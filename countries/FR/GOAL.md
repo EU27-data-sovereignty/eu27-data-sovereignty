@@ -19,7 +19,7 @@ adjusted below for what is structurally different about France.
 
 | | |
 |---|---|
-| Population | 68.64 m (Eurostat, 1 Jan 2025) |
+| Population | 68.88 m (Eurostat, 1 Jan 2025) |
 | GDP | EUR 2,991 bn (2025, current prices) |
 | Public administration employment (NACE O) | 2,272 k (Eurostat LFS 2025) |
 | Non-household electricity price | 153.4 EUR/MWh (Eurostat, band IC, 2025-S2) |
@@ -30,7 +30,7 @@ adjusted below for what is structurally different about France.
 | National digital identity (anchor workload) | FranceConnect / FranceConnect+ + France Identite |
 | Internet exchange / cable landings | France-IX Paris/Marseille; Marseille Mediterranean gateway; Atlantic landings Vendee/Bordeaux/Brittany |
 
-Relative to the Dutch baseline: population x3.80, public administration x3.17,
+Relative to the Dutch baseline: population x3.82, public administration x3.17,
 GDP x2.56. Resulting design load: x3.24 the Dutch figure.
 
 ## 3. What is structurally different from the Dutch case
@@ -44,27 +44,27 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 
 | Workload | Class | CPU cores | GPU eq. | Storage (PB) | Avail. factor |
 |---|---|---:|---:|---:|---:|
-| Digital identity / FranceConnect | Critical government | 68,500 | 0 | 15.2 | 1.5 |
-| Core government applications | Government | 191,800 | 0 | 62.8 | 1.35 |
-| Data platforms & analytics | Government data | 111,300 | 256 | 190.8 | 1.25 |
+| Digital identity / FranceConnect | Critical government | 68,700 | 0 | 15.3 | 1.5 |
+| Core government applications | Government | 192,200 | 0 | 62.9 | 1.35 |
+| Data platforms & analytics | Government data | 111,500 | 256 | 191.2 | 1.25 |
 | AI / sovereign model serving | AI | 46,000 | 1312 | 30.7 | 1.3 |
-| Defense classified compute | Defense | 114,100 | 976 | 57.1 | 1.5 |
-| Cybersecurity / SOC / telemetry | Security | 79,500 | 112 | 90.4 | 1.4 |
+| Defense classified compute | Defense | 114,500 | 976 | 57.3 | 1.5 |
+| Cybersecurity / SOC / telemetry | Security | 79,700 | 112 | 90.6 | 1.4 |
 | Scientific / public research | Research | 66,400 | 328 | 51.1 | 1.15 |
 
 ## 5. Capacity model output
 
 | Metric | Value |
 |---|---:|
-| Physical servers | 18,833 (CPU 13,063 / GPU 840 / storage 4,930) |
-| Rack equivalents | ~589 |
-| IT critical load | 30.6 MW |
+| Physical servers | 18,871 (CPU 13,090 / GPU 840 / storage 4,941) |
+| Rack equivalents | ~590 |
+| IT critical load | 30.7 MW |
 | Facility load (PUE 1.25) | 38.3 MW |
-| Facility design load (+20% headroom) | **45.9 MW** |
+| Facility design load (+20% headroom) | **46.0 MW** |
 | Sites by capacity / recommended | 4 / **4** (minimum 4) |
 | Average design MW per site | 11.5 MW |
-| Total CAPEX | **EUR 1,086 m** (facility EUR 459 m, IT EUR 531 m, network EUR 96 m) |
-| Annual energy | 335,121 MWh |
+| Total CAPEX | **EUR 1,087 m** (facility EUR 460 m, IT EUR 532 m, network EUR 96 m) |
+| Annual energy | 335,653 MWh |
 | Annual OPEX | **EUR 100 m / yr** (power EUR 51 m, non-power EUR 49 m) |
 
 Full table: `facility_summary.csv`.
@@ -75,7 +75,7 @@ Site posture: standard. Separation target: 50-100 km failure domains, dual fibre
 
 | Region | Role | Share | Design MW | Racks | Facility CAPEX | Notes |
 |---|---|---:|---:|---:|---:|---|
-| Ile-de-France | Primary civil cloud | 36% | 16.5 | 212 | EUR 165 m | DINUM/ministry estate, France-IX; RTE saturation - use designated turnkey sites. |
+| Ile-de-France | Primary civil cloud | 36% | 16.6 | 212 | EUR 166 m | DINUM/ministry estate, France-IX; RTE saturation - use designated turnkey sites. |
 | Auvergne-Rhone-Alpes / Lyon | Sovereign secondary | 18% | 8.3 | 106 | EUR 83 m | Second metro, nuclear/hydro grid, Alpine seismic zoning. |
 | Sud-Ouest / Toulouse - Bordeaux | Defense / industrial | 18% | 8.3 | 106 | EUR 83 m | Defense-aerospace cluster, Atlantic cable landings (Amitie). |
 | Ouest / Rennes - Nantes | Government / continuity | 18% | 8.3 | 106 | EUR 83 m | DGA cyber cluster (Rennes), Brittany cable landings. |
@@ -152,8 +152,8 @@ therefore necessary but not sufficient; what matters is who holds the keys and w
 
 A federated government cloud is already in production. The open question is consolidation and governance, not construction.
 
-Against that starting point, the modelled sovereign core is **45.9 MW of design load across
-4 site(s)**, or roughly 18,833 servers. The gap between what runs today and that
+Against that starting point, the modelled sovereign core is **46.0 MW of design load across
+4 site(s)**, or roughly 18,871 servers. The gap between what runs today and that
 figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
 
 ## 12. Migration path and cost
@@ -164,12 +164,12 @@ are in `migration_phases.csv` in this directory.
 
 | Phase | Scope | Servers | Design MW | CAPEX | Cumulative | Hybrid-eligible |
 |---|---|---:|---:|---:|---:|---|
-| 1 | Sovereign core | 5,945 | 11.7 | EUR 223 m | 21% | no |
-| 2 | Security and defense | 5,944 | 15.3 | EUR 371 m | 55% | no |
-| 3 | State record | 3,833 | 7.9 | EUR 200 m | 73% | no |
+| 1 | Sovereign core | 5,960 | 11.7 | EUR 224 m | 21% | no |
+| 2 | Security and defense | 5,960 | 15.3 | EUR 372 m | 55% | no |
+| 3 | State record | 3,840 | 7.9 | EUR 200 m | 73% | no |
 | 4 | Elective | 3,111 | 11.0 | EUR 291 m | 100% | yes |
 
-**Phase 1 is the number that matters: EUR 223 m for 11.7 MW,
+**Phase 1 is the number that matters: EUR 224 m for 11.7 MW,
 21% of total CAPEX.** That is the floor - identity and core government
 services - below which no hybrid arrangement helps, because these workloads cannot be foreign-hosted under
 any sovereignty posture worth the name. It is also, notably, a small fraction of the full build: sovereignty

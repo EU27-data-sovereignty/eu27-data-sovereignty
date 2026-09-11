@@ -66,7 +66,10 @@ that supports the cell**. A URL only shows a page exists — it cannot show the 
 it said, which is why the documents themselves are fetched and hashed (`SOURCES.md`).
 
 Tier 1 — `legal_instrument`, `data_classification`, `certification_scheme` — asserts a legal
-obligation and admits nothing but the instrument itself. Tier 2 describes what a state runs, buys
+obligation and admits nothing but the instrument itself, or, where the cell says no such
+instrument exists, an authoritative enumeration showing so (`confidence: absence`, #58). 39 of the
+189 cells assert an absence; without that value tier 1 was capped at 72.8% and `--strict` could
+never have passed. Tier 2 describes what a state runs, buys
 or depends on, and takes an official government page. The three ordinal columns are the author's
 judgements, **disclosed and never cited**; a source row for one is a validation error.
 
@@ -227,7 +230,10 @@ before that verification is done invites an easy dismissal. See `ROADMAP.md`.
 
 Same as the Dutch case, only more so: every input is a working assumption or a scaled placeholder, the
 electricity prices are 2025-S2 band-IC averages rather than negotiated tariffs, and public-administration
-employment is Eurostat NACE section O (excludes public health and education). The per-country sovereign-cloud
+employment is *nominally* Eurostat NACE section O (excludes public health and education) — but for 9 of
+the 27 states that column matches no year of the official series, and is a known open defect rather than
+a sourced figure (`VERIFICATION.md`). The other five Eurostat columns are pinned to a stated dataset and
+period and machine-checked to reproduce from it. The per-country sovereign-cloud
 and digital-ID entries were researched in September 2026 and will date.
 
 **The legal and regulatory entries are a different kind of claim from the rest.** Capacity figures are

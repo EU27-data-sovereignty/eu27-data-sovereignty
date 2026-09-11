@@ -46,10 +46,10 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 | Workload | Class | CPU cores | GPU eq. | Storage (PB) | Avail. factor |
 |---|---|---:|---:|---:|---:|
 | Digital identity / Cl@ve | Critical government | 49,000 | 0 | 10.9 | 1.5 |
-| Core government applications | Government | 128,700 | 0 | 42.1 | 1.35 |
+| Core government applications | Government | 128,600 | 0 | 42.1 | 1.35 |
 | Data platforms & analytics | Government data | 72,900 | 168 | 124.9 | 1.25 |
 | AI / sovereign model serving | AI | 25,900 | 736 | 17.3 | 1.3 |
-| Defense classified compute | Defense | 81,700 | 696 | 40.9 | 1.5 |
+| Defense classified compute | Defense | 81,700 | 696 | 40.8 | 1.5 |
 | Cybersecurity / SOC / telemetry | Security | 54,800 | 80 | 62.3 | 1.4 |
 | Scientific / public research | Research | 37,500 | 184 | 28.8 | 1.15 |
 
@@ -57,15 +57,15 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 
 | Metric | Value |
 |---|---:|
-| Physical servers | 12,517 (CPU 8,731 / GPU 531 / storage 3,255) |
+| Physical servers | 12,514 (CPU 8,730 / GPU 531 / storage 3,253) |
 | Rack equivalents | ~391 |
 | IT critical load | 20.1 MW |
 | Facility load (PUE 1.25) | 25.2 MW |
 | Facility design load (+20% headroom) | **30.2 MW** |
 | Sites by capacity / recommended | 3 / **4** (minimum 4) |
 | Average design MW per site | 7.6 MW |
-| Total CAPEX | **EUR 711 m** (facility EUR 302 m, IT EUR 346 m, network EUR 62 m) |
-| Annual energy | 220,509 MWh |
+| Total CAPEX | **EUR 710 m** (facility EUR 302 m, IT EUR 346 m, network EUR 62 m) |
+| Annual energy | 220,470 MWh |
 | Annual OPEX | **EUR 61 m / yr** (power EUR 29 m, non-power EUR 32 m) |
 
 Full table: `facility_summary.csv`.
@@ -154,7 +154,7 @@ therefore necessary but not sufficient; what matters is who holds the keys and w
 An operating government platform already exists; the sovereign core should be its next generation, not a parallel build beside it.
 
 Against that starting point, the modelled sovereign core is **30.2 MW of design load across
-4 site(s)**, or roughly 12,517 servers. The gap between what runs today and that
+4 site(s)**, or roughly 12,514 servers. The gap between what runs today and that
 figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
 
 ## 12. Migration path and cost
@@ -165,8 +165,8 @@ are in `migration_phases.csv` in this directory.
 
 | Phase | Scope | Servers | Design MW | CAPEX | Cumulative | Hybrid-eligible |
 |---|---|---:|---:|---:|---:|---|
-| 1 | Sovereign core | 4,063 | 8.0 | EUR 152 m | 22% | no |
-| 2 | Security and defense | 4,189 | 10.8 | EUR 263 m | 58% | no |
+| 1 | Sovereign core | 4,062 | 8.0 | EUR 152 m | 22% | no |
+| 2 | Security and defense | 4,187 | 10.8 | EUR 263 m | 58% | no |
 | 3 | State record | 2,510 | 5.2 | EUR 131 m | 77% | no |
 | 4 | Elective | 1,755 | 6.2 | EUR 164 m | 100% | yes |
 

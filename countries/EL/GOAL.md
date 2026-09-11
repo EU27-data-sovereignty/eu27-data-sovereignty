@@ -19,10 +19,10 @@ adjusted below for what is structurally different about Greece.
 
 | | |
 |---|---|
-| Population | 10.59 m (Eurostat, 1 Jan 2025) |
+| Population | 10.37 m (Eurostat, 1 Jan 2025) |
 | GDP | EUR 248 bn (2025, current prices) |
 | Public administration employment (NACE O) | 346 k (Eurostat LFS 2025) |
-| Non-household electricity price | 174.0 EUR/MWh (Eurostat, band IC, 2025-S2) |
+| Non-household electricity price | 173.8 EUR/MWh (Eurostat, band IC, 2025-S2) |
 | Renewables in electricity | 51.2% (2024) |
 | Land area | 130,048 km2 |
 | Live hyperscaler regions in-country | 0 |
@@ -30,8 +30,8 @@ adjusted below for what is structurally different about Greece.
 | National digital identity (anchor workload) | gov.gr Wallet (TaxisNet-based) |
 | Internet exchange / cable landings | GR-IX Athens; Crete (Chania) and Attica East-Med landings |
 
-Relative to the Dutch baseline: population x0.59, public administration x0.48,
-GDP x0.21. Resulting design load: x0.43 the Dutch figure.
+Relative to the Dutch baseline: population x0.57, public administration x0.48,
+GDP x0.21. Resulting design load: x0.42 the Dutch figure.
 
 ## 3. What is structurally different from the Dutch case
 
@@ -45,27 +45,27 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 
 | Workload | Class | CPU cores | GPU eq. | Storage (PB) | Avail. factor |
 |---|---|---:|---:|---:|---:|
-| Digital identity / gov.gr Wallet | Critical government | 10,600 | 0 | 2.3 | 1.5 |
-| Core government applications | Government | 29,400 | 0 | 9.6 | 1.35 |
-| Data platforms & analytics | Government data | 14,000 | 32 | 24.0 | 1.25 |
+| Digital identity / gov.gr Wallet | Critical government | 10,300 | 0 | 2.3 | 1.5 |
+| Core government applications | Government | 29,100 | 0 | 9.5 | 1.35 |
+| Data platforms & analytics | Government data | 13,800 | 32 | 23.6 | 1.25 |
 | AI / sovereign model serving | AI | 3,800 | 112 | 2.5 | 1.3 |
-| Defense classified compute | Defense | 17,600 | 152 | 8.8 | 1.5 |
-| Cybersecurity / SOC / telemetry | Security | 12,200 | 16 | 13.9 | 1.4 |
+| Defense classified compute | Defense | 17,200 | 144 | 8.6 | 1.5 |
+| Cybersecurity / SOC / telemetry | Security | 12,000 | 16 | 13.7 | 1.4 |
 | Scientific / public research | Research | 5,500 | 24 | 4.2 | 1.15 |
 
 ## 5. Capacity model output
 
 | Metric | Value |
 |---|---:|
-| Physical servers | 2,573 (CPU 1,818 / GPU 99 / storage 656) |
-| Rack equivalents | ~80 |
-| IT critical load | 4.1 MW |
-| Facility load (PUE 1.25) | 5.1 MW |
-| Facility design load (+20% headroom) | **6.1 MW** |
+| Physical servers | 2,536 (CPU 1,792 / GPU 96 / storage 648) |
+| Rack equivalents | ~79 |
+| IT critical load | 4.0 MW |
+| Facility load (PUE 1.25) | 5.0 MW |
+| Facility design load (+20% headroom) | **6.0 MW** |
 | Sites by capacity / recommended | 1 / **3** (minimum 3) |
 | Average design MW per site | 2.0 MW |
-| Total CAPEX | **EUR 142 m** (facility EUR 61 m, IT EUR 69 m, network EUR 12 m) |
-| Annual energy | 44,513 MWh |
+| Total CAPEX | **EUR 139 m** (facility EUR 60 m, IT EUR 67 m, network EUR 12 m) |
+| Annual energy | 43,738 MWh |
 | Annual OPEX | **EUR 14 m / yr** (power EUR 8 m, non-power EUR 6 m) |
 
 Full table: `facility_summary.csv`.
@@ -76,8 +76,8 @@ Site posture: standard. Separation target: 50-100 km failure domains, dual fibre
 
 | Region | Role | Share | Design MW | Racks | Facility CAPEX | Notes |
 |---|---|---:|---:|---:|---:|---|
-| Attica / Athens | Primary civil cloud | 40% | 2.5 | 33 | EUR 25 m | GSIS G-Cloud, GR-IX, Microsoft Spata campus; seismic design mandatory. |
-| Thessaloniki / Central Macedonia | Sovereign secondary | 27% | 1.6 | 22 | EUR 16 m | Second metro, 300 km separation, Balkan transit. |
+| Attica / Athens | Primary civil cloud | 40% | 2.4 | 32 | EUR 24 m | GSIS G-Cloud, GR-IX, Microsoft Spata campus; seismic design mandatory. |
+| Thessaloniki / Central Macedonia | Sovereign secondary | 27% | 1.6 | 21 | EUR 16 m | Second metro, 300 km separation, Balkan transit. |
 | Western Greece / Patras | Government / continuity | 22% | 1.4 | 18 | EUR 14 m | Adriatic cable routes; separate seismic domain. |
 | Crete / Chania | Strategic reserve | 10% | 0.6 | 8 | EUR 6 m | East-Med cable hub and Great Sea Interconnector; island - reserve/edge only. |
 
@@ -152,8 +152,8 @@ therefore necessary but not sufficient; what matters is who holds the keys and w
 
 An operating government platform already exists; the sovereign core should be its next generation, not a parallel build beside it.
 
-Against that starting point, the modelled sovereign core is **6.1 MW of design load across
-3 site(s)**, or roughly 2,573 servers. The gap between what runs today and that
+Against that starting point, the modelled sovereign core is **6.0 MW of design load across
+3 site(s)**, or roughly 2,536 servers. The gap between what runs today and that
 figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
 
 ## 12. Migration path and cost
@@ -164,9 +164,9 @@ are in `migration_phases.csv` in this directory.
 
 | Phase | Scope | Servers | Design MW | CAPEX | Cumulative | Hybrid-eligible |
 |---|---|---:|---:|---:|---:|---|
-| 1 | Sovereign core | 914 | 1.8 | EUR 34 m | 24% | no |
-| 2 | Security and defense | 916 | 2.4 | EUR 58 m | 65% | no |
-| 3 | State record | 483 | 1.0 | EUR 25 m | 83% | no |
+| 1 | Sovereign core | 902 | 1.8 | EUR 34 m | 24% | no |
+| 2 | Security and defense | 897 | 2.3 | EUR 56 m | 64% | no |
+| 3 | State record | 477 | 1.0 | EUR 25 m | 82% | no |
 | 4 | Elective | 260 | 0.9 | EUR 25 m | 100% | no |
 
 **Phase 1 is the number that matters: EUR 34 m for 1.8 MW,

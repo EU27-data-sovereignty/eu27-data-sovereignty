@@ -19,7 +19,7 @@ adjusted below for what is structurally different about Portugal.
 
 | | |
 |---|---|
-| Population | 10.75 m (Eurostat, 1 Jan 2025) |
+| Population | 11.39 m (Eurostat, 1 Jan 2025) |
 | GDP | EUR 307 bn (2025, current prices) |
 | Public administration employment (NACE O) | 342 k (Eurostat LFS 2025) |
 | Non-household electricity price | 132.9 EUR/MWh (Eurostat, band IC, 2025-S2) |
@@ -30,8 +30,8 @@ adjusted below for what is structurally different about Portugal.
 | National digital identity (anchor workload) | Chave Movel Digital / Cartao de Cidadao |
 | Internet exchange / cable landings | GigaPIX Lisbon; Sines landing hub (EllaLink 2Africa Equiano Medusa) |
 
-Relative to the Dutch baseline: population x0.60, public administration x0.48,
-GDP x0.26. Resulting design load: x0.45 the Dutch figure.
+Relative to the Dutch baseline: population x0.63, public administration x0.48,
+GDP x0.26. Resulting design load: x0.47 the Dutch figure.
 
 ## 3. What is structurally different from the Dutch case
 
@@ -46,27 +46,27 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 
 | Workload | Class | CPU cores | GPU eq. | Storage (PB) | Avail. factor |
 |---|---|---:|---:|---:|---:|
-| Digital identity / Chave Movel Digital | Critical government | 10,700 | 0 | 2.4 | 1.5 |
-| Core government applications | Government | 29,500 | 0 | 9.7 | 1.35 |
-| Data platforms & analytics | Government data | 15,000 | 32 | 25.7 | 1.25 |
+| Digital identity / Chave Movel Digital | Critical government | 11,400 | 0 | 2.5 | 1.5 |
+| Core government applications | Government | 30,500 | 0 | 10.0 | 1.35 |
+| Data platforms & analytics | Government data | 15,600 | 32 | 26.8 | 1.25 |
 | AI / sovereign model serving | AI | 4,700 | 136 | 3.1 | 1.3 |
-| Defense classified compute | Defense | 17,900 | 152 | 8.9 | 1.5 |
-| Cybersecurity / SOC / telemetry | Security | 12,300 | 16 | 14.0 | 1.4 |
+| Defense classified compute | Defense | 18,900 | 160 | 9.5 | 1.5 |
+| Cybersecurity / SOC / telemetry | Security | 12,900 | 16 | 14.6 | 1.4 |
 | Scientific / public research | Research | 6,800 | 32 | 5.2 | 1.15 |
 
 ## 5. Capacity model output
 
 | Metric | Value |
 |---|---:|
-| Physical servers | 2,685 (CPU 1,887 / GPU 107 / storage 691) |
-| Rack equivalents | ~84 |
-| IT critical load | 4.3 MW |
-| Facility load (PUE 1.25) | 5.3 MW |
-| Facility design load (+20% headroom) | **6.4 MW** |
+| Physical servers | 2,793 (CPU 1,964 / GPU 109 / storage 720) |
+| Rack equivalents | ~87 |
+| IT critical load | 4.4 MW |
+| Facility load (PUE 1.25) | 5.5 MW |
+| Facility design load (+20% headroom) | **6.6 MW** |
 | Sites by capacity / recommended | 1 / **3** (minimum 3) |
-| Average design MW per site | 2.1 MW |
-| Total CAPEX | **EUR 150 m** (facility EUR 64 m, IT EUR 73 m, network EUR 13 m) |
-| Annual energy | 46,743 MWh |
+| Average design MW per site | 2.2 MW |
+| Total CAPEX | **EUR 155 m** (facility EUR 66 m, IT EUR 75 m, network EUR 13 m) |
+| Annual energy | 48,428 MWh |
 | Annual OPEX | **EUR 13 m / yr** (power EUR 6 m, non-power EUR 7 m) |
 
 Full table: `facility_summary.csv`.
@@ -77,10 +77,10 @@ Site posture: standard. Separation target: 50-100 km failure domains, dual fibre
 
 | Region | Role | Share | Design MW | Racks | Facility CAPEX | Notes |
 |---|---|---:|---:|---:|---:|---|
-| Lisbon | Primary civil cloud | 40% | 2.6 | 34 | EUR 26 m | AMA/eSPap estate, GigaPIX; seismic/tsunami design mandatory. |
-| Sines / Alentejo | Sovereign secondary | 27% | 1.7 | 23 | EUR 17 m | Atlantic cable hub, Start Campus proves 1 GW-class grid; renewables. |
-| Porto / North | Government / continuity | 22% | 1.4 | 19 | EUR 14 m | 300 km separation, lower seismicity, Douro hydro. |
-| Coimbra / Centre | Strategic reserve | 10% | 0.6 | 8 | EUR 6 m | Inland reserve between the two metros. |
+| Lisbon | Primary civil cloud | 40% | 2.7 | 35 | EUR 27 m | AMA/eSPap estate, GigaPIX; seismic/tsunami design mandatory. |
+| Sines / Alentejo | Sovereign secondary | 27% | 1.8 | 24 | EUR 18 m | Atlantic cable hub, Start Campus proves 1 GW-class grid; renewables. |
+| Porto / North | Government / continuity | 22% | 1.5 | 20 | EUR 15 m | 300 km separation, lower seismicity, Douro hydro. |
+| Coimbra / Centre | Strategic reserve | 10% | 0.7 | 9 | EUR 7 m | Inland reserve between the two metros. |
 
 These regions encode only the obvious constraints (capital estate, second metro, distance from the frontier,
 fault or flood zone). They are to be replaced by the scored site selection in workstream A of the Dutch
@@ -153,8 +153,8 @@ therefore necessary but not sufficient; what matters is who holds the keys and w
 
 An operating government platform already exists; the sovereign core should be its next generation, not a parallel build beside it.
 
-Against that starting point, the modelled sovereign core is **6.4 MW of design load across
-3 site(s)**, or roughly 2,685 servers. The gap between what runs today and that
+Against that starting point, the modelled sovereign core is **6.6 MW of design load across
+3 site(s)**, or roughly 2,793 servers. The gap between what runs today and that
 figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
 
 ## 12. Migration path and cost
@@ -165,12 +165,12 @@ are in `migration_phases.csv` in this directory.
 
 | Phase | Scope | Servers | Design MW | CAPEX | Cumulative | Hybrid-eligible |
 |---|---|---:|---:|---:|---:|---|
-| 1 | Sovereign core | 920 | 1.8 | EUR 35 m | 23% | no |
-| 2 | Security and defense | 928 | 2.4 | EUR 58 m | 62% | no |
-| 3 | State record | 517 | 1.1 | EUR 27 m | 80% | no |
+| 1 | Sovereign core | 959 | 1.9 | EUR 36 m | 23% | no |
+| 2 | Security and defense | 976 | 2.5 | EUR 61 m | 63% | no |
+| 3 | State record | 538 | 1.1 | EUR 28 m | 81% | no |
 | 4 | Elective | 320 | 1.1 | EUR 30 m | 100% | no |
 
-**Phase 1 is the number that matters: EUR 35 m for 1.8 MW,
+**Phase 1 is the number that matters: EUR 36 m for 1.9 MW,
 23% of total CAPEX.** That is the floor - identity and core government
 services - below which no hybrid arrangement helps, because these workloads cannot be foreign-hosted under
 any sovereignty posture worth the name. It is also, notably, a small fraction of the full build: sovereignty

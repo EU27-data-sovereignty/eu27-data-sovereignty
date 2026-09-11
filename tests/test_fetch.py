@@ -90,5 +90,49 @@ class EurostatPull(unittest.TestCase):
             self.assertEqual(len(periods), 1, f"{column} mixes periods {sorted(periods)}")
 
 
+class EurostatProvenance(unittest.TestCase):
+    """Does each Eurostat column actually reproduce from the source it claims?
+
+    This is the check that caught the one real defect. `eu27_parameters.csv` describes six
+    columns as Eurostat figures; five reproduce from their pinned dataset and period almost
+    exactly, and `gov_employment_k` reproduces from no period at all.
+    """
+
+    # Ordinary Eurostat revision between the pull and the commit. Anything larger means the
+    # cell did not come from where it says it did.
+    TOLERANCE_PCT = 0.5
+
+    # Known defect, deliberately excluded so this test documents it rather than fails on it:
+    # 9 of 27 values match no year of nama_10_a64_e NACE O within 10% (Sweden is 40% out).
+    # See VERIFICATION.md. Remove from this set when the column is rebuilt.
+    KNOWN_BAD = {"gov_employment_k"}
+
+    def setUp(self):
+        path = ROOT / "model" / "eurostat_pull.csv"
+        if not path.exists():
+            self.skipTest("no eurostat_pull.csv yet; run ./run.sh fetch eurostat")
+        with path.open(newline="", encoding="utf-8") as fh:
+            self.rows = list(csv.DictReader(fh))
+
+    def test_sound_columns_reproduce_from_their_pinned_source(self):
+        off = []
+        for r in self.rows:
+            if r["column"] in self.KNOWN_BAD:
+                continue
+            cur, new = float(r["current"]), float(r["value"])
+            if cur and abs(new - cur) / abs(cur) * 100 > self.TOLERANCE_PCT:
+                off.append(f"{r['iso']}/{r['column']}: csv {cur} vs {r['dataset']}@{r['period']} {new}")
+        self.assertEqual(off, [], "these cells do not reproduce from the source they claim")
+
+    def test_the_known_defect_is_still_scoped_to_one_column(self):
+        """If another column starts drifting, it should stop being silently tolerated."""
+        self.assertEqual(self.KNOWN_BAD, {"gov_employment_k"})
+
+    def test_every_column_is_pinned_to_a_period(self):
+        for column, spec in fetch_eurostat.SERIES.items():
+            self.assertEqual(len(spec), 5, f"{column}: expected a pinned period in its spec")
+            self.assertTrue(spec[4], f"{column}: period pin is empty")
+
+
 if __name__ == "__main__":
     unittest.main()

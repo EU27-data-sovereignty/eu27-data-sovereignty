@@ -24,7 +24,7 @@ adjusted below for what is structurally different about Italy.
 | Public administration employment (NACE O) | 1,159 k (Eurostat LFS 2025) |
 | Non-household electricity price | 220.3 EUR/MWh (Eurostat, band IC, 2025-S2) |
 | Renewables in electricity | 40.7% (2024) |
-| Land area | 297,825 km2 |
+| Land area | 297,734 km2 |
 | Live hyperscaler regions in-country | 4 |
 | Existing government / sovereign cloud | Polo Strategico Nazionale (PSN) - operational since 2023, TIM/Leonardo/CDP/Sogei consortium, 4 DC pairs; ACN cloud qualification regime (Strategia Cloud Italia) |
 | National digital identity (anchor workload) | SPID / CIE (IT-Wallet in rollout) |

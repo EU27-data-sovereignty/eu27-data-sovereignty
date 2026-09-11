@@ -31,7 +31,7 @@ adjusted below for what is structurally different about Finland.
 | Internet exchange / cable landings | FICIX Helsinki/Espoo/Oulu; C-Lion1 Helsinki-Rostock (damaged Nov 2024) |
 
 Relative to the Dutch baseline: population x0.31, public administration x0.16,
-GDP x0.24. Resulting design load: x0.31 the Dutch figure.
+GDP x0.24. Resulting design load: x0.30 the Dutch figure.
 
 ## 3. What is structurally different from the Dutch case
 
@@ -50,14 +50,14 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 | Data platforms & analytics | Government data | 9,700 | 24 | 16.6 | 1.25 |
 | AI / sovereign model serving | AI | 4,300 | 120 | 2.9 | 1.3 |
 | Defense classified compute | Defense | 14,100 | 120 | 7.0 | 1.5 |
-| Cybersecurity / SOC / telemetry | Security | 7,400 | 8 | 8.4 | 1.4 |
+| Cybersecurity / SOC / telemetry | Security | 7,300 | 8 | 8.4 | 1.4 |
 | Scientific / public research | Research | 6,300 | 32 | 4.8 | 1.15 |
 
 ## 5. Capacity model output
 
 | Metric | Value |
 |---|---:|
-| Physical servers | 1,717 (CPU 1,175 / GPU 89 / storage 453) |
+| Physical servers | 1,715 (CPU 1,173 / GPU 89 / storage 453) |
 | Rack equivalents | ~54 |
 | IT critical load | 2.9 MW |
 | Facility load (PUE 1.25) | 3.6 MW |
@@ -65,7 +65,7 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 | Sites by capacity / recommended | 1 / **3** (minimum 3) |
 | Average design MW per site | 1.4 MW |
 | Total CAPEX | **EUR 104 m** (facility EUR 43 m, IT EUR 51 m, network EUR 9 m) |
-| Annual energy | 31,580 MWh |
+| Annual energy | 31,550 MWh |
 | Annual OPEX | **EUR 7 m / yr** (power EUR 2 m, non-power EUR 5 m) |
 
 Full table: `facility_summary.csv`.
@@ -153,7 +153,7 @@ therefore necessary but not sufficient; what matters is who holds the keys and w
 An operating government platform already exists; the sovereign core should be its next generation, not a parallel build beside it.
 
 Against that starting point, the modelled sovereign core is **4.3 MW of design load across
-3 site(s)**, or roughly 1,717 servers. The gap between what runs today and that
+3 site(s)**, or roughly 1,715 servers. The gap between what runs today and that
 figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
 
 ## 12. Migration path and cost
@@ -165,7 +165,7 @@ are in `migration_phases.csv` in this directory.
 | Phase | Scope | Servers | Design MW | CAPEX | Cumulative | Hybrid-eligible |
 |---|---|---:|---:|---:|---:|---|
 | 1 | Sovereign core | 428 | 0.8 | EUR 16 m | 16% | no |
-| 2 | Security and defense | 658 | 1.7 | EUR 42 m | 56% | no |
+| 2 | Security and defense | 656 | 1.7 | EUR 42 m | 56% | no |
 | 3 | State record | 336 | 0.7 | EUR 18 m | 74% | no |
 | 4 | Elective | 295 | 1.0 | EUR 28 m | 100% | yes |
 

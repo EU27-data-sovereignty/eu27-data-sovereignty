@@ -377,7 +377,7 @@
     "gov_employment_k": 332.8,
     "gov_ratio": 0.46454494695700727,
     "land_km2": 82519,
-    "pop_ratio": 0.5098115299334811,
+    "pop_ratio": 0.5096985147417423,
     "population_m": 9.197,
     "renewables_pct": 90.1
    },
@@ -452,7 +452,7 @@
   },
   "BE": {
    "capacity": {
-    "annual_mwh": 63564,
+    "annual_mwh": 63552,
     "avg_mw_per_site": 2.9,
     "binding_constraint": "min_sites",
     "capex_facility": 87.1,
@@ -461,17 +461,17 @@
     "capex_total": 207.2,
     "cpu_servers": 2430,
     "design_mw": 8.71,
-    "facility_mw": 7.26,
+    "facility_mw": 7.25,
     "gpu_servers": 167,
-    "opex_nonpower": 9.33,
+    "opex_nonpower": 9.32,
     "opex_power": 11.86,
-    "opex_total": 21.19,
+    "opex_total": 21.18,
     "racks": 110.2,
     "sites": 3,
     "sites_by_mw": 1,
-    "storage_servers": 931,
+    "storage_servers": 930,
     "total_it_mw": 5.8,
-    "total_servers": 3528
+    "total_servers": 3527
    },
    "flags": {
     "frontline": false,
@@ -543,10 +543,10 @@
     "hyperscaler_regions_live": "2",
     "iso2": "BE",
     "ixp": "BNIX Brussels; transit via Amsterdam/London",
-    "land_km2": "30452",
+    "land_km2": "30451",
     "legal_instrument": "Federal cloud policy via FPS BOSA; Smals framework rules on sovereignty and portability (2026)",
     "min_sites": "3",
-    "population_m": "11.900",
+    "population_m": "11.883",
     "procurement_vehicle": "FPS BOSA federal framework; Smals for social-security IT",
     "renewables_pct": "31.3",
     "seismic": "low",
@@ -555,14 +555,14 @@
    },
    "phases": [
     {
-     "CAPEX (EUR mm)": 40.6,
-     "Cumulative CAPEX %": 19.6,
-     "Design MW": 2.13,
+     "CAPEX (EUR mm)": 40.5,
+     "Cumulative CAPEX %": 19.5,
+     "Design MW": 2.12,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "1",
      "Phase name": "Sovereign core",
-     "Servers": 1079,
+     "Servers": 1078,
      "Workloads": "Digital identity / Belgian eID card + itsme; Core government applications"
     },
     {
@@ -602,7 +602,7 @@
    "regions": [
     {
      "Design MW": 3.53,
-     "Estimated racks": 44.7,
+     "Estimated racks": 44.6,
      "Indicative facility CAPEX (EUR mm)": 35.3,
      "Notes": "Federal institutions, BNIX, Smals/G-Cloud estate; Elia connection queue is the constraint.",
      "Region": "Brussels - Flemish Brabant",
@@ -642,15 +642,15 @@
     }
    ],
    "scale": {
-    "design_ratio": 0.6142887619408822,
+    "design_ratio": 0.6141702420176832,
     "elec_price_eur_mwh": 186.6,
     "gdp_eur_bn": 642.0,
     "gdp_ratio": 0.548436699128652,
     "gov_employment_k": 447.3,
     "gov_ratio": 0.6243718592964824,
-    "land_km2": 30452,
-    "pop_ratio": 0.6596452328159645,
-    "population_m": 11.9,
+    "land_km2": 30451,
+    "pop_ratio": 0.6585568610064286,
+    "population_m": 11.883,
     "renewables_pct": 31.3
    },
    "structural_differences": [
@@ -671,7 +671,7 @@
      "CPU cores required": "35300",
      "Class": "Government",
      "GPU eq. required": "0",
-     "Logical storage (PB)": "11.6",
+     "Logical storage (PB)": "11.5",
      "Notes": "Scaled from NL baseline x0.64 (transactional load tracks citizens and the size of the administration).",
      "Workload": "Core government applications"
     },
@@ -921,7 +921,7 @@
     "gov_employment_k": 220.3,
     "gov_ratio": 0.3075097710776103,
     "land_km2": 110001,
-    "pop_ratio": 0.35681818181818187,
+    "pop_ratio": 0.356739082243405,
     "population_m": 6.437,
     "renewables_pct": 33.8
    },
@@ -1175,7 +1175,7 @@
     "gov_employment_k": 35.9,
     "gov_ratio": 0.050111669458403126,
     "land_km2": 9213,
-    "pop_ratio": 0.054490022172949,
+    "pop_ratio": 0.05447794280647306,
     "population_m": 0.983,
     "renewables_pct": 24.1
    },
@@ -1254,26 +1254,26 @@
   },
   "CZ": {
    "capacity": {
-    "annual_mwh": 47162,
-    "avg_mw_per_site": 2.15,
+    "annual_mwh": 48835,
+    "avg_mw_per_site": 2.23,
     "binding_constraint": "min_sites",
-    "capex_facility": 64.6,
-    "capex_it": 73.7,
-    "capex_network": 13.3,
-    "capex_total": 151.5,
-    "cpu_servers": 1883,
-    "design_mw": 6.46,
-    "facility_mw": 5.38,
-    "gpu_servers": 111,
-    "opex_nonpower": 6.82,
-    "opex_power": 8.61,
-    "opex_total": 15.43,
-    "racks": 84.1,
+    "capex_facility": 66.9,
+    "capex_it": 76.4,
+    "capex_network": 13.7,
+    "capex_total": 157.0,
+    "cpu_servers": 1945,
+    "design_mw": 6.69,
+    "facility_mw": 5.57,
+    "gpu_servers": 116,
+    "opex_nonpower": 7.07,
+    "opex_power": 8.91,
+    "opex_total": 15.98,
+    "racks": 86.9,
     "sites": 3,
     "sites_by_mw": 1,
-    "storage_servers": 698,
-    "total_it_mw": 4.31,
-    "total_servers": 2692
+    "storage_servers": 720,
+    "total_it_mw": 4.46,
+    "total_servers": 2781
    },
    "flags": {
     "frontline": false,
@@ -1321,7 +1321,7 @@
      "source": "Low seismic; Vltava/Elbe/Morava floods (2024); central location with good land; nuclear baseload (new Dukovany units) but coal exit and gas import; NATO; ~300 km from Ukraine; Russian sabotage/espionage incidents 2024-25"
     },
     "site_feasibility": {
-     "label": "2.15 MW/site over 3 sites",
+     "label": "2.23 MW/site over 3 sites",
      "score": 1.0,
      "source": "Meets the 3-region rule at viable site size."
     }
@@ -1336,7 +1336,7 @@
     "digital_id": "Identita obcana (NIA) / eDoklady / BankID",
     "elec_price_eur_mwh": "182.5",
     "frontline": "0",
-    "gdp_eur_bn": "346.6",
+    "gdp_eur_bn": "347.3",
     "gov_cloud_maturity": "operational",
     "gov_employment_k": "342.7",
     "grid_isolated": "0",
@@ -1348,7 +1348,7 @@
     "land_km2": "77212",
     "legal_instrument": "Act 365/2000 on Information Systems of Public Administration; eGovernment Cloud (eGC) catalogue is mandatory route",
     "min_sites": "3",
-    "population_m": "10.410",
+    "population_m": "10.909",
     "procurement_vehicle": "Ministry of the Interior eGC catalogue; commercial entries admitted only after NUKIB assessment",
     "renewables_pct": "17.9",
     "seismic": "low",
@@ -1357,36 +1357,36 @@
    },
    "phases": [
     {
-     "CAPEX (EUR mm)": 33.9,
-     "Cumulative CAPEX %": 22.4,
-     "Design MW": 1.78,
+     "CAPEX (EUR mm)": 34.9,
+     "Cumulative CAPEX %": 22.3,
+     "Design MW": 1.83,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "1",
      "Phase name": "Sovereign core",
-     "Servers": 902,
+     "Servers": 931,
      "Workloads": "Digital identity / Identita obcana; Core government applications"
     },
     {
-     "CAPEX (EUR mm)": 55.8,
-     "Cumulative CAPEX %": 59.2,
-     "Design MW": 2.3,
+     "CAPEX (EUR mm)": 58.6,
+     "Cumulative CAPEX %": 59.6,
+     "Design MW": 2.42,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "2",
      "Phase name": "Security and defense",
-     "Servers": 900,
+     "Servers": 941,
      "Workloads": "Defense classified compute; Cybersecurity / SOC / telemetry"
     },
     {
-     "CAPEX (EUR mm)": 27.4,
-     "Cumulative CAPEX %": 77.3,
-     "Design MW": 1.08,
+     "CAPEX (EUR mm)": 29.0,
+     "Cumulative CAPEX %": 78.1,
+     "Design MW": 1.14,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "3",
      "Phase name": "State record",
-     "Servers": 527,
+     "Servers": 546,
      "Workloads": "Data platforms & analytics"
     },
     {
@@ -1403,9 +1403,9 @@
    ],
    "regions": [
     {
-     "Design MW": 2.62,
-     "Estimated racks": 34.1,
-     "Indicative facility CAPEX (EUR mm)": 26.2,
+     "Design MW": 2.71,
+     "Estimated racks": 35.2,
+     "Indicative facility CAPEX (EUR mm)": 27.1,
      "Notes": "SPCSS/NAKIT estate, NIX.CZ; Vltava flood zoning applies.",
      "Region": "Prague - Central Bohemia",
      "Resilience role": "Active-active",
@@ -1413,9 +1413,9 @@
      "Share of design load": 0.405
     },
     {
-     "Design MW": 1.74,
-     "Estimated racks": 22.7,
-     "Indicative facility CAPEX (EUR mm)": 17.4,
+     "Design MW": 1.81,
+     "Estimated racks": 23.5,
+     "Indicative facility CAPEX (EUR mm)": 18.1,
      "Notes": "Second metro, research cluster, 200 km separation.",
      "Region": "Brno / South Moravia",
      "Resilience role": "Active-active",
@@ -1423,9 +1423,9 @@
      "Share of design load": 0.27
     },
     {
-     "Design MW": 1.45,
-     "Estimated racks": 18.9,
-     "Indicative facility CAPEX (EUR mm)": 14.5,
+     "Design MW": 1.51,
+     "Estimated racks": 19.6,
+     "Indicative facility CAPEX (EUR mm)": 15.1,
      "Notes": "Industrial grid; post-coal land availability.",
      "Region": "Ostrava / Moravia-Silesia",
      "Resilience role": "Active-active",
@@ -1433,9 +1433,9 @@
      "Share of design load": 0.225
     },
     {
-     "Design MW": 0.65,
-     "Estimated racks": 8.4,
-     "Indicative facility CAPEX (EUR mm)": 6.5,
+     "Design MW": 0.67,
+     "Estimated racks": 8.7,
+     "Indicative facility CAPEX (EUR mm)": 6.7,
      "Notes": "Western reserve, furthest from the eastern frontier.",
      "Region": "Plzen / West Bohemia",
      "Resilience role": "Warm reserve",
@@ -1444,15 +1444,15 @@
     }
    ],
    "scale": {
-    "design_ratio": 0.45578021665441965,
+    "design_ratio": 0.4719463341787754,
     "elec_price_eur_mwh": 182.5,
-    "gdp_eur_bn": 346.6,
-    "gdp_ratio": 0.29608747650777384,
+    "gdp_eur_bn": 347.3,
+    "gdp_ratio": 0.2966854604476337,
     "gov_employment_k": 342.7,
     "gov_ratio": 0.4783640424343942,
     "land_km2": 77212,
-    "pop_ratio": 0.5770509977827052,
-    "population_m": 10.41,
+    "pop_ratio": 0.6045776989581024,
+    "population_m": 10.909,
     "renewables_pct": 17.9
    },
    "structural_differences": [
@@ -1461,29 +1461,29 @@
    "workloads": [
     {
      "Availability factor": "1.5",
-     "CPU cores required": "10400",
+     "CPU cores required": "10900",
      "Class": "Critical government",
      "GPU eq. required": "0",
-     "Logical storage (PB)": "2.3",
-     "Notes": "Scaled from NL baseline x0.58 (identity load tracks citizens; fixed platform floor for small states).",
+     "Logical storage (PB)": "2.4",
+     "Notes": "Scaled from NL baseline x0.60 (identity load tracks citizens; fixed platform floor for small states).",
      "Workload": "Digital identity / Identita obcana"
     },
     {
      "Availability factor": "1.35",
-     "CPU cores required": "29000",
+     "CPU cores required": "29800",
      "Class": "Government",
      "GPU eq. required": "0",
-     "Logical storage (PB)": "9.5",
-     "Notes": "Scaled from NL baseline x0.53 (transactional load tracks citizens and the size of the administration).",
+     "Logical storage (PB)": "9.7",
+     "Notes": "Scaled from NL baseline x0.54 (transactional load tracks citizens and the size of the administration).",
      "Workload": "Core government applications"
     },
     {
      "Availability factor": "1.25",
-     "CPU cores required": "15300",
+     "CPU cores required": "15800",
      "Class": "Government data",
-     "GPU eq. required": "32",
-     "Logical storage (PB)": "26.2",
-     "Notes": "Scaled from NL baseline x0.44 (data volume tracks citizens and economic activity).",
+     "GPU eq. required": "40",
+     "Logical storage (PB)": "27.0",
+     "Notes": "Scaled from NL baseline x0.45 (data volume tracks citizens and economic activity).",
      "Workload": "Data platforms & analytics"
     },
     {
@@ -1497,20 +1497,20 @@
     },
     {
      "Availability factor": "1.5",
-     "CPU cores required": "17300",
+     "CPU cores required": "18100",
      "Class": "Defense",
-     "GPU eq. required": "144",
-     "Logical storage (PB)": "8.7",
-     "Notes": "Scaled from NL baseline x0.58 (tracks population; frontline states carry a higher defense share).",
+     "GPU eq. required": "152",
+     "Logical storage (PB)": "9.1",
+     "Notes": "Scaled from NL baseline x0.60 (tracks population; frontline states carry a higher defense share).",
      "Workload": "Defense classified compute"
     },
     {
      "Availability factor": "1.4",
-     "CPU cores required": "12000",
+     "CPU cores required": "12500",
      "Class": "Security",
      "GPU eq. required": "16",
-     "Logical storage (PB)": "13.7",
-     "Notes": "Scaled from NL baseline x0.55 (telemetry tracks the digital estate; high fixed floor because a SOC has a minimum viable size).",
+     "Logical storage (PB)": "14.2",
+     "Notes": "Scaled from NL baseline x0.57 (telemetry tracks the digital estate; high fixed floor because a SOC has a minimum viable size).",
      "Workload": "Cybersecurity / SOC / telemetry"
     },
     {
@@ -1526,26 +1526,26 @@
   },
   "DE": {
    "capacity": {
-    "annual_mwh": 440722,
-    "avg_mw_per_site": 10.06,
+    "annual_mwh": 443147,
+    "avg_mw_per_site": 10.12,
     "binding_constraint": "capacity",
-    "capex_facility": 603.7,
-    "capex_it": 704.4,
-    "capex_network": 126.8,
-    "capex_total": 1435.0,
-    "cpu_servers": 16916,
-    "design_mw": 60.37,
-    "facility_mw": 50.31,
-    "gpu_servers": 1146,
-    "opex_nonpower": 64.57,
-    "opex_power": 99.78,
-    "opex_total": 164.35,
-    "racks": 766.6,
+    "capex_facility": 607.1,
+    "capex_it": 709.2,
+    "capex_network": 127.7,
+    "capex_total": 1443.9,
+    "cpu_servers": 16970,
+    "design_mw": 60.71,
+    "facility_mw": 50.59,
+    "gpu_servers": 1159,
+    "opex_nonpower": 64.98,
+    "opex_power": 100.33,
+    "opex_total": 165.31,
+    "racks": 769.6,
     "sites": 6,
     "sites_by_mw": 6,
-    "storage_servers": 6469,
-    "total_it_mw": 40.25,
-    "total_servers": 24531
+    "storage_servers": 6498,
+    "total_it_mw": 40.47,
+    "total_servers": 24627
    },
    "flags": {
     "frontline": false,
@@ -1593,7 +1593,7 @@
      "source": "Low seismic; Ahr/Rhine/Elbe floods (2021); Frankfurt grid saturated (multi-year waits) with headroom in Brandenburg/east; 3rd-highest EU power price; north-south grid bottlenecks; LNG gas import; NATO; sabotage/drone incidents at DCs 2024-25"
     },
     "site_feasibility": {
-     "label": "10.06 MW/site over 6 sites",
+     "label": "10.12 MW/site over 6 sites",
      "score": 1.0,
      "source": "Meets the 3-region rule at viable site size."
     }
@@ -1608,7 +1608,7 @@
     "digital_id": "Online-Ausweis eID + BundID/DeutschlandID",
     "elec_price_eur_mwh": "226.4",
     "frontline": "0",
-    "gdp_eur_bn": "4469.8",
+    "gdp_eur_bn": "4529.7",
     "gov_cloud_maturity": "federated",
     "gov_employment_k": "3041.3",
     "grid_isolated": "0",
@@ -1630,7 +1630,7 @@
    "phases": [
     {
      "CAPEX (EUR mm)": 280.8,
-     "Cumulative CAPEX %": 19.6,
+     "Cumulative CAPEX %": 19.4,
      "Design MW": 14.73,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
@@ -1640,44 +1640,44 @@
      "Workloads": "Digital identity / Online-Ausweis eID + BundID; Core government applications"
     },
     {
-     "CAPEX (EUR mm)": 455.9,
-     "Cumulative CAPEX %": 51.3,
+     "CAPEX (EUR mm)": 455.8,
+     "Cumulative CAPEX %": 51.0,
      "Design MW": 18.8,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "2",
      "Phase name": "Security and defense",
-     "Servers": 7319,
+     "Servers": 7317,
      "Workloads": "Defense classified compute; Cybersecurity / SOC / telemetry"
     },
     {
-     "CAPEX (EUR mm)": 265.0,
-     "Cumulative CAPEX %": 69.8,
-     "Design MW": 10.47,
+     "CAPEX (EUR mm)": 267.2,
+     "Cumulative CAPEX %": 69.5,
+     "Design MW": 10.55,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "3",
      "Phase name": "State record",
-     "Servers": 5092,
+     "Servers": 5124,
      "Workloads": "Data platforms & analytics"
     },
     {
-     "CAPEX (EUR mm)": 433.3,
+     "CAPEX (EUR mm)": 440.1,
      "Cumulative CAPEX %": 100.0,
-     "Design MW": 16.37,
+     "Design MW": 16.62,
      "Hybrid eligible": "yes",
      "Hybrid eligible (class)": "yes",
      "Phase": "4",
      "Phase name": "Elective",
-     "Servers": 4644,
+     "Servers": 4710,
      "Workloads": "AI / sovereign model serving; Scientific / public research"
     }
    ],
    "regions": [
     {
-     "Design MW": 21.73,
-     "Estimated racks": 276.0,
-     "Indicative facility CAPEX (EUR mm)": 217.3,
+     "Design MW": 21.85,
+     "Estimated racks": 277.1,
+     "Indicative facility CAPEX (EUR mm)": 218.5,
      "Notes": "DE-CIX, ITZBund estate; grid saturated - expect multi-year connection lead time.",
      "Region": "Frankfurt - Rhine-Main",
      "Resilience role": "Active-active",
@@ -1685,9 +1685,9 @@
      "Share of design load": 0.36
     },
     {
-     "Design MW": 10.87,
-     "Estimated racks": 138.0,
-     "Indicative facility CAPEX (EUR mm)": 108.7,
+     "Design MW": 10.93,
+     "Estimated racks": 138.5,
+     "Indicative facility CAPEX (EUR mm)": 109.3,
      "Notes": "Federal ministries, AWS ESC and STACKIT prove grid headroom in the east.",
      "Region": "Berlin - Brandenburg",
      "Resilience role": "Active-active",
@@ -1695,9 +1695,9 @@
      "Share of design load": 0.18
     },
     {
-     "Design MW": 10.87,
-     "Estimated racks": 138.0,
-     "Indicative facility CAPEX (EUR mm)": 108.7,
+     "Design MW": 10.93,
+     "Estimated racks": 138.5,
+     "Indicative facility CAPEX (EUR mm)": 109.3,
      "Notes": "Defense-industrial cluster, Bundeswehr IT; southern separation.",
      "Region": "Munich / Bavaria",
      "Resilience role": "Active-active",
@@ -1705,9 +1705,9 @@
      "Share of design load": 0.18
     },
     {
-     "Design MW": 10.87,
-     "Estimated racks": 138.0,
-     "Indicative facility CAPEX (EUR mm)": 108.7,
+     "Design MW": 10.93,
+     "Estimated racks": 138.5,
+     "Indicative facility CAPEX (EUR mm)": 109.3,
      "Notes": "Wind surplus, North Sea cable landings (Norden/Sylt).",
      "Region": "Hamburg / North",
      "Resilience role": "Active-active",
@@ -1715,9 +1715,9 @@
      "Share of design load": 0.18
     },
     {
-     "Design MW": 6.04,
-     "Estimated racks": 76.7,
-     "Indicative facility CAPEX (EUR mm)": 60.4,
+     "Design MW": 6.07,
+     "Estimated racks": 77.0,
+     "Indicative facility CAPEX (EUR mm)": 60.7,
      "Notes": "Post-coal land and grid; reserve/expansion.",
      "Region": "Leipzig - Saxony",
      "Resilience role": "Warm reserve",
@@ -1726,14 +1726,14 @@
     }
    ],
    "scale": {
-    "design_ratio": 4.259155664067129,
+    "design_ratio": 4.282598904875909,
     "elec_price_eur_mwh": 226.4,
-    "gdp_eur_bn": 4469.8,
-    "gdp_ratio": 3.818383734836836,
+    "gdp_eur_bn": 4529.7,
+    "gdp_ratio": 3.869554074833419,
     "gov_employment_k": 3041.3,
     "gov_ratio": 4.245254048017867,
     "land_km2": 353296,
-    "pop_ratio": 4.632871396895787,
+    "pop_ratio": 4.631844380403458,
     "population_m": 83.577,
     "renewables_pct": 54.1
    },
@@ -1762,20 +1762,20 @@
     },
     {
      "Availability factor": "1.25",
-     "CPU cores required": "147900",
+     "CPU cores required": "148800",
      "Class": "Government data",
-     "GPU eq. required": "336",
-     "Logical storage (PB)": "253.5",
-     "Notes": "Scaled from NL baseline x4.23 (data volume tracks citizens and economic activity).",
+     "GPU eq. required": "344",
+     "Logical storage (PB)": "255.0",
+     "Notes": "Scaled from NL baseline x4.25 (data volume tracks citizens and economic activity).",
      "Workload": "Data platforms & analytics"
     },
     {
      "Availability factor": "1.3",
-     "CPU cores required": "68700",
+     "CPU cores required": "69700",
      "Class": "AI",
-     "GPU eq. required": "1952",
-     "Logical storage (PB)": "45.8",
-     "Notes": "Scaled from NL baseline x3.82 (AI capacity is an economic-policy choice; tracks GDP).",
+     "GPU eq. required": "1984",
+     "Logical storage (PB)": "46.4",
+     "Notes": "Scaled from NL baseline x3.87 (AI capacity is an economic-policy choice; tracks GDP).",
      "Workload": "AI / sovereign model serving"
     },
     {
@@ -1789,7 +1789,7 @@
     },
     {
      "Availability factor": "1.4",
-     "CPU cores required": "99400",
+     "CPU cores required": "99300",
      "Class": "Security",
      "GPU eq. required": "144",
      "Logical storage (PB)": "112.9",
@@ -1798,11 +1798,11 @@
     },
     {
      "Availability factor": "1.15",
-     "CPU cores required": "99300",
+     "CPU cores required": "100600",
      "Class": "Research",
-     "GPU eq. required": "488",
-     "Logical storage (PB)": "76.4",
-     "Notes": "Scaled from NL baseline x3.82 (research HPC is discretionary; tracks GDP).",
+     "GPU eq. required": "496",
+     "Logical storage (PB)": "77.4",
+     "Notes": "Scaled from NL baseline x3.87 (research HPC is discretionary; tracks GDP).",
      "Workload": "Scientific / public research"
     }
    ]
@@ -2006,7 +2006,7 @@
     "gov_employment_k": 166.0,
     "gov_ratio": 0.231714126186488,
     "land_km2": 41987,
-    "pop_ratio": 0.33220620842572063,
+    "pop_ratio": 0.33213256484149856,
     "population_m": 5.993,
     "renewables_pct": 79.7
    },
@@ -2163,7 +2163,7 @@
     "digital_id": "ID-kaart + Mobiil-ID + Smart-ID",
     "elec_price_eur_mwh": "141.0",
     "frontline": "1",
-    "gdp_eur_bn": "41.6",
+    "gdp_eur_bn": "41.9",
     "gov_cloud_maturity": "operational",
     "gov_employment_k": "37.1",
     "grid_isolated": "0",
@@ -2172,7 +2172,7 @@
     "hyperscaler_regions_live": "0",
     "iso2": "EE",
     "ixp": "TLLIX/RTIX Tallinn; EESF cables to Helsinki; Estlink HVDC",
-    "land_km2": "43110",
+    "land_km2": "43466",
     "legal_instrument": "Public Information Act; Data Embassy Act enabling state data held under Estonian jurisdiction abroad",
     "min_sites": "3",
     "population_m": "1.370",
@@ -2273,12 +2273,12 @@
    "scale": {
     "design_ratio": 0.1020693578590561,
     "elec_price_eur_mwh": 141.0,
-    "gdp_eur_bn": 41.6,
-    "gdp_ratio": 0.035537331283102686,
+    "gdp_eur_bn": 41.9,
+    "gdp_ratio": 0.035793610114471214,
     "gov_employment_k": 37.1,
     "gov_ratio": 0.05178671133445003,
-    "land_km2": 43110,
-    "pop_ratio": 0.07594235033259425,
+    "land_km2": 43466,
+    "pop_ratio": 0.07592551540678343,
     "population_m": 1.37,
     "renewables_pct": 38.9
    },
@@ -2354,26 +2354,26 @@
   },
   "EL": {
    "capacity": {
-    "annual_mwh": 44513,
-    "avg_mw_per_site": 2.03,
+    "annual_mwh": 43738,
+    "avg_mw_per_site": 2.0,
     "binding_constraint": "min_sites",
-    "capex_facility": 61.0,
-    "capex_it": 68.5,
-    "capex_network": 12.3,
-    "capex_total": 141.8,
-    "cpu_servers": 1818,
-    "design_mw": 6.1,
-    "facility_mw": 5.08,
-    "gpu_servers": 99,
-    "opex_nonpower": 6.38,
-    "opex_power": 7.75,
-    "opex_total": 14.13,
-    "racks": 80.4,
+    "capex_facility": 59.9,
+    "capex_it": 67.2,
+    "capex_network": 12.1,
+    "capex_total": 139.2,
+    "cpu_servers": 1792,
+    "design_mw": 5.99,
+    "facility_mw": 4.99,
+    "gpu_servers": 96,
+    "opex_nonpower": 6.27,
+    "opex_power": 7.6,
+    "opex_total": 13.87,
+    "racks": 79.2,
     "sites": 3,
     "sites_by_mw": 1,
-    "storage_servers": 656,
-    "total_it_mw": 4.07,
-    "total_servers": 2573
+    "storage_servers": 648,
+    "total_it_mw": 3.99,
+    "total_servers": 2536
    },
    "flags": {
     "frontline": false,
@@ -2421,7 +2421,7 @@
      "source": "HIGH seismic (Aegean arc; Athens 1999; Crete 2021) - seismic design mandatory; wildfire/extreme heat; flash floods (Thessaly 2023); mountainous with sites in Attica/Thessaloniki; Attica grid needs upgrade; LNG gas import; NATO; Turkey tensions"
     },
     "site_feasibility": {
-     "label": "2.03 MW/site over 3 sites",
+     "label": "2.00 MW/site over 3 sites",
      "score": 1.0,
      "source": "Meets the 3-region rule at viable site size."
     }
@@ -2434,7 +2434,7 @@
     "data_classification": "National classified-information rules aligned to EU/NATO markings",
     "data_status": "Eurostat figures sourced; legal/regulatory columns and ordinal ratings are unverified research (Sept 2026) - see model/README.md",
     "digital_id": "gov.gr Wallet (TaxisNet-based)",
-    "elec_price_eur_mwh": "174.0",
+    "elec_price_eur_mwh": "173.8",
     "frontline": "0",
     "gdp_eur_bn": "248.4",
     "gov_cloud_maturity": "operational",
@@ -2448,7 +2448,7 @@
     "land_km2": "130048",
     "legal_instrument": "Law 4727/2020 Digital Governance Code; government cloud (G-Cloud) operated by GRNET mandatory for public bodies",
     "min_sites": "3",
-    "population_m": "10.588",
+    "population_m": "10.372",
     "procurement_vehicle": "Ministry of Digital Governance and GRNET",
     "renewables_pct": "51.2",
     "seismic": "high",
@@ -2457,36 +2457,36 @@
    },
    "phases": [
     {
-     "CAPEX (EUR mm)": 34.3,
-     "Cumulative CAPEX %": 24.2,
-     "Design MW": 1.8,
+     "CAPEX (EUR mm)": 33.9,
+     "Cumulative CAPEX %": 24.3,
+     "Design MW": 1.78,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "1",
      "Phase name": "Sovereign core",
-     "Servers": 914,
+     "Servers": 902,
      "Workloads": "Digital identity / gov.gr Wallet; Core government applications"
     },
     {
-     "CAPEX (EUR mm)": 57.6,
-     "Cumulative CAPEX %": 64.8,
-     "Design MW": 2.37,
+     "CAPEX (EUR mm)": 55.7,
+     "Cumulative CAPEX %": 64.3,
+     "Design MW": 2.3,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "2",
      "Phase name": "Security and defense",
-     "Servers": 916,
+     "Servers": 897,
      "Workloads": "Defense classified compute; Cybersecurity / SOC / telemetry"
     },
     {
-     "CAPEX (EUR mm)": 25.4,
-     "Cumulative CAPEX %": 82.7,
-     "Design MW": 1.0,
+     "CAPEX (EUR mm)": 25.1,
+     "Cumulative CAPEX %": 82.3,
+     "Design MW": 0.99,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "3",
      "Phase name": "State record",
-     "Servers": 483,
+     "Servers": 477,
      "Workloads": "Data platforms & analytics"
     },
     {
@@ -2503,9 +2503,9 @@
    ],
    "regions": [
     {
-     "Design MW": 2.47,
-     "Estimated racks": 32.6,
-     "Indicative facility CAPEX (EUR mm)": 24.7,
+     "Design MW": 2.43,
+     "Estimated racks": 32.1,
+     "Indicative facility CAPEX (EUR mm)": 24.3,
      "Notes": "GSIS G-Cloud, GR-IX, Microsoft Spata campus; seismic design mandatory.",
      "Region": "Attica / Athens",
      "Resilience role": "Active-active",
@@ -2513,9 +2513,9 @@
      "Share of design load": 0.405
     },
     {
-     "Design MW": 1.65,
-     "Estimated racks": 21.7,
-     "Indicative facility CAPEX (EUR mm)": 16.5,
+     "Design MW": 1.62,
+     "Estimated racks": 21.4,
+     "Indicative facility CAPEX (EUR mm)": 16.2,
      "Notes": "Second metro, 300 km separation, Balkan transit.",
      "Region": "Thessaloniki / Central Macedonia",
      "Resilience role": "Active-active",
@@ -2523,9 +2523,9 @@
      "Share of design load": 0.27
     },
     {
-     "Design MW": 1.37,
-     "Estimated racks": 18.1,
-     "Indicative facility CAPEX (EUR mm)": 13.7,
+     "Design MW": 1.35,
+     "Estimated racks": 17.8,
+     "Indicative facility CAPEX (EUR mm)": 13.5,
      "Notes": "Adriatic cable routes; separate seismic domain.",
      "Region": "Western Greece / Patras",
      "Resilience role": "Active-active",
@@ -2533,9 +2533,9 @@
      "Share of design load": 0.225
     },
     {
-     "Design MW": 0.61,
-     "Estimated racks": 8.0,
-     "Indicative facility CAPEX (EUR mm)": 6.1,
+     "Design MW": 0.6,
+     "Estimated racks": 7.9,
+     "Indicative facility CAPEX (EUR mm)": 6.0,
      "Notes": "East-Med cable hub and Great Sea Interconnector; island - reserve/edge only.",
      "Region": "Crete / Chania",
      "Resilience role": "Warm reserve",
@@ -2544,15 +2544,15 @@
     }
    ],
    "scale": {
-    "design_ratio": 0.4301799132434162,
-    "elec_price_eur_mwh": 174.0,
+    "design_ratio": 0.42268945409723363,
+    "elec_price_eur_mwh": 173.8,
     "gdp_eur_bn": 248.4,
     "gdp_ratio": 0.212198872373142,
     "gov_employment_k": 346.5,
     "gov_ratio": 0.4836683417085427,
     "land_km2": 130048,
-    "pop_ratio": 0.5869179600886918,
-    "population_m": 10.588,
+    "pop_ratio": 0.5748171137220128,
+    "population_m": 10.372,
     "renewables_pct": 51.2
    },
    "structural_differences": [
@@ -2562,29 +2562,29 @@
    "workloads": [
     {
      "Availability factor": "1.5",
-     "CPU cores required": "10600",
+     "CPU cores required": "10300",
      "Class": "Critical government",
      "GPU eq. required": "0",
      "Logical storage (PB)": "2.3",
-     "Notes": "Scaled from NL baseline x0.59 (identity load tracks citizens; fixed platform floor for small states).",
+     "Notes": "Scaled from NL baseline x0.57 (identity load tracks citizens; fixed platform floor for small states).",
      "Workload": "Digital identity / gov.gr Wallet"
     },
     {
      "Availability factor": "1.35",
-     "CPU cores required": "29400",
+     "CPU cores required": "29100",
      "Class": "Government",
      "GPU eq. required": "0",
-     "Logical storage (PB)": "9.6",
-     "Notes": "Scaled from NL baseline x0.54 (transactional load tracks citizens and the size of the administration).",
+     "Logical storage (PB)": "9.5",
+     "Notes": "Scaled from NL baseline x0.53 (transactional load tracks citizens and the size of the administration).",
      "Workload": "Core government applications"
     },
     {
      "Availability factor": "1.25",
-     "CPU cores required": "14000",
+     "CPU cores required": "13800",
      "Class": "Government data",
      "GPU eq. required": "32",
-     "Logical storage (PB)": "24.0",
-     "Notes": "Scaled from NL baseline x0.40 (data volume tracks citizens and economic activity).",
+     "Logical storage (PB)": "23.6",
+     "Notes": "Scaled from NL baseline x0.39 (data volume tracks citizens and economic activity).",
      "Workload": "Data platforms & analytics"
     },
     {
@@ -2598,20 +2598,20 @@
     },
     {
      "Availability factor": "1.5",
-     "CPU cores required": "17600",
+     "CPU cores required": "17200",
      "Class": "Defense",
-     "GPU eq. required": "152",
-     "Logical storage (PB)": "8.8",
-     "Notes": "Scaled from NL baseline x0.59 (tracks population; frontline states carry a higher defense share).",
+     "GPU eq. required": "144",
+     "Logical storage (PB)": "8.6",
+     "Notes": "Scaled from NL baseline x0.57 (tracks population; frontline states carry a higher defense share).",
      "Workload": "Defense classified compute"
     },
     {
      "Availability factor": "1.4",
-     "CPU cores required": "12200",
+     "CPU cores required": "12000",
      "Class": "Security",
      "GPU eq. required": "16",
-     "Logical storage (PB)": "13.9",
-     "Notes": "Scaled from NL baseline x0.56 (telemetry tracks the digital estate; high fixed floor because a SOC has a minimum viable size).",
+     "Logical storage (PB)": "13.7",
+     "Notes": "Scaled from NL baseline x0.55 (telemetry tracks the digital estate; high fixed floor because a SOC has a minimum viable size).",
      "Workload": "Cybersecurity / SOC / telemetry"
     },
     {
@@ -2627,26 +2627,26 @@
   },
   "ES": {
    "capacity": {
-    "annual_mwh": 220509,
+    "annual_mwh": 220470,
     "avg_mw_per_site": 7.55,
     "binding_constraint": "min_sites",
-    "capex_facility": 302.1,
+    "capex_facility": 302.0,
     "capex_it": 346.1,
     "capex_network": 62.3,
-    "capex_total": 710.5,
-    "cpu_servers": 8731,
-    "design_mw": 30.21,
+    "capex_total": 710.4,
+    "cpu_servers": 8730,
+    "design_mw": 30.2,
     "facility_mw": 25.17,
     "gpu_servers": 531,
     "opex_nonpower": 31.97,
-    "opex_power": 29.2,
-    "opex_total": 61.17,
-    "racks": 391.2,
+    "opex_power": 29.19,
+    "opex_total": 61.16,
+    "racks": 391.1,
     "sites": 4,
     "sites_by_mw": 3,
-    "storage_servers": 3255,
-    "total_it_mw": 20.14,
-    "total_servers": 12517
+    "storage_servers": 3253,
+    "total_it_mw": 20.13,
+    "total_servers": 12514
    },
    "flags": {
     "frontline": false,
@@ -2721,7 +2721,7 @@
     "land_km2": "502654",
     "legal_instrument": "Real Decreto 311/2022 (Esquema Nacional de Seguridad); Ley 40/2015 on the public sector",
     "min_sites": "4",
-    "population_m": "49.13",
+    "population_m": "49.128",
     "procurement_vehicle": "Direccion General de Racionalizacion y Centralizacion de la Contratacion",
     "renewables_pct": "59.7",
     "seismic": "low",
@@ -2732,23 +2732,23 @@
     {
      "CAPEX (EUR mm)": 152.5,
      "Cumulative CAPEX %": 21.5,
-     "Design MW": 8.01,
+     "Design MW": 8.0,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "1",
      "Phase name": "Sovereign core",
-     "Servers": 4063,
+     "Servers": 4062,
      "Workloads": "Digital identity / Cl@ve; Core government applications"
     },
     {
-     "CAPEX (EUR mm)": 263.1,
+     "CAPEX (EUR mm)": 262.9,
      "Cumulative CAPEX %": 58.5,
      "Design MW": 10.83,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "2",
      "Phase name": "Security and defense",
-     "Servers": 4189,
+     "Servers": 4187,
      "Workloads": "Defense classified compute; Cybersecurity / SOC / telemetry"
     },
     {
@@ -2827,15 +2827,15 @@
     }
    ],
    "scale": {
-    "design_ratio": 2.1310119231042735,
+    "design_ratio": 2.1306326593500367,
     "elec_price_eur_mwh": 132.4,
     "gdp_eur_bn": 1687.2,
     "gdp_ratio": 1.441312147616607,
     "gov_employment_k": 1400.9,
     "gov_ratio": 1.9554718034617533,
     "land_km2": 502654,
-    "pop_ratio": 2.7233924611973395,
-    "population_m": 49.13,
+    "pop_ratio": 2.7226778984704056,
+    "population_m": 49.128,
     "renewables_pct": 59.7
    },
    "structural_differences": [
@@ -2854,7 +2854,7 @@
     },
     {
      "Availability factor": "1.35",
-     "CPU cores required": "128700",
+     "CPU cores required": "128600",
      "Class": "Government",
      "GPU eq. required": "0",
      "Logical storage (PB)": "42.1",
@@ -2884,7 +2884,7 @@
      "CPU cores required": "81700",
      "Class": "Defense",
      "GPU eq. required": "696",
-     "Logical storage (PB)": "40.9",
+     "Logical storage (PB)": "40.8",
      "Notes": "Scaled from NL baseline x2.72 (tracks population; frontline states carry a higher defense share).",
      "Workload": "Defense classified compute"
     },
@@ -2910,26 +2910,26 @@
   },
   "FI": {
    "capacity": {
-    "annual_mwh": 31580,
+    "annual_mwh": 31550,
     "avg_mw_per_site": 1.44,
     "binding_constraint": "min_sites",
-    "capex_facility": 43.3,
+    "capex_facility": 43.2,
     "capex_it": 51.3,
     "capex_network": 9.2,
-    "capex_total": 103.8,
-    "cpu_servers": 1175,
-    "design_mw": 4.33,
-    "facility_mw": 3.61,
+    "capex_total": 103.7,
+    "cpu_servers": 1173,
+    "design_mw": 4.32,
+    "facility_mw": 3.6,
     "gpu_servers": 89,
     "opex_nonpower": 4.67,
     "opex_power": 2.36,
     "opex_total": 7.03,
-    "racks": 53.7,
+    "racks": 53.6,
     "sites": 3,
     "sites_by_mw": 1,
     "storage_servers": 453,
     "total_it_mw": 2.88,
-    "total_servers": 1717
+    "total_servers": 1715
    },
    "flags": {
     "frontline": true,
@@ -3024,14 +3024,14 @@
      "Workloads": "Digital identity / Suomi.fi e-Identification; Core government applications"
     },
     {
-     "CAPEX (EUR mm)": 42.3,
+     "CAPEX (EUR mm)": 42.2,
      "Cumulative CAPEX %": 56.2,
-     "Design MW": 1.74,
+     "Design MW": 1.73,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "2",
      "Phase name": "Security and defense",
-     "Servers": 658,
+     "Servers": 656,
      "Workloads": "Defense classified compute; Cybersecurity / SOC / telemetry"
     },
     {
@@ -3100,14 +3100,14 @@
     }
    ],
    "scale": {
-    "design_ratio": 0.30518880223765615,
+    "design_ratio": 0.30490435442197833,
     "elec_price_eur_mwh": 74.8,
     "gdp_eur_bn": 281.7,
     "gdp_ratio": 0.2406458226550487,
     "gov_employment_k": 116.1,
     "gov_ratio": 0.1620603015075377,
     "land_km2": 304316,
-    "pop_ratio": 0.3124168514412417,
+    "pop_ratio": 0.31234759476834406,
     "population_m": 5.636,
     "renewables_pct": 54.3
    },
@@ -3163,7 +3163,7 @@
     },
     {
      "Availability factor": "1.4",
-     "CPU cores required": "7400",
+     "CPU cores required": "7300",
      "Class": "Security",
      "GPU eq. required": "8",
      "Logical storage (PB)": "8.4",
@@ -3183,26 +3183,26 @@
   },
   "FR": {
    "capacity": {
-    "annual_mwh": 335121,
-    "avg_mw_per_site": 11.48,
+    "annual_mwh": 335653,
+    "avg_mw_per_site": 11.49,
     "binding_constraint": "capacity",
-    "capex_facility": 459.1,
-    "capex_it": 530.9,
-    "capex_network": 95.6,
-    "capex_total": 1085.5,
-    "cpu_servers": 13063,
-    "design_mw": 45.91,
-    "facility_mw": 38.26,
+    "capex_facility": 459.8,
+    "capex_it": 531.6,
+    "capex_network": 95.7,
+    "capex_total": 1087.1,
+    "cpu_servers": 13090,
+    "design_mw": 45.98,
+    "facility_mw": 38.32,
     "gpu_servers": 840,
-    "opex_nonpower": 48.85,
-    "opex_power": 51.41,
-    "opex_total": 100.26,
-    "racks": 588.5,
+    "opex_nonpower": 48.92,
+    "opex_power": 51.49,
+    "opex_total": 100.41,
+    "racks": 589.7,
     "sites": 4,
     "sites_by_mw": 4,
-    "storage_servers": 4930,
-    "total_it_mw": 30.6,
-    "total_servers": 18833
+    "storage_servers": 4941,
+    "total_it_mw": 30.65,
+    "total_servers": 18871
    },
    "flags": {
     "frontline": false,
@@ -3250,7 +3250,7 @@
      "source": "Low seismic (Alps/Pyrenees moderate); Seine/Rhone flood plains; land plentiful outside Ile-de-France; RTE grid saturation Paris/Marseille (state designated turnkey DC sites 2025); nuclear gives low import dependence; terrorism/cyber main threats"
     },
     "site_feasibility": {
-     "label": "11.48 MW/site over 4 sites",
+     "label": "11.49 MW/site over 4 sites",
      "score": 1.0,
      "source": "Meets the 3-region rule at viable site size."
     }
@@ -3277,7 +3277,7 @@
     "land_km2": "633886",
     "legal_instrument": "Doctrine 'Cloud au centre' (DINUM, revised 2023): sovereign-qualified cloud required for sensitive state data",
     "min_sites": "4",
-    "population_m": "68.636",
+    "population_m": "68.883",
     "procurement_vehicle": "UGAP and DINUM interministerial frameworks",
     "renewables_pct": "31.3",
     "seismic": "low",
@@ -3286,36 +3286,36 @@
    },
    "phases": [
     {
-     "CAPEX (EUR mm)": 223.2,
+     "CAPEX (EUR mm)": 223.8,
      "Cumulative CAPEX %": 20.6,
-     "Design MW": 11.71,
+     "Design MW": 11.74,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "1",
      "Phase name": "Sovereign core",
-     "Servers": 5945,
+     "Servers": 5960,
      "Workloads": "Digital identity / FranceConnect; Core government applications"
     },
     {
-     "CAPEX (EUR mm)": 371.4,
+     "CAPEX (EUR mm)": 372.1,
      "Cumulative CAPEX %": 54.8,
-     "Design MW": 15.31,
+     "Design MW": 15.34,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "2",
      "Phase name": "Security and defense",
-     "Servers": 5944,
+     "Servers": 5960,
      "Workloads": "Defense classified compute; Cybersecurity / SOC / telemetry"
     },
     {
-     "CAPEX (EUR mm)": 199.8,
+     "CAPEX (EUR mm)": 200.1,
      "Cumulative CAPEX %": 73.2,
-     "Design MW": 7.89,
+     "Design MW": 7.9,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "3",
      "Phase name": "State record",
-     "Servers": 3833,
+     "Servers": 3840,
      "Workloads": "Data platforms & analytics"
     },
     {
@@ -3332,9 +3332,9 @@
    ],
    "regions": [
     {
-     "Design MW": 16.53,
-     "Estimated racks": 211.9,
-     "Indicative facility CAPEX (EUR mm)": 165.3,
+     "Design MW": 16.55,
+     "Estimated racks": 212.3,
+     "Indicative facility CAPEX (EUR mm)": 165.5,
      "Notes": "DINUM/ministry estate, France-IX; RTE saturation - use designated turnkey sites.",
      "Region": "Ile-de-France",
      "Resilience role": "Active-active",
@@ -3342,9 +3342,9 @@
      "Share of design load": 0.36
     },
     {
-     "Design MW": 8.26,
-     "Estimated racks": 105.9,
-     "Indicative facility CAPEX (EUR mm)": 82.6,
+     "Design MW": 8.28,
+     "Estimated racks": 106.1,
+     "Indicative facility CAPEX (EUR mm)": 82.8,
      "Notes": "Second metro, nuclear/hydro grid, Alpine seismic zoning.",
      "Region": "Auvergne-Rhone-Alpes / Lyon",
      "Resilience role": "Active-active",
@@ -3352,9 +3352,9 @@
      "Share of design load": 0.18
     },
     {
-     "Design MW": 8.26,
-     "Estimated racks": 105.9,
-     "Indicative facility CAPEX (EUR mm)": 82.6,
+     "Design MW": 8.28,
+     "Estimated racks": 106.1,
+     "Indicative facility CAPEX (EUR mm)": 82.8,
      "Notes": "Defense-aerospace cluster, Atlantic cable landings (Amitie).",
      "Region": "Sud-Ouest / Toulouse - Bordeaux",
      "Resilience role": "Active-active",
@@ -3362,9 +3362,9 @@
      "Share of design load": 0.18
     },
     {
-     "Design MW": 8.26,
-     "Estimated racks": 105.9,
-     "Indicative facility CAPEX (EUR mm)": 82.6,
+     "Design MW": 8.28,
+     "Estimated racks": 106.1,
+     "Indicative facility CAPEX (EUR mm)": 82.8,
      "Notes": "DGA cyber cluster (Rennes), Brittany cable landings.",
      "Region": "Ouest / Rennes - Nantes",
      "Resilience role": "Active-active",
@@ -3372,9 +3372,9 @@
      "Share of design load": 0.18
     },
     {
-     "Design MW": 4.59,
-     "Estimated racks": 58.9,
-     "Indicative facility CAPEX (EUR mm)": 45.9,
+     "Design MW": 4.6,
+     "Estimated racks": 59.0,
+     "Indicative facility CAPEX (EUR mm)": 46.0,
      "Notes": "Nuclear grid headroom; reserve/expansion.",
      "Region": "Grand Est - Hauts-de-France",
      "Resilience role": "Warm reserve",
@@ -3383,15 +3383,15 @@
     }
    ],
    "scale": {
-    "design_ratio": 3.2386280133690466,
+    "design_ratio": 3.2437717780358875,
     "elec_price_eur_mwh": 153.4,
     "gdp_eur_bn": 2991.1,
     "gdp_ratio": 2.555185375021357,
     "gov_employment_k": 2271.5,
     "gov_ratio": 3.17071468453378,
     "land_km2": 633886,
-    "pop_ratio": 3.8046563192904657,
-    "population_m": 68.636,
+    "pop_ratio": 3.8175016626025267,
+    "population_m": 68.883,
     "renewables_pct": 31.3
    },
    "structural_differences": [
@@ -3400,29 +3400,29 @@
    "workloads": [
     {
      "Availability factor": "1.5",
-     "CPU cores required": "68500",
+     "CPU cores required": "68700",
      "Class": "Critical government",
      "GPU eq. required": "0",
-     "Logical storage (PB)": "15.2",
-     "Notes": "Scaled from NL baseline x3.80 (identity load tracks citizens; fixed platform floor for small states).",
+     "Logical storage (PB)": "15.3",
+     "Notes": "Scaled from NL baseline x3.82 (identity load tracks citizens; fixed platform floor for small states).",
      "Workload": "Digital identity / FranceConnect"
     },
     {
      "Availability factor": "1.35",
-     "CPU cores required": "191800",
+     "CPU cores required": "192200",
      "Class": "Government",
      "GPU eq. required": "0",
-     "Logical storage (PB)": "62.8",
+     "Logical storage (PB)": "62.9",
      "Notes": "Scaled from NL baseline x3.49 (transactional load tracks citizens and the size of the administration).",
      "Workload": "Core government applications"
     },
     {
      "Availability factor": "1.25",
-     "CPU cores required": "111300",
+     "CPU cores required": "111500",
      "Class": "Government data",
      "GPU eq. required": "256",
-     "Logical storage (PB)": "190.8",
-     "Notes": "Scaled from NL baseline x3.18 (data volume tracks citizens and economic activity).",
+     "Logical storage (PB)": "191.2",
+     "Notes": "Scaled from NL baseline x3.19 (data volume tracks citizens and economic activity).",
      "Workload": "Data platforms & analytics"
     },
     {
@@ -3436,20 +3436,20 @@
     },
     {
      "Availability factor": "1.5",
-     "CPU cores required": "114100",
+     "CPU cores required": "114500",
      "Class": "Defense",
      "GPU eq. required": "976",
-     "Logical storage (PB)": "57.1",
-     "Notes": "Scaled from NL baseline x3.80 (tracks population; frontline states carry a higher defense share).",
+     "Logical storage (PB)": "57.3",
+     "Notes": "Scaled from NL baseline x3.82 (tracks population; frontline states carry a higher defense share).",
      "Workload": "Defense classified compute"
     },
     {
      "Availability factor": "1.4",
-     "CPU cores required": "79500",
+     "CPU cores required": "79700",
      "Class": "Security",
      "GPU eq. required": "112",
-     "Logical storage (PB)": "90.4",
-     "Notes": "Scaled from NL baseline x3.61 (telemetry tracks the digital estate; high fixed floor because a SOC has a minimum viable size).",
+     "Logical storage (PB)": "90.6",
+     "Notes": "Scaled from NL baseline x3.62 (telemetry tracks the digital estate; high fixed floor because a SOC has a minimum viable size).",
      "Workload": "Cybersecurity / SOC / telemetry"
     },
     {
@@ -3662,7 +3662,7 @@
     "gov_employment_k": 110.0,
     "gov_ratio": 0.15354550530429928,
     "land_km2": 55896,
-    "pop_ratio": 0.2147450110864745,
+    "pop_ratio": 0.21469740634005763,
     "population_m": 3.874,
     "renewables_pct": 58.0
    },
@@ -3935,7 +3935,7 @@
     "gov_employment_k": 397.5,
     "gov_ratio": 0.5548576214405361,
     "land_km2": 91248,
-    "pop_ratio": 0.5288248337028825,
+    "pop_ratio": 0.5287076036355575,
     "population_m": 9.54,
     "renewables_pct": 24.1
    },
@@ -4011,26 +4011,26 @@
   },
   "IE": {
    "capacity": {
-    "annual_mwh": 38830,
+    "annual_mwh": 38860,
     "avg_mw_per_site": 1.77,
     "binding_constraint": "min_sites",
     "capex_facility": 53.2,
-    "capex_it": 65.7,
+    "capex_it": 65.8,
     "capex_network": 11.8,
     "capex_total": 130.8,
-    "cpu_servers": 1336,
+    "cpu_servers": 1338,
     "design_mw": 5.32,
-    "facility_mw": 4.43,
+    "facility_mw": 4.44,
     "gpu_servers": 125,
-    "opex_nonpower": 5.88,
-    "opex_power": 9.91,
-    "opex_total": 15.79,
-    "racks": 63.2,
+    "opex_nonpower": 5.89,
+    "opex_power": 9.92,
+    "opex_total": 15.8,
+    "racks": 63.3,
     "sites": 3,
     "sites_by_mw": 1,
     "storage_servers": 563,
     "total_it_mw": 3.55,
-    "total_servers": 2024
+    "total_servers": 2026
    },
    "flags": {
     "frontline": false,
@@ -4105,7 +4105,7 @@
     "land_km2": "68655",
     "legal_instrument": "Public Service ICT Strategy and OGCIO cloud-first policy; no sovereignty carve-out",
     "min_sites": "3",
-    "population_m": "5.420",
+    "population_m": "5.440",
     "procurement_vehicle": "Office of Government Procurement (OGP)",
     "renewables_pct": "41.3",
     "seismic": "low",
@@ -4132,7 +4132,7 @@
      "Hybrid eligible (class)": "no",
      "Phase": "2",
      "Phase name": "Security and defense",
-     "Servers": 461,
+     "Servers": 463,
      "Workloads": "Defense classified compute; Cybersecurity / SOC / telemetry"
     },
     {
@@ -4160,9 +4160,9 @@
    ],
    "regions": [
     {
-     "Design MW": 2.15,
+     "Design MW": 2.16,
      "Estimated racks": 25.6,
-     "Indicative facility CAPEX (EUR mm)": 21.5,
+     "Indicative facility CAPEX (EUR mm)": 21.6,
      "Notes": "OGCIO/Backweston estate, INEX; EirGrid connection moratorium to ~2028 is binding.",
      "Region": "Dublin",
      "Resilience role": "Active-active",
@@ -4201,15 +4201,15 @@
     }
    ],
    "scale": {
-    "design_ratio": 0.37525778083295797,
+    "design_ratio": 0.3755422286486358,
     "elec_price_eur_mwh": 255.2,
     "gdp_eur_bn": 602.4,
     "gdp_ratio": 0.5146078933880062,
     "gov_employment_k": 143.5,
     "gov_ratio": 0.20030709101060862,
     "land_km2": 68655,
-    "pop_ratio": 0.3004434589800444,
-    "population_m": 5.42,
+    "pop_ratio": 0.3014852582575926,
+    "population_m": 5.44,
     "renewables_pct": 41.3
    },
    "structural_differences": [
@@ -4264,7 +4264,7 @@
     },
     {
      "Availability factor": "1.4",
-     "CPU cores required": "5900",
+     "CPU cores required": "6000",
      "Class": "Security",
      "GPU eq. required": "8",
      "Logical storage (PB)": "6.8",
@@ -4375,10 +4375,10 @@
     "hyperscaler_regions_live": "4",
     "iso2": "IT",
     "ixp": "MIX Milan; NAMEX Rome; landings Genoa, Sicily, Bari",
-    "land_km2": "297825",
+    "land_km2": "297734",
     "legal_instrument": "Polo Strategico Nazionale (PSN) with mandatory migration deadlines for central administrations",
     "min_sites": "4",
-    "population_m": "58.94",
+    "population_m": "58.943",
     "procurement_vehicle": "Consip central purchasing; PSN concession held by TIM, CDP, Leonardo and Sogei",
     "renewables_pct": "40.7",
     "seismic": "high",
@@ -4490,9 +4490,9 @@
     "gdp_ratio": 1.9289253374337947,
     "gov_employment_k": 1158.6,
     "gov_ratio": 1.617252931323283,
-    "land_km2": 297825,
-    "pop_ratio": 3.2671840354767183,
-    "population_m": 58.94,
+    "land_km2": 297734,
+    "pop_ratio": 3.266626025271558,
+    "population_m": 58.943,
     "renewables_pct": 40.7
    },
    "structural_differences": [
@@ -4662,7 +4662,7 @@
     "land_km2": "62643",
     "legal_instrument": "Law on the Management of State Information Resources",
     "min_sites": "3",
-    "population_m": "2.89",
+    "population_m": "2.891",
     "procurement_vehicle": "CPO LT central purchasing organisation",
     "renewables_pct": "49.0",
     "seismic": "low",
@@ -4765,8 +4765,8 @@
     "gov_employment_k": 94.3,
     "gov_ratio": 0.13163037409268566,
     "land_km2": 62643,
-    "pop_ratio": 0.16019955654101997,
-    "population_m": 2.89,
+    "pop_ratio": 0.16021946353358457,
+    "population_m": 2.891,
     "renewables_pct": 49.0
    },
    "structural_differences": [
@@ -4935,7 +4935,7 @@
     "land_km2": "2586",
     "legal_instrument": "Government cloud policy operated by CTIE; hosts the Estonian data embassy under treaty",
     "min_sites": "2",
-    "population_m": "0.68",
+    "population_m": "0.682",
     "procurement_vehicle": "Centre des technologies de l'information de l'Etat (CTIE)",
     "renewables_pct": "20.5",
     "seismic": "low",
@@ -5018,8 +5018,8 @@
     "gov_employment_k": 38.3,
     "gov_ratio": 0.053461753210496926,
     "land_km2": 2586,
-    "pop_ratio": 0.037694013303769404,
-    "population_m": 0.68,
+    "pop_ratio": 0.03779649745067613,
+    "population_m": 0.682,
     "renewables_pct": 20.5
    },
    "structural_differences": [
@@ -5188,7 +5188,7 @@
     "land_km2": "63290",
     "legal_instrument": "State Information Systems Law; VRAA operates the state cloud platform",
     "min_sites": "3",
-    "population_m": "1.86",
+    "population_m": "1.861",
     "procurement_vehicle": "Electronic Procurement System (EIS) central catalogue",
     "renewables_pct": "55.5",
     "seismic": "low",
@@ -5291,8 +5291,8 @@
     "gov_employment_k": 63.0,
     "gov_ratio": 0.08793969849246232,
     "land_km2": 63290,
-    "pop_ratio": 0.10310421286031043,
-    "population_m": 1.86,
+    "pop_ratio": 0.10313677676790069,
+    "population_m": 1.861,
     "renewables_pct": 55.5
    },
    "structural_differences": [
@@ -5449,7 +5449,7 @@
     "digital_id": "Maltese eID (Identita) / MyIdentity",
     "elec_price_eur_mwh": "135.2",
     "frontline": "0",
-    "gdp_eur_bn": "24.6",
+    "gdp_eur_bn": "24.7",
     "gov_cloud_maturity": "operational",
     "gov_employment_k": "23.6",
     "grid_isolated": "1",
@@ -5539,12 +5539,12 @@
    "scale": {
     "design_ratio": 0.08824993481404225,
     "elec_price_eur_mwh": 135.2,
-    "gdp_eur_bn": 24.6,
-    "gdp_ratio": 0.02101486417221938,
+    "gdp_eur_bn": 24.7,
+    "gdp_ratio": 0.02110029044934222,
     "gov_employment_k": 23.6,
     "gov_ratio": 0.03294249022892239,
     "land_km2": 313,
-    "pop_ratio": 0.031818181818181815,
+    "pop_ratio": 0.031811128352915094,
     "population_m": 0.574,
     "renewables_pct": 10.7
    },
@@ -5715,7 +5715,7 @@
     "land_km2": "34188",
     "legal_instrument": "Rijksbreed cloudbeleid 2022 (revised 2023) permitting public cloud under conditions; Baseline Informatiebeveiliging Overheid (BIO)",
     "min_sites": "3",
-    "population_m": "18.04",
+    "population_m": "18.044",
     "procurement_vehicle": "SSC-ICT and Rijksinkoop; Logius operates DigiD and the generic services",
     "renewables_pct": "50.5",
     "seismic": "low",
@@ -5829,7 +5829,7 @@
     "gov_ratio": 1.0,
     "land_km2": 34188,
     "pop_ratio": 1.0,
-    "population_m": 18.04,
+    "population_m": 18.044,
     "renewables_pct": 50.5
    },
    "structural_differences": [
@@ -5903,26 +5903,26 @@
   },
   "PL": {
    "capacity": {
-    "annual_mwh": 180136,
+    "annual_mwh": 180082,
     "avg_mw_per_site": 6.17,
     "binding_constraint": "min_sites",
-    "capex_facility": 246.8,
-    "capex_it": 280.8,
+    "capex_facility": 246.7,
+    "capex_it": 280.7,
     "capex_network": 50.5,
-    "capex_total": 578.1,
-    "cpu_servers": 7201,
-    "design_mw": 24.68,
+    "capex_total": 577.9,
+    "cpu_servers": 7199,
+    "design_mw": 24.67,
     "facility_mw": 20.56,
     "gpu_servers": 431,
-    "opex_nonpower": 26.02,
-    "opex_power": 34.5,
-    "opex_total": 60.51,
-    "racks": 319.7,
+    "opex_nonpower": 26.01,
+    "opex_power": 34.85,
+    "opex_total": 60.85,
+    "racks": 319.6,
     "sites": 4,
     "sites_by_mw": 3,
-    "storage_servers": 2599,
+    "storage_servers": 2597,
     "total_it_mw": 16.45,
-    "total_servers": 10231
+    "total_servers": 10227
    },
    "flags": {
     "frontline": true,
@@ -5983,7 +5983,7 @@
     "data_classification": "Act on the Protection of Classified Information (2010): Zastrzezone / Poufne / Tajne / Scisle tajne",
     "data_status": "Eurostat figures sourced; legal/regulatory columns and ordinal ratings are unverified research (Sept 2026) - see model/README.md",
     "digital_id": "Profil Zaufany / mObywatel / e-dowod",
-    "elec_price_eur_mwh": "191.5",
+    "elec_price_eur_mwh": "193.5",
     "frontline": "1",
     "gdp_eur_bn": "922.9",
     "gov_cloud_maturity": "operational",
@@ -5997,7 +5997,7 @@
     "land_km2": "307236",
     "legal_instrument": "Act on Computerisation of Public Entities; Wspolna Infrastruktura Informatyczna Panstwa (WIIP) programme",
     "min_sites": "4",
-    "population_m": "36.50",
+    "population_m": "36.497",
     "procurement_vehicle": "Centralny Osrodek Informatyki (COI) and central framework agreements",
     "renewables_pct": "30.4",
     "seismic": "low",
@@ -6006,36 +6006,36 @@
    },
    "phases": [
     {
-     "CAPEX (EUR mm)": 119.1,
+     "CAPEX (EUR mm)": 119.0,
      "Cumulative CAPEX %": 20.6,
-     "Design MW": 6.25,
+     "Design MW": 6.24,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "1",
      "Phase name": "Sovereign core",
-     "Servers": 3170,
+     "Servers": 3168,
      "Workloads": "Digital identity / Profil Zaufany; Core government applications"
     },
     {
-     "CAPEX (EUR mm)": 280.7,
+     "CAPEX (EUR mm)": 280.6,
      "Cumulative CAPEX %": 69.1,
      "Design MW": 11.54,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "2",
      "Phase name": "Security and defense",
-     "Servers": 4403,
+     "Servers": 4402,
      "Workloads": "Defense classified compute; Cybersecurity / SOC / telemetry"
     },
     {
      "CAPEX (EUR mm)": 88.5,
      "Cumulative CAPEX %": 84.5,
-     "Design MW": 3.5,
+     "Design MW": 3.49,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "3",
      "Phase name": "State record",
-     "Servers": 1696,
+     "Servers": 1695,
      "Workloads": "Data platforms & analytics"
     },
     {
@@ -6103,20 +6103,20 @@
     }
    ],
    "scale": {
-    "design_ratio": 1.74084433593287,
-    "elec_price_eur_mwh": 191.5,
+    "design_ratio": 1.7403228482707944,
+    "elec_price_eur_mwh": 193.5,
     "gdp_eur_bn": 922.9,
     "gdp_ratio": 0.7883991115667179,
     "gov_employment_k": 1214.6,
     "gov_ratio": 1.6954215522054716,
     "land_km2": 307236,
-    "pop_ratio": 2.0232815964523283,
-    "population_m": 36.5,
+    "pop_ratio": 2.022666814453558,
+    "population_m": 36.497,
     "renewables_pct": 30.4
    },
    "structural_differences": [
     "**Frontline exposure.** A land border with Russia or Belarus (or a Black Sea coast facing the war) changes the threat model from *geopolitical supply disruption* to *kinetic and sabotage risk against the facilities themselves*. Defense and security workloads are scaled up 1.5x/1.25x in the baseline, and at least one site should be hardened (EMP/blast, autonomous power for weeks, not hours). A purely national footprint cannot provide the out-of-country cold copy that Estonia's Data Embassy already demonstrates; this is the first item to revisit when the EU federation layer (Dutch GOAL.md section 16) is modelled.",
-    "**Expensive power (192 EUR/MWh vs. EU average ~184).** Power is the dominant OPEX line; free cooling, heat reuse, and siting near renewables or nuclear baseload move the economics more than server choice does. The model's power OPEX line is the number to attack first."
+    "**Expensive power (194 EUR/MWh vs. EU average ~184).** Power is the dominant OPEX line; free cooling, heat reuse, and siting near renewables or nuclear baseload move the economics more than server choice does. The model's power OPEX line is the number to attack first."
    ],
    "workloads": [
     {
@@ -6130,7 +6130,7 @@
     },
     {
      "Availability factor": "1.35",
-     "CPU cores required": "102300",
+     "CPU cores required": "102200",
      "Class": "Government",
      "GPU eq. required": "0",
      "Logical storage (PB)": "33.5",
@@ -6142,7 +6142,7 @@
      "CPU cores required": "49200",
      "Class": "Government data",
      "GPU eq. required": "112",
-     "Logical storage (PB)": "84.4",
+     "Logical storage (PB)": "84.3",
      "Notes": "Scaled from NL baseline x1.41 (data volume tracks citizens and economic activity).",
      "Workload": "Data platforms & analytics"
     },
@@ -6169,7 +6169,7 @@
      "CPU cores required": "52900",
      "Class": "Security",
      "GPU eq. required": "80",
-     "Logical storage (PB)": "60.2",
+     "Logical storage (PB)": "60.1",
      "Notes": "Scaled from NL baseline x2.41 (telemetry tracks the digital estate; high fixed floor because a SOC has a minimum viable size).",
      "Workload": "Cybersecurity / SOC / telemetry"
     },
@@ -6186,26 +6186,26 @@
   },
   "PT": {
    "capacity": {
-    "annual_mwh": 46743,
-    "avg_mw_per_site": 2.13,
+    "annual_mwh": 48428,
+    "avg_mw_per_site": 2.21,
     "binding_constraint": "min_sites",
-    "capex_facility": 64.0,
-    "capex_it": 72.5,
-    "capex_network": 13.1,
-    "capex_total": 149.6,
-    "cpu_servers": 1887,
-    "design_mw": 6.4,
-    "facility_mw": 5.34,
-    "gpu_servers": 107,
-    "opex_nonpower": 6.73,
-    "opex_power": 6.21,
-    "opex_total": 12.94,
-    "racks": 83.9,
+    "capex_facility": 66.3,
+    "capex_it": 74.9,
+    "capex_network": 13.5,
+    "capex_total": 154.8,
+    "cpu_servers": 1964,
+    "design_mw": 6.63,
+    "facility_mw": 5.53,
+    "gpu_servers": 109,
+    "opex_nonpower": 6.96,
+    "opex_power": 6.44,
+    "opex_total": 13.4,
+    "racks": 87.3,
     "sites": 3,
     "sites_by_mw": 1,
-    "storage_servers": 691,
-    "total_it_mw": 4.27,
-    "total_servers": 2685
+    "storage_servers": 720,
+    "total_it_mw": 4.42,
+    "total_servers": 2793
    },
    "flags": {
     "frontline": false,
@@ -6253,7 +6253,7 @@
      "source": "Seismic/tsunami exposure Lisbon-Algarve-Azores (1755 fault systems); wildfire and drought inland; Iberian grid island with weak links to France (Apr 2025 blackout) but cheap high-renewable power and land near Sines; very low geopolitical risk"
     },
     "site_feasibility": {
-     "label": "2.13 MW/site over 3 sites",
+     "label": "2.21 MW/site over 3 sites",
      "score": 1.0,
      "source": "Meets the 3-region rule at viable site size."
     }
@@ -6280,7 +6280,7 @@
     "land_km2": "90996",
     "legal_instrument": "Cloud policy under AMA (Administrative Modernisation Agency); iAP interoperability platform",
     "min_sites": "3",
-    "population_m": "10.75",
+    "population_m": "11.387",
     "procurement_vehicle": "ESPAP shared-services agency central frameworks",
     "renewables_pct": "65.8",
     "seismic": "high",
@@ -6289,36 +6289,36 @@
    },
    "phases": [
     {
-     "CAPEX (EUR mm)": 34.6,
-     "Cumulative CAPEX %": 23.1,
-     "Design MW": 1.81,
+     "CAPEX (EUR mm)": 36.0,
+     "Cumulative CAPEX %": 23.3,
+     "Design MW": 1.89,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "1",
      "Phase name": "Sovereign core",
-     "Servers": 920,
+     "Servers": 959,
      "Workloads": "Digital identity / Chave Movel Digital; Core government applications"
     },
     {
-     "CAPEX (EUR mm)": 58.1,
-     "Cumulative CAPEX %": 61.9,
-     "Design MW": 2.39,
+     "CAPEX (EUR mm)": 60.8,
+     "Cumulative CAPEX %": 62.6,
+     "Design MW": 2.51,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "2",
      "Phase name": "Security and defense",
-     "Servers": 928,
+     "Servers": 976,
      "Workloads": "Defense classified compute; Cybersecurity / SOC / telemetry"
     },
     {
-     "CAPEX (EUR mm)": 26.9,
-     "Cumulative CAPEX %": 79.9,
-     "Design MW": 1.06,
+     "CAPEX (EUR mm)": 27.9,
+     "Cumulative CAPEX %": 80.6,
+     "Design MW": 1.1,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "3",
      "Phase name": "State record",
-     "Servers": 517,
+     "Servers": 538,
      "Workloads": "Data platforms & analytics"
     },
     {
@@ -6335,9 +6335,9 @@
    ],
    "regions": [
     {
-     "Design MW": 2.59,
-     "Estimated racks": 34.0,
-     "Indicative facility CAPEX (EUR mm)": 25.9,
+     "Design MW": 2.69,
+     "Estimated racks": 35.3,
+     "Indicative facility CAPEX (EUR mm)": 26.9,
      "Notes": "AMA/eSPap estate, GigaPIX; seismic/tsunami design mandatory.",
      "Region": "Lisbon",
      "Resilience role": "Active-active",
@@ -6345,9 +6345,9 @@
      "Share of design load": 0.405
     },
     {
-     "Design MW": 1.73,
-     "Estimated racks": 22.7,
-     "Indicative facility CAPEX (EUR mm)": 17.3,
+     "Design MW": 1.79,
+     "Estimated racks": 23.6,
+     "Indicative facility CAPEX (EUR mm)": 17.9,
      "Notes": "Atlantic cable hub, Start Campus proves 1 GW-class grid; renewables.",
      "Region": "Sines / Alentejo",
      "Resilience role": "Active-active",
@@ -6355,9 +6355,9 @@
      "Share of design load": 0.27
     },
     {
-     "Design MW": 1.44,
-     "Estimated racks": 18.9,
-     "Indicative facility CAPEX (EUR mm)": 14.4,
+     "Design MW": 1.49,
+     "Estimated racks": 19.6,
+     "Indicative facility CAPEX (EUR mm)": 14.9,
      "Notes": "300 km separation, lower seismicity, Douro hydro.",
      "Region": "Porto / North",
      "Resilience role": "Active-active",
@@ -6365,9 +6365,9 @@
      "Share of design load": 0.225
     },
     {
-     "Design MW": 0.64,
-     "Estimated racks": 8.4,
-     "Indicative facility CAPEX (EUR mm)": 6.4,
+     "Design MW": 0.66,
+     "Estimated racks": 8.7,
+     "Indicative facility CAPEX (EUR mm)": 6.6,
      "Notes": "Inland reserve between the two metros.",
      "Region": "Coimbra / Centre",
      "Resilience role": "Warm reserve",
@@ -6376,15 +6376,15 @@
     }
    ],
    "scale": {
-    "design_ratio": 0.45172683528101076,
+    "design_ratio": 0.4680114727285656,
     "elec_price_eur_mwh": 132.9,
     "gdp_eur_bn": 306.7,
     "gdp_ratio": 0.26200239193575947,
     "gov_employment_k": 342.0,
     "gov_ratio": 0.47738693467336685,
     "land_km2": 90996,
-    "pop_ratio": 0.5958980044345898,
-    "population_m": 10.75,
+    "pop_ratio": 0.6310684992241188,
+    "population_m": 11.387,
     "renewables_pct": 65.8
    },
    "structural_differences": [
@@ -6395,29 +6395,29 @@
    "workloads": [
     {
      "Availability factor": "1.5",
-     "CPU cores required": "10700",
+     "CPU cores required": "11400",
      "Class": "Critical government",
      "GPU eq. required": "0",
-     "Logical storage (PB)": "2.4",
-     "Notes": "Scaled from NL baseline x0.60 (identity load tracks citizens; fixed platform floor for small states).",
+     "Logical storage (PB)": "2.5",
+     "Notes": "Scaled from NL baseline x0.63 (identity load tracks citizens; fixed platform floor for small states).",
      "Workload": "Digital identity / Chave Movel Digital"
     },
     {
      "Availability factor": "1.35",
-     "CPU cores required": "29500",
+     "CPU cores required": "30500",
      "Class": "Government",
      "GPU eq. required": "0",
-     "Logical storage (PB)": "9.7",
-     "Notes": "Scaled from NL baseline x0.54 (transactional load tracks citizens and the size of the administration).",
+     "Logical storage (PB)": "10.0",
+     "Notes": "Scaled from NL baseline x0.55 (transactional load tracks citizens and the size of the administration).",
      "Workload": "Core government applications"
     },
     {
      "Availability factor": "1.25",
-     "CPU cores required": "15000",
+     "CPU cores required": "15600",
      "Class": "Government data",
      "GPU eq. required": "32",
-     "Logical storage (PB)": "25.7",
-     "Notes": "Scaled from NL baseline x0.43 (data volume tracks citizens and economic activity).",
+     "Logical storage (PB)": "26.8",
+     "Notes": "Scaled from NL baseline x0.45 (data volume tracks citizens and economic activity).",
      "Workload": "Data platforms & analytics"
     },
     {
@@ -6431,20 +6431,20 @@
     },
     {
      "Availability factor": "1.5",
-     "CPU cores required": "17900",
+     "CPU cores required": "18900",
      "Class": "Defense",
-     "GPU eq. required": "152",
-     "Logical storage (PB)": "8.9",
-     "Notes": "Scaled from NL baseline x0.60 (tracks population; frontline states carry a higher defense share).",
+     "GPU eq. required": "160",
+     "Logical storage (PB)": "9.5",
+     "Notes": "Scaled from NL baseline x0.63 (tracks population; frontline states carry a higher defense share).",
      "Workload": "Defense classified compute"
     },
     {
      "Availability factor": "1.4",
-     "CPU cores required": "12300",
+     "CPU cores required": "12900",
      "Class": "Security",
      "GPU eq. required": "16",
-     "Logical storage (PB)": "14.0",
-     "Notes": "Scaled from NL baseline x0.56 (telemetry tracks the digital estate; high fixed floor because a SOC has a minimum viable size).",
+     "Logical storage (PB)": "14.6",
+     "Notes": "Scaled from NL baseline x0.58 (telemetry tracks the digital estate; high fixed floor because a SOC has a minimum viable size).",
      "Workload": "Cybersecurity / SOC / telemetry"
     },
     {
@@ -6554,7 +6554,7 @@
     "land_km2": "234270",
     "legal_instrument": "Law 242/2022 establishing the Government Cloud (Cloud Guvernamental), PNRR-funded and under construction",
     "min_sites": "4",
-    "population_m": "19.04",
+    "population_m": "19.043",
     "procurement_vehicle": "Autoritatea pentru Digitalizarea Romaniei (ADR) and ONAC",
     "renewables_pct": "47.6",
     "seismic": "high",
@@ -6667,8 +6667,8 @@
     "gov_employment_k": 396.1,
     "gov_ratio": 0.5529034059184813,
     "land_km2": 234270,
-    "pop_ratio": 1.0554323725055432,
-    "population_m": 19.04,
+    "pop_ratio": 1.0553646641542895,
+    "population_m": 19.043,
     "renewables_pct": 47.6
    },
    "structural_differences": [
@@ -6744,26 +6744,26 @@
   },
   "SE": {
    "capacity": {
-    "annual_mwh": 58033,
-    "avg_mw_per_site": 2.65,
+    "annual_mwh": 57793,
+    "avg_mw_per_site": 2.64,
     "binding_constraint": "min_sites",
-    "capex_facility": 79.5,
-    "capex_it": 93.2,
-    "capex_network": 16.8,
-    "capex_total": 189.4,
-    "cpu_servers": 2210,
-    "design_mw": 7.95,
-    "facility_mw": 6.62,
-    "gpu_servers": 154,
-    "opex_nonpower": 8.52,
-    "opex_power": 5.63,
-    "opex_total": 14.15,
-    "racks": 100.4,
+    "capex_facility": 79.2,
+    "capex_it": 92.6,
+    "capex_network": 16.7,
+    "capex_total": 188.5,
+    "cpu_servers": 2207,
+    "design_mw": 7.92,
+    "facility_mw": 6.6,
+    "gpu_servers": 152,
+    "opex_nonpower": 8.48,
+    "opex_power": 5.61,
+    "opex_total": 14.09,
+    "racks": 100.2,
     "sites": 3,
     "sites_by_mw": 1,
     "storage_servers": 848,
-    "total_it_mw": 5.3,
-    "total_servers": 3212
+    "total_it_mw": 5.28,
+    "total_servers": 3207
    },
    "flags": {
     "frontline": false,
@@ -6811,7 +6811,7 @@
      "source": "No seismic/flood; cold climate favours free cooling; NATO (2024) with Baltic subsea sabotage and Gotland exposure; north-south grid bottlenecks (SE1/2 surplus vs SE3/4 constraints); 2nd-cheapest EU power, ~98% low-carbon"
     },
     "site_feasibility": {
-     "label": "2.65 MW/site over 3 sites",
+     "label": "2.64 MW/site over 3 sites",
      "score": 1.0,
      "source": "Meets the 3-region rule at viable site size."
     }
@@ -6826,7 +6826,7 @@
     "digital_id": "BankID / Freja eID+; state e-ID 2026",
     "elec_price_eur_mwh": "97.0",
     "frontline": "0",
-    "gdp_eur_bn": "601.2",
+    "gdp_eur_bn": "600.4",
     "gov_cloud_maturity": "pilot",
     "gov_employment_k": "420.4",
     "grid_isolated": "0",
@@ -6838,7 +6838,7 @@
     "land_km2": "407300",
     "legal_instrument": "Government inquiry on public-sector cloud; MSB guidance; no binding sovereignty doctrine yet",
     "min_sites": "3",
-    "population_m": "10.59",
+    "population_m": "10.588",
     "procurement_vehicle": "Kammarkollegiet and Adda central framework agreements",
     "renewables_pct": "88.1",
     "seismic": "low",
@@ -6848,7 +6848,7 @@
    "phases": [
     {
      "CAPEX (EUR mm)": 36.8,
-     "Cumulative CAPEX %": 19.4,
+     "Cumulative CAPEX %": 19.5,
      "Design MW": 1.93,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
@@ -6859,7 +6859,7 @@
     },
     {
      "CAPEX (EUR mm)": 58.6,
-     "Cumulative CAPEX %": 50.4,
+     "Cumulative CAPEX %": 50.6,
      "Design MW": 2.41,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
@@ -6869,14 +6869,14 @@
      "Workloads": "Defense classified compute; Cybersecurity / SOC / telemetry"
     },
     {
-     "CAPEX (EUR mm)": 35.2,
-     "Cumulative CAPEX %": 69.0,
-     "Design MW": 1.39,
+     "CAPEX (EUR mm)": 34.3,
+     "Cumulative CAPEX %": 68.8,
+     "Design MW": 1.36,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
      "Phase": "3",
      "Phase name": "State record",
-     "Servers": 666,
+     "Servers": 662,
      "Workloads": "Data platforms & analytics"
     },
     {
@@ -6887,15 +6887,15 @@
      "Hybrid eligible (class)": "yes",
      "Phase": "4",
      "Phase name": "Elective",
-     "Servers": 627,
+     "Servers": 626,
      "Workloads": "AI / sovereign model serving; Scientific / public research"
     }
    ],
    "regions": [
     {
-     "Design MW": 3.22,
-     "Estimated racks": 40.7,
-     "Indicative facility CAPEX (EUR mm)": 32.2,
+     "Design MW": 3.21,
+     "Estimated racks": 40.6,
+     "Indicative facility CAPEX (EUR mm)": 32.1,
      "Notes": "State IT providers, Netnod, all three hyperscaler regions; SE3 grid constraints.",
      "Region": "Stockholm - Malardalen",
      "Resilience role": "Active-active",
@@ -6903,9 +6903,9 @@
      "Share of design load": 0.405
     },
     {
-     "Design MW": 2.15,
+     "Design MW": 2.14,
      "Estimated racks": 27.1,
-     "Indicative facility CAPEX (EUR mm)": 21.5,
+     "Indicative facility CAPEX (EUR mm)": 21.4,
      "Notes": "Azure campus proves grid; SE2 surplus power.",
      "Region": "Gavle - Sandviken",
      "Resilience role": "Active-active",
@@ -6913,9 +6913,9 @@
      "Share of design load": 0.27
     },
     {
-     "Design MW": 1.79,
-     "Estimated racks": 22.6,
-     "Indicative facility CAPEX (EUR mm)": 17.9,
+     "Design MW": 1.78,
+     "Estimated racks": 22.5,
+     "Indicative facility CAPEX (EUR mm)": 17.8,
      "Notes": "SE1 cheapest power, free cooling, Meta campus; adds ~15 ms.",
      "Region": "Lulea - Boden / North",
      "Resilience role": "Active-active",
@@ -6934,15 +6934,15 @@
     }
    ],
    "scale": {
-    "design_ratio": 0.5608362765780928,
+    "design_ratio": 0.5585132860833905,
     "elec_price_eur_mwh": 97.0,
-    "gdp_eur_bn": 601.2,
-    "gdp_ratio": 0.5135827780625322,
+    "gdp_eur_bn": 600.4,
+    "gdp_ratio": 0.5128993678455493,
     "gov_employment_k": 420.4,
     "gov_ratio": 0.586823003908431,
     "land_km2": 407300,
-    "pop_ratio": 0.5870288248337029,
-    "population_m": 10.59,
+    "pop_ratio": 0.5867878519175349,
+    "population_m": 10.588,
     "renewables_pct": 88.1
    },
    "structural_differences": [
@@ -6970,9 +6970,9 @@
     },
     {
      "Availability factor": "1.25",
-     "CPU cores required": "19300",
+     "CPU cores required": "19200",
      "Class": "Government data",
-     "GPU eq. required": "48",
+     "GPU eq. required": "40",
      "Logical storage (PB)": "33.0",
      "Notes": "Scaled from NL baseline x0.55 (data volume tracks citizens and economic activity).",
      "Workload": "Data platforms & analytics"
@@ -7006,7 +7006,7 @@
     },
     {
      "Availability factor": "1.15",
-     "CPU cores required": "13400",
+     "CPU cores required": "13300",
      "Class": "Research",
      "GPU eq. required": "64",
      "Logical storage (PB)": "10.3",
@@ -7017,26 +7017,26 @@
   },
   "SI": {
    "capacity": {
-    "annual_mwh": 10265,
+    "annual_mwh": 10277,
     "avg_mw_per_site": 0.47,
     "binding_constraint": "min_sites",
     "capex_facility": 14.1,
-    "capex_it": 16.5,
+    "capex_it": 16.6,
     "capex_network": 3.0,
-    "capex_total": 33.5,
+    "capex_total": 33.6,
     "cpu_servers": 390,
     "design_mw": 1.41,
     "facility_mw": 1.17,
     "gpu_servers": 27,
     "opex_nonpower": 1.51,
     "opex_power": 1.54,
-    "opex_total": 3.05,
+    "opex_total": 3.06,
     "racks": 17.8,
     "sites": 3,
     "sites_by_mw": 1,
-    "storage_servers": 153,
+    "storage_servers": 154,
     "total_it_mw": 0.94,
-    "total_servers": 570
+    "total_servers": 571
    },
    "flags": {
     "frontline": false,
@@ -7099,7 +7099,7 @@
     "digital_id": "SI-PASS / smsPASS / eOsebna eID card",
     "elec_price_eur_mwh": "150.3",
     "frontline": "0",
-    "gdp_eur_bn": "70.5",
+    "gdp_eur_bn": "71.2",
     "gov_cloud_maturity": "operational",
     "gov_employment_k": "51.4",
     "grid_isolated": "0",
@@ -7111,7 +7111,7 @@
     "land_km2": "20145",
     "legal_instrument": "State cloud (Drzavni racunalniski oblak, DRO) under the Ministry of Digital Transformation",
     "min_sites": "3",
-    "population_m": "2.13",
+    "population_m": "2.131",
     "procurement_vehicle": "Ministry of Public Administration central procurement",
     "renewables_pct": "43.1",
     "seismic": "moderate",
@@ -7132,7 +7132,7 @@
     },
     {
      "CAPEX (EUR mm)": 13.8,
-     "Cumulative CAPEX %": 60.2,
+     "Cumulative CAPEX %": 60.1,
      "Design MW": 0.56,
      "Hybrid eligible": "no",
      "Hybrid eligible (class)": "no",
@@ -7149,7 +7149,7 @@
      "Hybrid eligible (class)": "no",
      "Phase": "3",
      "Phase name": "State record",
-     "Servers": 109,
+     "Servers": 110,
      "Workloads": "Data platforms & analytics"
     },
     {
@@ -7207,15 +7207,15 @@
     }
    ],
    "scale": {
-    "design_ratio": 0.09920117571763813,
+    "design_ratio": 0.0993196956408372,
     "elec_price_eur_mwh": 150.3,
-    "gdp_eur_bn": 70.5,
-    "gdp_ratio": 0.06022552537160431,
+    "gdp_eur_bn": 71.2,
+    "gdp_ratio": 0.06082350931146421,
     "gov_employment_k": 51.4,
     "gov_ratio": 0.07174762702400893,
     "land_km2": 20145,
-    "pop_ratio": 0.1180709534368071,
-    "population_m": 2.13,
+    "pop_ratio": 0.11810019951230324,
+    "population_m": 2.131,
     "renewables_pct": 43.1
    },
    "structural_differences": [
@@ -7246,7 +7246,7 @@
      "CPU cores required": "3100",
      "Class": "Government data",
      "GPU eq. required": "8",
-     "Logical storage (PB)": "5.3",
+     "Logical storage (PB)": "5.4",
      "Notes": "Scaled from NL baseline x0.09 (data volume tracks citizens and economic activity).",
      "Workload": "Data platforms & analytics"
     },
@@ -7384,7 +7384,7 @@
     "land_km2": "48702",
     "legal_instrument": "Act 95/2019 on IT in Public Administration; government cloud (vladny cloud) catalogue",
     "min_sites": "3",
-    "population_m": "5.42",
+    "population_m": "5.419",
     "procurement_vehicle": "MIRRI (Ministry of Investments, Regional Development and Informatisation) central catalogue",
     "renewables_pct": "24.9",
     "seismic": "moderate",
@@ -7487,8 +7487,8 @@
     "gov_employment_k": 210.2,
     "gov_ratio": 0.2934115019542155,
     "land_km2": 48702,
-    "pop_ratio": 0.3004434589800444,
-    "population_m": 5.42,
+    "pop_ratio": 0.30032143648858345,
+    "population_m": 5.419,
     "renewables_pct": 24.9
    },
    "structural_differences": [
@@ -7618,10 +7618,10 @@
  "provenance": "Every figure is a scaled working assumption derived from the Dutch reference case, not a sourced forecast. Legal and regulatory entries were researched in September 2026 and will date. See /methodology.",
  "schema_version": 1,
  "totals": {
-  "capex_total": 7235.7,
-  "design_mw": 305.7,
-  "opex_total": 734.6,
-  "servers": 125089,
+  "capex_total": 7253.1,
+  "design_mw": 306.4,
+  "opex_total": 736.7,
+  "servers": 125371,
   "sites": 86
  }
 }

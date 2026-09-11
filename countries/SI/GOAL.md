@@ -20,7 +20,7 @@ adjusted below for what is structurally different about Slovenia.
 | | |
 |---|---|
 | Population | 2.13 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 70 bn (2025, current prices) |
+| GDP | EUR 71 bn (2025, current prices) |
 | Public administration employment (NACE O) | 51 k (Eurostat LFS 2025) |
 | Non-household electricity price | 150.3 EUR/MWh (Eurostat, band IC, 2025-S2) |
 | Renewables in electricity | 43.1% (2024) |
@@ -47,7 +47,7 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 |---|---|---:|---:|---:|---:|
 | Digital identity / SI-PASS | Critical government | 2,100 | 0 | 0.5 | 1.5 |
 | Core government applications | Government | 5,200 | 0 | 1.7 | 1.35 |
-| Data platforms & analytics | Government data | 3,100 | 8 | 5.3 | 1.25 |
+| Data platforms & analytics | Government data | 3,100 | 8 | 5.4 | 1.25 |
 | AI / sovereign model serving | AI | 1,100 | 32 | 0.7 | 1.3 |
 | Defense classified compute | Defense | 3,500 | 32 | 1.8 | 1.5 |
 | Cybersecurity / SOC / telemetry | Security | 3,300 | 8 | 3.8 | 1.4 |
@@ -57,7 +57,7 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 
 | Metric | Value |
 |---|---:|
-| Physical servers | 570 (CPU 390 / GPU 27 / storage 153) |
+| Physical servers | 571 (CPU 390 / GPU 27 / storage 154) |
 | Rack equivalents | ~18 |
 | IT critical load | 0.9 MW |
 | Facility load (PUE 1.25) | 1.2 MW |
@@ -65,7 +65,7 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 | Sites by capacity / recommended | 1 / **3** (minimum 3) |
 | Average design MW per site | 0.5 MW |
 | Total CAPEX | **EUR 34 m** (facility EUR 14 m, IT EUR 17 m, network EUR 3 m) |
-| Annual energy | 10,265 MWh |
+| Annual energy | 10,277 MWh |
 | Annual OPEX | **EUR 3 m / yr** (power EUR 2 m, non-power EUR 2 m) |
 
 Full table: `facility_summary.csv`.
@@ -153,7 +153,7 @@ therefore necessary but not sufficient; what matters is who holds the keys and w
 An operating government platform already exists; the sovereign core should be its next generation, not a parallel build beside it.
 
 Against that starting point, the modelled sovereign core is **1.4 MW of design load across
-3 site(s)**, or roughly 570 servers. The gap between what runs today and that
+3 site(s)**, or roughly 571 servers. The gap between what runs today and that
 figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
 
 ## 12. Migration path and cost
@@ -166,7 +166,7 @@ are in `migration_phases.csv` in this directory.
 |---|---|---:|---:|---:|---:|---|
 | 1 | Sovereign core | 169 | 0.3 | EUR 6 m | 19% | no |
 | 2 | Security and defense | 215 | 0.6 | EUR 14 m | 60% | no |
-| 3 | State record | 109 | 0.2 | EUR 6 m | 78% | no |
+| 3 | State record | 110 | 0.2 | EUR 6 m | 78% | no |
 | 4 | Elective | 77 | 0.3 | EUR 7 m | 100% | no |
 
 **Phase 1 is the number that matters: EUR 6 m for 0.3 MW,

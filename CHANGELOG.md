@@ -63,18 +63,63 @@ The opposite error surfaced immediately after: Poland's `isap.sejm.gov.pl` publi
 corrected fetcher sailed straight past a real prohibition and retrieved the page. It is now marked
 `forbidden` by hand and never attempted. Being *able* to fetch something is not permission to.
 
-### Eurostat — reported, not applied
+### Eurostat — the columns were already right; the pipeline was wrong
 
-**98 of 162 values differ from `eu27_parameters.csv` by more than 0.5%**, almost all of it vintage
-drift: the CSV holds 2023-24 figures, the API now serves 2025-26. `model/eurostat_pull.csv` carries
-the dataset code, period and the API's `updated` vintage per value. Adopting the newer vintage
-wholesale is a separate decision — a column must not mix vintages across countries — so only the
-one outright error was corrected.
+**Superseded later the same day. The first version of this entry reported that 98 of 162 values
+differed from the CSV, "almost all of it vintage drift", and that the published OPEX was ~12%
+overstated. That finding was false, and it was my measurement that was broken.** `nrg_pc_205`
+band IC is 500-1,999 MWh/yr; the fetcher was requesting `MWH2000-19999`, which is band **ID**.
+Against the correct band the electricity column matches at **0.00%**.
 
-Two filters were calibrated against the existing column rather than assumed, and both would have
-been wrong by guess: `renewables_pct` is the renewable share **of electricity** (`REN_ELC`), and
-`elec_price_eur_mwh` excludes VAT and other recoverable taxes (`X_VAT`). The period used is the
-most recent one all 27 report, not the latest — `nama_10_a64_e` had 10 of 27 states for 2025.
+Recalibrating every column against period as well as filter gives the real picture. Each column
+was taken from one specific vintage, and once pinned to it, **five of the six reproduce exactly**:
+
+| Column | Dataset | Pinned period | Cells differing |
+|---|---|---|---|
+| `population_m` | `tps00001` | 2025 | 0/27 |
+| `gdp_eur_bn` | `nama_10_gdp` B1GQ CP_MEUR | 2025 | 0/27 |
+| `elec_price_eur_mwh` | `nrg_pc_205` band IC, X_VAT | 2025-S2 | 0/27 |
+| `renewables_pct` | `nrg_ind_ren` REN_ELC | 2024 | 0/27 |
+| `land_km2` | `reg_area3` L0008 | 2019 | 0/27 |
+| `gov_employment_k` | `nama_10_a64_e` NACE O | 2023 | **26/27** |
+
+So nothing needed a vintage bump. What the figures lacked was a *recorded provenance* — which is
+what ROADMAP step 4 asked for all along, and what `eurostat_pull.csv` now carries. 28 cells were
+nudged to match their pinned vintage exactly (mostly trailing precision; materially CZ +4.8%,
+PT +5.9%, EL −2.0% population, DE +1.3% GDP). EU-27 totals move +0.23%; sites stay at 86.
+
+**`gov_employment_k` is a provenance defect, not stale data.** It reproduces from no period at
+all, and **9 of 27 values match no year of the official series within 10%** — Sweden is 40% out.
+The README claims this column is "Eurostat NACE section O"; for a third of the states that is not
+where the number came from. The 27 values are held unchanged pending a rebuild, and
+`tests/test_fetch.py` now enforces that every *other* column reproduces from its stated source,
+with this one named as a known defect so it is documented rather than silently tolerated.
+
+The lesson is the expensive one: a measurement tool that is itself mis-specified does not fail
+quietly, it manufactures confident findings. Being wrong with evidence attached is worse than
+having no evidence. The periods and filters are now pinned in `SERIES` with the reasoning beside
+them, and bumping a pin is a deliberate edit with a diff.
+
+### Added — `confidence: absence`, because 39 cells assert that nothing exists
+
+22 of the 81 tier-1 cells — 21 of the 27 `certification_scheme` cells — say some version of "No
+national scheme". No instrument enacts the absence of a scheme, so under a rule admitting only
+`primary` those cells could never be sourced. Tier 1 was capped at **59/81 = 72.8%**, the ledger
+at 167/189, and `sources.py --strict` — the end state ROADMAP step 3 asks for — **could never
+pass**. That is an unsatisfiable specification, not a research backlog.
+
+`confidence: absence` closes it. Evidence of absence is not an instrument but an **authoritative
+enumeration**: the competent authority's own register of schemes, showing the category empty. A
+claim about a complete list is evidenced by the complete list.
+
+It is also the easiest value to abuse — it would let any hard-to-find instrument be waved
+through — so `sources.py` refuses an `absence` row whose cell does not actually assert an
+absence, and `tests/test_sources.py` asserts that refusal. The coverage report now prints, per
+column, how many cells are negative and how many were sourced that way.
+
+No `absence` rows are recorded yet: ENISA's NCCA directory enumerates authorities, not schemes,
+and inventing a weaker citation is precisely what this value exists to prevent. The mechanism is
+unblocked; finding the right register per state is the next batch.
 
 ### Added — deployment as a command
 

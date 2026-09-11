@@ -20,7 +20,7 @@ adjusted below for what is structurally different about Sweden.
 | | |
 |---|---|
 | Population | 10.59 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 601 bn (2025, current prices) |
+| GDP | EUR 600 bn (2025, current prices) |
 | Public administration employment (NACE O) | 420 k (Eurostat LFS 2025) |
 | Non-household electricity price | 97.0 EUR/MWh (Eurostat, band IC, 2025-S2) |
 | Renewables in electricity | 88.1% (2024) |
@@ -47,26 +47,26 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 |---|---|---:|---:|---:|---:|
 | Digital identity / BankID | Critical government | 10,600 | 0 | 2.3 | 1.5 |
 | Core government applications | Government | 32,300 | 0 | 10.6 | 1.35 |
-| Data platforms & analytics | Government data | 19,300 | 48 | 33.0 | 1.25 |
+| Data platforms & analytics | Government data | 19,200 | 40 | 33.0 | 1.25 |
 | AI / sovereign model serving | AI | 9,200 | 264 | 6.2 | 1.3 |
 | Defense classified compute | Defense | 17,600 | 152 | 8.8 | 1.5 |
 | Cybersecurity / SOC / telemetry | Security | 12,900 | 16 | 14.7 | 1.4 |
-| Scientific / public research | Research | 13,400 | 64 | 10.3 | 1.15 |
+| Scientific / public research | Research | 13,300 | 64 | 10.3 | 1.15 |
 
 ## 5. Capacity model output
 
 | Metric | Value |
 |---|---:|
-| Physical servers | 3,212 (CPU 2,210 / GPU 154 / storage 848) |
+| Physical servers | 3,207 (CPU 2,207 / GPU 152 / storage 848) |
 | Rack equivalents | ~100 |
 | IT critical load | 5.3 MW |
 | Facility load (PUE 1.25) | 6.6 MW |
 | Facility design load (+20% headroom) | **7.9 MW** |
 | Sites by capacity / recommended | 1 / **3** (minimum 3) |
 | Average design MW per site | 2.6 MW |
-| Total CAPEX | **EUR 189 m** (facility EUR 79 m, IT EUR 93 m, network EUR 17 m) |
-| Annual energy | 58,033 MWh |
-| Annual OPEX | **EUR 14 m / yr** (power EUR 6 m, non-power EUR 9 m) |
+| Total CAPEX | **EUR 188 m** (facility EUR 79 m, IT EUR 93 m, network EUR 17 m) |
+| Annual energy | 57,793 MWh |
+| Annual OPEX | **EUR 14 m / yr** (power EUR 6 m, non-power EUR 8 m) |
 
 Full table: `facility_summary.csv`.
 
@@ -77,8 +77,8 @@ Site posture: standard. Separation target: 50-100 km failure domains, dual fibre
 | Region | Role | Share | Design MW | Racks | Facility CAPEX | Notes |
 |---|---|---:|---:|---:|---:|---|
 | Stockholm - Malardalen | Primary civil cloud | 40% | 3.2 | 41 | EUR 32 m | State IT providers, Netnod, all three hyperscaler regions; SE3 grid constraints. |
-| Gavle - Sandviken | Sovereign secondary | 27% | 2.1 | 27 | EUR 22 m | Azure campus proves grid; SE2 surplus power. |
-| Lulea - Boden / North | Government / continuity | 22% | 1.8 | 23 | EUR 18 m | SE1 cheapest power, free cooling, Meta campus; adds ~15 ms. |
+| Gavle - Sandviken | Sovereign secondary | 27% | 2.1 | 27 | EUR 21 m | Azure campus proves grid; SE2 surplus power. |
+| Lulea - Boden / North | Government / continuity | 22% | 1.8 | 22 | EUR 18 m | SE1 cheapest power, free cooling, Meta campus; adds ~15 ms. |
 | Gothenburg / West | Defense / industrial | 10% | 0.8 | 10 | EUR 8 m | Naval/defense cluster, North Sea routing away from the Baltic. |
 
 These regions encode only the obvious constraints (capital estate, second metro, distance from the frontier,
@@ -153,7 +153,7 @@ therefore necessary but not sufficient; what matters is who holds the keys and w
 What exists is a pilot rather than an operating platform; the sovereign core would be its first production incarnation.
 
 Against that starting point, the modelled sovereign core is **7.9 MW of design load across
-3 site(s)**, or roughly 3,212 servers. The gap between what runs today and that
+3 site(s)**, or roughly 3,207 servers. The gap between what runs today and that
 figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
 
 ## 12. Migration path and cost
@@ -164,13 +164,13 @@ are in `migration_phases.csv` in this directory.
 
 | Phase | Scope | Servers | Design MW | CAPEX | Cumulative | Hybrid-eligible |
 |---|---|---:|---:|---:|---:|---|
-| 1 | Sovereign core | 980 | 1.9 | EUR 37 m | 19% | no |
-| 2 | Security and defense | 939 | 2.4 | EUR 59 m | 50% | no |
-| 3 | State record | 666 | 1.4 | EUR 35 m | 69% | no |
-| 4 | Elective | 627 | 2.2 | EUR 59 m | 100% | yes |
+| 1 | Sovereign core | 980 | 1.9 | EUR 37 m | 20% | no |
+| 2 | Security and defense | 939 | 2.4 | EUR 59 m | 51% | no |
+| 3 | State record | 662 | 1.4 | EUR 34 m | 69% | no |
+| 4 | Elective | 626 | 2.2 | EUR 59 m | 100% | yes |
 
 **Phase 1 is the number that matters: EUR 37 m for 1.9 MW,
-19% of total CAPEX.** That is the floor - identity and core government
+20% of total CAPEX.** That is the floor - identity and core government
 services - below which no hybrid arrangement helps, because these workloads cannot be foreign-hosted under
 any sovereignty posture worth the name. It is also, notably, a small fraction of the full build: sovereignty
 for the workloads that define the state is cheaper than the headline figure suggests.

@@ -19,7 +19,7 @@ adjusted below for what is structurally different about Czechia.
 
 | | |
 |---|---|
-| Population | 10.41 m (Eurostat, 1 Jan 2025) |
+| Population | 10.91 m (Eurostat, 1 Jan 2025) |
 | GDP | EUR 347 bn (2025, current prices) |
 | Public administration employment (NACE O) | 343 k (Eurostat LFS 2025) |
 | Non-household electricity price | 182.5 EUR/MWh (Eurostat, band IC, 2025-S2) |
@@ -30,8 +30,8 @@ adjusted below for what is structurally different about Czechia.
 | National digital identity (anchor workload) | Identita obcana (NIA) / eDoklady / BankID |
 | Internet exchange / cable landings | NIX.CZ Prague; landlocked |
 
-Relative to the Dutch baseline: population x0.58, public administration x0.48,
-GDP x0.30. Resulting design load: x0.46 the Dutch figure.
+Relative to the Dutch baseline: population x0.60, public administration x0.48,
+GDP x0.30. Resulting design load: x0.47 the Dutch figure.
 
 ## 3. What is structurally different from the Dutch case
 
@@ -44,28 +44,28 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 
 | Workload | Class | CPU cores | GPU eq. | Storage (PB) | Avail. factor |
 |---|---|---:|---:|---:|---:|
-| Digital identity / Identita obcana | Critical government | 10,400 | 0 | 2.3 | 1.5 |
-| Core government applications | Government | 29,000 | 0 | 9.5 | 1.35 |
-| Data platforms & analytics | Government data | 15,300 | 32 | 26.2 | 1.25 |
+| Digital identity / Identita obcana | Critical government | 10,900 | 0 | 2.4 | 1.5 |
+| Core government applications | Government | 29,800 | 0 | 9.7 | 1.35 |
+| Data platforms & analytics | Government data | 15,800 | 40 | 27.0 | 1.25 |
 | AI / sovereign model serving | AI | 5,300 | 152 | 3.6 | 1.3 |
-| Defense classified compute | Defense | 17,300 | 144 | 8.7 | 1.5 |
-| Cybersecurity / SOC / telemetry | Security | 12,000 | 16 | 13.7 | 1.4 |
+| Defense classified compute | Defense | 18,100 | 152 | 9.1 | 1.5 |
+| Cybersecurity / SOC / telemetry | Security | 12,500 | 16 | 14.2 | 1.4 |
 | Scientific / public research | Research | 7,700 | 40 | 5.9 | 1.15 |
 
 ## 5. Capacity model output
 
 | Metric | Value |
 |---|---:|
-| Physical servers | 2,692 (CPU 1,883 / GPU 111 / storage 698) |
-| Rack equivalents | ~84 |
-| IT critical load | 4.3 MW |
-| Facility load (PUE 1.25) | 5.4 MW |
-| Facility design load (+20% headroom) | **6.5 MW** |
+| Physical servers | 2,781 (CPU 1,945 / GPU 116 / storage 720) |
+| Rack equivalents | ~87 |
+| IT critical load | 4.5 MW |
+| Facility load (PUE 1.25) | 5.6 MW |
+| Facility design load (+20% headroom) | **6.7 MW** |
 | Sites by capacity / recommended | 1 / **3** (minimum 3) |
 | Average design MW per site | 2.2 MW |
-| Total CAPEX | **EUR 152 m** (facility EUR 65 m, IT EUR 74 m, network EUR 13 m) |
-| Annual energy | 47,162 MWh |
-| Annual OPEX | **EUR 15 m / yr** (power EUR 9 m, non-power EUR 7 m) |
+| Total CAPEX | **EUR 157 m** (facility EUR 67 m, IT EUR 76 m, network EUR 14 m) |
+| Annual energy | 48,835 MWh |
+| Annual OPEX | **EUR 16 m / yr** (power EUR 9 m, non-power EUR 7 m) |
 
 Full table: `facility_summary.csv`.
 
@@ -75,10 +75,10 @@ Site posture: standard. Separation target: 50-100 km failure domains, dual fibre
 
 | Region | Role | Share | Design MW | Racks | Facility CAPEX | Notes |
 |---|---|---:|---:|---:|---:|---|
-| Prague - Central Bohemia | Primary civil cloud | 40% | 2.6 | 34 | EUR 26 m | SPCSS/NAKIT estate, NIX.CZ; Vltava flood zoning applies. |
-| Brno / South Moravia | Sovereign secondary | 27% | 1.7 | 23 | EUR 17 m | Second metro, research cluster, 200 km separation. |
-| Ostrava / Moravia-Silesia | Government / continuity | 22% | 1.4 | 19 | EUR 14 m | Industrial grid; post-coal land availability. |
-| Plzen / West Bohemia | Strategic reserve | 10% | 0.7 | 8 | EUR 6 m | Western reserve, furthest from the eastern frontier. |
+| Prague - Central Bohemia | Primary civil cloud | 40% | 2.7 | 35 | EUR 27 m | SPCSS/NAKIT estate, NIX.CZ; Vltava flood zoning applies. |
+| Brno / South Moravia | Sovereign secondary | 27% | 1.8 | 24 | EUR 18 m | Second metro, research cluster, 200 km separation. |
+| Ostrava / Moravia-Silesia | Government / continuity | 22% | 1.5 | 20 | EUR 15 m | Industrial grid; post-coal land availability. |
+| Plzen / West Bohemia | Strategic reserve | 10% | 0.7 | 9 | EUR 7 m | Western reserve, furthest from the eastern frontier. |
 
 These regions encode only the obvious constraints (capital estate, second metro, distance from the frontier,
 fault or flood zone). They are to be replaced by the scored site selection in workstream A of the Dutch
@@ -151,8 +151,8 @@ therefore necessary but not sufficient; what matters is who holds the keys and w
 
 An operating government platform already exists; the sovereign core should be its next generation, not a parallel build beside it.
 
-Against that starting point, the modelled sovereign core is **6.5 MW of design load across
-3 site(s)**, or roughly 2,692 servers. The gap between what runs today and that
+Against that starting point, the modelled sovereign core is **6.7 MW of design load across
+3 site(s)**, or roughly 2,781 servers. The gap between what runs today and that
 figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
 
 ## 12. Migration path and cost
@@ -163,12 +163,12 @@ are in `migration_phases.csv` in this directory.
 
 | Phase | Scope | Servers | Design MW | CAPEX | Cumulative | Hybrid-eligible |
 |---|---|---:|---:|---:|---:|---|
-| 1 | Sovereign core | 902 | 1.8 | EUR 34 m | 22% | no |
-| 2 | Security and defense | 900 | 2.3 | EUR 56 m | 59% | no |
-| 3 | State record | 527 | 1.1 | EUR 27 m | 77% | no |
+| 1 | Sovereign core | 931 | 1.8 | EUR 35 m | 22% | no |
+| 2 | Security and defense | 941 | 2.4 | EUR 59 m | 60% | no |
+| 3 | State record | 546 | 1.1 | EUR 29 m | 78% | no |
 | 4 | Elective | 363 | 1.3 | EUR 34 m | 100% | no |
 
-**Phase 1 is the number that matters: EUR 34 m for 1.8 MW,
+**Phase 1 is the number that matters: EUR 35 m for 1.8 MW,
 22% of total CAPEX.** That is the floor - identity and core government
 services - below which no hybrid arrangement helps, because these workloads cannot be foreign-hosted under
 any sovereignty posture worth the name. It is also, notably, a small fraction of the full build: sovereignty

@@ -19,12 +19,12 @@ adjusted below for what is structurally different about Belgium.
 
 | | |
 |---|---|
-| Population | 11.90 m (Eurostat, 1 Jan 2025) |
+| Population | 11.88 m (Eurostat, 1 Jan 2025) |
 | GDP | EUR 642 bn (2025, current prices) |
 | Public administration employment (NACE O) | 447 k (Eurostat LFS 2025) |
 | Non-household electricity price | 186.6 EUR/MWh (Eurostat, band IC, 2025-S2) |
 | Renewables in electricity | 31.3% (2024) |
-| Land area | 30,452 km2 |
+| Land area | 30,451 km2 |
 | Live hyperscaler regions in-country | 2 |
 | Existing government / sovereign cloud | Federal G-Cloud (BOSA/Smals community cloud); Smals selected Google Cloud as public-cloud pillar (Jun 2026) under federal sovereignty/portability rules |
 | National digital identity (anchor workload) | Belgian eID card + itsme (CSAM) |
@@ -45,7 +45,7 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 | Workload | Class | CPU cores | GPU eq. | Storage (PB) | Avail. factor |
 |---|---|---:|---:|---:|---:|
 | Digital identity / Belgian eID card + itsme | Critical government | 11,900 | 0 | 2.6 | 1.5 |
-| Core government applications | Government | 35,300 | 0 | 11.6 | 1.35 |
+| Core government applications | Government | 35,300 | 0 | 11.5 | 1.35 |
 | Data platforms & analytics | Government data | 21,100 | 48 | 36.2 | 1.25 |
 | AI / sovereign model serving | AI | 9,900 | 280 | 6.6 | 1.3 |
 | Defense classified compute | Defense | 19,800 | 168 | 9.9 | 1.5 |
@@ -56,7 +56,7 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 
 | Metric | Value |
 |---|---:|
-| Physical servers | 3,528 (CPU 2,430 / GPU 167 / storage 931) |
+| Physical servers | 3,527 (CPU 2,430 / GPU 167 / storage 930) |
 | Rack equivalents | ~110 |
 | IT critical load | 5.8 MW |
 | Facility load (PUE 1.25) | 7.3 MW |
@@ -64,7 +64,7 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 | Sites by capacity / recommended | 1 / **3** (minimum 3) |
 | Average design MW per site | 2.9 MW |
 | Total CAPEX | **EUR 207 m** (facility EUR 87 m, IT EUR 102 m, network EUR 18 m) |
-| Annual energy | 63,564 MWh |
+| Annual energy | 63,552 MWh |
 | Annual OPEX | **EUR 21 m / yr** (power EUR 12 m, non-power EUR 9 m) |
 
 Full table: `facility_summary.csv`.
@@ -152,7 +152,7 @@ therefore necessary but not sufficient; what matters is who holds the keys and w
 An operating government platform already exists; the sovereign core should be its next generation, not a parallel build beside it.
 
 Against that starting point, the modelled sovereign core is **8.7 MW of design load across
-3 site(s)**, or roughly 3,528 servers. The gap between what runs today and that
+3 site(s)**, or roughly 3,527 servers. The gap between what runs today and that
 figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
 
 ## 12. Migration path and cost
@@ -163,12 +163,12 @@ are in `migration_phases.csv` in this directory.
 
 | Phase | Scope | Servers | Design MW | CAPEX | Cumulative | Hybrid-eligible |
 |---|---|---:|---:|---:|---:|---|
-| 1 | Sovereign core | 1,079 | 2.1 | EUR 41 m | 20% | no |
+| 1 | Sovereign core | 1,078 | 2.1 | EUR 40 m | 20% | no |
 | 2 | Security and defense | 1,050 | 2.7 | EUR 66 m | 51% | no |
 | 3 | State record | 728 | 1.5 | EUR 38 m | 70% | no |
 | 4 | Elective | 671 | 2.4 | EUR 63 m | 100% | yes |
 
-**Phase 1 is the number that matters: EUR 41 m for 2.1 MW,
+**Phase 1 is the number that matters: EUR 40 m for 2.1 MW,
 20% of total CAPEX.** That is the floor - identity and core government
 services - below which no hybrid arrangement helps, because these workloads cannot be foreign-hosted under
 any sovereignty posture worth the name. It is also, notably, a small fraction of the full build: sovereignty

@@ -19,7 +19,7 @@ adjusted below for what is structurally different about Ireland.
 
 | | |
 |---|---|
-| Population | 5.42 m (Eurostat, 1 Jan 2025) |
+| Population | 5.44 m (Eurostat, 1 Jan 2025) |
 | GDP | EUR 602 bn (2025, current prices) |
 | Public administration employment (NACE O) | 144 k (Eurostat LFS 2025) |
 | Non-household electricity price | 255.2 EUR/MWh (Eurostat, band IC, 2025-S2) |
@@ -50,14 +50,14 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 | Data platforms & analytics | Government data | 14,300 | 32 | 24.5 | 1.25 |
 | AI / sovereign model serving | AI | 9,300 | 264 | 6.2 | 1.3 |
 | Defense classified compute | Defense | 9,000 | 80 | 4.5 | 1.5 |
-| Cybersecurity / SOC / telemetry | Security | 5,900 | 8 | 6.8 | 1.4 |
+| Cybersecurity / SOC / telemetry | Security | 6,000 | 8 | 6.8 | 1.4 |
 | Scientific / public research | Research | 13,400 | 64 | 10.3 | 1.15 |
 
 ## 5. Capacity model output
 
 | Metric | Value |
 |---|---:|
-| Physical servers | 2,024 (CPU 1,336 / GPU 125 / storage 563) |
+| Physical servers | 2,026 (CPU 1,338 / GPU 125 / storage 563) |
 | Rack equivalents | ~63 |
 | IT critical load | 3.5 MW |
 | Facility load (PUE 1.25) | 4.4 MW |
@@ -65,7 +65,7 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 | Sites by capacity / recommended | 1 / **3** (minimum 3) |
 | Average design MW per site | 1.8 MW |
 | Total CAPEX | **EUR 131 m** (facility EUR 53 m, IT EUR 66 m, network EUR 12 m) |
-| Annual energy | 38,830 MWh |
+| Annual energy | 38,860 MWh |
 | Annual OPEX | **EUR 16 m / yr** (power EUR 10 m, non-power EUR 6 m) |
 
 Full table: `facility_summary.csv`.
@@ -76,7 +76,7 @@ Site posture: standard. Separation target: 50-100 km failure domains, dual fibre
 
 | Region | Role | Share | Design MW | Racks | Facility CAPEX | Notes |
 |---|---|---:|---:|---:|---:|---|
-| Dublin | Primary civil cloud | 40% | 2.1 | 26 | EUR 22 m | OGCIO/Backweston estate, INEX; EirGrid connection moratorium to ~2028 is binding. |
+| Dublin | Primary civil cloud | 40% | 2.2 | 26 | EUR 22 m | OGCIO/Backweston estate, INEX; EirGrid connection moratorium to ~2028 is binding. |
 | Cork | Sovereign secondary | 27% | 1.4 | 17 | EUR 14 m | Atlantic cable landings (Kinsale, Amitie), Celtic Interconnector. |
 | Galway - Limerick / West | Government / continuity | 22% | 1.2 | 14 | EUR 12 m | Wind surplus, AEC-1 landing (Killala). |
 | Midlands / Athlone | Strategic reserve | 10% | 0.5 | 6 | EUR 5 m | Post-peat land and grid; reserve/expansion. |
@@ -153,7 +153,7 @@ therefore necessary but not sufficient; what matters is who holds the keys and w
 What exists is a pilot rather than an operating platform; the sovereign core would be its first production incarnation.
 
 Against that starting point, the modelled sovereign core is **5.3 MW of design load across
-3 site(s)**, or roughly 2,024 servers. The gap between what runs today and that
+3 site(s)**, or roughly 2,026 servers. The gap between what runs today and that
 figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
 
 ## 12. Migration path and cost
@@ -165,7 +165,7 @@ are in `migration_phases.csv` in this directory.
 | Phase | Scope | Servers | Design MW | CAPEX | Cumulative | Hybrid-eligible |
 |---|---|---:|---:|---:|---:|---|
 | 1 | Sovereign core | 441 | 0.9 | EUR 17 m | 13% | no |
-| 2 | Security and defense | 461 | 1.2 | EUR 30 m | 35% | no |
+| 2 | Security and defense | 463 | 1.2 | EUR 30 m | 35% | no |
 | 3 | State record | 493 | 1.0 | EUR 26 m | 55% | no |
 | 4 | Elective | 629 | 2.2 | EUR 59 m | 100% | yes |
 

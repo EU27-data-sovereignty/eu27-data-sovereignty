@@ -62,7 +62,7 @@ landed.
 
 | Tier | Columns | What counts |
 |---|---|---|
-| **1** — asserts a legal obligation | `legal_instrument`, `data_classification`, `certification_scheme` | the instrument itself: the statute, decree or scheme document. `confidence` must be `primary`. |
+| **1** — asserts a legal obligation | `legal_instrument`, `data_classification`, `certification_scheme` | the instrument itself: the statute, decree or scheme document (`confidence: primary`) — or, where the cell says no such instrument exists, an authoritative enumeration showing so (`confidence: absence`, see below). |
 | **2** — describes what the state does | `sovereign_cloud_initiative`, `procurement_vehicle`, `digital_id`, `hyperscaler_gov_exposure` | an official government page. `primary` or `official`. |
 | — **not sourceable** | `gov_cloud_maturity`, `certification_strength`, `hyperscaler_dependency` | author judgements; disclosed in the briefs and the CSVs, never cited |
 
@@ -116,7 +116,7 @@ confirmation of the small-state cliff, not a reason the fix did not matter.
 
 Neither would have been caught by more careful reading. That is the argument for the process.
 
-## Two problems the schema has, found by using it
+## Two problems the schema had, found by using it — one solved
 
 **Compound cells.** `covered_cells()` marks a cell sourced once one row exists, but the cells are
 free prose and several assert more than one thing -- NL `legal_instrument` names two instruments,
@@ -124,12 +124,32 @@ DE `sovereign_cloud_initiative` names six programmes. Half a cell can therefore 
 The convention is one row per instrument named, and where a clause cannot be sourced, **narrow
 the cell** rather than leave it standing.
 
-**Negative claims have no primary source.** NL `certification_scheme` is *"No national cloud
-scheme; BIO is the binding baseline"*, and roughly 19 of 27 states sit at `certification_strength:
-baseline`. No instrument enacts the absence of a scheme, and tier 1 admits nothing but `primary`.
-The positive half is citable; the negative half is not, under the current schema. This is a real
-gap in a substantial fraction of one tier-1 column and needs a decision before that column can
-ever reach 27.
+**Negative claims have no primary source — solved by `confidence: absence` (#58).** 22 of the 81
+tier-1 cells assert that something does *not* exist, 21 of them in `certification_scheme` ("No
+national scheme; ISO 27001"). No instrument enacts the absence of a scheme, so under a tier-1
+rule admitting only `primary` those cells could never be sourced:
+
+| | Under `primary` only | With `absence` |
+|---|---|---|
+| Tier-1 ceiling | 59/81 = **72.8%** | 81/81 |
+| Whole ledger ceiling | 167/189 = **88.4%** | 189/189 |
+| Can `--strict` ever pass? | **No** | Yes |
+
+That was an unsatisfiable specification rather than a research backlog, and it would have let
+`COVERAGE_FLOOR` ratchet quietly into a ceiling nobody had written down.
+
+`absence` cites an **authoritative enumeration** — the competent authority's own register of
+schemes, showing the category empty — because a claim about a complete list is evidenced by the
+complete list. Demanding an instrument for a negative is a category error.
+
+It is also the one value that could make this ledger *less* honest, by excusing a source nobody
+could find, so `sources.py` refuses an `absence` row whose cell does not actually assert an
+absence. `./run.sh sources` prints, per column, how many cells are negative and how many were
+sourced that way. **39 of the 189 cells are negative** (22 tier-1, 17 tier-2).
+
+No `absence` rows are recorded yet. ENISA's NCCA directory enumerates authorities rather than
+schemes, and citing something weaker is exactly what this value exists to prevent. The mechanism
+is unblocked; the register per state is the next batch of work.
 
 ## Then: the sampling audit
 
@@ -141,19 +161,51 @@ book. Sourcing every cell only makes it possible to measure.
 ## Separately: the Eurostat figures
 
 `population_m`, `gdp_eur_bn`, `gov_employment_k`, `elec_price_eur_mwh`, `renewables_pct` and
-`land_km2` are Eurostat values, already described as sourced. They need a **retrieval date and a
-re-pull against the public API** (`ROADMAP.md` step 4), not the tiered treatment above — a figure
-carrying a dataset code and a date is verifiable by anyone in a way a paraphrased legal
-requirement is not.
+`land_km2` are Eurostat values. `ROADMAP.md` step 4 asked for a retrieval date and a re-pull
+against the public API; `./run.sh fetch eurostat` does it, and `model/eurostat_pull.csv` now
+carries a dataset code, a pinned period and the API's own `updated` vintage beside every value.
 
-## What this gates
+**Five of the six columns were already exactly right.** Pinned to the vintage each was actually
+taken from, they reproduce at 0/27 cells differing:
 
-| Stage | Gate |
-|---|---|
-| Indexing — delete the two `Disallow` lines from `web/public/robots.txt` | tier-1 cells sourced, Eurostat re-pulled |
-| `eu27.cloud` | sampling audit error rate measured |
-| The printed book | sampling audit error rate measured |
-| Institutional outreach | the entry for that body's own country, verified |
+| Column | Dataset | Pinned period | Differing |
+|---|---|---|---|
+| `population_m` | `tps00001` | 2025 | 0/27 |
+| `gdp_eur_bn` | `nama_10_gdp` B1GQ CP_MEUR | 2025 | 0/27 |
+| `elec_price_eur_mwh` | `nrg_pc_205` band IC, X_VAT | 2025-S2 | 0/27 |
+| `renewables_pct` | `nrg_ind_ren` REN_ELC | 2024 | 0/27 |
+| `land_km2` | `reg_area3` L0008 | 2019 | 0/27 |
+| `gov_employment_k` | `nama_10_a64_e` NACE O | 2023 | **26/27** |
 
-The last row is the practical one. The first thing any of these bodies checks is what the
-repository says about them.
+So the figures did not need updating; they needed a provenance, and now have one that
+`tests/test_fetch.py` re-checks on every run. The pins do not move on their own (#57).
+
+### The open defect: `gov_employment_k`
+
+It reproduces from **no period at all** — best match 2023 at 5.3% median error — and **9 of 27
+values match no year of the official series within 10%**:
+
+| | SE | FI | SK | ES | AT | EE | LU | EL | MT |
+|---|---|---|---|---|---|---|---|---|---|
+| off by | 40% | 25% | 19% | 16% | 16% | 15% | 15% | 14% | 11% |
+
+`README.md` describes this column as "Eurostat NACE section O". For a third of the member states
+that is not where the number came from, and no re-pull fixes it — it is a provenance defect, not
+a stale vintage. The 27 values are **held unchanged** rather than overwritten, because replacing
+them would substitute one unexplained column for another without establishing what the first one
+measured. `tests/test_fetch.py` names it as a known defect so it stays documented rather than
+silently tolerated.
+
+It matters: public-administration employment is one of the three scaling weights, so it moves
+server counts. Adopting the official series wholesale would move EU-27 servers +1.4% and swing
+individual states as far as SE −5.9% and ES +4.7%.
+
+### A note on the tooling
+
+The first version of this pipeline requested `nrg_cons=MWH2000-19999` for a column documented as
+band IC. Band IC is 500–1,999 MWh/yr; that code is band ID. The mis-specified fetcher reported,
+with a full table across all 27, that the column was 10% adrift and the published OPEX overstated
+by 12%. Every part of that was false. A measurement tool that is itself wrong does not fail
+quietly — it manufactures findings and attaches evidence to them. That is the argument for
+pinning filters and periods in code with their reasoning beside them (#57), and for a test that
+re-derives the claim rather than trusting the last run.

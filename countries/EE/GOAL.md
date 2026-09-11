@@ -24,7 +24,7 @@ adjusted below for what is structurally different about Estonia.
 | Public administration employment (NACE O) | 37 k (Eurostat LFS 2025) |
 | Non-household electricity price | 141.0 EUR/MWh (Eurostat, band IC, 2025-S2) |
 | Renewables in electricity | 38.9% (2024) |
-| Land area | 43,110 km2 |
+| Land area | 43,466 km2 |
 | Live hyperscaler regions in-country | 0 |
 | Existing government / sovereign cloud | Riigipilv (Government Cloud) - RIT (Estonian IT Centre) private state cloud on OCI Dedicated Region + Azure/AWS public-cloud framework (2025); Data Embassy in Luxembourg (2018); X-Road |
 | National digital identity (anchor workload) | ID-kaart + Mobiil-ID + Smart-ID |

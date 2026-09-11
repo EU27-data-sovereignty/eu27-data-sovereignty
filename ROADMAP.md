@@ -59,7 +59,7 @@ React 19, Vite 8, TypeScript 6, Tailwind 4, D3 7. Seven working routes:
 
 ### Tooling and testing
 - `init.sh`, `run.sh`, `test.sh` following the workspace template convention
-- 29 Python tests, 30 Vitest (including TS/Python parity), 15 Playwright (E2E, accessibility, responsive)
+- 44 Python tests, 30 Vitest (including TS/Python parity), 15 Playwright (E2E, accessibility, responsive)
 - CI on GitHub, including a check that committed generated files match the model
 - Chart palette validated for colour-vision deficiency on both light and dark surfaces
 
@@ -98,7 +98,7 @@ Live at **https://sovereign-data-centers.vercel.app**, `noindex`, on the Vercel 
 - `tests/test_docs.py` asserts decision numbers are unique and every `#N` reference resolves (#55)
 
 ### Documentation
-`DECISIONS.md` (55 entries), `ROADMAP.md`, `CHANGELOG.md`, `VERIFICATION.md`, `README.md` with the
+`DECISIONS.md` (58 entries), `ROADMAP.md`, `CHANGELOG.md`, `VERIFICATION.md`, `README.md` with the
 institutional outreach map, and a data-correction issue template.
 
 ---
@@ -197,17 +197,21 @@ this is the state of the five steps.
    is a *negative* claim have no primary instrument to cite. The second needs a decision before tier 1
    can ever reach 27. Both are written up in [`VERIFICATION.md`](VERIFICATION.md).
 3. **Add a CI check** that fails when a legal cell has no `sources.csv` row. ✅ *Exists as
-   `python3 model/sources.py --strict`, deliberately not yet wired into CI* — it would fail on day one and
+   `python3 model/sources.py --strict`, deliberately not yet wired into CI, and — as of #58 —
+   now actually reachable: until `confidence: absence` landed, 22 tier-1 cells asserted that
+   nothing exists and could never be sourced, so `--strict` could never have passed at all* — it would fail on day one and
    be disabled on day two. What CI enforces today is the ratchet: `COVERAGE_FLOOR` in
    `tests/test_sources.py` may only be raised, so verified cells cannot silently become unverified. Switch
    to `--strict` when coverage reaches 189.
 4. **Re-pull Eurostat from the public API** and diff against the CSV, so the figures carry a retrieval
    date rather than an assumption. ✅ *Done 2026-09-11.* `./run.sh fetch eurostat` writes
-   `model/eurostat_pull.csv` -- value, dataset code, period and the API's own `updated` vintage per
-   country per figure -- and reports a diff without applying it. **98 of 162 values differ from the
-   CSV by more than 0.5%**, almost all of it vintage drift: the CSV holds 2023-24 figures and the API
-   now serves 2025-26. Adopting the newer vintage wholesale is a separate decision, because a column
-   must not mix vintages across countries; only the one outright error (CY) was corrected.
+   `model/eurostat_pull.csv` — value, dataset code, pinned period and the API's own `updated`
+   vintage per country per figure. **Five of the six columns were already exactly right** and now
+   reproduce from their pinned vintage at 0/27 cells differing, enforced by `tests/test_fetch.py`;
+   what they lacked was a recorded provenance, not accuracy. The pins do not move on their own (#57).
+   **`gov_employment_k` is the exception and is an open defect**: it reproduces from no period at
+   all, and 9 of 27 values match no year of the official series within 10% (Sweden 40% out). Held
+   unchanged pending a rebuild — see [`VERIFICATION.md`](VERIFICATION.md).
 5. **Run the sampling audit.** A random sample per column, independently re-checked, producing a
    **measured error rate per column** — confidence as a number, not a feeling. This is the artefact that
    opens stages 2 and 3; the earlier steps only make it possible.
@@ -226,6 +230,12 @@ Register `eu27.cloud`, add it to the Vercel project, point DNS, and let the apex
 domain is deliberately unofficial-sounding so the site is not mistaken for an EU institution's; see
 `DECISIONS.md` #50. A custom domain is also what makes the SSO-protection setting irrelevant, since
 protection applies to `*.vercel.app` only.
+
+### Then — rebuild `gov_employment_k`
+The column is described as Eurostat NACE section O, and for 9 of 27 states it is not. It is one of
+the three scaling weights, so it moves server counts: adopting the official series wholesale would
+move EU-27 servers +1.4%, SE −5.9%, ES +4.7%. Establish what the current values measure before
+replacing them — substituting one unexplained column for another is not a fix.
 
 ### Then — close the `ixp` and `threat_notes` gap
 `model/README.md` lists **nine** columns as unverified research; `sources.py` makes seven of them

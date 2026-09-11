@@ -19,20 +19,28 @@ inputs is a script that can silently edit them wrongly, and every parameter chan
 27 briefs and stales 54 tracked artefacts (#52). Corrections are read first, then applied by
 hand in one batch.
 
-Picking the period
-------------------
-Not simply the latest. National accounts are reported at different times, so the most recent
-period is routinely partial -- `nama_10_a64_e` had 10 of 27 states for 2025 and all 27 for
-2024. Taking "latest" would silently mix vintages across countries. Instead each figure uses
-the most recent period for which **all 27 report**, and that period is recorded per row.
+What this found
+---------------
+**Five of the six columns were already exactly right.** Each was taken from one specific
+Eurostat vintage, and once the right filter and period are used it reproduces to within 0.06%.
+What they lacked was not accuracy but a recorded provenance -- which is what ROADMAP step 4
+actually asked for, and what `eurostat_pull.csv` now supplies.
 
-The filters were calibrated against the existing column rather than assumed, which is what
-`DECISIONS.md` #14 asks for. Two would have been wrong by guess:
+The sixth, `gov_employment_k`, reproduces from no period at all: its best match is 2023 at 5.3%
+median error, and 9 of the 27 values match no year of the official series within 10% (Sweden is
+40% out). That is a provenance defect, not a stale vintage, and it is not fixed by re-pulling.
+
+The filters and periods were recovered by scanning, not assumed -- `DECISIONS.md` #14. Three
+would have been wrong by guess, and the third is the cautionary one:
 
 * `renewables_pct` is the renewable share **of electricity** (`REN_ELC`), not of gross final
-  energy (`REN`). Guessing `REN` disagrees with every one of the 27 by 36% on average.
-* `elec_price_eur_mwh` excludes VAT and other recoverable taxes (`X_VAT`), not all taxes
-  (`X_TAX`).
+  energy (`REN`), which disagrees with all 27 by 36% on average.
+* `elec_price_eur_mwh` excludes VAT and other recoverable taxes (`X_VAT`), not all taxes.
+* `elec_price_eur_mwh` is band **IC** (500-1,999 MWh/yr). An earlier version of this file used
+  `MWH2000-19999`, which is band **ID** -- and produced a confident, entirely false report that
+  the column was 10% adrift and the published OPEX was overstated. The column is exact. A
+  measurement tool that is itself mis-specified manufactures findings, which is worse than
+  having no tool: it is wrong with evidence attached.
 """
 from __future__ import annotations
 
@@ -54,27 +62,42 @@ PULL = ROOT / "model" / "eurostat_pull.csv"
 API = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data"
 FIELDS = ["iso", "column", "value", "current", "dataset", "period", "updated", "retrieved"]
 
-# How many recent periods to ask for while looking for one the whole EU-27 reports.
-PERIODS = 6
+# How many recent periods to request, so the pinned one is present and the latest is visible.
+PERIODS = 8
 
-# column -> (dataset, fixed dimension filters, multiplier onto the column's unit, decimals)
-SERIES: dict[str, tuple[str, dict[str, str], float, int]] = {
-    "population_m": ("tps00001", {"indic_de": "JAN"}, 1e-6, 3),
-    "gdp_eur_bn": ("nama_10_gdp", {"na_item": "B1GQ", "unit": "CP_MEUR"}, 1e-3, 1),
+# column -> (dataset, fixed dimension filters, multiplier onto the column's unit, decimals, pinned period)
+#
+# The period is PINNED, not "latest". Each column in eu27_parameters.csv was taken from one
+# specific vintage, and re-pulling the newest one would silently mix vintages across countries
+# -- and, worse, would look like drift when it is only a different year. The pins below were
+# recovered by scanning every available period for the one the column actually reproduces:
+# five of the six match their pinned vintage to within 0.06%, which is what "sourced" ought to
+# mean. Bumping a pin is a deliberate decision with a diff attached, not a side effect of
+# running the fetcher.
+SERIES: dict[str, tuple[str, dict[str, str], float, int, str]] = {
+    "population_m": ("tps00001", {"indic_de": "JAN"}, 1e-6, 3, "2025"),
+    "gdp_eur_bn": ("nama_10_gdp", {"na_item": "B1GQ", "unit": "CP_MEUR"}, 1e-3, 1, "2025"),
     "gov_employment_k": (
         "nama_10_a64_e",
         {"nace_r2": "O", "unit": "THS_PER", "na_item": "EMP_DC"},
         1.0,
         1,
+        "2023",
     ),
+    # Band IC is 500-1,999 MWh/yr. `MWH2000-19999` is band ID, one band up: using it manufactures
+    # a ~10% disagreement with a column that is in fact exact, which is precisely the kind of
+    # false finding this pipeline exists to avoid.
     "elec_price_eur_mwh": (
         "nrg_pc_205",
-        {"nrg_cons": "MWH2000-19999", "unit": "KWH", "currency": "EUR", "tax": "X_VAT"},
+        {"nrg_cons": "MWH500-1999", "unit": "KWH", "currency": "EUR", "tax": "X_VAT"},
         1000.0,
         1,
+        "2025-S2",
     ),
-    "renewables_pct": ("nrg_ind_ren", {"nrg_bal": "REN_ELC", "unit": "PC"}, 1.0, 1),
-    "land_km2": ("reg_area3", {"landuse": "L0008", "unit": "KM2"}, 1.0, 0),
+    # Renewable share OF ELECTRICITY, not of gross final energy consumption (`REN`), which
+    # disagrees with all 27 by 36% on average.
+    "renewables_pct": ("nrg_ind_ren", {"nrg_bal": "REN_ELC", "unit": "PC"}, 1.0, 1, "2024"),
+    "land_km2": ("reg_area3", {"landuse": "L0008", "unit": "KM2"}, 1.0, 0, "2019"),
 }
 
 
@@ -146,7 +169,7 @@ def pull(offline: bool = False) -> tuple[list[dict[str, str]], list[str]]:
     manifest: list[dict[str, str]] = []
     notes: list[str] = []
 
-    for column, (dataset, filters, scale, decimals) in SERIES.items():
+    for column, (dataset, filters, scale, decimals, pinned) in SERIES.items():
         url = url_for(dataset, filters, isos)
         path = fetchlib.cache_path("EU", "eurostat", column, url).with_suffix(".json")
 
@@ -165,14 +188,20 @@ def pull(offline: bool = False) -> tuple[list[dict[str, str]], list[str]]:
 
         doc = json.loads(body)
         data, periods = series(doc, isos)
-        period = complete_period(data, periods, isos)
-        if period is None:
-            best = max((sum(p in data.get(i, {}) for i in isos) for p in periods), default=0)
+
+        period = pinned
+        if not all(period in data.get(iso, {}) for iso in isos):
+            have = sum(period in data.get(i, {}) for i in isos)
+            latest = complete_period(data, periods, isos)
             notes.append(
-                f"{column}: no period in the last {PERIODS} has all 27 reporting "
-                f"(best was {best}/27); skipped"
+                f"{column}: pinned period {pinned} has only {have}/27 reporting "
+                f"(latest complete: {latest}); skipped rather than substituted"
             )
             continue
+
+        latest = complete_period(data, periods, isos)
+        if latest and latest != pinned:
+            notes.append(f"{column}: pinned to {pinned}; {latest} is now available")
 
         for iso in isos:
             value = round(data[iso][period] * scale, decimals)
@@ -230,6 +259,11 @@ def report(rows: list[dict[str, str]], notes: list[str]) -> None:
         )
     print(f"\n{total} of {len(rows)} values differ from eu27_parameters.csv by more than 0.5%")
     print(f"wrote {PULL.relative_to(ROOT)} -- review before changing any parameter")
+    if total:
+        print(
+            "A column that differs at its PINNED period is a provenance defect, not stale data:\n"
+            "re-pulling will not fix it. See VERIFICATION.md."
+        )
 
 
 def main(argv: list[str] | None = None) -> int:

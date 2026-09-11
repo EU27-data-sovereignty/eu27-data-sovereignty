@@ -130,20 +130,43 @@ Rows naming a sourceable column are specific documents already identified for th
 
 A separate pipeline, `model/fetch_eurostat.py`, because it is a different kind of claim: a
 figure carrying a dataset code and a period is verifiable by anyone, in a way a paraphrased
-legal requirement is not. It writes `model/eurostat_pull.csv` -- value, dataset, period,
-the API's own `updated` vintage and retrieval date, per country per figure -- and **reports a
-diff without applying it**.
+legal requirement is not. It writes `model/eurostat_pull.csv` — value, dataset, pinned period,
+the API's own `updated` vintage and retrieval date, per country per figure.
 
-Two filters were calibrated against the existing column rather than assumed, and both would
-have been wrong by guess:
+**The period is pinned, not "latest" (#57).** Each column was taken from one specific vintage;
+re-pulling the newest would mix vintages across countries, and would make a different year look
+like drift. Pinned, five of the six columns reproduce exactly:
+
+| Column | Dataset and filters | Pinned period | Cells differing |
+|---|---|---|---|
+| `population_m` | `tps00001`, `indic_de=JAN` | 2025 | 0/27 |
+| `gdp_eur_bn` | `nama_10_gdp`, `B1GQ`, `CP_MEUR` | 2025 | 0/27 |
+| `elec_price_eur_mwh` | `nrg_pc_205`, band **IC** (`MWH500-1999`), `X_VAT`, EUR | 2025-S2 | 0/27 |
+| `renewables_pct` | `nrg_ind_ren`, `REN_ELC` | 2024 | 0/27 |
+| `land_km2` | `reg_area3`, `L0008` | 2019 | 0/27 |
+| `gov_employment_k` | `nama_10_a64_e`, `O`, `EMP_DC`, `THS_PER` | 2023 | **26/27 — open defect** |
+
+`tests/test_fetch.py` re-derives this on every run, so a column that stops reproducing from the
+source it names becomes a test failure rather than a footnote.
+
+### Three filters that would have been wrong by guess
 
 * `renewables_pct` is the renewable share **of electricity** (`REN_ELC`), not of gross final
-  energy consumption (`REN`). Guessing `REN` disagrees with all 27 by 36% on average.
+  energy consumption (`REN`), which disagrees with all 27 by 36% on average.
 * `elec_price_eur_mwh` excludes VAT and other recoverable taxes (`X_VAT`), not all taxes.
+* `elec_price_eur_mwh` is band **IC**, 500–1,999 MWh/yr. The first version of this pipeline used
+  `MWH2000-19999`, which is band **ID** — and reported, across all 27 states and with a full
+  table, that the column was 10% adrift and the published OPEX overstated by 12%. All false. A
+  measurement tool that is itself mis-specified does not fail quietly; it manufactures findings
+  and attaches evidence to them. Filters now carry their reasoning inline in `SERIES`.
 
-The period is **the most recent one all 27 report**, not simply the latest. National accounts
-arrive at different times -- `nama_10_a64_e` had 10 of 27 states for 2025 and all 27 for 2024 --
-so taking "latest" would silently mix vintages across countries.
+### The open defect
+
+`gov_employment_k` reproduces from no period at all, and **9 of 27 values match no year of the
+official series within 10%** — SE 40%, FI 25%, SK 19%, ES 16%, AT 16%, EE 15%, LU 15%, EL 14%,
+MT 11%. The README describes the column as Eurostat NACE section O; for a third of the states
+that is not where the number came from. The values are held unchanged rather than overwritten,
+because swapping one unexplained column for another establishes nothing. See `VERIFICATION.md`.
 
 ## Commands
 

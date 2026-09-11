@@ -20,7 +20,7 @@ adjusted below for what is structurally different about Germany.
 | | |
 |---|---|
 | Population | 83.58 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 4,470 bn (2025, current prices) |
+| GDP | EUR 4,530 bn (2025, current prices) |
 | Public administration employment (NACE O) | 3,041 k (Eurostat LFS 2025) |
 | Non-household electricity price | 226.4 EUR/MWh (Eurostat, band IC, 2025-S2) |
 | Renewables in electricity | 54.1% (2024) |
@@ -31,7 +31,7 @@ adjusted below for what is structurally different about Germany.
 | Internet exchange / cable landings | DE-CIX Frankfurt (world's largest) Hamburg Munich; Norden/Sylt/Rostock landings |
 
 Relative to the Dutch baseline: population x4.63, public administration x4.25,
-GDP x3.82. Resulting design load: x4.26 the Dutch figure.
+GDP x3.87. Resulting design load: x4.28 the Dutch figure.
 
 ## 3. What is structurally different from the Dutch case
 
@@ -47,26 +47,26 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 |---|---|---:|---:|---:|---:|
 | Digital identity / Online-Ausweis eID + BundID | Critical government | 83,400 | 0 | 18.5 | 1.5 |
 | Core government applications | Government | 244,100 | 0 | 79.9 | 1.35 |
-| Data platforms & analytics | Government data | 147,900 | 336 | 253.5 | 1.25 |
-| AI / sovereign model serving | AI | 68,700 | 1952 | 45.8 | 1.3 |
+| Data platforms & analytics | Government data | 148,800 | 344 | 255.0 | 1.25 |
+| AI / sovereign model serving | AI | 69,700 | 1984 | 46.4 | 1.3 |
 | Defense classified compute | Defense | 139,000 | 1184 | 69.5 | 1.5 |
-| Cybersecurity / SOC / telemetry | Security | 99,400 | 144 | 112.9 | 1.4 |
-| Scientific / public research | Research | 99,300 | 488 | 76.4 | 1.15 |
+| Cybersecurity / SOC / telemetry | Security | 99,300 | 144 | 112.9 | 1.4 |
+| Scientific / public research | Research | 100,600 | 496 | 77.4 | 1.15 |
 
 ## 5. Capacity model output
 
 | Metric | Value |
 |---|---:|
-| Physical servers | 24,531 (CPU 16,916 / GPU 1,146 / storage 6,469) |
-| Rack equivalents | ~767 |
-| IT critical load | 40.2 MW |
-| Facility load (PUE 1.25) | 50.3 MW |
-| Facility design load (+20% headroom) | **60.4 MW** |
+| Physical servers | 24,627 (CPU 16,970 / GPU 1,159 / storage 6,498) |
+| Rack equivalents | ~770 |
+| IT critical load | 40.5 MW |
+| Facility load (PUE 1.25) | 50.6 MW |
+| Facility design load (+20% headroom) | **60.7 MW** |
 | Sites by capacity / recommended | 6 / **6** (minimum 4) |
 | Average design MW per site | 10.1 MW |
-| Total CAPEX | **EUR 1,435 m** (facility EUR 604 m, IT EUR 704 m, network EUR 127 m) |
-| Annual energy | 440,722 MWh |
-| Annual OPEX | **EUR 164 m / yr** (power EUR 100 m, non-power EUR 65 m) |
+| Total CAPEX | **EUR 1,444 m** (facility EUR 607 m, IT EUR 709 m, network EUR 128 m) |
+| Annual energy | 443,147 MWh |
+| Annual OPEX | **EUR 165 m / yr** (power EUR 100 m, non-power EUR 65 m) |
 
 Full table: `facility_summary.csv`.
 
@@ -76,11 +76,11 @@ Site posture: standard. Separation target: 50-100 km failure domains, dual fibre
 
 | Region | Role | Share | Design MW | Racks | Facility CAPEX | Notes |
 |---|---|---:|---:|---:|---:|---|
-| Frankfurt - Rhine-Main | Primary civil cloud | 36% | 21.7 | 276 | EUR 217 m | DE-CIX, ITZBund estate; grid saturated - expect multi-year connection lead time. |
+| Frankfurt - Rhine-Main | Primary civil cloud | 36% | 21.9 | 277 | EUR 218 m | DE-CIX, ITZBund estate; grid saturated - expect multi-year connection lead time. |
 | Berlin - Brandenburg | Sovereign secondary | 18% | 10.9 | 138 | EUR 109 m | Federal ministries, AWS ESC and STACKIT prove grid headroom in the east. |
 | Munich / Bavaria | Defense / industrial | 18% | 10.9 | 138 | EUR 109 m | Defense-industrial cluster, Bundeswehr IT; southern separation. |
 | Hamburg / North | Government / continuity | 18% | 10.9 | 138 | EUR 109 m | Wind surplus, North Sea cable landings (Norden/Sylt). |
-| Leipzig - Saxony | Strategic reserve | 10% | 6.0 | 77 | EUR 60 m | Post-coal land and grid; reserve/expansion. |
+| Leipzig - Saxony | Strategic reserve | 10% | 6.1 | 77 | EUR 61 m | Post-coal land and grid; reserve/expansion. |
 
 These regions encode only the obvious constraints (capital estate, second metro, distance from the frontier,
 fault or flood zone). They are to be replaced by the scored site selection in workstream A of the Dutch
@@ -153,8 +153,8 @@ therefore necessary but not sufficient; what matters is who holds the keys and w
 
 A federated government cloud is already in production. The open question is consolidation and governance, not construction.
 
-Against that starting point, the modelled sovereign core is **60.4 MW of design load across
-6 site(s)**, or roughly 24,531 servers. The gap between what runs today and that
+Against that starting point, the modelled sovereign core is **60.7 MW of design load across
+6 site(s)**, or roughly 24,627 servers. The gap between what runs today and that
 figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
 
 ## 12. Migration path and cost
@@ -165,13 +165,13 @@ are in `migration_phases.csv` in this directory.
 
 | Phase | Scope | Servers | Design MW | CAPEX | Cumulative | Hybrid-eligible |
 |---|---|---:|---:|---:|---:|---|
-| 1 | Sovereign core | 7,476 | 14.7 | EUR 281 m | 20% | no |
-| 2 | Security and defense | 7,319 | 18.8 | EUR 456 m | 51% | no |
-| 3 | State record | 5,092 | 10.5 | EUR 265 m | 70% | no |
-| 4 | Elective | 4,644 | 16.4 | EUR 433 m | 100% | yes |
+| 1 | Sovereign core | 7,476 | 14.7 | EUR 281 m | 19% | no |
+| 2 | Security and defense | 7,317 | 18.8 | EUR 456 m | 51% | no |
+| 3 | State record | 5,124 | 10.6 | EUR 267 m | 70% | no |
+| 4 | Elective | 4,710 | 16.6 | EUR 440 m | 100% | yes |
 
 **Phase 1 is the number that matters: EUR 281 m for 14.7 MW,
-20% of total CAPEX.** That is the floor - identity and core government
+19% of total CAPEX.** That is the floor - identity and core government
 services - below which no hybrid arrangement helps, because these workloads cannot be foreign-hosted under
 any sovereignty posture worth the name. It is also, notably, a small fraction of the full build: sovereignty
 for the workloads that define the state is cheaper than the headline figure suggests.

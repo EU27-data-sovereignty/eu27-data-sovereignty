@@ -55,6 +55,55 @@ class Ledger(unittest.TestCase):
         )
 
 
+class AbsenceIsEvidencedNotAssumed(unittest.TestCase):
+    """`confidence: absence` exists so a cell claiming nothing exists can still be sourced.
+
+    22 of the 81 tier-1 cells assert an absence, so a rule admitting only `primary` capped
+    tier 1 at 72.8% and made `--strict` unsatisfiable. The value that fixes that is also the
+    easiest one to abuse -- it would let any hard-to-find instrument be waved through -- so
+    the guard is that the cited cell must actually assert an absence.
+    """
+
+    def test_absence_is_a_confidence_value(self):
+        self.assertIn("absence", sources.CONFIDENCE)
+
+    def test_tier1_accepts_only_primary_or_absence(self):
+        self.assertEqual(set(sources.TIER1_CONFIDENCE), {"primary", "absence"})
+        self.assertNotIn("secondary", sources.TIER1_CONFIDENCE)
+        self.assertNotIn("official", sources.TIER1_CONFIDENCE)
+
+    def test_absence_on_a_positive_cell_is_rejected(self):
+        """The whole guard. FR certification_scheme names SecNumCloud; it is not an absence."""
+        row = {
+            "country": "FR", "column": "certification_scheme",
+            "url": "https://example.org/register", "publisher": "Some authority",
+            "retrieved": "2026-09-11", "confidence": "absence",
+            "quote": "This register lists every national scheme currently in force.",
+        }
+        errors = sources.validate([row])
+        self.assertTrue(
+            any("does not assert one" in e for e in errors),
+            f"`absence` must be refused on a cell naming a real scheme; got {errors}",
+        )
+
+    def test_absence_on_a_negative_cell_is_accepted(self):
+        """NL certification_scheme is 'No national cloud scheme; BIO is the binding baseline'."""
+        row = {
+            "country": "NL", "column": "certification_scheme",
+            "url": "https://example.org/register", "publisher": "Some authority",
+            "retrieved": "2026-09-11", "confidence": "absence",
+            "quote": "This register lists every national scheme currently in force.",
+        }
+        self.assertEqual(sources.validate([row]), [])
+
+    def test_the_ceiling_is_now_reachable(self):
+        """Before `absence`, 22 tier-1 cells could never be sourced and --strict never passed."""
+        neg = sources.negative_cells()
+        self.assertGreater(sum(neg.values()), 0, "expected negative cells in the dataset")
+        tier1_neg = sum(neg[c] for c in sources.TIER1)
+        self.assertGreater(tier1_neg, 20, "the problem this value solves should still be visible")
+
+
 class TieringIsWiredToTheData(unittest.TestCase):
     """The column lists are hand-maintained and sit next to a CSV that changes."""
 

@@ -840,3 +840,55 @@ rule, so `robots.txt` is fetched directly and its status kept. And Poland's `isa
 publishes `Disallow: /` but serves `robots.txt` only to browser user-agents — an automated client
 is told nothing and sails past a rule that plainly exists. It is marked `forbidden` by hand.
 Being *able* to fetch something is not permission to.
+
+### 57. Eurostat columns are pinned to a vintage, not re-pulled to the latest
+**2026-09-11.** Each of the six Eurostat columns in `eu27_parameters.csv` names a dataset, a
+filter set **and a period**, recorded in `SERIES` in `model/fetch_eurostat.py` and reproduced
+per value in `model/eurostat_pull.csv`. The fetcher compares against the pin. It never adopts a
+newer period on its own; it says one exists and stops.
+
+**Because "latest" silently mixes vintages.** National accounts arrive at different times, so
+the newest period is routinely partial — `nama_10_a64_e` had 10 of 27 states for 2025 and all 27
+for 2024. A column assembled from whatever each country had last published is not a comparison,
+it is 27 different questions. Pinning also makes drift mean something: a value that no longer
+matches its pin is a defect, because the pin cannot move by itself.
+
+**The pins were recovered by measurement, not memory.** Scanning every available period against
+the existing column showed five of the six reproduce their pinned vintage to within 0.06%. The
+figures were already right; what they lacked was a recorded provenance, which is what
+`ROADMAP.md` step 4 actually asked for.
+
+**This decision exists because getting it wrong was cheap and convincing.** The first version of
+the fetcher used `nrg_cons=MWH2000-19999` for a column documented as band IC. Band IC is
+500–1,999 MWh/yr; that code is band ID. The mis-specified tool reported, with a full table and a
+sample of 27, that the column was 10% adrift and the published OPEX was overstated by 12%. All of
+it false. A measurement tool that is itself wrong does not fail quietly — it manufactures
+findings and attaches evidence to them, which is worse than having no tool. Filters and periods
+now carry their reasoning inline, and `tests/test_fetch.py` enforces that every column except the
+one known defect reproduces from the source it claims.
+
+### 58. Absence is evidenced by an enumeration, and `confidence: absence` records it
+**2026-09-11.** `sources.py` accepts a fourth confidence value, `absence`, admissible for tier 1
+alongside `primary`. It cites an **authoritative enumeration** — the competent authority's own
+register of schemes — showing the category is empty, rather than an instrument.
+
+**Because the rule as written was unsatisfiable.** 22 of the 81 tier-1 cells assert that
+something does not exist, 21 of them in `certification_scheme` ("No national scheme; ISO 27001").
+Nothing enacts the absence of a scheme. Under a tier-1 rule admitting only `primary`, those cells
+could never be sourced: tier 1 was capped at 59/81 = 72.8%, the ledger at 167/189, and
+`--strict` — the end state #54 and `ROADMAP.md` step 3 both point at — could never pass. A gate
+that cannot pass is not a strict gate, it is a dead one, and `COVERAGE_FLOOR` would have ratcheted
+to a ceiling nobody had written down.
+
+**A claim about a complete list is evidenced by the complete list.** Demanding an instrument for
+a negative is a category error, which is why 78% of that column was stuck.
+
+**The guard matters more than the value.** `absence` is the one confidence level that could make
+the ledger *less* honest, by excusing a source nobody could find. So a row may only be `absence`
+if the cell it cites actually asserts an absence; anything else is a validation error, and
+`tests/test_sources.py` asserts the refusal on a real positive cell (France's SecNumCloud).
+
+The alternative considered and not taken: splitting `certification_scheme` into a boolean
+`has_national_cloud_scheme` plus a name populated only when true. Cleaner modelling, but a data
+migration across 27 briefs, the bundle and the matrix, to fix a schema problem a confidence value
+fixes in one line. Revisit if the column needs restructuring for other reasons.
