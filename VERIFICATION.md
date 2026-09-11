@@ -4,7 +4,11 @@ The one thing gating everything public-facing: whether the legal and regulatory 
 `model/eu27_parameters.csv` have been checked against primary sources. `ROADMAP.md` states the
 gate; this file is how the work is done and where it currently stands.
 
-**Status: 0 of 189 cells sourced.** Run `./run.sh sources` for the live figure.
+**Status: 2 of 189 cells sourced.** Run `./run.sh sources` for the live figure.
+
+Where to look for each state's instruments is a separate document, [`SOURCES.md`](SOURCES.md),
+together with the fetch pipeline that keeps a local copy of every document consulted. This file
+stays about method.
 
 ---
 
@@ -87,6 +91,45 @@ One country at a time, tier 1 first:
 `COVERAGE_FLOOR` is a ratchet and may only be raised. `--strict` is the end state `ROADMAP.md`
 step 3 asks for and already works; it is not wired into CI yet, because a gate that fails on the
 day it lands is a gate that gets disabled on the day after (`DECISIONS.md` #54).
+
+## What the first nine cells found
+
+The pilot took NL, EE and FR -- an easy case, the reference case and the hardest case -- across
+the three tier-1 columns. Two cells were sourced to primary instruments, and the exercise
+immediately earned its keep by finding two defects in the data it was checking.
+
+**FR `data_classification` was wrong.** It read *"IGI 1300: Diffusion Restreinte / Secret / Tres
+Secret"*, presenting Diffusion Restreinte as one of three classification levels. The instrument
+says the opposite, in terms:
+
+> Traitee par le § 1.4.3 de l'IGI 1300, la mention « Diffusion Restreinte » (DR) n'est pas un
+> niveau de classification mais une mention de protection.
+
+Corrected to the two levels that exist, with DR named as the protective marking it is.
+
+**CY `population_m` was Estonia's.** The cell held `1.370`, which is exactly Estonia's Eurostat
+figure for 1 January 2025 (1,369,995). Cyprus's own is 0.983 m. A copy-paste, found by the
+Eurostat re-pull rather than by reading, and invisible to every test in the suite because a
+plausible number in the right format is not a detectable error. Corrected. The capacity outputs
+did not move, because the small-state floors already bind for Cyprus (#12) -- which is a
+confirmation of the small-state cliff, not a reason the fix did not matter.
+
+Neither would have been caught by more careful reading. That is the argument for the process.
+
+## Two problems the schema has, found by using it
+
+**Compound cells.** `covered_cells()` marks a cell sourced once one row exists, but the cells are
+free prose and several assert more than one thing -- NL `legal_instrument` names two instruments,
+DE `sovereign_cloud_initiative` names six programmes. Half a cell can therefore read as verified.
+The convention is one row per instrument named, and where a clause cannot be sourced, **narrow
+the cell** rather than leave it standing.
+
+**Negative claims have no primary source.** NL `certification_scheme` is *"No national cloud
+scheme; BIO is the binding baseline"*, and roughly 19 of 27 states sit at `certification_strength:
+baseline`. No instrument enacts the absence of a scheme, and tier 1 admits nothing but `primary`.
+The positive half is citable; the negative half is not, under the current schema. This is a real
+gap in a substantial fraction of one tier-1 column and needs a decision before that column can
+ever reach 27.
 
 ## Then: the sampling audit
 

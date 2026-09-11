@@ -26,7 +26,7 @@ sys.path.insert(0, str(ROOT / "model"))
 import sources  # noqa: E402
 
 # Raise as cells are verified. 189 = 7 sourceable columns x 27 member states.
-COVERAGE_FLOOR = 0
+COVERAGE_FLOOR = 2
 
 
 class Ledger(unittest.TestCase):

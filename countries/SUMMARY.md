@@ -29,7 +29,7 @@ Generated 2026-09-05 by `model/generate_countries.py`. All figures are scaled wo
 | EE | Estonia | 1.4 | 574 | 18 | 1.0 | 1.4 | 3 | 35 | 3 | 141 | frontline |
 | SI | Slovenia | 2.1 | 570 | 18 | 0.9 | 1.4 | 3 | 34 | 3 | 150 |  |
 | LU | Luxembourg | 0.7 | 526 | 16 | 0.9 | 1.3 | 2 | 32 | 3 | 172 | micro |
-| CY | Cyprus | 1.4 | 502 | 16 | 0.8 | 1.3 | 2 | 30 | 4 | 243 | grid-isolated, micro |
+| CY | Cyprus | 1.0 | 502 | 16 | 0.8 | 1.3 | 2 | 30 | 4 | 243 | grid-isolated, micro |
 | MT | Malta | 0.6 | 502 | 16 | 0.8 | 1.3 | 2 | 30 | 3 | 135 | grid-isolated, micro |
 | | **EU-27 total** | | **125,089** | | | **306** | **86** | **7,236** | **735** | | |
 

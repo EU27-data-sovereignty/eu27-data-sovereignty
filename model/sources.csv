@@ -1,1 +1,3 @@
 country,column,url,publisher,retrieved,confidence,quote
+FR,data_classification,https://www.info.gouv.fr/upload/media/content/0001/05/1dbd413d9574bba8df1f282cab4a74f128432209.pdf,Secretariat general de la defense et de la securite nationale (SGDSN),2026-09-11,primary,"Traitee par le § 1.4.3 de l'IGI 1300, la mention « Diffusion Restreinte » (DR) n'est pas un niveau de classification mais une mention de protection."
+NL,data_classification,https://wetten.overheid.nl/BWBR0033507/2013-06-01,Overheid.nl Wettenbank,2026-09-11,primary,a. Staatsgeheim ZEER GEHEIM (afgekort Stg.ZG) b. Staatsgeheim GEHEIM (afgekort Stg.G) c. Staatsgeheim CONFIDENTIEEL (afgekort Stg.C) d. Departementaal VERTROUWELIJK (afgekort Dep.V.)

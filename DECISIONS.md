@@ -813,3 +813,30 @@ renumbered to #47-#50 and every reference to it updated.
 The same conclusion as #52 and as `ROADMAP.md`'s "pattern worth naming": three of the four
 findings in the second audit were drift between what a document asserted and what the tree
 did, and prose cannot detect prose going stale.
+
+### 56. Source documents are cached locally; the manifest is tracked, the bytes are not
+**2026-09-11.** `model/fetch.py` retrieves every document consulted into `cache/`, which is
+gitignored and `.vercelignore`d, and records its sha256, size, HTTP status and retrieval date
+in `model/fetch_manifest.csv`, which is tracked. `SOURCES.md` is the arrangement in full.
+
+**Keeping the bytes is the point.** #54 made the quote the unit of evidence precisely because a
+URL cannot show that a page still says what it said. But a quote alone cannot be re-checked once
+the page is reorganised or the statute consolidated. With the document kept and hashed, a source
+that changed under us becomes a detectable finding instead of a cell that merely looks verified.
+
+**Not in git**, because national gazette PDFs run to megabytes, git history never shrinks, and
+the workspace rule on large binaries says so. The manifest is the same trade already made for
+the per-country artefacts in #52: the hash travels with the repository, the bytes do not.
+
+**A refusal is a row, not a gap.** Twelve of the 36 endpoints tried refuse an automated client —
+bot challenges, connections that never complete, one published `Disallow: /`. Each is recorded
+with its status. Dropping them would make a blocked source indistinguishable from work not yet
+done, which is the distinction this whole workstream exists to preserve.
+
+**Two honesty rules in the fetcher, both learned by getting them wrong first.** Python's
+`RobotFileParser.read()` treats a 403 on `robots.txt` as *disallow everything*, so a host that
+blocked our user-agent looks identical to one that asked us not to come; only the second is a
+rule, so `robots.txt` is fetched directly and its status kept. And Poland's `isap.sejm.gov.pl`
+publishes `Disallow: /` but serves `robots.txt` only to browser user-agents — an automated client
+is told nothing and sails past a rule that plainly exists. It is marked `forbidden` by hand.
+Being *able* to fetch something is not permission to.

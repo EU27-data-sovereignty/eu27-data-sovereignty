@@ -5,6 +5,96 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-09-11
+
+Builds the layer that was missing under the verification workstream: something that actually
+fetches the sources. Eurostat first, then the legal corpus, then a nine-cell pilot run on top of
+both. Reasoning in [`DECISIONS.md`](DECISIONS.md) #56; the arrangement is documented in the new
+[`SOURCES.md`](SOURCES.md).
+
+### Added — the fetch layer
+
+`model/fetch.py` retrieves a document, writes it into `cache/`, and records its sha256, size,
+HTTP status and retrieval date in `model/fetch_manifest.csv`. The cache is gitignored **and**
+`.vercelignore`d; the manifest is tracked. Same trade as #52: the hash travels with the repository,
+the megabytes do not.
+
+Two pipelines sit on it. `./run.sh fetch eurostat` re-pulls the six Eurostat figures for all 27
+(ROADMAP step 4, now closed); `./run.sh fetch legal` retrieves the legal corpus from
+`model/source_urls.csv`. `tests/test_fetch.py` guards both, and passes with an empty cache, which
+is what CI has.
+
+### Found — two defects in the data, both invisible to the existing tests
+
+**France's classification ladder was wrong.** `data_classification` read *"IGI 1300: Diffusion
+Restreinte / Secret / Tres Secret"*. The instrument says, in terms, that Diffusion Restreinte
+*« n'est pas un niveau de classification mais une mention de protection »* — it is a protective
+marking, not a classification level. Corrected to the two levels that exist.
+
+**Cyprus's population was Estonia's.** `population_m` held `1.370`, which is exactly Estonia's
+Eurostat figure for 1 January 2025 (1,369,995). Cyprus's own is 0.983 m. Corrected. The capacity
+outputs did not move, because the small-state floors already bind for Cyprus (#12).
+
+Neither was findable by reading more carefully: a plausible number in the right format is not a
+detectable error, and the classification cell reads perfectly well until you open the instrument.
+That is the argument for the process, and it is the sixth and seventh entries in the #14 list.
+
+### Found — two gaps in the verification schema itself
+
+`covered_cells()` marks a cell sourced once **one** row exists, but the cells are free prose and
+several assert more than one thing, so half a cell can read as verified. The convention is now one
+row per instrument named.
+
+Worse: **a negative claim has no primary source.** NL `certification_scheme` is *"No national cloud
+scheme; BIO is the binding baseline"*, and roughly 19 of 27 states sit at `certification_strength:
+baseline`. No instrument enacts the absence of a scheme, and tier 1 admits nothing but `primary`.
+That is a substantial fraction of one tier-1 column with no route to being sourced under the
+current rule. Recorded, not solved.
+
+### Fixed — the fetcher's own honesty, twice
+
+Python's `RobotFileParser.read()` treats a 403 on `robots.txt` as *disallow everything*, so the
+first run reported eleven hosts as "robots-denied" when in fact they had simply blocked the
+request and never served their rules. Those are different facts; `robots.txt` is now fetched
+directly and its status kept. Correcting it took the corpus from 22 fetched to 25.
+
+The opposite error surfaced immediately after: Poland's `isap.sejm.gov.pl` publishes
+`Disallow: /` for all agents, but serves `robots.txt` only to browser user-agents — so the
+corrected fetcher sailed straight past a real prohibition and retrieved the page. It is now marked
+`forbidden` by hand and never attempted. Being *able* to fetch something is not permission to.
+
+### Eurostat — reported, not applied
+
+**98 of 162 values differ from `eu27_parameters.csv` by more than 0.5%**, almost all of it vintage
+drift: the CSV holds 2023-24 figures, the API now serves 2025-26. `model/eurostat_pull.csv` carries
+the dataset code, period and the API's `updated` vintage per value. Adopting the newer vintage
+wholesale is a separate decision — a column must not mix vintages across countries — so only the
+one outright error was corrected.
+
+Two filters were calibrated against the existing column rather than assumed, and both would have
+been wrong by guess: `renewables_pct` is the renewable share **of electricity** (`REN_ELC`), and
+`elec_price_eur_mwh` excludes VAT and other recoverable taxes (`X_VAT`). The period used is the
+most recent one all 27 report, not the latest — `nama_10_a64_e` had 10 of 27 states for 2025.
+
+### Added — deployment as a command
+
+`./run.sh deploy` refuses a dirty tree or a non-`main` branch, runs the full gate, checks that
+`.vercelignore` still excludes `cache/`, then deploys. Deploys are manual because the Vercel GitHub
+App is not installed, and a stale site was the named failure mode; a remembered incantation is a
+bad defence against it. `README.md` gains the `## Deployment` and `## Verification` sections it
+never had.
+
+`./test.sh` now prints the ledger coverage as its own step and in the closing banner, and
+`./init.sh` prints it on a fresh clone. The blocker should be visible to whoever is standing in
+front of it.
+
+### Still owed
+
+The blanket "not verified against primary sources" wording in `ProvenanceBanner.tsx`,
+`Methodology.tsx`, `Poster.tsx` and the generated brief §10 is still substantially true at 2 of
+189, so it stands. It needs revisiting when tier 1 completes — as does the `ixp` / `threat_notes`
+gap now recorded in `ROADMAP.md`.
+
 ## 2026-09-08
 
 Closes the four findings the 2026-09-06 audit left open, and scaffolds the verification

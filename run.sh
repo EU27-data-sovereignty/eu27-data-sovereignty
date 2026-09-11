@@ -56,6 +56,10 @@ show_help() {
     echo "  export           Standalone per-country PDF briefs (book/build/briefs/)"
     echo "  book             Typeset the paper book"
     echo "  sources          Verification-ledger coverage report"
+    echo "  fetch [what]     Fetch source documents into cache/ (eurostat | legal | all)"
+    echo
+    echo -e "${GREEN}Deployment${NC}"
+    echo "  deploy           Run the full gate, then deploy to Vercel production"
     echo
     echo -e "${GREEN}Housekeeping${NC}"
     echo "  clean            Remove build artefacts"
@@ -121,6 +125,52 @@ case "${1:-dev}" in
         ;;
     sources)
         python3 model/sources.py "${@:2}"
+        ;;
+    fetch)
+        # Stdlib only, like `sources` -- no check_deps. Writes into cache/, which is
+        # gitignored AND .vercelignored; only the manifest and the pull are tracked.
+        case "${2:-all}" in
+            eurostat) python3 model/fetch_eurostat.py "${@:3}" ;;
+            legal)    python3 model/fetch_sources.py "${@:3}" ;;
+            all)
+                python3 model/fetch_eurostat.py
+                echo
+                python3 model/fetch_sources.py
+                ;;
+            *) print_error "fetch: expected eurostat, legal or all"; exit 1 ;;
+        esac
+        ;;
+    deploy)
+        # Deploys are manual: the Vercel GitHub App is not installed, so a push does
+        # not ship anything (ROADMAP.md, README.md "Deployment"). A stale site is the
+        # failure mode this command exists to prevent, so it refuses to ship anything
+        # that is not the committed state of main and has not passed the gate.
+        if [ -n "$(git status --porcelain)" ]; then
+            print_error "Working tree is dirty. Commit first — deploy ships the tree, not the last commit."
+            git status --short
+            exit 1
+        fi
+        branch="$(git rev-parse --abbrev-ref HEAD)"
+        if [ "$branch" != "main" ]; then
+            print_error "On branch '$branch'. Production deploys come from main."
+            exit 1
+        fi
+        if ! command -v vercel &> /dev/null; then
+            print_error "The Vercel CLI is not installed. Install with: npm i -g vercel"
+            exit 1
+        fi
+        print_info "Running the full gate before deploying..."
+        "$ROOT/test.sh" "${@:2}"
+        echo
+        # cache/ can be hundreds of MB of fetched gazettes. .vercelignore excludes it,
+        # but .vercelignore is read INSTEAD of .gitignore, so the rule is easy to lose.
+        if [ -d "$ROOT/cache" ] && ! grep -q '^cache/$' "$ROOT/.vercelignore"; then
+            print_error ".vercelignore does not exclude cache/ — the fetched corpus would upload."
+            exit 1
+        fi
+        print_info "Deploying to production..."
+        vercel deploy --prod
+        print_success "Deployed. robots.txt still disallows indexing until the verification gate passes."
         ;;
     book)
         if ! command -v typst &> /dev/null; then

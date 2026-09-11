@@ -114,6 +114,14 @@ print_info "Generating the data bundle..."
 python3 model/export_json.py
 print_success "web/public/data/eu27.json ready"
 
+# --- Verification state ------------------------------------------------------
+# A fresh clone should learn the project's actual epistemic state on first contact,
+# not discover it later in a README paragraph. This is the number that gates
+# indexing, the custom domain and the book (DECISIONS.md #25).
+echo
+print_info "Verification coverage..."
+echo "  $(python3 model/sources.py 2>/dev/null | tail -1)"
+
 # --- Done --------------------------------------------------------------------
 echo
 print_success "Initialization complete"
@@ -122,5 +130,6 @@ echo
 echo -e "${BLUE}Next steps:${NC}"
 echo -e "  ${GREEN}./run.sh${NC}          Start the dev server on http://localhost:5173"
 echo -e "  ${GREEN}./test.sh${NC}         Run the full test gate"
+echo -e "  ${GREEN}./run.sh fetch${NC}    Fetch source documents into cache/"
 echo -e "  ${GREEN}./run.sh help${NC}     List every command"
 echo

@@ -54,3 +54,10 @@ web/dist/
 # Playwright output
 web/test-results/
 web/playwright-report/
+
+# Fetched source corpus (model/fetch.py). Rebuildable with `./run.sh fetch`, so
+# the bytes stay out of git: national gazette PDFs are large and git history
+# never shrinks. model/fetch_manifest.csv IS tracked and carries the sha256 of
+# every file, which is what makes drift detectable without storing them.
+# Mirrored in .vercelignore -- the CLI reads that INSTEAD of this file.
+cache/

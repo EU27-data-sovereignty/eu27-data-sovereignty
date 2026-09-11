@@ -17,6 +17,63 @@ Indexing is gated on the verification work in [`VERIFICATION.md`](VERIFICATION.m
 
 Corrections are welcome — there is a data-correction issue template.
 
+## Deployment
+
+Live at **https://sovereign-data-centers.vercel.app**, on the Vercel project
+`pieteradejongs-projects/sovereign-data-centers`.
+
+```
+./run.sh deploy     # refuses a dirty tree or a non-main branch, runs ./test.sh, then deploys
+```
+
+Three things about this deployment are easy to get wrong, so they are written down:
+
+- **Deploys are manual.** The Vercel GitHub App is not installed on the account, so the project
+  is not linked to the repository and **a push does not ship anything**. A stale site is the
+  failure mode to watch for, and `./run.sh deploy` exists so shipping is one command rather than
+  a remembered incantation.
+- **`vercel.json` sets `github.silent`**, so there is no deploy status on the commit. Check the
+  Vercel dashboard, not GitHub.
+- **`.vercelignore` is read *instead of* `.gitignore`**, not in addition to it. Every rule that
+  matters has to be repeated there — `**/contacts/` first among them (#46), and `cache/`, which
+  would otherwise upload the entire fetched corpus with the source. `./run.sh deploy` checks that
+  last one before shipping.
+
+### The three stages
+
+| Stage | What it is | Gated on |
+|---|---|---|
+| 1 — `*.vercel.app`, `noindex` | where it is today | nothing; done 2026-09-07 |
+| 2 — indexing | delete the two `Disallow` lines from `web/public/robots.txt` | tier-1 cells sourced for all 27, Eurostat re-pulled |
+| 3 — `eu27.cloud` | custom domain | the sampling audit's measured error rate |
+
+The domain is deliberately unofficial-sounding so the site is not mistaken for an EU
+institution's (#50); it was still available at $9.99/yr when last checked, 2026-09-11.
+
+## Verification
+
+The legal and regulatory columns assert what 27 real jurisdictions **require**. That is a
+different kind of claim from a scaled capacity placeholder, and it is the gate on everything
+public-facing (#25).
+
+```
+./run.sh sources    # coverage; currently 2 of 189 cells
+./run.sh fetch      # retrieve the source documents into cache/
+```
+
+`model/sources.csv` is the ledger: one row per sourced claim, carrying **the sentence on the page
+that supports the cell**. A URL only shows a page exists — it cannot show the page still says what
+it said, which is why the documents themselves are fetched and hashed (`SOURCES.md`).
+
+Tier 1 — `legal_instrument`, `data_classification`, `certification_scheme` — asserts a legal
+obligation and admits nothing but the instrument itself. Tier 2 describes what a state runs, buys
+or depends on, and takes an official government page. The three ordinal columns are the author's
+judgements, **disclosed and never cited**; a source row for one is a validation error.
+
+`COVERAGE_FLOOR` in `tests/test_sources.py` is a ratchet: it moves in the same commit as the rows
+it counts, so progress cannot be silently undone. Method is in [`VERIFICATION.md`](VERIFICATION.md),
+endpoints in [`SOURCES.md`](SOURCES.md).
+
 ## Layout
 
 ```
@@ -68,6 +125,8 @@ renderings of one `country_data.build()` dict, so they cannot disagree with each
 ./test.sh                                   # the full gate: model, types, lint, unit, build, e2e, a11y
 ./run.sh artefacts                          # re-render the tracked posters and briefing PDFs
 ./run.sh sources                            # verification-ledger coverage
+./run.sh fetch                              # fetch source documents into cache/ (see SOURCES.md)
+./run.sh deploy                             # full gate, then deploy to Vercel production
 ./run.sh export                             # 27 standalone A4 country briefs (PDF)
 ./run.sh book                               # typeset the A5 print edition
 ```
@@ -174,9 +233,16 @@ and digital-ID entries were researched in September 2026 and will date.
 **The legal and regulatory entries are a different kind of claim from the rest.** Capacity figures are
 openly scaled placeholders, and the "working assumption" framing covers them honestly. The certification
 schemes, classification ladders and procurement routes are assertions about what real jurisdictions
-actually require, and they have **not yet been verified against primary sources**. Nothing here should be
-relied on for a procurement or policy decision until that verification is done — see `DECISIONS.md` #25
-for the gate, and open an issue if you can correct an entry.
+actually require, and **187 of the 189 have not been checked against primary sources**. Two have:
+`./run.sh sources` prints the live figure, and `model/sources.csv` names exactly which, with the
+quote that supports each. Assume any given entry is unverified unless the ledger says otherwise.
+
+Checking the first of them found two defects — France's classification ladder listed a protective
+marking as a classification level, and Cyprus's population was Estonia's — so the unverified
+entries should be read as what they are: one researcher's reading, useful and quite possibly
+wrong in specifics. Nothing here should be relied on for a procurement or policy decision until
+that verification is done — see `DECISIONS.md` #25 for the gate, and open an issue if you can
+correct an entry.
 
 ## Licence
 

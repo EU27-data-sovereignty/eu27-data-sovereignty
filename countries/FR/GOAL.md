@@ -124,7 +124,7 @@ to close.
 |---|---|
 | Governing instrument | Doctrine 'Cloud au centre' (DINUM, revised 2023): sovereign-qualified cloud required for sensitive state data |
 | Cloud certification | SecNumCloud (ANSSI) qualification; the most demanding national scheme in the EU-27 |
-| Data classification | IGI 1300: Diffusion Restreinte / Secret / Tres Secret |
+| Data classification | IGI 1300: Secret / Tres Secret; 'Diffusion Restreinte' is a protection marking, not a classification level |
 | Procurement route | UGAP and DINUM interministerial frameworks |
 
 SecNumCloud (ANSSI) qualification; the most demanding national scheme in the EU-27 is among the most demanding cloud assurance regimes in the Union. The sovereign core inherits a mature control baseline and, more usefully, an existing qualification path that suppliers already know how to pass.

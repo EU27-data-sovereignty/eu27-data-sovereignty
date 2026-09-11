@@ -3,13 +3,15 @@
 Where this project stands, what is next, and what gates what. Reasoning behind individual choices lives in
 [`DECISIONS.md`](DECISIONS.md); the record of what changed is in [`CHANGELOG.md`](CHANGELOG.md).
 
-**Status as of 2026-09-08.** The model, the data, the documents, the web app and the test suite are built
+**Status as of 2026-09-11.** The model, the data, the documents, the web app and the test suite are built
 and pushed, and the web app is deployed at
 [sovereign-data-centers.vercel.app](https://sovereign-data-centers.vercel.app) with indexing disabled. Every
 finding from both security audits is now closed. The blocker for anything further public-facing is not code
 — it is that 189 researched legal cells across 27 jurisdictions have not been verified against primary
-sources. The ledger and the tooling for that work now exist and are empty:
-[`VERIFICATION.md`](VERIFICATION.md), `model/sources.csv`, `./run.sh sources`.
+sources. The ledger and the
+tooling exist, the fetch layer that feeds them landed 2026-09-11 (#56), and **2 of the 189 cells are
+sourced**: [`VERIFICATION.md`](VERIFICATION.md) for method, [`SOURCES.md`](SOURCES.md) for endpoints,
+`./run.sh sources` for the live figure.
 
 ---
 
@@ -188,14 +190,24 @@ this is the state of the five steps.
    does not show the cited page says what the cell claims.
 2. **Apply the tiered rule.** ✅ *Encoded, not yet applied.* Three tier-1 columns require `confidence:
    primary`; four tier-2 columns take an official government page; the three ordinal columns are author
-   judgements and a source row for one is a validation error. **189 cells. 0 done.** This is the work.
+   judgements and a source row for one is a validation error. **189 cells. 2 done.** This is the work.
+   The pilot (NL, EE, FR, tier 1) found two defects in the data it was checking — France's
+   classification ladder and Cyprus's population — and two gaps in the schema itself: a compound cell
+   reads as verified when only half of it is sourced, and the ~19 states whose `certification_scheme`
+   is a *negative* claim have no primary instrument to cite. The second needs a decision before tier 1
+   can ever reach 27. Both are written up in [`VERIFICATION.md`](VERIFICATION.md).
 3. **Add a CI check** that fails when a legal cell has no `sources.csv` row. ✅ *Exists as
    `python3 model/sources.py --strict`, deliberately not yet wired into CI* — it would fail on day one and
    be disabled on day two. What CI enforces today is the ratchet: `COVERAGE_FLOOR` in
    `tests/test_sources.py` may only be raised, so verified cells cannot silently become unverified. Switch
    to `--strict` when coverage reaches 189.
 4. **Re-pull Eurostat from the public API** and diff against the CSV, so the figures carry a retrieval
-   date rather than an assumption.
+   date rather than an assumption. ✅ *Done 2026-09-11.* `./run.sh fetch eurostat` writes
+   `model/eurostat_pull.csv` -- value, dataset code, period and the API's own `updated` vintage per
+   country per figure -- and reports a diff without applying it. **98 of 162 values differ from the
+   CSV by more than 0.5%**, almost all of it vintage drift: the CSV holds 2023-24 figures and the API
+   now serves 2025-26. Adopting the newer vintage wholesale is a separate decision, because a column
+   must not mix vintages across countries; only the one outright error (CY) was corrected.
 5. **Run the sampling audit.** A random sample per column, independently re-checked, producing a
    **measured error rate per column** — confidence as a number, not a feeling. This is the artefact that
    opens stages 2 and 3; the earlier steps only make it possible.
@@ -214,6 +226,13 @@ Register `eu27.cloud`, add it to the Vercel project, point DNS, and let the apex
 domain is deliberately unofficial-sounding so the site is not mistaken for an EU institution's; see
 `DECISIONS.md` #50. A custom domain is also what makes the SSO-protection setting irrelevant, since
 protection applies to `*.vercel.app` only.
+
+### Then — close the `ixp` and `threat_notes` gap
+`model/README.md` lists **nine** columns as unverified research; `sources.py` makes seven of them
+sourceable. `ixp` and `threat_notes` are excluded, yet `threat_notes` is the text revealed behind
+three of the eight matrix dimensions and `ixp` is rendered in brief §11. They are unverified and
+uncitable at once, which is the worst combination available. Either bring them into the tiered rule
+or say in `model/README.md` why they are outside it.
 
 ### Then — the choropleth
 `/map` is in the navigation but unbuilt, so the nav currently points at nothing.

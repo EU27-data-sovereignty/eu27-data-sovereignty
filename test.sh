@@ -54,7 +54,15 @@ echo -e "${GREEN}Running the full test gate${NC}"
 # -----------------------------------------------------------------------------
 step "Python model and data integrity"
 python3 -m unittest discover -s tests -q
-ok "model, CSV integrity, referential integrity, determinism"
+ok "model, CSV integrity, referential integrity, determinism, ledger and fetch manifest"
+
+# -----------------------------------------------------------------------------
+step "Verification ledger"
+# tests/test_sources.py already enforces this inside step 1; printing the table here
+# puts the number in front of whoever runs the gate. Coverage is the project's real
+# blocker (DECISIONS.md #25), and a blocker nobody sees is a blocker nobody works on.
+python3 model/sources.py
+ok "ledger is valid"
 
 # -----------------------------------------------------------------------------
 step "Generated files are current"
@@ -123,6 +131,8 @@ echo
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${GREEN}✅ All checks passed${NC}"
 echo
-echo -e "${YELLOW}Note:${NC} passing does not mean the data is verified. The legal and"
-echo "regulatory entries are still unverified research — see DECISIONS.md #25"
-echo "for the gate that must pass before publishing to a custom domain or print."
+echo -e "${YELLOW}Note:${NC} passing does not mean the data is verified."
+echo "  $(python3 model/sources.py 2>/dev/null | tail -1)"
+echo "The unsourced legal and regulatory entries are still one researcher's reading of"
+echo "public policy documents — see DECISIONS.md #25 for the gate that must pass before"
+echo "publishing to a custom domain or print, and VERIFICATION.md for how it is closed."

@@ -19,7 +19,7 @@ adjusted below for what is structurally different about Cyprus.
 
 | | |
 |---|---|
-| Population | 1.37 m (Eurostat, 1 Jan 2025) |
+| Population | 0.98 m (Eurostat, 1 Jan 2025) |
 | GDP | EUR 36 bn (2025, current prices) |
 | Public administration employment (NACE O) | 36 k (Eurostat LFS 2025) |
 | Non-household electricity price | 242.9 EUR/MWh (Eurostat, band IC, 2025-S2) |
@@ -30,7 +30,7 @@ adjusted below for what is structurally different about Cyprus.
 | National digital identity (anchor workload) | CY Login + Cyprus Digital ID |
 | Internet exchange / cable landings | CyIX Nicosia; major East-Med cable hub (2Africa Cadmos Tamares Medusa) |
 
-Relative to the Dutch baseline: population x0.08, public administration x0.05,
+Relative to the Dutch baseline: population x0.05, public administration x0.05,
 GDP x0.03. Resulting design load: x0.09 the Dutch figure.
 
 ## 3. What is structurally different from the Dutch case

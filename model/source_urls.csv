@@ -1,0 +1,37 @@
+iso,column,url,publisher,policy,note
+AT,gazette,https://www.ris.bka.gv.at/,Rechtsinformationssystem des Bundes,auto,National legal information system
+BE,gazette,https://www.ejustice.just.fgov.be/cgi_loi/loi.pl,Belgisch Staatsblad / Moniteur belge,manual,Connection refused to automated requests
+BG,gazette,https://dv.parliament.bg/,Darzhaven Vestnik,auto,State gazette
+CY,gazette,http://www.cylaw.org/,CyLaw,auto,Official gazette is gazette.gov.cy; CyLaw is the consolidated-law archive
+CZ,gazette,https://www.e-sbirka.cz/,e-Sbirka,auto,Official collection of laws
+DE,gazette,https://www.gesetze-im-internet.de/,Bundesministerium der Justiz,auto,Federal law in consolidated form
+DK,gazette,https://www.retsinformation.dk/,Retsinformation,auto,National legal information portal
+EE,certification_scheme,https://www.ria.ee/en/cyber-security/e-its,Riigi Infosusteemi Amet (RIA),manual,E-ITS standard authority
+EE,data_classification,https://www.riigiteataja.ee/en/eli/511072014001/consolide/current,Riigi Teataja,manual,State Secrets and Classified Information of Foreign States Act; blocked
+EE,gazette,https://www.riigiteataja.ee/en/,Riigi Teataja,manual,Cloudflare challenge blocks automated requests; English translations available by hand
+EE,legal_instrument,https://www.riigiteataja.ee/en/eli/518012016001/consolide,Riigi Teataja,manual,Public Information Act; blocked
+EL,gazette,https://www.et.gr/,Ethniko Typographeio,auto,National printing house
+ES,gazette,https://www.boe.es/,Boletin Oficial del Estado,auto,Official state gazette
+FI,gazette,https://www.finlex.fi/en/,Finlex,auto,National legal database
+FR,certification_scheme,https://cyber.gouv.fr/sites/default/files/document/secnumcloud-referentiel-exigences-v3.2.pdf,ANSSI,auto,SecNumCloud referentiel d'exigences v3.2
+FR,data_classification,https://www.info.gouv.fr/upload/media/content/0001/05/1dbd413d9574bba8df1f282cab4a74f128432209.pdf,SGDSN,auto,IGI 1300 on protection of national defence secrets
+FR,gazette,https://www.legifrance.gouv.fr/,Legifrance,manual,WAF blocks automated requests; use the publishing ministry's own copy instead
+FR,legal_instrument,https://www.numerique.gouv.fr/offre-accompagnement/cloud-administrations/,DINUM,auto,Doctrine 'cloud au centre'; the circulaire itself is on the blocked Legifrance
+HR,gazette,https://narodne-novine.nn.hr/,Narodne novine,auto,Official gazette
+HU,gazette,https://njt.hu/,Nemzeti Jogszabalytar,manual,Times out for automated requests
+IE,gazette,https://www.irishstatutebook.ie/,Office of the Attorney General,auto,Irish Statute Book
+IT,gazette,https://www.normattiva.it/,Normattiva,auto,Consolidated national legislation
+LT,gazette,https://www.e-tar.lt/portal/index.html,Teisines informacijos registras,manual,Cloudflare challenge blocks automated requests
+LU,gazette,https://legilux.public.lu/,Journal officiel du Grand-Duche de Luxembourg,auto,Official journal
+LV,gazette,https://likumi.lv/,Latvijas Vestnesis,auto,Official publisher
+MT,gazette,https://legislation.mt/,Ministry for Justice,auto,Laws of Malta
+NL,certification_scheme,https://www.bio-overheid.nl/media/cs5ctudu/20250924-baseline-informatiebeveiliging-overheid-2-bio2-v12-deff.pdf,BIO-overheid (BZK),manual,Baseline Informatiebeveiliging Overheid 2 (BIO2)
+NL,data_classification,https://wetten.overheid.nl/BWBR0033507/2013-06-01,Overheid.nl Wettenbank,auto,VIRBI 2013
+NL,gazette,https://wetten.overheid.nl/,Overheid.nl Wettenbank,auto,Consolidated Dutch law
+NL,legal_instrument,https://www.tweedekamer.nl/downloads/document?id=2022D33299,Tweede Kamer der Staten-Generaal,auto,Rijksbreed cloudbeleid 2022
+PL,gazette,https://isap.sejm.gov.pl/,Sejm RP,forbidden,robots.txt publishes Disallow: / for all agents; never fetched automatically
+PT,gazette,https://dre.pt/,Diario da Republica,auto,Official gazette
+RO,gazette,https://legislatie.just.ro/,Ministerul Justitiei,manual,Times out for automated requests
+SE,gazette,https://www.riksdagen.se/,Sveriges riksdag,auto,Svensk forfattningssamling
+SI,gazette,https://pisrs.si/,Pravno-informacijski sistem,auto,Times out for automated requests
+SK,gazette,https://www.slov-lex.sk/,Slov-Lex,manual,Consolidated legislation

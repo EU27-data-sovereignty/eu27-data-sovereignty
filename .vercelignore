@@ -38,3 +38,7 @@ venv/
 
 # Logs
 *.log
+
+# Fetched source corpus. Gitignored, but .gitignore is not read here, so without
+# this rule the whole cache uploads with the source on every deploy.
+cache/

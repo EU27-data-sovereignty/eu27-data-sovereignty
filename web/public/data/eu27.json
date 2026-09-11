@@ -1092,7 +1092,7 @@
     "land_km2": "9213",
     "legal_instrument": "Digital Strategy for Cyprus; Deputy Ministry of Research, Innovation and Digital Policy",
     "min_sites": "2",
-    "population_m": "1.370",
+    "population_m": "0.983",
     "procurement_vehicle": "Public Procurement Directorate, Treasury of the Republic",
     "renewables_pct": "24.1",
     "seismic": "moderate",
@@ -1175,8 +1175,8 @@
     "gov_employment_k": 35.9,
     "gov_ratio": 0.050111669458403126,
     "land_km2": 9213,
-    "pop_ratio": 0.07594235033259425,
-    "population_m": 1.37,
+    "pop_ratio": 0.054490022172949,
+    "population_m": 0.983,
     "renewables_pct": 24.1
    },
    "structural_differences": [
@@ -3260,7 +3260,7 @@
     "certification_scheme": "SecNumCloud (ANSSI) qualification; the most demanding national scheme in the EU-27",
     "certification_strength": "stringent",
     "country": "France",
-    "data_classification": "IGI 1300: Diffusion Restreinte / Secret / Tres Secret",
+    "data_classification": "IGI 1300: Secret / Tres Secret; 'Diffusion Restreinte' is a protection marking, not a classification level",
     "data_status": "Eurostat figures sourced; legal/regulatory columns and ordinal ratings are unverified research (Sept 2026) - see model/README.md",
     "digital_id": "FranceConnect / FranceConnect+ + France Identite",
     "elec_price_eur_mwh": "153.4",
