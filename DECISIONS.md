@@ -892,3 +892,30 @@ The alternative considered and not taken: splitting `certification_scheme` into 
 `has_national_cloud_scheme` plus a name populated only when true. Cleaner modelling, but a data
 migration across 27 briefs, the bundle and the matrix, to fix a schema problem a confidence value
 fixes in one line. Revisit if the column needs restructuring for other reasons.
+
+### 59. A feasibility ranking exists, as an authored note and a bounded exception to #10
+**2026-09-13.** `FEASIBILITY-RANKING.md` ranks all 27 states by how feasible a combined plan for
+sovereign data centers *and* sovereign AI models would be. It was asked for directly, and "which
+countries could actually do this?" is the question a reader of the matrix arrives at anyway.
+
+**#10 still governs the model and the app.** Nothing in `eu27_parameters.csv`, the JSON bundle, the
+matrix or the briefs gains a score. The exception is confined to one authored note, under four
+conditions that carry #10's reasoning into it:
+
+- **Groups, not a score.** States are placed in four groups by judgement, then ordered within them;
+  no number is computed, so there is no false precision to quote. The note says the groups are the
+  finding and the within-group order is not.
+- **The caveats live in the body.** Same rule as the briefs under #25: the unverified status of both
+  halves is stated where the ranking is read, not only in a header.
+- **The evidentiary standard is stated, and it is low.** The data center half uses the author's
+  ordinal columns (2 of 189 legal cells sourced). The model half uses no repository data at all — it
+  is general knowledge to roughly May 2026, with no ledger rows. That is below even
+  `FRONTIER-MODEL.md`'s bar (#44), and the note must not be cited as if it met the model's.
+- **It sits at the repository root, outside the generator.** `generate_countries.py` never writes
+  there, so it survives `run.sh data`, as #44 requires of anything authored.
+
+**"Sovereign data models" was read as sovereign AI models**, following #44's framing. If a schema or
+data-standards meaning was intended, the model half is replaced rather than amended.
+
+*Would change if:* the model half is sourced (at which point it could become ledger rows and the note a
+re-ranking), or the ranking starts being quoted without its caveats, in which case it is withdrawn.

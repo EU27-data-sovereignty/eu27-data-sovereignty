@@ -113,6 +113,8 @@ tests/                       stdlib unittest suite for the model and the data
 DECISIONS.md                 why every choice was made
 CHANGELOG.md                 what changed and when
 VERIFICATION.md              the source-verification workstream: schema, tiered rule, where it stands
+FEASIBILITY-RANKING.md       authored note: EU-27 ranked on feasibility of sovereign data centers plus
+                             sovereign AI models, in four groups; model half unsourced (#59)
 ```
 
 Python is the source of truth. The markdown briefs, the JSON bundle, the app and the exports are all

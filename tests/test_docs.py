@@ -28,7 +28,7 @@ HEADING = re.compile(r"^### (\d+)\. ", re.M)
 REFERENCE = re.compile(r"(?<![\w#])#(\d{1,2})(?![0-9A-Za-z])")
 
 # Files that cite decisions by number. Country briefs are generated and cite none.
-CITING = ["README.md", "ROADMAP.md", "CHANGELOG.md", "ASSETS.md", "OUTREACH.md",
+CITING = ["README.md", "ROADMAP.md", "CHANGELOG.md", "ASSETS.md", "OUTREACH.md", "FEASIBILITY-RANKING.md",
           "VERIFICATION.md", "DECISIONS.md", ".gitignore", "model/README.md", "book/README.md"]
 
 

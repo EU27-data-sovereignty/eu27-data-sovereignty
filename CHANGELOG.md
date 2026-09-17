@@ -5,7 +5,19 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
-## 2026-09-11
+## 2026-09-13
+
+### Added — `FEASIBILITY-RANKING.md`
+
+An authored note ranking all 27 member states by how feasible a combined national plan for
+sovereign data centers and sovereign AI models would be, in four groups (A–D). France, Germany,
+Spain and Italy lead; Slovakia, Croatia, Ireland, Cyprus and Malta trail. The more useful finding
+is where the two halves diverge: Estonia, Luxembourg and Latvia are easy on data centers and hard
+on models, Denmark and Sweden the reverse.
+
+The data center half reads the existing parameters. The model half is unsourced general knowledge
+current to roughly May 2026, and the note says so throughout. A bounded exception to #10, recorded
+as #59. `tests/test_docs.py` now checks the note's decision references too.
 
 Builds the layer that was missing under the verification workstream: something that actually
 fetches the sources. Eurostat first, then the legal corpus, then a nine-cell pilot run on top of

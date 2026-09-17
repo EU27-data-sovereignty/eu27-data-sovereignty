@@ -98,8 +98,13 @@ Live at **https://sovereign-data-centers.vercel.app**, `noindex`, on the Vercel 
 - `tests/test_docs.py` asserts decision numbers are unique and every `#N` reference resolves (#55)
 
 ### Documentation
-`DECISIONS.md` (58 entries), `ROADMAP.md`, `CHANGELOG.md`, `VERIFICATION.md`, `README.md` with the
+`DECISIONS.md` (59 entries), `ROADMAP.md`, `CHANGELOG.md`, `VERIFICATION.md`, `README.md` with the
 institutional outreach map, and a data-correction issue template.
+
+### Feasibility ranking (2026-09-13)
+`FEASIBILITY-RANKING.md` groups the 27 states by how feasible a combined sovereign data center and
+sovereign AI model plan would be. An authored note and a bounded exception to #10, under the
+conditions in #59. The model half is unsourced; see *Planned* below.
 
 ---
 
@@ -243,6 +248,12 @@ sourceable. `ixp` and `threat_notes` are excluded, yet `threat_notes` is the tex
 three of the eight matrix dimensions and `ixp` is rendered in brief §11. They are unverified and
 uncitable at once, which is the worst combination available. Either bring them into the tiered rule
 or say in `model/README.md` why they are outside it.
+
+### Then — source the model half of the feasibility ranking
+`FEASIBILITY-RANKING.md` rests its AI-model half on unsourced general knowledge (#59). Confirm, per
+state: EuroHPC AI Factory hosting (the four marked `AIF?` first — CZ, NL, RO, LT), the status and
+funding of each national model effort, and AI Gigafactory bids and awards. Also confirm that
+"sovereign data models" meant AI models. Then re-rank and record in the note what moved and why.
 
 ### Then — the choropleth
 `/map` is in the navigation but unbuilt, so the nav currently points at nothing.
