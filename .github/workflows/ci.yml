@@ -12,6 +12,13 @@ permissions:
   contents: read
 
 jobs:
+  # Full-history secret scan with the shared ruleset, so a .gitleaks.toml added to
+  # this repo cannot allowlist its way past it. The local commit/push gate runs the
+  # same tool over added lines; this is the half that sees history and runs on a
+  # machine that is not the author's. Policy: dotfiles/docs/policy/security-and-privacy.md.
+  gitleaks:
+    uses: pieteradejong/dotfiles/.github/workflows/gitleaks-reusable.yml@main
+
   model:
     name: Model and data integrity
     runs-on: ubuntu-latest
