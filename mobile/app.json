@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "Sovereign Data Centers",
+    "slug": "sovereign-data-centers",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "sovereigndatacenters",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "cloud.eu27.sovereigndatacenters",
+      "buildNumber": "1",
+      "infoPlist": {}
+    },
+    "android": {
+      "versionCode": 1,
+      "package": "cloud.eu27.sovereigndatacenters",
+      "permissions": [],
+      "usesCleartextTraffic": false
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

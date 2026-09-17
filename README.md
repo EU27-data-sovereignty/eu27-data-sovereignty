@@ -109,6 +109,7 @@ countries/
                              region_allocation_output.csv, migration_phases.csv (outputs),
                              <ISO>-infographic.png and <ISO>-briefing.pdf (tracked deliverables)
 web/                         React + Vite visualization app; reads the JSON bundle, no server
+mobile/                      Expo reader for the same bundle; local only, never built or deployed
 tests/                       stdlib unittest suite for the model and the data
 DECISIONS.md                 why every choice was made
 CHANGELOG.md                 what changed and when

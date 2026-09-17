@@ -10,6 +10,9 @@
 .env
 .env.*
 !.env.example
+# The Expo reader's template names the two EXPO_PUBLIC_ variables and ships no values; it has to
+# be tracked or mobile/__tests__/security.test.ts, which reads it, cannot run in CI.
+!mobile/.env.template
 
 # Logs
 *.log
@@ -29,6 +32,15 @@ node_modules/
 web/node_modules/
 web/dist/
 .vercel/
+
+# Expo reader (mobile/). Local-only: no build, no store listing, no deploy.
+# node_modules/ above already covers the first of these; it is repeated because
+# tests/test_ignore_rules.py asserts each one by name, and a rule that is only
+# implied is a rule that disappears the next time the general one is edited.
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/.env.local
 
 # Outreach contact lists. The institutional map is public (see README); files
 # naming individuals are not: a public official's work contact is still personal

@@ -278,6 +278,26 @@ to be written; the 27 briefings become an explicitly labelled reference section.
 
 `run.sh book` dispatches to `paper_book/build.py`, which **does not exist yet.**
 
+### Later — a mobile reader
+`mobile/` is an Expo app that reads the 27 country cases on a phone: one app with the country as
+data, not 27 builds. It renders `assets/data/eu27.json` — a copy of the same bundle the site reads,
+checked against it by `mobile/__tests__/parity.test.ts` — so the app and the site cannot disagree
+about a figure, and the app needs no network at all.
+
+**It is local-only.** No EAS build, no store listing, no deploy: `.vercelignore` excludes the
+directory and `vercel.json` builds `web/` alone. `./init.sh` then `./run.sh web` in `mobile/`.
+
+What is deliberately not built yet:
+
+- **Supabase as a read-only mirror of the bundle.** `mobile/src/services/supabase.ts` is wired and
+  idle — unconfigured returns `null`, and unconfigured is the default. The one thing a mirror would
+  buy is shipping a data correction without a store release, which only matters once there is a
+  release. Schema, sync path and RLS are a design job, not a decision taken here.
+- **The matrix heatmap and the poster**, both of which are d3 work on the web side.
+- **A public release**, which sits behind the same gate as indexing and `eu27.cloud`: the legal and
+  regulatory entries are not yet verified (#25). The app carries the same placeholder disclaimer the
+  site does.
+
 ### Later — outreach
 The institutional map is in the README. Named individuals live in the private repo
 `sovereign-data-centers-contacts` (#45), checked out at `contacts/` since 2026-09-07 but

@@ -5,6 +5,42 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-09-17
+
+### Added — `mobile/`, an Expo reader for the same bundle
+
+One app with the country as data rather than 27 builds: a filterable list of the member states, a
+country screen following the same nine sections as `web/src/pages/Country.tsx`, and a methodology
+screen carrying the not-yet-verified notice the site carries. `assets/data/eu27.json` is a copy of
+`web/public/data/eu27.json`, so the app renders the whole model with no network at all, and
+`__tests__/parity.test.ts` fails if the copy — or the copied `types.ts` and `format.ts` — drifts
+from its original.
+
+Local only: no EAS build, no store listing, no deploy. `.vercelignore` excludes the directory,
+which matters because Vercel reads that file *instead of* `.gitignore`. Supabase is wired and idle
+in `src/services/supabase.ts` — unconfigured returns `null` — for the mirror described in
+[`ROADMAP.md`](ROADMAP.md), "Later — a mobile reader". No decision recorded: nothing irreversible
+was decided.
+
+### Added — security and privacy checks for a JS app in this tree
+
+The commit gate already scans everything here for secrets and personal data. Three things it cannot
+see are now asserted in `mobile/__tests__/security.test.ts`: that no `EXPO_PUBLIC_*` name is
+secret-shaped (Expo inlines those into the shipped JavaScript, so a service-role key placed there
+would be published to every install); that the app asks for no device capability, declares no iOS
+usage strings and refuses cleartext traffic; and that every dependency is on an allowlist, which is
+how analytics and crash-reporting SDKs stay out. `./run.sh test` in `mobile/` also runs
+`npm audit --audit-level=high`, and every version is pinned exactly.
+
+### Added — `gitleaks` in CI, and `tests/test_ignore_rules.py`
+
+CI ran the model tests and nothing else; it now calls the shared reusable gitleaks workflow, which
+scans full history with the shared ruleset rather than the diff. Separately, the ignore rules that
+keep personal data out of git and off Vercel are now asserted rather than trusted: `**/contacts/`
+and `cache/` in both files, `mobile/` in `.vercelignore`.
+
+---
+
 ## 2026-09-13
 
 ### Added — `FEASIBILITY-RANKING.md`

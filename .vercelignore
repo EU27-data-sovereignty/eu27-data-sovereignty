@@ -13,6 +13,11 @@ web/node_modules/
 web/dist/
 .vercel/
 
+# Expo reader. Nothing in mobile/ is deployed: vercel.json builds web/ only, and
+# uploading an app tree with its own node_modules and .expo cache would ship
+# megabytes of irrelevance on every deploy.
+mobile/
+
 # Test output
 web/test-results/
 web/playwright-report/
