@@ -6,6 +6,22 @@
 > `python3 model/capacity_model.py LT` to update the capacity numbers; edit
 > `model/eu27_parameters.csv` or `model/scaling_rules.csv` and re-run the generator to update this file.
 
+## Contents
+
+1. [Working thesis](#1-working-thesis)
+2. [Starting point](#2-starting-point)
+3. [What is structurally different from the Dutch case](#3-what-is-structurally-different-from-the-dutch-case)
+4. [Workload demand (scaled from the Dutch baseline)](#4-workload-demand-scaled-from-the-dutch-baseline)
+5. [Capacity model output](#5-capacity-model-output)
+6. [Proposed geography (first-pass hypothesis)](#6-proposed-geography-first-pass-hypothesis)
+7. [Geography and threat notes](#7-geography-and-threat-notes)
+8. [Recommendations specific to Lithuania](#8-recommendations-specific-to-lithuania)
+9. [Open questions](#9-open-questions)
+10. [Legal and regulatory posture](#10-legal-and-regulatory-posture)
+11. [Current state and provider landscape](#11-current-state-and-provider-landscape)
+12. [Migration path and cost](#12-migration-path-and-cost)
+13. [Critical national data in scope (Tier 0 / Tier 1)](#13-critical-national-data-in-scope-tier-0--tier-1)
+
 ## 1. Working thesis
 
 Lithuania does not need to become technologically autarkic. It needs enough independently controlled compute,
@@ -180,3 +196,34 @@ Phases 2 and 3 follow on clearance and legal constraints rather than cost. With 
 Sequencing caveat: the CAPEX split above apportions facility cost by each phase's share of IT load, which
 assumes phases are built into a shared facility programme rather than as separate buildings. Building
 phase 1 alone, on its own site, costs disproportionately more - the facility is largely a fixed cost.
+
+## 13. Critical national data in scope (Tier 0 / Tier 1)
+
+The workloads above are sized in servers and megawatts. This section says what they would *hold*:
+the records whose loss or foreign control is the reason a sovereign core is argued for at all. The
+tiering is by consequence of loss rather than by department, and is set out in
+`TIER0-TIER1-SIZING.md` - tier 0 is the identity spine, without which the state cannot say who
+exists; tier 1 is the enforceable relationship between citizen and state.
+
+**0 of 15 record classes recorded for Lithuania.** The register is
+`model/national_data.csv`; run `./run.sh registers` for coverage across all 27.
+
+| Tier | Record class | Register | Held by | Official description |
+|---|---|---|---|---|
+| 0 | Civil registry core | *not yet recorded* |  |  |
+| 0 | Facial biometric | *not yet recorded* |  |  |
+| 0 | Fingerprint biometric | *not yet recorded* |  |  |
+| 0 | Breeder document scans | *not yet recorded* |  |  |
+| 0 | Document issuance history | *not yet recorded* |  |  |
+| 0 | Digital identity credentials | *not yet recorded* |  |  |
+| 0 | Authentication audit log | *not yet recorded* |  |  |
+| 0 | Electoral roll entry | *not yet recorded* |  |  |
+| 1 | Tax | *not yet recorded* |  |  |
+| 1 | Benefits & pensions | *not yet recorded* |  |  |
+| 1 | Land & property registry | *not yet recorded* |  |  |
+| 1 | Judicial & criminal justice | *not yet recorded* |  |  |
+| 1 | Education | *not yet recorded* |  |  |
+| 1 | Business registry | *not yet recorded* |  |  |
+| 1 | Vehicle & licensing | *not yet recorded* |  |  |
+
+A blank row means this repository has not yet researched that register. It is not a statement that the country holds no such data. Tiers 2 (health records, imaging) and 3 (genomics, archives, video retention, geospatial) are out of scope: they hold most of the bytes, but Tiers 0 and 1 hold the sovereignty.

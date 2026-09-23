@@ -15,6 +15,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import os
+import re
 import subprocess
 import sys
 import unittest
@@ -25,6 +26,7 @@ sys.path.insert(0, str(ROOT / "model"))
 
 import capacity_model as cm  # noqa: E402
 import country_data  # noqa: E402
+import emoji  # noqa: E402
 import generate_countries as gc  # noqa: E402
 
 # The pinned generation date, read from the one file that owns it. Hardcoding this
@@ -239,6 +241,74 @@ class GeneratorDeterminism(unittest.TestCase):
             capture_output=True, check=True,
         )
         self.assertEqual(before, nl_goal.read_bytes())
+
+
+class ContentsMatchHeadings(unittest.TestCase):
+    """A brief must not advertise a section it does not have.
+
+    The contents list and the headings are both built from `generate_countries.SECTIONS`,
+    so they cannot disagree by construction -- but that is exactly the kind of invariant
+    that survives one refactor and quietly dies in the next. Asserted against the rendered
+    files rather than against the tuple, so the test fails if the *output* drifts.
+    """
+
+    HEADING = re.compile(r"^## (\d+)\. (.+)$", re.M)
+    ENTRY = re.compile(r"^(\d+)\. \[(.+)\]\(#(.+)\)$", re.M)
+
+    def briefs(self):
+        """All 27, NL included.
+
+        NL is hand-written and the generator never touches it (#5), so nothing else would
+        notice a section added there without a matching contents entry. That is exactly the
+        drift worth catching: NL is the reference case the other 26 are scaled from.
+        """
+        return sorted(ROOT.glob("countries/*/GOAL.md"))
+
+    def test_every_generated_brief_has_a_contents_list(self):
+        for f in self.briefs():
+            with self.subTest(country=f.parent.name):
+                self.assertIn("## Contents", f.read_text(encoding="utf-8"))
+
+    def test_contents_matches_the_headings_exactly(self):
+        for f in self.briefs():
+            with self.subTest(country=f.parent.name):
+                text = f.read_text(encoding="utf-8")
+                headings = [(int(n), t) for n, t in self.HEADING.findall(text)]
+                entries = [(int(n), t) for n, t, _ in self.ENTRY.findall(text)]
+                self.assertEqual(entries, headings)
+
+    def test_numbering_is_contiguous_from_one(self):
+        for f in self.briefs():
+            with self.subTest(country=f.parent.name):
+                numbers = [int(n) for n, _ in self.HEADING.findall(f.read_text(encoding="utf-8"))]
+                self.assertEqual(numbers, list(range(1, len(numbers) + 1)))
+
+    def test_every_anchor_resolves_to_its_heading(self):
+        """GitHub builds the anchor from the heading text; a wrong slug is a dead link."""
+        for f in self.briefs():
+            with self.subTest(country=f.parent.name):
+                text = f.read_text(encoding="utf-8")
+                expected = {gc.slug(f"{n}. {t}") for n, t in self.HEADING.findall(text)}
+                anchors = {a for _, _, a in self.ENTRY.findall(text)}
+                self.assertEqual(anchors, expected)
+
+
+class SummaryIsAnIndex(unittest.TestCase):
+    """countries/SUMMARY.md is the cross-country table of contents."""
+
+    def setUp(self):
+        self.text = (cm.COUNTRIES / "SUMMARY.md").read_text(encoding="utf-8")
+
+    def test_every_country_links_to_its_brief(self):
+        for row in cm.read_csv(ROOT / "model" / "eu27_parameters.csv"):
+            iso, name = row["iso2"], row["country"]
+            with self.subTest(iso=iso):
+                self.assertIn(f"[{name}]({iso}/GOAL.md)", self.text)
+
+    def test_every_country_carries_its_flag(self):
+        for row in cm.read_csv(ROOT / "model" / "eu27_parameters.csv"):
+            with self.subTest(iso=row["iso2"]):
+                self.assertIn(emoji.flag(row["iso2"]), self.text)
 
 
 if __name__ == "__main__":

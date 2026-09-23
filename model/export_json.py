@@ -21,6 +21,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import capacity_model as cm  # noqa: E402
 import country_data  # noqa: E402
+import national_data as nd  # noqa: E402
 import generate_countries as gc  # noqa: E402
 
 SCHEMA_VERSION = 1
@@ -41,11 +42,16 @@ def build_bundle() -> dict:
     nl = params[gc.BASELINE]
     nl_summary = cm.run_country(gc.BASELINE, write=False)
 
+    # Read once, outside the loop: country_data.build() does no file I/O of its own.
+    register = nd.load()
+
     countries = {}
     for iso, c in sorted(params.items()):
         s = cm.run_country(iso, write=False)
         wl = cm.read_csv(cm.COUNTRIES / iso / "workloads_inputs.csv")
-        countries[iso] = strip_private(country_data.build(c, nl, s, wl, nl_summary))
+        countries[iso] = strip_private(
+            country_data.build(c, nl, s, wl, nl_summary, nd.for_country(register, iso))
+        )
 
     totals = {
         "servers": sum(c["capacity"]["total_servers"] for c in countries.values()),
@@ -63,6 +69,9 @@ def build_bundle() -> dict:
             "case, not a sourced forecast. Legal and regulatory entries were researched in "
             "September 2026 and will date. See /methodology."
         ),
+        # One disclaimer, in the bundle, so the markdown brief, the web page, the book and the
+        # mobile reader hedge identically instead of growing four different wordings.
+        "national_data_note": nd.NOTE,
         "assumptions": cm.read_csv(cm.ASSUMPTIONS),
         "phase_map": cm.read_csv(cm.PHASE_MAP),
         "countries": countries,

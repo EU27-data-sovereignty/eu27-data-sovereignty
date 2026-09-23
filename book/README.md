@@ -58,6 +58,16 @@ build/          book.typ and book.pdf — GITIGNORED, regenerable
 - **Nothing generated is committed.** `build/` is gitignored. The build is deterministic
   given `.build-epoch`, so the PDF is always reproducible from source.
 - **No named individuals**, here or anywhere in the repo outside `contacts/`.
+- **No country flag emoji** (`DECISIONS.md` #61, #62). The outline identifies countries as
+  `DE · Germany`, because the chapter head *is* the outline entry — typst has no short-title.
+  Flags would need a fallback to Apple Color Emoji, which is colour (against the mono rule above)
+  and macOS-only, so the same source would render flags here and empty boxes on any Linux
+  machine, silently. `tests/test_book.py` asserts no regional-indicator codepoint reaches the
+  typst source, and runs without typst so CI sees it.
+- **Each country chapter carries its Tier 0/Tier 1 register** (`DECISIONS.md` #60), rendered from
+  `model/national_data.csv`. Its three states are told apart by words — a register name,
+  *no central register*, or *not yet recorded* — never by colour, which the mono rule forbids
+  anyway.
 
 ## Before print
 

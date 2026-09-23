@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 import type { Bundle } from '@/data/types'
-import { eur, mw, num } from '@/utils/format'
+import { eur, flagEmoji, mw, num } from '@/utils/format'
 
 export function Countries({ bundle }: { bundle: Bundle }) {
   const rows = Object.values(bundle.countries).sort(
@@ -44,6 +44,11 @@ export function Countries({ bundle }: { bundle: Bundle }) {
             {rows.map(c => (
               <tr key={c.iso2} className="border-b border-[var(--color-border)]">
                 <th scope="row" className="p-2 text-left font-normal">
+                  {/* This table is the index, which is the one place a flag belongs (#47).
+                      aria-hidden: it is decorative beside the name, never the label. */}
+                  <span aria-hidden="true" className="mr-2">
+                    {flagEmoji(c.iso2)}
+                  </span>
                   <Link
                     className="text-[var(--color-accent-text)] underline"
                     to={`/country/${c.iso2}`}

@@ -5,6 +5,97 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-09-22
+
+### Added — `DISTRIBUTION-AND-TRUST.md`, an authored note (#64)
+
+What a sovereign estate can borrow from CDN architecture, and the encryption, accountability and
+auditability that wide distribution depends on. The second authored note under #59, and joined
+rather than split in two because the argument only works joined: distributing state data more
+widely is a straightforward loss until encryption makes a seized replica inert and a verifiable
+audit trail makes an unauthorised read detectable from outside the operator.
+
+It names the mechanism `TIER0-TIER1-SIZING.md` item 4 was missing. That item proposed "commercially
+hosted with sovereign-held keys" for the Tier 2/3 bulk and left open how that could be more than a
+contractual promise; attestation-gated key release is the answer, and confidential computing was
+absent from the repository entirely before this.
+
+The note carries no figures, deliberately. The model has no term for distributed topology — #12
+already records that the `min_sites` floor binds for 24 of 27 countries, making site count "mostly
+a *political* parameter" — so any number would have been invented. `ROADMAP.md` gains a Planned
+entry for what making it a modelled dimension would take, including the ripple through both
+TypeScript type files and the golden results file.
+
+Before this, `accountability`, `transparency`, `confidential computing` and `Schrems` appeared
+nowhere in the repository, and `encryption` appeared once.
+
+---
+
+## 2026-09-21
+
+### Fixed — the gate had been red for a week
+
+`web/e2e/app.spec.ts` hardcoded `305.7 MW`, `125,089` servers and Germany's `60.4 MW`; pinning the
+Eurostat vintages in `cc242ed` moved the totals to `306.4`, `125,371` and `60.7`, and nothing
+updated the expectations. Failing since 2026-09-13.
+
+The fix is not new constants. The three figures are now read from `model/eu27_results.csv` — which
+the spec's own comment always claimed was where they came from — and formatted with the app's own
+`mw()` and `num()`, so neither the number nor its rendering can drift independently. The parser
+throws on a malformed row rather than yielding `NaN`, because a silently undefined expectation is
+how this went unnoticed in the first place.
+
+CI still cannot see this class of failure: `.github/workflows/ci.yml` runs the Python suite and
+gitleaks, but no `npm run build`, no Vitest, no Playwright and no mobile suite. Recorded, not
+fixed.
+
+### Added — the critical national data register (#60)
+
+`model/national_data.csv` records per member state which of the fifteen Tier 0/Tier 1 record
+classes it holds, the national register that holds them, and the official page describing it,
+with the publisher, retrieval date and a supporting quote. `model/national_data.py` validates and
+reports (`./run.sh registers`); `tests/test_national_data.py` ratchets coverage from both sides,
+as `tests/test_sources.py` does.
+
+It renders as a new section in all four country renderings — `## 13.` in the generated briefs,
+section 9 on the web, a subsection in the book chapter and the A4 brief, section 10 in the mobile
+reader — and as a hand-written `## 21.` in `countries/NL/GOAL.md`, which the generator may not
+touch (#5). A test asserts every Dutch register named in the CSV appears verbatim in that file, so
+the hand-written copy cannot drift from the register.
+
+All fifteen classes render for every country, always. **3 of 405 pairs are recorded** — the three
+Dutch registers `TIER0-TIER1-SIZING.md` names as the ones to validate against: the BRP, the BRK
+and the Handelsregister. Four other candidate pages 404'd or could not be quoted with confidence
+and so were left unrecorded rather than guessed.
+
+### Added — tables of contents, and country flags in the indexes (#61, #62)
+
+Every generated brief opens with a contents list, built from the same `SECTIONS` tuple as the
+headings themselves, with GitHub anchors; `countries/NL/GOAL.md` gained one by hand. The web
+country page gained an on-page section index. `countries/SUMMARY.md` became a real index: each
+country name links to its brief, and each row carries its flag. The web country table and the
+mobile country list carry flags too.
+
+Flags appear in indexes and navigation only, never on a poster or a briefing PDF (#47, #61). The
+book's outline identifies countries as `DE · Germany` instead, because its interior is mono (#28)
+and typst could only reach flag glyphs through a colour, macOS-only font — which would have made
+`./run.sh book` silently render empty boxes anywhere but this machine. `tests/test_book.py` now
+asserts no flag codepoint reaches the typst source.
+
+The glyph is derived rather than stored in the bundle (#62). That kept the whole
+table-of-contents change at **zero artefact churn**; only the register, which does move the
+bundle, required re-rendering the 54 tracked binaries.
+
+### Added — `artifacts/`, a style guide per representation (#63)
+
+`artifacts/{markdown,html,pdf,png,mobile}/STYLE.md` plus a README stating the invariants that hold
+across all of them. They are the working form of rules that were spread across this register and a
+handful of source comments, and they cite decisions by number rather than restating them. All six
+files are in `tests/test_docs.py`'s `CITING` list, so a citation that stops resolving fails the
+suite.
+
+---
+
 ## 2026-09-17
 
 ### Added — `mobile/`, an Expo reader for the same bundle

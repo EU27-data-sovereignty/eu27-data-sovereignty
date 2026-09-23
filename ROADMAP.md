@@ -59,7 +59,11 @@ React 19, Vite 8, TypeScript 6, Tailwind 4, D3 7. Seven working routes:
 
 ### Tooling and testing
 - `init.sh`, `run.sh`, `test.sh` following the workspace template convention
-- 44 Python tests, 30 Vitest (including TS/Python parity), 15 Playwright (E2E, accessibility, responsive)
+- 84 Python tests, 66 Vitest (including TS/Python parity), 15 Playwright (E2E, accessibility,
+  responsive) and 19 Jest in `mobile/` — all passing as of 2026-09-21. The two failing Playwright
+  assertions are fixed: they read their figures from `model/eu27_results.csv` rather than
+  hardcoding them. Note the Vitest, Playwright and Jest suites run in neither `./test.sh`'s
+  default CI path nor `ci.yml`; see [`PROGRESS.md`](PROGRESS.md)
 - CI on GitHub, including a check that committed generated files match the model
 - Chart palette validated for colour-vision deficiency on both light and dark surfaces
 
@@ -267,6 +271,33 @@ funding of each national model effort, and AI Gigafactory bids and awards. Also 
    bucketing into a single shade.
 4. Keep the provenance caveat on the map itself, as on the infographics — a map gets screenshotted away
    from the page that qualifies it.
+
+### Then — make distribution a modelled dimension
+`DISTRIBUTION-AND-TRUST.md` (#64) argues that the Tier 0/1 spine wants many small sites while the
+Tier 2/3 bulk wants few large ones. The model cannot currently express either, so the note carries
+no figures.
+
+The starting point is recorded in #12: `sites = max(sites_by_mw, min_sites)`, and the hand-set floor
+binds for 24 of 27 countries, so "site count is mostly a *political* parameter, not an engineering
+result." This item is about changing that.
+
+1. **Give site count a cost.** `Critical-load MW per site` is a flat 12.0 MW constant in
+   `model/assumptions.csv`, so raising the count today only shrinks `avg_mw_per_site`: no per-site
+   fixed overhead, no economy-of-scale penalty, no latency benefit. Without a fixed-cost term there
+   is no tradeoff to optimise and "many small sites" cannot be evaluated against "few large".
+2. **Add workload-to-topology affinity.** Which workload classes distribute to many small sites and
+   which stay in sovereign cores. `workloads_inputs.csv` currently has no tier or affinity column.
+3. **Model failure domains**, rather than letting a flat 20% `Design headroom` stand in for
+   resilience.
+4. **Thread it through.** `capacity_model.py` sizing math → `country_data.build()` →
+   `export_json.py` → **both** `web/src/data/types.ts` and `mobile/src/data/types.ts` identically,
+   or `mobile/__tests__/parity.test.ts` fails.
+5. **Re-baseline the tests.** Regenerate the golden `model/eu27_results.csv`, widen
+   `tests/test_model.py`'s `min_sites: (1, 8)` bound deliberately rather than incidentally, and
+   generalise `Conservation.test_site_count_respects_both_floors` — `sites` stops being one scalar.
+
+**Gated on:** nothing technical. It is gated on wanting a second topology in the model at all, which
+is a product decision about what the model is for, not housekeeping.
 
 ### Later — the paper book
 `paper_book/`, 7 × 10 in, ~280–320 pp, grayscale-safe interior, typeset with Typst (installed).

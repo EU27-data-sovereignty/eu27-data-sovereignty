@@ -42,6 +42,11 @@ generator's path.
 
 *Would change if:* hand-authored country analysis becomes the main deliverable rather than the exception.
 
+**Amended 2026-09-21 (#60):** a thirteenth section, the Tier 0/Tier 1 national data register, was
+appended on the same reasoning — the alternative was a second generated document per country. The
+count in this entry's title is left as it was written; the live list is `SECTIONS` in
+`model/generate_countries.py`, which drives both the headings and each brief's contents list.
+
 ### 4. Research all 27 legal cells now, rather than scaffold and fill later
 **2026-09-03.** The six legal/regulatory columns were populated for every state in one pass.
 
@@ -516,7 +521,9 @@ the model's 1.25.
 Two rules the layout follows, both from the security audit:
 
 - **No state emblems, flags, crowns or official-looking wordmarks.** These are concept
-  posters for a programme that exists in no member state, and they say so.
+  posters for a programme that exists in no member state, and they say so. This rule is about
+  *artefacts*, which travel without the page that explains them; #61 records where a country
+  flag emoji is nonetheless allowed, and it is navigation only.
 - **The caveat is printed on the poster.** An image gets shared without the page that
   explains it, so the disclaimer has to travel with the pixels.
 
@@ -919,3 +926,143 @@ data-standards meaning was intended, the model half is replaced rather than amen
 
 *Would change if:* the model half is sourced (at which point it could become ledger rows and the note a
 re-ranking), or the ranking starts being quoted without its caveats, in which case it is withdrawn.
+
+---
+
+## The critical national data register
+
+### 60. Critical national data is a sourced register, not prose
+**2026-09-21.** `model/national_data.csv` records, per member state, which Tier 0 and Tier 1
+record classes the state holds, the register that holds them, and the official page describing
+it — validated by `model/national_data.py`, ratcheted by `tests/test_national_data.py`, and
+rendered as a section in all four country renderings.
+
+`TIER0-TIER1-SIZING.md` already had the vocabulary: the identity spine and the legal/fiscal
+state, tiered by consequence of loss. What it did not have was a single URL, or any country but
+the Netherlands. Its own open items asked for "the 'tiered sovereignty' argument as a reusable
+section for country write-ups". This is that, made machine-checkable.
+
+It clones the bargain `sources.csv` strikes (#54) rather than inventing a second one: every row
+carries the publisher, the retrieval date and **a quote from the page**, because a URL shows that
+a page exists, not that it says what the row claims.
+
+**Three states, not two.** `held`, `not_held`, and no row at all. All fifteen record classes
+render for every country, always — a sparse table hides the gap, whereas a full table with twelve
+blanks *is* the coverage report, readable by someone who will never run the test suite. A blank
+says "not yet recorded" in words, never a dash and never colour alone.
+
+`status: not_held` requires `confidence: absence` and an authoritative enumeration, extending #58.
+**This guard is weaker than the one in `sources.py`**, and the docstring says so: there, an
+absence claim is checked against the parameter cell in a different file; here the cell *is* the
+row, so nothing independent corroborates it. The claim is also more consequential — several
+member states genuinely keep fingerprints only on the document chip, so "no central register" is
+a real finding a careless row could fake.
+
+Where a register is *hosted* is deliberately not a column. That is a separate factual claim
+needing its own source, and recording it unsourced beside sourced cells is what #25 exists to
+prevent.
+
+*Would change if:* coverage reaches a point where tier 1 stops being reachable by one researcher,
+at which point the published percentage narrows to tier 0 — which is where the sovereignty
+argument lives — rather than staying honestly stuck near zero.
+
+### 61. Flags in navigation, never on an artefact
+**2026-09-21.** Country flag emoji appear in `countries/SUMMARY.md`, the web country index and
+the mobile country list. They appear nowhere else.
+
+This **extends #47, it does not contradict it.** #47's layout rule — no state emblems, flags,
+crowns or official-looking wordmarks — exists because a poster travels without the page that
+explains it, and must not read as something a government published. An index entry is not a
+document: it is a way of finding one, seen beside the country's name and its ISO code, in a table
+that says on its face what it is.
+
+So the exclusions are the artefacts, and they are absolute: no flag on a poster, a briefing PDF,
+a title block or a wordmark. The book is excluded too, for unrelated reasons — see #62.
+
+The glyph is derived from the ISO code by regional-indicator offset. `EL → GR` is the only
+override: Eurostat writes Greece as EL, which is not an ISO 3166-1 alpha-2 code and has no flag
+codepoint. Everywhere the flag is shown it is decorative and carries `aria-hidden`, sitting beside
+the country name and never replacing it — the name stays the accessible label and the thing the
+mobile filter matches on.
+
+### 62. The flag glyph is derived, not stored in the bundle
+**2026-09-21.** `model/emoji.py` and `flagEmoji()` in `web/src/utils/format.ts`. Nothing about
+flags reaches `web/public/data/eu27.json`.
+
+This **narrows #6**, which is why it gets its own entry rather than an edit to #6. #6 says Python
+is the source of truth and everything else renders one dict — but it governs canonical *figures*.
+A glyph derived from `iso2`, which is already in the bundle, is presentation, in the same category
+as `mw()`, `eur()` and `num()`, none of which live in the bundle either.
+
+The deciding argument is cost, and it is asymmetric. Any new bundle key changes its sha256, which
+marks all 54 tracked artefacts stale (#52) and forces a Chrome re-render — in exchange for a
+character that by #61 must appear on none of them. Deriving it instead made the whole
+table-of-contents change cost zero artefact churn.
+
+Two implementations is the accepted price, and it is smaller than it looks:
+`mobile/__tests__/parity.test.ts` already pins `mobile/src/data/format.ts` byte-for-byte to the
+web file, so the two TypeScript renderers share one copy; and both implementations are asserted
+against the same literal 27-pair table rather than recomputing the same arithmetic twice.
+
+**The book is excluded on separate grounds.** Its interior is mono (#28), and `typst` can only
+reach flag glyphs by falling back to Apple Color Emoji — colour, and macOS-only, so `./run.sh book`
+would render correctly here and emit empty boxes on any Linux machine, silently. The outline
+identifies countries by ISO code instead: `DE · Germany`. Since typst has no short-title, that
+means the visible chapter head carries the code, which also makes a 27-entry Contents scannable.
+`tests/test_book.py` asserts no regional-indicator codepoint reaches the typst source, so this is
+enforced rather than remembered.
+
+### 63. `artifacts/` holds style guides; `artefacts` are the tracked binaries
+**2026-09-21.** The new top-level `artifacts/` directory holds one style guide per output
+representation. The existing sense of the word — `countries/ARTEFACTS.csv`, `./run.sh artefacts`,
+#51 — keeps its narrower meaning: the tracked per-country PNG and PDF.
+
+The collision is real and was accepted deliberately, because the alternative names (`style/`,
+`representations/`) were worse at saying what the directory is for. It is mitigated by
+`artifacts/README.md` opening with the disambiguation, and by the two senses never appearing in
+the same sentence without it.
+
+The guides are the working form of rules that were otherwise spread across this register and a
+handful of source comments; nobody could answer "what are the rules for the PDF?" without reading
+all of it. They cite decisions by number rather than restating the reasoning, and they are listed
+in `tests/test_docs.py`'s `CITING`, so a guide citing a decision that does not exist fails the
+suite — which is what stops them becoming decorative.
+
+*Would change if:* a third sense of the word appears, at which point this one is renamed rather
+than disambiguated again.
+
+### 64. Distribution, encryption and accountability are one authored note
+**2026-09-22.** `DISTRIBUTION-AND-TRUST.md` argues that how widely a sovereign estate can be spread
+and how thoroughly it must be encrypted and audited are the same question, and proposes answers to
+the governance questions the Dutch reference case has left open since it was written. It is the
+second authored note, written under #59's conditions.
+
+**One note, not two.** The obvious split — deployment topology in one document, the governance
+triad in another — was rejected because the argument only works joined. Distribution multiplies the
+places state data physically sits, which is a straightforward loss until encryption makes a seized
+replica inert and a verifiable audit trail makes an unauthorised read detectable by someone outside
+the operator. Separating them would have produced one document recommending wide distribution
+without its preconditions, and another listing security properties with no account of what they buy.
+
+**#59's four conditions carry over intact.** It proposes rather than measures, so #10 is untouched:
+no member state is scored or ordered, and the note contains no figures at all, deliberately — the
+model has no term for distributed topology, so any number would be invented. Its caveats sit in the
+body. It states its evidentiary standard and that standard is low: it makes no per-country factual
+claim, so `VERIFICATION.md`'s tiered bar is not engaged rather than met, and the note says so in
+those words. It lives at the repository root, where `generate_countries.py` never writes, so
+`./run.sh data` cannot clobber it (#44).
+
+**It answers an open item the repository raised against itself.** `TIER0-TIER1-SIZING.md` item 4
+proposed absolute national control for Tier 0/1 and a looser posture for the Tier 2/3 bulk, called
+it "worth developing as a section in the country write-ups", and left the mechanism unnamed. The
+mechanism is attestation-gated key release, and naming it is most of what makes that proposal
+actionable. The same document's item 3 had already concluded that design effort belongs on "key
+custody and audit"; nothing in the repository had taken that up.
+
+The Netflix and Cloudflare material is an analogy and is flagged as one. It is cited to public
+vendor documentation inline and deliberately kept out of `model/source_urls.csv`, which is the
+ledger for parameter cells — adding vendor engineering pages to it would misrepresent how much of
+the model is sourced.
+
+*Would change if:* distribution becomes a modelled dimension, at which point the topology half stops
+being an argument and becomes a result, and this note keeps only the parts the model cannot express.

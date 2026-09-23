@@ -56,6 +56,7 @@ show_help() {
     echo "  export           Standalone per-country PDF briefs (book/build/briefs/)"
     echo "  book             Typeset the paper book"
     echo "  sources          Verification-ledger coverage report"
+    echo "  registers        Critical national data register coverage report"
     echo "  fetch [what]     Fetch source documents into cache/ (eurostat | legal | all)"
     echo
     echo -e "${GREEN}Deployment${NC}"
@@ -125,6 +126,11 @@ case "${1:-dev}" in
         ;;
     sources)
         python3 model/sources.py "${@:2}"
+        ;;
+    registers)
+        # The critical national data register: which Tier 0/Tier 1 records each state holds
+        # and the official page describing each. Stdlib only, like `sources` -- no check_deps.
+        python3 model/national_data.py "${@:2}"
         ;;
     fetch)
         # Stdlib only, like `sources` -- no check_deps. Writes into cache/, which is

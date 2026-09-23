@@ -82,6 +82,19 @@ reachable by a person with a browser, which is what the **manual** policy is for
 
 ---
 
+## A second set of endpoints, not yet in this pipeline
+
+`model/national_data.csv` carries an official-description URL per (state, record class), on the
+same terms as the ledger below: publisher, retrieval date, and a quote from the page (#60).
+
+**Those URLs are not fetched, hashed or cached by the pipeline described here.** They were
+retrieved by hand. So the property this document exists to provide — a local copy proving what the
+page said on the day it was read — does not yet hold for them, and link rot there is undetected.
+Bringing them under `./run.sh fetch` is open work; until then, treat a register row's quote as the
+only evidence, which is what the validator enforces.
+
+Run `./run.sh registers` for coverage. Currently 3 of 405 pairs.
+
 ## Endpoints per member state
 
 `gazette` is the state's legal gazette -- the first place to look for any tier-1 instrument.

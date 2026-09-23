@@ -28,6 +28,7 @@ from __future__ import annotations
 import csv
 import math
 import os
+import re
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -35,6 +36,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import capacity_model as cm  # noqa: E402
 import country_data  # noqa: E402
+import emoji  # noqa: E402
+import national_data as nd  # noqa: E402
 
 ROOT = cm.ROOT
 COUNTRIES = cm.COUNTRIES
@@ -225,6 +228,68 @@ REGIONS: dict[str, list[tuple[str, str, str, str]]] = {
 SHARES = {2: [0.55, 0.45], 3: [0.35, 0.30, 0.25], 4: [0.30, 0.20, 0.20, 0.20]}
 RESERVE_SHARE = 0.10
 
+# The brief's sections, in order. One tuple drives both the contents list and the headings
+# themselves, so a document cannot advertise a section it does not have -- the failure mode a
+# hand-maintained table of contents beside a hardcoded heading block always eventually reaches.
+#
+# Twelve sections rather than a second document per country is DECISIONS.md #3, and the numbers
+# are part of the contract: README.md, the book and countries/NL/GOAL.md all cross-reference
+# sections by number. Append here; never insert or renumber.
+SECTIONS = (
+    "Working thesis",
+    "Starting point",
+    "What is structurally different from the Dutch case",
+    "Workload demand (scaled from the Dutch baseline)",
+    "Capacity model output",
+    "Proposed geography (first-pass hypothesis)",
+    "Geography and threat notes",
+    "Recommendations specific to {name}",
+    "Open questions",
+    "Legal and regulatory posture",
+    "Current state and provider landscape",
+    "Migration path and cost",
+    "Critical national data in scope (Tier 0 / Tier 1)",
+)
+
+
+def national_data_table(entries: list[dict]) -> str:
+    """The Tier 0/Tier 1 register as a markdown table: all 15 classes, always.
+
+    A sparse table hides the gap; a full table with blanks *is* the coverage report, readable
+    by someone who will never run `./run.sh registers`. Module-level rather than a closure so
+    the hand-written Dutch brief (#5 keeps the generator out of it) is produced by this same
+    function instead of a second implementation that would drift.
+    """
+    rows = [
+        "| Tier | Record class | Register | Held by | Official description |",
+        "|---|---|---|---|---|",
+    ]
+    for e in entries:
+        if e["status"] == "held":
+            register = e["register"]
+            holder = f"[{e['holder']}]({e['holder_url']})" if e["holder_url"] else e["holder"]
+            link = f"[{e['publisher']}]({e['url']})"
+        elif e["status"] == "not_held":
+            register = "*no central register*"
+            holder = e["holder"]
+            link = f"[{e['publisher']}]({e['url']})"
+        else:
+            register = "*not yet recorded*"
+            holder = ""
+            link = ""
+        rows.append(f"| {e['tier']} | {e['label']} | {register} | {holder} | {link} |")
+    return "\n".join(rows)
+
+
+def slug(heading: str) -> str:
+    """The GitHub anchor for a rendered `## N. Title` heading.
+
+    Lowercase, punctuation dropped, spaces to hyphens -- GitHub's own rule. Country names in
+    this dataset are ASCII, so no transliteration is needed; if one ever is not, the anchor
+    will be wrong rather than missing, which a reader notices.
+    """
+    return re.sub(r"[^a-z0-9 -]", "", heading.lower()).replace(" ", "-")
+
 
 def load_rules() -> dict[str, dict]:
     rules = {}
@@ -395,6 +460,21 @@ def write_goal(d: dict) -> str:
         "either it stays in the sovereign core, sized accordingly, or it leaves the jurisdiction under explicit terms."
     )
 
+    recorded = nd.recorded(d["national_data"])
+    total = len(d["national_data"])
+    note = nd.NOTE
+
+    def h(n: int) -> str:
+        """Heading n, from the one SECTIONS tuple the contents list is also built from."""
+        return f"## {n}. {SECTIONS[n - 1].format(name=name)}"
+
+    def contents() -> str:
+        """A contents list that cannot disagree with the headings: same source, same loop."""
+        return "\n".join(
+            f"{n}. [{SECTIONS[n - 1].format(name=name)}](#{slug(h(n)[3:])})"
+            for n in range(1, len(SECTIONS) + 1)
+        )
+
     body = f"""# {name} - Sovereign Government Data Center Network
 
 > Generated {gen_date()} by `model/generate_countries.py` from the Dutch reference case
@@ -403,7 +483,11 @@ def write_goal(d: dict) -> str:
 > `python3 model/capacity_model.py {iso}` to update the capacity numbers; edit
 > `model/eu27_parameters.csv` or `model/scaling_rules.csv` and re-run the generator to update this file.
 
-## 1. Working thesis
+## Contents
+
+{contents()}
+
+{h(1)}
 
 {name} does not need to become technologically autarkic. It needs enough independently controlled compute,
 storage, networking, identity, cryptography and operational capability that the state can continue functioning
@@ -412,7 +496,7 @@ trustworthy. The Dutch design rules (sovereignty is a stack, not a building; 3-5
 paths; no single hardware supplier; a first-class developer platform) are taken as the starting point and
 adjusted below for what is structurally different about {name}.
 
-## 2. Starting point
+{h(2)}
 
 | | |
 |---|---|
@@ -430,18 +514,18 @@ adjusted below for what is structurally different about {name}.
 Relative to the Dutch baseline: population x{sc['pop_ratio']:.2f}, public administration x{sc['gov_ratio']:.2f},
 GDP x{sc['gdp_ratio']:.2f}. Resulting design load: x{ratio:.2f} the Dutch figure.
 
-## 3. What is structurally different from the Dutch case
+{h(3)}
 
 {chr(10).join('- ' + d for d in differs)}
 
-## 4. Workload demand (scaled from the Dutch baseline)
+{h(4)}
 
 Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch rows they scale are in
 `countries/NL/workloads_inputs.csv`. Frontline multiplier applied: {'yes' if frontline else 'no'}.
 
 {wl_table()}
 
-## 5. Capacity model output
+{h(5)}
 
 | Metric | Value |
 |---|---:|
@@ -458,7 +542,7 @@ Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch r
 
 Full table: `facility_summary.csv`.
 
-## 6. Proposed geography (first-pass hypothesis)
+{h(6)}
 
 Site posture: {hard}. Separation target: {'~30-80 km (island/micro-state maximum)' if micro else '50-100 km failure domains, dual fibre paths, distinct grid feeds'}.
 
@@ -468,11 +552,11 @@ These regions encode only the obvious constraints (capital estate, second metro,
 fault or flood zone). They are to be replaced by the scored site selection in workstream A of the Dutch
 `TODO.md` (grid capacity, flood risk, fibre, failure independence, physical security, land, cooling).
 
-## 7. Geography and threat notes
+{h(7)}
 
 {c['threat_notes']}
 
-## 8. Recommendations specific to {name}
+{h(8)}
 
 1. **Anchor on {c['digital_id'].split('/')[0].split('(')[0].strip()}.** Digital identity is the workload that, if it fails, stops every other
    government service; it belongs in the sovereign core first, active-active across at least two regions.
@@ -482,14 +566,14 @@ fault or flood zone). They are to be replaced by the scored site selection in wo
 4. **Power strategy.** {'Power is the binding constraint; treat grid connection lead time and on-site generation as first-order site criteria.' if (price > 190 or isolated) else 'Power is not the binding constraint; optimise for fibre diversity and failure-domain separation.'}
 5. **Hybrid tier.** {'With no in-country hyperscaler region, define now which non-critical workloads may leave the jurisdiction and under what contract terms.' if hs == 0 else 'Use in-country commercial regions for the non-critical tier, but keep identity, defense, security telemetry and registries in the sovereign core.'}
 
-## 9. Open questions
+{h(9)}
 
 - Replace scaled workload rows with real ministry/agency demand (see `countries/NL/CAPACITY_PLAN.md` for the method).
 - Which body owns the sovereign core, and how are agencies compelled or incentivised to migrate?
 - {'Out-of-country reserve: which partner state, under what treaty?' if (frontline or micro) else 'Which regions federate with EU partners for mutual disaster recovery, and which stay national-only?'}
 - Site-size assumption: is the 12 MW planning unit right for {name}, or should sites be {'smaller' if s.design_mw < 20 else 'larger'}?
 
-## 10. Legal and regulatory posture
+{h(10)}
 
 > **These entries are unverified research, not legal advice.** They were compiled in September 2026 from
 > public policy documents and have **not** been checked against the primary instruments. The maturity,
@@ -523,7 +607,7 @@ with expensive infrastructure hosting the wrong workloads.
 order for data it holds, regardless of where the data physically sits. Data residency in-country is
 therefore necessary but not sufficient; what matters is who holds the keys and who can be compelled.
 
-## 11. Current state and provider landscape
+{h(11)}
 
 | | |
 |---|---|
@@ -539,7 +623,7 @@ Against that starting point, the modelled sovereign core is **{s.design_mw:.1f} 
 {s.sites} site(s)**, or roughly {s.total_servers:,} servers. The gap between what runs today and that
 figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
 
-## 12. Migration path and cost
+{h(12)}
 
 Workloads are sequenced by how badly loss of control would hurt, not by how easy they are to move. The
 phases below are derived from the workload classes in `model/migration_phases.csv`; per-country figures
@@ -558,6 +642,21 @@ Phases 2 and 3 follow on clearance and legal constraints rather than cost. {hybr
 Sequencing caveat: the CAPEX split above apportions facility cost by each phase's share of IT load, which
 assumes phases are built into a shared facility programme rather than as separate buildings. Building
 phase 1 alone, on its own site, costs disproportionately more - the facility is largely a fixed cost.
+
+{h(13)}
+
+The workloads above are sized in servers and megawatts. This section says what they would *hold*:
+the records whose loss or foreign control is the reason a sovereign core is argued for at all. The
+tiering is by consequence of loss rather than by department, and is set out in
+`TIER0-TIER1-SIZING.md` - tier 0 is the identity spine, without which the state cannot say who
+exists; tier 1 is the enforceable relationship between citizen and state.
+
+**{recorded} of {total} record classes recorded for {name}.** The register is
+`model/national_data.csv`; run `./run.sh registers` for coverage across all 27.
+
+{national_data_table(d['national_data'])}
+
+{note}
 """
     return body
 
@@ -569,8 +668,9 @@ def write_summary(results: list[tuple[dict, cm.Summary]]) -> None:
         f"Generated {gen_date()} by `model/generate_countries.py`. All figures are scaled working assumptions "
         "derived from the Dutch reference case; see each country's `GOAL.md`.",
         "",
-        "| ISO | Country | Pop (m) | Servers | Racks | IT MW | Design MW | Sites | CAPEX (EUR m) | OPEX (EUR m/yr) | Power price | Flags |",
-        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|",
+        "| | ISO | Country | Pop (m) | Servers | Racks | IT MW | Design MW | Sites | CAPEX (EUR m) | "
+        "OPEX (EUR m/yr) | Power price | Structural flags |",
+        "|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|",
     ]
     tot = {"servers": 0, "design_mw": 0.0, "capex": 0.0, "opex": 0.0, "sites": 0}
     for c, s in sorted(results, key=lambda t: -t[1].design_mw):
@@ -584,7 +684,8 @@ def write_summary(results: list[tuple[dict, cm.Summary]]) -> None:
         if int(c["min_sites"]) <= 2:
             flags.append("micro")
         lines.append(
-            f"| {c['iso2']} | {c['country']} | {float(c['population_m']):.1f} | {s.total_servers:,} | {s.rack_equivalents:,.0f} | "
+            f"| {emoji.flag(c['iso2'])} | {c['iso2']} | [{c['country']}]({c['iso2']}/GOAL.md) | "
+            f"{float(c['population_m']):.1f} | {s.total_servers:,} | {s.rack_equivalents:,.0f} | "
             f"{s.total_it_mw:.1f} | {s.design_mw:.1f} | {s.sites} | {s.capex_total:,.0f} | {s.opex_total:,.0f} | "
             f"{float(c['elec_price_eur_mwh']):.0f} | {', '.join(flags)} |"
         )
@@ -594,12 +695,15 @@ def write_summary(results: list[tuple[dict, cm.Summary]]) -> None:
         tot["opex"] += s.opex_total
         tot["sites"] += s.sites
     lines.append(
-        f"| | **EU-27 total** | | **{tot['servers']:,}** | | | **{tot['design_mw']:,.0f}** | **{tot['sites']}** | "
+        f"| | | **EU-27 total** | | **{tot['servers']:,}** | | | **{tot['design_mw']:,.0f}** | **{tot['sites']}** | "
         f"**{tot['capex']:,.0f}** | **{tot['opex']:,.0f}** | | |"
     )
     lines += [
         "",
-        "Flags: *frontline* = land border with Russia/Belarus or Black Sea war exposure (defense/security workloads scaled up, "
+        "This table is the index: each country name links to its full brief. The flag is decorative and "
+        "sits beside the ISO code, which is what the dataset keys on.",
+        "",
+        "Structural flags: *frontline* = land border with Russia/Belarus or Black Sea war exposure (defense/security workloads scaled up, "
         "hardened site posture); *grid-isolated* = electrical island or near-island; *seismic* = high seismic risk at the "
         "capital region; *micro* = two in-country sites only.",
         "",
@@ -621,6 +725,9 @@ def main() -> int:
     if missing:
         raise SystemExit(f"no REGIONS entry for {missing}")
 
+    # Read once, outside the loop: country_data.build() does no file I/O of its own.
+    register = nd.load()
+
     # Baseline params (price source consistency) and run.
     cm.write_csv(COUNTRIES / BASELINE / "params.csv", params_rows(nl))
     nl_summary = cm.run_country(BASELINE)
@@ -637,7 +744,7 @@ def main() -> int:
         cm.write_csv(cdir / "workloads_inputs.csv", wl)
         cm.write_csv(cdir / "region_allocation_inputs.csv", rg)
         s = cm.run_country(iso)
-        d = country_data.build(c, nl, s, wl, nl_summary)
+        d = country_data.build(c, nl, s, wl, nl_summary, nd.for_country(register, iso))
         (cdir / "GOAL.md").write_text(write_goal(d), encoding="utf-8")
         results.append((c, s))
         cm.print_summary(s)

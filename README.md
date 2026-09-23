@@ -88,6 +88,10 @@ model/
                              legal/regulatory posture columns (certification, classification, procurement)
   sources.csv                the verification ledger: one row per sourced claim, with the quote
   sources.py                 validates the ledger and reports coverage (./run.sh sources)
+  national_data.csv          the critical national data register: per state, which Tier 0/Tier 1
+                             record classes it holds, the register, and the official page for it
+  national_data.py           validates the register and reports coverage (./run.sh registers)
+  emoji.py                   country flag emoji, derived from the ISO code (#61, #62)
   scaling_rules.csv          how each workload class scales from the NL baseline (weights, floors, frontline multiplier)
   migration_phases.csv       workload class -> migration phase
   capacity_model.py          workloads -> servers -> racks -> MW -> sites -> CAPEX/OPEX, for any country dir
@@ -97,6 +101,8 @@ model/
   export_artifacts.py        renders the tracked per-country poster and briefing PDF (./run.sh artefacts)
   eu27_results.csv           one result row per country (generated)
 book/                        print edition and per-country PDF briefs (typst); see book/README.md
+artifacts/                   one style guide per output representation - markdown, html, pdf, png,
+                             mobile. Documentation, not output; see artifacts/README.md (#63)
 OUTREACH.md                  institutional distribution map, one entry per member state
 countries/
   SUMMARY.md                 cross-country table (generated)
@@ -111,11 +117,15 @@ countries/
 web/                         React + Vite visualization app; reads the JSON bundle, no server
 mobile/                      Expo reader for the same bundle; local only, never built or deployed
 tests/                       stdlib unittest suite for the model and the data
+PROGRESS.md                  where every workstream stands today, on one page
 DECISIONS.md                 why every choice was made
 CHANGELOG.md                 what changed and when
 VERIFICATION.md              the source-verification workstream: schema, tiered rule, where it stands
 FEASIBILITY-RANKING.md       authored note: EU-27 ranked on feasibility of sovereign data centers plus
                              sovereign AI models, in four groups; model half unsourced (#59)
+DISTRIBUTION-AND-TRUST.md    authored note: what sovereign infrastructure can borrow from CDN
+                             architecture, and the encryption, accountability and auditability
+                             that wide distribution depends on (#64)
 ```
 
 Python is the source of truth. The markdown briefs, the JSON bundle, the app and the exports are all
@@ -131,6 +141,7 @@ renderings of one `country_data.build()` dict, so they cannot disagree with each
 ./test.sh                                   # the full gate: model, types, lint, unit, build, e2e, a11y
 ./run.sh artefacts                          # re-render the tracked posters and briefing PDFs
 ./run.sh sources                            # verification-ledger coverage
+./run.sh registers                          # critical national data register coverage
 ./run.sh fetch                              # fetch source documents into cache/ (see SOURCES.md)
 ./run.sh deploy                             # full gate, then deploy to Vercel production
 ./run.sh export                             # 27 standalone A4 country briefs (PDF)

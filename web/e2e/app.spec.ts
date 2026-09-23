@@ -1,5 +1,11 @@
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
+
+import { mw, num } from '../src/utils/format'
 
 /**
  * These assert that routes render REAL DATA, not that they merely load.
@@ -8,7 +14,53 @@ import { expect, test } from '@playwright/test'
  * returns 200 and shows a loading message forever — which is exactly what a broken
  * PDF export looks like too. Every check below therefore asserts a specific figure
  * traceable to the model.
+ *
+ * Those figures are READ FROM `model/eu27_results.csv`, never hardcoded. Three literals
+ * here once drifted from the model and the gate stayed red for a week (PROGRESS.md), so
+ * the expectations are now derived from the same file the comment always claimed they
+ * came from -- and formatted with the app's own helpers, so neither the number nor its
+ * rendering can drift independently.
  */
+
+const HERE = path.dirname(fileURLToPath(import.meta.url))
+const RESULTS = path.resolve(HERE, '../../model/eu27_results.csv')
+
+/** One row per country, keyed by ISO. Throws rather than yielding NaN: a silently
+ *  undefined expectation is how the previous hardcoded figures went unnoticed. */
+function results(): Map<string, Map<string, number>> {
+  const lines = fs.readFileSync(RESULTS, 'utf8').trim().split('\n')
+  const head = lines.shift()
+  if (!head) throw new Error(`${RESULTS} is empty`)
+  const cols = head.split(',')
+
+  const out = new Map<string, Map<string, number>>()
+  for (const line of lines) {
+    const cells = line.split(',')
+    if (cells.length !== cols.length) throw new Error(`malformed row: ${line}`)
+    const iso = cells[0] as string
+    const row = new Map<string, number>()
+    cols.forEach((col, i) => {
+      if (i > 0) row.set(col, Number(cells[i]))
+    })
+    out.set(iso, row)
+  }
+  return out
+}
+
+const MODEL = results()
+
+function cell(iso: string, col: string): number {
+  const v = MODEL.get(iso)?.get(col)
+  if (v === undefined || Number.isNaN(v)) throw new Error(`no ${col} for ${iso} in ${RESULTS}`)
+  return v
+}
+
+const sum = (col: string) => [...MODEL.keys()].reduce((total, iso) => total + cell(iso, col), 0)
+
+// The app sums the rounded per-country figures, so round before formatting.
+const EU27_DESIGN_MW = mw(Number(sum('design_mw').toFixed(1)))
+const EU27_SERVERS = num(sum('total_servers'))
+const DE_DESIGN_MW = mw(cell('DE', 'design_mw'))
 
 const ROUTES = [
   '/',
@@ -23,9 +75,9 @@ const ROUTES = [
 test.describe('data actually renders', () => {
   test('overview shows the EU-27 totals from the model', async ({ page }) => {
     await page.goto('/')
-    // 305.7 MW and 125,089 servers are the committed totals in eu27_results.csv.
-    await expect(page.getByText('305.7 MW')).toBeVisible()
-    await expect(page.getByText('125,089')).toBeVisible()
+    // Both derived from model/eu27_results.csv above, never typed in.
+    await expect(page.getByText(EU27_DESIGN_MW)).toBeVisible()
+    await expect(page.getByText(EU27_SERVERS)).toBeVisible()
   })
 
   test('matrix renders all 27 countries with 8 dimensions each', async ({ page }) => {
@@ -46,7 +98,7 @@ test.describe('data actually renders', () => {
   test('country page shows figures matching facility_summary.csv', async ({ page }) => {
     await page.goto('/country/DE')
     await expect(page.getByRole('heading', { name: 'Germany', level: 1 })).toBeVisible()
-    await expect(page.getByText('60.4 MW')).toBeVisible()
+    await expect(page.getByText(DE_DESIGN_MW)).toBeVisible()
     await expect(page.getByText(/BSI C5/).first()).toBeVisible()
     await expect(page.getByText(/Sovereign core/).first()).toBeVisible()
   })

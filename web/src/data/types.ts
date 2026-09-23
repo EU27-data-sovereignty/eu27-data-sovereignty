@@ -110,9 +110,30 @@ export interface Scale {
   design_ratio: number
 }
 
+/**
+ * One Tier 0/Tier 1 record class for one country. Always all 15, in tier order, so a gap is
+ * visible rather than absent — `status: 'unrecorded'` means nobody has researched it, which is
+ * NOT a claim that the state holds no such data. See `bundle.national_data_note`.
+ */
+export interface NationalDataEntry {
+  tier: 0 | 1
+  record_class: string
+  label: string
+  status: 'held' | 'not_held' | 'unrecorded'
+  register: string
+  holder: string
+  holder_url: string
+  url: string
+  publisher: string
+  retrieved: string
+  confidence: string
+  quote: string
+}
+
 export interface Country {
   iso2: string
   name: string
+  national_data: NationalDataEntry[]
   params: Record<string, string>
   flags: Flags
   scale: Scale
@@ -128,6 +149,8 @@ export interface Bundle {
   schema_version: number
   generated: string
   provenance: string
+  /** One disclaimer for all four renderers, so they cannot hedge differently. */
+  national_data_note: string
   assumptions: Record<string, string>[]
   phase_map: Record<string, string>[]
   countries: Record<string, Country>

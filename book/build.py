@@ -110,7 +110,11 @@ def country_entry(c: dict, standalone: bool = False) -> str:
     lines = []
     if not standalone:
         lines += [
-            f'== {esc(c["name"])}',
+            # The chapter head IS the outline entry -- typst has no short-title -- so the ISO
+            # code goes here to make a 27-country Contents scannable. Deliberately not a flag
+            # emoji: the interior is mono (DECISIONS.md #28) and typst could only reach those
+            # glyphs through a colour, macOS-only font, which would render tofu anywhere else.
+            f'== {esc(c["iso2"])} · {esc(c["name"])}',
             "",
             "#standfirst[",
             f"  {stake_line(c)}",
@@ -195,6 +199,41 @@ def country_entry(c: dict, standalone: bool = False) -> str:
         ")",
         "",
     ]
+
+    # Tier 0/Tier 1 register. Mono like everything else (#28): the three states are told apart
+    # by words, never by colour, and an unrecorded class says so rather than showing a dash.
+    entries = c.get("national_data") or []
+    if entries:
+        recorded = sum(1 for e in entries if e["status"] != "unrecorded")
+        lines += [
+            f"{h2} Critical national data in scope",
+            "",
+            f"What the platform would hold, tiered by consequence of loss. {recorded} of "
+            f"{len(entries)} record classes recorded.",
+            "",
+            "#datatable(",
+            "  columns: (auto, 1fr, 1fr),",
+            "  align: (left, left, left),",
+            "  table.hline(stroke: 0.6pt),",
+            "  [Tier], [Record class], [Register],",
+            "  table.hline(stroke: 0.3pt),",
+        ]
+        for e in entries:
+            if e["status"] == "held":
+                register = f'#link("{e["url"]}")[{esc(e["register"])}]'
+            elif e["status"] == "not_held":
+                register = "_no central register_"
+            else:
+                register = "_not yet recorded_"
+            lines.append(f'  [{e["tier"]}], [{esc(e["label"])}], [{register}],')
+        lines += [
+            "  table.hline(stroke: 0.6pt),",
+            "  caption: [A blank is an unresearched register, not a state that holds no such "
+            "data. Tiers 2 and 3 are out of scope.],",
+            ")",
+            "",
+        ]
+
     return "\n".join(lines)
 
 

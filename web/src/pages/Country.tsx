@@ -4,9 +4,60 @@ import type { Bundle } from '@/data/types'
 import { eur, mw, num, pct } from '@/utils/format'
 import { NotFound } from './NotFound'
 
-function Section({ n, title, children }: { n: number; title: string; children: React.ReactNode }) {
+/**
+ * The page's sections, in order. One array drives the contents list, the headings and the
+ * anchors, so the three cannot disagree — a contents list maintained beside a separate set of
+ * hardcoded headings is the drift this avoids.
+ *
+ * The markdown brief has its own list in `model/generate_countries.py` and the mobile reader
+ * its own again; the three surfaces deliberately do not show identical sections, so they are
+ * not shared. See artifacts/README.md.
+ */
+const SECTIONS = [
+  'Starting point',
+  'What is structurally different',
+  'Capacity',
+  'Proposed geography',
+  'Legal and regulatory posture',
+  'Current state and provider landscape',
+  'Migration path and cost',
+  'Geography and threat notes',
+  'Critical national data in scope',
+] as const
+
+function sectionTitle(n: number): string {
+  const title = SECTIONS[n - 1]
+  if (title === undefined) throw new Error(`no section ${n}`)
+  return title
+}
+
+const anchor = (n: number) =>
+  `s${n}-${sectionTitle(n)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')}`
+
+function Contents() {
   return (
-    <section className="mb-8">
+    <nav aria-label="Contents" className="mb-8 border-l-2 border-[var(--color-border)] pl-4">
+      <h2 className="mb-2 text-sm font-semibold text-[var(--color-fg-secondary)]">Contents</h2>
+      <ol className="text-sm">
+        {SECTIONS.map((title, i) => (
+          <li key={title} className="mb-1">
+            <span className="mr-2 text-[var(--color-fg-muted)] tabular-nums">{i + 1}</span>
+            <a className="text-[var(--color-accent-text)] underline" href={`#${anchor(i + 1)}`}>
+              {title}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  )
+}
+
+function Section({ n, children }: { n: number; children: React.ReactNode }) {
+  const title = sectionTitle(n)
+  return (
+    <section id={anchor(n)} className="mb-8 scroll-mt-4">
       <h2 className="mb-2 text-lg font-semibold">
         <span className="mr-2 text-[var(--color-fg-muted)]">{n}</span>
         {title}
@@ -37,6 +88,7 @@ export function Country({ bundle }: { bundle: Bundle }) {
   const p = c.params
   const cap = c.capacity
   const phase1 = c.phases[0]
+  const recorded = c.national_data.filter(e => e.status !== 'unrecorded').length
 
   return (
     <article>
@@ -46,7 +98,9 @@ export function Country({ bundle }: { bundle: Bundle }) {
         migration path.
       </p>
 
-      <Section n={1} title="Starting point">
+      <Contents />
+
+      <Section n={1}>
         <Facts
           rows={[
             ['Population', `${c.scale.population_m.toFixed(2)} m`],
@@ -59,7 +113,7 @@ export function Country({ bundle }: { bundle: Bundle }) {
         />
       </Section>
 
-      <Section n={2} title="What is structurally different">
+      <Section n={2}>
         <ul className="list-disc space-y-2 pl-5 text-sm text-[var(--color-fg-secondary)]">
           {c.structural_differences.map((d, i) => (
             <li key={i}>{d.replace(/\*\*/g, '')}</li>
@@ -67,7 +121,7 @@ export function Country({ bundle }: { bundle: Bundle }) {
         </ul>
       </Section>
 
-      <Section n={3} title="Capacity">
+      <Section n={3}>
         <Facts
           rows={[
             [
@@ -90,7 +144,7 @@ export function Country({ bundle }: { bundle: Bundle }) {
         />
       </Section>
 
-      <Section n={4} title="Proposed geography">
+      <Section n={4}>
         <div className="scroll-x">
           <table className="w-full border-collapse text-xs">
             <thead>
@@ -133,7 +187,7 @@ export function Country({ bundle }: { bundle: Bundle }) {
         </p>
       </Section>
 
-      <Section n={5} title="Legal and regulatory posture">
+      <Section n={5}>
         <Facts
           rows={[
             ['Governing instrument', p['legal_instrument'] ?? '—'],
@@ -153,7 +207,7 @@ export function Country({ bundle }: { bundle: Bundle }) {
         </p>
       </Section>
 
-      <Section n={6} title="Current state and provider landscape">
+      <Section n={6}>
         <Facts
           rows={[
             ['Government cloud', p['sovereign_cloud_initiative'] ?? '—'],
@@ -164,7 +218,7 @@ export function Country({ bundle }: { bundle: Bundle }) {
         />
       </Section>
 
-      <Section n={7} title="Migration path and cost">
+      <Section n={7}>
         <div className="scroll-x">
           <table className="w-full border-collapse text-xs">
             <thead>
@@ -217,8 +271,81 @@ export function Country({ bundle }: { bundle: Bundle }) {
         ) : null}
       </Section>
 
-      <Section n={8} title="Geography and threat notes">
+      <Section n={8}>
         <p className="text-sm text-[var(--color-fg-secondary)]">{p['threat_notes']}</p>
+      </Section>
+
+      <Section n={9}>
+        <p className="mb-3 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
+          What the platform would <em>hold</em>, tiered by consequence of loss rather than by
+          department. Tier 0 is the identity spine; tier 1 is the enforceable relationship between
+          citizen and state.{' '}
+          <strong>
+            {recorded} of {c.national_data.length} record classes recorded.
+          </strong>
+        </p>
+        <div className="scroll-x">
+          <table className="w-full border-collapse text-sm">
+            <caption className="sr-only">
+              Tier 0 and Tier 1 record classes for {c.name}, with the official page describing each
+              register
+            </caption>
+            <thead>
+              <tr className="border-b border-[var(--color-border)] text-left">
+                <th scope="col" className="p-2">
+                  Tier
+                </th>
+                <th scope="col" className="p-2">
+                  Record class
+                </th>
+                <th scope="col" className="p-2">
+                  Register
+                </th>
+                <th scope="col" className="p-2">
+                  Official description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {c.national_data.map(e => (
+                <tr key={e.record_class} className="border-b border-[var(--color-border)]">
+                  <td className="p-2 tabular-nums">{e.tier}</td>
+                  <th scope="row" className="p-2 text-left font-normal">
+                    {e.label}
+                  </th>
+                  <td className="p-2">
+                    {e.status === 'held' ? (
+                      e.register
+                    ) : e.status === 'not_held' ? (
+                      <em>no central register</em>
+                    ) : (
+                      /* Words, not a dash and not colour alone: a blank must not read as a
+                         finding, and WCAG 1.4.1 forbids encoding this by styling only. */
+                      <em className="text-[var(--color-fg-muted)]">not yet recorded</em>
+                    )}
+                  </td>
+                  <td className="p-2">
+                    {e.url ? (
+                      <a
+                        className="text-[var(--color-accent-text)] underline"
+                        href={e.url}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        {e.publisher}
+                      </a>
+                    ) : (
+                      ''
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 max-w-3xl text-xs text-[var(--color-fg-muted)]">
+          {bundle.national_data_note}
+        </p>
       </Section>
     </article>
   )

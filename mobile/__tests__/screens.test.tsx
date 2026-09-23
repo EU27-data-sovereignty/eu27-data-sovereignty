@@ -60,6 +60,7 @@ describe('country screen', () => {
       'Migration path and cost',
       'Sovereignty matrix',
       'Geography and threat notes',
+      'Critical national data in scope',
     ]) {
       // The heading is one Text with a nested Text for the number, so the string is split.
       expect(screen.getByText(new RegExp(title))).toBeTruthy();

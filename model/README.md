@@ -25,6 +25,12 @@ that verification is recorded — one row per sourced claim, with the quote that
 `../VERIFICATION.md` has the schema, the tiered rule and where it currently stands. `python3
 model/sources.py` reports coverage and fails on a row that is not usable evidence.
 
+`model/national_data.csv` is the second register, and strikes the same bargain for a different
+claim: not "what does this state's law require" but "what records does this state hold, and where
+is the official page that says so". `./run.sh registers` reports it. It has three states rather
+than two -- `held`, `not_held`, and no row at all -- because a blank must be readable as
+"not yet researched" and never as a finding of absence (#60).
+
 ## Why the ratings are not summed
 
 The eight sovereignty-matrix dimensions are shown side by side and never combined into a score.
@@ -52,6 +58,13 @@ export_json.py         writes web/public/data/eu27.json from the same dict
 export_artifacts.py    renders the tracked per-country PNG infographics and PDF briefings
 sources.py             validates the verification ledger and reports coverage
 sources.csv            the verification ledger: one row per sourced claim, with its quote
+national_data.py       validates the critical national data register and reports coverage
+national_data.csv      per state, which Tier 0/Tier 1 record classes it holds, the register
+                       that holds them, and the official page describing it, with a quote
+emoji.py               country flag emoji derived from the ISO code; EL -> GR is the only
+                       override. Imported by generate_countries.py ONLY -- never by the book
+                       or the poster, which carry no state emblems (#47, #61, #62)
+institutions.py        validates the institutional contact map (uncommitted work in progress)
 assumptions.csv        shared engineering and economic defaults
 eu27_parameters.csv    one row per member state; see the table above before using it
 scaling_rules.csv      how each workload class scales from the Dutch baseline

@@ -6,6 +6,30 @@
 > institutional and policy descriptions are unverified research. RijksCloud is a proposed name; no
 > such programme exists. This is independent analysis, not a government document.
 
+## Contents
+
+1. [Core idea](#1-core-idea)
+2. [Why this exists](#2-why-this-exists)
+3. [Proposed institutional model](#3-proposed-institutional-model)
+4. [Physical architecture](#4-physical-architecture)
+5. [Preliminary scale](#5-preliminary-scale)
+6. [Logical platform architecture](#6-logical-platform-architecture)
+7. [Hybrid cloud model](#7-hybrid-cloud-model)
+8. [Digital identity as a foundational workload](#8-digital-identity-as-a-foundational-workload)
+9. [Defense extension](#9-defense-extension)
+10. [Sovereignty is a stack, not a building](#10-sovereignty-is-a-stack-not-a-building)
+11. [Hardware and supply-chain reality](#11-hardware-and-supply-chain-reality)
+12. [Power and cooling](#12-power-and-cooling)
+13. [Network topology](#13-network-topology)
+14. [Resilience model](#14-resilience-model)
+15. [Security model](#15-security-model)
+16. [European dimension](#16-european-dimension)
+17. [What should not be done](#17-what-should-not-be-done)
+18. [Questions still to answer](#18-questions-still-to-answer)
+19. [Recommended next analytical work](#19-recommended-next-analytical-work)
+20. [Working thesis](#20-working-thesis)
+21. [Critical national data in scope (Tier 0 / Tier 1)](#21-critical-national-data-in-scope-tier-0--tier-1)
+
 ## 1. Core idea
 
 Create a Dutch-controlled national cloud and data-center capability — provisionally **RijksCloud** or a **Dutch National Cloud Authority** — for workloads where sovereignty, continuity, security, and jurisdiction matter more than hyperscaler convenience.
@@ -443,3 +467,47 @@ Estimate CAPEX/OPEX for 3-, 4-, and 5-region architectures and compare them with
 
 That is the standard against which **RijksCloud** should be designed.
 
+## 21. Critical national data in scope (Tier 0 / Tier 1)
+
+Sections 5 and 12 size this platform in servers and megawatts. This section says what it would
+*hold*: the records whose loss or foreign control is the reason a sovereign core is argued for at
+all. The tiering is by consequence of loss rather than by department, and is worked out in
+`TIER0-TIER1-SIZING.md`, which uses the Netherlands as its example - tier 0 is the identity
+spine, without which the state cannot say who exists; tier 1 is the enforceable relationship
+between citizen and state. Together they come to roughly 80 MB per citizen, about 1.4 PB logical
+for the Dutch population, which is **0.2-0.4% of the 14 MW facility budget**. Storage is not the
+sizing driver; serving is.
+
+That asymmetry is the argument: tier 0 alone is around 50 TB - one rack, air-gappable, physically
+containable - so absolute national control over tiers 0 and 1 is cheap, and can be argued for
+separately from the expensive capacity case.
+
+**3 of 15 record classes recorded.** Unlike the generated briefs, this
+section is hand-written (#5); the rows below come from `model/national_data.csv` via
+`generate_countries.national_data_table()`, so they cannot drift from the register. Run
+`./run.sh registers` for coverage across all 27.
+
+| Tier | Record class | Register | Held by | Official description |
+|---|---|---|---|---|
+| 0 | Civil registry core | Basisregistratie Personen (BRP) | [Rijksdienst voor Identiteitsgegevens (RvIG)](https://www.rvig.nl/) | [Rijksdienst voor Identiteitsgegevens (RvIG)](https://www.rvig.nl/basisregistratie-personen) |
+| 0 | Facial biometric | *not yet recorded* |  |  |
+| 0 | Fingerprint biometric | *not yet recorded* |  |  |
+| 0 | Breeder document scans | *not yet recorded* |  |  |
+| 0 | Document issuance history | *not yet recorded* |  |  |
+| 0 | Digital identity credentials | *not yet recorded* |  |  |
+| 0 | Authentication audit log | *not yet recorded* |  |  |
+| 0 | Electoral roll entry | *not yet recorded* |  |  |
+| 1 | Tax | *not yet recorded* |  |  |
+| 1 | Benefits & pensions | *not yet recorded* |  |  |
+| 1 | Land & property registry | Basisregistratie Kadaster (BRK) | [Kadaster](https://www.kadaster.nl/) | [Kadaster](https://www.kadaster.nl/zakelijk/registraties/basisregistraties/brk) |
+| 1 | Judicial & criminal justice | *not yet recorded* |  |  |
+| 1 | Education | *not yet recorded* |  |  |
+| 1 | Business registry | Handelsregister | [Kamer van Koophandel (KVK)](https://www.kvk.nl/) | [Kamer van Koophandel (KVK)](https://www.kvk.nl/over-het-handelsregister/) |
+| 1 | Vehicle & licensing | *not yet recorded* |  |  |
+
+A blank row means this repository has not yet researched that register. It is not a statement that the country holds no such data. Tiers 2 (health records, imaging) and 3 (genomics, archives, video retention, geospatial) are out of scope: they hold most of the bytes, but Tiers 0 and 1 hold the sovereignty.
+
+The sizing figures in `TIER0-TIER1-SIZING.md` are order-of-magnitude estimates built from public
+schema documentation and standard media sizes, **not** from any national statistics office
+publication. Validating them against the Kadaster, RvIG and Belastingdienst annual reports is an
+open item in that document, and is a different task from recording the registers here.

@@ -5,7 +5,7 @@ import { FlatList, StyleSheet, Text, TextInput, useColorScheme, View } from 'rea
 
 import { Text as Type, themeFor } from '@/constants/Colors';
 import { bundle, search } from '@/data/bundle';
-import { eur, mw, num } from '@/data/format';
+import { eur, flagEmoji, mw, num } from '@/data/format';
 
 export default function Countries() {
   const theme = themeFor(useColorScheme());
@@ -47,7 +47,15 @@ export default function Countries() {
               style={[styles.row, { borderColor: theme.border, backgroundColor: theme.bgCard }]}
             >
               <View style={styles.rowMain}>
-                <Text style={[styles.name, { color: theme.fgPrimary }]}>{item.name}</Text>
+                {/* The list is the index, which is the one place a flag belongs (#47). The row
+                    already carries accessibilityLabel={item.name}, so the flag is decorative.
+                    The name stays its OWN text node rather than being concatenated with the
+                    glyph, so it remains independently addressable — by assistive tech, and by
+                    the test that asserts the list renders real country names. */}
+                <Text style={[styles.name, { color: theme.fgPrimary }]}>
+                  <Text>{`${flagEmoji(item.iso2)}  `}</Text>
+                  <Text>{item.name}</Text>
+                </Text>
                 <Text style={[styles.meta, { color: theme.fgSecondary }]}>
                   {item.iso2} · {num(item.capacity.total_servers)} servers · {item.capacity.sites}{' '}
                   sites

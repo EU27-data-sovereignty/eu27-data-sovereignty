@@ -10,6 +10,28 @@ Where to look for each state's instruments is a separate document, [`SOURCES.md`
 together with the fetch pipeline that keeps a local copy of every document consulted. This file
 stays about method.
 
+## A second register, same bargain, different claim
+
+`model/national_data.csv` is a parallel workstream with the same discipline and a different
+subject (#60). This file's ledger asks *what does this state's law require*; that one asks *what
+records does this state hold, and where is the official page that says so*. Both carry the
+publisher, the retrieval date and a quote from the page, for the same reason — a URL shows that a
+page exists, not that it says what the row claims.
+
+**Status: 3 of 405 (country, record class) pairs recorded.** Run `./run.sh registers`.
+
+Two differences worth knowing before working on it:
+
+- It has **three** states, not two. `held`, `not_held`, and no row at all. A blank renders as
+  "not yet recorded" in words, never as a dash and never as absence.
+- Its `confidence: absence` guard is **weaker** than the one described below. Here an absence
+  claim is checked against the parameter cell in a different file; there the cell *is* the row, so
+  nothing independent corroborates it. That is stated in the module docstring rather than papered
+  over.
+
+It is not currently a gate on publication. It becomes one if the register section starts being
+read as a statement of what a state does and does not hold, rather than as a scope note.
+
 ---
 
 ## What is and is not at issue

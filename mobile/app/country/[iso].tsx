@@ -12,7 +12,7 @@ import { useEffect } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, useColorScheme, View } from 'react-native';
 
 import { Text as Type, themeFor, type Theme } from '@/constants/Colors';
-import { countries, countryFor } from '@/data/bundle';
+import { bundle, countries, countryFor } from '@/data/bundle';
 import { eur, mw, num, pct } from '@/data/format';
 import { DIMENSION_LABELS, MATRIX_DIMENSIONS } from '@/data/types';
 
@@ -249,6 +249,32 @@ export default function CountryScreen() {
 
       <Section n={9} title="Geography and threat notes" theme={theme}>
         <Text style={[styles.body, { color: theme.fgSecondary }]}>{p['threat_notes']}</Text>
+      </Section>
+
+      <Section n={10} title="Critical national data in scope" theme={theme}>
+        <Text style={[styles.body, { color: theme.fgSecondary }]}>
+          What the platform would hold, tiered by consequence of loss.{' '}
+          {c.national_data.filter(e => e.status !== 'unrecorded').length} of{' '}
+          {c.national_data.length} record classes recorded.
+        </Text>
+        {c.national_data.map(e => (
+          <View key={e.record_class} style={[styles.fact, { borderColor: theme.border }]}>
+            <Text style={[styles.factKey, { color: theme.fgMuted }]}>
+              Tier {e.tier} · {e.label}
+            </Text>
+            {/* Words, never a dash or colour alone: a blank must not read as a finding. */}
+            <Text style={[styles.factValue, { color: theme.fgPrimary }]}>
+              {e.status === 'held'
+                ? e.register
+                : e.status === 'not_held'
+                  ? 'No central register'
+                  : 'Not yet recorded'}
+            </Text>
+          </View>
+        ))}
+        <Text style={[styles.caveat, { color: theme.fgMuted }]}>
+          {bundle.national_data_note}
+        </Text>
       </Section>
     </ScrollView>
   );

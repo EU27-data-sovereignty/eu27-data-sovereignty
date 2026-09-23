@@ -65,6 +65,13 @@ python3 model/sources.py
 ok "ledger is valid"
 
 # -----------------------------------------------------------------------------
+step "National data register"
+# Same reasoning as the ledger above: the coverage number goes in front of whoever runs
+# the gate. 405 = 15 Tier 0/Tier 1 record classes x 27 member states.
+python3 model/national_data.py | tail -4
+ok "register is valid"
+
+# -----------------------------------------------------------------------------
 step "Generated files are current"
 # Regenerate with the date pinned; anything the generator *moves* is a real change
 # that was not committed, which would make the published site disagree with the model.

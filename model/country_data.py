@@ -164,8 +164,16 @@ def structural_differences(c: dict, f: dict) -> list[str]:
     return differs
 
 
-def build(c: dict, nl: dict, s, wl_rows: list[dict], nl_s) -> dict:
-    """Everything the renderers need about one country."""
+def build(c: dict, nl: dict, s, wl_rows: list[dict], nl_s, national_data=None) -> dict:
+    """Everything the renderers need about one country.
+
+    `national_data` is the 15-entry Tier 0/Tier 1 register view from
+    `national_data.for_country()`, passed in rather than read here: this module does no file
+    I/O, so that it stays a pure function of its arguments (DECISIONS.md #7). It is a keyword
+    with a default because `build()` has four call sites, two of them in the test suite, and
+    None is a meaningful value -- it renders as "not yet recorded", which is also what an
+    unresearched country renders as.
+    """
     f = flags(c)
     pop, gdp, gov = float(c["population_m"]), float(c["gdp_eur_bn"]), float(c["gov_employment_k"])
 
@@ -183,6 +191,7 @@ def build(c: dict, nl: dict, s, wl_rows: list[dict], nl_s) -> dict:
     return {
         "iso2": c["iso2"],
         "name": c["country"],
+        "national_data": national_data or [],
         "params": dict(c),
         "flags": f,
         # Raw, unrounded Summary. The markdown renderer formats straight from these so

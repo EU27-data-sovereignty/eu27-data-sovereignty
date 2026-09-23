@@ -47,3 +47,8 @@ venv/
 # Fetched source corpus. Gitignored, but .gitignore is not read here, so without
 # this rule the whole cache uploads with the source on every deploy.
 cache/
+
+# Representation style guides. Documentation for people editing this repo; nothing
+# in the deployed app reads them. Distinct from countries/*-infographic.png and
+# *-briefing.pdf, which are tracked deliverables the site does serve.
+artifacts/

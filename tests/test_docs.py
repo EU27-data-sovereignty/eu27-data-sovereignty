@@ -28,8 +28,15 @@ HEADING = re.compile(r"^### (\d+)\. ", re.M)
 REFERENCE = re.compile(r"(?<![\w#])#(\d{1,2})(?![0-9A-Za-z])")
 
 # Files that cite decisions by number. Country briefs are generated and cite none.
-CITING = ["README.md", "ROADMAP.md", "CHANGELOG.md", "ASSETS.md", "OUTREACH.md", "FEASIBILITY-RANKING.md",
-          "VERIFICATION.md", "DECISIONS.md", ".gitignore", "model/README.md", "book/README.md"]
+CITING = ["README.md", "ROADMAP.md", "PROGRESS.md", "CHANGELOG.md", "ASSETS.md", "OUTREACH.md",
+          "FEASIBILITY-RANKING.md", "DISTRIBUTION-AND-TRUST.md", "VERIFICATION.md",
+          "SOURCES.md", "DECISIONS.md", ".gitignore",
+          "model/README.md", "book/README.md",
+          # The representation style guides are the working form of the rules this register
+          # holds the reasoning for, so they cite heavily. A guide citing a decision that does
+          # not exist is exactly the drift this test was written to catch.
+          "artifacts/README.md", "artifacts/markdown/STYLE.md", "artifacts/html/STYLE.md",
+          "artifacts/pdf/STYLE.md", "artifacts/png/STYLE.md", "artifacts/mobile/STYLE.md"]
 
 
 def numbers() -> list[int]:
