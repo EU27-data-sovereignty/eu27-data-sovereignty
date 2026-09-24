@@ -1148,3 +1148,27 @@ so no tracked artefact is stale; the regenerated diff is citation text only (26 
 
 *Would change if:* the register outgrows CSV review — thousands of citations — at which point it moves
 to SQLite with a CSV export for diffs, keeping the same schema.
+
+### 68. The public institutional register routes by web page, never by email address
+**2026-09-24.** `model/institutions.csv` admits an https page (contact page, press office, secretariat,
+web form) or a postal address as a body's route, and no email address at all — not even a generic
+inbox such as `press@`. `model/institutions.py` rejects `mailto:`; the private screen
+(`contacts/tools/check_institutions.py`) also tests every candidate with the commit gate's own
+patterns, so a row the gate would block never reaches a commit.
+
+Found by the gate, not by review: the first fill of the register (91 rows, 53 routed by `mailto:`) was
+blocked at commit for "real email address" and "phone-number-shaped value". `institutions.py` had
+allowed a generic inbox and rejected only a `first.last@` shape — a finer line than the gate draws,
+and a line a regex can get wrong in either direction. The gate's rule is simpler and holds: this
+repository is public, so it carries no addresses. The page that publishes an inbox is as good a route
+for a reader, and survives the inbox being renamed.
+
+Cost, accepted: coverage fell from the 67 pairs the email-routed rows would have filled to 25. Those
+bodies are not lost — their inboxes are in the private repo — but each needs its contact page found
+before it enters this register.
+
+Verified: `python3 model/institutions.py` — 37 rows, 25/324 pairs, 0 errors; the gate passes the
+commit that adds them; `contacts/tools/people.py` leak check 0 lines.
+
+*Would change if:* the gate gains a per-file allowance for published institutional inboxes, which is a
+policy change in `dotfiles`, not here.

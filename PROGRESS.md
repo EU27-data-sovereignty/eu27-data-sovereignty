@@ -21,10 +21,11 @@ two untracked files — see [In progress](#in-progress).
 | Secret scanning | **Done** | local gate on every commit + gitleaks in CI |
 | Tables of contents | **Done** | every brief, `SUMMARY.md`, web, mobile, book outline |
 | Representation style guides | **Done** | `artifacts/`, 6 files, citations checked by `tests/test_docs.py` |
-| Source verification | **2 of 189 cells** | `./run.sh sources` |
+| Source verification | **2 of 189 legal cells** | `./run.sh sources` |
+| **Source register** | **138 of 621 parameter cells; 0 of 22 assumptions** | `python3 model/provenance.py` (#67) |
 | **Critical national data register** | **3 of 405 pairs** | `./run.sh registers` |
-| Institutional map | **Prose only; register 0 of 324** | `OUTREACH.md`; `model/institutions.csv` uncommitted |
-| Named contacts | **NL only, no routes** | private repo at `contacts/` |
+| Institutional map | **25 of 324 pairs** (37 rows) | `python3 model/institutions.py` |
+| Named contacts | **956 rows, 910 people; 850 send-ready** | private repo at `contacts/` (#66) |
 | Paper book | **Scaffolded** | `book/build.py` typesets; ~1.1k of ~20-30k words written |
 | **Full test gate** | **Green** as of 2026-09-21 | `./test.sh` exits 0 — see below |
 
@@ -250,28 +251,33 @@ one country the whole model derives from. `tests/test_national_data.py` asserts 
 name and URL in the CSV appears verbatim in `countries/NL/GOAL.md`, which is the cheapest guard
 that catches real drift.
 
-### The institutional map — started, uncommitted
-`OUTREACH.md` carries the institutions to approach in each member state as prose, with its ministry,
-committee and press rows marked "check before send". A machine-checkable register was started and is
-**not committed**:
-
-- `model/institutions.py` — validator: twelve functions per country, an institutional-route rule that
-  rejects `first.last@` addresses, a mandatory quote, a coverage report.
-- `model/institutions.csv` — header only.
+### The institutional map — 25 of 324
+`OUTREACH.md` carries the institutions to approach in each member state as prose. The machine-checkable
+register, `model/institutions.csv`, was filled on 2026-09-24 from the same research pass that built the
+private people inventory, through a screen in the private repo (`contacts/tools/check_institutions.py`):
+of 215 researched rows, 141 failed the validator (most because they route by email, which the public
+register no longer admits, #68), 25 were dropped for naming a person, 1 carried a value the commit
+gate blocks, 11 had a quote that could not be found on the body's page, and **37 were admitted**.
+`tests/test_institutions.py` ratchets the coverage. The email-routed bodies are not lost: their
+inboxes sit in the private repo, and each needs its contact *page* found to enter this register.
 
 ```
 $ python3 model/institutions.py
-0/324 (country, function) pairs filled (0%)
+25/324 (country, function) pairs filled (8%)
+37 rows, of which 9 are EU-level (tier 0).
 ```
 
 The twelve functions: policy, operator, certification, procurement, scrutiny, press, energy, cyber,
-dataprotection, telecom, planning, finance. Agreed but not yet built: named officeholders and agency
-heads go in the private contacts repo with institutional routes only; no personal contact details, so
-`contacts/CONVENTIONS.md` rule 2 stands.
+dataprotection, telecom, planning, finance. Named officeholders live only in the private repo (#26, #66).
 
 ### Named contacts
-`contacts/NL/list.md` covers the Netherlands only, records no contact details by design, and its
-political rows lapsed with the 29 October 2025 election. The other 26 countries have nothing.
+The private repo at `contacts/` holds `people.csv`: 956 seats held by 910 people across the EU
+institutions and 26 member states (none yet for MT; CY, HU, HR, EL and SI have five rows or fewer).
+Each row records why the person matters, a quote proving the seat, and a work contact their own
+institution publishes (#66). Every row is fetched and checked: 929 contacts and 870 seat quotes are
+found on their cited pages, and **850 rows have both, which is what "send-ready" means**. 78
+addresses were removed because their cited page did not carry them. Counts only here; no name
+crosses into this repository.
 
 ---
 

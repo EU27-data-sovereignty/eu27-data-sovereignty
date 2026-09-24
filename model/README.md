@@ -64,7 +64,7 @@ national_data.csv      per state, which Tier 0/Tier 1 record classes it holds, t
 emoji.py               country flag emoji derived from the ISO code; EL -> GR is the only
                        override. Imported by generate_countries.py ONLY -- never by the book
                        or the poster, which carry no state emblems (#47, #61, #62)
-institutions.py        validates the institutional contact map (uncommitted work in progress)
+institutions.py        validates the institutional contact map (25/324 pairs; tests/test_institutions.py)
 assumptions.csv        shared engineering and economic defaults
 eu27_parameters.csv    one row per member state; see the table above before using it
 scaling_rules.csv      how each workload class scales from the Dutch baseline

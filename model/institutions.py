@@ -21,10 +21,11 @@ entirely -- a public official's work contact is still personal data under GDPR, 
 repository is a scrape target. Named officeholders live in the private contacts repo, which
 cross-references this file for the institution they sit in.
 
-The same rule constrains `route_url`: it must be an institution's *published* channel -- a press
-office, a committee secretariat, a general inbox, a web form. An address shaped like an
-individual's mailbox (`first.last@`) is rejected even when a page publishes it, because the whole
-point of routing through the institution is that the route survives the officeholder.
+The same rule constrains `route_url`: it must be an institution's *published* channel -- the https
+page of a press office, a committee secretariat, a contact page, a web form -- or a postal address.
+Never an email address, not even a generic inbox: this repository is public and its commit gate
+blocks every real address (#68). The page that publishes an inbox is the route; the inbox itself,
+where one is wanted, lives in the private contacts repo.
 """
 from __future__ import annotations
 
@@ -69,17 +70,6 @@ CONFIDENCE = ("primary", "official", "secondary")
 
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
-# Local parts that read as an individual's mailbox rather than an institutional one.
-PERSONAL_LOCAL = re.compile(r"^[a-z]{2,}[._-][a-z]{2,}$", re.I)
-
-# Institutional local parts that happen to contain a separator, so PERSONAL_LOCAL cannot see them.
-GENERIC_LOCAL = re.compile(
-    r"^(info|contact|press|pers|presse|prensa|stampa|media|office|secretariat|secretariaat|"
-    r"sekretariat|secretaria|segreteria|kontakt|comms|communication|communications|voorlichting|"
-    r"mail|post|posta|postmaster|enquiries|helpdesk|support|service|servicedesk|cert|csirt|"
-    r"soc|abuse|dpo|gdpr|privacy|foi|woo|procurement|tenders|general|admin|reception)\b",
-    re.I,
-)
 
 
 def countries() -> list[str]:
@@ -102,15 +92,11 @@ def route_errors(where: str, route_type: str, route_url: str) -> list[str]:
         errors.append(f"{where}: route_type must be one of {ROUTE_TYPES}")
 
     if route_url.startswith("mailto:"):
-        address = route_url[len("mailto:"):]
-        local, _, domain = address.partition("@")
-        if not domain:
-            errors.append(f"{where}: route_url is a mailto: without a domain")
-        elif not GENERIC_LOCAL.match(local) and PERSONAL_LOCAL.match(local):
-            errors.append(
-                f"{where}: route_url looks like an individual's mailbox; route through the "
-                f"institution's published channel instead (CONVENTIONS rule 2)"
-            )
+        # This repository is public and its commit gate blocks every real address (#68). A body's
+        # inbox is published on its contact page; route to that page, and keep addresses in the
+        # private contacts repo.
+        errors.append(f"{where}: no email addresses in the public register; use the https page "
+                      f"that publishes the inbox (#68)")
     elif route_url.startswith("https://"):
         if route_type == "postal":
             errors.append(f"{where}: a postal route needs the address, not a URL")
@@ -118,7 +104,7 @@ def route_errors(where: str, route_type: str, route_url: str) -> list[str]:
         if len(route_url.strip()) < 10:
             errors.append(f"{where}: postal route is too short to be an address")
     else:
-        errors.append(f"{where}: route_url must be an https:// URL or a mailto: address")
+        errors.append(f"{where}: route_url must be an https:// URL or a postal address")
     return errors
 
 
