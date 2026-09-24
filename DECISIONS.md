@@ -1108,9 +1108,10 @@ The same bargain as `sources.csv` (#54): a URL shows that a page exists, not tha
 claims. What is new is that a script, not a reader, holds the row to it.
 
 Verified: `python3 contacts/tools/people.py` — 956 rows, 910 people, 0 validation errors, leak check
-0 public-repo lines; 845/956 send-ready. `contacts/tools/check_contacts.py --all` — 919 contacts found
-on their page, 37 unreached; 866 seat quotes found, 79 not found, 11 unreached. 78 addresses were
-removed because their cited page did not carry them.
+0 public-repo lines; 850/956 send-ready. `contacts/tools/check_contacts.py` — 929 contacts found on
+their page, 27 unreached; 870 seat quotes found, 77 not found, 9 unreached. 78 addresses were removed
+because their cited page did not carry them. (Figures from the run after the matching fixes of the
+same day; an earlier run, with a bug that rewrote " at " to "@" in quote text, read 845/919/866.)
 
 *Would change if:* a named individual ever needs to appear in this repository, which #26 still forbids.
 
