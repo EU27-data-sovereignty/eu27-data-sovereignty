@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Cyprus.
 
 | | |
 |---|---|
-| Population | 0.98 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 36 bn (2025, current prices) |
-| Public administration employment (NACE O) | 36 k (Eurostat LFS 2025) |
-| Non-household electricity price | 242.9 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 24.1% (2024) |
-| Land area | 9,213 km2 |
+| Population | 0.98 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 36 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 36 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 242.9 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 24.1% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 9,213 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 0 |
 | Existing government / sovereign cloud | Government G-Cloud / Government Data Centre - Deputy Ministry of Research, Innovation and Digital Policy (DMRID) + Cyta hosting; RRF hybrid-cloud consolidation |
 | National digital identity (anchor workload) | CY Login + Cyprus Digital ID |

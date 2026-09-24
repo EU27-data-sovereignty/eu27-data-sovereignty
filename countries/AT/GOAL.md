@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Austria.
 
 | | |
 |---|---|
-| Population | 9.20 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 514 bn (2025, current prices) |
-| Public administration employment (NACE O) | 333 k (Eurostat LFS 2025) |
-| Non-household electricity price | 198.6 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 90.1% (2024) |
-| Land area | 82,519 km2 |
+| Population | 9.20 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 514 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 333 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 198.6 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 90.1% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 82,519 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 1 |
 | Existing government / sovereign cloud | BRZ (Bundesrechenzentrum) federal computing centre / BRZ Cloud; 2026 Digital Administration Guideline names digital sovereignty as core principle; no branded sovereign cloud |
 | National digital identity (anchor workload) | ID Austria |

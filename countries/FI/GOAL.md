@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Finland.
 
 | | |
 |---|---|
-| Population | 5.64 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 282 bn (2025, current prices) |
-| Public administration employment (NACE O) | 116 k (Eurostat LFS 2025) |
-| Non-household electricity price | 74.8 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 54.3% (2024) |
-| Land area | 304,316 km2 |
+| Population | 5.64 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 282 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 116 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 74.8 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 54.3% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 304,316 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 1 |
 | Existing government / sovereign cloud | Valtori (Government ICT Centre) state DCs + public-cloud brokerage; PiTuKri cloud security criteria; Digital Sovereignty Roadmap adopted Apr 2026; no branded sovereign cloud |
 | National digital identity (anchor workload) | Suomi.fi e-Identification (DVV) |

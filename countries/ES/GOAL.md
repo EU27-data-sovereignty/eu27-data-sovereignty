@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Spain.
 
 | | |
 |---|---|
-| Population | 49.13 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 1,687 bn (2025, current prices) |
-| Public administration employment (NACE O) | 1,401 k (Eurostat LFS 2025) |
-| Non-household electricity price | 132.4 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 59.7% (2024) |
-| Land area | 502,654 km2 |
+| Population | 49.13 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 1,687 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 1,401 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 132.4 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 59.7% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 502,654 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 3 |
 | Existing government / sovereign cloud | No single state cloud: Nube SARA / SGAD common services, sectoral ENS-Alta clouds (AEAT, GISS); regional sovereign clouds emerging (Madrid 2026); Telefonica/IBM, Indra, Oracle sovereign offers under ENS |
 | National digital identity (anchor workload) | Cl@ve / DNIe |

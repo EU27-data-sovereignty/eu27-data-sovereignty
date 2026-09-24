@@ -55,30 +55,37 @@ prevent.
 
 ## The ledger
 
-`model/sources.csv`, one row per sourced claim:
+Since 2026-09-24 (#67) every sourced claim in the repository — not only the legal cells — is recorded
+in one **source register**, `model/sources/`, validated by `model/provenance.py`:
 
-| Field | Meaning |
-|---|---|
-| `country` | ISO-2 code, must exist in `eu27_parameters.csv` |
-| `column` | one of the seven sourceable columns below |
-| `url` | absolute `http(s)` URL of the page or document consulted |
-| `publisher` | the body that published it, as it names itself |
-| `retrieved` | `YYYY-MM-DD`, the date the page was read |
-| `confidence` | `primary`, `official`, or `secondary` |
-| `quote` | **the words on the page that support the cell** |
+| File | One row per | Key fields |
+|---|---|---|
+| `registry.csv` | original document or dataset | `source_id` (`<publisher>:<doc>[@vintage]`), `title`, `publisher`, `url`, `doc_type`, `published` |
+| `citations.csv` | (claim, source) | `claim`, `source_id`, `locator` (page / article / dataset filter), `quote` or `value_as_found`, `confidence`, `retrieved` |
+
+A legal cell is the claim `param:<ISO>:<column>`:
 
 ```csv
-country,column,url,publisher,retrieved,confidence,quote
-EE,legal_instrument,https://www.riigiteataja.ee/en/eli/...,Riigi Teataja,2026-09-08,primary,"Public information holders shall ..."
+claim,source_id,locator,quote,value_as_found,unit,confidence,retrieved,checked_by
+param:NL:data_classification,wetten-nl:bwbr0033507@2013-06-01,Artikel 4,"a. Staatsgeheim ZEER GEHEIM ...",,,primary,2026-09-11,...
 ```
+
+`model/sources.py` reads these rows back in the shape this document describes below (`country`,
+`column`, `url`, `publisher`, `retrieved`, `confidence`, `quote`) and applies the tiered rule to
+them unchanged; `model/sources.csv` is retired.
 
 **The quote is the requirement.** A URL shows that a page exists, not that it says what the cell
 claims. It also survives the page being rewritten: a quote that no longer appears at its URL is a
 finding, whereas a bare link that now says something else looks exactly like a verified cell.
-Rows with a quote under 20 characters fail validation.
+Citations with a quote under 20 characters fail validation. The one exception is a dataset, which
+has no words to quote: there the evidence is the `locator` (dataset, dimension filters, geo, period)
+and the `value_as_found`, and a value that does not reproduce the cell within 0.5% does not count as
+a citation of it. That is why the 26 `gov_employment_k` cells below are cited but not sourced.
 
-Rows are sorted by `(country, column)` so a diff shows what was added rather than where it
-landed.
+Citations are sorted by `(claim, source_id)` so a diff shows what was added rather than where it
+landed. The locator is checked against the cached document, not typed from memory: the first
+migration's French locator was corrected from a section number of the instrument the quote *refers
+to* to the page the quote is actually on.
 
 ## The tiered rule
 

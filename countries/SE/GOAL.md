@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Sweden.
 
 | | |
 |---|---|
-| Population | 10.59 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 600 bn (2025, current prices) |
-| Public administration employment (NACE O) | 420 k (Eurostat LFS 2025) |
-| Non-household electricity price | 97.0 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 88.1% (2024) |
-| Land area | 407,300 km2 |
+| Population | 10.59 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 600 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 420 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 97.0 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 88.1% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 407,300 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 3 |
 | Existing government / sovereign cloud | Nationell molnpolicy (May 2026, guidance) + coordinated statlig it-drift via Forsakringskassan (SAFOS), Skatteverket, Lantmateriet, Trafikverket; no single state cloud; Kammarkollegiet procurement, DIGG coordination |
 | National digital identity (anchor workload) | BankID / Freja eID+; state e-ID 2026 |

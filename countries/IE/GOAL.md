@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Ireland.
 
 | | |
 |---|---|
-| Population | 5.44 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 602 bn (2025, current prices) |
-| Public administration employment (NACE O) | 144 k (Eurostat LFS 2025) |
-| Non-household electricity price | 255.2 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 41.3% (2024) |
-| Land area | 68,655 km2 |
+| Population | 5.44 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 602 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 144 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 255.2 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 41.3% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 68,655 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 2 |
 | Existing government / sovereign cloud | No sovereign cloud; OGCIO Build to Share + Government Cloud Network + Backweston government DCs; cloud-first Advice Note; Digital Decade 2025 report flags DC grid limits |
 | National digital identity (anchor workload) | MyGovID (Public Services Card) |

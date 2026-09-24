@@ -1,0 +1,165 @@
+claim,source_id,locator,quote,value_as_found,unit,confidence,retrieved,checked_by
+param:AT:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=AT; time=2025-S2,,198.6,,primary,2026-09-11,fetch_eurostat.py
+param:AT:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=AT; time=2025,,514.3,,primary,2026-09-11,fetch_eurostat.py
+param:AT:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=AT; time=2023,,278.8,,primary,2026-09-11,fetch_eurostat.py
+param:AT:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=AT; time=2019,,82519,,primary,2026-09-11,fetch_eurostat.py
+param:AT:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=AT; time=2025,,9.197,,primary,2026-09-11,fetch_eurostat.py
+param:AT:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=AT; time=2024,,90.1,,primary,2026-09-11,fetch_eurostat.py
+param:BE:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=BE; time=2025-S2,,186.6,,primary,2026-09-11,fetch_eurostat.py
+param:BE:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=BE; time=2025,,642.0,,primary,2026-09-11,fetch_eurostat.py
+param:BE:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=BE; time=2023,,454.0,,primary,2026-09-11,fetch_eurostat.py
+param:BE:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=BE; time=2019,,30451,,primary,2026-09-11,fetch_eurostat.py
+param:BE:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=BE; time=2025,,11.883,,primary,2026-09-11,fetch_eurostat.py
+param:BE:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=BE; time=2024,,31.3,,primary,2026-09-11,fetch_eurostat.py
+param:BG:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=BG; time=2025-S2,,141.3,,primary,2026-09-11,fetch_eurostat.py
+param:BG:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=BG; time=2025,,116.0,,primary,2026-09-11,fetch_eurostat.py
+param:BG:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=BG; time=2023,,216.6,,primary,2026-09-11,fetch_eurostat.py
+param:BG:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=BG; time=2019,,110001,,primary,2026-09-11,fetch_eurostat.py
+param:BG:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=BG; time=2025,,6.437,,primary,2026-09-11,fetch_eurostat.py
+param:BG:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=BG; time=2024,,33.8,,primary,2026-09-11,fetch_eurostat.py
+param:CY:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=CY; time=2025-S2,,242.9,,primary,2026-09-11,fetch_eurostat.py
+param:CY:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=CY; time=2025,,36.5,,primary,2026-09-11,fetch_eurostat.py
+param:CY:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=CY; time=2023,,34.9,,primary,2026-09-11,fetch_eurostat.py
+param:CY:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=CY; time=2019,,9213,,primary,2026-09-11,fetch_eurostat.py
+param:CY:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=CY; time=2025,,0.983,,primary,2026-09-11,fetch_eurostat.py
+param:CY:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=CY; time=2024,,24.1,,primary,2026-09-11,fetch_eurostat.py
+param:CZ:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=CZ; time=2025-S2,,182.5,,primary,2026-09-11,fetch_eurostat.py
+param:CZ:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=CZ; time=2025,,347.3,,primary,2026-09-11,fetch_eurostat.py
+param:CZ:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=CZ; time=2023,,329.1,,primary,2026-09-11,fetch_eurostat.py
+param:CZ:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=CZ; time=2019,,77212,,primary,2026-09-11,fetch_eurostat.py
+param:CZ:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=CZ; time=2025,,10.909,,primary,2026-09-11,fetch_eurostat.py
+param:CZ:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=CZ; time=2024,,17.9,,primary,2026-09-11,fetch_eurostat.py
+param:DE:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=DE; time=2025-S2,,226.4,,primary,2026-09-11,fetch_eurostat.py
+param:DE:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=DE; time=2025,,4529.7,,primary,2026-09-11,fetch_eurostat.py
+param:DE:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=DE; time=2023,,2889.0,,primary,2026-09-11,fetch_eurostat.py
+param:DE:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=DE; time=2019,,353296,,primary,2026-09-11,fetch_eurostat.py
+param:DE:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=DE; time=2025,,83.577,,primary,2026-09-11,fetch_eurostat.py
+param:DE:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=DE; time=2024,,54.1,,primary,2026-09-11,fetch_eurostat.py
+param:DK:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=DK; time=2025-S2,,121.6,,primary,2026-09-11,fetch_eurostat.py
+param:DK:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=DK; time=2025,,417.8,,primary,2026-09-11,fetch_eurostat.py
+param:DK:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=DK; time=2023,,167.5,,primary,2026-09-11,fetch_eurostat.py
+param:DK:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=DK; time=2019,,41987,,primary,2026-09-11,fetch_eurostat.py
+param:DK:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=DK; time=2025,,5.993,,primary,2026-09-11,fetch_eurostat.py
+param:DK:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=DK; time=2024,,79.7,,primary,2026-09-11,fetch_eurostat.py
+param:EE:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=EE; time=2025-S2,,141.0,,primary,2026-09-11,fetch_eurostat.py
+param:EE:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=EE; time=2025,,41.9,,primary,2026-09-11,fetch_eurostat.py
+param:EE:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=EE; time=2023,,44.2,,primary,2026-09-11,fetch_eurostat.py
+param:EE:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=EE; time=2019,,43466,,primary,2026-09-11,fetch_eurostat.py
+param:EE:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=EE; time=2025,,1.370,,primary,2026-09-11,fetch_eurostat.py
+param:EE:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=EE; time=2024,,38.9,,primary,2026-09-11,fetch_eurostat.py
+param:EL:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=EL; time=2025-S2,,173.8,,primary,2026-09-11,fetch_eurostat.py
+param:EL:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=EL; time=2025,,248.4,,primary,2026-09-11,fetch_eurostat.py
+param:EL:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=EL; time=2023,,397.7,,primary,2026-09-11,fetch_eurostat.py
+param:EL:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=EL; time=2019,,130048,,primary,2026-09-11,fetch_eurostat.py
+param:EL:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=EL; time=2025,,10.372,,primary,2026-09-11,fetch_eurostat.py
+param:EL:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=EL; time=2024,,51.2,,primary,2026-09-11,fetch_eurostat.py
+param:ES:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=ES; time=2025-S2,,132.4,,primary,2026-09-11,fetch_eurostat.py
+param:ES:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=ES; time=2025,,1687.2,,primary,2026-09-11,fetch_eurostat.py
+param:ES:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=ES; time=2023,,1678.5,,primary,2026-09-11,fetch_eurostat.py
+param:ES:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=ES; time=2019,,502654,,primary,2026-09-11,fetch_eurostat.py
+param:ES:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=ES; time=2025,,49.128,,primary,2026-09-11,fetch_eurostat.py
+param:ES:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=ES; time=2024,,59.7,,primary,2026-09-11,fetch_eurostat.py
+param:FI:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=FI; time=2025-S2,,74.8,,primary,2026-09-11,fetch_eurostat.py
+param:FI:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=FI; time=2025,,281.7,,primary,2026-09-11,fetch_eurostat.py
+param:FI:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=FI; time=2023,,149.1,,primary,2026-09-11,fetch_eurostat.py
+param:FI:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=FI; time=2019,,304316,,primary,2026-09-11,fetch_eurostat.py
+param:FI:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=FI; time=2025,,5.636,,primary,2026-09-11,fetch_eurostat.py
+param:FI:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=FI; time=2024,,54.3,,primary,2026-09-11,fetch_eurostat.py
+param:FR:data_classification,sgdsn:igi-secret-defense@2021-12-01,p. 11 (Diffusion Restreinte paragraph),"Traitee par le § 1.4.3 de l'IGI 1300, la mention « Diffusion Restreinte » (DR) n'est pas un niveau de classification mais une mention de protection.",,,primary,2026-09-11,sources.csv migration (#67)
+param:FR:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=FR; time=2025-S2,,153.4,,primary,2026-09-11,fetch_eurostat.py
+param:FR:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=FR; time=2025,,2991.1,,primary,2026-09-11,fetch_eurostat.py
+param:FR:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=FR; time=2023,,2481.4,,primary,2026-09-11,fetch_eurostat.py
+param:FR:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=FR; time=2019,,633886,,primary,2026-09-11,fetch_eurostat.py
+param:FR:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=FR; time=2025,,68.883,,primary,2026-09-11,fetch_eurostat.py
+param:FR:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=FR; time=2024,,31.3,,primary,2026-09-11,fetch_eurostat.py
+param:HR:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=HR; time=2025-S2,,154.8,,primary,2026-09-11,fetch_eurostat.py
+param:HR:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=HR; time=2025,,93.0,,primary,2026-09-11,fetch_eurostat.py
+param:HR:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=HR; time=2023,,115.8,,primary,2026-09-11,fetch_eurostat.py
+param:HR:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=HR; time=2019,,55896,,primary,2026-09-11,fetch_eurostat.py
+param:HR:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=HR; time=2025,,3.874,,primary,2026-09-11,fetch_eurostat.py
+param:HR:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=HR; time=2024,,58.0,,primary,2026-09-11,fetch_eurostat.py
+param:HU:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=HU; time=2025-S2,,213.2,,primary,2026-09-11,fetch_eurostat.py
+param:HU:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=HU; time=2025,,218.8,,primary,2026-09-11,fetch_eurostat.py
+param:HU:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=HU; time=2023,,343.8,,primary,2026-09-11,fetch_eurostat.py
+param:HU:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=HU; time=2019,,91248,,primary,2026-09-11,fetch_eurostat.py
+param:HU:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=HU; time=2025,,9.540,,primary,2026-09-11,fetch_eurostat.py
+param:HU:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=HU; time=2024,,24.1,,primary,2026-09-11,fetch_eurostat.py
+param:IE:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=IE; time=2025-S2,,255.2,,primary,2026-09-11,fetch_eurostat.py
+param:IE:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=IE; time=2025,,602.4,,primary,2026-09-11,fetch_eurostat.py
+param:IE:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=IE; time=2023,,142.2,,primary,2026-09-11,fetch_eurostat.py
+param:IE:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=IE; time=2019,,68655,,primary,2026-09-11,fetch_eurostat.py
+param:IE:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=IE; time=2025,,5.440,,primary,2026-09-11,fetch_eurostat.py
+param:IE:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=IE; time=2024,,41.3,,primary,2026-09-11,fetch_eurostat.py
+param:IT:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=IT; time=2025-S2,,220.3,,primary,2026-09-11,fetch_eurostat.py
+param:IT:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=IT; time=2025,,2258.0,,primary,2026-09-11,fetch_eurostat.py
+param:IT:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=IT; time=2023,,1203.6,,primary,2026-09-11,fetch_eurostat.py
+param:IT:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=IT; time=2019,,297734,,primary,2026-09-11,fetch_eurostat.py
+param:IT:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=IT; time=2025,,58.943,,primary,2026-09-11,fetch_eurostat.py
+param:IT:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=IT; time=2024,,40.7,,primary,2026-09-11,fetch_eurostat.py
+param:LT:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=LT; time=2025-S2,,159.1,,primary,2026-09-11,fetch_eurostat.py
+param:LT:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=LT; time=2025,,84.3,,primary,2026-09-11,fetch_eurostat.py
+param:LT:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=LT; time=2023,,92.3,,primary,2026-09-11,fetch_eurostat.py
+param:LT:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=LT; time=2019,,62643,,primary,2026-09-11,fetch_eurostat.py
+param:LT:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=LT; time=2025,,2.891,,primary,2026-09-11,fetch_eurostat.py
+param:LT:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=LT; time=2024,,49.0,,primary,2026-09-11,fetch_eurostat.py
+param:LU:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=LU; time=2025-S2,,171.7,,primary,2026-09-11,fetch_eurostat.py
+param:LU:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=LU; time=2025,,89.5,,primary,2026-09-11,fetch_eurostat.py
+param:LU:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=LU; time=2023,,31.3,,primary,2026-09-11,fetch_eurostat.py
+param:LU:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=LU; time=2019,,2586,,primary,2026-09-11,fetch_eurostat.py
+param:LU:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=LU; time=2025,,0.682,,primary,2026-09-11,fetch_eurostat.py
+param:LU:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=LU; time=2024,,20.5,,primary,2026-09-11,fetch_eurostat.py
+param:LV:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=LV; time=2025-S2,,136.1,,primary,2026-09-11,fetch_eurostat.py
+param:LV:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=LV; time=2025,,43.0,,primary,2026-09-11,fetch_eurostat.py
+param:LV:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=LV; time=2023,,63.6,,primary,2026-09-11,fetch_eurostat.py
+param:LV:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=LV; time=2019,,63290,,primary,2026-09-11,fetch_eurostat.py
+param:LV:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=LV; time=2025,,1.861,,primary,2026-09-11,fetch_eurostat.py
+param:LV:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=LV; time=2024,,55.5,,primary,2026-09-11,fetch_eurostat.py
+param:MT:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=MT; time=2025-S2,,135.2,,primary,2026-09-11,fetch_eurostat.py
+param:MT:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=MT; time=2025,,24.7,,primary,2026-09-11,fetch_eurostat.py
+param:MT:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=MT; time=2023,,19.3,,primary,2026-09-11,fetch_eurostat.py
+param:MT:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=MT; time=2019,,313,,primary,2026-09-11,fetch_eurostat.py
+param:MT:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=MT; time=2025,,0.574,,primary,2026-09-11,fetch_eurostat.py
+param:MT:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=MT; time=2024,,10.7,,primary,2026-09-11,fetch_eurostat.py
+param:NL:data_classification,wetten-nl:bwbr0033507@2013-06-01,"Artikel 4, rubricering bijzondere informatie",a. Staatsgeheim ZEER GEHEIM (afgekort Stg.ZG) b. Staatsgeheim GEHEIM (afgekort Stg.G) c. Staatsgeheim CONFIDENTIEEL (afgekort Stg.C) d. Departementaal VERTROUWELIJK (afgekort Dep.V.),,,primary,2026-09-11,sources.csv migration (#67)
+param:NL:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=NL; time=2025-S2,,199.1,,primary,2026-09-11,fetch_eurostat.py
+param:NL:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=NL; time=2025,,1170.6,,primary,2026-09-11,fetch_eurostat.py
+param:NL:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=NL; time=2023,,638.0,,primary,2026-09-11,fetch_eurostat.py
+param:NL:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=NL; time=2019,,34188,,primary,2026-09-11,fetch_eurostat.py
+param:NL:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=NL; time=2025,,18.044,,primary,2026-09-11,fetch_eurostat.py
+param:NL:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=NL; time=2024,,50.5,,primary,2026-09-11,fetch_eurostat.py
+param:PL:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=PL; time=2025-S2,,193.5,,primary,2026-09-11,fetch_eurostat.py
+param:PL:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=PL; time=2025,,922.9,,primary,2026-09-11,fetch_eurostat.py
+param:PL:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=PL; time=2023,,1217.1,,primary,2026-09-11,fetch_eurostat.py
+param:PL:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=PL; time=2019,,307236,,primary,2026-09-11,fetch_eurostat.py
+param:PL:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=PL; time=2025,,36.497,,primary,2026-09-11,fetch_eurostat.py
+param:PL:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=PL; time=2024,,30.4,,primary,2026-09-11,fetch_eurostat.py
+param:PT:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=PT; time=2025-S2,,132.9,,primary,2026-09-11,fetch_eurostat.py
+param:PT:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=PT; time=2025,,306.7,,primary,2026-09-11,fetch_eurostat.py
+param:PT:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=PT; time=2023,,308.9,,primary,2026-09-11,fetch_eurostat.py
+param:PT:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=PT; time=2019,,90996,,primary,2026-09-11,fetch_eurostat.py
+param:PT:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=PT; time=2025,,11.387,,primary,2026-09-11,fetch_eurostat.py
+param:PT:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=PT; time=2024,,65.8,,primary,2026-09-11,fetch_eurostat.py
+param:RO:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=RO; time=2025-S2,,188.7,,primary,2026-09-11,fetch_eurostat.py
+param:RO:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=RO; time=2025,,380.1,,primary,2026-09-11,fetch_eurostat.py
+param:RO:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=RO; time=2023,,388.0,,primary,2026-09-11,fetch_eurostat.py
+param:RO:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=RO; time=2019,,234270,,primary,2026-09-11,fetch_eurostat.py
+param:RO:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=RO; time=2025,,19.043,,primary,2026-09-11,fetch_eurostat.py
+param:RO:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=RO; time=2024,,47.6,,primary,2026-09-11,fetch_eurostat.py
+param:SE:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=SE; time=2025-S2,,97.0,,primary,2026-09-11,fetch_eurostat.py
+param:SE:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=SE; time=2025,,600.4,,primary,2026-09-11,fetch_eurostat.py
+param:SE:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=SE; time=2023,,247.0,,primary,2026-09-11,fetch_eurostat.py
+param:SE:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=SE; time=2019,,407300,,primary,2026-09-11,fetch_eurostat.py
+param:SE:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=SE; time=2025,,10.588,,primary,2026-09-11,fetch_eurostat.py
+param:SE:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=SE; time=2024,,88.1,,primary,2026-09-11,fetch_eurostat.py
+param:SI:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=SI; time=2025-S2,,150.3,,primary,2026-09-11,fetch_eurostat.py
+param:SI:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=SI; time=2025,,71.2,,primary,2026-09-11,fetch_eurostat.py
+param:SI:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=SI; time=2023,,50.6,,primary,2026-09-11,fetch_eurostat.py
+param:SI:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=SI; time=2019,,20145,,primary,2026-09-11,fetch_eurostat.py
+param:SI:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=SI; time=2025,,2.131,,primary,2026-09-11,fetch_eurostat.py
+param:SI:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=SI; time=2024,,43.1,,primary,2026-09-11,fetch_eurostat.py
+param:SK:elec_price_eur_mwh,eurostat:nrg_pc_205@2025-S2,nrg_pc_205; currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH; geo=SK; time=2025-S2,,209.0,,primary,2026-09-11,fetch_eurostat.py
+param:SK:gdp_eur_bn,eurostat:nama_10_gdp@2025,nama_10_gdp; na_item=B1GQ; unit=CP_MEUR; geo=SK; time=2025,,136.8,,primary,2026-09-11,fetch_eurostat.py
+param:SK:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP_DC; nace_r2=O; unit=THS_PER; geo=SK; time=2023,,167.7,,primary,2026-09-11,fetch_eurostat.py
+param:SK:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=SK; time=2019,,48702,,primary,2026-09-11,fetch_eurostat.py
+param:SK:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=SK; time=2025,,5.419,,primary,2026-09-11,fetch_eurostat.py
+param:SK:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=SK; time=2024,,24.9,,primary,2026-09-11,fetch_eurostat.py

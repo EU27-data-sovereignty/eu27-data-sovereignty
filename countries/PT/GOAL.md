@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Portugal.
 
 | | |
 |---|---|
-| Population | 11.39 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 307 bn (2025, current prices) |
-| Public administration employment (NACE O) | 342 k (Eurostat LFS 2025) |
-| Non-household electricity price | 132.9 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 65.8% (2024) |
-| Land area | 90,996 km2 |
+| Population | 11.39 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 307 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 342 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 132.9 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 65.8% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 90,996 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 0 |
 | Existing government / sovereign cloud | Plano Nacional de Nuvem Soberana - approved May 2026 (ARTE): data classification, technical requirements, phased state sovereign-cloud infrastructure; builds on Nuvem da AP (AMA/eSPap) |
 | National digital identity (anchor workload) | Chave Movel Digital / Cartao de Cidadao |

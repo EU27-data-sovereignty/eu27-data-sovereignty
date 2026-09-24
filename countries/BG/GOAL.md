@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Bulgaria.
 
 | | |
 |---|---|
-| Population | 6.44 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 116 bn (2025, current prices) |
-| Public administration employment (NACE O) | 220 k (Eurostat LFS 2025) |
-| Non-household electricity price | 141.3 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 33.8% (2024) |
-| Land area | 110,001 km2 |
+| Population | 6.44 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 116 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 220 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 141.3 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 33.8% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 110,001 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 0 |
 | Existing government / sovereign cloud | State Hybrid Private Cloud (SHPC) for e-Governance - Ministry of e-Government / Information Services JSC (upgraded 2024) |
 | National digital identity (anchor workload) | Bulgarian eID (biometric ID card + Evrotrust); EUDI wallet law in draft |

@@ -35,12 +35,12 @@ adjusted below for what is structurally different about France.
 
 | | |
 |---|---|
-| Population | 68.88 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 2,991 bn (2025, current prices) |
-| Public administration employment (NACE O) | 2,272 k (Eurostat LFS 2025) |
-| Non-household electricity price | 153.4 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 31.3% (2024) |
-| Land area | 633,886 km2 |
+| Population | 68.88 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 2,991 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 2,272 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 153.4 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 31.3% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 633,886 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 4 |
 | Existing government / sovereign cloud | SecNumCloud (ANSSI) / Cloud de confiance doctrine: OVHcloud Outscale Cloud Temple Thales S3NS qualified; Bleu and NumSpot pending (2026); state clouds Nubo (Finance) and Cloud Pi Native (Interior) via DINUM |
 | National digital identity (anchor workload) | FranceConnect / FranceConnect+ + France Identite |

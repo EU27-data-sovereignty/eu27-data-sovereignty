@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Estonia.
 
 | | |
 |---|---|
-| Population | 1.37 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 42 bn (2025, current prices) |
-| Public administration employment (NACE O) | 37 k (Eurostat LFS 2025) |
-| Non-household electricity price | 141.0 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 38.9% (2024) |
-| Land area | 43,466 km2 |
+| Population | 1.37 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 42 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 37 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 141.0 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 38.9% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 43,466 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 0 |
 | Existing government / sovereign cloud | Riigipilv (Government Cloud) - RIT (Estonian IT Centre) private state cloud on OCI Dedicated Region + Azure/AWS public-cloud framework (2025); Data Embassy in Luxembourg (2018); X-Road |
 | National digital identity (anchor workload) | ID-kaart + Mobiil-ID + Smart-ID |

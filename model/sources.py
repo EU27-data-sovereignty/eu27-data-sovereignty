@@ -13,7 +13,9 @@ jurisdictions require, researched from public policy documents by one person and
 checked against primary sources. `DECISIONS.md` #25 gates publication on fixing that,
 and `ROADMAP.md` makes it the gate for indexing, a custom domain and the book.
 
-`sources.csv` is where that verification is recorded. **The quote is the point.** A URL
+Since 2026-09-24 (#67) the ledger's rows live in the source register -- `sources/citations.csv`,
+claims `param:<ISO>:<column>`, joined to `sources/registry.csv` for the URL and publisher -- and
+this module reads them from there in the shape it always had. **The quote is the point.** A URL
 alone shows that a page exists, not that it says what the cell claims, and a cell whose
 source has silently been rewritten is worse than an uncited one because it looks checked.
 
@@ -53,7 +55,6 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCES = ROOT / "model" / "sources.csv"
 PARAMETERS = ROOT / "model" / "eu27_parameters.csv"
 
 FIELDS = ["country", "column", "url", "publisher", "retrieved", "confidence", "quote"]
@@ -98,11 +99,21 @@ def asserts_absence(country: str, column: str) -> bool:
 
 
 def load() -> list[dict[str, str]]:
-    with SOURCES.open(newline="", encoding="utf-8") as fh:
-        reader = csv.DictReader(fh)
-        if reader.fieldnames != FIELDS:
-            raise SystemExit(f"{SOURCES.name}: header is {reader.fieldnames}, expected {FIELDS}")
-        return list(reader)
+    """The legal and regulatory cells' citations, in the ledger's row shape, sorted."""
+    import provenance  # noqa: PLC0415 -- sibling module; imported late so this file stays importable alone
+
+    reg = provenance.registry()
+    rows = []
+    for c in provenance.citations():
+        ns, _, rest = c["claim"].partition(":")
+        country, _, column = rest.partition(":")
+        if ns != "param" or column not in REQUIRED + JUDGEMENT:
+            continue   # Eurostat and other claims are provenance.py's to check, not this ledger's
+        src = reg.get(c["source_id"], {})
+        rows.append({"country": country, "column": column, "url": src.get("url", ""),
+                     "publisher": src.get("publisher", ""), "retrieved": c["retrieved"],
+                     "confidence": c["confidence"], "quote": c["quote"]})
+    return sorted(rows, key=lambda r: (r["country"], r["column"]))
 
 
 def validate(rows: list[dict[str, str]]) -> list[str]:

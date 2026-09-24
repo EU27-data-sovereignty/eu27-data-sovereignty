@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Malta.
 
 | | |
 |---|---|
-| Population | 0.57 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 25 bn (2025, current prices) |
-| Public administration employment (NACE O) | 24 k (Eurostat LFS 2025) |
-| Non-household electricity price | 135.2 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 10.7% (2024) |
-| Land area | 313 km2 |
+| Population | 0.57 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 25 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 24 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 135.2 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 10.7% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 313 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 0 |
 | Existing government / sovereign cloud | MITA Government Hybrid Cloud (MITA data centre + Azure); National Digital Strategy 2022-2027 |
 | National digital identity (anchor workload) | Maltese eID (Identita) / MyIdentity |

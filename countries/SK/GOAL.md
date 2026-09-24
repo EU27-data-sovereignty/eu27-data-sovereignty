@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Slovakia.
 
 | | |
 |---|---|
-| Population | 5.42 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 137 bn (2025, current prices) |
-| Public administration employment (NACE O) | 210 k (Eurostat LFS 2025) |
-| Non-household electricity price | 209.0 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 24.9% (2024) |
-| Land area | 48,702 km2 |
+| Population | 5.42 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 137 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 210 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 209.0 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 24.9% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 48,702 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 0 |
 | Existing government / sovereign cloud | Vladny cloud (Government Cloud) - Ministry of Interior Datacentrum Kopcianska + MoF DataCentrum (backup Tajov); MIRRI governance; hybrid extension to certified providers |
 | National digital identity (anchor workload) | eID (obciansky preukaz s cipom) / Slovensko v mobile |

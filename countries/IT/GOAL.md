@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Italy.
 
 | | |
 |---|---|
-| Population | 58.94 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 2,258 bn (2025, current prices) |
-| Public administration employment (NACE O) | 1,159 k (Eurostat LFS 2025) |
-| Non-household electricity price | 220.3 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 40.7% (2024) |
-| Land area | 297,734 km2 |
+| Population | 58.94 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 2,258 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 1,159 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 220.3 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 40.7% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 297,734 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 4 |
 | Existing government / sovereign cloud | Polo Strategico Nazionale (PSN) - operational since 2023, TIM/Leonardo/CDP/Sogei consortium, 4 DC pairs; ACN cloud qualification regime (Strategia Cloud Italia) |
 | National digital identity (anchor workload) | SPID / CIE (IT-Wallet in rollout) |

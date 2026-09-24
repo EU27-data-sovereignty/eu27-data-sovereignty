@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Luxembourg.
 
 | | |
 |---|---|
-| Population | 0.68 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 90 bn (2025, current prices) |
-| Public administration employment (NACE O) | 38 k (Eurostat LFS 2025) |
-| Non-household electricity price | 171.7 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 20.5% (2024) |
-| Land area | 2,586 km2 |
+| Population | 0.68 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 90 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 38 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 171.7 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 20.5% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 2,586 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 0 |
 | Existing government / sovereign cloud | Clarence (Proximus + LuxConnect, Google Distributed Cloud disconnected, 2024); CTIE GovCloud; LuxConnect state-owned Tier IV DCs; MeluXina HPC; hosts Estonia's Data Embassy |
 | National digital identity (anchor workload) | LuxTrust / eID / GouvID |

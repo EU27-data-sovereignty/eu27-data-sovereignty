@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Greece.
 
 | | |
 |---|---|
-| Population | 10.37 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 248 bn (2025, current prices) |
-| Public administration employment (NACE O) | 346 k (Eurostat LFS 2025) |
-| Non-household electricity price | 173.8 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 51.2% (2024) |
-| Land area | 130,048 km2 |
+| Population | 10.37 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 248 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 346 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 173.8 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 51.2% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 130,048 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 0 |
 | Existing government / sovereign cloud | G-Cloud (Single Government Cloud) - GSIS / Ministry of Digital Governance Tier-3 DC on SYZEFXIS; GRNET research cloud/HPC and EUDI wallet lead; hybrid policy for non-critical data |
 | National digital identity (anchor workload) | gov.gr Wallet (TaxisNet-based) |

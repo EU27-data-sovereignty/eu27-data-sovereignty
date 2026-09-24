@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Romania.
 
 | | |
 |---|---|
-| Population | 19.04 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 380 bn (2025, current prices) |
-| Public administration employment (NACE O) | 396 k (Eurostat LFS 2025) |
-| Non-household electricity price | 188.7 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 47.6% (2024) |
-| Land area | 234,270 km2 |
+| Population | 19.04 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 380 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 396 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 188.7 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 47.6% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 234,270 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 0 |
 | Existing government / sovereign cloud | Cloud Privat Guvernamental - STS-operated, PNRR-funded (~EUR 560m package with SRI/ADR), 4 regional DCs (Bucharest, Timis, Brasov, Sibiu), national operational phase Mar 2026 |
 | National digital identity (anchor workload) | ROeID / electronic ID card (CEI) |

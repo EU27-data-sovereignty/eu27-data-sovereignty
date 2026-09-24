@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Croatia.
 
 | | |
 |---|---|
-| Population | 3.87 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 93 bn (2025, current prices) |
-| Public administration employment (NACE O) | 110 k (Eurostat LFS 2025) |
-| Non-household electricity price | 154.8 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 58.0% (2024) |
-| Land area | 55,896 km2 |
+| Population | 3.87 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 93 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 110 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 154.8 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 58.0% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 55,896 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 0 |
 | Existing government / sovereign cloud | Centar dijeljenih usluga (CDU / Shared Services Centre) state cloud - APIS IT for Ministry of Justice, Public Administration and Digital Transformation; two HA data centres; NRRP-funded |
 | National digital identity (anchor workload) | e-Gradani / NIAS + eOI eID card |

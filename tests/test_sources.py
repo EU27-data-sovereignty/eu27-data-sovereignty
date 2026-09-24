@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The verification ledger, model/sources.csv.
+The verification ledger: the legal-cell citations in model/sources/citations.csv (#67).
 
     python3 -m unittest discover -s tests -v
 

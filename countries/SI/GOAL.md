@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Slovenia.
 
 | | |
 |---|---|
-| Population | 2.13 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 71 bn (2025, current prices) |
-| Public administration employment (NACE O) | 51 k (Eurostat LFS 2025) |
-| Non-household electricity price | 150.3 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 43.1% (2024) |
-| Land area | 20,145 km2 |
+| Population | 2.13 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 71 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 51 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
+| Non-household electricity price | 150.3 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 43.1% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 20,145 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 0 |
 | Existing government / sovereign cloud | Drzavni racunalniski oblak (DRO) - Ministry of Digital Transformation state cloud in the national government DC (Ljubljana) + DR site; EuroHPC Vega (Maribor) |
 | National digital identity (anchor workload) | SI-PASS / smsPASS / eOsebna eID card |

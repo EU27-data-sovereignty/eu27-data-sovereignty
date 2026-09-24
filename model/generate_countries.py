@@ -38,6 +38,27 @@ import capacity_model as cm  # noqa: E402
 import country_data  # noqa: E402
 import emoji  # noqa: E402
 import national_data as nd  # noqa: E402
+import provenance  # noqa: E402
+
+REGISTER = provenance.registry()
+CITES = provenance.citations()
+PARAMS_BY_ISO = provenance.parameters()
+
+
+def cite(iso: str, column: str, detail: str = "") -> str:
+    """The source note for a parameter cell, looked up in the register -- never typed (#67).
+
+    Where the cell does not reproduce its cited dataset, say so beside the value: a clean-looking
+    citation next to a figure the source does not support is worse than no citation.
+    """
+    claim = f"param:{iso}:{column}"
+    rows = [c for c in CITES if c["claim"] == claim]
+    if not rows:
+        return f"({detail}; unsourced)" if detail else "(unsourced)"
+    labels = "; ".join(dict.fromkeys(provenance.label(c["source_id"], REGISTER) for c in rows))
+    ok = any(provenance.supported(c, REGISTER, PARAMS_BY_ISO) for c in rows)
+    note = "" if ok else "; value does not reproduce the source, under review"
+    return f"({detail + '; ' if detail else ''}{labels}{note})"
 
 ROOT = cm.ROOT
 COUNTRIES = cm.COUNTRIES
@@ -354,7 +375,8 @@ def region_rows(iso2: str, min_sites: int) -> list[dict]:
 
 def params_rows(c: dict) -> list[dict]:
     return [
-        {"Assumption": "Electricity price", "Value": c["elec_price_eur_mwh"], "Notes": "Eurostat nrg_pc_205, band IC (500-2,000 MWh), excl. VAT, 2025-S2."},
+        {"Assumption": "Electricity price", "Value": c["elec_price_eur_mwh"],
+         "Notes": f"Band IC (500-2,000 MWh), excl. VAT. {cite(c['iso2'], 'elec_price_eur_mwh')[1:-1]}."},
         {"Assumption": "Minimum sovereign sites", "Value": c["min_sites"], "Notes": "2 for micro-states where 50-100 km separation is impossible; 4 for the five largest states."},
     ]
 
@@ -500,12 +522,12 @@ adjusted below for what is structurally different about {name}.
 
 | | |
 |---|---|
-| Population | {pop:.2f} m (Eurostat, 1 Jan 2025) |
-| GDP | EUR {gdp:,.0f} bn (2025, current prices) |
-| Public administration employment (NACE O) | {gov:,.0f} k (Eurostat LFS 2025) |
-| Non-household electricity price | {price:.1f} EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | {res:.1f}% (2024) |
-| Land area | {int(c['land_km2']):,} km2 |
+| Population | {pop:.2f} m {cite(iso, 'population_m', '1 January')} |
+| GDP | EUR {gdp:,.0f} bn {cite(iso, 'gdp_eur_bn', 'current prices')} |
+| Public administration employment (NACE O) | {gov:,.0f} k {cite(iso, 'gov_employment_k')} |
+| Non-household electricity price | {price:.1f} EUR/MWh {cite(iso, 'elec_price_eur_mwh', 'band IC, excl. VAT')} |
+| Renewables in electricity | {res:.1f}% {cite(iso, 'renewables_pct')} |
+| Land area | {int(c['land_km2']):,} km2 {cite(iso, 'land_km2')} |
 | Live hyperscaler regions in-country | {hs} |
 | Existing government / sovereign cloud | {c['sovereign_cloud_initiative']} |
 | National digital identity (anchor workload) | {c['digital_id']} |

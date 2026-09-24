@@ -35,12 +35,12 @@ adjusted below for what is structurally different about Poland.
 
 | | |
 |---|---|
-| Population | 36.50 m (Eurostat, 1 Jan 2025) |
-| GDP | EUR 923 bn (2025, current prices) |
-| Public administration employment (NACE O) | 1,215 k (Eurostat LFS 2025) |
-| Non-household electricity price | 193.5 EUR/MWh (Eurostat, band IC, 2025-S2) |
-| Renewables in electricity | 30.4% (2024) |
-| Land area | 307,236 km2 |
+| Population | 36.50 m (1 January; Eurostat tps00001, 2025) |
+| GDP | EUR 923 bn (current prices; Eurostat nama_10_gdp, 2025) |
+| Public administration employment (NACE O) | 1,215 k (Eurostat nama_10_a64_e, 2023) |
+| Non-household electricity price | 193.5 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
+| Renewables in electricity | 30.4% (Eurostat nrg_ind_ren, 2024) |
+| Land area | 307,236 km2 (Eurostat reg_area3, 2019) |
 | Live hyperscaler regions in-country | 2 |
 | Existing government / sovereign cloud | WIIP: Rzadowa Chmura Obliczeniowa (RChO, COI/NASK, Ministry of Digital Affairs) + ZUCH public-cloud marketplace; Chmura Krajowa/OChK (PKO BP + PFR) commercial; national sovereign cloud/AI factory debate under EU CADA |
 | National digital identity (anchor workload) | Profil Zaufany / mObywatel / e-dowod |

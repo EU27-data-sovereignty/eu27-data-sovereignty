@@ -1085,3 +1085,66 @@ entry in place (it failed on the dangling `#65` citation before it existed).
 
 *Would change if:* an asset is shared across countries, at which point it goes in a top-level
 `assets/` rather than being copied into each.
+
+### 66. The private outreach inventory may hold institution-published work contacts, proved on the page
+**2026-09-24.** Amends #26/#49 for the private contacts repo only; nothing changes in this one. The
+private inventory (`contacts/people.csv`) may now record a work address that the person's **own
+institution publishes on its own site** — an MEP's address in the Parliament's open data, a deputy's
+address on the parliament's member page — beside the institutional routes it already allowed. Never a
+phone number, a private or webmail address, a social handle, or an address found anywhere but that
+institution's page. `contacts/CONVENTIONS.md` rule 2 carries the amendment and the GDPR basis
+(legitimate interest; an Art. 14 notice at first contact; a `review_by` date on every row).
+
+**Why a mechanical proof rather than a rule.** The research pass that built the inventory was sampled
+by an adversarial verifier, which found two of 49 sampled rows carrying a journalist's address that
+was on no page at all — built from the outlet's naming pattern. A sample cannot find the rest. So each
+row is fetched and checked: the address must appear on its cited page (after undoing Cloudflare,
+entity, `[at]` and span-splitting obfuscation), and the seat quote — every cell of it, plus the
+person's surname — must appear on the page cited for the seat. An address that is not on its page is
+removed, not kept on trust; a page that cannot be fetched leaves the row unchecked, never passed.
+Rows go out only when both checks carry a date.
+
+The same bargain as `sources.csv` (#54): a URL shows that a page exists, not that it says what the row
+claims. What is new is that a script, not a reader, holds the row to it.
+
+Verified: `python3 contacts/tools/people.py` — 956 rows, 910 people, 0 validation errors, leak check
+0 public-repo lines; 845/956 send-ready. `contacts/tools/check_contacts.py --all` — 919 contacts found
+on their page, 37 unreached; 866 seat quotes found, 79 not found, 11 unreached. 78 addresses were
+removed because their cited page did not carry them.
+
+*Would change if:* a named individual ever needs to appear in this repository, which #26 still forbids.
+
+### 67. One source register; every claim cites a registered document
+**2026-09-24.** `model/sources/registry.csv` holds each original document or dataset once, under a
+stable `source_id` (`<publisher>:<doc>[@vintage]`); `model/sources/citations.csv` links a claim to it
+with a locator and the evidence. Claims are namespaced — `param:`, `assumption:`, `workload:`,
+`inventory:`, `record:`, `doc:` — so the same register serves the legal cells, the Eurostat cells, the
+planning assumptions, and the IT inventories and Tier 0/1 record counts still to come.
+`model/provenance.py` validates it and reports coverage per namespace; `tests/test_provenance.py`
+ratchets that coverage the way `test_sources.py` does. Supersedes `model/sources.csv` (#54), whose two
+rows migrated; `sources.py` keeps the tiered rule (#54, #58) and reads the register.
+
+**Why one register rather than a sixth ledger.** Provenance lived in five files with five schemas and no
+shared key, so a document cited twice was two strings, and only the legal cells could answer "where
+does this come from?". The Eurostat cells were the proof: `write_goal()` typed its own citations,
+and one of them — "Eurostat LFS 2025" — named a series and year the pinned source (#57) does not use.
+Renderings now look citations up; a test fails if a literal "(Eurostat …)" returns to the generator.
+
+**Two rules that make it honest rather than merely tidy.** A dataset citation has no quote, so its
+evidence is the locator plus the value found there, and a value that does not reproduce the cell
+within 0.5% is cited but not counted as sourced — which is why every brief now says, beside the
+public-administration employment figure, that it does not reproduce its source. And
+`confidence: assumption` declares a working assumption as one, with its rationale; it is counted as
+*declared*, never as sourced. The launch gate is every published namespace at full sourced coverage,
+with assumptions either sourced or visibly declared (widening #25, at the author's instruction of the
+same date).
+
+Verified: `python3 model/provenance.py` — 8 sources, 164 citations, 0 errors; `param` 138/621
+supported (2 legal cells + 136 reproducing Eurostat cells; 26 `gov_employment_k` cells cited, not
+supported), `assumption` 0/22. `capacity_model.py --all --json --no-write` byte-identical to the
+pre-change baseline; `eu27.json` unchanged (sha256 `e472325f…`, the hash `ARTEFACTS.csv` records),
+so no tracked artefact is stale; the regenerated diff is citation text only (26 `GOAL.md`, 27
+`params.csv`). `./test.sh` passes: 94 Python, 66 Vitest, 15 Playwright.
+
+*Would change if:* the register outgrows CSV review — thousands of citations — at which point it moves
+to SQLite with a CSV export for diffs, keeping the same schema.
