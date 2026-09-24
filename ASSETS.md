@@ -9,7 +9,7 @@ otherwise reveal itself before the repository did.
 
 ---
 
-## `countries/NL/Rijkscloud-Dutch_Sovereign_Data_Center_Network.png`
+## `countries/NL/assets/Rijkscloud-Dutch_Sovereign_Data_Center_Network.png`
 
 **AI-generated concept artwork. Not a Dutch government document.**
 
@@ -21,7 +21,7 @@ otherwise reveal itself before the repository did.
 | IPTC classification | `trainedAlgorithmicMedia` — fully AI-generated |
 | Watermark | Carries `c2pa.watermarked.unbound` (an invisible watermark) |
 | Dimensions | 1024 × 1536, 2.2 MB |
-| Added in | `605ab80`, later moved to `countries/NL/` |
+| Added in | `605ab80`, later moved to `countries/NL/`, then to `countries/NL/assets/` (#65) |
 
 ### What it is, and is not
 
