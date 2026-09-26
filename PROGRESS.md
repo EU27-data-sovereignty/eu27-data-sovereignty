@@ -13,7 +13,7 @@ pushed**; the private contacts repo likewise. Working tree clean.
 
 | Workstream | State | Evidence |
 |---|---|---|
-| Capacity model | **Done** | 84 Python tests; reproduces the Dutch xlsx exactly |
+| Capacity model | **Done** | 97 Python tests; reproduces the Dutch xlsx exactly |
 | Country data (27) | **Done**, unverified | `countries/<ISO>/`, generated from `eu27_parameters.csv` |
 | Web app | **Done**, deployed `noindex` | 66 Vitest; 15 of 15 Playwright pass |
 | Per-country artefacts | **Done** | 27 PDFs + 27 posters, hashes in `countries/ARTEFACTS.csv` |
@@ -23,7 +23,7 @@ pushed**; the private contacts repo likewise. Working tree clean.
 | Representation style guides | **Done** | `artifacts/`, 6 files, citations checked by `tests/test_docs.py` |
 | Source verification | **2 of 189 legal cells** | `./run.sh sources` |
 | **Source register** | **138 of 621 parameter cells; 0 of 22 assumptions** | `python3 model/provenance.py` (#67) |
-| **Critical national data register** | **3 of 405 pairs** | `./run.sh registers` |
+| **Critical national data register** | **3 of 405 pairs**; not yet on the source register | `./run.sh registers` (#60; migration to #67 open) |
 | Institutional map | **25 of 324 pairs** (37 rows) | `python3 model/institutions.py` |
 | Named contacts | **956 rows, 910 people; 850 send-ready** | private repo at `contacts/` (#66) |
 | Paper book | **Scaffolded** | `book/build.py` typesets; ~1.1k of ~20-30k words written |
@@ -207,8 +207,9 @@ pattern again.
 
 Three smaller drifts surfaced in the same pass:
 
-- `ROADMAP.md:62` reads "44 Python tests ... 15 Playwright". It is now 84 Python, 15 Playwright,
-  66 Vitest and 19 Jest.
+- `ROADMAP.md:62` read "44 Python tests ... 15 Playwright" — fixed; it now says 97 Python, 15
+  Playwright, 66 Vitest and 19 Jest, which is what the suites actually report. Test counts in
+  prose drift every time a suite grows; they are worth stating only where a command backs them.
 - `tests/test_docs.py` `CITING` omitted `SOURCES.md` — decision references in that file were the
   one set nothing validated. Added, along with this file and the six `artifacts/` style guides.
 - `./test.sh` does not run the `mobile/` suite; those 19 tests run only from `mobile/`.
@@ -255,7 +256,13 @@ the same pass — Belastingdienst, DigiD, RDW, DUO — and **none was recorded**
 sentence describing a register, and one could not be attributed to a publisher with confidence. A
 failed fetch is a gap, not a guess.
 
-**This is 402 rows of reading, not of code.** Every mechanism is in place and tested. Tier 0 alone
+**It is not on the source register yet, and that is the first thing to fix.** #67 reserved the
+`record:` namespace for these rows and the namespace is still unused: `national_data.csv` carries
+its own `url`, `publisher`, `retrieved`, `confidence` and `quote`, which is the duplicated
+provenance #67 exists to end. The file predates that decision by three days. Migrate before
+researching further — the cost scales with row count, and at 3 rows it is an afternoon.
+
+**The remaining 402 rows are reading, not code.** Every mechanism is in place and tested. Tier 0 alone
 is 216 pairs and is where the sovereignty argument lives; if tier 1 proves unreachable for one
 researcher, the published percentage should narrow to tier 0 rather than sit honestly stuck near
 zero (#60).

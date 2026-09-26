@@ -55,8 +55,8 @@ are labelled facts, not a dataset with column semantics.
 ```markdown
 | | |
 |---|---|
-| Population | 83.58 m (Eurostat, 1 Jan 2025) |
-| Land area | 353,296 km2 |
+| Population | 83.58 m (1 January; Eurostat tps00001, 2025) |
+| Land area | 353,296 km2 (Eurostat reg_area3, 2019) |
 ```
 
 **Datasets** — a headed table, numeric columns right-aligned with `---:`.
@@ -70,7 +70,14 @@ are labelled facts, not a dataset with column semantics.
 Rules for both:
 
 - Every number carries its unit in the label or the cell, never neither.
-- A figure that came from a source names the source inline — `(Eurostat, band IC, 2025-S2)`.
+- **Citations are looked up, never typed.** A figure that came from a source gets its citation
+  from the source register (`model/sources/`), which `write_goal()` resolves by `source_id` (#67).
+  `tests/test_provenance.py` fails if a literal `(Eurostat …)` string reappears in the generator,
+  so hand-writing one is not a style preference — it breaks the suite. This replaced an inline
+  form that had drifted: one brief named a series and year the pinned source does not use.
+- A citation that cannot support its cell says so in the cell. Where a value does not reproduce
+  its source within 0.5%, the brief prints that beside the figure rather than hiding it — as
+  `gov_employment_k` currently does in all 27.
 - Thousands separators on counts, not on years or identifiers.
 - ASCII only in generated prose: `km2`, not `km²`; `-`, not `—`. The generator's output is
   compared byte-for-byte across platforms, and the briefs are re-rendered into Typst and HTML

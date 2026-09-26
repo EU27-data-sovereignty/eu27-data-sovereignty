@@ -59,7 +59,7 @@ React 19, Vite 8, TypeScript 6, Tailwind 4, D3 7. Seven working routes:
 
 ### Tooling and testing
 - `init.sh`, `run.sh`, `test.sh` following the workspace template convention
-- 84 Python tests, 66 Vitest (including TS/Python parity), 15 Playwright (E2E, accessibility,
+- 97 Python tests, 66 Vitest (including TS/Python parity), 15 Playwright (E2E, accessibility,
   responsive) and 19 Jest in `mobile/` — all passing as of 2026-09-21. The two failing Playwright
   assertions are fixed: they read their figures from `model/eu27_results.csv` rather than
   hardcoding them. Note the Vitest, Playwright and Jest suites run in neither `./test.sh`'s

@@ -31,6 +31,15 @@ This file tracks the cross-country work.
 - [ ] Mutual DR pairs and treaty basis
 
 ## Critical national data register (`model/national_data.csv`)
+- [ ] **Migrate onto the source register (#67), before researching more rows.** #67 reserved the
+      `record:` namespace for exactly these rows — "the IT inventories and Tier 0/1 record counts
+      still to come" — but the namespace is unused and `national_data.csv` still carries its own
+      `url`, `publisher`, `retrieved`, `confidence` and `quote`. That is the duplicated-provenance
+      pattern #67 was written to end; the file was built three days before the decision that
+      reorganises it. Cost scales with row count: 3 rows today, an afternoon. Drop the five
+      columns, register rvig.nl / kadaster.nl / kvk.nl in `sources/registry.csv`, emit
+      `record:<ISO>:<record_class>` citations, and have the four renderers resolve provenance by
+      `source_id` instead of reading it inline.
 - [x] Schema, validator, coverage ratchet and the section in all four renderings (#60)
 - [x] NL: BRP, BRK, Handelsregister — 3 of 405 pairs
 - [ ] Tier 0 for the five large states (DE, FR, IT, ES, PL) — 40 pairs, the highest-value batch
