@@ -4,7 +4,8 @@ The one thing gating everything public-facing: whether the legal and regulatory 
 `model/eu27_parameters.csv` have been checked against primary sources. `ROADMAP.md` states the
 gate; this file is how the work is done and where it currently stands.
 
-**Status: 2 of 189 cells sourced.** Run `./run.sh sources` for the live figure.
+**Status: 2 of 189 legal cells sourced; 138 of 621 parameter cells across all columns.** Run
+`./run.sh sources` (legal cells) and `python3 model/provenance.py` (every namespace) for the live figures.
 
 Where to look for each state's instruments is a separate document, [`SOURCES.md`](SOURCES.md),
 together with the fetch pipeline that keeps a local copy of every document consulted. This file

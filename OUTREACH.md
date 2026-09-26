@@ -561,6 +561,12 @@ separation available, which the model flags as insufficient.
 - [ ] Hand-edit DE, FR, IT, ES, PL briefs into full analyses first (`TODO.md`, Write-ups) —
       the generated briefs are scaled from the Dutch baseline and say so, which is fine for a
       calibration request but thin for a ministerial send
-- [ ] Resolve the missing `model/export_artifacts.py` if PDFs rather than Markdown are wanted
-- [ ] Named individuals and addresses → private `sovereign-data-centers-contacts` repo (checked out at
-      `contacts/`, #46), never this file
+- [x] Resolve the missing `model/export_artifacts.py` if PDFs rather than Markdown are wanted — it
+      exists; the per-country briefing PDFs are tracked (#51)
+- [ ] **The launch gate (#67):** every claim in the brief being sent cites an original source —
+      `python3 model/provenance.py` shows full coverage for the namespaces the brief publishes
+- [ ] Send only to rows that are **send-ready** in the private inventory: both `contact_checked` and
+      `quote_checked` set (`contacts/tools/check_contacts.py`, #66); include the Art. 14 notice
+      (`contacts/CONVENTIONS.md`, GDPR basis) in the first message
+- [x] Named individuals and addresses → private `sovereign-data-centers-contacts` repo (checked out at
+      `contacts/`, #46), never this file — `contacts/people.csv`, 956 rows, 2026-09-24

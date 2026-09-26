@@ -4,8 +4,8 @@ Where every workstream stands, in one place. [`CHANGELOG.md`](CHANGELOG.md) reco
 when, [`ROADMAP.md`](ROADMAP.md) what is planned, [`DECISIONS.md`](DECISIONS.md) why. This file is
 the status view across all three: what is built, what is half-built, what is blocked and on what.
 
-**Status as of 2026-09-20**, at commit `7e2955c` on `main`, pushed. Working tree clean apart from
-two untracked files — see [In progress](#in-progress).
+**Status as of 2026-09-26**, on `main` after `390c57b`. Four commits (2026-09-24) are **not yet
+pushed**; the private contacts repo likewise. Working tree clean.
 
 ---
 
@@ -27,11 +27,14 @@ two untracked files — see [In progress](#in-progress).
 | Institutional map | **25 of 324 pairs** (37 rows) | `python3 model/institutions.py` |
 | Named contacts | **956 rows, 910 people; 850 send-ready** | private repo at `contacts/` (#66) |
 | Paper book | **Scaffolded** | `book/build.py` typesets; ~1.1k of ~20-30k words written |
-| **Full test gate** | **Green** as of 2026-09-21 | `./test.sh` exits 0 — see below |
+| **Full test gate** | **Green** as of 2026-09-24 | `./test.sh` exits 0: 97 Python, 66 Vitest, 15 Playwright |
 
-Two numbers gate everything public-facing, and both are research rather than code: **2 of 189
-legal and regulatory cells are sourced**, and **3 of 405 national data registers are recorded**.
-Every mechanism around them is built and tested; what is missing is the reading.
+**The launch gate (widened 2026-09-24, #67): nothing public — indexing, the domain, the book, the
+mobile release, outreach sends — until every published claim cites an original source**, with
+planning assumptions sourced or visibly declared as assumptions. Today: **138 of 621 parameter cells**
+(2 of 189 legal cells), **0 of 22 assumptions** declared, and **3 of 405 national data registers**.
+Every mechanism is built and tested; what is missing is the reading. The plan for closing it is
+`ROADMAP.md` § Sourcing plan.
 
 ---
 
@@ -73,7 +76,7 @@ flowchart LR
     B -- copied, parity-tested --> MOB
     G --> BK
 
-    S[model/sources.csv<br/>verification ledger] -. cites .-> P
+    S[model/sources/<br/>source register] -. cites .-> P
 ```
 
 Python is the source of truth. The briefs, the bundle, the artefacts and both readers are renderings
@@ -219,7 +222,18 @@ not.
 $ ./run.sh sources
 2/189 cells sourced (1%)
 39 of 189 cells assert an absence and need an authoritative enumeration rather than an instrument.
+
+$ python3 model/provenance.py
+8 sources, 164 citations
+namespace     supported  declared   claims
+param               138         0      621    22.2% sourced
+assumption            0         0       22     0.0% sourced
 ```
+
+Since 2026-09-24 every claim is recorded in the source register (#67), not only the legal cells: the
+136 reproducing Eurostat cells are cited from their pinned series, and the 26 `gov_employment_k`
+cells are cited but not counted, because they do not reproduce it — every brief says so beside the
+figure.
 
 ### The critical national data register — mechanism done, research at 1%
 
@@ -285,15 +299,15 @@ crosses into this repository.
 
 ```mermaid
 flowchart TD
-    V["Verify 189 legal cells<br/>against primary sources<br/><b>2 done</b>"]
+    V["Every published claim sourced<br/>(source register, #67)<br/><b>138 of 621 cells; 0 of 22 assumptions</b>"]
     V --> IDX[Stage 2: allow indexing]
     V --> DOM["Stage 3: eu27.cloud domain"]
     V --> BOOK[Paper book]
     V --> OUT[Outreach sends]
     V --> REL[Public mobile release]
 
-    OUT --> INST[Institutional register<br/>0 of 324 filled]
-    OUT --> PEOPLE[Named officeholders<br/>NL only]
+    OUT --> INST[Institutional register<br/>25 of 324 pairs]
+    OUT --> PEOPLE[People inventory, private<br/>850 of 956 send-ready]
 
     style V fill:#f7e9e3,stroke:#d97757,stroke-width:2px
 ```
@@ -306,14 +320,19 @@ one reply.
 
 ## Next
 
-1. **Source the tier-1 cells**, country by country, using `./run.sh fetch` and the ledger. This is
-   the only work that unblocks anything else.
-2. **Record the tier-0 national data registers** for the large states first (DE, FR, IT, ES, PL),
+1. **Push** the four 2026-09-24 commits here and the three in the private contacts repo (awaiting
+   the author's go-ahead).
+2. **The sourcing plan, in order** (`ROADMAP.md` § Sourcing plan): A2 join the register to the fetch
+   manifest and the national-data register, and show sources in web, mobile and book; A3 declare the
+   22 assumptions and 7 scaling rules; C sourced Tier 0/1 model for NL; B real government IT
+   inventories replacing population/GDP scaling, and the `gov_employment_k` fix.
+3. **Source the tier-1 cells**, country by country, using `./run.sh fetch` and the register.
+4. **Record the tier-0 national data registers** for the large states first (DE, FR, IT, ES, PL),
    raising `NATIONAL_DATA_FLOOR` with each batch. `./run.sh registers` prints the gaps by country.
-3. **Fill `model/institutions.csv`** from the EU-level registers (ENTSO-E, ACER, the CSIRTs network,
-   EDPB, BEREC, GÉANT), then per-country official pages — then commit the validator with data in it.
-4. **Rebuild `gov_employment_k`**, which reproduces from no Eurostat vintage and is 40% out for
-   Sweden.
+5. **Institutional map beyond 25 pairs:** find the contact *page* for each of the email-routed bodies
+   (#68), then the EU-level registers (ENTSO-E, ACER, the CSIRTs network, EDPB, BEREC, GÉANT).
+6. **People inventory:** a second research pass for MT (none), CY, HU, HR, EL, SI (five rows or
+   fewer), and re-research of the 77 rows whose seat quote was not found on its page.
 5. Smaller, recorded in `ROADMAP.md`: the choropleth, sourcing the feasibility ranking's model half,
    and the two-PDF-renderers question.
 

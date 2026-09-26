@@ -193,7 +193,8 @@ This is the most valuable remaining work, and the only thing standing between th
 site, a custom domain, or a printed book. The working document is [`VERIFICATION.md`](VERIFICATION.md);
 this is the state of the five steps.
 
-1. **Build `model/sources.csv`.** ✅ *Scaffolded 2026-09-08, and empty.* Schema as planned —
+1. **Build `model/sources.csv`.** ✅ *Scaffolded 2026-09-08; superseded 2026-09-24 by the source
+   register `model/sources/` (#67), which carries the same rows and every other kind of claim.* Schema as planned —
    `country,column,url,publisher,retrieved,confidence,quote` — with `model/sources.py` validating it and
    `tests/test_sources.py` guarding it. A row whose quote is under 20 characters fails, because a URL alone
    does not show the cited page says what the cell claims.
@@ -205,7 +206,7 @@ this is the state of the five steps.
    reads as verified when only half of it is sourced, and the ~19 states whose `certification_scheme`
    is a *negative* claim have no primary instrument to cite. The second needs a decision before tier 1
    can ever reach 27. Both are written up in [`VERIFICATION.md`](VERIFICATION.md).
-3. **Add a CI check** that fails when a legal cell has no `sources.csv` row. ✅ *Exists as
+3. **Add a CI check** that fails when a legal cell has no citation in the register. ✅ *Exists as
    `python3 model/sources.py --strict`, deliberately not yet wired into CI, and — as of #58 —
    now actually reachable: until `confidence: absence` landed, 22 tier-1 cells asserted that
    nothing exists and could never be sourced, so `--strict` could never have passed at all* — it would fail on day one and
@@ -224,6 +225,46 @@ this is the state of the five steps.
 5. **Run the sampling audit.** A random sample per column, independently re-checked, producing a
    **measured error rate per column** — confidence as a number, not a feeling. This is the artefact that
    opens stages 2 and 3; the earlier steps only make it possible.
+
+### Next — sourcing plan: every published claim cites an original source (approved 2026-09-24)
+The launch gate, widened by the author on 2026-09-24 and recorded in #67: **nothing launches — stage 2
+indexing, stage 3 domain, the book, the mobile release, outreach sends — until every published claim
+cites an original source**, and every planning assumption is either sourced or visibly declared as one.
+Three parts, in this order; no number moves until B3, and every step before it proves so with the
+byte-identical model diff.
+
+**A — one source register** (`model/sources/`, `model/provenance.py`, `tests/test_provenance.py`).
+- A1 ✅ *2026-09-24.* Registry + citations + validator + ratchet; `sources.csv` migrated; the Eurostat
+  cells cited from their pinned series; `write_goal()` looks citations up instead of typing them.
+  `param` 138/621, `assumption` 0/22.
+- A2. Add `source_id` to `fetch_manifest.csv` (so the cached bytes a quote was read from are named),
+  `national_data.csv` and `institutions.csv`; export sources to `eu27.json`; a Sources page and
+  citation popovers in the web app, source links in mobile, a bibliography in the book.
+- A3. Declare the 22 assumptions and 7 scaling rules as `confidence: assumption` with a rationale each,
+  sourcing any that a published benchmark supports; `SOURCES.md` generated from the registry.
+
+**B — replace population/GDP scaling with real government IT inventories.**
+- B1–B2. `model/it_inventory.csv` (`gov_servers`, `gov_storage_pb`, `gov_dc_count`/`gov_dc_mw`,
+  `gov_it_spend_eur`, `gov_it_staff`, `consolidation_target`), each value cited. Research by country
+  batch in the same shape as the outreach pass: source and quote per row, a verifier sample, staging,
+  merge, validators. Candidates: FR DINUM, DE ITZBund/federal consolidation, IT AgID data-centre
+  census and PSN, PL RChO, EE RIT, NL SSC-ICT/ODC and the Rijks ICT-dashboard; OECD *Government at a
+  Glance*, the eGovernment Benchmark, Eurostat COFOG across the Union.
+- B3–B5. `anchor_workloads()` in `generate_countries.py`: anchor on a direct inventory metric where one
+  exists, on IT spend relative to NL where only that does, and fall back to today's formula otherwise;
+  each country records and displays its method. Fix `gov_employment_k` (below) in the same step. The
+  decision entry carries the before/after table; NL must stay 5,691 servers / 14.2 MW / EUR 339 m.
+  Countries with no public inventory stay `scaled`, and say so.
+
+**C — turn Tier 0/1 into a sourced model.**
+- Restate each record class as count × size. Counts come from annual reports (RvIG: BRP size and
+  travel documents; Kadaster: parcels, rights, deeds; Belastingdienst: returns and retention; KVK:
+  registrations); sizes from standards (ICAO Doc 9303, ANSI/NIST-ITL / ISO 19794, eIDAS). Each is a
+  `record:` citation.
+- `model/tier_records.csv` + `model/tier_sizing.py` (pure, like `country_data.build()`), NL first,
+  reconciled against today's ~1.4 PB estimate; output shown per country as its own section, checked to
+  fit inside modelled storage, without driving sizing (#12 stands). Remove the false "Feeds:" line in
+  `TIER0-TIER1-SIZING.md`. Then the other 26 via the Part B research pass.
 
 ### Then — deployment stage 2: indexing
 **Gated on:** Tier-1 verification (steps 1–4 above).
@@ -330,11 +371,12 @@ What is deliberately not built yet:
   site does.
 
 ### Later — outreach
-The institutional map is in the README. Named individuals live in the private repo
-`sovereign-data-centers-contacts` (#45), checked out at `contacts/` since 2026-09-07 but
-still a separate private repo with its own remote (#46), in
-official capacity only. Outreach itself waits on verification: the first thing any of these bodies would
-check is the entry about their own country.
+The inventory exists (2026-09-24, #66): 956 seats held by 910 people across the EU institutions and 26
+member states, in the private repo `sovereign-data-centers-contacts` (#45) checked out at `contacts/`
+(#46), each row with its seat quote and an institution-published work contact, every one fetched and
+checked on its page — 850 send-ready. The public institutional map, `model/institutions.csv`, routes by
+web page only (#68), 25 of 324 pairs. **Outreach itself waits on the launch gate above**: the first
+thing any of these people would check is the entry about their own country.
 
 ---
 
@@ -389,7 +431,8 @@ Recorded so that "we knew and chose not to" stays distinguishable from "we misse
 Everything above is buildable. The project's real constraint is epistemic: the capacity figures are openly
 scaled placeholders and the framing covers them honestly, but the legal and regulatory entries are
 **assertions about what real jurisdictions require**, made from public policy documents by one researcher,
-and not yet checked against primary sources.
+and not yet checked against primary sources. Since 2026-09-24 the gate covers every published claim,
+not only those (#67, § Sourcing plan above).
 
 That is fine for a public research repository with prominent caveats and a corrections channel — which is
 what exists today, and arguably the fastest route to getting them verified. It is not fine for a custom

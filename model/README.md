@@ -20,10 +20,12 @@ conflating them is the easiest way to misuse this project.
 Every row of `eu27_parameters.csv` carries a `data_status` column repeating this, because GitHub renders a
 CSV as a clean table that looks more authoritative than it is.
 
-**Moving rows out of the third kind is the project's gating workstream.** `sources.csv` is the ledger where
-that verification is recorded — one row per sourced claim, with the quote that supports it — and
-`../VERIFICATION.md` has the schema, the tiered rule and where it currently stands. `python3
-model/sources.py` reports coverage and fails on a row that is not usable evidence.
+**Moving rows out of the third kind is the project's gating workstream.** The source register,
+`sources/registry.csv` + `sources/citations.csv` (#67), is where that verification is recorded — every
+document once, every claim citing it with a locator and a quote (or, for a dataset, the value found) —
+and `../VERIFICATION.md` has the schema, the tiered rule and where it currently stands. `python3
+model/provenance.py` reports coverage per claim namespace; `python3 model/sources.py` applies the
+tiered rule to the legal cells. Both fail on a row that is not usable evidence.
 
 `model/national_data.csv` is the second register, and strikes the same bargain for a different
 claim: not "what does this state's law require" but "what records does this state hold, and where
@@ -56,8 +58,10 @@ country_data.py        assembles one country's facts into a dict; scores the mat
 generate_countries.py  scales NL to the other 26, writes briefs and SUMMARY.md
 export_json.py         writes web/public/data/eu27.json from the same dict
 export_artifacts.py    renders the tracked per-country PNG infographics and PDF briefings
-sources.py             validates the verification ledger and reports coverage
-sources.csv            the verification ledger: one row per sourced claim, with its quote
+provenance.py          validates the source register (sources/) and reports coverage per namespace
+sources/registry.csv   one row per original document or dataset, keyed by source_id (#67)
+sources/citations.csv  one row per (claim, source): locator, quote or dataset value, confidence
+sources.py             the tiered rule for the legal cells, reading them from the register
 national_data.py       validates the critical national data register and reports coverage
 national_data.csv      per state, which Tier 0/Tier 1 record classes it holds, the register
                        that holds them, and the official page describing it, with a quote

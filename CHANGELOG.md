@@ -5,6 +5,41 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-09-24
+
+### Added — the source register (#67)
+
+`model/sources/registry.csv` (each original document once) and `citations.csv` (each claim linked to
+it, with a locator and a quote, or for a dataset the value found), validated by `model/provenance.py`
+and ratcheted by `tests/test_provenance.py`. `model/sources.csv` is retired; its two rows migrated and
+`sources.py` reads the register. The 162 Eurostat cells are cited from their pinned series; the 26
+`gov_employment_k` cells are cited but not counted, because they do not reproduce it.
+
+- Every generated brief's key-figure table now takes its source notes from the register; the wrong
+  "Eurostat LFS 2025" label is gone, and each brief says beside the employment figure that it does not
+  reproduce its source. Model output byte-identical; `eu27.json` unchanged (no artefact stale).
+- The launch gate widened, at the author's instruction: nothing launches until every published claim
+  cites an original source (#67, `ROADMAP.md` § Sourcing plan).
+
+### Added — the institutional map, 25 of 324 pairs (#68)
+
+37 rows in `model/institutions.csv`, admitted by a screen in the private repo: validator, no name,
+nothing the commit gate blocks, quote found on the body's page. Web routes only — the gate blocked the
+first fill for its email routes, and `institutions.py` now rejects `mailto:`. `tests/test_institutions.py`.
+
+### Added — the outreach inventory, private (#66)
+
+In `contacts/` (the private repo): 956 seats held by 910 people across the EU institutions and 26 member
+states, each with why they matter, a seat quote and an institution-published work contact; every row
+fetched and checked on its page, 850 send-ready, 78 unconfirmed addresses removed. MEPs on six
+committees come from the European Parliament's open-data API. This repository records counts only.
+
+### Changed
+
+- The NL concept poster moved to `countries/NL/assets/` (#65).
+- `PROGRESS.md`, `ROADMAP.md`, `README.md`, `model/README.md`, `VERIFICATION.md`, `SOURCES.md`,
+  `OUTREACH.md`, `TODO.md` brought up to date (2026-09-26).
+
 ## 2026-09-22
 
 ### Added — `DISTRIBUTION-AND-TRUST.md`, an authored note (#64)

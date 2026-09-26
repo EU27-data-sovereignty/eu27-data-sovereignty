@@ -57,12 +57,14 @@ different kind of claim from a scaled capacity placeholder, and it is the gate o
 public-facing (#25).
 
 ```
-./run.sh sources    # coverage; currently 2 of 189 cells
-./run.sh fetch      # retrieve the source documents into cache/
+./run.sh sources            # legal cells: currently 2 of 189
+python3 model/provenance.py # every claim, per namespace: 138 of 621 parameter cells
+./run.sh fetch              # retrieve the source documents into cache/
 ```
 
-`model/sources.csv` is the ledger: one row per sourced claim, carrying **the sentence on the page
-that supports the cell**. A URL only shows a page exists — it cannot show the page still says what
+`model/sources/` is the **source register** (#67): `registry.csv` holds each original document once,
+and `citations.csv` links every claim to it with a locator and **the sentence on the page that
+supports the cell** (for a dataset, the value found there, which must reproduce the cell). A URL only shows a page exists — it cannot show the page still says what
 it said, which is why the documents themselves are fetched and hashed (`SOURCES.md`).
 
 Tier 1 — `legal_instrument`, `data_classification`, `certification_scheme` — asserts a legal
@@ -86,8 +88,11 @@ model/
   eu27_parameters.csv        one row per country: population, GDP, public-admin employment, power price,
                              renewables, land, flags, existing gov cloud, digital ID, IXPs, and the
                              legal/regulatory posture columns (certification, classification, procurement)
-  sources.csv                the verification ledger: one row per sourced claim, with the quote
-  sources.py                 validates the ledger and reports coverage (./run.sh sources)
+  sources/registry.csv       the source register: one row per original document or dataset (#67)
+  sources/citations.csv      one row per (claim, source), with locator and quote or dataset value
+  provenance.py              validates the register; coverage per claim namespace
+  sources.py                 the tiered rule for the legal cells, read from the register (./run.sh sources)
+  institutions.csv           the public institutional contact map: web routes only, no names (#68)
   national_data.csv          the critical national data register: per state, which Tier 0/Tier 1
                              record classes it holds, the register, and the official page for it
   national_data.py           validates the register and reports coverage (./run.sh registers)
@@ -254,8 +259,8 @@ and digital-ID entries were researched in September 2026 and will date.
 openly scaled placeholders, and the "working assumption" framing covers them honestly. The certification
 schemes, classification ladders and procurement routes are assertions about what real jurisdictions
 actually require, and **187 of the 189 have not been checked against primary sources**. Two have:
-`./run.sh sources` prints the live figure, and `model/sources.csv` names exactly which, with the
-quote that supports each. Assume any given entry is unverified unless the ledger says otherwise.
+`./run.sh sources` prints the live figure, and `model/sources/citations.csv` names exactly which,
+with the quote that supports each. Assume any given entry is unverified unless the ledger says otherwise.
 
 Checking the first of them found two defects — France's classification ladder listed a protective
 marking as a classification level, and Cyprus's population was Estonia's — so the unverified

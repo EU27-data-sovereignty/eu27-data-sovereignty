@@ -23,7 +23,7 @@ The cache is rebuildable, so the bytes stay out of git: national gazette PDFs ar
 history never shrinks. The manifest carries the hash of each one, which is what makes drift
 detectable without storing them. Same pattern as `countries/ARTEFACTS.csv` (#52).
 
-**Why keep the documents at all?** Because `sources.csv` records that a claim was checked
+**Why keep the documents at all?** Because the source register (`model/sources/`, #67) records that a claim was checked
 against a URL, and a URL cannot record that the page still says what it said. A quote that no
 longer appears in its source is a finding; a bare link that quietly changed underneath is
 invisible, and looks exactly like a verified cell. That is the failure #54 exists to prevent.
