@@ -59,8 +59,8 @@ React 19, Vite 8, TypeScript 6, Tailwind 4, D3 7. Seven working routes:
 
 ### Tooling and testing
 - `init.sh`, `run.sh`, `test.sh` following the workspace template convention
-- 97 Python tests, 66 Vitest (including TS/Python parity), 15 Playwright (E2E, accessibility,
-  responsive) and 19 Jest in `mobile/` — all passing as of 2026-09-21. The two failing Playwright
+- 106 Python tests, 66 Vitest (including TS/Python parity), 15 Playwright (E2E, accessibility,
+  responsive) and 19 Jest in `mobile/` — all passing as of 2026-09-26. The two failing Playwright
   assertions are fixed: they read their figures from `model/eu27_results.csv` rather than
   hardcoding them. Note the Vitest, Playwright and Jest suites run in neither `./test.sh`'s
   default CI path nor `ci.yml`; see [`PROGRESS.md`](PROGRESS.md)
@@ -237,8 +237,9 @@ byte-identical model diff.
 - A1 ✅ *2026-09-24.* Registry + citations + validator + ratchet; `sources.csv` migrated; the Eurostat
   cells cited from their pinned series; `write_goal()` looks citations up instead of typing them.
   `param` 138/621, `assumption` 0/22.
-- A2. Add `source_id` to `fetch_manifest.csv` (so the cached bytes a quote was read from are named),
-  `national_data.csv` and `institutions.csv`; export sources to `eu27.json`; a Sources page and
+- A2. Add `source_id` to `fetch_manifest.csv` (so the cached bytes a quote was read from are named)
+  and `institutions.csv` (`national_data.csv` is on the register since #69, 2026-09-26, joined back
+  into the old row shape; its `source_id` is not yet in the bundle); export sources to `eu27.json`; a Sources page and
   citation popovers in the web app, source links in mobile, a bibliography in the book.
 - A3. Declare the 22 assumptions and 7 scaling rules as `confidence: assumption` with a rationale each,
   sourcing any that a published benchmark supports; `SOURCES.md` generated from the registry.

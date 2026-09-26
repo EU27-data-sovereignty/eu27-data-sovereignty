@@ -1,4 +1,4 @@
-iso,tier,record_class,status,register,holder,holder_url,url,publisher,retrieved,confidence,quote
-NL,0,civil_registry,held,Basisregistratie Personen (BRP),Rijksdienst voor Identiteitsgegevens (RvIG),https://www.rvig.nl/,https://www.rvig.nl/basisregistratie-personen,Rijksdienst voor Identiteitsgegevens (RvIG),2026-09-21,official,De Nederlandse overheid registreert persoonsgegevens in de Basisregistratie Personen (BRP).
-NL,1,land_property,held,Basisregistratie Kadaster (BRK),Kadaster,https://www.kadaster.nl/,https://www.kadaster.nl/zakelijk/registraties/basisregistraties/brk,Kadaster,2026-09-21,official,de kadastrale registratie van onroerende zaken en zakelijke rechten
-NL,1,business_registry,held,Handelsregister,Kamer van Koophandel (KVK),https://www.kvk.nl/,https://www.kvk.nl/over-het-handelsregister/,Kamer van Koophandel (KVK),2026-09-21,official,Bedrijven en organisaties zijn ingeschreven in het Handelsregister van KVK. Dat register is openbaar.
+iso,tier,record_class,status,register,holder,holder_url
+NL,0,civil_registry,held,Basisregistratie Personen (BRP),Rijksdienst voor Identiteitsgegevens (RvIG),https://www.rvig.nl/
+NL,1,land_property,held,Basisregistratie Kadaster (BRK),Kadaster,https://www.kadaster.nl/
+NL,1,business_registry,held,Handelsregister,Kamer van Koophandel (KVK),https://www.kvk.nl/

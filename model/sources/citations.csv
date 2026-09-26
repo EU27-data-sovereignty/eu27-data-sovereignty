@@ -163,3 +163,6 @@ param:SK:gov_employment_k,eurostat:nama_10_a64_e@2023,nama_10_a64_e; na_item=EMP
 param:SK:land_km2,eurostat:reg_area3@2019,reg_area3; landuse=L0008; unit=KM2; geo=SK; time=2019,,48702,,primary,2026-09-11,fetch_eurostat.py
 param:SK:population_m,eurostat:tps00001@2025,tps00001; indic_de=JAN; geo=SK; time=2025,,5.419,,primary,2026-09-11,fetch_eurostat.py
 param:SK:renewables_pct,eurostat:nrg_ind_ren@2024,nrg_ind_ren; nrg_bal=REN_ELC; unit=PC; geo=SK; time=2024,,24.9,,primary,2026-09-11,fetch_eurostat.py
+record:NL:business_registry:register,kvk:handelsregister,Intro paragraph under the heading 'Over het Handelsregister',Bedrijven en organisaties zijn ingeschreven in het Handelsregister van KVK. Dat register is openbaar.,,,official,2026-09-21,national_data.csv migration (#67)
+record:NL:civil_registry:register,rvig:brp,"Intro section, first paragraph",De Nederlandse overheid registreert persoonsgegevens in de Basisregistratie Personen (BRP).,,,official,2026-09-21,national_data.csv migration (#67)
+record:NL:land_property:register,kadaster:brk,"Intro under the heading 'Basisregistratie Kadaster (BRK)', first item of the 'bestaat uit' list",de kadastrale registratie van onroerende zaken en zakelijke rechten,,,official,2026-09-21,national_data.csv migration (#67)

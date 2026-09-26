@@ -1173,3 +1173,31 @@ commit that adds them; `contacts/tools/people.py` leak check 0 lines.
 
 *Would change if:* the gate gains a per-file allowance for published institutional inboxes, which is a
 policy change in `dotfiles`, not here.
+
+### 69. A register's existence is the claim `record:<ISO>:<class>:register`
+**2026-09-26.** `national_data.csv` keeps only the facts about a register (tier, class, status, name,
+holder). The page that describes it is in `sources/registry.csv` and the quote in
+`sources/citations.csv`, under the claim `record:<ISO>:<record_class>:register`. #67 had reserved
+`record:<ISO|*>:<record_class>:<count|size>` for the Tier 0/1 counts and sizes still to come; this widens
+the kind to `<register|count|size>` rather than taking the bare 3-part `record:<ISO>:<class>` the TODO
+first proposed, so that a register's existence, its record count and its record size for the same class
+sit side by side without colliding. `provenance.py` now checks the shape and counts the 405 (country,
+class) register claims as the namespace's denominator, which without it would have reported 3 of 3.
+
+`national_data.load()` joins the citation and registry entry back into the old row shape, the adapter
+`sources.load()` used in #67, so the validator and all four renderers are unchanged and every output
+is byte-identical. Putting `source_id` into `eu27.json` is still ROADMAP step A2, a separate change
+to the bundle. The three source ids (`rvig:brp`, `kadaster:brk`, `kvk:handelsregister`) carry no
+vintage: they are live pages, dated by each citation's `retrieved`. All three pages were re-read on
+2026-09-26 and still carry their quotes verbatim.
+
+Verified: `python3 model/provenance.py` — 11 sources, 167 citations, 0 errors; `record` 3/405
+supported. `python3 model/national_data.py` — 0 errors, 3/405 pairs. `for_country()` for all 27
+countries and `capacity_model.py --all --json --no-write` are both byte-identical to the pre-change
+baseline. After `./run.sh data`, `countries/`, `web/public/data/` and `mobile/assets/` show no diff,
+and `eu27.json` is still sha256 `e472325f…`, the hash `ARTEFACTS.csv` records. `./test.sh` passes:
+106 Python, 66 Vitest, 15 Playwright. `mobile` `npm test` passes: 19 Jest.
+
+*Would change if:* a record class turns out to need more than one register per country (a federal
+state with one register per Land), at which point the kind gains a qualifier rather than the row
+gaining a second citation.

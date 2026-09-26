@@ -26,7 +26,7 @@ sys.path.insert(0, str(ROOT / "model"))
 import provenance  # noqa: E402
 
 # Supported claims per namespace. Raise in the commit that adds the citations.
-FLOORS = {"param": 138, "assumption": 0}
+FLOORS = {"param": 138, "assumption": 0, "record": 3}
 
 
 class Register(unittest.TestCase):
@@ -89,6 +89,29 @@ class Rules(unittest.TestCase):
     def test_an_assumption_is_declared_not_supported(self):
         c = self.cite(confidence="assumption")
         self.assertFalse(provenance.supported(c, self.REG, {}))
+
+    def test_a_well_formed_record_claim_is_accepted(self):
+        for claim in ("record:NL:civil_registry:register", "record:*:tax:count"):
+            with self.subTest(claim=claim):
+                self.assertEqual(provenance.validate(self.REG, [self.cite(claim=claim)]), [])
+
+    def test_a_malformed_record_claim_is_rejected(self):
+        """#67 reserved the shape; the register rows (national_data.csv) are its first users."""
+        for claim in ("record:NL:civil_registry",          # the kind is missing
+                      "record:NL:civil_registry:rows",     # unknown kind
+                      "record:NL:fingerprints:register",   # not a record class
+                      "record:UK:civil_registry:register"):  # not a member state
+            with self.subTest(claim=claim):
+                errors = provenance.validate(self.REG, [self.cite(claim=claim)])
+                self.assertTrue(any("record claim must be" in e for e in errors))
+
+
+class RecordDenominator(unittest.TestCase):
+    def test_every_country_and_record_class_is_a_register_claim(self):
+        """Without a denominator, 3 cited registers would read as 3 of 3 -- 100% sourced."""
+        claims = provenance.claims_by_namespace()["record"]
+        self.assertEqual(len(claims), 27 * 15)
+        self.assertIn("record:NL:civil_registry:register", claims)
 
 
 class NoHandTypedCitations(unittest.TestCase):

@@ -6,6 +6,7 @@ fails if coverage rises without the floor moving with it. Together they assert e
 progress cannot be silently undone and the constant cannot silently go stale.
 """
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -13,6 +14,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "model"))
 
 import national_data as nd  # noqa: E402
+import provenance  # noqa: E402
 
 # Raise as registers are recorded. 405 = 15 record classes x 27 member states.
 NATIONAL_DATA_FLOOR = 3
@@ -120,6 +122,40 @@ class ValidationRules(unittest.TestCase):
             {**self.BASE, "record_class": "civil_registry", "tier": "0"},
         ]
         self.assertTrue(any("sorted" in e for e in nd.validate(rows)))
+
+
+class ProvenanceLivesInTheSourceRegister(unittest.TestCase):
+    """The page and quote moved to model/sources/ (#67); national_data.csv keeps only the facts."""
+
+    ROW = {"iso": "NL", "record_class": "civil_registry"}
+    CITE = {"claim": "record:NL:civil_registry:register"}
+
+    def test_the_old_inline_columns_are_gone_from_the_file_but_joined_on_load(self):
+        self.assertTrue(set(nd.PROVENANCE).isdisjoint(nd.FIELDS))
+        for r in nd.load():
+            self.assertTrue(set(nd.PROVENANCE) <= set(r))
+
+    def test_the_old_header_is_rejected(self):
+        with tempfile.TemporaryDirectory() as d:
+            old = Path(d) / "national_data.csv"
+            old.write_text(",".join(nd.FIELDS + nd.PROVENANCE) + "\n", encoding="utf-8")
+            with self.assertRaises(SystemExit):
+                nd.load(old)
+
+    def test_every_row_has_exactly_one_register_citation(self):
+        self.assertEqual(nd.citation_errors(nd.load(), provenance.citations()), [])
+
+    def test_a_row_without_a_citation_is_rejected(self):
+        errors = nd.citation_errors([self.ROW], [])
+        self.assertTrue(any("needs exactly one" in e for e in errors))
+
+    def test_a_citation_without_a_row_is_rejected(self):
+        errors = nd.citation_errors([], [self.CITE])
+        self.assertTrue(any("has no such row" in e for e in errors))
+
+    def test_count_and_size_citations_need_no_row(self):
+        """Part C cites record counts and sizes; only :register claims mirror a row here."""
+        self.assertEqual(nd.citation_errors([], [{"claim": "record:NL:civil_registry:count"}]), [])
 
 
 class TheDutchBriefStaysInSync(unittest.TestCase):

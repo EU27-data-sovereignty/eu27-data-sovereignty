@@ -25,7 +25,9 @@ Claim ids name exactly what is asserted, in namespaces:
     assumption:<name>                        a row of assumptions.csv / scaling_rules.csv / params.csv
     workload:<ISO>:<workload>:<field>        a workload input
     inventory:<ISO>:<metric>                 a government IT inventory figure (it_inventory.csv)
-    record:<ISO|*>:<record_class>:<count|size>   a Tier 0/1 record count or size
+    record:<ISO|*>:<record_class>:<register|count|size>
+                                             a Tier 0/1 register's existence (national_data.csv),
+                                             its record count, or its record size
     doc:<path>#<anchor>                      a claim in an authored note
 
 The bargain is the one sources.csv struck (#54): a URL shows that a document exists, not that it
@@ -63,6 +65,7 @@ DOC_TYPES = ("statute", "regulation", "dataset", "report", "annual_report", "sta
              "register", "unused")
 CONFIDENCE = ("primary", "official", "secondary", "absence", "assumption")
 NAMESPACES = ("param", "assumption", "workload", "inventory", "record", "doc")
+RECORD_KINDS = ("register", "count", "size")
 
 SOURCE_ID = re.compile(r"^[a-z0-9-]+:[a-z0-9_.-]+(@[A-Za-z0-9_.-]+)?$")
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -83,6 +86,12 @@ def registry() -> dict[str, dict[str, str]]:
 
 def citations() -> list[dict[str, str]]:
     return _read(CITATIONS, CITATION_FIELDS)
+
+
+def record_classes() -> tuple[str, ...]:
+    """The closed Tier 0/1 vocabulary, owned by national_data.py."""
+    from national_data import RECORD_CLASSES  # noqa: PLC0415 -- national_data imports this module too
+    return RECORD_CLASSES
 
 
 def parameters() -> dict[str, dict[str, str]]:
@@ -144,6 +153,12 @@ def validate(reg: dict[str, dict[str, str]], cites: list[dict[str, str]]) -> lis
             parts = c["claim"].split(":")
             if len(parts) != 3 or parts[1] not in params or parts[2] not in params[parts[1]]:
                 errors.append(f"{where}: param claim must be param:<ISO>:<column of eu27_parameters.csv>")
+        if ns == "record":
+            parts = c["claim"].split(":")
+            if (len(parts) != 4 or (parts[1] not in params and parts[1] != "*")
+                    or parts[2] not in record_classes() or parts[3] not in RECORD_KINDS):
+                errors.append(f"{where}: record claim must be record:<ISO|*>:<record_class of "
+                              f"national_data.py>:<{'|'.join(RECORD_KINDS)}>")
         key = (c["claim"], c["source_id"], c["locator"])
         if key in seen:
             errors.append(f"{where}: duplicate of an earlier row")
@@ -178,6 +193,8 @@ def claims_by_namespace() -> dict[str, set[str]]:
         out["param"] |= {f"param:{iso}:{col}" for col in row if col not in skip}
     with ASSUMPTIONS.open(newline="", encoding="utf-8") as fh:
         out["assumption"] |= {f"assumption:{r['Assumption']}" for r in csv.DictReader(fh)}
+    # One register claim per (country, record class); counts and sizes join with Part C.
+    out["record"] |= {f"record:{iso}:{c}:register" for iso in params for c in record_classes()}
     return out
 
 

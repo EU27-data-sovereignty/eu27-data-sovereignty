@@ -21,6 +21,11 @@ Every row carries the register, the body that operates it, the official page des
 a quote from that page -- the same bargain `sources.csv` strikes for the parameter cells, for
 the same reason: a URL shows that a page exists, not that it says what the row claims.
 
+The page and the quote are not in this file. They live in the source register (#67): the page
+once in `sources/registry.csv`, the quote in `sources/citations.csv` under the claim
+`record:<ISO>:<record_class>:register`. `load()` joins them back into the row shape below, so
+the validator and all four renderers read exactly what they read before the migration.
+
 Three states, not two
 ---------------------
 A reader must be able to tell "this state has no such register" from "nobody has looked yet":
@@ -62,10 +67,10 @@ ROOT = Path(__file__).resolve().parent.parent
 REGISTER = ROOT / "model" / "national_data.csv"
 PARAMETERS = ROOT / "model" / "eu27_parameters.csv"
 
-FIELDS = [
-    "iso", "tier", "record_class", "status", "register", "holder", "holder_url",
-    "url", "publisher", "retrieved", "confidence", "quote",
-]
+FIELDS = ["iso", "tier", "record_class", "status", "register", "holder", "holder_url"]
+# Joined in by load() from the source register: url and publisher from the registry entry,
+# the rest from the citation.
+PROVENANCE = ["url", "publisher", "retrieved", "confidence", "quote"]
 
 # Tier 0 -- the identity spine. Without it the state cannot say who exists, and recovery from
 # total loss would mean re-enrolling the population.
@@ -136,12 +141,47 @@ def countries() -> list[str]:
         return [r["iso2"] for r in csv.DictReader(fh)]
 
 
+def claim(r: dict[str, str]) -> str:
+    """The source-register claim that evidences this row."""
+    return f"record:{r['iso']}:{r['record_class']}:register"
+
+
 def load(path: Path = REGISTER) -> list[dict[str, str]]:
+    """The register's rows with their provenance joined in from the source register (#67)."""
+    import provenance  # noqa: PLC0415 -- sibling module; imported late so this file stays importable alone
+
     with path.open(newline="", encoding="utf-8") as fh:
         reader = csv.DictReader(fh)
         if reader.fieldnames != FIELDS:
             raise SystemExit(f"{path.name}: header is {reader.fieldnames}, expected {FIELDS}")
-        return list(reader)
+        rows = list(reader)
+    reg = provenance.registry()
+    cites = {c["claim"]: c for c in provenance.citations()}
+    for r in rows:
+        c = cites.get(claim(r), {})
+        src = reg.get(c.get("source_id", ""), {})
+        r.update(url=src.get("url", ""), publisher=src.get("publisher", ""),
+                 retrieved=c.get("retrieved", ""), confidence=c.get("confidence", ""),
+                 quote=c.get("quote", ""))
+    return rows
+
+
+def citation_errors(rows: list[dict[str, str]], cites: list[dict[str, str]]) -> list[str]:
+    """Each row needs exactly one :register citation, and each such citation needs its row."""
+    errors: list[str] = []
+    counts: dict[str, int] = {}
+    for c in cites:
+        if c["claim"].startswith("record:") and c["claim"].endswith(":register"):
+            counts[c["claim"]] = counts.get(c["claim"], 0) + 1
+    claimed = {claim(r) for r in rows}
+    for r in rows:
+        n = counts.get(claim(r), 0)
+        if n != 1:
+            errors.append(f"{r['iso']}/{r['record_class']}: needs exactly one {claim(r)} "
+                          f"citation in sources/citations.csv, found {n}")
+    for c in sorted(set(counts) - claimed):
+        errors.append(f"{c}: cited in sources/citations.csv but national_data.csv has no such row")
+    return errors
 
 
 def status_errors(where: str, r: dict[str, str]) -> list[str]:
@@ -310,8 +350,10 @@ def main(argv: list[str] | None = None) -> int:
                     help="fail while any (country, record class) pair is unrecorded")
     args = ap.parse_args(argv)
 
+    import provenance  # noqa: PLC0415
+
     rows = load()
-    errors = validate(rows)
+    errors = validate(rows) + citation_errors(rows, provenance.citations())
     for e in errors:
         print(f"error: {e}", file=sys.stderr)
     report(rows)
