@@ -1201,3 +1201,33 @@ and `eu27.json` is still sha256 `e472325f…`, the hash `ARTEFACTS.csv` records.
 *Would change if:* a record class turns out to need more than one register per country (a federal
 state with one register per Land), at which point the kind gains a qualifier rather than the row
 gaining a second citation.
+
+### 70. `eu27.cloud` is registered through Vercel, not an EU registrar
+**2026-09-27.** #50 chose `eu27.cloud` for stage 3; this settles where it is bought. It is registered
+through Vercel on the team `pieteradejongs-projects`, the same account the site already deploys from, so
+the domain, its DNS and the project sit in one place. It is bought now to hold the name. It is **not**
+attached to the project until the stage-3 gate in #50 is met, so the site stays on `*.vercel.app` with
+`noindex`.
+
+Rejected:
+- **An EU registrar with EU-hosted DNS and DNSSEC**, the approach `EU27-CLOUD-BRIEF.md` recommends. It
+  fits the project's subject better, but it would mean a second account and wiring DNS across providers,
+  for a domain that does not serve anything yet. Whether Vercel DNS supports DNSSEC has not been checked.
+- **`eu.cloud`**, which is unavailable. It would have failed #50's test anyway, because a bare `eu`
+  looks more official than any `.eu` name.
+- **Defensive registrations** (`eu-27.cloud`, `eu27dc.cloud`, `eu27.eu`, all suggested by the brief).
+  `eu27.eu` is ruled out by #50. The others are not worth their renewal cost for an unindexed draft.
+- **`eu27.dev`**, which renews at $13/yr against `eu27.cloud`'s $24. Rejected because `.cloud` is the name
+  #50 argued for, and $11 a year does not justify reopening that choice.
+
+Price: $7.99 for the first year, **$24/yr on renewal**. The README's "$9.99/yr" (checked 2026-09-11) was
+the first-year price and has been corrected.
+
+Verified: availability and price only. On 2026-09-26, Vercel `get_bulk_availability` returned
+`eu27.cloud` `available: true` and `eu.cloud` `available: false`. `get_bulk_price` returned purchase
+7.99, renewal 24. `get_purchase_quote` for the team returned cost 7.99 USD with auto-renew on.
+**Registration: NOT YET.** It is waiting on the registrant's postal address. Recheck with
+`vercel domains ls` after the purchase and record the result here.
+
+*Would change if:* the project starts to present itself as practising the sovereignty it describes, at
+which point moving the domain to an EU registrar and EU-hosted DNS becomes worth the extra account.

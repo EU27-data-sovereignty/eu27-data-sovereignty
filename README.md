@@ -48,7 +48,7 @@ Three things about this deployment are easy to get wrong, so they are written do
 | 3 — `eu27.cloud` | custom domain | the sampling audit's measured error rate |
 
 The domain is deliberately unofficial-sounding so the site is not mistaken for an EU
-institution's (#50); it was still available at $9.99/yr when last checked, 2026-09-11.
+institution's (#50); it is being registered through Vercel ($7.99 first year, $24/yr renewal; checked 2026-09-26) and held unattached until stage 3 (#70).
 
 ## Verification
 
