@@ -13,7 +13,7 @@ pushed**; the private contacts repo likewise. Working tree clean.
 
 | Workstream | State | Evidence |
 |---|---|---|
-| Capacity model | **Done** | 106 Python tests; reproduces the Dutch xlsx exactly |
+| Capacity model | **Done** | 108 Python tests; reproduces the Dutch xlsx exactly |
 | Country data (27) | **Done**, unverified | `countries/<ISO>/`, generated from `eu27_parameters.csv` |
 | Web app | **Done**, deployed `noindex` | 66 Vitest; 15 of 15 Playwright pass |
 | Per-country artefacts | **Done** | 27 PDFs + 27 posters, hashes in `countries/ARTEFACTS.csv` |
@@ -27,7 +27,7 @@ pushed**; the private contacts repo likewise. Working tree clean.
 | Institutional map | **25 of 324 pairs** (37 rows) | `python3 model/institutions.py` |
 | Named contacts | **956 rows, 910 people; 850 send-ready** | private repo at `contacts/` (#66) |
 | Paper book | **Scaffolded** | `book/build.py` typesets; ~1.1k of ~20-30k words written |
-| **Full test gate** | **Green** as of 2026-09-26 | `./test.sh` exits 0: 106 Python, 66 Vitest, 15 Playwright |
+| **Full test gate** | **Green** as of 2026-09-27 | `./test.sh` exits 0: 108 Python, 66 Vitest, 15 Playwright |
 
 **The launch gate (widened 2026-09-24, #67): nothing public — indexing, the domain, the book, the
 mobile release, outreach sends — until every published claim cites an original source**, with
@@ -103,7 +103,9 @@ OK
 ### The web app
 Seven routes including `/country/:iso` and the sovereignty matrix; deployed at
 **sovereign-data-centers.vercel.app** with indexing disabled. Deploys are manual: the Vercel GitHub
-App is not installed, so a push ships nothing.
+App is not installed, so a push ships nothing. Topology, deploy flow, freshness check and the deploy
+log: [`DEPLOYMENT.md`](DEPLOYMENT.md). Redeployed 2026-09-27, when the live site was 16 days stale
+and every deep link returned 404.
 
 ```
 $ ./test.sh --no-e2e

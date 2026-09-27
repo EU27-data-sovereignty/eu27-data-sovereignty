@@ -26,26 +26,9 @@ Live at **https://sovereign-data-centers.vercel.app**, on the Vercel project
 ./run.sh deploy     # refuses a dirty tree or a non-main branch, runs ./test.sh, then deploys
 ```
 
-Three things about this deployment are easy to get wrong, so they are written down:
-
-- **Deploys are manual.** The Vercel GitHub App is not installed on the account, so the project
-  is not linked to the repository and **a push does not ship anything**. A stale site is the
-  failure mode to watch for, and `./run.sh deploy` exists so shipping is one command rather than
-  a remembered incantation.
-- **`vercel.json` sets `github.silent`**, so there is no deploy status on the commit. Check the
-  Vercel dashboard, not GitHub.
-- **`.vercelignore` is read *instead of* `.gitignore`**, not in addition to it. Every rule that
-  matters has to be repeated there — `**/contacts/` first among them (#46), and `cache/`, which
-  would otherwise upload the entire fetched corpus with the source. `./run.sh deploy` checks that
-  last one before shipping.
-
-### The three stages
-
-| Stage | What it is | Gated on |
-|---|---|---|
-| 1 — `*.vercel.app`, `noindex` | where it is today | nothing; done 2026-09-07 |
-| 2 — indexing | delete the two `Disallow` lines from `web/public/robots.txt` | tier-1 cells sourced for all 27, Eurostat re-pulled |
-| 3 — `eu27.cloud` | custom domain | the sampling audit's measured error rate |
+**Deploys are manual: a push ships nothing.** Everything else is in
+[`DEPLOYMENT.md`](DEPLOYMENT.md): topology and headers, the deploy flow, what `.vercelignore` must keep off
+Vercel, the three stages, the freshness check for a stale site, known gaps, and a log of every production deploy.
 
 The domain is deliberately unofficial-sounding so the site is not mistaken for an EU
 institution's (#50); it is being registered through Vercel ($7.99 first year, $24/yr renewal; checked 2026-09-26) and held unattached until stage 3 (#70).

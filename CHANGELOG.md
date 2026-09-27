@@ -5,6 +5,25 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-09-27
+
+### Fixed — every deep link on the live site returned 404
+
+`vercel.json` rewrote `/(.*)` to `/index.html` while `cleanUrls` was on. Vercel 308-redirects `.html`
+paths under `cleanUrls`, so the rewrite failed and `/matrix`, `/country/DE` and a refresh on any page
+but `/` returned 404 from the first deploy on. The gate missed it because Playwright runs against
+`vite preview`. The destination is now `/`, and `tests/test_vercel_config.py` asserts that it cannot end in
+`.html`. Verified on a preview with `vercel curl` before going to production.
+
+### Added — `DEPLOYMENT.md`, and a redeploy
+
+The live site was the 2026-09-11 deploy (`cc242ed`), 12 commits behind, serving an `eu27.json` older
+than `91c86c9`. Deploys are manual, so nothing had shipped it. `DEPLOYMENT.md` collects topology,
+the deploy flow, the upload boundary, staging, a freshness check, known gaps and a deploy log. The README
+"Deployment" section now points to it.
+
+---
+
 ## 2026-09-24
 
 ### Added — the source register (#67)
