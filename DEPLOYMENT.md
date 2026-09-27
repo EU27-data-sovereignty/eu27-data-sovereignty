@@ -119,7 +119,8 @@ One row per production deploy. The bundle hash is the sha256 of the served `/dat
 | 2026-09-07 10:09 | `sovereign-data-centers-5im92s6gj` | `b2bb2f2` | — (not recorded) |
 | 2026-09-11 03:50 | `sovereign-data-centers-8us9100tr` | `4e9c227` | — (not recorded) |
 | 2026-09-11 06:17 | `sovereign-data-centers-lq0z37s9h` | `cc242ed` | `1e9f838a…652f` |
+| 2026-09-27 06:41 | `sovereign-data-centers-3r0t04xdu` | `b2ac205` | `e472325f…e609` |
 
-The commits for the first three rows are inferred: each is the last commit before that deploy's timestamp.
+The commits for the first three rows are inferred: each is the last commit before that deploy's timestamp. From 2026-09-27 on, each row records the commit that was actually deployed.
 The 2026-09-11 06:17 deploy stayed live until 2026-09-27. By then it was 12 commits behind and served a
 bundle older than `91c86c9`.
