@@ -1,0 +1,217 @@
+{
+ "indicators": [
+  {
+   "claims": [],
+   "id": "L1",
+   "research_note": "No statute or binding regulation found that requires government data (or classified data) to be stored or processed under Cypriot or EU jurisdiction. Checked: Law 84(I)/2021 on security rules for classified information (cylaw.org), where art. 16 requires security measures for communication and information systems but sets no location or jurisdiction rule; Law 89(I)/2020 on network and information security, with no data-location provision found; and the 2024 NIFO Digital Public Administration supporting document for Cyprus. That document says G-Cloud is to be hosted by a Tier3 datacentre provider and later expanded to a hybrid cloud using public cloud 'when suitable', which suggests no general localisation rule but is not an authoritative 'no'. gov.cy (DMRID, DITS, Digital Security Authority pages) returned HTTP 403 or a block page, and WebSearch was unavailable (session quota used up), so a policy-level requirement cannot be ruled out.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were offered, and the Law 84(I)/2021 text and the NIFO 2024 document I fetched contain no data-location or jurisdiction rule, so unknown stands.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "el",
+     "published": "2021",
+     "publisher": "Republic of Cyprus (consolidated text via CyLaw, Cyprus Bar Association)",
+     "quote": "διαβαθμισμένες πληροφορίες της Δημοκρατίας και διαβαθμισμένες πληροφορίες της ΕΕ με διαβάθμιση «ΑΚΡΩΣ ΑΠΟΡΡΗΤΟ», «ΑΠΟΡΡΗΤΟ» και «ΕΜΠΙΣΤΕΥΤΙΚΟ» έχουν υποστεί σχετικό έλεγχο ασφάλειας",
+     "quote_english": "classified information of the Republic and EU classified information with classification 'TOP SECRET', 'SECRET' and 'CONFIDENTIAL' have undergone the relevant security clearance",
+     "title": "Ο περί Κανόνων Ασφαλείας Διαβαθμισμένων Πληροφοριών, Εγγράφων και Υλικού και για Συναφή Θέματα Νόμος του 2021 (Ν. 84(I)/2021)",
+     "url": "https://www.cylaw.org/nomoi/enop/non-ind/2021_1_84/full.html"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "el",
+     "published": "2021",
+     "publisher": "Republic of Cyprus (consolidated text via CyLaw, Cyprus Bar Association)",
+     "quote": "Τα Συστήματα Επικοινωνίας και Πληροφοριών στα οποία διακινούνται διαβαθμισμένες πληροφορίες ή/και διαβαθμισμένες πληροφορίες της ΕΕ με διαβάθμιση «ΠΕΡΙΟΡΙΣΜΕΝΗΣ ΧΡΗΣΗΣ» ή «ΠΕΡΙΟΡΙΣΜΕΝΗΣ ΧΡΗΣΗΣ ΕΕ» (RESTREINT UE) και ανώτερη, απαιτείται να καλύπτονται από μέτρα ασφαλείας",
+     "quote_english": "Communication and Information Systems in which classified information and/or EU classified information classified 'RESTRICTED' or 'RESTREINT UE' and above is handled are required to be covered by security measures",
+     "title": "Ο περί Κανόνων Ασφαλείας Διαβαθμισμένων Πληροφοριών, Εγγράφων και Υλικού και για Συναφή Θέματα Νόμος του 2021 (Ν. 84(I)/2021)",
+     "url": "https://www.cylaw.org/nomoi/enop/non-ind/2021_1_84/full.html"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "el",
+     "published": "2021",
+     "publisher": "Republic of Cyprus (consolidated text via CyLaw, Cyprus Bar Association)",
+     "quote": "«διαβαθμισμένη πληροφορία» σημαίνει κάθε πληροφορία, έγγραφο ή υλικό που φέρει ή έχει χαρακτηρισθεί με διαβάθμιση ασφαλείας της Δημοκρατίας οιουδήποτε επιπέδου",
+     "quote_english": "'classified information' means any information, document or material that bears or has been marked with a security classification of the Republic of any level",
+     "title": "Ο περί Κανόνων Ασφαλείας Διαβαθμισμένων Πληροφοριών, Εγγράφων και Υλικού και για Συναφή Θέματα Νόμος του 2021 (Ν. 84(I)/2021)",
+     "url": "https://www.cylaw.org/nomoi/enop/non-ind/2021_1_84/full.html"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Law 84(I)/2021 on security rules for classified information, documents and material is a statute. It names the national classification levels ΑΚΡΩΣ ΑΠΟΡΡΗΤΟ, ΑΠΟΡΡΗΤΟ, ΕΜΠΙΣΤΕΥΤΙΚΟ and ΠΕΡΙΟΡΙΣΜΕΝΗΣ ΧΡΗΣΗΣ and maps them to EU levels. It replaced Law 216(I)/2002. The CyLaw page is encoded as windows-1253, and all three quotes were confirmed after decoding it.",
+   "review": {
+    "original": "yes",
+    "reason": "All three Greek quotes are on the CyLaw page (decoded as cp1253): the statute itself names the national levels ΑΚΡΩΣ ΑΠΟΡΡΗΤΟ, ΑΠΟΡΡΗΤΟ, ΕΜΠΙΣΤΕΥΤΙΚΟ and ΠΕΡΙΟΡΙΣΜΕΝΗΣ ΧΡΗΣΗΣ, gives them binding legal effect (security clearance under art. 15, CIS security measures under art. 16(1)) and defines 'classified information' by the Republic's classification, which meets 'levels defined in a statute'.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "No Cypriot cloud certification requiring immunity from non-EU law (SecNumCloud-type) was found. The 2024 NIFO Cyprus supporting document describes G-Cloud without any such certification requirement. The Digital Security Authority and DITS pages on gov.cy were blocked (HTTP 403), and WebSearch was unavailable, so no authoritative statement either way was found.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were offered, and the NIFO 2024 G-Cloud section mentions no sovereign or immunity certification, so unknown stands.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "published": "2024",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "issued in February 2019 to JCC Payment Systems Ltd the first authorisation as qualified trust service provider.",
+     "quote_english": "issued in February 2019 to JCC Payment Systems Ltd the first authorisation as qualified trust service provider.",
+     "title": "Digital Public Administration factsheet 2024 – Cyprus, Supportive Document",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024%20Supportive%20Document_Cyprus_vFinal.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "",
+     "publisher": "JCC Payment Systems Ltd",
+     "quote": "JCC is fully owned by local commercial banks in Cyprus. Bank of Cyprus Public Co Ltd has a controlling interest.",
+     "quote_english": "JCC is fully owned by local commercial banks in Cyprus. Bank of Cyprus Public Co Ltd has a controlling interest.",
+     "title": "JCC Governance – Board of Directors and company ownership",
+     "url": "https://www.jcc.com.cy/jcc/governance/"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Cyprus trusted list (TSL-CY-sign.xml, published by the Department of Electronic Communications and linked from the EU LOTL) lists one qualified trust service provider: JCC PAYMENT SYSTEMS LTD. Its services include JCC CA for EU Qualified e-Signatures and e-Seals and JCC eID CA / G1. JCC is a private EU company owned by commercial banks. It is authorised and supervised by the state Department of Electronic Communications, which is the eIDAS supervisory body and the trusted-list operator. No state-operated root CA or qualified trust service provider appears on the list. The rating is 'partial' because JCC is a private EU provider working under state authorisation. That is an authorisation rather than a strict contract.",
+   "review": {
+    "original": "partial",
+    "reason": "Both quotes are verbatim: the NIFO document shows JCC was authorised as a QTSP by the state Department of Electronic Communications, and JCC's governance page shows it is fully owned by commercial banks with Bank of Cyprus holding control. That makes it a private EU provider rather than a state body, so 'yes' is excluded and 'partial' is the most that holds; note the link is a state authorisation, not a proven state contract, and 'no' (outside state control) is arguably the closer fit.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "published": "2024",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "According to this legislation, Trust Service Providers (TSP) authorised by the Cypriot government will be able to provide eID (eIdentification of High Assurance Level and qualified eSignature) to the Cypriot citizens above 18 years old.",
+     "quote_english": "According to this legislation, Trust Service Providers (TSP) authorised by the Cypriot government will be able to provide eID (eIdentification of High Assurance Level and qualified eSignature) to the Cypriot citizens above 18 years old.",
+     "title": "Digital Public Administration factsheet 2024 – Cyprus, Supportive Document",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024%20Supportive%20Document_Cyprus_vFinal.pdf"
+    },
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "published": "2024",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "in March 2022 the Department of Electronic Communications issued to JCC Payment Systems Ltd (qualified trust services provider) an authorisation to provide eID to Cypriot citizens.",
+     "quote_english": "in March 2022 the Department of Electronic Communications issued to JCC Payment Systems Ltd (qualified trust services provider) an authorisation to provide eID to Cypriot citizens.",
+     "title": "Digital Public Administration factsheet 2024 – Cyprus, Supportive Document",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024%20Supportive%20Document_Cyprus_vFinal.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "",
+     "publisher": "JCC Payment Systems Ltd",
+     "quote": "The Authentication Certificate constitutes the identity of the citizen in the digital world, as with its use the citizen will be able to authenticate and access information systems and electronic services, such as the CY Login Government Portal",
+     "quote_english": "The Authentication Certificate constitutes the identity of the citizen in the digital world, as with its use the citizen will be able to authenticate and access information systems and electronic services, such as the CY Login Government Portal",
+     "title": "eIDENTITY",
+     "url": "https://www.jcc.com.cy/trust-services/eidentity/"
+    }
+   ],
+   "id": "K2",
+   "research_note": "The notified scheme is 'Cyprus National eID' (IDMe.cy), assurance level High. It was notified on 11 Jul 2023 and published as C/2024/1719, according to the Commission's eID notification overview on ec.europa.eu. The High-assurance eID credentials are issued by JCC Payment Systems Ltd, a private company owned by commercial banks, under authorisation from the state Department of Electronic Communications. The CY Login portal that relying services use is a government portal. That fact comes from the NIFO document and the JCC page; the gov.cy CY Login and idme.cy pages were blocked, so the operator could not be confirmed from those sites. EUR-Lex C/2024/1719 returned an HTTP 202 challenge with no body. The rating is 'partial' because a private EU provider issues the credential under state supervision, while the state owns the scheme.",
+   "review": {
+    "original": "partial",
+    "reason": "All three quotes are verbatim (NIFO pp. on eID, and JCC's eIDENTITY page) and establish that the High-assurance eID is issued by bank-owned JCC under a March 2022 authorisation from the state supervisory body, for use with the government CY Login portal, which matches the 'private EU provider under state supervision' definition of partial.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "published": "2024",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "From 1 July 2021, the Unified Data Centre (UDC) holds together the IT systems of the MLWSI and the IT Systems of the newly established Deputy Ministry of Social Welfare (DMSW).",
+     "quote_english": "From 1 July 2021, the Unified Data Centre (UDC) holds together the IT systems of the Ministry of Labour, Welfare and Social Insurance and the IT Systems of the newly established Deputy Ministry of Social Welfare (DMSW).",
+     "title": "Digital Public Administration factsheet 2024 – Cyprus, Supportive Document",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024%20Supportive%20Document_Cyprus_vFinal.pdf"
+    },
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "published": "2024",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "At the beginning of 2024 the UDC launched its own Disaster Recovery site supporting its IT systems.",
+     "quote_english": "At the beginning of 2024 the UDC launched its own Disaster Recovery site supporting its IT systems.",
+     "title": "Digital Public Administration factsheet 2024 – Cyprus, Supportive Document",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024%20Supportive%20Document_Cyprus_vFinal.pdf"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The Unified Data Centre of the Ministry of Labour, Welfare and Social Insurance and the Deputy Ministry of Social Welfare is a ministry-run government data centre. It has hosted welfare and social-insurance systems since 2021 and added its own disaster-recovery site in 2024. The same document says eOASIS runs on a central government infrastructure 'cloud-style', while the Police, House of Representatives, Cyprus Intelligence Service and Deputy Ministry of Tourism run their own infrastructure. The DITS data-centre pages on gov.cy were blocked (HTTP 403).",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are verbatim in the NIFO 2024 document, which describes the Unified Data Centre as hosting the Ministry of Labour and the Deputy Ministry of Social Welfare IT systems since July 2021, with welfare systems migrated into it through 2022 and its own DR site launched in early 2024, so it is a state-run government data centre in operation.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "published": "2024",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "Cyprus aims to create a unified cloud environment that will provide Cloud Computing capabilities for the government by hosting Governmental Systems and Services.",
+     "quote_english": "Cyprus aims to create a unified cloud environment that will provide Cloud Computing capabilities for the government by hosting Governmental Systems and Services.",
+     "title": "Digital Public Administration factsheet 2024 – Cyprus, Supportive Document",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024%20Supportive%20Document_Cyprus_vFinal.pdf"
+    },
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "published": "2024",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "The project is at the initial phase and it is getting prepared for the procurement phase.",
+     "quote_english": "The project is at the initial phase and it is getting prepared for the procurement phase.",
+     "title": "Digital Public Administration factsheet 2024 – Cyprus, Supportive Document",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024%20Supportive%20Document_Cyprus_vFinal.pdf"
+    },
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "published": "2024",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "The G-Cloud will be implemented in the premises of a datacentre provider (Tier3 datacentre) and not in government premises.",
+     "quote_english": "The G-Cloud will be implemented in the premises of a datacentre provider (Tier3 datacentre) and not in government premises.",
+     "title": "Digital Public Administration factsheet 2024 – Cyprus, Supportive Document",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024%20Supportive%20Document_Cyprus_vFinal.pdf"
+    }
+   ],
+   "id": "C2",
+   "research_note": "In the 2024 NIFO document, the Cyprus G-Cloud is planned and preparing for procurement, with completion expected by the end of 2025. It is to be hosted by a Tier3 datacentre provider rather than on government premises, and later expanded to a hybrid cloud. No 2025 or 2026 evidence that it is in operation was found: gov.cy and DITS pages were blocked (HTTP 403), no Cyprus file was found on the NIFO 2025 factsheet page, and WebSearch was unavailable. The rating stays 'partial' (announced or in procurement) until operation can be confirmed.",
+   "review": {
+    "original": "partial",
+    "reason": "All three quotes are verbatim, and the paragraph says the G-Cloud 'is at the initial phase and it is getting prepared for the procurement phase' with completion expected by end-2025, which shows it was announced but not in operation, so partial is correct.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  }
+ ],
+ "iso": "CY"
+}

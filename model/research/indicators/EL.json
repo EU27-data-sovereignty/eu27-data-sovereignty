@@ -1,0 +1,214 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "el",
+     "published": "2020-09-23",
+     "publisher": "Lawspot (consolidated text of Law 4727/2020, FEK A 184/2020)",
+     "quote": "Στο Κυβερνητικό Νέφος Δημόσιου Τομέα πρέπει υποχρεωτικά να εγκατασταθούν έως την 1η.01.2022 όλες οι κεντρικές ηλεκτρονικές εφαρμογές",
+     "quote_english": "All central electronic applications must mandatorily be installed in the Public Sector Government Cloud by 1.1.2022.",
+     "title": "Law 4727/2020, Article 87 – Government clouds",
+     "url": "https://www.lawspot.gr/nomothesia/n-4727-2020/arthro-87-nomos-4727-2020-kyvernitika-nefi/"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "el",
+     "published": "2020-09-23",
+     "publisher": "Lawspot (consolidated text of Law 4727/2020, FEK A 184/2020)",
+     "quote": "Ως Κυβερνητικό Νέφος Δημόσιου Τομέα (GCloud) νοείται το σύνολο των ψηφιακών υποδομών που διαχειρίζεται η Γενική Γραμματεία Πληροφοριακών Συστημάτων Δημόσιας Διοίκησης",
+     "quote_english": "The Public Sector Government Cloud (G-Cloud) means the totality of digital infrastructures managed by the General Secretariat of Public Administration Information Systems.",
+     "title": "Law 4727/2020, Article 87 – Government clouds",
+     "url": "https://www.lawspot.gr/nomothesia/n-4727-2020/arthro-87-nomos-4727-2020-kyvernitika-nefi/"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "el",
+     "published": "2020-09-23",
+     "publisher": "Lawspot (consolidated text of Law 4727/2020, FEK A 184/2020)",
+     "quote": "Για τα συστήματα επικοινωνιών και πληροφορικής, στα οποία αποθηκεύονται, επεξεργάζονται ή διαβιβάζονται εθνικά διαβαθμισμένες πληροφορίες, εφαρμόζονται οι διατάξεις του Εθνικού Κανονισμού Ασφαλείας (Ε.Κ.Α.).",
+     "quote_english": "For communication and information systems in which nationally classified information is stored, processed or transmitted, the provisions of the National Security Regulation (EKA) apply.",
+     "title": "Law 4727/2020, Article 1 – Purpose and scope",
+     "url": "https://www.lawspot.gr/nomothesia/n-4727-2020/arthro-1-nomos-4727-2020-skopos-kai-pedio-efarmogis-toy/"
+    }
+   ],
+   "id": "L1",
+   "research_note": "Law 4727/2020 (Arts 85-87) obliges ministries' central systems to be hosted in the state-managed G-Cloud (GSIS), education systems in RE-Cloud (GRNET) and health systems in H-Cloud (IDIKA). But G-Cloud is defined to include 'public cloud managed by GSIS', and no explicit national- or EU-location/jurisdiction clause was found in the statute. Classified systems fall under the unpublished National Security Regulation (EKA) and are excluded from Art. 87 (para 7). Rated partial: a statutory mandate to host on state-managed infrastructure, not an express jurisdiction requirement for all government data. The procurement conditions of the 2022 KtP public-cloud tender (which might contain location clauses) were not checked.",
+   "review": {
+    "original": "partial",
+    "reason": "Both Art. 87 quotes are on the page, but the article sets no location or jurisdiction clause: G-Cloud can be public cloud as long as GSIS manages it, and classified systems are carved out (para 7) to an unpublished EKA whose hosting rules can't be seen, so no quoted text establishes a jurisdiction requirement for any category of data.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "el",
+     "published": "2018-02-27",
+     "publisher": "e-nomothesia.gr (Ministry of National Defence decision, Government Gazette)",
+     "quote": "Τη μη δημοσίευση και ανάρτηση του κυρούμενου Κανονισμού στην Εφημερίδα της Κυβερνήσεως και στο Πρόγραμμα Διαύγεια, αντίστοιχα, για λόγους εθνικής ασφάλειας.",
+     "quote_english": "The non-publication of the ratified Regulation in the Government Gazette and on the Diavgeia programme, respectively, for reasons of national security.",
+     "title": "Ministerial Decision F.120/01/510313/S.94/2018 (FEK B 683/27-2-2018) – Ratification of the National Security Regulation (EKA)",
+     "url": "https://www.e-nomothesia.gr/kat-enoples-dynameis/upourgike-apophase-ph-120-01-510313-s94-2018.html"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "el",
+     "published": "2020-09-23",
+     "publisher": "Lawspot (consolidated text of Law 4727/2020)",
+     "quote": "Για τα συστήματα επικοινωνιών και πληροφορικής, στα οποία αποθηκεύονται, επεξεργάζονται ή διαβιβάζονται εθνικά διαβαθμισμένες πληροφορίες, εφαρμόζονται οι διατάξεις του Εθνικού Κανονισμού Ασφαλείας (Ε.Κ.Α.).",
+     "quote_english": "For communication and information systems in which nationally classified information is stored, processed or transmitted, the provisions of the National Security Regulation (EKA) apply.",
+     "title": "Law 4727/2020, Article 1 – Purpose and scope",
+     "url": "https://www.lawspot.gr/nomothesia/n-4727-2020/arthro-1-nomos-4727-2020-skopos-kai-pedio-efarmogis-toy/"
+    },
+    {
+     "doc_type": "secondary",
+     "language": "el",
+     "published": "2017-11-24",
+     "publisher": "Newsbeast",
+     "quote": "Πόσες διαβαθμίσεις απορρήτων υπάρχουν όμως και τι σημαίνει η κάθε μία, τουλάχιστον στην Ελλάδα; Την απάντηση δίνουν ο διακλαδικός κανονισμός στρατιωτικής αλληλογραφίας του ΓΕΕΘΑ και το σχετικό ΦΕΚ.",
+     "quote_english": "How many classification levels exist and what does each mean, at least in Greece? The answer is given by the Hellenic National Defence General Staff's joint regulation on military correspondence and the related Government Gazette.",
+     "title": "Πώς διαβαθμίζονται τα απόρρητα έγγραφα στην Ελλάδα",
+     "url": "https://www.newsbeast.gr/greece/arthro/3026379/pos-diavathmizonte-ta-aporrita-engrafa-stin-ellada"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Classification levels are set in the National Security Regulation (EKA). It was ratified by a binding Defence Minister's decision (FEK B 683/2018), and Law 4727/2020 Art. 1 applies it to classified ICT systems. The EKA text itself is deliberately unpublished, so the levels cannot be quoted from the primary instrument. A secondary source lists them: Άκρως Απόρρητο, Απόρρητο, Εμπιστευτικό, Περιορισμένης Χρήσης. Law 4727 Art. 85 also requires a data-classification study for every new public-sector system. Rated yes (binding regulation), with the caveat that the regulation is not public. EUR-Lex (the EU Member States' agreement ratified by Law 4184/2013, which carries the equivalence table) returned a bot challenge and was not used.",
+   "review": {
+    "original": "yes",
+    "reason": "All three quotes checked out: the binding Ministerial Decision (FEK B 683/2018) ratifies the EKA, Law 4727 Art. 1 para 5 applies it to classified ICT systems, and the secondary source names the levels and ties them to a Government Gazette instrument (FEK 336/2005); the primary text defining the levels is unpublished, so this is a weak yes.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "No Greek cloud certification that requires immunity from non-EU law (a SecNumCloud-type scheme) was found. Searched: Law 4727/2020 cloud articles 85-87 (no certification requirement), the National Cybersecurity Authority site (cyber.gov.gr), NIS2 transposition Law 5160/2024 references, and Brave searches in Greek and English for national cloud certification / EUCS / sovereign cloud requirements for public bodies. No authoritative statement either way, so unknown.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were made and no source establishes whether a sovereign-cloud certification exists, so unknown stands.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "el",
+     "publisher": "Αρχή Πιστοποίησης του Ελληνικού Δημοσίου (ΑΠΕΔ) – Υπουργείο Ψηφιακής Διακυβέρνησης",
+     "quote": "Η επιχειρησιακή διαχείριση της Υποδομής Δημοσίου Κλειδιού του Δημόσιου Τομέα και της Αρχής Πιστοποίησης του Ελληνικού Δημοσίου ασκείται αρμοδίως από το Τμήμα Υπηρεσιών Εμπιστοσύνης",
+     "quote_english": "The operational management of the Public Sector Public Key Infrastructure and of the Hellenic Public Administration Certification Authority is exercised by the Trust Services Department.",
+     "title": "Σχετικά με την ΑΠΕΔ",
+     "url": "https://aped.gov.gr/about-aped/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "el",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης",
+     "quote": "Η Αρχή Πιστοποίησης του Ελληνικού Δημοσίου (ΑΠΕΔ) παρέχει δωρεάν εγκεκριμένα πιστοποιητικά ηλεκτρονικής υπογραφής.",
+     "quote_english": "The Hellenic Public Administration Certification Authority (APED) provides free qualified electronic signature certificates.",
+     "title": "Αρχή Πιστοποίησης του Ελληνικού Δημοσίου – Αρχική",
+     "url": "https://aped.gov.gr/"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Greek national trusted list (EETT, eett.gr/tsl/EL-TSL.xml) lists 'HELLENIC PUBLIC ADMINISTRATION CERTIFICATION AUTHORITY' (Hellenic Public Administration Root CA - HPARCA) as a qualified TSP. The APED site states that the root CA is the General Secretariat of Information Systems & Digital Governance and that the Ministry of Digital Governance runs it (PD 40/2020, Law 4727/2020 Art. 58). The state operates the root and the qualified trust service.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are on the official aped.gov.gr pages, which place PKI operations in the Ministry of Digital Governance's Trust Services Department and name the General Secretariat as the Root CA, so a state body runs the trust anchor.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "el",
+     "published": "2020-09-23",
+     "publisher": "Lawspot (consolidated text of Law 4727/2020)",
+     "quote": "η Γενική Γραμματεία Πληροφοριακών Συστημάτων Δημόσιας Διοίκησης είναι αποκλειστικά υπεύθυνη για την ταυτοποίηση και την αυθεντικοποίηση των φυσικών ή νομικών προσώπων ή νομικών οντοτήτων για σκοπούς παροχής και χρήσης των ψηφιακών δημόσιων υπηρεσιών",
+     "quote_english": "The General Secretariat of Public Administration Information Systems is exclusively responsible for the identification and authentication of natural or legal persons or legal entities for the provision and use of digital public services.",
+     "title": "Law 4727/2020, Article 25 – Identification for the issuance of credentials",
+     "url": "https://www.lawspot.gr/nomothesia/n-4727-2020/arthro-25-nomos-4727-2020-taytopoiisi-gia-tin-ekdosi/"
+    }
+   ],
+   "id": "K2",
+   "research_note": "Greece's citizen eID (TaxisNet credentials used for gov.gr and the gov.gr Wallet) is run by the state General Secretariat (GSIS, Ministry of Digital Governance) under Law 4727/2020 Art. 25. Identity proofing goes through AADE/TaxisNet, KEP citizen centres or remote identification. Greece does not appear on the European Commission's overview of notified or pre-notified eIDAS eID schemes (checked Feb 2026 version), so no notified scheme exists. The operator is the state either way.",
+   "review": {
+    "original": "yes",
+    "reason": "The Law 4727/2020 Art. 25 quote is on the page and gives the state General Secretariat (GSIS) exclusive responsibility for identifying and authenticating people for digital public services, so the state runs the eID.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "GRNET (Εθνικό Δίκτυο Υποδομών Τεχνολογίας και Έρευνας, ΕΔΥΤΕ Α.Ε.)",
+     "quote": "The GRNET data center on Louros has the capacity to support equipment up to 200 KWatt.",
+     "title": "GRNET Datacenters",
+     "url": "https://grnet.gr/en/infrastructures/grnet-datacenters/"
+    },
+    {
+     "doc_type": "procurement",
+     "language": "el",
+     "published": "2022-09-06",
+     "publisher": "Κοινωνία της Πληροφορίας Μ.Α.Ε.",
+     "quote": "Σκοπός του έργου είναι η διασφάλιση της επιχειρησιακής συνέχειας της παραγωγικής λειτουργίας των πληροφοριακών συστημάτων που φιλοξενούνται ή θα φιλοξενηθούν στις υποδομές της Γ.Γ.Π.Σ.Δ.Δ.",
+     "quote_english": "The purpose of the project is to ensure business continuity of the production operation of the information systems hosted, or to be hosted, on the infrastructure of the General Secretariat of Public Administration Information Systems.",
+     "title": "Παροχή Νεφο-Υπολογιστικών Υποδομών και υπηρεσιών (Cloud Services)",
+     "url": "https://www.ktpae.gr/erga/parochi-nefo-ypologistikon-ypodomon-kai-ypiresion-cloud-services/"
+    }
+   ],
+   "id": "C1",
+   "research_note": "State-controlled bodies operate data centres that are running today. GRNET (EDYTE S.A., state-owned, supervised by the Ministry of Digital Governance) runs data centres at Louros, Knossos/Heraklion and Athens, which host the RE-Cloud defined in Law 4727 Art. 87. GSIS operates the G-Cloud data centre hosting ministry systems, and IDIKA runs H-Cloud. gsis.gr pages returned HTTP 403 to automated fetches, so GSIS is cited through KtP procurement pages.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are on the pages: GRNET (state-owned) describes several data centres in operation (Louros, Crete, Ministry of Education DC1-3, and others), and KtP refers to systems hosted on GSIS infrastructure today.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "el",
+     "published": "2020-01-12",
+     "publisher": "Κοινωνία της Πληροφορίας Μ.Α.Ε.",
+     "quote": "Σε αρκετούς Δημόσιους Φορείς έχει ολοκληρωθεί με επιτυχία η μετάπτωση των Πληροφοριακών τους Συστημάτων στο G-Cloud",
+     "quote_english": "In several public bodies the migration of their information systems to the G-Cloud has been successfully completed.",
+     "title": "Government Cloud / G-Cloud",
+     "url": "https://www.ktpae.gr/erga/government-cloud-g-cloud/"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "el",
+     "published": "2020-09-23",
+     "publisher": "Lawspot (consolidated text of Law 4727/2020)",
+     "quote": "Ως Κυβερνητικό Νέφος Δημόσιου Τομέα (GCloud) νοείται το σύνολο των ψηφιακών υποδομών που διαχειρίζεται η Γενική Γραμματεία Πληροφοριακών Συστημάτων Δημόσιας Διοίκησης",
+     "quote_english": "The Public Sector Government Cloud (G-Cloud) means the totality of digital infrastructures managed by the General Secretariat of Public Administration Information Systems.",
+     "title": "Law 4727/2020, Article 87 – Government clouds",
+     "url": "https://www.lawspot.gr/nomothesia/n-4727-2020/arthro-87-nomos-4727-2020-kyvernitika-nefi/"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The G-Cloud run by GSIS is in operation, and public bodies have migrated their systems to it. Law 4727/2020 made it mandatory for ministries' central systems from 1.1.2022, and the RE-Cloud (GRNET) and H-Cloud (IDIKA) serve education and health. A 2022 Recovery Fund project (EUR 95m) extended G-Cloud and H-Cloud with capacity from a public-cloud provider, so the platform is hybrid rather than purely on-premise.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are on the pages: KtP says several public bodies have completed migration to G-Cloud, and Art. 87 defines G-Cloud and makes it mandatory, so it is in operation (the 2022 public-cloud extension makes it hybrid, but it still serves government workloads).",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "EL"
+}

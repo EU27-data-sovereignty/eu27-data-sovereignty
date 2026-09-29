@@ -1,0 +1,251 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "pt",
+     "published": "2014-08-06",
+     "publisher": "Assembleia da República (copy hosted by SIRP)",
+     "quote": "Proibição de armazenamento de documentos e informações classificados fora dos locais ou equipamentos definidos para o efeito",
+     "quote_english": "Prohibition on storing classified documents and information outside the premises or equipment designated for that purpose.",
+     "title": "Lei Orgânica n.º 2/2014, de 6 de agosto – Regime do Segredo de Estado (Diário da República, 1.ª série, N.º 150)",
+     "url": "https://sirp.pt/wp-content/uploads/2025/09/LEI_DO_SEGREDO_DE_ESTADO.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pt",
+     "published": "2025-12-29",
+     "publisher": "Agência para a Reforma Tecnológica do Estado, I.P. (ARTE)",
+     "quote": "que permita a identificação dos dados sensíveis do Estado, definindo a obrigatoriedade de dados sensíveis permanecerem em infraestruturas nacionais com requisitos de criptografia, governança e acesso",
+     "quote_english": "[a national data classification model] that allows the State's sensitive data to be identified, making it mandatory for sensitive data to remain in national infrastructure with encryption, governance and access requirements.",
+     "title": "Estratégia Digital Nacional – Plano de Ação 2026-2027 (projeto 8.2)",
+     "url": "https://www.arte.gov.pt/wp-content/uploads/2026/05/Plano-de-Acao-2026-2027_EDN.pdf"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "pt",
+     "published": "2026-05-27",
+     "publisher": "Presidência do Conselho de Ministros (Diário da República, 1.ª série, N.º 102)",
+     "quote": "Mandatar a ARTE, I. P., e o Centro Nacional de Cibersegurança (CNCS) para, no prazo de 90 dias a contar da entrada em vigor da presente resolução, determinarem a metodologia de qualificação e os requisitos de soberania previstos na presente resolução",
+     "quote_english": "Mandate ARTE and the National Cybersecurity Centre (CNCS) to determine, within 90 days of this resolution entering into force, the qualification methodology and the sovereignty requirements provided for in this resolution.",
+     "title": "Resolução do Conselho de Ministros n.º 102/2026 – Aprova o Plano Nacional de Nuvem Soberana",
+     "url": "https://bo.digital.gov.pt/api/assets/etic/2fecc6f4-b424-41c6-b2a8-722b17b1914f/"
+    }
+   ],
+   "id": "L1",
+   "research_note": "Only classified information has a binding storage restriction. Lei Orgânica 2/2014, art. 3(7)(c), bars storing classified material outside designated premises or equipment. That is state-controlled custody, not an explicit 'national/EU jurisdiction' clause. No statute was found requiring general government data to stay under national or EU jurisdiction. RCM 41/2018 (technical security requirements for public administration) was read in full: it has no data-location rule beyond offsite backups. A general obligation is only planned. The EDN Action Plan 2026-2027 (project 8.2) foresees a classification model making sensitive data stay in national infrastructure. RCM 102/2026 gave ARTE and CNCS 90 days to define sovereignty requirements per qualification level. Those requirements were not found published. Decreto-Lei 125/2025 (NIS2) and Decreto-Lei 85/2026 could not be read because diariodarepublica.pt detail pages need JavaScript. Recheck if the PNNS sovereignty requirements are adopted.",
+   "review": {
+    "original": "partial",
+    "reason": "The quote appears verbatim in Lei Orgânica 2/2014, art. 3(7)(c), and binds only classified material to state-designated premises and equipment; the EDN and RCM 102/2026 quotes describe planned or pending requirements, so a classified-only partial holds, though the law does not say 'national/EU jurisdiction' explicitly.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "pt",
+     "published": "2014-08-06",
+     "publisher": "Assembleia da República (copy hosted by SIRP)",
+     "quote": "A classificação como segredo de Estado não prejudica a aplicação do quadro normativo respeitante à segurança das matérias classificadas, abreviadamente designado por SEGNAC, que comporta os graus de classificação «Muito secreto», «Secreto», «Confidencial» e «Reservado».",
+     "quote_english": "Classification as a State secret does not affect the rules on the security of classified matters, known as SEGNAC, which contain the classification levels 'Top Secret', 'Secret', 'Confidential' and 'Restricted'.",
+     "title": "Lei Orgânica n.º 2/2014, de 6 de agosto – Regime do Segredo de Estado, Anexo, artigo 1.º, n.º 5",
+     "url": "https://sirp.pt/wp-content/uploads/2025/09/LEI_DO_SEGREDO_DE_ESTADO.pdf"
+    }
+   ],
+   "id": "L2",
+   "research_note": "The four classification levels (Muito secreto, Secreto, Confidencial, Reservado) are set by the SEGNAC instructions, which are binding Council of Ministers resolutions (RCM 50/88, 37/89, 16/94, 5/90). They are also recognised in statute by Lei Orgânica 2/2014, art. 1(5). The quoted PDF is the Diário da República text of the Lei Orgânica, hosted on the official SIRP site. The Gabinete Nacional de Segurança site, which carries the SEGNAC texts, blocks automated access. A separate sovereignty qualification scale (neutro/corrente/crítico/estratégico) was introduced by RCM 102/2026 for cloud placement.",
+   "review": {
+    "original": "yes",
+    "reason": "Art. 1(5) of Lei Orgânica 2/2014 (verbatim on the page) names the SEGNAC levels Muito secreto/Secreto/Confidencial/Reservado, and the preamble cites the binding RCMs 50/88, 37/89, 16/94 and 5/90 that set them, so the levels are defined in binding law.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "pt",
+     "published": "2026-05-27",
+     "publisher": "Presidência do Conselho de Ministros (Diário da República, 1.ª série, N.º 102)",
+     "quote": "A cada nível de qualificação correspondem requisitos específicos de soberania, segurança e resiliência, os quais definem as condições técnicas e operacionais a cumprir pelas infraestruturas digitais e pelos serviços nuvem utilizados pelo Estado.",
+     "quote_english": "Each qualification level corresponds to specific sovereignty, security and resilience requirements, which set the technical and operational conditions to be met by the digital infrastructure and cloud services used by the State.",
+     "title": "Resolução do Conselho de Ministros n.º 102/2026 – Plano Nacional de Nuvem Soberana (Anexo, Dimensão 2)",
+     "url": "https://bo.digital.gov.pt/api/assets/etic/2fecc6f4-b424-41c6-b2a8-722b17b1914f/"
+    }
+   ],
+   "id": "L3",
+   "research_note": "No Portuguese cloud certification requiring immunity from non-EU law was found in force or adopted. RCM 102/2026 (May 2026) sets four qualification levels, with levels 2-3 tied to data, operational and software sovereignty. It gives ARTE and CNCS 90 days to define the matching sovereignty requirements, including audit and certification mechanisms, aligned with EUCS. No published certification scheme was found. There is also no authoritative statement that none exists. Sources checked: RCM 102/2026, the PNNS document, the EDN Action Plan 2026-2027, and the 2025 cloud governance impact report. CNCS and GNS sites could not be read because a bot wall blocks them. Recheck once the CNCS/ARTE requirements and technical reference are published on digital.gov.pt.",
+   "review": {
+    "original": "unknown",
+    "reason": "The RCM 102/2026 quote is present and only says sovereignty requirements will be attached to qualification levels; ARTE and CNCS still have to define them, so no certification requiring immunity from non-EU law is shown as adopted, and unknown is correct.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "pt",
+     "publisher": "SCEE – Sistema de Certificação Electrónica do Estado",
+     "quote": "A Entidade de Certificação Electrónica do Estado (ECEE), é a entidade certificadora de topo da cadeia de certificação do SCEE (ECRaizEstado), executora das políticas de certificados e diretrizes aprovadas pelo Conselho Gestor do SCEE.",
+     "quote_english": "The State Electronic Certification Entity (ECEE) is the top certification authority of the SCEE certification chain (State Root CA), executing the certificate policies and guidelines approved by the SCEE Management Board.",
+     "title": "Entidade Certificadora Raíz do Estado",
+     "url": "https://www.scee.gov.pt/entidade-certificadora-raiz/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pt",
+     "publisher": "SCEE – Sistema de Certificação Electrónica do Estado",
+     "quote": "A ECEE é dirigida, por inerência, pelo Secretário Geral da Secretaria Geral do Governo",
+     "quote_english": "The ECEE is headed, ex officio, by the Secretary-General of the Government General Secretariat.",
+     "title": "Entidade Certificadora Raíz do Estado",
+     "url": "https://www.scee.gov.pt/entidade-certificadora-raiz/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pt",
+     "publisher": "SCEE – Sistema de Certificação Electrónica do Estado",
+     "quote": "o Gabinete Nacional de Segurança (GNS) é a Entidade Supervisora do Sistema de Certificação Eletrónica do Estado, sendo a sua principal função a de supervisionar os prestadores qualificados de serviços de confiança estabelecidos no território nacional",
+     "quote_english": "The National Security Office (GNS) is the supervisory body of the State Electronic Certification System, its main function being to supervise qualified trust service providers established in national territory.",
+     "title": "Entidade Supervisora",
+     "url": "https://www.scee.gov.pt/autoridade-credenciadora/"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The government PKI root (ECRaizEstado) is run by the ECEE, headed ex officio by the Secretary-General of the Government General Secretariat, so it is state-operated. The legal basis is RCM 171/2005 and Decreto-Lei 116-A/2006. GNS, a state body, supervises trust services and manages the national trusted list. The EU trusted-list browser (JavaScript) and the GNS TSL page (bot wall) could not be read automatically. Private QTSPs such as Multicert also exist, but the state root is state-operated.",
+   "review": {
+    "original": "yes",
+    "reason": "The SCEE pages state verbatim that ECEE runs the state root ECRaizEstado and is headed ex officio by the Secretary-General of the Government General Secretariat, with GNS as supervisor, so the root is state-operated.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "pt",
+     "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote": "Este é o sítio oficial dos meios de identificação eletrónica, assinatura digital e autenticação segura do Estado.",
+     "quote_english": "This is the official site of the State's electronic identification, digital signature and secure authentication means.",
+     "title": "Autenticação.gov – Termos e Condições",
+     "url": "https://www.autenticacao.gov.pt/web/guest/termos-e-condicoes"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pt",
+     "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote": "Este sítio é gerido pela A Agência para a Reforma Tecnológica do Estado, I.P., adiante abreviadamente designada por",
+     "quote_english": "This site is managed by the Agency for the Technological Reform of the State, I.P. (ARTE).",
+     "title": "Autenticação.gov – Termos e Condições",
+     "url": "https://www.autenticacao.gov.pt/web/guest/termos-e-condicoes"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pt",
+     "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote": "A Chave Móvel Digital (CMD) é um meio de autenticação e assinatura digital certificado pelo Estado português.",
+     "quote_english": "The Digital Mobile Key (CMD) is a means of authentication and digital signature certified by the Portuguese State.",
+     "title": "A Chave Móvel Digital",
+     "url": "https://www.autenticacao.gov.pt/web/guest/a-chave-movel-digital"
+    }
+   ],
+   "id": "K2",
+   "research_note": "Chave Móvel Digital and the Cartão de Cidadão eID are run through Autenticação.gov. That platform is managed by ARTE, I.P., a public institute that took over from AMA, I.P. The CMD legal basis is Lei 37/2014 and Portaria 77/2018, as listed on the terms page. The eIDAS notified-schemes list was not checked; its page is JavaScript-only.",
+   "review": {
+    "original": "yes",
+    "reason": "The Autenticação.gov pages state verbatim that this is the State's official eID site, managed by the public institute ARTE, I.P., and that the Chave Móvel Digital is certified by the Portuguese State, which establishes state operation.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "pt",
+     "publisher": "IP Telecom – Serviços de Telecomunicações, S.A.",
+     "quote": "Com 3 Datacenters em território Nacional (Lisboa, Porto e Viseu), ligados em alto débito entre si, com fibras próprias, e geridos de forma única e redundante, é garantido ao cliente a permanência dos seus dados em Portugal",
+     "quote_english": "With 3 data centres in national territory (Lisbon, Porto and Viseu), linked by high-speed own fibre and managed as a single redundant system, customers are guaranteed that their data stays in Portugal.",
+     "title": "IPT Cloud & Datacenter",
+     "url": "https://www.iptelecom.pt/pt-pt/servicos/ipt-cloud-datacenter"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pt",
+     "publisher": "IP Telecom – Serviços de Telecomunicações, S.A.",
+     "quote": "A operar em Portugal desde o ano 2000, é detida a 100% pela Infraestruturas de Portugal, S.A.",
+     "quote_english": "Operating in Portugal since 2000, it is 100% owned by Infraestruturas de Portugal, S.A.",
+     "title": "Sobre Nós",
+     "url": "https://www.iptelecom.pt/pt-pt/empresa/sobre-nos"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pt",
+     "published": "2026-05",
+     "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote": "um modelo fragmentado, assente em milhares de centros de dados dispersos e sistemas legados difíceis de proteger e de atualizar",
+     "quote_english": "a fragmented model, based on thousands of dispersed data centres and legacy systems that are hard to protect and update",
+     "title": "Plano Nacional de Nuvem Soberana (Maio 2026)",
+     "url": "https://www.arte.gov.pt/wp-content/uploads/2026/05/Plano-Nacional-de-Nuvem-Soberana.pdf"
+    }
+   ],
+   "id": "C1",
+   "research_note": "IP Telecom runs three data centres now in operation (Lisbon, Porto, Viseu). It is wholly owned by Infraestruturas de Portugal, S.A., a state-owned company, so the operator is state-controlled. RCM 102/2026 names IP Telecom as the operator and funder of the Nuvem Soberana. The PNNS also says the public administration currently runs thousands of dispersed data centres of its own. Other bodies' own data centres (SPMS, Segurança Social II, AT, IGFEJ) could not be confirmed; their sites were unreachable or blocked.",
+   "review": {
+    "original": "yes",
+    "reason": "IP Telecom's pages confirm three operating data centres in Lisbon, Porto and Viseu and 100% ownership by Infraestruturas de Portugal (a state-owned company), and the PNNS quote describes the State's current fragmented estate of thousands of data centres; weakness: IP Telecom's DCs are sold commercially to businesses rather than being purely government facilities.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "pt",
+     "published": "2026-05",
+     "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote": "Desenvolvimento, pelo Estado, de infraestrutura nacional soberana de nuvem, incluindo capacidades de IA Soberana.",
+     "quote_english": "Development, by the State, of national sovereign cloud infrastructure, including sovereign AI capabilities.",
+     "title": "Plano Nacional de Nuvem Soberana (Maio 2026), Iniciativa 1.2",
+     "url": "https://www.arte.gov.pt/wp-content/uploads/2026/05/Plano-Nacional-de-Nuvem-Soberana.pdf"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "pt",
+     "published": "2026-05-27",
+     "publisher": "Presidência do Conselho de Ministros (Diário da República, 1.ª série, N.º 102)",
+     "quote": "O financiamento da implementação da Nuvem Soberana, incluindo o processo de migração inicial, é garantido pelo orçamento do Estado através da Agência para a Reforma Tecnológica do Estado, I. P.",
+     "quote_english": "Funding for implementing the Sovereign Cloud, including the initial migration process, is guaranteed by the State budget through ARTE, I.P.",
+     "title": "Resolução do Conselho de Ministros n.º 102/2026 – Aprova o Plano Nacional de Nuvem Soberana",
+     "url": "https://bo.digital.gov.pt/api/assets/etic/2fecc6f4-b424-41c6-b2a8-722b17b1914f/"
+    },
+    {
+     "doc_type": "press_release",
+     "language": "pt",
+     "published": "2026-05-29",
+     "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote": "A Agência para a Reforma Tecnológica do Estado (ARTE) é a entidade responsável pela coordenação de todo o processo de elaboração do plano e assumirá agora a supervisão da sua execução.",
+     "quote_english": "ARTE is the body responsible for coordinating the drafting of the plan and will now supervise its execution.",
+     "title": "ARTE coordena elaboração do Plano Nacional de Nuvem Soberana",
+     "url": "https://www.arte.gov.pt/arte-coordena-elaboracao-do-plano-nacional-de-nuvem-soberana/"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The Nuvem Soberana was approved by RCM 102/2026 (27 May 2026) and is being built. Initiative I.2, state development of sovereign cloud infrastructure, started in the first half of 2026. It is funded through ARTE and IP Telecom, but public bodies have until 30 June 2027 to qualify their processes. A September 2026 digital.gov.pt news item says a PNNS public consultation is still to open. No source says the sovereign cloud already serves government workloads, so this is scored partial (announced or being implemented). The 2025 cloud governance report mentions a 'Cloud privada da Administração Pública' as a survey option but does not name the operator.",
+   "review": {
+    "original": "partial",
+    "reason": "The PNNS (Initiative 1.2, S1 2026), RCM 102/2026 funding clause and ARTE press release are all present and describe a sovereign cloud approved and being developed, not one shown serving government workloads, so partial is the strictest supported value.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  }
+ ],
+ "iso": "PT"
+}

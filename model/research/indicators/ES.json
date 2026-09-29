@@ -1,0 +1,201 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "es",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "datos fiscales relacionados con tributos propios o cedidos y datos de los usuarios del sistema nacional de salud, así como los correspondientes tratamientos de datos personales, deberán ubicarse y prestarse dentro del territorio de la Unión Europea.",
+     "quote_english": "tax data on own or ceded taxes and data on national health system users, and the corresponding personal data processing, must be located and provided within the territory of the European Union.",
+     "title": "Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público (art. 46 bis, texto consolidado)",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10566"
+    }
+   ],
+   "id": "L1",
+   "research_note": "Art. 46 bis of Ley 40/2015 (inserted by Real Decreto-ley 14/2019) requires that the systems for the electoral census, municipal population registers and other population registers, tax data, and national health system user data be located and operated inside the EU. Transfers to third countries are barred unless covered by an adequacy decision. The rule covers named categories of data, not government data in general, so the value is partial.",
+   "review": {
+    "original": "partial",
+    "reason": "Art. 46 bis of Ley 40/2015 is on the BOE page word for word. It requires EU location only for named categories (census, population registers, tax and health-system user data), so partial is correct.",
+    "reviewed": "yes"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "es",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Las «materias clasificadas» serán calificadas en las categorías de secreto y reservado en atención al grado de protección que requieran.",
+     "quote_english": "'Classified matters' shall be graded in the categories of secret and reserved according to the degree of protection they require.",
+     "title": "Ley 9/1968, de 5 de abril, sobre secretos oficiales (texto consolidado)",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1968-444"
+    }
+   ],
+   "id": "L2",
+   "research_note": "The Official Secrets Act (Ley 9/1968, art. 3) sets two classification levels, secreto and reservado. The consolidated BOE text shows no repeal notice; its last update dates from 1978. A replacement classified-information law has been proposed, but its status could not be checked because the web-search budget was used up.",
+   "review": {
+    "original": "yes",
+    "reason": "Art. 3 of Ley 9/1968 is on the BOE consolidated page word for word and sets the statutory levels secreto and reservado. The page shows no repeal notice and a last update of 11/10/1978.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "es",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Cuando se utilicen servicios en la nube suministrados por terceros, estos deberán estar certificados bajo una metodología de certificación reconocida por el Organismo de Certificación del Esquema Nacional de Evaluación y Certificación de Seguridad de las Tecnologías de la Información.",
+     "quote_english": "When third-party cloud services are used, they must be certified under a certification methodology recognised by the Certification Body of the National IT Security Evaluation and Certification Scheme.",
+     "title": "Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad (op.nub.1)",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "es",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "deberán ser conformes con el ENS o cumplir con las medidas desarrolladas en una guía CCN-STIC que incluirá, entre otros, requisitos relativos a:",
+     "quote_english": "must conform to the ENS or meet the measures set out in a CCN-STIC guide that will include, among others, requirements relating to: (the list includes data jurisdiction)",
+     "title": "Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad (op.nub.1)",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+    }
+   ],
+   "id": "L3",
+   "research_note": "Spain's National Security Framework (ENS, RD 311/2022, measure op.nub.1) requires certified third-party cloud services for MEDIA and ALTA category systems. It also refers to a CCN-STIC guide that includes 'jurisdicción de los datos' (data jurisdiction) requirements. No text found makes immunity from non-EU law a requirement, as SecNumCloud does, and no authoritative source says such a scheme is absent. The value is therefore unknown, not no. The web-search budget was used up, so CCN guidance (CCN-STIC 823, CPSTIC) was not checked.",
+   "review": {
+    "original": "unknown",
+    "reason": "Both op.nub.1 quotes are in RD 311/2022 (op.nub.1.2 lists 'd) Jurisdicción de los datos'; op.nub.1.r1.1 requires certification), but neither requires immunity from non-EU law, so unknown is the right value.",
+    "reviewed": "yes"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "es",
+     "publisher": "Ministerio para la Transformación Digital y de la Función Pública",
+     "quote": "Fábrica Nacional de Moneda y Timbre - Real Casa de la Moneda, Entidad Pública Empresarial, Medio Propio (FNMT-RCM)",
+     "quote_english": "National Mint and Stamp Factory - Royal Mint, Public Business Entity, In-house Provider (FNMT-RCM)",
+     "title": "Spanish Trusted Service List (TSL)",
+     "url": "https://tsl.digital.gob.es/TSL.xml"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "es",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda es una entidad pública empresarial de las previstas en el artículo 43.1.b) de la Ley 6/1997",
+     "quote_english": "The FNMT-RCM is a public business entity of the kind provided for in article 43.1.b) of Law 6/1997",
+     "title": "Real Decreto 1114/1999, Estatuto de la entidad pública empresarial Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda",
+     "url": "https://www.boe.es/eli/es/rd/1999/06/25/1114/con"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "es",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "se faculta a la Fábrica Nacional de Moneda y Timbre (FNMT) para la prestación de los servicios técnicos y administrativos necesarios para garantizar la seguridad, validez y eficacia de la emisión y recepción de comunicaciones y documentos",
+     "quote_english": "the FNMT is empowered to provide the technical and administrative services needed to guarantee the security, validity and effectiveness of issuing and receiving communications and documents",
+     "title": "Ley 66/1997, art. 81",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1997-28053"
+    }
+   ],
+   "id": "K1",
+   "research_note": "FNMT-RCM, a state public business entity attached to the Treasury ministry, is on Spain's national trusted list, which the EU list of trusted lists points to at tsl.digital.gob.es. Ley 66/1997 art. 81 makes it the certification provider for the central state administration. The Dirección General de la Policía (DNIe) is also a listed trust service provider.",
+   "review": {
+    "original": "yes",
+    "reason": "FNMT-RCM appears in tsl.digital.gob.es/TSL.xml with the quoted name. RD 1114/1999 and Ley 66/1997 art. 81 contain the quoted text, confirming a state public business entity acting as trust service provider.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "es",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Documento Nacional de Identidad es un documento personal e intransferible emitido por el Ministerio del Interior, a través de la Dirección General de la Policía",
+     "quote_english": "The National Identity Document is a personal and non-transferable document issued by the Ministry of the Interior, through the Directorate-General of the Police",
+     "title": "Real Decreto 255/2025, de 1 de abril, por el que se regula el Documento Nacional de Identidad",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-6601"
+    },
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "published": "2024",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "The Spanish electronic National Identity Document (eDNI) was notified in November 2018 as a high-level of assurance eID provided by the Ministry of the Interior.",
+     "quote_english": "(English original)",
+     "title": "Digital Public Administration Factsheet 2024 – Spain, Supporting document",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024_Supporting%20document_Spain_vFINAL.pdf"
+    }
+   ],
+   "id": "K2",
+   "research_note": "The DNIe, notified under eIDAS at high assurance level, is issued by the Ministry of the Interior through the Police directorate (RD 255/2025, which replaced RD 1553/2005). Cl@ve, the shared login system, is run by the central administration; the NIFO factsheet says it was approved by the Council of Ministers in 2014.",
+   "review": {
+    "original": "yes",
+    "reason": "RD 255/2025 contains the quote that the DNI is issued by the Ministry of the Interior through the Dirección General de la Policía. The NIFO 2024 PDF confirms the eDNI was notified in 2018 as a high-assurance eID provided by the Ministry of the Interior.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "es",
+     "published": "2024-11-06",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El diseño, provisión, explotación y evolución de los centros de proceso de datos de referencia, gestionados por la Agencia, para la prestación de servicios comunes.",
+     "quote_english": "The design, provision, operation and evolution of the reference data processing centres, managed by the Agency, for providing common services.",
+     "title": "Real Decreto 1118/2024, de 5 de noviembre, por el que se aprueba el Estatuto de la Agencia Estatal de Administración Digital",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-22929"
+    },
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "published": "2024",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "consolidating data processing centres by merging internal centres (private cloud) and, if needed, external providers (public cloud). This strategy was approved in 2023.",
+     "quote_english": "(English original)",
+     "title": "Digital Public Administration Factsheet 2024 – Spain, Supporting document",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024_Supporting%20document_Spain_vFINAL.pdf"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The statute of the state agency Agencia Estatal de Administración Digital gives it the operation of the government's reference data processing centres. The 2023 AGE cloud strategy consolidates existing internal centres. The statute's additional provisions also mention separate data centres run by the National Intelligence Centre (CNI), the Tax Agency and other bodies. The agency's own portal (administracionelectronica.gob.es) rejected automated requests, so it could not be used as a source.",
+   "review": {
+    "original": "yes",
+    "reason": "RD 1118/2024 art. 17.a.5º is quoted exactly and assigns the Agency the operation of reference data processing centres 'gestionados por la Agencia'. The NIFO PDF confirms the internal centres (private cloud) are being consolidated, which shows they exist and are run by the state.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "es",
+     "published": "2024-11-06",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La operación de la capa de infraestructuras que soporta las distintas plataformas de la Agencia, entre ellas la solución de nube híbrida propia de la Administración, conocida como «NubeSARA».",
+     "quote_english": "The operation of the infrastructure layer supporting the Agency's various platforms, including the Administration's own hybrid cloud solution, known as 'NubeSARA'.",
+     "title": "Real Decreto 1118/2024, de 5 de noviembre, por el que se aprueba el Estatuto de la Agencia Estatal de Administración Digital",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-22929"
+    }
+   ],
+   "id": "C2",
+   "research_note": "NubeSARA, the government's own hybrid cloud, is operated by the Agencia Estatal de Administración Digital, and its statute assigns it the operation of this cloud. The only source is the statute; the NubeSARA service page on administracionelectronica.gob.es could not be fetched (request rejected), so no independent page confirms current workloads.",
+   "review": {
+    "original": "yes",
+    "reason": "RD 1118/2024 art. 17.a.6º is quoted exactly and assigns the operation of the Administration's own hybrid cloud 'NubeSARA', which it refers to as an existing platform the Agency operates. This is the only source; no independent page confirms current workloads.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "ES"
+}

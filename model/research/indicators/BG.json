@@ -1,0 +1,235 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "bg",
+     "publisher": "Народно събрание / Държавен вестник (consolidated text, Ciela Norma free zone)",
+     "quote": "Не се допуска създаване, обработване, съхраняване и пренасяне на класифицирана информация в КИС без наличието на издаден сертификат по чл. 14, т. 2.",
+     "quote_english": "Creating, processing, storing and transmitting classified information in a communication and information system is not permitted without a certificate issued under Art. 14(2) [by the State Commission on Information Security].",
+     "title": "Закон за защита на класифицираната информация (Classified Information Protection Act), Art. 91(2)",
+     "url": "https://www.ciela.net/svobodna-zona-normativi/view/2135448577/zakon-za-zashtita-na-klasifitsiranata-informatsiya"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "bg",
+     "publisher": "Народно събрание / Държавен вестник (consolidated text, Ciela Norma free zone)",
+     "quote": "Преди въвеждане в експлоатация за работа с класифицирана информация за всяка КИС се провежда процедура по акредитиране",
+     "quote_english": "Before any communication and information system is put into operation for classified information, it goes through an accreditation procedure.",
+     "title": "Закон за защита на класифицираната информация, Art. 91(1)",
+     "url": "https://www.ciela.net/svobodna-zona-normativi/view/2135448577/zakon-za-zashtita-na-klasifitsiranata-informatsiya"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "bg",
+     "publisher": "Народно събрание / Държавен вестник (consolidated text, Ciela Norma free zone)",
+     "quote": "Административните органи използват споделените ресурси на електронното управление съгласно стандарти и по ред, определени в наредбата по чл. 12, ал. 4.",
+     "quote_english": "Administrative bodies use the shared e-government resources according to standards and procedures set in the ordinance under Art. 12(4).",
+     "title": "Закон за електронното управление (E-Government Act), Art. 17(4)",
+     "url": "https://www.ciela.net/svobodna-zona-normativi/view/2135555445/zakon-za-elektronnoto-upravlenie"
+    }
+   ],
+   "id": "L1",
+   "research_note": "Binding national control exists only for classified information: the Classified Information Protection Act bars processing classified data in any system that lacks accreditation and a certificate from the national security authority (DKSI), with detailed rules in the ordinance on security conditions for classified information systems. For government data in general, the E-Government Act obliges administrative bodies to use the shared e-government resources. By the Act's own definition these include the state hybrid private cloud, built and run by the Ministry. However, neither the Act, the Ordinance on general requirements for information systems (NOIISREAU), the Cybersecurity Act nor the Ordinance on minimum network and information security requirements contains an explicit requirement to store data in Bulgaria or the EU, or under national or EU jurisdiction. I searched their full texts for 'територията', 'Европейския съюз', 'облак'/'облачн' and 'трета държава'. Scored partial, meaning the requirement covers classified data only. lex.bg was blocked by Cloudflare, so the consolidated texts were read on ciela.net.",
+   "review": {
+    "original": "partial",
+    "reason": "Both ZZKI Art. 91 quotes are on the ciela.net page: classified systems need DKSI accreditation and a certificate, which in effect puts classified data under national control. The E-Government Act quote only obliges bodies to use the shared e-government resources and sets no jurisdiction rule for government data in general, so partial (classified only) is the correct ceiling.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "bg",
+     "publisher": "Народно събрание / Държавен вестник (consolidated text, Ciela Norma free zone)",
+     "quote": "Нивата на класификация за сигурност на информацията и техният гриф за сигурност са",
+     "quote_english": "The security classification levels of information and their security markings are: [1. Top Secret; 2. Secret; 3. Confidential; 4. For Official Use].",
+     "title": "Закон за защита на класифицираната информация, Art. 28(1)",
+     "url": "https://www.ciela.net/svobodna-zona-normativi/view/2135448577/zakon-za-zashtita-na-klasifitsiranata-informatsiya"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Art. 28(1) of the Classified Information Protection Act (ЗЗКИ) sets four levels in statute: 'Строго секретно', 'Секретно', 'Поверително' and 'За служебно ползване'. Art. 28(2) defines each level by the harm unauthorised access would cause. The quote stops before the level names because they are wrapped in quotation marks, which could fail exact matching.",
+   "review": {
+    "original": "yes",
+    "reason": "On the page, ZZKI Art. 28(1) continues straight into the four statutory levels ('Строго секретно', 'Секретно', 'Поверително', 'За служебно ползване'), so the classification scheme is set in statute.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "I found no Bulgarian certification that requires immunity from non-EU law, like SecNumCloud, and no source saying none exists. I searched the full texts of the Cybersecurity Act (Закон за киберсигурност), the Ordinance on minimum network and information security requirements, NOIISREAU and the E-Government Act. The only cloud-related content is the NIS2 provider definitions and a reference to the ISO/IEC 27017/27018 standards. Web search was unavailable in this session (quota exhausted), so a sources-stated 'no' could not be looked for more widely. Next steps: the Ministry of Innovation and Digital Transformation and the DKSI sites, and parliamentary answers.",
+   "review": {
+    "original": "unknown",
+    "reason": "There are no claims either way, so unknown is the only value the evidence supports.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "language": "bg",
+     "published": "2025",
+     "publisher": "Информационно обслужване АД",
+     "quote": "Към датата на съставяне на отчета основен акционер е държавата, чрез Министъра на електронното управление, с 2 286 897 броя акции, или 99.49% от капитала",
+     "quote_english": "At the date of the report the principal shareholder is the state, through the Minister of e-Government, with 2,286,897 shares, or 99.49% of the capital.",
+     "title": "Информационно обслужване АД – Доклад за дейността 2024 (Annual activity report 2024)",
+     "url": "https://www.is-bg.net/upload/4944/IS_2024_%D0%94%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%20%D0%B7%D0%B0%20%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D1%82%D0%B0.pdf"
+    },
+    {
+     "doc_type": "annual_report",
+     "language": "bg",
+     "published": "2025",
+     "publisher": "Информационно обслужване АД",
+     "quote": "Национална инфраструктура за издаване и управление на удостоверения за електронен подпис с търговското име StampIT",
+     "quote_english": "National infrastructure for issuing and managing electronic signature certificates under the trade name StampIT.",
+     "title": "Информационно обслужване АД – Доклад за дейността 2024",
+     "url": "https://www.is-bg.net/upload/4944/IS_2024_%D0%94%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%20%D0%B7%D0%B0%20%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D1%82%D0%B0.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "bg",
+     "publisher": "Комисия за регулиране на съобщенията (CRC)",
+     "quote": "Вписаните от КРС в националния доверителен списък доставчици на квалифицирани удостоверителни услуги са: „Борика“ АД , „Евротръст Технолъджис“ АД , „Инфонотари“ ЕАД, „Информационно обслужване“ АД и „Идокс България“ ЕООД",
+     "quote_english": "The qualified trust service providers entered by the CRC in the national trusted list are: Borica AD, Evrotrust Technologies AD, InfoNotary EAD, Information Services AD and Idox Bulgaria EOOD.",
+     "title": "Електронни удостоверителни услуги",
+     "url": "https://crc.bg/bg/rubriki/560/elektronni-udostoveritelni-uslugi"
+    }
+   ],
+   "id": "K1",
+   "research_note": "Information Services AD (Информационно обслужване) is on the national trusted list kept by the Communications Regulation Commission. It runs the StampIT qualified trust service, and the state holds 99.49% of it through the minister for e-government. The E-Government Act (§45 of its transitional provisions) also names it the state's system integrator. Four other qualified trust service providers on the list are private EU companies (Borica, Evrotrust, InfoNotary, Idox). Those four are not the state PKI anchor. The MoI electronic seal for eID certificates is also state-run. The EU Trusted List browser (eidas.ec.europa.eu) is rendered by JavaScript, so it was not used as a quotable source.",
+   "review": {
+    "original": "yes",
+    "reason": "The IS AD 2024 report PDF has both quotes: the state holds 99.49% of the company, and it runs the StampIT national e-signature infrastructure. The CRC page lists IS AD among the qualified trust service providers, so a state-controlled body operates a qualified trust service.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "bg",
+     "publisher": "Народно събрание / Държавен вестник (consolidated text, Ciela Norma free zone)",
+     "quote": "Министърът на вътрешните работи издава удостоверение за електронна идентичност по писмено заявление на лице по чл. 6.",
+     "quote_english": "The Minister of Interior issues an electronic identity certificate upon written application by a person under Art. 6.",
+     "title": "Закон за електронната идентификация (Electronic Identification Act), Art. 20(1)",
+     "url": "https://www.ciela.net/svobodna-zona-normativi/view/2136822116/zakon-za-elektronnata-identifikatsiya"
+    },
+    {
+     "doc_type": "secondary",
+     "language": "bg",
+     "published": "2026-09-19",
+     "publisher": "Сега (newspaper)",
+     "quote": "Удостоверенията за електронна идентичност е предвидено да се издават и записват върху електронния носител на информация в документите за самоличност, повече известен като чипа в личните карти. Този чип имат новите лични карти. Към момента обаче МВР не ги е задействала.",
+     "quote_english": "Electronic identity certificates are meant to be issued and written onto the electronic chip in identity documents. The new ID cards have this chip. So far, however, the Ministry of Interior has not activated them.",
+     "title": "Отпада едно от безумията за личните карти с чип",
+     "url": "https://www.segabg.com/hot/category-consult/otpada-edno-bezumiyata-za-lichnite-karti-chip"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "bg",
+     "publisher": "Комисия за регулиране на съобщенията (CRC)",
+     "quote": "Вписаните от КРС в националния доверителен списък доставчици на квалифицирани удостоверителни услуги са: „Борика“ АД , „Евротръст Технолъджис“ АД , „Инфонотари“ ЕАД, „Информационно обслужване“ АД и „Идокс България“ ЕООД",
+     "quote_english": "The qualified trust service providers entered by the CRC in the national trusted list are: Borica AD, Evrotrust Technologies AD, InfoNotary EAD, Information Services AD and Idox Bulgaria EOOD.",
+     "title": "Електронни удостоверителни услуги",
+     "url": "https://crc.bg/bg/rubriki/560/elektronni-udostoveritelni-uslugi"
+    }
+   ],
+   "id": "K2",
+   "research_note": "By law the national eID scheme belongs to the state. Under the Electronic Identification Act the Ministry of Interior issues eID certificates and keeps the registers, and they are to be written onto the chip of the new ID cards. As of September 2026, however, a press report says the Ministry of Interior has not yet activated the chip eID. So the state scheme exists in law but is not yet operating. Remote identification in practice relies on private EU qualified trust service providers supervised by the CRC, such as Evrotrust and Borica. Scored partial for that reason. It would become yes once the chip eID goes live. I could not confirm from a quotable source whether a Bulgarian scheme has been notified under eIDAS, because the EC notified-schemes page is dynamic.",
+   "review": {
+    "original": "partial",
+    "reason": "All three quotes are on their pages: the eID Act makes the Ministry of Interior the issuer, and Sega says the Ministry has not activated the chip eID. The state scheme is therefore not yet operating, and partial is a defensible conservative score. One caveat: the CRC list shows qualified trust service providers, not a private eID scheme, and the Sega page's visible dates are from 2024 rather than the claimed 2026-09-19, so the 'not yet active' status should be rechecked.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "bg",
+     "publisher": "Информационно обслужване АД",
+     "quote": "Сред клиентите на Информационно обслужване за ползване на „Инфраструктура като услуга“ са Национална агенция по приходите, Национална здравноосигурителна каса, Агенция по вписванията",
+     "quote_english": "Among Information Services' clients for Infrastructure as a Service are the National Revenue Agency, the National Health Insurance Fund and the Registry Agency.",
+     "title": "Инфраструктура",
+     "url": "https://www.is-bg.net/bg/solutions/infrastructure"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "bg",
+     "publisher": "Информационно обслужване АД",
+     "quote": "Информационно обслужване предоставя на своите клиенти възможност да разположат свое хардуерно оборудване в сървърните помещения на компанията чрез колокация на оборудването в сигурен център за данни.",
+     "quote_english": "Information Services lets its clients place their own hardware in the company's server rooms through colocation in a secure data centre.",
+     "title": "Инфраструктура",
+     "url": "https://www.is-bg.net/bg/solutions/infrastructure"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "bg",
+     "publisher": "Народно събрание / Държавен вестник (consolidated text, Ciela Norma free zone)",
+     "quote": "е централизирана държавна информационна инфраструктура (сървъри, средства за съхранение на данни, комуникационно оборудване, съпътстващо оборудване и системен софтуер), разпределена в няколко локации в помещения, отговарящи на критериите за изграждане на защитени информационни центрове",
+     "quote_english": "[The State Hybrid Private Cloud] is centralised state information infrastructure (servers, storage, communications equipment, ancillary equipment and system software) distributed across several locations in premises meeting the criteria for secured information centres.",
+     "title": "Закон за електронното управление, Supplementary Provisions §1 item 26",
+     "url": "https://www.ciela.net/svobodna-zona-normativi/view/2135555445/zakon-za-elektronnoto-upravlenie"
+    }
+   ],
+   "id": "C1",
+   "research_note": "Information Services AD is 99.49% owned by the state (see K1). It operates data centres in production that host core registers for the National Revenue Agency, the National Health Insurance Fund, the Registry Agency and others. Its transparency page reports 340 physical servers and 2,902 VMs for June 2026. The state hybrid private cloud (ДХЧО) is defined in statute as state infrastructure housed in secured information centres. According to eufunds.bg it runs on four state data centres: ЦДЕУ1, ЦДЕУ2, a recovery centre and the e-government control centre.",
+   "review": {
+    "original": "yes",
+    "reason": "The is-bg.net infrastructure page has both quotes: IS AD sells IaaS to the National Revenue Agency, the National Health Insurance Fund and the Registry Agency, and offers colocation in its secure data centre. Combined with 99.49% state ownership and the statutory definition of the state hybrid private cloud (ДХЧО), this shows state-controlled data centres operating today.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "bg",
+     "publisher": "Министерски съвет / Държавен вестник (consolidated text, Ciela Norma free zone)",
+     "quote": "Държавният хибриден частен облак (ДХЧО) предоставя услугите си в домейн egov.bg.",
+     "quote_english": "The State Hybrid Private Cloud (DHChO) provides its services in the egov.bg domain.",
+     "title": "Наредба за общите изисквания към информационните системи, регистрите и електронните административни услуги, Art. (as amended DV No. 80/2024)",
+     "url": "https://www.ciela.net/svobodna-zona-normativi/view/2136995819/naredba-za-obshtite-iziskvaniya-kam-informatsionnite-sistemi-registrite-i-elektronnite-administrativni-uslugi"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "bg",
+     "publisher": "Министерски съвет / Държавен вестник (consolidated text, Ciela Norma free zone)",
+     "quote": "Администрациите, които използват ресурси от ДХЧО, могат да публикуват в egov.bg системи за общ достъп като поддомейни",
+     "quote_english": "Administrations that use DHChO resources may publish public-access systems in egov.bg as subdomains.",
+     "title": "Наредба за общите изисквания към информационните системи, регистрите и електронните административни услуги",
+     "url": "https://www.ciela.net/svobodna-zona-normativi/view/2136995819/naredba-za-obshtite-iziskvaniya-kam-informatsionnite-sistemi-registrite-i-elektronnite-administrativni-uslugi"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "bg",
+     "publisher": "eufunds.bg (Министерство на финансите)",
+     "quote": "Успоредно с процеса на надграждане на ДХЧО, върви процес на присъединяване на вече изградена техническа инфраструктура на други администрации към облака.",
+     "quote_english": "In parallel with upgrading the DHChO, the technical infrastructure already built by other administrations is being joined to the cloud.",
+     "title": "Надграждане и развитие на Държавния хибриден частен облак, финансиран по ОП „Добро управление“",
+     "url": "https://www.eufunds.bg/bg/opgg/node/9490"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The State Hybrid Private Cloud (ДХЧО) is defined in the E-Government Act. It is built and run by the Ministry of Innovation and Digital Transformation, formerly the Ministry of e-Government. A 2024 amendment to NOIISREAU describes it as serving administrations from the egov.bg domain, and administrations already use its resources. The eufunds.bg page describes its four data centres and the migration of other administrations' infrastructure onto it. Caveat: eufunds.bg serves an incomplete TLS certificate chain. Curl opens it, but strict clients such as Python urllib and WebFetch fail, so that claim may not pass the automated check. The two NOIISREAU claims stand on their own. egov.government.bg and e-gov.bg could not be reached from this environment.",
+   "review": {
+    "original": "yes",
+    "reason": "Both NOIISREAU quotes are on the ciela.net page and describe the ДХЧО serving administrations from egov.bg. The eufunds.bg page, just before the quoted sentence, lists services the ДХЧО 'currently provides' (colocation, virtual servers, virtual private cloud, backup), which shows a cloud in operation rather than one that is only announced.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "BG"
+}

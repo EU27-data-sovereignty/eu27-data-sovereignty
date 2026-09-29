@@ -1,0 +1,221 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "language": "et",
+     "published": "2018-05-14",
+     "publisher": "Riigikontroll (National Audit Office of Estonia)",
+     "quote": "Kriitiliste andmekogude kontseptsiooni elluviimiseks ei ole õiguslikke reegleid kehtestatud",
+     "quote_english": "No legal rules have been established for implementing the critical databases concept.",
+     "title": "Eesti riigi kriitiliste andmekogude turvalisuse ja säilitamise tagamine",
+     "url": "https://www.riigikontroll.ee/sites/default/files/arhivaalid/2462/RKTR_2462_2-1.4_2213_001-2.pdf"
+    },
+    {
+     "doc_type": "audit_report",
+     "language": "et",
+     "published": "2018-05-14",
+     "publisher": "Riigikontroll (National Audit Office of Estonia)",
+     "quote": "Samuti on olemas riigisektoris avalike pilveteenuste turvaliseks kasutamiseks eraldi juhend, kus on kirjeldatud pilveteenuste võimalusi, lähtudes andmekogu turbeastmest ja turvaklassist.",
+     "quote_english": "There is also a separate guide for the secure use of public cloud services in the public sector, describing cloud options according to the database's security level and security class.",
+     "title": "Eesti riigi kriitiliste andmekogude turvalisuse ja säilitamise tagamine",
+     "url": "https://www.riigikontroll.ee/sites/default/files/arhivaalid/2462/RKTR_2462_2-1.4_2213_001-2.pdf"
+    }
+   ],
+   "id": "L1",
+   "research_note": "No statute or binding regulation requiring government data to be stored and processed under Estonian or EU jurisdiction was found and verified. The consolidated legislation portal (riigiteataja.ee), ria.ee, rit.ee, mkm.ee and valitsus.ee all returned HTTP 403 (Cloudflare) to scripted fetches, so the Public Information Act, the Cybersecurity Act, the E-ITS regulation and the State Secrets Act text could not be checked directly. The 2018 National Audit Office report says data location for public-sector cloud use was covered by a separate guide, not law, and that no legal rules had been set for the critical-databases concept. For classified data, the NSA FAQ (teabeamet.ee/nsa/kkk.html) says CONFIDENTIAL-and-above information may be processed only in an approved security area. That is a physical-security rule, not an explicit jurisdiction requirement, so it was not scored as partial. To resolve this, re-check riigiteataja.ee from a browser (State Secrets Act and regulation no. 262, Public Information Act §43 onwards).",
+   "review": {
+    "original": "unknown",
+    "reason": "Both quotes are on page in the 2018 audit (paras 39-40): no legal rules for critical databases and cloud data location left to a guide, so no jurisdiction statute is shown and unknown stands.",
+    "reviewed": "yes"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "et",
+     "publisher": "Välisluureamet – Estonian National Security Authority",
+     "quote": "Seadus sätestab riigisaladuse mõiste, riigisaladuseks oleva teabe tasemed ja liigid, riigisaladusele juurdepääsu, riigisaladuse ja salastatud teabekandjate töötlemise korra alused, samuti salastatud välisteabe kaitse üldalused.",
+     "quote_english": "The Act (State Secrets and Classified Information of Foreign States Act) establishes the concept of state secret, the levels and types of information constituting state secrets, access to state secrets, the basis for processing state secrets and classified media, and the general principles for protecting classified foreign information.",
+     "title": "Korduma kippuvad küsimused (Riigi julgeoleku volitatud esindaja)",
+     "url": "https://www.teabeamet.ee/nsa/kkk.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "et",
+     "publisher": "Välisluureamet – Estonian National Security Authority",
+     "quote": "salastatud teabe tasemete vastavus Eesti seadustega kehtestatud tasemetele",
+     "quote_english": "correspondence of classified information levels to the levels established by Estonian law",
+     "title": "Võrdlustabelid",
+     "url": "https://www.teabeamet.ee/nsa/tabelid.html"
+    }
+   ],
+   "id": "L2",
+   "research_note": "The classification levels PIIRATUD, KONFIDENTSIAALNE, SALAJANE and TÄIESTI SALAJANE are set out in the State Secrets and Classified Information of Foreign States Act (Riigisaladuse ja salastatud välisteabe seadus). Their sub-types are set out in Government Regulation no. 262 of 20 December 2007. The National Security Authority (Välisluureamet) states this on its site. The statute itself on riigiteataja.ee could not be fetched (HTTP 403).",
+   "review": {
+    "original": "yes",
+    "reason": "The NSA FAQ says the State Secrets and Classified Information of Foreign States Act sets the classification levels, and the tabelid page lists the PIIRATUD to TÄIESTI SALAJANE levels 'kehtestatud Eesti seadustega' (set by Estonian law), which meets the statutory definition.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "No Estonian cloud certification requiring immunity from non-EU law (SecNumCloud-type) was found. The Riigipilv site (riigipilv.ee) describes security only in terms of the national standards ISKE/E-ITS (audited to ISKE level H), with no immunity or sovereignty certification. RIA (ria.ee), the legislation portal and the ministry sites returned HTTP 403, and web search was unavailable in this run, so no authoritative statement that such a scheme does not exist could be found. The value is therefore unknown, not no.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were cited and nothing establishes yes or no, so unknown is the right value.",
+    "reviewed": "yes"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "et",
+     "publisher": "Zetes Estonia",
+     "quote": "Zetes Estonia väljastab kvalifitseeritud digitaalseid sertifikaate ning haldab EEGovCA2025 sertifikaadiahelat Eesti riiklike ID1 dokumentide jaoks.",
+     "quote_english": "Zetes Estonia issues qualified digital certificates and operates the EEGovCA2025 certificate chain for Estonian government ID1 documents.",
+     "title": "About – Trust Service Provider by Zetes Estonia",
+     "url": "https://repository.eidpki.ee/about"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2026-07-17",
+     "publisher": "Politsei- ja Piirivalveamet (Police and Border Guard Board)",
+     "quote": "The contract partner of the PBGB shall fulfil the role of the CA.",
+     "quote_english": "The contract partner of the Police and Border Guard Board shall fulfil the role of the Certification Authority.",
+     "title": "Certificate Policy for the root Certification Authority of the Republic of Estonia (Root CP) v2.0",
+     "url": "https://repository.eidpki.ee/static/documents/root-cp_v-2.0_04.06.2026_allkirjastatud.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2026-07-17",
+     "publisher": "Politsei- ja Piirivalveamet (Police and Border Guard Board)",
+     "quote": "The root CA is the national trust anchor for managing and servicing the lifecycle of intermediate CA’s certificates in order to provide certification and qualified trust services for the Republic of Estonia.",
+     "quote_english": "The root CA is the national trust anchor for managing and servicing the lifecycle of intermediate CA certificates in order to provide certification and qualified trust services for the Republic of Estonia.",
+     "title": "Certificate Policy for the root Certification Authority of the Republic of Estonia (Root CP) v2.0",
+     "url": "https://repository.eidpki.ee/static/documents/root-cp_v-2.0_04.06.2026_allkirjastatud.pdf"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The state root (EEGovCA2025) belongs to the Police and Border Guard Board, which owns the policy. It is operated by a private contractor, Zetes Estonia, a subsidiary of Belgian Zetes SA, which the same page says Panasonic acquired in 2016. The previous state chain, EE-GovCA2018, was run by SK ID Solutions AS (founded by Swedbank, SEB and Telia Eesti), which no longer issues certificates under it. This is a private EU provider under a state contract, so the value is partial. The ultimate non-EU parent (Panasonic) is worth flagging. The EU Trusted List browser and the national TSL (sr.riik.ee) could not be fetched as static pages (single-page app, or HTTP 403).",
+   "review": {
+    "original": "partial",
+    "reason": "The Root CP says 'the contract partner of the PBGB shall fulfil the role of the CA' and the about page names Zetes Estonia (a subsidiary of Zetes SA) as running EEGovCA2025, so the root is run by a private EU provider under state contract, which is partial.",
+    "reviewed": "yes"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2026-07-17",
+     "publisher": "Politsei- ja Piirivalveamet (Police and Border Guard Board)",
+     "quote": "The Police and Border Guard Board (PBGB) or the Ministry of Foreign Affairs (MFA) is the issuing authority of Documents in the Republic of Estonia.",
+     "quote_english": "The Police and Border Guard Board or the Ministry of Foreign Affairs is the issuing authority of the (ID-1 identity) documents in the Republic of Estonia.",
+     "title": "Certificate Policy for ID-1 format identity documents of the Republic of Estonia (eID CP) v2.0",
+     "url": "https://repository.eidpki.ee/static/documents/eid-cp-v-2.0_04.06.2026_allkirjastatud.pdf"
+    }
+   ],
+   "id": "K2",
+   "research_note": "The notified Estonian eID scheme covers the ID card, residence permit card, Digi-ID, e-Residency Digi-ID, Mobile-ID and diplomatic ID card. It was notified at assurance level High in 2018 (EC list of notified eID schemes). Its core credential, the ID card family, is issued by state bodies: the Police and Border Guard Board and the Ministry of Foreign Affairs. The certificates on these cards come from contractor Zetes Estonia. Mobile-ID and Smart-ID are run by the private SK ID Solutions AS, which is not state-controlled. The value is yes because the scheme and its main credential are state-issued and state-owned; the private operation of Mobile-ID and of the certification service is a caveat. The operator site id.ee and ria.ee returned HTTP 403.",
+   "review": {
+    "original": "yes",
+    "reason": "The quote shows only that PBGB and MFA issue the documents; the same eID CP gives the CA role to 'the contract partner of the PBGB' (Zetes) and RAs can be external contractors, and Mobile-ID/Smart-ID are private, so the scheme is not operated by the state alone and should be downgraded to partial.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "et",
+     "publisher": "Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv",
+     "quote": "Riigipilve riistvararessursid koosnevad erinevate parameetritega tehnilistest lahendustest erinevates asukohtades Eesti Vabariigi piirides ja üks asukoht väljaspool Eestit.",
+     "quote_english": "The Government Cloud's hardware resources consist of technical solutions with different parameters in different locations within the borders of the Republic of Estonia and one location outside Estonia.",
+     "title": "Riigipilve tehniline lahendus",
+     "url": "https://www.riigipilv.ee/riigipilvest/riigipilve-tehniline-lahendus"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "et",
+     "publisher": "Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv",
+     "quote": "See võimaldab riigiasutustel majutada oma andmeid ja infosüsteeme hajusamalt. Dubleeriva andmekeskuse asukoht jääb Tallinna piirkonnast välja.",
+     "quote_english": "This allows state agencies to host their data and information systems in a more distributed way. The duplicate data centre is located outside the Tallinn area.",
+     "title": "Mis saab Riigipilvest eriolukorras?",
+     "url": "https://www.riigipilv.ee/riigipilvest/riigipilvest-kkk/mis-saab-riigipilvest-eriolukorras"
+    },
+    {
+     "doc_type": "audit_report",
+     "language": "et",
+     "published": "2018-05-14",
+     "publisher": "Riigikontroll (National Audit Office of Estonia)",
+     "quote": "Järgmiseks sammuks on esimese andmesaatkonna loomine ehk oma serveriruum välisriigi riiklikus andmekeskuses.",
+     "quote_english": "The next step is creating the first data embassy, that is, Estonia's own server room in a foreign state's national data centre.",
+     "title": "Eesti riigi kriitiliste andmekogude turvalisuse ja säilitamise tagamine",
+     "url": "https://www.riigikontroll.ee/sites/default/files/arhivaalid/2462/RKTR_2462_2-1.4_2213_001-2.pdf"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The State IT Centre (RIT), a state agency, runs the Riigipilv data-centre infrastructure in several locations in Estonia, including a duplicate site outside Tallinn built to ISKE level H. It also has one location abroad, the data embassy in a Luxembourg government data centre. The value is yes. RIT's own site (rit.ee) returned HTTP 403, so the evidence comes from riigipilv.ee, which RIT operates, and from the National Audit Office.",
+   "review": {
+    "original": "yes",
+    "reason": "All three quotes appear verbatim; riigipilv.ee describes live hardware in several locations in Estonia plus one abroad under the State IT Centre, and the audit confirms the data-embassy plan, so state-operated data centres in operation hold.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "et",
+     "publisher": "Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv",
+     "quote": "Riigipilve arenduse eest vastutab Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (Riigi IT Keskus).",
+     "quote_english": "The State Information and Communication Technology Centre (State IT Centre) is responsible for developing the Government Cloud.",
+     "title": "Eesti Riigipilv",
+     "url": "https://www.riigipilv.ee/et"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "et",
+     "publisher": "Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv",
+     "quote": "1. juuni 2022 seisuga on Riigipilvel 82 tellijat.",
+     "quote_english": "As of 1 June 2022 the Government Cloud had 82 customers.",
+     "title": "Tellijad",
+     "url": "https://www.riigipilv.ee/riigipilvest/kliendid"
+    },
+    {
+     "doc_type": "audit_report",
+     "language": "et",
+     "published": "2018-05-14",
+     "publisher": "Riigikontroll (National Audit Office of Estonia)",
+     "quote": "Riigi privaatpilve keskkond (http://riigipilv.ee/) võeti ametlikult kasutusele 2017. aasta maikuus.",
+     "quote_english": "The state private cloud environment (riigipilv.ee) was officially put into use in May 2017.",
+     "title": "Eesti riigi kriitiliste andmekogude turvalisuse ja säilitamise tagamine",
+     "url": "https://www.riigikontroll.ee/sites/default/files/arhivaalid/2462/RKTR_2462_2-1.4_2213_001-2.pdf"
+    }
+   ],
+   "id": "C2",
+   "research_note": "Riigipilv, the Estonian Government Cloud, has been in operation since May 2017 and has been owned by the State IT Centre (RIT) since 1 March 2022. It serves state agencies and providers of vital services with IaaS, PaaS, backup and storage, with published prices through 2027. Its site lists 82 customers as of June 2022. The value is yes.",
+   "review": {
+    "original": "yes",
+    "reason": "Quotes appear verbatim: Riigipilv went into official use in May 2017, RIT is responsible for it and it had 82 customers in June 2022, so it is in operation and serving government workloads (the customer figure is dated but the service is live).",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "EE"
+}

@@ -1,0 +1,206 @@
+{
+ "indicators": [
+  {
+   "claims": [],
+   "id": "L1",
+   "research_note": "No statute or binding regulation found that requires Belgian government data, or classified data, to be stored or processed under national or EU jurisdiction. Checked: the Law of 11 December 1998 on classification (via the etaamb.openjustice.be copy of the Moniteur belge), which sets classification degrees and clearances but has no hosting-location clause; and the G-Cloud service catalogue. The catalogue says sensitive services are hosted in state data centres 'pour lesquels l'indépendance de l'État envers des tiers doit être garantie', but that is programme policy, not law. The implementing Royal Decree of 24 March 2000 and the Belgian NIS2 law (2024) were not reached: ejustice.just.fgov.be rejects scripted requests, and the web-search budget was used up. Silence, so the value is unknown.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were cited, and nothing I checked shows a statutory hosting-jurisdiction requirement, so unknown stands.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "fr",
+     "published": "1999-05-07",
+     "publisher": "Moniteur belge (copy on etaamb.openjustice.be); numac 1999007004",
+     "quote": "Art. 4. La classification visée à l'article 3 comprend trois degrés : TRES SECRET, SECRET, CONFIDENTIEL.",
+     "quote_english": "Art. 4. The classification referred to in Article 3 comprises three degrees: TOP SECRET, SECRET, CONFIDENTIAL.",
+     "title": "Loi du 11 décembre 1998 relative à la classification et aux habilitations de sécurité",
+     "url": "https://etaamb.openjustice.be/fr/loi-du-11-decembre-1998_n1999007004.html"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "fr",
+     "published": "1999-05-07",
+     "publisher": "Moniteur belge (copy on etaamb.openjustice.be); numac 1999007004",
+     "quote": "Le degré TRES SECRET est attribué lorsque l'utilisation inappropriée peut porter très gravement atteinte à un des intérêts visés à l'article 3.",
+     "quote_english": "The TOP SECRET degree is assigned when inappropriate use could very seriously harm one of the interests referred to in Article 3.",
+     "title": "Loi du 11 décembre 1998 relative à la classification et aux habilitations de sécurité",
+     "url": "https://etaamb.openjustice.be/fr/loi-du-11-decembre-1998_n1999007004.html"
+    }
+   ],
+   "id": "L2",
+   "research_note": "The classification levels are defined in a statute, the Law of 11 December 1998 on classification and security clearances (Art. 4). The quote is from the original text as published in the Moniteur belge on 7 May 1999, taken from the etaamb.openjustice.be copy because the official ejustice portal rejects scripted downloads. Later amendments, such as any added RESTREINT level, were not checked. They would not change the value.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes appear word for word in the etaamb copy of the Law of 11 December 1998, whose Art. 4 defines the TRES SECRET, SECRET and CONFIDENTIEL levels in a statute.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "No Belgian cloud certification requiring immunity from non-EU law (SecNumCloud-type) was found, and no source saying that none exists. The Centre for Cybersecurity Belgium site (ccb.belgium.be), the national cybersecurity certification authority, returned HTTP 403 to scripted requests, and the web-search budget was used up. The G-Cloud catalogue sets no certification requirement. Silence, so the value is unknown.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were cited and no source establishes a SecNumCloud-type certification either way, so unknown stands.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "FPS Economy, SMEs, Self-employed and Energy",
+     "quote": "CN=Belgium Root CA6, OU=FPS Policy and Support - BOSA (NTRBE-0671516647), OU=FPS Home Affairs - BIK-GCI (NTRBE-0362475538), O=Kingdom of Belgium - Federal Government, L=Brussels, C=BE",
+     "quote_english": "Subject of the qualified CA service 'Belgium Root CA6': FPS Policy and Support (BOSA) and FPS Home Affairs, Kingdom of Belgium - Federal Government, Brussels.",
+     "title": "Belgian Trusted List (TSL-BE)",
+     "url": "https://tsl.belgium.be/tsl-be.xml"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "FPS Economy, SMEs, Self-employed and Energy",
+     "quote": "CN=eSign CA eID, SERIALNUMBER=202501, OU=QTSP: FPS Policy and Support - BOSA (NTRBE-0671516647), OU=CA/RA: FPS Home Affairs - BIK-GCI (NTRBE-0362475538), O=Kingdom of Belgium - Federal Government, L=Brussels, C=BE",
+     "quote_english": "The qualified eID signing CA 'eSign CA eID': qualified trust service provider FPS BOSA; CA/RA FPS Home Affairs; Kingdom of Belgium - Federal Government.",
+     "title": "Belgian Trusted List (TSL-BE)",
+     "url": "https://tsl.belgium.be/tsl-be.xml"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "Belgian eID PKI repository (Belgian authorities)",
+     "quote": "The Belgian authorities are the CSP responsible for the Belgium Root CAs and for the CA certificates issued under the Belgian Root CA.",
+     "quote_english": "The Belgian authorities are the CSP responsible for the Belgium Root CAs and for the CA certificates issued under the Belgian Root CA.",
+     "title": "Citizen CA - Certification Practice Statement v1.4",
+     "url": "https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA.pdf"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Belgian Trusted List names FPS Policy and Support (BOSA), a federal public service, as the qualified trust service provider for Belgium Root CA6, eSeal CA Gov, eSign CA eID and the government timestamp units. The subject is 'Kingdom of Belgium - Federal Government', with FPS Home Affairs as CA/RA. The Citizen CA CPS v1.4 is an older document: it says Certipost ran the Citizen CA 'on behalf and for the account of the Belgian authorities', while the authorities stayed CSP for the Belgium Root CAs. The current trusted list shows the eID signing CA now under BOSA. Private qualified TSPs (Certipost, DigiCert/QuoVadis, GlobalSign, Belgian Mobile ID) also appear on the list, but the government root is state-operated.",
+   "review": {
+    "original": "yes",
+    "reason": "tsl.belgium.be could not be reached (SSL error and socket closed), so the two trusted-list quotes are unverified; the Citizen CA CPS does contain 'The Belgian authorities are the CSP responsible for the Belgium Root CAs', which on its own establishes a state-operated root.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "publisher": "CSAM (Belgian federal government services)",
+     "quote": "CSAM is het resultaat van de samenwerking tussen verschillende overheidsdiensten en is een initiatief van de volgende instanties: Rijksdienst voor Sociale Zekerheid; FOD BOSA DG DT; FOD Financiën; Kruispuntbank van de Sociale Zekerheid; FOD Economie, KMO, Middenstand en Energie; FOD Binnenlandse Zaken.",
+     "quote_english": "CSAM is the result of cooperation between several government services and is an initiative of the following bodies: National Social Security Office; FPS BOSA DG DT; FPS Finance; Crossroads Bank for Social Security; FPS Economy; FPS Home Affairs.",
+     "title": "Over CSAM",
+     "url": "https://www.csam.be/nl/over-csam.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "publisher": "FOD Binnenlandse Zaken - Algemene Directie Identiteit en Burgerzaken (IBZ)",
+     "quote": "De eID is de elektronische identiteitskaart die wordt uitgereikt aan elke Belg ouder dan 12 jaar.",
+     "quote_english": "The eID is the electronic identity card issued to every Belgian over the age of 12.",
+     "title": "eID",
+     "url": "https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid"
+    }
+   ],
+   "id": "K2",
+   "research_note": "The national eID card is issued under FPS Home Affairs (IBZ), and its certificates chain to the state-run Belgium Root CA (see K1). The CSAM identity and access framework, which hosts the federal authentication service, is a joint initiative of federal public services and social-security bodies. itsme, the widely used mobile ID, is run by Belgian Mobile ID SA/NV, a private company, and is listed as a qualified TSP on the Belgian trusted list. The state-run core scheme (eID card plus CSAM/FAS) supports 'yes'. The eIDAS notified-schemes list on the Commission site is JavaScript-rendered and was not fetched.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes appear word for word: the CSAM page lists only federal public services and social-security bodies as its initiators, and the FPS Home Affairs (IBZ) page describes the eID it issues, so the core scheme is state-operated.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "G-Cloud (Belgian federal public services, social-security institutions and state ICT organisations)",
+     "quote": "Hébergement dans les data centers de l'État Entre autres pour l'offre de services sensibles à la confidentialité Pour lesquels l'indépendance de l'État envers des tiers doit êre garantie",
+     "quote_english": "Hosting in the State's data centres, among other things for confidentiality-sensitive services for which the State's independence from third parties must be guaranteed.",
+     "title": "G-Cloud - Services",
+     "url": "https://www.gcloud.belgium.be/fr/services"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "G-Cloud (Belgian federal public services, social-security institutions and state ICT organisations)",
+     "quote": "Housing Datacenter-as-a-Service En service",
+     "quote_english": "Housing: Datacenter-as-a-Service - In service",
+     "title": "G-Cloud - Services",
+     "url": "https://www.gcloud.belgium.be/fr/services"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "G-Cloud (Belgian federal public services, social-security institutions and state ICT organisations)",
+     "quote": "Le G-Cloud est un cloud hybride qui utilise, d’une part, des services proposés par des sociétés privées dans des environnements de cloud public et, d’autre part, des services hébergés dans les data centers de l’État.",
+     "quote_english": "G-Cloud is a hybrid cloud that uses, on the one hand, services from private companies in public cloud environments and, on the other, services hosted in the State's data centres.",
+     "title": "G-Cloud - Home",
+     "url": "https://www.gcloud.belgium.be/fr"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The G-Cloud catalogue lists a Datacenter-as-a-Service housing offer as 'En service' and says confidentiality-sensitive services are hosted in state data centres. The sources name no individual site or operator. Smals, the social-security ICT association, is a likely operator, but its site failed TLS handshakes to scripted requests and was not cited.",
+   "review": {
+    "original": "yes",
+    "reason": "All three quotes appear on the G-Cloud pages, which describe services hosted in state data centres and a housing (Datacenter-as-a-Service) offer marked 'En service', under a platform the home page says the State manages.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "G-Cloud (Belgian federal public services, social-security institutions and state ICT organisations)",
+     "quote": "Si la première génération de services G-Cloud est opérationnelle depuis fin mars 2015, de nombreuses évolutions restent encore à venir.",
+     "quote_english": "While the first generation of G-Cloud services has been operational since the end of March 2015, many developments are still to come.",
+     "title": "G-Cloud - Home",
+     "url": "https://www.gcloud.belgium.be/fr"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "G-Cloud (Belgian federal public services, social-security institutions and state ICT organisations)",
+     "quote": "La gestion du G-Cloud est assurée par l’État.",
+     "quote_english": "G-Cloud is managed by the State.",
+     "title": "G-Cloud - Home",
+     "url": "https://www.gcloud.belgium.be/fr"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "G-Cloud (Belgian federal public services, social-security institutions and state ICT organisations)",
+     "quote": "Ces services sont d'ores et déjà disponibles et largement utilisés.",
+     "quote_english": "These services are already available and widely used.",
+     "title": "G-Cloud - Services",
+     "url": "https://www.gcloud.belgium.be/fr/services"
+    }
+   ],
+   "id": "C2",
+   "research_note": "G-Cloud, the shared cloud of the Belgian federal public sector, is state-managed and has been operational since March 2015. Its catalogue marks IaaS (VMaaS, StaaS), housing, backup, FEDMAN/FEDWAN and CSAM services as 'En service'. It is a hybrid model that also uses private public-cloud providers, so not every workload runs on state infrastructure. The home-page text appears to date from G-Cloud's launch, but the catalogue statuses are current.",
+   "review": {
+    "original": "yes",
+    "reason": "All three quotes appear on the G-Cloud pages: it has been operational since March 2015, is managed by the State, and its services are 'd'ores et déjà disponibles et largement utilisés', so it is in operation, not just announced.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "BE"
+}

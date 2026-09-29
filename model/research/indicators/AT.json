@@ -1,0 +1,216 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "de",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Informationen ab der Klassifizierungsstufe VERTRAULICH dürfen auf allen Informations- und Kommunikationssystemen verarbeitet werden, sofern eine Akkreditierung durch die Informationssicherheitskommission vorliegt.",
+     "quote_english": "Information from classification level CONFIDENTIAL upward may be processed on any information and communication system, provided accreditation by the Information Security Commission exists.",
+     "title": "Informationssicherheitsverordnung (InfoSiV), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003054"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "de",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Die Verarbeitung von klassifizierten Informationen in Informations- und Kommunikationssystemen bedarf besonderer Sicherungsmaßnahmen, die abhängig sind von",
+     "quote_english": "The processing of classified information in information and communication systems requires special security measures, which depend on",
+     "title": "Informationssicherheitsverordnung (InfoSiV), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003054"
+    }
+   ],
+   "id": "L1",
+   "research_note": "No Austrian statute found that requires government data in general to be stored or processed under national or EU jurisdiction. The rule found covers classified data only. Under the Informationssicherheitsverordnung (InfoSiV), classified information at VERTRAULICH or higher may be processed only on ICT systems accredited by the national Informationssicherheitskommission. That keeps such processing under national control. The ordinance does not name a geographic or jurisdictional location, so 'partial' is an inference from the accreditation rule. Searched on RIS: InfoSiG, InfoSiV, E-GovG, BRZ-Gesetz, and a Court of Audit (Rechnungshof) IT-security report; none contains a general data-localisation rule.",
+   "review": {
+    "original": "partial",
+    "reason": "Both InfoSiV quotes are on the page, but they only require accreditation by the Informationssicherheitskommission. The ordinance says nothing about where classified data must be stored or which jurisdiction it falls under, so it does not establish even the classified-only 'partial' requirement.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "de",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Gemäß Abs. 1 erhaltene klassifizierte Informationen sind zur Wahrung des von den übermittelnden Stellen vorgesehenen Schutzes einer der folgenden Klassifizierungsstufen zuzuordnen:",
+     "quote_english": "Classified information received under para. 1 shall, to preserve the protection intended by the transmitting bodies, be assigned to one of the following classification levels:",
+     "title": "Informationssicherheitsgesetz (InfoSiG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20001740"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "de",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "„GEHEIM“, wenn die Informationen vertraulich sind und ihre Preisgabe zudem die Gefahr einer erheblichen Schädigung der in § 6 Abs. 1 IFG genannten Interessen schaffen würde;",
+     "quote_english": "'SECRET', if the information is confidential and its disclosure would moreover create the risk of substantial harm to the interests named in § 6(1) Freedom of Information Act;",
+     "title": "Informationssicherheitsgesetz (InfoSiG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20001740"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "de",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "„streng geheim“, wenn sie geheim ist und überdies ihr Bekanntwerden eine schwere Schädigung nach Z 2 wahrscheinlich machen würde.",
+     "quote_english": "'top secret', if it is secret and its becoming known would moreover make serious harm under item 2 likely.",
+     "title": "Sicherheitspolizeigesetz (SPG), consolidated version, § 55",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005792"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Two federal statutes set out the classification levels. The Information Security Act (InfoSiG) § 2(2) defines EINGESCHRÄNKT, VERTRAULICH, GEHEIM and STRENG GEHEIM, but it applies to classified information Austria receives under international rules. The Security Police Act (SPG) § 55 defines vertraulich, geheim and streng geheim for security clearances. The InfoSiV ordinance adds handling rules.",
+   "review": {
+    "original": "yes",
+    "reason": "Verified: InfoSiG § 2(2) defines EINGESCHRÄNKT to STRENG GEHEIM in statute, with the GEHEIM text word for word, and SPG § 55 also defines vertraulich, geheim and streng geheim in statute, so the levels are defined in binding law.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "No Austrian cloud certification requiring immunity from non-EU law (SecNumCloud-type) was found. No authoritative statement that none exists was found either, so the value is 'unknown', not 'no'. Searched: RIS federal law (InfoSiG, InfoSiV, E-GovG, BRZ-Gesetz), Bundesrechenzentrum (BRZ) product and security pages, the onlinesicherheit.gv.at authority pages, and Court of Audit reports on IT security and E-ID. The BRZ says its cloud is hosted in Austria in its certified data centre, but that is a hosting claim, not a sovereignty certification. The web search budget ran out, so the national cybersecurity strategy and procurement notices could not be checked.",
+   "review": {
+    "original": "unknown",
+    "reason": "There are no claims to check, and without a source either way 'unknown' is the correct value.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "language": "de",
+     "published": "2023",
+     "publisher": "Rechnungshof Österreich",
+     "quote": "Der (behördliche) Registrierungsprozess wurde mithilfe eines Vertrauensdiensteanbieters durchgeführt. Dieser nahm eine zentrale Rolle im Registrierungs– und Authentifizierungsprozess ein, da das E–ID–System auf dem Vertrauensdienst der Ausstellung von Signaturzertifikaten beruhte. Für die Erbringung dieses Vertrauensdienstes war das (privatwirtschaftliche) Unternehmen",
+     "quote_english": "The (official) registration process was carried out with the help of a trust service provider. It played a central role in registration and authentication, since the E-ID system relied on the trust service of issuing signature certificates. For providing this trust service, the (private-sector) company [A acted as subcontractor to BRZ GmbH]",
+     "title": "Umstellung von der Bürgerkarte/Handysignatur auf den elektronischen Identitätsnachweis (E-ID), Reihe Bund 2023/7",
+     "url": "https://www.rechnungshof.gv.at/rh/home/home/2023_7_E-ID.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "Bundesministerium für Inneres",
+     "quote": "This website contains information on the Austrian CSCA operated by the Federal Ministry of Interior (BMI).",
+     "quote_english": "This website contains information on the Austrian CSCA operated by the Federal Ministry of Interior (BMI).",
+     "title": "The Austrian Country Signing CA (CSCA)",
+     "url": "https://www.bmi.gv.at/downloads/csca.html"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The state runs part of the government PKI. The Interior Ministry (BMI) operates the Country Signing CA (CSCA) for passports and ID cards. The qualified trust service behind ID Austria and the Handy-Signatur is not state-run. The Court of Audit (Rechnungshof, 2023/7) says it is provided by a private company working as a subcontractor to the state-owned BRZ, which the ministries commissioned. Per the provider's own pages this is A-Trust GmbH. That fits 'private EU provider under state contract'. The EU Trusted List browser needs JavaScript, and the RTR list page gave no provider text, so neither could be quoted.",
+   "review": {
+    "original": "partial",
+    "reason": "Verified: the Court of Audit (Rechnungshof) PDF says the qualified trust service came from a private company (A24) working as a subcontractor to BRZ GmbH, which the ministries commissioned, and the BMI page confirms the BMI operates the CSCA. 'Partial' is supported and cannot be upgraded under the rules.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "de",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Der Bundesminister für Inneres sowie die Stammzahlenregisterbehörde sind ermächtigt, diese personenbezogenen Daten zu Zwecken der Verwaltung des E-ID zu verarbeiten.",
+     "quote_english": "The Federal Minister of the Interior and the Source PIN Register Authority are authorised to process these personal data for the purposes of administering the E-ID.",
+     "title": "E-Government-Gesetz (E-GovG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230"
+    },
+    {
+     "doc_type": "press_release",
+     "language": "de",
+     "published": "2023",
+     "publisher": "Rechnungshof Österreich",
+     "quote": "Auftragnehmer des BMDW war fast ausschließlich die Bundesrechenzentrum (BRZ) GmbH.",
+     "quote_english": "The contractor of the Federal Ministry for Digital and Economic Affairs was almost exclusively Bundesrechenzentrum (BRZ) GmbH.",
+     "title": "Elektronischer Identitätsnachweis: Hohe Abhängigkeit von externen Unternehmen",
+     "url": "https://www.rechnungshof.gv.at/rh/home/news/news/news_3/Umstellung_von_Handysignatur_auf_E-ID.html"
+    }
+   ],
+   "id": "K2",
+   "research_note": "The E-Government Act (E-GovG) sets up the E-ID, branded ID Austria. The Interior Minister and the Source PIN Register Authority, a federal minister, are empowered to administer it. The Court of Audit found that the digital ministry's contractor was almost exclusively the state-owned Bundesrechenzentrum (BRZ) GmbH. The qualified signature certificate linked to ID Austria is issued by a private qualified trust service provider (see K1), but the scheme itself is run by the state. The eIDAS notified-schemes page could not be quoted as static text.",
+   "review": {
+    "original": "yes",
+    "reason": "Verified: E-GovG § 4b(1) empowers the Interior Minister and the Source PIN Register Authority to administer the E-ID, and the Court of Audit confirms the contractor was almost exclusively the state-owned BRZ, so the scheme is state-run even though subcontractors do much of the work.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "de",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Die Anteile der Gesellschaft sind zu 100% dem Bund vorbehalten. Die Veräußerung von Geschäftsanteilen des Bundes ist nicht zulässig.",
+     "quote_english": "The shares of the company are reserved 100% to the Federation. The sale of the Federation's shares is not permitted.",
+     "title": "Bundesgesetz über die Bundesrechenzentrum GmbH (BRZ-Gesetz), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001466"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Bundesrechenzentrum GmbH",
+     "quote": "Darüber hinaus verfügen wir über eines der größten Rechenzentren des Landes und hüten den Datenschatz der Republik.",
+     "quote_english": "In addition, we have one of the largest data centres in the country and safeguard the Republic's data treasure.",
+     "title": "Was wir tun",
+     "url": "https://www.brz.gv.at/was-wir-tun.html"
+    }
+   ],
+   "id": "C1",
+   "research_note": "Bundesrechenzentrum GmbH (BRZ) is wholly federally owned by statute: shares are reserved 100% to the Federation and may not be sold. It runs one of Austria's largest data centres and serves as the federal administration's IT provider.",
+   "review": {
+    "original": "yes",
+    "reason": "Verified: BRZ-Gesetz § 1(3) reserves 100% of the shares to the Federation and bans their sale, § 2 makes BRZ the federal IT operator, and the BRZ page says it runs one of the country's largest data centres.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Bundesrechenzentrum GmbH",
+     "quote": "Mit unserer Cloud-Infrastruktur bieten wir z.B. Platform as a Service – PaaS; Software as a Service – SaaS.",
+     "quote_english": "With our cloud infrastructure we offer, for example, Platform as a Service (PaaS) and Software as a Service (SaaS).",
+     "title": "Geschäftsfelder",
+     "url": "https://www.brz.gv.at/was-wir-tun/geschaeftsfelder.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Bundesrechenzentrum GmbH",
+     "quote": "Wir organisieren den Umzug in die Cloud und unsere Kunden profitieren von den Vorteilen wie Effizienz, Flexibilität – und das alles in Österreich.",
+     "quote_english": "We organise the move to the cloud and our customers benefit from advantages such as efficiency and flexibility, all in Austria.",
+     "title": "Geschäftsfelder",
+     "url": "https://www.brz.gv.at/was-wir-tun/geschaeftsfelder.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Bundesrechenzentrum GmbH",
+     "quote": "BRZ GoverDrive ist ein Ablageort zur sicheren Speicherung, Synchronisierung und zum Teilen von digitalen Informationen in der Cloud.",
+     "quote_english": "BRZ GoverDrive is a storage location for the secure storage, synchronisation and sharing of digital information in the cloud.",
+     "title": "Cloud Storage - BRZ GoverDrive",
+     "url": "https://www.brz.gv.at/was-wir-tun/services-produkte/cloud-storage_brz_goverdrive.html"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The state-owned BRZ runs cloud services for public-sector customers: PaaS and SaaS on its own cloud infrastructure, described as 'all in Austria', and the BRZ GoverDrive cloud storage, hosted in the certified BRZ data centre. Caveat: no single branded national 'government cloud' programme was found, and the BRZ says GoverDrive will be replaced by an equivalent BRZ service by the end of 2026.",
+   "review": {
+    "original": "yes",
+    "reason": "Verified: the BRZ pages describe PaaS and SaaS on BRZ cloud infrastructure 'all in Austria', and GoverDrive, which is live, hosted in the certified BRZ data centre and used by public-sector staff. It is to be replaced by an equivalent BRZ service by the end of 2026, but it is in operation, not just announced.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "AT"
+}

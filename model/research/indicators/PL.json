@@ -1,0 +1,245 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Ministerstwo Cyfryzacji",
+     "quote": "Nowe przepisy pozwalają podmiotom administracji rządowej na korzystanie z rozwiązań chmurowych w jurysdykcji krajowej lub w innych państwach Europejskiego Obszaru Gospodarczego (EOG). Warunkiem jest przeprowadzenie przez administratora systemu szczegółowej analizy ryzyka.",
+     "quote_english": "The new rules allow government administration bodies to use cloud solutions under national jurisdiction or in other European Economic Area (EEA) states. The condition is that the system administrator carries out a detailed risk analysis.",
+     "title": "Standardy Cyberbezpieczeństwa Chmur Obliczeniowych",
+     "url": "https://www.gov.pl/web/cyfryzacja/standardy-cyberbezpieczenstwa-chmur-obliczeniowych"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Ministerstwo Cyfryzacji",
+     "quote": "Ministerstwo Cyfryzacji dopuszcza możliwość przetwarzania danych w CPD zlokalizowanych na terenie EOG, jednakże wymogiem jest, aby w tych państwach respektowane było prawo Unii Europejskiej.",
+     "quote_english": "The Ministry of Digital Affairs allows data to be processed in data centres located in the EEA, but it requires that EU law is respected in those states.",
+     "title": "Standardy Cyberbezpieczeństwa Chmur Obliczeniowych",
+     "url": "https://www.gov.pl/web/cyfryzacja/standardy-cyberbezpieczenstwa-chmur-obliczeniowych"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "pl",
+     "published": "2010-10-01",
+     "publisher": "Sejm RP (Dziennik Ustaw)",
+     "quote": "Systemy teleinformatyczne, w których mają być przetwarzane informacje niejawne, podlegają akredytacji bezpieczeństwa teleinformatycznego.",
+     "quote_english": "ICT systems in which classified information is to be processed are subject to ICT security accreditation.",
+     "title": "Ustawa z dnia 5 sierpnia 2010 r. o ochronie informacji niejawnych (art. 48)",
+     "url": "https://api.sejm.gov.pl/eli/acts/DU/2010/1228/text.html"
+    }
+   ],
+   "id": "L1",
+   "research_note": "The jurisdiction rule comes from Council of Ministers Resolution No. 97 of 2019 on the 'Wspólna Infrastruktura Informatyczna Państwa' (WIIP) initiative, amended in force from 29 Oct 2024. It limits cloud use by government administration bodies to national jurisdiction or to EEA states, subject to a risk analysis. Graded partial rather than yes for three reasons: (1) it is an internal Council of Ministers resolution, not a statute or generally binding regulation, and it was not published in Monitor Polski (checked with the Sejm ELI API); (2) it covers only cloud use by government administration; (3) it allows the EEA, not only the EU. The accompanying SCCO standard is expressly not a legislative act. For classified data, the 2010 Act on the Protection of Classified Information requires ABW/SKW accreditation of ICT systems (art. 48) but contains no explicit territorial clause. The 2026 State Digitisation Strategy plans legislation to allow classified data in government cloud. The resolution text itself could not be retrieved; the evidence is the ministry's official description.",
+   "review": {
+    "original": "partial",
+    "reason": "All quotes are on the pages, but the jurisdiction rule comes from an internal Council of Ministers resolution (WIIP), which is not a statute or binding regulation; it covers government data generally rather than only classified data or named sectors, and it allows the EEA, which is not the same as the EU; the classified-information Act (art. 48) requires accreditation but sets no territorial limit, so neither 'partial' nor any other value is established.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "pl",
+     "published": "2010-10-01",
+     "publisher": "Sejm RP (Dziennik Ustaw)",
+     "quote": "Informacjom niejawnym nadaje się klauzulę „ściśle tajne”, jeżeli ich nieuprawnione ujawnienie spowoduje wyjątkowo poważną szkodę dla Rzeczypospolitej Polskiej",
+     "quote_english": "Classified information is given the 'top secret' (ściśle tajne) marking if its unauthorised disclosure would cause exceptionally grave damage to the Republic of Poland",
+     "title": "Ustawa z dnia 5 sierpnia 2010 r. o ochronie informacji niejawnych (art. 5)",
+     "url": "https://api.sejm.gov.pl/eli/acts/DU/2010/1228/text.html"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Article 5 of the Act of 5 August 2010 on the Protection of Classified Information (Dz.U. 2010 nr 182 poz. 1228, in force, consolidated text Dz.U. 2025 poz. 1209) sets four statutory classification levels: ściśle tajne, tajne, poufne and zastrzeżone. Quote checked against the Sejm ELI HTML text. ISAP (isap.sejm.gov.pl) is behind an Incapsula bot wall, so the ELI API URL is used instead.",
+   "review": {
+    "original": "yes",
+    "reason": "The art. 5 quote is in the Sejm ELI text of the 2010 Act on the Protection of Classified Information, which sets the classification levels in statute.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Ministerstwo Cyfryzacji",
+     "quote": "Obecnie trwają również prace nad krajowym schematem oceny i certyfikacji bezpieczeństwa oraz prywatności produktów i systemów IT",
+     "quote_english": "Work is also currently under way on a national scheme for evaluating and certifying the security and privacy of IT products and systems",
+     "title": "Certyfikacja",
+     "url": "https://www.gov.pl/web/cyfryzacja/certyfikacja"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Ministerstwo Cyfryzacji",
+     "quote": "Projekt SCCO, mimo swojej kluczowej roli, nie podlega procesowi legislacyjnemu",
+     "quote_english": "The SCCO draft, despite its key role, is not subject to the legislative process",
+     "title": "Standardy Cyberbezpieczeństwa Chmur Obliczeniowych",
+     "url": "https://www.gov.pl/web/cyfryzacja/standardy-cyberbezpieczenstwa-chmur-obliczeniowych"
+    }
+   ],
+   "id": "L3",
+   "research_note": "No SecNumCloud-type certification requiring immunity from non-EU law was found for Poland. Checked the Ministry of Digital Affairs certification page (the KSO3C national scheme is still in development and covers product and system security, not cloud immunity), the SCCO cloud security standards page (a control catalogue based on NIST, not a certification, and it expressly allows EEA data centres), and the COI government cloud page. No authoritative statement that no such certification exists was found, so the value is unknown, not no. The web-search budget was exhausted, so a Sejm/NIK search for a draft sovereign-cloud certification could not be done.",
+   "review": {
+    "original": "unknown",
+    "reason": "Both quotes are on the ministry pages; they show a national certification scheme still in development and an SCCO standard that is not legislation, and neither establishes a SecNumCloud-type certification or its absence.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Narodowy Bank Polski (NCCert)",
+     "quote": "Narodowe Centrum Certyfikacji to system informatyczny Narodowego Banku Polskiego zbudowany w celu realizacji zadań powierzonych NBP przez ministra właściwego do spraw informatyzacji",
+     "quote_english": "The National Certification Centre is an IT system of the National Bank of Poland built to perform tasks entrusted to the NBP by the minister responsible for digitisation",
+     "title": "Narodowe Centrum Certyfikacji - strona główna",
+     "url": "https://www.nccert.pl/"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "pl",
+     "published": "2016-09-29",
+     "publisher": "Sejm RP (Dziennik Ustaw)",
+     "quote": "Na wniosek Prezesa Narodowego Banku Polskiego, minister właściwy do spraw informatyzacji może upoważnić Narodowy Bank Polski do realizacji zadań, o których mowa w art. 10, jak również do prowadzenia rejestru i zaufanej listy.",
+     "quote_english": "At the request of the President of the National Bank of Poland, the minister responsible for digitisation may authorise the National Bank of Poland to perform the tasks referred to in art. 10, and to keep the register and the trusted list.",
+     "title": "Ustawa z dnia 5 września 2016 r. o usługach zaufania oraz identyfikacji elektronicznej (art. 11)",
+     "url": "https://api.sejm.gov.pl/eli/acts/DU/2016/1579/text.html"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The national root (Narodowe Centrum Certyfikacji, NCCert) issues the certificates of qualified trust service providers (art. 10 of the 2016 Trust Services Act). It is operated by Narodowy Bank Polski, the state central bank, under the minister's authorisation (art. 11). NCCert also publishes the Polish trusted list (TSL). The qualified providers under the root (Certum, KIR, EuroCert and others) are mostly private, but the root and the trusted list are state-controlled. Not checked in the EU TL browser, which is a JavaScript application.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes check out: NCCert, the national root that issues certificates to qualified trust service providers (art. 10), is an IT system of the state central bank NBP, authorised by the minister under art. 11 of the 2016 Act, so it is state-controlled.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Ministerstwo Cyfryzacji",
+     "quote": "Profil zaufany to bezpłatna metoda potwierdzania tożsamości obywatela w systemach podmiotów publicznych.",
+     "quote_english": "The trusted profile is a free method of confirming a citizen's identity in the systems of public bodies.",
+     "title": "Profil zaufany",
+     "url": "https://www.gov.pl/web/cyfryzacja/profil-zaufany"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Ministerstwo Cyfryzacji",
+     "quote": "Za rozwój i utrzymanie serwisu odpowiada Minister Cyfryzacji",
+     "quote_english": "The Minister of Digital Affairs is responsible for developing and maintaining the service",
+     "title": "Profil zaufany",
+     "url": "https://www.gov.pl/web/cyfryzacja/profil-zaufany"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Centralny Ośrodek Informatyki",
+     "quote": "Profil zaufany jest środkiem identyfikacji elektronicznej notyfikowanym na poziomie średnim. Oznacza to, że uznają go inne kraje UE",
+     "quote_english": "The trusted profile is an electronic identification means notified at the substantial level. This means other EU countries recognise it",
+     "title": "Profil zaufany",
+     "url": "https://coi.gov.pl/realizacje/profil-zaufany"
+    }
+   ],
+   "id": "K2",
+   "research_note": "Profil Zaufany, which is notified under eIDAS, is run by the Minister of Digital Affairs and built by COI (Centralny Ośrodek Informatyki), a state budgetary institution. mObywatel is also state-run: under the Act of 26 May 2023 on the mObywatel application, the digital minister is the controller of the mObywatel system's data. e-dowód is issued by the state (COI with MSWiA and PWPW). Banks only act as channels for confirming a trusted profile; they do not operate the scheme. The EU notified-schemes list was not fetched.",
+   "review": {
+    "original": "yes",
+    "reason": "The quotes are on the ministry and COI pages and show that Profil Zaufany is maintained by the Minister of Digital Affairs and notified at the substantial level, so the scheme is state-operated.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Centralny Ośrodek Informatyki",
+     "quote": "Infrastruktura Systemów Rządowych (ISR) – przestrzeń dla najważniejszych e-usług państwowych. Infrastruktura Disaster Recovery (IDR) – zasoby pozwalające błyskawicznie odtworzyć systemy w razie awarii.",
+     "quote_english": "Government Systems Infrastructure (ISR) - space for the most important state e-services. Disaster Recovery Infrastructure (IDR) - resources that allow systems to be restored quickly after a failure.",
+     "title": "Wspólna Infrastruktura Informatyczna Państwa",
+     "url": "https://coi.gov.pl/realizacje/wspolna-infrastruktura-informatyczna-panstwa"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Centralny Ośrodek Informatyki",
+     "quote": "urzędy mogą szybciej wymieniać informacje między sobą, dane są bezpiecznie przechowywane w państwowej infrastrukturze",
+     "quote_english": "offices can exchange information with each other faster, and data are stored securely in state infrastructure",
+     "title": "Elektroniczne Zarządzanie Dokumentacją w Rządowej Chmurze Obliczeniowej",
+     "url": "https://coi.gov.pl/realizacje/ekosystem-e-uslug"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Ministerstwo Cyfryzacji",
+     "quote": "budowę 3 ustandaryzowanych i efektywnych energetycznie centrów przetwarzania danych (CPD) w różnych lokalizacjach",
+     "quote_english": "construction of 3 standardised, energy-efficient data processing centres (CPD) in different locations",
+     "title": "Wieloletni Program „Krajowe Centrum Przetwarzania Danych (KCPD)” Etap I",
+     "url": "https://www.gov.pl/web/cyfryzacja/wieloletni-program-krajowe-centrum-przetwarzania-danych-kcpd-etap-i--wsparcie-procesu-przygotowania-projektu"
+    }
+   ],
+   "id": "C1",
+   "research_note": "COI, a state budgetary institution under the digital ministry, runs the government's own infrastructure today: Infrastruktura Systemów Rządowych (ISR) and Disaster Recovery infrastructure within the government cloud. The ministry also runs the multi-year KCPD programme to build three new dedicated state data centres, so part of the estate is still planned. Weakness: no source found that names specific sites or halls. The 'yes' rests on COI's description of operating state infrastructure, not on a data-centre inventory. Sources such as NASK or the Ministry of Finance IT centre (CIRF) were not fetched.",
+   "review": {
+    "original": "yes",
+    "reason": "The quotes are present, but the COI page only lists ISR and IDR as parts of the government cloud without naming any state-operated data centre, the EZD page describes a future SaaS rollout, and the one explicit data-centre quote (KCPD, three new centres) is planned construction.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Centralny Ośrodek Informatyki",
+     "quote": "Dzięki Rządowej Chmurze Obliczeniowej (RChO) urzędy mogą przetwarzać dane i uruchamiać systemy w bezpiecznym środowisku, bez konieczności budowania własnej infrastruktury.",
+     "quote_english": "Thanks to the Government Computing Cloud (RChO), offices can process data and run systems in a secure environment without having to build their own infrastructure.",
+     "title": "Wspólna Infrastruktura Informatyczna Państwa",
+     "url": "https://coi.gov.pl/realizacje/wspolna-infrastruktura-informatyczna-panstwa"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Centralny Ośrodek Informatyki",
+     "quote": "Centralnym komponentem architektury pozostaje Rządowa Chmura Obliczeniowa, w której osadzono usługę SaaS EZD RP.",
+     "quote_english": "The central component of the architecture remains the Government Computing Cloud, in which the EZD RP SaaS service has been deployed.",
+     "title": "EZD RP w modelu SaaS - jak COI buduje technologiczne zaplecze cyfrowej administracji",
+     "url": "https://coi.gov.pl/strefa-wiedzy/wpis/ezd-rp-w-modelu-saas-jak-coi-buduje-technologiczne-zaplecze-cyfrowej-administracji"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "pl",
+     "publisher": "Ministerstwo Cyfryzacji",
+     "quote": "Rozwój Rządowej Chmury Obliczeniowej (RCHO) poprzez migrację kolejnych systemów administracji rządowej na bezpieczne zasoby RCHO",
+     "quote_english": "Development of the Government Computing Cloud (RCHO) by migrating further government administration systems onto secure RCHO resources",
+     "title": "Strategia Cyfryzacji Państwa",
+     "url": "https://www.gov.pl/web/cyfryzacja/strategia-cyfryzacji-panstwa"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The Rządowa Chmura Obliczeniowa (RChO/RCHO) is in operation under the WIIP initiative and is run by COI. Government offices order resources through the ZUCH platform, and it hosts production services such as EZD RP SaaS. The 2026 State Digitisation Strategy describes migrating more government systems onto it. Alongside it is the Publiczna Chmura Obliczeniowa, which consists of commercial cloud bought through COI framework agreements.",
+   "review": {
+    "original": "yes",
+    "reason": "COI's pages say RChO lets offices process data and run systems today and that the EZD RP SaaS service 'has been deployed' in it, which shows a government cloud serving production workloads.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "PL"
+}

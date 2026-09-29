@@ -1,0 +1,222 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "hu",
+     "published": "2024",
+     "publisher": "Wolters Kluwer Jogtár (consolidated text of Act LXIX of 2024)",
+     "quote": "kizárólag az adatosztályozás alapján, annak eredményére figyelemmel vehet igénybe nem privát felhőszolgáltatást, vagy kezelhet külföldön adatot, amennyiben más jogszabály a felhőszolgáltatás igénybevételét, vagy a külföldi adatkezelést nem tiltja vagy korlátozza.",
+     "quote_english": "[the organisation] may use non-private cloud services or process data abroad only on the basis of, and having regard to the result of, data classification, provided other legislation does not prohibit or restrict cloud use or foreign data processing.",
+     "title": "2024. évi LXIX. törvény Magyarország kiberbiztonságáról (Kiberbiztonsági tv.), 9. §",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a2400069.tv"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "hu",
+     "published": "2024-12-23",
+     "publisher": "Wolters Kluwer Jogtár (consolidated text of Government Decree 418/2024)",
+     "quote": "Az F4 besorolású adatok – kizárólag Magyarország területén, – felhőszolgáltatás igénybevétele esetén – harmadik fél által tanúsított privát felhőben vagy – kormányzati felhőben kezelhetők.",
+     "quote_english": "F4-class data may be processed only on the territory of Hungary and, where cloud services are used, only in a third-party-certified private cloud or in the government cloud.",
+     "title": "418/2024. (XII. 23.) Korm. rendelet a Magyarország kiberbiztonságáról szóló törvény végrehajtásáról, 1. melléklet",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a2400418.kor"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "hu",
+     "published": "2024-12-23",
+     "publisher": "Wolters Kluwer Jogtár (consolidated text of Government Decree 418/2024)",
+     "quote": "Az F1 besorolású adatok – földrajzi korlátozás nélkül, – nem privát felhőszolgáltatás igénybevétele esetén korlátozás nélkül kezelhetők és tárolhatók.",
+     "quote_english": "F1-class data may be processed and stored without geographic restriction and, when non-private cloud services are used, without restriction.",
+     "title": "418/2024. (XII. 23.) Korm. rendelet a Magyarország kiberbiztonságáról szóló törvény végrehajtásáról, 1. melléklet",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a2400418.kor"
+    }
+   ],
+   "id": "L1",
+   "research_note": "The Cybersecurity Act (Act LXIX of 2024, s. 9) and its implementing Government Decree 418/2024 bind public-administration bodies (Kbtv s. 1(1)(a)) to classify their data. Location limits then depend on the class. F4 data may be processed only in Hungary (government cloud or certified private cloud). SR2-class data may be stored only in EEA member states. F1 data has no geographic restriction. So there is a binding localisation rule, but it covers only the more sensitive categories, not government data generally, which makes this partial. I could not check the older National Data Assets Act (2010. évi CLVII.): net.jogtar returned 404 and njt.hu was unreachable.",
+   "review": {
+    "original": "partial",
+    "reason": "Kbtv s.9(4) (verbatim on page, applying to s.1(1)(a)-(c) public bodies) makes foreign processing and non-private cloud use depend on data classification, and Decree 418/2024 Annex 1 point 4.2.2.4 (verbatim) confines F4 data to Hungary, 4.2.1 confines SR2 data to the EEA, and 4.2.2.1 lets F1 data go anywhere, so the requirement is binding only for the more sensitive categories, which fits partial.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "hu",
+     "published": "2009",
+     "publisher": "Wolters Kluwer Jogtár (consolidated text of Act CLV of 2009)",
+     "quote": "rendkívül súlyosan károsítja a minősítéssel védhető közérdeket, akkor „Szigorúan titkos!”, b) súlyosan károsítja a minősítéssel védhető közérdeket, akkor „Titkos!”, c) károsítja a minősítéssel védhető közérdeket, akkor „Bizalmas!”",
+     "quote_english": "if it causes exceptionally grave damage to the public interest protectable by classification, then 'Top Secret!'; b) if it causes grave damage, then 'Secret!'; c) if it causes damage, then 'Confidential!'",
+     "title": "2009. évi CLV. törvény a minősített adat védelméről, 5. § (4)",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a0900155.tv"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Act CLV of 2009 on the protection of classified data, s. 5(4), sets out four classification levels in statute: Szigorúan titkos!, Titkos!, Bizalmas! and Korlátozott terjesztésű!. Separately, the Cybersecurity Act s. 9 together with Decree 418/2024 Annex 1 sets a binding confidentiality/integrity/availability classification (B1-B4, SR1-SR2, F1-F4) for unclassified government data.",
+   "review": {
+    "original": "yes",
+    "reason": "Act CLV of 2009 s.5(4) (quote verified verbatim) sets the statutory levels Szigorúan titkos!, Titkos!, Bizalmas! and Korlátozott terjesztésű!, so the classification scheme is established in statute.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "hu",
+     "publisher": "Nemzeti Kibervédelmi Intézet / national cybersecurity authority",
+     "quote": "A FedRAMP marketplace-en megtalálható listában szereplő felhőszolgáltatásokat a nemzeti kiberbiztonsági hatóság engedélyezett és a Vhr. 1. melléklet 4.2.2.2. pontjában definiált tanúsított felhőszolgáltatásként ismeri el.",
+     "quote_english": "The national cybersecurity authority recognises cloud services on the FedRAMP marketplace list as authorised, certified cloud services as defined in point 4.2.2.2 of Annex 1 of the implementing decree.",
+     "title": "Felhő – harmadik fél által tanúsított felhőszolgáltatások (Cloud – third-party certified cloud services)",
+     "url": "https://nki.gov.hu/hatosag/tartalom/felho/"
+    }
+   ],
+   "id": "L3",
+   "research_note": "The national cybersecurity authority's list of certifications accepted for 'third-party certified' cloud under Decree 418/2024 contains CSA CCM, NIST SP 500-292, ISO/IEC 27017/27018, BSI C5, SOC 2 and the US FedRAMP marketplace. None of these requires immunity from non-EU law, and US FedRAMP services are explicitly recognised as certified. The certification regime that does apply therefore has no SecNumCloud-type immunity requirement. I found no Hungarian immunity-based certification.",
+   "review": {
+    "original": "no",
+    "reason": "The NKI authority page states verbatim that services on the US FedRAMP marketplace count as certified cloud under Vhr. Annex 1 point 4.2.2.2, and the accepted frameworks list contains no immunity-from-non-EU-law requirement, so no SecNumCloud-type certification applies.",
+    "reviewed": "no"
+   },
+   "value": "no"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "hu",
+     "publisher": "Kormányzati Hitelesítés Szolgáltató (GovCA), NISZ Zrt.",
+     "quote": "A NISZ Nemzeti Infokommunikációs Szolgáltató Zrt. kijelölt kormányzati hitelesítés-szolgáltatóként (GovCA) bizalmi szolgáltatásokat és egyéb PKI szolgáltatásokat nyújt.",
+     "quote_english": "NISZ National Infocommunications Service Company, as the designated government certification service provider (GovCA), provides trust services and other PKI services.",
+     "title": "Kormányzati Hitelesítés Szolgáltató – Kik vagyunk",
+     "url": "https://hiteles.gov.hu/cikk/185/kormanyzati_hitelesites_szolgaltato"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "hu",
+     "publisher": "NISZ Nemzeti Infokommunikációs Szolgáltató Zrt.",
+     "quote": "A NISZ Zrt. felett a tulajdonosi jogokat 2022 szeptemberétől a Digitális Magyarország Ügynökség (DMÜ) gyakorolja.",
+     "quote_english": "Since September 2022, ownership rights over NISZ Zrt. have been exercised by the Digital Hungary Agency (DMÜ).",
+     "title": "Cégbemutató – NISZ Nemzeti Infokommunikációs Szolgáltató Zrt.",
+     "url": "https://nisz.hu/rolunk/cegbemutato"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Hungarian trusted list (https://www.nmhh.hu/tl/pub/HU_TL.xml, located via the EU LOTL) lists NISZ Zrt. as a qualified TSP. Its services with status 'granted' include 'GovCA Minősített Közigazgatási Tanúsítványkiadó', 'GovCA Minősített Tanúsítványkiadó 2024', 'Digitális Állampolgárság Tanúsítványkiadó (DAP-CA)' and a qualified timestamp CA. NISZ is the designated government CA, and the Digital Hungary Agency, a state agency, exercises ownership over it. Private qualified TSPs (Microsec, NetLock and others) also appear on the list.",
+   "review": {
+    "original": "yes",
+    "reason": "hiteles.gov.hu states verbatim that NISZ Zrt. is the designated government certification service provider (GovCA), and nisz.hu states verbatim that the Digital Hungary Agency, a state agency, has exercised ownership rights over NISZ since September 2022, so the operator is state-controlled.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "hu",
+     "published": "2023",
+     "publisher": "Wolters Kluwer Jogtár (consolidated text of Act CIII of 2023)",
+     "quote": "a Kormány által kötelezően biztosított elektronikus azonosítási szolgáltatás kapcsán annak hiteles biztosításához és mások jogának vagy jogos érdekének védelme érdekében az érintett személy azonosításához szükséges adatok és technikai azonosítók kezelése",
+     "quote_english": "regarding the electronic identification service that the Government is obliged to provide: processing the data and technical identifiers needed to identify the person, so that the service is provided authentically and the rights or legitimate interests of others are protected",
+     "title": "2023. évi CIII. törvény a digitális államról és a digitális szolgáltatások nyújtásának egyes szabályairól (Dáptv.), 12. §",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a2300103.tv"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "hu",
+     "published": "2023",
+     "publisher": "Wolters Kluwer Jogtár (consolidated text of Act CIII of 2023)",
+     "quote": "a digitális keretalkalmazás, a digitális keretszolgáltatások és az életesemény-alapú szolgáltatások nyújtására a Kormány által kijelölt szervre, valamint a digitális állampolgárság szolgáltatóra.",
+     "quote_english": "[the Act extends] to the body designated by the Government to provide the digital framework application, digital framework services and life-event-based services, and to the digital citizenship provider.",
+     "title": "2023. évi CIII. törvény a digitális államról (Dáptv.), 1. § (3)",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a2300103.tv"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "hu",
+     "publisher": "Digitális Magyarország Ügynökség (Digital Hungary Agency)",
+     "quote": "A DMÜ közvetlen módon 6 társaság felett látja el a tulajdonosi jogokat.",
+     "quote_english": "The Digital Hungary Agency directly exercises ownership rights over six companies (the list starts with IdomSoft Zrt., developer of the Digital Citizenship Programme).",
+     "title": "Portfólió – Digitális Magyarország Ügynökség",
+     "url": "https://www.dmu.gov.hu/cikkek/portfolio"
+    }
+   ],
+   "id": "K2",
+   "research_note": "Hungary's national eID runs through the Digital Citizenship Programme (DÁP) and the eSzemélyi card, under Act CIII of 2023, which provides for a Government-provided electronic identification service. The dap.gov.hu imprint names IdomSoft Informatikai Zrt. as the service provider. The DMÜ portfolio page lists IdomSoft first among the six companies over which the Digital Hungary Agency (a state agency) exercises ownership, and says it co-develops DÁP. NISZ (also owned via DMÜ) runs the DAP-CA on the trusted list. I did not check the EC notified-eID list page, which is JavaScript-rendered.",
+   "review": {
+    "original": "yes",
+    "reason": "Both Dáptv quotes (s.12 on the Government-mandated eID service and s.1(3)(b) on the Government-designated digital citizenship provider) are verbatim on the page, the DMÜ portfolio page verbatim lists IdomSoft Zrt. among its six state-owned companies as a developer of the Digital Citizenship Programme, and the dap.gov.hu imprint names IdomSoft as service provider, so the scheme is operated by a state-controlled body.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "hu",
+     "publisher": "NISZ Nemzeti Infokommunikációs Szolgáltató Zrt.",
+     "quote": "A Kormányzati Adatközpont két fő szolgáltatása a fizikai szerver hoszting szolgáltatás és a virtuális adatközpont szolgáltatás.",
+     "quote_english": "The Government Data Centre's two main services are physical server hosting and virtual data centre services.",
+     "title": "Szolgáltatásaink – NISZ Zrt.",
+     "url": "https://nisz.hu/szolgaltatasaink"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "hu",
+     "publisher": "Digitális Magyarország Ügynökség (Digital Hungary Agency)",
+     "quote": "egyedi döntésében megállapítja a Kormányzati Adatközpont szolgáltatások kötelező igénybevételét vagy az alóli teljes vagy időleges mentességet",
+     "quote_english": "[the Agency] decides case by case whether Government Data Centre services must be used, or grants a full or temporary exemption from that obligation",
+     "title": "Rólunk – Digitális Magyarország Ügynökség",
+     "url": "https://www.dmu.gov.hu/rolunk"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The Government Data Centre (Kormányzati Adatközpont, KAK) is operated today by NISZ Zrt., which the Digital Hungary Agency owns. NISZ describes it as a centrally built IT system 'in government hands' offering hosting and virtual data centre services to about 300 institutions. The DMÜ decides when its use is mandatory for public bodies.",
+   "review": {
+    "original": "yes",
+    "reason": "nisz.hu verbatim describes the Government Data Centre's hosting and virtual data centre services as a centrally built system 'in government hands' currently offered by state-owned NISZ, and dmu.gov.hu verbatim confirms the DMÜ decides whether public bodies must use it, so it is state-operated and in operation.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "hu",
+     "publisher": "NISZ Nemzeti Infokommunikációs Szolgáltató Zrt.",
+     "quote": "Ezt alapvetően két környezetben a Kormányzati Felhőben és a Kormányzati Adatközpontban valósítjuk meg. A két környezetben eltérő szolgáltatói modell és eltérő jogszabályi előírások szerint nyújtjuk a szolgáltatásokat. A Kormányzati Felhőben a központi kiszolgáló erőforrásait infrastruktúra szolgáltatás (Infrastructure as a Service – IaaS) formában biztosítjuk.",
+     "quote_english": "We provide this mainly in two environments, the Government Cloud and the Government Data Centre, each under a different service model and different legal requirements. In the Government Cloud we provide central server resources as Infrastructure as a Service (IaaS).",
+     "title": "Szolgáltatásaink – NISZ Zrt.",
+     "url": "https://nisz.hu/szolgaltatasaink"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "hu",
+     "published": "2024-12-23",
+     "publisher": "Wolters Kluwer Jogtár (consolidated text of Government Decree 418/2024)",
+     "quote": "Az F4 besorolású adatok – kizárólag Magyarország területén, – felhőszolgáltatás igénybevétele esetén – harmadik fél által tanúsított privát felhőben vagy – kormányzati felhőben kezelhetők.",
+     "quote_english": "F4-class data may be processed only on the territory of Hungary and, where cloud services are used, only in a third-party-certified private cloud or in the government cloud.",
+     "title": "418/2024. (XII. 23.) Korm. rendelet, 1. melléklet 4.2.2.4.",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a2400418.kor"
+    }
+   ],
+   "id": "C2",
+   "research_note": "NISZ Zrt. (state-owned through the Digital Hungary Agency) currently offers the Government Cloud (Kormányzati Felhő) as an IaaS service to public-sector customers. Decree 418/2024 names the government cloud as a permitted environment for the most sensitive (F4) data.",
+   "review": {
+    "original": "yes",
+    "reason": "nisz.hu states verbatim, in the present tense, that NISZ provides IaaS in the Government Cloud (Kormányzati Felhő) under its own legal rules, and Decree 418/2024 point 4.2.2.4 (verbatim) names the government cloud as a permitted environment for F4 data, so it is an operating platform serving government workloads, not an announcement.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "HU"
+}

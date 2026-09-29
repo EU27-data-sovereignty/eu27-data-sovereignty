@@ -1,0 +1,207 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2019-10",
+     "publisher": "Office of the Government Chief Information Officer (OGCIO)",
+     "quote": "Data, including personal data, can be located in other EEA member states (EU plus Iceland, Liechtenstein and Norway).",
+     "quote_english": "Same (English original).",
+     "title": "Cloud Computing Advice Note (October 2019)",
+     "url": "https://assets.per.gov.ie/documents/4468be59812f40dda7003116cf05f196_1.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2019-10",
+     "publisher": "Office of the Government Chief Information Officer (OGCIO)",
+     "quote": "potentially suitable for any category of public service information or system except where such data would be classified as ‘top secret’ as per Circular 39/07",
+     "quote_english": "Same (English original).",
+     "title": "Cloud Computing Advice Note (October 2019)",
+     "url": "https://assets.per.gov.ie/documents/4468be59812f40dda7003116cf05f196_1.pdf"
+    }
+   ],
+   "id": "L1",
+   "research_note": "No Irish statute or binding regulation was found that requires government data to be stored under national or EU jurisdiction. The government's own cloud guidance (the OGCIO Cloud Computing Advice Note, still the current reference on ogcio.gov.ie, updated 2025) treats data location as each organisation's due-diligence choice. It says data may sit in other EEA states, and it lists 'nationally, EEA, non-EEA' as options to weigh. Only 'top secret' data, under Department of Finance Circular 39/07, is kept out of cloud. That exclusion is not a rule about jurisdiction. The rating is 'no' on the strength of this guidance, not an explicit statutory statement, so confidence is moderate. The second quote contains a curly apostrophe and a footnote marker ('39/071' in the PDF text); it matches the normalised PDF text up to '39/07'. gov.ie pages returned 403 to automated fetches.",
+   "review": {
+    "original": "no",
+    "reason": "Both quotes appear in the 2019 OGCIO advice note, but they are policy guidance that allows EEA (and weighs non-EEA) locations. Neither says that no statute or binding regulation requires national or EU jurisdiction, and the definition asks for that statement.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2019-10",
+     "publisher": "Office of the Government Chief Information Officer (OGCIO)",
+     "quote": "While some organisations have a data classification system in place (for example the Department of Foreign Affairs and Trade), others do not and there are no central classification rules in place except for information defined as",
+     "quote_english": "Same (English original).",
+     "title": "Cloud Computing Advice Note (October 2019)",
+     "url": "https://assets.per.gov.ie/documents/4468be59812f40dda7003116cf05f196_1.pdf"
+    }
+   ],
+   "id": "L2",
+   "research_note": "The OGCIO states there are no central classification rules. The one exception is 'top secret', which Department of Finance Circular 39/07 defines. A circular is not a statute, which makes this 'partial'. No statute defining classification levels was found. Circular 39/07 itself was not fetched, because gov.ie blocked automated access.",
+   "review": {
+    "original": "partial",
+    "reason": "The quote is verbatim on p.10. It says there are no central classification rules except 'top secret', which Department of Finance Circular 39/07 defines, and a classification set only by a circular fits 'partial'.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2019-10",
+     "publisher": "Office of the Government Chief Information Officer (OGCIO)",
+     "quote": "There is no single relevant certification scheme for cloud computing and an EU study from 2018, Certification Schemes for Cloud Computing21, found that compliance with existing certification schemes is a big challenge for cloud service providers.",
+     "quote_english": "Same (English original).",
+     "title": "Cloud Computing Advice Note (October 2019)",
+     "url": "https://assets.per.gov.ie/documents/4468be59812f40dda7003116cf05f196_1.pdf"
+    }
+   ],
+   "id": "L3",
+   "research_note": "The government's cloud guidance says there is no single relevant cloud certification scheme and points to general schemes such as ISO 27001. No Irish scheme requiring immunity from non-EU law (SecNumCloud-type) was found on the OGCIO or NCSC (ncsc.gov.ie/guidance) sites. The source dates from 2019, so 'no' reflects the latest authoritative statement found, and confidence is moderate. The quote includes a footnote marker ('Computing21') as it appears in the PDF text layer; if the checker rejects it, use the shorter first clause, which is 10 words.",
+   "review": {
+    "original": "no",
+    "reason": "The quote is verbatim, footnote marker included. The note says there is no single relevant cloud certification scheme and points to general schemes such as ISO 27001, so a SecNumCloud-type certification is ruled out as of 2019; the rating stays 'no', with moderate confidence because the source is old.",
+    "reviewed": "partial"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2026-08-13",
+     "publisher": "Department of the Environment, Climate and Communications (scheme operator)",
+     "quote": "C=IE, L=Dublin, O=TrustPro QTSP Ltd, OU=QTSP, CN=TrustPro Qualified Root CA 1, OID.2.5.4.97=NTRIE-637218",
+     "quote_english": "Same (distinguished name of a granted qualified root CA of a private Irish company).",
+     "title": "Ireland Trusted List (signed TSL v6)",
+     "url": "https://eidas.gov.ie/Irelandtslsignedv6.xml"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2026-08-13",
+     "publisher": "Department of the Environment, Climate and Communications (scheme operator)",
+     "quote": "Post.Trust Ltd is a subsidiary of An Post",
+     "quote_english": "Same (English original).",
+     "title": "Ireland Trusted List (signed TSL v6)",
+     "url": "https://eidas.gov.ie/Irelandtslsignedv6.xml"
+    }
+   ],
+   "id": "K1",
+   "research_note": "Checked Ireland's trusted list (issued 2026-08-13; its location is taken from the EU LOTL). The only state-linked provider, Post.Trust Ltd (a subsidiary of the state-owned An Post), has its qualified certificate service marked 'withdrawn' since 2019-01-25. The qualified services currently granted belong to private firms: TrustPro QTSP Ltd, Adobe Systems Software Ireland, and Entaksi Solutions SpA Irish Branch. Namirial's services were withdrawn in 2026. No central government PKI root operated by the state was found. None of these providers was found to hold a state contract, which rules out 'partial', so the rating is 'no' (outside state control, though inside the EU). The quotes are text nodes in the XML file, which may matter for the automated checker.",
+   "review": {
+    "original": "no",
+    "reason": "Both quotes are in the TSL (issued 2026-08-13). Post.Trust, the An Post subsidiary, was withdrawn in 2019, and every qualified service now granted belongs to a private firm (TrustPro, Adobe, Entaksi), so the qualified trust anchor is outside state control and 'no' holds.",
+    "reviewed": "partial"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "Department of Social Protection",
+     "quote": "The Department of Social Protection (DSP) is the Data Controller for all data collected by MyGovID for the purpose of its business.",
+     "quote_english": "Same (English original).",
+     "title": "MyGovID Privacy Statement and Cookies",
+     "url": "https://www.mygovid.ie/en-IE/Privacy"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "Department of Social Protection",
+     "quote": "MyGovID Privacy Statement and Cookies This website is maintained by the Department of Social Protection.",
+     "quote_english": "Same (English original).",
+     "title": "MyGovID Privacy Statement and Cookies",
+     "url": "https://www.mygovid.ie/en-IE/Privacy"
+    }
+   ],
+   "id": "K2",
+   "research_note": "MyGovID is run and maintained by the Department of Social Protection, a government department, which acts as data controller. Whether the scheme has been notified under eIDAS was not checked, because the EU dashboard is a JavaScript application and web search was unavailable.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are verbatim on the MyGovID privacy page. They show that the Department of Social Protection, a government department, maintains MyGovID and is its data controller, which means a state body runs it.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2019-10",
+     "publisher": "Office of the Government Chief Information Officer (OGCIO)",
+     "quote": "delivers private Government Cloud services to public service organisations from Government Data Centres. The range and scale of services offered continues to expand and already includes compute and storage services i.e. IaaS.",
+     "quote_english": "Same (English original).",
+     "title": "Cloud Computing Advice Note (October 2019)",
+     "url": "https://assets.per.gov.ie/documents/4468be59812f40dda7003116cf05f196_1.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2025-07-30",
+     "publisher": "Office of the Government Chief Information Officer (OGCIO)",
+     "quote": "enabling public service bodies to locate their ICT infrastructure in a purpose-built Government owned and run facility. The multi-year project to deliver the Government Data Centre is underway.",
+     "quote_english": "Same (English original).",
+     "title": "Build To Share",
+     "url": "https://www.ogcio.gov.ie/en/corporate-pages/policy/build-to-share/"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The OGCIO already delivers the private Government Cloud from existing Government Data Centres, according to the 2019 advice note. A new purpose-built, government-owned and government-run Government Data Centre is a multi-year project that is still underway, per the OGCIO page updated July 2025. The rating is 'yes' because government data centres operate today. The new facility on its own would only count as 'partial'.",
+   "review": {
+    "original": "yes",
+    "reason": "The 2019 note says the OGCIO delivers the private Government Cloud 'from Government Data Centres', which are therefore operating. The 2025 page's quote about a new purpose-built facility is verbatim and covers only an additional facility still under way, so 'yes' holds.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2025-07-30",
+     "publisher": "Office of the Government Chief Information Officer (OGCIO)",
+     "quote": "Delivers a shared robust, resilient, private Government Cloud infrastructure platform available for system/application hosting for all Public Bodies.",
+     "quote_english": "Same (English original).",
+     "title": "Build To Share",
+     "url": "https://www.ogcio.gov.ie/en/corporate-pages/policy/build-to-share/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2025-07-30",
+     "publisher": "Office of the Government Chief Information Officer (OGCIO)",
+     "quote": "The Government Cloud means that smaller departments and offices will not have to support their own hardware.",
+     "quote_english": "Same (English original).",
+     "title": "Infrastructure",
+     "url": "https://www.ogcio.gov.ie/en/corporate-pages/services/infrastructure/"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The OGCIO runs the Build to Share private Government Cloud, which is available to all public bodies. The 2019 advice note says it already provides IaaS compute and storage, with organisations being moved onto it through an ongoing programme.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are verbatim on OGCIO pages last updated 2025-07-30. They describe the private Government Cloud in the present tense as available to all public bodies, and the 2019 note confirms IaaS is already delivered with organisations being moved onto it, so the cloud is in operation.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "IE"
+}

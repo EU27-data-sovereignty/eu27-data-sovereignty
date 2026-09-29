@@ -1,0 +1,199 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "sl",
+     "published": "2018-04-27",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Storitve računalništva v javno dostopnem oblaku se lahko uporabljajo le za obravnavo informacijskih premoženj, ki niso uvrščena v varnostne razrede ali so uvrščena v varnostne razrede Z1, C1 in R1.",
+     "quote_english": "Public cloud computing services may be used only for information assets that are not assigned to security classes or are assigned to security classes Z1, C1 and R1.",
+     "title": "Uredba o informacijski varnosti v državni upravi (Uradni list RS, št. 29/2018), 41. člen",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2018-01-1272/uredba-o-informacijski-varnosti-v-drzavni-upravi"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "sl",
+     "publisher": "Ministrstvo za notranje zadeve in javno upravo (GOV.SI)",
+     "quote": "Na tej infrastrukturi se izvajajo storitve, ki uporabljajo občutljive, osebne in druge podatke in informacije, ki jih država ne želi shranjevati zunaj svojega okolja.",
+     "quote_english": "This infrastructure runs services that use sensitive, personal and other data and information that the state does not want to store outside its own environment.",
+     "title": "Informatika v državni upravi",
+     "url": "https://www.gov.si/teme/informatika-v-drzavni-upravi/"
+    }
+   ],
+   "id": "L1",
+   "research_note": "The binding Government Decree on Information Security in State Administration (Art. 41) bars public cloud use for information assets in higher security classes (above Z1/C1/R1) and requires ministry approval otherwise; this keeps higher-class data on state infrastructure but is not an explicit national/EU jurisdiction clause for government data generally. The ministry states the state cloud (DRO) hosts data the state does not want stored outside its environment (policy, not statute). No statute found expressly requiring all government data to be stored under Slovenian/EU jurisdiction; hence partial (restriction applies only to classified/higher security classes). The new information security act (NIS2 transposition) was not checked for a localisation clause.",
+   "review": {
+    "original": "partial",
+    "reason": "Art. 41 of the 2018 Decree is quoted correctly, but it only limits public-cloud use to assets in lower security classes and requires ministry approval; the fetched text sets no national or EU storage or jurisdiction requirement, and the gov.si DRO sentence is a policy statement, not binding law.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "sl",
+     "published": "2006-05-16",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "STROGO TAJNO, ki se določi za tajne podatke, katerih razkritje nepoklicani osebi bi ogrozilo vitalne interese Republike Slovenije ali jim nepopravljivo škodovalo",
+     "quote_english": "TOP SECRET, assigned to classified information whose disclosure to an unauthorised person would endanger or irreparably damage the vital interests of the Republic of Slovenia",
+     "title": "Zakon o tajnih podatkih (uradno prečiščeno besedilo) (ZTP-UPB2), 13. člen",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2006-01-2128/zakon-o-tajnih-podatkih-uradno-precisceno-besedilo-ztp-upb2"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "sl",
+     "published": "2006-05-16",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "V organih se smejo za določanje stopenj tajnosti podatkov uporabljati samo stopnje, določene v prejšnjem odstavku.",
+     "quote_english": "Bodies may use only the levels set out in the preceding paragraph when determining the classification level of data.",
+     "title": "Zakon o tajnih podatkih (uradno prečiščeno besedilo) (ZTP-UPB2), 13. člen",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2006-01-2128/zakon-o-tajnih-podatkih-uradno-precisceno-besedilo-ztp-upb2"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Article 13 of the Classified Information Act (ZTP) defines four statutory levels: STROGO TAJNO, TAJNO, ZAUPNO, INTERNO. In addition, the 2018 Government Decree on Information Security sets binding security classes (Z/C/R) for unclassified information assets.",
+   "review": {
+    "original": "yes",
+    "reason": "Art. 13 of the Classified Information Act (ZTP-UPB2) contains both quoted passages, which set statutory classification levels that bodies must use.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "No Slovenian cloud certification requiring immunity from non-EU law (SecNumCloud-type) was found. Checked: Decree on Information Security in State Administration (2018), which only requires ministry approval of public cloud use and limits it to lower security classes, with no certification or immunity criteria; the Ministry of the Interior and Public Administration informatics pages (DRO, security policy). No authoritative statement that no such scheme exists was found either, so unknown rather than no. Web search budget was exhausted, which limited the search for any newer instrument under the information security act.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were cited and no source was found either way, so unknown stands.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "sl",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "Državni center za storitve zaupanja SI-TRUST deluje v sklopu Ministrstva za notranje zadeve in javno upravo",
+     "quote_english": "The State Trust Services Centre SI-TRUST operates within the Ministry of the Interior and Public Administration",
+     "title": "O nas",
+     "url": "https://www.si-trust.gov.si/sl/o-nas"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "sl",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "Državni center za storitve zaupanja upravlja s korenskim izdajateljem SI-TRUST Root, izdajateljem kvalificiranih digitalnih potrdil SIGEN-CA, izdajateljem kvalificiranih digitalnih potrdil SIGOV-CA",
+     "quote_english": "The State Trust Services Centre manages the root issuer SI-TRUST Root, the qualified certificate issuer SIGEN-CA and the qualified certificate issuer SIGOV-CA",
+     "title": "O nas",
+     "url": "https://www.si-trust.gov.si/sl/o-nas"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The government PKI root (SI-TRUST Root) and the qualified CAs SIGEN-CA/SIGOV-CA are run by the State Trust Services Centre, part of a ministry (since the 2026 reorganisation, the Ministry of the Interior and Public Administration). The EU Trusted List browser was not fetched because it is JavaScript-rendered.",
+   "review": {
+    "original": "yes",
+    "reason": "The SI-TRUST 'O nas' page confirms verbatim that SI-TRUST operates within the Ministry of the Interior and Public Administration and runs SI-TRUST Root and the qualified CAs SIGEN-CA and SIGOV-CA.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "sl",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "je skrbnik storitve za spletno prijavo in e-podpis SI-PASS ter izdaja mobilno identiteto smsPASS",
+     "quote_english": "is the custodian of the SI-PASS online login and e-signature service and issues the smsPASS mobile identity",
+     "title": "O nas",
+     "url": "https://www.si-trust.gov.si/sl/o-nas"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "sl",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "Storitev SI-PASS je enotna točka za preverjanje identitete različnih uporabnikov (državljanov, poslovnih subjektov, javnih uslužbencev) ter elektronsko podpisovanje vlog in ostalih dokumentov.",
+     "quote_english": "The SI-PASS service is the single point for verifying the identity of various users (citizens, business entities, public employees) and for electronically signing applications and other documents.",
+     "title": "Spletna prijava in e-podpis SI-PASS",
+     "url": "https://www.si-trust.gov.si/sl/si-pass"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "sl",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "Elektronska osebna izkaznica je del osebne izkaznice, ki jo pridobite osebno na upravni enoti ali diplomatsko-konzularnem predstavništvu.",
+     "quote_english": "The electronic identity card is part of the identity card, which you obtain in person at an administrative unit or a diplomatic-consular mission.",
+     "title": "Elektronska osebna izkaznica",
+     "url": "https://www.si-trust.gov.si/sl/eoi"
+    }
+   ],
+   "id": "K2",
+   "research_note": "SI-PASS (the national login and eID hub) and the eID certificates on the electronic identity card (eOsebna) are operated by SI-TRUST inside the ministry. The card is issued by state administrative units. The eIDAS notified-schemes list was not fetched.",
+   "review": {
+    "original": "yes",
+    "reason": "The SI-TRUST pages confirm verbatim that the ministry-run centre is custodian of SI-PASS, the single identity-verification and e-signature point, and issues smsPASS, and that the eID card is issued at state administrative units.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "sl",
+     "publisher": "Ministrstvo za notranje zadeve in javno upravo (GOV.SI)",
+     "quote": "upravljamo sistemsko programsko in strojno opremo v podatkovnih centrih na centralni lokaciji, kjer deluje DRO (Državni Računalniški Oblak), ter v lokalnih podatkovnih centrih centraliziranih organov",
+     "quote_english": "we manage system software and hardware in the data centres at the central location where DRO (State Computing Cloud) runs, and in the local data centres of centralised bodies",
+     "title": "Sektor za podatkovno in strežniško infrastrukturo",
+     "url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-digitalno-infrastrukturo/sektor-za-podatkovno-in-streznisko-infrastrukturo/"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The ministry's Directorate for Informatics, through its Data and Server Infrastructure Sector, runs the state data centres: the central site hosting DRO and the local data centres of centralised bodies. Data-centre addresses and number of sites were not researched further.",
+   "review": {
+    "original": "yes",
+    "reason": "The ministry sector page confirms verbatim that it manages hardware and software in state data centres at the central DRO site and in local data centres of centralised bodies, which shows state operation today.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "sl",
+     "publisher": "Ministrstvo za notranje zadeve in javno upravo (GOV.SI)",
+     "quote": "Na tej infrastrukturi se izvajajo storitve, ki uporabljajo občutljive, osebne in druge podatke in informacije, ki jih država ne želi shranjevati zunaj svojega okolja.",
+     "quote_english": "This infrastructure runs services that use sensitive, personal and other data and information that the state does not want to store outside its own environment.",
+     "title": "Informatika v državni upravi",
+     "url": "https://www.gov.si/teme/informatika-v-drzavni-upravi/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "sl",
+     "publisher": "Ministrstvo za notranje zadeve in javno upravo (GOV.SI)",
+     "quote": "zagotavljamo brezhibno delovanje in optimalno uporabniško izkušnjo portala Državnega računalniškega oblaka.",
+     "quote_english": "we ensure the smooth operation and optimal user experience of the State Computing Cloud portal.",
+     "title": "Sektor za virtualizacijo in orkestracijo",
+     "url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-digitalno-infrastrukturo/sektor-za-virt/"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The State Computing Cloud (Državni računalniški oblak, DRO) is in operation and hosts government services that handle sensitive and personal data. Ministry sectors run the platform and its self-service portal. The same page says DRO won an innovation award in 2015, so it has been running for about a decade.",
+   "review": {
+    "original": "yes",
+    "reason": "The gov.si page confirms verbatim that services handling sensitive and personal data run on the established State Computing Cloud (DRO), and the ministry sector page confirms it operates the DRO portal, so it is in operation, not announced.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "SI"
+}

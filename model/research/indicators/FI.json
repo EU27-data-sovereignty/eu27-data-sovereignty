@@ -1,0 +1,196 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "fi",
+     "publisher": "Finlex / Oikeusministeriö",
+     "quote": "Turvallisuusverkkoon välittömästi kuuluvien laitetilojen ja laitteiden on sijaittava ja palvelut on tuotettava Suomessa. Turvallisuusverkon laitetilojen, laitteiden ja palvelutuotannon hallinta ja valvonta on hoidettava Suomessa.",
+     "quote_english": "Equipment facilities and equipment belonging directly to the security network must be located, and services produced, in Finland. Management and supervision of the security network's facilities, equipment and service production must be carried out in Finland.",
+     "title": "Laki turvallisuusverkkotoiminnasta (10/2015), 5 §",
+     "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2015/10/fin@"
+    }
+   ],
+   "id": "L1",
+   "research_note": "Act 10/2015 on security network operations (TUVE), section 5, requires the government security network's facilities, equipment and services to be located and managed in Finland (with a narrow operational-necessity exception). This is sector-specific (security-network users: state leadership, defence, police, border guard, rescue services etc.), not a general requirement for all government data. Decree 1101/2019 on security classification and Act 906/2019 on information management were checked and contain no data-location clause. Hence partial.",
+   "review": {
+    "original": "partial",
+    "reason": "The Act 10/2015 s.5 quote is on the Finlex page word for word. It requires the security network's facilities and services to be in Finland and managed there (with an operational-necessity exception), which covers one named sector only and fits partial.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "fi",
+     "publisher": "Finlex / Oikeusministeriö",
+     "quote": "Tiedonhallintalain 18 §:n 1 momentissa tarkoitetut turvallisuusluokiteltavat asiakirjat jaetaan seuraaviin turvallisuusluokkiin",
+     "quote_english": "Documents to be security-classified under section 18(1) of the Information Management Act are divided into the following security classes",
+     "title": "Valtioneuvoston asetus asiakirjojen turvallisuusluokittelusta valtionhallinnossa (1101/2019), 3 §",
+     "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2019/1101/fin@"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "fi",
+     "publisher": "Finlex / Oikeusministeriö",
+     "quote": "turvallisuusluokan I asiakirja, jos asiakirjaan sisältyvän salassa pidettävän tiedon oikeudeton paljastuminen tai oikeudeton käyttö voi aiheuttaa erityisen suurta vahinkoa",
+     "quote_english": "a security class I document, if unauthorised disclosure or use of the confidential information in it may cause exceptionally great damage",
+     "title": "Valtioneuvoston asetus asiakirjojen turvallisuusluokittelusta valtionhallinnossa (1101/2019), 3 §",
+     "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2019/1101/fin@"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Government Decree 1101/2019 (issued under section 18 of the Act on Information Management in Public Administration 906/2019) defines security classes I-IV for state authorities. Binding regulation, so yes.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are in Government Decree 1101/2019 s.3, a binding regulation issued under the Information Management Act s.18, which sets security classes I-IV, so the value stays yes.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "No web search available in this run (session search budget exhausted). Checked the NCSC-FI (Traficom) assessment/approval pages; they list Katakri/assessment guidance and approved assessment bodies but no cloud certification requiring immunity from non-EU law. Finland's PiTuKri cloud security criteria are known to exist but are a security assessment criteria set, not an immunity/sovereignty certification; no authoritative statement found that such a certification does not exist, so unknown rather than no.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were given, and I may not upgrade or add evidence, so the value stays unknown.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "fi",
+     "publisher": "Finlex / Oikeusministeriö",
+     "quote": "Väestörekisterikeskuksen tehtävänä on tuottaa, tarjota ja hallinnoida varmennetussa sähköisessä asioinnissa käytettäväksi tarkoitettu kansalaisvarmenne sekä sen käyttöön välittömästi liittyvät varmennehakemisto- ja sulkulistapalvelut.",
+     "quote_english": "The Population Register Centre's task is to produce, provide and manage the citizen certificate for certified electronic transactions and the directly related certificate directory and revocation list services.",
+     "title": "Laki väestötietojärjestelmästä ja Väestörekisterikeskuksen varmennepalveluista (661/2009), 61 §",
+     "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2009/661/fin@"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Finnish national trusted list (https://dp.trustedlist.fi/fi-tl.xml, published by Traficom) contains exactly one trust service provider: Digital and Population Data Services Agency (DVV, formerly Population Register Centre VRK), a state agency, with its citizen, organisational, service and healthcare qualified CAs and qualified validation service. The statute quoted (original 2009 text; the agency was renamed DVV in 2020) assigns the certificate function to the state agency. Trusted-list XML not quoted because entries are short tagged names.",
+   "review": {
+    "original": "yes",
+    "reason": "The quote is in Act 661/2009 s.61. It gives the state Population Register Centre (now DVV) the job of producing and managing the citizen certificate and its certificate directory and revocation services, so a state body runs the trust service.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fi",
+     "publisher": "Digi- ja väestötietovirasto (DVV)",
+     "quote": "Digi- ja väestötietovirasto ylläpitää palvelun tunnistusvälinevalikoimaa ja vastaa mahdollisista sopimuksista tunnistusvälineiden tarjoajien kanssa.",
+     "quote_english": "The Digital and Population Data Services Agency maintains the service's selection of identification means and is responsible for agreements with identification-means providers.",
+     "title": "Tunnistus (Suomi.fi-tunnistus)",
+     "url": "https://dvv.fi/suomi.fi-tunnistus"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fi",
+     "publisher": "Digi- ja väestötietovirasto (DVV)",
+     "quote": "valtion hallintoviranomaisten ja virastojen, laitosten ja liikelaitosten sekä kunnallisten viranomaisten tulee tarjota lakisääteisiin palveluihin liittyvä tunnistautuminen Suomi.fi-tunnistus -palvelulla.",
+     "quote_english": "state administrative authorities, agencies, institutions and enterprises and municipal authorities must provide identification for statutory services through the Suomi.fi e-Identification service.",
+     "title": "Tunnistus (Suomi.fi-tunnistus)",
+     "url": "https://dvv.fi/suomi.fi-tunnistus"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "fi",
+     "publisher": "Finlex / Oikeusministeriö",
+     "quote": "Väestörekisterikeskus tuottaa ja kehittää 3 §:n 1 momentin 1–7 kohdissa tarkoitettuja tukipalveluja.",
+     "quote_english": "The Population Register Centre produces and develops the support services referred to in section 3(1)(1-7) [which include the identification service for natural persons].",
+     "title": "Laki hallinnon yhteisistä sähköisen asioinnin tukipalveluista (571/2016), 4 §",
+     "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2016/571/fin@"
+    }
+   ],
+   "id": "K2",
+   "research_note": "Suomi.fi e-Identification is operated by the state agency DVV under Act 571/2016 (the consolidated text still names its predecessor VRK). Caveat: most identification means routed through the hub are private (bank credentials, mobile certificate from operators), while DVV itself issues the citizen certificate on the ID card. The eIDAS notified-scheme list was not checked in this run.",
+   "review": {
+    "original": "yes",
+    "reason": "All three quotes are on their pages: DVV maintains Suomi.fi e-Identification, state and municipal authorities must use it, and Act 571/2016 s.4 names the state agency as producer of the s.3(1)(4) identification service, so the scheme is state-operated even though many of the identification methods are private.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "fi",
+     "publisher": "Finlex / Oikeusministeriö",
+     "quote": "Turvallisuusverkkoon välittömästi kuuluvat laitetilat ja laitteet omistaa tai niitä hallitsee Suomen valtio.",
+     "quote_english": "The equipment facilities and equipment belonging directly to the security network are owned or controlled by the Finnish state.",
+     "title": "Laki turvallisuusverkkotoiminnasta (10/2015), 5 §",
+     "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2015/10/fin@"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "fi",
+     "publisher": "Finlex / Oikeusministeriö",
+     "quote": "Turvallisuusverkon verkko- ja infrastruktuuripalvelujen tuottajana toimii valtion kokonaan omistama Suomen Erillisverkot Oy -niminen osakeyhtiö.",
+     "quote_english": "The wholly state-owned limited company Suomen Erillisverkot Oy acts as the producer of the security network's network and infrastructure services.",
+     "title": "Laki turvallisuusverkkotoiminnasta (10/2015), 6 §",
+     "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2015/10/fin@"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fi",
+     "publisher": "Suomen Erillisverkot Oy",
+     "quote": "Konesalimme on rakennettu täyttämään KATAKRI-turvaluokitustason 3 (TLIII) tai 4 (TLIV) vaatimukset.",
+     "quote_english": "Our data centres are built to meet the requirements of KATAKRI security classification level 3 (TL III) or 4 (TL IV).",
+     "title": "Konesalipalvelu",
+     "url": "https://www.erillisverkot.fi/palvelut/konesali-ja-suojatilat/"
+    }
+   ],
+   "id": "C1",
+   "research_note": "State-owned special-purpose company Suomen Erillisverkot Oy operates data centres (Katakri TL III/IV) for authorities; the same page states it is wholly state-owned. Act 10/2015 places the security-network facilities under state ownership/control with Erillisverkot as operator.",
+   "review": {
+    "original": "yes",
+    "reason": "The quotes from Act 10/2015 ss.5-6 (state ownership/control, wholly state-owned Erillisverkot as operator) and the Katakri TL III/IV data-centre statement on erillisverkot.fi are all on their pages. The same site says the company is wholly state-owned, so these are state-controlled data centres in operation.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fi",
+     "publisher": "Suomen Erillisverkot Oy",
+     "quote": "Erillisverkot tarjoaa turvallista virtuaalista konesalipalvelua viranomaisille ja valtionhallinnon toimijoille sekä eräille näitä toimijoita tukeville organisaatioille.",
+     "quote_english": "Erillisverkot offers a secure virtual data centre service to authorities and state administration actors and certain organisations supporting them.",
+     "title": "Turvapilvipalvelu (Virtuaalinen konesalipalvelu)",
+     "url": "https://www.erillisverkot.fi/palvelut/virtuaalinen-konesali/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fi",
+     "publisher": "Suomen Erillisverkot Oy",
+     "quote": "Erillisverkkojen omistama, operoima ja hallinnoima virtuaalinen konesalipalvelu, joka on täysin ohjelmisto-ohjattu kokonaisratkaisu.",
+     "quote_english": "A virtual data centre service owned, operated and managed by Erillisverkot, a fully software-defined overall solution.",
+     "title": "Turvapilvipalvelu (Virtuaalinen konesalipalvelu)",
+     "url": "https://www.erillisverkot.fi/palvelut/virtuaalinen-konesali/"
+    }
+   ],
+   "id": "C2",
+   "research_note": "Erillisverkot's Turvapilvi (security cloud) is an operational domestic cloud for authorities and state administration, run by a wholly state-owned company; the page lists it as a current service with government references (e.g. Border Guard). Valtori's cloud-transition pages were noted but not used.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are on the Erillisverkot virtual data centre page. It describes a current service for authorities and state administration, owned, operated and managed by the state-owned company, with a self-service portal available, so it is in operation rather than just announced.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "FI"
+}

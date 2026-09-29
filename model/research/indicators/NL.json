@@ -1,0 +1,260 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "published": "2026-07-30",
+     "publisher": "Tweede Kamer der Staten-Generaal (letter from the State Secretary of Economic Affairs and Climate)",
+     "quote": "Het gebruik van publieke clouddiensten blijft niet toegestaan voor staatsgeheime gerubriceerde informatie en voor te beschermen belangen (TBB) niveau 1 tot en met 3.",
+     "quote_english": "The use of public cloud services remains prohibited for state-secret classified information and for interests-to-be-protected (TBB) levels 1 to 3.",
+     "title": "Kamerstuk 26643 nr. 1541 - Herziening Rijksbreed Cloudbeleid 2026",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-1264433.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "published": "2026-07-30",
+     "publisher": "Tweede Kamer der Staten-Generaal (letter from the State Secretary of Economic Affairs and Climate)",
+     "quote": "Bij gebruik van publieke cloud is opslag en verwerking beperkt tot de landen van de EER en worden data versleuteld (behalve wanneer het openbare data betreft).",
+     "quote_english": "When public cloud is used, storage and processing are restricted to EEA countries and data are encrypted (except for public data).",
+     "title": "Kamerstuk 26643 nr. 1541 - Herziening Rijksbreed Cloudbeleid 2026",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-1264433.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "published": "2026-07-30",
+     "publisher": "Tweede Kamer der Staten-Generaal (letter from the State Secretary of Economic Affairs and Climate)",
+     "quote": "Het aangescherpte beleid zal gelden voor de gehele rijksoverheid, met uitzondering van de Hoge Colleges van Staat en het ministerie van Defensie.",
+     "quote_english": "The tightened policy will apply to the entire central government, except the High Councils of State and the Ministry of Defence.",
+     "title": "Kamerstuk 26643 nr. 1541 - Herziening Rijksbreed Cloudbeleid 2026",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-1264433.pdf"
+    }
+   ],
+   "id": "L1",
+   "research_note": "The location rules come from the Rijksbreed Cloudbeleid 2026, a cabinet policy adopted by the Council of Ministers on 3 July 2026. It is not a statute. It limits public-cloud storage and processing to the EEA, bans public cloud for state-secret information, and applies to central government only, with Defence and the High Councils of State excluded and a 4-year transition period. The binding VIRBI 2025 decree (Stcrt. 2025, 30222) was checked: it sets security measures for classified information but contains no storage-location or jurisdiction clause. No statute requiring national or EU jurisdiction for government data in general was found. The value is partial because the rule covers classified data and central government only, and the instrument is binding cabinet policy rather than law. A strict statute-only reading would make this 'unknown'.",
+   "review": {
+    "original": "partial",
+    "reason": "All three quotes appear verbatim in Kamerstuk 26643 nr. 1541, which is dated 3 July 2026, not 30 July. But the letter shows the rules are a cabinet cloud policy adopted by the Council of Ministers, not a statute or binding regulation, and the definition requires a statute or binding regulation even for 'partial', so the source does not establish that value.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "nl",
+     "published": "2025-09-08",
+     "publisher": "Ministerie van Algemene Zaken / Staatscourant",
+     "quote": "Staatsgeheim ZEER GEHEIM, afgekort ‘Stg.ZG’ of ‘Stg. ZEER GEHEIM’, indien kennisname door niet-geautoriseerden zeer ernstige schade kan toebrengen aan een van de vitale belangen van Nederland en de Nederlandse staat, of zijn bondgenoten",
+     "quote_english": "State secret TOP SECRET, abbreviated Stg.ZG, if disclosure to unauthorised persons could cause very serious damage to a vital interest of the Netherlands and the Dutch state, or its allies.",
+     "title": "Besluit voorschrift informatiebeveiliging Rijksdienst bijzondere informatie 2025 (VIRBI 2025), Staatscourant 2025, 30222",
+     "url": "https://zoek.officielebekendmakingen.nl/stcrt-2025-30222.html"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "nl",
+     "published": "2025-09-08",
+     "publisher": "Ministerie van Algemene Zaken / Staatscourant",
+     "quote": "Informatie waarvan de geheimhouding vanwege de vitale belangen van Nederland en de Nederlandse staat, van zijn bondgenoten of één of meer ministeries is geboden, moet worden voorzien van een passend niveau van rubricering.",
+     "quote_english": "Information whose secrecy is required because of the vital interests of the Netherlands and the Dutch state, its allies or one or more ministries must be given an appropriate classification level.",
+     "title": "Besluit voorschrift informatiebeveiliging Rijksdienst bijzondere informatie 2025 (VIRBI 2025), Staatscourant 2025, 30222",
+     "url": "https://zoek.officielebekendmakingen.nl/stcrt-2025-30222.html"
+    }
+   ],
+   "id": "L2",
+   "research_note": "VIRBI 2025 is a decree of the Minister-President, published in the Staatscourant and labelled 'algemeen verbindend voorschrift (ministeriële regeling)'. It replaced VIRBI 2013, which lapsed on 9 September 2025. Article 4 defines four levels: Departementaal Vertrouwelijk, Stg. Confidentieel, Stg. Geheim and Stg. Zeer Geheim. It also includes a table mapping these to NATO and EU levels.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes appear verbatim in Stcrt. 2025, 30222 (VIRBI 2025), which is labelled a generally binding ministerial regulation and defines the Stg. ZEER GEHEIM level, so the classification levels are set in a binding regulation.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "published": "2026-07",
+     "publisher": "Tweede Kamer der Staten-Generaal (letter from the State Secretary of Economic Affairs and Climate)",
+     "quote": "Momenteel bestaat er geen uniform vastgelegde definitie en bijbehorende criteria voor een soevereine cloud.",
+     "quote_english": "At present there is no uniformly established definition and associated criteria for a sovereign cloud.",
+     "title": "Kamerstuk 26643 nr. 1542 - Nationaal beleid voor de Nederlandse cloudmarkt",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-1263281.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "published": "2026-07",
+     "publisher": "Tweede Kamer der Staten-Generaal (letter from the State Secretary of Economic Affairs and Climate)",
+     "quote": "de Cloud & AI Development Act (CADA) als het primaire regelgevende kader ziet voor het vaststellen van een definitie en criteria van cloud soevereiniteit",
+     "quote_english": "[the cabinet] sees the Cloud & AI Development Act (CADA) as the primary regulatory framework for setting a definition and criteria of cloud sovereignty",
+     "title": "Kamerstuk 26643 nr. 1542 - Nationaal beleid voor de Nederlandse cloudmarkt",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-1263281.pdf"
+    }
+   ],
+   "id": "L3",
+   "research_note": "In its July 2026 letter the government states that no fixed definition or criteria for a sovereign cloud currently exist. It names the proposed EU Cloud & AI Development Act, still under negotiation, as the future framework. No national certification requiring immunity from non-EU law, comparable to SecNumCloud, was found in force or adopted for government use.",
+   "review": {
+    "original": "no",
+    "reason": "Both quotes appear verbatim in Kamerstuk 26643 nr. 1542 (3 July 2026): the government states that no uniform definition or criteria for a sovereign cloud currently exist and defers to the proposed EU Cloud & AI Development Act, which meets the 'no' definition.",
+    "reviewed": "no"
+   },
+   "value": "no"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "publisher": "Logius (Ministerie van Binnenlandse Zaken en Koninkrijksrelaties)",
+     "quote": "PKIoverheid is een afsprakenstelsel dat wordt beheerd door Logius. Het ministerie van Binnenlandse Zaken en Koninkrijksrelaties is de opdrachtgever.",
+     "quote_english": "PKIoverheid is a trust framework managed by Logius. The Ministry of the Interior and Kingdom Relations is the commissioning party.",
+     "title": "Wat is PKIoverheid?",
+     "url": "https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wat-pkioverheid"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "publisher": "Logius (Ministerie van Binnenlandse Zaken en Koninkrijksrelaties)",
+     "quote": "TSP’s geven de certificaten uit onder het vertrouwensanker van de Staat der Nederlanden zoals beschreven in de richtlijnen van het afsprakenstelsel.",
+     "quote_english": "TSPs issue certificates under the trust anchor of the State of the Netherlands as described in the framework's guidelines.",
+     "title": "Wat is PKIoverheid?",
+     "url": "https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wat-pkioverheid"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "publisher": "Logius",
+     "quote": "Logius is een agentschap van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties. We ontwikkelen en beheren producten en diensten voor de digitale overheid.",
+     "quote_english": "Logius is an agency of the Ministry of the Interior and Kingdom Relations. We develop and manage products and services for digital government.",
+     "title": "Onze organisatie",
+     "url": "https://www.logius.nl/over-ons/onze-organisatie"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The root of the government PKI, the 'Staat der Nederlanden' trust anchor, is run by Logius, an agency of the Interior Ministry (BZK). Certificates are issued by affiliated TSPs, some of them commercial, under that state root. The EU Trusted List browser for NL is a JavaScript application and was not quoted. The value rests on the operator's own site.",
+   "review": {
+    "original": "yes",
+    "reason": "All three quotes appear verbatim on the Logius pages: PKIoverheid is managed by Logius, an agency of the Interior Ministry (BZK), and trust service providers issue certificates under the 'Staat der Nederlanden' state trust anchor, so the root is state-controlled.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "publisher": "Logius",
+     "quote": "Dankzij onze diensten kan bijvoorbeeld iedereen inloggen met DigiD, en de eigen gegevens bekijken in MijnOverheid.",
+     "quote_english": "Thanks to our services everyone can, for example, log in with DigiD and view their own data in MijnOverheid.",
+     "title": "Onze organisatie",
+     "url": "https://www.logius.nl/over-ons/onze-organisatie"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "publisher": "Logius",
+     "quote": "Logius is een agentschap van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties. We ontwikkelen en beheren producten en diensten voor de digitale overheid.",
+     "quote_english": "Logius is an agency of the Ministry of the Interior and Kingdom Relations. We develop and manage products and services for digital government.",
+     "title": "Onze organisatie",
+     "url": "https://www.logius.nl/over-ons/onze-organisatie"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "publisher": "Logius",
+     "quote": "DigiD is een veilig en betrouwbaar middel waarmee gebruikers zich digitaal kunnen identificeren.",
+     "quote_english": "DigiD is a secure and reliable means by which users can identify themselves digitally.",
+     "title": "DigiD",
+     "url": "https://www.logius.nl/onze-dienstverlening/toegang/digid"
+    }
+   ],
+   "id": "K2",
+   "research_note": "DigiD, the citizen eID, is run by Logius, an agency of the Interior Ministry (BZK). Logius's 'wie doet wat' page says Logius is responsible for DigiD's availability, continuity and security. eHerkenning, the business login, is a separate framework served by private brokers and was not assessed as the national eID. Logius's organisation page lists a 'Mogelijke overname leverancier' item, which refers to the possible takeover of a hosting supplier. That item does not change who operates DigiD.",
+   "review": {
+    "original": "yes",
+    "reason": "All three quotes appear verbatim on the Logius pages: DigiD is provided by Logius, an agency of the Interior Ministry (BZK), so the national eID is operated by a state body.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "publisher": "ODC-Noord (Rijksoverheid, SSO-Noord)",
+     "quote": "ODC-Noord, 1 van de 4 landelijke rijksdatacenters, is hét kenniscentrum op het gebied van datacenter- en IT-diensten.",
+     "quote_english": "ODC-Noord, one of the 4 national central-government data centres, is the centre of expertise for data centre and IT services.",
+     "title": "Organisatie - ODC-Noord",
+     "url": "https://www.odc-noord.nl/Organisatie"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "published": "2026-07-01",
+     "publisher": "Tweede Kamer der Staten-Generaal (letter from the State Secretary of the Interior and Kingdom Relations)",
+     "quote": "Het kabinet geeft de voorkeur aan een zo soeverein mogelijk ingerichte cloudomgeving die waar mogelijk wordt gehuisvest in de overheidsdatacenters (ODC’s) van het Rijk.",
+     "quote_english": "The cabinet prefers a cloud environment set up as sovereignly as possible, housed where possible in the central government's own government data centres (ODCs).",
+     "title": "Kamerstuk 26643 nr. 1537 - Stand van zaken verkenning soevereine overheidscloud",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-1263099.pdf"
+    }
+   ],
+   "id": "C1",
+   "research_note": "Central government runs four national government data centres (ODCs). ODC-Noord, part of the SSO-Noord shared-service organisation, runs them for ministries. The ODC-Noord site notes that its facility in Groningen is housed in a NorthC data centre building, while the IT services are run by the state.",
+   "review": {
+    "original": "yes",
+    "reason": "The ODC-Noord page confirms it is 'one of the 4 national central-government data centres' (1 van de 4 landelijke rijksdatacenters), and Kamerstuk 26643 nr. 1537 quotes the cabinet referring to the central government's own data centres (ODCs), which establishes state-run data centres in operation today.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "publisher": "ODC-Noord (Rijksoverheid, SSO-Noord)",
+     "quote": "ODC-Noord is dé clouddienstverlener binnen de Rijksoverheid. Wij geloven in een efficiënte overheid. Vanuit onze datacenters leveren wij gestandaardiseerde, schaalbare en duurzame clouddiensten",
+     "quote_english": "ODC-Noord is the cloud service provider within central government. We believe in efficient government. From our data centres we deliver standardised, scalable and sustainable cloud services.",
+     "title": "Organisatie - ODC-Noord",
+     "url": "https://www.odc-noord.nl/Organisatie"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "publisher": "ODC-Noord (Rijksoverheid, SSO-Noord)",
+     "quote": "De dienstverlening Infrastructure as a Service (IaaS) van ODC-Noord biedt een compleet gevirtualiseerd en geautomatiseerd datacenterconcept.",
+     "quote_english": "ODC-Noord's Infrastructure as a Service (IaaS) offering provides a fully virtualised and automated data centre concept.",
+     "title": "Infrastructure as a Service - ODC-Noord",
+     "url": "https://www.odc-noord.nl/diensten/infrastructure-as-a-service"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "nl",
+     "published": "2026-07-01",
+     "publisher": "Tweede Kamer der Staten-Generaal (letter from the State Secretary of the Interior and Kingdom Relations)",
+     "quote": "De Proof of Concept van het ontwerp is gestart en bij positieve uitkomsten doorontwikkeld naar een kleinschalige productieomgeving.",
+     "quote_english": "The Proof of Concept of the design has started and, if results are positive, will be developed into a small-scale production environment.",
+     "title": "Kamerstuk 26643 nr. 1537 - Stand van zaken verkenning soevereine overheidscloud",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-1263099.pdf"
+    }
+   ],
+   "id": "C2",
+   "research_note": "A state-run government cloud is in operation: ODC-Noord supplies IaaS, PaaS and HaaS services to ministries from government data centres. Separately, the new government-wide 'soevereine overheidscloud', a container platform built to the Haven standard, is only at Proof of Concept stage, with first applications expected by end of 2026 (letter of 1 July 2026). If the indicator is meant to cover only that new sovereign platform, the value would be 'partial'.",
+   "review": {
+    "original": "yes",
+    "reason": "The ODC-Noord pages verbatim describe it as the cloud service provider within central government, offering IaaS as a current service, which meets 'in operation'. The quote from Kamerstuk 26643 nr. 1537 (1 July 2026) is also verbatim and shows that the separate new sovereign government cloud is only a Proof of Concept, so 'yes' rests only on ODC-Noord's existing government cloud.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "NL"
+}

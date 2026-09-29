@@ -1,0 +1,221 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "da",
+     "published": "2014-12-17",
+     "publisher": "Statsministeriet / Retsinformation",
+     "quote": "Alle former for elektroniske informationssystemer beregnet til behandling af informationer klassificeret HEMMELIGT eller FORTROLIGT skal sikkerhedsgodkendes af den nationale it-sikkerhedsmyndighed.",
+     "quote_english": "All forms of electronic information systems intended for processing information classified SECRET or CONFIDENTIAL must be security-approved by the national IT security authority.",
+     "title": "Cirkulære om sikkerhedsbeskyttelse af informationer af fælles interesse for landene i NATO eller EU, andre klassificerede informationer samt informationer af sikkerhedsmæssig beskyttelsesinteresse i øvrigt (Sikkerhedscirkulæret), CIR nr. 10338 af 17/12/2014",
+     "url": "https://www.retsinformation.dk/eli/retsinfo/2014/10338/xml"
+    }
+   ],
+   "id": "L1",
+   "research_note": "No Danish statute or binding regulation was found that requires government data (or classified data) to be stored or processed under Danish or EU jurisdiction. The security circular (Sikkerhedscirkulæret, CIR 10338/2014) requires IT systems for SECRET and CONFIDENTIAL information to be security-approved by the national IT security authority (§ 27), and processing of TOP SECRET needs a separate permit (§ 26). It does not state any storage-location or jurisdiction rule, so this is not scored as partial. Web search was unavailable (the session's search budget was used up), so the search for sector rules (health, tax, police, archives) and for guidance from the Agency for Digital Government or CFCS on third-country cloud was limited to direct fetches of known documents.",
+   "review": {
+    "original": "unknown",
+    "reason": "The circular's quote (verified verbatim in the Retsinformation XML) requires only security approval of systems handling SECRET/CONFIDENTIAL information and says nothing about storage location or jurisdiction, so unknown is correct.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "da",
+     "published": "2014-12-17",
+     "publisher": "Statsministeriet / Retsinformation",
+     "quote": "Denne klassifikationsgrad skal anvendes om informationer, hvis videregivelse uden dertil indhentet bemyndigelse ville kunne forvolde Danmark eller landene i NATO eller EU overordentlig alvorlig skade.",
+     "quote_english": "This classification level [YDERST HEMMELIGT / TOP SECRET] shall be used for information whose unauthorised disclosure could cause Denmark or the NATO or EU countries exceptionally grave damage.",
+     "title": "Cirkulære om sikkerhedsbeskyttelse af informationer af fælles interesse for landene i NATO eller EU, andre klassificerede informationer samt informationer af sikkerhedsmæssig beskyttelsesinteresse i øvrigt (Sikkerhedscirkulæret), CIR nr. 10338 af 17/12/2014",
+     "url": "https://www.retsinformation.dk/eli/retsinfo/2014/10338/xml"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "da",
+     "published": "2014-12-17",
+     "publisher": "Statsministeriet / Retsinformation",
+     "quote": "Denne klassifikationsgrad skal anvendes om informationer, hvis videregivelse uden dertil indhentet bemyndigelse ville kunne forvolde Danmark eller landene i NATO eller EU alvorlig skade.",
+     "quote_english": "This classification level [HEMMELIGT / SECRET] shall be used for information whose unauthorised disclosure could cause Denmark or the NATO or EU countries grave damage.",
+     "title": "Cirkulære om sikkerhedsbeskyttelse af informationer (Sikkerhedscirkulæret), CIR nr. 10338 af 17/12/2014",
+     "url": "https://www.retsinformation.dk/eli/retsinfo/2014/10338/xml"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Denmark's four classification levels (YDERST HEMMELIGT, HEMMELIGT, FORTROLIGT, TIL TJENESTEBRUG) are defined in § 1 of Sikkerhedscirkulæret, CIR 10338 of 17 December 2014, published on Retsinformation. The instrument is a circular (cirkulære), an administrative directive that binds state authorities. It is not a statute or an executive order (bekendtgørelse), so under the rubric it scores partial. The /xml URL is cited because the HTML view of Retsinformation is rendered by JavaScript. Both quotes were checked verbatim against the XML.",
+   "review": {
+    "original": "partial",
+    "reason": "Both classification-level definitions are verbatim in CIR 10338/2014, which is a circular (cirkulære), and the rubric puts a circular under partial.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "No Danish cloud certification requiring immunity from non-EU law (SecNumCloud-type) was found, and no authoritative statement that none exists was found either, so this is unknown rather than no. Web search was unavailable in this run (the session's search budget was used up). Sites checked directly: the Agency for Digital Government (digst.dk) and the Agency for Governmental IT Services (Statens IT), including its 2025 annual report. None mentions a sovereign-cloud certification scheme.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were cited and no source shows a SecNumCloud-type scheme or states that none exists, so unknown stands.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "da",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "Den Danske Stat leverer kvalificerede og ikke-kvalificerede tillidstjenester til offentlige myndigheder og private aktører.",
+     "quote_english": "The Danish State provides qualified and non-qualified trust services to public authorities and private actors.",
+     "title": "Den Danske Stat Tillidstjenester (CA1)",
+     "url": "https://www.ca1.gov.dk/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "da",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "Den Danske Stat (CA1) er en kvalificeret tillidstjenesteudbyder efter eIDAS-forordningen og optræder på positivlisten over godkendte tillidstjenesteudbydere.",
+     "quote_english": "The Danish State (CA1) is a qualified trust service provider under the eIDAS Regulation and appears on the trusted list of approved trust service providers.",
+     "title": "Den Danske Stat Tillidstjenester (CA1)",
+     "url": "https://www.ca1.gov.dk/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "da",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "I Danmark er Digitaliseringsstyrelsen udpeget som tilsynsorgan for tillidstjenester.",
+     "quote_english": "In Denmark the Agency for Digital Government is designated as the supervisory body for trust services.",
+     "title": "Tilsynsorgan for Danske tillidstjenester",
+     "url": "https://certifikat.gov.dk/"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Danish trusted list (https://www.digst.dk/TSLDK_v6xml, linked from the EU list of trusted lists) names 'Den Danske Stat' (NTRDK-34051178, operated by Digitaliseringsstyrelsen) as a qualified trust service provider. Its entry holds the 'Den Danske Stat kvalificeret rod-CA' (status granted), the 'Den Danske Stat OCES rod-CA' (the national OCES3 root, status recognised at national level), qualified time-stamping and qualified validation. So both the state PKI root and a qualified trust service are run by a state agency. The same list also has private providers: IN Groupe Denmark A/S (the former Nets DanID CVR), and Penneo A/S for time-stamping. The old TRUST2408 OCES root from Nets DanID is marked deprecated at national level.",
+   "review": {
+    "original": "yes",
+    "reason": "The ca1.gov.dk page states verbatim that Den Danske Stat (CA1), run by Digitaliseringsstyrelsen, is a qualified trust service provider under eIDAS on the trusted list, so a state body operates the qualified trust service.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "da",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "Kontrakten om udvikling og drift af MitID blev i 2019 vundet af Nets DANID A/S på baggrund af et udbud.",
+     "quote_english": "The contract for development and operation of MitID was won in 2019 by Nets DANID A/S following a tender.",
+     "title": "Om MitID",
+     "url": "https://digst.dk/it-loesninger/mitid/om-mitid/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "da",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "Digitaliseringsstyrelsen repræsenterer staten, de danske regioner og kommunerne, mens de danske pengeinstitutter er repræsenterede ved FR I et datterselskab til Finans Danmark.",
+     "quote_english": "The Agency for Digital Government represents the state, the Danish regions and municipalities, while the Danish banks are represented by FR I, a subsidiary of Finance Denmark.",
+     "title": "Om MitID",
+     "url": "https://digst.dk/it-loesninger/mitid/om-mitid/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "da",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "MitID-partnerskabet har rettighederne til MitID løsningen, navn og logo, også efter kontraktens løbetid.",
+     "quote_english": "The MitID partnership holds the rights to the MitID solution, name and logo, also after the contract term.",
+     "title": "Om MitID",
+     "url": "https://digst.dk/it-loesninger/mitid/om-mitid/"
+    }
+   ],
+   "id": "K2",
+   "research_note": "MitID is owned by a public-private partnership between the state (through Digitaliseringsstyrelsen) and the banks (through FR I, a subsidiary of Finance Denmark). It is developed and operated under contract by a private EU company, Nets DanID A/S. The Danish trusted list now shows that company's CVR (30808460) under the name IN Groupe Denmark A/S. Because operation is by a private EU provider under a state-led partnership, this is scored partial rather than yes. The eIDAS notified-schemes list was not fetched; www.mitid.dk returned HTTP 403 to automated fetches.",
+   "review": {
+    "original": "partial",
+    "reason": "The digst.dk MitID page confirms verbatim that Nets DANID A/S, a private EU company, develops and operates MitID under contract for a state-bank partnership, which matches partial.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "language": "da",
+     "published": "2026",
+     "publisher": "Statens It (Agency for Governmental IT Services, Ministry of Finance)",
+     "quote": "Ydelsen basal it-drift dækker over services inden for interne datacentre, netværk, servere og storage, drift af operativsystemer, standard it-arbejdsplads, servicedesk og brugeradministration",
+     "quote_english": "The basic IT operations service covers services within internal data centres, network, servers and storage, operation of operating systems, standard IT workplace, service desk and user administration",
+     "title": "Statens It Årsrapport 2025",
+     "url": "https://statens-it.dk/media/0iwny3lc/statens-it-aaarsrapport-2025.pdf"
+    },
+    {
+     "doc_type": "annual_report",
+     "language": "da",
+     "published": "2026",
+     "publisher": "Statens It (Agency for Governmental IT Services, Ministry of Finance)",
+     "quote": "Igangværende arbejder for egen regning udgør 23,9 mio. kr. og vedrører primært etablering af nyt datacenter.",
+     "quote_english": "Work in progress on own account amounts to DKK 23.9 million and relates mainly to establishment of a new data centre.",
+     "title": "Statens It Årsrapport 2025",
+     "url": "https://statens-it.dk/media/0iwny3lc/statens-it-aaarsrapport-2025.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "da",
+     "publisher": "Statens It",
+     "quote": "Statens It leverer it-drift og services til statslige ministerier, styrelser og selvejende uddannelsesinstitutioner.",
+     "quote_english": "Statens It delivers IT operations and services to state ministries, agencies and self-governing educational institutions.",
+     "title": "Om Statens It",
+     "url": "https://statens-it.dk/om-os/om-statens-it/"
+    }
+   ],
+   "id": "C1",
+   "research_note": "Statens It is an agency under the Ministry of Finance, set up on 1 January 2010. It runs internal data centres that deliver basic IT operations to 21 ministries. Its 2025 annual report records a new data centre being built and existing data centres being expanded. The PDF quotes were checked verbatim after collapsing whitespace. The Ministry of Defence's own facilities were not researched.",
+   "review": {
+    "original": "yes",
+    "reason": "The Statens It 2025 annual report (quotes verified in the PDF text) describes basic IT operations delivered from its own internal data centres, and Statens It is a Ministry of Finance agency serving state ministries, so the state runs data centres that are operating now.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "language": "da",
+     "published": "2026",
+     "publisher": "Statens It (Agency for Governmental IT Services, Ministry of Finance)",
+     "quote": "Infrastrukturprojekt vedr. servermigrering til SIT Cloud mhp. at øge standardisering og sikre stabil og fremtidssikret drift. Ved udgangen af 2025 var der migreret ca. 1.000 servere.",
+     "quote_english": "Infrastructure project on server migration to SIT Cloud to increase standardisation and ensure stable, future-proof operations. By the end of 2025 about 1,000 servers had been migrated.",
+     "title": "Statens It Årsrapport 2025",
+     "url": "https://statens-it.dk/media/0iwny3lc/statens-it-aaarsrapport-2025.pdf"
+    },
+    {
+     "doc_type": "annual_report",
+     "language": "da",
+     "published": "2026",
+     "publisher": "Statens It (Agency for Governmental IT Services, Ministry of Finance)",
+     "quote": "Tilgangen i de immaterielle anlægsaktiver skyldes en markant stigning i udviklingsprojekter under opførsel, som primært kan henføres til transitionsprojekter og udvikling af SIT Cloud.",
+     "quote_english": "The increase in intangible fixed assets is due to a marked rise in development projects under construction, mainly attributable to transition projects and development of SIT Cloud.",
+     "title": "Statens It Årsrapport 2025",
+     "url": "https://statens-it.dk/media/0iwny3lc/statens-it-aaarsrapport-2025.pdf"
+    }
+   ],
+   "id": "C2",
+   "research_note": "SIT Cloud is the government cloud platform of Statens It, the state IT-operations agency under the Ministry of Finance. It runs in Statens It's own data centres. By the end of 2025 about 1,000 government servers had been migrated onto it, so it is in operation and serving government workloads. The same report also mentions 'cloud løsninger til SIT's kunder på servere i SIT's datacenter' (cloud solutions for Statens It's customers on servers in its own data centre). No separate public-sector-wide sovereign cloud programme was checked, because web search was unavailable.",
+   "review": {
+    "original": "yes",
+    "reason": "The annual report states verbatim that about 1,000 servers had been migrated to SIT Cloud by the end of 2025, and it mentions cloud solutions on servers in SIT's own data centre, so a government cloud is running government workloads and is not just announced.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "DK"
+}

@@ -1,0 +1,213 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "sk",
+     "published": "2026-05-15",
+     "publisher": "Úrad podpredsedu vlády SR pre investície a informatizáciu / Slov-Lex (Ministerstvo spravodlivosti SR)",
+     "quote": "sa spracúvanie a uloženie údajov uskutočňuje na území členských štátov Európskej únie, zmluvných strán Dohody o Európskom hospodárskom priestore a krajín s primeranou ochranou osobných údajov",
+     "quote_english": "[public administration information systems may use cloud services only if] the processing and storage of data takes place on the territory of EU Member States, EEA contracting parties and countries with an adequate level of personal data protection",
+     "title": "Vyhláška č. 78/2020 Z. z. o štandardoch pre informačné technológie verejnej správy (§ 45 ods. 1 písm. c), consolidated 15.05.2026",
+     "url": "https://static.slov-lex.sk/static/SK/ZZ/2020/78/20260515.html"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "sk",
+     "published": "2026-05-15",
+     "publisher": "Slov-Lex (Ministerstvo spravodlivosti SR)",
+     "quote": "U4, ak dôležitosť alebo hodnota uchovávaných a spracovávaných údajov pre procesy odberateľa cloudovej služby zodpovedá klasifikačným stupňom podľa tretieho bodu a cloudová služba je prevádzkovaná v privátnej časti vládneho cloudu",
+     "quote_english": "U4, where the importance or value of stored and processed data corresponds to the classification levels under point 3 and the cloud service is operated in the private part of the government cloud",
+     "title": "Vyhláška č. 78/2020 Z. z. o štandardoch pre informačné technológie verejnej správy (§ 44a ods. 1), consolidated 15.05.2026",
+     "url": "https://static.slov-lex.sk/static/SK/ZZ/2020/78/20260515.html"
+    }
+   ],
+   "id": "L1",
+   "research_note": "Binding decree 78/2020 (§ 45) requires all public-administration information systems that use cloud services to have data processed and stored in the EU/EEA or in countries with a GDPR adequacy decision, with the provider also seated there; the highest level (U4) must run in the state-run private part of the government cloud. Scored partial rather than yes: the rule covers cloud use only and allows adequacy third countries, so it is not strictly national or EU jurisdiction. Open data is exempt (§ 45 ods. 2).",
+   "review": {
+    "original": "partial",
+    "reason": "Both quotes appear verbatim in Decree 78/2020 § 44a/§ 45(1)(c): any public-administration information system that uses cloud services must have its data processed and stored in the EU/EEA or an adequacy country, and open data is exempt under § 45(2). The rule covers cloud use only and allows adequacy third countries, so partial is a defensible, conservative score.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "sk",
+     "published": "2025-05-01",
+     "publisher": "Slov-Lex (Ministerstvo spravodlivosti SR)",
+     "quote": "Utajované skutočnosti sa podľa stupňa utajenia členia na a) prísne tajné, b) tajné, c) dôverné, d) vyhradené.",
+     "quote_english": "Classified information is divided by classification level into a) top secret, b) secret, c) confidential, d) restricted.",
+     "title": "Zákon č. 215/2004 Z. z. o ochrane utajovaných skutočností (§ 3 Stupne utajenia), consolidated 01.05.2025",
+     "url": "https://static.slov-lex.sk/static/SK/ZZ/2004/215/20250501.html"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Act 215/2004 § 3 defines four classification levels in statute and gives criteria for each. Decree 78/2020 also refers to a separate binding categorisation of unclassified data (public, internal, protected, strictly protected) that is used to set cloud security levels.",
+   "review": {
+    "original": "yes",
+    "reason": "Act 215/2004 § 3(1) on Slov-Lex says verbatim that classified information is divided into four levels (prísne tajné, tajné, dôverné, vyhradené), and the following paragraphs give statutory criteria for each, which meets the yes definition.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "sk",
+     "published": "2026-05-15",
+     "publisher": "Slov-Lex (Ministerstvo spravodlivosti SR)",
+     "quote": "U4, ak dôležitosť alebo hodnota uchovávaných a spracovávaných údajov pre procesy odberateľa cloudovej služby zodpovedá klasifikačným stupňom podľa tretieho bodu a cloudová služba je prevádzkovaná v privátnej časti vládneho cloudu",
+     "quote_english": "U4, where the importance or value of stored and processed data corresponds to the classification levels under point 3 and the cloud service is operated in the private part of the government cloud",
+     "title": "Vyhláška č. 78/2020 Z. z. o štandardoch pre informačné technológie verejnej správy (§ 44a), consolidated 15.05.2026",
+     "url": "https://static.slov-lex.sk/static/SK/ZZ/2020/78/20260515.html"
+    }
+   ],
+   "id": "L3",
+   "research_note": "Found no SecNumCloud-type certification that requires immunity from non-EU law. Checked Act 95/2019 § 24a and Decree 78/2020 §§ 44a-45. These set security levels U1-U4 and registration in the government cloud catalogue. The provider must be seated in the EU/EEA or an adequacy country, and U4 must run in the state-operated private government cloud. This is a location and operator rule, not an immunity certification. No authoritative statement that none exists was found, so this is unknown rather than no. The NBU (National Security Authority) website could not be read (bot-challenge page).",
+   "review": {
+    "original": "unknown",
+    "reason": "The cited § 44a quote is present, but it sets a security level (U4 must run in the private government cloud), not a certification requiring immunity from non-EU law, and no source says none exists, so unknown is correct.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "sk",
+     "publisher": "Národná agentúra pre sieťové a elektronické služby (NASES)",
+     "quote": "Od 1. augusta 2019 je prevádzkovateľom Slovenskej národnej certifikačnej autority (SNCA) a poskytovateľom kvalifikovaných dôveryhodných služieb Národná agentúra pre sieťové a elektronické služby (NASES). SNCA poskytuje kvalifikované dôveryhodné služby orgánom verejnej moci Slovenskej republiky.",
+     "quote_english": "Since 1 August 2019 the operator of the Slovak National Certification Authority (SNCA) and provider of qualified trust services is the National Agency for Network and Electronic Services (NASES). SNCA provides qualified trust services to public authorities of the Slovak Republic.",
+     "title": "Certifikačná autorita",
+     "url": "https://snca.gov.sk/o-nas/certifikacna-autorita"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "sk",
+     "publisher": "Národná agentúra pre sieťové a elektronické služby (NASES)",
+     "quote": "je príspevkovou organizáciou Ministerstva investícií, regionálneho rozvoja a informatizácie Slovenskej republiky, ktorá je zriadená k plneniu úloh vyplývajúcich",
+     "quote_english": "[NASES] is a state-funded contributory organisation of the Ministry of Investment, Regional Development and Informatization of the Slovak Republic, established to perform tasks arising from [Act 575/2001 and Act 95/2019]",
+     "title": "Činnosť agentúry",
+     "url": "https://www.nases.gov.sk/o-nas/cinnost-agentury"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Slovak trusted list (tl.nbu.gov.sk/kca/tsl/tsl.xml, scheme operator: National Security Authority) was parsed. The first-listed trust service provider is the state body NBU/NASES, and its OCSP certificate chains to SNCA4, issued with O=Narodna agentura pre sietove a elektronicke sluzby. SNCA is the state root and qualified CA for public authorities, run by NASES, a contributory organisation of the ministry MIRRI. Private qualified providers (Disig, I.CA, Ardaco and others) also appear on the list.",
+   "review": {
+    "original": "yes",
+    "reason": "The SNCA page confirms verbatim that NASES has operated the national root CA and qualified trust services for public authorities since 1 August 2019, and the NASES page confirms it is a contributory organisation of the ministry MIRRI, so the operator is state-controlled.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "sk",
+     "published": "2024-03-28",
+     "publisher": "Ústredný portál verejnej správy (slovensko.sk), NASES; source: Ministerstvo vnútra SR",
+     "quote": "O vydanie eID môže občan požiadať na ktoromkoľvek pracovisku oddelenia dokladov Okresného riaditeľstva Policajného zboru (OR PZ).",
+     "quote_english": "A citizen may apply for the eID at any documents office of a District Directorate of the Police Force.",
+     "title": "Nové elektronické občianske preukazy s čipom",
+     "url": "https://www.slovensko.sk/sk/eid"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "sk",
+     "publisher": "Slov-Lex (Ministerstvo spravodlivosti SR)",
+     "quote": "Ministerstvo vnútra v oblasti elektronickej identifikácie a) zostavuje a vedie zoznam spoliehajúcich sa strán, ktoré používajú európsku peňaženku,",
+     "quote_english": "The Ministry of Interior, in the field of electronic identification, a) compiles and maintains the list of relying parties that use the European wallet,",
+     "title": "Zákon č. 272/2016 Z. z. o dôveryhodných službách (§ 10a Postavenie a úlohy ministerstva vnútra)",
+     "url": "https://static.slov-lex.sk/static/SK/ZZ/2016/272/20250101.html"
+    }
+   ],
+   "id": "K2",
+   "research_note": "The Slovak eID (identity card with chip, in use since 2013) is issued by the Police Force under the Ministry of Interior. Act 272/2016 § 10a makes the Ministry of Interior the public authority responsible for providing the European identity wallet. The eIDAS notified-schemes list (EC, JavaScript page) and the Slovensko v mobile site (svm.slovensko.sk) could not be read.",
+   "review": {
+    "original": "yes",
+    "reason": "slovensko.sk confirms verbatim that the eID card is issued by documents offices of the Police Force, and Act 272/2016 § 10a gives the Ministry of Interior the eID and European-wallet role, so the scheme is state-operated.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "sk",
+     "published": "2026-04-30",
+     "publisher": "Slov-Lex (Ministerstvo spravodlivosti SR)",
+     "quote": "Poskytovateľom cloudovej služby a prevádzkovateľom cloudovej služby v časti privátneho cloudu v modeli infraštruktúra ako služba a platforma ako služba môže byť spomedzi orgánov riadenia len Ministerstvo vnútra Slovenskej republiky, pričom pre tieto služby výpočtové zdroje zabezpečujú datacentrum v správe Ministerstva vnútra Slovenskej republiky a datacentrum v správe Ministerstva financií Slovenskej republiky",
+     "quote_english": "Among governing bodies, only the Ministry of Interior may provide and operate IaaS and PaaS cloud services in the private cloud; computing resources for these services are supplied by the data centre managed by the Ministry of Interior and the data centre managed by the Ministry of Finance",
+     "title": "Zákon č. 95/2019 Z. z. o informačných technológiách vo verejnej správe (§ 24a ods. 7), consolidated 30.04.2026",
+     "url": "https://static.slov-lex.sk/static/SK/ZZ/2019/95/20260430.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "sk",
+     "publisher": "Ministerstvo investícií, regionálneho rozvoja a informatizácie SR (MIRRI)",
+     "quote": "Poskytovateľom cloudových služieb a prevádzkovateľom cloudových služieb v časti komunitného cloudu pre obce a mestá je DataCentrum elektronizácie územnej samosprávy Slovenska (DEUS)",
+     "quote_english": "The provider and operator of cloud services in the community cloud part for municipalities and towns is DataCentrum for the Electronisation of Local Self-Government of Slovakia (DEUS)",
+     "title": "Vládny cloud",
+     "url": "https://mirri.gov.sk/sekcie/informatizacia/dokumenty/vladny-cloud/"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The statute (Act 95/2019 § 24a(7)) names two data centres, one run by the Ministry of Interior and one by the Ministry of Finance, that supply computing resources for the government cloud. Its wording is in the present tense, and the ministry MIRRI's page repeats it. A separate data centre for municipalities (DEUS) serves local government. No audit-office report was checked.",
+   "review": {
+    "original": "yes",
+    "reason": "Act 95/2019 § 24a(7) says verbatim, in the present tense, that data centres managed by the Ministry of Interior and the Ministry of Finance supply computing resources for the private government cloud, and the MIRRI page describes the MV SR and DEUS parts as operating, which is enough for state-operated data centres in use.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "sk",
+     "publisher": "Ministerstvo investícií, regionálneho rozvoja a informatizácie SR (MIRRI)",
+     "quote": "Vládny cloud je platforma štátnej správy, ktorá dynamicky poskytuje a uvoľňuje zdieľané technické zdroje, t.j. servery, storage, databázy, aplikácie a podobne.",
+     "quote_english": "The government cloud is a state administration platform that dynamically provides and releases shared technical resources, i.e. servers, storage, databases, applications and the like.",
+     "title": "Vládny cloud",
+     "url": "https://mirri.gov.sk/sekcie/informatizacia/dokumenty/vladny-cloud/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "sk",
+     "publisher": "Ministerstvo investícií, regionálneho rozvoja a informatizácie SR (MIRRI)",
+     "quote": "Všetky dáta sú v infraštruktúre štátnej správy na území SR.",
+     "quote_english": "All data are in state administration infrastructure on the territory of the Slovak Republic.",
+     "title": "Vládny cloud",
+     "url": "https://mirri.gov.sk/sekcie/informatizacia/dokumenty/vladny-cloud/"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "sk",
+     "published": "2026-04-30",
+     "publisher": "Slov-Lex (Ministerstvo spravodlivosti SR)",
+     "quote": "Vládny cloud je cloud computing prevádzkovaný vo forme hybridného cloudu, ktorý je tvorený vládnymi cloudovými službami.",
+     "quote_english": "The government cloud is cloud computing operated as a hybrid cloud, made up of government cloud services.",
+     "title": "Zákon č. 95/2019 Z. z. o informačných technológiách vo verejnej správe (§ 24a Vládny cloud)",
+     "url": "https://static.slov-lex.sk/static/SK/ZZ/2019/95/20260430.html"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The government cloud (Vládny cloud) is set up in statute (Act 95/2019 § 24a). It has a register of government cloud services kept by the ministry MIRRI, and public bodies must report which services they use. It has a private part run by the Ministry of Interior, a community part (DEUS) and a public part. The MIRRI catalogue page (katalog-cloudovych-sluzieb) was reached, but its service list did not come through as static text, so service counts were not confirmed.",
+   "review": {
+    "original": "yes",
+    "reason": "All three quotes are present: the statute establishes the hybrid government cloud and a register of government cloud services, and MIRRI describes it as an operating platform ('Všetky dáta sú v infraštruktúre štátnej správy na území SR'), with private, community and public parts that have named operators; service counts are unconfirmed, but it is more than an announcement.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "SK"
+}

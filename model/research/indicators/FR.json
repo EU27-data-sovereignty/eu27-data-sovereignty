@@ -1,0 +1,228 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "published": "2026-02-04",
+     "publisher": "Direction interministérielle du numérique (DINUM)",
+     "quote": "l'administration veille à ce que le service d'informatique en nuage fourni par le prestataire privé mette en œuvre des critères de sécurité et de protection des données garantissant notamment la protection des données traitées ou stockées contre tout accès par des autorités publiques d’États tiers non autorisé par le droit de l'Union européenne ou d'un État membre",
+     "quote_english": "the administration ensures that the cloud service supplied by the private provider applies security and data-protection criteria that protect the data processed or stored against any access by public authorities of third states not authorised by EU or Member State law",
+     "title": "Vade-mecum sur la sensibilité des données au sens de l'article 31 de la loi SREN",
+     "url": "https://www.numerique.gouv.fr/documents/244/20260204_Vademecum_donnees_sensibles_.pdf"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "published": "2026-02-04",
+     "publisher": "Direction interministérielle du numérique (DINUM)",
+     "quote": "Les dispositions de cette loi ne s'appliquent que lorsqu'un système d'information a recours à un service d’informatique en nuage (cloud) commercial.",
+     "quote_english": "The provisions of this law apply only when an information system uses a commercial cloud computing service.",
+     "title": "Vade-mecum sur la sensibilité des données au sens de l'article 31 de la loi SREN",
+     "url": "https://www.numerique.gouv.fr/documents/244/20260204_Vademecum_donnees_sensibles_.pdf"
+    }
+   ],
+   "id": "L1",
+   "research_note": "Article 31 of Loi n° 2024-449 of 21 May 2024 (SREN) is a statute. It requires protection against access by non-EU authorities, but only for data of 'particular sensitivity' held by State administrations, their operators and listed public-interest groupings (GIPs), and only when they use a commercial cloud. It does not cover government data in general, so the value is partial. Classified information falls under the separate defence-secrecy regime (IGI 1300). Légifrance returns HTTP 403 to scripted downloads, so the statutory text is quoted from the DINUM vade-mecum, which reproduces Article 31 verbatim.",
+   "review": {
+    "original": "partial",
+    "reason": "Both quotes appear verbatim in the DINUM vade-mecum. It shows Article 31 of the SREN law requires protection against access by non-EU authorities only for particularly sensitive State data on commercial cloud, a narrow statutory scope that fits 'partial' rather than a general requirement.",
+    "reviewed": "yes"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "Secrétariat général de la défense et de la sécurité nationale (SGDSN)",
+     "quote": "La protection du secret de la défense nationale repose sur un corpus juridique qui a fait l’objet d’une importante révision : modification des articles R. 2311-2 et suivants du code de la défense et nouvelle instruction générale interministérielle n° 1300",
+     "quote_english": "Protection of national defence secrecy rests on a legal corpus that has been significantly revised: amendment of articles R. 2311-2 et seq. of the Defence Code and a new general interministerial instruction no. 1300",
+     "title": "Réforme de la protection du secret de la défense nationale",
+     "url": "https://www.sgdsn.gouv.fr/nos-missions/proteger/proteger-le-secret-de-la-defense-nationale/reforme-de-la-protection-du-secret"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "published": "2022-11-23",
+     "publisher": "Secrétariat général de la défense et de la sécurité nationale (SGDSN)",
+     "quote": "il existe deux niveaux de classification : le niveau Secret qui protège les informations et supports dont la divulgation ou auxquels l’accès est de nature à porter atteinte à la défense et à la sécurité nationale",
+     "quote_english": "there are two classification levels: the Secret level, which protects information and media whose disclosure or access would harm defence and national security",
+     "title": "Protéger le secret de la défense nationale",
+     "url": "https://www.sgdsn.gouv.fr/nos-missions/proteger/proteger-le-secret-de-la-defense-nationale"
+    }
+   ],
+   "id": "L2",
+   "research_note": "The classification levels (Secret and Très Secret, in force since 1 July 2021) are defined in the regulatory part of the Code de la défense (art. R. 2311-2 et seq., as amended by décret). That is a binding regulation, backed by the Code pénal, with IGI 1300 as the implementing instruction. Légifrance blocks scripted downloads (HTTP 403), so the SGDSN official pages are cited instead.",
+   "review": {
+    "original": "yes",
+    "reason": "The SGDSN pages contain both quotes. They state that the classification levels (Secret and Très Secret, since 1 July 2021) rest on articles R. 2311-2 et seq. of the Code de la défense, which is binding regulation.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "Direction interministérielle du numérique (DINUM)",
+     "quote": "l’offre de Cloud commerciale retenue devra impérativement respecter la qualification SecNumCloud (ou une qualification européenne garantissant un niveau au moins équivalent, notamment de cybersécurité) et être immunisée contre tout accès non autorisé par des autorités publiques d’État tiers",
+     "quote_english": "the commercial cloud offer chosen must imperatively comply with the SecNumCloud qualification (or an at least equivalent European qualification) and be immune to any unauthorised access by public authorities of third states",
+     "title": "Cloud au centre : la doctrine de l'État",
+     "url": "https://www.numerique.gouv.fr/offre-accompagnement/cloud-administrations/la-doctrine-cloud-etat/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "published": "2026-02-04",
+     "publisher": "Direction interministérielle du numérique (DINUM)",
+     "quote": "la France dispose de la qualification nationale dénommée SecNumCloud, attribuée par l’ANSSI aux prestations de services d’informatique en nuage, comprenant notamment des exigences visant à assurer une protection adéquate contre les lois non européennes à portée extraterritoriale.",
+     "quote_english": "France has the national qualification called SecNumCloud, awarded by ANSSI to cloud services, including requirements designed to ensure adequate protection against non-European laws with extraterritorial reach.",
+     "title": "Vade-mecum sur la sensibilité des données au sens de l'article 31 de la loi SREN",
+     "url": "https://www.numerique.gouv.fr/documents/244/20260204_Vademecum_donnees_sensibles_.pdf"
+    }
+   ],
+   "id": "L3",
+   "research_note": "ANSSI's SecNumCloud qualification is in force and includes immunity from extraterritorial non-EU law. The 'Cloud au centre' circular of 31 May 2023 and SREN Article 31 with its implementing decree make it mandatory for sensitive State data hosted on commercial cloud. ANSSI publishes a list of qualified providers and providers under qualification at cyber.gouv.fr/secnumcloud.",
+   "review": {
+    "original": "yes",
+    "reason": "The DINUM doctrine page says a commercial cloud offer for sensitive State data 'devra impérativement' comply with SecNumCloud and be immune to access by third-state authorities, and the vade-mecum confirms that SecNumCloud includes protection against extraterritorial non-EU law, so it is in force and required.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "Agence nationale de la sécurité des systèmes d'information (ANSSI)",
+     "quote": "Service d'émission de certificats de personnes qualifiés des ministères économiques et financiers",
+     "quote_english": "Qualified personal certificate issuance service of the economic and financial ministries",
+     "title": "Trusted List of France (TL-FR v6, XML)",
+     "url": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.xml"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "Agence nationale de la sécurité des systèmes d'information (ANSSI)",
+     "quote": "L’Agence nationale de la sécurité des systèmes d’information (ANSSI) est, en France, l’organe de contrôle chargé de qualifier les prestataires de services de confiance, et l’organisme responsable de l’établissement, la tenue à jour et la publication de la liste de confiance.",
+     "quote_english": "ANSSI is, in France, the supervisory body responsible for qualifying trust service providers and the body responsible for establishing, maintaining and publishing the trusted list.",
+     "title": "La liste nationale de confiance",
+     "url": "https://cyber.gouv.fr/reglementation/reglementation-identite-confiance-numerique/securite-echanges-voie-electronique/reglement-eidas/la-liste-nationale-de-confiance/"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The French eIDAS trusted list (XML downloaded 2026-09-29) lists several state bodies as qualified trust service providers with services in 'granted' status. They are ANTS (Agence Nationale des Titres Sécurisés, qualified certificate authorities AAE/ACT V6), the Ministère de l'Intérieur (qualified certificates and qualified timestamping, MI-17 to MI-20), the Ministère de la Justice, the Gendarmerie Nationale, the Ministères économiques et financiers and the Agence du numérique des forces de sécurité intérieure. The State agency ANSSI supervises trust services and publishes the list. The IGC/A administration root page on cyber.gouv.fr is currently a redirect loop, so it could not be cited.",
+   "review": {
+    "original": "yes",
+    "reason": "The quoted service is on the ANSSI-published French trusted list as a qualified certificate (QC) service in 'granted' status, run by the Ministères économiques et financiers, and the ANSSI page confirms that the State agency supervises and publishes the list, so a qualified trust service is operated by the state.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "France Titres (Agence nationale des titres sécurisés)",
+     "quote": "France Identité est l’application officielle de l’identité numérique, conçue et garantie par l’État.",
+     "quote_english": "France Identité is the official digital identity application, designed and guaranteed by the State.",
+     "title": "France Identité : Le service public officiel de l'identité numérique",
+     "url": "https://france-identite.gouv.fr/presenter-france-identite/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "France Titres (Agence nationale des titres sécurisés)",
+     "quote": "Elle a été notifiée par la Commission européenne comme la solution française pour l’identité numérique",
+     "quote_english": "It has been notified by the European Commission as the French digital identity solution",
+     "title": "France Identité : Le service public officiel de l'identité numérique",
+     "url": "https://france-identite.gouv.fr/presenter-france-identite/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "Direction interministérielle du numérique (DINUM)",
+     "quote": "FranceConnect est un service de l’État qui confirme l’identité et l’authentification d’une personne lorsqu’elle souhaite accéder à un service en ligne.",
+     "quote_english": "FranceConnect is a State service that confirms a person's identity and authentication when they want to access an online service.",
+     "title": "Accueil - FranceConnect",
+     "url": "https://www.franceconnect.gouv.fr/"
+    }
+   ],
+   "id": "K2",
+   "research_note": "France Identité is developed by France Titres (ANTS) under the Ministry of the Interior's interministerial France Identité Numérique programme. Its legal basis is décret n° 2022-676 (SGIN). The FranceConnect/FranceConnect+ federation is run by DINUM. Private identity providers such as La Poste connect through FranceConnect, but the notified scheme and the federation hub are operated by the State. The eIDAS notified-schemes list was not fetched.",
+   "review": {
+    "original": "yes",
+    "reason": "The France Identité page says the app is 'conçue et garantie par l'État', developed by France Titres (a State agency) and notified as the French eID solution, and FranceConnect describes itself as 'un service de l'État', so the scheme is state-operated.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "Direction interministérielle du numérique (DINUM)",
+     "quote": "L’offre de Cloud interne interministériel, permet de bénéficier d’un Cloud de confiance maîtrisé et opéré par des agents de l’État, hébergé dans les centres de production informatique de l’État et reposant sur les technologies open source.",
+     "quote_english": "The interministerial internal cloud offers a trusted cloud controlled and operated by State staff, hosted in the State's IT production centres and built on open-source technologies.",
+     "title": "Le Cloud interministériel",
+     "url": "https://www.numerique.gouv.fr/offre-accompagnement/cloud-administrations/le-cloud-interne/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "Direction interministérielle du numérique (DINUM)",
+     "quote": "Les infrastructures de π sont déployées sur 2 sites en Ile-de-France.",
+     "quote_english": "The π (Pi) infrastructure is deployed across 2 sites in Ile-de-France.",
+     "title": "Le Cloud interministériel",
+     "url": "https://www.numerique.gouv.fr/offre-accompagnement/cloud-administrations/le-cloud-interne/"
+    }
+   ],
+   "id": "C1",
+   "research_note": "DINUM states that the interministerial cloud is hosted in the State's own IT production centres. Nubo (DGFiP) runs on 2 sites in Ile-de-France and Pi (Ministry of the Interior) runs on another 2 sites in Ile-de-France. No audit-office report was consulted.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes appear on the DINUM page, which says the interministerial cloud is operated by State staff in the State's own IT production centres, with the π infrastructure on 2 Ile-de-France sites, which shows state-run data centres in operation today.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "Direction interministérielle du numérique (DINUM)",
+     "quote": "Fin juin 2024, l’offre Cloud Nubo héberge 440 projets applicatifs, répartis sur plus de 10 000 machines virtuelles.",
+     "quote_english": "At end of June 2024, the Nubo cloud offer hosts 440 application projects across more than 10,000 virtual machines.",
+     "title": "Le Cloud interministériel",
+     "url": "https://www.numerique.gouv.fr/offre-accompagnement/cloud-administrations/le-cloud-interne/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "Direction interministérielle du numérique (DINUM)",
+     "quote": "π (Pi), opérée par le ministère de l’Intérieur, adaptée à l’hébergement de données sensibles jusqu’au niveau Diffusion restreinte.",
+     "quote_english": "π (Pi), operated by the Ministry of the Interior, suited to hosting sensitive data up to the Diffusion Restreinte level.",
+     "title": "Le Cloud interministériel",
+     "url": "https://www.numerique.gouv.fr/offre-accompagnement/cloud-administrations/le-cloud-interne/"
+    }
+   ],
+   "id": "C2",
+   "research_note": "Two State-operated OpenStack clouds are in production for government workloads: Nubo (DGFiP) and Pi (Ministry of the Interior). The workload figures date from June 2024, the latest on the DINUM page.",
+   "review": {
+    "original": "yes",
+    "reason": "The DINUM page shows Nubo (DGFiP) hosting 440 application projects on more than 10,000 VMs at end June 2024, and π (Ministry of the Interior) in service for sensitive data up to Diffusion Restreinte, so a government cloud is in production.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "FR"
+}

@@ -1,0 +1,223 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "it",
+     "published": "2024",
+     "publisher": "Agenzia per la cybersicurezza nazionale (ACN)",
+     "quote": "I dati dell’amministrazione, ivi inclusi quelli deputati alla sicurezza (quali, a titolo esemplificativo, i sistemi di controllo degli accessi), sono trattati mediante infrastrutture localizzate sul territorio dell'Unione europea.",
+     "quote_english": "The administration's data, including security data (for example access-control systems), are processed using infrastructure located on the territory of the European Union.",
+     "title": "Regolamento per le infrastrutture digitali e per i servizi cloud per la pubblica amministrazione (Regolamento ACN n. 21007/2024), Allegato 2, sezione 2",
+     "url": "https://www.acn.gov.it/portale/documents/d/guest/regolamentocloud"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "it",
+     "published": "2012-10-18",
+     "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato / Presidenza del Consiglio dei ministri)",
+     "quote": "la Presidenza del Consiglio dei ministri promuove lo sviluppo di un'infrastruttura ad alta affidabilità localizzata sul territorio nazionale per la razionalizzazione e il consolidamento dei Centri per l'elaborazione delle informazioni (CED)",
+     "quote_english": "The Presidency of the Council of Ministers promotes a high-reliability infrastructure located on national territory to rationalise and consolidate the public administration's data processing centres (CED).",
+     "title": "Decreto-legge 18 ottobre 2012, n. 179, art. 33-septies (Consolidamento e razionalizzazione dei siti e delle infrastrutture digitali del Paese)",
+     "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art33septies"
+    }
+   ],
+   "id": "L1",
+   "research_note": "The binding ACN Regulation 21007/2024 was adopted under art. 33-septies(4) of DL 179/2012. Its minimum requirements for 'ordinary' data, which are the baseline for every class, require all public-administration data to be processed in infrastructure located in the EU. An exception covers only documented regulatory or technical reasons, such as business continuity or disaster recovery and global CDNs. The statute also sets up a national-territory infrastructure, the PSN. The rule is about location in the EU, not an explicit test of legal jurisdiction. Rated yes because it covers government data generally.",
+   "review": {
+    "original": "yes",
+    "reason": "The quote appears word for word in the ACN Regulation PDF, Allegato 2 section 2. Art. 5 of the regulation makes section 2 the minimum level for 'ordinari' data and so the baseline for every class, which means the regulation binds all PA data to EU-located infrastructure (with documented exceptions). The DL 179/2012 quote was also confirmed.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "it",
+     "published": "2007-08-03",
+     "publisher": "Parlamento italiano",
+     "quote": "Le classifiche attribuibili sono: segretissimo, segreto, riservatissimo, riservato. Le classifiche sono attribuite sulla base dei criteri ordinariamente seguiti nelle relazioni internazionali.",
+     "quote_english": "The classifications that may be assigned are: top secret, secret, confidential (riservatissimo), restricted (riservato). They are assigned on the criteria ordinarily followed in international relations.",
+     "title": "Legge 3 agosto 2007, n. 124, art. 42 (Classifiche di segretezza)",
+     "url": "https://www.parlamento.it/parlam/leggi/07124l.htm"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "it",
+     "published": "2024",
+     "publisher": "Agenzia per la cybersicurezza nazionale (ACN)",
+     "quote": "I dati e i servizi digitali delle amministrazioni di cui al comma 1 sono classificati, sulla base della loro caratterizzazione, nelle seguenti tre classi:",
+     "quote_english": "The administrations' data and digital services referred to in paragraph 1 are classified, based on their characterisation, into the following three classes (ordinary, critical, strategic).",
+     "title": "Regolamento ACN n. 21007/2024, art. 3 (Elenco, caratterizzazione e classificazione dei dati e dei servizi digitali della pubblica amministrazione)",
+     "url": "https://www.acn.gov.it/portale/documents/d/guest/regolamentocloud"
+    }
+   ],
+   "id": "L2",
+   "research_note": "The security-classification levels (segretissimo, segreto, riservatissimo, riservato) are set by statute in Law 124/2007, art. 42. The binding ACN regulation adopted under DL 179/2012 also sets a separate classification of public-administration data and services for cloud purposes: ordinary, critical and strategic.",
+   "review": {
+    "original": "yes",
+    "reason": "The Parlamento page carries L. 124/2007 art. 42(3) verbatim, and it sets the four classification levels in statute. The ACN art. 3 three-class scheme was also confirmed in the regulation text.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "it",
+     "published": "2024",
+     "publisher": "Agenzia per la cybersicurezza nazionale (ACN)",
+     "quote": "Con riferimento all'accesso ai dati da parte di entità extra-UE, il soggetto: a. segnala all'Agenzia per la cybersicurezza nazionale (ACN) e all'amministrazione ogni richiesta di accesso a dati o Metadati da parte di entità extra-UE;",
+     "quote_english": "Regarding access to data by non-EU entities, the provider: a. reports to ACN and to the administration every request for access to data or metadata by non-EU entities;",
+     "title": "Regolamento ACN n. 21007/2024, Allegato 2, sezione 4 (dati e servizi strategici)",
+     "url": "https://www.acn.gov.it/portale/documents/d/guest/regolamentocloud"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "it",
+     "published": "2024",
+     "publisher": "Agenzia per la cybersicurezza nazionale (ACN)",
+     "quote": "«strategici» possono essere erogati tramite servizi cloud accreditati nell’ambito delle tipologie di cui al comma 1, lettere c) e d).",
+     "quote_english": "'Strategic' data and services may be delivered only through cloud services qualified at levels c) and d) (QC3 and QC4).",
+     "title": "Regolamento ACN n. 21007/2024, art. 17 (Qualificazione dei servizi cloud)",
+     "url": "https://www.acn.gov.it/portale/documents/d/guest/regolamentocloud"
+    }
+   ],
+   "id": "L3",
+   "research_note": "Italy has a mandatory, binding ACN cloud-qualification scheme with levels QC1 to QC4. Strategic data may use only QC3 or QC4 services. For strategic data, all metadata must stay in the EU, and any request for access by a non-EU entity must be reported to ACN and needs the administration's explicit authorisation. The scheme does not require the provider to be immune from non-EU law in the way SecNumCloud does, and it does not bar non-EU ownership. The partial rating reflects this: the scheme is in force and required, but it only partly provides immunity from non-EU law. It could fairly be judged 'no' under a strict immunity test.",
+   "review": {
+    "original": "partial",
+    "reason": "Both quotes appear verbatim: art. 17(4) limits strategic data to QC3/QC4, and Allegato 2/3 require non-EU access requests to be reported to ACN and to need explicit authorisation from the administration. This is a mandatory scheme with non-EU access controls, but it is not a SecNumCloud-style immunity requirement, so 'yes' is unsupported. Partial is kept as the cautious rating, though the definition's 'adopted but not required' wording fits imperfectly.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "Agenzia per l'Italia Digitale (AgID), trusted list scheme operator",
+     "quote": "C=IT, O=Ministero dell'Interno, OU=Direz. Centr. per i Servizi Demografici - CNSD, CN=National root CA for the Italian Electronic Identity Card",
+     "quote_english": "Italy, Ministry of the Interior, Central Directorate for Demographic Services: National root CA for the Italian Electronic Identity Card.",
+     "title": "Italian Trusted List (TSL-IT), trust service provider entry: Ministero dell'Interno",
+     "url": "https://eidas.agid.gov.it/TL/TSL-IT.xml"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "Agenzia per l'Italia Digitale (AgID), trusted list scheme operator",
+     "quote": "CN=Ministero della Difesa - Time Stamp Authority eIDAS SERIALNUMBER=97355240587 OU=S.M.D. - C.do C4 Difesa O=Ministero della Difesa C=IT",
+     "quote_english": "Qualified eIDAS time-stamp authority operated by the Italian Ministry of Defence (Defence General Staff, C4 Command).",
+     "title": "Italian Trusted List (TSL-IT), trust service provider entry: Ministero della Difesa",
+     "url": "https://eidas.agid.gov.it/TL/TSL-IT.xml"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Italian trusted list is published by AgID, a state agency that acts as scheme operator and supervisory body. It lists state bodies as trust service providers. The Ministry of the Interior runs the national root CA for the CIE, which is recognised at national level. The Ministry of Defence holds granted qualified status for QC, QTST and remote-signature services. Banca d'Italia and PagoPA S.p.A. are also listed. Private QTSPs such as InfoCert, Aruba, Namirial and Actalis also issue most qualified certificates on the market. Rated yes because the government's own PKI roots (CIE and Defence) are run by state bodies.",
+   "review": {
+    "original": "yes",
+    "reason": "The AgID trusted list XML contains the Ministero dell'Interno 'National root CA for the Italian Electronic Identity Card' entry (6 occurrences) and the Ministero della Difesa Time Stamp Authority eIDAS entry. Both are operated directly by state ministries.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "it",
+     "publisher": "Ministero dell'Interno",
+     "quote": "è il documento d’identità dei cittadini italiani emesso dal Ministero dell’Interno e prodotto dal Poligrafico e Zecca dello Stato",
+     "quote_english": "[The CIE] is the identity document of Italian citizens issued by the Ministry of the Interior and produced by the State Printing Office and Mint (Poligrafico e Zecca dello Stato).",
+     "title": "Cos'è la carta - Carta di Identità Elettronica (CIE)",
+     "url": "https://www.cartaidentita.interno.gov.it/la-carta/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "Agenzia per l'Italia Digitale (AgID)",
+     "quote": "C=IT, O=Ministero dell'Interno, OU=Direz. Centr. per i Servizi Demografici - CNSD, CN=National root CA for the Italian Electronic Identity Card",
+     "quote_english": "Italy, Ministry of the Interior, Central Directorate for Demographic Services: National root CA for the Italian Electronic Identity Card.",
+     "title": "Italian Trusted List (TSL-IT), trust service provider entry: Ministero dell'Interno",
+     "url": "https://eidas.agid.gov.it/TL/TSL-IT.xml"
+    }
+   ],
+   "id": "K2",
+   "research_note": "The CIE eID scheme, which is notified under eIDAS, is issued and run by the Ministry of the Interior, and the cards are produced by the state-owned IPZS. Its root CA is a Ministry of the Interior entry on the trusted list. Italy's other notified scheme, SPID, is run by accredited private identity providers under AgID supervision; Poste Italiane is one of them. Rated yes on the basis of CIE. I could not fetch the Commission's notified-schemes page as static text, so it is not cited.",
+   "review": {
+    "original": "yes",
+    "reason": "The CIE page states verbatim that the card is issued by the Ministero dell'Interno and produced by the state-owned Poligrafico e Zecca dello Stato, and the trusted list shows the CIE root CA as a Ministry of the Interior entry. The state operates the CIE scheme, even though SPID is run by private providers.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "it",
+     "published": "2012-10-18",
+     "publisher": "Normattiva",
+     "quote": "migrano i loro Centri per l'elaborazione delle informazioni (CED) e i relativi sistemi informatici, privi dei requisiti fissati dal regolamento di cui al comma 4, verso l'infrastruttura di cui al primo periodo o verso altra infrastruttura propria già esistente",
+     "quote_english": "[Central administrations] migrate their data processing centres (CED) that lack the requirements of the regulation to the national infrastructure or to another existing infrastructure of their own that meets them.",
+     "title": "Decreto-legge 18 ottobre 2012, n. 179, art. 33-septies",
+     "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art33septies"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "it",
+     "publisher": "Polo Strategico Nazionale S.p.A.",
+     "quote": "Gestiamo dati e servizi in 4 Green Data Center nazionali con un impatto positivo sulla spesa pubblica e sul risparmio energetico.",
+     "quote_english": "We manage data and services in 4 national green data centres, with a positive impact on public spending and energy savings.",
+     "title": "Polo Strategico Nazionale: il cloud sovrano per l'Italia digitale",
+     "url": "https://www.polostrategiconazionale.it/"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The statute recognises that public administrations run their own data processing centres (CED) and may keep 'existing own infrastructure' that meets the ACN requirements. Art. 33-septies(3) also excludes CEDs handling classified data, which implies separate state-run classified facilities. PSN runs 4 national data centres. PSN S.p.A. is a public-private company owned by TIM, Leonardo, CDP Equity and Sogei, so it is not wholly state-owned. Sogei, the Finance Ministry's in-house IT company, runs data centres of its own, but its website returned HTTP 403 and could not be cited. The ACN catalogue lists qualified PA-owned infrastructures, but the page loads its content dynamically and could not be quoted.",
+   "review": {
+    "original": "yes",
+    "reason": "Art. 33-septies (verbatim on Normattiva) presumes that central administrations run their own CEDs and allows 'altra infrastruttura propria già esistente' that meets ACN requirements to be kept. PSN's homepage confirms 4 operational national data centres. The evidence for state operation today is inferential, and PSN is a public-private company rather than wholly state-owned, but it is enough for yes.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "language": "it",
+     "published": "2026-07-21",
+     "publisher": "Polo Strategico Nazionale S.p.A.",
+     "quote": "È stato raggiunto il target di oltre 280 Pubbliche Amministrazioni – tra PA Centrali, ASL e Aziende Ospedaliere – che hanno migrato dati, servizi e sistemi informativi verso l’infrastruttura cloud sovrana ad alta affidabilità",
+     "quote_english": "The target has been reached of more than 280 public administrations (central administrations, local health authorities and hospitals) that have migrated data, services and information systems to the high-reliability sovereign cloud infrastructure.",
+     "title": "Centrato il target PNRR: oltre 280 Pubbliche Amministrazioni migrate al cloud sovrano di Polo Strategico Nazionale",
+     "url": "https://www.polostrategiconazionale.it/media/news/centrato-il-target-pnrr-oltre-280-pubbliche-amministrazioni-migrate-al-cloud-sovrano-di-polo-strategico-nazionale/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "it",
+     "publisher": "Polo Strategico Nazionale S.p.A.",
+     "quote": "il Dipartimento per la trasformazione digitale ha promosso la creazione di Polo Strategico Nazionale S.p.A., società di nuova costituzione partecipata da",
+     "quote_english": "The Department for Digital Transformation promoted the creation of Polo Strategico Nazionale S.p.A., a newly established company with shareholders [TIM, Leonardo, CDP and Sogei].",
+     "title": "Polo Strategico Nazionale - Chi siamo",
+     "url": "https://www.polostrategiconazionale.it/chi-siamo/polo-strategico-nazionale/"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The Polo Strategico Nazionale (PSN) is the government cloud set up under art. 33-septies DL 179/2012 and PNRR Investment 1.1. It is in operation. In July 2026 PSN reported that more than 280 public administrations had migrated to it, meeting the PNRR target. It was created at the initiative of the Presidency's Department for Digital Transformation and is operated by a public-private company.",
+   "review": {
+    "original": "yes",
+    "reason": "The PSN news page confirms verbatim that more than 280 public administrations have migrated data, services and systems to PSN's sovereign cloud, and the Chi siamo page confirms it was created on the government's initiative (shareholders TIM, Leonardo, CDP Equity, Sogei). It is in operation and serving government workloads.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "IT"
+}

@@ -1,0 +1,140 @@
+{
+ "indicators": [
+  {
+   "claims": [],
+   "id": "L1",
+   "research_note": "No statute or binding regulation found that requires government data to be stored or processed under Maltese or EU jurisdiction. The EC NIFO Digital Public Administration Factsheet 2024 for Malta (interoperable-europe.ec.europa.eu) describes only a non-binding 2019 Centralised Digital Enabling Services Policy. That policy recommends government cloud services for classified information but sets no jurisdiction requirement. MITA's Hybrid Cloud Platform uses EU-located providers as a matter of practice, not by law. Could not reach mita.gov.mt, gov.mt, parlament.mt or nao.gov.mt: all return Cloudflare 403. The legislation.mt search API returned no results, and WebSearch was unavailable (budget exhausted).",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were cited and the research note finds no binding jurisdiction requirement (the 2019 policy is non-binding), so unknown stands.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [],
+   "id": "L2",
+   "research_note": "Checked the Official Secrets Act (Cap. 50, legislation.mt/eli/cap/50/eng). It criminalises disclosure of secret and confidential official information but defines no classification levels such as Top Secret, Secret or Confidential. The NIFO 2024 Malta factsheet mentions a GMICT Information Security Policy (ISO 27001-based) and 'classified information' in the Centralised Digital Enabling Services Policy, but no binding classification scheme. MITA's GMICT policy pages are behind a Cloudflare 403. Could not search legislation.mt subsidiary legislation for a protection-of-classified-information instrument.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were cited; the Official Secrets Act Cap. 50 criminalises disclosure but defines no classification levels, so unknown stands.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "No Maltese sovereign-cloud certification that requires immunity from non-EU law, in the SecNumCloud mould, was found in the NIFO 2024 Malta factsheet or its cybersecurity and cloud sections. MITA's Hybrid Cloud Platform links to EU-located public cloud providers, and no certification requirement is mentioned. National cybersecurity and MITA sites (cybersecurity.gov.mt, ncc.gov.mt, mita.gov.mt) return 403, so no authoritative statement either way could be retrieved.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were cited and no SecNumCloud-type certification could be found or ruled out, so unknown stands.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "Malta Communications Authority",
+     "quote": "CN=Malta Citizen Electronic Identity CA, OU=Class Qualified, O=Government of Malta, C=MT",
+     "quote_english": "The qualified CA for Maltese citizen electronic identity certificates belongs to the organisation 'Government of Malta'.",
+     "title": "Malta Trusted List (TSL)",
+     "url": "https://tsl.mca.org.mt/MT_TSL.xml"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Maltese trusted list, published by the Malta Communications Authority (scheme operator, located via the EU LOTL), lists the QTSP 'Malta Electronic Certification Services Ltd' (NTRMT-C43419). Its trade name is 'Government of Malta' and its address is Identity Malta Agency, Valley Road, Msida. It operates the qualified CAs Malta Citizen and Resident Electronic Identity CA and Remote Signing CA, issued under the 'Government of Malta Root CA'. The trusted list also carries two private QTSPs (ANF AC Malta, eWitness Malta), but the government PKI root and eID certificates are state-operated. MECS's own repository (repository.qca.gov.mt) is behind a Cloudflare 403.",
+   "review": {
+    "original": "yes",
+    "reason": "The quoted DN is verbatim in the MCA trusted list MT_TSL.xml, where the QTSP Malta Electronic Certification Services Ltd appears under the trade name 'Government of Malta' at the Identity Malta address and operates the citizen eID CA, so the trust anchor is state-controlled.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "Identità (formerly Identity Malta Agency)",
+     "quote": "The government agency offers a specialized public service in matters relating to e-ID cards, e-Passports, visas, residence documents, acts of civil status and public deeds.",
+     "quote_english": "Identità is a government agency providing public services for e-ID cards, e-passports, visas, residence documents, civil status acts and public deeds.",
+     "title": "About Us - Identità",
+     "url": "https://identita.gov.mt/about-us/"
+    },
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "In 2022, following a successful notification process of the Maltese eID and e-RP scheme at an EU level in terms of the e-IDAS Regulation",
+     "quote_english": "In 2022 the Maltese eID and electronic residence permit scheme was successfully notified at EU level under eIDAS.",
+     "title": "Digital Public Administration Factsheet 2024 - Malta (Supporting Document)",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024%20Supporting%20Document_Malta_vFinal.pdf"
+    }
+   ],
+   "id": "K2",
+   "research_note": "Identità, established in 2013 by Subsidiary Legislation 595.07 and governed by the Public Administration Act, issues the eID card and registers e-ID accounts. MITA, a government agency under the Office of the Prime Minister, operates the eID platform and the eIDAS Node. The scheme was notified under eIDAS in 2022.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are verbatim: the Identità page describes a government agency issuing e-ID cards under the Public Administration Act, and the NIFO 2024 factsheet confirms the Maltese eID scheme was notified under eIDAS in 2022.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "It is based upon an on-premises stack, which is hosted within the MITA Tier3 datacentre for Malta-based operations",
+     "quote_english": "The government hybrid cloud is based on an on-premises stack hosted in MITA's Tier 3 data centre in Malta.",
+     "title": "Digital Public Administration Factsheet 2024 - Malta (Supporting Document)",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024%20Supporting%20Document_Malta_vFinal.pdf"
+    },
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "The Malta Information Technology Agency (MITA), which falls under the remit of the OPM",
+     "quote_english": "MITA falls under the Office of the Prime Minister.",
+     "title": "Digital Public Administration Factsheet 2024 - Malta (Supporting Document)",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024%20Supporting%20Document_Malta_vFinal.pdf"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The NIFO 2024 factsheet also refers to the MITA core network 'located at the Agency's two Data Centres'. MITA is a government agency under the Office of the Prime Minister. MITA's own data-centre pages (mita.gov.mt) exist in the Wayback Machine, e.g. a 2026 post on a visit to the MITA Data Centre, but the live site returns 403.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are verbatim in the NIFO 2024 Malta PDF, which describes the HCP on-premises stack hosted in MITA's Tier 3 data centre and places MITA under the OPM, so a state body operates a data centre that is in use.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "eu_document",
+     "language": "en",
+     "publisher": "European Commission, Interoperable Europe / NIFO",
+     "quote": "MITA operates a Hybrid Cloud Platform (HCP), a hosting solution entirely developed and maintained in Malta for all government entities.",
+     "quote_english": "MITA operates a Hybrid Cloud Platform, a hosting solution developed and maintained in Malta for all government entities.",
+     "title": "Digital Public Administration Factsheet 2024 - Malta (Supporting Document)",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/NIFO_2024%20Supporting%20Document_Malta_vFinal.pdf"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The HCP combines an on-premises stack in MITA's Tier 3 data centre with an off-premises cloud linked to EU-located cloud service provider data centres, and connects to the Malta Government Network. It is in operation for government entities. The NIFO factsheet also notes that the eID system was migrated to the cloud in 2022.",
+   "review": {
+    "original": "yes",
+    "reason": "The quote is verbatim in the NIFO 2024 PDF, where the page says MITA 'operates' the Hybrid Cloud Platform for all government entities (on-prem in MITA's Tier 3 DC plus an EU-located off-prem cloud), so the platform is in operation and not only announced.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "MT"
+}

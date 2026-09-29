@@ -1,0 +1,242 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "ro",
+     "published": "2002-06-13",
+     "publisher": "Oficiul Registrului Național al Informațiilor Secrete de Stat (ORNISS)",
+     "quote": "(1) Sistemele SPAD şi RTD - SIC au dreptul să stocheze, să proceseze sau să transmită informaţii clasificate, numai dacă sunt autorizate potrivit prezentei hotărâri.",
+     "quote_english": "(1) Automatic data processing systems and communications/IT systems may store, process or transmit classified information only if they are authorised under this decision.",
+     "title": "HG nr. 585/2002 pentru aprobarea Standardelor naționale de protecție a informațiilor clasificate în România (Art. 240)",
+     "url": "http://orniss.ro/ro/legislatie/pdf/HG%20585.pdf"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "ro",
+     "published": "2002-06-13",
+     "publisher": "Oficiul Registrului Național al Informațiilor Secrete de Stat (ORNISS)",
+     "quote": "a) asigură, la nivel naţional, acreditarea de securitate şi reacreditarea SPAD şi RTD - SIC care stochează, procesează sau transmit informaţii clasificate, în funcţie de nivelul de clasificare a acestora;",
+     "quote_english": "a) ensures, at national level, the security accreditation and re-accreditation of systems that store, process or transmit classified information, according to their classification level;",
+     "title": "HG nr. 585/2002 pentru aprobarea Standardelor naționale de protecție a informațiilor clasificate în România (Art. 253)",
+     "url": "http://orniss.ro/ro/legislatie/pdf/HG%20585.pdf"
+    }
+   ],
+   "id": "L1",
+   "research_note": "Binding control exists only for classified data: HG 585/2002 lets systems store or process classified information only when they hold national accreditation from the ORNISS security accreditation agency. That is national-jurisdiction control over classified data, so the value is partial. OUG 89/2022, the ordinance on government cloud infrastructure, could set a wider rule, but its consolidated text could not be retrieved. legislatie.just.ro and cdep.ro refused connections, and the old research.gov.ro drafts were unreachable. The October 2023 explanatory note for amending OUG 89/2022 describes no data-localisation or jurisdiction clause for government data in general. Under Law 163/2021, vendors of equipment and software for national-interest IT infrastructure must be authorised. That rule screens vendors; it does not set where data must be stored.",
+   "review": {
+    "original": "partial",
+    "reason": "Both quotes appear verbatim in HG 585/2002 (Art. 240 and Art. 253): systems may hold classified information only once the national security accreditation agency has accredited them, which is binding national control limited to classified data, so partial holds (the decision contains no explicit storage-location clause).",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "ro",
+     "published": "2002-04-12",
+     "publisher": "Serviciul Român de Informații (republishing the statute)",
+     "quote": "(2) Nivelurile de secretizare atribuite informaţiilor din clasa secrete de stat sunt: a) strict secret de importanta deosebita; b) strict secret; c) secret.",
+     "quote_english": "(2) The secrecy levels assigned to information in the state-secret class are: a) top secret of exceptional importance; b) top secret; c) secret.",
+     "title": "Legea nr. 182/2002 privind protecția informațiilor clasificate (Art. 18)",
+     "url": "https://www.sri.ro/assets/files/legislatie/2024/Lege_182.2002.pdf"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "ro",
+     "published": "2002-04-12",
+     "publisher": "Serviciul Român de Informații (republishing the statute)",
+     "quote": "c) clasele de secretizare sunt: secrete de stat şi secrete de serviciu;",
+     "quote_english": "c) the secrecy classes are: state secrets and service secrets;",
+     "title": "Legea nr. 182/2002 privind protecția informațiilor clasificate (Art. 15)",
+     "url": "https://www.sri.ro/assets/files/legislatie/2024/Lege_182.2002.pdf"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Law 182/2002 defines the classification scheme in statute. It sets two classes, state secrets and service secrets. State secrets carry three levels: strict secret de importanță deosebită, strict secret and secret. HG 585/2002 supplies the implementing national standards.",
+   "review": {
+    "original": "yes",
+    "reason": "The SRI PDF of Law 182/2002 contains Art. 15(c) with the state/service secret classes and Art. 18(2) with the three state-secret levels verbatim, so the classification levels are set in statute.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "ro",
+     "published": "2023-10-19",
+     "publisher": "Ministerul Cercetării, Inovării și Digitalizării",
+     "quote": "MCID, în consultare cu SRI și DNSC, recunoaște certificarea de securitate a serviciilor publice de cloud în cadrul",
+     "quote_english": "The Ministry of Research, Innovation and Digitalisation, in consultation with SRI and DNSC, recognises security certification of public cloud services under [the proposed European cybersecurity certification scheme for cloud services, EUCS].",
+     "title": "Notă de fundamentare – OUG pentru modificarea și completarea OUG nr. 89/2022 (cloud)",
+     "url": "https://www.research.gov.ro/wp-content/uploads/2023/10/Nota-Fundamentare-OUG-Cloud-19.10.2023.pdf"
+    }
+   ],
+   "id": "L3",
+   "research_note": "No Romanian cloud certification requiring immunity from non-EU law was found, and no SecNumCloud-type scheme either. The 2023 explanatory note for the cloud ordinance says commercial public-cloud security certification is recognised under the proposed EU scheme (EUCS). That scheme carries no sovereignty or immunity criteria. Law 163/2021 requires authorisation of technology vendors for national-interest infrastructure, a supply-chain screen rather than a cloud certification. The DNSC site returned 403, and no authoritative statement that no such scheme exists was found, so the value is unknown rather than no.",
+   "review": {
+    "original": "unknown",
+    "reason": "The note quote was confirmed on the research.gov.ro PDF, which had to be fetched with a browser user agent: it recognises certification under the proposed EU cloud scheme (EUCS), which carries no immunity criteria, and no source says a sovereign scheme exists or that none exists, so unknown is right.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "OU=Autoritatea de Certificare STS ROOT G2, O=STS, C=RO",
+     "quote_english": "Certification Authority STS ROOT G2, organisation STS (Special Telecommunications Service), Romania — listed as a granted qualified CA/QC service.",
+     "title": "Romanian Trusted List (TSL) – Serviciul de Telecomunicatii Speciale entry",
+     "url": "http://trustedlist.adr.gov.ro/trustedlist.xml"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "CN=SRI Qualified e-Signatures CA, OU=UM 0296, OID.2.5.4.97=VATRO-14381010, O=SRI, C=RO",
+     "quote_english": "Romanian Intelligence Service (SRI) qualified e-signatures CA, listed with granted status on the Romanian trusted list.",
+     "title": "Romanian Trusted List (TSL) – Serviciul Român de Informații entry",
+     "url": "http://trustedlist.adr.gov.ro/trustedlist.xml"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "ADR exercită atribuţiile de organism de supraveghere pentru prestatorii de servicii de încredere calificaţi stabiliţi pe teritoriul României",
+     "quote_english": "ADR acts as the supervisory body for qualified trust service providers established on Romanian territory",
+     "title": "Semnătura electronică, Trusted list",
+     "url": "https://www.adr.gov.ro/semnatura-electronica-trusted-list"
+    }
+   ],
+   "id": "K1",
+   "research_note": "Two state bodies are qualified trust service providers on Romania's trusted list. The Special Telecommunications Service (STS) runs STS ROOT G2 and STS Qualified CA, with qualified timestamping, validation and remote signing. The Romanian Intelligence Service (SRI) runs SRI Root CA and qualified e-signature, e-seal and timestamping CAs. All are listed with granted status. Private qualified providers also operate, among them certSIGN, DigiSign, Trans Sped and AlfaTrust. The government PKI anchor still sits with state bodies. ADR, a state authority, is the supervisory body. The trusted-list XML is quoted within single X509SubjectName elements.",
+   "review": {
+    "original": "yes",
+    "reason": "Both subject-name strings appear verbatim in the ADR trusted-list XML, which lists the Special Telecommunications Service (STS ROOT G2, STS Qualified CA and others) and the Romanian Intelligence Service (SRI Root CA and qualified CAs) with status granted, and ADR's page confirms it is the state supervisory body, so state bodies operate qualified trust anchors.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României (ROeID)",
+     "quote": "Operator – Autoritatea pentru Digitalizarea României, structură cu personalitate juridică în subordinea Ministerului Cercetării, Inovării şi Digitalizării",
+     "quote_english": "Operator – the Romanian Digitalisation Authority, a legal entity subordinate to the Ministry of Research, Innovation and Digitalisation",
+     "title": "ROeID – Glosar termeni",
+     "url": "https://roeid.ro/glosar-termeni"
+    },
+    {
+     "doc_type": "press_release",
+     "language": "ro",
+     "published": "2024-09-13",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "În urma auditului, ROeID a fost recunoscut de către țările membre având un nivel de încredere substanțial, conform cărții de identitate existente la momentul actual în România.",
+     "quote_english": "Following the audit, ROeID was recognised by the Member States as having a substantial assurance level, based on the identity card currently in use in Romania.",
+     "title": "Comisia Europeană recunoaște ROeID ca fiind sistemul de identificare electronică al Statului Român",
+     "url": "https://www.adr.gov.ro/articole/comisia-europeana-recunoaste-roeid-ca-fiind-sistemul-de-identificare-electronica-al-statului-roman"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României (ROeID)",
+     "quote": "Aplicația mobila ROeID iți permite să semnezi digital documente folosind noua carte de identitate cu cip emisa de MAI în România.",
+     "quote_english": "The ROeID mobile app lets you sign documents digitally using the new chip identity card issued by the Ministry of Internal Affairs in Romania.",
+     "title": "ROeID – Acasă",
+     "url": "https://roeid.ro/"
+    }
+   ],
+   "id": "K2",
+   "research_note": "ROeID is Romania's national eID scheme, notified under eIDAS at assurance level substantial in September 2024. The Romanian Digitalisation Authority (ADR), a state authority under the digital ministry, operates it as identity service provider. The chip identity card (CEI) is issued by the Ministry of Internal Affairs (MAI). Both are state bodies.",
+   "review": {
+    "original": "yes",
+    "reason": "All three quotes were found verbatim: roeid.ro names ADR, a state authority under the ministry, as the ROeID operator; ADR's press release confirms ROeID was recognised at substantial assurance; and ROeID uses the MAI-issued chip identity card, so the scheme is state-operated.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "ro",
+     "published": "2023-10-19",
+     "publisher": "Ministerul Cercetării, Inovării și Digitalizării",
+     "quote": "în vederea asigurării unui management unitar și eficient privind gestionarea centralizată a resurselor IT&C și a centrelor de date dezvoltate de către autoritățile și instituțiile publice",
+     "quote_english": "in order to ensure unified and efficient management of the centralised administration of ICT resources and of the data centres developed by public authorities and institutions",
+     "title": "Notă de fundamentare – OUG pentru modificarea și completarea OUG nr. 89/2022 (cloud)",
+     "url": "https://www.research.gov.ro/wp-content/uploads/2023/10/Nota-Fundamentare-OUG-Cloud-19.10.2023.pdf"
+    },
+    {
+     "doc_type": "press_release",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "Amenajarea și dotarea centrelor de date cu un nivel de reziliență caracteristic nivelului Tier IV/III by design",
+     "quote_english": "Fitting out and equipping data centres with resilience characteristic of Tier IV/III by design",
+     "title": "Anunț de presă – Implementarea infrastructurii de Cloud Guvernamental (PNRR C7, Investiția 1)",
+     "url": "https://www.adr.gov.ro/articole/anunt-de-presa-pentru-proiectul-implementarea-infrastructurii-de-cloud-guvernamental-componenta-7---transformare-digitala-investitia-1---implementarea-infrastructurii-de-cloud-guvernamental"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The 2023 explanatory note from the ministry and ADR refers to data centres already developed by public authorities and institutions. It also refers to integrating the cloud with the 'centrele de date existente în ţară', the data centres already existing in the country. On top of that, ADR, STS and SRI are building new Tier IV/III government data centres under PNRR Investment 1. The note names STS as technical integrator of the cloud infrastructure. The STS site (sts.ro) would not connect, so the operator's own description of its facilities could not be checked. Rated yes on the strength of the ministry's reference to data centres that public authorities already run. The evidence is indirect.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are verbatim, but the note quote is a purpose clause that only mentions data centres public authorities have developed (and elsewhere 'existing data centres in the country'), without naming an operator or showing them running today, while the ADR quote describes data centres being fitted out under the PNRR, i.e. construction, so the citations establish only partial.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "language": "ro",
+     "published": "2025-02-20",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "Anul trecut, am recepționat lucrările pentru componenta de infrastructură a cloudului dedicat.",
+     "quote_english": "Last year we took delivery of the works for the infrastructure component of the dedicated cloud.",
+     "title": "ADR a organizat conferința de status a proiectului „Implementarea infrastructurii de Cloud Guvernamental”",
+     "url": "https://www.adr.gov.ro/articole/adr-a-organizat-conferinta-de-status-a-proiectului-implementarea-infrastructurii-de-cloud-guvernamental"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "Investiția 1 – Implementarea infrastructurii de Cloud Guvernamental - proiect finanțat prin PNRR, Componenta 7 – Transformare Digitală",
+     "quote_english": "Investment 1 – Implementation of the Government Cloud infrastructure – project financed through the RRF plan, Component 7 – Digital Transformation (listed under projects in implementation)",
+     "title": "Proiecte în implementare",
+     "url": "https://www.adr.gov.ro/proiecte-in-implementare"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "ro",
+     "published": "2023-10-19",
+     "publisher": "Ministerul Cercetării, Inovării și Digitalizării",
+     "quote": "România nu utilizează în prezent tehnologii cloud computing în administrația publică.",
+     "quote_english": "Romania does not currently use cloud computing technologies in public administration.",
+     "title": "Notă de fundamentare – OUG pentru modificarea și completarea OUG nr. 89/2022 (cloud)",
+     "url": "https://www.research.gov.ro/wp-content/uploads/2023/10/Nota-Fundamentare-OUG-Cloud-19.10.2023.pdf"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The government cloud platform is legally established by OUG 89/2022, and its governance guide was approved by HG in January 2023. Romania's Recovery and Resilience Plan (PNRR) funds it: Investment 1 for infrastructure (ADR, STS and SRI) and Investment 2 for migration (MAS-IC). The 2023 note said public administration used no cloud computing yet. In February 2025 ADR reported that the dedicated-cloud infrastructure had been received in 2024 and that migration was beginning. The ADR site still lists both investments as projects in implementation, as of the 2026-09-28 crawl. No official source found says government workloads are in production on the platform, so the value is partial: built, with migration under way, not yet confirmed in operation.",
+   "review": {
+    "original": "partial",
+    "reason": "All three quotes are verbatim: the 2023 note says public administration uses no cloud, ADR reported in 2025 that the infrastructure had been received and that migration is the next step, and the project is still listed as in implementation, so nothing shows government workloads running on it and partial is correct.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  }
+ ],
+ "iso": "RO"
+}

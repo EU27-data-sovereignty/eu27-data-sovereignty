@@ -1,0 +1,246 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "sv",
+     "published": "2026-07-09",
+     "publisher": "Sveriges riksdag (answer by the Minister for Public Administration)",
+     "quote": "Avseende statliga myndigheter ansvarar ledningen för verksamheten och ska se till att den bedrivs effektivt och enligt gällande rätt. Det innebär att myndigheten gör en självständig bedömning avseende användning av till exempel molntjänster.",
+     "quote_english": "For state agencies, management is responsible for operations and must ensure they are run efficiently and lawfully. This means the agency makes an independent assessment regarding the use of, for example, cloud services.",
+     "title": "Svar på fråga 2025/26:932 Myndigheters beroende av amerikanska molntjänster",
+     "url": "https://data.riksdagen.se/dokument/HD12932.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "sv",
+     "published": "2026-07-09",
+     "publisher": "Sveriges riksdag (answer by the Minister for Public Administration)",
+     "quote": "Regeringens molnpolicy som beslutades den 28 maj ska kunna användas som stöd av den offentliga förvaltningen vid dess användning av molntjänster.",
+     "quote_english": "The government's cloud policy adopted on 28 May is intended as support for public administration in its use of cloud services.",
+     "title": "Svar på fråga 2025/26:932 Myndigheters beroende av amerikanska molntjänster",
+     "url": "https://data.riksdagen.se/dokument/HD12932.html"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "sv",
+     "publisher": "Sveriges riksdag / Regeringskansliet (SFS)",
+     "quote": "Om lämplighetsprövningen leder till bedömningen att det planerade förfarandet är olämpligt från säkerhetsskyddssynpunkt, får det inte inledas.",
+     "quote_english": "If the suitability assessment concludes that the planned procedure is unsuitable from a protective-security standpoint, it may not be initiated.",
+     "title": "Säkerhetsskyddslag (2018:585), 4 kap. 8 §",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/sakerhetsskyddslag-2018585_sfs-2018-585/"
+    }
+   ],
+   "id": "L1",
+   "research_note": "The government's July 2026 answer to written question 2025/26:932 says each agency decides for itself whether to use cloud services. The cloud policy of 28 May 2026 is support material, and the Swedish Post and Telecom Authority (PTS) gives guidance, so neither is binding. For classified data, the Protective Security Act (säkerhetsskyddslagen) ch. 4 requires a protective-security agreement, a suitability test and consultation before any outsourcing. An unsuitable outsourcing may not go ahead. The Act never names a required jurisdiction, though. The Protective Security Ordinance (säkerhetsskyddsförordningen, SFS 2021:955) was searched for rules on storage abroad or outside Sweden and has none. Rated 'no' because no general or classified-data jurisdiction mandate was found. 'partial' could be argued, since the classified-data suitability test works in practice as a gate against foreign jurisdiction.",
+   "review": {
+    "original": "no",
+    "reason": "Both quotes are on their pages, but neither states that there is no jurisdiction requirement: the minister's answer only says each agency assesses cloud use itself, and the Protective Security Act ch. 4 s. 8 quote is about a suitability test, not jurisdiction. The 'no' criterion (a source stating no such requirement exists) is therefore not met.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "sv",
+     "publisher": "Sveriges riksdag / Regeringskansliet (SFS)",
+     "quote": "Säkerhetsskyddsklassificerade uppgifter ska delas in i säkerhetsskyddsklasser utifrån den skada som ett röjande av uppgiften kan medföra för Sveriges säkerhet.",
+     "quote_english": "Security-classified information shall be divided into security classification levels based on the damage that disclosure could cause to Sweden's security.",
+     "title": "Säkerhetsskyddslag (2018:585), 2 kap. 5 §",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/sakerhetsskyddslag-2018585_sfs-2018-585/"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "sv",
+     "publisher": "Sveriges riksdag / Regeringskansliet (SFS)",
+     "quote": "1. kvalificerat hemlig vid en synnerligen allvarlig skada, 2. hemlig vid en allvarlig skada, 3. konfidentiell vid en inte obetydlig skada, eller 4. begränsat hemlig vid endast ringa skada.",
+     "quote_english": "1. top secret for exceptionally grave damage, 2. secret for serious damage, 3. confidential for not insignificant damage, or 4. restricted for only minor damage.",
+     "title": "Säkerhetsskyddslag (2018:585), 2 kap. 5 §",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/sakerhetsskyddslag-2018585_sfs-2018-585/"
+    }
+   ],
+   "id": "L2",
+   "research_note": "The four classification levels are set in statute, in the Protective Security Act (SFS 2018:585) ch. 2 s. 5, in the consolidated text on riksdagen.se, which includes amendments up to SFS 2026:764.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes appear verbatim in the Protective Security Act (säkerhetsskyddslag 2018:585) ch. 2 s. 5 on riksdagen.se, which sets the four classification levels in statute.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "sv",
+     "published": "2026-07-09",
+     "publisher": "Sveriges riksdag (answer by the Minister for Public Administration)",
+     "quote": "Detta initiativ kan bl.a. bidra till ökad klarhet avseende, och att medlemsländerna får ökad tillgång till, digitalt suveräna molntjänster för verksamheter med höga skyddsvärden.",
+     "quote_english": "This initiative [the EU Cloud and AI Development Act] can, among other things, contribute to greater clarity regarding, and member states gaining increased access to, digitally sovereign cloud services for operations with high protection value.",
+     "title": "Svar på fråga 2025/26:932 Myndigheters beroende av amerikanska molntjänster",
+     "url": "https://data.riksdagen.se/dokument/HD12932.html"
+    }
+   ],
+   "id": "L3",
+   "research_note": "No Swedish cloud certification requiring immunity from non-EU law was found. Sources searched: the parliamentary answer 2025/26:932 (July 2026), the government fact memo 2025/26:FPM99 on the Cloud and AI Development Act, the Protective Security Act and Ordinance, and a riksdagen open-data search for 'suveränt moln' and 'statlig molntjänst'. The government points to the EU Cloud and AI Development Act as the future route to sovereign cloud services, which suggests no national scheme exists. No authoritative source says so outright, so this stays 'unknown'. The 28 May 2026 government cloud policy and PTS guidance were not retrieved because the regeringen.se search needs JavaScript and digg.se could not be reached.",
+   "review": {
+    "original": "unknown",
+    "reason": "The quote is in the minister's answer to 2025/26:932, where the government only points to the future EU Cloud and AI Development Act; nothing establishes a national certification either way, so 'unknown' stands.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "sv",
+     "published": "2023-10-16",
+     "publisher": "Statens offentliga utredningar (via Sveriges riksdag)",
+     "quote": "Genom Försäkringskassans tjänst E-identitet för offentlig sektor (Efos) tillhandahålls",
+     "quote_english": "Through the Swedish Social Insurance Agency's service E-identity for the public sector (Efos) are provided [e-identities]",
+     "title": "SOU 2023:61 En säker och tillgänglig statlig e-legitimation",
+     "url": "https://data.riksdagen.se/dokument/HBB361.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "sv",
+     "published": "2023-10-16",
+     "publisher": "Statens offentliga utredningar (via Sveriges riksdag)",
+     "quote": "Efos möjliggör att anslutna organisationer kan autentisera, kryptera och signera så väl inom som mellan organisationer.",
+     "quote_english": "Efos enables connected organisations to authenticate, encrypt and sign both within and between organisations.",
+     "title": "SOU 2023:61 En säker och tillgänglig statlig e-legitimation",
+     "url": "https://data.riksdagen.se/dokument/HBB361.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "sv",
+     "published": "2023-10-16",
+     "publisher": "Statens offentliga utredningar (via Sveriges riksdag)",
+     "quote": "Efos är visserligen anmäld för gränsöverskridande användning på nivå hög enligt eIDAS-förordningen, men det är fråga om en e-tjänstelegitimation",
+     "quote_english": "Efos is indeed notified for cross-border use at level high under the eIDAS Regulation, but it is an e-service (employee) credential.",
+     "title": "SOU 2023:61 En säker och tillgänglig statlig e-legitimation",
+     "url": "https://data.riksdagen.se/dokument/HBB361.html"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The government's own certificate PKI, Efos (E-identitet för offentlig sektor), is run by the state agency Försäkringskassan. It provides authentication, encryption and signing for public-sector organisations and is eIDAS-notified at level high. The qualified trust service layer is different. The Swedish Trusted List (PTS, https://trustedlist.pts.se/tlv6/SE-TL.xml, fetched 2026-09-29) lists only private QTSPs: SignGuard Europe AB, TrustWeaver AB, ZealiD AB, IDnow Trust Services AB and Fourthline Trust Services AB. No state-operated QTSP is listed. That list is XML with no quotable prose, so it is not cited as a claim. Rated 'yes' because the government PKI root is state-operated. If only qualified trust services count, the answer would be 'no' or 'partial'.",
+   "review": {
+    "original": "yes",
+    "reason": "SOU 2023:61 footnote 1 confirms the quotes: Efos is Försäkringskassan's (a state agency's) service that provides e-identities and lets connected organisations authenticate, encrypt and sign, and it is eIDAS-notified at level high. That makes the government PKI state-operated, with the caveat that the qualified trust service layer is private.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "sv",
+     "published": "2026-05-07",
+     "publisher": "Regeringen (via Sveriges riksdag)",
+     "quote": "I Sverige finns det flera privata utfärdare av e-legitimationer, bl.a. AB Svenska pass, Finansiell ID-Teknik BID AB och Freja eID Group AB. Finansiell ID-Teknik BID AB äger och förvaltar e-legitimationen Bankid.",
+     "quote_english": "In Sweden there are several private issuers of e-identities, including AB Svenska pass, Finansiell ID-Teknik BID AB and Freja eID Group AB. Finansiell ID-Teknik BID AB owns and manages the BankID e-identity.",
+     "title": "Prop. 2025/26:250 En statlig e-legitimation",
+     "url": "https://data.riksdagen.se/dokument/HD03250.html"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "sv",
+     "published": "2026-05-07",
+     "publisher": "Regeringen (via Sveriges riksdag)",
+     "quote": "Den statliga e-legitimationen ska utfärdas av utfärdande myndighet. Utfärdande myndighet ska fullgöra de uppgifter som anges i den nya lagen och föreskrifter som har meddelats i anslutning till lagen. Polismyndigheten ska vara utfärdande myndighet inom riket.",
+     "quote_english": "The state e-ID shall be issued by the issuing authority. The issuing authority shall perform the tasks set out in the new law and its regulations. The Swedish Police Authority shall be the issuing authority within the country.",
+     "title": "Prop. 2025/26:250 En statlig e-legitimation",
+     "url": "https://data.riksdagen.se/dokument/HD03250.html"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "sv",
+     "published": "2026-05-07",
+     "publisher": "Regeringen (via Sveriges riksdag)",
+     "quote": "Lagen om statlig e-legitimation och elektronisk identifiering ska träda i kraft den 1 december 2026.",
+     "quote_english": "The Act on state e-ID and electronic identification shall enter into force on 1 December 2026.",
+     "title": "Prop. 2025/26:250 En statlig e-legitimation",
+     "url": "https://data.riksdagen.se/dokument/HD03250.html"
+    }
+   ],
+   "id": "K2",
+   "research_note": "Today the national eIDs in use are private. BankID is owned by the bank-owned company Finansiell ID-Teknik BID AB, and Freja+ by Freja eID Group AB. Both operate under the Swedish trust framework (tillitsramverket) of the Agency for Digital Government (DIGG), and DIGG supervises eIDAS in Sweden. A state e-ID issued by the Police Authority was enacted as Lag (2026:1358) and Förordning (2026:1359), but it enters into force only on 1 December 2026, after today's date (2026-09-29). Rated 'partial' until then; it becomes 'yes' once the state e-ID is actually being issued.",
+   "review": {
+    "original": "partial",
+    "reason": "Prop. 2025/26:250 s. 5.3 lists BankID and Freja as private issuers and places them under DIGG's trust framework. The state e-ID issued by the Police Authority only enters into force on 1 December 2026, so 'partial' is correct as of 2026-09-29.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "sv",
+     "published": "2021-01-18",
+     "publisher": "Statens offentliga utredningar (via Sveriges riksdag)",
+     "quote": "Av 158 respondenter som svarat på frågan om datacenter i vår enkät har 58 procent (100) uppgivit att de har egna datacenter.",
+     "quote_english": "Of 158 respondents who answered the question on data centres in our survey, 58 percent (100) stated that they have their own data centres.",
+     "title": "SOU 2021:1 Säker och kostnadseffektiv it-drift",
+     "url": "https://data.riksdagen.se/dokument/ZZB31.html"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "sv",
+     "published": "2024-11-07",
+     "publisher": "Regeringskansliet (SFS, via Sveriges riksdag)",
+     "quote": "Leverantörsmyndigheter enligt denna förordning är Försäkringskassan, Lantmäteriet, Skatteverket och Trafikverket.",
+     "quote_english": "Supplier authorities under this ordinance are the Social Insurance Agency, the Land Survey, the Tax Agency and the Transport Administration.",
+     "title": "Förordning (2024:1005) om samordnad och säker statlig it-drift",
+     "url": "https://data.riksdagen.se/dokument/sfs-2024-1005.html"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The 2021 government inquiry SOU 2021:1 surveyed state agencies and found that 100 of them run their own data centres, at least 220 in total. Ordinance SFS 2024:1005, in force and amended up to 2025:936, names four agencies that supply IT operations to other agencies. Its s. 6 limits them to services based on their own IT operations. The data-centre count dates from 2020/21 survey data; no newer census was found.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are verbatim: SOU 2021:1 reports 100 agencies with their own data centres (220 in total), and SFS 2024:1005 s. 5 names four supplier agencies running state IT operations. That supports 'yes', but the data-centre count comes from a survey from about 2020 rather than a current census.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "sv",
+     "published": "2024-11-07",
+     "publisher": "Regeringskansliet (SFS, via Sveriges riksdag)",
+     "quote": "samordnat statligt tjänsteutbud: it-driftstjänster som tillhandahålls myndigheter av en leverantörsmyndighet eller på uppdrag av en sådan myndighet.",
+     "quote_english": "coordinated state service offering: IT operation services provided to agencies by a supplier authority or on behalf of such an authority.",
+     "title": "Förordning (2024:1005) om samordnad och säker statlig it-drift",
+     "url": "https://data.riksdagen.se/dokument/sfs-2024-1005.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "sv",
+     "published": "2025-02-10",
+     "publisher": "Statens offentliga utredningar (via Sveriges riksdag)",
+     "quote": "Vidare har myndigheten ett samverkansavtal med Försäkringskassan om molntjänsterna SAFOS Mötestjänst för",
+     "quote_english": "Furthermore, the agency has a cooperation agreement with the Social Insurance Agency on the cloud services SAFOS Meeting Service for [video meetings]",
+     "title": "SOU 2025:13 En effektivare organisering av mindre myndigheter",
+     "url": "https://data.riksdagen.se/dokument/HDB313.html"
+    }
+   ],
+   "id": "C2",
+   "research_note": "Sweden runs a state-provided shared IT operation and cloud offering. Försäkringskassan coordinates it, and Försäkringskassan, Lantmäteriet, Skatteverket and Trafikverket supply it, under ordinance SFS 2024:1005, which replaced government assignments running since 2017. SOU 2025:13 says Försäkringskassan provided services such as an IT workplace, object storage, a collaboration platform and a virtual data centre to 76 state agencies in 2023. It also names the SAFOS cloud services. That text is hyphen-broken, so only a short clean passage is quoted. It is a government shared-services cloud rather than a platform branded as 'sovereign cloud'.",
+   "review": {
+    "original": "yes",
+    "reason": "SFS 2024:1005 s. 3 defines a state IT-operations service offering that supplier agencies provide to other agencies, and SOU 2025:13 Bilaga 4 shows an agency using Försäkringskassan's SAFOS cloud services in practice. That is a government cloud in operation, though it is not branded as a 'sovereign cloud'.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "SE"
+}

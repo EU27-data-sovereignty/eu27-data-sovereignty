@@ -1,0 +1,235 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "de",
+     "published": "2023-03-13",
+     "publisher": "Bundesministerium des Innern und für Heimat",
+     "quote": "Die Weitergabe von Verschlusssachen an nichtöffentliche Stellen mit Sitz im Ausland setzt entsprechende Regelungen in einem solchen Abkommen voraus.",
+     "quote_english": "Passing classified information to non-public bodies seated abroad requires corresponding provisions in such a (government or departmental security) agreement.",
+     "title": "Allgemeine Verwaltungsvorschrift zum materiellen Geheimschutz (Verschlusssachenanweisung - VSA), § 34",
+     "url": "https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_13032023_SII554001405.htm"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "published": "2022-12",
+     "publisher": "Bundesamt für Sicherheit in der Informationstechnik (BSI)",
+     "quote": "Die Einrichtung SOLLTE zur Absicherung der Verfügbarkeit als Teil der Informationssicherheit Vereinbarungen ausschließlich nach deutschem Recht und deutschem Gerichtsstand und ohne obligatorisch vorab zu betreibende Schlichtungsverfahren abschließen.",
+     "quote_english": "To safeguard availability as part of information security, the body SHOULD conclude agreements exclusively under German law and German jurisdiction, without mandatory prior arbitration.",
+     "title": "Mindeststandard des BSI zur Nutzung externer Cloud-Dienste, Version 2.1 (NCD.2.2.03 Gerichtsbarkeit)",
+     "url": "https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Mindeststandards/Mindeststandard_Nutzung_externer_Cloud-Dienste_Version_2_1.pdf?__blob=publicationFile&v=4"
+    }
+   ],
+   "id": "L1",
+   "research_note": "Binding rule found only for classified data: the VSA (a general administrative regulation issued under SÜG § 35, binding on federal authorities) bars handing German classified information to foreign bodies or non-public bodies seated abroad unless a security agreement exists. For government data in general, the BSI minimum standard for external cloud services (binding on federal bodies under § 44 BSIG) makes German law and jurisdiction only a SHOULD (recommended, not mandatory), and it only requires checking the permitted processing locations (NCD.2.2.04). No statute found that requires all government data to stay under national or EU jurisdiction. Web search was unavailable (budget exhausted), so the research used direct fetches of the official portals.",
+   "review": {
+    "original": "partial",
+    "reason": "The quote appears word for word in VSA § 34(1), a binding administrative regulation issued under SÜG § 35. It stops classified data passing to foreign bodies, including non-public ones seated abroad, unless a security agreement covers it, while the BSI cloud standard only says German law and jurisdiction SHOULD apply (quote also confirmed), so the rule is binding for classified data only. Caveat: it is a conditional transfer restriction rather than an explicit hosting-jurisdiction mandate, so partial is the ceiling.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "de",
+     "publisher": "Bundesministerium der Justiz (gesetze-im-internet.de)",
+     "quote": "Verschlusssachen werden entsprechend ihrer Schutzbedürftigkeit von einer amtlichen Stelle des Bundes oder auf deren Veranlassung in folgende Geheimhaltungsgrade eingestuft",
+     "quote_english": "Classified information is classified according to its need for protection, by or at the instigation of an official federal body, into the following classification levels",
+     "title": "Sicherheitsüberprüfungsgesetz (SÜG) § 4 Allgemeine Grundsätze zum Schutz von Verschlusssachen",
+     "url": "https://www.gesetze-im-internet.de/s_g/__4.html"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "de",
+     "publisher": "Bundesministerium der Justiz (gesetze-im-internet.de)",
+     "quote": "VS-NUR FÜR DEN DIENSTGEBRAUCH, wenn die Kenntnisnahme durch Unbefugte für die Interessen der Bundesrepublik Deutschland oder eines ihrer Länder nachteilig sein kann.",
+     "quote_english": "RESTRICTED (for official use only), if disclosure to unauthorised persons may be disadvantageous to the interests of the Federal Republic of Germany or one of its Länder.",
+     "title": "Sicherheitsüberprüfungsgesetz (SÜG) § 4 Abs. 2",
+     "url": "https://www.gesetze-im-internet.de/s_g/__4.html"
+    }
+   ],
+   "id": "L2",
+   "research_note": "SÜG § 4(2), a federal statute, defines four classification levels: STRENG GEHEIM, GEHEIM, VS-VERTRAULICH and VS-NUR FÜR DEN DIENSTGEBRAUCH. The VSA (2023) sets out how they are handled.",
+   "review": {
+    "original": "yes",
+    "reason": "SÜG § 4(2), a federal statute, defines four levels verbatim: STRENG GEHEIM, GEHEIM, VS-VERTRAULICH and VS-NUR FÜR DEN DIENSTGEBRAUCH. Both quotes are on the page.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "Bundesamt für Sicherheit in der Informationstechnik (BSI)",
+     "quote": "The cloud service provider MUST operate under EU jurisdiction, with contract governance and dispute resolution.",
+     "quote_english": "(English original)",
+     "title": "C3A - Criteria enabling Cloud Computing Autonomy (criterion SOV-1-01-C1)",
+     "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/CloudComputing/C3A_Cloud_Computing_Autonomy.pdf?__blob=publicationFile"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Bundesamt für Sicherheit in der Informationstechnik (BSI)",
+     "quote": "dienen als richtungsweisender Handlungsrahmen, schaffen Transparenz, sind von sich aus jedoch nicht verbindlich.",
+     "quote_english": "(The C3A) serve as a guiding framework for action and create transparency, but are not binding in themselves.",
+     "title": "C3A - Criteria enabling Cloud Computing Autonomy",
+     "url": "https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Empfehlungen-nach-Angriffszielen/Cloud-Computing/C3A/C3A_node.html"
+    }
+   ],
+   "id": "L3",
+   "research_note": "The BSI has published the C3A sovereignty criteria. They build on the EU Cloud Sovereignty Framework and C5:2026 and include requirements to operate under EU or German jurisdiction and to assess exposure to extraterritorial non-EU law. The BSI states that the C3A are not binding, and no instrument was found that makes them mandatory for sensitive government workloads. The BSI's C5 catalogue does not require immunity from non-EU law.",
+   "review": {
+    "original": "partial",
+    "reason": "Both quotes are present, but C3A is a non-binding criteria framework whose evidence is supplied through an audit, not a certification scheme. On non-EU law it only requires providers to identify extraterritorial exposure once a year (SOV-2-01-C), not to be immune from it, so it does not establish a SecNumCloud-type certification that is adopted or in force.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Bundesamt für Sicherheit in der Informationstechnik (BSI)",
+     "quote": "wird dieser Sicherungsanker seit dem 20. Februar 2001 im BSI betrieben",
+     "quote_english": "this trust anchor (the root CA of the public administration PKI) has been operated at the BSI since 20 February 2001",
+     "title": "Public Key Infrastruktur der Verwaltung (Verwaltungs-PKI)",
+     "url": "https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Moderner-Staat/Verwaltungs-PKI/verwaltungs-pki_node.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "D-Trust GmbH",
+     "quote": "Die D-Trust GmbH ist ein Unternehmen der Bundesdruckerei-Gruppe mit Sitz im Herzen Berlins.",
+     "quote_english": "D-Trust GmbH is a company of the Bundesdruckerei Group, headquartered in the heart of Berlin.",
+     "title": "Über uns - D-Trust",
+     "url": "https://www.d-trust.net/de/ueber-uns"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The root CA of the administration PKI (V-PKI) is operated by the BSI, a federal authority. D-Trust, a qualified trust service provider, belongs to the federally owned Bundesdruckerei Group, although other private QTSPs are also on Germany's trusted list. The EU Trusted List browser (a JavaScript app) was not fetched, so no trusted-list entry is cited.",
+   "review": {
+    "original": "yes",
+    "reason": "The BSI page states that the V-PKI trust anchor has been operated at the BSI, a federal authority, since 20 February 2001. The D-Trust quote, placing it in the Bundesdruckerei Group, is also confirmed.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "de",
+     "publisher": "Bundesministerium der Justiz (gesetze-im-internet.de)",
+     "quote": "Das Bundesministerium des Innern und für Heimat bestimmt 1. den Ausweishersteller,",
+     "quote_english": "The Federal Ministry of the Interior determines 1. the ID card manufacturer, (and further the certificate authority for service providers and the blocking-list operator)",
+     "title": "Personalausweisgesetz (PAuswG) § 4 Eigentum am Ausweis; Ausweishersteller; Vergabestelle für Berechtigungszertifikate",
+     "url": "https://www.gesetze-im-internet.de/pauswg/__4.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Bundesdruckerei Gruppe GmbH",
+     "quote": "Die Bundesdruckerei-Gruppe leistet mit ihrer Digital- und Sicherheitskompetenz als Technologieunternehmen des Bundes einen Beitrag für die digitale Souveränität Deutschlands und Europas.",
+     "quote_english": "As the federal government's technology company, the Bundesdruckerei Group contributes its digital and security expertise to the digital sovereignty of Germany and Europe.",
+     "title": "Konzern - Bundesdruckerei-Gruppe",
+     "url": "https://www.bundesdruckerei.de/de/konzern"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Bundesministerium für Digitales und Staatsmodernisierung",
+     "quote": "Diese Webseite ist ein Angebot des Bundesministerium für Digitales und Staatsmodernisierung",
+     "quote_english": "This website (BundID) is a service of the Federal Ministry for Digital Affairs and State Modernisation",
+     "title": "BundID - Impressum",
+     "url": "https://id.bund.de/de"
+    }
+   ],
+   "id": "K2",
+   "research_note": "The eID function of the Personalausweis is set up by statute (PAuswG § 18). The Federal Interior Ministry designates the manufacturer, the certificate authority for service providers and the blocking-list operator (§ 4(3)); the manufacturer is the federally owned Bundesdruckerei. BundID is offered by the Federal Ministry for Digital Affairs and State Modernisation (BMDS) and run by the ITZBund, whose operator line appears in the same imprint as 'Laufender Betrieb: Informationstechnikzentrum Bund (ITZBund)'. The eIDAS notified-schemes list was not fetched.",
+   "review": {
+    "original": "yes",
+    "reason": "PAuswG § 4(3) has the Federal Interior Ministry designate the ID card manufacturer. Bundesdruckerei calls itself the federal government's technology company, and the BundID imprint names BMDS as provider and ITZBund for ongoing operation, so the eID is state-controlled. All quotes were confirmed on their pages.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Informationstechnikzentrum Bund (ITZBund)",
+     "quote": "Das ITZBund stellt seinen Kunden leistungsstarke und hochsichere Rechenzentren bereit. So gewährleisten wir das Hosting und den Produktionsbetrieb für eine Vielzahl von Dienststellen des Bundes.",
+     "quote_english": "ITZBund provides its customers with high-performance, highly secure data centres, ensuring hosting and production operations for a large number of federal agencies.",
+     "title": "Hosting und Betrieb - Die Rechenzentren des ITZBund",
+     "url": "https://www.itzbund.de/DE/leistungsportfolio/hostingundbetrieb/hostingundbetrieb.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Informationstechnikzentrum Bund (ITZBund)",
+     "quote": "Unsere Strategie ist ein überregionaler Verbund von Rechenzentren, aufgeteilt auf mindestens drei Regionen.",
+     "quote_english": "Our strategy is a supra-regional network of data centres spread across at least three regions.",
+     "title": "Hosting und Betrieb - Die Rechenzentren des ITZBund",
+     "url": "https://www.itzbund.de/DE/leistungsportfolio/hostingundbetrieb/hostingundbetrieb.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Informationstechnikzentrum Bund (ITZBund)",
+     "quote": "Das ITZBund arbeitet ressortübergreifend für die gesamte Bundesverwaltung.",
+     "quote_english": "ITZBund works across ministries for the entire federal administration.",
+     "title": "Informationstechnikzentrum Bund (ITZBund) - Über uns",
+     "url": "https://www.itzbund.de/DE/dasitzbund/ueber-uns/ueber-uns.html"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The ITZBund is the federal central IT service provider, a public-law institution (AöR) since 2021 in the Federal Finance Ministry's portfolio. It operates its own data centres for federal agencies; its about page reports about 83,600 logical server systems in operation.",
+   "review": {
+    "original": "yes",
+    "reason": "The ITZBund pages confirm, verbatim, that the federal central IT provider runs its own highly secure data centres across at least three regions. They are in production use hosting many federal agencies.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Informationstechnikzentrum Bund (ITZBund)",
+     "quote": "Damit nur berechtigte Personen auf die Daten in der Cloud zugreifen können, wird sie derzeit nur über das sichere geschlossene Netzwerk der Bundesverwaltung erreichbar. Schnittstellen zu anderen, kommerziellen Cloud-Anbietern gibt es nicht.",
+     "quote_english": "So that only authorised persons can access the data in the cloud, it is currently reachable only via the secure closed network of the federal administration. There are no interfaces to other, commercial cloud providers.",
+     "title": "Die Bundescloud – eine exklusive, private Cloud für die Bundesverwaltung",
+     "url": "https://www.itzbund.de/DE/itloesungen/egovernment/bundescloud/bundescloud.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "de",
+     "publisher": "Informationstechnikzentrum Bund (ITZBund)",
+     "quote": "stellen wir sicher, dass der Bund die Hoheit über seine Daten behält.",
+     "quote_english": "(by operating the private Bundescloud in our own ITZBund data centres) we ensure that the federal government retains sovereignty over its data.",
+     "title": "Die Bundescloud – eine exklusive, private Cloud für die Bundesverwaltung",
+     "url": "https://www.itzbund.de/DE/itloesungen/egovernment/bundescloud/bundescloud.html"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The Bundescloud is a private cloud for the federal administration, run by the ITZBund in its own data centres and reachable over the closed federal network. Services such as the SIB-Box (Nextcloud) run on it. The Deutsche Verwaltungscloud (federal and Länder level) was not separately sourced.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes are on the ITZBund Bundescloud page. It describes a private cloud run in ITZBund's own data centres over the closed federal network, and says it is already used by more than 50 federal authorities, so it is in operation, not announced.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "DE"
+}

@@ -1,0 +1,237 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "cs",
+     "published": "2026-01-01",
+     "publisher": "Sbírka zákonů ČR (consolidated text via zakonyprolidi.cz)",
+     "quote": "Poskytovatelem cloud computingu poskytujícím orgánu veřejné správy cloud computing zařazený do nejvyšší bezpečnostní úrovně může být pouze poskytovatel státního cloud computingu.",
+     "quote_english": "Only the state cloud computing provider may provide a public administration body with cloud computing classified at the highest security level.",
+     "title": "Zákon č. 365/2000 Sb., o informačních systémech veřejné správy, § 6m odst. 2 (consolidated text, version effective 1.1.2026)",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-365"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "cs",
+     "published": "2025-12-05",
+     "publisher": "Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB), Sbírka zákonů ČR",
+     "quote": "Zákaznická data a specifické provozní údaje jsou zpracovávány na území České republiky.",
+     "quote_english": "Customer data and specific operational data are processed on the territory of the Czech Republic (Annex 4, requirement 1.2, critical security level).",
+     "title": "Vyhláška č. 505/2025 Sb., o některých požadavcích pro zápis do katalogu cloud computingu, příloha č. 4",
+     "url": "https://www.zakonyprolidi.cz/cs/2025-505"
+    }
+   ],
+   "id": "L1",
+   "research_note": "Binding rules set jurisdiction only for the highest-risk tier. Under Act 365/2000 § 6m(2), public administration cloud workloads at the highest ('kritická') security level may be hosted only by the state-designated state cloud provider. NÚKIB Decree 505/2025 (in force since 1.1.2026, replacing Decree 316/2021) Annex 4 requires processing in the Czech Republic at the critical level, with narrow justified exceptions. Lower levels require only a provider seat or representative in the EU (§ 3), and EU/EFTA storage is a declared option there, not a mandate. No statute requiring national or EU jurisdiction for government data in general was found. Cybersecurity Act 264/2025 was searched and has no data-location clause. Hence partial.",
+   "review": {
+    "original": "partial",
+    "reason": "Both quotes appear verbatim. § 6m(2) of Act 365/2000 reserves highest-level cloud to the state provider, and Annex 4 row 1.2 of Decree 505/2025 requires critical-level data to be processed in the Czech Republic, but only for the top tier and not for government data in general, which fits partial.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "cs",
+     "published": "2005-10-18",
+     "publisher": "Sbírka zákonů ČR (consolidated text via zakonyprolidi.cz)",
+     "quote": "Přísně tajné, jestliže její vyzrazení neoprávněné osobě nebo zneužití může způsobit mimořádně vážnou újmu zájmu České republiky",
+     "quote_english": "Top Secret, if its disclosure to an unauthorised person or misuse may cause exceptionally grave harm to the interests of the Czech Republic.",
+     "title": "Zákon č. 412/2005 Sb., o ochraně utajovaných informací a o bezpečnostní způsobilosti, § 4 Stupně utajení",
+     "url": "https://www.zakonyprolidi.cz/cs/2005-412"
+    }
+   ],
+   "id": "L2",
+   "research_note": "§ 4 of Act 412/2005 sets out four classification levels in statute: Přísně tajné, Tajné, Důvěrné and Vyhrazené. Unclassified public-administration systems also get statutory security levels (nízká, střední, vysoká, kritická) for cloud use under Act 365/2000 and Act 264/2025, with NÚKIB implementing decrees.",
+   "review": {
+    "original": "yes",
+    "reason": "§ 4 of Act 412/2005 appears verbatim and sets out four statutory classification levels (Přísně tajné, Tajné, Důvěrné, Vyhrazené).",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "cs",
+     "published": "2025-12-05",
+     "publisher": "Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB), Sbírka zákonů ČR",
+     "quote": "Poskytovatel jasně a srozumitelně uvádí své povinnosti vyplývající z právních řádů států odlišných od členských států Evropské unie",
+     "quote_english": "The provider clearly and comprehensibly states its obligations arising from the legal orders of states other than EU member states.",
+     "title": "Vyhláška č. 505/2025 Sb., o některých požadavcích pro zápis do katalogu cloud computingu, příloha č. 4 (critical level), řádek 2.2",
+     "url": "https://www.zakonyprolidi.cz/cs/2025-505"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "cs",
+     "published": "2026-01-01",
+     "publisher": "Sbírka zákonů ČR (consolidated text via zakonyprolidi.cz)",
+     "quote": "Poskytovatelem cloud computingu poskytujícím orgánu veřejné správy cloud computing zařazený do nejvyšší bezpečnostní úrovně může být pouze poskytovatel státního cloud computingu.",
+     "quote_english": "Only the state cloud computing provider may provide a public administration body with cloud computing classified at the highest security level.",
+     "title": "Zákon č. 365/2000 Sb., o informačních systémech veřejné správy, § 6m odst. 2",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-365"
+    }
+   ],
+   "id": "L3",
+   "research_note": "Czechia has a binding, in-force cloud qualification scheme: the cloud computing catalogue (katalog cloud computingu) with four security levels under Act 365/2000 and NÚKIB Decree 505/2025. It is not a SecNumCloud-type certification. For commercial providers, even at the critical level (Annex 4, row 2.2), it requires only disclosure of obligations under non-EU law, not immunity from them. The sovereignty safeguard is structural instead: the highest level is reserved by statute for the state-established state cloud provider (§ 6m(2)), and critical-level processing must take place in the Czech Republic. I rated this partial because an in-force scheme addresses the risk without an immunity criterion. A stricter reading could score it 'no', but no source states outright that no immunity certification exists. Web search budget ran out; I did not find a NÚKIB statement on EUCS or on immunity.",
+   "review": {
+    "original": "partial",
+    "reason": "The row 2.2 quote is on the page, but it requires only disclosure of obligations under non-EU law, not immunity from them, and § 6m(2) is not a certification, so no cited source shows that an immunity-requiring certification exists at all, whether adopted or required; since a 'no' is not permitted without a source saying so, this goes to unknown.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "cs",
+     "published": "2016-09-19",
+     "publisher": "Sbírka zákonů ČR (consolidated text via zakonyprolidi.cz)",
+     "quote": "Zřizuje se a vzniká Správa státních služeb vytvářejících důvěru (dále jen „Správa“) jako státní příspěvková organizace.",
+     "quote_english": "The State Trust Services Administration (the 'Administration') is hereby established as a state contributory organisation.",
+     "title": "Zákon č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce, § 14 odst. 1",
+     "url": "https://www.zakonyprolidi.cz/cs/2016-297"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "cs",
+     "published": "2016-09-19",
+     "publisher": "Sbírka zákonů ČR (consolidated text via zakonyprolidi.cz)",
+     "quote": "Předmětem činnosti Správy je poskytování služeb vytvářejících důvěru pro potřeby České republiky.",
+     "quote_english": "The Administration's activity is the provision of trust services for the needs of the Czech Republic.",
+     "title": "Zákon č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce, § 14 odst. 4",
+     "url": "https://www.zakonyprolidi.cz/cs/2016-297"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "cs",
+     "publisher": "Správa státních služeb vytvářejících důvěru, s. p. o.",
+     "quote": "Správa byla ze strany Digitální a informační agentury zapsána na Seznam kvalifikovaných poskytovatelů služeb vytvářejících důvěru a poskytovaných kvalifikovaných služeb vytvářejících důvěru a od 1. ledna 2024 může poskytovat služby vytvářející důvěru.",
+     "quote_english": "The Administration was entered by the Digital and Information Agency on the List of qualified trust service providers and qualified trust services, and may provide trust services from 1 January 2024.",
+     "title": "Úvodní strana – Správa státních služeb vytvářejících důvěru",
+     "url": "https://sssvd.gov.cz/"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Czech Trusted List (https://tsl.gov.cz/publ/TSL_CZ.xtsl) is operated by the Digitální a informační agentura. Among its qualified TSPs are the state body 'Správa státních služeb vytvářejících důvěru' (trade name Národní certifikační autorita, NCA), 'Správa základních registrů' and the state enterprise Česká pošta, s.p. (PostSignum). Private qualified TSPs are also listed: I.CA, eIdentity, Software602, SEFIRA, TECHNISERV IT, Komerční banka and Seyfor. The XML trusted list is not quoted because its tag structure breaks up the text. The government's own qualified trust service is operated by a state organisation set up by statute.",
+   "review": {
+    "original": "yes",
+    "reason": "§ 14(1) and (4) of Act 297/2016 appear verbatim: they establish the Správa as a state contributory organisation (founded by the Agentura) that provides trust services for the Czech Republic, and sssvd.gov.cz confirms it has been on the qualified list since 1 Jan 2024.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "cs",
+     "published": "2017-08-18",
+     "publisher": "Sbírka zákonů ČR (consolidated text via zakonyprolidi.cz)",
+     "quote": "Národní bod je informační systém veřejné správy podporující proces elektronické identifikace a autentizace prostřednictvím kvalifikovaného systému.",
+     "quote_english": "The National Point is a public administration information system supporting electronic identification and authentication through a qualified system.",
+     "title": "Zákon č. 250/2017 Sb., o elektronické identifikaci, § 20 odst. 1",
+     "url": "https://www.zakonyprolidi.cz/cs/2017-250"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "cs",
+     "published": "2017-08-18",
+     "publisher": "Sbírka zákonů ČR (consolidated text via zakonyprolidi.cz)",
+     "quote": "působnost Digitální a informační agentury (dále jen „Agentura“) na úseku elektronické identifikace",
+     "quote_english": "the competence of the Digital and Information Agency (the 'Agency') in the field of electronic identification",
+     "title": "Zákon č. 250/2017 Sb., o elektronické identifikaci, § 1 písm. b)",
+     "url": "https://www.zakonyprolidi.cz/cs/2017-250"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "cs",
+     "publisher": "Digitální a informační agentura",
+     "quote": "NIA ID - státem zdarma poskytovaný identifikační prostředek založený na kombinaci jména, hesla a SMS kódu",
+     "quote_english": "NIA ID – an identification means provided free of charge by the state, based on a combination of name, password and SMS code.",
+     "title": "Elektronická identita – Informační web elektronické identity (Národní identitní autorita)",
+     "url": "https://info.identitaobcana.cz/"
+    }
+   ],
+   "id": "K2",
+   "research_note": "The national eID hub (Národní bod / NIA, Identita občana) is a public administration information system. § 20(2) of Act 250/2017 names the Agentura (the state Digitální a informační agentura, DIA) as its administrator. The state-issued means are the chip ID card, NIA ID and Mobilní klíč eGovernmentu. Bank iDs issued by private parties plug into the state hub as additional qualified means. The eIDAS notified-schemes list was not fetched, because the EC page renders with JavaScript.",
+   "review": {
+    "original": "yes",
+    "reason": "All three quotes are on their pages. § 20(1) makes the National Point a public administration system, § 20(2) names the state Agentura as its administrator, and identitaobcana.cz describes NIA ID as provided by the state.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "cs",
+     "published": "2026-05-14",
+     "publisher": "Státní pokladna Centrum sdílených služeb, s. p.",
+     "quote": "Provozujeme dvě nezávislé lokality propojené optickým kruhem. Nabízíme certifikovanou bezpečnost i moderní kapacitu pro Cloud computingové služby.",
+     "quote_english": "We operate two independent sites connected by an optical ring. We offer certified security and modern capacity for cloud computing services.",
+     "title": "SPCSS – Státní pokladna Centrum sdílených služeb, s. p. (homepage, archived 14 May 2026)",
+     "url": "https://web.archive.org/web/20260514094405/https://www.spcss.cz/"
+    }
+   ],
+   "id": "C1",
+   "research_note": "SPCSS is a state enterprise (s. p.) of the Ministry of Finance. It runs two government data centres: DC Vápenka in Prague and the new DC Zeleneč, both Tier III. The live site spcss.cz blocks automated requests with HTTP 403, so the claim cites a Wayback Machine snapshot of the official homepage from 14 May 2026. The state enterprise NAKIT (Ministry of Interior) also runs government infrastructure, but nakit.cz blocked access.",
+   "review": {
+    "original": "yes",
+    "reason": "The archived official SPCSS (state enterprise, s. p.) homepage contains the quote verbatim and names two operating data centres, DC Vápenka (Tier III, Prague) and DC Zeleneč.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "cs",
+     "published": "2023-12-21",
+     "publisher": "Digitální a informační agentura",
+     "quote": "Vláda dne 20. 12. 2023 pověřila Státní pokladnu Centrum sdílených služeb, s. p. jako poskytovatel státního cloud computingu.",
+     "quote_english": "On 20 December 2023 the Government designated Státní pokladna Centrum sdílených služeb, s. p. as the state cloud computing provider.",
+     "title": "eGovernment cloud – Aktuality – archiv",
+     "url": "https://dia.gov.cz/cs/nase-cinnosti/na-cem-pracujeme/egovernment-cloud/aktuality/archiv"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "cs",
+     "published": "2026-05-14",
+     "publisher": "Státní pokladna Centrum sdílených služeb, s. p.",
+     "quote": "Poskytovatel služeb Státní části eGovernment cloudu, služeb kybernetické bezpečnosti a dalších souvisejících ICT služeb pro státní správu.",
+     "quote_english": "Provider of services of the State part of the eGovernment cloud, cybersecurity services and other related ICT services for the state administration.",
+     "title": "SPCSS – Státní pokladna Centrum sdílených služeb, s. p. (homepage, archived 14 May 2026)",
+     "url": "https://web.archive.org/web/20260514094405/https://www.spcss.cz/"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "cs",
+     "published": "2026-01-01",
+     "publisher": "Sbírka zákonů ČR (consolidated text via zakonyprolidi.cz)",
+     "quote": "pověřuje osobu nebo jiné právní uspořádání, které jsou zřízené nebo založené státem a které splňují požadavky podle § 6m odst. 1, poskytováním cloud computingu orgánům veřejné správy",
+     "quote_english": "[The Government] mandates a person or other legal arrangement established or founded by the state and meeting the requirements of § 6m(1) to provide cloud computing to public administration bodies.",
+     "title": "Zákon č. 365/2000 Sb., o informačních systémech veřejné správy, § 6i odst. 1 písm. a)",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-365"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The eGovernment Cloud rests on Act 365/2000, Head VI. Its state part (Státní část eGovernment cloudu) is run by SPCSS, which the Government designated as state cloud provider on 20 Dec 2023. SPCSS describes itself as the provider of this service to state administration, and § 6m(2) makes it the only lawful host for critical-level workloads. DIA's Informační systém cloud computingu (ISCC, the catalogue system, not a hosting platform) went live on 1 July 2026. No usage statistics on workloads were retrieved, so the 'serving government workloads' element rests on the operator's own description.",
+   "review": {
+    "original": "yes",
+    "reason": "The DIA archive says verbatim that the Government designated SPCSS as state cloud provider on 20 Dec 2023, the SPCSS homepage describes it in the present tense as the provider of the State part of the eGovernment cloud to the state administration, and § 6i(1)(a) is verbatim; this supports an operating platform, though workload use rests on the operator's own statement.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "CZ"
+}

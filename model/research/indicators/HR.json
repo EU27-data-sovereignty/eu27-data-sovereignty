@@ -1,0 +1,207 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "hr",
+     "published": "2014-07-28",
+     "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+     "quote": "Javni registri se pohranjuju u podatkovnim centrima koji se nalaze na teritoriju Republike Hrvatske, a koji zadovoljavaju uvjete propisane uredbom iz članka 4. stavka 2. ovoga Zakona.",
+     "quote_english": "Public registers are stored in data centres located on the territory of the Republic of Croatia that meet the conditions set by the regulation referred to in Article 4(2) of this Act.",
+     "title": "Zakon o državnoj informacijskoj infrastrukturi (NN 92/2014), članak 12.",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2014_07_92_1840.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "hr",
+     "publisher": "Ministarstvo pravosuđa, uprave i digitalne transformacije",
+     "quote": "Zakonom je propisano da tijela državne uprave za uspostavu i rad svojih informacijskih sustava koriste usluge Centra dijeljenih usluga, osim u slučajevima propisanim Zakonom i provedbenim propisima.",
+     "quote_english": "The Act prescribes that state administration bodies use the services of the Shared Services Centre to set up and run their information systems, except in cases provided by the Act and implementing regulations.",
+     "title": "Centar dijeljenih usluga (CDU) – državni oblak koji pokreće digitalnu Hrvatsku",
+     "url": "https://mpudt.gov.hr/centar-dijeljenih-usluga-cdu-drzavni-oblak-koji-pokrece-digitalnu-hrvatsku/30983"
+    }
+   ],
+   "id": "L1",
+   "research_note": "The State Information Infrastructure Act (NN 92/2014) Art. 12 requires public registers to be stored in data centres on Croatian territory. That is a named category of government data, not government data in general. The ministry also says state administration bodies must by law use the state cloud (CDU), but this is an obligation to use a platform, not an explicit jurisdiction rule for all government data. So: partial. The Cybersecurity Act (NN 14/2024) was checked; it has no data-localisation rule for government data.",
+   "review": {
+    "original": "partial",
+    "reason": "Art. 12 of NN 92/2014 is verbatim on the page and requires only public registers (a named category) to be stored in data centres on Croatian territory, and the page confirms no general requirement covers all government data, so partial holds.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "hr",
+     "publisher": "Zakon.hr (consolidated text of Croatian legislation)",
+     "quote": "Stupnjevi tajnosti klasificiranih podataka su: - VRLO TAJNO, - TAJNO, - POVJERLJIVO, - OGRANIČENO.",
+     "quote_english": "The classification levels of classified data are: TOP SECRET, SECRET, CONFIDENTIAL, RESTRICTED.",
+     "title": "Zakon o tajnosti podataka (NN 79/07, 86/12), članak 4.",
+     "url": "https://www.zakon.hr/z/217/Zakon-o-tajnosti-podataka"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "hr",
+     "publisher": "Zakon.hr (consolidated text of Croatian legislation)",
+     "quote": "Stupnjem tajnosti »VRLO TAJNO« klasificiraju se podaci čije bi neovlašteno otkrivanje nanijelo nepopravljivu štetu nacionalnoj sigurnosti i vitalnim interesima Republike Hrvatske",
+     "quote_english": "Data whose unauthorised disclosure would cause irreparable damage to national security and the vital interests of the Republic of Croatia are classified TOP SECRET.",
+     "title": "Zakon o tajnosti podataka, članak 6.",
+     "url": "https://www.zakon.hr/z/217/Zakon-o-tajnosti-podataka"
+    }
+   ],
+   "id": "L2",
+   "research_note": "The Data Secrecy Act (Zakon o tajnosti podataka) is a statute. It sets four classification levels (Art. 4) and defines each one (Arts. 6-9).",
+   "review": {
+    "original": "yes",
+    "reason": "Arts. 4 and 6 of the Data Secrecy Act appear verbatim on zakon.hr and set four statutory classification levels with their definitions.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "Searched the Cybersecurity Act (NN 14/2024, narodne-novine.nn.hr/clanci/sluzbeni/2024_02_14_254.html) for cloud certification and non-EU-law immunity terms. It only defines cloud computing service providers under NIS2 and sets territorial jurisdiction. The ministry page on the CDU state cloud was also checked. No national SecNumCloud-type certification requiring immunity from non-EU law was found, and no source states that none exists. Web search was unavailable (session search budget exhausted), so the search was limited to direct fetches of primary sources.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were given and no source establishes or denies a SecNumCloud-type certification, so unknown stays.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "hr",
+     "publisher": "Financijska agencija (Fina)",
+     "quote": "Fina je prvi izdavatelj kvalificiranih digitalnih certifikata i vremenskih žigova u RH.",
+     "quote_english": "Fina is the first issuer of qualified digital certificates and time stamps in Croatia.",
+     "title": "O nama – Financijska agencija",
+     "url": "https://www.fina.hr/o-nama"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "hr",
+     "publisher": "Financijska agencija (Fina)",
+     "quote": "Osnivač: Republika Hrvatska Osnivački akt: Zakon o Financijskoj agenciji",
+     "quote_english": "Founder: Republic of Croatia. Founding act: Financial Agency Act.",
+     "title": "O nama – Financijska agencija",
+     "url": "https://www.fina.hr/o-nama"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "hr",
+     "publisher": "AKD d.o.o.",
+     "quote": "Društvo je u 100 %-tnom vlasništvu Republike Hrvatske.",
+     "quote_english": "The company is 100% owned by the Republic of Croatia.",
+     "title": "Tvrtka – osnovni podaci",
+     "url": "https://www.akd.hr/hr/o-nama/tvrtka-osnovni-podaci"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Croatian Trusted List (gov.hr/UserDocsImages/Usluge povjerenja/Pouzdani_popis_RH.xml, published by the Ministry of Justice, Public Administration and Digital Transformation) lists four qualified trust service providers: Financijska agencija (Fina), AKD d.o.o., Zagrebačka banka and HP d.d. The two main ones are state-controlled. Fina was founded by the Republic of Croatia under the Financial Agency Act. AKD is 100% state-owned and issues the qualified certificates on the eID card. Two private providers are also on the list.",
+   "review": {
+    "original": "yes",
+    "reason": "Fina's page confirms it is a qualified certificate and time-stamp issuer founded by the Republic of Croatia by statute, and AKD's page (the URL now redirects to /o-nama/o-tvrtki) confirms it is 100% state-owned, so the trust service is state-controlled.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "hr",
+     "published": "2014-07-28",
+     "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+     "quote": "Sustav e-Građani je dio državnog informacijskog sustava, a čine ga središnji državni portal, nacionalni identifikacijski i autentifikacijski sustav i sustav osobnog korisničkog pretinca.",
+     "quote_english": "The e-Citizens system is part of the state information system and consists of the central state portal, the national identification and authentication system (NIAS) and the personal user mailbox system.",
+     "title": "Zakon o državnoj informacijskoj infrastrukturi (NN 92/2014), članak 2.",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2014_07_92_1840.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "hr",
+     "publisher": "AKD d.o.o.",
+     "quote": "upisana u evidenciju nadležnog ministarstva kao davatelj usluga certificiranja koja obavlja usluge izdavanja kvalificiranih certifikata, te pravna osoba ovlaštena za obavljanje poslova izdavanja kvalificiranih certifikata građanima RH na elektroničkoj osobnoj iskaznici.",
+     "quote_english": "registered with the competent ministry as a certification service provider issuing qualified certificates, and the legal person authorised to issue qualified certificates to Croatian citizens on the electronic identity card.",
+     "title": "Tvrtka – osnovni podaci",
+     "url": "https://www.akd.hr/hr/o-nama/tvrtka-osnovni-podaci"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "hr",
+     "publisher": "AKD d.o.o.",
+     "quote": "Društvo je u 100 %-tnom vlasništvu Republike Hrvatske.",
+     "quote_english": "The company is 100% owned by the Republic of Croatia.",
+     "title": "Tvrtka – osnovni podaci",
+     "url": "https://www.akd.hr/hr/o-nama/tvrtka-osnovni-podaci"
+    }
+   ],
+   "id": "K2",
+   "research_note": "By statute, NIAS and e-Građani are part of the state information system. The eOI eID card, which was notified under eIDAS, is issued with credentials from AKD, which is 100% owned by the Republic of Croatia. The eIDAS notified-schemes page on the EC site renders with JavaScript and was not used as a quote source.",
+   "review": {
+    "original": "yes",
+    "reason": "Art. 2 of NN 92/2014 verbatim places NIAS inside the state information system, and AKD's page (redirected) confirms the 100% state-owned company issues the qualified certificates on the eID card.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "hr",
+     "publisher": "Ministarstvo pravosuđa, uprave i digitalne transformacije",
+     "quote": "Platforma se temelji na dva geografski odvojena podatkovna centra visoke raspoloživosti koji omogućuju nastavak rada sustava i u slučaju izvanrednih okolnosti.",
+     "quote_english": "The platform is based on two geographically separated high-availability data centres that allow systems to keep running even in extraordinary circumstances.",
+     "title": "Centar dijeljenih usluga (CDU) – državni oblak koji pokreće digitalnu Hrvatsku",
+     "url": "https://mpudt.gov.hr/centar-dijeljenih-usluga-cdu-drzavni-oblak-koji-pokrece-digitalnu-hrvatsku/30983"
+    }
+   ],
+   "id": "C1",
+   "research_note": "The ministry describes the state cloud (CDU) as running on two geographically separate data centres that are in operation today. AKD, which is state-owned, also runs its own Tier III data centre in Sveta Nedelja (akd.hr PKI page). The page does not name the CDU operator; APIS IT is widely reported as the operator, but this was not confirmed from a fetched source.",
+   "review": {
+    "original": "yes",
+    "reason": "The ministry page verbatim describes the state cloud running on two geographically separate high-availability data centres now in operation; it does not name the operator, but it presents them as central state infrastructure.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "hr",
+     "publisher": "Ministarstvo pravosuđa, uprave i digitalne transformacije",
+     "quote": "Upravo tu ulogu ima Centar dijeljenih usluga (CDU), državni oblak Republike Hrvatske.",
+     "quote_english": "It is precisely this role that the Shared Services Centre (CDU), the state cloud of the Republic of Croatia, fulfils.",
+     "title": "Centar dijeljenih usluga (CDU) – državni oblak koji pokreće digitalnu Hrvatsku",
+     "url": "https://mpudt.gov.hr/centar-dijeljenih-usluga-cdu-drzavni-oblak-koji-pokrece-digitalnu-hrvatsku/30983"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "hr",
+     "publisher": "Ministarstvo pravosuđa, uprave i digitalne transformacije",
+     "quote": "Njegove usluge koristi više od 1.080 korisnika, na platformi radi gotovo 6.000 virtualnih poslužitelja, dok se podaci pohranjuju na više od 8 petabajta prostora.",
+     "quote_english": "Its services are used by more than 1,080 users, almost 6,000 virtual servers run on the platform, and data is stored on more than 8 petabytes of storage.",
+     "title": "Centar dijeljenih usluga (CDU) – državni oblak koji pokreće digitalnu Hrvatsku",
+     "url": "https://mpudt.gov.hr/centar-dijeljenih-usluga-cdu-drzavni-oblak-koji-pokrece-digitalnu-hrvatsku/30983"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The CDU is the Croatian state cloud and is in production. It has more than 1,080 users and about 6,000 virtual servers, and it hosts e-Građani and other public administration systems. State administration bodies are required by law to use it.",
+   "review": {
+    "original": "yes",
+    "reason": "The ministry page verbatim calls the CDU the state cloud of the Republic of Croatia, in production with more than 1,080 users, about 6,000 VMs and more than 8 PB of storage.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "HR"
+}

@@ -1,0 +1,206 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "lt",
+     "published": "2026-07-04",
+     "publisher": "Lietuvos Respublikos Seimas (e-seimas)",
+     "quote": "savo valdomus valstybės informacinius išteklius laiko valstybiniuose duomenų centruose arba Lietuvos Respublikoje ar kitose Europos Sąjungos valstybėse narėse, Europos ekonominės erdvės valstybėse ir (ar) NATO valstybėse narėse esančiuose duomenų centruose",
+     "quote_english": "[institutions] keep the state information resources they manage in state data centres or in data centres located in Lithuania or other EU Member States, EEA states and/or NATO member states",
+     "title": "Lietuvos Respublikos kibernetinio saugumo įstatymas Nr. XII-1428 (suvestinė redakcija nuo 2026-07-04), 38 straipsnis",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/f6958c2085dd11e495dc9901227533ee/uhYWDUWMTF/format/ISO_PDF/"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "lt",
+     "published": "2026-07-04",
+     "publisher": "Lietuvos Respublikos Seimas (e-seimas)",
+     "quote": "Į Saugiojo tinklo naudotojų sąrašą įrašytos specialius tikslus įgyvendinančios institucijos savo valdomus valstybės informacinius išteklius laiko savo valdomuose duomenų centruose",
+     "quote_english": "Special-purpose institutions on the list of Secure Network users keep the state information resources they manage in data centres they themselves operate",
+     "title": "Lietuvos Respublikos kibernetinio saugumo įstatymas Nr. XII-1428 (suvestinė redakcija nuo 2026-07-04), 38 straipsnis",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/f6958c2085dd11e495dc9901227533ee/uhYWDUWMTF/format/ISO_PDF/"
+    },
+    {
+     "doc_type": "secondary",
+     "language": "lt",
+     "published": "2022-08-10",
+     "publisher": "LRT",
+     "quote": "kopijas valstybės institucijos galės laikyti ne tik Lietuvos, bet ir kitų Europos Sąjungos, Europos ekonominės erdvės ar Šiaurės Atlanto Sutarties Organizacijos (NATO) valstybių duomenų centruose",
+     "quote_english": "state institutions will be able to keep copies not only in Lithuanian data centres but also in data centres of other EU, EEA or NATO states",
+     "title": "Penkios naudos, kurias suteiks valstybės informacinių išteklių perkėlimas į debesiją",
+     "url": "https://www.lrt.lt/naujienos/mokslas-ir-it/11/1757601/penkios-naudos-kurias-suteiks-valstybes-informaciniu-istekliu-perkelimas-i-debesija"
+    }
+   ],
+   "id": "L1",
+   "research_note": "Cyber Security Law Art. 38 (as amended by XV-1076, 2026) requires state information resources of Secure Network users to be kept in state data centres or data centres in Lithuania/EU/EEA/NATO states, and requires special-purpose (security) institutions to keep them in their own data centres; it points to Art. 45 of the Law on the Management of State Information Resources for the general rule (that law's text could not be retrieved: e-tar.lt is behind a Cloudflare challenge and the e-seimas search is WAF-blocked). The territorial rule permits non-EU NATO states (e.g. US, UK, Canada, Turkey), so it is not a national/EU-jurisdiction requirement for government data in general; strict national hosting applies only to named security institutions. Hence partial.",
+   "review": {
+    "original": "partial",
+    "reason": "Both quotes appear word for word in Art. 38(1) of the 2026-07-04 consolidated Cyber Security Law. The article applies only to institutions on the Secure Network user list and allows non-EU NATO locations; strict own-data-centre hosting is required only of special-purpose (intelligence and security) institutions, so partial is right and yes is not supported.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "lt",
+     "published": "2026-06-01",
+     "publisher": "Lietuvos Respublikos Seimas (e-seimas)",
+     "quote": "Slaptumo žymos nuo aukščiausios iki žemiausios yra šios: 1) „Visiškai slaptai“; 2) „Slaptai“; 3) „Konfidencialiai“; 4) „Riboto naudojimo“.",
+     "quote_english": "The classification markings, from highest to lowest, are: 1) 'Top Secret'; 2) 'Secret'; 3) 'Confidential'; 4) 'Restricted'.",
+     "title": "Lietuvos Respublikos valstybės ir tarnybos paslapčių įstatymas Nr. VIII-1443 (suvestinė redakcija nuo 2026-06-01), 5 straipsnis",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/TAIS.91654/ycSVAPVwLS/format/ISO_PDF/"
+    }
+   ],
+   "id": "L2",
+   "research_note": "The four classification levels are set out in Art. 5(6) of the Law on State Secrets and Official Secrets (VIII-1443, restated by XII-2375 from 2016-10-01), which is a statute. The consolidated edition was found at e-seimas ID TAIS.91654.",
+   "review": {
+    "original": "yes",
+    "reason": "Art. 5(6) of the Law on State Secrets and Official Secrets (consolidated edition from 2026-06-01) lists the four markings exactly as quoted, so the levels are set in a statute.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "No Lithuanian cloud certification requiring immunity from non-EU law (SecNumCloud-type) was found. The consolidated Cyber Security Law (XII-1428) refers only to European cybersecurity certification schemes, with the NKSC as national certification authority; it contains no national sovereign-cloud scheme. NKSC (nksc.lt), VSSA (vssa.lrv.lt), KVTC and other lrv.lt sites returned HTTP 403 to automated requests and e-tar.lt is behind a Cloudflare challenge, so there was no authoritative statement to support a 'no'. The WebSearch budget for this session was also used up.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were made and no source establishes a yes, partial or no, so unknown stands.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2025-11-14",
+     "publisher": "Migracijos departamentas prie LR VRM (nsc.vrm.lt)",
+     "quote": "The Communication Regulatory Authority of the Republic of Lithuania has confirmed a qualified trust service provider status of the Migration Department under the Ministry of Interior of the Republic of Lithuania",
+     "quote_english": "(English original)",
+     "title": "Lithuanian national identity cards and electronic signatures. About.",
+     "url": "https://www.nsc.vrm.lt/default_en.htm"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "published": "2025-11-14",
+     "publisher": "Migracijos departamentas prie LR VRM (nsc.vrm.lt)",
+     "quote": "the Migration Department with immediate effect is taking over the provision of qualified trust services from the Identity Documents Personalisation Centre under the Ministry of Interior of the Republic of Lithuania",
+     "quote_english": "(English original)",
+     "title": "Lithuanian national identity cards and electronic signatures. About.",
+     "url": "https://www.nsc.vrm.lt/default_en.htm"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Lithuanian Trusted List (https://rrt.lt/static/files/LT-TSL.xml, scheme operator RRT) lists these state bodies as QTSPs: the Migration Department and the Identity Documents Personalisation Centre (both under the Ministry of the Interior), the Residents Register Service, and the State Enterprise Centre of Registers. It also lists private providers (e.g. UAB Skaitmeninio sertifikavimo centras, BalTstamp, Dokobit). The QTSP behind the national ID card and civil-servant certificates is the Migration Department, a state body, and it took over from ADIC in November 2025.",
+   "review": {
+    "original": "yes",
+    "reason": "The nsc.vrm.lt English page confirms, word for word, that RRT confirmed the qualified trust service provider status of the Migration Department under the Ministry of the Interior (a state body) and that it took over from the Identity Documents Personalisation Centre.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "lt",
+     "publisher": "Migracijos departamentas prie LR VRM (nsc.vrm.lt)",
+     "quote": "Lietuvos Respublikos piliečiams išduodamos asmens tapatybės kortelės yra elektroninės kortelės, kurios gali būti naudojamos ne tik kaip asmens dokumentai, bet taip pat kaip elektroninės atpažinties priemonės ir elektroninių dokumentų pasirašymo elektroniniu parašu įtaisai",
+     "quote_english": "Identity cards issued to citizens of the Republic of Lithuania are electronic cards which can be used not only as identity documents but also as electronic identification means and devices for signing electronic documents with an electronic signature",
+     "title": "Asmens tapatybės kortelė ir elektroninis parašas. Pagrindinis puslapis.",
+     "url": "https://www.nsc.vrm.lt/default.htm"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "Migracijos departamentas prie LR VRM (nsc.vrm.lt)",
+     "quote": "are supported by digital certificates issued by the Migration Department under the Ministry of Interior of the Republic of Lithuania",
+     "quote_english": "(English original)",
+     "title": "Lithuanian national identity cards and electronic signatures. About.",
+     "url": "https://www.nsc.vrm.lt/default_en.htm"
+    }
+   ],
+   "id": "K2",
+   "research_note": "The national eID credential is the ID card, whose authentication and signature certificates are issued by the Migration Department under the Ministry of the Interior, a state body. Mobile-ID (mobile operators) and Smart-ID (a private Estonian provider) are also widely used but are not the state card scheme. The eIDAS notified-schemes dashboard could not be read: its page is JavaScript-only and the download endpoint returns the HTML app shell. So whether and how the scheme was notified under eIDAS is not confirmed here.",
+   "review": {
+    "original": "yes",
+    "reason": "nsc.vrm.lt confirms the national ID card is the eID and e-signature device and that its certificates are issued by the Migration Department under the Ministry of the Interior, a state body.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "secondary",
+     "language": "lt",
+     "published": "2025-05-23",
+     "publisher": "LRT (BNS)",
+     "quote": "Netoli Vilniaus oro uosto esantis VDC4 veikti pradėjo šių metų vasarį, jis teikia IT įrangos talpinimo paslaugas valstybės organizacijoms.",
+     "quote_english": "VDC4, located near Vilnius airport, began operating in February this year; it provides IT equipment hosting services to state organisations.",
+     "title": "Antrasis valstybinis duomenų centras pradeda veiklą",
+     "url": "https://www.lrt.lt/naujienos/verslas/4/2571753/antrasis-valstybinis-duomenu-centras-pradeda-veikla"
+    },
+    {
+     "doc_type": "secondary",
+     "language": "lt",
+     "published": "2025-05-23",
+     "publisher": "LRT (BNS)",
+     "quote": "Telecentras baigė valstybinio duomenų centro VDC3 pridavimo Valstybinei teritorijų planavimo ir statybos inspekcijai procedūrą ir pradeda eksploatuoti objektą pagal jo paskirtį",
+     "quote_english": "Telecentras has completed the handover of state data centre VDC3 to the State Territorial Planning and Construction Inspectorate and is starting to operate the facility for its intended purpose",
+     "title": "Antrasis valstybinis duomenų centras pradeda veiklą",
+     "url": "https://www.lrt.lt/naujienos/verslas/4/2571753/antrasis-valstybinis-duomenu-centras-pradeda-veikla"
+    }
+   ],
+   "id": "C1",
+   "research_note": "Two state data centres (VDC3 at the Vilnius TV Tower and VDC4 near Vilnius airport) are operated by Telecentras (Lithuanian Radio and Television Centre) and are in service for state institutions. A 2026-08 LRT report says their data-centre revenue doubled as institutions migrated. The Cyber Security Law also provides for a Government-approved list of state data centres (valstybiniai duomenų centrai). That Telecentras is state-owned comes from background knowledge; no fetched source quotes it, because telecentras.lt serves a JavaScript challenge. The sources are news reports (BNS via LRT), since the operator and ministry sites returned 403.",
+   "review": {
+    "original": "yes",
+    "reason": "The LRT/BNS article (2025-05-23) contains both quotes: it calls VDC3 and VDC4 state data centres (valstybiniai duomenų centrai) and says VDC4 has operated since February and hosts IT for state organisations. The only gap is that Telecentras being state-owned is not stated on the page.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "secondary",
+     "language": "lt",
+     "published": "2026-08-03",
+     "publisher": "LRT",
+     "quote": "Šį augimą daugiausiai lėmė valstybės institucijų migravimas į naujus duomenų centrus ir virtualių išteklių (debesijos) teikiamų paslaugų apimčių augimas",
+     "quote_english": "This growth was mainly driven by state institutions migrating to the new data centres and by growth in the volume of virtual-resource (cloud) services provided",
+     "title": "„Telecentro“ grynasis pelnas per metus išaugo beveik 5,8 karto ir siekė 432 tūkst. eurų",
+     "url": "https://www.lrt.lt/naujienos/verslas/4/3010133/telecentro-grynasis-pelnas-per-metus-isaugo-beveik-5-8-karto-ir-sieke-432-tukst-euru"
+    },
+    {
+     "doc_type": "secondary",
+     "language": "lt",
+     "published": "2026-08-03",
+     "publisher": "LRT",
+     "quote": "vienas didžiausių pirmo pusmečio debesijos paslaugų kontraktų buvo pasirašytas su „Via Lietuva“, pagal kurį Telecentro valdomuose duomenų centruose bus saugomi visi su nauja kelių rinkliavos „Via Toll“ sistema ir jos veikimu susiję duomenys",
+     "quote_english": "one of the largest cloud-service contracts of the first half-year was signed with Via Lietuva, under which all data related to the new Via Toll road-charging system will be stored in data centres operated by Telecentras",
+     "title": "„Telecentro“ grynasis pelnas per metus išaugo beveik 5,8 karto ir siekė 432 tūkst. eurų",
+     "url": "https://www.lrt.lt/naujienos/verslas/4/3010133/telecentro-grynasis-pelnas-per-metus-isaugo-beveik-5-8-karto-ir-sieke-432-tukst-euru"
+    }
+   ],
+   "id": "C2",
+   "research_note": "Cloud (virtual-resource) services run from the state data centres operated by Telecentras are in operation and serve state institutions; the named workload is state road agency Via Lietuva's Via Toll data. The state-cloud (valstybės debesija) programme was designed from 2019 under IVPK/the Ministry of Economy (LRT 2019-04-30). Caveats: the evidence is news reporting, not an official page. VSSA, KVTC and Ministry of Economy pages returned 403 to automated fetches, so the platform's official name, scope and whether hosting there is mandatory could not be confirmed. Rate yes on the operational evidence, with moderate confidence.",
+   "review": {
+    "original": "yes",
+    "reason": "The LRT article (2026-08-03) contains both quotes: state institutions migrating to the new data centres and virtual-resource (cloud) services as the main growth driver, plus a live contract to store the state road agency's Via Toll data. This shows a government cloud already in operation and serving government workloads, not just announced; the evidence is secondary reporting only.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "LT"
+}

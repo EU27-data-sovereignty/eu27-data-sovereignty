@@ -1,0 +1,190 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "lv",
+     "published": "2024-07-04",
+     "publisher": "Saeima / Latvijas Vēstnesis (likumi.lv)",
+     "quote": "Vienoto valsts interneta plūsmu apmaiņas punktu izveido un uztur, lai: 1) pastāvīgi nodrošinātu kritiskās datu plūsmas atrašanos tikai Latvijas Republikas teritorijā",
+     "quote_english": "The single state internet exchange point is established and maintained in order to: 1) permanently ensure that critical data flows remain only within the territory of the Republic of Latvia",
+     "title": "Nacionālās kiberdrošības likums (National Cybersecurity Law), Art. 32",
+     "url": "https://likumi.lv/ta/id/353390"
+    },
+    {
+     "doc_type": "legislation",
+     "language": "lv",
+     "published": "2023-12-19",
+     "publisher": "Ministru kabinets (likumi.lv)",
+     "quote": "akreditēta informācijas sistēma – Satversmes aizsardzības biroja noteiktā kārtībā reģistrēta un akreditēta informācijas sistēma, kurā apstrādā klasificēto informāciju",
+     "quote_english": "accredited information system: an information system registered and accredited in accordance with the procedure set by the Constitution Protection Bureau, in which classified information is processed",
+     "title": "MK noteikumi Nr. 822 (19.12.2023) Valsts noslēpuma, NATO, ES un ārvalstu institūciju klasificētās informācijas aizsardzības noteikumi, para. 2.1",
+     "url": "https://likumi.lv/ta/id/348742"
+    }
+   ],
+   "id": "L1",
+   "research_note": "Judged partial. The general rule for state and municipal bodies was Cabinet Regulation No. 442 (2015), para. 5.1. It required data to be stored in a NATO, EU or EEA member state. That regulation lapsed on 18.10.2024 (https://likumi.lv/ta/id/275671). Its successor, Cabinet Regulation No. 397 (2025) on minimum cybersecurity requirements (https://likumi.lv/ta/id/361481), has no general storage-location clause for government data that I could find. It restricts outsourcing for critical-infrastructure A-class systems by nationality and registration (NATO/EU/EFTA/IP4, para. 94). It also limits auditors to processing data in NATO/EU/EFTA territory. The National Cybersecurity Law Art. 30 delegates data-centre placement rules to the Cabinet, with a deadline of 01.04.2025. No such regulation appears among the acts issued under the law. The binding location rules that remain are sector-specific: critical data flows must stay in Latvian territory (Art. 32), and classified information may only be processed in systems accredited by the Constitution Protection Bureau (SAB).",
+   "review": {
+    "original": "partial",
+    "reason": "Art. 32 of the National Cybersecurity Law does require critical data flows to stay only in Latvian territory, which is a sector-specific rule; the Reg. 822 quote is only a definition and ties classified processing to SAB-accredited systems, so 'partial' holds but not 'yes'.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "lv",
+     "published": "1996-10-17",
+     "publisher": "Saeima (likumi.lv)",
+     "quote": "Informāciju, kas ir valsts noslēpums, pēc svarīguma klasificē sevišķi slepenā, slepenā un konfidenciālā informācijā un informācijā dienesta vajadzībām.",
+     "quote_english": "Information that is a state secret is classified by importance as top secret, secret and confidential information, and information for official use.",
+     "title": "Likums \"Par valsts noslēpumu\" (Law on State Secrets), Art. 3(1)",
+     "url": "https://likumi.lv/ta/id/41058"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Classification levels are defined in statute: the Law on State Secrets, Art. 3. Detailed protection rules are in Cabinet Regulation No. 822 (2023).",
+   "review": {
+    "original": "yes",
+    "reason": "Art. 3(1) of the Law on State Secrets, verified verbatim, defines the classification levels (top secret, secret, confidential, official use) in statute.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "I checked the National Cybersecurity Law (likumi.lv/ta/id/353390), Cabinet Regulation No. 397 (2025), the acts issued under the Cybersecurity Law (likumi.lv related-acts listing), and the LVRTC cloud project pages. None of them has a cloud certification scheme requiring immunity from non-EU law. Regulation No. 397 has only audit requirements for cloud and data-centre providers, based on NIS2. I found no authoritative statement that no such scheme exists, so the value is unknown rather than no.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were cited and no source confirms or denies a sovereign cloud certification, so 'unknown' is the correct value.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "lv",
+     "publisher": "VAS Latvijas Valsts radio un televīzijas centrs (LVRTC)",
+     "quote": "LVRTC ir vienīgais Latvijā reģistrētais uzticamais sertifikācijas pakalpojumu sniedzējs un nodrošina droša elektroniskā paraksta pakalpojumu fiziskām un juridiskām personām.",
+     "quote_english": "LVRTC is the only trusted certification service provider registered in Latvia and provides the secure electronic signature service to natural and legal persons.",
+     "title": "Par mums (About us)",
+     "url": "https://www.lvrtc.lv/par-lvrtc/par-mums/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "lv",
+     "publisher": "VAS Latvijas Valsts radio un televīzijas centrs (LVRTC)",
+     "quote": "LVRTC ir 100% Latvijas valstij piederoša kapitālsabiedrība, kuras misija ir gādāt, lai ikvienam valsts iedzīvotājam būtu iespēja droši un ātri saņemt un pārraidīt informāciju.",
+     "quote_english": "LVRTC is a capital company 100% owned by the Latvian state, whose mission is to ensure that every resident can receive and transmit information safely and quickly.",
+     "title": "Par mums (About us)",
+     "url": "https://www.lvrtc.lv/par-lvrtc/par-mums/"
+    }
+   ],
+   "id": "K1",
+   "research_note": "The Latvian trusted list (https://trustlist.gov.lv/tsl/latvian-tsl.xml, operated by the Digital Security Supervisory Committee) lists one TSP: Latvijas Valsts radio un televīzijas centrs. Its services include the eParaksts Root CA, the LV eID ICA and the TSAs. LVRTC is a state joint-stock company whose shares are held by the Ministry of Transport. I did not quote the XML itself because its text strings are too short to quote.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes appear verbatim on the LVRTC About page: it is the only registered trusted certification service provider in Latvia and it is 100% owned by the state.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "lv",
+     "publisher": "VAS Latvijas Valsts radio un televīzijas centrs (LVRTC)",
+     "quote": "LVRTC ir reģistrēts kā vienīgais valstī kvalificēta paaugstinātas drošības elektroniskās identifikācijas pakalpojuma sniedzējs.",
+     "quote_english": "LVRTC is registered as the only qualified high-security electronic identification service provider in the country.",
+     "title": "eParaksta un e-Identitātes integrācijas risinājumi",
+     "url": "https://www.lvrtc.lv/projekti/eparaksts_identitate/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "lv",
+     "publisher": "VAS Latvijas Valsts radio un televīzijas centrs (LVRTC)",
+     "quote": "jānodrošina iespēja saņemt pakalpojumus, izmantojot nacionālos elektroniskās identifikācijas līdzekļus – eID karti un mobilo lietotni eParaksts mobile",
+     "quote_english": "must ensure the possibility to receive services using the national electronic identification means: the eID card and the mobile app eParaksts mobile",
+     "title": "eParaksta vēsture (eParaksts history)",
+     "url": "https://www.lvrtc.lv/par-lvrtc/vesture-2/eparaksta-vesture/"
+    }
+   ],
+   "id": "K2",
+   "research_note": "The national eID means are the eID card and eParaksts mobile. Their certificates and identification service are run by LVRTC, which is 100% state-owned (see the K1 source). I did not fetch the EU notified-schemes list because it is a JavaScript page.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes were verified: LVRTC is the only registered qualified high-assurance eID provider, the national eID means are the eID card and eParaksts mobile, and LVRTC is state-owned per K1.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "lv",
+     "publisher": "VAS Latvijas Valsts radio un televīzijas centrs (LVRTC)",
+     "quote": "Mēs esam viens no nozīmīgākajiem datu centru pakalpojumu sniedzējiem Latvijā. Piedāvājam Jums iespēju izvietot iekārtas gan Rīgā, gan pārējā Latvijas teritorijā",
+     "quote_english": "We are one of the most significant data centre service providers in Latvia. We offer the possibility to place equipment both in Riga and elsewhere in Latvia",
+     "title": "Datu centri (Data centres), public sector services",
+     "url": "https://www.lvrtc.lv/pakalpojumi/valsts_sektoram/datu_centri/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "lv",
+     "publisher": "VAS Latvijas Valsts radio un televīzijas centrs (LVRTC)",
+     "quote": "LVRTC ir 100% Latvijas valstij piederoša kapitālsabiedrība, kuras misija ir gādāt, lai ikvienam valsts iedzīvotājam būtu iespēja droši un ātri saņemt un pārraidīt informāciju.",
+     "quote_english": "LVRTC is a capital company 100% owned by the Latvian state, whose mission is to ensure that every resident can receive and transmit information safely and quickly.",
+     "title": "Par mums (About us)",
+     "url": "https://www.lvrtc.lv/par-lvrtc/par-mums/"
+    }
+   ],
+   "id": "C1",
+   "research_note": "State-owned LVRTC runs Tier 3, Tier 2 and regional data centres, and its public-sector services page lists them. A further facility, the 'Pozitrons' data centre, is under construction and due for 2027 (https://www.lvrtc.lv/projekti/datu-centrs-pozitrons/).",
+   "review": {
+    "original": "yes",
+    "reason": "The quote was verified in full on the LVRTC public-sector data centre page, which describes operating Tier 3, Tier 2 and regional data centres that are in service, and the operator is 100% state-owned.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "lv",
+     "publisher": "VAS Latvijas Valsts radio un televīzijas centrs (LVRTC)",
+     "quote": "nacionālajā federētajā mākonī tika izmitinātas vēl piecas publiskās pārvaldes informācijas sistēmas, kas kopējo sistēmu skaitu ir palielinājis līdz deviņām",
+     "quote_english": "five more public administration information systems were hosted in the national federated cloud, raising the total number of systems to nine",
+     "title": "Latvijas Nacionālais federētais mākonis (Latvian National Federated Cloud)",
+     "url": "https://www.lvrtc.lv/projekti/latvijas-nacionalais-federetais-makonis/"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "lv",
+     "publisher": "VAS Latvijas Valsts radio un televīzijas centrs (LVRTC)",
+     "quote": "2021. gada sākumā uzsākta pakalpojumu nodrošināšana valsts pārvaldes iestādēm atbilstoši valsts elektronisko sakaru pakalpojumu centra (VESPC) nodrošināšanas kārtībai.",
+     "quote_english": "At the beginning of 2021 service provision to state administration institutions began in accordance with the procedure for the State Electronic Communications Services Centre (VESPC).",
+     "title": "LVDC – loģiski vienotais datu centrs 2. kārta (Logically unified data centre, phase 2)",
+     "url": "https://www.lvrtc.lv/projekti/lvdc-2/"
+    }
+   ],
+   "id": "C2",
+   "research_note": "The Latvian National Federated Cloud is funded by the RRF under Cabinet Regulation No. 435 (2022). It is in operation, hosting 9 public administration information systems as of 2025. The LVRTC VESPC/LVDC cloud (virtual and container data centre) has served government bodies since 2021.",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes were verified: the National Federated Cloud hosted nine public administration systems in 2025, and LVDC/VESPC services to state institutions began in early 2021, so it is in operation and not just announced.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  }
+ ],
+ "iso": "LV"
+}

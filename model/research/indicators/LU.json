@@ -1,0 +1,182 @@
+{
+ "indicators": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "fr",
+     "published": "2004-06-15",
+     "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+     "quote": "La transmission électronique de pièces classifiées «TRES SECRET», «SECRET» et «CONFIDENTIEL» se fait exclusivement par des centres et réseaux de communication / transmission et terminaux habilités",
+     "quote_english": "Electronic transmission of documents classified TOP SECRET, SECRET and CONFIDENTIAL takes place exclusively through accredited communication/transmission centres, networks and terminals",
+     "title": "Loi du 15 juin 2004 relative à la classification des pièces et aux habilitations de sécurité (Art. 11)",
+     "url": "https://data.legilux.public.lu/filestore/eli/etat/leg/loi/2004/06/15/n5/jo/fr/html/eli-etat-leg-loi-2004-06-15-n5-jo-fr-html.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+     "quote": "la planification, la mise en place, la gestion, l’exploitation et l’assurance de la disponibilité des systèmes de communication et d’information classifiés permettant la consultation politique et l’échange d’informations au profit du Gouvernement",
+     "quote_english": "the planning, set-up, management, operation and availability assurance of classified communication and information systems enabling political consultation and information exchange for the Government",
+     "title": "Attributions du CTIE",
+     "url": "https://ctie.gouvernement.lu/fr/l-administration/Attributions.html"
+    }
+   ],
+   "id": "L1",
+   "research_note": "The 2004 classification law (Art. 11) requires classified material to be handled only through centres, networks and terminals accredited by the National Security Authority (Autorité nationale de Sécurité). By law (2009/2015 CTIE law), the state IT centre CTIE runs the Government's classified systems. I found no statute requiring non-classified government data in general to be stored under national or EU jurisdiction, so this is partial (classified data only). Legilux's main portal is JavaScript-only, so the data.legilux filestore HTML was used.",
+   "review": {
+    "original": "partial",
+    "reason": "Art. 11 is on the page and limits electronic transmission of classified documents to accredited centres, networks and terminals, and the CTIE page confirms the State runs the classified systems, but no article requires storage or processing under Luxembourg or EU jurisdiction (Art. 8 sets physical security measures with no territorial clause), so even the classified-only 'partial' is not established.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "language": "fr",
+     "published": "2004-06-15",
+     "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+     "quote": "Les pièces sont classifiées selon les quatre degrés de confidentialité suivants:",
+     "quote_english": "Documents are classified according to the following four levels of confidentiality:",
+     "title": "Loi du 15 juin 2004 relative à la classification des pièces et aux habilitations de sécurité (Art. 4)",
+     "url": "https://data.legilux.public.lu/filestore/eli/etat/leg/loi/2004/06/15/n5/jo/fr/html/eli-etat-leg-loi-2004-06-15-n5-jo-fr-html.html"
+    }
+   ],
+   "id": "L2",
+   "research_note": "Article 4 of the Law of 15 June 2004 on document classification and security clearances sets four levels: TRES SECRET, SECRET, CONFIDENTIEL and RESTREINT. Article 3 sets the interests being protected (national security, international relations, scientific and economic potential). The quote was checked in the original gazette (JO) text; it may not match the current consolidated version, which has been amended since.",
+   "review": {
+    "original": "yes",
+    "reason": "Art. 4 of the Law of 15 June 2004 appears verbatim on the Legilux page and sets out the four statutory classification levels (TRES SECRET, SECRET, CONFIDENTIEL, RESTREINT), which meets 'defined in a statute'.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [],
+   "id": "L3",
+   "research_note": "I found no Luxembourg cloud certification that requires immunity from non-EU law (SecNumCloud-type), whether in force or adopted for government use. Checked: the CTIE and Ministry for Digitalisation sites (attributions, strategic axes, Luxchat4Gov). The web-search budget ran out, so ILNAS, the ANSSI/GOVCERT.LU sites and CSSF cloud circulars were not searched. No authoritative statement of absence was found, so this is unknown rather than no.",
+   "review": {
+    "original": "unknown",
+    "reason": "No claims were offered and no source states that a sovereign cloud certification exists or is absent, so unknown is correct.",
+    "reviewed": "unknown"
+   },
+   "value": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "INCERT GIE",
+     "quote": "Established in 2012 by the State of Luxembourg, INCERT serves national public services within",
+     "quote_english": "Established in 2012 by the State of Luxembourg, INCERT serves national public services within [identity management and cryptography]",
+     "title": "INCERT – Building trust in a Digital World (About us)",
+     "url": "https://www.incert.lu/sous-page"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "en",
+     "publisher": "INCERT GIE",
+     "quote": "Managing secure digital trust services such as qualified time stampings, and certificates for authentication and signature purposes (eIDAS 2.0).",
+     "quote_english": "Managing secure digital trust services such as qualified time stamping, and certificates for authentication and signature purposes (eIDAS 2.0).",
+     "title": "INCERT – Serving Luxembourg public services",
+     "url": "https://www.incert.lu/serving-luxembourg-public-agencies"
+    }
+   ],
+   "id": "K1",
+   "research_note": "INCERT is an economic interest grouping (GIE) set up by the State of Luxembourg. It serves public services as a Qualified Trust Service Provider (qualified time-stamping and authentication/signature certificates) and runs identity-document PKI; its board chair is from the Ministry of the Economy. The other main Luxembourg QTSP, LuxTrust, lists POST Luxembourg (state-owned) as a shareholder. The EU Trusted List browser (eidas.ec.europa.eu/efda) is JavaScript-only and could not be read to confirm the list entries. I also could not confirm which QTSP issues the certificates on the eID card.",
+   "review": {
+    "original": "yes",
+    "reason": "Both INCERT quotes appear verbatim: INCERT was 'Established in 2012 by the State of Luxembourg', calls itself a public agency and a Qualified Trust Service Provider issuing qualified time-stamps and authentication/signature certificates, so a state-established body runs a qualified trust service (the pages do not spell out the ownership structure).",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "published": "2021-12-17",
+     "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+     "quote": "le gouvernement luxembourgeois donne au citoyen la possibilité d’utiliser sa carte d’identité électronique",
+     "quote_english": "the Luxembourg government gives citizens the possibility to use their electronic identity card",
+     "title": "GouvID – L'app pour vous identifier auprès des services publics en ligne",
+     "url": "https://ctie.gouvernement.lu/fr/actualites/dossiers/gouvid/gouvid.html"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+     "quote": "la production et la personnalisation de documents administratifs sécurisés et le traitement des données biométriques y relatives",
+     "quote_english": "the production and personalisation of secure administrative documents and the processing of the related biometric data",
+     "title": "Attributions du CTIE",
+     "url": "https://ctie.gouvernement.lu/fr/l-administration/Attributions.html"
+    }
+   ],
+   "id": "K2",
+   "research_note": "The national eID is the electronic identity card, produced and personalised by the state IT centre CTIE. The government's GouvID app, published by CTIE, uses the card's certificates to log in to MyGuichet.lu, eCDF and the Luxembourg Business Register. Not verified: the eIDAS notified-schemes list (a JavaScript/Confluence page) and the 2013 identification law on Legilux (connection failures).",
+   "review": {
+    "original": "yes",
+    "reason": "Both quotes appear verbatim: the eID card and GouvID come from the government, and CTIE, a state administration, produces and personalises the secure documents and runs GouvID, which establishes state operation.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "secondary",
+     "language": "en",
+     "publisher": "Wikipedia",
+     "quote": "October 2006: Incorporation of LuxConnect S.A. by the State of Luxembourg as main shareholder.",
+     "quote_english": "October 2006: Incorporation of LuxConnect S.A. by the State of Luxembourg as main shareholder.",
+     "title": "LuxConnect",
+     "url": "https://en.wikipedia.org/wiki/LuxConnect"
+    },
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+     "quote": "la gestion des équipements électroniques, informatiques et de sécurité appropriés à l'accomplissement de ses attributions",
+     "quote_english": "the management of the electronic, IT and security equipment needed to carry out its duties",
+     "title": "Attributions du CTIE",
+     "url": "https://ctie.gouvernement.lu/fr/l-administration/Attributions.html"
+    }
+   ],
+   "id": "C1",
+   "research_note": "LuxConnect S.A. is majority-owned by the state and has run data centres in Bettembourg and Bissen since 2009–2012. Part of its business is commercial colocation. The CTIE, a state administration, runs the State's IT infrastructure, mainframe and platforms and the government's classified systems; its organisation chart includes 'Systèmes et stockage' and 'Technique des bâtiments' units. The LuxConnect site itself was unreachable (socket closed), so a secondary source was used. I found no official page naming CTIE data-centre sites.",
+   "review": {
+    "original": "yes",
+    "reason": "The Wikipedia quote appears verbatim, and the article describes four operating Tier IV LuxConnect data centres in Bettembourg and Bissen incorporated with the State as main shareholder; this is a weak basis (a secondary source, ownership stated only as of 2006, commercial colocation not shown to host government data, and no data-centre wording on the CTIE page), but it meets the literal definition of a state-controlled body operating data centres.",
+    "reviewed": "yes"
+   },
+   "value": "yes"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "language": "fr",
+     "published": "2026-08-26",
+     "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+     "quote": "Les demandes de projets govCloud et de développement de solutions métiers ne cessent de croitre.",
+     "quote_english": "Requests for govCloud projects and for the development of business solutions keep growing.",
+     "title": "Offres d'emploi – CTIE",
+     "url": "https://ctie.gouvernement.lu/fr/offres-emploi.html"
+    }
+   ],
+   "id": "C2",
+   "research_note": "CTIE's official jobs page mentions ministries' growing demand for 'govCloud' projects, which points to a government cloud platform run by CTIE and in use today. Confidence is moderate: this is one indirect official statement, not a description of the service. In the raw HTML, 'gov' and 'Cloud' sit in separate tags; the rendered text reads 'govCloud', but tag stripping may produce 'gov Cloud'. The web-search budget ran out, so press releases on the CTIE govCloud or a sovereign cloud (e.g. Clarence/POST) were not searched.",
+   "review": {
+    "original": "yes",
+    "reason": "The quote appears verbatim on the CTIE jobs page, but one recruitment line saying 'requests for govCloud projects keep growing' is indirect and does not establish a platform in operation serving government workloads, so the strict standard is not met.",
+    "reviewed": "partial"
+   },
+   "value": "partial"
+  }
+ ],
+ "iso": "LU"
+}
