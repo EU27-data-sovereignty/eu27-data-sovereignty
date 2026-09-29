@@ -28,6 +28,7 @@ Claim ids name exactly what is asserted, in namespaces:
     record:<ISO|*>:<record_class>:<kind>     a critical holding (national_data.csv): its existence
                                              (register), operator, legal basis, hosting, foreign
                                              dependency, record count or data size (#73)
+    indicator:<ISO>:<id>                     a data-sovereignty indicator (indicators.csv), #77
     doc:<path>#<anchor>                      a claim in an authored note
 
 The bargain is the one sources.csv struck (#54): a URL shows that a document exists, not that it
@@ -64,7 +65,7 @@ CITATION_FIELDS = ["claim", "source_id", "locator", "quote", "value_as_found", "
 DOC_TYPES = ("statute", "regulation", "dataset", "report", "annual_report", "standard", "webpage",
              "register", "unused")
 CONFIDENCE = ("primary", "official", "secondary", "absence", "assumption")
-NAMESPACES = ("param", "assumption", "workload", "inventory", "record", "doc")
+NAMESPACES = ("param", "assumption", "workload", "inventory", "record", "indicator", "doc")
 RECORD_KINDS = ("register", "operator", "legal_basis", "hosting", "foreign_dependency", "count", "size")
 
 SOURCE_ID = re.compile(r"^[a-z0-9-]+:[a-z0-9_.-]+(@[A-Za-z0-9_.-]+)?$")
@@ -109,6 +110,11 @@ def record_classes() -> tuple[str, ...]:
     """The closed Tier 0/1 vocabulary, owned by national_data.py."""
     from national_data import RECORD_CLASSES  # noqa: PLC0415 -- national_data imports this module too
     return RECORD_CLASSES
+
+
+def indicator_ids() -> tuple[str, ...]:
+    with (ROOT / "model" / "indicators.csv").open(newline="", encoding="utf-8") as fh:
+        return tuple(r["id"] for r in csv.DictReader(fh))
 
 
 def parameters() -> dict[str, dict[str, str]]:
@@ -176,6 +182,10 @@ def validate(reg: dict[str, dict[str, str]], cites: list[dict[str, str]]) -> lis
                     or parts[2] not in record_classes() or parts[3] not in RECORD_KINDS):
                 errors.append(f"{where}: record claim must be record:<ISO|*>:<record_class of "
                               f"national_data.py>:<{'|'.join(RECORD_KINDS)}>")
+        if ns == "indicator":
+            parts = c["claim"].split(":")
+            if len(parts) != 3 or parts[1] not in params or parts[2] not in indicator_ids():
+                errors.append(f"{where}: indicator claim must be indicator:<ISO>:<id of indicators.csv>")
         key = (c["claim"], c["source_id"], c["locator"])
         if key in seen:
             errors.append(f"{where}: duplicate of an earlier row")
@@ -212,6 +222,7 @@ def claims_by_namespace() -> dict[str, set[str]]:
         out["assumption"] |= {f"assumption:{r['Assumption']}" for r in csv.DictReader(fh)}
     # One register claim per (country, record class); counts and sizes join with Part C.
     out["record"] |= {f"record:{iso}:{c}:register" for iso in params for c in record_classes()}
+    out["indicator"] |= {f"indicator:{iso}:{i}" for iso in params for i in indicator_ids()}
     return out
 
 

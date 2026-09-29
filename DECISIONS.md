@@ -1421,3 +1421,45 @@ colour in a web component. `tests/test_artifacts.py` `Retired` fails if a briefi
 `git ls-files 'countries/*/*-briefing.pdf'` → empty. `vercel.json` redirects `/briefs/:iso.pdf`.
 
 *Would change if:* the project is formally endorsed by an EU body and permitted to use its marks.
+
+### 77. States are placed in data-sovereignty groups by a published rule, with computed confidence
+**Decision.** 2026-09-29. Each member state is placed in one of five ordered groups by the decision rule in
+`model/sovereignty.py`: *Sovereign in law and in practice*, *Sovereign in practice, not secured in law*,
+*Secured in law, not yet in practice*, *Not demonstrated*, *Dependent on non-EU providers*. The inputs are
+seven sourced indicators (`model/indicators.csv`: jurisdiction requirement, classification in law, sovereign
+cloud certification, state-controlled trust anchor and eID, government data centres, government cloud in
+operation) plus two computed from the critical-holdings register (share of verified tier 0/1 holdings on
+national or EU infrastructure; any sourced non-EU dependency). An input without a checked source is
+*unknown* and counts as not demonstrated. Confidence is the width of the range of groups the state could
+reach if every unknown resolved for or against it: one group High, two Medium, three or more Low. States
+within a group are listed alphabetically. Amends #10 for this ranking only.
+
+**Problem.** The author asked for a ranking of data sovereignty by country covering all 27 now, with the
+confidence in each placement and the reason made clear. #10 forbids a composite score, and nearly every
+input is still unresearched, so any ranking today mostly measures the research.
+
+**Alternatives considered.**
+- **Rule-based groups with a computed range (chosen).** Answers "where does each state stand" without a
+  number to quote; the range makes unfinished research visible instead of hiding it in a score.
+- **Weighted index (0-100).** *Why not:* the weights would be invented, the dimensions do not add (#10), and
+  a precise-looking number is exactly what gets quoted without its caveats.
+- **Per-dimension ranks only.** *Why not:* within #10, but it does not answer the question asked; a reader
+  must build the ranking in their head, inconsistently.
+- **Dominance layers (A above B only if at least as strong on every dimension).** *Why not:* weight-free and
+  honest, but with this many unknowns most pairs are incomparable, and the layers are hard to read.
+- **Rank only states above an evidence threshold.** *Why not:* the author asked for all 27; the range
+  carries the same warning without hiding anyone.
+- **Coverage percentage as the confidence.** *Why not:* an arbitrary threshold; the range says what the
+  missing evidence could actually change.
+
+**Closes off.** A single sovereignty score anywhere in the bundle or the outputs; an order within a group;
+treating silence in the sources as evidence of national hosting.
+
+**Verified:** 2026-09-29. `tests/test_sovereignty.py`: every rule branch, plus exhaustive checks that the
+placement always lies inside its range and that resolving an unknown favourably never worsens a group;
+`python3 -m unittest tests.test_sovereignty` → 14 tests OK. The indicator research has not run: all 27
+states are currently *Not demonstrated*, Low confidence, full range.
+
+*Would change if:* a dimension proves unmeasurable across most states (it is then dropped from the rule,
+not guessed), or the groups start being quoted without their confidence, in which case the ranking is
+withdrawn as #59 provides.
