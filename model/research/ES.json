@@ -1,0 +1,1569 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La operación de la capa de infraestructuras que soporta las distintas plataformas de la Agencia, entre ellas la solución de nube híbrida propia de la Administración, conocida como «NubeSARA».",
+     "quote_english": "Operating the infrastructure layer supporting the Agency's platforms, including the Administration's own hybrid cloud solution, known as 'NubeSARA'.",
+     "title": "Real Decreto 1118/2024, de 5 de noviembre, Estatuto de la Agencia Estatal de Administración Digital",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-22929",
+     "value": "The AEAD operates the Administration's own hybrid cloud, NubeSARA"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El diseño, provisión, explotación y evolución de los centros de proceso de datos de referencia, gestionados por la Agencia, para la prestación de servicios comunes.",
+     "quote_english": "The design, provision, operation and evolution of the reference data centres managed by the Agency for providing common services.",
+     "title": "Real Decreto 1118/2024, de 5 de noviembre, Estatuto de la Agencia Estatal de Administración Digital",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-22929",
+     "value": "The AEAD designs, provides and runs reference data centres for common services"
+    }
+   ],
+   "holding_name": "NubeSARA y centros de proceso de datos de referencia (AGE hybrid cloud and reference data centres)",
+   "suggested_class": "government_cloud_and_data_centres",
+   "why_critical": "The State's own hybrid cloud and shared data centres host common services for the General State Administration. Their control decides whether many holdings depend on foreign infrastructure."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El diseño, provisión y explotación de los servicios, soluciones tecnológicas y las infraestructuras de comunicaciones unificadas de la Administración del Estado, así como de la conocida como Red SARA.",
+     "quote_english": "The design, provision and operation of the services, technology solutions and unified communications infrastructure of the State Administration, including the network known as Red SARA.",
+     "title": "Real Decreto 1118/2024, de 5 de noviembre, Estatuto de la Agencia Estatal de Administración Digital",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-22929",
+     "value": "The AEAD designs, provides and operates the State's unified communications infrastructure, including Red SARA"
+    }
+   ],
+   "holding_name": "Red SARA (inter-administration network)",
+   "suggested_class": "government_network",
+   "why_critical": "The backbone network connecting Spanish administrations and their registers. The AEAD can order disconnections from it during cyber incidents."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2015",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "En el ámbito estatal, este registro será el Registro Electrónico de Apoderamientos de la Administración General del Estado.",
+     "quote_english": "At state level, this register shall be the Electronic Register of Powers of Attorney of the General State Administration.",
+     "title": "Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565",
+     "value": "Ley 39/2015: the state-level general register of powers of representation is the AGE Electronic Register of Powers of Attorney"
+    }
+   ],
+   "holding_name": "Registro Electrónico de Apoderamientos de la AGE (electronic register of powers of representation)",
+   "suggested_class": "representation_register",
+   "why_critical": "It records who may act legally on behalf of citizens and companies before the administration. Tampering would allow unauthorised acts in someone's name."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2011-07-22",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Registro Civil es único para toda España. 2. El Registro Civil es electrónico.",
+     "quote_english": "The Civil Registry is single for all of Spain. 2. The Civil Registry is electronic.",
+     "title": "Ley 20/2011, de 21 de julio, del Registro Civil",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-12628",
+     "value": "Registro Civil (Civil Registry): a single, electronic register for all of Spain"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2011-07-22",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Los datos serán objeto de tratamiento automatizado y se integrarán en una base de datos única cuya estructura, organización y funcionamiento es competencia del Ministerio de Justicia",
+     "quote_english": "The data will be processed automatically and integrated into a single database whose structure, organisation and operation are the competence of the Ministry of Justice",
+     "title": "Ley 20/2011, de 21 de julio, del Registro Civil",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-12628",
+     "value": "Ley 20/2011 del Registro Civil: data held in a single automated database whose structure and operation is the competence of the Ministry of Justice"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2011-07-22",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "ejercerá sus cometidos bajo la dependencia funcional de la Dirección General de Seguridad Jurídica y Fe Pública",
+     "quote_english": "shall perform their duties under the functional authority of the Directorate-General for Legal Certainty and Public Faith",
+     "title": "Ley 20/2011, de 21 de julio, del Registro Civil",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-12628",
+     "value": "Registry officers work under the functional authority of the Dirección General de Seguridad Jurídica y Fe Pública (Ministry of Justice)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2025-04-02",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "se extraerá del Código Personal de la inscripción realizada en el Registro Civil proporcionado por DICIREG",
+     "quote_english": "shall be taken from the Personal Code of the entry made in the Civil Registry provided by DICIREG",
+     "title": "Real Decreto 255/2025, de 1 de abril, por el que se regula el Documento Nacional de Identidad",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-6601",
+     "value": "DICIREG is the Civil Registry system that supplies the personal code used to assign DNI numbers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1985",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Padrón municipal es el registro administrativo donde constan los vecinos de un municipio.",
+     "quote_english": "The municipal Padrón is the administrative register listing the residents of a municipality.",
+     "title": "Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-5392",
+     "value": "Ley 7/1985, art. 16: the Padrón municipal is the administrative register of residents of each municipality"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registro Civil (base de datos única; aplicación DICIREG) y Padrón municipal",
+   "operator": "Ministerio de Justicia – Dirección General de Seguridad Jurídica y Fe Pública; Padrón: Ayuntamientos coordinados por el INE",
+   "research_note": "No public source found stating where the Registro Civil database (DICIREG) is hosted, and none giving a record count.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2025-04-02",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Documento Nacional de Identidad incluirá un medio de almacenamiento de alta seguridad que contendrá una imagen facial del titular del documento.",
+     "quote_english": "The National Identity Document shall include a high-security storage medium containing a facial image of the document holder.",
+     "title": "Real Decreto 255/2025, de 1 de abril, por el que se regula el Documento Nacional de Identidad",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-6601",
+     "value": "RD 255/2025: the DNI contains a high-security storage medium holding a facial image of the holder"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2025-04-02",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Dicha competencia será ejercida por la Dirección General de la Policía, gestionando la custodia y responsabilidad de la actividad del tratamiento de los datos personales",
+     "quote_english": "That competence shall be exercised by the Directorate-General of the Police, managing custody of and responsibility for the processing of personal data",
+     "title": "Real Decreto 255/2025, de 1 de abril, por el que se regula el Documento Nacional de Identidad",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-6601",
+     "value": "Dirección General de la Policía exercises the DNI competence and has custody of and responsibility for the processing of personal data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2003",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El pasaporte llevará incorporado un chip electrónico que contendrá la siguiente información referida a su titular: datos de filiación, imagen digitalizada de la fotografía",
+     "quote_english": "The passport shall carry an electronic chip containing the following information on its holder: personal details, a digitised image of the photograph",
+     "title": "Real Decreto 896/2003, de 11 de julio, por el que se regula la expedición del pasaporte ordinario y se determinan sus características",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-13978",
+     "value": "RD 896/2003: the passport chip contains the holder's digitised photograph"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Imagen facial del DNI y del pasaporte (facial image for the DNI and passport)",
+   "operator": "Ministerio del Interior – Dirección General de la Policía",
+   "research_note": "The legislation places the image on the document chip and gives the DGP custody of the processing. No source found that describes a central facial-image database, its hosting or its size.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2025-04-02",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Se tomarán las impresiones dactilares de los dedos índices de ambas manos a la persona interesada.",
+     "quote_english": "The fingerprints of the index fingers of both hands shall be taken from the applicant.",
+     "title": "Real Decreto 255/2025, de 1 de abril, por el que se regula el Documento Nacional de Identidad",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-6601",
+     "value": "RD 255/2025: index-finger prints of both hands are taken from DNI applicants"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2025-04-02",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "aquellas personas de nacionalidad española de las que no se tengan registros biométricos asociados a su identidad o si fuera necesario durante el periodo de implantación del nuevo modelo de Registro",
+     "quote_english": "those persons of Spanish nationality for whom no biometric records associated with their identity are held, or if necessary during the implementation period of the new Registry model",
+     "title": "Real Decreto 255/2025, de 1 de abril, por el que se regula el Documento Nacional de Identidad",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-6601",
+     "value": "The decree refers to biometric records (registros biométricos) associated with the identity of Spanish nationals"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2003",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "impresiones dactilares de los dedos índices de ambas manos, o los que en su defecto correspondan conforme al siguiente orden de prelación: medio, anular o pulgar",
+     "quote_english": "fingerprints of the index fingers of both hands or, failing that, those that apply in the following order of precedence: middle, ring or thumb",
+     "title": "Real Decreto 896/2003, de 11 de julio, por el que se regula la expedición del pasaporte ordinario y se determinan sus características",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-13978",
+     "value": "RD 896/2003: the passport chip holds the fingerprints of both index fingers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2025-04-02",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Dicha competencia será ejercida por la Dirección General de la Policía, gestionando la custodia y responsabilidad de la actividad del tratamiento de los datos personales",
+     "quote_english": "That competence shall be exercised by the Directorate-General of the Police, managing custody of and responsibility for the processing of personal data",
+     "title": "Real Decreto 255/2025, de 1 de abril, por el que se regula el Documento Nacional de Identidad",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-6601",
+     "value": "Dirección General de la Policía has custody of the DNI personal-data processing"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Impresiones dactilares del DNI y del pasaporte (fingerprints for the DNI and passport); registros biométricos",
+   "operator": "Ministerio del Interior – Dirección General de la Policía",
+   "research_note": "Fingerprints are captured for the DNI and the passport, and RD 255/2025 refers to 'registros biométricos' linked to identity. No source found on central retention architecture, hosting or volume.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2011-07-22",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Ministerio de Justicia adoptará las disposiciones necesarias para la progresiva incorporación de los datos digitalizados que consten en la base de datos del Registro Civil a registros individuales.",
+     "quote_english": "The Ministry of Justice shall adopt the necessary provisions for the progressive incorporation of the digitised data in the Civil Registry database into individual records.",
+     "title": "Ley 20/2011, de 21 de julio, del Registro Civil",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-12628",
+     "value": "Digitised data in the Civil Registry database are being migrated into individual records by the Ministry of Justice"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2011-07-22",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Los Encargados del Registro Civil comprobarán de oficio la realidad y legalidad de los hechos y actos cuya inscripción se pretende, según resulte de los documentos que los acrediten y certifiquen",
+     "quote_english": "Civil Registry officers shall verify ex officio the reality and legality of the facts and acts to be registered, as shown by the documents that prove and certify them",
+     "title": "Ley 20/2011, de 21 de julio, del Registro Civil",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-12628",
+     "value": "Art. 13 Ley 20/2011: inscriptions are checked against the documents that prove the facts"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Datos digitalizados y documentos acreditativos del Registro Civil (digitised Civil Registry entries and supporting documents)",
+   "operator": "Ministerio de Justicia",
+   "research_note": "The law mentions digitised entries and the documents that support each inscription. No source found that describes a separate scan archive, its hosting or its size.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La Subdirección General de Logística e Innovación es responsable de la dirección y coordinación de las funciones relativas a la gestión de los recursos económicos y materiales, de los sistemas de telecomunicación e información, de la documentación de españoles y extranjeros, y de los archivos policiales",
+     "quote_english": "The Sub-Directorate-General for Logistics and Innovation is responsible for directing and coordinating the management of economic and material resources, telecommunication and information systems, the documentation of Spaniards and foreigners, and police archives",
+     "title": "Real Decreto 207/2024, de 27 de febrero, por el que se desarrolla la estructura orgánica básica del Ministerio del Interior",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-3793",
+     "value": "DGP Subdirección General de Logística e Innovación directs the information systems, the documentation of Spaniards and foreigners, and police archives"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2025-04-02",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Corresponde al Ministerio del Interior la competencia exclusiva para la dirección, organización, desarrollo, administración y gestión de todos los aspectos referentes al Documento Nacional de Identidad.",
+     "quote_english": "The Ministry of the Interior has exclusive competence for the direction, organisation, development, administration and management of all aspects of the National Identity Document.",
+     "title": "Real Decreto 255/2025, de 1 de abril, por el que se regula el Documento Nacional de Identidad",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-6601",
+     "value": "RD 255/2025 art. 5: the Ministry of the Interior has exclusive competence over all aspects of the DNI"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2003",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Por el Ministerio de Asuntos Exteriores se comunicará al Ministerio del Interior (Dirección General de la Policía), con una periodicidad máxima de dos meses, por el procedimiento informático y telemático que se fije por ambos departamentos, las relaciones de pasaportes expedidos",
+     "quote_english": "The Ministry of Foreign Affairs shall send the Ministry of the Interior (Directorate-General of the Police), at most every two months and by the electronic procedure the two departments set, the lists of passports issued",
+     "title": "Real Decreto 896/2003, de 11 de julio, por el que se regula la expedición del pasaporte ordinario y se determinan sus características",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-13978",
+     "value": "RD 896/2003: consulates report passports issued abroad to the DGP electronically at least every two months"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Documentación de españoles y extranjeros (DNI/pasaporte) – Dirección General de la Policía",
+   "operator": "Dirección General de la Policía – Subdirección General de Logística e Innovación",
+   "research_note": "No source found on the hosting or record count of the document issuance database.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2014",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "por el que se aprueba Cl@ve, la plataforma común del Sector Público Administrativo Estatal para la identificación, autenticación y firma electrónica mediante el uso de claves concertadas",
+     "quote_english": "approving Cl@ve, the common platform of the State Administrative Public Sector for identification, authentication and electronic signature using agreed keys",
+     "title": "Orden PRE/1838/2014, de 8 de octubre (Cl@ve)",
+     "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-10264",
+     "value": "Orden PRE/1838/2014 publishes the Council of Ministers Agreement approving Cl@ve"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2014",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El órgano responsable del sistema Cl@ve será la Dirección de Tecnologías de la Información y las Comunicaciones",
+     "quote_english": "The body responsible for the Cl@ve system shall be the Directorate of Information and Communication Technologies",
+     "title": "Orden PRE/1838/2014, de 8 de octubre (Cl@ve)",
+     "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-10264",
+     "value": "The body responsible for Cl@ve under the 2014 Agreement is the Dirección de Tecnologías de la Información y las Comunicaciones"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2014",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "asumirán la responsabilidad de sus respectivas actuaciones en los ámbitos de Registro de usuarios, Identificación, Autenticación y Firma Electrónica la Agencia Estatal de Administración Tributaria, la Gerencia de Informática de la Seguridad Social",
+     "quote_english": "the State Tax Administration Agency and the Social Security IT Management shall take responsibility for their respective actions in user registration, identification, authentication and electronic signature",
+     "title": "Orden PRE/1838/2014, de 8 de octubre (Cl@ve)",
+     "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2014-10264",
+     "value": "AEAT, GISS and other Social Security bodies share responsibility for user registration, identification, authentication and signature"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "es",
+     "published": "",
+     "publisher": "Gobierno de España – portal Cl@ve",
+     "quote": "Los certificados necesarios para poder realizar firma centralizada, son emitidos y custodiados por la Dirección General de la Policía",
+     "quote_english": "The certificates needed for centralised signature are issued and held in custody by the Directorate-General of the Police",
+     "title": "¿Qué es Cl@ve Firma?",
+     "url": "https://clave.gob.es/dnin/que-es",
+     "value": "Centralised (cloud) signature certificates are issued and held in custody by the Dirección General de la Policía"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "es",
+     "published": "",
+     "publisher": "Gobierno de España – portal Cl@ve",
+     "quote": "La GISS queda encargada de la custodia de una copia de seguridad de los certificados con el mismo nivel de seguridad que el fichero original",
+     "quote_english": "GISS is responsible for keeping a backup copy of the certificates with the same level of security as the original file",
+     "title": "¿Qué es Cl@ve Firma?",
+     "url": "https://clave.gob.es/dnin/que-es",
+     "value": "GISS (Social Security IT Management) holds a backup copy of the cloud-signature certificates"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "national",
+   "holding_name": "Cl@ve – plataforma común de identificación, autenticación y firma electrónica (with DNIe)",
+   "operator": "Responsible body under the 2014 Agreement: Dirección de Tecnologías de la Información y las Comunicaciones (now the AGE digital administration bodies), with AEAT, GISS, DGP and FNMT-RCM",
+   "research_note": "The hosting source covers the cloud-signature certificates (held by the DGP, with a GISS backup copy), not the whole Cl@ve platform. No official user count was found.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "Searched Orden PRE/1838/2014 (Cl@ve), RD 203/2021 (electronic public sector regulation) and the Cl@ve portal for an authentication log, traceability register or audit trail. None of them names or describes a central authentication log.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1985",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El censo electoral contiene la inscripción de quienes reúnen los requisitos para ser elector y no se hallen privados, definitiva o temporalmente, del derecho de sufragio.",
+     "quote_english": "The electoral roll contains the registration of those who meet the requirements to be voters and are not deprived, permanently or temporarily, of the right to vote.",
+     "title": "Ley Orgánica 5/1985, de 19 de junio, del Régimen Electoral General",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672",
+     "value": "LOREG art. 31: the electoral roll records everyone who meets the requirements to vote"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "1985",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La Oficina del Censo Electoral, encuadrada en el instituto nacional de estadística, es el órgano encargado de la formación del censo electoral",
+     "quote_english": "The Electoral Roll Office, part of the National Statistics Institute, is the body responsible for compiling the electoral roll",
+     "title": "Ley Orgánica 5/1985, de 19 de junio, del Régimen Electoral General",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672",
+     "value": "Oficina del Censo Electoral, part of the INE, compiles the electoral roll"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Censo electoral (electoral roll)",
+   "operator": "Oficina del Censo Electoral (Instituto Nacional de Estadística)",
+   "research_note": "No source found on hosting. No verifiable elector count was retrieved.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1997",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "se faculta a la Fábrica Nacional de Moneda y Timbre (FNMT) para la prestación de los servicios técnicos y administrativos necesarios para garantizar la seguridad, validez y eficacia de la emisión y recepción de comunicaciones y documentos",
+     "quote_english": "the National Mint (FNMT) is empowered to provide the technical and administrative services needed to guarantee the security, validity and effectiveness of sending and receiving communications and documents",
+     "title": "Ley 66/1997, de 30 de diciembre, de Medidas Fiscales, Administrativas y del Orden Social",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1997-28053",
+     "value": "Ley 66/1997 art. 81 empowers FNMT to provide security services for electronic communications with the administration"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2025-04-02",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Ministro de Interior, a través de la Dirección General de la Policía, formulará una Declaración de Prácticas y Políticas de Certificación",
+     "quote_english": "The Minister of the Interior, through the Directorate-General of the Police, shall issue a Certification Practice and Policy Statement",
+     "title": "Real Decreto 255/2025, de 1 de abril, por el que se regula el Documento Nacional de Identidad",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-6601",
+     "value": "The DGP issues the Certification Practice and Policy Statement for the DNI certificates"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2020",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Ley 6/2020, de 11 de noviembre, reguladora de determinados aspectos de los servicios electrónicos de confianza.",
+     "quote_english": "Law 6/2020 of 11 November regulating certain aspects of electronic trust services.",
+     "title": "Ley 6/2020, de 11 de noviembre, reguladora de determinados aspectos de los servicios electrónicos de confianza",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2020-14046",
+     "value": "Ley 6/2020 regulating electronic trust services"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "FNMT-RCM (CERES) certification services and the DNIe PKI of the Dirección General de la Policía",
+   "operator": "Fábrica Nacional de Moneda y Timbre–Real Casa de la Moneda; Dirección General de la Policía",
+   "research_note": "No source found on where the root CA or HSM infrastructure is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Existirá, en la Dirección General de la Policía, un Registro Central de Extranjeros en el que se anotarán: a) Entradas. b) Documentos de viaje.",
+     "quote_english": "There shall be, within the Directorate-General of the Police, a Central Register of Foreign Nationals recording: a) Entries. b) Travel documents.",
+     "title": "Real Decreto 1155/2024, de 19 de noviembre, Reglamento de la Ley Orgánica 4/2000",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-24099",
+     "value": "RD 1155/2024 art. 212: a Central Register of Foreign Nationals exists within the DGP, recording entries, travel documents, stays and authorisations"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2000",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Ley Orgánica 4/2000, de 11 de enero, sobre derechos y libertades de los extranjeros en España y su integración social.",
+     "quote_english": "Organic Law 4/2000 of 11 January on the rights and freedoms of foreigners in Spain and their social integration.",
+     "title": "Ley Orgánica 4/2000, de 11 de enero",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-544",
+     "value": "Ley Orgánica 4/2000 on the rights and freedoms of foreigners in Spain"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registro Central de Extranjeros (Central Register of Foreign Nationals)",
+   "operator": "Dirección General de la Policía",
+   "research_note": "No source found on hosting or record count.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1990",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La Agencia Estatal de Administración Tributaria es la organización administrativa responsable, en nombre y por cuenta del Estado, de la aplicación efectiva del sistema tributario estatal y del aduanero",
+     "quote_english": "The State Tax Administration Agency is the administrative organisation responsible, in the name and on behalf of the State, for the effective application of the state tax and customs systems",
+     "title": "Ley 31/1990, de 27 de diciembre, de Presupuestos Generales del Estado para 1991",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1990-31180",
+     "value": "Ley 31/1990 art. 103 creates the AEAT, which applies the state tax and customs systems"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2003",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La expedición y, en su caso, revocación del número de identificación fiscal, en los términos establecidos en la normativa específica. l) La elaboración y mantenimiento de los censos tributarios.",
+     "quote_english": "Issuing and, where applicable, revoking the tax identification number under the specific rules. l) Compiling and maintaining the tax censuses.",
+     "title": "Ley 58/2003, de 17 de diciembre, General Tributaria",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-23186",
+     "value": "Ley General Tributaria: tax functions include issuing tax ID numbers and maintaining the tax censuses"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "1994",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Departamento de Informática Tributaria estará integrado por las siguientes Subdirecciones Generales: Subdirección General de Planificación y Coordinación Informática. Subdirección General de Explotación.",
+     "quote_english": "The Tax IT Department shall comprise the following Sub-Directorates-General: IT Planning and Coordination; Operations.",
+     "title": "Orden de 2 de junio de 1994 por la que se desarrolla la estructura de la Agencia Estatal de Administración Tributaria",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-12973",
+     "value": "AEAT's Departamento de Informática Tributaria includes sub-directorates for IT planning and for operations (Explotación)"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Censos tributarios y sistemas de información de la AEAT (tax censuses and AEAT systems)",
+   "operator": "Agencia Estatal de Administración Tributaria (Departamento de Informática Tributaria)",
+   "research_note": "The AEAT has an in-house IT department, but no source found stating where AEAT data is hosted, and no record counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "1994",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Departamento de Aduanas e Impuestos Especiales estará integrado por la Dirección Adjunta de Vigilancia Aduanera y por las siguientes Subdirecciones Generales",
+     "quote_english": "The Customs and Excise Department shall comprise the Deputy Directorate of Customs Surveillance and the following Sub-Directorates-General",
+     "title": "Orden de 2 de junio de 1994 por la que se desarrolla la estructura de la Agencia Estatal de Administración Tributaria",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-12973",
+     "value": "AEAT Customs and Excise Department, including the Customs Surveillance service"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "1994",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Subdirección General de Aplicaciones. Subdirección General de Aplicaciones de Aduanas e Impuestos Especiales.",
+     "quote_english": "Sub-Directorate-General for Applications. Sub-Directorate-General for Customs and Excise Applications.",
+     "title": "Orden de 2 de junio de 1994 por la que se desarrolla la estructura de la Agencia Estatal de Administración Tributaria",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-12973",
+     "value": "AEAT's IT department has a dedicated sub-directorate for customs and excise applications"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1990",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La Agencia Estatal de Administración Tributaria es la organización administrativa responsable, en nombre y por cuenta del Estado, de la aplicación efectiva del sistema tributario estatal y del aduanero",
+     "quote_english": "The State Tax Administration Agency is the administrative organisation responsible, in the name and on behalf of the State, for the effective application of the state tax and customs systems",
+     "title": "Ley 31/1990, de 27 de diciembre, de Presupuestos Generales del Estado para 1991",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1990-31180",
+     "value": "Ley 31/1990 art. 103: the AEAT applies the customs system on behalf of the State"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemas de gestión aduanera de la AEAT (AEAT customs systems)",
+   "operator": "AEAT – Departamento de Aduanas e Impuestos Especiales",
+   "research_note": "No source found on hosting or declaration volumes.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2015",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La Tesorería General de la Seguridad Social, como caja única del sistema de la Seguridad Social, llevará a efecto la gestión liquidatoria y recaudatoria de los recursos de esta",
+     "quote_english": "The General Treasury of Social Security, as the single fund of the Social Security system, shall carry out the assessment and collection of its resources",
+     "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+     "value": "TGSS is the single treasury of the Social Security system and manages contribution collection"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2015",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Instituto Nacional de la Seguridad Social, para la gestión y administración de las prestaciones económicas del sistema de la Seguridad Social",
+     "quote_english": "The National Social Security Institute, for the management and administration of the cash benefits of the Social Security system",
+     "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+     "value": "INSS manages the system's cash benefits"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "es",
+     "published": "2015",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La Gerencia de Informática de la Seguridad Social es un servicio común para la gestión y administración de las tecnologías de la información y las comunicaciones en el sistema de Seguridad Social",
+     "quote_english": "The Social Security IT Management is a common service for managing and administering information and communication technologies in the Social Security system",
+     "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+     "value": "GISS is the statutory common service that manages the Social Security system's ICT"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "national",
+   "holding_name": "Sistemas de afiliación, cotización y prestaciones de la Seguridad Social (TGSS / INSS)",
+   "operator": "Tesorería General de la Seguridad Social; Instituto Nacional de la Seguridad Social; ICT by Gerencia de Informática de la Seguridad Social",
+   "research_note": "The ICT operator is a statutory national common service (GISS). No data-centre location or record count was retrieved.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2004",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "es necesario regular el funcionamiento de la base de datos de población protegida del Sistema Nacional de Salud, que tiene como objetivo fundamental la generación de este código de identificación personal",
+     "quote_english": "it is necessary to regulate the operation of the National Health System protected-population database, whose main purpose is to generate this personal identification code",
+     "title": "Real Decreto 183/2004, de 30 de enero, por el que se regula la tarjeta sanitaria individual",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-2591",
+     "value": "The SNS protected-population database generates a unique personal health ID code"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2004",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "la ley encomienda al Ministerio de Sanidad y Consumo la generación de un código de identificación personal único para el Sistema Nacional de Salud",
+     "quote_english": "the law entrusts the Ministry of Health and Consumer Affairs with generating a unique personal identification code for the National Health System",
+     "title": "Real Decreto 183/2004, de 30 de enero, por el que se regula la tarjeta sanitaria individual",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-2591",
+     "value": "The law assigns the Ministry of Health to generate the unique SNS personal ID code"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2004",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La base de datos se concibe como un sistema de intercambio de información sobre la población protegida entre las Administraciones sanitarias",
+     "quote_english": "The database is conceived as a system for exchanging information on the protected population between the health administrations",
+     "title": "Real Decreto 183/2004, de 30 de enero, por el que se regula la tarjeta sanitaria individual",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-2591",
+     "value": "The database is an exchange system on insured population between health administrations"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Base de datos de población protegida del Sistema Nacional de Salud (SNS protected-population database / tarjeta sanitaria)",
+   "operator": "Ministerio de Sanidad, with the regional health administrations",
+   "research_note": "No source found on hosting or record count.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1946",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Registro de la Propiedad tiene por objeto la inscripción o anotación de los actos y contratos relativos al dominio y demás derechos reales sobre bienes inmuebles.",
+     "quote_english": "The purpose of the Property Registry is to register or record acts and contracts relating to ownership and other real rights over immovable property.",
+     "title": "Decreto de 8 de febrero de 1946, Ley Hipotecaria",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1946-2453",
+     "value": "Ley Hipotecaria art. 1: the Property Registry records acts and contracts on ownership and real rights over immovable property"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2004",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Catastro Inmobiliario es un registro administrativo dependiente del Ministerio de Hacienda en el que se describen los bienes inmuebles rústicos, urbanos y de características especiales",
+     "quote_english": "The Real Estate Cadastre is an administrative register under the Ministry of Finance describing rural, urban and special-characteristics real estate",
+     "title": "Real Decreto Legislativo 1/2004, texto refundido de la Ley del Catastro Inmobiliario",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-4163",
+     "value": "Texto refundido de la Ley del Catastro Inmobiliario art. 1: the Cadastre is an administrative register under the Ministry of Finance"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registro de la Propiedad (Land Registry) and Catastro Inmobiliario (Cadastre)",
+   "operator": "Registradores de la Propiedad (under the Ministry of Justice); Dirección General del Catastro (Ministerio de Hacienda)",
+   "research_note": "No source found on hosting. The Catastro statistics site was unreachable, so no parcel count was verified.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1996",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La organización del Registro Mercantil, integrada por los Registros Mercantiles territoriales y por el Registro Mercantil Central, se halla bajo la dependencia del Ministerio de Justicia.",
+     "quote_english": "The Commercial Registry organisation, made up of the territorial Commercial Registries and the Central Commercial Registry, is under the Ministry of Justice.",
+     "title": "Real Decreto 1784/1996, de 19 de julio, Reglamento del Registro Mercantil",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1996-17533",
+     "value": "Reglamento del Registro Mercantil art. 1: territorial registries plus the Central Commercial Registry, under the Ministry of Justice"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registro Mercantil (territorial registries and Registro Mercantil Central)",
+   "operator": "Ministerio de Justicia (Registradores Mercantiles)",
+   "research_note": "No source found on hosting or entity counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2023",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "regular la obtención de información sobre la titularidad real, directa o indirecta, de las entidades jurídicas creando el Registro Central de Titularidades Reales, un registro que centralizará la información de titularidad real",
+     "quote_english": "to regulate obtaining information on the direct or indirect beneficial ownership of legal entities by creating the Central Register of Beneficial Ownership, which will centralise beneficial-ownership information",
+     "title": "Real Decreto 609/2023, de 11 de julio, por el que se crea el Registro Central de Titularidades Reales",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-16159",
+     "value": "RD 609/2023 creates the Central Register of Beneficial Ownership, centralising beneficial-ownership information"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2023",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "mediante real decreto se creará en el Ministerio de Justicia el Registro de Titularidades Reales, registro central y único en todo el territorio nacional",
+     "quote_english": "a Beneficial Ownership Register shall be created by royal decree in the Ministry of Justice, a central and single register for the whole national territory",
+     "title": "Real Decreto 609/2023, de 11 de julio, por el que se crea el Registro Central de Titularidades Reales",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-16159",
+     "value": "Ley 10/2010 DA 3ª (quoted in RD 609/2023): the register is created in the Ministry of Justice as a single national register"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registro Central de Titularidades Reales (Central Register of Beneficial Ownership)",
+   "operator": "Ministerio de Justicia",
+   "research_note": "No source found on hosting or record count.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2015",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Los registros de vehículos, de conductores e infractores, de profesionales de la enseñanza de la conducción, de centros de formación de conductores",
+     "quote_english": "The registers of vehicles, of drivers and offenders, of driving-instruction professionals, of driver training centres",
+     "title": "Real Decreto Legislativo 6/2015, texto refundido de la Ley sobre Tráfico, Circulación de Vehículos a Motor y Seguridad Vial",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11722",
+     "value": "RDL 6/2015 art. 5: Interior's traffic competences include the vehicle, driver and offender registers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2015",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "permita la identificación en el Registro de Conductores e Infractores del organismo autónomo Jefatura Central de Tráfico",
+     "quote_english": "allowing identification in the Driver and Offender Register of the autonomous body Central Traffic Headquarters",
+     "title": "Real Decreto Legislativo 6/2015, texto refundido de la Ley sobre Tráfico, Circulación de Vehículos a Motor y Seguridad Vial",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11722",
+     "value": "The Driver and Offender Register is kept by the Jefatura Central de Tráfico"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2015",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El titular del vehículo puede comunicar al Registro de Vehículos del organismo autónomo Jefatura Central de Tráfico la identidad del conductor habitual del mismo.",
+     "quote_english": "The vehicle owner may notify the Vehicle Register of the Central Traffic Headquarters of the identity of the vehicle's usual driver.",
+     "title": "Real Decreto Legislativo 6/2015, texto refundido de la Ley sobre Tráfico, Circulación de Vehículos a Motor y Seguridad Vial",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11722",
+     "value": "Vehicle Register of the Jefatura Central de Tráfico"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registro de Vehículos; Registro de Conductores e Infractores (DGT)",
+   "operator": "Organismo autónomo Jefatura Central de Tráfico (DGT), Ministerio del Interior",
+   "research_note": "No source found on hosting or on vehicle/licence counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2009",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Dicho Sistema de Registros estará integrado por el Registro Central de Penados, el Registro Central para la Protección de las Víctimas de la Violencia Doméstica y de Género",
+     "quote_english": "That Registry System shall comprise the Central Register of Convicted Persons and the Central Register for the Protection of Victims of Domestic and Gender Violence",
+     "title": "Real Decreto 95/2009, de 6 de febrero, Sistema de registros administrativos de apoyo a la Administración de Justicia",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2009-2073",
+     "value": "The system comprises the Central Register of Convicted Persons, the Central Register for Protection of Victims of Domestic and Gender Violence, and others"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2009",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "establecer una serie de disposiciones generales sobre el objeto y naturaleza del Sistema de registros, destacando su carácter no público y su dependencia del Ministerio de Justicia.",
+     "quote_english": "to lay down general provisions on the purpose and nature of the Registry System, highlighting its non-public character and its dependence on the Ministry of Justice.",
+     "title": "Real Decreto 95/2009, de 6 de febrero, Sistema de registros administrativos de apoyo a la Administración de Justicia",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2009-2073",
+     "value": "The registry system is non-public and depends on the Ministry of Justice"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema de registros administrativos de apoyo a la Administración de Justicia (SIRAJ), incl. Registro Central de Penados",
+   "operator": "Ministerio de Justicia",
+   "research_note": "No source found on hosting or record counts. Court case-management systems were not researched in depth.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La Subdirección General de Logística e Innovación es responsable de la dirección y coordinación de las funciones relativas a la gestión de los recursos económicos y materiales, de los sistemas de telecomunicación e información, de la documentación de españoles y extranjeros, y de los archivos policiales",
+     "quote_english": "The Sub-Directorate-General for Logistics and Innovation is responsible for directing and coordinating the management of economic and material resources, telecommunication and information systems, the documentation of Spaniards and foreigners, and police archives",
+     "title": "Real Decreto 207/2024, de 27 de febrero, estructura orgánica básica del Ministerio del Interior",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-3793",
+     "value": "DGP sub-directorate responsible for information systems and police archives"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Coordinar, desarrollar e implantar bases de datos, sistemas de información y sistemas de comunicaciones de utilización conjunta o compartida por las Fuerzas y Cuerpos de Seguridad del Estado",
+     "quote_english": "To coordinate, develop and deploy databases, information systems and communication systems used jointly or shared by the State Security Forces",
+     "title": "Real Decreto 207/2024, de 27 de febrero, estructura orgánica básica del Ministerio del Interior",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-3793",
+     "value": "The Secretariat of State for Security coordinates databases and information systems shared by the state security forces"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2021",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "se determina que serán autoridades competentes: las Fuerzas y Cuerpos de Seguridad; las autoridades judiciales del orden jurisdiccional penal y el Ministerio Fiscal",
+     "quote_english": "the competent authorities are determined to be: the Security Forces; the judicial authorities of the criminal jurisdiction and the Public Prosecutor's Office",
+     "title": "Ley Orgánica 7/2021, de 26 de mayo, de protección de datos personales tratados para fines de prevención, detección, investigación y enjuiciamiento de infracciones penales",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-8806",
+     "value": "LO 7/2021 on personal data processed for criminal-law purposes names the security forces as competent authorities"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Archivos policiales y bases de datos de las Fuerzas y Cuerpos de Seguridad del Estado",
+   "operator": "Dirección General de la Policía; Secretaría de Estado de Seguridad (Subdirección General de Sistemas de Información y Comunicaciones para la Seguridad)",
+   "research_note": "Named police databases and their hosting are not described in the sources found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "incluyendo aquellos relacionados con la Agencia Europea para la Gestión Operativa de Sistemas Informáticos de gran magnitud en el Espacio de Libertad, Seguridad y Justicia (eu-LISA), los correspondientes al Sistema Schengen",
+     "quote_english": "including those related to the EU Agency for the Operational Management of Large-Scale IT Systems in the Area of Freedom, Security and Justice (eu-LISA), those of the Schengen System",
+     "title": "Real Decreto 207/2024, de 27 de febrero, estructura orgánica básica del Ministerio del Interior",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-3793",
+     "value": "The Secretariat of State for Security coordinates the systems related to eu-LISA and the Schengen system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La dirección y coordinación de la cooperación policial internacional, especialmente con EUROPOL, INTERPOL, SIRENE, los Sistemas de Información de Schengen y los Centros de Cooperación Policial y Aduanera.",
+     "quote_english": "The direction and coordination of international police cooperation, especially with EUROPOL, INTERPOL, SIRENE, the Schengen Information Systems and the Police and Customs Cooperation Centres.",
+     "title": "Real Decreto 207/2024, de 27 de febrero, estructura orgánica básica del Ministerio del Interior",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-3793",
+     "value": "Direction of international police cooperation, including SIRENE and the Schengen Information Systems"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La estampación del sello de entrada quedará sustituida por el registro en el Sistema de Entradas y Salidas, cuando éste entre en funcionamiento",
+     "quote_english": "Entry stamping shall be replaced by registration in the Entry/Exit System once it comes into operation",
+     "title": "Real Decreto 1155/2024, de 19 de noviembre, Reglamento de la Ley Orgánica 4/2000",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-24099",
+     "value": "RD 1155/2024: entry stamping is replaced by registration in the Entry/Exit System once it is operational"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemas nacionales de Schengen (N.SIS/SIRENE) y Sistema de Entradas y Salidas (SES)",
+   "operator": "Ministerio del Interior – Secretaría de Estado de Seguridad",
+   "research_note": "No source found on the hosting of the national SIS/VIS/EES components.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1993",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "En el Registro Nacional de Armas de la Intervención Central de Armas y Explosivos de la Dirección General de la Guardia Civil constarán todos los datos necesarios para cumplir con la finalidad de expedir las licencias",
+     "quote_english": "The National Firearms Register of the Central Arms and Explosives Office of the Directorate-General of the Guardia Civil shall contain all data needed to issue licences",
+     "title": "Real Decreto 137/1993, de 29 de enero, Reglamento de Armas",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1993-6202",
+     "value": "Reglamento de Armas art. 9: the National Firearms Register of the Guardia Civil holds the data needed to issue licences and permits"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registro Nacional de Armas (National Firearms Register)",
+   "operator": "Intervención Central de Armas y Explosivos, Dirección General de la Guardia Civil",
+   "research_note": "No source found on hosting or record count.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2008",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "diario oficial del Estado español, es el medio de publicación de las leyes, disposiciones y actos de inserción obligatoria.",
+     "quote_english": "official gazette of the Spanish State, is the medium for publishing laws, provisions and acts that must be published.",
+     "title": "Real Decreto 181/2008, de 8 de febrero, de ordenación del diario oficial «Boletín Oficial del Estado»",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389",
+     "value": "RD 181/2008 art. 1: the BOE is Spain's official gazette for laws and mandatory acts"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2008",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Corresponde a la Agencia Estatal Boletín Oficial del Estado la edición, publicación y difusión del diario oficial",
+     "quote_english": "The State Agency Official State Gazette is responsible for editing, publishing and distributing the official gazette",
+     "title": "Real Decreto 181/2008, de 8 de febrero, de ordenación del diario oficial «Boletín Oficial del Estado»",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389",
+     "value": "The Agencia Estatal BOE edits, publishes and distributes the official gazette"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2008",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "se publica en edición electrónica con arreglo a las condiciones que se establecen en este real decreto",
+     "quote_english": "is published in electronic edition under the conditions established in this royal decree",
+     "title": "Real Decreto 181/2008, de 8 de febrero, de ordenación del diario oficial «Boletín Oficial del Estado»",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389",
+     "value": "The BOE is published in an electronic edition"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "«Boletín Oficial del Estado» (edición electrónica)",
+   "operator": "Agencia Estatal Boletín Oficial del Estado",
+   "research_note": "No source found stating where the BOE electronic edition is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2003",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La Intervención General de la Administración del Estado es el centro gestor de la contabilidad pública, al que compete: a) Gestionar la contabilidad de la Administración General del Estado.",
+     "quote_english": "The General Comptroller of the State Administration is the managing centre of public accounting, responsible for: a) Managing the accounts of the General State Administration.",
+     "title": "Ley 47/2003, de 26 de noviembre, General Presupuestaria",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-21614",
+     "value": "Ley General Presupuestaria: IGAE is the managing centre of public accounting"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Contabilidad pública de la Administración General del Estado (state accounts)",
+   "operator": "Intervención General de la Administración del Estado (IGAE)",
+   "research_note": "The Treasury payment systems and the IGAE accounting system names and hosting were not found in the sources consulted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2000",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Registro Central de Personal es el registro administrativo de la Administración General del Estado en el que se inscribe el personal a que se refiere el artículo 5 del presente Reglamento",
+     "quote_english": "The Central Personnel Register is the administrative register of the General State Administration in which the staff referred to in article 5 of this Regulation are registered",
+     "title": "Real Decreto 2073/1999, de 30 de diciembre, Reglamento del Registro Central de Personal",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-1007",
+     "value": "The Central Personnel Register is the AGE register of its staff and of acts affecting their careers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2000",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Deberá justificarse la previa comunicación al Registro Central de Personal de los actos o resoluciones que comporten efectos económicos en nómina",
+     "quote_english": "Prior notification to the Central Personnel Register must be shown for acts or decisions that have payroll effects",
+     "title": "Real Decreto 2073/1999, de 30 de diciembre, Reglamento del Registro Central de Personal",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-1007",
+     "value": "Acts with payroll effects must first be notified to the Central Personnel Register"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registro Central de Personal (Central Personnel Register)",
+   "operator": "Administración General del Estado (Registro Central de Personal)",
+   "research_note": "Armed forces personnel systems and the payroll application were not found in the sources consulted. No hosting information was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La dirección y coordinación de los desarrollos informáticos y de comunicaciones para la gestión de los procesos electorales.",
+     "quote_english": "The direction and coordination of IT and communications developments for managing electoral processes.",
+     "title": "Real Decreto 207/2024, de 27 de febrero, estructura orgánica básica del Ministerio del Interior",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-3793",
+     "value": "Ministry of the Interior directs the IT and communications developments for managing elections"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1985",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "a los solos efectos de facilitar la información provisional sobre los resultados de la elección que ha de proporcionar el Gobierno",
+     "quote_english": "solely for the purpose of providing the provisional information on the election results that the Government must provide",
+     "title": "Ley Orgánica 5/1985, de 19 de junio, del Régimen Electoral General",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672",
+     "value": "LOREG: the Government provides provisional election results from copies of the count records"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La planificación, dirección y coordinación de las actuaciones en materia de ciberseguridad en el ámbito electoral",
+     "quote_english": "Planning, directing and coordinating cybersecurity actions in the electoral field",
+     "title": "Real Decreto 207/2024, de 27 de febrero, estructura orgánica básica del Ministerio del Interior",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-3793",
+     "value": "Ministry of the Interior plans and coordinates cybersecurity in the electoral field"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemas informáticos de gestión de procesos electorales y difusión de resultados provisionales",
+   "operator": "Ministerio del Interior (Subsecretaría – unidad de procesos electorales)",
+   "research_note": "No procurement award or official source on the contractor or hosting of the provisional-results systems was retrieved.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1994",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Poseer y gestionar las reservas de divisas y metales preciosos no transferidas al Banco Central Europeo.",
+     "quote_english": "To hold and manage the foreign-currency and precious-metal reserves not transferred to the European Central Bank.",
+     "title": "Ley 13/1994, de 1 de junio, de Autonomía del Banco de España",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-12553",
+     "value": "Ley 13/1994: Banco de España holds and manages foreign-currency and precious-metal reserves not transferred to the ECB"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1994",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Promover el buen funcionamiento y estabilidad del sistema financiero y, sin perjuicio de lo dispuesto en el número 3, d) anterior, de los sistemas de pagos nacionales.",
+     "quote_english": "To promote the proper functioning and stability of the financial system and, without prejudice to point 3(d) above, of national payment systems.",
+     "title": "Ley 13/1994, de 1 de junio, de Autonomía del Banco de España",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-12553",
+     "value": "Ley 13/1994: Banco de España promotes the stability of national payment systems"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "holding_name": "Banco de España – reservas y sistemas de pagos nacionales",
+   "operator": "Banco de España",
+   "research_note": "No source found on the hosting of Banco de España systems. The Eurosystem (TARGET) dimension was not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Centro de Sistemas y Tecnologías de la Información y las Comunicaciones (CESTIC) es el órgano directivo al que le corresponde la planificación, desarrollo, programación y gestión de las políticas relativas a los sistemas y tecnologías de la información y las comunicaciones (CIS/TIC)",
+     "quote_english": "The Centre for Information and Communication Systems and Technologies (CESTIC) is the directorate responsible for planning, developing, programming and managing policies on information and communication systems and technologies (CIS/ICT)",
+     "title": "Real Decreto 205/2024, de 27 de febrero, estructura orgánica básica del Ministerio de Defensa",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-3791",
+     "value": "CESTIC plans, develops and manages Defence CIS/ICT policy, data management and information security"
+    }
+   ],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemas de información y telecomunicaciones del Ministerio de Defensa (CIS/TIC)",
+   "operator": "Centro de Sistemas y Tecnologías de la Información y las Comunicaciones (CESTIC), Ministerio de Defensa",
+   "research_note": "No source found on hosting of military command-and-control or logistics data.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2002",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Centro Nacional de Inteligencia es el Organismo público responsable de facilitar al Presidente del Gobierno y al Gobierno de la Nación las informaciones, análisis, estudios o propuestas",
+     "quote_english": "The National Intelligence Centre is the public body responsible for providing the Prime Minister and the Government with information, analyses, studies or proposals",
+     "title": "Ley 11/2002, de 6 de mayo, reguladora del Centro Nacional de Inteligencia",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-8628",
+     "value": "Ley 11/2002 art. 1: the CNI is the public body that supplies intelligence to the Government"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "es",
+     "published": "2002",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "instalaciones, bases y centros de datos, fuentes de información y las informaciones o datos que puedan conducir al conocimiento de las anteriores materias, constituyen información clasificada, con el grado de secreto",
+     "quote_english": "facilities, databases and data centres, information sources and any information or data that could reveal those matters are classified information at the level of secret",
+     "title": "Ley 11/2002, de 6 de mayo, reguladora del Centro Nacional de Inteligencia",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-8628",
+     "value": "CNI facilities, databases and data centres are classified information at the level of secret"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Información y centros de datos del Centro Nacional de Inteligencia",
+   "operator": "Centro Nacional de Inteligencia (CNI)",
+   "research_note": "By law the CNI's databases and data centres are classified secret, so no public hosting information exists.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "1997",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La prestación del servicio de atención de llamadas de urgencia 112 se llevará a cabo por las Comunidades Autónomas que establecerán los correspondientes centros de recepción de llamadas de urgencia",
+     "quote_english": "The 112 emergency call service shall be provided by the Autonomous Communities, which shall set up the corresponding emergency call reception centres",
+     "title": "Real Decreto 903/1997, de 16 de junio, acceso al servicio de atención de llamadas de urgencia 112",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1997-14058",
+     "value": "The 112 emergency call service is provided by the Autonomous Communities through their own call centres"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "los correspondientes al Sistema Schengen y al Sistema de Radiocomunicaciones Digitales de Emergencia del Estado (SIRDEE)",
+     "quote_english": "those of the Schengen System and of the State Digital Emergency Radiocommunications System (SIRDEE)",
+     "title": "Real Decreto 207/2024, de 27 de febrero, estructura orgánica básica del Ministerio del Interior",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-3793",
+     "value": "SIRDEE, the State digital emergency radio system, is coordinated by the Secretariat of State for Security"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "Servicio de atención de llamadas de urgencia 112 (regional) and SIRDEE (Sistema de Radiocomunicaciones Digitales de Emergencia del Estado)",
+   "operator": "112: Comunidades Autónomas; SIRDEE: Ministerio del Interior – Secretaría de Estado de Seguridad",
+   "research_note": "No source found on SIRDEE network operator or infrastructure ownership.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2015",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Se crea la Red de Alerta Nacional de Protección Civil como sistema de comunicación de avisos de emergencia a las autoridades competentes en materia de protección civil",
+     "quote_english": "The National Civil Protection Alert Network is created as a system for communicating emergency warnings to the competent civil protection authorities",
+     "title": "Ley 17/2015, de 9 de julio, del Sistema Nacional de Protección Civil",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-7730",
+     "value": "Ley 17/2015 art. 12 creates the National Civil Protection Alert Network"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La organización y mantenimiento del Centro Nacional de Seguimiento y Coordinación de Emergencias, de la Red de Alerta Nacional, de la Red Nacional de Información",
+     "quote_english": "The organisation and maintenance of the National Emergency Monitoring and Coordination Centre, the National Alert Network and the National Information Network",
+     "title": "Real Decreto 207/2024, de 27 de febrero, estructura orgánica básica del Ministerio del Interior",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-3793",
+     "value": "DG Civil Protection runs the National Emergency Monitoring Centre, the Alert Network and the National Information Network"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2015",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Departamento de Seguridad Nacional ejercerá las funciones de Secretaría Técnica y órgano de trabajo permanente del Consejo de Seguridad Nacional",
+     "quote_english": "The National Security Department shall act as Technical Secretariat and permanent working body of the National Security Council",
+     "title": "Ley 36/2015, de 28 de septiembre, de Seguridad Nacional",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10389",
+     "value": "The Departamento de Seguridad Nacional is the permanent working body of the National Security Council"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Red de Alerta Nacional de Protección Civil; Centro Nacional de Seguimiento y Coordinación de Emergencias; Red Nacional de Información",
+   "operator": "Dirección General de Protección Civil y Emergencias (Ministerio del Interior); Departamento de Seguridad Nacional",
+   "research_note": "No source found on hosting of the alerting or crisis-centre systems.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2013",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El operador del sistema tendrá como función principal garantizar la continuidad y seguridad del suministro eléctrico y la correcta coordinación del sistema de producción y transporte.",
+     "quote_english": "The system operator's main function is to guarantee the continuity and security of electricity supply and the correct coordination of the generation and transmission system.",
+     "title": "Ley 24/2013, de 26 de diciembre, del Sector Eléctrico",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-13645",
+     "value": "Ley 24/2013 art. 30: the system operator guarantees continuity and security of electricity supply"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2013",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "En todo caso Red Eléctrica de España, S.A., actuará como transportista único desarrollando la actividad en régimen de exclusividad",
+     "quote_english": "In all cases Red Eléctrica de España, S.A. shall act as sole transmission operator, carrying out the activity exclusively",
+     "title": "Ley 24/2013, de 26 de diciembre, del Sector Eléctrico",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-13645",
+     "value": "Red Eléctrica de España is the sole transmission operator, and the system operator is the transmission network manager"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Operación del sistema eléctrico (operador del sistema y gestor de la red de transporte)",
+   "operator": "Red Eléctrica de España, S.A.U. (system operator and sole transmission operator)",
+   "research_note": "No source retrieved on the location or ownership of the control-centre IT (SCADA/EMS) infrastructure.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2001",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Los organismos de cuenca, con la denominación de Confederaciones Hidrográficas, son organismos autónomos",
+     "quote_english": "The river basin bodies, called Hydrographic Confederations, are autonomous bodies",
+     "title": "Real Decreto Legislativo 1/2001, de 20 de julio, texto refundido de la Ley de Aguas",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2001-14276",
+     "value": "River basin authorities (Confederaciones Hidrográficas) are autonomous bodies of the State"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "Confederaciones Hidrográficas (river basin authorities)",
+   "research_note": "Only the operator bodies (the Confederaciones Hidrográficas) were confirmed. No source was retrieved that names the hydrological/flood control systems (e.g. SAIH) or their hosting.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2003",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "el Ministerio de Sanidad y Consumo coordinará los mecanismos de intercambio electrónico de información clínica y de salud individual, previamente acordados con las comunidades autónomas",
+     "quote_english": "the Ministry of Health and Consumer Affairs shall coordinate the mechanisms for electronic exchange of individual clinical and health information, agreed in advance with the autonomous communities",
+     "title": "Ley 16/2003, de 28 de mayo, de cohesión y calidad del Sistema Nacional de Salud",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-10715",
+     "value": "Ley 16/2003 art. 56: the Ministry of Health coordinates electronic exchange of individual clinical information agreed with the regions"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Intercambio electrónico de información clínica del SNS (SNS clinical-information exchange; records held by regional health services)",
+   "operator": "Ministerio de Sanidad (coordination) with the Comunidades Autónomas",
+   "research_note": "No source was retrieved that names the SNS digital clinical record system, its hosting or its size.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1996",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La Red nacional de vigilancia epidemiológica estará constituida por: 1. El sistema básico de la vigilancia, integrado por la notificación obligatoria de enfermedades, la notificación de situaciones epidémicas y brotes y la información microbiológica.",
+     "quote_english": "The national epidemiological surveillance network shall comprise: 1. The basic surveillance system, made up of mandatory disease notification, notification of epidemics and outbreaks, and microbiological information.",
+     "title": "Real Decreto 2210/1995, de 28 de diciembre, por el que se crea la red nacional de vigilancia epidemiológica",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1996-1502",
+     "value": "RD 2210/1995 art. 4: the network's basic system covers mandatory disease notification, outbreaks and microbiological information"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Red Nacional de Vigilancia Epidemiológica (RENAVE)",
+   "operator": "Ministerio de Sanidad and Comunidades Autónomas",
+   "research_note": "No source found on hosting. The national vaccination register was not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2010",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Mediante el presente Real Decreto se crea también el Registro Nacional de Titulados Universitarios Oficiales",
+     "quote_english": "This Royal Decree also creates the National Register of Official University Graduates",
+     "title": "Real Decreto 1002/2010, de 5 de agosto, sobre expedición de títulos universitarios oficiales",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-12621",
+     "value": "RD 1002/2010 creates the National Register of Official University Graduates"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2010",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "La creación y el mantenimiento del Registro se llevará a cabo con los medios económicos y materiales de la Subdirección General de Títulos y Reconocimiento de Cualificaciones.",
+     "quote_english": "The Register shall be created and maintained with the economic and material resources of the Sub-Directorate-General for Degrees and Recognition of Qualifications.",
+     "title": "Real Decreto 1002/2010, de 5 de agosto, sobre expedición de títulos universitarios oficiales",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-12621",
+     "value": "The register is created and maintained with the resources of the Sub-Directorate-General for Degrees and Recognition of Qualifications"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registro Nacional de Titulados Universitarios Oficiales (National Register of Official University Graduates)",
+   "operator": "Ministerio competente en universidades – Subdirección General de Títulos y Reconocimiento de Cualificaciones",
+   "research_note": "School-level records are regional. No hosting information or record count was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "1989",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Serán objeto de protección y quedarán amparados por el secreto estadístico los datos confidenciales que obtengan los servicios estadísticos, tanto directamente de los informantes como a través de otras fuentes.",
+     "quote_english": "Confidential data obtained by the statistical services, whether directly from respondents or through other sources, shall be protected by statistical secrecy.",
+     "title": "Ley 12/1989, de 9 de mayo, de la Función Estadística Pública",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1989-10767",
+     "value": "Ley 12/1989 art. 13: confidential data obtained by statistical services are protected by statistical secrecy"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "1989",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Instituto Nacional de Estadística es un organismo autónomo, con personalidad jurídica y patrimonio propio",
+     "quote_english": "The National Statistics Institute is an autonomous body with its own legal personality and assets",
+     "title": "Ley 12/1989, de 9 de mayo, de la Función Estadística Pública",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1989-10767",
+     "value": "INE is an autonomous body with its own legal personality"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "1985",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "Los Ayuntamientos remitirán al Instituto Nacional de Estadística los datos de sus respectivos Padrones",
+     "quote_english": "Municipalities shall send the data of their respective Padrones to the National Statistics Institute",
+     "title": "Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-5392",
+     "value": "Municipalities send their Padrón data to the INE for national coordination"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "Datos confidenciales amparados por el secreto estadístico (INE microdata), incl. coordinated Padrón data",
+   "operator": "Instituto Nacional de Estadística (INE)",
+   "research_note": "No source found on INE hosting or data volumes.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2010",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "estableciendo la obligación de constituir su Geoportal, y los cometidos de la Dirección General del Instituto Geográfico Nacional en relación con ella.",
+     "quote_english": "establishing the obligation to set up its Geoportal, and the duties of the Directorate-General of the National Geographic Institute in relation to it.",
+     "title": "Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-10707",
+     "value": "Ley 14/2010 assigns the IGN duties for the AGE geographic information infrastructure and its Geoportal"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "es",
+     "published": "2010",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "integra la Información Geográfica de Referencia la parcela catastral, así como los bienes inmuebles inscritos en el Catastro con sus correspondientes referencias catastrales",
+     "quote_english": "the cadastral parcel and the real estate registered in the Cadastre with their cadastral references form part of the Reference Geographic Information",
+     "title": "Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-10707",
+     "value": "Reference geographic information includes cadastral parcels and registered real estate"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Información Geográfica de Referencia / Infraestructura de Información Geográfica de la AGE (IGN) and cadastral parcels",
+   "operator": "Dirección General del Instituto Geográfico Nacional; Dirección General del Catastro",
+   "research_note": "No source found on hosting or data volumes.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "es",
+     "published": "2015",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "la obligación de cada Administración Pública de mantener un archivo electrónico único de los documentos que correspondan a procedimientos finalizados",
+     "quote_english": "the obligation of each Public Administration to maintain a single electronic archive of the documents of completed procedures",
+     "title": "Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565",
+     "value": "Ley 39/2015 requires every administration to keep a single electronic archive of closed procedures"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2011",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "El Archivo General de la Administración, es el archivo intermedio de la Administración General del Estado, según la normativa vigente.",
+     "quote_english": "The General Archive of the Administration is the intermediate archive of the General State Administration, under current rules.",
+     "title": "Real Decreto 1708/2011, de 18 de noviembre, Sistema Español de Archivos",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-18541",
+     "value": "The Archivo General de la Administración is the intermediate archive of the State Administration"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "es",
+     "published": "2024",
+     "publisher": "Agencia Estatal Boletín Oficial del Estado",
+     "quote": "incluyendo en particular el puesto de trabajo, las infraestructuras de almacenamiento y el archivo electrónico de los expedientes y documentos electrónicos.",
+     "quote_english": "including in particular the workstation, storage infrastructure and the electronic archive of electronic files and documents.",
+     "title": "Real Decreto 1118/2024, de 5 de noviembre, Estatuto de la Agencia Estatal de Administración Digital",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-22929",
+     "value": "The AEAD's remit includes storage infrastructure and the electronic archive of files and documents"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Archivo electrónico único de la AGE; Archivo General de la Administración",
+   "operator": "Ministerio de Cultura (Archivo General de la Administración); Agencia Estatal de Administración Digital (electronic archive infrastructure)",
+   "research_note": "The AEAD statute gives the agency the electronic archive infrastructure. It does not say where the archive is physically hosted.",
+   "status": "held"
+  }
+ ],
+ "iso": "ES"
+}

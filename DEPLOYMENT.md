@@ -16,7 +16,7 @@
 
 ## Topology
 
-The site is fully static. Nothing runs server-side: there are no functions, no env vars, no analytics and no database.
+The site is static except for one function, `/api/ask` (#78). There is no database and no analytics.
 
 | Piece | Source | Notes |
 |---|---|---|
@@ -28,6 +28,10 @@ The site is fully static. Nothing runs server-side: there are no functions, no e
 | Headers | `vercel.json` `headers` | Strict CSP (`default-src 'self'`, no inline scripts, `frame-ancestors 'none'`), `nosniff`, `X-Frame-Options: DENY`, restrictive `Permissions-Policy` |
 | Caching | `/data/*` → `public, max-age=300, must-revalidate` | Five minutes, so a redeploy shows up quickly |
 | Indexing | `web/public/robots.txt` disallows everything | Removing it is stage 2 |
+| Function | `api/ask.ts` → `/api/ask`, Node 24, `maxDuration` 60 s | Streams answers from the Anthropic API over the sourced corpus `api/_corpus.json` (#78). Dependencies in the root `package.json` (exact pins); `vercel build` emits `.vercel/output/functions/api/ask.func` |
+| Secret | `ANTHROPIC_API_KEY` (Vercel env, Preview + Production) | The value is set with `vercel env add` by the owner and never printed. Without it, `/ask` returns a readable error |
+| Cost cap | A dedicated Anthropic workspace for that key, with a monthly spend limit | The hard ceiling, enforced by Anthropic. When it is reached, `/ask` says questions are paused |
+| Rate limit | Vercel Firewall rule on `/api/ask`, per IP | Staged with `vercel firewall`, applied only with the owner's OK |
 
 ## Deploy flow
 
@@ -57,6 +61,8 @@ flowchart TD
     B --> G["vercel deploy --prebuilt --prod<br/>uploads .vercel/output only"]
     G --> H[Freshness check + add a row to the deploy log]
 ```
+
+The root `package.json` (the function's dependencies) is installed by the build command (`npm ci`).
 
 To try a change without touching production, run `vercel build && vercel deploy --prebuilt`. With no `--prod` it gives you a
 preview URL. Previews sit behind Vercel login: open them in a browser where you are signed in to Vercel, or use `vercel curl`.

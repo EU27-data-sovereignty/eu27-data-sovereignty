@@ -1,0 +1,1285 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2026",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "För de kontroll- och urvalsändamål som anges i 5 § ska det föras ett statligt personadressregister (SPAR). Registret får användas för elektroniskt utlämnande av uppgifter.",
+     "quote_english": "For the control and selection purposes in section 5 a state personal address register (SPAR) shall be kept. The register may be used for electronic disclosure of data.",
+     "title": "Lag (2026:129) om det statliga personadressregistret",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2026129-om-det-statliga_sfs-2026-129/",
+     "value": "SPAR, the state personal address register, under Lag (2026:129)"
+    }
+   ],
+   "holding_name": "Statens personadressregister (SPAR)",
+   "suggested_class": "population_address_register",
+   "why_critical": "State register used across public and private sectors to update and verify identity and address data derived from folkbokföring."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2008",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Myndigheten ska förvalta, utveckla och tillhandahålla den nationella kommunikationstjänsten Swedish Government Secure Intranet (SGSI). Tjänsten ska tillhandahållas statliga myndigheter, kommuner och regioner.",
+     "quote_english": "The agency shall manage, develop and provide the national communication service SGSI to state agencies, municipalities and regions.",
+     "title": "Förordning (2008:1002) med instruktion för Myndigheten för civilt försvar",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20081002-med-instruktion-for_sfs-2008-1002/",
+     "value": "Myndigheten för civilt försvar manages SGSI"
+    }
+   ],
+   "holding_name": "Swedish Government Secure Intranet (SGSI)",
+   "suggested_class": "government_secure_network",
+   "why_critical": "National secure communication service for state agencies, municipalities and regions."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "sv",
+     "published": "2024",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "En leverantörsmyndighet får endast tillhandahålla it- driftstjänster som baseras på den myndighetens it-drift, om inte något annat är föreskrivet.",
+     "quote_english": "A supplier agency may only provide IT operations services based on that agency's own IT operations, unless otherwise prescribed.",
+     "title": "Förordning (2024:1005) om samordnad och säker statlig it-drift",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20241005-om-samordnad-och-saker_sfs-2024-1005/",
+     "value": "Supplier agencies may only provide IT services based on their own IT operations"
+    }
+   ],
+   "holding_name": "Samordnad statlig it-drift (coordinated state IT operations)",
+   "suggested_class": "shared_state_it_operations",
+   "why_critical": "State-run IT operations platform on which agencies may host their systems; determines where many government holdings physically run."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2026",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Denna lag gäller vid behandling av personuppgifter i Skatteverkets folkbokföringsverksamhet med 1. folkbokföring, 2. handläggning av ärenden om samordningsnummer",
+     "quote_english": "This act applies to the processing of personal data in the Swedish Tax Agency's population registration activity with 1. population registration, 2. handling of cases concerning coordination numbers",
+     "title": "Folkbokföringsdatalag (2026:126)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/folkbokforingsdatalag-2026126_sfs-2026-126/",
+     "value": "Folkbokföringsverksamheten / Skatteverket's population registration data (the national population register)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "1991",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "vigsel, födelse och dödsfall i landet ska registreras även i fråga om en person som inte är eller har varit folkbokförd. Skatteverket ansvarar för folkbokföring",
+     "quote_english": "Marriage, birth and death in the country shall be registered even for a person who is not or has not been registered. The Swedish Tax Agency is responsible for population registration",
+     "title": "Folkbokföringslag (1991:481)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/folkbokforingslag-1991481_sfs-1991-481/",
+     "value": "Skatteverket (Swedish Tax Agency) is responsible for population registration"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "2026",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Skatteverket är personuppgiftsansvarig för den behandling av personuppgifter som myndigheten utför enligt denna lag och föreskrifter som har meddelats i anslutning till lagen.",
+     "quote_english": "The Swedish Tax Agency is the controller for the processing of personal data that the agency carries out under this act and regulations issued in connection with it.",
+     "title": "Folkbokföringsdatalag (2026:126)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/folkbokforingsdatalag-2026126_sfs-2026-126/",
+     "value": "Folkbokföringsdatalag (2026:126) makes Skatteverket the data controller (together with Folkbokföringslag 1991:481)"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "sv",
+     "published": "2026-02-24",
+     "publisher": "Statistiska centralbyrån (SCB)",
+     "quote": "2025 var folkmängden i Sverige 10 605 529. Antalet kvinnor var 5 274 950 och män 5 330 576.",
+     "quote_english": "In 2025 the population of Sweden was 10,605,529. The number of women was 5,274,950 and men 5,330,576.",
+     "title": "Sveriges befolkning",
+     "url": "https://www.scb.se/hitta-statistik/sverige-i-siffror/manniskorna-i-sverige/sveriges-befolkning/",
+     "value": "10,605,529 persons registered in Sweden (2025), per folkbokföring data supplied by Skatteverket"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "sv",
+     "published": "2026-02-24",
+     "publisher": "Statistiska centralbyrån (SCB)",
+     "quote": "Sveriges befolkning består av alla som är folkbokförda i Sverige. Statistiken baseras på de uppgifter om folkbokförda personer som Skatteverket lämnar till SCB.",
+     "quote_english": "Sweden's population consists of everyone registered in Sweden. The statistics are based on data on registered persons that the Swedish Tax Agency provides to SCB.",
+     "title": "Sveriges befolkning",
+     "url": "https://www.scb.se/hitta-statistik/sverige-i-siffror/manniskorna-i-sverige/sveriges-befolkning/",
+     "value": "Population statistics are based on the registered-population data Skatteverket delivers to SCB"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Folkbokföringen (folkbokföringsdatabasen) - national population register",
+   "operator": "Skatteverket",
+   "research_note": "Hosting of the population register not stated in any source found; Skatteverket is named a supplier agency for coordinated state IT operations (förordning 2024:1005) but that does not state where this register runs.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "1979",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Polismyndigheten ska föra ett passregister och ett register över omständigheter som avses i 20 § 1 och 3 passlagen (1978:302). Polismyndigheten ska på begäran lämna ut ett fotografi av en enskild från passregistret",
+     "quote_english": "The Police Authority shall keep a passport register and a register of circumstances referred to in section 20(1) and (3) of the Passport Act. The Police Authority shall on request disclose a photograph of an individual from the passport register",
+     "title": "Passförordning (1979:664)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/passforordning-1979664_sfs-1979-664/",
+     "value": "Passregistret (passport register), which holds holders' photographs"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2015",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "En kopia av den ansiktsbild som identitetskortet har försetts med får behandlas i databasen.",
+     "quote_english": "A copy of the facial image with which the identity card has been provided may be processed in the database.",
+     "title": "Lag (2015:899) om identitetskort för folkbokförda i Sverige",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2015899-om-identitetskort-for-folkbokforda_sfs-2015-899/",
+     "value": "Skatteverket's identity-card database may hold a copy of the facial image on each ID card"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "1978",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Fingeravtrycken och ansiktsbilden enligt 6 § andra stycket 1 samt de biometriska data som kan tas fram ur dessa får inte användas vid sökning med hjälp av automatiserad behandling.",
+     "quote_english": "The fingerprints and the facial image under section 6(2)(1) and the biometric data that can be derived from them may not be used for searching by automated processing.",
+     "title": "Passlag (1978:302)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/passlag-1978302_sfs-1978-302/",
+     "value": "Passlag (1978:302) 6 b §: facial images may not be used for automated searching"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Passregistret (photographs) and Skatteverket ID-card database (facial image copy)",
+   "operator": "Polismyndigheten; Skatteverket",
+   "research_note": "No source found on where the passport register is hosted or how many facial images it holds.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "sv",
+     "published": "1978",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Fingeravtrycken och ansiktsbilden enligt 6 § andra stycket 1 ska sparas i ett lagringsmedium i passet. Fingeravtrycken och de biometriska data som tas fram ur dessa och ur ansiktsbilden ska omedelbart förstöras när passet har lämnats ut eller passansökan har återkallats eller avslagits.",
+     "quote_english": "The fingerprints and facial image shall be stored in a storage medium in the passport. The fingerprints and the biometric data derived from them and from the facial image shall be destroyed immediately when the passport has been delivered or the application withdrawn or refused.",
+     "title": "Passlag (1978:302)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/passlag-1978302_sfs-1978-302/",
+     "value": "Passport fingerprints are stored only on the passport chip and must be destroyed once the passport is issued; no central fingerprint store"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "sv",
+     "published": "2005",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Fingeravtrycken och ansiktsbilden enligt 3 § andra stycket 1 ska sparas i ett lagringsmedium i identitetskortet. Fingeravtryck som inte sparats i ett sådant medium och de biometriska data som tas fram ur fingeravtrycken och ur ansiktsbilden ska omedelbart förstöras",
+     "quote_english": "The fingerprints and facial image shall be stored in a storage medium in the identity card. Fingerprints not stored in such a medium and biometric data derived from the fingerprints and the facial image shall be destroyed immediately",
+     "title": "Förordning (2005:661) om nationellt identitetskort",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-2005661-om-nationellt-identitetskort_sfs-2005-661/",
+     "value": "National ID card fingerprints likewise stored only on the card and destroyed after issuance"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "research_note": "Swedish law requires document fingerprints to be destroyed after issuance; police forensic fingerprint databases (criminal-justice) are outside this class.",
+   "status": "not_held"
+  },
+  {
+   "claims": [],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "research_note": "Searched Riksdagen SFS and documents for a central store of scanned birth/naturalisation documents (Skatteverket folkbokföring, Migrationsverket citizenship decisions); no source stating such a holding, its operator or hosting was found.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "1979",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Polismyndigheten ska föra ett passregister och ett register över omständigheter som avses i 20 § 1 och 3 passlagen (1978:302).",
+     "quote_english": "The Police Authority shall keep a passport register and a register of circumstances referred to in section 20(1) and (3) of the Passport Act.",
+     "title": "Passförordning (1979:664)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/passforordning-1979664_sfs-1979-664/",
+     "value": "Passregistret: central passport register kept by the Police Authority"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2005",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Polismyndigheten ska med hjälp av automatiserad behandling föra ett register över nationella identitetskort. Myndigheten är personuppgiftsansvarig för behandling av personuppgifter i registret.",
+     "quote_english": "The Police Authority shall by automated processing keep a register of national identity cards. The authority is controller for processing of personal data in the register.",
+     "title": "Förordning (2005:661) om nationellt identitetskort",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-2005661-om-nationellt-identitetskort_sfs-2005-661/",
+     "value": "Register över nationella identitetskort (national ID card register), Police Authority"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2015",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Den utfärdande myndigheten ska med hjälp av automatiserad behandling föra en databas med en samling uppgifter om identitetskort för folkbokförda i Sverige.",
+     "quote_english": "The issuing authority shall by automated processing keep a database with a collection of data on identity cards for persons registered in Sweden.",
+     "title": "Lag (2015:899) om identitetskort för folkbokförda i Sverige",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2015899-om-identitetskort-for-folkbokforda_sfs-2015-899/",
+     "value": "Database of identity cards for persons registered in Sweden (Skatteverket ID card)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "record_count",
+     "language": "sv",
+     "published": "2026-05-07",
+     "publisher": "Regeringen (via Sveriges riksdag)",
+     "quote": "dagens nivåer som uppgår till ca 170 000 identitetskort årligen",
+     "quote_english": "today's levels, which amount to about 170,000 identity cards annually",
+     "title": "Prop. 2025/26:250 En statlig e-legitimation",
+     "url": "https://data.riksdagen.se/dokument/hd03250.html",
+     "value": "Skatteverket issues about 170,000 identity cards per year"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Passregistret; register över nationella identitetskort; Skatteverket ID-kortsdatabas",
+   "operator": "Polismyndigheten; Skatteverket",
+   "research_note": "Hosting of the passport and ID card registers not found in public sources.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2026-05-07",
+     "publisher": "Regeringen (via Sveriges riksdag)",
+     "quote": "I Sverige finns det flera privata utfärdare av e-legitimationer, bl.a. AB Svenska pass, Finansiell ID-Teknik BID AB och Freja eID Group AB. Finansiell ID-Teknik BID AB äger och förvaltar e-legitimationen Bankid.",
+     "quote_english": "In Sweden there are several private issuers of e-IDs, including AB Svenska pass, Finansiell ID-Teknik BID AB and Freja eID Group AB. Finansiell ID-Teknik BID AB owns and manages the BankID e-ID.",
+     "title": "Prop. 2025/26:250 En statlig e-legitimation",
+     "url": "https://data.riksdagen.se/dokument/hd03250.html",
+     "value": "Private issuers: Finansiell ID-Teknik BID AB owns and manages BankID; Freja eID Group AB; AB Svenska pass"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2026-05-07",
+     "publisher": "Regeringen (via Sveriges riksdag)",
+     "quote": "Freja eID Group AB utvecklar, äger och förvaltar Freja+, som är en mobil e-legitimation.",
+     "quote_english": "Freja eID Group AB develops, owns and manages Freja+, which is a mobile e-ID.",
+     "title": "Prop. 2025/26:250 En statlig e-legitimation",
+     "url": "https://data.riksdagen.se/dokument/hd03250.html",
+     "value": "Freja eID Group AB develops, owns and manages Freja+"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "2026",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Denna lag innehåller bestämmelser om en statlig e- legitimation och krav på erkännande av vissa medel för elektronisk identifiering.",
+     "quote_english": "This act contains provisions on a state e-ID and requirements for recognition of certain means of electronic identification.",
+     "title": "Lag (2026:1358) om statlig e-legitimation och elektronisk identifiering",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20261358-om-statlig-e-legitimation-och_sfs-2026-1358/",
+     "value": "Lag (2026:1358) on a state e-ID, in force 2026-12-01"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2026",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Polismyndigheten är personuppgiftsansvarig för behandling av personuppgifter i registret över ärenden om statlig e- legitimation.",
+     "quote_english": "The Police Authority is controller for processing of personal data in the register of state e-ID cases.",
+     "title": "Lag (2026:1358) om statlig e-legitimation och elektronisk identifiering",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20261358-om-statlig-e-legitimation-och_sfs-2026-1358/",
+     "value": "Police Authority is controller of the register of state e-ID cases"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2026",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "ansvara för den offentliga förvaltningens tillgång till infrastruktur och tjänster för elektronisk identifiering och underskrift",
+     "quote_english": "be responsible for public administration's access to infrastructure and services for electronic identification and signature",
+     "title": "Förordning (2026:1769) med instruktion för Digitaliseringsmyndigheten",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20261769-med-instruktion-for_sfs-2026-1769/",
+     "value": "Digitaliseringsmyndigheten is responsible for public-sector access to e-identification and signature infrastructure"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "unknown",
+   "holding_name": "BankID / Freja+ (private); statlig e-legitimation (state e-ID, from 2026-12-01)",
+   "operator": "Finansiell ID-Teknik BID AB (BankID); Freja eID Group AB; Polismyndigheten (state e-ID)",
+   "research_note": "No public source found on where BankID or Freja credential infrastructure is hosted; digg.se was unreachable during research.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "research_note": "Searched the state e-ID law (2026:1358), Digitaliseringsmyndigheten instruction and Riksdagen documents for a central log of authentications to public services; none found. BankID/Freja logs are held by private issuers and not publicly described.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2005",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Vid val ska den centrala valmyndigheten för varje valdistrikt upprätta en förteckning över dem som är röstberättigade i valet (röstlängd). Röstlängderna ska grundas på uppgifter i Skatteverkets folkbokföringsverksamhet",
+     "quote_english": "At elections the central election authority shall, for each voting district, draw up a list of those entitled to vote (electoral roll). The rolls shall be based on data in the Swedish Tax Agency's population registration",
+     "title": "Vallag (2005:837)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vallag-2005837_sfs-2005-837/",
+     "value": "Röstlängd (electoral roll), drawn up by the central election authority per voting district from folkbokföring data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "2005",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Röstlängderna ska grundas på de uppgifter som finns 30 dagar före valdagen.",
+     "quote_english": "The electoral rolls shall be based on the data that exist 30 days before election day.",
+     "title": "Vallag (2005:837)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vallag-2005837_sfs-2005-837/",
+     "value": "Vallag (2005:837) ch. 5; roll fixed 30 days before election day"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "sv",
+     "published": "",
+     "publisher": "Valmyndigheten",
+     "quote": "Skatteverket ansvarar för drift, utveckling och övervakning av it-stödet på uppdrag av Valmyndigheten.",
+     "quote_english": "The Swedish Tax Agency is responsible for operation, development and monitoring of the IT support on behalf of the Election Authority.",
+     "title": "Vårt it-stöd",
+     "url": "https://www.val.se/om-valmyndigheten/vart-it-stod",
+     "value": "Skatteverket operates, develops and monitors Valmyndigheten's election IT on its behalf"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "national",
+   "holding_name": "Röstlängd",
+   "operator": "Valmyndigheten (central valmyndighet), based on Skatteverket data",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "2026",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "i uppgift att vara tillsynsmyndighet enligt lagen (2016:561) med kompletterande bestämmelser till EU:s förordning om elektronisk identifiering.",
+     "quote_english": "tasked with being the supervisory authority under Act (2016:561) with supplementary provisions to the EU regulation on electronic identification.",
+     "title": "Förordning (2026:1769) med instruktion för Digitaliseringsmyndigheten",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20261769-med-instruktion-for_sfs-2026-1769/",
+     "value": "Digitaliseringsmyndigheten is the supervisory authority for eIDAS trust services under lag (2016:561)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2026",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "ansvara för de svenska förbindelsepunkterna (noderna) för gränsöverskridande elektronisk identifiering",
+     "quote_english": "be responsible for the Swedish connection points (nodes) for cross-border electronic identification",
+     "title": "Förordning (2026:1769) med instruktion för Digitaliseringsmyndigheten",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20261769-med-instruktion-for_sfs-2026-1769/",
+     "value": "Digitaliseringsmyndigheten operates the Swedish eIDAS nodes"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "research_note": "No source found naming a state-operated root/issuing CA for government or a state qualified trust service provider; only the supervisory role and eIDAS node are sourced.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2016",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Migrationsverket, Polismyndigheten och en utlandsmyndighet är var och en personuppgiftsansvarig för den behandling av personuppgifter som myndigheten utför. Migrationsverket är dock personuppgiftsansvarigt för utlandsmyndigheternas automatiserade behandling av personuppgifter.",
+     "quote_english": "Migrationsverket, the Police Authority and a mission abroad are each controller for the processing they carry out. Migrationsverket is however controller for the missions' automated processing.",
+     "title": "Utlänningsdatalag (2016:27)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/utlanningsdatalag-201627_sfs-2016-27/",
+     "value": "Migrationsverket, the Police Authority and missions abroad are each controllers; Migrationsverket for missions' automated processing"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Migrationsverket's case and permit data under Utlänningsdatalag (2016:27)",
+   "operator": "Migrationsverket",
+   "research_note": "No figure for records held or hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "2026",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Skatteverket är personuppgiftsansvarig för den behandling av personuppgifter som myndigheten utför enligt denna lag och föreskrifter som har meddelats i anslutning till lagen. Ändamål 7 §",
+     "quote_english": "The Swedish Tax Agency is controller for the processing it carries out under this act and related regulations. Purposes section 7",
+     "title": "Beskattningsdatalag (2026:125)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/beskattningsdatalag-2026125_sfs-2026-125/",
+     "value": "Beskattningsdatalag (2026:125); Skatteverket is controller"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "sv",
+     "published": "2024",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Leverantörsmyndigheter enligt denna förordning är Försäkringskassan, Lantmäteriet, Skatteverket och Trafikverket.",
+     "quote_english": "Supplier agencies under this ordinance are Försäkringskassan, Lantmäteriet, Skatteverket and Trafikverket.",
+     "title": "Förordning (2024:1005) om samordnad och säker statlig it-drift",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20241005-om-samordnad-och-saker_sfs-2024-1005/",
+     "value": "Skatteverket is one of four supplier agencies providing coordinated state IT-operations services based on their own IT operations"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Skatteverkets beskattningsverksamhet (tax data)",
+   "operator": "Skatteverket",
+   "research_note": "The IT-operations ordinance shows Skatteverket runs its own IT operations for others but does not state where the tax database itself is hosted, so dependency is left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "2026",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Tullverket är personuppgiftsansvarig för den behandling av personuppgifter som myndigheten utför enligt denna lag och föreskrifter som har meddelats i anslutning till lagen.",
+     "quote_english": "Swedish Customs is controller for the processing of personal data it carries out under this act and related regulations.",
+     "title": "Tulldatalag (2026:127)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/tulldatalag-2026127_sfs-2026-127/",
+     "value": "Tulldatalag (2026:127); Tullverket is controller"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "Tullverkets uppgiftssamlingar (customs data)",
+   "operator": "Tullverket",
+   "research_note": "No hosting or volume source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2010",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Försäkringskassan och Pensionsmyndigheten är personuppgiftsansvariga för behandling av personuppgifter i sina respektive verksamheter.",
+     "quote_english": "Försäkringskassan and Pensionsmyndigheten are controllers for the processing of personal data in their respective activities.",
+     "title": "Socialförsäkringsbalk (2010:110)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/socialforsakringsbalk-2010110_sfs-2010-110/",
+     "value": "Försäkringskassan and Pensionsmyndigheten are controllers for their respective activities (SFB ch. 114)"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Social insurance and pension data under Socialförsäkringsbalken ch. 114",
+   "operator": "Försäkringskassan; Pensionsmyndigheten",
+   "research_note": "A 2026 parliamentary question asserted Försäkringskassan had opened for US cloud services, but the minister's answer did not confirm any hosting of benefit data, so dependency is left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "research_note": "Sweden's health care is residence-based and regionally run; no statutory health-insurance enrolment register was found in SFS or Riksdagen documents, but no authoritative source stating its absence was found either.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2000",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "ska det med hjälp av automatiserad behandling föras ett register benämnt fastighetsregistret. Detta ska ge offentlighet åt den information som ingår i registret",
+     "quote_english": "a register called the real property register shall be kept by automated processing. It shall give publicity to the information in the register",
+     "title": "Lag (2000:224) om fastighetsregister",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2000224-om-fastighetsregister_sfs-2000-224/",
+     "value": "Fastighetsregistret (real property register)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2000",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Den statliga lantmäterimyndigheten är personuppgiftsansvarig för den behandling av personuppgifter som sker i fastighetsregistret.",
+     "quote_english": "The state cadastral authority is controller for the processing of personal data in the real property register.",
+     "title": "Lag (2000:224) om fastighetsregister",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2000224-om-fastighetsregister_sfs-2000-224/",
+     "value": "The state cadastral authority (Lantmäteriet) is controller"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sv",
+     "published": "",
+     "publisher": "Lantmäteriet",
+     "quote": "Till våra uppgifter hör också att registrera och säkra ägandet av alla fastigheter samt hantera deras gränser.",
+     "quote_english": "Our tasks also include registering and securing ownership of all properties and managing their boundaries.",
+     "title": "Lantmäteriet och geodata - en viktig del av Sveriges beredskap",
+     "url": "https://www.lantmateriet.se/sv/om-lantmateriet/nyheter-och-sociala-medier/nyheter/lantmateriet-och-geodata--en-viktig-del-av-sveriges-beredskap/",
+     "value": "Lantmäteriet registers and secures ownership of all properties"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Fastighetsregistret",
+   "operator": "Lantmäteriet",
+   "research_note": "No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2005",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Bolagsverket är personuppgiftsansvarigt för den behandling av personuppgifter som sker i aktiebolagsregistret.",
+     "quote_english": "The Swedish Companies Registration Office is controller for the processing of personal data in the companies register.",
+     "title": "Aktiebolagsförordning (2005:559)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/aktiebolagsforordning-2005559_sfs-2005-559/",
+     "value": "Aktiebolagsregistret (companies register); Bolagsverket controller"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "2005",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Aktiebolagsregistret ska ge offentlighet åt den information som ingår i registret.",
+     "quote_english": "The companies register shall give publicity to the information in the register.",
+     "title": "Aktiebolagsförordning (2005:559)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/aktiebolagsforordning-2005559_sfs-2005-559/",
+     "value": "Aktiebolagsförordning (2005:559) ch. 2"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Aktiebolagsregistret (and other Bolagsverket registers)",
+   "operator": "Bolagsverket",
+   "research_note": "No hosting or record-count source found; bolagsverket.se served no readable text.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2017",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "En juridisk person ska anmäla uppgifterna enligt 1 § första stycket till Bolagsverket för registrering i registret över verkliga huvudmän.",
+     "quote_english": "A legal person shall notify the data to the Swedish Companies Registration Office for registration in the register of beneficial owners.",
+     "title": "Lag (2017:631) om registrering av verkliga huvudmän",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2017631-om-registrering-av-verkliga_sfs-2017-631/",
+     "value": "Registret över verkliga huvudmän, kept by Bolagsverket"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registret över verkliga huvudmän",
+   "operator": "Bolagsverket",
+   "research_note": "No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2019",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Transportstyrelsen ska med hjälp av automatiserad behandling registrera personuppgifter för de ändamål som anges i 3, 7, 11, 14 och 16 §§. Uppgiftssamlingen benämns vägtrafikregistret.",
+     "quote_english": "Transportstyrelsen shall by automated processing register personal data for the stated purposes. The data collection is called the road traffic register.",
+     "title": "Vägtrafikdatalag (2019:369)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vagtrafikdatalag-2019369_sfs-2019-369/",
+     "value": "Vägtrafikregistret (road traffic register) kept by Transportstyrelsen"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "hosting",
+     "language": "sv",
+     "published": "2018-03-23",
+     "publisher": "Regeringskansliet (via Sveriges riksdag)",
+     "quote": "IBM skulle enligt avtalet ansvara för att maskinvara, nätverk och program fungerar. Detta omfattar också driften av de register som Transportstyrelsen har ansvar för såsom vägtrafikregistret.",
+     "quote_english": "Under the contract IBM was to be responsible for hardware, network and software working. This also covers operation of the registers Transportstyrelsen is responsible for, such as the road traffic register.",
+     "title": "Ds 2018:6 Granskning av Transportstyrelsens upphandling av it-drift",
+     "url": "https://data.riksdagen.se/dokument/h6b46.html",
+     "value": "In 2015 IBM Svenska AB took over Transportstyrelsen's IT operations, including operation of the road traffic register"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "foreign_dependency",
+     "language": "sv",
+     "published": "2018-03-23",
+     "publisher": "Regeringskansliet (via Sveriges riksdag)",
+     "quote": "Underleverantörerna är IBM-bolag i Indien, Polen, Irland, Finland, Danmark, Norge, Slovakien och Tjeckien.",
+     "quote_english": "The subcontractors are IBM companies in India, Poland, Ireland, Finland, Denmark, Norway, Slovakia and the Czech Republic.",
+     "title": "Ds 2018:6 Granskning av Transportstyrelsens upphandling av it-drift",
+     "url": "https://data.riksdagen.se/dokument/h6b46.html",
+     "value": "IBM's tender listed IBM subcontractors outside Sweden, including India and Czech Republic"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "non_eu_provider",
+   "holding_name": "Vägtrafikregistret",
+   "operator": "Transportstyrelsen",
+   "research_note": "Hosting evidence dates from the 2015 IBM outsourcing examined in Ds 2018:6; no source found on the current (2026) operating arrangement.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "1998",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Polismyndigheten ska med hjälp av automatiserad behandling föra ett belastningsregister. Myndigheten är personuppgiftsansvarig för behandlingen av personuppgifter i registret.",
+     "quote_english": "The Police Authority shall by automated processing keep a criminal records register. The authority is controller for processing personal data in the register.",
+     "title": "Lag (1998:620) om belastningsregister",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1998620-om-belastningsregister_sfs-1998-620/",
+     "value": "Belastningsregistret (criminal records register), Police Authority"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2015",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "En allmän domstol, en allmän förvaltningsdomstol eller en hyres- och arrendenämnd är personuppgiftsansvarig för den behandling av personuppgifter som den domstolen eller nämnden utför.",
+     "quote_english": "A general court, a general administrative court or a rent and tenancy tribunal is controller for the processing of personal data it carries out.",
+     "title": "Domstolsdatalag (2015:728)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/domstolsdatalag-2015728_sfs-2015-728/",
+     "value": "Courts are each controllers for court case data under Domstolsdatalag (2015:728)"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Belastningsregistret; court case data",
+   "operator": "Polismyndigheten; the courts (Domstolsverket administrative support)",
+   "research_note": "No hosting or volume source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2018",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Polismyndigheten är personuppgiftsansvarig för den behandling av personuppgifter som utförs vid myndigheten och för den behandling som myndigheten utför vid Ekobrottsmyndigheten",
+     "quote_english": "The Police Authority is controller for processing carried out at the authority and for processing it carries out at the Economic Crime Authority",
+     "title": "Lag (2018:1693) om polisens behandling av personuppgifter inom brottsdatalagens område",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20181693-om-polisens-behandling-av_sfs-2018-1693/",
+     "value": "Polismyndigheten is controller for police processing under the criminal-data regime"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Polisens informationssystem under lag (2018:1693)",
+   "operator": "Polismyndigheten",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2021",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Polismyndigheten ska med hjälp av automatiserad behandling föra ett register som ska vara den svenska nationella delen av Schengens informationssystem.",
+     "quote_english": "The Police Authority shall by automated processing keep a register that is to be the Swedish national part of the Schengen Information System.",
+     "title": "Lag (2021:1187) med kompletterande bestämmelser till EU:s förordningar om Schengens informationssystem",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20211187-med-kompletterande-bestammelser_sfs-2021-1187/",
+     "value": "Swedish national part of the Schengen Information System, kept by the Police Authority"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2021",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Polismyndigheten respektive Migrationsverket är personuppgiftsansvarig för den behandling av personuppgifter i den svenska nationella delen av Schengens informationssystem som myndigheten utför.",
+     "quote_english": "The Police Authority and Migrationsverket respectively are controllers for processing in the Swedish national part of SIS that they carry out.",
+     "title": "Lag (2021:1187) med kompletterande bestämmelser till EU:s förordningar om Schengens informationssystem",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20211187-med-kompletterande-bestammelser_sfs-2021-1187/",
+     "value": "Police Authority and Migrationsverket are each controllers for their processing in N.SIS"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Svenska nationella delen av SIS (N.SIS)",
+   "operator": "Polismyndigheten; Migrationsverket",
+   "research_note": "No hosting source found for N.SIS or national VIS/EES components.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2026",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Polismyndigheten ska med hjälp av automatiserad behandling föra de separata register som anges i 2-5 §§.",
+     "quote_english": "The Police Authority shall by automated processing keep the separate registers set out in sections 2-5.",
+     "title": "Vapenlag (2026:408)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/",
+     "value": "Vapenregistren (firearms registers) kept by the Police Authority under the new Vapenlag (2026:408)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2026",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Vapenregistret ska innehålla uppgift om de skjutvapen för vilka tillstånd till innehav har beviljats enligt denna lag samt uppgift om skjutvapen som upphittats eller anmälts stulna eller försvunna.",
+     "quote_english": "The firearms register shall contain data on firearms for which possession licences have been granted and on firearms found or reported stolen or missing.",
+     "title": "Vapenlag (2026:408)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/",
+     "value": "Vapenregistret contains licensed firearms and found/stolen firearms"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Vapenregistret; vapeninnehavarregistret",
+   "operator": "Polismyndigheten",
+   "research_note": "No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "1976",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Regeringen ska se till att Svensk författningssamling publiceras elektroniskt på en särskild webbplats. En författning ska anses kungjord när den har publicerats i Svensk författningssamling på webbplatsen.",
+     "quote_english": "The Government shall ensure that the Swedish Code of Statutes is published electronically on a dedicated website. A statute is deemed promulgated when published in the Code on the website.",
+     "title": "Lag (1976:633) om kungörande av lagar och andra författningar",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1976633-om-kungorande-av-lagar-och-andra_sfs-1976-633/",
+     "value": "SFS is published electronically on a dedicated government website; publication there is the legal promulgation"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Svensk författningssamling (SFS), electronic",
+   "operator": "Regeringen / Regeringskansliet",
+   "research_note": "svenskforfattningssamling.se returned HTTP 403 to automated requests; no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2016",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Myndigheten ska utveckla och förvalta statens informationssystem för budgetering, hantering av dokument och uppföljning (Hermes)",
+     "quote_english": "The agency shall develop and manage the state's information system for budgeting, document handling and follow-up (Hermes)",
+     "title": "Förordning (2016:1023) med instruktion för Ekonomistyrningsverket",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20161023-med-instruktion-for_sfs-2016-1023/",
+     "value": "Hermes, the state information system for budgeting and follow-up, developed and managed by ESV"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2016",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Myndigheten ska 1. ansvara för statsredovisningen, 2. månatligen följa, analysera och redovisa utfallet för statens budget",
+     "quote_english": "The agency shall 1. be responsible for the state accounts, 2. monthly monitor, analyse and report the outcome of the state budget",
+     "title": "Förordning (2016:1023) med instruktion för Ekonomistyrningsverket",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20161023-med-instruktion-for_sfs-2016-1023/",
+     "value": "ESV is responsible for state accounts"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Statsredovisningen / Hermes",
+   "operator": "Ekonomistyrningsverket (ESV)",
+   "research_note": "esv.se unreachable; no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "research_note": "Statens servicecenter's instruction (2012:208) mentions only generic administrative support services, not payroll; statenssc.se was unreachable. No sourced holding name, hosting or volume found.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "sv",
+     "published": "",
+     "publisher": "Valmyndigheten",
+     "quote": "Skatteverket ansvarar för drift, utveckling och övervakning av it-stödet på uppdrag av Valmyndigheten.",
+     "quote_english": "The Swedish Tax Agency is responsible for operation, development and monitoring of the IT support on behalf of the Election Authority.",
+     "title": "Vårt it-stöd",
+     "url": "https://www.val.se/om-valmyndigheten/vart-it-stod",
+     "value": "Election IT support is operated by Skatteverket on behalf of Valmyndigheten"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "",
+     "publisher": "Valmyndigheten",
+     "quote": "läggs resultatet in i Valmyndighetens it-stöd för att sammanställas och kommuniceras till allmänheten.",
+     "quote_english": "the result is entered into the Election Authority's IT support to be compiled and communicated to the public.",
+     "title": "Vårt it-stöd",
+     "url": "https://www.val.se/om-valmyndigheten/vart-it-stod",
+     "value": "Valmyndighetens it-stöd used to compile and publish results"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "national",
+   "holding_name": "Valmyndighetens it-stöd för valadministration",
+   "operator": "Valmyndigheten (operated by Skatteverket)",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "2022",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Riksbanken ska tillhandahålla system för avveckling av betalningar. Riksbanken bestämmer vilka finansiella företag och myndigheter som får delta i bankens system för avveckling av betalningar.",
+     "quote_english": "The Riksbank shall provide systems for settlement of payments. It decides which financial firms and authorities may participate.",
+     "title": "Lag (2022:1568) om Sveriges riksbank",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20221568-om-sveriges-riksbank_sfs-2022-1568/",
+     "value": "Riksbank must provide payment settlement systems"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "foreign_dependency",
+     "language": "sv",
+     "published": "2025-02-18",
+     "publisher": "Sveriges riksbank (via Sveriges riksdag)",
+     "quote": "I februari 2024 avvecklades för första gången betalningar genom tjänsten RIX-INST, vilken tillhandahålls på Eurosystemets plattform TIPS.",
+     "quote_english": "In February 2024 payments were settled for the first time through the RIX-INST service, which is provided on the Eurosystem's TIPS platform.",
+     "title": "Årsredovisning för Sveriges riksbank 2024",
+     "url": "https://data.riksdagen.se/dokument/hc04rb1.html",
+     "value": "RIX-INST is provided on the Eurosystem's TIPS platform (since February 2024)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "sv",
+     "published": "",
+     "publisher": "Sveriges riksbank",
+     "quote": "Riksbankens direktion har beslutat att förhandla med Eurosystemet om att använda den europeiska avvecklingsplattformen för betalningar, T2, för att tillhandahålla avvecklingstjänsten för stora betalningar i svenska kronor, RIX-RTGS.",
+     "quote_english": "The Riksbank's Executive Board has decided to negotiate with the Eurosystem on using the European settlement platform T2 to provide the large-value krona settlement service RIX-RTGS.",
+     "title": "Pågående utredningar och projekt",
+     "url": "https://www.riksbank.se/sv/betalningar--kontanter/betalningssystemet-rix/pagaende-utredningar-och-projekt/",
+     "value": "Riksbank negotiating to run RIX-RTGS on the Eurosystem T2 platform, planned by 2029"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "sv",
+     "published": "2025-02-18",
+     "publisher": "Sveriges riksbank (via Sveriges riksdag)",
+     "quote": "Under året avvecklades 901 884 490 transaktioner genom RIX-INST, i genomsnitt 2,7 miljoner per dag",
+     "quote_english": "During the year 901,884,490 transactions were settled through RIX-INST, on average 2.7 million per day",
+     "title": "Årsredovisning för Sveriges riksbank 2024",
+     "url": "https://data.riksdagen.se/dokument/hc04rb1.html",
+     "value": "RIX-INST settled 901,884,490 transactions in 2024"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "eu_provider",
+   "holding_name": "RIX (RIX-RTGS and RIX-INST)",
+   "operator": "Sveriges riksbank",
+   "research_note": "RIX-INST runs on the ECB/Eurosystem TIPS platform; RIX-RTGS hosting not stated but planned to move to T2.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "2021",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Syftet med denna lag är att säkerställa att Försvarsmakten kan behandla personuppgifter på ett ändamålsenligt sätt",
+     "quote_english": "The purpose of this act is to ensure that the Armed Forces can process personal data appropriately",
+     "title": "Lag (2021:1171) om behandling av personuppgifter vid Försvarsmakten",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20211171-om-behandling-av-personuppgifter_sfs-2021-1171/",
+     "value": "Lag (2021:1171) governs Försvarsmakten's personal data processing"
+    }
+   ],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "holding_name": "Försvarsmaktens informationssystem",
+   "operator": "Försvarsmakten",
+   "research_note": "No public source on command-and-control data hosting; expected to be classified.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "2021",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Syftet med denna lag är att säkerställa att Försvarets radioanstalt kan behandla personuppgifter på ett ändamålsenligt sätt",
+     "quote_english": "The purpose of this act is to ensure that the National Defence Radio Establishment can process personal data appropriately",
+     "title": "Lag (2021:1172) om behandling av personuppgifter vid Försvarets radioanstalt",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20211172-om-behandling-av-personuppgifter_sfs-2021-1172/",
+     "value": "Lag (2021:1172) on FRA's processing of personal data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "2019",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "säkerställa att Säkerhetspolisen kan behandla och utbyta personuppgifter på ett ändamålsenligt sätt",
+     "quote_english": "ensure that the Security Service can process and exchange personal data appropriately",
+     "title": "Lag (2019:1182) om Säkerhetspolisens behandling av personuppgifter",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20191182-om-sakerhetspolisens-behandling-av_sfs-2019-1182/",
+     "value": "Lag (2019:1182) on Säkerhetspolisen's processing of personal data"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "FRA and Säkerhetspolisen holdings",
+   "operator": "Försvarets radioanstalt; Säkerhetspolisen",
+   "research_note": "No public hosting information; classified.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2008",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Myndigheten ska införa, förvalta och utveckla radiokommunikationssystemet för skydd och säkerhet (Rakel- systemet).",
+     "quote_english": "The agency shall introduce, manage and develop the radio communication system for protection and safety (Rakel).",
+     "title": "Förordning (2008:1002) med instruktion för Myndigheten för civilt försvar",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20081002-med-instruktion-for_sfs-2008-1002/",
+     "value": "Myndigheten för civilt försvar runs the Rakel radio system"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "operator",
+     "language": "sv",
+     "published": "2024-04-04",
+     "publisher": "Regeringen (via Sveriges riksdag)",
+     "quote": "SOS Alarm ägs till hälften av staten och till hälften av SKR Företag AB",
+     "quote_english": "SOS Alarm is owned half by the state and half by SKR Företag AB",
+     "title": "Skr. 2023/24:123 Riksrevisionens rapport om nödnumret 112",
+     "url": "https://data.riksdagen.se/dokument/hb03123.html",
+     "value": "SOS Alarm (112) is owned half by the state and half by SKR Företag AB"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "record_count",
+     "language": "sv",
+     "published": "2024-04-04",
+     "publisher": "Regeringen (via Sveriges riksdag)",
+     "quote": "År 2022 inkom 4,1 miljoner samtal till 112.",
+     "quote_english": "In 2022, 4.1 million calls were received by 112.",
+     "title": "Skr. 2023/24:123 Riksrevisionens rapport om nödnumret 112",
+     "url": "https://data.riksdagen.se/dokument/hb03123.html",
+     "value": "4.1 million calls to 112 in 2022"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "sv",
+     "published": "2022-05-04",
+     "publisher": "Justitiedepartementet (via Sveriges riksdag)",
+     "quote": "där Rakel G2 ska nyttja Trafikverkets och Svenska kraftnäts optofibernät och där ett statligt radioaccessnät ska etableras. Systemet ska kompletteras med radioaccess i kommersiella nät för ökad kapacitet och täckning.",
+     "quote_english": "where Rakel G2 shall use Trafikverket's and Svenska kraftnät's optical fibre network and a state radio access network shall be established. The system shall be supplemented with radio access in commercial networks for capacity and coverage.",
+     "title": "Svar på skriftlig fråga 2021/22:1496 Upphandling av Rakel Generation 2",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svar-pa-skriftlig-fraga/upphandling-av-rakel-generation-2_h9121496/",
+     "value": "Rakel G2 is planned on Trafikverket and Svenska kraftnät fibre with a state radio access network, supplemented by commercial networks"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "SOS Alarm 112 systems; Rakel",
+   "operator": "SOS Alarm Sverige AB; Myndigheten för civilt försvar",
+   "research_note": "Rakel G2 infrastructure is a plan (2022 answer); no source on SOS Alarm's system hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2008",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Myndigheten ska samordna och utveckla systemet för varning och information till allmänheten enligt lagen (2023:407) om viktigt meddelande till allmänheten.",
+     "quote_english": "The agency shall coordinate and develop the system for warning and informing the public under the Act on important public announcements.",
+     "title": "Förordning (2008:1002) med instruktion för Myndigheten för civilt försvar",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20081002-med-instruktion-for_sfs-2008-1002/",
+     "value": "Myndigheten för civilt försvar coordinates the public warning (VMA) system"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "VMA-systemet and civil-defence coordination systems",
+   "operator": "Myndigheten för civilt försvar",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2025",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Myndigheten ska 1. driva och utveckla transmissionsnätet för el i Sverige och förbindelserna med elnät i andra länder",
+     "quote_english": "The agency shall 1. operate and develop the electricity transmission grid in Sweden and interconnections with grids in other countries",
+     "title": "Förordning (2025:782) med instruktion för Affärsverket svenska kraftnät",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-2025782-med-instruktion-for_sfs-2025-782/",
+     "value": "Svenska kraftnät operates the transmission grid"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Svenska kraftnät transmission control systems",
+   "operator": "Affärsverket svenska kraftnät",
+   "research_note": "No public source on SCADA/EMS hosting or vendor.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "research_note": "Drinking water and flood control in Sweden are municipal/regional; no national water control system holding, operator or hosting source was found in SFS or Riksdagen documents within the time available.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sv",
+     "published": "2022",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Denna lag innehåller bestämmelser som kompletterar EU:s dataskyddsförordning, patientdatalagen (2008:355), lagen (2001:454) om behandling av personuppgifter inom socialtjänsten",
+     "quote_english": "This act contains provisions supplementing the GDPR, the Patient Data Act (2008:355), the Act on processing of personal data in social services",
+     "title": "Lag (2022:913) om sammanhållen vård- och omsorgsdokumentation",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2022913-om-sammanhallen-vard-och_sfs-2022-913/",
+     "value": "Lag (2022:913) on shared care documentation between providers"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sv",
+     "published": "2026-01-20",
+     "publisher": "Regeringskansliet (via Sveriges riksdag)",
+     "quote": "Befintlig gemensam infrastruktur finns bland annat hos Inera AB som ägs av Sveriges Kommuner och Regioner genom SKR Företag AB samt alla kommuner och regioner.",
+     "quote_english": "Existing common infrastructure is held, among others, by Inera AB, owned by SKR through SKR Företag AB and all municipalities and regions.",
+     "title": "SOU 2026:6 En nationell digital infrastruktur i hälso- och sjukvården",
+     "url": "https://data.riksdagen.se/dokument/heb36.html",
+     "value": "Shared national health infrastructure is held by Inera AB, owned by SKR and all municipalities and regions"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sammanhållen vård- och omsorgsdokumentation (regional EHRs; Inera shared services)",
+   "operator": "Regions and care providers; Inera AB",
+   "research_note": "No national EHR; hosting of regional records and Inera services not sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "2012",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Denna lag tillämpas vid behandling av personuppgifter i Folkhälsomyndighetens verksamhet när det gäller nationella vaccinationsprogram och vaccinationer mot sjukdomen covid-19 (vaccinationsregistret).",
+     "quote_english": "This act applies to processing of personal data in the Public Health Agency's activity regarding national vaccination programmes and COVID-19 vaccinations (the vaccination register).",
+     "title": "Lag (2012:453) om register över nationella vaccinationsprogram m.m.",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2012453-om-register-over-nationella_sfs-2012-453/",
+     "value": "Vaccinationsregistret, Folkhälsomyndigheten"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2004",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Folkhälsomyndigheten ansvarar för samordning av smittskyddet på nationell nivå och ska ta de initiativ som krävs för att upprätthålla ett effektivt smittskydd.",
+     "quote_english": "The Public Health Agency is responsible for coordinating communicable disease control at national level.",
+     "title": "Smittskyddslag (2004:168)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/smittskyddslag-2004168_sfs-2004-168/",
+     "value": "Folkhälsomyndigheten coordinates communicable disease control nationally"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Vaccinationsregistret; notifiable disease surveillance",
+   "operator": "Folkhälsomyndigheten",
+   "research_note": "No hosting source found; the SmiNet system name was not confirmed in a fetched source.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sv",
+     "published": "1993",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Varje högskola ska dokumentera uppgifter om studenter. Varje högskola ska föra ett studieregister och där ange uppgifterna individuellt för varje student.",
+     "quote_english": "Each higher-education institution shall document data on students and keep a study register with data for each student individually.",
+     "title": "Förordning (1993:1153) om redovisning av studier m.m. vid universitet och högskolor",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-19931153-om-redovisning-av-studier-m_sfs-1993-1153/",
+     "value": "Each higher-education institution keeps a student register (studieregister)"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "Studieregister (higher education)",
+   "operator": "Universities and university colleges",
+   "research_note": "ladok.se refused automated requests (403); the shared Ladok system and its hosting could not be sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2016",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Statistiska centralbyrån ansvarar för att utveckla, framställa och sprida officiell statistik och annan statlig statistik",
+     "quote_english": "Statistics Sweden is responsible for developing, producing and disseminating official statistics and other state statistics",
+     "title": "Förordning (2016:822) med instruktion för Statistiska centralbyrån",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-2016822-med-instruktion-for_sfs-2016-822/",
+     "value": "SCB produces official statistics"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "SCB statistical registers and microdata",
+   "operator": "Statistiska centralbyrån (SCB)",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2009",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Lantmäteriet har ett nationellt samordningsansvar för produktion, samverkan, tillhandahållande och utveckling inom området för geografisk information och fastighetsinformation (geodataområdet).",
+     "quote_english": "Lantmäteriet has national coordinating responsibility for production, cooperation, provision and development in geographic and property information (geodata).",
+     "title": "Förordning (2009:946) med instruktion för Lantmäteriet",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-2009946-med-instruktion-for_sfs-2009-946/",
+     "value": "Lantmäteriet has national coordinating responsibility for geodata"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Lantmäteriet geodata",
+   "operator": "Lantmäteriet",
+   "research_note": "No hosting or volume source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sv",
+     "published": "2009",
+     "publisher": "Sveriges riksdag (Svensk författningssamling)",
+     "quote": "Riksarkivet är statlig arkivmyndighet och har det särskilda ansvar för den statliga arkivverksamheten och för arkivvården i landet",
+     "quote_english": "The National Archives is the state archive authority with special responsibility for state archives and archive care in the country",
+     "title": "Förordning (2009:1593) med instruktion för Riksarkivet",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20091593-med-instruktion-for_sfs-2009-1593/",
+     "value": "Riksarkivet is the state archive authority"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Riksarkivet holdings (incl. digital)",
+   "operator": "Riksarkivet",
+   "research_note": "riksarkivet.se unreachable; no hosting or data-size source found.",
+   "status": "held"
+  }
+ ],
+ "iso": "SE"
+}

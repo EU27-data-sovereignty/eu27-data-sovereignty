@@ -112,6 +112,7 @@ model/
   generate_countries.py      writes countries/<ISO>/GOAL.md (markdown rendering of the document) + SUMMARY.md
   export_json.py             writes web/public/data/eu27.json: countries, documents, claims, sources
   export_artifacts.py        renders the tracked per-country poster (./run.sh artefacts)
+api/                         ask.ts + _ask-core.ts: the /api/ask function; _corpus.json, its generated corpus (#78)
 design/                      tokens.json, the one colour and type source, and build_tokens.py (#74, #76)
 book/                        report.py (EU-27 report + 27 country PDFs) and the print book; see book/README.md
 artifacts/                   one style guide per output representation - markdown, html, pdf, png,
@@ -194,6 +195,8 @@ Standard library only. The capacity engine still reproduces the xlsx it was buil
 5. **Ranking.** States are placed in five groups by a published rule over sourced indicators, never scored.
    Each placement shows its confidence: the range of groups the open evidence could still move it to (#77).
 6. **Capacity.** Withdrawn until each state can be sized from its own measured holdings (#73).
+7. **Ask.** `/ask` answers questions from the sourced findings only, citing every fact; questions go to the
+   Anthropic API and are not stored (#78).
 
 ## What the evidence shows so far
 

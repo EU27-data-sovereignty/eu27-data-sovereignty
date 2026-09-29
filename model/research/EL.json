@@ -1,0 +1,1524 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "el",
+     "published": "",
+     "publisher": "Η.Δ.Υ.Κ.Α. Μ.Α.Ε. (IDIKA)",
+     "quote": "Η Η.Δ.Υ.Κ.Α Μ.Α.Ε έχει την ευθύνη τήρησης του Εθνικού Μητρώου ΑΜΚΑ (web based εφαρμογή) σύμφωνα με το οποίο κάθε πολίτης της χώρας υποχρεούται να διαθέτει από 01/06/2009 Αριθμό Μητρώου Κοινωνικής Ασφάλισης",
+     "quote_english": "IDIKA is responsible for keeping the National AMKA Register (web-based application), under which every citizen must hold a Social Security Number since 01/06/2009",
+     "title": "Εθνικό Μητρώο ΑΜΚΑ",
+     "url": "https://www.idika.gr/erga/ethniko-mitroo-amka/",
+     "value": "IDIKA (Η.Δ.Υ.Κ.Α. Μ.Α.Ε.) is responsible for keeping the National AMKA Register; AMKA mandatory for every citizen since 1 June 2009"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "el",
+     "published": "",
+     "publisher": "Η.Δ.Υ.Κ.Α. Μ.Α.Ε. (IDIKA)",
+     "quote": "Το σύνολο του μετοχικού κεφαλαίου της ΗΔΥΚΑ ΜΑΕ ανήκει στο Ελληνικό Δημόσιο, ελέγχεται και εποπτεύεται από κοινού από τους Υπουργούς Ψηφιακής Διακυβέρνησης και Υγείας κατά λόγο αρμοδιότητάς τους.",
+     "quote_english": "All share capital of IDIKA belongs to the Greek State, controlled and supervised jointly by the Ministers of Digital Governance and Health within their competences.",
+     "title": "Εταιρικό Προφίλ",
+     "url": "https://www.idika.gr/etaireia/profil/",
+     "value": "IDIKA is wholly owned by the Greek State, jointly supervised by the Ministers of Digital Governance and Health"
+    }
+   ],
+   "holding_name": "Εθνικό Μητρώο ΑΜΚΑ (National Social Security Number Register)",
+   "suggested_class": "identity (sectoral identifier)",
+   "why_critical": "Every resident must hold an AMKA to work, be insured or receive benefits and health care; it keys the health record, e-prescription and pension systems."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2020-09-23",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "το Κέντρο Διαλειτουργικότητας της Γενικής Γραμματείας Πληροφοριακών Συστημάτων Δημόσιας Διοίκησης είναι αρμόδιο για τη διαλειτουργικότητα των επιμέρους μητρώων των φορέων του δημόσιου τομέα και ιδίως των Υπουργείων Προστασίας του Πολίτη, Εσωτερικών, Μετανάστευσης και Ασύλου και της Α.Α.Δ.Ε.",
+     "quote_english": "the Interoperability Centre of the General Secretariat for Information Systems of Public Administration is competent for the interoperability of the individual registers of public-sector bodies, in particular of the Ministries of Citizen Protection, Interior, Migration and Asylum and AADE.",
+     "title": "Νόμος 4727/2020 (ΦΕΚ Α΄ 184/2020)",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4727-2020/",
+     "value": "The GSIS Interoperability Centre is responsible for interoperability of registers, notably of the Ministries of Citizen Protection, Interior, Migration and Asylum and AADE"
+    }
+   ],
+   "holding_name": "Κέντρο Διαλειτουργικότητας (ΚΕΔ) της Γ.Γ.Π.Σ.Δ.Δ.",
+   "suggested_class": "interoperability hub",
+   "why_critical": "Central exchange point through which base registers (Citizen Protection, Interior, Migration, AADE) are queried by other bodies; an outage or compromise affects all once-only services."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Το εν λόγω έργο αποτελεί το βασικό κορμό υλοποίησης της πρόβλεψης του ν.4623/2019 (ΦΕΚ 134/Α/9.8.2019) για τη φιλοξενία των κεντρικών πληροφοριακών συστημάτων της Δημόσιας Διοίκησης (με ελάχιστες εξαιρέσεις).",
+     "quote_english": "This project is the main vehicle for implementing Law 4623/2019 on hosting the central information systems of Public Administration (with minimal exceptions).",
+     "title": "Ενίσχυση των κεντρικών υποδομών Κυβερνητικού Νέφους (G- Cloud) της Γ.Γ.Π.Σ.Δ.Δ.",
+     "url": "https://digitalstrategy.gov.gr/project/g-cloud",
+     "value": "G-Cloud implements Law 4623/2019 on hosting the central information systems of public administration"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Παράλληλα θα πραγματοποιηθεί προμήθεια υπολογιστικών υποδομών από παρόχους δημόσιου υπολογιστικού νέφους",
+     "quote_english": "In parallel, computing infrastructure will be procured from public cloud providers",
+     "title": "Υλοποίηση και Υποστήριξη G-Cloud Next Generation",
+     "url": "https://digitalstrategy.gov.gr/project/g-cloud_next_generation",
+     "value": "G-Cloud Next Generation plans procurement of capacity from public-cloud providers to form a hybrid cloud (providers not named in the source)"
+    }
+   ],
+   "holding_name": "Κυβερνητικό Νέφος Δημόσιου Τομέα (G-Cloud) της Γ.Γ.Π.Σ.Δ.Δ.",
+   "suggested_class": "government hosting platform",
+   "why_critical": "Hosts the central information systems of the public administration; its planned hybrid model adds public-cloud capacity, which is where a foreign dependency could enter."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Ανάπτυξη και τήρηση μητρώου στο οποίο θα καταχωρούνται δεδομένα δικτύων, υλικού, συσκευών, συστημάτων και πληροφοριακών αγαθών των κρίσιμων υποδομών της χώρας",
+     "quote_english": "Development and keeping of a registry recording data on networks, hardware, devices, systems and information assets of the country's critical infrastructures",
+     "title": "Ανάπτυξη και τήρηση Μητρώου-αποθετηρίου (Asset Registry) κρίσιμων υποδομών",
+     "url": "https://digitalstrategy.gov.gr/project/asset_registry",
+     "value": "Registry of network, hardware, device, system and information assets of the country's critical infrastructures (project marked completed)"
+    }
+   ],
+   "holding_name": "Μητρώο-αποθετήριο (Asset Registry) κρίσιμων υποδομών",
+   "suggested_class": "critical infrastructure security",
+   "why_critical": "A consolidated inventory of networks, devices and systems of national critical infrastructure is itself a high-value target and must stay under national control."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2017-07-31",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "α. το σύνολο των στοιχείων του Εθνικού Δημοτολογίου, όπως αυτό ορίζεται στο άρθρο 13 του ν. 3274/2004 (Α΄ 195),",
+     "quote_english": "a. all the data of the National Municipal Register, as defined in Article 13 of Law 3274/2004",
+     "title": "Νόμος 4483/2017 (ΦΕΚ Α΄ 107/2017)",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4483-2017/",
+     "value": "«Μητρώο Πολιτών» (Citizens' Register): national information system combining the National Municipal Register (Δημοτολόγιο) and civil-status (registry) records"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2017-07-31",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Στο Υπουργείο Εσωτερικών δημιουργείται και τηρείται πληροφοριακό σύστημα με την ονομασία «Μητρώο Πολιτών», το οποίο συγκροτείται από:",
+     "quote_english": "An information system named \"Citizens' Register\" is created and maintained at the Ministry of the Interior, composed of:",
+     "title": "Νόμος 4483/2017 (ΦΕΚ Α΄ 107/2017)",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4483-2017/",
+     "value": "Law 4483/2017, Article 115 (creation of the Citizens' Register)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2020-09-23",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Καθιερώνεται προσωπικός αριθμός (Π.Α.) ως αριθμός υποχρεωτικής επαλήθευσης της ταυτότητας των φυσικών προσώπων στις συναλλαγές τους με τους φορείς του δημόσιου τομέα.",
+     "quote_english": "A personal number (P.N.) is established as a number for mandatory verification of the identity of natural persons in their transactions with public-sector bodies.",
+     "title": "Νόμος 4727/2020 (ΦΕΚ Α΄ 184/2020)",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4727-2020/",
+     "value": "National person identifier: the Personal Number (Προσωπικός Αριθμός, Π.Α.), a 12-character identifier assigned once per natural person"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "el",
+     "published": "2017-07-31",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Με κοινή απόφαση του Υπουργού Εσωτερικών και του κατά περίπτωση αρμόδιου Υπουργού μπορεί να ανατίθεται η φιλοξενία του Μητρώου Πολιτών σε κατάλληλες τεχνολογικές υποδομές τρίτου φορέα του δημόσιου τομέα",
+     "quote_english": "By joint decision of the Minister of the Interior and the competent Minister, the hosting of the Citizens' Register may be assigned to suitable technological infrastructure of a third public-sector body",
+     "title": "Νόμος 4483/2017 (ΦΕΚ Α΄ 107/2017)",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4483-2017/",
+     "value": "The law allows hosting of the Citizens' Register to be assigned by joint ministerial decision to the technological infrastructure of another public-sector body (no source found naming the actual host)"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Μητρώο Πολιτών (Citizens' Register) + Προσωπικός Αριθμός",
+   "operator": "Υπουργείο Εσωτερικών (Ministry of the Interior)",
+   "research_note": "Law 4483/2017 Art. 117 only permits hosting at another public-sector body; no public source found naming the actual data centre or provider.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2025-12-31",
+     "publisher": "Ελληνική Αστυνομία - Διεύθυνση Διαβατηρίων και Εγγράφων Ασφαλείας",
+     "quote": "συλλέγει και αποθηκεύει στο μέσο αποθήκευσης των ελληνικών διαβατηρίων τα απαιτούμενα βιομετρικά χαρακτηριστικά (φωτογραφία προσώπου και δύο επίπεδα δακτυλικά αποτυπώματα για τους αιτούντες άνω των 12 ετών)",
+     "quote_english": "collects and stores on the storage medium of Greek passports the required biometric features (facial photograph and two flat fingerprints for applicants over 12 years)",
+     "title": "Προστασία Προσωπικών Δεδομένων - Διεύθυνση Διαβατηρίων & Εγγράφων Ασφαλείας",
+     "url": "https://www.passport.gov.gr/npc/data.html",
+     "value": "Facial image and two flat fingerprints collected by the Passports and Security Documents Directorate (Δ.Δ.Ε.Α./Α.Ε.Α.) of Hellenic Police HQ and stored on the passport chip"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2019-09-26",
+     "publisher": "Ελληνική Αστυνομία - Διεύθυνση Διαβατηρίων και Εγγράφων Ασφαλείας",
+     "quote": "προκειμένου να ελεγχθεί και να εξακριβωθεί η εικόνα που εμφαίνεται επί του διαβατηρίου με αυτή που κρατείται στο αρχείο της Υπηρεσίας.",
+     "quote_english": "in order to check and verify the image shown on the passport against the one kept in the archive of the Service.",
+     "title": "Βιομετρικά χαρακτηριστικά",
+     "url": "https://www.passport.gov.gr/e-passport/biometrics.html",
+     "value": "The facial image is also held in the Service's own archive, against which the chip image can be compared at border checks"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2025-12-31",
+     "publisher": "Ελληνική Αστυνομία - Διεύθυνση Διαβατηρίων και Εγγράφων Ασφαλείας",
+     "quote": "όπως αυτές προβλέπονται από τις διατάξεις του άρθρου 1 του Ν. 3103/2003, του άρθρου 11 του Ν. 3480/2006, του άρθρου 26 του Ν. 5187/2025, του Π.Δ. 25/2022",
+     "quote_english": "as provided by the provisions of Article 1 of Law 3103/2003, Article 11 of Law 3480/2006, Article 26 of Law 5187/2025, P.D. 25/2022",
+     "title": "Προστασία Προσωπικών Δεδομένων - Διεύθυνση Διαβατηρίων & Εγγράφων Ασφαλείας",
+     "url": "https://www.passport.gov.gr/npc/data.html",
+     "value": "Passport data processing rests on Art. 1 of Law 3103/2003, Art. 11 of Law 3480/2006, Art. 26 of Law 5187/2025, P.D. 25/2022 and JMD 3021/22/10-ο/2025"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Βιομετρικά στοιχεία διαβατηρίων (passport facial images), Δ.Δ.Ε.Α./Α.Ε.Α.",
+   "operator": "Ελληνική Αστυνομία – Διεύθυνση Διαβατηρίων και Εγγράφων Ασφαλείας (Hellenic Police Passports and Security Documents Directorate)",
+   "research_note": "No public source found on where the passport/ID central database is hosted. The new-type ID card (2024+) facial data retention was not confirmed from an accessible primary source (astynomia.gr blocked).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2025-12-31",
+     "publisher": "Ελληνική Αστυνομία - Διεύθυνση Διαβατηρίων και Εγγράφων Ασφαλείας",
+     "quote": "Οι απεικονίσεις των δακτυλικών αποτυπωμάτων τηρούνται κρυπτογραφημένες (με ισχυρό σύστημα κρυπτογράφησης - αποκρυπτογράφησης) στην Κεντρική Βάση Δεδομένων της Δ.Δ.Ε.Α./Α.Ε.Α.",
+     "quote_english": "The fingerprint images are kept encrypted (with a strong encryption-decryption system) in the Central Database of the Passports Directorate.",
+     "title": "Προστασία Προσωπικών Δεδομένων - Διεύθυνση Διαβατηρίων & Εγγράφων Ασφαλείας",
+     "url": "https://www.passport.gov.gr/npc/data.html",
+     "value": "Encrypted fingerprint images kept in the Central Database of the Passports Directorate, accessible only to authorised police staff"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2025-12-31",
+     "publisher": "Ελληνική Αστυνομία - Διεύθυνση Διαβατηρίων και Εγγράφων Ασφαλείας",
+     "quote": "Οι ψηφιακές αποτυπώσεις δακτυλικών αποτυπωμάτων τηρούνται κεντρικά στη Δ.Δ.Ε.Α./Α.Ε.Α., σε κρυπτογραφημένη μορφή, μέχρι τη λήξη ισχύος του σχετικού διαβατηρίου ή μέχρι την ακύρωσή του για οποιαδήποτε αιτία.",
+     "quote_english": "Digital fingerprint captures are kept centrally at the Passports Directorate, in encrypted form, until the expiry of the passport or its cancellation for any reason.",
+     "title": "Προστασία Προσωπικών Δεδομένων - Διεύθυνση Διαβατηρίων & Εγγράφων Ασφαλείας",
+     "url": "https://www.passport.gov.gr/npc/data.html",
+     "value": "Retention: fingerprints are held centrally only until passport expiry or cancellation, then deleted within 30 days"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Κεντρική Βάση Δεδομένων Δ.Δ.Ε.Α./Α.Ε.Α. (passport fingerprints)",
+   "operator": "Ελληνική Αστυνομία – Διεύθυνση Διαβατηρίων και Εγγράφων Ασφαλείας",
+   "research_note": "Central retention confirmed for passport fingerprints only, and time-limited (until passport expiry/cancellation). Hosting of the central database is not published; ID-card fingerprint retention not verified (astynomia.gr blocked).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2017-07-31",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "β. το σύνολο των στοιχείων που αφορούν στις ληξιαρχικές πράξεις των Ελλήνων πολιτών και αλλοδαπών, στους οποίους συμβαίνουν ληξιαρχικά γεγονότα στην Ελλάδα",
+     "quote_english": "b. all the data relating to the civil-status acts of Greek citizens and foreigners who have civil-status events in Greece",
+     "title": "Νόμος 4483/2017 (ΦΕΚ Α΄ 107/2017)",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4483-2017/",
+     "value": "Civil-status acts (births, marriages, deaths) of Greek citizens and of foreigners with events in Greece, held in the Ministry of the Interior's Registry Acts Management system within the Citizens' Register"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2025-12-31",
+     "publisher": "Ελληνική Αστυνομία - Διεύθυνση Διαβατηρίων και Εγγράφων Ασφαλείας",
+     "quote": "Οι αιτήσεις και τα συνοδευτικά δικαιολογητικά τηρούνται σε ψηφιακή μορφή σε κεντρική βάση δεδομένων της Δ.Δ.Ε.Α./Α.Ε.Α. και διαγράφονται μετά την παρέλευση δεκαπέντε (15) ετών από την υποβολή τους.",
+     "quote_english": "Applications and supporting documents are kept in digital form in a central database of the Passports Directorate and are deleted fifteen (15) years after submission.",
+     "title": "Προστασία Προσωπικών Δεδομένων - Διεύθυνση Διαβατηρίων & Εγγράφων Ασφαλείας",
+     "url": "https://www.passport.gov.gr/npc/data.html",
+     "value": "Passport applications and supporting documents are kept digitised in a central database of the Passports Directorate for 15 years"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Ληξιαρχικές πράξεις στο Μητρώο Πολιτών; ψηφιοποιημένα δικαιολογητικά διαβατηρίων",
+   "operator": "Υπουργείο Εσωτερικών; Ελληνική Αστυνομία (Δ.Δ.Ε.Α.)",
+   "research_note": "No source found on digitised naturalisation decrees or on hosting of these archives.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2003-01-29",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Η αρμοδιότητα για την έκδοση και χορήγηση των διαβατηρίων ανατίθεται αποκλειστικά σε Κεντρική Υπηρεσία της Ελληνικής Αστυνομίας.",
+     "quote_english": "Competence for issuing and granting passports is assigned exclusively to a Central Service of the Hellenic Police.",
+     "title": "Νόμος 3103/2003 (ΦΕΚ Α΄ 23/2003)",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-3103-2003/",
+     "value": "Law 3103/2003: passports are issued exclusively by a Central Service of the Hellenic Police"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2014-03-23",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "στην έκδοση δελτίων αστυνομικών ταυτοτήτων και την τήρηση σχετικού αρχείου",
+     "quote_english": "in the issuance of police identity cards and the keeping of the related archive",
+     "title": "Νόμος 4249/2014",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4249-2014/",
+     "value": "Law 4249/2014: the Hellenic Police issues police identity cards and keeps the related archive"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2025-12-31",
+     "publisher": "Ελληνική Αστυνομία - Διεύθυνση Διαβατηρίων και Εγγράφων Ασφαλείας",
+     "quote": "Η Ελληνική Αστυνομία διαθέτει σε Φορείς του Δημοσίου διαδικτυακές υπηρεσίες για την παροχή στοιχείων που αφορούν τα εκδοθέντα ελληνικά διαβατήρια",
+     "quote_english": "The Hellenic Police provides public bodies with web services supplying data on issued Greek passports",
+     "title": "Προστασία Προσωπικών Δεδομένων - Διεύθυνση Διαβατηρίων & Εγγράφων Ασφαλείας",
+     "url": "https://www.passport.gov.gr/npc/data.html",
+     "value": "Web services supplying public bodies with data on issued Greek passports, via the Interoperability Centre"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Αρχείο εκδοθέντων διαβατηρίων και αστυνομικών ταυτοτήτων (issued passports and ID cards)",
+   "operator": "Ελληνική Αστυνομία (Hellenic Police)",
+   "research_note": "astynomia.gr (ID-card pages) was not retrievable; hosting of the issuance databases not published.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2020-09-23",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Ο χρήστης της ΕΨΠ αποκτά πρόσβαση στις υπηρεσίες που παρέχονται μέσα από αυτήν, αφού προηγουμένως προβεί σε αυθεντικοποίηση.",
+     "quote_english": "The user of the Single Digital Portal gains access to the services provided through it after first authenticating.",
+     "title": "Νόμος 4727/2020 (ΦΕΚ Α΄ 184/2020)",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4727-2020/",
+     "value": "Law 4727/2020, Art. 24: users must authenticate to access services of the Single Digital Portal (gov.gr); the first listed method is the GSIS (TaxisNet) credentials"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2020-09-23",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "το Υπουργείο Ψηφιακής Διακυβέρνησης ενεργεί ως Υπεύθυνος Επεξεργασίας ως προς την πρόσβαση, την επεξεργασία και τη διατήρηση των δεδομένων προσωπικού χαρακτήρα που είναι αναγκαία για τις υπηρεσίες αυθεντικοποίησης",
+     "quote_english": "the Ministry of Digital Governance acts as Controller for the access, processing and retention of the personal data necessary for the authentication services",
+     "title": "Νόμος 4727/2020 (ΦΕΚ Α΄ 184/2020)",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4727-2020/",
+     "value": "Ministry of Digital Governance is the controller for the authentication services of gov.gr"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης",
+     "quote": "Για τη χρήση της εφαρμογής είναι απαραίτητοι οι προσωπικοί σας κωδικοί TaxisNet και η κατοχή επιβεβαιωμένου αριθμού κινητού τηλεφώνου στο ΕΜΕπ ή οι προσωπικοί σας κωδικοί web banking.",
+     "quote_english": "To use the application you need your personal TaxisNet credentials and a verified mobile number in the National Communication Register, or your personal web-banking credentials.",
+     "title": "Gov.gr Wallet",
+     "url": "https://wallet.gov.gr/",
+     "value": "Gov.gr Wallet requires the personal TaxisNet credentials (or web-banking credentials) plus a verified mobile number"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης",
+     "quote": "Σύμφωνα με τo αρ. 80 του ν. 4954/2022 (Α’ 136) σκοπός της επεξεργασίας των δεδομένων προσωπικού χαρακτήρα είναι η διασφάλιση της διαδικασίας ευχερούς και ασφαλούς ταυτοποίησης του φυσικού προσώπου",
+     "quote_english": "Under Art. 80 of Law 4954/2022 (A 136) the purpose of processing personal data is to ensure easy and secure identification of the natural person",
+     "title": "Gov.gr Wallet - Πολιτική Απορρήτου",
+     "url": "https://wallet.gov.gr/privacy/",
+     "value": "Gov.gr Wallet legal basis: Law 4954/2022, Art. 80 (digital repository of identification documents)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "el",
+     "published": "",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης",
+     "quote": "Η Ε.Δ.Υ.Τ.Ε. αναλαμβάνει, για λογαριασμό του Υπουργείου Ψηφιακής Διακυβέρνησης, τον σχεδιασμό, την υλοποίηση και τη συντήρηση της ειδικής ηλεκτρονικής εφαρμογής",
+     "quote_english": "GRNET undertakes, on behalf of the Ministry of Digital Governance, the design, implementation and maintenance of the special electronic application",
+     "title": "Gov.gr Wallet - Πολιτική Απορρήτου",
+     "url": "https://wallet.gov.gr/privacy/",
+     "value": "GRNET (Ε.Δ.Υ.Τ.Ε. Α.Ε.), a Greek state-owned company, is the processor that designs, implements and maintains the Gov.gr Wallet application"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "national",
+   "holding_name": "Κωδικοί TaxisNet (ΓΓΠΣΔΔ) και Gov.gr Wallet (national eID: gov.gr Wallet, TaxisNet-based)",
+   "operator": "Υπουργείο Ψηφιακής Διακυβέρνησης / Γ.Γ.Π.Σ.Δ.Δ.; Wallet implemented by Ε.Δ.Υ.Τ.Ε. (GRNET)",
+   "research_note": "Hosting of the TaxisNet credential store itself is not stated separately; the national classification rests on GRNET (state-owned) designing, implementing and maintaining the Wallet. No account-count figure found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης",
+     "quote": "Στην Ε.Δ.Υ.Τ.Ε. Α.Ε. τηρείται, για χρονικό διάστημα δώδεκα (12) μηνών, ιστορικό των ενεργειών που λαμβάνουν χώρα στο πλαίσιο της διαδικασίας επίδειξης εγγράφων.",
+     "quote_english": "A history of the actions taking place in the document-presentation process is kept at GRNET S.A. for a period of twelve (12) months.",
+     "title": "Gov.gr Wallet - Πολιτική Απορρήτου",
+     "url": "https://wallet.gov.gr/privacy/",
+     "value": "GRNET keeps for 12 months a history of actions taken in the Gov.gr Wallet document-presentation process"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "el",
+     "published": "",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης",
+     "quote": "Η ανώνυμη εταιρεία του Ελληνικού Δημοσίου με την επωνυμία «ΕΘΝΙΚΟ ΔΙΚΤΥΟ ΥΠΟΔΟΜΩΝ ΤΕΧΝΟΛΟΓΙΑΣ ΚΑΙ ΕΡΕΥΝΑΣ Α.Ε.» και διακριτικό τίτλο «Ε.Δ.Υ.Τ.Ε. Α.Ε.» ορίζεται ως Εκτελούσα την Επεξεργασία",
+     "quote_english": "The Greek State public limited company named \"National Infrastructures for Research and Technology S.A.\" (GRNET S.A.) is designated as Processor",
+     "title": "Gov.gr Wallet - Πολιτική Απορρήτου",
+     "url": "https://wallet.gov.gr/privacy/",
+     "value": "GRNET (Ε.Δ.Υ.Τ.Ε. Α.Ε.), company of the Greek State, is the designated processor"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "national",
+   "holding_name": "Ιστορικό ενεργειών επίδειξης εγγράφων Gov.gr Wallet (Wallet presentation log)",
+   "operator": "Ε.Δ.Υ.Τ.Ε. Α.Ε. (GRNET) για το Υπουργείο Ψηφιακής Διακυβέρνησης",
+   "research_note": "Only the Wallet presentation log is documented. No public source found for retention or hosting of the TaxisNet/gov.gr login (authentication) logs of GSIS.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2012-03-14",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Η εκλογή γίνεται σε κάθε δήμο μόνο με τους εκλογικούς καταλόγους που τηρούνται στο Υπουργείο Εσωτερικών και έχουν καταρτιστεί με βάση τα δημοτολόγια του οικείου δήμου.",
+     "quote_english": "Elections are held in each municipality only with the electoral rolls kept at the Ministry of the Interior and compiled on the basis of the municipal registers of that municipality.",
+     "title": "Προεδρικό Διάταγμα 26/2012 (κωδικοποίηση εκλογικής νομοθεσίας)",
+     "url": "https://www.lawspot.gr/nomothesia/proedriko-diatagma-26-2012/",
+     "value": "Electoral rolls kept at the Ministry of the Interior, compiled from municipal registers (δημοτολόγια)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2012-03-14",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Η εγγραφή στους εκλογικούς καταλόγους είναι υποχρεωτική. Καθένας εγγράφεται μόνο μία φορά σε ένα εκλογικό κατάλογο.",
+     "quote_english": "Registration in the electoral rolls is compulsory. Everyone is registered only once in one electoral roll.",
+     "title": "Προεδρικό Διάταγμα 26/2012 (κωδικοποίηση εκλογικής νομοθεσίας)",
+     "url": "https://www.lawspot.gr/nomothesia/proedriko-diatagma-26-2012/",
+     "value": "P.D. 26/2012, Art. 8: registration in the electoral rolls is compulsory and each voter is registered once"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Εκλογικοί κατάλογοι (electoral rolls)",
+   "operator": "Υπουργείο Εσωτερικών (Ministry of the Interior)",
+   "research_note": "No public source found on the hosting of the electoral roll system; ekloges.ypes.gr and ypes.gr were not retrievable.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2020-09-23",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Η Αρχή Πιστοποίησης του Ελληνικού Δημοσίου (Α.Π.Ε.Δ.) αποτελεί τον πάροχο υπηρεσιών εμπιστοσύνης του Ελληνικού Δημοσίου.",
+     "quote_english": "The Certification Authority of the Greek Public Sector (APED) is the trust service provider of the Greek State.",
+     "title": "Νόμος 4727/2020 (ΦΕΚ Α΄ 184/2020)",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4727-2020/",
+     "value": "Law 4727/2020, Art. 58: the Hellenic Public Administration Certification Authority (ΑΠΕΔ) is the trust service provider of the Greek State"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2020-09-23",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Είναι αρμόδια για την έκδοση και διαχείριση πιστοποιητικών για την παροχή υπηρεσιών εμπιστοσύνης σε όλους τους φορείς του δημόσιου τομέα.",
+     "quote_english": "It is competent for issuing and managing certificates for the provision of trust services to all public-sector bodies.",
+     "title": "Νόμος 4727/2020 (ΦΕΚ Α΄ 184/2020)",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4727-2020/",
+     "value": "ΑΠΕΔ issues and manages certificates for trust services to all public-sector bodies"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2026-05-16",
+     "publisher": "Ελληνική Αστυνομία - Διεύθυνση Διαβατηρίων και Εγγράφων Ασφαλείας",
+     "quote": "This document contains information on the Hellenic CSCA operated by the Hellenic Police.",
+     "title": "Αρχή Πιστοποίησης CSCA-ePASSPORT & eID",
+     "url": "https://www.passport.gov.gr/e-passport/csca-epassport.html",
+     "value": "Hellenic CSCA for e-passports and eID is operated by the Hellenic Police"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "Αρχή Πιστοποίησης Ελληνικού Δημοσίου (ΑΠΕΔ) + Hellenic CSCA",
+   "operator": "Υπουργείο Ψηφιακής Διακυβέρνησης (ΑΠΕΔ); Ελληνική Αστυνομία (CSCA)",
+   "research_note": "No public source found stating where ΑΠΕΔ root/issuing CA keys or HSMs are hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "",
+     "publisher": "Υπουργείο Μετανάστευσης και Ασύλου",
+     "quote": "τον σχεδιασμό και την κεντρική λειτουργία των Πληροφοριακών Συστημάτων Μετανάστευσης και του Μητρώου Αλλοδαπών σε συνεργασία με τη Γενική Διεύθυνση Πληροφορικής και Επικοινωνιών",
+     "quote_english": "the design and central operation of the Migration Information Systems and of the Register of Aliens in cooperation with the General Directorate of Informatics and Communications",
+     "title": "Διοίκηση - Υπουργείο Μετανάστευσης και Ασύλου",
+     "url": "https://migration.gov.gr/migration-policy/dioikisi/",
+     "value": "Migration Information Systems and the Register of Aliens (Μητρώο Αλλοδαπών), centrally operated by the Ministry of Migration and Asylum"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "el",
+     "published": "2026-09",
+     "publisher": "Υπουργείο Μετανάστευσης και Ασύλου",
+     "quote": "(Ενεργές ΑΔΕΤ) ΣΥΝΟΛΟ Αύγουστος 2026 274.705 41.788 591.461 99.966 1.007.920",
+     "quote_english": "(Active refugee residence permits) TOTAL August 2026 274,705 41,788 591,461 99,966 1,007,920",
+     "title": "Νόμιμη Μετανάστευση Αύγουστος 2026 - Παράρτημα Β (Αναλυτικοί Πίνακες)",
+     "url": "https://migration.gov.gr/wp-content/uploads/2026/09/%CE%A0%CE%91%CE%A1%CE%91%CE%A1%CE%A4%CE%97%CE%9C%CE%91-%CE%92_%CE%91%CF%8D%CE%B3%CE%BF%CF%85%CF%83%CF%84%CE%BF%CF%82-_2026_%CE%A5%CE%9C%CE%91-GR-%CE%95%CE%BD%CE%B7%CE%BC%CE%B5%CF%81%CF%89%CF%84%CE%B9%CE%BA%CF%8C-%CE%91%CF%8D%CE%B3%CE%BF%CF%85%CF%83%CF%84%CE%BF%CF%82-%CE%92-%CE%9D%CF%8C%CE%BC%CE%B9%CE%BC%CE%B7-%CE%9C%CE%B5%CF%84%CE%B1%CE%BD%CE%AC%CF%83%CF%84%CE%B5%CF%85%CF%83%CE%B7.pdf",
+     "value": "1,007,920 residence documents in force in August 2026 (EU citizens/ethnic Greeks 274,705; temporary protection 41,788; third-country nationals 591,461; recognised refugees 99,966)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "έχει προγραμματιστεί η συγκέντρωση όλης της υφιστάμενης υποδομής στη νέα έδρα του Υπουργείου Μετανάστευσης & Ασύλου, στο Κτήριο Κεράνη μέσω της δημιουργία κέντρου δεδομένων υψηλής διαθεσιμότητας επιπέδου 4-Tier",
+     "quote_english": "the concentration of all existing infrastructure at the new seat of the Ministry of Migration & Asylum, in the Kerani Building, has been planned through the creation of a Tier-4 high-availability data centre",
+     "title": "Κέντρο Δεδομένων υψηλής διαθεσιμότητας (Tier-4 Datacenter)",
+     "url": "https://digitalstrategy.gov.gr/project/tier-4_datacenter",
+     "value": "Migration and asylum data centres (holding biometric data) are in ministry/agency premises; consolidation into a Tier-4 data centre at the Ministry of Migration's Kerani building was planned"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "national",
+   "holding_name": "Πληροφοριακά Συστήματα Μετανάστευσης και Μητρώο Αλλοδαπών (Register of Aliens)",
+   "operator": "Υπουργείο Μετανάστευσης και Ασύλου (Ministry of Migration and Asylum)",
+   "research_note": "Hosting classification national rests on the Bible of Digital Transformation project page (ministry-owned data centres; Tier-4 DC planned, completion not confirmed). Legal basis (Migration Code, Law 5038/2023) not retrieved from an accessible full text.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2016-05-27",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Συνιστάται Ανεξάρτητη Διοικητική Αρχή χωρίς νομική προσωπικότητα με την επωνυμία Ανεξάρτητη Αρχή Δημοσίων Εσόδων (Α.Α.Δ.Ε.)",
+     "quote_english": "An Independent Administrative Authority without legal personality is established under the name Independent Authority for Public Revenue (AADE)",
+     "title": "Νόμος 4389/2016",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4389-2016/",
+     "value": "Independent Authority for Public Revenue (ΑΑΔΕ), established by Law 4389/2016 to assess and collect tax, customs and other public revenue"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "el",
+     "published": "2016-05-27",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "φιλοξενούνται, φυλάσσονται, εγκαθίστανται και λειτουργούν σε υπολογιστικές υποδομές της Γενικής Γραμματείας Πληροφοριακών Συστημάτων και Διοικητικής Υποστήριξης (Γ.Γ.Π.Σ. και Δ.Υ.) του Υπουργείου Οικονομικών",
+     "quote_english": "are hosted, safeguarded, installed and operated on computing infrastructure of the General Secretariat for Information Systems and Administrative Support of the Ministry of Finance",
+     "title": "Νόμος 4389/2016",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4389-2016/",
+     "value": "Law 4389/2016 Art. 37 (as reproduced, last amended 2018): AADE data and code are hosted and operated on infrastructure of the Ministry of Finance General Secretariat for Information Systems"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "υφιστάμενων και νέων πληροφοριακών συστημάτων που φιλοξενούνται στις υποδομές της ΓΓΠΣΔΔ (όπως ICISnet, TAXISnet, Taxis, Γενικού Χημείου του Κράτους, ELENXIS κ.ά.)",
+     "quote_english": "existing and new information systems hosted on the infrastructure of the GSIS (such as ICISnet, TAXISnet, Taxis, General Chemical State Laboratory, ELENXIS etc.)",
+     "title": "Αναβάθμιση διαθεσιμότητας, εφεδρείας, ασφάλειας δεδομένων, που φιλοξενούνται στις υποδομές της ΓΓΠΣΔΔ",
+     "url": "https://digitalstrategy.gov.gr/project/anavathmisi_diathesimotitas_efedreias_asfaleias_dedomenon_poy_filoxenoyntai_stis_ypodomes_tis_ggpsdd",
+     "value": "TAXIS, TAXISnet, ICISnet and ELENXIS are hosted on the infrastructure of the General Secretariat for Information Systems of Public Administration (ΓΓΠΣΔΔ); a private-cloud database service was planned"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "στην ενοποίηση των βάσεων δεδομένων, καθώς και στον ανασχεδιασμό του περιβάλλοντος και των διαδικασιών TAXIS - TAXISnet - Elenxis.",
+     "quote_english": "the unification of the databases, as well as the redesign of the environment and processes of TAXIS - TAXISnet - Elenxis.",
+     "title": "Ανάπτυξη νέου ενοποιημένου Ολοκληρωμένου Πληροφοριακού Συστήματος Φορολογίας της ΑΑΔΕ",
+     "url": "https://digitalstrategy.gov.gr/project/anaptyxi_neoy_enopoiimenoy_olokliromenoy_pliroforiakoy_systimatos_forologias_tis_aade",
+     "value": "Integrated Tax Information System of AADE: TAXIS - TAXISnet - Elenxis"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "national",
+   "holding_name": "TAXIS / TAXISnet / Elenxis (Ολοκληρωμένο Πληροφοριακό Σύστημα Φορολογίας)",
+   "operator": "Ανεξάρτητη Αρχή Δημοσίων Εσόδων (ΑΑΔΕ)",
+   "research_note": "Both sources place hosting on Greek state infrastructure (GSIS). Law 4727/2020 Art. 85(3) exempts AADE from the general cloud policy. No record-count figure found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "την συμπλήρωση λειτουργιών για τελωνειακές διαδικασίες που έχουν θεσπιστεί και δεν καλύπτονται από τις λειτουργίες του υφιστάμενου ICISnet.",
+     "quote_english": "completing functions for customs procedures that have been established and are not covered by the functions of the existing ICISnet.",
+     "title": "Ανάπτυξη νέου ενοποιημένου Ολοκληρωμένου Πληροφοριακού Συστήματος Τελωνείων της ΑΑΔΕ (ICISnet)",
+     "url": "https://digitalstrategy.gov.gr/project/icisnet",
+     "value": "ICISnet — integrated customs information system of AADE"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2016-05-27",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "με σκοπό τον προσδιορισμό, τη βεβαίωση και την είσπραξη των φορολογικών, τελωνειακών και λοιπών δημοσίων εσόδων",
+     "quote_english": "for the purpose of determining, assessing and collecting tax, customs and other public revenue",
+     "title": "Νόμος 4389/2016",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4389-2016/",
+     "value": "Law 4389/2016 Art. 1: AADE collects tax, customs and other public revenue"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "υφιστάμενων και νέων πληροφοριακών συστημάτων που φιλοξενούνται στις υποδομές της ΓΓΠΣΔΔ (όπως ICISnet, TAXISnet, Taxis, Γενικού Χημείου του Κράτους, ELENXIS κ.ά.)",
+     "quote_english": "existing and new information systems hosted on the infrastructure of the GSIS (such as ICISnet, TAXISnet, Taxis, ...)",
+     "title": "Αναβάθμιση διαθεσιμότητας, εφεδρείας, ασφάλειας δεδομένων, που φιλοξενούνται στις υποδομές της ΓΓΠΣΔΔ",
+     "url": "https://digitalstrategy.gov.gr/project/anavathmisi_diathesimotitas_efedreias_asfaleias_dedomenon_poy_filoxenoyntai_stis_ypodomes_tis_ggpsdd",
+     "value": "ICISnet is hosted on ΓΓΠΣΔΔ infrastructure"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "national",
+   "holding_name": "ICISnet (Ολοκληρωμένο Πληροφοριακό Σύστημα Τελωνείων)",
+   "operator": "Ανεξάρτητη Αρχή Δημοσίων Εσόδων (ΑΑΔΕ) – Τελωνειακή Υπηρεσία",
+   "research_note": "No declaration-volume figure found in an accessible source.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2016-05-12",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Συνιστάται Νομικό Πρόσωπο Δημοσίου Δικαίου (Ν.Π.Δ.Δ.) με την επωνυμία «Ενιαίος Φορέας Κοινωνικής Ασφάλισης», αποκαλούμενο στο εξής «Ε.Φ.Κ.Α.»",
+     "quote_english": "A legal entity of public law is established under the name \"Unified Social Security Fund\", hereinafter \"EFKA\"",
+     "title": "Νόμος 4387/2016",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4387-2016/",
+     "value": "Law 4387/2016, Art. 51: establishment of the Unified Social Security Fund (Ε.Φ.Κ.Α., now e-ΕΦΚΑ)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "el",
+     "published": "",
+     "publisher": "Η.Δ.Υ.Κ.Α. Μ.Α.Ε. (IDIKA)",
+     "quote": "συγκέντρωσε για πρώτη τα φορά τα δεδομένα από 92 πληροφοριακά συστήματα των ασφαλιστικών φορέων για 4,5 εκατομμύρια συντάξεις και ταυτοποίησε 2,7 εκατομμύρια συνταξιούχους.",
+     "quote_english": "for the first time it gathered data from 92 information systems of the insurance funds for 4.5 million pensions and identified 2.7 million pensioners.",
+     "title": "Ενιαίο Σύστημα Ελέγχου & Πληρωμών Συντάξεων ΕΣΕΠΣ – ΗΛΙΟΣ",
+     "url": "https://www.idika.gr/erga/eniaio-systima-syntaxeon-eseps-ilios/",
+     "value": "HELIOS pension control and payment system (operated by ΗΔΥΚΑ/IDIKA under Law 4093/2012) consolidated data from 92 systems covering 4.5 million pensions and 2.7 million pensioners"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "την αναγνώριση/ καταχώριση των δεδομένων του χρόνου ασφάλισης στη Βάση Δεδομένων του συστήματος «ΑΤΛΑΣ» για την χρήση τους στη συνέχεια για την απονομή των συντάξεων.",
+     "quote_english": "the recognition/entry of insurance-period data into the Database of the \"ATLAS\" system for subsequent use in awarding pensions.",
+     "title": "Ψηφιοποίηση Ασφαλιστικής Ιστορίας e-ΕΦΚΑ",
+     "url": "https://digitalstrategy.gov.gr/project/psifiopoiisi_asfalistikis_istorias_e-efka",
+     "value": "ATLAS: digital pension award system of e-EFKA, whose database holds insurance-period data digitised from former IKA archives"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "e-ΕΦΚΑ ασφαλιστικό ιστορικό / ΑΤΛΑΣ; Σύστημα ΗΛΙΟΣ (πληρωμές συντάξεων)",
+   "operator": "e-ΕΦΚΑ; Η.Δ.Υ.Κ.Α. Μ.Α.Ε. (ex-ΗΔΙΚΑ)",
+   "research_note": "Law 4727/2020 Art. 85 names IDIKA as a public cloud provider, but no source was found stating where ATLAS/HELIOS are hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2011-03-01",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Συνιστάται νομικό πρόσωπο δημοσίου δικαίου (Ν.Π.Δ.Δ.) με την επωνυμία Εθνικός Οργανισμός Παροχής Υπηρεσιών Υγείας (εφεξής Ε.Ο.Π.Υ.Υ. ή Οργανισμός)",
+     "quote_english": "A legal entity of public law is established under the name National Organisation for Healthcare Services Provision (hereinafter EOPYY or Organisation)",
+     "title": "Νόμος 3918/2011",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-3918-2011/",
+     "value": "Law 3918/2011, Art. 17: establishment of the National Organisation for Healthcare Services Provision (ΕΟΠΥΥ)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "",
+     "publisher": "Η.Δ.Υ.Κ.Α. Μ.Α.Ε. (IDIKA)",
+     "quote": "Έχει εγκατασταθεί και λειτουργεί στην ΗΔ.Υ.Κ.Α. Μ.Α.Ε. εφαρμογή ηλεκτρονικής καταχώρησης και εκτέλεσης συνταγών φαρμάκων",
+     "quote_english": "An application for electronic registration and execution of medicine prescriptions has been installed and operates at IDIKA",
+     "title": "Ηλεκτρονική Συνταγογράφηση",
+     "url": "https://www.idika.gr/erga/ilektroniki-syntagografisi/",
+     "value": "Electronic prescription system installed and operated at ΗΔΥΚΑ (IDIKA) for the social-insurance funds"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Μητρώο δικαιούχων ΕΟΠΥΥ / Ηλεκτρονική Συνταγογράφηση",
+   "operator": "ΕΟΠΥΥ; Η.Δ.Υ.Κ.Α. Μ.Α.Ε.",
+   "research_note": "eopyy.gov.gr reachable but no statement on the entitlement register hosting or size was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2018-01-16",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Συστήνεται νομικό πρόσωπο δημοσίου δικαίου (Ν.Π.Δ.Δ.) με την επωνυμία «Ελληνικό Κτηματολόγιο εφεξής «Φορέας»), με έδρα την Αθήνα, το οποίο εποπτεύεται από τον Υπουργό Περιβάλλοντος και Ενέργειας.",
+     "quote_english": "A legal entity of public law is established under the name \"Hellenic Cadastre\" (hereinafter \"Agency\"), seated in Athens, supervised by the Minister of Environment and Energy.",
+     "title": "Νόμος 4512/2018",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4512-2018/",
+     "value": "Hellenic Cadastre (Ελληνικό Κτηματολόγιο), public-law entity supervised by the Minister of Environment and Energy"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2018-01-16",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Σκοπός του Φορέα είναι η διασφάλιση της αξιοπιστίας, δημοσιότητας και διαθεσιμότητας των χωρικών και νομικών δεδομένων που αφορούν την ακίνητη ιδιοκτησία",
+     "quote_english": "The purpose of the Agency is to ensure the reliability, publicity and availability of the spatial and legal data relating to real property",
+     "title": "Νόμος 4512/2018",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4512-2018/",
+     "value": "Law 4512/2018, Art. 1: purpose is the reliability, publicity and availability of spatial and legal data on real property"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Αναβάθμιση εξοπλισμού Κέντρου Δεδομένων (Data Center) και Εφεδρικού Κέντρου Δεδομένων (Disaster recovery center) Κτηματολογίου για λειτουργία σε εικονικό περιβάλλον (virtualization)",
+     "quote_english": "Upgrade of the equipment of the Cadastre Data Center and Disaster Recovery Center for operation in a virtualised environment",
+     "title": "Αναβάθμιση εξοπλισμού Κέντρου Δεδομένων (Data Center) και Εφεδρικού Κέντρου Δεδομένων Κτηματολογίου",
+     "url": "https://digitalstrategy.gov.gr/project/anavathmisi_exoplismoy_ktimatologioy_gia_leitoyrgia_se_eikoniko_perivallon_virtualization",
+     "value": "Hellenic Cadastre operates its own Data Center and Disaster Recovery Center (upgrade planned)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Αντικείμενο του έργου αποτελεί η ψηφιοποίηση των αρχείων του συστήματος Μεταγραφών και Υποθηκών καθενός από τα συμμετέχοντα στο έργο Υποθηκοφυλακεία και η εισαγωγή τους στο Σύστημα Πληροφορικής του Εθνικού Κτηματολογίου (ΣΠΕΚ).",
+     "quote_english": "The project concerns digitising the archives of the Transcriptions and Mortgages system of each participating Mortgage Registry and entering them into the National Cadastre Information System (SPEK).",
+     "title": "Ψηφιοποίηση Αρχείου Υποθηκοφυλακείων για το Εθνικό Κτηματολόγιο",
+     "url": "https://digitalstrategy.gov.gr/project/psifiopoiisi_archeioy_ypothikofylakeion_gia_to_ethniko_ktimatologio",
+     "value": "Cadastre Information System (ΣΠΕΚ), into which legacy mortgage-registry archives are being digitised"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "national",
+   "holding_name": "Εθνικό Κτηματολόγιο – Σύστημα Πληροφορικής Εθνικού Κτηματολογίου (ΣΠΕΚ)",
+   "operator": "Ελληνικό Κτηματολόγιο (Hellenic Cadastre)",
+   "research_note": "National classification rests on the Cadastre operating its own data centre and DR centre (project page). No parcel/record-count figure retrieved (ktimatologio.gr blocked).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2022-04-07",
+     "publisher": "e-nomothesia.gr (reproduction of the Government Gazette text)",
+     "quote": "α) «Γενικό Εμπορικό Μητρώο (Γ.Ε.ΜΗ.)»: Το εθνικό μητρώο εμπορικής δημοσιότητας, στο οποίο πραγματοποιείται η δημοσιότητα πράξεων, στοιχείων ή δηλώσεων των υπόχρεων προσώπων.",
+     "quote_english": "a) \"General Commercial Registry (GEMI)\": the national register of commercial publicity, in which acts, data or declarations of obliged persons are published.",
+     "title": "Νόμος 4919/2022 (ΦΕΚ Α΄ 71/7-4-2022)",
+     "url": "https://www.e-nomothesia.gr/kat-x/nomos-4919-2022-phek-71a-7-4-2022.html",
+     "value": "General Commercial Registry (Γ.Ε.ΜΗ.): the national register of commercial publicity"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2022-04-07",
+     "publisher": "e-nomothesia.gr (reproduction of the Government Gazette text)",
+     "quote": "Συστήνεται και λειτουργεί στην Κεντρική Ένωση Επιμελητηρίων Ελλάδας (Κ.Ε.Ε.Ε.), Τμήμα Υποστήριξης και Ανάπτυξης των Πληροφοριακών Συστημάτων Γ.Ε.ΜΗ. και Υ.Μ.Σ.",
+     "quote_english": "A Department for Support and Development of the Information Systems of GEMI and One-Stop Shops is established and operates at the Central Union of Chambers of Greece (KEEE)",
+     "title": "Νόμος 4919/2022 (ΦΕΚ Α΄ 71/7-4-2022)",
+     "url": "https://www.e-nomothesia.gr/kat-x/nomos-4919-2022-phek-71a-7-4-2022.html",
+     "value": "Support and development of the GEMI information systems sits in a department of the Central Union of Chambers of Greece (Κ.Ε.Ε.Ε.)"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Γενικό Εμπορικό Μητρώο (Γ.Ε.ΜΗ.)",
+   "operator": "Κεντρική Ένωση Επιμελητηρίων Ελλάδας (Κ.Ε.Ε.Ε.) / Υπηρεσίες Γ.Ε.ΜΗ. των Επιμελητηρίων",
+   "research_note": "No public source found on GEMI hosting; businessportal.gr reachable but no hosting statement found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2018-07-30",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Στη Γραμματεία Πληροφοριακών Συστημάτων (Γ.Γ.Π.Σ.) δημιουργείται, με χρήση διαδικτυακής ηλεκτρονικής εφαρμογής, Κεντρικό Μητρώο Πραγματικών Δικαιούχων, το οποίο συνδέεται ηλεκτρονικά με το Α.Φ.Μ. κάθε νομικού προσώπου ή νομικής οντότητας",
+     "quote_english": "A Central Register of Beneficial Owners is created at the Secretariat of Information Systems (GSIS), using a web application, electronically linked to the Tax ID of each legal person or entity",
+     "title": "Νόμος 4557/2018",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4557-2018/",
+     "value": "Central Register of Beneficial Owners, created at the General Secretariat for Information Systems and linked to each legal entity's tax number (ΑΦΜ)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2018-07-30",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "καταχωρίζεται στο Κεντρικό Μητρώο Πραγματικών Δικαιούχων εντός εξήντα (60) ημερών από την έναρξη λειτουργίας του, με τη χρήση κωδικών εισαγωγής στην ηλεκτρονική πλατφόρμα taxisnet.",
+     "quote_english": "is registered in the Central Register of Beneficial Owners within sixty (60) days of its start of operation, using login credentials on the taxisnet electronic platform.",
+     "title": "Νόμος 4557/2018",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4557-2018/",
+     "value": "Law 4557/2018, Art. 20; entities register via the TaxisNet platform"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Κεντρικό Μητρώο Πραγματικών Δικαιούχων (Central Register of Beneficial Owners)",
+   "operator": "Γ.Γ.Π.Σ. (now Γ.Γ.Π.Σ.Δ.Δ., Υπουργείο Ψηφιακής Διακυβέρνησης)",
+   "research_note": "Operated by GSIS on TaxisNet, but no source states hosting explicitly for this register.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης",
+     "quote": "Το φυσικό πρόσωπο-κάτοχος κάνοντας χρήση της εφαρμογής δίνει την εξουσιοδότηση του ώστε να έχει η εφαρμογή πρόσβαση στα ως άνω δημόσια έγγραφα μέσα από τα αντίστοιχα μητρώα από τα οποία αντλούνται",
+     "quote_english": "By using the application, the holder authorises it to access the above public documents through the respective registers from which they are drawn",
+     "title": "Gov.gr Wallet - Πολιτική Απορρήτου",
+     "url": "https://wallet.gov.gr/privacy/",
+     "value": "Driving licences and police ID cards are drawn into the Gov.gr Wallet from the respective registers in which they are held"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Στόχος του έργου είναι η απλούστευση της διαδικασίας έκδοσης αδειών οδήγησης και η ανάπτυξη εφαρμογής για την ηλεκτρονική υποβολή δικαιολογητικών ή η υποβολή τους μέσω ΚΕΠ.",
+     "quote_english": "The project aims to simplify the driving-licence issuance procedure and develop an application for electronic submission of documents or submission via KEP.",
+     "title": "Απλοποίηση & Ψηφιοποίηση της έκδοσης αδειών οδήγησης",
+     "url": "https://digitalstrategy.gov.gr/project/aplopoiisi_k_psifiopoiisi_tis_ekdosis_adeion_odigisis",
+     "value": "Driving-licence issuance is being digitised (online submission, electronic temporary licence)"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Μητρώα αδειών οδήγησης και οχημάτων (driving-licence and vehicle registers)",
+   "operator": "Υπουργείο Υποδομών και Μεταφορών (not confirmed by a retrieved source)",
+   "research_note": "Existence of the driving-licence register is confirmed; the operator, legal basis (Road Traffic Code, Law 2696/1999) and hosting could not be verified from an accessible full text. No vehicle-register source retrieved.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2019-06-11",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Με προεδρικό διάταγμα, που εκδίδεται ύστερα από πρόταση του Υπουργού Δικαιοσύνης, Διαφάνειας και Ανθρωπίνων Δικαιωμάτων, καθορίζονται: α) οι υπηρεσίες στις οποίες τηρείται το ποινικό μητρώο",
+     "quote_english": "By presidential decree issued on the proposal of the Minister of Justice, the following are specified: a) the services at which the criminal record is kept",
+     "title": "Νόμος 4620/2019 - Κώδικας Ποινικής Δικονομίας",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4620-2019/",
+     "value": "Code of Criminal Procedure (Law 4620/2019), Book Nine, Art. 568: criminal-record services organised by P.D. on the proposal of the Minister of Justice"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2019-06-11",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Με την επιφύλαξη της εφαρμογής του μηχανογραφικού συστήματος κατά το άρθρο 568 παρ. 1 εδ. ε΄, το ποινικό μητρώο αποτελείται από δελτία.",
+     "quote_english": "Subject to the application of the computerised system under Article 568 para. 1(e), the criminal record consists of record slips.",
+     "title": "Νόμος 4620/2019 - Κώδικας Ποινικής Δικονομίας",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4620-2019/",
+     "value": "Criminal record consists of record slips, subject to use of the computerised system"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Αφορά στη δεύτερη φάση ψηφιοποίησης της δικαστικής διαδικασίας στα πολιτικά και ποινικά δικαστήρια και εισαγγελίες μέσω του Ολοκληρωμένου Συστήματος Διαχείρισης Δικαστικών Υποθέσεων για την Πολιτική και Ποινική Δικαιοσύνη (ΟΣΔΔΥ-ΠΠ).",
+     "quote_english": "It concerns the second phase of digitising judicial procedure in civil and criminal courts and prosecutors' offices through the Integrated Court Case Management System for Civil and Criminal Justice (OSDDY-PP).",
+     "title": "Επέκταση και Αναβάθμιση των πληροφοριακών συστημάτων του τομέα της Δικαιοσύνης",
+     "url": "https://digitalstrategy.gov.gr/project/olokliromeno_systima_diacheirisis_ypotheseon_gia_tin_politiki_kai_poiniki_dikaiosyni_osddy-pp_b_fasi",
+     "value": "Integrated Court Case Management System for Civil and Criminal Justice (ΟΣΔΔΥ-ΠΠ)"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Ποινικό Μητρώο (criminal record) + ΟΣΔΔΥ-ΠΠ",
+   "operator": "Υπουργείο Δικαιοσύνης / Εισαγγελίες",
+   "research_note": "No source found on hosting of the criminal record system or OSDDY-PP.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2014-03-23",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "τη λήψη όλων των αναγκαίων μέτρων προστασίας και ασφάλειας των αρχείων και των βάσεων δεδομένων του κεντρικού συστήματος πληροφορικής της Ελληνικής Αστυνομίας",
+     "quote_english": "taking all necessary protection and security measures for the files and databases of the central information system of the Hellenic Police",
+     "title": "Νόμος 4249/2014",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4249-2014/",
+     "value": "Central information system of the Hellenic Police with its files and databases, protected by the Police IT Directorate"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "el",
+     "published": "2014-03-23",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Η Διεύθυνση Πληροφορικής είναι αρμόδια για το σχεδιασμό μηχανογραφημένων πληροφοριακών συστημάτων και τη δημιουργία και υποστήριξη της κατάλληλης τεχνικής και λειτουργικής υποδομής και των αναγκαίων εφαρμογών πληροφορικής",
+     "quote_english": "The IT Directorate is competent for designing computerised information systems and for creating and supporting the appropriate technical and operational infrastructure and the necessary IT applications",
+     "title": "Νόμος 4249/2014",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4249-2014/",
+     "value": "The Hellenic Police IT Directorate designs the computerised information systems and creates and supports their technical infrastructure"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "national",
+   "holding_name": "Κεντρικό σύστημα πληροφορικής της Ελληνικής Αστυνομίας (Hellenic Police central information system)",
+   "operator": "Ελληνική Αστυνομία – Διεύθυνση Πληροφορικής",
+   "research_note": "National classification rests on Law 4249/2014 assigning the infrastructure to the Police IT Directorate; the physical data-centre location is not published. astynomia.gr was not retrievable.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2014-03-23",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "την τεχνική υποστήριξη και εξασφάλιση της εύρυθμης λειτουργίας του πληροφοριακού συστήματος της εθνικής αρχής, στο πλαίσιο της σύμβασης SCHENGEN που κυρώθηκε με το ν. 2514/1997 (Α΄ 140)",
+     "quote_english": "the technical support and ensuring the smooth operation of the information system of the national authority, under the SCHENGEN convention ratified by Law 2514/1997",
+     "title": "Νόμος 4249/2014",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4249-2014/",
+     "value": "National Schengen information system (N.SIS) supported by the Hellenic Police IT Directorate under the Schengen Convention ratified by Law 2514/1997"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2014-03-23",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "διεκπεραίωσης της αλληλογραφίας αναφορικά με την καταχώριση ή άρση των προστίμων που επιβάλλονται και την εξέταση αιτημάτων που υποβάλλονται μέσω του εθνικού γραφείου SIRENE,",
+     "quote_english": "handling correspondence on entering or lifting fines imposed and examining requests submitted through the national SIRENE bureau,",
+     "title": "Νόμος 4249/2014",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4249-2014/",
+     "value": "Hellenic Police handles requests submitted through the national SIRENE bureau"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "national",
+   "holding_name": "Εθνικό τμήμα Συστήματος Πληροφοριών Σένγκεν (N.SIS) και γραφείο SIRENE",
+   "operator": "Ελληνική Αστυνομία",
+   "research_note": "National classification rests on the Police IT Directorate supporting the national Schengen system. No source on national VIS/EES components or hosting location.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "Ελληνική Αστυνομία",
+   "research_note": "Searched Law 2168/1993 (original 1993 text on lawspot) and Law 4249/2014 for a central firearms register or data-filing system; found only police licensing duties. The post-2020 transposition of the EU Firearms Directive was not retrieved.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "el",
+     "published": "",
+     "publisher": "Εθνικό Τυπογραφείο",
+     "quote": "Το Εθνικό Τυπογραφείο αποτελεί δημόσια υπηρεσία που υπάγεται στην Προεδρία της Κυβέρνησης.",
+     "quote_english": "The National Printing Office is a public service under the Presidency of the Government.",
+     "title": "Αποστολή - Εθνικό Τυπογραφείο",
+     "url": "https://et.gr/yphresia/mission/",
+     "value": "National Printing Office (Εθνικό Τυπογραφείο), a public service under the Presidency of the Government, publishes the Government Gazette (ΦΕΚ) in print and electronically"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "",
+     "publisher": "Εθνικό Τυπογραφείο",
+     "quote": "η έντυπη και ηλεκτρονική έκδοση, εκτύπωση, διαχείριση και κυκλοφορία της Εφημερίδας της Κυβερνήσεως και την εξασφάλιση της πρόσβασης των πολιτών στα κείμενα που δημοσιεύονται σε αυτήν",
+     "quote_english": "the printed and electronic publication, printing, management and circulation of the Government Gazette and ensuring citizens' access to the texts published in it",
+     "title": "Αποστολή - Εθνικό Τυπογραφείο",
+     "url": "https://et.gr/yphresia/mission/",
+     "value": "Government Gazette (Εφημερίδα της Κυβερνήσεως, ΦΕΚ): printed and electronic edition and citizens' access to published texts"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Εφημερίδα της Κυβερνήσεως (ΦΕΚ)",
+   "operator": "Εθνικό Τυπογραφείο (National Printing Office)",
+   "research_note": "The mission page cites Law 3469/2006. No published statement on hosting of et.gr / search.et.gr was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Το πληροφοριακό σύστημα της Κεντρικής Διοίκησης αποτελεί τη μετεξέλιξη του Ολοκληρωμένου Πληροφοριακού Συστήματος Δημοσιονομικής Πολιτικής (ΟΠΣΔΠ)",
+     "quote_english": "The information system of the Central Administration is the evolution of the Integrated Information System for Fiscal Policy (OPSDP)",
+     "title": "Κεντρικό και Ενιαίο Σύστημα Δημοσιονομικής Πολιτικής (Government ERP)",
+     "url": "https://digitalstrategy.gov.gr/project/government_erp",
+     "value": "Integrated Information System for Fiscal Policy (ΟΠΣΔΠ), to evolve into a central Government ERP"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Συμπλήρωση των υποδομών και αδειοδότηση των δύο επιπέδων πέραν της βάσης δεδομένων, των εφαρμογών και της παρουσίασης για όλα τα υφιστάμενα και νέα έργα που θα φιλοξενηθούν στο data center και στο disaster site του Υπ.Οικ. και της ΑΑΔΕ.",
+     "quote_english": "Completion of infrastructure and licensing of the two tiers beyond the database, applications and presentation for all existing and new projects to be hosted in the data centre and disaster site of the Ministry of Finance and AADE.",
+     "title": "Ενίσχυση των κεντρικών υποδομών Κυβερνητικού Νέφους (G- Cloud) της Γ.Γ.Π.Σ.Δ.Δ.",
+     "url": "https://digitalstrategy.gov.gr/project/g-cloud",
+     "value": "G-Cloud project plans infrastructure for systems hosted in the data centre and disaster site of the Ministry of Finance and AADE"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Ολοκληρωμένο Πληροφοριακό Σύστημα Δημοσιονομικής Πολιτικής (ΟΠΣΔΠ) / Government ERP",
+   "operator": "Υπουργείο Εθνικής Οικονομίας και Οικονομικών – Γενικό Λογιστήριο του Κράτους (not confirmed by a retrieved source)",
+   "research_note": "The G-Cloud claim concerns Ministry of Finance systems generally, not ΟΠΣΔΠ specifically, so hosting remains unknown. minfin.gov.gr and glk.gr were not retrievable.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "λαμβάνοντας υπόψη το πλήθος των τουλάχιστον 680.000 μισθοδοτούμενων, που ανήκουν σε 3.500 φορείς του ευρύτερου Δημόσιου Τομέα",
+     "quote_english": "taking into account the number of at least 680,000 paid employees belonging to 3,500 bodies of the wider Public Sector",
+     "title": "Μισθοδοσία",
+     "url": "https://digitalstrategy.gov.gr/project/misthodosia",
+     "value": "At least 680,000 paid staff in 3,500 wider-public-sector bodies"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Συγκεκριμένα το έργο θα επιτρέψει οι μισθολογικές, ασφαλιστικές, φορολογικές και λοιπές σχετικές με τη μισθοδοσία διατάξεις να εφαρμόζονται κεντρικά από την Ενιαία Αρχή Πληρωμής (ΕΑΠ).",
+     "quote_english": "Specifically, the project will allow salary, insurance, tax and other payroll provisions to be applied centrally by the Single Payment Authority (EAP).",
+     "title": "Μισθοδοσία",
+     "url": "https://digitalstrategy.gov.gr/project/misthodosia",
+     "value": "Payroll rules to be applied centrally by the Single Payment Authority (Ενιαία Αρχή Πληρωμής, ΕΑΠ)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Το έργο αφορά τη σχεδίαση και υλοποίηση ενός κεντρικού συστήματος διαχείρισης ανθρώπινου δυναμικού του ελληνικού Δημοσίου.",
+     "quote_english": "The project concerns the design and implementation of a central human resources management system of the Greek State.",
+     "title": "Κεντρικό Σύστημα Διαχείρισης Ανθρώπινου Δυναμικού",
+     "url": "https://digitalstrategy.gov.gr/project/kentriko_systima_diacheirisis_anthropinoy_dynamikoy",
+     "value": "Central Human Resources Management System for the Greek public administration, from appointment to retirement"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Ενιαία Αρχή Πληρωμής (ΕΑΠ) μισθοδοσία + Κεντρικό Σύστημα Διαχείρισης Ανθρώπινου Δυναμικού",
+   "operator": "Ενιαία Αρχή Πληρωμής (ΕΑΠ)",
+   "research_note": "Armed-forces payroll not covered. Legal basis of ΕΑΠ (Law 4024/2011) not verifiable from the partial lawspot text. Hosting not published.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2012-03-14",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Επίσης συντάσσει πίνακα με αναλυτικά αποτελέσματα σταυροδοσίας των υποψηφίων, τον οποίο αποστέλλει άμεσα σε έντυπη ή ηλεκτρονική μορφή στο Υπουργείο Εσωτερικών.",
+     "quote_english": "It also compiles a table with detailed preference-vote results of the candidates, which it immediately sends in printed or electronic form to the Ministry of the Interior.",
+     "title": "Προεδρικό Διάταγμα 26/2012 (κωδικοποίηση εκλογικής νομοθεσίας)",
+     "url": "https://www.lawspot.gr/nomothesia/proedriko-diatagma-26-2012/",
+     "value": "Courts of first instance compile detailed preference-vote results and send them in print or electronically to the Ministry of the Interior"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Aφορά στην αναβάθμιση των συστημάτων που υποστηρίζουν τις εκλογικές διαδικασίες και την ενοποίησή τους σε ένα ενιαίο, κεντρικό, σύγχρονο μηχανογραφικό περιβάλλον",
+     "quote_english": "It concerns upgrading the systems supporting electoral processes and unifying them into a single, central, modern computing environment",
+     "title": "Αναβάθμιση και Ολοκλήρωση συστημάτων εκλογικής διαδικασίας",
+     "url": "https://digitalstrategy.gov.gr/project/anavathmisi_kai_oloklirosi_systimaton_eklogikis_diadikasias",
+     "value": "Planned unified central IT environment for electoral processes (candidate lists, results aggregation, seat allocation) involving the Ministry of Justice"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Συστήματα εκλογικής διαδικασίας και αποτελεσμάτων (election results systems)",
+   "operator": "Υπουργείο Εσωτερικών; Πρωτοδικεία / Υπουργείο Δικαιοσύνης",
+   "research_note": "No public source found on who hosts or operates the results tabulation platform (ekloges.ypes.gr not retrievable).",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "bankofgreece.gr returned HTTP 403 and the DIAS payment-system site timed out; the Bank of Greece statute was not available on lawspot. No verifiable source retrieved for central-bank systems or hosting.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "geetha.mil.gr and mod.mil.gr returned HTTP 403; the Bible of Digital Transformation catalogue lists only an armed-forces health system (ΟΠΣΥΕΔ), not command-and-control. No verifiable public source retrieved.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2008-03-05",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Η Εθνική Υπηρεσία Πληροφοριών (Ε.Υ.Π.) αποτελεί αυτοτελή δημόσια πολιτική υπηρεσία",
+     "quote_english": "The National Intelligence Service (EYP) is an autonomous public civilian service",
+     "title": "Νόμος 3649/2008",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-3649-2008/",
+     "value": "National Intelligence Service (Ε.Υ.Π.) is an autonomous public civilian service (Law 3649/2008 as reproduced)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2008-03-05",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Η Ε.Υ.Π. έχει ως αποστολή, στο πλαίσιο του Συντάγματος και των νόμων, την αναζήτηση, συλλογή, επεξεργασία και γνωστοποίηση στις αρμόδιες αρχές των πληροφοριών",
+     "quote_english": "EYP's mission, within the Constitution and the laws, is the search, collection, processing and communication to the competent authorities of information",
+     "title": "Νόμος 3649/2008",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-3649-2008/",
+     "value": "Law 3649/2008, Art. 2: EYP's mission is the search, collection, processing and communication of intelligence to the competent authorities"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Αρχεία Εθνικής Υπηρεσίας Πληροφοριών (ΕΥΠ)",
+   "operator": "Εθνική Υπηρεσία Πληροφοριών (ΕΥΠ)",
+   "research_note": "Hosting of intelligence holdings is not public, as expected. The retrieved text of Law 3649/2008 predates later changes to EYP's supervising authority.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "civilprotection.gov.gr returned HTTP 403 and 112.gr timed out; Law 4662/2020 (which governs the 112 service) could not be retrieved from lawspot or e-nomothesia. No PSAP or TETRA/public-safety network source retrieved.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2002-05-02",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Οργανώνει και λειτουργεί σε μόνιμη βάση και για όλη τη διάρκεια του εικοσιτετραώρου το Κέντρο Επιχειρήσεων Πολιτικής Προστασίας με ειδικευμένα στελέχη πολιτικής προστασίας και το αναγκαίο προσωπικό",
+     "quote_english": "It organises and operates on a permanent basis, around the clock, the Civil Protection Operations Centre with specialised civil-protection staff and the necessary personnel",
+     "title": "Νόμος 3013/2002",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-3013-2002/",
+     "value": "Civil Protection Operations Centre, run 24/7 by the General Secretariat for Civil Protection (Law 3013/2002 as reproduced; since superseded by Law 4662/2020, not retrieved)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2002-05-02",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "η δημιουργία και η διατήρηση τράπεζας πληροφοριών και γεωγραφικών συστημάτων πληροφοριών, το σύνολο των στοιχείων της οποίας είναι διαθέσιμο, σε μόνιμη και διαρκή βάση, για χρήση από το Κέντρο Επιχειρήσεων της Γενικής Γραμματείας Πολιτικής Προστασίας.",
+     "quote_english": "the creation and maintenance of an information bank and geographic information systems, all data of which is permanently available for use by the Operations Centre of the General Secretariat for Civil Protection.",
+     "title": "Νόμος 3013/2002",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-3013-2002/",
+     "value": "Civil-protection information bank and GIS, available to the Operations Centre"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Κέντρο Επιχειρήσεων Πολιτικής Προστασίας και τράπεζα πληροφοριών/GIS",
+   "operator": "Γενική Γραμματεία Πολιτικής Προστασίας (current ministerial placement not verified)",
+   "research_note": "Legal text retrieved is the 2002 law; the current framework (Law 4662/2020) could not be retrieved. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "el",
+     "published": "",
+     "publisher": "ΑΔΜΗΕ (Independent Power Transmission Operator)",
+     "quote": "Η State Grid αποτελεί στρατηγικό επενδυτή με ποσοστό 24% από το 2017.",
+     "quote_english": "State Grid has been a strategic investor with a 24% stake since 2017.",
+     "title": "State Grid - Μέτοχοι",
+     "url": "https://www.admie.gr/i-etaireia/metohoi/state-grid",
+     "value": "State Grid Corporation of China has been a 24% strategic shareholder of the transmission system operator ADMIE (IPTO) since 2017 (ownership, not a statement about hosting of SCADA/EMS)"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Έλεγχος Ελληνικού Συστήματος Μεταφοράς Ηλεκτρικής Ενέργειας (ΕΣΜΗΕ) – ΑΔΜΗΕ",
+   "operator": "ΑΔΜΗΕ Α.Ε. (IPTO)",
+   "research_note": "ADMIE control-centre/SCADA pages render content client-side and yielded no verifiable text on control systems or hosting. The State Grid stake is an ownership dependency of the operator, recorded in claims; hosting itself remains unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "el",
+     "published": "",
+     "publisher": "ΕΥΔΑΠ Α.Ε.",
+     "quote": "Στη Σύμβαση αυτή, καθορίζονται οι όροι ανανέωσης του αποκλειστικού δικαιώματος παροχής υπηρεσιών ύδρευσης και αποχέτευσης της ΕΥΔΑΠ, καθώς και οι όροι για την υπογραφή σύμβασης υπηρεσιών λειτουργίας και συντήρησης του Εξωτερικού Υδροδοτικού Συστήματος (ΕΥΣ), για τρία (3) έτη.",
+     "quote_english": "This Contract sets the terms for renewing EYDAP's exclusive right to provide water supply and sewerage services, and the terms for signing a contract for operation and maintenance of the External Water Supply System (EYS), for three (3) years.",
+     "title": "Η Εταιρεία - ΕΥΔΑΠ",
+     "url": "https://www.eydap.gr/TheCompany/",
+     "value": "EYDAP holds an exclusive right to water supply and sewerage services under a contract with the Greek State, which also covers operation and maintenance of the External Water Supply System (ΕΥΣ)"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Σύστημα ύδρευσης Αττικής (ΕΥΔΑΠ) – partial coverage only",
+   "operator": "ΕΥΔΑΠ Α.Ε. (Athens Water Supply and Sewerage Company)",
+   "research_note": "Covers Attica only; no national water-control register. No source found on EYDAP SCADA/telecontrol systems or their hosting. Thessaloniki (ΕΥΑΘ) and flood-defence systems not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2019-03-09",
+     "publisher": "e-nomothesia.gr (reproduction of the Government Gazette text)",
+     "quote": "Καθιερώνεται ο Ατομικός Ηλεκτρονικός Φάκελος Υγείας (Α.Η.Φ.Υ.) για όλους τους κατόχους Α.Μ.Κ.Α. και Α.Υ.Π.Α., ο οποίος τίθεται σε λειτουργία με απόφαση του Υπουργού Υγείας.",
+     "quote_english": "The Individual Electronic Health Record (AHFY) is established for all holders of AMKA and AYPA, and is put into operation by decision of the Minister of Health.",
+     "title": "Νόμος 4600/2019 (ΦΕΚ Α΄ 43/9-3-2019)",
+     "url": "https://www.e-nomothesia.gr/kat-x/nomos-4600-2019-phek-43a-9-3-2019.html",
+     "value": "Law 4600/2019, Art. 84 (replacing Art. 51(4) of Law 4238/2014): the Individual Electronic Health Record (Α.Η.Φ.Υ.) is established for all AMKA/AYPA holders"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2019-03-09",
+     "publisher": "e-nomothesia.gr (reproduction of the Government Gazette text)",
+     "quote": "Με τη σύσταση και λειτουργία του από το Υπουργείο Υγείας, ως υπεύθυνο επεξεργασίας, ο Α.Η.Φ.Υ. διέπεται από τις διατάξεις του Γενικού Κανονισμού Προστασίας Δεδομένων",
+     "quote_english": "With its establishment and operation by the Ministry of Health, as controller, the AHFY is governed by the provisions of the General Data Protection Regulation",
+     "title": "Νόμος 4600/2019 (ΦΕΚ Α΄ 43/9-3-2019)",
+     "url": "https://www.e-nomothesia.gr/kat-x/nomos-4600-2019-phek-43a-9-3-2019.html",
+     "value": "Ministry of Health establishes and operates the record as data controller"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2019-03-09",
+     "publisher": "e-nomothesia.gr (reproduction of the Government Gazette text)",
+     "quote": "Το περιεχόμενο του Α.Η.Φ.Υ. τηρείται ισοβίως και είναι ενιαίο και υποχρεωτικό σε εθνικό επίπεδο.",
+     "quote_english": "The content of the AHFY is kept for life and is single and mandatory at national level.",
+     "title": "Νόμος 4600/2019 (ΦΕΚ Α΄ 43/9-3-2019)",
+     "url": "https://www.e-nomothesia.gr/kat-x/nomos-4600-2019-phek-43a-9-3-2019.html",
+     "value": "The AHFY content is kept for life and is single and mandatory at national level"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "",
+     "publisher": "Υπουργείο Υγείας",
+     "quote": "Ένα ασφαλές, κεντρικό σημείο αποθήκευσης και διαχείρισης ιατρικών δεδομένων σε ηλεκτρονική μορφή.",
+     "quote_english": "A secure, central point for storing and managing medical data in electronic form.",
+     "title": "Εθνικός Ηλεκτρονικός Φάκελος Υγείας",
+     "url": "https://www.ehealthrecord.gov.gr/ehfy-overview-details",
+     "value": "National Electronic Health Record (ΕΗΦΥ): a central point for storing and managing medical data"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Στο Κυβερνητικό Νέφος Τομέα Υγείας (H-Cloud) πρέπει υποχρεωτικά να εγκατασταθούν έως την 1η.1.2023 όλες οι ηλεκτρονικές εφαρμογές και τα κεντρικά πληροφοριακά συστήματα του Υπουργείου Υγείας, των Νοσοκομείων και των Κέντρων Υγείας",
+     "quote_english": "All electronic applications and central information systems of the Ministry of Health, hospitals and health centres must be installed in the Health Sector Government Cloud (H-Cloud) by 1.1.2023",
+     "title": "Σύστημα Διακυβέρνησης Δεδομένων για τον Τομέα της Υγείας",
+     "url": "https://digitalstrategy.gov.gr/project/systima_diakyvernisis_dedomenon_gia_ton_tomea_tis_ygeias",
+     "value": "Law 4727/2020 mandates that central health-sector systems processing medical data be installed in the Health Sector Government Cloud (H-Cloud) run by IDIKA"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "national",
+   "holding_name": "Ατομικός / Εθνικός Ηλεκτρονικός Φάκελος Υγείας (Α.Η.Φ.Υ. / ΕΗΦΥ)",
+   "operator": "Υπουργείο Υγείας; υλοποίηση Η.Δ.Υ.Κ.Α. Μ.Α.Ε.",
+   "research_note": "Hosting classification rests on a legal mandate to use the state H-Cloud (IDIKA); actual migration status was not confirmed by a separate source.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2019-10-16",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Συστήνεται Νομικό Πρόσωπο Ιδιωτικού Δικαίου με την επωνυμία «Εθνικός Οργανισμός Δημόσιας Υγείας» (ΕΟΔΥ), το οποίο υπάγεται στην εποπτεία του Υπουργού Υγείας.",
+     "quote_english": "A legal entity of private law is established named \"National Public Health Organization\" (EODY), supervised by the Minister of Health.",
+     "title": "Νόμος 4633/2019",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4633-2019/",
+     "value": "National Public Health Organization (ΕΟΔΥ), private-law entity supervised by the Minister of Health (Law 4633/2019)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2019-10-16",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Οι βασικές λειτουργίες του ΕΟΔΥ περιλαμβάνουν δραστηριότητες, όπως η επιδημιολογική επιτήρηση, η εκτίμηση κινδύνου, η παροχή γνωμοδοτήσεων σε επιστημονικά θέματα",
+     "quote_english": "The core functions of EODY include activities such as epidemiological surveillance, risk assessment, provision of opinions on scientific matters",
+     "title": "Νόμος 4633/2019",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-4633-2019/",
+     "value": "EODY core functions include epidemiological surveillance and provision of epidemiological data"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Επιδημιολογική επιτήρηση ΕΟΔΥ (notifiable disease surveillance)",
+   "operator": "Εθνικός Οργανισμός Δημόσιας Υγείας (ΕΟΔΥ)",
+   "research_note": "eody.gov.gr returned HTTP 403; no source retrieved on the vaccination register or surveillance-system hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Η πλατφόρμα διαχειρίζεται 1,5 εκατομμύριο μαθητές, 140 χιλιάδες εκπαιδευτικό προσωπικό και εξυπηρετεί 16 χιλιάδες σχολικές μονάδες",
+     "quote_english": "The platform manages 1.5 million pupils, 140 thousand educational staff and serves 16 thousand school units",
+     "title": "Ψηφιακές Υπηρεσίες MySchool",
+     "url": "https://digitalstrategy.gov.gr/project/myschool",
+     "value": "MySchool platform manages 1.5 million pupils and 140,000 educational staff across 16,000 school units"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "MySchool (πληροφοριακό σύστημα σχολικών μονάδων)",
+   "operator": "Υπουργείο Παιδείας (not confirmed by the retrieved page)",
+   "research_note": "No legal basis or hosting statement retrieved for MySchool; higher-education diploma registers not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2010-03-11",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Φορείς του ΕΛ.Σ.Σ. είναι η Ελληνική Στατιστική Αρχή (ΕΛ.ΣΤΑΤ.), ανεξάρτητη αρχή, η οποία συνιστάται με το άρθρο 9, και αποτελεί την εθνική στατιστική υπηρεσία",
+     "quote_english": "Bodies of the Hellenic Statistical System are the Hellenic Statistical Authority (ELSTAT), an independent authority established by Article 9, which is the national statistical service",
+     "title": "Νόμος 3832/2010",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-3832-2010/",
+     "value": "Hellenic Statistical Authority (ΕΛ.ΣΤΑΤ.), independent authority and the national statistical service"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "Στατιστικά μικροδεδομένα ΕΛΣΤΑΤ (incl. census)",
+   "operator": "Ελληνική Στατιστική Αρχή (ΕΛΣΤΑΤ)",
+   "research_note": "No source retrieved on ELSTAT microdata hosting or census data volume.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2010-09-22",
+     "publisher": "Lawspot (reproduction of the Government Gazette text)",
+     "quote": "Ο ΟΚΧΕ παρέχει πρόσβαση στις υπηρεσίες του άρθρου 8 παράγραφος 1 μέσω της Γεωπύλης του άρθρου 25 και μέσω της δικτυακής πύλης γεωχωρικών πληροφοριών Inspire.",
+     "quote_english": "OKXE provides access to the services of Article 8(1) through the Geoportal of Article 25 and through the Inspire geospatial information portal.",
+     "title": "Νόμος 3882/2010",
+     "url": "https://www.lawspot.gr/nomothesia/nomos-3882-2010/",
+     "value": "National Spatial Data Infrastructure (ΕΥΓΕΠ) and national Geoportal, access provided by ΟΚΧΕ under Law 3882/2010 (INSPIRE)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "υποστηρίζοντας την πλήρως ηλεκτρονική τήρηση και λειτουργία του Κτηματολογίου για το σύνολο της χώρας αλλά και διαθέτοντας τον Ενιαίο Ψηφιακό Χάρτη προς όλους",
+     "quote_english": "supporting the fully electronic keeping and operation of the Cadastre for the whole country and making the Single Digital Map available to all",
+     "title": "Αναβάθμιση εξοπλισμού Κέντρου Δεδομένων (Data Center) και Εφεδρικού Κέντρου Δεδομένων Κτηματολογίου",
+     "url": "https://digitalstrategy.gov.gr/project/anavathmisi_exoplismoy_ktimatologioy_gia_leitoyrgia_se_eikoniko_perivallon_virtualization",
+     "value": "Hellenic Cadastre makes available the Single Digital Map (Ενιαίος Ψηφιακός Χάρτης)"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Εθνική Υποδομή Γεωχωρικών Πληροφοριών / Ενιαίος Ψηφιακός Χάρτης",
+   "operator": "Ελληνικό Κτηματολόγιο (successor of ΟΚΧΕ – succession not verified here)",
+   "research_note": "The Cadastre data-centre claim is recorded under land_property; not repeated as hosting here because the Single Digital Map hosting is not separately stated.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023-12-01",
+     "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025)",
+     "quote": "Το έργο αφορά την ψηφιοποίηση όλων των φυσικών αρχείων των Γενικών Αρχείων του Κράτους και τη μετάπτωση αυτών των δεδομένων από τα σχετικά πληροφοριακά συστήματα.",
+     "quote_english": "The project concerns digitising all physical archives of the General State Archives and migrating these data from the related information systems.",
+     "title": "Ψηφιοποίηση των Γενικών Αρχείων του Κράτους",
+     "url": "https://digitalstrategy.gov.gr/project/psifiopoiisi_ton_genikon_archeion_toy_kratoys",
+     "value": "Digitisation of all physical holdings of the General State Archives (ΓΑΚ) and migration of data from related information systems"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "el",
+     "published": "",
+     "publisher": "Γενικά Αρχεία του Κράτους",
+     "quote": "Μέχρι την ολοκλήρωση των εργασιών, μπορείτε να επισκεφθείτε τις ακόλουθες ψηφιακές υπηρεσίες των Γενικών Αρχείων του Κράτους:",
+     "quote_english": "Until the works are completed, you can visit the following digital services of the General State Archives:",
+     "title": "Γενικά Αρχεία του Κράτους",
+     "url": "https://gak.gr/",
+     "value": "General State Archives operate digital services (listed on the page: National Archives Inventory, 1922 Digital Archives Portal, digital archival collections)"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Γενικά Αρχεία του Κράτους – ψηφιακές αρχειακές συλλογές",
+   "operator": "Γενικά Αρχεία του Κράτους (ΓΑΚ)",
+   "research_note": "Legal basis (Law 1946/1991) not retrievable; no source on digital transfer of born-digital government records or on hosting.",
+   "status": "held"
+  }
+ ],
+ "iso": "EL"
+}

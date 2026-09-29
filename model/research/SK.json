@@ -1,0 +1,1502 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Ministerstvo investícií, regionálneho rozvoja a informatizácie SR",
+     "quote": "Poskytovateľom cloudových služieb a prevádzkovateľom cloudových služieb v časti privátneho cloudu v modeli infraštruktúra ako služba a platforma ako služba môže byť spomedzi orgánov riadenia len Ministerstvo vnútra Slovenskej republiky",
+     "quote_english": "Among governing bodies, only the Ministry of Interior may be the provider and operator of cloud services in the private cloud part in the IaaS and PaaS models",
+     "title": "Vládny cloud",
+     "url": "https://mirri.gov.sk/sekcie/informatizacia/dokumenty/vladny-cloud/",
+     "value": "Only the Ministry of Interior may provide/operate the private IaaS/PaaS part of the Government Cloud"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "sk",
+     "published": "",
+     "publisher": "Ministerstvo investícií, regionálneho rozvoja a informatizácie SR",
+     "quote": "výpočtové zdroje zabezpečujú datacentrum v správe Ministerstva vnútra Slovenskej republiky a datacentrum v správe Ministerstva financií Slovenskej republiky.",
+     "quote_english": "compute resources are provided by the datacentre administered by the Ministry of Interior and the datacentre administered by the Ministry of Finance.",
+     "title": "Vládny cloud",
+     "url": "https://mirri.gov.sk/sekcie/informatizacia/dokumenty/vladny-cloud/",
+     "value": "Compute for the private cloud is provided by datacentres administered by the Ministry of Interior and the Ministry of Finance"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "sk",
+     "published": "",
+     "publisher": "Ministerstvo investícií, regionálneho rozvoja a informatizácie SR",
+     "quote": "Dostupné cenníky MVSR = privátna časť Vládneho cloudu Azure – v regióne „North Europe – Ireland“ Oracle Cloud Infrastructure (OCI) – v regióne „Germany Central (Frankfurt)“",
+     "quote_english": "Available price lists: MVSR = private part of the Government Cloud; Azure in region North Europe - Ireland; Oracle Cloud Infrastructure (OCI) in region Germany Central (Frankfurt)",
+     "title": "Vládny cloud",
+     "url": "https://mirri.gov.sk/sekcie/informatizacia/dokumenty/vladny-cloud/",
+     "value": "The public part consists of commercial providers; price lists are published for Azure (North Europe, Ireland) and Oracle OCI (Germany Central, Frankfurt)"
+    }
+   ],
+   "holding_name": "Vládny cloud (Government Cloud)",
+   "suggested_class": "government_cloud_platform",
+   "why_critical": "Shared hosting platform for public-administration information systems. Its private part runs in state datacentres and its public part lists commercial providers, so it decides where many registers physically sit."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Národná agentúra pre sieťové a elektronické služby",
+     "quote": "Je nadrezortnou informačnou sieťou, ktorá slúži na efektívnu a bezpečnú výmenu informácií. Vznikla na základe uznesenia vlády SR č. 310/1993 Z. z.",
+     "quote_english": "It is a cross-ministry information network serving efficient and secure information exchange. It was created on the basis of Government Resolution No. 310/1993.",
+     "title": "Vládna sieť Govnet",
+     "url": "https://www.nases.gov.sk/sluzby/sluzby-pre-po-a-ovm/govnet",
+     "value": "Govnet is the cross-ministry government information network operated by NASES"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "sk",
+     "published": "",
+     "publisher": "Národná agentúra pre sieťové a elektronické služby",
+     "quote": "bezpečná elektronická pošta ( antivírusová / antispamová farma), housing a hosting aplikácií, konektivita do siete TESTA",
+     "quote_english": "secure e-mail (antivirus/antispam farm), housing and hosting of applications, connectivity to the TESTA network",
+     "title": "Vládna sieť Govnet",
+     "url": "https://www.nases.gov.sk/sluzby/sluzby-pre-po-a-ovm/govnet",
+     "value": "Govnet services include housing and hosting of applications and central portal services"
+    }
+   ],
+   "holding_name": "Vládna sieť Govnet (Government network)",
+   "suggested_class": "government_network",
+   "why_critical": "Cross-government network that carries data exchange between public bodies, including housing and hosting of applications and central portal services."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Register je informačným systémom verejnej správy,6) ktorý obsahuje súbor údajov o obyvateľoch Slovenskej republiky a o ďalších osobách evidovaných v registri, na ktorých základe možno osobu identifikovať, zistiť jej pobyt a vzťahy k iným osobám",
+     "quote_english": "(1) The register is a public administration information system containing data on inhabitants of the Slovak Republic and other persons registered, on the basis of which a person can be identified and their residence and relationships to other persons established",
+     "title": "Zákon o hlásení pobytu občanov Slovenskej republiky a registri obyvateľov Slovenskej republiky 253/1998",
+     "url": "https://zakony.judikaty.info/predpis/zakon-253/1998",
+     "value": "Register obyvateľov Slovenskej republiky (Register of Inhabitants of the Slovak Republic), a public-administration information system identifying persons, their residence and relationships"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Register fyzických osôb je základný register verejnej správy, ktorý obsahuje súbor údajov o fyzických osobách podľa § 23b. Správcom registra fyzických osôb je ministerstvo. Doba uchovávania údajov v registri fyzických osôb je trvalá.",
+     "quote_english": "(1) The register of natural persons is a base register of public administration containing data on natural persons under § 23b. The administrator of the register of natural persons is the ministry. Data in the register of natural persons are retained permanently.",
+     "title": "Zákon o hlásení pobytu občanov Slovenskej republiky a registri obyvateľov Slovenskej republiky 253/1998",
+     "url": "https://zakony.judikaty.info/predpis/zakon-253/1998",
+     "value": "The Ministry of Interior (ministerstvo) administers the Register of Natural Persons, a base register; retention is permanent"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(2) Register je zdrojom platných údajov o obyvateľoch Slovenskej republiky a o ďalších osobách evidovaných v registri pre potreby štátnych orgánov, orgánov územnej samosprávy, iných právnických osôb alebo fyzických osôb.",
+     "quote_english": "(2) The register is the source of valid data on inhabitants of the Slovak Republic and other registered persons for state bodies, territorial self-government, other legal or natural persons.",
+     "title": "Zákon o hlásení pobytu občanov Slovenskej republiky a registri obyvateľov Slovenskej republiky 253/1998",
+     "url": "https://zakony.judikaty.info/predpis/zakon-253/1998",
+     "value": "Act No. 253/1998 Coll. on reporting residence of citizens and the Register of Inhabitants of the Slovak Republic"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Ministerstvo vnútra Slovenskej republiky",
+     "quote": "Podľa § 23 ods. 1 zákona č. 253/1998 Z. z. o hlásení pobytu občanov Slovenskej republiky a registri obyvateľov Slovenskej republiky v znení neskorších predpisov je z registra obyvateľov možné poskytnúť oznámenie o mieste pobytu obyvateľa .",
+     "quote_english": "Under § 23(1) of Act No. 253/1998 on reporting residence of citizens and the register of inhabitants, as amended, a notice of an inhabitant's place of residence can be provided from the register of inhabitants.",
+     "title": "Register obyvateľov SR",
+     "url": "https://www.minv.sk/?register-obyvatelov-sr",
+     "value": "The Ministry of Interior of the Slovak Republic publishes the Register of Inhabitants service page and cites Act 253/1998 as the basis for issuing residence notices from it"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register obyvateľov Slovenskej republiky / Register fyzických osôb",
+   "operator": "Ministerstvo vnútra Slovenskej republiky",
+   "research_note": "No public source found on hosting or record count. Slov-Lex (official gazette) refuses automated fetches, so statute text is cited from the zakony.judikaty.info consolidated mirror.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Ministerstvo a okresné riaditeľstvá vedú evidenciu občianskych preukazov a evidenciu čistopisov občianskych preukazov.",
+     "quote_english": "(1) The ministry and the district directorates keep the records of identity cards and the records of blank identity cards.",
+     "title": "Zákon o občianskych preukazoch 224/2006",
+     "url": "https://zakony.judikaty.info/predpis/zakon-224/2006",
+     "value": "Evidencia občianskych preukazov (ID card records) kept by the Ministry of Interior and district police directorates"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "h) úrad, ktorý občiansky preukaz vydal, i) dobu platnosti občianskeho preukazu, j) zobrazenie podoby tváre občana, k) podpis občana",
+     "quote_english": "h) the office that issued the identity card, i) the validity period of the identity card, j) the image of the citizen's face, k) the citizen's signature",
+     "title": "Zákon o občianskych preukazoch 224/2006",
+     "url": "https://zakony.judikaty.info/predpis/zakon-224/2006",
+     "value": "Act 224/2006 on identity cards, § 15(2): the ID card records contain the holder's facial image and signature (2019 consolidated version on this mirror)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "Centrálnu evidenciu cestovných dokladov vydávaných príslušnými útvarmi vedie ministerstvo vnútra.",
+     "quote_english": "The central register of travel documents issued by the competent units is kept by the Ministry of Interior.",
+     "title": "Zákon o cestovných dokladoch 647/2007",
+     "url": "https://zakony.judikaty.info/predpis/zakon-647/2007",
+     "value": "The Ministry of Interior keeps the central register of travel documents, which includes the facial image"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "i) príslušný útvar, ktorý cestovný doklad vydal, j) podobu tváre, k) podpis, l) akademický titul",
+     "quote_english": "i) the competent unit that issued the travel document, j) the facial image, k) the signature, l) academic title",
+     "title": "Zákon o cestovných dokladoch 647/2007",
+     "url": "https://zakony.judikaty.info/predpis/zakon-647/2007",
+     "value": "Act 647/2007 on travel documents, § 29(2): the travel-document register and the central register contain the facial image and signature"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidencia občianskych preukazov; centrálna evidencia cestovných dokladov",
+   "operator": "Ministerstvo vnútra Slovenskej republiky and okresné riaditeľstvá Policajného zboru",
+   "research_note": "The mirror's consolidated text of Act 224/2006 is the 2019 version. No source found on hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "na účely tohto zákona sú biometrickými údajmi podoba tváre a odtlačky prstov v elektronickom čipe podľa osobitného predpisu.",
+     "quote_english": "for the purposes of this act, biometric data are the facial image and fingerprints in the electronic chip under a special regulation.",
+     "title": "Zákon o cestovných dokladoch 647/2007",
+     "url": "https://zakony.judikaty.info/predpis/zakon-647/2007",
+     "value": "Fingerprints are biometric data stored in the electronic chip of Slovak travel documents"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "Občan, ktorému má byť cestovný doklad vydaný, je povinný sa podrobiť nasnímaniu podoby tváre, odtlačkov prstov a podpisu, ak cestovný doklad takéto údaje obsahuje",
+     "quote_english": "A citizen to whom a travel document is to be issued must undergo capture of the facial image, fingerprints and signature, if the travel document contains such data",
+     "title": "Zákon o cestovných dokladoch 647/2007",
+     "url": "https://zakony.judikaty.info/predpis/zakon-647/2007",
+     "value": "Act 647/2007 obliges passport applicants to have their face, fingerprints and signature captured"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Biometric data (fingerprints) in travel-document chips",
+   "operator": "Ministerstvo vnútra Slovenskej republiky",
+   "research_note": "Act 647/2007 requires fingerprints to be captured for the passport chip. The list of what the central travel-document register holds (§ 29(2)) names the facial image and signature but not fingerprints. No source states either way whether fingerprints are kept centrally. The police hold dactyloscopic data under Act 171/1993 § 69 (see police_records).",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Matričný úrad vedie zbierku listín. Tvoria ju listiny, ktoré slúžia ako podklad na zápis, dodatočný zápis, dodatočný záznam alebo ich zmenu v matrike.",
+     "quote_english": "(1) The registry office keeps a collection of documents. It consists of documents serving as the basis for an entry, supplementary entry, supplementary record or their change in the civil register.",
+     "title": "Zákon Národnej rady Slovenskej republiky o matrikách 154/1994",
+     "url": "https://zakony.judikaty.info/predpis/zakon-154/1994",
+     "value": "Zbierka listín (collection of source documents) kept by registry offices as the basis for civil-status entries"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(2) Okresný úrad uchováva zbierku listín oddelene od ostatných písomností a zabezpečuje jej aktualizáciu a ochranu pred zničením a poškodením a pred zneužitím údajov, ktoré obsahuje.",
+     "quote_english": "(2) The district office keeps the collection of documents separately from other papers and ensures its updating and protection against destruction, damage and misuse of its data.",
+     "title": "Zákon Národnej rady Slovenskej republiky o matrikách 154/1994",
+     "url": "https://zakony.judikaty.info/predpis/zakon-154/1994",
+     "value": "District offices keep the collection of documents and hand it to the state archive after 100 years"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "Správcom a prevádzkovateľom informačného systému elektronická matrika je ministerstvo.",
+     "quote_english": "The administrator and operator of the electronic civil register information system is the ministry.",
+     "title": "Zákon Národnej rady Slovenskej republiky o matrikách 154/1994",
+     "url": "https://zakony.judikaty.info/predpis/zakon-154/1994",
+     "value": "The Ministry of Interior administers and operates the electronic civil register (elektronická matrika) information system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "Matriku ako výkon štátnej správy vedie obec, v hlavnom meste Slovenskej republiky Bratislave a v meste Košiciach mestská časť, ktoré sú uvedené v prílohe",
+     "quote_english": "The civil register, as an exercise of state administration, is kept by the municipality, and in Bratislava and Košice by the city district, listed in the annex",
+     "title": "Zákon Národnej rady Slovenskej republiky o matrikách 154/1994",
+     "url": "https://zakony.judikaty.info/predpis/zakon-154/1994",
+     "value": "Act 154/1994 on civil registers: registers are kept by municipalities as registry offices"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Matriky, zbierka listín and informačný systém elektronická matrika",
+   "operator": "Matričné úrady (municipalities), okresné úrady; Ministerstvo vnútra SR (elektronická matrika)",
+   "research_note": "No source found on hosting or volume.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "m) čísla a série stratených a odcudzených občianskych preukazov, n) čísla vydaných dokladov o občianskom preukaze, o) potvrdenia o občianskom preukaze vydané občanovi, p) dátum zničenia občianskeho preukazu",
+     "quote_english": "m) numbers and series of lost and stolen identity cards, n) numbers of issued identity card documents, o) identity-card certificates issued to the citizen, p) date of destruction of the identity card",
+     "title": "Zákon o občianskych preukazoch 224/2006",
+     "url": "https://zakony.judikaty.info/predpis/zakon-224/2006",
+     "value": "Evidencia občianskych preukazov (ID card issuance records), incl. numbers of issued, lost and stolen cards and destruction dates"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Ministerstvo a okresné riaditeľstvá vedú evidenciu občianskych preukazov a evidenciu čistopisov občianskych preukazov.",
+     "quote_english": "(1) The ministry and the district directorates keep the records of identity cards and the records of blank identity cards.",
+     "title": "Zákon o občianskych preukazoch 224/2006",
+     "url": "https://zakony.judikaty.info/predpis/zakon-224/2006",
+     "value": "Kept by the Ministry of Interior and district police directorates"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "Centrálnu evidenciu cestovných dokladov vydávaných príslušnými útvarmi vedie ministerstvo vnútra.",
+     "quote_english": "The central register of travel documents issued by the competent units is kept by the Ministry of Interior.",
+     "title": "Zákon o cestovných dokladoch 647/2007",
+     "url": "https://zakony.judikaty.info/predpis/zakon-647/2007",
+     "value": "Centrálna evidencia cestovných dokladov (central register of travel documents) kept by the Ministry of Interior"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidencia občianskych preukazov; centrálna evidencia cestovných dokladov",
+   "operator": "Ministerstvo vnútra Slovenskej republiky",
+   "research_note": "No source found on hosting or on how many records are held.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "a) úradný autentifikátor, ktorým sú občiansky preukaz s elektronickým čipom a bezpečnostný osobný kód podľa osobitného predpisu15)",
+     "quote_english": "a) the official authenticator, which is the identity card with electronic chip and the security personal code under a special regulation",
+     "title": "Zákon o e-Governmente 305/2013",
+     "url": "https://zakony.judikaty.info/predpis/zakon-305/2013",
+     "value": "Act 305/2013 (e-Government Act): the official authenticator is the chip ID card with its security personal code (BOK)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "Správcom autentifikačnej časti autentifikačného modulu je Ministerstvo vnútra Slovenskej republiky (ďalej len „ministerstvo vnútra“) a správcom komunikačnej časti autentifikačného modulu je ministerstvo investícií.",
+     "quote_english": "The administrator of the authentication part of the authentication module is the Ministry of Interior, and the administrator of its communication part is the Ministry of Investment.",
+     "title": "Zákon o e-Governmente 305/2013",
+     "url": "https://zakony.judikaty.info/predpis/zakon-305/2013",
+     "value": "The Ministry of Interior administers the authentication part of the authentication module; MIRRI administers its communication part"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "2013-12-01",
+     "publisher": "Národná agentúra pre sieťové a elektronické služby (slovensko.sk)",
+     "quote": "Od 2. decembra 2013 sa vydáva nový typ občianskeho preukazu s elektronickým kontaktným čipom – tzv. elektronická identifikačná karta (eID) .",
+     "quote_english": "Since 2 December 2013 a new type of identity card with an electronic contact chip, the so-called electronic identification card (eID), has been issued.",
+     "title": "Nové elektronické občianske preukazy s čipom",
+     "url": "https://www.slovensko.sk/sk/eid",
+     "value": "eID: electronic identity card with contact chip, issued since 2 December 2013"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sk",
+     "published": "2023-09-27",
+     "publisher": "Národná agentúra pre sieťové a elektronické služby (slovensko.sk)",
+     "quote": "Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky ( MIRRI ) v zmysle zákona o e-Governmente vedie evidenciu autentifikačných prostriedkov.",
+     "quote_english": "The Ministry of Investment, Regional Development and Informatization (MIRRI) keeps the register of authentication means under the e-Government Act.",
+     "title": "Evidencia autentifikačných prostriedkov",
+     "url": "https://www.slovensko.sk/sk/clanok/_evidencia-autentifikacnych-pro",
+     "value": "MIRRI keeps the register of authentication means under the e-Government Act"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "unknown",
+   "holding_name": "eID (občiansky preukaz s čipom) / Slovensko v mobile; autentifikačný modul ÚPVS",
+   "operator": "Ministerstvo vnútra SR (authentication part); MIRRI (communication part and register of authenticators); NASES (portal slovensko.sk)",
+   "research_note": "No public source found giving the number of eID holders or where the authentication module is hosted. Could not reach an official page on 'Slovensko v mobile' that the checker can read.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "Pri prístupe osoby do informačného systému verejnej správy prostredníctvom prístupového miesta zabezpečuje overením správnosti a platnosti identifikátora osoby a použitého autentifikátora vykonanie autentifikácie a) autentifikačný modul",
+     "quote_english": "When a person accesses a public administration information system via an access point, authentication by verifying the person identifier and authenticator is performed by a) the authentication module",
+     "title": "Zákon o e-Governmente 305/2013",
+     "url": "https://zakony.judikaty.info/predpis/zakon-305/2013",
+     "value": "Autentifikačný modul (authentication module) of the central government portal, which authenticates access to public-service information systems"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "holding_name": "Autentifikačný modul ÚPVS",
+   "operator": "Ministerstvo vnútra SR / MIRRI",
+   "research_note": "Act 305/2013 says the authentication module authenticates access. We searched the Act and the slovensko.sk / NASES pages for any rule on keeping authentication logs, or on how long logs are kept, and found none.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Stály zoznam voličov (ďalej len „stály zoznam“) zostavuje a vedie obec, v hlavnom meste Slovenskej republiky Bratislave a v meste Košice mestská časť (ďalej len „obec“).",
+     "quote_english": "(1) The permanent list of voters is compiled and kept by the municipality, in Bratislava and Košice by the city district.",
+     "title": "Zákon o podmienkach výkonu volebného práva 180/2014",
+     "url": "https://zakony.judikaty.info/predpis/zakon-180/2014",
+     "value": "Stály zoznam voličov (permanent electoral roll) compiled and kept by each municipality"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "Do stáleho zoznamu zapisuje obec voličov, ktorí majú trvalý pobyt v obci. Volič môže byť zapísaný len v jednom stálom zozname.",
+     "quote_english": "The municipality enters in the permanent list voters with permanent residence in the municipality. A voter may be entered in only one permanent list.",
+     "title": "Zákon o podmienkach výkonu volebného práva 180/2014",
+     "url": "https://zakony.judikaty.info/predpis/zakon-180/2014",
+     "value": "Act 180/2014 on the conditions for exercising the right to vote, § 9"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Stály zoznam voličov",
+   "operator": "Obce (municipalities) / mestské časti",
+   "research_note": "The roll is kept separately by each municipality. We found no central electoral roll and no source on hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Národná agentúra pre sieťové a elektronické služby (SNCA)",
+     "quote": "Od 1. augusta 2019 je prevádzkovateľom Slovenskej národnej certifikačnej autority (SNCA) a poskytovateľom kvalifikovaných dôveryhodných služieb Národná agentúra pre sieťové a elektronické služby (NASES).",
+     "quote_english": "Since 1 August 2019 the operator of the Slovak National Certification Authority (SNCA) and provider of qualified trust services is the National Agency for Network and Electronic Services (NASES).",
+     "title": "Certifikačná autorita",
+     "url": "https://snca.gov.sk/o-nas/certifikacna-autorita",
+     "value": "NASES has operated the Slovak National Certification Authority (SNCA) and provided qualified trust services since 1 August 2019"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Národná agentúra pre sieťové a elektronické služby (SNCA)",
+     "quote": "Schéma dohľadu kvalifikovaných dôveryhodných služieb, ktorú na svojom webovom sídle publikuje orgán dohľadu, ktorým pre Slovenskú republike je Národný bezpečnostný úrad.",
+     "quote_english": "The supervision scheme for qualified trust services, published by the supervisory body, which for the Slovak Republic is the National Security Authority.",
+     "title": "Certifikačná autorita",
+     "url": "https://snca.gov.sk/o-nas/certifikacna-autorita",
+     "value": "The National Security Authority (NBÚ) is the supervisory body for qualified trust services in Slovakia"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Národná agentúra pre sieťové a elektronické služby",
+     "quote": "NASES je prevádzkovateľom Slovenskej národnej certifikačnej autority (SNCA) a poskytovateľom kvalifikovaných dôveryhodných služieb. SNCA poskytuje kvalifikované dôveryhodné služby orgánom verejnej moci bezodplatne.",
+     "quote_english": "NASES is the operator of the Slovak National Certification Authority (SNCA) and a provider of qualified trust services. SNCA provides qualified trust services to public authorities free of charge.",
+     "title": "Kvalifikované dôveryhodné služby",
+     "url": "https://www.nases.gov.sk/sluzby/sluzby-pre-po-a-ovm/doveryhodne-sluzby-snca",
+     "value": "Slovenská národná certifikačná autorita (SNCA), providing qualified trust services free of charge to public authorities"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Úrad je oprávnený vykonávať kontrolu plnenia povinností poskytovateľa dôveryhodnej služby alebo poskytovateľa európskej peňaženky podľa osobitných predpisov.",
+     "quote_english": "(1) The Office is entitled to inspect fulfilment of the obligations of a trust service provider or a European wallet provider under special regulations.",
+     "title": "Zákon o dôveryhodných službách 272/2016",
+     "url": "https://zakony.judikaty.info/predpis/zakon-272/2016",
+     "value": "Act 272/2016 on trust services: the Office (NBÚ) supervises trust service providers"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "Slovenská národná certifikačná autorita (SNCA)",
+   "operator": "Národná agentúra pre sieťové a elektronické služby (NASES); supervision: Národný bezpečnostný úrad",
+   "research_note": "No source found on where the SNCA is hosted or on its HSM infrastructure.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Policajný útvar pri plnení úloh vedie v informačných systémoch Policajného zboru vedených podľa osobitného predpisu74) evidencie o a) vstupe, pobyte a vycestovaní cudzincov, b) žiadateľoch o víza, o udelených alebo neudelených vízach, c) žiadateľoch o pobyt",
+     "quote_english": "(1) The police unit keeps, in Police Force information systems, records on a) entry, stay and departure of foreigners, b) visa applicants and granted or refused visas, c) residence applicants",
+     "title": "Zákon o pobyte cudzincov 404/2011",
+     "url": "https://zakony.judikaty.info/predpis/zakon-404/2011",
+     "value": "Police Force information systems holding records on foreigners' entry, stay and departure, visa and residence applicants"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidencie cudzincov v informačných systémoch Policajného zboru",
+   "operator": "Policajný zbor (Úrad hraničnej a cudzineckej polície)",
+   "research_note": "The asylum records under Act 480/2002 were not separately confirmed. No source found on hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "§ 4 - Správca dane a osoby zúčastnené na správe daní (1) Správcom dane je daňový úrad, colný úrad a obec.",
+     "quote_english": "§ 4 Tax administrator and persons involved in tax administration (1) The tax administrator is the tax office, the customs office and the municipality.",
+     "title": "Zákon o správe daní (daňový poriadok) 563/2009",
+     "url": "https://zakony.judikaty.info/predpis/zakon-563/2009",
+     "value": "Act 563/2009 (Tax Code): tax administrators are tax offices, customs offices and municipalities"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "d) vytvára, rozvíja a prevádzkuje informačné systémy finančnej správy; zámer vykonať činnosti týkajúce sa vytvárania a rozvoja informačných systémov finančnej správy predkladá ministerstvu financií",
+     "quote_english": "d) creates, develops and operates the information systems of the financial administration; it submits plans for creating and developing them to the Ministry of Finance",
+     "title": "Zákon o finančnej správe 35/2019",
+     "url": "https://zakony.judikaty.info/predpis/zakon-35/2019",
+     "value": "The Financial Directorate (Finančné riaditeľstvo SR) creates, develops and operates the information systems of the Financial Administration"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informačné systémy finančnej správy (tax administration)",
+   "operator": "Finančné riaditeľstvo Slovenskej republiky",
+   "research_note": "The Financial Administration's annual-report page did not show PDFs the checker can read. No source found on hosting or record counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "c) prevádzkuje spoločný automatizovaný informačný systém na colné účely,60) zodpovedá zaň, určuje údaje",
+     "quote_english": "c) operates the common automated information system for customs purposes, is responsible for it, determines the data",
+     "title": "Zákon o finančnej správe 35/2019",
+     "url": "https://zakony.judikaty.info/predpis/zakon-35/2019",
+     "value": "The Criminal Office of the Financial Administration operates the common automated information system for customs purposes"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(3) Finančné riaditeľstvo plní tieto úlohy: a) riadi a kontroluje daňové úrady, colné úrady a Kriminálny úrad finančnej správy",
+     "quote_english": "(3) The Financial Directorate performs these tasks: a) manages and controls tax offices, customs offices and the Criminal Office of the Financial Administration",
+     "title": "Zákon o finančnej správe 35/2019",
+     "url": "https://zakony.judikaty.info/predpis/zakon-35/2019",
+     "value": "Act 35/2019 on the Financial Administration: the Financial Directorate manages tax offices, customs offices and the Criminal Office"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informačné systémy finančnej správy (customs); spoločný automatizovaný informačný systém na colné účely",
+   "operator": "Finančné riaditeľstvo SR; Kriminálny úrad finančnej správy",
+   "research_note": "No source found on hosting or on the number of declarations held.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "e) viesť register zamestnávateľov a register poistencov a sporiteľov starobného dôchodkového sporenia",
+     "quote_english": "e) keep the register of employers and the register of insured persons and old-age pension savers",
+     "title": "Zákon o sociálnom poistení 461/2003",
+     "url": "https://zakony.judikaty.info/predpis/zakon-461/2003",
+     "value": "Register poistencov a sporiteľov starobného dôchodkového sporenia (register of insured persons and pension savers) and employer register kept by Sociálna poisťovňa"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Sociálna poisťovňa zhromažďuje údaje na výkon sociálneho poistenia vrátane údajov o telefónnych číslach, adresách elektronickej pošty",
+     "quote_english": "(1) The Social Insurance Agency collects data for administering social insurance, including telephone numbers and e-mail addresses",
+     "title": "Zákon o sociálnom poistení 461/2003",
+     "url": "https://zakony.judikaty.info/predpis/zakon-461/2003",
+     "value": "Act 461/2003 on social insurance, § 170: Sociálna poisťovňa collects data for social insurance"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register poistencov a sporiteľov starobného dôchodkového sporenia; register zamestnávateľov",
+   "operator": "Sociálna poisťovňa",
+   "research_note": "Sociálna poisťovňa publishes its statistics only as xlsx files, which the checker cannot read as text. No source found on hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "e) vedie 1. centrálny register poistencov, ktorý obsahuje meno, priezvisko, rodné priezvisko, rodné číslo alebo bezvýznamové identifikačné číslo pridelené úradom",
+     "quote_english": "e) keeps 1. the central register of insured persons, containing name, surname, birth surname, birth number or a non-significant identification number assigned by the Authority",
+     "title": "Zákon o zdravotných poisťovniach, dohľade nad zdravotnou starostlivosťou 581/2004",
+     "url": "https://zakony.judikaty.info/predpis/zakon-581/2004",
+     "value": "Centrálny register poistencov (central register of insured persons) kept by the Health Care Surveillance Authority (ÚDZS)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(6) Zdravotná poisťovňa je na účel vedenia centrálneho registra poistencov povinná sprístupniť úradu elektronicky zoznamy",
+     "quote_english": "(6) For keeping the central register of insured persons, a health insurer must make lists available electronically to the Authority",
+     "title": "Zákon o zdravotných poisťovniach, dohľade nad zdravotnou starostlivosťou 581/2004",
+     "url": "https://zakony.judikaty.info/predpis/zakon-581/2004",
+     "value": "Act 581/2004: health insurers must supply data electronically to the Authority to maintain the central register"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Centrálny register poistencov",
+   "operator": "Úrad pre dohľad nad zdravotnou starostlivosťou (ÚDZS)",
+   "research_note": "The ÚDZS website timed out or returned empty pages, so no figures could be obtained. No source found on hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Kataster nehnuteľností (ďalej len „kataster“) je geometrické určenie, súpis a popis nehnuteľností. Súčasťou katastra sú údaje o právach k týmto nehnuteľnostiam, a to o vlastníckom práve, záložnom práve, vecnom bremene",
+     "quote_english": "(1) The real-estate cadastre is the geometric determination, inventory and description of real estate. It includes data on rights to the property: ownership, liens, easements",
+     "title": "Katastrálny zákon 162/1995",
+     "url": "https://zakony.judikaty.info/predpis/zakon-162/1995",
+     "value": "Kataster nehnuteľností (real-estate cadastre) including ownership, liens and other rights"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "d) spravuje katastrálny operát, e) spravuje informačný systém katastra, f) rozhoduje o odvolaní proti rozhodnutiu o zamietnutí vkladu",
+     "quote_english": "d) administers the cadastral records, e) administers the cadastre information system, f) decides appeals against refusal of registration",
+     "title": "Katastrálny zákon 162/1995",
+     "url": "https://zakony.judikaty.info/predpis/zakon-162/1995",
+     "value": "The Office of Geodesy, Cartography and Cadastre (ÚGKK SR, 'úrad') administers the cadastral records and the cadastre information system"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "sk",
+     "published": "2026",
+     "publisher": "Úrad geodézie, kartografie a katastra Slovenskej republiky",
+     "quote": "počet parciel registra C počet parciel registra C so založeným LV (podiel v %) počet parciel registra E 9 033 960 7 525 626 (83,3 %) 7 643 899 počet LV 4 850 159 Kataster v absolútnych číslach",
+     "quote_english": "number of register-C parcels, number of register-C parcels with an ownership sheet (share in %), number of register-E parcels 9,033,960 7,525,626 (83.3%) 7,643,899 number of ownership sheets 4,850,159 Cadastre in absolute numbers",
+     "title": "Výročná správa ÚGKK SR za rok 2025",
+     "url": "https://www.skgeodesy.sk/files/sk/slovensky/ugkk/kontrakty-vyrocne-spravy/ugkk-sr_vyrocna-sprava_2025.pdf",
+     "value": "As of 31 Dec 2025: 9,033,960 register-C parcels, 7,643,899 register-E parcels and 4,850,159 ownership sheets (LV)"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kataster nehnuteľností / informačný systém katastra nehnuteľností (ISKN)",
+   "operator": "Úrad geodézie, kartografie a katastra Slovenskej republiky (ÚGKK SR); katastrálne odbory okresných úradov",
+   "research_note": "ÚGKK's 2025 annual report describes a large cyberattack on the cadastre information system on 5 January 2025, but says nothing about where the system is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(2) Obchodný register sa vedie v elektronickej forme. Zbierka listín sa vedie v elektronickej forme, ak tento zákon neustanovuje inak. (3) Registrový súd vydá žiadateľovi po zaplatení súdneho poplatku výpis z obchodného registra",
+     "quote_english": "(2) The commercial register is kept in electronic form. The collection of deeds is kept in electronic form unless this act provides otherwise. (3) The registry court issues an extract from the commercial register after payment of the court fee",
+     "title": "Zákon o obchodnom registri 530/2003",
+     "url": "https://zakony.judikaty.info/predpis/zakon-530/2003",
+     "value": "Obchodný register (Commercial Register) and collection of deeds, kept electronically by registry courts"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Zriaďuje sa register právnických osôb. Register právnických osôb je informačným systémom verejnej správy, ktorého správcom je ministerstvo vnútra.",
+     "quote_english": "(1) A register of legal persons is established. The register of legal persons is a public administration information system administered by the Ministry of Interior.",
+     "title": "Zákon o registri právnických osôb, podnikateľov a orgánov verejnej moci 272/2015",
+     "url": "https://zakony.judikaty.info/predpis/zakon-272/2015",
+     "value": "Register právnických osôb (Register of Legal Persons), administered by the Ministry of Interior"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Obchodný register; Register právnických osôb (RPO)",
+   "operator": "Registrové súdy (Ministerstvo spravodlivosti SR); RPO: Ministerstvo vnútra SR",
+   "research_note": "orsr.sk timed out. No source found on hosting or on the number of entities.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "Register je informačný systém verejnej správy, ktorý obsahuje údaje podľa § 4 a ktorého správcom a prevádzkovateľom je Ministerstvo spravodlivosti Slovenskej republiky (ďalej len „ministerstvo“). Registrujúcim orgánom je Okresný súd Žilina.",
+     "quote_english": "The register is a public administration information system containing data under § 4, administered and operated by the Ministry of Justice. The registering body is the District Court Žilina.",
+     "title": "Zákon o registri partnerov verejného sektora 315/2016",
+     "url": "https://zakony.judikaty.info/predpis/zakon-315/2016",
+     "value": "Register partnerov verejného sektora (Register of Public Sector Partners), run by the Ministry of Justice with Žilina District Court as registering body"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "i) záznamom o konečnom užívateľovi výhod súbor údajov o konečnom užívateľovi výhod ustanovených osobitným predpisom1f) tvorený údajmi, ktoré zakladajú postavenie konečného užívateľa výhod",
+     "quote_english": "i) beneficial owner record means the set of data on the beneficial owner set by a special regulation, consisting of data establishing beneficial-owner status",
+     "title": "Zákon o registri právnických osôb, podnikateľov a orgánov verejnej moci 272/2015",
+     "url": "https://zakony.judikaty.info/predpis/zakon-272/2015",
+     "value": "The Register of Legal Persons holds a beneficial-owner record (záznam o konečnom užívateľovi výhod)"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register partnerov verejného sektora (RPVS); záznam o konečnom užívateľovi výhod v RPO",
+   "operator": "Ministerstvo spravodlivosti SR (RPVS, registering court: Okresný súd Žilina); Ministerstvo vnútra SR (RPO)",
+   "research_note": "The mirror's text of Act 315/2016 is the 2019 consolidated version. No source found on hosting or record counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Evidencia vozidiel je informačný systém Policajného zboru podľa osobitného predpisu,32)ktorý sa vedie na účely získavania informácií o vlastníkoch vozidiel, držiteľoch vozidiel",
+     "quote_english": "(1) The vehicle register is an information system of the Police Force kept to obtain information on vehicle owners and keepers",
+     "title": "Zákon o cestnej premávke 8/2009",
+     "url": "https://zakony.judikaty.info/predpis/zakon-8/2009",
+     "value": "Evidencia vozidiel (vehicle register), an information system of the Police Force"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Evidencia vodičov je informačný systém Policajného zboru podľa osobitného predpisu,32) ktorý sa vedie na účely rozhodovania o vodičských oprávneniach, vodičských preukazoch a o medzinárodných vodičských preukazoch",
+     "quote_english": "(1) The driver register is an information system of the Police Force kept for decisions on driving entitlements, driving licences and international driving permits",
+     "title": "Zákon o cestnej premávke 8/2009",
+     "url": "https://zakony.judikaty.info/predpis/zakon-8/2009",
+     "value": "Evidencia vodičov (driver register), an information system of the Police Force"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidencia vozidiel; evidencia vodičov",
+   "operator": "Policajný zbor (Ministerstvo vnútra SR)",
+   "research_note": "No source found on hosting or on the number of vehicles and drivers recorded.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(5) Register trestov vedie Generálna prokuratúra Slovenskej republiky (ďalej len „generálna prokuratúra“).",
+     "quote_english": "(5) The criminal records register is kept by the General Prosecutor's Office of the Slovak Republic.",
+     "title": "Zákon o registri trestov 330/2007",
+     "url": "https://zakony.judikaty.info/predpis/zakon-330/2007",
+     "value": "Register trestov (Criminal Records Register) kept by the General Prosecutor's Office"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "3. spravuje a zabezpečuje Centrálny informačný systém súdnictva (ďalej len „centrálny informačný systém“)",
+     "quote_english": "3. administers and secures the Central Information System of the Judiciary",
+     "title": "Zákon o súdoch 757/2004",
+     "url": "https://zakony.judikaty.info/predpis/zakon-757/2004",
+     "value": "Centrálny informačný systém súdnictva (Central Judicial Information System), administered under the Courts Act by the ministry (Ministry of Justice)"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register trestov; Centrálny informačný systém súdnictva",
+   "operator": "Generálna prokuratúra SR (Register trestov); Ministerstvo spravodlivosti SR (CISS)",
+   "research_note": "The mirror's text of Act 330/2007 is a 2022-2023 consolidated version. No source found on hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Policajný zbor spracúva podľa tohto zákona a osobitných predpisov11bc) informácie, osobné údaje, daktyloskopické údaje a snímky tvárí zhromaždené pri plnení úloh Policajného zboru",
+     "quote_english": "(1) The Police Force processes, under this act and special regulations, information, personal data, dactyloscopic data and face images collected in performing Police Force tasks",
+     "title": "Zákon Národnej rady Slovenskej republiky o Policajnom zbore 171/1993",
+     "url": "https://zakony.judikaty.info/predpis/zakon-171/1993",
+     "value": "Police Force information systems processing personal data, fingerprint (dactyloscopic) data and face images"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informačné systémy Policajného zboru",
+   "operator": "Policajný zbor",
+   "research_note": "policia.sk could not be fetched. No source found on hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "i) nežiaducich osobách, j) cudzincoch získané pri zabezpečovaní kontroly hraníc, k) cudzincoch na neoprávnenom pobyte.",
+     "quote_english": "i) undesirable persons, j) foreigners, obtained in carrying out border control, k) foreigners staying illegally.",
+     "title": "Zákon o pobyte cudzincov 404/2011",
+     "url": "https://zakony.judikaty.info/predpis/zakon-404/2011",
+     "value": "Police Force records on undesirable persons, border-control data on foreigners and illegal stay"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidencie Policajného zboru o vízach, kontrole hraníc a nežiaducich osobách (national SIS/VIS components)",
+   "operator": "Policajný zbor",
+   "research_note": "We found no public page naming the operator or hosting of the national SIS/VIS/EES components that the checker can read. Visa records are also covered by the § 76 quote under residence_permits.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Policajný zbor pri plnení úloh podľa tohto zákona vedie informačný systém, ktorý obsahuje údaje o a) vydaných zbrojných preukazoch a ich držiteľoch",
+     "quote_english": "(1) In performing tasks under this act the Police Force keeps an information system containing data on a) issued firearms licences and their holders",
+     "title": "Zákon o strelných zbraniach a strelive 190/2003",
+     "url": "https://zakony.judikaty.info/predpis/zakon-190/2003",
+     "value": "Police Force information system on firearms licences, holders and registered weapons"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "f) evidovaných zbraniach a vydaných preukazoch zbraní, g) dovezených, vyvezených alebo prevezených zbraniach",
+     "quote_english": "f) registered weapons and issued weapon cards, g) imported, exported or transferred weapons",
+     "title": "Zákon o strelných zbraniach a strelive 190/2003",
+     "url": "https://zakony.judikaty.info/predpis/zakon-190/2003",
+     "value": "Act 190/2003 on firearms and ammunition, § 64, incl. registered weapons"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informačný systém o zbraniach, strelive a strelniciach",
+   "operator": "Policajný zbor",
+   "research_note": "No source found on hosting or on the number of records.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(2) Vydavateľom zbierky zákonov je ministerstvo spravodlivosti. (3) Zbierka zákonov sa vydáva v elektronickej podobe a v listinnej podobe.",
+     "quote_english": "(2) The publisher of the Collection of Laws is the Ministry of Justice. (3) The Collection of Laws is issued in electronic and paper form.",
+     "title": "Zákon o tvorbe právnych predpisov a o Zbierke zákonov Slovenskej republiky 400/2015",
+     "url": "https://zakony.judikaty.info/predpis/zakon-400/2015",
+     "value": "The Ministry of Justice publishes the Collection of Laws; it is issued in electronic and paper form"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(2) Portál je súčasťou informačného systému verejnej správy Slov-Lex (ďalej len „Slov-Lex“), ktorého správcom a prevádzkovateľom je Ministerstvo spravodlivosti Slovenskej republiky",
+     "quote_english": "(2) The portal is part of the Slov-Lex public administration information system, administered and operated by the Ministry of Justice",
+     "title": "Zákon o tvorbe právnych predpisov a o Zbierke zákonov Slovenskej republiky 400/2015",
+     "url": "https://zakony.judikaty.info/predpis/zakon-400/2015",
+     "value": "Slov-Lex, the public administration information system administered and operated by the Ministry of Justice"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(4) Elektronická podoba zbierky zákonov je dostupná bezplatne prostredníctvom Slov-Lexu.",
+     "quote_english": "(4) The electronic form of the Collection of Laws is available free of charge via Slov-Lex.",
+     "title": "Zákon o tvorbe právnych predpisov a o Zbierke zákonov Slovenskej republiky 400/2015",
+     "url": "https://zakony.judikaty.info/predpis/zakon-400/2015",
+     "value": "Act 400/2015: the electronic Collection of Laws is available free of charge via Slov-Lex"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Zbierka zákonov Slovenskej republiky / Slov-Lex",
+   "operator": "Ministerstvo spravodlivosti Slovenskej republiky",
+   "research_note": "slov-lex.sk returns HTTP 403 to the project's fetcher. No source found on hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "e) buduje a udržiava informačný systém pre systém štátnej pokladnice (ďalej len „informačný systém”) a zabezpečuje, aby informačný systém spĺňal kritériá bezpečnosti, spoľahlivosti a primeranosti",
+     "quote_english": "e) builds and maintains the information system for the state treasury system and ensures it meets security, reliability and adequacy criteria",
+     "title": "Zákon o Štátnej pokladnici 291/2002",
+     "url": "https://zakony.judikaty.info/predpis/zakon-291/2002",
+     "value": "The Ministry of Finance builds and maintains the State Treasury information system"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informačný systém pre systém štátnej pokladnice",
+   "operator": "Ministerstvo financií Slovenskej republiky; Štátna pokladnica",
+   "research_note": "The MIRRI Government Cloud page mentions a datacentre run by the Ministry of Finance, but does not tie the Treasury system to it, so no hosting claim is made here.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "d) spravuje centrálny informačný systém štátnej služby (ďalej len „centrálny informačný systém“) a vykonáva ďalšie činnosti podľa osobitného predpisu,20)",
+     "quote_english": "d) administers the central information system of the civil service and performs other activities under a special regulation",
+     "title": "Zákon o štátnej službe 55/2017",
+     "url": "https://zakony.judikaty.info/predpis/zakon-55/2017",
+     "value": "Centrálny informačný systém štátnej služby (central civil-service information system) administered by the Government Office"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "§ 21 - Úrad vlády (1) Úrad vlády v oblasti štátnej služby, ak tento zákon neustanovuje inak, a) zabezpečuje jednotný postup služobných úradov pri uplatňovaní tohto zákona",
+     "quote_english": "§ 21 Government Office (1) In civil service matters the Government Office, unless this act provides otherwise, a) ensures uniform procedure of service offices in applying this act",
+     "title": "Zákon o štátnej službe 55/2017",
+     "url": "https://zakony.judikaty.info/predpis/zakon-55/2017",
+     "value": "Government Office of the Slovak Republic (Úrad vlády SR)"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Centrálny informačný systém štátnej služby",
+   "operator": "Úrad vlády Slovenskej republiky",
+   "research_note": "This covers civil-service personnel data only. We found no source on a central payroll system or on armed-forces personnel systems.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Ministerstvo vnútra vytvára, spravuje a prevádzkuje informačný systém Register kandidátov a kandidátnych listín vo voľbách do Národnej rady Slovenskej republiky",
+     "quote_english": "(1) The Ministry of Interior creates, administers and operates the information system Register of candidates and candidate lists in elections to the National Council",
+     "title": "Zákon o podmienkach výkonu volebného práva 180/2014",
+     "url": "https://zakony.judikaty.info/predpis/zakon-180/2014",
+     "value": "Register kandidátov a kandidátnych listín (Register of candidates and candidate lists), created and operated by the Ministry of Interior"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "e) spracovania výsledkov volieb prostredníctvom informačného systému Štatistického úradu Slovenskej republiky (ďalej len „štatistický úrad“).",
+     "quote_english": "e) processing of election results through the information system of the Statistical Office of the Slovak Republic.",
+     "title": "Zákon o podmienkach výkonu volebného práva 180/2014",
+     "url": "https://zakony.judikaty.info/predpis/zakon-180/2014",
+     "value": "Election results are processed through the information system of the Statistical Office of the Slovak Republic"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(9) Štatistický úrad utvára na prípravu spracovania a spracovanie výsledkov volieb pre štátnu komisiu, okresné volebné komisie",
+     "quote_english": "(9) The Statistical Office sets up, for preparing and processing election results, for the state commission and district electoral commissions",
+     "title": "Zákon o podmienkach výkonu volebného práva 180/2014",
+     "url": "https://zakony.judikaty.info/predpis/zakon-180/2014",
+     "value": "Act 180/2014: the Statistical Office sets up expert summarisation units to process results"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register kandidátov a kandidátnych listín; informačný systém Štatistického úradu SR na spracovanie výsledkov volieb",
+   "operator": "Ministerstvo vnútra SR; Štatistický úrad Slovenskej republiky",
+   "research_note": "statistics.sk disallows the project's fetcher in robots.txt, and volby.sk could not be reached. No source found on hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Národná banka Slovenska",
+     "quote": "Národná banka Slovenska prevádzkuje dva platobné systémy: TARGET-SK – je nová generácia platobného systému prevádzkovaného Národnou bankou Slovenska",
+     "quote_english": "Národná banka Slovenska operates two payment systems: TARGET-SK, a new generation payment system operated by Národná banka Slovenska",
+     "title": "Platobné systémy",
+     "url": "https://nbs.sk/platby/platobne-systemy/",
+     "value": "Národná banka Slovenska operates two payment systems: TARGET-SK (RTGS) and SIPS (retail)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "sk",
+     "published": "",
+     "publisher": "Národná banka Slovenska",
+     "quote": "TARGET-SK je názov slovenského komponentu, ktorý je súčasťou celoeurópskeho systému TARGET, ktorý vlastnia a prevádzkujú centrálne banky Eurosystému.",
+     "quote_english": "TARGET-SK is the name of the Slovak component, part of the pan-European TARGET system owned and operated by the Eurosystem central banks.",
+     "title": "Platobné systémy",
+     "url": "https://nbs.sk/platby/platobne-systemy/",
+     "value": "TARGET-SK is the Slovak component of the Eurosystem-wide TARGET system owned and operated by Eurosystem central banks"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Národná banka Slovenska",
+     "quote": "SIPS – je retailový platobný systém určený na spracovanie klientskych platieb. Platobný systém SIPS je pripojený na systém STEP2",
+     "quote_english": "SIPS is a retail payment system for processing client payments. SIPS is connected to the STEP2 system",
+     "title": "Platobné systémy",
+     "url": "https://nbs.sk/platby/platobne-systemy/",
+     "value": "SIPS is the NBS retail payment system for client payments, connected to STEP2"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "mixed",
+   "holding_name": "Platobné systémy TARGET-SK a SIPS",
+   "operator": "Národná banka Slovenska",
+   "research_note": "The mixed rating rests only on the NBS page's own statement: SIPS is run by NBS, and TARGET-SK is a component of TARGET, which Eurosystem central banks own and operate. It does not refer to any cloud provider.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "Ministerstvo obrany SR / Ozbrojené sily SR",
+   "research_note": "The mosr.sk homepage loads, but we found no public page or statute text naming a defence command-and-control or logistics information system, or its hosting, that the checker can read. We did not search in depth, because this is a tier-1 class with little public material.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "Informačná služba je na účely plnenia úloh podľa tohto zákona alebo osobitného zákona v rozsahu svojej pôsobnosti oprávnená vytvárať a prevádzkovať informačné systémy a spracúvať v nich osobné údaje fyzických osôb",
+     "quote_english": "For tasks under this or a special act, the Information Service is entitled within its competence to create and operate information systems and process personal data of natural persons in them",
+     "title": "Zákon Národnej rady Slovenskej republiky o Slovenskej informačnej službe 46/1993",
+     "url": "https://zakony.judikaty.info/predpis/zakon-46/1993",
+     "value": "The Slovak Information Service is authorised to create and operate information systems with personal data"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informačné systémy a evidencie Slovenskej informačnej služby",
+   "operator": "Slovenská informačná služba",
+   "research_note": "sis.gov.sk could not be reached. Holdings are established by statute only; no details are public.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "Na privolanie záchranných zložiek integrovaného záchranného systému v tiesni prostredníctvom tiesňovej komunikácie je zriadené vo verejnej telekomunikačnej sieti jednotné európske číslo tiesňového volania 112.",
+     "quote_english": "To summon rescue units of the integrated rescue system in distress, the single European emergency number 112 is established in the public telecommunications network.",
+     "title": "Zákon o integrovanom záchrannom systéme 129/2002",
+     "url": "https://zakony.judikaty.info/predpis/zakon-129/2002",
+     "value": "Act 129/2002 on the Integrated Rescue System establishes emergency number 112"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "a) zabezpečuje príjem tiesňového volania, volania eCall, 30) príjem krátkych textových správ (SMS) a odpoveď na príjem tiesňovej komunikácie na jednotnom európskom čísle tiesňového volania 112",
+     "quote_english": "a) ensures receipt of emergency calls, eCall calls, SMS and response to emergency communication on the single European emergency number 112",
+     "title": "Zákon o integrovanom záchrannom systéme 129/2002",
+     "url": "https://zakony.judikaty.info/predpis/zakon-129/2002",
+     "value": "Coordination centres receive 112 calls, eCall and SMS emergency communications"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "Jednotné európske číslo tiesňového volania 112 / koordinačné strediská IZS",
+   "operator": "Ministerstvo vnútra SR (koordinačné strediská integrovaného záchranného systému)",
+   "research_note": "No source found on the SITOS/TETRA public-safety radio network or on hosting of the 112 system.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Orgány krízového riadenia pri príprave na krízové situácie a pri ich riešení využívajú informačný systém krízového riadenia štátu.",
+     "quote_english": "(1) Crisis management bodies use the state crisis management information system when preparing for and resolving crisis situations.",
+     "title": "Zákon o riadení štátu v krízových situáciách mimo času vojny a vojnového stavu 387/2002",
+     "url": "https://zakony.judikaty.info/predpis/zakon-387/2002",
+     "value": "Informačný systém krízového riadenia štátu (state crisis management information system)"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informačný systém krízového riadenia štátu",
+   "operator": "Orgány krízového riadenia (Ministerstvo vnútra SR, sekcia krízového riadenia)",
+   "research_note": "The Act names the system, but we found no public source naming its operator or hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Slovenská elektrizačná prenosová sústava, a. s.",
+     "quote": "Pôsobíme ako prevádzkovateľ prenosovej sústavy v Slovenskej republike, vrátane Slovenského elektroenergetického dispečingu.",
+     "quote_english": "We act as the transmission system operator in the Slovak Republic, including the Slovak Electricity Dispatching.",
+     "title": "O spoločnosti",
+     "url": "https://www.sepsas.sk/o-nas/o-spolocnosti/",
+     "value": "SEPS a.s. is the transmission system operator including the Slovak Electricity Dispatch Centre"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Slovenská elektrizačná prenosová sústava, a. s.",
+     "quote": "Pri rozpade sústavy alebo poruche typu blackout priamo riadi aktiváciu opatrení obranného plánu a plánu obnovy elektrizačnej sústavy SR.",
+     "quote_english": "In a system split or blackout it directly manages activation of the defence plan and restoration plan of the Slovak power system.",
+     "title": "Dispečing",
+     "url": "https://www.sepsas.sk/pre-partnerov/dispecing/",
+     "value": "Dispatch control of the transmission system, incl. defence and restoration plan in a blackout"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(6) Prevádzkovateľ prenosovej sústavy je oprávnený vykonať skúšku stavu núdze v elektroenergetike v súlade s technickými podmienkami prevádzkovateľa prenosovej sústavy",
+     "quote_english": "(6) The transmission system operator is entitled to test the state of emergency in the electricity sector in line with its technical conditions",
+     "title": "Zákon o energetike 251/2012",
+     "url": "https://zakony.judikaty.info/predpis/zakon-251/2012",
+     "value": "Act 251/2012 on energy governs the transmission system operator"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Slovenský elektroenergetický dispečing",
+   "operator": "Slovenská elektrizačná prenosová sústava, a. s. (SEPS)",
+   "research_note": "No source found on the vendor or hosting of the SCADA/EMS systems.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "Predpovednú povodňovú službu vykonáva ústav. (2) Ústav je povinný bezodkladne informovať o vzniku povodňovej situácie orgány ochrany pred povodňami",
+     "quote_english": "The flood forecasting service is performed by the Institute. (2) The Institute must inform flood-protection bodies without delay of a flood situation",
+     "title": "Zákon o ochrane pred povodňami 7/2010",
+     "url": "https://zakony.judikaty.info/predpis/zakon-7/2010",
+     "value": "The Slovak Hydrometeorological Institute (SHMÚ, 'ústav') performs the flood forecasting service"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "obcami a Slovenským hydrometeorologickým ústavom (ďalej len „ústav“).",
+     "quote_english": "municipalities and the Slovak Hydrometeorological Institute (the Institute).",
+     "title": "Zákon o ochrane pred povodňami 7/2010",
+     "url": "https://zakony.judikaty.info/predpis/zakon-7/2010",
+     "value": "Act 7/2010 on flood protection; defines the Institute as the Slovak Hydrometeorological Institute"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Predpovedná povodňová služba",
+   "operator": "Slovenský hydrometeorologický ústav (SHMÚ)",
+   "research_note": "We did not investigate the control systems of the water manager (Slovenský vodohospodársky podnik). No source found on hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Národný zdravotnícky informačný systém je súbor zdravotníckych informačných systémov v správe národného centra slúžiacich na zber, spracúvanie a poskytovanie informácií v zdravotníctve",
+     "quote_english": "(1) The national health information system is a set of health information systems administered by the national centre for collecting, processing and providing health information",
+     "title": "Zákon o národnom zdravotníckom informačnom systéme 153/2013",
+     "url": "https://zakony.judikaty.info/predpis/zakon-153/2013",
+     "value": "Národný zdravotnícky informačný systém (National Health Information System), administered by the National Health Information Centre"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Elektronická zdravotná knižka obsahuje a) identifikačné údaje osoby, b) elektronické zdravotné záznamy v rozsahu 1. pacientsky sumár v rozsahu ustanovenom v § 6",
+     "quote_english": "(1) The electronic health record contains a) identification data of the person, b) electronic health records including 1. the patient summary under § 6",
+     "title": "Zákon o národnom zdravotníckom informačnom systéme 153/2013",
+     "url": "https://zakony.judikaty.info/predpis/zakon-153/2013",
+     "value": "Elektronická zdravotná knižka (electronic health record) containing patient summary and clinical records"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "h) postavenie a úlohy Národného centra zdravotníckych informácií (ďalej len „národné centrum“)",
+     "quote_english": "h) the status and tasks of the National Health Information Centre",
+     "title": "Zákon o národnom zdravotníckom informačnom systéme 153/2013",
+     "url": "https://zakony.judikaty.info/predpis/zakon-153/2013",
+     "value": "National Health Information Centre (NCZI, 'národné centrum')"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Národný zdravotnícky informačný systém / Elektronická zdravotná knižka (ezdravie)",
+   "operator": "Národné centrum zdravotníckych informácií (NCZI)",
+   "research_note": "No source found on hosting or on the number of records.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Orgány verejného zdravotníctva utvárajú a prevádzkujú informačné systémy, v ktorých zhromažďujú, uchovávajú a spracúvajú informácie potrebné na plnenie svojich úloh v oblasti ochrany, podpory a rozvoja verejného zdravia.",
+     "quote_english": "(1) Public health authorities create and operate information systems in which they collect, store and process information needed for their tasks in protecting, promoting and developing public health.",
+     "title": "Zákon o ochrane, podpore a rozvoji verejného zdravia 355/2007",
+     "url": "https://zakony.judikaty.info/predpis/zakon-355/2007",
+     "value": "Public health authorities create and operate information systems for public-health tasks"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informačné systémy orgánov verejného zdravotníctva",
+   "operator": "Úrad verejného zdravotníctva SR a regionálne úrady verejného zdravotníctva",
+   "research_note": "uvzsr.sk returned HTTP 401, so the specific system name (e.g. EPIS) could not be confirmed from a page the checker can read.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Centrálny register je zoznam osobných údajov o deťoch, žiakoch a poslucháčoch, ktorí sa zúčastňujú na výchovno-vzdelávacom procese v školách",
+     "quote_english": "(1) The central register is a list of personal data on children, pupils and students participating in education in schools",
+     "title": "Zákon o výchove a vzdelávaní (školský zákon) 245/2008",
+     "url": "https://zakony.judikaty.info/predpis/zakon-245/2008",
+     "value": "Centrálny register (central register of children, pupils and students) under the School Act"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Centrálny register študentov je neverejný informačný systém verejnej správy, ktorého správcom a prevádzkovateľom je ministerstvo školstva.",
+     "quote_english": "(1) The central register of students is a non-public public administration information system administered and operated by the Ministry of Education.",
+     "title": "Zákon o vysokých školách 131/2002",
+     "url": "https://zakony.judikaty.info/predpis/zakon-131/2002",
+     "value": "Centrálny register študentov (Central Register of Students), administered and operated by the Ministry of Education"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "Centrálny register (detí, žiakov a poslucháčov); Centrálny register študentov",
+   "operator": "Ministerstvo školstva Slovenskej republiky",
+   "research_note": "No source found on hosting or record counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(6) Štatistickou dôvernosťou podľa odseku 1 písm. e) sa rozumie ochrana dôverných štatistických údajov bez ohľadu na zdroj, z ktorého boli získané",
+     "quote_english": "(6) Statistical confidentiality means protection of confidential statistical data regardless of the source from which they were obtained",
+     "title": "Zákon o štátnej štatistike 540/2001",
+     "url": "https://zakony.judikaty.info/predpis/zakon-540/2001",
+     "value": "Act 540/2001 on state statistics protects confidential statistical data regardless of source"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "Dôverné štatistické údaje (statistical microdata)",
+   "operator": "Štatistický úrad Slovenskej republiky",
+   "research_note": "statistics.sk disallows the project's fetcher in robots.txt, so there are no operator-page claims and no census figures.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "(1) Register je informačný systém verejnej správy,5) ktorý obsahuje údaje podľa § 5 a ktorého správcom je Ministerstvo vnútra Slovenskej republiky (ďalej len „ministerstvo“).",
+     "quote_english": "(1) The register is a public administration information system containing data under § 5, administered by the Ministry of Interior.",
+     "title": "Zákon o registri adries 125/2015",
+     "url": "https://zakony.judikaty.info/predpis/zakon-125/2015",
+     "value": "Register adries (Address Register), administered by the Ministry of Interior"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Ministerstvo vnútra Slovenskej republiky",
+     "quote": "je dátovo konzistentným, centralizovaným zdrojom dát o adresách všetkých fyzických budov na území Slovenskej republiky, ktorým bolo určené súpisné číslo.",
+     "quote_english": "is a data-consistent, centralised source of data on the addresses of all physical buildings in the Slovak Republic that have been assigned a registration number.",
+     "title": "Register adries",
+     "url": "https://www.minv.sk/?register-adries",
+     "value": "The address register is the centralised source of addresses of all buildings with a registration number"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "sk",
+     "published": "2026",
+     "publisher": "Úrad geodézie, kartografie a katastra Slovenskej republiky",
+     "quote": "zabezpečuje tvorbu, správu a prevádzkovanie ISGKK, zabezpečuje poskytovanie informácií a údajov z ISGKK, spravuje internetový portál",
+     "quote_english": "ensures creation, administration and operation of ISGKK, provision of information and data from ISGKK, administers the internet portal",
+     "title": "Výročná správa ÚGKK SR za rok 2025",
+     "url": "https://www.skgeodesy.sk/files/sk/slovensky/ugkk/kontrakty-vyrocne-spravy/ugkk-sr_vyrocna-sprava_2025.pdf",
+     "value": "ÚGKK SR creates, administers and operates the geodesy, cartography and cadastre information system (ISGKK)"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register adries; ZBGIS / informačný systém geodézie, kartografie a katastra (ISGKK)",
+   "operator": "Ministerstvo vnútra SR (Register adries); ÚGKK SR (ISGKK)",
+   "research_note": "No source found on hosting or data volume.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sk",
+     "published": "",
+     "publisher": "Ministerstvo vnútra Slovenskej republiky",
+     "quote": "Elektronický archív MV SR je dlhodobým úložiskom elektronických archívnych dokumentov produkovaných orgánmi verejnej moci, ako aj ostatnými pôvodcami.",
+     "quote_english": "The Electronic Archive of the Ministry of Interior is the long-term repository of electronic archival documents produced by public authorities and other originators.",
+     "title": "Elektronický archív Slovenska MV SR",
+     "url": "https://www.minv.sk/?elektronicky-archiv-slovenska-mv-sr",
+     "value": "Elektronický archív Slovenska (Electronic Archive of Slovakia), the long-term repository of electronic archival records of public authorities"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sk",
+     "published": "",
+     "publisher": "Ministerstvo vnútra Slovenskej republiky",
+     "quote": "rovnako archiváciu štruktúrovaných dát a dát z produkčných systémov MV SR.",
+     "quote_english": "as well as archiving of structured data and data from production systems of the Ministry of Interior.",
+     "title": "Elektronický archív Slovenska MV SR",
+     "url": "https://www.minv.sk/?elektronicky-archiv-slovenska-mv-sr",
+     "value": "The Electronic Archive also archives structured data and data from Ministry of Interior production systems"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sk",
+     "published": "",
+     "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+     "quote": "ktoré sú orgánmi verejnej moci.12) (3) Štátnym ústredným archívom je Slovenský národný archív.",
+     "quote_english": "which are public authorities. (3) The central state archive is the Slovak National Archives.",
+     "title": "Zákon o archívoch a registratúrach 395/2002",
+     "url": "https://zakony.judikaty.info/predpis/zakon-395/2002",
+     "value": "Act 395/2002 on archives: the Slovak National Archives is the central state archive"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Elektronický archív Slovenska",
+   "operator": "Ministerstvo vnútra SR (odbor archívov a registratúr; Slovenský národný archív)",
+   "research_note": "No source found on hosting location or volume.",
+   "status": "held"
+  }
+ ],
+ "iso": "SK"
+}

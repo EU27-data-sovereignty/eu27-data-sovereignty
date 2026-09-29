@@ -1,0 +1,1424 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "hosting",
+     "language": "nl",
+     "published": "2025-01-15",
+     "publisher": "Algemene Rekenkamer",
+     "quote": "Bij het ministerie van IenW gebruikt het Koninklijk Nederlands Meteorologisch Instituut (KNMI) de dienst ‘Amazon AWS Cloud’ als kerncloudplatform.",
+     "quote_english": "At the Ministry of Infrastructure and Water Management, KNMI uses the 'Amazon AWS Cloud' service as its core cloud platform.",
+     "title": "Het Rijk in de cloud; Donkere wolken pakken samen",
+     "url": "https://repository.overheid.nl/frbr/officielepublicaties/blg/onopgemaakt/blg-1178863/1/pdf/blg-1178863.pdf",
+     "value": "KNMI uses Amazon AWS Cloud as its core cloud platform"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "foreign_dependency",
+     "language": "nl",
+     "published": "2025-01-15",
+     "publisher": "Algemene Rekenkamer",
+     "quote": "KNMI beschrijft dit platform in de aangeleverde informatie als “hét kerncloudplatform met vele operationele applicaties, van waarnemingen tot diensten voor de buitenwereld”.",
+     "quote_english": "KNMI describes this platform as 'the core cloud platform with many operational applications, from observations to services for the outside world'.",
+     "title": "Het Rijk in de cloud; Donkere wolken pakken samen",
+     "url": "https://repository.overheid.nl/frbr/officielepublicaties/blg/onopgemaakt/blg-1178863/1/pdf/blg-1178863.pdf",
+     "value": "AWS hosts many operational applications, from observations to external services"
+    }
+   ],
+   "holding_name": "KNMI observation, forecasting and weather-warning platform",
+   "suggested_class": "meteorological_warning",
+   "why_critical": "KNMI data underpin code-red warnings and Delta Programme flood-safety decisions in a low-lying country; the Court of Audit reports its core cloud platform runs on Amazon AWS."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2025-11-11",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Er is een basisregistratie personen. De basisregistratie bevat persoonsgegevens over de ingezetenen van Nederland.",
+     "quote_english": "There is a personal records database. The database contains personal data on the residents of the Netherlands.",
+     "title": "Wet basisregistratie personen",
+     "url": "https://wetten.overheid.nl/BWBR0033715/2025-11-11",
+     "value": "Wet basisregistratie personen (Personal Records Database Act), art. 1.2 establishes the BRP"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "Rijksdienst voor Identiteitsgegevens",
+     "quote": "RvIG is verantwoordelijk voor de veilige opslag van deze gegevens en de uitwisseling ervan",
+     "quote_english": "RvIG is responsible for the secure storage of this data and its exchange",
+     "title": "Basisregistratie Personen",
+     "url": "https://www.rvig.nl/basisregistratie-personen",
+     "value": "RvIG is responsible for the secure storage and exchange of BRP data"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "nl",
+     "published": "",
+     "publisher": "Rijksdienst voor Identiteitsgegevens",
+     "quote": "Gemeenten verwerken deze gegevens via hun eigen computersysteem in de Basisregistratie Personen. Een kopie van deze gegevens komt in de Basisregistratie Personen Verstrekkingsvoorziening (BRP-V).",
+     "quote_english": "Municipalities process this data via their own computer system in the BRP. A copy of this data goes into the BRP Provision Facility (BRP-V).",
+     "title": "Beheer van de gegevens in de Basisregistratie Personen (BRP)",
+     "url": "https://www.rvig.nl/beheer-van-de-gegevens-de-basisregistratie-personen-brp",
+     "value": "Municipalities process data in their own computer systems; a copy goes to the central BRP-V (Verstrekkingsvoorziening)"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Basisregistratie Personen (BRP) — Personal Records Database",
+   "operator": "Municipalities (residents) and Rijksdienst voor Identiteitsgegevens (RvIG, non-residents and central facilities), Ministry of the Interior (BZK)",
+   "research_note": "No public source found naming the hosting provider of the central BRP-V facility; municipalities run their own local systems. No record count sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2024-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Een reisdocument is voorzien van de gezichtsopname, twee vingerafdrukken en de handtekening van de houder volgens nader bij regeling van Onze Minister te stellen regels.",
+     "quote_english": "A travel document contains the facial image, two fingerprints and the signature of the holder according to rules to be set by ministerial regulation.",
+     "title": "Paspoortwet",
+     "url": "https://wetten.overheid.nl/BWBR0005212/2024-01-01",
+     "value": "Passport Act (Paspoortwet) art. 3: travel documents contain the facial image, two fingerprints and signature"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "2024-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "De tot uitreiking bevoegde autoriteiten voeren een reisdocumentenadministratie ten behoeve van de aanvraag, verstrekking en uitreiking van reisdocumenten. De administratie bevat de gegevens bedoeld in het eerste, tweede, vierde, vijfde, zesde en zevende lid",
+     "quote_english": "The authorities competent to issue keep a travel document administration for application, provision and issuance of travel documents. The administration contains the data referred to in paragraphs one, two, four, five, six and seven",
+     "title": "Paspoortwet",
+     "url": "https://wetten.overheid.nl/BWBR0005212/2024-01-01",
+     "value": "Issuing authorities keep a travel document administration containing the data of art. 3 paras 1-2 (incl. facial image)"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Reisdocumentenadministratie (travel document administration) — facial images captured at application",
+   "operator": "Issuing authorities (chiefly municipalities) under the Minister of BZK",
+   "research_note": "Facial images are held in the decentral travel-document administration kept by issuing authorities; no source found on hosting or on a central facial-image database.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "nl",
+     "published": "2024-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "De bij de aanvraag van een reisdocument opgenomen vingerafdrukken worden bewaard totdat de uitreiking van het aangevraagde reisdocument, dan wel de reden voor het niet uitreiken daarvan, in de administratie, bedoeld in het achtste lid, is geregistreerd",
+     "quote_english": "The fingerprints taken on application for a travel document are kept until the issuance of the requested document, or the reason for not issuing it, has been registered in the administration referred to in paragraph eight",
+     "title": "Paspoortwet",
+     "url": "https://wetten.overheid.nl/BWBR0005212/2024-01-01",
+     "value": "Fingerprints taken for a travel document are kept only until issuance (or non-issuance) is registered, and used only for issuing"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "No central retention of passport/ID-card fingerprints",
+   "operator": "Issuing authorities (temporary storage only)",
+   "research_note": "Passport Act limits retention of fingerprints to the period until the document is issued; no central fingerprint register for citizens' travel documents. Note: the separate vreemdelingenadministratie (Aliens Act art. 107) does centrally hold facial images and fingerprints of foreign nationals (see residence_permits).",
+   "status": "not_held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2025-07-05",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "De ambtenaar van de burgerlijke stand is belast met het opnemen in de onder hem berustende registers van de burgerlijke stand van akten en de daaraan toe te voegen latere vermeldingen",
+     "quote_english": "The civil registrar is charged with entering deeds and later annotations in the civil status registers in his custody",
+     "title": "Burgerlijk Wetboek Boek 1",
+     "url": "https://wetten.overheid.nl/BWBR0002656/2025-07-05",
+     "value": "Civil Code Book 1 art. 16a: the civil registrar keeps the civil status registers of deeds"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registers van de burgerlijke stand (civil status registers: birth, death, marriage deeds)",
+   "operator": "Municipal civil registrars (ambtenaar van de burgerlijke stand)",
+   "research_note": "Registers are kept per municipality under Civil Code Book 1; no national central repository or hosting information found. Naturalisation decrees not separately researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2024-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Er is een basisregister reisdocumenten. Onze Minister is verantwoordelijk voor de gegevensverwerkingen in dit register.",
+     "quote_english": "There is a basic register of travel documents. Our Minister is responsible for the data processing in this register.",
+     "title": "Paspoortwet",
+     "url": "https://wetten.overheid.nl/BWBR0005212/2024-01-01",
+     "value": "Passport Act art. 4c establishes the Basic Register of Travel Documents under the Minister"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "Rijksdienst voor Identiteitsgegevens",
+     "quote": "bevat informatie over Nederlandse reisdocumenten die in aanvraag zijn, uitgereikt en geldig zijn, (van rechtswege) vervallen en daarmee ongeldig zijn en die definitief onttrokken zijn. De Rijksdienst voor Identiteitsgegevens beheert het BR.",
+     "quote_english": "contains information on Dutch travel documents that are applied for, issued and valid, expired and thus invalid, and definitively withdrawn. RvIG manages the BR.",
+     "title": "Basisregister Reisdocumenten",
+     "url": "https://www.rvig.nl/basisregister-reisdocumenten",
+     "value": "The BR records documents applied for, issued, invalid and withdrawn; RvIG manages it"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Basisregister Reisdocumenten (BR) — Basic Register of Travel Documents",
+   "operator": "Rijksdienst voor Identiteitsgegevens (RvIG), Ministry of BZK",
+   "research_note": "No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "DigiD / Logius",
+     "quote": "De minister van Binnenlandse Zaken en Koninkrijksrelaties is verantwoordelijk voor het verwerken van persoonsgegevens voor DigiD. Het beheer van DigiD wordt uitgevoerd door Logius .",
+     "quote_english": "The Minister of the Interior is responsible for processing personal data for DigiD. DigiD is managed by Logius.",
+     "title": "Privacy DigiD",
+     "url": "https://www.digid.nl/over-digid/privacy",
+     "value": "Minister of BZK is controller; DigiD is managed by Logius"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "",
+     "publisher": "DigiD / Logius",
+     "quote": "De grondslag voor het verwerken van persoonsgegevens is het Besluit digitale overheid, dat gebaseerd is op de Wet Digitale overheid.",
+     "quote_english": "The legal basis for processing personal data is the Digital Government Decree, based on the Digital Government Act.",
+     "title": "Privacy DigiD",
+     "url": "https://www.digid.nl/over-digid/privacy",
+     "value": "Besluit digitale overheid, based on the Wet digitale overheid (Digital Government Act)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "nl",
+     "published": "",
+     "publisher": "DigiD / Logius",
+     "quote": "Persoonsgegevens worden opgeslagen op ICT-faciliteiten die zich bevinden op Nederlands grondgebied en die worden beheerd door Logius. Uw persoonsgegevens worden niet doorgegeven aan landen buiten de EU.",
+     "quote_english": "Personal data is stored on ICT facilities located on Dutch territory and managed by Logius. Your personal data is not transferred to countries outside the EU.",
+     "title": "Privacy DigiD",
+     "url": "https://www.digid.nl/over-digid/privacy",
+     "value": "Stored on ICT facilities on Dutch territory managed by Logius; not transferred outside the EU"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "",
+     "publisher": "Logius",
+     "quote": "DigiD is een veilig en betrouwbaar middel waarmee gebruikers zich digitaal kunnen identificeren.",
+     "quote_english": "DigiD is a secure and reliable means by which users can identify themselves digitally.",
+     "title": "DigiD",
+     "url": "https://www.logius.nl/onze-dienstverlening/toegang/digid",
+     "value": "DigiD: the national means for citizens to identify digitally"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "national",
+   "holding_name": "DigiD (citizens' eID; with eHerkenning for businesses and NL Wallet pilot)",
+   "operator": "Logius, Ministry of BZK",
+   "research_note": "DigiD privacy statement says data is stored on Logius-managed ICT facilities on Dutch territory. eHerkenning (private brokers) and NL Wallet not researched for hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "",
+     "publisher": "DigiD / Logius",
+     "quote": "De bewaartermijnen voor DigiD variëren tussen maximaal 6 weken en maximaal 5 jaar. Voor de precieze bewaartermijnen kunt u kijken in artikel 11 van het Besluit digitale overheid.",
+     "quote_english": "Retention periods for DigiD vary between a maximum of 6 weeks and a maximum of 5 years. For exact periods see article 11 of the Digital Government Decree.",
+     "title": "Privacy DigiD",
+     "url": "https://www.digid.nl/over-digid/privacy",
+     "value": "DigiD retention periods range from 6 weeks to 5 years, set in art. 11 Besluit digitale overheid"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "nl",
+     "published": "",
+     "publisher": "DigiD / Logius",
+     "quote": "Persoonsgegevens worden opgeslagen op ICT-faciliteiten die zich bevinden op Nederlands grondgebied en die worden beheerd door Logius. Uw persoonsgegevens worden niet doorgegeven aan landen buiten de EU.",
+     "quote_english": "Personal data is stored on ICT facilities located on Dutch territory and managed by Logius. Not transferred outside the EU.",
+     "title": "Privacy DigiD",
+     "url": "https://www.digid.nl/over-digid/privacy",
+     "value": "DigiD data (usage and account data) stored on Logius-managed facilities on Dutch territory"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "nl",
+     "published": "2026-08-17",
+     "publisher": "Logius",
+     "quote": "In de eerste helft van 2026 werd bijna 370 miljoen keer succesvol met DigiD ingelogd.",
+     "quote_english": "In the first half of 2026 there were almost 370 million successful DigiD logins.",
+     "title": "Ruim de helft van alle DigiD-logins wordt gedaan met DigiD app en ID-check",
+     "url": "https://www.logius.nl/actueel/ruim-de-helft-van-alle-digid-logins-wordt-gedaan-met-digid-app-en-id-check",
+     "value": "Almost 370 million successful DigiD logins in the first half of 2026"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "national",
+   "holding_name": "DigiD gebruiksgegevens (DigiD usage/authentication records)",
+   "operator": "Logius, Ministry of BZK",
+   "research_note": "Retention periods set in art. 11 Besluit digitale overheid (6 weeks to 5 years). Hosting statement covers all DigiD personal data including usage data.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Burgemeester en wethouders registreren de kiesgerechtigdheid van de ingezetenen van de gemeente.",
+     "quote_english": "The mayor and aldermen register the voting entitlement of the residents of the municipality.",
+     "title": "Kieswet",
+     "url": "https://wetten.overheid.nl/BWBR0004627/2026-01-01",
+     "value": "Elections Act art. D 1: mayor and aldermen register voting entitlement of the municipality's residents"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registratie van de kiesgerechtigdheid (municipal registration of voting entitlement, derived from BRP)",
+   "operator": "Municipal executives (burgemeester en wethouders)",
+   "research_note": "No national central electoral roll; each municipality registers entitlement. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "Logius",
+     "quote": "PKIoverheid is een afsprakenstelsel dat wordt beheerd door Logius. Het ministerie van Binnenlandse Zaken en Koninkrijksrelaties is de opdrachtgever.",
+     "quote_english": "PKIoverheid is a trust framework managed by Logius. The Ministry of the Interior is the commissioning body.",
+     "title": "Wat is PKIoverheid",
+     "url": "https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wat-pkioverheid",
+     "value": "PKIoverheid is a trust framework managed by Logius on behalf of Ministry of BZK"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "",
+     "publisher": "Logius",
+     "quote": "TSP’s geven de certificaten uit onder het vertrouwensanker van de Staat der Nederlanden zoals beschreven in de richtlijnen van het afsprakenstelsel.",
+     "quote_english": "TSPs issue certificates under the trust anchor of the State of the Netherlands as described in the framework's guidelines.",
+     "title": "Wat is PKIoverheid",
+     "url": "https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wat-pkioverheid",
+     "value": "TSPs issue certificates under the State of the Netherlands trust anchor"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "nl",
+     "published": "2026-08-13",
+     "publisher": "Logius",
+     "quote": "U kiest zelf bij welke van de vier erkende leveranciers u uw certificaat koopt. Cleverbase Digidentity KPN DigiCert (voorheen QuoVadis)",
+     "quote_english": "You choose which of the four approved suppliers to buy your certificate from. Cleverbase Digidentity KPN DigiCert (formerly QuoVadis)",
+     "title": "PKIoverheidcertificaat aanvragen",
+     "url": "https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/pkioverheidcertificaat-aanvragen",
+     "value": "Four approved commercial TSPs: Cleverbase, Digidentity, KPN, DigiCert (formerly QuoVadis)"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "PKIoverheid (State of the Netherlands root and government PKI trust framework)",
+   "operator": "Logius (framework/Policy Authority) for Ministry of BZK; certificates issued by private TSPs",
+   "research_note": "Logius lists four approved TSPs (Cleverbase, Digidentity, KPN, DigiCert formerly QuoVadis); the source does not state the TSPs' jurisdiction or hosting, so dependency is left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-09-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Er is een vreemdelingenadministratie, die wordt beheerd door Onze Minister. De vreemdelingenadministratie bevat: a. de gezichtsopnames en vingerafdrukken, bedoeld in artikel 106a, eerste lid",
+     "quote_english": "There is an aliens administration managed by Our Minister. It contains: a. the facial images and fingerprints referred to in article 106a(1)",
+     "title": "Vreemdelingenwet 2000",
+     "url": "https://wetten.overheid.nl/BWBR0011823/2026-09-01",
+     "value": "Aliens Act 2000 art. 107 establishes the aliens administration managed by the Minister, including facial images and fingerprints"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "Immigratie- en Naturalisatiedienst",
+     "quote": "Bij de IND beoordelen we alle verzoeken van mensen die in Nederland willen verblijven.",
+     "quote_english": "At the IND we assess all requests from people who want to reside in the Netherlands.",
+     "title": "Over ons",
+     "url": "https://ind.nl/nl/over-ons",
+     "value": "IND assesses all requests from people wishing to reside in the Netherlands"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Vreemdelingenadministratie (aliens administration, incl. biometrics) / IND casework",
+   "operator": "Minister for Asylum and Migration; Immigratie- en Naturalisatiedienst (IND)",
+   "research_note": "No hosting or record-count source found for the aliens administration or IND systems.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-04-11",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "belastingwet: zowel deze wet als andere wettelijke bepalingen betreffende de heffing van de onder artikel 1 vallende belastingen",
+     "quote_english": "tax law: both this act and other statutory provisions concerning the levying of the taxes falling under article 1",
+     "title": "Algemene wet inzake rijksbelastingen",
+     "url": "https://wetten.overheid.nl/BWBR0002320/2026-04-11",
+     "value": "General State Taxes Act (AWR) defines tax law framework"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "nl",
+     "published": "2025-12-01",
+     "publisher": "Tweede Kamer der Staten-Generaal (Aanhangsel Handelingen)",
+     "quote": "de applicaties binnen de primaire processen voor de belastingheffing, -inning en opsporing blijven draaien in hun huidige omgeving in de datacenters van de Belastingdienst. De overstap heeft betrekking op de kantoorautomatisering.",
+     "quote_english": "the applications within the primary processes for tax levying, collection and investigation keep running in their current environment in the Belastingdienst data centres. The switch concerns office automation.",
+     "title": "Antwoord op vragen over de overstap van de Belastingdienst naar Microsoft",
+     "url": "https://zoek.officielebekendmakingen.nl/ah-tk-20252026-506.html",
+     "value": "Tax levying, collection and investigation applications stay in Belastingdienst data centres; the Microsoft move concerns office automation only"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "nl",
+     "published": "2025-12-01",
+     "publisher": "Tweede Kamer der Staten-Generaal (Aanhangsel Handelingen)",
+     "quote": "De Belastingdienst levert, als eigenaar van een Overheidsdatacenter, in het kader van betere rijksbrede samenwerking graag een belangrijke en noodzakelijke bijdrage",
+     "quote_english": "The Belastingdienst, as owner of a Government Data Centre, gladly makes an important contribution to better government-wide cooperation",
+     "title": "Antwoord op vragen over de overstap van de Belastingdienst naar Microsoft",
+     "url": "https://zoek.officielebekendmakingen.nl/ah-tk-20252026-506.html",
+     "value": "Belastingdienst owns a government data centre (Overheidsdatacenter)"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "national",
+   "holding_name": "Belastingdienst primary-process systems for tax levying and collection",
+   "operator": "Belastingdienst (Tax and Customs Administration), Ministry of Finance",
+   "research_note": "Government states tax levying, collection and investigation applications run in Belastingdienst's own data centres; only office automation is moving to Microsoft 365.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-07-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "De bepalingen bij of krachtens deze wet vormen de nationale bepalingen ter uitvoering van: a. het Douanewetboek van de Unie",
+     "quote_english": "The provisions under this act form the national provisions implementing: a. the Union Customs Code",
+     "title": "Algemene douanewet",
+     "url": "https://wetten.overheid.nl/BWBR0023746/2026-07-01",
+     "value": "General Customs Act implements the Union Customs Code"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "2022-11-07",
+     "publisher": "Tweede Kamer der Staten-Generaal",
+     "quote": "Het huidige aangiftesysteem (AGS) wordt vervangen door een nieuw aangiftesysteem (DMS)",
+     "quote_english": "The current declaration system (AGS) is being replaced by a new declaration system (DMS)",
+     "title": "Douane; Brief regering; Uitstel invoering nieuw aangiftesysteem van de Douane",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-31934-61.html",
+     "value": "Current declaration system AGS is being replaced by the new DMS"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "Douaneaangiften Managementsysteem (DMS), replacing AGS — customs declaration system",
+   "operator": "Douane (Netherlands Customs), part of Belastingdienst, Ministry of Finance",
+   "research_note": "Found no source stating where DMS is hosted; the Belastingdienst data-centre statement refers to tax processes, not explicitly customs.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-07-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "De Sociale verzekeringsbank is bevoegd controlevoorschriften vast te stellen.",
+     "quote_english": "The Social Insurance Bank is authorised to set control regulations.",
+     "title": "Algemene Ouderdomswet",
+     "url": "https://wetten.overheid.nl/BWBR0002221/2026-07-01",
+     "value": "General Old Age Pensions Act (AOW) assigns execution to the SVB"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-07-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Het Uitvoeringsinstituut werknemersverzekeringen draagt zorg voor de inrichting en adequate werking van de polisadministratie.",
+     "quote_english": "UWV is responsible for setting up and properly operating the policy administration.",
+     "title": "Wet structuur uitvoeringsorganisatie werk en inkomen",
+     "url": "https://wetten.overheid.nl/BWBR0013060/2026-07-01",
+     "value": "SUWI Act art. 33: UWV is responsible for the polisadministratie"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "nl",
+     "published": "2025-05-22",
+     "publisher": "Sociale Verzekeringsbank",
+     "quote": "Voor alle 3,6 miljoen AOW-gerechtigden is onderzocht of ze een fiscaal partner hebben.",
+     "quote_english": "For all 3.6 million AOW beneficiaries it was examined whether they have a tax partner.",
+     "title": "SUWI jaarverslag SVB 2024",
+     "url": "https://repository.overheid.nl/frbr/officielepublicaties/blg/onopgemaakt/blg-1196853/1/pdf/blg-1196853.pdf",
+     "value": "3.6 million AOW (state pension) beneficiaries"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "hosting",
+     "language": "nl",
+     "published": "2025-05-22",
+     "publisher": "Sociale Verzekeringsbank",
+     "quote": "De cloudomgeving waarin de SVB deels opereert maakt deel uit van de SVB-infrastructuur en krijgt dezelfde prioriteit om deze veilig en wendbaar te houden.",
+     "quote_english": "The cloud environment in which SVB partly operates is part of the SVB infrastructure and gets the same priority to keep it secure and agile.",
+     "title": "SUWI jaarverslag SVB 2024",
+     "url": "https://repository.overheid.nl/frbr/officielepublicaties/blg/onopgemaakt/blg-1196853/1/pdf/blg-1196853.pdf",
+     "value": "SVB partly operates in a cloud environment (provider not named)"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "SVB AOW administration (state pension) and UWV Polisadministratie (employment/wage and benefit relationships)",
+   "operator": "Sociale Verzekeringsbank (SVB); Uitvoeringsinstituut Werknemersverzekeringen (UWV)",
+   "research_note": "SVB reports it partly operates in a cloud environment but does not name the provider; UWV hosting not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "is verplicht zich krachtens een zorgverzekering te verzekeren of te laten verzekeren tegen het in artikel 10 bedoelde risico.",
+     "quote_english": "is obliged to insure or have themselves insured under a health insurance policy against the risk referred to in article 10.",
+     "title": "Zorgverzekeringswet",
+     "url": "https://wetten.overheid.nl/BWBR0018450/2026-01-01",
+     "value": "Health Insurance Act art. 2: insurance obligation under a zorgverzekering"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Statutory basic health insurance (Zorgverzekering) — insured-person records",
+   "operator": "Private health insurers (zorgverzekeraars) under the Zvw",
+   "research_note": "The Zvw obliges residents to take out insurance with private insurers; searched for a single national enrolment register (e.g. Zorginstituut, CAK, Vecozo) and found no authoritative source describing one, so status left unknown.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "De Dienst heeft, onverminderd het bepaalde in andere wettelijke voorschriften, tot taak: a. het houden van de openbare registers; b. het houden en bijwerken van de basisregistratie kadaster;",
+     "quote_english": "The Agency is tasked, without prejudice to other statutory provisions, with: a. keeping the public registers; b. keeping and updating the cadastral base register;",
+     "title": "Kadasterwet",
+     "url": "https://wetten.overheid.nl/BWBR0004541/2026-01-01",
+     "value": "Cadastre Act art. 3: Kadaster keeps the public registers and the cadastral base register"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "hosting",
+     "language": "nl",
+     "published": "2026-05-26",
+     "publisher": "Tweede Kamer der Staten-Generaal (bijlage)",
+     "quote": "Conform het Rijkscloudbeleid zijn alle verwerkingen ten behoeve van de wettelijke taken voor de basisregistraties in een private cloud bij KPN ondergebracht. Een specifieke set van goedgekeurde diensten staat in de public cloud bij Microsoft Azure.",
+     "quote_english": "In line with central government cloud policy, all processing for the statutory tasks for the base registers is housed in a private cloud at KPN. A specific set of approved services is in the Microsoft Azure public cloud.",
+     "title": "Rapport Wettelijke evaluatie Kadaster 2025",
+     "url": "https://repository.overheid.nl/frbr/officielepublicaties/blg/onopgemaakt/blg-1249287/1/pdf/blg-1249287.pdf",
+     "value": "Statutory base-register processing in KPN private cloud; a specific set of approved services in Microsoft Azure public cloud"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "eu_provider",
+   "holding_name": "Openbare registers en Basisregistratie Kadaster (public registers and cadastral base register)",
+   "operator": "Kadaster (Dienst voor het kadaster en de openbare registers)",
+   "research_note": "Statutory evaluation states all statutory base-register processing runs in a KPN private cloud; a specific set of approved services runs on Microsoft Azure public cloud. Datacentre/infrastructure was outsourced to Capgemini in 2013.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2025-07-16",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Er is een handelsregister van ondernemingen en rechtspersonen: a. ter bevordering van de rechtszekerheid in het economisch verkeer",
+     "quote_english": "There is a trade register of enterprises and legal entities: a. to promote legal certainty in economic transactions",
+     "title": "Handelsregisterwet 2007",
+     "url": "https://wetten.overheid.nl/BWBR0021777/2025-07-16",
+     "value": "Trade Register Act 2007 art. 2 establishes the trade register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "nl",
+     "published": "2025-07-16",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Het handelsregister wordt gehouden door de Kamer. 2 Ten aanzien van verwerkingen ten behoeve van het handelsregister is de Kamer verwerkingsverantwoordelijke.",
+     "quote_english": "The trade register is kept by the Chamber. 2 With regard to processing for the trade register, the Chamber is the controller.",
+     "title": "Handelsregisterwet 2007",
+     "url": "https://wetten.overheid.nl/BWBR0021777/2025-07-16",
+     "value": "The register is kept by the Chamber (KVK), which is controller"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "nl",
+     "published": "2025-07-16",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Kamer: de Kamer van Koophandel, genoemd in artikel 2 van de Wet op de Kamer van Koophandel",
+     "quote_english": "Chamber: the Chamber of Commerce referred to in article 2 of the Chamber of Commerce Act",
+     "title": "Handelsregisterwet 2007",
+     "url": "https://wetten.overheid.nl/BWBR0021777/2025-07-16",
+     "value": "'Kamer' means the Kamer van Koophandel"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Handelsregister (Trade Register)",
+   "operator": "Kamer van Koophandel (KVK)",
+   "research_note": "No public source found on KVK hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2025-07-16",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "In het handelsregister wordt opgenomen wie de uiteindelijk belanghebbende is of de uiteindelijk belanghebbenden zijn van vennootschappen of andere juridische entiteiten",
+     "quote_english": "The trade register records who the ultimate beneficial owner or owners are of companies or other legal entities",
+     "title": "Handelsregisterwet 2007",
+     "url": "https://wetten.overheid.nl/BWBR0021777/2025-07-16",
+     "value": "Trade Register Act art. 15a: ultimate beneficial owners are recorded in the trade register"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "UBO-register (part of the Handelsregister)",
+   "operator": "Kamer van Koophandel (KVK)",
+   "research_note": "UBO data is recorded in the trade register (art. 15a Hrw 2007); no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-09-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Er is een kentekenregister. Dit register is een basisregistratie.",
+     "quote_english": "There is a vehicle registration register. This register is a base register.",
+     "title": "Wegenverkeerswet 1994",
+     "url": "https://wetten.overheid.nl/BWBR0006622/2026-09-01",
+     "value": "Road Traffic Act 1994 art. 42: vehicle registration register is a base register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "nl",
+     "published": "2026-09-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "De Dienst Wegverkeer is de beheerder en verwerkingsverantwoordelijke van het kentekenregister.",
+     "quote_english": "The Road Traffic Agency is the manager and controller of the vehicle registration register.",
+     "title": "Wegenverkeerswet 1994",
+     "url": "https://wetten.overheid.nl/BWBR0006622/2026-09-01",
+     "value": "RDW manages and is controller of the vehicle registration register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "2026-09-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Er is een rijbewijzenregister. De Dienst Wegverkeer is beheerder en verwerkingsverantwoordelijke van het rijbewijzenregister.",
+     "quote_english": "There is a driving licence register. The Road Traffic Agency is manager and controller of the driving licence register.",
+     "title": "Wegenverkeerswet 1994",
+     "url": "https://wetten.overheid.nl/BWBR0006622/2026-09-01",
+     "value": "Art. 126: driving licence register managed by RDW"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kentekenregister (vehicle registration register) and Rijbewijzenregister (driving licence register)",
+   "operator": "Dienst Wegverkeer (RDW)",
+   "research_note": "No public hosting or record-count source found for RDW registers.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-09-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Onze Minister verwerkt in de justitiële documentatie justitiële gegevens ten behoeve van een goede strafrechtspleging.",
+     "quote_english": "Our Minister processes judicial data in the judicial documentation for the proper administration of criminal justice.",
+     "title": "Wet justitiële en strafvorderlijke gegevens",
+     "url": "https://wetten.overheid.nl/BWBR0014194/2026-09-01",
+     "value": "Judicial and Criminal Records Act art. 2: the Minister processes judicial data in the judicial documentation"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Justitiële documentatie (Judicial Documentation System / criminal records)",
+   "operator": "Minister of Justice and Security (executed by the Justitiële Informatiedienst, Justid)",
+   "research_note": "No hosting source found; court case-file systems of the Rechtspraak not researched in depth.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-09-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Politiegegevens kunnen worden verwerkt met het oog op de uitvoering van de dagelijkse politietaak gedurende een periode van één jaar na de datum van de eerste verwerking.",
+     "quote_english": "Police data may be processed for the daily police task for one year after the date of first processing.",
+     "title": "Wet politiegegevens",
+     "url": "https://wetten.overheid.nl/BWBR0022463/2026-09-01",
+     "value": "Police Data Act art. 8: police data for daily police tasks"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Politiegegevens (police data systems under the Police Data Act)",
+   "operator": "Politie (National Police, under the korpschef)",
+   "research_note": "No public source found naming police data hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "2022-07-05",
+     "publisher": "Tweede Kamer der Staten-Generaal",
+     "quote": "Bureau Sirene is in Nederland ondergebracht bij de landelijke eenheid van de politie, waarbij de politie de beheerverantwoordelijkheid voor het N.SIS heeft.",
+     "quote_english": "In the Netherlands the SIRENE bureau is housed in the national unit of the police, with the police having management responsibility for N.SIS.",
+     "title": "Uitvoeringswet EU-verordeningen grenzen en veiligheid; Memorie van toelichting",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-36158-3.html",
+     "value": "SIRENE bureau is in the police national unit; police has management responsibility for N.SIS"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-09-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Met het toezicht op de naleving en de uitvoering van de Schengengrenscode en de wettelijke voorschriften met betrekking tot de grensbewaking zijn belast: a. de ambtenaren van de Koninklijke marechaussee",
+     "quote_english": "Charged with supervising compliance with and implementing the Schengen Borders Code and border control rules are: a. officials of the Royal Marechaussee",
+     "title": "Vreemdelingenwet 2000",
+     "url": "https://wetten.overheid.nl/BWBR0011823/2026-09-01",
+     "value": "Aliens Act art. 46: Royal Marechaussee charged with Schengen Borders Code and border control"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "N.SIS (national Schengen Information System) and border control records (EES/VIS national parts)",
+   "operator": "Politie (N.SIS authority, SIRENE bureau in national unit); Koninklijke Marechaussee (border control)",
+   "research_note": "No hosting source found for N.SIS or national EES/VIS components.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-07-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "worden door de korpschef ingevoerd en bijgehouden in een geautomatiseerd systeem van gegevensbestanden.",
+     "quote_english": "are entered and maintained by the chief of police in an automated system of data files.",
+     "title": "Wet wapens en munitie",
+     "url": "https://wetten.overheid.nl/BWBR0008804/2026-07-01",
+     "value": "Weapons and Ammunition Act: licence data is entered and kept by the korpschef in an automated filing system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "nl",
+     "published": "2026-07-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Verlof tot het voorhanden hebben van een wapen en munitie wordt, uitsluitend voor wapens en munitie behorend tot categorie III, verleend door de korpschef.",
+     "quote_english": "A permit to possess a weapon and ammunition is, solely for category III, granted by the chief of police.",
+     "title": "Wet wapens en munitie",
+     "url": "https://wetten.overheid.nl/BWBR0008804/2026-07-01",
+     "value": "Art. 28: category III firearm permits are granted by the korpschef"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Automated firearms data filing system (licences/permits register)",
+   "operator": "Politie (korpschef)",
+   "research_note": "System name and hosting not found in public sources.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2024-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "De regering geeft het Staatsblad en de Staatscourant uit. 2 De uitgifte van het Staatsblad en de Staatscourant geschiedt elektronisch op een algemeen toegankelijke wijze.",
+     "quote_english": "The government issues the Bulletin of Acts and the Government Gazette. 2 Issuance takes place electronically in a publicly accessible way.",
+     "title": "Bekendmakingswet",
+     "url": "https://wetten.overheid.nl/BWBR0004287/2024-01-01",
+     "value": "Publication Act art. 1: government publishes Staatsblad and Staatscourant electronically"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "KOOP",
+     "quote": "KOOP (Kennis- en Exploitatiecentrum Officiële Overheidspublicaties) zet zich in voor een open overheid.",
+     "quote_english": "KOOP (Knowledge and Operations Centre for Official Government Publications) works for an open government.",
+     "title": "Over KOOP",
+     "url": "https://www.koopoverheid.nl/over-koop",
+     "value": "KOOP, the centre for official government publications"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Staatsblad and Staatscourant (electronic official gazettes, officielebekendmakingen.nl)",
+   "operator": "KOOP (Kennis- en Exploitatiecentrum Officiële Overheidspublicaties), Ministry of BZK; Staatsblad under Minister of Justice and Security",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-06-04",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "De aan het Rijk toebehorende en toevertrouwde gelden en geldswaardige papieren worden in de schatkist van het Rijk aangehouden. 2 Onze Minister van Financiën is belast met het centraal beheer van de schatkist van het Rijk.",
+     "quote_english": "Money and securities belonging or entrusted to the State are held in the State treasury. 2 The Minister of Finance is charged with central management of the State treasury.",
+     "title": "Comptabiliteitswet 2016",
+     "url": "https://wetten.overheid.nl/BWBR0039429/2026-06-04",
+     "value": "Government Accounts Act 2016 art. 4.17: central management of the state treasury by the Minister of Finance"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Schatkist van het Rijk (State treasury) and central government financial administration",
+   "operator": "Ministry of Finance",
+   "research_note": "No hosting source found for treasury/accounting systems.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2019-07-01",
+     "publisher": "Staatscourant",
+     "quote": "Kabinetsbesluit van 4 juli 2003 tot oprichting van een Shared Service Center HRM voor Personeelsregistratie en Salarisadministratie",
+     "quote_english": "Cabinet decision of 4 July 2003 establishing a Shared Service Centre HRM for Personnel Registration and Payroll Administration",
+     "title": "Besluit van de vice-president van de Raad van State tot het verlenen van machtiging aan P-Direkt",
+     "url": "https://zoek.officielebekendmakingen.nl/stcrt-2019-35539.html",
+     "value": "Cabinet decision of 4 July 2003 establishing the Shared Service Center HRM for personnel registration and payroll"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "P-Direkt (Shared Service Center HRM for personnel registration and payroll of central government)",
+   "operator": "P-Direkt (O&P Rijk), Ministry of BZK",
+   "research_note": "No public source found on P-Direkt hosting; Defence payroll not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2025-07-01",
+     "publisher": "Staatsblad",
+     "quote": "Indien de Kiesraad uitslagprogrammatuur ter beschikking stelt die niet centraal wordt gehost",
+     "quote_english": "If the Electoral Council provides results software that is not centrally hosted",
+     "title": "Besluit van 23 juni 2025 tot wijziging van het Kiesbesluit in verband met de Wet programmatuur verkiezingsuitslagen",
+     "url": "https://zoek.officielebekendmakingen.nl/stb-2025-172.html",
+     "value": "Kiesbesluit amendment (Wet programmatuur verkiezingsuitslagen) sets requirements for results software provided by the Kiesraad"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Uitslagprogrammatuur (election results software, formerly OSV2020)",
+   "operator": "Kiesraad (Electoral Council)",
+   "research_note": "The 2025 decree allows both centrally hosted and non-hosted results software; no source found on where it is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-09-22",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Wet van 26 maart 1998, houdende nieuwe bepalingen inzake De Nederlandsche Bank N.V.",
+     "quote_english": "Act of 26 March 1998 containing new provisions concerning De Nederlandsche Bank N.V.",
+     "title": "Bankwet 1998",
+     "url": "https://wetten.overheid.nl/BWBR0009508/2026-09-22",
+     "value": "Bank Act 1998 governs DNB"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-09-22",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "het bevorderen van de goede werking van het betalingsverkeer.",
+     "quote_english": "promoting the smooth operation of payment systems.",
+     "title": "Bankwet 1998",
+     "url": "https://wetten.overheid.nl/BWBR0009508/2026-09-22",
+     "value": "Art. 3: DNB task to promote the smooth operation of payment systems"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "holding_name": "De Nederlandsche Bank systems (payment system oversight/operation, accounts, reserves)",
+   "operator": "De Nederlandsche Bank N.V. (DNB)",
+   "research_note": "dnb.nl blocked automated retrieval; no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "hosting",
+     "language": "nl",
+     "published": "2018-06-11",
+     "publisher": "Bureau ICT-toetsing",
+     "quote": "Defensie heeft nog niet besloten wat zij doet met de bestaande datacenters in Den Helder en Maasland.",
+     "quote_english": "Defence has not yet decided what to do with the existing data centres in Den Helder and Maasland.",
+     "title": "Advies van Bureau ICT-toetsing (BIT) over het programma Grensverleggende IT (GrIT)",
+     "url": "https://repository.overheid.nl/frbr/officielepublicaties/blg/onopgemaakt/blg-844692/1/pdf/blg-844692.pdf",
+     "value": "Defence has existing own data centres in Den Helder and Maasland"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "foreign_dependency",
+     "language": "nl",
+     "published": "2018-06-11",
+     "publisher": "Bureau ICT-toetsing",
+     "quote": "Defensie selecteert daarvoor één leverancier die de nieuwe IT-infrastructuur bouwt en deze in samenwerking met Defensie gaat beheren en onderhouden.",
+     "quote_english": "Defence selects one supplier that builds the new IT infrastructure and will manage and maintain it together with Defence.",
+     "title": "Advies van Bureau ICT-toetsing (BIT) over het programma Grensverleggende IT (GrIT)",
+     "url": "https://repository.overheid.nl/frbr/officielepublicaties/blg/onopgemaakt/blg-844692/1/pdf/blg-844692.pdf",
+     "value": "A single external supplier builds and co-manages the new IT infrastructure"
+    }
+   ],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "holding_name": "Defence IT infrastructure (GrIT programme; Joint IV Commando)",
+   "operator": "Ministry of Defence (Joint IV Commando, JIVC) with an external supplier",
+   "research_note": "Defence runs own data centres (Den Helder, Maasland; new twin data centre under GrIT) but the IT infrastructure is built and co-managed by an external supplier not named in the source.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Er is een Algemene Inlichtingen- en Veiligheidsdienst. 2 De Algemene Inlichtingen- en Veiligheidsdienst heeft in het belang van de nationale veiligheid tot taak",
+     "quote_english": "There is a General Intelligence and Security Service. 2 In the interest of national security it has the task of",
+     "title": "Wet op de inlichtingen- en veiligheidsdiensten 2017",
+     "url": "https://wetten.overheid.nl/BWBR0039896/2026-01-01",
+     "value": "Intelligence and Security Services Act 2017 art. 8 establishes the AIVD"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Er is een Militaire Inlichtingen- en Veiligheidsdienst. 2 De Militaire Inlichtingen- en Veiligheidsdienst heeft in het belang van de nationale veiligheid tot taak",
+     "quote_english": "There is a Military Intelligence and Security Service. 2 In the interest of national security it has the task of",
+     "title": "Wet op de inlichtingen- en veiligheidsdiensten 2017",
+     "url": "https://wetten.overheid.nl/BWBR0039896/2026-01-01",
+     "value": "Art. 10 establishes the MIVD"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "AIVD and MIVD intelligence holdings",
+   "operator": "Algemene Inlichtingen- en Veiligheidsdienst (AIVD); Militaire Inlichtingen- en Veiligheidsdienst (MIVD)",
+   "research_note": "No public hosting information (as expected).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-06-12",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Een meldkamer is de fysieke plaats waar de meldkamerfunctie, bedoeld in artikel 25b, eerste lid , wordt uitgevoerd. De politie heeft meldkamers. Er zijn tien meldkamers.",
+     "quote_english": "A control room is the physical place where the control-room function is performed. The police has control rooms. There are ten control rooms.",
+     "title": "Politiewet 2012",
+     "url": "https://wetten.overheid.nl/BWBR0031788/2026-06-12",
+     "value": "Police Act 2012 art. 25a: the police has ten control rooms"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "Landelijke Meldkamer Samenwerking",
+     "quote": "LMS beheert het C2000-systeem. Wij zorgen dat er nieuwe masten worden neergezet, plegen het onderhoud en voeren keuringen uit. C2000 is eigendom van het ministerie van Justitie en Veiligheid.",
+     "quote_english": "LMS manages the C2000 system. We place new masts, carry out maintenance and inspections. C2000 is owned by the Ministry of Justice and Security.",
+     "title": "C2000",
+     "url": "https://www.meldkamersamenwerking.nl/c2000/",
+     "value": "LMS manages C2000; C2000 is owned by the Ministry of Justice and Security"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "112 emergency control rooms (meldkamers) and C2000 public-safety radio network",
+   "operator": "Politie (control rooms) with Landelijke Meldkamer Samenwerking (LMS, manages C2000); owned by Ministry of Justice and Security",
+   "research_note": "No hosting source found for control-room systems.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "2025-02-10",
+     "publisher": "Tweede Kamer der Staten-Generaal (bijlage)",
+     "quote": "Voor landelijke alertering moet de NCTV goedkeuring geven, waarna het Nationaal Crisiscentrum (NCC) de berichten verstuurt.",
+     "quote_english": "For national alerting the NCTV must give approval, after which the National Crisis Centre (NCC) sends the messages.",
+     "title": "Alertering bij militaire dreiging",
+     "url": "https://repository.overheid.nl/frbr/officielepublicaties/blg/onopgemaakt/blg-1182102/1/pdf/blg-1182102.pdf",
+     "value": "National alerts require NCTV approval, after which the NCC sends them"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "nl",
+     "published": "2025-02-10",
+     "publisher": "Tweede Kamer der Staten-Generaal (bijlage)",
+     "quote": "Wanneer een NL-Alert wordt verstuurd, gaat deze via de NL-Alert-broker naar de telecomproviders, die het bericht op hun beurt via cell broadcast verzenden naar de burgers.",
+     "quote_english": "When an NL-Alert is sent it goes via the NL-Alert broker to the telecom providers, who in turn send it to citizens via cell broadcast.",
+     "title": "Alertering bij militaire dreiging",
+     "url": "https://repository.overheid.nl/frbr/officielepublicaties/blg/onopgemaakt/blg-1182102/1/pdf/blg-1182102.pdf",
+     "value": "NL-Alert goes via a broker to telecom providers who send it via cell broadcast"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Nationaal Crisiscentrum (NCC) and NL-Alert public alerting",
+   "operator": "Nationaal Coördinator Terrorismebestrijding en Veiligheid (NCTV) / Nationaal Crisiscentrum, Ministry of Justice and Security",
+   "research_note": "NL-Alert depends on a broker and on mobile telecom providers (unnamed in source).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-07-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "transmissiesysteem voor elektriciteit, aanwijzen als beheerder van dat transmissiesysteem",
+     "quote_english": "electricity transmission system, designate as operator of that transmission system",
+     "title": "Energiewet",
+     "url": "https://wetten.overheid.nl/BWBR0050714/2026-07-01",
+     "value": "Energy Act art. 3.2: Minister designates the operator of the electricity transmission system"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "Tweede Kamer der Staten-Generaal",
+     "quote": "Voor elektriciteit is TenneT de enige TSB en voor gas is dit Gasunie Transport Services (GTS).",
+     "quote_english": "For electricity TenneT is the only TSO and for gas this is Gasunie Transport Services (GTS).",
+     "title": "Energiewet; Memorie van toelichting",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-36378-3.html",
+     "value": "TenneT is the sole electricity TSO"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "Tweede Kamer der Staten-Generaal",
+     "quote": "Op dit moment is TenneT TSO verantwoordelijk voor de balans in het gehele Nederlandse elektriciteitssysteem",
+     "quote_english": "At present TenneT TSO is responsible for the balance in the entire Dutch electricity system",
+     "title": "Energiewet; Memorie van toelichting",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-36378-3.html",
+     "value": "TenneT TSO is responsible for balancing the entire Dutch electricity system"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "TenneT transmission system control and balancing systems",
+   "operator": "TenneT TSO B.V. (sole electricity TSO)",
+   "research_note": "tennet.eu blocked automated retrieval; no public hosting source found for EMS/SCADA.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Waterschappen zijn openbare lichamen welke de waterstaatkundige verzorging van een bepaald gebied ten doel hebben.",
+     "quote_english": "Water boards are public bodies whose purpose is the water management of a particular area.",
+     "title": "Waterschapswet",
+     "url": "https://wetten.overheid.nl/BWBR0005108/2026-01-01",
+     "value": "Water Boards Act art. 1: water boards are public bodies charged with water management of an area"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Water system management and flood-defence control (water boards; Rijkswaterstaat for national waters)",
+   "operator": "Waterschappen (regional water authorities); Rijkswaterstaat",
+   "research_note": "No public source found on hosting of water-board or Rijkswaterstaat control systems; Rijkswaterstaat operator role not quoted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "",
+     "publisher": "VZVZ",
+     "quote": "Het Landelijk Schakelpunt (LSP) is een landelijke infrastructuur voor de gezondheidszorg, waarmee zorgaanbieders medische gegevens van hun patiënten uitwisselen.",
+     "quote_english": "The National Switch Point (LSP) is a national healthcare infrastructure through which care providers exchange their patients' medical data.",
+     "title": "AORTA-LSP",
+     "url": "https://www.aorta-lsp.nl/",
+     "value": "LSP is a national infrastructure through which care providers exchange patients' medical data"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "VZVZ",
+     "quote": "AORTA, met de voorzieningen in het Landelijk Schakelpunt, bestaat sinds 2012 en is in beheer bij de Vereniging van Zorgaanbieders voor Zorgcommunicatie (VZVZ).",
+     "quote_english": "AORTA, with the facilities in the National Switch Point, has existed since 2012 and is managed by VZVZ.",
+     "title": "Over AORTA-LSP",
+     "url": "https://www.aorta-lsp.nl/over-aorta-lsp",
+     "value": "AORTA/LSP managed by VZVZ since 2012"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "nl",
+     "published": "",
+     "publisher": "VZVZ",
+     "quote": "Die gegevens zijn en blijven decentraal opgeslagen bij de bron; de dossierhoudende huisarts of apotheker.",
+     "quote_english": "That data is and remains stored decentrally at the source: the record-holding GP or pharmacist.",
+     "title": "Hoe werkt het Landelijk Schakelpunt",
+     "url": "https://www.aorta-lsp.nl/over-aorta-lsp/hoe-werkt-het-landelijk-schakelpunt",
+     "value": "Medical data remain stored decentrally at the source (GP or pharmacist)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2025-07-05",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "elektronisch uitwisselingssysteem: een systeem waarmee zorgaanbieders op elektronische wijze, dossiers, gedeelten van dossiers of gegevens uit dossiers voor andere zorgaanbieders raadpleegbaar kunnen maken",
+     "quote_english": "electronic exchange system: a system by which care providers can electronically make records, parts of records or data from records accessible to other care providers",
+     "title": "Wet aanvullende bepalingen verwerking persoonsgegevens in de zorg",
+     "url": "https://wetten.overheid.nl/BWBR0023864/2025-07-05",
+     "value": "Wabvpz defines electronic exchange systems"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Landelijk Schakelpunt (LSP) — national health information exchange (AORTA); records stay with providers",
+   "operator": "Vereniging van Zorgaanbieders voor Zorgcommunicatie (VZVZ)",
+   "research_note": "No national central EHR: LSP is an exchange infrastructure; clinical data remain decentrally with GPs/pharmacists. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "2024-10-02",
+     "publisher": "Tweede Kamer der Staten-Generaal",
+     "quote": "het landelijke registratiesysteem Praeventis, waarin voor iedere individuele deelnemer aan het RVP centraal wordt geregistreerd welke vaccinaties zijn toegediend en dat dagelijks up-to-date gehouden wordt.",
+     "quote_english": "the national registration system Praeventis, in which for every individual participant in the national immunisation programme it is centrally registered which vaccinations were given, kept up to date daily.",
+     "title": "Wijziging van een aantal wetten op het terrein van VWS (grondslagen gegevensverwerking); Memorie van toelichting",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-36621-3.html",
+     "value": "Praeventis centrally registers vaccinations of every participant in the national immunisation programme"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Bij algemene maatregel van bestuur wordt een vaccinatieprogramma vastgesteld, waarin wordt opgenomen welke groepen voor welke vaccinaties in aanmerking komen.",
+     "quote_english": "A vaccination programme is established by order in council, stating which groups are eligible for which vaccinations.",
+     "title": "Wet publieke gezondheid",
+     "url": "https://wetten.overheid.nl/BWBR0024705/2026-01-01",
+     "value": "Public Health Act art. 6b: vaccination programme set by order in council"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Praeventis (national vaccination registration system)",
+   "operator": "RIVM (National Institute for Public Health and the Environment)",
+   "research_note": "Notifiable disease systems not researched; no hosting source found for Praeventis.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-08-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "Er is een register onderwijsdeelnemers, waarin basisgegevens, vrijstellingsgegevens, verzuimgegevens, diplomagegevens en persoonsgebonden nummers van onderwijsdeelnemers zijn opgenomen. 2 Onze Minister draagt zorg voor het beheer van het register onderwijsdeelnemers.",
+     "quote_english": "There is a register of education participants containing basic, exemption, absence and diploma data and personal numbers. 2 Our Minister is responsible for managing the register.",
+     "title": "Wet register onderwijsdeelnemers",
+     "url": "https://wetten.overheid.nl/BWBR0042012/2026-08-01",
+     "value": "Register of Education Participants Act art. 4 establishes the register, managed under the Minister"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "DUO",
+     "quote": "In Mijn diploma's staan diplomagegevens van de meeste, door het ministerie van OCW erkende Nederlandse opleidingen.",
+     "quote_english": "My diplomas contains diploma data of most Dutch programmes recognised by the Ministry of OCW.",
+     "title": "Uittreksel diploma",
+     "url": "https://duo.nl/particulier/uittreksel-diplomagegevens-downloaden.jsp",
+     "value": "DUO holds diploma data of most OCW-recognised programmes"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "nl",
+     "published": "2026-04-01",
+     "publisher": "Tweede Kamer der Staten-Generaal",
+     "quote": "Het advies bevestigt de strategische richting om standaardapplicaties te migreren naar de cloudinfrastructuur van ODC-Noord. Deze keuze staat niet ter discussie. Eerder werd al een omvangrijke groep van maatwerkapplicaties gemigreerd naar de cloudinfrastructuur van ODC-Noord.",
+     "quote_english": "The advice confirms the strategic direction of migrating standard applications to ODC-Noord's cloud infrastructure. This choice is not in question. A large group of custom applications was already migrated to ODC-Noord's cloud infrastructure.",
+     "title": "Ministeriële reactie op het advies van AcICT t.a.v. het project Enterprise Cloud bij DUO",
+     "url": "https://zoek.officielebekendmakingen.nl/kst-26643-1500.html",
+     "value": "DUO applications migrating to the cloud infrastructure of government data centre ODC-Noord"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register onderwijsdeelnemers (ROD, Register of Education Participants, incl. diploma data)",
+   "operator": "Dienst Uitvoering Onderwijs (DUO), Ministry of Education (OCW)",
+   "research_note": "DUO applications are being migrated to the government data centre ODC-Noord cloud infrastructure (Broadcom/VMware-based per the letter), but the source does not name the ROD specifically, so left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2025-09-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "De door de directeur-generaal in het kader van de uitoefening van de taken ter uitvoering van deze wet ontvangen gegevens worden uitsluitend gebruikt voor statistische doeleinden.",
+     "quote_english": "Data received by the Director-General in performing tasks under this act are used exclusively for statistical purposes.",
+     "title": "Wet op het Centraal bureau voor de statistiek",
+     "url": "https://wetten.overheid.nl/BWBR0015926/2025-09-01",
+     "value": "CBS Act art. 37: data received used only for statistical purposes"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "",
+     "publisher": "CBS",
+     "quote": "Microdata zijn koppelbare data op persoons-, bedrijfs- en adresniveau waarmee Nederlandse universiteiten, wetenschappelijke organisaties, planbureaus en onderzoeksinstanties in een aantal andere EU-landen onder strikte voorwaarden zelf statistisch onderzoek kunnen doen.",
+     "quote_english": "Microdata are linkable data at person, business and address level with which Dutch universities, scientific organisations, planning agencies and research bodies in some other EU countries can do statistical research under strict conditions.",
+     "title": "Microdata: Zelf onderzoek doen",
+     "url": "https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen",
+     "value": "Microdata: linkable person, business and address-level data for authorised researchers"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "nl",
+     "published": "",
+     "publisher": "CBS",
+     "quote": "Het borgen van privacy en het voorkomen van onthulling van personen of bedrijven is daarbij het uitgangspunt. Het onderzoek wordt gedaan in de CBS-microdataomgeving.",
+     "quote_english": "Safeguarding privacy and preventing disclosure of persons or businesses is the starting point. The research is done in the CBS microdata environment.",
+     "title": "Microdata: Zelf onderzoek doen",
+     "url": "https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen",
+     "value": "Research is done inside the CBS microdata environment"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "CBS microdata (linkable person, business and address-level data; CBS microdata environment)",
+   "operator": "Centraal Bureau voor de Statistiek (CBS)",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2025-02-12",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "De Dienst houdt een geautomatiseerde landelijke voorziening waarin de gegevens uit de in de gemeenten gehouden basisregistratie zijn opgenomen.",
+     "quote_english": "The Agency keeps an automated national facility containing the data from the base register held in the municipalities.",
+     "title": "Wet basisregistratie adressen en gebouwen",
+     "url": "https://wetten.overheid.nl/BWBR0023466/2025-02-12",
+     "value": "BAG Act art. 26: Kadaster keeps an automated national facility with the municipal BAG data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2026-01-01",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "het uniform, consistent en landsdekkend verzamelen, geometrisch vastleggen, beheren en cartografisch weergeven van geografische gegevens alsmede het houden en bijwerken van de basisregistratie topografie",
+     "quote_english": "the uniform, consistent, nationwide collection, geometric recording, management and cartographic display of geographic data and keeping and updating the topography base register",
+     "title": "Kadasterwet",
+     "url": "https://wetten.overheid.nl/BWBR0004541/2026-01-01",
+     "value": "Cadastre Act art. 3(f): Kadaster keeps the topography base register"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "hosting",
+     "language": "nl",
+     "published": "2026-05-26",
+     "publisher": "Tweede Kamer der Staten-Generaal (bijlage)",
+     "quote": "Conform het Rijkscloudbeleid zijn alle verwerkingen ten behoeve van de wettelijke taken voor de basisregistraties in een private cloud bij KPN ondergebracht. Een specifieke set van goedgekeurde diensten staat in de public cloud bij Microsoft Azure.",
+     "quote_english": "In line with government cloud policy, all processing for the statutory base-register tasks is in a private cloud at KPN. A specific set of approved services is in the Microsoft Azure public cloud.",
+     "title": "Rapport Wettelijke evaluatie Kadaster 2025",
+     "url": "https://repository.overheid.nl/frbr/officielepublicaties/blg/onopgemaakt/blg-1249287/1/pdf/blg-1249287.pdf",
+     "value": "Kadaster base-register processing in KPN private cloud; some approved services on Microsoft Azure"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "eu_provider",
+   "holding_name": "Basisregistratie Adressen en Gebouwen (BAG, national facility) and Basisregistratie Topografie (BRT)",
+   "operator": "Kadaster (national facilities); municipalities (BAG source holders)",
+   "research_note": "Kadaster evaluation states processing for its statutory base registers runs in a KPN private cloud, with a set of approved services on Microsoft Azure.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2024-06-19",
+     "publisher": "Overheid.nl Wettenbank",
+     "quote": "De zorgdrager brengt de archiefbescheiden die niet voor vernietiging in aanmerking komen en ouder zijn dan twintig jaar over naar een archiefbewaarplaats.",
+     "quote_english": "The responsible body transfers records not eligible for destruction and older than twenty years to an archive repository.",
+     "title": "Archiefwet 1995",
+     "url": "https://wetten.overheid.nl/BWBR0007376/2024-06-19",
+     "value": "Archives Act 1995 art. 12: records older than 20 years not destroyed are transferred to an archive repository"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "Nationaal Archief",
+     "quote": "Het Nationaal Archief is de grootste archiefinstelling van Nederland. We beheren blijvend te bewaren archieven van de overheid.",
+     "quote_english": "The National Archives is the largest archive institution in the Netherlands. We manage government archives that are to be kept permanently.",
+     "title": "Organisatie",
+     "url": "https://www.nationaalarchief.nl/over-het-na/organisatie",
+     "value": "Nationaal Archief manages government archives to be kept permanently"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Nationaal Archief (incl. digital e-depot of transferred government records)",
+   "operator": "Nationaal Archief, Ministry of Education, Culture and Science",
+   "research_note": "Archiefwet 1995 still applies; a new Archiefwet 2026 is being prepared for entry into force. No e-depot hosting source found.",
+   "status": "held"
+  }
+ ],
+ "iso": "NL"
+}

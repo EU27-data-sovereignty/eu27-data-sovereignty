@@ -46,6 +46,13 @@ export function Methodology({ bundle }: { bundle: Bundle }) {
         that method was withdrawn because it described no state on its own terms.
       </p>
 
+      <h2 className="text-lg font-semibold text-[var(--color-accent-text)]">Ask</h2>
+      <p>
+        The Ask page answers questions using only these sourced findings, with a citation for every
+        fact. Questions are sent to Anthropic&rsquo;s API to generate the answer and are not stored
+        by this site.
+      </p>
+
       <p className="text-sm text-[var(--color-fg-muted)]">{bundle.national_data_note}</p>
     </article>
   )

@@ -1,0 +1,1648 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "hosting",
+     "language": "fr",
+     "published": "2026-04-23",
+     "publisher": "Plateforme des données de santé (Health Data Hub)",
+     "quote": "La Plateforme de Données de Santé (PDS) annonce le choix de Scaleway comme futur hébergeur de sa plateforme technologique.",
+     "quote_english": "The Health Data Platform (PDS) announces it has chosen Scaleway as the future host of its technology platform.",
+     "title": "La Plateforme des données de santé engage sa migration vers un cloud souverain avec Scaleway",
+     "url": "https://www.health-data-hub.fr/actualites/la-plateforme-des-donnees-de-sante-engage-sa-migration-vers-un-cloud-souverain-avec",
+     "value": "The PDS chose Scaleway as the future host of its technology platform"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2026-04-23",
+     "publisher": "Plateforme des données de santé (Health Data Hub)",
+     "quote": "un espace sécurisé capable d’héberger les données de remboursement de l’Assurance maladie et d’autres bases de données de santé d’intérêt.",
+     "quote_english": "a secure space able to host Assurance Maladie reimbursement data and other health databases of interest.",
+     "title": "La Plateforme des données de santé engage sa migration vers un cloud souverain avec Scaleway",
+     "url": "https://www.health-data-hub.fr/actualites/la-plateforme-des-donnees-de-sante-engage-sa-migration-vers-un-cloud-souverain-avec",
+     "value": "Hosts Assurance Maladie reimbursement data and other health databases"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "CNIL",
+     "quote": "La Caisse nationale de l'assurance maladie des travailleurs salariés (CNAMTS) est responsable du traitement et se charge de sa mise en œuvre.",
+     "quote_english": "The National Health Insurance Fund for Salaried Workers (CNAMTS) is the controller and is responsible for implementing it.",
+     "title": "SNDS : Système national des données de santé",
+     "url": "https://www.cnil.fr/fr/snds-systeme-national-des-donnees-de-sante",
+     "value": "Cnam(TS) is the controller of the SNDS"
+    }
+   ],
+   "holding_name": "Plateforme des données de santé (Health Data Hub) and the Système national des données de santé (SNDS) (national claims and health data warehouse)",
+   "suggested_class": "health_data_platform",
+   "why_critical": "It gathers the Assurance Maladie reimbursement data for the whole population with other health databases for research. Its hosting has been a sovereignty issue, and the platform has chosen a new host."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2023-02-09",
+     "publisher": "CNIL",
+     "quote": "Le RNIPP est un instrument de vérification de l’état civil des personnes nées en France.",
+     "quote_english": "The RNIPP is an instrument for verifying the civil status of persons born in France.",
+     "title": "RNIPP : Répertoire national d’identification des personnes physiques",
+     "url": "https://www.cnil.fr/fr/rnipp-repertoire-national-didentification-des-personnes-physiques",
+     "value": "RNIPP, the register used to verify the civil status of people born in France"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2022",
+     "publisher": "Insee",
+     "quote": "Depuis sa création, l’Insee est responsable de la gestion du RNIPP.",
+     "quote_english": "Since its creation, Insee has been responsible for managing the RNIPP.",
+     "title": "Le Répertoire national d’identification des personnes physiques (RNIPP) au cœur de la vie administrative française (Courrier des statistiques N8)",
+     "url": "https://www.insee.fr/fr/information/6665188",
+     "value": "Insee has managed the RNIPP since its creation"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2022",
+     "publisher": "Insee",
+     "quote": "Les variables du RNIPP, définies par le décret n° 82-103 du 22 janvier 1982, sont moins d’une dizaine.",
+     "quote_english": "The RNIPP's variables, defined by decree no. 82-103 of 22 January 1982, number fewer than ten.",
+     "title": "Le Répertoire national d’identification des personnes physiques (RNIPP) au cœur de la vie administrative française (Courrier des statistiques N8)",
+     "url": "https://www.insee.fr/fr/information/6665188",
+     "value": "Décret n° 82-103 of 22 January 1982"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "fr",
+     "published": "2022",
+     "publisher": "Insee",
+     "quote": "Le répertoire national d’identification des personnes physiques comprend l’état civil de 113 millions de personnes nées ou ayant vécu en France.",
+     "quote_english": "The national register of natural persons contains the civil status of 113 million people born in or having lived in France.",
+     "title": "Le Répertoire national d’identification des personnes physiques (RNIPP) au cœur de la vie administrative française (Courrier des statistiques N8)",
+     "url": "https://www.insee.fr/fr/information/6665188",
+     "value": "Civil status of 113 million people born in or having lived in France"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Répertoire national d’identification des personnes physiques (RNIPP) (national register of natural persons, source of the NIR)",
+   "operator": "Insee (Institut national de la statistique et des études économiques)",
+   "research_note": "No public source found on where the RNIPP is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2020-11-17",
+     "publisher": "CNIL",
+     "quote": "Le fichier TES permet le regroupement, dans une base de données centralisée, de l’image numérisée du visage et des empreintes digitales (de chacun des index, sinon d’autres doigts) de l’ensemble des demandeurs de carte nationale d’identité et de passeport.",
+     "quote_english": "The TES file brings together, in a centralised database, the digitised image of the face and the fingerprints (of each index finger, otherwise other fingers) of all applicants for a national identity card and passport.",
+     "title": "Le fichier des titres électroniques sécurisés (TES)",
+     "url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes",
+     "value": "TES centralises the digitised facial image and fingerprints of every ID-card and passport applicant"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2020-11-17",
+     "publisher": "CNIL",
+     "quote": "Le ministère de l’Intérieur est responsable du fichier",
+     "quote_english": "The Ministry of the Interior is responsible for the file",
+     "title": "Le fichier des titres électroniques sécurisés (TES)",
+     "url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes",
+     "value": "Ministry of the Interior is the controller of TES"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2020-11-17",
+     "publisher": "CNIL",
+     "quote": "Décret n° 2016-1460 du 28 octobre 2016 autorisant la création d'un traitement de données à caractère personnel relatif aux passeports et aux cartes nationales d'identité",
+     "quote_english": "Decree no. 2016-1460 of 28 October 2016 authorising the creation of a personal-data processing relating to passports and national identity cards",
+     "title": "Le fichier des titres électroniques sécurisés (TES)",
+     "url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes",
+     "value": "Décret n° 2016-1460 of 28 October 2016"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Titres électroniques sécurisés (TES) (secure electronic documents file)",
+   "operator": "Ministère de l’Intérieur",
+   "research_note": "No public source found on TES hosting; ANTS sites that might state record counts require JavaScript and could not be retrieved.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2020-11-17",
+     "publisher": "CNIL",
+     "quote": "Le fichier des titres électroniques sécurisés contient des données personnelles, notamment les empreintes digitales, pour la création et la gestion des cartes nationales d’identité et des passeports des Français.",
+     "quote_english": "The secure electronic documents file contains personal data, notably fingerprints, for the creation and management of French national identity cards and passports.",
+     "title": "Le fichier des titres électroniques sécurisés (TES)",
+     "url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes",
+     "value": "TES holds fingerprints for issuing national ID cards and passports"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2020-11-17",
+     "publisher": "CNIL",
+     "quote": "Le ministère de l’Intérieur est responsable du fichier",
+     "quote_english": "The Ministry of the Interior is responsible for the file",
+     "title": "Le fichier des titres électroniques sécurisés (TES)",
+     "url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes",
+     "value": "Ministry of the Interior"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2020-11-17",
+     "publisher": "CNIL",
+     "quote": "Ce fichier a été créé en 2016 par un décret qui a fait l’objet d’un avis de la CNIL.",
+     "quote_english": "This file was created in 2016 by a decree on which the CNIL gave an opinion.",
+     "title": "Le fichier des titres électroniques sécurisés (TES)",
+     "url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes",
+     "value": "Created in 2016 by decree (Décret n° 2016-1460)"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Titres électroniques sécurisés (TES) (secure electronic documents file, fingerprints of ID and passport applicants)",
+   "operator": "Ministère de l’Intérieur",
+   "research_note": "No public source found on TES hosting or on a current record count. The separate police fingerprint file (FAED) is covered under police_records.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "Ministère de l’Europe et des Affaires étrangères",
+     "quote": "le SCEC constitue un service à compétence nationale du ministère des affaires étrangères",
+     "quote_english": "the SCEC is a service with national competence of the Ministry of Foreign Affairs",
+     "title": "Missions du Service central d’état civil",
+     "url": "https://www.diplomatie.gouv.fr/fr/services-aux-francaises-et-aux-francais/vie-administrative-et-elections/etat-civil/missions-du-service-central-d-etat-civil",
+     "value": "SCEC is a national-competence service of the Ministry of Foreign Affairs"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "Ministère de l’Europe et des Affaires étrangères",
+     "quote": "il établit les actes des personnes qui acquièrent la nationalité française, de plein droit",
+     "quote_english": "it draws up the acts of persons who acquire French nationality, by right",
+     "title": "Missions du Service central d’état civil",
+     "url": "https://www.diplomatie.gouv.fr/fr/services-aux-francaises-et-aux-francais/vie-administrative-et-elections/etat-civil/missions-du-service-central-d-etat-civil",
+     "value": "SCEC draws up the civil-status acts of persons who acquire French nationality"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "fr",
+     "published": "",
+     "publisher": "Ministère de l’Europe et des Affaires étrangères",
+     "quote": "Il conserve quelques 16 millions d’actes provenant de trois sources principales",
+     "quote_english": "It holds some 16 million acts from three main sources",
+     "title": "Missions du Service central d’état civil",
+     "url": "https://www.diplomatie.gouv.fr/fr/services-aux-francaises-et-aux-francais/vie-administrative-et-elections/etat-civil/missions-du-service-central-d-etat-civil",
+     "value": "About 16 million civil-status acts"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2024",
+     "publisher": "Sénat",
+     "quote": "cette ordonnance crée un nouveau système de traitement automatisé de données à caractère personnel, le registre d'état civil électronique (RECE)",
+     "quote_english": "this ordinance creates a new automated personal-data processing system, the electronic civil-status register (RECE)",
+     "title": "Proposition de loi visant à poursuivre la dématérialisation de l'état civil du ministère de l'Europe et des affaires étrangères (rapport n° 577, 2023-2024)",
+     "url": "https://www.senat.fr/rap/l23-577/l23-5773.html",
+     "value": "An ordinance created the electronic civil-status register (RECE)"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "record_count",
+     "language": "fr",
+     "published": "2024",
+     "publisher": "Sénat",
+     "quote": "Le SCEC de Nantes assure, pour sa part, la conservation et l'exploitation des quinze millions d'actes d'état civil dont il est le dépositaire.",
+     "quote_english": "The SCEC in Nantes, for its part, keeps and manages the fifteen million civil-status acts of which it is the depositary.",
+     "title": "Proposition de loi visant à poursuivre la dématérialisation de l'état civil du ministère de l'Europe et des affaires étrangères (rapport n° 577, 2023-2024)",
+     "url": "https://www.senat.fr/rap/l23-577/l23-5773.html",
+     "value": "The Senate report puts the SCEC holding at 15 million acts"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Service central d’état civil (SCEC), Nantes, and the Registre d’état civil électronique (RECE) (central civil-status records of French nationals abroad and of naturalised persons)",
+   "operator": "Ministère de l’Europe et des Affaires étrangères (SCEC)",
+   "research_note": "No public source found on where SCEC/RECE records are hosted. The Senate report gives 15 million acts; the ministry page gives about 16 million.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2020-11-17",
+     "publisher": "CNIL",
+     "quote": "Il contient également d’autres informations relatives à la carte d’identité ou au passeport, comme le numéro du titre, son type, ainsi que sa date et son lieu de délivrance.",
+     "quote_english": "It also contains other information on the identity card or passport, such as the document number, its type, and its date and place of issue.",
+     "title": "Le fichier des titres électroniques sécurisés (TES)",
+     "url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes",
+     "value": "TES records document number, type, and date and place of issue for each ID card and passport"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2020-11-17",
+     "publisher": "CNIL",
+     "quote": "Le ministère de l’Intérieur est responsable du fichier",
+     "quote_english": "The Ministry of the Interior is responsible for the file",
+     "title": "Le fichier des titres électroniques sécurisés (TES)",
+     "url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes",
+     "value": "Ministry of the Interior"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2020-11-17",
+     "publisher": "CNIL",
+     "quote": "Décret n° 2016-1460 du 28 octobre 2016 autorisant la création d'un traitement de données à caractère personnel relatif aux passeports et aux cartes nationales d'identité",
+     "quote_english": "Decree no. 2016-1460 of 28 October 2016 authorising the creation of a personal-data processing relating to passports and national identity cards",
+     "title": "Le fichier des titres électroniques sécurisés (TES)",
+     "url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes",
+     "value": "Décret n° 2016-1460 of 28 October 2016"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Titres électroniques sécurisés (TES) (issuance data of ID cards and passports)",
+   "operator": "Ministère de l’Intérieur",
+   "research_note": "TES records document number, type, date and place of issue. No source found on hosting. DOCVERIF, the document validity check service, was identified but no retrievable primary source was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "fr",
+     "published": "2026-05-20",
+     "publisher": "DINUM",
+     "quote": "Lancé en 2016, ce portail d'authentification unique développé par l'État permet aujourd'hui à 45 millions d'usagers d'accéder à plus de",
+     "quote_english": "Launched in 2016, this single authentication portal developed by the State today allows 45 million users to access more than",
+     "title": "FranceConnect : 10 ans de transformation de l'accès aux services publics numériques",
+     "url": "https://www.numerique.gouv.fr/sinformer/espace-presse/10-ans-franceconnect/",
+     "value": "45 million users, more than 1,500 public online services"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "fr",
+     "published": "2026-05-20",
+     "publisher": "DINUM",
+     "quote": "En 2025, le service a enregistré un record de 500 millions de connexions.",
+     "quote_english": "In 2025, the service recorded a record 500 million connections.",
+     "title": "FranceConnect : 10 ans de transformation de l'accès aux services publics numériques",
+     "url": "https://www.numerique.gouv.fr/sinformer/espace-presse/10-ans-franceconnect/",
+     "value": "Record 500 million connections in 2025"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2023-02-15",
+     "publisher": "DINUM / FranceConnect",
+     "quote": "des Données personnelles vous concernant font l’objet d’un Traitement informatisé par la DINUM (Direction Interministérielle du Numérique",
+     "quote_english": "personal data concerning you undergo computerised processing by DINUM (Interministerial Digital Directorate",
+     "title": "Politique de protection des données personnelles - FranceConnect / FranceConnect+",
+     "url": "https://www.franceconnect.gouv.fr/cgu/politique-protection-donnees-personnelles/",
+     "value": "DINUM processes FranceConnect/FranceConnect+ data"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2023-02-15",
+     "publisher": "DINUM / FranceConnect",
+     "quote": "Le Traitement de vos Données personnelles que Nous réalisons est encadré par l'arrêté du 8 novembre 2018",
+     "quote_english": "The processing of your personal data that we carry out is governed by the order of 8 November 2018",
+     "title": "Politique de protection des données personnelles - FranceConnect / FranceConnect+",
+     "url": "https://www.franceconnect.gouv.fr/cgu/politique-protection-donnees-personnelles/",
+     "value": "Arrêté of 8 November 2018 (FranceConnect)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "fr",
+     "published": "2023-02-15",
+     "publisher": "DINUM / FranceConnect",
+     "quote": "nos Sous-traitants qui interviennent pour l’hébergement du Téléservice, le développement du Téléservice, le support et la sécurité du Téléservice ainsi que sa distribution.",
+     "quote_english": "our subcontractors who work on hosting the teleservice, developing it, supporting and securing it, and distributing it.",
+     "title": "Politique de protection des données personnelles - FranceConnect / FranceConnect+",
+     "url": "https://www.franceconnect.gouv.fr/cgu/politique-protection-donnees-personnelles/",
+     "value": "Unnamed subcontractors host FranceConnect; the provider is not identified"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "",
+     "publisher": "France Identité (Ministère de l’Intérieur)",
+     "quote": "Décret n° 2022-676 du 26 avril 2022 autorisant la création d’un moyen d’identification électronique dénommé",
+     "quote_english": "Decree no. 2022-676 of 26 April 2022 authorising the creation of an electronic identification means named",
+     "title": "Décrets et avis CNIL | France Identité",
+     "url": "https://france-identite.gouv.fr/decrets-et-avis-cnil/",
+     "value": "France Identité: Décret n° 2022-676 of 26 April 2022 (SGIN)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "France Identité (Ministère de l’Intérieur)",
+     "quote": "L’article 1er du projet de décret prévoit désormais que l’Agence nationale des titres sécurisés",
+     "quote_english": "Article 1 of the draft decree now provides that the National Agency for Secure Documents",
+     "title": "Décrets et avis CNIL | France Identité",
+     "url": "https://france-identite.gouv.fr/decrets-et-avis-cnil/",
+     "value": "ANTS is joint controller of the SGIN (France Identité) processing"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "unknown",
+   "holding_name": "FranceConnect / FranceConnect+ (federation portal) and France Identité (Service de garantie de l’identité numérique, SGIN)",
+   "operator": "DINUM (FranceConnect); Ministère de l’Intérieur and ANTS as joint controllers (France Identité / SGIN)",
+   "research_note": "The FranceConnect privacy policy says unnamed subcontractors host the service. No source names the hosting provider for FranceConnect or France Identité.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2023-02-15",
+     "publisher": "DINUM / FranceConnect",
+     "quote": "Gestion de la traçabilité de vos accès au Téléservice et des modalités de ces accès",
+     "quote_english": "Management of the traceability of your access to the teleservice and of the modalities of that access",
+     "title": "Politique de protection des données personnelles - FranceConnect / FranceConnect+",
+     "url": "https://www.franceconnect.gouv.fr/cgu/politique-protection-donnees-personnelles/",
+     "value": "FranceConnect keeps traceability records of access to the teleservice"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2023-02-15",
+     "publisher": "DINUM / FranceConnect",
+     "quote": "Données de connexion : adresse IP, dates et heures de connexion, codes retour RNIPP",
+     "quote_english": "Connection data: IP address, connection dates and times, RNIPP return codes",
+     "title": "Politique de protection des données personnelles - FranceConnect / FranceConnect+",
+     "url": "https://www.franceconnect.gouv.fr/cgu/politique-protection-donnees-personnelles/",
+     "value": "Logged data: IP address, connection dates and times, RNIPP return codes"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2023-02-15",
+     "publisher": "DINUM / FranceConnect",
+     "quote": "Le Traitement de vos Données personnelles que Nous réalisons est encadré par l'arrêté du 8 novembre 2018",
+     "quote_english": "The processing of your personal data that we carry out is governed by the order of 8 November 2018",
+     "title": "Politique de protection des données personnelles - FranceConnect / FranceConnect+",
+     "url": "https://www.franceconnect.gouv.fr/cgu/politique-protection-donnees-personnelles/",
+     "value": "Arrêté of 8 November 2018"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "holding_name": "FranceConnect access traceability data (connection logs)",
+   "operator": "DINUM",
+   "research_note": "The logs are held by DINUM under the order of 8 November 2018. No source found on log hosting or volume.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2023-05-15",
+     "publisher": "Insee",
+     "quote": "modifie les modalités d'inscription sur les listes électorales et institue un répertoire électoral unique (REU) dont elle confie la gestion à l'Insee.",
+     "quote_english": "changes the rules for registration on electoral lists and establishes a single electoral register (REU), whose management it entrusts to Insee.",
+     "title": "Le Répertoire électoral unique",
+     "url": "https://www.insee.fr/fr/information/3539086",
+     "value": "The law set up the REU and gave its management to Insee"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2023-05-15",
+     "publisher": "Insee",
+     "quote": "La loi n° 2016-1048 du 1ᵉʳ août 2016 modifie les modalités d'inscription sur les listes électorales",
+     "quote_english": "Law no. 2016-1048 of 1 August 2016 changes the rules for registration on electoral lists",
+     "title": "Le Répertoire électoral unique",
+     "url": "https://www.insee.fr/fr/information/3539086",
+     "value": "Loi n° 2016-1048 of 1 August 2016"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "fr",
+     "published": "2026-03",
+     "publisher": "Insee",
+     "quote": "Début février 2026, 50,4 millions de personnes sont inscrites sur les listes électorales françaises.",
+     "quote_english": "In early February 2026, 50.4 million people are registered on French electoral lists.",
+     "title": "Corps électoral 2026 (Insee Focus n° 378)",
+     "url": "https://www.insee.fr/fr/statistiques/8888278",
+     "value": "50.4 million registered voters (early February 2026)"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Répertoire électoral unique (REU) (single electoral register)",
+   "operator": "Insee",
+   "research_note": "No public source found on REU hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2011-09-15",
+     "publisher": "Ministère de la Justice",
+     "quote": "a vocation à être signée par l’infrastructure de gestion de la confiance de l’administration",
+     "quote_english": "is intended to be signed by the administration's trust management infrastructure",
+     "title": "Politique de certification – AC Racine Justice",
+     "url": "https://crl.justice.gouv.fr/igc/ants/MJ-PC-AC-Racine.pdf",
+     "value": "The Justice ministry root CA is to be signed by IGC/A, the administration's trust infrastructure"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "IGC/A, infrastructure de gestion de la confiance de l’administration (State root certification infrastructure)",
+   "operator": "Unconfirmed: the ANSSI IGC/A page could not be retrieved",
+   "research_note": "The ANSSI IGC/A pages (cyber.gouv.fr/igca) loop on redirects and could not be retrieved. Légifrance returns 403 to automated clients, so the IGC/A notice there was not used. The only retrievable primary source is the Justice ministry root-CA policy, which names IGC/A as the administration's trust infrastructure. Operator and hosting are therefore not sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2021-06-09",
+     "publisher": "CNIL",
+     "quote": "AGDREF sert à mieux garantir le droit au séjour des personnes en situation régulière et à lutter contre l'entrée et le séjour irréguliers des étrangers en France.",
+     "quote_english": "AGDREF serves to better guarantee the right of residence of people in a regular situation and to combat irregular entry and residence of foreigners in France.",
+     "title": "Application de gestion des dossiers des ressortissants étrangers en France (AGDREF)",
+     "url": "https://www.cnil.fr/fr/application-de-gestion-des-dossiers-des-ressortissants-etrangers-en-france-agdref",
+     "value": "AGDREF manages the right of residence of foreign nationals"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2021-06-09",
+     "publisher": "CNIL",
+     "quote": "du ministère de l’Intérieur est responsable de ce fichier",
+     "quote_english": "of the Ministry of the Interior is responsible for this file",
+     "title": "Application de gestion des dossiers des ressortissants étrangers en France (AGDREF)",
+     "url": "https://www.cnil.fr/fr/application-de-gestion-des-dossiers-des-ressortissants-etrangers-en-france-agdref",
+     "value": "DGEF of the Ministry of the Interior is responsible"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2021-06-09",
+     "publisher": "CNIL",
+     "quote": "Article L. 142-1 du Code de l’entrée et du séjour des étrangers et du droit d’asile ou CESEDA (texte encadrant le fichier)",
+     "quote_english": "Article L. 142-1 of the Code on the Entry and Residence of Foreigners and the Right of Asylum (CESEDA) (text governing the file)",
+     "title": "Application de gestion des dossiers des ressortissants étrangers en France (AGDREF)",
+     "url": "https://www.cnil.fr/fr/application-de-gestion-des-dossiers-des-ressortissants-etrangers-en-france-agdref",
+     "value": "Article L. 142-1 CESEDA"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2021-06-09",
+     "publisher": "CNIL",
+     "quote": "les images numérisées de la photographie et des empreintes digitales des dix doigts des ressortissants étrangers",
+     "quote_english": "the digitised images of the photograph and of the fingerprints of all ten fingers of foreign nationals",
+     "title": "Application de gestion des dossiers des ressortissants étrangers en France (AGDREF)",
+     "url": "https://www.cnil.fr/fr/application-de-gestion-des-dossiers-des-ressortissants-etrangers-en-france-agdref",
+     "value": "Holds photographs and ten-finger fingerprints of foreign nationals"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Application de gestion des dossiers des ressortissants étrangers en France (AGDREF) (foreign nationals file management system)",
+   "operator": "Direction générale des étrangers en France (DGEF), Ministère de l’Intérieur",
+   "research_note": "No retrievable source gives AGDREF record counts or hosting. immigration.interieur.gouv.fr returns 403.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2021-03",
+     "publisher": "DGFiP (impots.gouv.fr)",
+     "quote": "Les informations recueillies sur la déclaration principale des revenus et sur ses annexes font l’objet d’un traitement mis en œuvre par la Direction Générale des Finances publiques (DGFiP)",
+     "quote_english": "The information collected on the main income return and its annexes is processed by the Directorate General of Public Finances (DGFiP)",
+     "title": "Document de présentation du traitement des données dans le cadre de la déclaration de revenu",
+     "url": "https://www.impots.gouv.fr/sites/default/files/media/8_transverse/mentions_legales_protection/2021-03_traitement_donnees_declaration_de_revenu.pdf",
+     "value": "DGFiP processes income tax returns as controller"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Income tax return processing of the Direction générale des Finances publiques (DGFiP)",
+   "operator": "Direction générale des Finances publiques (DGFiP)",
+   "research_note": "No retrievable source gives tax-file record counts or hosting. economie.gouv.fr (DGFiP reports) returns 403. The Senate report mentions an ad hoc 'cloud' run by customs (DGDDI) for several administrations but does not tie it to tax data.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "Direction générale des douanes et droits indirects",
+     "quote": "les opérateurs peuvent obtenir communication par la douane des données personnelles les concernant contenues dans les déclarations en douane déposées dans le service en ligne DELTA.",
+     "quote_english": "operators can obtain from customs the personal data about them contained in the customs declarations lodged in the DELTA online service.",
+     "title": "Demande d'accès aux données des déclarations en douane",
+     "url": "https://www.douane.gouv.fr/professionnels/autres-demarches/demande-dacces-aux-donnees-des-declarations-en-douane",
+     "value": "Customs declarations are lodged in the DELTA online service"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "Direction générale des douanes et droits indirects",
+     "quote": "Déclaration en douane – Fret traditionnel DELTA G Demande d’autorisation douanière et fiscale",
+     "quote_english": "Customs declaration – conventional freight DELTA G Customs and tax authorisation request",
+     "title": "Import & Export",
+     "url": "https://www.douane.gouv.fr/professionnels/commerce-international/import-export",
+     "value": "DELTA G is the customs declaration service for conventional freight"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "DELTA (DELTA G, DELTA X) customs declaration system",
+   "operator": "Direction générale des douanes et droits indirects (DGDDI)",
+   "research_note": "No retrievable source found on DELTA record volumes, hosting or legal basis.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2025",
+     "publisher": "L’Assurance retraite (CNAV)",
+     "quote": "Les pouvoirs publics ont confié à la Caisse nationale de l’Assurance retraite la réalisation du RGCU, référentiel unique contenant le détail des carrières de l’ensemble de la population française",
+     "quote_english": "The public authorities entrusted the National Pension Insurance Fund with building the RGCU, the single reference base containing the career details of the entire French population",
+     "title": "Dossier institutionnel 2025",
+     "url": "https://www.lassuranceretraite.fr/portail-info/files/live/sites/pub/files/PDF/dossier-institutionnel-2025.pdf",
+     "value": "RGCU is the single career register of the whole population, built by CNAV"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "fr",
+     "published": "2025",
+     "publisher": "L’Assurance retraite (CNAV)",
+     "quote": "du système national de gestion des identifiants (SNGI), pour l’ensemble de la sphère sociale",
+     "quote_english": "of the national identifier management system (SNGI), for the entire social sphere",
+     "title": "Dossier institutionnel 2025",
+     "url": "https://www.lassuranceretraite.fr/portail-info/files/live/sites/pub/files/PDF/dossier-institutionnel-2025.pdf",
+     "value": "CNAV also runs the SNGI identifier system for the whole social-security sphere"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "fr",
+     "published": "2025",
+     "publisher": "L’Assurance retraite (CNAV)",
+     "quote": "L’Assurance retraite verse une retraite à 15,3 millions de personnes dans plus de 150 pays",
+     "quote_english": "The Assurance retraite pays a pension to 15.3 million people in more than 150 countries",
+     "title": "Dossier institutionnel 2025",
+     "url": "https://www.lassuranceretraite.fr/portail-info/files/live/sites/pub/files/PDF/dossier-institutionnel-2025.pdf",
+     "value": "15.3 million pensioners paid by the general scheme"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "fr",
+     "published": "",
+     "publisher": "Sécurité sociale (securite-sociale.fr)",
+     "quote": "13 millions d'allocataires auprès des Caisses d'allocations familiales (CAF).",
+     "quote_english": "13 million beneficiaries of the family allowance funds (CAF).",
+     "title": "Chiffres clés",
+     "url": "https://www.securite-sociale.fr/la-secu-cest-quoi/chiffres-cles",
+     "value": "13 million family-benefit recipients (CAF)"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Répertoire de gestion des carrières unique (RGCU) (single career register) and Système national de gestion des identifiants (SNGI)",
+   "operator": "Caisse nationale de l’Assurance retraite (CNAV)",
+   "research_note": "No source found on RGCU/SNGI hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2025",
+     "publisher": "L’Assurance retraite (CNAV)",
+     "quote": "de l’Outil de calcul des droits aux soins de santé (ODSS), pour le compte de la Cnam",
+     "quote_english": "of the healthcare entitlement calculation tool (ODSS), on behalf of Cnam",
+     "title": "Dossier institutionnel 2025",
+     "url": "https://www.lassuranceretraite.fr/portail-info/files/live/sites/pub/files/PDF/dossier-institutionnel-2025.pdf",
+     "value": "CNAV runs the healthcare entitlement calculation tool (ODSS) on behalf of Cnam"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "fr",
+     "published": "",
+     "publisher": "Sécurité sociale (securite-sociale.fr)",
+     "quote": "65 millions de couverts par le régime général de l'assurance maladie.",
+     "quote_english": "65 million people covered by the general health insurance scheme.",
+     "title": "Chiffres clés",
+     "url": "https://www.securite-sociale.fr/la-secu-cest-quoi/chiffres-cles",
+     "value": "65 million people covered by the general health insurance scheme"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Assurance Maladie entitlement data; Outil de calcul des droits aux soins de santé (ODSS) (healthcare entitlement calculation tool)",
+   "operator": "Caisse nationale de l’Assurance Maladie (Cnam); ODSS run by CNAV on behalf of Cnam",
+   "research_note": "ameli.fr returns 403. No source found on hosting of the enrolment and entitlement registers.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2026-04-07",
+     "publisher": "DGFiP (data.gouv.fr)",
+     "quote": "les fichiers sont alimentés par les données saisies dans les services de la publicité foncière de la DGFiP",
+     "quote_english": "the files are fed by data entered in the DGFiP's land publication services",
+     "title": "Demandes de valeurs foncières",
+     "url": "https://www.data.gouv.fr/datasets/demandes-de-valeurs-foncieres",
+     "value": "Property transaction data are entered by the DGFiP's land publication services"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Publicité foncière records (land publication / property registry) of the services de la publicité foncière",
+   "operator": "Direction générale des Finances publiques (DGFiP), services de la publicité foncière",
+   "research_note": "No retrievable source gives the formal name of the land register (fichier immobilier), its legal basis, record counts or hosting. Alsace-Moselle keeps a separate land register (livre foncier) outside this dataset.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "INPI",
+     "quote": "Ce registre opéré par l’INPI est entièrement dématérialisé et consultable gratuitement.",
+     "quote_english": "This register, operated by INPI, is fully digital and free to consult.",
+     "title": "Le Guichet unique des entreprises et le Registre national des entreprises",
+     "url": "https://www.inpi.fr/decouvrir-inpi/formalites-dentreprises/guichet-unique-formalites-dentreprises-et-registre-national-entreprises",
+     "value": "RNE is operated by INPI"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "",
+     "publisher": "INPI",
+     "quote": "Dans le cadre de la loi Pacte, le Registre national des entreprises s’est substitué aux registres d’entreprises qui existaient auparavant",
+     "quote_english": "Under the PACTE law, the national business register replaced the business registers that previously existed",
+     "title": "Le Guichet unique des entreprises et le Registre national des entreprises",
+     "url": "https://www.inpi.fr/decouvrir-inpi/formalites-dentreprises/guichet-unique-formalites-dentreprises-et-registre-national-entreprises",
+     "value": "Loi PACTE"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "INPI",
+     "quote": "Tous ces registres ont été fusionnés en un registre unique, contenant l’intégralité des entreprises présentes en France",
+     "quote_english": "All these registers were merged into a single register containing all businesses present in France",
+     "title": "Le Guichet unique des entreprises et le Registre national des entreprises",
+     "url": "https://www.inpi.fr/decouvrir-inpi/formalites-dentreprises/guichet-unique-formalites-dentreprises-et-registre-national-entreprises",
+     "value": "Single register covering all businesses in France"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registre national des entreprises (RNE) (national business register)",
+   "operator": "Institut national de la propriété industrielle (INPI)",
+   "research_note": "No source found on RNE hosting or entity counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "INPI",
+     "quote": "de porter à la connaissance du greffe les divergences constatées entre les bénéficiaires effectifs qu’elles identifient du fait de leur connaissance client et les bénéficiaires effectifs mentionnés dans le registre des bénéficiaires effectifs.",
+     "quote_english": "to notify the court registry of discrepancies between the beneficial owners they identify through customer due diligence and those recorded in the register of beneficial owners.",
+     "title": "Bénéficiaires effectifs",
+     "url": "https://www.inpi.fr/ressources/formalites-dentreprises/beneficiaires-effectifs",
+     "value": "Register of beneficial owners; discrepancies are reported to the court registry (greffe)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "",
+     "publisher": "INPI",
+     "quote": "L’article L. 561-47-1 du code monétaire et financier impose aux personnes assujetties",
+     "quote_english": "Article L. 561-47-1 of the Monetary and Financial Code requires obliged entities",
+     "title": "Bénéficiaires effectifs",
+     "url": "https://www.inpi.fr/ressources/formalites-dentreprises/beneficiaires-effectifs",
+     "value": "Code monétaire et financier (art. L. 561-46 ff., incl. L. 561-47-1)"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registre des bénéficiaires effectifs (RBE) (beneficial ownership register)",
+   "operator": "Greffes des tribunaux de commerce; access provided through INPI",
+   "research_note": "No source found on RBE record counts or hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "CNIL",
+     "quote": "Mis en place en avril 2009 pour remplacer le Fichier national des immatriculations (FNI), le SIV a pour objet la gestion des pièces administratives exigées pour la circulation des véhicules ou affectant leur disponibilité.",
+     "quote_english": "Introduced in April 2009 to replace the national registration file (FNI), the SIV manages the administrative documents required for vehicles to be driven or affecting their availability.",
+     "title": "SIV : Système d’immatriculation des véhicules",
+     "url": "https://www.cnil.fr/fr/siv-systeme-dimmatriculation-des-vehicules",
+     "value": "SIV, in place since April 2009, replaced the FNI"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "CNIL",
+     "quote": "Il est géré par France Titres - Agence nationale des titres sécurisés (ANTS)",
+     "quote_english": "It is managed by France Titres – National Agency for Secure Documents (ANTS)",
+     "title": "SIV : Système d’immatriculation des véhicules",
+     "url": "https://www.cnil.fr/fr/siv-systeme-dimmatriculation-des-vehicules",
+     "value": "Managed by France Titres (ANTS)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "",
+     "publisher": "CNIL",
+     "quote": "énumérées aux articles L.330-2 à L.330-4 du code de la route",
+     "quote_english": "listed in articles L.330-2 to L.330-4 of the Highway Code",
+     "title": "SIV : Système d’immatriculation des véhicules",
+     "url": "https://www.cnil.fr/fr/siv-systeme-dimmatriculation-des-vehicules",
+     "value": "Code de la route, articles L.330-2 to L.330-4 (communication of SIV data)"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Système d’immatriculation des véhicules (SIV) (vehicle registration system)",
+   "operator": "France Titres – Agence nationale des titres sécurisés (ANTS), for the Ministère de l’Intérieur",
+   "research_note": "The driving licence register (SNPC) was not sourced: ANTS sites need JavaScript and Interior ministry sites return 403. No source found on SIV hosting or record counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2025",
+     "publisher": "Sénat",
+     "quote": "ASTREA : système d'information du casier judiciaire national. ECRIS-TCN : interconnexion des casiers judiciaires européens",
+     "quote_english": "ASTREA: information system of the national criminal record. ECRIS-TCN: interconnection of European criminal records",
+     "title": "Projet de loi de finances pour 2026 : Justice",
+     "url": "https://www.senat.fr/rap/l25-139-317/l25-139-317_mono.html",
+     "value": "ASTREA is the information system of the national criminal record"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2025",
+     "publisher": "Sénat",
+     "quote": "L'interconnexion entre le logiciel Cassiopée et le fichier de traitement des antécédents judiciaires devrait supprimer plus de",
+     "quote_english": "Interconnecting the Cassiopée software with the criminal records processing file should eliminate more than",
+     "title": "Projet de loi de finances pour 2026 : Justice",
+     "url": "https://www.senat.fr/rap/l25-139-317/l25-139-317_mono.html",
+     "value": "Cassiopée criminal case software"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "Ministère de la Justice",
+     "quote": "Demande d'extrait de casier judiciaire (bulletin n°3) - Casier judiciaire national - Ministère de la Justice",
+     "quote_english": "Request for a criminal record extract (bulletin no. 3) - National Criminal Record - Ministry of Justice",
+     "title": "Demande d'extrait de casier judiciaire (bulletin n°3)",
+     "url": "https://casier-judiciaire.justice.gouv.fr/",
+     "value": "Casier judiciaire national, Ministry of Justice"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "",
+     "publisher": "Ministère de la Justice",
+     "quote": "(articles R.82, 777 et 781 du Code de procédure pénale)",
+     "quote_english": "(articles R.82, 777 and 781 of the Code of Criminal Procedure)",
+     "title": "Demande d'extrait de casier judiciaire (bulletin n°3)",
+     "url": "https://casier-judiciaire.justice.gouv.fr/",
+     "value": "Code de procédure pénale (articles R.82, 777 and 781)"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Casier judiciaire national (ASTREA information system) and Cassiopée (criminal case management)",
+   "operator": "Ministère de la Justice",
+   "research_note": "No source found on hosting or record counts for the criminal record or Cassiopée.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2025-11-20",
+     "publisher": "CNIL",
+     "quote": "Le TAJ est un fichier du ministère de l’Intérieur, partagé entre la police et la gendarmerie nationale, permettant d’enregistrer et de consulter les antécédents judiciaires des individus.",
+     "quote_english": "The TAJ is a Ministry of the Interior file, shared between the police and the national gendarmerie, used to record and consult individuals' criminal histories.",
+     "title": "Traitement d’Antécédents Judiciaires - TAJ : comment exercer vos droits ?",
+     "url": "https://www.cnil.fr/fr/taj-traitement-dantecedents-judiciaires",
+     "value": "TAJ is a Ministry of the Interior file shared by police and gendarmerie"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "fr",
+     "published": "2025-11-20",
+     "publisher": "CNIL",
+     "quote": "En 2022, le TAJ contenait : 17 millions de fiches",
+     "quote_english": "In 2022, the TAJ contained: 17 million records",
+     "title": "Traitement d’Antécédents Judiciaires - TAJ : comment exercer vos droits ?",
+     "url": "https://www.cnil.fr/fr/taj-traitement-dantecedents-judiciaires",
+     "value": "17 million 'persons implicated' records (2022), plus 48 million victim records"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2025-11-20",
+     "publisher": "CNIL",
+     "quote": "Code de procédure pénale, articles 230-6 à 230-11 et articles R. 40.23 à R. 40-34",
+     "quote_english": "Code of Criminal Procedure, articles 230-6 to 230-11 and articles R. 40-23 to R. 40-34",
+     "title": "Traitement d’Antécédents Judiciaires - TAJ : comment exercer vos droits ?",
+     "url": "https://www.cnil.fr/fr/taj-traitement-dantecedents-judiciaires",
+     "value": "Code de procédure pénale arts. 230-6 to 230-11 and R. 40-23 to R. 40-34"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "fr",
+     "published": "",
+     "publisher": "CNIL",
+     "quote": "6,2 millions d'individus enregistrés 220 000 traces non résolues en 2018",
+     "quote_english": "6.2 million individuals recorded, 220,000 unresolved traces in 2018",
+     "title": "FAED : Fichier automatisé des empreintes digitales",
+     "url": "https://www.cnil.fr/fr/faed-fichier-automatise-des-empreintes-digitales",
+     "value": "FAED: 6.2 million individuals recorded"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "CNIL",
+     "quote": "La direction centrale de la police judiciaire du ministère de l’Intérieur, sous le contrôle d’un magistrat de l’ordre judiciaire.",
+     "quote_english": "The central directorate of the judicial police of the Ministry of the Interior, under the supervision of a judicial magistrate.",
+     "title": "FAED : Fichier automatisé des empreintes digitales",
+     "url": "https://www.cnil.fr/fr/faed-fichier-automatise-des-empreintes-digitales",
+     "value": "FAED is run by the Direction centrale de la police judiciaire"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "fr",
+     "published": "",
+     "publisher": "CNIL",
+     "quote": "Le fichier FPR contient environ 642 000 fiches actives pour 580 000 personnes",
+     "quote_english": "The FPR file contains about 642,000 active records for 580,000 people",
+     "title": "FPR : Fichier des personnes recherchées",
+     "url": "https://www.cnil.fr/fr/fpr-fichier-des-personnes-recherchees",
+     "value": "FPR: about 642,000 active records for 580,000 people"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Traitement d’antécédents judiciaires (TAJ) (criminal records processing); also Fichier automatisé des empreintes digitales (FAED) and Fichier des personnes recherchées (FPR)",
+   "operator": "Ministère de l’Intérieur (police and gendarmerie; FAED under the Direction centrale de la police judiciaire)",
+   "research_note": "No source found on hosting of TAJ, FAED or FPR.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "CNIL",
+     "quote": "Le ministère de l’intérieur, direction générale de la police nationale, est responsable du système national N. SIS II.",
+     "quote_english": "The Ministry of the Interior, Directorate General of the National Police, is responsible for the national system N-SIS II.",
+     "title": "SIS : Système d'information Schengen",
+     "url": "https://www.cnil.fr/fr/sis-systeme-dinformation-schengen",
+     "value": "DGPN is responsible for the national N-SIS II"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "fr",
+     "published": "",
+     "publisher": "CNIL",
+     "quote": "est chargée de la gestion opérationnelle du SIS II central et de de l’infrastructure de communication",
+     "quote_english": "is responsible for the operational management of central SIS II and of the communication infrastructure",
+     "title": "SIS : Système d'information Schengen",
+     "url": "https://www.cnil.fr/fr/sis-systeme-dinformation-schengen",
+     "value": "The central SIS II and its communication infrastructure are managed by eu-LISA (EU agency)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "",
+     "publisher": "CNIL",
+     "quote": "Code de la sécurité intérieure, articles R. 231-4 à R. 231-13",
+     "quote_english": "Internal Security Code, articles R. 231-4 to R. 231-13",
+     "title": "SIS : Système d'information Schengen",
+     "url": "https://www.cnil.fr/fr/sis-systeme-dinformation-schengen",
+     "value": "Code de la sécurité intérieure, articles R. 231-4 to R. 231-13"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "N-SIS II (national component of the Schengen Information System)",
+   "operator": "Ministère de l’Intérieur, Direction générale de la police nationale",
+   "research_note": "eu-LISA manages the central SIS II. No source was found on where the French national component is hosted. VISABIO and the Entry/Exit System national parts were not sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "Ministère de l’Intérieur",
+     "quote": "Bienvenue sur l'espace Détenteurs du système d'information sur les armes.",
+     "quote_english": "Welcome to the holders' area of the firearms information system.",
+     "title": "Accueil, Système d'Information des Armes",
+     "url": "https://sia.detenteurs.interieur.gouv.fr/",
+     "value": "SIA, the national firearms information system"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "Ministère de l’Intérieur",
+     "quote": "Ministère De l'intérieur Système d'Information sur les Armes Espace Détenteurs",
+     "quote_english": "Ministry of the Interior, Firearms Information System, Holders' Area",
+     "title": "Accueil, Système d'Information des Armes",
+     "url": "https://sia.detenteurs.interieur.gouv.fr/",
+     "value": "Ministry of the Interior"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "Ministère de l’Intérieur",
+     "quote": "Les détenteurs d'armes de défense et d'armes neutralisées (catégorie C3, C9, C12) doivent créer un compte dans le SIA.",
+     "quote_english": "Holders of defence weapons and neutralised weapons (categories C3, C9, C12) must create an account in the SIA.",
+     "title": "Accueil, Système d'Information des Armes",
+     "url": "https://sia.detenteurs.interieur.gouv.fr/",
+     "value": "Holders of defence and neutralised weapons must register in SIA"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Système d’information sur les armes (SIA) (firearms information system)",
+   "operator": "Ministère de l’Intérieur",
+   "research_note": "Interior ministry pages giving SIA's legal basis and record counts return 403. Only the SIA portal was retrievable.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2026-06-26",
+     "publisher": "DILA",
+     "quote": "La DILA (direction de l’information légale et administrative) publie le Journal officiel de la République française (JORF).",
+     "quote_english": "DILA (Directorate of Legal and Administrative Information) publishes the Official Journal of the French Republic (JORF).",
+     "title": "Diffusion légale",
+     "url": "https://www.dila.premier-ministre.gouv.fr/institution/missions/article/diffusion-legale",
+     "value": "DILA publishes the JORF"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2026-06-26",
+     "publisher": "DILA",
+     "quote": "Conformément aux lois n° 2015-1712 et 2015-1713 portant dématérialisation du Journal officiel",
+     "quote_english": "Under laws no. 2015-1712 and 2015-1713 on the dematerialisation of the Official Journal",
+     "title": "Diffusion légale",
+     "url": "https://www.dila.premier-ministre.gouv.fr/institution/missions/article/diffusion-legale",
+     "value": "Lois n° 2015-1712 and 2015-1713 (electronic publication of the Journal officiel)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2026-06-26",
+     "publisher": "DILA",
+     "quote": "portant dématérialisation du Journal officiel de la République française, le Journal officiel est mis à la disposition du public sous forme électronique de manière permanente et gratuite.",
+     "quote_english": "on the dematerialisation of the Official Journal of the French Republic, the Official Journal is made available to the public in electronic form, permanently and free of charge.",
+     "title": "Diffusion légale",
+     "url": "https://www.dila.premier-ministre.gouv.fr/institution/missions/article/diffusion-legale",
+     "value": "The JO is made available electronically, permanently and free of charge"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Journal officiel de la République française (JORF), electronic authenticated edition, published on Légifrance",
+   "operator": "Direction de l’information légale et administrative (DILA)",
+   "research_note": "No source found on hosting of the authenticated JO or Légifrance.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "public_finance",
+   "research_note": "Searched for Chorus (state financial information system) and AIFE. economie.gouv.fr/aife returns 403 and communaute.chorus-pro.gouv.fr and aife.economie.gouv.fr did not respond. Senate PLF 2025/2026 finance reports mention AIFE and cite Chorus only as a data source, not as the system of record with an operator.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2024",
+     "publisher": "Sénat",
+     "quote": "PAYSAGE : consolidation de l'application de paye des agents de l'État.",
+     "quote_english": "PAYSAGE: consolidation of the payroll application for State employees.",
+     "title": "Projet de loi de finances pour 2025 : Gestion des finances publiques - Crédits non répartis - Transformation et fonction publiques",
+     "url": "https://www.senat.fr/rap/l24-144-315-1/l24-144-315-1_mono.html",
+     "value": "PAYSAGE consolidates the payroll application for State employees"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "operator",
+     "language": "fr",
+     "published": "2024",
+     "publisher": "Sénat",
+     "quote": "Évolution des coûts et des délais des principaux projets informatiques portés par les programmes 156 et 218",
+     "quote_english": "Change in costs and timelines of the main IT projects carried by programmes 156 and 218",
+     "title": "Projet de loi de finances pour 2025 : Gestion des finances publiques - Crédits non répartis - Transformation et fonction publiques",
+     "url": "https://www.senat.fr/rap/l24-144-315-1/l24-144-315-1_mono.html",
+     "value": "Listed among IT projects carried by budget programmes 156 and 218"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "PAYSAGE (consolidated State employee payroll application)",
+   "operator": "Ministry of the Economy and Finance, programmes 156 and 218 (as stated in the Senate report)",
+   "research_note": "The Senate report lists PAYSAGE among IT projects of budget programmes 156 and 218. No source found on its operator by name, hosting, or armed-forces payroll.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "electoral_management",
+   "research_note": "Searched for the Interior ministry's candidate and results tabulation systems. interieur.gouv.fr and elections pages return 403. data.gouv.fr has Interior ministry results datasets but no retrievable source describing the tabulation system, its operator or its hosting.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "Banque de France",
+     "quote": "La Banque de France opère la composante nationale des services Target délivrés par l’Eurosystème.",
+     "quote_english": "The Banque de France operates the national component of the Target services provided by the Eurosystem.",
+     "title": "Systèmes opérés par la Banque de France",
+     "url": "https://www.banque-france.fr/fr/stabilite-financiere/cadre-institutionnel/systemes-operes-banque-de-france",
+     "value": "Banque de France operates the national component of the Eurosystem TARGET services"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "fr",
+     "published": "",
+     "publisher": "Banque de France",
+     "quote": "T2S est une plateforme technique de règlement-livraison développée et opérée par l’Eurosystème",
+     "quote_english": "T2S is a technical settlement platform developed and operated by the Eurosystem",
+     "title": "Systèmes opérés par la Banque de France",
+     "url": "https://www.banque-france.fr/fr/stabilite-financiere/cadre-institutionnel/systemes-operes-banque-de-france",
+     "value": "T2S is a technical platform developed and operated by the Eurosystem"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "mixed",
+   "holding_name": "National component of the Eurosystem TARGET services (T2 RTGS, T2S, TIPS) and Banque de France central-bank accounts",
+   "operator": "Banque de France",
+   "research_note": "The national component is operated by the Banque de France. T2S is a Eurosystem-operated platform. banque-france.fr returns 403 to some user agents.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "foreign_dependency",
+     "language": "fr",
+     "published": "2020",
+     "publisher": "Sénat / Assemblée nationale (Délégation parlementaire au renseignement)",
+     "quote": "en novembre 2017 la DGA a notifié l'initiative Artemis à la société Atos-Bull, à la société Capgemini et au groupement Thalès-Sopra-Stéria.",
+     "quote_english": "in November 2017 the DGA awarded the Artemis initiative to Atos-Bull, Capgemini and the Thales-Sopra Steria consortium.",
+     "title": "Délégation parlementaire au renseignement - rapport d'activité 2019-2020",
+     "url": "https://www.senat.fr/rap/r19-506/r19-506_mono.html",
+     "value": "Artemis contracted by DGA to French firms (Atos-Bull, Capgemini, Thales-Sopra Steria), presented as a French initiative"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2020",
+     "publisher": "Sénat / Assemblée nationale (Délégation parlementaire au renseignement)",
+     "quote": "Artemis a vocation à faire émerger des applications utilisant l'intelligence artificielle pour le traitement massif des données",
+     "quote_english": "Artemis is intended to produce applications using artificial intelligence for massive data processing",
+     "title": "Délégation parlementaire au renseignement - rapport d'activité 2019-2020",
+     "url": "https://www.senat.fr/rap/r19-506/r19-506_mono.html",
+     "value": "Artemis: AI applications for massive processing of military data"
+    }
+   ],
+   "class_id": "defence_command",
+   "foreign_dependency": "national",
+   "holding_name": "Artemis (Ministry of the Armed Forces big-data and AI processing programme)",
+   "operator": "Direction générale de l’armement (DGA), Ministère des Armées",
+   "research_note": "Only the Artemis data-processing programme was sourced. No source was found on the hosting of command-and-control or logistics systems.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "foreign_dependency",
+     "language": "fr",
+     "published": "2020",
+     "publisher": "Sénat / Assemblée nationale (Délégation parlementaire au renseignement)",
+     "quote": "Aussi l'acquisition par la DGSI du service proposé par Palantir en 2016 a-t'elle suscite deux initiatives françaises",
+     "quote_english": "Thus the DGSI's acquisition in 2016 of the service offered by Palantir prompted two French initiatives",
+     "title": "Délégation parlementaire au renseignement - rapport d'activité 2019-2020",
+     "url": "https://www.senat.fr/rap/r19-506/r19-506_mono.html",
+     "value": "DGSI acquired a service from Palantir in 2016"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "foreign_dependency",
+     "language": "fr",
+     "published": "2020",
+     "publisher": "Sénat / Assemblée nationale (Délégation parlementaire au renseignement)",
+     "quote": "même dans l'administration, les produits étrangers liés à la souveraineté numérique représentent une place importante des achats.",
+     "quote_english": "even within the administration, foreign products related to digital sovereignty account for a large share of purchases.",
+     "title": "Délégation parlementaire au renseignement - rapport d'activité 2019-2020",
+     "url": "https://www.senat.fr/rap/r19-506/r19-506_mono.html",
+     "value": "The report frames this as dependence on foreign products"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2020",
+     "publisher": "Sénat / Assemblée nationale (Délégation parlementaire au renseignement)",
+     "quote": "La DRSD a signé un marché pour son système d'information SIRCID avec Airbus Defence & Space",
+     "quote_english": "The DRSD signed a contract for its SIRCID information system with Airbus Defence & Space",
+     "title": "Délégation parlementaire au renseignement - rapport d'activité 2019-2020",
+     "url": "https://www.senat.fr/rap/r19-506/r19-506_mono.html",
+     "value": "DRSD SIRCID information system contracted to Airbus Defence & Space"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "non_eu_provider",
+   "holding_name": "DGSI data-analysis platform (Palantir service acquired in 2016); DRSD SIRCID information system",
+   "operator": "Direction générale de la sécurité intérieure (DGSI); Direction du renseignement et de la sécurité de la défense (DRSD)",
+   "research_note": "The report names Palantir, cited as a foreign product. The vendor's non-EU origin is general knowledge, not stated in the quote. DRSD's SIRCID is contracted to Airbus Defence & Space.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2024",
+     "publisher": "Sénat",
+     "quote": "Le programme NexSIS est un projet de mutualisation des systèmes d'information des services d'incendie et de secours (SIS).",
+     "quote_english": "The NexSIS programme is a project pooling the information systems of the fire and rescue services (SIS).",
+     "title": "Projet de loi de finances pour 2025 : Sécurités (Sécurité civile)",
+     "url": "https://www.senat.fr/rap/l24-144-329-2/l24-144-329-2_mono.html",
+     "value": "NexSIS pools the information systems of fire and rescue services"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "operator",
+     "language": "fr",
+     "published": "2024",
+     "publisher": "Sénat",
+     "quote": "Sa conception, son déploiement et sa maintenance sont assurés par l'agence du numérique de la sécurité civile",
+     "quote_english": "Its design, deployment and maintenance are carried out by the civil security digital agency",
+     "title": "Projet de loi de finances pour 2025 : Sécurités (Sécurité civile)",
+     "url": "https://www.senat.fr/rap/l24-144-329-2/l24-144-329-2_mono.html",
+     "value": "ANSC designs, deploys and maintains NexSIS"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "NexSIS 18-112 (shared information system of the fire and rescue services)",
+   "operator": "Agence du numérique de la sécurité civile (ANSC)",
+   "research_note": "The Réseau radio du futur (RRF) was not found in retrievable sources. No source found on NexSIS hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2024",
+     "publisher": "Sénat",
+     "quote": "Le système FR-Alert, dont la création a été annoncée par le ministre de l'intérieur en septembre 2020, vise à doter les services intervenant dans le champ de la sécurité publique et de la sécurité civile d'un système de diffusion d'alerte via la téléphonie mobile.",
+     "quote_english": "The FR-Alert system, announced by the Minister of the Interior in September 2020, aims to give public-safety and civil-protection services a system for broadcasting alerts via mobile telephony.",
+     "title": "Projet de loi de finances pour 2025 : Sécurités (Sécurité civile)",
+     "url": "https://www.senat.fr/rap/l24-144-329-2/l24-144-329-2_mono.html",
+     "value": "FR-Alert, the public warning system over mobile telephony"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2024",
+     "publisher": "Sénat",
+     "quote": "Ce projet a également vocation à mettre la France en conformité avec la directive européenne du 11 décembre 2018",
+     "quote_english": "This project also aims to bring France into compliance with the European directive of 11 December 2018",
+     "title": "Projet de loi de finances pour 2025 : Sécurités (Sécurité civile)",
+     "url": "https://www.senat.fr/rap/l24-144-329-2/l24-144-329-2_mono.html",
+     "value": "EU directive of 11 December 2018 (European Electronic Communications Code)"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "FR-Alert (mobile public warning system), complementing SAIP (population alert and information system)",
+   "operator": "Ministère de l’Intérieur",
+   "research_note": "No source found on FR-Alert hosting. Mobile network operators broadcast the alerts, but this was not sourced verbatim.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "RTE",
+     "quote": "RTE est le gestionnaire du Réseau de Transport d’Electricité français.",
+     "quote_english": "RTE is the operator of the French electricity transmission network.",
+     "title": "RTE en bref",
+     "url": "https://www.rte-france.com/rte-en-bref",
+     "value": "RTE is the French transmission system operator"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2021-09-16",
+     "publisher": "RTE",
+     "quote": "Campus Transfo rassemble un pôle d’expertise dédié à la téléconduite, c’est-à-dire l’ensemble des outils qui permettent de piloter le système électrique",
+     "quote_english": "Campus Transfo hosts an expertise centre dedicated to remote control, i.e. all the tools used to steer the electricity system",
+     "title": "Un centre d’expertise « téléconduite »",
+     "url": "https://www.rte-france.com/decouvrir-rte/campus-expertise-formation/centre-expertise-teleconduite",
+     "value": "Téléconduite: the tools that control the power system, from dispatching rooms to substations"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2021-09-16",
+     "publisher": "RTE",
+     "quote": "Les équipes de la DSIT travaillent sur les instruments d’aujourd’hui grâce à la réplique complète de tous les systèmes de conduite de RTE",
+     "quote_english": "The DSIT teams work on today's instruments using a complete replica of all RTE's control systems",
+     "title": "Un centre d’expertise « téléconduite »",
+     "url": "https://www.rte-france.com/decouvrir-rte/campus-expertise-formation/centre-expertise-teleconduite",
+     "value": "RTE keeps a complete replica of all its control systems"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "RTE grid control (téléconduite) systems, from dispatching rooms to substations",
+   "operator": "RTE (Réseau de transport d’électricité)",
+   "research_note": "RTE's own site describes a full replica of its control systems. No source found on the hosting or vendors of RTE SCADA/EMS.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "water_control",
+   "research_note": "Searched for Vigicrues/SCHAPI (flood forecasting) and water-control systems. vigicrues.gouv.fr is JavaScript-only, and ecologie.gouv.fr and georisques.gouv.fr did not respond, so no retrievable primary source was found.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2024",
+     "publisher": "Sénat",
+     "quote": "les infrastructures numériques de l'État (dossier médical partagé, espace numérique de santé...)",
+     "quote_english": "the State's digital infrastructures (shared medical record, digital health space...)",
+     "title": "Projet de loi de finances pour 2025 : Santé",
+     "url": "https://www.senat.fr/rap/l24-144-328/l24-144-328_mono.html",
+     "value": "DMP and the digital health space are State digital infrastructures"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Dossier médical partagé (DMP) / espace numérique de santé (Mon espace santé)",
+   "operator": "",
+   "research_note": "Only a Senate report naming the DMP and the digital health space as State digital infrastructures could be retrieved. esante.gouv.fr (bot protection), monespacesante.fr (JavaScript-only) and ameli.fr (403) blocked retrieval, so operator, legal basis, counts and hosting are unsourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2026-04-22",
+     "publisher": "Santé publique France",
+     "quote": "Le dispositif des maladies à signalement obligatoire (MSO – anciennement dites à déclaration obligatoire) concerne 38 maladies",
+     "quote_english": "The system of notifiable diseases (MSO, formerly called mandatory declaration diseases) covers 38 diseases",
+     "title": "Maladies à signalement obligatoire",
+     "url": "https://www.santepubliquefrance.fr/maladies-a-declaration-obligatoire",
+     "value": "The notifiable-diseases system covers 38 diseases"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2026-04-22",
+     "publisher": "Santé publique France",
+     "quote": "aux personnels compétents des Agences régionales de santé (ARS) et/ou aux épidémiologistes de Santé publique France.",
+     "quote_english": "to the competent staff of the Regional Health Agencies (ARS) and/or to Santé publique France epidemiologists.",
+     "title": "Maladies à signalement obligatoire",
+     "url": "https://www.santepubliquefrance.fr/maladies-a-declaration-obligatoire",
+     "value": "Data go to the ARS and to Santé publique France epidemiologists"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2024-07-05",
+     "publisher": "Santé publique France",
+     "quote": "Article L. 3113-1 du code de la santé publique (loi pris après avis de la cnil).",
+     "quote_english": "Article L. 3113-1 of the Public Health Code (law adopted after the CNIL's opinion).",
+     "title": "Textes réglementaires liés aux maladies à déclaration obligatoire",
+     "url": "https://www.santepubliquefrance.fr/maladies-a-declaration-obligatoire/textes-reglementaires-lies-aux-maladies-a-declaration-obligatoire",
+     "value": "Article L. 3113-1 Code de la santé publique"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "Santé publique France",
+     "quote": "Le dispositif de déclaration obligatoire de l’infection par le VIH/sida et de la tuberculose repose sur la transmission des informations via l’application e-DO.",
+     "quote_english": "Mandatory reporting of HIV/AIDS infection and tuberculosis relies on transmitting information via the e-DO application.",
+     "title": "e-DO - Déclaration obligatoire en ligne de l'infection par le VIH et du sida et de la tuberculose",
+     "url": "https://www.santepubliquefrance.fr/services/e-do-declaration-obligatoire-en-ligne-de-linfection-par-le-vih-et-du-sida-et-de-la-tuberculose",
+     "value": "e-DO online reporting application (HIV/AIDS and tuberculosis)"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Maladies à signalement obligatoire (MSO, notifiable diseases) system, including the e-DO online reporting application",
+   "operator": "Santé publique France with the Agences régionales de santé (ARS)",
+   "research_note": "No source found on e-DO hosting or record counts. Vaccination registers were not sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "education",
+   "research_note": "Searched for student and diploma registers (INE/RNIE, Parcoursup, diploma verification). education.gouv.fr returns 403, and the Senate PLF 2026 education and higher-education reports do not describe a central student or diploma register.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "CASD",
+     "quote": "Le CASD est un groupement d’intérêt public rassemblant l’État représenté par INSEE, le GENES, le CNRS, l’École polytechnique, HEC Paris et la Banque de France",
+     "quote_english": "CASD is a public-interest group bringing together the State represented by INSEE, GENES, CNRS, École polytechnique, HEC Paris and the Banque de France",
+     "title": "Gouvernance et Missions",
+     "url": "https://www.casd.eu/le-casd/gouvernance-et-missions/",
+     "value": "CASD is a GIP whose members include the State represented by Insee"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "CASD",
+     "quote": "Le GIP a pour objet principal d’organiser et de mettre en œuvre des services d’accès sécurisé pour les données confidentielles",
+     "quote_english": "The GIP's main purpose is to organise and operate secure access services for confidential data",
+     "title": "Gouvernance et Missions",
+     "url": "https://www.casd.eu/le-casd/gouvernance-et-missions/",
+     "value": "Secure access services for confidential data"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "fr",
+     "published": "",
+     "publisher": "CASD",
+     "quote": "le CASD a conçu un équipement sécurisé dédié qui répond à 3 grands principes",
+     "quote_english": "CASD designed dedicated secure equipment meeting three main principles",
+     "title": "Infrastructure",
+     "url": "https://www.casd.eu/technologie/infrastructure/",
+     "value": "CASD designed its own dedicated secure equipment"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "national",
+   "holding_name": "Centre d’accès sécurisé aux données (CASD) (secure access to confidential statistical microdata)",
+   "operator": "CASD, a public-interest group (GIP) of the State (Insee), GENES, CNRS, École polytechnique, HEC Paris and Banque de France",
+   "research_note": "Insee's own microdata stores were not separately sourced. CASD says it designed its own secure equipment and central infrastructure.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "adresse.data.gouv.fr (DINUM / IGN)",
+     "quote": "est une base de données d'état répertoriant l'ensemble des adresses du territoire français.",
+     "quote_english": "is a State database listing all addresses in French territory.",
+     "title": "Découvrir la Base Adresse Nationale",
+     "url": "https://adresse.data.gouv.fr/decouvrir-la-BAN",
+     "value": "BAN is a State database listing all addresses in France"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "adresse.data.gouv.fr (DINUM / IGN)",
+     "quote": "L'exploitation et la diffusion de la BAN sont pilotées par l'Institut National de l'Information Géographique et forestière",
+     "quote_english": "The operation and distribution of the BAN are managed by the National Institute of Geographic and Forest Information",
+     "title": "Découvrir la Base Adresse Nationale",
+     "url": "https://adresse.data.gouv.fr/decouvrir-la-BAN",
+     "value": "IGN runs operation and distribution of the BAN"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "fr",
+     "published": "",
+     "publisher": "adresse.data.gouv.fr (DINUM / IGN)",
+     "quote": "Chiffres clés 250 000 lieux-dits (beta) 25 millions d’adresses",
+     "quote_english": "Key figures: 250,000 localities (beta), 25 million addresses",
+     "title": "Découvrir la Base Adresse Nationale",
+     "url": "https://adresse.data.gouv.fr/decouvrir-la-BAN",
+     "value": "25 million addresses, 250,000 localities (beta)"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Base Adresse Nationale (BAN) (national address database)",
+   "operator": "IGN (operation and distribution), co-owned with DINUM",
+   "research_note": "IGN topographic and orthophoto bases were not sourced separately. No source found on BAN hosting. The 3DS law passage on the BAN page contains non-standard Unicode and was left out.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "Programme Vitam",
+     "quote": "Trois ministères, Europe et Affaires étrangères (MEAE), Culture (MC), Armées (MinArm), responsables de la conservation des archives de l’État ont mutualisé leurs efforts",
+     "quote_english": "Three ministries, Europe and Foreign Affairs (MEAE), Culture (MC) and Armed Forces (MinArm), responsible for preserving State archives, pooled their efforts",
+     "title": "Le programme",
+     "url": "https://www.programmevitam.fr/pages/presentation/",
+     "value": "Three ministries responsible for State archives pooled efforts in Vitam"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "fr",
+     "published": "",
+     "publisher": "Programme Vitam",
+     "quote": "un stockage sur bandes magnétiques (dit stockage froid) opéré par l’INA deux stockages sur un cloud souverain de l’Etat : Nubo opéré par la DGFIP",
+     "quote_english": "one storage on magnetic tape (cold storage) operated by INA, two storages on a sovereign State cloud: Nubo operated by the DGFiP",
+     "title": "VaS - Caractéristiques du service",
+     "url": "https://www.programmevitam.fr/pages/VaS/vas_caracteristiques/",
+     "value": "VaS stores data on INA tape and on two copies in Nubo, the State's sovereign cloud operated by DGFiP"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "national",
+   "holding_name": "Vitam (interministerial digital archiving programme and software), offered as the shared service 'Vitam accessible en service' (VaS)",
+   "operator": "Ministries of Europe and Foreign Affairs, Culture and Armed Forces (programme partners)",
+   "research_note": "Hosting is sourced for the shared VaS service only. Each ministry's own Vitam deployments may be hosted differently.",
+   "status": "held"
+  }
+ ],
+ "iso": "FR"
+}

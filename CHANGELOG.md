@@ -5,6 +5,19 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-09-29 (ask)
+
+### Added — /ask: questions answered from the sourced findings only (#78)
+
+A question box on the site, answered by Claude Opus 5 through a Vercel Function (`api/ask.ts`). The only
+material the model sees is `api/_corpus.json`, built from the content model with one block per sourced
+fact or explicit gap; citations are on, and every citation resolves to its claim's quote, URL, hash and
+archived copy. Questions are single-turn, at most 500 characters, and never stored. Costs are capped by a
+dedicated Anthropic workspace spend limit and a Vercel Firewall rate limit. Tested with a fake client
+and a recorded stream; live answers wait for the API key.
+
+---
+
 ## 2026-09-29 (ranking)
 
 ### Added — data-sovereignty ranking by published rule (#77)

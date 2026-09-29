@@ -1,0 +1,1053 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "Every registrar shall keep a record to be called the register and there shall be made therein all such entries as required so to be made by this Act.",
+     "title": "Merchant Shipping Act (Cap. 234)",
+     "url": "https://legislation.mt/getpdf/67fcbc94cf7b7f23782848d4",
+     "value": "Merchant Shipping Act (Cap. 234) art. 365(1): every registrar keeps the register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"Registrar-General\" means the Registrar-General of Shipping and Seamen as provided in article 363",
+     "title": "Merchant Shipping Act (Cap. 234)",
+     "url": "https://legislation.mt/getpdf/67fcbc94cf7b7f23782848d4",
+     "value": "Registrar-General of Shipping and Seamen"
+    }
+   ],
+   "holding_name": "Malta Ship Register (Registrar-General of Shipping and Seamen)",
+   "suggested_class": "ship_registry",
+   "why_critical": "Malta runs a large open ship register. Title, mortgages and flag status of registered ships exist only in this register, so its integrity carries international legal and commercial weight."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "In the Public Registry Office in Malta and in Gozo, there shall be kept five register books: one for the registration of acts of birth, one for the registration of acts of marriage",
+     "title": "Civil Code (Cap. 16)",
+     "url": "https://legislation.mt/getpdf/6a7c3f2652fe431ca8f9b4f1",
+     "value": "Civil Code (Cap. 16) art. 238(1) requires the Public Registry in Malta and Gozo to keep register books of acts of birth, marriage, civil union, death and cohabitation"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "Civil Status Section is responsible for the issuance of true copies of Acts of Birth, Marriage, Civil Union, and Death registered in Malta",
+     "title": "Public Registry – Civil Status",
+     "url": "https://identita.gov.mt/public-registry-sec-page-civil-status/",
+     "value": "Civil Status Section of the Public Registry holds acts of birth, marriage, civil union and death registered in Malta"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "Each of the said offices shall be under the management of an officer called Director of the Public Registry",
+     "title": "Public Registry Act (Cap. 56)",
+     "url": "https://legislation.mt/getpdf/602e53fb8f58ad1b78f3edbe",
+     "value": "Public Registry offices are managed by the Director of the Public Registry (Public Registry Act, Cap. 56)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "Identità was established in 2013 by virtue of Subsidiary Legislation 595.07 and is responsible for citizens’ identity management and the implementation of migration processes.",
+     "title": "About Identità",
+     "url": "https://identita.gov.mt/about-us/",
+     "value": "Identità (Identity Malta Agency), established 2013 under S.L. 595.07, is responsible for identity management"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Public Registry – Acts of Civil Status register books (birth, marriage, civil union, death, cohabitation)",
+   "operator": "Identità (Identity Malta Agency) – Public Registry, Director of the Public Registry",
+   "research_note": "Hosting of the civil status database not stated in any accessible public source; MITA (government IT agency) site blocked automated access.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "The facial image and information captured to produce the actual e-ID card are passed to the Electoral Office and used for election-related purposes, including the printing of voting documents and the publication of electoral registers.",
+     "title": "Identity Cards Unit – Electoral Office",
+     "url": "https://identita.gov.mt/identity-cards-unit-electoral-office/",
+     "value": "Facial images captured for the e-ID card are passed to the Electoral Office for voting documents and electoral registers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "An identity card shall contain a photograph of the person in respect of whom it is issued",
+     "title": "Identity Card and other Identity Documents Act (Cap. 258)",
+     "url": "https://legislation.mt/getpdf/6022aa7bbc827214c099ac41",
+     "value": "Identity Card and other Identity Documents Act (Cap. 258) art. 5(2): identity card contains the holder's photograph"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "The use of such biometric data for any other purpose including criminal investigation is prohibited",
+     "title": "Identity Card and other Identity Documents Act (Cap. 258)",
+     "url": "https://legislation.mt/getpdf/6022aa7bbc827214c099ac41",
+     "value": "Cap. 258 art. 5(4) prohibits use of the biometric data for other purposes, including criminal investigation"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "e-ID card facial image (Identity Cards Unit), shared with the Electoral Office",
+   "operator": "Identità – Identity Cards Unit",
+   "research_note": "No public source found on where facial images are stored or hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "At the office live biometrics will be captured including facial image, fingerprints, and signature.",
+     "title": "Passport Office – Adults Renewals",
+     "url": "https://identita.gov.mt/passport-office-adults-renewals/",
+     "value": "Live biometrics including fingerprints are captured at the Passport Office for passport applications"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "the Malta Passport Office started the process of collecting fingerprints from applicants in accordance with EC Regulation No. 2252/2004",
+     "title": "Passport Office",
+     "url": "https://identita.gov.mt/passport-office-main-page/",
+     "value": "Fingerprint collection started 28 June 2010 under Regulation (EC) No 2252/2004"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Passport Office biometric capture (facial image, fingerprints, signature)",
+   "operator": "Identità – Passport Office",
+   "research_note": "Sources show fingerprints are captured for passports under Reg. (EC) 2252/2004; no source found saying whether they are kept centrally after issuance, or where they are hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"certificate of naturalisation\" means a certificate of naturalisation granted under this Act",
+     "title": "Maltese Citizenship Act (Cap. 188)",
+     "url": "https://legislation.mt/getpdf/6890588dbed0ef08a8644d9d",
+     "value": "Maltese Citizenship Act (Cap. 188) defines certificates of naturalisation granted under the Act"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "Citizenship/Dual Citizenship certificate issued by Aġenzija Komunità Malta for individuals who obtained Maltese Citizenship",
+     "title": "Identity Cards Unit – First Time Applicant – Citizenship",
+     "url": "https://identita.gov.mt/identity-cards-unit/first-time-applicant/citizenship/",
+     "value": "Citizenship certificates are issued by Aġenzija Komunità Malta and are required for ID card applications"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "In the Public Registry Office in Malta and in Gozo, there shall be kept five register books: one for the registration of acts of birth, one for the registration of acts of marriage",
+     "title": "Civil Code (Cap. 16)",
+     "url": "https://legislation.mt/getpdf/6a7c3f2652fe431ca8f9b4f1",
+     "value": "Acts of birth are kept in the Public Registry register books (Civil Code art. 238)"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Acts of birth (Public Registry) and certificates of naturalisation/citizenship (Aġenzija Komunità Malta)",
+   "operator": "Identità – Public Registry; Aġenzija Komunità Malta (citizenship)",
+   "research_note": "No source found on digitisation or hosting of breeder documents.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "The Identity Cards Unit is responsible for issuing electronic Identity Cards to Maltese Citizens and registering e-ID (Virtual) accounts for individuals.",
+     "title": "Identity Cards Unit",
+     "url": "https://identita.gov.mt/identity-cards-unit/",
+     "value": "The Identity Cards Unit issues electronic ID cards and registers e-ID accounts"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "Every Maltese national over the age of fourteen years shall be in possession of a valid identity card",
+     "title": "Identity Card and other Identity Documents Act (Cap. 258)",
+     "url": "https://legislation.mt/getpdf/6022aa7bbc827214c099ac41",
+     "value": "Cap. 258 art. 4: every Maltese national over 14 must hold a valid identity card"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "The first Maltese biometric passport was issued on September 30, 2008",
+     "title": "Passport Office",
+     "url": "https://identita.gov.mt/passport-office-main-page/",
+     "value": "Biometric passports have been issued since 30 September 2008"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Identity card and passport issuance records (Identity Cards Unit; Passport Office)",
+   "operator": "Identità",
+   "research_note": "No source found giving record counts or hosting of the issuance system.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "When applying for an e-ID Card, applicants may subscribe for their e-ID virtual account, which is required to access Government online services.",
+     "title": "e-ID Virtual Account",
+     "url": "https://identita.gov.mt/identity-cards-unit/eid-virtual-account/",
+     "value": "The e-ID virtual account is required to access Government online services"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "The Identity Cards Unit is responsible for issuing electronic Identity Cards to Maltese Citizens and registering e-ID (Virtual) accounts for individuals.",
+     "title": "Identity Cards Unit",
+     "url": "https://identita.gov.mt/identity-cards-unit/",
+     "value": "Identity Cards Unit registers e-ID (virtual) accounts"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "unknown",
+   "holding_name": "Maltese eID (Identità) / MyIdentity – e-ID virtual account",
+   "operator": "Identità – Identity Cards Unit",
+   "research_note": "The Identità pages do not name the platform or hosting provider for e-ID accounts. The MyIdentity app was not described on the pages retrieved, and MITA's site was not accessible.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "authentication_audit_log",
+   "research_note": "No public source found describing e-ID authentication logs, their operator or retention. Identità e-ID pages and legislation.mt were checked; MITA site blocked automated access.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "The registration, transfer, correction and cancellation of voters, the compilation of the Electoral Register, the election of members of the House of Representatives",
+     "title": "General Elections Act (Cap. 354)",
+     "url": "https://legislation.mt/getpdf/661645c07403ed16fcf9eb8e",
+     "value": "General Elections Act (Cap. 354) art. 7(1): compilation of the Electoral Register is the sole responsibility of the Electoral Commission"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "The Commission is also to ensure that the Electoral Register database includes only the details of those persons eligible to vote.",
+     "title": "General Elections Act (Cap. 354)",
+     "url": "https://legislation.mt/getpdf/661645c07403ed16fcf9eb8e",
+     "value": "The Act refers to the Electoral Register database"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "The facial image and information captured to produce the actual e-ID card are passed to the Electoral Office and used for election-related purposes, including the printing of voting documents and the publication of electoral registers.",
+     "title": "Identity Cards Unit – Electoral Office",
+     "url": "https://identita.gov.mt/identity-cards-unit-electoral-office/",
+     "value": "ID card data and facial images feed the electoral registers"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Electoral Register (Reġistru Elettorali) database",
+   "operator": "Electoral Commission / Electoral Office",
+   "research_note": "electoral.gov.mt blocked automated access; no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "Applicants may choose to make use of the certificates (Authentication Certificate and Signature Certificate) found on their e-ID Card",
+     "title": "e-ID Virtual Account",
+     "url": "https://identita.gov.mt/identity-cards-unit/eid-virtual-account/",
+     "value": "e-ID cards carry an Authentication Certificate and a Signature Certificate"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "The competent regulator shall be responsible for the supervisory tasks stated in the Regulation",
+     "title": "Electronic Commerce Act (Cap. 426)",
+     "url": "https://legislation.mt/getpdf/65e082ac798bab1ea87f83dc",
+     "value": "Electronic Commerce Act (Cap. 426) art. 23A: a competent regulator supervises (qualified) trust service providers under eIDAS"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "e-ID card certificates (Authentication Certificate and Signature Certificate); qualified trust service supervision",
+   "operator": "Identità (e-ID certificates); competent regulator under the Electronic Commerce Act (supervision)",
+   "research_note": "No accessible source named the certification authority operating the e-ID certificates or its hosting. The EU trusted list browser API did not return data. The regulator's designation text was cut off in the PDF extraction, so that body is not named here.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "The Expatriates Unit is involved in the legal migration process and caters for the processing and issuing of residence documentation.",
+     "title": "Expatriates Unit",
+     "url": "https://identita.gov.mt/expatriates-unit-main-page/",
+     "value": "Expatriates Unit processes and issues residence documentation"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "visas, residence permits, work permits and other administrative matters related to expatriates",
+     "title": "Identity Malta Agency (Establishment) Order (S.L. 595.07)",
+     "url": "https://legislation.mt/getpdf/689061f044ed663ec0f22f07",
+     "value": "Identity Malta Agency (Establishment) Order S.L. 595.07 assigns visas, residence and work permits to the agency"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "During the appointment session, the biometrics will be taken.",
+     "title": "Expatriates Unit – Biometrics and Interim Receipt",
+     "url": "https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/useful-information/finalising-application-process/biometrics-and-interim-receipt/",
+     "value": "Biometrics are captured from non-EU applicants for residence documents"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Residence documents and permits (Expatriates Unit), including biometrics",
+   "operator": "Identità – Expatriates Unit",
+   "research_note": "No figures or hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "The administration of this Act and of the Income Tax Act, (hereinafter collectively referred to as \"the Income Tax Acts\") is vested in the Commissioner",
+     "title": "Income Tax Management Act (Cap. 372)",
+     "url": "https://legislation.mt/getpdf/69c65a5c7da36921dcc4f04b",
+     "value": "Income Tax Management Act (Cap. 372) art. 3(1): administration of the Income Tax Acts is vested in the Commissioner"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"Commissioner\" means the Commissioner for Tax and Customs;",
+     "title": "Income Tax Management Act (Cap. 372)",
+     "url": "https://legislation.mt/getpdf/69c65a5c7da36921dcc4f04b",
+     "value": "Commissioner means the Commissioner for Tax and Customs"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Income tax records administered by the Commissioner for Tax and Customs",
+   "operator": "Commissioner for Tax and Customs (Tax and Customs Administration)",
+   "research_note": "cfr.gov.mt blocked automated access; no hosting or volume source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "means the Commissioner for Tax and Customs, and includes any other person having an express or implied authority to act for the said Commissioner in carrying out the provisions of this Ordinance",
+     "title": "Customs Ordinance (Cap. 37)",
+     "url": "https://legislation.mt/getpdf/69c3afc27da36921dcc4ec14",
+     "value": "Customs Ordinance (Cap. 37) vests its administration in the Commissioner for Tax and Customs"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "Customs declarations under the Customs Ordinance",
+   "operator": "Commissioner for Tax and Customs (Customs)",
+   "research_note": "No source found naming the customs declaration system or its hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "To establish a scheme of social security and to consolidate with amendments existing provisions concerning the payment of social insurance benefits, pensions and allowances",
+     "title": "Social Security Act (Cap. 318)",
+     "url": "https://legislation.mt/getpdf/69d6033d6fe5fd3994d1710c",
+     "value": "Social Security Act (Cap. 318) establishes the social security scheme for benefits, pensions and contributions"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"Department\" means the Social Security Division; \"Director\" in or in respect of the provisions of this Act",
+     "title": "Social Security Act (Cap. 318)",
+     "url": "https://legislation.mt/getpdf/69d6033d6fe5fd3994d1710c",
+     "value": "The Department under the Act is the Social Security Division"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Social security contributions, benefits and pensions records",
+   "operator": "Social Security Division (Director General, Social Security)",
+   "research_note": "No hosting or volume source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"insured person\" means a person included in the list established by regulations made under this Act;",
+     "title": "Health Act (Cap. 528)",
+     "url": "https://legislation.mt/getpdf/677e3ecacc8e8e3d102ff18a",
+     "value": "Health Act defines insured persons as those included in a list established by regulations"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "To regulate the entitlement to, and the quality of, healthcare services in Malta",
+     "title": "Health Act (Cap. 528)",
+     "url": "https://legislation.mt/getpdf/677e3ecacc8e8e3d102ff18a",
+     "value": "Health Act (Cap. 528) regulates entitlement to healthcare services"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "Medical Assistance shall be of the following kinds: (a) Sickness Assistance; (b) Leprosy Assistance; (c) Tuberculosis Assistance; (d) Free Medical Aid; (e) Milk Grant.",
+     "title": "Social Security Act (Cap. 318)",
+     "url": "https://legislation.mt/getpdf/69d6033d6fe5fd3994d1710c",
+     "value": "Social Security Act art. 19 lists medical assistance types including Free Medical Aid"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Healthcare entitlement list of insured persons (Health Act) and Free Medical Aid entitlement (Social Security Act)",
+   "operator": "Ministry responsible for health; Social Security Division (Free Medical Aid)",
+   "research_note": "Malta has a tax-funded national health service rather than a separate insurance fund. Entitlement is set by the Health Act list of insured persons and by Social Security Act medical assistance. No source found naming the system or its hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "There shall be an office in Malta to be called the Land Registry for the purposes of registration of titles to land.",
+     "title": "Land Registration Act (Cap. 296)",
+     "url": "https://legislation.mt/getpdf/60efe5f532d0f719d442f08c",
+     "value": "Land Registration Act (Cap. 296) art. 3(1) establishes the Land Registry for registration of titles to land"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "The business of the registry shall be conducted by a public officer who shall be appointed for that purpose and shall be known as the Land Registrar",
+     "title": "Land Registration Act (Cap. 296)",
+     "url": "https://legislation.mt/getpdf/60efe5f532d0f719d442f08c",
+     "value": "The Land Registry is run by a public officer known as the Land Registrar"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "There shall be a Public Registry Office in Malta and another in Gozo for the registration of causes of preference among creditors for the enrolment of acts requiring registration",
+     "title": "Public Registry Act (Cap. 56)",
+     "url": "https://legislation.mt/getpdf/602e53fb8f58ad1b78f3edbe",
+     "value": "Public Registry Act (Cap. 56) art. 2: Public Registry Offices register acts requiring registration to have effect against third parties"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Land Registry (title registration) and Public Registry (registration of deeds, hypothecs and privileges)",
+   "operator": "Land Registrar (Land Registry); Director of the Public Registry",
+   "research_note": "No hosting or volume source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "There shall be established an Agency, to be known as the Malta Business Registry which shall have all the duties and functions pertaining to the Registrar of Companies",
+     "title": "Malta Business Registry (Establishment as an Agency) Order (S.L. 595.27)",
+     "url": "https://legislation.mt/getpdf/63b53288198b4d28602aa4aa",
+     "value": "Malta Business Registry (Establishment as an Agency) Order (S.L. 595.27) art. 3 establishes MBR with the Registrar of Companies' functions"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "The Minister shall appoint a senior official of the Agency to be Registrar of Companies and other Commercial Partnerships",
+     "title": "Companies Act (Cap. 386)",
+     "url": "https://legislation.mt/getpdf/6a1836349844fb1e280ec744",
+     "value": "Companies Act (Cap. 386) art. 400: a senior official of the Agency is appointed Registrar of Companies"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register of Companies and other Commercial Partnerships",
+   "operator": "Malta Business Registry (agency; Registrar of Companies)",
+   "research_note": "The MBR public website runs on Wix, but that is the public website, not the register. No source found on where the register system is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "The information on the beneficial owners of a company held by the Registrar in the register of beneficial owners shall, in accordance with data protection requirements, be accessible",
+     "title": "Companies Act (Register of Beneficial Owners) Regulations (S.L. 386.19)",
+     "url": "https://legislation.mt/getpdf/6a96811d8a32942218a3875e",
+     "value": "Companies Act (Register of Beneficial Owners) Regulations, S.L. 386.19, reg. 7: BO information held by the Registrar in the register of beneficial owners"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register of Beneficial Owners (companies)",
+   "operator": "Malta Business Registry (Registrar of Companies)",
+   "research_note": "No hosting or record count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "To provide for the registration and licensing of motor vehicles in Malta.",
+     "title": "Motor Vehicles Registration and Licensing Act (Cap. 368)",
+     "url": "https://legislation.mt/getpdf/69c657587da36921dcc4f02f",
+     "value": "Motor Vehicles Registration and Licensing Act (Cap. 368) provides for registration and licensing of motor vehicles"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"Authority\" means the Authority for Transport in Malta set up under the provisions of the Authority for Transport in Malta Act;",
+     "title": "Motor Vehicles Registration and Licensing Act (Cap. 368)",
+     "url": "https://legislation.mt/getpdf/69c657587da36921dcc4f02f",
+     "value": "The registering Authority is the Authority for Transport in Malta"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Motor vehicle registration and licensing records",
+   "operator": "Authority for Transport in Malta (Transport Malta)",
+   "research_note": "transport.gov.mt blocked automated access. The driving licence register was not found in the Authority for Transport in Malta Act text, and no hosting source was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "The Department of Justice shall be responsible to: (a) maintain a national criminal records register; and (b) issue conduct certificates",
+     "title": "Conduct Certificates Ordinance (Cap. 77)",
+     "url": "https://legislation.mt/getpdf/6aa1090e5ca02023e4009067",
+     "value": "Conduct Certificates Ordinance (Cap. 77) art. 2: Department of Justice maintains a national criminal records register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "the following competent authorities shall have continuous direct access to the complete record of criminal convictions of a person",
+     "title": "Conduct Certificates Ordinance (Cap. 77)",
+     "url": "https://legislation.mt/getpdf/6aa1090e5ca02023e4009067",
+     "value": "Named authorities (Attorney General, Commissioner of Police, Security Service) have continuous direct access to criminal conviction records"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "National criminal records register (Conducts and Criminal Records Office)",
+   "operator": "Department of Justice",
+   "research_note": "Court case management (ecourts.gov.mt) was not researched in depth. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"the Force\" means the Malta Police Force; \"gazetted officer\" means any police officer of or above the rank of Inspector;",
+     "title": "Police Act (Cap. 164)",
+     "url": "https://legislation.mt/getpdf/67a3249e8ea55623141e9a56",
+     "value": "Police Act (Cap. 164) defines the Force as the Malta Police Force"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Malta Police Force information systems",
+   "operator": "Malta Police Force (Commissioner of Police)",
+   "research_note": "The Police Act (Cap. 164) was searched for 'database' and 'records' with no match for a named police information system. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Identità",
+     "quote": "The Central Visa Unit (CVU) is the government’s immigration central authority responsible for the implementation of national visa policies and the provisions under the Schengen acquis",
+     "title": "Central Visa Unit",
+     "url": "https://identita.gov.mt/central-visa-unit-main-page/",
+     "value": "Central Visa Unit implements national visa policy and the Schengen acquis on visas"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"Principal Immigration Officer\" means the person appointed to such office by the Prime Minister under article 3",
+     "title": "Immigration Act (Cap. 217)",
+     "url": "https://legislation.mt/getpdf/654e355c495fa32038e251cd",
+     "value": "Immigration Act (Cap. 217) establishes the Principal Immigration Officer"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "National visa system (Central Visa Unit, Schengen) and immigration records",
+   "operator": "Identità – Central Visa Unit; Principal Immigration Officer",
+   "research_note": "Identità has a VFS helpdesk page, which suggests an external visa application service provider, but the page text does not state VFS's role, so no dependency is claimed. N.SIS/VIS/EES national-system hosting not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"Commissioner\" means the Commissioner of Police; \"deactivated firearms\" means firearms that have been rendered permanently unfit for use",
+     "title": "Arms Act (Cap. 480)",
+     "url": "https://legislation.mt/getpdf/60a4cb89083d7d182cdb9624",
+     "value": "Arms Act (Cap. 480): the licensing Commissioner is the Commissioner of Police"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "no person shall take possession thereof without prior approval by the Commissioner",
+     "title": "Arms Act (Cap. 480)",
+     "url": "https://legislation.mt/getpdf/60a4cb89083d7d182cdb9624",
+     "value": "Possession of imported firearms requires prior approval by the Commissioner"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Firearms licensing records under the Arms Act",
+   "operator": "Commissioner of Police (with the Weapons Board)",
+   "research_note": "The Arms Act requires dealers to keep registers. No explicit clause on a central police register was located, and no hosting source was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "mt",
+     "publisher": "Legislation Malta",
+     "quote": "F'Legiżlazzjoni Malta għandek issib il-Liġijijiet kollha ta' Malta, inkluża l-leġiżlazzjoni sussidjarja konsolidata.",
+     "quote_english": "In Legislation Malta you will find all the Laws of Malta, including consolidated subsidiary legislation.",
+     "title": "FAQs – Leġiżlazzjoni Malta",
+     "url": "https://legislation.mt/Home/FAQList",
+     "value": "Legislation Malta portal holds all Maltese laws including consolidated subsidiary legislation"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Leġiżlazzjoni Malta (Legislation Malta portal) and Gazzetta tal-Gvern (Government Gazette)",
+   "research_note": "The legal basis for the authentic electronic text and the portal operator were not established from a quotable source; gov.mt was blocked.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "The Accountant General shall, from day to day, cause to be paid into the bank to the credit of the proper account, all public moneys collected or received at the Treasury",
+     "title": "Financial Administration and Audit Act (Cap. 174)",
+     "url": "https://legislation.mt/getpdf/6022a40ebc827214c09925e0",
+     "value": "Financial Administration and Audit Act (Cap. 174) art. 19: Accountant General banks public moneys received at the Treasury"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Treasury accounts and public moneys (Accountant General)",
+   "operator": "Treasury Department – Accountant General",
+   "research_note": "The name and hosting of the government accounting system (e.g. DAS) were not sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "government_payroll",
+   "research_note": "No quotable public source found for the central government payroll/HR system or its operator; gov.mt and MITA sites blocked automated access.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "to demand the holding of a dummy run in order to ascertain the validity of the said electro-magnetic process",
+     "title": "General Elections Act (Cap. 354)",
+     "url": "https://legislation.mt/getpdf/661645c07403ed16fcf9eb8e",
+     "value": "General Elections Act (Cap. 354) provides for dummy runs of the electro-magnetic process used in elections"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "The registration, transfer, correction and cancellation of voters, the compilation of the Electoral Register, the election of members of the House of Representatives",
+     "title": "General Elections Act (Cap. 354)",
+     "url": "https://legislation.mt/getpdf/661645c07403ed16fcf9eb8e",
+     "value": "Electoral Commission is solely responsible for elections and the Electoral Register"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Electoral Commission election administration including electronic ('electro-magnetic') processing",
+   "operator": "Electoral Commission",
+   "research_note": "No source found on the vendor or hosting of the vote counting system.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "There shall be a Bank to be called the Central Bank of Malta. The Bank shall form an integral part of the European System of Central Banks",
+     "title": "Central Bank of Malta Act (Cap. 204)",
+     "url": "https://legislation.mt/getpdf/661f815ec2ed86388045ef0b",
+     "value": "Central Bank of Malta Act (Cap. 204) art. 3 establishes the Bank as part of the ESCB"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "holding_name": "Central Bank of Malta systems",
+   "operator": "Central Bank of Malta",
+   "research_note": "centralbankmalta.org blocked automated access; no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "To make provisions for the raising and maintenance of armed forces in Malta",
+     "title": "Malta Armed Forces Act (Cap. 220)",
+     "url": "https://legislation.mt/getpdf/654e35d08a3ed61ab0c67a38",
+     "value": "Malta Armed Forces Act (Cap. 220) provides for raising and maintaining the armed forces"
+    }
+   ],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "holding_name": "Armed Forces of Malta command and logistics",
+   "operator": "Armed Forces of Malta",
+   "research_note": "No public source on AFM information systems or hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "There shall continue to be a Security Service (in this Act referred to as \"the Service\") under the authority of the Minister.",
+     "title": "Security Service Act (Cap. 391)",
+     "url": "https://legislation.mt/getpdf/6022ba1cbc827214c09ac4a7",
+     "value": "Security Service Act (Cap. 391) art. 3(1) continues the Security Service"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "The function of the Service shall be to protect national security and, in particular, against threats from organised crime, espionage, terrorism and sabotage",
+     "title": "Security Service Act (Cap. 391)",
+     "url": "https://legislation.mt/getpdf/6022ba1cbc827214c09ac4a7",
+     "value": "The Service's function is protecting national security against organised crime, espionage, terrorism and sabotage"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Security Service holdings",
+   "operator": "Security Service",
+   "research_note": "No public source on hosting, as expected.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"emergency communication\" means communications by means of interpersonal communications services between an end-user and the PSAP",
+     "title": "Electronic Communications (Regulation) Act (Cap. 399)",
+     "url": "https://legislation.mt/getpdf/661cda8cc2ed7e0858a3687b",
+     "value": "Electronic Communications (Regulation) Act (Cap. 399) defines emergency communications to the PSAP"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "112 emergency communications to the PSAP",
+   "research_note": "The PSAP operator, dispatch system and public-safety radio network were not identified in any accessible source.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "To provide for the establishment of a Civil Protection Department and an Assistance and Rescue Force",
+     "title": "Civil Protection Act (Cap. 411)",
+     "url": "https://legislation.mt/getpdf/637747aebae36218f810d89e",
+     "value": "Civil Protection Act (Cap. 411) establishes the Civil Protection Department"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Civil Protection Department systems",
+   "operator": "Civil Protection Department",
+   "research_note": "No source found on the alerting or crisis systems or their hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "To make provision for the transfer of all the assets, rights, liabilities and obligations of Enemalta Corporation to Enemalta plc, to regulate the functions of distribution system operators",
+     "title": "Enemalta (Transfer of Assets, Rights, Liabilities and Obligations) Act (Cap. 536)",
+     "url": "https://legislation.mt/getpdf/6022c47abc827214c09b8213",
+     "value": "Enemalta (Transfer of Assets...) Act (Cap. 536) transfers Enemalta Corporation to Enemalta plc and regulates distribution system operators"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Electricity distribution system control (Enemalta plc)",
+   "operator": "Enemalta plc (distribution system operator)",
+   "research_note": "No source found on the SCADA/EMS vendor or hosting. Enemalta's ownership structure was not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "To provide for the establishment of a body corporate to be known as the Water Services Corporation",
+     "title": "Water Services Corporation Act (Cap. 355)",
+     "url": "https://legislation.mt/getpdf/6022b344bc827214c09a47cf",
+     "value": "Water Services Corporation Act (Cap. 355) establishes the Corporation"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Water Services Corporation water production and distribution control systems",
+   "operator": "Water Services Corporation",
+   "research_note": "No source found on control systems or hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "health_records",
+   "research_note": "The Health Act (Cap. 528) defines 'medical records' but was not found to establish a national EHR. myHealth and the national patient summary could not be sourced, because health.gov.mt was not searched after the web search budget ran out.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"Superintendent\" means the Superintendent of Public Health and to the extent of any delegation or authority given includes an authorised officer",
+     "title": "Public Health Act (Cap. 465)",
+     "url": "https://legislation.mt/getpdf/67515d500dba9f09507542ee",
+     "value": "Superintendent of Public Health"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "prescribing measures to guard against or to control dangerous epidemics or infectious disease",
+     "title": "Public Health Act (Cap. 465)",
+     "url": "https://legislation.mt/getpdf/67515d500dba9f09507542ee",
+     "value": "Public Health Act powers to control epidemics and infectious disease"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Notifiable/infectious disease control under the Public Health Act",
+   "operator": "Superintendent of Public Health",
+   "research_note": "The Public Health Act (Cap. 465) gives powers over infectious disease, but no quotable source was found for a central notifiable-disease or vaccination register.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "education",
+   "research_note": "The Education Act (Cap. 605) only requires a register of licensed schools and childcare centres, not student records. The Further and Higher Education Act (Cap. 607) establishes MFHEA, but no student or qualification register clause was found. No other source was found.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"confidential data\" means data obtained by the National Statistics Office for the production of official statistics",
+     "title": "Malta Statistics Authority Act (Cap. 422)",
+     "url": "https://legislation.mt/getpdf/6022c0cfbc827214c09b08e1",
+     "value": "Malta Statistics Authority Act (Cap. 422) defines confidential data obtained by the NSO"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "In the case of the holding of any census of population and housing, the relevant order shall be prescribed by the Prime Minister",
+     "title": "Malta Statistics Authority Act (Cap. 422)",
+     "url": "https://legislation.mt/getpdf/6022c0cfbc827214c09b08e1",
+     "value": "Census of population and housing held by order under the Act"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "National Statistics Office confidential data and census files",
+   "operator": "National Statistics Office / Malta Statistics Authority",
+   "research_note": "nso.gov.mt blocked automated access; no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "geospatial",
+   "research_note": "Not researched in depth (tier 3). The Planning Authority mapping and address data were not sourced.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "publisher": "Government of Malta – Legislation Malta",
+     "quote": "\"National Archives\" means the entity called the National Archives of Malta established under article 3;",
+     "title": "National Archives Act (Cap. 477)",
+     "url": "https://legislation.mt/getpdf/6197cb3147360305a40c0ec3",
+     "value": "National Archives Act (Cap. 477) establishes the National Archives of Malta"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "National Archives of Malta",
+   "operator": "National Archives of Malta (National Archivist)",
+   "research_note": "No source found on digital archive holdings or hosting.",
+   "status": "held"
+  }
+ ],
+ "iso": "MT"
+}

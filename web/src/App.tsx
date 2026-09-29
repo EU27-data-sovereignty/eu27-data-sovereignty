@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { loadBundle } from './data/load'
 import type { Bundle } from './data/types'
+import { Ask } from './pages/Ask'
 import { Countries } from './pages/Countries'
 import { Country } from './pages/Country'
 import { Holding, HoldingsIndex } from './pages/Holdings'
@@ -56,6 +57,7 @@ export function App() {
         <Route path="holdings/:cls" element={<Holding bundle={bundle} />} />
         <Route path="sources" element={<Sources bundle={bundle} />} />
         <Route path="sovereignty" element={<Sovereignty bundle={bundle} />} />
+        <Route path="ask" element={<Ask bundle={bundle} />} />
         <Route path="map" element={<Sovereignty bundle={bundle} />} />
         <Route path="country/:iso" element={<Country bundle={bundle} />} />
         <Route path="methodology" element={<Methodology bundle={bundle} />} />

@@ -1,0 +1,1333 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "hosting",
+     "language": "ro",
+     "published": "2026-09-09",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "Obiectivul general al proiectului a vizat realizarea infrastructurii cloudului guvernamental, folosind tehnologii de ultimă generație, cu un înalt grad de securitate cibernetică, eficiente din punct de vedere energetic, necesare asigurării găzduirii de sisteme informatice publice centrale",
+     "quote_english": "The general objective of the project was to build the government cloud infrastructure, using state-of-the-art technologies with a high degree of cyber security and energy efficiency, needed to host central public information systems",
+     "title": "Anunț privind finalizarea implementarii proiectului „Implementarea infrastructurii de cloud guvernamental”",
+     "url": "https://www.adr.gov.ro/articole/anunt-de-presa-pentru-proiectul-implementarea-infrastructurii-de-cloud-guvernamental-componenta-7---transformare-digitala-investitia-1---implementarea-infrastructurii-de-cloud-guvernamental",
+     "value": "The government cloud project (ADR as lead, with STS and SRI-Cyberint as partners) built data centres to host central public information systems"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "ro",
+     "published": "2026-09-09",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "Autoritatea pentru Digitalizarea României, în calitate de lider de parteneriat și beneficiar, împreună cu Serviciul de Telecomunicații Speciale, în calitate de partener și beneficiar",
+     "quote_english": "The Authority for the Digitalization of Romania, as partnership leader and beneficiary, together with the Special Telecommunications Service, as partner and beneficiary",
+     "title": "Anunț privind finalizarea implementarii proiectului „Implementarea infrastructurii de cloud guvernamental”",
+     "url": "https://www.adr.gov.ro/articole/anunt-de-presa-pentru-proiectul-implementarea-infrastructurii-de-cloud-guvernamental-componenta-7---transformare-digitala-investitia-1---implementarea-infrastructurii-de-cloud-guvernamental",
+     "value": "ADR leads the partnership, with STS and SRI (Military Unit 0929) as partners"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "minim 30 de aplicații și sisteme IT&C, prin intermediul cărora sunt furnizate servicii digitale guvernamentale, vor fi migrate în cloud până în iunie 2026.",
+     "quote_english": "at least 30 ICT applications and systems through which government digital services are provided will be migrated to the cloud by June 2026.",
+     "title": "Investiția 2 – Migrarea aplicațiilor și sistemelor informatice în cloud",
+     "url": "https://www.adr.gov.ro/investitia-2-dezvoltarea-cloudului-si-migrarea-in-cloud",
+     "value": "At least 30 government applications and systems were planned to move to the government cloud by June 2026"
+    }
+   ],
+   "holding_name": "Cloudul guvernamental (Government Cloud) – ADR, STS and SRI data centres",
+   "suggested_class": "government_cloud",
+   "why_critical": "A shared government cloud built to host central public information systems. Its build-out (Tier IV/III data centres, 2022-2026) concentrates many holdings in one state-run infrastructure."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "SEAP (Sistemul Electronic de Achiziții Publice) este o platformă electronică ce garantează transparența în procesul și procedurile de achiziții publice.",
+     "quote_english": "SEAP (Electronic Public Procurement System) is an electronic platform that guarantees transparency in public procurement processes and procedures.",
+     "title": "Platforme operate",
+     "url": "https://www.adr.gov.ro/platforme-operate",
+     "value": "SEAP is the electronic platform public authorities use to buy goods and services"
+    }
+   ],
+   "holding_name": "Sistemul Electronic de Achiziții Publice (SEAP / e-licitatie.ro)",
+   "suggested_class": "e_procurement",
+   "why_critical": "Contracting authorities carry out all public procurement through it, so it is the state's record of its contracts."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "Platforma, folosită deja de 2,3 milioane de români, îți oferă posibilitatea de a interacționa online cu administrația publică și de a-ți gestiona rapid și sigur plățile.",
+     "quote_english": "The platform, already used by 2.3 million Romanians, lets you interact online with the public administration and manage your payments quickly and securely.",
+     "title": "Platforme operate",
+     "url": "https://www.adr.gov.ro/platforme-operate",
+     "value": "Ghișeul.ro is used by 2.3 million Romanians"
+    }
+   ],
+   "holding_name": "Ghișeul.ro – national e-payment platform for taxes, local levies and fines",
+   "suggested_class": "government_payments",
+   "why_critical": "The main online channel for paying taxes, local levies and fines. It is linked to ROeID and is used to order criminal record certificates."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+     "quote": "actualizeaza, utilizeaza si valorifica datele din Registrul national de evidenta a persoanelor potrivit legii",
+     "quote_english": "updates, uses and exploits the data in the National Register of Persons Records according to the law",
+     "title": "Atributii - Directia Generala pentru Evidenta Persoanelor",
+     "url": "https://depabd.mai.gov.ro/atributii.html",
+     "value": "The national population register is the Registrul național de evidență a persoanelor (RNEP). DGEP updates and uses it."
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+     "quote": "gestioneaza si administreaza Sistemul national informatic de evidenta a persoanelor",
+     "quote_english": "manages and administers the National IT System for Persons Records",
+     "title": "Atributii - Directia Generala pentru Evidenta Persoanelor",
+     "url": "https://depabd.mai.gov.ro/atributii.html",
+     "value": "DGEP manages and administers the National IT System for Persons Records (Sistemul național informatic de evidență a persoanelor)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+     "quote": "Ordonanta de Urgenta a Guvernului nr.97/2005 privind evidenta, domiciliul, resedinta si actele de identitate ale cetatenilor romani, republicată, cu modificările și completările ulterioare",
+     "quote_english": "Government Emergency Ordinance no. 97/2005 on records, domicile, residence and identity documents of Romanian citizens, republished, as amended and supplemented",
+     "title": "Baza legala - Directia Generala pentru Evidenta Persoanelor",
+     "url": "https://depabd.mai.gov.ro/baza_legala.html",
+     "value": "Government Emergency Ordinance (OUG) 97/2005 on records, domicile, residence and identity documents of Romanian citizens. DGEP itself was established by HG 1367/2009."
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+     "quote": "Directia Generala pentru Evidenta Persoanelor este organ de specialitate al administratiei publice centrale, cu personalitate juridica si face parte din structurile de ordine si siguranta publica din subordinea Ministerului Afacerilor Interne",
+     "quote_english": "The General Directorate for Persons Records is a specialised body of central public administration, with legal personality, and is part of the public order and safety structures subordinated to the Ministry of Internal Affairs",
+     "title": "Baza legala - Directia Generala pentru Evidenta Persoanelor",
+     "url": "https://depabd.mai.gov.ro/baza_legala.html",
+     "value": "DGEP is a central public administration body with legal personality under the Ministry of Internal Affairs"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registrul național de evidență a persoanelor (RNEP) / Sistemul național informatic de evidență a persoanelor (National Register of Persons Records / National IT System for Persons Records)",
+   "operator": "Direcția Generală pentru Evidența Persoanelor (DGEP, Ministry of Internal Affairs)",
+   "research_note": "No public source found stating where this holding is hosted or who operates its infrastructure, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Ministerul Afacerilor Interne - Direcția Generală pentru Evidența Persoanelor",
+     "quote": "Datele biometrice, constând în imaginea facială și amprentele digitale ale titularului, sunt colectate în procesul de emitere a CEI pentru a îmbunătăți securitatea acesteia și preveni fraudarea identității.",
+     "quote_english": "Biometric data, consisting of the holder's facial image and fingerprints, are collected in the CEI issuance process to improve its security and prevent identity fraud.",
+     "title": "Despre | Cartea electronică de identitate",
+     "url": "https://carteadeidentitate.gov.ro/despre/",
+     "value": "Facial image and fingerprints are collected when the electronic identity card (CEI) is issued"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției Române",
+     "quote": "Obiectivul general al proiectului vizează asigurarea disponibilității sistemelor naționale de identificare a persoanelor pe baza datelor dactiloscopice și a imaginilor faciale",
+     "quote_english": "The general objective of the project is to ensure the availability of the national systems for identifying persons on the basis of fingerprint data and facial images",
+     "title": "4AFIS2AFIS",
+     "url": "https://politiaromana.ro/ro/informatii-generale/proiecte/4afis2afis",
+     "value": "The Romanian Police maintains national systems that identify persons from fingerprint data and facial images"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Imaginea facială (CEI) și sistemele naționale de identificare pe baza imaginilor faciale (facial images for the electronic ID card; national facial-image identification systems)",
+   "operator": "DGEP (ID cards); Inspectoratul General al Poliției Române (national identification systems)",
+   "research_note": "The CEI site confirms that facial images are captured and stored on the chip. No public source was found stating whether facial images from identity documents are also kept in a central database. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "not_held",
+     "language": "ro",
+     "publisher": "Ministerul Afacerilor Interne - Direcția Generală pentru Evidența Persoanelor",
+     "quote": "Legea stabilește expres că imaginile amprentelor preluate în bazele de date de producție se șterg, prin procedură automată, imediat după ce titularul a intrat în posesia CEI sau la împlinirea unui termen de 3 luni de la data programată pentru eliberarea actului de identitate.",
+     "quote_english": "The law expressly provides that fingerprint images captured in the production databases are deleted, by automatic procedure, immediately after the holder has received the CEI or upon expiry of 3 months from the date scheduled for issuing the identity document.",
+     "title": "Despre | Cartea electronică de identitate",
+     "url": "https://carteadeidentitate.gov.ro/despre/",
+     "value": "For the electronic ID card, fingerprint images in production databases are deleted automatically once the holder receives the card, or after 3 months. They are not retained centrally for ID cards."
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției Române",
+     "quote": "Obiectivul general al proiectului vizează asigurarea disponibilității sistemelor naționale de identificare a persoanelor pe baza datelor dactiloscopice și a imaginilor faciale",
+     "quote_english": "The general objective of the project is to ensure the availability of the national systems for identifying persons on the basis of fingerprint data and facial images",
+     "title": "4AFIS2AFIS",
+     "url": "https://politiaromana.ro/ro/informatii-generale/proiecte/4afis2afis",
+     "value": "The Romanian Police operates national systems that identify persons from fingerprint (dactyloscopic) data and facial images (4AFIS_2AFIS project, 2025-2027)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției Române",
+     "quote": "Asigură organizarea şi funcţionarea evidenţei dactiloscopice decadactilare a persoanelor condamnate penal ori împotriva cărora s-au luat alte măsuri prevăzute de legea penală prin examinarea impresiunilor digitale",
+     "quote_english": "Ensures the organisation and functioning of the ten-print fingerprint records of persons criminally convicted or against whom other measures provided by criminal law were taken, by examining fingerprints",
+     "title": "Direcţia Cazier Judiciar, Statistică şi Evidenţe Operative",
+     "url": "https://politiaromana.ro/ro/politia-romana/unitati-centrale/directia-cazier-judiciar-statistica-si-evidenta-operativa",
+     "value": "The police Criminal Records directorate runs the ten-print fingerprint register of persons convicted or subject to criminal-law measures"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidența dactiloscopică / sistemele naționale AFIS (national fingerprint identification systems); CEI fingerprints are not retained",
+   "operator": "Inspectoratul General al Poliției Române",
+   "research_note": "The central fingerprint holding is the police criminal AFIS. The official CEI site states that CEI fingerprints are deleted after issuance. No source was found on whether passport fingerprints are kept. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "ro",
+     "published": "2025",
+     "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+     "quote": "Peste 3 milioane de dosare de stare civilă, înregistrate în Sistemul Informatic Integrat pentru Emiterea Actelor de Stare Civilă (SIIEASC)",
+     "quote_english": "Over 3 million civil status files registered in the Integrated IT System for Issuing Civil Status Documents (SIIEASC)",
+     "title": "Directia Generală pentru Evidenţa Persoanelor - prima pagina",
+     "url": "https://depabd.mai.gov.ro/",
+     "value": "Over 3 million civil status files registered in SIIEASC (DGEP notice, 2025)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Direcția Generală de Pașapoarte (MAI)",
+     "quote": "Legea nr. 119/1996 cu privire la actele de stare civilă, republicată",
+     "quote_english": "Law no. 119/1996 on civil status documents, republished",
+     "title": "Legislație - Direcția Generală de Pașapoarte",
+     "url": "https://pasapoarte.mai.gov.ro/legislatie/",
+     "value": "Law 119/1996 on civil status acts governs civil status records"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+     "quote": "asigura dotarea serviciilor publice comunitare de evidenta a persoanelor cu registre si certificate de stare civila",
+     "quote_english": "supplies the community public services for persons records with civil status registers and certificates",
+     "title": "Atributii - Directia Generala pentru Evidenta Persoanelor",
+     "url": "https://depabd.mai.gov.ro/atributii.html",
+     "value": "DGEP supplies local registry offices with civil status registers and certificates"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemul Informatic Integrat pentru Emiterea Actelor de Stare Civilă (SIIEASC) (Integrated IT System for Issuing Civil Status Documents)",
+   "operator": "Direcția Generală pentru Evidența Persoanelor (with local SPCLEP civil status offices)",
+   "research_note": "No public source found stating where this holding is hosted or who operates its infrastructure, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Direcția Generală de Pașapoarte (MAI)",
+     "quote": "una dintre atribuțiile Direcției Generale de Pașapoarte este reprezentată de furnizarea datelor privind cetățenia română din Registrul naţional de evidenţă a paşapoartelor simple.",
+     "quote_english": "one of the duties of the General Directorate for Passports is providing data on Romanian citizenship from the National Register of Ordinary Passports.",
+     "title": "Furnizarea datelor din R.N.E.P.S.",
+     "url": "https://pasapoarte.mai.gov.ro/furnizarea-datelor-din-r-n-e-p-s/",
+     "value": "Passport issuance is recorded in the National Register of Ordinary Passports (RNEPS), held by the General Directorate for Passports"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Direcția Generală de Pașapoarte (MAI)",
+     "quote": "art. 23 alin. (1) din Normele metodologice de aplicare a Legii nr. 248/2005 privind regimul liberei circulații a cetățenilor români în străinătate, aprobate prin HG nr. 94/2006",
+     "quote_english": "art. 23 para. (1) of the Methodological Norms for applying Law no. 248/2005 on the free movement of Romanian citizens abroad, approved by Government Decision no. 94/2006",
+     "title": "Furnizarea datelor din R.N.E.P.S.",
+     "url": "https://pasapoarte.mai.gov.ro/furnizarea-datelor-din-r-n-e-p-s/",
+     "value": "Law 248/2005 on free movement of Romanian citizens abroad and its implementing norms (HG 94/2006)"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "ro",
+     "published": "2026-08-28",
+     "publisher": "Ministerul Afacerilor Interne - Direcția Generală pentru Evidența Persoanelor",
+     "quote": "2.537.388 cărți electronice de identitate emise Actualizat: 28.08.2026",
+     "quote_english": "2,537,388 electronic identity cards issued. Updated: 28.08.2026",
+     "title": "Cartea electronică de identitate",
+     "url": "https://carteadeidentitate.gov.ro/",
+     "value": "2,537,388 electronic identity cards issued (updated 28 Aug 2026)"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registrul național de evidență a pașapoartelor simple (RNEPS) and CEI issuance records (National Register of Ordinary Passports; electronic ID card issuance)",
+   "operator": "Direcția Generală de Pașapoarte (passports); DGEP (identity cards)",
+   "research_note": "The CEI counter on carteadeidentitate.gov.ro is updated from time to time, so the quoted figure may change. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "ROeID este soluția Single Sign-On (SSO) a României pentru interacțiunile digitale ale cetățenilor cu administrația, prin care pot fi generate și gestionate identități digitale pentru toți cetățenii români.",
+     "quote_english": "ROeID is Romania's Single Sign-On (SSO) solution for citizens' digital interactions with the administration, through which digital identities can be generated and managed for all Romanian citizens.",
+     "title": "Acasă - ROeID",
+     "url": "https://roeid.ro/",
+     "value": "ROeID is Romania's Single Sign-On solution. It generates and manages digital identities for all Romanian citizens."
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "ROeID este livrabilul proiectului \"Platforma software centralizată pentru identificare digitală\", implementat de Autoritatea pentru Digitalizarea României.",
+     "quote_english": "ROeID is the deliverable of the project \"Centralised software platform for digital identification\", implemented by the Authority for the Digitalization of Romania.",
+     "title": "Acasă - ROeID",
+     "url": "https://roeid.ro/",
+     "value": "ROeID was implemented by the Authority for the Digitalization of Romania (ADR)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Ministerul Afacerilor Interne - Direcția Generală pentru Evidența Persoanelor",
+     "quote": "Cartea electronică de identitate (CEI) conține certificate emise gratuit, de către M.A.I., pentru: autentificare în sistemele informatice ale autorităților române",
+     "quote_english": "The electronic identity card (CEI) contains certificates issued free of charge by the MAI for: authentication in the information systems of Romanian authorities",
+     "title": "Despre | Cartea electronică de identitate",
+     "url": "https://carteadeidentitate.gov.ro/despre/",
+     "value": "The electronic ID card carries free MAI-issued certificates for authentication to Romanian authorities' systems"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "SITUE este utilizat pentru autentificarea naţională şi transfrontalieră a solicitanţilor în relaţia cu furnizorii de servicii de eguvernare",
+     "quote_english": "SITUE is used for national and cross-border authentication of applicants in relation to e-government service providers",
+     "title": "Platforme operate",
+     "url": "https://www.adr.gov.ro/platforme-operate",
+     "value": "SITUE, Romania's eIDAS node, is used for national and cross-border authentication to e-government services"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "unknown",
+   "holding_name": "ROeID – identitatea digitală (national SSO digital identity) and CEI authentication certificates",
+   "operator": "Autoritatea pentru Digitalizarea României (ROeID); Ministerul Afacerilor Interne (CEI certificates)",
+   "research_note": "No public source was found naming a specific legal act that establishes ROeID, or giving its user count. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "Searched ROeID (roeid.ro), ADR platform pages and MAI/CEI pages for any statement about authentication logs of ROeID, SITUE or ghiseul.ro. None was found. The only documented access logging is for SIS (N.SIS), which is a police system, not authentication to public services.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Autoritatea Electorală Permanentă",
+     "quote": "Registrul electoral este un sistem informatic național de înregistrare și actualizare a datelor de identificare a cetățenilor români cu drept de vot și a informațiilor privind arondarea acestora la secțiile de votare.",
+     "quote_english": "The Electoral Register is a national IT system for registering and updating the identification data of Romanian citizens with the right to vote and information on their assignment to polling stations.",
+     "title": "Notă de informare - Registrul electoral",
+     "url": "https://www.registrulelectoral.ro/upload/public/FormulareCereri/Nota%20de%20informare%20finala%20RE.pdf",
+     "value": "The Electoral Register is a national IT system. It records identification data of Romanian citizens with voting rights and their polling station assignment."
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Autoritatea Electorală Permanentă",
+     "quote": "Obligația legală de prelucrare este prevăzută la art. 33 și art. 100 alin. (1) din Legea nr. 208/2015 privind alegerea Senatului şi a Camerei Deputaţilor",
+     "quote_english": "The legal obligation to process is provided in art. 33 and art. 100 para. (1) of Law no. 208/2015 on the election of the Senate and the Chamber of Deputies",
+     "title": "Notă de informare - Registrul electoral",
+     "url": "https://www.registrulelectoral.ro/upload/public/FormulareCereri/Nota%20de%20informare%20finala%20RE.pdf",
+     "value": "Law 208/2015 (arts. 33 and 100(1)) on the election of the Senate and Chamber of Deputies and on the organisation of the Permanent Electoral Authority"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+     "quote": "selecteaza si prelucreaza din Registrul National de Evidenta a Persoanelor, datele cu caracter personal ale cetatenilor cu drept de vot, tipareste si pune la dispozitia primarilor listele electorale permanente",
+     "quote_english": "selects and processes from the National Register of Persons Records the personal data of citizens with the right to vote, prints and makes available to mayors the permanent electoral lists",
+     "title": "Atributii - Directia Generala pentru Evidenta Persoanelor",
+     "url": "https://depabd.mai.gov.ro/atributii.html",
+     "value": "DGEP extracts voters' data from the national population register (RNEP) and prints the permanent electoral lists for mayors"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registrul electoral (Electoral Register)",
+   "operator": "Autoritatea Electorală Permanentă (AEP)",
+   "research_note": "No public source found stating where this holding is hosted or who operates its infrastructure, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Ministerul Afacerilor Interne",
+     "quote": "asigură managementul Autorităţii Centrale de Certificare PKI (Infrastructura de Chei Publice) şi al Autorităţii de Certificare a Aparatului Central al MAI",
+     "quote_english": "manages the Central PKI (Public Key Infrastructure) Certification Authority and the Certification Authority of the MAI Central Apparatus",
+     "title": "Direcția Generală pentru Comunicații și Tehnologia Informației",
+     "url": "https://www.mai.gov.ro/despre-noi/organizare/aparat-central/directia-generala-pentru-comunicatii-si-tehnologia-informatiei/",
+     "value": "The MAI IT directorate (DGCTI) manages the Central PKI Certification Authority and the certification authority of the MAI central apparatus"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "Conform HG nr. 89/2020 privind organizarea şi funcţionarea Autorităţii pentru Digitalizarea României art 5 lit f) pct 11, ADR exercită atribuţiile de organism de supraveghere pentru prestatorii de servicii de încredere calificaţi stabiliţi pe teritoriul României",
+     "quote_english": "According to Government Decision no. 89/2020 on the organisation and functioning of the Authority for the Digitalization of Romania, art. 5 letter f) point 11, ADR exercises the powers of supervisory body for qualified trust service providers established in Romania",
+     "title": "Semnătura electronică, Trusted list",
+     "url": "https://www.adr.gov.ro/semnatura-electronica-trusted-list",
+     "value": "Under HG 89/2020 (art. 5 f) pt. 11), ADR is the supervisory body for qualified trust service providers established in Romania under eIDAS Regulation 910/2014"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Ministerul Afacerilor Interne - Direcția Generală pentru Evidența Persoanelor",
+     "quote": "Documentele semnate cu certificatul pentru semnătură electronică avansată emis de M.A.I. au aceeași valoare ca documentele semnate olograf.",
+     "quote_english": "Documents signed with the advanced electronic signature certificate issued by the MAI have the same value as handwritten-signed documents.",
+     "title": "Despre | Cartea electronică de identitate",
+     "url": "https://carteadeidentitate.gov.ro/despre/",
+     "value": "Documents signed with the MAI-issued advanced signature certificate on the CEI have the same value as handwritten signatures"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "Autoritatea Centrală de Certificare PKI a MAI (MAI Central PKI Certification Authority); CEI certificates; national Trusted List",
+   "operator": "Ministerul Afacerilor Interne (DGCTI) for government PKI; ADR as supervisory body for qualified trust services",
+   "research_note": "No public source found stating where this holding is hosted or who operates its infrastructure, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Inspectoratul General pentru Imigrări",
+     "quote": "Legea nr. 122/2006 privind azilul în Romania; OUG nr.194 din 12 decembrie 2002 privind regimul străinilor în România; OUG nr.102 din 14 iulie 2005 privind libera circulație pe teritoriul României a cetățenilor statelor membre ale Uniunii Europene",
+     "quote_english": "Law no. 122/2006 on asylum in Romania; Emergency Ordinance no. 194 of 12 December 2002 on the regime of foreigners in Romania; Emergency Ordinance no. 102 of 14 July 2005 on free movement in Romania of citizens of EU Member States",
+     "title": "Protecția datelor - IGI",
+     "url": "https://igi.mai.gov.ro/protectia-datelor/",
+     "value": "Processing rests on Law 122/2006 on asylum, OUG 194/2002 on the regime of foreigners, and OUG 102/2005 on free movement of EU citizens"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Inspectoratul General pentru Imigrări",
+     "quote": "Inspectoratul General pentru Imigrări este organizat și funcționează ca structură de specialitate a administrației publice centrale, instituție publică cu personalitate juridică, în subordinea Ministerului Afacerilor Interne",
+     "quote_english": "The General Inspectorate for Immigration is organised and operates as a specialised structure of central public administration, a public institution with legal personality, subordinated to the Ministry of Internal Affairs",
+     "title": "Informații generale - IGI",
+     "url": "https://igi.mai.gov.ro/informatii-generale/",
+     "value": "IGI is a specialised central public administration body under the Ministry of Internal Affairs"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "ro",
+     "published": "2026-09-22",
+     "publisher": "Inspectoratul General pentru Imigrări",
+     "quote": "Din totalul celor 16.764 de permise emise/reemise, 12.876 au fost acordate străinilor veniți în țara noastră pentru a lucra, pentru a studia sau pentru a se stabili pe termen lung.",
+     "quote_english": "Of the total 16,764 permits issued/re-issued, 12,876 were granted to foreigners who came to our country to work, study or settle long-term.",
+     "title": "Peste 16.700 de permise de ședere emise în luna august a acestui an",
+     "url": "https://igi.mai.gov.ro/peste-16-700-de-permise-de-sedere-emise-in-luna-august-a-acestui-an/",
+     "value": "16,764 residence permits issued or re-issued in August 2026. This is a monthly flow, not the total number of records."
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidența străinilor și a permiselor de ședere (records of foreigners, residence permits and asylum)",
+   "operator": "Inspectoratul General pentru Imigrări (IGI, MAI)",
+   "research_note": "IGI's site names no central database of foreigners and gives no total record count. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2024",
+     "publisher": "Agenția Națională de Administrare Fiscală",
+     "quote": "prin proiectul Big-Data care va fi implementat în curând, consolidând baza de date de la nivel central.",
+     "quote_english": "through the Big-Data project to be implemented soon, consolidating the central-level database.",
+     "title": "Plan Strategic ANAF 2025-2028",
+     "url": "https://static.anaf.ro/static/10/Anaf/Informatii_R/240917_%20Plan_%20StrategicANAF2025-2028.pdf",
+     "value": "ANAF is consolidating its central database through a Big-Data project"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2024",
+     "publisher": "Agenția Națională de Administrare Fiscală",
+     "quote": "Implementarea Sistemului național de facturare electronică (RO e-Factura) în relațiile business to governement (B2G) și business to business (B2B)",
+     "quote_english": "Implementation of the national electronic invoicing system (RO e-Factura) in business-to-government (B2G) and business-to-business (B2B) relations",
+     "title": "Plan Strategic ANAF 2025-2028",
+     "url": "https://static.anaf.ro/static/10/Anaf/Informatii_R/240917_%20Plan_%20StrategicANAF2025-2028.pdf",
+     "value": "ANAF implemented the national e-invoicing system RO e-Factura for B2G and B2B"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2021",
+     "publisher": "Agenția Națională de Administrare Fiscală",
+     "quote": "proiectul „SFERA”, care vizează actualizarea sistemelor informatice de administrare fiscală a contribuabililor și asigurarea interoperabilității acestora",
+     "quote_english": "the 'SFERA' project, which aims to update the IT systems for tax administration of taxpayers and ensure their interoperability",
+     "title": "Strategia Agenției Naționale de Administrare Fiscală 2021-2024",
+     "url": "https://static.anaf.ro/static/10/Anaf/Informatii_R/StrategiaANAF_2021-2024_republ_19052021.pdf",
+     "value": "The SFERA project updates ANAF's tax administration IT systems and connects them with other state systems"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemele informatice de administrare fiscală ANAF, baza de date centrală, Spațiul Privat Virtual (SPV), RO e-Factura (ANAF tax administration systems and central database)",
+   "operator": "Agenția Națională de Administrare Fiscală (ANAF)",
+   "research_note": "ANAF's legal-basis pages (fiscal procedure code, organisation regulation) were image-only scans or dynamic pages and could not be quoted. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "ro",
+     "published": "2021",
+     "publisher": "Agenția Națională de Administrare Fiscală",
+     "quote": "să aplicăm politicile şi reglementările în domeniul vamal, § să exercităm atribuţiile de autoritate vamală",
+     "quote_english": "to apply policies and regulations in the customs field, § to exercise the powers of customs authority",
+     "title": "Strategia Agenției Naționale de Administrare Fiscală 2021-2024",
+     "url": "https://static.anaf.ro/static/10/Anaf/Informatii_R/StrategiaANAF_2021-2024_republ_19052021.pdf",
+     "value": "ANAF's mission includes exercising the powers of customs authority and applying customs policy"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "legal_basis",
+     "language": "ro",
+     "published": "2021",
+     "publisher": "Agenția Națională de Administrare Fiscală",
+     "quote": "Simplificarea graduală a procedurilor vamale, conform prevederilor Codului Vamal al Uniunii.",
+     "quote_english": "Gradual simplification of customs procedures, in accordance with the Union Customs Code.",
+     "title": "Strategia Agenției Naționale de Administrare Fiscală 2021-2024",
+     "url": "https://static.anaf.ro/static/10/Anaf/Informatii_R/StrategiaANAF_2021-2024_republ_19052021.pdf",
+     "value": "Customs procedures follow the Union Customs Code"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemele vamale ANAF / Autoritatea Vamală Română (customs declaration and control systems, incl. EU ICS2 and EMCS national components)",
+   "operator": "Agenția Națională de Administrare Fiscală (customs authority functions, via Autoritatea Vamală Română)",
+   "research_note": "customs.ro returned HTTP 403 to automated requests, so no national customs system name or hosting statement could be quoted. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Casa Națională de Pensii Publice",
+     "quote": "Casa Națională de Pensii Publice (CNPP) este instituția publică de interes național care administrează sistemul public de pensii și sistemul de asigurare pentru accidente de muncă și boli profesionale.",
+     "quote_english": "The National House of Public Pensions (CNPP) is the public institution of national interest that administers the public pension system and the insurance system for work accidents and occupational diseases.",
+     "title": "Despre CNPP",
+     "url": "https://www.cnpp.ro/despre-cnpp/",
+     "value": "CNPP is the national public institution that administers the public pension system and occupational accident insurance"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "ro",
+     "publisher": "Casa Națională de Pensii Publice",
+     "quote": "CNPP gestionează anual drepturile pentru milioane de pensionari și persoane asigurate.",
+     "quote_english": "CNPP manages entitlements annually for millions of pensioners and insured persons.",
+     "title": "Despre CNPP",
+     "url": "https://www.cnpp.ro/despre-cnpp/",
+     "value": "CNPP manages entitlements for millions of pensioners and insured persons (no exact figure given)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Casa Națională de Pensii Publice",
+     "quote": "Asigurarea conform prevederilor art. 6 alin. (2) din Legea nr. 360/2023 Asigurarea retroactivă conform prevederilor art. 6 alin. (3) din Legea nr. 360/2023",
+     "quote_english": "Insurance under art. 6 para. (2) of Law no. 360/2023; retroactive insurance under art. 6 para. (3) of Law no. 360/2023",
+     "title": "Asigurarea în sistemul public de pensii",
+     "url": "https://www.cnpp.ro/activitati-cnpp/asigurarea-in-sistemul-public-de-pensii/",
+     "value": "Law 360/2023 on the public pension system"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemul public de pensii – evidența asiguraților și pensionarilor (public pension system records)",
+   "operator": "Casa Națională de Pensii Publice (CNPP) and county pension houses",
+   "research_note": "No public source found stating where this holding is hosted or who operates its infrastructure, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Casa Națională de Asigurări de Sănătate",
+     "quote": "SIUI Platforma Informatică a Asigurărilor de Sănătate Asiguraţi Despre CID Servicii online",
+     "quote_english": "SIUI Health Insurance IT Platform — Insured persons, About CID, Online services",
+     "title": "SIUI Platforma Informatică a Asigurărilor de Sănătate",
+     "url": "https://siui.casan.ro/",
+     "value": "SIUI is the health insurance IT platform, run by CNAS"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "SIUI – Sistemul Informatic Unic Integrat al asigurărilor de sănătate (Single Integrated IT System of health insurance)",
+   "operator": "Casa Națională de Asigurări de Sănătate (CNAS)",
+   "research_note": "cnas.ro returned HTTP 503 ('access limited') to automated requests, so the legal basis (Law 95/2006) could not be quoted from the operator. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2026-08-20",
+     "publisher": "Agenția Națională de Cadastru și Publicitate Imobiliară",
+     "quote": "În această etapă, reluarea funcționării vizează exclusiv sistemul integrat e-Terra.",
+     "quote_english": "At this stage, the resumption of operation concerns exclusively the integrated e-Terra system.",
+     "title": "ANCPI - Agentia Nationala de Cadastru si Publicitate Imobiliara",
+     "url": "https://www.ancpi.ro/",
+     "value": "e-Terra is ANCPI's integrated system. ANCPI reported restarting it in August 2026 after an outage."
+    },
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2026-08-20",
+     "publisher": "Agenția Națională de Cadastru și Publicitate Imobiliară",
+     "quote": "Celelalte platforme online gestionate de ANCPI – Registrul de Transcripțiuni și Inscripțiuni (RTI), MyEterra, Registrul proprietarilor, Titluri de proprietate și Geoportal – vor fi repuse în funcțiune etapizat",
+     "quote_english": "The other online platforms managed by ANCPI – the Register of Transcriptions and Inscriptions (RTI), MyEterra, the Owners' Register, Property Titles and the Geoportal – will be brought back into operation in stages",
+     "title": "ANCPI - Agentia Nationala de Cadastru si Publicitate Imobiliara",
+     "url": "https://www.ancpi.ro/",
+     "value": "ANCPI also runs the Register of Transcriptions and Inscriptions (RTI), MyEterra, the owners' register, property titles and the Geoportal"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemul integrat de cadastru și carte funciară e-Terra (integrated cadastre and land book system)",
+   "operator": "Agenția Națională de Cadastru și Publicitate Imobiliară (ANCPI)",
+   "research_note": "ANCPI's site currently shows only a service-restoration notice, so the legal basis (Law 7/1996) could not be quoted from a reachable page. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "Searched onrc.ro, myportal.onrc.ro and portal.onrc.ro (Oficiul Național al Registrului Comerțului). The site's WAF rejected every automated request ('Request Rejected'), and legislatie.just.ro and e-justice.europa.eu were also unreachable, so no verbatim quote could be obtained.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "The beneficial ownership register is expected to sit with ONRC (Law 129/2019). onrc.ro rejected all automated requests and legislatie.just.ro was unreachable, so no verifiable quote was obtained.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Direcția Generală de Pașapoarte (MAI)",
+     "quote": "Ordonanţa Guvernului nr. 83/2001 privind înfiinţarea, organizarea şi funcţionarea Direcției generale de pașapoarte, serviciilor publice comunitare de paşapoarte, Direcției generale permise de conducere și înmatriculări",
+     "quote_english": "Government Ordinance no. 83/2001 on the establishment, organisation and functioning of the General Directorate for Passports, community public passport services, and the General Directorate for Driving Licences and Registrations",
+     "title": "Legislație - Direcția Generală de Pașapoarte",
+     "url": "https://pasapoarte.mai.gov.ro/legislatie/",
+     "value": "Government Ordinance 83/2001 establishes the General Directorate for Driving Licences and Registrations and its county services"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Ministerul Afacerilor Interne",
+     "quote": "Direcţia Generală de Paşapoarte Direcţia Generală pentru Evidența Persoanelor Direcţia Generală Permise de Conducere și Înmatriculări",
+     "quote_english": "General Directorate for Passports; General Directorate for Persons Records; General Directorate for Driving Licences and Registrations",
+     "title": "Structuri în subordinea / în cadrul MAI",
+     "url": "https://www.mai.gov.ro/despre-noi/organizare/structuri-in-subordinea-in-cadrul-mai/",
+     "value": "DGPCI is a structure subordinated to the Ministry of Internal Affairs"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidența permiselor de conducere și a vehiculelor înmatriculate (driving licence and vehicle registration records)",
+   "operator": "Direcția Generală Permise de Conducere și Înmatriculări (DGPCI, MAI)",
+   "research_note": "drpciv.ro is a JavaScript-only application, so no register name or record count could be quoted. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției Române",
+     "quote": "Organizează, în condiţiile legii, cazierul judiciar pentru ţinerea evidenţei persoanelor fizice şi juridice condamnate ori împotriva cărora s-au luat alte măsuri cu caracter penal",
+     "quote_english": "Organises, under the law, the criminal record for keeping records of natural and legal persons convicted or against whom other criminal measures were taken",
+     "title": "Direcţia Cazier Judiciar, Statistică şi Evidenţe Operative",
+     "url": "https://politiaromana.ro/ro/politia-romana/unitati-centrale/directia-cazier-judiciar-statistica-si-evidenta-operativa",
+     "value": "The police Criminal Records directorate organises the criminal record of natural and legal persons who were convicted or subject to criminal measures"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției Române",
+     "quote": "Asigură îndeplinirea sarcinilor ce revin Direcţiei în calitate de autoritate centrală, conform Deciziei - Cadru 2009/315/JAI a Uniunii Europene",
+     "quote_english": "Ensures the tasks of the Directorate as central authority under EU Council Framework Decision 2009/315/JHA",
+     "title": "Direcţia Cazier Judiciar, Statistică şi Evidenţe Operative",
+     "url": "https://politiaromana.ro/ro/politia-romana/unitati-centrale/directia-cazier-judiciar-statistica-si-evidenta-operativa",
+     "value": "The directorate is the central authority under Council Framework Decision 2009/315/JHA on exchange of criminal record information"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2025-06-21",
+     "publisher": "Inspectoratul General al Poliției Române",
+     "quote": "au fost eliberate 933.058 certificate de cazier judiciar în format electronic.",
+     "quote_english": "933,058 criminal record certificates were issued in electronic format.",
+     "title": "Aproape un milion de certificate de cazier judiciar obținute online",
+     "url": "https://www.politiaromana.ro/ro/stiri-si-media/comunicate/aproape-un-milion-de-certificate-de-cazier-judiciar-obtinute-online",
+     "value": "933,058 criminal record certificates issued electronically via hub.mai.gov.ro and ghiseul.ro. This is a service figure, not the size of the register."
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Cazierul judiciar (criminal record register)",
+   "operator": "Inspectoratul General al Poliției Române – Direcția Cazier Judiciar, Statistică și Evidențe Operative",
+   "research_note": "The court case-file system (ECRIS) could not be verified: portal.just.ro and ecris.ro were unreachable, and csm1909.ro had no description of it. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției de Frontieră",
+     "quote": "În România s-a înființat Sistemul Informatic Naţional de Semnalări (SINS) care conţine semnalările de interes național şi de interes Schengen, emise de către autorităţile naţionale competente.",
+     "quote_english": "In Romania the National Alerts IT System (SINS) was established, containing alerts of national and Schengen interest issued by the competent national authorities.",
+     "title": "Sistemul de Informații Schengen - Poliția de Frontieră Română",
+     "url": "https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html",
+     "value": "Romania set up the National Alerts IT System (SINS). It holds alerts of national and Schengen interest issued by national authorities."
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției de Frontieră",
+     "quote": "este autoritatea publică centrală care gestionează şi răspunde de buna funcționare a SINS, de integritatea semnalărilor conținute în acesta",
+     "quote_english": "is the central public authority that manages and is responsible for the proper functioning of SINS and the integrity of the alerts it contains",
+     "title": "Sistemul de Informații Schengen - Poliția de Frontieră Română",
+     "url": "https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html",
+     "value": "The Ministry of Internal Affairs, through its specialised structure, is the central public authority that manages SINS. It is responsible for the system's functioning and the integrity of its alerts."
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției de Frontieră",
+     "quote": "Legea nr. 76/2023 privind organizarea și funcționarea Sistemului informatic național de semnalări și participarea României la Sistemul de informații Schengen",
+     "quote_english": "Law no. 76/2023 on the organisation and functioning of the National Alerts IT System and Romania's participation in the Schengen Information System",
+     "title": "Sistemul de Informații Schengen - Poliția de Frontieră Română",
+     "url": "https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html",
+     "value": "Law 76/2023 on the organisation and functioning of the national alerts IT system and Romania's participation in SIS"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției Române",
+     "quote": "Asigură realizarea, funcţionarea şi actualizarea permanentă a evidenţei cazierului judiciar, a evidenţelor operative şi a evidenţelor speciale ale Poliţiei Române",
+     "quote_english": "Ensures the creation, functioning and permanent updating of the criminal record, the operational records and the special records of the Romanian Police",
+     "title": "Direcţia Cazier Judiciar, Statistică şi Evidenţe Operative",
+     "url": "https://politiaromana.ro/ro/politia-romana/unitati-centrale/directia-cazier-judiciar-statistica-si-evidenta-operativa",
+     "value": "The police directorate also runs the Romanian Police's operational and special records"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemul Informatic Național de Semnalări (SINS) / N.SIS and police operational databases",
+   "operator": "Ministerul Afacerilor Interne; Inspectoratul General al Poliției Române",
+   "research_note": "No public source found stating where this holding is hosted or who operates its infrastructure, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2018-07-05",
+     "publisher": "Ministerul Afacerilor Interne",
+     "quote": "La data de 12 octombrie 2017 a fost adoptată Decizia Consiliului 2017/1908 prin care s-a acordat acces României și Bulgariei la Sistemul de Informații privind Vizele (VIS).",
+     "quote_english": "On 12 October 2017 Council Decision 2017/1908 was adopted, granting Romania and Bulgaria access to the Visa Information System (VIS).",
+     "title": "Comunicate de presa - Schengen Romania",
+     "url": "https://schengen.mai.gov.ro/index09.htm",
+     "value": "Council Decision 2017/1908 gave Romania access to the Visa Information System (VIS)"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2026-04-10",
+     "publisher": "Inspectoratul General al Poliției de Frontieră",
+     "quote": "Sistemul Entry/Exit a fost operaționalizat la nivel european Începând de astăzi, 10 aprilie a.c., Sistemul Entry/Exit (EES) a devenit operațional integral la nivelul întregii Uniuni Europene.",
+     "quote_english": "The Entry/Exit System was made operational at European level. As of today, 10 April, the Entry/Exit System (EES) became fully operational across the entire European Union.",
+     "title": "Entry/Exit System (EES)",
+     "url": "https://www.politiadefrontiera.ro/ro/main/n-entryexit-system-ees-246/",
+     "value": "The Entry/Exit System became fully operational across the EU on 10 April 2026. The Border Police applies it at Romanian borders."
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției de Frontieră",
+     "quote": "In articolul 1 din O.U.G. nr. 104/2001 privind organizarea si functionarea Politiei de Frontiera Romane se statueaza atat atributiile generale, cat si competenta generala a acestei institutii",
+     "quote_english": "Article 1 of Emergency Ordinance no. 104/2001 on the organisation and functioning of the Romanian Border Police sets out both the general duties and the general competence of this institution",
+     "title": "Cadrul legal - Poliția de Frontieră Română",
+     "url": "https://www.politiadefrontiera.ro/ro/main/pg-cadrul-legal-26.html",
+     "value": "OUG 104/2001 on the organisation and functioning of the Romanian Border Police"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Ministerul Afacerilor Interne",
+     "quote": "Arhivele Naţionale Academia de Poliţie „Alexandru Ioan Cuza” Centrul Naţional SIS Casa de Pensii Sectorialã a Ministerului Afacerilor Interne",
+     "quote_english": "National Archives; 'Alexandru Ioan Cuza' Police Academy; National SIS Centre; Sectoral Pension House of the Ministry of Internal Affairs",
+     "title": "Structuri în subordinea / în cadrul MAI",
+     "url": "https://www.mai.gov.ro/despre-noi/organizare/structuri-in-subordinea-in-cadrul-mai/",
+     "value": "Centrul Național SIS is a structure within, or subordinated to, the Ministry of Internal Affairs"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "N.SIS/SINS, national VIS access and EES border records (national parts of Schengen systems)",
+   "operator": "Inspectoratul General al Poliției de Frontieră; Ministerul Afacerilor Interne (Centrul Național SIS)",
+   "research_note": "No public source found stating where this holding is hosted or who operates its infrastructure, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției Române",
+     "quote": "administrarea informațiile prelucrate prin intermediul Registrul Naţional al Armelor și eARM.",
+     "quote_english": "administration of the information processed through the National Firearms Register and eARM.",
+     "title": "Direcţia Arme, Explozivi şi Substanţe Periculoase",
+     "url": "https://politiaromana.ro/ro/politia-romana/unitati-centrale/directia-arme-explozivi-si-substante-periculoase",
+     "value": "The Arms directorate administers the information processed through the National Firearms Register and eARM"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției Române",
+     "quote": "Regimul juridic al armelor și al munițiilor este reglementat de Legea nr. 295/2004 republicată în Monitorul Oficial nr. 425 din 10 iunie 2014",
+     "quote_english": "The legal regime of arms and ammunition is regulated by Law no. 295/2004, republished in Official Gazette no. 425 of 10 June 2014",
+     "title": "Serviciul Arme",
+     "url": "https://politiaromana.ro/ro/structura-politiei-romane/unitati-centrale/directia-arme-explozivi-si-substante-periculoase/serviciul-arme",
+     "value": "Law 295/2004 on the regime of arms and ammunition (republished 2014), with implementing norms in HG 11/2018"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției Române",
+     "quote": "Autoritatea competentă care exercită controlul privind deţinerea, portul şi folosirea armelor, pieselor şi muniţiilor, precum şi cu privire la operaţiunile cu arme şi muniţii este Inspectoratul General al Poliției Române.",
+     "quote_english": "The competent authority exercising control over the possession, carrying and use of arms, parts and ammunition, and over operations with arms and ammunition, is the General Inspectorate of the Romanian Police.",
+     "title": "Serviciul Arme",
+     "url": "https://politiaromana.ro/ro/structura-politiei-romane/unitati-centrale/directia-arme-explozivi-si-substante-periculoase/serviciul-arme",
+     "value": "The General Inspectorate of Romanian Police is the competent authority controlling possession and use of arms"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registrul Național al Armelor și eARM (National Firearms Register)",
+   "operator": "Inspectoratul General al Poliției Române – Direcția Arme, Explozivi și Substanțe Periculoase",
+   "research_note": "No public source found stating where this holding is hosted or who operates its infrastructure, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Inspectoratul General pentru Imigrări",
+     "quote": "publicată în Monitorul Oficial al României, Partea I, nr. 461 din 9 iulie 2012.",
+     "quote_english": "published in the Official Gazette of Romania, Part I, no. 461 of 9 July 2012.",
+     "title": "Informații generale - IGI",
+     "url": "https://igi.mai.gov.ro/informatii-generale/",
+     "value": "Laws and ordinances are published in Monitorul Oficial al României, Partea I"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Monitorul Oficial al României, Partea I (Official Gazette of Romania, Part I)",
+   "operator": "",
+   "research_note": "monitoruloficial.ro and legislatie.just.ro blocked automated requests (403 or connection reset). The publisher (Regia Autonomă Monitorul Oficial) and its legal basis therefore could not be quoted from a primary page. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Ministerul Finanțelor",
+     "quote": "Ați accesat Portalul FOREXEBUG al Ministerului Finanțelor! Bun venit! Pentru accesarea funcționalităților Punctului Unic de Acces, este necesară autentificarea.",
+     "quote_english": "You have accessed the FOREXEBUG Portal of the Ministry of Finance! Welcome! Authentication is required to access the functions of the Single Access Point.",
+     "title": "Punct unic de acces - ForexePublic - MF",
+     "url": "https://forexepublic.mfinante.gov.ro/",
+     "value": "FOREXEBUG is the Ministry of Finance's national reporting portal for public entities"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemul național de raportare FOREXEBUG (national budget execution and reporting system)",
+   "operator": "Ministerul Finanțelor",
+   "research_note": "The FOREXEBUG portal's legal-act pages load dynamically and could not be quoted, and no description of the State Treasury system could be reached. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2026",
+     "publisher": "Agenția Națională a Funcționarilor Publici",
+     "quote": "a fost efectuat un număr de 389.708 operațiuni privind gestionarea funcțiilor și funcționarilor publici prin sistemul integrat de management al funcției și funcționarilor publici",
+     "quote_english": "389,708 operations concerning the management of public posts and civil servants were performed through the integrated management system for the civil service and civil servants",
+     "title": "Raport de activitate ANFP 2025",
+     "url": "https://www.anfp.gov.ro/media/fepnqk44/raport-activitate-anfp_2025_final.pdf",
+     "value": "In 2025, ANFP's integrated civil-service management system processed 389,708 operations on public posts and civil servants"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2026",
+     "publisher": "Agenția Națională a Funcționarilor Publici",
+     "quote": "Sistemului integrat de management al serviciilor de resurse umane pentru administrația publică centrală - SIMRU",
+     "quote_english": "the Integrated management system of human resources services for central public administration - SIMRU",
+     "title": "Raport de activitate ANFP 2025",
+     "url": "https://www.anfp.gov.ro/media/fepnqk44/raport-activitate-anfp_2025_final.pdf",
+     "value": "SIMRU: integrated HR management services system for central public administration"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemul integrat de management al funcției publice și funcționarilor publici; SIMRU (civil service personnel management system)",
+   "operator": "Agenția Națională a Funcționarilor Publici (ANFP)",
+   "research_note": "This covers civil-service personnel records only. No source was found for armed forces payroll or for a central payroll system. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Autoritatea Electorală Permanentă",
+     "quote": "care are misiunea de a asigura organizarea şi desfăşurarea alegerilor şi a referendumurilor, precum şi finanţarea partidelor politice şi a campaniilor electorale",
+     "quote_english": "whose mission is to ensure the organisation and conduct of elections and referendums, as well as the financing of political parties and electoral campaigns",
+     "title": "Notă de informare - Registrul electoral",
+     "url": "https://www.registrulelectoral.ro/upload/public/FormulareCereri/Nota%20de%20informare%20finala%20RE.pdf",
+     "value": "AEP's mission is to organise and run elections and referendums and to handle the financing of parties and campaigns"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemele informatice electorale ale AEP (election management IT systems)",
+   "operator": "Autoritatea Electorală Permanentă (AEP)",
+   "research_note": "roaep.ro sits behind a reCAPTCHA challenge, and the IT provider for vote counting could not be verified. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Banca Națională a României",
+     "quote": "Plăți Sisteme operate de BNR ReGIS SaFIR TARGET-România Guvernanță Reziliență cibernetică",
+     "quote_english": "Payments — Systems operated by the NBR: ReGIS, SaFIR, TARGET-România — Governance — Cyber resilience",
+     "title": "BNR Infrastructuri ale pieței financiare operate de BNR",
+     "url": "https://www.bnr.ro/2152-sisteme-operate-de-bnr",
+     "value": "BNR operates the financial market infrastructures ReGIS, SaFIR and TARGET-România"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "holding_name": "Infrastructuri ale pieței financiare operate de BNR: ReGIS, SaFIR, TARGET-România (RTGS, securities settlement)",
+   "operator": "Banca Națională a României (BNR)",
+   "research_note": "BNR page bodies are rendered in the browser, so only the navigation listing the systems BNR operates could be quoted. The legal basis (Law 312/2004) could not be quoted from a reachable page. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "Searched mapn.ro and linked MApN sites for descriptions of command-and-control or defence data systems and their hosting. Nothing public was found, which is expected for classified systems.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Serviciul Român de Informații",
+     "quote": "Legea nr. 51/1991 privind securitatea naţională a României; Legea nr. 14/1992 privind organizarea şi funcţionarea Serviciului Român de Informaţii",
+     "quote_english": "Law no. 51/1991 on the national security of Romania; Law no. 14/1992 on the organisation and functioning of the Romanian Intelligence Service",
+     "title": "Legislaţie - Serviciul Român de Informații",
+     "url": "https://www.sri.ro/legislatie",
+     "value": "SRI's activity is governed mainly by Law 51/1991 on national security and Law 14/1992 on the organisation and functioning of SRI"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Serviciul Român de Informații",
+     "quote": "Serviciul Român de Informații este autoritate competentă la nivel național în domeniul cyberintelligence.",
+     "quote_english": "The Romanian Intelligence Service is the national competent authority in the field of cyber intelligence.",
+     "title": "Cyber intelligence - Serviciul Român de Informații",
+     "url": "https://www.sri.ro/cyberint",
+     "value": "Under Law 58/2023, SRI is the national competent authority for cyber intelligence, acting through the National Cyberint Centre"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Holdings of the Serviciul Român de Informații (Romanian Intelligence Service)",
+   "operator": "Serviciul Român de Informații (SRI)",
+   "research_note": "The content of intelligence holdings is classified. No public source states where they are hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Ministerul Afacerilor Interne",
+     "quote": "coordonează activitatea de implementare a subsistemelor Platformei Comune TETRA din responsabilitatea MAI",
+     "quote_english": "coordinates the implementation of the subsystems of the Common TETRA Platform under MAI responsibility",
+     "title": "Direcția Generală pentru Comunicații și Tehnologia Informației",
+     "url": "https://www.mai.gov.ro/despre-noi/organizare/aparat-central/directia-generala-pentru-comunicatii-si-tehnologia-informatiei/",
+     "value": "MAI's IT and communications directorate coordinates the MAI subsystems of the common TETRA platform"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Ministerul Afacerilor Interne",
+     "quote": "asigură managementul Reţelei de Comunicaţii Integrate Voce-Date-Video a MAI",
+     "quote_english": "manages the MAI Integrated Voice-Data-Video Communications Network",
+     "title": "Direcția Generală pentru Comunicații și Tehnologia Informației",
+     "url": "https://www.mai.gov.ro/despre-noi/organizare/aparat-central/directia-generala-pentru-comunicatii-si-tehnologia-informatiei/",
+     "value": "DGCTI manages the MAI integrated voice-data-video communications network and its mobile radio systems"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "Platforma Comună TETRA și rețelele de radiocomunicații ale MAI (public-safety TETRA network)",
+   "operator": "Ministerul Afacerilor Interne (DGCTI)",
+   "research_note": "The 112 emergency call system is run by the Special Telecommunications Service (STS), but sts.ro and 112.ro were unreachable, so it could not be quoted. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Inspectoratul General pentru Situații de Urgență",
+     "quote": "În calitate de integrator al Sistemului Național de Management al Situațiilor de Urgență, creat în 2004, IGSU coordonează acțiunile instituțiilor implicate în managementul situațiilor de urgență",
+     "quote_english": "As integrator of the National Emergency Situations Management System, created in 2004, IGSU coordinates the actions of the institutions involved in emergency management",
+     "title": "Atribuții și istoric - IGSU",
+     "url": "https://www.igsu.ro/atributii-si-istoric",
+     "value": "IGSU integrates the National Emergency Situations Management System, created in 2004, and coordinates the institutions involved"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Inspectoratul General pentru Situații de Urgență",
+     "quote": "Ordonanţă de Urgenţă nr.21/2004 privind Sistemul Naţional de Management al Situaţiilor de Urgenţă",
+     "quote_english": "Emergency Ordinance no. 21/2004 on the National Emergency Situations Management System",
+     "title": "Atribuții și istoric - IGSU",
+     "url": "https://www.igsu.ro/atributii-si-istoric",
+     "value": "OUG 21/2004 on the National Emergency Situations Management System"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemul Național de Management al Situațiilor de Urgență (National Emergency Situations Management System)",
+   "operator": "Inspectoratul General pentru Situații de Urgență (IGSU)",
+   "research_note": "RO-ALERT and dsu.mai.gov.ro could not be reached. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "C.N.T.E.E. Transelectrica S.A.",
+     "quote": "Transelectrica SA are sarcina de a mentine în permanenta functionarea sistemului electroenergetic national în conditii de siguranta",
+     "quote_english": "Transelectrica SA is tasked with permanently maintaining the operation of the national power system in safe conditions",
+     "title": "Operator de sistem - Transelectrica",
+     "url": "https://www.transelectrica.ro/ro/web/tel/operator-de-sistem",
+     "value": "Transelectrica is responsible for keeping the national power system running safely at all times"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "C.N.T.E.E. Transelectrica S.A.",
+     "quote": "Conducerea operativa a SEN se asigură de: - Dispeceratul Energetic Naţional - 5 Dispecerate Teritoriale : Bucureşti, Bacău, Cluj, Craiova, Timişoara.",
+     "quote_english": "Operational control of the national power system (SEN) is ensured by: the National Energy Dispatch Centre and 5 territorial dispatch centres: Bucharest, Bacău, Cluj, Craiova, Timișoara.",
+     "title": "Operator de sistem - Transelectrica",
+     "url": "https://www.transelectrica.ro/ro/web/tel/operator-de-sistem",
+     "value": "Operational control of the national power system is ensured by the National Energy Dispatch and five territorial dispatch centres"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Dispeceratul Energetic Național și dispeceratele teritoriale (national grid dispatch)",
+   "operator": "C.N.T.E.E. Transelectrica S.A. (transmission system operator)",
+   "research_note": "No public source was found naming the SCADA/EMS vendor or where it is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "ro",
+     "publisher": "Administrația Națională Apele Române",
+     "quote": "“WATMAN – Sistemul Informatic pentru Managementul Integrat al Apelor – Etapa I” este un proiect care are ca obiectiv final protejarea populației",
+     "quote_english": "'WATMAN – IT System for Integrated Water Management – Stage I' is a project whose final objective is protecting the population",
+     "title": "WATMAN - Administrația Națională Apele Române",
+     "url": "https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/",
+     "value": "WATMAN is the IT system for integrated water management, aimed at flood prevention"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Administrația Națională Apele Române",
+     "quote": "Beneficiarul proiectului este ADMINISTRAȚIA NAȚIONALĂ ”APELE ROMÂNE”. Investiția totală este de 63 milioane de euro",
+     "quote_english": "The project beneficiary is the NATIONAL ADMINISTRATION 'ROMANIAN WATERS'. The total investment is EUR 63 million",
+     "title": "WATMAN - Administrația Națională Apele Române",
+     "url": "https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/",
+     "value": "The WATMAN project beneficiary is the National Administration Romanian Waters (total investment EUR 63 million)"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "WATMAN – Sistemul Informatic pentru Managementul Integrat al Apelor (integrated water management IT system)",
+   "operator": "Administrația Națională „Apele Române”",
+   "research_note": "No public source found stating where this holding is hosted or who operates its infrastructure, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "CNAS runs the electronic health record (Dosarul Electronic de Sănătate), but cnas.ro (HTTP 503) and des.casan.ro were unreachable and ms.ro pages had no description. No verifiable quote was obtained.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "Searched insp.gov.ro and cnscbt.ro (unreachable or 403) and ms.ro. Only the INSP statistics centre (cnsisp.insp.gov.ro) was reachable, and it describes health statistics, not a surveillance or vaccination register.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2026-07-30",
+     "publisher": "Ministerul Educației și Cercetării",
+     "quote": "Sistemul nou creat va integra datele din platformele existente (precum SIIIR, PMIPN, Edusal etc.) și va reflecta structura administrativă a învățământului",
+     "quote_english": "The newly created system will integrate data from existing platforms (such as SIIIR, PMIPN, Edusal etc.) and will reflect the administrative structure of education",
+     "title": "Sistem integrat de management al informațiilor în educație",
+     "url": "https://www.edu.ro/proiect_sistem_integrat_management_informatii_educationale",
+     "value": "The new integrated system will bring together data from existing platforms such as SIIIR, PMIPN and Edusal"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2026-07-30",
+     "publisher": "Ministerul Educației și Cercetării",
+     "quote": "include sub-module pentru gestionarea întregului parcurs al elevului, de la înscrierea în sistem până la absolvire",
+     "quote_english": "includes sub-modules for managing the pupil's entire path, from enrolment in the system to graduation",
+     "title": "Sistem integrat de management al informațiilor în educație",
+     "url": "https://www.edu.ro/proiect_sistem_integrat_management_informatii_educationale",
+     "value": "Student management modules cover each pupil's path from enrolment to graduation"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "SIIIR and the new Sistem integrat de management al informațiilor în educație (SIMIE) (education information systems)",
+   "operator": "Ministerul Educației și Cercetării",
+   "research_note": "The university diploma register (RMU, rmu.edu.ro) and SIIIR were unreachable. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "insse.ro (INS) and recensamantromania.ro were unreachable from this environment, so there is no verifiable quote on microdata or census file holdings.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "ro",
+     "published": "2026-08-20",
+     "publisher": "Agenția Națională de Cadastru și Publicitate Imobiliară",
+     "quote": "Celelalte platforme online gestionate de ANCPI – Registrul de Transcripțiuni și Inscripțiuni (RTI), MyEterra, Registrul proprietarilor, Titluri de proprietate și Geoportal – vor fi repuse în funcțiune etapizat",
+     "quote_english": "The other online platforms managed by ANCPI – the Register of Transcriptions and Inscriptions (RTI), MyEterra, the Owners' Register, Property Titles and the Geoportal – will be brought back into operation in stages",
+     "title": "ANCPI - Agentia Nationala de Cadastru si Publicitate Imobiliara",
+     "url": "https://www.ancpi.ro/",
+     "value": "The ANCPI Geoportal is one of the online platforms ANCPI manages"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Geoportal ANCPI (national cadastral/geospatial portal)",
+   "operator": "Agenția Națională de Cadastru și Publicitate Imobiliară (ANCPI)",
+   "research_note": "No source was found for a national address register or for topographic base holdings. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Ministerul Afacerilor Interne",
+     "quote": "Direcţia Generală Permise de Conducere și Înmatriculări Agenţia Naţională Împotriva Traficului de Persoane Arhivele Naţionale",
+     "quote_english": "General Directorate for Driving Licences and Registrations; National Agency against Trafficking in Persons; National Archives",
+     "title": "Structuri în subordinea / în cadrul MAI",
+     "url": "https://www.mai.gov.ro/despre-noi/organizare/structuri-in-subordinea-in-cadrul-mai/",
+     "value": "The National Archives are a structure subordinated to the Ministry of Internal Affairs"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "ro",
+     "publisher": "Autoritatea pentru Digitalizarea României",
+     "quote": "Legea nr. 135 din 15 mai 2007 privind arhivarea documentelor electronice Ordinului nr. 990/07.04.2025 din domeniul arhivării electronice",
+     "quote_english": "Law no. 135 of 15 May 2007 on the archiving of electronic documents; Order no. 990/07.04.2025 on electronic archiving",
+     "title": "Centre de date. Arhivare electronică",
+     "url": "https://www.adr.gov.ro/centre-de-date-arhivare-electronica",
+     "value": "Law 135/2007 on the archiving of electronic documents regulates electronic archive administrators"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "ro",
+     "publisher": "Inspectoratul General al Poliției Române",
+     "quote": "Direcția Generală Permise de Conducere și Înmatriculări, Arhivele Naționale ale României, Casa de Pensii Sectorială a Ministerului Afacerilor Interne",
+     "quote_english": "General Directorate for Driving Licences and Registrations, the National Archives of Romania, the Sectoral Pension House of the Ministry of Internal Affairs",
+     "title": "MAI Digital",
+     "url": "https://politiaromana.ro/ro/informatii-generale/proiecte/mai-digital",
+     "value": "The National Archives are a partner in the 'MAI Digital' project, which digitalises MAI public services"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Arhivele Naționale ale României (National Archives)",
+   "operator": "Arhivele Naționale (under the Ministry of Internal Affairs)",
+   "research_note": "arhivelenationale.ro was unreachable, and no figure for the volume of digital archive holdings was found. No public source states where this holding is hosted, so foreign_dependency is left unknown (not inferred).",
+   "status": "held"
+  }
+ ],
+ "iso": "RO"
+}

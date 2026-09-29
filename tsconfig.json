@@ -1,0 +1,14 @@
+{
+  "//": "Type-checks the Vercel Functions in api/ against the real SDK (DECISIONS.md #78). The web app has its own tsconfig in web/.",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "lib": ["ES2022", "DOM"]
+  },
+  "include": ["api/**/*.ts"]
+}

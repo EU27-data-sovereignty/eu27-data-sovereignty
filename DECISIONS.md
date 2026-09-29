@@ -1463,3 +1463,48 @@ states are currently *Not demonstrated*, Low confidence, full range.
 *Would change if:* a dimension proves unmeasurable across most states (it is then dropped from the rule,
 not guessed), or the groups start being quoted without their confidence, in which case the ranking is
 withdrawn as #59 provides.
+
+### 78. /ask answers questions from the sourced corpus only, through the Anthropic API, storing nothing
+**Decision.** 2026-09-29. `/ask` lets anyone ask about data sovereignty in the EU. A Vercel Function
+(`api/ask.ts`, logic in `api/_ask-core.ts`) sends the question to the Anthropic API with the model
+`claude-opus-5`, adaptive thinking at effort `medium`, `max_tokens` 2000, server-side refusal fallbacks
+(`fallbacks: "default"`), and one set of documents: `api/_corpus.json`, built by `model/ask_corpus.py`
+from the content model, one block per sourced fact or explicit gap, with citations enabled. Every
+citation maps back to claim ids, which the page resolves to quote, URL, hash and archived copy. The
+system prompt and corpus are cached (1-hour TTL); the question comes last. Questions are single-turn,
+at most 500 characters, and never logged or stored by this project. Spending is capped by a dedicated
+Anthropic workspace with a monthly spend limit, plus a per-IP rate limit in the Vercel Firewall.
+
+**Problem.** The author wants anyone to be able to ask about EU data sovereignty. A chatbot that answers
+from general knowledge would say things this project cannot source, contradicting #75, and a public
+endpoint that calls a paid API needs a hard cost ceiling. Visitors' questions are other people's data, so
+the privacy policy (§2 of `ai-and-external-services.md`) requires a decision naming the processor and
+what it receives.
+
+**Alternatives considered.**
+- **The whole corpus in context, with citations and caching (chosen).** About 80k tokens today, well
+  inside the 1M context, so every answer can draw on everything and cite it; caching makes repeat
+  questions cheap.
+- **Retrieval with a vector database.** *Why not:* more parts, a new processor, and a retrieval step that
+  can miss the relevant fact; no gain while the corpus fits in context.
+- **Answer from general knowledge as well, labelled.** *Why not:* the author chose sourced-only; mixing
+  checked and unchecked statements on one page is what #75 forbids.
+- **A daily spend counter in a data store (e.g. Upstash).** *Why not:* a new store that would hold
+  visitor identifiers; a provider-side workspace limit is a harder ceiling with no data kept by us.
+- **Log questions to learn what people ask.** *Why not:* the author chose to store nothing; question
+  text can contain personal data.
+- **Claude Sonnet 5 or Opus 5.5.** *Why not:* the author chose Opus 5 for answer quality.
+
+**Closes off.** Answers that go beyond the verified findings; conversation history (each question
+stands alone); any server-side record of what was asked.
+
+**Verified:** 2026-09-29. `web/src/__tests__/ask-core.test.ts` (7 tests: validation, request shape,
+citation-to-claim mapping, error mapping, the question is never logged); `tests/test_ask_corpus.py`
+(every corpus claim resolves to a supported citation; every fact the site shows is in the corpus);
+Playwright `/ask` tests with a recorded stream, and axe on `/ask`. `vercel build` emits
+`.vercel/output/functions/api/ask.func`; the built handler returns 400 for empty and over-long questions
+and a readable error without a key. **Live answers: NOT YET** — waiting for the API key and the eval.
+
+*Would change if:* the corpus outgrows the context window (then retrieval), costs exceed the workspace
+limit in normal use (then a cheaper model, by the author's decision), or a legal or privacy review
+requires a different processor.

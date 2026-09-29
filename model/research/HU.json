@@ -1,0 +1,2141 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2017",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Kormányzati Adatközpont: a kormányzat, a közigazgatás és a közszolgáltatások számára stabil és biztonságos informatikai infrastruktúra környezetet biztosító, felhő alapú szolgáltatások nyújtására képes központi informatikai infrastruktúrát magába foglaló, geo-redundánsan működő géptermek;",
+     "quote_english": "Government Data Centre: geo-redundant server rooms comprising central IT infrastructure capable of cloud services, providing a stable and secure environment for government, public administration and public services",
+     "title": "467/2017. (XII. 28.) Korm. rendelet a Kormányzati Adatközpont működéséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1700467.KOR",
+     "value": "Government Data Centre: geo-redundant server rooms providing central cloud-capable IT infrastructure for government"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2017",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a NISZ Nemzeti Infokommunikációs Szolgáltató Zártkörűen Működő Részvénytársaság (a továbbiakban: központi szolgáltató) útján működteti a Kormányzati Adatközpontot",
+     "quote_english": "operates the Government Data Centre through NISZ Zrt. as central provider",
+     "title": "467/2017. (XII. 28.) Korm. rendelet a Kormányzati Adatközpont működéséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1700467.KOR",
+     "value": "Operated by the minister through NISZ Zrt. as central provider"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2017",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a NISZ Nemzeti Infokommunikációs Szolgáltató Zártkörűen Működő Részvénytársaság által üzemeltetett, számítási-, és tárolókapacitást nyújtó, felhő technológián alapuló informatikai infrastruktúra szolgáltatások összessége;",
+     "quote_english": "the set of cloud-based IT infrastructure services providing compute and storage capacity, operated by NISZ Zrt.",
+     "title": "467/2017. (XII. 28.) Korm. rendelet a Kormányzati Adatközpont működéséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1700467.KOR",
+     "value": "Government Decree 467/2017; the Government Cloud is operated by NISZ"
+    }
+   ],
+   "holding_name": "Kormányzati Adatközpont (KAK) and Kormányzati Felhő (Government Data Centre / Government Cloud)",
+   "suggested_class": "government_data_centre",
+   "why_critical": "Shared geo-redundant state data centre and cloud that registers such as the company register are required to use; its operator (NISZ Zrt.) is a single point of dependency for many holdings."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2024",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a személyiadat- és lakcímnyilvántartásért felelős minisztert, amely szolgáltatáshoz kapcsolódó alkalmazásfejlesztési, alkalmazásüzemeltetési feladatok tekintetében az IdomSoft Zrt.-t, az infrastruktúraüzemeltetési feladatok tekintetében a NISZ Zrt.-t,",
+     "quote_english": "the minister responsible for the SZL, with IdomSoft Zrt. for application development and operation and NISZ Zrt. for infrastructure operation",
+     "title": "320/2024. (XI. 6.) Korm. rendelet a digitális állam megvalósításához kapcsolódó egyes szervezetek kijelöléséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2400320.KOR",
+     "value": "Keeper: minister responsible for the SZL; IdomSoft (applications) and NISZ (infrastructure) operate it"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "12. a személyazonosító jel helyébe lépő azonosítási módokról és az azonosító kódok használatáról szóló 1996. évi XX. törvény szerinti összerendelési nyilvántartást vezető szervként,",
+     "quote_english": "12. as the body keeping the linking register under Act XX of 1996 on identification methods replacing the personal identification number",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "Act XX of 1996 on identification methods replacing the personal identification number; minister designated as keeping body"
+    }
+   ],
+   "holding_name": "Összerendelési nyilvántartás (identifier-linking register under Act XX of 1996)",
+   "suggested_class": "identifier_linking_register",
+   "why_critical": "Hungary uses sector-specific identifiers instead of a universal PIN; this register links them, so cross-register data exchange depends on it."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2024",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "12. a központi kormányzati szolgáltatás busz szolgáltatás vonatkozásában az IdomSoft Zrt.-t,",
+     "quote_english": "12. regarding the central government service bus service, IdomSoft Zrt.",
+     "title": "320/2024. (XI. 6.) Korm. rendelet a digitális állam megvalósításához kapcsolódó egyes szervezetek kijelöléséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2400320.KOR",
+     "value": "IdomSoft Zrt. designated provider of the central government service bus"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Központi Kormányzati Szolgáltatás Busz A szervezetek számára lehetővé teszi, hogy a jogszabályokban meghatározott adateléréseket, szolgáltatásokat egy csatlakozási ponton érjék el.",
+     "quote_english": "Central Government Service Bus: enables organisations to reach legally defined data access and services through a single connection point.",
+     "title": "Termékek | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/termekek",
+     "value": "KKSZB lets organisations reach statutory data access and services through one connection point"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Leválunk a NISZ-ről Ezzel az IdomSoft közvetlen állami tulajdonba és közvetlenül a Digitális Magyarország Ügynökség irányítása alá kerül.",
+     "quote_english": "We separate from NISZ. With this IdomSoft comes into direct state ownership and directly under the control of the Digital Hungary Agency.",
+     "title": "Történetünk | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/rolunk/tortenetunk",
+     "value": "IdomSoft Zrt. has been directly state-owned and under the Digital Hungary Agency since 1 July 2024"
+    }
+   ],
+   "holding_name": "Központi Kormányzati Szolgáltatás Busz (KKSZB, central government service bus)",
+   "suggested_class": "government_service_bus",
+   "why_critical": "Single connection point through which statutory inter-register data access flows; outage or compromise disrupts data exchange across government."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2024",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "11. a 7. § szerinti tárhelyekhez kapcsolódó biztonságos kézbesítési szolgáltatás vonatkozásában az IdomSoft Zrt.-t,",
+     "quote_english": "11. regarding the secure delivery service linked to storage accounts, IdomSoft Zrt.",
+     "title": "320/2024. (XI. 6.) Korm. rendelet a digitális állam megvalósításához kapcsolódó egyes szervezetek kijelöléséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2400320.KOR",
+     "value": "IdomSoft Zrt. designated for secure delivery linked to storage accounts"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Tárhely és biztonságos kézbesítés Állampolgári, céges, hivatali tárhely szolgáltatás. Postafiók, amin keresztül az állam elektronikusan kommunikál a felhasználókkal.",
+     "quote_english": "Storage and secure delivery: citizen, company and office storage service. Mailbox through which the state communicates electronically with users.",
+     "title": "Termékek | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/termekek",
+     "value": "Citizen, company and office storage: the mailbox through which the state communicates electronically"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2013",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A választási iroda a határozatát vagy végzését (a továbbiakban együtt: döntés) a kérelmező – nem kérelemre indult eljárásban az érintett – Dáptv. 46. § (5) bekezdése szerinti tárhelyére történő megküldéssel közli.",
+     "quote_english": "The election office communicates its decision by sending it to the applicant's storage under Dáptv. s.46(5).",
+     "title": "2013. évi XXXVI. törvény a választási eljárásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1300036.TV",
+     "value": "Election offices deliver decisions to the Dáptv. storage account"
+    }
+   ],
+   "holding_name": "Tárhely / biztonságos kézbesítési szolgáltatás (official e-delivery storage for citizens, companies, offices)",
+   "suggested_class": "secure_delivery_mailbox",
+   "why_critical": "The legal delivery channel for official decisions (e.g. election offices deliver decisions to the Dáptv. storage); holds the state's outbound official correspondence."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "1992",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A nyilvántartás olyan közhiteles hatósági nyilvántartás, amely a nyilvántartásban szereplő polgároknak a 11. § (1), (1a), (3) és (4) bekezdésében meghatározott személyi, lakcím és értesítési cím adatait",
+     "quote_english": "The register is an authentic official register containing the personal, address and notification address data of citizens",
+     "title": "1992. évi LXVI. törvény a polgárok személyi adatainak és lakcímének nyilvántartásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv",
+     "value": "Személyiadat- és lakcímnyilvántartás (Personal Data and Address Register): the authentic official register of citizens' personal, address and notification-address data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2010",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az elektronikus anyakönyv a személyazonosság, az anyakönyvi események bekövetkezésének, az azok alapján létrejövő családi kapcsolatoknak, valamint a házasság és a bejegyzett élettársi kapcsolat megszűnésének igazolása céljából személyi alapnyilvántartásként határidő nélkül nyilvántartja",
+     "quote_english": "The electronic civil register records, without time limit as a basic personal register, for proving identity, civil events, resulting family relations and the end of marriage/partnership",
+     "title": "2010. évi I. törvény az anyakönyvi eljárásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1000001.TV",
+     "value": "Elektronikus anyakönyv (electronic civil-status register) records identity, civil events and family relations without time limit as a basic personal register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "1992",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "E törvény célja, hogy meghatározza a polgárok személyi- és lakcímadatait tartalmazó nyilvántartás (a továbbiakban: nyilvántartás) működésének törvényes feltételeit.",
+     "quote_english": "The purpose of this Act is to lay down the legal conditions for operating the register containing citizens' personal and address data",
+     "title": "1992. évi LXVI. törvény a polgárok személyi adatainak és lakcímének nyilvántartásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv",
+     "value": "Act LXVI of 1992 on the registration of citizens' personal data and address (Nytv.)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2010",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az anyakönyvi nyilvántartások rendszerének része a) az elektronikus anyakönyvi nyilvántartás és b) a papír alapú anyakönyvi nyilvántartás.",
+     "quote_english": "The civil registration system comprises a) the electronic civil register and b) the paper-based civil register.",
+     "title": "2010. évi I. törvény az anyakönyvi eljárásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1000001.TV",
+     "value": "Act I of 2010 on civil registration procedure (electronic civil register)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A Kormány a minisztert jelöli ki 1. a polgárok személyi adatainak és lakcímének nyilvántartásáról szóló 1992. évi LXVI. törvény szerinti polgárok személyi adatainak és lakcímének nyilvántartását kezelő szervként",
+     "quote_english": "The Government designates the minister 1. as the body managing the register of citizens' personal data and address under Act LXVI of 1992",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "The Government designates the Minister for Science and Technology as the body managing the SZL (Government Decree 90/2026)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "3. az anyakönyvi eljárásról szóló 2010. évi I. törvény szerinti nyilvántartó szervként,",
+     "quote_english": "3. as the registering body under Act I of 2010 on civil registration procedure",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "The same minister is the keeping body (nyilvántartó szerv) of the civil-status register"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Személyi Adat- és Lakcímnyilvántartás A polgárok személyi- és lakcímadatait, valamint az azokban bekövetkezett változásokat tartalmazza és igazolja, adatszolgáltatásokat teljesít.",
+     "quote_english": "Personal Data and Address Register: contains and certifies citizens' personal and address data and their changes, and performs data provision.",
+     "title": "Termékek | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/termekek",
+     "value": "IdomSoft Zrt. lists the SZL among the registers it builds and runs"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "1992",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "államigazgatási szerv vagy kizárólagos állami tulajdonú gazdálkodó szervezet adatfeldolgozót bízhat meg egyes adatfeldolgozási műveletek, technikai feladatok elvégzésével",
+     "quote_english": "may engage a state administrative body or wholly state-owned business entity as data processor to perform certain data processing operations and technical tasks",
+     "title": "1992. évi LXVI. törvény a polgárok személyi adatainak és lakcímének nyilvántartásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv",
+     "value": "Data processing for the SZL may only be outsourced to a state administrative body or a wholly state-owned company (unless a ministerial exemption is granted)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Leválunk a NISZ-ről Ezzel az IdomSoft közvetlen állami tulajdonba és közvetlenül a Digitális Magyarország Ügynökség irányítása alá kerül.",
+     "quote_english": "We separate from NISZ. With this IdomSoft comes into direct state ownership and directly under the control of the Digital Hungary Agency.",
+     "title": "Történetünk | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/rolunk/tortenetunk",
+     "value": "IdomSoft Zrt. (developer/operator of the national registers and DÁP) has been directly state-owned and under the Digital Hungary Agency since 1 July 2024"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "national",
+   "holding_name": "Személyiadat- és lakcímnyilvántartás (SZL) + elektronikus anyakönyv (EAK)",
+   "operator": "Minister for Science and Technology (tudományos és technológiai miniszter) as keeper; IdomSoft Zrt. develops/operates the application",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "1992",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "arcképmását és – ha 12. életévét betöltötte, valamint nem írásképtelen vagy írástudatlan – aláírását, ha a 29. § (12) bekezdésében meghatározott személyazonosításra alkalmas hatósági igazolványt igényelt",
+     "quote_english": "their facial image and – if over 12 and able to write – signature, if they applied for an official identity document",
+     "title": "1992. évi LXVI. törvény a polgárok személyi adatainak és lakcímének nyilvántartásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv",
+     "value": "The SZL stores the facial image (arcképmás) and signature of citizens who applied for an ID card"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "1998",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "az állampolgár arcképmását és saját kezű aláírását, ha 12. életévét betöltötte, valamint nem írásképtelen vagy írástudatlan, továbbá második biometrikus adatát, és annak tárolhatóságára vonatkozó adatát",
+     "quote_english": "the citizen's facial image and handwritten signature if over 12..., as well as their second biometric data and data on its storability",
+     "title": "1998. évi XII. törvény a külföldre utazásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99800012.TV",
+     "value": "The travel-document register holds the facial image, signature and the second biometric (fingerprint)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2015",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Kizárólag a központi szerv kezelheti az arckép profilok összességét.",
+     "quote_english": "Only the central organ may handle the totality of facial profiles.",
+     "title": "2015. évi CLXXXVIII. törvény az arcképelemzési nyilvántartásról és az arcképelemző rendszerről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1500188.TV",
+     "value": "Act CLXXXVIII of 2015 on the facial image analysis register: only the central organ may hold the full set of face profiles"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "13. az arcképelemzési nyilvántartásról és az arcképelemző rendszerről szóló 2015. évi CLXXXVIII. törvény szerinti központi szervként.",
+     "quote_english": "13. as central organ under Act CLXXXVIII of 2015 on the facial image analysis register and system.",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "The Minister for Science and Technology is designated central organ under the 2015 facial image analysis act"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "1992",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "államigazgatási szerv vagy kizárólagos állami tulajdonú gazdálkodó szervezet adatfeldolgozót bízhat meg egyes adatfeldolgozási műveletek, technikai feladatok elvégzésével",
+     "quote_english": "may engage a state administrative body or wholly state-owned business entity as data processor to perform certain data processing operations and technical tasks",
+     "title": "1992. évi LXVI. törvény a polgárok személyi adatainak és lakcímének nyilvántartásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv",
+     "value": "Data processing for the SZL may only be outsourced to a state administrative body or a wholly state-owned company (unless a ministerial exemption is granted)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "1998",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az adatkezelő szerv az útiokmány-nyilvántartással kapcsolatos adatfeldolgozási feladatok ellátásával csak államigazgatási szervet vagy kizárólagos állami tulajdonú gazdálkodó szervezetet bízhat meg",
+     "quote_english": "The controller may entrust data processing tasks related to the travel document register only to a state administrative body or a wholly state-owned business entity",
+     "title": "1998. évi XII. törvény a külföldre utazásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99800012.TV",
+     "value": "Data processing for the travel-document register may only be entrusted to a state body or wholly state-owned company unless an individual exemption is granted"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "national",
+   "holding_name": "Arcképmás in SZL / útiokmány-nyilvántartás; arckép profil nyilvántartás (facial image analysis register)",
+   "operator": "Minister for Science and Technology (central organ of the facial image analysis register)",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "1992",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A nyilvántartás – a polgár írásbeli hozzájárulása esetén – tartalmazza a polgár ujjnyomatát az állandó személyazonosító igazolvány pótlása céljából.",
+     "quote_english": "With the citizen's written consent, the register contains the citizen's fingerprint for the purpose of replacing the permanent ID card.",
+     "title": "1992. évi LXVI. törvény a polgárok személyi adatainak és lakcímének nyilvántartásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv",
+     "value": "With written consent, the SZL stores the citizen's fingerprint for replacing the permanent ID card"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "1998",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "az állampolgár arcképmását és saját kezű aláírását, ha 12. életévét betöltötte, valamint nem írásképtelen vagy írástudatlan, továbbá második biometrikus adatát, és annak tárolhatóságára vonatkozó adatát",
+     "quote_english": "the citizen's facial image and signature..., and their second biometric data and data on its storability",
+     "title": "1998. évi XII. törvény a külföldre utazásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99800012.TV",
+     "value": "The travel-document register holds the second biometric (fingerprint) of passport holders"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "",
+     "publisher": "Magyarország Kormánya (kormany.hu)",
+     "quote": "2009. június 28-tól pedig 12 éven felüli igénylők esetén a birtokos digitális ujjnyomat adatai is tárolásra kerülnek a chipen.",
+     "quote_english": "from 28 June 2009 the holder's digital fingerprint data are also stored on the chip for applicants over 12.",
+     "title": "Tájékoztató az új e-útlevélről",
+     "url": "https://kormany.hu/nyilvantartasok/biometrikus-utlevel/tajekoztato-az-uj-e-utlevelrol",
+     "value": "Passport chips carry fingerprint data for applicants over 12 since 28 June 2009"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "valamint a bűnügyi és rendészeti biometrikus adatok nyilvántartásáról szóló 2009. évi XLVII. törvény szerinti bűnügyi nyilvántartó szervként;",
+     "quote_english": "and as criminal records body under Act XLVII of 2009 on ... the register of criminal and law-enforcement biometric data",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "Minister of Interior designated as criminal records body, including the register of criminal and law-enforcement biometric data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "1992",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "államigazgatási szerv vagy kizárólagos állami tulajdonú gazdálkodó szervezet adatfeldolgozót bízhat meg egyes adatfeldolgozási műveletek, technikai feladatok elvégzésével",
+     "quote_english": "may engage a state administrative body or wholly state-owned business entity as data processor to perform certain data processing operations and technical tasks",
+     "title": "1992. évi LXVI. törvény a polgárok személyi adatainak és lakcímének nyilvántartásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv",
+     "value": "Data processing for the SZL may only be outsourced to a state administrative body or a wholly state-owned company (unless a ministerial exemption is granted)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "1998",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az adatkezelő szerv az útiokmány-nyilvántartással kapcsolatos adatfeldolgozási feladatok ellátásával csak államigazgatási szervet vagy kizárólagos állami tulajdonú gazdálkodó szervezetet bízhat meg",
+     "quote_english": "The controller may entrust data processing tasks related to the travel document register only to a state administrative body or a wholly state-owned business entity",
+     "title": "1998. évi XII. törvény a külföldre utazásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99800012.TV",
+     "value": "Data processing for the travel-document register may only be entrusted to a state body or wholly state-owned company unless an individual exemption is granted"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "national",
+   "holding_name": "Ujjnyomat in SZL (consent-based, ID card replacement) and second biometric in útiokmány-nyilvántartás; bűnügyi és rendészeti biometrikus adatok nyilvántartása",
+   "operator": "Minister for Science and Technology (SZL); passport register controller; Minister of Interior (criminal/police biometrics)",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2010",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az elektronikus anyakönyvi nyilvántartás része a) az elektronikus anyakönyv, b) az apai elismerő nyilatkozatok nyilvántartása, c) az anyakönyvi és névváltoztatási okiratok nyilvántartása (a továbbiakban: okiratnyilvántartás)",
+     "quote_english": "The electronic civil register includes a) the electronic civil register, b) register of paternity acknowledgements, c) register of civil-status and name-change certificates",
+     "title": "2010. évi I. törvény az anyakönyvi eljárásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1000001.TV",
+     "value": "The electronic civil register includes the register of civil-status and name-change certificates (okiratnyilvántartás)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2010",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "anyakönyvi alapirat: az anyakönyvi okirat kivételével az olyan elektronikus és papír alapú okirat, amely alapján az anyakönyvbe adatot jegyeznek be",
+     "quote_english": "civil source document: electronic and paper documents, other than certificates, on the basis of which data are entered into the civil register",
+     "title": "2010. évi I. törvény az anyakönyvi eljárásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1000001.TV",
+     "value": "Source documents (anyakönyvi alapirat) are electronic and paper documents on which civil register entries are based"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2010",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A papír alapú anyakönyv és a névmutató nem selejtezhető, őrzéséről a nyilvántartó anyakönyvvezető gondoskodik.",
+     "quote_english": "The paper civil register and name index cannot be discarded; the registrar ensures their safekeeping.",
+     "title": "2010. évi I. törvény az anyakönyvi eljárásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1000001.TV",
+     "value": "Legacy paper civil registers may not be destroyed and are kept by the registrar"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "1993",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A magyar állampolgárság megszerzéséről a köztársasági elnök honosítási, illetve visszahonosítási okiratot (a továbbiakban: honosítási okirat) ad ki.",
+     "quote_english": "The President of the Republic issues a naturalisation or re-naturalisation certificate on acquisition of Hungarian citizenship.",
+     "title": "1993. évi LV. törvény a magyar állampolgárságról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99300055.TV",
+     "value": "Naturalisation certificates are issued by the President of the Republic"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2010",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A nyilvántartó szerv az anyakönyvi ügyekért felelős miniszter és az e-közigazgatásért felelős miniszter jóváhagyásával államigazgatási szerv vagy kizárólagos állami tulajdonú gazdálkodó szervezet adatfeldolgozót bízhat meg",
+     "quote_english": "With ministerial approval the registering body may engage a state administrative body or wholly state-owned business entity as data processor",
+     "title": "2010. évi I. törvény az anyakönyvi eljárásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1000001.TV",
+     "value": "The civil register keeping body may only use a state body or wholly state-owned company as data processor unless an exemption is authorised"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "3. az anyakönyvi eljárásról szóló 2010. évi I. törvény szerinti nyilvántartó szervként,",
+     "quote_english": "3. as registering body under Act I of 2010 on civil registration procedure",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "Minister for Science and Technology is the civil-register keeping body"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "national",
+   "holding_name": "Anyakönyvi alapiratok és okiratnyilvántartás (civil-status source documents and certificate register); honosítási okiratok",
+   "operator": "Minister for Science and Technology (civil register keeping body); registrars",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "2. a polgárok személyi adatainak és lakcímének nyilvántartásáról szóló 1992. évi LXVI. törvény szerinti személyazonosság igazolására alkalmas hatósági igazolványok nyilvántartását vezető szervként,",
+     "quote_english": "2. as the body keeping the register of official identity documents under Act LXVI of 1992",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "Minister for Science and Technology keeps the register of official identity documents"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "1992",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "személyazonosító igazolványának okmányazonosítóját, állandó személyazonosító igazolványa elektronikus egyedi azonosítóját, szolgáltatásazonosítóját",
+     "quote_english": "the document ID of their identity card, the electronic unique identifier and service identifier of their permanent ID card",
+     "title": "1992. évi LXVI. törvény a polgárok személyi adatainak és lakcímének nyilvántartásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv",
+     "value": "The SZL records ID card document identifiers and electronic unique identifiers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "1998",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "az állampolgár számára kiadott úti okmány típusát, számát, érvényességének tényét, kiállítás szerinti érvényességi idejét, valamint az úti okmányra való jogosultság megszűnésének okát és időpontját",
+     "quote_english": "the type and number of the travel document issued, its validity, validity period, and the reason and time of termination of entitlement",
+     "title": "1998. évi XII. törvény a külföldre utazásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99800012.TV",
+     "value": "The travel-document register records every travel document issued and the reason/time entitlement ended"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Okmány nyilvántartások Kezeli és nyilvántartja a magyar hatóságok által kiállított okmányokat, támogatja az okmánykérelmek benyújtásának és elbírálásának teljes folyamatát.",
+     "quote_english": "Document registers: manages and records documents issued by Hungarian authorities, supports the whole process of submitting and deciding document applications.",
+     "title": "Termékek | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/termekek",
+     "value": "IdomSoft runs the document registers supporting the whole issuance process"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2024",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "5. az iratérvényességi nyilvántartás vonatkozásában az IdomSoft Zrt.-t,",
+     "quote_english": "5. regarding the document validity register, IdomSoft Zrt.",
+     "title": "320/2024. (XI. 6.) Korm. rendelet a digitális állam megvalósításához kapcsolódó egyes szervezetek kijelöléséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2400320.KOR",
+     "value": "IdomSoft Zrt. is designated provider of the document validity register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "1998",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az adatkezelő szerv az útiokmány-nyilvántartással kapcsolatos adatfeldolgozási feladatok ellátásával csak államigazgatási szervet vagy kizárólagos állami tulajdonú gazdálkodó szervezetet bízhat meg",
+     "quote_english": "The controller may entrust data processing tasks related to the travel document register only to a state administrative body or a wholly state-owned business entity",
+     "title": "1998. évi XII. törvény a külföldre utazásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99800012.TV",
+     "value": "Data processing for the travel-document register may only be entrusted to a state body or wholly state-owned company unless an individual exemption is granted"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Leválunk a NISZ-ről Ezzel az IdomSoft közvetlen állami tulajdonba és közvetlenül a Digitális Magyarország Ügynökség irányítása alá kerül.",
+     "quote_english": "We separate from NISZ. With this IdomSoft comes into direct state ownership and directly under the control of the Digital Hungary Agency.",
+     "title": "Történetünk | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/rolunk/tortenetunk",
+     "value": "IdomSoft Zrt. (developer/operator of the national registers and DÁP) has been directly state-owned and under the Digital Hungary Agency since 1 July 2024"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "national",
+   "holding_name": "Személyazonosító igazolvány nyilvántartás; útiokmány-nyilvántartás; iratérvényességi nyilvántartás",
+   "operator": "Minister for Science and Technology (ID documents register); IdomSoft Zrt. (document registers, document validity register)",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2023",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "digitális állampolgárság nyilvántartás: az e törvénnyel létrehozott ügyfél-regisztrációs nyilvántartás;",
+     "quote_english": "digital citizenship register: the client registration register established by this Act",
+     "title": "2023. évi CIII. törvény a digitális államról és a digitális szolgáltatások nyújtásának egyes szabályairól",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2300103.TV",
+     "value": "Digital citizenship register: the client-registration register created by the Digital State Act"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2023",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A digitális állampolgárság, és ezzel a digitális állampolgár azonosító valamennyi, a személyiadat- és lakcímnyilvántartás hatálya alá tartozó személyt – erre irányuló kérelem hiányában is – megillet.",
+     "quote_english": "Digital citizenship, and with it the digital citizen identifier, is due to every person covered by the personal data and address register, even without a request.",
+     "title": "2023. évi CIII. törvény a digitális államról és a digitális szolgáltatások nyújtásának egyes szabályairól",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2300103.TV",
+     "value": "Act CIII of 2023 on the digital state (Dáptv.): every person in the SZL is entitled to digital citizenship and a digital citizen identifier"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2024",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "szerinti digitális állampolgárság szolgáltatóként az IdomSoft Informatikai Zártkörűen Működő Részvénytársaságot (a továbbiakban: IdomSoft Zrt.) jelöli ki.",
+     "quote_english": "designates IdomSoft Zrt. as digital citizenship service provider",
+     "title": "320/2024. (XI. 6.) Korm. rendelet a digitális állam megvalósításához kapcsolódó egyes szervezetek kijelöléséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2400320.KOR",
+     "value": "IdomSoft Zrt. designated as digital citizenship service provider"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2024",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A Kormány digitális állampolgárság nyilvántartást vezető szervként a személyiadat- és lakcímnyilvántartásért felelős minisztert, a szolgáltatáshoz kapcsolódó alkalmazásfejlesztési, alkalmazásüzemeltetési feladatok tekintetében az IdomSoft Zrt.-t jelöli ki.",
+     "quote_english": "The Government designates the minister responsible for the SZL as keeper of the digital citizenship register, and IdomSoft Zrt. for application development and operation",
+     "title": "320/2024. (XI. 6.) Korm. rendelet a digitális állam megvalósításához kapcsolódó egyes szervezetek kijelöléséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2400320.KOR",
+     "value": "The SZL minister keeps the digital citizenship register; IdomSoft handles application development and operation"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2024",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "4. a Kormány által kötelezően biztosított elektronikus azonosítási szolgáltatás természetes személy ügyfelek részére történő szolgáltatás vonatkozásában az IdomSoft Zrt.-t,",
+     "quote_english": "4. regarding the mandatory government electronic identification service for natural persons, IdomSoft Zrt.",
+     "title": "320/2024. (XI. 6.) Korm. rendelet a digitális állam megvalósításához kapcsolódó egyes szervezetek kijelöléséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2400320.KOR",
+     "value": "IdomSoft Zrt. provides the mandatory government electronic identification service for natural persons"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "4. az egységes elektronikuskártya-kibocsátási keretrendszerről szóló 2014. évi LXXXIII. törvény szerinti működtetőként,",
+     "quote_english": "4. as operator under Act LXXXIII of 2014 on the unified electronic card issuance framework",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "Minister for Science and Technology is operator of the unified electronic card issuance framework (eSzemélyi)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Leválunk a NISZ-ről Ezzel az IdomSoft közvetlen állami tulajdonba és közvetlenül a Digitális Magyarország Ügynökség irányítása alá kerül.",
+     "quote_english": "We separate from NISZ. With this IdomSoft comes into direct state ownership and directly under the control of the Digital Hungary Agency.",
+     "title": "Történetünk | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/rolunk/tortenetunk",
+     "value": "IdomSoft Zrt. (developer/operator of the national registers and DÁP) has been directly state-owned and under the Digital Hungary Agency since 1 July 2024"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "national",
+   "holding_name": "Digitális állampolgárság nyilvántartás (DÁP – Digitális Állampolgár app) + eSzemélyi eID card, KAÜ/Ügyfélkapu+",
+   "operator": "Minister for Science and Technology (register keeper); IdomSoft Zrt. (digital citizenship service provider, KAÜ)",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2023",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a nyilvántartást vezető szerv automatizált adatkezelési rendszerben (a továbbiakban: naplórendszer) rögzíti a nyilvántartásban végzett adatkezelési művelettel összefüggő információkat.",
+     "quote_english": "the register keeping body records information on data processing operations in an automated data processing system (log system)",
+     "title": "2023. évi CIII. törvény a digitális államról és a digitális szolgáltatások nyújtásának egyes szabályairól",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2300103.TV",
+     "value": "The register keeper records every data-processing operation in an automated log system (naplórendszer)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2023",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A naplórendszerben a naplóbejegyzések megőrzési ideje annak keletkezésétől számított tíz év.",
+     "quote_english": "Log entries in the log system are retained for ten years from creation.",
+     "title": "2023. évi CIII. törvény a digitális államról és a digitális szolgáltatások nyújtásának egyes szabályairól",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2300103.TV",
+     "value": "Dáptv. s.14/A: log entries retained for ten years"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "melyek tartalmazzák a szolgáltatások által kezelt adatokat. A naplófájlokat adatkezelő privát felhőben (központi naplógyűjtőben) tárolja.",
+     "quote_english": "which contain the data processed by the services. The controller stores the log files in a private cloud (central log collector).",
+     "title": "Adatkezelési tájékoztató – Digitális Állampolgár (dap.gov.hu)",
+     "url": "https://dap.gov.hu/adatkezelesi-tajekoztato",
+     "value": "DÁP portal log files are stored by IdomSoft in a private cloud (central log collector)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Leválunk a NISZ-ről Ezzel az IdomSoft közvetlen állami tulajdonba és közvetlenül a Digitális Magyarország Ügynökség irányítása alá kerül.",
+     "quote_english": "We separate from NISZ. With this IdomSoft comes into direct state ownership and directly under the control of the Digital Hungary Agency.",
+     "title": "Történetünk | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/rolunk/tortenetunk",
+     "value": "IdomSoft Zrt. (developer/operator of the national registers and DÁP) has been directly state-owned and under the Digital Hungary Agency since 1 July 2024"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "national",
+   "holding_name": "Naplórendszer of the digital citizenship register (DÁP/KAÜ authentication logs)",
+   "operator": "Minister for Science and Technology / IdomSoft Zrt.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2013",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A központi névjegyzék a Nemzeti Választási Iroda által vezetett elektronikus nyilvántartás.",
+     "quote_english": "The central electoral register is an electronic register kept by the National Election Office.",
+     "title": "2013. évi XXXVI. törvény a választási eljárásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1300036.TV",
+     "value": "The central electoral register is an electronic register kept by the National Election Office"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2013",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A Nemzeti Választási Iroda csak államigazgatási szervet vagy kizárólagos állami tulajdonú gazdálkodó szervezet adatfeldolgozót bízhat meg a) a szavazókörök és választókerületek nyilvántartásával, b) a központi névjegyzékkel",
+     "quote_english": "NEO may engage only a state administrative body or wholly state-owned business entity as processor for a) polling districts and constituencies, b) the central electoral register",
+     "title": "2013. évi XXXVI. törvény a választási eljárásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1300036.TV",
+     "value": "NEO may only use state bodies or wholly state-owned companies as processors for the electoral registers"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Nemzeti Választási Rendszer A választási irodák jogszabályban előírt, választásokkal kapcsolatos szakigazgatási feladatainak elvégzését szolgáló rendszer.",
+     "quote_english": "National Election System: the system serving the statutory election-related administrative tasks of election offices.",
+     "title": "Termékek | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/termekek",
+     "value": "IdomSoft builds the National Election System used by election offices"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Leválunk a NISZ-ről Ezzel az IdomSoft közvetlen állami tulajdonba és közvetlenül a Digitális Magyarország Ügynökség irányítása alá kerül.",
+     "quote_english": "We separate from NISZ. With this IdomSoft comes into direct state ownership and directly under the control of the Digital Hungary Agency.",
+     "title": "Történetünk | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/rolunk/tortenetunk",
+     "value": "IdomSoft Zrt. (developer/operator of the national registers and DÁP) has been directly state-owned and under the Digital Hungary Agency since 1 July 2024"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "national",
+   "holding_name": "Központi névjegyzék (central electoral register)",
+   "operator": "Nemzeti Választási Iroda (National Election Office)",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2024",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "6. a kormányzati elektronikus aláírás, elektronikus bélyegzés és aláírás-ellenőrzési szolgáltatás vonatkozásában a NISZ Zrt.-t,",
+     "quote_english": "6. regarding the government electronic signature, electronic seal and signature verification service, NISZ Zrt.",
+     "title": "320/2024. (XI. 6.) Korm. rendelet a digitális állam megvalósításához kapcsolódó egyes szervezetek kijelöléséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2400320.KOR",
+     "value": "NISZ Zrt. is the designated provider of government e-signature, e-seal and signature validation"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2024",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A digitális állampolgárság szolgáltató az eAláírás szolgáltatást a NISZ Zártkörűen Működő Részvénytársaság (a továbbiakban: NISZ Zrt.) bevonásával nyújtja.",
+     "quote_english": "The digital citizenship provider provides the eSignature service with the involvement of NISZ Zrt.",
+     "title": "320/2024. (XI. 6.) Korm. rendelet a digitális állam megvalósításához kapcsolódó egyes szervezetek kijelöléséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2400320.KOR",
+     "value": "DÁP eSignature is provided with NISZ Zrt."
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "",
+     "publisher": "Magyarország Kormánya (kormany.hu)",
+     "quote": "A Magyar Országos Aláíró Hitelesítő Hatóság működtetésével összefüggő feladatokat az Energiaügyi Minisztérium, mint útlevél kibocsátó hatóság látja el.",
+     "quote_english": "Tasks related to operating the Hungarian Country Signing Certification Authority are performed by the Ministry of Energy as passport-issuing authority.",
+     "title": "Tájékoztató a CSCA tanúsítványról",
+     "url": "https://kormany.hu/nyilvantartasok/biometrikus-utlevel/tajekoztato-a-csca-tanusitvanyrol",
+     "value": "CSCA-HUNGARY country signing CA for e-passports, operated by the passport-issuing ministry"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A miniszter az informatikai adathordozót tartalmazó biztonsági okmányok tekintetében ellátja a publikus kulcsú információs rendszer (PKI) koordinátor",
+     "quote_english": "Regarding security documents with an IT data carrier, the minister performs the tasks of public key infrastructure (PKI) coordinator",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "The Minister for Science and Technology acts as PKI coordinator for security documents with data carriers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2023",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az e Részben foglalt szabályokat a) az eIDAS Rendelet szerinti, Magyarország területén letelepedett bizalmi szolgáltatókra és az általuk nyújtott bizalmi szolgáltatásokra",
+     "quote_english": "The rules of this Part apply to a) trust service providers established in Hungary under the eIDAS Regulation and their trust services",
+     "title": "2023. évi CIII. törvény a digitális államról és a digitális szolgáltatások nyújtásának egyes szabályairól",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2300103.TV",
+     "value": "Part Six of the Dáptv. governs eIDAS trust service providers established in Hungary"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kormányzati elektronikus aláírás/bélyegzés szolgáltatás (government e-signature/seal) and CSCA-HUNGARY (Magyar Országos Aláíró Hitelesítő Hatóság)",
+   "operator": "NISZ Zrt. (government e-signature, seal, signature validation); passport-issuing ministry (CSCA)",
+   "research_note": "No public source found stating where the government CA keys/HSMs are hosted or NISZ ownership in a quotable form; the CSCA page names the Ministry of Energy while Decree 90/2026 assigns PKI coordination to the Minister for Science and Technology.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2023",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "személyazonosítás, az okmányok hitelességének ellenőrzése, a jogszerű tartózkodás időtartamának megállapítása, illetve a párhuzamos eljárások megakadályozása céljából a központi idegenrendészeti nyilvántartás résznyilvántartásaiban kezeli.",
+     "quote_english": "handles [the data] in the sub-registers of the central aliens policing register for identification, document authenticity checks, determining lawful stay and preventing parallel procedures",
+     "title": "2023. évi XC. törvény a harmadik országbeli állampolgárok beutazására és tartózkodására vonatkozó általános szabályokról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2300090.TV",
+     "value": "Third-country nationals' data are kept in the sub-registers of the central aliens-policing register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2023",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az idegenrendészeti hatóság a központi idegenrendészeti nyilvántartással kapcsolatos adatfeldolgozási feladatok ellátásával csak államigazgatási szervet, vagy kizárólagos állami tulajdonú gazdálkodó szervezetet bízhat meg.",
+     "quote_english": "The aliens policing authority may entrust data processing tasks related to the central aliens policing register only to a state administrative body or wholly state-owned business entity.",
+     "title": "2023. évi XC. törvény a harmadik országbeli állampolgárok beutazására és tartózkodására vonatkozó általános szabályokról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2300090.TV",
+     "value": "Processing for the central aliens-policing register may only be entrusted to a state body or wholly state-owned company"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A belügyminiszter (ezen alcím alkalmazásában a továbbiakban: miniszter) a Kormány 1. aktív Magyarországért, 2. bűncselekmények megelőzéséért, 3. büntetés-végrehajtásért, 4. élet- és vagyonbiztonság védelméért, 5. határrendészetért, 6. idegenrendészetért és menekültügyért,",
+     "quote_english": "The Minister of Interior is the member of Government responsible for ... 5. border policing, 6. aliens policing and asylum",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "The Minister of Interior is responsible for aliens policing and asylum"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2023",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "idegenrendészeti hatóság: az a szerv, szervezet vagy személy, amelyet (akit) kormányrendelet idegenrendészeti hatósági hatáskör gyakorlására jogosít fel vagy jogszabály idegenrendészeti hatósági hatáskör gyakorlására jelöl ki;",
+     "quote_english": "aliens policing authority: the body designated by government decree or law to exercise aliens policing powers",
+     "title": "2023. évi XC. törvény a harmadik országbeli állampolgárok beutazására és tartózkodására vonatkozó általános szabályokról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2300090.TV",
+     "value": "Act XC of 2023 on the general rules of entry and residence of third-country nationals"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "national",
+   "holding_name": "Központi idegenrendészeti nyilvántartás (central aliens-policing register)",
+   "operator": "Immigration authority (Országos Idegenrendészeti Főigazgatóság) under the Minister of Interior",
+   "research_note": "The Országos Idegenrendészeti Főigazgatóság is named as the Directorate-General in Government Decree 35/2024, but a quotable designation of it as register keeper was not retrieved.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2017",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az adóhatóság a tudomására jutott adatokat nyilvántartja és megőrzi az adóvégrehajtáshoz való jog elévüléséig, kivéve a nyugdíjellátás megállapításhoz szükséges adatokat, amelyeket az adat nyilvántartásba vételétől számított ötven évig tartja nyilván és őrzi meg.",
+     "quote_english": "The tax authority records and keeps data until the right to enforce taxes lapses, except pension-relevant data which it keeps for fifty years.",
+     "title": "2017. évi CL. törvény az adózás rendjéről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1700150.TV",
+     "value": "Act CL of 2017 on the rules of taxation: tax authority records and retains data (pension-relevant data for 50 years)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2010",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A Nemzeti Adó- és Vámhivatal (a továbbiakban: NAV) államigazgatási és fegyveres rendvédelmi feladatokat ellátó, a Kormány eredeti jogalkotói hatáskörében kiadott rendeletében kijelölt miniszter (a továbbiakban: kijelölt miniszter) által irányított, központi hivatalként működő",
+     "quote_english": "The National Tax and Customs Administration (NAV), performing public administration and armed law-enforcement tasks, directed by the designated minister, operating as a central office",
+     "title": "2010. évi CXXII. törvény a Nemzeti Adó- és Vámhivatalról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1000122.TV",
+     "value": "NAV is the central office performing state tax and customs tasks"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2017",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az adóhatóság az általa kezelt adatok nyilvántartásával kapcsolatos adatfeldolgozási feladatok ellátásával csak államigazgatási szervet, az állam közvetlen vagy közvetett többségi tulajdonában álló jogi személyt vagy kizárólagos állami tulajdonú egyéb szervezetet bízhat meg",
+     "quote_english": "The tax authority may entrust data processing for its records only to a state body, a legal person directly or indirectly majority state-owned, or a wholly state-owned organisation",
+     "title": "2017. évi CL. törvény az adózás rendjéről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1700150.TV",
+     "value": "Tax data processing may only be entrusted to state bodies, majority state-owned legal persons or wholly state-owned organisations unless a time-limited exemption is granted"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "national",
+   "holding_name": "Adóhatósági nyilvántartás (NAV tax records)",
+   "operator": "Nemzeti Adó- és Vámhivatal (NAV)",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2017",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "vámhivatal: a NAV vármegyei (fővárosi) adó- és vámigazgatóságai és azok kirendeltségei, valamint a Kormány rendeletében meghatározott igazgatóságok,",
+     "quote_english": "customs office: NAV county (capital) tax and customs directorates and their branches, and directorates defined by government decree",
+     "title": "2017. évi CLII. törvény az uniós vámjog végrehajtásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1700152.TV",
+     "value": "Customs offices are NAV's county/capital tax and customs directorates"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2017",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A vámhatóság az FJA 4. cikke alapján az EORI nyilvántartásba vételhez szükséges adatok benyújtását elektronikus adatfeldolgozási módtól eltérő módon azon Vámkódex 5. cikk 4. pontja szerinti személyeknek engedélyezheti, akik a vámhatóság vonatkozó számítógépes rendszeréhez való közvetlen hozzáféréssel nem rendelkeznek.",
+     "quote_english": "The customs authority may allow non-electronic submission of EORI data for persons without direct access to its computer system.",
+     "title": "2017. évi CLII. törvény az uniós vámjog végrehajtásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1700152.TV",
+     "value": "Act CLII of 2017 implementing Union customs law; declarations and EORI registration are processed in the customs authority's computer system"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "NAV vámhatósági rendszerek (customs declarations, EORI)",
+   "operator": "Nemzeti Adó- és Vámhivatal (NAV) as customs authority",
+   "research_note": "No public source retrieved on hosting of NAV customs declaration systems; the Art. processor restriction applies to the tax authority but was not confirmed for customs data.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "1997",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a Magyar Államkincstár (a továbbiakban: Kincstár) Nyugdíjfolyósító Igazgatóságot (a továbbiakban: Nyugdíjfolyósító Igazgatóság),",
+     "quote_english": "the Hungarian State Treasury (Treasury) Pension Disbursement Directorate",
+     "title": "168/1997. (X. 6.) Korm. rendelet a társadalombiztosítási nyugellátásról szóló 1997. évi LXXXI. törvény végrehajtásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99700168.KOR",
+     "value": "Government designates the Hungarian State Treasury Pension Disbursement Directorate as a pension insurance administration body"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "1997",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a nyugdíjbiztosítási igazgatási szerv és az egészségbiztosítási szerv (a továbbiakban: társadalombiztosítási igazgatási szervek) nyilvántartásaiból megállapíthatók",
+     "quote_english": "can be established from the records of the pension insurance administration and the health insurance body (social insurance administration bodies)",
+     "title": "1997. évi LXXXI. törvény a társadalombiztosítási nyugellátásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99700081.TV",
+     "value": "Insurance periods are established from the records of the pension and health insurance administration bodies"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "1997",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a nyugdíjfolyósító szervre, a központi nyugdíjbiztosítási szervre, valamint a nyugdíj-megállapítás során és az e törvény szerinti egyéb eljárásokban eljáró szervekre (a továbbiakban együtt: nyugdíjbiztosítási igazgatási szerv).",
+     "quote_english": "the pension disbursement body, the central pension insurance body and bodies acting in pension determination (together: pension insurance administration body)",
+     "title": "1997. évi LXXXI. törvény a társadalombiztosítási nyugellátásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99700081.TV",
+     "value": "Act LXXXI of 1997 on social security pensions defines the pension insurance administration bodies"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Nyugdíjbiztosítási nyilvántartások (pension insurance records)",
+   "operator": "Magyar Államkincstár – Nyugdíjfolyósító Igazgatóság and central pension insurance body",
+   "research_note": "Hosting of Treasury pension systems not found in public sources searched (legislation, Treasury site).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2016",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "E rendelet alkalmazásában egészségbiztosítási szerv a) a Nemzeti Egészségbiztosítási Alapkezelő (a továbbiakban: NEAK),",
+     "quote_english": "For this decree, health insurance body means a) the National Health Insurance Fund Manager (NEAK)",
+     "title": "386/2016. (XII. 2.) Korm. rendelet az egészségbiztosítási szervekről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1600386.KOR",
+     "value": "NEAK is a health insurance body"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2016",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a bejelentett személyek jogviszonyadatainak nyilvántartását, ideértve az egészségügyi szolgáltatásra való jogosultsággal és annak igazolásával, valamint a Társadalombiztosítási Azonosító Jel (a továbbiakban: TAJ) igazolásával",
+     "quote_english": "the register of insured relationship data of reported persons, including entitlement to health services and its certification, and certification of the social security identifier (TAJ)",
+     "title": "386/2016. (XII. 2.) Korm. rendelet az egészségbiztosítási szervekről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1600386.KOR",
+     "value": "NEAK keeps the register of insured persons' relationship data, entitlement and TAJ data"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Egészségbiztosítási nyilvántartások incl. jogviszony and TAJ records (NEAK)",
+   "operator": "Nemzeti Egészségbiztosítási Alapkezelő (NEAK)",
+   "research_note": "No public statement found on where NEAK systems are hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2021",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az ingatlan-nyilvántartás az e törvényben és az e törvény felhatalmazása alapján kiadott kormányrendeletben szabályozott módon, településenként tartalmazza a Magyarország területén fekvő valamennyi ingatlant.",
+     "quote_english": "The land register contains, by settlement, all properties located in Hungary, as regulated by this Act and its implementing decree.",
+     "title": "2021. évi C. törvény az ingatlan-nyilvántartásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2100100.TV",
+     "value": "The land register contains every property located in Hungary, settlement by settlement"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2016",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a földmérési és térinformatikai államigazgatási szervként eljáró Lechner Tudásközpont Nonprofit Korlátolt Felelősségű Társaságot,",
+     "quote_english": "Lechner Knowledge Centre Nonprofit Ltd acting as state surveying and geoinformatics body",
+     "title": "383/2016. (XII. 2.) Korm. rendelet a földművelésügyi hatósági és igazgatási feladatokat ellátó szervek kijelöléséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1600383.KOR",
+     "value": "Lechner Tudásközpont is designated land authority (with county government offices)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2021",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az ingatlanügyi hatóság az ingatlan-nyilvántartással kapcsolatos adatfeldolgozási feladatok ellátásával csak államigazgatási szervet vagy 100%-os állami tulajdonú gazdálkodó szervezetet bízhat meg.",
+     "quote_english": "The land authority may entrust data processing for the land register only to a state body or 100% state-owned company.",
+     "title": "2021. évi C. törvény az ingatlan-nyilvántartásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2100100.TV",
+     "value": "Land register processing restricted to state bodies or 100% state-owned companies"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2021",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "az ingatlan-nyilvántartás vezetését támogató informatikai rendszer fejlesztése esetén az adatfeldolgozási feladatokat a rendszerfejlesztéshez szükséges mértékben az a nem állami tulajdonú gazdálkodó szervezet is elláthatja, amely a rendszerfejlesztést végzi.",
+     "quote_english": "when developing the land register IT system, a non-state-owned company performing the development may also process data to the extent necessary",
+     "title": "2021. évi C. törvény az ingatlan-nyilvántartásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2100100.TV",
+     "value": "Exception: a non-state-owned company developing the land register IT system may process data to the extent needed for development"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Ingatlan-nyilvántartás (land register)",
+   "operator": "Lechner Tudásközpont Nonprofit Kft. and county government offices as land authority",
+   "research_note": "foreign_dependency left unknown: the law restricts processing to state entities but explicitly allows a non-state system developer to process data; the developer's identity/nationality was not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2006",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A cégnyilvántartás és a (2) bekezdés b) pontja szerinti elektronikus ügyintézést támogató rendszer adatkezelője a céginformációs szolgálat.",
+     "quote_english": "The controller of the company register and the e-procedure support system is the company information service.",
+     "title": "2006. évi V. törvény a cégnyilvánosságról, a bírósági cégeljárásról és a végelszámolásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A0600005.TV",
+     "value": "The Company Information Service is the controller of the company register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2006",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A cégnyilvántartás és a (2) bekezdés b) pontja szerinti elektronikus ügyintézést támogató rendszer a Kormányzati Adatközpont szolgáltatásait kormányrendeletben meghatározottak szerint igénybe vevő szakrendszer.",
+     "quote_english": "The company register and the e-procedure support system are specialised systems using the Government Data Centre services as set out in government decree.",
+     "title": "2006. évi V. törvény a cégnyilvánosságról, a bírósági cégeljárásról és a végelszámolásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A0600005.TV",
+     "value": "The company register is a specialised system using Government Data Centre services"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2006",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A cégbíróság és a céginformációs szolgálat a cégnyilvántartással kapcsolatos adatfeldolgozási feladatok ellátásával csak államigazgatási szervet vagy kizárólagos állami tulajdonú gazdálkodó szervezetet bízhat meg.",
+     "quote_english": "The registry court and the company information service may entrust processing only to a state body or wholly state-owned company.",
+     "title": "2006. évi V. törvény a cégnyilvánosságról, a bírósági cégeljárásról és a végelszámolásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A0600005.TV",
+     "value": "Processing restricted to state bodies or wholly state-owned companies"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2017",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a NISZ Nemzeti Infokommunikációs Szolgáltató Zártkörűen Működő Részvénytársaság (a továbbiakban: központi szolgáltató) útján működteti a Kormányzati Adatközpontot",
+     "quote_english": "operates the Government Data Centre through NISZ National Infocommunications Service Provider Zrt. (central provider)",
+     "title": "467/2017. (XII. 28.) Korm. rendelet a Kormányzati Adatközpont működéséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1700467.KOR",
+     "value": "The Government Data Centre (Kormányzati Adatközpont) is operated by the responsible minister through NISZ Zrt. as central provider"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "national",
+   "holding_name": "Cégnyilvántartás (company register)",
+   "operator": "Céginformációs és az elektronikus cégeljárásban közreműködő szolgálat (Company Information Service) and registry courts",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2021",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A tényleges tulajdonosi nyilvántartás az adatszolgáltatók alábbi adatait tartalmazza: a) az adatszolgáltató nemzeti nyilvántartási száma;",
+     "quote_english": "The beneficial ownership register contains the following data of reporting entities: a) national registration number",
+     "title": "2021. évi XLIII. törvény a pénzügyi és egyéb szolgáltatók azonosítási feladatához kapcsolódó adatszolgáltatási háttér megteremtéséről és működtetéséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2100043.TV",
+     "value": "The beneficial ownership register contains the data of reporting entities"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2021",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a tényleges tulajdonosi adatok, illetve a bankszámlák és széfszolgáltatások központi nyilvántartásának létrehozásával és működtetésével.",
+     "quote_english": "by establishing and operating the central register of beneficial ownership data and of bank accounts and safe deposit services",
+     "title": "2021. évi XLIII. törvény a pénzügyi és egyéb szolgáltatók azonosítási feladatához kapcsolódó adatszolgáltatási háttér megteremtéséről és működtetéséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2100043.TV",
+     "value": "Act XLIII of 2021 creates central registers of beneficial owners and bank accounts/safe deposits"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Tényleges tulajdonosi nyilvántartás (beneficial ownership register)",
+   "operator": "Nyilvántartó szerv designated by Government (not confirmed in retrieved sources)",
+   "research_note": "The act refers to a 'nyilvántartó szerv' designated by the Government; neither the Act nor Decree 803/2021 as retrieved names it, and no hosting source was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "6. a közúti közlekedési nyilvántartásról szóló 1999. évi LXXXIV. törvény szerinti közúti közlekedési nyilvántartó szervként,",
+     "quote_english": "6. as road transport registering body under Act LXXXIV of 1999 on the road transport register",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "Minister for Science and Technology is the road transport registering body"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Országos Jármű Nyilvántartás A Magyarországon forgalomba helyezett közúti járművek adatainak nyilvántartását, kezelését és a törvény szerinti adatszolgáltatásokat végző rendszer.",
+     "quote_english": "National Vehicle Register: the system recording and managing data of road vehicles registered in Hungary and providing statutory data services.",
+     "title": "Termékek | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/termekek",
+     "value": "National Vehicle Register system built/run by IdomSoft"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "1999",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A nyilvántartó a nyilvántartással kapcsolatos adatfeldolgozási feladatok ellátásával csak államigazgatási szervet vagy kizárólagos állami tulajdonú gazdálkodó szervezetet bízhat meg.",
+     "quote_english": "The registering body may entrust register data processing only to a state body or wholly state-owned company.",
+     "title": "1999. évi LXXXIV. törvény a közúti közlekedési nyilvántartásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99900084.TV",
+     "value": "Processing restricted to state bodies or wholly state-owned companies"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Leválunk a NISZ-ről Ezzel az IdomSoft közvetlen állami tulajdonba és közvetlenül a Digitális Magyarország Ügynökség irányítása alá kerül.",
+     "quote_english": "We separate from NISZ. With this IdomSoft comes into direct state ownership and directly under the control of the Digital Hungary Agency.",
+     "title": "Történetünk | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/rolunk/tortenetunk",
+     "value": "IdomSoft Zrt. (developer/operator of the national registers and DÁP) has been directly state-owned and under the Digital Hungary Agency since 1 July 2024"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "national",
+   "holding_name": "Közúti közlekedési nyilvántartás / Országos Jármű Nyilvántartás (vehicles and driving licences)",
+   "operator": "Minister for Science and Technology (road transport register body); IdomSoft Zrt. (system)",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A Kormány a minisztert jelöli ki a) a bűnügyi nyilvántartási rendszerről, az Európai Unió tagállamainak bíróságai által magyar állampolgárokkal szemben hozott ítéletek nyilvántartásáról,",
+     "quote_english": "The Government designates the minister a) [as body] under the Act on the criminal records system and the register of judgments of EU member state courts against Hungarian citizens",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "Minister of Interior designated as criminal records body"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2009",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az e törvény hatálya alá tartozó nyilvántartások hatósági nyilvántartások. Az e törvény hatálya alá tartozó nyilvántartások – a (2) bekezdésben meghatározott kivétellel – az azokban kezelt adatok tekintetében közhiteles hatósági nyilvántartások.",
+     "quote_english": "Registers under this Act are official registers and, with exceptions, authentic official registers as regards their data.",
+     "title": "2009. évi XLVII. törvény a bűnügyi nyilvántartási rendszerről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A0900047.TV",
+     "value": "Act XLVII of 2009: the registers are authentic official registers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2009",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A bűnügyi nyilvántartó szerv a bűnügyi nyilvántartási rendszerrel kapcsolatos adatfeldolgozási feladatok ellátásával csak államigazgatási szervet vagy kizárólagos állami tulajdonú gazdálkodó szervezetet bízhat meg",
+     "quote_english": "The criminal records body may entrust processing only to a state body or wholly state-owned company",
+     "title": "2009. évi XLVII. törvény a bűnügyi nyilvántartási rendszerről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A0900047.TV",
+     "value": "Processing restricted to state bodies or wholly state-owned companies unless exempted"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "national",
+   "holding_name": "Bűnügyi nyilvántartási rendszer (criminal records system)",
+   "operator": "Minister of Interior (bűnügyi nyilvántartó szerv)",
+   "research_note": "Court case-management/judgment systems (OBH) were not researched in depth; only the criminal records system is sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "1994",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "figyelmeztető jelzés elhelyezését rendelheti el a körözési nyilvántartási rendszer útján a Schengeni Információs Rendszerben",
+     "quote_english": "may order placement of an alert via the wanted persons register system in the Schengen Information System",
+     "title": "1994. évi XXXIV. törvény a Rendőrségről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99400034.TV",
+     "value": "Police place SIS alerts via the wanted-persons register system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "1994",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "törvényben meghatározottak szerint a bűnügyi nyilvántartási rendszer nyilvántartásaiból, valamint a bűnügyi és rendészeti biometrikus adatok nyilvántartásaiból,",
+     "quote_english": "as defined by law, from the registers of the criminal records system and the registers of criminal and law-enforcement biometric data",
+     "title": "1994. évi XXXIV. törvény a Rendőrségről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99400034.TV",
+     "value": "Act XXXIV of 1994 on the Police: police access criminal records and biometric registers"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Rendőrségi nyilvántartások incl. körözési nyilvántartási rendszer (wanted persons)",
+   "operator": "Rendőrség (Hungarian Police)",
+   "research_note": "No public source found on police IT systems' hosting in legislation searched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2012",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a SIS-adatbázis teljes másolatából álló adatállomány (a továbbiakban: nemzeti másolat) és e) a nemzeti infokommunikációs gerinchálózat;",
+     "quote_english": "the data set consisting of a full copy of the SIS database (national copy) and e) the national infocommunication backbone",
+     "title": "2012. évi CLXXXI. törvény a Schengeni Információs Rendszer második generációja keretében történő információcseréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1200181.TV",
+     "value": "N.SIS comprises the full national copy of SIS and the national backbone, among other parts"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2012",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az N.SIS Hivatal a) felelős a nemzeti másolat adatbázisában szereplő adatok kezeléséért,",
+     "quote_english": "The N.SIS Office a) is responsible for handling data in the national copy database",
+     "title": "2012. évi CLXXXI. törvény a Schengeni Információs Rendszer második generációja keretében történő információcseréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1200181.TV",
+     "value": "N.SIS Office is responsible for data in the national copy"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2012",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a Kormány rendeletében kijelölt, a kötelezően biztosítandó központosított alkalmazásüzemeltetési és e rendszert érintő alkalmazásfejlesztési szolgáltatásokat nyújtó központi szolgáltatót vesz igénybe.",
+     "quote_english": "uses the central provider designated by Government decree for mandatory centralised application operation and development services",
+     "title": "2012. évi CLXXXI. törvény a Schengeni Információs Rendszer második generációja keretében történő információcseréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1200181.TV",
+     "value": "NS.CP operation uses a central application-operation provider designated by Government decree"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "N.SIS (Hungarian national SIS system incl. national copy) and SIRENE Iroda",
+   "operator": "N.SIS Hivatal (authority designated by Government decree)",
+   "research_note": "The central provider is not named in the Act; national VIS/EES components not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2004",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "köteles bejelenteni a rendőrség számára a tűzfegyverrel összefüggésben az e törvény alapján a lőfegyverek központi nyilvántartásában nyilvántartandó",
+     "quote_english": "must report to the police the data to be recorded in the central firearms register",
+     "title": "2004. évi XXIV. törvény a lőfegyverekről és lőszerekről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A0400024.TV",
+     "value": "Holders must report firearm data to police for the central firearms register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2004",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A rendőrség által kiadott engedély szükséges: a) a lőfegyver, a lőfegyverdarab (a továbbiakban együtt: lőfegyver),",
+     "quote_english": "A licence issued by the police is required for: a) firearms and firearm parts",
+     "title": "2004. évi XXIV. törvény a lőfegyverekről és lőszerekről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A0400024.TV",
+     "value": "Firearms licences are issued by the police"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Lőfegyverek központi nyilvántartása (central firearms register)",
+   "operator": "Rendőrség (Police)",
+   "research_note": "Hosting not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2010",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Magyarország hivatalos lapja a Magyar Közlöny. A Magyar Közlönyt a kormányzati portálon történő elektronikus dokumentumként való közzététellel kell kiadni, melynek szövegét hitelesnek kell tekinteni.",
+     "quote_english": "Hungary's official gazette is the Magyar Közlöny, published as an electronic document on the government portal; its text is authentic.",
+     "title": "2010. évi CXXX. törvény a jogalkotásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1000130.TV",
+     "value": "Act CXXX of 2010: the Magyar Közlöny is published electronically on the government portal and that text is authentic"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2019",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A Magyar Közlönyt az igazságügyért felelős miniszter által kijelölt felelős szerkesztő vagy a helyettesítésére jogosult személy (a továbbiakban együtt: felelős szerkesztő) szerkeszti, adja ki,",
+     "quote_english": "The Magyar Közlöny is edited and published by the responsible editor appointed by the Minister of Justice",
+     "title": "5/2019. (III. 13.) IM rendelet a Magyar Közlöny kiadásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1900005.IM",
+     "value": "Editor appointed by the Minister of Justice edits and publishes the gazette"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2019",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a Magyar Közlöny Lap- és Könyvkiadó Korlátolt Felelősségű Társaság a felelős szerkesztő rendelkezései szerint közreműködik, ennek keretében üzemelteti a lapszerkesztés alapjául szolgáló informatikai rendszert",
+     "quote_english": "Magyar Közlöny Publishing Ltd contributes under the editor's instructions and operates the IT system underlying the editing",
+     "title": "5/2019. (III. 13.) IM rendelet a Magyar Közlöny kiadásáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1900005.IM",
+     "value": "Magyar Közlöny Lap- és Könyvkiadó Kft. operates the IT system underlying gazette editing"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Magyar Közlöny (official gazette)",
+   "operator": "Editor appointed by the Minister of Justice; Magyar Közlöny Lap- és Könyvkiadó Kft. (runs the editorial IT system)",
+   "research_note": "Hosting location of the gazette publishing system/government portal not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2011",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "közreműködik a kincstári egységes számlák likviditásának kezelésében az ÁKK Zrt.-vel kötött megállapodás alapján,",
+     "quote_english": "participates in managing the liquidity of the single treasury accounts under an agreement with ÁKK Zrt.",
+     "title": "2011. évi CXCV. törvény az államháztartásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1100195.TV",
+     "value": "Treasury participates in managing single treasury account liquidity with ÁKK Zrt."
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2011",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A kincstár a központi költségvetésről szóló törvény szerinti szerkezetben és bontásban havonta közzéteszi a honlapján az államháztartás központi alrendszerébe tartozó költségvetési szervek,",
+     "quote_english": "The Treasury publishes monthly on its website [data of] budgetary bodies of the central subsystem in the structure of the central budget act",
+     "title": "2011. évi CXCV. törvény az államháztartásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1100195.TV",
+     "value": "Act CXCV of 2011 on public finances: Treasury publishes monthly budget execution data"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kincstári egységes számla and central budget execution systems (Magyar Államkincstár)",
+   "operator": "Magyar Államkincstár (Hungarian State Treasury) with ÁKK Zrt.",
+   "research_note": "Hosting of Treasury systems not found in public sources searched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2011",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a bevallásokon alapuló befizetési kötelezettségek teljesítése központosítottan, kizárólag a kincstár által működtetett központosított illetményszámfejtés útján, illetve az abból történő adatszolgáltatás alapján történik.",
+     "quote_english": "fulfilment of return-based payment obligations is centralised, exclusively via the centralised payroll operated by the Treasury and data supplied from it",
+     "title": "2011. évi CXCV. törvény az államháztartásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1100195.TV",
+     "value": "Payroll-based tax obligations are met exclusively through the centralised payroll system operated by the Treasury"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Központosított illetményszámfejtés (centralised public-sector payroll operated by the Treasury)",
+   "operator": "Magyar Államkincstár",
+   "research_note": "System name (KIRA) and hosting not confirmed from retrieved primary sources; armed forces payroll not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2013",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "d) a jelölő szervezetek, jelöltek és listák nyilvántartásával, e) a képviselők nyilvántartásával,",
+     "quote_english": "d) with the register of nominating organisations, candidates and lists, e) with the register of representatives",
+     "title": "2013. évi XXXVI. törvény a választási eljárásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1300036.TV",
+     "value": "NEO processors for candidate/list registers must be state bodies or wholly state-owned companies"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2013",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "g) a választási részvételi adatok, az előzetes és végleges jegyzőkönyvi adatok nyilvántartásával, valamint h) az a)–g) pont szerinti nyilvántartásokhoz történő elektronikus hozzáférést biztosító felhasználói nyilvántartással",
+     "quote_english": "g) with the register of turnout data and preliminary and final protocol data, and h) the user register providing electronic access",
+     "title": "2013. évi XXXVI. törvény a választási eljárásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1300036.TV",
+     "value": "The same restriction covers turnout and preliminary/final protocol (results) records"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Választási Tájékoztatási Rendszer Elsődleges információs portál, ami az országos választások idején kiegészíti a választások hivatalos honlapját, publikálja a választás gyorsan változó adatállományát.",
+     "quote_english": "Election Information System: primary information portal complementing the official election website during national elections, publishing fast-changing election data.",
+     "title": "Termékek | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/termekek",
+     "value": "IdomSoft runs the Election Information System publishing election data"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Nemzeti Választási Rendszer A választási irodák jogszabályban előírt, választásokkal kapcsolatos szakigazgatási feladatainak elvégzését szolgáló rendszer.",
+     "quote_english": "National Election System serving statutory administrative tasks of election offices.",
+     "title": "Termékek | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/termekek",
+     "value": "IdomSoft builds the National Election System"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "hu",
+     "published": "",
+     "publisher": "IdomSoft Informatikai Zrt.",
+     "quote": "Leválunk a NISZ-ről Ezzel az IdomSoft közvetlen állami tulajdonba és közvetlenül a Digitális Magyarország Ügynökség irányítása alá kerül.",
+     "quote_english": "We separate from NISZ. With this IdomSoft comes into direct state ownership and directly under the control of the Digital Hungary Agency.",
+     "title": "Történetünk | IdomSoft Zrt.",
+     "url": "https://www.idomsoft.hu/rolunk/tortenetunk",
+     "value": "IdomSoft Zrt. (developer/operator of the national registers and DÁP) has been directly state-owned and under the Digital Hungary Agency since 1 July 2024"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "national",
+   "holding_name": "Nemzeti Választási Rendszer and Választási Tájékoztatási Rendszer (candidate lists, results)",
+   "operator": "Nemzeti Választási Iroda; IdomSoft Zrt. (systems)",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2013",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az MNB a magyar gazdaság külső stabilitásának megőrzése érdekében hivatalos deviza- és aranytartalékot képez, és kezeli azt.",
+     "quote_english": "To preserve external stability, the MNB establishes and manages official foreign exchange and gold reserves.",
+     "title": "2013. évi CXXXIX. törvény a Magyar Nemzeti Bankról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1300139.TV",
+     "value": "Act CXXXIX of 2013 on the MNB: MNB holds and manages official reserves"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2013",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az MNB felvigyázza a fizetési és elszámolási, valamint az értékpapír-elszámolási rendszereket,",
+     "quote_english": "The MNB oversees payment and clearing and securities settlement systems",
+     "title": "2013. évi CXXXIX. törvény a Magyar Nemzeti Bankról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1300139.TV",
+     "value": "MNB oversees payment, clearing and securities settlement systems"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "",
+     "publisher": "Magyar Nemzeti Bank",
+     "quote": "2020. március 2-án elindult az azonnal fizetési szolgáltatás, amelynek alapvető célja a hazai pénzforgalom hatékonyságának növelése,",
+     "quote_english": "On 2 March 2020 the instant payment service was launched, with the main aim of increasing the efficiency of domestic payments",
+     "title": "Azonnali fizetés",
+     "url": "https://www.mnb.hu/penzforgalom/azonnalifizetes",
+     "value": "Instant payment service launched 2 March 2020"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "holding_name": "MNB systems: official FX and gold reserves; oversight of payment systems (VIBER, instant payments)",
+   "operator": "Magyar Nemzeti Bank",
+   "research_note": "Hosting of VIBER/MNB core systems not found in public sources retrieved.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2017",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a polgári nemzetbiztonsági, honvédelmi, katonai nemzetbiztonsági, rendvédelmi, diplomáciai és konzuli érdeket (a továbbiakban: védett érdek) érintő feladatokat ellátó szervezetek rendszereivel kapcsolatos fejlesztéseire,",
+     "quote_english": "[does not apply] to developments of systems of organisations performing tasks affecting civil national security, defence, military national security, law enforcement, diplomatic and consular interests (protected interests)",
+     "title": "467/2017. (XII. 28.) Korm. rendelet a Kormányzati Adatközpont működéséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1700467.KOR",
+     "value": "Government Data Centre rules do not apply to systems of bodies with national security, defence, law-enforcement, diplomatic and consular tasks whose disclosure could harm protected interests"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2021",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a hírközlési és informatikai hálózat, valamint a légi, meteorológiai, a vegyi és sugárfigyelő jelző- és riasztási rendszer működőképességének biztosításában meghatározott feladatokat,",
+     "quote_english": "tasks defined in ensuring operability of the communications and IT network and of air, meteorological, chemical and radiation warning systems",
+     "title": "2021. évi CXL. törvény a honvédelemről és a Magyar Honvédségről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2100140.TV",
+     "value": "Act CXL of 2021 on national defence and the Hungarian Defence Forces"
+    }
+   ],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "holding_name": "Magyar Honvédség command, control and logistics systems",
+   "operator": "Honvédelmi Minisztérium / Magyar Honvédség",
+   "research_note": "No public source names the defence C2/logistics systems or their hosting; defence systems are exempt from the Government Data Centre decree.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "1995",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az Információs Hivatal, az Alkotmányvédelmi Hivatal, a Nemzetbiztonsági Szakszolgálat, a Nemzeti Információs Központ (a továbbiakban együtt: polgári nemzetbiztonsági szolgálatok), a Katonai Nemzetbiztonsági Szolgálat a Kormány irányítása alatt álló,",
+     "quote_english": "The Information Office, Constitution Protection Office, Special Service for National Security, National Information Centre (civil national security services) and Military National Security Service are, under Government direction,",
+     "title": "1995. évi CXXV. törvény a nemzetbiztonsági szolgálatokról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99500125.TV",
+     "value": "Hungary's civil and military national security services operate under Government direction"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2017",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a polgári nemzetbiztonsági, honvédelmi, katonai nemzetbiztonsági, rendvédelmi, diplomáciai és konzuli érdeket (a továbbiakban: védett érdek) érintő feladatokat ellátó szervezetek rendszereivel kapcsolatos fejlesztéseire,",
+     "quote_english": "[does not apply] to developments of systems of organisations performing tasks affecting civil national security, defence, military national security, law enforcement, diplomatic and consular interests (protected interests)",
+     "title": "467/2017. (XII. 28.) Korm. rendelet a Kormányzati Adatközpont működéséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1700467.KOR",
+     "value": "Government Data Centre rules do not apply to systems of bodies with national security, defence, law-enforcement, diplomatic and consular tasks whose disclosure could harm protected interests"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Nemzetbiztonsági szolgálatok adatkezelése (national security services holdings)",
+   "operator": "Információs Hivatal, Alkotmányvédelmi Hivatal, Katonai Nemzetbiztonsági Szolgálat, Nemzetbiztonsági Szakszolgálat, Nemzeti Információs Központ",
+   "research_note": "Hosting not public; national security systems are excluded from the Government Data Centre decree.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "1994",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "ellátja a segélyhívó számokra érkező hívások, illetve egyéb jelzések fogadásából eredő feladatokat,",
+     "quote_english": "performs the tasks arising from receiving calls and other signals to emergency numbers",
+     "title": "1994. évi XXXIV. törvény a Rendőrségről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99400034.TV",
+     "value": "The police handle calls to emergency numbers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2010",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A kormányzati célú hírközlési szolgáltató a Pro-M Professzionális Mobil és Hálózati Szolgáltató Zártkörűen Működő Részvénytársaság.",
+     "quote_english": "The government-purpose communications provider is Pro-M Professional Mobile and Network Service Provider Zrt.",
+     "title": "346/2010. (XII. 28.) Korm. rendelet a kormányzati célú hálózatokról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1000346.KOR",
+     "value": "Pro-M Zrt. is the government-purpose communications provider"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2010",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "egységes digitális rádiótávközlő rendszer (EDR): a Schengeni Megállapodás Schengenben, 1990. június 19-én aláírt Végrehajtási Egyezményének 132., illetve 44. cikkében meghatározott követelményeket kielégítő mobil rádiótelefon-hálózat;",
+     "quote_english": "unified digital radio system (EDR): mobile radio network meeting the requirements of Articles 132 and 44 of the Schengen Implementing Convention",
+     "title": "346/2010. (XII. 28.) Korm. rendelet a kormányzati célú hálózatokról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1000346.KOR",
+     "value": "EDR: the Schengen-compliant digital government radio network"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2026",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "az Egységes Digitális Rádiótávközlő Rendszer infrastrukturális alapját biztosító szervezet tevékenységét.",
+     "quote_english": "the activity of the organisation providing the infrastructure of the Unified Digital Radio System",
+     "title": "90/2026. (V. 13.) Korm. rendelet a Kormány tagjainak feladat- és hatásköréről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR",
+     "value": "Minister for Science and Technology supervises the organisation providing EDR infrastructure"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "112 segélyhívó fogadás (police) and Egységes Digitális Rádiótávközlő Rendszer (EDR)",
+   "operator": "Rendőrség (112 call taking); Pro-M Zrt. (EDR government communications provider)",
+   "research_note": "Pro-M ownership not confirmed by a retrieved source; PSAP system hosting not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2011",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Lakossági riasztó rendszer: a hivatásos katasztrófavédelmi szerv központi szerve, illetve a hivatásos katasztrófavédelmi szerv területi szervei kezelésében lévő lakossági riasztó, riasztó-tájékoztató, viharjelző rendszerek",
+     "quote_english": "Public alarm system: public alarm, alarm-information and storm warning systems managed by the central and territorial organs of the professional disaster management body",
+     "title": "2011. évi CXXVIII. törvény a katasztrófavédelemről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1100128.TV",
+     "value": "Public alarm system managed by the professional disaster management body"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hu",
+     "published": "2010",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A kormányzati célú hírközlési szolgáltató alakítja ki, működteti és üzemelteti a védelmi és biztonsági igazgatás központi szerv oldaláról a védelmi és biztonsági célú lakossági riasztási rendszer funkcionalitását biztosító infrastruktúrát.",
+     "quote_english": "The government communications provider builds, runs and operates the infrastructure providing the defence and security public alerting function",
+     "title": "346/2010. (XII. 28.) Korm. rendelet a kormányzati célú hálózatokról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1000346.KOR",
+     "value": "Pro-M builds and operates the infrastructure of the defence and security public alerting system"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Lakossági riasztó rendszer and védelmi és biztonsági célú lakossági riasztási rendszer (public warning systems)",
+   "operator": "Hivatásos katasztrófavédelmi szerv (disaster management); Pro-M Zrt. (alerting infrastructure)",
+   "research_note": "National crisis centre systems not researched further.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2007",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "az átviteli rendszerirányító feladata a) a villamosenergia-rendszer zavartalan és biztonságos működtetése, valamint egyensúlyának biztosítása, b) az átviteli hálózat üzemeltetése, karbantartása és fejlesztése,",
+     "quote_english": "the TSO's tasks are a) undisturbed and secure operation and balancing of the power system, b) operation, maintenance and development of the transmission network",
+     "title": "2007. évi LXXXVI. törvény a villamos energiáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A0700086.TV",
+     "value": "Act LXXXVI of 2007: TSO tasks include secure operation and balancing of the power system"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hu",
+     "published": "",
+     "publisher": "MAVIR ZRt.",
+     "quote": "A MAVIR Magyar Villamosenergia-ipari Átviteli Rendszerirányító Zártkörűen Működő Részvénytársaság (MAVIR ZRt.) nagy hagyományokkal bíró, jelentős tapasztalattal rendelkező, mégis fiatalos, dinamikus szervezet.",
+     "quote_english": "MAVIR Hungarian Independent Transmission Operator Company Ltd. is an organisation with long traditions and significant experience.",
+     "title": "Rólunk – MAVIR",
+     "url": "https://mavir.hu/web/mavir/rolunk",
+     "value": "MAVIR ZRt. is the Hungarian transmission system operator"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "MAVIR átviteli rendszerirányítás (transmission system control)",
+   "operator": "MAVIR ZRt.",
+   "research_note": "SCADA/EMS hosting and vendor not found in public sources.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "1995",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az árvíz- és belvízvédekezés országos irányítása a) a rendkívüli védekezési készültség beálltáig a vízügyi igazgatási szervek irányításáért felelős miniszter,",
+     "quote_english": "National direction of flood and inland water defence: a) until extraordinary alert, the minister responsible for water directorates",
+     "title": "1995. évi LVII. törvény a vízgazdálkodásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99500057.TV",
+     "value": "Act LVII of 1995: national direction of flood and inland water defence"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Árvíz- és belvízvédekezés irányítási rendszerei (flood defence control)",
+   "operator": "Vízügyi igazgatási szervek (water directorates) under the responsible minister",
+   "research_note": "No public source retrieved naming flood-defence/water control IT systems or hosting; the national water directorate website returned HTTP 502 during research.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "1997",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A Kormány által rendeletben kijelölt szerv működtetőként ellátja az EESZT, mint az egészségügyi ellátóhálózat informatikai rendszereinek együttműködését biztosító,",
+     "quote_english": "The body designated by government decree operates the EESZT, ensuring interoperability of the health care network's IT systems",
+     "title": "1997. évi XLVII. törvény az egészségügyi és a hozzájuk kapcsolódó személyes adatok kezeléséről és védelméről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99700047.TV",
+     "value": "Act XLVII of 1997: a Government-designated body operates the EESZT"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2022",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A Kormány az egészségügyért felelős minisztert jelöli ki a) az Eüak. 35/A. §-a szerinti EESZT működtetőjeként;",
+     "quote_english": "The Government designates the minister responsible for health a) as EESZT operator",
+     "title": "29/2022. (I. 31.) Korm. rendelet a központi egészséginformatikai szolgáltatásokról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2200029.KOR",
+     "value": "Minister of Health designated as EESZT operator"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2022",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az 1. melléklet szerinti központi egészséginformatikai rendszerek fejlesztési, alkalmazásüzemeltetési, ügyfélszolgálati feladatait a Szolgáltatóközpont útján a miniszter látja el.",
+     "quote_english": "The minister performs development, application operation and helpdesk tasks of central health IT systems through the Service Centre (ESZFK)",
+     "title": "29/2022. (I. 31.) Korm. rendelet a központi egészséginformatikai szolgáltatásokról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2200029.KOR",
+     "value": "Central health IT systems are developed and run via ESZFK Nonprofit Kft. (the Service Centre)"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Elektronikus Egészségügyi Szolgáltatási Tér (EESZT)",
+   "operator": "Minister of Health as EESZT operator, via ESZFK Egészséginformatikai Szolgáltató és Fejlesztési Központ Nonprofit Kft.",
+   "research_note": "Hosting (data centre) of EESZT not stated in retrieved sources; eeszt.gov.hu returned 404 to automated fetch.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "1998",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "az oltott gyermek adatait elektronikus úton haladéktalanul rögzíti az elektronikus járványügyi felügyeleti rendszerbe,",
+     "quote_english": "records the vaccinated child's data without delay electronically in the electronic epidemiological surveillance system",
+     "title": "18/1998. (VI. 3.) NM rendelet a fertőző betegségek és a járványok megelőzése érdekében szükséges járványügyi intézkedésekről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99800018.NM",
+     "value": "Vaccination data are entered into the electronic epidemiological surveillance system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "1997",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A védőoltásra kötelezett és a védőoltásban részesített személyekről nyilvántartást kell vezetni.",
+     "quote_english": "A register must be kept of persons obliged to be vaccinated and persons vaccinated.",
+     "title": "1997. évi CLIV. törvény az egészségügyről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99700154.TV",
+     "value": "Act CLIV of 1997 on health: a register of persons obliged to be/being vaccinated must be kept"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Elektronikus járványügyi felügyeleti rendszer; oltási nyilvántartás",
+   "operator": "Government offices / NNGYK (operator of the electronic system not confirmed)",
+   "research_note": "Operator of the electronic surveillance system not identified in retrieved texts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2018",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az oktatási nyilvántartás működéséért felelős szerv az oktatási nyilvántartásban az 1. § (1) bekezdése szerinti célból a természetes személy alábbi adatait kezeli:",
+     "quote_english": "The body responsible for the education register processes the following data of natural persons for the purposes of s.1(1)",
+     "title": "2018. évi LXXXIX. törvény az oktatási nyilvántartásról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1800089.TV",
+     "value": "Act LXXXIX of 2018: the education register body processes personal data of learners"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2011",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A kiadott érettségi bizonyítványokról az oktatási nyilvántartásról szóló 2018. évi LXXXIX. törvény (a továbbiakban: Onytv.) 1. melléklet V. részében meghatározottak szerint központi nyilvántartást kell vezetni.",
+     "quote_english": "A central register must be kept of issued school-leaving certificates as set out in the Education Register Act.",
+     "title": "2011. évi CXC. törvény a nemzeti köznevelésről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1100190.TV",
+     "value": "Central register of issued school-leaving (matura) certificates"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "Oktatási nyilvántartás (national education register, incl. central register of school-leaving certificates)",
+   "operator": "Body responsible for operating the education register (not named in retrieved text)",
+   "research_note": "Operator (Oktatási Hivatal) and hosting not confirmed in retrieved texts; oktatas.hu unreachable.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "2016",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A KSH jogosult a Hivatalos Statisztikai Szolgálat többi tagjától az általuk kezelt egyedi adatokat hivatalos statisztikai célra átvenni.",
+     "quote_english": "KSH is entitled to take over individual data from other members of the Official Statistical Service for official statistical purposes.",
+     "title": "2016. évi CLV. törvény a hivatalos statisztikáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1600155.TV",
+     "value": "Act CLV of 2016: KSH may take over individual data from other official statistics service members"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2016",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "a népesség adatainak összeírása céljából időszakonként törvényben meghatározott módon népszámlálás, illetve mikrocenzus végrehajtása és az ezekből származó adatok közzététele,",
+     "quote_english": "periodic census or micro-census of the population as defined by law and publication of the resulting data",
+     "title": "2016. évi CLV. törvény a hivatalos statisztikáról",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1600155.TV",
+     "value": "KSH conducts censuses and micro-censuses"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "KSH egyedi adatok and census (népszámlálás) microdata",
+   "operator": "Központi Statisztikai Hivatal (KSH)",
+   "research_note": "Hosting not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2016",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "eljár a jogszabályokban meghatározott vagy delegált országos adatbázisok kezelése, üzemeltetése, változásvezetése és az azokból történő adatszolgáltatás során, b) működteti a nemzeti téradat-infrastruktúra rendszert,",
+     "quote_english": "acts in managing, operating and updating national databases and providing data from them, b) operates the national spatial data infrastructure",
+     "title": "383/2016. (XII. 2.) Korm. rendelet a földművelésügyi hatósági és igazgatási feladatokat ellátó szervek kijelöléséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A1600383.KOR",
+     "value": "Lechner manages national geodata databases and runs the national spatial data infrastructure"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hu",
+     "published": "2023",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A központi címregiszter olyan, a nyilvántartások együttműködési képességét elősegítő központi nyilvántartás, amely a címadatok vonatkozásában információátadási szolgáltatás útján hiteles adatforrást biztosít",
+     "quote_english": "The central address register is a central register promoting interoperability, providing an authentic source of address data via information transfer",
+     "title": "2023. évi CIII. törvény a digitális államról és a digitális szolgáltatások nyújtásának egyes szabályairól",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2300103.TV",
+     "value": "Central address register provides an authentic address source for registers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "2024",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A Kormány a Dáptv. szerinti központi címregiszter működtetéséért felelős szervként a személyiadat- és lakcímnyilvántartásért felelős minisztert jelöli ki.",
+     "quote_english": "The Government designates the minister responsible for the SZL as body operating the central address register.",
+     "title": "320/2024. (XI. 6.) Korm. rendelet a digitális állam megvalósításához kapcsolódó egyes szervezetek kijelöléséről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=A2400320.KOR",
+     "value": "The minister responsible for the SZL operates the central address register"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Állami földmérési/térképészeti adatbázisok, nemzeti téradat-infrastruktúra; központi címregiszter (KCR)",
+   "operator": "Lechner Tudásközpont; minister responsible for the SZL (address register)",
+   "research_note": "Hosting not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hu",
+     "published": "1995",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "A Magyar Nemzeti Levéltár központi általános levéltár, amely vármegyei szervezeti egységekkel (tagintézményekkel) rendelkezik.",
+     "quote_english": "The National Archives of Hungary is the central general archive with county member institutions.",
+     "title": "1995. évi LXVI. törvény a köziratokról, a közlevéltárakról és a magánlevéltári anyag védelméről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99500066.TV",
+     "value": "MNL is the central general archive"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hu",
+     "published": "1995",
+     "publisher": "Wolters Kluwer Hungary – Hatályos Jogszabályok Gyűjteménye (net.jogtar.hu)",
+     "quote": "Az elektronikus formában megőrzött maradandó értékű iratokat jogszabályban meghatározott követelményeknek megfelelően kell átadni az illetékes közlevéltárnak.",
+     "quote_english": "Records of permanent value kept electronically must be transferred to the competent public archive per legal requirements.",
+     "title": "1995. évi LXVI. törvény a köziratokról, a közlevéltárakról és a magánlevéltári anyag védelméről",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=99500066.TV",
+     "value": "Act LXVI of 1995: electronically kept permanent records must be transferred to the competent public archive"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Magyar Nemzeti Levéltár (incl. electronically transferred permanent records)",
+   "operator": "Magyar Nemzeti Levéltár",
+   "research_note": "Hosting of the MNL digital archive not found.",
+   "status": "held"
+  }
+ ],
+ "iso": "HU"
+}

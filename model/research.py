@@ -151,6 +151,14 @@ def archived(url: str) -> str:
 # Staging
 # --------------------------------------------------------------------------- #
 
+def clean_url(url: str) -> str:
+    """The URL an agent cited, as fetchable: HTML entities decoded (agents copy `&amp;` out of page
+    source) and plain http upgraded to https. The claim is admitted only if the quote is found at the
+    https address, so the upgrade can never make an unsupported claim pass."""
+    url = html.unescape(url.strip())
+    return "https://" + url[len("http://"):] if url.startswith("http://") else url
+
+
 def staged(isos: list[str] | None = None, where: Path = STAGING) -> dict[str, dict]:
     out = {}
     for path in sorted(where.glob("*.json")):
@@ -205,7 +213,7 @@ def verify(isos: list[str] | None) -> int:
 
     for iso, doc in docs.items():
         for class_id, c in claims(doc):
-            url = c["url"].strip()
+            url = clean_url(c["url"])
             key = (iso, class_id, c["field"], url)
             if key in existing and existing[key]["match"] in ("exact", "loose"):
                 continue
@@ -230,8 +238,14 @@ def verify(isos: list[str] | None) -> int:
             }
         print(f"{iso}: checked", file=sys.stderr)
 
+    # Keep only rows some current staged claim still cites; a row keyed by a URL an agent no longer
+    # cites (or by its raw, pre-clean form) would otherwise count in the report forever.
+    live = {(iso, cid, c["field"], clean_url(c["url"])) for iso, doc in staged().items()
+            for cid, c in claims(doc)}
+    for iso, doc in staged(None, INDICATOR_STAGING).items():
+        live |= {(iso, cid, c["field"], clean_url(c["url"])) for cid, c in claims(doc)}
     fetch.write_manifest(fetch.merge(manifest, fresh_manifest))
-    write_verification(list(existing.values()))
+    write_verification([r for k, r in existing.items() if k in live or (isos and k[0] not in isos)])
     return report()
 
 
@@ -286,7 +300,7 @@ def admit() -> int:
                 continue
             good = {}
             for c in h.get("claims", []):
-                v = ok.get((iso, cls, c["field"], c["url"].strip()))
+                v = ok.get((iso, cls, c["field"], clean_url(c["url"])))
                 if v and c["field"] not in good:
                     good[c["field"]] = (c, v)
             status = h.get("status")
@@ -372,9 +386,9 @@ def admit_indicators(ok: dict, reg: dict, cites: dict) -> int:
         for ind in doc.get("indicators", []):
             if ind.get("value") not in ("yes", "partial", "no"):
                 continue
-            good = [(c, ok[(iso, f"indicator:{ind['id']}", "indicator", c["url"].strip())])
+            good = [(c, ok[(iso, f"indicator:{ind['id']}", "indicator", clean_url(c["url"]))])
                     for c in ind.get("claims", [])
-                    if (iso, f"indicator:{ind['id']}", "indicator", c["url"].strip()) in ok]
+                    if (iso, f"indicator:{ind['id']}", "indicator", clean_url(c["url"])) in ok]
             if not good:
                 continue
             claim = f"indicator:{iso}:{ind['id']}"

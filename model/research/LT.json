@@ -1,0 +1,801 @@
+{
+ "extra_holdings": [],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "1992-01-23",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Lietuvos Respublikos gyventojų registrą (toliau – Gyventojų registras) steigia ir jo nuostatus tvirtina Lietuvos Respublikos Vyriausybė",
+     "quote_english": "The Population Register of the Republic of Lithuania (the Population Register) is established, and its regulations approved, by the Government of the Republic of Lithuania",
+     "title": "Lietuvos Respublikos gyventojų registro įstatymas Nr. I-2237 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/TAIS.2507/XPcBmEMGTH/",
+     "value": "Lietuvos Respublikos gyventojų registras (Population Register of the Republic of Lithuania), established by the Government"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "lt",
+     "published": "1992-01-23",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Šis įstatymas nustato Lietuvos Respublikos gyventojų registro steigimo ir tvarkymo tvarką, jo objektus, jame tvarkomus duomenis ir šių duomenų naudojimo tvarką",
+     "quote_english": "This law lays down the procedure for establishing and managing the Population Register of the Republic of Lithuania, its objects, the data processed in it and the procedure for using those data",
+     "title": "Lietuvos Respublikos gyventojų registro įstatymas Nr. I-2237 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/TAIS.2507/XPcBmEMGTH/",
+     "value": "Law on the Population Register of the Republic of Lithuania No. I-2237"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "1992-01-23",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Asmens kodas – unikali vienuolikos dešimtainių skaitmenų seka asmeniui identifikuoti, registrų ir valstybės informacinių sistemų sąveikai užtikrinti.",
+     "quote_english": "Personal code - a unique sequence of eleven decimal digits for identifying a person and ensuring interoperability of registers and state information systems.",
+     "title": "Lietuvos Respublikos gyventojų registro įstatymas Nr. I-2237 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/TAIS.2507/XPcBmEMGTH/",
+     "value": "The register holds the 11-digit national personal code (asmens kodas)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "1992-01-23",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Gyventojų registro valdytoja yra Lietuvos Respublikos teisingumo ministerija, kuri yra ir Gyventojų registro asmens duomenų valdytoja.",
+     "quote_english": "The controller of the Population Register is the Ministry of Justice of the Republic of Lithuania, which is also the personal data controller of the Population Register.",
+     "title": "Lietuvos Respublikos gyventojų registro įstatymas Nr. I-2237 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/TAIS.2507/XPcBmEMGTH/",
+     "value": "Controller: Ministry of Justice of the Republic of Lithuania"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Registro tvarkytojas yra valstybės įmonė Registrų centras (toliau – Registrų centras), kuris yra ir asmens duomenų tvarkytojas.",
+     "quote_english": "The processor of the Register is the state enterprise Centre of Registers (Registrų centras), which is also the personal data processor.",
+     "title": "Dėl Lietuvos Respublikos gyventojų registro nuostatų patvirtinimo, Government Resolution No. 1495 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/478d0920903111e48028e9b85331c55d/jJVblsLNKm/",
+     "value": "Processor: state enterprise Registrų centras (Centre of Registers)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "2015-12-29",
+     "publisher": "State enterprise Registrų centras (published on e-seimas)",
+     "quote": "MEPIS valdytojas yra valstybės įmonė Registrų centras, kuri yra ir MEPIS duomenų valdytojas.",
+     "quote_english": "The controller of MEPIS is the state enterprise Centre of Registers, which is also the MEPIS data controller.",
+     "title": "Dėl Metrikacijos paslaugų informacinės sistemos nuostatų patvirtinimo, Order No. V-296",
+     "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/cbda7830af3811e59010bea026bdb259/",
+     "value": "Metrikacijos paslaugų informacinė sistema (MEPIS, Civil Registration Services Information System), controlled by Registrų centras"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Lietuvos Respublikos gyventojų registras (Population Register of the Republic of Lithuania)",
+   "operator": "Ministry of Justice (controller); state enterprise Registrų centras (processor)",
+   "research_note": "No public source found naming the hosting data centre of the Population Register; registrucentras.lt blocked automated retrieval.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "2018",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "MIGRIS tikslas – informacinių technologijų priemonėmis tvarkyti duomenis, kurių reikia sprendimams dėl užsieniečių teisinės padėties Lietuvos Respublikoje nustatymo, Lietuvos Respublikos pilietybės įgijimo priimti, tvarkyti Lietuvos Respublikos pilietybę ir asmens tapatybę patvirtinančių dokumentų keitimo prašymų duomenis",
+     "quote_english": "The purpose of MIGRIS is to process by IT means the data needed for decisions on the legal status of aliens in Lithuania and acquisition of Lithuanian citizenship, and to process data of applications to replace documents certifying Lithuanian citizenship and identity",
+     "title": "Dėl Lietuvos migracijos informacinės sistemos nuostatų patvirtinimo, Order of the Minister of the Interior No. 1V-149 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/c22cab41181411e88a05839ea3846d8e/jIXMiiPlhc/",
+     "value": "MIGRIS processes applications for citizens' identity documents as well as aliens' status"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "2018",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "veido atvaizdo biometrinės paieškos sistema, kurios pagrindinės funkcijos – vykdyti veido atvaizdo biometrinę paiešką, grąžinti paieškos rezultatus ir perduoti juos MIGRIS patikros ar nagrinėjimo procesams",
+     "quote_english": "facial image biometric search system, whose main functions are to perform biometric facial image searches, return search results and pass them to MIGRIS checking or examination processes",
+     "title": "Dėl Lietuvos migracijos informacinės sistemos nuostatų patvirtinimo, Order of the Minister of the Interior No. 1V-149 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/c22cab41181411e88a05839ea3846d8e/jIXMiiPlhc/",
+     "value": "MIGRIS facial-image biometric search system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "2018",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "MIGRIS valdytojas yra Lietuvos Respublikos vidaus reikalų ministerija, kuri yra ir MIGRIS asmens duomenų valdytojas.",
+     "quote_english": "The controller of MIGRIS is the Ministry of the Interior of the Republic of Lithuania, which is also the MIGRIS personal data controller.",
+     "title": "Dėl Lietuvos migracijos informacinės sistemos nuostatų patvirtinimo, Order of the Minister of the Interior No. 1V-149 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/c22cab41181411e88a05839ea3846d8e/jIXMiiPlhc/",
+     "value": "Controller: Ministry of the Interior"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "lt",
+     "published": "2015",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Pasuose elektroniniu būdu fiksuojami šio straipsnio 1 dalyje ir 4 dalies 5 punkte nurodyti asmens duomenys, taip pat piliečio gimimo vieta ir biometriniai duomenys tapatybei patvirtinti – veido atvaizdas ir dviejų pirštų atspaudai.",
+     "quote_english": "Passports electronically record the personal data referred to in paragraph 1 and point 5 of paragraph 4 of this article, as well as the citizen's place of birth and biometric data for identity verification - a facial image and two fingerprints.",
+     "title": "Lietuvos Respublikos asmens tapatybės kortelės ir paso įstatymas Nr. XII-1519 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/f26839f08f5011e48028e9b85331c55d/OCAOEnkStv/",
+     "value": "Law on the Identity Card and Passport No. XII-1519: facial image and two fingerprints recorded in passports"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Lietuvos migracijos informacinė sistema (MIGRIS) facial-image biometric search system",
+   "operator": "Ministry of the Interior (controller); Migration Department and IRD under the Ministry of the Interior (processors)",
+   "research_note": "No public source found on MIGRIS hosting; ird.lt pages render client-side and the audit office site blocked retrieval.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "2018",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "pirštų atspaudų biometrinės paieškos sistema, kurios pagrindinės funkcijos – vykdyti pirštų atspaudų biometrinę paiešką, grąžinti paieškos rezultatus ir perduoti juos MIGRIS patikros ar nagrinėjimo procesams",
+     "quote_english": "fingerprint biometric search system, whose main functions are to perform fingerprint biometric searches, return search results and pass them to MIGRIS checking or examination processes",
+     "title": "Dėl Lietuvos migracijos informacinės sistemos nuostatų patvirtinimo, Order of the Minister of the Interior No. 1V-149 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/c22cab41181411e88a05839ea3846d8e/jIXMiiPlhc/",
+     "value": "MIGRIS fingerprint biometric search system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "2018",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "MIGRIS valdytojas yra Lietuvos Respublikos vidaus reikalų ministerija, kuri yra ir MIGRIS asmens duomenų valdytojas.",
+     "quote_english": "The controller of MIGRIS is the Ministry of the Interior of the Republic of Lithuania, which is also the MIGRIS personal data controller.",
+     "title": "Dėl Lietuvos migracijos informacinės sistemos nuostatų patvirtinimo, Order of the Minister of the Interior No. 1V-149 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/c22cab41181411e88a05839ea3846d8e/jIXMiiPlhc/",
+     "value": "Controller: Ministry of the Interior"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "lt",
+     "published": "2015",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Asmens tapatybės kortelėse elektroniniu būdu fiksuojami šio straipsnio 1 dalyje ir 4 dalies 5 punkte nurodyti asmens duomenys, piliečio biometriniai duomenys tapatybei patvirtinti – veido atvaizdas ir dviejų pirštų atspaudai",
+     "quote_english": "Identity cards electronically record the personal data referred to in paragraph 1 and point 5 of paragraph 4 of this article and the citizen's biometric data for identity verification - a facial image and two fingerprints",
+     "title": "Lietuvos Respublikos asmens tapatybės kortelės ir paso įstatymas Nr. XII-1519 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/f26839f08f5011e48028e9b85331c55d/OCAOEnkStv/",
+     "value": "Law on the Identity Card and Passport No. XII-1519: two fingerprints recorded in ID cards"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "MIGRIS fingerprint biometric search system",
+   "operator": "Ministry of the Interior (controller)",
+   "research_note": "Whether passport/ID fingerprints are retained centrally beyond MIGRIS processing was not established from an accessible source; hosting not found.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "research_note": "Civil status acts are handled via the Population Register and MEPIS (see civil_registry), but no accessible source was found describing a central archive of scanned birth certificates or naturalisation decrees.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "2018",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Lietuvos Respublikos paso ar asmens tapatybės kortelės paskelbimo negaliojančiu data ir pagrindas",
+     "quote_english": "date and grounds of declaring a Lithuanian passport or identity card invalid",
+     "title": "Dėl Lietuvos migracijos informacinės sistemos nuostatų patvirtinimo, Order of the Minister of the Interior No. 1V-149 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/c22cab41181411e88a05839ea3846d8e/jIXMiiPlhc/",
+     "value": "MIGRIS holds the date and grounds of invalidation of passports and ID cards"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "2018",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Lietuvos Respublikos piliečio asmens tapatybę ir pilietybę patvirtinančio dokumento duomenys",
+     "quote_english": "data of the document certifying the identity and citizenship of a citizen of the Republic of Lithuania",
+     "title": "Dėl Lietuvos migracijos informacinės sistemos nuostatų patvirtinimo, Order of the Minister of the Interior No. 1V-149 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/c22cab41181411e88a05839ea3846d8e/jIXMiiPlhc/",
+     "value": "MIGRIS data category: identity and citizenship documents of Lithuanian citizens"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "2018",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Migracijos departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (toliau – Migracijos departamentas);",
+     "quote_english": "Migration Department under the Ministry of the Interior of the Republic of Lithuania (hereinafter - Migration Department);",
+     "title": "Dėl Lietuvos migracijos informacinės sistemos nuostatų patvirtinimo, Order of the Minister of the Interior No. 1V-149 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/c22cab41181411e88a05839ea3846d8e/jIXMiiPlhc/",
+     "value": "Migration Department under the Ministry of the Interior is a MIGRIS processor"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "MIGRIS records of Lithuanian passports and identity cards",
+   "operator": "Migration Department under the Ministry of the Interior (processor); Ministry of the Interior (controller)",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "2025-01-21",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Nacionalinės elektroninės atpažinties informacinės sistemos valdytojas ir duomenų valdytojas yra Valstybės skaitmeninių sprendimų agentūra.",
+     "quote_english": "The controller and data controller of the National Electronic Identification Information System is the State Digital Solutions Agency.",
+     "title": "Dėl Nacionalinės elektroninės atpažinties informacinės sistemos pertvarkymo ir nuostatų patvirtinimo, Order No. T-4(2025)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/3aa41f12d83711ef8658d66412ddcc51/cjatyKBGVe/",
+     "value": "NETAIS is controlled by the State Digital Solutions Agency (VSSA)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "2021-08-09",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "elektroninių paslaugų gavėjų tapatumo nustatymo duomenų paketų perdavimo VIISP paslaugų gavėjui (toliau – tapatybės nustatymo paslauga);",
+     "quote_english": "transmission of identification data packages of electronic service recipients to the VIISP service recipient (the identification service);",
+     "title": "Dėl Valstybės informacinių išteklių sąveikumo platformos modernizavimo ir nuostatų patvirtinimo, Order No. 4-886 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/99d5f6b2f94811ebb4af84e751d2e0c9/kgJxRxjykY/",
+     "value": "VIISP provides the identification (authentication) service for e-government services"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "lt",
+     "published": "2018-04-26",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Šio įstatymo paskirtis – sudaryti teisinį pagrindą, kad Lietuvos Respublikoje efektyviai veiktų elektroninė atpažintis ir patikimumo užtikrinimo paslaugų rinka, kad būtų kuo geriau apsaugoti šių paslaugų naudotojų interesai.",
+     "quote_english": "The purpose of this law is to create a legal basis for electronic identification and the trust services market to function effectively in Lithuania, so that the interests of users of these services are protected as well as possible.",
+     "title": "Lietuvos Respublikos elektroninės atpažinties ir elektroninių operacijų patikimumo užtikrinimo paslaugų įstatymas Nr. XIII-1120 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/994308704dfa11e88525a4bc7611b788/mULKUgsBdp/",
+     "value": "Law on Electronic Identification and Trust Services for Electronic Transactions No. XIII-1120"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "lt",
+     "published": "",
+     "publisher": "Ryšių reguliavimo tarnyba (Communications Regulatory Authority, RRT)",
+     "quote": "Kvalifikuotus elektroninio parašo sertifikatus asmens tapatybės kortelėse sudaro Asmens dokumentų išrašymo centras prie LR vidaus reikalų ministerijos.",
+     "quote_english": "Qualified electronic signature certificates on identity cards are created by the Identity Documents Personalisation Centre under the Ministry of the Interior.",
+     "title": "Kvalifikuoti sertifikatai",
+     "url": "https://rrt.lt/veiklos-sritys/skaitmenine-erdve/patikimumo-uztikrinimo-paslaugos/kvalifikuoti-sertifikatai",
+     "value": "Qualified signature certificates on ID cards are created by the Identity Documents Personalisation Centre under the Ministry of the Interior"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "lt",
+     "published": "",
+     "publisher": "Ryšių reguliavimo tarnyba (Communications Regulatory Authority, RRT)",
+     "quote": "Lietuvoje galima įsigyti ir Estijos bendrovės „SK ID Solutions AS“ sudarytus kvalifikuotus elektroninio parašo sertifikatus, kurie platinami kartu su Smart-ID programėle arba kartu su šių operatorių SIM kortelėmis:",
+     "quote_english": "In Lithuania one can also obtain qualified electronic signature certificates created by the Estonian company SK ID Solutions AS, distributed with the Smart-ID app or with SIM cards of these operators:",
+     "title": "Kvalifikuoti sertifikatai",
+     "url": "https://rrt.lt/veiklos-sritys/skaitmenine-erdve/patikimumo-uztikrinimo-paslaugos/kvalifikuoti-sertifikatai",
+     "value": "Smart-ID and SIM-based certificates are issued by the Estonian company SK ID Solutions AS"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "foreign_dependency",
+     "language": "lt",
+     "published": "2026-04-28",
+     "publisher": "LRT (Lithuanian National Radio and Television), BNS",
+     "quote": "Lietuvoje didžiajai daugumai gyventojų naudojantis vieno tiekėjo – Estijos bendrovės „SK ID Solutions“ išduotais kvalifikuotai e. parašo sertifikatais, kurie naudojami kartu su „Smart-ID“ programėle ir SIM kortelėmis, Ryšių reguliavimo tarnyba (RRT) įspėja matanti atsparumo rizikų.",
+     "quote_english": "With the vast majority of residents using qualified e-signature certificates issued by a single supplier, the Estonian company SK ID Solutions, used with the Smart-ID app and SIM cards, the Communications Regulatory Authority (RRT) warns that it sees resilience risks.",
+     "title": "Beveik 92 proc. e. parašo sertifikatų Lietuvoje išduoda „SK ID Solutions“, RRT mato rizikų",
+     "url": "https://www.lrt.lt/naujienos/verslas/4/2912350/beveik-92-proc-e-paraso-sertifikatu-lietuvoje-isduoda-sk-id-solutions-rrt-mato-riziku",
+     "value": "The regulator warns of resilience risk from reliance on the single Estonian supplier SK ID Solutions"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "foreign_dependency",
+     "language": "lt",
+     "published": "2026-04-28",
+     "publisher": "LRT (Lithuanian National Radio and Television), BNS",
+     "quote": "RRT duomenimis, „SK ID Solutions AS“ išduoti sertifikatai Lietuvoje pernai sudarė 91,9 proc. visų galiojusių sertifikatų, o mobiliųjų sprendimų segmente – 98,9 procento.",
+     "quote_english": "According to RRT, certificates issued by SK ID Solutions AS accounted last year for 91.9% of all valid certificates in Lithuania, and 98.9% in the mobile solutions segment.",
+     "title": "Beveik 92 proc. e. parašo sertifikatų Lietuvoje išduoda „SK ID Solutions“, RRT mato rizikų",
+     "url": "https://www.lrt.lt/naujienos/verslas/4/2912350/beveik-92-proc-e-paraso-sertifikatu-lietuvoje-isduoda-sk-id-solutions-rrt-mato-riziku",
+     "value": "SK ID Solutions AS issued 91.9% of all valid certificates in 2025 and 98.9% in the mobile segment"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "record_count",
+     "language": "lt",
+     "published": "2026-04-28",
+     "publisher": "LRT (Lithuanian National Radio and Television), BNS",
+     "quote": "RRT duomenimis, 2025 metų pabaigoje galiojo 3,26 mln. kvalifikuotų e. parašo sertifikatų (vienas asmuo gali turėti daugiau nei vieną sertifikatą)",
+     "quote_english": "According to RRT, at the end of 2025 there were 3.26 million valid qualified e-signature certificates (one person may have more than one certificate)",
+     "title": "Beveik 92 proc. e. parašo sertifikatų Lietuvoje išduoda „SK ID Solutions“, RRT mato rizikų",
+     "url": "https://www.lrt.lt/naujienos/verslas/4/2912350/beveik-92-proc-e-paraso-sertifikatu-lietuvoje-isduoda-sk-id-solutions-rrt-mato-riziku",
+     "value": "3.26 million valid qualified e-signature certificates at end of 2025"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "record_count",
+     "language": "lt",
+     "published": "2026-04-28",
+     "publisher": "LRT (Lithuanian National Radio and Television), BNS",
+     "quote": "2025 metais RRT prižiūrimomis e. atpažinties priemonėmis naudojosi apie 2,3 mln. naudotojų, o bendras autentifikavimo ir pasirašymo veiksmų skaičius siekė 357 milijonus.",
+     "quote_english": "In 2025 about 2.3 million users used eID means supervised by RRT, and the total number of authentication and signing actions reached 357 million.",
+     "title": "Beveik 92 proc. e. parašo sertifikatų Lietuvoje išduoda „SK ID Solutions“, RRT mato rizikų",
+     "url": "https://www.lrt.lt/naujienos/verslas/4/2912350/beveik-92-proc-e-paraso-sertifikatu-lietuvoje-isduoda-sk-id-solutions-rrt-mato-riziku",
+     "value": "About 2.3 million users of supervised eID means in 2025; 357 million authentication and signing actions"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "mixed",
+   "holding_name": "eID / Mobile-ID / Smart-ID; Nacionalinė elektroninės atpažinties informacinė sistema (NETAIS) and VIISP identification service",
+   "operator": "State Digital Solutions Agency (NETAIS); Identity Documents Personalisation Centre (ID-card certificates); SK ID Solutions AS (Smart-ID/Mobile-ID certificates)",
+   "research_note": "ID-card certificates are issued by a national body; the regulator reports that 91.9% of valid qualified certificates are issued by the Estonian company SK ID Solutions AS.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "2021-08-09",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "elektroninių paslaugų gavėjo tapatybės nustatymo data ir laikas;",
+     "quote_english": "date and time of identification of the electronic service recipient;",
+     "title": "Dėl Valstybės informacinių išteklių sąveikumo platformos modernizavimo ir nuostatų patvirtinimo, Order No. 4-886 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/99d5f6b2f94811ebb4af84e751d2e0c9/kgJxRxjykY/",
+     "value": "VIISP records the date and time of identification of each e-service recipient"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "2021-08-09",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "VIISP valdytoja – Lietuvos Respublikos ekonomikos ir inovacijų ministerija.",
+     "quote_english": "VIISP controller - Ministry of the Economy and Innovation of the Republic of Lithuania.",
+     "title": "Dėl Valstybės informacinių išteklių sąveikumo platformos modernizavimo ir nuostatų patvirtinimo, Order No. 4-886 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/99d5f6b2f94811ebb4af84e751d2e0c9/kgJxRxjykY/",
+     "value": "VIISP controller: Ministry of the Economy and Innovation"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "2021-08-09",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "pagrindinis VIISP tvarkytojas – Informacinės visuomenės plėtros komitetas (toliau – Komitetas);",
+     "quote_english": "main VIISP processor - Information Society Development Committee (the Committee);",
+     "title": "Dėl Valstybės informacinių išteklių sąveikumo platformos modernizavimo ir nuostatų patvirtinimo, Order No. 4-886 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/99d5f6b2f94811ebb4af84e751d2e0c9/kgJxRxjykY/",
+     "value": "Main VIISP processor: Information Society Development Committee"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "lt",
+     "published": "2021-08-09",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "VIISP steigimo teisinis pagrindas yra Lietuvos Respublikos valstybės informacinių išteklių valdymo įstatymo 39 straipsnio 1 dalis.",
+     "quote_english": "The legal basis for establishing VIISP is Article 39(1) of the Law on the Management of State Information Resources of the Republic of Lithuania.",
+     "title": "Dėl Valstybės informacinių išteklių sąveikumo platformos modernizavimo ir nuostatų patvirtinimo, Order No. 4-886 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/99d5f6b2f94811ebb4af84e751d2e0c9/kgJxRxjykY/",
+     "value": "Article 39(1) of the Law on the Management of State Information Resources"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "holding_name": "Valstybės informacinių išteklių sąveikumo platforma (VIISP) identification records",
+   "operator": "Ministry of the Economy and Innovation (controller); Information Society Development Committee (main processor, since reorganised into VSSA)",
+   "research_note": "VIISP hosting not stated in accessible sources.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "2022-07-21",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Pagal Gyventojų registro duomenis yra sudaromas Asmenų, turinčių teisę rinkti, sąrašas, į kurį turi būti įrašytas kiekvienas asmuo, turintis teisę rinkti bent vienuose šiame kodekse nurodytuose rinkimuose",
+     "quote_english": "On the basis of Population Register data, the List of Persons Entitled to Vote is compiled, in which every person entitled to vote in at least one election specified in this code must be entered",
+     "title": "Lietuvos Respublikos rinkimų kodeksas, approved by Constitutional Law No. XIV-1381 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/44e06821075711edbfe9c72e552dd5bd/sCATgDoRHG/",
+     "value": "List of Persons Entitled to Vote, compiled from Population Register data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "2022-07-21",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Asmenų, turinčių teisę rinkti, sąrašą Vyriausiosios rinkimų komisijos informacinėje sistemoje sudaro ir nuolat tvarko Vyriausioji rinkimų komisija.",
+     "quote_english": "The List of Persons Entitled to Vote is compiled and continuously maintained by the Central Electoral Commission in the Commission's information system.",
+     "title": "Lietuvos Respublikos rinkimų kodeksas, approved by Constitutional Law No. XIV-1381 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/44e06821075711edbfe9c72e552dd5bd/sCATgDoRHG/",
+     "value": "Compiled and maintained by the Central Electoral Commission in its information system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "lt",
+     "published": "2022-07-21",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Rinkimams rengti ir vykdyti sudaromi šie rinkėjų sąrašai:",
+     "quote_english": "The following voter lists are drawn up to prepare and conduct elections:",
+     "title": "Lietuvos Respublikos rinkimų kodeksas, approved by Constitutional Law No. XIV-1381 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/44e06821075711edbfe9c72e552dd5bd/sCATgDoRHG/",
+     "value": "Electoral Code of the Republic of Lithuania, Art. 53-55 (voter lists)"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Asmenų, turinčių teisę rinkti, sąrašas (List of Persons Entitled to Vote)",
+   "operator": "Vyriausioji rinkimų komisija (Central Electoral Commission)",
+   "research_note": "vrk.lt blocked automated retrieval; no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "2022-12-20",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "nustato Asmens dokumentų išrašymo centro prie Lietuvos Respublikos vidaus reikalų ministerijos (toliau – Asmens dokumentų išrašymo centras), kaip kvalifikuoto patikimumo užtikrinimo paslaugų teikėjo (toliau – patikimumo užtikrinimo paslaugų teikėjas), veiklos taisykles, sudarant ir tvarkant sertifikatus",
+     "quote_english": "sets out the operating rules of the Identity Documents Personalisation Centre under the Ministry of the Interior, as a qualified trust service provider, when creating and managing certificates",
+     "title": "Dėl Sertifikavimo veiklos nuostatų 2022 patvirtinimo, Order No. 1-89",
+     "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/848c3ec0823311edbdcebd68a7a0df7e/",
+     "value": "ADIC acts as a qualified trust service provider under eIDAS"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "2022-12-20",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "pirmojo lygio, hierarchijos viršuje esanti sertifikavimo tarnyba, kurios viešojo rakto sertifikatui spauduoti naudojamas pačios tarnybos privatusis kriptografinis raktas",
+     "quote_english": "a first-level certification authority at the top of the hierarchy, whose own private cryptographic key is used to sign its public key certificate",
+     "title": "Dėl Sertifikavimo veiklos nuostatų 2022 patvirtinimo, Order No. 1-89",
+     "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/848c3ec0823311edbdcebd68a7a0df7e/",
+     "value": "ADIC Root CA, the first-level root certification authority"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "lt",
+     "published": "2018-04-26",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Šio įstatymo paskirtis – sudaryti teisinį pagrindą, kad Lietuvos Respublikoje efektyviai veiktų elektroninė atpažintis ir patikimumo užtikrinimo paslaugų rinka, kad būtų kuo geriau apsaugoti šių paslaugų naudotojų interesai.",
+     "quote_english": "The purpose of this law is to create a legal basis for electronic identification and the trust services market to function effectively in Lithuania, so that the interests of users of these services are protected as well as possible.",
+     "title": "Lietuvos Respublikos elektroninės atpažinties ir elektroninių operacijų patikimumo užtikrinimo paslaugų įstatymas Nr. XIII-1120 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/994308704dfa11e88525a4bc7611b788/mULKUgsBdp/",
+     "value": "Law on Electronic Identification and Trust Services No. XIII-1120"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "lt",
+     "published": "2015",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "taip pat gali būti fiksuojami asmens elektroninės atpažinties sertifikatas ir kvalifikuotas elektroninio parašo sertifikatas.",
+     "quote_english": "the person's electronic authentication certificate and qualified electronic signature certificate may also be recorded.",
+     "title": "Lietuvos Respublikos asmens tapatybės kortelės ir paso įstatymas Nr. XII-1519 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/f26839f08f5011e48028e9b85331c55d/OCAOEnkStv/",
+     "value": "Law on the Identity Card and Passport: ID cards may carry authentication and qualified signature certificates"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "ADIC Root CA (Asmens dokumentų išrašymo centro šakninė sertifikavimo tarnyba)",
+   "operator": "Asmens dokumentų išrašymo centras prie VRM (Identity Documents Personalisation Centre under the Ministry of the Interior)",
+   "research_note": "Hosting of CA key material not stated in accessible sources.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "2018",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "MIGRIS tikslas – informacinių technologijų priemonėmis tvarkyti duomenis, kurių reikia sprendimams dėl užsieniečių teisinės padėties Lietuvos Respublikoje nustatymo, Lietuvos Respublikos pilietybės įgijimo priimti, tvarkyti Lietuvos Respublikos pilietybę ir asmens tapatybę patvirtinančių dokumentų keitimo prašymų duomenis",
+     "quote_english": "The purpose of MIGRIS is to process by IT means the data needed for decisions on the legal status of aliens in Lithuania and acquisition of Lithuanian citizenship, and to process data of applications to replace citizenship and identity documents",
+     "title": "Dėl Lietuvos migracijos informacinės sistemos nuostatų patvirtinimo, Order of the Minister of the Interior No. 1V-149 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/c22cab41181411e88a05839ea3846d8e/jIXMiiPlhc/",
+     "value": "MIGRIS processes data for decisions on the legal status of aliens in Lithuania"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "2018",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "MIGRIS valdytojas yra Lietuvos Respublikos vidaus reikalų ministerija, kuri yra ir MIGRIS asmens duomenų valdytojas.",
+     "quote_english": "The controller of MIGRIS is the Ministry of the Interior of the Republic of Lithuania, which is also the MIGRIS personal data controller.",
+     "title": "Dėl Lietuvos migracijos informacinės sistemos nuostatų patvirtinimo, Order of the Minister of the Interior No. 1V-149 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/c22cab41181411e88a05839ea3846d8e/jIXMiiPlhc/",
+     "value": "Controller: Ministry of the Interior"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "2018",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Migracijos departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (toliau – Migracijos departamentas);",
+     "quote_english": "Migration Department under the Ministry of the Interior of the Republic of Lithuania (hereinafter - Migration Department);",
+     "title": "Dėl Lietuvos migracijos informacinės sistemos nuostatų patvirtinimo, Order of the Minister of the Interior No. 1V-149 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/c22cab41181411e88a05839ea3846d8e/jIXMiiPlhc/",
+     "value": "Processor: Migration Department under the Ministry of the Interior"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Lietuvos migracijos informacinė sistema (MIGRIS, Lithuanian Migration Information System)",
+   "operator": "Ministry of the Interior (controller); Migration Department (processor)",
+   "research_note": "No hosting source found for MIGRIS.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched to verbatim-source standard (run paused); candidate: VMI tax accounting information system regulations on e-seimas.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched to verbatim-source standard; muitine.lt did not respond to automated retrieval.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; sodra.lt blocked automated retrieval. Candidate: SPIS regulations (e-seimas TAIS.321513) and Sodra IS regulations.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; vlk.lt blocked automated retrieval. Candidate: SVEIDRA regulations order 1K-136 on e-seimas.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; registrucentras.lt blocked automated retrieval. Candidate: Real Property Register law on e-seimas.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet quoted; candidate: Juridinių asmenų registro nuostatai, Government Resolution No. 1407 (e-seimas TAIS.221119).",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet quoted; candidate: JADIS (Juridinių asmenų dalyvių informacinė sistema) regulations, order 1R-231 as amended by 1R-58.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; candidate: Road Vehicles Register operated by Regitra.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; teismai.lt blocked automated retrieval. Candidates: IKNR (register of suspects, accused and convicted persons, IRD) and LITEKO.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; policija.lrv.lt blocked automated retrieval.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; vsat.lrv.lt blocked automated retrieval. Candidate: national Schengen information system (IRD).",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; Ginklų registras is listed among IRD systems on ird.lt but the page is rendered client-side.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet quoted; Teisės aktų registras (e-tar.lt) blocked automated retrieval.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; finmin.lrv.lt blocked. Candidate: order 1K-180 implementing the State Treasury Law (e-seimas 39df6ee2edd311edb649a2a873fdbdfd).",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet quoted; candidate: Valstybės tarnybos valdymo informacinė sistema (VATIS) regulations 27V-8 (e-seimas TAIS.290698).",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "lt",
+     "published": "2022-07-21",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "patikrina, ar Vyriausiosios rinkimų komisijos informacinėje sistemoje skelbiami rinkimų apygardos rinkimų apylinkių rezultatai sutampa su rinkėjų balsų skaičiavimo protokolų duomenimis",
+     "quote_english": "checks whether the polling-district results of the constituency published in the Central Electoral Commission information system match the data of the vote-counting protocols",
+     "title": "Lietuvos Respublikos rinkimų kodeksas, approved by Constitutional Law No. XIV-1381 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/44e06821075711edbfe9c72e552dd5bd/sCATgDoRHG/",
+     "value": "The VRK information system publishes polling-district results checked against counting protocols"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "lt",
+     "published": "2022-07-21",
+     "publisher": "Seimas of the Republic of Lithuania (Register of Legal Acts, e-seimas)",
+     "quote": "Pareiškiniai dokumentai Vyriausiosios rinkimų komisijos nustatyta tvarka teikiami elektroniniu būdu ir nuolat saugomi šios komisijos informacinėje sistemoje.",
+     "quote_english": "Nomination documents are submitted electronically as established by the Central Electoral Commission and are permanently stored in the Commission's information system.",
+     "title": "Lietuvos Respublikos rinkimų kodeksas, approved by Constitutional Law No. XIV-1381 (consolidated)",
+     "url": "https://e-seimas.lrs.lt/rs/actualedition/44e06821075711edbfe9c72e552dd5bd/sCATgDoRHG/",
+     "value": "Nomination documents are submitted electronically and stored permanently in the VRK information system"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Vyriausiosios rinkimų komisijos informacinė sistema (Central Electoral Commission information system)",
+   "operator": "Vyriausioji rinkimų komisija (Central Electoral Commission)",
+   "research_note": "vrk.lt blocked automated retrieval; no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; lb.lt blocked automated retrieval.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched; kam.lt blocked automated retrieval and such systems are not normally described publicly.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched; vsd.lt blocked automated retrieval; holdings are not publicly described.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; bpc.lrv.lt (112 centre) blocked automated retrieval.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; pagd.lrv.lt blocked automated retrieval.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; litgrid.eu is reachable but was not examined before the run paused.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched; no national water-control register identified.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; candidate: ESPBI IS (esveikata.lt is reachable) but not examined before the run paused.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched; nvsc.lrv.lt blocked automated retrieval.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "research_note": "Not yet researched; nsa.smm.lt is reachable but not examined before the run paused.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched; stat.gov.lt and vda.lrv.lt blocked automated retrieval.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched; gis-centras.lt, nzt.lt and registrucentras.lt blocked automated retrieval.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched; archyvai.lt blocked automated retrieval.",
+   "status": "unknown"
+  }
+ ],
+ "iso": "LT"
+}

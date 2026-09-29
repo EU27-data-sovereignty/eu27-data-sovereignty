@@ -79,6 +79,16 @@ python3 model/document.py --check
 ok "every fact in all 27 documents resolves to a checked source"
 
 # -----------------------------------------------------------------------------
+step "The /ask function type-checks against the real SDK"
+# api/ask.ts proves at compile time that the request it builds is a valid SDK request (#78).
+if [ ! -d "node_modules/@anthropic-ai/sdk" ]; then
+    echo -e "${RED}❌ root node_modules missing. Run npm ci in the repository root.${NC}"
+    exit 1
+fi
+web/node_modules/.bin/tsc -p tsconfig.json
+ok "api/ type-checks"
+
+# -----------------------------------------------------------------------------
 step "Generated files are current"
 # Regenerate with the date pinned; anything the generator *moves* is a real change
 # that was not committed, which would make the published site disagree with the model.
@@ -87,10 +97,11 @@ step "Generated files are current"
 # countries/ holds tracked binaries that are re-rendered by hand (#51), and work in
 # progress under model/ is normal, so a dirty tree is not by itself a stale one --
 # and a check that cries wolf on every uncommitted edit is a check people stop reading.
-GENERATED_PATHS=(countries model web/public/data)
+GENERATED_PATHS=(countries model web/public/data api/_corpus.json)
 before="$(git diff -- "${GENERATED_PATHS[@]}" | shasum)"
 python3 model/generate_countries.py > /dev/null
 python3 model/export_json.py > /dev/null
+python3 model/ask_corpus.py > /dev/null
 after="$(git diff -- "${GENERATED_PATHS[@]}" | shasum)"
 if [ "$before" != "$after" ]; then
     echo -e "${RED}    ❌ Generated files are stale: regenerating changed them. Run ./run.sh data and commit.${NC}"

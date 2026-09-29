@@ -1,0 +1,11 @@
+{
+  "name": "sovereign-data-centers-api",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Vercel Functions for the site (/api/ask, DECISIONS.md #78). The web app has its own package.json in web/.",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.129.0"
+  }
+}

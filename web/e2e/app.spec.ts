@@ -40,6 +40,7 @@ const ROUTES = [
   '/holdings/civil_registry',
   '/sources',
   '/sovereignty',
+  '/ask',
   '/methodology',
 ]
 
@@ -123,6 +124,45 @@ test.describe('ranking', () => {
     await expect(page.getByRole('region', { name: 'Groups' }).getByRole('button')).toHaveCount(
       high.length,
     )
+  })
+})
+
+test.describe('ask', () => {
+  /** A recorded answer stream, so CI never calls the API. The cited claim is a real one. */
+  const claim = Object.keys(BUNDLE.claims)[0]!
+  const stream = [
+    { type: 'text', text: 'According to the sourced data, the figure is recorded.' },
+    { type: 'cite', claims: [claim], cited_text: 'recorded' },
+    { type: 'done', stop_reason: 'end_turn' },
+  ]
+    .map(e => `data: ${JSON.stringify(e)}\n\n`)
+    .join('')
+
+  test('an answer streams in with a citation that opens its source', async ({ page }) => {
+    await page.route('**/api/ask', route =>
+      route.fulfill({ status: 200, contentType: 'text/event-stream', body: stream }),
+    )
+    await page.goto('/ask')
+    await page.getByRole('button', { name: /How does the data-sovereignty ranking work/ }).click()
+    await expect(page.getByLabel('Your question')).toHaveValue(/ranking work/)
+    await page.getByRole('button', { name: 'Ask', exact: true }).click()
+    await expect(page.getByText('According to the sourced data')).toBeVisible()
+    await page.getByRole('link', { name: 'Source 1' }).click()
+    await expect(page.locator('#src-1')).toContainText(claim)
+  })
+
+  test('a rate-limited request shows a clear message', async ({ page }) => {
+    await page.route('**/api/ask', route => route.fulfill({ status: 429, body: '{}' }))
+    await page.goto('/ask')
+    await page.getByLabel('Your question').fill('Who runs the tax register?')
+    await page.getByRole('button', { name: 'Ask', exact: true }).click()
+    await expect(page.getByText(/Too many questions/)).toBeVisible()
+  })
+
+  test('the question is capped at 500 characters', async ({ page }) => {
+    await page.goto('/ask')
+    await page.getByLabel('Your question').fill('x'.repeat(600))
+    await expect(page.getByLabel('Your question')).toHaveValue('x'.repeat(500))
   })
 })
 

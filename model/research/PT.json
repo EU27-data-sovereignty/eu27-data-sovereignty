@@ -1,0 +1,1288 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2008",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A presente lei estabelece os princípios de criação e manutenção de uma base de dados de perfis de ADN, para fins de identificação civil e de investigação criminal",
+     "quote_english": "This law sets out the principles for creating and maintaining a DNA profile database for civil identification and criminal investigation",
+     "title": "Lei n.º 5/2008, de 12 de Fevereiro – Base de dados de perfis de ADN (art. 1.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1506&tabela=leis",
+     "value": "Lei 5/2008 establishes a DNA profile database for civil identification and criminal investigation"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2008",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O INMLCF, I. P., é a entidade responsável pela base de dados de perfis de ADN e pelas operações que lhe sejam aplicáveis.",
+     "quote_english": "INMLCF, I.P. is the entity responsible for the DNA profile database and the operations applicable to it.",
+     "title": "Lei n.º 5/2008, de 12 de Fevereiro – Base de dados de perfis de ADN (art. 16.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1506&tabela=leis",
+     "value": "INMLCF, I.P. (National Institute of Legal Medicine and Forensic Sciences) is responsible for the DNA database"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "pt",
+     "published": "2008",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A base de dados de perfis de ADN tem sede no INMLCF, I. P., em Coimbra.",
+     "quote_english": "The DNA profile database is seated at INMLCF, I.P., in Coimbra.",
+     "title": "Lei n.º 5/2008, de 12 de Fevereiro – Base de dados de perfis de ADN (art. 16.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1506&tabela=leis",
+     "value": "The DNA database is seated at INMLCF, I.P. in Coimbra (national, by statute)"
+    }
+   ],
+   "holding_name": "Base de dados de perfis de ADN (national DNA profile database for civil identification and criminal investigation)",
+   "suggested_class": "dna_database",
+   "why_critical": "Permanent genetic identifiers for civil identification and criminal investigation. Neither the facial nor the fingerprint class covers it, and a copy made under foreign compulsion could never be revoked."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "1995",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A base de dados do registo civil tem por finalidade organizar e manter actualizada a informação respeitante à nacionalidade, ao estado civil e à capacidade dos cidadãos",
+     "quote_english": "The civil registry database's purpose is to organise and keep up to date information on the nationality, civil status and capacity of citizens",
+     "title": "Código do Registo Civil (DL n.º 131/95), art. 220.º-A",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=682A0220A&nid=682&tabela=leis&pagina=1&ficha=1&nversao=",
+     "value": "Civil registry database (base de dados do registo civil) holding nationality, civil status and legal capacity of citizens"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "1995",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O presidente do IRN, I. P., é o responsável pelo tratamento da base de dados, nos termos e para os efeitos definidos na alínea d) do artigo 3.º da Lei n.º 67/98, de 26 de Outubro",
+     "quote_english": "The president of IRN, I.P. is the controller of the database, under Article 3(d) of Law 67/98",
+     "title": "Código do Registo Civil (DL n.º 131/95), art. 220.º-B",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=682A0220A&nid=682&tabela=leis&pagina=1&ficha=1&nversao=",
+     "value": "The President of IRN, I.P. is the data controller of the civil registry database"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "1999",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A base de dados de identificação civil tem por finalidade organizar e manter actualizada a informação necessária ao estabelecimento da identidade dos cidadãos e à emissão do correspondente bilhete de identidade.",
+     "quote_english": "The civil identification database's purpose is to organise and keep updated the information needed to establish citizens' identity and issue the identity card.",
+     "title": "Lei n.º 33/99, de 18 de Maio – Identificação civil (art. 21.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=334&tabela=leis",
+     "value": "Lei n.º 33/99 establishes the civil identification database (national person identification)"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Base de dados do registo civil (civil registry database) and Base de dados de identificação civil (civil identification database)",
+   "operator": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "research_note": "Legal basis and controller sourced from the Civil Registry Code and Lei 33/99. No public source found stating hosting, record count or data size.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2007",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "os ficheiros com a imagem facial, assinatura, altura e impressões digitais são comunicados apenas à base de dados de identificação civil.",
+     "quote_english": "files with the facial image, signature, height and fingerprints are communicated only to the civil identification database.",
+     "title": "Lei n.º 7/2007, de 5 de Fevereiro – Cartão de Cidadão (art. 37.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2807&tabela=leis",
+     "value": "Facial image files collected for the Citizen Card are communicated only to the civil identification database"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2007",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O IRN, I. P., é a entidade responsável pelo tratamento de dados pessoais nas operações referidas nos artigos 36.º e 37.º",
+     "quote_english": "IRN, I.P. is the entity responsible for processing personal data in the operations referred to in Articles 36 and 37",
+     "title": "Lei n.º 7/2007, de 5 de Fevereiro – Cartão de Cidadão (art. 38.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2807&tabela=leis",
+     "value": "IRN, I.P. is the controller for Citizen Card data processing operations"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2000",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "procedendo ao registo dos dados biográficos e biométricos do requerente no SIPEP.",
+     "quote_english": "registering the applicant's biographic and biometric data in SIPEP.",
+     "title": "Decreto-Lei n.º 86/2000, de 12 de Maio – SIPEP (art. 2.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2056&tabela=leis",
+     "value": "Biometric data of passport applicants are registered in the e-passport information system SIPEP (DL 86/2000)"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Imagem facial na base de dados de identificação civil / SIPEP (facial images in the civil identification database and e-passport system)",
+   "operator": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "research_note": "Retention in the civil identification database and in SIPEP is stated in law. No source found on hosting or record counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2007",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O pedido é instruído com os seguintes elementos de identificação do respetivo titular: a) Imagem facial; b) Impressões digitais; c) Assinatura; d) Altura.",
+     "quote_english": "The application includes the following identification elements of the holder: a) facial image; b) fingerprints; c) signature; d) height.",
+     "title": "Lei n.º 7/2007, de 5 de Fevereiro – Cartão de Cidadão (art. 25.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2807&tabela=leis",
+     "value": "Citizen Card applications must include facial image and fingerprints"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "1999",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "Além dos elementos identificadores que constam do bilhete de identidade, são recolhidos os seguintes dados pessoais do respectivo titular: a) Número e ano do assento de nascimento e conservatória onde foi lavrado; b) Filiação; c) Impressão digital;",
+     "quote_english": "Besides the identifiers on the identity card, the following personal data are collected: a) birth record number and year and registry office; b) parentage; c) fingerprint;",
+     "title": "Lei n.º 33/99, de 18 de Maio – Identificação civil (art. 22.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=334&tabela=leis",
+     "value": "The civil identification database records the holder's fingerprint (Lei 33/99 art. 22)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2015",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "São, também, da competência dos serviços de identificação criminal a organização e o funcionamento dos seguintes registos: a) Do ficheiro dactiloscópico de arguidos condenados;",
+     "quote_english": "The criminal identification services are also responsible for organising and operating the following registers: a) the fingerprint file of convicted defendants;",
+     "title": "Lei n.º 37/2015, de 5 de Maio – Lei da Identificação Criminal (art. 3.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2321&tabela=leis",
+     "value": "Criminal identification services maintain a fingerprint file of convicted defendants"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Impressões digitais na base de dados de identificação civil (fingerprints in the civil identification database); ficheiro dactiloscópico de arguidos condenados (convicted persons' fingerprint file)",
+   "operator": "IRN, I.P. (civil); Direção-Geral da Administração da Justiça (criminal fingerprint file)",
+   "research_note": "Central retention of fingerprints is stated in Lei 7/2007 and Lei 33/99. No source found on hosting or counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "1999",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "Os pedidos de bilhete de identidade e as certidões não emitidas pelo registo civil português são microfilmados ou conservados em suporte informático que ofereça condições de segurança, após o que são destruídos.",
+     "quote_english": "Identity card applications and certificates not issued by the Portuguese civil registry are microfilmed or kept on secure computer media, after which they are destroyed.",
+     "title": "Lei n.º 33/99, de 18 de Maio – Identificação civil (art. 32.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=334&tabela=leis",
+     "value": "ID card applications and foreign-issued certificates are microfilmed or kept in secure digital storage, then the paper originals destroyed"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Pedidos de identificação e certidões estrangeiras conservados em suporte informático (identity applications and non-Portuguese certificates retained digitally)",
+   "operator": "IRN, I.P. (civil identification services)",
+   "research_note": "Lei 33/99 requires ID applications and certificates not issued by the Portuguese civil registry to be microfilmed or kept digitally. No source found on volume or hosting; naturalisation decree archives not separately sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2007",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O tratamento de elementos de identificação do titular ocorre associado às seguintes operações do cartão de cidadão: a) Submissão, instrução e execução dos pedidos de emissão, atualização e renovação; b) Receção e execução dos pedidos de cancelamento;",
+     "quote_english": "Processing of the holder's identification data occurs in connection with the following Citizen Card operations: a) submission, processing and execution of issuance, update and renewal requests; b) receipt and execution of cancellation requests;",
+     "title": "Lei n.º 7/2007, de 5 de Fevereiro – Cartão de Cidadão (art. 36.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2807&tabela=leis",
+     "value": "Citizen Card data processing covers issuance, update, renewal and cancellation requests"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2000",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O sistema de informação do passaporte electrónico português, doravante designado SIPEP, tem por finalidade registar, armazenar, tratar, manter actualizada, validar e disponibilizar a informação associada ao processo de concessão dos passaportes",
+     "quote_english": "The Portuguese electronic passport information system (SIPEP) is intended to register, store, process, keep updated, validate and make available information on the passport issuance process",
+     "title": "Decreto-Lei n.º 86/2000, de 12 de Maio – SIPEP (art. 1.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2056&tabela=leis",
+     "value": "SIPEP registers, stores and validates information on the passport issuance process (DL 86/2000)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2000",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O IRN, I. P., é o organismo responsável pelo SIPEP.",
+     "quote_english": "IRN, I.P. is the body responsible for SIPEP.",
+     "title": "Decreto-Lei n.º 86/2000, de 12 de Maio – SIPEP (art. 15.º, as amended by DL 41/2023)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2056&tabela=leis",
+     "value": "IRN, I.P. is the body responsible for SIPEP"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema de informação do ciclo de vida do Cartão de Cidadão; Sistema de Informação do Passaporte Eletrónico Português (SIPEP)",
+   "operator": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "research_note": "Issuance, renewal and cancellation processing (Citizen Card) and the passport issuance system (SIPEP) are sourced in law. No figures or hosting found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2017",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A todo o cidadão, com idade igual ou superior a 16 anos, que não se encontre interdito ou inabilitado, é permitida a associação do seu número de identificação civil a um único número de telemóvel e ou a um único endereço de correio eletrónico.",
+     "quote_english": "Every citizen aged 16 or over who is not legally incapacitated may associate their civil identification number with a single mobile number and/or a single e-mail address.",
+     "title": "Lei n.º 32/2017, de 1 de Junho – alteração à Lei n.º 37/2014 (Chave Móvel Digital), art. 2.º republicado",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2809&tabela=leis",
+     "value": "Lei 37/2014 (as amended by Lei 32/2017): citizens aged 16+ may link their civil ID number to a mobile number/email to obtain the Chave Móvel Digital"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2017",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A AMA, I. P., é a entidade responsável pela gestão e segurança da infraestrutura tecnológica que suporta a CMD, nomeadamente o sistema de geração e envio dos códigos numéricos de utilização única e temporária.",
+     "quote_english": "AMA, I.P. is responsible for managing and securing the technological infrastructure supporting the CMD, including the system generating and sending one-time codes.",
+     "title": "Lei n.º 32/2017, de 1 de Junho – alteração à Lei n.º 37/2014 (Chave Móvel Digital)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2809&tabela=leis",
+     "value": "Law text assigns management and security of the CMD technological infrastructure to AMA, I.P. (the predecessor of ARTE)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "pt",
+     "published": "",
+     "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote": "Neste sítio poderá obter informações, aderir e gerir a sua identificação eletrónica, nomeadamente a Chave Móvel Digital, o Cartão de Cidadão, o Sistema de Certificação de Atributos Profissionais, e serviços de autenticação e assinatura digital. Este sítio é gerido pela A Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote_english": "On this site you can get information on, enrol in and manage your electronic identification, namely the Digital Mobile Key, Citizen Card, Professional Attributes Certification System, and authentication and digital signature services. This site is managed by the Agency for the Technological Reform of the State, I.P.",
+     "title": "Termos e Condições – Autenticação.gov",
+     "url": "https://www.autenticacao.gov.pt/web/guest/termos-e-condicoes",
+     "value": "The official eID site (CMD, Citizen Card, professional attributes, authentication and signature services) is managed by ARTE, I.P."
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "pt",
+     "published": "",
+     "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote": "Chave Móvel Digital Número Total de Adesões 9.743.199",
+     "quote_english": "Digital Mobile Key Total Number of Enrolments 9,743,199",
+     "title": "Estatísticas – Autenticação.gov",
+     "url": "https://www.autenticacao.gov.pt/web/guest/estatisticas",
+     "value": "9,743,199 total Chave Móvel Digital enrolments (figure shown on the page at time of research, 2026-09-29)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2007",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "Com o cartão de cidadão é emitido um certificado para autenticação e um certificado qualificado para assinatura eletrónica qualificada necessários à sua utilização eletrónica.",
+     "quote_english": "With the Citizen Card an authentication certificate and a qualified certificate for qualified electronic signature are issued for its electronic use.",
+     "title": "Lei n.º 7/2007, de 5 de Fevereiro – Cartão de Cidadão (art. 18.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2807&tabela=leis",
+     "value": "Each Citizen Card carries an authentication certificate and a qualified signature certificate"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "unknown",
+   "holding_name": "Chave Móvel Digital (CMD) e certificados do Cartão de Cidadão – Autenticação.gov (Digital Mobile Key and Citizen Card certificates)",
+   "operator": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P. (formerly AMA, I.P.)",
+   "research_note": "Legal basis (Lei 37/2014 as amended by Lei 32/2017), operator (ARTE site statement; law text still names AMA) and enrolment count sourced. No hosting information found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "",
+     "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote": "autenticações (tipo de autenticação, data/hora), e assinaturas (ficheiros e meta informação) para fins de gerir a sua identificação eletrónica",
+     "quote_english": "authentications (authentication type, date/time) and signatures (files and metadata) for the purpose of managing your electronic identification",
+     "title": "Termos e Condições – Autenticação.gov",
+     "url": "https://www.autenticacao.gov.pt/web/guest/termos-e-condicoes",
+     "value": "Authentication records (type, date/time) and signatures are processed to manage electronic identification"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "",
+     "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote": "Os utilizadores da CMD podem monitorizar o seu histórico de autenticações e assinaturas na sua área reservada.",
+     "quote_english": "CMD users can monitor their authentication and signature history in their private area.",
+     "title": "Termos e Condições – Autenticação.gov",
+     "url": "https://www.autenticacao.gov.pt/web/guest/termos-e-condicoes",
+     "value": "CMD users can view their authentication and signature history"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "",
+     "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote": "Os prazos de conservação dos dados são os estabelecidos na Portaria n.º 77/2018, de 16 de março",
+     "quote_english": "The data retention periods are those set in Portaria 77/2018 of 16 March",
+     "title": "Termos e Condições – Autenticação.gov",
+     "url": "https://www.autenticacao.gov.pt/web/guest/termos-e-condicoes",
+     "value": "Retention periods are set by Portaria 77/2018 and eIDAS Regulation (EU) 910/2014"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2017",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "não sendo permitido o rastreamento e o registo permanente das interações entre os cidadãos e a Administração Pública processadas através da CMD.",
+     "quote_english": "tracking and permanent recording of interactions between citizens and the Public Administration processed through the CMD are not permitted.",
+     "title": "Lei n.º 32/2017, de 1 de Junho – alteração à Lei n.º 37/2014 (Chave Móvel Digital)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2809&tabela=leis",
+     "value": "The CMD law prohibits tracking and permanent logging of interactions between citizens and the administration made through the CMD"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "pt",
+     "published": "",
+     "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+     "quote": "Número Total de Autenticações 140.783.983 ■ Chave Móvel Digital Número Total de Adesões",
+     "quote_english": "Total Number of Authentications 140,783,983 ■ Digital Mobile Key Total Number of Enrolments",
+     "title": "Estatísticas – Autenticação.gov",
+     "url": "https://www.autenticacao.gov.pt/web/guest/estatisticas",
+     "value": "140,783,983 total authentications through Autenticação.gov (figure shown at time of research, 2026-09-29)"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registo de autenticações e assinaturas do Autenticação.gov (authentication and signature records)",
+   "operator": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
+   "research_note": "ARTE's terms of use state that authentication type and date/time are processed, with retention under Portaria 77/2018. The CMD law forbids permanent logging of citizen-administration interactions made through the CMD. No hosting information found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "1999",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A BDRE, constituída ao abrigo da Lei n.º 130-A/97, de 31 de dezembro, tem por finalidade organizar e manter permanente e atual a informação relativa aos cidadãos eleitores inscritos no recenseamento eleitoral.",
+     "quote_english": "The BDRE, established under Law 130-A/97, is intended to organise and keep permanent and current the information on citizens registered as voters.",
+     "title": "Lei n.º 13/99, de 22 de Março – Regime Jurídico do Recenseamento Eleitoral (art. 10.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2545&tabela=leis",
+     "value": "The BDRE organises and keeps current the information on registered voters"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "1999",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A organização, manutenção e gestão da BDRE e do SIGRE competem à administração eleitoral da Secretaria-Geral do Ministério da Administração Interna.",
+     "quote_english": "The organisation, maintenance and management of the BDRE and SIGRE are the responsibility of the electoral administration of the Secretariat-General of the Ministry of Internal Administration.",
+     "title": "Lei n.º 13/99, de 22 de Março – Regime Jurídico do Recenseamento Eleitoral (art. 11.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2545&tabela=leis",
+     "value": "SGMAI electoral administration organises, maintains and manages BDRE and SIGRE"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Base de Dados do Recenseamento Eleitoral (BDRE) and Sistema de Informação e Gestão do Recenseamento Eleitoral (SIGRE)",
+   "operator": "Secretaria-Geral do Ministério da Administração Interna (SGMAI) – Administração Eleitoral",
+   "research_note": "Legal basis and operator sourced. No source found for hosting; voter totals were not collected from a citable static page.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2021",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A Entidade de Certificação Eletrónica do Estado, enquanto entidade certificadora raiz do Estado, é o serviço certificador de topo da cadeia de certificação do SCEE.",
+     "quote_english": "The State Electronic Certification Entity, as the State's root certification authority, is the top certifying service of the SCEE certification chain.",
+     "title": "Decreto-Lei n.º 12/2021, de 9 de fevereiro (art. 27.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3404&tabela=leis",
+     "value": "The State Electronic Certification Entity is the state's root certification authority at the top of the SCEE chain"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2021",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O Conselho Gestor do SCEE é o órgão responsável pela gestão global e administração do SCEE.",
+     "quote_english": "The SCEE Management Council is the body responsible for the overall management and administration of the SCEE.",
+     "title": "Decreto-Lei n.º 12/2021, de 9 de fevereiro (art. 25.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3404&tabela=leis",
+     "value": "The SCEE Management Council is responsible for overall management and administration of the SCEE"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2021",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "Só as entidades certificadoras do Estado compreendidas no âmbito do SCEE, ou outros prestadores de serviços de confiança reconhecidos por este, podem prestar serviços de confiança às entidades públicas.",
+     "quote_english": "Only State certification entities within the SCEE, or other trust service providers recognised by it, may provide trust services to public entities.",
+     "title": "Decreto-Lei n.º 12/2021, de 9 de fevereiro (art. 23.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3404&tabela=leis",
+     "value": "Only State certification entities within the SCEE, or trust service providers it recognises, may provide trust services to public entities"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2021",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O Gabinete Nacional de Segurança (GNS) é a entidade supervisora para efeitos do disposto na alínea b) do n.º 1 do artigo 9.º e no artigo 17.º do Regulamento",
+     "quote_english": "The National Security Office (GNS) is the supervisory body for the purposes of Article 9(1)(b) and Article 17 of the Regulation",
+     "title": "Decreto-Lei n.º 12/2021, de 9 de fevereiro (art. 6.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3404&tabela=leis",
+     "value": "Gabinete Nacional de Segurança (GNS) is the eIDAS supervisory body and manages the trusted lists"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema de Certificação Eletrónica do Estado – Infraestrutura de Chaves Públicas (SCEE); Entidade de Certificação Eletrónica do Estado (state root CA)",
+   "operator": "Conselho Gestor do SCEE (governance); Entidade de Certificação Eletrónica do Estado (root CA); Gabinete Nacional de Segurança (supervisor)",
+   "research_note": "Structure and roles sourced from DL 12/2021. The law does not name the body hosting the root CA keys; the GNS and ECEE websites returned no static content.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2007",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "sistema de informação de dados pessoais e dados relativos a bens jurídicos que integra informação de natureza não policial e de cooperação internacional em matéria de estrangeiros (SII AIMA).",
+     "quote_english": "information system of personal data and data on legal assets integrating non-police and international cooperation information on foreign nationals (SII AIMA).",
+     "title": "Lei n.º 23/2007, de 4 de Julho – Entrada, permanência, saída e afastamento de estrangeiros (art. 3.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis",
+     "value": "SII AIMA: personal-data information system holding non-police information on foreign nationals"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2023",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "das funções administrativas em matéria de migrações e asilo numa nova entidade, a Agência para a Integração, Migrações e Asilo, I. P. (AIMA, I. P.)",
+     "quote_english": "of the administrative functions on migration and asylum in a new entity, the Agency for Integration, Migration and Asylum, I.P. (AIMA, I.P.)",
+     "title": "Decreto-Lei n.º 41/2023, de 2 de junho – cria a AIMA, I. P. (preâmbulo)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3676&tabela=leis",
+     "value": "Administrative migration and asylum functions were transferred to the new AIMA, I.P."
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema Integrado de Informação AIMA (SII AIMA)",
+   "operator": "Agência para a Integração, Migrações e Asilo, I.P. (AIMA)",
+   "research_note": "SII AIMA is defined in the Foreigners Act (Lei 23/2007 as amended); AIMA's creation is in DL 41/2023. No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2011",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A AT tem por missão administrar os impostos, direitos aduaneiros e demais tributos que lhe sejam atribuídos, bem como exercer o controlo da fronteira externa da União Europeia e do território aduaneiro nacional",
+     "quote_english": "AT's mission is to administer taxes, customs duties and other levies assigned to it, and to control the EU external border and national customs territory",
+     "title": "Decreto-Lei n.º 118/2011, de 15 de Dezembro – orgânica da AT (art. 2.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1578&tabela=leis",
+     "value": "AT administers taxes, customs duties and other levies"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemas de informação tributária da Autoridade Tributária e Aduaneira (AT tax information systems)",
+   "operator": "Autoridade Tributária e Aduaneira (AT)",
+   "research_note": "Operator mandate sourced from DL 118/2011. The Portal das Finanças is JavaScript-rendered; no citable static source found for system names, hosting or taxpayer record counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2011",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A AT tem por missão administrar os impostos, direitos aduaneiros e demais tributos que lhe sejam atribuídos, bem como exercer o controlo da fronteira externa da União Europeia e do território aduaneiro nacional",
+     "quote_english": "AT's mission is to administer taxes, customs duties and other levies assigned to it, and to control the EU external border and national customs territory",
+     "title": "Decreto-Lei n.º 118/2011, de 15 de Dezembro – orgânica da AT (art. 2.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1578&tabela=leis",
+     "value": "AT administers customs duties and controls the EU external border and national customs territory"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemas declarativos aduaneiros da AT (AT customs declaration systems)",
+   "operator": "Autoridade Tributária e Aduaneira (AT)",
+   "research_note": "Only the operator mandate is sourced. No citable static source found naming the national customs declaration system, its hosting or declaration volumes.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2007",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A gestão do sistema de segurança social apoia-se num sistema de informação de âmbito nacional com os seguintes objectivos: a) Garantir que as prestações sejam atempadamente concedidas aos seus destinatários;",
+     "quote_english": "Management of the social security system relies on a national information system with the following objectives: a) ensuring benefits are granted to recipients on time;",
+     "title": "Lei n.º 4/2007, de 16 de Janeiro – Bases gerais do sistema de segurança social (art. 98.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2243&tabela=leis",
+     "value": "Social security management rests on a national information system that also organises national databases (Lei 4/2007 art. 98)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2007",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "Estão sujeitas a identificação no sistema de informação as pessoas singulares e colectivas que se relacionem com o sistema de segurança social.",
+     "quote_english": "Natural and legal persons dealing with the social security system are subject to identification in the information system.",
+     "title": "Lei n.º 4/2007, de 16 de Janeiro – Bases gerais do sistema de segurança social (art. 99.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2243&tabela=leis",
+     "value": "All natural and legal persons dealing with social security are identified in the information system"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema de informação da segurança social (national social security information system)",
+   "operator": "Social security institutions (Instituto da Segurança Social, I.P.; operator not separately sourced)",
+   "research_note": "Legal basis sourced from Lei 4/2007 art. 98-99. The seg-social.pt pages are JavaScript-rendered; no citable source found naming the IT operator, hosting or beneficiary counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2016",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O SINAVE recorre ao Registo Nacional de Utentes para pesquisa dos dados de identificação do doente, apenas para o Perfil de Médico no âmbito das notificações obrigatórias.",
+     "quote_english": "SINAVE uses the National Patient Register to look up patient identification data, only for the Physician profile in mandatory notifications.",
+     "title": "Portaria n.º 22/2016, de 10 de fevereiro – Regulamento de Notificação Obrigatória de Doenças Transmissíveis (art. 12.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2506&tabela=leis",
+     "value": "The National Patient Register (RNU) is used as the patient identification reference by other national health systems"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registo Nacional de Utentes (RNU) do Serviço Nacional de Saúde (National Patient Register; Portugal's statutory coverage is the tax-funded SNS)",
+   "operator": "Not sourced (SNS; RNU operator not confirmed by a citable source)",
+   "research_note": "RNU's existence is confirmed in a legal instrument (the SINAVE regulation). No static source found for its founding act, operator, hosting or enrolment count.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "1984",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "As bases de dados do registo predial têm por finalidade organizar e manter atualizada a informação respeitante à situação jurídica dos prédios, com vista à segurança do comércio jurídico",
+     "quote_english": "The land registry databases are intended to organise and keep updated information on the legal status of properties, for legal certainty in transactions",
+     "title": "Código do Registo Predial (DL n.º 224/84), art. 106.º",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=488A0106&nid=488&tabela=leis&pagina=1&ficha=1&nversao=",
+     "value": "Land registry databases hold the legal status of real property"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "1984",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O presidente do Instituto dos Registos e do Notariado, I. P., é o responsável pelo tratamento das bases de dados, nos termos e para os efeitos definidos na Lei de Proteção de Dados Pessoais",
+     "quote_english": "The president of the Institute of Registries and Notary, I.P. is the controller of the databases under the Personal Data Protection Law",
+     "title": "Código do Registo Predial (DL n.º 224/84), art. 107.º",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=488A0106&nid=488&tabela=leis&pagina=1&ficha=1&nversao=",
+     "value": "The President of IRN, I.P. is the controller of the land registry databases"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2019",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "As ações a desenvolver com vista à expansão do sistema de informação cadastral simplificado e do Balcão Único do Prédio (BUPi);",
+     "quote_english": "The actions to be taken to expand the simplified cadastral information system and the Single Property Desk (BUPi);",
+     "title": "Lei n.º 65/2019, de 23 de agosto – sistema de informação cadastral simplificada",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3157&tabela=leis",
+     "value": "Lei 65/2019 generalises the simplified cadastral information system and BUPi"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Bases de dados do registo predial (land registry databases); Balcão Único do Prédio (BUPi) / sistema de informação cadastral simplificada",
+   "operator": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "research_note": "Land registry legal basis and controller sourced from the Land Registry Code; BUPi from Lei 65/2019. No hosting or parcel-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "1986",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A base de dados do registo comercial tem por finalidade organizar e manter actualizada a informação respeitante à situação jurídica das entidades sujeitas a tal registo com vista à segurança do comércio jurídico",
+     "quote_english": "The commercial registry database is intended to organise and keep updated information on the legal status of entities subject to registration, for legal certainty",
+     "title": "Código do Registo Comercial (DL n.º 403/86), art. 78.º-B",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=506A0078B&nid=506&tabela=leis&pagina=1&ficha=1&nversao=",
+     "value": "The commercial registry database holds the legal status of registered entities"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "1986",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O director-geral dos Registos e do Notariado é o responsável pelo tratamento da base de dados",
+     "quote_english": "The Director-General of Registries and Notary is the controller of the database",
+     "title": "Código do Registo Comercial (DL n.º 403/86), art. 78.º-C",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=506A0078B&nid=506&tabela=leis&pagina=1&ficha=1&nversao=",
+     "value": "The Director-General of Registries and Notary (now IRN) is the database controller"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Base de dados do registo comercial (commercial registry database)",
+   "operator": "Instituto dos Registos e do Notariado, I.P. (IRN; law text names the Director-General of Registries and Notary, IRN's predecessor)",
+   "research_note": "Legal basis sourced from the Commercial Registry Code. No hosting or entity-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2017",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A entidade gestora do RCBE é o Instituto dos Registos e do Notariado, I. P. (IRN, I. P.), que designa o serviço ou os serviços que, em cada momento, reúnem as melhores condições para assegurar os procedimentos respeitantes àquele registo.",
+     "quote_english": "The managing entity of the RCBE is the Institute of Registries and Notary, I.P. (IRN, I.P.), which designates the service(s) best placed to carry out the register's procedures.",
+     "title": "Lei n.º 89/2017, de 21 de agosto – Regime Jurídico do RCBE (art. 2.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2755&tabela=leis",
+     "value": "IRN, I.P. is the managing entity of the RCBE (Lei 89/2017)"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registo Central do Beneficiário Efetivo (RCBE)",
+   "operator": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "research_note": "Legal basis and operator sourced from Lei 89/2017. No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "1975",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A base de dados do registo de automóveis tem por finalidade organizar e manter actualizada a informação respeitante à situação jurídica desses bens, com vista à segurança do comércio jurídico",
+     "quote_english": "The vehicle registry database is intended to organise and keep updated information on the legal status of vehicles, for legal certainty",
+     "title": "Decreto-Lei n.º 54/75, de 12 de Fevereiro – Registo automóvel (art. 27.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=598&tabela=leis",
+     "value": "The vehicle registry database holds the legal status of motor vehicles"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2009",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A base de dados do RNC tem por finalidade organizar e manter actualizada a informação necessária ao exercício das competências específicas cometidas ao IMTT, I. P., em matéria de condutores.",
+     "quote_english": "The RNC database is intended to organise and keep updated the information needed for IMTT, I.P.'s specific powers regarding drivers.",
+     "title": "Decreto-Lei n.º 262/2009, de 28 de Setembro – Registo Nacional de Condutores (art. 2.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2633&tabela=leis",
+     "value": "DL 262/2009 establishes the national driver register (RNC) database for IMTT (now IMT)"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Base de dados do registo automóvel (vehicle registry) and Registo Nacional de Condutores (RNC, national driver register)",
+   "operator": "IRN, I.P. (vehicle ownership registry, not separately sourced); IMT, I.P. (formerly IMTT; drivers)",
+   "research_note": "Legal bases sourced (DL 54/75; DL 262/2009). No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2015",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A Direção-Geral da Administração da Justiça é a entidade responsável pelas bases de dados de identificação criminal",
+     "quote_english": "The Directorate-General for the Administration of Justice is the entity responsible for the criminal identification databases",
+     "title": "Lei n.º 37/2015, de 5 de Maio – Lei da Identificação Criminal (art. 38.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2321&tabela=leis",
+     "value": "DGAJ is the entity responsible for the criminal identification databases"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2025",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A tramitação eletrónica prevista na presente portaria é efetuada no sistema de informação de suporte à atividade dos tribunais.",
+     "quote_english": "Electronic processing under this ordinance takes place in the information system supporting the courts' activity.",
+     "title": "Portaria n.º 350-A/2025/1, de 9 de outubro – tramitação eletrónica dos processos (art. 2.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3949&tabela=leis",
+     "value": "Electronic court case processing takes place in the courts' support information system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2025",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "Mediante protocolo a celebrar com o Instituto de Gestão Financeira e Equipamentos da Justiça, I. P. (IGFEJ, I. P.), podem as entidades públicas praticar atos processuais e realizar consultas",
+     "quote_english": "By protocol with the Institute for Financial Management and Justice Equipment, I.P. (IGFEJ), public entities may perform procedural acts and consultations",
+     "title": "Portaria n.º 350-A/2025/1, de 9 de outubro – tramitação eletrónica dos processos (art. 1.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3949&tabela=leis",
+     "value": "Public bodies connect to the courts' information system under protocol with IGFEJ, I.P."
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Bases de dados de identificação criminal (criminal records) and sistema de informação de suporte à atividade dos tribunais (court case management system)",
+   "operator": "Direção-Geral da Administração da Justiça (criminal records); IGFEJ, I.P. (court system interoperability, per Portaria 350-A/2025)",
+   "research_note": "Legal bases sourced. No hosting or case-volume source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2009",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "É criada a plataforma para o intercâmbio de informação criminal por via electrónica entre os órgãos de polícia criminal, adiante abreviadamente designada por plataforma.",
+     "quote_english": "A platform for electronic exchange of criminal information among criminal police bodies is created, hereinafter the platform.",
+     "title": "Lei n.º 73/2009, de 12 de Agosto – Sistema integrado de informação criminal (art. 2.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2225&tabela=leis",
+     "value": "Lei 73/2009 creates the electronic criminal-information exchange platform among criminal police bodies"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2008",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "Garantir a interoperabilidade entre os sistemas de informação das entidades que fazem parte do Sistema de Segurança Interna",
+     "quote_english": "Ensure interoperability between the information systems of the entities in the Internal Security System",
+     "title": "Lei n.º 53/2008, de 29 de Agosto – Lei de Segurança Interna",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1012&tabela=leis",
+     "value": "The Secretary-General of the Internal Security System ensures interoperability of security forces' information systems"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Plataforma para o intercâmbio de informação criminal (Sistema Integrado de Informação Criminal) and criminal police information systems",
+   "operator": "Criminal police bodies (PJ, PSP, GNR, etc.), coordinated under the Internal Security System; operator of the platform not separately sourced",
+   "research_note": "Legal basis sourced (Lei 73/2009; Lei 53/2008). No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2007",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "sistema de informação de dados pessoais e dados relativos a bens jurídicos que integra informação de natureza policial e de cooperação policial internacional em matéria de fronteiras e estrangeiros",
+     "quote_english": "information system of personal data and data on legal assets integrating police and international police cooperation information on borders and foreign nationals",
+     "title": "Lei n.º 23/2007, de 4 de Julho – Entrada, permanência, saída e afastamento de estrangeiros (art. 3.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis",
+     "value": "SII UCFE: shared police information system on borders and foreign nationals, used by security forces"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2021",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "incluindo as relativas à parte nacional do Sistema de Informação Schengen e outros existentes no âmbito do controlo da circulação de pessoas, passando a sua gestão a ser assegurada por uma unidade de tecnologias de informação de segurança",
+     "quote_english": "including those relating to the national part of the Schengen Information System and others for controlling movement of persons, their management being ensured by a security information technology unit",
+     "title": "Lei n.º 73/2021, de 12 de novembro – reestruturação do sistema português de controlo de fronteiras",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3468&tabela=leis",
+     "value": "Management of former SEF systems, including the national part of SIS, passes to a security information technology unit"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema Integrado de Informação UCFE (SII UCFE) and national part of the Schengen Information System (N.SIS)",
+   "operator": "Unidade de Coordenação de Fronteiras e Estrangeiros (UCFE) / security IT unit named in Lei 73/2021",
+   "research_note": "Legal basis sourced from Lei 23/2007 and Lei 73/2021. No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2006",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "O extravio, furto, roubo e transmissão de armas ficam sujeitos a registo na PSP.",
+     "quote_english": "The loss, theft, robbery and transfer of weapons are subject to registration with the PSP.",
+     "title": "Lei n.º 5/2006, de 23 de Fevereiro – Regime jurídico das armas e munições (art. 75.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=692&tabela=leis",
+     "value": "Loss, theft, robbery and transfer of firearms must be registered with the PSP"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2006",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A PSP conserva durante, pelo menos, 20 anos todas as informações referentes às armas de fogo, componentes essenciais e munições",
+     "quote_english": "The PSP keeps for at least 20 years all information on firearms, essential components and ammunition",
+     "title": "Lei n.º 5/2006, de 23 de Fevereiro – Regime jurídico das armas e munições (art. 60.º-C)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=692&tabela=leis",
+     "value": "PSP keeps all information on firearms, essential components and ammunition for at least 20 years"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registo de armas da PSP (PSP firearms registration records)",
+   "operator": "Polícia de Segurança Pública (PSP)",
+   "research_note": "Registration duty and 20-year retention sourced from Lei 5/2006. No hosting or count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "pt",
+     "published": "",
+     "publisher": "Imprensa Nacional-Casa da Moeda (INCM)",
+     "quote": "Somos responsáveis pela edição e publicação do Diário da República, onde se publicitam todos os atos e diplomas legais que regem a vida da sociedade portuguesa.",
+     "quote_english": "We are responsible for editing and publishing the Diário da República, where all legal acts and instruments governing Portuguese society are published.",
+     "title": "Diário da República – INCM",
+     "url": "https://incm.pt/site/diario-da-republica/",
+     "value": "INCM is responsible for editing and publishing the Diário da República"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Diário da República (diariodarepublica.pt)",
+   "operator": "Imprensa Nacional-Casa da Moeda, S.A. (INCM)",
+   "research_note": "Operator sourced from INCM's own page. The founding decree (DL 83/2016) could not be read on a static source because diariodarepublica.pt is JavaScript-rendered. No hosting source found. The quote spans an italic tag; it matches when tags are stripped without inserting spaces.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2025",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "são objeto de inserção nos sistemas de informação geridos pela Entidade de Serviços Partilhados da Administração Pública, I. P. (ESPAP, I. P.), através de informação disponibilizada pela DGO, registada no Sistema de Informação de Gestão Orçamental (SIGO).",
+     "quote_english": "are entered in the information systems managed by the Public Administration Shared Services Entity, I.P. (ESPAP), using information provided by the DGO and registered in the Budget Management Information System (SIGO).",
+     "title": "Decreto-Lei n.º 13-A/2025, de 10 de março – normas de execução do Orçamento do Estado para 2025",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3890&tabela=leis",
+     "value": "Budget data are registered in SIGO (DGO) and entered in information systems managed by ESPAP, I.P."
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema de Informação de Gestão Orçamental (SIGO) and ESPAP-managed financial information systems",
+   "operator": "Direção-Geral do Orçamento (DGO); Entidade de Serviços Partilhados da Administração Pública, I.P. (ESPAP)",
+   "research_note": "Sourced from the 2025 budget execution decree. No hosting source found; treasury (IGCP) systems not separately sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "pt",
+     "published": "",
+     "publisher": "Direção-Geral da Administração e do Emprego Público (DGAEP)",
+     "quote": "documento metodológico em uso no Departamento de Estatística do Emprego Público (DEEP) da DGAEP que descreve a operação para fins estatísticos realizada no âmbito do Sistema de Informação e Organização do Estado (SIOE).",
+     "quote_english": "methodological document used by DGAEP's Public Employment Statistics Department describing the statistical operation carried out within the State Organisation Information System (SIOE).",
+     "title": "Metodologia e metainformação estatística – DGAEP",
+     "url": "https://www.dgaep.gov.pt/index.cfm?OBJID=120BF3B2-FB82-4662-B232-A9D8E055B030",
+     "value": "DGAEP produces public employment statistics from the SIOE information system"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "pt",
+     "published": "2026",
+     "publisher": "Direção-Geral da Administração e do Emprego Público (DGAEP)",
+     "quote": "A 30 de junho de 2026, o emprego no setor das administrações públicas situou-se em 768 378 postos de trabalho",
+     "quote_english": "At 30 June 2026, employment in the general government sector stood at 768,378 jobs",
+     "title": "Síntese Estatística do Emprego Público (SIEP) – 2.º trimestre 2026",
+     "url": "https://www.dgaep.gov.pt/index.cfm?OBJID=ECA5D4CB-42B8-4692-A96C-8AAD63010A54",
+     "value": "768,378 general government jobs at 30 June 2026"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema de Informação da Organização do Estado (SIOE) – public employment and personnel information",
+   "operator": "Direção-Geral da Administração e do Emprego Público (DGAEP)",
+   "research_note": "SIOE is a personnel and organisation register, not a payroll engine; no citable source found for a central payroll system or its hosting. The public-employment figure comes from DGAEP's quarterly SIOE-based statistics.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "pt",
+     "published": "2026-09-11",
+     "publisher": "Secretaria-Geral do Ministério da Administração Interna (SGMAI)",
+     "quote": "Coordenar as operações de recolha e divulgação dos resultados do escrutínio provisório de todos os atos eleitorais e referendários.",
+     "quote_english": "Coordinate the collection and publication of provisional results of all electoral and referendum acts.",
+     "title": "Administração Eleitoral – SGMAI",
+     "url": "https://www.sg.mai.gov.pt/pt/AdministracaoEleitoral/",
+     "value": "SGMAI electoral administration coordinates collection and publication of provisional results of all elections and referendums"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistemas de recolha e divulgação de resultados eleitorais (provisional results collection and publication)",
+   "operator": "Secretaria-Geral do Ministério da Administração Interna (SGMAI) – Administração Eleitoral",
+   "research_note": "Operator competence sourced from SGMAI's page. No source found on the results system's hosting or contractors.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "Banco de Portugal",
+   "research_note": "bportugal.pt returns an HTTP 403 bot-check page to automated requests, so no quote from it would pass verification. The BdP Organic Law was not found on the static legislation database used. No claim made.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "Searched the consolidated legislation database for EMGFA and Armed Forces organic law and command-and-control provisions; no instrument naming a defence command or logistics information system was found. No public hosting information found.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "1984",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "Dirigir a atividade dos centros de dados do Serviço de Informações Estratégicas de Defesa e do Serviço de Informações de Segurança",
+     "quote_english": "Direct the activity of the data centres of the Strategic Defence Intelligence Service and the Security Intelligence Service",
+     "title": "Lei n.º 30/84, de 5 de Setembro – Lei Quadro do SIRP (versão consolidada)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=764&tabela=leis",
+     "value": "The SIRP Secretary-General directs the activity of the SIED and SIS data centres"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Centros de dados do SIS e do SIED (intelligence data centres of the Security Intelligence Service and the Strategic Defence Intelligence Service)",
+   "operator": "Secretário-Geral do SIRP (Intelligence System of the Portuguese Republic)",
+   "research_note": "The SIRP Framework Law names the SIS/SIED 'centros de dados'. The term refers to intelligence data holdings; the source does not state physical hosting, so none is inferred.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2008",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "Facultar às forças e aos serviços de segurança o acesso e a utilização de serviços comuns, designadamente no âmbito do Sistema Integrado de Redes de Emergência e Segurança de Portugal e da Central de Emergências 112",
+     "quote_english": "Provide the security forces and services with access to and use of common services, namely the Integrated Emergency and Security Networks System of Portugal and the 112 Emergency Centre",
+     "title": "Lei n.º 53/2008, de 29 de Agosto – Lei de Segurança Interna",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1012&tabela=leis",
+     "value": "SIRESP (public-safety radio network) and the 112 emergency centre are common services of the security forces"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema Integrado de Redes de Emergência e Segurança de Portugal (SIRESP) and Central de Emergências 112",
+   "operator": "Secretary-General of the Internal Security System (access to common services); network operator not separately sourced",
+   "research_note": "Sourced from the Internal Security Law. SIRESP's operating company and hosting were not found in a citable static source.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2019",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A ANEPC tem por missão planear, coordenar e executar as políticas de emergência e de proteção civil, designadamente na prevenção e na resposta a acidentes graves e catástrofes",
+     "quote_english": "ANEPC's mission is to plan, coordinate and execute emergency and civil protection policies, namely prevention of and response to major accidents and disasters",
+     "title": "Decreto-Lei n.º 45/2019, de 1 de abril – orgânica da ANEPC (art. 3.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3049&tabela=leis",
+     "value": "ANEPC plans, coordinates and executes emergency and civil protection policy, including civil emergency planning for crisis or war"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2019",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "Organizar um sistema nacional de alerta e aviso perante a ocorrência ou a iminência da ocorrência de acidente grave ou catástrofe;",
+     "quote_english": "Organise a national alert and warning system for the occurrence or imminence of a major accident or disaster;",
+     "title": "Decreto-Lei n.º 45/2019, de 1 de abril – orgânica da ANEPC",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3049&tabela=leis",
+     "value": "ANEPC organises a national alert and warning system"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema nacional de alerta e aviso (national alert and warning system) and ANEPC emergency planning systems",
+   "operator": "Autoridade Nacional de Emergência e Proteção Civil (ANEPC)",
+   "research_note": "Sourced from the ANEPC organic law (DL 45/2019). The SIOPS decree (DL 134/2006) is revoked. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "pt",
+     "published": "",
+     "publisher": "REN – Redes Energéticas Nacionais",
+     "quote": "Enquanto gestor técnico global do Sistema Elétrico Nacional, a REN - Rede Elétrica Nacional é a entidade responsável pela segurança e continuidade do serviço de eletricidade, com o seu centro de Despacho a assegurar permanentemente o equilíbrio entre a produção e o consumo de energia elétrica.",
+     "quote_english": "As overall technical manager of the National Electricity System, REN is responsible for security and continuity of electricity supply, its Dispatch centre continuously balancing generation and consumption.",
+     "title": "Eletricidade – REN",
+     "url": "https://www.ren.pt/atividade/eletricidade",
+     "value": "REN, as overall technical manager of the SEN, runs the dispatch centre balancing generation and consumption"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2022",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "As atividades de gestão técnica global do SEN, de gestão técnica das redes de distribuição, de transporte e de distribuição de eletricidade em regime de concessão de serviço público.",
+     "quote_english": "The activities of overall technical management of the SEN, technical management of distribution networks, and transmission and distribution of electricity under public service concession.",
+     "title": "Decreto-Lei n.º 15/2022, de 14 de janeiro – Sistema Elétrico Nacional",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3536&tabela=leis",
+     "value": "DL 15/2022: overall technical management of the SEN and transmission are exercised under public service concession"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Centro de Despacho / gestão técnica global do Sistema Elétrico Nacional (national dispatch centre and SEN system operation)",
+   "operator": "REN – Rede Elétrica Nacional, S.A.",
+   "research_note": "Operator statement from REN's own site; legal framing from DL 15/2022. No source found on the SCADA/EMS vendor or hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2005",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A instituição da Administração Pública a quem cabe exercer as competências previstas na presente lei é a Agência Portuguesa do Ambiente, I. P. (APA, I. P.), que, como autoridade nacional da água",
+     "quote_english": "The public body responsible for exercising the powers in this law is the Portuguese Environment Agency, I.P. (APA), which, as national water authority",
+     "title": "Lei n.º 58/2005, de 29 de Dezembro – Lei da Água (art. 7.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1191&tabela=leis",
+     "value": "APA, I.P. is the national water authority exercising the powers of the Water Law"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2005",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "Instituir e manter atualizado o sistema nacional de informação dos recursos hídricos;",
+     "quote_english": "Establish and keep updated the national water resources information system;",
+     "title": "Lei n.º 58/2005, de 29 de Dezembro – Lei da Água (art. 8.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1191&tabela=leis",
+     "value": "The national water authority establishes and maintains the national water resources information system"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema Nacional de Informação dos Recursos Hídricos (SNIRH)",
+   "operator": "Agência Portuguesa do Ambiente, I.P. (APA) as national water authority",
+   "research_note": "Sourced from the Water Law. No source found on flood-control/SCADA systems or their hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2022",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "o acesso a dados pessoais do utente, ainda que armazenados em entidades externas ao SNS, nos termos da lei, designadamente tendo em vista a consolidação do Registo de Saúde Eletrónico",
+     "quote_english": "access to patients' personal data, even when stored in entities outside the SNS, under the law, namely to consolidate the Electronic Health Record",
+     "title": "Decreto-Lei n.º 52/2022, de 4 de agosto – Estatuto do Serviço Nacional de Saúde",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3557&tabela=leis",
+     "value": "SNS information systems must enable access to patient data, including data held outside the SNS, to consolidate the Electronic Health Record"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registo de Saúde Eletrónico (RSE, Electronic Health Record)",
+   "operator": "Not sourced (SNS information systems)",
+   "research_note": "RSE is referenced in the SNS Statute (DL 52/2022). No citable static source found naming its operator, hosting or record count.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "pt",
+     "published": "2009",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "cujos participantes contribuem para um sistema nacional de informação de vigilância epidemiológica, denominado SINAVE.",
+     "quote_english": "whose participants contribute to a national epidemiological surveillance information system called SINAVE.",
+     "title": "Lei n.º 81/2009, de 21 de Agosto – Sistema de vigilância em saúde pública (art. 1.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1981&tabela=leis",
+     "value": "Lei 81/2009 establishes SINAVE, the national epidemiological surveillance information system"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema Nacional de Informação de Vigilância Epidemiológica (SINAVE)",
+   "operator": "Direção-Geral da Saúde (DGS) as national health authority (operator not separately sourced)",
+   "research_note": "Legal basis sourced from Lei 81/2009. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2007",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "disponibilizados no Sistema Integrado de Informação e Gestão da Oferta Educativa e Formativa (SIGO).",
+     "quote_english": "made available in the Integrated Information and Management System for Education and Training Provision (SIGO).",
+     "title": "Decreto-Lei n.º 396/2007, de 31 de Dezembro – Sistema Nacional de Qualificações (art. 7.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1081&tabela=leis",
+     "value": "Qualification diplomas and certificates under the National Qualifications System are made available in SIGO"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistema Integrado de Informação e Gestão da Oferta Educativa e Formativa (SIGO) – qualifications and certificates records",
+   "operator": "Not sourced",
+   "research_note": "SIGO is named in the National Qualifications System decree. No static source found for a higher-education diploma register, SIGO's operator, hosting or counts.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "Instituto Nacional de Estatística, I.P. (INE)",
+   "research_note": "ine.pt and censos.ine.pt returned empty responses to automated requests, and the Statistical System Law (Lei 22/2008) was not found on the static legislation database used. No claim made.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "pt",
+     "published": "2019",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "Disponibilizar produtos da base de dados nacional de informação geográfica de referência como a cartografia topográfica e ortofotocartografia",
+     "quote_english": "Make available products of the national reference geographic information database such as topographic mapping and orthophoto mapping",
+     "title": "Lei n.º 99/2019, de 5 de setembro – revisão do PNPOT",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3139&tabela=leis",
+     "value": "National reference geographic database products include topographic mapping and orthophoto mapping"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "pt",
+     "published": "2019",
+     "publisher": "Procuradoria-Geral Regional de Lisboa (consolidated legislation database)",
+     "quote": "A Direção-Geral do Território é responsável por constituir o Observatório do Ordenamento do Território e Urbanismo e por reunir no Sistema Nacional de Informação Territorial (SNIT) o conjunto da informação geográfica",
+     "quote_english": "The Directorate-General for Territory is responsible for setting up the Spatial Planning Observatory and gathering in SNIT the body of geographic information",
+     "title": "Lei n.º 99/2019, de 5 de setembro – revisão do PNPOT (art. 4.º)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3139&tabela=leis",
+     "value": "DGT gathers territorial geographic information in the National Territorial Information System (SNIT)"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Base de dados nacional de informação geográfica de referência (national reference geographic database: topographic maps, orthophotos); SNIG and SNIT",
+   "operator": "Direção-Geral do Território (DGT)",
+   "research_note": "Sourced from the PNPOT revision law (Lei 99/2019). No hosting or data-size source found. The address register is not separately sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "Searched the consolidated legislation database for DGLAB, Arquivo Nacional Torre do Tombo and the general archives regime; no instrument on the digital state archive was found in a verifiable static source. No claim made.",
+   "status": "unknown"
+  }
+ ],
+ "iso": "PT"
+}

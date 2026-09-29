@@ -9,6 +9,7 @@ const NAV = [
   { to: '/countries', label: 'Countries' },
   { to: '/holdings', label: 'Critical holdings' },
   { to: '/sources', label: 'Sources' },
+  { to: '/ask', label: 'Ask' },
   { to: '/methodology', label: 'Methodology' },
 ]
 

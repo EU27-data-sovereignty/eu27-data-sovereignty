@@ -1,0 +1,1645 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI (Ministrstvo za notranje zadeve in javno upravo)",
+     "quote": "V Sektorju za virtualizacijo in orkestracijo uresničujemo strategijo prehoda v oblak.",
+     "quote_english": "In the Virtualisation and Orchestration Sector we implement the cloud migration strategy.",
+     "title": "Sektor za virtualizacijo in orkestracijo",
+     "url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-digitalno-infrastrukturo/sektor-za-virt/",
+     "value": "The ministry's virtualisation and orchestration sector implements the cloud strategy and runs the DRO portal"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI (Ministrstvo za notranje zadeve in javno upravo)",
+     "quote": "V sektorju opravljamo naloge: Zagotavljamo neprekinjeno operativnost infrastrukture DRO (24/7/365).",
+     "quote_english": "In the sector we perform the tasks: We ensure uninterrupted operation of the DRO infrastructure (24/7/365).",
+     "title": "Sektor za virtualizacijo in orkestracijo",
+     "url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-digitalno-infrastrukturo/sektor-za-virt/",
+     "value": "The sector ensures 24/7/365 operation of DRO infrastructure"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "hosting",
+     "language": "sl",
+     "published": "2021",
+     "publisher": "Računsko sodišče Republike Slovenije",
+     "quote": "Temelj državnega računalniškega oblaka je virtualizacija strojnih virov, ki so razporejeni v 3 logične skupine na 2 lokacijah, in sicer v Ljubljani in Mariboru.",
+     "quote_english": "The foundation of the state computing cloud is virtualisation of hardware resources arranged in 3 logical groups at 2 locations, in Ljubljana and Maribor.",
+     "title": "Revizijsko poročilo: Učinkovitost in uspešnost vzpostavitve in delovanja državnega računalniškega oblaka",
+     "url": "https://www.rs-rs.si/fileadmin/user_upload/Datoteke/Revizije/2021/VzpDO/VzpDO_SP14-20_RevizijskoP.pdf",
+     "value": "DRO hardware is split across two locations, Ljubljana and Maribor (per the 2021 audit)"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "foreign_dependency",
+     "language": "sl",
+     "published": "2021",
+     "publisher": "Računsko sodišče Republike Slovenije",
+     "quote": "Za virtualizacijo strežniških virov se uporabljajo 3 različne tehnologije podjetij VMware (vSphere), Red Hat (RHEV) in Oracle (OVM).",
+     "quote_english": "Three different technologies from VMware (vSphere), Red Hat (RHEV) and Oracle (OVM) are used to virtualise server resources.",
+     "title": "Revizijsko poročilo: Učinkovitost in uspešnost vzpostavitve in delovanja državnega računalniškega oblaka",
+     "url": "https://www.rs-rs.si/fileadmin/user_upload/Datoteke/Revizije/2021/VzpDO/VzpDO_SP14-20_RevizijskoP.pdf",
+     "value": "At the time of the audit, DRO server virtualisation used VMware (vSphere), Red Hat (RHEV) and Oracle (OVM) technologies"
+    }
+   ],
+   "holding_name": "Državni računalniški oblak (DRO) (State Computing Cloud)",
+   "suggested_class": "government_cloud_hosting",
+   "why_critical": "This is the central government hosting platform run by the interior and public administration ministry. Consolidated state information systems run on it, so its location and its software stack determine how exposed many of the holdings above are to foreign control."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sl",
+     "published": "2022-04-04",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Registra transakcijskih računov, ki ga vodi Agencija Republike Slovenije za javnopravne evidence in storitve v skladu z zakonom, ki ureja plačilne storitve",
+     "quote_english": "the Register of Transaction Accounts kept by the Agency of the Republic of Slovenia for Public Legal Records and Related Services in accordance with the law governing payment services",
+     "title": "Zakon o preprečevanju pranja denarja in financiranja terorizma (ZPPDFT-2), Uradni list RS, št. 48/2022",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2022-01-0977",
+     "value": "AJPES keeps the Register of Transaction Accounts under the payment services law"
+    }
+   ],
+   "holding_name": "Register transakcijskih računov (Register of Transaction Accounts)",
+   "suggested_class": "bank_account_register",
+   "why_critical": "This is the national register of all bank and payment accounts. AML authorities, tax enforcement and court enforcement use it, and it links persons and companies to their accounts."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "Ministrstvo za notranje zadeve (CRP portal)",
+     "quote": "Kaj je Centralni register prebivalstva (CRP)? Je osrednja podatkovna baza z najosnovnejšimi podatki o prebivalstvu Slovenije.",
+     "quote_english": "What is the Central Population Register (CRP)? It is the central database with the most basic data on the population of Slovenia.",
+     "title": "Predstavitev CRP - CRP portal",
+     "url": "https://ecrp.gov.si/predstavitevCRP.html",
+     "value": "The Central Population Register (CRP) is the central database of basic population data for Slovenia"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "Ministrstvo za notranje zadeve (CRP portal)",
+     "quote": "Upravlja ga Ministrstvo za notranje zadeve Republike Slovenije. V CRP-ju se podatki o prebivalstvu centralno zbirajo, obdelujejo, hranijo in uporabljajo",
+     "quote_english": "It is managed by the Ministry of the Interior of the Republic of Slovenia. In the CRP, population data are centrally collected, processed, stored and used",
+     "title": "Predstavitev CRP - CRP portal",
+     "url": "https://ecrp.gov.si/predstavitevCRP.html",
+     "value": "CRP is managed by the Ministry of the Interior"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2006-07-11",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "4. člen (upravljavec CRP) Upravljavec CRP je ministrstvo, pristojno za notranje zadeve.",
+     "quote_english": "Article 4 (CRP controller) The controller of the CRP is the ministry responsible for internal affairs.",
+     "title": "Zakon o centralnem registru prebivalstva (uradno prečiščeno besedilo) (ZCRP-UPB1), Uradni list RS, št. 72/2006",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2006-01-3079",
+     "value": "Zakon o centralnem registru prebivalstva (ZCRP-UPB1), Art. 4: the controller of CRP is the ministry responsible for internal affairs"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2006-07-11",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Osebna identifikacijska številka v Republiki Sloveniji je enotna matična številka občana (v nadaljnjem besedilu: EMŠO)",
+     "quote_english": "The personal identification number in the Republic of Slovenia is the unique master citizen number (hereinafter: EMŠO)",
+     "title": "Zakon o centralnem registru prebivalstva (uradno prečiščeno besedilo) (ZCRP-UPB1), Uradni list RS, št. 72/2006",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2006-01-3079",
+     "value": "ZCRP Art. 6 establishes EMŠO as the national personal identification number"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2011-02-21",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Matični register se vodi v centralnem informacijskem sistemu. Pristojni matičar v centralno informatizirano bazo, ki jo za celo območje Republike Slovenije vodi in vzdržuje ministrstvo, pristojno za upravne notranje zadeve",
+     "quote_english": "The civil status register is kept in a central information system. The competent registrar enters data into the central computerised database, which for the entire territory of the Republic of Slovenia is kept and maintained by the ministry responsible for administrative internal affairs",
+     "title": "Zakon o matičnem registru (uradno prečiščeno besedilo) (ZMatR-UPB2), Uradni list RS, št. 11/2011",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-0451",
+     "value": "Zakon o matičnem registru (ZMatR-UPB2), Art. 19: the civil status register is kept in a central information system maintained by the interior ministry"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Centralni register prebivalstva (CRP) + Matični register (Central Population Register and civil status register)",
+   "operator": "Ministrstvo za notranje zadeve (Ministry of the Interior)",
+   "research_note": "No public source found stating where CRP or the civil status register is hosted; the state cloud (DRO) exists but no source ties CRP to it. SURS reports 2,135,107 residents on 1 Jan 2026, but that is a population figure, not a CRP record count, so it is not claimed.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2025-03-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "podatke iz prvega in tretjega odstavka 13. člena tega zakona, pri čemer je digitalna fotografija v obliki, ki je ni mogoče prebrati z napravami za branje biometričnih podatkov",
+     "quote_english": "data from the first and third paragraphs of Article 13 of this Act, the digital photograph being in a form that cannot be read by devices for reading biometric data",
+     "title": "Zakon o spremembah in dopolnitvah Zakona o osebni izkaznici (ZOIzk-1C), Uradni list RS, št. 17/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0584",
+     "value": "The ID card issuance register stores the digital photograph, but in a form that biometric readers cannot read"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2025-03-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Digitalne fotografije se hranijo v elektronskem odložišču fotografij za osebne dokumente šest mesecev",
+     "quote_english": "Digital photographs are kept in the electronic repository of photographs for identity documents for six months",
+     "title": "Zakon o spremembah in dopolnitvah Zakona o osebni izkaznici (ZOIzk-1C), Uradni list RS, št. 17/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0584",
+     "value": "Digital photographs for identity documents are kept in an electronic photo repository for six months"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sl",
+     "published": "2025-03-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Ministrstvo, pristojno za notranje zadeve, upravlja evidenco izdanih osebnih izkaznic centralno.",
+     "quote_english": "The ministry responsible for internal affairs manages the register of issued identity cards centrally.",
+     "title": "Zakon o spremembah in dopolnitvah Zakona o osebni izkaznici (ZOIzk-1C), Uradni list RS, št. 17/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0584",
+     "value": "The interior ministry manages the ID card issuance register centrally"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sl",
+     "published": "2025-03-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Ministrstvo, pristojno za notranje zadeve, upravlja evidenco izdanih potnih listin centralno.",
+     "quote_english": "The ministry responsible for internal affairs manages the register of issued travel documents centrally.",
+     "title": "Zakon o potnih listinah (ZPL), Uradni list RS, št. 17/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0581",
+     "value": "The interior ministry manages the passport issuance register centrally (Zakon o potnih listinah, ZPL)"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidenca izdanih osebnih izkaznic / Evidenca izdanih potnih listin in elektronsko odložišče fotografij za osebne dokumente (registers of issued ID cards and passports, and electronic photo repository for identity documents)",
+   "operator": "Ministrstvo za notranje zadeve (Ministry of the Interior)",
+   "research_note": "By law the issuance registers hold the digital photo in a form that biometric readers cannot read, and the photo repository keeps photos for six months. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "sl",
+     "published": "2025-03-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Prstni odtisi se v evidenci izdanih osebnih izkaznic hranijo 15 dni od vročitve osebne izkaznice, če osebna izkaznica ni vročena, pa 90 dni od datuma izdaje osebne izkaznice, nato pa se iz evidence izdanih osebnih izkaznic brišejo.",
+     "quote_english": "Fingerprints are kept in the register of issued identity cards for 15 days from delivery of the card, or, if the card is not delivered, 90 days from its date of issue, and are then deleted from the register.",
+     "title": "Zakon o spremembah in dopolnitvah Zakona o osebni izkaznici (ZOIzk-1C), Uradni list RS, št. 17/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0584",
+     "value": "ID card fingerprints are deleted from the issuance register 15 days after delivery (90 days if not delivered)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "sl",
+     "published": "2025-03-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Prstni odtisi se v evidenci izdanih potnih listin hranijo 15 dni od vročitve potne listine, če potna listina ni vročena, pa 90 dni od datuma izdaje potne listine, nato pa se iz evidence izdanih potnih listin izbrišejo.",
+     "quote_english": "Fingerprints are kept in the register of issued travel documents for 15 days from delivery, or 90 days from issue if not delivered, and are then deleted from the register.",
+     "title": "Zakon o potnih listinah (ZPL), Uradni list RS, št. 17/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0581",
+     "value": "Passport fingerprints are deleted from the issuance register 15 days after delivery (90 days if not delivered)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2025-03-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "pomnilniški medij, na katerem so podoba obraza in prstna odtisa oziroma prstni odtis državljana shranjeni kot biometrični podatek",
+     "quote_english": "storage medium on which the citizen's facial image and fingerprints (or fingerprint) are stored as biometric data",
+     "title": "Zakon o potnih listinah (ZPL), Uradni list RS, št. 17/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0581",
+     "value": "Face image and fingerprints are stored as biometric data on the passport's storage medium (chip)"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Fingerprints in the ID card and passport issuance registers (retained only temporarily)",
+   "operator": "Ministrstvo za notranje zadeve (Ministry of the Interior)",
+   "research_note": "Fingerprints are held only temporarily: by law they are deleted from the issuance registers 15 days after the document is delivered, or 90 days after issue if it is not delivered. They stay long-term only on the document chip. No long-term central fingerprint store for documents exists under ZOIzk-1C or ZPL. Police identification records (ZNPPol) are a separate matter and are not covered here.",
+   "status": "not_held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2011-02-21",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Sestavni del matičnega registra je zbirka listin, ki so podlaga za vpis v matični register.",
+     "quote_english": "An integral part of the civil status register is the collection of documents on which entries in the register are based.",
+     "title": "Zakon o matičnem registru (uradno prečiščeno besedilo) (ZMatR-UPB2), Uradni list RS, št. 11/2011",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-0451",
+     "value": "The collection of documents underlying civil status entries is part of the civil status register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "sl",
+     "published": "2011-02-21",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Glede na tehnične in druge možnosti se v centralni informatizirani bazi matičnega registra hranijo tudi deli ali celotna zbirka listin.",
+     "quote_english": "Depending on technical and other possibilities, parts of or the entire collection of documents are also kept in the central computerised database of the civil status register.",
+     "title": "Zakon o matičnem registru (uradno prečiščeno besedilo) (ZMatR-UPB2), Uradni list RS, št. 11/2011",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-0451",
+     "value": "Parts or all of the document collection may be kept in the register's central computerised database"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2011-02-21",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Podatki se v matičnem registru hranijo sto let od zadnjega vpisa, nato pa se skupaj z zbirko listin izročijo v hrambo Arhivu Republike Slovenije.",
+     "quote_english": "Data in the civil status register are kept for one hundred years from the last entry and are then handed over, together with the collection of documents, to the Archives of the Republic of Slovenia.",
+     "title": "Zakon o matičnem registru (uradno prečiščeno besedilo) (ZMatR-UPB2), Uradni list RS, št. 11/2011",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-0451",
+     "value": "The register and its documents are kept for 100 years after the last entry and then transferred to the Archives of the Republic of Slovenia"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Zbirka listin matičnega registra (collection of source documents of the civil status register)",
+   "operator": "Ministrstvo za notranje zadeve (Ministry of the Interior)",
+   "research_note": "Under ZMatR the collection of documents is part of the civil status register and may be kept in part or in full in the central computerised database. No hosting source or volume figure found. Naturalisation decrees (citizenship register) were not researched separately.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2025-03-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "19. člen (vsebina in pristojnost za vodenje evidence izdanih osebnih izkaznic) (1) Organi, pristojni za izdajo osebne izkaznice, vodijo in vzdržujejo evidenco izdanih osebnih izkaznic",
+     "quote_english": "Article 19 (content of and competence for keeping the register of issued identity cards) (1) Authorities competent for issuing identity cards keep and maintain the register of issued identity cards",
+     "title": "Zakon o spremembah in dopolnitvah Zakona o osebni izkaznici (ZOIzk-1C), Uradni list RS, št. 17/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0584",
+     "value": "ZOIzk-1C Art. 19: issuing authorities keep the register of issued ID cards, including for identity, citizenship, eID and e-signature purposes"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2025-03-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "2. datum izdelave osebne izkaznice in njenega prevzema s strani pošte, 3. podatke o statusu veljavnosti osebe izkaznice",
+     "quote_english": "2. date of production of the identity card and its collection by the post, 3. data on the validity status of the identity card",
+     "title": "Zakon o spremembah in dopolnitvah Zakona o osebni izkaznici (ZOIzk-1C), Uradni list RS, št. 17/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0584",
+     "value": "The register records production and delivery dates and the validity status of each ID card"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2025-03-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Organi, pristojni za izdajo potnih listin, vodijo in vzdržujejo evidenco izdanih potnih listin za namene preverjanja istovetnosti, državljanstva, prehoda državne meje in za upravne postopke po tem zakonu.",
+     "quote_english": "Authorities competent for issuing travel documents keep and maintain the register of issued travel documents for verifying identity, citizenship, border crossing and for administrative procedures under this Act.",
+     "title": "Zakon o potnih listinah (ZPL), Uradni list RS, št. 17/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0581",
+     "value": "ZPL: issuing authorities keep the register of issued travel documents"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sl",
+     "published": "2025-03-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Ministrstvo, pristojno za notranje zadeve, upravlja evidenco izdanih osebnih izkaznic centralno.",
+     "quote_english": "The ministry responsible for internal affairs manages the register of issued identity cards centrally.",
+     "title": "Zakon o spremembah in dopolnitvah Zakona o osebni izkaznici (ZOIzk-1C), Uradni list RS, št. 17/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0584",
+     "value": "The interior ministry manages the ID card issuance register centrally"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidenca izdanih osebnih izkaznic; Evidenca izdanih potnih listin (registers of issued identity cards and travel documents)",
+   "operator": "Ministrstvo za notranje zadeve (Ministry of the Interior), with issuing administrative units",
+   "research_note": "The registers include validity status, eID means status and qualified certificate status. No hosting source or record count found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "Storitev SI-PASS je enotna točka za preverjanje identitete različnih uporabnikov (državljanov, poslovnih subjektov, javnih uslužbencev) ter elektronsko podpisovanje vlog in ostalih dokumentov.",
+     "quote_english": "The SI-PASS service is a single point for verifying the identity of various users (citizens, businesses, civil servants) and for electronically signing applications and other documents.",
+     "title": "Spletna prijava in e-podpis (SI-PASS)",
+     "url": "https://www.si-trust.gov.si/sl/si-pass",
+     "value": "SI-PASS is the single identity-verification and e-signature service for citizens, businesses and civil servants"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "Državni center za storitve zaupanja SI-TRUST deluje v sklopu Ministrstva za notranje zadeve in javno upravo",
+     "quote_english": "The State Trust Services Centre SI-TRUST operates within the Ministry of the Interior and Public Administration",
+     "title": "O nas - SI-TRUST",
+     "url": "https://www.si-trust.gov.si/sl/o-nas",
+     "value": "SI-TRUST operates within the Ministry of the Interior and Public Administration"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "je skrbnik storitve za spletno prijavo in e-podpis SI-PASS ter izdaja mobilno identiteto smsPASS oz. enkratno geslo",
+     "quote_english": "is the administrator of the online login and e-signature service SI-PASS and issues the smsPASS mobile identity or one-time password",
+     "title": "O nas - SI-TRUST",
+     "url": "https://www.si-trust.gov.si/sl/o-nas",
+     "value": "SI-TRUST administers SI-PASS and issues the smsPASS mobile identity"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "izdajatelji digitalnih potrdil na elektronski osebni izkaznici SI-TRUST eID Podpis, SI-TRUST eID Visoka raven in SI-TRUST eID Nizka raven",
+     "quote_english": "issuers of digital certificates on the electronic identity card SI-TRUST eID Signature, SI-TRUST eID High level and SI-TRUST eID Low level",
+     "title": "O nas - SI-TRUST",
+     "url": "https://www.si-trust.gov.si/sl/o-nas",
+     "value": "SI-TRUST runs the certificate issuers for the electronic ID card (eOsebna): eID Signature, eID High and eID Low"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2021-07-23",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "45. člen (centralna storitev za spletno prijavo in elektronski podpis) (1) Centralna storitev za spletno prijavo in elektronski podpis je informacijska rešitev",
+     "quote_english": "Article 45 (central service for online login and electronic signature) (1) The central service for online login and electronic signature is an information solution",
+     "title": "Zakon o elektronski identifikaciji in storitvah zaupanja (ZEISZ), Uradni list RS, št. 121/2021",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2021-01-2571",
+     "value": "ZEISZ Art. 45 establishes the central online login and electronic signature service"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "sl",
+     "published": "",
+     "publisher": "SI-TRUST / Ministrstvo za notranje zadeve in javno upravo",
+     "quote": "Podatki se ne prenašajo v tretje države ali mednarodne organizacije. Podatki se obdelujejo na ozemlju Republike Slovenije.",
+     "quote_english": "Data are not transferred to third countries or international organisations. Data are processed on the territory of the Republic of Slovenia.",
+     "title": "Obvestilo posameznikom glede obdelave osebnih podatkov storitve SI-PASS",
+     "url": "https://www.si-trust.gov.si/sl/si-pass-obvestilo-posameznikom",
+     "value": "SI-PASS personal data are not transferred to third countries and are processed on Slovenian territory"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "national",
+   "holding_name": "SI-PASS (centralna storitev za spletno prijavo in e-podpis), smsPASS, eOsebna eID certificates (central online login and e-signature service)",
+   "operator": "SI-TRUST Državni center za storitve zaupanja, Ministrstvo za notranje zadeve in javno upravo (State Trust Services Centre, Ministry of the Interior and Public Administration)",
+   "research_note": "SI-TRUST moved to the Ministry of the Interior and Public Administration in the 2026 reorganisation. Its GDPR notice says the data are processed in Slovenia and names no processor. No user-count figure was found in a primary source.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "SI-TRUST / Ministrstvo za notranje zadeve in javno upravo",
+     "quote": "vodenja zbirke registriranih uporabnikov, v ta namen se hranijo identifikator SI-PASS, ime uporabniškega računa (naslov elektronske pošte), EŠEI, davčna številka, identifikator sredstva elektronske identifikacije ter podatki o uporabi računa",
+     "quote_english": "keeping the collection of registered users, for which the SI-PASS identifier, account name (e-mail address), EŠEI, tax number, eID means identifier and account usage data are stored",
+     "title": "Obvestilo posameznikom glede obdelave osebnih podatkov storitve SI-PASS",
+     "url": "https://www.si-trust.gov.si/sl/si-pass-obvestilo-posameznikom",
+     "value": "SI-PASS keeps registered-user records including account usage data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2021-07-23",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Podatke iz prejšnjega odstavka se hrani še pet let po izvedeni zahtevi za izbris podatkov s strani posameznika, ki je storitev iz prejšnjega odstavka uporabil, ali po zadnji uporabi te storitve s strani posameznika.",
+     "quote_english": "The data from the previous paragraph are kept for five more years after the individual who used the service requests erasure, or after the individual's last use of the service.",
+     "title": "Zakon o elektronski identifikaciji in storitvah zaupanja (ZEISZ), Uradni list RS, št. 121/2021",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2021-01-2571",
+     "value": "ZEISZ Art. 46(2): the data are kept for five years after an erasure request or after last use"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "SI-TRUST / Ministrstvo za notranje zadeve in javno upravo",
+     "quote": "Upravljavec osebnih podatkov (upravljavec): Ministrstvo za notranje zadeve in javno upravo, Direktorat za razvoj digitalnih rešitev in podatkovno ekonomijo, Državni center za storitve zaupanja SI-TRUST",
+     "quote_english": "Controller of personal data: Ministry of the Interior and Public Administration, Directorate for Development of Digital Solutions and Data Economy, State Trust Services Centre SI-TRUST",
+     "title": "Obvestilo posameznikom glede obdelave osebnih podatkov storitve SI-PASS",
+     "url": "https://www.si-trust.gov.si/sl/si-pass-obvestilo-posameznikom",
+     "value": "Controller: Ministry of the Interior and Public Administration, SI-TRUST"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "sl",
+     "published": "",
+     "publisher": "SI-TRUST / Ministrstvo za notranje zadeve in javno upravo",
+     "quote": "Podatki se ne prenašajo v tretje države ali mednarodne organizacije. Podatki se obdelujejo na ozemlju Republike Slovenije.",
+     "quote_english": "Data are not transferred to third countries or international organisations. Data are processed on the territory of the Republic of Slovenia.",
+     "title": "Obvestilo posameznikom glede obdelave osebnih podatkov storitve SI-PASS",
+     "url": "https://www.si-trust.gov.si/sl/si-pass-obvestilo-posameznikom",
+     "value": "Processed on Slovenian territory; no transfers to third countries"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "national",
+   "holding_name": "SI-PASS zbirka registriranih uporabnikov in podatki o uporabi računa (SI-PASS registered-user records including account usage data)",
+   "operator": "SI-TRUST, Ministrstvo za notranje zadeve in javno upravo",
+   "research_note": "The SI-PASS notice lists account usage data among the stored data, and ZEISZ Art. 46 sets a five-year retention. No source gives a log volume. The eZdravje CRPP separately records audit trails for health-record access.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI (Ministrstvo za notranje zadeve)",
+     "quote": "Volilno pravico vodimo v evidenci volilne pravice v registru stalnega prebivalstva in centralnem registru prebivalstva Republike Slovenije.",
+     "quote_english": "We record the right to vote in the register of voting rights within the permanent residence register and the central population register of the Republic of Slovenia.",
+     "title": "Volivci in evidenca volilne pravice",
+     "url": "https://www.gov.si/teme/volivci-in-evidenca-volilne-pravice/",
+     "value": "Voting rights are recorded in the register of voting rights, kept within the permanent-residence register and CRP"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2013-11-29",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Za vodenje evidence volilne pravice so pristojni upravne enote in ministrstvo, ki upravlja evidenco volilne pravice centralno.",
+     "quote_english": "Administrative units and the ministry, which manages the register of voting rights centrally, are competent for keeping the register of voting rights.",
+     "title": "Zakon o evidenci volilne pravice (ZEVP-2), Uradni list RS, št. 98/2013",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2013-01-3489",
+     "value": "ZEVP-2 Art. 13: administrative units and the ministry keep the register; the ministry manages it centrally"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidenca volilne pravice (register of voting rights)",
+   "operator": "Ministrstvo za notranje zadeve (central management) and upravne enote (administrative units)",
+   "research_note": "The register is kept within the permanent-residence register and CRP. No hosting source or voter-count figure was retrieved; the DVK results site returned a bot-challenge page.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "Državni center za storitve zaupanja upravlja s korenskim izdajateljem SI-TRUST Root, izdajateljem kvalificiranih digitalnih potrdil SIGEN-CA, izdajateljem kvalificiranih digitalnih potrdil SIGOV-CA",
+     "quote_english": "The State Trust Services Centre manages the root issuer SI-TRUST Root, the qualified certificate issuer SIGEN-CA, the qualified certificate issuer SIGOV-CA",
+     "title": "O nas - SI-TRUST",
+     "url": "https://www.si-trust.gov.si/sl/o-nas",
+     "value": "SI-TRUST manages the SI-TRUST Root and the qualified issuers SIGEN-CA and SIGOV-CA"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "Danes tem sklopu deluje še izdajatelj digitalnih potrdil za biometrične potne listine, izdajatelj za izdajo potrdil za potrebe davčnega potrjevanja računov.",
+     "quote_english": "Today this unit also includes the issuer of digital certificates for biometric travel documents and the issuer of certificates for fiscal verification of invoices.",
+     "title": "O nas - SI-TRUST",
+     "url": "https://www.si-trust.gov.si/sl/o-nas",
+     "value": "SI-TRUST also runs the CA for biometric passports and the CA for fiscal invoice verification"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "Državni center za storitve zaupanja SI-TRUST deluje v sklopu Ministrstva za notranje zadeve in javno upravo",
+     "quote_english": "The State Trust Services Centre SI-TRUST operates within the Ministry of the Interior and Public Administration",
+     "title": "O nas - SI-TRUST",
+     "url": "https://www.si-trust.gov.si/sl/o-nas",
+     "value": "SI-TRUST operates within the Ministry of the Interior and Public Administration"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "sl",
+     "published": "",
+     "publisher": "SI-TRUST / Državni center za storitve zaupanja",
+     "quote": "Dokumente podpišete s kvalificiranim digitalnim potrdilom SI-PASS-CA, ki je varno shranjeno pri SI-TRUST.",
+     "quote_english": "You sign documents with the qualified SI-PASS-CA digital certificate, which is securely stored at SI-TRUST.",
+     "title": "Spletna prijava in e-podpis (SI-PASS)",
+     "url": "https://www.si-trust.gov.si/sl/si-pass",
+     "value": "Qualified SI-PASS-CA signing certificates are stored at SI-TRUST"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "national",
+   "holding_name": "SI-TRUST Root, SIGEN-CA, SIGOV-CA, SI-PASS-CA, SI-TRUST eID CAs, SI-TSA (state trust service root and issuing certificate authorities)",
+   "operator": "SI-TRUST Državni center za storitve zaupanja, Ministrstvo za notranje zadeve in javno upravo",
+   "research_note": "SI-TRUST also runs the CA for biometric passport certificates and for fiscal invoice verification. The national rating rests on the state centre operating the CAs and holding the SI-PASS-CA signing certificates. No data-centre location was published.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2021-06-07",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "ministrstvu, pristojnemu za notranje zadeve, ki upravlja centralno evidenco o dovoljenjih za prebivanje in odpovedih prebivanja tujcu (Register tujcev)",
+     "quote_english": "the ministry responsible for internal affairs, which manages the central register of residence permits and revocations of residence of foreigners (Register of Foreigners)",
+     "title": "Zakon o tujcih (uradno prečiščeno besedilo) (ZTuj-2-UPB9), Uradni list RS, št. 91/2021",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2021-01-1957",
+     "value": "The interior ministry manages the central register of residence permits and their revocations (Register tujcev)"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register tujcev (centralna evidenca o dovoljenjih za prebivanje) (Register of Foreigners, central register of residence permits)",
+   "operator": "Ministrstvo za notranje zadeve (Ministry of the Interior)",
+   "research_note": "The ecrp.gov.si presentation also names an asylum register (Azilni register) as a CRP data source, but its legal basis in ZMZ-1 was not verified. No hosting source or count found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "Finančna uprava Republike Slovenije",
+     "quote": "Davčni register je enotna, z drugim evidencami povezana, informatizirana zbirka podatkov o zavezancih.",
+     "quote_english": "The tax register is a single computerised database of taxpayers, linked to other records.",
+     "title": "Vpis v davčni register in davčna številka",
+     "url": "https://www.fu.gov.si/davki_in_druge_dajatve/poslovanje_z_nami/vpis_v_davcni_register_in_davcna_stevilka/",
+     "value": "The tax register is a single computerised, linked database of taxpayers"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "Finančna uprava Republike Slovenije",
+     "quote": "Na podlagi Zakona o finančni upravi (ZFU) ga vodi in upravlja Finančna uprava Republike Slovenije (FURS).",
+     "quote_english": "Based on the Financial Administration Act (ZFU), it is kept and managed by the Financial Administration of the Republic of Slovenia (FURS).",
+     "title": "Vpis v davčni register in davčna številka",
+     "url": "https://www.fu.gov.si/davki_in_druge_dajatve/poslovanje_z_nami/vpis_v_davcni_register_in_davcna_stevilka/",
+     "value": "Under the Financial Administration Act (ZFU), FURS keeps and manages the tax register"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Davčni register and davčne evidence FURS (tax register and tax records)",
+   "operator": "Finančna uprava Republike Slovenije (FURS)",
+   "research_note": "No hosting source found for FURS tax systems. The FURS 2024 annual report gives eDavki app users, not a register size, so no count is claimed.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2025",
+     "publisher": "Finančna uprava Republike Slovenije",
+     "quote": "V letu 2024 je bila naročena nadgradnja uvoznega deklaracijskega sistema (SIAIS2) s komponento centraliziranega carinjenja pri uvozu (CCI).",
+     "quote_english": "In 2024 an upgrade of the import declaration system (SIAIS2) with a centralised clearance for import (CCI) component was ordered.",
+     "title": "Letno poročilo Finančne uprave za leto 2024",
+     "url": "https://www.gov.si/assets/organi-v-sestavi/FURS/Strateski-dokumenti/2025/Letno-porocilo-Financne-uprave-za-leto-2024.pdf",
+     "value": "FURS runs the SIAIS2 import declaration system; a centralised-clearance upgrade was ordered in 2024"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2016-05-06",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "v skladu s točko (1) 5. člena Uredbe 952/2013/EU je Finančna uprava Republike Slovenije (v nadaljnjem besedilu: carinski organ)",
+     "quote_english": "in accordance with point (1) of Article 5 of Regulation 952/2013/EU is the Financial Administration of the Republic of Slovenia (hereinafter: customs authority)",
+     "title": "Zakon o izvajanju carinske zakonodaje Evropske unije (ZICZEU), Uradni list RS, št. 32/2016",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2016-01-1362",
+     "value": "ZICZEU designates FURS as the customs authority under Regulation 952/2013/EU"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "SIAIS2 (uvozni deklaracijski sistem) and eCarina systems (import declaration system and e-customs)",
+   "operator": "Finančna uprava Republike Slovenije (FURS) as customs authority",
+   "research_note": "FURS also uses EU-run systems such as ICS2 and CDS, but no source states where SIAIS2 is hosted. No declaration count was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2025",
+     "publisher": "Zavod za pokojninsko in invalidsko zavarovanje Slovenije",
+     "quote": "Zakon o matični evidenci zavarovancev in uživalcev pravic iz pokojninskega in invalidskega zavarovanja, veljaven od 1. 1. 2014",
+     "quote_english": "Act on the Master Register of Insured Persons and Beneficiaries of Pension and Disability Insurance, in force since 1 Jan 2014",
+     "title": "Letno poročilo ZPIZ 2024",
+     "url": "https://www.zpiz.si/cms/engine/download.php?actionID=inf&id=68&name=Letno%20poro%C4%8Dilo%202024.pdf",
+     "value": "Zakon o matični evidenci zavarovancev in uživalcev pravic iz PIZ (ZMEPIZ-1), in force since 1 Jan 2014"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "sl",
+     "published": "2025",
+     "publisher": "Zavod za pokojninsko in invalidsko zavarovanje Slovenije",
+     "quote": "Skupno povprečno število zavarovancev v letu 2024 ostalo na enaki ravni kot leto pred tem, znašalo je 998.892 (999.043 v letu 2023).",
+     "quote_english": "The total average number of insured persons in 2024 remained at the previous year's level, at 998,892 (999,043 in 2023).",
+     "title": "Letno poročilo ZPIZ 2024",
+     "url": "https://www.zpiz.si/cms/engine/download.php?actionID=inf&id=68&name=Letno%20poro%C4%8Dilo%202024.pdf",
+     "value": "Average of 998,892 insured persons in 2024"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Matična evidenca zavarovancev in uživalcev pravic iz pokojninskega in invalidskega zavarovanja (master register of insured persons and pension beneficiaries)",
+   "operator": "Zavod za pokojninsko in invalidsko zavarovanje Slovenije (ZPIZ)",
+   "research_note": "The count below is ZPIZ's average number of insured persons in 2024, not the total number of records. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "Zavod za zdravstveno zavarovanje Slovenije",
+     "quote": "Naziv institucije: Zavod za zdravstveno zavarovanje Slovenije 2. Naziv zbirke podatkov: Evidenca o zavarovanih osebah obveznega zdravstvenega zavarovanja",
+     "quote_english": "Name of institution: Health Insurance Institute of Slovenia 2. Name of data collection: Register of insured persons of compulsory health insurance",
+     "title": "Evidenca o zavarovanih osebah (katalog zbirke)",
+     "url": "https://www.zzzs.si/fileadmin/user_upload/dokumenti/informacije_in_publikacije/evidenca_o_zavarovanih_osebah.pdf",
+     "value": "ZZZS keeps the register of persons covered by compulsory health insurance"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2026",
+     "publisher": "Zavod za zdravstveno zavarovanje Slovenije",
+     "quote": "V Sloveniji se v OZZ na osnovi ZZVZZ vključujejo vsi prebivalci oziroma državljani",
+     "quote_english": "In Slovenia, all residents or citizens are included in compulsory health insurance on the basis of ZZVZZ",
+     "title": "Poslovanje ZZZS v letu 2025",
+     "url": "https://zavezanec.zzzs.si/fileadmin/user_upload/dokumenti/novice/2026/zzzsporocilo2025-infografika-web.pdf",
+     "value": "Under ZZVZZ, all residents are covered by compulsory health insurance"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "sl",
+     "published": "2026",
+     "publisher": "Zavod za zdravstveno zavarovanje Slovenije",
+     "quote": "se je v 2025 prek ZZZS namenilo za potrebe 2,1 milijona zavarovanih oseb",
+     "quote_english": "was allocated through ZZZS in 2025 to the needs of 2.1 million insured persons",
+     "title": "Poslovanje ZZZS v letu 2025",
+     "url": "https://zavezanec.zzzs.si/fileadmin/user_upload/dokumenti/novice/2026/zzzsporocilo2025-infografika-web.pdf",
+     "value": "About 2.1 million insured persons (2025)"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidenca o zavarovanih osebah obveznega zdravstvenega zavarovanja (register of persons covered by compulsory health insurance)",
+   "operator": "Zavod za zdravstveno zavarovanje Slovenije (ZZZS)",
+   "research_note": "The 2.1 million figure is the number of insured persons served in 2025, per the ZZZS infographic. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "Sodstvo Republike Slovenije",
+     "quote": "Zemljiška knjiga je javna knjiga, namenjena vpisu in javni objavi podatkov o pravicah na nepremičninah in pravnih dejstvih v zvezi z nepremičninami. Za vodenje zemljiške knjige so pristojna okrajna sodišča",
+     "quote_english": "The land register is a public book for entering and publishing data on rights in real property and legal facts relating to real property. District courts are competent for keeping the land register",
+     "title": "Zemljiška knjiga - javne knjige",
+     "url": "https://www.sodisce.si/javne_knjige/zemljiska_knjiga/",
+     "value": "The Land Register is a public book of rights in real property, kept by the district courts"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2003-06-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Glavna knjiga zemljiške knjige se vodi kot centralna informatizirana baza (v nadaljnjem besedilu: informatizirana glavna knjiga).",
+     "quote_english": "The main book of the land register is kept as a central computerised database (hereinafter: computerised main book).",
+     "title": "Zakon o zemljiški knjigi (ZZK-1), Uradni list RS, št. 58/2003",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2003-01-2857",
+     "value": "ZZK-1 Art. 175: the main land book is kept as a central computerised database"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2021-04-09",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Kataster nepremičnin je temeljna evidenca podatkov o položaju, obliki, fizičnih in drugih lastnostih parcel, stavb in delov stavb, ki izkazuje dejansko stanje nepremičnin.",
+     "quote_english": "The real estate cadastre is the basic register of data on the position, shape, physical and other characteristics of parcels, buildings and parts of buildings, showing the actual state of real estate.",
+     "title": "Zakon o katastru nepremičnin (ZKN), Uradni list RS, št. 54/2021",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2021-01-1047",
+     "value": "The Real Estate Cadastre is the basic register of parcels, buildings and building parts (ZKN Art. 8)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sl",
+     "published": "2021-04-09",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Kataster nepremičnin, evidenco državne meje, register prostorskih enot in register naslovov vzpostavi, vodi in vzdržuje Geodetska uprava Republike Slovenije",
+     "quote_english": "The real estate cadastre, the state border register, the register of spatial units and the address register are established, kept and maintained by the Surveying and Mapping Authority of the Republic of Slovenia",
+     "title": "Zakon o katastru nepremičnin (ZKN), Uradni list RS, št. 54/2021",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2021-01-1047",
+     "value": "The Surveying and Mapping Authority (GURS) establishes, keeps and maintains the cadastre (ZKN Art. 4)"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Zemljiška knjiga (Land Register) + Kataster nepremičnin (Real Estate Cadastre)",
+   "operator": "Okrajna sodišča / Vrhovno sodišče (land register); Geodetska uprava RS (cadastre)",
+   "research_note": "The ZZK-1 citation is to the 2003 original text; Art. 175 on the central computerised database has been in effect since then, but later amendments were not checked. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sl",
+     "published": "2025-11-06",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Poslovni register vodi in upravlja Agencija Republike Slovenije za javnopravne evidence in storitve (v nadaljnjem besedilu: upravljavec registra).",
+     "quote_english": "The business register is kept and managed by the Agency of the Republic of Slovenia for Public Legal Records and Related Services (hereinafter: register controller).",
+     "title": "Zakon o Poslovnem registru Slovenije (ZPRS-2), Uradni list RS, št. 85/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3031",
+     "value": "ZPRS-2 Art. 6: AJPES keeps and manages the Business Register"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Poslovni register Slovenije (Slovenian Business Register)",
+   "operator": "Agencija Republike Slovenije za javnopravne evidence in storitve (AJPES)",
+   "research_note": "The court register (sodni register) is kept by the courts and was not researched separately. No hosting source or count found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "AJPES",
+     "quote": "Register dejanskih lastnikov (RDL) je baza podatkov, v kateri se zbirajo podatki o dejanskih lastnikih z namenom zagotavljanja transparentnosti lastniških struktur poslovnih subjektov",
+     "quote_english": "The Register of Beneficial Owners (RDL) is a database collecting data on beneficial owners in order to ensure transparency of the ownership structures of business entities",
+     "title": "Register dejanskih lastnikov - Splošno",
+     "url": "https://www.ajpes.si/registri/drugi_registri/register_dejanskih_lastnikov/splosno",
+     "value": "The RDL is a database of beneficial owners, kept for ownership transparency and AML purposes"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2022-04-04",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Register vzdržuje in upravlja Agencija Republike Slovenije za javnopravne evidence in storitve (v nadaljnjem besedilu tudi: upravljavec registra).",
+     "quote_english": "The register is maintained and managed by the Agency of the Republic of Slovenia for Public Legal Records and Related Services (hereinafter also: register controller).",
+     "title": "Zakon o preprečevanju pranja denarja in financiranja terorizma (ZPPDFT-2), Uradni list RS, št. 48/2022",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2022-01-0977",
+     "value": "ZPPDFT-2 Art. 48: AJPES maintains and manages the register"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register dejanskih lastnikov (RDL) (Register of Beneficial Owners)",
+   "operator": "AJPES",
+   "research_note": "No hosting source or count found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2017-12-22",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Ministrstvo, pristojno za promet, vodi v elektronski obliki naslednji zbirki podatkov: 1. evidenco registriranih vozil in 2. evidenco izvajanja cestnega pregleda tehnične brezhibnosti gospodarskih vozil.",
+     "quote_english": "The ministry responsible for transport keeps in electronic form the following two databases: 1. register of registered vehicles and 2. register of roadside technical inspections of commercial vehicles.",
+     "title": "Zakon o motornih vozilih (ZMV-1), Uradni list RS, št. 75/2017",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2017-01-3592",
+     "value": "ZMV-1: the transport ministry keeps the register of registered vehicles in electronic form"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2016-12-28",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Evidenco o vozniških dovoljenjih vodi ministrstvo, pristojno za promet. Podatke v evidenco vnašajo upravne enote, izvajalci zdravstvene dejavnosti, javna agencija in drugi organi",
+     "quote_english": "The register of driving licences is kept by the ministry responsible for transport. Data are entered by administrative units, healthcare providers, the public agency and other bodies",
+     "title": "Zakon o voznikih (ZVoz-1), Uradni list RS, št. 85/2016",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2016-01-3686",
+     "value": "ZVoz-1 Art. 70: the transport ministry keeps the driving licence register"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidenca registriranih vozil; Evidenca o vozniških dovoljenjih (register of registered vehicles and register of driving licences)",
+   "operator": "Ministry responsible for transport (ministrstvo, pristojno za promet)",
+   "research_note": "No hosting source or record counts found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI (Ministrstvo za pravosodje)",
+     "quote": "Ministrstvo za pravosodje (v nadaljevanju: ministrstvo) upravlja kazensko evidenco o vseh pravnih in fizičnih osebah, ki so jih obsodila sodišča Republike Slovenije.",
+     "quote_english": "The Ministry of Justice (hereinafter: ministry) manages the criminal record of all legal and natural persons convicted by the courts of the Republic of Slovenia.",
+     "title": "Kazenskopravne evidence",
+     "url": "https://www.gov.si/teme/kazenskopravne-evidence/",
+     "value": "The Ministry of Justice manages the criminal record of all persons convicted by Slovenian courts"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "Sodstvo Republike Slovenije",
+     "quote": "Center za informatiko (CIF) je posebna organizacijska enota Vrhovnega sodišča Republike Slovenije.",
+     "quote_english": "The Centre for Informatics (CIF) is a special organisational unit of the Supreme Court of the Republic of Slovenia.",
+     "title": "Center za informatiko - posebne službe",
+     "url": "https://www.sodisce.si/sodisca/posebne_sluzbe/center_za_informatiko/",
+     "value": "The Centre for Informatics (CIF) is a special unit of the Supreme Court"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "sl",
+     "published": "",
+     "publisher": "Sodstvo Republike Slovenije",
+     "quote": "CIF skrbi za izbiro in dobavo informacijske opreme za sodišča, njeno vzdrževanje, izdelavo specializirane programske opreme",
+     "quote_english": "CIF is responsible for selecting and supplying IT equipment for courts, its maintenance, and producing specialised software",
+     "title": "Center za informatiko - posebne službe",
+     "url": "https://www.sodisce.si/sodisca/posebne_sluzbe/center_za_informatiko/",
+     "value": "CIF selects, procures and maintains court IT equipment and develops specialised court software"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kazenska evidenca (criminal record) + court case-management systems (eSodstvo)",
+   "operator": "Ministrstvo za pravosodje (criminal record); Vrhovno sodišče RS, Center za informatiko (court IT)",
+   "research_note": "The Supreme Court's IT centre (CIF) procures and maintains court IT itself, which points to in-house operation of court systems. No source states where the criminal record or court databases are hosted, so the rating stays unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2013-02-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Policija upravlja in vzdržuje evidence, v katerih zaradi opravljanja policijskih nalog uslužbenci policije zbirajo in obdelujejo osebne podatke.",
+     "quote_english": "The Police manages and maintains records in which police employees collect and process personal data in performing police tasks.",
+     "title": "Zakon o nalogah in pooblastilih policije (ZNPPol), Uradni list RS, št. 15/2013",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2013-01-0435/",
+     "value": "ZNPPol Art. 123: the Police manages and maintains its records"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2013-02-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "V zvezi z izvajanjem policijskih pooblastil policija vodi in vzdržuje naslednje evidence: 1. evidenco kaznivih dejanj, 2. evidenco prekrškov, 3. evidenco iskanih oseb",
+     "quote_english": "In connection with exercising police powers, the police keeps and maintains the following records: 1. criminal offences, 2. misdemeanours, 3. wanted persons",
+     "title": "Zakon o nalogah in pooblastilih policije (ZNPPol), Uradni list RS, št. 15/2013",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2013-01-0435/",
+     "value": "Police records include criminal offences, misdemeanours and wanted persons"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidence policije (police records: criminal offences, misdemeanours, wanted persons, identifications, operational information)",
+   "operator": "Policija (Police, within the interior ministry)",
+   "research_note": "No hosting source or count found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2023-03-08",
+     "publisher": "GOV.SI (Ministrstvo za notranje zadeve)",
+     "quote": "Tehnično je SIS sestavljen iz centralnega sistema, nacionalnih sistemov SIS v državah članicah, pridruženih državah in evropskih agencijah, ki uporabljajo SIS, ter omrežja, ki povezuje vse sisteme.",
+     "quote_english": "Technically, SIS consists of a central system, national SIS systems in member states, associated states and European agencies using SIS, and a network connecting all systems.",
+     "title": "Prenovljeni Schengenski informacijski sistem",
+     "url": "https://www.gov.si/novice/2023-03-08-prenovljeni-schengenski-informacijski-sistem/",
+     "value": "SIS consists of a central system and national SIS systems in the member states, linked by a network"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Nacionalni sistem SIS II (national Schengen Information System) and national border/visa systems",
+   "operator": "Policija / Ministrstvo za notranje zadeve (national SIRENE office in the Criminal Police Directorate)",
+   "research_note": "SIS consists of an EU central system plus national systems; a source confirms Slovenia's national SIS II was renewed with EU Internal Security Fund money, but its hosting is not stated. National VIS and EES components were not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2000-07-06",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Centralna evidenca izdanih orožnih listin je zbir evidenc izdanih orožnih listin, ki jih vodijo pristojni organi.",
+     "quote_english": "The central register of issued firearms documents is the aggregate of the registers of issued firearms documents kept by the competent bodies.",
+     "title": "Zakon o orožju (ZOro-1), Uradni list RS, št. 61/2000",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2000-01-2747/zakon-o-orozju-zoro-1",
+     "value": "The central register of issued firearms documents combines the registers kept by the competent bodies"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "sl",
+     "published": "2000-07-06",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Pristojni organ vodi evidence iz tega člena na centralnem računalniku ministrstva, pristojnega za notranje zadeve.",
+     "quote_english": "The competent body keeps the records under this article on the central computer of the ministry responsible for internal affairs.",
+     "title": "Zakon o orožju (ZOro-1), Uradni list RS, št. 61/2000",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2000-01-2747/zakon-o-orozju-zoro-1",
+     "value": "Registers are kept on the interior ministry's central computer"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "national",
+   "holding_name": "Centralna evidenca izdanih orožnih listin (central register of issued firearms documents)",
+   "operator": "Ministrstvo za notranje zadeve (Ministry of the Interior); administrative units as competent bodies",
+   "research_note": "Citation is to the ZOro-1 text as published in 2000. The provision that registers are kept on the interior ministry's central computer is original text; whether later amendments changed it was not verified.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2025-10-28",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Uradni list se izdaja v elektronski obliki z objavo na spletišču Pravnega informacijskega sistema Republike Slovenije (v nadaljnjem besedilu: PISRS).",
+     "quote_english": "The Official Gazette is issued in electronic form by publication on the website of the Legal Information System of the Republic of Slovenia (hereinafter: PISRS).",
+     "title": "Zakon o objavljanju v Uradnem listu Republike Slovenije (ZOUL), Uradni list RS, št. 83/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-2953",
+     "value": "ZOUL Art. 4: the Official Gazette is published electronically on PISRS"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sl",
+     "published": "2025-10-28",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Izdajatelj uradnega lista je služba vlade, pristojna za zakonodajo.",
+     "quote_english": "The publisher of the Official Gazette is the government office responsible for legislation.",
+     "title": "Zakon o objavljanju v Uradnem listu Republike Slovenije (ZOUL), Uradni list RS, št. 83/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-2953",
+     "value": "The publisher of the Official Gazette is the government office responsible for legislation"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "sl",
+     "published": "2025-10-28",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "razvoj in vzdrževanje informacijskih sistemov, ki zagotavljajo izdajanje in dostopnost uradnega lista",
+     "quote_english": "development and maintenance of information systems ensuring the publication and accessibility of the Official Gazette",
+     "title": "Zakon o objavljanju v Uradnem listu Republike Slovenije (ZOUL), Uradni list RS, št. 83/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-2953",
+     "value": "The publisher itself develops and maintains the information systems that publish the gazette"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "national",
+   "holding_name": "Uradni list Republike Slovenije, izdan na PISRS (Official Gazette, published electronically on the Legal Information System)",
+   "operator": "Služba Vlade Republike Slovenije za zakonodajo (Government Office for Legislation)",
+   "research_note": "From 1 March 2026 under ZOUL, the gazette is published only in electronic form on PISRS by the Government Office for Legislation, which also develops and maintains the systems. No data-centre location was published.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI (Uprava RS za javna plačila)",
+     "quote": "V Upravi Republike Slovenije za javna plačila (UJP) izvajamo plačilne storitve za proračunske uporabnike, vodimo register proračunskih uporabnikov in njihovih podračunov",
+     "quote_english": "At the Public Payments Administration (UJP) we provide payment services for budget users and keep the register of budget users and their sub-accounts",
+     "title": "O Upravi Republike Slovenije za javna plačila",
+     "url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/uprava-za-javna-placila/o-upravi/",
+     "value": "UJP provides payment services to budget users and keeps the register of budget users and their sub-accounts"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI (Ministrstvo za finance)",
+     "quote": "Pri računovodenju oziroma vodenju poslovnih knjig za Proračun Republike Slovenije, neposredne proračunske uporabnike državnega proračuna in Mestne občine Ljubljana se uporablja sistem MFERAC.",
+     "quote_english": "The MFERAC system is used for accounting and bookkeeping for the Budget of the Republic of Slovenia, direct users of the state budget and the City Municipality of Ljubljana.",
+     "title": "Sistem MFERAC",
+     "url": "https://www.gov.si/zbirke/storitve/mferac/",
+     "value": "MFERAC is used for accounting of the state budget and direct budget users"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "UJP plačilni sistem in register proračunskih uporabnikov; sistem MFERAC (treasury payments, register of budget users, state accounting system)",
+   "operator": "Uprava Republike Slovenije za javna plačila (UJP) and Ministrstvo za finance",
+   "research_note": "No hosting source found for UJP or MFERAC.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI (Ministrstvo za finance)",
+     "quote": "Sistem MFERAC podpira poslovanje proračunskih uporabnikov na finančnem, računovodskem in plačno-kadrovskem področju.",
+     "quote_english": "The MFERAC system supports the operations of budget users in finance, accounting and payroll/HR.",
+     "title": "Sistem MFERAC",
+     "url": "https://www.gov.si/zbirke/storitve/mferac/",
+     "value": "MFERAC supports budget users in finance, accounting and payroll/HR"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "AJPES",
+     "quote": "AJPES zbira podatke o plačah v javnem sektorju prek informacijskega sistema za posredovanje in analizo podatkov o plačah, drugih izplačilih in številu zaposlenih v javnem sektorju",
+     "quote_english": "AJPES collects public-sector pay data through the information system for submitting and analysing data on pay, other payments and number of employees in the public sector",
+     "title": "Plače v javnem sektorju - Splošno",
+     "url": "https://www.ajpes.si/Statistike/Place_v_javnem_sektorju/Splosno",
+     "value": "AJPES collects public-sector payroll data through ISPAP"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "MFERAC (plačno-kadrovski del) and ISPAP (payroll/HR module of the state accounting system, and public-sector pay data system)",
+   "operator": "Ministrstvo za finance (MFERAC); AJPES (ISPAP)",
+   "research_note": "The Central HR register of the state administration (CKEDU, under ZJU) was identified but not verified in a primary text. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI",
+     "quote": "Državna volilna komisija izvaja, nadzoruje in usklajuje volilne postopke, s čimer zagotavlja, da volitve v naši državi potekajo zakonito",
+     "quote_english": "The National Electoral Commission carries out, supervises and coordinates electoral procedures, ensuring that elections in our country are conducted lawfully",
+     "title": "Državna volilna komisija",
+     "url": "https://www.gov.si/drzavni-organi/drugi-drzavni-organi/drzavna-volilna-komisija/",
+     "value": "DVK carries out, supervises and coordinates electoral procedures"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2006-10-23",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Državno volilno komisijo imenuje državni zbor. Državno volilno komisijo sestavljajo predsednik in pet članov ter njihovi namestniki.",
+     "quote_english": "The National Electoral Commission is appointed by the National Assembly. It consists of a president and five members and their deputies.",
+     "title": "Zakon o volitvah v državni zbor (uradno prečiščeno besedilo) (ZVDZ-UPB1), Uradni list RS, št. 109/2006",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/76022",
+     "value": "ZVDZ: DVK is appointed by the National Assembly"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Volilni sistemi Državne volilne komisije (DVK election administration and results systems)",
+   "operator": "Državna volilna komisija (National Electoral Commission)",
+   "research_note": "No source states how DVK systems are hosted. Observed on 2026-09-29, not from a published source: the DVK results site volitve.dvk-rs.si returns a Cloudflare bot-challenge (response header server: cloudflare). That shows only a web front end, not where results are tabulated, so it is not claimed.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "sl",
+     "published": "",
+     "publisher": "Banka Slovenije",
+     "quote": "Evrosistem razvil plačilno infrastrukturo, v okviru katere ponuja številne storitve, namen katerih je zagotoviti prost pretok denarja, vrednostnih papirjev in finančnega zavarovanja.",
+     "quote_english": "the Eurosystem developed payment infrastructure within which it offers numerous services aimed at ensuring the free flow of money, securities and collateral.",
+     "title": "Plačilna infrastruktura",
+     "url": "https://www.bsi.si/sl/placilni-sistemi/placilna-infrastruktura",
+     "value": "Payment infrastructure (TARGET services) is developed and provided by the Eurosystem"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "Banka Slovenije",
+     "quote": "Storitve TARGET so namenjene poravnavi plačil (večinoma) velikih vrednosti, poslov z vrednostnimi papirji in takojšnjih plačil.",
+     "quote_english": "TARGET services are intended for settling (mostly) large-value payments, securities transactions and instant payments.",
+     "title": "Plačilna infrastruktura",
+     "url": "https://www.bsi.si/sl/placilni-sistemi/placilna-infrastruktura",
+     "value": "TARGET services settle large-value payments, securities transactions and instant payments"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "eu_provider",
+   "holding_name": "Banka Slovenije: TARGET / TARGET-Slovenija payment settlement (Bank of Slovenia central bank accounts and TARGET settlement)",
+   "operator": "Banka Slovenije within the Eurosystem",
+   "research_note": "Only the TARGET component is sourced. It is Eurosystem-shared infrastructure, which the Bank of Slovenia itself belongs to. No source was found on hosting of the Bank of Slovenia's own internal systems.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "Ministrstvo za obrambo / Slovenska vojska",
+   "research_note": "Searched MORS and Slovenska vojska pages and Zakon o obrambi (ZObr-UPB1) for the command-and-control, logistics or mission data systems and their hosting; found nothing public beyond general provisions. No claim made.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI (SOVA)",
+     "quote": "Zakon o Sovi v 2. členu opredeljuje tri osnovne naloge agencije: pridobivanje podatkov, vrednotenje podatkov, posredovanje informacij iz tujine ali v povezavi s tujino.",
+     "quote_english": "Article 2 of the SOVA Act defines three core tasks of the agency: acquiring data, evaluating data, and passing on information from abroad or relating to abroad.",
+     "title": "O Slovenski obveščevalno-varnostni agenciji",
+     "url": "https://www.gov.si/drzavni-organi/vladne-sluzbe/slovenska-obvescevalno-varnostna-agencija/o-sovi/",
+     "value": "ZSOVA Art. 2 sets SOVA's core tasks: acquiring, evaluating and passing on intelligence from or relating to abroad"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2004-09-23",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Obveščevalno varnostna služba vodi v skladu s svojimi pristojnostmi tudi druge evidence in zbirke podatkov",
+     "quote_english": "The Intelligence and Security Service, within its competences, also keeps other records and databases",
+     "title": "Zakon o obrambi (uradno prečiščeno besedilo) (ZObr-UPB1), Uradni list RS, št. 103/2004",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/51272",
+     "value": "ZObr-UPB1: the defence intelligence and security service keeps records and databases"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Zbirke podatkov SOVA; evidence Obveščevalno varnostne službe MORS (holdings of the Slovenian Intelligence and Security Agency and records of the defence intelligence service)",
+   "operator": "Slovenska obveščevalno-varnostna agencija (SOVA); Obveščevalno varnostna služba MORS",
+   "research_note": "Hosting is not public, as expected.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI (Uprava RS za zaščito in reševanje)",
+     "quote": "Spremljamo, obdelujemo in prenašamo klice v sili na klicno številko 112 za pomoč gasilcev, službe nujne medicinske pomoči oziroma pomoč drugih reševalnih služb",
+     "quote_english": "We monitor, process and transfer emergency calls to number 112 for firefighters, emergency medical services or other rescue services",
+     "title": "Urad za obveščanje in alarmiranje",
+     "url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/uprava-za-zascito-in-resevanje/o-upravi/urad-za-obvescanje-in-alarmiranje/",
+     "value": "Regional notification centres receive and process 112 emergency calls"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI (Uprava RS za zaščito in reševanje)",
+     "quote": "Delo je organizirano v Centru za obveščanje Republike Slovenije in trinajstih Regijskih centrih za obveščanje",
+     "quote_english": "The work is organised in the Notification Centre of the Republic of Slovenia and thirteen Regional Notification Centres",
+     "title": "Urad za obveščanje in alarmiranje",
+     "url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/uprava-za-zascito-in-resevanje/o-upravi/urad-za-obvescanje-in-alarmiranje/",
+     "value": "Work is organised in the Notification Centre of the Republic of Slovenia and 13 regional centres"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2020-12-10",
+     "publisher": "GOV.SI (Ministrstvo za notranje zadeve)",
+     "quote": "pogodbo za izgradnjo infrastrukture in vzdrževanje digitalnega radijskega sistema državnih organov Republike Slovenije po standardu TETRA",
+     "quote_english": "a contract for building the infrastructure and maintaining the digital radio system of state bodies of the Republic of Slovenia to the TETRA standard",
+     "title": "Po več letih bo zgrajena nova infrastruktura sistema TETRA",
+     "url": "https://www.gov.si/novice/2020-12-10-po-vec-letih-bo-zgrajena-nova-infrastruktura-sistema-tetra/",
+     "value": "A contract was signed to build and maintain the state bodies' TETRA digital radio system"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "hosting",
+     "language": "sl",
+     "published": "2020-12-10",
+     "publisher": "GOV.SI (Ministrstvo za notranje zadeve)",
+     "quote": "predstavnik skupine ponudnikov direktor Poslovnega trga Telekoma Slovenije",
+     "quote_english": "representative of the bidder group, director of the Business Market of Telekom Slovenije",
+     "title": "Po več letih bo zgrajena nova infrastruktura sistema TETRA",
+     "url": "https://www.gov.si/novice/2020-12-10-po-vec-letih-bo-zgrajena-nova-infrastruktura-sistema-tetra/",
+     "value": "The contractor was a bidder group represented by Telekom Slovenije"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "Klic v sili 112 (Center za obveščanje RS in 13 regijskih centrov); digitalni radijski sistem državnih organov TETRA (112 emergency call handling and state TETRA radio network)",
+   "operator": "Uprava RS za zaščito in reševanje (URSZR), Ministry of Defence; Police / Ministry of the Interior (TETRA)",
+   "research_note": "A 2020 contract to build and maintain the TETRA infrastructure went to a bidder group represented by Telekom Slovenije. The other consortium members and vendors are not named in the source, so the rating stays unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI (Ministrstvo za obrambo)",
+     "quote": "Nacionalni center zagotavlja prostorske, tehnične, informacijske in telekomunikacijske pogoje za delo Vlade Republike Slovenije v okolju, ki lahko pomembno ogrozi nacionalno varnost.",
+     "quote_english": "The National Centre provides spatial, technical, information and telecommunication conditions for the Government's work in an environment that may significantly threaten national security.",
+     "title": "Nacionalni center za krizno upravljanje",
+     "url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-obrambo/o-ministrstvu/direktorat-za-obrambne-zadeve/nacionalni-center-za-krizno-upravljanje/",
+     "value": "NCKU provides premises, IT and telecom conditions for the government in crises threatening national security"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Nacionalni center za krizno upravljanje (NCKU) (National Crisis Management Centre)",
+   "operator": "Ministrstvo za obrambo, Direktorat za obrambne zadeve",
+   "research_note": "The governing Uredba o kriznem upravljanju in vodenju is on PISRS, which is JavaScript-rendered; it was not quoted. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "sl",
+     "published": "",
+     "publisher": "Portal Energetika (ministry responsible for energy)",
+     "quote": "Družba ELES, d. o.o. na podlagi Zakona o oskrbi z električno energijo (ZOEE) izvaja obvezno gospodarsko javno službo operaterja kombiniranega prenosnega in distribucijskega elektroenergetskega omrežja",
+     "quote_english": "ELES, d.o.o., on the basis of the Electricity Supply Act (ZOEE), performs the mandatory public service of operator of the combined transmission and distribution electricity network",
+     "title": "ELES, d.o.o. sistemski operater prenosnega elektroenergetskega omrežja",
+     "url": "https://www.energetika-portal.si/podrocja/energetika/upravljanje-kapitalskih-nalozb/eles/",
+     "value": "Under ZOEE, ELES performs the mandatory public service of combined transmission and distribution system operator"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "Portal Energetika (ministry responsible for energy)",
+     "quote": "V okviru opravljanja regulirane dejavnosti zagotavlja varno, zanesljivo in učinkovito obratovanje in vzdrževanje prenosnega in distribucijskega sistema.",
+     "quote_english": "Within its regulated activity it ensures safe, reliable and efficient operation and maintenance of the transmission and distribution system.",
+     "title": "ELES, d.o.o. sistemski operater prenosnega elektroenergetskega omrežja",
+     "url": "https://www.energetika-portal.si/podrocja/energetika/upravljanje-kapitalskih-nalozb/eles/",
+     "value": "ELES ensures safe, reliable and efficient operation of the transmission and distribution system"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sistem vodenja prenosnega omrežja ELES (Republiški center vodenja) (ELES transmission system control)",
+   "operator": "ELES, d.o.o. (state-owned transmission and distribution system operator)",
+   "research_note": "The ELES 'Republiški center vodenja' page body did not render in static HTML, so no text from it is quoted. No SCADA/EMS vendor or hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "Direkcija Republike Slovenije za vode (DRSV); Agencija RS za okolje (ARSO) for hydrological monitoring",
+   "research_note": "Searched DRSV and ARSO pages and Zakon o vodah (ZV-1) for a named flood-defence or water-control system and its hosting. The DRSV pages describe flood-protection works but no data/control system, so no claim is made.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "eZdravje (NIJZ)",
+     "quote": "Centralni register podatkov o pacientu (CRPP) je enotni sistem za zbiranje in izmenjavo zdravstvenih podatkov o pacientih s stalnim ali začasnim prebivališčem v Republiki Sloveniji",
+     "quote_english": "The Central Register of Patient Data (CRPP) is the single system for collecting and exchanging health data on patients with permanent or temporary residence in the Republic of Slovenia",
+     "title": "CRPP - eZdravje",
+     "url": "https://ezdrav.si/resitve/crpp/",
+     "value": "CRPP is the single system for collecting and exchanging health data on patients in Slovenia"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2025-12-04",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "vpis podatkov iz zbirke OZD v zbirko Centralni elektronski zdravstveni zapis (v nadaljnjem besedilu: zbirka CeZZ)",
+     "quote_english": "entry of data from the OZD collection into the Central Electronic Health Record collection (hereinafter: CeZZ collection)",
+     "title": "Zakon o digitalizaciji zdravstva (ZDigZ), Uradni list RS, št. 100/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387",
+     "value": "ZDigZ establishes the Central Electronic Health Record collection (CeZZ)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sl",
+     "published": "2025-12-04",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "NIJZ je odgovoren za vzpostavitev informacijskega sistema, ki podpira obdelavo podatkov v zbirki CeZZ in zbirki DOS, njegovo vzdrževanje ter tehnične in organizacijske ukrepe za varnost sistema in podatkov.",
+     "quote_english": "NIJZ is responsible for establishing the information system supporting data processing in the CeZZ and DOS collections, its maintenance, and technical and organisational security measures.",
+     "title": "Zakon o digitalizaciji zdravstva (ZDigZ), Uradni list RS, št. 100/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387",
+     "value": "NIJZ is responsible for the CeZZ information system, its maintenance and security"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "sl",
+     "published": "2025-12-04",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Gospodarsko javno službo izvaja javno podjetje, ki je oblikovano kot družba z omejeno odgovornostjo, katere edina ustanoviteljica in edina družbenica je Republika Slovenija",
+     "quote_english": "The public service is performed by a public company organised as a limited liability company whose sole founder and sole member is the Republic of Slovenia",
+     "title": "Zakon o digitalizaciji zdravstva (ZDigZ), Uradni list RS, št. 100/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387",
+     "value": "Central health ICT is a public service run by a public company wholly owned by the Republic of Slovenia"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "sl",
+     "published": "2025-12-04",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Družba ne sme ustanoviti druge gospodarske družbe ali pridobiti poslovnega deleža ali delnic druge družbe. Družba ima sedež na območju Republike Slovenije.",
+     "quote_english": "The company may not establish another company or acquire a stake or shares in another company. The company has its seat in the territory of the Republic of Slovenia.",
+     "title": "Zakon o digitalizaciji zdravstva (ZDigZ), Uradni list RS, št. 100/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387",
+     "value": "The company must have its seat in Slovenia and may not hold stakes in other companies"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "national",
+   "holding_name": "Centralni elektronski zdravstveni zapis (zbirka CeZZ), formerly Centralni register podatkov o pacientih (CRPP), eZdravje (central electronic health record)",
+   "operator": "NIJZ (information system) with healthcare providers as joint controllers; central ICT infrastructure by a state-owned public company",
+   "research_note": "ZDigZ (Uradni list RS 100/2025) replaced ZZPPZ, which applied until 18 Dec 2025. The national rating rests on the statute: central ICT is run by a public company wholly owned by the Republic of Slovenia with its seat in Slovenia. No data-centre location was published.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2025-12-04",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Zbirke podatkov na področju javnega zdravja so: 1. zbirka o nalezljivih boleznih in okužbah, povzročiteljih in njihovih lastnostih",
+     "quote_english": "Data collections in the field of public health are: 1. collection on communicable diseases and infections, pathogens and their characteristics",
+     "title": "Zakon o digitalizaciji zdravstva (ZDigZ), Uradni list RS, št. 100/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387",
+     "value": "ZDigZ Art. 22(2) lists public-health collections, starting with notifiable diseases"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2025-11-06",
+     "publisher": "Nacionalni inštitut za javno zdravje (NIJZ)",
+     "quote": "Z začetkom leta 2017 je v okviru eZdravja pričel z delovanjem Elektronski register cepljenih oseb in neželenih učinkov po cepljenju",
+     "quote_english": "At the beginning of 2017, the Electronic Register of Vaccinated Persons and Adverse Events Following Immunisation began operating within eZdravje",
+     "title": "Elektronski register cepljenih oseb in neželenih učinkov po cepljenju - eRCO",
+     "url": "https://nijz.si/nalezljive-bolezni/cepljenje/elektronski-register-cepljenih-oseb-in-nezelenih-ucinkov-po-cepljenju-erco/",
+     "value": "The electronic register of vaccinated persons and adverse events (eRCO) has operated since 2017"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "sl",
+     "published": "2025-12-04",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Družba šteje v skladu s Splošno uredbo o varstvu podatkov za pogodbenega obdelovalca zbirk podatkov iz 2. do 5. točke prvega odstavka 22. člena in drugega odstavka 22. člena tega zakona.",
+     "quote_english": "Under the GDPR, the company is the contractual processor of the data collections in points 2 to 5 of Article 22(1) and in Article 22(2) of this Act.",
+     "title": "Zakon o digitalizaciji zdravstva (ZDigZ), Uradni list RS, št. 100/2025",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387",
+     "value": "The state-owned public company is the contractual processor for the public-health collections (Art. 22(2))"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "national",
+   "holding_name": "Zbirke javnega zdravja po ZDigZ, incl. zbirka o nalezljivih boleznih in eRCO (public-health collections incl. notifiable diseases and the electronic vaccination register)",
+   "operator": "NIJZ and controllers listed in Annex 1 of ZDigZ",
+   "research_note": "The national rating rests on ZDigZ Art. 7(3): the state-owned public company is the processor for the public-health collections under Art. 22(2). Annex 1 (the list of controllers) was not quoted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2011-03-18",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "ministrstvo vzpostavi, vodi, vzdržuje in nadzoruje informatizirano zbirko podatkov (v nadaljnjem besedilu: centralna evidenca)",
+     "quote_english": "the ministry establishes, keeps, maintains and supervises a computerised database (hereinafter: central register)",
+     "title": "Zakon o spremembah in dopolnitvah Zakona o organizaciji in financiranju vzgoje in izobraževanja (ZOFVI-I), Uradni list RS, št. 20/2011",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/102705/",
+     "value": "ZOFVI Art. 135.a: the ministry establishes, keeps, maintains and supervises the central register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2011-06-03",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "se vodi v posebni računalniški aplikaciji Centralna evidenca udeležencev vzgoje in izobraževanja",
+     "quote_english": "is kept in a special computer application Central Register of Participants in Education",
+     "title": "Pravilnik o načinu in pogojih dostopa do podatkov iz centralne evidence udeležencev vzgoje in izobraževanja, Uradni list RS, št. 43/2011",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-2099",
+     "value": "The register is kept in the application 'Centralna evidenca udeležencev vzgoje in izobraževanja'"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "2017-03-10",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "S tem pravilnikom se določata način in oblika zagotavljanja podatkov za evidenčni in analitski informacijski sistem visokega šolstva v Republiki Sloveniji",
+     "quote_english": "This rulebook sets the manner and form of supplying data to the records and analytical information system of higher education in the Republic of Slovenia",
+     "title": "Pravilnik o zagotavljanju podatkov za eVŠ, Uradni list RS, št. 12/2017",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2017-01-0550/pravilnik-o-zagotavljanju-podatkov-za-evs/",
+     "value": "eVŠ is the higher-education records and analytics information system"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "Centralna evidenca udeležencev vzgoje in izobraževanja (CEUVIZ); eVŠ (central register of pupils and students; higher education records and analytics system)",
+   "operator": "Ministry responsible for education (CEUVIZ); eVŠ under the higher-education ministry",
+   "research_note": "No hosting source or count found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sl",
+     "published": "1995-08-04",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Osnovne naloge pri izvajanju dejavnosti državne statistike opravlja Statistični urad Republike Slovenije",
+     "quote_english": "The basic tasks in carrying out national statistics are performed by the Statistical Office of the Republic of Slovenia",
+     "title": "Zakon o državni statistiki (ZDSta), Uradni list RS, št. 45/1995",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/1995-01-2169/zakon-o-drzavni-statistiki-zdsta/",
+     "value": "ZDSta Art. 3: SURS performs the core tasks of official statistics"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "1995-08-04",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "da je zagotovljena zaupnost zbranih statističnih podatkov, ki se uporabljajo samo za statistične namene",
+     "quote_english": "that the confidentiality of the collected statistical data is ensured, which are used only for statistical purposes",
+     "title": "Zakon o državni statistiki (ZDSta), Uradni list RS, št. 45/1995",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/1995-01-2169/zakon-o-drzavni-statistiki-zdsta/",
+     "value": "Statistical data are confidential and used only for statistical purposes"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "Statistični podatki in mikropodatki SURS (confidential statistical microdata)",
+   "operator": "Statistični urad Republike Slovenije (SURS)",
+   "research_note": "Citation is to the ZDSta text as published in 1995; amendments not checked. The stat.si copy of the act was reachable with curl but failed a Python TLS handshake, so the Uradni list page is cited. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "sl",
+     "published": "2021-04-09",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Kataster nepremičnin, evidenco državne meje, register prostorskih enot in register naslovov vzpostavi, vodi in vzdržuje Geodetska uprava Republike Slovenije",
+     "quote_english": "The real estate cadastre, the state border register, the register of spatial units and the address register are established, kept and maintained by the Surveying and Mapping Authority of the Republic of Slovenia",
+     "title": "Zakon o katastru nepremičnin (ZKN), Uradni list RS, št. 54/2021",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2021-01-1047",
+     "value": "ZKN Art. 4: GURS establishes, keeps and maintains the address register and the spatial units register"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register naslovov, register prostorskih enot, kataster nepremičnin (address register, spatial units register, real estate cadastre)",
+   "operator": "Geodetska uprava Republike Slovenije (GURS)",
+   "research_note": "No hosting source or volume figure found for GURS geodata or orthophotos.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "sl",
+     "published": "",
+     "publisher": "GOV.SI",
+     "quote": "s sistemom e-ARH.si, ki je varen, standardiziran in zaupanja vreden slovenski elektronski arhiv za dolgoročno ohranjanje in nadaljnjo uporabo elektronskega arhivskega gradiva",
+     "quote_english": "with the e-ARH.si system, a secure, standardised and trustworthy Slovenian electronic archive for long-term preservation and further use of electronic archival material",
+     "title": "Slovenski elektronski arhiv",
+     "url": "https://www.gov.si/teme/slovenski-elektronski-arhiv/",
+     "value": "e-ARH.si is the Slovenian electronic archive for long-term preservation of electronic archival records"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "sl",
+     "published": "2006-03-23",
+     "publisher": "Uradni list Republike Slovenije",
+     "quote": "Naloge državnega arhiva opravlja Arhiv Republike Slovenije, ki je organ v sestavi ministrstva, pristojnega za arhive.",
+     "quote_english": "The tasks of the state archive are performed by the Archives of the Republic of Slovenia, a body within the ministry responsible for archives.",
+     "title": "Zakon o varstvu dokumentarnega in arhivskega gradiva ter arhivih (ZVDAGA), Uradni list RS, št. 30/2006",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2006-01-1229",
+     "value": "ZVDAGA: the Archives of the Republic of Slovenia performs the tasks of the state archive"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "e-ARH.si (Slovenski elektronski arhiv) (Slovenian electronic archive)",
+   "operator": "Arhiv Republike Slovenije (Archives of the Republic of Slovenia)",
+   "research_note": "No hosting source or data volume found for e-ARH.si.",
+   "status": "held"
+  }
+ ],
+ "iso": "SI"
+}

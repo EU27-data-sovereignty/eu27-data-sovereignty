@@ -1,0 +1,1526 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2020-03-25",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Loi du 25 mars 2020 instituant un système électronique central de recherche de données concernant des comptes de paiement et des comptes bancaires identifiés par un numéro IBAN et des coffres-forts tenus par des établissements de crédit au Luxembourg",
+     "quote_english": "Act of 25 March 2020 establishing a central electronic data-retrieval system for payment and bank accounts identified by an IBAN and safe-deposit boxes held by credit institutions in Luxembourg",
+     "title": "Loi du 25 mars 2020 instituant un système électronique central de recherche de données concernant des comptes IBAN et des coffres-forts",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2020/03/25/a193/jo/fr/html",
+     "value": "Act of 25 March 2020 establishing a central electronic data-retrieval system for IBAN payment and bank accounts and safe-deposit boxes at Luxembourg credit institutions"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2020-03-25",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Les professionnels mettent en place un fichier de données permettant l’identification de toute personne physique ou morale qui détient ou contrôle, auprès de tels professionnels, des comptes de paiement ou des comptes bancaires identifiés par un numéro IBAN",
+     "quote_english": "Professionals set up a data file allowing the identification of any natural or legal person who holds or controls, with those professionals, payment accounts or bank accounts identified by an IBAN",
+     "title": "Loi du 25 mars 2020 instituant un système électronique central de recherche de données concernant des comptes IBAN et des coffres-forts",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2020/03/25/a193/jo/fr/html",
+     "value": "Institutions must keep a data file identifying every person who holds or controls IBAN accounts or safe-deposit boxes, and the CSSF has automated access to it"
+    }
+   ],
+   "holding_name": "Système électronique central de recherche de données concernant des comptes IBAN et des coffres-forts (central electronic data-retrieval system for IBAN accounts and safe-deposit boxes)",
+   "suggested_class": "financial_account_registry",
+   "why_critical": "Luxembourg is a major financial centre. This system gives the judicial authorities, the FIU, the CSSF, the tax administration and the SRE access to the holders and beneficial owners of every IBAN account and safe-deposit box held with Luxembourg credit institutions. It is central to anti-money-laundering, sanctions and intelligence work, and a foreign-compelled disclosure would expose the whole banking clientele."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Il est établi un registre national qui a pour finalités: – l’identification des personnes physiques; – la mise à disposition de données de personnes physiques aux responsables des fichiers des organismes publics",
+     "quote_english": "A national register is established whose purposes are: the identification of natural persons; making natural persons' data available to the controllers of public bodies' files",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "Registre national des personnes physiques (National Register of Natural Persons), established for identifying natural persons and supplying data to public bodies"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le Centre est chargé de toutes les opérations relatives à la gestion et à la tenue du registre national sous l’autorité du ministre.",
+     "quote_english": "The Centre is responsible for all operations relating to the management and keeping of the national register under the authority of the minister.",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "The Centre (CTIE) manages and keeps the national register under the minister's authority"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "auprès du Centre des technologies de l’information de l’Etat, désigné ci-après par le terme «Centre»",
+     "quote_english": "with the State Information Technology Centre, hereinafter referred to as the 'Centre'",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "In this Act, 'Centre' means the Centre des technologies de l'information de l'État (CTIE)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Loi du 19 juin 2013 relative à l’identification des personnes physiques, au registre national des personnes physiques, à la carte d’identité, aux registres communaux des personnes physiques",
+     "quote_english": "Act of 19 June 2013 on the identification of natural persons, the national register of natural persons, the identity card and the municipal registers of natural persons",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "Amended Act of 19 June 2013 on the identification of natural persons, the national register, the identity card and the municipal registers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Chaque commune tient un registre des personnes physiques, ci-après le «registre communal», divisé en un registre principal et un registre d’attente.",
+     "quote_english": "Each commune keeps a register of natural persons, hereinafter the 'municipal register', divided into a main register and a waiting register.",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "Each commune keeps a municipal register of natural persons (registre communal), which feeds the national register"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registre national des personnes physiques (RNPP) - National Register of Natural Persons",
+   "operator": "Centre des technologies de l'information de l'État (CTIE), under the minister for internal affairs; communes keep the municipal registers",
+   "research_note": "No public source found on where the RNPP is hosted, or on its record count.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Les données biométriques ne sont conservées que pendant une durée de deux mois après la délivrance d’une carte d’identité et sont, à l’expiration de ce délai, automatiquement et irréversiblement supprimées.",
+     "quote_english": "Biometric data are kept only for two months after an identity card is issued and are, when that period expires, automatically and irreversibly deleted.",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "Identity-card biometric data are kept for only two months after issuance, then automatically and irreversibly deleted, so there is no permanent central store for ID cards"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Les données biométriques à collecter en vue de l’établissement d’une carte d’identité sont déterminées à l’article 12, paragraphe 2,",
+     "quote_english": "The biometric data to be collected for issuing an identity card are determined in Article 12, paragraph 2,",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "The biometric data collected for the ID card are those set out in Art. 12(2), which include the digitised photograph"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2021-07-20",
+     "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+     "quote": "la production et la personnalisation de documents administratifs sécurisés et le traitement des données biométriques y relatives",
+     "quote_english": "the production and personalisation of secure administrative documents and the processing of the related biometric data",
+     "title": "Attributions - Centre des technologies de l'information de l'État",
+     "url": "https://ctie.gouvernement.lu/fr/l-administration/Attributions.html",
+     "value": "CTIE produces and personalises secure documents and processes the related biometric data"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Données biométriques de la carte d'identité (identity-card facial image, kept for two months only)",
+   "operator": "Centre des technologies de l'information de l'État (CTIE)",
+   "research_note": "The two-month deletion rule (Act of 19 June 2013, Art. 16(3)) covers identity-card biometrics, including the digitised photograph. The passport regulation (RGD of 12 February 2015) only says the facial image is stored on the chip. No provision on central retention of passport facial images was found, so the passport side is not established either way.",
+   "status": "not_held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Les données biométriques ne sont conservées que pendant une durée de deux mois après la délivrance d’une carte d’identité et sont, à l’expiration de ce délai, automatiquement et irréversiblement supprimées.",
+     "quote_english": "Biometric data are kept only for two months after an identity card is issued and are, when that period expires, automatically and irreversibly deleted.",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "Identity-card biometric data, including fingerprints, are deleted two months after issuance"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Les enfants de moins de douze ans sont exemptés de l’obligation de donner leurs empreintes digitales.",
+     "quote_english": "Children under twelve are exempt from the obligation to give their fingerprints.",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "Fingerprints are captured for identity cards; children under 12 are exempt"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "fr",
+     "published": "2015-02-12",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Est incorporée dans le passeport une puce électronique stockant: (a)",
+     "quote_english": "An electronic chip is incorporated in the passport, storing: (a)",
+     "title": "Règlement grand-ducal du 12 février 2015 fixant les modalités pour l'obtention d'un passeport biométrique",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/rgd/2015/02/12/n1/jo/fr/html",
+     "value": "Passport biometrics (facial image, signature, fingerprints) are stored on an electronic chip in the passport"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Empreintes digitales (fingerprints for the ID card and passport; not kept centrally for ID cards beyond two months)",
+   "operator": "Centre des technologies de l'information de l'État (CTIE)",
+   "research_note": "The two-month deletion rule applies to identity-card biometrics, and the 2021 amendment added two fingerprints to the card. For passports, the 2015 regulation only describes storage on the chip. No central fingerprint retention provision was found.",
+   "status": "not_held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2019-12-20",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Les actes de l’état civil sont inscrits, dans chaque commune, sur un ou plusieurs registres tenus doubles.",
+     "quote_english": "Civil status records are entered, in each commune, in one or more registers kept in duplicate.",
+     "title": "Loi du 20 décembre 2019 relative aux registres de l'état civil",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2019/12/20/a878/jo/fr/html",
+     "value": "Civil-status records (births, marriages, deaths) are entered in registers kept in duplicate in each commune"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2019-12-20",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "L’un des doubles est déposé, dans le mois, aux archives de la commune.",
+     "quote_english": "One of the duplicates is deposited, within the month, in the commune's archives.",
+     "title": "Loi du 20 décembre 2019 relative aux registres de l'état civil",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2019/12/20/a878/jo/fr/html",
+     "value": "One duplicate is deposited in the commune's archives"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2019-12-20",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "L’autre double demeure au greffe du Tribunal d’arrondissement.",
+     "quote_english": "The other duplicate remains at the registry of the District Court.",
+     "title": "Loi du 20 décembre 2019 relative aux registres de l'état civil",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2019/12/20/a878/jo/fr/html",
+     "value": "The other duplicate stays at the registry of the District Court"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2019-12-20",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Loi du 20 décembre 2019 relative aux registres de l’état civil et portant modification du livre",
+     "quote_english": "Act of 20 December 2019 on civil status registers and amending book",
+     "title": "Loi du 20 décembre 2019 relative aux registres de l'état civil",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2019/12/20/a878/jo/fr/html",
+     "value": "Act of 20 December 2019 on civil-status registers, amending Book I, Title II of the Civil Code"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Les copies numériques ou les photocopies des pièces justificatives des données inscrites sur le registre communal doivent être conservées par les communes.",
+     "quote_english": "Digital copies or photocopies of the supporting documents for the data entered in the municipal register must be kept by the communes.",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "Communes must keep digital copies or photocopies of the supporting documents for entries in the municipal population register"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registres de l'état civil (civil-status registers) and pièces justificatives (supporting documents) of the registres communaux",
+   "operator": "Communes (civil registrars); a duplicate is held at the registry of the Tribunal d'arrondissement",
+   "research_note": "Since the 2019 amendment of the Civil Code, the registers are loose sheets bound each year and kept in duplicate. No source was found on digitisation or hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Il est établi un registre des cartes d’identité qui a pour finalités de collecter les demandes de cartes d’identité, de permettre la délivrance des cartes d’identité sur base des données reprises du registre national et de répertorier les cartes d’identité émises.",
+     "quote_english": "An identity card register is established to collect identity card applications, allow cards to be issued on the basis of national register data, and list the identity cards issued.",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "Registre des cartes d'identité: collects applications, allows issuance from national register data and lists the cards issued"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2021-07-20",
+     "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+     "quote": "la production et la personnalisation de documents administratifs sécurisés et le traitement des données biométriques y relatives",
+     "quote_english": "the production and personalisation of secure administrative documents and the processing of the related biometric data",
+     "title": "Attributions - Centre des technologies de l'information de l'État",
+     "url": "https://ctie.gouvernement.lu/fr/l-administration/Attributions.html",
+     "value": "CTIE produces and personalises secure administrative documents"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "en",
+     "published": "",
+     "publisher": "INCERT GIE",
+     "quote": "Issuance Ensuring data's authenticity contained in these documents. Production ≈ 140,000 per year.",
+     "title": "Serving Luxembourg's Public Services",
+     "url": "https://www.incert.lu/serving-luxembourg-public-agencies",
+     "value": "About 140,000 travel and identity documents produced per year (INCERT figure)"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registre des cartes d'identité (identity card register)",
+   "operator": "Centre des technologies de l'information de l'État (CTIE); INCERT GIE supports document issuance",
+   "research_note": "Passport issuance records (Bureau des passeports, visas et légalisations) were not separately sourced. No hosting source was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2021-12-17",
+     "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+     "quote": "le gouvernement luxembourgeois donne au citoyen la possibilité d’utiliser sa carte d’identité électronique",
+     "quote_english": "the Luxembourg government gives citizens the possibility of using their electronic identity card",
+     "title": "GouvID – L'app pour vous identifier auprès des services publics en ligne",
+     "url": "https://ctie.gouvernement.lu/fr/actualites/dossiers/gouvid/gouvid.html",
+     "value": "GouvID app: lets citizens use the Luxembourg electronic identity card (eID) with a smartphone"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2021-12-17",
+     "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+     "quote": "pour s’identifier sur un PC ou une tablette auprès de certains services publics en ligne tels que MyGuichet.lu.",
+     "quote_english": "to identify themselves on a PC or tablet with certain public online services such as MyGuichet.lu.",
+     "title": "GouvID – L'app pour vous identifier auprès des services publics en ligne",
+     "url": "https://ctie.gouvernement.lu/fr/actualites/dossiers/gouvid/gouvid.html",
+     "value": "GouvID/eID is used to log in to public online services such as MyGuichet.lu"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "les moyens d’authentification et de signature du titulaire de la carte d’identité si celui-ci en a fait la demande;",
+     "quote_english": "the identity card holder's means of authentication and signature if the holder has requested them;",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "On request, the identity card chip carries the holder's authentication and signature means (Act of 19 June 2013, Art. 12)"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "fr",
+     "published": "2026-07-28",
+     "publisher": "LuxTrust",
+     "quote": "LuxTrust, prestataire de services de confiance qualifié et acteur de référence de l’identité numérique",
+     "quote_english": "LuxTrust, qualified trust service provider and reference player in digital identity",
+     "title": "LuxTrust et INCERT scellent un partenariat stratégique pour renforcer la souveraineté numérique",
+     "url": "https://www.luxtrust.com/fr/news/luxtrust-et-incert-scellent-un-partenariat-strategique-pour-renforcer-la-souverainete",
+     "value": "LuxTrust is a qualified trust service provider and a reference digital-identity provider (LuxTrust credentials)"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "unknown",
+   "holding_name": "LuxTrust / eID (carte d'identité électronique, electronic identity card) / GouvID",
+   "operator": "CTIE (GouvID app and eID card); LuxTrust (LuxTrust credentials)",
+   "research_note": "No public source found on the hosting of the authentication back-end or on the number of active credentials.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "research_note": "Searched CTIE pages, the guichet.lu/MyGuichet help pages and a Legilux SPARQL title search for a legal basis or description of MyGuichet/GouvID authentication logs. Found nothing citable.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2024-04-26",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "une liste des citoyens luxembourgeois, électeurs aux élections législatives, européennes et communales; 2. une liste des ressortissants étrangers, électeurs aux élections communales;",
+     "quote_english": "a list of Luxembourg citizens, voters in legislative, European and communal elections; 2. a list of foreign nationals, voters in communal elections;",
+     "title": "Loi électorale modifiée du 18 février 2003 (version consolidée au 26/04/2024)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2003/02/18/n2/consolide/20240426/fr/html",
+     "value": "Each commune keeps electoral lists: Luxembourg citizens (all elections) and foreign nationals (communal elections)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "l’inscription sur les listes électorales constatant la qualité d’électeur pour les élections législatives, communales ou européennes.",
+     "quote_english": "registration on the electoral lists establishing voter status for legislative, communal or European elections.",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "Registration on the electoral lists is recorded in the national register (RNPP)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2024-04-26",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "le Centre des technologies de l’information de l’État établit une liste, triée par nationalité, de tous les ressortissants des autres États membres de l’Union européenne, électeurs aux élections européennes",
+     "quote_english": "the State IT Centre draws up a list, sorted by nationality, of all nationals of other EU Member States who are voters in European elections",
+     "title": "Loi électorale modifiée du 18 février 2003 (version consolidée au 26/04/2024)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2003/02/18/n2/consolide/20240426/fr/html",
+     "value": "CTIE draws up the list of EU-national voters for European elections from the RNPP"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Listes électorales (electoral lists), with registration recorded in the RNPP",
+   "operator": "Communes (collège des bourgmestre et échevins); CTIE for the EU-voter list",
+   "research_note": "No hosting information found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "INCERT GIE",
+     "quote": "Service Provider Managing secure digital trust services such as qualified time stampings, and certificates for authentication and signature purposes (eIDAS 2.0).",
+     "title": "Serving Luxembourg's Public Services",
+     "url": "https://www.incert.lu/serving-luxembourg-public-agencies",
+     "value": "INCERT acts as a qualified trust service provider, issuing authentication and signature certificates"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "fr",
+     "published": "2026-07-28",
+     "publisher": "LuxTrust",
+     "quote": "Créé en 2012 par l’État luxembourgeois, INCERT est un Groupement d’Intérêt Économique spécialisé dans les solutions de souveraineté numérique, la cryptographie et la gestion d’identité.",
+     "quote_english": "Created in 2012 by the Luxembourg State, INCERT is an economic interest grouping specialised in digital sovereignty solutions, cryptography and identity management.",
+     "title": "LuxTrust et INCERT scellent un partenariat stratégique pour renforcer la souveraineté numérique",
+     "url": "https://www.luxtrust.com/fr/news/luxtrust-et-incert-scellent-un-partenariat-strategique-pour-renforcer-la-souverainete",
+     "value": "INCERT was created by the Luxembourg State in 2012 as an economic interest grouping (GIE) for cryptography and identity management"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "les moyens d’authentification et de signature du titulaire de la carte d’identité si celui-ci en a fait la demande;",
+     "quote_english": "the identity card holder's means of authentication and signature if the holder has requested them;",
+     "title": "Loi modifiée du 19 juin 2013 relative à l'identification des personnes physiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/consolide/20220731/fr/html",
+     "value": "The ID card carries the holder's certificate-based authentication and signature means, issued by an approved certification service provider (Act of 19 June 2013, Art. 12)"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "fr",
+     "published": "2026-07-28",
+     "publisher": "LuxTrust",
+     "quote": "LuxTrust, prestataire de services de confiance qualifié et acteur de référence de l’identité numérique",
+     "quote_english": "LuxTrust, qualified trust service provider and reference player in digital identity",
+     "title": "LuxTrust et INCERT scellent un partenariat stratégique pour renforcer la souveraineté numérique",
+     "url": "https://www.luxtrust.com/fr/news/luxtrust-et-incert-scellent-un-partenariat-strategique-pour-renforcer-la-souverainete",
+     "value": "LuxTrust is a qualified trust service provider"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "Qualified trust services and eID certificates (INCERT GIE; LuxTrust)",
+   "operator": "INCERT GIE (created by the State); LuxTrust",
+   "research_note": "No source found on where the CA keys or HSMs are hosted. No government root CA document was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2016-07-05",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "le fichier des étrangers exploité pour le compte du service des étrangers du ministre ayant l'Immigration dans ses attributions;",
+     "quote_english": "the foreign nationals file operated on behalf of the foreigners service of the minister responsible for Immigration;",
+     "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+     "value": "Fichier des étrangers (foreign nationals file), run for the foreigners service of the minister responsible for Immigration"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2008-08-29",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "portant sur la libre circulation des personnes et l'immigration;",
+     "quote_english": "on the free movement of persons and immigration;",
+     "title": "Loi du 29 août 2008 portant sur la libre circulation des personnes et l'immigration",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2008/08/29/n1/jo/fr/html",
+     "value": "Amended Act of 29 August 2008 on the free movement of persons and immigration"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Fichier des étrangers (foreign nationals file)",
+   "operator": "The foreigners service of the minister responsible for Immigration",
+   "research_note": "The description of the file comes from the 2016 SRE Act's list of databases the intelligence service can access. No record count or hosting source found; asylum data (Act of 5 May 2006, later replaced) not separately sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "Administration des contributions directes",
+     "quote": "L’ACD, représentée par le directeur des contributions, est le responsable du traitement.",
+     "quote_english": "The ACD, represented by the director of taxes, is the data controller.",
+     "title": "Règlement général sur la protection des données (RGPD)",
+     "url": "https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html",
+     "value": "The ACD is the data controller"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "Administration des contributions directes",
+     "quote": "La fixation des impôts et taxes, la perception et le recouvrement d'impôts, taxes et autres créances, la gestion des échanges d'information nationaux et internationaux",
+     "quote_english": "The assessment of taxes and duties, the collection and recovery of taxes, duties and other claims, the management of national and international information exchanges",
+     "title": "Règlement général sur la protection des données (RGPD)",
+     "url": "https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html",
+     "value": "ACD processes personal data to assess, collect and recover taxes and to exchange information nationally and internationally"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Données fiscales de l'Administration des contributions directes (direct tax assessment and collection data)",
+   "operator": "Administration des contributions directes (ACD)",
+   "research_note": "No source found on hosting or record counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "Administration des douanes et accises",
+     "quote": "eDouane est le point d'accès aux téléservices de l'Administration des douanes et accises du Luxembourg. A partir d'eDouane, vous pouvez accéder à toutes les applications de déclaration en ligne",
+     "quote_english": "eDouane is the access point to the online services of the Luxembourg Customs and Excise Administration. From eDouane you can access all the online declaration applications",
+     "title": "eDouane - Services en ligne",
+     "url": "https://douanes.public.lu/fr/services-ligne/edouanes.html",
+     "value": "eDouane is the access point to all online declaration applications of the Customs and Excise Administration"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2015-10-01",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "les attributions de l'administration des douanes et accises portent sur les matières suivantes: 1.",
+     "quote_english": "the remit of the customs and excise administration covers the following matters: 1.",
+     "title": "Loi modifiée du 27 juillet 1993 portant organisation de l'administration des douanes et accises (version consolidée au 01/10/2015)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/1993/07/27/n3/consolide/20151001/fr/html",
+     "value": "Act of 27 July 1993 organising the Customs and Excise Administration, which sets its remit (EU customs and excise law, national excise, VAT duties)"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "eDouane (customs and excise online declaration applications)",
+   "operator": "Administration des douanes et accises (ADA)",
+   "research_note": "No hosting or volume source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2016-07-05",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "le fichier relatif aux affiliations des salariés, des indépendants et des employeurs géré par le Centre commun de la sécurité sociale sur base de l'article 413 du Code de la sécurité sociale",
+     "quote_english": "the file on the affiliations of employees, self-employed persons and employers managed by the Joint Social Security Centre on the basis of Article 413 of the Social Security Code",
+     "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+     "value": "Affiliation file of employees, self-employed and employers kept by the CCSS under Art. 413 of the Social Security Code"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "2020-02-07",
+     "publisher": "Centre commun de la sécurité sociale",
+     "quote": "L’institution de sécurité sociale dénommée « Centre commun de la sécurité sociale » a pour missions : l’affiliation des assurés d’après les dispositions y relatives en matière de sécurité sociale ;",
+     "quote_english": "The social security institution called 'Joint Social Security Centre' has the tasks of: affiliating insured persons under the relevant social security provisions;",
+     "title": "Attributions - Centre commun de la sécurité sociale",
+     "url": "https://ccss.public.lu/fr/ccss/attributions.html",
+     "value": "The CCSS's statutory tasks include affiliating insured persons and calculating and collecting contributions"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "fr",
+     "published": "2020-02-07",
+     "publisher": "Centre commun de la sécurité sociale",
+     "quote": "l’organisation de l’informatisation, le développement et l’implémentation des applications informatiques, la mise à disposition de l’infrastructure informatique",
+     "quote_english": "organising computerisation, developing and implementing IT applications, providing the IT infrastructure",
+     "title": "Attributions - Centre commun de la sécurité sociale",
+     "url": "https://ccss.public.lu/fr/ccss/attributions.html",
+     "value": "The CCSS develops the IT applications and provides the IT infrastructure for the social security institutions"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "fr",
+     "published": "2020-02-07",
+     "publisher": "Centre commun de la sécurité sociale",
+     "quote": "la centralisation et le traitement informatique des données pour le compte des différentes institutions de sécurité sociale",
+     "quote_english": "the centralisation and computer processing of data on behalf of the various social security institutions",
+     "title": "Attributions - Centre commun de la sécurité sociale",
+     "url": "https://ccss.public.lu/fr/ccss/attributions.html",
+     "value": "The CCSS centralises and processes data on behalf of the social security institutions"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "fr",
+     "published": "2026-06-26",
+     "publisher": "Centre commun de la sécurité sociale",
+     "quote": "Déclarations de salaire : 10.193.370 → +5,0 % (2024",
+     "quote_english": "Wage declarations: 10,193,370 → +5.0% (2024",
+     "title": "Le rapport annuel 2025 du CCSS est en ligne !",
+     "url": "https://ccss.public.lu/fr/actualites/2026/06/rapport-annuel-2025.html",
+     "value": "10,193,370 wage declarations processed in 2025 (+5.0%)"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "national",
+   "holding_name": "Fichier des affiliations du Centre commun de la sécurité sociale (social security affiliation and contributions file)",
+   "operator": "Centre commun de la sécurité sociale (CCSS)",
+   "research_note": "foreign_dependency is 'national' because the CCSS's statutory tasks include providing the IT infrastructure and central data processing for the social security institutions. No source names a data centre or any cloud provider.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "Caisse nationale de santé",
+     "quote": "la Caisse nationale de santé (CNS) gère les prestations à l’usage de tous les ASSURÉS DU PRIVÉ et des OUVRIERS DE L’ÉTAT",
+     "quote_english": "the National Health Fund (CNS) manages the benefits for all PRIVATE-SECTOR INSURED PERSONS and STATE WORKERS",
+     "title": "L'assurance maladie en bref",
+     "url": "https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html",
+     "value": "The CNS manages benefits for all private-sector insured persons and State workers"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "Caisse nationale de santé",
+     "quote": "Si je travaille au Luxembourg, que ce soit pour un employeur ou en tant qu'indépendant, je dois obligatoirement être affilié par le Centre commun de la sécurité sociale (CCSS).",
+     "quote_english": "If I work in Luxembourg, whether for an employer or as a self-employed person, I must be affiliated by the Joint Social Security Centre (CCSS).",
+     "title": "Affiliation",
+     "url": "https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html",
+     "value": "Anyone working in Luxembourg must be affiliated by the CCSS, which triggers health insurance coverage"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "fr",
+     "published": "2020-02-07",
+     "publisher": "Centre commun de la sécurité sociale",
+     "quote": "la centralisation et le traitement informatique des données pour le compte des différentes institutions de sécurité sociale",
+     "quote_english": "the centralisation and computer processing of data on behalf of the various social security institutions",
+     "title": "Attributions - Centre commun de la sécurité sociale",
+     "url": "https://ccss.public.lu/fr/ccss/attributions.html",
+     "value": "The CCSS centralises and processes data on behalf of the social security institutions"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "national",
+   "holding_name": "Affiliation and benefits records of the statutory sickness-maternity insurance (assurance maladie-maternité)",
+   "operator": "Caisse nationale de santé (CNS); affiliation by the Centre commun de la sécurité sociale (CCSS)",
+   "research_note": "foreign_dependency is 'national' because the CCSS centralises and processes data for all social security institutions, CNS included. No source names a data centre or cloud provider.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2022-11-01",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "la publicité en matière de propriété et de copropriété foncières, sur la base de la documentation cadastrale, appelée documentation par la suite, et se composant des registres et des fichiers fonciers ainsi que du plan cadastral",
+     "quote_english": "publicity of land ownership and co-ownership, on the basis of the cadastral documentation, made up of the land registers and land files and the cadastral plan",
+     "title": "Loi modifiée du 25 juillet 2002 portant réorganisation de l'administration du cadastre et de la topographie (version consolidée au 01/11/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2002/07/25/n8/consolide/20221101/fr/html",
+     "value": "The ACT handles publicity of land ownership and co-ownership, based on cadastral documentation made up of land registers, land files and the cadastral plan"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Documentation cadastrale (cadastral documentation: land registers, land files and cadastral plan)",
+   "operator": "Administration du cadastre et de la topographie (ACT)",
+   "research_note": "The mortgage and land-publicity side (Act of 11 November 2003 on publicité foncière, AED) was not separately quoted. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2025-12-23",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le registre de commerce et des sociétés fonctionne sous l’autorité du ministre de la Justice, qui en confie la gestion à un groupement d’intérêt économique, regroupant l’État, la Chambre de commerce et la Chambre des métiers, constitué à cette fin.",
+     "quote_english": "The trade and companies register operates under the authority of the Minister of Justice, who entrusts its management to an economic interest grouping of the State, the Chamber of Commerce and the Chamber of Trades, set up for this purpose.",
+     "title": "Loi modifiée du 19 décembre 2002 concernant le registre de commerce et des sociétés (version consolidée au 23/12/2025)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2002/12/19/n1/consolide/20251223/fr/html",
+     "value": "The RCS operates under the Minister of Justice, who entrusts its management to a GIE of the State, the Chamber of Commerce and the Chamber of Trades"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registre de commerce et des sociétés (RCS, Trade and Companies Register)",
+   "operator": "Luxembourg Business Registers (LBR), a GIE of the State, the Chamber of Commerce and the Chamber of Trades, under the Minister of Justice",
+   "research_note": "No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2025-02-01",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "le fichier dans lequel sont conservées les informations sur les bénéficiaires effectifs ;",
+     "quote_english": "the file in which information on beneficial owners is kept;",
+     "title": "Loi modifiée du 13 janvier 2019 instituant un Registre des bénéficiaires effectifs (version consolidée au 01/02/2025)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2019/01/13/a15/consolide/20250201/fr/html",
+     "value": "The RBE is the file in which beneficial-owner information is kept"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2025-02-01",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le gestionnaire est chargé de l’inscription, de la sauvegarde, de la gestion administrative et de la mise à disposition des informations sur les bénéficiaires effectifs conformément aux dispositions de la présente loi.",
+     "quote_english": "The manager is responsible for registering, safeguarding, administering and making available the beneficial-owner information in accordance with this Act.",
+     "title": "Loi modifiée du 13 janvier 2019 instituant un Registre des bénéficiaires effectifs (version consolidée au 01/02/2025)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2019/01/13/a15/consolide/20250201/fr/html",
+     "value": "The manager (the LBR GIE) registers, safeguards, administers and provides the beneficial-owner information"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registre des bénéficiaires effectifs (RBE, Register of Beneficial Owners)",
+   "operator": "Luxembourg Business Registers (LBR) GIE",
+   "research_note": "No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2016-07-05",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "le fichier des véhicules routiers et de leurs propriétaires et détenteurs, exploité pour le compte du ministère ayant le Transport dans ses attributions;",
+     "quote_english": "the file of road vehicles and their owners and keepers, operated on behalf of the ministry responsible for Transport;",
+     "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+     "value": "Road vehicles file of vehicles and their owners and keepers, run for the ministry responsible for Transport"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "Société nationale de circulation automobile",
+     "quote": "Être au service des automobilistes du Luxembourg en leur fournissant dans les meilleurs délais un support professionnel et une information complète en matière de mise en circulation de véhicules routiers et de permis de conduire",
+     "quote_english": "To serve Luxembourg motorists by providing, as quickly as possible, professional support and complete information on putting road vehicles into circulation and on driving licences",
+     "title": "Missions et valeurs - SNCA",
+     "url": "https://snca.public.lu/fr/snca/missions-valeurs.html",
+     "value": "The SNCA handles putting road vehicles into circulation and driving licences"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "",
+     "publisher": "Société nationale de circulation automobile",
+     "quote": "En premier lieu, l’immatriculation vise l’identification univoque de tout véhicule routier et de son titulaire ou propriétaire par le biais d’un numéro d’immatriculation unique",
+     "quote_english": "First, registration aims at the unambiguous identification of every road vehicle and its holder or owner by means of a unique registration number",
+     "title": "Histoire de la SNCA",
+     "url": "https://snca.public.lu/fr/snca/histoire-snca.html",
+     "value": "Registration uniquely identifies each road vehicle and its holder or owner"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Fichier des véhicules routiers et de leurs propriétaires et détenteurs (road vehicles file); driving licences",
+   "operator": "Société nationale de circulation automobile (SNCA), for the ministry responsible for Transport",
+   "research_note": "A consolidated version of the 1955 road traffic law was not available on Legilux, so the existence of the vehicle file is quoted from the 2016 SRE Act. No hosting or count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2026-03-17",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le casier judiciaire est tenu sous la responsabilité du procureur général d’Etat sous forme électronique.",
+     "quote_english": "The criminal record is kept under the responsibility of the State Prosecutor General in electronic form.",
+     "title": "Loi modifiée du 29 mars 2013 relative à l'organisation du casier judiciaire (version consolidée au 17/03/2026)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/03/29/n10/consolide/20260317/fr/html",
+     "value": "The criminal record is kept in electronic form under the responsibility of the State Prosecutor General"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Casier judiciaire (criminal record)",
+   "operator": "Procureur général d'État (Parquet général), service du casier judiciaire",
+   "research_note": "Court case-management systems were not sourced. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2026-07-25",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Dans le fichier central, la Police traite les données à caractère personnel et informations relatives aux personnes qui ont fait l’objet d’un procès-verbal ou rapport dans le cadre de l’exécution d’une mission de police judiciaire",
+     "quote_english": "In the central file, the Police process personal data and information on persons who were the subject of an official report or report in the course of a judicial police mission",
+     "title": "Loi modifiée du 18 juillet 2018 sur la Police grand-ducale (version consolidée au 25/07/2026)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2018/07/18/a621/consolide/20260725/fr/html",
+     "value": "In the central file, the Police process data on persons who are the subject of a police report in judicial, administrative or other police missions"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2026-07-25",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le fichier central comprend une partie active et une partie passive.",
+     "quote_english": "The central file comprises an active part and a passive part.",
+     "title": "Loi modifiée du 18 juillet 2018 sur la Police grand-ducale (version consolidée au 25/07/2026)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2018/07/18/a621/consolide/20260725/fr/html",
+     "value": "The central file has an active and a passive part"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Fichier central de la Police grand-ducale (Grand Ducal Police central file)",
+   "operator": "Police grand-ducale",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2024-12-18",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Il est créé au sein de la Police grand-ducale un office",
+     "quote_english": "An office is created within the Grand Ducal Police",
+     "title": "Loi du 18 décembre 2024 portant mise en œuvre des règlements (UE) relatifs au système d'information Schengen",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2024/12/18/a549/jo/fr/html",
+     "value": "An N.SIS office is set up within the Grand Ducal Police"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2024-12-18",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "qui comporte une copie partielle de la base de données du SIS, ci-après dénommé",
+     "quote_english": "which contains a partial copy of the SIS database, hereinafter referred to as",
+     "title": "Loi du 18 décembre 2024 portant mise en œuvre des règlements (UE) relatifs au système d'information Schengen",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2024/12/18/a549/jo/fr/html",
+     "value": "The 'national copy' N.SIS holds a partial copy of the SIS database"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2016-07-05",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "le fichier des demandeurs de visa exploité pour le compte du bureau des passeports, visas et légalisations du ministre ayant les Affaires étrangères dans ses attributions;",
+     "quote_english": "the visa applicants file operated on behalf of the passports, visas and legalisations office of the minister responsible for Foreign Affairs;",
+     "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+     "value": "Visa applicants file run for the Passport, Visa and Legalisation Office of the Foreign Affairs minister"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2018-08-01",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Il est créé au sein de la Police grand-ducale une Unité d’informations passagers, ci-après désignée",
+     "quote_english": "A Passenger Information Unit is created within the Grand Ducal Police, hereinafter referred to as",
+     "title": "Loi du 1er août 2018 relative au traitement des données des dossiers passagers",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2018/08/01/a690/jo/fr/html",
+     "value": "A Passenger Information Unit (UIP) is set up within the Grand Ducal Police"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2018-08-01",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "de la collecte des données PNR transférées par les transporteurs aériens ainsi que de la conservation et du traitement de ces données ;",
+     "quote_english": "collecting PNR data transferred by air carriers and keeping and processing that data;",
+     "title": "Loi du 1er août 2018 relative au traitement des données des dossiers passagers",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2018/08/01/a690/jo/fr/html",
+     "value": "The UIP collects, keeps and processes PNR data sent by air carriers"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "N.SIS (copie nationale du SIS, national copy of the Schengen Information System); fichier des demandeurs de visa (visa applicants file); PNR data of the Unité d'informations passagers",
+   "operator": "Police grand-ducale (office N.SIS, bureau SIRENE, UIP); Bureau des passeports, visas et légalisations (visas)",
+   "research_note": "No national Entry/Exit implementation source was found. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2022-02-02",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le ministre tient un fichier comportant les données à caractère personnel des personnes physiques qui sont nécessaires pour tracer et identifier les armes visées par la présente loi",
+     "quote_english": "The minister keeps a file containing the personal data of natural persons needed to trace and identify the weapons covered by this Act",
+     "title": "Loi du 2 février 2022 sur les armes et munitions",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2022/02/02/a49/jo/fr/html",
+     "value": "The minister keeps a file of the personal data needed to trace and identify weapons (Art. 15, Act of 2 February 2022)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2022-02-02",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "sont conservées au fichier pour une période maximale de trente ans qui court à partir de la destruction des armes à feu ou des parties essentielles en question.",
+     "quote_english": "are kept in the file for a maximum period of thirty years running from the destruction of the firearms or essential components concerned.",
+     "title": "Loi du 2 février 2022 sur les armes et munitions",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2022/02/02/a49/jo/fr/html",
+     "value": "Firearms records are kept for up to 30 years after the weapon is destroyed"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Fichier des armes (weapons file)",
+   "operator": "The minister responsible under the Arms Act (Ministry of Justice)",
+   "research_note": "The Act refers to 'le ministre'. The 2016 SRE Act describes the earlier prohibited-weapons file as belonging to the minister responsible for Justice. No hosting or count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2016-12-23",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le Journal officiel est publié sous forme électronique et dans des conditions permettant de garantir l’authenticité de son contenu. Le Journal officiel publié fait seul foi et produit des effets juridiques.",
+     "quote_english": "The Official Journal is published in electronic form under conditions that guarantee the authenticity of its content. Only the published Official Journal is authentic and has legal effect.",
+     "title": "Loi du 23 décembre 2016 concernant le Journal officiel du Grand-Duché de Luxembourg",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/12/23/n25/jo/fr/html",
+     "value": "The Official Journal is published electronically with guaranteed authenticity, and only the published electronic version is authentic"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "Ministère d'État - Service central de législation",
+     "quote": "Le Service central de législation (SCL) du ministère d'État assure l'édition du Journal officiel du Grand-Duché de Luxembourg et la consolidation de la législation.",
+     "quote_english": "The Central Legislation Service (SCL) of the Ministry of State publishes the Official Journal of the Grand Duchy of Luxembourg and consolidates legislation.",
+     "title": "Service central de législation",
+     "url": "https://scl.gouvernement.lu/fr.html",
+     "value": "The SCL of the Ministry of State publishes the Official Journal and consolidates legislation"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Journal officiel du Grand-Duché de Luxembourg (Mémorial A and B; legilux.public.lu)",
+   "operator": "Ministère d'État - Service central de législation (SCL)",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2026-07-27",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "La section «comptabilité» centralise l’intégralité des opérations de recettes et de dépenses de l’Etat ainsi que tous les mouvements de fonds sur les comptes de l’Etat",
+     "quote_english": "The 'accounting' section centralises all State revenue and expenditure operations as well as all movements of funds on the State's accounts",
+     "title": "Loi modifiée du 8 juin 1999 sur le budget, la comptabilité et la trésorerie de l'État (version consolidée au 27/07/2026)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/1999/06/08/n2/consolide/20260727/fr/html",
+     "value": "The accounting section centralises all State revenue and expenditure operations and all fund movements on State accounts"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2026-07-27",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "du paiement de toutes les dépenses de l’Etat autres que celles payées directement par les comptables extraordinaires",
+     "quote_english": "payment of all State expenditure other than that paid directly by the special accountants",
+     "title": "Loi modifiée du 8 juin 1999 sur le budget, la comptabilité et la trésorerie de l'État (version consolidée au 27/07/2026)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/1999/06/08/n2/consolide/20260727/fr/html",
+     "value": "Under Art. 91 of the budget law (Treasury chapter), the State Treasury pays all State expenditure apart from that paid by special accountants"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Comptabilité budgétaire et générale de l'État (State budgetary and general accounts, Trésorerie de l'État)",
+   "operator": "Trésorerie de l'État (State Treasury), Ministry of Finance",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2026-09-15",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "assurer une gestion centralisée de l’ensemble des données relatives aux ressources humaines de l’État ;",
+     "quote_english": "to ensure centralised management of all data relating to the State's human resources;",
+     "title": "Loi du 25 juillet 2018 portant création du Centre de gestion du personnel et de l'organisation de l'État (version consolidée au 15/09/2026)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2018/07/25/a620/consolide/20260915/fr/html",
+     "value": "The CGPO provides centralised management of all State human-resources data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2026-09-15",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "calculer et allouer les traitements, indemnités, salaires et rémunérations accessoires des agents au service de l’État ;",
+     "quote_english": "to calculate and pay the salaries, allowances, wages and ancillary remuneration of State staff;",
+     "title": "Loi du 25 juillet 2018 portant création du Centre de gestion du personnel et de l'organisation de l'État (version consolidée au 15/09/2026)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2018/07/25/a620/consolide/20260915/fr/html",
+     "value": "The CGPO calculates and pays the salaries and allowances of State staff"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Données RH et paie de l'État (State HR and payroll data)",
+   "operator": "Centre de gestion du personnel et de l'organisation de l'État (CGPO)",
+   "research_note": "Armed forces personnel files were not separately sourced. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2024-04-26",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le Gouvernement en conseil installe à l’occasion de chaque élection législative, européenne ou communale générale un bureau centralisateur chargé de la détermination et de la diffusion des résultats officieux des élections.",
+     "quote_english": "For each general legislative, European or communal election, the Government in Council installs a centralising office responsible for determining and disseminating the unofficial election results.",
+     "title": "Loi électorale modifiée du 18 février 2003 (version consolidée au 26/04/2024)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2003/02/18/n2/consolide/20240426/fr/html",
+     "value": "For each election the Government installs a central office that determines and publishes the provisional results"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Bureau centralisateur gouvernemental (government results-centralisation office)",
+   "operator": "Government in Council (bureau centralisateur); communal polling offices",
+   "research_note": "No source found on the IT systems or hosting used for results tabulation.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "1998-12-23",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "La Banque centrale du Luxembourg, désignée dans les dispositions qui suivent par les termes \"Banque centrale\", fait partie intégrante du Système européen de banques centrales",
+     "quote_english": "The Central Bank of Luxembourg, hereinafter the 'Central Bank', is an integral part of the European System of Central Banks",
+     "title": "Loi du 23 décembre 1998 relative au statut monétaire et à la Banque centrale du Luxembourg",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/1998/12/23/n1/jo/fr/html",
+     "value": "The BCL is an integral part of the European System of Central Banks (Act of 23 December 1998)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "1998-12-23",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "La Banque centrale est un établissement public, doté de la personnalité juridique et de l'autonomie financière.",
+     "quote_english": "The Central Bank is a public institution with legal personality and financial autonomy.",
+     "title": "Loi du 23 décembre 1998 relative au statut monétaire et à la Banque centrale du Luxembourg",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/1998/12/23/n1/jo/fr/html",
+     "value": "The BCL is a public institution with legal personality and financial autonomy"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "holding_name": "Systèmes de la Banque centrale du Luxembourg (BCL central bank systems)",
+   "operator": "Banque centrale du Luxembourg (BCL)",
+   "research_note": "Payment-system and reserves IT were not described in the sources found. BCL is part of the Eurosystem (ESCB).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2023-08-07",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "la préparation et la mise en condition des unités et du personnel de l’Armée. Il commande les moyens militaires. Il peut déléguer ce commandement ou une partie de ce commandement.",
+     "quote_english": "the preparation and readiness of the Army's units and personnel. He commands the military means. He may delegate this command or part of it.",
+     "title": "Loi du 7 août 2023 sur l'organisation de l'Armée luxembourgeoise",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2023/08/07/a502/jo/fr/html",
+     "value": "Under the Act of 7 August 2023 on the organisation of the Luxembourg Army, the Chief of Defence Staff commands the military means"
+    }
+   ],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "operator": "Armée luxembourgeoise (Chief of Defence Staff)",
+   "research_note": "The Army Act of 7 August 2023 sets out command authority. No public source was found describing defence command-and-control or logistics data systems or their hosting.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2016-07-05",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Tout traitement des données reprises dans les banques et fichiers de données à caractère personnel qui sont gérés par le SRE ou auxquels le SRE a accès",
+     "quote_english": "Any processing of data contained in the personal-data banks and files managed by the SRE or to which the SRE has access",
+     "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+     "value": "The SRE manages its own databanks and personal-data files"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2016-07-05",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le SRE a pour mission de rechercher, d'analyser et de traiter, dans une perspective d'anticipation et de prévention, mais à l'exclusion de toute surveillance politique interne, les renseignements relatifs à",
+     "quote_english": "The SRE's mission is to seek, analyse and process, for anticipation and prevention but excluding any internal political surveillance, intelligence relating to",
+     "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+     "value": "Act of 5 July 2016: the SRE's mission is to seek, analyse and process intelligence"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Banques et fichiers de données du Service de renseignement de l'État (SRE databanks and files)",
+   "operator": "Service de renseignement de l'État (SRE)",
+   "research_note": "No hosting source found (as expected).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2018-03-27",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le Central des secours d’urgence est l’organe national unique de réception et de régulation des demandes de secours en provenance du numéro d’appel d’urgence",
+     "quote_english": "The Emergency Call Centre is the single national body for receiving and regulating requests for help coming from the emergency number",
+     "title": "Loi du 27 mars 2018 portant organisation de la sécurité civile et création d'un Corps grand-ducal d'incendie et de secours",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2018/03/27/a221/jo/fr/html",
+     "value": "The Central des secours d'urgence is the single national body that receives and regulates 112 emergency calls"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "fr",
+     "published": "2014-05-20",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le Gouvernement est autorisé à conclure le contrat de marché avec l'adjudicataire du marché public pour la fourniture, le déploiement et l'opération d'un réseau radio numérique dédié pour les services de secours et de sécurité du Grand-Duché de Luxembourg.",
+     "quote_english": "The Government is authorised to conclude the contract with the winner of the public tender for the supply, deployment and operation of a dedicated digital radio network for the emergency and security services of the Grand Duchy of Luxembourg.",
+     "title": "Loi du 20 mai 2014 relative au financement du Réseau national intégré de radiocommunication pour les services de sécurité et de secours luxembourgeois",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2014/05/20/n1/jo/fr/html",
+     "value": "The dedicated digital radio network for emergency and security services (RENITA) is supplied, deployed and operated by a public-contract contractor, on a contract running to 30 June 2030"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "Central des secours d'urgence 112 (112 emergency call centre); RENITA (Réseau national intégré de radiocommunication, national public-safety radio network)",
+   "operator": "Corps grand-ducal d'incendie et de secours (CGDIS); RENITA supplied and operated by a contractor under a State public contract",
+   "research_note": "The RENITA Act states that the network is supplied, deployed and operated by the winner of a public contract. The contractor is not named in the text found, so foreign_dependency stays unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2016-07-23",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le Haut-Commissariat à la Protection nationale a pour mission de mettre en oeuvre le concept de protection nationale tel que défini à l'article 2.",
+     "quote_english": "The High Commission for National Protection's mission is to implement the national protection concept defined in Article 2.",
+     "title": "Loi du 23 juillet 2016 portant création d'un Haut-Commissariat à la Protection nationale",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/23/n1/jo/fr/html",
+     "value": "Act of 23 July 2016: the HCPN implements national protection"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2016-07-23",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "de veiller à la mise en place et au fonctionnement du Centre national de crise.",
+     "quote_english": "to ensure the set-up and operation of the National Crisis Centre.",
+     "title": "Loi du 23 juillet 2016 portant création d'un Haut-Commissariat à la Protection nationale",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/23/n1/jo/fr/html",
+     "value": "The HCPN ensures the set-up and running of the National Crisis Centre"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "fr",
+     "published": "2021-07-20",
+     "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+     "quote": "la mise à la disposition du Gouvernement d'une infrastructure sécurisée et des ressources administratives, logistiques, de communications électroniques et de traitement de l’information nécessaires à la gestion de crises",
+     "quote_english": "providing the Government with a secure infrastructure and the administrative, logistical, electronic communications and information-processing resources needed for crisis management",
+     "title": "Attributions - Centre des technologies de l'information de l'État",
+     "url": "https://ctie.gouvernement.lu/fr/l-administration/Attributions.html",
+     "value": "The CTIE provides the government with the secure infrastructure and information-processing resources needed for crisis management"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "national",
+   "holding_name": "Centre national de crise (national crisis centre) and the government's secure crisis-management infrastructure",
+   "operator": "Haut-Commissariat à la Protection nationale (HCPN); CTIE provides the secure infrastructure",
+   "research_note": "foreign_dependency is 'national' because the CTIE, a State administration, is legally tasked with providing the government's secure crisis-management infrastructure. No data-centre location is given.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fr",
+     "published": "",
+     "publisher": "Creos Luxembourg S.A.",
+     "quote": "Creos Luxembourg S.A. est gestionnaire de réseaux d'électricité et de gaz naturel au Luxembourg.",
+     "quote_english": "Creos Luxembourg S.A. is the electricity and natural gas network operator in Luxembourg.",
+     "title": "A propos - Creos Luxembourg",
+     "url": "https://www.creos-net.lu/particuliers/creos-luxembourg/a-propos",
+     "value": "Creos Luxembourg S.A. operates the electricity and natural gas networks in Luxembourg"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "fr",
+     "published": "",
+     "publisher": "Creos Luxembourg S.A.",
+     "quote": "Le contrôle et la gestion de ces réseaux à haute et moyenne tension sont assurés par un centre de conduite appelé Dispatching électricité. Pour pouvoir gérer un ensemble aussi complexe, le Dispatching dispose d'une représentation graphique (système PSI SCADA)",
+     "quote_english": "These high- and medium-voltage networks are controlled and managed by a control centre called Dispatching électricité. To manage such a complex whole, the Dispatching has a graphical representation (PSI SCADA system)",
+     "title": "Réseau électrique - Creos Luxembourg",
+     "url": "https://www.creos-net.lu/particuliers/creos-luxembourg/reseau-electrique",
+     "value": "The high- and medium-voltage grid is controlled from Creos's 'Dispatching électricité' control centre using a PSI SCADA system"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "fr",
+     "published": "",
+     "publisher": "Creos Luxembourg S.A.",
+     "quote": "Les réseaux gérés par Creos comprennent 12.728 km de lignes électriques et 2.216 km de conduites de gaz naturel, ainsi que plus de 331.500 clients en électricité",
+     "quote_english": "The networks managed by Creos comprise 12,728 km of power lines and 2,216 km of natural gas pipelines, and more than 331,500 electricity customers",
+     "title": "A propos - Creos Luxembourg",
+     "url": "https://www.creos-net.lu/particuliers/creos-luxembourg/a-propos",
+     "value": "12,728 km of power lines and more than 331,500 electricity customers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2022-12-23",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "«gestionnaire de réseau de transport»: toute personne physique ou morale responsable de l’exploitation, de l’entretien et, si nécessaire, du développement du réseau de transport dans une zone donnée",
+     "quote_english": "'transmission system operator': any natural or legal person responsible for operating, maintaining and, where necessary, developing the transmission system in a given area",
+     "title": "Loi modifiée du 1er août 2007 relative à l'organisation du marché de l'électricité (version consolidée au 23/12/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2007/08/01/n13/consolide/20221223/fr/html",
+     "value": "Amended Act of 1 August 2007 on the organisation of the electricity market defines the transmission system operator"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Dispatching électricité (electricity grid control centre, PSI SCADA)",
+   "operator": "Creos Luxembourg S.A. (electricity and gas network operator, Encevo group)",
+   "research_note": "Creos names its SCADA system as 'PSI SCADA'. The vendor's origin is not stated on the page, so no foreign-dependency value was inferred.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2026-01-01",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "L’Administration de la gestion de l’eau exploite un réseau de prévision des crues et de modélisation du régime hydrologique des cours d’eau afin de garantir une surveillance par temps de crues et d’étiages.",
+     "quote_english": "The Water Management Administration operates a flood-forecasting and hydrological-modelling network for watercourses in order to ensure monitoring during floods and low water.",
+     "title": "Loi modifiée du 19 décembre 2008 relative à l'eau (version consolidée au 01/01/2026)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2008/12/19/n17/consolide/20260101/fr/html",
+     "value": "The AGE runs a flood-forecasting and hydrological-modelling network to monitor floods and low water"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Réseau de prévision des crues (flood-forecasting and hydrological modelling network)",
+   "operator": "Administration de la gestion de l'eau (AGE)",
+   "research_note": "Drinking-water control systems (e.g. the intercommunal water syndicates) were not sourced. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2019-12-06",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Un dossier de soins partagé est créé par l’Agence pour le patient dès son affiliation à l’assurance maladie.",
+     "quote_english": "A shared care record is created by the Agency for the patient as soon as they are affiliated to health insurance.",
+     "title": "Règlement grand-ducal du 6 décembre 2019 précisant les modalités et conditions de mise en place du dossier de soins partagé",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/rgd/2019/12/06/a909/jo/fr/html",
+     "value": "A DSP is created by the Agency for every patient as soon as they are affiliated to health insurance"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2019-12-06",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Agence eSanté - Agence nationale des informations partagées dans le domaine de la santé",
+     "quote_english": "eSanté Agency - National agency for shared information in the health field",
+     "title": "Règlement grand-ducal du 6 décembre 2019 précisant les modalités et conditions de mise en place du dossier de soins partagé",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/rgd/2019/12/06/a909/jo/fr/html",
+     "value": "The Agency is the Agence eSanté - National Agency for Shared Health Information"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Dossier de soins partagé (DSP, shared care record)",
+   "operator": "Agence eSanté - Agence nationale des informations partagées dans le domaine de la santé (GIE)",
+   "research_note": "The legal basis is Art. 60quater of the Social Security Code and the RGD of 6 December 2019. No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2018-08-01",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Font l’objet d’une déclaration obligatoire avec transmission de données individuelles des cas diagnostiqués au directeur de la Santé ou à son délégué",
+     "quote_english": "Subject to mandatory notification, with transmission of individual data on diagnosed cases to the Director of Health or his delegate, are",
+     "title": "Loi du 1er août 2018 sur la déclaration obligatoire de certaines maladies dans le cadre de la protection de la santé publique",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2018/08/01/a705/jo/fr/html",
+     "value": "Act of 1 August 2018: doctors, dentists and laboratories must report cases of notifiable diseases, with individual data, to the Director of Health"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Déclarations obligatoires de maladies (notifiable disease reports)",
+   "operator": "Direction de la santé (Directeur de la santé as health authority)",
+   "research_note": "Vaccination registers were not sourced. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2014-09-04",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le ministre met en oeuvre les traitements des données à caractère personnel concernant les élèves et leurs représentants légaux qui sont nécessaires à la réalisation des finalités énoncées à l'article 3.",
+     "quote_english": "The minister carries out the processing of personal data on pupils and their legal representatives that is necessary for the purposes set out in Article 3.",
+     "title": "Loi du 18 mars 2013 relative aux traitements de données à caractère personnel concernant les élèves (republication)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/trep/2014/09/04/n4/jo/fr/html",
+     "value": "Act of 18 March 2013: the minister carries out the processing of personal data on pupils and their legal representatives"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "Traitements de données concernant les élèves (national pupil data processing)",
+   "operator": "Minister responsible for Education (Ministère de l'Éducation nationale)",
+   "research_note": "The system name was not found in the sources (no citable source for 'Scolaria' etc.). Diploma registers and higher-education data were not sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2022-07-31",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "Le STATEC peut accorder, à des fins scientifiques, l’accès, dans ses locaux, à des données confidentielles.",
+     "quote_english": "STATEC may grant access, for scientific purposes and on its premises, to confidential data.",
+     "title": "Loi modifiée du 10 juillet 2011 portant organisation de l'Institut national de la statistique et des études économiques (version consolidée au 31/07/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2011/07/10/n5/consolide/20220731/fr/html",
+     "value": "STATEC holds confidential data and may grant on-site access for scientific purposes"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "Données confidentielles du STATEC (STATEC confidential microdata)",
+   "operator": "Institut national de la statistique et des études économiques (STATEC)",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2022-11-01",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "g) la création, la gestion, la diffusion et la mise à jour d’un registre national des localités et des rues, constitué de la dénomination des localités et des rues et de la numérotation des immeubles construits;",
+     "quote_english": "g) creating, managing, disseminating and updating a national register of localities and streets, made up of the names of localities and streets and the numbering of built properties;",
+     "title": "Loi modifiée du 25 juillet 2002 portant réorganisation de l'administration du cadastre et de la topographie (version consolidée au 01/11/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2002/07/25/n8/consolide/20221101/fr/html",
+     "value": "The ACT creates, manages and publishes the national register of localities and streets, including building numbering"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fr",
+     "published": "2022-11-01",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "h) l’établissement, la gestion, la tenue à jour et la diffusion de la documentation cartographique du territoire se présentant sous forme analogue ou digitale;",
+     "quote_english": "h) producing, managing, updating and disseminating the cartographic documentation of the territory in analogue or digital form;",
+     "title": "Loi modifiée du 25 juillet 2002 portant réorganisation de l'administration du cadastre et de la topographie (version consolidée au 01/11/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2002/07/25/n8/consolide/20221101/fr/html",
+     "value": "The ACT produces and maintains the national cartographic documentation in analogue or digital form"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registre national des localités et des rues (national register of localities and streets) and national cartographic documentation",
+   "operator": "Administration du cadastre et de la topographie (ACT)",
+   "research_note": "No hosting or volume source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fr",
+     "published": "2022-03-03",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "la transmission de la conservation, de la gestion et de la responsabilité du traitement des archives publiques y compris des données à caractère personnel ;",
+     "quote_english": "the transfer of the custody, management and processing responsibility for public archives, including personal data;",
+     "title": "Loi modifiée du 17 août 2018 sur l'archivage (version consolidée au 03/03/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2018/08/17/a706/consolide/20220303/fr/html",
+     "value": "Act of 17 August 2018 on archiving: a transfer ('versement') hands over custody, management and data-controller responsibility for public records, including personal data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fr",
+     "published": "2022-03-03",
+     "publisher": "Ministère d'État - Service central de législation (Legilux)",
+     "quote": "La communication gratuite des archives publiques est garantie à toute personne qui en fait la demande aux Archives nationales après leur versement",
+     "quote_english": "Free access to public archives is guaranteed to anyone who requests it from the National Archives after their transfer",
+     "title": "Loi modifiée du 17 août 2018 sur l'archivage (version consolidée au 03/03/2022)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2018/08/17/a706/consolide/20220303/fr/html",
+     "value": "Public records are communicated by the National Archives after transfer"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Archives publiques versées aux Archives nationales (public records transferred to the National Archives)",
+   "operator": "Archives nationales de Luxembourg (ANLux)",
+   "research_note": "No source found on a digital repository, its hosting or its volume.",
+   "status": "held"
+  }
+ ],
+ "iso": "LU"
+}

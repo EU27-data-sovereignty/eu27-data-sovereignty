@@ -1,0 +1,1854 @@
+{
+ "extra_holdings": [],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Department of Social Protection",
+     "quote": "The General Register Office (Oifig An Ard-Chláraitheora) is the central civil repository for records relating to births, stillbirths, deaths, marriages, civil partnerships and adoptions in Ireland.",
+     "quote_english": "",
+     "title": "About the General Register Office",
+     "url": "https://www.gov.ie/en/department-of-social-protection/organisation-information/about-the-general-register-office/",
+     "value": "Civil registers held by Oifig an Ard-Chláraitheora (General Register Office): births, stillbirths, deaths, marriages, civil partnerships, adoptions"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2019-10-04",
+     "publisher": "Department of Social Protection",
+     "quote": "that information can be used to maintain the person's PSI dataset, which is held and managed by this department.",
+     "quote_english": "",
+     "title": "Public Service Identity",
+     "url": "https://www.gov.ie/en/department-of-social-protection/policy-information/public-service-identity/",
+     "value": "Public Service Identity (PSI) dataset and PPS Number (national person identifier), held by the Department of Social Protection"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "Department of Social Protection",
+     "quote": "The General Register Office (GRO) operates under the aegis of the Department of Social Protection and has responsibility for the administration of the Civil Registration Service in Ireland.",
+     "quote_english": "",
+     "title": "About the General Register Office",
+     "url": "https://www.gov.ie/en/department-of-social-protection/organisation-information/about-the-general-register-office/",
+     "value": "General Register Office under the aegis of the Department of Social Protection"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2004",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "There shall be established, where appropriate, and maintained by an tArd-Chláraitheoir— ( a ) a register of all births occurring in the State or to which section 26 or 27 applies",
+     "quote_english": "",
+     "title": "Civil Registration Act 2004, section 13",
+     "url": "https://www.irishstatutebook.ie/eli/2004/act/3/section/13/enacted/en/html",
+     "value": "Civil Registration Act 2004, s.13: registers of births, deaths, marriages etc. maintained by an tArd-Chláraitheoir (Registrar General)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2005",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "“public service identity”, in relation to a person, means the information specified in subsection (3) and the person’s personal public service number;",
+     "quote_english": "",
+     "title": "Social Welfare Consolidation Act 2005, section 262",
+     "url": "https://www.irishstatutebook.ie/eli/2005/act/26/section/262/enacted/en/html",
+     "value": "Social Welfare Consolidation Act 2005, s.262: Personal Public Service Number and public service identity"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Civil registers of Oifig an Ard-Chláraitheora (General Register Office); Public Service Identity dataset keyed on the PPS Number",
+   "operator": "General Register Office, under the aegis of the Department of Social Protection",
+   "research_note": "No public source found stating where the GRO civil registration system or the PSI/PPSN dataset is hosted. The www.gov.ie claims load in a browser but return HTTP 403 to non-browser user agents, so an automated check may record them as refused.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2025-06-12",
+     "publisher": "Data Protection Commission",
+     "quote": "examined the DSP’s processing of biometric facial templates, and usage of associated facial matching technologies, as part of the registration process for the Public Services Card. This process is known as “SAFE 2 registration”.",
+     "quote_english": "",
+     "title": "DPC announces conclusion of investigation into use of facial matching technology in connection with Public Services Card",
+     "url": "https://www.dataprotection.ie/en/news-media/press-releases/dpc-announces-conclusion-investigation-use-facial-matching-technology-connection-public-services",
+     "value": "SAFE 2 registration biometric facial templates (Public Services Card)"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "en",
+     "published": "2025-06-12",
+     "publisher": "Data Protection Commission",
+     "quote": "The rollout of Safe 2 registration has resulted in the ongoing collection, storage and processing of highly sensitive personal data, including biometric data consisting of facial templates, on a large scale by the DSP.",
+     "quote_english": "",
+     "title": "DPC announces conclusion of investigation into use of facial matching technology in connection with Public Services Card",
+     "url": "https://www.dataprotection.ie/en/news-media/press-releases/dpc-announces-conclusion-investigation-use-facial-matching-technology-connection-public-services",
+     "value": "Department of Social Protection (DSP)"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "en",
+     "published": "2025-06-12",
+     "publisher": "Data Protection Commission",
+     "quote": "In 2021, the DSP held biometric facial templates relating to 70% of the population of the State.",
+     "quote_english": "",
+     "title": "DPC announces conclusion of investigation into use of facial matching technology in connection with Public Services Card",
+     "url": "https://www.dataprotection.ie/en/news-media/press-releases/dpc-announces-conclusion-investigation-use-facial-matching-technology-connection-public-services",
+     "value": "Facial templates for 70% of the State's population (2021)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "",
+     "publisher": "Law Reform Commission (Revised Acts)",
+     "quote": "Where a public services card is issued to a person the following information shall be inscribed on it: ( a ) the name of that person; ( b ) the personal public service number of that person; ( c ) a photograph of that person;",
+     "quote_english": "",
+     "title": "Social Welfare Consolidation Act 2005, section 263 (revised)",
+     "url": "https://revisedacts.lawreform.ie/eli/2005/act/26/section/263/revised/en/html",
+     "value": "Social Welfare Consolidation Act 2005, s.263 (public services card bearing a photograph)"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "SAFE 2 registration biometric facial templates (Public Services Card)",
+   "operator": "Department of Social Protection",
+   "research_note": "Hosting of the SAFE 2 facial-matching system is not stated in any source found. Passport facial images are covered by Passports Act 2008 s.8 (see issuance_history).",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "research_note": "No authoritative source found either establishing or ruling out a central fingerprint store for Irish passports or identity documents. A secondary source (Irish Times, 16 Jan 2019) reports that Ireland secured a derogation from EU fingerprinting rules for passport cards, but no official statement was found. EUR-Lex (Reg. 2252/2004, 2019/1157) returned an HTTP 202 challenge and Oireachtas parliamentary questions returned HTTP 405 to automated fetches, so neither could be quoted. Fingerprints held for immigration or policing were not researched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Department of Foreign Affairs",
+     "quote": "Once a person is entered onto the Foreign Births Register they are an Irish citizen and entitled to apply for an Irish passport.",
+     "quote_english": "",
+     "title": "Registering a Foreign Birth",
+     "url": "https://www.ireland.ie/en/dfa/citizenship/born-abroad/registering-a-foreign-birth/",
+     "value": "Foreign Births Register (citizenship by descent; built on original civil birth, marriage and naturalisation documents)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "Department of Foreign Affairs",
+     "quote": "The Foreign Births Register is for persons who can apply to become Irish citizens through their Irish-born grandparents or their parent who was an Irish citizen at the time of their birth, but was not born in Ireland.",
+     "quote_english": "",
+     "title": "Registering a Foreign Birth",
+     "url": "https://www.ireland.ie/en/dfa/citizenship/born-abroad/registering-a-foreign-birth/",
+     "value": "Department of Foreign Affairs"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "1956",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "A foreign births entry book shall be kept in every Irish diplomatic mission and consular office and a foreign births register shall be kept in the Department of External Affairs in Dublin.",
+     "quote_english": "",
+     "title": "Irish Nationality and Citizenship Act 1956, section 27",
+     "url": "https://www.irishstatutebook.ie/eli/1956/act/26/section/27/enacted/en/html",
+     "value": "Irish Nationality and Citizenship Act 1956, s.27: Foreign Births Register kept by the Department of Foreign (External) Affairs"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "en",
+     "published": "2024-12-02",
+     "publisher": "Department of Justice, Home Affairs and Migration",
+     "quote": "To date, over 191,000 people have received Irish citizenship since 2011.",
+     "quote_english": "",
+     "title": "Record numbers receive Irish Citizenship decisions in 2024",
+     "url": "https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/press-releases/record-numbers-receive-irish-citizenship-decisions-in-2024/",
+     "value": "Over 191,000 people granted Irish citizenship by naturalisation since 2011"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Foreign Births Register; certificates of naturalisation",
+   "operator": "Department of Foreign Affairs (Foreign Births Register); Department of Justice (naturalisation)",
+   "research_note": "Hosting not stated in any source found. The record count covers naturalisations since 2011, not the size of the Foreign Births Register.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Department of Foreign Affairs",
+     "quote": "In the case of passport issuance, the data will be held for 15 years after the date of issuance (the validity of the passport plus five years).",
+     "quote_english": "",
+     "title": "Data Privacy Notice for the Passport Service",
+     "url": "https://www.ireland.ie/en/privacypolicy/data-privacy-notice-for-the-passport-service/",
+     "value": "Passport issuance records of the Passport Service, retained 15 years after issue"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "Department of Foreign Affairs",
+     "quote": "The personal data is being collected/processed for the purpose of verifying the identity and Irish citizenship of the applicant, and issuing passports in line with the Passports Act 2008.",
+     "quote_english": "",
+     "title": "Data Privacy Notice for the Passport Service",
+     "url": "https://www.ireland.ie/en/privacypolicy/data-privacy-notice-for-the-passport-service/",
+     "value": "Department of Foreign Affairs (Passport Service)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2008",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "the Minister may process such personal data, including biometric data, in respect of an applicant for a passport as are required for the issue of a passport to the applicant and the maintenance of the integrity of the system for issuing passports.",
+     "quote_english": "",
+     "title": "Passports Act 2008",
+     "url": "https://www.irishstatutebook.ie/eli/2008/act/4/enacted/en/print",
+     "value": "Passports Act 2008, s.8: Minister for Foreign Affairs may process personal data, including biometric data, for issuing passports and maintaining the integrity of the passport system"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "en",
+     "published": "2026-08-10",
+     "publisher": "Department of Foreign Affairs and Trade",
+     "quote": "the Passport Service, who have issued over half a million passports so far this year, with almost 370,000 of these issued to people across the island of Ireland.",
+     "quote_english": "",
+     "title": "Press release: over half a million passports issued this year",
+     "url": "https://www.gov.ie/en/department-of-foreign-affairs/press-releases/minister-mcentee-encourages-citizens-to-check-passports-with-over-half-a-million-issued-this-year/",
+     "value": "Over 500,000 passports issued in the first six months of 2026"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Passport issuance records of the Passport Service",
+   "operator": "Department of Foreign Affairs (Passport Service)",
+   "research_note": "The Passport Service privacy notice names Cisco as host of the WebChat facility only; hosting of the passport issuance system itself is not stated.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2019-10-04",
+     "publisher": "Department of Social Protection",
+     "quote": "MyGovID is a secure online identity verification service that the Department of Social Protection (DSP) carries out on behalf of bodies providing public services online.",
+     "quote_english": "",
+     "title": "MyGovID",
+     "url": "https://www.gov.ie/en/department-of-social-protection/policy-information/mygovid/",
+     "value": "MyGovID (national online identity verification service, linked to SAFE registration / Public Services Card)"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "en",
+     "published": "2021-12-17",
+     "publisher": "Department of Social Protection",
+     "quote": "MyGovID, a service provided by the Department of Social Protection, provides users with a safe and secure ‘single sign on’ to online public services in Ireland.",
+     "quote_english": "",
+     "title": "3 millionth person registers for a MyGovID account",
+     "url": "https://www.gov.ie/en/department-of-social-protection/press-releases/3-millionth-person-registers-for-a-mygovid-account/",
+     "value": "Department of Social Protection"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "",
+     "publisher": "Law Reform Commission (Revised Acts)",
+     "quote": "issue a card (in this Act referred to as a ‘ public services card ’ ) to a person in such form as the Minister considers fit for the purposes of carrying out a transaction.",
+     "quote_english": "",
+     "title": "Social Welfare Consolidation Act 2005, section 263 (revised)",
+     "url": "https://revisedacts.lawreform.ie/eli/2005/act/26/section/263/revised/en/html",
+     "value": "Social Welfare Consolidation Act 2005, s.263: Public Services Card issued by the Minister for Social Protection"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "en",
+     "published": "2021-12-17",
+     "publisher": "Department of Social Protection",
+     "quote": "The Department of Social Protection is today announcing that the 3 millionth person has registered for an account on the MyGovID platform.",
+     "quote_english": "",
+     "title": "3 millionth person registers for a MyGovID account",
+     "url": "https://www.gov.ie/en/department-of-social-protection/press-releases/3-millionth-person-registers-for-a-mygovid-account/",
+     "value": "3 million MyGovID accounts registered (December 2021)"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "unknown",
+   "holding_name": "MyGovID (Public Services Card / SAFE registration)",
+   "operator": "Department of Social Protection",
+   "research_note": "No public source found on where MyGovID is hosted. The account count is from December 2021; no newer official figure was verified.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "research_note": "Searched for MyGovID privacy statements and audit-logging disclosures; the pages found describe the service but say nothing about authentication logs, their retention or their hosting. The MyGovID partner portal and mygovid.ie were not checked in depth.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2022-11-06",
+     "publisher": "Department of Housing, Local Government and Heritage",
+     "quote": "All electors are now being asked to visit the Check the Register website to confirm or update their entry by adding their PPSN, Date of Birth and Eircode.",
+     "quote_english": "",
+     "title": "Improvements to voter registration process launched today as new Check the Register campaign begins",
+     "url": "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/press-releases/improvements-to-voter-registration-process-launched-today-as-new-check-the-register-campaign-begins/",
+     "value": "Register of Electors (rolling register, linked to PPSN, date of birth and Eircode)"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2025",
+     "publisher": "An Coimisiún Toghcháin (Electoral Commission)",
+     "quote": "The Act provided for the establishment of a shared national electoral register database. This is known as the Local Government Electoral Registration System (LGERS). It is planned that LGERS will be rolled out nationally in 2026.",
+     "quote_english": "",
+     "title": "Oversight Report on the Electoral Registers",
+     "url": "https://cdn.electoralcommission.ie/app/uploads/2025/04/30104313/Oversight-Report-on-the-Electoral-Registers_online_english_tagged.pdf",
+     "value": "Local Government Electoral Registration System (LGERS), shared national electoral register database replacing 31 local registers"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "en",
+     "published": "2022-11-06",
+     "publisher": "Department of Housing, Local Government and Heritage",
+     "quote": "This will help local authorities to ensure that entries are accurate and up to date as well as enabling the identification of entries on the register that require follow up.",
+     "quote_english": "",
+     "title": "Improvements to voter registration process launched today as new Check the Register campaign begins",
+     "url": "https://www.gov.ie/en/department-of-housing-local-government-and-heritage/press-releases/improvements-to-voter-registration-process-launched-today-as-new-check-the-register-campaign-begins/",
+     "value": "Local authorities as registration authorities"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "1992",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "A register by reference to registration areas consisting of administrative counties and county boroughs shall be prepared and published in every year of persons who were entitled to be registered as electors on the qualifying date",
+     "quote_english": "",
+     "title": "Electoral Act 1992, section 13",
+     "url": "https://www.irishstatutebook.ie/eli/1992/act/23/section/13/enacted/en/html",
+     "value": "Electoral Act 1992, s.13 (as amended by the Electoral Reform Act 2022): the register of electors"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "hosting",
+     "language": "en",
+     "published": "2025",
+     "publisher": "An Coimisiún Toghcháin (Electoral Commission)",
+     "quote": "Integration with Eircode, PPSN and MyGovID systems. Migration of project to DCC’s Azure Public Cloud Tenancy.",
+     "quote_english": "",
+     "title": "Oversight Report on the Electoral Registers",
+     "url": "https://cdn.electoralcommission.ie/app/uploads/2025/04/30104313/Oversight-Report-on-the-Electoral-Registers_online_english_tagged.pdf",
+     "value": "LGERS (national electoral register database) being migrated to Dublin City Council's Azure public cloud tenancy"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "record_count",
+     "language": "en",
+     "published": "2025",
+     "publisher": "An Coimisiún Toghcháin (Electoral Commission)",
+     "quote": "During 2024, the numbers registered to vote in Ireland rose from from 3.51 million (Dec 2023) to 3.87 million (Dec 2024).",
+     "quote_english": "",
+     "title": "Oversight Report on the Electoral Registers",
+     "url": "https://cdn.electoralcommission.ie/app/uploads/2025/04/30104313/Oversight-Report-on-the-Electoral-Registers_online_english_tagged.pdf",
+     "value": "3.87 million registered electors (December 2024)"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "non_eu_provider",
+   "holding_name": "Register of Electors; Local Government Electoral Registration System (LGERS)",
+   "operator": "Local authorities as registration authorities (LGERS project led by Dublin City Council)",
+   "research_note": "The Electoral Commission report says LGERS is being migrated to Dublin City Council's 'Azure Public Cloud Tenancy'. The report names Azure but not Microsoft; the non-EU classification rests on Azure being Microsoft's (US) service. National rollout was planned for 2026.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2025-10",
+     "publisher": "Revenue Commissioners",
+     "quote": "The security provided by the digital certificate design is being used by the Companies Registration Office, the Department of Transport and the Department of Social Protection.",
+     "quote_english": "",
+     "title": "Tax and Duty Manual Part 38-06-01 Revenue Online Service (ROS)",
+     "url": "https://www.revenue.ie/en/tax-professionals/tdm-wm/income-tax-capital-gains-tax-corporation-tax/part-38/38-06-01.pdf",
+     "value": "ROS digital certificate PKI (Revenue CA), also used by CRO, Department of Transport and Department of Social Protection"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2020-10-14",
+     "publisher": "Department of Culture, Communications and Sport",
+     "quote": "The present list is the trusted list including information related to the qualified trust service providers (TSPs) which are supervised by Ireland, together with information related to the qualified trust services provided by them",
+     "quote_english": "",
+     "title": "Trust Service Providers",
+     "url": "https://www.gov.ie/en/department-of-culture-communications-and-sport/publications/trust-service-providers/",
+     "value": "Irish Trusted List of qualified trust service providers (eIDAS Regulation (EU) No 910/2014)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "2025-10",
+     "publisher": "Revenue Commissioners",
+     "quote": "A digital certificate is a guarantee by the Certification Authority (in this case the Revenue Commissioners) that the private key, which is contained in the certificate and is used for authentication and signing purposes, can only be used by the person to whom it belongs.",
+     "quote_english": "",
+     "title": "Tax and Duty Manual Part 38-06-01 Revenue Online Service (ROS)",
+     "url": "https://www.revenue.ie/en/tax-professionals/tdm-wm/income-tax-capital-gains-tax-corporation-tax/part-38/38-06-01.pdf",
+     "value": "Revenue Commissioners act as Certification Authority for ROS digital certificates"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2020-10-14",
+     "publisher": "Department of Culture, Communications and Sport",
+     "quote": "in accordance with the relevant provisions laid down in Regulation (EU) No 910/2014 of the European Parliament and of the Council of 23 July 2014 on electronic identification and trust services for electronic transactions",
+     "quote_english": "",
+     "title": "Trust Service Providers",
+     "url": "https://www.gov.ie/en/department-of-culture-communications-and-sport/publications/trust-service-providers/",
+     "value": "Regulation (EU) No 910/2014 (eIDAS)"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "ROS digital certificate PKI (Revenue Commissioners as Certification Authority); Irish eIDAS Trusted List",
+   "operator": "Revenue Commissioners (ROS CA); Department of Culture, Communications and Sport (Trusted List)",
+   "research_note": "No general government root CA was found. The Revenue ROS certificate authority is the de facto state PKI and is also used by the CRO, the Department of Transport and the Department of Social Protection. Hosting of the CA is not stated.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Immigration Service Delivery, Department of Justice",
+     "quote": "Revocation of a registered Irish Residence Permission is the process of revoking a permission that was incorrectly registered, conditions attached to a permission were breached,",
+     "quote_english": "",
+     "title": "Information on revocation of registered Irish Residence Permissions",
+     "url": "https://www.irishimmigration.ie/information-on-revocation-of-registered-irish-residence-permissions/",
+     "value": "Irish Residence Permission (IRP) register: the register of non-nationals with permission to be in the State"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "An Garda Síochána",
+     "quote": "On 13 January 2025, the final remaining responsibility for all nationwide first time registration of Irish immigration residence permissions will transfer, from the Garda National Immigration Bureau, to Immigration Service Delivery (ISD) of the Department of Justice.",
+     "quote_english": "",
+     "title": "Immigration (GNIB) - Registration & Renewal of Immigration Permission",
+     "url": "https://www.garda.ie/en/about-us/organised-serious-crime/immigration-gnib-/",
+     "value": "Immigration Service Delivery (ISD), Department of Justice (took over first-time registration from the Garda National Immigration Bureau, 13 January 2025)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2004",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "A register of non-nationals who have permission to be in the State shall be established and maintained by registration officers in such manner as the Minister may direct.",
+     "quote_english": "",
+     "title": "Immigration Act 2004",
+     "url": "https://www.irishstatutebook.ie/eli/2004/act/1/enacted/en/print",
+     "value": "Immigration Act 2004, s.9: register of non-nationals with permission to be in the State"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register of non-nationals with permission to be in the State (Irish Residence Permission)",
+   "operator": "Immigration Service Delivery, Department of Justice",
+   "research_note": "No verified count of registered permission holders; the ISD statistics pages found were aggregate application and decision tables. Hosting not stated.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Revenue Commissioners",
+     "quote": "Our Mission To serve the community by fairly and efficiently collecting taxes and duties and implementing customs controls.",
+     "quote_english": "",
+     "title": "Annual Report 2025",
+     "url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf",
+     "value": "Revenue Commissioners (Office of the Revenue Commissioners)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2025-10",
+     "publisher": "Revenue Commissioners",
+     "quote": "Section 917EA of the Taxes Consolidation Act 1997, as provided for in the 2003 Finance Act, and supplemented by Regulations in 2008, 2011, 2012 and 2014 provides for a scheme of mandatory electronic filing of returns and payment of tax liabilities",
+     "quote_english": "",
+     "title": "Tax and Duty Manual Part 38-06-01 Revenue Online Service (ROS)",
+     "url": "https://www.revenue.ie/en/tax-professionals/tdm-wm/income-tax-capital-gains-tax-corporation-tax/part-38/38-06-01.pdf",
+     "value": "Taxes Consolidation Act 1997, s.917EA: mandatory electronic filing of returns and payment through ROS"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "hosting",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Revenue Commissioners",
+     "quote": "We continue to provide, and further extend, shared computing facilities to other public sector bodies from our data centre, whilst our print and mail service continued to support a number of other public sector organisations during 2025.",
+     "quote_english": "",
+     "title": "Annual Report 2025",
+     "url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf",
+     "value": "Revenue operates its own data centre and provides shared computing facilities to other public sector bodies"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Revenue Commissioners",
+     "quote": "Over 900,000 self-assessed taxpayers, 287,000 companies and 293,000 VAT traders registered 6.7 million successful payroll submissions and 13.5 million reportable benefits declared",
+     "quote_english": "",
+     "title": "Annual Report 2025",
+     "url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf",
+     "value": "Over 900,000 self-assessed taxpayers, 287,000 companies and 293,000 VAT traders registered (2025)"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Revenue Commissioners",
+     "quote": "over 6.7 million successful payroll submissions were made during the year in respect of 4.4 million PAYE employments.",
+     "quote_english": "",
+     "title": "Annual Report 2025",
+     "url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf",
+     "value": "4.4 million PAYE employments reported via real-time payroll submissions (2025)"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "national",
+   "holding_name": "Revenue tax records (ROS, PAYE real-time payroll reporting)",
+   "operator": "Revenue Commissioners",
+   "research_note": "Revenue states it runs its own data centre and provides shared computing to other public bodies. The 2025 annual report also mentions a 'private Revenue managed cloud-based' AI chatbot service, provider not named.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Revenue Commissioners",
+     "quote": "Our AIS handled over 83 million messages in 2025, with a peak of 522,734 messages in a single day on 16 December,",
+     "quote_english": "",
+     "title": "Annual Report 2025",
+     "url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf",
+     "value": "Automated Import System (AIS), Automated Export System (AES) and New Computerised Transit System (NCTS)"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Revenue Commissioners",
+     "quote": "our automated customs systems processed 62.8 million customs declarations and handled over 90 million messages throughout 2025.",
+     "quote_english": "",
+     "title": "Annual Report 2025",
+     "url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf",
+     "value": "Revenue Commissioners"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2015",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "to repeal the Customs Consolidation Act 1876 and certain other enactments; to make provision in connection with Council Regulation (EEC) No. 2913/92 of 12 October 1992 establishing the Community Customs Code;",
+     "quote_english": "",
+     "title": "Customs Act 2015",
+     "url": "https://www.irishstatutebook.ie/eli/2015/act/18/enacted/en/print",
+     "value": "Customs Act 2015 (with the EU Customs Code)"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Revenue Commissioners",
+     "quote": "we processed 62.8 million customs declarations through our customs transit system (NCTS) and the Automated Import and Export Systems (AIS/AES).",
+     "quote_english": "",
+     "title": "Annual Report 2025",
+     "url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf",
+     "value": "62.8 million customs declarations processed in 2025 through NCTS and AIS/AES"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "Automated Import System (AIS), Automated Export System (AES), New Computerised Transit System (NCTS)",
+   "operator": "Revenue Commissioners",
+   "research_note": "No source ties the customs systems to a specific hosting location; Revenue's own data centre is stated only in general terms (see tax).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2018-07-27",
+     "publisher": "Department of Social Protection",
+     "quote": "The SDM programme is supported through a series of information and communications technology (ICT) projects to add new and improve existing functionality on its main strategic system (Business Object Model implementation – BOMi).",
+     "quote_english": "",
+     "title": "Service Delivery Modernisation and BOMi Development Programme",
+     "url": "https://www.gov.ie/en/department-of-social-protection/publications/service-delivery-modernisation-and-bomi-development-programme/",
+     "value": "BOMi (Business Object Model implementation), the Department's main strategic social welfare system"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "2018-07-27",
+     "publisher": "Department of Social Protection",
+     "quote": "Since 2001, the Department of Social Protection (DSP) has been engaged in a continuous Service Delivery Modernisation (SDM) programme, which is delivering a high quality, proactive service to customers.",
+     "quote_english": "",
+     "title": "Service Delivery Modernisation and BOMi Development Programme",
+     "url": "https://www.gov.ie/en/department-of-social-protection/publications/service-delivery-modernisation-and-bomi-development-programme/",
+     "value": "Department of Social Protection"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2005",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "Number 26 of 2005 SOCIAL WELFARE CONSOLIDATION ACT 2005 AN ACT TO CONSOLIDATE THE SOCIAL WELFARE ACTS.",
+     "quote_english": "",
+     "title": "Social Welfare Consolidation Act 2005",
+     "url": "https://www.irishstatutebook.ie/eli/2005/act/26/enacted/en/print",
+     "value": "Social Welfare Consolidation Act 2005"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Department of Social Protection",
+     "quote": "At the end of 2024, there were 3.5 million unique people who were beneficiaries of Social Protection payments, representing approximately 66% of the population",
+     "quote_english": "",
+     "title": "Statistical Information on Social Welfare Services Annual Report 2024",
+     "url": "https://assets.gov.ie/static/documents/0787e49b/20260520_2024_Annual_Statistics_Report.pdf",
+     "value": "3.5 million unique beneficiaries of Social Protection payments at end-2024 (about 66% of the population)"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "BOMi (Business Object Model implementation), the Department's main social welfare system",
+   "operator": "Department of Social Protection",
+   "research_note": "No source found stating where BOMi is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Health Information and Quality Authority",
+     "quote": "Patient identifiers are collected to record eligibility which include PPSN. Equity stratifiers Place of residence and gender are captured for medical card holders.",
+     "quote_english": "",
+     "title": "Primary Care Reimbursement Service (PCRS)",
+     "url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/primary-care-reimbursement-service-pcrs",
+     "value": "PCRS eligibility records (medical card / GMS scheme eligibility, keyed on PPSN)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "Health Information and Quality Authority",
+     "quote": "Claim data is processed and payments are made by the Primary Care Reimbursement Service under the following Schemes/Payment Arrangements: - General Medical Services (GMS)",
+     "quote_english": "",
+     "title": "Primary Care Reimbursement Service (PCRS)",
+     "url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/primary-care-reimbursement-service-pcrs",
+     "value": "HSE Primary Care Reimbursement Service (PCRS)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "1970",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "A person in either of the following categories shall have full eligibility for the services under this Part— ( a ) adult persons unable without undue hardship to arrange general practitioner medical and surgical services for themselves and their dependants,",
+     "quote_english": "",
+     "title": "Health Act 1970, section 45",
+     "url": "https://www.irishstatutebook.ie/eli/1970/act/1/section/45/enacted/en/html",
+     "value": "Health Act 1970, s.45 (full eligibility / medical card)"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Health Service Executive (copy hosted by HRB National Drugs Library)",
+     "quote": "Number of Eligible Persons per Scheme - 2025 *GMS 1,552,553 *GPVC 785,152 DPS 2,244,993 LTI 373,409",
+     "quote_english": "",
+     "title": "Primary Care Reimbursement Service Statistical Analysis of Claims and Payments 2025",
+     "url": "https://www.drugsandalcohol.ie/46590/1/PCRS_Statistical_Analysis_of_Claims_and_Payments_2025.pdf",
+     "value": "1,552,553 GMS (medical card) eligible persons and 785,152 GP visit card holders in 2025"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "PCRS eligibility records (medical card / GP visit card, General Medical Services scheme)",
+   "operator": "HSE Primary Care Reimbursement Service",
+   "research_note": "Ireland has no statutory health insurance scheme; the closest analogue is tax-funded eligibility under the Health Act 1970 (medical cards, GMS), recorded here. The PCRS statistics PDF is cited from the HRB National Drugs Library copy because about.hse.ie returned HTTP 403. Hosting not stated.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Tailte Éireann",
+     "quote": "When title or ownership is registered in the Land Registry the deeds are filed in the Registry and all relevant particulars concerning the property and its ownership are entered on folios which form the National Land Register.",
+     "quote_english": "",
+     "title": "Tailte Éireann Annual Report 2024",
+     "url": "https://tailte.ie/wp-content/uploads/2025/11/TE_AnnualReport2024_GA_EN.pdf",
+     "value": "National Land Register (folios of the Land Registry) and Registry of Deeds"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Tailte Éireann",
+     "quote": "Under the Tailte Éireann Act 2022, Tailte Éireann is a Civil Service body with its own Vote and Accounting Officer (the Chief Executive).",
+     "quote_english": "",
+     "title": "Tailte Éireann Annual Report 2024",
+     "url": "https://tailte.ie/wp-content/uploads/2025/11/TE_AnnualReport2024_GA_EN.pdf",
+     "value": "Tailte Éireann (civil service body under the Tailte Éireann Act 2022)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "1964",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "There shall be maintained in the central office— ( a ) registers of— (i) ownership of freehold land, and (ii) ownership of leasehold interests,",
+     "quote_english": "",
+     "title": "Registration of Title Act 1964, section 8",
+     "url": "https://www.irishstatutebook.ie/eli/1964/act/16/section/8/enacted/en/html",
+     "value": "Registration of Title Act 1964, s.8: registers of ownership maintained in the central office"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Tailte Éireann",
+     "quote": "2.4 million Folios and associated spatial data can be accessed through it and as the primary provider of Registration digital services, it played host to over 12.6 million online actions in 2024.",
+     "quote_english": "",
+     "title": "Tailte Éireann Annual Report 2024",
+     "url": "https://tailte.ie/wp-content/uploads/2025/11/TE_AnnualReport2024_GA_EN.pdf",
+     "value": "2.4 million folios with associated spatial data accessible via landdirect.ie"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "National Land Register (Land Registry folios) and Registry of Deeds",
+   "operator": "Tailte Éireann",
+   "research_note": "The Tailte Éireann 2024 annual report lists a 'Government Cloud Network' connectivity contract, but it does not say where the Land Register is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Department of Enterprise, Tourism and Employment",
+     "quote": "The Companies Registration Office (CRO) is the central repository of public statutory information on Irish companies, business names and limited partnerships.",
+     "quote_english": "",
+     "title": "Companies Registration Office (CRO)",
+     "url": "https://enterprise.gov.ie/en/who-we-are/offices-agencies/companies-registration-office-cro-.html",
+     "value": "Register of companies, business names and limited partnerships held by the Companies Registration Office"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "Department of Enterprise, Tourism and Employment",
+     "quote": "The CRO has a number of functions including the incorporation of companies, the registration of business names, the receipt and registration of post incorporation documents,",
+     "quote_english": "",
+     "title": "Companies Registration Office (CRO)",
+     "url": "https://enterprise.gov.ie/en/who-we-are/offices-agencies/companies-registration-office-cro-.html",
+     "value": "Companies Registration Office (CRO), an office of the Department of Enterprise, Tourism and Employment"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2014",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "The Minister shall maintain and administer an office or offices in the State at such places as the Minister thinks fit for the purposes of— (a) the registration of companies under this Act,",
+     "quote_english": "",
+     "title": "Companies Act 2014, section 887",
+     "url": "https://www.irishstatutebook.ie/eli/2014/act/38/section/887/enacted/en/html",
+     "value": "Companies Act 2014, s.887: registration office for companies and the Registrar of Companies"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register of companies, business names and limited partnerships (CORE system)",
+   "operator": "Companies Registration Office, Department of Enterprise, Tourism and Employment",
+   "research_note": "cro.ie (including the CRO Annual Report 2024 PDF) returned a Cloudflare HTTP 403 block even to a browser user agent, so no company count or hosting statement could be quoted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2019",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "There is, by virtue of this Regulation, established a register which shall be known as the “Central Register of Beneficial Ownership of Companies and Industrial and Provident Societies”",
+     "quote_english": "",
+     "title": "European Union (Anti-Money Laundering: Beneficial Ownership of Corporate Entities) Regulations 2019 (S.I. No. 110 of 2019)",
+     "url": "https://www.irishstatutebook.ie/eli/2019/si/110/made/en/print",
+     "value": "S.I. No. 110 of 2019, Regulation 19: establishes the central register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "en",
+     "published": "2019",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "The Minister may, after consultation with the Minister for Finance, appoint – ( a ) a registrar, who shall be known as the “Registrar of Beneficial Ownership of Companies and Industrial and Provident Societies”",
+     "quote_english": "",
+     "title": "European Union (Anti-Money Laundering: Beneficial Ownership of Corporate Entities) Regulations 2019 (S.I. No. 110 of 2019)",
+     "url": "https://www.irishstatutebook.ie/eli/2019/si/110/made/en/print",
+     "value": "Registrar of Beneficial Ownership of Companies and Industrial and Provident Societies (RBO), appointed by the Minister"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Central Register of Beneficial Ownership of Companies and Industrial and Provident Societies",
+   "operator": "Registrar of Beneficial Ownership (RBO)",
+   "research_note": "rbo.gov.ie (including the RBO Annual Reports 2024 and 2025) returned a Cloudflare HTTP 403 block, so no entity count or hosting statement could be quoted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Government of Ireland PSB Data Catalogue",
+     "quote": "The vehicle and driver records are updated on renewal of motor tax, driving licence and change of address or change of vehicle ownership.",
+     "quote_english": "",
+     "title": "National Vehicle and Driver Database",
+     "url": "https://datacatalogue.gov.ie/dataset/national-vehicle-and-driver-database",
+     "value": "National Vehicle and Driver File (NVDF)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "2019-07-02",
+     "publisher": "Department of Transport",
+     "quote": "The primary role of the division relates to the management of the national motor tax and driving licence services and the implementation of policies for these services which meet customer requirements.",
+     "quote_english": "",
+     "title": "Driver and Vehicle Computer Services Division",
+     "url": "https://www.gov.ie/en/department-of-transport/organisation-information/driver-and-vehicle-computer-services-division/",
+     "value": "Driver and Vehicle Computer Services Division, Department of Transport (Shannon)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "1993",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "The Minister and a licensing authority may each establish and maintain records in relation to licences under the Act of 1952, trade licences under section 21 of the Finance (No. 2) Act, 1992 , driving licences under Part III of the Act of 1933",
+     "quote_english": "",
+     "title": "Finance Act 1993, section 60",
+     "url": "https://www.irishstatutebook.ie/eli/1993/act/13/section/60/enacted/en/html",
+     "value": "Finance Act 1993, s.60 (records of vehicle and driving licences; basis of the NVDF)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "en",
+     "published": "2019-07-02",
+     "publisher": "Department of Transport",
+     "quote": "the National Vehicle and Driver File, which contains details of all 2.5 million registered vehicles and 2.6 million licensed drivers in the country",
+     "quote_english": "",
+     "title": "Driver and Vehicle Computer Services Division",
+     "url": "https://www.gov.ie/en/department-of-transport/organisation-information/driver-and-vehicle-computer-services-division/",
+     "value": "2.5 million registered vehicles and 2.6 million licensed drivers on the NVDF"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "National Vehicle and Driver File (NVDF)",
+   "operator": "Driver and Vehicle Computer Services Division, Department of Transport",
+   "research_note": "The vehicle and driver counts come from a gov.ie page last updated in 2021 and may be dated. Hosting not stated.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Courts Service",
+     "quote": "UCMS is replacing many legacy systems with a single, modern, and user-friendly system that supports all staff,",
+     "quote_english": "",
+     "title": "Courts Service Annual Report 2024",
+     "url": "https://www.courts.ie/docs/default-source/courts-annual-reports/courts-service-annual-report-2024.pdf",
+     "value": "Unified Case Management System (UCMS), replacing legacy court case systems"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Courts Service",
+     "quote": "The multi-year initiative, to re-imagine and migrate all case-related activity to a single unified case management system (UCMS) was one of the main focuses for our Digital team in 2024.",
+     "quote_english": "",
+     "title": "Courts Service Annual Report 2024",
+     "url": "https://www.courts.ie/docs/default-source/courts-annual-reports/courts-service-annual-report-2024.pdf",
+     "value": "Courts Service"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "1998",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "The functions of the Service shall be to— ( a ) manage the courts, ( b ) provide support services for the judges, ( c ) provide information on the courts system to the public,",
+     "quote_english": "",
+     "title": "Courts Service Act 1998, section 5",
+     "url": "https://www.irishstatutebook.ie/eli/1998/act/8/section/5/enacted/en/html",
+     "value": "Courts Service Act 1998, s.5: functions of the Courts Service"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Courts Service Unified Case Management System (UCMS); criminal records on Garda PULSE",
+   "operator": "Courts Service",
+   "research_note": "The Courts Service 2024 annual report mentions Microsoft productivity tools for staff laptops, but not where the case management system is hosted. Criminal conviction data sits on PULSE (see police_records).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "An Garda Síochána",
+     "quote": "They give the details to trained civilian call-takers who enter the details on the PULSE system (An Garda Síochána’s database).",
+     "quote_english": "",
+     "title": "Garda Information Services Centre (GISC)",
+     "url": "https://www.garda.ie/en/about-us/our-departments/garda-information-services-centre-gisc-/",
+     "value": "PULSE (An Garda Síochána's national incident and intelligence database)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "An Garda Síochána",
+     "quote": "They give the details to trained civilian call-takers who enter the details on the PULSE system (An Garda Síochána’s database).",
+     "quote_english": "",
+     "title": "Garda Information Services Centre (GISC)",
+     "url": "https://www.garda.ie/en/about-us/our-departments/garda-information-services-centre-gisc-/",
+     "value": "An Garda Síochána"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "PULSE (An Garda Síochána's database)",
+   "operator": "An Garda Síochána",
+   "research_note": "No statute specifically establishing PULSE was found, and no record count or hosting statement was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "An Garda Síochána",
+     "quote": "The Schengen Information System went live in Ireland on 15 March 2021, and enables An Garda Síochána to further improve the safety and security of the public",
+     "quote_english": "",
+     "title": "Schengen Information System (SIS): When was it introduced?",
+     "url": "https://www.garda.ie/en/about-us/our-departments/garda-national-crime-security-intelligence-service1/schengen-information-system-sis-/when-was-it-introduced-.html",
+     "value": "National connection to the Schengen Information System (SIS), live in Ireland since 15 March 2021"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "en",
+     "published": "2021-09-16",
+     "publisher": "Department of Justice, Home Affairs and Migration",
+     "quote": "The integration of SIS II into national systems means that automatic alerts are generated in real-time in instances where, for example, a Garda member encounters a person who is wanted or has been involved in a serious crime in another jurisdiction.",
+     "quote_english": "",
+     "title": "Press release: six months of Ireland's connection to Schengen Information System (SIS II)",
+     "url": "https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/press-releases/minister-humphreys-and-garda-commissioner-harris-mark-six-months-of-irelands-connection-to-schengen-information-system-sis-ii/",
+     "value": "An Garda Síochána"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "National connection to the Schengen Information System (SIS)",
+   "operator": "An Garda Síochána",
+   "research_note": "Ireland is outside Schengen border control but connected to SIS for law-enforcement cooperation from 15 March 2021. National visa and border-crossing systems (e.g. Advance Passenger Information) were not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "An Garda Síochána",
+     "quote": "The fifth significant renewal phase of three (3) year firearm certificates commenced on the 1st August 2024.",
+     "quote_english": "",
+     "title": "Firearms Licensing",
+     "url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/",
+     "value": "Firearm certificates (three-year certificates, renewal phases administered by An Garda Síochána)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "An Garda Síochána",
+     "quote": "It should then be returned to the local Garda Station for consideration by the relevant Superintendent (or Chief Superintendent if a restricted firearm application).",
+     "quote_english": "",
+     "title": "Firearms Licensing",
+     "url": "https://www.garda.ie/en/about-us/online-services/firearms-licensing/",
+     "value": "An Garda Síochána (applications decided by the local Superintendent)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "1925",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "it shall not be lawful for any person after the commencement of this Act to have in his possession, use, or carry any firearm or ammunition save in so far",
+     "quote_english": "",
+     "title": "Firearms Act 1925, section 2",
+     "url": "https://www.irishstatutebook.ie/eli/1925/act/17/section/2/enacted/en/html",
+     "value": "Firearms Act 1925, s.2 (firearm certificates), as amended"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Firearm certificates administered by An Garda Síochána",
+   "operator": "An Garda Síochána",
+   "research_note": "No official count of licensed firearms was verified; the counts found were in secondary media or in Oireachtas answers that block automated fetching. No named central firearms register system was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2019-11-18",
+     "publisher": "Office of Public Works",
+     "quote": "The Office also publishes Iris Oifigiúil, the State's official gazette, which is published twice weekly on Tuesday and Friday in hard copy and online.",
+     "quote_english": "",
+     "title": "Government Publications",
+     "url": "https://www.gov.ie/en/office-of-public-works/services/government-publications/",
+     "value": "Iris Oifigiúil (the State's official gazette)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2018-05-25",
+     "publisher": "Office of the Attorney General",
+     "quote": "Access to the Electronic Irish Statute Book (eISB), which includes the Acts of the Oireachtas and statutory instruments.",
+     "quote_english": "",
+     "title": "Access the Electronic Irish Statute Book (eISB)",
+     "url": "https://www.gov.ie/en/office-of-the-attorney-general/services/access-the-electronic-irish-statute-book-eisb/",
+     "value": "electronic Irish Statute Book (eISB): Acts, statutory instruments, Constitution and revised Acts"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "2019-11-18",
+     "publisher": "Office of Public Works",
+     "quote": "The Government Publications Office provides a sales outlet by mail order to the public for most government publications.",
+     "quote_english": "",
+     "title": "Government Publications",
+     "url": "https://www.gov.ie/en/office-of-public-works/services/government-publications/",
+     "value": "Government Publications Office (Office of Public Works)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "Office of the Attorney General",
+     "quote": "English Produced by the Office of the Attorney General Táirgthe ag Oifig an Ard-Aighne Home Legislation Acts of the Oireachtas Statutory Instruments",
+     "quote_english": "",
+     "title": "Irish Statute Book Frequently Asked Questions",
+     "url": "https://www.irishstatutebook.ie/faq.html",
+     "value": "Office of the Attorney General (produces the eISB)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "1925",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "Prima facie evidence of any rules, orders, regulations, or byelaws to which this section applies, may be given in all Courts of Justice and in all legal proceedings by the production of a copy of the Iris Oifigiúil",
+     "quote_english": "",
+     "title": "Documentary Evidence Act 1925",
+     "url": "https://www.irishstatutebook.ie/eli/1925/act/24/enacted/en/print.html",
+     "value": "Documentary Evidence Act 1925, s.4: an Iris Oifigiúil copy is prima facie evidence of rules, orders and regulations"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Iris Oifigiúil (official gazette); electronic Irish Statute Book (eISB)",
+   "operator": "Government Publications Office, Office of Public Works (Iris Oifigiúil); Office of the Attorney General (eISB)",
+   "research_note": "Hosting of irishstatutebook.ie and irisoifigiuil.ie not stated in any source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2023",
+     "publisher": "Office of the Comptroller and Auditor General",
+     "quote": "The FMSS system went live for wave 1 client public service bodies on 19 April 2022, some four months later than planned.",
+     "quote_english": "",
+     "title": "Report on the Accounts of the Public Services 2022, Chapter 6: Financial management shared services: implementation progress",
+     "url": "https://www.audit.gov.ie/media/jqinw3i5/6-financial-management-shared-services-implementation-progress.pdf",
+     "value": "Financial Management Shared Services (FMSS) system, the shared government financial management system (incl. the Exchequer)"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "operator",
+     "language": "en",
+     "published": "2023",
+     "publisher": "Office of the Comptroller and Auditor General",
+     "quote": "The Department of Finance manages the Central Fund of the Exchequer (the Exchequer). The Exchequer was part of the planned wave 1 deployment.",
+     "quote_english": "",
+     "title": "Report on the Accounts of the Public Services 2022, Chapter 6: Financial management shared services: implementation progress",
+     "url": "https://www.audit.gov.ie/media/jqinw3i5/6-financial-management-shared-services-implementation-progress.pdf",
+     "value": "National Shared Services Office (FMSS); Department of Finance manages the Exchequer"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2017",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "An Act to provide for the establishment of a body to be known as the National Shared Services Office; to provide for the transfer to that body of certain functions of the Minister for Public Expenditure and Reform relating to the provision of certain services to public service bodies;",
+     "quote_english": "",
+     "title": "National Shared Services Office Act 2017",
+     "url": "https://www.irishstatutebook.ie/eli/2017/act/26/enacted/en/html",
+     "value": "National Shared Services Office Act 2017 (NSSO provides FMSS to public service bodies)"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "foreign_dependency",
+     "language": "en",
+     "published": "2023",
+     "publisher": "Office of the Comptroller and Auditor General",
+     "quote": "An Oracle-based infrastructure platform for the FMSS system was agreed by the NSSO and the system implementation partner in September 2016.",
+     "quote_english": "",
+     "title": "Report on the Accounts of the Public Services 2022, Chapter 6: Financial management shared services: implementation progress",
+     "url": "https://www.audit.gov.ie/media/jqinw3i5/6-financial-management-shared-services-implementation-progress.pdf",
+     "value": "FMSS runs on an Oracle-based infrastructure platform, agreed with the system implementation partner in 2016"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "non_eu_provider",
+   "holding_name": "Financial Management Shared Services (FMSS) system, including the Exchequer",
+   "operator": "National Shared Services Office (FMSS); Department of Finance (Exchequer)",
+   "research_note": "The C&AG report says FMSS runs on an 'Oracle-based infrastructure platform' and that Oracle supports the existing hardware. Classifying this as a non-EU dependency rests on Oracle being a US vendor, which the report does not state. The report does not say where FMSS is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "en",
+     "published": "2025",
+     "publisher": "National Shared Services Office",
+     "quote": "Customer Relations and Support Services: provides support to individual customers while also managing relationships with client PSBs who receive HR and payroll services from the NSSO.",
+     "quote_english": "",
+     "title": "National Shared Services Office Annual Report 2024",
+     "url": "https://assets.nsso.gov.ie/documents/NSSO_Annual_Report_2024_1102.pdf",
+     "value": "National Shared Services Office (NSSO), Employee Services"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2017",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "An Act to provide for the establishment of a body to be known as the National Shared Services Office; to provide for the transfer to that body of certain functions of the Minister for Public Expenditure and Reform relating to the provision of certain services to public service bodies;",
+     "quote_english": "",
+     "title": "National Shared Services Office Act 2017",
+     "url": "https://www.irishstatutebook.ie/eli/2017/act/26/enacted/en/html",
+     "value": "National Shared Services Office Act 2017"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "hosting",
+     "language": "en",
+     "published": "2025",
+     "publisher": "National Shared Services Office",
+     "quote": "Cloud First Delivery: This is another core element of our IT strategy and aligned to central government policy on cloud we continued our evaluation of cloud platforms which can be utilised to underpin our applications.",
+     "quote_english": "",
+     "title": "National Shared Services Office Annual Report 2024",
+     "url": "https://assets.nsso.gov.ie/documents/NSSO_Annual_Report_2024_1102.pdf",
+     "value": "NSSO pursuing 'Cloud First Delivery', evaluating cloud platforms to underpin its applications (no provider named)"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "en",
+     "published": "2025",
+     "publisher": "National Shared Services Office",
+     "quote": "In 2024, Employee Services delivered HR services to 48,748 customers and processed payroll and pension payments totalling €7.2 billion for 164,102 customers across 54 client PSBs.",
+     "quote_english": "",
+     "title": "National Shared Services Office Annual Report 2024",
+     "url": "https://assets.nsso.gov.ie/documents/NSSO_Annual_Report_2024_1102.pdf",
+     "value": "Payroll and pension payments of €7.2 billion for 164,102 customers across 54 client public service bodies (2024)"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "NSSO Employee Services payroll, pensions and HR shared services",
+   "operator": "National Shared Services Office",
+   "research_note": "The NSSO says it is evaluating cloud platforms under a 'Cloud First' strategy but names no provider. Defence Forces payroll was not researched separately.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2024",
+     "publisher": "Department of Housing, Local Government and Heritage",
+     "quote": "You will be notified in good time before the election of the version of the Election Count Database System (Ecount) that will be available to you.",
+     "quote_english": "",
+     "title": "Memorandum for the Guidance of Returning Officers, General Election 2024",
+     "url": "https://assets.gov.ie/312963/3e85cb42-027b-4ede-8249-20112f9f652c.pdf",
+     "value": "Election Count Database System (Ecount), used alongside the manual paper-ballot count"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "2024",
+     "publisher": "Department of Housing, Local Government and Heritage",
+     "quote": "The general duty of a Returning Officer at a Dáil election is to do all that is necessary for conducting a Dáil election in the constituency, in accordance with the Electoral Act 1992, to ascertain and declare the results of the election",
+     "quote_english": "",
+     "title": "Memorandum for the Guidance of Returning Officers, General Election 2024",
+     "url": "https://assets.gov.ie/312963/3e85cb42-027b-4ede-8249-20112f9f652c.pdf",
+     "value": "Returning Officers per constituency"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2022",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "An Act to provide for the establishment of An Coimisiún Toghcháin ; to confer on the Commission certain functions in relation to the preparation and maintenance of the Register of Political Parties;",
+     "quote_english": "",
+     "title": "Electoral Reform Act 2022",
+     "url": "https://www.irishstatutebook.ie/eli/2022/act/30/enacted/en/html",
+     "value": "Electoral Reform Act 2022 (establishes An Coimisiún Toghcháin); the Electoral Act 1992 governs conduct and count"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Election Count Database System (Ecount), used alongside the manual paper count",
+   "operator": "Returning Officers, with guidance from the Department of Housing, Local Government and Heritage",
+   "research_note": "Counting is done by hand from paper ballots, and Ecount runs the surplus calculations alongside it. Who supplies and hosts Ecount is not stated.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Central Bank of Ireland",
+     "quote": "T2 is structured as a multiplicity of payments systems using a single technical platform. The Irish component system of T2, operated by the Central Bank of Ireland, is TARGET2-Ireland.",
+     "quote_english": "",
+     "title": "T2",
+     "url": "https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2",
+     "value": "TARGET2-Ireland (Irish component of the Eurosystem T2 RTGS system)"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Central Bank of Ireland",
+     "quote": "We continued to invest in our IT capabilities, including completing a major transformational initiative to enable the Central Bank to transition to a new data centre service provider.",
+     "quote_english": "",
+     "title": "Annual Report 2025 and Annual Performance Statement 2025-2026",
+     "url": "https://www.centralbank.ie/docs/default-source/publications/corporate-reports/annual-reports/annual-report-2025-and-annual-performance-statement-2025-2026.pdf",
+     "value": "Central Bank of Ireland"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Central Bank of Ireland",
+     "quote": "The functions of the Central Bank of Ireland (the Central Bank) are set out in section 5A of the Central Bank Act 1942 (as amended) (the Act).",
+     "quote_english": "",
+     "title": "Annual Report 2025 and Annual Performance Statement 2025-2026",
+     "url": "https://www.centralbank.ie/docs/default-source/publications/corporate-reports/annual-reports/annual-report-2025-and-annual-performance-statement-2025-2026.pdf",
+     "value": "Central Bank Act 1942 (as amended), s.5A"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "hosting",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Central Bank of Ireland",
+     "quote": "A major milestone was the successful transitioning to two new Tier-3 data centres operating in active-active configuration, providing near-zero downtime capability and avails of new security monitoring capabilities.",
+     "quote_english": "",
+     "title": "Annual Report 2025 and Annual Performance Statement 2025-2026",
+     "url": "https://www.centralbank.ie/docs/default-source/publications/corporate-reports/annual-reports/annual-report-2025-and-annual-performance-statement-2025-2026.pdf",
+     "value": "Transitioned to a new data centre service provider: two Tier-3 data centres in active-active configuration (provider not named)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "en",
+     "published": "",
+     "publisher": "Central Bank of Ireland",
+     "quote": "The key legal instrument in relation to TARGET2 is the: Guideline of the European Central Bank of 24 February 2022 on a new generation Trans-European Automated Real-time Gross Settlement Express Transfer system (TARGET)",
+     "quote_english": "",
+     "title": "T2",
+     "url": "https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2",
+     "value": "T2 is a Eurosystem system governed by ECB Guideline of 24 February 2022"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "eu_provider",
+   "holding_name": "TARGET2-Ireland (Irish component of the Eurosystem T2 payment system)",
+   "operator": "Central Bank of Ireland",
+   "research_note": "T2 runs on a single Eurosystem technical platform, which is shared EU public infrastructure. Separately, the Central Bank moved its own systems to a new data centre service provider (two Tier-3 data centres) in 2025; that provider is not named.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Department of Defence",
+     "quote": "In progressing DF Enterprise network advancement, the CIS Corps continued the implementation of the DF’s Next Generation Working Environment (NGWE) project.",
+     "quote_english": "",
+     "title": "Department of Defence and Defence Forces Annual Report 2024",
+     "url": "https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf",
+     "value": "Defence Forces Enterprise network (NGWE project) and national Communications Information Services Network (CISN)"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Department of Defence",
+     "quote": "This project will provide for the evolution of the DF’s Enterprise network by enhancing all nodes and functions of the network, including security, storage, backup and applications.",
+     "quote_english": "",
+     "title": "Department of Defence and Defence Forces Annual Report 2024",
+     "url": "https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf",
+     "value": "Defence Forces CIS Corps"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "1954",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "AN ACT TO MAKE FURTHER AND BETTER PROVISION IN RELATION TO THE DEFENCE OF THE STATE AND THE DEFENCE FORCES",
+     "quote_english": "",
+     "title": "Defence Act 1954",
+     "url": "https://www.irishstatutebook.ie/eli/1954/act/18/enacted/en/html",
+     "value": "Defence Act 1954"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "hosting",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Department of Defence",
+     "quote": "securely accessing cloud services where required, as well as maintaining a secure ‘on premise’ national Communications Information Services Network (CISN) built around two ‘Active/Active’ resilient Data Centres.",
+     "quote_english": "",
+     "title": "Department of Defence and Defence Forces Annual Report 2024",
+     "url": "https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf",
+     "value": "On-premise national CISN built around two active/active resilient data centres, with hybrid cloud access where required"
+    }
+   ],
+   "class_id": "defence_command",
+   "foreign_dependency": "national",
+   "holding_name": "Defence Forces Communications Information Services Network (CISN) / Next Generation Working Environment",
+   "operator": "Defence Forces CIS Corps",
+   "research_note": "The report describes the core CISN as 'on premise' and national, built around two active/active data centres, with a hybrid cloud strategy that uses cloud services 'where required'. No cloud provider is named.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Department of Defence",
+     "quote": "DF Cyber, Special Operations Forces and Military Intelligence continually deliver national defence and security outputs in the interests of the Irish State and our society.",
+     "quote_english": "",
+     "title": "Department of Defence and Defence Forces Annual Report 2024",
+     "url": "https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf",
+     "value": "Defence Forces Military Intelligence holdings"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Department of Defence",
+     "quote": "The NSAC was established in 2019, by the Government. Its primary remit is to provide high-quality, strategic analysis to the Taoiseach and Government of the key threats to Ireland’s national security.",
+     "quote_english": "",
+     "title": "Department of Defence and Defence Forces Annual Report 2024",
+     "url": "https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf",
+     "value": "National Security Analysis Centre (established by Government in 2019)"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Defence Forces Military Intelligence; National Security Analysis Centre (NSAC)",
+   "operator": "Defence Forces Military Intelligence; National Security Analysis Centre (established by Government, 2019)",
+   "research_note": "No statutory basis was verified; the NSAC was established by Government decision. Garda Crime and Security intelligence holdings were not researched. Hosting is not public.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2022-03-23",
+     "publisher": "Motorola Solutions, Inc.",
+     "quote": "TETRA Ireland delivers mission-critical voice and data land mobile radio (LMR) communications to thousands of first responders and frontline workers from national security and enforcement agencies, health and emergency services, state utilities and volunteer organizations across the country.",
+     "quote_english": "",
+     "title": "Motorola Solutions Acquires TETRA Ireland Communications, The Provider of Ireland's National Digital Radio Service",
+     "url": "https://www.motorolasolutions.com/newsroom/press-releases/motorola-solutions-acquires-tetra-ireland-communications.html",
+     "value": "National Digital Radio Service (NDRS), TETRA network for first responders"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "ECAS (112.ie)",
+     "quote": "On completion of this open tender process BT was awarded the contract (known as a Concession Agreement) to provide 112 and 999 call answering services on behalf of the State of Ireland.",
+     "quote_english": "",
+     "title": "Service Providers - ECAS 112.ie",
+     "url": "https://112.ie/service-providers/",
+     "value": "Emergency Call Answering Service (ECAS) for 112/999 operated by BT under a State concession (re-awarded 2019)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "",
+     "publisher": "ECAS (112.ie)",
+     "quote": "Communications Regulation (Amendment) Act of 2007, the Department of Communications, Energy and Natural Resources (DCENR) tendered for a supplier to provide the Emergency Call Answering Service (ECAS) for Ireland.",
+     "quote_english": "",
+     "title": "Service Providers - ECAS 112.ie",
+     "url": "https://112.ie/service-providers/",
+     "value": "Communications Regulation (Amendment) Act 2007 (basis for the ECAS tender)"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "foreign_dependency",
+     "language": "en",
+     "published": "2022-03-23",
+     "publisher": "Motorola Solutions, Inc.",
+     "quote": "CHICAGO – March 23, 2022 – Motorola Solutions, Inc. (NYSE: MSI) today announced it has acquired TETRA Ireland Communications Limited, the provider of Ireland’s National Digital Radio Service (NDRS).",
+     "quote_english": "",
+     "title": "Motorola Solutions Acquires TETRA Ireland Communications, The Provider of Ireland's National Digital Radio Service",
+     "url": "https://www.motorolasolutions.com/newsroom/press-releases/motorola-solutions-acquires-tetra-ireland-communications.html",
+     "value": "NDRS provider TETRA Ireland Communications Ltd acquired by US company Motorola Solutions, Inc. (Chicago, NYSE: MSI) in March 2022"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "non_eu_provider",
+   "holding_name": "Emergency Call Answering Service (ECAS, 112/999); National Digital Radio Service (TETRA)",
+   "operator": "BT Communications Ireland Ltd under State concession (ECAS); TETRA Ireland Communications Ltd (NDRS)",
+   "research_note": "The non-EU classification rests on the Motorola Solutions press release: the NDRS provider, TETRA Ireland Communications Ltd, was acquired in 2022 by Motorola Solutions, Inc. (Chicago, NYSE: MSI). ECAS is run by BT under a State concession; the ultimate ownership of BT Communications Ireland Ltd was not verified from a quotable source, so ECAS alone is not classified.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Department of Defence",
+     "quote": "The OEP manages the National Emergency Co-ordination Centre (NECC), which provides a dedicated facility for ministers and officials to coordinate the national response to major emergencies and crises.",
+     "quote_english": "",
+     "title": "Our Office of Emergency Planning",
+     "url": "https://www.gov.ie/en/department-of-defence/organisation-information/office-of-emergency-planning/",
+     "value": "National Emergency Co-ordination Centre (NECC), managed by the Office of Emergency Planning"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Department of Defence",
+     "quote": "The GTF is supported by the Office of Emergency Planning, which is an office within the Department of Defence.",
+     "quote_english": "",
+     "title": "Department of Defence and Defence Forces Annual Report 2024",
+     "url": "https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf",
+     "value": "Office of Emergency Planning (Department of Defence), supporting the Government Task Force on Emergency Planning"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2018-07-19",
+     "publisher": "Department of Defence",
+     "quote": "This framework outlines the structures for coordinating a “whole of Government” approach and the framework for achieving a systems approach to emergency management.",
+     "quote_english": "",
+     "title": "Strategic Emergency Management National Structures and Framework",
+     "url": "https://www.gov.ie/en/department-of-defence/publications/strategic-emergency-management-national-structures-and-framework/",
+     "value": "Strategic Emergency Management: National Structures and Framework (Government policy framework, not a statute)"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "National Emergency Co-ordination Centre (NECC)",
+   "operator": "Office of Emergency Planning, Department of Defence",
+   "research_note": "The governing instrument is a Government framework document, not a statute. NECC systems and hosting are not described publicly.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "EirGrid",
+     "quote": "Our national control centres for the island of Ireland are located in Dublin and Belfast.",
+     "quote_english": "",
+     "title": "National Control Centres",
+     "url": "https://www.eirgrid.ie/grid/how-grid-works/national-control-centres",
+     "value": "National Control Centres (NCCs) of the transmission system operator"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "EirGrid",
+     "quote": "The National Control Centres (NCCs) make sure the lights stay on throughout the island of Ireland. A team of staff operate the grid from NCCs in Dublin and Belfast.",
+     "quote_english": "",
+     "title": "National Control Centres",
+     "url": "https://www.eirgrid.ie/grid/how-grid-works/national-control-centres",
+     "value": "EirGrid (transmission system operator)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2000",
+     "publisher": "Office of the Attorney General (Irish Statute Book)",
+     "quote": "A licence under section 14(1)(e) (inserted by Regulation 32) of the Act of 1999 shall only be granted to the company referred to in Regulation 34.",
+     "quote_english": "",
+     "title": "S.I. No. 445/2000 - European Communities (Internal Market in Electricity) Regulations 2000",
+     "url": "https://www.irishstatutebook.ie/eli/2000/si/445/made/en/print",
+     "value": "S.I. No. 445 of 2000, Reg. 5: TSO licence under s.14(1)(e) of the Electricity Regulation Act 1999"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "National Control Centres (NCCs) of the transmission system operator",
+   "operator": "EirGrid",
+   "research_note": "The NCCs are in Dublin and Belfast (the all-island grid). No source found on the EMS/SCADA vendor or hosting for the control centres.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Uisce Éireann",
+     "quote": "Our National Operations Management Centre based in Dublin operates 24/7 and is now monitoring alarms at 517 of our water treatment plants, covering a population of approximately 3.8 million.",
+     "quote_english": "",
+     "title": "Delivering Water Services for Ireland: Annual Report and Financial Statements 2024",
+     "url": "https://www.water.ie/sites/default/files/2025-07/Uisce-Eireann-2024-Annual-Report-EN.pdf",
+     "value": "National Operations Management Centre (24/7 alarm and treatment monitoring)"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "operator",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Uisce Éireann",
+     "quote": "Uisce Éireann is a Designated Activity Company limited by shares with a Constitution (Memorandum and Articles of Association) in accordance with the Companies Act 2014.",
+     "quote_english": "",
+     "title": "Delivering Water Services for Ireland: Annual Report and Financial Statements 2024",
+     "url": "https://www.water.ie/sites/default/files/2025-07/Uisce-Eireann-2024-Annual-Report-EN.pdf",
+     "value": "Uisce Éireann (national water utility, designated activity company)"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Uisce Éireann",
+     "quote": "Uisce Éireann (“the Company”) was incorporated in July 2013 pursuant to the Water Services Act 2013.",
+     "quote_english": "",
+     "title": "Delivering Water Services for Ireland: Annual Report and Financial Statements 2024",
+     "url": "https://www.water.ie/sites/default/files/2025-07/Uisce-Eireann-2024-Annual-Report-EN.pdf",
+     "value": "Water Services Act 2013 (Uisce Éireann incorporated under it)"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "en",
+     "published": "2025",
+     "publisher": "Uisce Éireann",
+     "quote": "Our National Operations Management Centre based in Dublin operates 24/7 and is now monitoring alarms at 517 of our water treatment plants",
+     "quote_english": "",
+     "title": "Delivering Water Services for Ireland: Annual Report and Financial Statements 2024",
+     "url": "https://www.water.ie/sites/default/files/2025-07/Uisce-Eireann-2024-Annual-Report-EN.pdf",
+     "value": "Alarms monitored at 517 water treatment plants"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Uisce Éireann National Operations Management Centre",
+   "operator": "Uisce Éireann",
+   "research_note": "Flood-defence systems (OPW) were not researched. No source found on where the telemetry and SCADA systems are hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2026-06-10",
+     "publisher": "HSE MyHealth@IE programme (hosted by Irish Institute of Pharmacy)",
+     "quote": "A read-only digital record of a patient’s key healthcare data aggregated from various electronic data sources and settings.",
+     "quote_english": "",
+     "title": "National Shared Care Record: Enabling Data, Enhancing Care (MyHealth@IE programme webinar)",
+     "url": "https://iiop.ie/sites/default/files/2026-06/NSCR%20Presentation_10%20June%202026_IIOPWebinar.pdf",
+     "value": "National Shared Care Record (NSCR), HSE MyHealth@IE programme (read-only aggregated record)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Health Information and Quality Authority",
+     "quote": "The HIDS service is the designated authority, provided for under the Health Identifiers Act 2014, which establishes and operates all identifiers in systems across the HSE.",
+     "quote_english": "",
+     "title": "National Register of Individual Health Identifiers",
+     "url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/national-register-individual-health-identifiers",
+     "value": "National Register of Individual Health Identifiers (IHI), HSE Health Identifiers Service"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "Health Information and Quality Authority",
+     "quote": "Health Identifiers Service (HIDS) within the National Operational Performance & Integration Unit, Chief Operations Office, HSE.",
+     "quote_english": "",
+     "title": "National Register of Individual Health Identifiers",
+     "url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/national-register-individual-health-identifiers",
+     "value": "Health Service Executive (Health Identifiers Service)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "",
+     "publisher": "Health Information and Quality Authority",
+     "quote": "With the enactment of the Health Identifiers Act in 2014, residents and former residents in Ireland with a Personal Public Services Number (PPSN) were given an Individual Health Identifier (IHI) number.",
+     "quote_english": "",
+     "title": "National Register of Individual Health Identifiers",
+     "url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/national-register-individual-health-identifiers",
+     "value": "Health Identifiers Act 2014 (IHI for every resident/former resident with a PPSN)"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "National Shared Care Record (NSCR); National Register of Individual Health Identifiers",
+   "operator": "Health Service Executive",
+   "research_note": "The NSCR presentation (HSE MyHealth@IE programme, hosted by the Irish Institute of Pharmacy) says the NSCR is live but is not an EHR. It names no platform vendor or hosting. The Health Information Act 2026 was not checked.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Health Protection Surveillance Centre (HSE)",
+     "quote": "CIDR is used by laboratories, Public Health Areas and HPSC to collect, analyse and interpret notification data in order to investigate cases, prevent spread of infection, identify potential outbreaks",
+     "quote_english": "",
+     "title": "Computerised Infectious Disease Reporting (CIDR)",
+     "url": "https://www.hpsc.ie/cidr/",
+     "value": "Computerised Infectious Disease Reporting (CIDR)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "Health Information and Quality Authority",
+     "quote": "Organisation Health Protection Surveillance Centre (HPSC). Web address http://www.hpsc.ie/hpsc/CIDR Year established CIDR was established in 2004,",
+     "quote_english": "",
+     "title": "Computerised Infectious Disease Reporting (CIDR) system",
+     "url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr",
+     "value": "Health Protection Surveillance Centre (HPSC); CIDR established 2004"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "",
+     "publisher": "Health Information and Quality Authority",
+     "quote": "The current list is also specified in S.I. No. 258/2022 - Infectious Diseases (Amendment) Regulations 2022,",
+     "quote_english": "",
+     "title": "Computerised Infectious Disease Reporting (CIDR) system",
+     "url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr",
+     "value": "Infectious Diseases Regulations (current list in S.I. No. 258/2022, Infectious Diseases (Amendment) Regulations 2022)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "en",
+     "published": "",
+     "publisher": "Health Information and Quality Authority",
+     "quote": "On average 33,394 cases were reported annually between 2013-2019, range 25,814 – 46,065.",
+     "quote_english": "",
+     "title": "Computerised Infectious Disease Reporting (CIDR) system",
+     "url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr",
+     "value": "On average 33,394 notified cases per year, 2013-2019 (range 25,814-46,065)"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Computerised Infectious Disease Reporting (CIDR)",
+   "operator": "Health Protection Surveillance Centre (HSE)",
+   "research_note": "The vaccination register (NIIS) was not researched separately. No source found on CIDR hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "research_note": "Candidate holdings identified but not verified: the Primary Online Database (POD) and Post-Primary Online Database (P-POD) of the Department of Education (gov.ie service pages, Circular 0017/2014 fair processing notice). Research stopped before the quotes could be checked, so no claims are made.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched: work stopped before this tier-2 class was reached. Likely holding: Central Statistics Office microdata and census files under the Statistics Act 1993; unverified.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched: work stopped before this tier-3 class was reached. The Tailte Éireann 2024 annual report mentions a GeoDirectory dividend, but no geospatial or address-register claim was verified.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched: work stopped before this tier-3 class was reached. Likely legal basis is the National Archives Act 1986; unverified.",
+   "status": "unknown"
+  }
+ ],
+ "iso": "IE"
+}
