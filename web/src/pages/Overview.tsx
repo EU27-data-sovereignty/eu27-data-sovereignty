@@ -82,6 +82,19 @@ export function Overview({ bundle }: { bundle: Bundle }) {
         </p>
       </section>
 
+      {/* A plain <a>, not <Link>: the report is a static file built beside the app (book/build.py --report). */}
+      <a
+        href="/eu27-report.pdf"
+        className="mb-3 block rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-3 hover:border-[var(--color-accent)]"
+      >
+        <div className="font-semibold text-[var(--color-accent-text)]">
+          EU-27 country report (PDF)
+        </div>
+        <div className="text-sm text-[var(--color-fg-secondary)]">
+          Every member state in one document, with a table of contents. About 140 pages.
+        </div>
+      </a>
+
       <nav className="grid gap-3 sm:grid-cols-2">
         {[
           ['/matrix', 'Sovereignty matrix', 'Eight dimensions of posture, per state.'],

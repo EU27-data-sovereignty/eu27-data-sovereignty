@@ -20,10 +20,11 @@ The site is fully static. Nothing runs server-side: there are no functions, no e
 
 | Piece | Source | Notes |
 |---|---|---|
-| Build | `vercel.json` `buildCommand`: `cd web && npm ci && npm run build` | `installCommand` is a no-op; the build installs inside `web/` |
+| Build | `vercel.json` `buildCommand`: the web app, then `book/build.py --briefs` and `--report` | Runs **locally** through `vercel build` (#71); it needs `typst` and `pandoc`, which Vercel's image lacks |
 | Output | `web/dist` | Vite. `dist/` is never committed (#24) |
+| PDFs | `/eu27-report.pdf`, `/briefs/<ISO>.pdf` | The EU-27 country report (colour, one file, table of contents) and the 27 A4 briefs. Built into `web/dist/`, never committed (#41) |
 | Data | `web/public/data/eu27.json` → `/data/eu27.json` | Tracked; CI asserts it is fresh. It is the app's only network fetch |
-| Routing | `rewrites: /(.*) → /` | SPA. `cleanUrls`, no trailing slash. The destination must not end in `.html`, because `cleanUrls` 308-redirects those and the rewrite then 404s. `tests/test_vercel_config.py` asserts this |
+| Routing | `rewrites: /(.*) → /index` | SPA. `cleanUrls`, no trailing slash. Under `cleanUrls` the build output serves `index.html` at `/index`, so that is the only destination that works in a prebuilt deploy. `/index.html` 404s every deep link (it did until 2026-09-27), and `/` 404s even the home page when prebuilt. `tests/test_vercel_config.py` asserts this |
 | Headers | `vercel.json` `headers` | Strict CSP (`default-src 'self'`, no inline scripts, `frame-ancestors 'none'`), `nosniff`, `X-Frame-Options: DENY`, restrictive `Permissions-Policy` |
 | Caching | `/data/*` → `public, max-age=300, must-revalidate` | Five minutes, so a redeploy shows up quickly |
 | Indexing | `web/public/robots.txt` disallows everything | Removing it is stage 2 |
@@ -50,11 +51,20 @@ flowchart TD
     E -- fails --> X4[Stop]
     E -- passes --> F{".vercelignore excludes cache/?"}
     F -- no --> X5[Refuse: corpus would upload]
-    F -- yes --> G["vercel deploy --prod<br/>uploads the tree, Vercel builds web/"]
+    F -- yes --> T{"typst and pandoc installed?"}
+    T -- no --> X6[Refuse: the PDFs cannot be built]
+    T -- yes --> B["vercel build --prod<br/>web app + 27 briefs + EU-27 report, locally"]
+    B --> G["vercel deploy --prebuilt --prod<br/>uploads .vercel/output only"]
     G --> H[Freshness check + add a row to the deploy log]
 ```
 
-To try a change without touching production, run `vercel deploy`. With no `--prod` it gives you a preview URL.
+To try a change without touching production, run `vercel build && vercel deploy --prebuilt`. With no `--prod` it gives you a
+preview URL. Previews sit behind Vercel login: open them in a browser where you are signed in to Vercel, or use `vercel curl`.
+
+**Prebuilt, not remote builds (#71).** The PDFs need `typst` and `pandoc`, and Vercel's build image has neither.
+Only `.vercel/output` is uploaded, so `.vercelignore` now matters only for a plain `vercel deploy`. It stays, as a second layer.
+A remote build (a plain `vercel deploy`, or a Git integration) fails at the report step. That is deliberate: a remote build
+cannot quietly ship a site without its PDFs.
 
 ## Upload boundary
 
@@ -103,8 +113,8 @@ deploy's date with `git log -1 --format=%ci`.
   while every test passed. `tests/test_vercel_config.py` guards that rule now, but for any other routing
   or header change you still have to check a preview by hand. Previews sit behind Vercel deployment
   protection, so use `vercel curl <path> --deployment <url>`, not plain curl, which gets a 302.
-- **No briefs on Vercel (#42, open).** The Vercel build image has no `typst`, so `/briefs/<ISO>.pdf` is
-  missing from every Vercel-built deploy. A local `./run.sh build` produces them.
+- **Deploys need this Mac's toolchain (#71).** The PDFs are built by `typst` and `pandoc` at deploy time, so a deploy
+  from a machine without them is refused. This closed #42's open item: the briefs are served again.
 - **No auto-deploy.** See the deploy flow above. Installing the Vercel GitHub App would close this gap, but
   it would also need preview-deploy protection thought through first.
 - **The Vercel MCP connector cannot list this project's deployments.** `list_deployments` returns 403

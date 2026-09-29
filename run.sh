@@ -174,8 +174,19 @@ case "${1:-dev}" in
             print_error ".vercelignore does not exclude cache/ — the fetched corpus would upload."
             exit 1
         fi
+        # Built here, uploaded prebuilt: the PDFs need typst and pandoc, which Vercel's
+        # build image does not have (DECISIONS.md #71). vercel build runs vercel.json's
+        # buildCommand locally into .vercel/output; only that output is uploaded.
+        for tool in typst pandoc; do
+            if ! command -v "$tool" &> /dev/null; then
+                print_error "$tool is not installed — the report and briefs cannot be built. brew install $tool"
+                exit 1
+            fi
+        done
+        print_info "Building for production..."
+        vercel build --prod --yes
         print_info "Deploying to production..."
-        vercel deploy --prod
+        vercel deploy --prebuilt --prod
         print_success "Deployed. robots.txt still disallows indexing until the verification gate passes."
         ;;
     book)

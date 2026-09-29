@@ -9,6 +9,7 @@ is mono by decision, the cover is colour.
 ./run.sh book                        # gazetteer + reference, compile to book/build/book.pdf
 python3 book/build.py --part 3       # one part, for fast proofing
 python3 book/build.py --typ-only     # emit the .typ without compiling
+python3 book/build.py --report       # EU-27 country report, colour A4 (needs pandoc) -> build/eu27-report.pdf
 ```
 
 Requires `typst` (`brew install typst`). `init.sh` warns if it is missing.

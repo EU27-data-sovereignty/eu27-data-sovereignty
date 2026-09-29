@@ -5,6 +5,25 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-09-29
+
+### Added — the EU-27 country report, one PDF (#71)
+
+`python3 book/build.py --report` builds `eu27-report.pdf`: an EU-blue cover with the circle of stars, a
+clickable contents page, a provenance notice, an EU-27 summary table, then one chapter per member state in
+alphabetical order. Each chapter is that country's `countries/<ISO>/GOAL.md`, converted by pandoc, so the
+report cannot disagree with the files. 142 pages, about 2.8 MB. The colour template lives in
+`book/templates/report.typ`; `style.typ` stays mono (#28). It is served at `/eu27-report.pdf` and linked from
+the Overview page.
+
+### Changed — prebuilt deploys; the briefs are back (#71)
+
+`./run.sh deploy` now builds locally (`vercel build`) and uploads the output (`vercel deploy --prebuilt`),
+because the PDFs need typst and pandoc. That also closes #42's open item: `/briefs/<ISO>.pdf` is served. The
+SPA rewrite moved from `/` to `/index`, the path prebuilt output gives `index.html` under `cleanUrls`.
+
+---
+
 ## 2026-09-27
 
 ### Fixed — every deep link on the live site returned 404

@@ -5,6 +5,7 @@ Typeset the book.
     python3 book/build.py                  # the book -> build/book.pdf
     python3 book/build.py --briefs         # 27 standalone A4 briefs -> build/briefs/
     python3 book/build.py --briefs --iso DE
+    python3 book/build.py --report         # EU-27 country report, colour A4 -> build/eu27-report.pdf
     python3 book/build.py --part 3         # one part, for fast proofing
     python3 book/build.py --typ-only       # emit .typ, skip the typst call
 
@@ -361,6 +362,133 @@ def build_briefs(bundle: dict, isos: list[str], out_dir: Path, compile_pdf: bool
 
 
 # --------------------------------------------------------------------------- #
+# The EU-27 country report — one colour PDF, every member state
+# --------------------------------------------------------------------------- #
+
+REPORT_TITLE = "Sovereign Data Centres for the EU-27"
+REPORT_SUBTITLE = "A country-by-country analysis of national government cloud capacity"
+
+
+def goal_body(iso: str) -> str:
+    """countries/<ISO>/GOAL.md from its first numbered section on, converted to typst.
+
+    Drops the title, the generator's blockquote and the per-file Contents list: the report
+    has its own chapter head, provenance notice and table of contents. The analysis itself
+    is taken verbatim, so the report cannot disagree with the file it was built from.
+    """
+    md = (ROOT / "countries" / iso / "GOAL.md").read_text(encoding="utf-8")
+    sections = re.split(r"(?m)^(?=## )", md)
+    kept = [s for s in sections[1:] if not s.startswith("## Contents")]
+    typ = subprocess.run(
+        # No auto identifiers: 27 files share section names, and duplicate labels are an error.
+        ["pandoc", "-f", "gfm-gfm_auto_identifiers", "-t", "typst", "--wrap=none"],
+        input="".join(kept), capture_output=True, text=True, check=True,
+    ).stdout
+    # Links into a file's own Contents anchors have nowhere to point once it is removed.
+    typ = re.sub(r"#link\(<[^>]*>\)\[([^\]]*)\]", r"\1", typ)
+    # The report's table style draws its own rules.
+    typ = re.sub(r"(?m)^\s*table\.hline\(\),\n", "", typ)
+    # A GFM table with a blank header row is a key-value list: drop the empty header and
+    # render it with kvtable, which styles the first column instead of the first row.
+    empty_header = re.compile(r"(\s*columns:[^\n]*\n\s*align:[^\n]*\n)\s*table\.header\((?:\[\],\s*)+\),\n")
+    parts = typ.split("#table(")
+    for i in range(1, len(parts)):
+        stripped, n = empty_header.subn(r"\1", parts[i], count=1)
+        parts[i] = ("#kvtable(" if n else "#table(") + stripped
+    typ = parts[0] + "".join(parts[1:])
+    # pandoc centres every table; the report's tables read left to right. Without the
+    # align(center)[...] wrapper the call sits in figure's code arguments, so it loses its #.
+    return re.sub(r"align\(center\)\[#((?:kv)?table\(.*?)\]\s*\n(\s*, kind: table)", r"\1\n\2",
+                  typ, flags=re.S)
+
+
+def report_doc(bundle: dict) -> str:
+    order = sorted(bundle["countries"].values(), key=lambda c: c["name"])
+    t = bundle["totals"]
+    out = [
+        '#import "/templates/report.typ": report, standfirst, notice, kvtable',
+        "",
+        "#show: report.with(",
+        f'  title: "{REPORT_TITLE}",',
+        f'  subtitle: "{REPORT_SUBTITLE}",',
+        f'  generated: "{bundle["generated"]}",',
+        '  provenance: "Scaled working assumptions, not a sourced forecast. '
+        'sovereign-data-centers.vercel.app, generated ' + bundle["generated"] + '",',
+        ")",
+        "",
+        "#outline(title: [Contents], depth: 1)",
+        "",
+        "= About this report",
+        "",
+        "#notice[",
+        "*Read this first.* This is a capacity planning model, not a forecast and not a proposal. "
+        "Every figure is a working assumption scaled from a hand-built Dutch reference case. "
+        "The legal and regulatory entries were researched from public policy documents in "
+        "September 2026, have *not* been checked against primary instruments, and will date. "
+        "Nothing here is legal advice or an official position of any government or EU body.",
+        "]",
+        "",
+        "Each chapter covers one member state, in alphabetical order, with the same thirteen "
+        "sections: the working thesis, the starting point, what is structurally different from "
+        "the Dutch reference case, workload demand, the capacity model's output, a first-pass "
+        "geography, threat notes, recommendations, open questions, the legal and regulatory "
+        "posture, the current provider landscape, the migration path and cost, and the critical "
+        "national data in scope. The Netherlands chapter is the hand-built reference case the "
+        "other twenty-six are scaled from, so its structure is longer.",
+        "",
+        "The same data drives the interactive site at "
+        '#link("https://sovereign-data-centers.vercel.app")[sovereign-data-centers.vercel.app]. '
+        "Corrections are welcome through the repository's issue template.",
+        "",
+        "== The EU-27 at a glance",
+        "",
+        "#table(",
+        "  columns: (1fr, auto, auto, auto, auto, auto),",
+        "  align: (left, left, right, right, right, right),",
+        "  table.header([Country], [ISO], [Servers], [Design MW], [Sites], [CAPEX EUR m]),",
+    ]
+    for c in order:
+        cap = c["capacity"]
+        out.append(
+            f'  [{esc(c["name"])}], [{esc(c["iso2"])}], [{num(cap["total_servers"])}], '
+            f'[{num(cap["design_mw"], 1)}], [{cap["sites"]}], [{num(cap["capex_total"])}],'
+        )
+    out += [
+        f'  [*EU-27*], [], [*{num(t["servers"])}*], [*{num(t["design_mw"], 0)}*], '
+        f'[*{t["sites"]}*], [*{num(t["capex_total"])}*],',
+        ")",
+        "",
+    ]
+    for c in order:
+        out += [
+            f'= {esc(c["name"])} ({esc(c["iso2"])})',
+            "",
+            f"#standfirst[{stake_line(c)}]",
+            "",
+            goal_body(c["iso2"]),
+            "",
+        ]
+    return "\n".join(out)
+
+
+def build_report(bundle: dict, out: Path, compile_pdf: bool) -> int:
+    if not shutil.which("pandoc"):
+        raise SystemExit("pandoc is not installed. Install with: brew install pandoc")
+    BUILD.mkdir(exist_ok=True)
+    typ = BUILD / "report.typ"
+    typ.write_text(report_doc(bundle), encoding="utf-8")
+    print(f"{rel(typ)}: {len(bundle['countries'])} countries")
+    if not compile_pdf:
+        return 0
+    if not shutil.which("typst"):
+        raise SystemExit("typst is not installed. Install with: brew install typst")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(["typst", "compile", "--root", str(BOOK), str(typ), str(out)], check=True)
+    print(f"{rel(out)}: {out.stat().st_size:,} bytes")
+    return 0
+
+
+# --------------------------------------------------------------------------- #
 # Assembly
 # --------------------------------------------------------------------------- #
 
@@ -404,6 +532,8 @@ def main(argv: list[str] | None = None) -> int:
                    help="compile only these parts (repeatable)")
     p.add_argument("--briefs", action="store_true",
                    help="build standalone per-country PDFs instead of the book")
+    p.add_argument("--report", action="store_true",
+                   help="build the single EU-27 country report (colour, A4) instead of the book")
     p.add_argument("--iso", action="append", help="limit --briefs to these countries")
     p.add_argument("-o", "--out", type=Path, help="output path (default depends on mode)")
     args = p.parse_args(argv)
@@ -425,6 +555,10 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.iso:
         raise SystemExit("--iso only applies with --briefs")
+
+    if args.report:
+        out = args.out.resolve() if args.out else (BUILD / "eu27-report.pdf")
+        return build_report(bundle, out, compile_pdf=not args.typ_only)
 
     parts = sorted(set(args.part)) if args.part else [1, 2, 3, 4, 5]
     BUILD.mkdir(exist_ok=True)

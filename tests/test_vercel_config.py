@@ -9,7 +9,8 @@ that only breaks on Vercel passes every other stage. That happened: from the fir
 until 2026-09-27 the SPA rewrite pointed at `/index.html` while `cleanUrls` was on. Vercel
 308-redirects every `.html` path under `cleanUrls`, so the rewrite failed its filesystem
 check and every deep link -- `/matrix`, `/country/DE`, a refresh on any page but `/` --
-returned 404. DEPLOYMENT.md records it.
+returned 404. The first fix, `/`, then 404'd the home page itself once deploys went prebuilt
+(#71), because the build output serves `index.html` at `/index`. DEPLOYMENT.md records both.
 """
 from __future__ import annotations
 
@@ -28,8 +29,8 @@ class Routing(unittest.TestCase):
         self.assertEqual(len(catch_all), 1, "the SPA needs exactly one catch-all rewrite")
         dest = catch_all[0]["destination"]
         if CONFIG.get("cleanUrls"):
-            self.assertFalse(dest.endswith(".html"),
-                             f"cleanUrls redirects .html paths, so a rewrite to {dest} 404s every deep link")
+            self.assertEqual(dest, "/index",
+                             f"under cleanUrls index.html is served at /index; a rewrite to {dest} 404s")
 
 
 class Headers(unittest.TestCase):

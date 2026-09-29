@@ -1231,3 +1231,33 @@ Verified: availability and price only. On 2026-09-26, Vercel `get_bulk_availabil
 
 *Would change if:* the project starts to present itself as practising the sovereignty it describes, at
 which point moving the domain to an EU registrar and EU-hosted DNS becomes worth the extra account.
+
+### 71. Deploys are built locally and uploaded prebuilt, so the site can serve the PDFs
+**2026-09-29.** `./run.sh deploy` runs `vercel build --prod` on this machine and uploads `.vercel/output` with
+`vercel deploy --prebuilt --prod`. `vercel.json`'s `buildCommand` builds the web app, the 27 briefs and the
+EU-27 country report (`book/build.py --report`) into `web/dist/`.
+
+The report and the briefs need `typst` and `pandoc`, which Vercel's build image does not have (#42's open
+item). There were three ways to get them onto the site:
+
+- **Install both on Vercel in the build command.** That means downloading pinned binaries with checksums on
+  every build: a supply-chain surface (`supply-chain.md`) to maintain, for a site that already deploys by hand
+  from one machine.
+- **Commit the PDFs.** About 2.8 MB for the report plus 1.5 MB of briefs, rewritten whenever the model changes.
+  #41 already rejected that for typst output.
+- **Build locally, upload prebuilt.** This one: no new tooling anywhere, nothing binary in git. Deploys were
+  already manual and local (#50 as corrected in DEPLOYMENT.md), so it closes off nothing that was working.
+
+The cost is that a deploy needs this machine's toolchain, and a remote build now fails at the report step.
+That is deliberate: it cannot quietly ship a site without its PDFs. `run.sh deploy` checks for both tools
+before building.
+
+It also moved the SPA rewrite to `/index`. Prebuilt output under `cleanUrls` serves `index.html` at `/index`,
+and the earlier `/` destination 404'd the home page on the first prebuilt preview.
+
+Verified: 2026-09-29, prebuilt preview `sovereign-data-centers-936ynu1tv`, via `vercel curl`: `/`, `/matrix`,
+`/country/DE` and `/countries` 200 text/html; `/eu27-report.pdf` and `/briefs/DE.pdf` 200 application/pdf,
+report sha256 identical to the local build; CSP present. Production: NOT YET.
+
+*Would change if:* the site needs deploys from CI or from another machine. The next step would be pinned
+typst and pandoc binaries in the build command.

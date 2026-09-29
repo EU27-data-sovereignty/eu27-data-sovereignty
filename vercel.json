@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "cd web && npm ci && npm run build",
+  "buildCommand": "cd web && npm ci && npm run build && cd .. && python3 book/build.py --briefs -o web/dist/briefs && python3 book/build.py --report -o web/dist/eu27-report.pdf",
   "outputDirectory": "web/dist",
   "installCommand": "echo skip",
   "cleanUrls": true,
@@ -25,5 +25,5 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }]
     }
   ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index" }]
 }
