@@ -1,87 +1,12 @@
 @import 'tailwindcss';
 
 /*
- * Warm Neutral + Terracotta, from ~/dev/design/DESIGN_SYSTEMS.md.
- *
- * The system's raw -> semantic token split is kept: raw hexes are defined once, and
- * everything downstream refers to a role (--color-fg-secondary), never to a colour
- * name. Swapping palettes then touches one block.
- *
- * Dark mode is *selected*, not an automatic inversion: its steps are re-derived and
- * separately validated against the dark surface (see src/utils/palette.ts).
+ * Colour, type and dark-mode tokens are generated from design/tokens.json into tokens.css
+ * (DECISIONS.md #74, #76). Components refer to roles (--color-fg-secondary), never to hexes.
  */
-@theme {
-  /* Raw ---------------------------------------------------------------- */
-  --color-ivory: #f5f2e9;
-  --color-cloud: #faf9f5;
-  --color-clay: #d97757;
-  --color-clay-dark: #a8462b;
-  --color-slate: #262625;
-  --color-sage: #b5b2a4;
-  --color-rule: #e3ded0;
+@import './tokens.css';
 
-  /* Semantic ----------------------------------------------------------- */
-  --color-bg-page: var(--color-ivory);
-  --color-bg-card: var(--color-cloud);
-  --color-bg-emphasis: #f7e9e3;
-  --color-fg-primary: var(--color-slate);
-  --color-fg-secondary: #6b6a63;
-  /* The design system lists #898781 here, which measures 3.21:1 on this page —
-     fine for axis ticks (graphical, 3:1) but failing AA as body text. Darkened to
-     4.63:1 so the same token is safe everywhere it is used. */
-  --color-fg-muted: #6f6d66;
-  --color-border: var(--color-rule);
-  --color-accent: var(--color-clay);
-  --color-accent-text: var(--color-clay-dark);
-
-  /* Chart surfaces, matching the validated palette in src/utils/palette.ts */
-  --color-chart-surface: #faf9f5;
-  --color-gridline: #e3ded0;
-  --color-baseline: #b5b2a4;
-
-  /* Scales ------------------------------------------------------------- */
-  --text-axis: 11px;
-  --text-body: 14px;
-  --text-stat: 30px;
-}
-
-/*
- * Dark mode. Explicit toggle wins over the OS in both directions, so every token is
- * redefined in both blocks rather than relying on a media query alone.
- */
 @layer base {
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme='light']) {
-      --color-bg-page: #0d0d0d;
-      --color-bg-card: #1a1a19;
-      --color-bg-emphasis: #2a1a13;
-      --color-fg-primary: #ffffff;
-      --color-fg-secondary: #c3c2b7;
-      --color-fg-muted: #898781;
-      --color-border: #2c2c2a;
-      --color-accent: #d17a58;
-      --color-accent-text: #e2926f;
-      --color-chart-surface: #1a1a19;
-      --color-gridline: #2c2c2a;
-      --color-baseline: #383835;
-    }
-  }
-
-  :root[data-theme='dark'] {
-    --color-bg-page: #0d0d0d;
-    --color-bg-card: #1a1a19;
-    --color-bg-emphasis: #2a1a13;
-    --color-fg-primary: #ffffff;
-    --color-fg-secondary: #c3c2b7;
-    --color-fg-muted: #898781;
-    --color-border: #2c2c2a;
-    --color-accent: #d17a58;
-    --color-accent-text: #e2926f;
-    --color-chart-surface: #1a1a19;
-    --color-gridline: #2c2c2a;
-    --color-baseline: #383835;
-  }
-
   html {
     color-scheme: light dark;
   }

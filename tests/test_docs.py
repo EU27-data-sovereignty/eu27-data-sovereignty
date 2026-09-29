@@ -70,5 +70,28 @@ class References(unittest.TestCase):
         self.assertEqual(dangling, [], "a document points at a decision that does not exist")
 
 
+class EntryStructure(unittest.TestCase):
+    """From #72 on, an entry must say what was chosen, why, and why not each alternative
+    (README.md § How decisions are recorded). A decision without its rejected options cannot be
+    reopened honestly: nobody can tell whether the alternative was weighed or never seen."""
+
+    FIRST = 72
+    PARTS = ("**Decision.**", "**Problem.**", "**Alternatives considered.**", "*Why not:*",
+             "**Closes off.**", "**Verified:**", "*Would change if:*")
+
+    def test_entries_from_72_have_every_part(self):
+        text = DECISIONS.read_text()
+        heads = list(HEADING.finditer(text))
+        missing = []
+        for i, h in enumerate(heads):
+            n = int(h.group(1))
+            if n < self.FIRST:
+                continue
+            end = heads[i + 1].start() if i + 1 < len(heads) else len(text)
+            body = text[h.start():end]
+            missing += [f"#{n} lacks {part}" for part in self.PARTS if part not in body]
+        self.assertEqual(missing, [], "a decision entry is missing a required part")
+
+
 if __name__ == "__main__":
     unittest.main()

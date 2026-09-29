@@ -5,7 +5,8 @@ independently of any chat transcript or anyone's memory.
 
 **Conventions.** Newest section last. Each entry records what was decided, when, why, what was rejected,
 and what would change it. Decisions that get overturned are marked **Superseded** and left in place — a
-decision that changed is more informative than one quietly erased.
+decision that changed is more informative than one quietly erased. From #72 on, every entry follows the
+required structure in `README.md` § How decisions are recorded, and `tests/test_docs.py` enforces it.
 
 ---
 
@@ -55,6 +56,7 @@ table of contents and disappoints on arrival. The tradeoff is that these are one
 claims — addressed by decision 25 rather than by hedging the prose.
 
 ### 5. NL is excluded from generation
+**Superseded by #72** (2026-09-29): the Netherlands is no longer the baseline the others derive from.
 **2026-09-03.** `generate_countries.py` skips the Netherlands.
 
 `countries/NL/GOAL.md` is the hand-written 20-section narrative that the entire model derives from — the
@@ -82,6 +84,7 @@ have drifted. Verified behaviour-preserving: regenerating all 27 countries after
 byte-for-byte zero diff.
 
 ### 8. The migration phase map is keyed on `Class`, not `Workload`
+**Superseded in part by #72** (2026-09-29): workloads are no longer Dutch rows renamed per country.
 **2026-09-03.** `model/migration_phases.csv` maps the seven workload *classes* to phases.
 
 The generator rewrites workload *names* per country — the Dutch "Digital identity / DigiD" becomes
@@ -223,6 +226,7 @@ Worth reporting back to the template so they get fixed at source.
 Consistency with the workspace's other web projects won over dropping three build dependencies.
 
 ### 21. Warm Neutral + Terracotta design system
+**Superseded for this project by #76** (2026-09-29): EU blue and gold from `design/tokens.json`.
 **2026-09-04.** From `~/dev/design/DESIGN_SYSTEMS.md`, with Editorial Data-Report as the layout reference.
 
 Of the five systems in that library, two are dark single-theme (Nocturnal Cartography, Quant Terminal) and
@@ -702,6 +706,7 @@ trap for exactly the mistake the rules above exist to prevent.
 ## Maintenance and integrity
 
 ### 51. The per-country artefacts ship in the repository, deliberately
+**Superseded in part by #76** (2026-09-29): the Chrome briefing PDF is retired; one per-country PDF remains.
 **2026-09-08.** Resolves the contradiction the second security audit found: #24 said the
 posters and per-country PDFs are tracked, #41 said no generated PDF is ever committed, both
 were dated 2026-09-04, and `README.md` quoted the second one absolutely while the tree did
@@ -1261,3 +1266,149 @@ report sha256 identical to the local build; CSP present. Production: NOT YET.
 
 *Would change if:* the site needs deploys from CI or from another machine. The next step would be pinned
 typst and pandoc binaries in the build command.
+
+---
+
+## Own fundamentals, one pipeline, sourced output
+
+### 72. Each country is analysed on its own fundamentals; the Netherlands is one of 27
+**Decision.** 2026-09-29. No country's figures or text are derived from, scaled from or framed against
+another country. `scale_workloads`, `model/scaling_rules.csv`, `BASELINE`, the `nl`/`nl_s` arguments of
+`country_data.build` and the `scale.*_ratio` fields are removed. The Netherlands is analysed like the other 26;
+its hand-written `countries/NL/GOAL.md` and `FRONTIER-MODEL.md` stay as notes, not inputs.
+
+**Problem.** Every figure for 26 states was the Dutch workload table multiplied by that state's population,
+public-administration employment and GDP relative to the Netherlands (`generate_countries.py`
+`scale_workloads`). The text followed: "What is structurally different from the Dutch case", "Relative to
+the Dutch baseline". A reader in Tallinn or Madrid got a Dutch plan resized, not an analysis of their
+state. The Netherlands was chosen only because its spreadsheet came first; no entry ever justified it.
+
+**Alternatives considered.**
+- **Own fundamentals, sized from each state's critical holdings (chosen).** See #73.
+- **Keep the scaling, reframe the text.** *Why not:* the numbers would still be Dutch numbers resized, so the
+  framing would be cosmetic and the claim of a per-country analysis untrue.
+- **Scale from an EU-average template instead of NL.** *Why not:* removes the Dutch bias but keeps the
+  defect: a state is still a resized template, not measured.
+- **ROADMAP Plan B as written: anchor on IT inventories, fall back to IT spend relative to NL.** *Why not:*
+  its fallback keeps the Netherlands as the denominator; it is superseded here, and its inventory idea is
+  folded into #73.
+
+**Closes off.** Every figure that depended on the Dutch table: the 27-country golden file
+(`model/eu27_results.csv`), the spreadsheet reproduction as a test of the other 26, and any sentence that
+explains a state by contrast with another. Supersedes #5 and the premise of #8 (workloads as Dutch rows
+renamed per country).
+
+**Verified:** NOT YET. Verified when a test asserts no NL input reaches another country's model or text, and
+`grep -rn "Dutch" model/ web/src` finds only the NL chapter.
+
+*Would change if:* a sourced, published per-country figure turns out to be unobtainable for most states and
+the project decides an explicitly labelled common template is better than showing nothing.
+
+### 73. Sizing comes from each state's inventory of critical holdings; until then, "not yet sized"
+**Decision.** 2026-09-29. Capacity is sized bottom-up from an inventory of each state's critical data
+holdings (`model/holding_classes.csv`, 39 classes; per-country rows extending `national_data.csv`).
+Record counts and data sizes come from cited sources. A state without enough measured holdings shows
+"not yet sized" and its coverage ("7 of 39 holdings measured"), never a scaled estimate. The Dutch-scaled
+servers, MW, sites and CAPEX are withdrawn from every output.
+
+**Problem.** After #72 there is no demand input: the only one was the Dutch table. Something measurable per
+state has to replace it, and the author asked for the holdings a state cannot let depend on foreign
+control to be inventoried, prioritised and documented first.
+
+**Alternatives considered.**
+- **Critical-holdings inventory, researched across all 27 at once (chosen).** Directly measures what must
+  stay sovereign; the Tier 0/1 register (#69) and the reserved `record:…:count/size` claims already point
+  here.
+- **Driver × intensity (citizens × cores per eID user, etc.).** *Why not:* the intensities would be declared
+  assumptions with no per-state source, so it trades a Dutch template for an invented one.
+- **Wait for government IT inventories (server counts, IT spend).** *Why not:* almost none are public;
+  most states would show nothing for months, and spend is not capacity.
+- **Keep the scaled figures in a labelled appendix until replaced.** *Why not:* the author chose to withdraw
+  them; a labelled number still gets quoted without its label.
+
+**Closes off.** Headline EU-27 totals, the scenario sandbox and the site-count finding (#12) until enough
+states are sized. The web shows "sized: n of 27" instead.
+
+**Verified:** NOT YET. Taxonomy written (`model/holding_classes.csv`, 39 rows); research run for all 27 in
+progress; nothing admitted yet.
+
+*Would change if:* after the research run, fewer than a handful of states have any measurable holding, in
+which case the sizing method itself needs revisiting.
+
+### 74. One content model and one design-token source feed every output
+**Decision.** 2026-09-29. `model/document.py` turns the #6 fact dict into one ordered document per country
+(sections → blocks → claim ids). The typst report, the 27 per-country PDFs, the web country page and
+`GOAL.md` all render that structure. `design/tokens.json` is the single source for colour, type and
+spacing, generated into web CSS, typst and the mobile constants.
+
+**Problem.** One country was drawn by seven renderers with seven section lists (GOAL.md 13, book 5, web 9,
+poster 7, mobile 10, the report via pandoc, the Chrome PDF), and styled by four unrelated palettes. #6
+unified the facts; nothing unified what is said about them or how it looks.
+
+**Alternatives considered.**
+- **One content model, thin renderers (chosen).**
+- **Keep markdown as the source and convert it (the v1 report, pandoc over GOAL.md).** *Why not:* the web
+  cannot make an interactive table or a claim marker out of prose, and regex-patching pandoc output is
+  brittle.
+- **Render PDFs from the web page with headless Chrome (the #51 briefing path).** *Why not:* print output
+  inherits screen layout, needs Chrome in the build, and cannot do footnotes on the page.
+- **Leave the renderers separate and add a parity test.** *Why not:* tests detect drift after the fact; one
+  structure removes it.
+
+**Closes off.** Hand-written prose inside React components or typst code; per-output section lists; the
+pandoc dependency. Supersedes #39's scope and the "deliberately not shared" section lists.
+
+**Verified:** NOT YET.
+
+*Would change if:* an output needs content that genuinely has no place in the others (the poster is the
+likely case), in which case it gets its own block type, not its own renderer.
+
+### 75. Every claim is sourced on the page and in an appendix; the build fails otherwise
+**Decision.** 2026-09-29. Every factual sentence or table cell in the content model carries claim ids that
+resolve through `model/provenance.py` to the source register. PDFs print numbered footnotes at the foot of
+the page and an appendix listing each source once (title, publisher, URL, retrieval date, document sha256,
+archived copy, and every claim that cites it with its quote). The web shows a marker that opens the same
+record. A declared assumption is shown as an assumption, never as sourced. `test.sh` fails on any factual
+claim without a citation.
+
+**Problem.** The register held 138 sourced cells of 621, and no output showed a single source to the reader.
+The author requires source documentation for everything, "unimpeachable".
+
+**Alternatives considered.**
+- **Footnotes plus appendix, generated from the register, with a hard gate (chosen).** Every source is
+  mechanically checkable: the document is fetched, hashed, and the quote must appear in it.
+- **Appendix only.** *Why not:* a reader of page 40 cannot tell which statement rests on which source.
+- **Links only (URL per claim).** *Why not:* links rot and pages change; without the hash, the quote and an
+  archived copy, a link proves only that a page existed.
+- **Warn instead of fail on unsourced claims.** *Why not:* a warning is how 483 unsourced cells accumulated.
+
+**Closes off.** Publishing any statement the register cannot back. Most of the current posture text is
+unsourced and will show as such until researched.
+
+**Verified:** NOT YET.
+
+*Would change if:* never for the gate itself; the display format may change.
+
+### 76. EU colours without the emblem; one per-country PDF
+**Decision.** 2026-09-29. All outputs use EU blue `#003399` and gold `#FFCC00` from `design/tokens.json`. No
+circle of stars, flag or other official mark appears anywhere (#50 and `artifacts/README.md` invariant 3
+stand). The Chrome-printed `countries/<ISO>/<ISO>-briefing.pdf` and the mono typst briefs are retired;
+the one per-country PDF is `/report/<ISO>.pdf` from #74. The PNG posters stay for now.
+
+**Problem.** The v1 report drew the circle of stars on a flag-blue cover, which broke invariant 3. The web
+used Warm Neutral + Terracotta (#21), the book mono (#28), the report EU blue. There were three different
+per-country PDFs.
+
+**Alternatives considered.**
+- **EU colours, no emblem, everywhere (chosen).** Recognisably European without looking official.
+- **Keep the stars with a disclaimer.** *Why not:* #50's reason is that the work must not be mistaken for an
+  EU institution's; a disclaimer does not undo what the emblem signals first.
+- **EU theme on PDFs only.** *Why not:* two brands to maintain for one body of work.
+- **Keep all three per-country PDFs.** *Why not:* three documents that disagree about the same country.
+
+**Closes off.** The terracotta web theme (#21, superseded for this project) and the #51 Chrome PDF path.
+#28's mono rule remains for a printed book edition only.
+
+**Verified:** NOT YET.
+
+*Would change if:* the project is formally endorsed by an EU body and permitted to use its marks.

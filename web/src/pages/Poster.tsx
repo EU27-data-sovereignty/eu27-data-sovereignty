@@ -23,17 +23,17 @@ import { NotFound } from './NotFound'
  *      the page that explains them.
  */
 
-const PANEL = 'border border-[#e3ded0] bg-white rounded p-3'
-const H = 'text-[11px] font-semibold uppercase tracking-wide text-[#6b6a63] mb-2'
+const PANEL = 'border border-[var(--color-border)] bg-[var(--color-bg-card)] rounded p-3'
+const H = 'text-[11px] font-semibold uppercase tracking-wide text-[var(--color-fg-secondary)] mb-2'
 
 function Metric({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
     <div>
-      <div className="text-[10px] text-[#6b6a63]">{label}</div>
-      <div className="text-[19px] font-semibold leading-tight tabular-nums text-[#262625]">
+      <div className="text-[10px] text-[var(--color-fg-secondary)]">{label}</div>
+      <div className="text-[19px] font-semibold leading-tight tabular-nums text-[var(--color-fg-primary)]">
         {value}
       </div>
-      {sub ? <div className="text-[9px] text-[#898781]">{sub}</div> : null}
+      {sub ? <div className="text-[9px] text-[var(--color-fg-muted)]">{sub}</div> : null}
     </div>
   )
 }
@@ -63,11 +63,13 @@ function PhaseBar({ c }: { c: Country }) {
               style={{ background: CATEGORICAL_LIGHT[i % CATEGORICAL_LIGHT.length] }}
               className="inline-block h-2 w-2 shrink-0 rounded-[1px]"
             />
-            <span className="w-[110px] shrink-0 text-[#262625]">
+            <span className="w-[110px] shrink-0 text-[var(--color-fg-primary)]">
               {p.Phase}. {p['Phase name']}
             </span>
-            <span className="tabular-nums text-[#6b6a63]">{eur(p['CAPEX (EUR mm)'])}</span>
-            <span className="ml-auto tabular-nums text-[#898781]">
+            <span className="tabular-nums text-[var(--color-fg-secondary)]">
+              {eur(p['CAPEX (EUR mm)'])}
+            </span>
+            <span className="ml-auto tabular-nums text-[var(--color-fg-muted)]">
               {p['Design MW'].toFixed(1)} MW
             </span>
           </div>
@@ -91,14 +93,16 @@ function WorkloadMix({ c }: { c: Country }) {
     <div className="space-y-[3px]">
       {rows.map(([cls, v]) => (
         <div key={cls} className="flex items-center gap-1.5 text-[9px]">
-          <span className="w-[104px] shrink-0 truncate text-[#6b6a63]">{cls}</span>
-          <span className="h-2 flex-1 bg-[#f0efec]">
+          <span className="w-[104px] shrink-0 truncate text-[var(--color-fg-secondary)]">
+            {cls}
+          </span>
+          <span className="h-2 flex-1 bg-[var(--color-bg-emphasis)]">
             <span
               style={{ width: `${(v / total) * 100}%` }}
-              className="block h-2 rounded-r-[2px] bg-[#a8462b]"
+              className="block h-2 rounded-r-[2px] bg-[var(--color-accent-text)]"
             />
           </span>
-          <span className="w-8 shrink-0 text-right tabular-nums text-[#898781]">
+          <span className="w-8 shrink-0 text-right tabular-nums text-[var(--color-fg-muted)]">
             {pct(v / total)}
           </span>
         </div>
@@ -142,14 +146,14 @@ export function Poster({ bundle }: { bundle: Bundle }) {
       ref={ref}
       data-poster={c.iso2}
       style={{ width: 1024, colorScheme: 'light' }}
-      className="mx-auto bg-[#f5f2e9] p-8 text-[#262625]"
+      className="mx-auto bg-[var(--color-bg-page)] p-8 text-[var(--color-fg-primary)]"
     >
-      <header className="mb-4 border-b-2 border-[#a8462b] pb-3">
-        <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#a8462b]">
+      <header className="mb-4 border-b-2 border-[var(--color-accent-text)] pb-3">
+        <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
           Sovereign government data centre network — concept study
         </div>
         <h1 className="text-[38px] font-bold leading-none">{c.name}</h1>
-        <p className="mt-1 text-[12px] text-[#6b6a63]">
+        <p className="mt-1 text-[12px] text-[var(--color-fg-secondary)]">
           What a sovereign core would take: capacity, cost, legal posture and a phased migration.
         </p>
       </header>
@@ -159,7 +163,7 @@ export function Poster({ bundle }: { bundle: Bundle }) {
           {flags.map(f => (
             <span
               key={f}
-              className="rounded border border-[#a8462b] px-2 py-[2px] text-[9px] font-semibold uppercase tracking-wide text-[#a8462b]"
+              className="rounded border border-[var(--color-accent-text)] px-2 py-[2px] text-[9px] font-semibold uppercase tracking-wide text-[var(--color-accent-text)]"
             >
               {f}
             </span>
@@ -213,9 +217,9 @@ export function Poster({ bundle }: { bundle: Bundle }) {
             ].map(([k, v]) => (
               <div
                 key={k}
-                className="flex justify-between border-b border-dotted border-[#e3ded0] pb-[2px]"
+                className="flex justify-between border-b border-dotted border-[var(--color-border)] pb-[2px]"
               >
-                <span className="text-[#6b6a63]">{k}</span>
+                <span className="text-[var(--color-fg-secondary)]">{k}</span>
                 <span className="font-semibold tabular-nums">{v}</span>
               </div>
             ))}
@@ -225,7 +229,7 @@ export function Poster({ bundle }: { bundle: Bundle }) {
         <section className={PANEL}>
           <h2 className={H}>2 · Workload mix (share of CPU demand)</h2>
           <WorkloadMix c={c} />
-          <p className="mt-2 text-[9px] italic leading-snug text-[#898781]">
+          <p className="mt-2 text-[9px] italic leading-snug text-[var(--color-fg-muted)]">
             {c.flags.micro
               ? 'Identity and security floors dominate: both have a minimum viable size regardless of population.'
               : 'Analytics and AI dominate once the identity and security floors are cleared.'}
@@ -238,18 +242,21 @@ export function Poster({ bundle }: { bundle: Bundle }) {
           <h2 className={H}>3 · Proposed geography</h2>
           <div className="space-y-[3px] text-[9px]">
             {c.regions.map(r => (
-              <div key={r.Region} className="border-b border-dotted border-[#e3ded0] pb-[3px]">
+              <div
+                key={r.Region}
+                className="border-b border-dotted border-[var(--color-border)] pb-[3px]"
+              >
                 <div className="flex justify-between">
                   <span className="font-semibold">{r.Region}</span>
-                  <span className="tabular-nums text-[#6b6a63]">
+                  <span className="tabular-nums text-[var(--color-fg-secondary)]">
                     {pct(r['Share of design load'])} · {r['Design MW'].toFixed(1)} MW
                   </span>
                 </div>
-                <div className="text-[#898781]">{r.Role}</div>
+                <div className="text-[var(--color-fg-muted)]">{r.Role}</div>
               </div>
             ))}
           </div>
-          <p className="mt-2 text-[9px] italic leading-snug text-[#898781]">
+          <p className="mt-2 text-[9px] italic leading-snug text-[var(--color-fg-muted)]">
             First-pass hypotheses encoding only the obvious constraints. Not selected sites.
           </p>
         </section>
@@ -258,7 +265,7 @@ export function Poster({ bundle }: { bundle: Bundle }) {
           <h2 className={H}>4 · Migration path and cost</h2>
           <PhaseBar c={c} />
           {phase1 ? (
-            <p className="mt-2 text-[9px] italic leading-snug text-[#898781]">
+            <p className="mt-2 text-[9px] italic leading-snug text-[var(--color-fg-muted)]">
               Phase 1 — the floor below which no hybrid arrangement helps — is{' '}
               {eur(phase1['CAPEX (EUR mm)'])}, {phase1['Cumulative CAPEX %'].toFixed(0)}% of total
               CAPEX.
@@ -278,8 +285,8 @@ export function Poster({ bundle }: { bundle: Bundle }) {
               ['Procurement', p['procurement_vehicle']],
             ].map(([k, v]) => (
               <div key={k}>
-                <dt className="font-semibold text-[#6b6a63]">{k}</dt>
-                <dd className="leading-snug text-[#262625]">{v || '—'}</dd>
+                <dt className="font-semibold text-[var(--color-fg-secondary)]">{k}</dt>
+                <dd className="leading-snug text-[var(--color-fg-primary)]">{v || '—'}</dd>
               </div>
             ))}
           </dl>
@@ -294,8 +301,8 @@ export function Poster({ bundle }: { bundle: Bundle }) {
               ['Foreign jurisdiction exposure', p['hyperscaler_gov_exposure']],
             ].map(([k, v]) => (
               <div key={k}>
-                <dt className="font-semibold text-[#6b6a63]">{k}</dt>
-                <dd className="leading-snug text-[#262625]">{v || '—'}</dd>
+                <dt className="font-semibold text-[var(--color-fg-secondary)]">{k}</dt>
+                <dd className="leading-snug text-[var(--color-fg-primary)]">{v || '—'}</dd>
               </div>
             ))}
           </dl>
@@ -304,20 +311,26 @@ export function Poster({ bundle }: { bundle: Bundle }) {
 
       <section className={`${PANEL} mb-3`}>
         <h2 className={H}>7 · Geography and threat notes</h2>
-        <p className="text-[9px] leading-snug text-[#262625]">{p['threat_notes']}</p>
+        <p className="text-[9px] leading-snug text-[var(--color-fg-primary)]">
+          {p['threat_notes']}
+        </p>
       </section>
 
       {/* The caveat is ON the poster. An image gets shared without the page around it. */}
-      <footer className="border-t border-[#e3ded0] pt-2 text-[8px] leading-snug text-[#898781]">
+      <footer className="border-t border-[var(--color-border)] pt-2 text-[8px] leading-snug text-[var(--color-fg-muted)]">
         <p className="mb-1">
-          <strong className="text-[#6b6a63]">Working assumptions, not forecasts.</strong> Capacity
-          figures are scaled from a single Dutch reference case, not a survey of this
+          <strong className="text-[var(--color-fg-secondary)]">
+            Working assumptions, not forecasts.
+          </strong>{' '}
+          Capacity figures are scaled from a single Dutch reference case, not a survey of this
           country&rsquo;s actual government IT. Legal and regulatory entries were researched in
           September 2026, are{' '}
-          <strong className="text-[#6b6a63]">not verified against primary sources</strong>, and will
-          date. Maturity, certification-strength and dependency ratings are the author&rsquo;s
-          judgements, not official ratings. Nothing here should be relied on for a procurement or
-          policy decision.
+          <strong className="text-[var(--color-fg-secondary)]">
+            not verified against primary sources
+          </strong>
+          , and will date. Maturity, certification-strength and dependency ratings are the
+          author&rsquo;s judgements, not official ratings. Nothing here should be relied on for a
+          procurement or policy decision.
         </p>
         <p>
           This is an independent concept study. It is not a government document and does not

@@ -62,6 +62,26 @@ judgements, **disclosed and never cited**; a source row for one is a validation 
 it counts, so progress cannot be silently undone. Method is in [`VERIFICATION.md`](VERIFICATION.md),
 endpoints in [`SOURCES.md`](SOURCES.md).
 
+## How decisions are recorded
+
+Every choice that closes off an alternative gets an entry in [`DECISIONS.md`](DECISIONS.md). An entry
+states the decision precisely enough that someone who was not there can see what was chosen, why, and why
+not the other ways. From #72 on, every entry has these parts, in this order:
+
+| Part | What it must say |
+|---|---|
+| **Decision.** | What was chosen, in one or two sentences, with the date. Concrete: file names, numbers, rules. |
+| **Problem.** | What was wrong or missing that forced a choice. |
+| **Alternatives considered.** | Every serious option, including the one chosen. Each rejected option carries a *Why not:* line giving the specific reason. "Worse" is not a reason; "needs pinned binaries on every build" is. |
+| **Closes off.** | What this makes harder or impossible from now on. |
+| **Verified:** | The command and output that show it is true in the tree, or `NOT YET` with what would verify it. |
+| *Would change if:* | The observable condition under which the decision should be reopened. |
+
+`tests/test_docs.py` fails the build when an entry from #72 on is missing one of these parts. Entries
+before #72 keep their original shape; #71 is the closest earlier example.
+
+A decision that is overturned is marked **Superseded by #N** and left in place.
+
 ## Layout
 
 ```

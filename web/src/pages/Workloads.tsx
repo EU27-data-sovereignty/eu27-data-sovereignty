@@ -110,7 +110,7 @@ export function Workloads({ bundle, mode }: { bundle: Bundle; mode: Mode }) {
               onClick={() => setNormalized(v)}
               className={
                 normalized === v
-                  ? 'bg-[var(--color-accent)] px-3 py-1 text-[#262625]'
+                  ? 'bg-[var(--color-accent)] px-3 py-1 text-[var(--color-fg-on-accent)]'
                   : 'px-3 py-1 text-[var(--color-fg-secondary)]'
               }
             >
