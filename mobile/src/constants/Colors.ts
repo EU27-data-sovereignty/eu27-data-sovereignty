@@ -20,6 +20,11 @@ export interface Theme {
   gridline: string;
   baseline: string;
   fgOnAccent: string;
+  rank1: string;
+  rank2: string;
+  rank3: string;
+  rank4: string;
+  rank5: string;
 }
 
 export const light: Theme = {
@@ -37,6 +42,11 @@ export const light: Theme = {
   gridline: '#E3E7F0',
   baseline: '#848CA0',
   fgOnAccent: '#FFFFFF',
+  rank1: '#003399',
+  rank2: '#3A62BE',
+  rank3: '#8FA8DC',
+  rank4: '#DCE2EE',
+  rank5: '#B07800',
 };
 
 export const dark: Theme = {
@@ -54,6 +64,11 @@ export const dark: Theme = {
   gridline: '#27324F',
   baseline: '#6E7A99',
   fgOnAccent: '#0A0F1E',
+  rank1: '#7FA2FF',
+  rank2: '#5575C8',
+  rank3: '#3A4F8A',
+  rank4: '#27324F',
+  rank5: '#E0A100',
 };
 
 export const Brand = {

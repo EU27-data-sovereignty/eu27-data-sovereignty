@@ -16,7 +16,8 @@ pushed**; the private contacts repo likewise. Working tree clean.
 | Own-fundamentals analysis | **Done** (#72) | No country scaled from another; `NoCountryIsDerivedFromAnother` tests |
 | Capacity | **Withdrawn**, not yet sized (#73) | Engine kept; sizing waits for measured holdings |
 | Content model + footnoted outputs | **Done** (#74, #75) | `document.py --check`: 0 unsourced facts; report + 27 country PDFs |
-| Web app | **Rebuilt**, EU theme | 36 Vitest; 15 of 15 Playwright + axe |
+| Web app | **Rebuilt**, EU theme | 36 Vitest; 19 of 19 Playwright + axe |
+| Data-sovereignty ranking | **Built** (#77); 0 of 189 indicators sourced | `python3 model/sovereignty.py`; all 27 Not demonstrated, Low |
 | Per-country artefacts | **Done** | 27 posters, hashes in `countries/ARTEFACTS.csv`; Chrome PDFs retired (#76) |
 | Mobile reader | **Done**, local only | 19 Jest tests; never built or deployed |
 | Secret scanning | **Done** | local gate on every commit + gitleaks in CI |

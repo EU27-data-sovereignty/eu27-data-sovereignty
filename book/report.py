@@ -204,9 +204,81 @@ def front_matter(b: dict) -> str:
     ])
 
 
+def ranking(b: dict, r: "Renderer") -> str:
+    """The ranking chapter (#77): the rule, the groups with each state's confidence and range, and
+    the indicator grid. Every finding in the grid is a fact span from the documents, footnoted."""
+    sov = b["sovereignty"]
+    label = {g["id"]: g["label"] for g in sov["groups"]}
+    names = {iso: d["name"] for iso, d in b["documents"].items()}
+    out = [
+        "= Data-sovereignty ranking",
+        "",
+        f"#callout(tone: \"notice\")[{esc(sov['guardrail'])}]",
+        "",
+        "== The rule",
+        "",
+        "Each state is placed by the first group whose condition it meets, in this order. An input "
+        "without a checked source is *unknown* and counts as not demonstrated: never as sovereign, "
+        "never as dependent.",
+        "",
+        "+ *Dependent on non-EU providers:* a source shows a tier 0 or 1 holding on non-EU "
+        "infrastructure, or a national eID or trust anchor outside state or EU control.",
+        "+ *Sovereign in law and in practice:* a statute keeps government data under national or EU "
+        "jurisdiction, and at least 75% of verified tier 0/1 holdings run on national or EU "
+        "infrastructure, the trust anchor and eID are state-controlled, and the state runs its own "
+        "data centres or government cloud.",
+        "+ *Sovereign in practice, not secured in law:* the practice test, without the statute.",
+        "+ *Secured in law, not yet in practice:* the statute, without the practice test.",
+        "+ *Not demonstrated:* neither.",
+        "",
+        "*Confidence* is how many groups a state could still reach if every unknown resolved for or "
+        "against it: one group is High, two Medium, three or more Low. Within a group, states are "
+        "alphabetical; the order carries no meaning.",
+        "",
+        "== The groups",
+        "",
+        "#table(",
+        "  columns: (auto, auto, auto, 1fr),",
+        "  align: (left, left, left, left),",
+        "  table.header([Group], [State], [Confidence], [Could still reach]),",
+    ]
+    placements = sov["placements"]
+    for g in sov["groups"]:
+        members = sorted((iso for iso, p in placements.items() if p["group"] == g["id"]),
+                         key=lambda i: names[i])
+        if not members:
+            out.append(f"  [*{esc(g['label'])}*], [#gap[None]], [], [],")
+            continue
+        for n, i in enumerate(members):
+            p = placements[i]
+            reach = (esc(label[p["range"][0]]) if len(p["range"]) == 1 else
+                     f"{esc(label[p['range'][0]])} to {esc(label[p['range'][-1]])}")
+            out.append(f"  [{'*' + esc(g['label']) + '*' if n == 0 else ''}], [{esc(names[i])}], "
+                       f"[{p['confidence']}], [{reach}],")
+    out += [")", "", "== The indicators", ""]
+    inds = sov["indicators"]
+    out += [
+        "#table(",
+        f"  columns: (1fr, {', '.join(['auto'] * len(inds))}),",
+        f"  align: (left, {', '.join(['center'] * len(inds))}),",
+        f"  table.header([State], {', '.join(f'[{esc(i[chr(105)+chr(100)])}]' for i in inds)}),",
+    ]
+    for iso in sorted(placements, key=lambda i: names[i]):
+        doc = b["documents"][iso]
+        table = next(bl for bl in doc["sections"][0]["blocks"] if bl["type"] == "table")
+        cells = ", ".join(f"[{r.span(row[1]) if row[1]['role'] == 'fact' else '#gap[?]'}]"
+                          for row in table["rows"])
+        out.append(f"  [{esc(names[iso])}], {cells},")
+    out += [")", "",
+            "Key: " + "; ".join(f"*{esc(i['id'])}* {esc(i['label'])}" for i in inds)
+            + ". A question mark is an indicator not yet sourced.", ""]
+    return "\n".join(out)
+
+
 def report_typ(b: dict) -> str:
     r = Renderer(b)
     docs = sorted(b["documents"].values(), key=lambda d: d["name"])
+    rank = ranking(b, r)
     body = [r.chapter(d) for d in docs]
     return "\n".join([
         '#import "/templates/report.typ": report, callout, gap, source-entry, claim-entry',
@@ -221,6 +293,7 @@ def report_typ(b: dict) -> str:
         "#outline(title: [Contents], depth: 1)",
         "",
         front_matter(b),
+        rank,
         *body,
         r.appendix(),
     ])

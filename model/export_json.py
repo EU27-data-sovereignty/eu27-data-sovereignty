@@ -72,6 +72,15 @@ def build_bundle() -> dict:
         "holding_classes": [{"class_id": c, "label": nd.LABELS[c], "tier": nd.TIER_OF[c],
                              "domain": nd.DOMAIN_OF[c]} for c in nd.RECORD_CLASSES],
         "priority_rule": document.PRIORITY_RULE,
+        # #77: groups by a published rule, with computed range and confidence. Ids and labels only;
+        # there is no score anywhere in the bundle.
+        "sovereignty": {
+            "groups": [{"id": g, "label": document.sv.LABELS[g]} for g in document.sv.GROUPS],
+            "guardrail": document.sv.GUARDRAIL,
+            "indicators": [{k: d[k] for k in ("id", "dimension", "label", "question")}
+                           for d in document.sv.indicator_defs()],
+            "placements": {iso: document.placement(c, src) for iso, c in countries.items()},
+        },
         "generated": gc.gen_date(),
         "provenance": (
             "Each member state is analysed on its own fundamentals. Every fact is footnoted to a "

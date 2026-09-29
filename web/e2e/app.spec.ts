@@ -39,6 +39,7 @@ const ROUTES = [
   '/holdings',
   '/holdings/civil_registry',
   '/sources',
+  '/sovereignty',
   '/methodology',
 ]
 
@@ -91,6 +92,36 @@ test.describe('data actually renders', () => {
     await page.goto('/sources')
     await expect(page.locator('#sources li[id^="src-"]')).toHaveCount(
       Object.keys(BUNDLE.sources).length,
+    )
+  })
+})
+
+test.describe('ranking', () => {
+  test('every state appears once in the groups, with its confidence', async ({ page }) => {
+    await page.goto('/sovereignty')
+    const groups = page.getByRole('region', { name: 'Groups' })
+    await expect(groups.getByRole('button')).toHaveCount(27)
+    const first = Object.entries(BUNDLE.sovereignty.placements)[0]!
+    await expect(
+      groups.getByRole('button', { name: new RegExp(BUNDLE.documents[first[0]]!.name) }),
+    ).toContainText(first[1].confidence)
+  })
+
+  test('the map renders one shape per state and selecting one explains it', async ({ page }) => {
+    await page.goto('/sovereignty')
+    const map = page.getByRole('group', { name: /Map of the EU-27/ })
+    await expect(map.getByRole('button')).toHaveCount(27)
+    await map.getByRole('button', { name: /^Estonia:/ }).click()
+    await expect(page.getByRole('heading', { name: 'Estonia', level: 2 })).toBeVisible()
+    await expect(page.getByText('What could move it')).toBeVisible()
+  })
+
+  test('filtering by confidence keeps only matching states', async ({ page }) => {
+    await page.goto('/sovereignty')
+    await page.getByRole('button', { name: 'High', exact: true }).click()
+    const high = Object.values(BUNDLE.sovereignty.placements).filter(p => p.confidence === 'High')
+    await expect(page.getByRole('region', { name: 'Groups' }).getByRole('button')).toHaveCount(
+      high.length,
     )
   })
 })

@@ -1,6 +1,6 @@
 # EU-27 country briefs
 
-> Generated 2026-09-05 by `model/generate_countries.py`. Each brief analyses one member state on its own fundamentals (DECISIONS.md #72); none is scaled from another.
+> Generated 2026-09-29 by `model/generate_countries.py`. Each brief analyses one member state on its own fundamentals (DECISIONS.md #72); none is scaled from another.
 
 | | Country | ISO | Holdings verified | Tier 0 verified | Capacity |
 |---|---|---|---:|---:|---|

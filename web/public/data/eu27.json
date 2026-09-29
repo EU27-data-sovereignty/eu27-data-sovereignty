@@ -24596,6 +24596,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Austria could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Austria described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -26221,6 +26373,158 @@
    "iso": "BE",
    "name": "Belgium",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Belgium could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -27858,6 +28162,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Bulgaria could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Bulgaria described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -29483,6 +29939,158 @@
    "iso": "CY",
    "name": "Cyprus",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Cyprus could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -31120,6 +31728,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Czechia could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Czechia described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -32745,6 +33505,158 @@
    "iso": "DE",
    "name": "Germany",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Germany could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -34382,6 +35294,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Denmark could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Denmark described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -36007,6 +37071,158 @@
    "iso": "EE",
    "name": "Estonia",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Estonia could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -37644,6 +38860,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Greece could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Greece described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -39269,6 +40637,158 @@
    "iso": "ES",
    "name": "Spain",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Spain could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -40906,6 +42426,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Finland could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Finland described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -42531,6 +44203,158 @@
    "iso": "FR",
    "name": "France",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, France could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -44171,6 +45995,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Croatia could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Croatia described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -45796,6 +47772,158 @@
    "iso": "HU",
    "name": "Hungary",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Hungary could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -47433,6 +49561,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Ireland could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Ireland described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -49058,6 +51338,158 @@
    "iso": "IT",
    "name": "Italy",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Italy could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -50695,6 +53127,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Lithuania could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Lithuania described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -52320,6 +54904,158 @@
    "iso": "LU",
    "name": "Luxembourg",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Luxembourg could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -53957,6 +56693,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Latvia could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Latvia described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -55582,6 +58470,158 @@
    "iso": "MT",
    "name": "Malta",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Malta could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -57219,6 +60259,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Netherlands could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Netherlands described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -58838,6 +62030,158 @@
    "iso": "PL",
    "name": "Poland",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Poland could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -60478,6 +63822,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Portugal could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Portugal described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -62103,6 +65599,158 @@
    "iso": "RO",
    "name": "Romania",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Romania could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -63740,6 +67388,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Sweden could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Sweden described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -65365,6 +69165,158 @@
    "iso": "SI",
    "name": "Slovenia",
    "sections": [
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Slovenia could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
     {
      "blocks": [
       {
@@ -67002,6 +70954,158 @@
        "spans": [
         {
          "role": "method",
+         "t": "Not demonstrated. Confidence: Low. With the evidence still open, Slovakia could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'."
+        }
+       ],
+       "tone": "notice",
+       "type": "callout"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "align": [
+        "left",
+        "left"
+       ],
+       "columns": [
+        {
+         "role": "label",
+         "t": "Indicator"
+        },
+        {
+         "role": "label",
+         "t": "Finding"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "Jurisdiction requirement"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Classification in law"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Sovereign cloud certification"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled trust anchor"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "State-controlled national eID"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government data centres"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Government cloud in operation"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         }
+        ]
+       ],
+       "type": "table"
+      },
+      {
+       "spans": [
+        {
+         "role": "method",
+         "t": "What could move this placement:"
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "items": [
+        [
+         {
+          "role": "method",
+          "t": "If jurisdiction requirement is found to be yes: Secured in law, not yet in practice."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled trust anchor is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If state-controlled national eid is found to be no: Dependent on non-EU providers."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+         }
+        ]
+       ],
+       "type": "list"
+      }
+     ],
+     "id": "placement",
+     "title": "Data-sovereignty placement"
+    },
+    {
+     "blocks": [
+      {
+       "spans": [
+        {
+         "role": "method",
          "t": "Slovakia described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date."
         }
        ],
@@ -68624,7 +72728,7 @@
    ]
   }
  },
- "generated": "2026-09-05",
+ "generated": "2026-09-29",
  "holding_classes": [
   {
    "class_id": "civil_registry",
@@ -69008,6 +73112,1238 @@
    "source_id": "wetten-nl:bwbr0033507@2013-06-01",
    "title": "Besluit Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie 2013 (VIRBI 2013)",
    "url": "https://wetten.overheid.nl/BWBR0033507/2013-06-01"
+  }
+ },
+ "sovereignty": {
+  "groups": [
+   {
+    "id": "law_and_practice",
+    "label": "Sovereign in law and in practice"
+   },
+   {
+    "id": "practice_only",
+    "label": "Sovereign in practice, not secured in law"
+   },
+   {
+    "id": "law_only",
+    "label": "Secured in law, not yet in practice"
+   },
+   {
+    "id": "not_demonstrated",
+    "label": "Not demonstrated"
+   },
+   {
+    "id": "dependent",
+    "label": "Dependent on non-EU providers"
+   }
+  ],
+  "guardrail": "Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.",
+  "indicators": [
+   {
+    "dimension": "legal",
+    "id": "L1",
+    "label": "Jurisdiction requirement",
+    "question": "Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction?"
+   },
+   {
+    "dimension": "legal",
+    "id": "L2",
+    "label": "Classification in law",
+    "question": "Is the government's data classification scheme established in a statute or binding regulation?"
+   },
+   {
+    "dimension": "legal",
+    "id": "L3",
+    "label": "Sovereign cloud certification",
+    "question": "Is a cloud certification that requires immunity from non-EU law in force or adopted for government use?"
+   },
+   {
+    "dimension": "keys",
+    "id": "K1",
+    "label": "State-controlled trust anchor",
+    "question": "Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?"
+   },
+   {
+    "dimension": "keys",
+    "id": "K2",
+    "label": "State-controlled national eID",
+    "question": "Is the national electronic identity scheme operated by the state or a state-controlled body?"
+   },
+   {
+    "dimension": "capacity",
+    "id": "C1",
+    "label": "Government data centres",
+    "question": "Does the state operate its own government data centres that are in operation today?"
+   },
+   {
+    "dimension": "capacity",
+    "id": "C2",
+    "label": "Government cloud in operation",
+    "question": "Is a national sovereign or government cloud platform in operation (not announced)?"
+   }
+  ],
+  "placements": {
+   "AT": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "BE": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "BG": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "CY": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "CZ": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "DE": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "DK": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "EE": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "EL": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "ES": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "FI": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "FR": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "HR": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "HU": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "IE": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "IT": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "LT": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "LU": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "LV": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "MT": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "NL": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "PL": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "PT": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "RO": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "SE": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "SI": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   },
+   "SK": {
+    "confidence": "Low",
+    "could_move": [
+     {
+      "group": "law_only",
+      "if": "yes",
+      "input": "L1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K1"
+     },
+     {
+      "group": "dependent",
+      "if": "no",
+      "input": "K2"
+     },
+     {
+      "count": 34,
+      "group": "dependent",
+      "if": "non_eu_found",
+      "input": "holdings"
+     }
+    ],
+    "group": "not_demonstrated",
+    "indicators": {
+     "C1": "unknown",
+     "C2": "unknown",
+     "K1": "unknown",
+     "K2": "unknown",
+     "L1": "unknown",
+     "L2": "unknown",
+     "L3": "unknown"
+    },
+    "range": [
+     "law_and_practice",
+     "practice_only",
+     "law_only",
+     "not_demonstrated",
+     "dependent"
+    ]
+   }
   }
  }
 }

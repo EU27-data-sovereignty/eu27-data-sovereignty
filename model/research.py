@@ -52,6 +52,8 @@ sys.path.insert(0, str(ROOT / "model"))
 import fetch  # noqa: E402
 
 STAGING = ROOT / "model" / "research"
+INDICATOR_STAGING = STAGING / "indicators"
+INDICATOR_VALUES = ROOT / "model" / "sovereignty_indicators.csv"
 VERIFICATION = STAGING / "verification.csv"
 VFIELDS = ["iso", "class_id", "field", "url", "http_status", "content_type", "sha256", "match",
            "archived_url", "checked"]
@@ -149,9 +151,9 @@ def archived(url: str) -> str:
 # Staging
 # --------------------------------------------------------------------------- #
 
-def staged(isos: list[str] | None = None) -> dict[str, dict]:
+def staged(isos: list[str] | None = None, where: Path = STAGING) -> dict[str, dict]:
     out = {}
-    for path in sorted(STAGING.glob("*.json")):
+    for path in sorted(where.glob("*.json")):
         if isos and path.stem not in isos:
             continue
         out[path.stem] = json.loads(path.read_text(encoding="utf-8"))
@@ -166,6 +168,9 @@ def claims(doc: dict):
     for x in doc.get("extra_holdings", []):
         for c in x.get("claims", []):
             yield f"extra:{x['suggested_class']}", c
+    for ind in doc.get("indicators", []):
+        for c in ind.get("claims", []):
+            yield f"indicator:{ind['id']}", {**c, "field": "indicator"}
 
 
 def load_verification() -> list[dict[str, str]]:
@@ -190,6 +195,8 @@ def write_verification(rows: list[dict[str, str]]) -> None:
 def verify(isos: list[str] | None) -> int:
     today = dt.date.today().isoformat()
     docs = staged(isos)
+    for iso, doc in staged(isos, INDICATOR_STAGING).items():
+        docs.setdefault(iso, {}).setdefault("indicators", doc.get("indicators", []))
     existing = {(r["iso"], r["class_id"], r["field"], r["url"]): r for r in load_verification()}
     manifest = fetch.load_manifest()
     fresh_manifest = []
@@ -331,11 +338,66 @@ def admit() -> int:
             rows[(iso, cls)] = row
             admitted += 1
 
+    indicator_rows = admit_indicators(ok, reg, cites)
     provenance.write_registry(reg)
     provenance.write_citations(list(cites.values()))
     nd.write_rows(list(rows.values()))
-    print(f"admitted {admitted} holdings")
+    print(f"admitted {admitted} holdings and {indicator_rows} indicator values")
     return 0
+
+
+def register_source(reg: dict, c: dict, v: dict) -> str:
+    sid = source_id(v["url"])
+    reg.setdefault(sid, {
+        "source_id": sid, "title": c.get("title", "").strip() or v["url"],
+        "publisher": c.get("publisher", "").strip() or urllib.parse.urlsplit(v["url"]).netloc,
+        "url": v["url"], "doc_type": DOC_TYPE.get(c.get("doc_type", ""), "webpage"),
+        "published": c.get("published", ""), "language": c.get("language", ""),
+        "license": "", "archived_url": v["archived_url"],
+        "notes": f"sha256 {v['sha256']} ({v['content_type']}), fetched {v['checked']}",
+    })
+    return sid
+
+
+def admit_indicators(ok: dict, reg: dict, cites: dict) -> int:
+    """Verified indicator claims -> sovereignty_indicators.csv and indicator:<ISO>:<id> citations.
+
+    A value is admitted when at least one of its claims verified. A 'no' is an absence claim and is
+    recorded with confidence 'absence', like a not-held register (#58)."""
+    values: dict[tuple[str, str], str] = {}
+    if INDICATOR_VALUES.exists():
+        with INDICATOR_VALUES.open(newline="", encoding="utf-8") as fh:
+            values = {(r["iso"], r["indicator"]): r["value"] for r in csv.DictReader(fh)}
+    for iso, doc in staged(None, INDICATOR_STAGING).items():
+        for ind in doc.get("indicators", []):
+            if ind.get("value") not in ("yes", "partial", "no"):
+                continue
+            good = [(c, ok[(iso, f"indicator:{ind['id']}", "indicator", c["url"].strip())])
+                    for c in ind.get("claims", [])
+                    if (iso, f"indicator:{ind['id']}", "indicator", c["url"].strip()) in ok]
+            if not good:
+                continue
+            claim = f"indicator:{iso}:{ind['id']}"
+            for c, v in good:
+                sid = register_source(reg, c, v)
+                locator = "PDF text" if "pdf" in v["content_type"] else "page text"
+                quote = c["quote"].strip()
+                if c.get("quote_english", "").strip():
+                    quote += f" [English: {c['quote_english'].strip()}]"
+                cites[(claim, sid, locator)] = {
+                    "claim": claim, "source_id": sid, "locator": locator, "quote": quote,
+                    "value_as_found": ind["value"], "unit": "",
+                    "confidence": ("absence" if ind["value"] == "no" else
+                                   "secondary" if c.get("doc_type") in SECONDARY else "official"),
+                    "retrieved": v["checked"],
+                    "checked_by": f"research.py: quote {v['match']} in fetched document",
+                }
+            values[(iso, ind["id"])] = ind["value"]
+    with INDICATOR_VALUES.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=["iso", "indicator", "value"], lineterminator="\n")
+        w.writeheader()
+        w.writerows({"iso": i, "indicator": k, "value": val} for (i, k), val in sorted(values.items()))
+    return len(values)
 
 
 def main(argv: list[str] | None = None) -> int:

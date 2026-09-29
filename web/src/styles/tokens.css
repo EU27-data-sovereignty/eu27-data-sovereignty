@@ -18,6 +18,11 @@
   --color-gridline: #E3E7F0;
   --color-baseline: #848CA0;
   --color-fg-on-accent: #FFFFFF;
+  --color-rank-1: #003399;
+  --color-rank-2: #3A62BE;
+  --color-rank-3: #8FA8DC;
+  --color-rank-4: #DCE2EE;
+  --color-rank-5: #B07800;
   --text-axis: 11px;
   --text-body: 14px;
   --text-stat: 30px;
@@ -40,6 +45,11 @@
       --color-gridline: #27324F;
       --color-baseline: #6E7A99;
       --color-fg-on-accent: #0A0F1E;
+      --color-rank-1: #7FA2FF;
+      --color-rank-2: #5575C8;
+      --color-rank-3: #3A4F8A;
+      --color-rank-4: #27324F;
+      --color-rank-5: #E0A100;
     }
   }
 
@@ -58,5 +68,10 @@
     --color-gridline: #27324F;
     --color-baseline: #6E7A99;
     --color-fg-on-accent: #0A0F1E;
+    --color-rank-1: #7FA2FF;
+    --color-rank-2: #5575C8;
+    --color-rank-3: #3A4F8A;
+    --color-rank-4: #27324F;
+    --color-rank-5: #E0A100;
   }
 }

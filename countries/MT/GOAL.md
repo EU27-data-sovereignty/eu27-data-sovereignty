@@ -1,17 +1,41 @@
 # Malta: critical data holdings and sovereign hosting
 
-> Generated 2026-09-05 by `model/generate_countries.py` from the content model (`model/document.py`). The same document is typeset as the country PDF and rendered on the web. Every fact carries a footnote to a source whose text was fetched and checked; a value in *italics* is withheld because no checked source supports it yet.
+> Generated 2026-09-29 by `model/generate_countries.py` from the content model (`model/document.py`). The same document is typeset as the country PDF and rendered on the web. Every fact carries a footnote to a source whose text was fetched and checked; a value in *italics* is withheld because no checked source supports it yet.
 
 ## Contents
 
-1. [Fundamentals](#1-fundamentals)
-2. [Critical data holdings, by priority](#2-critical-data-holdings-by-priority)
-3. [Foreign-dependency exposure](#3-foreign-dependency-exposure)
-4. [Legal and institutional posture](#4-legal-and-institutional-posture)
-5. [Capacity](#5-capacity)
-6. [Research still open](#6-research-still-open)
+1. [Data-sovereignty placement](#1-data-sovereignty-placement)
+2. [Fundamentals](#2-fundamentals)
+3. [Critical data holdings, by priority](#3-critical-data-holdings-by-priority)
+4. [Foreign-dependency exposure](#4-foreign-dependency-exposure)
+5. [Legal and institutional posture](#5-legal-and-institutional-posture)
+6. [Capacity](#6-capacity)
+7. [Research still open](#7-research-still-open)
 
-## 1. Fundamentals
+## 1. Data-sovereignty placement
+
+> Not demonstrated. Confidence: Low. With the evidence still open, Malta could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
+
+Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.
+
+| Indicator | Finding |
+|---|---|
+| Jurisdiction requirement | *Not yet sourced* |
+| Classification in law | *Not yet sourced* |
+| Sovereign cloud certification | *Not yet sourced* |
+| State-controlled trust anchor | *Not yet sourced* |
+| State-controlled national eID | *Not yet sourced* |
+| Government data centres | *Not yet sourced* |
+| Government cloud in operation | *Not yet sourced* |
+
+What could move this placement:
+
+- If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
+- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
+- If state-controlled national eid is found to be no: Dependent on non-EU providers.
+- If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
+
+## 2. Fundamentals
 
 Malta described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date.
 
@@ -24,7 +48,7 @@ Malta described on its own measured characteristics. Each figure is the publishe
 | Renewables share of electricity | 10.7 %[^s4] |
 | Land area | 313 km²[^s5] |
 
-## 2. Critical data holdings, by priority
+## 3. Critical data holdings, by priority
 
 The holdings Malta cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
 
@@ -72,7 +96,7 @@ The holdings Malta cannot let depend on infrastructure a foreign state can compe
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 
-## 3. Foreign-dependency exposure
+## 4. Foreign-dependency exposure
 
 Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
@@ -84,7 +108,7 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 | Non-EU provider | 0 |
 | Not stated in sources | 0 |
 
-## 4. Legal and institutional posture
+## 5. Legal and institutional posture
 
 0 of 8 posture entries have a verified source. The others were researched from public policy documents but are withheld here until each is checked against the governing instrument.
 
@@ -99,11 +123,11 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 | Internet exchange | *Not yet sourced* |
 | Hyperscaler regions in country | *Not yet sourced* |
 
-## 5. Capacity
+## 6. Capacity
 
 > Not yet sized. Capacity for Malta will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 0 of 39 holding classes have a sourced measurement so far.
 
-## 6. Research still open
+## 7. Research still open
 
 Tier 0 and 1 holdings for Malta without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 

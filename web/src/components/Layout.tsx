@@ -5,6 +5,7 @@ import { useTheme } from '@/utils/theme'
 
 const NAV = [
   { to: '/', label: 'Overview', end: true },
+  { to: '/sovereignty', label: 'Ranking' },
   { to: '/countries', label: 'Countries' },
   { to: '/holdings', label: 'Critical holdings' },
   { to: '/sources', label: 'Sources' },

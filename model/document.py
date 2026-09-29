@@ -39,6 +39,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import national_data as nd  # noqa: E402
 import provenance  # noqa: E402
+import sovereignty as sv  # noqa: E402
 
 # The Eurostat fundamentals, in display order: (column, label, unit, decimals).
 FUNDAMENTALS = [
@@ -272,6 +273,57 @@ def gaps_section(c: dict, entries: list[dict]) -> dict:
     }
 
 
+INDICATOR_DEFS = {r["id"]: r for r in sv.indicator_defs()}
+VALUE_LABEL = {"yes": "Yes", "partial": "Partly", "no": "No", "unknown": "Not yet sourced"}
+
+
+def indicators_for(iso: str, src: Sources) -> dict[str, str]:
+    """The state's indicator values that a checked citation supports; the rest are unknown."""
+    raw = sv.load_values().get(iso, {})
+    supported = sv.supported_values(iso, raw, src.supported)
+    return {i: supported.get(i, "unknown") for i in sv.INDICATOR_IDS}
+
+
+def placement(c: dict, src: Sources) -> dict:
+    ind = indicators_for(c["iso2"], src)
+    return {**sv.place(ind, c["national_data"]), "indicators": ind}
+
+
+def move_text(m: dict) -> str:
+    if m["input"] == "holdings":
+        return (f"If any of the {m['count']} tier 0/1 holdings whose hosting is not yet sourced turns "
+                f"out to run on non-EU infrastructure: {sv.LABELS[m['group']]}.")
+    name = INDICATOR_DEFS[m["input"]]["label"]
+    return f"If {name.lower()} is found to be {m['if']}: {sv.LABELS[m['group']]}."
+
+
+def placement_section(c: dict, src: Sources, p: dict) -> dict:
+    iso = c["iso2"]
+    rows = []
+    for i in sv.INDICATOR_IDS:
+        d = INDICATOR_DEFS[i]
+        v = p["indicators"][i]
+        cell = (src.fact(f"indicator:{iso}:{i}", VALUE_LABEL[v]) if v != "unknown" else gap())
+        rows.append([label(d["label"]), cell])
+    moves = [[method(move_text(m))] for m in p["could_move"]]
+    rng = p["range"]
+    return {
+        "id": "placement", "title": "Data-sovereignty placement",
+        "blocks": [
+            {"type": "callout", "tone": "notice", "spans": [method(
+                f"{sv.LABELS[p['group']]}. Confidence: {p['confidence']}. With the evidence still "
+                f"open, {c['name']} could be anywhere from '{sv.LABELS[rng[0]]}' to "
+                f"'{sv.LABELS[rng[-1]]}'.")]},
+            {"type": "p", "spans": [method(sv.GUARDRAIL)]},
+            {"type": "table", "columns": [label("Indicator"), label("Finding")],
+             "align": ["left", "left"], "rows": rows},
+            {"type": "p", "spans": [method("What could move this placement:")]},
+            {"type": "list", "items": moves} if moves else
+            {"type": "p", "spans": [method("Nothing: every input the rule reads is settled by a source.")]},
+        ],
+    }
+
+
 def country(c: dict, src: Sources | None = None) -> dict:
     """One country's document. `c` is a bundle country (country_data.build output)."""
     src = src or Sources()
@@ -279,6 +331,7 @@ def country(c: dict, src: Sources | None = None) -> dict:
     return {
         "iso": c["iso2"], "name": c["name"],
         "sections": [
+            placement_section(c, src, placement(c, src)),
             fundamentals(c, src),
             holdings_section(c, src, entries),
             exposure_section(c, entries),

@@ -5,6 +5,21 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-09-29 (ranking)
+
+### Added — data-sovereignty ranking by published rule (#77)
+
+Five groups instead of a score: *Sovereign in law and in practice*, *in practice, not secured in law*,
+*Secured in law, not yet in practice*, *Not demonstrated*, *Dependent on non-EU providers*. Seven sourced
+indicators (`model/indicators.csv`) plus two computed from the holdings register feed the rule in
+`model/sovereignty.py`. Confidence is the range of groups a state could still reach; it is shown next to
+every placement. The report gains a ranking chapter; each country document opens with its placement;
+the web gains `/sovereignty` with the group ladder, an EU map, a per-state explanation and a sortable
+indicator grid. With no indicator researched yet, all 27 are *Not demonstrated*, Low confidence.
+`.build-epoch` moves to 2026-09-29 so generated files carry today's date.
+
+---
+
 ## 2026-09-29 (later)
 
 ### Changed — each country on its own fundamentals; Dutch-scaled figures withdrawn (#72, #73)

@@ -21,6 +21,11 @@
 #let gridline-light = rgb("#E3E7F0")
 #let baseline-light = rgb("#848CA0")
 #let fg-on-accent-light = rgb("#FFFFFF")
+#let rank-1-light = rgb("#003399")
+#let rank-2-light = rgb("#3A62BE")
+#let rank-3-light = rgb("#8FA8DC")
+#let rank-4-light = rgb("#DCE2EE")
+#let rank-5-light = rgb("#B07800")
 #let print-family = ("Libertinus Serif", "Georgia", "Times New Roman")
 #let print-mono = ("Menlo", "DejaVu Sans Mono")
 #let size-body = 10pt

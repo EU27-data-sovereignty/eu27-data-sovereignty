@@ -95,12 +95,33 @@ export interface HoldingClass {
   domain: string
 }
 
+export type GroupId =
+  'law_and_practice' | 'practice_only' | 'law_only' | 'not_demonstrated' | 'dependent'
+
+/** One state's placement (#77). Ids and labels only: there is no score to quote. */
+export interface Placement {
+  group: GroupId
+  /** The groups this state could still reach, best to worst. */
+  range: GroupId[]
+  confidence: 'High' | 'Medium' | 'Low'
+  could_move: { input: string; if: string; group: GroupId; count?: number }[]
+  indicators: Record<string, 'yes' | 'partial' | 'no' | 'unknown'>
+}
+
+export interface Sovereignty {
+  groups: { id: GroupId; label: string }[]
+  guardrail: string
+  indicators: { id: string; dimension: string; label: string; question: string }[]
+  placements: Record<string, Placement>
+}
+
 export interface Bundle {
   schema_version: number
   generated: string
   provenance: string
   national_data_note: string
   priority_rule: string
+  sovereignty: Sovereignty
   holding_classes: HoldingClass[]
   countries: Record<string, CountryData>
   documents: Record<string, Document>

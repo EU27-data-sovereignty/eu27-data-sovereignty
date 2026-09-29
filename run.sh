@@ -69,6 +69,9 @@ show_help() {
 }
 
 regen_data() {
+    # The same pinned date the gate uses (#34), so `data` and `./test.sh` agree byte for byte.
+    # Bump .build-epoch deliberately when a release should carry a new date.
+    export SOURCE_DATE_EPOCH="$(cat "$ROOT/.build-epoch")"
     print_info "Regenerating model outputs..."
     python3 model/generate_countries.py > /dev/null
     python3 model/export_json.py

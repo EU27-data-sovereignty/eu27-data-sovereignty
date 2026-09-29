@@ -191,7 +191,9 @@ Standard library only. The capacity engine still reproduces the xlsx it was buil
    SHA-256, finding the quote in the extracted text and looking up an archived copy.
 4. **Priority.** Holdings are ranked by a declared rule: consequence of loss, difficulty of rebuilding and
    known exposure to non-EU providers. It is a formula, not a judgement about any state.
-5. **Capacity.** Withdrawn until each state can be sized from its own measured holdings (#73).
+5. **Ranking.** States are placed in five groups by a published rule over sourced indicators, never scored.
+   Each placement shows its confidence: the range of groups the open evidence could still move it to (#77).
+6. **Capacity.** Withdrawn until each state can be sized from its own measured holdings (#73).
 
 ## What the evidence shows so far
 

@@ -12,6 +12,7 @@ import { NotFound } from './pages/NotFound'
 import { Overview } from './pages/Overview'
 import { Poster } from './pages/Poster'
 import { Sources } from './pages/Sources'
+import { Sovereignty } from './pages/Sovereignty'
 
 export function App() {
   const [bundle, setBundle] = useState<Bundle | null>(null)
@@ -54,6 +55,8 @@ export function App() {
         <Route path="holdings" element={<HoldingsIndex bundle={bundle} />} />
         <Route path="holdings/:cls" element={<Holding bundle={bundle} />} />
         <Route path="sources" element={<Sources bundle={bundle} />} />
+        <Route path="sovereignty" element={<Sovereignty bundle={bundle} />} />
+        <Route path="map" element={<Sovereignty bundle={bundle} />} />
         <Route path="country/:iso" element={<Country bundle={bundle} />} />
         <Route path="methodology" element={<Methodology bundle={bundle} />} />
         <Route path="*" element={<NotFound />} />
