@@ -1,0 +1,7 @@
+name: security
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  security:
+    uses: pieteradejong/dotfiles/.github/workflows/security-reusable.yml@main
