@@ -1,17 +1,17 @@
 # Sovereign Data Centers for European States
 
-Planning models and write-ups for national sovereign government data center networks, one per EU member state.
-The Netherlands (`RijksCloud`) is the worked reference case; the other 26 are generated from it by a
-parameterized model and are meant to be refined country by country.
+An analysis, per EU member state, of the critical government data holdings a state cannot let depend on
+infrastructure a foreign power can compel or switch off, and of what sovereign hosting for them requires.
+Each state is analysed on its own fundamentals; none is scaled from or measured against another (#72).
+Every fact is footnoted to a source whose text was fetched, hashed and checked (#75).
 
 ## Live site
 
 **https://sovereign-data-centers.vercel.app**
 
-Deliberately **not indexed** by search engines. The capacity figures are openly scaled placeholders, and
-the legal and regulatory entries are assertions about what 27 real jurisdictions require, researched from
-public policy documents by one person and **not yet checked against primary sources**. That is fine for a
-research repository that says so; it is not fine for something search engines present as authoritative.
+Deliberately **not indexed** by search engines while the research is incomplete. The site, the EU-27
+report (`/eu27-report.pdf`) and the 27 country reports (`/report/<ISO>.pdf`) show a value only when a
+checked source supports it; everything else is shown as a gap. Capacity is not yet sized (#73).
 Indexing is gated on the verification work in [`VERIFICATION.md`](VERIFICATION.md), as is the
 `eu27.cloud` domain.
 
@@ -87,7 +87,9 @@ A decision that is overturned is marked **Superseded by #N** and left in place.
 ```
 init.sh / run.sh / test.sh   set up, run, and fully test the project
 model/
-  assumptions.csv            shared engineering/economic defaults (the Dutch "working assumptions")
+  assumptions.csv            engineering and cost constants for the capacity engine (sizing is paused, #73)
+  holding_classes.csv        the 39 critical holding classes, by tier, with why each cannot depend on
+                             foreign control (#73)
   eu27_parameters.csv        one row per country: population, GDP, public-admin employment, power price,
                              renewables, land, flags, existing gov cloud, digital ID, IXPs, and the
                              legal/regulatory posture columns (certification, classification, procurement)
@@ -96,32 +98,31 @@ model/
   provenance.py              validates the register; coverage per claim namespace
   sources.py                 the tiered rule for the legal cells, read from the register (./run.sh sources)
   institutions.csv           the public institutional contact map: web routes only, no names (#68)
-  national_data.csv          the critical national data register: per state, which Tier 0/Tier 1
-                             record classes it holds, the register, and the official page for it
+  national_data.csv          the critical holdings register: per state and class, the register, operator,
+                             legal basis, hosting, foreign dependency, size -- each cell cited (#73)
+  research.py                admits researched claims only after fetching, hashing and finding the quote
+  research/                  agent research staging (<ISO>.json) and verification.csv; never rendered
+  document.py                the one content model every output renders (#74); --check is the #75 gate
   national_data.py           validates the register and reports coverage (./run.sh registers)
   emoji.py                   country flag emoji, derived from the ISO code (#61, #62)
-  scaling_rules.csv          how each workload class scales from the NL baseline (weights, floors, frontline multiplier)
   migration_phases.csv       workload class -> migration phase
-  capacity_model.py          workloads -> servers -> racks -> MW -> sites -> CAPEX/OPEX, for any country dir
-  country_data.py            assembles every fact about a country into one dict (the single source)
-  generate_countries.py      builds countries/<ISO>/ inputs + GOAL.md for all 27, runs the model, writes SUMMARY.md
-  export_json.py             writes web/public/data/eu27.json from the same dict
-  export_artifacts.py        renders the tracked per-country poster and briefing PDF (./run.sh artefacts)
-  eu27_results.csv           one result row per country (generated)
-book/                        print edition and per-country PDF briefs (typst); see book/README.md
+  capacity_model.py          the capacity engine: workloads -> servers -> MW -> sites -> CAPEX/OPEX; kept for
+                             sizing from measured holdings, checked against the one spreadsheet it reproduces
+  country_data.py            one country's parameter row and register view, nothing about any other (#72)
+  generate_countries.py      writes countries/<ISO>/GOAL.md (markdown rendering of the document) + SUMMARY.md
+  export_json.py             writes web/public/data/eu27.json: countries, documents, claims, sources
+  export_artifacts.py        renders the tracked per-country poster (./run.sh artefacts)
+design/                      tokens.json, the one colour and type source, and build_tokens.py (#74, #76)
+book/                        report.py (EU-27 report + 27 country PDFs) and the print book; see book/README.md
 artifacts/                   one style guide per output representation - markdown, html, pdf, png,
                              mobile. Documentation, not output; see artifacts/README.md (#63)
 OUTREACH.md                  institutional distribution map, one entry per member state
 countries/
   SUMMARY.md                 cross-country table (generated)
-  ARTEFACTS.csv              sha256 of every tracked poster and PDF, and of the bundle it came from
-  NL/                        the reference case: hand-written GOAL.md, xlsx model, inputs, TODO, plan,
-                             FRONTIER-MODEL.md (authored companion note, not generated), and the
-                             AI-generated concept infographic (see ASSETS.md)
-  DE/ FR/ ... (x26)          params.csv, workloads_inputs.csv, region_allocation_inputs.csv (generated inputs, edit freely)
-                             GOAL.md (generated 12-section brief), facility_summary.csv,
-                             region_allocation_output.csv, migration_phases.csv (outputs),
-                             <ISO>-infographic.png and <ISO>-briefing.pdf (tracked deliverables)
+  ARTEFACTS.csv              sha256 of every tracked poster, and of the bundle it came from
+  <ISO>/ (x27)               GOAL.md (generated from the content model) and <ISO>-infographic.png (tracked)
+  NL/                        also: REFERENCE-CASE.md (the original hand-written Dutch plan, now a note, not
+                             an input), the xlsx the engine reproduces, FRONTIER-MODEL.md, TODO, plan
 web/                         React + Vite visualization app; reads the JSON bundle, no server
 mobile/                      Expo reader for the same bundle; local only, never built or deployed
 tests/                       stdlib unittest suite for the model and the data
@@ -136,8 +137,8 @@ DISTRIBUTION-AND-TRUST.md    authored note: what sovereign infrastructure can bo
                              that wide distribution depends on (#64)
 ```
 
-Python is the source of truth. The markdown briefs, the JSON bundle, the app and the exports are all
-renderings of one `country_data.build()` dict, so they cannot disagree with each other.
+Python is the source of truth. The markdown briefs, the PDFs, the web app and the posters all render one
+content model (`model/document.py`), so they cannot disagree with each other (#74).
 
 ## Running
 
@@ -147,61 +148,56 @@ renderings of one `country_data.build()` dict, so they cannot disagree with each
 ./run.sh data                               # regenerate country files, briefs and the JSON bundle
 ./run.sh help                               # every command
 ./test.sh                                   # the full gate: model, types, lint, unit, build, e2e, a11y
-./run.sh artefacts                          # re-render the tracked posters and briefing PDFs
+./run.sh artefacts                          # re-render the tracked posters
 ./run.sh sources                            # verification-ledger coverage
 ./run.sh registers                          # critical national data register coverage
 ./run.sh fetch                              # fetch source documents into cache/ (see SOURCES.md)
 ./run.sh deploy                             # full gate, then deploy to Vercel production
-./run.sh export                             # 27 standalone A4 country briefs (PDF)
-./run.sh book                               # typeset the A5 print edition
+./run.sh export                             # EU-27 report + 27 country reports (PDF, footnoted)
+./run.sh book                               # typeset the print book's authored parts
+python3 model/research.py verify            # check staged research: fetch, hash, find each quote
+python3 model/research.py admit             # write verified claims into the registers
 ```
 
 `export` and `book` need typst (`brew install typst`), and write into `book/build/`, which is
 gitignored — that build output is never committed (`DECISIONS.md` #41).
 
-`artefacts` is the other, separate pipeline: headless Chrome renders `<ISO>-infographic.png` and
-`<ISO>-briefing.pdf` into each country directory, and **those two are tracked deliverables**
-(#24, #51). They are byte-reproducible (#53), and `countries/ARTEFACTS.csv` records the data
-bundle each was rendered from so the test suite can tell when they have gone stale (#52). Needs
-Chrome and `npm`.
+`artefacts` is the other, separate pipeline: headless Chrome renders `<ISO>-infographic.png` into
+each country directory, a **tracked deliverable** (#24, #51). `countries/ARTEFACTS.csv` records the
+data bundle each was rendered from so the test suite can tell when one has gone stale (#52). Needs
+Chrome and `npm`. The Chrome briefing PDF is retired (#76).
 
 The model on its own, without the app:
 
 ```
-python3 model/capacity_model.py NL          # one country
-python3 model/capacity_model.py --all       # all, refreshes model/eu27_results.csv
-python3 model/generate_countries.py         # regenerate the 26 derived countries from NL + parameters
+python3 model/document.py DE                # one country's document as JSON
+python3 model/document.py --check           # the #75 gate: every fact shown is sourced
+python3 model/generate_countries.py         # regenerate the 27 markdown briefs and SUMMARY.md
 ```
 
-Standard library only. `capacity_model.py` reproduces the Dutch xlsx exactly (5,691 servers, 14.2 MW design,
-EUR 339 m CAPEX) when run on `countries/NL/`.
+Standard library only. The capacity engine still reproduces the xlsx it was built from (5,691 servers,
+14.2 MW, EUR 339 m) as an arithmetic check; those inputs size nothing (#72).
 
 ## Method
 
-Every country inherits the Dutch assumption set (`model/assumptions.csv`) and overrides only what is
-observably different: the Eurostat non-household electricity price and the minimum number of in-country sites
-(2 for LU/MT/CY, 4 for DE/FR/IT/ES/PL/RO, 3 otherwise). Workload demand is the Dutch workload table scaled
-per class by a blend of population, public-administration employment and GDP (`model/scaling_rules.csv`),
-with a floor for small states (an identity platform or a SOC does not shrink linearly with population) and a
-multiplier on defense/security for frontline states. Regions are first-pass geographic hypotheses that
-encode only the obvious constraints; they are placeholders for the scored site selection described in
-`countries/NL/TODO.md` workstream A.
+1. **Fundamentals.** Each state's measured characteristics come from pinned Eurostat series, each value
+   footnoted with the series, dimensions and retrieval date.
+2. **Critical holdings.** `model/holding_classes.csv` lists 39 classes of government data holding, from
+   the identity spine (tier 0) through the legal, fiscal and security state (tier 1) to health,
+   statistics and archives (tiers 2 and 3). For each state and class the register records the holding,
+   its operator, legal basis, hosting, foreign dependency and size, each only where a source states it.
+3. **Research, then verification.** Agents research all 27 states in parallel and stage claims with
+   verbatim quotes. `model/research.py` admits a claim only after fetching the document, recording its
+   SHA-256, finding the quote in the extracted text and looking up an archived copy.
+4. **Priority.** Holdings are ranked by a declared rule: consequence of loss, difficulty of rebuilding and
+   known exposure to non-EU providers. It is a formula, not a judgement about any state.
+5. **Capacity.** Withdrawn until each state can be sized from its own measured holdings (#73).
 
-The write-ups are generated, and say so at the top. To keep hand edits to a country's `GOAL.md`, rename it
-(e.g. `GOAL.md` -> `ANALYSIS.md`) or stop running the generator for that country; the generator only ever
-rewrites `GOAL.md`, `params.csv`, `workloads_inputs.csv` and `region_allocation_inputs.csv`, never `NL/`.
+## What the evidence shows so far
 
-## What the first pass shows
-
-- The EU-27 "sovereign core" tier is small: ~306 MW design load, ~125k servers, ~EUR 7.2 bn CAPEX,
-  ~EUR 0.7 bn/yr OPEX across 86 sites. Germany alone is ~60 MW; eight states are under 3 MW.
-- For states under ~3 MW, three in-country sites means sub-1 MW rooms, which is a closet, not a data center.
-  The Dutch 3-region rule does not survive contact with Estonia, Slovenia or Luxembourg; those cases push
-  toward fewer, hardened in-country sites plus an out-of-country reserve, i.e. the EU federation layer that
-  is deliberately out of scope for now (Dutch `GOAL.md` section 16).
-- Power price, not hardware, separates the OPEX outcomes: Ireland and Cyprus pay 3x Finland per MWh.
-- Seven states have frontline exposure (EE, LV, LT, PL, FI, RO, BG); five have no live hyperscaler region and
-  therefore no in-jurisdiction commercial tier for the hybrid model.
+`countries/SUMMARY.md` and the Overview page give the live figures: how many holdings are verified per
+state, how many facts are sourced, and what is still open. The earlier headline figures (EU-27 design
+load, servers, CAPEX) were Dutch-scaled and are withdrawn; `CHANGELOG.md` records them and why.
 
 ## Who this is for
 
@@ -250,16 +246,14 @@ before that verification is done invites an easy dismissal. See `ROADMAP.md`.
 
 ## Caveats
 
-Same as the Dutch case, only more so: every input is a working assumption or a scaled placeholder, the
-electricity prices are 2025-S2 band-IC averages rather than negotiated tariffs, and public-administration
+The electricity prices are 2025-S2 band-IC averages rather than negotiated tariffs, and public-administration
 employment is *nominally* Eurostat NACE section O (excludes public health and education) — but for 9 of
 the 27 states that column matches no year of the official series, and is a known open defect rather than
 a sourced figure (`VERIFICATION.md`). The other five Eurostat columns are pinned to a stated dataset and
 period and machine-checked to reproduce from it. The per-country sovereign-cloud
 and digital-ID entries were researched in September 2026 and will date.
 
-**The legal and regulatory entries are a different kind of claim from the rest.** Capacity figures are
-openly scaled placeholders, and the "working assumption" framing covers them honestly. The certification
+**The legal and regulatory entries are withheld until sourced.** The certification
 schemes, classification ladders and procurement routes are assertions about what real jurisdictions
 actually require, and **187 of the 189 have not been checked against primary sources**. Two have:
 `./run.sh sources` prints the live figure, and `model/sources/citations.csv` names exactly which,
@@ -289,7 +283,8 @@ database, and because an EU-focused dataset attracts a sui generis right under D
 does not address. Attribution also keeps the contestable ratings in this dataset traceable back to their
 caveats.
 
-## Reference case
+## The original Dutch plan
 
-`countries/NL/GOAL.md` is the full write-up of the design philosophy, physical/logical architecture,
-sovereignty stack, threat model and open questions. Read it first; the generated country files assume it.
+`countries/NL/REFERENCE-CASE.md` is the hand-written plan this project began from: design philosophy,
+architecture, sovereignty stack and threat model for the Netherlands. It is kept as a note. It is no longer
+an input to any country's analysis, the Netherlands' included (#72).

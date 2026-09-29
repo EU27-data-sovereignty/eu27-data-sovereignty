@@ -1,16 +1,15 @@
-"""The book is typeset by typst and CI has no typst, so its output is otherwise ungated.
+"""The PDFs are typeset by typst and CI has no typst, so their source is gated here instead.
 
-These tests do not compile anything. They import the builder and assert on the *typst source*
-it emits, which needs only the JSON bundle -- so they run everywhere `unittest discover` does,
+These tests do not compile anything. They import the renderers and assert on the *typst source*
+they emit, which needs only the JSON bundle -- so they run everywhere `unittest discover` does,
 including CI.
 
-What they protect is the one rule that cannot be recovered after the fact: the interior is
-monochrome (DECISIONS.md #28) and must typeset identically off a Mac. A country flag emoji
-would satisfy neither -- typst can only reach those glyphs by falling back to Apple Color
-Emoji, so the same source would render colour flags here and empty boxes on a Linux machine,
-silently.
+A country flag emoji must never reach a PDF: typst can only reach those glyphs through Apple Color
+Emoji, so the same source would render flags here and empty boxes on Linux, silently. And every
+fact in a typeset document must arrive with its footnote (#75).
 """
 import json
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -19,6 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "book"))
 
 import build as book  # noqa: E402
+import report  # noqa: E402
 
 BUNDLE = ROOT / "web" / "public" / "data" / "eu27.json"
 
@@ -30,43 +30,40 @@ def flag_chars(text: str) -> list[str]:
     return [c for c in text if ord(c) in REGIONAL_INDICATORS]
 
 
-class NoFlagsInTheBook(unittest.TestCase):
+class Typeset(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         if not BUNDLE.exists():
             raise unittest.SkipTest("run ./run.sh data first")
         cls.bundle = json.loads(BUNDLE.read_text(encoding="utf-8"))
+        cls.report = report.report_typ(cls.bundle)
 
-    def test_the_assembled_book_contains_no_flag_emoji(self):
-        typ = book.assemble(self.bundle, [1, 2, 3, 4, 5])
-        self.assertEqual(flag_chars(typ), [], "a flag emoji reached the mono book interior")
-
-    def test_no_standalone_brief_contains_a_flag_emoji(self):
-        for iso, c in sorted(self.bundle["countries"].items()):
+    def test_no_flag_emoji_in_the_report_or_any_country_pdf(self):
+        self.assertEqual(flag_chars(self.report), [])
+        for iso in sorted(self.bundle["documents"]):
             with self.subTest(iso=iso):
-                self.assertEqual(flag_chars(book.country_entry(c, standalone=True)), [])
+                self.assertEqual(flag_chars(report.country_typ(self.bundle, iso)), [])
 
+    def test_no_flag_emoji_in_the_book(self):
+        self.assertEqual(flag_chars(book.assemble(sorted(book.AUTHORED), "2026-01-01")), [])
 
-class OutlineScansByIsoCode(unittest.TestCase):
-    """The chapter head is the outline entry -- typst has no short-title."""
-
-    @classmethod
-    def setUpClass(cls):
-        if not BUNDLE.exists():
-            raise unittest.SkipTest("run ./run.sh data first")
-        cls.bundle = json.loads(BUNDLE.read_text(encoding="utf-8"))
-
-    def test_every_country_chapter_head_carries_its_iso(self):
-        for iso, c in sorted(self.bundle["countries"].items()):
+    def test_every_country_chapter_head_carries_its_name_and_iso(self):
+        for iso, d in sorted(self.bundle["documents"].items()):
             with self.subTest(iso=iso):
-                head = book.country_entry(c, standalone=False).splitlines()[0]
-                self.assertTrue(head.startswith(f"== {iso} "), head)
-                self.assertIn(c["name"], head)
+                self.assertIn(f"\n= {d['name']} ({iso})\n", self.report)
 
-    def test_a_standalone_brief_has_no_chapter_head(self):
-        """Its title block already carries the name; the heading would duplicate it."""
-        de = self.bundle["countries"]["DE"]
-        self.assertFalse(book.country_entry(de, standalone=True).startswith("== DE"))
+    def test_every_footnote_points_at_an_appendix_entry(self):
+        """#75: a footnote's [Sn] link must land on a source listed in the appendix."""
+        for text in (self.report, report.country_typ(self.bundle, "NL")):
+            linked = set(re.findall(r"#link\(<src-(\d+)>\)", text))
+            listed = set(re.findall(r"\] <src-(\d+)>", text))
+            self.assertTrue(linked)
+            self.assertEqual(linked - listed, set())
+
+    def test_every_fact_span_gets_a_footnote(self):
+        facts = sum(1 for d in self.bundle["documents"].values()
+                    for s in report.document_spans(d) if s.get("role") == "fact")
+        self.assertEqual(self.report.count("#footnote["), facts)
 
 
 if __name__ == "__main__":

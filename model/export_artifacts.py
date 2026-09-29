@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
-Export per-country artefacts: a PNG infographic and a PDF briefing for each member state.
+Export the per-country PNG infographic for each member state.
 
-    python3 model/export_artifacts.py            # all 27, posters and reports
+The Chrome-printed PDF briefing is retired (DECISIONS.md #76): the one per-country PDF is now
+`/report/<ISO>.pdf`, typeset by book/report.py from the content model with footnoted sources.
+
+    python3 model/export_artifacts.py            # all 27 posters
     python3 model/export_artifacts.py DE MT      # named countries only
-    python3 model/export_artifacts.py --posters  # skip the PDFs
 
 Builds the web app, serves the build, and drives headless Chrome over /poster/<ISO> and
 /country/<ISO>. Everything rendered comes from web/public/data/eu27.json, which is
@@ -136,7 +138,7 @@ def write_manifest(rendered: set[str]) -> None:
 
     rows = []
     for cdir in sorted(COUNTRIES.iterdir()):
-        for suffix in ("-infographic.png", "-briefing.pdf"):
+        for suffix in ("-infographic.png",):
             f = cdir / f"{cdir.name}{suffix}"
             if not f.is_file():
                 continue
@@ -226,21 +228,18 @@ def run_chrome(browser: str, url: str, *flags: str) -> None:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("iso2", nargs="*", help="country codes; default is all")
-    ap.add_argument("--posters", action="store_true", help="posters only, skip PDFs")
-    ap.add_argument("--reports", action="store_true", help="PDFs only, skip posters")
     ap.add_argument("--skip-build", action="store_true", help="reuse an existing web/dist")
     args = ap.parse_args(argv)
 
     browser = find_browser()
     codes = [c.upper() for c in args.iso2] or sorted(
-        d.name for d in COUNTRIES.iterdir() if d.is_dir() and (d / "workloads_inputs.csv").exists()
+        d.name for d in COUNTRIES.iterdir() if d.is_dir() and (d / "GOAL.md").exists()
     )
     missing = [c for c in codes if not (COUNTRIES / c).is_dir()]
     if missing:
         raise SystemExit(f"no such country directory: {missing}")
 
-    want_posters = not args.reports
-    want_reports = not args.posters
+    want_posters = True
     epoch = build_epoch()
     rendered: set[str] = set()
 
@@ -276,18 +275,6 @@ def main(argv: list[str] | None = None) -> int:
                 )
                 rendered.add(out.relative_to(ROOT).as_posix())
                 print(f"  poster {POSTER_W}x{height} {out.stat().st_size // 1024} KB", end="")
-
-            if want_reports:
-                out = cdir / f"{iso}-briefing.pdf"
-                run_chrome(
-                    browser,
-                    f"http://localhost:{PORT}/country/{iso}",
-                    "--no-pdf-header-footer",
-                    f"--print-to-pdf={out}",
-                )
-                pin_pdf_dates(out, epoch)
-                rendered.add(out.relative_to(ROOT).as_posix())
-                print(f"  pdf {out.stat().st_size // 1024} KB", end="")
 
             print()
     finally:

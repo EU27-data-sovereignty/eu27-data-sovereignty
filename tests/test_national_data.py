@@ -182,41 +182,5 @@ class ProvenanceLivesInTheSourceRegister(unittest.TestCase):
         self.assertEqual(nd.citation_errors([], [{"claim": "record:NL:civil_registry:count"}]), [])
 
 
-class TheDutchBriefStaysInSync(unittest.TestCase):
-    """countries/NL/GOAL.md is hand-written, which makes it a second source of truth.
-
-    The generator is forbidden to touch NL (#5), and tests/test_model.py only asserts that it
-    stays away -- nothing asserts the prose still matches the register. NL is the country the
-    whole model derives from and the first one a Dutch reader checks, so the drift that matters
-    most is the one nothing was watching. This is the cheapest sufficient guard: a containment
-    check, not a parser.
-    """
-
-    NL_GOAL = ROOT / "countries" / "NL" / "GOAL.md"
-
-    def setUp(self):
-        self.rows = [r for r in nd.load() if r["iso"] == "NL"]
-        self.text = self.NL_GOAL.read_text(encoding="utf-8")
-
-    def test_the_brief_has_the_section_at_all(self):
-        self.assertIn("Critical national data in scope", self.text)
-
-    def test_every_recorded_dutch_register_is_named_in_the_brief(self):
-        for r in self.rows:
-            with self.subTest(record_class=r["record_class"]):
-                self.assertIn(r["register"], self.text)
-
-    def test_every_recorded_dutch_source_is_linked_from_the_brief(self):
-        for r in self.rows:
-            with self.subTest(record_class=r["record_class"]):
-                self.assertIn(r["url"], self.text)
-
-    def test_the_stated_count_matches_the_register(self):
-        entries = nd.for_country(nd.load(), "NL")
-        self.assertIn(
-            f"**{nd.recorded(entries)} of {len(entries)} record classes recorded.**", self.text
-        )
-
-
 if __name__ == "__main__":
     unittest.main()

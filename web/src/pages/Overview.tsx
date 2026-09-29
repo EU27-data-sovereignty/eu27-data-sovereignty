@@ -1,106 +1,73 @@
 import { Link } from 'react-router-dom'
 
-import { RankedBar } from '@/charts/RankedBar'
+import { coverage } from '@/data/sources'
 import type { Bundle } from '@/data/types'
-import { eur, mw, num } from '@/utils/format'
 
-const CLOSET_MW = 1.0
-
-function Stat({ label, value, note }: { label: string; value: string; note?: string }) {
+function Stat({ label, value, sub }: { label: string; value: string; sub: string }) {
   return (
     <div className="rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-3">
       <div className="text-xs text-[var(--color-fg-secondary)]">{label}</div>
-      <div className="text-2xl font-semibold tabular-nums">{value}</div>
-      {note ? <div className="mt-1 text-xs text-[var(--color-fg-muted)]">{note}</div> : null}
+      <div className="text-[length:var(--text-stat)] leading-tight font-semibold tabular-nums">
+        {value}
+      </div>
+      <div className="text-xs text-[var(--color-fg-muted)]">{sub}</div>
     </div>
   )
 }
 
+/**
+ * The headline is the state of the evidence, not a capacity figure: capacity is withdrawn
+ * until each country is sized from its own measured holdings (#73), and a site that led with
+ * a number it cannot source would contradict its own rule (#75).
+ */
 export function Overview({ bundle }: { bundle: Bundle }) {
   const countries = Object.values(bundle.countries)
-
-  const perSite = countries
-    .map(c => ({
-      id: c.iso2,
-      label: c.name,
-      value: c.capacity.avg_mw_per_site,
-      flagged: c.capacity.avg_mw_per_site < CLOSET_MW,
-    }))
-    .sort((a, b) => b.value - a.value)
-
-  const belowCloset = perSite.filter(d => d.flagged).length
-  const floorBound = countries.filter(c => c.capacity.binding_constraint === 'min_sites').length
+  const covs = countries.map(coverage)
+  const verified = covs.reduce((n, c) => n + c.verified, 0)
+  const total = covs.reduce((n, c) => n + c.total, 0)
+  const tier0 = covs.reduce((n, c) => n + c.tier0, 0)
+  const tier0Total = covs.reduce((n, c) => n + c.tier0Total, 0)
+  const sources = Object.keys(bundle.sources).length
+  const claims = Object.keys(bundle.claims).length
 
   return (
     <article>
-      <h1 className="mb-1 text-2xl font-semibold">A sovereign core for twenty-seven states</h1>
+      <h1 className="mb-2 text-3xl font-semibold">Sovereign data centres for the EU-27</h1>
       <p className="mb-6 max-w-3xl text-[var(--color-fg-secondary)]">
-        What it would take for each EU member state to run the workloads it cannot afford to lose on
-        infrastructure it controls — and what that costs.
+        Each member state analysed on its own fundamentals: the critical data holdings it cannot let
+        depend on infrastructure a foreign state can compel or switch off, who operates them, under
+        which law, and where they run. Every fact is footnoted to a document that was fetched,
+        hashed and checked to contain the quoted text. Where no such document has been found yet,
+        the value is withheld and the gap is shown.
       </p>
 
-      <div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4">
+      <section aria-label="State of the evidence" className="mb-8 grid gap-3 sm:grid-cols-4">
         <Stat
-          label="Design load, EU-27"
-          value={mw(bundle.totals.design_mw)}
-          note="across 27 sovereign cores"
+          label="Critical holdings verified"
+          value={`${verified}`}
+          sub={`of ${total} (27 states × ${bundle.holding_classes.length} classes)`}
         />
-        <Stat label="Servers" value={num(bundle.totals.servers)} />
-        <Stat label="Sites" value={String(bundle.totals.sites)} />
-        <Stat
-          label="CAPEX"
-          value={eur(bundle.totals.capex_total)}
-          note={`${eur(bundle.totals.opex_total)}/yr to run`}
-        />
-      </div>
-
-      <section className="mb-10">
-        <h2 className="mb-1 text-lg font-semibold">The small-state cliff</h2>
-        <p className="mb-4 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
-          The Dutch design rule — three to five separated regions — does not survive contact with a
-          small country. Spreading a sub-3 MW national requirement across three sites produces rooms
-          below one megawatt: a closet, not a data centre. <strong>{belowCloset} states</strong>{' '}
-          land there.
-        </p>
-        <RankedBar
-          data={perSite}
-          threshold={{ value: CLOSET_MW, label: 'below this a "site" is a server room' }}
-          unit="MW/site"
-          format={v => `${v.toFixed(2)} MW`}
-          caption="Average design load per site, after the minimum-sites floor is applied."
-        />
+        <Stat label="Tier 0 holdings verified" value={`${tier0}`} sub={`of ${tier0Total}`} />
+        <Stat label="Sourced claims" value={`${claims}`} sub={`from ${sources} checked sources`} />
+        <Stat label="Countries sized" value="0" sub="of 27; sizing needs measured holdings" />
       </section>
 
-      <section className="mb-10 max-w-3xl">
-        <h2 className="mb-1 text-lg font-semibold">Site count is a political number</h2>
-        <p className="text-sm text-[var(--color-fg-secondary)]">
-          For <strong>{floorBound} of 27</strong> states, the number of sites is set by a
-          hand-entered minimum rather than by how much power the workloads need. Only Germany
-          genuinely requires more sites than its floor; France and Italy land exactly on theirs. The
-          engineering result is not driving the geography — a policy assumption is, and it deserves
-          to be argued about explicitly rather than inherited.
-        </p>
-      </section>
-
-      {/* A plain <a>, not <Link>: the report is a static file built beside the app (book/build.py --report). */}
       <a
         href="/eu27-report.pdf"
-        className="mb-3 block rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-3 hover:border-[var(--color-accent)]"
+        className="mb-6 block rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-3 hover:border-[var(--color-accent)]"
       >
-        <div className="font-semibold text-[var(--color-accent-text)]">
-          EU-27 country report (PDF)
-        </div>
+        <div className="font-semibold text-[var(--color-accent-text)]">EU-27 report (PDF)</div>
         <div className="text-sm text-[var(--color-fg-secondary)]">
-          Every member state in one document, with a table of contents. About 140 pages.
+          Every member state in one document, with a table of contents, footnoted sources and a
+          source appendix. Each country is also available as its own PDF.
         </div>
       </a>
 
-      <nav className="grid gap-3 sm:grid-cols-2">
+      <nav className="grid gap-3 sm:grid-cols-3">
         {[
-          ['/matrix', 'Sovereignty matrix', 'Eight dimensions of posture, per state.'],
-          ['/workloads', 'Workload composition', 'What each state would actually run.'],
-          ['/scenario', 'Scenario sandbox', 'Change the assumptions, recompute all 27.'],
-          ['/countries', 'Country briefings', 'The full strategy for each member state.'],
+          ['/countries', 'Countries', 'All 27, sortable, each with its own report.'],
+          ['/holdings', 'Critical holdings', 'One kind of holding across every member state.'],
+          ['/sources', 'Sources', 'Every checked source and the claims it supports.'],
         ].map(([to, title, blurb]) => (
           <Link
             key={to}

@@ -4,8 +4,8 @@ Export every fact about all 27 member states as one JSON bundle for the web app.
 
     python3 model/export_json.py [-o web/public/data/eu27.json]
 
-Reads the same country_data.build() dict the markdown briefs are rendered from, so
-the app and the briefs cannot disagree. The whole bundle is ~26 KB gzipped, which is
+Reads the same country_data.build() dict and content model (document.py) the markdown
+briefs and the PDFs are rendered from, so no output can disagree with another. The whole bundle is ~26 KB gzipped, which is
 why the app ships the entire model client-side and needs no API.
 
 Keys prefixed with "_" are dropped: they carry Python objects (the raw Summary
@@ -23,8 +23,9 @@ import capacity_model as cm  # noqa: E402
 import country_data  # noqa: E402
 import national_data as nd  # noqa: E402
 import generate_countries as gc  # noqa: E402
+import document  # noqa: E402
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 DEFAULT_OUT = cm.ROOT / "web" / "public" / "data" / "eu27.json"
 
 
@@ -37,45 +38,50 @@ def strip_private(obj):
     return obj
 
 
+def provenance_ok(c: dict, src) -> bool:
+    return document.provenance.supported(c, src.reg, src.params)
+
+
 def build_bundle() -> dict:
     params = {r["iso2"]: r for r in cm.read_csv(gc.PARAMS)}
-    nl = params[gc.BASELINE]
-    nl_summary = cm.run_country(gc.BASELINE, write=False)
-
     # Read once, outside the loop: country_data.build() does no file I/O of its own.
     register = nd.load()
+    # Each country from its own parameter row and register only (#72). No capacity: withdrawn
+    # until a country is sized from its own measured holdings (#73).
+    countries = {iso: strip_private(country_data.build(c, nd.for_country(register, iso)))
+                 for iso, c in sorted(params.items())}
 
-    countries = {}
-    for iso, c in sorted(params.items()):
-        s = cm.run_country(iso, write=False)
-        wl = cm.read_csv(cm.COUNTRIES / iso / "workloads_inputs.csv")
-        countries[iso] = strip_private(
-            country_data.build(c, nl, s, wl, nl_summary, nd.for_country(register, iso))
-        )
-
-    totals = {
-        "servers": sum(c["capacity"]["total_servers"] for c in countries.values()),
-        "design_mw": round(sum(c["capacity"]["design_mw"] for c in countries.values()), 1),
-        "sites": sum(c["capacity"]["sites"] for c in countries.values()),
-        "capex_total": round(sum(c["capacity"]["capex_total"] for c in countries.values()), 1),
-        "opex_total": round(sum(c["capacity"]["opex_total"] for c in countries.values()), 1),
-    }
+    # The content model (#74) and everything its facts cite (#75): renderers look sources up here
+    # rather than carrying their own copies, so a footnote cannot drift from the register.
+    src = document.Sources()
+    documents = {iso: document.country(c, src) for iso, c in countries.items()}
+    used = sorted({claim for d in documents.values() for claim in document.claims_used(d)})
+    claims = {claim: [{k: c[k] for k in ("source_id", "locator", "quote", "value_as_found",
+                                         "confidence", "retrieved", "checked_by")}
+                      for c in src.by_claim[claim] if provenance_ok(c, src)]
+              for claim in used}
+    source_ids = sorted({c["source_id"] for cs in claims.values() for c in cs})
+    sources = {sid: {**src.reg[sid], "label": document.provenance.label(sid, src.reg)}
+               for sid in source_ids}
 
     return {
         "schema_version": SCHEMA_VERSION,
+        "documents": documents,
+        "claims": claims,
+        "sources": sources,
+        "holding_classes": [{"class_id": c, "label": nd.LABELS[c], "tier": nd.TIER_OF[c],
+                             "domain": nd.DOMAIN_OF[c]} for c in nd.RECORD_CLASSES],
+        "priority_rule": document.PRIORITY_RULE,
         "generated": gc.gen_date(),
         "provenance": (
-            "Every figure is a scaled working assumption derived from the Dutch reference "
-            "case, not a sourced forecast. Legal and regulatory entries were researched in "
-            "September 2026 and will date. See /methodology."
+            "Each member state is analysed on its own fundamentals. Every fact is footnoted to a "
+            "source whose text was fetched and checked; unsourced values are withheld and shown "
+            "as gaps. Capacity is not yet sized. See /methodology."
         ),
         # One disclaimer, in the bundle, so the markdown brief, the web page, the book and the
         # mobile reader hedge identically instead of growing four different wordings.
         "national_data_note": nd.NOTE,
-        "assumptions": cm.read_csv(cm.ASSUMPTIONS),
-        "phase_map": cm.read_csv(cm.PHASE_MAP),
         "countries": countries,
-        "totals": totals,
     }
 
 

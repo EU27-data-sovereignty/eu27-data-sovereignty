@@ -1,5 +1,0 @@
-Phase,Phase name,Workloads,Servers,Design MW,CAPEX (EUR mm),Cumulative CAPEX %,Hybrid eligible (class)
-1,Sovereign core,Digital identity / Chave Movel Digital; Core government applications,959,1.89,36.0,23.3,no
-2,Security and defense,Defense classified compute; Cybersecurity / SOC / telemetry,976,2.51,60.8,62.6,no
-3,State record,Data platforms & analytics,538,1.1,27.9,80.6,no
-4,Elective,AI / sovereign model serving; Scientific / public research,320,1.13,30.0,100.0,yes

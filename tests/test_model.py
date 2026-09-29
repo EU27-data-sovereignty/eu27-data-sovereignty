@@ -6,9 +6,8 @@ Model and data-integrity tests.
 
 Stdlib unittest, no pytest, consistent with the project's stdlib-only rule.
 
-These exist because 27 generated documents, a JSON bundle and five CSVs per country all
-derive from one small pile of arithmetic, so a silent change is invisible until someone
-reads a wrong number in print.
+These guard the model's inputs, the capacity engine's arithmetic, the generated briefs, and
+the rule that no country is derived from another (#72).
 """
 from __future__ import annotations
 
@@ -38,57 +37,59 @@ def params() -> dict[str, dict]:
     return {r["iso2"]: r for r in cm.read_csv(gc.PARAMS)}
 
 
-class DocumentedInvariants(unittest.TestCase):
-    """README states the model reproduces the Dutch spreadsheet exactly. A documented
-    claim nobody checks is a claim that quietly stops being true."""
+class EngineReproducesTheSpreadsheet(unittest.TestCase):
+    """The capacity engine (capacity_model.py) is kept for sizing from measured holdings (#73).
+    Its arithmetic is still checked against the one spreadsheet it was built to reproduce --
+    as an engine test only: the Dutch inputs size nothing and feed no other country (#72)."""
 
-    def test_nl_reproduces_the_spreadsheet(self):
+    def test_engine_reproduces_the_dutch_spreadsheet(self):
         s = cm.run_country("NL", write=False)
         self.assertEqual(s.total_servers, 5691)
         self.assertAlmostEqual(s.design_mw, 14.2, places=1)
         self.assertAlmostEqual(s.capex_total, 339.0, places=0)
 
 
-class GoldenFile(unittest.TestCase):
-    """model/eu27_results.csv is the committed expected output."""
+class NoCountryIsDerivedFromAnother(unittest.TestCase):
+    """#72: each country is analysed on its own fundamentals. Changing one country's parameter
+    row must leave every other country's document byte-identical."""
 
-    def test_all_countries_match_committed_results(self):
-        expected = {r["iso2"]: r for r in cm.read_csv(ROOT / "model" / "eu27_results.csv")}
-        self.assertEqual(len(expected), 27)
-        for iso in sorted(expected):
+    def test_changing_the_netherlands_changes_no_other_document(self):
+        import document
+        import national_data as nd
+        rows = params()
+        register = nd.load()
+        src = document.Sources()
+
+        def docs(p):
+            return {iso: document.country(country_data.build(c, nd.for_country(register, iso)), src)
+                    for iso, c in p.items() if iso != "NL"}
+
+        before = docs(rows)
+        mutated = {**rows, "NL": {**rows["NL"], "population_m": "99.9", "gdp_eur_bn": "9999"}}
+        self.assertEqual(before, docs(mutated))
+
+    def test_no_other_brief_mentions_the_dutch_case(self):
+        for f in sorted(ROOT.glob("countries/*/GOAL.md")):
+            if f.parent.name == "NL":
+                continue
+            with self.subTest(country=f.parent.name):
+                text = f.read_text(encoding="utf-8")
+                self.assertNotIn("Dutch", text)
+                self.assertNotIn("Netherlands", text)
+
+    def test_no_scaled_capacity_reaches_the_bundle(self):
+        """#73: capacity is withdrawn until sized from a country's own holdings."""
+        bundle = json_bundle()
+        self.assertNotIn("totals", bundle)
+        for iso, c in bundle["countries"].items():
             with self.subTest(iso=iso):
-                got = cm.result_row(cm.run_country(iso, write=False))
-                for key, want in expected[iso].items():
-                    self.assertEqual(
-                        str(got[key]), want,
-                        f"{iso}.{key}: model gives {got[key]!r}, committed file says {want!r}",
-                    )
+                self.assertNotIn("capacity", c)
+                self.assertNotIn("scale", c)
 
 
-class Conservation(unittest.TestCase):
-    def test_phase_capex_sums_to_total(self):
-        for iso in sorted(params()):
-            with self.subTest(iso=iso):
-                s = cm.run_country(iso, write=False)
-                total = sum(p["CAPEX (EUR mm)"] for p in s.phases)
-                # Phase rows are rounded to 0.1, so allow drift of half a unit per phase.
-                self.assertAlmostEqual(total, s.capex_total, delta=0.05 * len(s.phases))
-
-    def test_region_shares_sum_to_one(self):
-        for iso in sorted(params()):
-            with self.subTest(iso=iso):
-                s = cm.run_country(iso, write=False)
-                if s.regions:
-                    total = sum(r["Share of design load"] for r in s.regions)
-                    self.assertAlmostEqual(total, 1.0, places=6)
-
-    def test_site_count_respects_both_floors(self):
-        p = params()
-        for iso in sorted(p):
-            with self.subTest(iso=iso):
-                s = cm.run_country(iso, write=False)
-                self.assertGreaterEqual(s.sites, s.sites_by_mw)
-                self.assertGreaterEqual(s.sites, int(p[iso]["min_sites"]))
+def json_bundle() -> dict:
+    import json
+    return json.loads((ROOT / "web" / "public" / "data" / "eu27.json").read_text(encoding="utf-8"))
 
 
 class CsvIntegrity(unittest.TestCase):
@@ -144,72 +145,6 @@ class CsvIntegrity(unittest.TestCase):
                     self.assertTrue(lo <= float(r[col]) <= hi, f"{r[col]} outside [{lo}, {hi}]")
 
 
-class ReferentialIntegrity(unittest.TestCase):
-    def test_every_workload_class_has_a_phase(self):
-        phases = cm.load_phase_map()
-        for iso in sorted(params()):
-            with self.subTest(iso=iso):
-                classes = {r["Class"] for r in cm.read_csv(cm.COUNTRIES / iso / "workloads_inputs.csv")}
-                self.assertTrue(classes <= phases.keys(), f"unmapped: {sorted(classes - phases.keys())}")
-
-    def test_scaling_rules_match_the_nl_baseline(self):
-        """A renamed workload in one file and not the other raises a bare KeyError deep
-        inside the generator; catch it here with a readable message instead."""
-        rules = {r["Workload"] for r in cm.read_csv(gc.RULES)}
-        baseline = {r["Workload"] for r in cm.read_csv(cm.COUNTRIES / "NL" / "workloads_inputs.csv")}
-        self.assertEqual(rules, baseline)
-
-    def test_every_country_has_regions_and_a_directory(self):
-        for iso in sorted(params()):
-            with self.subTest(iso=iso):
-                self.assertTrue((cm.COUNTRIES / iso).is_dir())
-                if iso != gc.BASELINE:
-                    self.assertIn(iso, gc.REGIONS)
-
-
-class MatrixScoring(unittest.TestCase):
-    def test_scores_are_normalised(self):
-        p, nl = params(), None
-        nl = p[gc.BASELINE]
-        nl_s = cm.run_country(gc.BASELINE, write=False)
-        for iso in sorted(p):
-            s = cm.run_country(iso, write=False)
-            wl = cm.read_csv(cm.COUNTRIES / iso / "workloads_inputs.csv")
-            d = country_data.build(p[iso], nl, s, wl, nl_s)
-            for dim, cell in d["matrix"].items():
-                with self.subTest(iso=iso, dimension=dim):
-                    self.assertTrue(0.0 <= cell["score"] <= 1.0)
-                    self.assertTrue(cell["source"], "every score needs its source text")
-
-    def test_matrix_discriminates(self):
-        """Guards against a matrix that has stopped telling countries apart.
-
-        The check is per-column variance and overall spread, NOT whether a leader tops
-        out. France currently scores 1.00 on all eight dimensions and Germany on seven;
-        that is a genuine finding (France does lead the EU on sovereign-cloud doctrine),
-        not a defect. What would be a defect is a dimension that scores every country
-        the same, or a distribution so flat that ranking is noise.
-        """
-        p = params()
-        nl, nl_s = p[gc.BASELINE], cm.run_country(gc.BASELINE, write=False)
-        rows = {}
-        for iso in sorted(p):
-            s = cm.run_country(iso, write=False)
-            wl = cm.read_csv(cm.COUNTRIES / iso / "workloads_inputs.csv")
-            rows[iso] = country_data.build(p[iso], nl, s, wl, nl_s)["matrix"]
-
-        for dim in next(iter(rows.values())):
-            with self.subTest(dimension=dim):
-                distinct = {rows[iso][dim]["score"] for iso in rows}
-                self.assertGreater(len(distinct), 1, f"{dim} scores every country identically")
-
-        totals = [sum(c["score"] for c in m.values()) for m in rows.values()]
-        self.assertGreater(
-            max(totals) - min(totals), 2.0,
-            "total scores are too tightly clustered for the ranking to mean anything",
-        )
-
-
 class GeneratorDeterminism(unittest.TestCase):
     def test_regeneration_is_a_no_op(self):
         """With the date pinned, running the generator twice must change nothing."""
@@ -231,17 +166,6 @@ class GeneratorDeterminism(unittest.TestCase):
         run()
         self.assertEqual(before, fingerprint(), "generator is not byte-reproducible")
 
-    def test_nl_narrative_is_never_regenerated(self):
-        """countries/NL/GOAL.md is the hand-written source the whole model derives from."""
-        nl_goal = cm.COUNTRIES / "NL" / "GOAL.md"
-        before = nl_goal.read_bytes()
-        subprocess.run(
-            [sys.executable, str(ROOT / "model" / "generate_countries.py")],
-            cwd=ROOT, env={**os.environ, "SOURCE_DATE_EPOCH": PINNED_EPOCH},
-            capture_output=True, check=True,
-        )
-        self.assertEqual(before, nl_goal.read_bytes())
-
 
 class ContentsMatchHeadings(unittest.TestCase):
     """A brief must not advertise a section it does not have.
@@ -256,12 +180,7 @@ class ContentsMatchHeadings(unittest.TestCase):
     ENTRY = re.compile(r"^(\d+)\. \[(.+)\]\(#(.+)\)$", re.M)
 
     def briefs(self):
-        """All 27, NL included.
-
-        NL is hand-written and the generator never touches it (#5), so nothing else would
-        notice a section added there without a matching contents entry. That is exactly the
-        drift worth catching: NL is the reference case the other 26 are scaled from.
-        """
+        """All 27, NL included: every brief is generated the same way (#72)."""
         return sorted(ROOT.glob("countries/*/GOAL.md"))
 
     def test_every_generated_brief_has_a_contents_list(self):

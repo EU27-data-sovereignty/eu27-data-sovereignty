@@ -1298,8 +1298,11 @@ state. The Netherlands was chosen only because its spreadsheet came first; no en
 explains a state by contrast with another. Supersedes #5 and the premise of #8 (workloads as Dutch rows
 renamed per country).
 
-**Verified:** NOT YET. Verified when a test asserts no NL input reaches another country's model or text, and
-`grep -rn "Dutch" model/ web/src` finds only the NL chapter.
+**Verified:** 2026-09-29. `tests/test_model.py` `NoCountryIsDerivedFromAnother`: changing the Netherlands'
+parameter row leaves the other 26 documents identical; no other brief contains "Dutch" or "Netherlands";
+the bundle has no `capacity`, `scale` or `totals`. `python3 -m unittest discover -s tests` → OK. The
+spreadsheet reproduction is **kept**, renamed `EngineReproducesTheSpreadsheet`, as an arithmetic check of
+the capacity engine only; its Dutch inputs size nothing.
 
 *Would change if:* a sourced, published per-country figure turns out to be unobtainable for most states and
 the project decides an explicitly labelled common template is better than showing nothing.
@@ -1358,7 +1361,9 @@ unified the facts; nothing unified what is said about them or how it looks.
 **Closes off.** Hand-written prose inside React components or typst code; per-output section lists; the
 pandoc dependency. Supersedes #39's scope and the "deliberately not shared" section lists.
 
-**Verified:** NOT YET.
+**Verified:** 2026-09-29. `model/document.py` builds all 27 documents; `book/report.py` (report and 27
+country PDFs), `model/generate_countries.py` (27 GOAL.md) and the web `DocumentView` render them.
+`design/build_tokens.py --check` passes (`tests/test_tokens.py`). pandoc and `goal_body()` are removed.
 
 *Would change if:* an output needs content that genuinely has no place in the others (the poster is the
 likely case), in which case it gets its own block type, not its own renderer.
@@ -1385,7 +1390,9 @@ The author requires source documentation for everything, "unimpeachable".
 **Closes off.** Publishing any statement the register cannot back. Most of the current posture text is
 unsourced and will show as such until researched.
 
-**Verified:** NOT YET.
+**Verified:** 2026-09-29. `python3 model/document.py --check` → "27 documents checked, 0 unsourced facts",
+now a `test.sh` stage. `tests/test_book.py` asserts one footnote per fact span and that every footnote
+link lands on an appendix entry; the web e2e test follows a footnote to its source.
 
 *Would change if:* never for the gate itself; the display format may change.
 
@@ -1409,6 +1416,8 @@ per-country PDFs.
 **Closes off.** The terracotta web theme (#21, superseded for this project) and the #51 Chrome PDF path.
 #28's mono rule remains for a printed book edition only.
 
-**Verified:** NOT YET.
+**Verified:** 2026-09-29. `tests/test_tokens.py` fails on any star shape in a template and on any hex
+colour in a web component. `tests/test_artifacts.py` `Retired` fails if a briefing PDF reappears;
+`git ls-files 'countries/*/*-briefing.pdf'` → empty. `vercel.json` redirects `/briefs/:iso.pdf`.
 
 *Would change if:* the project is formally endorsed by an EU body and permitted to use its marks.

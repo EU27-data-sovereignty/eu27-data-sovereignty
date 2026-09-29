@@ -9,7 +9,7 @@
 // gold only: no circle of stars, flag or other official mark (#50, #76).
 #import "/templates/tokens.typ": *
 
-#let report(title: "", subtitle: "", generated: "", provenance: "", body) = {
+#let report(title: "", subtitle: "", generated: "", provenance: "", kicker: "EU-27 · Country report", body) = {
   set document(title: title, author: "Pieter de Jong")
   set text(font: ("Libertinus Serif", "Georgia", "Times New Roman"), size: 10pt, fill: ink, lang: "en")
   set par(justify: true, leading: 0.62em, spacing: 0.95em)
@@ -28,7 +28,7 @@
     #pad(x: 26mm)[
       #block[
         #set text(size: 9pt, tracking: 2pt, fill: eu-gold)
-        #upper("EU-27 · Country report")
+        #upper(kicker)
       ]
       #v(3mm)
       #block[
@@ -131,6 +131,11 @@
   )
 
   // Contents: countries only, with dotted leaders and the page in blue.
+  // Footnotes carry the sources (#75): small, ruled off, numbered in blue.
+  set footnote.entry(separator: line(length: 30%, stroke: 0.5pt + eu-blue), gap: 0.35em, indent: 0em)
+  show footnote.entry: set text(size: 7pt, fill: ink)
+  show footnote: set text(fill: eu-blue)
+
   show outline.entry.where(level: 1): it => {
     set text(size: 10.5pt)
     link(it.element.location(), it.indented(none, it.body() + box(width: 1fr, repeat[.#h(3pt)]) + text(fill: eu-blue, weight: "bold", it.page())))
@@ -163,3 +168,25 @@
   stroke: 0.5pt + eu-blue,
   text(size: 9pt, body),
 )
+
+// A value withheld because no checked source supports it yet (#75). Grey italics: visible as a gap,
+// never mistaken for a fact.
+#let gap(body) = text(style: "italic", fill: quiet, body)
+
+// Method notes, notices and gaps. Tone changes the rule colour only; the words say which it is.
+#let callout(tone: "method", body) = block(
+  width: 100%, fill: wash, inset: (left: 9pt, right: 8pt, y: 7pt),
+  stroke: (left: 2.5pt + (if tone == "gap" { eu-gold } else { eu-blue })),
+  text(size: 9pt, body),
+)
+
+// Sources appendix: one entry per source, then the claims that cite it with their quotes.
+#let source-entry(n, body) = block(above: 1.1em, below: 0.4em, breakable: false,
+  grid(columns: (9mm, 1fr), column-gutter: 2mm,
+    text(weight: "bold", fill: eu-blue)[S#n], text(size: 8.5pt, body)))
+
+#let claim-entry(claim, quote, meta) = pad(left: 11mm, bottom: 0.3em, block(breakable: false)[
+  #set text(size: 7.5pt)
+  #text(font: print-mono, size: 6.5pt, fill: quiet, claim) \
+  #emph(["#quote"]) #text(fill: quiet)[(#meta)]
+])

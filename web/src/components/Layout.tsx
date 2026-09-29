@@ -5,15 +5,13 @@ import { useTheme } from '@/utils/theme'
 
 const NAV = [
   { to: '/', label: 'Overview', end: true },
-  { to: '/matrix', label: 'Sovereignty matrix' },
-  { to: '/workloads', label: 'Workloads' },
-  { to: '/scenario', label: 'Scenario' },
-  { to: '/map', label: 'Map' },
   { to: '/countries', label: 'Countries' },
+  { to: '/holdings', label: 'Critical holdings' },
+  { to: '/sources', label: 'Sources' },
   { to: '/methodology', label: 'Methodology' },
 ]
 
-export function Layout({ generated }: { generated: string }) {
+export function Layout({ generated, provenance }: { generated: string; provenance: string }) {
   const [mode, setMode] = useTheme()
 
   return (
@@ -25,7 +23,7 @@ export function Layout({ generated }: { generated: string }) {
         Skip to content
       </a>
 
-      <ProvenanceBanner generated={generated} />
+      <ProvenanceBanner generated={generated} provenance={provenance} />
 
       <header className="no-print border-b border-[var(--color-border)] px-4 py-3">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-4 gap-y-2">
@@ -62,7 +60,8 @@ export function Layout({ generated }: { generated: string }) {
 
       <footer className="no-print mt-12 border-t border-[var(--color-border)] px-4 py-6 text-xs text-[var(--color-fg-secondary)]">
         <div className="mx-auto max-w-6xl">
-          MIT licensed. Every figure is a working assumption — corrections welcome via{' '}
+          MIT licensed. Independent research, not affiliated with any government or EU body.
+          Corrections and sources welcome via{' '}
           <a
             className="underline"
             href="https://github.com/pieteradejong/sovereign-data-centers/issues/new?template=data-correction.yml"

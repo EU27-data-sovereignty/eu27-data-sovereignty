@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Tracked-artefact integrity: the 27 posters and 27 briefing PDFs under countries/.
+Tracked-artefact integrity: the 27 posters under countries/. The Chrome briefing PDFs were
+retired by #76; the per-country PDF is built at deploy time and never committed (#41).
 
     python3 -m unittest discover -s tests -v
 
@@ -39,13 +40,13 @@ def sha256_file(path: Path) -> str:
 def expected_artefacts() -> list[Path]:
     out = []
     for d in sorted(COUNTRIES.iterdir()):
-        if d.is_dir() and (d / "workloads_inputs.csv").exists():
-            out += [d / f"{d.name}-infographic.png", d / f"{d.name}-briefing.pdf"]
+        if d.is_dir() and (d / "GOAL.md").exists():
+            out += [d / f"{d.name}-infographic.png"]
     return out
 
 
 class ArtefactsExist(unittest.TestCase):
-    def test_every_country_has_both_artefacts(self):
+    def test_every_country_has_its_poster(self):
         missing = [p.relative_to(ROOT).as_posix() for p in expected_artefacts() if not p.is_file()]
         self.assertEqual(missing, [], f"missing artefacts; {REBUILD}")
 
@@ -80,20 +81,11 @@ class Manifest(unittest.TestCase):
         self.assertEqual(stale, [], f"{len(stale)} artefacts predate the current data; {REBUILD}")
 
 
-class Reproducibility(unittest.TestCase):
-    def test_pdfs_carry_the_pinned_build_date(self):
-        """Chrome stamps wall-clock /CreationDate, which made every rebuild a diff.
-        export_artifacts.pin_pdf_dates rewrites both date fields to .build-epoch (#34)."""
-        import time
-
-        epoch = int((ROOT / ".build-epoch").read_text().strip())
-        expected = time.strftime("D:%Y%m%d%H%M%S+00'00'", time.gmtime(epoch)).encode("ascii")
-        offenders = []
-        for pdf in sorted(COUNTRIES.glob("*/*-briefing.pdf")):
-            data = pdf.read_bytes()
-            if data.count(b"/CreationDate (" + expected + b")") != 1:
-                offenders.append(pdf.relative_to(ROOT).as_posix())
-        self.assertEqual(offenders, [], f"PDF carries a wall-clock date; {REBUILD}")
+class Retired(unittest.TestCase):
+    def test_no_chrome_briefing_pdf_is_tracked(self):
+        """#76: one per-country PDF, from the content model. A briefing PDF reappearing here
+        would be a second, unsourced rendering of the same country."""
+        self.assertEqual(sorted(COUNTRIES.glob("*/*-briefing.pdf")), [])
 
 
 if __name__ == "__main__":

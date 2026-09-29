@@ -1,255 +1,151 @@
-# Italy - Sovereign Government Data Center Network
+# Italy: critical data holdings and sovereign hosting
 
-> Generated 2026-09-05 by `model/generate_countries.py` from the Dutch reference case
-> (`countries/NL/GOAL.md`) and `model/eu27_parameters.csv`. Every number below is a **scaled working
-> assumption**, not a sourced figure. Edit the CSVs in this directory and re-run
-> `python3 model/capacity_model.py IT` to update the capacity numbers; edit
-> `model/eu27_parameters.csv` or `model/scaling_rules.csv` and re-run the generator to update this file.
+> Generated 2026-09-05 by `model/generate_countries.py` from the content model (`model/document.py`). The same document is typeset as the country PDF and rendered on the web. Every fact carries a footnote to a source whose text was fetched and checked; a value in *italics* is withheld because no checked source supports it yet.
 
 ## Contents
 
-1. [Working thesis](#1-working-thesis)
-2. [Starting point](#2-starting-point)
-3. [What is structurally different from the Dutch case](#3-what-is-structurally-different-from-the-dutch-case)
-4. [Workload demand (scaled from the Dutch baseline)](#4-workload-demand-scaled-from-the-dutch-baseline)
-5. [Capacity model output](#5-capacity-model-output)
-6. [Proposed geography (first-pass hypothesis)](#6-proposed-geography-first-pass-hypothesis)
-7. [Geography and threat notes](#7-geography-and-threat-notes)
-8. [Recommendations specific to Italy](#8-recommendations-specific-to-italy)
-9. [Open questions](#9-open-questions)
-10. [Legal and regulatory posture](#10-legal-and-regulatory-posture)
-11. [Current state and provider landscape](#11-current-state-and-provider-landscape)
-12. [Migration path and cost](#12-migration-path-and-cost)
-13. [Critical national data in scope (Tier 0 / Tier 1)](#13-critical-national-data-in-scope-tier-0--tier-1)
+1. [Fundamentals](#1-fundamentals)
+2. [Critical data holdings, by priority](#2-critical-data-holdings-by-priority)
+3. [Foreign-dependency exposure](#3-foreign-dependency-exposure)
+4. [Legal and institutional posture](#4-legal-and-institutional-posture)
+5. [Capacity](#5-capacity)
+6. [Research still open](#6-research-still-open)
 
-## 1. Working thesis
+## 1. Fundamentals
 
-Italy does not need to become technologically autarkic. It needs enough independently controlled compute,
-storage, networking, identity, cryptography and operational capability that the state can continue functioning
-when foreign commercial infrastructure is unavailable, politically constrained, compromised, or no longer
-trustworthy. The Dutch design rules (sovereignty is a stack, not a building; 3-5 separated regions; dual fibre
-paths; no single hardware supplier; a first-class developer platform) are taken as the starting point and
-adjusted below for what is structurally different about Italy.
+Italy described on its own measured characteristics. Each figure is the published value of a pinned Eurostat series; the footnote names the series, the dimensions and the retrieval date.
 
-## 2. Starting point
-
-| | |
-|---|---|
-| Population | 58.94 m (1 January; Eurostat tps00001, 2025) |
-| GDP | EUR 2,258 bn (current prices; Eurostat nama_10_gdp, 2025) |
-| Public administration employment (NACE O) | 1,159 k (Eurostat nama_10_a64_e, 2023; value does not reproduce the source, under review) |
-| Non-household electricity price | 220.3 EUR/MWh (band IC, excl. VAT; Eurostat nrg_pc_205, 2025-S2) |
-| Renewables in electricity | 40.7% (Eurostat nrg_ind_ren, 2024) |
-| Land area | 297,734 km2 (Eurostat reg_area3, 2019) |
-| Live hyperscaler regions in-country | 4 |
-| Existing government / sovereign cloud | Polo Strategico Nazionale (PSN) - operational since 2023, TIM/Leonardo/CDP/Sogei consortium, 4 DC pairs; ACN cloud qualification regime (Strategia Cloud Italia) |
-| National digital identity (anchor workload) | SPID / CIE (IT-Wallet in rollout) |
-| Internet exchange / cable landings | MIX Milan; NAMEX Rome; landings Genoa, Sicily, Bari |
-
-Relative to the Dutch baseline: population x3.27, public administration x1.62,
-GDP x1.93. Resulting design load: x2.55 the Dutch figure.
-
-## 3. What is structurally different from the Dutch case
-
-- **High seismic risk.** Base isolation or seismic-rated structures are mandatory, not optional, at the primary site; the second and third regions should be chosen in a different seismic domain so a single event cannot take out two regions. Expect facility CAPEX above the EUR 10 m/MW planning figure.
-- **Expensive power (220 EUR/MWh vs. EU average ~184).** Power is the dominant OPEX line; free cooling, heat reuse, and siting near renewables or nuclear baseload move the economics more than server choice does. The model's power OPEX line is the number to attack first.
-- **Dense hyperscaler presence (4 live regions).** Commercial capacity, fibre and skills exist in-country; the sovereign core can stay lean and the hybrid model works as designed. The risk is the opposite one: political pressure to declare a hyperscaler region 'sovereign enough' (Dutch GOAL.md section 17: location is not sovereignty).
-
-## 4. Workload demand (scaled from the Dutch baseline)
-
-Scaling weights per workload class are in `model/scaling_rules.csv`; the Dutch rows they scale are in
-`countries/NL/workloads_inputs.csv`. Frontline multiplier applied: no.
-
-| Workload | Class | CPU cores | GPU eq. | Storage (PB) | Avail. factor |
-|---|---|---:|---:|---:|---:|
-| Digital identity / SPID | Critical government | 58,800 | 0 | 13.1 | 1.5 |
-| Core government applications | Government | 134,300 | 0 | 44.0 | 1.35 |
-| Data platforms & analytics | Government data | 90,900 | 208 | 155.9 | 1.25 |
-| AI / sovereign model serving | AI | 34,700 | 984 | 23.1 | 1.3 |
-| Defense classified compute | Defense | 98,000 | 840 | 49.0 | 1.5 |
-| Cybersecurity / SOC / telemetry | Security | 61,000 | 88 | 69.3 | 1.4 |
-| Scientific / public research | Research | 50,200 | 248 | 38.6 | 1.15 |
-
-## 5. Capacity model output
-
-| Metric | Value |
+| Indicator | Value |
 |---|---:|
-| Physical servers | 14,774 (CPU 10,208 / GPU 671 / storage 3,895) |
-| Rack equivalents | ~462 |
-| IT critical load | 24.1 MW |
-| Facility load (PUE 1.25) | 30.1 MW |
-| Facility design load (+20% headroom) | **36.1 MW** |
-| Sites by capacity / recommended | 4 / **4** (minimum 4) |
-| Average design MW per site | 9.0 MW |
-| Total CAPEX | **EUR 857 m** (facility EUR 361 m, IT EUR 420 m, network EUR 76 m) |
-| Annual energy | 263,831 MWh |
-| Annual OPEX | **EUR 97 m / yr** (power EUR 58 m, non-power EUR 39 m) |
+| Population | 58.94 million[^s1] |
+| GDP, current prices | 2 258.0 EUR bn[^s2] |
+| Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
+| Non-household electricity price | 220.3 EUR/MWh[^s3] |
+| Renewables share of electricity | 40.7 %[^s4] |
+| Land area | 297 734 km²[^s5] |
 
-Full table: `facility_summary.csv`.
+## 2. Critical data holdings, by priority
 
-## 6. Proposed geography (first-pass hypothesis)
+The holdings Italy cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
 
-Site posture: standard. Separation target: 50-100 km failure domains, dual fibre paths, distinct grid feeds.
+> Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Region | Role | Share | Design MW | Racks | Facility CAPEX | Notes |
-|---|---|---:|---:|---:|---:|---|
-| Milan / Lombardy | Primary civil cloud | 36% | 13.0 | 166 | EUR 130 m | PSN pair, MIX, all four hyperscaler regions nearby; Po flood zoning. |
-| Rome / Lazio | Sovereign secondary | 18% | 6.5 | 83 | EUR 65 m | Ministries, Sogei, NAMEX; Apennine seismic zoning. |
-| Turin / Piedmont | Government / continuity | 18% | 6.5 | 83 | EUR 65 m | Alpine hydro, TOP-IX; lower seismicity. |
-| Puglia / Bari | Defense / industrial | 18% | 6.5 | 83 | EUR 65 m | Southern separation, Adriatic cable landings; renewables belt. |
-| Emilia / Bologna | Strategic reserve | 10% | 3.6 | 46 | EUR 36 m | EuroHPC Leonardo campus (Tecnopolo); reserve - 2023 flood plains excluded. |
+| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 
-These regions encode only the obvious constraints (capital estate, second metro, distance from the frontier,
-fault or flood zone). They are to be replaced by the scored site selection in workstream A of the Dutch
-`TODO.md` (grid capacity, flood risk, fibre, failure independence, physical security, land, cooling).
+## 3. Foreign-dependency exposure
 
-## 7. Geography and threat notes
+Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
-High seismic/volcanic (Apennines, Naples, Etna); Po/Emilia floods (2023); gas-import dependent with structurally high power price; north-south grid bottlenecks (Lombardy hosts most capacity); low geopolitical frontline risk
+| Infrastructure | Holdings |
+|---|---:|
+| National infrastructure | 0 |
+| EU provider | 0 |
+| Mixed | 0 |
+| Non-EU provider | 0 |
+| Not stated in sources | 0 |
 
-## 8. Recommendations specific to Italy
+## 4. Legal and institutional posture
 
-1. **Anchor on SPID.** Digital identity is the workload that, if it fails, stops every other
-   government service; it belongs in the sovereign core first, active-active across at least two regions.
-2. **Build on the existing estate, do not replace it.** Polo Strategico Nazionale (PSN) - operational since 2023, TIM/Leonardo/CDP/Sogei consortium, 4 DC pairs is the
-   institutional starting point; the sovereign core should be its next generation, with one governance owner.
-3. **Site posture: standard.** Standard Tier III+ with 50-100 km separation is sufficient; spend the hardening budget on supply-chain assurance instead.
-4. **Power strategy.** Power is the binding constraint; treat grid connection lead time and on-site generation as first-order site criteria.
-5. **Hybrid tier.** Use in-country commercial regions for the non-critical tier, but keep identity, defense, security telemetry and registries in the sovereign core.
+0 of 8 posture entries have a verified source. The others were researched from public policy documents but are withheld here until each is checked against the governing instrument.
 
-## 9. Open questions
-
-- Replace scaled workload rows with real ministry/agency demand (see `countries/NL/CAPACITY_PLAN.md` for the method).
-- Which body owns the sovereign core, and how are agencies compelled or incentivised to migrate?
-- Which regions federate with EU partners for mutual disaster recovery, and which stay national-only?
-- Site-size assumption: is the 12 MW planning unit right for Italy, or should sites be larger?
-
-## 10. Legal and regulatory posture
-
-> **These entries are unverified research, not legal advice.** They were compiled in September 2026 from
-> public policy documents and have **not** been checked against the primary instruments. The maturity,
-> certification-strength and dependency ratings below are the author's judgements, not official or
-> measured ratings. Do not rely on this section for a procurement or policy decision. Corrections are
-> welcome via the repository's issue template.
-
-Every member state shares one baseline: GDPR for personal data, NIS2 for the security of essential
-entities, the Data Act for switching and access, and the EU Cloud Services Scheme (EUCS) still unresolved
-on the sovereignty requirements that would matter most here. That baseline governs *processing*. It does
-not, on its own, place infrastructure under national control - which is the gap a sovereign core exists
-to close.
-
-| | |
+| Dimension | Position |
 |---|---|
-| Governing instrument | Polo Strategico Nazionale (PSN) with mandatory migration deadlines for central administrations |
-| Cloud certification | ACN cloud qualification (formerly AgID) with ordinary/critical/strategic data tiers |
-| Data classification | Legge 124/2007: Riservato / Riservatissimo / Segreto / Segretissimo |
-| Procurement route | Consip central purchasing; PSN concession held by TIM, CDP, Leonardo and Sogei |
+| Governing instrument | *Not yet sourced* |
+| Sovereign or government cloud | *Not yet sourced* |
+| Cloud certification | *Not yet sourced* |
+| Data classification | *Not yet sourced* |
+| Procurement route | *Not yet sourced* |
+| National digital identity | *Not yet sourced* |
+| Internet exchange | *Not yet sourced* |
+| Hyperscaler regions in country | *Not yet sourced* |
 
-A binding national standard exists (ACN cloud qualification (formerly AgID) with ordinary/critical/strategic data tiers), so the sovereign core can be certified against something already recognised rather than inventing its own controls.
+## 5. Capacity
 
-The classification ladder is the practical control: it decides which tier of data may leave the
-jurisdiction at all, and it should be mapped onto the four migration phases in section 12 before any
-procurement starts. Buying capacity before deciding what may sit on it is how sovereign programmes end up
-with expensive infrastructure hosting the wrong workloads.
+> Not yet sized. Capacity for Italy will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 0 of 39 holding classes have a sourced measurement so far.
 
-**Foreign jurisdiction exposure.** PSN runs Azure, Google and Oracle technology under Italian operator control; strategic data must stay on the national stack
+## 6. Research still open
 
-Dependency on US hyperscalers is **moderate**: national arrangements carry part of the estate, and the sovereign core extends an existing position rather than reversing one. Under the US CLOUD Act and FISA 702, a provider subject to US jurisdiction can face a lawful
-order for data it holds, regardless of where the data physically sits. Data residency in-country is
-therefore necessary but not sufficient; what matters is who holds the keys and who can be compelled.
+Tier 0 and 1 holdings for Italy without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
-## 11. Current state and provider landscape
+- Civil registry core (tier 0)
+- Facial biometric (tier 0)
+- Fingerprint biometric (tier 0)
+- Breeder document scans (tier 0)
+- Document issuance history (tier 0)
+- Digital identity credentials (tier 0)
+- Authentication audit log (tier 0)
+- Electoral roll entry (tier 0)
+- State PKI and qualified trust services (tier 0)
+- Residence and migration status (tier 1)
+- Tax (tier 1)
+- Customs declarations (tier 1)
+- Benefits & pensions (tier 1)
+- Statutory health insurance (tier 1)
+- Land & property registry (tier 1)
+- Business registry (tier 1)
+- Beneficial ownership register (tier 1)
+- Vehicle & licensing (tier 1)
+- Judicial & criminal justice (tier 1)
+- Police information systems (tier 1)
+- Border and visa systems (tier 1)
+- Firearms register (tier 1)
+- Official gazette and legislation (tier 1)
+- Treasury and state accounts (tier 1)
+- Government payroll and personnel (tier 1)
+- Election management and results (tier 1)
+- Central bank systems (tier 1)
+- Defence command and logistics (tier 1)
+- Intelligence services (tier 1)
+- Emergency calls and public-safety radio (tier 1)
+- Crisis management and civil protection (tier 1)
+- Electricity grid control (tier 1)
+- Water management control (tier 1)
+- Education (tier 1)
 
-| | |
-|---|---|
-| Government cloud | Polo Strategico Nazionale (PSN) - operational since 2023, TIM/Leonardo/CDP/Sogei consortium, 4 DC pairs; ACN cloud qualification regime (Strategia Cloud Italia) |
-| Maturity | federated (author's rating, not an official one) |
-| Digital identity | SPID / CIE (IT-Wallet in rollout) |
-| In-country commercial regions | 4 |
-| Interconnection | MIX Milan; NAMEX Rome; landings Genoa, Sicily, Bari |
+---
 
-A federated government cloud is already in production. The open question is consolidation and governance, not construction.
-
-Against that starting point, the modelled sovereign core is **36.1 MW of design load across
-4 site(s)**, or roughly 14,774 servers. The gap between what runs today and that
-figure is the actual programme; the capacity model in sections 4-6 sizes the destination, not the journey.
-
-## 12. Migration path and cost
-
-Workloads are sequenced by how badly loss of control would hurt, not by how easy they are to move. The
-phases below are derived from the workload classes in `model/migration_phases.csv`; per-country figures
-are in `migration_phases.csv` in this directory.
-
-| Phase | Scope | Servers | Design MW | CAPEX | Cumulative | Hybrid-eligible |
-|---|---|---:|---:|---:|---:|---|
-| 1 | Sovereign core | 4,423 | 8.7 | EUR 166 m | 19% | no |
-| 2 | Security and defense | 4,872 | 12.7 | EUR 308 m | 55% | no |
-| 3 | State record | 3,131 | 6.5 | EUR 163 m | 74% | no |
-| 4 | Elective | 2,348 | 8.3 | EUR 219 m | 100% | yes |
-
-**Phase 1 is the number that matters: EUR 166 m for 8.7 MW,
-19% of total CAPEX.** That is the floor - identity and core government
-services - below which no hybrid arrangement helps, because these workloads cannot be foreign-hosted under
-any sovereignty posture worth the name. It is also, notably, a small fraction of the full build: sovereignty
-for the workloads that define the state is cheaper than the headline figure suggests.
-
-Phases 2 and 3 follow on clearance and legal constraints rather than cost. Phase 4 can use in-country commercial capacity (4 live region(s)) under sovereign-held keys, which is what keeps the sovereign core small.
-
-Sequencing caveat: the CAPEX split above apportions facility cost by each phase's share of IT load, which
-assumes phases are built into a shared facility programme rather than as separate buildings. Building
-phase 1 alone, on its own site, costs disproportionately more - the facility is largely a fixed cost.
-
-## 13. Critical national data in scope (Tier 0 / Tier 1)
-
-The workloads above are sized in servers and megawatts. This section says what they would *hold*:
-the records whose loss or foreign control is the reason a sovereign core is argued for at all. The
-tiering is by consequence of loss rather than by department, and is set out in
-`TIER0-TIER1-SIZING.md` - tier 0 is the identity spine, without which the state cannot say who
-exists; tier 1 is the enforceable relationship between citizen and state.
-
-**0 of 39 record classes recorded for Italy.** The register is
-`model/national_data.csv`; run `./run.sh registers` for coverage across all 27.
-
-| Tier | Record class | Register | Held by | Official description |
-|---|---|---|---|---|
-| 0 | Civil registry core | *not yet recorded* |  |  |
-| 0 | Facial biometric | *not yet recorded* |  |  |
-| 0 | Fingerprint biometric | *not yet recorded* |  |  |
-| 0 | Breeder document scans | *not yet recorded* |  |  |
-| 0 | Document issuance history | *not yet recorded* |  |  |
-| 0 | Digital identity credentials | *not yet recorded* |  |  |
-| 0 | Authentication audit log | *not yet recorded* |  |  |
-| 0 | Electoral roll entry | *not yet recorded* |  |  |
-| 0 | State PKI and qualified trust services | *not yet recorded* |  |  |
-| 1 | Residence and migration status | *not yet recorded* |  |  |
-| 1 | Tax | *not yet recorded* |  |  |
-| 1 | Customs declarations | *not yet recorded* |  |  |
-| 1 | Benefits & pensions | *not yet recorded* |  |  |
-| 1 | Statutory health insurance | *not yet recorded* |  |  |
-| 1 | Land & property registry | *not yet recorded* |  |  |
-| 1 | Business registry | *not yet recorded* |  |  |
-| 1 | Beneficial ownership register | *not yet recorded* |  |  |
-| 1 | Vehicle & licensing | *not yet recorded* |  |  |
-| 1 | Judicial & criminal justice | *not yet recorded* |  |  |
-| 1 | Police information systems | *not yet recorded* |  |  |
-| 1 | Border and visa systems | *not yet recorded* |  |  |
-| 1 | Firearms register | *not yet recorded* |  |  |
-| 1 | Official gazette and legislation | *not yet recorded* |  |  |
-| 1 | Treasury and state accounts | *not yet recorded* |  |  |
-| 1 | Government payroll and personnel | *not yet recorded* |  |  |
-| 1 | Election management and results | *not yet recorded* |  |  |
-| 1 | Central bank systems | *not yet recorded* |  |  |
-| 1 | Defence command and logistics | *not yet recorded* |  |  |
-| 1 | Intelligence services | *not yet recorded* |  |  |
-| 1 | Emergency calls and public-safety radio | *not yet recorded* |  |  |
-| 1 | Crisis management and civil protection | *not yet recorded* |  |  |
-| 1 | Electricity grid control | *not yet recorded* |  |  |
-| 1 | Water management control | *not yet recorded* |  |  |
-| 1 | Education | *not yet recorded* |  |  |
-| 2 | Health records | *not yet recorded* |  |  |
-| 2 | Public health surveillance | *not yet recorded* |  |  |
-| 2 | Statistical microdata | *not yet recorded* |  |  |
-| 3 | Geospatial base data | *not yet recorded* |  |  |
-| 3 | National archives (digital) | *not yet recorded* |  |  |
-
-A blank row means this repository has not yet verified a source for that holding. It is not a statement that the country holds no such data. Every named holding, operator, legal basis, hosting arrangement and figure is cited to a document whose text was fetched and checked.
+[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>

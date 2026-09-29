@@ -1,6 +1,0 @@
-Region,Role,Share of design load,Design MW,Estimated racks,Indicative facility CAPEX (EUR mm),Resilience role,Notes
-Ile-de-France,Primary civil cloud,0.36,16.55,212.3,165.5,Active-active,"DINUM/ministry estate, France-IX; RTE saturation - use designated turnkey sites."
-Auvergne-Rhone-Alpes / Lyon,Sovereign secondary,0.18,8.28,106.1,82.8,Active-active,"Second metro, nuclear/hydro grid, Alpine seismic zoning."
-Sud-Ouest / Toulouse - Bordeaux,Defense / industrial,0.18,8.28,106.1,82.8,Active-active,"Defense-aerospace cluster, Atlantic cable landings (Amitie)."
-Ouest / Rennes - Nantes,Government / continuity,0.18,8.28,106.1,82.8,Active-active,"DGA cyber cluster (Rennes), Brittany cable landings."
-Grand Est - Hauts-de-France,Strategic reserve,0.1,4.6,59.0,46.0,Warm reserve,Nuclear grid headroom; reserve/expansion.

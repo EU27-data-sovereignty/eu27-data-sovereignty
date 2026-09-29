@@ -5,6 +5,47 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-09-29 (later)
+
+### Changed — each country on its own fundamentals; Dutch-scaled figures withdrawn (#72, #73)
+
+Every country used to be the Dutch workload table resized by population, public-administration
+employment and GDP. That method is gone: `scale_workloads`, `scaling_rules.csv`, the per-country
+generated CSVs, `model/eu27_results.csv` and the NL arguments of `country_data.build` are removed.
+The withdrawn headline figures, for the record: ~306 MW design load, ~125k servers, ~EUR 7.2 bn
+CAPEX across 86 sites. They were never measured for any state but the Netherlands. The hand-written
+Dutch plan moved to `countries/NL/REFERENCE-CASE.md` as a note; `countries/NL/GOAL.md` is now
+generated like the other 26.
+
+### Added — one content model, footnoted everywhere (#74, #75)
+
+`model/document.py` writes each country once: fundamentals (Eurostat, footnoted), critical holdings
+by priority, foreign-dependency exposure, legal posture, capacity status and open research. A value
+is shown only when a checked citation supports it; otherwise it is a gap. The report, 27 country
+PDFs (`/report/<ISO>.pdf`), the markdown briefs, the web pages and the posters all render it.
+`document.py --check` is a new `test.sh` stage.
+
+### Added — critical holdings register and verified research (#73)
+
+`model/holding_classes.csv` (39 classes), a widened `national_data` register with per-field
+citations, and `model/research.py`, which admits a researched claim only after fetching the
+document, recording its sha256, finding the quote and looking up an archived copy. Research for
+all 27 states is running.
+
+### Changed — the web app
+
+Matrix, Workloads and Scenario are removed: they rendered the withdrawn figures and unsourced
+ratings. New: country pages rendered from the document with footnotes and a source list, a sortable
+Countries table, Critical holdings across all 27 states, and a Sources page. The EU theme applies
+throughout (#76).
+
+### Removed
+
+The Chrome-printed briefing PDFs (#76), the mono typst briefs, pandoc, and the book's generated
+Parts III and IV.
+
+---
+
 ## 2026-09-29
 
 ### Added — the EU-27 country report, one PDF (#71)

@@ -67,9 +67,16 @@ ok "ledger is valid"
 # -----------------------------------------------------------------------------
 step "National data register"
 # Same reasoning as the ledger above: the coverage number goes in front of whoever runs
-# the gate. 405 = 15 Tier 0/Tier 1 record classes x 27 member states.
+# the gate. 1053 = 39 critical holding classes x 27 member states (#73).
 python3 model/national_data.py | tail -4
 ok "register is valid"
+
+# -----------------------------------------------------------------------------
+step "Every fact shown is sourced"
+# DECISIONS.md #75: a fact in any document must carry a claim that a checked citation supports.
+# An unsourced value is a gap, never a fact. This is the gate the author asked for: unimpeachable.
+python3 model/document.py --check
+ok "every fact in all 27 documents resolves to a checked source"
 
 # -----------------------------------------------------------------------------
 step "Generated files are current"
@@ -113,7 +120,7 @@ ok "prettier clean"
 
 step "Unit tests and TS/Python parity"
 npm run --silent test
-ok "capacity.ts reproduces the Python model for all 27 countries"
+ok "unit tests pass"
 
 step "Production build"
 npm run --silent build

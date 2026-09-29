@@ -53,7 +53,7 @@ show_help() {
     echo -e "${GREEN}Data and artefacts${NC}"
     echo "  data             Regenerate country CSVs, briefs and the JSON bundle"
     echo "  artefacts        Re-render the tracked posters and briefing PDFs (needs Chrome)"
-    echo "  export           Standalone per-country PDF briefs (book/build/briefs/)"
+    echo "  export           EU-27 report + 27 country PDFs (book/build/, from the content model)"
     echo "  book             Typeset the paper book"
     echo "  sources          Verification-ledger coverage report"
     echo "  registers        Critical national data register coverage report"
@@ -88,10 +88,10 @@ case "${1:-dev}" in
         # Briefs go into dist/, never into web/public/ — public/ is committed and these
         # are regenerable binaries. Skipped rather than fatal when typst is absent.
         if command -v typst &> /dev/null; then
-            python3 book/build.py --briefs -o web/dist/briefs > /dev/null
-            print_success "Built to web/dist/ (with 27 briefs at /briefs/<ISO>.pdf)"
+            python3 book/report.py -o web/dist > /dev/null
+            print_success "Built to web/dist/ (EU-27 report and 27 country PDFs at /report/<ISO>.pdf)"
         else
-            print_warning "typst missing — built without the per-country PDFs"
+            print_warning "typst missing — built without the PDFs"
             print_success "Built to web/dist/"
         fi
         ;;
@@ -115,14 +115,14 @@ case "${1:-dev}" in
         regen_data
         ;;
     artefacts)
-        # The tracked countries/<ISO>/ poster and briefing PDF (#24, #51). Distinct from
-        # `export`, which typesets standalone A4 briefs into the gitignored book/build/.
+        # The tracked countries/<ISO>/ infographic poster (#24, #51). The Chrome briefing PDF
+        # is retired (#76); the per-country PDF comes from `export`.
         check_deps
         python3 model/export_artifacts.py "${@:2}"
         ;;
     export)
-        check_deps
-        python3 book/build.py --briefs "${@:2}"
+        # The EU-27 report and the 27 country PDFs from the content model (#74, #75).
+        python3 book/report.py "${@:2}" && python3 book/report.py --countries "${@:2}"
         ;;
     sources)
         python3 model/sources.py "${@:2}"
@@ -174,12 +174,12 @@ case "${1:-dev}" in
             print_error ".vercelignore does not exclude cache/ — the fetched corpus would upload."
             exit 1
         fi
-        # Built here, uploaded prebuilt: the PDFs need typst and pandoc, which Vercel's
-        # build image does not have (DECISIONS.md #71). vercel build runs vercel.json's
-        # buildCommand locally into .vercel/output; only that output is uploaded.
-        for tool in typst pandoc; do
+        # Built here, uploaded prebuilt: the PDFs need typst, which Vercel's build image
+        # does not have (DECISIONS.md #71). vercel build runs vercel.json's buildCommand
+        # locally into .vercel/output; only that output is uploaded.
+        for tool in typst; do
             if ! command -v "$tool" &> /dev/null; then
-                print_error "$tool is not installed — the report and briefs cannot be built. brew install $tool"
+                print_error "$tool is not installed — the PDFs cannot be built. brew install $tool"
                 exit 1
             fi
         done

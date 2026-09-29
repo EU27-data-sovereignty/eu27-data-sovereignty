@@ -1,28 +1,22 @@
 #!/usr/bin/env python3
 """
-Typeset the book.
+Typeset the print book's authored parts.
 
     python3 book/build.py                  # the book -> build/book.pdf
-    python3 book/build.py --briefs         # 27 standalone A4 briefs -> build/briefs/
-    python3 book/build.py --briefs --iso DE
-    python3 book/build.py --report         # EU-27 country report, colour A4 -> build/eu27-report.pdf
-    python3 book/build.py --part 3         # one part, for fast proofing
+    python3 book/build.py --part 1         # one part, for fast proofing
     python3 book/build.py --typ-only       # emit .typ, skip the typst call
 
-Reads web/public/data/eu27.json — the same country_data.build() dict the markdown
-briefs and the web app render from (DECISIONS.md #6), so the book cannot drift from
-the model. Nothing here recomputes a canonical figure.
+Parts I, II and V are authored prose in manuscript/. The generated Parts III (the twenty-seven)
+and IV (reference tables) printed the Dutch-scaled capacity figures that #72 and #73 withdrew,
+so they are gone until they can be rendered from the content model (model/document.py) the
+report and the country PDFs already use -- see book/report.py. Nothing here states a fact
+about a country.
 
-Structure follows DECISIONS.md #27: Parts I, II and V are authored prose in
-manuscript/; Parts III and IV are generated here and labelled as reference.
-
-Standard library only, like the rest of the model.
+Standard library only.
 """
 from __future__ import annotations
 
 import argparse
-import json
-import re
 import shutil
 import subprocess
 import sys
@@ -30,14 +24,12 @@ from pathlib import Path
 
 BOOK = Path(__file__).resolve().parent
 ROOT = BOOK.parent
-BUNDLE = ROOT / "web" / "public" / "data" / "eu27.json"
 MANUSCRIPT = BOOK / "manuscript"
 BUILD = BOOK / "build"
 
 TITLE = "Sovereign Data Centers for European States"
-SUBTITLE = "A capacity model for twenty-seven national government clouds"
+SUBTITLE = "Critical government data, analysed state by state"
 
-# Authored parts, in order, with the generated parts slotted between them.
 AUTHORED = {
     1: "part-1-argument.typ",
     2: "part-2-method.typ",
@@ -45,538 +37,51 @@ AUTHORED = {
 }
 
 
-# --------------------------------------------------------------------------- #
-# Typst escaping
-# --------------------------------------------------------------------------- #
-
-_SPECIAL = re.compile(r"([#@$\\<>*_`~\[\]])")
-
-
-def esc(value) -> str:
-    """Escape a plain string for typst content mode."""
-    return _SPECIAL.sub(r"\\\1", str(value))
-
-
-def esc_md(value) -> str:
-    """Escape, but keep markdown bold: **x** in the source becomes *x* in typst."""
-    parts = re.split(r"\*\*(.+?)\*\*", str(value))
-    out = []
-    for i, part in enumerate(parts):
-        out.append(f"*{esc(part)}*" if i % 2 else esc(part))
-    return "".join(out)
-
-
-def rel(path: Path) -> str:
-    """Repo-relative path for logging, falling back to absolute for paths outside it."""
-    try:
-        return str(path.relative_to(ROOT))
-    except ValueError:
-        return str(path)
-
-
-def num(value, places: int = 0) -> str:
-    """Thousands-separated number. CSV-sourced values arrive as strings."""
-    return f"{float(value):,.{places}f}".replace(",", " ")
-
-
-# --------------------------------------------------------------------------- #
-# Part III — the gazetteer
-# --------------------------------------------------------------------------- #
-
-def stake_line(c: dict) -> str:
-    """The one-line summary under a country's name, shared by book and brief."""
-    cap, flags = c["capacity"], c["flags"]
-    names = [n for n in ("frontline", "grid_isolated") if flags.get(n)]
-    if flags.get("seismic") == "high":
-        names.append("seismic")
-    if flags.get("micro"):
-        names.append("micro")
-    return (
-        f'{num(cap["design_mw"], 1)}#sym.space.thin MW design load #sym.dot.c '
-        f'{cap["sites"]} sites #sym.dot.c EUR#sym.space.thin {num(cap["capex_total"])}#sym.space.thin m CAPEX '
-        f'#sym.dot.c EUR#sym.space.thin {num(cap["opex_total"])}#sym.space.thin m/yr OPEX '
-        f'#sym.dot.c flags: {esc(", ".join(n.replace("_", "-") for n in names) or "none")}'
-    )
-
-
-def country_entry(c: dict, standalone: bool = False) -> str:
-    """One country, as a book chapter (standalone=False) or a whole brief (True).
-
-    Standalone promotes every section heading by a level, because the brief's title
-    block already carries the country name that the book puts in a `==` chapter head.
-    """
-    cap, params = c["capacity"], c["params"]
-    h2 = "==" if standalone else "==="
-
-    lines = []
-    if not standalone:
-        lines += [
-            # The chapter head IS the outline entry -- typst has no short-title -- so the ISO
-            # code goes here to make a 27-country Contents scannable. Deliberately not a flag
-            # emoji: the interior is mono (DECISIONS.md #28) and typst could only reach those
-            # glyphs through a colour, macOS-only font, which would render tofu anywhere else.
-            f'== {esc(c["iso2"])} · {esc(c["name"])}',
-            "",
-            "#standfirst[",
-            f"  {stake_line(c)}",
-            "]",
-            "",
-        ]
-    lines += [
-        f"{h2} Capacity",
-        "",
-        "#datatable(",
-        "  columns: (1fr, auto),",
-        "  align: (left, right),",
-        "  table.hline(stroke: 0.6pt),",
-        "  [Metric], [Value],",
-        "  table.hline(stroke: 0.3pt),",
-    ]
-    rows = [
-        ("Total servers", num(cap["total_servers"])),
-        ("Rack equivalents", num(cap["racks"])),
-        ("IT load (MW)", num(cap["total_it_mw"], 1)),
-        ("Facility design load (MW)", num(cap["design_mw"], 1)),
-        ("Sites", str(cap["sites"])),
-        ("Average MW per site", num(cap["avg_mw_per_site"], 2)),
-        ("Total CAPEX (EUR m)", num(cap["capex_total"])),
-        ("Annual OPEX (EUR m)", num(cap["opex_total"])),
-        ("Electricity price (EUR/MWh)", num(params["elec_price_eur_mwh"], 1)),
-    ]
-    for label, value in rows:
-        lines.append(f"  [{esc(label)}], [{value}],")
-    lines += [
-        "  table.hline(stroke: 0.6pt),",
-        f'  caption: [Binding constraint: {esc(cap["binding_constraint"])}.],',
-        ")",
-        "",
-        f"{h2} Proposed geography",
-        "",
-        "#datatable(",
-        "  columns: (1.4fr, 1fr, auto),",
-        "  align: (left, left, right),",
-        "  table.hline(stroke: 0.6pt),",
-        "  [Region], [Role], [MW],",
-        "  table.hline(stroke: 0.3pt),",
-    ]
-    for r in c["regions"]:
-        lines.append(
-            f'  [{esc(r["Region"])}], [{esc(r["Role"])}], [{num(r["Design MW"], 2)}],'
-        )
-    lines += [
-        "  table.hline(stroke: 0.6pt),",
-        "  caption: [First-pass geographic hypothesis, not a site selection. See Part II.],",
-        ")",
-        "",
-        f"{h2} What is structurally different",
-        "",
-    ]
-    for d in c["structural_differences"]:
-        lines.append(f"- {esc_md(d)}")
-        lines.append("")
-
-    lines += [f"{h2} Legal and institutional posture", ""]
-    posture = [
-        ("Legal instrument", params["legal_instrument"]),
-        ("Sovereign cloud initiative", params["sovereign_cloud_initiative"]),
-        ("Certification scheme", params["certification_scheme"]),
-        ("Procurement vehicle", params["procurement_vehicle"]),
-        ("Digital identity", params["digital_id"]),
-        ("Internet exchange", params["ixp"]),
-    ]
-    lines += [
-        "#datatable(",
-        "  columns: (auto, 1fr),",
-        "  align: (left, left),",
-        "  table.hline(stroke: 0.6pt),",
-        "  [Dimension], [Position],",
-        "  table.hline(stroke: 0.3pt),",
-    ]
-    for label, value in posture:
-        lines.append(f"  [{esc(label)}], [{esc(value)}],")
-    lines += [
-        "  table.hline(stroke: 0.6pt),",
-        "  caption: [Researched September 2026. Legal entries are factual claims and will date.],",
-        ")",
-        "",
-    ]
-
-    # Tier 0/Tier 1 register. Mono like everything else (#28): the three states are told apart
-    # by words, never by colour, and an unrecorded class says so rather than showing a dash.
-    entries = c.get("national_data") or []
-    if entries:
-        recorded = sum(1 for e in entries if e["status"] != "unrecorded")
-        lines += [
-            f"{h2} Critical national data in scope",
-            "",
-            f"What the platform would hold, tiered by consequence of loss. {recorded} of "
-            f"{len(entries)} record classes recorded.",
-            "",
-            "#datatable(",
-            "  columns: (auto, 1fr, 1fr),",
-            "  align: (left, left, left),",
-            "  table.hline(stroke: 0.6pt),",
-            "  [Tier], [Record class], [Register],",
-            "  table.hline(stroke: 0.3pt),",
-        ]
-        for e in entries:
-            if e["status"] == "held":
-                register = f'#link("{e["url"]}")[{esc(e["register"])}]'
-            elif e["status"] == "not_held":
-                register = "_no central register_"
-            else:
-                register = "_not yet recorded_"
-            lines.append(f'  [{e["tier"]}], [{esc(e["label"])}], [{register}],')
-        lines += [
-            "  table.hline(stroke: 0.6pt),",
-            "  caption: [A blank is an unresearched register, not a state that holds no such "
-            "data. Tiers 2 and 3 are out of scope.],",
-            ")",
-            "",
-        ]
-
-    return "\n".join(lines)
-
-
-def gazetteer(bundle: dict) -> str:
-    order = sorted(
-        bundle["countries"].values(),
-        key=lambda c: -c["capacity"]["design_mw"],
-    )
-    head = [
-        "= Part III — The twenty-seven",
-        "",
-        "This part is *reference*, not argument. Each entry follows the same template and is",
-        "generated from the model; the entries are meant to be consulted, not read through.",
-        "The argument is in Parts I, II and V.",
-        "",
-        "Every figure is a scaled working assumption derived from the Dutch reference case in",
-        "Part II. None of it is a sourced national forecast.",
-        "",
-    ]
-    return "\n".join(head) + "\n" + "\n".join(country_entry(c) for c in order)
-
-
-# --------------------------------------------------------------------------- #
-# Part IV — cross-country reference tables
-# --------------------------------------------------------------------------- #
-
-def reference(bundle: dict) -> str:
-    order = sorted(bundle["countries"].values(), key=lambda c: -c["capacity"]["design_mw"])
-    t = bundle["totals"]
-
-    lines = [
-        "= Part IV — Reference tables",
-        "",
-        "== The model in one table",
-        "",
-        "#datatable(",
-        "  columns: (auto, 1fr, auto, auto, auto, auto),",
-        "  align: (left, left, right, right, right, right),",
-        "  table.hline(stroke: 0.6pt),",
-        "  [ISO], [Country], [Servers], [MW], [Sites], [CAPEX],",
-        "  table.hline(stroke: 0.3pt),",
-    ]
-    for c in order:
-        cap = c["capacity"]
-        lines.append(
-            f'  [{esc(c["iso2"])}], [{esc(c["name"])}], [{num(cap["total_servers"])}], '
-            f'[{num(cap["design_mw"], 1)}], [{cap["sites"]}], [{num(cap["capex_total"])}],'
-        )
-    lines += [
-        "  table.hline(stroke: 0.3pt),",
-        f'  [], [*EU-27*], [*{num(t["servers"])}*], [*{num(t["design_mw"], 0)}*], '
-        f'[*{t["sites"]}*], [*{num(t["capex_total"])}*],',
-        "  table.hline(stroke: 0.6pt),",
-        "  caption: [CAPEX in EUR millions. Generated "
-        f'{esc(bundle["generated"])} from `model/eu27_results.csv`.],',
-        ")",
-        "",
-        "== Shared assumptions",
-        "",
-        "#datatable(",
-        "  columns: (1fr, auto),",
-        "  align: (left, right),",
-        "  table.hline(stroke: 0.6pt),",
-    ]
-    for row in bundle["assumptions"]:
-        keys = list(row)
-        label, value = row[keys[0]], row[keys[1]] if len(keys) > 1 else ""
-        lines.append(f"  [{esc(label)}], [{esc(value)}],")
-    lines += [
-        "  table.hline(stroke: 0.6pt),",
-        "  caption: [From `model/assumptions.csv` — the Dutch working assumptions.],",
-        ")",
-        "",
-    ]
-    return "\n".join(lines)
-
-
-# --------------------------------------------------------------------------- #
-# Standalone country briefs
-# --------------------------------------------------------------------------- #
-
-def brief_doc(c: dict, bundle: dict) -> str:
-    """One country as a self-contained A4 document.
-
-    Same renderer as the book's gazetteer entry (DECISIONS.md #6) — only the wrapper
-    differs, so a brief and its chapter can never disagree.
-    """
-    return "\n".join([
-        '#import "/templates/style.typ": brief, datatable, standfirst',
-        "",
-        "#show: brief.with(",
-        f'  country: "{c["name"]}",',
-        f'  iso: "{c["iso2"]}",',
-        f"  standfirst: [{stake_line(c)}],",
-        f'  generated: "{bundle["generated"]}",',
-        f'  provenance: "Scaled working assumptions, not a sourced forecast. '
-        f'sovereign-data-centers, generated {bundle["generated"]}",',
-        ")",
-        "",
-        country_entry(c, standalone=True),
-    ])
-
-
-def build_briefs(bundle: dict, isos: list[str], out_dir: Path, compile_pdf: bool) -> int:
-    src = BUILD / "briefs"
-    src.mkdir(parents=True, exist_ok=True)
-    out_dir.mkdir(parents=True, exist_ok=True)
-
-    for iso in isos:
-        c = bundle["countries"][iso]
-        typ = src / f"{iso}.typ"
-        typ.write_text(brief_doc(c, bundle), encoding="utf-8")
-        if compile_pdf:
-            subprocess.run(
-                ["typst", "compile", "--root", str(BOOK), str(typ), str(out_dir / f"{iso}.pdf")],
-                check=True,
-            )
-
-    if compile_pdf:
-        total = sum((out_dir / f"{iso}.pdf").stat().st_size for iso in isos)
-        print(f"{rel(out_dir)}: {len(isos)} briefs, {total:,} bytes")
-    else:
-        print(f"{rel(src)}: {len(isos)} .typ files")
-    return 0
-
-
-# --------------------------------------------------------------------------- #
-# The EU-27 country report — one colour PDF, every member state
-# --------------------------------------------------------------------------- #
-
-REPORT_TITLE = "Sovereign Data Centres for the EU-27"
-REPORT_SUBTITLE = "A country-by-country analysis of national government cloud capacity"
-
-
-def goal_body(iso: str) -> str:
-    """countries/<ISO>/GOAL.md from its first numbered section on, converted to typst.
-
-    Drops the title, the generator's blockquote and the per-file Contents list: the report
-    has its own chapter head, provenance notice and table of contents. The analysis itself
-    is taken verbatim, so the report cannot disagree with the file it was built from.
-    """
-    md = (ROOT / "countries" / iso / "GOAL.md").read_text(encoding="utf-8")
-    sections = re.split(r"(?m)^(?=## )", md)
-    kept = [s for s in sections[1:] if not s.startswith("## Contents")]
-    typ = subprocess.run(
-        # No auto identifiers: 27 files share section names, and duplicate labels are an error.
-        ["pandoc", "-f", "gfm-gfm_auto_identifiers", "-t", "typst", "--wrap=none"],
-        input="".join(kept), capture_output=True, text=True, check=True,
-    ).stdout
-    # Links into a file's own Contents anchors have nowhere to point once it is removed.
-    typ = re.sub(r"#link\(<[^>]*>\)\[([^\]]*)\]", r"\1", typ)
-    # The report's table style draws its own rules.
-    typ = re.sub(r"(?m)^\s*table\.hline\(\),\n", "", typ)
-    # A GFM table with a blank header row is a key-value list: drop the empty header and
-    # render it with kvtable, which styles the first column instead of the first row.
-    empty_header = re.compile(r"(\s*columns:[^\n]*\n\s*align:[^\n]*\n)\s*table\.header\((?:\[\],\s*)+\),\n")
-    parts = typ.split("#table(")
-    for i in range(1, len(parts)):
-        stripped, n = empty_header.subn(r"\1", parts[i], count=1)
-        parts[i] = ("#kvtable(" if n else "#table(") + stripped
-    typ = parts[0] + "".join(parts[1:])
-    # pandoc centres every table; the report's tables read left to right. Without the
-    # align(center)[...] wrapper the call sits in figure's code arguments, so it loses its #.
-    return re.sub(r"align\(center\)\[#((?:kv)?table\(.*?)\]\s*\n(\s*, kind: table)", r"\1\n\2",
-                  typ, flags=re.S)
-
-
-def report_doc(bundle: dict) -> str:
-    order = sorted(bundle["countries"].values(), key=lambda c: c["name"])
-    t = bundle["totals"]
+def assemble(parts: list[int], generated: str) -> str:
     out = [
-        '#import "/templates/report.typ": report, standfirst, notice, kvtable',
-        "",
-        "#show: report.with(",
-        f'  title: "{REPORT_TITLE}",',
-        f'  subtitle: "{REPORT_SUBTITLE}",',
-        f'  generated: "{bundle["generated"]}",',
-        '  provenance: "Scaled working assumptions, not a sourced forecast. '
-        'sovereign-data-centers.vercel.app, generated ' + bundle["generated"] + '",',
-        ")",
-        "",
-        "#outline(title: [Contents], depth: 1)",
-        "",
-        "= About this report",
-        "",
-        "#notice[",
-        "*Read this first.* This is a capacity planning model, not a forecast and not a proposal. "
-        "Every figure is a working assumption scaled from a hand-built Dutch reference case. "
-        "The legal and regulatory entries were researched from public policy documents in "
-        "September 2026, have *not* been checked against primary instruments, and will date. "
-        "Nothing here is legal advice or an official position of any government or EU body.",
-        "]",
-        "",
-        "Each chapter covers one member state, in alphabetical order, with the same thirteen "
-        "sections: the working thesis, the starting point, what is structurally different from "
-        "the Dutch reference case, workload demand, the capacity model's output, a first-pass "
-        "geography, threat notes, recommendations, open questions, the legal and regulatory "
-        "posture, the current provider landscape, the migration path and cost, and the critical "
-        "national data in scope. The Netherlands chapter is the hand-built reference case the "
-        "other twenty-six are scaled from, so its structure is longer.",
-        "",
-        "The same data drives the interactive site at "
-        '#link("https://sovereign-data-centers.vercel.app")[sovereign-data-centers.vercel.app]. '
-        "Corrections are welcome through the repository's issue template.",
-        "",
-        "== The EU-27 at a glance",
-        "",
-        "#table(",
-        "  columns: (1fr, auto, auto, auto, auto, auto),",
-        "  align: (left, left, right, right, right, right),",
-        "  table.header([Country], [ISO], [Servers], [Design MW], [Sites], [CAPEX EUR m]),",
-    ]
-    for c in order:
-        cap = c["capacity"]
-        out.append(
-            f'  [{esc(c["name"])}], [{esc(c["iso2"])}], [{num(cap["total_servers"])}], '
-            f'[{num(cap["design_mw"], 1)}], [{cap["sites"]}], [{num(cap["capex_total"])}],'
-        )
-    out += [
-        f'  [*EU-27*], [], [*{num(t["servers"])}*], [*{num(t["design_mw"], 0)}*], '
-        f'[*{t["sites"]}*], [*{num(t["capex_total"])}*],',
-        ")",
-        "",
-    ]
-    for c in order:
-        out += [
-            f'= {esc(c["name"])} ({esc(c["iso2"])})',
-            "",
-            f"#standfirst[{stake_line(c)}]",
-            "",
-            goal_body(c["iso2"]),
-            "",
-        ]
-    return "\n".join(out)
-
-
-def build_report(bundle: dict, out: Path, compile_pdf: bool) -> int:
-    if not shutil.which("pandoc"):
-        raise SystemExit("pandoc is not installed. Install with: brew install pandoc")
-    BUILD.mkdir(exist_ok=True)
-    typ = BUILD / "report.typ"
-    typ.write_text(report_doc(bundle), encoding="utf-8")
-    print(f"{rel(typ)}: {len(bundle['countries'])} countries")
-    if not compile_pdf:
-        return 0
-    if not shutil.which("typst"):
-        raise SystemExit("typst is not installed. Install with: brew install typst")
-    out.parent.mkdir(parents=True, exist_ok=True)
-    subprocess.run(["typst", "compile", "--root", str(BOOK), str(typ), str(out)], check=True)
-    print(f"{rel(out)}: {out.stat().st_size:,} bytes")
-    return 0
-
-
-# --------------------------------------------------------------------------- #
-# Assembly
-# --------------------------------------------------------------------------- #
-
-def assemble(bundle: dict, parts: list[int]) -> str:
-    # Root-absolute: --root is book/, so this resolves from any output depth.
-    rel = "/templates/style.typ"
-    out = [
-        f'#import "{rel}": book, datatable, standfirst',
+        '#import "/templates/style.typ": book, datatable, standfirst',
         "",
         "#show: book.with(",
         f'  title: "{TITLE}",',
         f'  subtitle: "{SUBTITLE}",',
-        f'  generated: "{bundle["generated"]}",',
-        '  provenance: "Scaled working assumptions, not a sourced forecast. '
-        'sovereign-data-centers, generated ' + bundle["generated"] + '",',
+        f'  generated: "{generated}",',
+        f'  provenance: "Authored draft. Country facts are in the EU-27 report, with sources. Generated {generated}",',
         ")",
         "",
         "#outline(title: [Contents], depth: 2, indent: 1em)",
         "",
     ]
     for n in parts:
-        if n in AUTHORED:
-            src = MANUSCRIPT / AUTHORED[n]
-            if not src.exists():
-                raise SystemExit(f"missing manuscript file: {src.relative_to(ROOT)}")
-            out.append(src.read_text(encoding="utf-8"))
-        elif n == 3:
-            out.append(gazetteer(bundle))
-        elif n == 4:
-            out.append(reference(bundle))
-        out.append("")
+        src = MANUSCRIPT / AUTHORED[n]
+        if not src.exists():
+            raise SystemExit(f"missing manuscript file: {src.relative_to(ROOT)}")
+        out += [src.read_text(encoding="utf-8"), ""]
     return "\n".join(out)
 
 
 def main(argv: list[str] | None = None) -> int:
-    p = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
-    )
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--typ-only", action="store_true", help="emit .typ without compiling")
-    p.add_argument("--part", type=int, action="append", choices=[1, 2, 3, 4, 5],
+    p.add_argument("--part", type=int, action="append", choices=sorted(AUTHORED),
                    help="compile only these parts (repeatable)")
-    p.add_argument("--briefs", action="store_true",
-                   help="build standalone per-country PDFs instead of the book")
-    p.add_argument("--report", action="store_true",
-                   help="build the single EU-27 country report (colour, A4) instead of the book")
-    p.add_argument("--iso", action="append", help="limit --briefs to these countries")
-    p.add_argument("-o", "--out", type=Path, help="output path (default depends on mode)")
+    p.add_argument("-o", "--out", type=Path, help="output path (default build/book.pdf)")
     args = p.parse_args(argv)
 
-    if not BUNDLE.exists():
-        raise SystemExit(
-            f"missing {BUNDLE.relative_to(ROOT)} — run ./run.sh data first"
-        )
-    bundle = json.loads(BUNDLE.read_text(encoding="utf-8"))
+    sys.path.insert(0, str(ROOT / "model"))
+    from generate_countries import gen_date  # noqa: PLC0415
 
-    if args.briefs:
-        known = bundle["countries"]
-        isos = [i.upper() for i in args.iso] if args.iso else sorted(known)
-        unknown = [i for i in isos if i not in known]
-        if unknown:
-            raise SystemExit(f"unknown country code(s): {', '.join(unknown)}")
-        out_dir = args.out.resolve() if args.out else (BUILD / "briefs")
-        return build_briefs(bundle, isos, out_dir, compile_pdf=not args.typ_only)
-
-    if args.iso:
-        raise SystemExit("--iso only applies with --briefs")
-
-    if args.report:
-        out = args.out.resolve() if args.out else (BUILD / "eu27-report.pdf")
-        return build_report(bundle, out, compile_pdf=not args.typ_only)
-
-    parts = sorted(set(args.part)) if args.part else [1, 2, 3, 4, 5]
+    parts = sorted(set(args.part)) if args.part else sorted(AUTHORED)
     BUILD.mkdir(exist_ok=True)
     typ = BUILD / "book.typ"
-    typ.write_text(assemble(bundle, parts), encoding="utf-8")
-    print(f"{rel(typ)}: parts {', '.join(map(str, parts))}")
-
+    typ.write_text(assemble(parts, gen_date()), encoding="utf-8")
+    print(f"{typ.relative_to(ROOT)}: parts {', '.join(map(str, parts))}")
     if args.typ_only:
         return 0
     if not shutil.which("typst"):
         raise SystemExit("typst is not installed. Install with: brew install typst")
-
-    # --root so the generated .typ under build/ can import ../templates/style.typ.
     out = args.out.resolve() if args.out else (BUILD / "book.pdf")
-    subprocess.run(
-        ["typst", "compile", "--root", str(BOOK), str(typ), str(out)], check=True
-    )
-    print(f"{rel(out)}: {out.stat().st_size:,} bytes")
+    subprocess.run(["typst", "compile", "--root", str(BOOK), str(typ), str(out)], check=True)
+    print(f"{out.relative_to(ROOT) if out.is_relative_to(ROOT) else out}: {out.stat().st_size:,} bytes")
     return 0
 
 

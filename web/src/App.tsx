@@ -6,19 +6,16 @@ import { loadBundle } from './data/load'
 import type { Bundle } from './data/types'
 import { Countries } from './pages/Countries'
 import { Country } from './pages/Country'
-import { Matrix } from './pages/Matrix'
+import { Holding, HoldingsIndex } from './pages/Holdings'
 import { Methodology } from './pages/Methodology'
 import { NotFound } from './pages/NotFound'
 import { Overview } from './pages/Overview'
 import { Poster } from './pages/Poster'
-import { Scenario } from './pages/Scenario'
-import { Workloads } from './pages/Workloads'
-import { useTheme } from './utils/theme'
+import { Sources } from './pages/Sources'
 
 export function App() {
   const [bundle, setBundle] = useState<Bundle | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [mode] = useTheme()
 
   useEffect(() => {
     loadBundle().then(setBundle, e => setError(String(e)))
@@ -51,12 +48,12 @@ export function App() {
       {/* Outside Layout: the poster is a standalone artefact exported to PNG, with no
           site chrome. Its caveat is printed on the poster itself. */}
       <Route path="poster/:iso" element={<Poster bundle={bundle} />} />
-      <Route element={<Layout generated={bundle.generated} />}>
+      <Route element={<Layout generated={bundle.generated} provenance={bundle.provenance} />}>
         <Route index element={<Overview bundle={bundle} />} />
-        <Route path="matrix" element={<Matrix bundle={bundle} mode={mode} />} />
-        <Route path="workloads" element={<Workloads bundle={bundle} mode={mode} />} />
-        <Route path="scenario" element={<Scenario bundle={bundle} />} />
         <Route path="countries" element={<Countries bundle={bundle} />} />
+        <Route path="holdings" element={<HoldingsIndex bundle={bundle} />} />
+        <Route path="holdings/:cls" element={<Holding bundle={bundle} />} />
+        <Route path="sources" element={<Sources bundle={bundle} />} />
         <Route path="country/:iso" element={<Country bundle={bundle} />} />
         <Route path="methodology" element={<Methodology bundle={bundle} />} />
         <Route path="*" element={<NotFound />} />

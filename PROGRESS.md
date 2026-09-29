@@ -13,26 +13,27 @@ pushed**; the private contacts repo likewise. Working tree clean.
 
 | Workstream | State | Evidence |
 |---|---|---|
-| Capacity model | **Done** | 108 Python tests; reproduces the Dutch xlsx exactly |
-| Country data (27) | **Done**, unverified | `countries/<ISO>/`, generated from `eu27_parameters.csv` |
-| Web app | **Done**, deployed `noindex` | 66 Vitest; 15 of 15 Playwright pass |
-| Per-country artefacts | **Done** | 27 PDFs + 27 posters, hashes in `countries/ARTEFACTS.csv` |
+| Own-fundamentals analysis | **Done** (#72) | No country scaled from another; `NoCountryIsDerivedFromAnother` tests |
+| Capacity | **Withdrawn**, not yet sized (#73) | Engine kept; sizing waits for measured holdings |
+| Content model + footnoted outputs | **Done** (#74, #75) | `document.py --check`: 0 unsourced facts; report + 27 country PDFs |
+| Web app | **Rebuilt**, EU theme | 36 Vitest; 15 of 15 Playwright + axe |
+| Per-country artefacts | **Done** | 27 posters, hashes in `countries/ARTEFACTS.csv`; Chrome PDFs retired (#76) |
 | Mobile reader | **Done**, local only | 19 Jest tests; never built or deployed |
 | Secret scanning | **Done** | local gate on every commit + gitleaks in CI |
 | Tables of contents | **Done** | every brief, `SUMMARY.md`, web, mobile, book outline |
 | Representation style guides | **Done** | `artifacts/`, 6 files, citations checked by `tests/test_docs.py` |
 | Source verification | **2 of 189 legal cells** | `./run.sh sources` |
 | **Source register** | **138 of 621 parameter cells; 0 of 22 assumptions** | `python3 model/provenance.py` (#67) |
-| **Critical national data register** | **3 of 405 pairs**; on the source register | `./run.sh registers` (#60, #69) |
+| **Critical holdings register** | **3 of 1053 pairs** (39 classes); research for all 27 running | `./run.sh registers` (#73) |
 | Institutional map | **25 of 324 pairs** (37 rows) | `python3 model/institutions.py` |
 | Named contacts | **956 rows, 910 people; 850 send-ready** | private repo at `contacts/` (#66) |
 | Paper book | **Scaffolded** | `book/build.py` typesets; ~1.1k of ~20-30k words written |
-| **Full test gate** | **Green** as of 2026-09-27 | `./test.sh` exits 0: 108 Python, 66 Vitest, 15 Playwright |
+| **Full test gate** | **Green** as of 2026-09-29 | `./test.sh` exits 0, including the #75 sourcing stage |
 
 **The launch gate (widened 2026-09-24, #67): nothing public — indexing, the domain, the book, the
 mobile release, outreach sends — until every published claim cites an original source**, with
 planning assumptions sourced or visibly declared as assumptions. Today: **138 of 621 parameter cells**
-(2 of 189 legal cells), **0 of 22 assumptions** declared, and **3 of 405 national data registers**.
+(2 of 189 legal cells), **0 of 22 assumptions** declared, and **3 of 1053 critical holdings**.
 Every mechanism is built and tested; what is missing is the reading. The plan for closing it is
 `ROADMAP.md` § Sourcing plan.
 
