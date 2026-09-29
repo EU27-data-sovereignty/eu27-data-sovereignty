@@ -1,0 +1,605 @@
+{
+ "extra_holdings": [],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "et",
+     "published": "2025-12-11",
+     "publisher": "Riigi Teataja",
+     "quote": "Käesolev seadus sätestab rahvastikuregistri andmete koosseisu ja rahvastikuregistri pidamise, elukoha andmete rahvastikuregistrisse kandmise, isikukoodi andmise, andmete töötlemise, andmetele juurdepääsu tagamise ning nende tegevuste üle järelevalve teostamise korra.",
+     "quote_english": "This Act lays down the composition of population register data and the keeping of the register, entry of residence data, assignment of personal identification codes, data processing, access to data and supervision of these activities.",
+     "title": "Rahvastikuregistri seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20251211184747/https://www.riigiteataja.ee/akt/RRS",
+     "value": "Rahvastikuregistri seadus (Population Register Act) governs the register's data, keeping, personal identification codes and access"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Rahvastikuregister (Population Register)",
+   "operator": "Siseministeerium (Ministry of the Interior), controller",
+   "research_note": "PARTIAL RUN, halted by plan mode. The controller clause in the act is under 8 words, so it is not cited. Hosting not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "et",
+     "published": "2026-03-13",
+     "publisher": "Riigi Teataja",
+     "quote": "Biomeetrilised andmed käesoleva seaduse tähenduses on näokujutis, sõrmejäljekujutised, allkiri või allkirjakujutis ja silmaiirisekujutised.",
+     "quote_english": "Biometric data within the meaning of this Act are the facial image, fingerprint images, signature or signature image and iris images.",
+     "title": "Isikut tõendavate dokumentide seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20260313205329/https://www.riigiteataja.ee/akt/itds",
+     "value": "Biometric data under the Identity Documents Act are facial image, fingerprints, signature and iris images"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2026-03-13",
+     "publisher": "Riigi Teataja",
+     "quote": "Andmekogu ABIS vastutavad töötlejad on Politsei- ja Piirivalveamet ning Välisministeerium.",
+     "quote_english": "The controllers of database ABIS are the Police and Border Guard Board and the Ministry of Foreign Affairs.",
+     "title": "Isikut tõendavate dokumentide seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20260313205329/https://www.riigiteataja.ee/akt/itds",
+     "value": "ABIS controllers are the Police and Border Guard Board and the Ministry of Foreign Affairs"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Automaatse biomeetrilise isikutuvastuse süsteemi andmekogu (ABIS, automated biometric identification system database)",
+   "operator": "Politsei- ja Piirivalveamet and Välisministeerium (joint controllers)",
+   "research_note": "PARTIAL RUN. Hosting not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "et",
+     "published": "2026-03-13",
+     "publisher": "Riigi Teataja",
+     "quote": "Dokumendi taotluse esitamisel on taotleja või tema seaduslik esindaja kohustatud võimaldama taotleja daktüloskopeerimist ja näokujutise võtmist ning nende andmete töötlemist.",
+     "quote_english": "When applying for a document, the applicant or legal representative must allow fingerprinting and capture of the facial image and processing of these data.",
+     "title": "Isikut tõendavate dokumentide seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20260313205329/https://www.riigiteataja.ee/akt/itds",
+     "value": "Identity document applicants must allow fingerprinting and facial image capture (Identity Documents Act)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2026-03-13",
+     "publisher": "Riigi Teataja",
+     "quote": "Isikult võetud biomeetrilised andmed kannab Politsei- ja Piirivalveamet andmekogusse ABIS.",
+     "quote_english": "The Police and Border Guard Board enters biometric data taken from the person into database ABIS.",
+     "title": "Isikut tõendavate dokumentide seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20260313205329/https://www.riigiteataja.ee/akt/itds",
+     "value": "Police and Border Guard Board enters biometric data into ABIS"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "ABIS (automaatse biomeetrilise isikutuvastuse süsteemi andmekogu)",
+   "operator": "Politsei- ja Piirivalveamet",
+   "research_note": "PARTIAL RUN. Hosting not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "breeder_documents",
+   "research_note": "PARTIAL RUN. Perekonnaseisutoimingute seadus was downloaded but not yet searched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "et",
+     "published": "2026-03-13",
+     "publisher": "Riigi Teataja",
+     "quote": "Isikut tõendavate dokumentide andmekogu (edaspidi käesolevas paragrahvis andmekogu) on Vabariigi Valitsuse asutatud andmekogu, mille põhimääruse kehtestab valdkonna eest vastutav minister määrusega.",
+     "quote_english": "The Identity Documents Database is a database established by the Government, whose statutes are set by regulation of the responsible minister.",
+     "title": "Isikut tõendavate dokumentide seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20260313205329/https://www.riigiteataja.ee/akt/itds",
+     "value": "Identity Documents Database established by the Government under the Identity Documents Act"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Isikut tõendavate dokumentide andmekogu (Identity Documents Database)",
+   "operator": "Politsei- ja Piirivalveamet",
+   "research_note": "PARTIAL RUN. The controller clause is under 8 words, so it is not cited.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "digital_identity_credentials",
+   "holding_name": "ID-kaart + Mobiil-ID + Smart-ID",
+   "research_note": "PARTIAL RUN. Scheme named in the brief; ria.ee and id.ee return HTTP 403 to automated fetches. Not yet sourced.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "authentication_audit_log",
+   "research_note": "PARTIAL RUN. Not researched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "electoral_roll",
+   "research_note": "PARTIAL RUN. Riigikogu valimise seadus was downloaded; the voter-list provisions have not been extracted yet.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2026-03-15",
+     "publisher": "Riigi Teataja",
+     "quote": "Euroopa Parlamendi ja nõukogu määruse (EL) nr 910/2014 artikli 7 punktis f ning artiklites 9 ja 12 sätestatud ülesandeid täidab Riigi Infosüsteemi Amet (edaspidi pädev asutus).",
+     "quote_english": "The tasks under Articles 7(f), 9 and 12 of Regulation (EU) No 910/2014 are performed by the Information System Authority (competent authority).",
+     "title": "E-identimise ja e-tehingute usaldusteenuste seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20260315144913/https://www.riigiteataja.ee/akt/EUTS",
+     "value": "The Information System Authority is the competent eIDAS supervisory body"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "et",
+     "published": "2026-03-15",
+     "publisher": "Riigi Teataja",
+     "quote": "Euroopa Parlamendi ja nõukogu määruse (EL) nr 910/2014 artikli 22 kohast usaldusnimekirja (edaspidi usaldusnimekiri) peab pädev asutus.",
+     "quote_english": "The trusted list under Article 22 of Regulation (EU) No 910/2014 is kept by the competent authority.",
+     "title": "E-identimise ja e-tehingute usaldusteenuste seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20260315144913/https://www.riigiteataja.ee/akt/EUTS",
+     "value": "The competent authority keeps the eIDAS Article 22 trusted list"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "Usaldusnimekiri (national trusted list) and qualified trust services supervision",
+   "operator": "Riigi Infosüsteemi Amet (Information System Authority)",
+   "research_note": "PARTIAL RUN. The certificate issuer for ID cards has not been sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "et",
+     "published": "2025-12-15",
+     "publisher": "Riigi Teataja",
+     "quote": "Elamislubade ja töölubade registri asutab Vabariigi Valitsus ja registri põhimääruse kehtestab valdkonna eest vastutav minister määrusega.",
+     "quote_english": "The register of residence permits and work permits is established by the Government, and its statutes are set by the responsible minister by regulation.",
+     "title": "Välismaalaste seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20251215054605/https://www.riigiteataja.ee/akt/vms",
+     "value": "Register established by the Government under the Aliens Act"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2025-12-15",
+     "publisher": "Riigi Teataja",
+     "quote": "Andmekogu vastutav töötleja on Politsei- ja Piirivalveamet ning volitatud töötleja määratakse andmekogu põhimääruses.",
+     "quote_english": "The controller of the database is the Police and Border Guard Board, and the processor is designated in the database statutes.",
+     "title": "Välismaalaste seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20251215054605/https://www.riigiteataja.ee/akt/vms",
+     "value": "The Police and Border Guard Board is controller"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Elamislubade ja töölubade register (Register of residence and work permits)",
+   "operator": "Politsei- ja Piirivalveamet",
+   "research_note": "PARTIAL RUN. Hosting not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "tax",
+   "research_note": "PARTIAL RUN. Maksukorralduse seadus names Maksu- ja Tolliamet as register controller, but that clause is under 8 words and the register-name line has not been extracted yet.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "customs",
+   "research_note": "PARTIAL RUN. Tolliseadus names Maksu- ja Tolliamet as controller of customs ANPR, X-ray image and passenger-list databases. The customs declaration system itself has not been sourced.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "et",
+     "published": "2025-10-20",
+     "publisher": "Riigi Teataja",
+     "quote": "Sotsiaalteenuste ja -toetuste andmeregister on riigi infosüsteemi kuuluv keskne andmekogu, mis on asutatud järgmistel eesmärkidel",
+     "quote_english": "The register of social services and benefits is a central database of the state information system established for the following purposes",
+     "title": "Sotsiaalhoolekande seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20251020072142/https://www.riigiteataja.ee/akt/SHS",
+     "value": "Social services and benefits register is a central state database (Social Welfare Act)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2025-10-20",
+     "publisher": "Riigi Teataja",
+     "quote": "Sotsiaalteenuste ja -toetuste andmeregistri vastutav töötleja on Sotsiaalkindlustusamet",
+     "quote_english": "The controller of the register of social services and benefits is the Social Insurance Board",
+     "title": "Sotsiaalhoolekande seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20251020072142/https://www.riigiteataja.ee/akt/SHS",
+     "value": "The Social Insurance Board is controller"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sotsiaalteenuste ja -toetuste andmeregister (STAR/SKAIS, Social services and benefits register)",
+   "operator": "Sotsiaalkindlustusamet (Social Insurance Board)",
+   "research_note": "PARTIAL RUN. Pension register provisions not yet extracted.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "health_insurance",
+   "research_note": "PARTIAL RUN. Ravikindlustuse seadus was downloaded but not yet searched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2025-08-07",
+     "publisher": "Riigi Teataja",
+     "quote": "Kinnistusraamatu vastutav töötleja on Justiits- ja Digiministeerium ja volitatud töötlejad on Tartu Maakohtu kinnistusosakond ning Registrite ja Infosüsteemide Keskus.",
+     "quote_english": "The controller of the land register is the Ministry of Justice and Digital Affairs, and the processors are the Tartu County Court land registry department and the Centre of Registers and Information Systems.",
+     "title": "Kinnistusraamatuseadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20250807000745/https://www.riigiteataja.ee/akt/KRS",
+     "value": "Controller is the Ministry of Justice and Digital Affairs; processors are the Tartu County Court land registry department and the Centre of Registers and Information Systems"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kinnistusraamat (Land Register)",
+   "operator": "Justiits- ja Digiministeerium (controller); Tartu Maakohtu kinnistusosakond and Registrite ja Infosüsteemide Keskus (processors)",
+   "research_note": "PARTIAL RUN. The cadastre act was downloaded but not yet searched.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "business_registry",
+   "research_note": "PARTIAL RUN. Äriseadustik was downloaded; the registrar provisions have not been extracted yet.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "et",
+     "published": "2025-04-19",
+     "publisher": "Riigi Teataja",
+     "quote": "Tegelike kasusaajate andmekogu asutab ja selle põhimääruse kehtestab valdkonna eest vastutav minister määrusega.",
+     "quote_english": "The beneficial owners database is established, and its statutes are set, by regulation of the responsible minister.",
+     "title": "Rahapesu ja terrorismi rahastamise tõkestamise seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20250419091429/https://www.riigiteataja.ee/akt/RahaPTS",
+     "value": "Database established by ministerial regulation under the AML/CFT Act"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2025-04-19",
+     "publisher": "Riigi Teataja",
+     "quote": "Tegelike kasusaajate andmekogu vastutav töötleja on Rahandusministeerium. Volitatud töötlejad on Registrite ja Infosüsteemide Keskus ning Tartu Maakohtu registriosakond",
+     "quote_english": "The controller of the beneficial owners database is the Ministry of Finance. The processors are the Centre of Registers and Information Systems and the Tartu County Court registration department",
+     "title": "Rahapesu ja terrorismi rahastamise tõkestamise seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20250419091429/https://www.riigiteataja.ee/akt/RahaPTS",
+     "value": "Ministry of Finance is controller; Centre of Registers and Information Systems and Tartu County Court registration department are processors"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Tegelike kasusaajate andmekogu (Beneficial owners database)",
+   "operator": "Rahandusministeerium (controller); Registrite ja Infosüsteemide Keskus and Tartu Maakohtu registriosakond (processors)",
+   "research_note": "PARTIAL RUN.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "vehicle_licensing",
+   "research_note": "PARTIAL RUN. Liiklusseadus was downloaded; the traffic register provisions have not been extracted yet.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "et",
+     "published": "2025-08-03",
+     "publisher": "Riigi Teataja",
+     "quote": "Karistusregister (edaspidi register) on riigi infosüsteemi kuuluv andmekogu, kuhu kantakse andmed karistatud isiku ja tema karistuse kohta.",
+     "quote_english": "The criminal records database is a database of the state information system into which data on punished persons and their punishments are entered.",
+     "title": "Karistusregistri seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20250803214052/https://www.riigiteataja.ee/akt/KarRS",
+     "value": "Criminal records database is part of the state information system (Criminal Records Database Act)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2025-08-03",
+     "publisher": "Riigi Teataja",
+     "quote": "Registri vastutav töötleja on Justiits- ja Digiministeerium ning registri volitatud töötleja Registrite ja Infosüsteemide Keskus (edaspidi keskus).",
+     "quote_english": "The controller of the register is the Ministry of Justice and Digital Affairs and the processor is the Centre of Registers and Information Systems.",
+     "title": "Karistusregistri seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20250803214052/https://www.riigiteataja.ee/akt/KarRS",
+     "value": "Controller Ministry of Justice and Digital Affairs; processor Centre of Registers and Information Systems"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Karistusregister (Criminal Records Database)",
+   "operator": "Justiits- ja Digiministeerium (controller); Registrite ja Infosüsteemide Keskus (processor)",
+   "research_note": "PARTIAL RUN. Court information system provisions in Kohtute seadus not yet cleanly extracted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "et",
+     "published": "2026-05-13",
+     "publisher": "Riigi Teataja",
+     "quote": "Politsei andmekogu on andmekogu, kus töödeldakse korrakaitse ja süüteomenetlusega seotud andmeid avaliku korra ja siseturvalisuse tagamise eesmärgil.",
+     "quote_english": "The police database is a database processing law-enforcement and offence-proceedings data for public order and internal security.",
+     "title": "Politsei ja piirivalve seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20260513193215/https://www.riigiteataja.ee/akt/PPVS",
+     "value": "Police database for law enforcement and offence proceedings data (Police and Border Guard Act)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2026-05-13",
+     "publisher": "Riigi Teataja",
+     "quote": "Politsei andmekogu vastutav töötleja on Politsei- ja Piirivalveamet ning volitatud töötleja määratakse andmekogu põhimääruses.",
+     "quote_english": "The controller of the police database is the Police and Border Guard Board and the processor is designated in the statutes.",
+     "title": "Politsei ja piirivalve seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20260513193215/https://www.riigiteataja.ee/akt/PPVS",
+     "value": "Police and Border Guard Board is controller"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Politsei andmekogu, Infosüsteem POLIS (Police database)",
+   "operator": "Politsei- ja Piirivalveamet",
+   "research_note": "PARTIAL RUN.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "et",
+     "published": "2026-05-13",
+     "publisher": "Riigi Teataja",
+     "quote": "Valdkonna eest vastutav minister asutab andmekogu, mille eesmärk on tagada siseturvalisus ja avalik kord isikute ning transpordivahendite piiriületusel kogutud andmete töötlemise kaudu.",
+     "quote_english": "The responsible minister establishes a database to ensure internal security and public order by processing data collected at border crossings of persons and vehicles.",
+     "title": "Politsei ja piirivalve seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20260513193215/https://www.riigiteataja.ee/akt/PPVS",
+     "value": "Border control database established by the minister (Police and Border Guard Act)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "foreign_dependency",
+     "language": "et",
+     "published": "2025-12-15",
+     "publisher": "Riigi Teataja",
+     "quote": "Viisaregister on seotud Euroopa Liidu ühtse viisainfosüsteemiga vastavalt Euroopa Liidu õigusaktides sätestatule.",
+     "quote_english": "The visa register is linked to the EU common visa information system in accordance with EU legislation.",
+     "title": "Välismaalaste seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20251215054605/https://www.riigiteataja.ee/akt/vms",
+     "value": "National visa register is linked to the EU Visa Information System"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Piirikontrolli infosüsteem (Border control information system); Viisaregister (Visa register)",
+   "operator": "Politsei- ja Piirivalveamet",
+   "research_note": "PARTIAL RUN. The national SIS register is also established in the Police and Border Guard Act (PPVS) but is not cited here.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2025-11-15",
+     "publisher": "Riigi Teataja",
+     "quote": "Teenistus- ja tsiviilrelvade registri vastutavad töötlejad on Politsei- ja Piirivalveamet ning Kaitsepolitseiamet. Volitatud töötleja määratakse registri põhimääruses.",
+     "quote_english": "The controllers of the register of service and civilian weapons are the Police and Border Guard Board and the Internal Security Service. The processor is designated in the register statutes.",
+     "title": "Relvaseadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20251115135104/https://www.riigiteataja.ee/akt/RelvS",
+     "value": "Controllers are the Police and Border Guard Board and the Internal Security Service"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Teenistus- ja tsiviilrelvade register (Service and civilian weapons register)",
+   "operator": "Politsei- ja Piirivalveamet and Kaitsepolitseiamet",
+   "research_note": "PARTIAL RUN. A separate military weapons register is held by Kaitseministeerium.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "official_gazette",
+   "research_note": "PARTIAL RUN. Riigi Teataja seadus was downloaded but not yet searched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "public_finance",
+   "research_note": "PARTIAL RUN. Riigieelarve seadus was downloaded but not yet searched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "government_payroll",
+   "research_note": "PARTIAL RUN. Avaliku teenistuse seadus names Riigi Tugiteenuste Keskus as controller of a database, but that clause is under 8 words and the database name has not been extracted yet.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2026-02-18",
+     "publisher": "Riigi Teataja",
+     "quote": "Elektroonilisel hääletamisel kasutatakse ajakohast elektroonilise hääletamise süsteemi, mida haldab riigi valimisteenistus.",
+     "quote_english": "Electronic voting uses an up-to-date electronic voting system administered by the State Electoral Office.",
+     "title": "Riigikogu valimise seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20260218005759/https://www.riigiteataja.ee/akt/RKVS",
+     "value": "The e-voting system is administered by the State Electoral Office (Riigikogu Election Act)"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Elektroonilise hääletamise süsteem (e-voting system)",
+   "operator": "Riigi valimisteenistus (State Electoral Office)",
+   "research_note": "PARTIAL RUN. valimised.ee returns HTTP 403 to automated fetches.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "central_bank",
+   "research_note": "PARTIAL RUN. Eesti Panga seadus was downloaded but not yet searched; eestipank.ee returns HTTP 403 to automated fetches.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "research_note": "PARTIAL RUN. Kaitseväe korralduse seadus was downloaded but not yet searched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "intelligence",
+   "research_note": "PARTIAL RUN. Julgeolekuasutuste seadus was downloaded but not yet searched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "emergency_communications",
+   "research_note": "PARTIAL RUN. Hädaolukorra seadus and 112.ee are available but have not been searched yet.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "crisis_management",
+   "research_note": "PARTIAL RUN. Not yet sourced.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "grid_control",
+   "research_note": "PARTIAL RUN. Elektrituruseadus and elering.ee are available but have not been searched yet.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "water_control",
+   "research_note": "PARTIAL RUN. Veeseadus was downloaded but not yet searched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2026-04-15",
+     "publisher": "Riigi Teataja",
+     "quote": "Tervise infosüsteemi kaasvastutavad töötlejad on Sotsiaalministeerium ja Tervisekassa.",
+     "quote_english": "The joint controllers of the health information system are the Ministry of Social Affairs and the Health Insurance Fund.",
+     "title": "Tervishoiuteenuste korraldamise seadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20260415062508/https://www.riigiteataja.ee/akt/TTKS",
+     "value": "Joint controllers are the Ministry of Social Affairs and the Health Insurance Fund"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Tervise infosüsteem (Health Information System)",
+   "operator": "Sotsiaalministeerium and Tervisekassa (joint controllers)",
+   "research_note": "PARTIAL RUN.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "public_health_surveillance",
+   "research_note": "PARTIAL RUN. The communicable disease act names Terviseamet as register controller, but that clause is under 8 words.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "et",
+     "published": "2025-04-26",
+     "publisher": "Riigi Teataja",
+     "quote": "Eesti hariduse infosüsteemi vastutav töötleja on Haridus- ja Teadusministeerium ning volitatud töötleja määratakse andmekogu põhimääruses.",
+     "quote_english": "The controller of the Estonian Education Information System is the Ministry of Education and Research; the processor is designated in the statutes.",
+     "title": "Eesti Vabariigi haridusseadus (Internet Archive copy of Riigi Teataja)",
+     "url": "https://web.archive.org/web/20250426205540/https://www.riigiteataja.ee/akt/HaS",
+     "value": "Controller is the Ministry of Education and Research"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "Eesti hariduse infosüsteem (EHIS, Estonian Education Information System)",
+   "operator": "Haridus- ja Teadusministeerium",
+   "research_note": "PARTIAL RUN.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "statistics_microdata",
+   "research_note": "PARTIAL RUN. Riikliku statistika seadus was downloaded but not yet searched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "geospatial",
+   "research_note": "PARTIAL RUN. The building register controller is Kliimaministeerium (Ehitusseadustik), but that clause is under 8 words; Ruumiandmete seadus has not been searched yet.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "national_archives",
+   "research_note": "PARTIAL RUN. Arhiiviseadus was downloaded and ra.ee is available; neither has been searched yet.",
+   "status": "unknown"
+  }
+ ],
+ "iso": "EE"
+}

@@ -1,0 +1,1881 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "da",
+     "published": "2026-01-26",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "NemKonto Brug 6 mio personrelaterede NemKonti. 752.102 virksomhedsrelaterede NemKonti. Antal betalinger 7,9 mio. betalinger i september 2025. 102 mio. antal betalinger i 2024 år.",
+     "quote_english": "NemKonto usage: 6 million person-related NemKonto accounts. 752,102 business-related NemKonto accounts. 7.9 million payments in September 2025. 102 million payments in 2024.",
+     "title": "Tal og statistik for Digitaliseringsstyrelsens produkter",
+     "url": "https://digst.dk/tal-og-statistik/",
+     "value": "6 million person-related NemKonto accounts and 752,102 business-related; 102 million payments in 2024"
+    }
+   ],
+   "holding_name": "NemKonto (national register of citizens' and companies' payment accounts for public payments)",
+   "suggested_class": "payment_account_register",
+   "why_critical": "All public payments to citizens and businesses (benefits, tax refunds, salaries) are routed through NemKonto; 6 million person accounts."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Liste over it-systemer, der skal føres her i landet 1. CPR-systemet 2. DeMars 3. Digital Post 4. Den fællesoffentlige Datafordeler",
+     "quote_english": "List of IT systems that must be kept in this country: 1. The CPR system 2. DeMars 3. Digital Post 4. The joint public Data Distributor",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "Digital Post is listed in Annex 1 of the Location Requirement Order: must be kept in Denmark"
+    }
+   ],
+   "holding_name": "Digital Post (mandatory public digital mail)",
+   "suggested_class": "government_mail",
+   "why_critical": "Legally binding communication from public authorities to citizens and companies; listed among systems that must be kept in Denmark."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "da",
+     "published": "",
+     "publisher": "CPR-kontoret",
+     "quote": "Registret omfatter navne og andre personoplysninger for ca. 11,4 millioner personer, herunder knap 6,1 millioner nulevende personer.",
+     "quote_english": "The register covers names and other personal data for approx. 11.4 million persons, including just under 6.1 million living persons.",
+     "title": "CPR-kontoret (forside)",
+     "url": "https://www.cpr.dk/",
+     "value": "About 11.4 million persons, of which just under 6.1 million living persons"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "hosting",
+     "language": "da",
+     "published": "2022-09-21",
+     "publisher": "CPR-kontoret",
+     "quote": "har besluttet at tildele kontrakten til DXC Technologies A/S, idet det efter en grundig evalueringsproces er vurderet, at DXC har afgivet det økonomisk mest fordelagtige tilbud",
+     "quote_english": "has decided to award the contract to DXC Technologies A/S, as it was assessed after a thorough evaluation process that DXC submitted the most economically advantageous tender",
+     "title": "Ny kontrakt om CPR-opgaven",
+     "url": "https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2022/sep/ny-kontrakt-om-cpr-opgaven",
+     "value": "Operation, maintenance and support of the CPR system contracted to DXC Technologies A/S (2022 tender, 6-8 year contract), subject to investment-screening permission as critical infrastructure"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "foreign_dependency",
+     "language": "da",
+     "published": "2022-09-21",
+     "publisher": "CPR-kontoret",
+     "quote": "Da CPR-kontrakten omfatter kritisk infrastruktur, forudsætter kontraktens indgåelse, at Erhvervsstyrelsen giver tilladelse hertil, jf. investeringsscreeningsloven.",
+     "quote_english": "As the CPR contract covers critical infrastructure, concluding the contract requires that the Danish Business Authority grants permission, cf. the Investment Screening Act.",
+     "title": "Ny kontrakt om CPR-opgaven",
+     "url": "https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2022/sep/ny-kontrakt-om-cpr-opgaven",
+     "value": "Contract required permission under the Investment Screening Act because it covers critical infrastructure"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2023-06-23",
+     "publisher": "Retsinformation / Forsknings-, Uddannelses- og Digitaliseringsministeriet",
+     "quote": "Det Centrale Personregister (CPR) indeholder grundlæggende personoplysninger om enhver, der har et personnummer,",
+     "quote_english": "the Central Person Register (CPR) contains basic personal data on everyone who has a personal identification number,",
+     "title": "Bekendtgørelse af lov om Det Centrale Personregister (LBK nr 1010 af 23/06/2023)",
+     "url": "https://www.retsinformation.dk/eli/lta/2023/1010/xml",
+     "value": "Det Centrale Personregister (CPR) - the Central Person Register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2023-06-23",
+     "publisher": "Retsinformation / Forsknings-, Uddannelses- og Digitaliseringsministeriet",
+     "quote": "Herved bekendtgøres lov om Det Centrale Personregister, jf. lovbekendtgørelse nr. 702 af 23. maj 2022, med de ændringer, der følger af § 1 i lov nr. 411 af 25. april 2023",
+     "quote_english": "The Act on the Central Person Register is hereby promulgated, cf. consolidated act no. 702 of 23 May 2022, with the amendments following from § 1 of act no. 411 of 25 April 2023",
+     "title": "Bekendtgørelse af lov om Det Centrale Personregister (LBK nr 1010 af 23/06/2023)",
+     "url": "https://www.retsinformation.dk/eli/lta/2023/1010/xml",
+     "value": "Lov om Det Centrale Personregister (CPR-loven), consolidated as LBK nr 1010 af 23/06/2023"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "da",
+     "published": "",
+     "publisher": "CPR-kontoret",
+     "quote": "CPR-administrationen er organisatorisk placeret i Forsknings-, Uddannelses- og Digitaliseringsministeriets departement.",
+     "quote_english": "The CPR administration is organisationally placed in the department of the Ministry of Research, Education and Digitalisation.",
+     "title": "Om CPR-kontoret",
+     "url": "https://www.cpr.dk/om-cpr-kontoret",
+     "value": "CPR-administrationen (CPR Office), placed in the department of the Ministry of Research, Education and Digitalisation"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Liste over it-systemer, der skal føres her i landet 1. CPR-systemet 2. DeMars 3. Digital Post 4. Den fællesoffentlige Datafordeler",
+     "quote_english": "List of IT systems that must be kept in this country: 1. The CPR system 2. DeMars 3. Digital Post 4. The joint public Data Distributor",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "CPR-systemet is listed in Annex 1 of the Location Requirement Order (BEK nr 291 af 20/03/2025): IT systems that must be kept in Denmark"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "It-systemer, der er nævnt i bilag 1, skal føres her i landet. § 2. Bekendtgørelsen træder i kraft den 1. april 2025.",
+     "quote_english": "IT systems listed in Annex 1 must be kept in this country. § 2. The order enters into force on 1 April 2025.",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "Location requirement: IT systems in Annex 1 must be kept in Denmark (Lokationskravsbekendtgørelsen § 1, in force 1 April 2025)"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "mixed",
+   "holding_name": "Det Centrale Personregister (CPR)",
+   "operator": "CPR-administrationen (Forsknings-, Uddannelses- og Digitaliseringsministeriet); operation contracted to DXC Technologies A/S",
+   "research_note": "CPR system must by law be kept in Denmark (BEK 291/2025); operation contracted to DXC Technologies A/S, whose contract required investment-screening permission. The DXC parent company's nationality is not stated in the cited sources.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Udlændingestyrelsen / SIRI (nyidanmark.dk)",
+     "quote": "De opbevares ved ansøgning i 20 år efter optagelsen af fingeraftrykket og personfotografiet, i visumsager dog 10 år.",
+     "quote_english": "On application they are stored for 20 years after the capture of the fingerprint and personal photograph, but 10 years in visa cases.",
+     "title": "Biometri – Opbevaring af fingeraftryk og ansigtsfoto",
+     "url": "https://www.nyidanmark.dk/da/Ord-og-begreber/F%C3%A6lles/Biometri---Opbevaring-af-fingeraftryk-og-ansigtsfoto",
+     "value": "Immigration authorities' biometric register (facial photos and fingerprints of foreign nationals for residence cards); retained 20 years (10 years for visa cases)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "da",
+     "published": "",
+     "publisher": "Udlændingestyrelsen / SIRI (nyidanmark.dk)",
+     "quote": "De biometriske data vil blive registreret i udlændingemyndighedernes register, som Udlændinge- og Integrationsministeriet, Udlændingestyrelsen og Styrelsen for International Rekruttering og Integration (SIRI) er ansvarlige for.",
+     "quote_english": "The biometric data will be registered in the immigration authorities' register, for which the Ministry of Immigration and Integration, the Danish Immigration Service and SIRI are responsible.",
+     "title": "Biometri – Opbevaring af fingeraftryk og ansigtsfoto",
+     "url": "https://www.nyidanmark.dk/da/Ord-og-begreber/F%C3%A6lles/Biometri---Opbevaring-af-fingeraftryk-og-ansigtsfoto",
+     "value": "Ministry of Immigration and Integration, Udlændingestyrelsen and SIRI"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2011",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Det medbragte foto sendes til pasproducenten, der digitaliserer billedet ved at indscanne det og derefter lagrer det i passets chip.",
+     "quote_english": "The photo brought along is sent to the passport producer, which digitises the image by scanning it and then stores it in the passport's chip.",
+     "title": "Forslag til lov om ændring af lov om pas til danske statsborgere m.v. og udlændingeloven (Fingeraftryk i pas m.v.) (2010/1 LSF 202)",
+     "url": "https://www.retsinformation.dk/eli/ft/201012L00202/xml",
+     "value": "Danish passports: the passport photo is sent to the passport producer, which scans it and stores it in the passport chip (Rigspolitiet transmits data via Det Centrale Pasregister)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2025-09-25",
+     "publisher": "Retsinformation / Udlændinge- og Integrationsministeriet",
+     "quote": "Personfotografi, der opbevares i medfør af stk. 13, registreres i et centralt register, der føres af Udlændinge- og Integrationsministeriet, Udlændingestyrelsen og Styrelsen for International Rekruttering og Integration.",
+     "quote_english": "Personal photographs retained under subsection 13 are registered in a central register kept by the Ministry of Immigration and Integration, the Danish Immigration Service and SIRI.",
+     "title": "Bekendtgørelse af udlændingeloven (LBK nr 1183 af 25/09/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/1183/xml",
+     "value": "Udlændingeloven § 40 b, stk. 14: retained facial photographs go into a central register kept by the Ministry, Udlændingestyrelsen and SIRI"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Udlændingemyndighedernes biometriregister (foreign nationals); Danish passport photos stored in the passport chip",
+   "operator": "Udlændinge- og Integrationsministeriet, Udlændingestyrelsen, SIRI",
+   "research_note": "No source was found on the hosting of the immigration biometric register. No source was found stating whether Danish citizens' passport photos are kept centrally after production.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Udlændingestyrelsen / SIRI (nyidanmark.dk)",
+     "quote": "optager fingeraftryk og personfotografi (biometriske data) til brug for udstedelse af opholdskort og til brug for identifikation og identitetskontrol på udlændingeområdet.",
+     "quote_english": "capture fingerprints and personal photographs (biometric data) for issuing residence cards and for identification and identity control in the immigration field.",
+     "title": "Biometri – Opbevaring af fingeraftryk og ansigtsfoto",
+     "url": "https://www.nyidanmark.dk/da/Ord-og-begreber/F%C3%A6lles/Biometri---Opbevaring-af-fingeraftryk-og-ansigtsfoto",
+     "value": "Immigration authorities' biometric register (fingerprints and facial photos of foreign nationals, captured for residence cards and identity control)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "da",
+     "published": "",
+     "publisher": "Udlændingestyrelsen / SIRI (nyidanmark.dk)",
+     "quote": "De biometriske data vil blive registreret i udlændingemyndighedernes register, som Udlændinge- og Integrationsministeriet, Udlændingestyrelsen og Styrelsen for International Rekruttering og Integration (SIRI) er ansvarlige for.",
+     "quote_english": "The biometric data will be registered in the immigration authorities' register, for which the Ministry of Immigration and Integration, the Danish Immigration Service and SIRI are responsible.",
+     "title": "Biometri – Opbevaring af fingeraftryk og ansigtsfoto",
+     "url": "https://www.nyidanmark.dk/da/Ord-og-begreber/F%C3%A6lles/Biometri---Opbevaring-af-fingeraftryk-og-ansigtsfoto",
+     "value": "Ministry of Immigration and Integration, Danish Immigration Service (Udlændingestyrelsen) and SIRI are responsible for the register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2011",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Det er Rigspolitiet, der har ansvaret for at tilvejebringe it-understøttelse til håndtering af de data, der er nødvendige for at producere pas, og sikre formidlingen af de registrerede data til pasproducenten. Dette sker via Det Centrale Pasregister.",
+     "quote_english": "Rigspolitiet is responsible for providing IT support for handling the data needed to produce passports and for transmitting the registered data to the passport producer. This takes place via the Central Passport Register.",
+     "title": "Forslag til lov om ændring af lov om pas til danske statsborgere m.v. og udlændingeloven (Fingeraftryk i pas m.v.) (2010/1 LSF 202)",
+     "url": "https://www.retsinformation.dk/eli/ft/201012L00202/xml",
+     "value": "Passport fingerprints: Rigspolitiet provides IT support and transmits the registered data to the passport producer via Det Centrale Pasregister (bill L 202 2010/11, Fingeraftryk i pas)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2025-09-25",
+     "publisher": "Retsinformation / Udlændinge- og Integrationsministeriet",
+     "quote": "Fingeraftryk, der opbevares i medfør af stk. 14, registreres i et centralt register, der føres af Udlændinge- og Integrationsministeriet, Udlændingestyrelsen og Styrelsen for International Rekruttering og Integration.",
+     "quote_english": "Fingerprints retained under subsection 14 are registered in a central register kept by the Ministry of Immigration and Integration, the Danish Immigration Service and SIRI.",
+     "title": "Bekendtgørelse af udlændingeloven (LBK nr 1183 af 25/09/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/1183/xml",
+     "value": "Udlændingeloven § 40 a, stk. 15 (LBK nr 1183 af 25/09/2025): retained fingerprints go into a central register kept by the Ministry, Udlændingestyrelsen and SIRI"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Udlændingemyndighedernes centrale fingeraftryksregister (Udlændingeloven § 40 a, stk. 15)",
+   "operator": "Udlændinge- og Integrationsministeriet, Udlændingestyrelsen, SIRI",
+   "research_note": "Passport fingerprints are routed to the passport producer via Det Centrale Pasregister. A primary source on whether they are retained centrally could not be fetched: ft.dk sits behind a Cloudflare challenge. Hosting of the immigration register is not stated.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2021-06-15",
+     "publisher": "Retsinformation / Kirkeministeriet",
+     "quote": "Kirkeministeriet stiller således fælles systemer til rådighed til brug for personregistrering, sognebåndsløsning samt valg i folkekirken,",
+     "quote_english": "The Ministry of Ecclesiastical Affairs thus provides common systems for use in personal registration, release from parish ties and elections in the Church of Denmark,",
+     "title": "Cirkulære om fælles dataansvar ... Kirkeministeriets fælles systemer vedrørende personregistrering (CIR1H nr 9447 af 15/06/2021)",
+     "url": "https://www.retsinformation.dk/eli/retsinfo/2021/9447/xml",
+     "value": "Kirkeministeriet's common systems for personregistrering (church registration of births, names and deaths), used by parish registrars"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2021-06-15",
+     "publisher": "Retsinformation / Kirkeministeriet",
+     "quote": "§ 5, stk. 2, i bekendtgørelse af lov om udnævnelse af biskopper og om stiftsbåndsløsning, § 4 i lov om anmeldelse af fødsler og dødsfald",
+     "quote_english": "§ 5(2) of the consolidated act on appointment of bishops and release from diocese ties, § 4 of the act on notification of births and deaths",
+     "title": "Cirkulære om fælles dataansvar ... Kirkeministeriets fælles systemer vedrørende personregistrering (CIR1H nr 9447 af 15/06/2021)",
+     "url": "https://www.retsinformation.dk/eli/retsinfo/2021/9447/xml",
+     "value": "Includes § 4 of the Act on notification of births and deaths (lov om anmeldelse af fødsler og dødsfald) among the bases for the ministry's systems"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "hosting",
+     "language": "da",
+     "published": "2022-09-21",
+     "publisher": "CPR-kontoret",
+     "quote": "gennemført et udbud af CPR-opgaven, der omfatter drift, vedligehold og support samt bistand til udvikling af CPR-systemet og Kirkeministeriets Personregistrering.",
+     "quote_english": "carried out a tender for the CPR task, covering operation, maintenance and support and assistance in developing the CPR system and the Church Ministry's Personal Registration.",
+     "title": "Ny kontrakt om CPR-opgaven",
+     "url": "https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2022/sep/ny-kontrakt-om-cpr-opgaven",
+     "value": "The 2022 CPR contract awarded to DXC Technologies A/S also covers operation, maintenance and support of Kirkeministeriets Personregistrering"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kirkeministeriets fælles systemer vedrørende personregistrering (church birth/death/name registration)",
+   "operator": "Kirkeministeriet; operation within the DXC Technologies A/S CPR contract",
+   "research_note": "No source states where scans of breeder documents (for example naturalisation decrees) are stored centrally. The ownership of DXC is not stated in the cited source.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Politi (Rigspolitiet)",
+     "quote": "Rigspolitiet er således dataansvarlig for Det Centrale Pasregister (Pasregistret) og Centralregistret for Motorkøretøjer (CRM).",
+     "quote_english": "The National Police is thus data controller for the Central Passport Register and the Central Register of Motor Vehicles (CRM).",
+     "title": "Politiets brug af personoplysninger",
+     "url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger",
+     "value": "Det Centrale Pasregister (Pasregistret) - Central Passport Register, with Rigspolitiet (Danish National Police) as data controller"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "da",
+     "published": "",
+     "publisher": "Politi (Rigspolitiet)",
+     "quote": "Oplysninger i Pasregistret slettes to år efter passets udløb eller senest to år efter pasindehaverens død.",
+     "quote_english": "Data in the Passport Register is deleted two years after the passport expires or at the latest two years after the holder's death.",
+     "title": "Politiets brug af personoplysninger",
+     "url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger",
+     "value": "Rigspolitiet; retention: deleted two years after passport expiry or holder's death"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2021-12-28",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Kommunalbestyrelsen må ikke udstede pas til en ansøger, hvis der i Det Centrale Pasregister er anført en markering, der taler imod pasudstedelsen.",
+     "quote_english": "The municipal council may not issue a passport to an applicant if a marker against issuance is recorded in the Central Passport Register.",
+     "title": "Bekendtgørelse om pas m.v. (BEK nr 2693 af 28/12/2021)",
+     "url": "https://www.retsinformation.dk/eli/lta/2021/2693/xml",
+     "value": "Bekendtgørelse om pas m.v. (BEK nr 2693 af 28/12/2021) under the Passport Act; references Det Centrale Pasregister"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Rigspolitiets centrale systemportefølje (Automatisk Trafikkontrol System, Bøde og Kasse, Bøde og Kasse Grønland og Færøerne, Centralregistret for Motorkøretøjer, Det Centrale Kriminalregister, Det Centrale Pasregister, Det Centrale Rettighedsregister, On Demand, Politiets Index Register,",
+     "quote_english": "The National Police's central system portfolio (..., Central Register of Motor Vehicles, Central Criminal Register, Central Passport Register, Central Rights Register, On Demand, Police Index Register,",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "Det Centrale Pasregister is part of Rigspolitiet's central system portfolio that must be kept in Denmark (Location Requirement Order, Annex 1, item 13)"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "national",
+   "holding_name": "Det Centrale Pasregister (Pasregistret)",
+   "operator": "Rigspolitiet",
+   "research_note": "This rests on the legal location requirement (BEK 291/2025, Annex 1 item 13). The infrastructure operator was not found. Denmark has no national ID card register in scope.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2025-03-19",
+     "publisher": "Retsinformation / Digitaliseringsministeriet",
+     "quote": "1) Den danske nationale elektroniske identifikationsordning (MitID-løsningen). 2) Den fællesoffentlige digitale infrastrukturløsning (NemLog-in).",
+     "quote_english": "1) The Danish national electronic identification scheme (the MitID solution). 2) The joint public digital infrastructure solution (NemLog-in).",
+     "title": "Bekendtgørelse af lov om MitID og NemLog-in (LBK nr 333 af 19/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/333/xml",
+     "value": "MitID-løsningen - the Danish national electronic identification scheme (MitID)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2025-03-19",
+     "publisher": "Retsinformation / Digitaliseringsministeriet",
+     "quote": "Herved bekendtgøres lov nr. 783 af 4. maj 2021 om MitID og NemLog-in med de ændringer, der følger af lov nr. 1559 af 12. december 2023.",
+     "quote_english": "Act no. 783 of 4 May 2021 on MitID and NemLog-in is hereby promulgated with the amendments following from act no. 1559 of 12 December 2023.",
+     "title": "Bekendtgørelse af lov om MitID og NemLog-in (LBK nr 333 af 19/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/333/xml",
+     "value": "Lov om MitID og NemLog-in (lov nr. 783 af 4. maj 2021), consolidated as LBK nr 333 af 19/03/2025"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "da",
+     "published": "2025-03-19",
+     "publisher": "Retsinformation / Digitaliseringsministeriet",
+     "quote": "Digitaliseringsstyrelsen stiller MitID-løsningen til rådighed for offentlige myndigheder, offentligretlige organer og juridiske enheder. Digitaliseringsstyrelsen sikrer udvikling, drift og vedligeholdelse af løsningen.",
+     "quote_english": "The Agency for Digital Government makes the MitID solution available to public authorities, bodies governed by public law and legal entities. The Agency ensures development, operation and maintenance of the solution.",
+     "title": "Bekendtgørelse af lov om MitID og NemLog-in (LBK nr 333 af 19/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/333/xml",
+     "value": "Digitaliseringsstyrelsen (Agency for Digital Government) provides MitID and ensures its development, operation and maintenance"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "hosting",
+     "language": "da",
+     "published": "2024-11-04",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "Nets Danmark A/S, der er en del af den italienske Nexi Group, indgik for næsten et år siden, den 9. november 2023, en aftale om salg af deres eID-forretning til den statsejede franske virksomhed IN Groupe.",
+     "quote_english": "Nets Danmark A/S, part of the Italian Nexi Group, almost a year ago, on 9 November 2023, entered an agreement to sell its eID business to the French state-owned company IN Groupe.",
+     "title": "MitID og NemLog-ins udviklings- og driftsleverandør får ny ejer",
+     "url": "https://digst.dk/nyheder/nyhedsarkiv/2024/november/mitid-og-nemlog-ins-udviklings-og-driftsleverandoer-faar-ny-ejer/",
+     "value": "Development and operation contracts for MitID and NemLog-in held by Nets DanID, whose eID business was sold by Nets Danmark (Italian Nexi Group) to French state-owned IN Groupe, effective 1 Nov 2024"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "foreign_dependency",
+     "language": "da",
+     "published": "2024-11-04",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "Der stilles i MitID-kontrakten store krav til sikkerhed og driftsstabilitet i MitID, og til at MitID drives fra Danmark.",
+     "quote_english": "The MitID contract sets high requirements for security and operational stability in MitID, and that MitID is operated from Denmark.",
+     "title": "MitID og NemLog-ins udviklings- og driftsleverandør får ny ejer",
+     "url": "https://digst.dk/nyheder/nyhedsarkiv/2024/november/mitid-og-nemlog-ins-udviklings-og-driftsleverandoer-faar-ny-ejer/",
+     "value": "MitID contract requires that MitID is operated from Denmark; supplier owned by French (EU) state-owned IN Groupe"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "da",
+     "published": "2026-04-16",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "97,2 % af danmarksbefolkningen over 15 år har et aktivt MitID. 5,3 mio. registrerede MitID-brugere i alt. 94,4 mio. månedlige transaktioner*.",
+     "quote_english": "97.2% of the Danish population over 15 has an active MitID. 5.3 million registered MitID users in total. 94.4 million monthly transactions.",
+     "title": "Tal og statistik for Digitaliseringsstyrelsens produkter",
+     "url": "https://digst.dk/tal-og-statistik/",
+     "value": "5.3 million registered MitID users; 97.2% of population over 15 has an active MitID; 94.4 million monthly transactions (2025 average)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "8. Kreditregisteret 9. Kriminalforsorgens Klientadministrationssystem 10. MitID 11. NemLog-in3 12. Rigsarkivets arkiveringsversioner, så længe de ikke er tilgængelige",
+     "quote_english": "8. The Credit Register 9. Prison and Probation Service client administration system 10. MitID 11. NemLog-in3 12. The National Archives' archival versions, as long as they are not accessible",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "MitID and NemLog-in3 are listed in Annex 1 of the Location Requirement Order: systems that must be kept in Denmark"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "eu_provider",
+   "holding_name": "MitID (MitID-løsningen)",
+   "operator": "Digitaliseringsstyrelsen (MitID-partnerskabet with banks); supplier Nets DanID owned by IN Groupe (France)",
+   "research_note": "The supplier is owned by French state-owned IN Groupe. The contract requires that MitID is operated from Denmark, and MitID is also on the statutory list of systems that must be kept in Denmark.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2025-03-19",
+     "publisher": "Retsinformation / Digitaliseringsministeriet",
+     "quote": "NemLog-in: Den fællesoffentlige digitale infrastrukturløsning, som sætter privatpersoner og erhvervsbrugere med digitale identiteter i stand til at interagere med digitale selvbetjeningsløsninger,",
+     "quote_english": "NemLog-in: the joint public digital infrastructure solution that enables private persons and business users with digital identities to interact with digital self-service solutions,",
+     "title": "Bekendtgørelse af lov om MitID og NemLog-in (LBK nr 333 af 19/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/333/xml",
+     "value": "NemLog-in - the joint public digital login infrastructure through which authentications to public self-service solutions pass"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2025-03-19",
+     "publisher": "Retsinformation / Digitaliseringsministeriet",
+     "quote": "Digitaliseringsstyrelsen videregive autentifikationssvar, herunder risikodata vedrørende den konkrete og enkelte transaktion, til en broker, der er tilsluttet MitID-løsningen eller NemLog-in.",
+     "quote_english": "the Agency for Digital Government may pass on authentication responses, including risk data concerning the specific individual transaction, to a broker connected to the MitID solution or NemLog-in.",
+     "title": "Bekendtgørelse af lov om MitID og NemLog-in (LBK nr 333 af 19/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/333/xml",
+     "value": "MitID and NemLog-in Act § 13: Digitaliseringsstyrelsen may pass authentication responses incl. per-transaction risk data to brokers"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "hosting",
+     "language": "da",
+     "published": "2026-01-26",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "Den nuværende driftskontrakt blev indgået med NNIT (nu Aeven) i 2018 og løber til marts 2029.",
+     "quote_english": "The current operations contract was concluded with NNIT (now Aeven) in 2018 and runs until March 2029.",
+     "title": "Drift af NemLog-in sendes i udbud",
+     "url": "https://digst.dk/nyheder/nyhedsarkiv/2026/januar/drift-af-nemlog-in-sendes-i-udbud/",
+     "value": "NemLog-in infrastructure operation contracted to NNIT (now Aeven) in 2018, running to March 2029; re-tendered in 2026"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "da",
+     "published": "2026-01-26",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "Digitaliseringsstyrelsen offentliggør udbudsmaterialet om infrastrukturdrift af NemLog-in-løsningen, som er en samfundskritisk del af den offentlige digitale infrastruktur.",
+     "quote_english": "The Agency for Digital Government publishes the tender material for infrastructure operation of the NemLog-in solution, which is a society-critical part of the public digital infrastructure.",
+     "title": "Drift af NemLog-in sendes i udbud",
+     "url": "https://digst.dk/nyheder/nyhedsarkiv/2026/januar/drift-af-nemlog-in-sendes-i-udbud/",
+     "value": "Digitaliseringsstyrelsen; NemLog-in described as a society-critical part of public digital infrastructure"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "foreign_dependency",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "8. Kreditregisteret 9. Kriminalforsorgens Klientadministrationssystem 10. MitID 11. NemLog-in3 12. Rigsarkivets arkiveringsversioner, så længe de ikke er tilgængelige",
+     "quote_english": "8. The Credit Register 9. Prison and Probation Service client administration system 10. MitID 11. NemLog-in3 12. The National Archives' archival versions, as long as they are not accessible",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "NemLog-in3 is listed in Annex 1 of the Location Requirement Order: must be kept in Denmark"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "da",
+     "published": "2026-03-06",
+     "publisher": "Digitaliseringsstyrelsen",
+     "quote": "Der gennemføres i gennemsnit omkring 35 millioner logins gennem NemLog-in om måneden",
+     "quote_english": "On average around 35 million logins are made through NemLog-in each month",
+     "title": "Tal og statistik for Digitaliseringsstyrelsens produkter",
+     "url": "https://digst.dk/tal-og-statistik/",
+     "value": "On average around 35 million logins per month through NemLog-in"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "national",
+   "holding_name": "NemLog-in (NemLog-in3) authentication logs",
+   "operator": "Digitaliseringsstyrelsen; infrastructure operation by NNIT (now Aeven) until March 2029",
+   "research_note": "NemLog-in3 must by law be kept in Denmark. No source was found stating the retention period of the authentication logs; a 24-month figure appears in secondary search snippets but not on a fetchable page. Aeven's ownership was not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2026-09-11",
+     "publisher": "Retsinformation / Økonomi- og Indenrigsministeriet",
+     "quote": "Når valg er udskrevet, skal kommunalbestyrelsen udarbejde en valgliste over kommunens vælgere, jf. §§ 15 og 16. Valglisten skal udarbejdes for hvert afstemningsområde i kommunen.",
+     "quote_english": "When an election is called, the municipal council shall prepare an electoral list of the municipality's voters, cf. §§ 15 and 16. The list shall be prepared for each polling district in the municipality.",
+     "title": "Bekendtgørelse af lov om valg til Folketinget (LBK nr 805 af 11/09/2026)",
+     "url": "https://www.retsinformation.dk/eli/lta/2026/805/xml",
+     "value": "Valglister (electoral lists) compiled per polling district by each municipal council when an election is called; not a standing central register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2026-09-11",
+     "publisher": "Retsinformation / Økonomi- og Indenrigsministeriet",
+     "quote": "Valglisterne udarbejdes på grundlag af oplysningerne i Det Centrale Personregister (CPR). Stk. 2. Valglisterne skal indeholde vælgernes navn, fødselsdato og bopæl",
+     "quote_english": "The electoral lists are prepared on the basis of the data in the Central Person Register (CPR). (2) The lists shall contain voters' name, date of birth and residence",
+     "title": "Bekendtgørelse af lov om valg til Folketinget (LBK nr 805 af 11/09/2026)",
+     "url": "https://www.retsinformation.dk/eli/lta/2026/805/xml",
+     "value": "Folketingsvalgloven § 19: electoral lists are prepared on the basis of the data in CPR"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "da",
+     "published": "2026-09-11",
+     "publisher": "Retsinformation / Økonomi- og Indenrigsministeriet",
+     "quote": "Vælgerne skal optages på valglisten i den kommune, hvor de er bopælsregistreret i Det Centrale Personregister (CPR), jf. dog § 16.",
+     "quote_english": "Voters shall be entered on the electoral list in the municipality where they are registered as resident in the Central Person Register (CPR), cf. however § 16.",
+     "title": "Bekendtgørelse af lov om valg til Folketinget (LBK nr 805 af 11/09/2026)",
+     "url": "https://www.retsinformation.dk/eli/lta/2026/805/xml",
+     "value": "Municipal councils; voters are entered on the list in the municipality where they are registered as resident in CPR"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Valglister (compiled from CPR per election)",
+   "operator": "Kommunalbestyrelserne (municipal councils)",
+   "research_note": "There is no standing central electoral register. Lists are generated from CPR when an election is called. The IT system and hosting used for the lists were not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Digitaliseringsstyrelsen / Den Danske Stat Tillidstjenester",
+     "quote": "Den Danske Stat Tillidstjenester (CA1) Tillidstjenester leveret af Digitaliseringsstyrelsen på vegne af Den Danske Stat",
+     "quote_english": "The Danish State Trust Services (CA1): trust services delivered by the Agency for Digital Government on behalf of the Danish State",
+     "title": "Forside - Den Danske Stat Tillidstjenester",
+     "url": "https://www.ca1.gov.dk/",
+     "value": "Den Danske Stat Tillidstjenester (CA1) - Danish State trust services, delivered by Digitaliseringsstyrelsen on behalf of the Danish State"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "da",
+     "published": "",
+     "publisher": "Digitaliseringsstyrelsen / Den Danske Stat Tillidstjenester",
+     "quote": "Den Danske Stat (CA1) er en kvalificeret tillidstjenesteudbyder efter eIDAS-forordningen og optræder på positivlisten over godkendte tillidstjenesteudbydere.",
+     "quote_english": "The Danish State (CA1) is a qualified trust service provider under the eIDAS Regulation and appears on the trusted list of approved trust service providers.",
+     "title": "Forside - Den Danske Stat Tillidstjenester",
+     "url": "https://www.ca1.gov.dk/",
+     "value": "Digitaliseringsstyrelsen; CA1 is a qualified trust service provider under eIDAS on the EU trusted list"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Digitaliseringsstyrelsen / Den Danske Stat Tillidstjenester",
+     "quote": "Kvalificerede certifikater: Hent certifikat: Den Danske Stat kvalificeret rod-CA (pem) Hent certifikat: Den Danske Stat kvalificeret udstedende-CA 1 (pem) OCES certifikater: Hent certifikat: Den Danske Stat OCES rod-CA (pem)",
+     "quote_english": "Qualified certificates: Download certificate: Danish State qualified root CA (pem); Danish State qualified issuing CA 1 (pem); OCES certificates: Danish State OCES root CA (pem)",
+     "title": "Certifikater - Den Danske Stat Tillidstjenester",
+     "url": "https://www.ca1.gov.dk/certifikater/",
+     "value": "Root and issuing CAs: Den Danske Stat qualified root CA / issuing CA 1 and OCES root CA / issuing CA 1"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2016-06-08",
+     "publisher": "Retsinformation / Finansministeriet",
+     "quote": "Denne lov finder anvendelse på tillidstjenesteudbydere, som udbyder tillidstjenester og er etableret på det danske marked, og som er omfattet af Europa-Parlamentets og Rådets forordning (EU) nr. 910/2014",
+     "quote_english": "This act applies to trust service providers offering trust services established on the Danish market and covered by Regulation (EU) No 910/2014 of the European Parliament and of the Council",
+     "title": "Lov om supplerende bestemmelser til forordning om elektronisk identifikation og tillidstjenester (LOV nr 617 af 08/06/2016)",
+     "url": "https://www.retsinformation.dk/eli/lta/2016/617/xml",
+     "value": "eIDAS Regulation (EU) 910/2014 plus Danish supplementary act LOV nr 617 af 08/06/2016; Digitaliseringsstyrelsen is supervisory authority"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "Den Danske Stat Tillidstjenester (CA1): qualified and OCES root/issuing CAs",
+   "operator": "Digitaliseringsstyrelsen",
+   "research_note": "No public source on the CA hosting or HSM operator was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Udlændingestyrelsen (nyidanmark.dk)",
+     "quote": "Læs om adgang til de informationssystemer, der kan bruges til udveksling af oplysninger mellem myndighederne på udlændingeområdet (tidligere UIP-portalen).",
+     "quote_english": "Read about access to the information systems that can be used for exchanging information between the authorities in the immigration field (formerly the UIP portal).",
+     "title": "Informationssystemer på udlændingeområdet",
+     "url": "https://nyidanmark.dk/da/Collaborators/uip",
+     "value": "Information systems in the immigration field incl. Udlændinge Informations Systemet (UIS), used for data exchange between authorities (formerly UIP portal)"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "operator",
+     "language": "da",
+     "published": "",
+     "publisher": "Danmarks Statistik",
+     "quote": "Udlændingestyrelsen er den myndighed, som modtager og behandler ansøgninger om asyl samt anden opholdstilladelse.",
+     "quote_english": "The Danish Immigration Service is the authority that receives and processes applications for asylum and other residence permits.",
+     "title": "Asylansøgninger og opholdstilladelser: Statistisk behandling",
+     "url": "https://www.dst.dk/da/Statistik/dokumentation/statistikdokumentation/asylansoegninger-og-opholdstilladelser/statistisk-behandling",
+     "value": "Udlændingestyrelsen (Danish Immigration Service) receives and processes asylum and other residence permit applications"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2025-09-25",
+     "publisher": "Retsinformation / Udlændinge- og Integrationsministeriet",
+     "quote": "Der optages omgående fingeraftryk af en udlænding, som 1) søger om opholdstilladelse efter § 7, stk. 1-3, jf. dog stk. 11,",
+     "quote_english": "Fingerprints are taken immediately of a foreign national who 1) applies for a residence permit under § 7(1)-(3), cf. however subsection 11,",
+     "title": "Bekendtgørelse af udlændingeloven (LBK nr 1183 af 25/09/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/1183/xml",
+     "value": "Udlændingeloven (Aliens Act), LBK nr 1183 af 25/09/2025"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Udlændinge Informations Systemet (UIS) and related immigration information systems",
+   "operator": "Udlændingestyrelsen",
+   "research_note": "No record counts or hosting information was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2025-08-21",
+     "publisher": "Retsinformation / Skatte- og Vækstministeriet",
+     "quote": "Ved denne lov oprettes et indkomstregister. Indberetningspligtige § 2. Indberetningspligten efter denne lov påhviler fysiske eller juridiske personer,",
+     "quote_english": "This act establishes an income register. Reporting obligation § 2. The reporting obligation under this act lies with natural or legal persons,",
+     "title": "Bekendtgørelse af lov om et indkomstregister (LBK nr 1054 af 21/08/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/1054/xml",
+     "value": "Indkomstregisteret (eIndkomst) - national income register established by the Income Register Act"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "da",
+     "published": "2025-08-21",
+     "publisher": "Retsinformation / Skatte- og Vækstministeriet",
+     "quote": "Told- og skatteforvaltningen har terminaladgang til indkomstregisteret, jf. stk. 1, med henblik på drift og administration af indkomstregisteret.",
+     "quote_english": "The customs and tax administration has terminal access to the income register for the purpose of operating and administering it.",
+     "title": "Bekendtgørelse af lov om et indkomstregister (LBK nr 1054 af 21/08/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/1054/xml",
+     "value": "Told- og skatteforvaltningen (Danish Tax Administration) operates and administers the income register"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "da",
+     "published": "",
+     "publisher": "Udviklings- og Forenklingsstyrelsen",
+     "quote": "Udviklings- og Forenklingsstyrelsen sikrer stabil drift og vedligeholdelse af Skatteforvaltningens it-systemer og udvikler i partnerskab med fagstyrelserne de it-løsninger, som Skatteforvaltningen har brug for.",
+     "quote_english": "The Agency for Development and Simplification ensures stable operation and maintenance of the Tax Administration's IT systems and develops, in partnership with the specialist agencies, the IT solutions the Tax Administration needs.",
+     "title": "Fakta om styrelsen",
+     "url": "https://ufst.dk/om-styrelsen/vores-opgaver/fakta-om-styrelsen",
+     "value": "Udviklings- og Forenklingsstyrelsen (UFST), an agency of the Tax Administration, runs operation and maintenance of the Tax Administration's IT systems"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "national",
+   "holding_name": "Indkomstregisteret (eIndkomst) and Skatteforvaltningen tax systems",
+   "operator": "Skatteforvaltningen; IT operated by Udviklings- og Forenklingsstyrelsen (UFST)",
+   "research_note": "UFST states that it runs operation of the Tax Administration IT. The use of external suppliers and data centres was not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "da",
+     "published": "2026-03-16",
+     "publisher": "Toldstyrelsen",
+     "quote": "Vi er nu helt overgået til de nye toldsystemer for eksport, forsendelse og import. Fremover kan nye importangivelser kun oprettes i DMS Import.",
+     "quote_english": "We have now fully moved to the new customs systems for export, transit and import. From now on new import declarations can only be created in DMS Import.",
+     "title": "Nu er vi overgået til DMS Import",
+     "url": "https://toldst.dk/nyheder/nyt-om-told/dms-import-er-nu-i-fuld-drift",
+     "value": "Toldstyrelsen (Customs Agency); DMS Import in full operation from March 2026"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2022-01-04",
+     "publisher": "Retsinformation / Skatteministeriet",
+     "quote": "Varer, der føres ind i, transiterer eller føres ud af det danske toldområde, behandles efter EU's retsakter, herunder EU-toldkodeksen. Der svares told i henhold til disse retsakter.",
+     "quote_english": "Goods brought into, transiting or taken out of the Danish customs territory are treated under EU acts, including the Union Customs Code. Duty is paid under those acts.",
+     "title": "Bekendtgørelse af toldloven (LBK nr 29 af 04/01/2022)",
+     "url": "https://www.retsinformation.dk/eli/lta/2022/29/xml",
+     "value": "Toldloven (LBK nr 29 af 04/01/2022) applying the EU Union Customs Code"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Toldstyrelsen",
+     "quote": "I toldsystemet DMS kan du håndtere din virksomheds import, eksport og forsendelse.",
+     "quote_english": "In the DMS customs system you can handle your company's import, export and transit.",
+     "title": "DMS (Declaration Management System)",
+     "url": "https://toldst.dk/erhverv/toldsystemer/dms",
+     "value": "DMS (Declaration Management System) - customs system for import, export and transit declarations"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "DMS (Declaration Management System)",
+   "operator": "Toldstyrelsen",
+   "research_note": "Hosting and supplier of DMS were not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2024-09-02",
+     "publisher": "Retsinformation / Beskæftigelsesministeriet",
+     "quote": "Udbetaling Danmark varetager de opgaver, der tillægges Udbetaling Danmark i henhold til denne lov og til: 1) Lov om social pension.",
+     "quote_english": "Udbetaling Danmark carries out the tasks assigned to it under this act and under: 1) the Social Pensions Act.",
+     "title": "Bekendtgørelse af lov om Udbetaling Danmark (LBK nr 1034 af 02/09/2024)",
+     "url": "https://www.retsinformation.dk/eli/lta/2024/1034/xml",
+     "value": "Udbetaling Danmark - self-governing institution administering social pensions, housing benefit and other cash benefits"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2016-12-06",
+     "publisher": "Retsinformation / Beskæftigelsesministeriet",
+     "quote": "Med denne lov oprettes Udbetaling Danmark som en selvejende institution. Stk. 2. Udbetaling Danmarks hjemsted er Hillerød Kommune.",
+     "quote_english": "This act establishes Udbetaling Danmark as a self-governing institution. (2) Udbetaling Danmark's seat is Hillerød Municipality.",
+     "title": "Bekendtgørelse af lov om etablering af den selvejende institution Udbetaling Danmark (LBK nr 1506 af 06/12/2016)",
+     "url": "https://www.retsinformation.dk/eli/lta/2016/1506/xml",
+     "value": "Lov om etablering af den selvejende institution Udbetaling Danmark (LBK nr 1506 af 06/12/2016) and Lov om Udbetaling Danmark (LBK nr 1034 af 02/09/2024)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "da",
+     "published": "",
+     "publisher": "ATP",
+     "quote": "Vi administrerer udbetaling af en række velfærds- og sikringsydelser, for eksempel feriepenge, folkepension, boligstøtte og barselsdagpenge.",
+     "quote_english": "We administer payment of a range of welfare and security benefits, for example holiday pay, state pension, housing benefit and parental benefit.",
+     "title": "ATP's opgaver – pensionsforvalter, investor og administrator",
+     "url": "https://www.atp.dk/vores-opgaver",
+     "value": "ATP (Arbejdsmarkedets Tillægspension) administers payment of welfare benefits such as state pension, housing benefit and parental benefit"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Udbetaling Danmark (social pensions and cash benefits), administered by ATP",
+   "operator": "Udbetaling Danmark / ATP",
+   "research_note": "Hosting and record counts were not found. The ATP annual report was not consulted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2025-03-12",
+     "publisher": "Retsinformation / Indenrigs- og Sundhedsministeriet",
+     "quote": "Personer, der har bopæl her i landet, har ret til lovens ydelser, jf. dog stk. 4 og 5. Stk. 2. Ved bopæl forstås tilmelding til Folkeregisteret.",
+     "quote_english": "Persons resident in Denmark are entitled to benefits under the act, cf. however subsections 4 and 5. (2) Residence means registration in the Civil Registration System.",
+     "title": "Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/275/xml",
+     "value": "No separate statutory insurance enrolment: entitlement under the Health Act follows residence, defined as registration in the Civil Registration System (Folkeregisteret)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "da",
+     "published": "2025-03-12",
+     "publisher": "Retsinformation / Indenrigs- og Sundhedsministeriet",
+     "quote": "Kommunalbestyrelsen udsteder sundhedskort som bevis til personer, der har ret til ydelser efter loven, jf. § 7, stk. 1.",
+     "quote_english": "The municipal council issues health cards as proof to persons entitled to benefits under the act, cf. § 7(1).",
+     "title": "Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/275/xml",
+     "value": "Municipal councils issue the health card (sundhedskort) as proof of entitlement"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2025-05-21",
+     "publisher": "Retsinformation / Indenrigs- og Sundhedsministeriet",
+     "quote": "Alle personer, der er registreret i Det Centrale Personregister (CPR) med bopæl eller fast opholdssted her i landet, forsynes med et sundhedskort.",
+     "quote_english": "All persons registered in the Central Person Register (CPR) with residence or fixed abode in Denmark are provided with a health card.",
+     "title": "Bekendtgørelse om valgfri indplacering i sikringsgrupper og udstedelse af sundhedskort m.v. (BEK nr 529 af 21/05/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/529/xml",
+     "value": "BEK nr 529 af 21/05/2025: everyone registered in CPR with residence in Denmark receives a health card"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "No separate statutory health insurance register: entitlement via CPR residence and sundhedskort",
+   "operator": "Kommunalbestyrelserne (health card issuance) on the basis of CPR",
+   "research_note": "Denmark has a tax-funded system. Entitlement follows CPR registration, and the insurance group (sikringsgruppe) is administered by the municipalities.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2026-01-31",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "For hver ejendom findes en elektronisk akt indeholdende en fuldstændig gengivelse af de på ejendommen tinglyste dokumenter. Udslettede dokumenter overføres til en historisk akt.",
+     "quote_english": "For each property there is an electronic file containing a full reproduction of the documents registered on the property. Deleted documents are transferred to a historical file.",
+     "title": "Bekendtgørelse af lov om tinglysning (LBK nr 285 af 31/01/2026)",
+     "url": "https://www.retsinformation.dk/eli/lta/2026/285/xml",
+     "value": "Tingbogen (land register) - electronic file per property with a full reproduction of registered documents"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "operator",
+     "language": "da",
+     "published": "2010-08-17",
+     "publisher": "Rigsrevisionen",
+     "quote": "Domstolsstyrelsen, som er en uafhængig institution under Justitsministeriet, har varetaget implementeringen af det digitale tinglysningssystem i tæt samarbejde med Tinglysningsretten, som blev etableret i 2007.",
+     "quote_english": "The Court Administration, an independent institution under the Ministry of Justice, handled implementation of the digital land registration system in close cooperation with the Land Registration Court, established in 2007.",
+     "title": "Beretning om det digitale tinglysningsprojekt (nr. 14/2009)",
+     "url": "https://www.rigsrevisionen.dk/revisionssager-arkiv/2010/aug/beretning-om-det-digitale-tinglysningsprojekt",
+     "value": "Domstolsstyrelsen (Danish Court Administration) implemented the digital land registration system together with Tinglysningsretten (Land Registration Court)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2026-01-31",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Rettigheder over fast ejendom skal tinglyses for at få gyldighed mod aftaler om ejendommen og mod retsforfølgning.",
+     "quote_english": "Rights over real property must be registered to be valid against agreements concerning the property and against enforcement.",
+     "title": "Bekendtgørelse af lov om tinglysning (LBK nr 285 af 31/01/2026)",
+     "url": "https://www.retsinformation.dk/eli/lta/2026/285/xml",
+     "value": "Tinglysningsloven (LBK nr 285 af 31/01/2026)"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Tingbogen / digital tinglysning",
+   "operator": "Tinglysningsretten and Domstolsstyrelsen",
+   "research_note": "The 2010 NAO report names a supplier delay but not the current operator or hosting. The current contract was not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2026-02-05",
+     "publisher": "Retsinformation / Erhvervsministeriet",
+     "quote": "Erhvervsstyrelsen fører Det Centrale Virksomhedsregister. Erhvervsstyrelsen er ansvarlig for registrering i samt vedligeholdelse og udvikling af registret.",
+     "quote_english": "The Danish Business Authority keeps the Central Business Register. The Authority is responsible for registration in, and maintenance and development of, the register.",
+     "title": "Bekendtgørelse af lov om Det Centrale Virksomhedsregister (LBK nr 246 af 05/02/2026)",
+     "url": "https://www.retsinformation.dk/eli/lta/2026/246/xml",
+     "value": "Det Centrale Virksomhedsregister (CVR) - Central Business Register, kept by Erhvervsstyrelsen"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2026-02-05",
+     "publisher": "Retsinformation / Erhvervsministeriet",
+     "quote": "Herved bekendtgøres lov om Det Centrale Virksomhedsregister, jf. lovbekendtgørelse nr. 1052 af 16. oktober 2019,",
+     "quote_english": "The Act on the Central Business Register is hereby promulgated, cf. consolidated act no. 1052 of 16 October 2019,",
+     "title": "Bekendtgørelse af lov om Det Centrale Virksomhedsregister (LBK nr 246 af 05/02/2026)",
+     "url": "https://www.retsinformation.dk/eli/lta/2026/246/xml",
+     "value": "Lov om Det Centrale Virksomhedsregister (CVR-loven), LBK nr 246 af 05/02/2026"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Det Centrale Virksomhedsregister (CVR)",
+   "operator": "Erhvervsstyrelsen",
+   "research_note": "erhvervsstyrelsen.dk returns 403 to automated fetches. No count or hosting source was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Erhvervsministeriet",
+     "quote": "Kapitalselskabet skal registrere oplysningerne om selskabets reelle ejere, herunder oplysninger om de reelle ejeres rettigheder, i Erhvervsstyrelsens it-system,",
+     "quote_english": "The company shall register the information on its beneficial owners, including their rights, in the Danish Business Authority's IT system,",
+     "title": "Bekendtgørelse af lov om aktie- og anpartsselskaber (selskabsloven) (LBK nr 331 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/331/xml",
+     "value": "Selskabsloven § 58 a, stk. 3 (LBK nr 331 af 20/03/2025): companies must register beneficial owners in the Business Authority's IT system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2026-02-05",
+     "publisher": "Retsinformation / Erhvervsministeriet",
+     "quote": "En juridisk person, jf. § 3, nr. 2, som i henhold til anden lovgivning er forpligtet til at registrere reelle ejere, skal være registreret i Det Centrale Virksomhedsregister.",
+     "quote_english": "A legal person that under other legislation is obliged to register beneficial owners must be registered in the Central Business Register.",
+     "title": "Bekendtgørelse af lov om Det Centrale Virksomhedsregister (LBK nr 246 af 05/02/2026)",
+     "url": "https://www.retsinformation.dk/eli/lta/2026/246/xml",
+     "value": "Beneficial ownership data held in CVR: legal persons and trusts obliged to register beneficial owners must be registered in CVR"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "da",
+     "published": "2026-02-05",
+     "publisher": "Retsinformation / Erhvervsministeriet",
+     "quote": "Der kan efter anmodning gives adgang til oplysninger om reelle ejere til følgende: 1) Kompetente myndigheder og Hvidvasksekretariatet.",
+     "quote_english": "On request, access to information on beneficial owners may be given to the following: 1) Competent authorities and the Money Laundering Secretariat.",
+     "title": "Bekendtgørelse af lov om Det Centrale Virksomhedsregister (LBK nr 246 af 05/02/2026)",
+     "url": "https://www.retsinformation.dk/eli/lta/2026/246/xml",
+     "value": "Erhvervsstyrelsen; access to BO data restricted to competent authorities, the Money Laundering Secretariat, obliged entities and those with legitimate interest (CVR Act § 18 a)"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Reelle ejere registered in CVR (Erhvervsstyrelsens it-system)",
+   "operator": "Erhvervsstyrelsen",
+   "research_note": "No hosting information was found. The Erhvervsstyrelsen guidance pages were blocked (403).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2023-02-22",
+     "publisher": "Retsinformation / Skatteministeriet",
+     "quote": "Registrering af køretøjer sker i et for hele landet fælles register for køretøjer (Køretøjsregisteret), jf. dog stk. 4.",
+     "quote_english": "Registration of vehicles takes place in a common national register of vehicles (the Vehicle Register), cf. however subsection 4.",
+     "title": "Bekendtgørelse af lov om registrering af køretøjer (LBK nr 179 af 22/02/2023)",
+     "url": "https://www.retsinformation.dk/eli/lta/2023/179/xml",
+     "value": "Køretøjsregisteret - the national vehicle register (DMR) covering every vehicle and its ownership"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2023-02-22",
+     "publisher": "Retsinformation / Skatteministeriet",
+     "quote": "I Køretøjsregisteret registreres oplysninger om hvert enkelt køretøj og om køretøjets tilhørsforhold. Stk. 3. Skatteministeren fastsætter regler om registrering i Køretøjsregisteret.",
+     "quote_english": "The Vehicle Register records information on each vehicle and its ownership. (3) The Minister of Taxation lays down rules on registration in the Vehicle Register.",
+     "title": "Bekendtgørelse af lov om registrering af køretøjer (LBK nr 179 af 22/02/2023)",
+     "url": "https://www.retsinformation.dk/eli/lta/2023/179/xml",
+     "value": "Køretøjsregistreringsloven (LBK nr 179 af 22/02/2023); Minister of Taxation sets registration rules"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Køretøjsregisteret (national vehicle register)",
+   "operator": "Skatteministeriet area (Motorstyrelsen); Rigspolitiet also keeps Centralregistret for Motorkøretøjer",
+   "research_note": "The driving-licence register was not sourced. The police CRM is on the statutory Denmark-location list, but the tax-side Køretøjsregisteret is not.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Politi (Rigspolitiet)",
+     "quote": "vil du derudover blive registreret i Det Centrale Kriminalregister (Kriminalregistret), der bl.a. tjener som internt arbejdsregister for politiet og danner grundlag for udskrift af straffeattester",
+     "quote_english": "you will also be registered in the Central Criminal Register, which serves inter alia as an internal police working register and forms the basis for criminal record certificates",
+     "title": "Politiets brug af personoplysninger",
+     "url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger",
+     "value": "Det Centrale Kriminalregister (Kriminalregistret) - Central Criminal Register"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "da",
+     "published": "",
+     "publisher": "Politi (Rigspolitiet)",
+     "quote": "Rigspolitiet er dataansvarlig for behandlingen af personoplysninger i Kriminalregistret, der er særskilt reguleret i kriminalregisterbekendtgørelsen",
+     "quote_english": "The National Police is data controller for processing personal data in the Criminal Register, which is separately regulated by the Criminal Register Order",
+     "title": "Politiets brug af personoplysninger",
+     "url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger",
+     "value": "Rigspolitiet is data controller; regulated by the kriminalregisterbekendtgørelse"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2026-06-22",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Kriminalregisteret består af en afgørelsesdel og en efterforskningsdel. Stk. 2. Rigspolitiet er dataansvarlig myndighed.",
+     "quote_english": "The Criminal Register consists of a decisions part and an investigation part. (2) The National Police is the data controller.",
+     "title": "Bekendtgørelse om behandling af personoplysninger i Det Centrale Kriminalregister (BEK nr 589 af 22/06/2026)",
+     "url": "https://www.retsinformation.dk/eli/lta/2026/589/xml",
+     "value": "Kriminalregisterbekendtgørelsen (BEK nr 589 af 22/06/2026): register has a decisions part and an investigation part; Rigspolitiet is data controller"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Rigspolitiets centrale systemportefølje (Automatisk Trafikkontrol System, Bøde og Kasse, Bøde og Kasse Grønland og Færøerne, Centralregistret for Motorkøretøjer, Det Centrale Kriminalregister, Det Centrale Pasregister, Det Centrale Rettighedsregister, On Demand, Politiets Index Register,",
+     "quote_english": "The National Police's central system portfolio (..., Central Register of Motor Vehicles, Central Criminal Register, Central Passport Register, Central Rights Register, On Demand, Police Index Register,",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "Det Centrale Kriminalregister is part of Rigspolitiet's central system portfolio that must be kept in Denmark (Location Requirement Order, Annex 1, item 13)"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "national",
+   "holding_name": "Det Centrale Kriminalregister (Kriminalregisteret)",
+   "operator": "Rigspolitiet",
+   "research_note": "This rests on the legal location requirement (BEK 291/2025, item 13). Court case-management systems were not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Politi (Rigspolitiet)",
+     "quote": "opretter politikredsen en sag i politiets sagsstyringssystem POLSAS med henblik på at behandle og dokumentere sagen.",
+     "quote_english": "the police district creates a case in the police case management system POLSAS in order to process and document the case.",
+     "title": "Politiets brug af personoplysninger",
+     "url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger",
+     "value": "POLSAS - the police case management system"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Politi (Rigspolitiet)",
+     "quote": "har politiet oprettet Politiets Indexregister, hvori politiet opbevarer og opstiller de person- og virksomhedsoplysninger, der er registreret i de centrale systemer og POLSAS.",
+     "quote_english": "the police have established the Police Index Register, in which the police store and list the person and company data registered in the central systems and POLSAS.",
+     "title": "Politiets brug af personoplysninger",
+     "url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger",
+     "value": "Politiets Indexregister - index of person and company data across the police central systems and POLSAS"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Rigspolitiets centrale systemportefølje (Automatisk Trafikkontrol System, Bøde og Kasse, Bøde og Kasse Grønland og Færøerne, Centralregistret for Motorkøretøjer, Det Centrale Kriminalregister, Det Centrale Pasregister, Det Centrale Rettighedsregister, On Demand, Politiets Index Register,",
+     "quote_english": "The National Police's central system portfolio (Automatic Traffic Control System, Fines and Cash, ..., Central Register of Motor Vehicles, Central Criminal Register, Central Passport Register, Central Rights Register, On Demand, Police Index Register,",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "Rigspolitiet's central system portfolio (incl. Politiets Sagsstyringssystem, Politiets Index Register, Det Centrale Kriminalregister, Det Centrale Pasregister) must be kept in Denmark (Annex 1, item 13)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "",
+     "publisher": "Politi (Rigspolitiet)",
+     "quote": "Politiet kan i overensstemmelse med lov nr. 410 af 27. april 2017 om retshåndhævende myndigheders behandling af personoplysninger (retshåndhævelsesloven) lovligt behandle oplysninger om dig,",
+     "quote_english": "The police may, in accordance with act no. 410 of 27 April 2017 on law enforcement authorities' processing of personal data (the Law Enforcement Act), lawfully process data about you,",
+     "title": "Politiets brug af personoplysninger",
+     "url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger",
+     "value": "Retshåndhævelsesloven (lov nr. 410 af 27. april 2017) governs police processing of personal data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2022-06-21",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Denne lov finder anvendelse på Det Centrale Dna-profilregister (dna-profilregisteret) og Det Centrale Fingeraftryksregister (fingeraftryksregisteret), der tjener som interne arbejdsregistre for politiet i forbindelse med identifikation af personer og sammenligning af spor.",
+     "quote_english": "This act applies to the Central DNA Profile Register and the Central Fingerprint Register, which serve as internal police working registers for identifying persons and comparing traces.",
+     "title": "Lov om Det Centrale Dna-profilregister og Det Centrale Fingeraftryksregister (LOV nr 873 af 21/06/2022)",
+     "url": "https://www.retsinformation.dk/eli/lta/2022/873/xml",
+     "value": "Det Centrale Dna-profilregister and Det Centrale Fingeraftryksregister - internal police registers for identification (LOV nr 873 af 21/06/2022)"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "national",
+   "holding_name": "POLSAS (Politiets Sagsstyringssystem), Politiets Indexregister, Det Centrale Fingeraftryksregister and Dna-profilregister",
+   "operator": "Rigspolitiet",
+   "research_note": "This rests on the legal location requirement (BEK 291/2025, item 13) for Rigspolitiet's central system portfolio.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "da",
+     "published": "2021-04-27",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "I § 2, stk. 2, ændres »Rigspolitichefen« til: »Rigspolitiet«, »den centrale myndighed« ændres til: »N. SIS-kontoret«,",
+     "quote_english": "In § 2(2), 'the National Commissioner' is changed to 'the National Police', 'the central authority' is changed to 'the N.SIS office',",
+     "title": "Lov om ændring af udlændingeloven og lov om Danmarks tiltrædelse af Schengenkonventionen (LOV nr 721 af 27/04/2021)",
+     "url": "https://www.retsinformation.dk/eli/lta/2021/721/xml",
+     "value": "Rigspolitiet is the N.SIS office (national Schengen Information System authority) under the Schengen accession act § 2(2) as amended by LOV nr 721 af 27/04/2021"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2021-04-27",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "forordning (EU) nr. 2018/1860 om brug af Schengeninformationssystemet i forbindelse med tilbagesendelse af tredjelandsstatsborgere med ulovligt ophold med senere ændringer gælder her i landet.",
+     "quote_english": "Regulation (EU) 2018/1860 on the use of the Schengen Information System for the return of illegally staying third-country nationals, as amended, applies in Denmark.",
+     "title": "Lov om ændring af udlændingeloven og lov om Danmarks tiltrædelse af Schengenkonventionen (LOV nr 721 af 27/04/2021)",
+     "url": "https://www.retsinformation.dk/eli/lta/2021/721/xml",
+     "value": "LOV nr 721 af 27/04/2021 implements the ETIAS, EES and SIS regulations into Danish law"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "da",
+     "published": "",
+     "publisher": "Udlændingestyrelsen / SIRI (nyidanmark.dk)",
+     "quote": "vil de biometriske data blive overført til Schengeninformationssystemet (SIS), som er et centralt EU system, hvor Schengen-landene og Schengen-associerede landene deler og udveksler oplysninger.",
+     "quote_english": "the biometric data will be transferred to the Schengen Information System (SIS), a central EU system where Schengen states and Schengen-associated states share and exchange information.",
+     "title": "Biometri – Opbevaring af fingeraftryk og ansigtsfoto",
+     "url": "https://www.nyidanmark.dk/da/Ord-og-begreber/F%C3%A6lles/Biometri---Opbevaring-af-fingeraftryk-og-ansigtsfoto",
+     "value": "SIS is a central EU system shared among Schengen states; biometric data of refused foreign nationals are transferred to it"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "mixed",
+   "holding_name": "N.SIS (national Schengen Information System component) and immigration biometric/visa systems",
+   "operator": "Rigspolitiet (N.SIS-kontoret); Udlændingestyrelsen",
+   "research_note": "The national component is run by Rigspolitiet, and the central SIS is an EU system. Hosting of the VIS/EES national parts was not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Politi (Rigspolitiet)",
+     "quote": "Rigspolitiet er eksempelvis dataansvarlig for Politiets Våbenregister, der har til formål at understøtte politiets administration af sager i medfør af våben- og jagtlovgivningen",
+     "quote_english": "The National Police is for example data controller for the Police Firearms Register, which supports police administration of cases under firearms and hunting legislation",
+     "title": "Politiets brug af personoplysninger",
+     "url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger",
+     "value": "Politiets Våbenregister (Police Firearms Register), Rigspolitiet data controller"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2021-08-26",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Det er forbudt uden tilladelse af justitsministeren eller den, han dertil bemyndiger, at indføre eller fremstille, herunder samle: 1) Skydevåben",
+     "quote_english": "It is prohibited without permission from the Minister of Justice or a person authorised by him to import or manufacture, including assemble: 1) Firearms",
+     "title": "Bekendtgørelse af lov om våben og eksplosivstoffer m.v. (LBK nr 1736 af 26/08/2021)",
+     "url": "https://www.retsinformation.dk/eli/lta/2021/1736/xml",
+     "value": "Våbenloven (LBK nr 1736 af 26/08/2021): import and manufacture of firearms require permission from the Minister of Justice"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "da",
+     "published": "",
+     "publisher": "Politi (Rigspolitiet)",
+     "quote": "Rigspolitiet og politikredsene kan anvende oplysningerne i Våbenregistret til at understøtte politiets efterforskningsmæssige virksomhed og til at føre tilsyn og kontrol med de udstedte tilladelser.",
+     "quote_english": "The National Police and police districts may use data in the Firearms Register to support investigations and to supervise and check permits issued.",
+     "title": "Politiets brug af personoplysninger",
+     "url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger",
+     "value": "Rigspolitiet (data controller); police may also use the register for investigation and supervision of permits"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Politiets Våbenregister",
+   "operator": "Rigspolitiet",
+   "research_note": "The Våbenregister is not named in the statutory Denmark-location list. No hosting source was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2016-08-10",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Fra 1. januar 1871 udgives ved regeringens foranstaltning en Lovtidende. § 1 a. Justitsministeren forestår drift af Lovtidende i elektronisk form.",
+     "quote_english": "From 1 January 1871 a Law Gazette is published by the government. § 1 a. The Minister of Justice is responsible for operating the Law Gazette in electronic form.",
+     "title": "Bekendtgørelse af lov om udgivelsen af en Lovtidende (LBK nr 1098 af 10/08/2016)",
+     "url": "https://www.retsinformation.dk/eli/lta/2016/1098/xml",
+     "value": "Lovtidende (Law Gazette), published since 1871, in electronic form operated under the Minister of Justice"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2016-08-10",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Justitsministeren fastsætter regler om Lovtidende i elektronisk form, herunder regler om Lovtidendes sikkerhed.",
+     "quote_english": "The Minister of Justice lays down rules on the Law Gazette in electronic form, including rules on its security.",
+     "title": "Bekendtgørelse af lov om udgivelsen af en Lovtidende (LBK nr 1098 af 10/08/2016)",
+     "url": "https://www.retsinformation.dk/eli/lta/2016/1098/xml",
+     "value": "Lovtidendeloven (LBK nr 1098 af 10/08/2016) § 1 a, stk. 2: Minister of Justice sets rules on the electronic Gazette, including its security"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Lovtidende (electronic, via Retsinformation/Lovtidende.dk)",
+   "operator": "Justitsministeriet (Civilstyrelsen administers Lovtidende; this was not separately sourced)",
+   "research_note": "No hosting source was found for Lovtidende or Retsinformation.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Økonomistyrelsen",
+     "quote": "Statens Bevillings- og Regnskabsløsning (SBRL) er den it-løsning, som understøtter finanslovs- og statsregnskabsprocesserne.",
+     "quote_english": "The State Appropriation and Accounts Solution (SBRL) is the IT solution supporting the Finance Act and state accounts processes.",
+     "title": "Statens Bevillings- og Regnskabsløsning",
+     "url": "https://oes.dk/digitale-loesninger/statens-bevillings-og-regnskabsloesning/",
+     "value": "Statens Bevillings- og Regnskabsløsning (SBRL) - state appropriation and accounts solution supporting Finance Act and state accounts from FY2025"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Økonomistyrelsen",
+     "quote": "Navision Stat bruges af mere end 400 statslige og selvejende institutioner.",
+     "quote_english": "Navision Stat is used by more than 400 state and self-governing institutions.",
+     "title": "Navision Stat",
+     "url": "https://oes.dk/digitale-loesninger/navision-stat/",
+     "value": "Navision Stat - accounting system used by more than 400 state and self-governing institutions"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2018-02-19",
+     "publisher": "Retsinformation / Finansministeriet",
+     "quote": "er endvidere forpligtet til at anvende de systemer på økonomi-, betalings-, HR- og lønområdet, der stilles til rådighed af Moderniseringsstyrelsen.",
+     "quote_english": "are furthermore obliged to use the systems in the finance, payment, HR and payroll areas made available by the Agency for Modernisation.",
+     "title": "Bekendtgørelse om statens regnskabsvæsen mv. (BEK nr 116 af 19/02/2018)",
+     "url": "https://www.retsinformation.dk/eli/lta/2018/116/xml",
+     "value": "Bekendtgørelse om statens regnskabsvæsen mv. (BEK nr 116 af 19/02/2018) § 11: state institutions must use the centrally administered group system and finance, payment, HR and payroll systems"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Statens Bevillings- og Regnskabsløsning (SBRL), Navision Stat",
+   "operator": "Økonomistyrelsen",
+   "research_note": "No hosting source was found for SBRL or Navision Stat.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Det Centrale Register for Parkeringsafgifter og Register for Efterlyste Køretøjer) 14. Statens Lønløsning 15. 112-alarmsystemet",
+     "quote_english": "the Central Register for Parking Charges and Register of Wanted Vehicles) 14. The State Payroll Solution 15. The 112 alarm system",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "Statens Lønløsning (state payroll solution), listed in Annex 1 of the Location Requirement Order as a system that must be kept in Denmark"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "da",
+     "published": "",
+     "publisher": "Økonomistyrelsen",
+     "quote": "Statens Lønløsning understøtter digitalt arbejdet med korrekte og stabile løn- og pensionsudbetalinger til ansatte i staten – hver gang. Hver måned udbetales løn til ca. 180.000 statslige ansatte.",
+     "quote_english": "The State Payroll Solution digitally supports correct and stable salary and pension payments to state employees every time. Each month salary is paid to approx. 180,000 state employees.",
+     "title": "Statens Lønløsning",
+     "url": "https://oes.dk/digitale-loesninger/statens-loenloesning/",
+     "value": "Salary paid monthly to approx. 180,000 state employees via Statens Lønløsning"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2018-02-19",
+     "publisher": "Retsinformation / Finansministeriet",
+     "quote": "er endvidere forpligtet til at anvende de systemer på økonomi-, betalings-, HR- og lønområdet, der stilles til rådighed af Moderniseringsstyrelsen.",
+     "quote_english": "are furthermore obliged to use the systems in the finance, payment, HR and payroll areas made available by the Agency for Modernisation.",
+     "title": "Bekendtgørelse om statens regnskabsvæsen mv. (BEK nr 116 af 19/02/2018)",
+     "url": "https://www.retsinformation.dk/eli/lta/2018/116/xml",
+     "value": "BEK nr 116 af 19/02/2018 § 11, stk. 2: state institutions must use the centrally provided payroll systems"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "national",
+   "holding_name": "Statens Lønløsning",
+   "operator": "Økonomistyrelsen",
+   "research_note": "Statens Lønløsning is on the statutory list of systems that must be kept in Denmark (BEK 291/2025, item 14). Armed-forces payroll was not researched separately.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Danmarks Statistik",
+     "quote": "Ved valg i Danmark optælles stemmer manuelt. Kommunerne indtaster derefter stemmetal i IT-system udviklet af KMD.",
+     "quote_english": "In Danish elections votes are counted manually. The municipalities then enter the vote counts into an IT system developed by KMD.",
+     "title": "Folketingsvalg, folkeafstemninger og Europa-parlamentsvalg: Præcision og pålidelighed",
+     "url": "https://www.dst.dk/da/Statistik/dokumentation/statistikdokumentation/folketingsvalg--folkeafstemninger-og-europa-parlamentsvalg/praecision-og-paalidelighed",
+     "value": "Election results system: municipalities enter manually counted vote totals into an IT system developed by KMD; Danmarks Statistik compiles results"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "foreign_dependency",
+     "language": "da",
+     "published": "2018-12-27",
+     "publisher": "DR",
+     "quote": "KMD skal fremover være et datterselskab i den japanske teknologikoncern NEC.",
+     "quote_english": "KMD will in future be a subsidiary of the Japanese technology group NEC.",
+     "title": "It-selskabet KMD solgt til japansk teknologikoncern",
+     "url": "https://www.dr.dk/nyheder/penge/it-selskabet-kmd-solgt-til-japansk-teknologikoncern",
+     "value": "KMD became a subsidiary of Japanese technology group NEC (sale announced Dec 2018)"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "non_eu_provider",
+   "holding_name": "Election result IT system developed by KMD; results compiled by Danmarks Statistik",
+   "operator": "Kommunerne, Danmarks Statistik; system developed by KMD",
+   "research_note": "The sources show the system was developed by KMD, which is a subsidiary of Japan's NEC (per DR). Hosting of the system is not stated.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2026",
+     "publisher": "Danmarks Nationalbank",
+     "quote": "TARGET DKK (afvikling i danske kroner via T2 og TIPS på TARGET Services samt Nationalbankens system for de pengepolitiske instrumenter og sikkerhedsstillelse, SPI)",
+     "quote_english": "TARGET DKK (settlement in Danish kroner via T2 and TIPS on TARGET Services and Nationalbanken's system for monetary-policy instruments and collateral, SPI)",
+     "title": "Overvågning af den finansielle infrastruktur 2025",
+     "url": "https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025",
+     "value": "TARGET DKK - Nationalbanken's payment system for krone settlement (via T2 and TIPS on TARGET Services, plus SPI for monetary-policy instruments and collateral)"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "hosting",
+     "language": "da",
+     "published": "2026",
+     "publisher": "Danmarks Nationalbank",
+     "quote": "Nationalbanken flyttede i påsken 2025 afviklingen af danske kroner fra Nationalbankens eget afviklingssystem, Kronos2, til den fælleseuropæiske platform for afvikling af betalinger og værdipapirhandler, TARGET Services",
+     "quote_english": "At Easter 2025 Nationalbanken moved settlement of Danish kroner from its own settlement system, Kronos2, to the pan-European platform for settlement of payments and securities trades, TARGET Services",
+     "title": "Overvågning af den finansielle infrastruktur 2025",
+     "url": "https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025",
+     "value": "At Easter 2025 Nationalbanken moved krone settlement from its own system Kronos2 to the pan-European TARGET Services platform"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "foreign_dependency",
+     "language": "da",
+     "published": "2026",
+     "publisher": "Danmarks Nationalbank",
+     "quote": "TARGET Services er en fælleseuropæisk teknisk platform, som stilles til rådighed for deltagende centralbanker af den Europæiske Centralbank, ECB, og Eurosystemet.",
+     "quote_english": "TARGET Services is a pan-European technical platform made available to participating central banks by the European Central Bank (ECB) and the Eurosystem.",
+     "title": "Overvågning af den finansielle infrastruktur 2025",
+     "url": "https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025",
+     "value": "TARGET Services is provided by the ECB and the Eurosystem (EU institutions; Denmark is outside the euro area)"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "eu_provider",
+   "holding_name": "TARGET DKK (T2/TIPS on TARGET Services) and SPI",
+   "operator": "Danmarks Nationalbank; platform provided by ECB/Eurosystem",
+   "research_note": "Settlement moved from Kronos2 to TARGET Services at Easter 2025.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "da",
+     "published": "",
+     "publisher": "Forsvarsministeriets Materiel- og Indkøbsstyrelse",
+     "quote": "FMI har ansvar for Forsvarsministeriets it-organisation, Cyberdivisionen. Vi understøtter de flere end 20.000 medarbejdere i koncernen, såvel nationalt som internationalt – i fred, krise og krig.",
+     "quote_english": "FMI is responsible for the Ministry of Defence's IT organisation, the Cyber Division. We support the more than 20,000 employees in the group, nationally and internationally, in peace, crisis and war.",
+     "title": "It- og cyberområdet",
+     "url": "https://www.fmi.dk/da/it-og-cyberomraadet/",
+     "value": "Forsvarsministeriets Materiel- og Indkøbsstyrelse (FMI) Cyberdivisionen operates IT and IT support for the Danish Defence"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "da",
+     "published": "",
+     "publisher": "Forsvarsministeriets Materiel- og Indkøbsstyrelse",
+     "quote": "Vi it-understøtter Forsvaret 24/7. Vi drifter it og yder it-støtte til Forsvarets medarbejdere – fra danske ambassader til udsendte soldater og andre ansatte på fem kontinenter.",
+     "quote_english": "We provide IT support to the Defence 24/7. We operate IT and provide IT support to Defence staff, from Danish embassies to deployed soldiers and other staff on five continents.",
+     "title": "It- og cyberområdet",
+     "url": "https://www.fmi.dk/da/it-og-cyberomraadet/",
+     "value": "Cyber Division runs Defence IT in-house: more than 2,500 servers monitored around the clock, several networks incl. crisis-management networks"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "data_size",
+     "language": "da",
+     "published": "",
+     "publisher": "Forsvarsministeriets Materiel- og Indkøbsstyrelse",
+     "quote": "Flere end 2.500 servere overvåges i døgndrift. FMIs it-organisation it-understøtter de +20.000 ansatte i Forsvarsministeriets koncern",
+     "quote_english": "More than 2,500 servers are monitored around the clock. FMI's IT organisation supports the 20,000+ employees of the Ministry of Defence group",
+     "title": "It- og cyberområdet",
+     "url": "https://www.fmi.dk/da/it-og-cyberomraadet/",
+     "value": "More than 2,500 servers monitored around the clock; 50,000 computers supported"
+    }
+   ],
+   "class_id": "defence_command",
+   "foreign_dependency": "national",
+   "holding_name": "Forsvarets it (Cyberdivisionen-operated systems and networks)",
+   "operator": "Forsvarsministeriets Materiel- og Indkøbsstyrelse (FMI), Cyberdivisionen",
+   "research_note": "FMI states that it operates Defence IT in-house (2,500+ servers). DeMars appears on the statutory Denmark-location list, but no fetched source ties it to Defence, so it is not claimed here.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2017-03-07",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Politiets Efterretningstjeneste kan indsamle og indhente oplysninger, der kan have betydning for tjenestens virksomhed.",
+     "quote_english": "The Danish Security and Intelligence Service may collect and obtain information that may be relevant to the service's activities.",
+     "title": "Bekendtgørelse af lov om Politiets Efterretningstjeneste (PET) (LBK nr 231 af 07/03/2017)",
+     "url": "https://www.retsinformation.dk/eli/lta/2017/231/xml",
+     "value": "Politiets Efterretningstjeneste (PET) - domestic security intelligence; may collect information relevant to its activities"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2017-11-28",
+     "publisher": "Retsinformation / Forsvarsministeriet",
+     "quote": "Forsvarets Efterretningstjeneste er Danmarks udenrigsefterretningstjeneste og militære efterretningstjeneste.",
+     "quote_english": "The Danish Defence Intelligence Service is Denmark's foreign intelligence service and military intelligence service.",
+     "title": "Bekendtgørelse af lov om Forsvarets Efterretningstjeneste (FE) (LBK nr 1287 af 28/11/2017)",
+     "url": "https://www.retsinformation.dk/eli/lta/2017/1287/xml",
+     "value": "Forsvarets Efterretningstjeneste (FE) - foreign and military intelligence service"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2017-11-28",
+     "publisher": "Retsinformation / Forsvarsministeriet",
+     "quote": "Forsvarets Efterretningstjeneste kan indsamle og indhente oplysninger, der kan have betydning for tjenestens efterretningsmæssige virksomhed.",
+     "quote_english": "The Defence Intelligence Service may collect and obtain information that may be relevant to the service's intelligence activities.",
+     "title": "Bekendtgørelse af lov om Forsvarets Efterretningstjeneste (FE) (LBK nr 1287 af 28/11/2017)",
+     "url": "https://www.retsinformation.dk/eli/lta/2017/1287/xml",
+     "value": "PET-loven (LBK nr 231 af 07/03/2017) and FE-loven (LBK nr 1287 af 28/11/2017)"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Politiets Efterretningstjeneste (PET) and Forsvarets Efterretningstjeneste (FE) holdings",
+   "operator": "PET (Justitsministeriet); FE (Forsvarsministeriet)",
+   "research_note": "Hosting is not public.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "da",
+     "published": "",
+     "publisher": "Center for Beredskabskommunikation",
+     "quote": "Center for Beredskabskommunikation (CFB) er en del af Ministeriet for Samfundssikkerhed og Beredskab.",
+     "quote_english": "The Centre for Emergency Communication (CFB) is part of the Ministry of Civil Security and Emergency Preparedness.",
+     "title": "Om CFB",
+     "url": "https://sikkerhedsnet.dk/om-cfb",
+     "value": "Center for Beredskabskommunikation (CFB), part of the Ministry of Civil Security and Emergency Preparedness; network operation by Dansk Beredskabskommunikation A/S"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "da",
+     "published": "",
+     "publisher": "Center for Beredskabskommunikation",
+     "quote": "Leverandør Dansk Beredskabskommunikation A/S står for driften af SINE.",
+     "quote_english": "Supplier: Dansk Beredskabskommunikation A/S is responsible for operating SINE.",
+     "title": "Om SINE",
+     "url": "https://sikkerhedsnet.dk/om-sine",
+     "value": "SINE network operation is supplied by Dansk Beredskabskommunikation A/S (ownership not stated in this source)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Center for Beredskabskommunikation",
+     "quote": "I medfør af beredskabslovens § 29 skal beredskabsmyndighederne anvende SINE til løsning af beredskabsmæssige opgaver.",
+     "quote_english": "Under § 29 of the Emergency Management Act, emergency authorities must use SINE for emergency tasks.",
+     "title": "Om SINE",
+     "url": "https://sikkerhedsnet.dk/om-sine",
+     "value": "SINE (Sikkerhedsnettet) - Denmark's radio network for emergency communications; use mandatory under beredskabsloven § 29"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "da",
+     "published": "",
+     "publisher": "Center for Beredskabskommunikation",
+     "quote": "SINE er et krypteret, nødstrømssikret Tetra-radionet, der dækker Danmark og prioriterer vigtige opkald.",
+     "quote_english": "SINE is an encrypted, emergency-power-backed TETRA radio network that covers Denmark and prioritises important calls.",
+     "title": "Om SINE",
+     "url": "https://sikkerhedsnet.dk/om-sine",
+     "value": "SINE is an encrypted, emergency-power-backed TETRA radio network covering Denmark"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Det Centrale Register for Parkeringsafgifter og Register for Efterlyste Køretøjer) 14. Statens Lønløsning 15. 112-alarmsystemet",
+     "quote_english": "the Central Register for Parking Charges and Register of Wanted Vehicles) 14. The State Payroll Solution 15. The 112 alarm system",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "The 112 alarm system is listed in Annex 1 of the Location Requirement Order: must be kept in Denmark"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "SINE (Sikkerhedsnettet, TETRA) and the 112-alarmsystemet",
+   "operator": "Center for Beredskabskommunikation (Ministeriet for Samfundssikkerhed og Beredskab); SINE operated by Dansk Beredskabskommunikation A/S",
+   "research_note": "The 112 alarm system must by law be kept in Denmark (BEK 291/2025, item 15). The ownership of the SINE operator Dansk Beredskabskommunikation A/S is not stated in the fetched sources.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "research_note": "The Beredskabsloven (LBK 1741/2025) and the CFB/SINE pages were searched. No named national crisis-centre or alerting information system with a public source was found. The web-search budget ran out before the NOST and Beredskabsstyrelsen alerting systems could be researched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2023-03-09",
+     "publisher": "Retsinformation / Klima-, Energi- og Forsyningsministeriet",
+     "quote": "Energinets formål er at eje, drive og udbygge overordnet energiinfrastruktur og varetage opgaver med sammenhæng hertil",
+     "quote_english": "Energinet's purpose is to own, operate and expand the overall energy infrastructure and carry out related tasks",
+     "title": "Bekendtgørelse af lov om Energinet (LBK nr 271 af 09/03/2023)",
+     "url": "https://www.retsinformation.dk/eli/lta/2023/271/xml",
+     "value": "Lov om Energinet (LBK nr 271 af 09/03/2023) § 2"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2023-03-09",
+     "publisher": "Retsinformation / Klima-, Energi- og Forsyningsministeriet",
+     "quote": "lov om fremme af vedvarende energi og lov om gasforsyning og driver systemansvarlig virksomhed, eltransmissionsvirksomhed og gastransmissionsvirksomhed.",
+     "quote_english": "the Renewable Energy Promotion Act and the Gas Supply Act and carries out system-responsibility activities, electricity transmission and gas transmission.",
+     "title": "Bekendtgørelse af lov om Energinet (LBK nr 271 af 09/03/2023)",
+     "url": "https://www.retsinformation.dk/eli/lta/2023/271/xml",
+     "value": "Energinet carries out system-responsibility (TSO) activities, electricity transmission and gas transmission"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Energinet system operation (TSO control and market systems)",
+   "operator": "Energinet",
+   "research_note": "No public source on SCADA/EMS hosting was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2024-10-28",
+     "publisher": "Retsinformation / Miljøministeriet",
+     "quote": "Kommunalbestyrelsen indberetter hvert år til databasen for grundvands-, drikkevands-, råstof-, miljø- og geotekniske data, Jupiterdatabasen, oplysninger om 1) vandindvindingsanlæg,",
+     "quote_english": "The municipal council reports each year to the database for groundwater, drinking water, raw material, environmental and geotechnical data, the Jupiter database, information on 1) water abstraction plants,",
+     "title": "Bekendtgørelse af lov om vandforsyning m.v. (LBK nr 1149 af 28/10/2024)",
+     "url": "https://www.retsinformation.dk/eli/lta/2024/1149/xml",
+     "value": "Jupiterdatabasen - national database for groundwater, drinking water, raw materials, environmental and geotechnical data, to which municipalities report water abstraction plants annually"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Jupiterdatabasen (national groundwater and drinking-water database)",
+   "operator": "Municipalities report to it; the database operator (GEUS) is not stated in the cited source",
+   "research_note": "This is a data register, not a control system. No national flood-defence or water-control SCADA register was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "4. Den fællesoffentlige Datafordeler 5. Den Nationale Serviceplatform 6. Fælles Medicinkort 7. KESDH 8. Kreditregisteret",
+     "quote_english": "4. The joint public Data Distributor 5. The National Service Platform 6. Shared Medication Record 7. KESDH 8. The Credit Register",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "Fælles Medicinkort (Shared Medication Record) is listed in Annex 1 of the Location Requirement Order: must be kept in Denmark"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2025-03-12",
+     "publisher": "Retsinformation / Indenrigs- og Sundhedsministeriet",
+     "quote": "Sundhedsdatastyrelsen er ansvarlig for at drive en elektronisk registrering af de enkelte borgeres medicinoplysninger, herunder ordination, køb, udlevering, indtagelse, dosisændring, ophør",
+     "quote_english": "The Danish Health Data Authority is responsible for operating an electronic registration of each citizen's medication data, including prescription, purchase, dispensing, intake, dose change, discontinuation",
+     "title": "Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/275/xml",
+     "value": "Fælles Medicinkort (FMK) - Sundhedsdatastyrelsen's electronic register of every citizen's medication data (prescription, purchase, dispensing, dose changes)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2025-03-12",
+     "publisher": "Retsinformation / Indenrigs- og Sundhedsministeriet",
+     "quote": "Sundhedsdatastyrelsens elektroniske registrering af borgernes medicinoplysninger § 157. Sundhedsdatastyrelsen er ansvarlig for at drive en elektronisk registrering",
+     "quote_english": "The Health Data Authority's electronic registration of citizens' medication data § 157. The Danish Health Data Authority is responsible for operating an electronic registration",
+     "title": "Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/275/xml",
+     "value": "Sundhedsloven § 157 (LBK nr 275 af 12/03/2025)"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "national",
+   "holding_name": "Fælles Medicinkort (FMK)",
+   "operator": "Sundhedsdatastyrelsen",
+   "research_note": "FMK is on the statutory Denmark-location list (BEK 291/2025, item 6). sundhed.dk and regional EHRs were not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2025-03-12",
+     "publisher": "Retsinformation / Indenrigs- og Sundhedsministeriet",
+     "quote": "Statens Serum Institut er ansvarlig for at drive en elektronisk registrering af oplysninger om de enkelte borgeres vaccinationer og hertil knyttede oplysninger (Det Danske Vaccinationsregister).",
+     "quote_english": "Statens Serum Institut is responsible for operating an electronic registration of each citizen's vaccinations and related information (the Danish Vaccination Register).",
+     "title": "Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/275/xml",
+     "value": "Det Danske Vaccinationsregister - national register of citizens' vaccinations, run by Statens Serum Institut"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2025-03-12",
+     "publisher": "Retsinformation / Indenrigs- og Sundhedsministeriet",
+     "quote": "Det Danske Vaccinationsregister § 157 a. Statens Serum Institut er ansvarlig for at drive en elektronisk registrering",
+     "quote_english": "The Danish Vaccination Register § 157 a. Statens Serum Institut is responsible for operating an electronic registration",
+     "title": "Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/275/xml",
+     "value": "Sundhedsloven § 157 a (LBK nr 275 af 12/03/2025)"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Det Danske Vaccinationsregister",
+   "operator": "Statens Serum Institut",
+   "research_note": "MiBa and the notifiable-disease systems were not researched. No hosting source was found.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "research_note": "The retsinformation search API was checked for eksamens-/uddannelsesregister and for STIL orders (BEK 448/2024 on Optagelse.dk, BEK 1180/2024 on study-administrative systems). No central diploma or qualification register with a quotable establishing source was found.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2018-05-30",
+     "publisher": "Retsinformation / Økonomi- og Indenrigsministeriet",
+     "quote": "Danmarks nationale statistikmyndighed er Danmarks Statistik. Danmarks Statistik er en fagligt uafhængig statslig myndighed, som hører under økonomi- og indenrigsministeren.",
+     "quote_english": "Denmark's national statistical authority is Statistics Denmark. Statistics Denmark is a professionally independent state authority under the Minister for Economic Affairs and the Interior.",
+     "title": "Bekendtgørelse af lov om Danmarks Statistik (LBK nr 610 af 30/05/2018)",
+     "url": "https://www.retsinformation.dk/eli/lta/2018/610/xml",
+     "value": "Danmarks Statistik - national statistical authority, an independent state authority under the Minister for Economic Affairs and the Interior"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "Danmarks Statistik microdata",
+   "operator": "Danmarks Statistik",
+   "research_note": "No hosting source or data volume was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "4. Den fællesoffentlige Datafordeler 5. Den Nationale Serviceplatform 6. Fælles Medicinkort 7. KESDH 8. Kreditregisteret",
+     "quote_english": "4. The joint public Data Distributor 5. The National Service Platform 6. Shared Medication Record 7. KESDH 8. The Credit Register",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "Den fællesoffentlige Datafordeler (the joint public data distributor for basic data) is listed in Annex 1 of the Location Requirement Order: must be kept in Denmark"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2017-02-01",
+     "publisher": "Retsinformation / Styrelsen for Dataforsyning og Effektivisering",
+     "quote": "at alle vejnavne og adresser registreres på en ensartet måde i Danmarks Adresseregister, således at dette er autoritativ kilde til oplysninger om vejnavne og adresser,",
+     "quote_english": "that all road names and addresses are registered uniformly in the Danish Address Register, so that it is the authoritative source of information on road names and addresses,",
+     "title": "Adresseloven (LOV nr 136 af 01/02/2017)",
+     "url": "https://www.retsinformation.dk/eli/lta/2017/136/xml",
+     "value": "Danmarks Adresseregister (DAR) - authoritative register of road names and addresses"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "national",
+   "holding_name": "Danmarks Adresseregister (DAR), distributed via Den fællesoffentlige Datafordeler",
+   "operator": "Klimadatastyrelsen (address authority); municipalities set addresses",
+   "research_note": "The Datafordeler is on the statutory Denmark-location list (BEK 291/2025, item 4). The hosting of DAR itself is not separately stated.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "da",
+     "published": "2025-03-20",
+     "publisher": "Retsinformation / Justitsministeriet",
+     "quote": "Rigsarkivets arkiveringsversioner, så længe de ikke er tilgængelige efter arkivlovens regler om tilgængelighed til offentlige arkivalier, af: DeMars, Det Centrale Anmeldelsesregister, Det Centrale Kriminalregister,",
+     "quote_english": "The National Archives' archival versions, as long as they are not accessible under the Archives Act rules on access to public records, of: DeMars, the Central Reporting Register, the Central Criminal Register,",
+     "title": "Bekendtgørelse om hel eller delvis opbevaring her i landet af personoplysninger (Lokationskravsbekendtgørelsen, BEK nr 291 af 20/03/2025)",
+     "url": "https://www.retsinformation.dk/eli/lta/2025/291/xml",
+     "value": "Rigsarkivet's archival versions of listed police and other systems must be kept in Denmark while not yet publicly accessible (Annex 1, item 12)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "da",
+     "published": "2016-09-28",
+     "publisher": "Retsinformation / Kulturministeriet",
+     "quote": "Rigsarkivet har til formål 1) at sikre bevaringen af arkivalier, der har historisk værdi eller tjener til dokumentation af forhold af væsentlig administrativ eller retlig betydning for borgere og myndigheder,",
+     "quote_english": "The National Archives' purpose is 1) to ensure the preservation of records of historical value or that document matters of significant administrative or legal importance for citizens and authorities,",
+     "title": "Bekendtgørelse af arkivloven (LBK nr 1201 af 28/09/2016)",
+     "url": "https://www.retsinformation.dk/eli/lta/2016/1201/xml",
+     "value": "Rigsarkivet (Danish National Archives) - preserves records of historical value or of significant administrative or legal importance"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "da",
+     "published": "2016-09-28",
+     "publisher": "Retsinformation / Kulturministeriet",
+     "quote": "Lovens bestemmelser om offentlige arkivalier gælder for al virksomhed, der udøves af den offentlige forvaltning og domstolene.",
+     "quote_english": "The act's provisions on public records apply to all activity carried out by the public administration and the courts.",
+     "title": "Bekendtgørelse af arkivloven (LBK nr 1201 af 28/09/2016)",
+     "url": "https://www.retsinformation.dk/eli/lta/2016/1201/xml",
+     "value": "Arkivloven (LBK nr 1201 af 28/09/2016); applies to all public administration and the courts"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Rigsarkivet digital archive",
+   "operator": "Rigsarkivet (Kulturministeriet)",
+   "research_note": "Only the archival versions of specific listed systems must be kept in Denmark. No figure for digital holdings (TB) was found on the Rigsarkivet site.",
+   "status": "held"
+  }
+ ],
+ "iso": "DK"
+}

@@ -1,0 +1,1539 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "bg",
+     "published": "2022-01-01",
+     "publisher": "Министерство на финансите – eufunds.bg",
+     "quote": "ДХЧО е изграден на база четири центъра за данни – центрове за обработка на данни 1 и 2 (ЦДЕУ1 и ЦДЕУ2), Център за възстановяване (ЦВ) и Контролно-технически център на електронното правителство (КТЦЕП).",
+     "quote_english": "The State Hybrid Private Cloud is built on four data centres – data processing centres 1 and 2 (TsDEU1 and TsDEU2), a Recovery Centre and the Control and Technical Centre of e-Government.",
+     "title": "Надграждане и развитие на Държавния хибриден частен облак, финансиран по ОП „Добро управление“",
+     "url": "https://www.eufunds.bg/bg/opgg/node/9490",
+     "value": "The State Hybrid Private Cloud is built on four data centres: data centres 1 and 2, a recovery centre and an e-government control centre"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2022-01-01",
+     "publisher": "Министерство на финансите – eufunds.bg",
+     "quote": "Администрациите, които изграждат ключови системи по проекти, ще разчитат те да бъдат разположени на облака.",
+     "quote_english": "Administrations building key systems under projects will rely on them being deployed on the cloud.",
+     "title": "Надграждане и развитие на Държавния хибриден частен облак, финансиран по ОП „Добро управление“",
+     "url": "https://www.eufunds.bg/bg/opgg/node/9490",
+     "value": "Administrations that build key systems are expected to place them on the cloud"
+    }
+   ],
+   "holding_name": "Държавен хибриден частен облак (ДХЧО)",
+   "suggested_class": "government_cloud_infrastructure",
+   "why_critical": "The shared government cloud and data centres into which administrations are moving key registers and e-services. Its four data centres concentrate the hosting of several tier 0 and tier 1 holdings."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2021-08-05",
+     "publisher": "Сметна палата на Република България",
+     "quote": "Информацията в регистър БУЛСТАТ се съхранява в единна информационна система, която поддържа национална база данни.",
+     "quote_english": "The information in the BULSTAT register is stored in a single information system that maintains a national database.",
+     "title": "Одитен доклад № 0300101019 – Ефективност на организацията и контрола на дейностите по водене и съхраняване на поддържаните от Агенцията по вписванията регистри",
+     "url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf",
+     "value": "BULSTAT register data are kept in a single information system that maintains a national database (Registry Agency)"
+    }
+   ],
+   "holding_name": "Регистър БУЛСТАТ",
+   "suggested_class": "business_registry",
+   "why_critical": "The unified identification register for entities outside the Commercial Register (public bodies, foreign entities, self-employed persons). Tax, social security and procurement all use it."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2024-05-15",
+     "publisher": "Комисия за защита на личните данни",
+     "quote": "до поддържания от МРРБ чрез ГД „ГРАО“ Регистър Национална база данни „Население“ – Справка за родственост, достъпвана през средата за междурегистров обмен на данни (RegiX).",
+     "quote_english": "to the Register National Database \"Population\" maintained by MRRB through DG GRAO – kinship report, accessed through the inter-registry data exchange environment (RegiX).",
+     "title": "Становище на КЗЛД относно разрешение за директен достъп до Регистър на населението ... RegiX",
+     "url": "https://cpdp.bg/%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%89%D0%B5-%D0%BD%D0%B0-%D0%BA%D0%B7%D0%BB%D0%B4-%D1%80%D0%B0%D0%B7%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0-%D0%B4%D0%B8%D1%80%D0%B5%D0%BA/",
+     "value": "Population Register data (GRAO) are accessed through the RegiX inter-registry data exchange environment"
+    }
+   ],
+   "holding_name": "RegiX – среда за междурегистров обмен на данни",
+   "suggested_class": "interoperability_infrastructure",
+   "why_critical": "The data-exchange backbone between registers. Public bodies and authorised parties query base registers such as the Population Register through it."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Министерство на регионалното развитие и благоустройството – ГД „ГРАО“",
+     "quote": "Национално ниво – Министерството на регионалното развитие и благоустройството чрез Главна дирекция „Гражданска регистрация и административно обслужване“ поддържа Регистър на населението – Национална база данни „Население“",
+     "quote_english": "National level – the Ministry of Regional Development and Public Works, through the Directorate-General \"Civil Registration and Administrative Services\", maintains the Population Register – National Database \"Population\"",
+     "title": "ЕСГРАОН",
+     "url": "https://www.grao.bg/esgraon.html",
+     "value": "Population Register – National Database \"Population\" (part of ESGRAON), maintained at national level by MRRB through the Directorate-General for Civil Registration (GRAO)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "Агенция за социално подпомагане (копие на закона)",
+     "quote": "Единната система за гражданска регистрация и административно обслужване на населението (ЕСГРАОН) е национална система за гражданска регистрация на физическите лица в Република България и източник на лични данни за тях.",
+     "quote_english": "The Unified System for Civil Registration and Administrative Service of the Population (ESGRAON) is the national system for civil registration of natural persons in the Republic of Bulgaria and a source of personal data about them.",
+     "title": "Закон за гражданската регистрация (консолидиран текст)",
+     "url": "https://asp.government.bg/uploaded/files/4390-Zakon-za-grazhdanskata-registratsiya.pdf",
+     "value": "Civil Registration Act (Закон за гражданската регистрация), Art. 100: ESGRAON is the national civil registration system and source of personal data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "bg",
+     "published": "2012",
+     "publisher": "МРРБ – ГД „ГРАО“",
+     "quote": "Поддържането на Единната система за гражданска регистрация се осъществява от общинските администрации и от Министерството на регионалното развитие и благоустройството чрез Главна дирекция \"Гражданска регистрация и административно обслужване\" (ГРАО) и териториалните ѝ звена.",
+     "quote_english": "The Unified Civil Registration System is maintained by the municipal administrations and by the Ministry of Regional Development and Public Works through the Directorate-General \"Civil Registration and Administrative Services\" (GRAO) and its territorial units.",
+     "title": "Наредба № РД-02-20-9 от 21 май 2012 г. за функциониране на Единната система за гражданска регистрация",
+     "url": "https://www.grao.bg/normact/NaredbaFunkcESGR.pdf",
+     "value": "Operated by municipal administrations and MRRB through GRAO and its territorial units (Ordinance RD-02-20-9 of 2012, Art. 2)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "Агенция за социално подпомагане (копие на закона)",
+     "quote": "Единната система за гражданска регистрация и административно обслужване на населението е базова информационна система в Република България по отношение на данните за гражданската регистрация на лицата.",
+     "quote_english": "The Unified System for Civil Registration and Administrative Service of the Population is the base information system in the Republic of Bulgaria with respect to civil registration data on persons.",
+     "title": "Закон за гражданската регистрация (консолидиран текст)",
+     "url": "https://asp.government.bg/uploaded/files/4390-Zakon-za-grazhdanskata-registratsiya.pdf",
+     "value": "ESGRAON is the base information system for civil registration data (Civil Registration Act, Art. 110)"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Регистър на населението – Национална база данни „Население“ (ЕСГРАОН)",
+   "operator": "Министерство на регионалното развитие и благоустройството – ГД „Гражданска регистрация и административно обслужване“ (ГРАО), with municipal administrations",
+   "research_note": "No public source found on where ESGRAON or the National Database Population is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Държавна агенция за бежанците (копие на закона)",
+     "quote": "На основата на автоматизираните информационни фондове по ал. 1 се създава Национален автоматизиран информационен фонд за българските лични документи - \"Национален регистър на българските лични документи\".",
+     "quote_english": "On the basis of the automated information funds under para. 1, a National Automated Information Fund for Bulgarian identity documents – the \"National Register of Bulgarian Identity Documents\" – is created.",
+     "title": "Закон за българските лични документи (консолидиран текст)",
+     "url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf",
+     "value": "National Register of Bulgarian Identity Documents, built on the automated information funds of the Bulgarian Identity Documents Act (Art. 65(3))"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Държавна агенция за бежанците (копие на закона)",
+     "quote": "данни от българските лични документи, заявленията за издаването им и биометрични данни;",
+     "quote_english": "data from Bulgarian identity documents, the applications for their issuance and biometric data;",
+     "title": "Закон за българските лични документи (консолидиран текст)",
+     "url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf",
+     "value": "Bulgarian Identity Documents Act, Art. 65(1): the information funds contain document data, applications and biometric data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Държавна агенция за бежанците (копие на закона)",
+     "quote": "Личната карта освен данните по чл. 16, ал. 1 съдържа и данни за: 1. снимка на притежателя;",
+     "quote_english": "Besides the data under Art. 16(1), the identity card also contains data on: 1. a photograph of the holder;",
+     "title": "Закон за българските лични документи (консолидиран текст)",
+     "url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf",
+     "value": "Bulgarian Identity Documents Act, Art. 26: the identity card contains a photograph of the holder"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Държавна агенция за бежанците (копие на закона)",
+     "quote": "Българските лични документи се издават от Министерството на вътрешните работи, Министерството на външните работи, Министерството на транспорта и съобщенията и Министерството на отбраната съобразно предоставената им компетентност по този закон.",
+     "quote_english": "Bulgarian identity documents are issued by the Ministry of Interior, the Ministry of Foreign Affairs, the Ministry of Transport and Communications and the Ministry of Defence according to the competence assigned to them under this Act.",
+     "title": "Закон за българските лични документи (консолидиран текст)",
+     "url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf",
+     "value": "Identity documents are issued by the Ministry of Interior, Ministry of Foreign Affairs, Ministry of Transport and Communications and Ministry of Defence"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Национален регистър на българските лични документи (Национален автоматизиран информационен фонд за българските лични документи)",
+   "operator": "Министерство на вътрешните работи (дирекция „Български документи за самоличност“); also MFA, Ministry of Transport and Ministry of Defence for documents in their competence",
+   "research_note": "No public source found on hosting of the identity-document register.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Държавна агенция за бежанците (копие на закона)",
+     "quote": "Данните от информационните фондове за българските лични документи с изключение на пръстовите отпечатъци, снети по реда на този закон се предоставят на:",
+     "quote_english": "Data from the information funds for Bulgarian identity documents, with the exception of fingerprints taken under this Act, are provided to:",
+     "title": "Закон за българските лични документи (консолидиран текст)",
+     "url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf",
+     "value": "Fingerprints are held in the identity-document information funds but are excluded from disclosure to other bodies (Bulgarian Identity Documents Act, Art. 70(1))"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Държавна агенция за бежанците (копие на закона)",
+     "quote": "съдържа данните по чл. 20, ал. 2, снимка на лицето и пръстовите му отпечатъци, снети при подаване на заявлението",
+     "quote_english": "contains the data under Art. 20(2), a photograph of the person and their fingerprints taken when the application is submitted",
+     "title": "Закон за българските лични документи (консолидиран текст)",
+     "url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf",
+     "value": "The document chip holds the photograph and fingerprints taken at application (Bulgarian Identity Documents Act, Art. 13)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Държавна агенция за бежанците (копие на закона)",
+     "quote": "На основата на автоматизираните информационни фондове по ал. 1 се създава Национален автоматизиран информационен фонд за българските лични документи - \"Национален регистър на българските лични документи\".",
+     "quote_english": "On the basis of the automated information funds under para. 1, a National Automated Information Fund for Bulgarian identity documents – the \"National Register of Bulgarian Identity Documents\" – is created.",
+     "title": "Закон за българските лични документи (консолидиран текст)",
+     "url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf",
+     "value": "National Register of Bulgarian Identity Documents (automated information fund)"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Биометрични данни (пръстови отпечатъци) в информационните фондове за българските лични документи / Национален регистър на българските лични документи",
+   "operator": "Министерство на вътрешните работи",
+   "research_note": "No public source found on hosting of fingerprint data.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Агенция за социално подпомагане (копие на закона)",
+     "quote": "Електронните актове за гражданско състояние образуват Национален електронен регистър на актове за гражданско състояние.",
+     "quote_english": "The electronic civil status acts form the National Electronic Register of Civil Status Acts.",
+     "title": "Закон за гражданската регистрация (консолидиран текст)",
+     "url": "https://asp.government.bg/uploaded/files/4390-Zakon-za-grazhdanskata-registratsiya.pdf",
+     "value": "National Electronic Register of Civil Status Acts (birth, marriage, death acts) formed from the electronic equivalents of the acts (Civil Registration Act, Art. 41(5))"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "bg",
+     "published": "",
+     "publisher": "Министерство на регионалното развитие и благоустройството – ГД „ГРАО“",
+     "quote": "поддържа Регистър на населението – Национална база данни „Население“, Национален електронен регистър на актове за гражданско състояние, Регистър на единните граждански номера",
+     "quote_english": "maintains the Population Register – National Database \"Population\", the National Electronic Register of Civil Status Acts, the Register of Unified Civil Numbers",
+     "title": "ЕСГРАОН",
+     "url": "https://www.grao.bg/esgraon.html",
+     "value": "Maintained at national level by MRRB through GRAO alongside the Population Register and the register of unified civil numbers (EGN)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "Агенция за социално подпомагане (копие на закона)",
+     "quote": "При несъответствие на данните в акта за гражданско състояние и неговия електронен еквивалент доказателствена сила имат данните, вписани в акта за гражданско състояние, в писмен вид.",
+     "quote_english": "Where the data in the civil status act and its electronic equivalent differ, the data entered in the civil status act in written form have evidential force.",
+     "title": "Закон за гражданската регистрация (консолидиран текст)",
+     "url": "https://asp.government.bg/uploaded/files/4390-Zakon-za-grazhdanskata-registratsiya.pdf",
+     "value": "Where the paper act and its electronic equivalent differ, the written (paper) act has evidential force (Civil Registration Act, Art. 41(4))"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Национален електронен регистър на актове за гражданско състояние (plus paper registers of civil status acts held by municipalities)",
+   "operator": "МРРБ – ГД „ГРАО“ (national level); общински администрации (paper acts)",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Държавна агенция за бежанците (копие на закона)",
+     "quote": "предишни значения на личните данни от българските лични документи и заявленията за издаването им;",
+     "quote_english": "previous values of the personal data from Bulgarian identity documents and the applications for their issuance;",
+     "title": "Закон за българските лични документи (консолидиран текст)",
+     "url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf",
+     "value": "The identity-document information funds also hold previous values of personal data from documents and applications (Bulgarian Identity Documents Act, Art. 65(1)(2))"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "bg",
+     "published": "2026-04-27",
+     "publisher": "Министерство на вътрешните работи – ОДМВР София",
+     "quote": "От днес, 27 април 2026 г., се преминава към централизирана персонализация и въвеждане на ново поколение български лични документи.",
+     "quote_english": "As of today, 27 April 2026, there is a transition to centralised personalisation and the introduction of a new generation of Bulgarian identity documents.",
+     "title": "Въвеждане на ново поколение български лични документи",
+     "url": "https://mvr.bg/sofia/%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B5%D0%BD-%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BF%D1%80%D0%B5%D1%81%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/90242",
+     "value": "From 27 April 2026 the Ministry of Interior moved to centralised personalisation and a new generation of identity documents"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Държавна агенция за бежанците (копие на закона)",
+     "quote": "Данни от информационните фондове могат да се предоставят на изпълнител по договор, включващ дейностите по персонализиране на български лични документи.",
+     "quote_english": "Data from the information funds may be provided to a contractor under a contract that includes personalisation of Bulgarian identity documents.",
+     "title": "Закон за българските лични документи (консолидиран текст)",
+     "url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf",
+     "value": "Data from the information funds may be provided to a contractor performing personalisation of identity documents (Bulgarian Identity Documents Act, Art. 69a)"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "foreign_dependency",
+     "language": "bg",
+     "published": "",
+     "publisher": "Actualno.com",
+     "quote": "За изпълнител бе избран консорциум „Консорциум Мюлбауер Ай Ди Сървисиз ГмбХ - С&Т“ между немската компания „Мюлбауер Ай Ди Сървисиз ГмбХ“ и българската \"С&Т България\" ЕООД",
+     "quote_english": "The contractor selected was the consortium \"Consortium Mühlbauer ID Services GmbH – S&T\", between the German company Mühlbauer ID Services GmbH and the Bulgarian S&T Bulgaria EOOD",
+     "title": "Опитват да пришпорят закъснялото издаване на лични документи от поколение 2019",
+     "url": "https://www.actualno.com/society/opitvat-da-prishporjat-zakysnjaloto-izdavane-na-lichni-dokumenti-ot-pokolenie-2019-news_2212950.html",
+     "value": "The generation-2019 system for issuing identity documents was contracted (end 2022) to a consortium of the German Mühlbauer ID Services GmbH and the Bulgarian S&T Bulgaria EOOD. It is named as a supplier, not as a host."
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "mixed",
+   "holding_name": "Национален регистър на българските лични документи; Система за издаване на български лични документи (поколение 2019)",
+   "operator": "Министерство на вътрешните работи – дирекция „Български документи за самоличност“",
+   "research_note": "The supplier of the new issuance system is a German-Bulgarian consortium (secondary source). No public source found on where the register itself is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2017",
+     "publisher": "Министерство на транспорта и съобщенията (копие на правилника)",
+     "quote": "В регистъра на електронните идентификатори се вписва всеки създаден електронен идентификатор и уникалният граждански идентификатор, на който той съответства.",
+     "quote_english": "Every electronic identifier created and the unique civil identifier to which it corresponds is entered in the register of electronic identifiers.",
+     "title": "Правилник за прилагане на Закона за електронната идентификация",
+     "url": "https://www.mtc.government.bg/sites/default/files/pravilnik_za_prilagane_na_zakona_za_elektronnata_identifikaciq.pdf",
+     "value": "Register of electronic identifiers linking each eID identifier to the unified civil identifier (Rules for the Electronic Identification Act, Art. 3(1))"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "bg",
+     "published": "2017",
+     "publisher": "Министерство на транспорта и съобщенията (копие на правилника)",
+     "quote": "Достъп до регистъра по чл. 3, ал. 1 имат и лица, определени със заповед на министъра на вътрешните работи, които се идентифицират по електронен път преди всяко осъществяване на достъп.",
+     "quote_english": "Access to the register under Art. 3(1) is also granted to persons designated by order of the Minister of Interior, who identify themselves electronically before each access.",
+     "title": "Правилник за прилагане на Закона за електронната идентификация",
+     "url": "https://www.mtc.government.bg/sites/default/files/pravilnik_za_prilagane_na_zakona_za_elektronnata_identifikaciq.pdf",
+     "value": "Access to the register is granted to persons designated by order of the Minister of Interior (MVR runs the register)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "bg",
+     "published": "",
+     "publisher": "Комисия за регулиране на съобщенията",
+     "quote": "сайтът Ви пренасочва към модула за електронна идентификация (е-Автентикация) на Министерство на електронното управление (MЕУ), където можете да изберете средство (Квалифициран електронен подпис КЕП/ Облачен КЕП Борика/Облачен КЕП Евротръст) и да се автентикирате.",
+     "quote_english": "the site redirects you to the electronic identification module (e-Authentication) of the Ministry of e-Government, where you can choose a means (qualified electronic signature / Borica cloud QES / Evrotrust cloud QES) and authenticate.",
+     "title": "Вход през системата за електронна идентификация на MЕУ (е-Автентикация)",
+     "url": "https://public-btswspreg.crc.bg/help/topics/idh-topic190.html",
+     "value": "Central e-Authentication (eAuth) module of the Ministry of e-Government, accepting QES, Borica cloud QES and Evrotrust cloud QES"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2026-09-19",
+     "publisher": "Вестник „Сега“",
+     "quote": "Удостоверенията за електронна идентичност е предвидено да се издават и записват върху електронния носител на информация в документите за самоличност, повече известен като чипа в личните карти. Този чип имат новите лични карти. Към момента обаче МВР не ги е задействала.",
+     "quote_english": "Electronic identity certificates are to be issued and written to the electronic data carrier in identity documents, better known as the chip in ID cards. The new ID cards have this chip. At present, however, the Ministry of Interior has not activated them.",
+     "title": "Отпада едно от безумията за личните карти с чип",
+     "url": "https://www.segabg.com/hot/category-consult/otpada-edno-bezumiyata-za-lichnite-karti-chip",
+     "value": "eID certificates are to be written to the chip of identity documents; as of September 2026 MVR had not activated the chip"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2026-09-19",
+     "publisher": "Вестник „Сега“",
+     "quote": "Тези промени в Закона за електронната идентификация вече получиха единодушна подкрепа на първо четене и в парламентарната комисия по вътрешна сигурност и обществен ред.",
+     "quote_english": "These amendments to the Electronic Identification Act have already received unanimous support at first reading in the parliamentary committee on internal security and public order as well.",
+     "title": "Отпада едно от безумията за личните карти с чип",
+     "url": "https://www.segabg.com/hot/category-consult/otpada-edno-bezumiyata-za-lichnite-karti-chip",
+     "value": "Amendments to the Electronic Identification Act (free eID certificates) passed first reading in parliamentary committees in September 2026"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "unknown",
+   "holding_name": "Регистър на електронните идентификатори и Регистър на удостоверенията за електронна идентичност (Закон за електронната идентификация); е-Автентикация (eAuth) на МЕУ",
+   "operator": "Министерство на вътрешните работи (eID registers); Министерство на електронното управление (eAuth); qualified trust service providers incl. Борика АД and Евротръст Технолъджис АД as authentication means",
+   "research_note": "The law provides for eID certificates on the chip of the new ID card. A September 2026 press report says the chip is not yet activated, and an amendment to the eID Act was at first reading. No source found on eAuth hosting; e-gov.bg could not be reached from the research machine.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2017",
+     "publisher": "Министерство на транспорта и съобщенията (копие на правилника)",
+     "quote": "При извършване на проверка на електронна идентичност лицата, осъществяващи дейност на център за електронна идентификация, и държавните органи съхраняват информация за извършените проверки по реда на този раздел.",
+     "quote_english": "When verifying an electronic identity, persons operating an electronic identification centre and state bodies store information on the verifications performed under this section.",
+     "title": "Правилник за прилагане на Закона за електронната идентификация",
+     "url": "https://www.mtc.government.bg/sites/default/files/pravilnik_za_prilagane_na_zakona_za_elektronnata_identifikaciq.pdf",
+     "value": "Rules for the Electronic Identification Act, Art. 23(1): eID centres and state bodies must keep information on every eID verification"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "record_count",
+     "language": "bg",
+     "published": "2017",
+     "publisher": "Министерство на транспорта и съобщенията (копие на правилника)",
+     "quote": "държавните органи съхраняват информация за извършените проверки по реда на този раздел. (2) Информацията се съхранява за срок 10 години.",
+     "quote_english": "state bodies store information on the verifications performed under this section. (2) The information is stored for a period of 10 years.",
+     "title": "Правилник за прилагане на Закона за електронната идентификация",
+     "url": "https://www.mtc.government.bg/sites/default/files/pravilnik_za_prilagane_na_zakona_za_elektronnata_identifikaciq.pdf",
+     "value": "Verification records are kept for 10 years (Art. 23(2)); retention period, not a record count"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2017",
+     "publisher": "Министерство на транспорта и съобщенията (копие на правилника)",
+     "quote": "Всички операции, извършени в регистъра по чл. 3, ал. 1, се съхраняват в журнал на събитията. (5) Интегритетът на журнала на събитията се защитава чрез криптографски методи.",
+     "quote_english": "All operations performed in the register under Art. 3(1) are stored in an event log. (5) The integrity of the event log is protected by cryptographic methods.",
+     "title": "Правилник за прилагане на Закона за електронната идентификация",
+     "url": "https://www.mtc.government.bg/sites/default/files/pravilnik_za_prilagane_na_zakona_za_elektronnata_identifikaciq.pdf",
+     "value": "All operations on the register of electronic identifiers are recorded in an event log protected cryptographically (Art. 4(4)-(5))"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "holding_name": "Информация за извършените проверки на електронна идентичност; журнал на събитията на регистрите по ЗЕИ",
+   "operator": "Centres for electronic identification and state bodies performing eID verification; MVR for the eID registers",
+   "research_note": "The retention duty is set in regulation. No public source found on where eAuth or eID verification logs are hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2026",
+     "publisher": "МРРБ – ГД „ГРАО“ (копие на кодекса)",
+     "quote": "Избирателните списъци, включително част I на избирателните списъци, се отпечатват въз основа на Националния регистър на населението от Главна дирекция \"Гражданска регистрация и административно обслужване\" в Министерството на регионалното развитие и благоустройството.",
+     "quote_english": "The voter lists, including part I of the voter lists, are printed on the basis of the National Population Register of the Directorate-General \"Civil Registration and Administrative Services\" in the Ministry of Regional Development and Public Works.",
+     "title": "Изборен кодекс (консолидиран текст)",
+     "url": "https://www.grao.bg/normact/IK-2026.pdf",
+     "value": "Electoral Code, Art. 26(1): voter lists are printed from the National Population Register kept by GRAO in MRRB"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Избирателни списъци, изготвяни от Националния регистър на населението",
+   "operator": "МРРБ – ГД „ГРАО“ (from the National Population Register); municipal administrations",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Комисия за регулиране на съобщенията",
+     "quote": "КРС създава, поддържа и публикува националния доверителен списък на лицата, предоставящи удостоверителни услуги и квалифицирани удостоверителни услуги, съгласно чл. 22 от Регламент (ЕС) № 910/2014, изменен с Регламент (ЕС) 2024/1183.",
+     "quote_english": "The CRC creates, maintains and publishes the national trusted list of persons providing trust services and qualified trust services, under Art. 22 of Regulation (EU) No 910/2014 as amended by Regulation (EU) 2024/1183.",
+     "title": "Електронни удостоверителни услуги",
+     "url": "https://crc.bg/bg/rubriki/560/elektronni-udostoveritelni-uslugi",
+     "value": "The Communications Regulation Commission creates, maintains and publishes the national Trusted List"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "Комисия за регулиране на съобщенията",
+     "quote": "В съответствие с чл. 32 от Закона за електронния документ и електронните удостоверителни услуги (ЗЕДЕУУ), Комисията за регулиране на съобщенията (КРС) изпълнява следните функции:",
+     "quote_english": "In accordance with Art. 32 of the Electronic Document and Electronic Trust Services Act, the Communications Regulation Commission performs the following functions:",
+     "title": "Електронни удостоверителни услуги",
+     "url": "https://crc.bg/bg/rubriki/560/elektronni-udostoveritelni-uslugi",
+     "value": "Electronic Document and Electronic Trust Services Act (ЗЕДЕУУ), Art. 32"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "bg",
+     "published": "",
+     "publisher": "Комисия за регулиране на съобщенията",
+     "quote": "Вписаните от КРС в националния доверителен списък доставчици на квалифицирани удостоверителни услуги са: „Борика“ АД, „Евротръст Технолъджис“ АД, „Инфонотари“ ЕАД, „Информационно обслужване“ АД и „Идокс България“ ЕООД.",
+     "quote_english": "The qualified trust service providers entered by the CRC in the national trusted list are: Borica AD, Evrotrust Technologies AD, InfoNotary EAD, Information Services AD and Idocs Bulgaria EOOD.",
+     "title": "Електронни удостоверителни услуги",
+     "url": "https://crc.bg/bg/rubriki/560/elektronni-udostoveritelni-uslugi",
+     "value": "Qualified trust service providers on the Bulgarian Trusted List: Borica AD, Evrotrust Technologies AD, InfoNotary EAD, Information Services AD and Idocs Bulgaria EOOD"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "Национален доверителен списък (Trusted List) на доставчиците на удостоверителни услуги",
+   "operator": "Комисия за регулиране на съобщенията (supervisor and Trusted List); qualified providers „Борика“ АД, „Евротръст Технолъджис“ АД, „Инфонотари“ ЕАД, „Информационно обслужване“ АД, „Идокс България“ ЕООД",
+   "research_note": "No source found describing a separate state root CA. Qualified signatures and seals rely on the listed QTSPs. No hosting information found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Държавна агенция за бежанците (копие на закона)",
+     "quote": "На пребиваващи в Република България чужденци се издават следните видове документи за самоличност:",
+     "quote_english": "Foreigners residing in the Republic of Bulgaria are issued the following types of identity documents:",
+     "title": "Закон за българските лични документи (консолидиран текст)",
+     "url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf",
+     "value": "Bulgarian Identity Documents Act, Art. 59: identity and residence documents issued to foreigners residing in Bulgaria"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Държавна агенция за бежанците (копие на закона)",
+     "quote": "В информационния фонд по ал. 1 се съхраняват и данни за наложени мерки за държавна принуда, свързани с документи за самоличност и с разрешенията за пребиваване на чужденци или пребиваването им в Република България.",
+     "quote_english": "The information fund under para. 1 also stores data on coercive measures related to identity documents and to residence permits of foreigners or their residence in the Republic of Bulgaria.",
+     "title": "Закон за българските лични документи (консолидиран текст)",
+     "url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf",
+     "value": "A separate information fund holds coercive measures linked to identity documents and residence permits of foreigners (Art. 66(2))"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "bg",
+     "published": "",
+     "publisher": "Министерство на външните работи (копие на закона)",
+     "quote": "което има задължителен характер за дирекция \"Миграция\" и за отдел/сектор/група \"Миграция\" при областните дирекции на Министерството на вътрешните работи.",
+     "quote_english": "which is binding on the Migration Directorate and on the Migration department/sector/group at the regional directorates of the Ministry of Interior.",
+     "title": "Закон за чужденците в Република България",
+     "url": "https://www.mfa.bg/upload/138160/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%87%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D1%82%D0%B5%20%D0%B2%20%D0%A0%D0%B5%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F.pdf",
+     "value": "Migration Directorate of MVR and Migration units of the regional MVR directorates (Foreigners in the Republic of Bulgaria Act)"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Документи за пребиваване на чужденци в Националния регистър на българските лични документи; регистри по Закона за чужденците",
+   "operator": "Министерство на вътрешните работи – дирекция „Миграция“ и звената „Миграция“ в ОДМВР",
+   "research_note": "The asylum registers of the State Agency for Refugees were not separately sourced. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Министерство на вътрешните работи (копие на кодекса)",
+     "quote": "Националната агенция за приходите създава и поддържа регистър и бази данни за задължените лица.",
+     "quote_english": "The National Revenue Agency creates and maintains a register and databases of obliged persons.",
+     "title": "Данъчно-осигурителен процесуален кодекс",
+     "url": "https://www.mvr.bg/upload/296043/%D0%94%D0%9E%D0%9F%D0%9A.pdf",
+     "value": "Tax and Social Security Procedure Code: NRA creates and maintains the register and databases of obliged persons"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "Министерство на вътрешните работи (копие на кодекса)",
+     "quote": "Данъчно-осигурителна сметка Чл. 87. (1) На всяко регистрирано лице се открива данъчно-осигурителна сметка. (2) В данъчно-осигурителната сметка се отразяват:",
+     "quote_english": "Tax and social security account Art. 87. (1) A tax and social security account is opened for every registered person. (2) The tax and social security account records:",
+     "title": "Данъчно-осигурителен процесуален кодекс",
+     "url": "https://www.mvr.bg/upload/296043/%D0%94%D0%9E%D0%9F%D0%9A.pdf",
+     "value": "Tax and Social Security Procedure Code, Art. 87: a tax and social-security account is opened for every registered person"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Регистър и бази данни за задължените лица; данъчно-осигурителни сметки (НАП)",
+   "operator": "Национална агенция за приходите",
+   "research_note": "nra.bg could not be reached from the research machine. No public source on NRA hosting was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "secondary",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2018-11-26",
+     "publisher": "Българска търговско-промишлена палата – Инфобизнес",
+     "quote": "На 26.11.2018 г. ще бъде въведена в реална експлоатация новата Митническа информационна система за внасяне (МИСВ).",
+     "quote_english": "On 26.11.2018 the new Customs Information System for Import (MISV) will be put into live operation.",
+     "title": "Въвеждане в реална експлоатация на нова Митническа информационна система за внасяне (МИСВ) на Агенция „Митници“",
+     "url": "https://www.infobusiness.bcci.bg/customs-26-11-18.html",
+     "value": "The new Customs Import Information System (MISV) went into production on 26.11.2018"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2018-11-26",
+     "publisher": "Българска търговско-промишлена палата – Инфобизнес",
+     "quote": "Новата информационна система за внасяне е разработена в съответствие с изискванията заложените в новата законодателна рамка - Регламент (ЕС) No 952/2013",
+     "quote_english": "The new import information system is developed in accordance with the requirements of the new legislative framework – Regulation (EU) No 952/2013",
+     "title": "Въвеждане в реална експлоатация на нова Митническа информационна система за внасяне (МИСВ) на Агенция „Митници“",
+     "url": "https://www.infobusiness.bcci.bg/customs-26-11-18.html",
+     "value": "Built to the requirements of the Union Customs Code, Regulation (EU) No 952/2013"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "bg",
+     "published": "2016-07-26",
+     "publisher": "Народно събрание – Държавен вестник",
+     "quote": "Решенията по прилагане на митническото законодателство се издават от директора на Агенция „Митници“ или от началниците на митници.",
+     "quote_english": "Decisions applying customs legislation are issued by the Director of the Customs Agency or by the heads of customs offices.",
+     "title": "Закон за изменение и допълнение на Закона за митниците, ДВ бр. 58 от 26.7.2016 г.",
+     "url": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=105827",
+     "value": "Customs decisions are issued by the Director of the Customs Agency or heads of customs offices (Customs Act, Art. 19 as amended 2016)"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "Митническа информационна система за внасяне (МИСВ) и Българска интегрирана митническа информационна система (БИМИС)",
+   "operator": "Агенция „Митници“",
+   "research_note": "customs.bg could not be reached from the research machine. System names come from a Chamber of Commerce bulletin. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Министерство на труда и социалната политика",
+     "quote": "поддържа информационна система за изплащаните пенсии, обезщетения и помощи по този кодекс и за гарантираните вземания по Закона за гарантираните вземания на работниците и служителите при несъстоятелност на работодателя;",
+     "quote_english": "maintains an information system on the pensions, benefits and allowances paid under this Code and on guaranteed claims under the Act on Guaranteed Claims of Workers and Employees in Employer Insolvency;",
+     "title": "Кодекс за социално осигуряване (консолидиран текст)",
+     "url": "https://www.mlsp.government.bg/uploads/37/politiki/trud/zakonodatelstvo/2024/kso24.pdf",
+     "value": "NSSI maintains the information system on pensions, benefits and allowances paid (Social Security Code, Art. 33)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Министерство на труда и социалната политика",
+     "quote": "поддържа информационна система за осигурените лица, осигурителите и самоосигуряващите се лица въз основа на данните, предоставени от Националната агенция за приходите, и за трудовите злополуки и професионалните болести;",
+     "quote_english": "maintains an information system on insured persons, insurers and self-insured persons based on the data provided by the National Revenue Agency, and on occupational accidents and diseases;",
+     "title": "Кодекс за социално осигуряване (консолидиран текст)",
+     "url": "https://www.mlsp.government.bg/uploads/37/politiki/trud/zakonodatelstvo/2024/kso24.pdf",
+     "value": "NSSI maintains the information system on insured persons, insurers and self-insured persons based on NRA data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Министерство на труда и социалната политика",
+     "quote": "Националният осигурителен институт създава и поддържа информационна система за ведомостите за заплати, предадени по реда на ал. 10. Данните от информационната система се използват за изчисляване и отпускане на пенсиите и паричните обезщетения.",
+     "quote_english": "The National Social Security Institute creates and maintains an information system for the payrolls submitted under para. 10. The data in the information system are used to calculate and grant pensions and cash benefits.",
+     "title": "Кодекс за социално осигуряване (консолидиран текст)",
+     "url": "https://www.mlsp.government.bg/uploads/37/politiki/trud/zakonodatelstvo/2024/kso24.pdf",
+     "value": "NSSI creates and maintains the payroll-records information system used to calculate pensions (Social Security Code, Art. 5(12))"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Информационна система за изплащаните пенсии, обезщетения и помощи; информационна система за осигурените лица; информационна система за ведомостите за заплати",
+   "operator": "Национален осигурителен институт",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Национална здравноосигурителна каса (копие на закона)",
+     "quote": "Националната здравноосигурителна каса изгражда информационна система, която съдържа: 1. (изм. - ДВ, бр. 110 от 1999 г., доп., бр. 95 от 2006 г., в сила от 1.01.2007 г.) регистър на осигурените лица,",
+     "quote_english": "The National Health Insurance Fund builds an information system containing: 1. (...) a register of insured persons,",
+     "title": "Закон за здравното осигуряване",
+     "url": "https://www.nhif.bg/upload/32277/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BD%D0%BE%D1%82%D0%BE%20%D0%BE%D1%81%D0%B8%D0%B3%D1%83%D1%80%D1%8F%D0%B2%D0%B0%D0%BD%D0%B5.pdf",
+     "value": "Health Insurance Act, Art. 63(1): NHIF builds an information system containing the register of insured persons"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Национална здравноосигурителна каса (копие на закона)",
+     "quote": "регистър на осигурените лица, включващ: паспортни данни; уникален идентификационен номер; основанието за осигуряване по чл. 33; заплатените вноски;",
+     "quote_english": "register of insured persons, including: passport data; unique identification number; the basis of insurance under Art. 33; contributions paid;",
+     "title": "Закон за здравното осигуряване",
+     "url": "https://www.nhif.bg/upload/32277/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BD%D0%BE%D1%82%D0%BE%20%D0%BE%D1%81%D0%B8%D0%B3%D1%83%D1%80%D1%8F%D0%B2%D0%B0%D0%BD%D0%B5.pdf",
+     "value": "Register content: identity data, unique identification number, insurance basis, contributions paid"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "bg",
+     "published": "",
+     "publisher": "Национална здравноосигурителна каса (копие на закона)",
+     "quote": "изпълнителите на медицинска и дентална помощ да извършат проверка на здравноосигурителния статус на лицата съгласно данни на Националната агенция за приходите.",
+     "quote_english": "providers of medical and dental care shall check the health insurance status of persons according to data of the National Revenue Agency.",
+     "title": "Закон за здравното осигуряване",
+     "url": "https://www.nhif.bg/upload/32277/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BD%D0%BE%D1%82%D0%BE%20%D0%BE%D1%81%D0%B8%D0%B3%D1%83%D1%80%D1%8F%D0%B2%D0%B0%D0%BD%D0%B5.pdf",
+     "value": "Providers check health-insurance status against NRA data (Health Insurance Act, Art. 50)"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Регистър на осигурените лица в информационната система на НЗОК; здравноосигурителен статус по данни на НАП",
+   "operator": "Национална здравноосигурителна каса; Национална агенция за приходите (insurance status)",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "operator",
+     "language": "bg",
+     "published": "2021-08-05",
+     "publisher": "Сметна палата на Република България",
+     "quote": "На Агенцията нормативно е възложено да води и съхранява имотен регистър, търговски регистър и регистър на юридическите лица с нестопанска цел, регистър БУЛСТАТ, регистър на имуществените отношения на съпрузите и централен регистър на особените залози.",
+     "quote_english": "The Agency is legally tasked with keeping and storing the property register, the commercial register and register of non-profit legal entities, the BULSTAT register, the register of spouses' property relations and the central register of special pledges.",
+     "title": "Одитен доклад № 0300101019 – Ефективност на организацията и контрола на дейностите по водене и съхраняване на поддържаните от Агенцията по вписванията регистри",
+     "url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf",
+     "value": "The Registry Agency (executive agency under the Minister of Justice) keeps the property register, commercial register, BULSTAT and other registers"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2021-08-05",
+     "publisher": "Сметна палата на Република България",
+     "quote": "Агенцията е създадена през 2004 г. на основание чл. 58а от Закона за кадастъра и имотния регистър (ЗКИР) с цел да организира създаването и поддържането на имотния регистър",
+     "quote_english": "The Agency was created in 2004 on the basis of Art. 58a of the Cadastre and Property Register Act in order to organise the creation and maintenance of the property register",
+     "title": "Одитен доклад № 0300101019 – Ефективност на организацията и контрола на дейностите по водене и съхраняване на поддържаните от Агенцията по вписванията регистри",
+     "url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf",
+     "value": "The Registry Agency was created in 2004 under Art. 58a of the Cadastre and Property Register Act"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Агенция по геодезия, картография и кадастър",
+     "quote": "Съгласно Закона за кадастъра и имотния регистър: създаване и поддържане на кадастралната карта и кадастралните регистри за територията на цялата страна;",
+     "quote_english": "Under the Cadastre and Property Register Act: creation and maintenance of the cadastral map and cadastral registers for the territory of the whole country;",
+     "title": "Функции на АГКК",
+     "url": "https://www.cadastre.bg/funkcii-na-agkk",
+     "value": "AGCC creates and maintains the cadastral map and cadastral registers for the whole country under the Cadastre and Property Register Act"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "hosting",
+     "language": "bg",
+     "published": "2021-08-05",
+     "publisher": "Сметна палата на Република България",
+     "quote": "договор 93-00-141 от 17.12.2019 г. с предмет \"Надграждане на информационните центрове за данни на АВ\"",
+     "quote_english": "contract 93-00-141 of 17.12.2019 on \"Upgrading the information data centres of the Registry Agency\"",
+     "title": "Одитен доклад № 0300101019 – Ефективност на организацията и контрола на дейностите по водене и съхраняване на поддържаните от Агенцията по вписванията регистри",
+     "url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf",
+     "value": "The Registry Agency operates its own data centres; a 2019 contract upgraded them"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "national",
+   "holding_name": "Имотен регистър (Агенция по вписванията); Кадастрална карта и кадастрални регистри (КАИС, АГКК)",
+   "operator": "Агенция по вписванията (Министерство на правосъдието); Агенция по геодезия, картография и кадастър",
+   "research_note": "Hosting is classed as national because the National Audit Office names the Registry Agency's own data centres and servers. No cloud provider was found. No hosting source found for the cadastre (AGCC).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2021-08-05",
+     "publisher": "Сметна палата на Република България",
+     "quote": "Търговският регистър и регистърът на юридическите лица с нестопанска цел (ТРРЮЛНЦ) е обща електронна база данни, съдържаща обстоятелствата, вписани по силата на закон,",
+     "quote_english": "The Commercial Register and Register of Non-Profit Legal Entities (TRRYuLNTs) is a common electronic database containing the circumstances entered by force of law,",
+     "title": "Одитен доклад № 0300101019 – Ефективност на организацията и контрола на дейностите по водене и съхраняване на поддържаните от Агенцията по вписванията регистри",
+     "url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf",
+     "value": "The Commercial Register and Register of Non-Profit Legal Entities is a common electronic database"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2021-08-05",
+     "publisher": "Сметна палата на Република България",
+     "quote": "От 2006 г. със Закона за търговския регистър на Агенцията по вписванията се възлага воденето и съхраняването на търговския регистър",
+     "quote_english": "From 2006, the Commercial Register Act assigns the Registry Agency the keeping and storing of the commercial register",
+     "title": "Одитен доклад № 0300101019 – Ефективност на организацията и контрола на дейностите по водене и съхраняване на поддържаните от Агенцията по вписванията регистри",
+     "url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf",
+     "value": "Commercial Register Act (2006; since 2016 the Commercial Register and Register of Non-Profit Legal Entities Act)"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "hosting",
+     "language": "bg",
+     "published": "2021-08-05",
+     "publisher": "Сметна палата на Република България",
+     "quote": "Разширяване капацитета на масиви за съхранение на данни, надграждане на сървъри и доставка на лентови библиотеки за архивиране на данни, обслужващи информационните системи на регистрите на АВ",
+     "quote_english": "Expanding the capacity of data storage arrays, upgrading servers and supplying tape libraries for data backup serving the information systems of the Registry Agency registers",
+     "title": "Одитен доклад № 0300101019 – Ефективност на организацията и контрола на дейностите по водене и съхраняване на поддържаните от Агенцията по вписванията регистри",
+     "url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf",
+     "value": "Registry Agency contract to expand storage arrays, upgrade servers and supply tape libraries serving the registers' information systems"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "national",
+   "holding_name": "Търговски регистър и регистър на юридическите лица с нестопанска цел (ТРРЮЛНЦ); регистър БУЛСТАТ",
+   "operator": "Агенция по вписванията",
+   "research_note": "Hosting is classed as national because the Audit Office report describes the Agency's own data-storage arrays and servers.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2021-08-05",
+     "publisher": "Сметна палата на Република България",
+     "quote": "идентификационните данни за действителните собственици и данните за юридическите лица или други правни образувания, чрез които пряко или непряко се упражнява контрол, съгласно изискванията на Закона за мерките срещу изпирането на пари подлежат на вписване в търговския регистър/регистъра на юридическите лица с нестопанска цел.",
+     "quote_english": "identification data of beneficial owners and data on legal entities or other legal arrangements through which control is directly or indirectly exercised are, under the Measures against Money Laundering Act, subject to entry in the commercial register/register of non-profit legal entities.",
+     "title": "Одитен доклад № 0300101019 – Ефективност на организацията и контрола на дейностите по водене и съхраняване на поддържаните от Агенцията по вписванията регистри",
+     "url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf",
+     "value": "Beneficial-owner data are entered in the Commercial Register / Register of Non-Profit Legal Entities under the Measures against Money Laundering Act"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2021-08-05",
+     "publisher": "Сметна палата на Република България",
+     "quote": "възлага на изпълнителя надграждане на регистрите с цел осигуряване на възможност за вписване на обстоятелствата относно действителните собственици в изпълнение на изискванията на ЗМИП. Промяната на софтуера е въведена в експлоатация на 28.01.2019 г.",
+     "quote_english": "assigns the contractor the upgrade of the registers to enable entry of circumstances concerning beneficial owners under the Measures against Money Laundering Act. The software change was put into operation on 28.01.2019.",
+     "title": "Одитен доклад № 0300101019 – Ефективност на организацията и контрола на дейностите по водене и съхраняване на поддържаните от Агенцията по вписванията регистри",
+     "url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf",
+     "value": "The software change enabling beneficial-owner entries went live on 28.01.2019"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "national",
+   "holding_name": "Обстоятелства относно действителните собственици, вписани в Търговския регистър и регистъра на ЮЛНЦ",
+   "operator": "Агенция по вписванията",
+   "research_note": "Runs on the same infrastructure as the Commercial Register (see business_registry).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Главна инспекция по труда (копие на наредбата)",
+     "quote": "Справки за ПС и собствениците им от АИС - КАТ се предоставят на чужди компетентни органи по силата на международен договор, по който Република България е страна.",
+     "quote_english": "Information on vehicles and their owners from AIS-KAT is provided to foreign competent authorities under an international treaty to which the Republic of Bulgaria is a party.",
+     "title": "Наредба № I-45 от 24 март 2000 г. за регистриране, отчет, пускане в движение и спиране от движение на моторните превозни средства",
+     "url": "https://www.gli.government.bg/sites/default/files/upload/documents/2020-09/NI45_24.03.2000.pdf",
+     "value": "Vehicle and owner data are held in the automated information system KAT (AIS-KAT) (Ordinance I-45, Art. 37a)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "bg",
+     "published": "",
+     "publisher": "Главна инспекция по труда (копие на наредбата)",
+     "quote": "Обобщени справки за броя на моторните превозни средства на централно ниво се издават от ГДНП",
+     "quote_english": "Aggregated reports on the number of motor vehicles at central level are issued by GDNP",
+     "title": "Наредба № I-45 от 24 март 2000 г. за регистриране, отчет, пускане в движение и спиране от движение на моторните превозни средства",
+     "url": "https://www.gli.government.bg/sites/default/files/upload/documents/2020-09/NI45_24.03.2000.pdf",
+     "value": "Central-level vehicle statistics are issued by the Directorate-General National Police (GDNP) of MVR"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2024",
+     "publisher": "Държавна агенция за бежанците (копие на закона)",
+     "quote": "Свидетелството за управление на моторно превозно средство се издава от органите на Министерството на вътрешните работи на лица при условия и по ред, определени с акт",
+     "quote_english": "The driving licence is issued by the bodies of the Ministry of Interior to persons under conditions and procedures determined by an act",
+     "title": "Закон за българските лични документи (консолидиран текст)",
+     "url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf",
+     "value": "Driving licences are issued by bodies of the Ministry of Interior (Bulgarian Identity Documents Act, Art. 51)"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Автоматизирана информационна система КАТ (АИС – КАТ); регистър на свидетелствата за управление в информационните фондове за българските лични документи",
+   "operator": "Министерство на вътрешните работи – ГД „Национална полиция“, отдели/сектори „Пътна полиция“",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2022",
+     "publisher": "Комисия за финансов надзор (копие на наредбата, актуално към 01.01.2022)",
+     "quote": "Министерството на правосъдието създава и поддържа Централизирана автоматизирана информационна система \"Съдебен статус\" (ЦАИС \"Съдебен статус\") с централна база данни.",
+     "quote_english": "The Ministry of Justice creates and maintains the Centralised Automated Information System \"Court Status\" (CAIS \"Court Status\") with a central database.",
+     "title": "Наредба № 8 от 26.02.2008 г. за функциите и организацията на дейността на бюрата за съдимост",
+     "url": "https://www.fsc.bg/wp-content/uploads/2021/files/31563_file.pdf",
+     "value": "The Ministry of Justice creates and maintains the Centralised Automated Information System \"Court Status\" with a central database (Ordinance No 8/2008)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "bg",
+     "published": "2022",
+     "publisher": "Комисия за финансов надзор (копие на наредбата, актуално към 01.01.2022)",
+     "quote": "Бюро за съдимост има при всеки районен съд и Централно бюро за съдимост при Министерството на правосъдието.",
+     "quote_english": "There is a criminal records bureau at every district court and a Central Criminal Records Bureau at the Ministry of Justice.",
+     "title": "Наредба № 8 от 26.02.2008 г. за функциите и организацията на дейността на бюрата за съдимост",
+     "url": "https://www.fsc.bg/wp-content/uploads/2021/files/31563_file.pdf",
+     "value": "Criminal-record bureaus at every district court and a Central Criminal Records Bureau at the Ministry of Justice"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "„Информационно обслужване“ АД",
+     "quote": "Единната информационна система на съдилищата (ЕИСС) е платформа за управление на съдебните дела. Системата обхваща всички общи 151 съдилища.",
+     "quote_english": "The Unified Information System of the Courts (EISS) is a platform for managing court cases. The system covers all 151 general courts.",
+     "title": "Електронно правосъдие",
+     "url": "https://www.is-bg.net/bg/solutions/software-integration/e-justice",
+     "value": "The Unified Court Information System (EISS) is the case-management platform covering all 151 general courts"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "hosting",
+     "language": "bg",
+     "published": "",
+     "publisher": "Висш адвокатски съвет",
+     "quote": "ЕИСС представлява централизирано уеб базирано приложение за организиране процесите по управление на дела по електронен път и свързаните с това промени, като се достъпва от потребителите през Интернет.",
+     "quote_english": "EISS is a centralised web-based application for organising electronic case-management processes, accessed by users over the Internet.",
+     "title": "ВСС прие график за въвеждане на Единната информационна система на съдилищата (ЕИСС)",
+     "url": "https://www.vas.bg/bg/a/vss-prie-grafik-za-vvezhdane-na-edinnata-informatsionna-sistema-na-sdilishchata-eiss",
+     "value": "EISS is a centralised web-based application accessed over the Internet (host not stated)"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "ЦАИС „Съдебен статус“ (регистър за съдимост); Единна информационна система на съдилищата (ЕИСС)",
+   "operator": "Министерство на правосъдието – Централно бюро за съдимост и бюрата за съдимост при районните съдилища (criminal records); Висш съдебен съвет (ЕИСС)",
+   "research_note": "EISS was built with Information Services AD as contractor (secondary sources). vss.justice.bg and justice.bg could not be reached. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "Министерство на труда и социалната политика (копие на закона)",
+     "quote": "В МВР се изграждат информационни фондове и звена за събиране, обработване, систематизиране, съхраняване, анализиране, изготвяне и предоставяне на информация.",
+     "quote_english": "Information funds and units for collecting, processing, systematising, storing, analysing, preparing and providing information are established in the Ministry of Interior.",
+     "title": "Закон за Министерството на вътрешните работи",
+     "url": "https://www.mlsp.government.bg/uploads/15/spitao/dokumenti/pravilnitsi/za-ministerstvoto-na-vtreshnite-raboti.pdf",
+     "value": "Ministry of Interior Act, Art. 24(1): MVR builds information funds for collecting, processing, storing and providing information"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Главна инспекция по труда (копие на наредбата)",
+     "quote": "отразяване на информацията в Автоматизираната информационна система \"Издирвателна дейност\" - Национална Шенгенска информационна система",
+     "quote_english": "recording of the information in the Automated Information System \"Search Activity\" – National Schengen Information System",
+     "title": "Наредба № I-45 от 24 март 2000 г. за регистриране, отчет, пускане в движение и спиране от движение на моторните превозни средства",
+     "url": "https://www.gli.government.bg/sites/default/files/upload/documents/2020-09/NI45_24.03.2000.pdf",
+     "value": "Wanted-persons and wanted-objects system: Automated Information System \"Search Activity\" – National Schengen Information System"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Информационни фондове на МВР; АИС „Издирвателна дейност“ – Национална Шенгенска информационна система (АИС ИД – НШИС)",
+   "operator": "Министерство на вътрешните работи",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "bg",
+     "published": "",
+     "publisher": "Министерство на труда и социалната политика (копие на закона)",
+     "quote": "и на Шенгенската информационна система (ШИС) и изпълнява ангажиментите на Република България като Национално централно бюро \"Интерпол\", Национално звено \"Европол\", Национално звено \"ETIAS\" и Бюро \"СИРЕНЕ\".",
+     "quote_english": "and of the Schengen Information System (SIS) and fulfils the commitments of the Republic of Bulgaria as National Central Bureau \"Interpol\", National Unit \"Europol\", National Unit \"ETIAS\" and SIRENE Bureau.",
+     "title": "Закон за Министерството на вътрешните работи",
+     "url": "https://www.mlsp.government.bg/uploads/15/spitao/dokumenti/pravilnitsi/za-ministerstvoto-na-vtreshnite-raboti.pdf",
+     "value": "MVR acts as SIRENE Bureau and national unit for SIS, ETIAS, Europol and Interpol (Ministry of Interior Act)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "Министерство на външните работи (копие на закона)",
+     "quote": "Правилата за работа с визовата информационна система се определят с инструкция на министъра на външните работи.",
+     "quote_english": "The rules for working with the visa information system are determined by instruction of the Minister of Foreign Affairs.",
+     "title": "Закон за чужденците в Република България",
+     "url": "https://www.mfa.bg/upload/138160/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%87%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D1%82%D0%B5%20%D0%B2%20%D0%A0%D0%B5%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F.pdf",
+     "value": "Rules for the visa information system are set by instruction of the Minister of Foreign Affairs (Foreigners Act, Art. 9zh(7))"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "bg",
+     "published": "",
+     "publisher": "Министерство на външните работи (копие на закона)",
+     "quote": "служители на Националния визов център към дирекция \"Консулски отношения\" на Министерството на външните работи",
+     "quote_english": "officials of the National Visa Centre at the Consular Relations Directorate of the Ministry of Foreign Affairs",
+     "title": "Закон за чужденците в Република България",
+     "url": "https://www.mfa.bg/upload/138160/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%87%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D1%82%D0%B5%20%D0%B2%20%D0%A0%D0%B5%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F.pdf",
+     "value": "National Visa Centre of the MFA Consular Relations Directorate"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Национална Шенгенска информационна система (N.SIS, Бюро СИРЕНЕ); визова информационна система (Национален визов център)",
+   "operator": "Министерство на вътрешните работи (ШИС/СИРЕНЕ, гранична полиция); Министерство на външните работи – Национален визов център (визи)",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Министерство на външните работи",
+     "quote": "В Министерството на вътрешните работи се изгражда и поддържа единен автоматизиран регистър за дейностите по този закон.",
+     "quote_english": "A unified automated register for the activities under this Act is established and maintained at the Ministry of Interior.",
+     "title": "Закон за оръжията, боеприпасите, взривните вещества и пиротехническите изделия (двуезично издание)",
+     "url": "https://www.mfa.bg/upload/762/10-ZOBVVPI-bg-en.pdf",
+     "value": "Weapons Act, Art. 11(1): MVR builds and maintains a unified automated register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "Министерство на външните работи",
+     "quote": "Данните по ал. 2 се съхраняват за срок 20 години след датата на вписването им в регистъра.",
+     "quote_english": "The data under para. 2 are stored for 20 years after the date of their entry in the register.",
+     "title": "Закон за оръжията, боеприпасите, взривните вещества и пиротехническите изделия (двуезично издание)",
+     "url": "https://www.mfa.bg/upload/762/10-ZOBVVPI-bg-en.pdf",
+     "value": "Register data are retained for 20 years after entry (Art. 11(4))"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Единен автоматизиран регистър за дейностите по Закона за оръжията, боеприпасите, взривните вещества и пиротехническите изделия",
+   "operator": "Министерство на вътрешните работи",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "secondary",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "Уикиизточник (текст на закона)",
+     "quote": "\"Държавен вестник\" е официално издание на Република България. (2) \"Държавен вестник\" се издава от Народното събрание.",
+     "quote_english": "\"State Gazette\" is the official publication of the Republic of Bulgaria. (2) \"State Gazette\" is published by the National Assembly.",
+     "title": "Закон за „Държавен вестник“",
+     "url": "https://bg.wikisource.org/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD_%D0%B7%D0%B0_%E2%80%9E%D0%94%D1%8A%D1%80%D0%B6%D0%B0%D0%B2%D0%B5%D0%BD_%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%B8%D0%BA%E2%80%9C",
+     "value": "State Gazette Act, Art. 1: the State Gazette is the official publication and is published by the National Assembly (text reproduced on Wikisource)"
+    },
+    {
+     "doc_type": "eu_document",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Европейска комисия / Службата за публикации на ЕС (N-Lex)",
+     "quote": "На този уебсайт можете да намерите пълното съдържание на всички броеве на „Държавен вестник“ за последните 7 години в PDF формат.",
+     "quote_english": "On this website you can find the full content of all issues of the State Gazette for the last 7 years in PDF format.",
+     "title": "За националната база данни – България",
+     "url": "https://n-lex.europa.eu/n-lex/info/info-bg/index?lang=bg",
+     "value": "The State Gazette website provides the full content of all issues for the last 7 years in PDF (EU N-Lex description)"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "„Държавен вестник“ (dv.parliament.bg)",
+   "operator": "Народно събрание",
+   "research_note": "The State Gazette Act text is cited from Wikisource because lex.bg, APIS and parliament.bg law pages could not be read by automated tools. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2023-05-03",
+     "publisher": "Министерство на финансите – дирекция „Държавно съкровище“ (публикувано от БНБ)",
+     "quote": "С това указание се регламентират образците на платежно нареждане за плащане от/към бюджета, на бюджетно платежно искане за иницииране на плащания чрез Системата за електронни бюджетни разплащания (СЕБРА)",
+     "quote_english": "This instruction sets the templates for the payment order for payments from/to the budget and for the budget payment request initiating payments through the System for Electronic Budget Payments (SEBRA)",
+     "title": "ДДС № 03/03.05.2023 г. – Изисквания за структурата, формата и съдържанието на платежни документи ... чрез СЕБРА",
+     "url": "https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/instructions_bnb_51681_bg.pdf",
+     "value": "SEBRA (System for Electronic Budget Payments) is used to initiate payments of budget organisations"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "bg",
+     "published": "2023-05-03",
+     "publisher": "Министерство на финансите – дирекция „Държавно съкровище“ (публикувано от БНБ)",
+     "quote": "Указанието включва и изисквания към БОРИКА АД за трансформирането на информацията в XML формат съгласно ISO 20022 при финализация на одобрените плащания в СЕБРА.",
+     "quote_english": "The instruction also includes requirements for BORICA AD to transform the information into XML format under ISO 20022 when finalising the approved payments in SEBRA.",
+     "title": "ДДС № 03/03.05.2023 г. – Изисквания за структурата, формата и съдържанието на платежни документи ... чрез СЕБРА",
+     "url": "https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/instructions_bnb_51681_bg.pdf",
+     "value": "BORICA AD transforms approved SEBRA payments into ISO 20022 XML"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2023-05-03",
+     "publisher": "Министерство на финансите – дирекция „Държавно съкровище“ (публикувано от БНБ)",
+     "quote": "Указанието се издава на основание чл. 151, ал. 1 от Закона за публичните финанси (ЗПФ).",
+     "quote_english": "The instruction is issued on the basis of Art. 151(1) of the Public Finance Act.",
+     "title": "ДДС № 03/03.05.2023 г. – Изисквания за структурата, формата и съдържанието на платежни документи ... чрез СЕБРА",
+     "url": "https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/instructions_bnb_51681_bg.pdf",
+     "value": "Issued under Art. 151(1) of the Public Finance Act"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Система за електронни бюджетни разплащания (СЕБРА)",
+   "operator": "Министерство на финансите (дирекция „Държавно съкровище“); Българска народна банка; „БОРИКА“ АД (processing)",
+   "research_note": "Late in the research bnb.bg blocked or rate-limited automated fetches. The three SEBRA quotes were read verbatim from this PDF earlier in the same session but could not be re-checked at the end.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "government_payroll",
+   "research_note": "Searched for a central civil-service or armed-forces payroll and personnel register (MoF, Institute of Public Administration, Ministry of Defence). No authoritative source on a central payroll system was found. Payroll data reach NSSI through its payroll-records information system (see benefits_pensions).",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "bg",
+     "published": "2026",
+     "publisher": "МРРБ – ГД „ГРАО“ (копие на кодекса)",
+     "quote": "определя изискванията към организацията и технологията на компютърната обработка на данните от гласуването и към издаването на бюлетин с резултатите от изборите, включително от машинното гласуване, не по-късно от 55 дни преди изборния ден и възлага изпълнението на \"Информационно обслужване\" АД;",
+     "quote_english": "sets the requirements for the organisation and technology of computer processing of voting data and for issuing the bulletin with election results, including from machine voting, no later than 55 days before election day, and assigns the execution to Information Services AD;",
+     "title": "Изборен кодекс (консолидиран текст)",
+     "url": "https://www.grao.bg/normact/IK-2026.pdf",
+     "value": "Electoral Code: the CEC sets the requirements for computer processing of voting data and results and assigns the work to Information Services AD"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "national",
+   "holding_name": "Компютърна обработка на данните от гласуването и бюлетин с резултатите (ЦИК)",
+   "operator": "Централна избирателна комисия; „Информационно обслужване“ АД (computer processing of results)",
+   "research_note": "cik.bg returned 403 to automated requests. The Electoral Code itself names the processing contractor, a Bulgarian joint-stock company. Server location is not stated.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "central_bank",
+   "operator": "Българска народна банка",
+   "research_note": "BNB pages on TARGET-BNB/T2 and RINGS were found, but bnb.bg blocked or rate-limited automated retrieval, so no verbatim quote could be secured. Bulgaria joined the euro area on 1 January 2026; the move of settlement to Eurosystem T2 is inferred from BNB page titles only and is not quoted.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "research_note": "mod.bg could not be reached from the research machine. No public source was found naming defence command-and-control or logistics data holdings or their hosting.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "intelligence",
+   "research_note": "dans.bg returned 403. No public source was found on intelligence data holdings or their hosting, as expected for classified holdings.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2019",
+     "publisher": "Министерство на транспорта и съобщенията (копие на закона)",
+     "quote": "Този закон определя структурата и функциите на Националната система за спешни повиквания с единен европейски номер 112, отговорностите за нейното изграждане, поддържане и развитие,",
+     "quote_english": "This Act sets out the structure and functions of the National System for Emergency Calls with the single European number 112 and the responsibilities for building, maintaining and developing it,",
+     "title": "Закон за Националната система за спешни повиквания с единен европейски номер 112",
+     "url": "https://www.mtc.government.bg/sites/default/files/zakon-nacsist-spesni-povikvaniq-nomer-112-23072019.pdf",
+     "value": "Act on the National System for Emergency Calls with the Single European Number 112"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "bg",
+     "published": "2019",
+     "publisher": "Министерство на транспорта и съобщенията (копие на закона)",
+     "quote": "са териториални звена на дирекция \"Национална система 112\" на Министерството на вътрешните работи (МВР).",
+     "quote_english": "are territorial units of the \"National System 112\" directorate of the Ministry of Interior (MVR).",
+     "title": "Закон за Националната система за спешни повиквания с единен европейски номер 112",
+     "url": "https://www.mtc.government.bg/sites/default/files/zakon-nacsist-spesni-povikvaniq-nomer-112-23072019.pdf",
+     "value": "112 centres are territorial units of the \"National System 112\" directorate of MVR"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "bg",
+     "published": "2019",
+     "publisher": "Министерство на транспорта и съобщенията (копие на закона)",
+     "quote": "Министерството на вътрешните работи изгражда и поддържа центровете 112, организира тяхната дейност и популяризира съществуването и използването на ЕЕН 112.",
+     "quote_english": "The Ministry of Interior builds and maintains the 112 centres, organises their activity and promotes the existence and use of the single European emergency number 112.",
+     "title": "Закон за Националната система за спешни повиквания с единен европейски номер 112",
+     "url": "https://www.mtc.government.bg/sites/default/files/zakon-nacsist-spesni-povikvaniq-nomer-112-23072019.pdf",
+     "value": "MVR builds and maintains the 112 centres"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "Национална система за спешни повиквания с единен европейски номер 112 (центрове 112)",
+   "operator": "Министерство на вътрешните работи – дирекция „Национална система 112“",
+   "research_note": "112.bg could not be reached. No source found on the platform vendor or hosting. The TETRA public-safety network was not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "secondary",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2026-01-07",
+     "publisher": "Вестник „Сега“",
+     "quote": "BG-ALERT е система за разпространение на съобщения за предупреждение на населението в случаи на опасни събития",
+     "quote_english": "BG-ALERT is a system for disseminating warning messages to the population in the event of dangerous events",
+     "title": "МВР ще издирва бандити чрез BG-ALERT",
+     "url": "https://www.segabg.com/hot/category-bulgaria/mvr-shte-izdirva-banditi-chrez-bg-alert",
+     "value": "BG-ALERT public warning system over mobile networks (Cell Broadcast)"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "operator",
+     "language": "bg",
+     "published": "2026-01-07",
+     "publisher": "Вестник „Сега“",
+     "quote": "Предупредителната система е разработена съвместно от МВР и Министерството на електронното управление.",
+     "quote_english": "The warning system was developed jointly by the Ministry of Interior and the Ministry of e-Government.",
+     "title": "МВР ще издирва бандити чрез BG-ALERT",
+     "url": "https://www.segabg.com/hot/category-bulgaria/mvr-shte-izdirva-banditi-chrez-bg-alert",
+     "value": "Developed jointly by MVR and the Ministry of e-Government"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2026-01-07",
+     "publisher": "Вестник „Сега“",
+     "quote": "Измененията са в наредбата за реда за изграждане, поддържане, развитие и използване на системата BG-ALERT. Тя е издадена от министъра на вътрешните работи съвместно с министъра на транспорта и съобщенията.",
+     "quote_english": "The amendments are to the ordinance on building, maintaining, developing and using the BG-ALERT system. It was issued by the Minister of Interior jointly with the Minister of Transport and Communications.",
+     "title": "МВР ще издирва бандити чрез BG-ALERT",
+     "url": "https://www.segabg.com/hot/category-bulgaria/mvr-shte-izdirva-banditi-chrez-bg-alert",
+     "value": "Ordinance on building, maintaining, developing and using BG-ALERT, issued by the Minister of Interior jointly with the Minister of Transport and Communications"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "BG-ALERT (система за разпространение на съобщения за предупреждение на населението); Национална система за ранно предупреждение и оповестяване",
+   "operator": "Министерство на вътрешните работи; Министерство на електронното управление",
+   "research_note": "gdpbzn.bg could not be reached. The sources are a press report on the draft ordinance. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "procurement",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "2016-01-20",
+     "publisher": "Електроенергиен системен оператор ЕАД",
+     "quote": "Модернизация и Разширение на Системата SCADA/EMS и Информационната среда в Централно Диспечерско Управление (ЦДУ) на ЕСО",
+     "quote_english": "Modernisation and Extension of the SCADA/EMS System and the Information Environment in the Central Dispatch Control (CDU) of ESO",
+     "title": "Модернизация и Разширение на Системата SCADA/EMS и Информационната среда в ЦДУ на ЕСО – предварително обявление",
+     "url": "https://www.eso.bg/fileObj.php?oid=131",
+     "value": "Project to modernise and extend the SCADA/EMS and information environment in ESO's Central Dispatch (CDU)"
+    },
+    {
+     "doc_type": "procurement",
+     "field": "hosting",
+     "language": "bg",
+     "published": "2016-01-20",
+     "publisher": "Електроенергиен системен оператор ЕАД",
+     "quote": "Изграждане на Резервен център за съхранение и обработка на данни за ЦДУ (прогнозна стойност на договора до 1,200,000 евро)",
+     "quote_english": "Construction of a backup data storage and processing centre for the CDU (estimated contract value up to EUR 1,200,000)",
+     "title": "Модернизация и Разширение на Системата SCADA/EMS и Информационната среда в ЦДУ на ЕСО – предварително обявление",
+     "url": "https://www.eso.bg/fileObj.php?oid=131",
+     "value": "The project includes a backup data storage and processing centre for the Central Dispatch"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "SCADA/EMS на Централно диспечерско управление (ЦДУ) на ЕСО",
+   "operator": "Електроенергиен системен оператор ЕАД (ЕСО)",
+   "research_note": "The tender ran under EBRD rules and was open to firms worldwide. The winning vendors were not found.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "water_control",
+   "research_note": "Checked the Ministry of Environment and Water site. Within the search budget, no quotable source was found on central flood-defence or water-management control systems, their operator or their hosting.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "Национална здравноосигурителна каса (копие на закона)",
+     "quote": "Създава се Национална здравноинформационна система, която се администрира и поддържа от Министерството на здравеопазването.",
+     "quote_english": "A National Health Information System is created, administered and maintained by the Ministry of Health.",
+     "title": "Закон за здравето",
+     "url": "https://www.nhif.bg/upload/30458/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%B5%D1%82%D0%BE.pdf",
+     "value": "Health Act, Art. 28g(1): creates the National Health Information System, administered and maintained by the Ministry of Health"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Национална здравноосигурителна каса (копие на закона)",
+     "quote": "В Националната здравноинформационна система се събира, обработва и съхранява информация за здравното състояние на населението чрез създаване и поддържане на електронен здравен запис на всеки гражданин.",
+     "quote_english": "The National Health Information System collects, processes and stores information on the health status of the population by creating and maintaining an electronic health record for every citizen.",
+     "title": "Закон за здравето",
+     "url": "https://www.nhif.bg/upload/30458/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%B5%D1%82%D0%BE.pdf",
+     "value": "The NHIS holds an electronic health record for every citizen"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Национална здравноинформационна система (НЗИС) – електронен здравен запис",
+   "operator": "Министерство на здравеопазването",
+   "research_note": "No public source found on NHIS hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "Национална здравноосигурителна каса (копие на закона)",
+     "quote": "Болните от заразни болести, контактните с тях лица и заразоносителите подлежат на регистрация, задължително съобщаване и отчет.",
+     "quote_english": "Persons ill with communicable diseases, their contacts and carriers are subject to registration, mandatory notification and reporting.",
+     "title": "Закон за здравето",
+     "url": "https://www.nhif.bg/upload/30458/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%B5%D1%82%D0%BE.pdf",
+     "value": "Health Act, Art. 60: persons with communicable diseases, their contacts and carriers are subject to registration and mandatory notification"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "bg",
+     "published": "",
+     "publisher": "Национална здравноосигурителна каса (копие на закона)",
+     "quote": "Министърът на здравеопазването определя с наредба болестите по ал. 1 и реда за регистрация, съобщаване и отчет.",
+     "quote_english": "The Minister of Health determines by ordinance the diseases under para. 1 and the procedure for registration, notification and reporting.",
+     "title": "Закон за здравето",
+     "url": "https://www.nhif.bg/upload/30458/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%B5%D1%82%D0%BE.pdf",
+     "value": "The Minister of Health sets the diseases and the registration procedure by ordinance"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Регистрация, съобщаване и отчет на заразните болести",
+   "operator": "Министерство на здравеопазването",
+   "research_note": "The immunisation register was not separately sourced. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "НАЦИД",
+     "quote": "Регистърът на всички действащи, прекъснали и завършили студенти и докторанти по степени на обучение и по професионални направления (РДПЗСД) се води и поддържа като електронна база данни от министъра на образованието и науката чрез Националния център за информация и документация (НАЦИД)",
+     "quote_english": "The Register of all current, interrupted and graduated students and doctoral candidates by degree and professional field (RDPZSD) is kept and maintained as an electronic database by the Minister of Education and Science through the National Centre for Information and Documentation (NACID)",
+     "title": "Регистър на студенти и докторанти",
+     "url": "https://nacid.bg/bg/register_rdpzsd/",
+     "value": "Register of all current, interrupted and graduated students and doctoral candidates, kept as an electronic database through NACID"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "НАЦИД",
+     "quote": "по силата на чл. 10, ал. 2, т. 3, б. „в“ от Закона за висшето образование. Достъпът до регистъра се осъществява чрез интернет страница на НАЦИД.",
+     "quote_english": "under Art. 10(2)(3)(c) of the Higher Education Act. Access to the register is through the NACID website.",
+     "title": "Регистър на студенти и докторанти",
+     "url": "https://nacid.bg/bg/register_rdpzsd/",
+     "value": "Higher Education Act, Art. 10(2)(3)(c)"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "Регистър на всички действащи, прекъснали и завършили студенти и докторанти (РДПЗСД)",
+   "operator": "Министър на образованието и науката чрез НАЦИД",
+   "research_note": "The school-level diploma register (NEISPUO) was not sourced; mon.bg returned 403. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Национален статистически институт",
+     "quote": "От 7 септември до 10 октомври 2021 г. се проведе 18-ото поред преброяване на населението и жилищния фонд в Република България.",
+     "quote_english": "From 7 September to 10 October 2021 the 18th population and housing census in the Republic of Bulgaria was held.",
+     "title": "Преброяване 2021",
+     "url": "https://census2021.bg/",
+     "value": "2021 Population and Housing Census, the 18th in Bulgaria (census site of the National Statistical Institute)"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "Преброяване на населението и жилищния фонд 2021 (census microdata)",
+   "operator": "Национален статистически институт",
+   "research_note": "The Statistics Act and the microdata access rules were not quoted because the search budget ran out. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "",
+     "publisher": "Агенция по геодезия, картография и кадастър",
+     "quote": "2. Съгласно Закона за геодезията и картографията: създаване и поддържане на държавните топографски карти в мащаби 1 : 5000 и 1 : 10 000 за територията на страната;",
+     "quote_english": "2. Under the Geodesy and Cartography Act: creation and maintenance of the state topographic maps at scales 1:5000 and 1:10000 for the territory of the country;",
+     "title": "Функции на АГКК",
+     "url": "https://www.cadastre.bg/funkcii-na-agkk",
+     "value": "Geodesy and Cartography Act: AGCC creates and maintains the state topographic maps at 1:5000 and 1:10000"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "bg",
+     "published": "",
+     "publisher": "Агенция по геодезия, картография и кадастър",
+     "quote": "създаване и поддържане на топографски бази данни и на геоинформационната система;",
+     "quote_english": "creation and maintenance of topographic databases and of the geo-information system;",
+     "title": "Функции на АГКК",
+     "url": "https://www.cadastre.bg/funkcii-na-agkk",
+     "value": "AGCC creates and maintains the topographic databases and the geo-information system"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Държавни топографски карти, топографски бази данни и геоинформационна система; кадастрална карта (АГКК)",
+   "operator": "Агенция по геодезия, картография и кадастър",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "bg",
+     "published": "2022",
+     "publisher": "Държавна агенция „Архиви“",
+     "quote": "Условията и редът за опазването, съхраняването, достъпа и използването на ценни електронни документи в държавните архиви се определят с наредба, приета от Министерския съвет по предложение на министъра на електронното управление съгласувано с председателя на Държавна агенция „Архиви“.",
+     "quote_english": "The conditions and procedure for preserving, storing, accessing and using valuable electronic documents in the state archives are determined by an ordinance adopted by the Council of Ministers on a proposal from the Minister of e-Government in agreement with the Chair of the State Archives Agency.",
+     "title": "Закон за Националния архивен фонд",
+     "url": "https://archives.government.bg/uploaded_files/%D0%97%D0%90%D0%9A%D0%9E%D0%9D_%D0%97%D0%90_%D0%9D%D0%90%D0%A6%D0%98%D0%9E%D0%9D%D0%90%D0%9B%D0%9D%D0%98%D0%AF_%D0%90%D0%A0%D0%A5%D0%98%D0%92%D0%95%D0%9D_%D0%A4%D0%9E%D0%9D%D0%94_%282022%29%281%29.pdf",
+     "value": "National Archival Fund Act, Art. 9(2): preservation of valuable electronic documents in the state archives is governed by a Council of Ministers ordinance"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Национален архивен фонд – ценни електронни документи в държавните архиви",
+   "operator": "Държавна агенция „Архиви“",
+   "research_note": "No source found on a digital repository or its hosting.",
+   "status": "held"
+  }
+ ],
+ "iso": "BG"
+}

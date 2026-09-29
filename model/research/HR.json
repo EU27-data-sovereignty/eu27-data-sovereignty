@@ -1,0 +1,1659 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Ministarstvo pravosuđa, uprave i digitalne transformacije",
+     "quote": "Centar dijeljenih usluga („Državni oblak”) jedan je od ključnih projekata Središnjeg državnog ureda za razvoj digitalnog društva kojim će se spojiti državna informacijska infrastruktura",
+     "quote_english": "The Shared Services Centre (State Cloud) is one of the key projects of the Central State Office for the Development of the Digital Society, joining up the state information infrastructure",
+     "title": "Uspostava Centra dijeljenih usluga",
+     "url": "https://mpudt.gov.hr/istaknute-teme-11/projekti/eu-projekti/uspostava-centra-dijeljenih-usluga/28824",
+     "value": "Shared Services Centre (State Cloud) consolidating the state information infrastructure"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "hosting",
+     "language": "hr",
+     "published": "2023-11-29",
+     "publisher": "SAFU",
+     "quote": "više podatkovnih centara kojima upravlja APIS IT osiguravaju i visoku dostupnost, odnosno automatski oporavak od bilo kakvog ispada na jednoj od lokacija bez gubitka podataka.",
+     "quote_english": "multiple data centres managed by APIS IT ensure high availability and automatic recovery from an outage at one location without data loss.",
+     "title": "Uspostavom Centra dijeljenih usluga omogućena učinkovitija javna uprava",
+     "url": "https://www.safu.hr/uspostavom-centra-dijeljenih-usluga-omogucena-ucinkovitija-javna-uprava-bolja-dostupnost-servisa-i-veca-sigurnost-podataka/",
+     "value": "Runs in multiple data centres managed by the state company APIS IT"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "data_size",
+     "language": "hr",
+     "published": "2023-11-29",
+     "publisher": "SAFU",
+     "quote": "ukupni kapaciteti CDU platforme danas obuhvaćaju 37.840 vCPU, 154 TB RAM, 15.5 PB prostora za pohranu",
+     "quote_english": "total CDU platform capacity today comprises 37,840 vCPU, 154 TB RAM and 15.5 PB of storage",
+     "title": "Uspostavom Centra dijeljenih usluga omogućena učinkovitija javna uprava",
+     "url": "https://www.safu.hr/uspostavom-centra-dijeljenih-usluga-omogucena-ucinkovitija-javna-uprava-bolja-dostupnost-servisa-i-veca-sigurnost-podataka/",
+     "value": "15.5 PB storage, 37,840 vCPU, 154 TB RAM (Nov 2023)"
+    }
+   ],
+   "holding_name": "Centar dijeljenih usluga (CDU, \"Državni oblak\" – State Cloud)",
+   "suggested_class": "government_shared_cloud",
+   "why_critical": "A consolidated state cloud that hosts systems for hundreds of public bodies, including components of e-Građani. Whoever controls it controls much of the state's digital infrastructure at once."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "određivanje i dodjeljivanje osobnoga identifikacijskog broja, izdavanje potvrda o osobnom identifikacijskom broju, vođenje evidencije o osobnim identifikacijskim brojevima",
+     "quote_english": "determining and assigning the personal identification number, issuing OIB certificates, and keeping the register of personal identification numbers",
+     "title": "Zakon o poreznoj upravi",
+     "url": "https://www.zakon.hr/z/419/zakon-o-poreznoj-upravi",
+     "value": "Tax Administration assigns OIBs and keeps the OIB register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2025",
+     "publisher": "Narodne novine d.d.",
+     "quote": "osobni identifikacijski broj i osobno ime – iz Evidencije o osobnim identifikacijskim brojevima Porezne uprave",
+     "quote_english": "personal identification number and personal name – from the Tax Administration's Register of Personal Identification Numbers",
+     "title": "Zakon o Središnjem registru stanovništva",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2025_04_67_856.html",
+     "value": "The Central Population Register takes OIB and name from the Tax Administration OIB register"
+    }
+   ],
+   "holding_name": "Evidencija o osobnim identifikacijskim brojevima (OIB register)",
+   "suggested_class": "national_identifier_register",
+   "why_critical": "The OIB is the universal personal and business identifier. The new Central Population Register and other registers key on it, and the Tax Administration assigns it."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr (consolidated text of Narodne novine 96/93, 76/13, 98/19, 133/22)",
+     "quote": "O osobnim stanjima građana vode se državne matice: matica rođenih, matica vjenčanih i matica umrlih.",
+     "quote_english": "State civil registers are kept on citizens' personal status: the register of births, the register of marriages and the register of deaths.",
+     "title": "Zakon o državnim maticama (pročišćeni tekst)",
+     "url": "https://www.zakon.hr/z/603/zakon-o-drzavnim-maticama",
+     "value": "State civil registers (Državne matice): registers of births, marriages and deaths"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Tijelo državne uprave nadležno za poslove opće uprave utvrđuje i vodi jedinstveni informacijski sustav državnih matica te se brine za njegovo održavanje i nadogradnju.",
+     "quote_english": "The state administration body responsible for general administration establishes and runs the single information system of state civil registers and ensures its maintenance and upgrading.",
+     "title": "Zakon o državnim maticama (pročišćeni tekst)",
+     "url": "https://www.zakon.hr/z/603/zakon-o-drzavnim-maticama",
+     "value": "The state administration body for general administration sets up and runs the single information system for the civil registers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Državne matice vode se u elektroničkom obliku. Na obradu podataka primjenjuju se propisi kojima se uređuje zaštita osobnih podataka i informacijska sigurnost.",
+     "quote_english": "State civil registers are kept in electronic form. Data processing is subject to the rules on personal data protection and information security.",
+     "title": "Zakon o državnim maticama (pročišćeni tekst)",
+     "url": "https://www.zakon.hr/z/603/zakon-o-drzavnim-maticama",
+     "value": "Zakon o državnim maticama (Act on State Civil Registers): the registers are kept in electronic form"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2025",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Ovim Zakonom ustrojava se Središnji registar stanovništva (u daljnjem tekstu: Središnji registar) i propisuje se način vođenja, preuzimanje, prikupljanje i korištenje podataka",
+     "quote_english": "This Act establishes the Central Population Register and prescribes how data are kept, taken over, collected and used.",
+     "title": "Zakon o Središnjem registru stanovništva",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2025_04_67_856.html",
+     "value": "Zakon o Središnjem registru stanovništva (Central Population Register Act, NN 67/2025)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "2025",
+     "publisher": "Narodne novine d.d.",
+     "quote": "(1) Središnji registar uspostavlja i vodi Ministarstvo financija, Porezna uprava (u daljnjem tekstu: Porezna uprava).",
+     "quote_english": "(1) The Central Register is established and run by the Ministry of Finance, Tax Administration.",
+     "title": "Zakon o Središnjem registru stanovništva",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2025_04_67_856.html",
+     "value": "Central Population Register is established and run by the Ministry of Finance, Tax Administration"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Državne matice (matica rođenih, vjenčanih, umrlih) and Središnji registar stanovništva",
+   "operator": "Ministry responsible for general administration (Ministarstvo pravosuđa, uprave i digitalne transformacije); Central Population Register: Ministry of Finance, Tax Administration",
+   "research_note": "Both registers found in law. No public source found naming where the civil-register system or the Central Population Register is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2019",
+     "publisher": "Narodne novine d.d.",
+     "quote": "za izradu vozačke dozvole koristi se fotografija koja je pohranjena u evidenciji osobnih iskaznica na informacijskom sustavu Ministarstva unutarnjih poslova prilikom izdavanja elektroničke osobne iskaznice.",
+     "quote_english": "the photograph stored in the ID card register on the Ministry of the Interior information system when the electronic ID card was issued is used to produce the driving licence.",
+     "title": "Pravilnik o vozačkim dozvolama",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_01_2_39.html",
+     "value": "Photograph stored in the ID-card register in the Ministry of the Interior information system (reused for driving licences)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2020",
+     "publisher": "Narodne novine d.d.",
+     "quote": "U osobnu iskaznicu u elektroničkom se obliku pohranjuju podaci iz članka 1. stavka 1. ovoga Zakona, prikaz lica nositelja osobne iskaznice i dva otiska prstiju u interoperabilnim digitalnim formatima",
+     "quote_english": "The data from Article 1(1), the facial image of the holder and two fingerprints in interoperable digital formats are stored electronically in the ID card.",
+     "title": "Zakon o izmjenama i dopunama Zakona o osobnoj iskaznici",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2020_12_144_2768.html",
+     "value": "Zakon o izmjenama i dopunama Zakona o osobnoj iskaznici (NN 144/2020): facial image and two fingerprints stored on the ID card"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2019",
+     "publisher": "Zakon.hr (NN 127/19)",
+     "quote": "Nadležna tijela prikupljaju biometrijske podatke sukladno posebnim propisima i pohranjuju ih u odgovarajuće zbirke.",
+     "quote_english": "Competent bodies collect biometric data in accordance with special regulations and store them in the relevant collections.",
+     "title": "Zakon o obradi biometrijskih podataka",
+     "url": "https://www.zakon.hr/z/2431/zakon-o-obradi-biometrijskih-podataka",
+     "value": "Zakon o obradi biometrijskih podataka (NN 127/19): competent bodies store biometric data in collections"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "2019",
+     "publisher": "Zakon.hr (NN 127/19)",
+     "quote": "nadležna tijela ovlaštena za prikupljanje i obradu biometrijskih podataka te ustrojavanje odgovarajućih zbirki podataka iz članka 6. ovoga Zakona su ministarstva nadležna za unutarnje poslove, vanjske poslove, poslove pravosuđa",
+     "quote_english": "the competent bodies authorised to collect and process biometric data and to establish the collections under Article 6 are the ministries responsible for internal affairs, foreign affairs and justice",
+     "title": "Zakon o obradi biometrijskih podataka",
+     "url": "https://www.zakon.hr/z/2431/zakon-o-obradi-biometrijskih-podataka",
+     "value": "Competent bodies for biometric collections are the ministries of the interior, foreign affairs and justice"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidencija osobnih iskaznica: facial images held in MUP information system; biometric collections under Zakon o obradi biometrijskih podataka",
+   "operator": "Ministry of the Interior (MUP)",
+   "research_note": "The law confirms that facial images from eID issuance are stored in the MUP information system. No source found on where that system is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2015",
+     "publisher": "Narodne novine d.d.",
+     "quote": "osoba ne mora dati otiske papilarnih linija ako su otisci već izuzeti i pohranjeni u elektroničkom obliku u nekom postupku izdavanja javne isprave koji se provodio u Ministarstvu.",
+     "quote_english": "a person need not give fingerprints if they have already been taken and stored in electronic form in a public-document issuance procedure conducted in the Ministry.",
+     "title": "Zakon o osobnoj iskaznici",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2015_06_62_1189.html",
+     "value": "Fingerprints already taken and stored electronically in a ministry document-issuance procedure are reused (central retention)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2015",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Prilikom podnošenja zahtjeva za izdavanje osobne iskaznice osoba je dužna dati otisak papilarnih linija lijevog i desnog kažiprsta.",
+     "quote_english": "When applying for an ID card a person must give the fingerprints of the left and right index fingers.",
+     "title": "Zakon o osobnoj iskaznici",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2015_06_62_1189.html",
+     "value": "Zakon o osobnoj iskaznici (NN 62/2015): fingerprints of both index fingers are required at application"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Fingerprints taken for ID cards and passports, stored electronically by the Ministry of the Interior",
+   "operator": "Ministry of the Interior (MUP)",
+   "research_note": "The law confirms that fingerprints are retained centrally in electronic form. No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2021",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Spisi (predmeti) koji se odnose na upis u državne matice su spisi trajne vrijednosti i čuvaju se sukladno propisima kojima se uređuje upravljanje dokumentarnim i arhivskim gradivom.",
+     "quote_english": "Files relating to entries in the state civil registers are of permanent value and are kept under the rules on managing documentary and archival material.",
+     "title": "Naputak za provedbu Zakona o državnim maticama",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2021_10_117_2012.html",
+     "value": "Files underlying civil-register entries are of permanent value"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2021",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Obavijesti o činjenicama koje se u državne matice upisuju kao temeljni odnosno naknadni upisi, primjedbe i bilješke dostavljene u elektroničkom obliku čuvaju se trajno u elektroničkom obliku.",
+     "quote_english": "Notifications of facts entered in the civil registers as primary or subsequent entries, remarks and notes delivered electronically are kept permanently in electronic form.",
+     "title": "Naputak za provedbu Zakona o državnim maticama",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2021_10_117_2012.html",
+     "value": "Electronic notifications of registrable facts are kept permanently in electronic form"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "hr",
+     "published": "2021",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Za spise državnih matica vodi se posebna evidencija u informacijskom sustavu elektroničkog uredskog poslovanja.",
+     "quote_english": "A separate record of civil-register files is kept in the electronic office-management information system.",
+     "title": "Naputak za provedbu Zakona o državnim maticama",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2021_10_117_2012.html",
+     "value": "Civil-register files are tracked in the electronic office-management information system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Državne matice u kojima je zadnji upis stariji od 100 godina, čuva Hrvatski državni arhiv.",
+     "quote_english": "State civil registers whose last entry is more than 100 years old are kept by the Croatian State Archives.",
+     "title": "Zakon o državnim maticama (pročišćeni tekst)",
+     "url": "https://www.zakon.hr/z/603/zakon-o-drzavnim-maticama",
+     "value": "Registers whose last entry is more than 100 years old are kept by the Croatian State Archives"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Spisi državnih matica (civil-register case files and supporting documents)",
+   "operator": "Registry offices under the ministry responsible for general administration; Croatian State Archives for registers older than 100 years",
+   "research_note": "Found retention rules for the files that support civil-register entries. No source found on digitisation volumes or hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2015",
+     "publisher": "Narodne novine d.d.",
+     "quote": "u evidenciji osobnih iskaznica koja se vodi u informacijskom sustavu Ministarstva nestaloj osobnoj iskaznici evidentira status nevažeće osobne iskaznice.",
+     "quote_english": "in the ID card register kept in the Ministry's information system, a missing ID card is recorded with the status of invalid ID card.",
+     "title": "Zakon o osobnoj iskaznici",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2015_06_62_1189.html",
+     "value": "ID-card register kept in the Ministry of the Interior information system, recording invalid (lost) cards"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2015",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Nakon što se osobnoj iskaznici koja je prestala važiti zbog razloga iz stavka 1. ovoga članka evidentira status nevažeće osobne iskaznice u evidenciji osobnih iskaznica, automatski se pokreće zahtjev za opoziv certifikata.",
+     "quote_english": "Once an ID card that has ceased to be valid is recorded as invalid in the ID card register, a certificate revocation request is triggered automatically.",
+     "title": "Zakon o osobnoj iskaznici",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2015_06_62_1189.html",
+     "value": "Invalidation in the ID-card register automatically triggers certificate revocation"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Evidenciju putnih isprava vodi nadležno tijelo koje je izdalo putnu ispravu.",
+     "quote_english": "The travel document register is kept by the competent authority that issued the travel document.",
+     "title": "Zakon o putnim ispravama hrvatskih državljana",
+     "url": "https://www.zakon.hr/z/448/zakon-o-putnim-ispravama-hrvatskih-drzavljana",
+     "value": "Zakon o putnim ispravama hrvatskih državljana: the issuing authority keeps the travel-document register"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidencija osobnih iskaznica; Evidencija putnih isprava",
+   "operator": "Ministry of the Interior (police administrations); issuing authority for travel documents",
+   "research_note": "The law confirms the ID-card and travel-document registers, including their validity and revocation state. No hosting source or record count found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2014",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Sustav e-Građani je dio državne informacijske infrastrukture koji čine sustav središnjeg državnog portala, nacionalni sustav za identifikaciju i autentifikaciju i sustav osobnog korisničkog pretinca.",
+     "quote_english": "The e-Citizens system is part of the state information infrastructure and consists of the central state portal, the national identification and authentication system and the personal user mailbox.",
+     "title": "Zakon o državnoj informacijskoj infrastrukturi",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2014_07_92_1840.html",
+     "value": "Zakon o državnoj informacijskoj infrastrukturi (NN 92/2014): e-Građani comprises the central portal, NIAS and the personal user box"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2014",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Tijela javnog sektora obvezna su za identificirani i autentificirani pristup elektroničkim javnim uslugama iz svog djelokruga koristiti nacionalni sustav za identifikaciju i autentifikaciju",
+     "quote_english": "Public sector bodies must use the national identification and authentication system for identified and authenticated access to their electronic public services",
+     "title": "Zakon o državnoj informacijskoj infrastrukturi",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2014_07_92_1840.html",
+     "value": "Public bodies must use the national identification and authentication system for authenticated e-services"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hr",
+     "published": "2025",
+     "publisher": "NIAS / e-Građani",
+     "quote": "Administratori ili Administrator sustava znači tijelo državne uprave nadležno za digitalnu transformaciju.",
+     "quote_english": "Administrators or System Administrator means the state administration body responsible for digital transformation.",
+     "title": "Opći uvjeti korištenja - NIAS",
+     "url": "https://nias.gov.hr/Home/TermsOfUse",
+     "value": "System administrator is the state administration body responsible for digital transformation"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "hr",
+     "published": "2025",
+     "publisher": "NIAS / e-Građani",
+     "quote": "ovaj pojam ne obuhvaća pružatelja usluga u okviru Centra dijeljenih usluga koji je, na temelju članka 2. točke 2. Uredbe o organizacijskim i tehničkim standardima za povezivanje na državnu informacijsku infrastrukturu („Narodne novine“, broj: 60/2017), s Administratorom sustava sklopio sporazum o operativnom vođenju sastavnice Sustava.",
+     "quote_english": "this term does not include the service provider within the Shared Services Centre which, under Article 2(2) of the Regulation on connecting to the state information infrastructure (NN 60/2017), has concluded an agreement with the System Administrator on the operational running of a component of the System.",
+     "title": "Opći uvjeti korištenja - NIAS",
+     "url": "https://nias.gov.hr/Home/TermsOfUse",
+     "value": "A Shared Services Centre (CDU) provider runs a component of the system under an agreement with the administrator"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "hosting",
+     "language": "hr",
+     "published": "2023-11-29",
+     "publisher": "SAFU (Agencija za reviziju sustava provedbe programa EU)",
+     "quote": "više podatkovnih centara kojima upravlja APIS IT osiguravaju i visoku dostupnost, odnosno automatski oporavak od bilo kakvog ispada na jednoj od lokacija bez gubitka podataka.",
+     "quote_english": "multiple data centres managed by APIS IT ensure high availability, i.e. automatic recovery from any outage at one of the locations without data loss.",
+     "title": "Uspostavom Centra dijeljenih usluga omogućena učinkovitija javna uprava",
+     "url": "https://www.safu.hr/uspostavom-centra-dijeljenih-usluga-omogucena-ucinkovitija-javna-uprava-bolja-dostupnost-servisa-i-veca-sigurnost-podataka/",
+     "value": "The CDU state cloud runs in multiple data centres managed by the state company APIS IT"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "record_count",
+     "language": "hr",
+     "published": "2024-10-11",
+     "publisher": "Bug.hr",
+     "quote": "Sustav e-Građani zabilježio je značajan porast korisnika, premašivši brojku od dva milijuna.",
+     "quote_english": "The e-Citizens system recorded a significant increase in users, exceeding two million.",
+     "title": "Sustav e-Građani koristi preko dva milijuna korisnika",
+     "url": "https://www.bug.hr/servisi/sustav-e-gradjani-koristi-preko-dva-milijuna-korisnika-44202",
+     "value": "More than 2 million users of e-Građani (October 2024)"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "national",
+   "holding_name": "e-Građani / NIAS (Nacionalni identifikacijski i autentifikacijski sustav) + eOI eID card",
+   "operator": "State administration body responsible for digital transformation (Ministarstvo pravosuđa, uprave i digitalne transformacije)",
+   "research_note": "The hosting finding is indirect. The NIAS terms say a service provider within the Shared Services Centre (CDU) runs a component of the system under agreement. A separate source says CDU runs in data centres managed by the state company APIS IT.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2025",
+     "publisher": "NIAS / e-Građani",
+     "quote": "Usluga Moj Profil Korisniku omogućava administraciju korisničkog računa u okviru sustava NIAS, dostup svim e-uslugama na Sustavu, upravljanje vlastitim prečicama prema dostupnim e-uslugama, pregled povijesti korištenja vjerodajnice unutar zadnjih 60 dana",
+     "quote_english": "The My Profile service lets the User administer the NIAS account, access all e-services, manage shortcuts and view the credential-usage history for the last 60 days",
+     "title": "Opći uvjeti korištenja - NIAS",
+     "url": "https://nias.gov.hr/Home/TermsOfUse",
+     "value": "NIAS records credential-usage history, visible to the user for the last 60 days"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2025",
+     "publisher": "NIAS / e-Građani",
+     "quote": "evidentiranjem njegovih podataka u Registru uparivanja, sa svim aktivnostima uparivanja (uspješnim i neuspješnim).",
+     "quote_english": "by recording their data in the Matching Register, with all matching activities (successful and unsuccessful).",
+     "title": "Opći uvjeti korištenja - NIAS",
+     "url": "https://nias.gov.hr/Home/TermsOfUse",
+     "value": "Matching register records all successful and unsuccessful cross-border identity-matching activities"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "holding_name": "NIAS credential-usage history and cross-border matching register (Registar uparivanja)",
+   "operator": "State administration body responsible for digital transformation",
+   "research_note": "The NIAS terms show that credential-use history (visible to users for 60 days) and matching attempts are recorded. No source found stating the retention period of the underlying log or where it is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2012",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Registar birača vodi se u obliku jedinstvene elektroničke baze podataka osoba koje imaju biračko pravo.",
+     "quote_english": "The voter register is kept as a single electronic database of persons entitled to vote.",
+     "title": "Zakon o registru birača",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_144_3073.html",
+     "value": "Zakon o registru birača (NN 144/2012): single electronic database of persons entitled to vote"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "2012",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Središnje tijelo državne uprave nadležno za poslove opće uprave (u daljnjem tekstu: središnje tijelo) utvrđuje jedinstveno programsko rješenje za vođenje registra birača.",
+     "quote_english": "The central state administration body responsible for general administration determines the single software solution for keeping the voter register.",
+     "title": "Zakon o registru birača",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_144_3073.html",
+     "value": "Central state administration body for general administration defines the single software solution for the register"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "record_count",
+     "language": "hr",
+     "published": "2026-06-09",
+     "publisher": "HRT (Hrvatska radiotelevizija)",
+     "quote": "Hrvatska je na kraju prvog tromjesečja ove godine imala 3.601.578 birača, pri čemu su sva odstupanja po izbornom jedinicama unutar propisanih plus/minus pet posto",
+     "quote_english": "At the end of the first quarter of this year Croatia had 3,601,578 voters, with all deviations by electoral unit within the prescribed plus/minus five percent",
+     "title": "Hrvatska ima 3,6 milijuna birača",
+     "url": "https://vijesti.hrt.hr/hrvatska/drzavni-tajnik-rukavina-hrvatska-ima-36-milijuna-biraca-12758649",
+     "value": "3,601,578 registered voters at the end of Q1 2026"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registar birača (voter register)",
+   "operator": "Central state administration body for general administration (Ministarstvo pravosuđa, uprave i digitalne transformacije); county offices keep their parts",
+   "research_note": "Found the legal basis and a voter count. No source found on where the single electronic database is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "AKD d.o.o. (eid.hr)",
+     "quote": "Certifikati koje izdaje AKD HRIDCA su identifikacijski i kvalificirani potpisni certifikati i izdaju se u skladu sa Zakonom o elektroničkom potpisu, Uredbom EU br. 910/2014 (eIDAs uredba)",
+     "quote_english": "Certificates issued by AKD HRIDCA are identification and qualified signature certificates issued under the Electronic Signature Act and Regulation (EU) 910/2014 (eIDAS)",
+     "title": "AKD PKI – Certifikati",
+     "url": "https://www.eid.hr/hr/certifikati/akd-pki",
+     "value": "AKD HRIDCA issues identification and qualified signature certificates for the eOI card"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "hr",
+     "published": "",
+     "publisher": "AKD d.o.o. (eid.hr)",
+     "quote": "podređenog ovjerovitelja HRIDCA, koji izdaje certifikate fizičkim osobama za potrebe eOI.",
+     "quote_english": "the subordinate certification authority HRIDCA, which issues certificates to natural persons for the eOI.",
+     "title": "AKD PKI – Certifikati",
+     "url": "https://www.eid.hr/hr/certifikati/akd-pki",
+     "value": "Subordinate CA HRIDCA, operated within AKD's own PKI, issues eOI certificates to natural persons"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Fina (Financijska agencija)",
+     "quote": "Fina je prvi kvalificirani pružatelj usluga povjerenja i nositelj EU znaka pouzdanosti u Republici Hrvatskoj.",
+     "quote_english": "Fina is the first qualified trust service provider and holder of the EU trust mark in the Republic of Croatia.",
+     "title": "Vjerujte Fini",
+     "url": "https://www.fina.hr/vjerujte-fini",
+     "value": "Fina is a qualified trust service provider on the national trusted list"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2017",
+     "publisher": "Narodne novine d.d.",
+     "quote": "je središnje tijelo državne uprave nadležno za poslove gospodarstva.",
+     "quote_english": "is the central state administration body responsible for the economy.",
+     "title": "Zakon o provedbi Uredbe (EU) br. 910/2014",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2017_06_62_1430.html",
+     "value": "Act implementing eIDAS (NN 62/2017): the ministry responsible for the economy is competent for trust services"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "national",
+   "holding_name": "AKD PKI (AKDCA Root / HRIDCA) for the eOI card; Fina qualified trust services (incl. certificates for state bodies)",
+   "operator": "AKD d.o.o. (Agencija za komercijalnu djelatnost); Fina (Financijska agencija); supervision: ministry responsible for the economy",
+   "research_note": "The AKD page says its PKI was established within AKD. No source found on the data-centre location of the AKD or Fina CAs.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr (NN 133/20, 114/22, 151/22, 40/25, 55/26)",
+     "quote": "Radi učinkovite kontrole provođenja postupaka propisanih ovim Zakonom Ministarstvo vodi zbirke podataka u kojima se pohranjuju osobni podaci o:",
+     "quote_english": "For effective control of the procedures under this Act, the Ministry keeps data collections storing personal data on:",
+     "title": "Zakon o strancima (pročišćeni tekst)",
+     "url": "https://www.zakon.hr/z/142/zakon-o-strancima",
+     "value": "Zakon o strancima (Aliens Act), Art. 243: the Ministry keeps data collections"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "državljanima trećih zemalja na kratkotrajnom, privremenom boravku, dugotrajnom boravku i stalnom boravku",
+     "quote_english": "third-country nationals on short-term, temporary, long-term and permanent stay",
+     "title": "Zakon o strancima (pročišćeni tekst)",
+     "url": "https://www.zakon.hr/z/142/zakon-o-strancima",
+     "value": "Collection covers third-country nationals on short-term, temporary, long-term and permanent stay"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Zbirke podataka o državljanima trećih zemalja (data collections on third-country nationals)",
+   "operator": "Ministry of the Interior",
+   "research_note": "Found the legal basis in the Aliens Act. No source found on hosting or on the number of records.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "utvrđivanje osnovice poreza, doprinosa i drugih javnih davanja, utvrđivanje porezne obveze i obveze za uplatu doprinosa, evidentiranje poreznih obveza i obveza doprinosa u poreznim evidencijama",
+     "quote_english": "determining the base of taxes, contributions and other public levies, determining tax and contribution liabilities, and recording them in tax records",
+     "title": "Zakon o poreznoj upravi",
+     "url": "https://www.zakon.hr/z/419/zakon-o-poreznoj-upravi",
+     "value": "Zakon o poreznoj upravi: recording tax and contribution liabilities in tax records"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "razvoj, unaprjeđenje i korištenje informacijskog sustava Porezne uprave, sustava za međunarodnu razmjenu informacija i sustava za usluge poreznim obveznicima",
+     "quote_english": "development, improvement and use of the Tax Administration information system, the international information-exchange system and the taxpayer services system",
+     "title": "Zakon o poreznoj upravi",
+     "url": "https://www.zakon.hr/z/419/zakon-o-poreznoj-upravi",
+     "value": "Information system of the Tax Administration"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "hr",
+     "published": "",
+     "publisher": "Hrvatska gospodarska komora (Znakovi kvalitete)",
+     "quote": "APIS IT razvija i održava neke od najkompleksnijih sustava državne uprave kao što su informacijski sustavi Porezne i Carinske uprave, sustav za provedbu izbora, Centar dijeljenih usluga",
+     "quote_english": "APIS IT develops and maintains some of the most complex state administration systems, such as the Tax and Customs Administration information systems, the election system and the Shared Services Centre",
+     "title": "Usluga podatkovnog centra APIS IT",
+     "url": "https://znakovi.hgk.hr/proizvod/usluga-podatkovnog-centra-apis-it/",
+     "value": "State-owned APIS IT develops and maintains the Tax and Customs Administration information systems"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "hr",
+     "published": "",
+     "publisher": "Hrvatska gospodarska komora (Znakovi kvalitete)",
+     "quote": "podatkovni centri APIS IT-a omogućuju pouzdano čuvanje i obradu podataka unutar Hrvatske.",
+     "quote_english": "APIS IT's data centres enable reliable storage and processing of data within Croatia.",
+     "title": "Usluga podatkovnog centra APIS IT",
+     "url": "https://znakovi.hgk.hr/proizvod/usluga-podatkovnog-centra-apis-it/",
+     "value": "APIS IT data centres store and process data within Croatia"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "national",
+   "holding_name": "Informacijski sustav Porezne uprave / porezne evidencije (Tax Administration information system and tax records)",
+   "operator": "Ministry of Finance, Tax Administration (Porezna uprava)",
+   "research_note": "APIS IT, a state-owned company, develops and maintains the Tax Administration IS, and its data centres keep data in Croatia.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Carinska uprava objavljuje na svojim mrežnim stranicama tehničke preduvjete za potrebe elektroničke komunikacije s Carinskom upravom te pravila uporabe sustava elektroničke razmjene podataka i pružanja usluga elektroničkog poslovanja Carinske uprave (e-Carina).",
+     "quote_english": "The Customs Administration publishes on its website the technical prerequisites for electronic communication and the rules for using its electronic data-exchange and e-business system (e-Carina).",
+     "title": "Zakon o provedbi carinskog zakonodavstva Europske unije",
+     "url": "https://www.zakon.hr/z/844/zakon-o-provedbi-carinskog-zakonodavstva-europske-unije",
+     "value": "Zakon o provedbi carinskog zakonodavstva EU: rules of the e-Carina electronic data-exchange system"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "hr",
+     "published": "",
+     "publisher": "Hrvatska gospodarska komora (Znakovi kvalitete)",
+     "quote": "APIS IT razvija i održava neke od najkompleksnijih sustava državne uprave kao što su informacijski sustavi Porezne i Carinske uprave, sustav za provedbu izbora, Centar dijeljenih usluga",
+     "quote_english": "APIS IT develops and maintains some of the most complex state administration systems, such as the Tax and Customs Administration information systems, the election system and the Shared Services Centre",
+     "title": "Usluga podatkovnog centra APIS IT",
+     "url": "https://znakovi.hgk.hr/proizvod/usluga-podatkovnog-centra-apis-it/",
+     "value": "State-owned APIS IT develops and maintains the Customs Administration information systems"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "national",
+   "holding_name": "e-Carina (Customs Administration electronic data-exchange system)",
+   "operator": "Ministry of Finance, Customs Administration (Carinska uprava)",
+   "research_note": "APIS IT, a state-owned company, develops and maintains the Customs Administration IS. EU central customs systems also exist.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Hrvatski zavod za mirovinsko osiguranje",
+     "quote": "Matičnu evidenciju o osiguranicima, obveznicima doprinosa i korisnicima prava iz mirovinskog osiguranja vodi Hrvatski zavod za mirovinsko osiguranje na temelju podataka koje su dužni dostavljati obveznici doprinosa.",
+     "quote_english": "The master register of insured persons, contribution payers and pension beneficiaries is kept by the Croatian Pension Insurance Institute on the basis of data contribution payers must submit.",
+     "title": "Matična evidencija",
+     "url": "https://www.mirovinsko.hr/hr/maticna-evidencija/238",
+     "value": "HZMO keeps the master register of insured persons, contributors and pension beneficiaries"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2025",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Matična evidencija vodi se preuzimanjem i obradom podataka koje Zavodu dostavljaju Središnji registar osiguranika (REGOS), Porezna uprava i druga nadležna tijela.",
+     "quote_english": "The master register is kept by taking over and processing data supplied by the Central Register of Insured Persons (REGOS), the Tax Administration and other competent bodies.",
+     "title": "Pravilnik o vođenju matične evidencije Hrvatskog zavoda za mirovinsko osiguranje",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2025_10_127_1836.html",
+     "value": "Pravilnik o vođenju matične evidencije HZMO (NN 127/2025): register fed by REGOS and the Tax Administration"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Matična evidencija HZMO (master register of insured persons, contributors and pension beneficiaries)",
+   "operator": "Hrvatski zavod za mirovinsko osiguranje (HZMO)",
+   "research_note": "No source found on hosting or on record counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr (NN 80/13, 137/13, 98/19, 33/23, 105/25)",
+     "quote": "U svrhu osiguravanja podataka potrebnih za provođenje obveznoga zdravstvenog osiguranja te nadzora nad ostvarivanjem prava iz obveznoga zdravstvenog osiguranja u Zavodu se vode evidencije u elektroničkom obliku.",
+     "quote_english": "To provide the data needed to implement compulsory health insurance and to supervise the exercise of rights under it, the Institute keeps records in electronic form.",
+     "title": "Zakon o obveznom zdravstvenom osiguranju (pročišćeni tekst)",
+     "url": "https://www.zakon.hr/z/192/zakon-o-obveznom-zdravstvenom-osiguranju",
+     "value": "Zakon o obveznom zdravstvenom osiguranju: HZZO keeps records in electronic form"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidencije HZZO-a o osiguranim osobama (HZZO electronic insurance records)",
+   "operator": "Hrvatski zavod za zdravstveno osiguranje (HZZO)",
+   "research_note": "No source found on hosting or on the number of insured persons.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Zemljišne knjige vode se elektronički, u Zajedničkom informacijskom sustavu zemljišnih knjiga i katastra (u daljnjem tekstu: ZIS).",
+     "quote_english": "Land registers are kept electronically in the Joint Information System of Land Registers and Cadastre (ZIS).",
+     "title": "Zakon o zemljišnim knjigama",
+     "url": "https://www.zakon.hr/z/103/zakon-o-zemljisnim-knjigama",
+     "value": "Zakon o zemljišnim knjigama (NN 63/19): land registers are kept electronically in ZIS"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "ZIS je informacijski sustav u kojem se pohranjuju, održavaju i vode svi podaci zemljišnih knjiga i katastra.",
+     "quote_english": "ZIS is the information system in which all land register and cadastre data are stored, maintained and kept.",
+     "title": "Zakon o zemljišnim knjigama",
+     "url": "https://www.zakon.hr/z/103/zakon-o-zemljisnim-knjigama",
+     "value": "ZIS stores and maintains all land-register and cadastre data"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Državna geodetska uprava",
+     "quote": "ZIS zajednički koordiniraju Ministarstvo pravosuđa (MP) i Državna geodetska uprava (DGU).",
+     "quote_english": "ZIS is jointly coordinated by the Ministry of Justice and the State Geodetic Administration.",
+     "title": "Zajednički informacijski sustav zemljišnih knjiga i katastra",
+     "url": "https://dgu.gov.hr/zajednicki-informacijski-sustav-zemljisnih-knjiga-i-katastra/161",
+     "value": "ZIS is jointly coordinated by the Ministry of Justice and the State Geodetic Administration"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Zajednički informacijski sustav zemljišnih knjiga i katastra (ZIS) with Baza zemljišnih podataka (BZP)",
+   "operator": "Ministry of Justice and State Geodetic Administration (jointly); land registry departments of municipal courts",
+   "research_note": "No source found on where ZIS is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Registar vode trgovački sudovi (u daljnjem tekstu: registarski sudovi). Registar se čuva trajno.",
+     "quote_english": "The register is kept by the commercial courts (register courts). The register is kept permanently.",
+     "title": "Zakon o sudskom registru",
+     "url": "https://www.zakon.hr/z/271/zakon-o-sudskom-registru",
+     "value": "The register is kept by the commercial courts and preserved permanently"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Glavne knjige se povezuju u jedinstvenu bazu podataka za Republiku Hrvatsku.",
+     "quote_english": "The main books are linked into a single database for the Republic of Croatia.",
+     "title": "Zakon o sudskom registru",
+     "url": "https://www.zakon.hr/z/271/zakon-o-sudskom-registru",
+     "value": "Main books are linked into a single database for Croatia"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sudski registar (court register): glavna knjiga and zbirka isprava in a single national database",
+   "operator": "Commercial courts (registarski sudovi); Ministry of Justice",
+   "research_note": "No source found on hosting of the single register database.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Fina (Financijska agencija)",
+     "quote": "Registar stvarnih vlasnika je središnja elektronička baza podataka o stvarnim vlasnicima pravnih subjekata i trustova osnovanih na području Republike Hrvatske.",
+     "quote_english": "The Register of Beneficial Owners is the central electronic database of beneficial owners of legal entities and trusts established in Croatia.",
+     "title": "Registar stvarnih vlasnika",
+     "url": "https://www.fina.hr/javne-usluge-za-poslovne-subjekte/registri/registar-stvarnih-vlasnika",
+     "value": "Central electronic database of beneficial owners of legal entities and trusts"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Fina (Financijska agencija)",
+     "quote": "Operativno ga vodi Fina u ime Ureda za sprječavanja pranja novca, Ministarstva financija.",
+     "quote_english": "It is operationally run by Fina on behalf of the Anti-Money Laundering Office of the Ministry of Finance.",
+     "title": "Registar stvarnih vlasnika",
+     "url": "https://www.fina.hr/javne-usluge-za-poslovne-subjekte/registri/registar-stvarnih-vlasnika",
+     "value": "Operationally run by Fina on behalf of the Anti-Money Laundering Office, Ministry of Finance"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Fina (Financijska agencija)",
+     "quote": "Zakon o sprječavanju pranja novca i financiranja terorizma, NN 108/17",
+     "quote_english": "Anti-Money Laundering and Terrorist Financing Act, Official Gazette 108/17",
+     "title": "Propisi vezani za Registar stvarnih vlasnika",
+     "url": "https://www.fina.hr/javne-usluge-za-poslovne-subjekte/registri/registar-stvarnih-vlasnika/propisi-vezani-za-registar-stvarnih-vlasnika",
+     "value": "Zakon o sprječavanju pranja novca i financiranja terorizma (NN 108/17 and amendments)"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registar stvarnih vlasnika (RSV)",
+   "operator": "Fina, on behalf of the Anti-Money Laundering Office, Ministry of Finance",
+   "research_note": "No source found on hosting or on the number of entries.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2017",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Evidencija o registriranim vozilima vodi se na informacijskom sustavu ministarstva nadležnog za unutarnje poslove, a podatke u evidenciju unose stanice za tehničke preglede vozila i stručna organizacija prilikom registracije vozila",
+     "quote_english": "The register of registered vehicles is kept on the information system of the ministry responsible for internal affairs; data are entered by vehicle inspection stations and the professional organisation at registration",
+     "title": "Pravilnik o registraciji i označavanju vozila",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2017_12_130_2993.html",
+     "value": "Register of registered vehicles kept on the Ministry of the Interior information system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2019",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Nadležno tijelo vodi evidenciju o vozačima i izdanim vozačkim dozvolama u kartoteci i na Informacijskom sustavu Ministarstva unutarnjih poslova.",
+     "quote_english": "The competent authority keeps the register of drivers and issued driving licences in a card index and on the Ministry of the Interior Information System.",
+     "title": "Pravilnik o vozačkim dozvolama",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_01_2_39.html",
+     "value": "Register of drivers and issued driving licences on the MUP information system"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidencija o registriranim vozilima; Evidencija o vozačima i izdanim vozačkim dozvolama",
+   "operator": "Ministry of the Interior",
+   "research_note": "Both registers sit on the MUP information system. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "2012",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Kaznenu evidenciju ustrojava i vodi ministarstvo nadležno za pravosuđe koje je ujedno i središnje tijelo za razmjenu tih podataka s drugim državama",
+     "quote_english": "The criminal record is established and kept by the ministry responsible for justice, which is also the central authority for exchanging these data with other states",
+     "title": "Zakon o pravnim posljedicama osude, kaznenoj evidenciji i rehabilitaciji",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_143_3030.html",
+     "value": "Criminal record is established and kept by the ministry responsible for justice"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2012",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Podaci iz kaznene evidencije dostavljaju se drugim državama članicama EU elektroničkim putem korištenjem baze podataka kaznene evidencije povezane u Europski informacijski sustav kaznenih evidencija (ECRIS).",
+     "quote_english": "Criminal record data are sent to other EU Member States electronically using the criminal record database connected to ECRIS.",
+     "title": "Zakon o pravnim posljedicama osude, kaznenoj evidenciji i rehabilitaciji",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_143_3030.html",
+     "value": "Criminal-record database connected to ECRIS for EU exchange"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kaznena evidencija (criminal record)",
+   "operator": "Ministry responsible for justice",
+   "research_note": "Found the criminal record only. The court case-management system (eSpis) was not researched to source level. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Osobni podaci pohranjeni u zbirke mogu se koristiti samo u svrhu zbog koje je zbirka ustrojena",
+     "quote_english": "Personal data stored in the collections may be used only for the purpose for which the collection was established",
+     "title": "Zakon o policijskim poslovima i ovlastima",
+     "url": "https://www.zakon.hr/z/173/zakon-o-policijskim-poslovima-i-ovlastima",
+     "value": "Zakon o policijskim poslovima i ovlastima: police keep data collections"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "informacijski sustav Ministarstva je Informacijski sustav Ministarstva unutarnjih poslova,",
+     "quote_english": "the Ministry's information system is the Information System of the Ministry of the Interior,",
+     "title": "Zakon o policijskim poslovima i ovlastima",
+     "url": "https://www.zakon.hr/z/173/zakon-o-policijskim-poslovima-i-ovlastima",
+     "value": "The Ministry information system is the Information System of the Ministry of the Interior"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Policijske zbirke podataka in the Informacijski sustav MUP-a",
+   "operator": "Police / Ministry of the Interior",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "u Ministarstvu je uspostavljen Nacionalni informacijski sustav za upravljanje državnom granicom, koji je sastavni dio Informacijskog sustava Ministarstva.",
+     "quote_english": "the National information system for state border management has been established in the Ministry and is an integral part of the Ministry's Information System.",
+     "title": "Zakon o nadzoru državne granice",
+     "url": "https://www.zakon.hr/z/450/zakon-o-nadzoru-drzavne-granice",
+     "value": "National information system for state border management, part of the MUP information system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Zbirka podataka iz stavka 1. ovoga članka vodi se u HVIS sustavu sukladno članku 21. i članku 39. ovoga Zakona.",
+     "quote_english": "The data collection from paragraph 1 is kept in the HVIS system in accordance with Articles 21 and 39 of this Act.",
+     "title": "Zakon o strancima (pročišćeni tekst)",
+     "url": "https://www.zakon.hr/z/142/zakon-o-strancima",
+     "value": "Visa data collection of the Ministry of Foreign Affairs is kept in the HVIS system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2019",
+     "publisher": "Zakon.hr (NN 127/19)",
+     "quote": "od državljana trećih zemalja ili osoba bez državljanstva koji podnose zahtjev za izdavanje vize",
+     "quote_english": "from third-country nationals or stateless persons applying for a visa",
+     "title": "Zakon o obradi biometrijskih podataka",
+     "url": "https://www.zakon.hr/z/2431/zakon-o-obradi-biometrijskih-podataka",
+     "value": "Biometric data of visa applicants are among the regulated biometric collections"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Nacionalni informacijski sustav za upravljanje državnom granicom; HVIS (national visa system)",
+   "operator": "Ministry of the Interior; Ministry of Foreign Affairs (HVIS)",
+   "research_note": "No hosting source found for the national border IS or for HVIS.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Nadležno tijelo u svrhu kontrole nabave, registracije i kretanja oružja vodi na središnjem informacijskom sustavu ministarstva nadležnog za unutarnje poslove evidencije o izdanim odobrenjima za nabavu oružja, izdanim oružnim listovima",
+     "quote_english": "To control the acquisition, registration and movement of firearms, the competent body keeps records of issued purchase authorisations and firearms licences on the central information system of the ministry responsible for internal affairs",
+     "title": "Zakon o nabavi i posjedovanju oružja građana",
+     "url": "https://www.zakon.hr/z/1161/zakon-o-nabavi-i-posjedovanju-oruzja-gradana",
+     "value": "Zakon o nabavi i posjedovanju oružja građana: firearms records kept on the central MUP information system"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidencije o oružju on the central MUP information system",
+   "operator": "Ministry of the Interior (competent police bodies)",
+   "research_note": "No hosting source or record count found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Vlada RH, Ured za zakonodavstvo",
+     "quote": "Zakoni, drugi propisi i akti za koje je propisana obveza objave (u daljnjem tekstu: akti) prije nego što stupe na snagu, objavljuju se u „Narodnim novinama“.",
+     "quote_english": "Laws, other regulations and acts subject to publication are published in Narodne novine before entering into force.",
+     "title": "Pravila objave zakona, drugih propisa i akata u Narodnim novinama",
+     "url": "https://zakonodavstvo.gov.hr/pravila-objave-zakona-drugih-propisa-i-akata-u-narodnim-novinama-sluzbenom-listu-republike-hrvatske/517",
+     "value": "Laws and regulations are published in Narodne novine before entry into force"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Vlada RH, Ured za zakonodavstvo",
+     "quote": "Glavni urednik „Narodnih novina“ je ravnatelj Ureda za zakonodavstvo.",
+     "quote_english": "The editor-in-chief of Narodne novine is the director of the Legislation Office.",
+     "title": "Pravila objave zakona, drugih propisa i akata u Narodnim novinama",
+     "url": "https://zakonodavstvo.gov.hr/pravila-objave-zakona-drugih-propisa-i-akata-u-narodnim-novinama-sluzbenom-listu-republike-hrvatske/517",
+     "value": "Editor-in-chief is the director of the Legislation Office"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Vlada RH, Ured za zakonodavstvo",
+     "quote": "Službenik zadužen za objavu dostavlja jedan primjerak izvornika akta iz članka 5. ovih Pravila društvu Narodne novine d.d. svakodnevno, prema dogovoru, putem dostavljača.",
+     "quote_english": "The official in charge of publication delivers one original copy of the act daily to the company Narodne novine d.d., by courier as agreed.",
+     "title": "Pravila objave zakona, drugih propisa i akata u Narodnim novinama",
+     "url": "https://zakonodavstvo.gov.hr/pravila-objave-zakona-drugih-propisa-i-akata-u-narodnim-novinama-sluzbenom-listu-republike-hrvatske/517",
+     "value": "Originals are delivered to the company Narodne novine d.d. for publication"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Narodne novine – službeni list Republike Hrvatske",
+   "operator": "Narodne novine d.d. (publisher); Government Legislation Office (Ured za zakonodavstvo, editor-in-chief)",
+   "research_note": "No source found on the hosting of the e-Narodne novine platform.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Ministarstvo financija",
+     "quote": "Sve financijske transakcije proračunskih korisnika obavljaju se preko sustava državne riznice, odnosno preko jedinstvenog računa riznice, koji se nalazi u depozitu Hrvatske narodne banke.",
+     "quote_english": "All financial transactions of budget users go through the State Treasury system, i.e. the single treasury account deposited with the Croatian National Bank.",
+     "title": "Državna riznica",
+     "url": "https://mfin.gov.hr/istaknute-teme/drzavna-riznica/103",
+     "value": "All budget-user transactions go through the State Treasury system and the single treasury account held at HNB"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Državni proračun ima jedinstveni račun državnog proračuna koji se otvara i vodi u Hrvatskoj narodnoj banci",
+     "quote_english": "The state budget has a single state budget account opened and kept at the Croatian National Bank",
+     "title": "Zakon o proračunu",
+     "url": "https://www.zakon.hr/z/283/zakon-o-proracunu",
+     "value": "Zakon o proračunu: single state budget account opened and kept at the Croatian National Bank"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sustav državne riznice / jedinstveni račun državnog proračuna (State Treasury system and single treasury account)",
+   "operator": "Ministry of Finance, State Treasury",
+   "research_note": "The single treasury account is held at the Croatian National Bank. No source found on where the treasury IT system is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2023",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Registar zaposlenih u državnoj službi i javnim službama je središnja baza podataka o zaposlenicima i vanjskim suradnicima u državnoj službi i javnim službama",
+     "quote_english": "The Register of Employees in the civil service and public services is the central database of employees and external associates in the civil service and public services",
+     "title": "Zakon o Registru zaposlenih i centraliziranom obračunu plaća u državnoj službi i javnim službama",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2023_06_59_997.html",
+     "value": "Zakon o Registru zaposlenih i centraliziranom obračunu plaća (NN 59/2023): central database of public employees"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "2023",
+     "publisher": "Narodne novine d.d.",
+     "quote": "izvršitelj obrade podataka je Financijska agencija koja provodi obradu podataka u ime tijela nadležnog za službeničke odnose",
+     "quote_english": "the data processor is the Financial Agency, which processes data on behalf of the body responsible for civil-service relations",
+     "title": "Zakon o Registru zaposlenih i centraliziranom obračunu plaća u državnoj službi i javnim službama",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2023_06_59_997.html",
+     "value": "Fina processes the data on behalf of the civil-service body"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2023",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Informacijski sustav Centraliziranog obračuna plaća u državnoj službi i javnim službama u vlasništvu je Republike Hrvatske.",
+     "quote_english": "The Centralised Payroll information system for the civil service and public services is owned by the Republic of Croatia.",
+     "title": "Zakon o Registru zaposlenih i centraliziranom obračunu plaća u državnoj službi i javnim službama",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2023_06_59_997.html",
+     "value": "The COP payroll information system is owned by the Republic of Croatia"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registar zaposlenih u državnoj službi i javnim službama + Centralizirani obračun plaća (COP)",
+   "operator": "Body responsible for civil-service relations (owner); Fina as data processor",
+   "research_note": "Both systems are state-owned by law and Fina is the processor. No source found naming the data-centre location. Armed forces payroll was not researched separately.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Povjerenstvo je stalno i neovisno državno tijelo koje obavlja poslove iz svog djelokruga u skladu s ovim Zakonom te zakonima koji uređuju izbor zastupnika u Hrvatski sabor",
+     "quote_english": "The Commission is a permanent and independent state body performing its tasks under this Act and the laws on election of members of the Croatian Parliament",
+     "title": "Zakon o Državnom izbornom povjerenstvu Republike Hrvatske",
+     "url": "https://www.zakon.hr/z/354/zakon-o-drzavnom-izbornom-povjerenstvu",
+     "value": "Zakon o Državnom izbornom povjerenstvu (NN 44/06, 19/07): DIP is a permanent independent state body"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "hr",
+     "published": "",
+     "publisher": "Hrvatska gospodarska komora (Znakovi kvalitete)",
+     "quote": "APIS IT razvija i održava neke od najkompleksnijih sustava državne uprave kao što su informacijski sustavi Porezne i Carinske uprave, sustav za provedbu izbora, Centar dijeljenih usluga",
+     "quote_english": "APIS IT develops and maintains some of the most complex state administration systems, such as the Tax and Customs Administration information systems, the election system and the Shared Services Centre",
+     "title": "Usluga podatkovnog centra APIS IT",
+     "url": "https://znakovi.hgk.hr/proizvod/usluga-podatkovnog-centra-apis-it/",
+     "value": "State-owned APIS IT develops and maintains the election system"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "national",
+   "holding_name": "Election administration and results system of the Državno izborno povjerenstvo (DIP)",
+   "operator": "Državno izborno povjerenstvo RH; system developed and maintained by APIS IT",
+   "research_note": "APIS IT, a state-owned company, develops and maintains the election system (HGK page). No DIP document on the results system itself was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2023-01-01",
+     "publisher": "Hrvatska narodna banka",
+     "quote": "Payment operations in the Republic of Croatia are carried out through the TARGET-HR, EuroNCS and EuroNCSInst systems.",
+     "quote_english": "",
+     "title": "Payment systems",
+     "url": "https://www.hnb.hr/en/statistics/statistical-data/payment-systems",
+     "value": "Payments in Croatia run through TARGET-HR, EuroNCS and EuroNCSInst"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "en",
+     "published": "",
+     "publisher": "Hrvatska narodna banka",
+     "quote": "is a system with the Single Shared Platform (SSP), jointly operated by Deutsche Bundesbank, Banca d’Italia, Banque de France and Banco de España (4CB) on behalf of the Eurosystem.",
+     "quote_english": "",
+     "title": "TARGET-HR",
+     "url": "https://www.hnb.hr/en/core-functions/payment-system/payment-systems/targe-hr",
+     "value": "TARGET platform jointly operated by Deutsche Bundesbank, Banca d'Italia, Banque de France and Banco de España (4CB)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "2022",
+     "publisher": "Narodne novine d.d.",
+     "quote": "HSVP i NKS prestaju s radom na kraju obračunskog dana 30. prosinca 2022.",
+     "quote_english": "HSVP and NKS cease operating at the end of the settlement day of 30 December 2022.",
+     "title": "Odluka o prestanku rada Hrvatskog sustava velikih plaćanja i Nacionalnoga klirinškog sustava",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2022_11_133_2014.html",
+     "value": "HNB decision closing the national HSVP and NKS systems at end of 30 December 2022"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "eu_provider",
+   "holding_name": "TARGET-HR (national component of TARGET), EuroNCS and EuroNCSInst",
+   "operator": "Hrvatska narodna banka (HNB); TARGET platform operated by the 4CB on behalf of the Eurosystem",
+   "research_note": "Since the euro changeover, the national RTGS and NCS systems have been closed. Large-value settlement runs on the Eurosystem TARGET platform, which is operated by four other EU central banks.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "planiranje, organiziranje, upravljanje i nadzor informacijskih i komunikacijskih sustava Ministarstva obrane te planiranje i nadzor informacijskih i komunikacijskih sustava Oružanih snaga",
+     "quote_english": "planning, organising, managing and overseeing the information and communication systems of the Ministry of Defence, and planning and overseeing those of the Armed Forces",
+     "title": "Zakon o obrani",
+     "url": "https://www.zakon.hr/z/334/zakon-o-obrani",
+     "value": "Zakon o obrani: the Ministry of Defence plans, manages and oversees MoD and Armed Forces ICT systems"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Ovlast punog zapovijedanja obuhvaća sve aspekte zapovijedanja, nadzora i upravljanja u Oružanim snagama i ona se uvijek zadržava unutar nacionalnih okvira.",
+     "quote_english": "Full command authority covers all aspects of command, control and management in the Armed Forces and is always retained within national frameworks.",
+     "title": "Zakon o obrani",
+     "url": "https://www.zakon.hr/z/334/zakon-o-obrani",
+     "value": "Full command authority always stays within national frameworks"
+    }
+   ],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "holding_name": "Information and communication systems of the Ministry of Defence and Armed Forces",
+   "operator": "Ministry of Defence; General Staff of the Armed Forces",
+   "research_note": "The Defence Act assigns ICT management to the Ministry of Defence and keeps full command national. No public source found on hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Sigurnosno-obavještajne agencije uspostavljaju i vode zbirke i registre osobnih podataka i druge evidencije prikupljenih podataka i dokumenata",
+     "quote_english": "The security and intelligence agencies establish and keep collections and registers of personal data and other records of collected data and documents",
+     "title": "Zakon o sigurnosno-obavještajnom sustavu Republike Hrvatske",
+     "url": "https://www.zakon.hr/z/744/zakon-o-sigurnosno-obavjestajnom-sustavu-republike-hrvatske",
+     "value": "Zakon o sigurnosno-obavještajnom sustavu RH: agencies establish and keep collections and registers"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Data collections and registers of SOA and VSOA",
+   "operator": "Sigurnosno-obavještajna agencija (SOA); Vojna sigurnosno-obavještajna agencija (VSOA)",
+   "research_note": "No public hosting information, as expected.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Ravnateljstvo civilne zaštite (MUP)",
+     "quote": "Sustav 112 čine međusobno komunikacijski i informacijski povezani centri 112 i Operativni centar civilne zaštite.",
+     "quote_english": "System 112 consists of communicatively and informationally interconnected 112 centres and the Operational Centre of Civil Protection.",
+     "title": "Sustav 112",
+     "url": "https://civilna-zastita.gov.hr/sustav-112/112",
+     "value": "System 112 consists of interconnected 112 centres and the Operational Centre of Civil Protection"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Ravnateljstvo civilne zaštite (MUP)",
+     "quote": "Sustav 112 izvršava zadaće iz djelokruga civilne zaštite Republike Hrvatske u skladu sa Zakonom o sustavu civilne zaštite i Uredbom o unutarnjem ustrojstvu Ministarstva unutarnjih poslova.",
+     "quote_english": "System 112 performs civil protection tasks in accordance with the Civil Protection System Act and the Regulation on the internal organisation of the Ministry of the Interior.",
+     "title": "Sustav 112",
+     "url": "https://civilna-zastita.gov.hr/sustav-112/112",
+     "value": "System 112 operates under the Civil Protection System Act and the MUP organisation regulation"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Ministarstvo unutarnjih poslova",
+     "quote": "U okviru obilježavanja Dana policije pušten je u rad novi digitalni radio komunikacijski sustav TETRA.",
+     "quote_english": "As part of Police Day, the new digital radio communication system TETRA was put into operation.",
+     "title": "Pušten u rad novi komunikacijski sustav TETRA",
+     "url": "https://mup.gov.hr/vijesti-8/pusten-u-rad-novi-komunikacijski-sustav-tetra/1537",
+     "value": "MUP launched the digital TETRA radio communication system"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sustav 112 (county 112 centres + Operational Centre of Civil Protection); TETRA police digital radio network",
+   "operator": "Ministry of the Interior, Civil Protection Directorate (112); Ministry of the Interior (TETRA)",
+   "research_note": "No source found on the hosting of the 112 IT platform or on the TETRA infrastructure vendor or operator.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "uspostavlja i upravlja jedinstvenim sustavom uzbunjivanja u Republici Hrvatskoj i provodi uzbunjivanje i obavješćivanje stanovništva",
+     "quote_english": "establishes and manages the single alerting system in the Republic of Croatia and carries out alerting and informing of the population",
+     "title": "Zakon o sustavu civilne zaštite",
+     "url": "https://www.zakon.hr/z/809/zakon-o-sustavu-civilne-zastite",
+     "value": "Zakon o sustavu civilne zaštite: the Ministry establishes and manages the single national alerting system"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Ravnateljstvo civilne zaštite (MUP)",
+     "quote": "Operativni centar civilne zaštite ustrojen na nacionalnoj razini i putem centara 112 prati događaje iz djelokruga civilne zaštite na području Republike Hrvatske.",
+     "quote_english": "The Operational Centre of Civil Protection, organised at national level, monitors civil-protection events across Croatia through the 112 centres.",
+     "title": "Sustav 112",
+     "url": "https://civilna-zastita.gov.hr/sustav-112/112",
+     "value": "National Operational Centre of Civil Protection monitors events through the 112 centres"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Operativni centar civilne zaštite and the national public alerting system",
+   "operator": "Ministry of the Interior, Civil Protection Directorate",
+   "research_note": "No source found on hosting of the alerting or crisis systems.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "operator prijenosnog sustava je fizička ili pravna osoba odgovorna za pogon i vođenje, održavanje, razvoj i izgradnju prijenosne mreže na danom području",
+     "quote_english": "the transmission system operator is the natural or legal person responsible for operating and controlling, maintaining, developing and building the transmission network in a given area",
+     "title": "Zakon o tržištu električne energije",
+     "url": "https://www.zakon.hr/z/377/zakon-o-trzistu-elektricne-energije",
+     "value": "Zakon o tržištu električne energije: the TSO is responsible for operation and control of the transmission network"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "hr",
+     "published": "2013",
+     "publisher": "HEP grupa",
+     "quote": "promjeni tvrtke društva iz dosadašnje: HEP-Operator prijenosnog sustava d.o.o. u sadašnju: Hrvatski operator prijenosnog sustava d.o.o., skraćeno HOPS d.o.o.",
+     "quote_english": "change of the company name from HEP-Operator prijenosnog sustava d.o.o. to Hrvatski operator prijenosnog sustava d.o.o., abbreviated HOPS d.o.o.",
+     "title": "HEP Operator prijenosnog sustava postao Hrvatski operator prijenosnog sustava",
+     "url": "https://www.hep.hr/hep-operator-prijenosnog-sustava-postao-hrvatski-operator-prijenosnog-sustava/1174",
+     "value": "Transmission operator company is Hrvatski operator prijenosnog sustava d.o.o. (HOPS)"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Transmission system operation and control (HOPS)",
+   "operator": "Hrvatski operator prijenosnog sustava (HOPS)",
+   "research_note": "HOPS publications (SCADA/EMS) are behind a web firewall that rejected automated retrieval. No citable source found for the control-system vendor or hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr (NN 66/19, 84/21, 47/23)",
+     "quote": "vođenje vodne dokumentacije i jedinstvenoga informacijskog sustava voda te izdavanje vodopravnih akata u skladu s ovim Zakonom",
+     "quote_english": "keeping water documentation and the single water information system, and issuing water-law acts under this Act",
+     "title": "Zakon o vodama",
+     "url": "https://www.zakon.hr/z/124/zakon-o-vodama",
+     "value": "Hrvatske vode keep water documentation and the single water information system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Za potrebe operativnoga upravljanja rizicima od poplava Vlada Republike Hrvatske na prijedlog Ministarstva donosi Državni plan obrane od poplava.",
+     "quote_english": "For operational flood-risk management, the Government adopts the State Flood Defence Plan on the Ministry's proposal.",
+     "title": "Zakon o vodama",
+     "url": "https://www.zakon.hr/z/124/zakon-o-vodama",
+     "value": "Government adopts the State Flood Defence Plan for operational flood-risk management"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Jedinstveni informacijski sustav voda; flood defence under the Državni plan obrane od poplava",
+   "operator": "Hrvatske vode",
+   "research_note": "No source found on the hosting of the water IS or on flood-control telemetry.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2019",
+     "publisher": "Zakon.hr (NN 14/19)",
+     "quote": "Centralni zdravstveni informacijski sustav Republike Hrvatske (u daljnjem tekstu: CEZIH) je središnji sustav pohrane zdravstvenih podataka i informacija za njihovu standardiziranu obradu na primarnoj, sekundarnoj i tercijarnoj razini zdravstvene zaštite",
+     "quote_english": "CEZIH is the central system for storing health data and information for standardised processing at primary, secondary and tertiary levels of care",
+     "title": "Zakon o podacima i informacijama u zdravstvu",
+     "url": "https://www.zakon.hr/z/1883/zakon-o-podacima-i-informacijama-u-zdravstvu",
+     "value": "CEZIH is the central store of health data for primary, secondary and tertiary care"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "2019",
+     "publisher": "Zakon.hr (NN 14/19)",
+     "quote": "upravljanje CEZIH-om radi uspostave i održavanja središnjeg dijela CEZIH-a",
+     "quote_english": "managing CEZIH to establish and maintain the central part of CEZIH",
+     "title": "Zakon o podacima i informacijama u zdravstvu",
+     "url": "https://www.zakon.hr/z/1883/zakon-o-podacima-i-informacijama-u-zdravstvu",
+     "value": "HZZO manages CEZIH and maintains its central part"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Centralni zdravstveni informacijski sustav Republike Hrvatske (CEZIH)",
+   "operator": "Hrvatski zavod za zdravstveno osiguranje (HZZO)",
+   "research_note": "No source found tying CEZIH specifically to a data centre. One news report says the health system uses much of the CDU state cloud, but it does not name CEZIH.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2019",
+     "publisher": "Zakon.hr (NN 14/19)",
+     "quote": "Nacionalni javnozdravstveni informacijski sustav (u daljnjem tekstu: NAJS) je sustav pohrane zdravstvenih podataka i informacija za njihovu obradu i arhiviranje (zdravstvene evidencije i registri) radi ostvarenja javnozdravstvenih potreba",
+     "quote_english": "NAJS is the system storing health data and information for processing and archiving (health records and registers) for public-health purposes",
+     "title": "Zakon o podacima i informacijama u zdravstvu",
+     "url": "https://www.zakon.hr/z/1883/zakon-o-podacima-i-informacijama-u-zdravstvu",
+     "value": "NAJS stores health data and public-health records and registers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "2019",
+     "publisher": "Zakon.hr (NN 14/19)",
+     "quote": "Nacionalni javnozdravstveni informacijski sustav vodi HZJZ i mogu mu pristupiti ministarstvo nadležno za zdravstvo, županijski zavodi za javno zdravstvo te druge ovlaštene pravne i fizičke osobe.",
+     "quote_english": "NAJS is run by HZJZ and may be accessed by the health ministry, county public-health institutes and other authorised persons.",
+     "title": "Zakon o podacima i informacijama u zdravstvu",
+     "url": "https://www.zakon.hr/z/1883/zakon-o-podacima-i-informacijama-u-zdravstvu",
+     "value": "NAJS is run by HZJZ"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Nacionalni javnozdravstveni informacijski sustav (NAJS) with public-health registers",
+   "operator": "Hrvatski zavod za javno zdravstvo (HZJZ)",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "U Ministarstvu se vodi zajednički upisnik školskih ustanova u elektronskom obliku (e-Matica) i sadrži sljedeće evidencije:",
+     "quote_english": "The Ministry keeps a joint electronic register of school institutions (e-Matica), containing the following records:",
+     "title": "Zakon o odgoju i obrazovanju u osnovnoj i srednjoj školi",
+     "url": "https://www.zakon.hr/z/317/zakon-o-odgoju-i-obrazovanju-u-osnovnoj-i-srednjoj-skoli",
+     "value": "Zakon o odgoju i obrazovanju u osnovnoj i srednjoj školi: the Ministry keeps the electronic joint register e-Matica"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "CARNET",
+     "quote": "e-Matica je usluga Ministarstva znanosti, obrazovanja i mladih, a CARNET je Centar potpore i pruža korisničku podršku za aplikaciju.",
+     "quote_english": "e-Matica is a service of the Ministry of Science, Education and Youth, and CARNET is the support centre providing user support for the application.",
+     "title": "e-Matica",
+     "url": "https://www.carnet.hr/projekt/e-matica-2/",
+     "value": "e-Matica is a centralised MZOM system; CARNET is the support centre"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "2023",
+     "publisher": "Narodne novine d.d.",
+     "quote": "Središnju evidenciju svjedodžbi, diploma i dopunskih isprava o studiju (Digitalni registar diploma) vodi Ministarstvo.",
+     "quote_english": "The central record of certificates, diplomas and diploma supplements (Digital Register of Diplomas) is kept by the Ministry.",
+     "title": "Pravilnik o sadržaju i korištenju informacijskih sustava u visokom obrazovanju",
+     "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2023_03_36_614.html",
+     "value": "Central register of higher-education certificates, diplomas and supplements (Digital Register of Diplomas)"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "e-Matica (school register of institutions, pupils and staff); Digitalni registar diploma (higher education)",
+   "operator": "Ministry of Science, Education and Youth (MZOM); CARNET provides user support",
+   "research_note": "No source found on the hosting of e-Matica or the higher-education registers.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Za potrebe službene statistike Državni zavod za statistiku ustrojava i vodi statističke registre.",
+     "quote_english": "For official statistics, the Croatian Bureau of Statistics establishes and keeps statistical registers.",
+     "title": "Zakon o službenoj statistici",
+     "url": "https://www.zakon.hr/z/531/zakon-o-slu%C5%BEbenoj-statistici",
+     "value": "Zakon o službenoj statistici: DZS establishes and keeps statistical registers"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "Statistički registri and census microdata of the Državni zavod za statistiku",
+   "operator": "Državni zavod za statistiku (DZS)",
+   "research_note": "No citable source was captured for the census record count or for hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Državna geodetska uprava nadležna je za uspostavu i vođenje registra prostornih jedinica.",
+     "quote_english": "The State Geodetic Administration is responsible for establishing and keeping the spatial units register.",
+     "title": "Zakon o državnoj izmjeri i katastru nekretnina",
+     "url": "https://www.zakon.hr/z/156/zakon-o-drzavnoj-izmjeri-i-katastru-nekretnina",
+     "value": "DGU establishes and keeps the spatial units register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Registar zgrada je evidencija o zgradama koju osniva, vodi i održava Državna geodetska uprava.",
+     "quote_english": "The building register is the record of buildings established, kept and maintained by the State Geodetic Administration.",
+     "title": "Zakon o državnoj izmjeri i katastru nekretnina",
+     "url": "https://www.zakon.hr/z/156/zakon-o-drzavnoj-izmjeri-i-katastru-nekretnina",
+     "value": "Building register established, kept and maintained by DGU"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registar prostornih jedinica (incl. streets, addresses) and Registar zgrada",
+   "operator": "Državna geodetska uprava (DGU)",
+   "research_note": "Orthophoto and topographic holdings were not sourced separately. No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr (NN 61/18, 98/19, 114/22, 36/24)",
+     "quote": "uspostavlja i upravlja informacijskim sustavom za trajno osiguranje pristupa i mogućnosti korištenja gradiva preuzetog u digitalnom obliku",
+     "quote_english": "establishes and manages the information system ensuring permanent access to and usability of material received in digital form",
+     "title": "Zakon o arhivskom gradivu i arhivima",
+     "url": "https://www.zakon.hr/z/373/zakon-o-arhivskom-gradivu-i-arhivima",
+     "value": "HDA establishes and manages the information system for permanent access to digitally received archives"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "hr",
+     "published": "",
+     "publisher": "Zakon.hr",
+     "quote": "Javno arhivsko gradivo u digitalnom obliku predaje se nadležnom arhivu u obliku koji je primjeren za trajno čuvanje.",
+     "quote_english": "Public archival material in digital form is transferred to the competent archive in a form suitable for permanent preservation.",
+     "title": "Zakon o arhivskom gradivu i arhivima",
+     "url": "https://www.zakon.hr/z/373/zakon-o-arhivskom-gradivu-i-arhivima",
+     "value": "Digital public archival material is transferred to the competent archive in a form suitable for permanent preservation"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "HDA information system for permanent access to material received in digital form",
+   "operator": "Hrvatski državni arhiv (HDA)",
+   "research_note": "No source found on the hosting or volume of the HDA digital repository.",
+   "status": "held"
+  }
+ ],
+ "iso": "HR"
+}

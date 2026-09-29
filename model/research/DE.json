@@ -1,0 +1,1390 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Bundesnotarkammer betreibt als Urkundenarchivbehörde ein zentrales elektronisches Archiv, das den Notaren die Führung der elektronischen Urkundensammlung, des Urkundenverzeichnisses und des Verwahrungsverzeichnisses ermöglicht (Elektronisches Urkundenarchiv).",
+     "quote_english": "The Federal Chamber of Notaries operates, as deed archive authority, a central electronic archive enabling notaries to keep the electronic deed collection, the deed index and the custody index (Electronic Deed Archive).",
+     "title": "§ 78h BNotO - Elektronisches Urkundenarchiv",
+     "url": "https://www.gesetze-im-internet.de/bnoto/__78h.html",
+     "value": "The Bundesnotarkammer operates, as archive authority, a central electronic archive for notaries' deed collections (BNotO § 78h)"
+    }
+   ],
+   "holding_name": "Elektronisches Urkundenarchiv (central electronic archive of notarial deeds)",
+   "suggested_class": "notarial_deeds_archive",
+   "why_critical": "Holds the electronic deed collections of all German notaries (property transfers, company formations, inheritance deeds); authentic originals whose loss or foreign compulsion would undermine legal certainty."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Bundesnotarkammer führt als Registerbehörde ein automatisiertes elektronisches Register über die Verwahrung erbfolgerelevanter Urkunden und sonstige Daten nach § 78d.",
+     "quote_english": "The Federal Chamber of Notaries keeps, as register authority, an automated electronic register on the custody of succession-relevant deeds and other data under § 78d.",
+     "title": "§ 78c BNotO - Zentrales Testamentsregister",
+     "url": "https://www.gesetze-im-internet.de/bnoto/__78c.html",
+     "value": "The Bundesnotarkammer keeps, as register authority, an automated electronic register of the custody of succession-relevant deeds (BNotO § 78c)"
+    }
+   ],
+   "holding_name": "Zentrales Testamentsregister (Central Register of Wills)",
+   "suggested_class": "succession_register",
+   "why_critical": "Sole national record of where wills and succession-relevant deeds are held; probate courts depend on it."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Bundeszentralamt für Steuern darf in den Fällen des § 93 Absatz 7 und 8 auf Ersuchen bei den Kreditinstituten einzelne Daten aus den nach den Absätzen 1 und 1a zu führenden Dateisystemen im automatisierten Verfahren abrufen",
+     "quote_english": "In the cases of § 93(7) and (8), the Federal Central Tax Office may, on request, retrieve individual data from the credit institutions' file systems kept under paragraphs 1 and 1a in an automated procedure",
+     "title": "§ 93b AO",
+     "url": "https://www.gesetze-im-internet.de/ao_1977/__93b.html",
+     "value": "The BZSt may retrieve account data from credit institutions' files in an automated procedure (AO § 93b)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Ein Kreditinstitut hat ein Dateisystem zu führen, in dem unverzüglich folgende Daten zu speichern sind",
+     "quote_english": "A credit institution must keep a file system in which the following data are to be stored without delay",
+     "title": "§ 24c KWG - Automatisierter Abruf von Kontoinformationen",
+     "url": "https://www.gesetze-im-internet.de/kredwg/__24c.html",
+     "value": "KWG § 24c: every credit institution must keep a file system of account master data for automated retrieval"
+    }
+   ],
+   "holding_name": "Kontenabrufverfahren (automated retrieval of account master data)",
+   "suggested_class": "bank_account_register",
+   "why_critical": "Gives tax and other authorities access to the master data of every bank account in Germany; central to tax enforcement, AML and sanctions."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Meldebehörden haben die in ihrem Zuständigkeitsbereich wohnhaften Personen (Einwohner) zu registrieren, um deren Identität und deren Wohnungen feststellen und nachweisen zu können.",
+     "quote_english": "The registration authorities must register persons residing in their area (residents) in order to establish and prove their identity and dwellings.",
+     "title": "§ 2 BMG - Aufgaben und Befugnisse der Meldebehörden",
+     "url": "https://www.gesetze-im-internet.de/bmg/__2.html",
+     "value": "Bundesmeldegesetz (BMG) § 2: registration offices must register all residents to establish their identity and dwellings"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Meldebehörden führen zur Erfüllung ihrer Aufgaben Melderegister. Diese enthalten Daten, die bei der betroffenen Person erhoben, von öffentlichen Stellen übermittelt oder sonst amtlich bekannt werden.",
+     "quote_english": "The registration authorities keep population registers to fulfil their tasks. These contain data collected from the data subject, transmitted by public bodies or otherwise officially known.",
+     "title": "§ 2 BMG - Aufgaben und Befugnisse der Meldebehörden",
+     "url": "https://www.gesetze-im-internet.de/bmg/__2.html",
+     "value": "Melderegister (population/residence registers) kept by the Meldebehörden"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Standesamt führt für seinen Zuständigkeitsbereich 1. ein Eheregister (§ 15), 2. ein Lebenspartnerschaftsregister (§ 17), 3. ein Geburtenregister (§ 21), 4. ein Sterberegister (§ 31).",
+     "quote_english": "The registry office keeps for its area 1. a marriage register, 2. a civil partnership register, 3. a birth register, 4. a death register.",
+     "title": "§ 3 PStG - Personenstandsregister",
+     "url": "https://www.gesetze-im-internet.de/pstg/__3.html",
+     "value": "Personenstandsregister (marriage, civil partnership, birth and death registers) kept by each Standesamt, held electronically (Personenstandsgesetz § 3)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Personenstandsregister werden elektronisch geführt. Die Beurkundungen in den Personenstandsregistern sind jährlich fortlaufend zu nummerieren",
+     "quote_english": "The civil status registers are kept electronically. The entries in the civil status registers are to be numbered consecutively each year.",
+     "title": "§ 3 PStG - Personenstandsregister",
+     "url": "https://www.gesetze-im-internet.de/pstg/__3.html",
+     "value": "Civil status registers are kept electronically (PStG § 3(2))"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Bundeszentralamt für Steuern speichert zu natürlichen Personen folgende Daten: 1. Identifikationsnummer, 2. Wirtschafts-Identifikationsnummern, 3. Familienname, 4. frühere Namen, 5. Vornamen",
+     "quote_english": "The Federal Central Tax Office stores the following data on natural persons: 1. identification number, 2. business identification numbers, 3. surname, 4. former names, 5. first names",
+     "title": "§ 139b AO - Identifikationsnummer",
+     "url": "https://www.gesetze-im-internet.de/ao_1977/__139b.html",
+     "value": "The Federal Central Tax Office (BZSt) stores the national personal identification number (Identifikationsnummer) with core identity data for every natural person (Abgabenordnung § 139b(3))"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Identifikationsnummer nach § 139b der Abgabenordnung (Identifikationsnummer) wird als zusätzliches Ordnungsmerkmal in die sich aus der Anlage zu diesem Gesetz ergebenden Register des Bundes und der Länder eingeführt",
+     "quote_english": "The identification number under § 139b of the Fiscal Code is introduced as an additional reference key into the federal and state registers listed in the annex to this Act.",
+     "title": "§ 1 IDNrG - Ziele des Gesetzes",
+     "url": "https://www.gesetze-im-internet.de/idnrg/__1.html",
+     "value": "Identifikationsnummerngesetz (IDNrG) § 1 makes the tax identification number the cross-register personal identifier for federal and state registers"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Melderegister (population registers, municipal), Personenstandsregister (civil status registers) and the Identifikationsnummer database at the Bundeszentralamt für Steuern",
+   "operator": "Meldebehörden (municipal registration offices); Standesämter; Bundeszentralamt für Steuern (national identifier)",
+   "research_note": "No public source found stating hosting of municipal registers or of the BZSt identifier database; no authoritative total record count located.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Passregister darf neben dem Lichtbild und der Unterschrift des Passinhabers sowie verfahrensbedingten Bearbeitungsvermerken ausschließlich folgende Daten enthalten",
+     "quote_english": "Besides the photograph and signature of the passport holder and procedural processing notes, the passport register may contain only the following data",
+     "title": "§ 21 PassG - Passregister",
+     "url": "https://www.gesetze-im-internet.de/pa_g_1986/__21.html",
+     "value": "Passregister (passport register) contains the holder's photograph (Passgesetz § 21)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Personalausweisregister darf neben dem Lichtbild, der Unterschrift des Ausweisinhabers und verfahrensbedingten Bearbeitungsvermerken ausschließlich folgende Daten enthalten",
+     "quote_english": "Besides the photograph, the signature of the card holder and procedural processing notes, the ID card register may contain only the following data",
+     "title": "§ 23 PAuswG - Personalausweisregister",
+     "url": "https://www.gesetze-im-internet.de/pauswg/__23.html",
+     "value": "Personalausweisregister (ID-card register) contains the holder's photograph (PAuswG § 23)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Beantragung, Ausstellung und Aushändigung von Ausweisen dürfen nicht zum Anlass genommen werden, die dafür erforderlichen Angaben und biometrischen Merkmale außer bei den ausstellenden Personalausweisbehörden nach § 7 Abs. 1 und 2 nach den Vorgaben der §§ 23 bis 25 zu speichern.",
+     "quote_english": "Application, issuance and handover of ID cards may not be used as occasion to store the required data and biometric features other than at the issuing ID card authorities under § 7(1) and (2) in accordance with §§ 23 to 25.",
+     "title": "§ 26 PAuswG - Sonstige Speicherung personenbezogener Daten",
+     "url": "https://www.gesetze-im-internet.de/pauswg/__26.html",
+     "value": "Biometric features may be stored only at the issuing ID-card authorities"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Eine bundesweite Datenbank der biometrischen Merkmale wird nicht errichtet.",
+     "quote_english": "A nationwide database of biometric features will not be established.",
+     "title": "§ 26 PAuswG - Sonstige Speicherung personenbezogener Daten",
+     "url": "https://www.gesetze-im-internet.de/pauswg/__26.html",
+     "value": "No nationwide central database of biometric features is to be established; storage is decentral"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Lichtbilder in Passregister and Personalausweisregister (facial images in passport and ID-card registers)",
+   "operator": "Passbehörden and Personalausweisbehörden (municipal issuing authorities)",
+   "research_note": "Facial images are held decentrally at the issuing authorities; the law excludes a nationwide biometric database. No source found on the hosting of the municipal registers.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die bei der Personalausweisbehörde gespeicherten Fingerabdrücke sind spätestens nach Aushändigung des Personalausweises an die antragstellende Person zu löschen.",
+     "quote_english": "The fingerprints stored at the ID card authority are to be deleted at the latest after the ID card is handed over to the applicant.",
+     "title": "§ 26 PAuswG - Sonstige Speicherung personenbezogener Daten",
+     "url": "https://www.gesetze-im-internet.de/pauswg/__26.html",
+     "value": "Fingerprints stored at the ID-card authority must be deleted at the latest when the card is handed over"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Eine bundesweite Datenbank der biometrischen Merkmale wird nicht errichtet.",
+     "quote_english": "A nationwide database of biometric features will not be established.",
+     "title": "§ 26 PAuswG - Sonstige Speicherung personenbezogener Daten",
+     "url": "https://www.gesetze-im-internet.de/pauswg/__26.html",
+     "value": "No nationwide biometric database is established"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "die Fingerabdrücke nach Absatz 9, die Bezeichnung der erfassten Finger, die Angaben zur Qualität der Abdrücke",
+     "quote_english": "the fingerprints under paragraph 9, the designation of the captured fingers, the information on the quality of the prints",
+     "title": "§ 5 PAuswG - Ausweismuster; gespeicherte Daten",
+     "url": "https://www.gesetze-im-internet.de/pauswg/__5.html",
+     "value": "Fingerprints are stored on the electronic storage medium (chip) of the ID card (PAuswG § 5(5))"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Fingerabdrücke (fingerprints) on the ID-card chip only; no central retention",
+   "operator": "Personalausweisbehörden (temporary storage only until card handover)",
+   "research_note": "Fingerprints are stored on the document chip; the issuing authority must delete its copy on handover and a nationwide biometric database is prohibited by statute.",
+   "status": "not_held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Dokumente, die einzelne Beurkundungen in den Personenstandsregistern betreffen, werden in besonderen Akten (Sammelakten) aufbewahrt.",
+     "quote_english": "Documents relating to individual entries in the civil status registers are kept in special files (collected files).",
+     "title": "§ 6 PStG - Aktenführung",
+     "url": "https://www.gesetze-im-internet.de/pstg/__6.html",
+     "value": "Documents underlying each civil status entry are kept in special files (Sammelakten) (PStG § 6)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Standesamt führt für seinen Zuständigkeitsbereich 1. ein Eheregister (§ 15), 2. ein Lebenspartnerschaftsregister (§ 17), 3. ein Geburtenregister (§ 21), 4. ein Sterberegister (§ 31).",
+     "quote_english": "The registry office keeps for its area 1. a marriage register, 2. a civil partnership register, 3. a birth register, 4. a death register.",
+     "title": "§ 3 PStG - Personenstandsregister",
+     "url": "https://www.gesetze-im-internet.de/pstg/__3.html",
+     "value": "Each Standesamt keeps the birth register (Geburtenregister) and other civil status registers"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sammelakten und Personenstandsregister (supporting-document files and civil status registers, incl. Geburtenregister)",
+   "operator": "Standesämter (municipal registry offices)",
+   "research_note": "No source found on digitisation level or hosting of Sammelakten; naturalisation files are held by state authorities and were not separately sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "11. Seriennummer, 12. Sperrkennwort und Sperrsumme, 13. letzter Tag der Gültigkeitsdauer, 14. ausstellende Behörde",
+     "quote_english": "11. serial number, 12. revocation password and revocation sum, 13. last day of validity, 14. issuing authority",
+     "title": "§ 23 PAuswG - Personalausweisregister",
+     "url": "https://www.gesetze-im-internet.de/pauswg/__23.html",
+     "value": "The ID-card register records serial number, revocation password/sum and expiry date"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Eine zentrale, alle Seriennummern umfassende Speicherung darf nur bei dem Ausweishersteller und ausschließlich zum Nachweis des Verbleibs der Ausweise erfolgen.",
+     "quote_english": "Central storage covering all serial numbers may take place only at the ID card manufacturer and exclusively to prove the whereabouts of the cards.",
+     "title": "§ 26 PAuswG - Sonstige Speicherung personenbezogener Daten",
+     "url": "https://www.gesetze-im-internet.de/pauswg/__26.html",
+     "value": "A central store of all ID-card serial numbers is permitted only at the card manufacturer, solely to trace the cards"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Personenbezogene Daten im Passregister sind mindestens bis zur Ausstellung eines neuen Passes, höchstens jedoch bis zu fünf Jahren nach dem Ablauf der Gültigkeit des Passes, auf den sie sich beziehen, zu speichern und dann zu löschen.",
+     "quote_english": "Personal data in the passport register are to be stored at least until a new passport is issued, but at most up to five years after the expiry of the passport concerned, and then deleted.",
+     "title": "§ 21 PassG - Passregister",
+     "url": "https://www.gesetze-im-internet.de/pa_g_1986/__21.html",
+     "value": "Passport register data kept at least until a new passport is issued and at most five years after expiry (PassG § 21(4))"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Passregister and Personalausweisregister (serial numbers, validity, revocation data) plus central serial-number record at the document manufacturer",
+   "operator": "Passbehörden / Personalausweisbehörden; the ID-card manufacturer (Ausweishersteller) for the central serial-number record",
+   "research_note": "No public source found on the hosting of the registers or of the manufacturer's serial-number store.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Der Personalausweisinhaber, der mindestens 16 Jahre alt ist, kann den elektronischen Identitätsnachweis dazu verwenden, seine Identität gegenüber öffentlichen und nichtöffentlichen Stellen elektronisch nachzuweisen.",
+     "quote_english": "The ID card holder who is at least 16 years old may use the electronic proof of identity to prove his identity electronically to public and non-public bodies.",
+     "title": "§ 18 PAuswG - Elektronischer Identitätsnachweis",
+     "url": "https://www.gesetze-im-internet.de/pauswg/__18.html",
+     "value": "PAuswG § 18: ID-card holders aged 16+ may use the electronic identity function (eID) to prove identity online"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "erfolgt, soweit nicht durch Bundesgesetz etwas anderes bestimmt ist, über ein zentrales Bürgerkonto, das der Bund bereitstellt. Die Verwendung des Bürgerkontos ist für die Nutzer freiwillig.",
+     "quote_english": "takes place, unless otherwise provided by federal law, via a central citizen account provided by the Federation. Use of the citizen account is voluntary for users.",
+     "title": "§ 3 OZG - Nutzerkonten, Identifizierung und Authentifizierung",
+     "url": "https://www.gesetze-im-internet.de/ozg/__3.html",
+     "value": "Onlinezugangsgesetz (OZG) § 3: identification for online services via a central citizen account provided by the federal government"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "de",
+     "published": "",
+     "publisher": "Land Brandenburg, OZG-Portal",
+     "quote": "Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund",
+     "quote_english": "BundID is operated in the ITZBund data centre",
+     "title": "BundID (Nutzerkonto) - DeutschlandID",
+     "url": "https://ozg.brandenburg.de/ozg/de/it-infrastrukturen/it-basiskomponenten/bundid-nutzerkonto-deutschlandid/",
+     "value": "BundID is operated in the data centre of the Informationstechnikzentrum Bund (ITZBund), the federal IT service provider"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Land Brandenburg, OZG-Portal",
+     "quote": "Zukünftig wird die BundID gemäß OZG als zentrales Bürgerkonto für alle weiterentwickelt und in die DeutschlandID umgewandelt",
+     "quote_english": "In future, BundID will be developed under the OZG into the central citizen account for all and converted into the DeutschlandID",
+     "title": "BundID (Nutzerkonto) - DeutschlandID",
+     "url": "https://ozg.brandenburg.de/ozg/de/it-infrastrukturen/it-basiskomponenten/bundid-nutzerkonto-deutschlandid/",
+     "value": "BundID is to become the single central citizen account 'DeutschlandID' under the OZG"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "national",
+   "holding_name": "Online-Ausweis eID (elektronischer Identitätsnachweis) + BundID / DeutschlandID (central citizen account)",
+   "operator": "Bund (BMI); BundID operated in the ITZBund data centre",
+   "research_note": "No curl-accessible official source with a current BundID account total was found (digitale-verwaltung.de and bundestag.de blocked automated retrieval).",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "research_note": "Searched OZG, PAuswG and BundID/ITZBund pages for a statutory or published authentication log of BundID/eID use; no source describing such a log, its operator or retention was found.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Gemeindebehörde legt vor jeder Wahl für jeden allgemeinen Wahlbezirk (§ 12) ein Verzeichnis der Wahlberechtigten nach Familiennamen und Vornamen, Geburtsdatum und Wohnung an.",
+     "quote_english": "Before each election the municipal authority draws up, for each general polling district, a register of eligible voters by surname and first names, date of birth and dwelling.",
+     "title": "§ 14 BWO - Führung des Wählerverzeichnisses",
+     "url": "https://www.gesetze-im-internet.de/bwo_1985/__14.html",
+     "value": "Bundeswahlordnung § 14: municipality compiles a register of eligible voters for each polling district before every election"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Wählerverzeichnis kann auch im automatisierten Verfahren geführt werden.",
+     "quote_english": "The electoral register may also be kept in an automated procedure.",
+     "title": "§ 14 BWO - Führung des Wählerverzeichnisses",
+     "url": "https://www.gesetze-im-internet.de/bwo_1985/__14.html",
+     "value": "The electoral register may be kept in an automated (IT) procedure"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "de",
+     "published": "2025-01-13",
+     "publisher": "Die Bundeswahlleiterin",
+     "quote": "In das Wählerverzeichnis für die Bundestagswahl 2025 sind alle Wahlberechtigten eingetragen worden, die am 12. Januar 2025 – dem 42. Tag vor der Wahl – bei der Meldebehörde ihrer Gemeinde mit Hauptwohnung gemeldet waren.",
+     "quote_english": "All eligible voters registered with their municipality's registration office with main residence on 12 January 2025, the 42nd day before the election, were entered in the electoral register for the 2025 Bundestag election.",
+     "title": "Bundestagswahl 2025: Wahlberechtigte erhalten Wahlbenachrichtigung bis zum 2. Februar 2025",
+     "url": "https://www.bundeswahlleiterin.de/info/presse/mitteilungen/bundestagswahl-2025/05_25_wahlbenachrichtigung.html",
+     "value": "Entries derive from registration with the municipal registration office on the 42nd day before the election"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Wählerverzeichnis (electoral register), compiled per polling district from the Melderegister",
+   "operator": "Gemeindebehörden (municipal authorities)",
+   "research_note": "No source found on hosting of municipal electoral-roll systems; the national electorate total appears only in a results table, not cited.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesamt für Sicherheit in der Informationstechnik",
+     "quote": "wird dieser Sicherungsanker seit dem 20. Februar 2001 im BSI betrieben",
+     "quote_english": "this trust anchor has been operated at the BSI since 20 February 2001",
+     "title": "Verwaltungs-PKI",
+     "url": "https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Moderner-Staat/Verwaltungs-PKI/verwaltungs-pki_node.html",
+     "value": "The root CA (trust anchor) of the public-administration PKI has been operated at the BSI since 20 February 2001"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesamt für Sicherheit in der Informationstechnik",
+     "quote": "bietet diese Basistechnologie als zertifikatsbasierte Sicherheitsdienstleistung für Bundes- und Landesbehörden, Kommunen sowie öffentliche Institutionen an",
+     "quote_english": "offers this base technology as a certificate-based security service for federal and state authorities, municipalities and public institutions",
+     "title": "Verwaltungs-PKI",
+     "url": "https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Moderner-Staat/Verwaltungs-PKI/verwaltungs-pki_node.html",
+     "value": "V-PKI provides certificate-based security services to federal and state authorities, municipalities and public institutions"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesamt für Sicherheit in der Informationstechnik",
+     "quote": "die Country Signing Certificate Authority (Nationale Wurzelzertifizierungsstelle für Signaturen, CSCA)",
+     "quote_english": "the Country Signing Certificate Authority (national root certification authority for signatures, CSCA)",
+     "title": "Public Key Infrastrukturen",
+     "url": "https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Elektronische-Identitaeten/Public-Key-Infrastrukturen/public-key-infrastrukturen_node.html",
+     "value": "National Country Signing CA (CSCA) and Country Verifying CA (CVCA) for electronic identity documents"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Aufgaben der Aufsichtsstelle nach Artikel 17 der Verordnung (EU) Nr. 910/2014 und nach diesem Gesetz sowie nach der Rechtsverordnung nach § 20 obliegen 1. der Bundesnetzagentur",
+     "quote_english": "The tasks of the supervisory body under Article 17 of Regulation (EU) No 910/2014 and under this Act are incumbent on 1. the Federal Network Agency",
+     "title": "§ 2 VDG",
+     "url": "https://www.gesetze-im-internet.de/vdg/__2.html",
+     "value": "Vertrauensdienstegesetz (VDG) § 2 assigns eIDAS supervisory-body tasks to the Bundesnetzagentur (signatures, seals, timestamps)"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "national",
+   "holding_name": "Verwaltungs-PKI (V-PKI) root CA; CSCA/CVCA for electronic identity documents",
+   "operator": "Bundesamt für Sicherheit in der Informationstechnik (BSI); supervision of qualified trust services by Bundesnetzagentur and BSI (VDG § 2)",
+   "research_note": "Root CA operation by the BSI is sourced; hosting of subordinate CAs was not systematically researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Ausländerzentralregister wird vom Bundesamt für Migration und Flüchtlinge geführt (Registerbehörde). Das Bundesverwaltungsamt verarbeitet die gespeicherten Daten im Auftrag und nach Weisung des Bundesamtes für Migration und Flüchtlinge",
+     "quote_english": "The Central Register of Foreign Nationals is kept by the Federal Office for Migration and Refugees (register authority). The Federal Office of Administration processes the stored data on behalf of and as instructed by the Federal Office for Migration and Refugees",
+     "title": "§ 1 AZR-Gesetz",
+     "url": "https://www.gesetze-im-internet.de/azrg/__1.html",
+     "value": "The AZR is kept by BAMF; the Federal Office of Administration (BVA) processes the data on BAMF's behalf"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Ausländerzentralregister besteht aus einem allgemeinen Datenbestand und einer gesondert geführten Visadatei.",
+     "quote_english": "The Central Register of Foreign Nationals consists of a general data stock and a separately kept visa file.",
+     "title": "§ 1 AZR-Gesetz",
+     "url": "https://www.gesetze-im-internet.de/azrg/__1.html",
+     "value": "The AZR consists of a general data stock and a separately kept visa file"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "national",
+   "holding_name": "Ausländerzentralregister (AZR, Central Register of Foreign Nationals), incl. Visadatei",
+   "operator": "Bundesamt für Migration und Flüchtlinge (register authority); data processed by Bundesverwaltungsamt on its behalf",
+   "research_note": "Record count not found in a curl-accessible official source.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "wirken Bund und Länder beim einheitlichen Einsatz von IT-Verfahren und Software sowie ihrer einheitlichen Entwicklung zusammen.",
+     "quote_english": "the Federation and the states cooperate in the uniform use of IT procedures and software and their uniform development.",
+     "title": "§ 1 KONSENS-G - Anwendungsbereich",
+     "url": "https://www.gesetze-im-internet.de/konsens-g/__1.html",
+     "value": "KONSENS-Gesetz § 1: Bund and Länder jointly develop and deploy uniform IT procedures for tax administration"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Bundeszentralamt für Steuern speichert zu natürlichen Personen folgende Daten: 1. Identifikationsnummer, 2. Wirtschafts-Identifikationsnummern, 3. Familienname, 4. frühere Namen, 5. Vornamen",
+     "quote_english": "The Federal Central Tax Office stores the following data on natural persons: 1. identification number, 2. business identification numbers, 3. surname, 4. former names, 5. first names",
+     "title": "§ 139b AO - Identifikationsnummer",
+     "url": "https://www.gesetze-im-internet.de/ao_1977/__139b.html",
+     "value": "BZSt stores the tax identification number and core data of every natural person (AO § 139b(3))"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Steuerverwaltung IT (KONSENS joint federal-state tax software) and BZSt identification-number database",
+   "operator": "Landesfinanzbehörden (state tax administrations) with the Bund under KONSENS; Bundeszentralamt für Steuern",
+   "research_note": "No public source found on data-centre hosting of KONSENS procedures or record volumes.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Generalzolldirektion (Zoll online)",
+     "quote": "Mit dem IT-Verfahren ATLAS (Automatisiertes Tarif- und Lokales Zollabwicklungssystem) wird die weitgehend automatisierte Abfertigung und die Überwachung des grenzüberschreitenden Warenverkehrs gewährleistet.",
+     "quote_english": "The IT procedure ATLAS (Automated Tariff and Local Customs Clearance System) ensures largely automated clearance and monitoring of cross-border movement of goods.",
+     "title": "ATLAS",
+     "url": "https://www.zoll.de/DE/Fachthemen/Zoelle/ATLAS/atlas_node.html",
+     "value": "ATLAS is the customs IT procedure for automated clearance and monitoring of cross-border goods traffic"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "ATLAS (Automatisiertes Tarif- und Lokales Zollabwicklungssystem)",
+   "operator": "Zollverwaltung (German customs administration, Generalzolldirektion)",
+   "research_note": "The ATLAS page references maintenance notices at ITZBund but no source explicitly states where ATLAS is hosted; volumes not found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Der Träger der Rentenversicherung führt für jeden Versicherten ein Versicherungskonto, das nach der Versicherungsnummer geordnet ist.",
+     "quote_english": "The pension insurance institution keeps an insurance account for each insured person, ordered by insurance number.",
+     "title": "§ 149 SGB VI - Versicherungskonto",
+     "url": "https://www.gesetze-im-internet.de/sgb_6/__149.html",
+     "value": "Each pension insurer keeps an insurance account for every insured person, ordered by insurance number (SGB VI § 149)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Träger der Rentenversicherung unterhalten gemeinsam eine Datenstelle, die von der Deutschen Rentenversicherung Bund verwaltet wird.",
+     "quote_english": "The pension insurance institutions jointly maintain a data centre, which is administered by Deutsche Rentenversicherung Bund.",
+     "title": "§ 145 SGB VI - Aufgaben der Datenstelle der Rentenversicherung",
+     "url": "https://www.gesetze-im-internet.de/sgb_6/__145.html",
+     "value": "Pension insurers jointly maintain a data centre (Datenstelle) administered by Deutsche Rentenversicherung Bund (SGB VI § 145)"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Versicherungskonten der gesetzlichen Rentenversicherung (pension insurance accounts) and Datenstelle der Rentenversicherung (DSRV)",
+   "operator": "Träger der Deutschen Rentenversicherung; DSRV administered by Deutsche Rentenversicherung Bund",
+   "research_note": "No curl-accessible source found stating insured-person totals or hosting of DRV systems.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Krankenkassen dürfen Sozialdaten für Zwecke der Krankenversicherung nur erheben und speichern, soweit dies erforderlich ist für 1. die Feststellung des Versicherungsverhältnisses und der Mitgliedschaft",
+     "quote_english": "Health insurance funds may collect and store social data for health insurance purposes only insofar as necessary for 1. establishing the insurance relationship and membership",
+     "title": "§ 284 SGB V - Sozialdaten bei den Krankenkassen",
+     "url": "https://www.gesetze-im-internet.de/sgb_5/__284.html",
+     "value": "SGB V § 284: health insurance funds may collect and store social data needed to establish insurance relationships and issue the electronic health card"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Versicherten- und Mitgliedschaftsdaten der Krankenkassen (statutory health insurance membership/entitlement data)",
+   "operator": "Gesetzliche Krankenkassen (statutory health insurance funds)",
+   "research_note": "Held decentrally by each insurance fund; no source found on hosting or national totals in a fetchable official page.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Grundbücher, die auch als Loseblattgrundbuch geführt werden können, werden von den Amtsgerichten geführt (Grundbuchämter).",
+     "quote_english": "The land registers, which may also be kept as loose-leaf registers, are kept by the local courts (land registry offices).",
+     "title": "§ 1 GBO",
+     "url": "https://www.gesetze-im-internet.de/gbo/__1.html",
+     "value": "Land registers are kept by the local courts acting as land-registry offices (GBO § 1)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Landesregierungen können durch Rechtsverordnung bestimmen, daß und in welchem Umfang das Grundbuch in maschineller Form als automatisiertes Dateisystem geführt wird",
+     "quote_english": "The state governments may determine by ordinance that and to what extent the land register is kept in machine form as an automated file system",
+     "title": "§ 126 GBO",
+     "url": "https://www.gesetze-im-internet.de/gbo/__126.html",
+     "value": "State governments may order the land register to be kept as an automated file system / database land register (GBO § 126)"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Grundbuch (land register), kept electronically as maschinelles Grundbuch; Liegenschaftskataster (cadastre)",
+   "operator": "Amtsgerichte as Grundbuchämter (state courts); state cadastral authorities",
+   "research_note": "No source found on hosting of state land-register IT systems.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Handelsregister wird von den Gerichten elektronisch geführt. (2) Andere Datensammlungen dürfen nicht unter Verwendung oder Beifügung der Bezeichnung",
+     "quote_english": "The commercial register is kept electronically by the courts. (2) Other data collections may not use or add the designation",
+     "title": "§ 8 HGB - Handelsregister",
+     "url": "https://www.gesetze-im-internet.de/hgb/__8.html",
+     "value": "HGB § 8: the commercial register is kept electronically by the courts"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Unternehmensregister wird vorbehaltlich einer Regelung nach § 9a Abs. 1 vom Bundesministerium der Justiz elektronisch geführt.",
+     "quote_english": "The company register is kept electronically by the Federal Ministry of Justice, subject to a provision under § 9a(1).",
+     "title": "§ 8b HGB - Unternehmensregister",
+     "url": "https://www.gesetze-im-internet.de/hgb/__8b.html",
+     "value": "HGB § 8b: the Unternehmensregister is kept electronically by the Federal Ministry of Justice (subject to delegation under § 9a)"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Handelsregister (commercial register) and Unternehmensregister (company register portal)",
+   "operator": "Registergerichte (courts) for the Handelsregister; Bundesministerium der Justiz for the Unternehmensregister",
+   "research_note": "No source found on hosting of the court register systems or the Unternehmensregister.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Transparenzregister wird als hoheitliche Aufgabe des Bundes von der registerführenden Stelle elektronisch geführt.",
+     "quote_english": "The transparency register is kept electronically by the registering body as a sovereign task of the Federation.",
+     "title": "§ 18 GwG - Einrichtung des Transparenzregisters und registerführende Stelle",
+     "url": "https://www.gesetze-im-internet.de/gwg_2017/__18.html",
+     "value": "GwG § 18: establishment of the Transparenzregister as a sovereign federal task kept electronically"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "beliehen wird die Bundesanzeiger Verlag GmbH, eingetragen im Handelsregister beim Amtsgericht Köln, HRB 31248. Die Beleihung ist bis zum 31. Dezember 2031 befristet.",
+     "quote_english": "Bundesanzeiger Verlag GmbH, registered in the commercial register at the Cologne local court, HRB 31248, is entrusted. The entrustment is limited until 31 December 2031.",
+     "title": "§ 1 TBelV - Beleihung",
+     "url": "https://www.gesetze-im-internet.de/tbelv/__1.html",
+     "value": "Bundesanzeiger Verlag GmbH (Cologne) is entrusted with keeping the Transparenzregister until 31 December 2031 (TBelV § 1)"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Transparenzregister (register of beneficial owners)",
+   "operator": "Bundesanzeiger Verlag GmbH, entrusted (beliehen) as registerführende Stelle",
+   "research_note": "Operator is sourced; no source found stating where the register infrastructure is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Kraftfahrt-Bundesamt führt ein Register über die Fahrzeuge, für die im Geltungsbereich dieses Gesetzes ein Kennzeichen zugeteilt oder ausgegeben wurde",
+     "quote_english": "The Federal Motor Transport Authority keeps a register of vehicles for which a registration plate has been allocated or issued within the scope of this Act",
+     "title": "§ 31 StVG - Registerführung und Registerbehörden",
+     "url": "https://www.gesetze-im-internet.de/stvg/__31.html",
+     "value": "StVG § 31(2): the KBA keeps the Central Vehicle Register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Kraftfahrt-Bundesamt führt ein Register über Fahrerlaubnisse und die entsprechenden Führerscheine (Zentrales Fahrerlaubnisregister)",
+     "quote_english": "The Federal Motor Transport Authority keeps a register of driving licences and the corresponding licence documents (Central Driving Licence Register)",
+     "title": "§ 48 StVG - Registerführung und Registerbehörden",
+     "url": "https://www.gesetze-im-internet.de/stvg/__48.html",
+     "value": "StVG § 48(2): the KBA keeps the Central Driving Licence Register"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "de",
+     "published": "2026",
+     "publisher": "Kraftfahrt-Bundesamt",
+     "quote": "Bestand an allgemeinen Fahrerlaubnissen im ZFER am 1. Januar 2026 56.473.329",
+     "quote_english": "Stock of general driving licences in the ZFER on 1 January 2026: 56,473,329",
+     "title": "Fahrerlaubnisbestand im ZFER",
+     "url": "https://www.kba.de/DE/Statistik/Kraftfahrer/Fahrerlaubnisse/Fahrerlaubnisbestand/fahrerlaubnisbestand_node.html",
+     "value": "56,473,329 general driving licences held in the ZFER on 1 January 2026"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Zentrales Fahrzeugregister (ZFZR) and Zentrales Fahrerlaubnisregister (ZFER)",
+   "operator": "Kraftfahrt-Bundesamt (KBA)",
+   "research_note": "No source found on KBA hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Für den Geltungsbereich dieses Gesetzes führt das Bundesamt für Justiz ein Zentralregister und ein Erziehungsregister (Bundeszentralregister).",
+     "quote_english": "For the scope of this Act the Federal Office of Justice keeps a central register and an educational register (Federal Central Register).",
+     "title": "§ 1 BZRG - Bundeszentralregister",
+     "url": "https://www.gesetze-im-internet.de/bzrg/__1.html",
+     "value": "BZRG § 1: the Federal Office of Justice keeps the central register and the educational register (Bundeszentralregister)"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Bundeszentralregister (Federal Central Criminal Register: Zentralregister and Erziehungsregister)",
+   "operator": "Bundesamt für Justiz",
+   "research_note": "Court case-file systems (state e-file systems) not researched; no source found on BZR hosting or record count.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Bundeskriminalamt betreibt ein Informationssystem zur Erfüllung seiner Aufgaben nach den §§ 2 bis 8.",
+     "quote_english": "The Federal Criminal Police Office operates an information system to fulfil its tasks under §§ 2 to 8.",
+     "title": "§ 13 BKAG - Informationssystem des Bundeskriminalamtes",
+     "url": "https://www.gesetze-im-internet.de/bkag_2018/__13.html",
+     "value": "BKAG § 13: the BKA operates an information system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Bundeskriminalamt ist im Rahmen seiner Aufgabe nach § 2 Absatz 3 Zentralstelle für den polizeilichen Informationsverbund zwischen Bund und Ländern. Es stellt zu diesem Zweck ein einheitliches Verbundsystem zur Verfügung.",
+     "quote_english": "Within its task under § 2(3), the Federal Criminal Police Office is the central office for the police information network between Federation and states. For this purpose it provides a uniform network system.",
+     "title": "§ 29 BKAG - Polizeilicher Informationsverbund",
+     "url": "https://www.gesetze-im-internet.de/bkag_2018/__29.html",
+     "value": "BKAG § 29: the BKA is central office for the federal-state police information network and provides a uniform network system"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informationssystem des Bundeskriminalamtes / polizeilicher Informationsverbund (INPOL)",
+   "operator": "Bundeskriminalamt (BKA) as central office for the federal-state police information network",
+   "research_note": "bka.de was not reachable for automated retrieval; no source on hosting found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "die zentrale nationale Stelle für den Betrieb des nationalen Teils des Schengener Informationssystems",
+     "quote_english": "the central national authority for operating the national part of the Schengen Information System",
+     "title": "§ 3 BKAG",
+     "url": "https://www.gesetze-im-internet.de/bkag_2018/__3.html",
+     "value": "The BKA is the central national authority operating the national part of the Schengen Information System"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Bundesverwaltungsamt führt eine Visa-Warndatei zur Vermeidung des Missbrauchs von Visa.",
+     "quote_english": "The Federal Office of Administration keeps a visa warning file to prevent the misuse of visas.",
+     "title": "§ 1 VWDG - Führung und Zweck der Datei",
+     "url": "https://www.gesetze-im-internet.de/vwdg/__1.html",
+     "value": "The Federal Office of Administration keeps a Visa Warning File to prevent visa misuse (VWDG § 1)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Ausländerzentralregister besteht aus einem allgemeinen Datenbestand und einer gesondert geführten Visadatei.",
+     "quote_english": "The Central Register of Foreign Nationals consists of a general data stock and a separately kept visa file.",
+     "title": "§ 1 AZR-Gesetz",
+     "url": "https://www.gesetze-im-internet.de/azrg/__1.html",
+     "value": "The AZR includes a separately kept visa file"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Nationaler Teil des Schengener Informationssystems (N.SIS); AZR-Visadatei; Visa-Warndatei",
+   "operator": "Bundeskriminalamt (national SIS part); BAMF/BVA (AZR visa file); Bundesverwaltungsamt (Visa-Warndatei)",
+   "research_note": "Entry/Exit System national interface and Bundespolizei border records not sourced (bundespolizei.de unreachable); no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Nationale Waffenregister dient insbesondere dem Schutz der öffentlichen Sicherheit und Ordnung.",
+     "quote_english": "The National Firearms Register serves in particular to protect public safety and order.",
+     "title": "§ 1 WaffRG - Zweck des Waffenregisters",
+     "url": "https://www.gesetze-im-internet.de/waffrg/__1.html",
+     "value": "Waffenregistergesetz (WaffRG) § 1: purpose of the National Firearms Register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Waffenregister wird von der Registerbehörde geführt. (2) Registerbehörde ist das Bundesverwaltungsamt.",
+     "quote_english": "The firearms register is kept by the register authority. (2) The register authority is the Federal Office of Administration.",
+     "title": "§ 3 WaffRG - Registerbehörde",
+     "url": "https://www.gesetze-im-internet.de/waffrg/__3.html",
+     "value": "The register authority is the Bundesverwaltungsamt (WaffRG § 3)"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Nationales Waffenregister (National Firearms Register)",
+   "operator": "Bundesverwaltungsamt (register authority)",
+   "research_note": "No source found on hosting or record counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Bundesgesetzblatt ist das Verkündungsorgan des Bundes für Gesetze und Rechtsverordnungen.",
+     "quote_english": "The Federal Law Gazette is the Federation's promulgation organ for laws and ordinances.",
+     "title": "§ 1 VkBkmG",
+     "url": "https://www.gesetze-im-internet.de/vkbkmg/__1.html",
+     "value": "VkBkmG § 1: the Bundesgesetzblatt is the federal promulgation organ for laws and ordinances"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "und jede Nummer des amtlichen Teils des Bundesanzeigers trägt ein qualifiziertes elektronisches Siegel nach Artikel 3 Nummer 27 der Verordnung (EU) Nr. 910/2014",
+     "quote_english": "and each issue of the official part of the Federal Gazette carries a qualified electronic seal under Article 3(27) of Regulation (EU) No 910/2014",
+     "title": "§ 7 VkBkmG",
+     "url": "https://www.gesetze-im-internet.de/vkbkmg/__7.html",
+     "value": "Each issue of the Bundesgesetzblatt carries a qualified electronic seal (VkBkmG § 7)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz und für Verbraucherschutz",
+     "quote": "Technische Umsetzung Materna Information & Communications SE Hosting und Betrieb Informationstechnikzentrum Bund (ITZBund)",
+     "quote_english": "Technical implementation Materna Information & Communications SE; hosting and operation Federal Information Technology Centre (ITZBund)",
+     "title": "Impressum - Bundesgesetzblatt",
+     "url": "https://www.recht.bund.de/de/serviceseiten/impressum/impressum_node.html",
+     "value": "recht.bund.de is hosted and operated by the Informationstechnikzentrum Bund (ITZBund); technical implementation by Materna Information & Communications SE"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "national",
+   "holding_name": "Bundesgesetzblatt (electronic Federal Law Gazette, recht.bund.de)",
+   "operator": "Bundesministerium der Justiz und für Verbraucherschutz; hosting and operation by ITZBund",
+   "research_note": "",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Aufgaben der Kassen bei der Annahme und der Leistung von Zahlungen für den Bund werden für alle Stellen innerhalb und außerhalb der Bundesverwaltung von den Bundeskassen wahrgenommen",
+     "quote_english": "The tasks of cash offices in receiving and making payments for the Federation are performed for all bodies inside and outside the federal administration by the federal cash offices",
+     "title": "§ 79 BHO - Bundeskassen",
+     "url": "https://www.gesetze-im-internet.de/bho/__79.html",
+     "value": "BHO § 79: federal cash offices handle receipt and payment for all federal bodies; the central cash office is at the Federal Ministry of Finance"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Zentralkasse besteht beim Bundesministerium der Finanzen. Das Bundesministerium der Finanzen kann bestimmen, dass die Zentralkasse bei einer Bundesbehörde seines",
+     "quote_english": "The central cash office is at the Federal Ministry of Finance. The Federal Ministry of Finance may determine that the central cash office is at a federal authority within its",
+     "title": "§ 79 BHO - Bundeskassen",
+     "url": "https://www.gesetze-im-internet.de/bho/__79.html",
+     "value": "The central cash office (Zentralkasse) is located at the Federal Ministry of Finance"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Bundeskassen / Zentralkasse des Bundes (federal treasury payment and accounting)",
+   "operator": "Bundeskassen; Zentralkasse at the Bundesministerium der Finanzen",
+   "research_note": "No source found on the hosting of the federal budget/cash/accounting (HKR) systems.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesverwaltungsamt",
+     "quote": "Wir berechnen für Sie Ihre Besoldung, zahlen diese aus und informieren Sie über aktuelle Rechtsänderungen sowie relevante Änderungen rund um die Bezügeabrechnung der Statusgruppe der Bundesbeamten.",
+     "quote_english": "We calculate your salary, pay it out and inform you about current legal changes and relevant changes concerning payroll for the status group of federal civil servants.",
+     "title": "Besoldung",
+     "url": "https://www.bva.bund.de/DE/Services/Bundesbedienstete/Arbeit-Beruf/Besoldung/besoldung_node.html",
+     "value": "The BVA calculates and pays the salaries of federal civil servants"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Für jede Beamtin und jeden Beamten ist eine Personalakte zu führen.",
+     "quote_english": "A personnel file must be kept for every civil servant.",
+     "title": "§ 106 BBG - Personalakte",
+     "url": "https://www.gesetze-im-internet.de/bbg_2009/__106.html",
+     "value": "Bundesbeamtengesetz § 106: a personnel file must be kept for every federal civil servant"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Bezügeabrechnung und Personalakten des Bundes (federal payroll and personnel files)",
+   "operator": "Bundesverwaltungsamt (payroll for federal civil servants); employing authorities (personnel files)",
+   "research_note": "Armed forces payroll/personnel systems and hosting of BVA payroll systems were not sourced.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Der Bundeswahlleiter und sein Stellvertreter werden vom Bundesministerium des Innern und für Heimat, die Landeswahlleiter, Kreiswahlleiter und Wahlvorsteher sowie ihre Stellvertreter von der Landesregierung oder der von ihr bestimmten Stelle ernannt.",
+     "quote_english": "The Federal Returning Officer and deputy are appointed by the Federal Ministry of the Interior; the state returning officers, district returning officers and electoral officers and their deputies by the state government or a body it designates.",
+     "title": "§ 9 BWahlG - Bildung der Wahlorgane",
+     "url": "https://www.gesetze-im-internet.de/bwahlg/__9.html",
+     "value": "Bundeswahlgesetz § 9: appointment of the federal returning officer and state/district returning officers"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Wahlorganisation und Ergebnisermittlung (Bundeswahlleiter, Landes-/Kreiswahlleiter, Wahlausschüsse)",
+   "operator": "Bundeswahlleiter(in) and electoral bodies of the Länder",
+   "research_note": "No source found on the IT systems or hosting used for results tabulation.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "hält und verwaltet die Währungsreserven der Bundesrepublik Deutschland, sorgt für die bankmäßige Abwicklung des Zahlungsverkehrs im Inland und mit dem Ausland",
+     "quote_english": "holds and manages the currency reserves of the Federal Republic of Germany, and ensures the banking settlement of domestic and cross-border payments",
+     "title": "§ 3 BBankG - Aufgaben",
+     "url": "https://www.gesetze-im-internet.de/bbankg/__3.html",
+     "value": "BBankG § 3: the Bundesbank holds and manages Germany's currency reserves and handles domestic and foreign payments"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "holding_name": "Deutsche Bundesbank systems (payments, reserve management)",
+   "operator": "Deutsche Bundesbank",
+   "research_note": "bundesbank.de was not reachable for automated retrieval; no source on hosting of Bundesbank systems found.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "research_note": "Tried bwi.de (bot-verification wall) and bundeswehr.de/bmvg.de pages for the Bundeswehr IT provider and C2 systems; no retrievable official text found to cite.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die Verfassungsschutzbehörden verarbeiten zur Erfüllung ihrer Unterrichtungspflichten nach Absatz 1 Informationen im gemeinsamen nachrichtendienstlichen Informationssystem.",
+     "quote_english": "The constitution protection authorities process information in the joint intelligence information system to fulfil their duties to inform under paragraph 1.",
+     "title": "§ 6 BVerfSchG",
+     "url": "https://www.gesetze-im-internet.de/bverfschg/__6.html",
+     "value": "The domestic intelligence authorities process information in the joint intelligence information system (BVerfSchG § 6)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Der Bundesnachrichtendienst ist eine Bundesoberbehörde im Geschäftsbereich des Bundeskanzleramtes. Einer polizeilichen Dienststelle darf er nicht angegliedert werden.",
+     "quote_english": "The Federal Intelligence Service is a higher federal authority within the remit of the Federal Chancellery. It may not be attached to a police agency.",
+     "title": "§ 1 BNDG - Organisation und Aufgaben",
+     "url": "https://www.gesetze-im-internet.de/bndg/__1.html",
+     "value": "BND-Gesetz § 1: the BND is a federal authority under the Federal Chancellery"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Nachrichtendienstliches Informationssystem (NADIS) of the Verfassungsschutz; BND holdings",
+   "operator": "Bundesamt für Verfassungsschutz and Landesämter; Bundesnachrichtendienst",
+   "research_note": "No public source on hosting of intelligence systems (expected).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Der Zweck der Bundesanstalt ist insbesondere der Aufbau und der Betrieb eines bundesweit einheitlichen digitalen Sprech- und Datenfunksystems für Behörden und Organisationen mit Sicherheitsaufgaben (Digitalfunk BOS) in der Bundesrepublik Deutschland.",
+     "quote_english": "The purpose of the federal institution is in particular to build and operate a nationwide uniform digital voice and data radio system for authorities and organisations with security tasks (Digitalfunk BOS) in Germany.",
+     "title": "§ 1 BDBOSG - Errichtung, Zweck, Sitz",
+     "url": "https://www.gesetze-im-internet.de/bdbosg/__1.html",
+     "value": "BDBOS-Gesetz § 1: BDBOS established to build and operate the nationwide digital radio system for security authorities"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "Digitalfunk BOS (nationwide digital radio for authorities with security tasks)",
+   "operator": "Bundesanstalt für den Digitalfunk der Behörden und Organisationen mit Sicherheitsaufgaben (BDBOS)",
+   "research_note": "112 emergency call centres are run by Länder/municipalities and were not sourced; bdbos.bund.de was unreachable for automated retrieval.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesamt für Bevölkerungsschutz und Katastrophenhilfe",
+     "quote": "Das Modulare Warnsystem (kurz: MoWaS) ist ein hochverfügbares, gehärtetes System zur Warnung der Bevölkerung in Deutschland.",
+     "quote_english": "The Modular Warning System (MoWaS) is a highly available, hardened system for warning the population in Germany.",
+     "title": "MoWaS",
+     "url": "https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warnung-in-Deutschland/MoWaS/mowas_node.html",
+     "value": "MoWaS is a highly available, hardened system for warning the population in Germany"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die für die Warnung bei Katastrophen zuständigen Behörden der Länder warnen im Auftrage des Bundes auch vor den besonderen Gefahren, die der Bevölkerung in einem Verteidigungsfall drohen.",
+     "quote_english": "The state authorities responsible for disaster warnings also warn, on behalf of the Federation, of the special dangers threatening the population in a state of defence.",
+     "title": "§ 6 ZSKG - Warnung der Bevölkerung",
+     "url": "https://www.gesetze-im-internet.de/zsg/__6.html",
+     "value": "ZSKG § 6: warning of the population; Länder warning authorities also warn on behalf of the Federation"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Modulares Warnsystem (MoWaS)",
+   "operator": "Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK) with Länder warning authorities",
+   "research_note": "No source found on hosting of MoWaS or the joint situation centre.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Betreiber von Übertragungsnetzen haben die Energieübertragung durch das Netz unter Berücksichtigung des Austauschs mit anderen Verbundnetzen zu regeln",
+     "quote_english": "Operators of transmission networks must regulate energy transmission through the network, taking into account exchange with other interconnected networks",
+     "title": "§ 12 EnWG",
+     "url": "https://www.gesetze-im-internet.de/enwg_2005/__12.html",
+     "value": "EnWG § 12: transmission system operators must control energy transmission and contribute to a secure power system in their control area"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "50Hertz, Amprion, TenneT, TransnetBW (joint platform)",
+     "quote": "Verantwortlich für die überregionale Versorgung und Übertragung im Höchstspannungsbereich sind in Deutschland die vier Übertragungsnetzbetreiber",
+     "quote_english": "Responsible for supra-regional supply and transmission at extra-high voltage in Germany are the four transmission system operators",
+     "title": "Netztransparenz.de",
+     "url": "https://www.netztransparenz.de/",
+     "value": "Four transmission system operators are responsible for extra-high-voltage transmission in Germany"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Systemführung der Übertragungsnetze (transmission system control)",
+   "operator": "Four transmission system operators: 50Hertz, Amprion, TenneT, TransnetBW",
+   "research_note": "No source found on the hosting of TSO control systems; ownership of TSOs was not used to infer dependency.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "research_note": "Water management and flood control are a Länder/municipal responsibility; no national-level holding or authoritative source identified within the time budget.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Die elektronische Patientenakte ist eine versichertengeführte elektronische Akte, die den Versicherten von den Krankenkassen gemäß § 342 zur Verfügung gestellt wird.",
+     "quote_english": "The electronic patient record is an insured-person-managed electronic record that is provided to insured persons by the health insurance funds in accordance with § 342.",
+     "title": "§ 341 SGB V - Elektronische Patientenakte",
+     "url": "https://www.gesetze-im-internet.de/sgb_5/__341.html",
+     "value": "SGB V § 341: the ePA is an insured-person-managed electronic record provided by the health insurance funds"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "de",
+     "published": "",
+     "publisher": "gematik GmbH",
+     "quote": "Werden die Daten in der ePA in einem globalen, nationalen oder regionalen Rechenzentrum gespeichert? Die Rechenzentren stehen alle in Deutschland.",
+     "quote_english": "Is ePA data stored in a global, national or regional data centre? The data centres are all located in Germany.",
+     "title": "ePA für alle - FAQ",
+     "url": "https://www.gematik.de/anwendungen/epa-fuer-alle/faq",
+     "value": "ePA data centres are all located in Germany"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Elektronische Patientenakte (ePA für alle)",
+   "operator": "Gesetzliche Krankenkassen (provide the ePA); gematik (specification and approval)",
+   "research_note": "gematik states all data centres are in Germany but the page does not name the operating providers, so provider nationality is left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "ein elektronisches Melde- und Informationssystem ein. Das Robert Koch-Institut ist der Verantwortliche im Sinne des Datenschutzrechts. Das Robert Koch-Institut kann einen IT-Dienstleister mit der technischen Umsetzung beauftragen.",
+     "quote_english": "an electronic notification and information system. The Robert Koch Institute is the controller under data protection law. The Robert Koch Institute may commission an IT service provider with the technical implementation.",
+     "title": "§ 14 IfSG",
+     "url": "https://www.gesetze-im-internet.de/ifsg/__14.html",
+     "value": "IfSG § 14: the RKI establishes an electronic notification and information system and is the data controller"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Deutsches Elektronisches Melde- und Informationssystem für den Infektionsschutz (DEMIS)",
+   "operator": "Robert Koch-Institut",
+   "research_note": "IfSG allows the RKI to commission an IT service provider, but no source naming that provider or hosting was found.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "research_note": "Education is a Länder competence; no national central student or qualifications register, and no authoritative statement of its absence, was found within the time budget.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Statistische Bundesamt ist eine selbständige Bundesoberbehörde im Geschäftsbereich des Bundesministeriums des Innern, für Bau und Heimat.",
+     "quote_english": "The Federal Statistical Office is an independent higher federal authority within the remit of the Federal Ministry of the Interior, Building and Community.",
+     "title": "§ 2 BStatG - Statistisches Bundesamt",
+     "url": "https://www.gesetze-im-internet.de/bstatg_1987/__2.html",
+     "value": "Destatis is an independent higher federal authority (BStatG § 2)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Einzelangaben über persönliche und sachliche Verhältnisse, die für eine Bundesstatistik gemacht werden, sind von den Amtsträgern und Amtsträgerinnen und für den öffentlichen Dienst besonders Verpflichteten, die mit der Durchführung von Bundesstatistiken betraut sind, geheim zu halten",
+     "quote_english": "Individual data on personal and material circumstances supplied for a federal statistic must be kept secret by the officials entrusted with carrying out federal statistics",
+     "title": "§ 16 BStatG - Geheimhaltung",
+     "url": "https://www.gesetze-im-internet.de/bstatg_1987/__16.html",
+     "value": "BStatG § 16: individual data supplied for federal statistics must be kept secret"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "Einzelangaben der Bundesstatistik (federal statistics microdata, incl. census)",
+   "operator": "Statistisches Bundesamt (Destatis) with the statistical offices of the Länder",
+   "research_note": "No source found on hosting or data volume.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Bundesamt für Kartographie und Geodäsie hat den Auftrag, geodätische Referenzsysteme und -netze sowie geotopographische Referenzdaten des Bundes zur Nutzung durch Bundesbehörden",
+     "quote_english": "The Federal Agency for Cartography and Geodesy is mandated to provide geodetic reference systems and networks and geotopographic reference data of the Federation for use by federal authorities",
+     "title": "§ 3 BGeoRG - Bundesamt für Kartographie und Geodäsie",
+     "url": "https://www.gesetze-im-internet.de/bgeorg/__3.html",
+     "value": "Bundesgeoreferenzdatengesetz § 3: BKG is mandated to provide federal geodetic reference systems and geotopographic reference data"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Geodätische Referenzsysteme und geotopographische Referenzdaten des Bundes",
+   "operator": "Bundesamt für Kartographie und Geodäsie (BKG); Länder surveying authorities for cadastral data",
+   "research_note": "No source found on hosting or data volume.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
+     "quote": "Das Bundesarchiv hat die Aufgabe, das Archivgut des Bundes auf Dauer zu sichern, nutzbar zu machen und wissenschaftlich zu verwerten.",
+     "quote_english": "The Federal Archives has the task of permanently securing the federal archival records, making them usable and evaluating them scientifically.",
+     "title": "§ 3 BArchG - Aufgaben des Bundesarchivs",
+     "url": "https://www.gesetze-im-internet.de/barchg_2017/__3.html",
+     "value": "BArchG § 3: the Bundesarchiv secures federal archival records permanently"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundesarchiv",
+     "quote": "Das Bundesarchiv stellt allen öffentlichen Stellen des Bundes das Digitale Zwischenarchiv des Bundes (DZAB) als zentralen Dienst zur Verfügung.",
+     "quote_english": "The Federal Archives provides all federal public bodies with the Digital Intermediate Archive of the Federation (DZAB) as a central service.",
+     "title": "Nutzung des Digitalen Zwischenarchivs (DZAB)",
+     "url": "https://www.bundesarchiv.de/unterlagen-abgeben/behoerdenberatung-zu-schriftgut-und-informationsverwaltung/nutzung-des-digitalen-zwischenarchivs-dzab/",
+     "value": "The Bundesarchiv provides the Digital Intermediate Archive of the Federation (DZAB) as a central service to all federal public bodies"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Archivgut des Bundes incl. Digitales Zwischenarchiv des Bundes (DZAB)",
+   "operator": "Bundesarchiv",
+   "research_note": "No source found on hosting or storage volume of the digital archive.",
+   "status": "held"
+  }
+ ],
+ "iso": "DE"
+}

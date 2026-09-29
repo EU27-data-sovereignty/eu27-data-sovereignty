@@ -1,0 +1,746 @@
+{
+ "extra_holdings": [],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "für die Zwecke der Führung des Zentralen Melderegisters ihre Meldedaten – mit Ausnahme der Angaben zum Religionsbekenntnis – samt allenfalls bestehende Auskunftssperren sowie zugehörige Abmeldungen gemeinsam in der Art zu verarbeiten",
+     "quote_english": "for the purposes of keeping the Central Register of Residents, to process their registration data - except details of religious denomination - together with any information blocks and associated deregistrations jointly",
+     "title": "Meldegesetz 1991 (MeldeG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005799",
+     "value": "Zentrales Melderegister (ZMR) - Central Register of Residents"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Die Meldebehörden haben dem Bundesminister für Inneres ihre Meldedaten im Sinne des ersten Satzes zu übermitteln.",
+     "quote_english": "The registration authorities must transmit their registration data within the meaning of the first sentence to the Federal Minister of the Interior.",
+     "title": "Meldegesetz 1991 (MeldeG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005799",
+     "value": "Meldegesetz 1991 (Registration Act), § 16"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "gemeinsam in der Art zu verarbeiten, dass jeder Verantwortliche auch auf jene Daten in der Datenverarbeitung Zugriff hat, die dieser von den anderen Verantwortlichen zur Verfügung gestellt wurden (Zentrales Personenstandsregister – ZPR).",
+     "quote_english": "to process jointly in such a way that each controller also has access to the data made available by the other controllers (Central Civil Status Register - ZPR).",
+     "title": "Personenstandsgesetz 2013 (PStG 2013), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008228",
+     "value": "Zentrales Personenstandsregister (ZPR) - Central Civil Status Register (births, marriages, deaths)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Der Bundesminister für Inneres übt die Funktion des Auftragsverarbeiters gemäß Art. 4 Z 8 in Verbindung mit Art. 28 Abs. 1 DSGVO aus.",
+     "quote_english": "The Federal Minister of the Interior performs the function of processor under Art. 4(8) in conjunction with Art. 28(1) GDPR.",
+     "title": "Personenstandsgesetz 2013 (PStG 2013), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008228",
+     "value": "Federal Minister of the Interior acts as processor of the ZPR"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "de",
+     "published": "2022",
+     "publisher": "Bundesministerium für Inneres",
+     "quote": "Der Bundesminister für Inneres betreibt als sogenannter Auftragsverarbeiter das ZMR für die",
+     "quote_english": "The Federal Minister of the Interior operates the ZMR as a so-called processor for the",
+     "title": "E-Government (BMI magazine Öffentliche Sicherheit 5-6/2022)",
+     "url": "https://www.bmi.gv.at/magazin/2022_05_06/34_E_Government.aspx",
+     "value": "Federal Minister of the Interior operates the ZMR as processor for the registration authorities"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "de",
+     "published": "2022",
+     "publisher": "Bundesministerium für Inneres",
+     "quote": "Basisregister zur Errechnung des bPK ist das ZMR für jene Menschen, die in Österreich einen aufrechten Hauptwohnsitz haben, die Identifikation dieser erfolgt über die Stammzahl.",
+     "quote_english": "The base register for computing the bPK is the ZMR for people with a current main residence in Austria; they are identified via the source PIN (Stammzahl).",
+     "title": "E-Government (BMI magazine Öffentliche Sicherheit 5-6/2022)",
+     "url": "https://www.bmi.gv.at/magazin/2022_05_06/34_E_Government.aspx",
+     "value": "The ZMR is the base register for deriving sector-specific identifiers (bPK) via the source PIN (Stammzahl)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Die Stammzahlenregisterbehörde kann sich bei der Führung des Ergänzungsregisters sowie bei der Errechnung von Stammzahlen und bei der Durchführung der in den §§ 4, 4b, 5, 9, 10, 14, 14a und 15 geregelten Verfahren des Bundesministeriums für Inneres als Auftragsverarbeiter, soweit natürliche Personen Betroffene sind",
+     "quote_english": "The Source PIN Register Authority may use the Federal Ministry of the Interior as processor for keeping the supplementary register, computing source PINs and carrying out the procedures in §§ 4, 4b, 5, 9, 10, 14, 14a and 15, insofar as natural persons are concerned",
+     "title": "E-Government-Gesetz (E-GovG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230",
+     "value": "The Source PIN Register Authority (E-GovG § 7) may use the Federal Ministry of the Interior as processor for the supplementary register and computing source PINs of natural persons"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Zentrales Melderegister (ZMR); Zentrales Personenstandsregister (ZPR); Stammzahlenregister/Ergänzungsregister",
+   "operator": "Bundesministerium für Inneres (processor for municipal registration and civil status authorities)",
+   "research_note": "No public source found naming the data centre or hosting provider of ZMR/ZPR; BMI is the operator.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Die Passbehörden sind als gemeinsam Verantwortliche gemäß Art. 4 Z 7 in Verbindung mit Art. 26 Abs. 1 DSGVO ermächtigt, die für die Wahrnehmung der ihnen nach diesem Bundesgesetz übertragenen Aufgaben erforderlichen personenbezogenen Daten nach § 22a Abs. 1 mit Ausnahme der lit. k",
+     "quote_english": "The passport authorities, as joint controllers under Art. 4(7) with Art. 26(1) GDPR, are authorised to process the personal data under § 22a(1) necessary for their tasks under this Act, with the exception of lit. k [fingerprints]",
+     "title": "Passgesetz 1992, consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798",
+     "value": "Central evidence under § 22b Passport Act holds passport/ID card data including the facial image (lit. j) but not fingerprints (lit. k)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "i) Litera i besondere Kennzeichen in verbaler Beschreibung, j) Litera j Lichtbild, k) Litera k die Papillarlinienabdrücke zweier Finger, l) Litera l Unterschrift",
+     "quote_english": "i) special characteristics in verbal description, j) photograph, k) the fingerprints of two fingers, l) signature",
+     "title": "Passgesetz 1992, consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798",
+     "value": "Passgesetz 1992 § 22a(1): facial image (Lichtbild) is among the data collected on application"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Die Bundesrechenzentrum GmbH hat als Auftragsverarbeiterin bei der Führung von Datenverarbeitungen gemäß § 22a und § 22b gegen Entgelt mitzuwirken.",
+     "quote_english": "Bundesrechenzentrum GmbH shall, as processor, participate for a fee in the conduct of the data processing under § 22a and § 22b.",
+     "title": "Passgesetz 1992, consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798",
+     "value": "Bundesrechenzentrum GmbH (state-owned) is the processor for the passport data processing under §§ 22a and 22b"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "national",
+   "holding_name": "Zentrale Evidenz nach § 22b Passgesetz (Identitätsdokumentenregister) - facial images",
+   "operator": "Passport authorities (joint controllers); Bundesrechenzentrum GmbH as processor",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Die Passbehörden sind als gemeinsam Verantwortliche gemäß Art. 4 Z 7 in Verbindung mit Art. 26 Abs. 1 DSGVO ermächtigt, die für die Wahrnehmung der ihnen nach diesem Bundesgesetz übertragenen Aufgaben erforderlichen personenbezogenen Daten nach § 22a Abs. 1 mit Ausnahme der lit. k",
+     "quote_english": "The passport authorities ... are authorised to process the personal data under § 22a(1) ... with the exception of lit. k [fingerprints]",
+     "title": "Passgesetz 1992, consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798",
+     "value": "Fingerprints (§ 22a(1) lit. k) are excluded from the central passport evidence under § 22b"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "diese Daten, sowie alle ihm für seine Aufgabe übermittelten Daten hat der Auftragsverarbeiter zu löschen, sobald er diese nicht mehr benötigt, spätestens jedoch nach 90 Tagen ab Ausstellung des Dokuments.",
+     "quote_english": "these data, and all data transmitted to it for its task, must be deleted by the processor as soon as it no longer needs them, but at the latest 90 days after issuance of the document.",
+     "title": "Passgesetz 1992, consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798",
+     "value": "The document-personalisation processor must delete all data it received, at the latest 90 days after issuance"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Gemäß Abs. 1 lit. k verarbeitete Papillarlinienabdrücke dürfen ausschließlich für die Identifizierung des Passinhabers und die Prüfung der Authentizität des Dokuments in Vollziehung dieses Gesetzes verarbeitet werden.",
+     "quote_english": "Fingerprints processed under para. 1 lit. k may be processed solely for identifying the passport holder and verifying the authenticity of the document in the enforcement of this Act.",
+     "title": "Passgesetz 1992, consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798",
+     "value": "Fingerprints may be used only to identify the holder and verify document authenticity"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "No central retention of passport/ID card fingerprints",
+   "operator": "",
+   "research_note": "Passport Act excludes fingerprints from the central evidence and obliges the personalisation processor to delete data within 90 days; fingerprints held in police/asylum systems were not researched here.",
+   "status": "not_held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Alle Schriftstücke, die die Grundlage der Eintragung und späterer Veränderungen sowie der Ermittlung der Ehefähigkeit und der Fähigkeit, eine eingetragene Partnerschaft zu begründen, gebildet haben, sind bei jener Personenstandsbehörde aufzubewahren, die die Eintragung vorgenommen hat.",
+     "quote_english": "All documents that formed the basis of the entry and later changes, and of establishing capacity to marry or to enter a registered partnership, shall be kept by the civil status authority that made the entry.",
+     "title": "Personenstandsgesetz 2013 (PStG 2013), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008228",
+     "value": "Supporting documents underlying civil status entries are kept by the civil status authority that made the entry (decentralised)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Anstelle der Schriftstücke gemäß Abs. 1 können auch Mikrofilme oder elektronische Informationsträger aufbewahrt werden.",
+     "quote_english": "Instead of the documents under para. 1, microfilms or electronic data carriers may also be kept.",
+     "title": "Personenstandsgesetz 2013 (PStG 2013), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008228",
+     "value": "Documents may be kept on microfilm or electronic media instead of paper"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Bestätigungen, dass eine bestimmte Person die Staatsbürgerschaft besitzt (Staatsbürgerschaftsnachweise), sowie staatsbürgerschaftsrechtliche Bestätigungen sind Auszüge aus dem Zentralen Staatsbürgerschaftsregister – ZSR (§ 56a).",
+     "quote_english": "Confirmations that a certain person holds citizenship (proof of citizenship) and citizenship-law confirmations are extracts from the Central Citizenship Register - ZSR (§ 56a).",
+     "title": "Staatsbürgerschaftsgesetz 1985 (StbG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005579",
+     "value": "Zentrales Staatsbürgerschaftsregister (ZSR) - Central Citizenship Register; citizenship certificates are extracts from it"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Schriftstücke at Personenstandsbehörden (decentralised); Zentrales Staatsbürgerschaftsregister (ZSR)",
+   "operator": "Local civil status authorities; citizenship evidence authorities",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "audit_report",
+     "field": "holding_name",
+     "language": "de",
+     "published": "2023",
+     "publisher": "Rechnungshof Österreich",
+     "quote": "Die Registrierung des E–ID sollte über das Identitätsdokumentenregister",
+     "quote_english": "Registration of the E-ID was to be handled via the Identity Document Register",
+     "title": "Umstellung von der Bürgerkarte/Handysignatur auf den elektronischen Identitätsnachweis (E-ID), Reihe Bund 2023/7",
+     "url": "https://www.rechnungshof.gv.at/rh/home/home/2023_7_E-ID.pdf",
+     "value": "Identitätsdokumentenregister (IDR) - Identity Document Register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Die Passbehörden dürfen weiters Namen, Geschlecht, akademische Grade und Qualifikationsbezeichnungen, die auf Grund des Gesetzes in amtlichen Urkunden eingetragen werden können, Geburtsdatum, Geburtsort, Staatsangehörigkeit, Wohnsitze oder Kontaktstelle",
+     "quote_english": "The passport authorities may further [process] names, sex, academic degrees and qualification titles that may be entered in official documents by law, date of birth, place of birth, nationality, residences or contact point",
+     "title": "Passgesetz 1992, consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798",
+     "value": "Passgesetz 1992 § 22b central evidence of identity and document data"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "hosting",
+     "language": "de",
+     "published": "2023",
+     "publisher": "Rechnungshof Österreich",
+     "quote": "Für die Anpassung dieses Registers an die Anforderungen der zusätzlichen E–ID–Registrierung beauftragte das BMI die BRZ GmbH, den gesetzlichen Auftragsverarbeiter des Identitätsdokumentenregisters.",
+     "quote_english": "To adapt this register to the requirements of the additional E-ID registration, the Interior Ministry commissioned BRZ GmbH, the statutory processor of the Identity Document Register.",
+     "title": "Umstellung von der Bürgerkarte/Handysignatur auf den elektronischen Identitätsnachweis (E-ID), Reihe Bund 2023/7",
+     "url": "https://www.rechnungshof.gv.at/rh/home/home/2023_7_E-ID.pdf",
+     "value": "BRZ GmbH is the statutory processor of the Identity Document Register"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "national",
+   "holding_name": "Identitätsdokumentenregister (IDR), zentrale Evidenz nach § 22b Passgesetz",
+   "operator": "Passport authorities / Bundesministerium für Inneres; BRZ GmbH as statutory processor",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Der E-ID dient dem Nachweis der eindeutigen Identität, weiterer Merkmale sowie des Bestehens einer Einzelvertretungsbefugnis eines Einschreiters und der Authentizität des elektronisch gestellten Anbringens",
+     "quote_english": "The E-ID serves to prove the unique identity, further attributes and the existence of a sole power of representation of an applicant and the authenticity of the electronically submitted application",
+     "title": "E-Government-Gesetz (E-GovG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230",
+     "value": "Elektronischer Identitätsnachweis (E-ID), branded ID Austria"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Der Bundesminister für Inneres sowie die Stammzahlenregisterbehörde sind ermächtigt, diese personenbezogenen Daten zu Zwecken der Verwaltung des E-ID zu verarbeiten.",
+     "quote_english": "The Federal Minister of the Interior and the Source PIN Register Authority are authorised to process these personal data for the purposes of administering the E-ID.",
+     "title": "E-Government-Gesetz (E-GovG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230",
+     "value": "Federal Minister of the Interior and the Source PIN Register Authority process E-ID registration data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "hat die Stammzahlenregisterbehörde die Stammzahl des E-ID-Werbers zu ermitteln und diese in verschlüsselter Form an den qualifizierten Vertrauensdiensteanbieter (VDA) gemäß Art. 3 Z 20 eIDAS-VO, der das qualifizierte Zertifikat für eine elektronische Signatur ausstellt",
+     "quote_english": "the Source PIN Register Authority shall determine the source PIN of the E-ID applicant and transmit it in encrypted form to the qualified trust service provider (VDA) under Art. 3(20) eIDAS Regulation which issues the qualified certificate for an electronic signature",
+     "title": "E-Government-Gesetz (E-GovG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230",
+     "value": "E-GovG § 4(4): qualified trust service provider issues the signature certificate bound to the E-ID"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "hosting",
+     "language": "de",
+     "published": "2023",
+     "publisher": "Rechnungshof Österreich",
+     "quote": "Der Vertrauensdiensteanbieter war gesetzlich verpflichtet, den Betrieb bzw. die ständige Verfügbarkeit der in seinem Einflussbereich (Rechenzentrum) betriebenen Zertifikatsdatenbank zu gewährleisten.",
+     "quote_english": "The trust service provider was legally obliged to ensure the operation and permanent availability of the certificate database operated within its sphere of control (data centre).",
+     "title": "Umstellung von der Bürgerkarte/Handysignatur auf den elektronischen Identitätsnachweis (E-ID), Reihe Bund 2023/7",
+     "url": "https://www.rechnungshof.gv.at/rh/home/home/2023_7_E-ID.pdf",
+     "value": "The private trust service provider runs the certificate database in its own data centre"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "foreign_dependency",
+     "language": "de",
+     "published": "2023",
+     "publisher": "Rechnungshof Österreich",
+     "quote": "Auftragnehmer des BMDW war fast ausschließlich die Bundesrechenzentrum (BRZ) GmbH.",
+     "quote_english": "The contractor of the BMDW was almost exclusively Bundesrechenzentrum (BRZ) GmbH.",
+     "title": "Elektronischer Identitätsnachweis: Hohe Abhängigkeit von externen Unternehmen",
+     "url": "https://www.rechnungshof.gv.at/rh/home/news/news/news_3/Umstellung_von_Handysignatur_auf_E-ID.html",
+     "value": "The digital ministry's E-ID contractor was almost exclusively the state-owned Bundesrechenzentrum GmbH"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "de",
+     "published": "2025-08",
+     "publisher": "Bundeskanzleramt Österreich",
+     "quote": "Mit der ID Austria nutzen bereits über 4,1 Millionen Bürgerinnen und Bürger eine sichere digitale Identität – das ist rund jede zweite Person in Österreich.",
+     "quote_english": "With ID Austria, over 4.1 million citizens already use a secure digital identity - roughly every second person in Austria.",
+     "title": "Pröll: ID Austria knackt die 4-Millionen-Marke",
+     "url": "https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/2025/08/id-austria-knackt-4-millionen-marke.html",
+     "value": "Over 4.1 million citizens use ID Austria (August 2025)"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "national",
+   "holding_name": "Elektronischer Identitätsnachweis (E-ID) / ID Austria",
+   "operator": "Bundesministerium für Inneres and Stammzahlenregisterbehörde; BRZ GmbH and a private qualified trust service provider",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Es ist sicherzustellen, dass die Protokollierung der Datenübermittlung aus dem E-ID-System im Auftrag des E-ID-Inhabers unbeschadet der datenschutzrechtlichen Verpflichtungen des Verantwortlichen und seiner Auftragsverarbeiter nur dem E-ID-Inhaber zugänglich ist.",
+     "quote_english": "It must be ensured that the logging of data transmission from the E-ID system on behalf of the E-ID holder is accessible only to the E-ID holder, without prejudice to the data protection obligations of the controller and its processors.",
+     "title": "E-Government-Gesetz (E-GovG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230",
+     "value": "Logging of data transmissions from the E-ID system must be accessible only to the E-ID holder"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Protokolldaten über tatsächlich durchgeführte Verarbeitungsvorgänge, wie insbesondere Änderungen, Abfragen und Übermittlungen, sind drei Jahre lang aufzubewahren.",
+     "quote_english": "Log data on processing operations actually carried out, in particular changes, queries and transmissions, must be kept for three years.",
+     "title": "E-Government-Gesetz (E-GovG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230",
+     "value": "Log data of E-ID registration processing must be kept for three years"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "holding_name": "Protokollierung im E-ID-System (E-ID logging)",
+   "operator": "Bundesministerium für Inneres / Stammzahlenregisterbehörde",
+   "research_note": "Legal logging duties found; no source on where the logs are hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Die Wählerevidenz ist unter Verwendung des Zentralen Wählerregisters – ZeWaeR (§ 4 Abs. 1) zu führen.",
+     "quote_english": "The voter register shall be kept using the Central Voter Register - ZeWaeR (§ 4(1)).",
+     "title": "Wählerevidenzgesetz 2018 (WEviG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009720",
+     "value": "Zentrales Wählerregister (ZeWaeR) - Central Voter Register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Soweit der Bundesminister für Inneres aufgrund bundesgesetzlicher oder landesgesetzlicher Vorschriften Daten des ZeWaeR zu verarbeiten hat, übt er die Funktion des Auftragsverarbeiters gemäß Art. 4 Z 8 in Verbindung mit Art. 28 Abs. 1 DSGVO für die jeweilige Gemeinde aus",
+     "quote_english": "Insofar as the Federal Minister of the Interior has to process ZeWaeR data under federal or provincial law, he acts as processor under Art. 4(8) with Art. 28(1) GDPR for the respective municipality",
+     "title": "Wählerevidenzgesetz 2018 (WEviG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009720",
+     "value": "Federal Minister of the Interior acts as processor of ZeWaeR for each municipality"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "de",
+     "published": "2024",
+     "publisher": "Bundesministerium für Inneres",
+     "quote": "Das endgültige Ergebnis der Nationalratswahl 2024 lautet – nach Feststellung durch die Bundeswahlbehörde am 16. Oktober 2024 – wie folgt: Wahlberechtigte: 6.346.059",
+     "quote_english": "The final result of the 2024 National Council election - as determined by the Federal Electoral Board on 16 October 2024 - is as follows: Persons entitled to vote: 6,346,059",
+     "title": "Nationalratswahl 2024",
+     "url": "https://www.bmi.gv.at/412/nationalratswahlen/nationalratswahl_2024/start.html",
+     "value": "6,346,059 persons entitled to vote in the 2024 National Council election"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Zentrales Wählerregister (ZeWaeR)",
+   "operator": "Municipalities (controllers); Bundesministerium für Inneres (processor)",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Bundesministerium für Inneres",
+     "quote": "This website contains information on the Austrian CSCA operated by the Federal Ministry of Interior (BMI).",
+     "quote_english": "",
+     "title": "The Austrian Country Signing CA (CSCA)",
+     "url": "https://www.bmi.gv.at/downloads/csca.html",
+     "value": "Austrian Country Signing CA (CSCA) operated by the Federal Ministry of the Interior"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Aufsichtsstelle gemäß Art. 17 eIDAS-VO ist die Telekom-Control-Kommission (§ 116 TKG 2003).",
+     "quote_english": "The supervisory body under Art. 17 eIDAS Regulation is the Telekom-Control-Kommission (§ 116 TKG 2003).",
+     "title": "Signatur- und Vertrauensdienstegesetz (SVG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009585",
+     "value": "Supervisory body for trust services under Art. 17 eIDAS is the Telekom-Control-Kommission"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Die RTR-GmbH erstellt, führt und veröffentlicht für die Aufsichtsstelle auf gesicherte Weise eine von der RTR-GmbH elektronisch unterzeichnete oder besiegelte Vertrauensliste gemäß Art. 22 eIDAS-VO.",
+     "quote_english": "RTR-GmbH compiles, maintains and publishes securely for the supervisory body a trust list under Art. 22 eIDAS Regulation, electronically signed or sealed by RTR-GmbH.",
+     "title": "Signatur- und Vertrauensdienstegesetz (SVG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009585",
+     "value": "RTR-GmbH compiles and publishes the national trust list"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Die Amtssignatur ist eine fortgeschrittene elektronische Signatur oder ein fortgeschrittenes elektronisches Siegel, deren Besonderheit durch ein entsprechendes Attribut im Signaturzertifikat oder Zertifikat für elektronische Siegel ausgewiesen wird.",
+     "quote_english": "The official signature is an advanced electronic signature or advanced electronic seal whose special nature is indicated by a corresponding attribute in the signature certificate or certificate for electronic seals.",
+     "title": "E-Government-Gesetz (E-GovG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230",
+     "value": "Amtssignatur (official signature/seal of public bodies), E-GovG § 19"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "record_count",
+     "language": "de",
+     "published": "",
+     "publisher": "A-Trust GmbH",
+     "quote": "Bereits mehr als 4 Millionen Personen verwenden eine QES von A-Trust!",
+     "quote_english": "More than 4 million people already use a QES from A-Trust!",
+     "title": "ID Austria | A-Trust",
+     "url": "https://www.a-trust.at/de/produkte/qualifizierte_signaturservices/id_austria/",
+     "value": "More than 4 million persons use a qualified electronic signature from A-Trust"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "CSCA-AUSTRIA; Amtssignatur; qualified trust services under SVG",
+   "operator": "Bundesministerium für Inneres (CSCA); Telekom-Control-Kommission/RTR-GmbH (supervision, trust list); A-Trust GmbH (qualified TSP)",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Der Bundesminister für Inneres, das Bundesamt, die Vertretungsbehörden, die Behörden nach dem NAG und die Landespolizeidirektionen sind als gemeinsam Verantwortliche gemäß Art. 4 Z 7 in Verbindung mit Art. 26 Abs. 1 DSGVO ermächtigt, personenbezogene Daten von Fremden (§ 27 Abs. 1) gemeinsam in der Art zu verarbeiten",
+     "quote_english": "The Federal Minister of the Interior, the Federal Office, the representation authorities, the authorities under the NAG and the provincial police directorates are authorised as joint controllers under Art. 4(7) with Art. 26(1) GDPR to process personal data of foreigners (§ 27(1)) jointly",
+     "title": "BFA-Verfahrensgesetz (BFA-VG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20007944",
+     "value": "Zentrales Fremdenregister - Central Register of Foreigners (BFA-VG § 26)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Der Bundesminister für Inneres übt die Funktion des Auftragsverarbeiters gemäß Art. 4 Z 8 in Verbindung mit Art. 28 Abs. 1 DSGVO aus.",
+     "quote_english": "The Federal Minister of the Interior performs the function of processor under Art. 4(8) in conjunction with Art. 28(1) GDPR.",
+     "title": "BFA-Verfahrensgesetz (BFA-VG), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20007944",
+     "value": "Federal Minister of the Interior acts as processor of the Central Register of Foreigners"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Zentrales Fremdenregister (IZR) - Central Register of Foreigners",
+   "operator": "Bundesministerium für Inneres, BFA, NAG authorities, Landespolizeidirektionen (joint controllers); BMI as processor",
+   "research_note": "Hosting of the IZR not found in public sources; record counts not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "de",
+     "published": "",
+     "publisher": "Bundeskanzleramt (RIS)",
+     "quote": "Abgabenbehörden dürfen personenbezogene und nicht personenbezogene Daten für Zwecke des automationsunterstützten Risikomanagements und der Betrugsbekämpfung verarbeiten",
+     "quote_english": "Tax authorities may process personal and non-personal data for the purposes of automated risk management and fraud prevention",
+     "title": "Bundesabgabenordnung (BAO), consolidated version",
+     "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10003940",
+     "value": "Bundesabgabenordnung authorises tax authorities to process data for automated risk management and anti-fraud"
+    },
+    {
+     "doc_type": "audit_report",
+     "field": "hosting",
+     "language": "de",
+     "published": "2024",
+     "publisher": "Rechnungshof Österreich (via Parlament)",
+     "quote": "Vulnerability Scans der Server, die die BRZ GmbH im Auftrag des Finanzministeriums betreibt",
+     "quote_english": "Vulnerability scans of the servers that BRZ GmbH operates on behalf of the Finance Ministry",
+     "title": "Management der IT-Sicherheit im Finanzministerium, Klimaschutzministerium und Landwirtschaftsministerium, Reihe Bund 2024/16",
+     "url": "https://www.parlament.gv.at/dokument/XXVIII/III/39/imfname_1658039.pdf",
+     "value": "BRZ GmbH operates servers on behalf of the Finance Ministry"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "national",
+   "holding_name": "Abgabenverfahren / FinanzOnline (tax administration systems of the Finance Ministry)",
+   "operator": "Bundesministerium für Finanzen / Abgabenbehörden; BRZ GmbH operates servers",
+   "research_note": "Holding name and record counts not yet sourced verbatim; hosting sourced from Rechnungshof report.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "customs",
+   "research_note": "Zollrechts-Durchführungsgesetz text downloaded; Rechnungshof E-Finanz report lists BRZ as contractor for customs IT projects, but no verbatim claims were finalised before the run was paused.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "benefits_pensions",
+   "research_note": "ASVG downloaded; Dachverband/pension insurance systems not yet sourced verbatim.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "health_insurance",
+   "research_note": "ASVG downloaded; e-card/ELSY and Dachverband sources not yet researched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "land_property",
+   "research_note": "Grundbuchsumstellungsgesetz, Allgemeines Grundbuchsgesetz and Vermessungsgesetz downloaded; verbatim claims on Grundbuch/cadastre operator and hosting not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "business_registry",
+   "research_note": "Firmenbuchgesetz downloaded; claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "beneficial_ownership",
+   "research_note": "WiEReG downloaded; Rechnungshof E-Finanz report lists BRZ as contractor for WiEReG, but claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "vehicle_licensing",
+   "research_note": "KFG 1967 and Führerscheingesetz downloaded; register claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "judicial_criminal",
+   "research_note": "Strafregistergesetz downloaded; Justice IT (Verfahrensautomation Justiz) not researched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "police_records",
+   "research_note": "Sicherheitspolizeigesetz downloaded; EKIS/police databases not yet sourced.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "border_control",
+   "research_note": "EU-Polizeikooperationsgesetz/Grenzkontrolle not researched (N.SIS, VIS national).",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "firearms_register",
+   "research_note": "Waffengesetz 1996 downloaded; Zentrales Waffenregister claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "official_gazette",
+   "research_note": "Bundesgesetzblattgesetz downloaded; RIS authentic publication claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "public_finance",
+   "research_note": "Bundeshaushaltsgesetz 2013 downloaded; HV-SAP/Buchhaltungsagentur not sourced.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "government_payroll",
+   "research_note": "BRZ states payroll via SAP but figures sit in animated counters not safely quotable; not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "electoral_management",
+   "research_note": "Nationalrats-Wahlordnung 1992 downloaded; results system claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "central_bank",
+   "research_note": "Nationalbankgesetz 1984 downloaded; OeNB systems not researched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "research_note": "Militärbefugnisgesetz downloaded; no public hosting information searched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "intelligence",
+   "research_note": "Staatsschutz- und Nachrichtendienst-Gesetz downloaded; claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "emergency_communications",
+   "research_note": "TKG 2021 downloaded; BOS-Austria/112 systems not researched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "crisis_management",
+   "research_note": "Bundes-Krisensicherheitsgesetz downloaded; claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "grid_control",
+   "research_note": "ElWOG 2010 downloaded; APG control systems not researched.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "water_control",
+   "research_note": "Not researched (largely provincial competence).",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "health_records",
+   "research_note": "Gesundheitstelematikgesetz 2012 downloaded (ELGA); claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "public_health_surveillance",
+   "research_note": "Epidemiegesetz 1950 downloaded (EMS, e-Impfpass); claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "education",
+   "research_note": "Bildungsdokumentationsgesetz 2020 downloaded; claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "statistics_microdata",
+   "research_note": "Bundesstatistikgesetz 2000 and Registerzählungsgesetz downloaded; claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "geospatial",
+   "research_note": "GWR-Gesetz and Vermessungsgesetz downloaded; BEV/address register claims not finalised.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "national_archives",
+   "research_note": "Bundesarchivgesetz downloaded; claims not finalised.",
+   "status": "unknown"
+  }
+ ],
+ "iso": "AT"
+}

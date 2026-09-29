@@ -1,0 +1,819 @@
+{
+ "extra_holdings": [],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+     "quote": "Het Rijksregister is dus een centrale databank waarin volgende groepen zijn geregistreerd: alle Belgen die in België verblijven;",
+     "quote_english": "The National Register is thus a central database in which the following groups are registered: all Belgians residing in Belgium;",
+     "title": "Rijksregister | IBZ - FOD Binnenlandse Zaken",
+     "url": "https://www.ibz.rrn.fgov.be/nl/burger/rijksregister-en-bevolking/rijksregister",
+     "value": "Rijksregister van de natuurlijke personen (National Register of Natural Persons), the central database of identification data of all registered persons"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+     "quote": "Ze beheert het Rijksregister, de centrale databank waarin alle bevolkingsgegevens zijn opgeslagen.",
+     "quote_english": "It manages the National Register, the central database in which all population data are stored.",
+     "title": "Home | IBZ - FOD Binnenlandse Zaken",
+     "url": "https://www.ibz.rrn.fgov.be/nl",
+     "value": "The National Register is managed by the Directorate-General Identity and Civil Affairs of the FPS Interior"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+     "quote": "Vijftien jaar later verkreeg het Rijksregister een wettelijke basis door de goedkeuring van de wet van 8 augustus 1983 tot regeling van een Rijksregister van de natuurlijke personen.",
+     "quote_english": "Fifteen years later the National Register obtained a legal basis through the adoption of the law of 8 August 1983 organising a National Register of Natural Persons.",
+     "title": "Rijksregister | IBZ - FOD Binnenlandse Zaken",
+     "url": "https://www.ibz.rrn.fgov.be/nl/burger/rijksregister-en-bevolking/rijksregister",
+     "value": "Law of 8 August 1983 organising a National Register of Natural Persons"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Rijksregister van de natuurlijke personen (National Register of Natural Persons)",
+   "operator": "FOD Binnenlandse Zaken - Algemene Directie Identiteit en Burgerzaken",
+   "research_note": "No public source found stating the Rijksregister's hosting location, infrastructure provider or total record count.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+     "quote": "Eenmaal de kaart geproduceerd is, zal de pasfoto te zien zijn op de identiteitskaart (zowel fysiek als op de chip) als in het rijksregister.",
+     "quote_english": "Once the card has been produced, the passport photo will be visible on the identity card (both physically and on the chip) and in the national register.",
+     "title": "eID en GDPR | IBZ - FOD Binnenlandse Zaken",
+     "url": "https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid/eid-en-gdpr",
+     "value": "ID-card photos are stored and visible in the National Register"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+     "quote": "Dit alles gebeurt in uitvoering van Artikel 6 en 6 bis van de wet van 19 juli 1991 betreffende de bevolkingsregisters en de identiteitskaarten. Een foto maakt het in het bijzonder mogelijk",
+     "quote_english": "All this is done in implementation of Articles 6 and 6bis of the law of 19 July 1991 on population registers and identity cards. A photo in particular makes it possible",
+     "title": "eID en GDPR | IBZ - FOD Binnenlandse Zaken",
+     "url": "https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid/eid-en-gdpr",
+     "value": "Articles 6 and 6bis of the Law of 19 July 1991 on population registers and identity cards"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+     "quote": "De foto's worden bewaard op een beveiligde server. Enkel de bevoegde instanties hebben hier toegang toe.",
+     "quote_english": "The photos are stored on a secure server. Only the competent authorities have access to it.",
+     "title": "eID en GDPR | IBZ - FOD Binnenlandse Zaken",
+     "url": "https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid/eid-en-gdpr",
+     "value": "Photos are kept on a secure server (no provider or location named)"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Pasfoto's eID in het Rijksregister (ID-card photos held with the National Register)",
+   "operator": "FOD Binnenlandse Zaken - Algemene Directie Identiteit en Burgerzaken",
+   "research_note": "The 'secure server' is not identified by location or operator in any public source found. The law sets no retention limit for photos.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "not_held",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+     "quote": "De vingerafdrukken staan enkel op de contactloze chip van de kaart (geen centrale databank) en zijn beveiligd.",
+     "quote_english": "The fingerprints are only on the contactless chip of the card (no central database) and are secured.",
+     "title": "eID | IBZ - FOD Binnenlandse Zaken",
+     "url": "https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid",
+     "value": "eID fingerprints are stored only on the card chip; there is no central fingerprint database"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "not_held",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+     "quote": "Er zal dus op geen enkel moment sprake zijn van een centrale databank. Dit wordt ook niet door de wetgever toegelaten.",
+     "quote_english": "There will therefore at no point be a central database. This is also not permitted by the legislator.",
+     "title": "eID en GDPR | IBZ - FOD Binnenlandse Zaken",
+     "url": "https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid/eid-en-gdpr",
+     "value": "A central fingerprint database is not permitted by law"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+     "quote": "Tijdens de productiefase worden de vingerafdrukken tijdelijk bewaard, dit voor een termijn van maximaal 3 maand.",
+     "quote_english": "During the production phase, the fingerprints are stored temporarily, for a period of at most 3 months.",
+     "title": "eID en GDPR | IBZ - FOD Binnenlandse Zaken",
+     "url": "https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid/eid-en-gdpr",
+     "value": "Fingerprints are held temporarily, for at most 3 months, during card production"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Vingerafdrukken eID (eID fingerprints, stored on chip only)",
+   "operator": "FOD Binnenlandse Zaken (card producer holds temporarily during production)",
+   "research_note": "Applies to the eID; passport fingerprint storage (FPS Foreign Affairs) was not separately checked.",
+   "status": "not_held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "2023-06-14",
+     "publisher": "Rijksarchief in België",
+     "quote": "De Databank voor Akten van de Burgerlijke Stand (DABS) is een centrale databank waarin alle akten van de burgerlijke stand voortaan worden bewaard en beheerd.",
+     "quote_english": "The Database of Civil Status Records (DABS) is a central database in which all civil status records are henceforth stored and managed.",
+     "title": "Het Rijksarchief is vertegenwoordigd in het beheerscomité van de Databank voor Akten van de Burgerlijke Stand",
+     "url": "https://www.arch.be/index.php?l=nl&m=nieuws&r=alle-nieuwsberichten&a=2023-06-14-het-rijksarchief-is-vertegenwoordigd-in-het-beheerscomite-van-de-databank-voor-akten-van-de-burgerlijke-stand",
+     "value": "DABS: a central database holding all civil status deeds, replacing the municipal and consular registers"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "2023-06-14",
+     "publisher": "Rijksarchief in België",
+     "quote": "De DABS wordt aangestuurd door een Beheerscomité DABS. Dat staat in voor de inrichting en het beheer van de DABS",
+     "quote_english": "The DABS is steered by a DABS Management Committee. It is responsible for the set-up and management of the DABS",
+     "title": "Het Rijksarchief is vertegenwoordigd in het beheerscomité van de Databank voor Akten van de Burgerlijke Stand",
+     "url": "https://www.arch.be/index.php?l=nl&m=nieuws&r=alle-nieuwsberichten&a=2023-06-14-het-rijksarchief-is-vertegenwoordigd-in-het-beheerscomite-van-de-databank-voor-akten-van-de-burgerlijke-stand",
+     "value": "DABS is governed by a DABS Management Committee responsible for its set-up and management"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "2023-06-14",
+     "publisher": "Rijksarchief in België",
+     "quote": "Dit beheerscomité is samengesteld uit vertegenwoordigers van de gemeentelijke overheden, van de Federale Overheidsdienst Justitie, van het College van het openbaar ministerie, van het College van de hoven en rechtbanken, van de Federale Overheidsdienst Binnenlandse Zaken, van de Federale Overheidsdienst Buitenlandse Zaken en van het Rijksarchief.",
+     "quote_english": "This management committee is composed of representatives of the municipal authorities, the FPS Justice, the College of the Public Prosecution Service, the College of Courts and Tribunals, the FPS Interior, the FPS Foreign Affairs and the State Archives.",
+     "title": "Het Rijksarchief is vertegenwoordigd in het beheerscomité van de Databank voor Akten van de Burgerlijke Stand",
+     "url": "https://www.arch.be/index.php?l=nl&m=nieuws&r=alle-nieuwsberichten&a=2023-06-14-het-rijksarchief-is-vertegenwoordigd-in-het-beheerscomite-van-de-databank-voor-akten-van-de-burgerlijke-stand",
+     "value": "The committee is made up of the municipalities, FPS Justice, the Public Prosecution College, the Courts College, FPS Interior, FPS Foreign Affairs and the State Archives"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+     "quote": "Wet van 18 juni 2018 houdende diverse bepalingen inzake burgerlijk recht en bepalingen met het oog op de bevordering van alternatieve vormen van geschillenoplossing",
+     "quote_english": "Law of 18 June 2018 containing various provisions on civil law and provisions to promote alternative forms of dispute resolution",
+     "title": "Geldende regelgeving | IBZ - FOD Binnenlandse Zaken",
+     "url": "https://www.ibz.rrn.fgov.be/nl/professioneel/dabs/geldende-regelgeving",
+     "value": "Law of 18 June 2018 on various provisions of civil law (Civil Status Modernisation Law)"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Databank voor Akten van de Burgerlijke Stand - DABS (Civil Status Records Database)",
+   "operator": "Beheerscomité DABS (FOD Justitie, FOD Binnenlandse Zaken, FOD Buitenlandse Zaken, municipalities, Rijksarchief)",
+   "research_note": "No public source found on DABS hosting/infrastructure provider or the number of deeds stored.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "2005-05-25",
+     "publisher": "Belgisch Staatsblad (copy published by etaamb.openjustice.be)",
+     "quote": "De doelstelling van dit Register van de Identiteitskaarten bestaat erin een permanente inventaris te verzekeren van de identiteitskaarten die in België vervaardigd en uitgereikt werden.",
+     "quote_english": "The purpose of this Register of Identity Cards is to ensure a permanent inventory of the identity cards produced and issued in Belgium.",
+     "title": "Koninklijk Besluit van 25/05/2005 tot bepaling van de personen en instellingen die toegang hebben tot het register van de identiteitskaarten",
+     "url": "https://etaamb.openjustice.be/nl/koninklijk-besluit-van-25-mei-2005_n2005000390.html",
+     "value": "Register van de Identiteitskaarten: a permanent inventory of the identity cards produced and issued in Belgium"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "2005-05-25",
+     "publisher": "Belgisch Staatsblad (copy published by etaamb.openjustice.be)",
+     "quote": "e) de informatie waaruit blijkt dat de kaart geldig, vervallen of vernietigd is en, in dat geval de reden;",
+     "quote_english": "e) the information showing whether the card is valid, expired or destroyed and, in that case, the reason;",
+     "title": "Koninklijk Besluit van 25/05/2005 tot bepaling van de personen en instellingen die toegang hebben tot het register van de identiteitskaarten",
+     "url": "https://etaamb.openjustice.be/nl/koninklijk-besluit-van-25-mei-2005_n2005000390.html",
+     "value": "The register records whether each card is valid, expired or destroyed, and the reason"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2005-05-25",
+     "publisher": "Belgisch Staatsblad (copy published by etaamb.openjustice.be)",
+     "quote": "schept een wettelijk kader voor het bestand van de identiteitskaarten dat door het koninklijk besluit van 29 juli 1985 betreffende de identiteitskaarten ingesteld was.",
+     "quote_english": "creates a legal framework for the identity card file that had been established by the royal decree of 29 July 1985 on identity cards.",
+     "title": "Koninklijk Besluit van 25/05/2005 tot bepaling van de personen en instellingen die toegang hebben tot het register van de identiteitskaarten",
+     "url": "https://etaamb.openjustice.be/nl/koninklijk-besluit-van-25-mei-2005_n2005000390.html",
+     "value": "Article 6bis of the Law of 19 July 1991 gives the ID card file (set up by the Royal Decree of 29 July 1985) its legal framework"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+     "quote": "worden opgenomen en bijgehouden in het centraal bestand van de identiteitskaarten en in het centraal bestand van de vreemdelingenkaarten.",
+     "quote_english": "are recorded and kept in the central file of identity cards and in the central file of foreigners' cards.",
+     "title": "Wetgeving eID | IBZ - FOD Binnenlandse Zaken",
+     "url": "https://www.ibz.rrn.fgov.be/nl/professioneel/identiteitsdocumenten/eid/wetgeving",
+     "value": "The history of photos and signature images is kept in the central files of identity cards and of foreigners' cards"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+     "quote": "wel degelijk is uitgereikt door de Belgische overheid en niet bekend staat als verloren, gestolen, verlopen of ongeldig.",
+     "quote_english": "has indeed been issued by the Belgian government and is not known as lost, stolen, expired or invalid.",
+     "title": "Checkdoc | IBZ - FOD Binnenlandse Zaken",
+     "url": "https://www.ibz.rrn.fgov.be/nl/professioneel/identiteitsdocumenten/checkdoc",
+     "value": "Checkdoc lets third parties verify whether a Belgian identity document is lost, stolen, expired or invalid"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "foreign_dependency",
+     "language": "nl",
+     "published": "2018-10-08",
+     "publisher": "Emerce (Zetes press release)",
+     "quote": "Zetes kondigt aan de twee aanbestedingen van de FOD Binnenlandse Zaken binnengehaald te hebben voor de productie en de personalisatie van de eID, de Kids-ID, de verblijfstitels en de bijbehorende documenten",
+     "quote_english": "Zetes announces it has won the two tenders of the FPS Interior for the production and personalisation of the eID, the Kids-ID, residence permits and related documents",
+     "title": "Zetes opnieuw geselecteerd voor de productie en depersonalisatie van de kaarten en nu ook voor de uitgifte van de authenticatie- en handtekeningcertificaten",
+     "url": "https://www.emerce.nl/wire/zetes-opnieuw-geselecteerd-productie-depersonalisatie-kaarten-nu-uitgifte-authenticatie-handtekeningcertificaten",
+     "value": "Card production and personalisation contracted to Zetes (2018 FPS Interior tenders)"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Register van de Identiteitskaarten / centraal bestand van de identiteitskaarten (Register of Identity Cards)",
+   "operator": "FOD Binnenlandse Zaken - Algemene Directie Identiteit en Burgerzaken",
+   "research_note": "No public source found on the register's own hosting. Card production is contracted to Zetes. The law text is cited from etaamb.openjustice.be, a faithful copy of the Belgisch Staatsblad, because ejustice blocks automated access.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2025-08-05",
+     "publisher": "FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering",
+     "quote": "The FAS enables citizens to authenticate themselves using digital keys, allowing authorities to confirm who is requesting access to their applications.",
+     "quote_english": "",
+     "title": "Privacy statement - FAS - My Digital Keys",
+     "url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
+     "value": "Federal Authentication Service (FAS / CSAM 'My digital keys'): citizens authenticate with digital keys such as the eID or itsme"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "2025-08-05",
+     "publisher": "FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering",
+     "quote": "Please read this Privacy Notice to learn how personal data are collected and processed within the Federal Authentication Service (FAS) provided by DG Simplification and Digitization.",
+     "quote_english": "",
+     "title": "Privacy statement - FAS - My Digital Keys",
+     "url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
+     "value": "FPS Policy and Support (BOSA), DG Simplification and Digitization provides the FAS"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2025-08-05",
+     "publisher": "FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering",
+     "quote": "The processing of your data by DG Simplification and Digitization during registration and use of digital keys is based on Article 9 of the Belgian Act of 18 July 2017 on electronic identification.",
+     "quote_english": "",
+     "title": "Privacy statement - FAS - My Digital Keys",
+     "url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
+     "value": "Article 9 of the Law of 18 July 2017 on electronic identification"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "2017-07-18",
+     "publisher": "Belgisch Staatsblad (copy published by etaamb.openjustice.be)",
+     "quote": "wordt de Federale overheidsdienst Beleid en Ondersteuning belast met het aanbieden van elektronische aanmeldingsdiensten voor overheidstoepassingen binnen de authenticatiedienst.",
+     "quote_english": "the Federal Public Service Policy and Support is charged with offering electronic log-in services for government applications within the authentication service.",
+     "title": "Wet van 18/07/2017 inzake elektronische identificatie",
+     "url": "https://etaamb.openjustice.be/nl/wet-van-18-juli-2017_n2017020539.html",
+     "value": "Law of 18 July 2017, Art. 9: FPS BOSA is charged with providing electronic log-in services for government applications"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "en",
+     "published": "2025-08-05",
+     "publisher": "FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering",
+     "quote": "Accredited service providers (e.g., itsme®) process your data under applicable regulations and the Royal Decree of 22 October 2017.",
+     "quote_english": "",
+     "title": "Privacy statement - FAS - My Digital Keys",
+     "url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
+     "value": "Accredited private keys such as itsme are part of the FAS scheme"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "en",
+     "published": "2025-08-05",
+     "publisher": "FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering",
+     "quote": "DG Simplification and Digitization employs subcontractors as processors under GDPR-compliant contracts.",
+     "quote_english": "",
+     "title": "Privacy statement - FAS - My Digital Keys",
+     "url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
+     "value": "BOSA uses subcontractors as data processors (not named)"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "en",
+     "published": "2026-03-17",
+     "publisher": "itsme (Belgian Mobile ID)",
+     "quote": "For the first time in its nearly ten-year history, more than eight million Belgians are using the digital identity app.",
+     "quote_english": "",
+     "title": "itsme® grows to eight million users and strengthens its position as a European player",
+     "url": "https://press.itsme-id.com/itsmer-grows-to-eight-million-users-and-strengthens-its-position-as-a-european-player",
+     "value": "itsme: more than eight million users in Belgium (2025)"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "unknown",
+   "holding_name": "Belgian eID card + itsme (CSAM) via the Federal Authentication Service (FAS)",
+   "operator": "FOD BOSA - DG Vereenvoudiging en Digitalisering (FAS/CSAM); itsme operated by Belgian Mobile ID",
+   "research_note": "No public source found on the FAS hosting location or the names of its subcontractors.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2025-08-05",
+     "publisher": "FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering",
+     "quote": "Authentication logs (date, time, ID number, message ID, IP address, browser, OS) are stored in an audit trail for 10 years for investigation or complaint purposes.",
+     "quote_english": "",
+     "title": "Privacy statement - FAS - My Digital Keys",
+     "url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
+     "value": "FAS authentication logs (date, time, ID number, IP address, browser, OS) are kept in an audit trail for 10 years"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "2025-08-05",
+     "publisher": "FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering",
+     "quote": "The Federal Public Service Policy and Support, the Directorate-General for Simplification and Digitization (\"DG Simplification and Digitization\"), is responsible for your personal data",
+     "quote_english": "",
+     "title": "Privacy statement - FAS - My Digital Keys",
+     "url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
+     "value": "Controller: FPS BOSA, DG Simplification and Digitization"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "en",
+     "published": "2025-08-05",
+     "publisher": "FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering",
+     "quote": "This forms the legal basis for processing the national registration number within the FAS.",
+     "quote_english": "",
+     "title": "Privacy statement - FAS - My Digital Keys",
+     "url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
+     "value": "Article 9 of the Law of 18 July 2017 on electronic identification is the legal basis for processing within the FAS"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "holding_name": "FAS audit trail (authentication logs of the Federal Authentication Service)",
+   "operator": "FOD BOSA - DG Vereenvoudiging en Digitalisering",
+   "research_note": "No public source states where the FAS audit trail is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken - Directie van de Verkiezingen",
+     "quote": "stelt het college van burgemeester en schepenen de lijst van de kiezers ingeschreven in de bevolkingsregisters vast op de tachtigste dag die voorafgaat aan de dag van de verkiezing.",
+     "quote_english": "the college of mayor and aldermen draws up the list of voters registered in the population registers on the eightieth day preceding the day of the election.",
+     "title": "Code électoral / Kieswetboek (coordinated text)",
+     "url": "https://elections.fgov.be/sites/default/files/documents/CodeElectoral__Kieswetboek.pdf",
+     "value": "Voter list drawn up by each municipal college from the population registers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken - Directie van de Verkiezingen",
+     "quote": "het geslacht, de hoofdverblijfplaats en het identificatienummer bedoeld in artikel 2, tweede lid, van de wet van 8 augustus 1983 tot regeling van een Rijksregister van de natuurlijke personen.",
+     "quote_english": "sex, main residence and the identification number referred to in Article 2, second paragraph, of the law of 8 August 1983 organising a National Register of natural persons.",
+     "title": "Code électoral / Kieswetboek (coordinated text)",
+     "url": "https://elections.fgov.be/sites/default/files/documents/CodeElectoral__Kieswetboek.pdf",
+     "value": "Electoral Code Art. 10 §2: the list includes the National Register identification number (Law of 8 August 1983)"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kiezerslijst (voter list) derived from the population registers / Rijksregister",
+   "operator": "Municipal colleges of mayor and aldermen, using Rijksregister data (FOD Binnenlandse Zaken)",
+   "research_note": "The roll is derived from the Rijksregister; no source found on separate hosting. Official voter counts are published only as tables, which could not be quoted as prose.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Belgian eID PKI repository",
+     "quote": "On the top of this hierarchy, there is a “Belgium Root CA (BRCA)” of which the purpose amongst others is to build trust in the various Certification Authorities within the government domain.",
+     "quote_english": "",
+     "title": "Citizen CA Certification Practice Statement (v1.4)",
+     "url": "https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA.pdf",
+     "value": "Belgium Root CA (BRCA), the top of the government CA hierarchy"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "Belgian eID PKI repository",
+     "quote": "The Belgian authorities are the CSP responsible for the Belgium Root CAs and for the CA certificates issued under the Belgian Root CA.",
+     "quote_english": "",
+     "title": "Citizen CA Certification Practice Statement (v1.4)",
+     "url": "https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA.pdf",
+     "value": "The Belgian authorities are the certification service provider responsible for the Belgium Root CAs"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "Belgian eID PKI repository",
+     "quote": "CERTIPOST assumes, on behalf and for the account of the Belgian authorities, both the roles of CA and CSP for the Citizen CAs",
+     "quote_english": "",
+     "title": "Citizen CA Certification Practice Statement (v1.4)",
+     "url": "https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA.pdf",
+     "value": "Citizen CA operated by Certipost on behalf of the Belgian authorities (per CPS v1.4)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "en",
+     "published": "",
+     "publisher": "Belgian eID PKI repository",
+     "quote": "The root sign provider of the BRCA is CYBERTRUST - BALTIMORE owned by Digicert (http://cybertrust.omniroot.com/repository/).",
+     "quote_english": "",
+     "title": "Citizen CA Certification Practice Statement (v1.4)",
+     "url": "https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA.pdf",
+     "value": "The root-sign provider for the BRCA (browser trust) is Cybertrust-Baltimore, owned by DigiCert"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "nl",
+     "published": "2018-10-08",
+     "publisher": "Emerce (Zetes press release)",
+     "quote": "Dit statuut wordt pas verkregen na zeer uitgebreide audits, waarvoor Zetes over de nodige expertise beschikt dankzij de nieuwe divisie ZetesConfidens.",
+     "quote_english": "This status is only obtained after very extensive audits, for which Zetes has the necessary expertise thanks to the new ZetesConfidens division.",
+     "title": "Zetes opnieuw geselecteerd voor de productie en depersonalisatie van de kaarten en nu ook voor de uitgifte van de authenticatie- en handtekeningcertificaten",
+     "url": "https://www.emerce.nl/wire/zetes-opnieuw-geselecteerd-productie-depersonalisatie-kaarten-nu-uitgifte-authenticatie-handtekeningcertificaten",
+     "value": "Zetes (ZetesConfidens division) won the 2018 FPS Interior tender to issue the eID authentication and signature certificates"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "mixed",
+   "holding_name": "Belgium Root CA (BRCA) / eID Citizen CA (government PKI)",
+   "operator": "Belgian State (root CA); contracted certification service provider for the Citizen CA (Certipost per CPS v1.4; ZetesConfidens per the 2018 tender announcement)",
+   "research_note": "The CPS v1.4 on the official repository still names Certipost as the Citizen CA provider, while Zetes announced winning the certificate tender in 2018; both are cited. The DigiCert root-sign is a dependency for browser trust only. DigiCert's jurisdiction is not stated in the source, so this is marked mixed rather than non-EU.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "2022-07-01",
+     "publisher": "Gegevensbeschermingsautoriteit",
+     "quote": "de afgevaardigde van de minister heeft aangegeven dat het gaat om de interne databank van de vreemdelingendienst, namelijk Evibel, die in de toekomst zal worden vervangen door eMigration.",
+     "quote_english": "the minister's delegate indicated that it concerns the internal database of the immigration service, namely Evibel, which will in future be replaced by eMigration.",
+     "title": "Advies nr. 121/2022 van 1 juli 2022",
+     "url": "https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-121-2022.pdf",
+     "value": "Evibel is the internal database of the immigration service, to be replaced by eMigration"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evibel (internal case-file database of the Dienst Vreemdelingenzaken), to be replaced by eMigration",
+   "operator": "FOD Binnenlandse Zaken - Algemene Directie Dienst Vreemdelingenzaken",
+   "research_note": "Found only in a Data Protection Authority opinion. The immigration service's own site (dofi.ibz.be) blocks automated access. Legal basis (Law of 15 December 1980) and hosting not yet cited. This claim did not go through the local checker run, so it is unverified.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in depth. FPS Finance pages (financien.belgium.be) return a bot challenge to automated fetches, so quotes from them cannot be verified.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in depth. The FPS Finance customs pages (the AAD&A general administration, the PLDA declaration system) are behind a bot challenge.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidates: the Crossroads Bank for Social Security (KSZ/CBSS) network and the Federal Pensions Service (SFPD).",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidates: RIZIV/INAMI and the health insurance funds' member files. The RIZIV site was unreachable by script.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidate: FPS Finance AAPD Patrimoniumdocumentatie (cadastre and mortgage offices), whose site is behind a bot challenge.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidate: the Kruispuntbank van Ondernemingen (KBO/BCE) under FPS Economy, whose sites are behind a bot challenge.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidate: the UBO register at the FPS Finance Treasury (Law of 18 September 2017).",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidates: DIV (FPS Mobility) and the Kruispuntbank van de Voertuigen (Crossroads Bank for Vehicles). The mobilit site is behind a bot challenge.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidate: the Centraal Strafregister (Central Criminal Register, FPS Justice). The Justice sites are behind a bot challenge.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidate: the Algemene Nationale Gegevensbank (ANG, national police database; Police Function Act Art. 44/7). police.be returned 403.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "nl",
+     "published": "2023-03-02",
+     "publisher": "Belgisch Staatsblad (copy published by etaamb.openjustice.be)",
+     "quote": "wordt de Directie van de politionele informatie en de ICT-middelen van de Federale Politie, zoals bedoeld in artikel 7, 3°, van het",
+     "quote_english": "the Directorate of Police Information and ICT Resources of the Federal Police, as referred to in Article 7, 3°, of the ... is designated",
+     "title": "Wet van 02/03/2023 betreffende de werking en het gebruik van het schengeninformatiesysteem",
+     "url": "https://etaamb.openjustice.be/nl/wet-van-02-maart-2023_n2023030500.html",
+     "value": "SIS Law of 2 March 2023, Art. 4 designates the Federal Police Directorate of Police Information and ICT Resources as the N.SIS authority"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "N.SIS (national part of the Schengen Information System)",
+   "operator": "Federale Politie - Directie van de politionele informatie en de ICT-middelen (N.SIS authority)",
+   "research_note": "Hosting not found. The quote was checked by hand against the page HTML but did not go through the local checker run. VIS and Entry/Exit national components were not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidate: the Centraal Wapenregister (Central Weapons Register; Weapons Law of 8 June 2006).",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidate: the Belgisch Staatsblad (FPS Justice). ejustice.just.fgov.be blocks automated access.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidate: the FEDCOM accounting system. The FPS BOSA and Court of Audit sites are behind a bot challenge.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidates: Persopoint and Fedweb, both behind a bot challenge.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken - Directie van de Verkiezingen",
+     "quote": "Een belangrijk onderdeel daarvan is de digitale transmissie van de verkiezingsresultaten vanuit de kantonhoofdbureaus naar de centrale overheid op verkiezingsdag.",
+     "quote_english": "An important part of it is the digital transmission of election results from the cantonal head offices to the central government on election day.",
+     "title": "Verkiezingssoftware | Verkiezingen België 2024",
+     "url": "https://verkiezingen.fgov.be/algemeen/verkiezingssoftware",
+     "value": "The MARTINE platform transmits results digitally from the cantonal head offices to central government on election day"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken - Directie van de Verkiezingen",
+     "quote": "Gemeenten waar elektronisch gestemd wordt maken gebruik van de SMARTMATIC software.",
+     "quote_english": "Municipalities where electronic voting takes place use the SMARTMATIC software.",
+     "title": "Verkiezingssoftware | Verkiezingen België 2024",
+     "url": "https://verkiezingen.fgov.be/algemeen/verkiezingssoftware",
+     "value": "Municipalities that vote electronically use Smartmatic software"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken - Directie van de Verkiezingen",
+     "quote": "De computer bij de FOD Binnenlandse Zaken waarop de USB-sticks aangemaakt worden is niet verbonden met het internet.",
+     "quote_english": "The computer at the FPS Interior on which the USB sticks are created is not connected to the internet.",
+     "title": "Veiligheid en transparantie | Verkiezingen België 2024",
+     "url": "https://verkiezingen.fgov.be/algemeen/veiligheid-en-transparantie",
+     "value": "FPS Interior creates the voting-software USB sticks on an offline computer"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "nl",
+     "published": "",
+     "publisher": "FOD Binnenlandse Zaken - Directie van de Verkiezingen",
+     "quote": "De stemcomputers in de bureaus in België zijn dus niet verbonden met het Internet.",
+     "quote_english": "The voting computers in the polling stations in Belgium are therefore not connected to the Internet.",
+     "title": "Veiligheid en transparantie | Verkiezingen België 2024",
+     "url": "https://verkiezingen.fgov.be/algemeen/veiligheid-en-transparantie",
+     "value": "Voting computers are stand-alone and not connected to the Internet"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Verkiezingssoftware: MARTINE (results transmission), SMARTMATIC (e-voting), PATSY (counting aid)",
+   "operator": "FOD Binnenlandse Zaken - Directie van de Verkiezingen",
+   "research_note": "Hosting of the MARTINE platform not found. The e-voting software is supplied by the private vendor Smartmatic; its jurisdiction is not stated in the source.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidate: the Nationale Bank van België (NBB), whose site is reachable.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Details are unlikely to be public.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidates: VSSE and ADIV/SGRS. Details are unlikely to be public.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidates: ASTRID (the public-safety radio network) and the 112 centres.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidates: the NCCN (National Crisis Centre) and BE-Alert. The crisiscentrum.be site was intermittently unreachable.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Candidate: Elia, whose site returned 403 to scripted fetches.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Water management is a regional competence (VMM, Waterbouwkundig Laboratorium, SPW).",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "research_note": "Tier 2, not researched in this run. Candidates: the eHealth platform and the regional hubs.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "research_note": "Tier 2, not researched in this run. Candidates: Sciensano and Vaccinnet.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in this run. Education is a community competence (e.g. Flanders' LED diploma database).",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "research_note": "Tier 2, not researched in this run. The Statbel site is behind a bot challenge.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "research_note": "Tier 3, not researched in this run. Candidates: NGI/IGN and the regional address registers.",
+   "status": "unknown"
+  },
+  {
+   "claims": [],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "research_note": "Tier 3, not researched in this run. Candidate: the Rijksarchief (State Archives, arch.be).",
+   "status": "unknown"
+  }
+ ],
+ "iso": "BE"
+}

@@ -1,0 +1,1475 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2009",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "provoz informačního systému základních registrů, informačního systému sdílené služby, registru obyvatel a registru práv a povinností a jejich bezpečnost",
+     "title": "Zákon č. 111/2009 Sb., o základních registrech",
+     "url": "https://www.zakonyprolidi.cz/cs/2009-111",
+     "value": "DIA operates ISZR, the shared-service IS, ROB and RPP and is responsible for their security"
+    }
+   ],
+   "holding_name": "Informační systém základních registrů (ISZR) a Registr práv a povinností (RPP)",
+   "suggested_class": "shared_register_backbone",
+   "why_critical": "All four base registers and every agency's data exchange run through ISZR/RPP; its loss halts identity, address and entitlement checks across government."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "cs",
+     "published": "2026-05-22",
+     "publisher": "Digitální a informační agentura",
+     "quote": "V dubnu 2026 bylo celkově zřízeno 5 000 686 datových schránek a odesláno 1 570 451 312 datových zpráv.",
+     "title": "Fact sheet Digitální a informační agentury",
+     "url": "https://www.dia.gov.cz/media/3376/download/2026%20fact%20sheet.pdf?v=1",
+     "value": "5,000,686 data boxes established and 1,570,451,312 data messages sent (April 2026)"
+    }
+   ],
+   "holding_name": "Informační systém datových schránek (ISDS)",
+   "suggested_class": "government_messaging",
+   "why_critical": "The legally binding electronic delivery channel between the state, businesses and citizens; over 5 million mailboxes and 1.57 billion messages."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "",
+     "publisher": "Digitální a informační agentura",
+     "quote": "V registru obyvatel jsou vedeny referenční údaje o státních občanech České republiky, cizincích, kteří pobývají na území České republiky v rámci trvalého pobytu",
+     "title": "Registr obyvatel",
+     "url": "https://www.dia.gov.cz/cs/nase-cinnosti/na-cem-to-bezi/registr-obyvatel",
+     "value": "Basic Population Register (Základní registr obyvatel, ROB) holding reference data on citizens and resident foreigners"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "cs",
+     "published": "",
+     "publisher": "Digitální a informační agentura",
+     "quote": "Správcem registru obyvatel je Digitální a informační agentura. Údaje vedené v registru obyvatel edituje prostřednictvím agendových informačních systémů Ministerstvo vnitra",
+     "title": "Registr obyvatel",
+     "url": "https://www.dia.gov.cz/cs/nase-cinnosti/na-cem-to-bezi/registr-obyvatel",
+     "value": "Digitální a informační agentura (DIA) administers ROB; Ministry of the Interior edits the data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2009",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Správcem informačního systému základních registrů a informačního systému sdílené služby je Digitální a informační agentura",
+     "title": "Zákon č. 111/2009 Sb., o základních registrech",
+     "url": "https://www.zakonyprolidi.cz/cs/2009-111",
+     "value": "Act No. 111/2009 Coll. on basic registers, § 7: DIA administers the basic registers information system (ISZR)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2000",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Evidence obyvatel je vedena v informačním systému evidence obyvatel",
+     "title": "Zákon č. 133/2000 Sb., o evidenci obyvatel a rodných číslech",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-133",
+     "value": "Act No. 133/2000 Coll. on population records establishes the population records information system (ISEO)"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Základní registr obyvatel (ROB) / Informační systém evidence obyvatel (ISEO)",
+   "operator": "Digitální a informační agentura (DIA); data edited by Ministerstvo vnitra",
+   "research_note": "No public source found stating ROB/ISZR hosting location or record count; DIA and szrcr.cz pages searched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2021",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Evidence občanských průkazů je informačním systémem veřejné správy, který obsahuje údaje o držitelích občanských průkazů, údaje o občanských průkazech",
+     "title": "Zákon č. 269/2021 Sb., o občanských průkazech",
+     "url": "https://www.zakonyprolidi.cz/cs/2021-269",
+     "value": "ID card register (Evidence občanských průkazů), a public administration information system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2021",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "digitální zpracování podoby a podpisu uvedené v občanském průkazu, popřípadě důvod nepořízení podpisu",
+     "title": "Zákon č. 269/2021 Sb., o občanských průkazech",
+     "url": "https://www.zakonyprolidi.cz/cs/2021-269",
+     "value": "Act 269/2021 § 56(1)(i): the ID register keeps the digitised facial image and signature"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2021",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Údaje se v evidenci občanských průkazů vedou po dobu 15 let ode dne skončení platnosti občanského průkazu",
+     "title": "Zákon č. 269/2021 Sb., o občanských průkazech",
+     "url": "https://www.zakonyprolidi.cz/cs/2021-269",
+     "value": "Act 269/2021 § 57(1): data retained 15 years after the ID card expires"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "1999",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "o) označení orgánu, který cestovní doklad vydal, p) digitální zpracování fotografie a podpisu držitele",
+     "title": "Zákon č. 329/1999 Sb., o cestovních dokladech",
+     "url": "https://www.zakonyprolidi.cz/cs/1999-329",
+     "value": "Act 329/1999 § 29(2)(p): passport register keeps the digitised photograph and signature"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2021",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Správcem evidence občanských průkazů je ministerstvo. (3) Evidence občanských průkazů je neveřejnou evidencí.",
+     "title": "Zákon č. 269/2021 Sb., o občanských průkazech",
+     "url": "https://www.zakonyprolidi.cz/cs/2021-269",
+     "value": "Ministry of the Interior is the controller of the ID card register"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidence občanských průkazů / Evidence cestovních dokladů (ID card and passport registers)",
+   "operator": "Ministerstvo vnitra",
+   "research_note": "Digitised facial image is retained in both registers for 15 years after expiry; no public hosting information found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "cs",
+     "published": "2021",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "se v evidenci občanských průkazů vedou výlučně po dobu od jejich pořízení do doby převzetí občanského průkazu žadatelem o vydání občanského průkazu, nejdéle však do uplynutí 90 dnů ode dne vydání občanského průkazu",
+     "title": "Zákon č. 269/2021 Sb., o občanských průkazech",
+     "url": "https://www.zakonyprolidi.cz/cs/2021-269",
+     "value": "ID card fingerprints are kept only until the card is collected, and at most 90 days after issue"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "cs",
+     "published": "1999",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "se vedou výlučně po dobu od jejich pořízení do uplynutí 60 dnů ode dne dodání vyrobeného cestovního pasu ministerstvu; po uplynutí této lhůty je správce evidence cestovních dokladů podle odstavce 1 povinen tyto údaje odstranit",
+     "title": "Zákon č. 329/1999 Sb., o cestovních dokladech",
+     "url": "https://www.zakonyprolidi.cz/cs/1999-329",
+     "value": "Passport biometric data must be deleted 60 days after the produced passport is delivered to the ministry"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2021",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "biometrickými údaji se rozumí zobrazení obličeje a otisky prstů rukou pořízené podle nařízení Evropského parlamentu a Rady (EU) 2019/1157",
+     "title": "Zákon č. 269/2021 Sb., o občanských průkazech",
+     "url": "https://www.zakonyprolidi.cz/cs/2021-269",
+     "value": "Biometric data defined as facial image and fingerprints captured under Regulation (EU) 2019/1157"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Biometrické údaje v evidenci občanských průkazů / evidenci cestovních dokladů (not retained)",
+   "operator": "Ministerstvo vnitra",
+   "research_note": "Czech law requires deletion of ID-card fingerprints once the card is handed over (max 90 days) and of passport biometrics 60 days after delivery. Fingerprints of foreign nationals are, however, kept in the Police foreigners' information system (see residence_permits).",
+   "status": "not_held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2000",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Matriční úřad vede pro každou matriční knihu sbírku listin za každý kalendářní rok samostatně.",
+     "title": "Zákon č. 301/2000 Sb., o matrikách, jménu a příjmení",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-301",
+     "value": "Collection of documents (sbírka listin) underlying each civil status register book"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2000",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "předají matriční úřady Ministerstvu vnitra pro účely zřízení matričního informačního systému do 31. prosince 2026 podle harmonogramu stanoveného v národním standardu pro elektronické vedení matriky",
+     "title": "Zákon č. 301/2000 Sb., o matrikách, jménu a příjmení",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-301",
+     "value": "Registry offices transfer electronic civil status data to the Ministry of the Interior to set up a central civil-status information system by 31 Dec 2026"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sbírka listin matričních úřadů / matriční informační systém (civil status document collections)",
+   "operator": "Matriční úřady (municipal civil registry offices); Ministerstvo vnitra for the central civil-status IS",
+   "research_note": "Document collections are kept per registry office; a central civil-status information system at the Ministry of the Interior is being populated by 31 Dec 2026. No hosting or volume figures found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2021",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "V evidenci občanských průkazů se o neplatném občanském průkazu vedou a) číslo, popřípadě série, b) datum skutečného skončení platnosti, c) důvod skončení platnosti",
+     "title": "Zákon č. 269/2021 Sb., o občanských průkazech",
+     "url": "https://www.zakonyprolidi.cz/cs/2021-269",
+     "value": "The ID card register records invalid cards, the date and the reason they became invalid"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "1999",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Skončení platnosti cestovního dokladu se bezodkladně uvede do evidence cestovních dokladů.",
+     "title": "Zákon č. 329/1999 Sb., o cestovních dokladech",
+     "url": "https://www.zakonyprolidi.cz/cs/1999-329",
+     "value": "Act 329/1999: passport invalidation must be recorded without delay in the passport register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2021",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Správcem evidence občanských průkazů je ministerstvo. (3) Evidence občanských průkazů je neveřejnou evidencí.",
+     "title": "Zákon č. 269/2021 Sb., o občanských průkazech",
+     "url": "https://www.zakonyprolidi.cz/cs/2021-269",
+     "value": "Ministry of the Interior is the controller of the ID card register"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidence občanských průkazů; Evidence cestovních dokladů",
+   "operator": "Ministerstvo vnitra",
+   "research_note": "No hosting or record-count figures found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2017",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Národní bod je informační systém veřejné správy podporující proces elektronické identifikace a autentizace prostřednictvím kvalifikovaného systému. (2) Správcem národního bodu je Agentura.",
+     "title": "Zákon č. 250/2017 Sb., o elektronické identifikaci",
+     "url": "https://www.zakonyprolidi.cz/cs/2017-250",
+     "value": "National point for identification and authentication (Národní bod, NIA), administered by DIA"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2017",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "lze umožnit prokázání totožnosti s využitím elektronické identifikace pouze prostřednictvím kvalifikovaného systému",
+     "title": "Zákon č. 250/2017 Sb., o elektronické identifikaci",
+     "url": "https://www.zakonyprolidi.cz/cs/2017-250",
+     "value": "Act 250/2017: identity may be proven electronically only through a qualified eID system"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "cs",
+     "published": "",
+     "publisher": "Ministerstvo vnitra České republiky",
+     "quote": "Každý občan může mít více Identit občana a jejich počet už překonal hranici 10 milionů.",
+     "title": "Počet elektronických Identit občanů překonal hranici 10 milionů",
+     "url": "https://mv.gov.cz/clanek/pocet-elektronickych-identit-obcanu-prekonal-hranici-10-milionu.aspx",
+     "value": "More than 10 million 'Identita občana' credentials; 5.5 million citizens hold an electronic identity"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "cs",
+     "published": "2026-05-22",
+     "publisher": "Digitální a informační agentura",
+     "quote": "Ke konci dubna 2026 měly 980 tisíc aktivních uživatelů a podle výzkumu vzrostla jejich znalost na 82 % a využití na 27 %.",
+     "title": "Fact sheet Digitální a informační agentury",
+     "url": "https://www.dia.gov.cz/media/3376/download/2026%20fact%20sheet.pdf?v=1",
+     "value": "eDoklady mobile ID app had 980,000 active users at end of April 2026"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "unknown",
+   "holding_name": "Národní bod pro identifikaci a autentizaci (NIA) / Identita občana / eDoklady",
+   "operator": "Digitální a informační agentura (DIA)",
+   "research_note": "Bank identities (BankID) are private qualified eID schemes connected through NIA; no public source found on where NIA is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2017",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "V národním bodu se jako provozní údaj vede alespoň a) datum prvotního zápisu údaje do národního bodu, b) datum poslední změny údaje vedeného v národním bodu a c) záznam o využití údaje z národního bodu.",
+     "title": "Zákon č. 250/2017 Sb., o elektronické identifikaci",
+     "url": "https://www.zakonyprolidi.cz/cs/2017-250",
+     "value": "NIA keeps operational data including a record of each use of NIA data"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2017",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Údaje podle odstavců 1 a 2 se v národním bodu uchovávají po dobu 15 let od skončení platnosti prostředku pro elektronickou identifikaci.",
+     "title": "Zákon č. 250/2017 Sb., o elektronické identifikaci",
+     "url": "https://www.zakonyprolidi.cz/cs/2017-250",
+     "value": "Act 250/2017 § 21(5): NIA data and operational records kept 15 years after the eID means expires"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2021",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "V evidenci občanských průkazů se jako provozní údaje vedou alespoň záznamy o využití údajů vedených v evidenci občanských průkazů",
+     "title": "Zákon č. 269/2021 Sb., o občanských průkazech",
+     "url": "https://www.zakonyprolidi.cz/cs/2021-269",
+     "value": "Act 269/2021 § 56(5): ID card register logs every use of its data"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "holding_name": "Provozní údaje národního bodu (NIA usage records); záznamy o využití údajů v evidenci OP",
+   "operator": "Digitální a informační agentura (DIA); Ministerstvo vnitra for ID register logs",
+   "research_note": "No public source on volume or hosting of NIA logs.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2024",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Součástmi informačního systému jsou a) seznam voličů, b) registr kandidátních listin, c) registr okrskových volebních komisí a d) nástroj pro sestavování elektronických petic.",
+     "title": "Zákon č. 88/2024 Sb., o správě voleb",
+     "url": "https://www.zakonyprolidi.cz/cs/2024-88",
+     "value": "Election administration information system (ISSV) whose components include the voter list"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2024",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Jeho správcem je Ministerstvo vnitra. (2) Informační systém slouží ve volbách upravených tímto zákonem a příslušnými zákony o volbách k zajištění evidence voličů",
+     "title": "Zákon č. 88/2024 Sb., o správě voleb",
+     "url": "https://www.zakonyprolidi.cz/cs/2024-88",
+     "value": "Ministry of the Interior administers the ISSV, which keeps voter records"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2024",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Ministerstvo vnitra vytvoří do 18 měsíců ode dne nabytí účinnosti tohoto zákona seznam voličů naplněním údaji ze základních registrů",
+     "title": "Zákon č. 88/2024 Sb., o správě voleb",
+     "url": "https://www.zakonyprolidi.cz/cs/2024-88",
+     "value": "The ministry must build the voter list from basic-register data within 18 months of the act taking effect"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Seznam voličů v informačním systému správy voleb (ISSV)",
+   "operator": "Ministerstvo vnitra",
+   "research_note": "Act 88/2024 replaces municipal permanent voter lists with a single voter list in the ISSV; hosting not published.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2016",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Zřizuje se a vzniká Správa státních služeb vytvářejících důvěru",
+     "title": "Zákon č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce",
+     "url": "https://www.zakonyprolidi.cz/cs/2016-297",
+     "value": "State Trust Services Administration established by Act 297/2016 § 14"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2016",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Předmětem činnosti Správy je poskytování služeb vytvářejících důvěru pro potřeby České republiky.",
+     "title": "Zákon č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce",
+     "url": "https://www.zakonyprolidi.cz/cs/2016-297",
+     "value": "Its purpose is to provide trust services for the needs of the Czech Republic"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2016",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Zřizovatelskou funkci vůči Správě vykonává Agentura. (3) Statutárním orgánem Správy je ředitel.",
+     "title": "Zákon č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce",
+     "url": "https://www.zakonyprolidi.cz/cs/2016-297",
+     "value": "DIA acts as founder of the State Trust Services Administration"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "Správa státních služeb vytvářejících důvěru (state trust service provider)",
+   "operator": "Správa státních služeb vytvářejících důvěru (state contributory organisation founded by DIA)",
+   "research_note": "No public source found on the provider's infrastructure hosting or certificate counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "1999",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Policie při výkonu působnosti podle tohoto zákona provozuje informační systém cizinců, jehož je správcem a který obsahuje jméno",
+     "title": "Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky",
+     "url": "https://www.zakonyprolidi.cz/cs/1999-326",
+     "value": "Police operate and control the foreigners' information system, incl. photos and fingerprints"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "1999",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Informační systém cizinců podle odstavce 1 obsahuje rovněž údaje o cizincích, kteří požádali Českou republiku o udělení mezinárodní ochrany nebo dočasné ochrany",
+     "title": "Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky",
+     "url": "https://www.zakonyprolidi.cz/cs/1999-326",
+     "value": "The system also covers applicants for and holders of international or temporary protection"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "1999",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Evidované údaje se uchovávají po dobu a) 75 let, pokud jde o údaje v elektronické podobě, a 15 let, pokud jde o údaje v listinné podobě",
+     "title": "Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky",
+     "url": "https://www.zakonyprolidi.cz/cs/1999-326",
+     "value": "Electronic records retained 75 years after residence ends"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informační systém cizinců (Foreigners' Information System)",
+   "operator": "Policie České republiky (with Ministerstvo vnitra – OAMP supplying asylum/protection data)",
+   "research_note": "No public hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "",
+     "publisher": "Generální finanční ředitelství",
+     "quote": "Podílí se na vývoji a praktickém uplatňování Automatizovaného daňového informačního systému",
+     "title": "Organizační řád Generálního finančního ředitelství",
+     "url": "https://financnisprava.gov.cz/assets/cs/prilohy/fs-financni-sprava-cr/OR_FS_UZ_D4.pdf",
+     "value": "Automated Tax Information System (ADIS) of the Financial Administration"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2009",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Správce daně vede evidenci daní, kde zaznamenává stanovení daně, vznik, splnění, popřípadě jiný zánik daňových povinností, a z toho vyplývající přeplatky, nedoplatky a případné převody.",
+     "title": "Zákon č. 280/2009 Sb., daňový řád",
+     "url": "https://www.zakonyprolidi.cz/cs/2009-280",
+     "value": "Tax Code (Act 280/2009) § 149: tax administrator keeps tax records on personal tax accounts"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Automatizovaný daňový informační systém (ADIS) – evidence daní / osobní daňové účty",
+   "operator": "Finanční správa ČR (Generální finanční ředitelství)",
+   "research_note": "Secondary search snippets say SPCSS (a Ministry of Finance state enterprise) runs ADIS, but its website blocks automated retrieval and no fetchable primary source confirmed it, so hosting is left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2010-10-29",
+     "publisher": "Celní správa ČR",
+     "quote": "Spuštěním tzv. automatizovaného dovozního systému bude završena elektronická komunikace u všech celních systémů – tranzitu, vývozu i dovozu.",
+     "title": "e-Dovoz (tisková zpráva)",
+     "url": "https://celnisprava.gov.cz/cz/crhradeckralove/tiskove-zpravy/2010/Stranky/e-dovoz.aspx",
+     "value": "Automated import system e-Dovoz completing electronic customs systems for transit, export and import"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2012",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Základním úkolem celní správy je ochrana ekonomických zájmů České republiky a trhu zejména v souvislosti s dohledem nad zbožím a jeho pohybem.",
+     "title": "Zákon č. 17/2012 Sb., o Celní správě České republiky",
+     "url": "https://www.zakonyprolidi.cz/cs/2012-17",
+     "value": "Customs Administration: General Directorate of Customs and customs offices"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2016",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "výkon dohledu nad mezinárodním obchodem Evropské unie a nad zbožím, které vstupuje na celní území Evropské unie nebo jej opouští",
+     "title": "Zákon č. 242/2016 Sb., celní zákon",
+     "url": "https://www.zakonyprolidi.cz/cs/2016-242",
+     "value": "Customs Act 242/2016 implementing the EU customs rules"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "Automatizovaný dovozní systém e-Dovoz (with NCTS, AES, eCeP)",
+   "operator": "Celní správa ČR (Generální ředitelství cel)",
+   "research_note": "No public hosting or volume source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "1991",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Integrovaný informační systém Ministerstva práce a sociálních věcí je informačním systémem veřejné správy, jehož správcem je ministerstvo",
+     "title": "Zákon č. 582/1991 Sb., o organizaci a provádění sociálního zabezpečení",
+     "url": "https://www.zakonyprolidi.cz/cs/1991-582",
+     "value": "MPSV is controller of the integrated MPSV information system, which includes the ČSSZ system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "1991",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "zajišťuje vydávání tiskopisů předepsaných podle tohoto zákona, g) vede registr pojištěnců důchodového pojištění",
+     "title": "Zákon č. 582/1991 Sb., o organizaci a provádění sociálního zabezpečení",
+     "url": "https://www.zakonyprolidi.cz/cs/1991-582",
+     "value": "ČSSZ keeps the register of pension insurance contributors"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "1991",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "zajišťuje správu údajů Integrovaného informačního systému České správy sociálního zabezpečení; správou údajů se rozumí jejich sběr a zpracování",
+     "title": "Zákon č. 582/1991 Sb., o organizaci a provádění sociálního zabezpečení",
+     "url": "https://www.zakonyprolidi.cz/cs/1991-582",
+     "value": "ČSSZ manages the data of the ČSSZ integrated information system"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Integrovaný informační systém ČSSZ; registr pojištěnců důchodového pojištění",
+   "operator": "Česká správa sociálního zabezpečení (ČSSZ); controller Ministerstvo práce a sociálních věcí",
+   "research_note": "No public hosting or record-count source found in this pass.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "1992",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Všeobecná zdravotní pojišťovna České republiky vede registr všech pojištěnců veřejného zdravotního pojištění",
+     "title": "Zákon č. 592/1992 Sb., o pojistném na veřejné zdravotní pojištění",
+     "url": "https://www.zakonyprolidi.cz/cs/1992-592",
+     "value": "VZP keeps the register of all persons insured under public health insurance"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Centrální registr pojištěnců (Central Register of Insured Persons)",
+   "operator": "Všeobecná zdravotní pojišťovna ČR (VZP)",
+   "research_note": "No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2026-03-10",
+     "publisher": "Český úřad zeměměřický a katastrální",
+     "quote": "Informační systém katastru nemovitostí (ISKN) je integrovaný informační systém pro podporu výkonu státní správy katastru nemovitostí a pro zajištění uživatelských služeb katastru nemovitostí.",
+     "title": "Výroční zpráva ČÚZK za rok 2025",
+     "url": "https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx",
+     "value": "Cadastre is kept in the Cadastre of Real Estate Information System (ISKN)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2013",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "je veřejný seznam, který obsahuje soubor údajů o nemovitých věcech",
+     "title": "Zákon č. 256/2013 Sb., o katastru nemovitostí (katastrální zákon)",
+     "url": "https://www.zakonyprolidi.cz/cs/2013-256",
+     "value": "Cadastral Act 256/2013 § 1: the cadastre is a public list of real property and rights"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "1992",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "jako ústřední správní úřad zeměměřictví a katastru nemovitostí České republiky se sídlem v Praze",
+     "title": "Zákon č. 359/1992 Sb., o zeměměřických a katastrálních orgánech",
+     "url": "https://www.zakonyprolidi.cz/cs/1992-359",
+     "value": "ČÚZK is the central state authority for surveying and the cadastre"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "cs",
+     "published": "2026-03-10",
+     "publisher": "Český úřad zeměměřický a katastrální",
+     "quote": "V digitální části sbírky listin je k dispozici více než 33 milionů dokumentů",
+     "title": "Výroční zpráva ČÚZK za rok 2025",
+     "url": "https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx",
+     "value": "More than 33 million documents in the digital part of the cadastral deed collection"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Katastr nemovitostí – Informační systém katastru nemovitostí (ISKN)",
+   "operator": "Český úřad zeměměřický a katastrální (ČÚZK) and katastrální úřady",
+   "research_note": "ČÚZK 2025 annual report reviewed; no hosting information given.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2013",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Veřejný rejstřík je informačním systémem veřejné správy. (4) Veřejný rejstřík je veden v elektronické podobě. Veřejný rejstřík vede soud",
+     "title": "Zákon č. 304/2013 Sb., o veřejných rejstřících právnických a fyzických osob",
+     "url": "https://www.zakonyprolidi.cz/cs/2013-304",
+     "value": "The Public Register is a public administration IS kept electronically by the registry courts"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2009",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Správcem registru osob je Agentura. (2) Správce registru osob poskytuje editorům k přidělení identifikační číslo osoby a identifikační číslo provozovny",
+     "title": "Zákon č. 111/2009 Sb., o základních registrech",
+     "url": "https://www.zakonyprolidi.cz/cs/2009-111",
+     "value": "DIA administers the Basic Register of Persons (ROS) and assigns company identification numbers"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Veřejný rejstřík (Public Register) and Základní registr osob (ROS)",
+   "operator": "Rejstříkové soudy (registry courts); ROS administered by Digitální a informační agentura",
+   "research_note": "No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2021",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Evidence skutečných majitelů je informačním systémem veřejné správy, jehož správcem je Ministerstvo spravedlnosti",
+     "title": "Zákon č. 37/2021 Sb., o evidenci skutečných majitelů",
+     "url": "https://www.zakonyprolidi.cz/cs/2021-37",
+     "value": "Register of beneficial owners is a public administration IS controlled by the Ministry of Justice"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2021",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Evidenci skutečných majitelů vede soud, který je příslušný k řízení o zápisu. (3) Zápis do evidence skutečných majitelů provádí soud nebo notář.",
+     "title": "Zákon č. 37/2021 Sb., o evidenci skutečných majitelů",
+     "url": "https://www.zakonyprolidi.cz/cs/2021-37",
+     "value": "Kept by the court competent for registration; entries made by courts or notaries"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Evidence skutečných majitelů (Register of Beneficial Owners)",
+   "operator": "Ministerstvo spravedlnosti (controller); kept by registry courts",
+   "research_note": "No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2001",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "jehož správcem je ministerstvo. Registr silničních vozidel obsahuje evidenci a) silničních vozidel, vlastníků a provozovatelů těchto vozidel",
+     "title": "Zákon č. 56/2001 Sb., o podmínkách provozu vozidel na pozemních komunikacích",
+     "url": "https://www.zakonyprolidi.cz/cs/2001-56",
+     "value": "Road Vehicle Register, controlled by the Ministry of Transport, records vehicles, owners and operators"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2000",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Evidence údajů o řidičích, shromažďovaných z registru řidičů, je vedena v centrálním registru řidičů",
+     "title": "Zákon č. 361/2000 Sb., o provozu na pozemních komunikacích",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-361",
+     "value": "Central Driver Register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2000",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "vede centrální registr řidičů a informační systém digitálního tachografu",
+     "title": "Zákon č. 361/2000 Sb., o provozu na pozemních komunikacích",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-361",
+     "value": "Ministry of Transport keeps the central driver register and digital tachograph system"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registr silničních vozidel; Centrální registr řidičů",
+   "operator": "Ministerstvo dopravy",
+   "research_note": "No hosting or record-count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "1994",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Rejstřík trestů je informační systém veřejné správy, který obsahuje údaje o fyzických a právnických osobách",
+     "title": "Zákon č. 269/1994 Sb., o rejstříku trestů",
+     "url": "https://www.zakonyprolidi.cz/cs/1994-269",
+     "value": "Criminal Records Register: public administration IS of persons finally convicted"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "1994",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Údaje z rejstříku trestů slouží pro potřebu trestního, občanskoprávního nebo správního řízení a k prokazování bezúhonnosti. Správcem rejstříku trestů je Ministerstvo spravedlnosti",
+     "title": "Zákon č. 269/1994 Sb., o rejstříku trestů",
+     "url": "https://www.zakonyprolidi.cz/cs/1994-269",
+     "value": "Ministry of Justice is the controller"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Rejstřík trestů (Criminal Records Register)",
+   "operator": "Ministerstvo spravedlnosti",
+   "research_note": "Court case-management systems not researched in depth; no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2008",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Policie zpracovává v souladu s tímto zákonem a jiným právním předpisem informace včetně osobních údajů v rozsahu nezbytném pro plnění svých úkolů.",
+     "title": "Zákon č. 273/2008 Sb., o Policii České republiky",
+     "url": "https://www.zakonyprolidi.cz/cs/2008-273",
+     "value": "Police Act 273/2008 § 60: police process information incl. personal data as needed for their tasks"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informační systémy Policie ČR",
+   "operator": "Policie České republiky",
+   "research_note": "Individual police databases are not named publicly in the act; no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2008",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Policejní prezidium provozuje národní součást Schengenského informačního systému a plní úkoly orgánu centrálně odpovědného za národní součást Schengenského informačního systému",
+     "title": "Zákon č. 273/2008 Sb., o Policii České republiky",
+     "url": "https://www.zakonyprolidi.cz/cs/2008-273",
+     "value": "Police Presidium operates the national component of SIS and the SIRENE function"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "1999",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Ministerstvo zahraničních věcí při výkonu působnosti podle tohoto zákona a zákona o zahraniční službě provozuje informační systém, který obsahuje údaje o jménu",
+     "title": "Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky",
+     "url": "https://www.zakonyprolidi.cz/cs/1999-326",
+     "value": "Ministry of Foreign Affairs visa information system incl. photographs and fingerprints"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Národní součást Schengenského informačního systému (N.SIS); vízový informační systém MZV",
+   "operator": "Policejní prezidium ČR (N.SIS/SIRENE); Ministerstvo zahraničních věcí (visa IS)",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2024",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Centrální registr zbraní je neveřejný informační systém veřejné správy, který slouží k výkonu státní správy v oblasti nakládání se zbraněmi a střelivem",
+     "title": "Zákon č. 90/2024 Sb., o zbraních a střelivu",
+     "url": "https://www.zakonyprolidi.cz/cs/2024-90",
+     "value": "Central Firearms Register: non-public public administration IS"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2024",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Správcem centrálního registru zbraní je Policejní prezidium.",
+     "title": "Zákon č. 90/2024 Sb., o zbraních a střelivu",
+     "url": "https://www.zakonyprolidi.cz/cs/2024-90",
+     "value": "Police Presidium is the controller"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Centrální registr zbraní (Central Firearms Register)",
+   "operator": "Policejní prezidium ČR",
+   "research_note": "Act 90/2024 in force since 1 Jan 2026; no hosting or count source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2016",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Sbírka zákonů a mezinárodních smluv je úředním listem, ve kterém se vyhlašuje závazné znění právního předpisu, mezinárodní smlouvy nebo jiného aktu",
+     "title": "Zákon č. 222/2016 Sb., o Sbírce zákonů a mezinárodních smluv",
+     "url": "https://www.zakonyprolidi.cz/cs/2016-222",
+     "value": "The Collection of Laws is the official journal publishing the binding text and is kept electronically"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2016",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Elektronický systém Sbírky zákonů a mezinárodních smluv je informačním systémem veřejné správy. Správcem elektronického systému Sbírky zákonů a mezinárodních smluv je Ministerstvo vnitra.",
+     "title": "Zákon č. 222/2016 Sb., o Sbírce zákonů a mezinárodních smluv",
+     "url": "https://www.zakonyprolidi.cz/cs/2016-222",
+     "value": "Ministry of the Interior controls the electronic system of the Collection of Laws"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sbírka zákonů a mezinárodních smluv / elektronický systém e-Sbírka",
+   "operator": "Ministerstvo vnitra",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "cs",
+     "published": "2021-03-08",
+     "publisher": "Ministerstvo financí ČR",
+     "quote": "zajištění služby Bezpečného datového centra pro provoz Integrovaného informačního systému Státní pokladny v letech 2021 – 2025, a to přímým zadáním zakázky státnímu podniku Státní pokladna Centrum sdílených služeb",
+     "title": "Materiály na jednání vlády dne 8. března 2021",
+     "url": "https://www.mfcr.cz/cs/legislativa/materialy-na-jednani-vlady/1-ctvrtleti-21/materialy-na-jednani-vlady-dne-8-brezna-41198",
+     "value": "IISSP runs in the Secure Data Centre service directly awarded to the MF state enterprise SPCSS (2021–2025)"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "cs",
+     "published": "",
+     "publisher": "Ministerstvo financí ČR",
+     "quote": "Poskytovatel služeb Státní části eGovernment cloudu, služeb kybernetické bezpečnosti a dalších souvisejících ICT služeb pro státní správu.",
+     "title": "Přímo řízené organizace",
+     "url": "https://mf.gov.cz/cs/ministerstvo/zakladni-informace/primo-rizene-organizace",
+     "value": "SPCSS is an MF state enterprise providing the state part of the eGovernment cloud and cyber-security services"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "national",
+   "holding_name": "Integrovaný informační systém Státní pokladny (IISSP)",
+   "operator": "Ministerstvo financí; hosted by Státní pokladna Centrum sdílených služeb, s. p. (SPCSS)",
+   "research_note": "Hosting evidenced by the MF government-agenda note on a direct award to the state enterprise SPCSS for 2021–2025; later contract periods not checked.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2014",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Zřizuje se informační systém o státní službě jako informační systém veřejné správy, jehož účelem je vedení údajů nezbytných pro správu organizačních věcí služby a služebních vztahů",
+     "title": "Zákon č. 234/2014 Sb., o státní službě",
+     "url": "https://www.zakonyprolidi.cz/cs/2014-234",
+     "value": "Civil service information system for service relationships"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2014",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Správcem informačního systému o státní službě je Úřad vlády.",
+     "title": "Zákon č. 234/2014 Sb., o státní službě",
+     "url": "https://www.zakonyprolidi.cz/cs/2014-234",
+     "value": "Office of the Government is the controller"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2014",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Informační systém o platech státních zaměstnanců je součástí informačního systému o platech podle § 137 zákoníku práce.",
+     "title": "Zákon č. 234/2014 Sb., o státní službě",
+     "url": "https://www.zakonyprolidi.cz/cs/2014-234",
+     "value": "Pay data of state employees form part of the pay information system under the Labour Code § 137"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informační systém o státní službě (ISoSS); Informační systém o platech",
+   "operator": "Úřad vlády ČR (ISoSS)",
+   "research_note": "Armed-forces personnel/payroll systems not found publicly; no hosting source.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2024",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "řídí, zajišťuje a metodicky podporuje zjišťování, zpracování a zpřístupňování výsledků voleb, b) k zajištění činností podle písmene a) vypracovává systém zjišťování výsledků voleb včetně programového vybavení",
+     "title": "Zákon č. 88/2024 Sb., o správě voleb",
+     "url": "https://www.zakonyprolidi.cz/cs/2024-88",
+     "value": "Czech Statistical Office runs results collection and builds the results system including software"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2024",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Součástmi informačního systému jsou a) seznam voličů, b) registr kandidátních listin, c) registr okrskových volebních komisí a d) nástroj pro sestavování elektronických petic.",
+     "title": "Zákon č. 88/2024 Sb., o správě voleb",
+     "url": "https://www.zakonyprolidi.cz/cs/2024-88",
+     "value": "ISSV components include the register of candidate lists and of polling-station commissions"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registr kandidátních listin (ISSV) and ČSÚ election results system",
+   "operator": "Ministerstvo vnitra (ISSV); Český statistický úřad (results processing)",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "",
+     "publisher": "Česká národní banka",
+     "quote": "Vznik a provozování systému CERTIS, stejně jako práva a povinnosti účastníků, jsou stanoveny zákonem o platebním styku.",
+     "title": "Popis systému CERTIS",
+     "url": "https://www.cnb.cz/cs/platebni-styk/certis/popis-systemu-certis/",
+     "value": "CERTIS is established and operated under the Payment System Act"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "cs",
+     "published": "",
+     "publisher": "Česká národní banka",
+     "quote": "Účty mezibankovního platebního styku jsou vedeny ČNB na základě uzavřených smluv s účastníky.",
+     "title": "Popis systému CERTIS",
+     "url": "https://www.cnb.cz/cs/platebni-styk/certis/popis-systemu-certis/",
+     "value": "Interbank payment accounts are kept by the ČNB"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "1993",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "řídí peněžní oběh, platební styk a zúčtování bank",
+     "title": "Zákon č. 6/1993 Sb., o České národní bance",
+     "url": "https://www.zakonyprolidi.cz/cs/1993-6",
+     "value": "Act 6/1993 on the ČNB: the bank manages payment and interbank settlement"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "holding_name": "CERTIS (Czech Express Real Time Interbank Gross Settlement System)",
+   "operator": "Česká národní banka",
+   "research_note": "No public hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "research_note": "Not researched in depth for time; no public source naming Czech Armed Forces command/logistics information systems or their hosting was retrieved.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "1994",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Zpravodajské služby jsou státní orgány pro získávání, shromažďování a vyhodnocování informací",
+     "title": "Zákon č. 153/1994 Sb., o zpravodajských službách České republiky",
+     "url": "https://www.zakonyprolidi.cz/cs/1994-153",
+     "value": "Act 153/1994: intelligence services are state bodies that obtain, gather and evaluate information"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Holdings of the zpravodajské služby (BIS, ÚZSI, Vojenské zpravodajství)",
+   "operator": "Bezpečnostní informační služba; Úřad pro zahraniční styky a informace; Vojenské zpravodajství",
+   "research_note": "Hosting is not public, as expected.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "press_release",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "",
+     "publisher": "Hasičský záchranný sbor České republiky",
+     "quote": "V ČR v současnosti funguje 14 call center linky 112, ta jsou v rámci celé republiky navzájem hlasově i datově propojena.",
+     "title": "Tísňová linka 112 má svůj den",
+     "url": "https://hzscr.gov.cz/clanek/tisnova-linka-112-ma-svuj-den",
+     "value": "14 interconnected 112 call centres"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "operator",
+     "language": "cs",
+     "published": "2026-02-10",
+     "publisher": "Hasičský záchranný sbor České republiky",
+     "quote": "Tísňová linka 112 funguje nepřetržitě 24 hodin denně, 7 dní v týdnu, prostřednictvím 14 vzájemně technologicky propojených krajských operačních a informačních středisek",
+     "title": "Tísňová linka 112 funguje už 22 let",
+     "url": "https://hzscr.gov.cz/clanek/hzs-jihoceskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-unor-tisnova-linka-112-funguje-uz-22-let.aspx",
+     "value": "112 runs through 14 regional operational and information centres of the Fire Rescue Service"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "cs",
+     "published": "2026-02-10",
+     "publisher": "Hasičský záchranný sbor České republiky",
+     "quote": "V roce 2025 přijali operátoři tísňové linky 112 celkem 1 995 395 volání a 33 035 SMS",
+     "title": "Tísňová linka 112 funguje už 22 let",
+     "url": "https://hzscr.gov.cz/clanek/hzs-jihoceskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-unor-tisnova-linka-112-funguje-uz-22-let.aspx",
+     "value": "1,995,395 calls and 33,035 SMS to 112 in 2025"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2000",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "koordinuje a rozvíjí tísňovou komunikaci za účelem zajištění přístupu k základním složkám integrovaného záchranného systému prostřednictvím jednotného evropského tísňového čísla 112",
+     "title": "Zákon č. 239/2000 Sb., o integrovaném záchranném systému",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-239",
+     "value": "Act 239/2000: Ministry of the Interior coordinates emergency communication via 112, 150, 155, 158"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "unknown",
+   "holding_name": "Telefonní centra tísňového volání 112 (TCTV 112)",
+   "operator": "Hasičský záchranný sbor ČR (regional operational and information centres)",
+   "research_note": "PEGAS public-safety radio network not researched; no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2000",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Informační systém krizového řízení je informačním systémem veřejné správy, jehož účelem je podpora orgánů krizového řízení při zajišťování připravenosti na krizové situace a při jejich řešení.",
+     "title": "Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon)",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-240",
+     "value": "Crisis management information system supporting crisis authorities"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2000",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Správu informačního systému krizového řízení zajišťuje Ministerstvo vnitra, přičemž úkoly s tím spojené plní generální ředitelství hasičského záchranného sboru.",
+     "title": "Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon)",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-240",
+     "value": "Administered by the Ministry of the Interior through the Fire Rescue Service directorate"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informační systém krizového řízení",
+   "operator": "Ministerstvo vnitra – generální ředitelství Hasičského záchranného sboru ČR",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "",
+     "publisher": "ČEPS, a.s.",
+     "quote": "Dispečerské řízení je činností technického dispečinku ČEPS, která přispívá k naplňování základního poslání společnosti ČEPS, k zajištění spolehlivého a bezpečného provozu elektrizační soustavy ČR.",
+     "title": "Dispečerské řízení",
+     "url": "https://www.ceps.cz/cs/dispecerske-rizeni",
+     "value": "Dispatch control by the ČEPS technical dispatching centre"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2000",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "se zřetelem k využití energeticky účinných technologií zajišťuje bezpečný, spolehlivý a efektivní provoz, obnovu a rozvoj přenosové soustavy",
+     "title": "Zákon č. 458/2000 Sb., energetický zákon",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-458",
+     "value": "Energy Act 458/2000 § 24: transmission system operator duties"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Technický dispečink ČEPS (transmission system dispatch)",
+   "operator": "ČEPS, a.s. (transmission system operator)",
+   "research_note": "No public source on SCADA/EMS hosting found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2001",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Tuto službu zabezpečuje Český hydrometeorologický ústav ve spolupráci se správcem povodí.",
+     "title": "Zákon č. 254/2001 Sb., o vodách (vodní zákon)",
+     "url": "https://www.zakonyprolidi.cz/cs/2001-254",
+     "value": "Flood forecasting service provided by ČHMÚ with the river basin administrators"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2001",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Předpovědní povodňová služba informuje povodňové orgány, popřípadě další účastníky ochrany před povodněmi, o nebezpečí vzniku povodně",
+     "title": "Zákon č. 254/2001 Sb., o vodách (vodní zákon)",
+     "url": "https://www.zakonyprolidi.cz/cs/2001-254",
+     "value": "Water Act § 73: flood forecasting service informs flood authorities"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Předpovědní povodňová služba (flood forecasting service)",
+   "operator": "Český hydrometeorologický ústav with the státní podniky Povodí",
+   "research_note": "Control systems of Povodí state enterprises and drinking-water utilities not researched.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2007",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Ústav zřizuje systém eRecept jako informační systém veřejné správy.",
+     "title": "Zákon č. 378/2007 Sb., o léčivech",
+     "url": "https://www.zakonyprolidi.cz/cs/2007-378",
+     "value": "SÚKL ('Ústav') establishes eRecept as a public administration information system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2007",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Centrální úložiště elektronických receptů je v rámci systému eRecept zřízeno k zabezpečení a) shromažďování a ukládání elektronických receptů",
+     "title": "Zákon č. 378/2007 Sb., o léčivech",
+     "url": "https://www.zakonyprolidi.cz/cs/2007-378",
+     "value": "Central store collects e-prescriptions and dispensing records"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Systém eRecept – centrální úložiště elektronických receptů",
+   "operator": "Státní ústav pro kontrolu léčiv (SÚKL)",
+   "research_note": "There is no single national EHR; the closest central patient-level holding is SÚKL's eRecept (prescriptions, dispensing, vaccinations). No hosting or volume source retrieved.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2000",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Zřizuje se Informační systém infekčních nemocí jako informační systém veřejné správy. Jeho správcem je Ministerstvo zdravotnictví a provozovatelem Ústav zdravotnických informací a statistiky České republiky.",
+     "title": "Zákon č. 258/2000 Sb., o ochraně veřejného zdraví",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-258",
+     "value": "Infectious disease IS: Ministry of Health controller, ÚZIS operator"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2000",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Součástmi Informačního systému infekčních nemocí jsou a) registr případů infekčních onemocnění a očkování",
+     "title": "Zákon č. 258/2000 Sb., o ochraně veřejného zdraví",
+     "url": "https://www.zakonyprolidi.cz/cs/2000-258",
+     "value": "Includes the register of infectious disease cases and vaccination"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Informační systém infekčních nemocí (ISIN)",
+   "operator": "Ministerstvo zdravotnictví (controller); Ústav zdravotnických informací a statistiky ČR (operator)",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "1998",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Vysoká škola vede matriku studentů. Matrika studentů slouží k evidenci o studentech",
+     "title": "Zákon č. 111/1998 Sb., o vysokých školách",
+     "url": "https://www.zakonyprolidi.cz/cs/1998-111",
+     "value": "Each higher-education institution keeps a student register incl. degrees and diploma numbers"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "1998",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "sdružuje a využívá informace o uchazečích o přijetí ke studiu a o účastnících a absolventech celoživotního vzdělávání a informace z matriky studentů",
+     "title": "Zákon č. 111/1998 Sb., o vysokých školách",
+     "url": "https://www.zakonyprolidi.cz/cs/1998-111",
+     "value": "Ministry of Education aggregates data from the student registers"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "Matriky studentů vysokých škol and ministry's aggregated student data (SIMS)",
+   "operator": "Vysoké školy; Ministerstvo školství, mládeže a tělovýchovy (aggregation)",
+   "research_note": "School-level records (školní matrika) are kept by schools; no hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "1995",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Český statistický úřad zabezpečuje získávání a zpracování údajů pro statistické účely a poskytuje statistické informace státním orgánům",
+     "title": "Zákon č. 89/1995 Sb., o státní statistické službě",
+     "url": "https://www.zakonyprolidi.cz/cs/1995-89",
+     "value": "ČSÚ obtains and processes data for statistical purposes"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "1995",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Orgány vykonávající státní statistickou službu jsou povinny zajistit ochranu důvěrných statistických údajů způsobem stanoveným tímto zákonem.",
+     "title": "Zákon č. 89/1995 Sb., o státní statistické službě",
+     "url": "https://www.zakonyprolidi.cz/cs/1995-89",
+     "value": "Statistical bodies must protect confidential statistical data"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "Důvěrné statistické údaje ČSÚ incl. Sčítání lidu, domů a bytů 2021",
+   "operator": "Český statistický úřad",
+   "research_note": "No hosting or volume source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "cs",
+     "published": "2009",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Registr územní identifikace je veřejným seznamem. (2) Správcem registru územní identifikace je Český úřad zeměměřický a katastrální.",
+     "title": "Zákon č. 111/2009 Sb., o základních registrech",
+     "url": "https://www.zakonyprolidi.cz/cs/2009-111",
+     "value": "ČÚZK is the controller of the territorial identification register (RÚIAN)"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "cs",
+     "published": "2026-03-10",
+     "publisher": "Český úřad zeměměřický a katastrální",
+     "quote": "Z databáze ISKN je publikováno téma Parcely, z RÚIAN jsou to témata Budovy, Adresy a Územně-správní jednotky",
+     "title": "Výroční zpráva ČÚZK za rok 2025",
+     "url": "https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx",
+     "value": "ČÚZK publishes parcels from ISKN and buildings/addresses from RÚIAN"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Registr územní identifikace, adres a nemovitostí (RÚIAN); ZABAGED",
+   "operator": "Český úřad zeměměřický a katastrální",
+   "research_note": "No hosting source found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "cs",
+     "published": "2004",
+     "publisher": "Zákony pro lidi (consolidated text of Sbírka zákonů)",
+     "quote": "Neuzavře-li zřizovatel archivu dohodu o uložení archiválií, archiválie v digitální podobě náležející do jeho péče se uloží v Národním archivu.",
+     "title": "Zákon č. 499/2004 Sb., o archivnictví a spisové službě",
+     "url": "https://www.zakonyprolidi.cz/cs/2004-499",
+     "value": "Archives Act 499/2004: digital archival records are deposited in the National Archives absent another agreement"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "data_size",
+     "language": "cs",
+     "published": "2026-02",
+     "publisher": "Národní archiv",
+     "quote": "Celkem 55 přírůstků převzatých v roce 2025 obsahovalo rovněž digitální archiválie o celkové velikosti cca 99501,41 MB.",
+     "title": "Výroční zpráva o činnosti archivu – Národní archiv 2025",
+     "url": "https://www.nacr.cz/wp-content/uploads/2026/02/Vyrocni_zpravy_o_cinnosti_archivu-NA-2025.pdf",
+     "value": "Digital archival records accessioned in 2025 totalled c. 99,501 MB (annual intake, not total holdings)"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Národní digitální archiv (National Digital Archive) of the Národní archiv",
+   "operator": "Národní archiv",
+   "research_note": "Total digital holdings appear only in a table of the 2025 report (not quoted, to avoid table-extraction mismatch); hosting not stated.",
+   "status": "held"
+  }
+ ],
+ "iso": "CZ"
+}

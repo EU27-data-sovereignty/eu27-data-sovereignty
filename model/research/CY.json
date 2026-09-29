@@ -1,0 +1,1596 @@
+{
+ "extra_holdings": [],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "«Αρχείο Πληθυσμού» σημαίνει το Αρχείο στο οποίο συλλέγονται και συγκεντρώνονται τα προσωπικά στοιχεία για το σύνολο των κατοίκων της Κύπρου και περιλαμβάνει το μητρώο πολιτών της Δημοκρατίας, το ληξιαρχικό μητρώο",
+     "quote_english": "'Population Archive' means the Archive in which the personal data of all residents of Cyprus are collected and gathered, and includes the register of citizens of the Republic, the civil (births and deaths) register",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Αρχείο Πληθυσμού (Population Archive): personal data of all residents of Cyprus, including the citizens' register, the register of births and deaths, the electoral roll, the ID card register and the aliens register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "1. Ο Νόμος αυτός θα αναφέρεται ως ο περί Αρχείου Πληθυσμού Νόμος του 2002.",
+     "quote_english": "1. This Law shall be cited as the Civil Registry Law of 2002.",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Civil Registry Law of 2002 (Ο περί Αρχείου Πληθυσμού Νόμος, Law 141(I)/2002)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "«αρχή εγγραφής» σημαίνει το Τμήμα Αρχείου Πληθυσμού και Μετανάστευσης και το Γραφείο ή τα Γραφεία των Επαρχιακών Διοικήσεων που είναι υπεύθυνα για την εγγραφή των γεννήσεων και θανάτων",
+     "quote_english": "'registration authority' means the Civil Registry and Migration Department and the Office or Offices of the District Administrations responsible for registering births and deaths",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Civil Registry and Migration Department, with District Administration offices as registration authorities"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Αρχείο Πληθυσμού (Civil/Population Register)",
+   "operator": "Civil Registry and Migration Department (Τμήμα Αρχείου Πληθυσμού και Μετανάστευσης), Ministry of Interior",
+   "research_note": "Legal basis and operator from the consolidated Civil Registry Law on CyLaw. No public source found on hosting or record counts; gov.cy pages block automated retrieval.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Civil Registry and Migration Department, Ministry of Interior",
+     "quote": "In all cases a biometric facial image is necessary for the issuance of these documents. The image is captured during the application process by specialised equipment.",
+     "quote_english": "",
+     "title": "Electronic Documents - CRMD | CSCA PKI",
+     "url": "https://csca.crmd.moi.gov.cy/Electronic_documents",
+     "value": "Biometric facial image captured for every passport, travel document, ID card and residence permit"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "Civil Registry and Migration Department, Ministry of Interior",
+     "quote": "The Civil Registry and Migration Department of the Ministry of Interior is the competent authority for the issuance of electronic ID documents, such as the electronic ID card, the electronic passport and the electronic residence permit.",
+     "quote_english": "",
+     "title": "Electronic Documents - CRMD | CSCA PKI",
+     "url": "https://csca.crmd.moi.gov.cy/Electronic_documents",
+     "value": "Civil Registry and Migration Department of the Ministry of Interior (competent authority for electronic ID documents)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "οποιαδήποτε φωτογραφία που μεταφέρεται αυτόματα σε οποιοδήποτε δελτίο ταυτότητας δεν είναι, ή δεν έχει, ή δυνατό να παύσει να έχει ομοιότητα με τον πολίτη",
+     "quote_english": "any photograph automatically transferred to any identity card is not, or does not have, or may cease to have a likeness to the citizen",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Civil Registry Law 141(I)/2002, art. 64: refers to photographs transferred automatically onto ID cards"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Biometric facial image for passports, ID cards and residence permits",
+   "operator": "Civil Registry and Migration Department, Ministry of Interior",
+   "research_note": "The CSCA page confirms facial images are captured and stored on the document chip. The law refers to photographs 'transferred automatically' to ID cards. No source states how long facial images are kept centrally, where they are hosted, or how many there are.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "not_held",
+     "language": "en",
+     "published": "",
+     "publisher": "Civil Registry and Migration Department, Ministry of Interior",
+     "quote": "The captured fingerprints are stored in the document issued and are erased from the repository within 48 hours after issuing the document or after a final decision is made on the application.",
+     "quote_english": "",
+     "title": "Electronic Documents - CRMD | CSCA PKI",
+     "url": "https://csca.crmd.moi.gov.cy/Electronic_documents",
+     "value": "Fingerprints for passports, ID cards and residence permits are stored only on the document and erased from the repository within 48 hours of issuance"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Τα ληφθέντα δακτυλικά αποτυπώματα δεν μπορούν να χρησιμοποιηθούν για οποιοδήποτε άλλο σκοπό, εκτός από την έκδοση δελτίου ταυτότητας, και διαγράφονται εντός σαράντα οχτώ (48) ωρών από την έκδοση του δελτίου ταυτότητας.",
+     "quote_english": "The fingerprints taken may not be used for any other purpose except the issuance of the identity card, and are deleted within forty-eight (48) hours of the issuance of the identity card.",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Civil Registry Law art. 63(5): ID-card fingerprints may be used only to issue the card and are deleted within 48 hours"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "not_held",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Τα ληφθέντα δακτυλικά αποτυπώματα δεν μπορούν να χρησιμοποιηθούν για οποιοδήποτε άλλο σκοπό εκτός από την έκδοση διαβατηρίου και διαγράφονται εντός 48 ωρών από την έκδοση του διαβατηρίου.",
+     "quote_english": "The fingerprints taken may not be used for any other purpose except the issuance of a passport and are deleted within 48 hours of the issuance of the passport.",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Civil Registry Law: passport fingerprints are likewise deleted within 48 hours of issuance"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "No central fingerprint database: fingerprints are stored only on the document chip",
+   "operator": "Civil Registry and Migration Department, Ministry of Interior",
+   "research_note": "By law, fingerprints for ID cards and passports must be deleted within 48 hours of issuance. The CSCA site states the same for residence permits.",
+   "status": "not_held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "«ληξιαρχικό μητρώο» σημαίνει το μητρώο το οποίο τηρεί ο Ληξίαρχος και στο οποίο καταχωρίζει τις γεννήσεις και τους θανάτους της Επαρχίας του·",
+     "quote_english": "'civil register' means the register kept by the Registrar in which he records the births and deaths of his District",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Civil register of births and deaths kept by the Registrar of each District"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο Υπουργός, όταν υποβληθεί σ' αυτόν αίτηση κατά τον καθορισμένο τύπο και τρόπο από οποιοδήποτε αλλοδαπό ενήλικα και με πλήρη ικανότητα",
+     "quote_english": "The Minister, when an application is submitted to him in the prescribed form and manner by any adult alien of full capacity",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Civil Registry Law 141(I)/2002, art. 111: the Minister of Interior grants naturalisation certificates"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "«αρχή εγγραφής» σημαίνει το Τμήμα Αρχείου Πληθυσμού και Μετανάστευσης και το Γραφείο ή τα Γραφεία των Επαρχιακών Διοικήσεων που είναι υπεύθυνα για την εγγραφή των γεννήσεων και θανάτων",
+     "quote_english": "'registration authority' means the Civil Registry and Migration Department and the Office or Offices of the District Administrations responsible for registering births and deaths",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Civil Registry and Migration Department and District Administrations (registration authorities for births and deaths)"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Ληξιαρχικό μητρώο (civil register of births and deaths) and naturalisation records",
+   "operator": "District Registrars / Civil Registry and Migration Department; Minister of Interior for naturalisation",
+   "research_note": "No source found on digitisation, scan volumes or hosting of the birth and naturalisation records.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "«μητρώο δελτίων ταυτοτήτων» σημαίνει οποιοδήποτε μητρώο που εγκαθιδρύεται και τηρείται σύμφωνα με τις διατάξεις του άρθρου 59 του Νόμου αυτού·",
+     "quote_english": "'identity card register' means any register established and maintained under the provisions of article 59 of this Law",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Identity card register established under art. 59 of the Civil Registry Law"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "",
+     "publisher": "Civil Registry and Migration Department, Ministry of Interior",
+     "quote": "The Civil Registry and Migration Department of the Ministry of Interior is the competent authority for the issuance of electronic ID documents, such as the electronic ID card, the electronic passport/ travel document and the electronic residence document/ permit.",
+     "quote_english": "",
+     "title": "Electronic Documents - CRMD | CSCA PKI",
+     "url": "https://csca.crmd.moi.gov.cy/Electronic_documents",
+     "value": "Civil Registry and Migration Department (issuer of electronic ID cards, passports/travel documents and residence permits)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Τα δελτία ταυτότητας εκδίδονται από το Διευθυντή, ο οποίος έχει την εξουσία να λαμβάνει και να διαχειρίζεται τα προσωπικά στοιχεία των αιτητών",
+     "quote_english": "Identity cards are issued by the Director, who has the power to receive and manage the personal data of applicants",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Civil Registry Law 141(I)/2002, art. 63(1): ID cards are issued by the Director of the Civil Registry and Migration Department"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Μητρώο δελτίων ταυτοτήτων (identity card register) and travel-document issuance",
+   "operator": "Civil Registry and Migration Department, Ministry of Interior",
+   "research_note": "No source found on hosting or counts of documents issued.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "«ηλεκτρονική ταυτότητα» σημαίνει το μέσο ηλεκτρονικής ταυτοποίησης που εκδίδεται, ανανεώνεται, αναστέλλεται, ανακαλείται ή επανενεργοποιείται σύμφωνα με τις διατάξεις του Μέρους Τρίτου του Κεφαλαίου Τρίτου του παρόντος Νόμου",
+     "quote_english": "'electronic identity' means the electronic identification means issued, renewed, suspended, revoked or reactivated under Part Three of Chapter Three of this Law",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Electronic identity (national eID) defined in the Civil Registry Law as an electronic identification means that is issued, renewed, suspended, revoked or reactivated"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "ο Διευθυντής δίδει εντολή στον πάροχο υπηρεσιών ηλεκτρονικής ταυτότητας να εκδώσει ή ανανεώσει ηλεκτρονική ταυτότητα",
+     "quote_english": "the Director instructs the electronic identity service provider to issue or renew an electronic identity",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "The Director of the Civil Registry and Migration Department instructs the eID service provider to issue or renew the eID"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "el",
+     "published": "2025-11-03",
+     "publisher": "JCC Payment Systems Ltd",
+     "quote": "Η JCC Payment Systems αναθέτει τη λειτουργία της ΑΠ στην ADACOM η οποία είναι Εγκεκριμένος πάροχος υπηρεσιών εμπιστοσύνης εγγεγραμμένος στην Ελλάδα και καταχωρισμένος στην Ευρωπαική Λίστα Παρόχων Εμπιστοσύνης.",
+     "quote_english": "JCC Payment Systems outsources the operation of the CA to ADACOM, which is a qualified trust service provider registered in Greece and listed in the European Trusted List.",
+     "title": "Δήλωση Πρακτικών Πιστοποίησης για την Κυπριακή Ηλεκτρονική Ταυτότητα (eID), έκδοση 1.4",
+     "url": "https://pki.jcc.com.cy/repository/el/CPS/files/JCC-PL-QTSP-Certification_Practice_Statement_for_eID_GR-1.4_FINAL.pdf",
+     "value": "JCC Payment Systems outsources operation of the eID certification authority to ADACOM, a qualified trust service provider registered in Greece"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "foreign_dependency",
+     "language": "el",
+     "published": "2025-11-03",
+     "publisher": "JCC Payment Systems Ltd",
+     "quote": "Η JCC Payment Systems αναθέτει τη λειτουργία της ΑΠ στην ADACOM η οποία είναι Εγκεκριμένος πάροχος υπηρεσιών εμπιστοσύνης εγγεγραμμένος στην Ελλάδα και καταχωρισμένος στην Ευρωπαική Λίστα Παρόχων Εμπιστοσύνης.",
+     "quote_english": "JCC Payment Systems outsources the operation of the CA to ADACOM, which is a qualified trust service provider registered in Greece and listed in the European Trusted List.",
+     "title": "Δήλωση Πρακτικών Πιστοποίησης για την Κυπριακή Ηλεκτρονική Ταυτότητα (eID), έκδοση 1.4",
+     "url": "https://pki.jcc.com.cy/repository/el/CPS/files/JCC-PL-QTSP-Certification_Practice_Statement_for_eID_GR-1.4_FINAL.pdf",
+     "value": "eID CA operations outsourced to a Greece-registered QTSP (EU provider)"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "record_count",
+     "language": "en",
+     "published": "2026-09-13",
+     "publisher": "Politis",
+     "quote": "There are currently 542,716 verified citizen profiles , with more than 5,000 new verified profiles added, on average, every month in 2026.",
+     "quote_english": "",
+     "title": "From The Counter To The Screen: CY Login Becomes Cyprus's Key To Digital Government",
+     "url": "https://en.politis.com.cy/in-depth/1032645/from-the-counter-to-the-screen-cy-login-becomes-cypruss-key-to-digital-government",
+     "value": "CY Login: 542,716 verified citizen profiles (September 2026)"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "record_count",
+     "language": "en",
+     "published": "2025-11-25",
+     "publisher": "Biometric Update",
+     "quote": "Per the department, 409,030 of the registered profiles are owned by individual citizens, while 155,117 are for companies and other corporate and legal establishments.",
+     "quote_english": "",
+     "title": "Cyprus lauds impressive use of CY Login digital government services",
+     "url": "https://www.biometricupdate.com/202511/cyprus-lauds-impressive-use-of-cy-login-digital-government-services",
+     "value": "CY Login (November 2025): 409,030 individual profiles and 155,117 company/legal-entity profiles"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "eu_provider",
+   "holding_name": "CY Login + Cyprus Digital ID; national eID (ηλεκτρονική ταυτότητα) under the Civil Registry Law",
+   "operator": "Civil Registry and Migration Department (eID issuance orders) with JCC Payment Systems as eID service provider; CY Login run by the Deputy Ministry of Research, Innovation and Digital Policy",
+   "research_note": "The eID certificate authority run by JCC Payment Systems is operated under outsourcing by ADACOM, a qualified trust service provider registered in Greece. No public source found on where the CY Login platform is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "research_note": "Searched CY Login and gov.cy material, the JCC eID Certification Practice Statement (its audit logging covers CA events only), and news coverage. No public source describes a central log of citizen authentications to public services, who holds it, or how long it is kept.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "«εκλογικός κατάλογος» σημαίνει τον κατάλογο εκλογέων για την εκλογική περιφέρεια που καταρτίζεται δυνάμει των προνοιών του Νόμου αυτού·",
+     "quote_english": "'electoral roll' means the list of voters for the electoral district compiled under the provisions of this Law",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Electoral roll: list of voters per electoral district compiled under the Civil Registry Law"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο οικείος Έπαρχος εγγράφει στον εκλογικό κατάλογο, από την ημερομηνία κτήσεως των εκλογικών προσόντων, κάθε εκλογέα ο οποίος αποκτά το δικαίωμα του εκλέγειν:",
+     "quote_english": "The competent District Officer enters on the electoral roll, from the date of acquiring electoral qualifications, every voter who acquires the right to vote",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "The competent District Officer enters voters on the electoral roll"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Για κάθε εκλογέα διενεργείται μόνο μία εγγραφή στον εκλογικό κατάλογο, με βάση την καταχωρισμένη διεύθυνση αυτού στο σύστημα αρχείου πληθυσμού.",
+     "quote_english": "For each voter only one entry is made in the electoral roll, based on his registered address in the population register system.",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Civil Registry Law 141(I)/2002, art. 97(2): one entry per voter, based on the address in the population register system"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "record_count",
+     "language": "el",
+     "published": "2026-04-19",
+     "publisher": "Politis",
+     "quote": "Σε 568.587 ανέρχεται ο αριθμός των εκλογέων που έχουν δικαίωμα ψήφου στις προσεχείς Βουλευτικές Εκλογές, αναφέρει σε ανακοίνωσή του το Υπουργείο Εσωτερικών",
+     "quote_english": "The number of voters entitled to vote in the forthcoming Parliamentary Elections amounts to 568,587, the Ministry of Interior states in an announcement",
+     "title": "Στους 568.587 οι εκλογείς για τις προσεχείς βουλευτικές εκλογές, ανακοίνωσε το ΥΠΕΣ",
+     "url": "https://www.politis.com.cy/politis-news/cyprus/999272/stoys-568587-oi-ekloghis-ghia-tis-prosekhis-voyleftikes-ekloghes-anakinose-to-ypes",
+     "value": "568,587 registered voters for the May 2026 parliamentary elections (Ministry of Interior announcement)"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Εκλογικός κατάλογος (electoral roll), part of the Population Archive",
+   "operator": "District Officers (Έπαρχοι) / Ministry of Interior",
+   "research_note": "No source found on hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Civil Registry and Migration Department, Ministry of Interior",
+     "quote": "The distinguished name of the CSCA is “C=CY, O=Republic of Cyprus, OU=Civil Registry and Migration Department, CN=CSCA-CYPRUS”.",
+     "quote_english": "",
+     "title": "Root Certificate - CRMD | CSCA PKI",
+     "url": "https://csca.crmd.moi.gov.cy/PKI/CSCA/Root_Certificate",
+     "value": "Country Signing Certification Authority of the Civil Registry and Migration Department (CSCA-CYPRUS)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2018",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Εποπτικός φορέας, κατ’ εφαρμογήν των διατάξεων του άρθρου 17 του Κανονισμού (ΕΕ) αριθ. 910/2014, ορίζεται το Τμήμα Ηλεκτρονικών Επικοινωνιών ενεργώντας διά του Διευθυντή του.",
+     "quote_english": "The supervisory body, pursuant to article 17 of Regulation (EU) No 910/2014, is the Department of Electronic Communications acting through its Director.",
+     "title": "Ο περί της Εφαρμογής του Κανονισμού (Ε.Ε.) αριθ. 910/2014 Νόμος του 2018 (55(I)/2018)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2018_1_55/full.html",
+     "value": "Law 55(I)/2018 implementing eIDAS: the Department of Electronic Communications is the supervisory body for trust services"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "en",
+     "published": "2026-05-25",
+     "publisher": "JCC Payment Systems Ltd",
+     "quote": "JCC Payment Systems outsources CA operation to ADACOM SA who is a QTSP registered in Greece and listed in EU Trusted List.",
+     "quote_english": "",
+     "title": "Certification Practice Statement for Qualified Certificates, version 1.7",
+     "url": "https://pki.jcc.com.cy/repository/CPS/files/cp-cps-latest-version.pdf",
+     "value": "JCC Payment Systems (QTSP) outsources CA operation to ADACOM SA, a QTSP registered in Greece"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "hosting",
+     "language": "en",
+     "published": "2026-05-25",
+     "publisher": "JCC Payment Systems Ltd",
+     "quote": "All facility, management and operations controls related to JCC Payment Systems CA and described below are provided by ADACOM SA.",
+     "quote_english": "",
+     "title": "Certification Practice Statement for Qualified Certificates, version 1.7",
+     "url": "https://pki.jcc.com.cy/repository/CPS/files/cp-cps-latest-version.pdf",
+     "value": "All facility, management and operations controls for the JCC CA are provided by ADACOM SA"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "mixed",
+   "holding_name": "CSCA-CYPRUS (Country Signing CA for e-passports, ID cards and residence permits); qualified trust services (JCC Payment Systems QTSP)",
+   "operator": "Civil Registry and Migration Department (CSCA); JCC Payment Systems (QTSP), supervised by the Department of Electronic Communications",
+   "research_note": "The CSCA is run by a national department; no source says where it is hosted. Qualified certificates, including the eID, come from JCC, whose CA operations are outsourced to ADACOM SA (Greece). No separate government root CA for civil servants was found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "τον εκλογικό κατάλογο, το μητρώο δελτίων ταυτοτήτων και το μητρώο αλλοδαπών·",
+     "quote_english": "the electoral roll, the identity card register and the register of aliens",
+     "title": "Ο Περί Αρχείου Πληθυσμού Νόμος του 2002 (141(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html",
+     "value": "Register of aliens, part of the Population Archive"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "\"Τμήμα\" σημαίνει το Τμήμα Αρχείου Πληθυσμού και Μετανάστευσης, η δημιουργία του οποίου προνοείται από τον περί Αρχείου Πληθυσμού Νόμο.",
+     "quote_english": "'Department' means the Civil Registry and Migration Department, whose establishment is provided for by the Civil Registry Law.",
+     "title": "Ο περί Αλλοδαπών και Μεταναστεύσεως Νόμος (ΚΕΦ.105)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/0_105/full.html",
+     "value": "Civil Registry and Migration Department (the 'Department' under the Aliens and Immigration Law)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο Διευθυντής, σύμφωνα με τον Κανονισμό (ΕΚ) αριθ. 1030/2002, χορηγεί άδεια διαμονής στους κατόχους μπλε κάρτας της ΕΕ",
+     "quote_english": "The Director, in accordance with Regulation (EC) No 1030/2002, grants a residence permit to holders of an EU blue card",
+     "title": "Ο περί Αλλοδαπών και Μεταναστεύσεως Νόμος (ΚΕΦ.105)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/0_105/full.html",
+     "value": "Aliens and Immigration Law Cap. 105: the Director grants residence permits (e.g. art. 18TH under Regulation 1030/2002)"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Μητρώο αλλοδαπών (register of aliens) and residence permits",
+   "operator": "Civil Registry and Migration Department",
+   "research_note": "Asylum records fall under the Refugee Law 6(I)/2000 (Asylum Service); no quotable passage was collected for them. No source found on hosting or counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "1978",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο Έφορος δύναται να εγγράφει στο Φορολογικό Μητρώο οποιοδήποτε πρόσωπο και ενημερώνει το πρόσωπο αυτό με σχετική ειδοποίηση",
+     "quote_english": "The Commissioner may register any person in the Tax Register and informs that person by relevant notice",
+     "title": "Ο περί Βεβαιώσεως και Εισπράξεως Φόρων Νόμος του 1978 (4/1978)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/1978_1_4/full.html",
+     "value": "Tax Register in which the Tax Commissioner registers persons"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "1978",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "\"Έφορος\" σημαίνει τον Έφορο Φορολογίας, όπως ορίζεται στον περί Τμήματος Φορολογίας Νόμο και οποιονδήποτε δεόντως εξουσιοδοτημένο από αυτόν λειτουργό του Τμήματος Φορολογίας",
+     "quote_english": "'Commissioner' means the Tax Commissioner as defined in the Tax Department Law and any officer of the Tax Department duly authorised by him",
+     "title": "Ο περί Βεβαιώσεως και Εισπράξεως Φόρων Νόμος του 1978 (4/1978)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/1978_1_4/full.html",
+     "value": "Tax Commissioner and officers of the Tax Department"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "1978",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Άτομο υπέχει υποχρέωση να υποβάλει σχετική ειδοποίηση για εγγραφή στο Φορολογικό Μητρώο και εξασφάλιση αριθμού φορολογικής ταυτότητας",
+     "quote_english": "An individual is obliged to submit a notice for registration in the Tax Register and obtain a tax identification number",
+     "title": "Ο περί Βεβαιώσεως και Εισπράξεως Φόρων Νόμος του 1978 (4/1978)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/1978_1_4/full.html",
+     "value": "Assessment and Collection of Taxes Law 4/1978, art. 5A (Tax Register and tax identification number)"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Φορολογικό Μητρώο (Tax Register); Tax For All (TFA) system",
+   "operator": "Tax Department (Τμήμα Φορολογίας), under the Tax Commissioner",
+   "research_note": "TFA pages on gov.cy block automated retrieval. No procurement or audit source found on where TFA is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "official_page",
+     "field": "holding_name",
+     "language": "en",
+     "published": "",
+     "publisher": "Customs and Excise Department, Ministry of Finance",
+     "quote": "Import Customs Declarations ( click here for sample of electr. import declaration for free circulation and consumption) and Import Manifest at national level may be submitted electronically through THESEAS Customs Electronic systems.",
+     "quote_english": "",
+     "title": "CUSTOMS & EXCISE - eCustoms Project",
+     "url": "https://www.mof.gov.cy/mof/customs/customs.nsf/ced12_en/ced12_en?OpenDocument=",
+     "value": "THESEAS customs electronic system for import declarations and manifests"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2004",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Το Τμήμα Τελωνείων είναι αρμόδιο, διά του Διευθυντή του, στα σημεία εισόδου και εξόδου, στους τελωνειακούς περιβόλους και στο εν γένει τελωνειακό έδαφος",
+     "quote_english": "The Customs Department is competent, through its Director, at points of entry and exit, in customs areas and in the customs territory generally",
+     "title": "Ο Περί Τελωνειακού Κώδικα Νόμος του 2004 (94(I)/2004)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2004_1_94/full.html",
+     "value": "Customs and Excise Department, acting through its Director"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2004",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο Περί Τελωνειακού Κώδικα Νόμος του 2004 (94(I)/2004)",
+     "quote_english": "The Customs Code Law of 2004 (94(I)/2004)",
+     "title": "Ο Περί Τελωνειακού Κώδικα Νόμος του 2004 (94(I)/2004)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2004_1_94/full.html",
+     "value": "Customs Code Law of 2004 (94(I)/2004)"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "THESEAS customs electronic system, alongside the EU systems NCTS, ICS2 and EORI",
+   "operator": "Customs and Excise Department, Ministry of Finance",
+   "research_note": "No source found on where THESEAS is hosted. The EU trans-European systems are operated jointly with the Commission, but that was not sourced for Cyprus.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2010",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Για τους σκοπούς του παρόντος Νόμου, ιδρύεται Ταμείο Κοινωνικών Ασφαλίσεων, καλούμενο «το Ταμείο», στο οποίο μεταφέρονται όλα τα στοιχεία του ενεργητικού και παθητικού",
+     "quote_english": "For the purposes of this Law, a Social Insurance Fund is established, called 'the Fund', to which all assets and liabilities are transferred",
+     "title": "Ο περί Κοινωνικών Ασφαλίσεων Νόμος του 2010 (59(I)/2010)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2010_1_59/full.html",
+     "value": "Social Insurance Fund established under art. 73"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2010",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "«Διευθυντής» σημαίνει το Διευθυντή των Υπηρεσιών Κοινωνικών Ασφαλίσεων του Υπουργείου Εργασίας και Κοινωνικών Ασφαλίσεων∙",
+     "quote_english": "'Director' means the Director of the Social Insurance Services of the Ministry of Labour and Social Insurance",
+     "title": "Ο περί Κοινωνικών Ασφαλίσεων Νόμος του 2010 (59(I)/2010)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2010_1_59/full.html",
+     "value": "Director of the Social Insurance Services, Ministry of Labour and Social Insurance"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2010",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο περί Κοινωνικών Ασφαλίσεων Νόμος του 2010 (59(I)/2010)",
+     "quote_english": "The Social Insurance Law of 2010 (59(I)/2010)",
+     "title": "Ο περί Κοινωνικών Ασφαλίσεων Νόμος του 2010 (59(I)/2010)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2010_1_59/full.html",
+     "value": "Social Insurance Law of 2010 (59(I)/2010)"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Ταμείο Κοινωνικών Ασφαλίσεων (Social Insurance Fund) and insured persons' records",
+   "operator": "Social Insurance Services, Ministry of Labour and Social Insurance",
+   "research_note": "No source found on the IT system, hosting or counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2001",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Οι παροχείς υπηρεσιών φροντίδας υγείας έχουν υποχρέωση να χρησιμοποιούν το σύστημα πληροφορικής για την έκδοση παραπεμπτικών και συνταγών, την υποβολή απαιτήσεων για αμοιβή, τη διαχείριση του καταλόγου των δικαιούχων",
+     "quote_english": "Healthcare providers are obliged to use the information system for issuing referrals and prescriptions, submitting claims for payment, managing the list of beneficiaries",
+     "title": "Ο Περί Γενικού Συστήματος Υγείας Νόμος του 2001 (89(I)/2001)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2001_1_89/full.html",
+     "value": "GeSY information system, which providers must use for referrals, prescriptions, claims and beneficiary lists"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2001",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Για την εκτέλεση των αρμοδιοτήτων που αναφέρονται στα εδάφια (1) και (2), ο Οργανισμός αναπτύσσει και λειτουργεί σύστημα πληροφορικής.",
+     "quote_english": "For carrying out the functions referred to in subsections (1) and (2), the Organisation develops and operates an information system.",
+     "title": "Ο Περί Γενικού Συστήματος Υγείας Νόμος του 2001 (89(I)/2001)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2001_1_89/full.html",
+     "value": "The Health Insurance Organisation develops and operates the information system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2001",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο Περί Γενικού Συστήματος Υγείας Νόμος του 2001 (89(I)/2001)",
+     "quote_english": "The General Health System Law of 2001 (89(I)/2001)",
+     "title": "Ο Περί Γενικού Συστήματος Υγείας Νόμος του 2001 (89(I)/2001)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2001_1_89/full.html",
+     "value": "General Health System Law of 2001 (89(I)/2001)"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "GeSY information system (σύστημα πληροφορικής ΓεΣΥ)",
+   "operator": "Health Insurance Organisation (Οργανισμός Ασφάλισης Υγείας)",
+   "research_note": "News coverage (RIK, January 2026) refers to an unnamed contractor company running the GeSY IT system. No source names the contractor's jurisdiction or the hosting location.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Όταν εξ αδιαιρέτου ιδανική μερίδα σε κάποια ακίνητη ιδιοκτησία κατέχεται μαζί με άλλη ακίνητη ιδιοκτησία που ανήκει εξ ολοκλήρου στον ίδιο κύριο ως ενιαία μονάδα που καλύπτεται από μια εγγραφή στο κτηματικό μητρώο",
+     "quote_english": "When an undivided share in immovable property is held together with other property wholly owned by the same owner as a single unit covered by one entry in the land register",
+     "title": "Ο περί Ακίνητης Ιδιοκτησίας (Διακατοχή, Εγγραφή και Εκτίμηση) Νόμος (ΚΕΦ.224)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/0_224/full.html",
+     "value": "Land register (κτηματικό μητρώο) under Cap. 224"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "\"Διευθυντής\" σημαίνει το Διευθυντή του Τμήματος Κτηματολογίου και Χωρομετρίας και περιλαμβάνει οποιοδήποτε λειτουργό που διορίζεται από το Διευθυντή",
+     "quote_english": "'Director' means the Director of the Department of Lands and Surveys and includes any officer appointed by the Director",
+     "title": "Ο περί Ακίνητης Ιδιοκτησίας (Διακατοχή, Εγγραφή και Εκτίμηση) Νόμος (ΚΕΦ.224)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/0_224/full.html",
+     "value": "Director of the Department of Lands and Surveys"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο περί Ακίνητης Ιδιοκτησίας (Διακατοχή, Εγγραφή και Εκτίμηση) Νόμος (ΚΕΦ.224)",
+     "quote_english": "The Immovable Property (Tenure, Registration and Valuation) Law (Cap. 224)",
+     "title": "Ο περί Ακίνητης Ιδιοκτησίας (Διακατοχή, Εγγραφή και Εκτίμηση) Νόμος (ΚΕΦ.224)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/0_224/full.html",
+     "value": "Immovable Property (Tenure, Registration and Valuation) Law, Cap. 224"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "hosting",
+     "language": "el",
+     "published": "2023",
+     "publisher": "Department of Lands and Surveys",
+     "quote": "Την τεχνική υποστήριξη επιλαμβάνεται κατόπιν η Δευτεροβάθμια Υποστήριξη στο Κέντρο Πληροφοριών Γης, από Λειτουργούς του Τμήματος Υπηρεσιών Πληροφορικής, σε συνεργασία με Λειτουργούς του Τμήματος, οι οποίοι ταυτόχρονα με τις αρμοδιότητες τους, έχουν την ευθύνη, τόσο για την συντήρηση και εύρυθμη λειτουργία των κεντρικών συστημάτων και υποσυστημάτων",
+     "quote_english": "Technical support is then handled by second-level support at the Land Information Centre, by officers of the Department of Information Technology Services with officers of the Department, who are responsible for maintaining and operating the central systems and subsystems",
+     "title": "Ετήσια Έκθεση Τμήματος Κτηματολογίου και Χωρομετρίας 2022",
+     "url": "https://portal.dls.moi.gov.cy/wp-content/uploads/2023/05/Annual-report-DLS-2022.pdf",
+     "value": "Central and backup systems of the Land Information System are maintained by officers of the government Department of Information Technology Services together with DLS officers"
+    },
+    {
+     "doc_type": "annual_report",
+     "field": "record_count",
+     "language": "el",
+     "published": "2023",
+     "publisher": "Department of Lands and Surveys",
+     "quote": "εκτιμήθηκαν 1.093.495 τεμάχια γης και 566.553 οικοδομές, δηλαδή συνολικά 1.660.048 ακίνητα στις ελεγχόμενες περιοχές από την Κ.Δ.",
+     "quote_english": "1,093,495 land parcels and 566,553 buildings were valued, i.e. a total of 1,660,048 properties in the areas controlled by the Republic of Cyprus",
+     "title": "Ετήσια Έκθεση Τμήματος Κτηματολογίου και Χωρομετρίας 2022",
+     "url": "https://portal.dls.moi.gov.cy/wp-content/uploads/2023/05/Annual-report-DLS-2022.pdf",
+     "value": "1,093,495 land parcels and 566,553 buildings (1,660,048 properties) valued in the 2021 General Valuation"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "national",
+   "holding_name": "Κτηματικό μητρώο (land register) in the Land Information System (Σύστημα Πληροφοριών Γης)",
+   "operator": "Department of Lands and Surveys, Ministry of Interior, with the Department of Information Technology Services",
+   "research_note": "The DLS 2022 annual report states that central and backup systems are maintained by officers of the government Department of Information Technology Services. The count used is properties valued in the 2021 General Valuation.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "ο έφορος καταχωρεί στο μητρώο, στη θέση του προηγούμενου ονόματος το νέο όνομα και εκδίδει πιστοποιητικό σύστασης",
+     "quote_english": "the registrar enters in the register the new name in place of the former name and issues a certificate of incorporation",
+     "title": "Ο περί Εταιρειών Νόμος (ΚΕΦ.113)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/0_113/full.html",
+     "value": "Register of companies kept by the Registrar"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "“ο έφορος εταιρειών” ή όταν χρησιμοποιείται σχετικά με εγγραφή εταιρειών “ο έφορος“ σημαίνει τον Επίσημο Παραλήπτη και Έφορο",
+     "quote_english": "'the registrar of companies' or, when used in relation to registration of companies, 'the registrar' means the Official Receiver and Registrar",
+     "title": "Ο περί Εταιρειών Νόμος (ΚΕΦ.113)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/0_113/full.html",
+     "value": "Registrar of Companies is the Official Receiver and Registrar"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Το ιδρυτικό έγγραφο και καταστατικό, αν υπάρχει, πρέπει να παραδίνεται στον έφορο εταιρειών και ο έφορος εταιρειών προβαίνει στην εγγραφή τους.",
+     "quote_english": "The memorandum and articles, if any, must be delivered to the registrar of companies, and the registrar registers them.",
+     "title": "Ο περί Εταιρειών Νόμος (ΚΕΦ.113)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/0_113/full.html",
+     "value": "Companies Law, Cap. 113"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Companies register (μητρώο) of the Registrar of Companies",
+   "operator": "Registrar of Companies and Official Receiver",
+   "research_note": "No source found on hosting or the number of registered companies.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2007",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Οι αναφερόμενες στο εδάφιο (1) πληροφορίες καταχωρίζονται σε Κεντρικό Μητρώο Πραγματικών Δικαιούχων Εταιρειών και Άλλων Νομικών Οντοτήτων.",
+     "quote_english": "The information referred to in subsection (1) is entered in a Central Register of Beneficial Owners of Companies and Other Legal Entities.",
+     "title": "Ο περί της Παρεμπόδισης και Καταπολέμησης της Νομιμοποίησης Εσόδων από Παράνομες Δραστηριότητες Νόμος του 2007 (188(I)/2007)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2007_1_188/full.html",
+     "value": "Central Register of Beneficial Owners of Companies and Other Legal Entities"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2007",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Το Μητρώο καταρτίζεται, τηρείται και δημοσιεύεται από τον Έφορο Εταιρειών και Επίσημο Παραλήπτη, ο οποίος, ως η αρχή τήρησης του Μητρώου",
+     "quote_english": "The Register is compiled, kept and published by the Registrar of Companies and Official Receiver who, as the authority keeping the Register",
+     "title": "Ο περί της Παρεμπόδισης και Καταπολέμησης της Νομιμοποίησης Εσόδων από Παράνομες Δραστηριότητες Νόμος του 2007 (188(I)/2007)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2007_1_188/full.html",
+     "value": "Registrar of Companies and Official Receiver, as the authority keeping the register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2007",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Το Μητρώο καταρτίζεται, τηρείται και δημοσιεύεται από τον Γενικό Έφορο ο οποίος, ως η αρχή τήρησης του Μητρώου, φυλάσσει πληροφορίες σχετικά με τις νομικές οντότητες και τους πραγματικούς δικαιούχους τους.",
+     "quote_english": "The Register is compiled, kept and published by the General Registrar who, as the authority keeping the Register, holds information on the legal entities and their beneficial owners.",
+     "title": "Ο περί της Παρεμπόδισης και Καταπολέμησης της Νομιμοποίησης Εσόδων από Παράνομες Δραστηριότητες Νόμος του 2007 (188(I)/2007)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2007_1_188/full.html",
+     "value": "AML Law 188(I)/2007, art. 61B: a separate register for associations and foundations is kept by the General Registrar"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Κεντρικό Μητρώο Πραγματικών Δικαιούχων Εταιρειών και Άλλων Νομικών Οντοτήτων (Central Register of Beneficial Owners)",
+   "operator": "Registrar of Companies and Official Receiver; the General Registrar for associations and foundations",
+   "research_note": "No source found on hosting or record counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "1972",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ειδική διάταξη για εγγραφή οχημάτων στο Μητρώο του Εφόρου κατά παρέκκλιση των προνοιών των Κανονισμών",
+     "quote_english": "Special provision for registration of vehicles in the Registrar's Register by derogation from the Regulations",
+     "title": "Ο περί Μηχανοκινήτων Οχημάτων και Τροχαίας Κινήσεως Νόμος του 1972 (86/1972)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/1972_1_86/full.html",
+     "value": "Registrar's Register of motor vehicles"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "1972",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Το Υπουργικόν Συμβούλιον ορίζει Έφορον Μηχανοκινήτων Οχημάτων διά την εφαρμογήν των διατάξεων του παρόντος Νόμου και των δυνάμει τούτου εκδιδομένων Κανονισμών",
+     "quote_english": "The Council of Ministers appoints a Registrar of Motor Vehicles for the application of this Law and the Regulations made under it",
+     "title": "Ο περί Μηχανοκινήτων Οχημάτων και Τροχαίας Κινήσεως Νόμος του 1972 (86/1972)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/1972_1_86/full.html",
+     "value": "Registrar of Motor Vehicles, appointed by the Council of Ministers, responsible for vehicle registration and licences"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "1972",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο περί Μηχανοκινήτων Οχημάτων και Τροχαίας Κινήσεως Νόμος του 1972 (86/1972)",
+     "quote_english": "The Motor Vehicles and Road Traffic Law of 1972 (86/1972)",
+     "title": "Ο περί Μηχανοκινήτων Οχημάτων και Τροχαίας Κινήσεως Νόμος του 1972 (86/1972)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/1972_1_86/full.html",
+     "value": "Motor Vehicles and Road Traffic Law 86/1972"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Μητρώο του Εφόρου (Registrar's register of motor vehicles) and driving licences",
+   "operator": "Registrar of Motor Vehicles (Road Transport Department)",
+   "research_note": "No source found on hosting or the number of registered vehicles. CYSTAT pages are on gov.cy and block automated retrieval.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2004",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο Αρχηγός Αστυνομίας ή κατάλληλα εξουσιοδοτημένο από αυτόν μέλος της Αστυνομίας τηρεί Αρχείο Προηγούμενων Καταδικών για σκοπούς έκδοσης πιστοποιητικών ποινικού μητρώου",
+     "quote_english": "The Chief of Police or a member of the Police duly authorised by him keeps an Archive of Previous Convictions for the purpose of issuing criminal record certificates",
+     "title": "Ο Περί Αστυνομίας Νόμος του 2004 (73(I)/2004)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2004_1_73/full.html",
+     "value": "Archive of Previous Convictions kept by the Chief of Police for criminal record certificates"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2004",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο Αρχηγός ή κατάλληλα εξουσιοδοτημένο από αυτόν μέλος της Αστυνομίας εκδίδει, ύστερα από σχετική αίτηση αιτητή ή δεόντως εξουσιοδοτημένου από τον αιτητή προσώπου",
+     "quote_english": "The Chief or a member of the Police duly authorised by him issues, upon application by the applicant or a person duly authorised by the applicant",
+     "title": "Ο Περί Αστυνομίας Νόμος του 2004 (73(I)/2004)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2004_1_73/full.html",
+     "value": "Police Law 73(I)/2004, arts. 9-10 (criminal record archive and certificates)"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Αρχείο Προηγούμενων Καταδικών (criminal record archive)",
+   "operator": "Cyprus Police (Chief of Police)",
+   "research_note": "Court case-management (e-justice) systems were not researched to quotable standard. No source found on hosting of the criminal record archive.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "secondary",
+     "field": "holding_name",
+     "language": "el",
+     "published": "",
+     "publisher": "Politis",
+     "quote": "Δύο μοναδικούς κωδικούς διαθέτει κάθε αστυνομικός για την πρόσβαση σε ηλεκτρονικό υπολογιστή και στο μηχανογραφικό σύστημα της Αστυνομίας.",
+     "quote_english": "Every police officer has two unique codes for access to a computer and to the Police computerised system.",
+     "title": "Στο στόχαστρο αστυνομικοί για διαρροές - Ποινικές και πειθαρχικές ευθύνες σε εξέλιξη",
+     "url": "https://www.politis.com.cy/politis-news/cyprus/1031511/sto-stokhastro-astinomiki-ghia-diarroes-poinikes-kai-peitharkhikes-efthynes-se-ekseliksi",
+     "value": "Cyprus Police computerised information system, with per-officer access codes"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2023",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "σία της Αστυνομίας Κύπρου και υπάγεται στο Τμήμα Πληροφορικής της Αστυνομίας Κύπρου",
+     "quote_english": "...of the Cyprus Police and reports to the IT Department of the Cyprus Police",
+     "title": "Ο περί της Λειτουργίας και Χρήσης στη Δημοκρατία του Συστήματος Πληροφοριών Σένγκεν (SIS) Νόμος του 2023 (171(I)/2023)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2023_1_171/full.html",
+     "value": "The National N.SIS Service is part of the Cyprus Police and reports to the Police IT Department"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Μηχανογραφικό σύστημα της Αστυνομίας (Cyprus Police computerised information system)",
+   "operator": "Cyprus Police (Police IT Department)",
+   "research_note": "police.gov.cy blocks automated retrieval. No source found on the system's formal name, hosting or size.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2023",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Η Αστυνομία Κύπρου ορίζεται ως αρμόδια αρχή στη Δημοκρατία για την εγκατάσταση, λειτουργία και συντήρηση του Εθνικού N.SIS",
+     "quote_english": "The Cyprus Police is designated as the competent authority in the Republic for the installation, operation and maintenance of the National N.SIS",
+     "title": "Ο περί της Λειτουργίας και Χρήσης στη Δημοκρατία του Συστήματος Πληροφοριών Σένγκεν (SIS) Νόμος του 2023 (171(I)/2023)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2023_1_171/full.html",
+     "value": "National N.SIS: the Cyprus Police is the competent authority for its installation, operation and maintenance"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2023",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο παρών Νόμος θα αναφέρεται ως ο περί της Λειτουργίας και Χρήσης στη Δημοκρατία του Συστήματος Πληροφοριών Σένγκεν (SIS) Νόμος του 2023.",
+     "quote_english": "This Law shall be cited as the Operation and Use in the Republic of the Schengen Information System (SIS) Law of 2023.",
+     "title": "Ο περί της Λειτουργίας και Χρήσης στη Δημοκρατία του Συστήματος Πληροφοριών Σένγκεν (SIS) Νόμος του 2023 (171(I)/2023)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2023_1_171/full.html",
+     "value": "Law 171(I)/2023 on the Operation and Use of the Schengen Information System in the Republic"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2023",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Η Αστυνομία Κύπρου ορίζεται ως αρμόδια αρχή για την εισαγωγή καταχωρίσεων στο Κεντρικό SIS.",
+     "quote_english": "The Cyprus Police is designated as the competent authority for entering alerts in Central SIS.",
+     "title": "Ο περί της Λειτουργίας και Χρήσης στη Δημοκρατία του Συστήματος Πληροφοριών Σένγκεν (SIS) Νόμος του 2023 (171(I)/2023)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2023_1_171/full.html",
+     "value": "Cyprus Police is the competent authority for entering alerts in Central SIS"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "el",
+     "published": "2023",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Η Αστυνομία Κύπρου ορίζεται ως αρμόδια αρχή στη Δημοκρατία για την εγκατάσταση, λειτουργία και συντήρηση του Εθνικού N.SIS",
+     "quote_english": "The Cyprus Police is designated as the competent authority in the Republic for the installation, operation and maintenance of the National N.SIS",
+     "title": "Ο περί της Λειτουργίας και Χρήσης στη Δημοκρατία του Συστήματος Πληροφοριών Σένγκεν (SIS) Νόμος του 2023 (171(I)/2023)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2023_1_171/full.html",
+     "value": "National N.SIS installed, operated and maintained by the Cyprus Police (national)"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "national",
+   "holding_name": "Εθνικό N.SIS (national Schengen Information System) and SIRENE Bureau",
+   "operator": "Cyprus Police",
+   "research_note": "The SIS Law names the Cyprus Police as the authority that installs, operates and maintains the national N.SIS. The national VIS/EES parts were not researched to quotable standard.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2004",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Η Αστυνομία τηρεί αρχείο πυροβόλων όπλων στο οποίο καταγράφονται τα δεδομένα των πυροβόλων όπλων και των ουσιωδών συστατικών μερών.",
+     "quote_english": "The Police keeps a firearms file in which the data of firearms and their essential components are recorded.",
+     "title": "Ο Περί Πυροβόλων και Μη Πυροβόλων Όπλων Νόμος του 2004 (113(I)/2004)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2004_1_113/full.html",
+     "value": "Firearms file kept by the Police recording firearms and essential components"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2004",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Το αρχείο πυροβόλων όπλων τηρείται κατά τρόπο που διασφαλίζει τη σύνδεση κάθε πυροβόλου όπλου με τον ιδιοκτήτη του.",
+     "quote_english": "The firearms file is kept in a way that ensures the link of each firearm to its owner.",
+     "title": "Ο Περί Πυροβόλων και Μη Πυροβόλων Όπλων Νόμος του 2004 (113(I)/2004)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2004_1_113/full.html",
+     "value": "Firearms and Non-Firearms Law 113(I)/2004, arts. 49A-49C (each firearm linked to its owner)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2004",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Το αρχείο πυροβόλων όπλων τηρείται κατά τρόπο που διασφαλίζει ότι τα δεδομένα κάθε πυροβόλου όπλου και κάθε ουσιώδους συστατικού μέρους, συμπεριλαμβανομένων των σχετικών δεδομένων προσωπικού χαρακτήρα, διατηρούνται στο σύστημα αρχειοθέτησης δεδομένων",
+     "quote_english": "The firearms file is kept so that the data of each firearm and essential component, including related personal data, are retained in the data filing system",
+     "title": "Ο Περί Πυροβόλων και Μη Πυροβόλων Όπλων Νόμος του 2004 (113(I)/2004)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2004_1_113/full.html",
+     "value": "Cyprus Police, keeping the data in a data filing system"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Αρχείο πυροβόλων όπλων (firearms file)",
+   "operator": "Cyprus Police",
+   "research_note": "No source found on hosting or counts.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2019",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "η έκδοση της Επίσημης Εφημερίδας σε ηλεκτρονική μορφή αποτελεί τη μόνη αυθεντική έκδοση που παράγει έννομα αποτελέσματα",
+     "quote_english": "the edition of the Official Gazette in electronic form is the only authentic edition producing legal effects",
+     "title": "Ο περί της Ηλεκτρονικής Έκδοσης της Επίσημης Εφημερίδας της Δημοκρατίας Νόμος του 2019 (82(I)/2019)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2019_1_82/full.html",
+     "value": "The electronic edition of the Official Gazette is the only authentic edition with legal effect"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2019",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο παρών Νόμος θα αναφέρεται ως ο περί της Ηλεκτρονικής Έκδοσης της Επίσημης Εφημερίδας της Δημοκρατίας Νόμος του 2019.",
+     "quote_english": "This Law shall be cited as the Electronic Publication of the Official Gazette of the Republic Law of 2019.",
+     "title": "Ο περί της Ηλεκτρονικής Έκδοσης της Επίσημης Εφημερίδας της Δημοκρατίας Νόμος του 2019 (82(I)/2019)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2019_1_82/full.html",
+     "value": "Electronic Publication of the Official Gazette Law of 2019 (82(I)/2019)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2019",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "στο διαδικτυακό τόπο του Τυπογραφείου για απεριόριστο χρόνο και η πρόσβαση σε αυτή γίνεται άνευ αντιτίμου",
+     "quote_english": "on the website of the Printing Office for an unlimited time and access to it is free of charge",
+     "title": "Ο περί της Ηλεκτρονικής Έκδοσης της Επίσημης Εφημερίδας της Δημοκρατίας Νόμος του 2019 (82(I)/2019)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2019_1_82/full.html",
+     "value": "Published permanently and free of charge on the Government Printing Office website"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "foreign_dependency",
+     "language": "el",
+     "published": "2019",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Κάθε ηλεκτρονική έκδοση της Επίσημης Εφημερίδας φέρει προηγμένη ηλεκτρονική υπογραφή βάσει αναγνωρισμένου πιστοποιητικού",
+     "quote_english": "Every electronic edition of the Official Gazette bears an advanced electronic signature based on a qualified certificate",
+     "title": "Ο περί της Ηλεκτρονικής Έκδοσης της Επίσημης Εφημερίδας της Δημοκρατίας Νόμος του 2019 (82(I)/2019)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2019_1_82/full.html",
+     "value": "Every electronic edition carries an advanced electronic signature based on a qualified certificate (issuing trust service provider not stated)"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Επίσημη Εφημερίδα της Δημοκρατίας (Official Gazette), electronic edition",
+   "operator": "Government Printing Office (Τυπογραφείο της Κυπριακής Δημοκρατίας)",
+   "research_note": "No source found on where the Printing Office website is hosted.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2014",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "ο Γενικός Λογιστής διατηρεί ενιαίο κυβερνητικό λογαριασμό, στον οποίο κατατίθενται όλες οι εισπράξεις των οικονομικών φορέων της Δημοκρατίας και από τον οποίο πληρώνονται όλες οι δαπάνες των οικονομικών φορέων της Δημοκρατίας.",
+     "quote_english": "the Accountant General maintains a single government account into which all receipts of the Republic's fiscal entities are deposited and from which all their expenditures are paid.",
+     "title": "Ο Περί της Δημοσιονομικής Ευθύνης και του Δημοσιονομικού Πλαισίου Νόμος του 2014 (20(I)/2014)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2014_1_20/full.html",
+     "value": "Single government account kept by the Accountant General for all receipts and payments of the Republic's fiscal entities"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2014",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "ο Γενικός Λογιστής διευθύνει και επιβλέπει όλες τις λογιστικές εργασίες, τις σχετικές με τα χρηματικά διαθέσιμα και τα άλλα στοιχεία του ενεργητικού",
+     "quote_english": "the Accountant General directs and supervises all accounting operations relating to cash and other assets",
+     "title": "Ο Περί της Δημοσιονομικής Ευθύνης και του Δημοσιονομικού Πλαισίου Νόμος του 2014 (20(I)/2014)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2014_1_20/full.html",
+     "value": "The Accountant General directs and supervises all government accounting"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2014",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο Περί της Δημοσιονομικής Ευθύνης και του Δημοσιονομικού Πλαισίου Νόμος του 2014 (20(I)/2014)",
+     "quote_english": "The Fiscal Responsibility and Fiscal Framework Law of 2014 (20(I)/2014)",
+     "title": "Ο Περί της Δημοσιονομικής Ευθύνης και του Δημοσιονομικού Πλαισίου Νόμος του 2014 (20(I)/2014)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2014_1_20/full.html",
+     "value": "Fiscal Responsibility and Budget Systems Law of 2014 (20(I)/2014)"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Government accounting and the single government account (Treasury; FIMAS accounting system)",
+   "operator": "Treasury of the Republic (Accountant General / Γενικός Λογιστής)",
+   "research_note": "FIMAS is named on Treasury pages, but treasury.gov.cy redirects to gov.cy, which blocks automated retrieval. A vendor case study (NetU Group) also blocked retrieval. No verifiable hosting source.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "research_note": "Search results indicate the Treasury Payroll Section pays civil servants, but treasury.gov.cy and gov.cy pages block automated retrieval, so no verbatim quote could be secured. No source found on the payroll system, National Guard payroll or hosting.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "1979",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο Γενικός Έφορος Εκλογής έχει την εξουσία να επιλύει, κατά την κρίση του, οποιεσδήποτε τυχόν ασάφειες και/ή προβλήματα τα οποία προκύπτουν σε σχέση με την εκλογική διαδικασία",
+     "quote_english": "The Chief Returning Officer has the power to resolve, at his discretion, any ambiguities and/or problems arising in relation to the electoral process",
+     "title": "Ο περί Εκλογής Μελών της Βουλής των Αντιπροσώπων Νόμος του 1979 (72/1979)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/1979_1_72/full.html",
+     "value": "The Chief Returning Officer has authority to resolve issues arising in the electoral process"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "1979",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο περί Εκλογής Μελών της Βουλής των Αντιπροσώπων Νόμος του 1979 (72/1979)",
+     "quote_english": "The Election of Members of the House of Representatives Law of 1979 (72/1979)",
+     "title": "Ο περί Εκλογής Μελών της Βουλής των Αντιπροσώπων Νόμος του 1979 (72/1979)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/1979_1_72/full.html",
+     "value": "Election of Members of the House of Representatives Law 72/1979"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Parliamentary election administration and results compilation under the Election of Members of the House of Representatives Law",
+   "operator": "Chief Returning Officer (Γενικός Έφορος Εκλογής), Ministry of Interior",
+   "research_note": "No source found on the IT system used for results tabulation or its hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "annual_report",
+     "field": "holding_name",
+     "language": "en",
+     "published": "2026",
+     "publisher": "Central Bank of Cyprus",
+     "quote": "T2-CY is the Cypriot component of the European T2 payment system, which supports liquidity management and the settlement of high-value payments.",
+     "quote_english": "",
+     "title": "Central Bank of Cyprus Annual Report 2025",
+     "url": "https://www.centralbank.cy/images/media/redirectfile/CBC_Annual_Report_English_2025_Final%20(006).pdf",
+     "value": "T2-CY, the Cypriot component of the European T2 payment system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο περί της Κεντρικής Τράπεζας της Κύπρου Νόμος του 2002 (138(I)/2002)",
+     "quote_english": "The Central Bank of Cyprus Law of 2002 (138(I)/2002)",
+     "title": "Ο περί της Κεντρικής Τράπεζας της Κύπρου Νόμος του 2002 (138(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_138/full.html",
+     "value": "Central Bank of Cyprus Law of 2002 (138(I)/2002)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2002",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "η Τράπεζα δύναται να ανοίγει λογαριασμούς υπέρ πιστωτικών ιδρυμάτων, δημόσιων οργανισμών και άλλων φορέων της αγοράς",
+     "quote_english": "the Bank may open accounts for credit institutions, public bodies and other market participants",
+     "title": "Ο περί της Κεντρικής Τράπεζας της Κύπρου Νόμος του 2002 (138(I)/2002)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2002_1_138/full.html",
+     "value": "The Central Bank may open accounts for credit institutions, public bodies and other market participants"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "holding_name": "T2-CY (Cypriot component of the Eurosystem T2 payment system) and Central Bank of Cyprus accounts",
+   "operator": "Central Bank of Cyprus",
+   "research_note": "T2 is a Eurosystem system; the CBC report calls T2-CY the Cypriot component of the European T2 system. No CBC source states where the platform or the CBC's own systems are hosted, so foreign_dependency is left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "research_note": "Searched for public sources on National Guard / Ministry of Defence command, logistics and IT systems. Nothing quotable was found. Such information is typically classified.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2016",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο παρών Νόμος θα αναφέρεται ως ο περί της Κυπριακής Υπηρεσίας Πληροφοριών (ΚΥΠ) Νόμος του 2016.",
+     "quote_english": "This Law shall be cited as the Cyprus Intelligence Service (KYP) Law of 2016.",
+     "title": "Ο περί της Κυπριακής Υπηρεσίας Πληροφοριών (ΚΥΠ) Νόμος του 2016 (75(I)/2016)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2016_1_75/full.html",
+     "value": "Cyprus Intelligence Service (KYP) Law of 2016 (75(I)/2016)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2016",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "η Κυπριακή Υπηρεσία Πληροφοριών της Δημοκρατίας αποτελεί το κύριο όργανο για την ενημέρωση του Προέδρου της Δημοκρατίας για θέματα που άπτονται εξωτερικών και εσωτερικών κινδύνων",
+     "quote_english": "the Cyprus Intelligence Service of the Republic is the main body for informing the President of the Republic on matters concerning external and internal threats",
+     "title": "Ο περί της Κυπριακής Υπηρεσίας Πληροφοριών (ΚΥΠ) Νόμος του 2016 (75(I)/2016)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2016_1_75/full.html",
+     "value": "KYP is the main body informing the President on external and internal threats to state security"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Κυπριακή Υπηρεσία Πληροφοριών (ΚΥΠ) holdings",
+   "operator": "Cyprus Intelligence Service (ΚΥΠ)",
+   "research_note": "Existence and statutory basis only. Holdings and infrastructure are not public.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "secondary",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2026-07-14",
+     "publisher": "RIK (Cyprus Broadcasting Corporation)",
+     "quote": "Υπογράφηκε χθες η συμφωνία για την ανάπτυξη του Συστήματος Νέας Γενιάς 112 μεταξύ της Πολιτικής Άμυνας και της CYTA, με ορίζοντα υλοποίησης του έργου τους 20 μήνες.",
+     "quote_english": "The agreement for the development of the Next Generation 112 System between Civil Defence and CYTA was signed yesterday, with an implementation horizon of 20 months.",
+     "title": "Πληρέστερη και ταχύτερη πληροφόρηση σε κρίσιμα περιστατικά με το Σύστημα Νέας Γενιάς 112",
+     "url": "https://news.rik.cy/el/article/2026/7/14/plerestere-kai-takhutere-plerophorese-se-krisima-peristatika-me-to-sustema-neas-genias-112/",
+     "value": "Next Generation 112 system; development agreement between Civil Defence and CYTA, 20-month implementation"
+    },
+    {
+     "doc_type": "secondary",
+     "field": "hosting",
+     "language": "el",
+     "published": "2026-07-14",
+     "publisher": "RIK (Cyprus Broadcasting Corporation)",
+     "quote": "Υπογράφηκε χθες η συμφωνία για την ανάπτυξη του Συστήματος Νέας Γενιάς 112 μεταξύ της Πολιτικής Άμυνας και της CYTA, με ορίζοντα υλοποίησης του έργου τους 20 μήνες.",
+     "quote_english": "The agreement for the development of the Next Generation 112 System between Civil Defence and CYTA was signed yesterday, with an implementation horizon of 20 months.",
+     "title": "Πληρέστερη και ταχύτερη πληροφόρηση σε κρίσιμα περιστατικά με το Σύστημα Νέας Γενιάς 112",
+     "url": "https://news.rik.cy/el/article/2026/7/14/plerestere-kai-takhutere-plerophorese-se-krisima-peristatika-me-to-sustema-neas-genias-112/",
+     "value": "NG112 developed by CYTA, the Cypriot telecommunications organisation"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "national",
+   "holding_name": "Σύστημα Νέας Γενιάς 112 (Next Generation 112 national emergency call centre system)",
+   "operator": "Civil Defence (Πολιτική Άμυνα), with CYTA as developer",
+   "research_note": "The agreement to develop NG112 was signed between Civil Defence and CYTA (Cypriot telecom operator) in July 2026. No public source found on a national TETRA / public-safety radio network.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "1996",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "ο Υπουργός Εσωτερικών καταρτίζει και υποβάλλει εγγράφως στο Υπουργικό Συμβούλιο για έγκριση, Γενικό Σχέδιο Πολιτικής Άμυνας",
+     "quote_english": "the Minister of Interior prepares and submits in writing to the Council of Ministers for approval a General Civil Defence Plan",
+     "title": "Ο περί Πολιτικής Άμυνας Νόμος του 1996 (117(I)/1996)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/1996_1_117/full.html",
+     "value": "General Civil Defence Plan drawn up by the Minister of Interior and approved by the Council of Ministers"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Γενικό Σχέδιο Πολιτικής Άμυνας (General Civil Defence Plan) and civil defence arrangements",
+   "operator": "Ministry of Interior / Civil Defence",
+   "research_note": "No quotable source found on crisis-centre systems or the CY-Alert public warning platform and its hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2021",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "«Διαχειριστής Συστήματος Μεταφοράς Κύπρου» ή «ΔΣΜΚ» σημαίνει το νομικό πρόσωπο που ορίζεται στις διατάξεις του άρθρου 57 και είναι υπεύθυνο για τη λειτουργία, τη συντήρηση και, αν είναι αναγκαίο, την ανάπτυξη του συστήματος μεταφοράς",
+     "quote_english": "'Transmission System Operator Cyprus' or 'TSOC' means the legal person designated under article 57 and responsible for operating, maintaining and, if necessary, developing the transmission system",
+     "title": "Ο περί Ρύθμισης της Αγοράς Ηλεκτρισμού Νόμος του 2021 (130(I)/2021)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2021_1_130/full.html",
+     "value": "TSOC is the legal person responsible for operating, maintaining and developing the transmission system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2021",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο παρών Νόμος θα αναφέρεται ως ο περί Ρύθμισης της Αγοράς Ηλεκτρισμού Νόμος του 2021.",
+     "quote_english": "This Law shall be cited as the Electricity Market Regulation Law of 2021.",
+     "title": "Ο περί Ρύθμισης της Αγοράς Ηλεκτρισμού Νόμος του 2021 (130(I)/2021)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2021_1_130/full.html",
+     "value": "Electricity Market Regulation Law of 2021 (130(I)/2021)"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Transmission system operation (Διαχειριστής Συστήματος Μεταφοράς Κύπρου, ΔΣΜΚ)",
+   "operator": "Transmission System Operator Cyprus (ΔΣΜΚ / TSOC)",
+   "research_note": "tsoc.org.cy blocks automated retrieval. No source found on SCADA/EMS vendors or hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2010",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Με τον παρόντα Νόμο η ενιαία διαχείριση των υδάτων ανατίθεται στο Τμήμα Αναπτύξεως Υδάτων, μέσα στα πλαίσια της καθοριζόμενης από το Υπουργικό Συμβούλιο κυβερνητικής γενικής υδατικής πολιτικής.",
+     "quote_english": "By this Law the integrated management of waters is assigned to the Water Development Department, within the government general water policy set by the Council of Ministers.",
+     "title": "Ο περί της Ενιαίας Διαχείρισης Υδάτων Νόμος του 2010 (79(I)/2010)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2010_1_79/full.html",
+     "value": "Integrated water management is assigned to the Water Development Department"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2010",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο περί της Ενιαίας Διαχείρισης Υδάτων Νόμος του 2010 (79(I)/2010)",
+     "quote_english": "The Integrated Water Management Law of 2010 (79(I)/2010)",
+     "title": "Ο περί της Ενιαίας Διαχείρισης Υδάτων Νόμος του 2010 (79(I)/2010)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2010_1_79/full.html",
+     "value": "Integrated Water Management Law of 2010 (79(I)/2010)"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Integrated water management of government water works (Water Development Department)",
+   "operator": "Water Development Department, Ministry of Agriculture, Rural Development and Environment",
+   "research_note": "The law assigns integrated water management to the WDD. No source found on SCADA/control systems or their hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2019",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "της Ενιαίας Τράπεζας Ηλεκτρονικών Φακέλων Υγείας, η οποία φυλάσσει και διαχειρίζεται τους ηλεκτρονικούς φάκελους υγείας των πολιτών",
+     "quote_english": "of the Single Bank of Electronic Health Records, which keeps and manages the citizens' electronic health records",
+     "title": "Ο περί Ηλεκτρονικής Υγείας Νόμος του 2019 (59(I)/2019)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2019_1_59/full.html",
+     "value": "Single Bank of Electronic Health Records, which keeps and manages citizens' electronic health records"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2019",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ιδρύεται Αρχή υπό την επωνυμία «Εθνική Αρχή Ηλεκτρονικής Υγείας», η οποία αποτελεί νομικό πρόσωπο δημοσίου δικαίου",
+     "quote_english": "An Authority is established under the name 'National eHealth Authority', which is a legal person governed by public law",
+     "title": "Ο περί Ηλεκτρονικής Υγείας Νόμος του 2019 (59(I)/2019)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2019_1_59/full.html",
+     "value": "National eHealth Authority, a public-law legal person"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2019",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο περί Ηλεκτρονικής Υγείας Νόμος του 2019 (59(I)/2019)",
+     "quote_english": "The eHealth Law of 2019 (59(I)/2019)",
+     "title": "Ο περί Ηλεκτρονικής Υγείας Νόμος του 2019 (59(I)/2019)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2019_1_59/full.html",
+     "value": "eHealth Law of 2019 (59(I)/2019)"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Ενιαία Τράπεζα Ηλεκτρονικών Φακέλων Υγείας (Single Bank of Electronic Health Records)",
+   "operator": "National eHealth Authority (Εθνική Αρχή Ηλεκτρονικής Υγείας)",
+   "research_note": "No source found on the operational status, hosting or size of the EHR bank.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "τη δημιουργία δικτύου Επιδημιολογικής Επιτήρησης και Ελέγχου Λοιμωδών Νοσημάτων με στόχο την παρακολούθηση, καταγραφή, ανάλυση δεδομένων που αφορούν λοιμώδη νοσήματα",
+     "quote_english": "the creation of a network for Epidemiological Surveillance and Control of Communicable Diseases aimed at monitoring, recording and analysing data on communicable diseases",
+     "title": "Ο περί Λοιμοκάθαρσης Νόμος (ΚΕΦ.260)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/0_260/full.html",
+     "value": "Quarantine Law Cap. 260 provides for an epidemiological surveillance and control network for communicable diseases"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Δίκτυο Επιδημιολογικής Επιτήρησης και Ελέγχου Λοιμωδών Νοσημάτων (communicable disease surveillance network)",
+   "operator": "Ministry of Health",
+   "research_note": "The operator is inferred from the Quarantine Law's regulation-making provisions, not stated in the quote. No source found on the surveillance or vaccination registry systems or their hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "research_note": "Searched for the Ministry of Education, Sport and Youth student information system and qualification registers. Ministry pages on gov.cy block automated retrieval and no quotable primary source was found.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2021",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "«εμπιστευτικά στοιχεία» ή «εμπιστευτικά δεδομένα» σημαίνει τα στοιχεία που συλλέγονται και χρησιμοποιούνται για την παραγωγή στατιστικών, εφόσον καθιστούν δυνατή την άμεση ή έμμεση ταυτοποίηση στατιστικών μονάδων",
+     "quote_english": "'confidential data' means data collected and used for producing statistics that allow direct or indirect identification of statistical units",
+     "title": "Ο περί Επίσημων Στατιστικών Νόμος του 2021 (Ν. 25(Ι)/2021)",
+     "url": "http://www.cylaw.org/nomoi/arith/2021_1_025.pdf",
+     "value": "Confidential statistical data: data that permit direct or indirect identification of statistical units"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2021",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "ώστε να διασφαλίζεται ότι τα εμπιστευτικά στοιχεία χρησιμοποιούνται αποκλειστικά για στατιστικούς σκοπούς και να αποτρέπεται η παράνομη δημοσιοποίησή τους.",
+     "quote_english": "so as to ensure that confidential data are used exclusively for statistical purposes and their unlawful disclosure is prevented.",
+     "title": "Ο περί Επίσημων Στατιστικών Νόμος του 2021 (Ν. 25(Ι)/2021)",
+     "url": "http://www.cylaw.org/nomoi/arith/2021_1_025.pdf",
+     "value": "Official Statistics Law of 2021 (25(I)/2021), art. 16: confidential data used exclusively for statistical purposes"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "Confidential statistical data of the Statistical Service (CYSTAT)",
+   "operator": "Statistical Service of Cyprus (Στατιστική Υπηρεσία)",
+   "research_note": "No source found on hosting or microdata volume.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "2010",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο παρών Νόμος θα αναφέρεται ως ο περί της Δημιουργίας Υποδομής Χωρικών Δεδομένων (INSPIRE) Νόμος του 2010.",
+     "quote_english": "This Law shall be cited as the Establishment of a Spatial Data Infrastructure (INSPIRE) Law of 2010.",
+     "title": "Ο περί της Δημιουργίας Υποδομής Χωρικών Δεδομένων (INSPIRE) Νόμος του 2010 (43(I)/2010)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2010_1_43/full.html",
+     "value": "Spatial Data Infrastructure (INSPIRE) Law of 2010 (43(I)/2010)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "el",
+     "published": "2010",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ιδρύεται Ομάδα με την ονομασία «Διευθυντική Ομάδα», αποτελούμενη από τρία (3) μέλη ως ακολούθως: (α)Το Διευθυντή του Τμήματος Κτηματολογίου και Χωρομετρίας ή εκπρόσωπό του, ο οποίος ενεργεί ως πρόεδρος της Διευθυντικής Ομάδας",
+     "quote_english": "A Group named 'Steering Group' is established, consisting of three members: (a) the Director of the Department of Lands and Surveys or his representative, who acts as chair of the Steering Group",
+     "title": "Ο περί της Δημιουργίας Υποδομής Χωρικών Δεδομένων (INSPIRE) Νόμος του 2010 (43(I)/2010)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2010_1_43/full.html",
+     "value": "Steering Group chaired by the Director of the Department of Lands and Surveys"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "2010",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Διευθύνσεις Θέση ακινήτων με βάση τη διεύθυνση, συνήθως με όνομα οδού, αριθμό οικίας και ταχυδρομικό κώδικα.",
+     "quote_english": "Addresses: location of properties based on address, usually by street name, house number and postal code.",
+     "title": "Ο περί της Δημιουργίας Υποδομής Χωρικών Δεδομένων (INSPIRE) Νόμος του 2010 (43(I)/2010)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/2010_1_43/full.html",
+     "value": "Address data theme: location of properties by street name, house number and postcode"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "National spatial data infrastructure (INSPIRE), incl. cadastral parcels and addresses",
+   "operator": "Steering Group chaired by the Director of the Department of Lands and Surveys; Minister of Interior as competent authority",
+   "research_note": "No source found on hosting of the INSPIRE geoportal or orthophoto/topographic holdings.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "el",
+     "published": "1991",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ιδρύεται Κρατικό Αρχείο στο οποίο κατατίθενται και φυλάσσονται δημόσια αρχεία κατά τον καθορισμένο τρόπο.",
+     "quote_english": "A State Archive is established in which public records are deposited and kept in the prescribed manner.",
+     "title": "Ο περί Κρατικού Αρχείου Νόμος του 1991 (208/1991)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/1991_1_208/full.html",
+     "value": "State Archives, in which public records are deposited and kept"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "el",
+     "published": "1991",
+     "publisher": "CyLaw (Cyprus Bar Association)",
+     "quote": "Ο περί Κρατικού Αρχείου Νόμος του 1991 (208/1991)",
+     "quote_english": "The State Archives Law of 1991 (208/1991)",
+     "title": "Ο περί Κρατικού Αρχείου Νόμος του 1991 (208/1991)",
+     "url": "http://www.cylaw.org/nomoi/enop/non-ind/1991_1_208/full.html",
+     "value": "State Archives Law of 1991 (208/1991)"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Κρατικό Αρχείο (State Archives)",
+   "operator": "State Archives, Ministry of Justice and Public Order",
+   "research_note": "The operator's ministry is not stated in the quoted text. No source found on digital-transfer holdings, volume or hosting.",
+   "status": "held"
+  }
+ ],
+ "iso": "CY"
+}

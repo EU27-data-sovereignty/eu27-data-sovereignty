@@ -1,0 +1,1366 @@
+{
+ "extra_holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2015",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Turvallisuusverkko on valtion omistuksessa ja hallinnassa oleva sähköisen viestinnän palveluista annetussa laissa",
+     "quote_english": "The security network is a state-owned and state-controlled network under the Act on Electronic Communications Services",
+     "title": "Laki julkisen hallinnon turvallisuusverkkotoiminnasta (10/2015)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2015/10",
+     "value": "The security network is owned and controlled by the state"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2015",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Turvallisuusverkon verkko- ja infrastruktuuripalvelujen tuottajana toimii valtion kokonaan omistama Suomen Erillisverkot Oy -niminen osakeyhtiö",
+     "quote_english": "The network and infrastructure services of the security network are produced by the wholly state-owned limited company Suomen Erillisverkot Oy",
+     "title": "Laki julkisen hallinnon turvallisuusverkkotoiminnasta (10/2015)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2015/10",
+     "value": "Network and infrastructure services are produced by the wholly state-owned Suomen Erillisverkot Oy"
+    }
+   ],
+   "holding_name": "Julkisen hallinnon turvallisuusverkko (TUVE, public administration security network)",
+   "suggested_class": "government_network",
+   "why_critical": "State-owned closed network over which security authorities must run their critical communications; underpins many tier-0/1 holdings."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2018",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Tulorekisteriyksikkö ja Verohallinto ovat kuitenkin yhteisrekisterinpitäjiä tulotietojärjestelmän ylläpidon, teknisen toimivuuden ja tietoturvallisuuden osalta.",
+     "quote_english": "The Incomes Register Unit and the Tax Administration are joint controllers for the maintenance, technical functioning and information security of the incomes information system.",
+     "title": "Laki tulotietojärjestelmästä (53/2018)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2018/53",
+     "value": "The Incomes Register Unit and the Tax Administration are joint controllers for maintenance, technical functioning and security of the incomes information system"
+    }
+   ],
+   "holding_name": "Tulorekisteri / tulotietojärjestelmä (Incomes Register)",
+   "suggested_class": "tax",
+   "why_critical": "Real-time national database of all wages, pensions and benefits; feeds taxation, Kela, pensions and statistics."
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2013",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Valtion yhteisiä perustietotekniikka- ja tietojärjestelmäpalveluja tuottaa ja kehittää valtiovarainministeriön hallinnonalalla toimiva palvelukeskus.",
+     "quote_english": "The state's common basic ICT and information system services are produced and developed by a service centre within the Ministry of Finance's administrative branch.",
+     "title": "Laki valtion yhteisten tieto- ja viestintäteknisten palvelujen järjestämisestä (1226/2013)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2013/1226",
+     "value": "A service centre under the Ministry of Finance produces the state's shared basic ICT and information system services"
+    }
+   ],
+   "holding_name": "Valtori – valtion yhteiset perustietotekniikka- ja tietojärjestelmäpalvelut (Government ICT Centre shared services)",
+   "suggested_class": "government_ict_platform",
+   "why_critical": "Statutory shared ICT provider for central government agencies; where their data physically run is largely determined by Valtori."
+  }
+ ],
+ "holdings": [
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2009",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Väestötietojärjestelmä on yleinen valtakunnallinen perusrekisteri, joka sisältää tässä laissa säädetyt tiedot henkilöistä, kiinteistöistä, rakennuksista ja huoneistoista",
+     "quote_english": "The Population Information System is a general national base register containing the data laid down in this Act on persons, real estate, buildings and dwellings",
+     "title": "Laki väestötietojärjestelmästä ja Digi- ja väestötietoviraston varmennepalveluista (661/2009)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2009/661",
+     "value": "Väestötietojärjestelmä (Population Information System) is the general national base register of persons, real estate, buildings and dwellings"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2009",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Digi- ja väestötietovirasto vastaa muista kuin 1 momentissa tarkoitetuista rekisterinpitäjän tehtävistä siltä osin kuin tässä laissa ei toisin säädetä.",
+     "quote_english": "The Digital and Population Data Services Agency is responsible for controller duties other than those in subsection 1, unless otherwise provided in this Act.",
+     "title": "Laki väestötietojärjestelmästä ja Digi- ja väestötietoviraston varmennepalveluista (661/2009)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2009/661",
+     "value": "Digital and Population Data Services Agency (DVV) carries the controller duties for the Population Information System"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2009",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Kun henkilön tiedot talletetaan ensimmäisen kerran väestötietojärjestelmään, hänelle on annettava henkilötunnus. Henkilötunnus annetaan automaattisesti väestötietojärjestelmästä.",
+     "quote_english": "When a person's data are first recorded in the Population Information System, they must be given a personal identity code. The code is assigned automatically from the system.",
+     "title": "Laki väestötietojärjestelmästä ja Digi- ja väestötietoviraston varmennepalveluista (661/2009)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2009/661",
+     "value": "Act 661/2009 establishes that the personal identity code is assigned automatically from the Population Information System"
+    }
+   ],
+   "class_id": "civil_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Väestötietojärjestelmä (Population Information System)",
+   "operator": "Digi- ja väestötietovirasto (DVV)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2019",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "henkilön valokuva ja nimikirjoitusnäyte, jotka hän on luovuttanut poliisille, ulkoministeriölle tai ulkoasiainhallinnon viranomaiselle hakiessaan sellaista lupaa tai päätöstä, jonka valmistamiseen henkilön valokuva ja nimikirjoitusnäyte ovat tarpeen;",
+     "quote_english": "the person's photograph and signature sample submitted to the police, the Ministry for Foreign Affairs or a foreign-service authority when applying for a licence or decision for whose production they are needed;",
+     "title": "Laki henkilötietojen käsittelystä poliisitoimessa (616/2019)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2019/616",
+     "value": "Police licence-administration data include photographs submitted when applying for a licence or decision (e.g. passport/ID card)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2006",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Hakemukseen on liitettävä hakijan kasvokuva, josta hakija on hyvin tunnistettavissa.",
+     "quote_english": "The application must include a facial image of the applicant from which the applicant is well identifiable.",
+     "title": "Passilaki (671/2006)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2006/671",
+     "value": "Passport Act requires a facial image with every passport application"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2006",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Tekniseen osaan talletetaan passinhaltijan kasvokuva sekä 6 a §:ssä tarkoitetut sormenjäljet tarvittavine lisätietoineen siten kuin EU:n passiasetuksessa säädetään.",
+     "quote_english": "The holder's facial image and the fingerprints referred to in section 6 a are stored in the technical part as laid down in the EU passport regulation.",
+     "title": "Passilaki (671/2006)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2006/671",
+     "value": "The facial image and fingerprints are stored in the passport chip (technical part) under the EU passport regulation"
+    }
+   ],
+   "class_id": "facial_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Poliisin lupahallinnon tiedot: passin/henkilökortin kasvokuvat (police licence-administration data incl. passport/ID-card facial images)",
+   "operator": "Poliisi (Poliisihallitus)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2006",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Sormenjäljet talletetaan passin tekniseen osaan sekä passirekisteriin. Passirekisteriin talletetut sormenjäljet on pidettävä erillään rikoksesta epäiltyjen henkilötuntomerkeistä.",
+     "quote_english": "Fingerprints are stored in the technical part of the passport and in the passport register. Fingerprints in the passport register must be kept separate from suspects' identifying data.",
+     "title": "Passilaki (671/2006)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2006/671",
+     "value": "Passport fingerprints are stored centrally in the passport register as well as in the chip"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2016",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Sormenjäljet talletetaan henkilökortin tekniseen osaan sekä henkilökorttirekisteriin. Henkilökorttirekisteriin talletetut sormenjäljet on pidettävä erillään rikoksesta epäiltyjen henkilötuntomerkeistä.",
+     "quote_english": "Fingerprints are stored in the technical part of the identity card and in the identity card register. They must be kept separate from suspects' identifying data.",
+     "title": "Henkilökorttilaki (663/2016)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2016/663",
+     "value": "ID-card fingerprints are stored centrally in the identity card register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2006",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Passinhakijalta otetaan passia haettaessa sormenjäljet. Sormenjäljet ottaa passin myöntävä viranomainen.",
+     "quote_english": "Fingerprints are taken from the passport applicant when applying. The fingerprints are taken by the issuing authority.",
+     "title": "Passilaki (671/2006)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2006/671",
+     "value": "Passport Act: fingerprints are taken from every passport applicant by the issuing authority"
+    }
+   ],
+   "class_id": "fingerprint_biometric",
+   "foreign_dependency": "unknown",
+   "holding_name": "Passirekisteri ja henkilökorttirekisteri: sormenjäljet (fingerprints in the passport and identity card registers)",
+   "operator": "Poliisi (Poliisihallitus)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2009",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Väestötietojärjestelmä muodostuu valtakunnallisesta tietojärjestelmästä sekä niistä alueellisesti järjestetyistä asiakirja- ja muista vastaavista tietoaineistoista, joita ei ole otettu digitaalisessa muodossa tietojärjestelmään.",
+     "quote_english": "The Population Information System consists of the national information system and the regionally organised document and similar data sets that have not been taken into the system in digital form.",
+     "title": "Laki väestötietojärjestelmästä ja Digi- ja väestötietoviraston varmennepalveluista (661/2009)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2009/661",
+     "value": "The Population Information System includes regionally organised documentary records not taken into digital form"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2009",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Jos väestötietojärjestelmään talletettavaksi ilmoitettu tieto perustuu ulkomaiseen asiakirjaan, väestötietojärjestelmään voidaan julkisesti luotettavana tietona tallettaa asiakirjan perusteella vain sellainen tieto, jonka luotettavuus on varmistettu alkuperäisestä virallisesta asiakirjasta",
+     "quote_english": "If data notified for recording is based on a foreign document, only data whose reliability has been verified from the original official document may be recorded as publicly reliable data",
+     "title": "Laki väestötietojärjestelmästä ja Digi- ja väestötietoviraston varmennepalveluista (661/2009)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2009/661",
+     "value": "Data based on foreign documents may be recorded only if verified from the original official document or certified copy"
+    }
+   ],
+   "class_id": "breeder_documents",
+   "foreign_dependency": "unknown",
+   "holding_name": "Väestötietojärjestelmän asiakirja-aineistot (documentary records of the Population Information System)",
+   "operator": "Digi- ja väestötietovirasto (DVV)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown. No source found on digitisation or hosting of the underlying documents.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2006",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Tässä laissa poliisille, ulkoministeriölle ja 10 §:ssä tarkoitetulle Suomen edustustolle säädettyjen tehtävien suorittamiseksi poliisi pitää rekisteriä, johon talletetaan:",
+     "quote_english": "To perform the tasks laid down in this Act for the police, the Ministry for Foreign Affairs and Finnish missions, the police keep a register in which are recorded:",
+     "title": "Passilaki (671/2006)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2006/671",
+     "value": "The police keep the passport register for tasks of the police, the Ministry for Foreign Affairs and missions"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2016",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Tässä laissa poliisille ja Suomen edustustolle säädettyjen tehtävien suorittamiseksi poliisi pitää henkilökorttirekisteriä, johon talletetaan:",
+     "quote_english": "To perform the tasks laid down in this Act for the police and Finnish missions, the police keep an identity card register in which are recorded:",
+     "title": "Henkilökorttilaki (663/2016)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2016/663",
+     "value": "The police keep the identity card register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2006",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Passirekisterin tietojen käytöstä säädetään henkilötietojen käsittelystä poliisitoimessa annetun lain 11–15 §:ssä.",
+     "quote_english": "The use of passport register data is governed by sections 11–15 of the Act on the Processing of Personal Data by the Police.",
+     "title": "Passilaki (671/2006)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2006/671",
+     "value": "Use, disclosure and deletion of passport-register data are governed by the Police Personal Data Act"
+    }
+   ],
+   "class_id": "issuance_history",
+   "foreign_dependency": "unknown",
+   "holding_name": "Passirekisteri ja henkilökorttirekisteri (passport register and identity card register)",
+   "operator": "Poliisi (Poliisihallitus)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2016",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Digi- ja väestötietovirasto tuottaa ja kehittää 3 §:n 1 momentin 1–7 kohdassa tarkoitettuja tukipalveluja.",
+     "quote_english": "The Digital and Population Data Services Agency produces and develops the support services referred to in section 3(1)(1–7).",
+     "title": "Laki hallinnon yhteisistä sähköisen asioinnin tukipalveluista (571/2016)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2016/571",
+     "value": "DVV produces and develops the shared e-service support services, including the identification service"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2009",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Digi- ja väestötietoviraston tehtävänä on tuottaa, tarjota ja hallinnoida varmennetussa sähköisessä asioinnissa käytettäväksi tarkoitettu kansalaisvarmenne sekä sen käyttöön välittömästi liittyvät varmennehakemisto- ja sulkulistapalvelut.",
+     "quote_english": "The task of DVV is to produce, provide and manage the citizen certificate for certified electronic transactions and the directly related certificate directory and revocation list services.",
+     "title": "Laki väestötietojärjestelmästä ja Digi- ja väestötietoviraston varmennepalveluista (661/2009)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2009/661",
+     "value": "DVV must produce and manage the citizen certificate and its directory and revocation-list services"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "hosting",
+     "language": "fi",
+     "published": "2024-01-31",
+     "publisher": "Digi- ja väestötietovirasto (DVV), via STT Info",
+     "quote": "Käytännössä tämä tarkoittaa, että sopimuksen tultua voimaan kaikki tunnistautumiset Suomi.fi-tunnistusta käyttäviin palveluihin kulkevat Telian välityspalvelun kautta",
+     "quote_english": "In practice this means that once the contract enters into force all authentications to services using Suomi.fi e-Identification pass through Telia's broker service",
+     "title": "Digi- ja väestötietovirasto valitsi vahvan tunnistamisen välityspalveluntarjoajaksi Telia Finland Oyj:n",
+     "url": "https://www.sttinfo.fi/tiedote/70085553/digi-ja-vaestotietovirasto-valitsi-vahvan-tunnistamisen-valityspalveluntarjoajaksi-telia-finland-oyjn?publisherId=3777&lang=fi",
+     "value": "After a 2024 tender, all Suomi.fi e-Identification authentications are routed through the broker service of Telia Finland Oyj"
+    }
+   ],
+   "class_id": "digital_identity_credentials",
+   "foreign_dependency": "unknown",
+   "holding_name": "Suomi.fi-tunnistus (Suomi.fi e-Identification) and DVV kansalaisvarmenne (citizen certificate)",
+   "operator": "Digi- ja väestötietovirasto (DVV)",
+   "research_note": "The identification broker for Suomi.fi e-Identification is Telia Finland Oyj (DVV press release, 2024). No source was retrieved stating the owner or jurisdiction of that company or where the service is hosted, so foreign_dependency is left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2016",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Digi- ja väestötietoviraston on tietojen käsittelyn laillisuuden varmistamiseksi pidettävä lokirekisteriä 3 §:n 1 momentin 1–7 kohdassa tarkoitettujen tukipalvelujen käytöstä tallennettujen tietojen käsittelystä.",
+     "quote_english": "To ensure lawful processing, DVV must keep a log register of processing of data stored from the use of the support services referred to in section 3(1)(1–7).",
+     "title": "Laki hallinnon yhteisistä sähköisen asioinnin tukipalveluista (571/2016)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2016/571",
+     "value": "DVV must keep a log register of processing of data stored from use of the support services (incl. identification)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2016",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Digi- ja väestötietoviraston on säilytettävä lokirekisteriin tallennetut tiedot vähintään kaksi vuotta niiden tallentamisajankohtaa seuraavan kalenterivuoden alusta lukien.",
+     "quote_english": "DVV must retain the data stored in the log register for at least two years from the start of the calendar year following storage.",
+     "title": "Laki hallinnon yhteisistä sähköisen asioinnin tukipalveluista (571/2016)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2016/571",
+     "value": "Log data must be retained for at least two years"
+    },
+    {
+     "doc_type": "press_release",
+     "field": "record_count",
+     "language": "fi",
+     "published": "2024-01-31",
+     "publisher": "Digi- ja väestötietovirasto (DVV), via STT Info",
+     "quote": "Sen kautta tunnistaudutaan digipalveluihin keskimäärin 17 miljoonaa kertaa kuukaudessa.",
+     "quote_english": "Through it people authenticate to digital services on average 17 million times a month.",
+     "title": "Digi- ja väestötietovirasto valitsi vahvan tunnistamisen välityspalveluntarjoajaksi Telia Finland Oyj:n",
+     "url": "https://www.sttinfo.fi/tiedote/70085553/digi-ja-vaestotietovirasto-valitsi-vahvan-tunnistamisen-valityspalveluntarjoajaksi-telia-finland-oyjn?publisherId=3777&lang=fi",
+     "value": "About 17 million authentications per month through Suomi.fi e-Identification"
+    }
+   ],
+   "class_id": "authentication_audit_log",
+   "foreign_dependency": "unknown",
+   "holding_name": "Suomi.fi-tukipalvelujen lokirekisteri (log register of the Suomi.fi support services)",
+   "operator": "Digi- ja väestötietovirasto (DVV)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "1998",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Digi- ja väestötietovirasto voi antaa äänioikeusrekisteristä otteita. Ote annetaan maksutta sille, josta otteessa on tietoja, ja tässä laissa tarkoitetulle viranomaiselle.",
+     "quote_english": "DVV may issue extracts from the voting register. An extract is issued free of charge to the person concerned and to authorities referred to in this Act.",
+     "title": "Vaalilaki (714/1998)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/1998/714",
+     "value": "DVV issues extracts from the voting register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "1998",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Sen jälkeen kun vaalien tulos on saanut lainvoiman, äänioikeusrekisteristä otetaan oikeusministeriön määräämät arkistotulosteet. Tämän jälkeen Digi- ja väestötietovirasto hävittää rekisterissä olevat tiedot.",
+     "quote_english": "After the election result has become final, archive printouts ordered by the Ministry of Justice are taken from the voting register. DVV then destroys the data in the register.",
+     "title": "Vaalilaki (714/1998)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/1998/714",
+     "value": "After the result becomes final, archive printouts are taken and DVV destroys the register data"
+    }
+   ],
+   "class_id": "electoral_roll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Äänioikeusrekisteri (register of persons entitled to vote)",
+   "operator": "Digi- ja väestötietovirasto (DVV)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2009",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Digi- ja väestötietovirasto pitää myöntämistään henkilövarmenteista varmennerekisteriä, josta säädetään sähköisestä tunnistamisesta ja sähköisiin transaktioihin liittyvistä luottamuspalveluista sisämarkkinoilla",
+     "quote_english": "DVV keeps a certificate register of the personal certificates it issues, provided for in the regulation on electronic identification and trust services in the internal market",
+     "title": "Laki väestötietojärjestelmästä ja Digi- ja väestötietoviraston varmennepalveluista (661/2009)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2009/661",
+     "value": "DVV keeps a certificate register of the personal certificates it issues, under the eIDAS Regulation"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2006",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Tekniseen osaan talletettujen tietojen aitouden ja eheyden varmistamiseen liittyvät sekä sormenjälkien lukemisessa tarvittavat varmenteet luo Digi- ja väestötietovirasto.",
+     "quote_english": "The certificates for verifying the authenticity and integrity of data stored in the technical part and for reading fingerprints are created by DVV.",
+     "title": "Passilaki (671/2006)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2006/671",
+     "value": "DVV creates the certificates used to verify passport chip data and read fingerprints"
+    }
+   ],
+   "class_id": "trust_services_pki",
+   "foreign_dependency": "unknown",
+   "holding_name": "DVV:n varmennepalvelut ja varmennerekisteri (DVV certificate services and certificate register)",
+   "operator": "Digi- ja väestötietovirasto (DVV)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2020",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Ulkomaalaisasioiden asiankäsittelyjärjestelmään tallennetaan 1 §:n 1 momentin 1 kohdassa tarkoitetussa käsittelytarkoituksessa käsiteltävät muut kuin lyhytaikaisten viisumien käsittelyä ja päätöksentekoa koskevat tiedot",
+     "quote_english": "The aliens-affairs case management system stores data processed for the purpose in section 1(1)(1) other than data on short-term visa processing and decisions",
+     "title": "Laki henkilötietojen käsittelystä maahanmuuttohallinnossa (615/2020)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2020/615",
+     "value": "The aliens-affairs case management system holds data on non-visa immigration matters"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2020",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Poliisin tallentamien tietojen rekisterinpitäjänä toimii Poliisihallitus ja Rajavartiolaitoksen tallentamien tietojen rekisterinpitäjänä Rajavartiolaitoksen esikunta. Kansainvälistä suojelua koskevan hakemuksen rekisteröintitietojen rekisterinpitäjänä toimii kuitenkin Maahanmuuttovirasto.",
+     "quote_english": "The National Police Board is controller for data stored by the police and the Border Guard HQ for data stored by the Border Guard. The Immigration Service is controller for international protection registration data.",
+     "title": "Laki henkilötietojen käsittelystä maahanmuuttohallinnossa (615/2020)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2020/615",
+     "value": "Each authority is controller for data it stores; the Finnish Immigration Service is controller for international-protection registration data"
+    }
+   ],
+   "class_id": "residence_permits",
+   "foreign_dependency": "unknown",
+   "holding_name": "Ulkomaalaisasioiden asiankäsittelyjärjestelmä (UMA, case management system for aliens affairs)",
+   "operator": "Maahanmuuttovirasto (Finnish Immigration Service), with Police and Border Guard as co-controllers",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2010",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Verohallinnon tehtävänä on verotuksen toimittaminen, verovalvonta, verojen ja maksujen kanto, perintä ja tilitys sekä veronsaajien oikeudenvalvonta sen mukaan kuin erikseen säädetään.",
+     "quote_english": "The Tax Administration is responsible for tax assessment, tax control, collection, recovery and remittance of taxes and charges, and safeguarding the rights of tax recipients.",
+     "title": "Laki Verohallinnosta (503/2010)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2010/503",
+     "value": "The Tax Administration carries out assessment, control, collection and recovery of taxes"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2010",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Verotusta varten on valtiovarainministeriön alainen Verohallinto, jonka virka-alueena on koko maa.",
+     "quote_english": "For taxation there is a Tax Administration under the Ministry of Finance, whose jurisdiction covers the whole country.",
+     "title": "Laki Verohallinnosta (503/2010)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2010/503",
+     "value": "Act on the Tax Administration establishes the nationwide Tax Administration under the Ministry of Finance"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2018",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Tulorekisteriyksikkö ja Verohallinto ovat kuitenkin yhteisrekisterinpitäjiä tulotietojärjestelmän ylläpidon, teknisen toimivuuden ja tietoturvallisuuden osalta.",
+     "quote_english": "The Incomes Register Unit and the Tax Administration are, however, joint controllers regarding the maintenance, technical functioning and information security of the incomes information system.",
+     "title": "Laki tulotietojärjestelmästä (53/2018)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2018/53",
+     "value": "Incomes Register Unit and the Tax Administration are joint controllers for maintenance, technical functioning and security of the incomes information system"
+    }
+   ],
+   "class_id": "tax",
+   "foreign_dependency": "unknown",
+   "holding_name": "Verohallinnon verotustiedot ja tulotietojärjestelmä (Tax Administration taxation data; Incomes Register)",
+   "operator": "Verohallinto (Finnish Tax Administration)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown. The name of the core tax system could not be confirmed from a retrievable primary source.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2016",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Tulli määrätään arvion perusteella, jos tulli-ilmoitusta ei ole annettu tai sitä ei voida täydennettynäkään käyttää tullin määrittämisen perusteena.",
+     "quote_english": "Duty is imposed on the basis of an estimate if no customs declaration has been lodged or it cannot, even when supplemented, be used as the basis for determining the duty.",
+     "title": "Tullilaki (304/2016)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2016/304",
+     "value": "Customs Act: duty is assessed from the customs declaration, or by estimate if none is given"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2019",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Edellä 2 luvussa tarkoitettujen henkilötietojen rekisterinpitäjä on Tulli.",
+     "quote_english": "The controller of the personal data referred to in chapter 2 is Finnish Customs.",
+     "title": "Laki henkilötietojen käsittelystä Tullissa (650/2019)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2019/650",
+     "value": "Finnish Customs is controller of the personal data in its registers under Act 650/2019"
+    }
+   ],
+   "class_id": "customs",
+   "foreign_dependency": "unknown",
+   "holding_name": "Tullin tulli-ilmoitustiedot ja rekisterit (Customs declaration data and registers)",
+   "operator": "Tulli (Finnish Customs)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown. Specific declaration systems (names, hosting) were not confirmed from a retrievable source.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2001",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Kansaneläkelaitos on itsenäinen julkisoikeudellinen laitos, jonka hallintoa ja toimintaa valvovat eduskunnan valitsemat valtuutetut.",
+     "quote_english": "The Social Insurance Institution is an independent public-law institution whose administration and activities are supervised by trustees elected by Parliament.",
+     "title": "Laki Kansaneläkelaitoksesta (731/2001)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2001/731",
+     "value": "Kela is an independent public-law institution supervised by trustees elected by Parliament"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2006",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "huolehtia laissa sille määrättyjen tehtävien hoitamiseksi tarvittavista rekistereistä ja työeläkelaitosten työeläkelakien mukaista toimintaa varten tarvitsemien tietojen saatavuudesta;",
+     "quote_english": "to maintain the registers needed for its statutory tasks and ensure availability of data pension institutions need under the earnings-related pension acts;",
+     "title": "Laki Eläketurvakeskuksesta (397/2006)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2006/397",
+     "value": "The Finnish Centre for Pensions keeps the registers needed for earnings-related pension tasks"
+    }
+   ],
+   "class_id": "benefits_pensions",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kelan etuustiedot ja Eläketurvakeskuksen työeläkerekisterit (Kela benefit data; Finnish Centre for Pensions earnings-related pension registers)",
+   "operator": "Kansaneläkelaitos (Kela); Eläketurvakeskus (ETK)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2004",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Kansaneläkelaitos vastaa sairausvakuutuksen toimeenpanoon liittyvistä tehtävistä sekä seuraa ja valvoo tämän lain ja sen nojalla annettujen asetusten ja määräysten noudattamista ja toteuttamista.",
+     "quote_english": "Kela is responsible for tasks related to implementing health insurance and monitors compliance with this Act and the decrees and regulations issued under it.",
+     "title": "Sairausvakuutuslaki (1224/2004)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2004/1224",
+     "value": "Kela is responsible for implementing statutory health insurance"
+    }
+   ],
+   "class_id": "health_insurance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Sairausvakuutuksen toimeenpano ja vakuutettujen tiedot (national health insurance implementation data)",
+   "operator": "Kansaneläkelaitos (Kela)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2002",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Tässä laissa tarkoitetun kiinteistötietojärjestelmän perustamisesta, hallinnosta, ylläpitämisestä, tietopalvelusta ja järjestelmän kehittämisestä huolehtii Maanmittauslaitos.",
+     "quote_english": "The National Land Survey is responsible for establishing, administering, maintaining, providing data services from and developing the real estate information system.",
+     "title": "Laki kiinteistötietojärjestelmästä ja siitä tuotettavasta tietopalvelusta (453/2002)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2002/453",
+     "value": "The National Land Survey establishes, administers, maintains and develops the Real Estate Information System"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2002",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Tätä lakia sovelletaan kiinteistötietojärjestelmän perustamiseen, järjestelmän ylläpitämiseen ja järjestelmään sisältyvien tietojen luovuttamiseen ja käyttämiseen.",
+     "quote_english": "This Act applies to the establishment and maintenance of the real estate information system and to disclosure and use of the data it contains.",
+     "title": "Laki kiinteistötietojärjestelmästä ja siitä tuotettavasta tietopalvelusta (453/2002)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2002/453",
+     "value": "The Act covers establishment, maintenance and data disclosure of the Real Estate Information System"
+    }
+   ],
+   "class_id": "land_property",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kiinteistötietojärjestelmä, incl. lainhuuto- ja kiinnitysrekisteri (Real Estate Information System incl. title and mortgage register)",
+   "operator": "Maanmittauslaitos (National Land Survey of Finland)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2023",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Tässä laissa säädetään kaupparekisterin pitämisestä yrityksiä, yhteisöjä ja niissä toimivia henkilöitä koskevien ajantasaisten ja luotettavien tietojen saamiseksi. Rekisteripitäjänä on Patentti- ja rekisterihallitus",
+     "quote_english": "This Act governs keeping the trade register to obtain up-to-date, reliable data on companies, entities and persons acting in them. The registrar is the Finnish Patent and Registration Office",
+     "title": "Kaupparekisterilaki (564/2023)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2023/564",
+     "value": "The Trade Register Act names the Finnish Patent and Registration Office as registrar"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2023",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Rekisteriviranomainen pitää tietojärjestelmässään julkista diaaria kaupparekisteriin saapuvista ilmoituksista, hakemuksista ja tiedonannoista sekä asiakirjakansiota ilmoitusvelvollista koskevista asiakirjoista.",
+     "quote_english": "The registration authority keeps in its information system a public diary of notifications, applications and communications to the trade register and a document folder of documents concerning each filer.",
+     "title": "Kaupparekisterilaki (564/2023)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2023/564",
+     "value": "The registration authority keeps a public diary and document files in its information system"
+    }
+   ],
+   "class_id": "business_registry",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kaupparekisteri (Trade Register)",
+   "operator": "Patentti- ja rekisterihallitus (PRH, Finnish Patent and Registration Office)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2023",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "tarkoitetun tosiasiallisen edunsaajan tietoja voidaan luovuttaa, jos luovutuksensaaja on tunnistettu ja luovutuksensaajalla on mainitun lain 1 luvun 1 §:n mukainen peruste tietojen käsittelylle tai viranomainen tarvitsee tietoja lakisääteisen tehtävänsä hoitamiseksi.",
+     "quote_english": "beneficial-owner data may be disclosed if the recipient has been identified and has a basis for processing under chapter 1 section 1 of that Act, or an authority needs the data for its statutory tasks.",
+     "title": "Kaupparekisterilaki (564/2023)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2023/564",
+     "value": "Beneficial-owner data in the Trade Register may be disclosed to identified recipients with a legal basis or to authorities"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2019",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Patentti- ja rekisterihallituksen kaupparekisteristä tiedot elinkeinonharjoittajia koskevista ilmoituksista ja tiedonannoista tulli- ja verovalvontaa, lupaharkintaa, verotusta, perintää sekä tullirikostorjuntaa varten sekä kaupparekisterin edunsaajista rekisteröitävät tiedot",
+     "quote_english": "from the Trade Register of the Finnish Patent and Registration Office, data on notifications by traders for customs and tax control, licensing, taxation, recovery and customs-crime prevention, and the data registered on beneficial owners",
+     "title": "Laki henkilötietojen käsittelystä Tullissa (650/2019)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2019/650",
+     "value": "Finnish Customs receives beneficial-owner data from the PRH Trade Register"
+    }
+   ],
+   "class_id": "beneficial_ownership",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kaupparekisterin tosiasiallisten edunsaajien tiedot (beneficial-owner data in the Trade Register)",
+   "operator": "Patentti- ja rekisterihallitus (PRH)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2017",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Liikenne- ja viestintävirasto pitää sähköisesti liikenneasioiden rekisteriä, joka sisältää tietoja:",
+     "quote_english": "The Finnish Transport and Communications Agency keeps the transport register electronically, containing data on:",
+     "title": "Laki liikenteen palveluista (320/2017)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2017/320",
+     "value": "Traficom keeps the transport register electronically"
+    }
+   ],
+   "class_id": "vehicle_licensing",
+   "foreign_dependency": "unknown",
+   "holding_name": "Liikenneasioiden rekisteri (Transport Register: vehicles and driving licences)",
+   "operator": "Liikenne- ja viestintävirasto Traficom",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2010",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Oikeusministeriö huolehtii oikeushallinnon valtakunnallisen tietojärjestelmän kehittämisestä ja käyttöpalvelujen järjestämisestä.",
+     "quote_english": "The Ministry of Justice sees to the development of the national information system of the judicial administration and to arranging its operating services.",
+     "title": "Laki oikeushallinnon valtakunnallisesta tietojärjestelmästä (372/2010)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2010/372",
+     "value": "The Ministry of Justice develops the national judicial information system and arranges its operating services (Legal Register Centre is controller)"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "1993",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Oikeusrekisterikeskus voi painavista syistä luovuttaa tietoja rikosrekisteristä viranomaiselle, jos ne ovat välttämättömiä henkilön luotettavuuden selvittämistä ja arviointia varten",
+     "quote_english": "For compelling reasons the Legal Register Centre may disclose criminal record data to an authority if necessary for investigating and assessing a person's reliability",
+     "title": "Rikosrekisterilaki (770/1993)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/1993/770",
+     "value": "The Legal Register Centre discloses data from the Criminal Records"
+    }
+   ],
+   "class_id": "judicial_criminal",
+   "foreign_dependency": "unknown",
+   "holding_name": "Rikosrekisteri and oikeushallinnon valtakunnallinen tietojärjestelmä (Criminal Records; national judicial information system)",
+   "operator": "Oikeusrekisterikeskus (Legal Register Centre)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2019",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Edellä 2 luvussa tarkoitettujen henkilötietojen sekä Schengenin tietojärjestelmän kansallisen järjestelmän rekisterinpitäjä ja SIS-asetuksissa tarkoitettu N.SIS-toimisto on Poliisihallitus.",
+     "quote_english": "The controller of the personal data referred to in chapter 2 and of the national Schengen Information System, and the N.SIS office under the SIS regulations, is the National Police Board.",
+     "title": "Laki henkilötietojen käsittelystä poliisitoimessa (616/2019)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2019/616",
+     "value": "The National Police Board is controller of police data and of the national Schengen Information System, and is the N.SIS office"
+    }
+   ],
+   "class_id": "police_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Poliisin henkilötietojärjestelmät ja SIS:n kansallinen järjestelmä (police personal data systems; national SIS)",
+   "operator": "Poliisihallitus (National Police Board)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2019",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Tässä laissa tarkoitettujen henkilötietojen sekä EES-asetuksen 39 artiklassa tarkoitettujen tietojen rekisterinpitäjä on Rajavartiolaitoksen esikunta.",
+     "quote_english": "The controller of the personal data under this Act and of the data referred to in Article 39 of the EES Regulation is the Border Guard Headquarters.",
+     "title": "Laki henkilötietojen käsittelystä Rajavartiolaitoksessa (639/2019)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2019/639",
+     "value": "Border Guard HQ is controller of Border Guard personal data and of EES data under Art. 39"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2020",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Kansalliseen viisumitietojärjestelmään tallennetaan 1 §:n 1 momentin 1 kohdassa tarkoitetussa käsittelytarkoituksessa käsiteltävät lyhytaikaisten ja pitkäaikaisten viisumien käsittelyä ja päätöksentekoa",
+     "quote_english": "The national visa information system stores the data on processing of and decisions on short-term and long-term visas",
+     "title": "Laki henkilötietojen käsittelystä maahanmuuttohallinnossa (615/2020)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2020/615",
+     "value": "The national visa information system stores short- and long-term visa processing data"
+    }
+   ],
+   "class_id": "border_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Rajavartiolaitoksen henkilötiedot, EES ja kansallinen viisumitietojärjestelmä (Border Guard data, Entry/Exit, national visa system)",
+   "operator": "Rajavartiolaitoksen esikunta (Border Guard HQ); Poliisihallitus; Ulkoministeriö",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "1998",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Ase-elinkeinonharjoittajien välisestä luovutuksesta on tehtävä ilmoitus 10 päivän kuluessa sähköistä asiointia käyttäen poliisin asetietojärjestelmään.",
+     "quote_english": "A transfer between firearms dealers must be notified within 10 days electronically to the police firearms information system.",
+     "title": "Ampuma-aselaki (1/1998)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/1998/1",
+     "value": "Transfers between firearms dealers must be notified electronically to the police firearms information system"
+    }
+   ],
+   "class_id": "firearms_register",
+   "foreign_dependency": "unknown",
+   "holding_name": "Poliisin asetietojärjestelmä (police firearms information system)",
+   "operator": "Poliisi",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2000",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Oikeusministeriö vastaa säädöskokoelman ja sopimussarjan julkaisemisesta ja jakelusta.",
+     "quote_english": "The Ministry of Justice is responsible for publishing and distributing the Statute Book and the Treaty Series.",
+     "title": "Laki Suomen säädöskokoelmasta (188/2000)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2000/188",
+     "value": "The Ministry of Justice is responsible for publishing the Statute Book"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2000",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Säädöskokoelma ja sopimussarja julkaistaan yleisessä tietoverkossa ja pidetään siellä maksutta yleisön saatavilla.",
+     "quote_english": "The Statute Book and the Treaty Series are published in the public data network and kept available to the public free of charge.",
+     "title": "Laki Suomen säädöskokoelmasta (188/2000)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2000/188",
+     "value": "The Statute Book is published in the public data network, free of charge"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "operator",
+     "language": "fi",
+     "published": "",
+     "publisher": "Oikeusministeriö / Finlex",
+     "quote": "Finlexiä ylläpitää Oikeusrekisterikeskus. Finlexin sisältö koostuu eri tahojen (mm. ministeriöt ja viranomaiset, tuomioistuimet) tuottamasta aineistosta.",
+     "quote_english": "Finlex is maintained by the Legal Register Centre. Finlex content consists of material produced by various bodies (e.g. ministries and authorities, courts).",
+     "title": "Finlex – Tietoa palvelusta (site footer)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2000/188",
+     "value": "Finlex is owned by the Ministry of Justice and maintained by the Legal Register Centre"
+    }
+   ],
+   "class_id": "official_gazette",
+   "foreign_dependency": "unknown",
+   "holding_name": "Suomen säädöskokoelma and Finlex (Statute Book of Finland)",
+   "operator": "Oikeusministeriö (Ministry of Justice); Finlex maintained by Oikeusrekisterikeskus",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "1991",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "hoitaa valtion keskuskirjanpitoa ja valmistella valtion tilinpäätös sekä ohjata valtion virastojen, laitosten ja talousarvion ulkopuolella olevien valtion rahastojen taloushallintoa ja maksuliikettä;",
+     "quote_english": "to keep the central government accounts and prepare the state financial statements and steer financial administration and payment traffic of state agencies, institutions and off-budget funds;",
+     "title": "Laki Valtiokonttorista (305/1991)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/1991/305",
+     "value": "The State Treasury keeps central government accounting and prepares the state financial statements"
+    }
+   ],
+   "class_id": "public_finance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Valtion keskuskirjanpito ja tilinpäätös (central government accounting and financial statements)",
+   "operator": "Valtiokonttori (State Treasury)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "1991",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Valtion talous- ja henkilöstöhallinnon palvelukeskuksen tiedot valtion budjettitalouden virastojen talous- ja henkilöstöhallinnosta, matkahallinnosta, toiminnan suunnittelusta ja seurannasta sekä organisaatiorakenteesta",
+     "quote_english": "data of the Government Shared Services Centre for Finance and HR on the financial and HR administration, travel administration, planning and monitoring and organisational structure of budget-economy agencies",
+     "title": "Laki Valtiokonttorista (305/1991)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/1991/305",
+     "value": "The Government Shared Services Centre for Finance and HR holds data on central-government agencies' financial and HR administration"
+    }
+   ],
+   "class_id": "government_payroll",
+   "foreign_dependency": "unknown",
+   "holding_name": "Valtion talous- ja henkilöstöhallinnon tiedot (state financial and HR administration data)",
+   "operator": "Valtion talous- ja henkilöstöhallinnon palvelukeskus (Palkeet)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown. Armed-forces personnel records are covered by Act 332/2019 (see defence_command).",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "1998",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Oikeusministeriö laatii tarvittaessa valtakunnallisesta ehdokasrekisteristä tulosteen, johon otetaan vaalipiireittäin, hyvinvointialueittain tai kunnittain kunkin ehdokkaan ehdokaslistojen yhdistelmässä olevat tiedot.",
+     "quote_english": "The Ministry of Justice prepares as needed a printout from the national candidate register with each candidate's data by constituency, wellbeing services county or municipality.",
+     "title": "Vaalilaki (714/1998)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/1998/714",
+     "value": "The Ministry of Justice produces printouts from the national candidate register"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "1998",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Vaalilautakunta voi ottaa avustavaa henkilöstöä äänestyslippujen laskemista ja järjestämistä varten sekä 77 §:ssä tarkoitettua ääni-oikeusrekisterin ja muiden oikeusministeriön tietojärjestelmien käyttämistä varten.",
+     "quote_english": "The election board may engage assisting staff for counting ballots and for using the voting register and other Ministry of Justice information systems.",
+     "title": "Vaalilaki (714/1998)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/1998/714",
+     "value": "Polling committees use the voting register and other Ministry of Justice information systems"
+    }
+   ],
+   "class_id": "electoral_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Oikeusministeriön vaalitietojärjestelmät, incl. valtakunnallinen ehdokasrekisteri (Ministry of Justice election information systems incl. national candidate register)",
+   "operator": "Oikeusministeriö (Ministry of Justice)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "1998",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "huolehtia osaltaan maksu- ja muun rahoitusjärjestelmän luotettavuudesta ja tehokkuudesta sekä osallistua sen kehittämiseen;",
+     "quote_english": "to contribute to the reliability and efficiency of the payment and wider financial system and participate in its development;",
+     "title": "Laki Suomen Pankista (214/1998)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/1998/214",
+     "value": "The Bank of Finland contributes to the reliability and efficiency of the payment and financial system"
+    }
+   ],
+   "class_id": "central_bank",
+   "foreign_dependency": "unknown",
+   "holding_name": "Suomen Pankin järjestelmät (Bank of Finland systems)",
+   "operator": "Suomen Pankki (Bank of Finland)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown. No retrievable source named specific Bank of Finland systems or their hosting.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2019",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Edellä 1 momentissa tarkoitettujen rekisterien rekisterinpitäjänä toimii pääesikunta.",
+     "quote_english": "The controller of the registers referred to in subsection 1 is the Defence Command.",
+     "title": "Laki henkilötietojen käsittelystä Puolustusvoimissa (332/2019)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2019/332",
+     "value": "Defence Command is controller of the Defence Forces' permanent personal data registers"
+    }
+   ],
+   "class_id": "defence_command",
+   "foreign_dependency": "unknown",
+   "holding_name": "Puolustusvoimien tietojärjestelmät ja pysyvät henkilörekisterit (Defence Forces information systems and permanent personnel registers)",
+   "operator": "Puolustusvoimat / Pääesikunta (Defence Command)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown. Command-and-control and logistics systems are not described in public sources found.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2019",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Suojelupoliisi saa käsitellä henkilötietoja, jotka ovat tarpeen kansallisen turvallisuuden suojaamiseksi, valtio- ja yhteiskuntajärjestystä tai valtion turvallisuutta uhkaavien toimintojen ja hankkeiden estämiseksi, paljastamiseksi ja selvittämiseksi",
+     "quote_english": "Supo may process personal data necessary to protect national security and to prevent, detect and investigate activities and projects threatening the state and social order or state security",
+     "title": "Laki henkilötietojen käsittelystä poliisitoimessa (616/2019)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2019/616",
+     "value": "Supo may process personal data needed to protect national security and counter threats to the state"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "1992",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Suojelupoliisin tehtävänä on sisäministeriön ohjauksen mukaisesti hankkia tietoa kansallisen turvallisuuden suojaamiseksi",
+     "quote_english": "The task of the Finnish Security and Intelligence Service, under the guidance of the Ministry of the Interior, is to acquire information to protect national security",
+     "title": "Laki poliisin hallinnosta (110/1992)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/1992/110",
+     "value": "Supo's statutory task is to acquire information to protect national security"
+    }
+   ],
+   "class_id": "intelligence",
+   "foreign_dependency": "unknown",
+   "holding_name": "Suojelupoliisin tietojärjestelmä (Finnish Security and Intelligence Service information system); Puolustusvoimien tiedustelulaitos",
+   "operator": "Suojelupoliisi (Supo); Puolustusvoimien tiedustelulaitos",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2010",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Pelastustoimi, poliisi, sosiaali- ja terveystoimi ja Rajavartiolaitos tallentavat hätäkeskustietojärjestelmään hälytysohjeet ja vaste-ehdotukset",
+     "quote_english": "Rescue services, police, social and health services and the Border Guard store alarm instructions and response proposals in the emergency response centre information system",
+     "title": "Laki hätäkeskustoiminnasta (692/2010)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2010/692",
+     "value": "Rescue, police, social/health services and Border Guard store alarm instructions in the emergency response centre information system"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "hosting",
+     "language": "fi",
+     "published": "2015",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Viranomaisradioverkon sekä viranomaisten aikakriittisen laajakaistaisen matkaviestinnän tieto- ja viestintäteknisten palvelujen tuottajana toimii Suomen Erillisverkot Oy",
+     "quote_english": "The ICT services of the authorities' radio network and of authorities' time-critical broadband mobile communications are produced by Suomen Erillisverkot Oy",
+     "title": "Laki julkisen hallinnon turvallisuusverkkotoiminnasta (10/2015)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2015/10",
+     "value": "The authorities' radio network (VIRVE) and critical broadband services are produced by state-owned Suomen Erillisverkot Oy"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "foreign_dependency",
+     "language": "fi",
+     "published": "2015",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Turvallisuusverkon verkko- ja infrastruktuuripalvelujen tuottajana toimii valtion kokonaan omistama Suomen Erillisverkot Oy -niminen osakeyhtiö",
+     "quote_english": "The network and infrastructure services of the security network are produced by the wholly state-owned limited company Suomen Erillisverkot Oy",
+     "title": "Laki julkisen hallinnon turvallisuusverkkotoiminnasta (10/2015)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2015/10",
+     "value": "Suomen Erillisverkot Oy is wholly state-owned"
+    }
+   ],
+   "class_id": "emergency_communications",
+   "foreign_dependency": "national",
+   "holding_name": "Hätäkeskustietojärjestelmä and viranomaisradioverkko VIRVE (emergency response centre information system; authorities' radio network)",
+   "operator": "Hätäkeskuslaitos (Emergency Response Centre Agency); Suomen Erillisverkot Oy (VIRVE)",
+   "research_note": "VIRVE radio network: produced by state-owned Suomen Erillisverkot Oy under Act 10/2015 (hence national). Hosting of the emergency response centre information system itself not confirmed.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2003",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "valtioneuvoston yhteinen tilannekuva, varautuminen ja turvallisuus, häiriötilanteiden hallinnan yleinen yhteensovittaminen",
+     "quote_english": "the Government's common situational picture, preparedness and security, general coordination of disruption management",
+     "title": "Valtioneuvoston ohjesääntö (262/2003)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2003/262",
+     "value": "Government Rules of Procedure assign the Government's common situational picture and coordination of disruption management"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2012",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Vaaratiedote välitetään väestölle radiossa ja Hätäkeskuslaitoksen tarjoamaan telepäätelaitesovellukseen.",
+     "quote_english": "The emergency warning is transmitted to the population by radio and to the mobile terminal application provided by the Emergency Response Centre Agency.",
+     "title": "Laki vaaratiedotteesta (466/2012)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2012/466",
+     "value": "Emergency warnings are distributed via radio and the Emergency Response Centre Agency's mobile application"
+    }
+   ],
+   "class_id": "crisis_management",
+   "foreign_dependency": "unknown",
+   "holding_name": "Valtioneuvoston yhteinen tilannekuva and vaaratiedotejärjestelmä (Government situation picture; public emergency warning system)",
+   "operator": "Valtioneuvoston kanslia (Prime Minister's Office); Hätäkeskuslaitos",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2013",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Järjestelmävastaava kantaverkonhaltija vastaa vastuualueellaan järjestelmävastuun piiriin kuuluvista tehtävistä",
+     "quote_english": "The system-responsible transmission system operator is responsible in its area for tasks within system responsibility",
+     "title": "Sähkömarkkinalaki (588/2013)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2013/588",
+     "value": "The system-responsible TSO is responsible for system responsibility tasks in its area"
+    },
+    {
+     "doc_type": "official_page",
+     "field": "record_count",
+     "language": "fi",
+     "published": "",
+     "publisher": "Fingrid Oyj",
+     "quote": "Datahub on sähkön vähittäismarkkinoiden keskitetty tiedonvaihtojärjestelmä, johon tallennetaan tietoa noin 4 miljoonasta sähkönkäyttöpaikasta.",
+     "quote_english": "Datahub is the centralised information exchange system of the electricity retail market, storing data on about 4 million metering points.",
+     "title": "Datahub - Fingrid",
+     "url": "https://www.fingrid.fi/sahkomarkkinat/datahub/",
+     "value": "Datahub stores data on about 4 million electricity metering points"
+    }
+   ],
+   "class_id": "grid_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kantaverkon järjestelmävastuu and Datahub (TSO system responsibility; centralised electricity-market data exchange)",
+   "operator": "Fingrid Oyj (designated TSO; operates Datahub)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown. No public source on SCADA/EMS supplier or hosting was retrieved.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "2010",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "huolehtia hydrologisen havaintotiedon tuottamisesta sekä vesitilanne- ja tulvavaroituspalvelusta yhteistyössä Suomen ympäristökeskuksen ja Ilmatieteen laitoksen kanssa;",
+     "quote_english": "to see to the production of hydrological observation data and the water-situation and flood warning service in cooperation with the Finnish Environment Institute and the Finnish Meteorological Institute;",
+     "title": "Laki tulvariskien hallinnasta (620/2010)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2010/620",
+     "value": "Flood Risk Management Act assigns hydrological observation and water-situation/flood warning services, in cooperation with SYKE and FMI"
+    }
+   ],
+   "class_id": "water_control",
+   "foreign_dependency": "unknown",
+   "holding_name": "",
+   "operator": "",
+   "research_note": "Searched Finlex (Flood Risk Management Act 620/2010, Water Services Act 119/2001) for a central water-control system; drinking-water control is run by municipal utilities and no national control system or its hosting was found.",
+   "status": "unknown"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2023",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Kansaneläkelaitos vastaa yhteisrekisterinpitäjänä tietojen turvallisuuden varmistamisesta sekä tietojen säilyttämisestä ja hävittämisestä.",
+     "quote_english": "Kela, as joint controller, is responsible for ensuring the security of the data and for their retention and destruction.",
+     "title": "Laki sosiaali- ja terveydenhuollon asiakastietojen käsittelystä (703/2023)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2023/703",
+     "value": "Kela is responsible as joint controller for data security, retention and deletion"
+    },
+    {
+     "doc_type": "statistics",
+     "field": "record_count",
+     "language": "fi",
+     "published": "",
+     "publisher": "Kanta-palvelut (Kela)",
+     "quote": "Kanta-palveluihin tallentuu yhteensä yli kaksi miljoonaa uutta asiakirjaa päivittäin.",
+     "quote_english": "In total more than two million new documents are stored in the Kanta services every day.",
+     "title": "Tilastot - Kanta.fi",
+     "url": "https://www.kanta.fi/tilastot",
+     "value": "Over two million new documents are stored in Kanta services every day"
+    }
+   ],
+   "class_id": "health_records",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kanta-palvelut: Potilastiedon arkisto / Potilastietovaranto (Kanta Services national patient data repository)",
+   "operator": "Kansaneläkelaitos (Kela), joint controller with wellbeing services counties",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2016",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Terveyden ja hyvinvoinnin laitos ylläpitää 28 §:ssä tarkoitettujen ilmoitusten perusteella valtakunnallista tartuntatautirekisteriä tautien seurantaa ja torjuntaa sekä viranomaistoimintaa, tilastointia ja tutkimusta varten.",
+     "quote_english": "The Finnish Institute for Health and Welfare maintains the national infectious diseases register on the basis of notifications under section 28 for disease surveillance and control, official activities, statistics and research.",
+     "title": "Tartuntatautilaki (1227/2016)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2016/1227",
+     "value": "THL maintains the national infectious diseases register"
+    }
+   ],
+   "class_id": "public_health_surveillance",
+   "foreign_dependency": "unknown",
+   "holding_name": "Valtakunnallinen tartuntatautirekisteri (National Infectious Diseases Register)",
+   "operator": "Terveyden ja hyvinvoinnin laitos (THL)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2017",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Opetushallitus vastaa tietovarannon yleisestä toiminnasta sekä teknisistä edellytyksistä tietojen tallentamista, käsittelyä ja luovutusta varten.",
+     "quote_english": "The Finnish National Agency for Education is responsible for the general operation of the data resource and the technical prerequisites for storing, processing and disclosing data.",
+     "title": "Laki valtakunnallisista opinto-, koulutus- ja tutkintorekistereistä (884/2017)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2017/884",
+     "value": "EDUFI is responsible for the general operation and technical prerequisites of the data resource"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2017",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Oppijanumerorekisterin rekisterinpitäjä on Opetushallitus. Oppijanumerorekisteriin tallennettavat tiedot säilytetään pysyvästi",
+     "quote_english": "The controller of the learner-number register is the Finnish National Agency for Education. Data stored in the register are kept permanently",
+     "title": "Laki valtakunnallisista opinto-, koulutus- ja tutkintorekistereistä (884/2017)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2017/884",
+     "value": "EDUFI is controller of the learner-number register; its data are kept permanently"
+    }
+   ],
+   "class_id": "education",
+   "foreign_dependency": "unknown",
+   "holding_name": "Valtakunnalliset opinto- ja tutkintorekisterit, incl. oppijanumerorekisteri (national study and qualification registers, incl. learner-number register)",
+   "operator": "Opetushallitus (Finnish National Agency for Education)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2004",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Tilastokeskus ylläpitää tilastojen laadintaa varten hallussaan olevien tietojen pohjalta yritys- ja toimipaikkarekisteriä",
+     "quote_english": "Statistics Finland maintains a business and establishment register for compiling statistics based on data in its possession",
+     "title": "Tilastolaki (280/2004)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2004/280",
+     "value": "Statistics Finland maintains a business and establishment register from the data it holds"
+    }
+   ],
+   "class_id": "statistics_microdata",
+   "foreign_dependency": "unknown",
+   "holding_name": "Tilastokeskuksen tilastoaineistot (Statistics Finland statistical data)",
+   "operator": "Tilastokeskus (Statistics Finland)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "operator",
+     "language": "fi",
+     "published": "2009",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Maanmittauslaitos vastaa siitä, että otetaan käyttöön paikkatietoaineistojen ja näitä aineistoja koskevien palvelujen etsimisen ja niitä koskevien metatietojen tarkastelun mahdollistava verkkopalvelu",
+     "quote_english": "The National Land Survey is responsible for introducing an online service enabling searching for spatial data sets and services and viewing their metadata",
+     "title": "Laki paikkatietoinfrastruktuurista (421/2009)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2009/421",
+     "value": "The National Land Survey is responsible for the national spatial-data discovery service"
+    },
+    {
+     "doc_type": "legislation",
+     "field": "holding_name",
+     "language": "fi",
+     "published": "2009",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Väestötietojärjestelmään talletetaan rekisteröinnin kohteena olevasta rakennushankkeesta ja rakennuksesta seuraavat tiedot:",
+     "quote_english": "The following data on a registered building project and building are recorded in the Population Information System:",
+     "title": "Laki väestötietojärjestelmästä ja Digi- ja väestötietoviraston varmennepalveluista (661/2009)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2009/661",
+     "value": "Building data are recorded in the Population Information System"
+    }
+   ],
+   "class_id": "geospatial",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kansallinen paikkatietoinfrastruktuuri and rakennus-/osoitetiedot väestötietojärjestelmässä (national spatial data infrastructure; building data in the Population Information System)",
+   "operator": "Maanmittauslaitos (National Land Survey); Digi- ja väestötietovirasto for building data",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  },
+  {
+   "claims": [
+    {
+     "doc_type": "legislation",
+     "field": "legal_basis",
+     "language": "fi",
+     "published": "1994",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "pysyvästi säilytettävät asiakirjat on siirrettävä kansallisarkistoon, maakunta-arkistoon tai muuhun arkistoon siten kuin arkistolaitos erikseen määrää.",
+     "quote_english": "records to be kept permanently must be transferred to the National Archives, a provincial archive or another archive as the archives service separately orders.",
+     "title": "Arkistolaki (831/1994)",
+     "url": "https://www.finlex.fi/fi/lainsaadanto/1994/831",
+     "value": "Records to be kept permanently must be transferred to the National Archives or another archive as the archives service decides"
+    }
+   ],
+   "class_id": "national_archives",
+   "foreign_dependency": "unknown",
+   "holding_name": "Kansallisarkiston pysyvästi säilytettävät asiakirjat (records transferred to the National Archives)",
+   "operator": "Kansallisarkisto (National Archives of Finland)",
+   "research_note": "Hosting/infrastructure provider: no public source found stating where it is hosted; foreign_dependency left unknown.",
+   "status": "held"
+  }
+ ],
+ "iso": "FI"
+}
