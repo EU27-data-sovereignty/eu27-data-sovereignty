@@ -110,7 +110,7 @@ class RecordDenominator(unittest.TestCase):
     def test_every_country_and_record_class_is_a_register_claim(self):
         """Without a denominator, 3 cited registers would read as 3 of 3 -- 100% sourced."""
         claims = provenance.claims_by_namespace()["record"]
-        self.assertEqual(len(claims), 27 * 15)
+        self.assertEqual(len(claims), 27 * 39)
         self.assertIn("record:NL:civil_registry:register", claims)
 
 

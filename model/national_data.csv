@@ -1,4 +1,4 @@
-iso,tier,record_class,status,register,holder,holder_url
-NL,0,civil_registry,held,Basisregistratie Personen (BRP),Rijksdienst voor Identiteitsgegevens (RvIG),https://www.rvig.nl/
-NL,1,land_property,held,Basisregistratie Kadaster (BRK),Kadaster,https://www.kadaster.nl/
-NL,1,business_registry,held,Handelsregister,Kamer van Koophandel (KVK),https://www.kvk.nl/
+iso,tier,record_class,status,register,holder,holder_url,legal_basis,hosting,foreign_dependency,record_count,data_size
+NL,0,civil_registry,held,Basisregistratie Personen (BRP),Rijksdienst voor Identiteitsgegevens (RvIG),https://www.rvig.nl/,,,,,
+NL,1,land_property,held,Basisregistratie Kadaster (BRK),Kadaster,https://www.kadaster.nl/,,,,,
+NL,1,business_registry,held,Handelsregister,Kamer van Koophandel (KVK),https://www.kvk.nl/,,,,,

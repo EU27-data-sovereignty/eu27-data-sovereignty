@@ -67,69 +67,52 @@ ROOT = Path(__file__).resolve().parent.parent
 REGISTER = ROOT / "model" / "national_data.csv"
 PARAMETERS = ROOT / "model" / "eu27_parameters.csv"
 
-FIELDS = ["iso", "tier", "record_class", "status", "register", "holder", "holder_url"]
+CLASSES = ROOT / "model" / "holding_classes.csv"
+
+# The critical-holding facts beyond the register's name and operator (#73). Each non-empty one is a
+# separate claim with its own citation: record:<ISO>:<class>:<kind>.
+EXTRA_FIELDS = ["legal_basis", "hosting", "foreign_dependency", "record_count", "data_size"]
+FIELDS = ["iso", "tier", "record_class", "status", "register", "holder", "holder_url"] + EXTRA_FIELDS
 # Joined in by load() from the source register: url and publisher from the registry entry,
 # the rest from the citation.
 PROVENANCE = ["url", "publisher", "retrieved", "confidence", "quote"]
 
-# Tier 0 -- the identity spine. Without it the state cannot say who exists, and recovery from
-# total loss would mean re-enrolling the population.
-TIER0 = (
-    "civil_registry",
-    "facial_biometric",
-    "fingerprint_biometric",
-    "breeder_documents",
-    "issuance_history",
-    "digital_identity_credentials",
-    "authentication_audit_log",
-    "electoral_roll",
-)
+# The research staging field each claim kind comes from (model/research.py).
+KIND_OF_FIELD = {
+    "holding_name": "register", "not_held": "register", "operator": "operator",
+    "legal_basis": "legal_basis", "hosting": "hosting", "foreign_dependency": "foreign_dependency",
+    "record_count": "count", "data_size": "size",
+}
+FOREIGN_DEPENDENCY = ("national", "eu_provider", "non_eu_provider", "mixed", "unknown")
 
-# Tier 1 -- the legal and fiscal state: what is owed, what is owned, what was adjudicated.
-TIER1 = (
-    "tax",
-    "benefits_pensions",
-    "land_property",
-    "judicial_criminal",
-    "education",
-    "business_registry",
-    "vehicle_licensing",
-)
 
-# Report and sort order. Tier 0 before tier 1 IS the argument -- TIER0-TIER1-SIZING.md orders by
-# consequence of loss, not alphabetically, and sorting this list would destroy that.
-RECORD_CLASSES = TIER0 + TIER1
-TIER_OF = {c: 0 for c in TIER0} | {c: 1 for c in TIER1}
+def _classes() -> list[dict[str, str]]:
+    with CLASSES.open(newline="", encoding="utf-8") as fh:
+        return list(csv.DictReader(fh))
+
+
+# The taxonomy lives in holding_classes.csv (39 classes, #73), widened from the original fifteen
+# Tier 0/1 record classes, whose ids are unchanged. Report order is tier first, then file order:
+# ordering by consequence of loss IS the argument (TIER0-TIER1-SIZING.md), so it is never sorted.
+_ROWS = sorted(_classes(), key=lambda r: int(r["tier"]))   # stable: file order within a tier
+RECORD_CLASSES = tuple(r["class_id"] for r in _ROWS)
+TIER_OF = {r["class_id"]: int(r["tier"]) for r in _ROWS}
+LABELS = {r["class_id"]: r["label"] for r in _ROWS}
+DOMAIN_OF = {r["class_id"]: r["domain"] for r in _ROWS}
+RECOVERABILITY_OF = {r["class_id"]: r["recoverability"] for r in _ROWS}
+TIERS = tuple(sorted(set(TIER_OF.values())))
+TIER0 = tuple(c for c in RECORD_CLASSES if TIER_OF[c] == 0)
+TIER1 = tuple(c for c in RECORD_CLASSES if TIER_OF[c] == 1)
 
 STATUS = ("held", "not_held")
 CONFIDENCE = ("primary", "official", "secondary", "absence")
 
-# Display labels, verbatim from the record-class tables in TIER0-TIER1-SIZING.md.
-LABELS = {
-    "civil_registry": "Civil registry core",
-    "facial_biometric": "Facial biometric",
-    "fingerprint_biometric": "Fingerprint biometric",
-    "breeder_documents": "Breeder document scans",
-    "issuance_history": "Document issuance history",
-    "digital_identity_credentials": "Digital identity credentials",
-    "authentication_audit_log": "Authentication audit log",
-    "electoral_roll": "Electoral roll entry",
-    "tax": "Tax",
-    "benefits_pensions": "Benefits & pensions",
-    "land_property": "Land & property registry",
-    "judicial_criminal": "Judicial & criminal justice",
-    "education": "Education",
-    "business_registry": "Business registry",
-    "vehicle_licensing": "Vehicle & licensing",
-}
-
-# Printed wherever the register is rendered. One string, in the bundle, so all four renderers
-# hedge identically rather than growing four different disclaimers (DECISIONS.md #6).
+# Printed wherever the register is rendered. One string, in the bundle, so every renderer
+# hedges identically rather than growing its own disclaimer (DECISIONS.md #6).
 NOTE = (
-    "A blank row means this repository has not yet researched that register. It is not a "
-    "statement that the country holds no such data. Tiers 2 (health records, imaging) and 3 "
-    "(genomics, archives, video retention, geospatial) are out of scope: they hold most of the "
-    "bytes, but Tiers 0 and 1 hold the sovereignty."
+    "A blank row means this repository has not yet verified a source for that holding. It is not a "
+    "statement that the country holds no such data. Every named holding, operator, legal basis, "
+    "hosting arrangement and figure is cited to a document whose text was fetched and checked."
 )
 
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -146,15 +129,29 @@ def claim(r: dict[str, str]) -> str:
     return f"record:{r['iso']}:{r['record_class']}:register"
 
 
-def load(path: Path = REGISTER) -> list[dict[str, str]]:
-    """The register's rows with their provenance joined in from the source register (#67)."""
-    import provenance  # noqa: PLC0415 -- sibling module; imported late so this file stays importable alone
-
+def read_rows(path: Path = REGISTER) -> list[dict[str, str]]:
+    """The register as stored, without provenance joined in."""
     with path.open(newline="", encoding="utf-8") as fh:
         reader = csv.DictReader(fh)
         if reader.fieldnames != FIELDS:
             raise SystemExit(f"{path.name}: header is {reader.fieldnames}, expected {FIELDS}")
-        rows = list(reader)
+        return list(reader)
+
+
+def write_rows(rows: list[dict[str, str]], path: Path = REGISTER) -> None:
+    """Sorted by (iso, tier order), the order validate() requires."""
+    rows = sorted(rows, key=lambda r: (r["iso"], RECORD_CLASSES.index(r["record_class"])))
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=FIELDS, lineterminator="\n")
+        w.writeheader()
+        w.writerows({k: r.get(k, "") for k in FIELDS} for r in rows)
+
+
+def load(path: Path = REGISTER) -> list[dict[str, str]]:
+    """The register's rows with their provenance joined in from the source register (#67)."""
+    import provenance  # noqa: PLC0415 -- sibling module; imported late so this file stays importable alone
+
+    rows = read_rows(path)
     reg = provenance.registry()
     cites = {c["claim"]: c for c in provenance.citations()}
     for r in rows:
@@ -179,6 +176,14 @@ def citation_errors(rows: list[dict[str, str]], cites: list[dict[str, str]]) -> 
         if n != 1:
             errors.append(f"{r['iso']}/{r['record_class']}: needs exactly one {claim(r)} "
                           f"citation in sources/citations.csv, found {n}")
+    # Every non-empty extra fact is a claim of its own and needs its own citation (#73, #75).
+    cited = {c["claim"] for c in cites}
+    for r in rows:
+        for field in EXTRA_FIELDS:
+            kind = KIND_OF_FIELD[field]
+            want = f"record:{r['iso']}:{r['record_class']}:{kind}"
+            if r.get(field, "").strip() and want not in cited:
+                errors.append(f"{r['iso']}/{r['record_class']}: {field} is filled but {want} is not cited")
     for c in sorted(set(counts) - claimed):
         errors.append(f"{c}: cited in sources/citations.csv but national_data.csv has no such row")
     return errors
@@ -228,6 +233,8 @@ def validate(rows: list[dict[str, str]]) -> list[str]:
             )
 
         errors += status_errors(where, r)
+        if r["foreign_dependency"] and r["foreign_dependency"] not in FOREIGN_DEPENDENCY:
+            errors.append(f"{where}: foreign_dependency must be one of {FOREIGN_DEPENDENCY}")
 
         if not r["holder"].strip():
             errors.append(f"{where}: holder is empty")
@@ -288,7 +295,8 @@ def report(rows: list[dict[str, str]]) -> None:
     cov = coverage(rows)
 
     print(f"{'record class':<30} {'countries':>12} {'rows':>6}")
-    for tier, classes in ((0, TIER0), (1, TIER1)):
+    for tier in TIERS:
+        classes = tuple(c for c in RECORD_CLASSES if TIER_OF[c] == tier)
         print(f"-- tier {tier} " + "-" * 38)
         for c in classes:
             total = sum(1 for r in rows if r["record_class"] == c)
@@ -335,12 +343,15 @@ def for_country(rows: list[dict[str, str]], iso: str) -> list[dict]:
             "retrieved": r["retrieved"] if r else "",
             "confidence": r["confidence"] if r else "",
             "quote": r["quote"] if r else "",
+            "domain": DOMAIN_OF[c],
+            "recoverability": RECOVERABILITY_OF[c],
+            **{f: (r[f] if r else "") for f in EXTRA_FIELDS},
         })
     return out
 
 
 def recorded(entries: list[dict]) -> int:
-    """How many of the 15 classes this country has a row for."""
+    """How many of the holding classes this country has a row for."""
     return sum(1 for e in entries if e["status"] != "unrecorded")
 
 

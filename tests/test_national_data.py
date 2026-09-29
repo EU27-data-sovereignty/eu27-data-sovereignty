@@ -16,7 +16,7 @@ sys.path.insert(0, str(ROOT / "model"))
 import national_data as nd  # noqa: E402
 import provenance  # noqa: E402
 
-# Raise as registers are recorded. 405 = 15 record classes x 27 member states.
+# Raise as holdings are admitted. 1053 = 39 holding classes x 27 member states (#73).
 NATIONAL_DATA_FLOOR = 3
 
 
@@ -49,11 +49,25 @@ class Register(unittest.TestCase):
 class Vocabulary(unittest.TestCase):
     """The closed vocabularies are what make a blank row mean 'not researched'."""
 
-    def test_the_two_tiers_partition_the_record_classes(self):
-        self.assertEqual(len(nd.TIER0), 8)
-        self.assertEqual(len(nd.TIER1), 7)
-        self.assertEqual(set(nd.TIER0) & set(nd.TIER1), set())
-        self.assertEqual(len(nd.RECORD_CLASSES), 15)
+    # The original fifteen Tier 0/1 record classes, which the widened taxonomy (#73) must keep
+    # with their ids and tiers unchanged: citations and the NL rows already refer to them.
+    ORIGINAL = {
+        "civil_registry": 0, "facial_biometric": 0, "fingerprint_biometric": 0,
+        "breeder_documents": 0, "issuance_history": 0, "digital_identity_credentials": 0,
+        "authentication_audit_log": 0, "electoral_roll": 0, "tax": 1, "benefits_pensions": 1,
+        "land_property": 1, "judicial_criminal": 1, "education": 1, "business_registry": 1,
+        "vehicle_licensing": 1,
+    }
+
+    def test_the_taxonomy_is_read_from_holding_classes_csv(self):
+        self.assertEqual(len(nd.RECORD_CLASSES), 39)
+        self.assertEqual(len(set(nd.RECORD_CLASSES)), 39)
+        self.assertEqual(set(nd.TIER_OF.values()), {0, 1, 2, 3})
+
+    def test_the_original_fifteen_keep_their_ids_and_tiers(self):
+        for c, tier in self.ORIGINAL.items():
+            with self.subTest(record_class=c):
+                self.assertEqual(nd.TIER_OF.get(c), tier)
 
     def test_record_class_order_is_by_consequence_of_loss_not_alphabet(self):
         """TIER0-TIER1-SIZING.md orders by consequence of loss; sorting would destroy it."""
@@ -66,6 +80,9 @@ class Vocabulary(unittest.TestCase):
             self.assertEqual(nd.TIER_OF[c], 0)
         for c in nd.TIER1:
             self.assertEqual(nd.TIER_OF[c], 1)
+        self.assertEqual(list(nd.RECORD_CLASSES),
+                         sorted(nd.RECORD_CLASSES, key=lambda c: nd.TIER_OF[c]),
+                         "tier order is the report order")
 
 
 class ValidationRules(unittest.TestCase):
@@ -77,6 +94,7 @@ class ValidationRules(unittest.TestCase):
         "holder_url": "https://www.rvig.nl/", "url": "https://www.rvig.nl/brp",
         "publisher": "RvIG", "retrieved": "2026-09-21", "confidence": "official",
         "quote": "De overheid registreert persoonsgegevens in de BRP.",
+        **{f: "" for f in nd.EXTRA_FIELDS},
     }
 
     def errors(self, **overrides):
@@ -148,6 +166,12 @@ class ProvenanceLivesInTheSourceRegister(unittest.TestCase):
     def test_a_row_without_a_citation_is_rejected(self):
         errors = nd.citation_errors([self.ROW], [])
         self.assertTrue(any("needs exactly one" in e for e in errors))
+
+    def test_a_filled_extra_field_needs_its_own_citation(self):
+        """#73/#75: legal basis, hosting, counts and sizes are claims, each with its own source."""
+        row = {**self.ROW, "hosting": "Government data centre"}
+        errors = nd.citation_errors([row], [self.CITE])
+        self.assertTrue(any(":hosting is not cited" in e for e in errors), errors)
 
     def test_a_citation_without_a_row_is_rejected(self):
         errors = nd.citation_errors([], [self.CITE])

@@ -482,7 +482,7 @@ That asymmetry is the argument: tier 0 alone is around 50 TB - one rack, air-gap
 containable - so absolute national control over tiers 0 and 1 is cheap, and can be argued for
 separately from the expensive capacity case.
 
-**3 of 15 record classes recorded.** Unlike the generated briefs, this
+**3 of 39 record classes recorded.** Unlike the generated briefs, this
 section is hand-written (#5); the rows below come from `model/national_data.csv` via
 `generate_countries.national_data_table()`, so they cannot drift from the register. Run
 `./run.sh registers` for coverage across all 27.

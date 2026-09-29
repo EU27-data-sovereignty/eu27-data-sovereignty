@@ -25,9 +25,9 @@ Claim ids name exactly what is asserted, in namespaces:
     assumption:<name>                        a row of assumptions.csv / scaling_rules.csv / params.csv
     workload:<ISO>:<workload>:<field>        a workload input
     inventory:<ISO>:<metric>                 a government IT inventory figure (it_inventory.csv)
-    record:<ISO|*>:<record_class>:<register|count|size>
-                                             a Tier 0/1 register's existence (national_data.csv),
-                                             its record count, or its record size
+    record:<ISO|*>:<record_class>:<kind>     a critical holding (national_data.csv): its existence
+                                             (register), operator, legal basis, hosting, foreign
+                                             dependency, record count or data size (#73)
     doc:<path>#<anchor>                      a claim in an authored note
 
 The bargain is the one sources.csv struck (#54): a URL shows that a document exists, not that it
@@ -65,7 +65,7 @@ DOC_TYPES = ("statute", "regulation", "dataset", "report", "annual_report", "sta
              "register", "unused")
 CONFIDENCE = ("primary", "official", "secondary", "absence", "assumption")
 NAMESPACES = ("param", "assumption", "workload", "inventory", "record", "doc")
-RECORD_KINDS = ("register", "count", "size")
+RECORD_KINDS = ("register", "operator", "legal_basis", "hosting", "foreign_dependency", "count", "size")
 
 SOURCE_ID = re.compile(r"^[a-z0-9-]+:[a-z0-9_.-]+(@[A-Za-z0-9_.-]+)?$")
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -86,6 +86,23 @@ def registry() -> dict[str, dict[str, str]]:
 
 def citations() -> list[dict[str, str]]:
     return _read(CITATIONS, CITATION_FIELDS)
+
+
+def _write(path: Path, fields: list[str], rows: list[dict[str, str]], key) -> None:
+    """Sorted and in the file's own dialect, so a diff shows what changed rather than where."""
+    ending = "\r\n" if path.exists() and b"\r\n" in path.read_bytes()[:4096] else "\n"
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=fields, lineterminator=ending)
+        w.writeheader()
+        w.writerows(sorted(rows, key=key))
+
+
+def write_registry(reg: dict[str, dict[str, str]]) -> None:
+    _write(REGISTRY, REGISTRY_FIELDS, list(reg.values()), key=lambda r: r["source_id"])
+
+
+def write_citations(cites: list[dict[str, str]]) -> None:
+    _write(CITATIONS, CITATION_FIELDS, cites, key=lambda c: (c["claim"], c["source_id"], c["locator"]))
 
 
 def record_classes() -> tuple[str, ...]:

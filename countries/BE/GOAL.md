@@ -204,7 +204,7 @@ tiering is by consequence of loss rather than by department, and is set out in
 `TIER0-TIER1-SIZING.md` - tier 0 is the identity spine, without which the state cannot say who
 exists; tier 1 is the enforceable relationship between citizen and state.
 
-**0 of 15 record classes recorded for Belgium.** The register is
+**0 of 39 record classes recorded for Belgium.** The register is
 `model/national_data.csv`; run `./run.sh registers` for coverage across all 27.
 
 | Tier | Record class | Register | Held by | Official description |
@@ -217,12 +217,36 @@ exists; tier 1 is the enforceable relationship between citizen and state.
 | 0 | Digital identity credentials | *not yet recorded* |  |  |
 | 0 | Authentication audit log | *not yet recorded* |  |  |
 | 0 | Electoral roll entry | *not yet recorded* |  |  |
+| 0 | State PKI and qualified trust services | *not yet recorded* |  |  |
+| 1 | Residence and migration status | *not yet recorded* |  |  |
 | 1 | Tax | *not yet recorded* |  |  |
+| 1 | Customs declarations | *not yet recorded* |  |  |
 | 1 | Benefits & pensions | *not yet recorded* |  |  |
+| 1 | Statutory health insurance | *not yet recorded* |  |  |
 | 1 | Land & property registry | *not yet recorded* |  |  |
-| 1 | Judicial & criminal justice | *not yet recorded* |  |  |
-| 1 | Education | *not yet recorded* |  |  |
 | 1 | Business registry | *not yet recorded* |  |  |
+| 1 | Beneficial ownership register | *not yet recorded* |  |  |
 | 1 | Vehicle & licensing | *not yet recorded* |  |  |
+| 1 | Judicial & criminal justice | *not yet recorded* |  |  |
+| 1 | Police information systems | *not yet recorded* |  |  |
+| 1 | Border and visa systems | *not yet recorded* |  |  |
+| 1 | Firearms register | *not yet recorded* |  |  |
+| 1 | Official gazette and legislation | *not yet recorded* |  |  |
+| 1 | Treasury and state accounts | *not yet recorded* |  |  |
+| 1 | Government payroll and personnel | *not yet recorded* |  |  |
+| 1 | Election management and results | *not yet recorded* |  |  |
+| 1 | Central bank systems | *not yet recorded* |  |  |
+| 1 | Defence command and logistics | *not yet recorded* |  |  |
+| 1 | Intelligence services | *not yet recorded* |  |  |
+| 1 | Emergency calls and public-safety radio | *not yet recorded* |  |  |
+| 1 | Crisis management and civil protection | *not yet recorded* |  |  |
+| 1 | Electricity grid control | *not yet recorded* |  |  |
+| 1 | Water management control | *not yet recorded* |  |  |
+| 1 | Education | *not yet recorded* |  |  |
+| 2 | Health records | *not yet recorded* |  |  |
+| 2 | Public health surveillance | *not yet recorded* |  |  |
+| 2 | Statistical microdata | *not yet recorded* |  |  |
+| 3 | Geospatial base data | *not yet recorded* |  |  |
+| 3 | National archives (digital) | *not yet recorded* |  |  |
 
-A blank row means this repository has not yet researched that register. It is not a statement that the country holds no such data. Tiers 2 (health records, imaging) and 3 (genomics, archives, video retention, geospatial) are out of scope: they hold most of the bytes, but Tiers 0 and 1 hold the sovereignty.
+A blank row means this repository has not yet verified a source for that holding. It is not a statement that the country holds no such data. Every named holding, operator, legal basis, hosting arrangement and figure is cited to a document whose text was fetched and checked.
