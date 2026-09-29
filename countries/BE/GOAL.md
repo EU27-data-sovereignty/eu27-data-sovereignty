@@ -21,19 +21,17 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | Indicator | Finding |
 |---|---|
 | Jurisdiction requirement | *Not yet sourced* |
-| Classification in law | *Not yet sourced* |
+| Classification in law | Yes[^s1] |
 | Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
+| State-controlled trust anchor | Yes[^s2] |
+| State-controlled national eID | Yes[^s3] |
 | Government data centres | *Not yet sourced* |
 | Government cloud in operation | *Not yet sourced* |
 
 What could move this placement:
 
 - If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
-- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
-- If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
+- If any of the 33 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
 
@@ -41,36 +39,36 @@ Belgium described on its own measured characteristics. Each figure is the publis
 
 | Indicator | Value |
 |---|---:|
-| Population | 11.88 million[^s1] |
-| GDP, current prices | 642.0 EUR bn[^s2] |
+| Population | 11.88 million[^s4] |
+| GDP, current prices | 642.0 EUR bn[^s5] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 186.6 EUR/MWh[^s3] |
-| Renewables share of electricity | 31.3 %[^s4] |
-| Land area | 30 451 km²[^s5] |
+| Non-household electricity price | 186.6 EUR/MWh[^s6] |
+| Renewables share of electricity | 31.3 %[^s7] |
+| Land area | 30 451 km²[^s8] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Belgium cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Belgium cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 7 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Civil registry core (tier 0) | Rijksregister van de natuurlijke personen (National Register of Natural Persons), the central database of identification data of all registered persons[^s9] | The National Register is managed by the Directorate-General Identity and Civil Affairs of the FPS Interior[^s10] | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | ID-card photos are stored and visible in the National Register[^s11] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | No central register[^s3] | — | — | — |
+| Critical | Breeder document scans (tier 0) | DABS: a central database holding all civil status deeds, replacing the municipal and consular registers[^s12] | DABS is governed by a DABS Management Committee responsible for its set-up and management[^s12] | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | Register van de Identiteitskaarten: a permanent inventory of the identity cards produced and issued in Belgium[^s13] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| High | State PKI and qualified trust services (tier 0) | Belgium Root CA (BRCA), the top of the government CA hierarchy[^s2] | The Belgian authorities are the certification service provider responsible for the Belgium Root CAs[^s2] | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | Evibel is the internal database of the immigration service, to be replaced by eMigration[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -98,7 +96,7 @@ The holdings Belgium cannot let depend on infrastructure a foreign state can com
 
 ## 4. Foreign-dependency exposure
 
-Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 6 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -106,7 +104,7 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 0 |
+| Not stated in sources | 6 |
 
 ## 5. Legal and institutional posture
 
@@ -131,16 +129,9 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 
 Tier 0 and 1 holdings for Belgium without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
-- Civil registry core (tier 0)
-- Facial biometric (tier 0)
-- Fingerprint biometric (tier 0)
-- Breeder document scans (tier 0)
-- Document issuance history (tier 0)
 - Digital identity credentials (tier 0)
 - Authentication audit log (tier 0)
 - Electoral roll entry (tier 0)
-- State PKI and qualified trust services (tier 0)
-- Residence and migration status (tier 1)
 - Tax (tier 1)
 - Customs declarations (tier 1)
 - Benefits & pensions (tier 1)
@@ -168,8 +159,17 @@ Tier 0 and 1 holdings for Belgium without a verified source yet. Corrections and
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: Moniteur belge (copy on etaamb.openjustice.be); numac 1999007004 d1488d8bbe, 1999-05-07. Loi du 11 décembre 1998 relative à la classification et aux habilitations de sécurité. <https://etaamb.openjustice.be/fr/loi-du-11-decembre-1998_n1999007004.html>
+[^s2]: Belgian eID PKI repository 8485ac65e6. Citizen CA Certification Practice Statement (v1.4). <https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA.pdf>
+[^s3]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken 192a634168. eID | IBZ - FOD Binnenlandse Zaken. <https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid> ([archived](https://web.archive.org/web/20260617223429/https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid))
+[^s4]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s5]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s6]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s7]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s8]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s9]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken 42d8c82a64. Rijksregister | IBZ - FOD Binnenlandse Zaken. <https://www.ibz.rrn.fgov.be/nl/burger/rijksregister-en-bevolking/rijksregister> ([archived](https://web.archive.org/web/20260911221802/https://www.ibz.rrn.fgov.be/nl/burger/rijksregister-en-bevolking/rijksregister))
+[^s10]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken e11b280087. Home | IBZ - FOD Binnenlandse Zaken. <https://www.ibz.rrn.fgov.be/nl>
+[^s11]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken 499b473c04. eID en GDPR | IBZ - FOD Binnenlandse Zaken. <https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid/eid-en-gdpr>
+[^s12]: Rijksarchief in België 44d4621965, 2023-06-14. Het Rijksarchief is vertegenwoordigd in het beheerscomité van de Databank voor Akten van de Burgerlijke Stand. <https://www.arch.be/index.php?l=nl&m=nieuws&r=alle-nieuwsberichten&a=2023-06-14-het-rijksarchief-is-vertegenwoordigd-in-het-beheerscomite-van-de-databank-voor-akten-van-de-burgerlijke-stand> ([archived](https://web.archive.org/web/20260416001407/https://www.arch.be/index.php?l=nl&m=nieuws&r=alle-nieuwsberichten&a=2023-06-14-het-rijksarchief-is-vertegenwoordigd-in-het-beheerscomite-van-de-databank-voor-akten-van-de-burgerlijke-stand))
+[^s13]: Belgisch Staatsblad (copy published by etaamb.openjustice.be) 67f7aaffa6, 2005-05-25. Koninklijk Besluit van 25/05/2005 tot bepaling van de personen en instellingen die toegang hebben tot het register van de identiteitskaarten. <https://etaamb.openjustice.be/nl/koninklijk-besluit-van-25-mei-2005_n2005000390.html>
+[^s14]: Gegevensbeschermingsautoriteit 6f515c0b30, 2022-07-01. Advies nr. 121/2022 van 1 juli 2022. <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-121-2022.pdf> ([archived](https://web.archive.org/web/20220706131107/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-121-2022.pdf))

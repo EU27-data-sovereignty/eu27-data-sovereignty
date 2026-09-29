@@ -1,0 +1,41 @@
+{
+ "iso": "IE",
+ "verdicts": [
+  {
+   "class_id": "electoral_roll",
+   "original": "non_eu_provider",
+   "reason": "The Electoral Commission oversight report says the LGERS register system is being migrated to Dublin City Council's tenancy on Microsoft Azure (US), a non-EU public cloud, so the hosting is non-EU.",
+   "reviewed": "non_eu_provider"
+  },
+  {
+   "class_id": "tax",
+   "original": "national",
+   "reason": "The Revenue Commissioners (Ireland) say they run their own data centre and even host other public bodies from it, so this is state-operated national hosting.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "public_finance",
+   "original": "non_eu_provider",
+   "reason": "An 'Oracle-based infrastructure platform' names Oracle's product, not who operates or hosts FMSS, and the implementation partner is neither named nor placed in a country, so no category is established.",
+   "reviewed": "unknown"
+  },
+  {
+   "class_id": "central_bank",
+   "original": "eu_provider",
+   "reason": "The Central Bank of Ireland says T2 is a Eurosystem system governed by the ECB Guideline of 24 February 2022; the Eurosystem counts as EU, and the Bank's own data centre provider is not named, so nothing points to a non-EU host.",
+   "reviewed": "eu_provider"
+  },
+  {
+   "class_id": "defence_command",
+   "original": "national",
+   "reason": "The Defence Forces CIS Corps (Ireland) runs the CISN as an on-premise national network built around two active/active data centres of its own; the cloud services it uses 'where required' are neither named nor tied to a country.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "emergency_communications",
+   "original": "non_eu_provider",
+   "reason": "The 112/999 call-answering service is run under a State concession by BT, part of the UK's BT Group, and the NDRS/TETRA provider TETRA Ireland Communications is owned by Motorola Solutions (Chicago, US), so both parts are non-EU controlled.",
+   "reviewed": "non_eu_provider"
+  }
+ ]
+}

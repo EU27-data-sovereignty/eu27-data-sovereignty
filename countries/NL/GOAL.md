@@ -21,19 +21,17 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | Indicator | Finding |
 |---|---|
 | Jurisdiction requirement | *Not yet sourced* |
-| Classification in law | *Not yet sourced* |
-| Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
-| Government cloud in operation | *Not yet sourced* |
+| Classification in law | Yes[^s1] |
+| Sovereign cloud certification | No[^s2] |
+| State-controlled trust anchor | Yes[^s3][^s4] |
+| State-controlled national eID | Yes[^s3][^s5] |
+| Government data centres | Yes[^s6][^s7] |
+| Government cloud in operation | Yes[^s6][^s8][^s7] |
 
 What could move this placement:
 
 - If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
-- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
-- If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
+- If any of the 32 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
 
@@ -41,43 +39,43 @@ Netherlands described on its own measured characteristics. Each figure is the pu
 
 | Indicator | Value |
 |---|---:|
-| Population | 18.04 million[^s1] |
-| GDP, current prices | 1 170.6 EUR bn[^s2] |
+| Population | 18.04 million[^s9] |
+| GDP, current prices | 1 170.6 EUR bn[^s10] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 199.1 EUR/MWh[^s3] |
-| Renewables share of electricity | 50.5 %[^s4] |
-| Land area | 34 188 km²[^s5] |
+| Non-household electricity price | 199.1 EUR/MWh[^s11] |
+| Renewables share of electricity | 50.5 %[^s12] |
+| Land area | 34 188 km²[^s13] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Netherlands cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 3 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Netherlands cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 12 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Basisregistratie Personen (BRP)[^s6] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Civil registry core (tier 0) | Basisregistratie Personen (BRP)[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Issuing authorities keep a travel document administration containing the data of art. 3 paras 1-2 (incl. facial image)[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | No central register[^s15] | — | — | — |
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Land & property registry (tier 1) | Basisregistratie Kadaster (BRK)[^s7] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | TSPs issue certificates under the State of the Netherlands trust anchor[^s4] | PKIoverheid is a trust framework managed by Logius on behalf of Ministry of BZK[^s4] | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | Basisregistratie Kadaster (BRK)[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Digital identity credentials (tier 0) | DigiD: the national means for citizens to identify digitally[^s5] | Minister of BZK is controller; DigiD is managed by Logius[^s17] | National infrastructure[^s17] | *Not yet measured* |
 | High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Customs declarations (tier 1) | Current declaration system AGS is being replaced by the new DMS[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | Handelsregister[^s8] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Handelsregister[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Vehicle & licensing (tier 1) | Art. 126: driving licence register managed by RDW[^s20] | RDW manages and is controller of the vehicle registration register[^s20] | *Not stated in sources* | *Not yet measured* |
 | High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -89,24 +87,24 @@ The holdings Netherlands cannot let depend on infrastructure a foreign state can
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
+| High | Health records (tier 2) | LSP is a national infrastructure through which care providers exchange patients' medical data[^s21] | AORTA/LSP managed by VZVZ since 2012[^s22] | *Not stated in sources* | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | Public health surveillance (tier 2) | Praeventis centrally registers vaccinations of every participant in the national immunisation programme[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | Microdata: linkable person, business and address-level data for authorised researchers[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 3 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 11 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
-| National infrastructure | 0 |
+| National infrastructure | 1 |
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 3 |
+| Not stated in sources | 10 |
 
 ## 5. Legal and institutional posture
 
@@ -117,7 +115,7 @@ Of the 3 verified holdings, how many sources state where the infrastructure is o
 | Governing instrument | *Not yet sourced* |
 | Sovereign or government cloud | *Not yet sourced* |
 | Cloud certification | *Not yet sourced* |
-| Data classification | VIRBI 2013: Departementaal VERTROUWELIJK / CONFIDENTIEEL / GEHEIM / ZEER GEHEIM[^s9] |
+| Data classification | VIRBI 2013: Departementaal VERTROUWELIJK / CONFIDENTIEEL / GEHEIM / ZEER GEHEIM[^s25] |
 | Procurement route | *Not yet sourced* |
 | National digital identity | *Not yet sourced* |
 | Internet exchange | *Not yet sourced* |
@@ -131,21 +129,15 @@ Of the 3 verified holdings, how many sources state where the infrastructure is o
 
 Tier 0 and 1 holdings for Netherlands without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
-- Facial biometric (tier 0)
-- Fingerprint biometric (tier 0)
 - Breeder document scans (tier 0)
 - Document issuance history (tier 0)
-- Digital identity credentials (tier 0)
 - Authentication audit log (tier 0)
 - Electoral roll entry (tier 0)
-- State PKI and qualified trust services (tier 0)
 - Residence and migration status (tier 1)
 - Tax (tier 1)
-- Customs declarations (tier 1)
 - Benefits & pensions (tier 1)
 - Statutory health insurance (tier 1)
 - Beneficial ownership register (tier 1)
-- Vehicle & licensing (tier 1)
 - Judicial & criminal justice (tier 1)
 - Police information systems (tier 1)
 - Border and visa systems (tier 1)
@@ -165,12 +157,28 @@ Tier 0 and 1 holdings for Netherlands without a verified source yet. Corrections
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
-[^s6]: Rijksdienst voor Identiteitsgegevens (RvIG) brp. Basisregistratie Personen | RvIG. <https://www.rvig.nl/basisregistratie-personen>
-[^s7]: Kadaster brk. Waar bestaat de BRK uit? - Kadaster.nl zakelijk. <https://www.kadaster.nl/zakelijk/registraties/basisregistraties/brk>
-[^s8]: Kamer van Koophandel (KVK) handelsregister. Over het Handelsregister | KVK. <https://www.kvk.nl/over-het-handelsregister/>
-[^s9]: Overheid.nl Wettenbank bwbr0033507, 2013-06-01. Besluit Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie 2013 (VIRBI 2013). <https://wetten.overheid.nl/BWBR0033507/2013-06-01>
+[^s1]: Ministerie van Algemene Zaken / Staatscourant 8abab4a5b0, 2025-09-08. Besluit voorschrift informatiebeveiliging Rijksdienst bijzondere informatie 2025 (VIRBI 2025), Staatscourant 2025, 30222. <https://zoek.officielebekendmakingen.nl/stcrt-2025-30222.html>
+[^s2]: Tweede Kamer der Staten-Generaal (letter from the State Secretary of Economic Affairs and Climate) 37250de695, 2026-07. Kamerstuk 26643 nr. 1542 - Nationaal beleid voor de Nederlandse cloudmarkt. <https://zoek.officielebekendmakingen.nl/kst-1263281.pdf>
+[^s3]: Logius a624a29ad7. Onze organisatie. <https://www.logius.nl/over-ons/onze-organisatie> ([archived](https://web.archive.org/web/20260519142506/https://www.logius.nl/over-ons/onze-organisatie))
+[^s4]: Logius b7d25aebe2. Wat is PKIoverheid. <https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wat-pkioverheid> ([archived](https://web.archive.org/web/20260618011710/https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wat-pkioverheid))
+[^s5]: Logius ff0101bb0f. DigiD. <https://www.logius.nl/onze-dienstverlening/toegang/digid> ([archived](https://web.archive.org/web/20260826221154/https://www.logius.nl/onze-dienstverlening/toegang/digid))
+[^s6]: ODC-Noord (Rijksoverheid, SSO-Noord) 0cc9a97862. Organisatie - ODC-Noord. <https://www.odc-noord.nl/Organisatie> ([archived](https://web.archive.org/web/20260226165411/https://www.odc-noord.nl/Organisatie))
+[^s7]: Tweede Kamer der Staten-Generaal (letter from the State Secretary of the Interior and Kingdom Relations) 21c4d0ab99, 2026-07-01. Kamerstuk 26643 nr. 1537 - Stand van zaken verkenning soevereine overheidscloud. <https://zoek.officielebekendmakingen.nl/kst-1263099.pdf>
+[^s8]: ODC-Noord (Rijksoverheid, SSO-Noord) e800e7ac70. Infrastructure as a Service - ODC-Noord. <https://www.odc-noord.nl/diensten/infrastructure-as-a-service> ([archived](https://web.archive.org/web/20260228011002/https://www.odc-noord.nl/diensten/infrastructure-as-a-service))
+[^s9]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s10]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s11]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s12]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s13]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s14]: Rijksdienst voor Identiteitsgegevens (RvIG) brp. Basisregistratie Personen | RvIG. <https://www.rvig.nl/basisregistratie-personen>
+[^s15]: Overheid.nl Wettenbank f0be5f00e8, 2024-01-01. Paspoortwet. <https://wetten.overheid.nl/BWBR0005212/2024-01-01> ([archived](https://web.archive.org/web/20260928030739/https://wetten.overheid.nl/BWBR0005212/2024-01-01/))
+[^s16]: Kadaster brk. Waar bestaat de BRK uit? - Kadaster.nl zakelijk. <https://www.kadaster.nl/zakelijk/registraties/basisregistraties/brk>
+[^s17]: DigiD / Logius 0bc47690fd. Privacy DigiD. <https://www.digid.nl/over-digid/privacy> ([archived](https://web.archive.org/web/20260927120423/https://www.digid.nl/over-digid/privacy))
+[^s18]: Tweede Kamer der Staten-Generaal 71ff96c75f, 2022-11-07. Douane; Brief regering; Uitstel invoering nieuw aangiftesysteem van de Douane. <https://zoek.officielebekendmakingen.nl/kst-31934-61.html>
+[^s19]: Kamer van Koophandel (KVK) handelsregister. Over het Handelsregister | KVK. <https://www.kvk.nl/over-het-handelsregister/>
+[^s20]: Overheid.nl Wettenbank d93f954bd2, 2026-09-01. Wegenverkeerswet 1994. <https://wetten.overheid.nl/BWBR0006622/2026-09-01> ([archived](https://web.archive.org/web/20260922170754/https://wetten.overheid.nl/BWBR0006622/2026-09-01))
+[^s21]: VZVZ ad10d4680e. AORTA-LSP. <https://www.aorta-lsp.nl/> ([archived](https://web.archive.org/web/20260710165804/https://www.aorta-lsp.nl/))
+[^s22]: VZVZ b5dd9e1e0f. Over AORTA-LSP. <https://www.aorta-lsp.nl/over-aorta-lsp> ([archived](https://web.archive.org/web/20260710170946/https://www.aorta-lsp.nl/over-aorta-lsp))
+[^s23]: Tweede Kamer der Staten-Generaal 9af8d75334, 2024-10-02. Wijziging van een aantal wetten op het terrein van VWS (grondslagen gegevensverwerking); Memorie van toelichting. <https://zoek.officielebekendmakingen.nl/kst-36621-3.html> ([archived](https://web.archive.org/web/20251013160730/https://zoek.officielebekendmakingen.nl/kst-36621-3.html))
+[^s24]: CBS 4c20e66a3a. Microdata: Zelf onderzoek doen. <https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen> ([archived](https://web.archive.org/web/20260923230852/https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen))
+[^s25]: Overheid.nl Wettenbank bwbr0033507, 2013-06-01. Besluit Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie 2013 (VIRBI 2013). <https://wetten.overheid.nl/BWBR0033507/2013-06-01>

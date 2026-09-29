@@ -14,26 +14,23 @@
 
 ## 1. Data-sovereignty placement
 
-> Not demonstrated. Confidence: Low. With the evidence still open, Ireland could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
+> Dependent on non-EU providers. Confidence: High. With the evidence still open, Ireland could be anywhere from 'Dependent on non-EU providers' to 'Dependent on non-EU providers'.
 
 Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.
 
 | Indicator | Finding |
 |---|---|
 | Jurisdiction requirement | *Not yet sourced* |
-| Classification in law | *Not yet sourced* |
+| Classification in law | Partly[^s1] |
 | Sovereign cloud certification | *Not yet sourced* |
 | State-controlled trust anchor | *Not yet sourced* |
 | State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
-| Government cloud in operation | *Not yet sourced* |
+| Government data centres | Yes[^s1][^s2] |
+| Government cloud in operation | Yes[^s2][^s3] |
 
 What could move this placement:
 
-- If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
-- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
-- If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
+Nothing: every input the rule reads is settled by a source.
 
 ## 2. Fundamentals
 
@@ -41,72 +38,72 @@ Ireland described on its own measured characteristics. Each figure is the publis
 
 | Indicator | Value |
 |---|---:|
-| Population | 5.44 million[^s1] |
-| GDP, current prices | 602.4 EUR bn[^s2] |
+| Population | 5.44 million[^s4] |
+| GDP, current prices | 602.4 EUR bn[^s5] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 255.2 EUR/MWh[^s3] |
-| Renewables share of electricity | 41.3 %[^s4] |
-| Land area | 68 655 km²[^s5] |
+| Non-household electricity price | 255.2 EUR/MWh[^s6] |
+| Renewables share of electricity | 41.3 %[^s7] |
+| Land area | 68 655 km²[^s8] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Ireland cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Ireland cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 22 of 39 holding classes have a verified source; 7 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Facial biometric (tier 0) | SAFE 2 registration biometric facial templates (Public Services Card)[^s9] | Department of Social Protection (DSP)[^s9] | *Not stated in sources* | Facial templates for 70% of the State's population (2021)[^s9] |
 | Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Electoral roll entry (tier 0) | Local Government Electoral Registration System (LGERS), shared national electoral register database replacing 31 local registers[^s10] | *Not yet sourced* | Non-EU provider[^s10] | 3.87 million registered electors (December 2024)[^s10] |
 | High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | State PKI and qualified trust services (tier 0) | ROS digital certificate PKI (Revenue CA), also used by CRO, Department of Transport and Department of Social Protection[^s11] | Revenue Commissioners act as Certification Authority for ROS digital certificates[^s11] | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | National Land Register (folios of the Land Registry) and Registry of Deeds[^s12] | Tailte Éireann (civil service body under the Tailte Éireann Act 2022)[^s12] | *Not stated in sources* | 2.4 million folios with associated spatial data accessible via landdirect.ie[^s12] |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Police information systems (tier 1) | PULSE (An Garda Síochána's national incident and intelligence database)[^s13] | An Garda Síochána[^s13] | *Not stated in sources* | *Not yet measured* |
+| High | Intelligence services (tier 1) | Defence Forces Military Intelligence holdings[^s14] | National Security Analysis Centre (established by Government in 2019)[^s14] | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | National Digital Radio Service (NDRS), TETRA network for first responders[^s15] | Emergency Call Answering Service (ECAS) for 112/999 operated by BT under a State concession (re-awarded 2019)[^s16] | Non-EU provider[^s15] | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Irish Residence Permission (IRP) register: the register of non-nationals with permission to be in the State[^s17] | Immigration Service Delivery (ISD), Department of Justice (took over first-time registration from the Garda National Immigration Bureau, 13 January 2025)[^s18] | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Customs declarations (tier 1) | Automated Import System (AIS), Automated Export System (AES) and New Computerised Transit System (NCTS)[^s19] | Revenue Commissioners[^s19] | *Not stated in sources* | 62.8 million customs declarations processed in 2025 through NCTS and AIS/AES[^s19] |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Statutory health insurance (tier 1) | PCRS eligibility records (medical card / GMS scheme eligibility, keyed on PPSN)[^s20] | HSE Primary Care Reimbursement Service (PCRS)[^s20] | *Not stated in sources* | 1,552,553 GMS (medical card) eligible persons and 785,152 GP visit card holders in 2025[^s21] |
+| High | Business registry (tier 1) | Register of companies, business names and limited partnerships held by the Companies Registration Office[^s22] | Companies Registration Office (CRO), an office of the Department of Enterprise, Tourism and Employment[^s22] | *Not stated in sources* | *Not yet measured* |
 | High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Vehicle & licensing (tier 1) | National Vehicle and Driver File (NVDF)[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | National connection to the Schengen Information System (SIS), live in Ireland since 15 March 2021[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Firearm certificates (three-year certificates, renewal phases administered by An Garda Síochána)[^s25] | An Garda Síochána (applications decided by the local Superintendent)[^s25] | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | Financial Management Shared Services (FMSS) system, the shared government financial management system (incl. the Exchequer)[^s26] | National Shared Services Office (FMSS); Department of Finance manages the Exchequer[^s26] | *Not stated in sources* | *Not yet measured* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Election management and results (tier 1) | Election Count Database System (Ecount), used alongside the manual paper-ballot count[^s27] | Returning Officers per constituency[^s27] | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | TARGET2-Ireland (Irish component of the Eurosystem T2 RTGS system)[^s28] | Central Bank of Ireland[^s29] | EU provider[^s28] | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | Defence Forces Enterprise network (NGWE project) and national Communications Information Services Network (CISN)[^s14] | Defence Forces CIS Corps[^s14] | National infrastructure[^s14] | *Not yet measured* |
 | High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Electricity grid control (tier 1) | National Control Centres (NCCs) of the transmission system operator[^s30] | EirGrid (transmission system operator)[^s30] | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | National Operations Management Centre (24/7 alarm and treatment monitoring)[^s31] | Uisce Éireann (national water utility, designated activity company)[^s31] | *Not stated in sources* | Alarms monitored at 517 water treatment plants[^s31] |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
+| High | Health records (tier 2) | National Shared Care Record (NSCR), HSE MyHealth@IE programme (read-only aggregated record)[^s32] | Health Service Executive (Health Identifiers Service)[^s33] | *Not stated in sources* | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | Public health surveillance (tier 2) | Computerised Infectious Disease Reporting (CIDR)[^s34] | Health Protection Surveillance Centre (HPSC); CIDR established 2004[^s35] | *Not stated in sources* | On average 33,394 notified cases per year, 2013-2019 (range 25,814-46,065)[^s35] |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 22 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
-| National infrastructure | 0 |
-| EU provider | 0 |
+| National infrastructure | 1 |
+| EU provider | 1 |
 | Mixed | 0 |
-| Non-EU provider | 0 |
-| Not stated in sources | 0 |
+| Non-EU provider | 2 |
+| Not stated in sources | 18 |
 
 ## 5. Legal and institutional posture
 
@@ -125,51 +122,61 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 
 ## 6. Capacity
 
-> Not yet sized. Capacity for Ireland will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 0 of 39 holding classes have a sourced measurement so far.
+> Not yet sized. Capacity for Ireland will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 7 of 39 holding classes have a sourced measurement so far.
 
 ## 7. Research still open
 
 Tier 0 and 1 holdings for Ireland without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
 - Civil registry core (tier 0)
-- Facial biometric (tier 0)
 - Fingerprint biometric (tier 0)
 - Breeder document scans (tier 0)
 - Document issuance history (tier 0)
 - Digital identity credentials (tier 0)
 - Authentication audit log (tier 0)
-- Electoral roll entry (tier 0)
-- State PKI and qualified trust services (tier 0)
-- Residence and migration status (tier 1)
 - Tax (tier 1)
-- Customs declarations (tier 1)
 - Benefits & pensions (tier 1)
-- Statutory health insurance (tier 1)
-- Land & property registry (tier 1)
-- Business registry (tier 1)
 - Beneficial ownership register (tier 1)
-- Vehicle & licensing (tier 1)
 - Judicial & criminal justice (tier 1)
-- Police information systems (tier 1)
-- Border and visa systems (tier 1)
-- Firearms register (tier 1)
 - Official gazette and legislation (tier 1)
-- Treasury and state accounts (tier 1)
 - Government payroll and personnel (tier 1)
-- Election management and results (tier 1)
-- Central bank systems (tier 1)
-- Defence command and logistics (tier 1)
-- Intelligence services (tier 1)
-- Emergency calls and public-safety radio (tier 1)
 - Crisis management and civil protection (tier 1)
-- Electricity grid control (tier 1)
-- Water management control (tier 1)
 - Education (tier 1)
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: Office of the Government Chief Information Officer (OGCIO) 1072f00483, 2019-10. Cloud Computing Advice Note (October 2019). <https://assets.per.gov.ie/documents/4468be59812f40dda7003116cf05f196_1.pdf>
+[^s2]: Office of the Government Chief Information Officer (OGCIO) b00e924ad9, 2025-07-30. Build To Share. <https://www.ogcio.gov.ie/en/corporate-pages/policy/build-to-share/> ([archived](https://web.archive.org/web/20260128012721/https://www.ogcio.gov.ie/en/corporate-pages/policy/build-to-share/))
+[^s3]: Office of the Government Chief Information Officer (OGCIO) dda774ec83, 2025-07-30. Infrastructure. <https://www.ogcio.gov.ie/en/corporate-pages/services/infrastructure/> ([archived](https://web.archive.org/web/20260618083911/https://www.ogcio.gov.ie/en/corporate-pages/services/infrastructure/))
+[^s4]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s5]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s6]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s7]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s8]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s9]: Data Protection Commission 4c5a1369a3, 2025-06-12. DPC announces conclusion of investigation into use of facial matching technology in connection with Public Services Card. <https://www.dataprotection.ie/en/news-media/press-releases/dpc-announces-conclusion-investigation-use-facial-matching-technology-connection-public-services> ([archived](https://web.archive.org/web/20260926120514/https://www.dataprotection.ie/en/news-media/press-releases/dpc-announces-conclusion-investigation-use-facial-matching-technology-connection-public-services))
+[^s10]: An Coimisiún Toghcháin (Electoral Commission) 5e8d8912b8, 2025. Oversight Report on the Electoral Registers. <https://cdn.electoralcommission.ie/app/uploads/2025/04/30104313/Oversight-Report-on-the-Electoral-Registers_online_english_tagged.pdf> ([archived](https://web.archive.org/web/20251026075202/https://cdn.electoralcommission.ie/app/uploads/2025/04/30104313/Oversight-Report-on-the-Electoral-Registers_online_english_tagged.pdf))
+[^s11]: Revenue Commissioners 517c378302, 2025-10. Tax and Duty Manual Part 38-06-01 Revenue Online Service (ROS). <https://www.revenue.ie/en/tax-professionals/tdm-wm/income-tax-capital-gains-tax-corporation-tax/part-38/38-06-01.pdf> ([archived](https://web.archive.org/web/20260520131022/https://www.revenue.ie/en/tax-professionals/tdm-wm/income-tax-capital-gains-tax-corporation-tax/part-38/38-06-01.pdf))
+[^s12]: Tailte Éireann 9cc27c87b8, 2025. Tailte Éireann Annual Report 2024. <https://tailte.ie/wp-content/uploads/2025/11/TE_AnnualReport2024_GA_EN.pdf> ([archived](https://web.archive.org/web/20260513220930/https://tailte.ie/wp-content/uploads/2025/11/TE_AnnualReport2024_GA_EN.pdf))
+[^s13]: An Garda Síochána e72270a4bc. Garda Information Services Centre (GISC). <https://www.garda.ie/en/about-us/our-departments/garda-information-services-centre-gisc-/> ([archived](https://web.archive.org/web/20260610071140/https://www.garda.ie/en/about-us/our-departments/garda-information-services-centre-gisc-/))
+[^s14]: Department of Defence f9640c4de5, 2025. Department of Defence and Defence Forces Annual Report 2024. <https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf> ([archived](https://web.archive.org/web/20260311093310/https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf))
+[^s15]: Motorola Solutions, Inc. 3a5eb8a308, 2022-03-23. Motorola Solutions Acquires TETRA Ireland Communications, The Provider of Ireland's National Digital Radio Service. <https://www.motorolasolutions.com/newsroom/press-releases/motorola-solutions-acquires-tetra-ireland-communications.html> ([archived](https://web.archive.org/web/20260711055831/https://www.motorolasolutions.com/newsroom/press-releases/motorola-solutions-acquires-tetra-ireland-communications.html))
+[^s16]: ECAS (112.ie) ea88ea8328. Service Providers - ECAS 112.ie. <https://112.ie/service-providers/>
+[^s17]: Immigration Service Delivery, Department of Justice 2e74ffe772. Information on revocation of registered Irish Residence Permissions. <https://www.irishimmigration.ie/information-on-revocation-of-registered-irish-residence-permissions/> ([archived](https://web.archive.org/web/20260518125209/https://www.irishimmigration.ie/information-on-revocation-of-registered-irish-residence-permissions/))
+[^s18]: An Garda Síochána 53cc0f1edb. Immigration (GNIB) - Registration & Renewal of Immigration Permission. <https://www.garda.ie/en/about-us/organised-serious-crime/immigration-gnib-/> ([archived](https://web.archive.org/web/20260917111236/https://www.garda.ie/en/about-us/organised-serious-crime/immigration-gnib-/))
+[^s19]: Revenue Commissioners 915815344e, 2026. Annual Report 2025. <https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf> ([archived](https://web.archive.org/web/20260507225147/https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf))
+[^s20]: Health Information and Quality Authority d9132e3454. Primary Care Reimbursement Service (PCRS). <https://www.hiqa.ie/areas-we-work/health-information/data-collections/primary-care-reimbursement-service-pcrs>
+[^s21]: Health Service Executive (copy hosted by HRB National Drugs Library) 6ab62471fb, 2026. Primary Care Reimbursement Service Statistical Analysis of Claims and Payments 2025. <https://www.drugsandalcohol.ie/46590/1/PCRS_Statistical_Analysis_of_Claims_and_Payments_2025.pdf>
+[^s22]: Department of Enterprise, Tourism and Employment b3438928a5. Companies Registration Office (CRO). <https://enterprise.gov.ie/en/who-we-are/offices-agencies/companies-registration-office-cro-.html> ([archived](https://web.archive.org/web/20260526152748/https://enterprise.gov.ie/en/who-we-are/offices-agencies/companies-registration-office-cro-.html))
+[^s23]: Government of Ireland PSB Data Catalogue ee89976ce3. National Vehicle and Driver Database. <https://datacatalogue.gov.ie/dataset/national-vehicle-and-driver-database> ([archived](https://web.archive.org/web/20260217001228/https://datacatalogue.gov.ie/dataset/national-vehicle-and-driver-database))
+[^s24]: An Garda Síochána a4ff8de185. Schengen Information System (SIS): When was it introduced?. <https://www.garda.ie/en/about-us/our-departments/garda-national-crime-security-intelligence-service1/schengen-information-system-sis-/when-was-it-introduced-.html>
+[^s25]: An Garda Síochána d67c609e83. Firearms Licensing. <https://www.garda.ie/en/about-us/online-services/firearms-licensing/> ([archived](https://web.archive.org/web/20260917111136/https://www.garda.ie/en/about-us/online-services/firearms-licensing/))
+[^s26]: Office of the Comptroller and Auditor General 33979d8093, 2023. Report on the Accounts of the Public Services 2022, Chapter 6: Financial management shared services: implementation progress. <https://www.audit.gov.ie/media/jqinw3i5/6-financial-management-shared-services-implementation-progress.pdf>
+[^s27]: Department of Housing, Local Government and Heritage 44adfd2bcf, 2024. Memorandum for the Guidance of Returning Officers, General Election 2024. <https://assets.gov.ie/312963/3e85cb42-027b-4ede-8249-20112f9f652c.pdf>
+[^s28]: Central Bank of Ireland 2bc4ad8a3c. T2. <https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2> ([archived](https://web.archive.org/web/20260315043823/https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2))
+[^s29]: Central Bank of Ireland 8160b5326b, 2026. Annual Report 2025 and Annual Performance Statement 2025-2026. <https://www.centralbank.ie/docs/default-source/publications/corporate-reports/annual-reports/annual-report-2025-and-annual-performance-statement-2025-2026.pdf> ([archived](https://web.archive.org/web/20260801021138/https://www.centralbank.ie/docs/default-source/publications/corporate-reports/annual-reports/annual-report-2025-and-annual-performance-statement-2025-2026.pdf))
+[^s30]: EirGrid e95e799174. National Control Centres. <https://www.eirgrid.ie/grid/how-grid-works/national-control-centres>
+[^s31]: Uisce Éireann 2457e18dd0, 2025. Delivering Water Services for Ireland: Annual Report and Financial Statements 2024. <https://www.water.ie/sites/default/files/2025-07/Uisce-Eireann-2024-Annual-Report-EN.pdf>
+[^s32]: HSE MyHealth@IE programme (hosted by Irish Institute of Pharmacy) fe4070ee66, 2026-06-10. National Shared Care Record: Enabling Data, Enhancing Care (MyHealth@IE programme webinar). <https://iiop.ie/sites/default/files/2026-06/NSCR%20Presentation_10%20June%202026_IIOPWebinar.pdf>
+[^s33]: Health Information and Quality Authority b3e5bb5d86. National Register of Individual Health Identifiers. <https://www.hiqa.ie/areas-we-work/health-information/data-collections/national-register-individual-health-identifiers>
+[^s34]: Health Protection Surveillance Centre (HSE) 370247fc97. Computerised Infectious Disease Reporting (CIDR). <https://www.hpsc.ie/cidr/> ([archived](https://web.archive.org/web/20260911101522/https://www.hpsc.ie/cidr/))
+[^s35]: Health Information and Quality Authority ace222398a. Computerised Infectious Disease Reporting (CIDR) system. <https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr> ([archived](https://web.archive.org/web/20240704233334/https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr))

@@ -1,0 +1,29 @@
+{
+ "iso": "CY",
+ "verdicts": [
+  {
+   "class_id": "digital_identity_credentials",
+   "original": "eu_provider",
+   "reason": "JCC Payment Systems' eID CPS says operation of the eID certification authority is outsourced to ADACOM, a qualified trust service provider registered in Greece, so another EU state operates it; nothing in the evidence shows non-EU control or hosting.",
+   "reviewed": "eu_provider"
+  },
+  {
+   "class_id": "trust_services_pki",
+   "original": "mixed",
+   "reason": "The JCC CPS shows all CA facility, management and operations controls are provided by ADACOM SA (Greece, EU); there is no evidence of any non-EU operator or host, so 'mixed' is not established, and the evidence says nothing about the CSCA.",
+   "reviewed": "eu_provider"
+  },
+  {
+   "class_id": "land_property",
+   "original": "national",
+   "reason": "The DLS 2022 annual report says officers of the Cypriot government's Department of Information Technology Services and the Department of Lands and Surveys maintain and operate the Land Information System's central systems.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "emergency_communications",
+   "original": "national",
+   "reason": "NG112 is being developed under an agreement between Cyprus Civil Defence and CYTA, the state-owned Cypriot telecommunications organisation, so both bodies are national; the evidence covers development rather than hosting.",
+   "reviewed": "national"
+  }
+ ]
+}

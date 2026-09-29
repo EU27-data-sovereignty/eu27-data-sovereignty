@@ -14,26 +14,23 @@
 
 ## 1. Data-sovereignty placement
 
-> Not demonstrated. Confidence: Low. With the evidence still open, Italy could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
+> Secured in law, not yet in practice. Confidence: Low. With the evidence still open, Italy could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
 
 Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.
 
 | Indicator | Finding |
 |---|---|
-| Jurisdiction requirement | *Not yet sourced* |
-| Classification in law | *Not yet sourced* |
-| Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
+| Jurisdiction requirement | Yes[^s1][^s2] |
+| Classification in law | Yes[^s1] |
+| Sovereign cloud certification | Partly[^s1] |
+| State-controlled trust anchor | Yes[^s3] |
+| State-controlled national eID | Yes[^s3] |
+| Government data centres | Yes[^s2] |
 | Government cloud in operation | *Not yet sourced* |
 
 What could move this placement:
 
-- If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
-- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
-- If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
+- If any of the 31 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
 
@@ -41,72 +38,72 @@ Italy described on its own measured characteristics. Each figure is the publishe
 
 | Indicator | Value |
 |---|---:|
-| Population | 58.94 million[^s1] |
-| GDP, current prices | 2 258.0 EUR bn[^s2] |
+| Population | 58.94 million[^s4] |
+| GDP, current prices | 2 258.0 EUR bn[^s5] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 220.3 EUR/MWh[^s3] |
-| Renewables share of electricity | 40.7 %[^s4] |
-| Land area | 297 734 km²[^s5] |
+| Non-household electricity price | 220.3 EUR/MWh[^s6] |
+| Renewables share of electricity | 40.7 %[^s7] |
+| Land area | 297 734 km²[^s8] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Italy cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Italy cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 15 of 39 holding classes have a verified source; 1 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Civil registry core (tier 0) | ANPR (National Register of the Resident Population) is the Ministry of the Interior's single database for population data[^s9] | Ministry of the Interior; Sogei S.p.A. provides the technical operation[^s9] | *Not stated in sources* | 66,252,730 persons in ANPR, including 6,800,090 residents abroad (AIRE), as updated 28 September 2026 (figure updated daily)[^s10] |
 | Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Breeder document scans (tier 0) | ANSC - national computerised archive of civil-status registers (births, marriages, deaths)[^s11] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| High | Facial biometric (tier 0) | The CIE electronic record card (cartellino elettronico), kept by SSCE, holds the holder's photograph, signature scan and registry data[^s12] | Centro Nazionale dei Servizi Demografici (CNSD), Ministry of the Interior[^s12] | National infrastructure[^s12] | *Not yet measured* |
 | High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| High | Electoral roll entry (tier 0) | Art. 62(2-ter) CAD provides for the electoral lists to be integrated into ANPR[^s13] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | The CIE database is part of the CNSD infrastructure[^s12] | Only the Ministry of the Interior may issue the CIE[^s14] | National infrastructure[^s12] | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | The CNSD 'CA Autenticazione' is the Ministry of the Interior's certification authority that issues online-authentication certificates for the CIE[^s12] | AgID is Italy's supervisory authority for qualified trust service providers[^s15] | National infrastructure[^s12] | *Not yet measured* |
 | High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Customs declarations (tier 1) | AIDA (Integrated Customs and Excise Automation) data warehouse of the Customs and Monopolies Agency[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Statutory health insurance (tier 1) | The National Register of Patients (ANA) is the reference register for public health, run within Sistema Tessera Sanitaria[^s17] | ANA is built by the Ministry of Economy and Finance in agreement with the Ministry of Health[^s18] | *Not stated in sources* | *Not yet measured* |
 | High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Treasury and state accounts (tier 1) | SIOPE monitors the receipts and payments made by the treasurers of all public administrations[^s19] | The SIOPE+ infrastructure is operated by the Banca d'Italia[^s19] | *Not stated in sources* | *Not yet measured* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Election management and results (tier 1) | The historical election archive is an online database of election results down to municipality level[^s20] | The Central Directorate for Electoral Services publishes turnout and results data[^s20] | *Not stated in sources* | *Not yet measured* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Crisis management and civil protection (tier 1) | IT-alert is the public warning service that sends messages to devices in an area hit by a serious emergency[^s21] | Art. 8 of Legislative Decree 1/2018 (Civil Protection Code): the Prime Minister acts through the Civil Protection Department[^s22] | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Health records (tier 2) | The electronic health record (FSE) holds the patient's clinical data and documents[^s23] | The FSE is set up by the regions and autonomous provinces[^s23] | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | The printed Gazzetta Ufficiale is the only definitive text and prevails over the digital version[^s24] | IPZS publishes the Gazzetta Ufficiale in digital form[^s24] | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | The Central State Archive is building the repository for digital archives produced by central state bodies[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Statistical microdata (tier 2) | Art. 3 of Decree-Law 179/2012: ISTAT carries out an annual (permanent) population and housing census[^s26] | ISTAT is the main producer of official statistics[^s27] | *Not stated in sources* | *Not yet measured* |
 | Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 15 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
-| National infrastructure | 0 |
+| National infrastructure | 3 |
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 0 |
+| Not stated in sources | 12 |
 
 ## 5. Legal and institutional posture
 
@@ -125,26 +122,18 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 
 ## 6. Capacity
 
-> Not yet sized. Capacity for Italy will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 0 of 39 holding classes have a sourced measurement so far.
+> Not yet sized. Capacity for Italy will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 1 of 39 holding classes have a sourced measurement so far.
 
 ## 7. Research still open
 
 Tier 0 and 1 holdings for Italy without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
-- Civil registry core (tier 0)
-- Facial biometric (tier 0)
 - Fingerprint biometric (tier 0)
-- Breeder document scans (tier 0)
-- Document issuance history (tier 0)
 - Digital identity credentials (tier 0)
 - Authentication audit log (tier 0)
-- Electoral roll entry (tier 0)
-- State PKI and qualified trust services (tier 0)
 - Residence and migration status (tier 1)
 - Tax (tier 1)
-- Customs declarations (tier 1)
 - Benefits & pensions (tier 1)
-- Statutory health insurance (tier 1)
 - Land & property registry (tier 1)
 - Business registry (tier 1)
 - Beneficial ownership register (tier 1)
@@ -153,23 +142,41 @@ Tier 0 and 1 holdings for Italy without a verified source yet. Corrections and s
 - Police information systems (tier 1)
 - Border and visa systems (tier 1)
 - Firearms register (tier 1)
-- Official gazette and legislation (tier 1)
-- Treasury and state accounts (tier 1)
 - Government payroll and personnel (tier 1)
-- Election management and results (tier 1)
 - Central bank systems (tier 1)
 - Defence command and logistics (tier 1)
 - Intelligence services (tier 1)
 - Emergency calls and public-safety radio (tier 1)
-- Crisis management and civil protection (tier 1)
 - Electricity grid control (tier 1)
 - Water management control (tier 1)
 - Education (tier 1)
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: Agenzia per la cybersicurezza nazionale (ACN) 75df96d0d5, 2024. Regolamento per le infrastrutture digitali e per i servizi cloud per la pubblica amministrazione (Regolamento ACN n. 21007/2024), Allegato 2, sezione 2. <https://www.acn.gov.it/portale/documents/d/guest/regolamentocloud> ([archived](https://web.archive.org/web/20260807151428/https://www.acn.gov.it/portale/documents/d/guest/regolamentocloud))
+[^s2]: Normattiva (Istituto Poligrafico e Zecca dello Stato / Presidenza del Consiglio dei ministri) 8ae7eff63c, 2012-10-18. Decreto-legge 18 ottobre 2012, n. 179, art. 33-septies (Consolidamento e razionalizzazione dei siti e delle infrastrutture digitali del Paese). <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art33septies>
+[^s3]: Agenzia per l'Italia Digitale (AgID), trusted list scheme operator 716a43ae73. Italian Trusted List (TSL-IT), trust service provider entry: Ministero dell'Interno. <https://eidas.agid.gov.it/TL/TSL-IT.xml> ([archived](https://web.archive.org/web/20260925060906/https://eidas.agid.gov.it/TL/TSL-IT.xml))
+[^s4]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s5]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s6]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s7]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s8]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s9]: Ministero dell'Interno - Anagrafe Nazionale 0ccfa7e7df. Conosci l'ANPR. <https://www.anagrafenazionale.interno.it/anpr/> ([archived](https://web.archive.org/web/20260927003857/https://www.anagrafenazionale.interno.it/anpr/))
+[^s10]: Ministero dell'Interno - Anagrafe Nazionale 604791f8f6, 2026-09-28. ANAGRAFE NAZIONALE – Unica. Per tutti.. <https://www.anagrafenazionale.interno.it/> ([archived](https://web.archive.org/web/20260929004520/https://www.anagrafenazionale.interno.it/))
+[^s11]: Ministero dell'Interno - Anagrafe Nazionale 58adaaee64. Guida all'ANSC. <https://www.anagrafenazionale.interno.it/area-tecnica/guida-ansc/> ([archived](https://web.archive.org/web/20260918002926/https://www.anagrafenazionale.interno.it/area-tecnica/guida-ansc/))
+[^s12]: Gazzetta Ufficiale della Repubblica Italiana - Istituto Poligrafico e Zecca dello Stato 96bca78079, 2015-12-30. Decreto del Ministero dell'Interno 23 dicembre 2015 - Modalità tecniche di emissione della Carta d'identità elettronica (GU Serie Generale n. 302 del 30-12-2015). <https://www.gazzettaufficiale.it/eli/gu/2015/12/30/302/sg/pdf>
+[^s13]: Normattiva - Istituto Poligrafico e Zecca dello Stato 210c9adc37, 2005. Decreto legislativo 7 marzo 2005, n. 82 (Codice dell'amministrazione digitale), art. 62. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62> ([archived](https://web.archive.org/web/20260125120137/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62))
+[^s14]: Normattiva - Istituto Poligrafico e Zecca dello Stato 78caf46345, 2005. Decreto-legge 31 gennaio 2005, n. 7, art. 7-vicies ter. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2005-01-31;7~art7viciester>
+[^s15]: Agenzia per l'Italia Digitale (AgID) bc8e7b6af7, 2024-04-23. Servizi fiduciari qualificati / Firma elettronica qualificata. <https://www.agid.gov.it/it/piattaforme/firma-elettronica-qualificata> ([archived](https://web.archive.org/web/20260924003149/https://www.agid.gov.it/it/piattaforme/firma-elettronica-qualificata))
+[^s16]: Agenzia delle Dogane e dei Monopoli ad0abd198a, 2025. Libro Blu 2024 - Relazione. <https://www.adm.gov.it/portale/documents/20182/261920520/Libro+blu+2024+-+Relazione.pdf/e46989ce-b39f-a404-3b4b-2af3196cba43?t=1784560697678>
+[^s17]: MEF - Ragioneria Generale dello Stato 89229c8c9f. Sistema Tessera Sanitaria - Home. <https://www.sistemats.it/> ([archived](https://web.archive.org/web/20160502181750/http://www.sistemats.it:80/))
+[^s18]: Normattiva - Istituto Poligrafico e Zecca dello Stato 50a3305831, 2005. Decreto legislativo 7 marzo 2005, n. 82 (Codice dell'amministrazione digitale), art. 62-ter. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62ter> ([archived](https://web.archive.org/web/20251012072920/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62ter))
+[^s19]: Agenzia per l'Italia Digitale (AgID) 0ee49b73ca. SIOPE. <https://www.agid.gov.it/it/piattaforme/siope> ([archived](https://web.archive.org/web/20260923012741/https://www.agid.gov.it/it/piattaforme/siope))
+[^s20]: Ministero dell'Interno - Dipartimento per gli Affari Interni e Territoriali fc6e2b316e. Le elezioni. <https://dait.interno.gov.it/elezioni> ([archived](https://web.archive.org/web/20260929012749/https://dait.interno.gov.it/elezioni))
+[^s21]: Presidenza del Consiglio dei Ministri - Dipartimento della Protezione Civile 5e8d3e644d. Come funziona | IT-alert. <https://www.it-alert.it/it/come-funziona/>
+[^s22]: Normattiva - Istituto Poligrafico e Zecca dello Stato 405d3c7907, 2018. Decreto legislativo 2 gennaio 2018, n. 1 (Codice della protezione civile), art. 8. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art8>
+[^s23]: Normattiva - Istituto Poligrafico e Zecca dello Stato e96f2575a3, 2012. Decreto-legge 18 ottobre 2012, n. 179, art. 12. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art12> ([archived](https://web.archive.org/web/20250819092310/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art12))
+[^s24]: Istituto Poligrafico e Zecca dello Stato d7eed3abe3. Gazzetta Ufficiale - Home. <https://www.gazzettaufficiale.it/> ([archived](https://web.archive.org/web/20260913204754/https://www.gazzettaufficiale.it/))
+[^s25]: Archivio Centrale dello Stato ebb9072864. Polo di conservazione digitale. <https://acs.cultura.gov.it/piano-nazionale-di-ripresa-e-resilienza-del-ministero-della-cultura/polo-di-conservazione-digitale/>
+[^s26]: Normattiva - Istituto Poligrafico e Zecca dello Stato cb6d493e8b, 2012. Decreto-legge 18 ottobre 2012, n. 179, art. 3. <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art3> ([archived](https://web.archive.org/web/20250521205442/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art3))
+[^s27]: Istituto nazionale di statistica (ISTAT) efe4fdf4e5. L'Istituto: organizzazione e attività. <https://www.istat.it/listituto/> ([archived](https://web.archive.org/web/20260927005502/https://www.istat.it/listituto/))

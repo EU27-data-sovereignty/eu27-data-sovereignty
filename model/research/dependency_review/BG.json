@@ -1,0 +1,23 @@
+{
+ "iso": "BG",
+ "verdicts": [
+  {
+   "class_id": "issuance_history",
+   "original": "mixed",
+   "reason": "The only named contractor is a consortium of Mühlbauer ID Services GmbH (Germany) and S&T Bulgaria EOOD, and it is named as a system supplier rather than an operator or host; neither company is shown to be non-EU, so nothing supports 'mixed' and the hosting is not established.",
+   "reviewed": "unknown"
+  },
+  {
+   "class_id": "land_property",
+   "original": "national",
+   "reason": "The Bulgarian National Audit Office report says the Registry Agency (Ministry of Justice, Bulgaria) is legally tasked with keeping and storing the property register in its own data centres (contract 93-00-141 upgraded 'the Registry Agency's information data centres'); the evidence does not cover the AGKK cadastre part of this holding.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "business_registry",
+   "original": "national",
+   "reason": "The Bulgarian Registry Agency keeps the commercial register and BULSTAT and runs its own storage, servers and backup tape libraries for the register systems; no foreign operator, host or cloud is shown.",
+   "reviewed": "national"
+  }
+ ]
+}

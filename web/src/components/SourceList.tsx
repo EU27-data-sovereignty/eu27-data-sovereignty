@@ -31,7 +31,7 @@ export function SourceList({
             <li
               key={sid}
               id={`src-${n}`}
-              className="scroll-mt-4 rounded target:bg-[var(--color-bg-emphasis)]"
+              className="scroll-mt-4 rounded [overflow-wrap:anywhere] target:bg-[var(--color-bg-emphasis)]"
             >
               <div>
                 <span className="mr-2 font-semibold text-[var(--color-accent-text)]">[{n}]</span>

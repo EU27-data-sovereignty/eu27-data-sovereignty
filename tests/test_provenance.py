@@ -26,7 +26,9 @@ sys.path.insert(0, str(ROOT / "model"))
 import provenance  # noqa: E402
 
 # Supported claims per namespace. Raise in the commit that adds the citations.
-FLOORS = {"param": 138, "assumption": 0, "record": 3}
+# record fell from 1029 to 1017 on 2026-09-29, deliberately: #79 withdrew the 12 dependency claims an
+# independent reviewer did not confirm. A floor may only be lowered by a recorded decision.
+FLOORS = {"param": 138, "assumption": 0, "record": 1017, "indicator": 134}
 
 
 class Register(unittest.TestCase):

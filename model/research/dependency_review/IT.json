@@ -1,0 +1,29 @@
+{
+ "iso": "IT",
+ "verdicts": [
+  {
+   "class_id": "facial_biometric",
+   "original": "national",
+   "reason": "The 2015 decree places the CIE issuance IT infrastructure, including the SSCE, in the Centro Nazionale dei Servizi Demografici of Italy's Ministry of the Interior, which is responsible for it; no non-Italian operator or host appears in the evidence (it dates from 2015).",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "issuance_history",
+   "original": "national",
+   "reason": "Italian law reserves CIE issuance to the Ministry of the Interior, and the 2015 decree says the SSCE issuance circuit runs on infrastructure in the Ministry's CNSD, so it is state-operated and hosted in Italy.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "trust_services_pki",
+   "original": "national",
+   "reason": "The CIE certification authority (CA Autenticazione and PKI-CIE) is part of the CNSD infrastructure of Italy's Ministry of the Interior; AgID, also Italian, only supervises the other qualified trust service providers, and the evidence does not show who operates those.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "central_bank",
+   "original": "eu_provider",
+   "reason": "The TARGET services are Eurosystem-owned, and T2 was built on a Eurosystem mandate by Banca d'Italia and Deutsche Bundesbank (Germany); Eurosystem bodies count as EU, and no non-EU operator appears in the evidence.",
+   "reviewed": "eu_provider"
+  }
+ ]
+}

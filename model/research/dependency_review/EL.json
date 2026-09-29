@@ -1,0 +1,47 @@
+{
+ "iso": "EL",
+ "verdicts": [
+  {
+   "class_id": "digital_identity_credentials",
+   "original": "national",
+   "reason": "The Greek Ministry of Digital Governance is the controller of gov.gr authentication, and GRNET (EDYTE S.A., a Greek state-owned company) designs, implements and maintains the Gov.gr Wallet on its behalf.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "residence_permits",
+   "original": "national",
+   "reason": "The only evidence is a planned consolidation of the Greek Ministry of Migration and Asylum's infrastructure into a Tier-4 data centre, which does not name the Register of Aliens and does not establish who hosts or operates it today.",
+   "reviewed": "unknown"
+  },
+  {
+   "class_id": "tax",
+   "original": "national",
+   "reason": "Law 4389/2016 and the digital strategy both state that TAXIS, TAXISnet and ELENXIS run on Greek state infrastructure (Ministry of Finance GSIS / GGPSDD), operated for the Greek AADE.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "customs",
+   "original": "national",
+   "reason": "ICISnet is named explicitly as hosted on the infrastructure of the Greek General Secretariat for Information Systems of Public Administration (GGPSDD).",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "land_property",
+   "original": "national",
+   "reason": "The Hellenic Cadastre, a Greek public-law entity, runs its own Data Center and Disaster Recovery Center.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "police_records",
+   "original": "national",
+   "reason": "Law 4249/2014 makes the Hellenic Police IT Directorate responsible for designing the police information systems and for creating and supporting their technical infrastructure.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "health_records",
+   "original": "national",
+   "reason": "Law 4727/2020 requires all central Greek Ministry of Health information systems to be installed in the state Health Sector Government Cloud (H-Cloud), and no non-EU host appears in the evidence.",
+   "reviewed": "national"
+  }
+ ]
+}

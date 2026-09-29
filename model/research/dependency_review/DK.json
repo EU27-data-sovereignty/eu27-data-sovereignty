@@ -1,0 +1,71 @@
+{
+ "iso": "DK",
+ "verdicts": [
+  {
+   "class_id": "civil_registry",
+   "original": "mixed",
+   "reason": "The CPR Office (Danish ministry) administers the register, but the evidence shows that operation, maintenance and support are contracted to DXC Technologies A/S, the Danish subsidiary of US-headquartered DXC Technology; the operator is therefore non-EU-controlled, and an administrative owner alone does not make it mixed.",
+   "reviewed": "non_eu_provider"
+  },
+  {
+   "class_id": "issuance_history",
+   "original": "national",
+   "reason": "The Central Passport Register belongs to the Danish National Police's (Rigspolitiet) own central system portfolio, which Danish law (Location Requirement Order, Annex 1) requires to be kept in Denmark, and no foreign operator is shown.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "digital_identity_credentials",
+   "original": "eu_provider",
+   "reason": "MitID is developed and operated by Nets DanID, which is owned by the French state-owned IN Groupe (another EU state), and the contract requires it to be run from Denmark.",
+   "reviewed": "eu_provider"
+  },
+  {
+   "class_id": "authentication_audit_log",
+   "original": "national",
+   "reason": "NemLog-in's infrastructure is run under contract by NNIT (now Aeven), but the evidence says nothing about who owns or controls Aeven (it was carved out of NNIT and reportedly sold to a London-based private-equity owner), so national control is not established.",
+   "reviewed": "unknown"
+  },
+  {
+   "class_id": "tax",
+   "original": "national",
+   "reason": "The Danish Tax Administration operates the income register, and its IT systems are run by its own agency UFST (Udviklings- og Forenklingsstyrelsen), a Danish state body.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "judicial_criminal",
+   "original": "national",
+   "reason": "The Danish National Police (Rigspolitiet) is data controller for the Criminal Register, which is part of its central system portfolio that Danish law requires to be kept in Denmark.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "police_records",
+   "original": "national",
+   "reason": "The Police Index Register and the rest of the Danish National Police's (Rigspolitiet) central system portfolio must be kept in Denmark by law and are run by the police themselves; the quoted evidence does not explicitly cover the fingerprint and DNA registers.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "border_control",
+   "original": "mixed",
+   "reason": "The evidence only shows that biometric data is sent to the central EU Schengen Information System; it shows no non-EU party (so it cannot be mixed) and says nothing about who operates or hosts Denmark's national N.SIS component or its immigration systems.",
+   "reviewed": "unknown"
+  },
+  {
+   "class_id": "electoral_management",
+   "original": "non_eu_provider",
+   "reason": "The evidence only shows that KMD became a subsidiary of Japan's NEC; it does not show that KMD hosts, operates or can access the election result system (it is described only as the developer), so a vendor relationship is not shown to be an operational dependency.",
+   "reviewed": "unknown"
+  },
+  {
+   "class_id": "central_bank",
+   "original": "eu_provider",
+   "reason": "Danmarks Nationalbank moved krone settlement to TARGET Services, a platform provided by the ECB and the Eurosystem (EU institutions), which counts as an EU provider; SPI is not separately evidenced.",
+   "reviewed": "eu_provider"
+  },
+  {
+   "class_id": "defence_command",
+   "original": "national",
+   "reason": "Defence IT is run in-house by the Cyber Division of FMI (Forsvarsministeriets Materiel- og Indkøbsstyrelse), an agency of the Danish Ministry of Defence.",
+   "reviewed": "national"
+  }
+ ]
+}

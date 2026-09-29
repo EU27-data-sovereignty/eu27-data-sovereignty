@@ -1,0 +1,53 @@
+{
+ "iso": "SI",
+ "verdicts": [
+  {
+   "class_id": "digital_identity_credentials",
+   "original": "national",
+   "reason": "SI-TRUST, part of Slovenia's Ministry of the Interior and Public Administration, administers SI-PASS and smsPASS, and the privacy notice says the data are processed in Slovenia with no transfers to third countries.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "authentication_audit_log",
+   "original": "national",
+   "reason": "The controller is Slovenia's Ministry of the Interior and Public Administration (SI-TRUST), and the privacy notice says the data are processed only in Slovenia with no transfers to third countries.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "trust_services_pki",
+   "original": "national",
+   "reason": "The CAs are run by SI-TRUST, which sits within Slovenia's Ministry of the Interior and Public Administration, and the SI-PASS-CA signing certificates are stored at SI-TRUST itself.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "firearms_register",
+   "original": "national",
+   "reason": "Under the Weapons Act (ZOro-1), the records are kept on the central computer of Slovenia's Ministry of the Interior.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "official_gazette",
+   "original": "national",
+   "reason": "Article 6(2) of the 2025 law makes the publisher, the Slovenian Government Office for Legislation, responsible for developing and maintaining the gazette's information systems; the law names no external contractor, and this takes effect from 1 March 2026.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "central_bank",
+   "original": "eu_provider",
+   "reason": "The Bank of Slovenia says TARGET payment infrastructure is developed and provided by the Eurosystem, which the definitions count as EU.",
+   "reviewed": "eu_provider"
+  },
+  {
+   "class_id": "health_records",
+   "original": "national",
+   "reason": "NIJZ, Slovenia's national public health institute, runs the CeZZ information system, and the central ICT is provided by a public company wholly owned by the Republic of Slovenia and required by law to have its seat in Slovenia.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "public_health_surveillance",
+   "original": "national",
+   "reason": "ZDigZ makes the public company wholly owned by the Slovenian state the contractual processor for these public-health collections, and NIJZ is the controller.",
+   "reviewed": "national"
+  }
+ ]
+}

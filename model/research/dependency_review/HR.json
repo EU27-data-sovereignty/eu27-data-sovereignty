@@ -1,0 +1,41 @@
+{
+ "iso": "HR",
+ "verdicts": [
+  {
+   "class_id": "digital_identity_credentials",
+   "original": "national",
+   "reason": "The NIAS terms name the Croatian state administration body for digital transformation as system administrator, and the operational component runs in the Shared Services Centre, in data centres managed by the state company APIS IT (Croatia).",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "trust_services_pki",
+   "original": "national",
+   "reason": "The eOI certificates are issued by HRIDCA within the PKI of AKD d.o.o., a Croatian state company, and Fina, a Croatian state agency, is the qualified trust service provider; no non-EU operator or host appears in the evidence.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "tax",
+   "original": "national",
+   "reason": "The Tax Administration systems are developed and maintained by the state-owned company APIS IT (Croatia), whose data centres store and process the data within Croatia.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "customs",
+   "original": "national",
+   "reason": "The Customs Administration information systems are developed and maintained by the state-owned company APIS IT (Croatia); nothing in the evidence points to a foreign operator.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "electoral_management",
+   "original": "national",
+   "reason": "The election system is developed and maintained by the state-owned company APIS IT (Croatia) on behalf of the State Election Commission (DIP).",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "central_bank",
+   "original": "eu_provider",
+   "reason": "The TARGET platform used by HNB is jointly operated by the 4CB (Deutsche Bundesbank, Banca d'Italia, Banque de France and Banco de España) on behalf of the Eurosystem, which counts as an EU provider.",
+   "reviewed": "eu_provider"
+  }
+ ]
+}

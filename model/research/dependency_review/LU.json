@@ -1,0 +1,23 @@
+{
+ "iso": "LU",
+ "verdicts": [
+  {
+   "class_id": "benefits_pensions",
+   "original": "national",
+   "reason": "The quoted statutory remit shows the Centre commun de la sécurité sociale (CCSS), a Luxembourg public social security institution, handles affiliation and contributions, provides the IT infrastructure and processes this data itself, and no non-EU operator or host is mentioned.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "health_insurance",
+   "original": "national",
+   "reason": "The Caisse nationale de santé (CNS), a Luxembourg public body, manages the benefits, and the CCSS (Luxembourg) centralises and processes the social security institutions' data, so the evidence shows only state operation and hosting.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "crisis_management",
+   "original": "national",
+   "reason": "The quoted remit of the CTIE, Luxembourg's state IT centre, is to give the government the secure infrastructure and information-processing resources for crisis management, which makes it a state-operated holding.",
+   "reviewed": "national"
+  }
+ ]
+}

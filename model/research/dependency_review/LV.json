@@ -1,0 +1,23 @@
+{
+ "iso": "LV",
+ "verdicts": [
+  {
+   "class_id": "digital_identity_credentials",
+   "original": "mixed",
+   "reason": "The evidence shows LVRTC, a Latvian state company, runs one eID means and SK ID Solutions AS, registered in Tallinn, Estonia (an EU member state), runs Smart-ID; nothing shows any non-EU operator, host or data access, so 'mixed' (which needs a non-EU part) is not established, and the foreign dependency shown is on an EU provider.",
+   "reviewed": "eu_provider"
+  },
+  {
+   "class_id": "land_property",
+   "original": "national",
+   "reason": "By statute the Latvian Court Administration holds the land register and provides its technical maintenance, and the Latvian state is sole owner of the register and its software; the cadastre system is held by the State Land Service, a Latvian state body.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "business_registry",
+   "original": "national",
+   "reason": "By statute the Latvian Register of Enterprises is controller and holder of its information system, and the software and technical equipment it runs on are Latvian state property.",
+   "reviewed": "national"
+  }
+ ]
+}

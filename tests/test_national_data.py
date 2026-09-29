@@ -17,7 +17,7 @@ import national_data as nd  # noqa: E402
 import provenance  # noqa: E402
 
 # Raise as holdings are admitted. 1053 = 39 holding classes x 27 member states (#73).
-NATIONAL_DATA_FLOOR = 3
+NATIONAL_DATA_FLOOR = 419
 
 
 class Register(unittest.TestCase):

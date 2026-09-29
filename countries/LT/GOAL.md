@@ -14,25 +14,22 @@
 
 ## 1. Data-sovereignty placement
 
-> Not demonstrated. Confidence: Low. With the evidence still open, Lithuania could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
+> Not demonstrated. Confidence: Low. With the evidence still open, Lithuania could be anywhere from 'Sovereign in practice, not secured in law' to 'Dependent on non-EU providers'.
 
 Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.
 
 | Indicator | Finding |
 |---|---|
-| Jurisdiction requirement | *Not yet sourced* |
+| Jurisdiction requirement | Partly[^s1] |
 | Classification in law | *Not yet sourced* |
 | Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
-| Government cloud in operation | *Not yet sourced* |
+| State-controlled trust anchor | Yes[^s2] |
+| State-controlled national eID | Yes[^s2][^s3] |
+| Government data centres | Yes[^s4] |
+| Government cloud in operation | Yes[^s5] |
 
 What could move this placement:
 
-- If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
-- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
 - If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
@@ -41,12 +38,12 @@ Lithuania described on its own measured characteristics. Each figure is the publ
 
 | Indicator | Value |
 |---|---:|
-| Population | 2.89 million[^s1] |
-| GDP, current prices | 84.3 EUR bn[^s2] |
+| Population | 2.89 million[^s6] |
+| GDP, current prices | 84.3 EUR bn[^s7] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 159.1 EUR/MWh[^s3] |
-| Renewables share of electricity | 49.0 %[^s4] |
-| Land area | 62 643 km²[^s5] |
+| Non-household electricity price | 159.1 EUR/MWh[^s8] |
+| Renewables share of electricity | 49.0 %[^s9] |
+| Land area | 62 643 km²[^s10] |
 
 ## 3. Critical data holdings, by priority
 
@@ -168,8 +165,13 @@ Tier 0 and 1 holdings for Lithuania without a verified source yet. Corrections a
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: LRT ca5f0d562a, 2022-08-10. Penkios naudos, kurias suteiks valstybės informacinių išteklių perkėlimas į debesiją. <https://www.lrt.lt/naujienos/mokslas-ir-it/11/1757601/penkios-naudos-kurias-suteiks-valstybes-informaciniu-istekliu-perkelimas-i-debesija> ([archived](https://web.archive.org/web/20230210031113/https://www.lrt.lt/naujienos/mokslas-ir-it/11/1757601/penkios-naudos-kurias-suteiks-valstybes-informaciniu-istekliu-perkelimas-i-debesija))
+[^s2]: Migracijos departamentas prie LR VRM (nsc.vrm.lt) 92756a8f46, 2025-11-14. Lithuanian national identity cards and electronic signatures. About.. <https://www.nsc.vrm.lt/default_en.htm> ([archived](https://web.archive.org/web/20260908033713/https://www.nsc.vrm.lt/default_en.htm))
+[^s3]: Migracijos departamentas prie LR VRM (nsc.vrm.lt) d6fccf37db. Asmens tapatybės kortelė ir elektroninis parašas. Pagrindinis puslapis.. <https://www.nsc.vrm.lt/default.htm> ([archived](https://web.archive.org/web/20260918194956/https://www.nsc.vrm.lt/default.htm))
+[^s4]: LRT (BNS) dab77997fd, 2025-05-23. Antrasis valstybinis duomenų centras pradeda veiklą. <https://www.lrt.lt/naujienos/verslas/4/2571753/antrasis-valstybinis-duomenu-centras-pradeda-veikla> ([archived](https://web.archive.org/web/20250724045122/https://www.lrt.lt/naujienos/verslas/4/2571753/antrasis-valstybinis-duomenu-centras-pradeda-veikla))
+[^s5]: LRT b4f6e681b1, 2026-08-03. „Telecentro“ grynasis pelnas per metus išaugo beveik 5,8 karto ir siekė 432 tūkst. eurų. <https://www.lrt.lt/naujienos/verslas/4/3010133/telecentro-grynasis-pelnas-per-metus-isaugo-beveik-5-8-karto-ir-sieke-432-tukst-euru>
+[^s6]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s7]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s8]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s9]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s10]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>

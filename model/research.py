@@ -134,6 +134,17 @@ def match(quote: str, text: str) -> str:
     return "not_found"
 
 
+def snapshot_matches(snapshot: str, url: str) -> bool:
+    """Is this Wayback snapshot of exactly `url`'s host? The archive sometimes returns a snapshot of a
+    different URL, e.g. with a mailbox name wedged into the host (.../https://mailbox@host/...)."""
+    parts = snapshot.split("/", 5)          # https: '' web.archive.org web <timestamp> <original>
+    if len(parts) < 6:
+        return False
+    original = urllib.parse.urlsplit(parts[5])
+    wanted = urllib.parse.urlsplit(url)
+    return "@" not in original.netloc and original.hostname == wanted.hostname
+
+
 def archived(url: str) -> str:
     """The Internet Archive's closest snapshot, or '' if it has none. Never raises."""
     api = "https://archive.org/wayback/available?url=" + urllib.parse.quote(url, safe="")
@@ -142,7 +153,8 @@ def archived(url: str) -> str:
         fetch._throttle()
         with urllib.request.urlopen(req, timeout=fetch.TIMEOUT) as resp:
             snap = json.load(resp).get("archived_snapshots", {}).get("closest", {})
-        return snap.get("url", "").replace("http://", "https://", 1) if snap.get("available") else ""
+        found = snap.get("url", "").replace("http://", "https://", 1) if snap.get("available") else ""
+        return found if snapshot_matches(found, url) else ""
     except Exception:
         return ""
 
@@ -308,8 +320,28 @@ def admit() -> int:
                 continue       # a holding is admitted only when its existence is verified
             if status == "not_held" and "not_held" not in good:
                 continue
+            if status == "not_held":
+                # An absence rests on the authoritative statement alone; a name claim for a
+                # register that does not exist would be a second, contradictory citation.
+                good = {"not_held": good["not_held"]}
             if status not in ("held", "not_held"):
                 continue
+            # Foreign dependency is a closed vocabulary in the register; the agent's categorical
+            # value is admitted only when a verified quote establishes where the holding runs --
+            # the dependency claim itself, or failing that the verified hosting claim (#73).
+            dep = h.get("foreign_dependency", "")
+            # #79: a categorical judgement is admitted only when an independent reviewer agreed
+            # with it against the definitions in DEPENDENCY_REVIEW. Unreviewed or disputed -> unknown.
+            if dependency_verdict(iso, cls) != dep:
+                dep = ""
+            if dep in nd.FOREIGN_DEPENDENCY and dep != "unknown":
+                basis = good.get("foreign_dependency") or good.get("hosting")
+                if basis:
+                    good["foreign_dependency"] = ({**basis[0], "value": dep}, basis[1])
+                else:
+                    good.pop("foreign_dependency", None)
+            else:
+                good.pop("foreign_dependency", None)
 
             for field, (c, v) in good.items():
                 sid = source_id(v["url"])
@@ -358,6 +390,20 @@ def admit() -> int:
     nd.write_rows(list(rows.values()))
     print(f"admitted {admitted} holdings and {indicator_rows} indicator values")
     return 0
+
+
+DEPENDENCY_REVIEW = STAGING / "dependency_review"
+_verdicts: dict[str, dict[str, str]] = {}
+
+
+def dependency_verdict(iso: str, cls: str) -> str:
+    """The reviewer's agreed dependency value for a holding, or '' if none or disputed (#79)."""
+    if iso not in _verdicts:
+        path = DEPENDENCY_REVIEW / f"{iso}.json"
+        doc = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"verdicts": []}
+        _verdicts[iso] = {v["class_id"]: v["reviewed"] for v in doc["verdicts"]
+                          if v.get("reviewed") == v.get("original")}
+    return _verdicts[iso].get(cls, "")
 
 
 def register_source(reg: dict, c: dict, v: dict) -> str:

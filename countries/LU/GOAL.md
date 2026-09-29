@@ -23,17 +23,15 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | Jurisdiction requirement | *Not yet sourced* |
 | Classification in law | *Not yet sourced* |
 | Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
-| Government cloud in operation | *Not yet sourced* |
+| State-controlled trust anchor | Yes[^s1][^s2] |
+| State-controlled national eID | Yes[^s3][^s4] |
+| Government data centres | Yes[^s4][^s5] |
+| Government cloud in operation | Partly[^s6] |
 
 What could move this placement:
 
 - If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
-- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
-- If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
+- If any of the 33 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
 
@@ -41,16 +39,16 @@ Luxembourg described on its own measured characteristics. Each figure is the pub
 
 | Indicator | Value |
 |---|---:|
-| Population | 0.68 million[^s1] |
-| GDP, current prices | 89.5 EUR bn[^s2] |
+| Population | 0.68 million[^s7] |
+| GDP, current prices | 89.5 EUR bn[^s8] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 171.7 EUR/MWh[^s3] |
-| Renewables share of electricity | 20.5 %[^s4] |
-| Land area | 2 586 km²[^s5] |
+| Non-household electricity price | 171.7 EUR/MWh[^s9] |
+| Renewables share of electricity | 20.5 %[^s10] |
+| Land area | 2 586 km²[^s11] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Luxembourg cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Luxembourg cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 5 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
@@ -62,7 +60,7 @@ The holdings Luxembourg cannot let depend on infrastructure a foreign state can 
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| High | Digital identity credentials (tier 0) | GouvID app: lets citizens use the Luxembourg electronic identity card (eID) with a smartphone[^s3] | LuxTrust is a qualified trust service provider and a reference digital-identity provider (LuxTrust credentials)[^s12] | *Not stated in sources* | *Not yet measured* |
 | High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -71,13 +69,12 @@ The holdings Luxembourg cannot let depend on infrastructure a foreign state can 
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Tax (tier 1) | ACD processes personal data to assess, collect and recover taxes and to exchange information nationally and internationally[^s13] | The ACD is the data controller[^s13] | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | eDouane is the access point to all online declaration applications of the Customs and Excise Administration[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Vehicle & licensing (tier 1) | Registration uniquely identifies each road vehicle and its holder or owner[^s15] | The SNCA handles putting road vehicles into circulation and driving licences[^s16] | *Not stated in sources* | *Not yet measured* |
 | High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -90,6 +87,7 @@ The holdings Luxembourg cannot let depend on infrastructure a foreign state can 
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | Statutory health insurance (tier 1) | Anyone working in Luxembourg must be affiliated by the CCSS, which triggers health insurance coverage[^s17] | The CNS manages benefits for all private-sector insured persons and State workers[^s18] | National infrastructure[^s19] | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
@@ -98,15 +96,15 @@ The holdings Luxembourg cannot let depend on infrastructure a foreign state can 
 
 ## 4. Foreign-dependency exposure
 
-Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 5 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
-| National infrastructure | 0 |
+| National infrastructure | 1 |
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 0 |
+| Not stated in sources | 4 |
 
 ## 5. Legal and institutional posture
 
@@ -136,19 +134,14 @@ Tier 0 and 1 holdings for Luxembourg without a verified source yet. Corrections 
 - Fingerprint biometric (tier 0)
 - Breeder document scans (tier 0)
 - Document issuance history (tier 0)
-- Digital identity credentials (tier 0)
 - Authentication audit log (tier 0)
 - Electoral roll entry (tier 0)
 - State PKI and qualified trust services (tier 0)
 - Residence and migration status (tier 1)
-- Tax (tier 1)
-- Customs declarations (tier 1)
 - Benefits & pensions (tier 1)
-- Statutory health insurance (tier 1)
 - Land & property registry (tier 1)
 - Business registry (tier 1)
 - Beneficial ownership register (tier 1)
-- Vehicle & licensing (tier 1)
 - Judicial & criminal justice (tier 1)
 - Police information systems (tier 1)
 - Border and visa systems (tier 1)
@@ -168,8 +161,22 @@ Tier 0 and 1 holdings for Luxembourg without a verified source yet. Corrections 
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: INCERT GIE 05260b3ab9. INCERT – Serving Luxembourg public services. <https://www.incert.lu/serving-luxembourg-public-agencies>
+[^s2]: INCERT GIE 52a70e39e6. INCERT – Building trust in a Digital World (About us). <https://www.incert.lu/sous-page>
+[^s3]: Centre des technologies de l'information de l'État (CTIE) 231c9e328b, 2021-12-17. GouvID – L'app pour vous identifier auprès des services publics en ligne. <https://ctie.gouvernement.lu/fr/actualites/dossiers/gouvid/gouvid.html>
+[^s4]: Centre des technologies de l'information de l'État (CTIE) d5e3660bb0. Attributions du CTIE. <https://ctie.gouvernement.lu/fr/l-administration/Attributions.html> ([archived](https://web.archive.org/web/20260720122851/https://ctie.gouvernement.lu/fr/l-administration/Attributions.html))
+[^s5]: Wikipedia cbdd04f061. LuxConnect. <https://en.wikipedia.org/wiki/LuxConnect> ([archived](https://web.archive.org/web/20250802060739/https://en.wikipedia.org/wiki/LuxConnect))
+[^s6]: Centre des technologies de l'information de l'État (CTIE) 19d1d77cc6, 2026-08-26. Offres d'emploi – CTIE. <https://ctie.gouvernement.lu/fr/offres-emploi.html> ([archived](https://web.archive.org/web/20260908040136/https://ctie.gouvernement.lu/fr/offres-emploi.html))
+[^s7]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s8]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s9]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s10]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s11]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s12]: LuxTrust 9d70f93861, 2026-07-28. LuxTrust et INCERT scellent un partenariat stratégique pour renforcer la souveraineté numérique. <https://www.luxtrust.com/fr/news/luxtrust-et-incert-scellent-un-partenariat-strategique-pour-renforcer-la-souverainete>
+[^s13]: Administration des contributions directes 5e0c88ceb7. Règlement général sur la protection des données (RGPD). <https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html> ([archived](https://web.archive.org/web/20260903021938/https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html))
+[^s14]: Administration des douanes et accises 85e862e52f. eDouane - Services en ligne. <https://douanes.public.lu/fr/services-ligne/edouanes.html> ([archived](https://web.archive.org/web/20260831153900/https://douanes.public.lu/fr/services-ligne/edouanes.html))
+[^s15]: Société nationale de circulation automobile af378778a2. Histoire de la SNCA. <https://snca.public.lu/fr/snca/histoire-snca.html> ([archived](https://web.archive.org/web/20260612182328/https://snca.public.lu/fr/snca/histoire-snca.html))
+[^s16]: Société nationale de circulation automobile 209cfec0f8. Missions et valeurs - SNCA. <https://snca.public.lu/fr/snca/missions-valeurs.html> ([archived](https://web.archive.org/web/20260324003908/https://snca.public.lu/fr/snca/missions-valeurs.html))
+[^s17]: Caisse nationale de santé 372ad85898. Affiliation. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html> ([archived](https://web.archive.org/web/20260324191230/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html))
+[^s18]: Caisse nationale de santé 267521ff6a. L'assurance maladie en bref. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html> ([archived](https://web.archive.org/web/20260324075300/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html))
+[^s19]: Centre commun de la sécurité sociale fe41e35d97, 2020-02-07. Attributions - Centre commun de la sécurité sociale. <https://ccss.public.lu/fr/ccss/attributions.html> ([archived](https://web.archive.org/web/20260324045749/https://ccss.public.lu/fr/ccss/attributions.html))

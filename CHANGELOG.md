@@ -5,6 +5,28 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-09-29 (evidence)
+
+### Added — the first verified research: 416 critical holdings and 134 indicator values
+
+Both research runs are verified and admitted.
+- **Holdings.** 1,724 of 2,228 claims passed the quote check; 416 (state, class) holdings are in the
+  register, each cell cited.
+- **Indicators.** 240 of 288 claims passed; 134 of 189 values admitted after a downgrade-only review.
+
+A hand spot-check found run 1's foreign-dependency labels unreliable: EU companies labelled "mixed" and
+Eurosystem infrastructure treated as non-EU. Under the new rule #79, a dependency label is admitted only
+when an independent reviewer agrees: 77 of 93 agreed, and 49 labels were admitted. The first ranking had
+eight High-confidence "Dependent" placements; after review one remains, Ireland, spot-checked by hand
+(the electoral register on a Microsoft Azure tenancy, and TETRA owned by Motorola Solutions). Italy is
+*Secured in law, not yet in practice*; the other 25 are *Not demonstrated*, Low confidence.
+
+### Fixed
+
+On phones, the source list no longer pushes the page sideways (long hashes and claim ids now wrap).
+
+---
+
 ## 2026-09-29 (ask)
 
 ### Added — /ask: questions answered from the sourced findings only (#78)

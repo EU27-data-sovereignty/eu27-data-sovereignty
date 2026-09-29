@@ -14,26 +14,23 @@
 
 ## 1. Data-sovereignty placement
 
-> Not demonstrated. Confidence: Low. With the evidence still open, Czechia could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
+> Not demonstrated. Confidence: Low. With the evidence still open, Czechia could be anywhere from 'Sovereign in practice, not secured in law' to 'Dependent on non-EU providers'.
 
 Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.
 
 | Indicator | Finding |
 |---|---|
-| Jurisdiction requirement | *Not yet sourced* |
-| Classification in law | *Not yet sourced* |
+| Jurisdiction requirement | Partly[^s1][^s2] |
+| Classification in law | Yes[^s3] |
 | Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
-| Government cloud in operation | *Not yet sourced* |
+| State-controlled trust anchor | Yes[^s4][^s5] |
+| State-controlled national eID | Yes[^s6][^s7] |
+| Government data centres | Yes[^s8] |
+| Government cloud in operation | Yes[^s8][^s2] |
 
 What could move this placement:
 
-- If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
-- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
-- If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
+- If any of the 33 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
 
@@ -41,64 +38,64 @@ Czechia described on its own measured characteristics. Each figure is the publis
 
 | Indicator | Value |
 |---|---:|
-| Population | 10.91 million[^s1] |
-| GDP, current prices | 347.3 EUR bn[^s2] |
+| Population | 10.91 million[^s9] |
+| GDP, current prices | 347.3 EUR bn[^s10] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 182.5 EUR/MWh[^s3] |
-| Renewables share of electricity | 17.9 %[^s4] |
-| Land area | 77 212 km²[^s5] |
+| Non-household electricity price | 182.5 EUR/MWh[^s11] |
+| Renewables share of electricity | 17.9 %[^s12] |
+| Land area | 77 212 km²[^s13] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Czechia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Czechia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 27 of 39 holding classes have a verified source; 3 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Facial biometric (tier 0) | ID card register (Evidence občanských průkazů), a public administration information system[^s14] | Ministry of the Interior is the controller of the ID card register[^s14] | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | No central register[^s14] | — | — | — |
+| Critical | Breeder document scans (tier 0) | Collection of documents (sbírka listin) underlying each civil status register book[^s15] | Registry offices transfer electronic civil status data to the Ministry of the Interior to set up a central civil-status information system by 31 Dec 2026[^s15] | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | NIA keeps operational data including a record of each use of NIA data[^s7] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | The ID card register records invalid cards, the date and the reason they became invalid[^s14] | Ministry of the Interior is the controller of the ID card register[^s14] | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | National point for identification and authentication (Národní bod, NIA), administered by DIA[^s7] | *Not yet sourced* | *Not stated in sources* | More than 10 million 'Identita občana' credentials; 5.5 million citizens hold an electronic identity[^s16] |
+| High | Electoral roll entry (tier 0) | Election administration information system (ISSV) whose components include the voter list[^s17] | Ministry of the Interior administers the ISSV, which keeps voter records[^s17] | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | State Trust Services Administration established by Act 297/2016 § 14[^s5] | DIA acts as founder of the State Trust Services Administration[^s5] | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | Cadastre is kept in the Cadastre of Real Estate Information System (ISKN)[^s18] | ČÚZK is the central state authority for surveying and the cadastre[^s19] | *Not stated in sources* | More than 33 million documents in the digital part of the cadastral deed collection[^s18] |
+| High | Judicial & criminal justice (tier 1) | Criminal Records Register: public administration IS of persons finally convicted[^s20] | Ministry of Justice is the controller[^s20] | *Not stated in sources* | *Not yet measured* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | Police operate and control the foreigners' information system, incl. photos and fingerprints[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Automated Tax Information System (ADIS) of the Financial Administration[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | Automated import system e-Dovoz completing electronic customs systems for transit, export and import[^s23] | Customs Administration: General Directorate of Customs and customs offices[^s24] | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | ČSSZ keeps the register of pension insurance contributors[^s25] | MPSV is controller of the integrated MPSV information system, which includes the ČSSZ system[^s25] | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | VZP keeps the register of all persons insured under public health insurance[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | The Public Register is a public administration IS kept electronically by the registry courts[^s27] | DIA administers the Basic Register of Persons (ROS) and assigns company identification numbers[^s28] | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Register of beneficial owners is a public administration IS controlled by the Ministry of Justice[^s29] | Kept by the court competent for registration; entries made by courts or notaries[^s29] | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Road Vehicle Register, controlled by the Ministry of Transport, records vehicles, owners and operators[^s30] | Ministry of Transport keeps the central driver register and digital tachograph system[^s31] | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Ministry of Foreign Affairs visa information system incl. photographs and fingerprints[^s21] | Police Presidium operates the national component of SIS and the SIRENE function[^s32] | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Central Firearms Register: non-public public administration IS[^s33] | Police Presidium is the controller[^s33] | *Not stated in sources* | *Not yet measured* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Government payroll and personnel (tier 1) | Civil service information system for service relationships[^s34] | Office of the Government is the controller[^s34] | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | ISSV components include the register of candidate lists and of polling-station commissions[^s17] | Czech Statistical Office runs results collection and builds the results system including software[^s17] | *Not stated in sources* | *Not yet measured* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Emergency calls and public-safety radio (tier 1) | 14 interconnected 112 call centres[^s35] | 112 runs through 14 regional operational and information centres of the Fire Rescue Service[^s36] | *Not stated in sources* | 1,995,395 calls and 33,035 SMS to 112 in 2025[^s36] |
+| High | Crisis management and civil protection (tier 1) | Crisis management information system supporting crisis authorities[^s37] | Administered by the Ministry of the Interior through the Fire Rescue Service directorate[^s37] | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
+| High | Health records (tier 2) | SÚKL ('Ústav') establishes eRecept as a public administration information system[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | Public health surveillance (tier 2) | Includes the register of infectious disease cases and vaccination[^s39] | Infectious disease IS: Ministry of Health controller, ÚZIS operator[^s39] | *Not stated in sources* | *Not yet measured* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | ČÚZK publishes parcels from ISKN and buildings/addresses from RÚIAN[^s18] | ČÚZK is the controller of the territorial identification register (RÚIAN)[^s28] | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 26 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -106,7 +103,7 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 0 |
+| Not stated in sources | 26 |
 
 ## 5. Legal and institutional posture
 
@@ -125,51 +122,61 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 
 ## 6. Capacity
 
-> Not yet sized. Capacity for Czechia will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 0 of 39 holding classes have a sourced measurement so far.
+> Not yet sized. Capacity for Czechia will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 3 of 39 holding classes have a sourced measurement so far.
 
 ## 7. Research still open
 
 Tier 0 and 1 holdings for Czechia without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
 - Civil registry core (tier 0)
-- Facial biometric (tier 0)
-- Fingerprint biometric (tier 0)
-- Breeder document scans (tier 0)
-- Document issuance history (tier 0)
-- Digital identity credentials (tier 0)
-- Authentication audit log (tier 0)
-- Electoral roll entry (tier 0)
-- State PKI and qualified trust services (tier 0)
-- Residence and migration status (tier 1)
-- Tax (tier 1)
-- Customs declarations (tier 1)
-- Benefits & pensions (tier 1)
-- Statutory health insurance (tier 1)
-- Land & property registry (tier 1)
-- Business registry (tier 1)
-- Beneficial ownership register (tier 1)
-- Vehicle & licensing (tier 1)
-- Judicial & criminal justice (tier 1)
 - Police information systems (tier 1)
-- Border and visa systems (tier 1)
-- Firearms register (tier 1)
 - Official gazette and legislation (tier 1)
 - Treasury and state accounts (tier 1)
-- Government payroll and personnel (tier 1)
-- Election management and results (tier 1)
 - Central bank systems (tier 1)
 - Defence command and logistics (tier 1)
 - Intelligence services (tier 1)
-- Emergency calls and public-safety radio (tier 1)
-- Crisis management and civil protection (tier 1)
 - Electricity grid control (tier 1)
 - Water management control (tier 1)
 - Education (tier 1)
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: Národní úřad pro kybernetickou a informační bezpečnost (NÚKIB), Sbírka zákonů ČR 0116023f54, 2025-12-05. Vyhláška č. 505/2025 Sb., o některých požadavcích pro zápis do katalogu cloud computingu, příloha č. 4. <https://www.zakonyprolidi.cz/cs/2025-505> ([archived](https://web.archive.org/web/20260421002355/https://www.zakonyprolidi.cz/cs/2025-505))
+[^s2]: Sbírka zákonů ČR (consolidated text via zakonyprolidi.cz) 7859dc5414, 2026-01-01. Zákon č. 365/2000 Sb., o informačních systémech veřejné správy, § 6m odst. 2 (consolidated text, version effective 1.1.2026). <https://www.zakonyprolidi.cz/cs/2000-365> ([archived](https://web.archive.org/web/20260130002605/https://www.zakonyprolidi.cz/cs/2000-365))
+[^s3]: Sbírka zákonů ČR (consolidated text via zakonyprolidi.cz) 2ad9441693, 2005-10-18. Zákon č. 412/2005 Sb., o ochraně utajovaných informací a o bezpečnostní způsobilosti, § 4 Stupně utajení. <https://www.zakonyprolidi.cz/cs/2005-412> ([archived](https://web.archive.org/web/20260416083654/https://www.zakonyprolidi.cz/cs/2005-412))
+[^s4]: Správa státních služeb vytvářejících důvěru, s. p. o. dfdd6618fb. Úvodní strana – Správa státních služeb vytvářejících důvěru. <https://sssvd.gov.cz/>
+[^s5]: Zákony pro lidi (consolidated text of Sbírka zákonů) 635a6233a1, 2016. Zákon č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce. <https://www.zakonyprolidi.cz/cs/2016-297> ([archived](https://web.archive.org/web/20260503120919/https://www.zakonyprolidi.cz/cs/2016-297))
+[^s6]: Digitální a informační agentura c6ddc5720a. Elektronická identita – Informační web elektronické identity (Národní identitní autorita). <https://info.identitaobcana.cz/> ([archived](https://web.archive.org/web/20241116155854/https://info.identitaobcana.cz/))
+[^s7]: Zákony pro lidi (consolidated text of Sbírka zákonů) ba1c501e72, 2017. Zákon č. 250/2017 Sb., o elektronické identifikaci. <https://www.zakonyprolidi.cz/cs/2017-250>
+[^s8]: Státní pokladna Centrum sdílených služeb, s. p. 75166dee30, 2026-05-14. SPCSS – Státní pokladna Centrum sdílených služeb, s. p. (homepage, archived 14 May 2026). <https://web.archive.org/web/20260514094405/https://www.spcss.cz/>
+[^s9]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s10]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s11]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s12]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s13]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s14]: Zákony pro lidi (consolidated text of Sbírka zákonů) 64b979d318, 2021. Zákon č. 269/2021 Sb., o občanských průkazech. <https://www.zakonyprolidi.cz/cs/2021-269>
+[^s15]: Zákony pro lidi (consolidated text of Sbírka zákonů) 4ddefe1ed9, 2000. Zákon č. 301/2000 Sb., o matrikách, jménu a příjmení. <https://www.zakonyprolidi.cz/cs/2000-301> ([archived](https://web.archive.org/web/20260224043912/https://www.zakonyprolidi.cz/cs/2000-301))
+[^s16]: Ministerstvo vnitra České republiky a50684ad5c. Počet elektronických Identit občanů překonal hranici 10 milionů. <https://mv.gov.cz/clanek/pocet-elektronickych-identit-obcanu-prekonal-hranici-10-milionu.aspx> ([archived](https://web.archive.org/web/20251003233623/https://mv.gov.cz/clanek/pocet-elektronickych-identit-obcanu-prekonal-hranici-10-milionu.aspx))
+[^s17]: Zákony pro lidi (consolidated text of Sbírka zákonů) bd0515f03f, 2024. Zákon č. 88/2024 Sb., o správě voleb. <https://www.zakonyprolidi.cz/cs/2024-88> ([archived](https://web.archive.org/web/20260113232740/https://www.zakonyprolidi.cz/cs/2024-88))
+[^s18]: Český úřad zeměměřický a katastrální 90c23118f9, 2026-03-10. Výroční zpráva ČÚZK za rok 2025. <https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx> ([archived](https://web.archive.org/web/20260310200755/https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx))
+[^s19]: Zákony pro lidi (consolidated text of Sbírka zákonů) d07c0378c2, 1992. Zákon č. 359/1992 Sb., o zeměměřických a katastrálních orgánech. <https://www.zakonyprolidi.cz/cs/1992-359> ([archived](https://web.archive.org/web/20260210112357/https://www.zakonyprolidi.cz/cs/1992-359))
+[^s20]: Zákony pro lidi (consolidated text of Sbírka zákonů) 968668a791, 1994. Zákon č. 269/1994 Sb., o rejstříku trestů. <https://www.zakonyprolidi.cz/cs/1994-269> ([archived](https://web.archive.org/web/20260312160053/https://www.zakonyprolidi.cz/cs/1994-269))
+[^s21]: Zákony pro lidi (consolidated text of Sbírka zákonů) 4f5b361511, 1999. Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky. <https://www.zakonyprolidi.cz/cs/1999-326>
+[^s22]: Generální finanční ředitelství 7b00e5ec25. Organizační řád Generálního finančního ředitelství. <https://financnisprava.gov.cz/assets/cs/prilohy/fs-financni-sprava-cr/OR_FS_UZ_D4.pdf>
+[^s23]: Celní správa ČR 96fa250cad, 2010-10-29. e-Dovoz (tisková zpráva). <https://celnisprava.gov.cz/cz/crhradeckralove/tiskove-zpravy/2010/Stranky/e-dovoz.aspx>
+[^s24]: Zákony pro lidi (consolidated text of Sbírka zákonů) abc8566548, 2012. Zákon č. 17/2012 Sb., o Celní správě České republiky. <https://www.zakonyprolidi.cz/cs/2012-17> ([archived](https://web.archive.org/web/20260214074216/https://www.zakonyprolidi.cz/cs/2012-17))
+[^s25]: Zákony pro lidi (consolidated text of Sbírka zákonů) 46654f5e99, 1991. Zákon č. 582/1991 Sb., o organizaci a provádění sociálního zabezpečení. <https://www.zakonyprolidi.cz/cs/1991-582>
+[^s26]: Zákony pro lidi (consolidated text of Sbírka zákonů) 6835ead736, 1992. Zákon č. 592/1992 Sb., o pojistném na veřejné zdravotní pojištění. <https://www.zakonyprolidi.cz/cs/1992-592> ([archived](https://web.archive.org/web/20260501174125/https://www.zakonyprolidi.cz/cs/1992-592))
+[^s27]: Zákony pro lidi (consolidated text of Sbírka zákonů) 1698443c0c, 2013. Zákon č. 304/2013 Sb., o veřejných rejstřících právnických a fyzických osob. <https://www.zakonyprolidi.cz/cs/2013-304> ([archived](https://web.archive.org/web/20260201065444/https://www.zakonyprolidi.cz/cs/2013-304))
+[^s28]: Zákony pro lidi (consolidated text of Sbírka zákonů) 3399c8e538, 2009. Zákon č. 111/2009 Sb., o základních registrech. <https://www.zakonyprolidi.cz/cs/2009-111> ([archived](https://web.archive.org/web/20251114195208/https://www.zakonyprolidi.cz/cs/2009-111))
+[^s29]: Zákony pro lidi (consolidated text of Sbírka zákonů) 5c69caa95d, 2021. Zákon č. 37/2021 Sb., o evidenci skutečných majitelů. <https://www.zakonyprolidi.cz/cs/2021-37> ([archived](https://web.archive.org/web/20251007111453/https://www.zakonyprolidi.cz/cs/2021-37))
+[^s30]: Zákony pro lidi (consolidated text of Sbírka zákonů) 9a93e4b049, 2001. Zákon č. 56/2001 Sb., o podmínkách provozu vozidel na pozemních komunikacích. <https://www.zakonyprolidi.cz/cs/2001-56> ([archived](https://web.archive.org/web/20260323232108/https://www.zakonyprolidi.cz/cs/2001-56))
+[^s31]: Zákony pro lidi (consolidated text of Sbírka zákonů) 968d9f961b, 2000. Zákon č. 361/2000 Sb., o provozu na pozemních komunikacích. <https://www.zakonyprolidi.cz/cs/2000-361> ([archived](https://web.archive.org/web/20260711182736/https://www.zakonyprolidi.cz/cs/2000-361))
+[^s32]: Zákony pro lidi (consolidated text of Sbírka zákonů) 5da60c34f7, 2008. Zákon č. 273/2008 Sb., o Policii České republiky. <https://www.zakonyprolidi.cz/cs/2008-273> ([archived](https://web.archive.org/web/20260404065219/https://www.zakonyprolidi.cz/cs/2008-273))
+[^s33]: Zákony pro lidi (consolidated text of Sbírka zákonů) 7b69d38132, 2024. Zákon č. 90/2024 Sb., o zbraních a střelivu. <https://www.zakonyprolidi.cz/cs/2024-90> ([archived](https://web.archive.org/web/20260623173655/https://www.zakonyprolidi.cz/cs/2024-90))
+[^s34]: Zákony pro lidi (consolidated text of Sbírka zákonů) c73d330c14, 2014. Zákon č. 234/2014 Sb., o státní službě. <https://www.zakonyprolidi.cz/cs/2014-234> ([archived](https://web.archive.org/web/20260427134705/https://www.zakonyprolidi.cz/cs/2014-234))
+[^s35]: Hasičský záchranný sbor České republiky 92d0e6dc66. Tísňová linka 112 má svůj den. <https://hzscr.gov.cz/clanek/tisnova-linka-112-ma-svuj-den> ([archived](https://web.archive.org/web/20250429081533/https://hzscr.gov.cz/clanek/tisnova-linka-112-ma-svuj-den))
+[^s36]: Hasičský záchranný sbor České republiky b2904a307d, 2026-02-10. Tísňová linka 112 funguje už 22 let. <https://hzscr.gov.cz/clanek/hzs-jihoceskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-unor-tisnova-linka-112-funguje-uz-22-let.aspx>
+[^s37]: Zákony pro lidi (consolidated text of Sbírka zákonů) 19033c0085, 2000. Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon). <https://www.zakonyprolidi.cz/cs/2000-240>
+[^s38]: Zákony pro lidi (consolidated text of Sbírka zákonů) d2c3643206, 2007. Zákon č. 378/2007 Sb., o léčivech. <https://www.zakonyprolidi.cz/cs/2007-378>
+[^s39]: Zákony pro lidi (consolidated text of Sbírka zákonů) c4a9a000d1, 2000. Zákon č. 258/2000 Sb., o ochraně veřejného zdraví. <https://www.zakonyprolidi.cz/cs/2000-258> ([archived](https://web.archive.org/web/20260319172250/https://www.zakonyprolidi.cz/cs/2000-258))

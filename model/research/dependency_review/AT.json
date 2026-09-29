@@ -1,0 +1,29 @@
+{
+ "iso": "AT",
+ "verdicts": [
+  {
+   "class_id": "facial_biometric",
+   "original": "national",
+   "reason": "The Passgesetz names Bundesrechenzentrum GmbH, which is owned by the Austrian state, as processor for the §22b central register that holds the facial images, and the passport authorities are the controllers.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "issuance_history",
+   "original": "national",
+   "reason": "The Rechnungshof (Austrian Court of Audit) identifies the Austrian state-owned BRZ GmbH as statutory processor of the Identity Document Register, which the Interior Ministry (BMI) controls.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "digital_identity_credentials",
+   "original": "national",
+   "reason": "The Interior Ministry, the Source PIN Register Authority and BRZ GmbH are all Austrian state bodies, but the evidence says an unnamed private trust service provider runs the E-ID certificate database in its own data centre and does not give that provider's identity, headquarters or ownership, so a fully national operation is not established.",
+   "reviewed": "unknown"
+  },
+  {
+   "class_id": "tax",
+   "original": "national",
+   "reason": "A parliamentary document says the Austrian state-owned BRZ GmbH operates the servers for the Finance Ministry, and no non-national host or data access is shown.",
+   "reviewed": "national"
+  }
+ ]
+}

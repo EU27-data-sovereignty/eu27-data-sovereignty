@@ -14,25 +14,22 @@
 
 ## 1. Data-sovereignty placement
 
-> Not demonstrated. Confidence: Low. With the evidence still open, Finland could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
+> Not demonstrated. Confidence: Low. With the evidence still open, Finland could be anywhere from 'Sovereign in practice, not secured in law' to 'Dependent on non-EU providers'.
 
 Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.
 
 | Indicator | Finding |
 |---|---|
-| Jurisdiction requirement | *Not yet sourced* |
-| Classification in law | *Not yet sourced* |
+| Jurisdiction requirement | Partly[^s1] |
+| Classification in law | Yes[^s2] |
 | Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
-| Government cloud in operation | *Not yet sourced* |
+| State-controlled trust anchor | Yes[^s3] |
+| State-controlled national eID | Yes[^s4][^s5] |
+| Government data centres | Yes[^s6][^s1] |
+| Government cloud in operation | Yes[^s7] |
 
 What could move this placement:
 
-- If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
-- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
 - If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
@@ -41,12 +38,12 @@ Finland described on its own measured characteristics. Each figure is the publis
 
 | Indicator | Value |
 |---|---:|
-| Population | 5.64 million[^s1] |
-| GDP, current prices | 281.7 EUR bn[^s2] |
+| Population | 5.64 million[^s8] |
+| GDP, current prices | 281.7 EUR bn[^s9] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 74.8 EUR/MWh[^s3] |
-| Renewables share of electricity | 54.3 %[^s4] |
-| Land area | 304 316 km²[^s5] |
+| Non-household electricity price | 74.8 EUR/MWh[^s10] |
+| Renewables share of electricity | 54.3 %[^s11] |
+| Land area | 304 316 km²[^s12] |
 
 ## 3. Critical data holdings, by priority
 
@@ -168,8 +165,15 @@ Tier 0 and 1 holdings for Finland without a verified source yet. Corrections and
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: Finlex / Oikeusministeriö c26c9dda26. Laki turvallisuusverkkotoiminnasta (10/2015), 5 §. <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2015/10/fin@>
+[^s2]: Finlex / Oikeusministeriö b349c9896d. Valtioneuvoston asetus asiakirjojen turvallisuusluokittelusta valtionhallinnossa (1101/2019), 3 §. <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2019/1101/fin@>
+[^s3]: Finlex / Oikeusministeriö 4187ed7874. Laki väestötietojärjestelmästä ja Väestörekisterikeskuksen varmennepalveluista (661/2009), 61 §. <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2009/661/fin@>
+[^s4]: Digi- ja väestötietovirasto (DVV) 0e79936b79. Tunnistus (Suomi.fi-tunnistus). <https://dvv.fi/suomi.fi-tunnistus>
+[^s5]: Finlex / Oikeusministeriö bcafff1597. Laki hallinnon yhteisistä sähköisen asioinnin tukipalveluista (571/2016), 4 §. <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2016/571/fin@>
+[^s6]: Suomen Erillisverkot Oy 5bb7b96539. Konesalipalvelu. <https://www.erillisverkot.fi/palvelut/konesali-ja-suojatilat/> ([archived](https://web.archive.org/web/20260727163800/https://www.erillisverkot.fi/palvelut/konesali-ja-suojatilat/))
+[^s7]: Suomen Erillisverkot Oy 5266ce1d26. Turvapilvipalvelu (Virtuaalinen konesalipalvelu). <https://www.erillisverkot.fi/palvelut/virtuaalinen-konesali/> ([archived](https://web.archive.org/web/20260727163800/https://www.erillisverkot.fi/palvelut/virtuaalinen-konesali/))
+[^s8]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s9]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s10]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s11]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s12]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>

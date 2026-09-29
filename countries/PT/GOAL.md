@@ -14,25 +14,23 @@
 
 ## 1. Data-sovereignty placement
 
-> Not demonstrated. Confidence: Low. With the evidence still open, Portugal could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
+> Not demonstrated. Confidence: Low. With the evidence still open, Portugal could be anywhere from 'Sovereign in practice, not secured in law' to 'Dependent on non-EU providers'.
 
 Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.
 
 | Indicator | Finding |
 |---|---|
-| Jurisdiction requirement | *Not yet sourced* |
-| Classification in law | *Not yet sourced* |
+| Jurisdiction requirement | Partly[^s1][^s2][^s3] |
+| Classification in law | Yes[^s3] |
 | Sovereign cloud certification | *Not yet sourced* |
 | State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
-| Government cloud in operation | *Not yet sourced* |
+| State-controlled national eID | Yes[^s4][^s5] |
+| Government data centres | Yes[^s6][^s7][^s8] |
+| Government cloud in operation | Partly[^s9][^s6][^s2] |
 
 What could move this placement:
 
-- If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
 - If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
 - If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
@@ -41,16 +39,16 @@ Portugal described on its own measured characteristics. Each figure is the publi
 
 | Indicator | Value |
 |---|---:|
-| Population | 11.39 million[^s1] |
-| GDP, current prices | 306.7 EUR bn[^s2] |
+| Population | 11.39 million[^s10] |
+| GDP, current prices | 306.7 EUR bn[^s11] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 132.9 EUR/MWh[^s3] |
-| Renewables share of electricity | 65.8 %[^s4] |
-| Land area | 90 996 km²[^s5] |
+| Non-household electricity price | 132.9 EUR/MWh[^s12] |
+| Renewables share of electricity | 65.8 %[^s13] |
+| Land area | 90 996 km²[^s14] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Portugal cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Portugal cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 1 of 39 holding classes have a verified source; 1 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
@@ -60,7 +58,7 @@ The holdings Portugal cannot let depend on infrastructure a foreign state can co
 | Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Authentication audit log (tier 0) | Authentication records (type, date/time) and signatures are processed to manage electronic identification[^s4] | *Not yet sourced* | *Not stated in sources* | 140,783,983 total authentications through Autenticação.gov (figure shown at time of research, 2026-09-29)[^s15] |
 | High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
@@ -98,7 +96,7 @@ The holdings Portugal cannot let depend on infrastructure a foreign state can co
 
 ## 4. Foreign-dependency exposure
 
-Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 1 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -106,7 +104,7 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 0 |
+| Not stated in sources | 1 |
 
 ## 5. Legal and institutional posture
 
@@ -125,7 +123,7 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 
 ## 6. Capacity
 
-> Not yet sized. Capacity for Portugal will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 0 of 39 holding classes have a sourced measurement so far.
+> Not yet sized. Capacity for Portugal will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 1 of 39 holding classes have a sourced measurement so far.
 
 ## 7. Research still open
 
@@ -137,7 +135,6 @@ Tier 0 and 1 holdings for Portugal without a verified source yet. Corrections an
 - Breeder document scans (tier 0)
 - Document issuance history (tier 0)
 - Digital identity credentials (tier 0)
-- Authentication audit log (tier 0)
 - Electoral roll entry (tier 0)
 - State PKI and qualified trust services (tier 0)
 - Residence and migration status (tier 1)
@@ -168,8 +165,18 @@ Tier 0 and 1 holdings for Portugal without a verified source yet. Corrections an
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: Agência para a Reforma Tecnológica do Estado, I.P. (ARTE) cf0d386079, 2025-12-29. Estratégia Digital Nacional – Plano de Ação 2026-2027 (projeto 8.2). <https://www.arte.gov.pt/wp-content/uploads/2026/05/Plano-de-Acao-2026-2027_EDN.pdf>
+[^s2]: Presidência do Conselho de Ministros (Diário da República, 1.ª série, N.º 102) 17741bbeeb, 2026-05-27. Resolução do Conselho de Ministros n.º 102/2026 – Aprova o Plano Nacional de Nuvem Soberana. <https://bo.digital.gov.pt/api/assets/etic/2fecc6f4-b424-41c6-b2a8-722b17b1914f/> ([archived](https://web.archive.org/web/20260702232015/https://bo.digital.gov.pt/api/assets/etic/2fecc6f4-b424-41c6-b2a8-722b17b1914f/))
+[^s3]: Assembleia da República (copy hosted by SIRP) 2b1deb9a86, 2014-08-06. Lei Orgânica n.º 2/2014, de 6 de agosto – Regime do Segredo de Estado (Diário da República, 1.ª série, N.º 150). <https://sirp.pt/wp-content/uploads/2025/09/LEI_DO_SEGREDO_DE_ESTADO.pdf> ([archived](https://web.archive.org/web/20251108103511/https://sirp.pt/wp-content/uploads/2025/09/LEI_DO_SEGREDO_DE_ESTADO.pdf))
+[^s4]: ARTE – Agência para a Reforma Tecnológica do Estado, I.P. 133175d62d. Termos e Condições – Autenticação.gov. <https://www.autenticacao.gov.pt/web/guest/termos-e-condicoes> ([archived](https://web.archive.org/web/20260830101400/https://www.autenticacao.gov.pt/web/guest/termos-e-condicoes))
+[^s5]: ARTE – Agência para a Reforma Tecnológica do Estado, I.P. 4cb6bc5565. A Chave Móvel Digital. <https://www.autenticacao.gov.pt/web/guest/a-chave-movel-digital> ([archived](https://web.archive.org/web/20260914162323/https://www.autenticacao.gov.pt/web/guest/a-chave-movel-digital))
+[^s6]: ARTE – Agência para a Reforma Tecnológica do Estado, I.P. f6b30d291b, 2026-05. Plano Nacional de Nuvem Soberana (Maio 2026). <https://www.arte.gov.pt/wp-content/uploads/2026/05/Plano-Nacional-de-Nuvem-Soberana.pdf>
+[^s7]: IP Telecom – Serviços de Telecomunicações, S.A. a3e6c65370. Sobre Nós. <https://www.iptelecom.pt/pt-pt/empresa/sobre-nos> ([archived](https://web.archive.org/web/20260626202759/https://www.iptelecom.pt/pt-pt/empresa/sobre-nos))
+[^s8]: IP Telecom – Serviços de Telecomunicações, S.A. ba3c465501. IPT Cloud & Datacenter. <https://www.iptelecom.pt/pt-pt/servicos/ipt-cloud-datacenter> ([archived](https://web.archive.org/web/20260626202758/https://www.iptelecom.pt/pt-pt/servicos/ipt-cloud-datacenter))
+[^s9]: ARTE – Agência para a Reforma Tecnológica do Estado, I.P. de9b2cb20b, 2026-05-29. ARTE coordena elaboração do Plano Nacional de Nuvem Soberana. <https://www.arte.gov.pt/arte-coordena-elaboracao-do-plano-nacional-de-nuvem-soberana/>
+[^s10]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s11]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s12]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s13]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s14]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s15]: ARTE – Agência para a Reforma Tecnológica do Estado, I.P. c33c5d245c. Estatísticas – Autenticação.gov. <https://www.autenticacao.gov.pt/web/guest/estatisticas>

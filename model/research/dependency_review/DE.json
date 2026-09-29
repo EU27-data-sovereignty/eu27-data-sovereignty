@@ -1,0 +1,17 @@
+{
+ "iso": "DE",
+ "verdicts": [
+  {
+   "class_id": "digital_identity_credentials",
+   "original": "national",
+   "reason": "The quote says BundID runs in the data centre of ITZBund, the German federal IT service provider, which is a state body; the evidence does not cover who hosts the Online-Ausweis eID infrastructure, but nothing in it points to a non-German or non-EU operator.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "trust_services_pki",
+   "original": "national",
+   "reason": "The quote says the V-PKI root CA (trust anchor) has been run at BSI, the German federal cybersecurity agency, since 2001, which makes it state-operated.",
+   "reviewed": "national"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "iso": "NL",
+ "verdicts": [
+  {
+   "class_id": "digital_identity_credentials",
+   "original": "national",
+   "reason": "DigiD is managed by Logius (Dutch state agency under the Ministry of BZK), and its data sits on Logius-managed ICT facilities on Dutch territory with no transfer outside the EU.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "authentication_audit_log",
+   "original": "national",
+   "reason": "DigiD usage records are personal data covered by the same DigiD privacy statement: stored on Logius-managed (Dutch state) facilities on Dutch territory and not transferred outside the EU.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "tax",
+   "original": "national",
+   "reason": "A parliamentary answer states that the Belastingdienst (Dutch Ministry of Finance) keeps its tax levying, collection and investigation applications in its own government data centres, and that the Microsoft move covers only office automation.",
+   "reviewed": "national"
+  }
+ ]
+}

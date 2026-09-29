@@ -14,26 +14,23 @@
 
 ## 1. Data-sovereignty placement
 
-> Not demonstrated. Confidence: Low. With the evidence still open, Germany could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
+> Not demonstrated. Confidence: Low. With the evidence still open, Germany could be anywhere from 'Sovereign in practice, not secured in law' to 'Dependent on non-EU providers'.
 
 Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.
 
 | Indicator | Finding |
 |---|---|
-| Jurisdiction requirement | *Not yet sourced* |
-| Classification in law | *Not yet sourced* |
+| Jurisdiction requirement | Partly[^s1] |
+| Classification in law | Yes[^s2] |
 | Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
-| Government cloud in operation | *Not yet sourced* |
+| State-controlled trust anchor | Yes[^s3][^s4] |
+| State-controlled national eID | Yes[^s5][^s6] |
+| Government data centres | Yes[^s7][^s8] |
+| Government cloud in operation | Yes[^s9] |
 
 What could move this placement:
 
-- If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
-- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
-- If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
+- If any of the 31 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
 
@@ -41,72 +38,72 @@ Germany described on its own measured characteristics. Each figure is the publis
 
 | Indicator | Value |
 |---|---:|
-| Population | 83.58 million[^s1] |
-| GDP, current prices | 4 529.7 EUR bn[^s2] |
+| Population | 83.58 million[^s10] |
+| GDP, current prices | 4 529.7 EUR bn[^s11] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 226.4 EUR/MWh[^s3] |
-| Renewables share of electricity | 54.1 %[^s4] |
-| Land area | 353 296 km²[^s5] |
+| Non-household electricity price | 226.4 EUR/MWh[^s12] |
+| Renewables share of electricity | 54.1 %[^s13] |
+| Land area | 353 296 km²[^s14] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Germany cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Germany cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 14 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Civil registry core (tier 0) | Melderegister (population/residence registers) kept by the Meldebehörden[^s15] | The Federal Central Tax Office (BZSt) stores the national personal identification number (Identifikationsnummer) with core identity data for every natural person (Abgabenordnung § 139b(3))[^s16] | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Passregister (passport register) contains the holder's photograph (Passgesetz § 21)[^s17] | Biometric features may be stored only at the issuing ID-card authorities[^s18] | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | No central register[^s18] | — | — | — |
+| Critical | Breeder document scans (tier 0) | Documents underlying each civil status entry are kept in special files (Sammelakten) (PStG § 6)[^s19] | Each Standesamt keeps the birth register (Geburtenregister) and other civil status registers[^s20] | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | The ID-card register records serial number, revocation password/sum and expiry date[^s21] | A central store of all ID-card serial numbers is permitted only at the card manufacturer, solely to trace the cards[^s18] | *Not stated in sources* | *Not yet measured* |
 | High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | The domestic intelligence authorities process information in the joint intelligence information system (BVerfSchG § 6)[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | BundID is to become the single central citizen account 'DeutschlandID' under the OZG[^s23] | *Not yet sourced* | National infrastructure[^s23] | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | V-PKI provides certificate-based security services to federal and state authorities, municipalities and public institutions[^s3] | *Not yet sourced* | National infrastructure[^s3] | *Not yet measured* |
+| High | Residence and migration status (tier 1) | The AZR consists of a general data stock and a separately kept visa file[^s24] | The AZR is kept by BAMF; the Federal Office of Administration (BVA) processes the data on BAMF's behalf[^s24] | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Customs declarations (tier 1) | ATLAS is the customs IT procedure for automated clearance and monitoring of cross-border goods traffic[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | Each pension insurer keeps an insurance account for every insured person, ordered by insurance number (SGB VI § 149)[^s26] | Pension insurers jointly maintain a data centre (Datenstelle) administered by Deutsche Rentenversicherung Bund (SGB VI § 145)[^s27] | *Not stated in sources* | *Not yet measured* |
 | High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Border and visa systems (tier 1) | The Federal Office of Administration keeps a Visa Warning File to prevent visa misuse (VWDG § 1)[^s28] | The BKA is the central national authority operating the national part of the Schengen Information System[^s29] | *Not stated in sources* | *Not yet measured* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Crisis management and civil protection (tier 1) | MoWaS is a highly available, hardened system for warning the population in Germany[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | The Bundesarchiv provides the Digital Intermediate Archive of the Federation (DZAB) as a central service to all federal public bodies[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 13 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
-| National infrastructure | 0 |
+| National infrastructure | 2 |
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 0 |
+| Not stated in sources | 11 |
 
 ## 5. Legal and institutional posture
 
@@ -131,19 +128,9 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 
 Tier 0 and 1 holdings for Germany without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
-- Civil registry core (tier 0)
-- Facial biometric (tier 0)
-- Fingerprint biometric (tier 0)
-- Breeder document scans (tier 0)
-- Document issuance history (tier 0)
-- Digital identity credentials (tier 0)
 - Authentication audit log (tier 0)
 - Electoral roll entry (tier 0)
-- State PKI and qualified trust services (tier 0)
-- Residence and migration status (tier 1)
 - Tax (tier 1)
-- Customs declarations (tier 1)
-- Benefits & pensions (tier 1)
 - Statutory health insurance (tier 1)
 - Land & property registry (tier 1)
 - Business registry (tier 1)
@@ -151,7 +138,6 @@ Tier 0 and 1 holdings for Germany without a verified source yet. Corrections and
 - Vehicle & licensing (tier 1)
 - Judicial & criminal justice (tier 1)
 - Police information systems (tier 1)
-- Border and visa systems (tier 1)
 - Firearms register (tier 1)
 - Official gazette and legislation (tier 1)
 - Treasury and state accounts (tier 1)
@@ -159,17 +145,41 @@ Tier 0 and 1 holdings for Germany without a verified source yet. Corrections and
 - Election management and results (tier 1)
 - Central bank systems (tier 1)
 - Defence command and logistics (tier 1)
-- Intelligence services (tier 1)
 - Emergency calls and public-safety radio (tier 1)
-- Crisis management and civil protection (tier 1)
 - Electricity grid control (tier 1)
 - Water management control (tier 1)
 - Education (tier 1)
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: Bundesamt für Sicherheit in der Informationstechnik (BSI) a38e3a49a7, 2022-12. Mindeststandard des BSI zur Nutzung externer Cloud-Dienste, Version 2.1 (NCD.2.2.03 Gerichtsbarkeit). <https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Mindeststandards/Mindeststandard_Nutzung_externer_Cloud-Dienste_Version_2_1.pdf?__blob=publicationFile&v=4> ([archived](https://web.archive.org/web/20260701150216/https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Mindeststandards/Mindeststandard_Nutzung_externer_Cloud-Dienste_Version_2_1.pdf?__blob=publicationFile&v=4))
+[^s2]: Bundesministerium der Justiz (gesetze-im-internet.de) aab4518525. Sicherheitsüberprüfungsgesetz (SÜG) § 4 Allgemeine Grundsätze zum Schutz von Verschlusssachen. <https://www.gesetze-im-internet.de/s_g/__4.html> ([archived](https://web.archive.org/web/20250821134415/https://www.gesetze-im-internet.de/s_g/__4.html))
+[^s3]: Bundesamt für Sicherheit in der Informationstechnik db18328d00. Verwaltungs-PKI. <https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Moderner-Staat/Verwaltungs-PKI/verwaltungs-pki_node.html> ([archived](https://web.archive.org/web/20260213021318/https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Moderner-Staat/Verwaltungs-PKI/verwaltungs-pki_node.html))
+[^s4]: D-Trust GmbH 9815d0323b. Über uns - D-Trust. <https://www.d-trust.net/de/ueber-uns> ([archived](https://web.archive.org/web/20260902212705/https://www.d-trust.net/de/ueber-uns))
+[^s5]: Bundesdruckerei Gruppe GmbH 2e8ac42075. Konzern - Bundesdruckerei-Gruppe. <https://www.bundesdruckerei.de/de/konzern> ([archived](https://web.archive.org/web/20260727120331/https://www.bundesdruckerei.de/de/konzern))
+[^s6]: Bundesministerium der Justiz (gesetze-im-internet.de) 3b46010997. Personalausweisgesetz (PAuswG) § 4 Eigentum am Ausweis; Ausweishersteller; Vergabestelle für Berechtigungszertifikate. <https://www.gesetze-im-internet.de/pauswg/__4.html> ([archived](https://web.archive.org/web/20260309012726/https://www.gesetze-im-internet.de/pauswg/__4.html))
+[^s7]: Informationstechnikzentrum Bund (ITZBund) a59e11192f. Informationstechnikzentrum Bund (ITZBund) - Über uns. <https://www.itzbund.de/DE/dasitzbund/ueber-uns/ueber-uns.html> ([archived](https://web.archive.org/web/20260302061921/https://www.itzbund.de/DE/dasitzbund/ueber-uns/ueber-uns.html))
+[^s8]: Informationstechnikzentrum Bund (ITZBund) c61eb2fa73. Hosting und Betrieb - Die Rechenzentren des ITZBund. <https://www.itzbund.de/DE/leistungsportfolio/hostingundbetrieb/hostingundbetrieb.html> ([archived](https://web.archive.org/web/20260223163818/https://www.itzbund.de/DE/leistungsportfolio/hostingundbetrieb/hostingundbetrieb.html))
+[^s9]: Informationstechnikzentrum Bund (ITZBund) 97b489181a. Die Bundescloud – eine exklusive, private Cloud für die Bundesverwaltung. <https://www.itzbund.de/DE/itloesungen/egovernment/bundescloud/bundescloud.html> ([archived](https://web.archive.org/web/20260708195922/https://www.itzbund.de/DE/itloesungen/egovernment/bundescloud/bundescloud.html))
+[^s10]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s11]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s12]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s13]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s14]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s15]: Bundesministerium der Justiz / gesetze-im-internet.de bf6c8ead7a. § 2 BMG - Aufgaben und Befugnisse der Meldebehörden. <https://www.gesetze-im-internet.de/bmg/__2.html> ([archived](https://web.archive.org/web/20260102165107/https://www.gesetze-im-internet.de/bmg/__2.html))
+[^s16]: Bundesministerium der Justiz / gesetze-im-internet.de 3fe2afde50. § 139b AO - Identifikationsnummer. <https://www.gesetze-im-internet.de/ao_1977/__139b.html> ([archived](https://web.archive.org/web/20260227090600/https://www.gesetze-im-internet.de/ao_1977/__139b.html))
+[^s17]: Bundesministerium der Justiz / gesetze-im-internet.de 6aec179f85. § 21 PassG - Passregister. <https://www.gesetze-im-internet.de/pa_g_1986/__21.html> ([archived](https://web.archive.org/web/20250311180221/https://www.gesetze-im-internet.de/pa_g_1986/__21.html))
+[^s18]: Bundesministerium der Justiz / gesetze-im-internet.de 27da0847df. § 26 PAuswG - Sonstige Speicherung personenbezogener Daten. <https://www.gesetze-im-internet.de/pauswg/__26.html> ([archived](https://web.archive.org/web/20251117090709/https://www.gesetze-im-internet.de/pauswg/__26.html))
+[^s19]: Bundesministerium der Justiz / gesetze-im-internet.de aec0b77b4d. § 6 PStG - Aktenführung. <https://www.gesetze-im-internet.de/pstg/__6.html> ([archived](https://web.archive.org/web/20250912133200/https://www.gesetze-im-internet.de/pstg/__6.html))
+[^s20]: Bundesministerium der Justiz / gesetze-im-internet.de d37a59e7c8. § 3 PStG - Personenstandsregister. <https://www.gesetze-im-internet.de/pstg/__3.html>
+[^s21]: Bundesministerium der Justiz / gesetze-im-internet.de 1c65b7fca8. § 23 PAuswG - Personalausweisregister. <https://www.gesetze-im-internet.de/pauswg/__23.html> ([archived](https://web.archive.org/web/20251009222823/https://www.gesetze-im-internet.de/pauswg/__23.html))
+[^s22]: Bundesministerium der Justiz / gesetze-im-internet.de a758b3c2b0. § 6 BVerfSchG. <https://www.gesetze-im-internet.de/bverfschg/__6.html> ([archived](https://web.archive.org/web/20260101153538/https://www.gesetze-im-internet.de/bverfschg/__6.html))
+[^s23]: Land Brandenburg, OZG-Portal 9abc55e93a. BundID (Nutzerkonto) - DeutschlandID. <https://ozg.brandenburg.de/ozg/de/it-infrastrukturen/it-basiskomponenten/bundid-nutzerkonto-deutschlandid/>
+[^s24]: Bundesministerium der Justiz / gesetze-im-internet.de 0be2c39533. § 1 AZR-Gesetz. <https://www.gesetze-im-internet.de/azrg/__1.html> ([archived](https://web.archive.org/web/20250215034909/https://www.gesetze-im-internet.de/azrg/__1.html))
+[^s25]: Generalzolldirektion (Zoll online) f2183dbfc2. ATLAS. <https://www.zoll.de/DE/Fachthemen/Zoelle/ATLAS/atlas_node.html> ([archived](https://web.archive.org/web/20260618015312/https://www.zoll.de/DE/Fachthemen/Zoelle/ATLAS/atlas_node.html))
+[^s26]: Bundesministerium der Justiz / gesetze-im-internet.de eb21a5a15b. § 149 SGB VI - Versicherungskonto. <https://www.gesetze-im-internet.de/sgb_6/__149.html> ([archived](https://web.archive.org/web/20260305102912/https://www.gesetze-im-internet.de/sgb_6/__149.html))
+[^s27]: Bundesministerium der Justiz / gesetze-im-internet.de 7643471870. § 145 SGB VI - Aufgaben der Datenstelle der Rentenversicherung. <https://www.gesetze-im-internet.de/sgb_6/__145.html> ([archived](https://web.archive.org/web/20260910135714/https://www.gesetze-im-internet.de/sgb_6/__145.html))
+[^s28]: Bundesministerium der Justiz / gesetze-im-internet.de d8b3bb5b35. § 1 VWDG - Führung und Zweck der Datei. <https://www.gesetze-im-internet.de/vwdg/__1.html> ([archived](https://web.archive.org/web/20240422124244/https://www.gesetze-im-internet.de/vwdg/__1.html))
+[^s29]: Bundesministerium der Justiz / gesetze-im-internet.de 4f79954d49. § 3 BKAG. <https://www.gesetze-im-internet.de/bkag_2018/__3.html> ([archived](https://web.archive.org/web/20260227115654/https://www.gesetze-im-internet.de/bkag_2018/__3.html))
+[^s30]: Bundesamt für Bevölkerungsschutz und Katastrophenhilfe f2c744301d. MoWaS. <https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warnung-in-Deutschland/MoWaS/mowas_node.html> ([archived](https://web.archive.org/web/20260924105236/https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warnung-in-Deutschland/MoWaS/mowas_node.html))
+[^s31]: Bundesarchiv 0032bf77af. Nutzung des Digitalen Zwischenarchivs (DZAB). <https://www.bundesarchiv.de/unterlagen-abgeben/behoerdenberatung-zu-schriftgut-und-informationsverwaltung/nutzung-des-digitalen-zwischenarchivs-dzab/> ([archived](https://web.archive.org/web/20260618022322/https://www.bundesarchiv.de/unterlagen-abgeben/behoerdenberatung-zu-schriftgut-und-informationsverwaltung/nutzung-des-digitalen-zwischenarchivs-dzab/))

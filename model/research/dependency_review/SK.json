@@ -1,0 +1,11 @@
+{
+ "iso": "SK",
+ "verdicts": [
+  {
+   "class_id": "central_bank",
+   "original": "mixed",
+   "reason": "The evidence only shows that TARGET-SK is part of TARGET, which the Eurosystem central banks own and operate (EU), alongside Národná banka Slovenska (Slovakia), which runs SIPS; no non-EU operator, host or data access is shown, so 'mixed' is not supported.",
+   "reviewed": "eu_provider"
+  }
+ ]
+}

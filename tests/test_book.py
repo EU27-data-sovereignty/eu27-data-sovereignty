@@ -61,9 +61,19 @@ class Typeset(unittest.TestCase):
             self.assertEqual(linked - listed, set())
 
     def test_every_fact_span_gets_a_footnote(self):
-        facts = sum(1 for d in self.bundle["documents"].values()
-                    for s in report.document_spans(d) if s.get("role") == "fact")
-        self.assertEqual(self.report.count("#footnote["), facts)
+        """One footnote per distinct citation (source, locator, date) of every fact span: a fact
+        that rests on three documents shows all three."""
+        expected = 0
+        for d in self.bundle["documents"].values():
+            for s in report.document_spans(d):
+                if s.get("role") == "fact":
+                    cites = {(c["source_id"], c["locator"], c["retrieved"])
+                             for claim in s["c"] for c in self.bundle["claims"].get(claim, [])}
+                    self.assertTrue(cites, s["t"][:60])
+                    expected += len(cites)
+        body = self.report.split("= Data-sovereignty ranking", 1)[1]
+        ranking, chapters = body.split("\n= ", 1)
+        self.assertEqual(chapters.count("#footnote["), expected)
 
 
 if __name__ == "__main__":

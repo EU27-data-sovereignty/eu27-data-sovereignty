@@ -23,16 +23,14 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | Jurisdiction requirement | *Not yet sourced* |
 | Classification in law | *Not yet sourced* |
 | Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
-| Government cloud in operation | *Not yet sourced* |
+| State-controlled trust anchor | Yes[^s1][^s2] |
+| State-controlled national eID | Yes[^s3] |
+| Government data centres | Yes[^s4] |
+| Government cloud in operation | Yes[^s4] |
 
 What could move this placement:
 
 - If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
-- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
 - If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
@@ -41,64 +39,64 @@ Slovakia described on its own measured characteristics. Each figure is the publi
 
 | Indicator | Value |
 |---|---:|
-| Population | 5.42 million[^s1] |
-| GDP, current prices | 136.8 EUR bn[^s2] |
+| Population | 5.42 million[^s5] |
+| GDP, current prices | 136.8 EUR bn[^s6] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 209.0 EUR/MWh[^s3] |
-| Renewables share of electricity | 24.9 %[^s4] |
-| Land area | 48 702 km²[^s5] |
+| Non-household electricity price | 209.0 EUR/MWh[^s7] |
+| Renewables share of electricity | 24.9 %[^s8] |
+| Land area | 48 702 km²[^s9] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Slovakia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Slovakia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 29 of 39 holding classes have a verified source; 1 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Civil registry core (tier 0) | Register obyvateľov Slovenskej republiky (Register of Inhabitants of the Slovak Republic), a public-administration information system identifying persons, their residence and relationships[^s10] | The Ministry of Interior (ministerstvo) administers the Register of Natural Persons, a base register; retention is permanent[^s10] | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Evidencia občianskych preukazov (ID card records) kept by the Ministry of Interior and district police directorates[^s11] | The Ministry of Interior keeps the central register of travel documents, which includes the facial image[^s12] | *Not stated in sources* | *Not yet measured* |
 | Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Breeder document scans (tier 0) | Zbierka listín (collection of source documents) kept by registry offices as the basis for civil-status entries[^s13] | District offices keep the collection of documents and hand it to the state archive after 100 years[^s13] | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | Evidencia občianskych preukazov (ID card issuance records), incl. numbers of issued, lost and stolen cards and destruction dates[^s11] | Kept by the Ministry of Interior and district police directorates[^s11] | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | eID: electronic identity card with contact chip, issued since 2 December 2013[^s3] | The Ministry of Interior administers the authentication part of the authentication module; MIRRI administers its communication part[^s14] | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | Stály zoznam voličov (permanent electoral roll) compiled and kept by each municipality[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | Slovenská národná certifikačná autorita (SNCA), providing qualified trust services free of charge to public authorities[^s16] | NASES has operated the Slovak National Certification Authority (SNCA) and provided qualified trust services since 1 August 2019[^s2] | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | Kataster nehnuteľností (real-estate cadastre) including ownership, liens and other rights[^s17] | The Office of Geodesy, Cartography and Cadastre (ÚGKK SR, 'úrad') administers the cadastral records and the cadastre information system[^s17] | *Not stated in sources* | As of 31 Dec 2025: 9,033,960 register-C parcels, 7,643,899 register-E parcels and 4,850,159 ownership sheets (LV)[^s18] |
+| High | Judicial & criminal justice (tier 1) | Register trestov (Criminal Records Register) kept by the General Prosecutor's Office[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Police Force information systems processing personal data, fingerprint (dactyloscopic) data and face images[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | Police Force information systems holding records on foreigners' entry, stay and departure, visa and residence applicants[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Benefits & pensions (tier 1) | Register poistencov a sporiteľov starobného dôchodkového sporenia (register of insured persons and pension savers) and employer register kept by Sociálna poisťovňa[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | Centrálny register poistencov (central register of insured persons) kept by the Health Care Surveillance Authority (ÚDZS)[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Obchodný register (Commercial Register) and collection of deeds, kept electronically by registry courts[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Register partnerov verejného sektora (Register of Public Sector Partners), run by the Ministry of Justice with Žilina District Court as registering body[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Evidencia vozidiel (vehicle register), an information system of the Police Force[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Police Force records on undesirable persons, border-control data on foreigners and illegal stay[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Police Force information system on firearms licences, holders and registered weapons[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Government payroll and personnel (tier 1) | Centrálny informačný systém štátnej služby (central civil-service information system) administered by the Government Office[^s28] | Government Office of the Slovak Republic (Úrad vlády SR)[^s28] | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | Register kandidátov a kandidátnych listín (Register of candidates and candidate lists), created and operated by the Ministry of Interior[^s15] | Election results are processed through the information system of the Statistical Office of the Slovak Republic[^s15] | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | Národná banka Slovenska operates two payment systems: TARGET-SK (RTGS) and SIPS (retail)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | Coordination centres receive 112 calls, eCall and SMS emergency communications[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Informačný systém krízového riadenia štátu (state crisis management information system)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Dispatch control of the transmission system, incl. defence and restoration plan in a blackout[^s32] | SEPS a.s. is the transmission system operator including the Slovak Electricity Dispatch Centre[^s33] | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Education (tier 1) | Centrálny register (central register of children, pupils and students) under the School Act[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | Národný zdravotnícky informačný systém (National Health Information System), administered by the National Health Information Centre[^s35] | National Health Information Centre (NCZI, 'národné centrum')[^s35] | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Slov-Lex, the public administration information system administered and operated by the Ministry of Justice[^s36] | The Ministry of Justice publishes the Collection of Laws; it is issued in electronic and paper form[^s36] | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | Elektronický archív Slovenska (Electronic Archive of Slovakia), the long-term repository of electronic archival records of public authorities[^s37] | The Electronic Archive also archives structured data and data from Ministry of Interior production systems[^s37] | *Not stated in sources* | *Not yet measured* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | Register adries (Address Register), administered by the Ministry of Interior[^s38] | ÚGKK SR creates, administers and operates the geodesy, cartography and cadastre information system (ISGKK)[^s18] | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 29 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -106,7 +104,7 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 0 |
+| Not stated in sources | 29 |
 
 ## 5. Legal and institutional posture
 
@@ -125,51 +123,58 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 
 ## 6. Capacity
 
-> Not yet sized. Capacity for Slovakia will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 0 of 39 holding classes have a sourced measurement so far.
+> Not yet sized. Capacity for Slovakia will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 1 of 39 holding classes have a sourced measurement so far.
 
 ## 7. Research still open
 
 Tier 0 and 1 holdings for Slovakia without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
-- Civil registry core (tier 0)
-- Facial biometric (tier 0)
 - Fingerprint biometric (tier 0)
-- Breeder document scans (tier 0)
-- Document issuance history (tier 0)
-- Digital identity credentials (tier 0)
 - Authentication audit log (tier 0)
-- Electoral roll entry (tier 0)
-- State PKI and qualified trust services (tier 0)
-- Residence and migration status (tier 1)
 - Tax (tier 1)
 - Customs declarations (tier 1)
-- Benefits & pensions (tier 1)
-- Statutory health insurance (tier 1)
-- Land & property registry (tier 1)
-- Business registry (tier 1)
-- Beneficial ownership register (tier 1)
-- Vehicle & licensing (tier 1)
-- Judicial & criminal justice (tier 1)
-- Police information systems (tier 1)
-- Border and visa systems (tier 1)
-- Firearms register (tier 1)
-- Official gazette and legislation (tier 1)
 - Treasury and state accounts (tier 1)
-- Government payroll and personnel (tier 1)
-- Election management and results (tier 1)
-- Central bank systems (tier 1)
 - Defence command and logistics (tier 1)
 - Intelligence services (tier 1)
-- Emergency calls and public-safety radio (tier 1)
-- Crisis management and civil protection (tier 1)
-- Electricity grid control (tier 1)
 - Water management control (tier 1)
-- Education (tier 1)
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: Národná agentúra pre sieťové a elektronické služby (NASES) 7c739339cc. Činnosť agentúry. <https://www.nases.gov.sk/o-nas/cinnost-agentury> ([archived](https://web.archive.org/web/20260928114903/https://www.nases.gov.sk/o-nas/cinnost-agentury))
+[^s2]: Národná agentúra pre sieťové a elektronické služby (SNCA) c4488488e6. Certifikačná autorita. <https://snca.gov.sk/o-nas/certifikacna-autorita> ([archived](https://web.archive.org/web/20260612111428/https://snca.gov.sk/o-nas/certifikacna-autorita))
+[^s3]: Národná agentúra pre sieťové a elektronické služby (slovensko.sk) 1e21687709, 2013-12-01. Nové elektronické občianske preukazy s čipom. <https://www.slovensko.sk/sk/eid> ([archived](https://web.archive.org/web/20260218060914/https://www.slovensko.sk/sk/eid))
+[^s4]: Ministerstvo investícií, regionálneho rozvoja a informatizácie SR (MIRRI) bdc8badf76. Vládny cloud. <https://mirri.gov.sk/sekcie/informatizacia/dokumenty/vladny-cloud/>
+[^s5]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s6]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s7]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s8]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s9]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s10]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) cf164276e2. Zákon o hlásení pobytu občanov Slovenskej republiky a registri obyvateľov Slovenskej republiky 253/1998. <https://zakony.judikaty.info/predpis/zakon-253/1998> ([archived](https://web.archive.org/web/20240913011250/https://zakony.judikaty.info/predpis/zakon-253/1998))
+[^s11]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) bc65dc8528. Zákon o občianskych preukazoch 224/2006. <https://zakony.judikaty.info/predpis/zakon-224/2006> ([archived](https://web.archive.org/web/20220307183542/https://zakony.judikaty.info/predpis/zakon-224/2006))
+[^s12]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) c9aed832ed. Zákon o cestovných dokladoch 647/2007. <https://zakony.judikaty.info/predpis/zakon-647/2007> ([archived](https://web.archive.org/web/20240913021636/https://zakony.judikaty.info/predpis/zakon-647/2007))
+[^s13]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) da6ca1f082. Zákon Národnej rady Slovenskej republiky o matrikách 154/1994. <https://zakony.judikaty.info/predpis/zakon-154/1994> ([archived](https://web.archive.org/web/20240913021122/https://zakony.judikaty.info/predpis/zakon-154/1994))
+[^s14]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) 6400764c4a. Zákon o e-Governmente 305/2013. <https://zakony.judikaty.info/predpis/zakon-305/2013>
+[^s15]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) 643bc3547c. Zákon o podmienkach výkonu volebného práva 180/2014. <https://zakony.judikaty.info/predpis/zakon-180/2014> ([archived](https://web.archive.org/web/20240913004101/https://zakony.judikaty.info/predpis/zakon-180/2014))
+[^s16]: Národná agentúra pre sieťové a elektronické služby 79a1c48d63. Kvalifikované dôveryhodné služby. <https://www.nases.gov.sk/sluzby/sluzby-pre-po-a-ovm/doveryhodne-sluzby-snca> ([archived](https://web.archive.org/web/20260928114903/https://www.nases.gov.sk/sluzby/sluzby-pre-po-a-ovm/doveryhodne-sluzby-snca))
+[^s17]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) abcab898c6. Katastrálny zákon 162/1995. <https://zakony.judikaty.info/predpis/zakon-162/1995> ([archived](https://web.archive.org/web/20251008162932/https://zakony.judikaty.info/predpis/zakon-162/1995))
+[^s18]: Úrad geodézie, kartografie a katastra Slovenskej republiky 1f5c574b6c, 2026. Výročná správa ÚGKK SR za rok 2025. <https://www.skgeodesy.sk/files/sk/slovensky/ugkk/kontrakty-vyrocne-spravy/ugkk-sr_vyrocna-sprava_2025.pdf> ([archived](https://web.archive.org/web/20260609112750/https://www.skgeodesy.sk/files/sk/slovensky/ugkk/kontrakty-vyrocne-spravy/ugkk-sr_vyrocna-sprava_2025.pdf))
+[^s19]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) c1d1cfead6. Zákon o registri trestov 330/2007. <https://zakony.judikaty.info/predpis/zakon-330/2007> ([archived](https://web.archive.org/web/20240913022235/https://zakony.judikaty.info/predpis/zakon-330/2007))
+[^s20]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) 66def3d68f. Zákon Národnej rady Slovenskej republiky o Policajnom zbore 171/1993. <https://zakony.judikaty.info/predpis/zakon-171/1993> ([archived](https://web.archive.org/web/20240915235127/https://zakony.judikaty.info/predpis/zakon-171/1993))
+[^s21]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) 3c57bfb4b0. Zákon o pobyte cudzincov 404/2011. <https://zakony.judikaty.info/predpis/zakon-404/2011> ([archived](https://web.archive.org/web/20250624013534/https://zakony.judikaty.info/predpis/zakon-404/2011))
+[^s22]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) 0879b0893a. Zákon o sociálnom poistení 461/2003. <https://zakony.judikaty.info/predpis/zakon-461/2003> ([archived](https://web.archive.org/web/20250624100422/https://zakony.judikaty.info/predpis/zakon-461/2003))
+[^s23]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) 08ff4edb78. Zákon o zdravotných poisťovniach, dohľade nad zdravotnou starostlivosťou 581/2004. <https://zakony.judikaty.info/predpis/zakon-581/2004>
+[^s24]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) d6d00cfb1d. Zákon o obchodnom registri 530/2003. <https://zakony.judikaty.info/predpis/zakon-530/2003> ([archived](https://web.archive.org/web/20250624003611/https://zakony.judikaty.info/predpis/zakon-530/2003))
+[^s25]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) b0d7e6f4f8. Zákon o registri partnerov verejného sektora 315/2016. <https://zakony.judikaty.info/predpis/zakon-315/2016> ([archived](https://web.archive.org/web/20240522091210/https://zakony.judikaty.info/predpis/zakon-315/2016))
+[^s26]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) 262477f4c7. Zákon o cestnej premávke 8/2009. <https://zakony.judikaty.info/predpis/zakon-8/2009> ([archived](https://web.archive.org/web/20240225121954/https://zakony.judikaty.info/predpis/zakon-8/2009))
+[^s27]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) 65a7d17398. Zákon o strelných zbraniach a strelive 190/2003. <https://zakony.judikaty.info/predpis/zakon-190/2003> ([archived](https://web.archive.org/web/20240521050240/https://zakony.judikaty.info/predpis/zakon-190/2003))
+[^s28]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) 58f8bc2ac4. Zákon o štátnej službe 55/2017. <https://zakony.judikaty.info/predpis/zakon-55/2017>
+[^s29]: Národná banka Slovenska f0e3e7c47c. Platobné systémy. <https://nbs.sk/platby/platobne-systemy/> ([archived](https://web.archive.org/web/20260617103250/https://nbs.sk/platby/platobne-systemy/))
+[^s30]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) 01b856c898. Zákon o integrovanom záchrannom systéme 129/2002. <https://zakony.judikaty.info/predpis/zakon-129/2002> ([archived](https://web.archive.org/web/20250624004629/https://zakony.judikaty.info/predpis/zakon-129/2002))
+[^s31]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) f7d0c691ce. Zákon o riadení štátu v krízových situáciách mimo času vojny a vojnového stavu 387/2002. <https://zakony.judikaty.info/predpis/zakon-387/2002>
+[^s32]: Slovenská elektrizačná prenosová sústava, a. s. 6fedfac656. Dispečing. <https://www.sepsas.sk/pre-partnerov/dispecing/> ([archived](https://web.archive.org/web/20260614225618/https://www.sepsas.sk/pre-partnerov/dispecing/))
+[^s33]: Slovenská elektrizačná prenosová sústava, a. s. 0b35785b93. O spoločnosti. <https://www.sepsas.sk/o-nas/o-spolocnosti/> ([archived](https://web.archive.org/web/20260516114637/https://www.sepsas.sk/o-nas/o-spolocnosti/))
+[^s34]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) c14756c1eb. Zákon o výchove a vzdelávaní (školský zákon) 245/2008. <https://zakony.judikaty.info/predpis/zakon-245/2008> ([archived](https://web.archive.org/web/20240715115213/https://zakony.judikaty.info/predpis/zakon-245/2008))
+[^s35]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) 102f092bed. Zákon o národnom zdravotníckom informačnom systéme 153/2013. <https://zakony.judikaty.info/predpis/zakon-153/2013> ([archived](https://web.archive.org/web/20250624093444/https://zakony.judikaty.info/predpis/zakon-153/2013))
+[^s36]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) 36191f0e74. Zákon o tvorbe právnych predpisov a o Zbierke zákonov Slovenskej republiky 400/2015. <https://zakony.judikaty.info/predpis/zakon-400/2015> ([archived](https://web.archive.org/web/20250624015208/https://zakony.judikaty.info/predpis/zakon-400/2015))
+[^s37]: Ministerstvo vnútra Slovenskej republiky 8698594fb9. Elektronický archív Slovenska MV SR. <https://www.minv.sk/?elektronicky-archiv-slovenska-mv-sr>
+[^s38]: Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) a3c5e3d80f. Zákon o registri adries 125/2015. <https://zakony.judikaty.info/predpis/zakon-125/2015> ([archived](https://web.archive.org/web/20210228034237/https://zakony.judikaty.info/predpis/zakon-125/2015))

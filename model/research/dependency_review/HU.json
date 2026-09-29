@@ -1,0 +1,89 @@
+{
+ "iso": "HU",
+ "verdicts": [
+  {
+   "class_id": "civil_registry",
+   "original": "national",
+   "reason": "The Hungarian Minister for Science and Technology keeps the SZL and the civil register, and they are run by IdomSoft Zrt., which has been directly state-owned under the Digital Hungary Agency (HU) since July 2024; Act LXVI/1992 allows only state bodies or wholly state-owned processors.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "facial_biometric",
+   "original": "national",
+   "reason": "The Hungarian Minister for Science and Technology is the central organ of the facial image analysis register, and statute limits processing of the SZL and travel-document register to Hungarian state bodies or wholly state-owned companies.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "fingerprint_biometric",
+   "original": "national",
+   "reason": "The Hungarian Minister of Interior (criminal biometrics) and the Minister for Science and Technology (SZL) are the controllers, and processing is limited by statute to Hungarian state bodies or wholly state-owned companies.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "breeder_documents",
+   "original": "national",
+   "reason": "The Hungarian Minister for Science and Technology is the civil-register keeping body, and Act I/2010 limits processors to state bodies or wholly state-owned companies.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "issuance_history",
+   "original": "national",
+   "reason": "The Hungarian Minister for Science and Technology keeps the ID-document register, and the document registers and validity register are operated by IdomSoft Zrt., which is directly owned by the Hungarian state.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "digital_identity_credentials",
+   "original": "national",
+   "reason": "By Government decree, the state-owned IdomSoft Zrt. (HU) develops and operates DÁP and the government eID service, and the Hungarian minister keeps the register and operates the eSzemélyi card framework.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "authentication_audit_log",
+   "original": "national",
+   "reason": "The DÁP privacy notice says the controller stores the log files in a private cloud (central log collector), and the system is run by the state-owned IdomSoft Zrt. (HU); the evidence names no third-party cloud.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "electoral_roll",
+   "original": "national",
+   "reason": "Hungary's National Election Office controls the central register and by statute may use only state bodies or wholly state-owned processors; its systems are built by the state-owned IdomSoft Zrt. (HU).",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "residence_permits",
+   "original": "national",
+   "reason": "The Hungarian aliens-policing authority under the Minister of Interior controls the register, and Act XC/2023 limits processing to state bodies or wholly state-owned companies.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "tax",
+   "original": "national",
+   "reason": "Hungary's tax and customs authority (NAV), a central state office, controls the records, and statute limits processing to state bodies or majority/wholly state-owned entities.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "business_registry",
+   "original": "national",
+   "reason": "The Company Information Service controls the register, which runs on the Government Data Centre operated through the state-owned NISZ Zrt. (HU), and processing is limited to state bodies or wholly state-owned companies.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "vehicle_licensing",
+   "original": "national",
+   "reason": "The Hungarian Minister for Science and Technology is the road-transport registering body, and statute limits processing to state bodies or wholly state-owned companies such as IdomSoft Zrt.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "judicial_criminal",
+   "original": "national",
+   "reason": "The Hungarian Minister of Interior is the criminal-records body, and Act XLVII/2009 limits processing to state bodies or wholly state-owned companies.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "electoral_management",
+   "original": "national",
+   "reason": "Hungary's National Election Office runs the candidate and results registers under a statutory state-only processor restriction, and the election systems are built and run by the state-owned IdomSoft Zrt. (HU).",
+   "reviewed": "national"
+  }
+ ]
+}

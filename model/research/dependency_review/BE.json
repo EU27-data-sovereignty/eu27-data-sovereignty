@@ -1,0 +1,11 @@
+{
+ "iso": "BE",
+ "verdicts": [
+  {
+   "class_id": "trust_services_pki",
+   "original": "mixed",
+   "reason": "The only non-EU link in the evidence is DigiCert (US) cross-signing the Belgian Root CA, which is a trust relationship and not operation, hosting or data access; the root is run by the Belgian State and the Citizen CA by Certipost or ZetesConfidens (both Belgian), but the evidence does not say who controls the current operator Zetes (in fact reportedly a Panasonic/Japan subsidiary since 2017), so neither national nor mixed is established.",
+   "reviewed": "unknown"
+  }
+ ]
+}

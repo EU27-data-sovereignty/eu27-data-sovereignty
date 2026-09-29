@@ -1508,3 +1508,46 @@ and a readable error without a key. **Live answers: NOT YET** — waiting for th
 *Would change if:* the corpus outgrows the context window (then retrieval), costs exceed the workspace
 limit in normal use (then a cheaper model, by the author's decision), or a legal or privacy review
 requires a different processor.
+
+### 79. A categorical judgement is admitted only after an independent review agrees with it
+**Decision.** 2026-09-29. Any value that classifies evidence rather than quoting it (a holding's foreign
+dependency, an indicator's yes/partial/no) enters the register only when a separate reviewer agent,
+applying written definitions to the verified quotes, reaches the same value. Disagreement or no review
+makes the value unknown, which under #77 never helps a state. Dependency reviews are staged in
+`model/research/dependency_review/<ISO>.json` and read by `research.py admit`. Indicator reviews are
+the second stage of research run 2.
+
+**Problem.** Research run 1 classified each holding's dependency (national, EU provider, non-EU
+provider, mixed) with no review. The quote check proves the words are in the document, not that the
+category follows from them. A spot-check of the eight states the rule first placed "Dependent" found at
+least three built on misclassified evidence: an EU company (Germany's Mühlbauer, Estonia's SK ID
+Solutions) labelled "mixed", and Eurosystem infrastructure (TARGET) treated as non-EU. A High-confidence
+"Dependent" placement is the most quotable claim this project makes; it cannot rest on an unchecked label.
+
+**Alternatives considered.**
+- **Independent review, agreement required (chosen).** Cheap (one agent per state), mechanical to
+  enforce, and it fails safe: a disputed value becomes unknown rather than being corrected by a second
+  unchecked judgement.
+- **Accept the reviewer's value when it differs.** *Why not:* that swaps one unchecked judgement for
+  another, and a reviewer "correcting" towards national would upgrade a state on no stronger evidence.
+- **Keep the labels and fix only the spotted errors.** *Why not:* the spot-check sampled eight of 61;
+  the error rate in the rest is unknown.
+- **Drop categorical judgements entirely and show only quotes.** *Why not:* the ranking (#77) needs the
+  categories; the review makes them defensible.
+- **Human expert review of every label.** *Why not:* the right end state for the published launch
+  (#67), but not available now; agreement between two independent passes is the interim standard,
+  stated as such.
+
+**Closes off.** Publishing a dependency category, and therefore any "Dependent" placement, that only one
+agent asserted.
+
+**Verified:** 2026-09-29. With no reviews staged, `research.py admit` admitted 0 dependency values
+(previously 61). The review run then returned 93 verdicts: 77 agreed, 16 disputed (5 mixed → EU
+provider, 3 mixed → unknown, 1 mixed → non-EU, 4 non-EU → unknown, 3 national → unknown). After
+re-admission: 43 national, 4 EU provider, 2 non-EU provider. The eight High-confidence "Dependent"
+placements fell to one, Ireland, whose two triggers were spot-checked by hand against their sources
+(the electoral register's migration to a Microsoft Azure tenancy; Motorola Solutions' ownership of the
+TETRA network operator).
+
+*Would change if:* a human reviewer with subject expertise takes over admission, or the two-pass
+agreement rate proves so high that sampling would do.

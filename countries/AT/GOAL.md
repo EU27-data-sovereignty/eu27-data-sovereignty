@@ -14,26 +14,24 @@
 
 ## 1. Data-sovereignty placement
 
-> Not demonstrated. Confidence: Low. With the evidence still open, Austria could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
+> Not demonstrated. Confidence: Low. With the evidence still open, Austria could be anywhere from 'Secured in law, not yet in practice' to 'Dependent on non-EU providers'.
 
 Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.
 
 | Indicator | Finding |
 |---|---|
 | Jurisdiction requirement | *Not yet sourced* |
-| Classification in law | *Not yet sourced* |
+| Classification in law | Yes[^s1][^s2] |
 | Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
-| Government cloud in operation | *Not yet sourced* |
+| State-controlled trust anchor | Partly[^s3][^s4] |
+| State-controlled national eID | Yes[^s5][^s6] |
+| Government data centres | Yes[^s7][^s8] |
+| Government cloud in operation | Yes[^s9][^s10] |
 
 What could move this placement:
 
 - If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
-- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
-- If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
+- If any of the 31 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
 
@@ -41,36 +39,36 @@ Austria described on its own measured characteristics. Each figure is the publis
 
 | Indicator | Value |
 |---|---:|
-| Population | 9.20 million[^s1] |
-| GDP, current prices | 514.3 EUR bn[^s2] |
+| Population | 9.20 million[^s11] |
+| GDP, current prices | 514.3 EUR bn[^s12] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 198.6 EUR/MWh[^s3] |
-| Renewables share of electricity | 90.1 %[^s4] |
-| Land area | 82 519 km²[^s5] |
+| Non-household electricity price | 198.6 EUR/MWh[^s13] |
+| Renewables share of electricity | 90.1 %[^s14] |
+| Land area | 82 519 km²[^s15] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Austria cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Austria cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 9 of 39 holding classes have a verified source; 3 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Civil registry core (tier 0) | Zentrales Melderegister (ZMR) - Central Register of Residents[^s16] | Federal Minister of the Interior acts as processor of the ZPR[^s17] | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | No central register[^s18] | — | — | — |
+| Critical | Breeder document scans (tier 0) | Supporting documents underlying civil status entries are kept by the civil status authority that made the entry (decentralised)[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| High | Facial biometric (tier 0) | Central evidence under § 22b Passport Act holds passport/ID card data including the facial image (lit. j) but not fingerprints (lit. k)[^s18] | *Not yet sourced* | National infrastructure[^s18] | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | Elektronischer Identitätsnachweis (E-ID), branded ID Austria[^s6] | Federal Minister of the Interior and the Source PIN Register Authority process E-ID registration data[^s6] | *Not stated in sources* | Over 4.1 million citizens use ID Austria (August 2025)[^s19] |
+| High | Electoral roll entry (tier 0) | Zentrales Wählerregister (ZeWaeR) - Central Voter Register[^s20] | Federal Minister of the Interior acts as processor of ZeWaeR for each municipality[^s20] | *Not stated in sources* | 6,346,059 persons entitled to vote in the 2024 National Council election[^s21] |
+| High | State PKI and qualified trust services (tier 0) | Austrian Country Signing CA (CSCA) operated by the Federal Ministry of the Interior[^s3] | RTR-GmbH compiles and publishes the national trust list[^s22] | *Not stated in sources* | More than 4 million persons use a qualified electronic signature from A-Trust[^s23] |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | Identitätsdokumentenregister (IDR) - Identity Document Register[^s4] | *Not yet sourced* | National infrastructure[^s4] | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Zentrales Fremdenregister - Central Register of Foreigners (BFA-VG § 26)[^s24] | Federal Minister of the Interior acts as processor of the Central Register of Foreigners[^s24] | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -98,15 +96,15 @@ The holdings Austria cannot let depend on infrastructure a foreign state can com
 
 ## 4. Foreign-dependency exposure
 
-Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 8 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
-| National infrastructure | 0 |
+| National infrastructure | 2 |
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 0 |
+| Not stated in sources | 6 |
 
 ## 5. Legal and institutional posture
 
@@ -125,22 +123,13 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 
 ## 6. Capacity
 
-> Not yet sized. Capacity for Austria will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 0 of 39 holding classes have a sourced measurement so far.
+> Not yet sized. Capacity for Austria will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 3 of 39 holding classes have a sourced measurement so far.
 
 ## 7. Research still open
 
 Tier 0 and 1 holdings for Austria without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
-- Civil registry core (tier 0)
-- Facial biometric (tier 0)
-- Fingerprint biometric (tier 0)
-- Breeder document scans (tier 0)
-- Document issuance history (tier 0)
-- Digital identity credentials (tier 0)
 - Authentication audit log (tier 0)
-- Electoral roll entry (tier 0)
-- State PKI and qualified trust services (tier 0)
-- Residence and migration status (tier 1)
 - Tax (tier 1)
 - Customs declarations (tier 1)
 - Benefits & pensions (tier 1)
@@ -168,8 +157,27 @@ Tier 0 and 1 holdings for Austria without a verified source yet. Corrections and
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: Bundeskanzleramt (RIS) 0f896da3e5. Sicherheitspolizeigesetz (SPG), consolidated version, § 55. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005792> ([archived](https://web.archive.org/web/20260208105744/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005792))
+[^s2]: Bundeskanzleramt (RIS) e1710f5636. Informationssicherheitsgesetz (InfoSiG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20001740> ([archived](https://web.archive.org/web/20250823130719/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Gesetzesnummer=20001740&Abfrage=Bundesnormen))
+[^s3]: Bundesministerium für Inneres fdbace9b54. The Austrian Country Signing CA (CSCA). <https://www.bmi.gv.at/downloads/csca.html> ([archived](https://web.archive.org/web/20260608085339/https://www.bmi.gv.at/downloads/csca.html))
+[^s4]: Rechnungshof Österreich 58d5050525, 2023. Umstellung von der Bürgerkarte/Handysignatur auf den elektronischen Identitätsnachweis (E-ID), Reihe Bund 2023/7. <https://www.rechnungshof.gv.at/rh/home/home/2023_7_E-ID.pdf>
+[^s5]: Rechnungshof Österreich a554cc68a2, 2023. Elektronischer Identitätsnachweis: Hohe Abhängigkeit von externen Unternehmen. <https://www.rechnungshof.gv.at/rh/home/news/news/news_3/Umstellung_von_Handysignatur_auf_E-ID.html> ([archived](https://web.archive.org/web/20230331220531/https://www.rechnungshof.gv.at/rh/home/news/news/news_3/Umstellung_von_Handysignatur_auf_E-ID.html))
+[^s6]: Bundeskanzleramt (RIS) 10d2ab61ab. E-Government-Gesetz (E-GovG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230> ([archived](https://web.archive.org/web/20260414095127/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230))
+[^s7]: Bundesrechenzentrum GmbH 79f90b28d7. Was wir tun. <https://www.brz.gv.at/was-wir-tun.html>
+[^s8]: Bundeskanzleramt (RIS) 00e4d18206. Bundesgesetz über die Bundesrechenzentrum GmbH (BRZ-Gesetz), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001466>
+[^s9]: Bundesrechenzentrum GmbH bbd9ff2cbb. Geschäftsfelder. <https://www.brz.gv.at/was-wir-tun/geschaeftsfelder.html> ([archived](https://web.archive.org/web/20250916204831/https://www.brz.gv.at/was-wir-tun/geschaeftsfelder.html))
+[^s10]: Bundesrechenzentrum GmbH d5ebbcabe9. Cloud Storage - BRZ GoverDrive. <https://www.brz.gv.at/was-wir-tun/services-produkte/cloud-storage_brz_goverdrive.html> ([archived](https://web.archive.org/web/20260313144351/https://www.brz.gv.at/was-wir-tun/services-produkte/cloud-storage_brz_goverdrive.html))
+[^s11]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s12]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s13]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s14]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s15]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s16]: Bundeskanzleramt (RIS) 6cd23d2e13. Meldegesetz 1991 (MeldeG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005799>
+[^s17]: Bundeskanzleramt (RIS) e8f950b227. Personenstandsgesetz 2013 (PStG 2013), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008228> ([archived](https://web.archive.org/web/20260407203750/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008228))
+[^s18]: Bundeskanzleramt (RIS) c8de5cda2b. Passgesetz 1992, consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798> ([archived](https://web.archive.org/web/20260123224358/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798))
+[^s19]: Bundeskanzleramt Österreich 87632f6055, 2025-08. Pröll: ID Austria knackt die 4-Millionen-Marke. <https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/2025/08/id-austria-knackt-4-millionen-marke.html> ([archived](https://web.archive.org/web/20260219091143/https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/2025/08/id-austria-knackt-4-millionen-marke.html))
+[^s20]: Bundeskanzleramt (RIS) fcf517edcc. Wählerevidenzgesetz 2018 (WEviG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009720> ([archived](https://web.archive.org/web/20260208002104/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Gesetzesnummer=20009720&Abfrage=Bundesnormen))
+[^s21]: Bundesministerium für Inneres 00cef6f156, 2024. Nationalratswahl 2024. <https://www.bmi.gv.at/412/nationalratswahlen/nationalratswahl_2024/start.html>
+[^s22]: Bundeskanzleramt (RIS) 34350faf1a. Signatur- und Vertrauensdienstegesetz (SVG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009585> ([archived](https://web.archive.org/web/20260211052418/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009585))
+[^s23]: A-Trust GmbH 1f3b1dfe0f. ID Austria | A-Trust. <https://www.a-trust.at/de/produkte/qualifizierte_signaturservices/id_austria/> ([archived](https://web.archive.org/web/20260915130050/https://www.a-trust.at/de/produkte/qualifizierte_signaturservices/id_austria/))
+[^s24]: Bundeskanzleramt (RIS) 3ca87f5339. BFA-Verfahrensgesetz (BFA-VG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20007944> ([archived](https://web.archive.org/web/20260723072308/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20007944))

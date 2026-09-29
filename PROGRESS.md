@@ -16,8 +16,8 @@ pushed**; the private contacts repo likewise. Working tree clean.
 | Own-fundamentals analysis | **Done** (#72) | No country scaled from another; `NoCountryIsDerivedFromAnother` tests |
 | Capacity | **Withdrawn**, not yet sized (#73) | Engine kept; sizing waits for measured holdings |
 | Content model + footnoted outputs | **Done** (#74, #75) | `document.py --check`: 0 unsourced facts; report + 27 country PDFs |
-| Web app | **Rebuilt**, EU theme | 36 Vitest; 19 of 19 Playwright + axe |
-| Data-sovereignty ranking | **Built** (#77); 0 of 189 indicators sourced | `python3 model/sovereignty.py`; all 27 Not demonstrated, Low |
+| Web app | **Rebuilt**, EU theme, /ask added | 43 Vitest; 23 of 23 Playwright + axe |
+| Data-sovereignty ranking | **Evidenced** (#77); 134 of 189 indicators sourced | IE Dependent (High); IT Secured in law; 25 Not demonstrated (Low) |
 | Per-country artefacts | **Done** | 27 posters, hashes in `countries/ARTEFACTS.csv`; Chrome PDFs retired (#76) |
 | Mobile reader | **Done**, local only | 19 Jest tests; never built or deployed |
 | Secret scanning | **Done** | local gate on every commit + gitleaks in CI |
@@ -25,7 +25,7 @@ pushed**; the private contacts repo likewise. Working tree clean.
 | Representation style guides | **Done** | `artifacts/`, 6 files, citations checked by `tests/test_docs.py` |
 | Source verification | **2 of 189 legal cells** | `./run.sh sources` |
 | **Source register** | **138 of 621 parameter cells; 0 of 22 assumptions** | `python3 model/provenance.py` (#67) |
-| **Critical holdings register** | **3 of 1053 pairs** (39 classes); research for all 27 running | `./run.sh registers` (#73) |
+| **Critical holdings register** | **419 of 1053 pairs** verified and admitted; dependency labels reviewed (#79) | `./run.sh registers` (#73) |
 | Institutional map | **25 of 324 pairs** (37 rows) | `python3 model/institutions.py` |
 | Named contacts | **956 rows, 910 people; 850 send-ready** | private repo at `contacts/` (#66) |
 | Paper book | **Scaffolded** | `book/build.py` typesets; ~1.1k of ~20-30k words written |

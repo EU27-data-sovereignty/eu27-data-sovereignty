@@ -1,0 +1,11 @@
+{
+ "iso": "LT",
+ "verdicts": [
+  {
+   "class_id": "digital_identity_credentials",
+   "original": "mixed",
+   "reason": "The evidence shows only national operators (the State Digital Solutions Agency and the Identity Documents Personalisation Centre under the Lithuanian Interior Ministry) and SK ID Solutions AS, an Estonian (EU) company that issues 91.9% of qualified e-signature certificates; there is no non-EU operator, host or data access, so 'mixed' as defined does not apply and the foreign dependency is on an EU provider.",
+   "reviewed": "eu_provider"
+  }
+ ]
+}

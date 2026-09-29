@@ -31,6 +31,22 @@ function firstFact(iso: string): string {
   return fact.t
 }
 
+/** The title of the first source a country page cites, in reading order. */
+function firstSourceTitle(iso: string): string {
+  const doc = BUNDLE.documents[iso]!
+  for (const s of doc.sections)
+    for (const b of s.blocks) {
+      const spans =
+        b.type === 'table' ? b.rows.flat() : b.type === 'list' ? b.items.flat() : b.spans
+      for (const sp of spans)
+        for (const claim of sp.c ?? []) {
+          const cite = BUNDLE.claims[claim]?.[0]
+          if (cite) return BUNDLE.sources[cite.source_id]!.title
+        }
+    }
+  throw new Error(`no cited source on ${iso}`)
+}
+
 const ROUTES = [
   '/',
   '/countries',
@@ -64,7 +80,8 @@ test.describe('data actually renders', () => {
       .first()
       .click()
     await expect(page.locator('#src-1')).toBeVisible()
-    await expect(page.locator('#src-1')).toContainText('Eurostat')
+    // Source 1 is whatever the page cites first: derived from the bundle, never assumed.
+    await expect(page.locator('#src-1')).toContainText(firstSourceTitle('DE'))
   })
 
   test('a value with no checked source is shown as a gap, not a fact', async ({ page }) => {

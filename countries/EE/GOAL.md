@@ -14,25 +14,24 @@
 
 ## 1. Data-sovereignty placement
 
-> Not demonstrated. Confidence: Low. With the evidence still open, Estonia could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
+> Not demonstrated. Confidence: Low. With the evidence still open, Estonia could be anywhere from 'Secured in law, not yet in practice' to 'Dependent on non-EU providers'.
 
 Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.
 
 | Indicator | Finding |
 |---|---|
 | Jurisdiction requirement | *Not yet sourced* |
-| Classification in law | *Not yet sourced* |
+| Classification in law | Yes[^s1][^s2] |
 | Sovereign cloud certification | *Not yet sourced* |
 | State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
-| Government cloud in operation | *Not yet sourced* |
+| State-controlled national eID | Partly[^s3] |
+| Government data centres | Yes[^s4][^s5][^s6] |
+| Government cloud in operation | Yes[^s4][^s7][^s8] |
 
 What could move this placement:
 
 - If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
 - If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
 - If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
@@ -41,23 +40,23 @@ Estonia described on its own measured characteristics. Each figure is the publis
 
 | Indicator | Value |
 |---|---:|
-| Population | 1.37 million[^s1] |
-| GDP, current prices | 41.9 EUR bn[^s2] |
+| Population | 1.37 million[^s9] |
+| GDP, current prices | 41.9 EUR bn[^s10] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 141.0 EUR/MWh[^s3] |
-| Renewables share of electricity | 38.9 %[^s4] |
-| Land area | 43 466 km²[^s5] |
+| Non-household electricity price | 141.0 EUR/MWh[^s11] |
+| Renewables share of electricity | 38.9 %[^s12] |
+| Land area | 43 466 km²[^s13] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Estonia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Estonia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 1 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Facial biometric (tier 0) | Biometric data under the Identity Documents Act are facial image, fingerprints, signature and iris images[^s14] | ABIS controllers are the Police and Border Guard Board and the Ministry of Foreign Affairs[^s14] | *Not stated in sources* | *Not yet measured* |
 | Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
@@ -98,7 +97,7 @@ The holdings Estonia cannot let depend on infrastructure a foreign state can com
 
 ## 4. Foreign-dependency exposure
 
-Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 1 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -106,7 +105,7 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 0 |
+| Not stated in sources | 1 |
 
 ## 5. Legal and institutional posture
 
@@ -132,7 +131,6 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 Tier 0 and 1 holdings for Estonia without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
 - Civil registry core (tier 0)
-- Facial biometric (tier 0)
 - Fingerprint biometric (tier 0)
 - Breeder document scans (tier 0)
 - Document issuance history (tier 0)
@@ -168,8 +166,17 @@ Tier 0 and 1 holdings for Estonia without a verified source yet. Corrections and
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: Välisluureamet – Estonian National Security Authority 3a282e16fe. Korduma kippuvad küsimused (Riigi julgeoleku volitatud esindaja). <https://www.teabeamet.ee/nsa/kkk.html>
+[^s2]: Välisluureamet – Estonian National Security Authority 52cd46756f. Võrdlustabelid. <https://www.teabeamet.ee/nsa/tabelid.html>
+[^s3]: Politsei- ja Piirivalveamet (Police and Border Guard Board) 1d46b67463, 2026-07-17. Certificate Policy for ID-1 format identity documents of the Republic of Estonia (eID CP) v2.0. <https://repository.eidpki.ee/static/documents/eid-cp-v-2.0_04.06.2026_allkirjastatud.pdf>
+[^s4]: Riigikontroll (National Audit Office of Estonia) f0e5603207, 2018-05-14. Eesti riigi kriitiliste andmekogude turvalisuse ja säilitamise tagamine. <https://www.riigikontroll.ee/sites/default/files/arhivaalid/2462/RKTR_2462_2-1.4_2213_001-2.pdf>
+[^s5]: Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv 16c4688e19. Riigipilve tehniline lahendus. <https://www.riigipilv.ee/riigipilvest/riigipilve-tehniline-lahendus>
+[^s6]: Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv 42ee6bff70. Mis saab Riigipilvest eriolukorras?. <https://www.riigipilv.ee/riigipilvest/riigipilvest-kkk/mis-saab-riigipilvest-eriolukorras>
+[^s7]: Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv 8882c59d89. Eesti Riigipilv. <https://www.riigipilv.ee/et>
+[^s8]: Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv ff4d0b6ad2. Tellijad. <https://www.riigipilv.ee/riigipilvest/kliendid> ([archived](https://web.archive.org/web/20260510204636/https://www.riigipilv.ee/riigipilvest/kliendid))
+[^s9]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s10]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s11]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s12]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s13]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s14]: Riigi Teataja 2feeedaf05, 2026-03-13. Isikut tõendavate dokumentide seadus (Internet Archive copy of Riigi Teataja). <https://web.archive.org/web/20260313205329/https://www.riigiteataja.ee/akt/itds>

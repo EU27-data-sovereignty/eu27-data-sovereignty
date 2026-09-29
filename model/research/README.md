@@ -9,6 +9,7 @@ copy (DECISIONS.md #73, #75).
 |---|---|---|
 | `<ISO>.json` | Critical holdings: 39 classes per state, claims with verbatim quotes | Research run 1, 2026-09-29 |
 | `indicators/<ISO>.json` | The seven data-sovereignty indicators (#77), with the reviewer's verdict per value | Research run 2, 2026-09-29 |
+| `dependency_review/<ISO>.json` | An independent reviewer's verdict on every foreign-dependency classification from run 1 (#79) | Review run, 2026-09-29 |
 | `verification.csv` | One row per (state, class or indicator, field, URL): HTTP status, content type, sha256, match result, archived copy | `research.py verify` |
 
 ## How the runs were made
@@ -44,3 +45,13 @@ Outcome of run 2's review: 19 of 189 values changed. After review, 119 are yes, 
 - **Pages that defeat the check.** Pages that render their text with JavaScript, sit behind a login or
   refuse automated requests fail verification even when the quote is genuine. They are recorded as
   failures and stay out.
+
+## Results, 2026-09-29
+
+- **Holdings (run 1).** 2,228 claims; 1,724 passed the quote check (77%). 416 (state, class) holdings
+  admitted.
+  - Failures cluster in two places: pages whose text is rendered by JavaScript (FI, PT, LT, CY) and sites
+    that refused automated requests (LU, LV, RO, IE).
+- **Dependency review (#79).** 93 classifications reviewed, 77 agreed, 16 disputed. Admitted: 43
+  national, 4 EU provider, 2 non-EU provider.
+- **Indicators (run 2).** 288 claims; 240 passed. 134 of 189 indicator values admitted.

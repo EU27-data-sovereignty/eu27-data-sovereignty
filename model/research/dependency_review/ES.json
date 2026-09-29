@@ -1,0 +1,17 @@
+{
+ "iso": "ES",
+ "verdicts": [
+  {
+   "class_id": "digital_identity_credentials",
+   "original": "national",
+   "reason": "The 2014 agreement in the BOE names Spain's state Directorate of ICT as the body responsible for Cl@ve, with the Spanish bodies AEAT and GISS sharing operation; clave.gob.es says the Spanish Directorate-General of the Police issues and holds the signature certificates and GISS keeps the backup copy, and no non-EU host appears in the evidence.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "benefits_pensions",
+   "original": "national",
+   "reason": "The Spanish consolidated Social Security law (BOE-A-2015-11724) gives these systems to Spanish state bodies: TGSS runs contributions, INSS runs benefits, and GISS is the legal common service that manages their ICT; the evidence shows no outside operator or cloud.",
+   "reviewed": "national"
+  }
+ ]
+}

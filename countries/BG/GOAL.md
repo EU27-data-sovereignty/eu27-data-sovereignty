@@ -14,7 +14,7 @@
 
 ## 1. Data-sovereignty placement
 
-> Not demonstrated. Confidence: Low. With the evidence still open, Bulgaria could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
+> Not demonstrated. Confidence: Low. With the evidence still open, Bulgaria could be anywhere from 'Secured in law, not yet in practice' to 'Dependent on non-EU providers'.
 
 Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.
 
@@ -23,17 +23,15 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | Jurisdiction requirement | *Not yet sourced* |
 | Classification in law | *Not yet sourced* |
 | Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | *Not yet sourced* |
-| State-controlled national eID | *Not yet sourced* |
-| Government data centres | *Not yet sourced* |
+| State-controlled trust anchor | Yes[^s1][^s2] |
+| State-controlled national eID | Partly[^s1][^s3] |
+| Government data centres | Yes[^s4] |
 | Government cloud in operation | *Not yet sourced* |
 
 What could move this placement:
 
 - If jurisdiction requirement is found to be yes: Secured in law, not yet in practice.
-- If state-controlled trust anchor is found to be no: Dependent on non-EU providers.
-- If state-controlled national eid is found to be no: Dependent on non-EU providers.
-- If any of the 34 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
+- If any of the 32 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers.
 
 ## 2. Fundamentals
 
@@ -41,72 +39,72 @@ Bulgaria described on its own measured characteristics. Each figure is the publi
 
 | Indicator | Value |
 |---|---:|
-| Population | 6.44 million[^s1] |
-| GDP, current prices | 116.0 EUR bn[^s2] |
+| Population | 6.44 million[^s5] |
+| GDP, current prices | 116.0 EUR bn[^s6] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 141.3 EUR/MWh[^s3] |
-| Renewables share of electricity | 33.8 %[^s4] |
-| Land area | 110 001 km²[^s5] |
+| Non-household electricity price | 141.3 EUR/MWh[^s7] |
+| Renewables share of electricity | 33.8 %[^s8] |
+| Land area | 110 001 km²[^s9] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Bulgaria cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 0 of 39 holding classes have a verified source; 0 have a sourced record count or data size.
+The holdings Bulgaria cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 25 of 39 holding classes have a verified source; 1 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
+| Critical | Facial biometric (tier 0) | National Register of Bulgarian Identity Documents, built on the automated information funds of the Bulgarian Identity Documents Act (Art. 65(3))[^s10] | Identity documents are issued by the Ministry of Interior, Ministry of Foreign Affairs, Ministry of Transport and Communications and Ministry of Defence[^s10] | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | National Register of Bulgarian Identity Documents (automated information fund)[^s10] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | National Electronic Register of Civil Status Acts (birth, marriage, death acts) formed from the electronic equivalents of the acts (Civil Registration Act, Art. 41(5))[^s11] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | All operations on the register of electronic identifiers are recorded in an event log protected cryptographically (Art. 4(4)-(5))[^s12] | *Not yet sourced* | *Not stated in sources* | Verification records are kept for 10 years (Art. 23(2)); retention period, not a record count[^s12] |
+| High | Document issuance history (tier 0) | The identity-document information funds also hold previous values of personal data from documents and applications (Bulgarian Identity Documents Act, Art. 65(1)(2))[^s10] | From 27 April 2026 the Ministry of Interior moved to centralised personalisation and a new generation of identity documents[^s13] | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | Register of electronic identifiers linking each eID identifier to the unified civil identifier (Rules for the Electronic Identification Act, Art. 3(1))[^s12] | Access to the register is granted to persons designated by order of the Minister of Interior (MVR runs the register)[^s12] | *Not stated in sources* | *Not yet measured* |
 | High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | State PKI and qualified trust services (tier 0) | The Communications Regulation Commission creates, maintains and publishes the national Trusted List[^s1] | Qualified trust service providers on the Bulgarian Trusted List: Borica AD, Evrotrust Technologies AD, InfoNotary EAD, Information Services AD and Idocs Bulgaria EOOD[^s1] | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | The Ministry of Justice creates and maintains the Centralised Automated Information System "Court Status" with a central database (Ordinance No 8/2008)[^s14] | Criminal-record bureaus at every district court and a Central Criminal Records Bureau at the Ministry of Justice[^s14] | *Not stated in sources* | *Not yet measured* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | A separate information fund holds coercive measures linked to identity documents and residence permits of foreigners (Art. 66(2))[^s10] | Migration Directorate of MVR and Migration units of the regional MVR directorates (Foreigners in the Republic of Bulgaria Act)[^s15] | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Tax and Social Security Procedure Code: NRA creates and maintains the register and databases of obliged persons[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | The new Customs Import Information System (MISV) went into production on 26.11.2018[^s17] | Customs decisions are issued by the Director of the Customs Agency or heads of customs offices (Customs Act, Art. 19 as amended 2016)[^s18] | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | NSSI maintains the information system on pensions, benefits and allowances paid (Social Security Code, Art. 33)[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | Health Insurance Act, Art. 63(1): NHIF builds an information system containing the register of insured persons[^s20] | Providers check health-insurance status against NRA data (Health Insurance Act, Art. 50)[^s20] | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | AGCC creates and maintains the cadastral map and cadastral registers for the whole country under the Cadastre and Property Register Act[^s21] | The Registry Agency (executive agency under the Minister of Justice) keeps the property register, commercial register, BULSTAT and other registers[^s22] | National infrastructure[^s22] | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | The software change enabling beneficial-owner entries went live on 28.01.2019[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Firearms register (tier 1) | Weapons Act, Art. 11(1): MVR builds and maintains a unified automated register[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | SEBRA (System for Electronic Budget Payments) is used to initiate payments of budget organisations[^s24] | BORICA AD transforms approved SEBRA payments into ISO 20022 XML[^s24] | *Not stated in sources* | *Not yet measured* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Crisis management and civil protection (tier 1) | BG-ALERT public warning system over mobile networks (Cell Broadcast)[^s25] | Developed jointly by MVR and the Ministry of e-Government[^s25] | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Project to modernise and extend the SCADA/EMS and information environment in ESO's Central Dispatch (CDU)[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
+| High | Education (tier 1) | Register of all current, interrupted and graduated students and doctoral candidates, kept as an electronic database through NACID[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | The NHIS holds an electronic health record for every citizen[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Business registry (tier 1) | The Commercial Register and Register of Non-Profit Legal Entities is a common electronic database[^s22] | *Not yet sourced* | National infrastructure[^s22] | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | The State Gazette website provides the full content of all issues for the last 7 years in PDF (EU N-Lex description)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | 2021 Population and Housing Census, the 18th in Bulgaria (census site of the National Statistical Institute)[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | AGCC creates and maintains the topographic databases and the geo-information system[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 0 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 25 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
-| National infrastructure | 0 |
+| National infrastructure | 2 |
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 0 |
+| Not stated in sources | 23 |
 
 ## 5. Legal and institutional posture
 
@@ -125,51 +123,54 @@ Of the 0 verified holdings, how many sources state where the infrastructure is o
 
 ## 6. Capacity
 
-> Not yet sized. Capacity for Bulgaria will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 0 of 39 holding classes have a sourced measurement so far.
+> Not yet sized. Capacity for Bulgaria will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 1 of 39 holding classes have a sourced measurement so far.
 
 ## 7. Research still open
 
 Tier 0 and 1 holdings for Bulgaria without a verified source yet. Corrections and sources are welcome through the repository's issue template.
 
 - Civil registry core (tier 0)
-- Facial biometric (tier 0)
-- Fingerprint biometric (tier 0)
-- Breeder document scans (tier 0)
-- Document issuance history (tier 0)
-- Digital identity credentials (tier 0)
-- Authentication audit log (tier 0)
 - Electoral roll entry (tier 0)
-- State PKI and qualified trust services (tier 0)
-- Residence and migration status (tier 1)
-- Tax (tier 1)
-- Customs declarations (tier 1)
-- Benefits & pensions (tier 1)
-- Statutory health insurance (tier 1)
-- Land & property registry (tier 1)
-- Business registry (tier 1)
-- Beneficial ownership register (tier 1)
 - Vehicle & licensing (tier 1)
-- Judicial & criminal justice (tier 1)
 - Police information systems (tier 1)
 - Border and visa systems (tier 1)
-- Firearms register (tier 1)
-- Official gazette and legislation (tier 1)
-- Treasury and state accounts (tier 1)
 - Government payroll and personnel (tier 1)
 - Election management and results (tier 1)
 - Central bank systems (tier 1)
 - Defence command and logistics (tier 1)
 - Intelligence services (tier 1)
 - Emergency calls and public-safety radio (tier 1)
-- Crisis management and civil protection (tier 1)
-- Electricity grid control (tier 1)
 - Water management control (tier 1)
-- Education (tier 1)
 
 ---
 
-[^s1]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s2]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s3]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s4]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s5]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s1]: Комисия за регулиране на съобщенията 091930d4a9. Електронни удостоверителни услуги. <https://crc.bg/bg/rubriki/560/elektronni-udostoveritelni-uslugi>
+[^s2]: Информационно обслужване АД 58846edda3, 2025. Информационно обслужване АД – Доклад за дейността 2024 (Annual activity report 2024). <https://www.is-bg.net/upload/4944/IS_2024_%D0%94%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%20%D0%B7%D0%B0%20%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D1%82%D0%B0.pdf>
+[^s3]: Вестник „Сега“ 893a8ce07a, 2026-09-19. Отпада едно от безумията за личните карти с чип. <https://www.segabg.com/hot/category-consult/otpada-edno-bezumiyata-za-lichnite-karti-chip> ([archived](https://web.archive.org/web/20260925122111/https://www.segabg.com/hot/category-consult/otpada-edno-bezumiyata-za-lichnite-karti-chip))
+[^s4]: Информационно обслужване АД 54686f3c44. Инфраструктура. <https://www.is-bg.net/bg/solutions/infrastructure>
+[^s5]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s6]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s7]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s8]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s9]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s10]: Държавна агенция за бежанците (копие на закона) e0e9f32faa, 2024. Закон за българските лични документи (консолидиран текст). <https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf> ([archived](https://web.archive.org/web/20260315085009/https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf))
+[^s11]: Агенция за социално подпомагане (копие на закона) ddac6f9091. Закон за гражданската регистрация (консолидиран текст). <https://asp.government.bg/uploaded/files/4390-Zakon-za-grazhdanskata-registratsiya.pdf> ([archived](https://web.archive.org/web/20240824063329/https://asp.government.bg/uploaded/files/4390-Zakon-za-grazhdanskata-registratsiya.pdf))
+[^s12]: Министерство на транспорта и съобщенията (копие на правилника) c645e7ccb8, 2017. Правилник за прилагане на Закона за електронната идентификация. <https://www.mtc.government.bg/sites/default/files/pravilnik_za_prilagane_na_zakona_za_elektronnata_identifikaciq.pdf> ([archived](https://web.archive.org/web/20240719053301/https://www.mtc.government.bg/sites/default/files/pravilnik_za_prilagane_na_zakona_za_elektronnata_identifikaciq.pdf))
+[^s13]: Министерство на вътрешните работи – ОДМВР София d9551e4bf5, 2026-04-27. Въвеждане на ново поколение български лични документи. <https://mvr.bg/sofia/%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B5%D0%BD-%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BF%D1%80%D0%B5%D1%81%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/90242> ([archived](https://web.archive.org/web/20260427064743/https://mvr.bg/sofia/%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B5%D0%BD-%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BF%D1%80%D0%B5%D1%81%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/90242))
+[^s14]: Комисия за финансов надзор (копие на наредбата, актуално към 01.01.2022) 89bd0a8b2c, 2022. Наредба № 8 от 26.02.2008 г. за функциите и организацията на дейността на бюрата за съдимост. <https://www.fsc.bg/wp-content/uploads/2021/files/31563_file.pdf> ([archived](https://web.archive.org/web/20240909150602/https://www.fsc.bg/wp-content/uploads/2021/files/31563_file.pdf))
+[^s15]: Министерство на външните работи (копие на закона) 08f16f5315. Закон за чужденците в Република България. <https://www.mfa.bg/upload/138160/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%87%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D1%82%D0%B5%20%D0%B2%20%D0%A0%D0%B5%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F.pdf>
+[^s16]: Министерство на вътрешните работи (копие на кодекса) ea36347ddb. Данъчно-осигурителен процесуален кодекс. <https://www.mvr.bg/upload/296043/%D0%94%D0%9E%D0%9F%D0%9A.pdf>
+[^s17]: Българска търговско-промишлена палата – Инфобизнес 291b25fe05, 2018-11-26. Въвеждане в реална експлоатация на нова Митническа информационна система за внасяне (МИСВ) на Агенция „Митници“. <https://www.infobusiness.bcci.bg/customs-26-11-18.html>
+[^s18]: Народно събрание – Държавен вестник 8b19398fb2, 2016-07-26. Закон за изменение и допълнение на Закона за митниците, ДВ бр. 58 от 26.7.2016 г.. <https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=105827>
+[^s19]: Министерство на труда и социалната политика 9d6dc1d5f6, 2024. Кодекс за социално осигуряване (консолидиран текст). <https://www.mlsp.government.bg/uploads/37/politiki/trud/zakonodatelstvo/2024/kso24.pdf> ([archived](https://web.archive.org/web/20250620210432/https://www.mlsp.government.bg/uploads/37/politiki/trud/zakonodatelstvo/2024/kso24.pdf))
+[^s20]: Национална здравноосигурителна каса (копие на закона) f33b858438. Закон за здравното осигуряване. <https://www.nhif.bg/upload/32277/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BD%D0%BE%D1%82%D0%BE%20%D0%BE%D1%81%D0%B8%D0%B3%D1%83%D1%80%D1%8F%D0%B2%D0%B0%D0%BD%D0%B5.pdf>
+[^s21]: Агенция по геодезия, картография и кадастър efb0bf607b. Функции на АГКК. <https://www.cadastre.bg/funkcii-na-agkk>
+[^s22]: Сметна палата на Република България 2b62662464, 2021-08-05. Одитен доклад № 0300101019 – Ефективност на организацията и контрола на дейностите по водене и съхраняване на поддържаните от Агенцията по вписванията регистри. <https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf> ([archived](https://web.archive.org/web/20250714123738/https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf))
+[^s23]: Министерство на външните работи b0be806a0f. Закон за оръжията, боеприпасите, взривните вещества и пиротехническите изделия (двуезично издание). <https://www.mfa.bg/upload/762/10-ZOBVVPI-bg-en.pdf> ([archived](https://web.archive.org/web/20250623235848/https://www.mfa.bg/upload/762/10-ZOBVVPI-bg-en.pdf))
+[^s24]: Министерство на финансите – дирекция „Държавно съкровище“ (публикувано от БНБ) dec1629802, 2023-05-03. ДДС № 03/03.05.2023 г. – Изисквания за структурата, формата и съдържанието на платежни документи ... чрез СЕБРА. <https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/instructions_bnb_51681_bg.pdf> ([archived](https://web.archive.org/web/20250527084951/https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/instructions_bnb_51681_bg.pdf))
+[^s25]: Вестник „Сега“ 0f370dfeb5, 2026-01-07. МВР ще издирва бандити чрез BG-ALERT. <https://www.segabg.com/hot/category-bulgaria/mvr-shte-izdirva-banditi-chrez-bg-alert> ([archived](https://web.archive.org/web/20260122112807/https://www.segabg.com/hot/category-bulgaria/mvr-shte-izdirva-banditi-chrez-bg-alert))
+[^s26]: Електроенергиен системен оператор ЕАД 105eef5475, 2016-01-20. Модернизация и Разширение на Системата SCADA/EMS и Информационната среда в ЦДУ на ЕСО – предварително обявление. <https://www.eso.bg/fileObj.php?oid=131>
+[^s27]: НАЦИД c51a61dcf1. Регистър на студенти и докторанти. <https://nacid.bg/bg/register_rdpzsd/>
+[^s28]: Национална здравноосигурителна каса (копие на закона) 5d73db1b8c. Закон за здравето. <https://www.nhif.bg/upload/30458/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%B5%D1%82%D0%BE.pdf>
+[^s29]: Европейска комисия / Службата за публикации на ЕС (N-Lex) 7377e8ce80. За националната база данни – България. <https://n-lex.europa.eu/n-lex/info/info-bg/index?lang=bg> ([archived](https://web.archive.org/web/20250629165146/https://n-lex.europa.eu/n-lex/info/info-bg/index?lang=bg))
+[^s30]: Национален статистически институт 55620fe11f. Преброяване 2021. <https://census2021.bg/> ([archived](https://web.archive.org/web/20260717163802/https://census2021.bg/))

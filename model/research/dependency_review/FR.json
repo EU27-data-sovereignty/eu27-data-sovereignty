@@ -1,0 +1,35 @@
+{
+ "iso": "FR",
+ "verdicts": [
+  {
+   "class_id": "central_bank",
+   "original": "mixed",
+   "reason": "The evidence names only Banque de France (French state body), which runs the national component, and the Eurosystem, which operates the T2S platform and counts as EU; nothing shows any non-EU operator, host or data access, so 'mixed' is not supported, and the shared platforms depend on the Eurosystem.",
+   "reviewed": "eu_provider"
+  },
+  {
+   "class_id": "defence_command",
+   "original": "national",
+   "reason": "The Senate report says the DGA (French Ministry of the Armed Forces) awarded Artemis to Atos-Bull, Capgemini and Thales-Sopra Steria, all headquartered in France, with no non-EU party mentioned.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "intelligence",
+   "original": "non_eu_provider",
+   "reason": "The Senate report says only that DGSI 'acquired the service offered by' Palantir (US), not that Palantir hosts, operates or can access the data; the second part of the holding, DRSD's SIRCID, is described in the same report as a national solution contracted to Airbus Defence & Space, so the evidence does not establish a category for the holding.",
+   "reviewed": "unknown"
+  },
+  {
+   "class_id": "statistics_microdata",
+   "original": "national",
+   "reason": "CASD is a French public-interest group (State via INSEE, GENES, CNRS, Ecole polytechnique, HEC Paris, Banque de France) that designed its own dedicated secure equipment, and no foreign party appears.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "national_archives",
+   "original": "national",
+   "reason": "VaS data is stored on tape run by INA and on Nubo, the State's sovereign cloud run by DGFiP (both French state bodies), with no foreign host shown.",
+   "reviewed": "national"
+  }
+ ]
+}

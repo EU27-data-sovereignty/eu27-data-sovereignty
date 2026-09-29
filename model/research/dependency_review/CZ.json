@@ -1,0 +1,11 @@
+{
+ "iso": "CZ",
+ "verdicts": [
+  {
+   "class_id": "public_finance",
+   "original": "national",
+   "reason": "The evidence shows IISSP is hosted in the Secure Data Centre service, which the Czech Ministry of Finance awarded directly for 2021–2025 to its own state enterprise, Státní pokladna Centrum sdílených služeb (SPCSS, Czech Republic). Nothing in the evidence shows a non-EU operator or host, or non-EU data access.",
+   "reviewed": "national"
+  }
+ ]
+}

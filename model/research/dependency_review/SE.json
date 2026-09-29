@@ -1,0 +1,29 @@
+{
+ "iso": "SE",
+ "verdicts": [
+  {
+   "class_id": "electoral_roll",
+   "original": "national",
+   "reason": "Valmyndigheten's election IT support, in which the roll is produced, is operated, developed and monitored by Skatteverket (Swedish state agency), and the evidence names no outside provider.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "vehicle_licensing",
+   "original": "non_eu_provider",
+   "reason": "The evidence shows IBM Svenska AB (US-controlled IBM) running the road traffic register under the 2015 outsourcing contract, but that describes the 2015-2017 arrangement. Transportstyrelsen later moved its IT operations back in-house after the 2017 scandal, and nothing in the evidence establishes who runs it today.",
+   "reviewed": "unknown"
+  },
+  {
+   "class_id": "electoral_management",
+   "original": "national",
+   "reason": "Valmyndigheten's election administration IT is operated by Skatteverket (Swedish state agency) on its behalf.",
+   "reviewed": "national"
+  },
+  {
+   "class_id": "central_bank",
+   "original": "eu_provider",
+   "reason": "RIX-INST runs on the Eurosystem's TIPS platform (EU), and RIX-RTGS is still operated by Sveriges riksbank (a move to T2 is only planned), so the only outside dependency is EU and none is non-EU.",
+   "reviewed": "eu_provider"
+  }
+ ]
+}

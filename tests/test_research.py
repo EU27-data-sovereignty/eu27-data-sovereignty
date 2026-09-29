@@ -51,6 +51,23 @@ class Matching(unittest.TestCase):
         self.assertEqual(research.match("BMG", self.text()), "too_short")
 
 
+class ArchivedCopies(unittest.TestCase):
+    def test_a_snapshot_of_the_same_url_is_accepted(self):
+        self.assertTrue(research.snapshot_matches(
+            "https://web.archive.org/web/20250626022512/https://www.mfa.bg/upload/x.pdf",
+            "https://www.mfa.bg/upload/x.pdf"))
+
+    def test_a_snapshot_with_userinfo_in_the_host_is_rejected(self):
+        """It happened: the archive answered with .../https://crisis@mfa.bg/..., a different URL."""
+        self.assertFalse(research.snapshot_matches(
+            "https://web.archive.org/web/20250626022512/https://crisis@mfa.bg/upload/x.pdf",
+            "https://www.mfa.bg/upload/x.pdf"))
+
+    def test_a_snapshot_of_another_host_is_rejected(self):
+        self.assertFalse(research.snapshot_matches(
+            "https://web.archive.org/web/2025/https://example.org/x", "https://www.mfa.bg/x"))
+
+
 class SourceIds(unittest.TestCase):
     def test_source_ids_satisfy_the_registry_grammar(self):
         import provenance

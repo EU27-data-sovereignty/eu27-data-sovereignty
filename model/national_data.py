@@ -236,8 +236,8 @@ def validate(rows: list[dict[str, str]]) -> list[str]:
         if r["foreign_dependency"] and r["foreign_dependency"] not in FOREIGN_DEPENDENCY:
             errors.append(f"{where}: foreign_dependency must be one of {FOREIGN_DEPENDENCY}")
 
-        if not r["holder"].strip():
-            errors.append(f"{where}: holder is empty")
+        # The operator is its own cited claim (#73): empty means "not yet sourced", which the
+        # renderers show as a gap. A not-held row has no operator by definition.
         for field in ("holder_url", "url"):
             if not r[field].startswith("https://"):
                 errors.append(f"{where}: {field} is not an https URL")
