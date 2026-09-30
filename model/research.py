@@ -385,6 +385,14 @@ def admit() -> int:
             admitted += 1
 
     indicator_rows = admit_indicators(ok, reg, cites)
+    # A source whose every citation was withdrawn (a review that did not agree) stays in the registry
+    # as a record that it was consulted, marked unused rather than deleted.
+    cited = {c["source_id"] for c in cites.values()}
+    withdrawn = [sid for sid, r in reg.items() if sid not in cited and r["doc_type"] != "unused"]
+    for sid in withdrawn:
+        reg[sid]["doc_type"] = "unused"
+    if withdrawn:
+        print(f"{len(withdrawn)} sources no longer cited, marked unused: {', '.join(sorted(withdrawn))}")
     provenance.write_registry(reg)
     provenance.write_citations(list(cites.values()))
     nd.write_rows(list(rows.values()))
@@ -419,10 +427,19 @@ def register_source(reg: dict, c: dict, v: dict) -> str:
     return sid
 
 
+def agreed(ind: dict) -> bool:
+    """Did the independent reviewer reach the staged value on its own (#79)?"""
+    review = ind.get("review") or {}
+    return review.get("original") == review.get("reviewed") == ind.get("value")
+
+
 def admit_indicators(ok: dict, reg: dict, cites: dict) -> int:
     """Verified indicator claims -> sovereignty_indicators.csv and indicator:<ISO>:<id> citations.
 
-    A value is admitted when at least one of its claims verified. A 'no' is an absence claim and is
+    A value is admitted when at least one of its claims verified and the independent review agreed
+    with it exactly (#79, enforced here since #82): the agent's original value, the reviewer's value and
+    the staged value are the same. A reviewer's changed value is never admitted in the agent's place;
+    it makes the value unknown, and its citations are withdrawn. A 'no' is an absence claim and is
     recorded with confidence 'absence', like a not-held register (#58)."""
     values: dict[tuple[str, str], str] = {}
     if INDICATOR_VALUES.exists():
@@ -431,6 +448,11 @@ def admit_indicators(ok: dict, reg: dict, cites: dict) -> int:
     for iso, doc in staged(None, INDICATOR_STAGING).items():
         for ind in doc.get("indicators", []):
             if ind.get("value") not in ("yes", "partial", "no"):
+                continue
+            if not agreed(ind):
+                values.pop((iso, ind["id"]), None)
+                for key in [k for k in cites if k[0] == f"indicator:{iso}:{ind['id']}"]:
+                    del cites[key]
                 continue
             good = [(c, ok[(iso, f"indicator:{ind['id']}", "indicator", clean_url(c["url"]))])
                     for c in ind.get("claims", [])

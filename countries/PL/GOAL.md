@@ -27,8 +27,8 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | Sovereign cloud certification | *Not yet sourced* |
 | State-controlled trust anchor | Yes[^s2][^s3] |
 | State-controlled national eID | Yes[^s4][^s5] |
-| Government data centres | Partly[^s6][^s7][^s8] |
-| Government cloud in operation | Yes[^s6][^s9][^s10] |
+| Government data centres | *Not yet sourced* |
+| Government cloud in operation | Yes[^s6][^s7][^s8] |
 
 What could move this placement:
 
@@ -41,12 +41,12 @@ Poland described on its own measured characteristics. Each figure is the publish
 
 | Indicator | Value |
 |---|---:|
-| Population | 36.50 million[^s11] |
-| GDP, current prices | 922.9 EUR bn[^s12] |
-| Public administration employment (NACE O) | 1 214.6 thousand[^s13] |
-| Non-household electricity price | 193.5 EUR/MWh[^s14] |
-| Renewables share of electricity | 30.4 %[^s15] |
-| Land area | 307 236 km²[^s16] |
+| Population | 36.50 million[^s9] |
+| GDP, current prices | 922.9 EUR bn[^s10] |
+| Public administration employment (NACE O) | 1 214.6 thousand[^s11] |
+| Non-household electricity price | 193.5 EUR/MWh[^s12] |
+| Renewables share of electricity | 30.4 %[^s13] |
+| Land area | 307 236 km²[^s14] |
 
 ## 3. Critical data holdings, by priority
 
@@ -58,11 +58,11 @@ The holdings Poland cannot let depend on infrastructure a foreign state can comp
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Facial biometric (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | No central register[^s17] | — | — | — |
+| Critical | Fingerprint biometric (tier 0) | No central register[^s15] | — | — | — |
 | Critical | Breeder document scans (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Document issuance history (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | Profil Zaufany is an electronic identification means notified at assurance level substantial[^s18] | The digital affairs minister manages the public electronic identification system (Art. 20ab, Act on Computerisation of Public Task Entities)[^s19] | *Not stated in sources* | Over 14 million active trusted profiles; over 27 million mObywatel app downloads[^s20] |
+| High | Digital identity credentials (tier 0) | Profil Zaufany is an electronic identification means notified at assurance level substantial[^s16] | The digital affairs minister manages the public electronic identification system (Art. 20ab, Act on Computerisation of Public Task Entities)[^s17] | *Not stated in sources* | Over 14 million active trusted profiles; over 27 million mObywatel app downloads[^s18] |
 | High | Electoral roll entry (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -71,13 +71,13 @@ The holdings Poland cannot let depend on infrastructure a foreign state can comp
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Tax (tier 1) | Tax identification numbers (NIP) are assigned via the Central Register of Entities – National Taxpayer Records (CRP KEP)[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | PUESC is the ICT system for electronic exchange between KAS and its clients, including declarations[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | ZUS also keeps the Central Register of Insured Persons, of Contribution Payers and of Open Pension Fund Members[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Tax identification numbers (NIP) are assigned via the Central Register of Entities – National Taxpayer Records (CRP KEP)[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | PUESC is the ICT system for electronic exchange between KAS and its clients, including declarations[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | ZUS also keeps the Central Register of Insured Persons, of Contribution Payers and of Open Pension Fund Members[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | CEIDG (sole-trader business register) is kept in an ICT system by the economy minister[^s24] | The Minister of Justice maintains the ICT system used to keep the KRS (Art. 3a)[^s25] | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | CEIDG (sole-trader business register) is kept in an ICT system by the economy minister[^s22] | The Minister of Justice maintains the ICT system used to keep the KRS (Art. 3a)[^s23] | *Not stated in sources* | *Not yet measured* |
 | High | Beneficial ownership register (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | CEPiK holds data on all vehicles, drivers and driving entitlements[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | CEPiK holds data on all vehicles, drivers and driving entitlements[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Treasury and state accounts (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
@@ -85,16 +85,16 @@ The holdings Poland cannot let depend on infrastructure a foreign state can comp
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | Council of Ministers regulation on cooperation of the RCB director with mobile network operators to warn end users (Alert RCB)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Council of Ministers regulation on cooperation of the RCB director with mobile network operators to warn end users (Alert RCB)[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Education (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | *Not yet sourced* | Administrator of P1 is a unit subordinate to the health minister competent for health information systems[^s28] | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | *Not yet sourced* | Administrator of P1 is a unit subordinate to the health minister competent for health information systems[^s26] | *Not stated in sources* | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | *Not yet sourced* | The health minister designates the register's system administrator from subordinate or supervised units[^s29] | *Not stated in sources* | *Not yet measured* |
-| Standard | National archives (digital) (tier 3) | Archival materials expressly include electronic documents[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | *Not yet sourced* | The health minister designates the register's system administrator from subordinate or supervised units[^s27] | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | Archival materials expressly include electronic documents[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | State register of boundaries, integrated with the land and building cadastre and the register of localities, streets and addresses[^s31] | Geodetic and Cartographic Law Art. 7a: the Surveyor General keeps the central geodetic and cartographic resource[^s31] | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | State register of boundaries, integrated with the land and building cadastre and the register of localities, streets and addresses[^s29] | Geodetic and Cartographic Law Art. 7a: the Surveyor General keeps the central geodetic and cartographic resource[^s29] | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -159,28 +159,28 @@ Tier 0 and 1 holdings for Poland without a verified source yet. Corrections and 
 [^s4]: Centralny Ośrodek Informatyki — Profil zaufany. Profil zaufany. <https://coi.gov.pl/realizacje/profil-zaufany>
 [^s5]: Ministerstwo Cyfryzacji — Profil zaufany. Profil zaufany. <https://www.gov.pl/web/cyfryzacja/profil-zaufany> ([archived](https://web.archive.org/web/20260927131122/https://www.gov.pl/web/cyfryzacja/profil-zaufany))
 [^s6]: Centralny Ośrodek Informatyki — Wspólna Infrastruktura Informatyczna Państwa. Wspólna Infrastruktura Informatyczna Państwa. <https://coi.gov.pl/realizacje/wspolna-infrastruktura-informatyczna-panstwa>
-[^s7]: Centralny Ośrodek Informatyki — Elektroniczne Zarządzanie Dokumentacją w Rządowej…. Elektroniczne Zarządzanie Dokumentacją w Rządowej Chmurze Obliczeniowej. <https://coi.gov.pl/realizacje/ekosystem-e-uslug>
-[^s8]: Ministerstwo Cyfryzacji — Wieloletni Program „Krajowe Centrum Przetwarzania Danych…. Wieloletni Program „Krajowe Centrum Przetwarzania Danych (KCPD)” Etap I. <https://www.gov.pl/web/cyfryzacja/wieloletni-program-krajowe-centrum-przetwarzania-danych-kcpd-etap-i--wsparcie-procesu-przygotowania-projektu>
-[^s9]: Centralny Ośrodek Informatyki — EZD RP w modelu SaaS - jak COI buduje technologiczne…. EZD RP w modelu SaaS - jak COI buduje technologiczne zaplecze cyfrowej administracji. <https://coi.gov.pl/strefa-wiedzy/wpis/ezd-rp-w-modelu-saas-jak-coi-buduje-technologiczne-zaplecze-cyfrowej-administracji>
-[^s10]: Ministerstwo Cyfryzacji — Strategia Cyfryzacji Państwa. Strategia Cyfryzacji Państwa. <https://www.gov.pl/web/cyfryzacja/strategia-cyfryzacji-panstwa> ([archived](https://web.archive.org/web/20260927055032/https://www.gov.pl/web/cyfryzacja/strategia-cyfryzacji-panstwa))
-[^s11]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s12]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s13]: Eurostat nama_10_a64_e, 2023. National accounts employment data by industry (up to NACE A*64). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_e/default/table>
-[^s14]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s15]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s16]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
-[^s17]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2025-12-10. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o dowodach osobistych (Dz.U. 2025 poz. 1753). <https://api.sejm.gov.pl/eli/acts/DU/2025/1753/text.pdf>
-[^s18]: Centralny Ośrodek Informatyki — Profil zaufany, 2026-05-26. Profil zaufany. <https://www.coi.gov.pl/realizacje/profil-zaufany> ([archived](https://web.archive.org/web/20260726144422/https://www.coi.gov.pl/realizacje/profil-zaufany))
-[^s19]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-09-23. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o informatyzacji działalności podmiotów realizujących zadania publiczne (Dz.U. 2026 poz. 1241). <https://api.sejm.gov.pl/eli/acts/DU/2026/1241/text.pdf>
-[^s20]: Centralny Ośrodek Informatyki — COI – Corporation (English version). COI – Corporation (English version). <https://www.coi.gov.pl/corporation> ([archived](https://web.archive.org/web/20260814170237/https://www.coi.gov.pl/corporation))
-[^s21]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-02-10. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o zasadach ewidencji i identyfikacji podatników i płatników (Dz.U. 2026 poz. 151). <https://api.sejm.gov.pl/eli/acts/DU/2026/151/text.pdf>
-[^s22]: Ministerstwo Finansów / Krajowa Administracja Skarbowa — Jak to działa – informacje o PUESC. Jak to działa – informacje o PUESC. <https://puesc.gov.pl/web/guest/uslugi/jak-to-dziala-informacje-o-puesc> ([archived](https://web.archive.org/web/20260716090913/https://puesc.gov.pl/web/guest/uslugi/jak-to-dziala-informacje-o-puesc))
-[^s23]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-02-23. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o systemie ubezpieczeń społecznych (Dz.U. 2026 poz. 199). <https://api.sejm.gov.pl/eli/acts/DU/2026/199/text.pdf>
-[^s24]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-01-12. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o CEIDG i Punkcie Informacji dla Przedsiębiorcy (Dz.U. 2026 poz. 30). <https://api.sejm.gov.pl/eli/acts/DU/2026/30/text.pdf>
-[^s25]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2025-07-02. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o Krajowym Rejestrze Sądowym (Dz.U. 2025 poz. 869). <https://api.sejm.gov.pl/eli/acts/DU/2025/869/text.pdf> ([archived](https://web.archive.org/web/20250915063449/https://api.sejm.gov.pl/eli/acts/DU/2025/869/text.pdf))
-[^s26]: Centralny Ośrodek Informatyki — Centralna Ewidencja Pojazdów i Kierowców, 2026-02-27. Centralna Ewidencja Pojazdów i Kierowców. <https://www.coi.gov.pl/realizacje/cepik> ([archived](https://web.archive.org/web/20260726144422/https://www.coi.gov.pl/realizacje/cepik))
-[^s27]: Rada Ministrów / Dziennik Ustaw — Rozporządzenie Rady Ministrów z dnia 31 sierpnia 2020 r.…, 2020. Rozporządzenie Rady Ministrów z dnia 31 sierpnia 2020 r. w sprawie współpracy dyrektora RCB z operatorem ruchomej publicznej sieci telekomunikacyjnej (Dz.U. 2020 poz. 1527). <https://api.sejm.gov.pl/eli/acts/DU/2020/1527/text.pdf> ([archived](https://web.archive.org/web/20260118083917/https://api.sejm.gov.pl/eli/acts/DU/2020/1527/text.pdf))
-[^s28]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-02-24. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o systemie informacji w ochronie zdrowia (Dz.U. 2026 poz. 208). <https://api.sejm.gov.pl/eli/acts/DU/2026/208/text.pdf>
-[^s29]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2025-12-02. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o zapobieganiu oraz zwalczaniu zakażeń i chorób zakaźnych u ludzi (Dz.U. 2025 poz. 1675). <https://api.sejm.gov.pl/eli/acts/DU/2025/1675/text.pdf>
-[^s30]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2020-02-03. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o narodowym zasobie archiwalnym i archiwach (Dz.U. 2020 poz. 164). <https://api.sejm.gov.pl/eli/acts/DU/2020/164/text.html> ([archived](https://web.archive.org/web/20260307211347/https://api.sejm.gov.pl/eli/acts/DU/2020/164/text.html))
-[^s31]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy…, 2024-07-31. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy Prawo geodezyjne i kartograficzne (Dz.U. 2024 poz. 1151). <https://api.sejm.gov.pl/eli/acts/DU/2024/1151/text.html>
+[^s7]: Centralny Ośrodek Informatyki — EZD RP w modelu SaaS - jak COI buduje technologiczne…. EZD RP w modelu SaaS - jak COI buduje technologiczne zaplecze cyfrowej administracji. <https://coi.gov.pl/strefa-wiedzy/wpis/ezd-rp-w-modelu-saas-jak-coi-buduje-technologiczne-zaplecze-cyfrowej-administracji>
+[^s8]: Ministerstwo Cyfryzacji — Strategia Cyfryzacji Państwa. Strategia Cyfryzacji Państwa. <https://www.gov.pl/web/cyfryzacja/strategia-cyfryzacji-panstwa> ([archived](https://web.archive.org/web/20260927055032/https://www.gov.pl/web/cyfryzacja/strategia-cyfryzacji-panstwa))
+[^s9]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s10]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s11]: Eurostat nama_10_a64_e, 2023. National accounts employment data by industry (up to NACE A*64). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_e/default/table>
+[^s12]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s13]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s14]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s15]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2025-12-10. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o dowodach osobistych (Dz.U. 2025 poz. 1753). <https://api.sejm.gov.pl/eli/acts/DU/2025/1753/text.pdf>
+[^s16]: Centralny Ośrodek Informatyki — Profil zaufany, 2026-05-26. Profil zaufany. <https://www.coi.gov.pl/realizacje/profil-zaufany> ([archived](https://web.archive.org/web/20260726144422/https://www.coi.gov.pl/realizacje/profil-zaufany))
+[^s17]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-09-23. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o informatyzacji działalności podmiotów realizujących zadania publiczne (Dz.U. 2026 poz. 1241). <https://api.sejm.gov.pl/eli/acts/DU/2026/1241/text.pdf>
+[^s18]: Centralny Ośrodek Informatyki — COI – Corporation (English version). COI – Corporation (English version). <https://www.coi.gov.pl/corporation> ([archived](https://web.archive.org/web/20260814170237/https://www.coi.gov.pl/corporation))
+[^s19]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-02-10. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o zasadach ewidencji i identyfikacji podatników i płatników (Dz.U. 2026 poz. 151). <https://api.sejm.gov.pl/eli/acts/DU/2026/151/text.pdf>
+[^s20]: Ministerstwo Finansów / Krajowa Administracja Skarbowa — Jak to działa – informacje o PUESC. Jak to działa – informacje o PUESC. <https://puesc.gov.pl/web/guest/uslugi/jak-to-dziala-informacje-o-puesc> ([archived](https://web.archive.org/web/20260716090913/https://puesc.gov.pl/web/guest/uslugi/jak-to-dziala-informacje-o-puesc))
+[^s21]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-02-23. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o systemie ubezpieczeń społecznych (Dz.U. 2026 poz. 199). <https://api.sejm.gov.pl/eli/acts/DU/2026/199/text.pdf>
+[^s22]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-01-12. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o CEIDG i Punkcie Informacji dla Przedsiębiorcy (Dz.U. 2026 poz. 30). <https://api.sejm.gov.pl/eli/acts/DU/2026/30/text.pdf>
+[^s23]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2025-07-02. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o Krajowym Rejestrze Sądowym (Dz.U. 2025 poz. 869). <https://api.sejm.gov.pl/eli/acts/DU/2025/869/text.pdf> ([archived](https://web.archive.org/web/20250915063449/https://api.sejm.gov.pl/eli/acts/DU/2025/869/text.pdf))
+[^s24]: Centralny Ośrodek Informatyki — Centralna Ewidencja Pojazdów i Kierowców, 2026-02-27. Centralna Ewidencja Pojazdów i Kierowców. <https://www.coi.gov.pl/realizacje/cepik> ([archived](https://web.archive.org/web/20260726144422/https://www.coi.gov.pl/realizacje/cepik))
+[^s25]: Rada Ministrów / Dziennik Ustaw — Rozporządzenie Rady Ministrów z dnia 31 sierpnia 2020 r.…, 2020. Rozporządzenie Rady Ministrów z dnia 31 sierpnia 2020 r. w sprawie współpracy dyrektora RCB z operatorem ruchomej publicznej sieci telekomunikacyjnej (Dz.U. 2020 poz. 1527). <https://api.sejm.gov.pl/eli/acts/DU/2020/1527/text.pdf> ([archived](https://web.archive.org/web/20260118083917/https://api.sejm.gov.pl/eli/acts/DU/2020/1527/text.pdf))
+[^s26]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-02-24. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o systemie informacji w ochronie zdrowia (Dz.U. 2026 poz. 208). <https://api.sejm.gov.pl/eli/acts/DU/2026/208/text.pdf>
+[^s27]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2025-12-02. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o zapobieganiu oraz zwalczaniu zakażeń i chorób zakaźnych u ludzi (Dz.U. 2025 poz. 1675). <https://api.sejm.gov.pl/eli/acts/DU/2025/1675/text.pdf>
+[^s28]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2020-02-03. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o narodowym zasobie archiwalnym i archiwach (Dz.U. 2020 poz. 164). <https://api.sejm.gov.pl/eli/acts/DU/2020/164/text.html> ([archived](https://web.archive.org/web/20260307211347/https://api.sejm.gov.pl/eli/acts/DU/2020/164/text.html))
+[^s29]: Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy…, 2024-07-31. Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy Prawo geodezyjne i kartograficzne (Dz.U. 2024 poz. 1151). <https://api.sejm.gov.pl/eli/acts/DU/2024/1151/text.html>
+
+**Evidence grades:** 1 Strong, 25 Standard. Strong: an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review. Standard: every required check passed, but one of those did not. Anything less is not printed. The checks behind each fact are listed in the country PDF and on the web page.

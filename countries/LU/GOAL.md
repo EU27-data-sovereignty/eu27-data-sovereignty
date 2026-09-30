@@ -28,7 +28,7 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | State-controlled trust anchor | Yes[^s1][^s2] |
 | State-controlled national eID | Yes[^s3][^s4] |
 | Government data centres | Yes[^s4][^s5] |
-| Government cloud in operation | Partly[^s6] |
+| Government cloud in operation | *Not yet sourced* |
 
 What could move this placement:
 
@@ -41,12 +41,12 @@ Luxembourg described on its own measured characteristics. Each figure is the pub
 
 | Indicator | Value |
 |---|---:|
-| Population | 0.68 million[^s7] |
-| GDP, current prices | 89.5 EUR bn[^s8] |
+| Population | 0.68 million[^s6] |
+| GDP, current prices | 89.5 EUR bn[^s7] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 171.7 EUR/MWh[^s9] |
-| Renewables share of electricity | 20.5 %[^s10] |
-| Land area | 2 586 km²[^s11] |
+| Non-household electricity price | 171.7 EUR/MWh[^s8] |
+| Renewables share of electricity | 20.5 %[^s9] |
+| Land area | 2 586 km²[^s10] |
 
 ## 3. Critical data holdings, by priority
 
@@ -62,7 +62,7 @@ The holdings Luxembourg cannot let depend on infrastructure a foreign state can 
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | GouvID app: lets citizens use the Luxembourg electronic identity card (eID) with a smartphone[^s3] | LuxTrust is a qualified trust service provider and a reference digital-identity provider (LuxTrust credentials)[^s12] | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | GouvID app: lets citizens use the Luxembourg electronic identity card (eID) with a smartphone[^s3] | LuxTrust is a qualified trust service provider and a reference digital-identity provider (LuxTrust credentials)[^s11] | *Not stated in sources* | *Not yet measured* |
 | High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -71,12 +71,12 @@ The holdings Luxembourg cannot let depend on infrastructure a foreign state can 
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Tax (tier 1) | ACD processes personal data to assess, collect and recover taxes and to exchange information nationally and internationally[^s13] | The ACD is the data controller[^s13] | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | eDouane is the access point to all online declaration applications of the Customs and Excise Administration[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | ACD processes personal data to assess, collect and recover taxes and to exchange information nationally and internationally[^s12] | The ACD is the data controller[^s12] | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | eDouane is the access point to all online declaration applications of the Customs and Excise Administration[^s13] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Vehicle & licensing (tier 1) | Registration uniquely identifies each road vehicle and its holder or owner[^s15] | The SNCA handles putting road vehicles into circulation and driving licences[^s16] | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Registration uniquely identifies each road vehicle and its holder or owner[^s14] | The SNCA handles putting road vehicles into circulation and driving licences[^s15] | *Not stated in sources* | *Not yet measured* |
 | High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -89,7 +89,7 @@ The holdings Luxembourg cannot let depend on infrastructure a foreign state can 
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statutory health insurance (tier 1) | Anyone working in Luxembourg must be affiliated by the CCSS, which triggers health insurance coverage[^s17] | The CNS manages benefits for all private-sector insured persons and State workers[^s18] | National infrastructure[^s19] | *Not yet measured* |
+| Standard | Statutory health insurance (tier 1) | Anyone working in Luxembourg must be affiliated by the CCSS, which triggers health insurance coverage[^s16] | The CNS manages benefits for all private-sector insured persons and State workers[^s17] | National infrastructure[^s18] | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
@@ -168,17 +168,18 @@ Tier 0 and 1 holdings for Luxembourg without a verified source yet. Corrections 
 [^s3]: Centre des technologies de l'information de l'État (CTIE) — GouvID – L'app pour vous identifier auprès des services…, 2021-12-17. GouvID – L'app pour vous identifier auprès des services publics en ligne. <https://ctie.gouvernement.lu/fr/actualites/dossiers/gouvid/gouvid.html>
 [^s4]: Centre des technologies de l'information de l'État (CTIE) — Attributions du CTIE. Attributions du CTIE. <https://ctie.gouvernement.lu/fr/l-administration/Attributions.html> ([archived](https://web.archive.org/web/20260720122851/https://ctie.gouvernement.lu/fr/l-administration/Attributions.html))
 [^s5]: Wikipedia — LuxConnect. LuxConnect. <https://en.wikipedia.org/wiki/LuxConnect> ([archived](https://web.archive.org/web/20250802060739/https://en.wikipedia.org/wiki/LuxConnect))
-[^s6]: Centre des technologies de l'information de l'État (CTIE) — Offres d'emploi – CTIE, 2026-08-26. Offres d'emploi – CTIE. <https://ctie.gouvernement.lu/fr/offres-emploi.html> ([archived](https://web.archive.org/web/20260908040136/https://ctie.gouvernement.lu/fr/offres-emploi.html))
-[^s7]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s8]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s9]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s10]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s11]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
-[^s12]: LuxTrust — LuxTrust et INCERT scellent un partenariat stratégique…, 2026-07-28. LuxTrust et INCERT scellent un partenariat stratégique pour renforcer la souveraineté numérique. <https://www.luxtrust.com/fr/news/luxtrust-et-incert-scellent-un-partenariat-strategique-pour-renforcer-la-souverainete>
-[^s13]: Administration des contributions directes — Règlement général sur la protection des données (RGPD). Règlement général sur la protection des données (RGPD). <https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html> ([archived](https://web.archive.org/web/20260903021938/https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html))
-[^s14]: Administration des douanes et accises — eDouane - Services en ligne. eDouane - Services en ligne. <https://douanes.public.lu/fr/services-ligne/edouanes.html> ([archived](https://web.archive.org/web/20260831153900/https://douanes.public.lu/fr/services-ligne/edouanes.html))
-[^s15]: Société nationale de circulation automobile — Histoire de la SNCA. Histoire de la SNCA. <https://snca.public.lu/fr/snca/histoire-snca.html> ([archived](https://web.archive.org/web/20260612182328/https://snca.public.lu/fr/snca/histoire-snca.html))
-[^s16]: Société nationale de circulation automobile — Missions et valeurs - SNCA. Missions et valeurs - SNCA. <https://snca.public.lu/fr/snca/missions-valeurs.html> ([archived](https://web.archive.org/web/20260324003908/https://snca.public.lu/fr/snca/missions-valeurs.html))
-[^s17]: Caisse nationale de santé — Affiliation. Affiliation. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html> ([archived](https://web.archive.org/web/20260324191230/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html))
-[^s18]: Caisse nationale de santé — L'assurance maladie en bref. L'assurance maladie en bref. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html> ([archived](https://web.archive.org/web/20260324075300/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html))
-[^s19]: Centre commun de la sécurité sociale — Attributions - Centre commun de la sécurité sociale, 2020-02-07. Attributions - Centre commun de la sécurité sociale. <https://ccss.public.lu/fr/ccss/attributions.html> ([archived](https://web.archive.org/web/20260324045749/https://ccss.public.lu/fr/ccss/attributions.html))
+[^s6]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s7]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s8]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s9]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s10]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s11]: LuxTrust — LuxTrust et INCERT scellent un partenariat stratégique…, 2026-07-28. LuxTrust et INCERT scellent un partenariat stratégique pour renforcer la souveraineté numérique. <https://www.luxtrust.com/fr/news/luxtrust-et-incert-scellent-un-partenariat-strategique-pour-renforcer-la-souverainete>
+[^s12]: Administration des contributions directes — Règlement général sur la protection des données (RGPD). Règlement général sur la protection des données (RGPD). <https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html> ([archived](https://web.archive.org/web/20260903021938/https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html))
+[^s13]: Administration des douanes et accises — eDouane - Services en ligne. eDouane - Services en ligne. <https://douanes.public.lu/fr/services-ligne/edouanes.html> ([archived](https://web.archive.org/web/20260831153900/https://douanes.public.lu/fr/services-ligne/edouanes.html))
+[^s14]: Société nationale de circulation automobile — Histoire de la SNCA. Histoire de la SNCA. <https://snca.public.lu/fr/snca/histoire-snca.html> ([archived](https://web.archive.org/web/20260612182328/https://snca.public.lu/fr/snca/histoire-snca.html))
+[^s15]: Société nationale de circulation automobile — Missions et valeurs - SNCA. Missions et valeurs - SNCA. <https://snca.public.lu/fr/snca/missions-valeurs.html> ([archived](https://web.archive.org/web/20260324003908/https://snca.public.lu/fr/snca/missions-valeurs.html))
+[^s16]: Caisse nationale de santé — Affiliation. Affiliation. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html> ([archived](https://web.archive.org/web/20260324191230/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html))
+[^s17]: Caisse nationale de santé — L'assurance maladie en bref. L'assurance maladie en bref. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html> ([archived](https://web.archive.org/web/20260324075300/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html))
+[^s18]: Centre commun de la sécurité sociale — Attributions - Centre commun de la sécurité sociale, 2020-02-07. Attributions - Centre commun de la sécurité sociale. <https://ccss.public.lu/fr/ccss/attributions.html> ([archived](https://web.archive.org/web/20260324045749/https://ccss.public.lu/fr/ccss/attributions.html))
+
+**Evidence grades:** 0 Strong, 18 Standard. Strong: an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review. Standard: every required check passed, but one of those did not. Anything less is not printed. The checks behind each fact are listed in the country PDF and on the web page.

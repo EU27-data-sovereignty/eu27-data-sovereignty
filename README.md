@@ -6,7 +6,7 @@ Each state is analysed on its own fundamentals; none is scaled from or measured 
 Every fact is footnoted to its source (#75), and every number in it was found in the quoted text (#82).
 **The findings are machine-checked, not human-verified;** every output says so.
 
-**Where it stands and what is next:** [`ROADMAP.md`](ROADMAP.md) · **how the evidence is produced:** [`METHOD.md`](METHOD.md) · **status:** [`PROGRESS.md`](PROGRESS.md)
+**Where it stands and what is next:** [`ROADMAP.md`](ROADMAP.md) · **how the evidence is produced:** [`METHOD.md`](METHOD.md) · **the evidence behind each fact, charted:** [`docs/evidence.md`](docs/evidence.md) · **status:** [`PROGRESS.md`](PROGRESS.md)
 
 ## Live site
 

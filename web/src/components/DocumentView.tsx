@@ -25,7 +25,7 @@ export function SpanView({ span, numbers, bundle }: SpanProps) {
             <a
               href={`#src-${n}`}
               className="text-[var(--color-accent-text)] no-underline hover:underline"
-              aria-label={`Source ${n}: ${bundle.sources[sid]?.label ?? sid}`}
+              aria-label={`Source ${n}: ${bundle.sources[sid]?.label ?? sid}. Evidence: ${span.g ?? ''}`}
             >
               [{n}]
             </a>

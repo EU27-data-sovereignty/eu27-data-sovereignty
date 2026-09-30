@@ -31,7 +31,9 @@ import provenance  # noqa: E402
 # param fell from 138 to 136 and record from 1017 to 1014 on 2026-09-30, deliberately: #82 requires a
 # recorded quote check at the registered hash, which the 5 hand-migrated citations of #67 never had
 # (param:FR/NL:data_classification, record:NL:{civil_registry,business_registry,land_property}:register).
-FLOORS = {"param": 136, "assumption": 0, "record": 1014, "indicator": 134}
+# indicator fell from 134 to 130 the same day: #79 admits a value only when the reviewer reached it on
+# its own, and EE K2, LU C2, PL C1 and RO C1 had been admitted at the reviewer's changed value.
+FLOORS = {"param": 136, "assumption": 0, "record": 1014, "indicator": 130}
 
 
 class Register(unittest.TestCase):

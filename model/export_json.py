@@ -39,10 +39,6 @@ def strip_private(obj):
     return obj
 
 
-def provenance_ok(c: dict, src) -> bool:
-    return document.provenance.supported(c, src.reg, src.params)
-
-
 def build_bundle() -> dict:
     params = {r["iso2"]: r for r in cm.read_csv(gc.PARAMS)}
     # Read once, outside the loop: country_data.build() does no file I/O of its own.
@@ -56,11 +52,24 @@ def build_bundle() -> dict:
     # rather than carrying their own copies, so a footnote cannot drift from the register.
     src = document.Sources()
     documents = {iso: document.country(c, src) for iso, c in countries.items()}
-    used = sorted({claim for d in documents.values() for claim in document.claims_used(d)})
-    claims = {claim: [{k: c[k] for k in ("source_id", "locator", "quote", "value_as_found",
-                                         "confidence", "retrieved", "checked_by")}
-                      for c in src.by_claim[claim] if provenance_ok(c, src)]
-              for claim in used}
+    # Each claim lists only the citations that back its value as printed (#82), with the checklist
+    # and grade evidence.assess() gives each. A claim id is printed once, in its own country.
+    claims = {}
+    for d in documents.values():
+        for span in document.walk_spans(d):
+            if span.get("role") != "fact":
+                continue
+            for claim in span["c"]:
+                claims[claim] = [
+                    {**{k: c[k] for k in ("source_id", "locator", "quote", "value_as_found",
+                                          "confidence", "retrieved", "checked_by")}, **a,
+                     # For renderers, so none re-derives a rule: the quote as found, the machine
+                     # gloss apart from it, and the checks as phrases.
+                     "original": evidence.split_quote(c["quote"])[0],
+                     "gloss": evidence.split_quote(c["quote"])[1],
+                     "checklist": evidence.checklist(a["checks"])}
+                    for c, a in src.evidence(claim, span["t"], span.get("k") == "categorical")]
+    claims = dict(sorted(claims.items()))
     source_ids = sorted({c["source_id"] for cs in claims.values() for c in cs})
     sources = {sid: {**src.reg[sid], "label": document.provenance.label(sid, src.reg)}
                for sid in source_ids}
@@ -90,6 +99,7 @@ def build_bundle() -> dict:
         # One wording, from evidence.py, so no surface claims a check that did not run.
         "provenance": f"{evidence.PROVENANCE} Capacity is not yet sized.",
         "notice": {"disclaimer": evidence.DISCLAIMER, "withheld": evidence.WITHHELD,
+                   "grade_rule": evidence.GRADE_RULE,
                    "checks": [{"name": n, "what": w} for n, w in evidence.CHECKS]},
         # One disclaimer, in the bundle, so the markdown brief, the web page, the book and the
         # mobile reader hedge identically instead of growing four different wordings.

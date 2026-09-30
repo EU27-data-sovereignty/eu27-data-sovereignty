@@ -71,6 +71,19 @@ class Markdown:
     def spans(self, spans: list[dict]) -> str:
         return " ".join(self.span(s) for s in spans)
 
+    @staticmethod
+    def walk(section: dict):
+        """Every span in one section of the content model."""
+        for b in section["blocks"]:
+            if b["type"] in ("p", "callout"):
+                yield from b["spans"]
+            elif b["type"] == "list":
+                for item in b["items"]:
+                    yield from item
+            elif b["type"] == "table":
+                for row in b["rows"]:
+                    yield from row
+
     def block(self, b: dict) -> str:
         if b["type"] == "p":
             return self.spans(b["spans"])
@@ -110,7 +123,10 @@ class Markdown:
                 src = self.b["sources"][sid]
                 archived = f" ([archived]({src['archived_url']}))" if src.get("archived_url") else ""
                 out.append(f"[^s{n}]: {src['label']}. {src['title']}. <{src['url']}>{archived}")
-            out.append("")
+            grades = [sp.get("g") for s in doc["sections"] for sp in self.walk(s) if sp.get("role") == "fact"]
+            out += ["", f"**Evidence grades:** {grades.count('Strong')} Strong, {grades.count('Standard')} "
+                    f"Standard. {self.b['notice']['grade_rule']} The checks behind each fact are listed in "
+                    "the country PDF and on the web page.", ""]
         return "\n".join(out)
 
 

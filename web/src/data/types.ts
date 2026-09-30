@@ -15,6 +15,10 @@ export interface Span {
   role: Role
   /** Claim ids; present on facts only. */
   c?: string[]
+  /** The best evidence grade among the fact's citations. */
+  g?: Grade
+  /** 'categorical' for a closed-vocabulary value admitted by review. */
+  k?: 'categorical'
 }
 
 export type Block =
@@ -35,6 +39,8 @@ export interface Document {
   sections: Section[]
 }
 
+export type Grade = 'Strong' | 'Standard'
+
 export interface Citation {
   source_id: string
   locator: string
@@ -43,6 +49,13 @@ export interface Citation {
   confidence: string
   retrieved: string
   checked_by: string
+  /** Computed by model/evidence.py from the checks; never set by hand (#82). */
+  grade: Grade
+  checks: Record<string, unknown>
+  /** The quote in its original language, and the machine translation apart from it. */
+  original: string
+  gloss: string
+  checklist: string[]
 }
 
 export interface Source {
@@ -119,6 +132,7 @@ export interface Sovereignty {
 export interface Notice {
   disclaimer: string
   withheld: string
+  grade_rule: string
   checks: { name: string; what: string }[]
 }
 

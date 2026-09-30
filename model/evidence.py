@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import re
 import unicodedata
+import urllib.parse
 from decimal import Decimal, InvalidOperation
 
 DISCLAIMER = (
@@ -149,3 +150,96 @@ def value_in_quote(value: str, quote: str, title: str = "") -> dict:
 
 if __name__ == "__main__":
     print(DISCLAIMER, "", checks_text(), "", WITHHELD, sep="\n")
+
+
+# --------------------------------------------------------------------------- #
+# The per-fact checklist and grade (#82)
+# --------------------------------------------------------------------------- #
+# No numeric confidence: nothing has calibrated one (#10, #77). Instead each fact lists the checks it
+# passed, and a fixed rule turns the list into one of two grades. A fact below Standard is not
+# printed at all; it is a gap. The grade is always computed here, never read from data.
+
+STRONG, STANDARD = "Strong", "Standard"
+GRADE_RULE = (
+    f"{STRONG}: an official or primary source; the quote found exactly in the hashed document; an "
+    "archived copy of exactly that URL; no name in the value missing from the quote; and the value "
+    "either quoted from an English source, found verbatim in the original, or resting on figures "
+    "matched in the original. A categorical finding is Strong only after a blind review. "
+    f"{STANDARD}: every required check passed, but one of those did not. Anything less is not printed."
+)
+
+
+def _url_key(url: str) -> str:
+    """Scheme, a trailing slash and the order of query parameters do not change the page."""
+    u = urllib.parse.urlsplit(url.strip())
+    query = urllib.parse.urlencode(sorted(urllib.parse.parse_qsl(u.query, keep_blank_values=True)))
+    return f"{(u.hostname or '').removeprefix('www.')}{u.path.rstrip('/')}?{query}".lower()
+
+
+def snapshot_is_exact(snapshot: str, url: str) -> bool:
+    """Is this Wayback snapshot of exactly `url` (scheme and a trailing slash aside)?"""
+    parts = snapshot.split("/", 5)          # https: '' web.archive.org web <timestamp> <original>
+    if len(parts) < 6 or not snapshot.startswith("https://web.archive.org/web/"):
+        return False
+    return "@" not in urllib.parse.urlsplit(parts[5]).netloc and _url_key(parts[5]) == _url_key(url)
+
+
+def checklist(checks: dict) -> list[str]:
+    """The checks as short phrases a reader can scan, in the order the grade rule reads them."""
+    out = [{"primary": "primary source", "official": "official source", "secondary": "secondary source",
+            "absence": "authoritative statement of absence"}.get(checks["source"], checks["source"])]
+    if checks.get("dataset_value_reproduced"):
+        out.append("dataset value reproduced; response not hashed")
+    else:
+        out.append(f"quote found ({checks['quote_match']} match) in the hashed document")
+    out.append("archived copy of this URL" if checks["archived"] else "no archived copy of this URL")
+    if "value" in checks:
+        out.append({"verbatim": "value quoted verbatim",
+                    "verbatim_gloss": "value quoted from the machine translation",
+                    "summary": "value is a machine summary of the quote"}[checks["value"]])
+        if checks["figures_matched"]:
+            out.append("every figure found in the original")
+        if checks["names_not_in_quote"]:
+            out.append(f"not in the quote: {', '.join(checks['names_not_in_quote'])}")
+    if "review" in checks:
+        out.append({"agreed, not blind": "independent review agreed (not blind)",
+                    "none": "not independently reviewed"}[checks["review"]])
+    out.append("English source" if checks["language"] == "english" else "non-English source, machine-translated")
+    return out
+
+
+def assess(value: str, citation: dict, source: dict, *, categorical: bool) -> dict:
+    """The checklist and grade for one citation backing one printed value."""
+    dataset = source["doc_type"] == "dataset"
+    original, gloss = split_quote(citation["quote"])
+    checks: dict = {
+        "source": citation["confidence"],
+        "archived": snapshot_is_exact(source.get("archived_url", ""), source["url"]),
+        "language": "english" if not gloss else "machine-translated",
+    }
+    if dataset:
+        checks["dataset_value_reproduced"] = True
+        checks["document_hashed"] = False
+    else:
+        checks["quote_match"] = "loose" if "quote loose" in citation["checked_by"] else "exact"
+        checks["document_hashed"] = True
+    if categorical:
+        checks["review"] = ("agreed, not blind" if citation["claim"].split(":")[-1] == "foreign_dependency"
+                            or citation["claim"].startswith("indicator:") else "none")
+    elif not dataset:
+        v = value_in_quote(value, citation["quote"], source["title"])
+        checks["value"] = v["how"]
+        checks["figures_matched"] = bool(numbers(value))
+        checks["names_not_in_quote"] = v["missing_names"]
+
+    strong = (
+        checks["source"] in ("primary", "official")
+        and checks["archived"]
+        and checks["document_hashed"]
+        and checks.get("quote_match") == "exact"
+        and not categorical
+        and not checks.get("names_not_in_quote")
+        and (checks["language"] == "english" or checks.get("value") == "verbatim"
+             or checks.get("figures_matched", False))
+    )
+    return {"grade": STRONG if strong else STANDARD, "checks": checks}

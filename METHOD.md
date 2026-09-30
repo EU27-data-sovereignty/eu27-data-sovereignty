@@ -6,10 +6,18 @@ It is written for a reader who wants to check the work. The reasons for each rul
 
 ## The short version
 
-Every fact shown anywhere is backed by a document that was **downloaded, fingerprinted and found to
-contain the quoted words**. Every label that classifies evidence, such as "hosted by a non-EU provider",
-was also **reached independently by two separate reviewers**. Anything that fails either test is not
-shown as a fact. It appears as a visible gap: *not yet sourced*.
+**No person has verified these findings.** Automated agents found the sources, and automated checks
+decide what is printed. Every output says so first, in the same words (`model/evidence.py`, #82).
+
+A researched fact is printed only when three things hold. Its document was **downloaded and
+fingerprinted, and contains the quoted words**. **Every number and date in the printed value** is in
+that quote. And, for a label that classifies evidence, such as "hosted by a non-EU provider", **a
+second, independent reviewer reached the same label**. A Eurostat figure is printed when the pinned
+dataset **reproduces the value**; its response is not yet fingerprinted. Anything that fails is shown
+as a visible gap: *not yet sourced*.
+
+Each printed fact carries an **evidence grade**, computed by a fixed rule from the checks it passed, and
+the list of those checks. There is no numeric confidence score.
 
 ```mermaid
 flowchart LR
@@ -17,12 +25,24 @@ flowchart LR
   A --> V{Quote check<br/>research.py verify}
   V -- "document fetched, sha256 recorded,<br/>quote found in its text" --> R{Independent review<br/>for categorical labels}
   V -- "not found / blocked /<br/>not https" --> X1[Stays out<br/>reason recorded]
-  R -- agrees --> AD[Admitted<br/>research.py admit]
-  R -- disagrees --> X2[Value becomes unknown]
-  AD --> CM[Content model<br/>model/document.py]
-  CM --> OUT[Report, country PDFs,<br/>web, posters, /ask]
-  CM -. no supporting citation .-> GAP[Shown as a gap,<br/>never as a fact]
+  R -- "same value, reached<br/>on its own" --> AD[Admitted<br/>research.py admit]
+  R -- "different value" --> X2[Unknown<br/>citations withdrawn]
+  AD --> VQ{Value in quote<br/>evidence.value_in_quote}
+  VQ -- "every number and date<br/>in the original quote" --> G[Graded<br/>evidence.assess]
+  VQ -- "a figure the quote<br/>does not contain" --> GAP[Shown as a gap,<br/>never as a fact]
+  G --> OUT[Report, country PDFs, web,<br/>posters, /ask: each with<br/>the disclaimer and the grade]
 ```
+
+### Evidence grades
+
+| Grade | Rule (`evidence.GRADE_RULE`) |
+|---|---|
+| **Strong** | Official or primary source, and the quote found *exactly* in the hashed document. An archived copy of exactly that URL, and no name in the value missing from the quote. The value is quoted from an English source, found verbatim in the original, or rests on figures matched in the original. Categorical findings reach Strong only after a blind review, which none has had yet. |
+| **Standard** | Every required check passed, but at least one of the Strong conditions did not. |
+| *(not printed)* | Anything less: the value is a gap. |
+
+On 2026-09-30, 76 printed facts were Strong and 842 Standard. The distribution per state is in
+[`docs/evidence.md`](docs/evidence.md).
 
 ## 1. What is researched
 
@@ -97,13 +117,20 @@ non-EU providers". A hand check found German and Estonian companies labelled as 
 Eurosystem treated as foreign infrastructure. After review, one state remained, and both of its triggers
 were checked by hand.
 
+**What the review is not, yet.** The reviewer saw the agent's value before judging (it was not blind), and
+which model reviewed is not recorded. Admission requires exact agreement, enforced in code for both
+dependencies and indicators since #82: four indicators that had been admitted at the reviewer's
+*changed* value (EE K2, LU C2, PL C1, RO C1) are now unknown. A blind re-review that records its model is
+open work; until then every categorical fact's checklist says its review was not blind.
+
 ## 5. Showing it
 
 The content model (`model/document.py`) builds one document per state, and every output renders the
 same document (#74):
 
 - **A fact** carries a footnote to its source: title, publisher, URL, archived copy, document hash and
-  the supporting quote.
+  the supporting quote. The quote is shown in its original language first, then any machine translation,
+  labelled as one, then the fact's evidence grade and the checks behind it.
 - **A gap** is shown as a gap, in italics. A value is never displayed without a checked source (#75).
   The build fails if one would be (`python3 model/document.py --check`).
 - **Method text,** such as the priority rule and the ranking rule, is labelled as this project's own

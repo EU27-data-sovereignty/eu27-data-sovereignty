@@ -16,7 +16,7 @@
 
 ## 1. Data-sovereignty placement
 
-> Not demonstrated. Confidence: Low. With the evidence still open, Romania could be anywhere from 'Secured in law, not yet in practice' to 'Dependent on non-EU providers'.
+> Not demonstrated. Confidence: Low. With the evidence still open, Romania could be anywhere from 'Sovereign in law and in practice' to 'Dependent on non-EU providers'.
 
 Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly reflects research that is not finished.
 
@@ -27,8 +27,8 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | Sovereign cloud certification | *Not yet sourced* |
 | State-controlled trust anchor | Yes[^s2][^s3] |
 | State-controlled national eID | Yes[^s4][^s5][^s6] |
-| Government data centres | Partly[^s7] |
-| Government cloud in operation | Partly[^s8][^s9] |
+| Government data centres | *Not yet sourced* |
+| Government cloud in operation | Partly[^s7][^s8] |
 
 What could move this placement:
 
@@ -41,12 +41,12 @@ Romania described on its own measured characteristics. Each figure is the publis
 
 | Indicator | Value |
 |---|---:|
-| Population | 19.04 million[^s10] |
-| GDP, current prices | 380.1 EUR bn[^s11] |
+| Population | 19.04 million[^s9] |
+| GDP, current prices | 380.1 EUR bn[^s10] |
 | Public administration employment (NACE O) | *Under review: the pinned source does not reproduce this value* |
-| Non-household electricity price | 188.7 EUR/MWh[^s12] |
-| Renewables share of electricity | 47.6 %[^s13] |
-| Land area | 234 270 km²[^s14] |
+| Non-household electricity price | 188.7 EUR/MWh[^s11] |
+| Renewables share of electricity | 47.6 %[^s12] |
+| Land area | 234 270 km²[^s13] |
 
 ## 3. Critical data holdings, by priority
 
@@ -57,44 +57,44 @@ The holdings Romania cannot let depend on infrastructure a foreign state can com
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | Facial image and fingerprints are collected when the electronic identity card (CEI) is issued[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Facial image and fingerprints are collected when the electronic identity card (CEI) is issued[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Digital identity credentials (tier 0) | ROeID is Romania's Single Sign-On solution. It generates and manages digital identities for all Romanian citizens.[^s6] | ROeID was implemented by the Authority for the Digitalization of Romania (ADR)[^s6] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | The Electoral Register is a national IT system. It records identification data of Romanian citizens with voting rights and their polling station assignment.[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | Documents signed with the MAI-issued advanced signature certificate on the CEI have the same value as handwritten signatures[^s15] | The MAI IT directorate (DGCTI) manages the Central PKI Certification Authority and the certification authority of the MAI central apparatus[^s17] | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | The Electoral Register is a national IT system. It records identification data of Romanian citizens with voting rights and their polling station assignment.[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | Documents signed with the MAI-issued advanced signature certificate on the CEI have the same value as handwritten signatures[^s14] | The MAI IT directorate (DGCTI) manages the Central PKI Certification Authority and the certification authority of the MAI central apparatus[^s16] | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | Romania set up the National Alerts IT System (SINS). It holds alerts of national and Schengen interest issued by national authorities.[^s18] | The Ministry of Internal Affairs, through its specialised structure, is the central public authority that manages SINS. It is responsible for the system's functioning and the integrity of its alerts.[^s18] | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Romania set up the National Alerts IT System (SINS). It holds alerts of national and Schengen interest issued by national authorities.[^s17] | The Ministry of Internal Affairs, through its specialised structure, is the central public authority that manages SINS. It is responsible for the system's functioning and the integrity of its alerts.[^s17] | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Tax (tier 1) | ANAF is consolidating its central database through a Big-Data project[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | ANAF is consolidating its central database through a Big-Data project[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | SIUI is the health insurance IT platform, run by CNAS[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | SIUI is the health insurance IT platform, run by CNAS[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | Council Decision 2017/1908 gave Romania access to the Visa Information System (VIS)[^s21] | Centrul Național SIS is a structure within, or subordinated to, the Ministry of Internal Affairs[^s22] | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Council Decision 2017/1908 gave Romania access to the Visa Information System (VIS)[^s20] | Centrul Național SIS is a structure within, or subordinated to, the Ministry of Internal Affairs[^s21] | *Not stated in sources* | *Not yet measured* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Government payroll and personnel (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | BNR operates the financial market infrastructures ReGIS, SaFIR and TARGET-România[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | BNR operates the financial market infrastructures ReGIS, SaFIR and TARGET-România[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | Operational control of the national power system is ensured by the National Energy Dispatch and five territorial dispatch centres[^s24] | Transelectrica is responsible for keeping the national power system running safely at all times[^s24] | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | WATMAN is the IT system for integrated water management, aimed at flood prevention[^s25] | The WATMAN project beneficiary is the National Administration Romanian Waters (total investment EUR 63 million)[^s25] | *Not stated in sources* | *Not yet measured* |
-| High | Education (tier 1) | The new integrated system will bring together data from existing platforms such as SIIIR, PMIPN and Edusal[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Operational control of the national power system is ensured by the National Energy Dispatch and five territorial dispatch centres[^s23] | Transelectrica is responsible for keeping the national power system running safely at all times[^s23] | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | WATMAN is the IT system for integrated water management, aimed at flood prevention[^s24] | The WATMAN project beneficiary is the National Administration Romanian Waters (total investment EUR 63 million)[^s24] | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | The new integrated system will bring together data from existing platforms such as SIIIR, PMIPN and Edusal[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | The ANCPI Geoportal is one of the online platforms ANCPI manages[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | The ANCPI Geoportal is one of the online platforms ANCPI manages[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -160,24 +160,25 @@ Tier 0 and 1 holdings for Romania without a verified source yet. Corrections and
 [^s4]: Autoritatea pentru Digitalizarea României — Comisia Europeană recunoaște ROeID ca fiind sistemul de…, 2024-09-13. Comisia Europeană recunoaște ROeID ca fiind sistemul de identificare electronică al Statului Român. <https://www.adr.gov.ro/articole/comisia-europeana-recunoaste-roeid-ca-fiind-sistemul-de-identificare-electronica-al-statului-roman> ([archived](https://web.archive.org/web/20260122073937/https://www.adr.gov.ro/articole/comisia-europeana-recunoaste-roeid-ca-fiind-sistemul-de-identificare-electronica-al-statului-roman))
 [^s5]: Autoritatea pentru Digitalizarea României (ROeID) — ROeID – Glosar termeni. ROeID – Glosar termeni. <https://roeid.ro/glosar-termeni>
 [^s6]: Autoritatea pentru Digitalizarea României — Acasă - ROeID. Acasă - ROeID. <https://roeid.ro/> ([archived](https://web.archive.org/web/20260903070414/https://roeid.ro/))
-[^s7]: Autoritatea pentru Digitalizarea României — Anunț de presă – Implementarea infrastructurii de Cloud…. Anunț de presă – Implementarea infrastructurii de Cloud Guvernamental (PNRR C7, Investiția 1). <https://www.adr.gov.ro/articole/anunt-de-presa-pentru-proiectul-implementarea-infrastructurii-de-cloud-guvernamental-componenta-7---transformare-digitala-investitia-1---implementarea-infrastructurii-de-cloud-guvernamental>
-[^s8]: Autoritatea pentru Digitalizarea României — Proiecte în implementare. Proiecte în implementare. <https://www.adr.gov.ro/proiecte-in-implementare> ([archived](https://web.archive.org/web/20260429160355/https://www.adr.gov.ro/proiecte-in-implementare))
-[^s9]: Autoritatea pentru Digitalizarea României — ADR a organizat conferința de status a proiectului…, 2025-02-20. ADR a organizat conferința de status a proiectului „Implementarea infrastructurii de Cloud Guvernamental”. <https://www.adr.gov.ro/articole/adr-a-organizat-conferinta-de-status-a-proiectului-implementarea-infrastructurii-de-cloud-guvernamental> ([archived](https://web.archive.org/web/20260608060129/https://www.adr.gov.ro/articole/adr-a-organizat-conferinta-de-status-a-proiectului-implementarea-infrastructurii-de-cloud-guvernamental))
-[^s10]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s11]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s12]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s13]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s14]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
-[^s15]: Ministerul Afacerilor Interne - Direcția Generală pentru Evidența Persoanelor — Despre | Cartea electronică de identitate. Despre | Cartea electronică de identitate. <https://carteadeidentitate.gov.ro/despre/> ([archived](https://web.archive.org/web/20260820162144/https://carteadeidentitate.gov.ro/despre/))
-[^s16]: Autoritatea Electorală Permanentă — Notă de informare - Registrul electoral. Notă de informare - Registrul electoral. <https://www.registrulelectoral.ro/upload/public/FormulareCereri/Nota%20de%20informare%20finala%20RE.pdf>
-[^s17]: Ministerul Afacerilor Interne — Direcția Generală pentru Comunicații și Tehnologia…. Direcția Generală pentru Comunicații și Tehnologia Informației. <https://www.mai.gov.ro/despre-noi/organizare/aparat-central/directia-generala-pentru-comunicatii-si-tehnologia-informatiei/> ([archived](https://web.archive.org/web/20260310104221/https://www.mai.gov.ro/despre-noi/organizare/aparat-central/directia-generala-pentru-comunicatii-si-tehnologia-informatiei/))
-[^s18]: Inspectoratul General al Poliției de Frontieră — Sistemul de Informații Schengen - Poliția de Frontieră…. Sistemul de Informații Schengen - Poliția de Frontieră Română. <https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html> ([archived](https://web.archive.org/web/20260826035149/https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html))
-[^s19]: Agenția Națională de Administrare Fiscală — Plan Strategic ANAF 2025-2028, 2024. Plan Strategic ANAF 2025-2028. <https://static.anaf.ro/static/10/Anaf/Informatii_R/240917_%20Plan_%20StrategicANAF2025-2028.pdf>
-[^s20]: Casa Națională de Asigurări de Sănătate — SIUI Platforma Informatică a Asigurărilor de Sănătate. SIUI Platforma Informatică a Asigurărilor de Sănătate. <https://siui.casan.ro/> ([archived](https://web.archive.org/web/20260727073727/https://siui.casan.ro/))
-[^s21]: Ministerul Afacerilor Interne — Comunicate de presa - Schengen Romania, 2018-07-05. Comunicate de presa - Schengen Romania. <https://schengen.mai.gov.ro/index09.htm> ([archived](https://web.archive.org/web/20250523114019/https://schengen.mai.gov.ro/index09.htm))
-[^s22]: Ministerul Afacerilor Interne — Structuri în subordinea / în cadrul MAI. Structuri în subordinea / în cadrul MAI. <https://www.mai.gov.ro/despre-noi/organizare/structuri-in-subordinea-in-cadrul-mai/> ([archived](https://web.archive.org/web/20260709212319/https://www.mai.gov.ro/despre-noi/organizare/structuri-in-subordinea-in-cadrul-mai/))
-[^s23]: Banca Națională a României — BNR Infrastructuri ale pieței financiare operate de BNR. BNR Infrastructuri ale pieței financiare operate de BNR. <https://www.bnr.ro/2152-sisteme-operate-de-bnr> ([archived](https://web.archive.org/web/20260514142924/https://www.bnr.ro/2152-sisteme-operate-de-bnr))
-[^s24]: C.N.T.E.E. Transelectrica S.A. — Operator de sistem - Transelectrica. Operator de sistem - Transelectrica. <https://www.transelectrica.ro/ro/web/tel/operator-de-sistem> ([archived](https://web.archive.org/web/20250803190750/https://www.transelectrica.ro/ro/web/tel/operator-de-sistem))
-[^s25]: Administrația Națională Apele Române — WATMAN - Administrația Națională Apele Române. WATMAN - Administrația Națională Apele Române. <https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/> ([archived](https://web.archive.org/web/20260519042221/https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/))
-[^s26]: Ministerul Educației și Cercetării — Sistem integrat de management al informațiilor în educație, 2026-07-30. Sistem integrat de management al informațiilor în educație. <https://www.edu.ro/proiect_sistem_integrat_management_informatii_educationale> ([archived](https://web.archive.org/web/20260928194106/https://www.edu.ro/proiect_sistem_integrat_management_informatii_educationale))
-[^s27]: Agenția Națională de Cadastru și Publicitate Imobiliară — ANCPI - Agentia Nationala de Cadastru si Publicitate…, 2026-08-20. ANCPI - Agentia Nationala de Cadastru si Publicitate Imobiliara. <https://www.ancpi.ro/>
+[^s7]: Autoritatea pentru Digitalizarea României — Proiecte în implementare. Proiecte în implementare. <https://www.adr.gov.ro/proiecte-in-implementare> ([archived](https://web.archive.org/web/20260429160355/https://www.adr.gov.ro/proiecte-in-implementare))
+[^s8]: Autoritatea pentru Digitalizarea României — ADR a organizat conferința de status a proiectului…, 2025-02-20. ADR a organizat conferința de status a proiectului „Implementarea infrastructurii de Cloud Guvernamental”. <https://www.adr.gov.ro/articole/adr-a-organizat-conferinta-de-status-a-proiectului-implementarea-infrastructurii-de-cloud-guvernamental> ([archived](https://web.archive.org/web/20260608060129/https://www.adr.gov.ro/articole/adr-a-organizat-conferinta-de-status-a-proiectului-implementarea-infrastructurii-de-cloud-guvernamental))
+[^s9]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s10]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s11]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s12]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s13]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s14]: Ministerul Afacerilor Interne - Direcția Generală pentru Evidența Persoanelor — Despre | Cartea electronică de identitate. Despre | Cartea electronică de identitate. <https://carteadeidentitate.gov.ro/despre/> ([archived](https://web.archive.org/web/20260820162144/https://carteadeidentitate.gov.ro/despre/))
+[^s15]: Autoritatea Electorală Permanentă — Notă de informare - Registrul electoral. Notă de informare - Registrul electoral. <https://www.registrulelectoral.ro/upload/public/FormulareCereri/Nota%20de%20informare%20finala%20RE.pdf>
+[^s16]: Ministerul Afacerilor Interne — Direcția Generală pentru Comunicații și Tehnologia…. Direcția Generală pentru Comunicații și Tehnologia Informației. <https://www.mai.gov.ro/despre-noi/organizare/aparat-central/directia-generala-pentru-comunicatii-si-tehnologia-informatiei/> ([archived](https://web.archive.org/web/20260310104221/https://www.mai.gov.ro/despre-noi/organizare/aparat-central/directia-generala-pentru-comunicatii-si-tehnologia-informatiei/))
+[^s17]: Inspectoratul General al Poliției de Frontieră — Sistemul de Informații Schengen - Poliția de Frontieră…. Sistemul de Informații Schengen - Poliția de Frontieră Română. <https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html> ([archived](https://web.archive.org/web/20260826035149/https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html))
+[^s18]: Agenția Națională de Administrare Fiscală — Plan Strategic ANAF 2025-2028, 2024. Plan Strategic ANAF 2025-2028. <https://static.anaf.ro/static/10/Anaf/Informatii_R/240917_%20Plan_%20StrategicANAF2025-2028.pdf>
+[^s19]: Casa Națională de Asigurări de Sănătate — SIUI Platforma Informatică a Asigurărilor de Sănătate. SIUI Platforma Informatică a Asigurărilor de Sănătate. <https://siui.casan.ro/> ([archived](https://web.archive.org/web/20260727073727/https://siui.casan.ro/))
+[^s20]: Ministerul Afacerilor Interne — Comunicate de presa - Schengen Romania, 2018-07-05. Comunicate de presa - Schengen Romania. <https://schengen.mai.gov.ro/index09.htm> ([archived](https://web.archive.org/web/20250523114019/https://schengen.mai.gov.ro/index09.htm))
+[^s21]: Ministerul Afacerilor Interne — Structuri în subordinea / în cadrul MAI. Structuri în subordinea / în cadrul MAI. <https://www.mai.gov.ro/despre-noi/organizare/structuri-in-subordinea-in-cadrul-mai/> ([archived](https://web.archive.org/web/20260709212319/https://www.mai.gov.ro/despre-noi/organizare/structuri-in-subordinea-in-cadrul-mai/))
+[^s22]: Banca Națională a României — BNR Infrastructuri ale pieței financiare operate de BNR. BNR Infrastructuri ale pieței financiare operate de BNR. <https://www.bnr.ro/2152-sisteme-operate-de-bnr> ([archived](https://web.archive.org/web/20260514142924/https://www.bnr.ro/2152-sisteme-operate-de-bnr))
+[^s23]: C.N.T.E.E. Transelectrica S.A. — Operator de sistem - Transelectrica. Operator de sistem - Transelectrica. <https://www.transelectrica.ro/ro/web/tel/operator-de-sistem> ([archived](https://web.archive.org/web/20250803190750/https://www.transelectrica.ro/ro/web/tel/operator-de-sistem))
+[^s24]: Administrația Națională Apele Române — WATMAN - Administrația Națională Apele Române. WATMAN - Administrația Națională Apele Române. <https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/> ([archived](https://web.archive.org/web/20260519042221/https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/))
+[^s25]: Ministerul Educației și Cercetării — Sistem integrat de management al informațiilor în educație, 2026-07-30. Sistem integrat de management al informațiilor în educație. <https://www.edu.ro/proiect_sistem_integrat_management_informatii_educationale> ([archived](https://web.archive.org/web/20260928194106/https://www.edu.ro/proiect_sistem_integrat_management_informatii_educationale))
+[^s26]: Agenția Națională de Cadastru și Publicitate Imobiliară — ANCPI - Agentia Nationala de Cadastru si Publicitate…, 2026-08-20. ANCPI - Agentia Nationala de Cadastru si Publicitate Imobiliara. <https://www.ancpi.ro/>
+
+**Evidence grades:** 1 Strong, 27 Standard. Strong: an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review. Standard: every required check passed, but one of those did not. Anything less is not printed. The checks behind each fact are listed in the country PDF and on the web page.

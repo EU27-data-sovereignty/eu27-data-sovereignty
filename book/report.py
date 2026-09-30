@@ -33,6 +33,8 @@ from pathlib import Path
 
 BOOK = Path(__file__).resolve().parent
 ROOT = BOOK.parent
+sys.path.insert(0, str(ROOT / "model"))
+from evidence import checklist, split_quote  # noqa: E402
 BUNDLE = ROOT / "web" / "public" / "data" / "eu27.json"
 BUILD = BOOK / "build"
 
@@ -77,7 +79,7 @@ class Renderer:
                     src = self.b["sources"][cite["source_id"]]
                     where = f", {esc(cite['locator'])}" if cite["locator"] not in ("page text", "") else ""
                     notes.append(f"#link(<src-{n}>)[\\[S{n}\\]] {esc(src['label'])}{where}; "
-                                 f"retrieved {esc(cite['retrieved'])}.")
+                                 f"retrieved {esc(cite['retrieved'])}. Evidence: {esc(cite['grade'])}.")
             return text + "".join(f"#footnote[{n}]" for n in dict.fromkeys(notes))
         return text
 
@@ -121,7 +123,10 @@ class Renderer:
                 cited_by.setdefault(c["source_id"], []).append((claim, c))
         out = [heading, "",
                "Each source is listed once, in order of first citation. The hash identifies the exact "
-               "document that was fetched and checked; the quote under each claim is text found in it.", ""]
+               "document that was fetched; the quote under each claim is text found in it by machine, "
+               "in its original language, followed by a machine translation where the source is not in "
+               "English, and by the checks the claim passed.", "",
+               f"_Evidence grades._ {esc(self.b['notice']['grade_rule'])}", ""]
         for n, sid in enumerate(self.order, start=1):
             s = self.b["sources"][sid]
             archived = (f"#link({string(s['archived_url'])})[archived copy]"
@@ -130,10 +135,12 @@ class Renderer:
                        f"{esc(s['publisher'])}{', ' + esc(s['published']) if s.get('published') else ''}. "
                        f"#link({string(s['url'])})[{esc(s['url'])}]; {archived}."
                        f"{' ' + esc(s['notes']) + '.' if s.get('notes') else ''}] <src-{n}>")
-            for claim, c in sorted(cited_by.get(sid, [])):
-                shown = esc(c["quote"]) if c["quote"] else f"value {esc(c['value_as_found'])} at {esc(c['locator'])}"
-                out.append(f"#claim-entry[{esc(claim)}][{shown}][{esc(c['confidence'])}, "
-                           f"retrieved {esc(c['retrieved'])}]")
+            for claim, c in sorted(cited_by.get(sid, []), key=lambda cc: cc[0]):
+                original, gloss = split_quote(c["quote"])
+                shown = (esc(original) if original else
+                         f"value {esc(c['value_as_found'])} at {esc(c['locator'])}")
+                out.append(f"#claim-entry[{esc(claim)}][{shown}][{esc(gloss)}][{esc(c['grade'])}: "
+                           f"{esc('; '.join(checklist(c['checks'])))}; retrieved {esc(c['retrieved'])}]")
             out.append("")
         return "\n".join(out)
 
@@ -302,6 +309,9 @@ def country_typ(b: dict, iso: str) -> str:
         ")",
         "",
         "#outline(title: [Contents], depth: 2)",
+        "",
+        f"#callout(tone: \"notice\")[*Read this first.* {esc(b['notice']['disclaimer'])} "
+        f"{esc(b['notice']['withheld'])}]",
         "",
         chapter,
         r.appendix(),

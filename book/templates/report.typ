@@ -185,8 +185,12 @@
   grid(columns: (9mm, 1fr), column-gutter: 2mm,
     text(weight: "bold", fill: eu-blue)[S#n], text(size: 8.5pt, body)))
 
-#let claim-entry(claim, quote, meta) = pad(left: 11mm, bottom: 0.3em, block(breakable: false)[
+// The quote as found, in its original language; then the machine translation, labelled as one, when
+// the source is not in English; then the grade and checks (#82).
+#let claim-entry(claim, quote, gloss, meta) = pad(left: 11mm, bottom: 0.3em, block(breakable: false)[
   #set text(size: 7.5pt)
   #text(font: print-mono, size: 6.5pt, fill: quiet, claim) \
-  #emph(["#quote"]) #text(fill: quiet)[(#meta)]
+  #emph(["#quote"])
+  #if gloss != [] [ \ #text(fill: quiet)[Machine translation: "#gloss"]]
+  \ #text(fill: quiet)[#meta]
 ])

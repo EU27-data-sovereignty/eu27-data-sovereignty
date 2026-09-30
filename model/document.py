@@ -129,12 +129,20 @@ class Sources:
                 out.append(c)
         return out
 
+    def evidence(self, claim: str, text: str, categorical: bool = False) -> list[tuple[dict, dict]]:
+        """(citation, checklist and grade) for every citation backing the printed value, strongest
+        first (evidence.assess)."""
+        out = [(c, evidence.assess(text, c, self.reg[c["source_id"]], categorical=categorical))
+               for c in self.backing(claim, text, categorical)]
+        return sorted(out, key=lambda ca: ca[1]["grade"] != evidence.STRONG)
+
     def fact(self, claim: str, text: str, missing: str = "Not yet sourced", *,
              categorical: bool = False) -> dict:
         """A fact span if a citation supports the value as printed, otherwise a gap. The value is
-        never shown unsourced."""
-        if text and self.backing(claim, text, categorical):
-            span = {"t": text, "role": "fact", "c": [claim]}
+        never shown unsourced. `g` is the best grade among its citations."""
+        found = self.evidence(claim, text, categorical) if text else []
+        if found:
+            span = {"t": text, "role": "fact", "c": [claim], "g": found[0][1]["grade"]}
             if categorical:
                 span["k"] = "categorical"
             return span

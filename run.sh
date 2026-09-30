@@ -76,7 +76,8 @@ regen_data() {
     python3 model/generate_countries.py > /dev/null
     python3 model/export_json.py
     python3 model/ask_corpus.py > /dev/null
-    print_success "Country files, briefs, bundle and /ask corpus regenerated"
+    python3 model/evidence_report.py > /dev/null
+    print_success "Country files, briefs, bundle, /ask corpus and docs/evidence.md regenerated"
 }
 
 case "${1:-dev}" in

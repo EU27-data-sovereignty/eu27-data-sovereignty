@@ -33,7 +33,6 @@ DK,K2,partial
 DK,L2,partial
 EE,C1,yes
 EE,C2,yes
-EE,K2,partial
 EE,L2,yes
 EL,C1,yes
 EL,C2,yes
@@ -85,7 +84,6 @@ LT,K1,yes
 LT,K2,yes
 LT,L1,partial
 LU,C1,yes
-LU,C2,partial
 LU,K1,yes
 LU,K2,yes
 LV,C1,yes
@@ -104,7 +102,6 @@ NL,K1,yes
 NL,K2,yes
 NL,L2,yes
 NL,L3,no
-PL,C1,partial
 PL,C2,yes
 PL,K1,yes
 PL,K2,yes
@@ -114,7 +111,6 @@ PT,C2,partial
 PT,K2,yes
 PT,L1,partial
 PT,L2,yes
-RO,C1,partial
 RO,C2,partial
 RO,K1,yes
 RO,K2,yes

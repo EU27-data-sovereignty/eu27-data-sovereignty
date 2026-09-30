@@ -48,8 +48,8 @@ class Disclaimer(unittest.TestCase):
 
     def test_the_report_and_country_pdfs_carry_it(self):
         import report  # noqa: PLC0415
-        self.assertIn("not human-verified", report.report_typ(BUNDLE))
-        self.assertIn("not human-verified", report.country_typ(BUNDLE, "DE"))
+        self.assertIn(report.esc(evidence.DISCLAIMER), report.report_typ(BUNDLE))
+        self.assertIn(report.esc(evidence.DISCLAIMER), report.country_typ(BUNDLE, "DE"))
 
     def test_ask_is_told_to_say_it(self):
         core = (ROOT / "api" / "_ask-core.ts").read_text(encoding="utf-8")
@@ -125,14 +125,70 @@ class ValueInQuote(unittest.TestCase):
                          "verbatim_gloss")
 
 
+class Review(unittest.TestCase):
+    def test_every_admitted_indicator_was_reached_by_the_reviewer_on_its_own(self):
+        import csv  # noqa: PLC0415
+        import research  # noqa: PLC0415
+        with (ROOT / "model" / "sovereignty_indicators.csv").open(newline="", encoding="utf-8") as fh:
+            admitted = {(r["iso"], r["indicator"]) for r in csv.DictReader(fh)}
+        staged = {(iso, ind["id"]): ind for iso, doc in research.staged(None, research.INDICATOR_STAGING).items()
+                  for ind in doc.get("indicators", [])}
+        disputed = sorted(k for k in admitted if not research.agreed(staged[k]))
+        self.assertEqual(disputed, [])
+
+
+class Grades(unittest.TestCase):
+    """The evidence grade is computed by one rule and never read from data (#82)."""
+
+    def test_the_bundle_grade_is_the_rule_recomputed(self):
+        import provenance  # noqa: PLC0415
+        reg = provenance.registry()
+        docs = BUNDLE["documents"]
+        text = {c: sp["t"] for d in docs.values() for sp in self._spans(d) if sp.get("role") == "fact"
+                for c in sp["c"]}
+        kind = {c: sp.get("k") for d in docs.values() for sp in self._spans(d) if sp.get("role") == "fact"
+                for c in sp["c"]}
+        for claim, cites in BUNDLE["claims"].items():
+            for c in cites:
+                again = evidence.assess(text[claim], {**c, "claim": claim}, reg[c["source_id"]],
+                                        categorical=kind[claim] == "categorical")
+                self.assertEqual((c["grade"], c["checks"]), (again["grade"], again["checks"]), claim)
+
+    def test_no_strong_fact_misses_a_required_check(self):
+        for claim, cites in BUNDLE["claims"].items():
+            for c in cites:
+                if c["grade"] != evidence.STRONG:
+                    continue
+                ck = c["checks"]
+                self.assertIn(ck["source"], ("primary", "official"), claim)
+                self.assertTrue(ck["archived"] and ck["document_hashed"], claim)
+                self.assertEqual(ck.get("quote_match"), "exact", claim)
+                self.assertFalse(ck.get("names_not_in_quote"), claim)
+                self.assertNotIn("review", ck, claim)
+
+    def test_a_span_carries_its_best_grade(self):
+        for d in BUNDLE["documents"].values():
+            for sp in self._spans(d):
+                if sp.get("role") == "fact":
+                    grades = {c["grade"] for c in BUNDLE["claims"][sp["c"][0]]}
+                    want = evidence.STRONG if evidence.STRONG in grades else evidence.STANDARD
+                    self.assertEqual(sp["g"], want, sp["c"])
+
+    @staticmethod
+    def _spans(doc):
+        import document  # noqa: PLC0415
+        return document.walk_spans(doc)
+
+
 class RenderedFacts(unittest.TestCase):
     """What the documents print, after #82."""
 
     # Fact spans across the 27 documents. A ratchet like test_provenance.FLOORS: adding facts without
     # raising it fails, and so does losing any. It fell from 997 to 922 on 2026-09-30 by #82: 5
     # citations had no recorded quote check, and 70 printed values carried a number or date their
-    # quote does not contain.
-    FACT_FLOOR = 922
+    # quote does not contain. Then to 918: 4 indicator values admitted at a reviewer's changed value
+    # were withdrawn (#79).
+    FACT_FLOOR = 918
 
     @classmethod
     def setUpClass(cls):

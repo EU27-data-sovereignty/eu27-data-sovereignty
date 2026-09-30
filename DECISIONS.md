@@ -1656,6 +1656,14 @@ the second case the Git integration would do the same job with less of our own C
   human-verified; English wording is machine translation or summary.
 - **Honest method text.** The list of checks is generated from `evidence.CHECKS`, and the ranking rule
   from `sovereignty.RULE`. `tests/test_evidence.py` fails on wording that claims a check that did not run.
+- **An evidence grade, not a score.** `evidence.assess` lists the checks each citation passed, and a
+  fixed rule (`evidence.GRADE_RULE`) turns them into Strong or Standard. Anything less is not printed.
+  Each fact span carries its best grade (`g`). The report, web and briefs show the grade, the checklist,
+  and the original quote before its machine translation.
+- **Review agreement, enforced.** `research.admit_indicators` admits an indicator value only when the
+  agent's value, the reviewer's value and the staged value are the same (#79). Any other value is
+  withdrawn with its citations, and a source left uncited is marked `unused`. Dependencies were already
+  enforced this way.
 
 **Problem.** The gate proved that each quote is in its document. It never proved the report printed what the
 quote says. A 2026-09-30 audit found 9 of 31 printed record counts carried numbers missing from their
@@ -1687,7 +1695,10 @@ closes off describing the checks as a human review.
 Printed facts fell from 997 to 922, with `tests/test_evidence.py` `FACT_FLOOR = 922`. The coverage floors
 fell from param 138 to 136 and record 1017 to 1014 (`tests/test_provenance.py`, reason recorded).
 `tests/test_evidence.py` asserts that BG `authentication_audit_log:count` and FR `police_records:count`
-are not printed, and that a citation without a recorded quote check supports nothing.
+are not printed, and that a citation without a recorded quote check supports nothing. Enforcing review
+agreement withdrew EE K2, LU C2, PL C1 and RO C1: indicator coverage fell from 134 to 130, and printed facts
+to 918. No state changed group. Grades on 2026-09-30: 76 Strong and 842 Standard. `tests/test_evidence.py`
+recomputes every bundle grade from its checks and asserts no Strong fact misses a required check. EE's and RO's ranges widened to reach "Sovereign in law and in practice".
 
 *Would change if:* a human sampling audit measures the error rate of machine summaries. The words of a
 summary could then be graded by that rate rather than only labelled. It would also change if a claim

@@ -20,8 +20,12 @@ export function SourceList({
     <section id="sources" className="mt-12 border-t border-[var(--color-border)] pt-6">
       <h2 className="mb-2 text-lg font-semibold text-[var(--color-accent-text)]">Sources</h2>
       <p className="mb-4 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
-        Each source is listed once. The hash identifies the exact document that was fetched and
-        checked; the quote under each claim is text found in it.
+        Each source is listed once. The hash identifies the exact document that was fetched; the
+        quote under each claim is text found in it by machine, in its original language, then a
+        machine translation where the source is not in English, then the checks the claim passed.
+      </p>
+      <p className="mb-4 max-w-3xl text-xs text-[var(--color-fg-muted)]">
+        Evidence grades. {bundle.notice.grade_rule}
       </p>
       <ol className="space-y-4 text-sm">
         {ordered.map(([sid, n]) => {
@@ -60,16 +64,22 @@ export function SourceList({
                       <li key={claim + c.locator}>
                         <code className="text-xs text-[var(--color-fg-muted)]">{claim}</code>
                         <div className="text-[var(--color-fg-secondary)]">
-                          {c.quote ? (
-                            <q>{c.quote}</q>
+                          {c.original ? (
+                            <q>{c.original}</q>
                           ) : (
                             <>
                               Value {c.value_as_found} at {c.locator}
                             </>
-                          )}{' '}
-                          <span className="text-[var(--color-fg-muted)]">
-                            ({c.confidence}, retrieved {c.retrieved})
-                          </span>
+                          )}
+                          {c.gloss ? (
+                            <div className="text-[var(--color-fg-muted)]">
+                              Machine translation: <q>{c.gloss}</q>
+                            </div>
+                          ) : null}
+                          <div className="text-xs text-[var(--color-fg-muted)]">
+                            <strong>{c.grade}</strong>: {c.checklist.join('; ')}; retrieved{' '}
+                            {c.retrieved}
+                          </div>
                         </div>
                       </li>
                     )),
