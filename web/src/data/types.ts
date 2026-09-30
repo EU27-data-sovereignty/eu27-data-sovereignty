@@ -115,10 +115,18 @@ export interface Sovereignty {
   placements: Record<string, Placement>
 }
 
+/** What the project can honestly say about its evidence (model/evidence.py). */
+export interface Notice {
+  disclaimer: string
+  withheld: string
+  checks: { name: string; what: string }[]
+}
+
 export interface Bundle {
   schema_version: number
   generated: string
   provenance: string
+  notice: Notice
   national_data_note: string
   priority_rule: string
   sovereignty: Sovereignty

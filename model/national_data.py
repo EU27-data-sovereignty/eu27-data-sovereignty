@@ -112,7 +112,8 @@ CONFIDENCE = ("primary", "official", "secondary", "absence")
 NOTE = (
     "A blank row means this repository has not yet verified a source for that holding. It is not a "
     "statement that the country holds no such data. Every named holding, operator, legal basis, "
-    "hosting arrangement and figure is cited to a document whose text was fetched and checked."
+    "hosting arrangement and figure is cited to a quote found by machine in a downloaded document; "
+    "no person has verified them."
 )
 
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")

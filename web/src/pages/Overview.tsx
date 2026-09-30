@@ -36,9 +36,11 @@ export function Overview({ bundle }: { bundle: Bundle }) {
       <p className="mb-6 max-w-3xl text-[var(--color-fg-secondary)]">
         Each member state analysed on its own fundamentals: the critical data holdings it cannot let
         depend on infrastructure a foreign state can compel or switch off, who operates them, under
-        which law, and where they run. Every fact is footnoted to a document that was fetched,
-        hashed and checked to contain the quoted text. Where no such document has been found yet,
-        the value is withheld and the gap is shown.
+        which law, and where they run. Every fact is footnoted to its source; where no checked
+        source has been found yet, the value is withheld and the gap is shown.
+      </p>
+      <p className="mb-6 max-w-3xl rounded border-l-4 border-[var(--color-accent)] bg-[var(--color-bg-emphasis)] px-3 py-2 text-sm font-medium">
+        {bundle.notice.disclaimer}
       </p>
 
       <section aria-label="State of the evidence" className="mb-8 grid gap-3 sm:grid-cols-4">

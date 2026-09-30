@@ -111,8 +111,9 @@ export function Poster({ bundle }: { bundle: Bundle }) {
           <strong className="text-[var(--color-fg-secondary)]">
             Independent research, not affiliated with any government or EU body.
           </strong>{' '}
-          Every fact is footnoted to a checked source; values in italics are withheld until sourced.
-          Generated {bundle.generated}. Full report: /report/{code}.pdf
+          Machine-checked, not human-verified: every fact is footnoted to its source; values in
+          italics are withheld until sourced. Generated {bundle.generated}. Full report: /report/
+          {code}.pdf
         </p>
         <ol className="flex flex-wrap gap-x-4">
           {[...numbers.entries()].map(([sid, n]) => (

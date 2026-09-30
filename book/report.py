@@ -172,9 +172,8 @@ def front_matter(b: dict) -> str:
     return "\n".join([
         "= About this report",
         "",
-        "#callout(tone: \"notice\")[*Read this first.* Every statement of fact in this report carries a "
-        "footnote to a document that was fetched, hashed and checked to contain the quoted text. Where no "
-        "such document has been found yet, the value is withheld and the gap is shown in grey italics. "
+        f"#callout(tone: \"notice\")[*Read this first.* {esc(b['notice']['disclaimer'])} "
+        f"{esc(b['notice']['withheld'])} Withheld values are shown in grey italics. "
         "Nothing here is legal advice or an official position of any government or EU body.]",
         "",
         "Each member state is analysed strictly on its own fundamentals: its measured characteristics, "
@@ -183,10 +182,9 @@ def front_matter(b: dict) -> str:
         "",
         "== How a source is checked",
         "",
-        "A researched claim is admitted only after the cited page or PDF is downloaded, its SHA-256 "
-        "recorded, and the quoted text found in the extracted document. An archived copy is looked up "
-        "on the Internet Archive. Claims that fail stay out of this report, with the reason recorded "
-        "in the repository.",
+        *[f"- *{esc(ck['name'])}:* {esc(ck['what'])}" for ck in b["notice"]["checks"]],
+        "",
+        "Claims that fail a check stay out of this report, with the reason recorded in the repository.",
         "",
         "== How holdings are prioritised",
         "",
@@ -217,23 +215,12 @@ def ranking(b: dict, r: "Renderer") -> str:
         "",
         "== The rule",
         "",
-        "Each state is placed by the first group whose condition it meets, in this order. An input "
-        "without a checked source is *unknown* and counts as not demonstrated: never as sovereign, "
-        "never as dependent.",
+        f"Each state is placed by the first group whose condition it meets, in this order. "
+        f"{esc(sov['unknown_rule'])}",
         "",
-        "+ *Dependent on non-EU providers:* a source shows a tier 0 or 1 holding on non-EU "
-        "infrastructure, or a national eID or trust anchor outside state or EU control.",
-        "+ *Sovereign in law and in practice:* a statute keeps government data under national or EU "
-        "jurisdiction, and at least 75% of verified tier 0/1 holdings run on national or EU "
-        "infrastructure, the trust anchor and eID are state-controlled, and the state runs its own "
-        "data centres or government cloud.",
-        "+ *Sovereign in practice, not secured in law:* the practice test, without the statute.",
-        "+ *Secured in law, not yet in practice:* the statute, without the practice test.",
-        "+ *Not demonstrated:* neither.",
+        *[f"+ *{esc(r['label'])}:* {esc(r['condition'])}." for r in sov["rule"]],
         "",
-        "*Confidence* is how many groups a state could still reach if every unknown resolved for or "
-        "against it: one group is High, two Medium, three or more Low. Within a group, states are "
-        "alphabetical; the order carries no meaning.",
+        esc(sov["confidence_rule"]),
         "",
         "== The groups",
         "",
@@ -287,7 +274,7 @@ def report_typ(b: dict) -> str:
         f"  title: {string(TITLE)},",
         f"  subtitle: {string(SUBTITLE)},",
         f"  generated: {string(b['generated'])},",
-        f"  provenance: {string('Independent research. Every fact is footnoted to a checked source. Generated ' + b['generated'])},",
+        f"  provenance: {string('Independent research. Machine-checked, not human-verified. Generated ' + b['generated'])},",
         ")",
         "",
         "#outline(title: [Contents], depth: 1)",
@@ -310,7 +297,7 @@ def country_typ(b: dict, iso: str) -> str:
         f"  title: {string(d['name'])},",
         f"  subtitle: {string('Critical data holdings and sovereign hosting, analysed on ' + d['name'] + chr(39) + 's own fundamentals')},",
         f"  generated: {string(b['generated'])},",
-        f"  provenance: {string(d['name'] + '. Every fact is footnoted to a checked source. Generated ' + b['generated'])},",
+        f"  provenance: {string(d['name'] + '. Machine-checked, not human-verified. Generated ' + b['generated'])},",
         "  kicker: \"EU-27 · Country report\",",
         ")",
         "",

@@ -24,6 +24,7 @@ import country_data  # noqa: E402
 import national_data as nd  # noqa: E402
 import generate_countries as gc  # noqa: E402
 import document  # noqa: E402
+import evidence  # noqa: E402
 
 SCHEMA_VERSION = 2
 DEFAULT_OUT = cm.ROOT / "web" / "public" / "data" / "eu27.json"
@@ -77,16 +78,19 @@ def build_bundle() -> dict:
         "sovereignty": {
             "groups": [{"id": g, "label": document.sv.LABELS[g]} for g in document.sv.GROUPS],
             "guardrail": document.sv.GUARDRAIL,
+            "rule": [{"group": g, "label": document.sv.LABELS[g], "condition": t}
+                     for g, t in document.sv.RULE],
+            "unknown_rule": document.sv.UNKNOWN_RULE,
+            "confidence_rule": document.sv.CONFIDENCE_RULE,
             "indicators": [{k: d[k] for k in ("id", "dimension", "label", "question")}
                            for d in document.sv.indicator_defs()],
             "placements": {iso: document.placement(c, src) for iso, c in countries.items()},
         },
         "generated": gc.gen_date(),
-        "provenance": (
-            "Each member state is analysed on its own fundamentals. Every fact is footnoted to a "
-            "source whose text was fetched and checked; unsourced values are withheld and shown "
-            "as gaps. Capacity is not yet sized. See /methodology."
-        ),
+        # One wording, from evidence.py, so no surface claims a check that did not run.
+        "provenance": f"{evidence.PROVENANCE} Capacity is not yet sized.",
+        "notice": {"disclaimer": evidence.DISCLAIMER, "withheld": evidence.WITHHELD,
+                   "checks": [{"name": n, "what": w} for n, w in evidence.CHECKS]},
         # One disclaimer, in the bundle, so the markdown brief, the web page, the book and the
         # mobile reader hedge identically instead of growing four different wordings.
         "national_data_note": nd.NOTE,

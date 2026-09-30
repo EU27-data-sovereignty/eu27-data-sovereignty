@@ -32,12 +32,17 @@ export function Methodology({ bundle }: { bundle: Bundle }) {
       <h2 className="text-lg font-semibold text-[var(--color-accent-text)]">
         How a source is checked
       </h2>
-      <p>
-        A researched claim is admitted only after the cited page or PDF is downloaded, its SHA-256
-        recorded, and the quoted text found in the extracted document. An archived copy is looked up
-        on the Internet Archive. A claim that fails stays out of every output. A value without an
-        admitted source is withheld and shown as a gap, never as a fact.
+      <p className="rounded border-l-4 border-[var(--color-accent)] bg-[var(--color-bg-emphasis)] px-3 py-2 text-sm font-medium">
+        {bundle.notice.disclaimer}
       </p>
+      <ul className="list-disc space-y-1 pl-5">
+        {bundle.notice.checks.map(c => (
+          <li key={c.name}>
+            <strong>{c.name}:</strong> {c.what}
+          </li>
+        ))}
+      </ul>
+      <p>A claim that fails a check stays out of every output. {bundle.notice.withheld}</p>
 
       <h2 className="text-lg font-semibold text-[var(--color-accent-text)]">Capacity</h2>
       <p>

@@ -60,6 +60,27 @@ VALUE = ("yes", "partial", "no")
 GUARDRAIL = ("Groups describe what the sources show, not how sovereign a state is. A Low-confidence "
              "placement mostly reflects research that is not finished.")
 
+# The rule in words, for every renderer. It sits next to group() and reads the same constants, so
+# the published rule cannot drift from the one that runs; tests/test_sovereignty.py holds them
+# together. Checked in this order, first match wins.
+_PRACTICE = (f"at least {H1_SHARE:.0%} of verified tier 0/1 holdings run on national or EU "
+             "infrastructure, the trust anchor and eID are state-controlled, and the state runs its "
+             "own data centres or government cloud")
+RULE = [
+    ("dependent", "a source shows a tier 0 or 1 holding on non-EU infrastructure, or a national eID "
+                  "or trust anchor outside state or EU control"),
+    ("law_and_practice", f"a statute keeps government data under national or EU jurisdiction, and {_PRACTICE}"),
+    ("practice_only", "the practice test, without the statute"),
+    ("law_only", "the statute, without the practice test"),
+    ("not_demonstrated", "neither"),
+]
+UNKNOWN_RULE = ("An input without a checked source is unknown and counts as not demonstrated: never as "
+                "sovereign, never as dependent.")
+CONFIDENCE_RULE = (
+    "Confidence is how many groups a state could still reach if every unknown resolved for or against "
+    f"it: one group is {CONFIDENCE[1]}, two {CONFIDENCE[2]}, three or more Low. Within a group, states "
+    "are alphabetical; the order carries no meaning.")
+
 
 def indicator_defs() -> list[dict[str, str]]:
     with INDICATORS.open(newline="", encoding="utf-8") as fh:

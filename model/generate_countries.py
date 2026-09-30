@@ -92,8 +92,8 @@ class Markdown:
             "",
             f"> Generated {self.b['generated']} by `model/generate_countries.py` from the content model "
             "(`model/document.py`). The same document is typeset as the country PDF and rendered on the "
-            "web. Every fact carries a footnote to a source whose text was fetched and checked; a value "
-            "in *italics* is withheld because no checked source supports it yet.",
+            f"web.\n>\n> **{self.b['notice']['disclaimer']}** {self.b['notice']['withheld']} A value in "
+            "*italics* is withheld.",
             "",
             "## Contents",
             "",
