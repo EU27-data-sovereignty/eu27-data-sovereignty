@@ -1671,7 +1671,9 @@ quote. `record:BG:authentication_audit_log:count` printed a 10-year retention pe
 `record:FR:police_records:count` added "48 million victim records" to a quote that says 17 million.
 `supported()` returned `True` for any non-dataset citation, so 5 hand-migrated citations (#67) with no
 recorded quote check were printed as facts. The report also said every fact was "fetched, hashed and
-checked", which was false for 136 Eurostat figures.
+checked", which was false for the 5 migrated citations. (This entry first said it was also false for 136
+Eurostat figures. That was wrong: their raw API responses are stored with a sha256 in
+`fetch_manifest.csv`. The registry that footnotes cite simply did not show it. Corrected 2026-09-30.)
 
 **Alternatives considered.**
 - **Figures hard, summaries labelled (chosen).** Numbers and dates are where a misreading does harm and
@@ -1744,9 +1746,84 @@ the law. Resolving a contradiction by judgement rather than by the two published
 
 **Verified:** 2026-09-30, for the tiers: `tests/test_vetting.py` passes. Every cited host is classified,
 mirrors are T4, and no fact below T2 is Strong. Best tier per printed fact is T1 343, T2 400, T3 9 and
-T4 166 (`docs/evidence.md`), and Strong fell from 76 to 59. The vetting run: NOT YET. It is verified by
-all 27 staging files with blind verdicts and by the vetting report's counts.
+T4 166 (`docs/evidence.md`), and Strong fell from 76 to 59.
+
+The vetting run, verified 2026-09-30, run `wf_1c6b8bb6-450` (manifest in `model/research/vetting/runs/`):
+- 27 staging files, each with the workflow's sha256 and the reviewer model;
+- 1,017 findings, 862 of them with the reviewer's agreement;
+- `vetting.py report`: 363 gaps filled, 244 corroborated, 26 superseded (23 higher tier, 3 later same
+  authority), 12 disputed; rejected: 153 by review, 176 unverifiable, 38 unestablished holdings, 5 below
+  T2; of the input items, 447 had no better source and 201 were not reached;
+- best tier per printed fact afterwards: T1 635, T2 633, T3 9, T4 113, with 107 Strong of 1,390 facts.
 
 *Would change if:* a person reviews `authorities.csv` and reclassifies hosts, since the table is an
 agent's work. It would also change if operator domains are recorded independently, which would allow
 the operator-domain rule.
+
+### 84. The project reproduces from scratch; the method is generated, not written
+**Decision.** 2026-09-30. Four parts.
+- **One command per step.** `./run.sh` gains `admit` (research, then vetting, always both), `recheck`,
+  `retry`, `eurostat check|adopt`, `vet prepare|stage|hosts|verify|admit|report`, and `reproduce`. The
+  agent step is the checked-in `/vet` skill (`.claude/skills/vet/SKILL.md`), which runs the checked-in
+  `workflow.js` and records a manifest per run (`model/research/vetting/runs/`). The manifest holds the
+  input, output and prompt hashes, the commit, the model, the tool versions and the outcome totals.
+- **Proof, not assertion.**
+  - `./run.sh admit --check` (a `./test.sh` stage) re-runs admission on the committed evidence and fails
+    if any register would change. Admission reads no clock.
+  - `./run.sh reproduce` clones HEAD into a temp directory, regenerates everything, requires `git status`
+    to stay clean, re-runs the admission check, compiles all 28 PDFs, builds the web app and runs the
+    tests.
+  - `--evidence` also re-fetches every source.
+  - Tool versions are pinned in `.tool-versions` and `.nvmrc`. `init.sh` warns on a mismatch, and
+    `tests/test_workflows.py` holds CI to the pins.
+- **Eurostat vintages as data.**
+  - Pins live in `model/eurostat_pins.csv`, with the date and decision behind each.
+  - Adopted today: population 2026, public-administration employment 2024, renewables 2025, land area
+    2026, and Portugal's revised 2025 GDP (306.7 → 308.5).
+  - The employment column had reproduced no Eurostat period (Sweden 420.4 against the official 245.0).
+    It is now the official series and is printed on all 27 pages, where it was withheld.
+- **A generated methodology appendix.**
+  - `model/methodology.py` builds one content-model document. Every rule in it is the constant the code
+    runs, and every number is counted from the build's files.
+  - The EU-27 report and each country PDF carry it as an appendix, and the web `/methodology` page renders
+    it. The PDFs stamp the commit and the bundle's sha256 when they are built.
+
+**Problem.** The process was documented but not repeatable. A vetting run needed inline one-off code: to
+split the input, extract the result, tier 171 hosts and apply Eurostat values. Nothing recorded a run's
+inputs or tool versions. Nothing proved the registers follow from the evidence. Admission stamped the
+date it ran on. CI ran Python 3.12 in one workflow and 3.14 in another, and this machine runs Node 26
+where CI pins 24. The methodology page was hand-written, which is how "fetched, hashed and checked" came
+to be printed over citations that were never checked (#82).
+
+**Alternatives considered.**
+- **Commands, a checked-in skill, a clean-room rebuild, and admission as a checked fixed point
+  (chosen).** A stranger with a clone can run every mechanical step without Claude. The one agent step is
+  written down, versioned and hashed.
+- **A headless script (`claude -p`) for the agent step.** *Why not:* the owner chose a skill that keeps a
+  person in the loop for the judgement calls, such as tiering new hosts.
+- **Commit the fetched documents, so the evidence reproduces offline.** *Why not:* copyright, and 599 MB.
+  Re-fetching (`reproduce --evidence`) plus archived copies is the reproducible path. Drift is reported
+  as a finding, not hidden.
+- **Keep the methodology hand-written, reviewed carefully.** *Why not:* that is exactly how the
+  overstatement of #82 happened. Generated text cannot claim a rule the code does not run, and a test
+  holds each rule to its constant.
+
+**Closes off.** An edited register that admission would not produce. A pin changed without a recorded
+decision. A methodology sentence that describes a rule other than the one that runs. A vetting run
+whose prompts, input or model cannot be identified.
+
+**Verified:** 2026-09-30, in part.
+- `./run.sh eurostat check` reports 0 of 162 values differing, and writes nothing.
+- `tests/test_fetch.py` holds every Eurostat column to its pinned source, with no column excused as a
+  known defect.
+- `tests/test_methodology.py` (7 tests) passes. The DE PDF's appendix and build stamp were checked in
+  the compiled text.
+- `tests/test_repeatability.py` passes.
+- `./run.sh admit --check`: "6 of 6 registers reproduce from the committed evidence". Its first run found
+  admission was not a fixed point (46 register rows moved on a second run). Admission now rebuilds from
+  its base every time.
+- `./run.sh reproduce` on the committed tree: NOT YET. It is verified when the clean room rebuilds HEAD.
+
+*Would change if:* the agent runs become deterministic (a pinned model snapshot with fixed sampling),
+which would let a rerun reproduce the findings themselves. It would also change if fetched documents
+could be archived with rights to redistribute, which would make the evidence reproducible offline.

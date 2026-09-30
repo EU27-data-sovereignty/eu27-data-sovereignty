@@ -74,9 +74,12 @@ def build_bundle() -> dict:
     sources = {sid: {**src.reg[sid], "label": document.provenance.label(sid, src.reg)}
                for sid in source_ids}
 
+    import methodology  # noqa: PLC0415
     return {
         "schema_version": SCHEMA_VERSION,
         "documents": documents,
+        # How every fact was sourced and every figure calculated, generated (#84).
+        "methodology": methodology.build(documents, claims, sources),
         "claims": claims,
         "sources": sources,
         "holding_classes": [{"class_id": c, "label": nd.LABELS[c], "tier": nd.TIER_OF[c],

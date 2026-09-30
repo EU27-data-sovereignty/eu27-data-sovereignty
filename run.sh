@@ -59,6 +59,15 @@ show_help() {
     echo "  registers        Critical national data register coverage report"
     echo "  fetch [what]     Fetch source documents into cache/ (eurostat | legal | all)"
     echo
+    echo -e "${GREEN}Evidence (docs/vetting.md; each step is one command)${NC}"
+    echo "  admit [--check]  Admit verified research, then vetting; --check proves the registers reproduce"
+    echo "  recheck          Re-fetch every source behind a printed fact (resumable)"
+    echo "  retry            Retry not-found quotes (served page in its charset, then rendered), then admit"
+    echo "  eurostat check   Pull at the pinned periods and report; writes nothing"
+    echo "  eurostat adopt COL=PERIOD ...   Move pins, apply, register the vintage"
+    echo "  vet prepare|stage|hosts|verify|admit|report   The vetting run (the agent step is /vet)"
+    echo "  reproduce [--evidence]   Rebuild everything in a fresh clone and compare"
+    echo
     echo -e "${GREEN}Deployment${NC}"
     echo "  deploy           Run the full gate, then deploy to Vercel production"
     echo
@@ -150,6 +159,33 @@ case "${1:-dev}" in
                 ;;
             *) print_error "fetch: expected eurostat, legal or all"; exit 1 ;;
         esac
+        ;;
+    admit)
+        # Always both, in this order: vetting may supersede or dispute what research admitted.
+        if [ "${2:-}" = "--check" ]; then
+            python3 model/reproduce.py admit-check
+        else
+            python3 model/reproduce.py admit      # from the base, research then vetting (#84)
+        fi
+        ;;
+    recheck)
+        python3 model/research.py recheck "${@:2}"
+        ;;
+    retry)
+        python3 model/research.py verify --rendered && python3 model/reproduce.py admit
+        ;;
+    eurostat)
+        case "${2:-check}" in
+            check) python3 model/fetch_eurostat.py --check ;;
+            adopt) python3 model/fetch_eurostat.py --adopt "${@:3}" ;;
+            *) print_error "usage: ./run.sh eurostat check | adopt COL=PERIOD ..."; exit 1 ;;
+        esac
+        ;;
+    vet)
+        python3 model/vetting.py "${@:2}"
+        ;;
+    reproduce)
+        python3 model/reproduce.py clean-room "${@:2}"
         ;;
     deploy)
         # The manual fallback. Normally a push to main deploys through

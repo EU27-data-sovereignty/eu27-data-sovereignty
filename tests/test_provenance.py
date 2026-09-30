@@ -33,7 +33,9 @@ import provenance  # noqa: E402
 # (param:FR/NL:data_classification, record:NL:{civil_registry,business_registry,land_property}:register).
 # indicator fell from 134 to 130 the same day: #79 admits a value only when the reviewer reached it on
 # its own, and EE K2, LU C2, PL C1 and RO C1 had been admitted at the reviewer's changed value.
-FLOORS = {"param": 136, "assumption": 0, "record": 1014, "indicator": 130}
+# Raised 2026-09-30 by the charset fix, the Eurostat vintages (#84: the employment column now
+# reproduces) and the first vetting run (#83).
+FLOORS = {"param": 162, "assumption": 0, "record": 1510, "indicator": 141}
 
 
 class Register(unittest.TestCase):
@@ -58,12 +60,15 @@ class Register(unittest.TestCase):
                                  "Raise it here so the progress cannot be undone silently.")
 
     def test_a_dataset_value_that_does_not_reproduce_is_not_coverage(self):
-        """gov_employment_k is cited to its pinned series but 26 of 27 cells do not reproduce it."""
+        """Until 2026-09-30, 26 of 27 gov_employment_k cells did not reproduce their series and were
+        withheld; the column was rebuilt from the official series (#84). The rule still holds: a cell
+        that differs from its dataset by more than the tolerance is not sourced."""
         params = provenance.parameters()
         rows = [c for c in self.cites if c["claim"].endswith(":gov_employment_k")]
         self.assertEqual(len(rows), 27)
-        supported = [c for c in rows if provenance.supported(c, self.reg, params)]
-        self.assertLessEqual(len(supported), 1)
+        self.assertTrue(all(provenance.supported(c, self.reg, params) for c in rows))
+        off = {**rows[0], "value_as_found": str(float(rows[0]["value_as_found"]) * 1.10)}
+        self.assertFalse(provenance.supported(off, self.reg, params))
 
 
 class Rules(unittest.TestCase):

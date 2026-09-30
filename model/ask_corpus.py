@@ -45,7 +45,7 @@ def row_text(country: str, section: str, cells: list[dict], columns: list[dict])
             parts.append(f"{col['t']}: {cell['t']}")
             claims += cell.get("c", [])
             kinds.add("fact")
-        elif cell.get("role") == "gap" and cell["t"] not in ("—", ""):
+        elif cell.get("role") in ("gap", "disputed") and cell["t"] not in ("—", ""):
             parts.append(f"{col['t']}: {cell['t'].lower()}")
             kinds.add("gap")
         elif cell.get("role") in ("method", "label") and cell["t"] not in ("—", ""):

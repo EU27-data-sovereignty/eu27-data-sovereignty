@@ -1,0 +1,1016 @@
+{
+ "iso": "FI",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:FI:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corroborates",
+   "url": "https://www.erillisverkot.fi/turvapilvipalvelu-taysin-kotimainen-pilvipalvelu-ja-tiedon-turvasatama/",
+   "quote": "Erillisverkkojen Turvapilvipalvelu on erillään julkisesta internetistä oleva, täysin kotimainen pilvipalvelu ja on räätälöitävissä asiakkaan tarpeiden mukaan.",
+   "quote_english": "Erillisverkot's Security Cloud Service is a fully domestic cloud service, separate from the public internet, that can be tailored to the customer's needs.",
+   "value": "Yes",
+   "published": "2021-12-03",
+   "title": "Turvapilvipalvelu – täysin kotimainen pilvipalvelu ja tiedon turvasatama",
+   "publisher": "Suomen Erillisverkot Oy",
+   "doc_type": "official_page",
+   "note": "A second page from the state-owned operator, separate from the virtual data-centre service page, describing the Turvapilvi service for authorities, audited against TL IV/Katakri. It is from the same publisher, so it does not count as fully independent.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Erillisverkot's Turvapilvipalvelu is described in the present tense as a fully domestic cloud, separate from the public internet, and the page says it is aimed at authorities and state administration, so it is an operating government cloud."
+   }
+  },
+  {
+   "claim": "indicator:FI:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "supersedes",
+   "url": "https://www.erillisverkot.fi/vuosikertomus-2025/",
+   "quote": "Konesalipalveluissa valmistui merkittävä rakennushanke, ja uusi, korkean tason vaatimukset täyttävä konesali saatiin asiakaskäyttöön.",
+   "quote_english": "In data centre services a major construction project was completed, and a new data centre meeting high-level requirements was taken into customer use.",
+   "value": "Yes",
+   "published": "2026",
+   "title": "Erillisverkkojen vuosikertomus 2025",
+   "publisher": "Suomen Erillisverkot Oy",
+   "doc_type": "annual_report",
+   "note": "The 2025 annual report of the wholly state-owned special-purpose company shows state data centres in operation and expanding. The printed source is the 2015 Tuve Act. Valtori, by contrast, buys general data-centre capacity from Tietoevry/CGI.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "A new high-security data centre was taken into customer use, and the page states that Erillisverkot is a wholly state-owned special-task company, so the state operates a data centre today."
+   }
+  },
+  {
+   "claim": "indicator:FI:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://www.erillisverkot.fi/suomalainen-data-turvaan-suomeen/",
+   "quote": "Suomen Erillisverkot on valtion kokonaan omistama erityistehtäväyhtiö. Konserni omistaa 15 maanalaista suojatilaa eri puolilla Suomea. Tiloissa on konesaleja ja turvallisuuskriittisiä viestiasemia.",
+   "quote_english": "Suomen Erillisverkot is a wholly state-owned special-purpose company. The group owns 15 underground protected facilities around Finland. The facilities contain data centres and security-critical communication stations.",
+   "value": "Yes",
+   "published": "2019-04-23",
+   "title": "Suomalainen data turvaan Suomeen",
+   "publisher": "Suomen Erillisverkot Oy",
+   "doc_type": "official_page",
+   "note": "An operator page, independent of the statute, stating that the state-owned company runs data centres in 15 underground facilities.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The wholly state-owned special-task company Erillisverkot owns 15 underground facilities containing data centres, which the page says are intended for public services."
+   }
+  },
+  {
+   "claim": "indicator:FI:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://dvv.fi/en/ca-certificates",
+   "quote": "The Digital and Population Data Services Agency’s certification authority certificates (root certificates, CA certificates) can be installed by clicking on them on this page.",
+   "quote_english": "",
+   "value": "Yes",
+   "published": "",
+   "title": "CA Certificates",
+   "publisher": "Digital and Population Data Services Agency (DVV)",
+   "doc_type": "official_page",
+   "note": "The state agency publishes its own government roots (DVV Gov. Root CA - G3 RSA/ECC). The printed source is the original 2009 act text, which still names the former Väestörekisterikeskus.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The root and CA certificates belong to the Digital and Population Data Services Agency (DVV), a state agency, so the government PKI root is operated by the state."
+   }
+  },
+  {
+   "claim": "indicator:FI:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.suomi.fi/sivu/suomifi-tunnistuksen-tietosuojaseloste",
+   "quote": "Digi- ja väestötietovirastolla on lakisääteinen velvoite tarjota Suomi.fi-tunnistusta. Velvoitteesta on säädetty tukipalvelulaissa.",
+   "quote_english": "The Digital and Population Data Services Agency has a statutory obligation to provide Suomi.fi identification. The obligation is laid down in the Support Services Act.",
+   "value": "Yes",
+   "published": "",
+   "title": "Suomi.fi-tunnistuksen tietosuojaseloste",
+   "publisher": "Digi- ja väestötietovirasto / Suomi.fi",
+   "doc_type": "official_page",
+   "note": "The state runs the national identification hub. Most strong eID credentials that pass through it (bank codes, mobile ID) are issued privately, so the Yes applies to the hub, not to the credentials.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "DVV, a state agency, has a statutory duty to provide Suomi.fi identification; note this is the national authentication service, and the quote does not describe the underlying credentials."
+   }
+  },
+  {
+   "claim": "indicator:FI:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "corroborates",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2019/906/fin@",
+   "quote": "Valtion virastoissa ja laitoksissa toimivien viranomaisten, tuomioistuimien ja valitusasioita käsittelemään perustettujen lautakuntien on turvallisuusluokiteltava asiakirjat ja tehtävä niihin turvallisuusluokkaa koskeva merkintä",
+   "quote_english": "Authorities in state agencies and institutions, courts and appeal boards must security-classify documents and mark them with the security classification",
+   "value": "Yes",
+   "published": "",
+   "title": "Laki julkisen hallinnon tiedonhallinnasta 906/2019 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "The Information Management Act (section 18) sets the classification duty in statute. Decree 1101/2019, the printed source, was last amended by 916/2025 (section 9, security areas), in force from 1 November 2025.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Section 18 of Act 906/2019 obliges state authorities to security-classify documents and mark them, so the classification scheme is set in statute."
+   }
+  },
+  {
+   "claim": "record:FI:civil_registry:register",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://dvv.fi/en/population-information-system",
+   "quote": "The Finnish Population Information System is a computerised national register that contains basic information about Finnish citizens and foreign citizens residing in Finland on a permanent or temporary basis.",
+   "quote_english": "",
+   "value": "Population Information System (Väestötietojärjestelmä)",
+   "published": "",
+   "title": "Population Information System",
+   "publisher": "Digital and Population Data Services Agency (DVV)",
+   "doc_type": "official_page",
+   "note": "The operator's own page. The statutory basis is Act 661/2009, section 3.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Population Information System (system name only; operator not stated)",
+    "reason": "The quote names and describes the national population register but does not say who operates it."
+   }
+  },
+  {
+   "claim": "record:FI:civil_registry:operator",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://dvv.fi/vtj-tietosuoja",
+   "quote": "Rekisterin nimi Väestötietojärjestelmä Rekisterinpitäjä ja yhteyshenkilöt Digi- ja väestötietovirasto ja Ahvenanmaan valtionvirasto",
+   "quote_english": "Register name Population Information System. Controller and contacts: Digital and Population Data Services Agency and the State Department of Åland",
+   "value": "Digi- ja väestötietovirasto ja Ahvenanmaan valtionvirasto (Digital and Population Data Services Agency and the State Department of Åland)",
+   "published": "",
+   "title": "Väestötietojärjestelmän tietosuojaseloste",
+   "publisher": "Digi- ja väestötietovirasto",
+   "doc_type": "official_page",
+   "note": "The same privacy notice says Valtori (the Government ICT Centre) runs the system under contract, with maintenance subcontracted to TietoEVRY Oyj.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Digi- ja väestötietovirasto (DVV), with Ahvenanmaan valtionvirasto as co-controller",
+    "reason": "The privacy notice names DVV and the State Department of Åland as controllers of the Väestötietojärjestelmä (Population Information System)."
+   }
+  },
+  {
+   "claim": "record:FI:facial_biometric:register",
+   "question": "Facial biometric: Facial images captured for identity documents",
+   "relation": "fills_gap",
+   "url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861",
+   "quote": "Lisäksi passirekisteriin talletetaan passinhakijalta passin hakutilanteessa otetut sormenjäljet sekä henkilön valokuva ja nimikirjoitusnäyte",
+   "quote_english": "In addition, the fingerprints taken from the passport applicant when applying, together with the person's photograph and signature sample, are stored in the passport register",
+   "value": "passirekisteri (passport register)",
+   "published": "2021-06-30",
+   "title": "Poliisin asiakirjajulkisuuskuvaus",
+   "publisher": "Poliisihallitus",
+   "doc_type": "official_page",
+   "note": "The police records description, under the Henkilökortti- ja passijärjestelmä (Heko-Passi) section.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "passirekisteri (passport register) stores applicant photographs",
+    "reason": "The quote says the passport register stores the photograph taken at application; the operator is not stated in the quote, but the document is the Police's own description."
+   }
+  },
+  {
+   "claim": "record:FI:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: Fingerprints captured for passports and ID cards where retained centrally",
+   "relation": "fills_gap",
+   "url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861",
+   "quote": "Lisäksi passirekisteriin talletetaan passinhakijalta passin hakutilanteessa otetut sormenjäljet sekä henkilön valokuva ja nimikirjoitusnäyte",
+   "quote_english": "In addition, the fingerprints taken from the passport applicant when applying, together with the person's photograph and signature sample, are stored in the passport register",
+   "value": "passirekisteri (passport register)",
+   "published": "2021-06-30",
+   "title": "Poliisin asiakirjajulkisuuskuvaus",
+   "publisher": "Poliisihallitus",
+   "doc_type": "official_page",
+   "note": "Passport fingerprints are kept centrally in the police passport register.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "yes, passport fingerprints are retained centrally in the passirekisteri (passport register)",
+    "reason": "The quote says fingerprints taken at passport application are stored in the passport register."
+   }
+  },
+  {
+   "claim": "record:FI:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: Fingerprints captured for passports and ID cards where retained centrally",
+   "relation": "fills_gap",
+   "url": "https://poliisi.fi/neuvontapalvelu/-/asset_publisher/ZtAEeHB39Lxr/content/sormenjaljet-matkustusoikeudelliselle-henkilokortille",
+   "quote": "Otetut sormenjäljet talletetaan henkilökortin sirulle sekä henkilökorttirekisteriin.",
+   "quote_english": "The fingerprints taken are stored on the ID card chip and in the ID card register.",
+   "value": "henkilökorttirekisteri (ID card register)",
+   "published": "",
+   "title": "Sormenjäljet matkustusoikeudelliselle henkilökortille",
+   "publisher": "Poliisi",
+   "doc_type": "official_page",
+   "note": "For ID cards, fingerprints are also kept centrally, in the ID card register.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "yes, ID-card fingerprints are retained in the henkilökorttirekisteri (ID card register) as well as on the chip",
+    "reason": "The quote says the fingerprints are stored on the ID card chip and in the ID card register."
+   }
+  },
+  {
+   "claim": "record:FI:issuance_history:register",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861",
+   "quote": "Henkilökortti- ja passijärjestelmässä (Heko-Passi) hallitaan henkilökortti- ja passihakemuksia ja niihin liittyviä päätöksiä ja lupa-asiakirjoja koko niiden elinkaaren ajan.",
+   "quote_english": "The ID card and passport system (Heko-Passi) manages ID card and passport applications and the related decisions and permit documents over their whole life cycle.",
+   "value": "Henkilökortti- ja passijärjestelmä, Heko-Passi (ID card and passport system)",
+   "published": "2021-06-30",
+   "title": "Poliisin asiakirjajulkisuuskuvaus",
+   "publisher": "Poliisihallitus",
+   "doc_type": "official_page",
+   "note": "The system also records lost, stolen or seized passports.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Henkilökortti- ja passijärjestelmä (Heko-Passi); operated by the Police according to page context",
+    "reason": "Heko-Passi manages ID card and passport applications, decisions and documents over their lifecycle; the operator is implied by the document (the Police's own document description), not stated in the quote."
+   }
+  },
+  {
+   "claim": "record:FI:digital_identity_credentials:register",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://dvv.fi/varmennetietojarjestelman-tietosuoja",
+   "quote": "Henkilötietoja käsitellään varmenteiden ja varmennekorttien tuottamiseksi, jakelemiseksi ja hallinnoimiseksi, tarkastuspalveluun lähetetyissä asiakirjoissa olevien sähköisten allekirjoitusten validoimiseksi",
+   "quote_english": "Personal data are processed to produce, distribute and manage certificates and certificate cards, and to validate electronic signatures in documents sent to the validation service",
+   "value": "Varmennetietojärjestelmä (certificate information system)",
+   "published": "",
+   "title": "Varmennetietojärjestelmän tietosuojaseloste",
+   "publisher": "Digi- ja väestötietovirasto",
+   "doc_type": "official_page",
+   "note": "This covers the state-issued citizen certificate (the eID on the ID card). The register name comes from the notice title. Most Finnish strong eID credentials are private bank or mobile credentials.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes the purposes of processing (certificates, cards, signature validation) and names no operator or eID scheme."
+   }
+  },
+  {
+   "claim": "record:FI:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://dvv.fi/varmennetietojarjestelman-tietosuoja",
+   "quote": "Digi- ja väestötietoviraston tehtävänä on tarjota valtakunnallisia varmennetun sähköisen asioinnin palveluja ja suoritteita.",
+   "quote_english": "The Digital and Population Data Services Agency's task is to provide national certified electronic transaction services and products.",
+   "value": "Digi- ja väestötietovirasto (Digital and Population Data Services Agency)",
+   "published": "",
+   "title": "Varmennetietojärjestelmän tietosuojaseloste",
+   "publisher": "Digi- ja väestötietovirasto",
+   "doc_type": "official_page",
+   "note": "The same notice says the data are not transferred outside the EU/EEA.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "Digi- ja väestötietovirasto (DVV)",
+    "reason": "The quote says it is DVV's task to provide national certified electronic transaction services, so DVV operates the certificate credentials."
+   }
+  },
+  {
+   "claim": "record:FI:authentication_audit_log:register",
+   "question": "Authentication audit log: Records of who authenticated to which public service and when",
+   "relation": "fills_gap",
+   "url": "https://www.suomi.fi/sivu/suomifi-tunnistuksen-tietosuojaseloste",
+   "quote": "Digi- ja väestötietovirasto käyttää tunnistuksen lokitiedoista koostuvaa tapahtumatietorekisteriä Suomi.fi-tunnistuksen käytön seurantaan ja valvontaan",
+   "quote_english": "The Digital and Population Data Services Agency uses an event data register consisting of authentication log data to monitor and supervise the use of Suomi.fi identification",
+   "value": "tapahtumatietorekisteri (event data register) of Suomi.fi-tunnistus",
+   "published": "",
+   "title": "Suomi.fi-tunnistuksen tietosuojaseloste",
+   "publisher": "Digi- ja väestötietovirasto / Suomi.fi",
+   "doc_type": "official_page",
+   "note": "The register of authentication log events.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "Digi- ja väestötietovirasto (DVV); tapahtumatietorekisteri (event log register)",
+    "reason": "DVV uses an event register built from Suomi.fi identification log data to monitor use of the service."
+   }
+  },
+  {
+   "claim": "record:FI:authentication_audit_log:operator",
+   "question": "Authentication audit log: Records of who authenticated to which public service and when",
+   "relation": "fills_gap",
+   "url": "https://www.suomi.fi/sivu/suomifi-tunnistuksen-tietosuojaseloste",
+   "quote": "Digi- ja väestötietovirasto käyttää tunnistuksen lokitiedoista koostuvaa tapahtumatietorekisteriä Suomi.fi-tunnistuksen käytön seurantaan ja valvontaan",
+   "quote_english": "The Digital and Population Data Services Agency uses an event data register consisting of authentication log data to monitor and supervise the use of Suomi.fi identification",
+   "value": "Digi- ja väestötietovirasto (Digital and Population Data Services Agency)",
+   "published": "",
+   "title": "Suomi.fi-tunnistuksen tietosuojaseloste",
+   "publisher": "Digi- ja väestötietovirasto / Suomi.fi",
+   "doc_type": "official_page",
+   "note": "DVV is named as controller in the same notice.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "Digi- ja väestötietovirasto (DVV); tapahtumatietorekisteri (event log register)",
+    "reason": "This is the same quote as item 14: DVV keeps and uses the authentication log register."
+   }
+  },
+  {
+   "claim": "record:FI:electoral_roll:register",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://dvv.fi/aanioikeusrekisterin-tietosuoja",
+   "quote": "väestötietojärjestelmän tietojen perusteella perustetaan vaalikohtainen äänioikeusrekisteri, joka määrittää kyseisen vaalin äänioikeutetut, heidän vaalipiirinsä ja heille osoitetut äänestyspaikat vaalipäivänä",
+   "quote_english": "on the basis of Population Information System data, an election-specific voting register is established, which determines those entitled to vote in that election, their constituency and their assigned polling stations on election day",
+   "value": "äänioikeusrekisteri (voting register)",
+   "published": "",
+   "title": "Äänioikeusrekisterin tietosuojaseloste",
+   "publisher": "Digi- ja väestötietovirasto",
+   "doc_type": "official_page",
+   "note": "The register is set up for each election under the Election Act 714/1998, section 18.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "äänioikeusrekisteri (election-specific voting register; operator not stated)",
+    "reason": "The quote says a voting register is established for each election from the population system data, but it does not say by whom."
+   }
+  },
+  {
+   "claim": "record:FI:electoral_roll:operator",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://dvv.fi/aanioikeusrekisterin-tietosuoja",
+   "quote": "Digi- ja väestötietovirasto perustaa jokaista vaalia varten väestötietojärjestelmästä äänioikeusrekisterin viimeistään 46. päivänä ennen vaalipäivää.",
+   "quote_english": "The Digital and Population Data Services Agency establishes the voting register from the Population Information System for each election no later than the 46th day before election day.",
+   "value": "Digi- ja väestötietovirasto (Digital and Population Data Services Agency)",
+   "published": "",
+   "title": "Äänioikeusrekisterin tietosuojaseloste",
+   "publisher": "Digi- ja väestötietovirasto",
+   "doc_type": "official_page",
+   "note": "The same notice says the register is part of the election information system maintained by Oikeusrekisterikeskus.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "Digi- ja väestötietovirasto (DVV)",
+    "reason": "The quote says DVV establishes the voting register from the population information system for every election."
+   }
+  },
+  {
+   "claim": "record:FI:trust_services_pki:register",
+   "question": "State PKI and qualified trust services: Root and issuing certificate authorities for government, qualified signatures and seals",
+   "relation": "fills_gap",
+   "url": "https://dvv.fi/varmennetietojarjestelman-tietosuoja",
+   "quote": "Varmennetietojärjestelmän sisältämiä henkilötietoja käsitellään EU:n yleisen tietosuoja-asetuksen 6 artiklan perusteella.",
+   "quote_english": "Personal data in the certificate information system are processed on the basis of Article 6 of the EU General Data Protection Regulation.",
+   "value": "Varmennetietojärjestelmä (certificate information system)",
+   "published": "",
+   "title": "Varmennetietojärjestelmän tietosuojaseloste",
+   "publisher": "Digi- ja väestötietovirasto",
+   "doc_type": "official_page",
+   "note": "DVV's certificate system, which covers certificates, certificate cards, validation, sealing and time-stamping services.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote only gives the GDPR Article 6 legal basis and says nothing about root CAs or who operates them."
+   }
+  },
+  {
+   "claim": "record:FI:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: Root and issuing certificate authorities for government, qualified signatures and seals",
+   "relation": "fills_gap",
+   "url": "https://dvv.fi/en/ca-certificates",
+   "quote": "The Digital and Population Data Services Agency’s certification authority certificates (root certificates, CA certificates) can be installed by clicking on them on this page.",
+   "quote_english": "",
+   "value": "Digital and Population Data Services Agency",
+   "published": "",
+   "title": "CA Certificates",
+   "publisher": "Digital and Population Data Services Agency (DVV)",
+   "doc_type": "official_page",
+   "note": "Current roots are DVV Gov. Root CA - G3 RSA and G3 ECC, from the 2021 hierarchy reform.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Digi- ja väestötietovirasto (DVV)",
+    "reason": "The quote says DVV's certification authority issues the root and CA certificates."
+   }
+  },
+  {
+   "claim": "record:FI:residence_permits:register",
+   "question": "Residence and migration status: Residence permits, asylum status and foreign-national registrations",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2020/615/fin@",
+   "quote": "Maahanmuuttovirasto vastaa ulkomaalaisasioiden asiankäsittelyjärjestelmästä julkisen hallinnon tiedonhallinnasta annetun lain (906/2019) mukaisesti.",
+   "quote_english": "The Finnish Immigration Service is responsible for the aliens affairs case management system in accordance with the Act on Information Management in Public Administration (906/2019).",
+   "value": "ulkomaalaisasioiden asiankäsittelyjärjestelmä (aliens affairs case management system)",
+   "published": "",
+   "title": "Laki henkilötietojen käsittelystä maahanmuuttohallinnossa 615/2020 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Consolidated text, which includes the amendment in force from 1 January 2026 (574/2025).",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Maahanmuuttovirasto (Finnish Immigration Service)",
+    "reason": "The Immigration Service is responsible for the aliens-affairs case management system under Act 906/2019."
+   }
+  },
+  {
+   "claim": "record:FI:residence_permits:operator",
+   "question": "Residence and migration status: Residence permits, asylum status and foreign-national registrations",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2020/615/fin@",
+   "quote": "Maahanmuuttovirasto vastaa ulkomaalaisasioiden asiankäsittelyjärjestelmästä julkisen hallinnon tiedonhallinnasta annetun lain (906/2019) mukaisesti.",
+   "quote_english": "The Finnish Immigration Service is responsible for the aliens affairs case management system in accordance with the Act on Information Management in Public Administration (906/2019).",
+   "value": "Maahanmuuttovirasto (Finnish Immigration Service)",
+   "published": "",
+   "title": "Laki henkilötietojen käsittelystä maahanmuuttohallinnossa 615/2020 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Controllership is split: each authority is controller for the data it records, including the Police Board and Border Guard HQ.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "Maahanmuuttovirasto (Finnish Immigration Service)",
+    "reason": "This is the same quote as item 20: the Immigration Service is responsible for the case management system."
+   }
+  },
+  {
+   "claim": "record:FI:health_insurance:operator",
+   "question": "Statutory health insurance: Enrolment and entitlement records of the statutory health insurance scheme",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2004/1224/fin@20260055",
+   "quote": "Kansaneläkelaitos vastaa sairausvakuutuksen toimeenpanoon liittyvistä tehtävistä sekä seuraa ja valvoo tämän lain ja sen nojalla annettujen asetusten ja määräysten noudattamista ja toteuttamista.",
+   "quote_english": "The Social Insurance Institution is responsible for the tasks related to implementing health insurance and monitors and supervises compliance with this Act and the decrees and regulations issued under it.",
+   "value": "Kansaneläkelaitos (Social Insurance Institution of Finland, Kela)",
+   "published": "2026",
+   "title": "Sairausvakuutuslaki 1224/2004 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Section 3 of the consolidated Health Insurance Act gives the operator only. No register name was found.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Kansaneläkelaitos (Kela)",
+    "reason": "Kela is responsible for implementing health insurance; the quote establishes the implementing body but does not name an enrolment register."
+   }
+  },
+  {
+   "claim": "record:FI:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2002/453/fin@20190103",
+   "quote": "Kiinteistötietojärjestelmä käsittää kiinteistörekisterilain (392/1985) mukaiset tiedot ja lainhuuto- ja kiinnitysrekisteriin merkittävät tiedot sekä muita tietoja sen mukaan kuin muualla laissa säädetään.",
+   "quote_english": "The Land Information System comprises the data under the Real Estate Register Act (392/1985) and the data entered in the title and mortgage register, as well as other data as provided elsewhere in law.",
+   "value": "Kiinteistötietojärjestelmä (Land Information System)",
+   "published": "",
+   "title": "Laki kiinteistötietojärjestelmästä ja siihen liittyvästä tietopalvelusta 453/2002 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "The system covers the cadastre plus the title and mortgage register.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Kiinteistötietojärjestelmä (Real property information system; operator not stated)",
+    "reason": "The quote defines what the system contains (the property register and the title and mortgage register) but not who operates it."
+   }
+  },
+  {
+   "claim": "record:FI:land_property:operator",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2002/453/fin@20190103",
+   "quote": "Tässä laissa tarkoitetun kiinteistötietojärjestelmän perustamisesta, hallinnosta, ylläpitämisestä, tietopalvelusta ja järjestelmän kehittämisestä huolehtii Maanmittauslaitos.",
+   "quote_english": "The National Land Survey of Finland is responsible for establishing, administering, maintaining, providing information services from and developing the land information system referred to in this Act.",
+   "value": "Maanmittauslaitos (National Land Survey of Finland)",
+   "published": "",
+   "title": "Laki kiinteistötietojärjestelmästä ja siihen liittyvästä tietopalvelusta 453/2002 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Section 5.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "Maanmittauslaitos (National Land Survey)",
+    "reason": "The quote says the National Land Survey establishes, administers and maintains the real property information system."
+   }
+  },
+  {
+   "claim": "record:FI:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2023/564/fin@",
+   "quote": "Tässä laissa säädetään kaupparekisterin pitämisestä yrityksiä, yhteisöjä ja niissä toimivia henkilöitä koskevien ajantasaisten ja luotettavien tietojen saamiseksi. Rekisteripitäjänä on Patentti- ja rekisterihallitus",
+   "quote_english": "This Act lays down provisions on keeping the Trade Register to obtain up-to-date and reliable information on companies, entities and persons acting in them. The registrar is the Finnish Patent and Registration Office",
+   "value": "kaupparekisteri (Trade Register)",
+   "published": "",
+   "title": "Kaupparekisterilaki 564/2023 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "The new Trade Register Act, 2023, section 1. Beneficial owner data are also entered in this register (section 5).",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "Patentti- ja rekisterihallitus (PRH)",
+    "reason": "The Trade Register Act names PRH as keeper of the trade register."
+   }
+  },
+  {
+   "claim": "record:FI:business_registry:operator",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2023/564/fin@",
+   "quote": "Tässä laissa säädetään kaupparekisterin pitämisestä yrityksiä, yhteisöjä ja niissä toimivia henkilöitä koskevien ajantasaisten ja luotettavien tietojen saamiseksi. Rekisteripitäjänä on Patentti- ja rekisterihallitus",
+   "quote_english": "This Act lays down provisions on keeping the Trade Register to obtain up-to-date and reliable information on companies, entities and persons acting in them. The registrar is the Finnish Patent and Registration Office",
+   "value": "Patentti- ja rekisterihallitus (Finnish Patent and Registration Office)",
+   "published": "",
+   "title": "Kaupparekisterilaki 564/2023 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Section 1.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "Patentti- ja rekisterihallitus (PRH)",
+    "reason": "This is the same quote as item 25: PRH keeps the trade register."
+   }
+  },
+  {
+   "claim": "record:FI:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2017/320/fin@20251001",
+   "quote": "Liikenne- ja viestintävirasto pitää sähköisesti liikenneasioiden rekisteriä, joka sisältää tietoja",
+   "quote_english": "The Finnish Transport and Communications Agency keeps the transport register electronically, which contains data",
+   "value": "liikenneasioiden rekisteri (Transport Register)",
+   "published": "2025",
+   "title": "Laki liikenteen palveluista 320/2017 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Section 216 lists vehicles and driving entitlements among the register's contents.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Liikenne- ja viestintävirasto (Traficom)",
+    "reason": "Traficom keeps the traffic affairs register, which the surrounding section says covers vehicles and personal licences."
+   }
+  },
+  {
+   "claim": "record:FI:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2017/320/fin@20251001",
+   "quote": "Liikenne- ja viestintävirasto pitää sähköisesti liikenneasioiden rekisteriä, joka sisältää tietoja",
+   "quote_english": "The Finnish Transport and Communications Agency keeps the transport register electronically, which contains data",
+   "value": "Liikenne- ja viestintävirasto (Finnish Transport and Communications Agency, Traficom)",
+   "published": "2025",
+   "title": "Laki liikenteen palveluista 320/2017 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Section 216.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Liikenne- ja viestintävirasto (Traficom)",
+    "reason": "This is the same quote as item 27: Traficom keeps the traffic affairs register."
+   }
+  },
+  {
+   "claim": "record:FI:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1993/770/fin@20250172",
+   "quote": "Rikosrekisterin rekisterinpitäjä on Oikeusrekisterikeskus. Rikosrekisteriin kerätään, talletetaan ja siitä luovutetaan tietoja, jotka tarvitaan rikosoikeudellisten seuraamusten määräämistä ja täytäntöönpanoa varten.",
+   "quote_english": "The controller of the criminal record is the Legal Register Centre. The criminal record collects, stores and discloses data needed to impose and enforce criminal sanctions.",
+   "value": "rikosrekisteri (criminal record register)",
+   "published": "2025",
+   "title": "Rikosrekisterilaki 770/1993 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Section 1 as currently amended. The original 1993 text named the Ministry of Justice.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "Oikeusrekisterikeskus (Legal Register Centre)",
+    "reason": "The Criminal Records Act names the Legal Register Centre as controller of the criminal record."
+   }
+  },
+  {
+   "claim": "record:FI:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/1993/770/fin@20250172",
+   "quote": "Rikosrekisterin rekisterinpitäjä on Oikeusrekisterikeskus.",
+   "quote_english": "The controller of the criminal record is the Legal Register Centre.",
+   "value": "Oikeusrekisterikeskus (Legal Register Centre)",
+   "published": "2025",
+   "title": "Rikosrekisterilaki 770/1993 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Section 1.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "Oikeusrekisterikeskus (Legal Register Centre)",
+    "reason": "The quote states the Legal Register Centre is controller of the criminal record."
+   }
+  },
+  {
+   "claim": "record:FI:police_records:register",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861",
+   "quote": "Poliisiasiaintietojärjestelmä PATJA Poliisiasiantietojärjestelmään kirjataan rikosilmoituksia, sekalaisilmoituksia, poliisilakiperusteisia kiinniottoilmoituksia sekä rangaistusvaatimuksia ja rikesakkoja koskevia tietoja.",
+   "quote_english": "Police Information System PATJA: crime reports, miscellaneous reports, apprehension reports under the Police Act and data on penalty claims and fixed fines are recorded in the police information system.",
+   "value": "Poliisiasiaintietojärjestelmä PATJA (Police Information System)",
+   "published": "2021-06-30",
+   "title": "Poliisin asiakirjajulkisuuskuvaus",
+   "publisher": "Poliisihallitus",
+   "doc_type": "official_page",
+   "note": "The same document also lists Vitja-RETU (identifying characteristics register) and the police intelligence system.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "PATJA (police information system); operated by the Police according to page context",
+    "reason": "The quote is in the PDF apart from line-break hyphenation ('rike- sakkoja'); it names PATJA and its contents, and the operator comes only from the document being the Police's."
+   }
+  },
+  {
+   "claim": "record:FI:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://poliisi.fi/documents/25235045/26823782/Tietosuojaseloste;+Schengenin+tietoj%C3%A4rjestelm%C3%A4n+kansallinen+j%C3%A4rjestelm%C3%A4.pdf/af420890-0a67-b39b-da12-314557f59f7e/Tietosuojaseloste;+Schengenin+tietoj%C3%A4rjestelm%C3%A4n+kansallinen+j%C3%A4rjestelm%C3%A4.pdf?t=1615875272104",
+   "quote": "Poliisin henkilötietojen käsittelystä ja käsittelyn oikeusperusteista liittyen Schengenin tietojärjestelmän kansalliseen järjestelmään säädetään seuraavissa laeissa",
+   "quote_english": "The processing of personal data by the police and its legal bases in relation to the national system of the Schengen Information System are laid down in the following acts",
+   "value": "Schengenin tietojärjestelmän kansallinen järjestelmä (national Schengen Information System, N.SIS)",
+   "published": "2023-05-11",
+   "title": "Tietosuojaseloste; Schengenin tietojärjestelmän kansallinen järjestelmä",
+   "publisher": "Poliisihallitus",
+   "doc_type": "official_page",
+   "note": "The controller named in the same notice is Poliisihallitus (National Police Board). This covers SIS only; nothing was found on VIS or EES.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote only introduces the laws that govern police processing for the national SIS and names no operator or system detail."
+   }
+  },
+  {
+   "claim": "record:FI:border_control:operator",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://poliisi.fi/documents/25235045/26823782/Tietosuojaseloste;+Schengenin+tietoj%C3%A4rjestelm%C3%A4n+kansallinen+j%C3%A4rjestelm%C3%A4.pdf/af420890-0a67-b39b-da12-314557f59f7e/Tietosuojaseloste;+Schengenin+tietoj%C3%A4rjestelm%C3%A4n+kansallinen+j%C3%A4rjestelm%C3%A4.pdf?t=1615875272104",
+   "quote": "Tietosuojaseloste; Schengenin tietojärjestelmän kansallinen järjestelmä 1 Rekisterinpitäjä Poliisihallitus",
+   "quote_english": "Privacy notice; national system of the Schengen Information System. 1 Controller: National Police Board",
+   "value": "Poliisihallitus (National Police Board)",
+   "published": "2023-05-11",
+   "title": "Tietosuojaseloste; Schengenin tietojärjestelmän kansallinen järjestelmä",
+   "publisher": "Poliisihallitus",
+   "doc_type": "official_page",
+   "note": "The quote spans the PDF heading and section 1, which are laid out on separate lines.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "Poliisihallitus (National Police Board)",
+    "reason": "The privacy notice names the National Police Board as controller of the national part of the Schengen Information System."
+   }
+  },
+  {
+   "claim": "record:FI:firearms_register:register",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861",
+   "quote": "Asetietojärjestelmässä hallitaan ampuma-aseiden ja aseen osien hankkimiseen ja hallussapitoon oikeuttavia lupia koko niiden elinkaarien ajan.",
+   "quote_english": "The firearms information system manages permits entitling the acquisition and possession of firearms and firearm parts over their whole life cycle.",
+   "value": "Asetietojärjestelmä (firearms information system)",
+   "published": "2021-06-30",
+   "title": "Poliisin asiakirjajulkisuuskuvaus",
+   "publisher": "Poliisihallitus",
+   "doc_type": "official_page",
+   "note": "The Firearms Act 1/1998, as consolidated, also refers to the asetietojärjestelmä.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "Asetietojärjestelmä (firearms information system); operated by the Police according to page context",
+    "reason": "The quote is in the PDF apart from line-break hyphenation ('hankkimi- seen'); it names the firearms permit system, and the operator is not stated in the quote."
+   }
+  },
+  {
+   "claim": "record:FI:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2000/188/fin@20241033",
+   "quote": "Säädösten julkaisemista varten on Suomen säädöskokoelma. Säädöskokoelmassa on erillinen osa",
+   "quote_english": "For the publication of statutes there is the Statute Book of Finland. The Statute Book has a separate part",
+   "value": "Suomen säädöskokoelma (Statute Book of Finland)",
+   "published": "2024",
+   "title": "Laki Suomen säädöskokoelmasta 188/2000 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Section 1. The version list also shows a 2026 amendment (853/2026) that may not yet be in this consolidation.",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "Suomen säädöskokoelma (Statute Book of Finland; operator not stated)",
+    "reason": "The quote establishes the Statute Book as the publication for legislation but does not say who operates it."
+   }
+  },
+  {
+   "claim": "record:FI:electoral_management:register",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://dvv.fi/aanioikeusrekisterin-tietosuoja",
+   "quote": "Äänioikeusrekisteri on osa vaalitietojärjestelmää, jonka ylläpidosta ja toiminnasta vastaa Oikeusrekisterikeskus.",
+   "quote_english": "The voting register is part of the election information system, whose maintenance and operation is the responsibility of the Legal Register Centre.",
+   "value": "vaalitietojärjestelmä (election information system)",
+   "published": "",
+   "title": "Äänioikeusrekisterin tietosuojaseloste",
+   "publisher": "Digi- ja väestötietovirasto",
+   "doc_type": "official_page",
+   "note": "A privacy notice from DVV, a state agency.",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "Oikeusrekisterikeskus (Legal Register Centre)",
+    "reason": "The quote says the Legal Register Centre maintains and operates the election information system."
+   }
+  },
+  {
+   "claim": "record:FI:electoral_management:operator",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://dvv.fi/aanioikeusrekisterin-tietosuoja",
+   "quote": "Äänioikeusrekisteri on osa vaalitietojärjestelmää, jonka ylläpidosta ja toiminnasta vastaa Oikeusrekisterikeskus.",
+   "quote_english": "The voting register is part of the election information system, whose maintenance and operation is the responsibility of the Legal Register Centre.",
+   "value": "Oikeusrekisterikeskus (Legal Register Centre)",
+   "published": "",
+   "title": "Äänioikeusrekisterin tietosuojaseloste",
+   "publisher": "Digi- ja väestötietovirasto",
+   "doc_type": "official_page",
+   "note": "Same quote as the register finding.",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "Oikeusrekisterikeskus (Legal Register Centre)",
+    "reason": "This is the same quote as item 36: the Legal Register Centre runs the election information system."
+   }
+  },
+  {
+   "claim": "record:FI:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2010/692/fin@20230438",
+   "quote": "Hätäkeskuslaitos vastaa hätäkeskustietojärjestelmästä julkisen hallinnon tiedonhallinnasta annetun lain (906/2019) mukaisesti.",
+   "quote_english": "The Emergency Response Centre Agency is responsible for the emergency response centre information system in accordance with the Act on Information Management in Public Administration (906/2019).",
+   "value": "hätäkeskustietojärjestelmä (emergency response centre information system)",
+   "published": "2023",
+   "title": "Laki hätäkeskustoiminnasta 692/2010 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Section 16 a. The TETRA network is Virve, provided by the state-owned Suomen Erillisverkot (vm.fi Tuve page).",
+   "review": {
+    "id": 38,
+    "quote_found": true,
+    "established": "Hätäkeskuslaitos (Emergency Response Centre Agency)",
+    "reason": "The quote says the Emergency Response Centre Agency is responsible for the emergency centre information system; it says nothing about TETRA."
+   }
+  },
+  {
+   "claim": "record:FI:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2010/692/fin@20230438",
+   "quote": "Hätäkeskuslaitos vastaa hätäkeskustietojärjestelmästä julkisen hallinnon tiedonhallinnasta annetun lain (906/2019) mukaisesti.",
+   "quote_english": "The Emergency Response Centre Agency is responsible for the emergency response centre information system in accordance with the Act on Information Management in Public Administration (906/2019).",
+   "value": "Hätäkeskuslaitos (Emergency Response Centre Agency)",
+   "published": "2023",
+   "title": "Laki hätäkeskustoiminnasta 692/2010 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Section 16 a.",
+   "review": {
+    "id": 39,
+    "quote_found": true,
+    "established": "Hätäkeskuslaitos (Emergency Response Centre Agency)",
+    "reason": "This is the same quote as item 38: the Emergency Response Centre Agency is responsible for the emergency centre information system."
+   }
+  },
+  {
+   "claim": "record:FI:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2017/884/fin@",
+   "quote": "Perusopetuksen, lukiokoulutuksen ja ammatillisen koulutuksen valtakunnallinen tietovaranto 4 § Tietovarannon käyttötarkoitus",
+   "quote_english": "National data repository for basic education, general upper secondary education and vocational education. Section 4: Purpose of the data repository",
+   "value": "Perusopetuksen, lukiokoulutuksen ja ammatillisen koulutuksen valtakunnallinen tietovaranto (national data repository for basic, general upper secondary and vocational education)",
+   "published": "",
+   "title": "Laki valtakunnallisista opinto- ja tutkintorekistereistä 884/2017 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Chapter 2 heading. The Act's title was changed by 1450/2025 from 1 January 2026, and the same Act sets up the learner number register (oppijanumerorekisteri).",
+   "review": {
+    "id": 40,
+    "quote_found": true,
+    "established": "Perusopetuksen, lukiokoulutuksen ja ammatillisen koulutuksen valtakunnallinen tietovaranto (national education data repository; operator not stated)",
+    "reason": "The quote is a chapter and section heading naming the repository, with no operator."
+   }
+  },
+  {
+   "claim": "record:FI:education:operator",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2017/884/fin@",
+   "quote": "Tietovarannon teknisenä ylläpitäjänä toimii Opetushallitus. Opetushallitus vastaa tietovarannon yleisestä toiminnasta",
+   "quote_english": "The Finnish National Agency for Education acts as the technical maintainer of the data repository. The Finnish National Agency for Education is responsible for the general operation of the data repository",
+   "value": "Opetushallitus (Finnish National Agency for Education)",
+   "published": "",
+   "title": "Laki valtakunnallisista opinto- ja tutkintorekistereistä 884/2017 (ajantasainen)",
+   "publisher": "Finlex / oikeusministeriö",
+   "doc_type": "legislation",
+   "note": "Section 5.",
+   "review": {
+    "id": 41,
+    "quote_found": true,
+    "established": "Opetushallitus (Finnish National Agency for Education)",
+    "reason": "The quote says the National Agency for Education is the technical maintainer of the repository and responsible for its general operation."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:FI:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:FI:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:FI:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:FI:K2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:FI:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:FI:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:facial_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:breeder_documents:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:FI:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:authentication_audit_log:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:tax:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FI:customs:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FI:benefits_pensions:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FI:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:beneficial_ownership:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:FI:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:public_finance:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FI:government_payroll:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FI:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:central_bank:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:FI:defence_command:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FI:intelligence:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FI:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FI:crisis_management:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FI:grid_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FI:water_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FI:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:FI:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

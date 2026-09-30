@@ -9,6 +9,7 @@ set -e
 #
 #   ./test.sh              everything
 #   ./test.sh --no-e2e     skip the browser stage (no Chrome, or CI without one)
+#   ./test.sh --no-pdf     skip compiling the PDFs (no typst); without it, missing typst fails
 #
 # Exit 0 = safe to publish. Anything else = do not.
 
@@ -22,11 +23,13 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT"
 
 SKIP_E2E=false
+SKIP_PDF=false
 for arg in "$@"; do
     case "$arg" in
         --no-e2e) SKIP_E2E=true ;;
+        --no-pdf) SKIP_PDF=true ;;
         --help|-h)
-            sed -n '3,14p' "$0" | sed 's/^# \{0,1\}//'
+            sed -n '3,15p' "$0" | sed 's/^# \{0,1\}//'
             exit 0
             ;;
         *)
@@ -116,6 +119,46 @@ if [ ! -d "web/node_modules" ]; then
     echo -e "${RED}❌ web/node_modules missing. Run ./init.sh first.${NC}"
     exit 1
 fi
+
+# -----------------------------------------------------------------------------
+step "Admission reproduces the committed registers"
+# Research then vetting admission, re-run on the committed evidence, must change nothing: the
+# registers a reader sees follow from the staged findings, verification rows and tier table (#84).
+python3 model/reproduce.py admit-check
+ok "registers reproduce from the committed evidence"
+
+# -----------------------------------------------------------------------------
+if [ "$SKIP_PDF" = true ]; then
+    echo
+    echo -e "${YELLOW}⚠️  Skipping the PDF stage (--no-pdf)${NC}"
+else
+    step "The EU-27 report and 27 country PDFs compile"
+    # Exactly what the deploy builds (vercel.json buildCommand), so a template error fails here and
+    # not halfway through a production deploy (#81). A typst error passed the whole gate once.
+    if ! command -v typst &> /dev/null; then
+        echo -e "${RED}    ❌ typst is not installed (brew install typst), or pass --no-pdf${NC}"
+        exit 1
+    fi
+    PDF_DIR="$(mktemp -d)"
+    trap 'rm -rf "$PDF_DIR"' EXIT
+    python3 book/report.py -o "$PDF_DIR" > /dev/null
+    pdfs=$(find "$PDF_DIR" -name '*.pdf' -size +1k | wc -l | tr -d ' ')
+    if [ "$pdfs" != 28 ]; then
+        echo -e "${RED}    ❌ expected 28 PDFs, found $pdfs${NC}"
+        exit 1
+    fi
+    # The compiled text, not just the source: every PDF opens with the disclaimer (#82).
+    if command -v pdftotext &> /dev/null; then
+        for pdf in "$PDF_DIR/eu27-report.pdf" "$PDF_DIR/report/DE.pdf"; do
+            if ! pdftotext "$pdf" - | tr -s ' \n' ' ' | grep -q "no person has reviewed the findings"; then
+                echo -e "${RED}    ❌ $(basename "$pdf") does not carry the disclaimer${NC}"
+                exit 1
+            fi
+        done
+    fi
+    ok "28 PDFs compiled; the disclaimer is in the compiled text"
+fi
+
 cd web
 
 step "TypeScript types"

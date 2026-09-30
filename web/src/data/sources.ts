@@ -75,7 +75,7 @@ export function factCounts(doc: Document): { facts: number; gaps: number } {
   let gaps = 0
   for (const s of spans(doc)) {
     if (s.role === 'fact') facts++
-    else if (s.role === 'gap' && s.t !== '—') gaps++
+    else if ((s.role === 'gap' || s.role === 'disputed') && s.t !== '—') gaps++
   }
   return { facts, gaps }
 }

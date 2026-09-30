@@ -80,5 +80,22 @@ class SourceIds(unittest.TestCase):
         self.assertEqual(research.source_id(u), research.source_id(u))
 
 
+class Decoding(unittest.TestCase):
+    """A page is read in the charset it declares (found 2026-09-30: 141 genuine quotes on ISO-8859-1
+    pages could never match while every page was decoded as UTF-8)."""
+
+    def test_a_latin1_page_keeps_its_accents(self):
+        body = '<html><head><meta charset="iso-8859-1"></head><body>Lei da proteção de dados</body></html>'
+        text = research.extract(body.encode("iso-8859-1"), "text/html")
+        self.assertIn("proteção", text)
+        self.assertEqual(research.match("Lei da proteção de dados pessoais", text + " pessoais"), "exact")
+
+    def test_utf8_is_read_as_utf8(self):
+        self.assertEqual(research.decode("Ελληνικά".encode("utf-8")), "Ελληνικά")
+
+    def test_an_undeclared_legacy_page_falls_back_to_windows_1252(self):
+        self.assertEqual(research.decode("Straße".encode("cp1252")), "Straße")
+
+
 if __name__ == "__main__":
     unittest.main()

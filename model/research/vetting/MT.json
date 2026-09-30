@@ -1,0 +1,892 @@
+{
+ "iso": "MT",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:MT:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://legislation.mt/getpdf/689061f044ed663ec0f22f07",
+   "quote": "There is hereby established an Agency, to be known as the Identity Malta Agency or as \"Identity Malta\", or as \"Identità\" which shall carry out functions and duties of the public administration in the following matters",
+   "quote_english": "",
+   "value": "Yes",
+   "published": "2025-07-22",
+   "title": "Identity Malta Agency (Establishment) Order (S.L. 595.07)",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "The order establishing the agency (T1, consolidated to 22/07/2025) makes Identità a public-administration agency. Its matters include \"(d) identity cards and other identity documents\", and it carries out the functions of the authorised officer under the Identity Card Act, Cap. 258.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "S.L. 595.07 sets up Identity Malta/Identità as an agency carrying out public-administration functions, and the list right after the quote includes '(d) identity cards and other identity documents'. The electronic side of the scheme is not stated explicitly."
+   }
+  },
+  {
+   "claim": "indicator:MT:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://identita.gov.mt/get-to-know-identita/",
+   "quote": "Identità was established in 2013 and is responsible for citizens’ identity management and the implementation of migration processes. The government agency offers a specialised public service in matters relating to e-ID cards",
+   "quote_english": "",
+   "value": "Yes",
+   "published": "2025-11-13",
+   "title": "Get to Know Identità",
+   "publisher": "Identità",
+   "doc_type": "official_page",
+   "note": "This is a different Identità page from the current source (about-us). It independently describes Identità as a government agency that runs the e-ID cards.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The page calls Identità 'the government agency' that provides the public service for e-ID cards, so the e-ID is run by a state body."
+   }
+  },
+  {
+   "claim": "record:MT:civil_registry:register",
+   "question": "Civil registry core: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://legislation.mt/getpdf/6a7c3f2652fe431ca8f9b4f1",
+   "quote": "In the Public Registry Office in Malta and in Gozo, there shall be kept five register books: one for the registration of acts of birth, one for the registration of acts of marriage",
+   "quote_english": "",
+   "value": "Public Registry Office register books",
+   "published": "2026-07-17",
+   "title": "Civil Code (Cap. 16), art. 238",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "This is the statutory basis on the official law portal, consolidated to 17/07/2026. Article 238 sets up the Public Registry register books for acts of birth, marriage, civil union, death and cohabitation.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "Public Registry (register books of acts of birth, marriage, civil union, death and cohabitation)",
+    "reason": "Cap. 16 names the register books kept in the Public Registry Office in Malta and Gozo, which is the civil registry."
+   }
+  },
+  {
+   "claim": "record:MT:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://identita.gov.mt/get-to-know-identita/",
+   "quote": "The Identity Cards Unit is responsible for issuing e-ID cards to Maltese citizens. It also manages the registration and maintenance of e-ID virtual accounts, ensuring citizens have secure access to digital public services.",
+   "quote_english": "",
+   "value": "Identity Cards Unit",
+   "published": "2025-11-13",
+   "title": "Get to Know Identità",
+   "publisher": "Identità",
+   "doc_type": "official_page",
+   "note": "An independent Identità page, updated November 2025. It confirms the Identity Cards Unit manages e-ID virtual accounts.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "Identity Cards Unit (Identità)",
+    "reason": "The quote says the Identity Cards Unit issues e-ID cards and manages e-ID virtual accounts, and the page belongs to Identità."
+   }
+  },
+  {
+   "claim": "record:MT:digital_identity_credentials:register",
+   "question": "Digital identity credentials: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://identita.gov.mt/get-to-know-identita/",
+   "quote": "The Identity Cards Unit is responsible for issuing e-ID cards to Maltese citizens. It also manages the registration and maintenance of e-ID virtual accounts, ensuring citizens have secure access to digital public services.",
+   "quote_english": "",
+   "value": "e-ID virtual accounts",
+   "published": "2025-11-13",
+   "title": "Get to Know Identità",
+   "publisher": "Identità",
+   "doc_type": "official_page",
+   "note": "A different page from the current source. It confirms that e-ID virtual accounts give access to digital public services.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "e-ID (e-ID cards and e-ID virtual accounts)",
+    "reason": "The quote names the credential (e-ID card and e-ID virtual account) but no separately named register or system beyond that."
+   }
+  },
+  {
+   "claim": "record:MT:issuance_history:operator",
+   "question": "Document issuance history: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://identita.gov.mt/get-to-know-identita/",
+   "quote": "The Identity Cards Unit is responsible for issuing e-ID cards to Maltese citizens. It also manages the registration and maintenance of e-ID virtual accounts, ensuring citizens have secure access to digital public services.",
+   "quote_english": "",
+   "value": "Identity Cards Unit",
+   "published": "2025-11-13",
+   "title": "Get to Know Identità",
+   "publisher": "Identità",
+   "doc_type": "official_page",
+   "note": "This page independently confirms that the Identity Cards Unit issues e-ID cards. The same page says the Passport Office issues e-Passports.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says the Unit issues e-ID cards but says nothing about a record or history of issued documents, so it does not say who operates one."
+   }
+  },
+  {
+   "claim": "record:MT:residence_permits:operator",
+   "question": "Residence and migration status: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://identita.gov.mt/get-to-know-identita/",
+   "quote": "The Expatriates Unit is responsible for issuing residence documents to EU nationals and residence permits to third-country nationals.",
+   "quote_english": "",
+   "value": "Expatriates Unit",
+   "published": "2025-11-13",
+   "title": "Get to Know Identità",
+   "publisher": "Identità",
+   "doc_type": "official_page",
+   "note": "An independent Identità page that corroborates the Expatriates Unit as the issuer of residence documents and permits.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Expatriates Unit (Identità)",
+    "reason": "The quote says the Expatriates Unit issues residence documents and permits, and the page belongs to Identità."
+   }
+  },
+  {
+   "claim": "record:MT:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://identita.gov.mt/passport-office-adults-first-time/",
+   "quote": "At the office, live biometrics such as facial images, fingerprints, and signatures will be captured.",
+   "quote_english": "",
+   "value": "Live biometrics including fingerprints are captured at the Passport Office for passport applications",
+   "published": "2026-07-22",
+   "title": "Passport Office – Adults – First-time",
+   "publisher": "Identità",
+   "doc_type": "official_page",
+   "note": "The first-time adult passport page (updated July 2026) differs from the current source, which is the renewals page, and states the same capture of fingerprints.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says fingerprints are captured at the passport office but names no register or system that holds them."
+   }
+  },
+  {
+   "claim": "record:MT:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://identita.gov.mt/frequently-asked-questions/maltese-eid-cards/",
+   "quote": "During the application process, biometric data is collected, including the applicant’s photograph, signature, and fingerprints.",
+   "quote_english": "",
+   "value": "Fingerprints are also captured for e-ID card applications",
+   "published": "2026-09-16",
+   "title": "FAQs – Maltese eID Cards",
+   "publisher": "Identità",
+   "doc_type": "official_page",
+   "note": "Shows that fingerprints are also captured for e-ID cards, not only for passports (FAQ updated September 2026).",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says fingerprints are collected during an e-ID application but names no register or system."
+   }
+  },
+  {
+   "claim": "record:MT:facial_biometric:register",
+   "question": "Facial biometric: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://identita.gov.mt/identity-cards-unit/useful-info/",
+   "quote": "The application form is checked and the following Biometrics are captured: Facial photo; Signature; Fingerprints.",
+   "quote_english": "",
+   "value": "Facial photo captured for e-ID card applications",
+   "published": "2026-07-07",
+   "title": "Identity Cards Unit – Useful Information",
+   "publisher": "Identità",
+   "doc_type": "official_page",
+   "note": "Confirms that facial images are captured for e-ID cards. The current source says these images are passed to the Electoral Office.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote lists the biometrics captured (including the facial photo) but names no register or system."
+   }
+  },
+  {
+   "claim": "record:MT:trust_services_pki:register",
+   "question": "State PKI and qualified trust services: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://identita.gov.mt/identity-cards-unit/useful-info/",
+   "quote": "The PINs in the letter which is received by post are used to make use of the certificates (Authentication Certificate Signature Certificate) found on their e-ID and kept on their computer.",
+   "quote_english": "",
+   "value": "e-ID cards carry an Authentication Certificate and a Signature Certificate",
+   "published": "2026-07-07",
+   "title": "Identity Cards Unit – Useful Information",
+   "publisher": "Identità",
+   "doc_type": "official_page",
+   "note": "A different Identità page with the same statement. The MCA trusted list (MT_TSL.xml, issued 2026-04-27) names the Government of Malta as the TSP for the Malta Citizen Electronic Identity CA.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote mentions the authentication and signature certificates on the e-ID but does not name the PKI or trust-service system that issues them."
+   }
+  },
+  {
+   "claim": "record:MT:breeder_documents:register",
+   "question": "Breeder document scans: Birth certificates, naturalisation decrees and other documents that establish identity",
+   "relation": "fills_gap",
+   "url": "https://identita.gov.mt/public-registry-main-page/",
+   "quote": "Records kept at the Public Registry include acts of birth, marriage, civil union, death, and adoption registrations. All documents presented are retained and indefinitely preserved in the Archives of the Public Registry.",
+   "quote_english": "",
+   "value": "Archives of the Public Registry",
+   "published": "2026-06-02",
+   "title": "Public Registry – Main Page",
+   "publisher": "Identità",
+   "doc_type": "official_page",
+   "note": "The Public Registry keeps the supporting documents presented for civil-status acts indefinitely. The page does not say whether they are scanned.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Public Registry (documents kept indefinitely in the Archives of the Public Registry)",
+    "reason": "The quote says documents presented for birth and other civil-status registrations are kept indefinitely in the Public Registry Archives."
+   }
+  },
+  {
+   "claim": "record:MT:tax:operator",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/69c65a5c7da36921dcc4f04b",
+   "quote": "\"Commissioner\" means the Commissioner for Tax and Customs;",
+   "quote_english": "",
+   "value": "Commissioner for Tax and Customs",
+   "published": "2026-03-10",
+   "title": "Income Tax Management Act (Cap. 372)",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "This is the operator, not the register name. The Income Tax Management Act (consolidated 10/03/2026) makes the Commissioner for Tax and Customs, the merged tax and customs administration that replaced the Commissioner for Revenue, responsible for returns and assessments.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "",
+    "reason": "This is only a definition of 'Commissioner' in the Income Tax Management Act. It does not say who holds or operates tax assessment or return records."
+   }
+  },
+  {
+   "claim": "record:MT:customs:operator",
+   "question": "Customs declarations: Import and export declarations and duty assessments",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/69c3afc27da36921dcc4ec14",
+   "quote": "\"Commissioner for Tax and Customs\" (hereinafter referred to as the \"Commissioner\") means the Commissioner for Tax and Customs, and includes any other person having an express or implied authority to act for the said Commissioner",
+   "quote_english": "",
+   "value": "Commissioner for Tax and Customs",
+   "published": "2026-03-10",
+   "title": "Customs Ordinance (Cap. 37)",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "This is the operator. The Ordinance refers to \"the systems relating to the processing of customs declarations, whether manual or electronic\" but gives them no name.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "",
+    "reason": "This is only a definition of the Commissioner for Tax and Customs in Cap. 37. It says nothing about customs declaration records or who operates them."
+   }
+  },
+  {
+   "claim": "record:MT:benefits_pensions:operator",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/69d6033d6fe5fd3994d1710c",
+   "quote": "the word Director means the Director General (Social Security) or the Commissioner for Tax and Customs, or each of them as the case may require",
+   "quote_english": "",
+   "value": "Director General (Social Security)",
+   "published": "2026-03-10",
+   "title": "Social Security Act (Cap. 318)",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "The Social Security Act (consolidated 10/03/2026) gives the Director General (Social Security) the administration of benefits. The Commissioner for Tax and Customs handles contributions; no register name is given.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "",
+    "reason": "This is only a definition of 'Director' in the Social Security Act and names two possible officials. It does not say who holds benefit or pension records."
+   }
+  },
+  {
+   "claim": "record:MT:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://lra.mt/news/a-leap-forward-in-digital-transformation-launch-of-the-new-digital-platform-lrs/",
+   "quote": "The Land Registration Agency has officially launched the new Land Registration System (LRS)",
+   "quote_english": "",
+   "value": "Land Registration System (LRS)",
+   "published": "2026-07-30",
+   "title": "A Leap Forward in Digital Transformation – Launch of the New Digital Platform LRS",
+   "publisher": "Land Registration Agency",
+   "doc_type": "official_page",
+   "note": "This is the operator's own announcement of July 2026. The Land Registration System (LRS) is the new digital title registration platform.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "Land Registration System (LRS), launched by the Land Registration Agency",
+    "reason": "The quote names the system (LRS) and the agency that launched it."
+   }
+  },
+  {
+   "claim": "record:MT:land_property:operator",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://lra.mt/",
+   "quote": "Land Registration Agency is the competent entity for the registration of property within the Maltese Islands.",
+   "quote_english": "",
+   "value": "Land Registration Agency",
+   "published": "2026-09-04",
+   "title": "Land Registration Agency – Home",
+   "publisher": "Land Registration Agency",
+   "doc_type": "official_page",
+   "note": "The Land Registration Agency is the current operator. The statute (Land Registration Act, Cap. 296) still speaks of the \"Land Registry\" under a Land Registrar.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "Land Registration Agency",
+    "reason": "The quote says the Land Registration Agency is the competent entity for registering property in Malta."
+   }
+  },
+  {
+   "claim": "record:MT:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/60efe5f532d0f719d442f08c",
+   "quote": "To establish a Land Registry to regulate the registration of title to land, and to make provision for matters incidental thereto or connected therewith.",
+   "quote_english": "",
+   "value": "Land Registry",
+   "published": "2021-07-06",
+   "title": "Land Registration Act (Cap. 296)",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "This is the statutory basis (T1, consolidated 06/07/2021) for the title register now run by the Land Registration Agency.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "Land Registry",
+    "reason": "The long title of the Land Registration Act (Cap. 296) sets up a Land Registry for title to land, but this quote does not say who operates it."
+   }
+  },
+  {
+   "claim": "record:MT:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://mbr.mt/",
+   "quote": "The MBR operates as a digital-first regulator through its flagship portal, the Business Automation Registry Online System (BAROS), which provides 24/7 access for the filing and registration of documentation for new and existing commercial partnerships and legal persons",
+   "quote_english": "",
+   "value": "Business Automation Registry Online System (BAROS)",
+   "published": "",
+   "title": "Malta Business Registry – About Us",
+   "publisher": "Malta Business Registry",
+   "doc_type": "official_page",
+   "note": "This is the operator's own site. BAROS is the filing and registration system for companies and other legal persons.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "Business Automation Registry Online System (BAROS), operated by the Malta Business Registry",
+    "reason": "The quote names BAROS as the MBR's filing and registration portal for companies and partnerships."
+   }
+  },
+  {
+   "claim": "record:MT:business_registry:operator",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://mbr.mt/",
+   "quote": "Established under Subsidiary Legislation 595.27 and led by the Registrar of Companies, the Malta Business Registry (MBR) is the central authority for all commercial entities in Malta.",
+   "quote_english": "",
+   "value": "Malta Business Registry (MBR)",
+   "published": "",
+   "title": "Malta Business Registry – About Us",
+   "publisher": "Malta Business Registry",
+   "doc_type": "official_page",
+   "note": "The MBR is an agency set up under S.L. 595.27 and led by the Registrar of Companies.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Malta Business Registry (MBR), led by the Registrar of Companies",
+    "reason": "The quote names the MBR as the central authority for all commercial entities."
+   }
+  },
+  {
+   "claim": "record:MT:beneficial_ownership:register",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://mbr.mt/",
+   "quote": "Since 2021, the MBR has served as a supervisory authority under the Prevention of Money Laundering and Funding of Terrorism Regulations (PMLFTR). In this vital role, the MBR maintains the central Register of Beneficial Owners",
+   "quote_english": "",
+   "value": "Register of Beneficial Owners",
+   "published": "",
+   "title": "Malta Business Registry – About Us",
+   "publisher": "Malta Business Registry",
+   "doc_type": "official_page",
+   "note": "The same quote names the MBR as the body that keeps this register (the operator).",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Register of Beneficial Owners, maintained by the Malta Business Registry",
+    "reason": "The quote says the MBR maintains the central Register of Beneficial Owners."
+   }
+  },
+  {
+   "claim": "record:MT:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/69c657587da36921dcc4f02f",
+   "quote": "\"Authority\" means the Authority for Transport in Malta set up under the provisions of the Authority for Transport in Malta Act;",
+   "quote_english": "",
+   "value": "Authority for Transport in Malta",
+   "published": "2026-01-01",
+   "title": "Motor Vehicles Registration and Licensing Act (Cap. 368)",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "Article 2A(1) of the same Act says: \"No person shall have in his possession or charge any motor vehicle which has not been registered with the Authority\". So this Authority (Transport Malta) keeps the vehicle register. The register's name is not given.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "",
+    "reason": "This is only a definition of 'Authority' in the Licensing Act (in the motor vehicles part). It does not say who keeps vehicle or licence records."
+   }
+  },
+  {
+   "claim": "record:MT:police_records:operator",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/67a3249e8ea55623141e9a56",
+   "quote": "The Police may hold, process and classify any information relevant to the commission of any crime in or outside Malta which information may be preserved by any system whatsoever, including in electronic format",
+   "quote_english": "",
+   "value": "Police",
+   "published": "2025-01-17",
+   "title": "Police Act (Cap. 164), art. 62",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "Article 62 allows the Malta Police to hold crime information, including fingerprints, photographs and samples, in electronic systems. It gives no name for the system.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Police (Malta Police)",
+    "reason": "Cap. 164 lets the Police hold and process crime information on any system, including electronic ones."
+   }
+  },
+  {
+   "claim": "record:MT:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/entry-exit-system/",
+   "quote": "The EES is an automated system which will register travellers from third-countries; both visa holders and visa-exempt travellers; each time they cross the EU's external borders.",
+   "quote_english": "",
+   "value": "Entry-Exit System (EES)",
+   "published": "2025-07-17",
+   "title": "Expatriates Unit Non-EU Nationals – Entry Exit System",
+   "publisher": "Identità",
+   "doc_type": "official_page",
+   "note": "This is Identità's page on the EU Entry-Exit System. The same page says EES records facial images and fingerprints. It does not describe how Malta hosts its national part.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Entry/Exit System (EES)",
+    "reason": "The quote names the EES as the automated system that registers third-country travellers at external borders. It names no national operator."
+   }
+  },
+  {
+   "claim": "record:MT:border_control:operator",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://identita.gov.mt/central-visa-unit-main-page/",
+   "quote": "The Central Visa Unit (CVU) is the government’s immigration central authority responsible for the implementation of national visa policies and the provisions under the Schengen acquis",
+   "quote_english": "",
+   "value": "Central Visa Unit (CVU)",
+   "published": "2026-08-12",
+   "title": "Central Visa Unit – Main Page",
+   "publisher": "Identità",
+   "doc_type": "official_page",
+   "note": "The CVU, part of Identità, is the visa authority, which covers the visa side (VIS). Border crossings themselves are not covered here.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "Central Visa Unit (CVU), Identità",
+    "reason": "The quote says the CVU is the government's central immigration authority for national visa policy and the Schengen acquis, which covers the visa side."
+   }
+  },
+  {
+   "claim": "record:MT:firearms_register:operator",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/60a4cb89083d7d182cdb9624",
+   "quote": "is licensed by the Commissioner for the purposes of this Act; \"Commissioner\" means the Commissioner of Police;",
+   "quote_english": "",
+   "value": "Commissioner of Police",
+   "published": "2020-05-21",
+   "title": "Arms Act (Cap. 480)",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "Under the Arms Act, firearms licences are issued by the Commissioner of Police, and dealers must report each transfer to the Commissioner. The Act gives no name for a central register.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote defines 'Commissioner' as the Commissioner of Police in the licensing of clubs. It does not mention a firearms register or who keeps it."
+   }
+  },
+  {
+   "claim": "record:MT:public_finance:operator",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/661f8cd37403ed2b30a8e0e2",
+   "quote": "The Accountant General shall ensure that a proper accounting system, including subsidiary accounting systems, is established across all public entities.",
+   "quote_english": "",
+   "value": "Accountant General",
+   "published": "2024-04-02",
+   "title": "Public Finance Management Act (Cap. 601), art. 32",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "The Act defines the \"accounting system\" as the electronic accounting software system adopted or authorised by the Ministry responsible for finance. It gives no product name.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "Accountant General",
+    "reason": "The Public Finance Management Act makes the Accountant General responsible for the government accounting system across public entities."
+   }
+  },
+  {
+   "claim": "record:MT:electoral_management:register",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/661645c07403ed16fcf9eb8e",
+   "quote": "Electronic Counting System\" means the process, computer program and/or computer hardware, other equipment, data and services as may be necessary in order to: (a) maintain relevant data in relation to the election being held;",
+   "quote_english": "",
+   "value": "Electronic Counting System",
+   "published": "2024-03-28",
+   "title": "General Elections Act (Cap. 354)",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "The Electronic Counting System is used for results tabulation under the General Elections (Electronic Counting and Sorting) Regulations, 2019. The same PDF is the source for the electoral_roll fact, but that is a different claim.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Electronic Counting System",
+    "reason": "The General Elections Act defines the Electronic Counting System as the software, hardware and data used for the election."
+   }
+  },
+  {
+   "claim": "record:MT:electoral_management:operator",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/661645c07403ed16fcf9eb8e",
+   "quote": "\"Commission\" shall mean the Electoral Commission established by article 60 of the Constitution;",
+   "quote_english": "",
+   "value": "Electoral Commission",
+   "published": "2024-03-28",
+   "title": "General Elections Act (Cap. 354)",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "The Act makes the Electoral Commission decide whether to use the Electronic Counting System. The Commission also keeps the Electoral Register database.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "",
+    "reason": "This only defines 'Commission' as the Electoral Commission. It does not say the Commission runs any election system."
+   }
+  },
+  {
+   "claim": "record:MT:central_bank:register",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/661f815ec2ed86388045ef0b",
+   "quote": "There shall be established a Central Credit Register (hereinafter referred to as \"Register\") at the Bank",
+   "quote_english": "",
+   "value": "Central Credit Register",
+   "published": "2024-04-02",
+   "title": "Central Bank of Malta Act (Cap. 204), art. 24",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "The Central Credit Register at the Central Bank of Malta holds granular, non-anonymised credit exposure data. It is a central bank system, but not the payment infrastructure.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "",
+    "reason": "The Central Credit Register at the Bank holds credit-exposure data. It is not central bank accounts, payment infrastructure or reserves records, so it does not answer this question."
+   }
+  },
+  {
+   "claim": "record:MT:crisis_management:operator",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/637747aebae36218f810d89e",
+   "quote": "There shall be a Civil Protection Department which shall be a department of Government headed by the Director General of Civil Protection",
+   "quote_english": "",
+   "value": "Civil Protection Department",
+   "published": "2022-11-11",
+   "title": "Civil Protection Act (Cap. 411)",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "Under article 4, the Department's functions start with preparing contingency plans. No named crisis system was found.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "Civil Protection Department (a government department)",
+    "reason": "The Civil Protection Act sets up the Civil Protection Department as a government department under a Director General."
+   }
+  },
+  {
+   "claim": "record:MT:water_control:register",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://www.wsc.com.mt/about-us/water-production-distribution/",
+   "quote": "All the production, transfer and storage of water is controlled and monitored in real time by remote sensing from the Control Room based at Luqa.",
+   "quote_english": "",
+   "value": "Control Room based at Luqa",
+   "published": "2023-03-08",
+   "title": "Water production",
+   "publisher": "Water Services Corporation",
+   "doc_type": "official_page",
+   "note": "This is the operator's own page. It describes centralised remote monitoring and control of drinking-water production, transfer and storage.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "Water Services Corporation Control Room at Luqa",
+    "reason": "On the WSC page, the quote says all water production, transfer and storage is controlled and monitored in real time from the Luqa Control Room."
+   }
+  },
+  {
+   "claim": "record:MT:water_control:operator",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://www.wsc.com.mt/about-us/water-production-distribution/",
+   "quote": "In 2022, the Water Services Corporation (WSC) produced 35.5 million cubic meters of potable water to meet the water demand.",
+   "quote_english": "",
+   "value": "Water Services Corporation (WSC)",
+   "published": "2023-03-08",
+   "title": "Water production",
+   "publisher": "Water Services Corporation",
+   "doc_type": "official_page",
+   "note": "The WSC operates drinking-water production and the Luqa control room.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "Water Services Corporation (WSC)",
+    "reason": "The quote names the WSC as the potable water producer (35.5 million cubic metres in 2022) but says nothing about control systems."
+   }
+  },
+  {
+   "claim": "record:MT:water_control:foreign_dependency",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://www.wsc.com.mt/about-us/water-production-distribution/",
+   "quote": "All the production, transfer and storage of water is controlled and monitored in real time by remote sensing from the Control Room based at Luqa.",
+   "quote_english": "",
+   "value": "national",
+   "published": "2023-03-08",
+   "title": "Water production",
+   "publisher": "Water Services Corporation",
+   "doc_type": "official_page",
+   "note": "The control room is in Luqa, Malta. The page says nothing about the IT or SCADA vendor or where the supporting servers are hosted, so treat this as weak.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "Water Services Corporation Control Room at Luqa",
+    "reason": "Same quote as item 31: remote monitoring and control of the water system from the Luqa Control Room on the WSC page."
+   }
+  },
+  {
+   "claim": "record:MT:education:operator",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://legislation.mt/getpdf/621f2607e3d8c541c4ac2f38",
+   "quote": "The Division of Education shall have access to all information which schools, State and non-State, may possess",
+   "quote_english": "",
+   "value": "Division of Education",
+   "published": "2022-03-01",
+   "title": "Education Act (Cap. 605)",
+   "publisher": "Legislation Malta",
+   "doc_type": "legislation",
+   "note": "The Education Act 2022 gives the Division of Education powers to collect student and school data. It names no student-records system, so this is weak evidence for an operator.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote gives the Division of Education access to schools' information. Having access does not establish who holds or operates student records or qualifications."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:MT:C1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:MT:C2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:MT:K1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:MT:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:issuance_history:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:digital_identity_credentials:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:facial_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:issuance_history:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:residence_permits:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:residence_permits:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:electoral_roll:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:health_insurance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:judicial_criminal:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:official_gazette:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:statistics_microdata:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:breeder_documents:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:authentication_audit_log:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:government_payroll:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:emergency_communications:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:grid_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:MT:water_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:MT:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:MT:L2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:MT:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

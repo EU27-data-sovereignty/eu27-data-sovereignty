@@ -20,6 +20,8 @@ text has a role:
     method   this project's own reasoning or instructions, stated as such
     fact     a statement about the world; carries claim ids that resolve to a cited source
     gap      where a fact would go, stated as not yet sourced -- the value is withheld
+    disputed where a fact was, withheld because its evidence is in question (#83): the cited source
+             no longer says it, or sources disagree. It carries the claim id and the reason.
 
 The rule the `--check` gate enforces (#75): a `fact` must carry at least one claim id, every claim id
 must have a citation in `sources/citations.csv`, and every citation's source must be in the registry
@@ -100,6 +102,10 @@ def gap(t: str = "Not yet sourced") -> dict:
     return {"t": t, "role": "gap"}
 
 
+def disputed(claim: str, why: str) -> dict:
+    return {"t": f"Disputed: {why}", "role": "disputed", "c": [claim]}
+
+
 class Sources:
     """The citations and registry, with the one test that matters: does a claim have support?"""
 
@@ -110,6 +116,38 @@ class Sources:
         self.by_claim: dict[str, list[dict]] = {}
         for c in self.cites:
             self.by_claim.setdefault(c["claim"], []).append(c)
+        # Sources a recheck found changed or gone (research.py recheck, #83).
+        import research  # noqa: PLC0415 -- research imports fetch, which document does not need otherwise
+        import vetting  # noqa: PLC0415
+        self.rechecked = research.load_recheck()
+        self.disputing = research.DISPUTING
+        # Sources that disagree and that no published rule settles (vetting.py, #83).
+        self.disagreements = vetting.load_disputes()
+
+    def dispute(self, claim: str, backing: list[dict]) -> str:
+        """Why a supported claim is nevertheless in question, or '' if it is not. A claim is disputed
+        when every source backing it has since dropped the quote or disappeared, or when a vetted
+        source disagrees and no published rule settles which one the report follows."""
+        d = self.disagreements.get(claim)
+        if d and d["other_source_id"] in self.reg:
+            return (f"sources disagree. {provenance.label(d['printed_source_id'], self.reg)} gives the "
+                    f"value this report printed; {provenance.label(d['other_source_id'], self.reg)} gives "
+                    f"\u201c{d['other_value']}\u201d. Neither is higher-tier or a later statement of the same "
+                    "authority, so both are shown and neither is printed as fact")
+        why = []
+        for c in backing:
+            r = self.rechecked.get(c["source_id"])
+            lost = r and (r["outcome"] == "gone" or (r["outcome"] == "quote_vanished"
+                                                     and claim in r.get("claims_missing", "").split(";")))
+            if not lost:
+                return ""
+            why.append(r)
+        if not why:
+            return ""
+        r = why[0]
+        return (f"the cited source no longer contains the quoted text (rechecked {r['checked']})"
+                if r["outcome"] == "quote_vanished" else
+                f"the cited source is gone (HTTP {r['http_status']}, rechecked {r['checked']})")
 
 
     def supported(self, claim: str) -> bool:
@@ -121,7 +159,7 @@ class Sources:
         vocabulary and is admitted by review (#79), and a dataset value by reproduction."""
         out = []
         for c in self.by_claim.get(claim, []):
-            if not provenance.supported(c, self.reg, self.params):
+            if not provenance.supported(c, self.reg, self.params) or "superseded" in c["checked_by"]:
                 continue
             src = self.reg[c["source_id"]]
             if categorical or src["doc_type"] == "dataset":
@@ -142,6 +180,9 @@ class Sources:
         """A fact span if a citation supports the value as printed, otherwise a gap. The value is
         never shown unsourced. `g` is the best grade among its citations."""
         found = self.evidence(claim, text, categorical) if text else []
+        why = self.dispute(claim, [c for c, _ in found]) if found else ""
+        if why:
+            return disputed(claim, why)
         if found:
             span = {"t": text, "role": "fact", "c": [claim], "g": found[0][1]["grade"]}
             if categorical:
@@ -171,9 +212,7 @@ def fundamentals(c: dict, src: Sources) -> dict:
     for col, name, unit, places in FUNDAMENTALS:
         claim = f"param:{iso}:{col}"
         value = f"{num(p[col], places)} {unit}" if p.get(col) not in (None, "") else ""
-        missing = ("Under review: the pinned source does not reproduce this value"
-                   if col == "gov_employment_k" else "Not yet sourced")
-        rows.append([label(name), src.fact(claim, value, missing)])
+        rows.append([label(name), src.fact(claim, value)])
     return {
         "id": "fundamentals", "title": "Fundamentals",
         "blocks": [
@@ -392,8 +431,12 @@ def walk_spans(doc: dict):
 
 
 def claims_used(doc: dict) -> list[str]:
+    """The claims a document asserts as fact. A disputed span carries its claim id for tracing, but
+    asserts nothing (#83)."""
     seen: list[str] = []
     for span in walk_spans(doc):
+        if span.get("role") != "fact":
+            continue
         for claim in span.get("c", []):
             if claim not in seen:
                 seen.append(claim)
@@ -404,7 +447,9 @@ def check(doc: dict, src: Sources) -> list[str]:
     errors = []
     for span in walk_spans(doc):
         role = span.get("role")
-        if role not in ("label", "method", "fact", "gap"):
+        if role == "disputed" and not span.get("c"):
+            errors.append(f"{doc['iso']}: disputed span without a claim: {span['t'][:60]!r}")
+        if role not in ("label", "method", "fact", "gap", "disputed"):
             errors.append(f"{doc['iso']}: span without a role: {span.get('t', '')[:60]!r}")
         if role == "fact":
             if not span.get("c"):

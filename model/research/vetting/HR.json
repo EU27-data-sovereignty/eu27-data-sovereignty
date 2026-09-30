@@ -1,0 +1,808 @@
+{
+ "iso": "HR",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:HR:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2007_07_79_2483.html",
+   "quote": "Ovim se Zakonom utvrđuju pojam klasificiranih i neklasificiranih podataka, stupnjevi tajnosti, postupak klasifikacije i deklasifikacije, pristup klasificiranim i neklasificiranim podacima, njihova zaštita i nadzor nad provedbom ovoga Zakona.",
+   "quote_english": "This Act lays down the concept of classified and unclassified data, the classification levels, the procedure for classification and declassification, access to classified and unclassified data, their protection and oversight of the implementation of this Act.",
+   "value": "Yes",
+   "published": "2007-07-30",
+   "title": "Zakon o tajnosti podataka (NN 79/2007)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "The Data Secrecy Act as published in the official gazette replaces the zakon.hr mirror; article 4 of the same text sets the levels VRLO TAJNO, TAJNO, POVJERLJIVO and OGRANIČENO. It was amended in NN 86/12.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Article 1 of the Zakon o tajnosti podataka (a statute adopted by the Sabor) sets out classified data, the secrecy levels and the classification procedure."
+   }
+  },
+  {
+   "claim": "record:HR:border_control:register",
+   "question": "Border and visa systems: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2013_07_83_1738.html",
+   "quote": "u Ministarstvu je uspostavljen Nacionalni informacijski sustav za upravljanje državnom granicom, koji je sastavni dio Informacijskog sustava Ministarstva.",
+   "quote_english": "the National Information System for State Border Management has been established in the Ministry and forms an integral part of the Ministry's Information System.",
+   "value": "Nacionalni informacijski sustav za upravljanje državnom granicom (National Information System for State Border Management)",
+   "published": "2013-07",
+   "title": "Zakon o nadzoru državne granice (NN 83/2013)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "The same provision in the official gazette text of the State Border Control Act. The act was amended several times, most recently in NN 13/26 (2026_02_13_116), and that amendment does not appear to change this provision.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "Nacionalni informacijski sustav za upravljanje državnom granicom (National Border Management Information System)",
+    "reason": "Article 40 names the system set up in the Ministry as a component of the Ministry's information system."
+   }
+  },
+  {
+   "claim": "record:HR:breeder_documents:operator",
+   "question": "Breeder document scans: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/1993_10_96_1878.html",
+   "quote": "Državne matice u kojima je zadnji upis stariji od 100 gođina, čuva Hrvatski državni arhiv.",
+   "quote_english": "State civil registers whose last entry is more than 100 years old are kept by the Croatian State Archives.",
+   "value": "Hrvatski državni arhiv (Croatian State Archives)",
+   "published": "1993-10",
+   "title": "Zakon o državnim maticama (NN 96/1993)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "The original gazette text of the State Registers Act. 'gođina' is a typo on the page itself and is kept verbatim. The later amendments (76/13, 98/19, 133/22) did not touch this sentence.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says only that the Croatian State Archives keeps state registers whose last entry is more than 100 years old; it does not mention scans or who operates a breeder-document scan holding."
+   }
+  },
+  {
+   "claim": "record:HR:business_registry:operator",
+   "question": "Business registry: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/1995_01_1_1.html",
+   "quote": "Registar vode trgovački sudovi (u daljnjem tekstu: registarski sudovi). Registar se čuva trajno.",
+   "quote_english": "The register is kept by the commercial courts (hereinafter: registry courts). The register is preserved permanently.",
+   "value": "trgovački sudovi (commercial courts)",
+   "published": "1995-01",
+   "title": "Zakon o sudskom registru (NN 1/1995)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 3 of the Court Register Act as originally published in the gazette. The act has been amended many times, most recently in NN 123/23.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "trgovački sudovi (commercial courts, as registry courts)",
+    "reason": "Article 3(1) states that the register is kept by the commercial courts."
+   }
+  },
+  {
+   "claim": "record:HR:business_registry:register",
+   "question": "Business registry: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/1995_01_1_1.html",
+   "quote": "Glavna knjigu rađena na računalu povezuje se u jedinstvenu bazu podataka za Republiku Hrvatsku.",
+   "quote_english": "The main book kept on computer is linked into a single database for the Republic of Croatia.",
+   "value": "jedinstvena baza podataka za Republiku Hrvatsku (single database for the Republic of Croatia)",
+   "published": "1995-01",
+   "title": "Zakon o sudskom registru (NN 1/1995)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 3(4) of the gazette original, which is the same provision the mirror shows.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes the computerised main book being linked into a single national database but gives that register or system no name."
+   }
+  },
+  {
+   "claim": "record:HR:civil_registry:operator",
+   "question": "Civil registry core: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2022_11_133_1997.html",
+   "quote": "U članku 4. stavcima 3. i 4. riječi: »Ministarstvo uprave« zamjenjuju se riječima: »Tijelo državne uprave nadležno za poslove opće uprave«.",
+   "quote_english": "In Article 4, paragraphs 3 and 4, the words 'Ministry of Administration' are replaced by 'State administration body competent for general administration'.",
+   "value": "Tijelo državne uprave nadležno za poslove opće uprave (state administration body competent for general administration)",
+   "published": "2022-11",
+   "title": "Zakon o izmjenama Zakona o državnim maticama (NN 133/2022)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "The 2019 amendment (NN 98/19, 2019_10_98_1928) gave the Ministry of Administration the job of establishing and running the single information system for the state registers. The 2022 amendment in this finding renamed that body to the one the printed value names.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "",
+    "reason": "The amending clause only swaps a ministry name in Article 4(3)-(4) of another law, and this page does not say what those paragraphs cover, so no operator of the civil registry is established."
+   }
+  },
+  {
+   "claim": "record:HR:civil_registry:register",
+   "question": "Civil registry core: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/1993_10_96_1878.html",
+   "quote": "O osobnim stanjima građana vode se matica rođenih, matica vjenčanih i matica umrlih.",
+   "quote_english": "The register of births, the register of marriages and the register of deaths are kept on citizens' personal status.",
+   "value": "matica rođenih, matica vjenčanih i matica umrlih (registers of births, marriages and deaths)",
+   "published": "1993-10",
+   "title": "Zakon o državnim maticama (NN 96/1993)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 8 of the State Registers Act as published in the gazette.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "matica rođenih, matica vjenčanih, matica umrlih (state registers of births, marriages and deaths)",
+    "reason": "Article 8 names the three state registers that hold citizens' personal status."
+   }
+  },
+  {
+   "claim": "record:HR:facial_biometric:operator",
+   "question": "Facial biometric: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_12_127_2551.html",
+   "quote": "nadležna tijela ovlaštena za prikupljanje i obradu biometrijskih podataka te ustrojavanje odgovarajućih zbirki podataka iz članka 6. ovoga Zakona su ministarstva nadležna za unutarnje poslove, vanjske poslove, poslove pravosuđa te ministarstvo nadležno za poslove obrane u dijelu koji se odnosi na obavljanje vojnopolicijskih poslova",
+   "quote_english": "the competent bodies authorised to collect and process biometric data and to set up the corresponding data collections are the ministries responsible for internal affairs, foreign affairs and justice, and the ministry responsible for defence as regards military police work",
+   "value": "ministarstva nadležna za unutarnje poslove, vanjske poslove, poslove pravosuđa te ministarstvo nadležno za poslove obrane (ministries of the interior, foreign affairs, justice, and defence for military police work)",
+   "published": "2019-12",
+   "title": "Zakon o obradi biometrijskih podataka (NN 127/2019)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "The official text also names the defence ministry, for military police work, which the printed value leaves out.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "ministries responsible for internal affairs, foreign affairs and justice, plus the defence ministry for military-police tasks",
+    "reason": "The definition lists these ministries as the bodies authorised to collect biometric data and set up its collections; it names several bodies, not one operator."
+   }
+  },
+  {
+   "claim": "record:HR:geospatial:operator",
+   "question": "Geospatial base data: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2018_12_112_2167.html",
+   "quote": "Državna geodetska uprava nadležna je za uspostavu i vođenje registra prostornih jedinica.",
+   "quote_english": "The State Geodetic Administration is responsible for establishing and keeping the spatial units register.",
+   "value": "Državna geodetska uprava (State Geodetic Administration)",
+   "published": "2018-12",
+   "title": "Zakon o državnoj izmjeri i katastru nekretnina (NN 112/2018)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 136(2) of the gazette original. The act was amended in NN 39/22 and 152/24.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Državna geodetska uprava (State Geodetic Administration)",
+    "reason": "Article 136(2) makes the State Geodetic Administration responsible for setting up and keeping the spatial units register."
+   }
+  },
+  {
+   "claim": "record:HR:geospatial:register",
+   "question": "Geospatial base data: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2018_12_112_2167.html",
+   "quote": "Registar zgrada je evidencija o zgradama koju osniva, vodi i održava Državna geodetska uprava.",
+   "quote_english": "The building register is a record of buildings established, kept and maintained by the State Geodetic Administration.",
+   "value": "Registar zgrada (Building register)",
+   "published": "2018-12",
+   "title": "Zakon o državnoj izmjeri i katastru nekretnina (NN 112/2018)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 116 of the gazette original.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Registar zgrada (Buildings Register)",
+    "reason": "Article 116 names the Buildings Register, kept by the State Geodetic Administration; it is one geospatial register, not necessarily the whole base dataset."
+   }
+  },
+  {
+   "claim": "record:HR:health_records:operator",
+   "question": "Health records: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_02_14_269.html",
+   "quote": "Hrvatski zavod za zdravstveno osiguranje (u daljnjem tekstu: HZZO) nadležan je za: – izradu prijedloga svih tehničkih standarda koji se koriste u CEZIH-u – upravljanje CEZIH-om radi uspostave i održavanja središnjeg dijela CEZIH-a",
+   "quote_english": "The Croatian Health Insurance Fund (HZZO) is responsible for: drafting all technical standards used in CEZIH; managing CEZIH in order to establish and maintain the central part of CEZIH",
+   "value": "Hrvatski zavod za zdravstveno osiguranje (HZZO) (Croatian Health Insurance Fund)",
+   "published": "2019-02",
+   "title": "Zakon o podacima i informacijama u zdravstvu (NN 14/2019)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 16 of the Health Data and Information Act as published in the gazette.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "HZZO (Hrvatski zavod za zdravstveno osiguranje)",
+    "reason": "Article 16 makes HZZO responsible for managing CEZIH, including setting up and maintaining its central part."
+   }
+  },
+  {
+   "claim": "record:HR:health_records:register",
+   "question": "Health records: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_02_14_269.html",
+   "quote": "Centralni zdravstveni informacijski sustav Republike Hrvatske (u daljnjem tekstu: CEZIH) je središnji sustav pohrane zdravstvenih podataka i informacija za njihovu standardiziranu obradu na primarnoj, sekundarnoj i tercijarnoj razini zdravstvene zaštite",
+   "quote_english": "The Central Health Information System of the Republic of Croatia (CEZIH) is the central storage system for health data and information for their standardised processing at the primary, secondary and tertiary levels of health care",
+   "value": "Centralni zdravstveni informacijski sustav Republike Hrvatske (CEZIH) (Central Health Information System of the Republic of Croatia)",
+   "published": "2019-02",
+   "title": "Zakon o podacima i informacijama u zdravstvu (NN 14/2019)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "The Article 2 definition in the gazette text.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "CEZIH (Centralni zdravstveni informacijski sustav Republike Hrvatske)",
+    "reason": "The definition names CEZIH as the central store of health data across all levels of care."
+   }
+  },
+  {
+   "claim": "record:HR:land_property:register",
+   "question": "Land & property registry: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_06_63_1234.html",
+   "quote": "Zemljišne knjige vode se elektronički, u Zajedničkom informacijskom sustavu zemljišnih knjiga i katastra (u daljnjem tekstu: ZIS). (2) ZIS je informacijski sustav u kojem se pohranjuju, održavaju i vode svi podaci zemljišnih knjiga i katastra.",
+   "quote_english": "Land registers are kept electronically in the Joint Information System of Land Registers and Cadastre (ZIS). ZIS is the information system in which all land-register and cadastre data are stored, maintained and kept.",
+   "value": "Zajednički informacijski sustav zemljišnih knjiga i katastra (ZIS) (Joint Information System of Land Registers and Cadastre)",
+   "published": "2019-06",
+   "title": "Zakon o zemljišnim knjigama (NN 63/2019)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 6 of the Land Registers Act as published in the gazette. It was amended in NN 128/22, 155/23 and 127/24.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "ZIS (Zajednički informacijski sustav zemljišnih knjiga i katastra)",
+    "reason": "Article 6 states that land books are kept electronically in the Joint Information System of Land Books and Cadastre (ZIS)."
+   }
+  },
+  {
+   "claim": "record:HR:police_records:register",
+   "question": "Police information systems: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2009_07_76_1835.html",
+   "quote": "informacijski sustav Ministarstva je Informacijski sustav Ministarstva unutarnjih poslova, 18. nalog je pisana ili usmena naredba",
+   "quote_english": "the Ministry information system is the Information System of the Ministry of the Interior; 18. an order is a written or oral instruction",
+   "value": "Informacijski sustav Ministarstva unutarnjih poslova (Information System of the Ministry of the Interior)",
+   "published": "2009-07",
+   "title": "Zakon o policijskim poslovima i ovlastima (NN 76/2009)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Definition 17 in Article 2 of the gazette original. The act was amended in NN 92/14 and 70/19.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "Informacijski sustav Ministarstva unutarnjih poslova (Ministry of the Interior Information System)",
+    "reason": "The statutory definition gives the Ministry's information system this name."
+   }
+  },
+  {
+   "claim": "record:HR:public_health_surveillance:operator",
+   "question": "Public health surveillance: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_02_14_269.html",
+   "quote": "Nacionalni javnozdravstveni informacijski sustav vodi HZJZ i mogu mu pristupiti ministarstvo nadležno za zdravstvo, županijski zavodi za javno zdravstvo te druge ovlaštene pravne i fizičke osobe.",
+   "quote_english": "The National Public Health Information System is run by HZJZ and may be accessed by the ministry responsible for health, the county public health institutes and other authorised legal and natural persons.",
+   "value": "HZJZ (Croatian Institute of Public Health)",
+   "published": "2019-02",
+   "title": "Zakon o podacima i informacijama u zdravstvu (NN 14/2019)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 29(1) of the gazette text.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "HZJZ (Croatian Institute of Public Health)",
+    "reason": "Article 29(1) states that HZJZ keeps the National Public Health Information System."
+   }
+  },
+  {
+   "claim": "record:HR:public_health_surveillance:register",
+   "question": "Public health surveillance: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_02_14_269.html",
+   "quote": "Nacionalni javnozdravstveni informacijski sustav (u daljnjem tekstu: NAJS) je sustav pohrane zdravstvenih podataka i informacija za njihovu obradu i arhiviranje (zdravstvene evidencije i registri) radi ostvarenja javnozdravstvenih potreba",
+   "quote_english": "The National Public Health Information System (NAJS) is a system for storing health data and information for their processing and archiving (health records and registers) to meet public-health needs",
+   "value": "Nacionalni javnozdravstveni informacijski sustav (NAJS) (National Public Health Information System)",
+   "published": "2019-02",
+   "title": "Zakon o podacima i informacijama u zdravstvu (NN 14/2019)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "The Article 2 definition in the gazette text.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "NAJS (Nacionalni javnozdravstveni informacijski sustav)",
+    "reason": "The definition names NAJS as the system storing health records and registers for public-health purposes."
+   }
+  },
+  {
+   "claim": "record:HR:residence_permits:register",
+   "question": "Residence and migration status: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2020_12_133_2520.html",
+   "quote": "Ministarstvo vodi zbirke podataka u kojima se pohranjuju osobni podaci o: 1. državljanima trećih zemalja kojima su izdane ili oduzete putne isprave za državljane trećih zemalja 2. državljanima trećih zemalja kojima je odbijen ulazak u Republiku Hrvatsku i izlazak iz Republike Hrvatske 3. državljanima trećih zemalja na kratkotrajnom, privremenom boravku, dugotrajnom boravištu i stalnom boravku",
+   "quote_english": "The Ministry keeps data collections storing personal data on: third-country nationals issued or deprived of travel documents; those refused entry or exit; third-country nationals on short-term, temporary, long-term and permanent stay",
+   "value": "zbirke podataka Ministarstva o državljanima trećih zemalja na kratkotrajnom, privremenom boravku, dugotrajnom boravištu i stalnom boravku (Ministry data collections on third-country nationals on short-term, temporary, long-term and permanent stay)",
+   "published": "2020-12",
+   "title": "Zakon o strancima (NN 133/2020)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 243 of the Aliens Act as published in the gazette. The act was amended in 2022, 2025 and 2026 (NN 55/26, 2026_05_55_692), and a text search of the 2026 amendment found no change to Article 243.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "",
+    "reason": "Article 243 says the Ministry keeps data collections on third-country nationals but gives those collections no name."
+   }
+  },
+  {
+   "claim": "record:HR:tax:register",
+   "question": "Tax: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2016_12_115_2520.html",
+   "quote": "23. izrada strategija i planiranje aktivnosti 24. izgradnja, unaprjeđenje i korištenje informacijskog sustava Porezne uprave",
+   "quote_english": "23. drafting strategies and planning activities 24. building, improving and using the information system of the Tax Administration",
+   "value": "informacijski sustav Porezne uprave (information system of the Tax Administration)",
+   "published": "2016-12",
+   "title": "Zakon o Poreznoj upravi (NN 115/2016)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "The list of Tax Administration tasks in the gazette original of the Tax Administration Act. It was amended in NN 98/19, 155/23 and 152/24.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "",
+    "reason": "The line is a task in a list (building and using 'the Tax Administration's information system') and generically describes a system rather than naming a register."
+   }
+  },
+  {
+   "claim": "indicator:HR:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://nias.gov.hr/Home/TermsOfUse",
+   "quote": "Administratori ili Administrator sustava znači tijelo državne uprave nadležno za digitalnu transformaciju.",
+   "quote_english": "Administrators or System Administrator means the state administration body responsible for digital transformation.",
+   "value": "Yes",
+   "published": "2025-04-04",
+   "title": "NIAS – Opći uvjeti korištenja",
+   "publisher": "Tijelo državne uprave nadležno za digitalnu transformaciju (NIAS / e-Građani)",
+   "doc_type": "official_page",
+   "note": "The terms of use of the NIAS operator's own site, in force from 4 April 2025, name a state administration body as administrator of the e-Građani and NIAS system. This is independent of the 2014 statute.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The NIAS terms of use define the system administrator as the state administration body responsible for digital transformation."
+   }
+  },
+  {
+   "claim": "record:HR:digital_identity_credentials:register",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://nias.gov.hr/Home/TermsOfUse",
+   "quote": "Čvor je mjesto priključenja Nacionalnog identifikacijskog i autentifikacijskog sustava (u daljnjem tekstu: NIAS) na EU/EEA strukturu interoperabilnosti elektroničke identifikacije",
+   "quote_english": "The Node is the connection point of the National Identification and Authentication System (NIAS) to the EU/EEA electronic identification interoperability framework",
+   "value": "Nacionalni identifikacijski i autentifikacijski sustav (NIAS) (National Identification and Authentication System)",
+   "published": "2025-04-04",
+   "title": "NIAS – Opći uvjeti korištenja",
+   "publisher": "Tijelo državne uprave nadležno za digitalnu transformaciju (NIAS / e-Građani)",
+   "doc_type": "official_page",
+   "note": "The same page says that NIAS keeps user accounts and serves credentials of different assurance levels ('vjerodajnicom iste ili niže razine sigurnosti').",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "NIAS (Nacionalni identifikacijski i autentifikacijski sustav)",
+    "reason": "The quote names the national identification and authentication system (NIAS) and its eIDAS node, but says nothing about its accounts, credentials or assurance levels."
+   }
+  },
+  {
+   "claim": "record:HR:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://nias.gov.hr/Home/TermsOfUse",
+   "quote": "Administratori ili Administrator sustava znači tijelo državne uprave nadležno za digitalnu transformaciju.",
+   "quote_english": "Administrators or System Administrator means the state administration body responsible for digital transformation.",
+   "value": "tijelo državne uprave nadležno za digitalnu transformaciju (state administration body responsible for digital transformation)",
+   "published": "2025-04-04",
+   "title": "NIAS – Opći uvjeti korištenja",
+   "publisher": "Tijelo državne uprave nadležno za digitalnu transformaciju (NIAS / e-Građani)",
+   "doc_type": "official_page",
+   "note": "The system administrator of NIAS and e-Građani, as the operator's own terms of use define it.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "tijelo državne uprave nadležno za digitalnu transformaciju (state administration body responsible for digital transformation)",
+    "reason": "The quote establishes only who administers the system, not the scheme's name, credentials or assurance levels."
+   }
+  },
+  {
+   "claim": "record:HR:electoral_roll:register",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_144_3073.html",
+   "quote": "Registar birača vodi se u obliku jedinstvene elektroničke baze podataka osoba koje imaju biračko pravo.",
+   "quote_english": "The register of voters is kept as a single electronic database of persons who have the right to vote.",
+   "value": "Registar birača (Register of voters)",
+   "published": "2012-12",
+   "title": "Zakon o registru birača (NN 144/2012)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 5(1) of the Register of Voters Act as published in the gazette. Later amendments were not checked.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "Registar birača (Register of Voters)",
+    "reason": "Article 5(1) names the Register of Voters as a single electronic database of everyone entitled to vote."
+   }
+  },
+  {
+   "claim": "record:HR:electoral_roll:operator",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_144_3073.html",
+   "quote": "Središnje tijelo državne uprave nadležno za poslove opće uprave (u daljnjem tekstu: središnje tijelo) utvrđuje jedinstveno programsko rješenje za vođenje registra birača.",
+   "quote_english": "The central state administration body responsible for general administration determines the single software solution for keeping the register of voters.",
+   "value": "Središnje tijelo državne uprave nadležno za poslove opće uprave (central state administration body for general administration)",
+   "published": "2012-12",
+   "title": "Zakon o registru birača (NN 144/2012)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 7(1) of the gazette text. The same body processes the register data.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "central state administration body responsible for general administration",
+    "reason": "Article 7(1) has this body set the single software solution for the voter register; the context says it also processes the data, while the offices (uredi) make the entries."
+   }
+  },
+  {
+   "claim": "record:HR:benefits_pensions:register",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2013_12_157_3290.html",
+   "quote": "Zavod obvezno vodi matičnu evidenciju o osiguranicima, poslovima iz članka 38. ovoga Zakona, korisnicima prava iz mirovinskog osiguranja te obveznicima doprinosa na način i u skladu s odredbama ovoga Zakona.",
+   "quote_english": "The Institute must keep the master record of insured persons, of the jobs referred to in Article 38, of pension-insurance beneficiaries and of contribution payers in accordance with this Act.",
+   "value": "matična evidencija (master record of insured persons, pension beneficiaries and contribution payers)",
+   "published": "2013-12",
+   "title": "Zakon o mirovinskom osiguranju (NN 157/2013)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 104(1) of the Pension Insurance Act. 'Zavod' is the Croatian Pension Insurance Institute (HZMO). Later amendments were not checked.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Hrvatski zavod za mirovinsko osiguranje (Croatian Pension Insurance Institute), matična evidencija",
+    "reason": "Article 104(1) has the Zavod, defined in Article 5 as HZMO, keep the master record of insured persons, pension beneficiaries and contribution payers."
+   }
+  },
+  {
+   "claim": "record:HR:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_143_3030.html",
+   "quote": "Kaznenu evidenciju ustrojava i vodi ministarstvo nadležno za pravosuđe koje je ujedno i središnje tijelo za razmjenu tih podataka s drugim državama",
+   "quote_english": "The criminal record is set up and kept by the ministry responsible for justice, which is also the central authority for exchanging these data with other states",
+   "value": "Kaznena evidencija (Criminal record register)",
+   "published": "2012-12",
+   "title": "Zakon o pravnim posljedicama osude, kaznenoj evidenciji i rehabilitaciji (NN 143/2012)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 3(1). This covers only the criminal-record part of the holding; court case-management systems were not researched.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "ministry responsible for justice",
+    "reason": "Article 3(1) states that the justice ministry sets up and keeps the criminal record and is the central authority for exchanging it."
+   }
+  },
+  {
+   "claim": "record:HR:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_143_3030.html",
+   "quote": "Kaznenu evidenciju ustrojava i vodi ministarstvo nadležno za pravosuđe koje je ujedno i središnje tijelo za razmjenu tih podataka s drugim državama",
+   "quote_english": "The criminal record is set up and kept by the ministry responsible for justice, which is also the central authority for exchanging these data with other states",
+   "value": "ministarstvo nadležno za pravosuđe (ministry responsible for justice)",
+   "published": "2012-12",
+   "title": "Zakon o pravnim posljedicama osude, kaznenoj evidenciji i rehabilitaciji (NN 143/2012)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 3(1). This names the operator of the criminal record only.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "ministry responsible for justice",
+    "reason": "Article 3(1) states that the justice ministry sets up and keeps the criminal record and is the central authority for exchanging it."
+   }
+  },
+  {
+   "claim": "record:HR:firearms_register:register",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2018_10_94_1816.html",
+   "quote": "Nadležno tijelo u svrhu kontrole nabave, registracije i kretanja oružja vodi na središnjem informacijskom sustavu ministarstva nadležnog za unutarnje poslove evidencije o izdanim odobrenjima za nabavu oružja, izdanim oružnim listovima",
+   "quote_english": "For the purpose of controlling the acquisition, registration and movement of weapons, the competent body keeps, on the central information system of the ministry responsible for internal affairs, records of issued permits to acquire weapons and issued weapons licences",
+   "value": "evidencije na središnjem informacijskom sustavu ministarstva nadležnog za unutarnje poslove (records on the central information system of the Ministry of the Interior)",
+   "published": "2018-10",
+   "title": "Zakon o nabavi i posjedovanju oružja građana (NN 94/2018)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 67(1) of the Act on Citizens' Acquisition and Possession of Weapons. Later amendments were not checked.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "ministry responsible for internal affairs (its central information system; records kept by police administrations/stations as the competent body)",
+    "reason": "Article 67(1) says the competent body, defined in Article 10 as MUP police administrations/stations, keeps the firearms records on the interior ministry's central information system."
+   }
+  },
+  {
+   "claim": "record:HR:intelligence:register",
+   "question": "Intelligence services: Intelligence holdings and case files",
+   "relation": "fills_gap",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2006_07_79_1912.html",
+   "quote": "Sigurnosno-obavještajne agencije uspostavljaju i vode zbirke i registre osobnih podataka i druge evidencije prikupljenih podataka i dokumenata o podacima koji su u svezi s poslovima iz djelokruga rada sigurnosno-obavještajnih agencija",
+   "quote_english": "The security-intelligence agencies establish and keep collections and registers of personal data and other records of collected data and documents relating to the work within their remit",
+   "value": "zbirke i registri osobnih podataka sigurnosno-obavještajnih agencija (personal-data collections and registers of the security-intelligence agencies)",
+   "published": "2006-07",
+   "title": "Zakon o sigurnosno-obavještajnom sustavu Republike Hrvatske (NN 79/2006)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Article 39(1). Article 1 of the same act establishes the agencies as SOA and VSOA. The act gives no single system name.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "sigurnosno-obavještajne agencije (security-intelligence agencies)",
+    "reason": "Article 39(1) states that the security-intelligence agencies set up and keep their own collections, registers and records."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:HR:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:breeder_documents:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:business_registry:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:civil_registry:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:facial_biometric:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:geospatial:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:geospatial:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:health_records:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:health_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:public_health_surveillance:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:public_health_surveillance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:tax:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:HR:C1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:HR:C2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:HR:K1",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:beneficial_ownership:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:beneficial_ownership:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:central_bank:foreign_dependency",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:education:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:land_property:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:public_finance:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:trust_services_pki:foreign_dependency",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:trust_services_pki:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:trust_services_pki:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:authentication_audit_log:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:central_bank:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:crisis_management:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:emergency_communications:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "indicator:HR:K2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:HR:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HR:breeder_documents:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:education:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:facial_biometric:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:fingerprint_biometric:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:government_payroll:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:government_payroll:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:issuance_history:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:vehicle_licensing:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:customs:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:health_insurance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HR:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:official_gazette:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:electoral_management:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:defence_command:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:HR:intelligence:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:grid_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HR:water_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "indicator:HR:L3",
+   "status": "not_reached"
+  }
+ ]
+}

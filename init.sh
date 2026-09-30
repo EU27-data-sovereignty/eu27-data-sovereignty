@@ -59,6 +59,18 @@ if ! version_at_least "20.0.0" "$NODE_VERSION"; then
 fi
 print_success "Node.js v$NODE_VERSION"
 
+# The versions CI builds with (.tool-versions). A different one still works for development, but
+# outputs are only guaranteed to reproduce byte for byte on the pinned versions (docs/vetting.md).
+pinned() { awk -v t="$1" '$1 == t {print $2}' "$(dirname "$0")/.tool-versions"; }
+for pair in "python:$PY_VERSION" "nodejs:$NODE_VERSION" "typst:$(typst --version 2>/dev/null | awk '{print $2}')"; do
+    tool="${pair%%:*}"; have="${pair#*:}"; want="$(pinned "$tool")"
+    case "$have" in
+        "$want"|"$want".*) print_success "$tool $have matches the pinned $want" ;;
+        "") print_warning "$tool not installed (pinned: $want)" ;;
+        *) print_warning "$tool $have differs from the pinned $want (.tool-versions): builds may not reproduce byte for byte" ;;
+    esac
+done
+
 if ! command -v npm &> /dev/null; then
     print_error "npm is not installed."
     exit 1

@@ -10,6 +10,9 @@ copy (DECISIONS.md #73, #75).
 | `<ISO>.json` | Critical holdings: 39 classes per state, claims with verbatim quotes | Research run 1, 2026-09-29 |
 | `indicators/<ISO>.json` | The seven data-sovereignty indicators (#77), with the reviewer's verdict per value | Research run 2, 2026-09-29 |
 | `dependency_review/<ISO>.json` | An independent reviewer's verdict on every foreign-dependency classification from run 1 (#79) | Review run, 2026-09-29 |
+| `recheck.csv` | One row per source behind a printed fact: re-fetched, hash before/now, whether every quote is still there (`claims_missing`) | `research.py recheck` (#83) |
+| `vetting/<ISO>.json` | Vetting run: findings (upgrade, corroborate, supersede, contradict, fill gap), each with its blind review; the reviewer's model and the workflow's sha256 | `model/research/vetting/workflow.js` via `vetting.py stage` |
+| `vetting/verification.csv`, `outcomes.csv`, `disputes.csv` | The mechanical check of each finding; what admission did with it; disagreements no rule settles | `vetting.py verify`, `admit` |
 | `verification.csv` | One row per (state, class or indicator, field, URL): HTTP status, content type, sha256, match result, archived copy | `research.py verify` |
 
 ## How the runs were made

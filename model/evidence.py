@@ -8,8 +8,10 @@ Why this file exists
 --------------------
 The report, the country PDFs, the web app, /ask, the posters and the briefs each described the
 checks in their own words, and the words drifted past the truth: "every fact ... fetched, hashed and
-checked" was printed over 136 Eurostat figures that were never hashed and five migrated citations
-that were never quote-checked. So the wording lives here, every renderer takes it from the bundle,
+checked" was printed over five migrated citations that were never quote-checked, and "hashed" over
+136 Eurostat figures whose hash no reader could find: it sits in fetch_manifest.csv, not in the
+registry the footnotes cite (corrected 2026-09-30; an earlier version of this note said they were
+never hashed, which was itself wrong). So the wording lives here, every renderer takes it from the bundle,
 and `tests/test_evidence.py` fails when an output describes a check that did not run.
 
 No human has verified the findings. That is said on every surface, first, in the same words.
@@ -40,7 +42,8 @@ CHECKS = [
      "none exists the footnote says so."),
     ("Eurostat figures",
      "the value was read from a pinned Eurostat dataset through its API and compared with the table "
-     "cell, within 0.5%. The footnote names the dataset, its dimensions and the retrieval date."),
+     "cell, within 0.5%. The raw API response is stored and its SHA-256 recorded in "
+     "model/fetch_manifest.csv. The footnote names the dataset, its dimensions and the retrieval date."),
     ("Categorical findings (infrastructure dependency, sovereignty indicators)",
      "admitted only when a second, independent automated reviewer reached the same value from the "
      "same quote."),
@@ -210,13 +213,28 @@ def tier(source: dict) -> tuple[int, str]:
     return int(row["tier"]), row["kind"]
 
 
+MANIFEST = Path(__file__).resolve().parent / "fetch_manifest.csv"
+_dataset_hashes: set[str] | None = None
+
+
+def dataset_hashes() -> set[str]:
+    """Eurostat columns whose raw API response is stored with a recorded sha256 (fetch_eurostat.py)."""
+    global _dataset_hashes
+    if _dataset_hashes is None:
+        with MANIFEST.open(newline="", encoding="utf-8") as fh:
+            _dataset_hashes = {r["key"] for r in csv.DictReader(fh)
+                               if r["kind"] == "eurostat" and r["http_status"] == "200" and r["sha256"]}
+    return _dataset_hashes
+
+
 STRONG, STANDARD = "Strong", "Standard"
 GRADE_RULE = (
     f"{STRONG}: a T1 or T2 source (an authoritative original or a competent public body); an official "
     "or primary source; the quote found exactly in the hashed document; an "
     "archived copy of exactly that URL; no name in the value missing from the quote; and the value "
     "either quoted from an English source, found verbatim in the original, or resting on figures "
-    "matched in the original. A categorical finding is Strong only after a blind review. "
+    "matched in the original. A categorical finding is Strong only after a blind review (a reviewer "
+    "shown the quote and URL but not the proposed value). "
     f"{STANDARD}: every required check passed, but one of those did not. Anything less is not printed."
 )
 
@@ -242,7 +260,8 @@ def checklist(checks: dict) -> list[str]:
     out += [{"primary": "primary source", "official": "official source", "secondary": "secondary source",
             "absence": "authoritative statement of absence"}.get(checks["source"], checks["source"])]
     if checks.get("dataset_value_reproduced"):
-        out.append("dataset value reproduced; response not hashed")
+        out.append("dataset value reproduced from the hashed API response" if checks["document_hashed"]
+                   else "dataset value reproduced; response not hashed")
     else:
         out.append(f"quote found ({checks['quote_match']} match) in the hashed document")
     out.append("archived copy of this URL" if checks["archived"] else "no archived copy of this URL")
@@ -256,6 +275,7 @@ def checklist(checks: dict) -> list[str]:
             out.append(f"not in the quote: {', '.join(checks['names_not_in_quote'])}")
     if "review" in checks:
         out.append({"agreed, not blind": "independent review agreed (not blind)",
+                    "blind, same model": "blind review agreed (reviewer: same model as the researcher)",
                     "none": "not independently reviewed"}[checks["review"]])
     out.append("English source" if checks["language"] == "english" else "non-English source, machine-translated")
     return out
@@ -275,13 +295,15 @@ def assess(value: str, citation: dict, source: dict, *, categorical: bool) -> di
     }
     if dataset:
         checks["dataset_value_reproduced"] = True
-        checks["document_hashed"] = False
+        checks["document_hashed"] = citation["claim"].split(":")[-1] in dataset_hashes()
     else:
         checks["quote_match"] = "loose" if "quote loose" in citation["checked_by"] else "exact"
         checks["document_hashed"] = True
     if categorical:
-        checks["review"] = ("agreed, not blind" if citation["claim"].split(":")[-1] == "foreign_dependency"
-                            or citation["claim"].startswith("indicator:") else "none")
+        reviewed = (citation["claim"].split(":")[-1] == "foreign_dependency"
+                    or citation["claim"].startswith("indicator:"))
+        checks["review"] = ("blind, same model" if "blind review agreed" in citation["checked_by"] else
+                            "agreed, not blind" if reviewed else "none")
     elif not dataset:
         v = value_in_quote(value, citation["quote"], source["title"])
         checks["value"] = v["how"]
@@ -294,7 +316,7 @@ def assess(value: str, citation: dict, source: dict, *, categorical: bool) -> di
         and checks["archived"]
         and checks["document_hashed"]
         and checks.get("quote_match") == "exact"
-        and not categorical
+        and (not categorical or checks.get("review") == "blind, same model")
         and not checks.get("names_not_in_quote")
         and (checks["language"] == "english" or checks.get("value") == "verbatim"
              or checks.get("figures_matched", False))

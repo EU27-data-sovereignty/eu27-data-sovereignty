@@ -1,0 +1,1352 @@
+{
+ "iso": "CZ",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:CZ:L1",
+   "question": "indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction?",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2025%2F505%2F2026-01-01/fragmenty?cisloStranky=0",
+   "quote": "Zákaznická data ve stavu neaktivních dat jsou ukládána nepřetržitě a výlučně na území členských států Evropské unie a členských států Evropského sdružení volného obchodu.",
+   "quote_english": "Customer data at rest are stored continuously and exclusively in the territory of EU member states and EFTA member states.",
+   "value": "partial",
+   "published": "2026-01-01",
+   "title": "Vyhláška č. 505/2025 Sb., o některých požadavcích pro zápis do katalogu cloud computingu (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is the official text of the NÚKIB cloud-catalogue decree, served as JSON by the official e-Sbírka text API because the HTML page is a JavaScript app. Annex 3 (high level) requires storage in the EU/EFTA and Annex 4 (critical level) requires processing in the Czech Republic; the rule covers only cloud at the higher levels, so the value is partial.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "partial",
+    "reason": "Decree 505/2025 is a binding regulation that requires customer data at rest to be stored only in EU and EFTA states, but it applies only to cloud services at the 'vysoká' (high) security level, covers storage at rest rather than processing, and counts EFTA as well as the EU."
+   }
+  },
+  {
+   "claim": "indicator:CZ:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2005%2F412%2F2026-07-01/fragmenty?cisloStranky=0",
+   "quote": "Podmínky přístupu fyzické osoby k utajované informaci stupně utajení Přísně tajné, Tajné nebo Důvěrné",
+   "quote_english": "Conditions of access of a natural person to classified information of classification level Top Secret, Secret or Confidential",
+   "value": "yes",
+   "published": "2026-07-01",
+   "title": "Zákon č. 412/2005 Sb., o ochraně utajovaných informací a o bezpečnostní způsobilosti (znění od 2026-07-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "Official consolidated text in force from 2026-07-01, last amended by 77/2025 Sb.; § 4 sets the levels Přísně tajné, Tajné, Důvěrné and Vyhrazené (e-Sbírka JSON text API).",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Act 412/2005 itself sets out the classification levels Přísně tajné, Tajné and Důvěrné and the access conditions for each, so the scheme is laid down in statute."
+   }
+  },
+  {
+   "claim": "record:CZ:authentication_audit_log:register",
+   "question": "Authentication audit log: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2017%2F250%2F2023-04-01/fragmenty?cisloStranky=0",
+   "quote": "V národním bodu se jako provozní údaj vede alespoň",
+   "quote_english": "The national point keeps as operational data at least",
+   "value": "národní bod keeps operational data (provozní údaj) (the national point keeps operational data)",
+   "published": "2023-04-01",
+   "title": "Zákon č. 250/2017 Sb., o elektronické identifikaci (znění od 2023-04-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 21(2) on the official portal; item (c) of the list is a record of each use of data from the national point (e-Sbírka JSON text API).",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "Národní bod (národní bod pro identifikaci a autentizaci)",
+    "reason": "§21(2) of Act 250/2017 says that the national point (národní bod) keeps operational data, including a record of each use of its data."
+   }
+  },
+  {
+   "claim": "record:CZ:beneficial_ownership:register",
+   "question": "Beneficial ownership register: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2021%2F37%2F2025-01-01/fragmenty?cisloStranky=0",
+   "quote": "je informačním systémem veřejné správy, jehož správcem je Ministerstvo spravedlnosti (dále jen „ministerstvo“).",
+   "quote_english": "is a public administration information system whose controller is the Ministry of Justice (the 'ministry').",
+   "value": "public administration information system controlled by the Ministerstvo spravedlnosti (Ministry of Justice)",
+   "published": "2025-01-01",
+   "title": "Zákon č. 37/2021 Sb., o evidenci skutečných majitelů (znění od 2025-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 11(1); its subject, 'Evidence skutečných majitelů' (register of beneficial owners), is marked up as a term in the source (e-Sbírka JSON text API).",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "Evidence skutečných majitelů",
+    "reason": "The quote leaves out the subject, but in §11(1) of Act 37/2021 it reads 'Evidence skutečných majitelů je informačním systémem veřejné správy...'."
+   }
+  },
+  {
+   "claim": "record:CZ:beneficial_ownership:operator",
+   "question": "Beneficial ownership register: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2021%2F37%2F2025-01-01/fragmenty?cisloStranky=0",
+   "quote": "Notář provede zápis na žádost osoby oprávněné k podání návrhu na zápis podle",
+   "quote_english": "A notary makes the entry at the request of a person entitled to file a petition for entry under",
+   "value": "notář (notary) makes entries in the register",
+   "published": "2025-01-01",
+   "title": "Zákon č. 37/2021 Sb., o evidenci skutečných majitelů (znění od 2025-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 34(1); § 11(2)-(3) add that the register is kept by the court competent for registration and that a court or a notary makes entries (e-Sbírka JSON text API).",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote only says notaries make entries when asked; it does not say who operates the register (the context names the Ministry of Justice as administrator and the courts as keepers, but the quote does not)."
+   }
+  },
+  {
+   "claim": "record:CZ:benefits_pensions:operator",
+   "question": "Benefits & pensions: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1991%2F582%2F2026-07-01/fragmenty?cisloStranky=0",
+   "quote": "Integrovaný informační systém Ministerstva práce a sociálních věcí je informačním systémem veřejné správy, jehož správcem je ministerstvo a který zahrnuje",
+   "quote_english": "The Integrated Information System of the Ministry of Labour and Social Affairs is a public administration information system whose controller is the ministry and which includes",
+   "value": "Ministerstvo práce a sociálních věcí (Ministry of Labour and Social Affairs) as controller of its Integrated Information System",
+   "published": "2026-07-01",
+   "title": "Zákon č. 582/1991 Sb., o organizaci a provádění sociálního zabezpečení (znění od 2026-07-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 4c(1); letter (b) lists the Integrated Information System of the Czech Social Security Administration (ČSSZ) as a component (e-Sbírka JSON text API).",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Ministerstvo práce a sociálních věcí",
+    "reason": "§4c names the Ministry of Labour and Social Affairs as administrator (správce) of the integrated information system, which includes the ČSSZ systems."
+   }
+  },
+  {
+   "claim": "record:CZ:benefits_pensions:register",
+   "question": "Benefits & pensions: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1991%2F582%2F2026-07-01/fragmenty?cisloStranky=0",
+   "quote": "vede registr pojištěnců důchodového pojištění (dále jen „registr pojištěnců“),",
+   "quote_english": "keeps the register of pension insurance contributors (the 'register of insured persons'),",
+   "value": "registr pojištěnců důchodového pojištění (register of pension insurance contributors)",
+   "published": "2026-07-01",
+   "title": "Zákon č. 582/1991 Sb., o organizaci a provádění sociálního zabezpečení (znění od 2026-07-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 5(g), which lists a task of the Czech Social Security Administration (ČSSZ) (e-Sbírka JSON text API).",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Registr pojištěnců důchodového pojištění",
+    "reason": "The quote, from the list of ČSSZ duties in Act 582/1991, names the pension insurance register of insured persons."
+   }
+  },
+  {
+   "claim": "record:CZ:border_control:operator",
+   "question": "Border and visa systems: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2008%2F273%2F2026-06-12/fragmenty?cisloStranky=0",
+   "quote": "Policejní prezidium provozuje národní součást Schengenského informačního systému a plní úkoly orgánu centrálně odpovědného za národní součást Schengenského informačního systému",
+   "quote_english": "The Police Presidium operates the national component of the Schengen Information System and performs the tasks of the authority centrally responsible for the national component of the Schengen Information System",
+   "value": "Policejní prezidium (Police Presidium)",
+   "published": "2026-06-12",
+   "title": "Zákon č. 273/2008 Sb., o Policii České republiky (znění od 2026-06-12)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 84(2); the same sentence goes on to give the SIRENE role, the exchange of supplementary information (e-Sbírka JSON text API).",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Policejní prezidium České republiky",
+    "reason": "§84(2) of Act 273/2008 says that the Police Presidium operates the national part of the Schengen Information System."
+   }
+  },
+  {
+   "claim": "record:CZ:border_control:register",
+   "question": "Border and visa systems: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1999%2F326%2F2026-06-12/fragmenty?cisloStranky=2",
+   "quote": "Ministerstvo zahraničních věcí při výkonu působnosti podle tohoto zákona a zákona o zahraniční službě provozuje informační systém, který obsahuje údaje o jménu, popřípadě jménech, příjmení, všech dřívějších jménech a příjmeních, dnu, měsíci a roku narození, pohlaví a státní příslušnosti, obrazový záznam, například fotografii,",
+   "quote_english": "The Ministry of Foreign Affairs, in exercising its powers under this Act and the Foreign Service Act, operates an information system containing name(s), surname, all former names and surnames, date of birth, sex and nationality, an image record, e.g. a photograph,",
+   "value": "informační systém Ministerstva zahraničních věcí (Ministry of Foreign Affairs information system, incl. photographs)",
+   "published": "2026-06-12",
+   "title": "Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky (znění od 2026-06-12)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 158a(1), found on page 2 of the paginated text (e-Sbírka JSON text API).",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "",
+    "reason": "§158a says that the Ministry of Foreign Affairs operates 'an information system' holding visa-applicant data but gives it no name."
+   }
+  },
+  {
+   "claim": "record:CZ:residence_permits:register",
+   "question": "Residence and migration status: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1999%2F326%2F2026-06-12/fragmenty?cisloStranky=2",
+   "quote": "Policie při výkonu působnosti podle tohoto zákona provozuje informační systém",
+   "quote_english": "The Police, in exercising their powers under this Act, operate an information system",
+   "value": "informační systém [cizinců] operated by the Police (Policie) (foreigners' information system)",
+   "published": "2026-06-12",
+   "title": "Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky (znění od 2026-06-12)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 158(1). The next word, 'cizinců' (of foreigners), is marked up as a term, and the same sentence names the Police as controller and says the system holds photographs and fingerprints (e-Sbírka JSON text API).",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Informační systém cizinců",
+    "reason": "The quote stops at 'informační systém', but in §158(1) it continues 'informační systém cizinců, jehož je správcem', which gives the system's name."
+   }
+  },
+  {
+   "claim": "record:CZ:breeder_documents:register",
+   "question": "Breeder document scans: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F301%2F2025-01-01/fragmenty?cisloStranky=0",
+   "quote": "Matriční úřad vede pro každou matriční knihu sbírku listin za každý kalendářní rok samostatně.",
+   "quote_english": "The registry office keeps a collection of documents for each register book separately for each calendar year.",
+   "value": "sbírka listin (collection of documents) for each civil status register book",
+   "published": "2025-01-01",
+   "title": "Zákon č. 301/2000 Sb., o matrikách, jménu a příjmení (znění od 2025-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 8(1) on the official portal, replacing the unofficial mirror (e-Sbírka JSON text API).",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "Sbírka listin",
+    "reason": "§8 says that each civil registry office keeps a 'sbírka listin' (collection of supporting documents) for each register book per year; it does not say the documents are scanned or held digitally."
+   }
+  },
+  {
+   "claim": "record:CZ:breeder_documents:operator",
+   "question": "Breeder document scans: the body that operates it",
+   "relation": "supersedes",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F301%2F2027-01-01/fragmenty?cisloStranky=0",
+   "quote": "Matriční informační systém je informační systém veřejné správy, jehož správcem je Ministerstvo vnitra (dále jen „ministerstvo“).",
+   "quote_english": "The civil status information system is a public administration information system whose controller is the Ministry of the Interior (the 'ministry').",
+   "value": "Ministerstvo vnitra (Ministry of the Interior) as controller of the Matriční informační systém (civil status information system)",
+   "published": "2027-01-01",
+   "title": "Zákon č. 301/2000 Sb., o matrikách, jménu a příjmení (budoucí znění od 2027-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is the new § 1b(1) in the future consolidated version, in force from 2027-01-01 (amended by 414/2023 and 123/2024 Sb.), and it names the central system that the printed value only anticipates (e-Sbírka JSON text API).",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Ministerstvo vnitra",
+    "reason": "§1b names the Ministry of the Interior as administrator of the Matriční informační systém, but the quote does not say that this system holds the breeder-document scans."
+   }
+  },
+  {
+   "claim": "record:CZ:business_registry:operator",
+   "question": "Business registry: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2009%2F111%2F2026-01-01/fragmenty?cisloStranky=0",
+   "quote": "a informačního systému sdílené služby je Digitální a informační agentura (dále jen „Agentura“).",
+   "quote_english": "and of the shared service information system is the Digital and Information Agency (the 'Agency').",
+   "value": "Digitální a informační agentura (Digital and Information Agency)",
+   "published": "2026-01-01",
+   "title": "Zákon č. 111/2009 Sb., o základních registrech (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 7(1), naming the Agency as controller of the basic registers information system and ISSS; § 28(1) also makes it controller of the register of persons (ROS) (e-Sbírka JSON text API).",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names the Digital and Information Agency as administrator of the base-registers system and the shared-service system, not of the business register, which the courts keep."
+   }
+  },
+  {
+   "claim": "record:CZ:geospatial:operator",
+   "question": "Geospatial base data: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2009%2F111%2F2026-01-01/fragmenty?cisloStranky=0",
+   "quote": "Správcem registru územní identifikace je Český úřad zeměměřický a katastrální.",
+   "quote_english": "The controller of the territorial identification register is the Czech Office for Surveying, Mapping and Cadastre.",
+   "value": "Český úřad zeměměřický a katastrální (Czech Office for Surveying, Mapping and Cadastre)",
+   "published": "2026-01-01",
+   "title": "Zákon č. 111/2009 Sb., o základních registrech (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 30(2) on the official portal (e-Sbírka JSON text API).",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "Český úřad zeměměřický a katastrální",
+    "reason": "§30(2) of Act 111/2009 names ČÚZK as administrator of the territorial identification register (RÚIAN)."
+   }
+  },
+  {
+   "claim": "record:CZ:business_registry:register",
+   "question": "Business registry: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2013%2F304%2F2024-07-19/fragmenty?cisloStranky=0",
+   "quote": "se rozumí spolkový rejstřík, nadační rejstřík, rejstřík ústavů, rejstřík společenství vlastníků jednotek, obchodní rejstřík a rejstřík obecně prospěšných společností.",
+   "quote_english": "means the register of associations, register of foundations, register of institutes, register of unit owners' associations, commercial register and register of public benefit companies.",
+   "value": "obchodní rejstřík (commercial register), one of the public registers",
+   "published": "2024-07-19",
+   "title": "Zákon č. 304/2013 Sb., o veřejných rejstřících právnických a fyzických osob (znění od 2024-07-19)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 1(1); § 1(3) says the public register is a public administration information system, and §§ 2-3 set out the registry court's role (e-Sbírka JSON text API).",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "Veřejný rejstřík (including obchodní rejstřík)",
+    "reason": "§1(1) of Act 304/2013 defines the public registers, among them the commercial register (obchodní rejstřík)."
+   }
+  },
+  {
+   "claim": "record:CZ:crisis_management:register",
+   "question": "Crisis management and civil protection: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F240%2F2025-08-19/fragmenty?cisloStranky=0",
+   "quote": "je informačním systémem veřejné správy, jehož účelem je podpora orgánů krizového řízení při zajišťování připravenosti na krizové situace a při jejich řešení.",
+   "quote_english": "is a public administration information system whose purpose is to support crisis management authorities in ensuring preparedness for and resolving crisis situations.",
+   "value": "a public administration information system supporting crisis management authorities",
+   "published": "2025-08-19",
+   "title": "Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon) (znění od 2025-08-19)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 26(1); its subject, 'Informační systém krizového řízení' (crisis management information system), is marked up as a term (e-Sbírka JSON text API).",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "Informační systém krizového řízení",
+    "reason": "In §26(1) the quote's subject is 'Informační systém krizového řízení'."
+   }
+  },
+  {
+   "claim": "record:CZ:crisis_management:operator",
+   "question": "Crisis management and civil protection: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F240%2F2025-08-19/fragmenty?cisloStranky=0",
+   "quote": "zajišťuje Ministerstvo vnitra, přičemž úkoly s tím spojené plní generální ředitelství hasičského záchranného sboru.",
+   "quote_english": "is ensured by the Ministry of the Interior, with the related tasks performed by the general directorate of the Fire Rescue Service.",
+   "value": "Ministerstvo vnitra, tasks performed by the generální ředitelství hasičského záchranného sboru (Ministry of the Interior via the Fire Rescue Service general directorate)",
+   "published": "2025-08-19",
+   "title": "Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon) (znění od 2025-08-19)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 26(2), which reads 'Správu informačního systému krizového řízení zajišťuje…' (e-Sbírka JSON text API).",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "Ministerstvo vnitra (tasks performed by Generální ředitelství Hasičského záchranného sboru)",
+    "reason": "§26(2) says that the Ministry of the Interior administers the crisis management information system and that the Fire Rescue Service directorate-general carries out the tasks."
+   }
+  },
+  {
+   "claim": "record:CZ:customs:operator",
+   "question": "Customs declarations: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2012%2F17%2F2026-01-01/fragmenty?cisloStranky=0",
+   "quote": "Jako orgány celní správy se zřizují Generální ředitelství cel a celní úřady, které jsou správními úřady a organizačními složkami státu.",
+   "quote_english": "The General Directorate of Customs and the customs offices are established as customs administration bodies; they are administrative authorities and organisational units of the state.",
+   "value": "Generální ředitelství cel a celní úřady (General Directorate of Customs and customs offices)",
+   "published": "2026-01-01",
+   "title": "Zákon č. 17/2012 Sb., o Celní správě České republiky (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 1(2) on the official portal (e-Sbírka JSON text API).",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote sets up the customs bodies (the General Directorate of Customs and the customs offices) but says nothing about who operates a customs declaration system."
+   }
+  },
+  {
+   "claim": "record:CZ:digital_identity_credentials:register",
+   "question": "Digital identity credentials: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2017%2F250%2F2023-04-01/fragmenty?cisloStranky=0",
+   "quote": "Národní bod je informační systém veřejné správy podporující proces elektronické identifikace a autentizace prostřednictvím",
+   "quote_english": "The national point is a public administration information system supporting the process of electronic identification and authentication through",
+   "value": "Národní bod (national point for identification and authentication)",
+   "published": "2023-04-01",
+   "title": "Zákon č. 250/2017 Sb., o elektronické identifikaci (znění od 2023-04-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 20(1); § 20(2) makes the Digital and Information Agency its controller (e-Sbírka JSON text API).",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "Národní bod (pro identifikaci a autentizaci)",
+    "reason": "§20(1) defines the national point as the public administration information system that supports electronic identification and authentication."
+   }
+  },
+  {
+   "claim": "record:CZ:electoral_roll:register",
+   "question": "Electoral roll entry: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2024%2F88%2F2026-06-26/fragmenty?cisloStranky=0",
+   "quote": "Zřizuje se informační systém správy voleb (dále jen „informační systém“) jako informační systém veřejné správy. Jeho správcem je Ministerstvo vnitra.",
+   "quote_english": "The election administration information system (the 'information system') is established as a public administration information system. Its controller is the Ministry of the Interior.",
+   "value": "informační systém správy voleb (election administration information system)",
+   "published": "2026-06-26",
+   "title": "Zákon č. 88/2024 Sb., o správě voleb (znění od 2026-06-26)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 22(1); § 22(3)(a) lists the voter list (seznam voličů) as a component (e-Sbírka JSON text API).",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Informační systém správy voleb",
+    "reason": "§22(1) of Act 88/2024 establishes the election administration information system; §22(2) says it provides the register of voters."
+   }
+  },
+  {
+   "claim": "record:CZ:electoral_roll:operator",
+   "question": "Electoral roll entry: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2024%2F88%2F2026-06-26/fragmenty?cisloStranky=0",
+   "quote": "Zřizuje se informační systém správy voleb (dále jen „informační systém“) jako informační systém veřejné správy. Jeho správcem je Ministerstvo vnitra.",
+   "quote_english": "The election administration information system (the 'information system') is established as a public administration information system. Its controller is the Ministry of the Interior.",
+   "value": "Ministerstvo vnitra (Ministry of the Interior)",
+   "published": "2026-06-26",
+   "title": "Zákon č. 88/2024 Sb., o správě voleb (znění od 2026-06-26)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 22(1) on the official portal (e-Sbírka JSON text API).",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Ministerstvo vnitra",
+    "reason": "The quote says that the Ministry of the Interior is administrator of the election administration information system."
+   }
+  },
+  {
+   "claim": "record:CZ:electoral_management:register",
+   "question": "Election management and results: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2024%2F88%2F2026-06-26/fragmenty?cisloStranky=0",
+   "quote": "Zřizuje se informační systém správy voleb (dále jen „informační systém“) jako informační systém veřejné správy. Jeho správcem je Ministerstvo vnitra.",
+   "quote_english": "The election administration information system (the 'information system') is established as a public administration information system. Its controller is the Ministry of the Interior.",
+   "value": "informační systém správy voleb (election administration information system)",
+   "published": "2026-06-26",
+   "title": "Zákon č. 88/2024 Sb., o správě voleb (znění od 2026-06-26)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 22(1); § 22(3)(b)-(c) list the register of candidate lists and the register of polling-station commissions as components (e-Sbírka JSON text API).",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "Informační systém správy voleb",
+    "reason": "The quote establishes the election administration information system by name."
+   }
+  },
+  {
+   "claim": "record:CZ:electoral_management:operator",
+   "question": "Election management and results: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2024%2F88%2F2026-06-26/fragmenty?cisloStranky=0",
+   "quote": "Využije-li okrsková volební komise pro vyhotovení zápisu o průběhu a výsledku hlasování výpočetní techniku, použije programové vybavení dodané Českým statistickým úřadem.",
+   "quote_english": "If a polling-station commission uses computers to draw up the record of the voting and result, it uses software supplied by the Czech Statistical Office.",
+   "value": "Český statistický úřad (Czech Statistical Office) supplies the results software",
+   "published": "2026-06-26",
+   "title": "Zákon č. 88/2024 Sb., o správě voleb (znění od 2026-06-26)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 65(3); § 12(1)(b) has ČSÚ build the results system, including its software (e-Sbírka JSON text API).",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote only says the Czech Statistical Office supplies the software polling committees use for their records; supplying software is not operating the results system."
+   }
+  },
+  {
+   "claim": "record:CZ:facial_biometric:register",
+   "question": "Facial biometric: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2021%2F269%2F2026-01-01/fragmenty?cisloStranky=0",
+   "quote": "Evidence občanských průkazů je informačním systémem veřejné správy, který obsahuje údaje o držitelích občanských průkazů, údaje o občanských průkazech a údaje související s právy, povinnostmi a působností na úseku občanských průkazů.",
+   "quote_english": "The ID card register is a public administration information system containing data on ID card holders, data on ID cards and data related to rights, duties and powers in the field of ID cards.",
+   "value": "Evidence občanských průkazů (ID card register)",
+   "published": "2026-01-01",
+   "title": "Zákon č. 269/2021 Sb., o občanských průkazech (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 54(1). § 54(2) names the Ministry of the Interior as controller, and § 19(1) says the facial image is digitised to be kept in this register (e-Sbírka JSON text API).",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Evidence občanských průkazů",
+    "reason": "§54(1) names the ID card register as an information system holding data on holders; the quote does not itself mention facial images."
+   }
+  },
+  {
+   "claim": "record:CZ:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2021%2F269%2F2026-01-01/fragmenty?cisloStranky=0",
+   "quote": "se v evidenci občanských průkazů vedou výlučně po dobu od jejich pořízení do doby převzetí občanského průkazu žadatelem o vydání občanského průkazu, nejdéle však do uplynutí 90 dnů ode dne vydání občanského průkazu.",
+   "quote_english": "are kept in the ID card register only from capture until the applicant collects the ID card, and at most until 90 days after the card is issued.",
+   "value": "No central register: kept only until card collection, at most 90 days",
+   "published": "2026-01-01",
+   "title": "Zákon č. 269/2021 Sb., o občanských průkazech (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "§ 57(3) covers the data in § 56(1)(o), the biometric data (face and fingerprints), so fingerprints are not kept centrally after the card is collected (e-Sbírka JSON text API).",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "Evidence občanských průkazů",
+    "reason": "The quote says that the §56(1)(o) (biometric) data are kept in the ID card register only until the card is collected, and for at most 90 days."
+   }
+  },
+  {
+   "claim": "record:CZ:issuance_history:register",
+   "question": "Document issuance history: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2021%2F269%2F2026-01-01/fragmenty?cisloStranky=0",
+   "quote": "V evidenci občanských průkazů se o neplatném občanském průkazu vedou",
+   "quote_english": "The ID card register keeps, on an invalid ID card,",
+   "value": "Evidence občanských průkazů (ID card register) records invalid ID cards",
+   "published": "2026-01-01",
+   "title": "Zákon č. 269/2021 Sb., o občanských průkazech (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 56(3); the items it lists include the date and reason the card became invalid (e-Sbírka JSON text API).",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "Evidence občanských průkazů",
+    "reason": "§56(3) lists the data the ID card register keeps on invalid cards."
+   }
+  },
+  {
+   "claim": "record:CZ:firearms_register:register",
+   "question": "Firearms register: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2024%2F90%2F2026-01-01/fragmenty?cisloStranky=1",
+   "quote": "je neveřejný informační systém veřejné správy, který slouží k výkonu státní správy v oblasti nakládání se",
+   "quote_english": "is a non-public public administration information system serving the exercise of state administration in the handling of",
+   "value": "neveřejný informační systém veřejné správy (non-public public administration information system)",
+   "published": "2026-01-01",
+   "title": "Zákon č. 90/2024 Sb., o zbraních a střelivu (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 128(1), whose subject 'Centrální registr zbraní' (Central Firearms Register) is marked up as a term; § 128(2) names the Police Presidium as controller but is too short to quote alone (e-Sbírka JSON text API, page 1).",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "Centrální registr zbraní",
+    "reason": "In §128(1) of Act 90/2024 the quote's subject is 'Centrální registr zbraní'."
+   }
+  },
+  {
+   "claim": "record:CZ:government_payroll:operator",
+   "question": "Government payroll and personnel: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2014%2F234%2F2026-01-01/fragmenty?cisloStranky=1",
+   "quote": "Správcem informačního systému o státní službě je Úřad vlády.",
+   "quote_english": "The controller of the civil service information system is the Office of the Government.",
+   "value": "Úřad vlády (Office of the Government)",
+   "published": "2026-01-01",
+   "title": "Zákon č. 234/2014 Sb., o státní službě (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 180(2) on the official portal (e-Sbírka JSON text API, page 1).",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Úřad vlády",
+    "reason": "§180(2) names the Office of the Government as administrator of the civil service information system; the payroll system in §179 is a separate one."
+   }
+  },
+  {
+   "claim": "record:CZ:government_payroll:register",
+   "question": "Government payroll and personnel: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2014%2F234%2F2026-01-01/fragmenty?cisloStranky=1",
+   "quote": "Zřizuje se informační systém o státní službě jako informační systém veřejné správy, jehož účelem je vedení údajů nezbytných pro správu organizačních věcí služby a služebních vztahů v rámci",
+   "quote_english": "The civil service information system is established as a public administration information system for keeping data needed to manage organisational matters of the service and service relationships within",
+   "value": "informační systém o státní službě (civil service information system)",
+   "published": "2026-01-01",
+   "title": "Zákon č. 234/2014 Sb., o státní službě (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 180(1) on the official portal (e-Sbírka JSON text API, page 1).",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Informační systém o státní službě",
+    "reason": "§180(1) establishes the civil service information system."
+   }
+  },
+  {
+   "claim": "record:CZ:health_insurance:register",
+   "question": "Statutory health insurance: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1992%2F592%2F2026-05-27/fragmenty?cisloStranky=0",
+   "quote": "Všeobecná zdravotní pojišťovna České republiky vede registr všech pojištěnců veřejného zdravotního pojištění (dále jen „centrální registr pojištěnců“) a spravuje jej",
+   "quote_english": "The General Health Insurance Company of the Czech Republic keeps the register of all persons insured under public health insurance (the 'central register of insured persons') and administers it",
+   "value": "centrální registr pojištěnců (central register of insured persons), kept by VZP",
+   "published": "2026-05-27",
+   "title": "Zákon č. 592/1992 Sb., o pojistném na veřejné zdravotní pojištění (znění od 2026-05-27)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 27(1) on the official portal (e-Sbírka JSON text API).",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "Centrální registr pojištěnců",
+    "reason": "§27 says that VZP keeps and administers the central register of everyone covered by public health insurance."
+   }
+  },
+  {
+   "claim": "record:CZ:health_records:register",
+   "question": "Health records: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2007%2F378%2F2026-01-01/fragmenty?cisloStranky=0",
+   "quote": "zřizuje a provozuje informační systém elektronického receptu (dále jen „systém eRecept“),",
+   "quote_english": "establishes and operates the electronic prescription information system (the 'eRecept system'),",
+   "value": "systém eRecept (electronic prescription information system)",
+   "published": "2026-01-01",
+   "title": "Zákon č. 378/2007 Sb., o léčivech (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 13(3)(n), which lists a task of the State Institute for Drug Control (SÚKL) (e-Sbírka JSON text API).",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "Systém eRecept (informační systém elektronického receptu)",
+    "reason": "The quote names the e-prescription system (set up and operated by SÚKL); it covers prescriptions, not health records in general."
+   }
+  },
+  {
+   "claim": "record:CZ:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1994%2F269%2F2026-07-01/fragmenty?cisloStranky=0",
+   "quote": "Údaje z rejstříku trestů slouží pro potřebu trestního, občanskoprávního nebo správního řízení a k prokazování bezúhonnosti. Správcem rejstříku trestů je Ministerstvo spravedlnosti",
+   "quote_english": "Data from the criminal records register serve criminal, civil or administrative proceedings and proof of good character. The controller of the criminal records register is the Ministry of Justice",
+   "value": "Ministerstvo spravedlnosti (Ministry of Justice)",
+   "published": "2026-07-01",
+   "title": "Zákon č. 269/1994 Sb., o rejstříku trestů a evidenci přestupků (znění od 2026-07-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 1a(1) on the official portal (e-Sbírka JSON text API).",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "Ministerstvo spravedlnosti",
+    "reason": "§1a(1) names the Ministry of Justice as administrator of the criminal record register."
+   }
+  },
+  {
+   "claim": "record:CZ:judicial_criminal:register",
+   "question": "Judicial & criminal justice: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1994%2F269%2F2026-07-01/fragmenty?cisloStranky=0",
+   "quote": "Rejstřík trestů je informační systém veřejné správy, který obsahuje údaje o fyzických a právnických osobách (dále jen „osoba“) pravomocně odsouzených soudy v trestním řízení",
+   "quote_english": "The criminal records register is a public administration information system containing data on natural and legal persons finally convicted by courts in criminal proceedings",
+   "value": "Rejstřík trestů (Criminal Records Register)",
+   "published": "2026-07-01",
+   "title": "Zákon č. 269/1994 Sb., o rejstříku trestů a evidenci přestupků (znění od 2026-07-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 1a(1) on the official portal (e-Sbírka JSON text API).",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "Rejstřík trestů",
+    "reason": "§1a(1) defines the criminal record register as a public administration information system."
+   }
+  },
+  {
+   "claim": "record:CZ:land_property:operator",
+   "question": "Land & property registry: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1992%2F359%2F2024-01-01/fragmenty?cisloStranky=0",
+   "quote": "Zřizuje se Český úřad zeměměřický a katastrální (dále jen „Úřad“), jako ústřední správní úřad zeměměřictví a katastru",
+   "quote_english": "The Czech Office for Surveying, Mapping and Cadastre (the 'Office') is established as the central administrative authority for surveying and the cadastre",
+   "value": "Český úřad zeměměřický a katastrální (Czech Office for Surveying, Mapping and Cadastre)",
+   "published": "2024-01-01",
+   "title": "Zákon č. 359/1992 Sb., o zeměměřických a katastrálních orgánech (znění od 2024-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 1(1) on the official portal (e-Sbírka JSON text API).",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "Český úřad zeměměřický a katastrální",
+    "reason": "§1 of Act 359/1992 establishes ČÚZK as the central administrative authority for surveying and the land cadastre; it does not literally say that ČÚZK operates the cadastral register system."
+   }
+  },
+  {
+   "claim": "record:CZ:public_health_surveillance:register",
+   "question": "Public health surveillance: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F258%2F2026-06-12/fragmenty?cisloStranky=0",
+   "quote": "Zřizuje se Informační systém infekčních nemocí jako informační systém veřejné správy. Jeho správcem je Ministerstvo zdravotnictví a",
+   "quote_english": "The Infectious Diseases Information System is established as a public administration information system. Its controller is the Ministry of Health and",
+   "value": "Informační systém infekčních nemocí (Infectious Diseases Information System)",
+   "published": "2026-06-12",
+   "title": "Zákon č. 258/2000 Sb., o ochraně veřejného zdraví (znění od 2026-06-12)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 79a(1); § 79a(2)(a) lists the register of infectious disease cases and vaccination as a component (e-Sbírka JSON text API).",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "Informační systém infekčních nemocí",
+    "reason": "§79a(1) establishes the infectious diseases information system."
+   }
+  },
+  {
+   "claim": "record:CZ:public_health_surveillance:operator",
+   "question": "Public health surveillance: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F258%2F2026-06-12/fragmenty?cisloStranky=0",
+   "quote": "Zřizuje se Informační systém infekčních nemocí jako informační systém veřejné správy. Jeho správcem je Ministerstvo zdravotnictví a",
+   "quote_english": "The Infectious Diseases Information System is established as a public administration information system. Its controller is the Ministry of Health and",
+   "value": "Ministerstvo zdravotnictví (Ministry of Health) as controller",
+   "published": "2026-06-12",
+   "title": "Zákon č. 258/2000 Sb., o ochraně veřejného zdraví (znění od 2026-06-12)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 79a(1). The sentence goes on to name ÚZIS (Institute of Health Information and Statistics) as operator, but 'provozovatelem' is marked up as a term, which cuts the quote there (e-Sbírka JSON text API).",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "Ministerstvo zdravotnictví (správce); provozovatel Ústav zdravotnických informací a statistiky ČR",
+    "reason": "The quote names the Ministry of Health as administrator and stops at 'a'; the same sentence goes on to name ÚZIS as operator (provozovatel)."
+   }
+  },
+  {
+   "claim": "record:CZ:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2016%2F297%2F2023-04-01/fragmenty?cisloStranky=0",
+   "quote": "Zřizuje se a vzniká Správa státních služeb vytvářejících důvěru (dále jen „Správa“) jako státní příspěvková organizace. Sídlem Správy je Praha.",
+   "quote_english": "The State Trust Services Administration (the 'Administration') is established as a state contributory organisation. Its seat is Prague.",
+   "value": "Správa státních služeb vytvářejících důvěru (State Trust Services Administration)",
+   "published": "2023-04-01",
+   "title": "Zákon č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce (znění od 2023-04-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 14(1); § 14(2) makes the Digital and Information Agency its founder (e-Sbírka JSON text API).",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "Správa státních služeb vytvářejících důvěru",
+    "reason": "§14(1) of Act 297/2016 establishes this state contributory organisation, and the context says it provides trust services for the Czech Republic."
+   }
+  },
+  {
+   "claim": "record:CZ:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F361%2F2026-01-01/fragmenty?cisloStranky=1",
+   "quote": "(dále jen „centrální registr“), který je informačním systémem, jehož správcem je ministerstvo. Centrální registr je informačním systémem veřejné správy podle zvláštního zákona.",
+   "quote_english": "(the 'central register'), which is an information system whose controller is the ministry. The central register is a public administration information system under a special act.",
+   "value": "ministerstvo (the ministry, i.e. Ministry of Transport) controls the centrální registr [řidičů] (central driver register)",
+   "published": "2026-01-01",
+   "title": "Zákon č. 361/2000 Sb., o provozu na pozemních komunikacích (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 122(1); in this Act 'ministerstvo' means the Ministry of Transport (e-Sbírka JSON text API, page 1).",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "ministerstvo (the Act's ministry, not named on this page)",
+    "reason": "§122(1) says that 'ministerstvo' administers the central driver register, but this page does not say which ministry that is, and the register covers drivers, not vehicles."
+   }
+  },
+  {
+   "claim": "indicator:CZ:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2016%2F297%2F2023-04-01/fragmenty?cisloStranky=0",
+   "quote": "Zřizuje se a vzniká Správa státních služeb vytvářejících důvěru (dále jen „Správa“) jako státní příspěvková organizace. Sídlem Správy je Praha.",
+   "quote_english": "The State Trust Services Administration (the 'Administration') is established as a state contributory organisation. Its seat is Prague.",
+   "value": "yes",
+   "published": "2023-04-01",
+   "title": "Zákon č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce (znění od 2023-04-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "The statute sets up the state trust-service provider as a state contributory organisation (§ 14(1)) (e-Sbírka JSON text API).",
+   "review": {
+    "id": 38,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote establishes a state contributory organisation, and the context says it provides trust services for the Czech Republic, so a state body runs the trust service."
+   }
+  },
+  {
+   "claim": "indicator:CZ:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2017%2F250%2F2023-04-01/fragmenty?cisloStranky=0",
+   "quote": "Národní bod je informační systém veřejné správy podporující proces elektronické identifikace a autentizace prostřednictvím",
+   "quote_english": "The national point is a public administration information system supporting the process of electronic identification and authentication through",
+   "value": "yes",
+   "published": "2023-04-01",
+   "title": "Zákon č. 250/2017 Sb., o elektronické identifikaci (znění od 2023-04-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "Under § 20(1)-(2) the national eID hub is a public administration system whose controller is the Digital and Information Agency (e-Sbírka JSON text API).",
+   "review": {
+    "id": 39,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote defines the national point as a public administration information system supporting eID and authentication, and §20(2) names the state Agency as its administrator."
+   }
+  },
+  {
+   "claim": "record:CZ:customs:register",
+   "question": "Customs declarations: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://celnisprava.gov.cz/cz/aktuality/Stranky/Nasazen%C3%AD-modernizovan%C3%A9ho-vnitrost%C3%A1tn%C3%ADho-syst%C3%A9mu-pro-dovoz-(e-DovozAIS).aspx",
+   "quote": "18. 5. 2026 nasazujeme modernizovaný vnitrostátní systém dovozu podle celního kodexu Unie (tzv. e-Dovoz/AIS).",
+   "quote_english": "On 18 May 2026 we are deploying the modernised national import system under the Union Customs Code (the so-called e-Dovoz/AIS).",
+   "value": "e-Dovoz/AIS, modernised national import system under the Union Customs Code, deployed 18. 5. 2026",
+   "published": "2026-05",
+   "title": "Nasazení modernizovaného vnitrostátního systému pro dovoz (e-Dovoz/AIS)",
+   "publisher": "Celní správa České republiky",
+   "doc_type": "official_page",
+   "note": "This replaces the 2010 e-Dovoz press release: on 18 May 2026 the import system became the UCC-compliant e-Dovoz/AIS.",
+   "review": {
+    "id": 40,
+    "quote_found": true,
+    "established": "e-Dovoz/AIS",
+    "reason": "The customs administration announces the modernised national import declaration system, e-Dovoz/AIS, going live on 18 May 2026."
+   }
+  },
+  {
+   "claim": "record:CZ:emergency_communications:count",
+   "question": "Emergency calls and public-safety radio: how many records it holds",
+   "relation": "corroborates",
+   "url": "https://hzscr.gov.cz/clanek/organizacni-slozky-zachranny-utvar-hzs-cr-menu-informacni-servis-zpravodajstvi-tisnova-linka-112-funguje-uz-22-let.aspx",
+   "quote": "V roce 2025 přijali operátoři tísňové linky 112 celkem 1 995 395 volání a 33 035 SMS",
+   "quote_english": "In 2025 the operators of emergency line 112 received a total of 1,995,395 calls and 33,035 SMS",
+   "value": "1 995 395 calls and 33 035 SMS to 112 in 2025",
+   "published": "2026-02-10",
+   "title": "Záchranný útvar HZS ČR - Tísňová linka 112 funguje už 22 let",
+   "publisher": "Hasičský záchranný sbor České republiky",
+   "doc_type": "official_page",
+   "note": "The same HZS ČR figure appears on the national Rescue Unit's page, so this is the same authority on a different page; no newer annual figure exists yet.",
+   "review": {
+    "id": 41,
+    "quote_found": true,
+    "established": "1,995,395 calls (plus 33,035 SMS) received on 112 in 2025",
+    "reason": "The quote gives the number of calls and texts received on 112 in 2025; these are yearly volumes, not stored records."
+   }
+  },
+  {
+   "claim": "record:CZ:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://hzscr.gov.cz/clanek/organizacni-slozky-zachranny-utvar-hzs-cr-menu-informacni-servis-zpravodajstvi-tisnova-linka-112-funguje-uz-22-let.aspx",
+   "quote": "Tísňová linka 112 funguje nepřetržitě 24 hodin denně, 7 dní v týdnu, prostřednictvím 14 vzájemně technologicky propojených krajských operačních a informačních středisek",
+   "quote_english": "Emergency line 112 runs non-stop 24 hours a day, 7 days a week, through 14 technologically interconnected regional operations and information centres",
+   "value": "14 vzájemně technologicky propojených krajských operačních a informačních středisek (14 interconnected regional operations and information centres)",
+   "published": "2026-02-10",
+   "title": "Záchranný útvar HZS ČR - Tísňová linka 112 funguje už 22 let",
+   "publisher": "Hasičský záchranný sbor České republiky",
+   "doc_type": "official_page",
+   "note": "This dated HZS ČR page (10 Feb 2026) gives the 14 interconnected centres; the printed source has no date.",
+   "review": {
+    "id": 42,
+    "quote_found": true,
+    "established": "Tísňová linka 112",
+    "reason": "The quote names emergency line 112, served by 14 interconnected regional operations and information centres."
+   }
+  },
+  {
+   "claim": "record:CZ:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://hzscr.gov.cz/clanek/hzs-jihomoravskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-dnes-je-evropsky-den-linky-112.aspx",
+   "quote": "Linku 112 zajišťují hasičské záchranné sbory jednotlivých krajů ve svých Centrech tísňové komunikace (CTK), kde se přijímá také volání na lince 150.",
+   "quote_english": "Line 112 is provided by the fire rescue services of the individual regions in their Emergency Communication Centres (CTK), which also take calls on line 150.",
+   "value": "hasičské záchranné sbory jednotlivých krajů (regional Fire Rescue Services), in Centra tísňové komunikace (CTK)",
+   "published": "2026-02-11",
+   "title": "HZS Jihomoravského kraje - Dnes je Evropský den linky 112",
+   "publisher": "Hasičský záchranný sbor České republiky",
+   "doc_type": "official_page",
+   "note": "This is a separate HZS page, and it shows the centres are now called Centra tísňové komunikace (Emergency Communication Centres).",
+   "review": {
+    "id": 43,
+    "quote_found": true,
+    "established": "Hasičské záchranné sbory krajů (in their Centra tísňové komunikace)",
+    "reason": "The quote says that each region's fire rescue service runs line 112 in its emergency communication centres."
+   }
+  },
+  {
+   "claim": "record:CZ:tax:register",
+   "question": "Tax: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://financnisprava.gov.cz/assets/cs/prilohy/fs-financni-sprava-cr/OR_FS_UZ_D15.pdf",
+   "quote": "Např.: Automatizovaný daňový informační systém (ADIS), nový daňový informační systém (nDIS).",
+   "quote_english": "E.g.: Automated Tax Information System (ADIS), new tax information system (nDIS).",
+   "value": "Automatizovaný daňový informační systém (ADIS) (Automated Tax Information System)",
+   "published": "2022",
+   "title": "Organizační řád Finanční správy České republiky (úplné znění ve znění Dodatku č. 15)",
+   "publisher": "Generální finanční ředitelství",
+   "doc_type": "official_page",
+   "note": "This is a later consolidated version (amendment no. 15, 2022) of the organisation rules that the printed value cites at amendment no. 4, and it still names ADIS.",
+   "review": {
+    "id": 44,
+    "quote_found": true,
+    "established": "ADIS (Automatizovaný daňový informační systém); nDIS (nový daňový informační systém)",
+    "reason": "A footnote in the Financial Administration's organisation rules gives ADIS and nDIS as examples of the tax information system."
+   }
+  },
+  {
+   "claim": "record:CZ:civil_registry:register",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F133%2F2025-01-01/fragmenty?cisloStranky=0",
+   "quote": "Evidence obyvatel je vedena v informačním systému evidence obyvatel (dále jen „informační systém“), jehož správcem",
+   "quote_english": "Population records are kept in the population register information system (the 'information system'), whose controller",
+   "value": "informační systém evidence obyvatel (population register information system)",
+   "published": "2025-01-01",
+   "title": "Zákon č. 133/2000 Sb., o evidenci obyvatel a rodných číslech (znění od 2025-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 3(1), whose sentence goes on to name the ministry (Interior) as controller; the separate basic register of population (registr obyvatel, 111/2009 Sb. § 20) is controlled by the Digital and Information Agency (e-Sbírka JSON text API).",
+   "review": {
+    "id": 45,
+    "quote_found": true,
+    "established": "Informační systém evidence obyvatel (správce: ministerstvo = Ministerstvo vnitra)",
+    "reason": "§3(1) of Act 133/2000 names the population register information system; the sentence goes on 'jehož správcem je ministerstvo', and the act defines the ministry as the Ministry of the Interior."
+   }
+  },
+  {
+   "claim": "record:CZ:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2016%2F222%2F2026-08-29/fragmenty?cisloStranky=0",
+   "quote": "Elektronický systém Sbírky zákonů a mezinárodních smluv je informačním systémem veřejné správy. Správcem elektronického systému Sbírky zákonů a mezinárodních smluv je Ministerstvo vnitra.",
+   "quote_english": "The electronic system of the Collection of Laws and International Treaties is a public administration information system. Its controller is the Ministry of the Interior.",
+   "value": "Elektronický systém Sbírky zákonů a mezinárodních smluv (electronic system of the Collection of Laws and International Treaties, e-Sbírka)",
+   "published": "2026-08-29",
+   "title": "Zákon č. 222/2016 Sb., o Sbírce zákonů a mezinárodních smluv (znění od 2026-08-29)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 6(1) on the official portal (e-Sbírka JSON text API).",
+   "review": {
+    "id": 46,
+    "quote_found": true,
+    "established": "Elektronický systém Sbírky zákonů a mezinárodních smluv (správce: Ministerstvo vnitra)",
+    "reason": "§6(1) of Act 222/2016 names the electronic Collection of Laws system and says that the Ministry of the Interior is its administrator."
+   }
+  },
+  {
+   "claim": "record:CZ:official_gazette:operator",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2016%2F222%2F2026-08-29/fragmenty?cisloStranky=0",
+   "quote": "Elektronický systém Sbírky zákonů a mezinárodních smluv je informačním systémem veřejné správy. Správcem elektronického systému Sbírky zákonů a mezinárodních smluv je Ministerstvo vnitra.",
+   "quote_english": "The electronic system of the Collection of Laws and International Treaties is a public administration information system. Its controller is the Ministry of the Interior.",
+   "value": "Ministerstvo vnitra (Ministry of the Interior)",
+   "published": "2026-08-29",
+   "title": "Zákon č. 222/2016 Sb., o Sbírce zákonů a mezinárodních smluv (znění od 2026-08-29)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 6(1) on the official portal (e-Sbírka JSON text API).",
+   "review": {
+    "id": 47,
+    "quote_found": true,
+    "established": "Elektronický systém Sbírky zákonů a mezinárodních smluv (správce: Ministerstvo vnitra)",
+    "reason": "This quote and URL are the same as item 46: it names the system and says the Ministry of the Interior administers it."
+   }
+  },
+  {
+   "claim": "record:CZ:public_finance:register",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://mf.gov.cz/cs/ministerstvo/informacni-systemy/iissp--monitor",
+   "quote": "Prezentované informace pocházejí ze systému Státní pokladny (IISSP – Integrovaný informační systém Státní pokladny) a jsou čtvrtletně aktualizovány.",
+   "quote_english": "The information presented comes from the State Treasury system (IISSP - Integrated Information System of the State Treasury) and is updated quarterly.",
+   "value": "Integrovaný informační systém Státní pokladny (IISSP) (Integrated Information System of the State Treasury)",
+   "published": "",
+   "title": "IISSP - MONITOR",
+   "publisher": "Ministerstvo financí ČR",
+   "doc_type": "official_page",
+   "note": "This Ministry of Finance page describes the MONITOR portal, which publishes budget and accounting data drawn from IISSP.",
+   "review": {
+    "id": 48,
+    "quote_found": true,
+    "established": "IISSP (Integrovaný informační systém Státní pokladny)",
+    "reason": "The Ministry of Finance page says that the MONITOR data come from the State Treasury integrated information system."
+   }
+  },
+  {
+   "claim": "record:CZ:central_bank:register",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.cnb.cz/cs/platebni-styk/certis/popis-systemu-certis/",
+   "quote": "Jediným systémem mezibankovního platebního styku v České republice, který zpracovává mezibankovní platby v českých korunách, je systém CERTIS",
+   "quote_english": "The only interbank payment system in the Czech Republic that processes interbank payments in Czech koruna is the CERTIS system",
+   "value": "systém CERTIS (CERTIS interbank payment system)",
+   "published": "",
+   "title": "Popis systému CERTIS",
+   "publisher": "Česká národní banka",
+   "doc_type": "official_page",
+   "note": "This is ČNB's own description of the interbank payment system it runs.",
+   "review": {
+    "id": 49,
+    "quote_found": true,
+    "established": "CERTIS",
+    "reason": "The ČNB page says that CERTIS is the only interbank payment system processing CZK interbank payments."
+   }
+  },
+  {
+   "claim": "record:CZ:central_bank:operator",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.cnb.cz/cs/cnb-news/tiskove-zpravy/System-CERTIS-rocne-zpracuje-temer-miliardu-mezibankovnich-platebnich-transakci.-CNB-jej-nove-zpristupni-inbspnebankovnim-subjektum/",
+   "quote": "CERTIS zahájil provoz v rámci zúčtovacího centra Státní banky československé v Československu dne 8. března 1992. V současnosti jej provozuje Česká národní banka.",
+   "quote_english": "CERTIS started operation in the clearing centre of the State Bank of Czechoslovakia on 8 March 1992. Today it is operated by the Czech National Bank.",
+   "value": "Česká národní banka (Czech National Bank)",
+   "published": "2025-01",
+   "title": "Systém CERTIS ročně zpracuje téměř miliardu mezibankovních platebních transakcí. ČNB jej nově zpřístupní i nebankovním subjektům",
+   "publisher": "Česká národní banka",
+   "doc_type": "official_page",
+   "note": "This ČNB press release dates from January 2025: the Senate had passed the payments-act amendment on 22 Jan 2025 and it was awaiting the President's signature.",
+   "review": {
+    "id": 50,
+    "quote_found": true,
+    "established": "CERTIS, operated by Česká národní banka",
+    "reason": "The ČNB press release says that the Czech National Bank now operates CERTIS."
+   }
+  },
+  {
+   "claim": "record:CZ:central_bank:count",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.cnb.cz/cs/cnb-news/tiskove-zpravy/System-CERTIS-rocne-zpracuje-temer-miliardu-mezibankovnich-platebnich-transakci.-CNB-jej-nove-zpristupni-inbspnebankovnim-subjektum/",
+   "quote": "V roce 2024 CERTIS zpracoval přes 983 milionů položek v celkové hodnotě 386,5 bilionu korun.",
+   "quote_english": "In 2024 CERTIS processed over 983 million items with a total value of CZK 386.5 trillion.",
+   "value": "over 983 million items in 2024",
+   "published": "2025-01",
+   "title": "Systém CERTIS ročně zpracuje téměř miliardu mezibankovních platebních transakcí. ČNB jej nově zpřístupní i nebankovním subjektům",
+   "publisher": "Česká národní banka",
+   "doc_type": "official_page",
+   "note": "This is the annual transaction volume of the central bank's payment system.",
+   "review": {
+    "id": 51,
+    "quote_found": true,
+    "established": "over 983 million items (payment transactions) processed in 2024, worth CZK 386.5 trillion",
+    "reason": "The quote gives CERTIS's volume for 2024 as transactions processed per year, not stored records."
+   }
+  },
+  {
+   "claim": "record:CZ:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1998%2F111%2F2026-01-01/fragmenty?cisloStranky=1",
+   "quote": "Vysoká škola vede matriku studentů. Matrika studentů slouží k evidenci o studentech,",
+   "quote_english": "A higher education institution keeps a student register. The student register serves to keep records on students,",
+   "value": "matrika studentů (student register), kept by each higher education institution",
+   "published": "2026-01-01",
+   "title": "Zákon č. 111/1998 Sb., o vysokých školách (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is § 88(1); schools below university level keep a školní matrika under § 28 of the Education Act 561/2004 Sb. (e-Sbírka JSON text API, page 1).",
+   "review": {
+    "id": 52,
+    "quote_found": true,
+    "established": "Matrika studentů (kept by each vysoká škola)",
+    "reason": "§88(1) of Act 111/1998 says that each higher education institution keeps a student register; the quote covers universities only, not schools or qualifications in general."
+   }
+  },
+  {
+   "claim": "indicator:CZ:L3",
+   "question": "Is a cloud certification that requires immunity from non-EU law in force or adopted for government use? yes = In force and required for sensitive government workloads; partial = Adopted or in force but not required; no = A source states no such certification exists or applies",
+   "relation": "fills_gap",
+   "url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2025%2F505%2F2026-01-01/fragmenty?cisloStranky=0",
+   "quote": "Poskytovatel v případě, že obdrží žádost cizozemských orgánů o zpřístupnění nebo předání zákaznických dat nebo specifických provozních údajů, tuto žádost odmítne a data nevydá a nezpřístupní.",
+   "quote_english": "If the provider receives a request from foreign authorities to disclose or hand over customer data or specific operational data, it refuses the request and does not release or disclose the data.",
+   "value": "yes",
+   "published": "2026-01-01",
+   "title": "Vyhláška č. 505/2025 Sb., o některých požadavcích pro zápis do katalogu cloud computingu (znění od 2026-01-01)",
+   "publisher": "Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal)",
+   "doc_type": "legislation",
+   "note": "This is Annex 4 (security level 'kritická') of the binding decree for entry in the government cloud catalogue; Act 365/2000 Sb. lets public bodies use only catalogue-listed cloud at the level their assessment requires, so refusing foreign access is mandatory for critical workloads (e-Sbírka JSON text API).",
+   "review": {
+    "id": 53,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Decree 505/2025 is in force and requires that a provider in the 'vysoká' security level of the public-administration cloud catalogue refuse foreign authorities' requests for customer data; the quote does not say whether public authorities must use such services, so 'partial' would also be arguable."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:CZ:L1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:CZ:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:authentication_audit_log:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:beneficial_ownership:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:benefits_pensions:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:border_control:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:breeder_documents:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:breeder_documents:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:business_registry:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:crisis_management:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:customs:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:electoral_management:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:electoral_roll:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:facial_biometric:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CZ:facial_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:firearms_register:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CZ:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:geospatial:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:government_payroll:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:government_payroll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:health_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:issuance_history:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CZ:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:judicial_criminal:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:land_property:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:public_health_surveillance:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:public_health_surveillance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:trust_services_pki:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:vehicle_licensing:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:vehicle_licensing:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:CZ:C1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:CZ:C2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:CZ:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:CZ:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:emergency_communications:count",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:emergency_communications:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:geospatial:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CZ:land_property:count",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CZ:land_property:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CZ:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:police_records:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CZ:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CZ:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CZ:grid_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CZ:water_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CZ:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:CZ:L3",
+   "status": "found"
+  }
+ ]
+}

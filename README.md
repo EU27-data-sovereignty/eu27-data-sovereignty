@@ -218,6 +218,26 @@ Standard library only. The capacity engine still reproduces the xlsx it was buil
 state, how many facts are sourced, and what is still open. The earlier headline figures (EU-27 design
 load, servers, CAPEX) were Dutch-scaled and are withdrawn; `CHANGELOG.md` records them and why.
 
+## Changelog
+
+How the project has evolved, one line per stage. The detail is in [`CHANGELOG.md`](CHANGELOG.md), newest
+first, and the reasoning is in [`DECISIONS.md`](DECISIONS.md), numbered below.
+
+| When | Stage | Decisions |
+|---|---|---|
+| 2026-08-13 – 08-30 | A capacity plan for the Netherlands' government cloud (RijksCloud): the model, its inputs and the write-up | — |
+| 2026-09-03 | Generalised from NL to all 27 member states, with legal and regulatory posture per state | — |
+| 2026-09-04 – 09-07 | Web app, `init.sh`/`run.sh`/`test.sh`, per-country infographics and briefs, a security audit, first deploy (noindex) | #6–#42 |
+| 2026-09-09 – 09-11 | The verification ledger and fetch layer: first cells sourced, Eurostat vintages pinned, two data defects found | #14, #54 |
+| 2026-09-17 – 09-26 | The source register: one registry, every claim pointing at a document; secret scanning in CI | #59–#69 |
+| 2026-09-27 | `eu27.cloud` registered; the deep-link 404 fixed | #70 |
+| 2026-09-29 | Rebuilt: each state on its own fundamentals, one content model for every output, sourced facts or visible gaps, a ranking by published rule, `/ask`, the first verified research with independent review, the EU-27 report | #71–#79 |
+| 2026-09-30 | Deploys from CI. The evidence rules: machine-checked disclaimer everywhere, figures must be in their quote, grades, source tiers, rechecks, disputed facts. The first vetting run. Eurostat vintages adopted. Reproducible from scratch, with a generated methodology | #80–#84 |
+
+**Keeping it current.** Any commit that changes what a reader sees, or how the evidence is produced,
+adds its entry to `CHANGELOG.md` in the same commit, citing the decision it rests on. A new stage adds a
+line here.
+
 ## Who this is for
 
 The audience is European policymakers and civil servants. The bodies below are the

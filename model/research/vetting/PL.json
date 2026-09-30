@@ -1,0 +1,900 @@
+{
+ "iso": "PL",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:PL:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1241/text.pdf",
+   "quote": "Minister właściwy do spraw informatyzacji: 1) zarządza publicznym systemem identyfikacji elektronicznej;",
+   "quote_english": "The minister competent for computerisation: 1) manages the public electronic identification system;",
+   "value": "Yes",
+   "published": "2026-09-23",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 1 września 2026 r. – jednolity tekst ustawy o informatyzacji działalności podmiotów realizujących zadania publiczne",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Art. 20ab of the 2026 consolidated Act on Computerisation: a statutory T1 basis, independent of the COI product page, for state operation of the public e-ID system.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Art. 20ab says the minister responsible for digitalisation manages the public electronic identification system, so a state body operates it."
+   }
+  },
+  {
+   "claim": "record:PL:customs:register",
+   "question": "Customs declarations: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1373/text.pdf",
+   "quote": "Wymiana informacji z organami celnymi drogą elektroniczną, w szczególności deklaracji lub zgłoszeń, jest dokonywana przez Platformę Usług Elektronicznych Skarbowo-Celnych, zwaną dalej „PUESC”.",
+   "quote_english": "Electronic exchange of information with customs authorities, in particular declarations or notifications, is carried out through the Tax and Customs Electronic Services Platform, hereinafter 'PUESC'.",
+   "value": "Platforma Usług Elektronicznych Skarbowo-Celnych – PUESC (Tax and Customs Electronic Services Platform)",
+   "published": "2024-09-17",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 11 września 2024 r. – jednolity tekst ustawy – Prawo celne",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Art. 10a of the consolidated Customs Law names PUESC as the statutory channel for customs declarations; the KAS Act (Dz.U. 2025 poz. 1131, Art. 35) also lists PUESC among KAS systems.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "PUESC (Platforma Usług Elektronicznych Skarbowo-Celnych)",
+    "reason": "The quote says electronic exchange of customs declarations goes through PUESC."
+   }
+  },
+  {
+   "claim": "record:PL:digital_identity_credentials:register",
+   "question": "Digital identity credentials: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1241/text.pdf",
+   "quote": "profil zaufany – środek identyfikacji elektronicznej zawierający zestaw danych identyfikujących i opisujących osobę fizyczną",
+   "quote_english": "trusted profile – an electronic identification means containing a set of data identifying and describing a natural person",
+   "value": "profil zaufany (trusted profile), an electronic identification means",
+   "published": "2026-09-23",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 1 września 2026 r. – jednolity tekst ustawy o informatyzacji działalności podmiotów realizujących zadania publiczne",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The statutory definition (Art. 3 pt 14) confirms Profil Zaufany is an e-ID means; the notification at level 'substantial' is stated only on the COI page.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "profil zaufany",
+    "reason": "The quote defines profil zaufany as an electronic identification means that holds the data identifying a natural person."
+   }
+  },
+  {
+   "claim": "record:PL:vehicle_licensing:register",
+   "question": "Vehicle & licensing: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1251/text.pdf",
+   "quote": "Rozdział 2a Centralna ewidencja pojazdów Art. 80a. 1. Tworzy się centralną ewidencję pojazdów, zwaną dalej „ewidencją”. 2. W ewidencji gromadzi się dane o pojazdach",
+   "quote_english": "Chapter 2a Central vehicle register Art. 80a. 1. A central vehicle register is established, hereinafter 'the register'. 2. The register collects data on vehicles",
+   "value": "centralna ewidencja pojazdów (central vehicle register)",
+   "published": "2024-08-19",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 21 czerwca 2024 r. – jednolity tekst ustawy – Prawo o ruchu drogowym",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The Road Traffic Act establishes the vehicle half of CEPiK in statute; the drivers' register sits in the Act on Vehicle Drivers.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "centralna ewidencja pojazdów (central vehicle register)",
+    "reason": "Art. 80a creates the central vehicle register, which collects vehicle data; the quote itself does not cover licensing."
+   }
+  },
+  {
+   "claim": "indicator:PL:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "supersedes",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1725/text.pdf",
+   "quote": "Minister właściwy do spraw informatyzacji zapewnia funkcjonowanie krajowej infrastruktury zaufania, która obejmuje: 1) rejestr dostawców usług zaufania, zwany dalej „rejestrem”; 2) zaufaną listę; 3) narodowe centrum certyfikacji.",
+   "quote_english": "The minister competent for computerisation ensures the functioning of the national trust infrastructure, which comprises: 1) the register of trust service providers, hereinafter 'the register'; 2) the trusted list; 3) the national certification centre.",
+   "value": "Yes",
+   "published": "2024-11-25",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 14 listopada 2024 r. – jednolity tekst ustawy o usługach zaufania oraz identyfikacji elektronicznej",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "This is the 2024 consolidated text of the 2016 Trust Services Act cited in the printed source (the original enactment); under Art. 11 the minister may authorise the National Bank of Poland to run the national certification centre.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The minister responsible for digitalisation ensures the national trust infrastructure, which includes the national certification centre (narodowe centrum certyfikacji)."
+   }
+  },
+  {
+   "claim": "indicator:PL:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "supersedes",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1209/text.pdf",
+   "quote": "Informacjom niejawnym nadaje się klauzulę „ściśle tajne”, jeżeli ich nieuprawnione ujawnienie spowoduje wyjątkowo poważną szkodę dla Rzeczypospolitej Polskiej",
+   "quote_english": "Classified information is given the 'top secret' classification if its unauthorised disclosure would cause exceptionally grave damage to the Republic of Poland",
+   "value": "Yes",
+   "published": "2025-09-02",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 11 sierpnia 2025 r. – jednolity tekst ustawy o ochronie informacji niejawnych",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "This is the 2025 consolidated text of the 2010 Classified Information Protection Act cited in the printed source (the original enactment); Art. 5 still sets the statutory classification levels.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote comes from an act published in Dziennik Ustaw that assigns the classification clause 'ściśle tajne' by level of harm, so the scheme is set in statute."
+   }
+  },
+  {
+   "claim": "record:PL:crisis_management:register",
+   "question": "Crisis management and civil protection: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/574/text.pdf",
+   "quote": "jest obowiązany, na żądanie dyrektora Centrum, do niezwłocznego, nieodpłatnego wysłania lub wysyłania, komunikatów do wszystkich lub określonych przez dyrektora Centrum grup użytkowników końcowych",
+   "quote_english": "is obliged, at the request of the director of the Centre, to send without delay and free of charge messages to all or to groups of end users specified by the director of the Centre",
+   "value": "Mobile operators must send warning messages to end users at the request of the RCB director",
+   "published": "2026-04-28",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 21 kwietnia 2026 r. – jednolity tekst ustawy o zarządzaniu kryzysowym",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The 2026 consolidated Crisis Management Act gives the statutory basis for the Alert RCB mechanism that the printed 2020 regulation implements.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote obliges mobile operators to send alert messages when the director of the Centrum (RCB) asks, but it names no register or system."
+   }
+  },
+  {
+   "claim": "record:PL:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "contradicts",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/636/text.pdf",
+   "quote": "dane daktyloskopijne są pobierane przez upoważnione podmioty i przekazywane Komendantowi Głównemu Policji w celu przetwarzania w zbiorach danych daktyloskopijnych",
+   "quote_english": "fingerprint data are taken by authorised entities and transmitted to the Chief Commander of Police for processing in the fingerprint data collections",
+   "value": "zbiory danych daktyloskopijnych (fingerprint data collections) processed by the Komendant Główny Policji",
+   "published": "2025-05-15",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 10 kwietnia 2025 r. – jednolity tekst ustawy o Policji",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The printed 'no central register' is based on the ID Cards Act, where fingerprints sit only in the document chip; the Police Act nonetheless provides for central police fingerprint collections, so the answer depends on whether law-enforcement holdings are in scope.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote only says fingerprint data go to the Chief Commander of Police for processing in generic 'zbiory danych daktyloskopijnych'; that is a description, not the name of a system."
+   }
+  },
+  {
+   "claim": "record:PL:health_records:operator",
+   "question": "Health records: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://cez.gov.pl/",
+   "quote": "Flagowym produktem Centrum e-Zdrowia jest system e-zdrowie (P1), który stanowi podstawę cyfrowego ekosystemu usług medycznych.",
+   "quote_english": "The flagship product of the e-Health Centre is the e-health system (P1), which forms the basis of the digital ecosystem of medical services.",
+   "value": "Centrum e-Zdrowia (e-Health Centre)",
+   "published": "",
+   "title": "Centrum e-Zdrowia – strona główna",
+   "publisher": "Centrum e-Zdrowia",
+   "doc_type": "official_page",
+   "note": "The operator's own site names Centrum e-Zdrowia, the unit subordinate to the health minister that the printed statute describes without naming it.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Centrum e-Zdrowia",
+    "reason": "The quote appears on cez.gov.pl and calls the e-zdrowie (P1) system the flagship product of Centrum e-Zdrowia, which makes CeZ its operator and provider."
+   }
+  },
+  {
+   "claim": "record:PL:civil_registry:register",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/384/text.pdf",
+   "quote": "Ewidencję ludności prowadzi się w Powszechnym Elektronicznym Systemie Ewidencji Ludności, który stanowi rejestr PESEL, oraz w rejestrach mieszkańców, prowadzonych w systemie teleinformatycznym.",
+   "quote_english": "Population records are kept in the Universal Electronic Population Register System, which constitutes the PESEL register, and in residents' registers, kept in an ICT system.",
+   "value": "Powszechny Elektroniczny System Ewidencji Ludności – rejestr PESEL (Universal Electronic Population Register System – PESEL register)",
+   "published": "2026-03-20",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 12 marca 2026 r. – jednolity tekst ustawy o ewidencji ludności",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Covers residence and the PESEL identifier; civil status events sit in the Rejestr Stanu Cywilnego, which COI lists alongside PESEL within the System Rejestrów Państwowych.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "rejestr PESEL (Powszechny Elektroniczny System Ewidencji Ludności) and residents' registers",
+    "reason": "The quote names PESEL as the population register kept in an ICT system but does not say who operates it."
+   }
+  },
+  {
+   "claim": "record:PL:civil_registry:operator",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/384/text.pdf",
+   "quote": "Utrzymanie i rozwój rejestru PESEL, w celu realizacji zadań określonych w ustawie, zapewnia minister właściwy do spraw informatyzacji",
+   "quote_english": "The maintenance and development of the PESEL register, for the tasks set out in the Act, is ensured by the minister competent for computerisation",
+   "value": "minister właściwy do spraw informatyzacji (minister competent for computerisation)",
+   "published": "2026-03-20",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 12 marca 2026 r. – jednolity tekst ustawy o ewidencji ludności",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Art. 6(2) of the Population Records Act; COI builds the system on the ministry's behalf.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "national: minister responsible for digitalisation",
+    "reason": "The quote says the minister responsible for digitalisation maintains and develops the PESEL register."
+   }
+  },
+  {
+   "claim": "record:PL:authentication_audit_log:register",
+   "question": "Authentication audit log: Records of who authenticated to which public service and when",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1241/text.pdf",
+   "quote": "2) zapisuje i zachowuje informacje związane z zapewnieniem rozliczalności i niezaprzeczalności działań użytkownika korzystającego ze środka identyfikacji elektronicznej wydanego w publicznym systemie identyfikacji elektronicznej.",
+   "quote_english": "2) records and retains information related to ensuring the accountability and non-repudiation of the actions of a user of an electronic identification means issued in the public electronic identification system.",
+   "value": "informacje związane z zapewnieniem rozliczalności i niezaprzeczalności działań użytkownika (accountability and non-repudiation records of users of the public e-ID system)",
+   "published": "2026-09-23",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 1 września 2026 r. – jednolity tekst ustawy o informatyzacji działalności podmiotów realizujących zadania publiczne",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Art. 20ab pt 2: the statute requires such records but gives them no register name.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "national: minister responsible for digitalisation",
+    "reason": "Art. 20ab(2) says the minister records and retains accountability and non-repudiation information on the actions of users of public eID means, which amounts to the authentication audit log."
+   }
+  },
+  {
+   "claim": "record:PL:authentication_audit_log:operator",
+   "question": "Authentication audit log: Records of who authenticated to which public service and when",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1241/text.pdf",
+   "quote": "Minister właściwy do spraw informatyzacji: 1) zarządza publicznym systemem identyfikacji elektronicznej;",
+   "quote_english": "The minister competent for computerisation: 1) manages the public electronic identification system;",
+   "value": "Minister właściwy do spraw informatyzacji (minister competent for computerisation)",
+   "published": "2026-09-23",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 1 września 2026 r. – jednolity tekst ustawy o informatyzacji działalności podmiotów realizujących zadania publiczne",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The same Art. 20ab makes the minister both the manager of the system and the keeper of the accountability records (point 2).",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "national: minister responsible for digitalisation (manages the public eID system)",
+    "reason": "The quote establishes only that the minister manages the public eID system; it does not itself mention audit logging."
+   }
+  },
+  {
+   "claim": "record:PL:trust_services_pki:register",
+   "question": "State PKI and qualified trust services: Root and issuing certificate authorities for government, qualified signatures and seals",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1725/text.pdf",
+   "quote": "Minister właściwy do spraw informatyzacji zapewnia funkcjonowanie krajowej infrastruktury zaufania, która obejmuje: 1) rejestr dostawców usług zaufania, zwany dalej „rejestrem”; 2) zaufaną listę; 3) narodowe centrum certyfikacji.",
+   "quote_english": "The minister competent for computerisation ensures the functioning of the national trust infrastructure, which comprises: 1) the register of trust service providers; 2) the trusted list; 3) the national certification centre.",
+   "value": "narodowe centrum certyfikacji (national certification centre), part of the krajowa infrastruktura zaufania (national trust infrastructure)",
+   "published": "2024-11-25",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 14 listopada 2024 r. – jednolity tekst ustawy o usługach zaufania oraz identyfikacji elektronicznej",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Under Art. 10 the national certification centre issues the certificates that qualified trust service providers use to verify signatures and seals.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "national: minister responsible for digitalisation (national certification centre)",
+    "reason": "The minister ensures the national trust infrastructure, including the trust-service register, the trusted list and the national certification centre (the root)."
+   }
+  },
+  {
+   "claim": "record:PL:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: Root and issuing certificate authorities for government, qualified signatures and seals",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1725/text.pdf",
+   "quote": "Na wniosek Prezesa Narodowego Banku Polskiego, minister właściwy do spraw informatyzacji może upoważnić Narodowy Bank Polski do realizacji zadań, o których mowa w art. 10, jak również do prowadzenia rejestru i zaufanej listy.",
+   "quote_english": "At the request of the President of the National Bank of Poland, the minister competent for computerisation may authorise the National Bank of Poland to carry out the tasks referred to in Art. 10, as well as to keep the register and the trusted list.",
+   "value": "Narodowy Bank Polski (National Bank of Poland), when authorised by the minister competent for computerisation",
+   "published": "2024-11-25",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 14 listopada 2024 r. – jednolity tekst ustawy o usługach zaufania oraz identyfikacji elektronicznej",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The statute makes NBP operation conditional ('may authorise'); I did not fetch an NBP or NCCert page confirming that an authorisation is in force.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "national: Narodowy Bank Polski (may be authorised by the minister)",
+    "reason": "The quote allows the minister, at the NBP President's request, to authorise NBP to carry out the Art. 10 tasks and to keep the register and trusted list; it is a discretionary delegation, not a fixed operator."
+   }
+  },
+  {
+   "claim": "record:PL:residence_permits:register",
+   "question": "Residence and migration status: Residence permits, asylum status and foreign-national registrations",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1079/text.pdf",
+   "quote": "Krajowy zbiór rejestrów, ewidencji i wykazu w sprawach cudzoziemców tworzy oraz prowadzi w systemie teleinformatycznym Szef Urzędu.",
+   "quote_english": "The national collection of registers, records and the list in matters of foreigners is created and kept in an ICT system by the Head of the Office.",
+   "value": "Krajowy zbiór rejestrów, ewidencji i wykazu w sprawach cudzoziemców (National collection of registers, records and list concerning foreigners)",
+   "published": "2025-08-07",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 25 lipca 2025 r. – jednolity tekst ustawy o cudzoziemcach",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Art. 449 of the Act on Foreigners; 'Szef Urzędu' is the Head of the Office for Foreigners (Urząd do Spraw Cudzoziemców).",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "national: Szef Urzędu do Spraw Cudzoziemców (national set of registers on foreigners)",
+    "reason": "The Head of the Office for Foreigners, who the act defines as 'Szef Urzędu', creates and keeps the national set of registers on foreigners in an ICT system."
+   }
+  },
+  {
+   "claim": "record:PL:residence_permits:operator",
+   "question": "Residence and migration status: Residence permits, asylum status and foreign-national registrations",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1079/text.pdf",
+   "quote": "Krajowy zbiór rejestrów, ewidencji i wykazu w sprawach cudzoziemców tworzy oraz prowadzi w systemie teleinformatycznym Szef Urzędu.",
+   "quote_english": "The national collection of registers, records and the list in matters of foreigners is created and kept in an ICT system by the Head of the Office.",
+   "value": "Szef Urzędu (Head of the Office [for Foreigners])",
+   "published": "2025-08-07",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 25 lipca 2025 r. – jednolity tekst ustawy o cudzoziemcach",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The Act defines 'Szef Urzędu' as the Head of the Office for Foreigners.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "national: Szef Urzędu do Spraw Cudzoziemców (national set of registers on foreigners)",
+    "reason": "This is the same quote as item 15: the Head of the Office for Foreigners creates and keeps the national set of registers on foreigners."
+   }
+  },
+  {
+   "claim": "record:PL:health_insurance:register",
+   "question": "Statutory health insurance: Enrolment and entitlement records of the statutory health insurance scheme",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1461/text.pdf",
+   "quote": "7) promocja zdrowia i profilaktyka chorób, w tym dofinansowanie programów polityki zdrowotnej na podstawie art. 48d; 8) prowadzenie Centralnego Wykazu Ubezpieczonych;",
+   "quote_english": "7) health promotion and disease prevention, including co-financing of health policy programmes under Art. 48d; 8) keeping the Central Register of Insured Persons;",
+   "value": "Centralny Wykaz Ubezpieczonych (Central Register of Insured Persons)",
+   "published": "2025-10-24",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 26 września 2025 r. – jednolity tekst ustawy o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The item appears in the statutory list of tasks of the National Health Fund (NFZ, Art. 97); the heading naming the Fund falls outside the quotable span, so no separate operator finding is given.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "national: Narodowy Fundusz Zdrowia (Centralny Wykaz Ubezpieczonych)",
+    "reason": "The quote sits in the Art. 97 list of the Fund's (NFZ) tasks, which includes keeping the Central Register of the Insured."
+   }
+  },
+  {
+   "claim": "record:PL:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1066/text.pdf",
+   "quote": "Księgi wieczyste są zakładane i prowadzone w systemie teleinformatycznym. 2. Minister Sprawiedliwości określi, w drodze rozporządzenia, sposób zakładania oraz prowadzenia ksiąg wieczystych w systemie teleinformatycznym",
+   "quote_english": "Land and mortgage registers are established and kept in an ICT system. 2. The Minister of Justice shall determine, by regulation, the manner of establishing and keeping land and mortgage registers in the ICT system",
+   "value": "księgi wieczyste (land and mortgage registers), kept in an ICT system",
+   "published": "2026-08-06",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 31 lipca 2026 r. – jednolity tekst ustawy o księgach wieczystych i hipotece",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Covers title and mortgages; cadastral parcels sit in the separate land and building register under the Geodetic and Cartographic Law.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "księgi wieczyste kept in an ICT system (operator not stated)",
+    "reason": "Land registers are kept in an ICT system and the Minister of Justice sets the method by regulation, but the quote does not name who operates the system."
+   }
+  },
+  {
+   "claim": "record:PL:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/276/text.pdf",
+   "quote": "Art. 1. 1. Tworzy się Krajowy Rejestr Karny, zwany dalej „Rejestrem”. 2. W Rejestrze gromadzi się dane o osobach: 1) prawomocnie skazanych za przestępstwa lub przestępstwa skarbowe;",
+   "quote_english": "Art. 1. 1. The National Criminal Register is established, hereinafter 'the Register'. 2. The Register collects data on persons: 1) finally convicted of offences or fiscal offences;",
+   "value": "Krajowy Rejestr Karny (National Criminal Register)",
+   "published": "2024-02-29",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 20 lutego 2024 r. – jednolity tekst ustawy o Krajowym Rejestrze Karnym",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Covers criminal records only; court case-file systems are not covered.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Krajowy Rejestr Karny",
+    "reason": "Art. 1 creates the National Criminal Register, which holds data on persons validly convicted; the quote names no operator."
+   }
+  },
+  {
+   "claim": "record:PL:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/276/text.pdf",
+   "quote": "Rejestr prowadzi Minister Sprawiedliwości. W zakresie określonym w niniejszej ustawie realizację zadań związanych z prowadzeniem Rejestru zapewnia wchodzące w skład Ministerstwa Sprawiedliwości Biuro Informacyjne Krajowego Rejestru Karnego",
+   "quote_english": "The Register is kept by the Minister of Justice. Within the scope set out in this Act, the tasks of keeping the Register are carried out by the Information Office of the National Criminal Register, part of the Ministry of Justice",
+   "value": "Minister Sprawiedliwości (Minister of Justice), through the Biuro Informacyjne Krajowego Rejestru Karnego (Information Office of the National Criminal Register)",
+   "published": "2024-02-29",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 20 lutego 2024 r. – jednolity tekst ustawy o Krajowym Rejestrze Karnym",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Art. 2(1) of the National Criminal Register Act.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "national: Minister Sprawiedliwości via Biuro Informacyjne Krajowego Rejestru Karnego",
+    "reason": "The quote says the Minister of Justice keeps the Register through the KRK Information Office within the ministry."
+   }
+  },
+  {
+   "claim": "record:PL:police_records:register",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/636/text.pdf",
+   "quote": "Komendant Główny Policji prowadzi Krajowy System Informacyjny Policji, zwany dalej „KSIP”, będący zestawem zbiorów danych, w którym przetwarza się informacje, w tym dane osobowe, w związku z realizacją zadań ustawowych.",
+   "quote_english": "The Chief Commander of Police keeps the National Police Information System, hereinafter 'KSIP', a set of data collections in which information, including personal data, is processed in connection with statutory tasks.",
+   "value": "Krajowy System Informacyjny Policji – KSIP (National Police Information System)",
+   "published": "2025-05-15",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 10 kwietnia 2025 r. – jednolity tekst ustawy o Policji",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The KSIP provision in the 2025 consolidated Police Act.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "national: Komendant Główny Policji (KSIP)",
+    "reason": "The Chief Commander of Police keeps the National Police Information System (KSIP)."
+   }
+  },
+  {
+   "claim": "record:PL:police_records:operator",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/636/text.pdf",
+   "quote": "Komendant Główny Policji prowadzi Krajowy System Informacyjny Policji, zwany dalej „KSIP”, będący zestawem zbiorów danych, w którym przetwarza się informacje, w tym dane osobowe, w związku z realizacją zadań ustawowych.",
+   "quote_english": "The Chief Commander of Police keeps the National Police Information System, hereinafter 'KSIP', a set of data collections in which personal data are processed for statutory tasks.",
+   "value": "Komendant Główny Policji (Chief Commander of Police)",
+   "published": "2025-05-15",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 10 kwietnia 2025 r. – jednolity tekst ustawy o Policji",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The same provision names the operator.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "national: Komendant Główny Policji (KSIP)",
+    "reason": "This is the same quote as item 21: KSIP is kept by the Chief Commander of Police."
+   }
+  },
+  {
+   "claim": "record:PL:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1061/text.pdf",
+   "quote": "dokonywania wpisów oraz wglądu do danych zawartych w Systemie Informacyjnym Schengen oraz Wizowym Systemie Informacyjnym poprzez Krajowy System Informatyczny (KSI).",
+   "quote_english": "making entries in and accessing data contained in the Schengen Information System and the Visa Information System through the National IT System (KSI).",
+   "value": "Krajowy System Informatyczny – KSI (National IT System)",
+   "published": "2026-08-06",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 31 lipca 2026 r. – jednolity tekst ustawy o udziale RP w Systemie Informacyjnym Schengen oraz Wizowym Systemie Informacyjnym",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "KSI is Poland's national interface to SIS and VIS; the Entry/Exit System is not covered by this quote.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Krajowy System Informatyczny (KSI) for SIS and VIS",
+    "reason": "The quote says entries into and access to SIS and VIS go through the national KSI, but it names no operator."
+   }
+  },
+  {
+   "claim": "record:PL:border_control:operator",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1061/text.pdf",
+   "quote": "3) centralnym organie technicznym KSI – rozumie się przez to Komendanta Głównego Policji;",
+   "quote_english": "3) central technical authority of KSI – this means the Chief Commander of Police;",
+   "value": "Komendant Główny Policji (Chief Commander of Police), as the central technical authority of KSI",
+   "published": "2026-08-06",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 31 lipca 2026 r. – jednolity tekst ustawy o udziale RP w Systemie Informacyjnym Schengen oraz Wizowym Systemie Informacyjnym",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Under Art. 26 the central technical authority creates, maintains and develops KSI and is responsible for N.SIS.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "national: Komendant Główny Policji (central technical authority of KSI)",
+    "reason": "The quote defines the central technical authority of KSI as the Chief Commander of Police."
+   }
+  },
+  {
+   "claim": "record:PL:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2019/1461/text.pdf",
+   "quote": "W Dzienniku Ustaw Rzeczypospolitej Polskiej, zwanym dalej „Dziennikiem Ustaw”, ogłasza się: 1) Konstytucję; 2) ustawy;",
+   "quote_english": "The Journal of Laws of the Republic of Poland, hereinafter 'Journal of Laws', publishes: 1) the Constitution; 2) statutes;",
+   "value": "Dziennik Ustaw Rzeczypospolitej Polskiej (Journal of Laws of the Republic of Poland)",
+   "published": "2019-08-05",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 19 lipca 2019 r. – jednolity tekst ustawy o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Art. 2(2) of the same Act says official journals are issued in electronic form.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "Dziennik Ustaw Rzeczypospolitej Polskiej",
+    "reason": "The quote says the Constitution and statutes are promulgated in Dziennik Ustaw; it names no operator."
+   }
+  },
+  {
+   "claim": "record:PL:official_gazette:operator",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2019/1461/text.pdf",
+   "quote": "Prezes Rady Ministrów wydaje: 1) Dziennik Ustaw i Monitor Polski przy pomocy Rządowego Centrum Legislacji",
+   "quote_english": "The Prime Minister issues: 1) the Journal of Laws and Monitor Polski with the assistance of the Government Legislation Centre",
+   "value": "Prezes Rady Ministrów (Prime Minister), with the assistance of the Rządowe Centrum Legislacji (Government Legislation Centre)",
+   "published": "2019-08-05",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 19 lipca 2019 r. – jednolity tekst ustawy o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Art. 21(1) of the Act on Publishing Normative Acts.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "national: Prezes Rady Ministrów via Rządowe Centrum Legislacji",
+    "reason": "The Prime Minister publishes Dziennik Ustaw and Monitor Polski with the help of the Government Legislation Centre."
+   }
+  },
+  {
+   "claim": "record:PL:electoral_management:register",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1261/text.pdf",
+   "quote": "Minister właściwy do spraw informatyzacji prowadzi w systemie teleinformatycznym Centralny Rejestr Wyborców, a także zapewnia jego utrzymanie i rozwój w celu realizacji zadań określonych w kodeksie",
+   "quote_english": "The minister competent for computerisation keeps the Central Register of Voters in an ICT system and ensures its maintenance and development for the tasks set out in the code",
+   "value": "Centralny Rejestr Wyborców (Central Register of Voters)",
+   "published": "2026-09-28",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 1 września 2026 r. – jednolity tekst ustawy – Kodeks wyborczy",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The voter register only; the results tabulation system run by the Krajowe Biuro Wyborcze is not named here.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "national: minister responsible for digitalisation (Centralny Rejestr Wyborców)",
+    "reason": "The minister keeps the Central Register of Voters in an ICT system; that is the voter register, not results tabulation."
+   }
+  },
+  {
+   "claim": "record:PL:electoral_management:operator",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1261/text.pdf",
+   "quote": "Minister właściwy do spraw informatyzacji prowadzi w systemie teleinformatycznym Centralny Rejestr Wyborców, a także zapewnia jego utrzymanie i rozwój w celu realizacji zadań określonych w kodeksie",
+   "quote_english": "The minister competent for computerisation keeps the Central Register of Voters in an ICT system and ensures its maintenance and development",
+   "value": "Minister właściwy do spraw informatyzacji (minister competent for computerisation)",
+   "published": "2026-09-28",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 1 września 2026 r. – jednolity tekst ustawy – Kodeks wyborczy",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The operator of the voter register (Art. 18 § 4 of the Electoral Code).",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "national: minister responsible for digitalisation (Centralny Rejestr Wyborców)",
+    "reason": "This is the same quote as item 27; it covers only the central voter register, not candidate lists or results systems."
+   }
+  },
+  {
+   "claim": "record:PL:central_bank:operator",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2022/2025/text.pdf",
+   "quote": "Do zadań NBP należy także: 1) organizowanie rozliczeń pieniężnych; 2) prowadzenie gospodarki rezerwami dewizowymi;",
+   "quote_english": "The tasks of NBP also include: 1) organising monetary settlements; 2) managing foreign exchange reserves;",
+   "value": "NBP (Narodowy Bank Polski, National Bank of Poland)",
+   "published": "2022-09-30",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 5 września 2022 r. – jednolity tekst ustawy o Narodowym Banku Polskim",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Establishes the operator only; no system name (e.g. SORBNET3) was found, because nbp.pl blocked automated fetches.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "national: Narodowy Bank Polski",
+    "reason": "Art. 3(2) lists organising monetary settlements and managing foreign-exchange reserves among NBP's tasks; it names no specific system."
+   }
+  },
+  {
+   "claim": "record:PL:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1354/text.pdf",
+   "quote": "System składa się z centrów powiadamiania ratunkowego, zwanych dalej „centrami”, tworzących jednolity system do obsługi zgłoszeń alarmowych, kierowanych do numerów alarmowych 112, 997 i 998",
+   "quote_english": "The system consists of emergency notification centres, hereinafter 'centres', forming a single system for handling emergency calls to the emergency numbers 112, 997 and 998",
+   "value": "system powiadamiania ratunkowego (emergency notification system) for numbers 112, 997 and 998",
+   "published": "2025-10-07",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 26 września 2025 r. – jednolity tekst ustawy o systemie powiadamiania ratunkowego",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Art. 3 of the Emergency Notification System Act; under Art. 10 the centres are supported by an ICT system.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "centra powiadamiania ratunkowego (unified system for handling 112, 997 and 998 calls)",
+    "reason": "The quote says the system consists of emergency notification centres that form a unified system for handling 112, 997 and 998 calls; it names no operator."
+   }
+  },
+  {
+   "claim": "record:PL:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1354/text.pdf",
+   "quote": "Minister właściwy do spraw administracji publicznej zapewnia: 1) zachowanie ciągłości funkcjonowania systemu teleinformatycznego;",
+   "quote_english": "The minister competent for public administration ensures: 1) the continuity of operation of the ICT system;",
+   "value": "Minister właściwy do spraw administracji publicznej (minister competent for public administration)",
+   "published": "2025-10-07",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 26 września 2025 r. – jednolity tekst ustawy o systemie powiadamiania ratunkowego",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The provinces (wojewodowie) run the centres and share security duties for the ICT system (Art. 10(9)).",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "national: minister responsible for public administration",
+    "reason": "The quote says the minister for public administration ensures the continuity of the emergency-notification ICT system."
+   }
+  },
+  {
+   "claim": "record:PL:grid_control:register",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/43/text.pdf",
+   "quote": "centralny system informacji rynku energii – system informacyjny służący do przetwarzania informacji rynku energii na potrzeby realizacji procesów rynku energii",
+   "quote_english": "central energy market information system – an information system used to process energy market information for energy market processes",
+   "value": "centralny system informacji rynku energii (central energy market information system)",
+   "published": "2026-01-15",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 5 grudnia 2025 r. – jednolity tekst ustawy – Prawo energetyczne",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Covers the market-data side only (CSIRE); no statute names a SCADA/EMS control system.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "centralny system informacji rynku energii (CSIRE)",
+    "reason": "The quote defines the central energy market information system; that is a market data system, not grid SCADA/EMS, and the quote names no operator."
+   }
+  },
+  {
+   "claim": "record:PL:grid_control:operator",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/43/text.pdf",
+   "quote": "współpracy operatora systemu przesyłowego elektroenergetycznego, działającego jako operator informacji rynku energii, z użytkownikami systemu elektroenergetycznego",
+   "quote_english": "cooperation of the electricity transmission system operator, acting as the energy market information operator, with users of the power system",
+   "value": "operator systemu przesyłowego elektroenergetycznego (electricity transmission system operator), acting as operator informacji rynku energii (energy market information operator)",
+   "published": "2026-01-15",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 5 grudnia 2025 r. – jednolity tekst ustawy – Prawo energetyczne",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "The TSO is PSE S.A., but the statute does not name the company.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "transmission system operator acting as energy market information operator (unnamed)",
+    "reason": "The quote says the electricity TSO acts as the energy market information operator for the central market information system, but it does not name the TSO or say who owns it."
+   }
+  },
+  {
+   "claim": "record:PL:water_control:register",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/960/text.pdf",
+   "quote": "System informacyjny gospodarowania wodami dla obszaru państwa, z uwzględnieniem podziału państwa na obszary dorzeczy i regiony wodne, prowadzą Wody Polskie.",
+   "quote_english": "The water management information system for the territory of the state, taking into account the division into river basin districts and water regions, is kept by Wody Polskie.",
+   "value": "System informacyjny gospodarowania wodami (water management information system)",
+   "published": "2025-07-21",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 26 czerwca 2025 r. – jednolity tekst ustawy – Prawo wodne",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "This is an information system (the successor to the water cadastre), not a SCADA or flood-control system; Art. 329 says it is kept in an ICT system.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "national: Wody Polskie (water management information system)",
+    "reason": "The quote says Wody Polskie keep the national water management information system; it does not cover flood-control or drinking-water control systems."
+   }
+  },
+  {
+   "claim": "record:PL:water_control:operator",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/960/text.pdf",
+   "quote": "System informacyjny gospodarowania wodami dla obszaru państwa, z uwzględnieniem podziału państwa na obszary dorzeczy i regiony wodne, prowadzą Wody Polskie.",
+   "quote_english": "The water management information system for the territory of the state is kept by Wody Polskie.",
+   "value": "Wody Polskie (Polish Waters)",
+   "published": "2025-07-21",
+   "title": "Obwieszczenie Marszałka Sejmu z dnia 26 czerwca 2025 r. – jednolity tekst ustawy – Prawo wodne",
+   "publisher": "Sejm RP / Dziennik Ustaw (ELI API)",
+   "doc_type": "legislation",
+   "note": "Art. 330(1) of the Water Law; Wody Polskie is the State Water Holding.",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "national: Wody Polskie (water management information system)",
+    "reason": "This is the same quote as item 34: Wody Polskie keep the state water management information system."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:PL:C2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:PL:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:digital_identity_credentials:count",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:PL:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:PL:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:benefits_pensions:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:business_registry:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:business_registry:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:digital_identity_credentials:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:geospatial:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:geospatial:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:health_records:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:national_archives:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:public_health_surveillance:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:tax:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:authentication_audit_log:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:firearms_register:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:government_payroll:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PL:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:grid_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PL:water_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:PL:C1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:PL:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:PL:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

@@ -1,0 +1,812 @@
+{
+ "iso": "DE",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:DE:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://www.itzbund.de/Webs/GB2024/DE/home/home_node.html?__site=GB2024",
+   "quote": "Das neu in Betrieb genommene Rechenzentrum im Rhein-Main-Gebiet wurde nach den derzeit umsetzbaren Nachhaltigkeitskriterien errichtet.",
+   "quote_english": "The newly commissioned data centre in the Rhine-Main area was built to the sustainability criteria currently achievable.",
+   "value": "Yes",
+   "published": "2025",
+   "title": "ITZBund - Facts & Figures 2024",
+   "publisher": "Informationstechnikzentrum Bund (ITZBund)",
+   "doc_type": "annual_report",
+   "note": "ITZBund's 2024 annual report confirms a newly commissioned federal master data centre in the Rhine-Main region, adding a dated, in-operation data point beyond the undated 'about us' page.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "On the ITZBund (federal IT service centre) annual-report page, the quote says a data centre in the Rhein-Main area has newly been put into operation, so a state-run data centre is operating today."
+   }
+  },
+  {
+   "claim": "indicator:DE:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "supersedes",
+   "url": "https://www.itzbund.de/Webs/GB2024/DE/home/home_node.html?__site=GB2024",
+   "quote": "Die Bundescloud 2.0 wird in den Rechenzentren des ITZBund betrieben.",
+   "quote_english": "The Bundescloud 2.0 is operated in ITZBund's data centres.",
+   "value": "Yes",
+   "published": "2025",
+   "title": "ITZBund - Facts & Figures 2024",
+   "publisher": "Informationstechnikzentrum Bund (ITZBund)",
+   "doc_type": "annual_report",
+   "note": "The Bundescloud has been merged with the IT-Betriebsplattform Bund into 'Bundescloud 2.0' (2025 milestone), so the platform name on the printed source is out of date.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote says Bundescloud 2.0 is operated in ITZBund data centres, but the page puts it under a '2025' heading and says the existing private-cloud offerings are being merged into it, so the platform may be partly still in progress."
+   }
+  },
+  {
+   "claim": "indicator:DE:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corroborates",
+   "url": "https://www.it-planungsrat.de/aktuelles/details/digitalisierung-der-verwaltung-deutsche-verwaltungscloud-startet-in-den-produktivbetrieb",
+   "quote": "Die Deutsche Verwaltungscloud (DVC) geht offiziell in den Produktivbetrieb: Ab dem 1. April 2025 wird sie als Produkt des IT-Planungsrats fester Bestandteil der föderalen IT-Landschaft und löst damit die bisherige Projektphase ab.",
+   "quote_english": "The German Administration Cloud (DVC) officially goes into production: from 1 April 2025 it becomes a permanent part of the federal IT landscape as a product of the IT Planning Council, replacing the previous project phase.",
+   "value": "Yes",
+   "published": "2025-03-27",
+   "title": "Digitalisierung der Verwaltung: Deutsche Verwaltungscloud startet in den Produktivbetrieb",
+   "publisher": "IT-Planungsrat",
+   "doc_type": "official_page",
+   "note": "An independent T2 body confirms a second, federation-wide government cloud (Deutsche Verwaltungscloud) in production since 1 April 2025.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote says the Deutsche Verwaltungscloud went into productive operation on 1 April 2025 as an IT-Planungsrat product; the page adds that it is at first a marketplace for cloud services."
+   }
+  },
+  {
+   "claim": "indicator:DE:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "corroborates",
+   "url": "https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_13032023_SII554001405.htm",
+   "quote": "(2) Verschlusssachen werden entsprechend ihrer Schutzbedürftigkeit von einer Dienststelle oder auf deren Veranlassung nach § 4 Absatz 2 Sicherheitsüberprüfungsgesetz in folgende Geheimhaltungsgrade eingestuft: 1. STRENG GEHEIM,",
+   "quote_english": "(2) Classified information is classified by an agency, or at its instigation, according to its need for protection under section 4(2) of the Security Clearance Act into the following classification levels: 1. TOP SECRET,",
+   "value": "Yes",
+   "published": "2023-03-13",
+   "title": "Allgemeine Verwaltungsvorschrift zum materiellen Geheimschutz (Verschlusssachenanweisung - VSA)",
+   "publisher": "Bundesministerium des Innern und für Heimat",
+   "doc_type": "legislation",
+   "note": "The binding federal administrative regulation (VSA of 13 March 2023) implements the SÜG § 4 classification levels, corroborating the statutory basis.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The classification levels (STRENG GEHEIM and the rest) are set out in the federal Verschlusssachenanweisung, a binding administrative regulation that assigns them under § 4(2) of the Sicherheitsüberprüfungsgesetz, a statute."
+   }
+  },
+  {
+   "claim": "record:DE:digital_identity_credentials:register",
+   "question": "Digital identity credentials: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.gesetze-im-internet.de/ozg/__3.html",
+   "quote": "Die Identifizierung und Authentifizierung der Nutzer im Sinne des § 2 Absatz 4 Nummer 1 für die Inanspruchnahme elektronischer Verwaltungsleistungen im Portalverbund erfolgt, soweit nicht durch Bundesgesetz etwas anderes bestimmt ist, über ein zentrales Bürgerkonto, das der Bund bereitstellt.",
+   "quote_english": "Identification and authentication of users for electronic administrative services in the portal network takes place, unless federal law provides otherwise, via a central citizen account provided by the Federation.",
+   "value": "zentrales Bürgerkonto, das der Bund bereitstellt (central citizen account provided by the Federation)",
+   "published": "",
+   "title": "Onlinezugangsgesetz (OZG) § 3",
+   "publisher": "Bundesministerium der Justiz / Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "The amended OZG on the official federal law portal now establishes the single central federal citizen account (BundID/DeutschlandID) in statute, a T1 basis for the Brandenburg state page.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "zentrales Bürgerkonto (central citizen account, provided by the Bund)",
+    "reason": "OZG § 3 says users are identified and authenticated for portal services through a central Bürgerkonto that the federal government provides."
+   }
+  },
+  {
+   "claim": "record:DE:electoral_roll:register",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/bwahlg/__17.html",
+   "quote": "§ 17 Wählerverzeichnis und Wahlschein (1) Die Gemeindebehörden führen für jeden Wahlbezirk ein Verzeichnis der Wahlberechtigten.",
+   "quote_english": "Section 17 Electoral roll and polling card (1) The municipal authorities keep a register of persons entitled to vote for each electoral district.",
+   "value": "Wählerverzeichnis (electoral roll)",
+   "published": "",
+   "title": "Bundeswahlgesetz § 17",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Federal Elections Act; the roll is kept per electoral district, not centrally.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Wählerverzeichnis, kept by the Gemeindebehörden (municipal authorities) per electoral district",
+    "reason": "BWahlG § 17(1) says the municipal authorities keep a register of eligible voters for each electoral district."
+   }
+  },
+  {
+   "claim": "record:DE:electoral_roll:operator",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/bwahlg/__17.html",
+   "quote": "§ 17 Wählerverzeichnis und Wahlschein (1) Die Gemeindebehörden führen für jeden Wahlbezirk ein Verzeichnis der Wahlberechtigten.",
+   "quote_english": "Section 17 Electoral roll and polling card (1) The municipal authorities keep a register of persons entitled to vote for each electoral district.",
+   "value": "Gemeindebehörden (municipal authorities)",
+   "published": "",
+   "title": "Bundeswahlgesetz § 17",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Operator is decentralised: each municipality.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Wählerverzeichnis, kept by the Gemeindebehörden (municipal authorities) per electoral district",
+    "reason": "This is the same quote and page as item 5: the municipal authorities keep the voter register for each district."
+   }
+  },
+  {
+   "claim": "record:DE:tax:register",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://www.lfst.bayern.de/elster",
+   "quote": "ELSTER steht für die ELektronische STeuerERklärung und ermöglicht eine effiziente, medienbruchfreie und hochsichere elektronische Übertragung von Steuerdaten zwischen Bürgern, Steuerberatern, Arbeitgebern, Kommunen, Verbänden, sonstigen Institutionen und den Finanzbehörden.",
+   "quote_english": "ELSTER stands for electronic tax return and enables efficient, seamless and highly secure electronic transmission of tax data between citizens, tax advisers, employers, municipalities, associations, other institutions and the tax authorities.",
+   "value": "ELSTER (ELektronische STeuerERklärung; electronic tax return)",
+   "published": "",
+   "title": "ELSTER - Bayerisches Landesamt für Steuern",
+   "publisher": "Bayerisches Landesamt für Steuern",
+   "doc_type": "official_page",
+   "note": "ELSTER is the filing channel into the tax administration; the assessment back-ends (KONSENS) are Länder-run and not named in this quote.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "ELSTER (electronic tax return transmission system); operator not stated",
+    "reason": "The quote names the ELSTER system and says it moves tax data to the tax authorities, but it does not say who operates it or where the tax records are held."
+   }
+  },
+  {
+   "claim": "record:DE:health_insurance:register",
+   "question": "Statutory health insurance: Enrolment and entitlement records of the statutory health insurance scheme",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/sgb_5/__288.html",
+   "quote": "§ 288 Versichertenverzeichnis Die Krankenkasse hat ein Versichertenverzeichnis zu führen. Das Versichertenverzeichnis hat alle Angaben zu enthalten, die zur Feststellung der Versicherungspflicht oder -berechtigung, zur Bemessung und Einziehung der Beiträge,",
+   "quote_english": "Section 288 Register of insured persons: The health insurance fund must keep a register of insured persons. The register must contain all information required to establish compulsory or voluntary insurance, to assess and collect contributions,",
+   "value": "Versichertenverzeichnis (register of insured persons)",
+   "published": "",
+   "title": "SGB V § 288 Versichertenverzeichnis",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Each statutory health insurance fund keeps its own register; there is no single national enrolment register.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Versichertenverzeichnis, kept by each Krankenkasse (statutory health insurer)",
+    "reason": "SGB V § 288 requires each health insurance fund to keep a register of insured persons, with the data needed to establish insurance status, contributions and entitlements."
+   }
+  },
+  {
+   "claim": "record:DE:health_insurance:operator",
+   "question": "Statutory health insurance: Enrolment and entitlement records of the statutory health insurance scheme",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/sgb_5/__288.html",
+   "quote": "§ 288 Versichertenverzeichnis Die Krankenkasse hat ein Versichertenverzeichnis zu führen.",
+   "quote_english": "Section 288 Register of insured persons: The health insurance fund must keep a register of insured persons.",
+   "value": "die Krankenkasse (each statutory health insurance fund)",
+   "published": "",
+   "title": "SGB V § 288 Versichertenverzeichnis",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Decentralised: operated per fund.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Versichertenverzeichnis, kept by each Krankenkasse (statutory health insurer)",
+    "reason": "The quote is the first sentence of SGB V § 288, which says the Krankenkasse must keep the Versichertenverzeichnis."
+   }
+  },
+  {
+   "claim": "record:DE:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/gbo/__1.html",
+   "quote": "(1) Die Grundbücher, die auch als Loseblattgrundbuch geführt werden können, werden von den Amtsgerichten geführt (Grundbuchämter). Diese sind für die in ihrem Bezirk liegenden Grundstücke zuständig.",
+   "quote_english": "(1) The land registers, which may also be kept as loose-leaf land registers, are kept by the local courts (land registry offices). These are responsible for the plots in their district.",
+   "value": "Grundbücher (land registers)",
+   "published": "",
+   "title": "Grundbuchordnung § 1",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Covers title and charges; the cadastre (Liegenschaftskataster) is a separate Länder surveying register.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "Grundbuch, kept by the Amtsgerichte (local courts) acting as Grundbuchämter",
+    "reason": "GBO § 1(1) says the land registers are kept by the local courts, as land registry offices, for the plots in their district."
+   }
+  },
+  {
+   "claim": "record:DE:land_property:operator",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/gbo/__1.html",
+   "quote": "(1) Die Grundbücher, die auch als Loseblattgrundbuch geführt werden können, werden von den Amtsgerichten geführt (Grundbuchämter).",
+   "quote_english": "(1) The land registers, which may also be kept as loose-leaf land registers, are kept by the local courts (land registry offices).",
+   "value": "Amtsgerichte (Grundbuchämter) (local courts acting as land registry offices)",
+   "published": "",
+   "title": "Grundbuchordnung § 1",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Decentralised across local courts of the Länder.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Grundbuch, kept by the Amtsgerichte (local courts) acting as Grundbuchämter",
+    "reason": "This is a shorter version of the item 10 quote, with the same operator: the local courts."
+   }
+  },
+  {
+   "claim": "record:DE:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/hgb/__8.html",
+   "quote": "§ 8 Handelsregister (1) Das Handelsregister wird von den Gerichten elektronisch geführt.",
+   "quote_english": "Section 8 Commercial register (1) The commercial register is kept electronically by the courts.",
+   "value": "Handelsregister (commercial register)",
+   "published": "",
+   "title": "Handelsgesetzbuch § 8",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Kept electronically by the registry courts.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "Handelsregister, kept electronically by the courts",
+    "reason": "HGB § 8(1) says the commercial register is kept electronically by the courts."
+   }
+  },
+  {
+   "claim": "record:DE:business_registry:operator",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/hgb/__8.html",
+   "quote": "§ 8 Handelsregister (1) Das Handelsregister wird von den Gerichten elektronisch geführt.",
+   "quote_english": "Section 8 Commercial register (1) The commercial register is kept electronically by the courts.",
+   "value": "die Gerichte (the courts)",
+   "published": "",
+   "title": "Handelsgesetzbuch § 8",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Registry courts (Amtsgerichte) of the Länder.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "Handelsregister, kept electronically by the courts",
+    "reason": "This is the same quote and page as item 12."
+   }
+  },
+  {
+   "claim": "record:DE:beneficial_ownership:register",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/gwg_2017/__18.html",
+   "quote": "(1) Es wird ein Register zur Erfassung und Zugänglichmachung von Angaben über den wirtschaftlich Berechtigten (Transparenzregister) eingerichtet. (2) Das Transparenzregister wird als hoheitliche Aufgabe des Bundes von der registerführenden Stelle elektronisch geführt.",
+   "quote_english": "(1) A register for recording and making available information on the beneficial owner (transparency register) is established. (2) The transparency register is kept electronically by the register-keeping body as a sovereign task of the Federation.",
+   "value": "Transparenzregister (transparency register)",
+   "published": "",
+   "title": "Geldwäschegesetz § 18",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "GwG § 25 allows the Finance Ministry to entrust a private-law legal person as register-keeping body; the operator was not confirmed on a fetchable official page.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "Transparenzregister; operator not named (only 'registerführende Stelle', a federal sovereign task)",
+    "reason": "GwG § 18 names the Transparenzregister and says a 'registerführende Stelle' keeps it as a federal task, but the quote does not say which body that is."
+   }
+  },
+  {
+   "claim": "record:DE:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/stvg/__31.html",
+   "quote": "(2) Das Kraftfahrt-Bundesamt führt ein Register über die Fahrzeuge, für die im Geltungsbereich dieses Gesetzes ein Kennzeichen zugeteilt oder ausgegeben wurde oder die nach Maßgabe von Vorschriften auf Grund des § 6 Absatz 1 Satz 1 Nummer 6 regelmäßig untersucht oder geprüft wurden (Zentrales Fahrzeugregister des Kraftfahrt-Bundesamtes).",
+   "quote_english": "(2) The Federal Motor Transport Authority keeps a register of vehicles assigned a registration number in the territory of this Act or regularly inspected under the regulations (Central Vehicle Register of the Federal Motor Transport Authority).",
+   "value": "Zentrales Fahrzeugregister des Kraftfahrt-Bundesamtes (Central Vehicle Register)",
+   "published": "",
+   "title": "Straßenverkehrsgesetz § 31",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Driving licences are in the separate Zentrales Fahrerlaubnisregister (StVG § 48(2)), also kept by the KBA.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "Zentrales Fahrzeugregister, kept by the Kraftfahrt-Bundesamt",
+    "reason": "StVG § 31(2) says the Kraftfahrt-Bundesamt keeps the central vehicle register."
+   }
+  },
+  {
+   "claim": "record:DE:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/stvg/__48.html",
+   "quote": "(2) Das Kraftfahrt-Bundesamt führt ein Register über Fahrerlaubnisse und die entsprechenden Führerscheine (Zentrales Fahrerlaubnisregister), die von den nach Landesrecht für den Vollzug des Fahrerlaubnisrechtes zuständigen Behörden (Fahrerlaubnisbehörden) erteilt sind.",
+   "quote_english": "(2) The Federal Motor Transport Authority keeps a register of driving licences and the corresponding licence cards (Central Driving Licence Register) issued by the authorities competent under Land law.",
+   "value": "Zentrales Fahrerlaubnisregister (Central Driving Licence Register)",
+   "published": "",
+   "title": "Straßenverkehrsgesetz § 48",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "The driving-licence half of this holding.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "Zentrales Fahrerlaubnisregister, kept by the Kraftfahrt-Bundesamt",
+    "reason": "StVG § 48(2) says the Kraftfahrt-Bundesamt keeps the central register of driving licences."
+   }
+  },
+  {
+   "claim": "record:DE:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/stvg/__48.html",
+   "quote": "(2) Das Kraftfahrt-Bundesamt führt ein Register über Fahrerlaubnisse und die entsprechenden Führerscheine (Zentrales Fahrerlaubnisregister),",
+   "quote_english": "(2) The Federal Motor Transport Authority keeps a register of driving licences and the corresponding licence cards (Central Driving Licence Register),",
+   "value": "Kraftfahrt-Bundesamt (Federal Motor Transport Authority)",
+   "published": "",
+   "title": "Straßenverkehrsgesetz § 48",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "The KBA keeps both the central vehicle register (§ 31(2)) and the central driving licence register.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "Zentrales Fahrerlaubnisregister, kept by the Kraftfahrt-Bundesamt",
+    "reason": "This is a shorter version of the item 16 quote, with the same register and operator."
+   }
+  },
+  {
+   "claim": "record:DE:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/bzrg/__1.html",
+   "quote": "(1) Für den Geltungsbereich dieses Gesetzes führt das Bundesamt für Justiz ein Zentralregister und ein Erziehungsregister (Bundeszentralregister).",
+   "quote_english": "(1) For the territory of this Act, the Federal Office of Justice keeps a central register and an educational-measures register (Federal Central Register).",
+   "value": "Bundeszentralregister (Federal Central Criminal Register)",
+   "published": "",
+   "title": "Bundeszentralregistergesetz § 1",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Covers criminal records; court case files are held by the Länder courts.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "Bundeszentralregister, kept by the Bundesamt für Justiz",
+    "reason": "BZRG § 1(1) says the Federal Office of Justice keeps the central register and the educational register, together the Bundeszentralregister."
+   }
+  },
+  {
+   "claim": "record:DE:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/bzrg/__1.html",
+   "quote": "(1) Für den Geltungsbereich dieses Gesetzes führt das Bundesamt für Justiz ein Zentralregister und ein Erziehungsregister (Bundeszentralregister).",
+   "quote_english": "(1) For the territory of this Act, the Federal Office of Justice keeps a central register and an educational-measures register (Federal Central Register).",
+   "value": "Bundesamt für Justiz (Federal Office of Justice)",
+   "published": "",
+   "title": "Bundeszentralregistergesetz § 1",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Statutory operator.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Bundeszentralregister, kept by the Bundesamt für Justiz",
+    "reason": "This is the same quote and page as item 18."
+   }
+  },
+  {
+   "claim": "record:DE:police_records:register",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/bkag_2018/__29.html",
+   "quote": "(1) Das Bundeskriminalamt ist im Rahmen seiner Aufgabe nach § 2 Absatz 3 Zentralstelle für den polizeilichen Informationsverbund zwischen Bund und Ländern. Es stellt zu diesem Zweck ein einheitliches Verbundsystem zur Verfügung.",
+   "quote_english": "(1) Within its task under section 2(3), the Federal Criminal Police Office is the central office for the police information network between the Federation and the Länder. For this purpose it provides a uniform network system.",
+   "value": "polizeilicher Informationsverbund zwischen Bund und Ländern (federal-state police information network)",
+   "published": "",
+   "title": "Bundeskriminalamtgesetz § 29",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "The system is commonly known as INPOL; bka.de refused connections, so the name INPOL could not be quoted from an official page.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "polizeilicher Informationsverbund (unified Verbundsystem), provided by the Bundeskriminalamt",
+    "reason": "BKAG § 29(1) makes the BKA the central office for the federal-state police information network and says it provides a single shared system for it."
+   }
+  },
+  {
+   "claim": "record:DE:police_records:operator",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/bkag_2018/__29.html",
+   "quote": "(1) Das Bundeskriminalamt ist im Rahmen seiner Aufgabe nach § 2 Absatz 3 Zentralstelle für den polizeilichen Informationsverbund zwischen Bund und Ländern. Es stellt zu diesem Zweck ein einheitliches Verbundsystem zur Verfügung.",
+   "quote_english": "(1) Within its task under section 2(3), the Federal Criminal Police Office is the central office for the police information network between the Federation and the Länder. For this purpose it provides a uniform network system.",
+   "value": "Bundeskriminalamt (Federal Criminal Police Office)",
+   "published": "",
+   "title": "Bundeskriminalamtgesetz § 29",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "BKA provides the network system.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "polizeilicher Informationsverbund (unified Verbundsystem), provided by the Bundeskriminalamt",
+    "reason": "This is the same quote and page as item 20."
+   }
+  },
+  {
+   "claim": "record:DE:firearms_register:register",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/waffrg/__1.html",
+   "quote": "(1) Das Nationale Waffenregister dient insbesondere dem Schutz der öffentlichen Sicherheit und Ordnung. Den Waffenbehörden und den um Datenübermittlung ersuchenden öffentlichen Stellen ermöglicht es 1. Waffen und wesentliche Teile zurückzuverfolgen sowie",
+   "quote_english": "(1) The National Firearms Register serves in particular to protect public safety and order. It enables the firearms authorities and requesting public bodies 1. to trace weapons and essential parts and",
+   "value": "Nationales Waffenregister (National Firearms Register)",
+   "published": "",
+   "title": "Waffenregistergesetz § 1",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Statutory register name.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Nationales Waffenregister; operator not stated",
+    "reason": "WaffRG § 1 names the Nationales Waffenregister and says what it is for, but not who operates it."
+   }
+  },
+  {
+   "claim": "record:DE:firearms_register:operator",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/waffrg/__3.html",
+   "quote": "(1) Das Waffenregister wird von der Registerbehörde geführt. (2) Registerbehörde ist das Bundesverwaltungsamt.",
+   "quote_english": "(1) The firearms register is kept by the register authority. (2) The register authority is the Federal Office of Administration.",
+   "value": "Bundesverwaltungsamt (Federal Office of Administration)",
+   "published": "",
+   "title": "Waffenregistergesetz § 3 Registerbehörde",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Statutory register authority.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Waffenregister, kept by the Bundesverwaltungsamt (Registerbehörde)",
+    "reason": "WaffRG § 3 says the register authority keeps the firearms register and that this authority is the Bundesverwaltungsamt."
+   }
+  },
+  {
+   "claim": "record:DE:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/vkbkmg/__1.html",
+   "quote": "(1) Das Bundesgesetzblatt ist das Verkündungsorgan des Bundes für Gesetze und Rechtsverordnungen.",
+   "quote_english": "(1) The Federal Law Gazette is the Federation's promulgation organ for laws and statutory instruments.",
+   "value": "Bundesgesetzblatt (Federal Law Gazette)",
+   "published": "",
+   "title": "Verkündungs- und Bekanntmachungsgesetz § 1",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Authentic promulgation organ since the 2023 switch to electronic promulgation.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "Bundesgesetzblatt; operator not stated",
+    "reason": "VkBkmG § 1(1) names the Bundesgesetzblatt as the federal gazette for laws and regulations, but does not say who publishes it."
+   }
+  },
+  {
+   "claim": "record:DE:official_gazette:operator",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/vkbkmg/__2.html",
+   "quote": "(1) Das Bundesgesetzblatt wird vom Bundesamt für Justiz auf der Internetseite www.recht.bund.de ausgegeben. Es wird dort vollständig und dauerhaft bereitgehalten.",
+   "quote_english": "(1) The Federal Law Gazette is issued by the Federal Office of Justice on the website www.recht.bund.de. It is kept available there in full and permanently.",
+   "value": "Bundesamt für Justiz (Federal Office of Justice)",
+   "published": "",
+   "title": "Verkündungs- und Bekanntmachungsgesetz § 2",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Statutory publisher of the electronic gazette.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "Bundesgesetzblatt, issued by the Bundesamt für Justiz at www.recht.bund.de",
+    "reason": "VkBkmG § 2(1) says the Federal Office of Justice issues the Bundesgesetzblatt at recht.bund.de and keeps it available there in full and permanently."
+   }
+  },
+  {
+   "claim": "record:DE:public_finance:register",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://zrb.bund.de/vorschriften/hkr-verfahren",
+   "quote": "Das automatisierte Verfahren für das Haushalts-, Kassen- und Rechnungswesen des Bundes",
+   "quote_english": "The automated procedure for the budget, cash and accounting system of the Federation",
+   "value": "automatisierte Verfahren für das Haushalts-, Kassen- und Rechnungswesen des Bundes (automated federal budget, cash and accounting procedure, HKR)",
+   "published": "",
+   "title": "HKR-Verfahren",
+   "publisher": "Zentrum für Finanzen des Bundes (ZFB) / Bundeskasse (zrb.bund.de)",
+   "doc_type": "official_page",
+   "note": "The page goes on to say the HKR procedure is used across all ministries to manage all federal budget funds; the quote stops before the abbreviation because the page marks it up in an abbr element.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "HKR-Verfahren (automated federal budget, cash and accounting procedure); operator not stated",
+    "reason": "The quote names the automated HKR procedure for the federal budget, cash and accounting, but neither it nor the sentence around it says who operates it."
+   }
+  },
+  {
+   "claim": "record:DE:central_bank:register",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.bundesbank.de/de/aufgaben/unbarer-zahlungsverkehr/target/target-603342",
+   "quote": "Vor diesem Hintergrund hat das Eurosystem TARGET entwickelt und dabei die folgenden drei Hauptziele verfolgt",
+   "quote_english": "Against this background, the Eurosystem developed TARGET, pursuing the following three main objectives",
+   "value": "TARGET (Eurosystem real-time gross settlement payment system)",
+   "published": "",
+   "title": "TARGET - Der Entwicklungsprozess",
+   "publisher": "Deutsche Bundesbank",
+   "doc_type": "official_page",
+   "note": "TARGET is a shared Eurosystem platform, not a German national system; the Bundesbank participates through TARGET-BBk.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "TARGET, developed by the Eurosystem",
+    "reason": "The Bundesbank page says the Eurosystem developed TARGET; it says who developed it, not who operates it now."
+   }
+  },
+  {
+   "claim": "record:DE:central_bank:operator",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/bbankg/__3.html",
+   "quote": "hält und verwaltet die Währungsreserven der Bundesrepublik Deutschland, sorgt für die bankmäßige Abwicklung des Zahlungsverkehrs im Inland und mit dem Ausland und trägt zur Stabilität der Zahlungs- und Verrechnungssysteme bei.",
+   "quote_english": "holds and manages the currency reserves of the Federal Republic of Germany, ensures the banking processing of domestic and foreign payments and contributes to the stability of payment and clearing systems.",
+   "value": "Deutsche Bundesbank",
+   "published": "",
+   "title": "Gesetz über die Deutsche Bundesbank § 3",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "The subject of the sentence ('Die Deutsche Bundesbank ist als Zentralbank ...') opens the same paragraph; the quote alone gives the reserves and payments tasks.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Deutsche Bundesbank (holds and manages currency reserves, handles domestic and foreign payments)",
+    "reason": "The subject of the sentence in BBankG § 3 is the Deutsche Bundesbank, which holds and manages the currency reserves and handles payment settlement."
+   }
+  },
+  {
+   "claim": "record:DE:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/bdbosg/__1.html",
+   "quote": "Der Zweck der Bundesanstalt ist insbesondere der Aufbau und der Betrieb eines bundesweit einheitlichen digitalen Sprech- und Datenfunksystems für Behörden und Organisationen mit Sicherheitsaufgaben (Digitalfunk BOS) in der Bundesrepublik Deutschland.",
+   "quote_english": "The purpose of the federal agency is in particular to build and operate a uniform nationwide digital voice and data radio system for authorities and organisations with security tasks (Digitalfunk BOS) in the Federal Republic of Germany.",
+   "value": "Digitalfunk BOS (nationwide digital radio for public-safety authorities)",
+   "published": "",
+   "title": "BDBOS-Gesetz § 1",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "Covers the public-safety radio network; 112 PSAPs are run by Länder and municipalities.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "Digitalfunk BOS, built and operated by the Bundesanstalt (BDBOS)",
+    "reason": "BDBOSG § 1 says the federal agency (named BDBOS earlier on the page) exists to build and operate the nationwide digital radio for authorities with security tasks, Digitalfunk BOS."
+   }
+  },
+  {
+   "claim": "record:DE:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.gesetze-im-internet.de/bdbosg/__1.html",
+   "quote": "Der Zweck der Bundesanstalt ist insbesondere der Aufbau und der Betrieb eines bundesweit einheitlichen digitalen Sprech- und Datenfunksystems für Behörden und Organisationen mit Sicherheitsaufgaben (Digitalfunk BOS) in der Bundesrepublik Deutschland.",
+   "quote_english": "The purpose of the federal agency is in particular to build and operate a uniform nationwide digital voice and data radio system for authorities and organisations with security tasks (Digitalfunk BOS) in the Federal Republic of Germany.",
+   "value": "Bundesanstalt für den Digitalfunk der BOS (BDBOS)",
+   "published": "",
+   "title": "BDBOS-Gesetz § 1",
+   "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+   "doc_type": "legislation",
+   "note": "The same section names the agency 'Bundesanstalt für den Digitalfunk der BOS - BDBOS'; the quote gives its operating purpose.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "Digitalfunk BOS, built and operated by the Bundesanstalt (BDBOS)",
+    "reason": "This is the same quote and page as item 29."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:DE:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:DE:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:DE:K1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:DE:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:crisis_management:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:customs:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:digital_identity_credentials:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:national_archives:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:trust_services_pki:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:trust_services_pki:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:DE:K2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:DE:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:border_control:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:breeder_documents:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:civil_registry:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:civil_registry:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:facial_biometric:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:fingerprint_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:issuance_history:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:issuance_history:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:residence_permits:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:residence_permits:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:DE:authentication_audit_log:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:DE:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:government_payroll:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:DE:electoral_management:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:DE:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:defence_command:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:DE:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:grid_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:DE:water_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:DE:education:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "indicator:DE:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

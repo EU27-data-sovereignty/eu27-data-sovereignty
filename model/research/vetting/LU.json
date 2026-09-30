@@ -1,0 +1,696 @@
+{
+ "iso": "LU",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:LU:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.luxtrust.com/fr/propos-de-luxtrust/qui-sommes-nous",
+   "quote": "Fondé à l'origine à l'initiative des banques et du gouvernement luxembourgeois, LuxTrust est un prestataire de services de confiance qualifié capable de répondre aux demandes des clients les plus complexes en matière de services de confiance numérique.",
+   "quote_english": "Originally founded on the initiative of the banks and the Luxembourg government, LuxTrust is a qualified trust service provider able to meet the most complex customer demands for digital trust services.",
+   "value": "LuxTrust, a qualified trust service provider (prestataire de services de confiance qualifié)",
+   "published": "",
+   "title": "Qui sommes-nous ? - LuxTrust",
+   "publisher": "LuxTrust S.A.",
+   "doc_type": "official_page",
+   "note": "The operator's own standing 'about us' page, not a news item. The same page lists POST Luxembourg and LuxTrust Development S.A. as shareholders.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says LuxTrust is a qualified trust service provider founded by the banks and the government, but it does not say LuxTrust operates Luxembourg's digital identity credentials."
+   }
+  },
+  {
+   "claim": "record:LU:vehicle_licensing:register",
+   "question": "Vehicle & licensing: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+   "quote": "f) le fichier des véhicules routiers et de leurs propriétaires et détenteurs, exploité pour le compte du ministère ayant le Transport dans ses attributions;",
+   "quote_english": "f) the file of road vehicles and their owners and holders, operated on behalf of the ministry responsible for Transport;",
+   "value": "fichier des véhicules routiers et de leurs propriétaires et détenteurs (file of road vehicles and their owners and holders)",
+   "published": "2016-07-05",
+   "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "An independent statute (Art. 10(2) of the SRE law) names the national vehicle register and says it is operated on behalf of the Transport ministry. This is the original Journal officiel text, not a consolidated version.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "fichier des véhicules routiers et de leurs propriétaires et détenteurs",
+    "reason": "The quote names the road-vehicle and owner/keeper file, run on behalf of the ministry responsible for Transport, in the list of files the SRE can access."
+   }
+  },
+  {
+   "claim": "record:LU:health_insurance:register",
+   "question": "Statutory health insurance: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+   "quote": "b) le fichier relatif aux affiliations des salariés, des indépendants et des employeurs géré par le Centre commun de la sécurité sociale sur base de l'article 413 du Code de la sécurité sociale",
+   "quote_english": "b) the file of affiliations of employees, self-employed persons and employers managed by the Joint Social Security Centre on the basis of article 413 of the Social Security Code",
+   "value": "fichier relatif aux affiliations (affiliation file) managed by the Centre commun de la sécurité sociale",
+   "published": "2016-07-05",
+   "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "A statute confirms that the CCSS manages the affiliation file that triggers health insurance coverage.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names the CCSS social-security affiliation file but never mentions health insurance, and the surrounding text explicitly excludes health data, so it does not name a health insurance register."
+   }
+  },
+  {
+   "claim": "record:LU:civil_registry:register",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/jo/fr/html",
+   "quote": "Loi du 19 juin 2013 relative à l’identification des personnes physiques, au registre national des personnes physiques, à la carte d’identité, aux registres communaux des personnes physiques",
+   "quote_english": "Law of 19 June 2013 on the identification of natural persons, the national register of natural persons, the identity card and the municipal registers of natural persons",
+   "value": "registre national des personnes physiques (national register of natural persons, RNPP)",
+   "published": "2013-06-19",
+   "title": "Loi du 19 juin 2013 relative à l’identification des personnes physiques, au registre national des personnes physiques",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "The founding statute of the RNPP, which holds the identification number and residence data. Original Journal officiel text.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "registre national des personnes physiques",
+    "reason": "The law's title names the national register of natural persons, alongside the identity card and the municipal registers."
+   }
+  },
+  {
+   "claim": "record:LU:civil_registry:operator",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/jo/fr/html",
+   "quote": "Le Centre est chargé de toutes les opérations relatives à la gestion et à la tenue du registre national sous l’autorité du ministre.",
+   "quote_english": "The Centre is responsible for all operations relating to the management and keeping of the national register, under the authority of the minister.",
+   "value": "Le Centre (the State IT centre)",
+   "published": "2013-06-19",
+   "title": "Loi du 19 juin 2013 relative à l’identification des personnes physiques, au registre national des personnes physiques",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Art. 1 of the same law defines 'Centre' as the Centre des technologies de l’information de l’Etat (CTIE).",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Centre des technologies de l'information de l'Etat (CTIE), under the authority of the minister",
+    "reason": "Art. 6 gives 'le Centre' the management and keeping of the national register, and Art. 1 of the same law defines 'Centre' as the CTIE."
+   }
+  },
+  {
+   "claim": "record:LU:issuance_history:register",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/06/19/n3/jo/fr/html",
+   "quote": "Il est établi un registre des cartes d’identité qui a pour finalités de collecter les demandes de cartes d’identité, de permettre la délivrance des cartes d’identité sur base des données reprises du registre national et de répertorier les cartes d’identité émises.",
+   "quote_english": "A register of identity cards is established to collect identity card applications, to allow identity cards to be issued from national register data, and to list the identity cards issued.",
+   "value": "registre des cartes d’identité (identity card register)",
+   "published": "2013-06-19",
+   "title": "Loi du 19 juin 2013 relative à l’identification des personnes physiques, au registre national des personnes physiques",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Art. 16 also lists fields for the date of loss, theft or damage and card validity. It covers ID cards only; passports are not included.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "registre des cartes d'identité",
+    "reason": "The quote establishes a register of identity cards that records applications and the cards issued; it covers ID cards only, not passports or revocation."
+   }
+  },
+  {
+   "claim": "record:LU:electoral_roll:register",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2003/02/18/n2/jo/fr/html",
+   "quote": "La qualité d'électeur est constatée par l'inscription sur les listes électorales.",
+   "quote_english": "The status of voter is established by registration on the electoral lists.",
+   "value": "listes électorales (electoral lists)",
+   "published": "2003-02-18",
+   "title": "Loi électorale du 18 février 2003",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Art. 4 of the Electoral Law. Original text; the law has been amended since.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "listes électorales",
+    "reason": "Art. 4 says that voter status is established by being entered on the electoral lists."
+   }
+  },
+  {
+   "claim": "record:LU:residence_permits:register",
+   "question": "Residence and migration status: Residence permits, asylum status and foreign-national registrations",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+   "quote": "c) le fichier des étrangers exploité pour le compte du service des étrangers du ministre ayant l'Immigration dans ses attributions;",
+   "quote_english": "c) the foreigners' file operated on behalf of the foreigners' service of the minister responsible for Immigration;",
+   "value": "fichier des étrangers (foreigners' file)",
+   "published": "2016-07-05",
+   "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Named in the list of databases the SRE may access directly (Art. 10(2)).",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "fichier des étrangers",
+    "reason": "The quote names the foreigners file, run on behalf of the immigration minister's service des étrangers; it says nothing about asylum or permits specifically."
+   }
+  },
+  {
+   "claim": "record:LU:benefits_pensions:register",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+   "quote": "b) le fichier relatif aux affiliations des salariés, des indépendants et des employeurs géré par le Centre commun de la sécurité sociale sur base de l'article 413 du Code de la sécurité sociale",
+   "quote_english": "b) the file of affiliations of employees, self-employed persons and employers managed by the Joint Social Security Centre on the basis of article 413 of the Social Security Code",
+   "value": "fichier relatif aux affiliations des salariés, des indépendants et des employeurs (social security affiliation file)",
+   "published": "2016-07-05",
+   "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "This is the affiliation and contribution file behind every social security branch. It does not by itself cover pension payment history.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "fichier relatif aux affiliations des salariés, des indépendants et des employeurs (managed by the Centre commun de la sécurité sociale)",
+    "reason": "The quote names the social-security affiliation file and says the CCSS manages it, which bears on contributions; it does not mention pensions or payment history."
+   }
+  },
+  {
+   "claim": "record:LU:benefits_pensions:operator",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+   "quote": "b) le fichier relatif aux affiliations des salariés, des indépendants et des employeurs géré par le Centre commun de la sécurité sociale sur base de l'article 413 du Code de la sécurité sociale",
+   "quote_english": "b) the file of affiliations of employees, self-employed persons and employers managed by the Joint Social Security Centre on the basis of article 413 of the Social Security Code",
+   "value": "Centre commun de la sécurité sociale (Joint Social Security Centre, CCSS)",
+   "published": "2016-07-05",
+   "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "The CCSS manages the affiliation file for all social security institutions.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "fichier relatif aux affiliations des salariés, des indépendants et des employeurs (managed by the Centre commun de la sécurité sociale)",
+    "reason": "This is the same quote as item 8: it names the affiliation file and its manager, the CCSS, and says nothing about entitlements or pension payments."
+   }
+  },
+  {
+   "claim": "record:LU:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2002/07/25/n8/jo/fr/html",
+   "quote": "a) la publicité en matière de propriété et de copropriété foncières, sur la base de la documentation cadastrale, appelée documentation par la suite, et se composant des registres et des fichiers fonciers ainsi que du plan cadastral",
+   "quote_english": "a) public notice of land ownership and co-ownership, on the basis of the cadastral documentation, consisting of the land registers and files and the cadastral plan",
+   "value": "documentation cadastrale (cadastral documentation: land registers, land files and cadastral plan)",
+   "published": "2002-07-25",
+   "title": "Loi du 25 juillet 2002 portant réorganisation de l'administration du cadastre et de la topographie",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Art. 2 lists this among the Administration du cadastre et de la topographie's duties. Mortgages are recorded separately by the Administration de l'enregistrement.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "documentation cadastrale (registres et fichiers fonciers, plan cadastral), held by the Administration du cadastre et de la topographie",
+    "reason": "Art. 2 gives the cadastre administration the publication of land ownership based on the cadastral documentation, which is made up of land registers, land files and the cadastral plan."
+   }
+  },
+  {
+   "claim": "record:LU:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2002/12/19/n1/jo/fr/html",
+   "quote": "Il est tenu un registre de commerce et des sociétés, dans lequel sont immatriculés sur leur déclaration ou sur la déclaration d’un mandataire",
+   "quote_english": "A trade and companies register is kept, in which are registered, on their declaration or that of an agent,",
+   "value": "registre de commerce et des sociétés (trade and companies register, RCS)",
+   "published": "2002-12-19",
+   "title": "Loi du 19 décembre 2002 concernant le registre de commerce et des sociétés",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Art. 1 of the RCS law. Original text.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "registre de commerce et des sociétés",
+    "reason": "The quote establishes that a trade and companies register is kept, in which entities are registered."
+   }
+  },
+  {
+   "claim": "record:LU:business_registry:operator",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2002/12/19/n1/jo/fr/html",
+   "quote": "La gestion du registre de commerce et des sociétés est confiée à un groupement d’intérêt économique, regroupant l’Etat, la Chambre de commerce et la Chambre des métiers, constitué à cette fin.",
+   "quote_english": "Management of the trade and companies register is entrusted to an economic interest grouping of the State, the Chamber of Commerce and the Chamber of Skilled Trades, set up for this purpose.",
+   "value": "groupement d’intérêt économique regroupant l’Etat, la Chambre de commerce et la Chambre des métiers (economic interest grouping of the State and the two chambers)",
+   "published": "2002-12-19",
+   "title": "Loi du 19 décembre 2002 concernant le registre de commerce et des sociétés",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "The 2019 RBE law names this grouping as Luxembourg Business Registers.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "a groupement d'intérêt économique of the State, the Chambre de commerce and the Chambre des métiers",
+    "reason": "The quote says a GIE made up of the State and the two chambers manages the RCS; the quote does not give the GIE's name."
+   }
+  },
+  {
+   "claim": "record:LU:beneficial_ownership:register",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2019/01/13/a15/jo/fr/html",
+   "quote": "Il est établi sous l'autorité du ministre ayant la Justice dans ses attributions un registre dénommé « Registre des bénéficiaires effectifs », en abrégé « RBE »",
+   "quote_english": "A register called the 'Register of beneficial owners', abbreviated 'RBE', is established under the authority of the minister responsible for Justice",
+   "value": "Registre des bénéficiaires effectifs, RBE (Register of beneficial owners)",
+   "published": "2019-01-13",
+   "title": "Loi du 13 janvier 2019 instituant un Registre des bénéficiaires effectifs",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Art. 2 of the RBE law. Original text; public access was later restricted after the 2022 CJEU ruling.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "Registre des bénéficiaires effectifs (RBE), under the authority of the Minister of Justice",
+    "reason": "The quote establishes the RBE by name and places it under the Justice minister."
+   }
+  },
+  {
+   "claim": "record:LU:beneficial_ownership:operator",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2019/01/13/a15/jo/fr/html",
+   "quote": "« gestionnaire » : le groupement d’intérêt économique Luxembourg Business Registers ;",
+   "quote_english": "'manager': the economic interest grouping Luxembourg Business Registers;",
+   "value": "Luxembourg Business Registers (economic interest grouping)",
+   "published": "2019-01-13",
+   "title": "Loi du 13 janvier 2019 instituant un Registre des bénéficiaires effectifs",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Art. 1 definitions. Art. 2(2) makes the manager responsible for recording, safekeeping and making the information available.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "GIE Luxembourg Business Registers",
+    "reason": "The definitions article of the RBE law defines the 'gestionnaire' of the register as the GIE Luxembourg Business Registers."
+   }
+  },
+  {
+   "claim": "record:LU:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/03/29/n10/jo/fr/html",
+   "quote": "Le casier judiciaire est tenu sous la responsabilité du procureur général d’Etat sous forme électronique.",
+   "quote_english": "The criminal record is kept in electronic form under the responsibility of the State Prosecutor General.",
+   "value": "casier judiciaire (criminal record)",
+   "published": "2013-03-29",
+   "title": "Loi du 29 mars 2013 relative à l’organisation du casier judiciaire",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Art. 1 of the criminal record law. Covers criminal records only; court case files are not included.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "casier judiciaire (electronic), under the responsibility of the procureur général d'Etat",
+    "reason": "The quote says the criminal record is kept in electronic form under the State Prosecutor General's responsibility; it does not cover court case files."
+   }
+  },
+  {
+   "claim": "record:LU:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2013/03/29/n10/jo/fr/html",
+   "quote": "Le casier judiciaire est tenu sous la responsabilité du procureur général d’Etat sous forme électronique.",
+   "quote_english": "The criminal record is kept in electronic form under the responsibility of the State Prosecutor General.",
+   "value": "procureur général d’Etat (State Prosecutor General)",
+   "published": "2013-03-29",
+   "title": "Loi du 29 mars 2013 relative à l’organisation du casier judiciaire",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Responsibility for the criminal record lies with the State Prosecutor General.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "casier judiciaire (electronic), under the responsibility of the procureur général d'Etat",
+    "reason": "This is the same quote as item 15: it names the criminal record and the body responsible for it."
+   }
+  },
+  {
+   "claim": "record:LU:police_records:register",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+   "quote": "h) la partie «recherche» de la banque de données nominatives de police générale.",
+   "quote_english": "h) the 'search' part of the general police nominative database.",
+   "value": "banque de données nominatives de police générale (general police nominative database)",
+   "published": "2016-07-05",
+   "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Named in the SRE law's list of databases. The police's own 2018 law is not reachable by ELI guesswork here.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "banque de données nominatives de police générale",
+    "reason": "The quote names the general police nominal database, of which the SRE can access the 'recherche' part."
+   }
+  },
+  {
+   "claim": "record:LU:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+   "quote": "d) le fichier des demandeurs de visa exploité pour le compte du bureau des passeports, visas et légalisations du ministre ayant les Affaires étrangères dans ses attributions;",
+   "quote_english": "d) the visa applicants' file operated on behalf of the passports, visas and legalisations office of the minister responsible for Foreign Affairs;",
+   "value": "fichier des demandeurs de visa (visa applicants' file)",
+   "published": "2016-07-05",
+   "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Covers only the national visa file; the national SIS and EES components are not named here.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "fichier des demandeurs de visa",
+    "reason": "The quote names a national visa-applicant file run for the foreign ministry's passport and visa bureau; it does not mention SIS, VIS or EES."
+   }
+  },
+  {
+   "claim": "record:LU:firearms_register:register",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/05/n8/jo/fr/html",
+   "quote": "g) le fichier des armes prohibées du ministre ayant la Justice dans ses attributions;",
+   "quote_english": "g) the prohibited weapons file of the minister responsible for Justice;",
+   "value": "fichier des armes prohibées (prohibited weapons file)",
+   "published": "2016-07-05",
+   "title": "Loi du 5 juillet 2016 portant réorganisation du Service de renseignement de l'État",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Held by the Justice ministry. The 2022 weapons law may have renamed it; that law was not checked.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "fichier des armes prohibées",
+    "reason": "The quote names the Justice minister's file of prohibited weapons; it does not explicitly say that this file records licences or licence holders."
+   }
+  },
+  {
+   "claim": "record:LU:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/12/23/n25/jo/fr/html",
+   "quote": "Le Journal officiel du Grand-Duché de Luxembourg rassemble tous les textes pour lesquels la publication est formellement prescrite par un acte normatif.",
+   "quote_english": "The Official Journal of the Grand Duchy of Luxembourg collects all texts whose publication is formally required by a normative act.",
+   "value": "Journal officiel du Grand-Duché de Luxembourg (Official Journal of the Grand Duchy of Luxembourg)",
+   "published": "2016-12-23",
+   "title": "Loi du 23 décembre 2016 concernant le Journal officiel du Grand-Duché de Luxembourg",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Art. 5 of the same law says the electronic Journal officiel alone is authentic ('fait seul foi').",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Journal officiel du Grand-Duché de Luxembourg",
+    "reason": "The quote establishes the Official Journal as the collection of every text whose publication is formally required."
+   }
+  },
+  {
+   "claim": "record:LU:public_finance:register",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/1999/06/08/n2/jo/fr/html",
+   "quote": "La comptabilité de l'Etat se compose d'une comptabilité budgétaire et d'une comptabilité générale.",
+   "quote_english": "The State's accounts consist of budgetary accounting and general accounting.",
+   "value": "comptabilité de l'Etat (State accounting: budgetary and general accounting)",
+   "published": "1999-06-08",
+   "title": "Loi du 8 juin 1999 sur le Budget, la Comptabilité et la Trésorerie de l'Etat",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Art. 13 of the budget, accounting and treasury law. It names no IT system, so this only weakly fills the gap.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "comptabilité de l'Etat (comptabilité budgétaire and comptabilité générale)",
+    "reason": "The quote establishes that state accounting has two parts, budgetary and general accounting; it names no system or operator."
+   }
+  },
+  {
+   "claim": "record:LU:crisis_management:register",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2016/07/23/n1/jo/fr/html",
+   "quote": "5. de veiller à la mise en place et au fonctionnement du Centre national de crise. Dans le cadre de ses attributions, le Haut-Commissariat à la Protection nationale est le point de contact du Luxembourg",
+   "quote_english": "5. to ensure the establishment and operation of the National Crisis Centre. Within its remit, the High Commission for National Protection is Luxembourg's point of contact",
+   "value": "Centre national de crise (National Crisis Centre), under the Haut-Commissariat à la Protection nationale",
+   "published": "2016-07-23",
+   "title": "Loi du 23 juillet 2016 portant création d'un Haut-Commissariat à la Protection nationale",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "The HCPN founding law. The CTIE's attributions also include secure crisis-management infrastructure for the government.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Centre national de crise, set up and run under the Haut-Commissariat à la Protection nationale",
+    "reason": "The quote gives the HCPN the task of ensuring that the national crisis centre is set up and operating."
+   }
+  },
+  {
+   "claim": "indicator:LU:C2",
+   "question": "Is a national sovereign or government cloud platform in operation (not announced)? yes = In operation and serving government workloads; partial = Announced or in pilot; no = A source states none exists",
+   "relation": "fills_gap",
+   "url": "https://ctie.gouvernement.lu/fr/l-administration.html",
+   "quote": "le hosting ; le cloud privé (IaaS) ; les plateformes (PaaS) ;",
+   "quote_english": "hosting; private cloud (IaaS); platforms (PaaS);",
+   "value": "yes",
+   "published": "2025-03-12",
+   "title": "Le CTIE - Centre des technologies de l'information de l'Etat",
+   "publisher": "Centre des technologies de l'information de l'État (CTIE)",
+   "doc_type": "official_page",
+   "note": "The State IT centre lists a private cloud (IaaS) among the services it provides to ministries and administrations, so a government cloud is in operation. The quote spans list items; page last modified 12.03.2025.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The CTIE page says, in the present tense, that the state IT administration provides private cloud (IaaS) and PaaS services to the ministries and administrations, which describes a government cloud in operation."
+   }
+  },
+  {
+   "claim": "indicator:LU:L2",
+   "question": "Is the government's data classification scheme established in a statute or binding regulation? yes = Classification levels are defined in a statute or binding regulation; partial = Defined only in non-binding guidance or a circular; no = A source states there is no binding classification scheme",
+   "relation": "fills_gap",
+   "url": "https://data.legilux.public.lu/eli/etat/leg/loi/2004/06/15/n5/jo/fr/html",
+   "quote": "Les pièces sont classifiées selon les quatre degrés de confidentialité suivants: 1. «TRES SECRET».",
+   "quote_english": "Documents are classified according to the following four levels of confidentiality: 1. 'TOP SECRET'.",
+   "value": "yes",
+   "published": "2004-06-15",
+   "title": "Loi du 15 juin 2004 relative à la classification des pièces et aux habilitations de sécurité",
+   "publisher": "Journal officiel du Grand-Duché de Luxembourg (Legilux)",
+   "doc_type": "legislation",
+   "note": "Art. 4 of the statute defines the levels TRES SECRET, SECRET, CONFIDENTIEL and RESTREINT. Original text; the law has been amended since.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Art. 4 of the law of 15 June 2004 sets out four classification levels, which puts the scheme in a statute."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:LU:digital_identity_credentials:operator",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:LU:C1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:LU:K1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:LU:K2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:customs:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:digital_identity_credentials:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:health_insurance:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:health_insurance:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:tax:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:tax:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:vehicle_licensing:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:facial_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:fingerprint_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:breeder_documents:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:authentication_audit_log:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:trust_services_pki:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:government_payroll:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:electoral_management:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:central_bank:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:defence_command:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:LU:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LU:emergency_communications:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:LU:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LU:grid_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:LU:water_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:LU:education:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "indicator:LU:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:LU:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:LU:L2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:LU:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

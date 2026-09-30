@@ -73,3 +73,6 @@ web/playwright-report/
 # every file, which is what makes drift detectable without storing them.
 # Mirrored in .vercelignore -- the CLI reads that INSTEAD of this file.
 cache/
+
+# Local Claude Code settings; the project skill under .claude/skills/ is tracked.
+.claude/settings.local.json

@@ -32,6 +32,7 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import subprocess
 import time
 import urllib.error
 import urllib.parse
@@ -157,6 +158,37 @@ def fetch(url: str, timeout: int = TIMEOUT) -> Result:
         return Result(STATUS_TIMEOUT, "", b"")
     except Exception:
         return Result(STATUS_ERROR, "", b"")
+
+
+BROWSERS = [
+    "/Applications/Chrome.app/Contents/MacOS/Google Chrome",
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "/usr/bin/google-chrome",
+    "/usr/bin/chromium",
+]
+RENDERED = "text/html; rendered"
+
+
+def fetch_rendered(url: str, timeout: int = 60) -> Result:
+    """The page as a browser shows it, for pages that build their text with JavaScript (#83).
+
+    Only for a page that already answered 200 and whose quote was not in the served HTML: a refusal
+    (403, robots) is an answer and is never routed around with a browser. The DOM of a rendered page
+    can differ from one load to the next, so its hash identifies what we checked, not what a
+    stranger will fetch; `content_type` says `rendered` so every reader can tell."""
+    if robots_check(url) == STATUS_ROBOTS:
+        return Result(STATUS_ROBOTS, "", b"")
+    browser = next((b for b in BROWSERS if Path(b).exists()), None)
+    if not browser:
+        return Result(STATUS_ERROR, "", b"")
+    try:
+        _throttle()
+        r = subprocess.run([browser, "--headless", "--disable-gpu", "--no-sandbox", f"--user-agent={UA}",
+                            "--virtual-time-budget=10000", "--dump-dom", url],
+                           capture_output=True, timeout=timeout)
+    except subprocess.TimeoutExpired:
+        return Result(STATUS_TIMEOUT, "", b"")
+    return Result("200", RENDERED, r.stdout) if r.returncode == 0 and r.stdout.strip() else Result(STATUS_ERROR, "", b"")
 
 
 def sha256(data: bytes) -> str:

@@ -5,6 +5,241 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-09-30
+
+A day in two halves: the morning brought the documents and deployment up to date; the rest of the day
+rebuilt how the evidence is checked, graded, re-checked and reproduced (#80–#84). The vetting run's
+admission, the first CI deploy and the clean-room rebuild are still to be verified; see the end of this
+entry.
+
+### Changed — every document brought in line with the rebuilt project
+
+- **New documents.** `METHOD.md` is the reader-facing evidence pipeline: research, quote check,
+  independent review, admission, rendering, and what the method does not establish. `CLAUDE.md` holds the
+  exact commands and the gotchas.
+- **Rewritten to the current state.** `ROADMAP.md` (in-progress work, the order of what comes next, the
+  launch gate as a human sampling audit, a diagram of the plan), `PROGRESS.md`, `model/README.md` and
+  `TODO.md`. `VERIFICATION.md` and `SOURCES.md` carry current figures.
+- **One style guide.** `artifacts/STYLE.md`, fed by `design/tokens.json`. The per-format guides keep only
+  their own rules.
+- **Fixed on the way.** Posters are sized to their content again, instead of a 1,400 px fallback, and
+  researched sources are labelled by publisher and title, not by a hash.
+
+### Added — `eu27.cloud`, attached with `noindex` (#80)
+
+Registered at iwantmyname on 2026-09-30, with its DNS kept there and pointed at Vercel. It serves `noindex`
+twice: through `robots.txt` and an `X-Robots-Tag` header on every path. It is not announced.
+
+### Added — production deploys from GitHub Actions (#81)
+
+A push to `main` runs the full `./test.sh`. It then builds with a pinned, checksummed typst, deploys
+prebuilt to Vercel and smoke-tests the live domain, including that the live data bundle is the committed
+one. Actions are pinned by commit SHA. **Not yet run:** the `VERCEL_TOKEN` secret is not yet set.
+
+### Changed — every output says the findings are machine-checked, not human-verified (#82)
+
+One disclaimer, from `model/evidence.py`, opens the report, every country PDF, the web app, `/ask`
+answers, the posters and the briefs. The list of checks each output describes is generated from what
+runs. So is the ranking rule's text: `report.py` restated it by hand, and it could drift.
+`tests/test_evidence.py` fails if any output drops the disclaimer or uses the old wording ("every fact
+... fetched, hashed and checked"), which had been printed over five citations that were never
+quote-checked.
+
+### Changed — a fact is printed only if its figures are in its quote (#82)
+
+The gate proved each quote is in its document. It never proved the report printed what the quote says.
+- **Value in quote.** Every number and date in a printed value must now appear in the original-language
+  quote, read in any EU number format. A number that is only in the English translation does not count.
+- **Recorded evidence.** A citation supports nothing without a recorded quote check at the hash the
+  registry holds.
+- **Printed facts fell from 997 to 922.** Examples: a 10-year retention period printed as Bulgaria's
+  record count; "48 million victim records" added to a French quote that says 17 million; and 68 other
+  values whose numbers or dates are not in their quote. Five hand-migrated citations (#67) had no
+  recorded check, and are withdrawn.
+- **Names are disclosed, not required.** An abbreviation missing from the quote, often a transliteration
+  (*MVR* for *МВР*), is named in the fact's checklist rather than withheld. 138 facts would otherwise
+  have gone.
+- **Summaries are labelled.** A value that is not a verbatim extract is labelled a machine summary of
+  the quote.
+
+### Changed — a categorical value needs the reviewer's own agreement (#79, enforced by #82)
+
+Four indicator values had been admitted at the reviewer's *changed* value: EE K2, LU C2, PL C1 and
+RO C1. They are withdrawn, and admission now enforces exact agreement. No state changed group. Estonia's
+and Romania's ranges widened, as they should when a known value becomes unknown.
+
+### Added — an evidence grade for every fact (#82)
+
+Each fact lists the checks it passed, and a fixed rule makes it **Strong** or **Standard**. There is no
+numeric score, since nothing has calibrated one. On the day it was introduced: 76 Strong, 842 Standard.
+The report, the PDFs, the web and the briefs show the grade and the checks. The quote is shown in its
+original language first, with the machine translation labelled.
+
+### Added — source tiers (#83)
+
+Every cited host is classified once, in `model/sources/authorities.csv` (247 hosts at first):
+- **T1:** official law portals and gazettes, statistics offices, Eurostat;
+- **T2:** public bodies and audit offices;
+- **T3:** companies and other institutions;
+- **T4:** unofficial statute mirrors, press and encyclopedias.
+
+Only T1/T2 facts can be Strong, which took Strong from 76 to 59. The best source per printed fact was T1
+343, T2 400, T3 9 and T4 166. 158 of the T4 facts rested on unofficial copies of statutes
+(`net.jogtar.hu`, `zakonyprolidi.cz`, `zakony.judikaty.info`, `lawspot.gr`, `zakon.hr`) where the
+official portal exists.
+
+### Added — rechecks and disputed facts (#83)
+
+`./run.sh recheck` re-fetched all 691 sources behind printed facts:
+- 306 unchanged;
+- 373 changed but still holding every quote;
+- 3 had lost a quote, affecting 6 facts;
+- 3 were gone (404: the Commission's NIFO 2024 factsheets);
+- 6 refused or timed out.
+
+A fact whose quote vanished, or whose source is gone, is now shown as **disputed**. It is not printed,
+and not silently kept. A refusal changes nothing. The recheck is resumable and saves after every source.
+
+### Fixed — 141 genuine quotes the first check could never match
+
+The quote check decoded every page as UTF-8, so on ISO-8859-1 pages every accented letter was garbled
+(`cylaw.org`, `pgdlisboa.pt`). `research.decode` reads a page in its declared charset.
+- **Rendered retry.** `./run.sh retry` retries each not-found quote against the correctly decoded page,
+  and renders it in a headless browser only if the text is still missing. A page that refused us is
+  never retried with a browser. 177 of 251 retried quotes were found.
+- **The result.** Admitted holdings rose from 416 to 472, and printed facts from 918 to 1,007.
+
+### Added — the first vetting run across all 27 states (#83)
+
+One researcher per state looked for a better source for every printed fact, newer information,
+contradictions and filled gaps. One blind reviewer per state was shown the quote and URL, never the
+proposed value.
+- **Scale:** 54 agents, 6.75M tokens and 2,231 tool calls, in 64 minutes.
+- **1,017 findings:** 138 upgrades, 199 corroborations, 45 newer statements, 11 contradictions and 624
+  filled gaps.
+- **The reviewer agreed with 862.** Of the 1,389 input items, 741 were found, 447 had no better source,
+  and 201 were not reached.
+- **Official portals.** The agents reached the portals the old citations lacked: 46 findings on
+  `slov-lex.sk` and 45 on `e-sbirka.cz`.
+- **New hosts.** 171 were tiered before admission.
+- **The limit, stated.** The reviewer was the same model as the researcher. It is blind, but two
+  readings by one model can share its blind spots.
+
+The admission rules never trust the researcher's own label. A different value is decided by a published
+rule: a higher tier wins, and the same authority with a later date wins. Otherwise the fact is shown as
+disputed, with both sources.
+
+**Admitted** (run `wf_1c6b8bb6-450`, manifest in `model/research/vetting/runs/`):
+- 681 of the 857 fetched findings had their quote on the page.
+- **363 gaps were filled**, 244 facts gained a second, independent source, and 26 values were superseded
+  (23 by a higher-tier source, 3 by a later statement of the same authority).
+- 12 became disputed.
+- **Rejected:** 153 findings the reviewer disagreed with, 176 not verifiable on the page, 38 operators or
+  counts for a register nobody established, and 5 below T2.
+
+**The result:**
+- Printed facts rose from 1,007 to **1,390**, and Strong from 58 to **107**.
+- The best source behind each fact is now T1 for **635** (from 343), T2 for 633, T3 for 9 and T4 for
+  **113** (from 166).
+- 20 facts are shown as disputed.
+
+### Changed — Eurostat vintages adopted; the employment column fixed (#84)
+
+- **Newer periods.** Population 2026, renewables 2025 and land area 2026, plus Portugal's revised 2025 GDP
+  (306.7 → 308.5).
+- **The employment column.** Public-administration employment reproduced no Eurostat period at all
+  (Sweden 420.4 against the official 245.0), so it had been withheld on every page. It is now the
+  official 2024 series, printed on all 27. No column is excused any more as a "known defect".
+- **Pins as data.** The pinned periods are now data, in `model/eurostat_pins.csv`, with the date and
+  decision behind each. `./run.sh eurostat check` reports and writes nothing; `adopt` makes the whole
+  change as one step.
+
+### Added — reproducible from scratch (#84)
+
+- **One command per step.** `./run.sh admit | recheck | retry | eurostat | vet | reproduce`. The agent
+  step is the checked-in `/vet` skill, which runs the checked-in, hashed `workflow.js`.
+- **A manifest per agent run.** It records the input, output and prompt hashes, the commit, the reviewer
+  model and the tool versions.
+- **Admission is a checked fixed point.** `./run.sh admit --check`, a gate stage, re-runs admission on
+  the committed evidence and fails if any register would change. Admission no longer reads the clock.
+- **A clean-room rebuild.** `./run.sh reproduce` rebuilds everything from a fresh clone of HEAD and
+  compares it with the committed copy. `--evidence` also re-fetches every source.
+- **Pinned tools.** Versions are pinned in `.tool-versions` and `.nvmrc`, `init.sh` warns on a mismatch,
+  and tests hold CI to the pins. One CI workflow was on Python 3.12 while the rest ran 3.14; it is now
+  aligned.
+
+### Added — a generated methodology appendix (#84)
+
+The EU-27 report and every country PDF end with a methodology appendix. It covers:
+- sourcing, and the measured outcomes of every run;
+- every check, the tiers and the grade rule;
+- every calculation: the priority formula, the ranking rule and confidence, the exposure count, and each
+  Eurostat series with its filters, period and unit conversion;
+- how to reproduce the work, and what it does not establish.
+
+It is generated from the constants the code runs, and a test holds each rule to its source. Each PDF
+stamps the git commit and the data bundle's hash it was built from. The web `/methodology` page renders
+the same document.
+
+### Added — the gate compiles the PDFs and checks what the web shows
+
+A typst template error had passed the whole gate this day. `./test.sh` now compiles the EU-27 report and
+all 27 country PDFs (about 10 s), and checks the disclaimer in the compiled text. Four Playwright tests
+check:
+- the disclaimer on every page;
+- the grade and checks on a fact;
+- the labelled machine translation;
+- that a disputed value is withheld without a footnote.
+
+Both new checks were shown to fail when they should. One of them first passed with the disclaimer
+removed, because the banner still contained it; it was tightened.
+
+### Added — documentation
+
+- `docs/vetting.md`, the runbook: every step as one command, the rules that must not bend, a
+  record-keeping checklist, and the known limits.
+- `docs/evidence.md`, generated on every build: grades, tiers, why facts are Standard, per-state charts,
+  disputed facts and agent runs.
+- `METHOD.md` sections 3 and 7, and decisions #82–#84.
+- The README Changelog table.
+
+### Corrections made during the day
+
+A record of what was wrong, including in this day's own work:
+- **Eurostat hashes.** The first version of #82 said the 136 Eurostat figures were never hashed. Wrong:
+  their API responses are hashed in `fetch_manifest.csv`. It is corrected in #82, the docs and the code.
+- **A circular tier rule.** "The operator's own domain is T1" was tried and dropped. The operator URL
+  recorded for a holding is the URL the research agent cited, so the rule was true by construction, and
+  it had marked 531 facts T1.
+- **`cylaw.org`.** It was first classified as an official law portal. It is a non-official legal
+  information institute: T4.
+- **Recheck scope.** The first recheck disputed every fact on a source when only one of its quotes had
+  vanished. Disputes are now per fact.
+- **Admission was not reproducible.** The new check found it on its first run. Each admission started
+  from the previous one's output, so a gap vetting filled read as an existing fact the next time, and
+  46 register rows changed. Admission now starts from the base it never produces (Eurostat and the #67
+  migrations) and rebuilds everything else from the evidence. It is a pure function of the committed
+  files.
+- **A mistaken `git checkout`.** Mid-work, it reset four register files. They were rebuilt from the
+  evidence with identical counts: an unplanned test of the point above.
+- **Two admission bugs, caught before any vetting finding was admitted.** An admitted "no central
+  register" would have been flipped to "held" by a finding, instead of being treated as a contradiction.
+  And any two text values without numbers counted as the same, so a finding naming a *different*
+  register would have been admitted as a corroboration.
+- **The `/ask` corpus.** Disputed values briefly counted as facts the site shows, which broke the corpus
+  check. They count as withheld.
+
+### Verified, and not yet
+
+- **Verified:** `./run.sh admit --check` reports "6 of 6 registers reproduce from the committed
+  evidence". `./test.sh` passes in full, including the new stages: admission, PDFs, and the evidence rules
+  in the browser.
+- **Not yet:** `./run.sh reproduce` on the committed tree (#84); the first CI deploy (#81), which needs
+  the `VERCEL_TOKEN` secret.
+- **No finding has been reviewed by a person.**
+
+---
+
 ## 2026-09-29 (evidence)
 
 ### Added — the first verified research: 416 critical holdings and 134 indicator values

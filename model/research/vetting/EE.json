@@ -1,0 +1,1280 @@
+{
+ "iso": "EE",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:EE:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://www.rit.ee/serverteenused",
+   "quote": "Riigipilve privaatpilv on pilveteenus, mis on loodud spetsiaalselt Eesti avaliku sektori jaoks ning mida haldab riik ise RITi kaudu. Selle teenuse iseloomulikud omadused on: taristu on riigi omandis ja riigi kontrolli all, sealhulgas andmekeskused, võrgud ja haldusprotsessid;",
+   "quote_english": "The State Cloud private cloud is a cloud service created specifically for the Estonian public sector and run by the state itself through RIT. Its characteristics are: the infrastructure is state-owned and under state control, including the data centres, networks and management processes;",
+   "value": "Yes",
+   "published": "",
+   "title": "Serverteenused ja Riigipilv",
+   "publisher": "Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT)",
+   "doc_type": "official_page",
+   "note": "Operator's own current page (T1) confirming state-owned data centres in operation today; the printed value rests on a 2018 audit-office file.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "RIT's page says the state's private cloud is run by the state itself through RIT. It adds that the infrastructure, including the data centres, is state-owned and state-controlled, and it describes this as a current service."
+   }
+  },
+  {
+   "claim": "indicator:EE:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corroborates",
+   "url": "https://www.riigipilv.ee/riigipilvest/riigipilvest-kkk/riigipilv-mis-see-on",
+   "quote": "Riigipilv on riiklikult hallatud pilvekeskkond, mis võimaldab pakkuda avalikule sektorile keskseid IT-taristu lahendusi ja teenuseid. Riigipilve projekti eest vastutab Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT).",
+   "quote_english": "The State Cloud is a state-managed cloud environment that makes it possible to provide central IT infrastructure solutions and services to the public sector. The State Information and Communication Technology Centre (RIT) is responsible for the State Cloud project.",
+   "value": "Yes",
+   "published": "",
+   "title": "Riigipilv — mis see on?",
+   "publisher": "Eesti Riigipilv / RIT",
+   "doc_type": "official_page",
+   "note": "The platform's own official site (T1) describes Riigipilv as a state-managed cloud in service, independent of the 2018 audit.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The page describes Riigipilv in the present tense as a state-managed cloud environment that provides central IT infrastructure services to the public sector, with RIT responsible for it."
+   }
+  },
+  {
+   "claim": "indicator:EE:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "supersedes",
+   "url": "https://www.rit.ee/uudised/uuendatud-riigipilv-eesti-avaliku-sektori-pilvteenus-senisest-voimsam-ja-turvalisem",
+   "quote": "Uuendatud riigipilv vastab kõrgetele infoturbe nõuetele, pakkudes turvalist keskkonda, kus andmete hoiustamine ja haldamine on täielikult Eesti riigi kontrolli all.",
+   "quote_english": "The renewed State Cloud meets high information-security requirements, offering a secure environment where data storage and management are fully under the control of the Estonian state.",
+   "value": "Yes",
+   "published": "2025-01-09",
+   "title": "Uuendatud riigipilv – Eesti avaliku sektori pilvteenus on senisest võimsam ja turvalisem",
+   "publisher": "Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT)",
+   "doc_type": "official_page",
+   "note": "Newer than the 2018 source: the renewed State Cloud went live in 2025 and, per the same page, runs on three data centres in Estonia and one elsewhere in Europe, so it is not purely domestic.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The news item says the updated Riigipilv already meets high security requirements and keeps data storage and management fully under Estonian state control, which describes a platform in operation."
+   }
+  },
+  {
+   "claim": "indicator:EE:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "upgrade",
+   "url": "https://web.archive.org/web/20260117004320/https://www.riigiteataja.ee/akt/RSVS",
+   "quote": "§ 5. Riigisaladuse tasemed Teabe kaitsevajaduse suurenemise järjekorras kaitstakse riigisaladust järgmistel tasemetel, alates madalamast tasemest: 1) piiratud tase; 2) konfidentsiaalne tase; 3) salajane tase; 4) täiesti salajane tase.",
+   "quote_english": "§ 5. Levels of state secrets. In increasing order of protection need, state secrets are protected at the following levels, starting from the lowest: 1) restricted; 2) confidential; 3) secret; 4) top secret.",
+   "value": "Yes",
+   "published": "2026-01-17",
+   "title": "Riigisaladuse ja salastatud välisteabe seadus (consolidated text, Riigi Teataja snapshot)",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "The statute itself (State Secrets and Classified Information of Foreign States Act) on the official law portal replaces the NSA FAQ page; riigiteataja.ee is now a JavaScript app, so this cites the Internet Archive snapshot of the official page.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "§ 5 of the State Secrets Act (RSVS) in Riigi Teataja sets out four statutory classification levels, from 'piiratud' up to 'täiesti salajane'. Note that this covers state secrets only."
+   }
+  },
+  {
+   "claim": "record:EE:facial_biometric:operator",
+   "question": "Facial biometric: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://web.archive.org/web/20260418112026/https://www.riigiteataja.ee/akt/131122021018",
+   "quote": "(1) Andmekogu vastutav töötleja on Politsei- ja Piirivalveamet, välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul. (2) Paragrahvides 10, 15 ja 16 sätestatu alusel andmekogusse kantavate andmete puhul on vastutav töötleja Välisministeerium.",
+   "quote_english": "(1) The controller of the database is the Police and Border Guard Board, except for the data set out in subsections 2 and 3. (2) For data entered under sections 10, 15 and 16, the controller is the Ministry of Foreign Affairs.",
+   "value": "Politsei- ja Piirivalveamet (Police and Border Guard Board) and Välisministeerium (Ministry of Foreign Affairs)",
+   "published": "2026-04-18",
+   "title": "Automaatse biomeetrilise isikutuvastuse süsteemi andmekogu põhimäärus",
+   "publisher": "Riigi Teataja (Vabariigi Valitsus)",
+   "doc_type": "legislation",
+   "note": "Independent T1 instrument (the ABIS statutes) agrees; subsection 3 adds the Estonian Forensic Science Institute as controller for forensic data, so the printed pair is not the complete list.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Politsei- ja Piirivalveamet (controller), with Välisministeerium as controller for data entered under §§ 10, 15 and 16",
+    "reason": "The page is the ABIS database statute (Automaatse biomeetrilise isikutuvastuse süsteemi andmekogu põhimäärus), and the quote names PPA as the controller except for certain data held by the Foreign Ministry."
+   }
+  },
+  {
+   "claim": "record:EE:facial_biometric:register",
+   "question": "Facial biometric: the name of the register or system",
+   "relation": "contradicts",
+   "url": "https://www.siseministeerium.ee/abis",
+   "quote": "ABIS on keskne riiklik andmekogu, kus säilitatakse riiklikes menetlustes kogutud biomeetrilisi isikuandmeid: näo- ja sõrmejäljekujutisi ning peopesajälgi.",
+   "quote_english": "ABIS is the central state database that stores biometric personal data collected in state proceedings: facial and fingerprint images and palm prints.",
+   "value": "ABIS (automaatse biomeetrilise isikutuvastuse süsteemi andmekogu; Automated Biometric Identification System database)",
+   "published": "",
+   "title": "Automaatse biomeetrilise isikutuvastuse süsteemi andmekogu ABIS",
+   "publisher": "Siseministeerium (Ministry of the Interior)",
+   "doc_type": "official_page",
+   "note": "The printed value lists data types rather than a register; the register that holds facial images is ABIS, and per this page iris images are not collected.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "ABIS",
+    "reason": "The quote names ABIS as the central national database holding face and fingerprint images collected in state procedures."
+   }
+  },
+  {
+   "claim": "record:EE:facial_biometric:foreign_dependency",
+   "question": "Facial biometric: the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20260418112026/https://www.riigiteataja.ee/akt/131122021018",
+   "quote": "(5) Andmekogu volitatud töötleja andmekogu arendamisel, hooldamisel ja majutamisel on Siseministeeriumi infotehnoloogia- ja arenduskeskus.",
+   "quote_english": "(5) The processor of the database for its development, maintenance and hosting is the IT and Development Centre of the Ministry of the Interior.",
+   "value": "national",
+   "published": "2026-04-18",
+   "title": "Automaatse biomeetrilise isikutuvastuse süsteemi andmekogu põhimäärus",
+   "publisher": "Riigi Teataja (Vabariigi Valitsus)",
+   "doc_type": "legislation",
+   "note": "ABIS is hosted by SMIT, a state agency under the Ministry of the Interior; the regulation assigns hosting to a national body but does not name a data-centre location.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote only says that SMIT is the processor that develops, maintains and hosts the database. It does not give the database's name, which appears only in the page title."
+   }
+  },
+  {
+   "claim": "record:EE:civil_registry:register",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://www.siseministeerium.ee/tegevusvaldkonnad/rahvastikutoimingud/rahvastikuregister",
+   "quote": "Rahvastikuregister on andmekogu, mis koondab Eesti kodanike, Eestis elukoha registreerinud Euroopa Liidu kodanike ja Eestis elamisloa või elamisõiguse saanud välismaalaste peamisi isikuandmeid. Registrit haldab ja arendab vastutava töötlejana Siseministeerium.",
+   "quote_english": "The Population Register is a database that brings together the main personal data of Estonian citizens, EU citizens who have registered residence in Estonia and foreigners who have received a residence permit or right of residence. The Ministry of the Interior manages and develops the register as controller.",
+   "value": "Rahvastikuregister (Population Register)",
+   "published": "",
+   "title": "Rahvastikuregister",
+   "publisher": "Siseministeerium (Ministry of the Interior)",
+   "doc_type": "official_page",
+   "note": "The controlling ministry's own page names the register; the same page names SMIT as its processor.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Rahvastikuregister, managed and developed by Siseministeerium as controller",
+    "reason": "The quote names the population register (Rahvastikuregister), which holds core personal data on residents, and says the Ministry of the Interior manages and develops it as controller."
+   }
+  },
+  {
+   "claim": "record:EE:civil_registry:operator",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://www.siseministeerium.ee/tegevusvaldkonnad/rahvastikutoimingud/rahvastikuregister",
+   "quote": "Rahvastikuregister on andmekogu, mis koondab Eesti kodanike, Eestis elukoha registreerinud Euroopa Liidu kodanike ja Eestis elamisloa või elamisõiguse saanud välismaalaste peamisi isikuandmeid. Registrit haldab ja arendab vastutava töötlejana Siseministeerium.",
+   "quote_english": "The Population Register is a database that brings together the main personal data of Estonian citizens, EU citizens with registered residence and foreigners with residence permits. The Ministry of the Interior manages and develops the register as controller.",
+   "value": "Siseministeerium (Ministry of the Interior)",
+   "published": "",
+   "title": "Rahvastikuregister",
+   "publisher": "Siseministeerium (Ministry of the Interior)",
+   "doc_type": "official_page",
+   "note": "Controller named by the ministry itself.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Rahvastikuregister, managed and developed by Siseministeerium as controller",
+    "reason": "This is the same quote as item 7: it gives the register name Rahvastikuregister and names Siseministeerium as its controller and manager."
+   }
+  },
+  {
+   "claim": "record:EE:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: Fingerprints captured for passports and ID cards where retained centrally",
+   "relation": "fills_gap",
+   "url": "https://www.siseministeerium.ee/abis",
+   "quote": "ABIS on keskne riiklik andmekogu, kus säilitatakse riiklikes menetlustes kogutud biomeetrilisi isikuandmeid: näo- ja sõrmejäljekujutisi ning peopesajälgi.",
+   "quote_english": "ABIS is the central state database that stores biometric personal data collected in state proceedings: facial and fingerprint images and palm prints.",
+   "value": "ABIS (automaatse biomeetrilise isikutuvastuse süsteemi andmekogu; Automated Biometric Identification System database)",
+   "published": "",
+   "title": "Automaatse biomeetrilise isikutuvastuse süsteemi andmekogu ABIS",
+   "publisher": "Siseministeerium (Ministry of the Interior)",
+   "doc_type": "official_page",
+   "note": "Fingerprints from identity-document procedures are held centrally in ABIS, stored separately from names and personal codes.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "ABIS",
+    "reason": "The quote says ABIS is the central national database storing fingerprint images collected in state procedures."
+   }
+  },
+  {
+   "claim": "record:EE:fingerprint_biometric:operator",
+   "question": "Fingerprint biometric: Fingerprints captured for passports and ID cards where retained centrally",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20260418112026/https://www.riigiteataja.ee/akt/131122021018",
+   "quote": "(1) Andmekogu vastutav töötleja on Politsei- ja Piirivalveamet, välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul. (2) Paragrahvides 10, 15 ja 16 sätestatu alusel andmekogusse kantavate andmete puhul on vastutav töötleja Välisministeerium.",
+   "quote_english": "(1) The controller of the database is the Police and Border Guard Board, except for the data in subsections 2 and 3. (2) For data entered under sections 10, 15 and 16, the controller is the Ministry of Foreign Affairs.",
+   "value": "Politsei- ja Piirivalveamet (Police and Border Guard Board)",
+   "published": "2026-04-18",
+   "title": "Automaatse biomeetrilise isikutuvastuse süsteemi andmekogu põhimäärus",
+   "publisher": "Riigi Teataja (Vabariigi Valitsus)",
+   "doc_type": "legislation",
+   "note": "PBGB is the main controller; the Ministry of Foreign Affairs controls diplomatic-passport data, and SMIT hosts the system.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "Politsei- ja Piirivalveamet (controller), with Välisministeerium for data under §§ 10, 15 and 16",
+    "reason": "On the ABIS statute page, the quote names PPA as the database controller, except for certain data controlled by the Foreign Ministry."
+   }
+  },
+  {
+   "claim": "record:EE:issuance_history:register",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20260309063502/https://www.riigiteataja.ee/akt/ITDS",
+   "quote": "(1) Isikut tõendavate dokumentide andmekogu (edaspidi käesolevas paragrahvis andmekogu) on Vabariigi Valitsuse asutatud andmekogu, mille põhimääruse kehtestab valdkonna eest vastutav minister määrusega.",
+   "quote_english": "(1) The identity documents database (hereinafter in this section the database) is a database established by the Government of the Republic, whose statutes are set by regulation of the responsible minister.",
+   "value": "Isikut tõendavate dokumentide andmekogu (Identity Documents Database)",
+   "published": "2026-03-09",
+   "title": "Isikut tõendavate dokumentide seadus (consolidated text, Riigi Teataja snapshot)",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Under the Identity Documents Act this database holds the data on issuing and revoking identity documents; the snapshot is different from the one behind the printed facts.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Isikut tõendavate dokumentide andmekogu",
+    "reason": "The quote names the identity documents database and says it was established by the Government. It does not say who operates it."
+   }
+  },
+  {
+   "claim": "record:EE:issuance_history:operator",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20260309063502/https://www.riigiteataja.ee/akt/ITDS",
+   "quote": "(3 1 ) Isiku tuvastamisel ja isikusamasuse kontrollimisel käesoleva seaduse § 15 5 tähenduses võib töödelda isiku identiteediandmeid, mis on kantud andmekogusse. [ RT I, 08.07.2021, 1 - jõust. 15.07.2021] (4) Andmekogu vastutav töötleja on Politsei- ja Piirivalveamet.",
+   "quote_english": "(3.1) When identifying a person and verifying identity within the meaning of section 15.5, identity data entered in the database may be processed. (4) The controller of the database is the Police and Border Guard Board.",
+   "value": "Politsei- ja Piirivalveamet (Police and Border Guard Board)",
+   "published": "2026-03-09",
+   "title": "Isikut tõendavate dokumentide seadus (consolidated text, Riigi Teataja snapshot)",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "The statute names the controller of the identity documents database.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "Politsei- ja Piirivalveamet",
+    "reason": "Subsection (4) of the quote says the controller of the identity documents database is PPA."
+   }
+  },
+  {
+   "claim": "record:EE:issuance_history:count",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://www.siseministeerium.ee/tegevusvaldkonnad/tohus-rahvastikuhaldus/isikut-toendavad-dokumendid-ja-identiteedihaldus",
+   "quote": "Alates 2002. aastast on välja antud üle 3,2 miljoni isikutunnistuse ja elamisloakaardi ning üle 494 000 digitaalse isikutunnistuse, sealhulgas mobiil-ID vormis digitaalse isikutunnistuse ja e-residendi isikutunnistused.",
+   "quote_english": "Since 2002, more than 3.2 million identity cards and residence permit cards and more than 494,000 digital identity cards have been issued, including digital ID in Mobile-ID form and e-resident ID cards.",
+   "value": "over 3,2 miljoni isikutunnistuse ja elamisloakaardi (over 3.2 million ID cards and residence permit cards issued)",
+   "published": "",
+   "title": "Isikut tõendavad dokumendid ja identiteedihaldus",
+   "publisher": "Siseministeerium (Ministry of the Interior)",
+   "doc_type": "official_page",
+   "note": "A cumulative issuance count since 2002, not a count of live records.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "over 3.2 million ID cards and residence permit cards, and over 494,000 digital ID cards, issued since 2002",
+    "reason": "The quote gives cumulative issuance counts with units, but it does not name the register or its operator."
+   }
+  },
+  {
+   "claim": "record:EE:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://www.ria.ee/en/state-information-system/electronic-identity-eid-and-trust-services/electronic-identity-eid",
+   "quote": "In Estonia, the following means of electronic personal identification are valid: ID cards, Mobile-ID, e-Resident’s digital ID, diplomatic ID, and residence cards. These documents are issued by the Police and Border Guard Board.",
+   "quote_english": "",
+   "value": "Police and Border Guard Board",
+   "published": "",
+   "title": "Electronic identity (eID)",
+   "publisher": "Riigi Infosüsteemi Amet (Information System Authority)",
+   "doc_type": "official_page",
+   "note": "The eID supervisor (RIA) states that the state police board issues every national eID credential; certificates are provided under contract by private trust service providers.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "Police and Border Guard Board (issuer of eID documents)",
+    "reason": "The quote lists the valid eID means and says the Police and Border Guard Board issues them, so it establishes the issuer rather than the operator of the whole scheme."
+   }
+  },
+  {
+   "claim": "record:EE:authentication_audit_log:register",
+   "question": "Authentication audit log: Records of who authenticated to which public service and when",
+   "relation": "fills_gap",
+   "url": "https://www.ria.ee/sites/default/files/documents/2025-02/TARA-SLA-Riigi-autentimisteenus-1-3-2025.pdf",
+   "quote": "Riigi autentimisteenus on RIA arendatud ja hallatav platvorm, mis on liidestatud kolmanda isiku pakutavate autentimismeetoditega ning teeb autentimiseks vajalikke (andme)päringuid.",
+   "quote_english": "The State Authentication Service is a platform developed and managed by RIA that is integrated with authentication methods offered by third parties and makes the (data) queries needed for authentication.",
+   "value": "Riigi autentimisteenus (State Authentication Service, TARA)",
+   "published": "2025-02",
+   "title": "Riigi Infosüsteemi Ameti teenustaseme leppe vorm – Riigi autentimisteenus (TARA)",
+   "publisher": "Riigi Infosüsteemi Amet (Information System Authority)",
+   "doc_type": "official_page",
+   "note": "TARA is the central government authentication service through which public e-services authenticate users; its logs are the authentication records.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "Riigi autentimisteenus, developed and managed by RIA",
+    "reason": "The quote names the state authentication service and says RIA develops and manages it. It does not mention authentication logs as such."
+   }
+  },
+  {
+   "claim": "record:EE:authentication_audit_log:operator",
+   "question": "Authentication audit log: Records of who authenticated to which public service and when",
+   "relation": "fills_gap",
+   "url": "https://www.ria.ee/sites/default/files/documents/2025-02/TARA-SLA-Riigi-autentimisteenus-1-3-2025.pdf",
+   "quote": "Riigi autentimisteenus on RIA arendatud ja hallatav platvorm, mis on liidestatud kolmanda isiku pakutavate autentimismeetoditega ning teeb autentimiseks vajalikke (andme)päringuid.",
+   "quote_english": "The State Authentication Service is a platform developed and managed by RIA that is integrated with authentication methods offered by third parties and makes the (data) queries needed for authentication.",
+   "value": "RIA (Riigi Infosüsteemi Amet; Information System Authority)",
+   "published": "2025-02",
+   "title": "Riigi Infosüsteemi Ameti teenustaseme leppe vorm – Riigi autentimisteenus (TARA)",
+   "publisher": "Riigi Infosüsteemi Amet (Information System Authority)",
+   "doc_type": "official_page",
+   "note": "The operator's own service-level agreement names RIA as developer and manager.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "Riigi autentimisteenus, developed and managed by RIA",
+    "reason": "This is the same quote as item 15: it establishes the service name and RIA as its operator, but it says nothing about an audit log."
+   }
+  },
+  {
+   "claim": "record:EE:electoral_roll:register",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20260218005759/https://www.riigiteataja.ee/akt/RKVS",
+   "quote": "§ 22. Valijate nimekiri (1) Rahvastikuregistri vastutav töötleja korraldab rahvastikuregistri andmete alusel valijate nimekirja koostamise ja edastab valijate nimekirja riigi valimisteenistusele hiljemalt 25. päeval enne valimispäeva.",
+   "quote_english": "§ 22. List of voters (1) The controller of the Population Register arranges the compilation of the list of voters from Population Register data and sends it to the State Electoral Office no later than on the 25th day before election day.",
+   "value": "Valijate nimekiri (list of voters), compiled from the Rahvastikuregister (Population Register)",
+   "published": "2026-02-18",
+   "title": "Riigikogu valimise seadus (consolidated text, Riigi Teataja snapshot)",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "The electoral roll is derived from the Population Register by its controller, the Ministry of the Interior.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "valijate nimekiri (compiled by the population register's controller from population register data)",
+    "reason": "The quote names the electoral roll and says the population register's controller compiles it, but it does not name that controller."
+   }
+  },
+  {
+   "claim": "record:EE:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: Root and issuing certificate authorities for government, qualified signatures and seals",
+   "relation": "fills_gap",
+   "url": "https://www.ria.ee/sites/default/files/documents/2025-10/Estonian-eID-ecosystem.pdf",
+   "quote": "For a long time, a single Estonian company provided trust services as a core business: this was SK ID Solutions AS (formerly known as AS Sertifitseerimiskeskus). The same company maintains the certificates of all eID means currently in use (ID-card, Mobile-ID, Smart-ID).",
+   "quote_english": "",
+   "value": "SK ID Solutions AS",
+   "published": "2025-10",
+   "title": "Estonian electronic identity ecosystem – Overview, Version 1.0",
+   "publisher": "Riigi Infosüsteemi Amet (Information System Authority)",
+   "doc_type": "official_page",
+   "note": "A private Estonian company; the same RIA document says Zetes Estonia OÜ takes over qualified certification for new ID cards from the end of 2025.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "SK ID Solutions AS (private Estonian company)",
+    "reason": "The quote says SK ID Solutions AS provides trust services and maintains the certificates of all eID means in use."
+   }
+  },
+  {
+   "claim": "record:EE:residence_permits:register",
+   "question": "Residence and migration status: Residence permits, asylum status and foreign-national registrations",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20250514142132/https://www.riigiteataja.ee/akt/114012017018",
+   "quote": "§ 1. Andmekogu nimetus Andmekogu ametlik nimetus on elamislubade ja töölubade register (edaspidi andmekogu). § 2. Andmekogu pidamise eesmärk (1) Andmekogu pidamise eesmärk on tagada avalik kord ja riigi julgeolek välismaalaste Eestis elamise ja töötamise seaduslike aluste ja tingimuste andmete töötlemise kaudu.",
+   "quote_english": "§ 1. Name of the database: the official name of the database is the register of residence permits and work permits. § 2. Purpose: to ensure public order and state security by processing data on the legal bases and conditions of foreigners' residence and employment in Estonia.",
+   "value": "elamislubade ja töölubade register (Register of Residence Permits and Work Permits)",
+   "published": "2025-05-14",
+   "title": "Elamislubade ja töölubade registri põhimäärus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Official name as fixed in the register's statutes.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "elamislubade ja töölubade register",
+    "reason": "The quote gives the official name of the residence and work permit register and its purpose."
+   }
+  },
+  {
+   "claim": "record:EE:residence_permits:operator",
+   "question": "Residence and migration status: Residence permits, asylum status and foreign-national registrations",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20250514142132/https://www.riigiteataja.ee/akt/114012017018",
+   "quote": "(1) Andmekogu vastutav töötleja on Politsei- ja Piirivalveamet (edaspidi vastutav töötleja). (2) Andmekogu volitatud töötleja on Siseministeeriumi infotehnoloogia- ja arenduskeskus (edaspidi volitatud töötleja).",
+   "quote_english": "(1) The controller of the database is the Police and Border Guard Board. (2) The processor of the database is the IT and Development Centre of the Ministry of the Interior.",
+   "value": "Politsei- ja Piirivalveamet (Police and Border Guard Board)",
+   "published": "2025-05-14",
+   "title": "Elamislubade ja töölubade registri põhimäärus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "SMIT is the processor.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Politsei- ja Piirivalveamet (controller); Siseministeeriumi infotehnoloogia- ja arenduskeskus (processor)",
+    "reason": "On the page for the residence and work permit register statute, the quote names PPA as controller and SMIT as processor."
+   }
+  },
+  {
+   "claim": "record:EE:tax:register",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20260207063839/https://www.riigiteataja.ee/akt/MKS",
+   "quote": "§ 17. Maksukohustuslaste register (1) Maksukohustuslaste registri (edaspidi register) asutab ja selle põhimääruse kehtestab Vabariigi Valitsus määrusega.",
+   "quote_english": "§ 17. Register of taxable persons (1) The register of taxable persons (hereinafter the register) is established, and its statutes set, by regulation of the Government.",
+   "value": "Maksukohustuslaste register (Register of Taxable Persons)",
+   "published": "2026-02-07",
+   "title": "Maksukorralduse seadus (consolidated text, Riigi Teataja snapshot)",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Under the same section the register keeps accounts for assessing, checking and collecting taxes.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "Maksukohustuslaste register",
+    "reason": "The quote names the taxable persons register and says the Government establishes it by regulation. It does not name an operator."
+   }
+  },
+  {
+   "claim": "record:EE:tax:operator",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20260207063839/https://www.riigiteataja.ee/akt/MKS",
+   "quote": "samuti käesoleva seaduse § 1 lõikes 6 nimetatud rahaliste kohustuste ning nende täitmise kohta. [ RT I, 13.03.2019, 2 - jõust. 15.03.2019] (3) Registri vastutav töötleja on Maksu- ja Tolliamet.",
+   "quote_english": "...as well as on the monetary obligations named in § 1(6) and their performance. (3) The controller of the register is the Tax and Customs Board.",
+   "value": "Maksu- ja Tolliamet (Tax and Customs Board)",
+   "published": "2026-02-07",
+   "title": "Maksukorralduse seadus (consolidated text, Riigi Teataja snapshot)",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Statutory controller of the register of taxable persons.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Maksu- ja Tolliamet",
+    "reason": "The quote says the register's controller is the Tax and Customs Board."
+   }
+  },
+  {
+   "claim": "record:EE:customs:register",
+   "question": "Customs declarations: Import and export declarations and duty assessments",
+   "relation": "fills_gap",
+   "url": "https://www.emta.ee/uudised/mta-votab-kasutusele-uue-impordi-tollivormistuse-infosusteemi",
+   "quote": "1. juulist alustab tööd uus impordi tollivormistuse infosüsteem Impulss, mis on mõeldud põhiliselt väljastpoolt Euroopa Liitu kaupa importivatele ettevõtetele ja tolliagentuuridele.",
+   "quote_english": "From 1 July, the new import customs clearance information system Impulss starts operating, intended mainly for companies and customs agents importing goods from outside the European Union.",
+   "value": "Impulss (import customs clearance information system)",
+   "published": "2021",
+   "title": "MTA võtab kasutusele uue impordi tollivormistuse infosüsteemi",
+   "publisher": "Maksu- ja Tolliamet (Tax and Customs Board)",
+   "doc_type": "official_page",
+   "note": "The operator's own announcement; covers import declarations only, and export declarations run in other customs systems.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Impulss",
+    "reason": "The quote names Impulss as the new import customs clearance system starting on 1 July. It does not itself name the operator."
+   }
+  },
+  {
+   "claim": "record:EE:benefits_pensions:register",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20221024144600/https://www.riigiteataja.ee/akt/108052020012",
+   "quote": "(3) Infosüsteemi ametlik nimetus on sotsiaalkaitse infosüsteem. (4) Infosüsteemi ingliskeelne nimetus on Social Security Information System. § 2. Infosüsteemi vastutav ja volitatud töötleja (1) Infosüsteemi vastutav töötleja on Sotsiaalkindlustusamet.",
+   "quote_english": "(3) The official name of the information system is the social protection information system. (4) Its English name is Social Security Information System. § 2 (1) The controller of the information system is the Social Insurance Board.",
+   "value": "sotsiaalkaitse infosüsteem (Social Security Information System, SKAIS)",
+   "published": "2022-10-24",
+   "title": "Sotsiaalkaitse infosüsteemi põhimäärus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Snapshot from 2022; the processors are TEHIK and the Tax and Customs Board.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "sotsiaalkaitse infosüsteem (Social Security Information System), controller Sotsiaalkindlustusamet",
+    "reason": "The quote gives the official name of the information system and names the Social Insurance Board as its controller."
+   }
+  },
+  {
+   "claim": "record:EE:benefits_pensions:operator",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20221024144600/https://www.riigiteataja.ee/akt/108052020012",
+   "quote": "(3) Infosüsteemi ametlik nimetus on sotsiaalkaitse infosüsteem. (4) Infosüsteemi ingliskeelne nimetus on Social Security Information System. § 2. Infosüsteemi vastutav ja volitatud töötleja (1) Infosüsteemi vastutav töötleja on Sotsiaalkindlustusamet.",
+   "quote_english": "(3) The official name is the social protection information system. (4) English name: Social Security Information System. § 2 (1) The controller of the information system is the Social Insurance Board.",
+   "value": "Sotsiaalkindlustusamet (Social Insurance Board)",
+   "published": "2022-10-24",
+   "title": "Sotsiaalkaitse infosüsteemi põhimäärus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Statutory controller.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "sotsiaalkaitse infosüsteem (Social Security Information System), controller Sotsiaalkindlustusamet",
+    "reason": "This is the same quote as item 24: it establishes both the system name and its controller."
+   }
+  },
+  {
+   "claim": "record:EE:health_insurance:register",
+   "question": "Statutory health insurance: Enrolment and entitlement records of the statutory health insurance scheme",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20241124195714/https://www.riigiteataja.ee/akt/107052024007",
+   "quote": "(3) Andmekogu ametlik nimetus on Tervisekassa andmekogu. [ RT I, 23.05.2023, 1 - jõust. 26.05.2023] (4) Andmekogu ingliskeelne nimetus on Health Insurance Fund Database.",
+   "quote_english": "(3) The official name of the database is the Health Insurance Fund database. (4) The English name of the database is Health Insurance Fund Database.",
+   "value": "Tervisekassa andmekogu (Health Insurance Fund Database)",
+   "published": "2024-11-24",
+   "title": "Tervisekassa andmekogu pidamise põhimäärus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Official name as set in the database's statutes.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "Tervisekassa andmekogu (Health Insurance Fund Database)",
+    "reason": "The quote gives the official Estonian and English names of the database."
+   }
+  },
+  {
+   "claim": "record:EE:health_insurance:operator",
+   "question": "Statutory health insurance: Enrolment and entitlement records of the statutory health insurance scheme",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20241124195714/https://www.riigiteataja.ee/akt/107052024007",
+   "quote": "§ 2. Andmekogu vastutav ja volitatud töötleja [ RT I, 02.07.2019, 2 - jõust. 05.07.2019] (1) Andmekogu vastutav töötleja on Tervisekassa.",
+   "quote_english": "§ 2. Controller and processor of the database (1) The controller of the database is the Health Insurance Fund.",
+   "value": "Tervisekassa (Health Insurance Fund)",
+   "published": "2024-11-24",
+   "title": "Tervisekassa andmekogu pidamise põhimäärus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "TEHIK is the processor for the EESSI access point.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Tervisekassa",
+    "reason": "The quote says the database's controller is Tervisekassa."
+   }
+  },
+  {
+   "claim": "record:EE:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.rik.ee/et/e-kinnistusraamat/e-kinnistusraamat",
+   "quote": "E-kinnistusraamat sisaldab andmeid kõigi Eestis registreeritud kinnistute kohta. E-keskkonnas saab igaüks ise kiirelt ja lihtsalt kontrollida kinnistute üldandmeid, pindala, omanikke, piiranguid, kinnistuid koormavate hüpoteekide andmeid jm.",
+   "quote_english": "The e-Land Register contains data on all immovables registered in Estonia. In the e-environment anyone can quickly check the general data, area, owners, restrictions and mortgages encumbering immovables.",
+   "value": "E-kinnistusraamat (e-Land Register)",
+   "published": "",
+   "title": "E-kinnistusraamat",
+   "publisher": "Registrite ja Infosüsteemide Keskus (RIK)",
+   "doc_type": "official_page",
+   "note": "The operator's own page; entries are made by the land registry department of Tartu County Court, and the cadastre is a separate register.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "E-kinnistusraamat",
+    "reason": "The quote names the e-land register and describes its content, including owners and mortgages. It does not name an operator."
+   }
+  },
+  {
+   "claim": "record:EE:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.rik.ee/et/e-ariregister/e-ariregistri-portaal",
+   "quote": "E-äriregister on riigi ametlik portaal, mis sisaldab kõigi Eestis registreeritud juriidiliste isikute andmeid ühes keskkonnas.",
+   "quote_english": "The e-Business Register is the state's official portal containing the data of all legal persons registered in Estonia in one environment.",
+   "value": "E-äriregister (e-Business Register)",
+   "published": "",
+   "title": "E-äriregistri portaal",
+   "publisher": "Registrite ja Infosüsteemide Keskus (RIK)",
+   "doc_type": "official_page",
+   "note": "The operator's own page.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "E-äriregister",
+    "reason": "The quote names the e-Business Register portal as the official state portal for all registered legal entities."
+   }
+  },
+  {
+   "claim": "record:EE:business_registry:operator",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.rik.ee/et/e-ariregister/e-ariregistri-portaal",
+   "quote": "Äriregistris teeb kandeid ja esitatud avaldusi menetleb Tartu Maakohtu registriosakond (registripidaja), portaali arendab ja haldab RIK.",
+   "quote_english": "Entries in the Business Register are made and applications processed by the registration department of Tartu County Court (the registrar); the portal is developed and managed by RIK.",
+   "value": "Tartu Maakohtu registriosakond (registrar); RIK (develops and manages the portal)",
+   "published": "",
+   "title": "E-äriregistri portaal",
+   "publisher": "Registrite ja Infosüsteemide Keskus (RIK)",
+   "doc_type": "official_page",
+   "note": "The registrar is a court department; the technical operator is RIK, the Ministry of Justice and Digital Affairs' IT centre.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "RIK develops and manages the portal; entries are made by the Tartu Maakohtu registriosakond (registrar)",
+    "reason": "The quote says the Tartu County Court registration department keeps the register and that RIK develops and manages the portal."
+   }
+  },
+  {
+   "claim": "record:EE:beneficial_ownership:register",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20260306092107/https://www.riigiteataja.ee/akt/RahaPTS",
+   "quote": "(2) Tegelike kasusaajate andmekogu vastutav töötleja on Rahandusministeerium. Volitatud töötlejad on Registrite ja Infosüsteemide Keskus ning Tartu Maakohtu registriosakond",
+   "quote_english": "(2) The controller of the beneficial owners database is the Ministry of Finance. The processors are the Centre of Registers and Information Systems and the registration department of Tartu County Court.",
+   "value": "Tegelike kasusaajate andmekogu (Beneficial Owners Database)",
+   "published": "2026-03-06",
+   "title": "Rahapesu ja terrorismi rahastamise tõkestamise seadus (consolidated text, Riigi Teataja snapshot)",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Statutory name from the Money Laundering and Terrorist Financing Prevention Act.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "Tegelike kasusaajate andmekogu; controller Rahandusministeerium; processors RIK and Tartu Maakohtu registriosakond",
+    "reason": "The quote names the beneficial owners database, its controller and its processors."
+   }
+  },
+  {
+   "claim": "record:EE:beneficial_ownership:operator",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20260306092107/https://www.riigiteataja.ee/akt/RahaPTS",
+   "quote": "(2) Tegelike kasusaajate andmekogu vastutav töötleja on Rahandusministeerium. Volitatud töötlejad on Registrite ja Infosüsteemide Keskus ning Tartu Maakohtu registriosakond",
+   "quote_english": "(2) The controller of the beneficial owners database is the Ministry of Finance. The processors are the Centre of Registers and Information Systems and the registration department of Tartu County Court.",
+   "value": "Rahandusministeerium (Ministry of Finance)",
+   "published": "2026-03-06",
+   "title": "Rahapesu ja terrorismi rahastamise tõkestamise seadus (consolidated text, Riigi Teataja snapshot)",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "RIK and the Tartu County Court registration department are the processors.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "Tegelike kasusaajate andmekogu; controller Rahandusministeerium; processors RIK and Tartu Maakohtu registriosakond",
+    "reason": "This is the same quote as item 31: it establishes the register name, the controller (Ministry of Finance) and the processors."
+   }
+  },
+  {
+   "claim": "record:EE:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20260228065122/https://www.riigiteataja.ee/akt/129012025006",
+   "quote": "Andmete parandamisel kantakse ebaõiged andmed registriandmete arhiivi koos andmete parandamise põhjustega. § 1 1 . Vastutav ja volitatud töötleja (1) Registri vastutav töötleja on Transpordiamet (edaspidi registripidaja).",
+   "quote_english": "When data are corrected, the incorrect data are moved to the register archive with the reasons for correction. § 1.1 Controller and processor (1) The controller of the register is the Transport Administration (hereinafter the registrar).",
+   "value": "Transpordiamet (Transport Administration)",
+   "published": "2026-02-28",
+   "title": "Liiklusregistri pidamise põhimäärus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Statutes of the liiklusregister (Traffic Register); the register name is the act's title rather than part of this quote.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "Transpordiamet",
+    "reason": "On the traffic register statute page (Liiklusregistri pidamise põhimäärus), the quote names Transpordiamet as the register's controller and registrar."
+   }
+  },
+  {
+   "claim": "record:EE:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.rik.ee/et/karistusregister/paring-karistusregistrist",
+   "quote": "Karistusregister on riiklik andmekogu, kuhu kantakse andmed isikute ja neile määratud karistuste kohta. Aluseks on jõustunud kohtuotsused ja kohtuväliste menetlejate lahendid.",
+   "quote_english": "The Criminal Records Database is a state database into which data on persons and the punishments imposed on them are entered, based on final court judgments and decisions of extra-judicial bodies.",
+   "value": "Karistusregister (Criminal Records Database)",
+   "published": "",
+   "title": "Päring karistusregistrist",
+   "publisher": "Registrite ja Infosüsteemide Keskus (RIK)",
+   "doc_type": "official_page",
+   "note": "The processor's own page; court case files are held separately in the e-File (e-toimik) and court information system, also run by RIK.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "Karistusregister",
+    "reason": "The quote names the criminal records register as a national database of persons and their punishments. It does not name an operator."
+   }
+  },
+  {
+   "claim": "record:EE:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20250803214052/https://www.riigiteataja.ee/akt/KarRS",
+   "quote": "§ 4. Registri vastutav ja volitatud töötleja Registri vastutav töötleja on Justiits- ja Digiministeerium ning registri volitatud töötleja Registrite ja Infosüsteemide Keskus (edaspidi keskus).",
+   "quote_english": "§ 4. Controller and processor of the register: the controller is the Ministry of Justice and Digital Affairs and the processor is the Centre of Registers and Information Systems.",
+   "value": "Justiits- ja Digiministeerium (Ministry of Justice and Digital Affairs); processor Registrite ja Infosüsteemide Keskus (RIK)",
+   "published": "2025-08-03",
+   "title": "Karistusregistri seadus (consolidated text, Riigi Teataja snapshot)",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Statutory controller and processor.",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "Justiits- ja Digiministeerium (controller); Registrite ja Infosüsteemide Keskus (processor)",
+    "reason": "The quote from the Criminal Records Database Act names the register's controller and processor."
+   }
+  },
+  {
+   "claim": "record:EE:police_records:register",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20251212223739/https://www.riigiteataja.ee/akt/113012017004",
+   "quote": "§ 1. Politsei andmekogu nimetus Andmekogu ametlik nimetus on «Infosüsteem POLIS» (edaspidi infosüsteem).",
+   "quote_english": "§ 1. Name of the police database: the official name of the database is 'Information system POLIS'.",
+   "value": "Infosüsteem POLIS (Information System POLIS)",
+   "published": "2025-12-12",
+   "title": "Politsei andmekogu pidamise põhimäärus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Official name as set in the statutes.",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "Infosüsteem POLIS",
+    "reason": "The quote gives the official name of the police database."
+   }
+  },
+  {
+   "claim": "record:EE:police_records:operator",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20251212223739/https://www.riigiteataja.ee/akt/113012017004",
+   "quote": "§ 5. Infosüsteemi vastutav töötleja Infosüsteemi vastutav töötleja on Politsei- ja Piirivalveamet (edaspidi vastutav töötleja).",
+   "quote_english": "§ 5. Controller of the information system: the controller of the information system is the Police and Border Guard Board.",
+   "value": "Politsei- ja Piirivalveamet (Police and Border Guard Board)",
+   "published": "2025-12-12",
+   "title": "Politsei andmekogu pidamise põhimäärus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Statutory controller.",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "Politsei- ja Piirivalveamet",
+    "reason": "The quote names PPA as the controller of the POLIS information system."
+   }
+  },
+  {
+   "claim": "record:EE:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20251022021813/https://www.riigiteataja.ee/akt/118042013027",
+   "quote": "§ 1. Schengeni infosüsteemi riikliku registri nimetus Andmekogu ametlik nimetus on „Schengeni infosüsteemi riiklik register“ (edaspidi register).",
+   "quote_english": "§ 1. Name of the national register of the Schengen Information System: the official name of the database is 'national register of the Schengen Information System'.",
+   "value": "Schengeni infosüsteemi riiklik register (national register of the Schengen Information System)",
+   "published": "2025-10-22",
+   "title": "Schengeni infosüsteemi riikliku registri pidamise põhimäärus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Covers the national SIS component only; VIS and the Entry/Exit System were not researched.",
+   "review": {
+    "id": 38,
+    "quote_found": true,
+    "established": "Schengeni infosüsteemi riiklik register",
+    "reason": "The quote gives the official name of the national Schengen Information System register."
+   }
+  },
+  {
+   "claim": "record:EE:border_control:operator",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20251022021813/https://www.riigiteataja.ee/akt/118042013027",
+   "quote": "§ 2. Registri vastutav töötleja Registri vastutav töötleja on Politsei- ja Piirivalveamet. [ RT I, 18.04.2013, 15 - jõust. 21.04.2013, rakendatakse alates 09.04.2013]",
+   "quote_english": "§ 2. Controller of the register: the controller of the register is the Police and Border Guard Board.",
+   "value": "Politsei- ja Piirivalveamet (Police and Border Guard Board)",
+   "published": "2025-10-22",
+   "title": "Schengeni infosüsteemi riikliku registri pidamise põhimäärus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "§ 3 names SMIT as the processor responsible for hardware and software.",
+   "review": {
+    "id": 39,
+    "quote_found": true,
+    "established": "Politsei- ja Piirivalveamet",
+    "reason": "The quote names PPA as the controller of the national SIS register."
+   }
+  },
+  {
+   "claim": "record:EE:firearms_register:register",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://www.politsei.ee/files/Anal%C3%BC%C3%BCs%20ja%20statistika/ppa-avaandmete-seletuskiri-relvaregister-05.06.20.pdf",
+   "quote": "Avaldatavate andmete allikas on teenistus- ja tsiviilrelvade register (edaspidi register), mille eesmärk on koguda ja säilitada teavet Eestisse saabunud ning Eestis asuvate tsiviilkäibes lubatud teenistus- ja tsiviilrelvade, relva- ja padrunikollektsioonide, laskekõlbmatute relvade ning nende omanike ja valdajate kohta",
+   "quote_english": "The source of the published data is the register of service and civilian weapons, whose purpose is to collect and keep information on service and civilian weapons brought into and located in Estonia, weapon and cartridge collections, deactivated weapons and their owners and holders.",
+   "value": "teenistus- ja tsiviilrelvade register (Register of Service and Civilian Weapons)",
+   "published": "2020-06-05",
+   "title": "Avaandmete seletuskiri – Teenistus- ja tsiviilrelvade register",
+   "publisher": "Politsei- ja Piirivalveamet (Police and Border Guard Board)",
+   "doc_type": "official_page",
+   "note": "The PBGB's own open-data description of the firearms register; dated 2020.",
+   "review": {
+    "id": 40,
+    "quote_found": true,
+    "established": "teenistus- ja tsiviilrelvade register",
+    "reason": "The quote names the service and civilian weapons register and describes it as holding data on weapons and their owners. It does not name an operator."
+   }
+  },
+  {
+   "claim": "record:EE:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://www.rik.ee/et/muud-teenused/riigi-teataja",
+   "quote": "Riigi Teataja on Eesti Vabariigi ametlik võrguväljaanne, milles avaldatakse õigusaktid ja muud dokumendid. Riigi Teatajat annab välja Justiits- ja Digiministeerium, majutab ja tehnilise toimimise eest vastutab Registrite ja Infosüsteemide Keskus (RIK).",
+   "quote_english": "Riigi Teataja is the official online publication of the Republic of Estonia in which legal acts and other documents are published. It is issued by the Ministry of Justice and Digital Affairs; the Centre of Registers and Information Systems (RIK) hosts it and is responsible for its technical operation.",
+   "value": "Riigi Teataja (State Gazette)",
+   "published": "",
+   "title": "Riigi Teataja",
+   "publisher": "Registrite ja Infosüsteemide Keskus (RIK)",
+   "doc_type": "official_page",
+   "note": "The hosting operator's own page.",
+   "review": {
+    "id": 41,
+    "quote_found": true,
+    "established": "Riigi Teataja; published by Justiits- ja Digiministeerium, hosted and technically run by RIK",
+    "reason": "The quote names the official gazette, its publisher and RIK as the body that hosts it and runs it technically."
+   }
+  },
+  {
+   "claim": "record:EE:official_gazette:operator",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://www.rik.ee/et/muud-teenused/riigi-teataja",
+   "quote": "Riigi Teataja on Eesti Vabariigi ametlik võrguväljaanne, milles avaldatakse õigusaktid ja muud dokumendid. Riigi Teatajat annab välja Justiits- ja Digiministeerium, majutab ja tehnilise toimimise eest vastutab Registrite ja Infosüsteemide Keskus (RIK).",
+   "quote_english": "Riigi Teataja is the official online publication of the Republic of Estonia. It is issued by the Ministry of Justice and Digital Affairs; RIK hosts it and is responsible for its technical operation.",
+   "value": "Justiits- ja Digiministeerium (publisher); Registrite ja Infosüsteemide Keskus (RIK) (hosting and technical operation)",
+   "published": "",
+   "title": "Riigi Teataja",
+   "publisher": "Registrite ja Infosüsteemide Keskus (RIK)",
+   "doc_type": "official_page",
+   "note": "Hosting is by a state agency, but no data-centre location is stated, so foreign_dependency is not asserted.",
+   "review": {
+    "id": 42,
+    "quote_found": true,
+    "established": "Riigi Teataja; published by Justiits- ja Digiministeerium, hosted and technically run by RIK",
+    "reason": "This is the same quote as item 41: it gives the gazette's name, its publisher and its technical operator/host."
+   }
+  },
+  {
+   "claim": "record:EE:public_finance:register",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://www.rtk.ee/riigitootaja-iseteenindusportaal",
+   "quote": "Riigitöötaja iseteenindusportaali (RTIP) on keskkond, mis automatiseerib info liikumise asutustest riigi finants-, personali- ja palgaarvestuse süsteemi SAP.",
+   "quote_english": "The State Employee Self-Service Portal (RTIP) is an environment that automates the flow of information from agencies into the state's financial, personnel and payroll accounting system SAP.",
+   "value": "riigi finants-, personali- ja palgaarvestuse süsteem SAP (state financial, personnel and payroll accounting system SAP)",
+   "published": "",
+   "title": "Riigitöötaja iseteenindusportaal",
+   "publisher": "Riigi Tugiteenuste Keskus (State Shared Service Centre)",
+   "doc_type": "official_page",
+   "note": "Names the central state accounting system; the treasury payment system itself was not identified.",
+   "review": {
+    "id": 43,
+    "quote_found": true,
+    "established": "SAP (the state's finance, personnel and payroll system)",
+    "reason": "The quote says RTIP feeds information into the state's finance, HR and payroll accounting system SAP, which names the system but not its operator."
+   }
+  },
+  {
+   "claim": "record:EE:government_payroll:register",
+   "question": "Government payroll and personnel: Civil service and armed forces payroll and personnel records",
+   "relation": "fills_gap",
+   "url": "https://www.rtk.ee/riigitootaja-iseteenindusportaal",
+   "quote": "Riigitöötaja iseteenindusportaali (RTIP) on keskkond, mis automatiseerib info liikumise asutustest riigi finants-, personali- ja palgaarvestuse süsteemi SAP.",
+   "quote_english": "The State Employee Self-Service Portal (RTIP) is an environment that automates the flow of information from agencies into the state's financial, personnel and payroll accounting system SAP.",
+   "value": "riigi finants-, personali- ja palgaarvestuse süsteem SAP (state financial, personnel and payroll accounting system SAP)",
+   "published": "",
+   "title": "Riigitöötaja iseteenindusportaal",
+   "publisher": "Riigi Tugiteenuste Keskus (State Shared Service Centre)",
+   "doc_type": "official_page",
+   "note": "The operator's own page; armed forces payroll is not confirmed here.",
+   "review": {
+    "id": 44,
+    "quote_found": true,
+    "established": "SAP (the state's finance, personnel and payroll system)",
+    "reason": "This is the same quote as item 43: it identifies SAP as the state payroll and personnel system but does not name who operates it."
+   }
+  },
+  {
+   "claim": "record:EE:electoral_management:register",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20260218005759/https://www.riigiteataja.ee/akt/RKVS",
+   "quote": "(1) Riigi valimisteenistusel on õigus valimiste infosüsteemi ning elektroonilise hääletamise süsteemi arendamise, haldamise ja majutuse korraldamisse ning nende infosüsteemide küberturvalisuse tagamisse kaasata pädevaid asutusi ja isikuid.",
+   "quote_english": "(1) The State Electoral Office has the right to involve competent agencies and persons in organising the development, management and hosting of the election information system and the electronic voting system and in ensuring their cybersecurity.",
+   "value": "valimiste infosüsteem (election information system) and elektroonilise hääletamise süsteem (electronic voting system)",
+   "published": "2026-02-18",
+   "title": "Riigikogu valimise seadus (consolidated text, Riigi Teataja snapshot)",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "The State Electoral Office (part of the Chancellery of the Riigikogu) administers both systems under § 15.",
+   "review": {
+    "id": 45,
+    "quote_found": true,
+    "established": "valimiste infosüsteem and elektroonilise hääletamise süsteem, organised by Riigi valimisteenistus (which may engage other bodies)",
+    "reason": "The quote names the election information system and the e-voting system and says the State Electoral Office may bring in competent bodies to develop, manage and host them."
+   }
+  },
+  {
+   "claim": "record:EE:electoral_management:operator",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://web.archive.org/web/20260218005759/https://www.riigiteataja.ee/akt/RKVS",
+   "quote": "(1) Riigi valimisteenistusel on õigus valimiste infosüsteemi ning elektroonilise hääletamise süsteemi arendamise, haldamise ja majutuse korraldamisse ning nende infosüsteemide küberturvalisuse tagamisse kaasata pädevaid asutusi ja isikuid.",
+   "quote_english": "(1) The State Electoral Office has the right to involve competent agencies and persons in the development, management and hosting of the election information system and electronic voting system.",
+   "value": "Riigi valimisteenistus (State Electoral Office)",
+   "published": "2026-02-18",
+   "title": "Riigikogu valimise seadus (consolidated text, Riigi Teataja snapshot)",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Statutory organiser; hosting may be delegated to other bodies.",
+   "review": {
+    "id": 46,
+    "quote_found": true,
+    "established": "valimiste infosüsteem and elektroonilise hääletamise süsteem, organised by Riigi valimisteenistus (which may engage other bodies)",
+    "reason": "This is the same quote as item 45: it establishes the system names and makes the State Electoral Office the organising body."
+   }
+  },
+  {
+   "claim": "record:EE:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.siseministeerium.ee/sites/default/files/documents/2024-02/EE-ALARM_ylevaade_avalik_07022024.pdf",
+   "quote": "(2) Häirekeskus edastab mobiiltelefoniteenust osutavale sideettevõtjale ohuteavituse ja kindlaksmääratud geograafilise ala, millel asuvale mobiiltelefoniteenuse kliendile ja rändlusteenuse kasutajale tuleb ohuteavitus edastada, hädaabiteadete ning abi- ja infoteadete andmekogu osaks oleva ohuteavituse süsteemi kaudu.",
+   "quote_english": "(2) The Emergency Response Centre sends the public warning and the defined geographic area to mobile operators, whose customers and roaming users in that area must receive it, through the public warning system that is part of the database of emergency notifications and assistance and information notifications.",
+   "value": "hädaabiteadete ning abi- ja infoteadete andmekogu (database of emergency notifications and assistance and information notifications)",
+   "published": "2024-02-07",
+   "title": "Riiklik avalikkuse hoiatamise süsteem ja ohuteavitus Eestis (EE-ALARM ülevaade)",
+   "publisher": "Siseministeerium (Ministry of the Interior)",
+   "doc_type": "official_page",
+   "note": "Quotes the statutory provision naming the 112 emergency-notification database; the TETRA/VIRVE radio network was not established.",
+   "review": {
+    "id": 47,
+    "quote_found": true,
+    "established": "hädaabiteadete ning abi- ja infoteadete andmekogu (ohuteavituse süsteem part), used by Häirekeskus",
+    "reason": "The quoted provision names the emergency, assistance and information calls database, with its public-warning subsystem, through which Häirekeskus sends alerts."
+   }
+  },
+  {
+   "claim": "record:EE:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.siseministeerium.ee/sites/default/files/documents/2024-02/EE-ALARM_ylevaade_avalik_07022024.pdf",
+   "quote": "(2) Häirekeskus edastab mobiiltelefoniteenust osutavale sideettevõtjale ohuteavituse ja kindlaksmääratud geograafilise ala, millel asuvale mobiiltelefoniteenuse kliendile ja rändlusteenuse kasutajale tuleb ohuteavitus edastada, hädaabiteadete ning abi- ja infoteadete andmekogu osaks oleva ohuteavituse süsteemi kaudu.",
+   "quote_english": "(2) The Emergency Response Centre sends the public warning and the defined geographic area to mobile operators through the public warning system that is part of the database of emergency notifications and assistance and information notifications.",
+   "value": "Häirekeskus (Emergency Response Centre)",
+   "published": "2024-02-07",
+   "title": "Riiklik avalikkuse hoiatamise süsteem ja ohuteavitus Eestis (EE-ALARM ülevaade)",
+   "publisher": "Siseministeerium (Ministry of the Interior)",
+   "doc_type": "official_page",
+   "note": "Häirekeskus operates the 112 database and warning system.",
+   "review": {
+    "id": 48,
+    "quote_found": true,
+    "established": "hädaabiteadete ning abi- ja infoteadete andmekogu (ohuteavituse süsteem part), used by Häirekeskus",
+    "reason": "This is the same quote as item 47: it names the emergency calls database and says Häirekeskus sends warnings through it."
+   }
+  },
+  {
+   "claim": "record:EE:crisis_management:register",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://www.siseministeerium.ee/sites/default/files/documents/2024-02/EE-ALARM_ylevaade_avalik_07022024.pdf",
+   "quote": "(2) Häirekeskus edastab mobiiltelefoniteenust osutavale sideettevõtjale ohuteavituse ja kindlaksmääratud geograafilise ala, millel asuvale mobiiltelefoniteenuse kliendile ja rändlusteenuse kasutajale tuleb ohuteavitus edastada, hädaabiteadete ning abi- ja infoteadete andmekogu osaks oleva ohuteavituse süsteemi kaudu.",
+   "quote_english": "(2) The Emergency Response Centre sends the public warning and the defined geographic area to mobile operators through the public warning system that is part of the database of emergency notifications and assistance and information notifications.",
+   "value": "ohuteavituse süsteem (public warning system, EE-ALARM), operated by Häirekeskus",
+   "published": "2024-02-07",
+   "title": "Riiklik avalikkuse hoiatamise süsteem ja ohuteavitus Eestis (EE-ALARM ülevaade)",
+   "publisher": "Siseministeerium (Ministry of the Interior)",
+   "doc_type": "official_page",
+   "note": "Covers the alerting component only; the crisis centre and continuity-planning systems were not identified. The 'EE-ALARM' name comes from the document title, not the quote.",
+   "review": {
+    "id": 49,
+    "quote_found": true,
+    "established": "ohuteavituse süsteem (part of the hädaabiteadete ning abi- ja infoteadete andmekogu), operated by Häirekeskus",
+    "reason": "The quote says Häirekeskus sends public-warning alerts to mobile operators through the ohuteavituse system."
+   }
+  },
+  {
+   "claim": "record:EE:grid_control:register",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.elering.ee/juhtimiskeskus",
+   "quote": "Lisaks aitavad Eleringi juhtimiskeskuse töötajatel oma ülesannetega hakkama saada muude süsteemide hulgas järgmised IT rakendused: SCADA/EMS – SCADA-ga integreeritud programmide kompleks, mis hindab elektrisüsteemi seisundit",
+   "quote_english": "In addition, the following IT applications, among other systems, help the staff of Elering's control centre carry out their tasks: SCADA/EMS – a suite of programs integrated with SCADA that assesses the state of the power system",
+   "value": "SCADA/EMS at Eleringi juhtimiskeskus (Elering control centre)",
+   "published": "2025-05-09",
+   "title": "Juhtimiskeskus",
+   "publisher": "Elering AS",
+   "doc_type": "official_page",
+   "note": "The TSO's own page, last updated 09.05.2025; it also notes that key control-centre tools are duplicated.",
+   "review": {
+    "id": 50,
+    "quote_found": true,
+    "established": "SCADA/EMS at Elering's control centre",
+    "reason": "The quote says Elering's control centre staff use SCADA/EMS to assess the state of the power system."
+   }
+  },
+  {
+   "claim": "record:EE:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.ehis.ee/",
+   "quote": "Eesti Hariduse Infosüsteem (EHIS) on riiklik register, mis koondab haridussüsteemi puudutavaid andmeid.",
+   "quote_english": "The Estonian Education Information System (EHIS) is a state register that brings together data on the education system.",
+   "value": "Eesti Hariduse Infosüsteem (EHIS; Estonian Education Information System)",
+   "published": "",
+   "title": "EHIS - Eesti Hariduse Infosüsteem",
+   "publisher": "Haridus- ja Teadusministeerium",
+   "doc_type": "official_page",
+   "note": "The system's own site; it holds learner, teacher and graduation-document data.",
+   "review": {
+    "id": 51,
+    "quote_found": true,
+    "established": "Eesti Hariduse Infosüsteem (EHIS)",
+    "reason": "The quote names EHIS as the national register of education system data. It does not name an operator."
+   }
+  },
+  {
+   "claim": "record:EE:education:operator",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.hm.ee/sites/default/files/documents/2024-07/Eesti%20keele%20tasemeeksamiks%20ettevalmistava%20t%C3%A4ienduskoolituse%20tegevusloa%20taotlemise%20kirjeldus.pdf",
+   "quote": "Eesti hariduse infosüsteem (edaspidi: EHIS) on Haridus- ja Teadusministeeriumi poolt hallatav riiklik haridussüsteemi andmeid koondav register.",
+   "quote_english": "The Estonian Education Information System (EHIS) is a state register of education-system data managed by the Ministry of Education and Research.",
+   "value": "Haridus- ja Teadusministeerium (Ministry of Education and Research)",
+   "published": "2024-07",
+   "title": "Eesti keele tasemeeksamiks ettevalmistava täienduskoolituse tegevusloa taotlemise kirjeldus",
+   "publisher": "Haridus- ja Teadusministeerium",
+   "doc_type": "official_page",
+   "note": "The ministry states that it manages EHIS.",
+   "review": {
+    "id": 52,
+    "quote_found": true,
+    "established": "EHIS, administered by Haridus- ja Teadusministeerium",
+    "reason": "The quote says EHIS is a national register administered by the Ministry of Education and Research."
+   }
+  },
+  {
+   "claim": "indicator:EE:K1",
+   "question": "Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? yes = Operated by the state or a state-controlled body; partial = Operated by a private EU provider under state contract; no = Operated by a provider outside state control or outside the EU",
+   "relation": "fills_gap",
+   "url": "https://www.ria.ee/en/state-information-system/electronic-identity-eid-and-trust-services/electronic-identity-eid",
+   "quote": "The state sources much of the PKI-related services from the private sector (SK ID Solutions AS), e.g. the certification service, the infrastructure for checking the validity of certificates, the infrastructure for sharing the public key (the LDAP service)",
+   "quote_english": "",
+   "value": "partial",
+   "published": "",
+   "title": "Electronic identity (eID)",
+   "publisher": "Riigi Infosüsteemi Amet (Information System Authority)",
+   "doc_type": "official_page",
+   "note": "PKI certification is sourced from a private Estonian company under state contract; RIA's 2025 ecosystem overview adds that Zetes Estonia OÜ provides qualified certification for new ID cards from the end of 2025, also a private EU provider.",
+   "review": {
+    "id": 53,
+    "quote_found": true,
+    "established": "partial",
+    "reason": "The quote says the state sources much of its PKI, including the certification and validity services, from a private company, SK ID Solutions AS. That fits 'private EU provider under state contract'."
+   }
+  },
+  {
+   "claim": "indicator:EE:K2",
+   "question": "Is the national electronic identity scheme operated by the state or a state-controlled body? yes = Operated by the state or a state-controlled body; partial = Operated by a private EU provider (e.g. a bank consortium) under state supervision; no = Operated by a provider outside the EU",
+   "relation": "fills_gap",
+   "url": "https://www.ria.ee/sites/default/files/documents/2025-10/Estonian-eID-ecosystem.pdf",
+   "quote": "The roles and responsibilities of the PBGB in the Estonian eID ecosystem are: • Issuance of identity documents (including documents that can be used as eID means); • Development of identity documents, signing contracts with service providers;",
+   "quote_english": "",
+   "value": "yes",
+   "published": "2025-10",
+   "title": "Estonian electronic identity ecosystem – Overview, Version 1.0",
+   "publisher": "Riigi Infosüsteemi Amet (Information System Authority)",
+   "doc_type": "official_page",
+   "note": "The state police board issues the national eID (ID card, Mobile-ID as statutory owner) and RIA runs the authentication infrastructure; certificates and chips come from contracted private providers, and Smart-ID is a separate private scheme.",
+   "review": {
+    "id": 54,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote gives the PBGB, a state agency, the roles of issuing and developing eID documents and signing contracts with service providers. So a state body runs the scheme and contracts out services."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:EE:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:EE:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:EE:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:facial_biometric:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:facial_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:breeder_documents:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:EE:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:authentication_audit_log:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:government_payroll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:central_bank:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:EE:defence_command:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EE:intelligence:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EE:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:grid_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:water_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EE:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:EE:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:EE:K2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:EE:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:EE:L3",
+   "status": "not_reached"
+  }
+ ]
+}

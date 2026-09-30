@@ -1,0 +1,556 @@
+{
+ "iso": "RO",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:RO:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corroborates",
+   "url": "https://www.adr.gov.ro/investitia-2-dezvoltarea-cloudului-si-migrarea-in-cloud",
+   "quote": "minim 30 de aplicații și sisteme IT&C, prin intermediul cărora sunt furnizate servicii digitale guvernamentale, vor fi migrate în cloud până în iunie 2026.",
+   "quote_english": "at least 30 IT&C applications and systems through which government digital services are provided will be migrated to the cloud by June 2026.",
+   "value": "Partly: the government cloud is still being populated, with at least 30 applications to be migrated by June 2026",
+   "published": "",
+   "title": "Investiția 2 – Migrarea aplicațiilor și sistemelor informatice în cloud (MAS IC)",
+   "publisher": "Autoritatea pentru Digitalizarea României (ADR)",
+   "doc_type": "official_page",
+   "note": "The ADR project page for the migration investment (project term 06.07.2023 to 30.06.2026) shows the government cloud was still being built and populated, which supports 'Partly'.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says at least 30 applications 'will be migrated' to the cloud by June 2026. That is a future plan, and it does not say that any government cloud platform is in operation."
+   }
+  },
+  {
+   "claim": "indicator:RO:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://trustedlist.adr.gov.ro/trustedlist.xml",
+   "quote": "OU=Autoritatea de Certificare STS ROOT G2, O=STS, C=RO Fh4HOeG7MT/ugThqcLbBhVKVF98= http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted 2020-11-13T22:00:00Z",
+   "quote_english": "OU=Certification Authority STS ROOT G2, O=STS, C=RO [key id] status granted 2020-11-13",
+   "value": "Yes: the Special Telecommunications Service (STS), a state body, runs the qualified root CA 'STS ROOT G2' with granted status on Romania's trusted list",
+   "published": "2026-09-28",
+   "title": "Romanian Trusted List (TSL)",
+   "publisher": "Autoritatea pentru Digitalizarea României (ADR)",
+   "doc_type": "official_page",
+   "note": "This is the official eIDAS trusted list XML, referenced from the EU LOTL and issued 2026-09-28. It independently shows a state body (STS) as a qualified trust service provider; the source is XML, so the quote joins text from adjacent elements.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The trusted list shows the STS ROOT G2 service with status 'granted'. Its TSP entry names the operator as Serviciul de Telecomunicatii Speciale (Special Telecommunications Service), a state body, so the root is state-operated."
+   }
+  },
+  {
+   "claim": "indicator:RO:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "supersedes",
+   "url": "https://trustedlist.adr.gov.ro/trustedlist.xml",
+   "quote": "CN=SRI Root CA, OU=UM 0296, OID.2.5.4.97=VATRO-14381010, O=SRI, C=RO pme+pWxykYvdBBhAd2S8HWSi9FY= http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted 2026-07-10T07:00:00Z",
+   "quote_english": "CN=SRI Root CA, OU=Military Unit 0296, O=SRI (Romanian Intelligence Service), C=RO, status granted 2026-07-10",
+   "value": "Yes: the Romanian Intelligence Service (SRI) also operates a qualified root CA, 'SRI Root CA', granted in 2026",
+   "published": "2026-09-28",
+   "title": "Romanian Trusted List (TSL)",
+   "publisher": "Autoritatea pentru Digitalizarea României (ADR)",
+   "doc_type": "official_page",
+   "note": "This is newer information: since July 2026 a second state body (SRI) is a qualified trust service provider, alongside STS.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The trusted list shows SRI Root CA with status 'granted' from 2026-07-10. Its TSP entry names the operator as Serviciul Român de Informații, acting through military unit UM 0296, which is a state body."
+   }
+  },
+  {
+   "claim": "indicator:RO:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "corroborates",
+   "url": "https://orniss.ro/",
+   "quote": "ORNISS exercită atribuţii de reglementare, autorizare, evidenţă şi control în conformitate cu prevederile Legii nr. 182/2002 privind protecţia informaţiilor clasificate, ale Standardelor naţionale de protecţie a informaţiilor clasificate în România, aprobate prin Hotărârea Guvernului nr. 585/2002",
+   "quote_english": "ORNISS exercises regulatory, authorisation, record-keeping and control powers under Law no. 182/2002 on the protection of classified information and the National standards for the protection of classified information in Romania, approved by Government Decision no. 585/2002",
+   "value": "Yes: classified information is governed by Legea nr. 182/2002 and the national standards approved by Hotărârea Guvernului nr. 585/2002",
+   "published": "",
+   "title": "ORNISS – Atribuţii",
+   "publisher": "Oficiul Registrului Național al Informațiilor Secrete de Stat (ORNISS)",
+   "doc_type": "official_page",
+   "note": "The national security authority for classified information independently confirms that the classification regime rests on a statute (Law 182/2002) and a binding Government Decision. The official law portal legislatie.just.ro refused every connection, so no T1 upgrade was possible.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote places classified-information protection under Law no. 182/2002 and under national standards approved by Government Decision no. 585/2002, so the classification scheme rests on statute and binding regulation."
+   }
+  },
+  {
+   "claim": "record:RO:police_records:register",
+   "question": "Police information systems: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://igi.mai.gov.ro/protectia-datelor/",
+   "quote": "Legea nr. 76/2023 privind organizarea și funcționarea Sistemului Național de Semnalizare și participarea României la Sistemul Informatic Schengen",
+   "quote_english": "Law no. 76/2023 on the organisation and functioning of the National Signalling System and Romania's participation in the Schengen Information System",
+   "value": "Sistemul Național de Semnalizare (National Signalling System)",
+   "published": "",
+   "title": "Protecția datelor – Informare privind prelucrarea datelor cu caracter personal",
+   "publisher": "Inspectoratul General pentru Imigrări (MAI)",
+   "doc_type": "official_page",
+   "note": "Law 76/2023 appears to replace the national alerts system (SINS, under Law 141/2010) cited in the printed fact with the 'Sistemul Național de Semnalizare', so the printed name may be out of date.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Sistemul Național de Semnalizare (national alert system linked to the Schengen Information System)",
+    "reason": "The quote names Law 76/2023 on the Sistemul Național de Semnalizare and on Romania's participation in the Schengen Information System. The page context describes the national alert system as the place where national-interest alerts are recorded."
+   }
+  },
+  {
+   "claim": "record:RO:civil_registry:register",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://depabd.mai.gov.ro/atributii.html",
+   "quote": "actualizeaza, utilizeaza si valorifica datele din Registrul national de evidenta a persoanelor potrivit legii",
+   "quote_english": "updates, uses and exploits the data in the National Register of Persons Records according to the law",
+   "value": "Registrul national de evidenta a persoanelor (National Register of Persons Records)",
+   "published": "",
+   "title": "Atributii – Directia Generala pentru Evidenta Persoanelor",
+   "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+   "doc_type": "official_page",
+   "note": "The same page lists the duty 'gestioneaza si administreaza Sistemul national informatic de evidenta a persoanelor', the national IT system behind the register.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Registrul național de evidență a persoanelor",
+    "reason": "The quote names the national population register, the Registrul national de evidenta a persoanelor, whose data the directorate updates and uses."
+   }
+  },
+  {
+   "claim": "record:RO:civil_registry:operator",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://depabd.mai.gov.ro/atributii.html",
+   "quote": "Directia Generala pentru Evidenta Persoanelor functioneaza ca structura operativa în cadrul Ministerului Afacerilor Interne, avand atributii în:",
+   "quote_english": "The Directorate General for Persons Records operates as an operational structure within the Ministry of Internal Affairs, with duties in:",
+   "value": "Directia Generala pentru Evidenta Persoanelor (Directorate General for Persons Records), within the Ministry of Internal Affairs",
+   "published": "",
+   "title": "Atributii – Directia Generala pentru Evidenta Persoanelor",
+   "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+   "doc_type": "official_page",
+   "note": "Items 3 and 7 of the duty list that follows this sentence give DGEP (formerly DEPABD) the updating of the Registrul national de evidenta a persoanelor and the administration of its national IT system.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Direcția Generală pentru Evidența Persoanelor (Ministry of Internal Affairs)",
+    "reason": "The quote says the General Directorate for Persons Records operates as an operative structure within the Ministry of Internal Affairs. In the page context, this directorate manages the national population register, so the operator is national."
+   }
+  },
+  {
+   "claim": "record:RO:breeder_documents:register",
+   "question": "Breeder document scans: Birth certificates, naturalisation decrees and other documents that establish identity",
+   "relation": "fills_gap",
+   "url": "https://depabd.mai.gov.ro/",
+   "quote": "Peste 3 milioane de dosare de stare civilă, înregistrate în Sistemul Informatic Integrat pentru Emiterea Actelor de Stare Civilă (SIIEASC)",
+   "quote_english": "Over 3 million civil status files registered in the Integrated IT System for Issuing Civil Status Documents (SIIEASC)",
+   "value": "Sistemul Informatic Integrat pentru Emiterea Actelor de Stare Civilă – SIIEASC (Integrated IT System for Issuing Civil Status Documents)",
+   "published": "",
+   "title": "Direcția Generală pentru Evidența Persoanelor – prima pagină",
+   "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+   "doc_type": "official_page",
+   "note": "SIIEASC is the digital system for civil status records (birth, marriage and death), the breeder documents for identity; the page links a 2025-08-22 press release on it.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Sistemul Informatic Integrat pentru Emiterea Actelor de Stare Civilă (SIIEASC)",
+    "reason": "The quote names SIIEASC as the system in which more than 3 million civil-status files are registered."
+   }
+  },
+  {
+   "claim": "record:RO:breeder_documents:count",
+   "question": "Breeder document scans: Birth certificates, naturalisation decrees and other documents that establish identity",
+   "relation": "fills_gap",
+   "url": "https://depabd.mai.gov.ro/",
+   "quote": "Peste 3 milioane de dosare de stare civilă, înregistrate în Sistemul Informatic Integrat pentru Emiterea Actelor de Stare Civilă (SIIEASC)",
+   "quote_english": "Over 3 million civil status files registered in the Integrated IT System for Issuing Civil Status Documents (SIIEASC)",
+   "value": "over 3 million civil status files",
+   "published": "",
+   "title": "Direcția Generală pentru Evidența Persoanelor – prima pagină",
+   "publisher": "Direcția Generală pentru Evidența Persoanelor (MAI)",
+   "doc_type": "official_page",
+   "note": "The figure is a headline on the DGEP homepage that links a 2025 press release, so it is a point-in-time count.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Sistemul Informatic Integrat pentru Emiterea Actelor de Stare Civilă (SIIEASC)",
+    "reason": "This quote is identical to item 7. It names SIIEASC and gives a count of more than 3 million civil-status files, but it does not itself say who operates the system (the page context attributes the news to DGEP)."
+   }
+  },
+  {
+   "claim": "record:RO:issuance_history:register",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://pasapoarte.mai.gov.ro/furnizarea-datelor-din-r-n-e-p-s/",
+   "quote": "una dintre atribuțiile Direcției Generale de Pașapoarte este reprezentată de furnizarea datelor privind cetățenia română din Registrul naţional de evidenţă a paşapoartelor simple.",
+   "quote_english": "one of the duties of the Directorate General for Passports is providing data on Romanian citizenship from the National Register of Simple Passports.",
+   "value": "Registrul naţional de evidenţă a paşapoartelor simple – R.N.E.P.S. (National Register of Simple Passports)",
+   "published": "2024-05-16",
+   "title": "Furnizarea datelor din R.N.E.P.S.",
+   "publisher": "Direcția Generală de Pașapoarte (MAI)",
+   "doc_type": "official_page",
+   "note": "The page was published 2021-02-16 and updated 2024-05-16. It covers passport issuance; ID-card issuance sits in the DGEP person register.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Registrul național de evidență a pașapoartelor simple",
+    "reason": "The quote names the national register of simple passports, from which the General Directorate of Passports supplies data."
+   }
+  },
+  {
+   "claim": "record:RO:issuance_history:operator",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://pasapoarte.mai.gov.ro/furnizarea-datelor-din-r-n-e-p-s/",
+   "quote": "una dintre atribuțiile Direcției Generale de Pașapoarte este reprezentată de furnizarea datelor privind cetățenia română din Registrul naţional de evidenţă a paşapoartelor simple.",
+   "quote_english": "one of the duties of the Directorate General for Passports is providing data on Romanian citizenship from the National Register of Simple Passports.",
+   "value": "Direcția Generală de Pașapoarte (Directorate General for Passports)",
+   "published": "2024-05-16",
+   "title": "Furnizarea datelor din R.N.E.P.S.",
+   "publisher": "Direcția Generală de Pașapoarte (MAI)",
+   "doc_type": "official_page",
+   "note": "DGP provides the data from the passport register; the page does not name a separate custodian.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "Direcția Generală de Pașapoarte",
+    "reason": "This quote is identical to item 9. It ties the passport register to the General Directorate of Passports, which supplies data from it."
+   }
+  },
+  {
+   "claim": "record:RO:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: Fingerprints captured for passports and ID cards where retained centrally",
+   "relation": "fills_gap",
+   "url": "https://carteadeidentitate.gov.ro/despre/",
+   "quote": "Legea stabilește expres că imaginile amprentelor preluate în bazele de date de producție se șterg, prin procedură automată, imediat după ce titularul a intrat în posesia CEI sau la împlinirea unui termen de 3 luni de la data programată pentru eliberarea actului de identitate.",
+   "quote_english": "The law expressly provides that fingerprint images captured in the production databases are deleted automatically as soon as the holder receives the CEI, or at the latest 3 months after the scheduled issue date of the identity document.",
+   "value": "Not retained centrally: CEI fingerprint images are deleted from the production databases after handover, or within 3 months",
+   "published": "",
+   "title": "Despre Cartea Electronică de Identitate",
+   "publisher": "Ministerul Afacerilor Interne (carteadeidentitate.gov.ro)",
+   "doc_type": "official_page",
+   "note": "This answers the gap: Romania keeps no central fingerprint register for ID cards. It does not cover passports.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "no (fingerprints are not retained centrally)",
+    "reason": "The quote says the law requires fingerprint images in the production databases to be deleted automatically once the holder receives the ID card, or at the latest 3 months after the scheduled issuance date."
+   }
+  },
+  {
+   "claim": "record:RO:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.politiaromana.ro/ro/stiri-si-media/comunicate/aproape-un-milion-de-certificate-de-cazier-judiciar-obtinute-online",
+   "quote": "fiind dezvoltată şi funcţionalitatea de eliberare a certificatelor de cazier judiciar pentru persoane cunoscute cu menţiuni în evidenţa cazierului judiciar.",
+   "quote_english": "with the functionality also developed to issue criminal record certificates for persons known with entries in the criminal record register.",
+   "value": "evidenţa cazierului judiciar (criminal record register)",
+   "published": "2025-06-21",
+   "title": "Aproape un milion de certificate de cazier judiciar obținute online",
+   "publisher": "Inspectoratul General al Poliției Române (IGPR)",
+   "doc_type": "official_page",
+   "note": "This is a press release from the Romanian Police (IGPR), a T2 body, which keeps criminal records under MAI. The same release reports 933,058 electronic certificates issued, a count of certificates rather than of records.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "cazier judiciar (criminal record register)",
+    "reason": "The quote refers to the criminal record register ('evidența cazierului judiciar') and to issuing criminal record certificates online. It does not name the operator; the page context points to the police and the Ministry of Internal Affairs hub."
+   }
+  },
+  {
+   "claim": "record:RO:public_finance:register",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://mfinante.gov.ro/web/forexepublic",
+   "quote": "Ați accesat Portalul FOREXEBUG al Ministerului Finanțelor! Bun venit! Pentru accesarea funcționalităților Punctului Unic de Acces, este necesară autentificarea.",
+   "quote_english": "You have accessed the FOREXEBUG Portal of the Ministry of Finance! Welcome! Authentication is required to access the Single Access Point functions.",
+   "value": "Portalul FOREXEBUG (FOREXEBUG portal) of the Ministry of Finance",
+   "published": "",
+   "title": "Punct unic de acces – ForexePublic",
+   "publisher": "Ministerul Finanțelor",
+   "doc_type": "official_page",
+   "note": "The Ministry of Finance site menu names this 'Sistemul național de raportare FOREXEBUG', the national budget-execution reporting system for public entities.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "FOREXEBUG",
+    "reason": "The page is the Ministry of Finance's FOREXEBUG portal. In the page context, public institutions use it to report budget execution and financial statements."
+   }
+  },
+  {
+   "claim": "record:RO:public_finance:operator",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://mfinante.gov.ro/web/forexepublic",
+   "quote": "Ați accesat Portalul FOREXEBUG al Ministerului Finanțelor! Bun venit! Pentru accesarea funcționalităților Punctului Unic de Acces, este necesară autentificarea.",
+   "quote_english": "You have accessed the FOREXEBUG Portal of the Ministry of Finance! Welcome! Authentication is required to access the Single Access Point functions.",
+   "value": "Ministerul Finanțelor (Ministry of Finance)",
+   "published": "",
+   "title": "Punct unic de acces – ForexePublic",
+   "publisher": "Ministerul Finanțelor",
+   "doc_type": "official_page",
+   "note": "The Ministry of Finance runs the portal on its own domain.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "Ministerul Finanțelor",
+    "reason": "This quote is identical to item 13. It identifies FOREXEBUG as the Ministry of Finance's portal, which makes the Ministry of Finance the operator."
+   }
+  },
+  {
+   "claim": "record:RO:benefits_pensions:register",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://www.cnpp.ro/despre-cnpp/strategie/",
+   "quote": "Casa Naţională de Pensii Publice urmăreşte: creşterea veniturilor la bugetul asigurărilor sociale de stat; optimizarea cheltuielilor; actualizarea sistemului informatic integrat (date, aplicaţii, comunicare);",
+   "quote_english": "The National House of Public Pensions aims at: increasing revenues to the state social insurance budget; optimising spending; updating the integrated IT system (data, applications, communication);",
+   "value": "sistemul informatic integrat (integrated IT system) of Casa Naţională de Pensii Publice",
+   "published": "2026-08-19",
+   "title": "Strategie – CNPP",
+   "publisher": "Casa Națională de Pensii Publice (CNPP)",
+   "doc_type": "official_page",
+   "note": "This is weak: the page names CNPP's integrated IT system only generically and gives no proper name for the pension register. The page was last modified 2026-08-19.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote only lists strategy goals, one of which is updating an integrated IT system. It does not name a specific register or system, and it gives no count or operator detail beyond the goal itself."
+   }
+  },
+  {
+   "claim": "indicator:RO:C1",
+   "question": "Does the state operate its own government data centres that are in operation today? yes = Operated by the state or a state-controlled body and in operation; partial = Planned or under construction; no = A source states the state operates none",
+   "relation": "fills_gap",
+   "url": "https://www.research.gov.ro/ministrul-bogdan-ivan-anunta-finalizarea-instalarii-tuturor-echipamentelor-pentru-cloudul-dedicat-in-centrul-de-date-sts-de-la-brasov-22761/",
+   "quote": "Inginerii și specialiștii care operează centrul de date au pregătire, expertiză și acreditări specifice în astfel de instalații critice și sunt în măsură să asigure disponibilitatea ridicată a centrului de date, securitatea operațională, eficiența energetică și suportul tehnic pentru instituțiile publice din România care au găzduite echipamente în această incintă.",
+   "quote_english": "The engineers and specialists who operate the data centre have specific training, expertise and accreditations for such critical facilities and can ensure the data centre's high availability, operational security, energy efficiency and technical support for Romanian public institutions that host equipment on these premises.",
+   "value": "yes",
+   "published": "2024-12-19",
+   "title": "Ministrul Bogdan Ivan anunță finalizarea instalării tuturor echipamentelor pentru cloudul dedicat în centrul de date STS de la Brașov",
+   "publisher": "Ministerul Cercetării, Inovării și Digitalizării (research.gov.ro)",
+   "doc_type": "official_page",
+   "note": "The STS (state) data centre at Cristian, Brașov is in operation, hosts public institutions' equipment and holds TIER III certification; the same release says it houses the government cloud's dedicated component.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote describes engineers who operate the data centre and give support to the Romanian public institutions whose equipment it already hosts. The page context identifies this as the STS data centre at Cristian, and STS is a state body, so a state-operated data centre is in operation."
+   }
+  },
+  {
+   "claim": "indicator:RO:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corroborates",
+   "url": "https://www.research.gov.ro/ministrul-bogdan-ivan-anunta-finalizarea-instalarii-tuturor-echipamentelor-pentru-cloudul-dedicat-in-centrul-de-date-sts-de-la-brasov-22761/",
+   "quote": "Amplasat în localitatea Cristian, județul Brașov, centrul de date al STS găzduiește deja echipamentele tehnice pentru operaționalizarea componentei de cloud dedicat a cloudului guvernamental al statului român.",
+   "quote_english": "Located in Cristian, Brașov county, the STS data centre already hosts the technical equipment for putting into operation the dedicated cloud component of the Romanian state's government cloud.",
+   "value": "Partly: government cloud equipment is installed in the STS data centre, pending operationalisation",
+   "published": "2024-12-19",
+   "title": "Ministrul Bogdan Ivan anunță finalizarea instalării tuturor echipamentelor pentru cloudul dedicat în centrul de date STS de la Brașov",
+   "publisher": "Ministerul Cercetării, Inovării și Digitalizării (research.gov.ro)",
+   "doc_type": "official_page",
+   "note": "The ministry release says the hardware for the dedicated government cloud was installed and configuration was the next step, which is consistent with 'Partly'.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "partial",
+    "reason": "The quote says the STS data centre already hosts equipment 'for operationalizing' the dedicated government cloud component. That means the equipment is installed but the platform is not stated to be in operation."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:RO:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:RO:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:RO:K2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:RO:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:border_control:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:border_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:RO:central_bank:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:digital_identity_credentials:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:RO:digital_identity_credentials:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:RO:education:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:RO:electoral_roll:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:facial_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:geospatial:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:grid_control:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:grid_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:health_insurance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:police_records:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:tax:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:trust_services_pki:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:trust_services_pki:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:water_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:RO:water_control:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:RO:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:breeder_documents:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:authentication_audit_log:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:RO:residence_permits:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:customs:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:business_registry:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:beneficial_ownership:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:vehicle_licensing:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:firearms_register:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:official_gazette:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:electoral_management:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:defence_command:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:RO:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:emergency_communications:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:RO:crisis_management:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:RO:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:RO:L1",
+   "status": "not_reached"
+  },
+  {
+   "claim": "indicator:RO:L3",
+   "status": "not_reached"
+  }
+ ]
+}

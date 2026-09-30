@@ -27,7 +27,8 @@ KINDS = {1: {"official_law_portal", "statistics_office", "eurostat_or_commission
          4: {"unofficial_law_mirror", "press", "encyclopedia"},
          0: {"archive_of_another_source"}}
 # Commercial or community copies of national law. Useful to a reader; never the authoritative text.
-MIRRORS = {"net.jogtar.hu", "zakonyprolidi.cz", "zakony.judikaty.info", "lawspot.gr", "zakon.hr"}
+MIRRORS = {"net.jogtar.hu", "zakonyprolidi.cz", "zakony.judikaty.info", "lawspot.gr", "zakon.hr", "cylaw.org",
+           "etaamb.openjustice.be"}
 
 
 class Authorities(unittest.TestCase):
@@ -71,6 +72,128 @@ class Authorities(unittest.TestCase):
             for c in cites:
                 if c["checks"]["tier"] > 2:
                     self.assertEqual(c["grade"], evidence.STANDARD, claim)
+
+
+class Recheck(unittest.TestCase):
+    """A source that changes after admission (research.py recheck, #83)."""
+
+    @classmethod
+    def setUpClass(cls):
+        import document  # noqa: PLC0415
+        cls.document = document
+        cls.src = document.Sources()
+        # A printed register fact backed by exactly one source, to force outcomes on.
+        cls.claim, cls.text = next(
+            (c, e["register"]) for iso, e in cls._held()
+            for c in [f"record:{iso}:{e['record_class']}:register"]
+            if len(cls.src.backing(c, e["register"])) == 1)
+        cls.sid = cls.src.backing(cls.claim, cls.text)[0]["source_id"]
+
+    @staticmethod
+    def _held():
+        import national_data as nd  # noqa: PLC0415
+        return [(r["iso"], r) for r in nd.read_rows() if r["status"] == "held" and r["register"]]
+
+    def with_outcome(self, outcome):
+        saved = self.src.rechecked
+        self.src.rechecked = {self.sid: {"outcome": outcome, "checked": "2026-10-01", "http_status": "404",
+                                         "claims_missing": self.claim if outcome == "quote_vanished" else ""}}
+        try:
+            return self.src.fact(self.claim, self.text)
+        finally:
+            self.src.rechecked = saved
+
+    def test_a_vanished_quote_is_disputed_never_a_fact(self):
+        span = self.with_outcome("quote_vanished")
+        self.assertEqual(span["role"], "disputed")
+        self.assertEqual(span["c"], [self.claim])
+        self.assertNotIn(self.text, span["t"])
+
+    def test_a_quote_lost_by_another_fact_on_the_same_source_leaves_this_one_alone(self):
+        saved = self.src.rechecked
+        self.src.rechecked = {self.sid: {"outcome": "quote_vanished", "checked": "2026-10-01",
+                                         "http_status": "200", "claims_missing": "record:XX:other:register"}}
+        try:
+            self.assertEqual(self.src.fact(self.claim, self.text)["role"], "fact")
+        finally:
+            self.src.rechecked = saved
+
+    def test_a_source_that_is_gone_is_disputed(self):
+        self.assertEqual(self.with_outcome("gone")["role"], "disputed")
+
+    def test_a_refused_fetch_disputes_nothing(self):
+        self.assertEqual(self.with_outcome("unreachable")["role"], "fact")
+
+    def test_a_changed_page_that_still_holds_the_quote_stays_a_fact(self):
+        self.assertEqual(self.with_outcome("changed_quotes_present")["role"], "fact")
+
+
+class Admission(unittest.TestCase):
+    """The rules vetting.py admits by (#83). The researcher's own label is never what decides."""
+
+    @classmethod
+    def setUpClass(cls):
+        import vetting  # noqa: PLC0415
+        cls.v = vetting
+
+    def finding(self, claim, value, established, quote="Das Zentrale Melderegister enthält 9,1 Millionen Einträge",
+                found=True):
+        return {"claim": claim, "value": value, "quote": quote, "title": "",
+                "review": {"quote_found": found, "established": established}}
+
+    def test_a_reviewer_who_reached_the_same_figure_agrees(self):
+        f = self.finding("record:AT:civil_registry:count", "9.1 million entries", "9,1 Millionen Einträge")
+        self.assertFalse(self.v.agree(f))      # figure agrees, but no shared word: not the same reading
+        f = self.finding("record:AT:civil_registry:count", "9.1 Millionen Einträge", "9,1 Millionen Einträge")
+        self.assertTrue(self.v.agree(f))
+
+    def test_a_different_figure_is_disagreement(self):
+        f = self.finding("record:AT:civil_registry:count", "9.1 Millionen Einträge", "8,4 Millionen Einträge")
+        self.assertFalse(self.v.agree(f))
+
+    def test_a_reviewer_who_could_not_find_the_quote_never_agrees(self):
+        f = self.finding("record:AT:civil_registry:register", "Zentrales Melderegister",
+                         "Zentrales Melderegister", found=False)
+        self.assertFalse(self.v.agree(f))
+
+    def test_categorical_values_must_match_exactly(self):
+        f = self.finding("indicator:AT:L1", "yes", "partial")
+        self.assertFalse(self.v.agree(f))
+        f = self.finding("indicator:AT:L1", "yes", "Yes")
+        self.assertTrue(self.v.agree(f))
+
+    def test_a_higher_tier_wins(self):
+        mirror = {"url": "https://net.jogtar.hu/x", "doc_type": "statute", "published": ""}
+        portal = {"url": "https://ris.bka.gv.at/y", "doc_type": "statute"}
+        self.assertEqual(self.v.resolve(mirror, portal, ""), "higher_tier")
+
+    def test_the_same_tier_from_another_authority_stays_disputed(self):
+        agency = {"url": "https://www.bmi.gv.at/z", "doc_type": "webpage", "published": "2024-01"}
+        other = {"url": "https://www.brz.gv.at/w", "doc_type": "webpage"}
+        self.assertEqual(self.v.resolve(agency, other, "2026-05"), "")
+
+    def test_the_same_authority_later_supersedes_only_with_both_dates(self):
+        old = {"url": "https://www.bmi.gv.at/a", "doc_type": "webpage", "published": "2024-01"}
+        new = {"url": "https://www.bmi.gv.at/b", "doc_type": "webpage"}
+        self.assertEqual(self.v.resolve(old, new, "2026-03"), "later_same_authority")
+        self.assertEqual(self.v.resolve({**old, "published": ""}, new, "2026-03"), "")
+        self.assertEqual(self.v.resolve(old, new, "2023-12"), "")
+
+
+class SameValue(unittest.TestCase):
+    def test_two_different_registers_are_not_the_same_value(self):
+        import vetting  # noqa: PLC0415
+        f = {"claim": "record:AT:tax:register", "value": "FinanzOnline", "quote": "FinanzOnline ist das Portal", "title": ""}
+        self.assertFalse(vetting.same_value("Zentrales Melderegister", f))
+        self.assertTrue(vetting.same_value("FinanzOnline (tax portal)", f))
+
+
+class AbsenceIsAFinding(unittest.TestCase):
+    def test_a_source_that_a_register_exists_contradicts_an_admitted_absence(self):
+        import vetting  # noqa: PLC0415
+        f = {"claim": "record:AT:fingerprint_biometric:register", "value": "Erkennungsdienstliche Evidenz",
+             "quote": "Die Erkennungsdienstliche Evidenz wird geführt", "title": ""}
+        self.assertFalse(vetting.same_value("No central register", f))
 
 
 if __name__ == "__main__":

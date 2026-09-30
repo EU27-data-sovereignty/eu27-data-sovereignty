@@ -7,7 +7,7 @@ Write docs/evidence.md: the state of the evidence behind every printed fact, wit
 Why this file exists
 --------------------
 A description of the evidence written by hand drifts from the evidence, which is how "every fact was
-fetched, hashed and checked" came to be printed over figures that were never hashed (#82). This page is
+fetched, hashed and checked" came to be printed over citations that were never checked (#82). This page is
 generated from web/public/data/eu27.json on every `./run.sh data`, and ./test.sh fails when the
 committed copy differs from a fresh one. Its charts are Mermaid, so GitHub renders them from text and a
 diff shows exactly what moved.
@@ -40,7 +40,7 @@ SHORTFALLS = [
     ("No archived copy of exactly this URL", lambda c: not c["archived"]),
     ("Categorical: review agreed but was not blind", lambda c: "review" in c),
     ("A name in the value is not in the quote", lambda c: bool(c.get("names_not_in_quote"))),
-    ("Dataset response not yet hashed", lambda c: not c["document_hashed"]),
+    ("Dataset response not hashed", lambda c: not c["document_hashed"]),
     ("Secondary source or statement of absence", lambda c: c["source"] not in ("primary", "official")),
     ("Quote matched loosely (punctuation)", lambda c: c.get("quote_match") == "loose"),
 ]
@@ -61,10 +61,28 @@ def facts(b: dict):
                 yield iso, span, b["claims"][span["c"][0]][0]
 
 
+def _runs_table() -> list[str]:
+    manifests = sorted((ROOT / "model" / "research" / "vetting" / "runs").glob("*.json"))
+    if not manifests:
+        return ["No run recorded yet."]
+    out = ["| Run | Reviewer | Findings | Admitted (corroborated / filled / superseded) | Disputed | Prompts sha256 |",
+           "|---|---|---:|---|---:|---|"]
+    for p in manifests:
+        m = json.loads(p.read_text(encoding="utf-8"))
+        o = m.get("outcomes", {})
+        sup = sum(v for k, v in o.items() if k.startswith("superseded"))
+        out.append(f"| {m['run']} | {', '.join(m['reviewer_model'])} | {m['findings']} | "
+                   f"{o.get('corroborated', 0)} / {o.get('filled_gap', 0)} / {sup} | {o.get('disputed', 0)} | "
+                   f"`{m['workflow_sha256'][:12]}` |")
+    return out
+
+
 def build(b: dict) -> str:
     rows = list(facts(b))
     gaps = collections.Counter(iso for iso, doc in b["documents"].items()
-                               for s in document.walk_spans(doc) if s.get("role") == "gap")
+                               for s in document.walk_spans(doc) if s.get("role") in ("gap", "disputed"))
+    disputes = [(iso, s) for iso, doc in sorted(b["documents"].items())
+                for s in document.walk_spans(doc) if s.get("role") == "disputed"]
     by_state = collections.defaultdict(collections.Counter)
     by_kind = collections.defaultdict(collections.Counter)
     shortfall = collections.Counter()
@@ -109,7 +127,8 @@ def build(b: dict) -> str:
         f"| Printed facts | {len(rows)} |",
         f"| Strong | {strong} |",
         f"| Standard | {standard} |",
-        f"| Gaps (values withheld) | {sum(gaps.values())} |",
+        f"| Gaps (values withheld) | {sum(gaps.values()) - len(disputes)} |",
+        f"| Disputed (withheld: source changed, or sources disagree) | {len(disputes)} |",
         "",
         "```mermaid",
         "pie showData",
@@ -169,6 +188,22 @@ def build(b: dict) -> str:
         "|---|---:|---:|---:|",
         *[f"| {k} | {sum(c.values())} | {c[evidence.STRONG]} | {c[evidence.STANDARD]} |"
           for k, c in sorted(by_kind.items(), key=lambda kc: -sum(kc[1].values()))],
+        "",
+        "## Disputed facts",
+        "",
+        "A fact whose evidence came into question after it was admitted: its source dropped the quote or "
+        "disappeared on recheck (`research.py recheck`), or a vetting run found a source that disagrees. "
+        "The value is withheld until the question is settled by a published rule (METHOD.md section 7).",
+        "",
+        *([f"- `{s['c'][0]}` ({iso}): {s['t']}" for iso, s in disputes] or ["None."]),
+        "",
+        "## Agent runs",
+        "",
+        "Each vetting run leaves a manifest (`model/research/vetting/runs/`): the hashes of its input, "
+        "output and prompts, the commit it was built from, the reviewer model and the tool versions. "
+        "See [`vetting.md`](vetting.md).",
+        "",
+        *_runs_table(),
         "",
         "## How the checks run",
         "",

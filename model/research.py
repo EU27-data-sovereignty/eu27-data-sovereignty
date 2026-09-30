@@ -5,6 +5,8 @@ Admit researched claims about critical holdings only after checking them against
     python3 model/research.py verify [--iso DE ...]   # fetch, hash, find the quote, look up an archive
     python3 model/research.py admit                    # write verified claims into the registers
     python3 model/research.py report                   # coverage per country, from verification.csv
+    python3 model/research.py recheck [--source ID]    # re-fetch every source behind a printed fact (#83)
+    python3 model/research.py verify --rendered        # retry quotes not found in served HTML, rendered
 
 Why this file exists
 --------------------
@@ -93,6 +95,27 @@ class _Text(html.parser.HTMLParser):
             self.parts.append(data)
 
 
+_CHARSET = re.compile(rb"""<meta[^>]+charset=["']?([A-Za-z0-9_-]+)""", re.I)
+
+
+def decode(body: bytes) -> str:
+    """A page's text in the charset it declares. Decoding everything as UTF-8 turned every accented
+    letter on an ISO-8859-1 page into U+FFFD, so 141 genuine quotes on cylaw.org and pgdlisboa.pt
+    could never match (found 2026-09-30). UTF-8 first; then the page's own <meta charset>; then
+    Windows-1252, which is a superset of Latin-1 for text."""
+    try:
+        return body.decode("utf-8")
+    except UnicodeDecodeError:
+        pass
+    m = _CHARSET.search(body[:4096])
+    for enc in ([m.group(1).decode("ascii")] if m else []) + ["cp1252"]:
+        try:
+            return body.decode(enc)
+        except (LookupError, UnicodeDecodeError):
+            continue
+    return body.decode("utf-8", errors="replace")
+
+
 def extract(body: bytes, content_type: str) -> str:
     if content_type == "application/pdf" or body[:5] == b"%PDF-":
         with tempfile.NamedTemporaryFile(suffix=".pdf") as fh:
@@ -100,7 +123,7 @@ def extract(body: bytes, content_type: str) -> str:
             fh.flush()
             r = subprocess.run(["pdftotext", "-enc", "UTF-8", fh.name, "-"], capture_output=True)
         return r.stdout.decode("utf-8", errors="replace")
-    text = body.decode("utf-8", errors="replace")
+    text = decode(body)
     if "html" in content_type or "<html" in text[:2000].lower():
         p = _Text()
         p.feed(text)
@@ -212,6 +235,46 @@ def write_verification(rows: list[dict[str, str]]) -> None:
 # verify
 # --------------------------------------------------------------------------- #
 
+def verify_rendered() -> int:
+    """Retry, in a headless browser, every quote not found in a page that answered 200 with HTML:
+    the page may build its text with JavaScript (#83). Never a page that refused us."""
+    rows = {(r["iso"], r["class_id"], r["field"], r["url"]): r for r in load_verification()}
+    todo = [k for k, r in rows.items()
+            if r["match"] == "not_found" and r["http_status"] == "200" and r["content_type"].startswith("text/html")]
+    quotes = {}
+    for iso, doc in staged().items():
+        for cid, c in claims(doc):
+            quotes[(iso, cid, c["field"], clean_url(c["url"]))] = c["quote"]
+    for iso, doc in staged(None, INDICATOR_STAGING).items():
+        for cid, c in claims(doc):
+            quotes[(iso, cid, c["field"], clean_url(c["url"]))] = c["quote"]
+    texts: dict[str, tuple[fetch.Result, str]] = {}
+    today = dt.date.today().isoformat()
+    found = 0
+    for n, k in enumerate(todo, start=1):
+        url = k[3]
+        # The served page first, decoded in its own charset: reproducible by anyone. The browser only
+        # when the text is genuinely not in what the server sent.
+        for how in ("served", "rendered"):
+            if (url, how) not in texts:
+                res = fetch.fetch(url) if how == "served" else fetch.fetch_rendered(url)
+                texts[(url, how)] = (res, extract(res.body, res.content_type) if res.ok else "")
+            res, text = texts[(url, how)]
+            m = match(quotes.get(k, ""), text) if res.ok and k in quotes else "not_found"
+            if m in ("exact", "loose"):
+                break
+        if m in ("exact", "loose"):
+            found += 1
+            rows[k] = {**rows[k], "content_type": res.content_type, "sha256": fetch.sha256(res.body), "match": m,
+                       "archived_url": rows[k]["archived_url"] or archived(url), "checked": today}
+        print(f"[{n}/{len(todo)}] {m:<10} {url[:80]}", file=sys.stderr, flush=True)
+        if n % 10 == 0:
+            write_verification(list(rows.values()))
+    write_verification(list(rows.values()))
+    print(f"{found} of {len(todo)} quotes found once the page was rendered")
+    return 0
+
+
 def verify(isos: list[str] | None) -> int:
     today = dt.date.today().isoformat()
     docs = staged(isos)
@@ -259,6 +322,94 @@ def verify(isos: list[str] | None) -> int:
     fetch.write_manifest(fetch.merge(manifest, fresh_manifest))
     write_verification([r for k, r in existing.items() if k in live or (isos and k[0] not in isos)])
     return report()
+
+
+# --------------------------------------------------------------------------- #
+# recheck: has a cited source changed since it was admitted? (#83)
+# --------------------------------------------------------------------------- #
+
+RECHECK = STAGING / "recheck.csv"
+RFIELDS = ["source_id", "url", "checked", "http_status", "sha256_before", "sha256_now", "outcome",
+           "quotes_checked", "quotes_missing", "claims_missing"]
+# What each outcome does to the facts that rest on the source (document.Sources):
+#   unchanged, changed_quotes_present   still supported; a new hash whose quotes were all found again
+#                                       is recorded as verified (provenance.verified_hashes)
+#   quote_vanished                      a fact whose own quote is gone (claims_missing) is shown as
+#                                       disputed; the source's other facts are untouched
+#   gone                                every fact on the source is shown as disputed
+#   unreachable                         recorded, nothing changes: a refusal is not evidence of change
+DISPUTING = ("quote_vanished", "gone")
+
+
+def load_recheck() -> dict[str, dict[str, str]]:
+    if not RECHECK.exists():
+        return {}
+    with RECHECK.open(newline="", encoding="utf-8") as fh:
+        return {r["source_id"]: r for r in csv.DictReader(fh)}
+
+
+def recheck(only: list[str] | None = None) -> int:
+    """Re-fetch every source behind a printed fact and check its quotes are still there."""
+    import provenance  # noqa: PLC0415
+    import evidence  # noqa: PLC0415
+
+    today = dt.date.today().isoformat()
+    reg, params = provenance.registry(), provenance.parameters()
+    by_source: dict[str, list[dict]] = {}
+    for c in provenance.citations():
+        src = reg.get(c["source_id"])
+        if src and src["doc_type"] != "dataset" and provenance.supported(c, reg, params):
+            by_source.setdefault(c["source_id"], []).append(c)
+    rows = load_recheck()
+    fresh = []
+
+    def save() -> None:
+        # After every source, so an interrupted run (a timeout, a closed laptop) loses nothing and
+        # the next run resumes where this one stopped.
+        with RECHECK.open("w", newline="", encoding="utf-8") as fh:
+            w = csv.DictWriter(fh, fieldnames=RFIELDS, lineterminator="\n")
+            w.writeheader()
+            w.writerows(sorted(rows.values(), key=lambda r: r["source_id"]))
+
+    for n, (sid, cites) in enumerate(sorted(by_source.items()), start=1):
+        if only and sid not in only:
+            continue
+        if not only and rows.get(sid, {}).get("checked") == today:
+            continue                      # done earlier today
+        src = reg[sid]
+        before = re.search(r"\bsha256 ([0-9a-f]{64})\b", src["notes"])
+        result = fetch.fetch(src["url"])
+        now = fetch.sha256(result.body) if result.ok and result.body else ""
+        quotes = [evidence.split_quote(c["quote"])[0] for c in cites]
+        lost: list[str] = []
+        if not result.ok:
+            outcome = "gone" if str(result.status) in ("404", "410") else "unreachable"
+            missing = ""
+        else:
+            iso = cites[0]["claim"].split(":")[1]
+            fresh.append(fetch.store(iso, "recheck", sid, src["url"], result, today))
+            text = extract(result.body, result.content_type)
+            lost = [c["claim"] for c, q in zip(cites, quotes) if match(q, text) not in ("exact", "loose")]
+            gone = len(lost)
+            missing = str(gone)
+            outcome = ("quote_vanished" if gone else
+                       "unchanged" if before and before.group(1) == now else "changed_quotes_present")
+        rows[sid] = {"source_id": sid, "url": src["url"], "checked": today,
+                     "http_status": str(result.status), "sha256_before": before.group(1) if before else "",
+                     "sha256_now": now, "outcome": outcome, "quotes_checked": str(len(quotes)),
+                     "quotes_missing": missing, "claims_missing": ";".join(sorted(set(lost)))}
+        print(f"[{n}/{len(by_source)}] {outcome:<23} {sid}", file=sys.stderr, flush=True)
+        save()
+        if len(fresh) >= 25:
+            fetch.write_manifest(fetch.merge(fetch.load_manifest(), fresh))
+            fresh = []
+    fetch.write_manifest(fetch.merge(fetch.load_manifest(), fresh))
+    save()
+    counts: dict[str, int] = {}
+    for r in rows.values():
+        counts[r["outcome"]] = counts.get(r["outcome"], 0) + 1
+    print(" ".join(f"{k}={v}" for k, v in sorted(counts.items())))
+    return 0
 
 
 # --------------------------------------------------------------------------- #
@@ -365,7 +516,8 @@ def admit() -> int:
                     "claim": claim, "source_id": sid, "locator": locator, "quote": quote,
                     "value_as_found": c["value"].strip(), "unit": "", "confidence": confidence,
                     "retrieved": v["checked"],
-                    "checked_by": f"research.py: quote {v['match']} in fetched document",
+                    "checked_by": f"research.py: quote {v['match']} in fetched document"
+                                  + (" (rendered in a headless browser)" if v["content_type"] == fetch.RENDERED else ""),
                 }
 
             name = good.get("holding_name", (None, None))[0]
@@ -484,9 +636,15 @@ def admit_indicators(ok: dict, reg: dict, cites: dict) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["verify", "admit", "report"])
+    ap.add_argument("command", choices=["verify", "admit", "report", "recheck"])
     ap.add_argument("--iso", action="append")
+    ap.add_argument("--source", action="append", help="recheck: only these source ids")
+    ap.add_argument("--rendered", action="store_true", help="verify: retry not-found quotes in a headless browser")
     args = ap.parse_args(argv)
+    if args.command == "verify" and args.rendered:
+        return verify_rendered()
+    if args.command == "recheck":
+        return recheck(args.source)
     if args.command == "verify":
         return verify([i.upper() for i in args.iso] if args.iso else None)
     if args.command == "admit":

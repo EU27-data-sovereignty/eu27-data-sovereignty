@@ -1,0 +1,1068 @@
+{
+ "iso": "SI",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:SI:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/teme/informatika-v-drzavni-upravi/",
+   "quote": "Na tej infrastrukturi se izvajajo storitve, ki uporabljajo občutljive, osebne in druge podatke in informacije, ki jih država ne želi shranjevati zunaj svojega okolja.",
+   "quote_english": "Services that use sensitive, personal and other data and information that the state does not wish to store outside its own environment run on this infrastructure.",
+   "value": "Yes",
+   "published": "2026-08-20",
+   "title": "Informatika v državni upravi",
+   "publisher": "Ministrstvo za notranje zadeve in javno upravo",
+   "doc_type": "official_page",
+   "note": "A separate ministry topic page, updated August 2026, describes the Državni računalniški oblak (state cloud, DRO) as live infrastructure that holds sensitive state data.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Under the heading 'Državni računalniški oblak', the page says the state built the state computing cloud and that services using sensitive and personal data, which the state does not want stored outside its own environment, run on it now, so it is in operation."
+   }
+  },
+  {
+   "claim": "indicator:SI:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/zbirke/javne-objave/vzdrzevanje-drzavnega-racunalniskega-oblaka-dro-vmware-260317002023/",
+   "quote": "Vzdrževanje državnega računalniškega oblaka (DRO - VMware) Več na portalu javnih naročil Šifra JN001880/2026-EUe16/01 Datum objave 25. 3. 2026",
+   "quote_english": "Maintenance of the state computing cloud (DRO - VMware). More on the public procurement portal. Reference JN001880/2026-EUe16/01. Published 25. 3. 2026",
+   "value": "Yes",
+   "published": "2026-03-25",
+   "title": "Vzdrževanje državnega računalniškega oblaka (DRO - VMware)",
+   "publisher": "Ministrstvo za javno upravo",
+   "doc_type": "procurement",
+   "note": "A 2026 maintenance tender shows the DRO is in operation. It also shows the platform runs on VMware, a US vendor stack, which matters for the dependency analysis.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "A 2026 public tender for maintaining the state computing cloud (DRO - VMware) implies an existing, operating platform, though the quote is only a tender listing."
+   }
+  },
+  {
+   "claim": "indicator:SI:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-razvoj-digitalnih-resitev/sektor-za-storitve-zaupanja/",
+   "quote": "V Sektorju za storitve zaupanja, v okviru katerega deluje Državni center za storitve zaupanja SI-TRUST, izvajamo kvalificirane storitve zaupanja, kot so elektronski podpisi, elektronski žigi in elektronski časovni žigi",
+   "quote_english": "In the Trust Services Division, within which the State Trust Services Centre SI-TRUST operates, we provide qualified trust services such as electronic signatures, electronic seals and electronic time stamps",
+   "value": "Yes",
+   "published": "2026-08-10",
+   "title": "Sektor za storitve zaupanja",
+   "publisher": "Ministrstvo za notranje zadeve und javno upravo",
+   "doc_type": "official_page",
+   "note": "The ministry's own organisational page, updated August 2026, places the qualified trust service inside a ministry division. This is independent of si-trust.gov.si.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The ministry's Trust Services Sector, which houses the State Trust Services Centre SI-TRUST, provides the qualified trust services, so a state body operates them."
+   }
+  },
+  {
+   "claim": "indicator:SI:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-razvoj-digitalnih-resitev/sektor-za-storitve-zaupanja/",
+   "quote": "Državni center za storitve zaupanja SI-TRUST je skrbnik storitve za spletno prijavo in e-podpis SI-PASS, ki je enotna storitev za preverjanje identitete državljanov, tujcev, poslovnih subjektov in javnih uslužbencev ter izvajanje oddaljenega e-podpisa.",
+   "quote_english": "The State Trust Services Centre SI-TRUST is the custodian of the online login and e-signature service SI-PASS, the single service for verifying the identity of citizens, foreigners, businesses and civil servants and for remote e-signing.",
+   "value": "Yes",
+   "published": "2026-08-10",
+   "title": "Sektor za storitve zaupanja",
+   "publisher": "Ministrstvo za notranje zadeve in javno upravo",
+   "doc_type": "official_page",
+   "note": "The ministry page confirms that a state body (SI-TRUST, inside the ministry) runs SI-PASS.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "SI-TRUST, a ministry sector, administers SI-PASS, the single identity-verification service for citizens, foreigners, businesses and civil servants."
+   }
+  },
+  {
+   "claim": "record:SI:authentication_audit_log:operator",
+   "question": "Authentication audit log: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-razvoj-digitalnih-resitev/sektor-za-storitve-zaupanja/",
+   "quote": "Državni center za storitve zaupanja SI-TRUST je skrbnik storitve za spletno prijavo in e-podpis SI-PASS, ki je enotna storitev za preverjanje identitete državljanov, tujcev, poslovnih subjektov in javnih uslužbencev ter izvajanje oddaljenega e-podpisa.",
+   "quote_english": "The State Trust Services Centre SI-TRUST is the custodian of the online login and e-signature service SI-PASS, the single service for verifying the identity of citizens, foreigners, businesses and civil servants and for remote e-signing.",
+   "value": "Državni center za storitve zaupanja SI-TRUST (State Trust Services Centre SI-TRUST)",
+   "published": "2026-08-10",
+   "title": "Sektor za storitve zaupanja",
+   "publisher": "Ministrstvo za notranje zadeve in javno upravo",
+   "doc_type": "official_page",
+   "note": "The ministry page names SI-TRUST as the custodian of SI-PASS, the system whose usage records form the authentication log.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names who administers the SI-PASS authentication service but never mentions an authentication audit log or who operates one."
+   }
+  },
+  {
+   "claim": "record:SI:beneficial_ownership:register",
+   "question": "Beneficial ownership register: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/novice/2026-09-24-preverite-vpis-v-register-dejanskih-lastnikov/",
+   "quote": "Poslovni subjekti morajo ugotoviti svoje dejanske lastnike, voditi natančno evidenco o njih ter podatke vpisati v RDL, ki ga upravlja AJPES.",
+   "quote_english": "Business entities must identify their beneficial owners, keep an accurate record of them and enter the data in the RDL, which is managed by AJPES.",
+   "value": "RDL (Register dejanskih lastnikov / Register of Beneficial Owners), managed by AJPES",
+   "published": "2026-09-24",
+   "title": "Preverite vpis v register dejanskih lastnikov",
+   "publisher": "Finančna uprava Republike Slovenije",
+   "doc_type": "official_page",
+   "note": "The Financial Administration (FURS), independently of AJPES, confirms in September 2026 that the RDL exists and that AJPES operates it.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Register dejanskih lastnikov (RDL)",
+    "reason": "The page names the beneficial ownership register as the register dejanskih lastnikov (RDL), managed by AJPES."
+   }
+  },
+  {
+   "claim": "record:SI:border_control:register",
+   "question": "Border and visa systems: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://www.gov.si/novice/2025-09-15-postopna-uvedba-novega-sistema-vstopa-in-izstopa-na-zunanji-schengenski-meji/",
+   "quote": "Slovenija bo v skladu z uredbama EU 2017/2226 in 2025/1534 od 12. oktobra 2025 na zunanjih schengenskih mejah skupaj z državami članicami začela izvajati sistem vstopa in izstopa (angleško Entry Exit Sytem - EES).",
+   "quote_english": "In line with EU Regulations 2017/2226 and 2025/1534, from 12 October 2025 Slovenia, together with the member states, will start operating the Entry/Exit System (EES) at the external Schengen borders.",
+   "value": "sistem vstopa in izstopa (Entry Exit System - EES), from 12 October 2025",
+   "published": "2025-09-15",
+   "title": "Postopna uvedba novega sistema vstopa in izstopa na zunanji schengenski meji",
+   "publisher": "Ministrstvo za notranje zadeve",
+   "doc_type": "official_page",
+   "note": "Newer than the 2023 SIS item. EES was added alongside SIS, with full operation from 10 April 2026, and brings biometric registration of third-country nationals at the border.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Entry/Exit System (EES)",
+    "reason": "The quote names the system Slovenia is introducing at the external Schengen borders: the Entry Exit System (EES)."
+   }
+  },
+  {
+   "claim": "record:SI:central_bank:foreign_dependency",
+   "question": "Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "corroborates",
+   "url": "https://www.ecb.europa.eu/paym/target/html/index.en.html",
+   "quote": "TARGET Services are those services developed and operated by the Eurosystem which ensure the free flow of cash, securities and collateral across Europe.",
+   "quote_english": "",
+   "value": "eu_provider",
+   "published": "",
+   "title": "TARGET Services",
+   "publisher": "European Central Bank",
+   "doc_type": "official_page",
+   "note": "The system owner, the ECB, states that the Eurosystem develops and operates TARGET, which is an EU-level provider rather than Banka Slovenije alone.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "eu_provider",
+    "reason": "TARGET Services are developed and operated by the Eurosystem, shared EU-level infrastructure rather than national or non-EU; the quote says who operates them, not where they are physically hosted."
+   }
+  },
+  {
+   "claim": "record:SI:central_bank:register",
+   "question": "Central bank systems: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.ecb.europa.eu/paym/target/html/index.en.html",
+   "quote": "These financial market infrastructure services include T2 (for settling payments), T2S (for settling securities), TIPS (for settling instant payments) and the ECMS (for collateral management).",
+   "quote_english": "",
+   "value": "TARGET Services: T2, T2S, TIPS and ECMS",
+   "published": "",
+   "title": "TARGET Services",
+   "publisher": "European Central Bank",
+   "doc_type": "official_page",
+   "note": "The operator's own page lists the component systems behind the TARGET services that Banka Slovenije describes.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "TARGET Services: T2, T2S, TIPS, ECMS",
+    "reason": "The quote lists the TARGET services by name: T2, T2S, TIPS and ECMS."
+   }
+  },
+  {
+   "claim": "record:SI:civil_registry:operator",
+   "question": "Civil registry core: the body that operates it",
+   "relation": "supersedes",
+   "url": "https://www.gov.si/teme/registri-in-evidence-prebivalstva/",
+   "quote": "Centralni register prebivalstva (CRP) je osrednja podatkovna baza z najosnovnejšimi podatki o prebivalstvu Slovenije. Upravlja ga Ministrstvo za notranje zadeve in javno upravo.",
+   "quote_english": "The Central Population Register (CRP) is the central database with the most basic data on the population of Slovenia. It is managed by the Ministry of the Interior and Public Administration.",
+   "value": "Ministrstvo za notranje zadeve in javno upravo (Ministry of the Interior and Public Administration)",
+   "published": "2026-08-17",
+   "title": "Registri in evidence prebivalstva",
+   "publisher": "Ministrstvo za notranje zadeve in javno upravo",
+   "doc_type": "official_page",
+   "note": "Gives the ministry's current name, which the older ecrp.gov.si page gives only as the 'Ministry of the Interior'. The page was updated in August 2026.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Ministrstvo za notranje zadeve in javno upravo",
+    "reason": "The quote says the Central Population Register is managed by the Ministry of the Interior and Public Administration."
+   }
+  },
+  {
+   "claim": "record:SI:civil_registry:register",
+   "question": "Civil registry core: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/teme/registri-in-evidence-prebivalstva/",
+   "quote": "Centralni register prebivalstva (CRP) je osrednja podatkovna baza z najosnovnejšimi podatki o prebivalstvu Slovenije. Upravlja ga Ministrstvo za notranje zadeve in javno upravo.",
+   "quote_english": "The Central Population Register (CRP) is the central database with the most basic data on the population of Slovenia. It is managed by the Ministry of the Interior and Public Administration.",
+   "value": "Centralni register prebivalstva (CRP) (Central Population Register)",
+   "published": "2026-08-17",
+   "title": "Registri in evidence prebivalstva",
+   "publisher": "Ministrstvo za notranje zadeve in javno upravo",
+   "doc_type": "official_page",
+   "note": "The ministry's gov.si topic page, separate from ecrp.gov.si, confirms the CRP.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "Centralni register prebivalstva (CRP)",
+    "reason": "The quote names the core population database as the Centralni register prebivalstva (CRP)."
+   }
+  },
+  {
+   "claim": "record:SI:customs:register",
+   "question": "Customs declarations: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://www.gov.si/assets/organi-v-sestavi/FURS/Strateski-dokumenti/2026/Letno-porocilo-Financne-uprave-za-leto-2025.pdf",
+   "quote": "Republika Slovenija je 10. novembra 2025 v skladu s Carinskim zakonikom Unije uvedla posodobljen uvozni avtomatizirani sistem, ki podpira tudi centralizirano carinjenje (faza P1 in P2).",
+   "quote_english": "On 10 November 2025, in line with the Union Customs Code, the Republic of Slovenia introduced an updated automated import system that also supports centralised clearance (phases P1 and P2).",
+   "value": "Updated automated import system supporting centralised clearance, introduced 10 November 2025",
+   "published": "2026-02",
+   "title": "Letno poročilo Finančne uprave za leto 2025",
+   "publisher": "Finančna uprava Republike Slovenije",
+   "doc_type": "annual_report",
+   "note": "The 2025 annual report shows that the centralised-clearance upgrade ordered in 2024 went live in November 2025. The same report still calls the import application SIAIS2.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes an 'updated import automated system' supporting centralised clearance but gives it no proper name."
+   }
+  },
+  {
+   "claim": "record:SI:customs:count",
+   "question": "Customs declarations: how many records it holds",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/assets/organi-v-sestavi/FURS/Strateski-dokumenti/2026/Letno-porocilo-Financne-uprave-za-leto-2025.pdf",
+   "quote": "V letu 2025 je bilo sprejetih 1.146.962 carinskih deklaracij oziroma 2.582.743 blagovnih postavk v teh deklaracijah.",
+   "quote_english": "In 2025, 1,146,962 customs declarations were accepted, covering 2,582,743 goods items.",
+   "value": "1.146.962 customs declarations accepted in 2025",
+   "published": "2026-02",
+   "title": "Letno poročilo Finančne uprave za leto 2025",
+   "publisher": "Finančna uprava Republike Slovenije",
+   "doc_type": "annual_report",
+   "note": "This is an annual flow figure (declarations accepted in one year), not a stock of stored records.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "1,146,962 customs declarations (2,582,743 goods items) accepted in 2025",
+    "reason": "The quote gives the number of customs declarations accepted in 2025; this is a yearly flow, not a stock of records held."
+   }
+  },
+  {
+   "claim": "record:SI:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-razvoj-digitalnih-resitev/sektor-za-storitve-zaupanja/",
+   "quote": "V Sektorju za storitve zaupanja, v okviru katerega deluje Državni center za storitve zaupanja SI-TRUST, izvajamo kvalificirane storitve zaupanja, kot so elektronski podpisi, elektronski žigi in elektronski časovni žigi",
+   "quote_english": "In the Trust Services Division, within which the State Trust Services Centre SI-TRUST operates, we provide qualified trust services such as electronic signatures, electronic seals and electronic time stamps",
+   "value": "Državni center za storitve zaupanja SI-TRUST, within the ministry's Sektor za storitve zaupanja (Trust Services Division)",
+   "published": "2026-08-10",
+   "title": "Sektor za storitve zaupanja",
+   "publisher": "Ministrstvo za notranje zadeve in javno upravo",
+   "doc_type": "official_page",
+   "note": "The ministry's own organisational page places SI-TRUST within the ministry, independently of si-trust.gov.si.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says SI-TRUST provides qualified trust services (e-signatures, seals, timestamps) but does not say it operates digital identity credentials."
+   }
+  },
+  {
+   "claim": "record:SI:digital_identity_credentials:register",
+   "question": "Digital identity credentials: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-razvoj-digitalnih-resitev/sektor-za-storitve-zaupanja/",
+   "quote": "Državni center za storitve zaupanja SI-TRUST je skrbnik storitve za spletno prijavo in e-podpis SI-PASS, ki je enotna storitev za preverjanje identitete državljanov, tujcev, poslovnih subjektov in javnih uslužbencev ter izvajanje oddaljenega e-podpisa.",
+   "quote_english": "The State Trust Services Centre SI-TRUST is the custodian of the online login and e-signature service SI-PASS, the single service for verifying the identity of citizens, foreigners, businesses and civil servants and for remote e-signing.",
+   "value": "SI-PASS (storitev za spletno prijavo in e-podpis / online login and e-signature service)",
+   "published": "2026-08-10",
+   "title": "Sektor za storitve zaupanja",
+   "publisher": "Ministrstvo za notranje zadeve in javno upravo",
+   "doc_type": "official_page",
+   "note": "Independent ministry page with nearly the same wording as the printed fact.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "SI-PASS",
+    "reason": "The quote names SI-PASS as the single online login and e-signature identity-verification service."
+   }
+  },
+  {
+   "claim": "record:SI:electoral_roll:register",
+   "question": "Electoral roll entry: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/teme/registri-in-evidence-prebivalstva/",
+   "quote": "evidence volilne pravice (volilna pravica) registra tujcev (dovoljenje za prebivanje tujca), azilnega registra (prosilec za mednarodno zaščito)",
+   "quote_english": "the register of voting rights (voting right), the register of foreigners (a foreigner's residence permit), the asylum register (applicant for international protection)",
+   "value": "evidenca volilne pravice (register of voting rights)",
+   "published": "2026-08-17",
+   "title": "Registri in evidence prebivalstva",
+   "publisher": "Ministrstvo za notranje zadeve in javno upravo",
+   "doc_type": "official_page",
+   "note": "The CRP page lists the register of voting rights as one of the sources that feed the CRP, which matches the printed fact.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "evidenca volilne pravice",
+    "reason": "The quote names the voting-rights record (evidenca volilne pravice) as one source of the Central Population Register; it gives the record's name but not an operator."
+   }
+  },
+  {
+   "claim": "record:SI:electoral_roll:count",
+   "question": "Electoral roll entry: how many records it holds",
+   "relation": "fills_gap",
+   "url": "https://www.dvk-rs.si/volitve-in-referendumi/drzavni-zbor-rs/volitve-drzavnega-zbora-rs/volitve-v-drzavni-zbor/",
+   "quote": "Od tega je 53 volivcev glasovalo s potrdili, ostali volivci pa so bili vpisani v volilne imenike (1.695.249).",
+   "quote_english": "Of these, 53 voters voted with certificates, while the other voters were entered in the electoral rolls (1,695,249).",
+   "value": "1.695.249 voters entered in the electoral rolls",
+   "published": "2026",
+   "title": "Volitve v Državni zbor 2026",
+   "publisher": "Državna volilna komisija",
+   "doc_type": "statistics",
+   "note": "Figure for the National Assembly election of 22 March 2026, published by the electoral commission.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "1,695,249 voters entered in the electoral rolls (National Assembly election, 22 March 2026)",
+    "reason": "The page gives the number of voters entered in the electoral rolls for the 2026 National Assembly election."
+   }
+  },
+  {
+   "claim": "record:SI:government_payroll:register",
+   "question": "Government payroll and personnel: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/zbirke/projekti-in-programi/prenova-mferac/",
+   "quote": "Sistem MFERAC je glavni informacijski sistem na področju financ, računovodstva, upravljanja kadrov in obračuna stroškov dela na ravni javnih financ Republike Slovenije.",
+   "quote_english": "The MFERAC system is the main information system for finance, accounting, HR management and payroll accounting across the public finances of the Republic of Slovenia.",
+   "value": "MFERAC",
+   "published": "2024-01-24",
+   "title": "Prenova MFERAC",
+   "publisher": "Ministrstvo za finance",
+   "doc_type": "official_page",
+   "note": "The Ministry of Finance project page confirms that MFERAC covers HR and payroll.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "MFERAC",
+    "reason": "The quote names MFERAC as the main system for finance, accounting, HR management and payroll in Slovenian public finance."
+   }
+  },
+  {
+   "claim": "record:SI:government_payroll:foreign_dependency",
+   "question": "Government payroll and personnel: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/zbirke/projekti-in-programi/prenova-mferac/",
+   "quote": "Namen projekta MFERAC05 je z vsebinsko in tehnološko prenovo obstoječega informacijskega sistema MFERAC omogočiti kontinuirano delovanje informacijskega sistema v državnem računalniškem oblaku",
+   "quote_english": "The purpose of the MFERAC05 project is, through a content and technology renewal of the existing MFERAC information system, to enable continuous operation of the information system in the state computing cloud",
+   "value": "national",
+   "published": "2024-01-24",
+   "title": "Prenova MFERAC",
+   "publisher": "Ministrstvo za finance",
+   "doc_type": "official_page",
+   "note": "The page states that the renewal aims to run MFERAC in the state cloud (DRO). It states a project purpose, not a confirmed current hosting, so it needs review.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "national",
+    "reason": "The MFERAC05 project aims to keep MFERAC running in the state computing cloud; this is a stated project goal, so the hosting is national, but the quote does not confirm it has happened."
+   }
+  },
+  {
+   "claim": "record:SI:grid_control:operator",
+   "question": "Electricity grid control: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.eles.si/",
+   "quote": "Slednje prenosno omrežje v Sloveniji upravljamo v družbi ELES.",
+   "quote_english": "The latter, the transmission network in Slovenia, is managed by us at ELES.",
+   "value": "ELES",
+   "published": "",
+   "title": "ELES, d. o. o.",
+   "publisher": "ELES, d. o. o.",
+   "doc_type": "official_page",
+   "note": "The operator's own website confirms it runs the transmission network.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "ELES",
+    "reason": "ELES states that it operates Slovenia's transmission network; the quote does not mention grid control systems by name."
+   }
+  },
+  {
+   "claim": "record:SI:public_finance:register",
+   "question": "Treasury and state accounts: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/teme/register-proracunskih-uporabnikov/",
+   "quote": "Register proračunskih uporabnikov, ki ga sestavljajo neposredni in posredni uporabniki državnega in občinskih proračunov, vodi Uprava Republike Slovenije za javna plačila (UJP).",
+   "quote_english": "The Register of Budget Users, made up of the direct and indirect users of the state and municipal budgets, is kept by the Public Payments Administration of the Republic of Slovenia (UJP).",
+   "value": "Register proračunskih uporabnikov (Register of Budget Users), kept by UJP",
+   "published": "2026-04-13",
+   "title": "Register proračunskih uporabnikov",
+   "publisher": "Uprava Republike Slovenije za javna plačila",
+   "doc_type": "official_page",
+   "note": "A dedicated topic page, updated April 2026, confirms the register and that UJP keeps it.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Register proračunskih uporabnikov",
+    "reason": "The quote names the register of budget users, kept by UJP; it is a register of budget users, not the treasury accounts system itself."
+   }
+  },
+  {
+   "claim": "record:SI:tax:count",
+   "question": "Tax: how many records it holds",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/assets/organi-v-sestavi/FURS/Strateski-dokumenti/2026/Letno-porocilo-Financne-uprave-za-leto-2025.pdf",
+   "quote": "Na dan 31. 12. 2025 je bilo v davčni register vpisanih 3.177.399 aktivnih zavezancev, od katerih je bilo 2.896.893 fizičnih oseb in 280.506 poslovnih subjektov.",
+   "quote_english": "On 31 December 2025, 3,177,399 active taxpayers were entered in the tax register, of whom 2,896,893 were natural persons and 280,506 business entities.",
+   "value": "3.177.399 active taxpayers in the tax register on 31. 12. 2025",
+   "published": "2026-02",
+   "title": "Letno poročilo Finančne uprave za leto 2025",
+   "publisher": "Finančna uprava Republike Slovenije",
+   "doc_type": "annual_report",
+   "note": "New count from the operator's 2025 annual report. It also confirms the tax register by name.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "3,177,399 active taxpayers in the tax register (31 Dec 2025)",
+    "reason": "The quote gives the number of active taxpayers entered in the tax register on 31 December 2025."
+   }
+  },
+  {
+   "claim": "record:SI:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-razvoj-digitalnih-resitev/sektor-za-storitve-zaupanja/",
+   "quote": "V Sektorju za storitve zaupanja, v okviru katerega deluje Državni center za storitve zaupanja SI-TRUST, izvajamo kvalificirane storitve zaupanja, kot so elektronski podpisi, elektronski žigi in elektronski časovni žigi",
+   "quote_english": "In the Trust Services Division, within which the State Trust Services Centre SI-TRUST operates, we provide qualified trust services such as electronic signatures, electronic seals and electronic time stamps",
+   "value": "Državni center za storitve zaupanja SI-TRUST, within the ministry's Sektor za storitve zaupanja (Trust Services Division)",
+   "published": "2026-08-10",
+   "title": "Sektor za storitve zaupanja",
+   "publisher": "Ministrstvo za notranje zadeve in javno upravo",
+   "doc_type": "official_page",
+   "note": "The ministry's own organisational page is independent of si-trust.gov.si.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Sektor za storitve zaupanja / Državni center za storitve zaupanja SI-TRUST (ministry)",
+    "reason": "The quote says the ministry's Trust Services Sector, which houses SI-TRUST, provides the qualified trust services."
+   }
+  },
+  {
+   "claim": "record:SI:trust_services_pki:register",
+   "question": "State PKI and qualified trust services: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-razvoj-digitalnih-resitev/sektor-za-storitve-zaupanja/",
+   "quote": "Upravljamo izdajatelje kvalificiranih potrdil: SIGEN-CA, ki izdaja digitalna potrdila državljanom in poslovnim subjektom, SIGOV-CA, ki izdaja digitalna potrdila za potrebe državnih organov",
+   "quote_english": "We manage the qualified certificate issuers: SIGEN-CA, which issues digital certificates to citizens and businesses, and SIGOV-CA, which issues digital certificates for state bodies",
+   "value": "Qualified certificate issuers SIGEN-CA and SIGOV-CA",
+   "published": "2026-08-10",
+   "title": "Sektor za storitve zaupanja",
+   "publisher": "Ministrstvo za notranje zadeve in javno upravo",
+   "doc_type": "official_page",
+   "note": "Confirms the qualified issuers. The same page also lists SI-PASS-CA and SI-TSA, but it does not name the SI-TRUST Root.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "SIGEN-CA, SIGOV-CA",
+    "reason": "The quote names the qualified certificate issuers SIGEN-CA and SIGOV-CA; the only difference from the page is whitespace before the commas."
+   }
+  },
+  {
+   "claim": "record:SI:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/teme/klic-v-sili/",
+   "quote": "V okviru Uprave Republike Slovenije za zaščito in reševanje deluje 13 regijskih centrov za obveščanje (v nadaljevanju ReCO), katerih 24-urno dežurstvo 365 dni v letu na evropski številki za klic v sili 112 zagotavlja učinkovito službo",
+   "quote_english": "Within the Administration for Civil Protection and Disaster Relief, 13 regional notification centres (ReCO) operate; their 24-hour, 365-day duty on the European emergency number 112 provides an effective service",
+   "value": "13 regional notification centres (regijski centri za obveščanje, ReCO) answering 112",
+   "published": "2026-01-23",
+   "title": "Klic v sili",
+   "publisher": "Uprava Republike Slovenije za zaščito in reševanje",
+   "doc_type": "official_page",
+   "note": "The URSZR topic page, updated January 2026, gives the number of centres. URSZR's 2025 call review reports 559,380 calls to the ReCO in 2025.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "ReCO (regijski centri za obveščanje) / 112",
+    "reason": "The quote names 13 regional notification centres (ReCO) that answer emergency number 112; it names no public-safety radio system."
+   }
+  },
+  {
+   "claim": "indicator:SI:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/teme/tajni-podatki/",
+   "quote": "Stopnje tajnosti, kot jih določa Zakon o tajnih podatkih, so usklajene s stopnjami tajnosti, ki jih določata Odločbi Sveta in Komisije.",
+   "quote_english": "The classification levels, as set by the Classified Information Act, are aligned with the classification levels set by the Council and Commission Decisions.",
+   "value": "Yes",
+   "published": "2026-03-26",
+   "title": "Tajni podatki",
+   "publisher": "Urad Vlade Republike Slovenije za varovanje tajnih podatkov",
+   "doc_type": "official_page",
+   "note": "The national security authority confirms in 2026 that the Classified Information Act (ZTP) sets the classification levels INTERNO, ZAUPNO, TAJNO and STROGO TAJNO.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote says the Classified Information Act (Zakon o tajnih podatkih) sets the classification levels, so they are fixed in statute."
+   }
+  },
+  {
+   "claim": "record:SI:residence_permits:register",
+   "question": "Residence and migration status: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.gov.si/teme/registri-in-evidence-prebivalstva/",
+   "quote": "evidence volilne pravice (volilna pravica) registra tujcev (dovoljenje za prebivanje tujca), azilnega registra (prosilec za mednarodno zaščito)",
+   "quote_english": "the register of voting rights (voting right), the register of foreigners (a foreigner's residence permit), the asylum register (applicant for international protection)",
+   "value": "register tujcev (register of foreigners), source of residence-permit data",
+   "published": "2026-08-17",
+   "title": "Registri in evidence prebivalstva",
+   "publisher": "Ministrstvo za notranje zadeve in javno upravo",
+   "doc_type": "official_page",
+   "note": "The ministry's page confirms that the register of foreigners exists and holds residence-permit data that feeds the CRP.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "register tujcev (and azilni register)",
+    "reason": "The quote names the register of foreigners, which holds residence permits, and the asylum register."
+   }
+  },
+  {
+   "claim": "record:SI:benefits_pensions:register",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://www.zpiz.si/cms/?ids=content2019&inf=1191",
+   "quote": "organizira in vodi matično evidenco o zavarovancih in uživalcih pravic; izplačuje pokojnine in druge denarne prejemke",
+   "quote_english": "organises and keeps the master record of insured persons and beneficiaries of rights; pays pensions and other cash benefits",
+   "value": "matična evidenca o zavarovancih in uživalcih pravic (master record of insured persons and beneficiaries)",
+   "published": "",
+   "title": "O zavodu",
+   "publisher": "Zavod za pokojninsko in invalidsko zavarovanje Slovenije (ZPIZ)",
+   "doc_type": "official_page",
+   "note": "Taken from the operator's own site. ZPIZ describes itself as the body that keeps the master pension-insurance record and pays pensions.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "ZPIZ: matična evidenca o zavarovancih in uživalcih pravic",
+    "reason": "According to the page, the pension institute ZPIZ keeps the master register of insured persons and beneficiaries and pays pensions."
+   }
+  },
+  {
+   "claim": "record:SI:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.ajpes.si/registri/poslovni_register/splosno",
+   "quote": "Poslovni register Slovenije (PRS) je informatizirana baza podatkov o vseh poslovnih subjektih s sedežem na območju Republike Slovenije, ki opravljajo dejavnost",
+   "quote_english": "The Slovenian Business Register (PRS) is a computerised database of all business entities with their seat in the Republic of Slovenia that carry out an activity",
+   "value": "Poslovni register Slovenije (PRS) (Slovenian Business Register)",
+   "published": "",
+   "title": "Poslovni register Slovenije – Splošno",
+   "publisher": "AJPES",
+   "doc_type": "official_page",
+   "note": "Taken from the operator's own page. Companies are entered via the court register, and AJPES then carries them into the PRS.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Poslovni register Slovenije (PRS)",
+    "reason": "The quote names the business register as the Poslovni register Slovenije (PRS), a database of all business entities."
+   }
+  },
+  {
+   "claim": "record:SI:business_registry:operator",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.ajpes.si/registri/poslovni_register/splosno",
+   "quote": "O vpisih podatkov samostojnih podjetnikov (od 1. 7. 2005 dalje) in fizičnih oseb – sobodajalcev (od 21. 1. 2008 dalje) v PRS odloča AJPES.",
+   "quote_english": "AJPES decides on entries of data on sole traders (from 1. 7. 2005) and on natural persons letting rooms (from 21. 1. 2008) in the PRS.",
+   "value": "AJPES",
+   "published": "",
+   "title": "Poslovni register Slovenije – Splošno",
+   "publisher": "AJPES",
+   "doc_type": "official_page",
+   "note": "AJPES keeps the PRS. For companies, the registration courts decide the entries in the court register.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "AJPES",
+    "reason": "The quote says AJPES decides PRS entries for sole traders and room-renting individuals; the page adds that registration courts decide entries for companies."
+   }
+  },
+  {
+   "claim": "record:SI:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/teme/tehnicni-pregled-in-registracija-vozil/",
+   "quote": "Evidenco registriranih motornih in priklopnih vozil in računalniško evidenco voznikov vodi Ministrstvo za infrastrukturo.",
+   "quote_english": "The register of registered motor vehicles and trailers and the computerised register of drivers are kept by the Ministry of Infrastructure.",
+   "value": "evidenca registriranih motornih in priklopnih vozil; računalniška evidenca voznikov (register of registered motor vehicles and trailers; computerised driver register)",
+   "published": "2026-06-04",
+   "title": "Tehnični pregled in registracija vozil",
+   "publisher": "Ministrstvo za infrastrukturo in energetiko",
+   "doc_type": "official_page",
+   "note": "A gov.si topic page updated June 2026. The page is now credited to the Ministry of Infrastructure and Energy.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "Ministrstvo za infrastrukturo",
+    "reason": "The quote says the Ministry of Infrastructure keeps the register of vehicles and the electronic register of drivers."
+   }
+  },
+  {
+   "claim": "record:SI:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/teme/tehnicni-pregled-in-registracija-vozil/",
+   "quote": "Evidenco registriranih motornih in priklopnih vozil in računalniško evidenco voznikov vodi Ministrstvo za infrastrukturo.",
+   "quote_english": "The register of registered motor vehicles and trailers and the computerised register of drivers are kept by the Ministry of Infrastructure.",
+   "value": "Ministrstvo za infrastrukturo (Ministry of Infrastructure)",
+   "published": "2026-06-04",
+   "title": "Tehnični pregled in registracija vozil",
+   "publisher": "Ministrstvo za infrastrukturo in energetiko",
+   "doc_type": "official_page",
+   "note": "The page's responsible institution is now named Ministrstvo za infrastrukturo in energetiko.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "Evidenca registriranih motornih in priklopnih vozil; računalniška evidenca voznikov (Ministrstvo za infrastrukturo)",
+    "reason": "The quote names the vehicle register and the driver register, both kept by the Ministry of Infrastructure."
+   }
+  },
+  {
+   "claim": "record:SI:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/teme/kazenskopravne-evidence/",
+   "quote": "Ministrstvo za pravosodje (v nadaljevanju: ministrstvo) upravlja kazensko evidenco o vseh pravnih in fizičnih osebah, ki so jih obsodila sodišča Republike Slovenije.",
+   "quote_english": "The Ministry of Justice (the ministry) manages the criminal record of all legal and natural persons convicted by the courts of the Republic of Slovenia.",
+   "value": "kazenska evidenca (criminal record)",
+   "published": "2024-03-22",
+   "title": "Kazenskopravne evidence",
+   "publisher": "Ministrstvo za pravosodje",
+   "doc_type": "official_page",
+   "note": "The same page also names the record of educational measures and the misdemeanour judgments record (EPS).",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "Ministrstvo za pravosodje",
+    "reason": "The quote says the Ministry of Justice manages the criminal record of everyone convicted by Slovenian courts."
+   }
+  },
+  {
+   "claim": "record:SI:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/teme/kazenskopravne-evidence/",
+   "quote": "Ministrstvo za pravosodje (v nadaljevanju: ministrstvo) upravlja kazensko evidenco o vseh pravnih in fizičnih osebah, ki so jih obsodila sodišča Republike Slovenije.",
+   "quote_english": "The Ministry of Justice (the ministry) manages the criminal record of all legal and natural persons convicted by the courts of the Republic of Slovenia.",
+   "value": "Ministrstvo za pravosodje (Ministry of Justice)",
+   "published": "2024-03-22",
+   "title": "Kazenskopravne evidence",
+   "publisher": "Ministrstvo za pravosodje",
+   "doc_type": "official_page",
+   "note": "The operator of the criminal record, stated on its own topic page.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "kazenska evidenca (Ministrstvo za pravosodje)",
+    "reason": "The quote names the criminal record (kazenska evidenca) and its manager, the Ministry of Justice; it says nothing about court case files."
+   }
+  },
+  {
+   "claim": "record:SI:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/glasilo-uradni-list-rs/o-glasilu",
+   "quote": "Od tega datuma bodo vse objave dostopne izključno v elektronski obliki na spletišču Pravnega informacijskega sistema Republike Slovenije (PISRS), tiskana izdaja pa se z 28. 2. 2026 ukinja.",
+   "quote_english": "From that date, all publications will be available exclusively in electronic form on the website of the Legal Information System of the Republic of Slovenia (PISRS), and the printed edition is discontinued as of 28. 2. 2026.",
+   "value": "Pravni informacijski sistem Republike Slovenije (PISRS) (Legal Information System of the Republic of Slovenia), sole publication platform of the Uradni list RS",
+   "published": "2026",
+   "title": "O glasilu",
+   "publisher": "Uradni list Republike Slovenije",
+   "doc_type": "official_page",
+   "note": "From 1 March 2026 the gazette appears only on PISRS, and uradni-list.si content is marked archival. The statute sources printed from uradni-list.si for SI are therefore now archival copies.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "PISRS (Pravni informacijski sistem Republike Slovenije)",
+    "reason": "The quote says all official gazette publications are now electronic only, on the PISRS website."
+   }
+  },
+  {
+   "claim": "record:SI:official_gazette:operator",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/glasilo-uradni-list-rs/o-glasilu",
+   "quote": "se je izdajanje uradnega lista s 1. 3. 2026 preneslo neposredno na Službo Vlade Republike Slovenije za zakonodajo",
+   "quote_english": "publication of the official gazette was transferred as of 1. 3. 2026 directly to the Government Office for Legislation of the Republic of Slovenia",
+   "value": "Služba Vlade Republike Slovenije za zakonodajo (Government Legislation Office)",
+   "published": "2026",
+   "title": "O glasilu",
+   "publisher": "Uradni list Republike Slovenije",
+   "doc_type": "official_page",
+   "note": "Under the new ZOUL act, the government office replaced the company Uradni list RS d.o.o. as publisher of the gazette from 1 March 2026.",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "Služba Vlade Republike Slovenije za zakonodajo",
+    "reason": "The quote says publication of the official gazette passed to the Government Office for Legislation on 1 March 2026."
+   }
+  },
+  {
+   "claim": "record:SI:electoral_management:operator",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://www.dvk-rs.si/o-komisiji/sestava-in-pristojnosti/",
+   "quote": "Državna volilna komisija skrbi za zakonito in pošteno izvedbo volitev ter opravlja druge naloge, ki jih določajo zakoni s področja volilne zakonodaje.",
+   "quote_english": "The National Electoral Commission ensures the lawful and fair conduct of elections and performs other tasks set by the electoral laws.",
+   "value": "Državna volilna komisija (National Electoral Commission, DVK)",
+   "published": "",
+   "title": "Sestava in pristojnosti Državne volilne komisije",
+   "publisher": "Državna volilna komisija",
+   "doc_type": "official_page",
+   "note": "This identifies the operator only. The results site volitve.dvk-rs.si is linked from DVK pages, but no page names the tabulation system.",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "Državna volilna komisija",
+    "reason": "The quote says the State Election Commission ensures elections are lawful and fair, but it names no candidate, logistics or results-tabulation system."
+   }
+  },
+  {
+   "claim": "record:SI:defence_command:register",
+   "question": "Defence command and logistics: Military command-and-control, logistics and mission data",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/generalstab-slovenske-vojske/o-generalstabu/poveljstvo-sil/enota-za-komunikacijske-in-informacijske-sisteme-ekis/",
+   "quote": "Enota za komunikacijske in informacijske sisteme (EKIS) je namenjena zagotavljanju delovanja komunikacijskih in informacijskih sistemov Slovenske vojske.",
+   "quote_english": "The Communication and Information Systems Unit (EKIS) is intended to ensure the operation of the communication and information systems of the Slovenian Armed Forces.",
+   "value": "komunikacijski in informacijski sistemi Slovenske vojske (communication and information systems of the Slovenian Armed Forces)",
+   "published": "2021-02-05",
+   "title": "Enota za komunikacijske in informacijske sisteme (EKIS)",
+   "publisher": "Ministrstvo za obrambo",
+   "doc_type": "official_page",
+   "note": "This is a general CIS description, not a named command-and-control system.",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "EKIS (Enota za komunikacijske in informacijske sisteme, Slovenska vojska)",
+    "reason": "The quote says the EKIS unit keeps the Slovenian Army's communication and information systems running."
+   }
+  },
+  {
+   "claim": "record:SI:defence_command:operator",
+   "question": "Defence command and logistics: Military command-and-control, logistics and mission data",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/generalstab-slovenske-vojske/o-generalstabu/poveljstvo-sil/enota-za-komunikacijske-in-informacijske-sisteme-ekis/",
+   "quote": "Enota za komunikacijske in informacijske sisteme (EKIS) je namenjena zagotavljanju delovanja komunikacijskih in informacijskih sistemov Slovenske vojske.",
+   "quote_english": "The Communication and Information Systems Unit (EKIS) is intended to ensure the operation of the communication and information systems of the Slovenian Armed Forces.",
+   "value": "Enota za komunikacijske in informacijske sisteme (EKIS) (Communication and Information Systems Unit)",
+   "published": "2021-02-05",
+   "title": "Enota za komunikacijske in informacijske sisteme (EKIS)",
+   "publisher": "Ministrstvo za obrambo",
+   "doc_type": "official_page",
+   "note": "EKIS sits under the Forces Command of the General Staff. It also hosts the military CERT (MilCERT).",
+   "review": {
+    "id": 38,
+    "quote_found": true,
+    "established": "EKIS (Enota za komunikacijske in informacijske sisteme, Slovenska vojska)",
+    "reason": "Same quote: EKIS runs the army's communication and information systems; it does not name specific command, logistics or mission systems."
+   }
+  },
+  {
+   "claim": "record:SI:water_control:register",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/agencija-za-okolje/o-agenciji/drzavna-hidroloska-sluzba/",
+   "quote": "Naloge državne hidrološke službe za območje Republike Slovenije izvaja Agencija Republike Slovenije za okolje.",
+   "quote_english": "The tasks of the state hydrological service for the territory of the Republic of Slovenia are carried out by the Slovenian Environment Agency.",
+   "value": "državna hidrološka služba (state hydrological service)",
+   "published": "2024-03-25",
+   "title": "Hidrološka služba",
+   "publisher": "Agencija Republike Slovenije za okolje",
+   "doc_type": "official_page",
+   "note": "Only a partial fit: this covers hydrological monitoring and official flood warnings, not flood-defence or drinking-water control systems.",
+   "review": {
+    "id": 39,
+    "quote_found": true,
+    "established": "Agencija Republike Slovenije za okolje (ARSO)",
+    "reason": "The quote says the Slovenian Environment Agency performs the state hydrological service; it does not mention flood-defence or drinking-water control systems."
+   }
+  },
+  {
+   "claim": "record:SI:water_control:operator",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/agencija-za-okolje/o-agenciji/drzavna-hidroloska-sluzba/",
+   "quote": "Naloge državne hidrološke službe za območje Republike Slovenije izvaja Agencija Republike Slovenije za okolje.",
+   "quote_english": "The tasks of the state hydrological service for the territory of the Republic of Slovenia are carried out by the Slovenian Environment Agency.",
+   "value": "Agencija Republike Slovenije za okolje (Slovenian Environment Agency, ARSO)",
+   "published": "2024-03-25",
+   "title": "Hidrološka služba",
+   "publisher": "Agencija Republike Slovenije za okolje",
+   "doc_type": "official_page",
+   "note": "ARSO operates the hydrological monitoring and forecasting service.",
+   "review": {
+    "id": 40,
+    "quote_found": true,
+    "established": "Agencija Republike Slovenije za okolje (ARSO)",
+    "reason": "Same quote: ARSO runs the state hydrological service, which only partly matches water-management control."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:SI:C1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:SI:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:SI:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:SI:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:authentication_audit_log:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:authentication_audit_log:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:authentication_audit_log:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:central_bank:foreign_dependency",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:civil_registry:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:crisis_management:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:digital_identity_credentials:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:digital_identity_credentials:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:government_payroll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:grid_control:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:grid_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:health_insurance:count",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:health_insurance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:health_records:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:land_property:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:national_archives:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:tax:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:tax:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:trust_services_pki:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:trust_services_pki:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:SI:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:breeder_documents:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:education:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:facial_biometric:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:facial_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:fingerprint_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:firearms_register:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:firearms_register:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:health_records:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:health_records:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:issuance_history:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:issuance_history:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:police_records:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:electoral_management:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:defence_command:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SI:water_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:SI:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:SI:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

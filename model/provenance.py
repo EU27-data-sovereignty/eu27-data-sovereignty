@@ -201,6 +201,8 @@ def validate(reg: dict[str, dict[str, str]], cites: list[dict[str, str]]) -> lis
 
 
 VERIFICATION = ROOT / "model" / "research" / "verification.csv"
+RECHECK = ROOT / "model" / "research" / "recheck.csv"
+VETTING_VERIFICATION = ROOT / "model" / "research" / "vetting" / "verification.csv"
 _SHA = re.compile(r"\bsha256 ([0-9a-f]{64})\b")
 _verified: dict[str, set[str]] | None = None
 
@@ -215,6 +217,19 @@ def verified_hashes() -> dict[str, set[str]]:
                 for r in csv.DictReader(fh):
                     if r["match"] in ("exact", "loose") and r["sha256"]:
                         _verified.setdefault(r["url"], set()).add(r["sha256"])
+        # A vetting run's findings are fetched and quote-checked the same way (vetting.py, #83).
+        if VETTING_VERIFICATION.exists():
+            with VETTING_VERIFICATION.open(newline="", encoding="utf-8") as fh:
+                for r in csv.DictReader(fh):
+                    if r["match"] in ("exact", "loose") and r["sha256"]:
+                        _verified.setdefault(r["url"], set()).add(r["sha256"])
+        # A later fetch whose quotes were all found again (research.py recheck, #83) is as verified
+        # as the first. The registry keeps the admitted hash; this set holds every verified one.
+        if RECHECK.exists():
+            with RECHECK.open(newline="", encoding="utf-8") as fh:
+                for r in csv.DictReader(fh):
+                    if r["outcome"] in ("unchanged", "changed_quotes_present") and r["sha256_now"]:
+                        _verified.setdefault(r["url"], set()).add(r["sha256_now"])
     return _verified
 
 

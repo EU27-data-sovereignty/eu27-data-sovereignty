@@ -1,0 +1,1012 @@
+{
+ "iso": "SE",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:SE:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://data.riksdagen.se/dokument/HDB313.html",
+   "quote": "Antalet anslutna myndigheter till dessa it-tjänster har successivt ökat. Under 2023 tillhandahöll För- säkringskassan en eller flera it-tjänster till totalt 76 statliga myndig- heter, inklusive länsstyrelserna.",
+   "quote_english": "The number of agencies connected to these IT services has gradually increased. In 2023 the Swedish Social Insurance Agency provided one or more IT services to a total of 76 state agencies, including the county administrative boards.",
+   "value": "Yes: in 2023 Försäkringskassan provided state-run IT services to 76 state agencies",
+   "published": "2025-02-10",
+   "title": "SOU 2025:13",
+   "publisher": "Sveriges riksdag / Regeringskansliet (Statens offentliga utredningar)",
+   "doc_type": "official_page",
+   "note": "This is a 2025 inquiry, newer than the 2021 SOU. Just before the quote it lists the services Försäkringskassan runs for other agencies, including 'virtuellt datacenter', which shows a state-operated data-centre service in operation.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says Försäkringskassan provided IT services to 76 agencies in 2023. It never mentions a data centre, and the nearby text lists only a 'virtuellt datacenter' service, so it does not show that the state runs its own data centres."
+   }
+  },
+  {
+   "claim": "indicator:SE:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "supersedes",
+   "url": "https://data.riksdagen.se/dokument/sfs-2026-1358.html",
+   "quote": "Utfärdande myndighet 6 § Den statliga e-legitimationen utfärdas av utfärdande myndighet. Polismyndigheten är utfärdande myndighet inom riket.",
+   "quote_english": "Issuing authority. The state e-identification is issued by an issuing authority. The Police Authority is the issuing authority within the realm.",
+   "value": "A statutory state e-legitimation issued by Polismyndigheten (Swedish Police Authority)",
+   "published": "2026-06-18",
+   "title": "Lag (2026:1358) om statlig e-legitimation och elektronisk identifiering",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "The bill (prop. 2025/26:250) that the printed value cites has since been enacted as SFS 2026:1358, in force from 2026-12-01; private eIDs such as BankID continue alongside it, so 'Partly' still describes the whole scheme.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Lag (2026:1358) says the state e-ID is issued by the issuing authority, and Polismyndigheten is that authority within Sweden, so a state body runs this state e-ID scheme."
+   }
+  },
+  {
+   "claim": "indicator:SE:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "corroborates",
+   "url": "https://data.riksdagen.se/dokument/sfs-2021-955.html",
+   "quote": "Säkerhetsskyddsklassificerade handlingar som innehåller uppgifter i säkerhetsskyddsklassen kvalificerat hemlig ska inventeras minst en gång per år. Säkerhetsskyddsklassificerade handlingar som innehåller uppgifter i säkerhetsskyddsklassen hemlig eller konfidentiell ska inventeras",
+   "quote_english": "Security-classified documents containing information in the security classification 'top secret' shall be inventoried at least once a year. Security-classified documents containing information in the classification 'secret' or 'confidential' shall be inventoried",
+   "value": "Yes",
+   "published": "2026",
+   "title": "Säkerhetsskyddsförordning (2021:955)",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "The Security Protection Ordinance is a binding regulation separate from the Security Protection Act that is the current source, and it applies the statutory classification levels. The text is consolidated through SFS 2026:1508.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The säkerhetsskyddsförordning, a binding regulation, uses the security classes kvalificerat hemlig, hemlig and konfidentiell and attaches handling duties to them."
+   }
+  },
+  {
+   "claim": "record:SE:beneficial_ownership:register",
+   "question": "Beneficial ownership register: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://data.riksdagen.se/dokument/sfs-2017-631.html",
+   "quote": "En juridisk person ska anmäla uppgifterna enligt 1 § första stycket till Bolagsverket för registrering i registret över verkliga huvudmän.",
+   "quote_english": "A legal person shall notify the information under section 1 first paragraph to the Swedish Companies Registration Office for registration in the register of beneficial owners.",
+   "value": "Registret över verkliga huvudmän (register of beneficial owners), Bolagsverket",
+   "published": "2026",
+   "title": "Lag (2017:631) om registrering av verkliga huvudmän",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "This is the current consolidated text (amended through SFS 2026:316), newer than the 2017 date on the source. It confirms that the register and its keeper have not changed. It is not independent of the source, and Bolagsverket's own site blocked automated fetches.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "registret över verkliga huvudmän",
+    "reason": "Legal persons must report to Bolagsverket for registration in 'registret över verkliga huvudmän', the beneficial ownership register."
+   }
+  },
+  {
+   "claim": "record:SE:border_control:operator",
+   "question": "Border and visa systems: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://data.riksdagen.se/dokument/sfs-2016-27.html",
+   "quote": "Migrationsverket, Polismyndigheten och en utlandsmyndighet är var och en personuppgiftsansvarig för den behandling av personuppgifter som myndigheten utför.",
+   "quote_english": "The Migration Agency, the Police Authority and a mission abroad are each controller for the processing of personal data that the authority carries out.",
+   "value": "Migrationsverket and Polismyndigheten (with missions abroad) are each controllers for their own processing",
+   "published": "2026",
+   "title": "Utlänningsdatalag (2016:27)",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "This is an independent statute covering entry, visa and residence processing; it confirms the Police and Migration Agency split of controllership. The text is consolidated through SFS 2026:1457.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names three separate personal-data controllers (Migrationsverket, Polismyndigheten, missions abroad) for their own processing. It names no border or visa system and no operator of one."
+   }
+  },
+  {
+   "claim": "record:SE:business_registry:register",
+   "question": "Business registry: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://data.riksdagen.se/dokument/sfs-2005-551.html",
+   "quote": "skall det övertagande bolaget eller, vid kombination, det äldsta av de överlåtande bolagen ge in planen med bifogade handlingar till Bolagsverket för registrering i aktiebolagsregistret.",
+   "quote_english": "the acquiring company or, in a combination, the oldest of the transferring companies shall submit the plan with attached documents to the Swedish Companies Registration Office for registration in the companies register.",
+   "value": "Aktiebolagsregistret (companies register), Bolagsverket",
+   "published": "2026",
+   "title": "Aktiebolagslag (2005:551)",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "The Companies Act is an independent statute from the Companies Ordinance that is the current source. It is consolidated through SFS 2026:783.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "aktiebolagsregistret",
+    "reason": "The merger plan is filed with Bolagsverket for registration in 'aktiebolagsregistret', which names the companies register."
+   }
+  },
+  {
+   "claim": "record:SE:civil_registry:operator",
+   "question": "Civil registry core: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://data.riksdagen.se/dokument/sfs-2026-126.html",
+   "quote": "Skatteverket är personuppgiftsansvarig för den behandling av personuppgifter som myndigheten utför enligt denna lag och föreskrifter som har meddelats i anslutning till lagen.",
+   "quote_english": "The Swedish Tax Agency is controller for the processing of personal data the authority carries out under this act and regulations issued in connection with it.",
+   "value": "Skatteverket (Swedish Tax Agency)",
+   "published": "2026-02-26",
+   "title": "Folkbokföringsdatalag (2026:126)",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "The 2026 Population Registration Data Act covers the processing done in population registration. It is independent of the 1991 Population Registration Act, which is the current source.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Skatteverket",
+    "reason": "Section 2 of Lag 2026:126 says the law covers Skatteverket's folkbokföring (population registration) work, and the quote makes Skatteverket the controller for that processing."
+   }
+  },
+  {
+   "claim": "record:SE:education:register",
+   "question": "Education: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://ladokkonsortiet.se/om-oss/om-ladokkonsortiet",
+   "quote": "Ladokkonsortiet ansvarar för utveckling och drift av systemet Ladok, samt support till lärosätena. Systemet utvecklas gemensamt för alla lärosäten, men varje lärosäte äger och ansvarar för innehållet i sitt eget register.",
+   "quote_english": "The Ladok consortium is responsible for development and operation of the Ladok system, and support to the institutions. The system is developed jointly for all institutions, but each institution owns and is responsible for the content of its own register.",
+   "value": "Each higher-education institution keeps its own register in the shared Ladok system",
+   "published": "",
+   "title": "Om Ladokkonsortiet",
+   "publisher": "Ladokkonsortiet",
+   "doc_type": "official_page",
+   "note": "This is the operator's own site. It confirms that each institution keeps its own register, and it names Ladok as the shared system, run by a consortium of 43 institutions.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Ladok",
+    "reason": "The page says Ladokkonsortiet develops and runs the system Ladok, where each university keeps its own register."
+   }
+  },
+  {
+   "claim": "record:SE:electoral_roll:register",
+   "question": "Electoral roll entry: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.val.se/det-svenska-valsystemet/sa-funkar-rostning-i-svenska-val/alla-som-har-rostratt-ar-med-i-rostlangden",
+   "quote": "Din rösträtt bestäms av uppgifterna i Skatteverkets folkbokföringsregister 30 dagar före valdagen. Alla som har rösträtt tas med i en röstlängd. Röstlängden är en lista med alla som får rösta i ett visst val och som tillhör ett visst valdistrikt.",
+   "quote_english": "Your right to vote is determined by the data in the Tax Agency's population register 30 days before election day. Everyone with the right to vote is included in an electoral roll. The electoral roll is a list of everyone who may vote in a given election and who belongs to a given voting district.",
+   "value": "Röstlängd (electoral roll) per voting district, drawn from Skatteverket's population register 30 days before election day",
+   "published": "2025-11-21",
+   "title": "Alla som har rösträtt är med i röstlängden",
+   "publisher": "Valmyndigheten",
+   "doc_type": "official_page",
+   "note": "The election authority's own page, independent of the Elections Act.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "röstlängd",
+    "reason": "Everyone entitled to vote is entered in a 'röstlängd', the electoral roll, which is drawn from Skatteverket's folkbokföringsregister."
+   }
+  },
+  {
+   "claim": "record:SE:facial_biometric:register",
+   "question": "Facial biometric: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://data.riksdagen.se/dokument/sfs-1979-664.html",
+   "quote": "Polismyndigheten ska på begäran lämna ut ett fotografi av en enskild från passregistret till Säkerhetspolisen, Ekobrottsmyndigheten, en svensk ambassad, ett svenskt lönat konsulat, Försvarsmakten, Kustbevakningen, Tullverket, Skatteverket och Kronofogdemyndigheten.",
+   "quote_english": "The Police Authority shall on request release a photograph of an individual from the passport register to the Security Service, the Economic Crime Authority, a Swedish embassy, a salaried consulate, the Armed Forces, the Coast Guard, Customs, the Tax Agency and the Enforcement Authority.",
+   "value": "Passregistret (passport register), which holds photographs, kept by Polismyndigheten",
+   "published": "2026",
+   "title": "Passförordning (1979:664)",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "This is the current consolidated text (amended through SFS 2026:541), newer than the 1979 date on the source. It confirms that the passport register holds photographs and is kept by the Police Authority.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "passregistret",
+    "reason": "Polismyndigheten releases photographs from 'passregistret', so the passport register holds facial images."
+   }
+  },
+  {
+   "claim": "record:SE:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "contradicts",
+   "url": "https://data.riksdagen.se/dokument/sfs-2018-1693.html",
+   "quote": "5 kap. Register Biometriregister Rätten att behandla uppgifter i biometriregister 1 § Polismyndigheten får föra - ett biometriregister över misstänkta, - ett biometriregister över dömda, och - ett biometriregister över spår.",
+   "quote_english": "Chapter 5. Registers. Biometric registers. The right to process data in biometric registers. The Police Authority may keep a biometric register of suspects, a biometric register of convicted persons and a biometric register of traces.",
+   "value": "Biometriregister (biometric registers) of suspects, convicted persons and traces, kept by Polismyndigheten",
+   "published": "2026",
+   "title": "Lag (2018:1693) om polisens behandling av personuppgifter inom brottsdatalagens område",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "The printed 'No central register' holds only for passport fingerprints. Chapter 5, section 2 of this act says a biometric register may hold fingerprints, so central fingerprint registers exist in law enforcement.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "biometriregister",
+    "reason": "Polismyndigheten may keep biometriregister (biometric registers) of suspects, the convicted and traces. The surrounding text refers to fingerprint checks."
+   }
+  },
+  {
+   "claim": "record:SE:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "contradicts",
+   "url": "https://data.riksdagen.se/dokument/sfs-2016-27.html",
+   "quote": "Migrationsverket får föra separata register över fingeravtryck och fotografier som tas med stöd av 9 kap. 8, 8 a, 8 h, 8 k och 8 l §§ utlänningslagen (2005:716)",
+   "quote_english": "The Migration Agency may keep separate registers of fingerprints and photographs taken under chapter 9 sections 8, 8 a, 8 h, 8 k and 8 l of the Aliens Act (2005:716)",
+   "value": "Migrationsverket's register of fingerprints and photographs (register över fingeravtryck och fotografier)",
+   "published": "2026",
+   "title": "Utlänningsdatalag (2016:27)",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "This is a second statutory fingerprint register, for foreign nationals, which also contradicts 'No central register'. The provision is being amended, with a new wording taking effect 2026-12-01.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Migrationsverkets register över fingeravtryck och fotografier",
+    "reason": "Migrationsverket may keep separate registers of fingerprints and photographs. The page marks this section as expiring on 2026-12-01."
+   }
+  },
+  {
+   "claim": "record:SE:issuance_history:register",
+   "question": "Document issuance history: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://data.riksdagen.se/dokument/sfs-1979-664.html",
+   "quote": "Register m.m. 23 § Polismyndigheten ska föra ett passregister och ett register över omständigheter som avses i 20 § 1 och 3 passlagen (1978:302).",
+   "quote_english": "Registers etc. The Police Authority shall keep a passport register and a register of circumstances referred to in section 20 points 1 and 3 of the Passport Act (1978:302).",
+   "value": "Passregistret (passport register), kept by Polismyndigheten",
+   "published": "2026",
+   "title": "Passförordning (1979:664)",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "This is the current consolidated text (amended through SFS 2026:541), newer than the 1979 date on the source. The provision is unchanged.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "passregistret",
+    "reason": "Polismyndigheten must keep a passregister, the register of issued passports."
+   }
+  },
+  {
+   "claim": "record:SE:judicial_criminal:register",
+   "question": "Judicial & criminal justice: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://polisen.se/tjanster-tillstand/belastningsregistret/",
+   "quote": "Belastningsregistret och misstankeregistret innehåller uppgifter om du är skäligen misstänkt eller har fått påföljder för brott.",
+   "quote_english": "The criminal records register and the register of suspects contain information on whether you are reasonably suspected of or have received sanctions for crimes.",
+   "value": "Belastningsregistret (criminal records register), Polismyndigheten",
+   "published": "",
+   "title": "Belastningsregistret - begära utdrag",
+   "publisher": "Polismyndigheten",
+   "doc_type": "official_page",
+   "note": "This is the operator's own site. It confirms that the Police keep the register and offer extracts from it.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "belastningsregistret (with misstankeregistret)",
+    "reason": "The page names belastningsregistret (criminal records register) and misstankeregistret (register of suspects) as holding offence and suspicion data."
+   }
+  },
+  {
+   "claim": "record:SE:land_property:operator",
+   "question": "Land & property registry: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://data.riksdagen.se/dokument/sfs-2000-308.html",
+   "quote": "Vidare finns bestämmelser om tilläggsinformation. 2 § Lantmäteriet ansvarar för drift och förvaltning av fastighetsregistret.",
+   "quote_english": "Further, there are provisions on supplementary information. Lantmäteriet is responsible for operation and management of the real property register.",
+   "value": "Lantmäteriet operates and manages the register",
+   "published": "",
+   "title": "Förordning (2000:308) om fastighetsregister",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "This is the implementing ordinance, independent of the 2000:224 act. It names Lantmäteriet explicitly as operator, where the act says only 'the state cadastral authority'.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "Lantmäteriet",
+    "reason": "The regulation says Lantmäteriet runs and maintains the property register (fastighetsregistret)."
+   }
+  },
+  {
+   "claim": "record:SE:land_property:register",
+   "question": "Land & property registry: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://data.riksdagen.se/dokument/sfs-2000-308.html",
+   "quote": "I förordningen finns bestämmelser om fastighetsregistrets allmänna del, inskrivningsdel, adressdel, byggnadsdel och taxeringsuppgiftsdel. Vidare finns bestämmelser om tilläggsinformation. 2 § Lantmäteriet ansvarar för drift och förvaltning av fastighetsregistret.",
+   "quote_english": "The ordinance contains provisions on the real property register's general part, land registration part, address part, building part and tax assessment part. Further provisions on supplementary information. Lantmäteriet is responsible for operation and management of the real property register.",
+   "value": "Fastighetsregistret (real property register)",
+   "published": "",
+   "title": "Förordning (2000:308) om fastighetsregister",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "This is an independent implementing ordinance. It also names the register's parts.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "fastighetsregistret",
+    "reason": "The regulation names the property register as fastighetsregistret and lists its parts."
+   }
+  },
+  {
+   "claim": "record:SE:public_health_surveillance:operator",
+   "question": "Public health surveillance: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://data.riksdagen.se/dokument/sfs-2021-248.html",
+   "quote": "Uppgifter som rör smittskydd 16 § Myndigheten ska samordna, följa och utveckla smittskyddet på nationell nivå.",
+   "quote_english": "Tasks relating to communicable disease control. The agency shall coordinate, monitor and develop communicable disease control at national level.",
+   "value": "Folkhälsomyndigheten coordinates communicable disease control at national level",
+   "published": "2026",
+   "title": "Förordning (2021:248) med instruktion för Folkhälsomyndigheten",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "'Myndigheten' in the quote is Folkhälsomyndigheten, whose instruction this is (see title). This is independent of the Communicable Diseases Act, and it is consolidated through SFS 2026:874.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "Folkhälsomyndigheten",
+    "reason": "This instruction for Folkhälsomyndigheten says the agency coordinates and monitors disease control nationally. It gives a surveillance role but names no specific system."
+   }
+  },
+  {
+   "claim": "record:SE:public_health_surveillance:register",
+   "question": "Public health surveillance: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.folkhalsomyndigheten.se/vara-amnesomraden/vaccinationer/nationella-vaccinationsregistret/",
+   "quote": "NVR ett hälsodataregister som Folkhälsomyndigheten ansvarar för. Registret innehåller uppgifter om vaccinationer som ges i Sverige inom nationella vaccinationsprogram samt covid-19-vaccinationer.",
+   "quote_english": "NVR [is] a health data register for which the Public Health Agency is responsible. The register contains data on vaccinations given in Sweden within national vaccination programmes and covid-19 vaccinations.",
+   "value": "Nationella vaccinationsregistret (NVR, national vaccination register), Folkhälsomyndigheten",
+   "published": "",
+   "title": "Nationella vaccinationsregistret",
+   "publisher": "Folkhälsomyndigheten",
+   "doc_type": "official_page",
+   "note": "This is the operator's own page. It gives the official full name 'Nationella vaccinationsregistret'.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "Nationella vaccinationsregistret (NVR)",
+    "reason": "NVR is named as a health data register that Folkhälsomyndigheten is responsible for."
+   }
+  },
+  {
+   "claim": "record:SE:vehicle_licensing:register",
+   "question": "Vehicle & licensing: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.transportstyrelsen.se/sv/vagtrafik/fordon/fordons-agaruppgift/uttag-av-fordonsdata-pa-fil/fordonsdata-fran-vagtrafikregistret/",
+   "quote": "Transportstyrelsen har rätt att ta ut avgift för uppgifter ur vägtrafikregistret till enskilda med stöd av 9 § förordning (2008:1300) med instruktion för Transportstyrelsen.",
+   "quote_english": "The Swedish Transport Agency may charge a fee for data from the road traffic register to private parties under section 9 of the ordinance (2008:1300) with instructions for the Transport Agency.",
+   "value": "Vägtrafikregistret (road traffic register), Transportstyrelsen",
+   "published": "",
+   "title": "Fordonsdata från vägtrafikregistret",
+   "publisher": "Transportstyrelsen",
+   "doc_type": "official_page",
+   "note": "This is the operator's own site. It confirms that the register is kept and sold by Transportstyrelsen.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "vägtrafikregistret",
+    "reason": "Transportstyrelsen supplies vehicle data from vägtrafikregistret, the road traffic register."
+   }
+  },
+  {
+   "claim": "record:SE:civil_registry:count",
+   "question": "Civil registry core: how many records it holds",
+   "relation": "supersedes",
+   "url": "https://www.scb.se/hitta-statistik/statistik-efter-amne/befolkning-och-levnadsforhallanden/befolkningens-sammansattning-och-utveckling/befolkningsstatistik/",
+   "quote": "Sveriges befolkning ökade med 5 000 personer under första halvåret 2026. Vid halvårsskiftet 2026 var 10 610 500 personer folkbokförda i landet.",
+   "quote_english": "Sweden's population increased by 5,000 persons in the first half of 2026. At mid-year 2026, 10,610,500 persons were registered in the country.",
+   "value": "10 610 500 persons folkbokförda (registered) at mid-year 2026",
+   "published": "2026-08-21",
+   "title": "Befolkningsstatistik",
+   "publisher": "Statistiska centralbyrån (SCB)",
+   "doc_type": "statistics",
+   "note": "This is a newer SCB figure (mid-2026) than the printed 2025 value of 10,605,529. The same page's key figure for July 2026 is 10 613 531.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "10 610 500 persons registered (folkbokförda) at mid-2026",
+    "reason": "SCB reports 10,610,500 people registered in the population register at the half-year point of 2026. That is a count of registered persons, not of register records as such."
+   }
+  },
+  {
+   "claim": "record:SE:breeder_documents:register",
+   "question": "Breeder document scans: Birth certificates, naturalisation decrees and other documents that establish identity",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/sfs-1991-481.html",
+   "quote": "Vigsel, födelse och dödsfall i landet ska registreras även i fråga om en person som inte är eller har varit folkbokförd. Skatteverket ansvarar för folkbokföring och sådan registrering som avses i andra stycket.",
+   "quote_english": "Marriage, birth and death in the country shall be registered even for a person who is not or has not been registered. The Tax Agency is responsible for population registration and such registration referred to in the second paragraph.",
+   "value": "Folkbokföring (population registration of births, marriages and deaths), Skatteverket",
+   "published": "2026",
+   "title": "Folkbokföringslag (1991:481)",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "Sweden has no separate birth-certificate register: births, marriages and deaths are recorded in population registration by Skatteverket. This is the nearest statutory equivalent to a breeder-document holding, not a register of document scans.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Skatteverket",
+    "reason": "Skatteverket is responsible for population registration and for registering births, marriages and deaths. The quote says nothing about scans of breeder documents."
+   }
+  },
+  {
+   "claim": "record:SE:digital_identity_credentials:register",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/sfs-2026-1358.html",
+   "quote": "Register över ärenden om statlig e-legitimation 5 § Polismyndigheten ska med hjälp av automatiserad behandling föra ett register över ärenden om statlig e-legitimation.",
+   "quote_english": "Register of state e-identification cases. The Police Authority shall, by automated processing, keep a register of cases concerning state e-identification.",
+   "value": "Registret över ärenden om statlig e-legitimation (register of state e-ID cases)",
+   "published": "2026-06-18",
+   "title": "Lag (2026:1358) om statlig e-legitimation och elektronisk identifiering",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "This is the statutory register for the new state eID, in force from 2026-12-01. Private eIDs such as BankID and Freja are outside it.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "Polismyndigheten (register över ärenden om statlig e-legitimation)",
+    "reason": "Polismyndigheten must keep an automated register of state e-ID cases. That covers the state e-ID only, not a wider national eID scheme."
+   }
+  },
+  {
+   "claim": "record:SE:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/sfs-2026-1358.html",
+   "quote": "Register över ärenden om statlig e-legitimation 5 § Polismyndigheten ska med hjälp av automatiserad behandling föra ett register över ärenden om statlig e-legitimation.",
+   "quote_english": "Register of state e-identification cases. The Police Authority shall, by automated processing, keep a register of cases concerning state e-identification.",
+   "value": "Polismyndigheten (Swedish Police Authority)",
+   "published": "2026-06-18",
+   "title": "Lag (2026:1358) om statlig e-legitimation och elektronisk identifiering",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "Chapter 3, section 11 of the same act also makes the Police Authority controller for this register.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Polismyndigheten (register över ärenden om statlig e-legitimation)",
+    "reason": "Identical to item 21: Polismyndigheten keeps the automated register of state e-ID cases."
+   }
+  },
+  {
+   "claim": "record:SE:residence_permits:operator",
+   "question": "Residence and migration status: Residence permits, asylum status and foreign-national registrations",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/sfs-2016-27.html",
+   "quote": "Migrationsverket, Polismyndigheten och en utlandsmyndighet är var och en personuppgiftsansvarig för den behandling av personuppgifter som myndigheten utför. Migrationsverket är dock personuppgiftsansvarigt för utlandsmyndigheternas automatiserade behandling av personuppgifter.",
+   "quote_english": "The Migration Agency, the Police Authority and a mission abroad are each controller for the processing they carry out. The Migration Agency is however controller for the missions' automated processing of personal data.",
+   "value": "Migrationsverket (Swedish Migration Agency), also controller for missions abroad's automated processing",
+   "published": "2026",
+   "title": "Utlänningsdatalag (2016:27)",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "The act covers residence, status declarations, citizenship and reception. It names no single register, so this finding gives the operator only.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Migrationsverket (with Polismyndigheten and missions abroad)",
+    "reason": "Under the law on processing in migration work, each of these bodies is a data controller. Migrationsverket is also the controller for the missions' automated processing."
+   }
+  },
+  {
+   "claim": "record:SE:tax:operator",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/sfs-2026-125.html",
+   "quote": "Skatteverket är personuppgiftsansvarig för den behandling av personuppgifter som myndigheten utför enligt denna lag och föreskrifter som har meddelats i anslutning till lagen.",
+   "quote_english": "The Swedish Tax Agency is controller for the processing of personal data the authority carries out under this act and regulations issued in connection with it.",
+   "value": "Skatteverket (Swedish Tax Agency)",
+   "published": "2026-02-26",
+   "title": "Beskattningsdatalag (2026:125)",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "This 2026 act replaced the 2001 taxation-data act. It covers the Tax Agency's taxation activities (assessment, payment, property valuation, audit) and no longer names a 'beskattningsdatabas', so no register name is given.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "Skatteverket",
+    "reason": "Section 2 of Lag 2026:125 applies it to Skatteverket's taxation work, and the quote makes Skatteverket the controller."
+   }
+  },
+  {
+   "claim": "record:SE:customs:operator",
+   "question": "Customs declarations: Import and export declarations and duty assessments",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/sfs-2026-127.html",
+   "quote": "Tullverket är personuppgiftsansvarig för den behandling av personuppgifter som myndigheten utför enligt denna lag och föreskrifter som har meddelats i anslutning till lagen.",
+   "quote_english": "Swedish Customs is controller for the processing of personal data the authority carries out under this act and regulations issued in connection with it.",
+   "value": "Tullverket (Swedish Customs)",
+   "published": "2026-02-26",
+   "title": "Tulldatalag (2026:127)",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "This is the new 2026 Customs Data Act. It names no specific declaration system, so this finding gives the operator only.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "Tullverket",
+    "reason": "Section 2 of Lag 2026:127 applies it to Tullverket's customs and duty work, and the quote makes Tullverket the controller."
+   }
+  },
+  {
+   "claim": "record:SE:benefits_pensions:operator",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/sfs-2010-110.html",
+   "quote": "Personuppgiftsansvar 7 § Försäkringskassan och Pensionsmyndigheten är personuppgiftsansvariga för behandling av personuppgifter i sina respektive verksamheter.",
+   "quote_english": "Controllership. The Social Insurance Agency and the Pensions Agency are controllers for the processing of personal data in their respective activities.",
+   "value": "Försäkringskassan (Social Insurance Agency) and Pensionsmyndigheten (Pensions Agency)",
+   "published": "2026",
+   "title": "Socialförsäkringsbalk (2010:110)",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "From chapter 114 of the Social Insurance Code. No named database appears in the current text, so this finding gives the operators only.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "Försäkringskassan and Pensionsmyndigheten",
+    "reason": "Each agency is named as the personal-data controller for its own social insurance and pension work."
+   }
+  },
+  {
+   "claim": "record:SE:police_records:register",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/sfs-1998-621.html",
+   "quote": "Polismyndigheten ska med hjälp av automatiserad behandling föra ett register med uppgifter om dem som är skäligen misstänkta för brott (misstankeregistret). Myndigheten är personuppgiftsansvarig för behandlingen av personuppgifter i registret.",
+   "quote_english": "The Police Authority shall by automated processing keep a register of those reasonably suspected of crimes (the register of suspects). The authority is controller for the processing of personal data in the register.",
+   "value": "Misstankeregistret (register of suspects), Polismyndigheten",
+   "published": "2026",
+   "title": "Lag (1998:621) om misstankeregister",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "This is a national police register, amended as recently as SFS 2026:1557. Lag (2018:1693) also sets up police biometric registers.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Polismyndigheten (misstankeregistret)",
+    "reason": "Polismyndigheten keeps misstankeregistret, the register of suspects, and is the controller for it."
+   }
+  },
+  {
+   "claim": "record:SE:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/sfs-1976-633.html",
+   "quote": "Regeringen ska se till att Svensk författningssamling publiceras elektroniskt på en särskild webbplats. En författning ska anses kungjord när den har publicerats i Svensk författningssamling på webbplatsen.",
+   "quote_english": "The Government shall ensure that the Swedish Code of Statutes is published electronically on a dedicated website. A statute shall be deemed promulgated when it has been published in the Swedish Code of Statutes on the website.",
+   "value": "Svensk författningssamling (SFS, Swedish Code of Statutes), published electronically on a dedicated website",
+   "published": "",
+   "title": "Lag (1976:633) om kungörande av lagar och andra författningar",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "The provision was amended by Lag (2016:500), which made the electronic SFS the authentic, legally binding publication.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Svensk författningssamling, published electronically by the Government (Regeringen)",
+    "reason": "The Government must publish SFS on a dedicated website, and publication there counts as promulgation."
+   }
+  },
+  {
+   "claim": "record:SE:government_payroll:operator",
+   "question": "Government payroll and personnel: Civil service and armed forces payroll and personnel records",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/HDB313.html",
+   "quote": "Under 2023 tillhandahöll SSC administrativa stödtjänster till totalt 167 myndigheter, varav lönetjänster till 143 myndigheter",
+   "quote_english": "In 2023 SSC provided administrative support services to a total of 167 agencies, of which payroll services to 143 agencies",
+   "value": "Statens servicecenter (SSC), payroll services to 143 agencies in 2023",
+   "published": "2025-02-10",
+   "title": "SOU 2025:13",
+   "publisher": "Sveriges riksdag / Regeringskansliet (Statens offentliga utredningar)",
+   "doc_type": "official_page",
+   "note": "The central government shared-service agency provides payroll for most, but not all, state agencies. The Armed Forces are not confirmed here.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "Statens servicecenter (SSC): payroll services to 143 agencies in 2023",
+    "reason": "SSC provided administrative services to 167 agencies in 2023, payroll services to 143 of them."
+   }
+  },
+  {
+   "claim": "record:SE:government_payroll:count",
+   "question": "Government payroll and personnel: Civil service and armed forces payroll and personnel records",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/HDB313.html",
+   "quote": "Sett till antal prestationer omfattade tjänsterna under samman år bland annat cirka 1,5 miljoner lönespecifikationer",
+   "quote_english": "In terms of volume, the services in the same year included about 1.5 million payslips",
+   "value": "about 1,5 million payslips (lönespecifikationer) per year",
+   "published": "2025-02-10",
+   "title": "SOU 2025:13",
+   "publisher": "Sveriges riksdag / Regeringskansliet (Statens offentliga utredningar)",
+   "doc_type": "official_page",
+   "note": "'The same year' is 2023, per the preceding sentence. This counts SSC's payslip output, not personnel records.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "about 1.5 million payslips (2023)",
+    "reason": "SSC's services covered about 1.5 million payslips in the same year, 2023, as the page's 'samman år' refers back to."
+   }
+  },
+  {
+   "claim": "record:SE:government_payroll:register",
+   "question": "Government payroll and personnel: Civil service and armed forces payroll and personnel records",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/HDB313.html",
+   "quote": "saknas i årsredovisningen för 2023, med anledning av en driftstörning i Statens Servicecenter Primula.",
+   "quote_english": "is missing from the 2023 annual report, owing to an outage in Statens servicecenter's Primula.",
+   "value": "Primula (Statens servicecenter)",
+   "published": "2025-02-10",
+   "title": "SOU 2025:13",
+   "publisher": "Sveriges riksdag / Regeringskansliet (Statens offentliga utredningar)",
+   "doc_type": "official_page",
+   "note": "Primula is SSC's payroll and HR system. This passage names it only in passing, so the identification as the payroll system rests on context; a stronger source would be SSC's own site.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "Primula (Statens servicecenter)",
+    "reason": "The quote comes from a note to Brå's cost table: an outage in 'Statens Servicecenter Primula' left staffing figures missing, which names Primula as SSC's system holding personnel data."
+   }
+  },
+  {
+   "claim": "record:SE:central_bank:register",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.riksbank.se/sv/betalningar--kontanter/betalningssystemet-rix/",
+   "quote": "RIX-RTGS är uppbyggt för att kunna hantera stora betalningar mellan deltagarna. Dagligen omsätts cirka 660 miljarder kronor i RIX-RTGS",
+   "quote_english": "RIX-RTGS is built to handle large payments between participants. About SEK 660 billion is turned over daily in RIX-RTGS",
+   "value": "RIX-RTGS (Riksbank's large-value payment settlement system)",
+   "published": "",
+   "title": "Betalningssystemet RIX",
+   "publisher": "Sveriges riksbank",
+   "doc_type": "official_page",
+   "note": "The operator's own page. The same page says the Riksbank has decided to negotiate with the Eurosystem to move RIX-RTGS onto T2, a change expected to take about five years; that bears on foreign_dependency later.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "RIX-RTGS (about 660 billion SEK settled daily)",
+    "reason": "The Riksbank page says RIX-RTGS handles large payments, about 660 billion kronor a day. The same page says the Riksbank plans to move RIX-RTGS to the Eurosystem's T2 platform."
+   }
+  },
+  {
+   "claim": "record:SE:central_bank:register",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.riksbank.se/sv/betalningar--kontanter/betalningssystemet-rix/",
+   "quote": "RIX-INST är Riksbankens system för omedelbara betalningar. Till skillnad från RIX-RTGS, är RIX-INST öppet dygnet runt alla dagar på året och avvecklingen i RIX-INST sker omedelbart.",
+   "quote_english": "RIX-INST is the Riksbank's system for instant payments. Unlike RIX-RTGS, RIX-INST is open around the clock every day of the year and settlement in RIX-INST is immediate.",
+   "value": "RIX-INST (Riksbank's instant payment system)",
+   "published": "",
+   "title": "Betalningssystemet RIX",
+   "publisher": "Sveriges riksbank",
+   "doc_type": "official_page",
+   "note": "This is the second RIX component; Swish payments settle here.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "RIX-INST (Riksbank)",
+    "reason": "RIX-INST is named as the Riksbank's system for instant payments."
+   }
+  },
+  {
+   "claim": "record:SE:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.mcf.se/sv/amnesomraden/samhallsviktiga-kommunikationstjanster/rakel/",
+   "quote": "Rakel är Sveriges nationella kommunikationssystem för ledning och samverkan. Myndigheten för civilt försvar ansvarar för drift, förvaltning och utveckling av Rakel.",
+   "quote_english": "Rakel is Sweden's national communication system for command and cooperation. The Swedish Civil Defence Agency is responsible for operation, management and development of Rakel.",
+   "value": "Rakel (national public-safety radio communication system)",
+   "published": "",
+   "title": "Rakel",
+   "publisher": "Myndigheten för civilt försvar",
+   "doc_type": "official_page",
+   "note": "This is the operator's own page. Its instruction, SFS 2008:1002, section 16, also names the 'Rakel-systemet'.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "Rakel, operated by Myndigheten för civilt försvar",
+    "reason": "Rakel is the national command and coordination radio system, and Myndigheten för civilt försvar runs, maintains and develops it."
+   }
+  },
+  {
+   "claim": "record:SE:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.mcf.se/sv/amnesomraden/samhallsviktiga-kommunikationstjanster/rakel/",
+   "quote": "Rakel är Sveriges nationella kommunikationssystem för ledning och samverkan. Myndigheten för civilt försvar ansvarar för drift, förvaltning och utveckling av Rakel.",
+   "quote_english": "Rakel is Sweden's national communication system for command and cooperation. The Swedish Civil Defence Agency is responsible for operation, management and development of Rakel.",
+   "value": "Myndigheten för civilt försvar (Swedish Civil Defence Agency)",
+   "published": "",
+   "title": "Rakel",
+   "publisher": "Myndigheten för civilt försvar",
+   "doc_type": "official_page",
+   "note": "This covers Rakel only. The 112 service (SOS Alarm) is not covered.",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "Rakel, operated by Myndigheten för civilt försvar",
+    "reason": "Identical to item 34: Myndigheten för civilt försvar runs Rakel."
+   }
+  },
+  {
+   "claim": "record:SE:crisis_management:register",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://www.mcf.se/sv/wis/",
+   "quote": "WIS är en portal för Sveriges civila beredskap där aktörer delar information före, under och efter samhällsstörningar.",
+   "quote_english": "WIS is a portal for Sweden's civil preparedness where actors share information before, during and after societal disruptions.",
+   "value": "WIS (portal for civil-preparedness information sharing), Myndigheten för civilt försvar",
+   "published": "",
+   "title": "WIS",
+   "publisher": "Myndigheten för civilt försvar",
+   "doc_type": "official_page",
+   "note": "This is the agency's own site; WIS is the national crisis information-sharing system.",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "WIS",
+    "reason": "The quote names WIS as the civil preparedness information-sharing portal but does not say who operates it; it appears only on the mcf.se site."
+   }
+  },
+  {
+   "claim": "record:SE:crisis_management:register",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/sfs-2008-1002.html",
+   "quote": "Myndigheten ska samordna och utveckla systemet för varning och information till allmänheten enligt lagen (2023:407) om viktigt meddelande till allmänheten.",
+   "quote_english": "The agency shall coordinate and develop the system for warning and information to the public under the Act (2023:407) on important public announcements.",
+   "value": "Systemet för varning och information till allmänheten (public warning and information system)",
+   "published": "2026",
+   "title": "Förordning (2008:1002) med instruktion för Myndigheten för civilt försvar",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "This is the alerting system in statute. 'Myndigheten' is Myndigheten för civilt försvar (see title), and the text is consolidated through SFS 2026:619.",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "Myndigheten för civilt försvar (VMA warning system)",
+    "reason": "This instruction for Myndigheten för civilt försvar has the agency coordinate and develop the public warning system under the VMA law (2023:407)."
+   }
+  },
+  {
+   "claim": "record:SE:grid_control:operator",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/sfs-2025-782.html",
+   "quote": "Affärsverket svenska kraftnät ska utifrån ett samhällsbyggnadsperspektiv skapa förutsättningar för en samhällsekonomiskt effektiv, internationellt konkurrenskraftig, hållbar och trygg elförsörjning i Sverige.",
+   "quote_english": "Svenska kraftnät shall, from a societal-planning perspective, create conditions for a socio-economically efficient, internationally competitive, sustainable and secure electricity supply in Sweden.",
+   "value": "Affärsverket svenska kraftnät (Svenska kraftnät)",
+   "published": "2025-06-26",
+   "title": "Förordning (2025:782) med instruktion för Affärsverket svenska kraftnät",
+   "publisher": "Regeringskansliet (SFS)",
+   "doc_type": "legislation",
+   "note": "Section 4 of the same instruction says the agency is the system-responsible authority under the Electricity Act, and section 5 says it runs the transmission grid. No name for the control system (SCADA/EMS) was found.",
+   "review": {
+    "id": 38,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote gives Svenska kraftnät's general remit for electricity supply. It does not mention operating the transmission grid or any control or market system."
+   }
+  },
+  {
+   "claim": "indicator:SE:L1",
+   "question": "Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? yes = A statute or binding regulation requires it for government data generally; partial = Required only for classified data or only for named sectors; no = A source states there is no such requirement",
+   "relation": "fills_gap",
+   "url": "https://data.riksdagen.se/dokument/HD12932.html",
+   "quote": "Avseende statliga myndigheter ansvarar ledningen för verksamheten och ska se till att den bedrivs effektivt och enligt gällande rätt. Det innebär att myndigheten gör en självständig bedömning avseende användning av till exempel molntjänster.",
+   "quote_english": "As regards state agencies, the management is responsible for the activity and shall ensure it is run efficiently and in accordance with applicable law. This means the agency makes an independent assessment regarding the use of, for example, cloud services.",
+   "value": "no",
+   "published": "2026-07-09",
+   "title": "Svar på fråga 2025/26:932 Myndigheters beroende av amerikanska molntjänster",
+   "publisher": "Sveriges riksdag (answer by the Minister for Public Administration)",
+   "doc_type": "official_page",
+   "note": "The minister's 2026 answer leaves cloud and location choices to each agency, pointing only to a non-binding government cloud policy of 28 May, and cites no jurisdiction requirement. This supports 'no' only by implication. A reviewer should weigh whether the Security Protection Act rules for classified data make it 'partial'.",
+   "review": {
+    "id": 39,
+    "quote_found": true,
+    "established": "",
+    "reason": "The minister says each agency assesses cloud use for itself under current law. This implies no rule but does not state that no statute requires national or EU storage."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:SE:electoral_management:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:electoral_management:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:electoral_roll:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:SE:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:SE:C2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:SE:K1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:SE:K2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:SE:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:border_control:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:border_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:civil_registry:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:civil_registry:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:facial_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:issuance_history:count",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:land_property:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:public_finance:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:public_finance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:public_health_surveillance:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:public_health_surveillance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:civil_registry:count",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:breeder_documents:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:authentication_audit_log:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:trust_services_pki:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:health_insurance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:government_payroll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:grid_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:SE:water_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:SE:L1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:SE:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

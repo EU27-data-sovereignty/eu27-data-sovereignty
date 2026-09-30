@@ -11,6 +11,13 @@ export function SpanView({ span, numbers, bundle }: SpanProps) {
   if (span.role === 'gap') {
     return <em className="text-[var(--color-fg-muted)]">{span.t}</em>
   }
+  if (span.role === 'disputed') {
+    return (
+      <em className="border-b border-dashed border-[var(--color-highlight)] text-[var(--color-fg-muted)]">
+        {span.t}
+      </em>
+    )
+  }
   if (span.role !== 'fact') return <>{span.t}</>
   const ids = [
     ...new Set((span.c ?? []).flatMap(claim => (bundle.claims[claim] ?? []).map(c => c.source_id))),

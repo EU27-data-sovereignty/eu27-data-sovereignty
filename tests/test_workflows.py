@@ -56,5 +56,27 @@ class Deploy(unittest.TestCase):
         self.assertNotIn("pull_request", DEPLOY)
 
 
+class ToolVersions(unittest.TestCase):
+    """CI builds with the versions pinned in .tool-versions, so a clean-room rebuild reproduces (#84)."""
+
+    PINNED = dict(line.split() for line in (ROOT / ".tool-versions").read_text().splitlines() if line.strip())
+
+    def test_every_workflow_uses_the_pinned_python_and_node(self):
+        for wf in WORKFLOWS:
+            text = wf.read_text()
+            for v in re.findall(r'python-version: "([^"]+)"', text):
+                self.assertEqual(v, self.PINNED["python"], wf.name)
+            for v in re.findall(r'node-version: "([^"]+)"', text):
+                self.assertEqual(v, self.PINNED["nodejs"], wf.name)
+
+    def test_ci_installs_the_pinned_typst(self):
+        found = re.findall(r"TYPST_VERSION: v(\S+)", "".join(wf.read_text() for wf in WORKFLOWS))
+        self.assertTrue(found)
+        self.assertEqual(set(found), {self.PINNED["typst"]})
+
+    def test_nvmrc_agrees(self):
+        self.assertEqual((ROOT / ".nvmrc").read_text().strip(), self.PINNED["nodejs"])
+
+
 if __name__ == "__main__":
     unittest.main()

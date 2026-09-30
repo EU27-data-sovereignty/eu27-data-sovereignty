@@ -8,7 +8,7 @@
  */
 
 /** label: heading or row name. method: this project's reasoning. fact: cited. gap: withheld. */
-export type Role = 'label' | 'method' | 'fact' | 'gap'
+export type Role = 'label' | 'method' | 'fact' | 'gap' | 'disputed'
 
 export interface Span {
   t: string
@@ -147,6 +147,8 @@ export interface Bundle {
   holding_classes: HoldingClass[]
   countries: Record<string, CountryData>
   documents: Record<string, Document>
+  /** How everything was sourced and calculated, generated (model/methodology.py). */
+  methodology: Document
   claims: Record<string, Citation[]>
   sources: Record<string, Source>
 }

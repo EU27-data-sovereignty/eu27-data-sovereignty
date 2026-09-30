@@ -1,0 +1,596 @@
+{
+ "iso": "LT",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:LT:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "upgrade",
+   "url": "https://telecentras.lt/projektai/vdc/",
+   "quote": "Oficialios inauguracijos metu paskelbtas valstybinių duomenų centrų VDC3 ir VDC4 startas. Bendra abiejų centrų talpa – 288 spintos.",
+   "quote_english": "At the official inauguration the launch of state data centres VDC3 and VDC4 was announced. The combined capacity of both centres is 288 racks.",
+   "value": "Yes",
+   "published": "2024-09-30",
+   "title": "Valstybės duomenų centrų plėtros projektas",
+   "publisher": "AB Lietuvos radijo ir televizijos centras (Telecentras), state-owned",
+   "doc_type": "official_page",
+   "note": "The operator's own page replaces a press source. It dates the VDC3/VDC4 launch to 2024-09-30 and also says that the IVPK-run VDC1 and VDC2 already operate.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The page announces the start of state data centres VDC3 and VDC4, with 288 racks in total (dated 2024-09-30), and says VDC1 and VDC2 already operate, so state data centres are in operation."
+   }
+  },
+  {
+   "claim": "indicator:LT:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "upgrade",
+   "url": "https://telecentras.lt/paslaugos/debesijos-paslaugos/",
+   "quote": "Telecentras Cloud – tai fizinio bei kibernetinio saugumo standartus atitinkanti, per kelias geolokacijas paskirstyta, nacionalinė debesijos platforma.",
+   "quote_english": "Telecentras Cloud is a national cloud platform that meets physical and cyber security standards and is distributed across several geolocations.",
+   "value": "Yes",
+   "published": "",
+   "title": "Debesijos paslaugos",
+   "publisher": "AB Lietuvos radijo ir televizijos centras (Telecentras), state-owned",
+   "doc_type": "official_page",
+   "note": "The state-owned operator's page replaces a press source. The same page says its virtual resources run in the Tier III state data centres, and that the platform is built on Nutanix HCI, a US vendor's software.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Telecentras offers 'Telecentras Cloud', described as a national cloud platform spread over several geolocations, as a current service with private and hybrid options; it is presented as operating, not announced."
+   }
+  },
+  {
+   "claim": "indicator:LT:L1",
+   "question": "indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction?",
+   "relation": "upgrade",
+   "url": "https://telecentras.lt/projektai/vdc/",
+   "quote": "Pagal įstatymą viešojo sektoriaus organizacijos ir įstaigos turėtų duomenis laikyti valstybiniuose duomenų centruose, o esančios Saugaus valstybinio duomenų perdavimo tinklo (SVDPT) sąraše - privalo.",
+   "quote_english": "By law, public sector organisations and bodies should keep data in state data centres, and those on the Secure State Data Transmission Network (SVDPT) list must.",
+   "value": "Partly",
+   "published": "2024-09-30",
+   "title": "Valstybės duomenų centrų plėtros projektas",
+   "publisher": "AB Lietuvos radijo ir televizijos centras (Telecentras), state-owned",
+   "doc_type": "official_page",
+   "note": "The operator's official page supports 'Partly' better than the press article: storage in state data centres is mandatory only for bodies on the SVDPT list. It is not the statute itself.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "partial",
+    "reason": "The page says that under the law public-sector bodies 'should' keep data in state data centres and only those on the SVDPT list 'must', so the binding requirement covers a subset, and the page paraphrases the statute without naming it."
+   }
+  },
+  {
+   "claim": "indicator:LT:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://rrt.lt/veiklos-sritys/skaitmenine-erdve/patikimumo-uztikrinimo-paslaugos/kvalifikuoti-sertifikatai",
+   "quote": "Įregistruotas Lietuvos Respublikos ryšių reguliavimo tarnybos direktoriaus 2025 m. lapkričio 13 d. įsakymu Nr. TN- „Dėl Migracijos departamento prie Lietuvos Respublikos vidaus reikalų ministerijos registravimo kvalifikuotus sertifikatus sudarančiu sertifikavimo paslaugų teikėju“.",
+   "quote_english": "Registered by order of the Director of the Communications Regulatory Authority of 13 November 2025 'On registering the Migration Department under the Ministry of the Interior as a certification service provider issuing qualified certificates'.",
+   "value": "Yes",
+   "published": "2025-11-13",
+   "title": "Kvalifikuoti sertifikatai",
+   "publisher": "Lietuvos Respublikos ryšių reguliavimo tarnyba (RRT)",
+   "doc_type": "official_page",
+   "note": "The supervisory body independently confirms that a state body, the Migration Department, is the registered qualified trust service provider. The same page lists state enterprise Registrų centras as a second QTSP.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "RRT registered the Migration Department under the Ministry of the Interior, a state body, as a provider that issues qualified certificates, so a qualified trust service is state-operated; the quote does not name a PKI root."
+   }
+  },
+  {
+   "claim": "indicator:LT:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://eid.vrm.lt/lt/apie-tapatybes-kortele",
+   "quote": "Daugiau nei 70 pasaulio valstybių, tarp jų ir Lietuvos Respublika, yra įgyvendinusios ir palaiko valstybės garantuojamo elektroninio asmens liudijimo sprendimą ir tuo tikslu piliečiams išduoda Lietuvos Respublikos asmens tapatybės korteles (ATK / eID)",
+   "quote_english": "More than 70 countries, including the Republic of Lithuania, have implemented and maintain a state-guaranteed electronic identity solution and for that purpose issue citizens Lithuanian identity cards (ATK / eID)",
+   "value": "Yes",
+   "published": "",
+   "title": "Apie tapatybės kortelę",
+   "publisher": "Lietuvos Respublikos vidaus reikalų ministerija / Migracijos departamentas (eid.vrm.lt)",
+   "doc_type": "official_page",
+   "note": "The Interior Ministry's eID portal describes the ATK/eID as a state-guaranteed eID issued by the state. The Migration Department is named on the site as the issuer.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote says Lithuania runs a state-guaranteed electronic identity scheme and issues citizens identity cards (ATK/eID), so the scheme is state-run, though the operating body is not named."
+   }
+  },
+  {
+   "claim": "record:LT:issuance_history:register",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/asmens-dokumentu-isdavimo-informacine-sistema-adis-2",
+   "quote": "ADIS tikslas - informacinių technologijų priemonėmis valdyti asmens dokumentų išdavimo, naikinimo, paskelbimo negaliojančiais procesus ir tvarkyti su šiais procesais susijusius duomenis.",
+   "quote_english": "The purpose of ADIS is to manage, by IT means, the processes of issuing, destroying and declaring invalid personal documents, and to process the related data.",
+   "value": "Asmens dokumentų išdavimo informacinė sistema, ADIS (Personal Documents Issuance Information System)",
+   "published": "",
+   "title": "Asmens dokumentų išdavimo informacinė sistema (ADIS)",
+   "publisher": "Informatikos ir ryšių departamentas prie VRM",
+   "doc_type": "official_page",
+   "note": "The same page says ADIS was created in 1997.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "ADIS (Asmens dokumentų išdavimo informacinė sistema); operator not stated",
+    "reason": "The quote gives ADIS's purpose (issuing documents, destroying them and declaring them invalid) but names no operator or controller."
+   }
+  },
+  {
+   "claim": "record:LT:issuance_history:operator",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/asmens-dokumentu-isdavimo-informacine-sistema-adis-2",
+   "quote": "Nuo 2020 m. ADIS valdytoju ir ADIS asmens duomenų valdytoju paskirta Lietuvos Respublikos vidaus reikalų ministerija. Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos vykdo ADIS techninės ir programinės infrastruktūros priežiūrą.",
+   "quote_english": "Since 2020 the Ministry of the Interior has been designated ADIS controller and personal data controller. The Information Technology and Communications Department under the Ministry of the Interior maintains the ADIS technical and software infrastructure.",
+   "value": "Lietuvos Respublikos vidaus reikalų ministerija (Ministry of the Interior), with Informatikos ir ryšių departamentas maintaining the infrastructure",
+   "published": "",
+   "title": "Asmens dokumentų išdavimo informacinė sistema (ADIS)",
+   "publisher": "Informatikos ir ryšių departamentas prie VRM",
+   "doc_type": "official_page",
+   "note": "The Ministry controls ADIS and its Information Technology and Communications Department (IRD) runs it.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Ministry of the Interior (VRM) as controller; Informatikos ir ryšių departamentas prie VRM maintains the infrastructure (national)",
+    "reason": "The quote names VRM as ADIS controller from 2020, and IRD under VRM as the body that maintains ADIS's technical and software infrastructure."
+   }
+  },
+  {
+   "claim": "record:LT:digital_identity_credentials:register",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://eid.vrm.lt/lt/apie-tapatybes-kortele",
+   "quote": "Daugiau nei 70 pasaulio valstybių, tarp jų ir Lietuvos Respublika, yra įgyvendinusios ir palaiko valstybės garantuojamo elektroninio asmens liudijimo sprendimą ir tuo tikslu piliečiams išduoda Lietuvos Respublikos asmens tapatybės korteles (ATK / eID)",
+   "quote_english": "More than 70 countries, including the Republic of Lithuania, have implemented and maintain a state-guaranteed electronic identity solution and for that purpose issue citizens Lithuanian identity cards (ATK / eID)",
+   "value": "Lietuvos Respublikos asmens tapatybės kortelė, ATK / eID (Lithuanian identity card eID)",
+   "published": "",
+   "title": "Apie tapatybės kortelę",
+   "publisher": "Lietuvos Respublikos vidaus reikalų ministerija (eid.vrm.lt)",
+   "doc_type": "official_page",
+   "note": "This names the national eID scheme, not a separately named credential register. A reviewer may judge it only a partial fill.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "national (state-guaranteed ATK/eID identity card)",
+    "reason": "The quote says the state guarantees the electronic identity and issues ATK/eID cards; it does not name the operating body or give accounts or assurance levels."
+   }
+  },
+  {
+   "claim": "record:LT:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: Root and issuing certificate authorities for government, qualified signatures and seals",
+   "relation": "fills_gap",
+   "url": "https://rrt.lt/veiklos-sritys/skaitmenine-erdve/patikimumo-uztikrinimo-paslaugos/kvalifikuoti-sertifikatai",
+   "quote": "Įregistruotas Lietuvos Respublikos ryšių reguliavimo tarnybos direktoriaus 2025 m. lapkričio 13 d. įsakymu Nr. TN- „Dėl Migracijos departamento prie Lietuvos Respublikos vidaus reikalų ministerijos registravimo kvalifikuotus sertifikatus sudarančiu sertifikavimo paslaugų teikėju“.",
+   "quote_english": "Registered by order of the Director of the Communications Regulatory Authority of 13 November 2025 'On registering the Migration Department under the Ministry of the Interior as a certification service provider issuing qualified certificates'.",
+   "value": "Migracijos departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Migration Department under the Ministry of the Interior)",
+   "published": "2025-11-13",
+   "title": "Kvalifikuoti sertifikatai",
+   "publisher": "Lietuvos Respublikos ryšių reguliavimo tarnyba (RRT)",
+   "doc_type": "official_page",
+   "note": "The Migration Department took over the ID-card qualified trust services from the Identity Documents Personalisation Centre in November 2025. State enterprise Registrų centras is also listed as a QTSP.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Migracijos departamentas prie LR vidaus reikalų ministerijos (qualified certificate provider)",
+    "reason": "The quote records RRT's 2025-11-13 order registering the Migration Department under VRM as a provider that issues qualified certificates."
+   }
+  },
+  {
+   "claim": "record:LT:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.regitra.lt/imone/veiklos-sritys/",
+   "quote": "Motorinių transporto priemonių ir jų priekabų duomenys registruojami ir tvarkomi valstybiniame registre KTPR, kurio valdytoja yra VRM, o tvarkytoja – AB „Regitra“.",
+   "quote_english": "Data on motor vehicles and their trailers are registered and processed in the state register KTPR, whose controller is the Ministry of the Interior and whose processor is AB Regitra.",
+   "value": "Kelių transporto priemonių registras, KTPR (Road Vehicle Register)",
+   "published": "",
+   "title": "Veiklos sritys",
+   "publisher": "AB „Regitra“",
+   "doc_type": "official_page",
+   "note": "The same page names the driving-licence register KTPVR, a departmental register of the Ministry of the Interior that Regitra also runs.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "KTPR vehicle register: controller VRM, processor AB Regitra",
+    "reason": "The quote says vehicle data sit in the state register KTPR, controlled by VRM and processed by AB Regitra (found only with browser headers; WebFetch got a CAPTCHA)."
+   }
+  },
+  {
+   "claim": "record:LT:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.regitra.lt/imone/veiklos-sritys/",
+   "quote": "Kelių transporto priemonių vairuotojų bei vairuotojo pažymėjimų apskaita vykdoma KTPVR – žinybiniame VRM registre. Vadovaujančioji registro tvarkymo įstaiga – VRM, registro tvarkymo įstaiga – AB „Regitra“.",
+   "quote_english": "Records of road vehicle drivers and driving licences are kept in KTPVR, a departmental register of the Ministry of the Interior. Lead register body: the Ministry of the Interior; register processing body: AB Regitra.",
+   "value": "AB „Regitra“ (processor), under VRM (Ministry of the Interior)",
+   "published": "",
+   "title": "Veiklos sritys",
+   "publisher": "AB „Regitra“",
+   "doc_type": "official_page",
+   "note": "Regitra, a state-owned company, processes both the vehicle register (KTPR) and the driver register (KTPVR).",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "KTPVR driver and licence register: lead body VRM, processor AB Regitra",
+    "reason": "The quote says drivers and driving licences are recorded in the VRM departmental register KTPVR, with VRM as lead body and AB Regitra as processor."
+   }
+  },
+  {
+   "claim": "record:LT:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/itariamuju-kaltinamuju-ir-nuteistuju-registro-iknr-paslaugos-2",
+   "quote": "Įtariamųjų, kaltinamųjų ir nuteistųjų registras įsteigtas 2012 metais, reorganizavus Įtariamų, kaltinamų ir teistų asmenų žinybinį registrą.",
+   "quote_english": "The Register of Suspects, Accused and Convicted Persons was established in 2012 by reorganising the departmental register of suspected, accused and convicted persons.",
+   "value": "Įtariamųjų, kaltinamųjų ir nuteistųjų registras, ĮKNR (Register of Suspects, Accused and Convicted Persons)",
+   "published": "",
+   "title": "Įtariamųjų, kaltinamųjų ir nuteistųjų registro (ĮKNR) paslaugos",
+   "publisher": "Informatikos ir ryšių departamentas prie VRM",
+   "doc_type": "official_page",
+   "note": "This is the criminal records register. IRD also runs the Integrated Criminal Procedure Information System (IBPS).",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Įtariamųjų, kaltinamųjų ir nuteistųjų registras (founded 2012); operator not stated",
+    "reason": "The quote gives only the register's founding history and names no operator."
+   }
+  },
+  {
+   "claim": "record:LT:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/itariamuju-kaltinamuju-ir-nuteistuju-registro-iknr-paslaugos-2",
+   "quote": "Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos – Įtariamųjų, kaltinamųjų ir nuteistųjų registro valdytojas ir tvarkytojas",
+   "quote_english": "The Information Technology and Communications Department under the Ministry of the Interior is the controller and processor of the Register of Suspects, Accused and Convicted Persons",
+   "value": "Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Information Technology and Communications Department under the Ministry of the Interior)",
+   "published": "",
+   "title": "Įtariamųjų, kaltinamųjų ir nuteistųjų registro (ĮKNR) paslaugos",
+   "publisher": "Informatikos ir ryšių departamentas prie VRM",
+   "doc_type": "official_page",
+   "note": "The operator's own page names it as both controller and processor.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "Informatikos ir ryšių departamentas prie LR VRM (controller and processor)",
+    "reason": "The quote names IRD under VRM as controller and processor of the register of suspects, accused and convicted persons."
+   }
+  },
+  {
+   "claim": "record:LT:police_records:register",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ieskomu-asmenu-zinybinio-registro-iazr-paslaugos-2",
+   "quote": "IAŽR – Ieškomų asmenų, neatpažintų lavonų ir nežinomų bejėgių asmenų žinybinis registras.",
+   "quote_english": "IAŽR – Departmental Register of Wanted Persons, Unidentified Corpses and Unknown Helpless Persons.",
+   "value": "Ieškomų asmenų, neatpažintų lavonų ir nežinomų bejėgių asmenų žinybinis registras, IAŽR (Departmental Register of Wanted Persons, Unidentified Corpses and Unknown Helpless Persons)",
+   "published": "",
+   "title": "Ieškomų asmenų žinybinio registro (IAŽR) paslaugos",
+   "publisher": "Informatikos ir ryšių departamentas prie VRM",
+   "doc_type": "official_page",
+   "note": "IRD publishes this register among the registers it manages. The page does not state the controller explicitly.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "IAŽR (wanted persons departmental register); operator not stated",
+    "reason": "The quote only expands the IAŽR acronym and does not say who operates it, even though the page is on the IRD site."
+   }
+  },
+  {
+   "claim": "record:LT:firearms_register:register",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ginklu-registro-paslaugos-2/ginklu-registro-pazymos-ar-israso-uzsakymas-2",
+   "quote": "Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos – Ginklų registro tvarkytojas – pagal fizinių ir juridinių asmenų pateiktus prašymus išduoda pažymas ir išrašus",
+   "quote_english": "The Information Technology and Communications Department under the Ministry of the Interior, processor of the Firearms Register, issues certificates and extracts on request of natural and legal persons",
+   "value": "Ginklų registras (Firearms Register)",
+   "published": "",
+   "title": "Ginklų registro pažymos ar išrašo užsakymas",
+   "publisher": "Informatikos ir ryšių departamentas prie VRM",
+   "doc_type": "official_page",
+   "note": "IRD's regulation page says the register's regulations were approved by Government resolution No 600 of 2020-06-10.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "Informatikos ir ryšių departamentas prie LR VRM (Ginklų registro tvarkytojas)",
+    "reason": "The quote names IRD under VRM as processor of the Weapons Register."
+   }
+  },
+  {
+   "claim": "record:LT:firearms_register:operator",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ginklu-registro-paslaugos-2/ginklu-registro-pazymos-ar-israso-uzsakymas-2",
+   "quote": "Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos – Ginklų registro tvarkytojas – pagal fizinių ir juridinių asmenų pateiktus prašymus išduoda pažymas ir išrašus",
+   "quote_english": "The Information Technology and Communications Department under the Ministry of the Interior, processor of the Firearms Register, issues certificates and extracts on request of natural and legal persons",
+   "value": "Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Information Technology and Communications Department under the Ministry of the Interior)",
+   "published": "",
+   "title": "Ginklų registro pažymos ar išrašo užsakymas",
+   "publisher": "Informatikos ir ryšių departamentas prie VRM",
+   "doc_type": "official_page",
+   "note": "The quote names IRD as processor (tvarkytojas), not as controller.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "Informatikos ir ryšių departamentas prie LR VRM (Ginklų registro tvarkytojas)",
+    "reason": "Same quote as item 14: IRD under VRM is named as processor of the Weapons Register."
+   }
+  },
+  {
+   "claim": "record:LT:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://112.lt/apie-numeri-112/",
+   "quote": "Lietuvoje į pagalbos skambučius telefono numeriu 112 atsako ir apie pagalbos poreikį atitinkamas skubiosios pagalbos tarnybas informuoja Bendrasis pagalbos centras.",
+   "quote_english": "In Lithuania, emergency calls to 112 are answered, and the relevant emergency services are informed of the need for help, by the Emergency Response Centre.",
+   "value": "Bendrasis pagalbos centras (Emergency Response Centre)",
+   "published": "",
+   "title": "Apie numerį 112",
+   "publisher": "Bendrasis pagalbos centras",
+   "doc_type": "official_page",
+   "note": "This is the PSAP operator's own site. It names no system, so only the operator is established.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "Bendrasis pagalbos centras",
+    "reason": "The quote says the Bendrasis pagalbos centras answers 112 calls and alerts the emergency services."
+   }
+  },
+  {
+   "claim": "record:LT:grid_control:register",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.litgrid.eu/sistema/sistemos-valdymas",
+   "quote": "Operatyvinis valdymas vykdomas naudojant moderniausias informacines technologijas ir sistemas. Dispečerinio valdymo sistema sudaryta iš atskirų viena su kita integruotų informacinių technologinių įrenginių ir sistemų, skirtų:",
+   "quote_english": "Operational control is carried out using the most modern information technologies and systems. The dispatch control system consists of separate, mutually integrated IT devices and systems intended for:",
+   "value": "Dispečerinio valdymo sistema (dispatch control system)",
+   "published": "",
+   "title": "Sistemos valdymas",
+   "publisher": "Litgrid AB",
+   "doc_type": "official_page",
+   "note": "The TSO's own page lists the system's functions: data acquisition, equipment monitoring and control, and balance control. These are SCADA/EMS functions.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes a dispatch control system built from integrated IT systems but names neither the system nor its operator."
+   }
+  },
+  {
+   "claim": "record:LT:grid_control:operator",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.litgrid.eu/apie-litgrid",
+   "quote": "„Litgrid“, Lietuvos elektros perdavimo sistemos operatorė, palaiko stabilų šalies elektros energetikos sistemos darbą, valdo elektros energijos srautus ir sudaro sąlygas konkurencijai atviroje elektros rinkoje.",
+   "quote_english": "Litgrid, Lithuania's electricity transmission system operator, maintains stable operation of the national power system, manages electricity flows and enables competition in the open electricity market.",
+   "value": "Litgrid (Lithuanian electricity transmission system operator)",
+   "published": "",
+   "title": "Apie Litgrid",
+   "publisher": "Litgrid AB",
+   "doc_type": "official_page",
+   "note": "The operator's own site.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "Litgrid (Lithuanian electricity transmission system operator)",
+    "reason": "The quote says Litgrid is Lithuania's electricity TSO and manages power flows, but does not name its control or market IT systems."
+   }
+  },
+  {
+   "claim": "record:LT:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.nsa.smsm.lt/informaciniu-istekliu-departamentas/registrai/diplomu-atestatu-ir-kvalifikacijos-pazymejimu-registras",
+   "quote": "Informacinių išteklių departamentas Registrai Diplomų, atestatų ir kvalifikacijos pažymėjimų registras",
+   "quote_english": "Information Resources Department Registers Register of Diplomas, Certificates and Qualification Certificates",
+   "value": "Diplomų, atestatų ir kvalifikacijos pažymėjimų registras (Register of Diplomas, Certificates and Qualification Certificates)",
+   "published": "2025-07-16",
+   "title": "Diplomų, atestatų ir kvalifikacijos pažymėjimų registras",
+   "publisher": "Nacionalinė švietimo agentūra",
+   "doc_type": "official_page",
+   "note": "The same agency's register list also names a Mokinių registras (Pupils' Register). The quote runs across page elements, so the whitespace may need normalising for the machine check.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Diplomų, atestatų ir kvalifikacijos pažymėjimų registras; operator not stated",
+    "reason": "The quote is a breadcrumb with the register's name only and says nothing about who operates it."
+   }
+  },
+  {
+   "claim": "record:LT:education:operator",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.nsa.smsm.lt/informaciniu-istekliu-departamentas/registrai/diplomu-atestatu-ir-kvalifikacijos-pazymejimu-registras",
+   "quote": "Informacija duomenų tvarkytojui Registro tvarkytojo funkcijas vykdo Nacionalinė švietimo agentūra",
+   "quote_english": "Information for the data processor: the functions of register processor are performed by the National Agency for Education",
+   "value": "Nacionalinė švietimo agentūra (National Agency for Education)",
+   "published": "2025-07-16",
+   "title": "Diplomų, atestatų ir kvalifikacijos pažymėjimų registras",
+   "publisher": "Nacionalinė švietimo agentūra",
+   "doc_type": "official_page",
+   "note": "The agency's own page states that it performs the processor role for the diploma register.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Nacionalinė švietimo agentūra (register processor)",
+    "reason": "The quote says the National Education Agency acts as processor of the register."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:LT:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:LT:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:LT:L1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:LT:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:LT:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:civil_registry:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:facial_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:fingerprint_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:breeder_documents:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:authentication_audit_log:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:electoral_roll:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:residence_permits:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:tax:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:customs:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:benefits_pensions:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:health_insurance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:land_property:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:business_registry:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:beneficial_ownership:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:border_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:official_gazette:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:public_finance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:government_payroll:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:electoral_management:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:central_bank:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:crisis_management:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:grid_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LT:water_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LT:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:LT:L2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:LT:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

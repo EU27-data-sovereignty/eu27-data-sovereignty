@@ -13,7 +13,7 @@ A researched fact is printed only when three things hold. Its document was **dow
 fingerprinted, and contains the quoted words**. **Every number and date in the printed value** is in
 that quote. And, for a label that classifies evidence, such as "hosted by a non-EU provider", **a
 second, independent reviewer reached the same label**. A Eurostat figure is printed when the pinned
-dataset **reproduces the value**; its response is not yet fingerprinted. Anything that fails is shown
+dataset **reproduces the value** from a stored, fingerprinted API response. Anything that fails is shown
 as a visible gap: *not yet sourced*.
 
 Each printed fact carries an **evidence grade**, computed by a fixed rule from the checks it passed, and
@@ -37,7 +37,7 @@ flowchart LR
 
 | Grade | Rule (`evidence.GRADE_RULE`) |
 |---|---|
-| **Strong** | Official or primary source, and the quote found *exactly* in the hashed document. An archived copy of exactly that URL, and no name in the value missing from the quote. The value is quoted from an English source, found verbatim in the original, or rests on figures matched in the original. Categorical findings reach Strong only after a blind review, which none has had yet. |
+| **Strong** | A T1 or T2 source that is official or primary, and the quote found *exactly* in the hashed document. An archived copy of exactly that URL, and no name in the value missing from the quote. The value is quoted from an English source, found verbatim in the original, or rests on figures matched in the original. Categorical findings reach Strong only after a blind review, which only the vetting run's findings have had. |
 | **Standard** | Every required check passed, but at least one of the Strong conditions did not. |
 | *(not printed)* | Anything less: the value is a gap. |
 
@@ -183,6 +183,37 @@ flowchart TD
   D -->|no| P[Printed with its grade]
   D -->|yes| DS[Shown as disputed:<br/>both sources named]
 ```
+
+**Admission of a vetting finding** (`model/vetting.py`) needs all of these:
+- a T1/T2 source;
+- the page fetched and hashed, with the quote found in it;
+- the blind reviewer found the quote and reached the same value on its own. For a category, that means
+  the same term. For text, every figure must match and the two readings must share a distinctive word;
+- for a register's operator, count or hosting, the register itself established, as in the first run.
+
+The researcher's own label (upgrade, supersedes, contradicts) decides nothing. A finding whose value
+the printed value passes against becomes a second citation (corroborated). One that says something
+else goes to the rule below.
+
+**Rechecks** (`research.py recheck`) re-fetch every source behind a printed fact and look for each quote
+again. A fact whose own quote has vanished, or whose source is gone (404/410), is shown as **disputed**,
+never silently kept. A refusal (403, timeout) changes nothing, because a refusal is not evidence that
+the page changed. A page whose bytes changed but which still holds every quote stays as it is, and the
+new hash is recorded as verified.
+
+**Quotes the first check missed.** 284 quotes were "not found" in pages that answered 200. Most were a bug
+in this project, not in the evidence: every page was decoded as UTF-8, so on the ISO-8859-1 pages of
+`cylaw.org` and `pgdlisboa.pt` every accented letter was garbled and no quote could match. The fix is
+`research.decode()`, which reads a page in the charset it declares. `research.py verify --rendered` retries
+each not-found quote against the served page, decoded correctly. Only if the text is still missing does
+it render the page in a headless browser, for pages that build their text with JavaScript, and then the
+checklist says "rendered". A page that refused us is never retried with a browser.
+
+**What "blind" means here, and what it does not.** The reviewer never sees the proposed value or the
+researcher's label. It gets only the question, the URL and the quote, and must reach an answer itself.
+But in the 2026-09-30 run it was **the same model as the researcher** (`claude-opus-5-5`, recorded in
+each staging file with the sha256 of `workflow.js`). Two readings by one model can share its blind
+spots. That is why a person reviewing a sample is still the step this method lacks (section 8).
 
 A contradiction is never settled by hand. A later statement by the same authority supersedes an earlier
 one, and a higher tier wins. Otherwise the fact stays **disputed**, with both sources shown, until one of

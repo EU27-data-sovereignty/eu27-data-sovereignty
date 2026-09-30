@@ -1,0 +1,712 @@
+{
+ "iso": "BG",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:BG:crisis_management:operator",
+   "question": "Crisis management and civil protection: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.mvr.bg/upload/8121/%D0%BC%D0%BE%D1%82%D0%B8%D0%B2%D0%B8_%D0%BD%D0%B0%D1%80%D0%B5%D0%B4%D0%B1%D0%B0_bg-alert.pdf",
+   "quote": "Като компетентен орган по изграждане, поддържане и развиване в техническо и функционално отношение на системата е определено Министерство на вътрешните работи, чрез своята Главна дирекция „Пожарна безопасност и защита на населението“, подпомагана от дирекция „Комуникационни и информационни системи“.",
+   "quote_english": "The Ministry of Interior, through its Directorate General 'Fire Safety and Civil Protection', supported by the 'Communications and Information Systems' directorate, is designated as the competent body for building, maintaining and developing the system technically and functionally.",
+   "value": "Министерство на вътрешните работи, чрез Главна дирекция „Пожарна безопасност и защита на населението“ (Ministry of Interior, through its Directorate General Fire Safety and Civil Protection)",
+   "published": "",
+   "title": "Мотиви към проект на наредба за реда за изграждане, поддържане, развитие и използване на системата BG-ALERT",
+   "publisher": "Министерство на вътрешните работи",
+   "doc_type": "official_page",
+   "note": "Replaces a press source with MVR's own document. It names MVR (DG PBZN, supported by the CIS directorate) as sole builder and maintainer, and does not mention the Ministry of e-Government as the printed 'jointly' wording does; this is the motives to the draft ordinance, which was adopted as Ordinance 8121з-413 of 2024.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Ministry of Interior (МВР), via its Chief Directorate Fire Safety and Civil Protection (ГДПБЗН), supported by the Directorate Communication and Information Systems",
+    "reason": "The motives document names the Ministry of Interior, through ГДПБЗН with help from the ДКИС directorate, as the authority that builds, maintains and develops the BG-ALERT system."
+   }
+  },
+  {
+   "claim": "record:BG:crisis_management:register",
+   "question": "Crisis management and civil protection: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.mvr.bg/upload/8121/%D0%BC%D0%BE%D1%82%D0%B8%D0%B2%D0%B8_%D0%BD%D0%B0%D1%80%D0%B5%D0%B4%D0%B1%D0%B0_bg-alert.pdf",
+   "quote": "редът за изграждане, поддържане, развитие и използване на системата BG-ALERT за разпространение на съобщения за предупреждение на населението в случай на бедствие или извънредна ситуация се определя с наредба на министъра на вътрешните работи",
+   "quote_english": "the procedure for building, maintaining, developing and using the BG-ALERT system for distributing warning messages to the population in case of disaster or emergency is set by ordinance of the Minister of Interior",
+   "value": "системата BG-ALERT за разпространение на съобщения за предупреждение на населението (BG-ALERT system for distributing warning messages to the population)",
+   "published": "",
+   "title": "Мотиви към проект на наредба за системата BG-ALERT",
+   "publisher": "Министерство на вътрешните работи",
+   "doc_type": "official_page",
+   "note": "An official MVR document grounded in Art. 242b of the Electronic Communications Act replaces the press source; the same document states the system uses Cell Broadcast technology over mobile operators' networks.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "BG-ALERT",
+    "reason": "The quote names the population warning system for disasters and emergencies as 'системата BG-ALERT'."
+   }
+  },
+  {
+   "claim": "indicator:BG:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://www.eufunds.bg/bg/opgg/node/9490",
+   "quote": "ДХЧО е изграден на база четири центъра за данни – центрове за обработка на данни 1 и 2 (ЦДЕУ1 и ЦДЕУ2), Център за възстановяване (ЦВ) и Контролно-технически център на електронното правителство (КТЦЕП).",
+   "quote_english": "The State Hybrid Private Cloud is built on four data centres: data processing centres 1 and 2 (TsDEU1 and TsDEU2), a Recovery Centre and the Control-Technical Centre of e-Government.",
+   "value": "Yes",
+   "published": "2022-01-01",
+   "title": "Надграждане и развитие на държавния хибриден частен облак, финансиран по ОП „Добро управление“",
+   "publisher": "eufunds.bg (Управляващ орган на ОП „Добро управление“)",
+   "doc_type": "official_page",
+   "note": "An independent official government source replaces the company page of Information Services AD; it names the state's own e-government data centres. The site's TLS certificate chain may fail strict verification.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The page says the State Hybrid Private Cloud (ДХЧО) is built on four government data centres (ЦДЕУ1, ЦДЕУ2, the recovery centre and КТЦЕП), and elsewhere on the same page says ДХЧО currently provides services, so the centres are in operation."
+   }
+  },
+  {
+   "claim": "indicator:BG:C2",
+   "question": "Is a national sovereign or government cloud platform in operation (not announced)? yes = In operation and serving government workloads; partial = Announced or in pilot; no = A source states none exists",
+   "relation": "fills_gap",
+   "url": "https://www.eufunds.bg/bg/opgg/node/9490",
+   "quote": "Към момента ДХЧО предоставя следните услуги: 1. Колокация - използване на физическо пространство в изградените Центрове за данни, както и мрежа за достъп, преносна среда и интернет достъп. 2. Предоставяне на виртуални ресурси",
+   "quote_english": "At present the State Hybrid Private Cloud provides the following services: 1. Colocation - use of physical space in the built data centres, plus access network, transmission and internet access. 2. Provision of virtual resources",
+   "value": "yes",
+   "published": "2022-01-01",
+   "title": "Надграждане и развитие на държавния хибриден частен облак, финансиран по ОП „Добро управление“",
+   "publisher": "eufunds.bg (Управляващ орган на ОП „Добро управление“)",
+   "doc_type": "official_page",
+   "note": "The State Hybrid Private Cloud (ДХЧО) is in operation and serves administrations (virtual data centre, virtual private cloud); the e-Government Act §1 item 26 defines it as centralised state infrastructure for state bodies.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "'Към момента ДХЧО предоставя' says the State Hybrid Private Cloud currently provides colocation and virtual resources, and the page context lists virtual servers, a virtual data centre and a virtual private cloud, so it is in operation."
+   }
+  },
+  {
+   "claim": "indicator:BG:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "contradicts",
+   "url": "https://ec.europa.eu/digital-building-blocks/sites/download/attachments/554369079/Notification%20Form%20to%20the%20EC.PDF?version=2&modificationDate=1688543772457&api=v2",
+   "quote": "Evrotrust Technologies AD, Sofia, Bulgaria. The electronic identification means shall be issued independently of and recognized by the notifying Member State, according to Article 7(a)(iii).",
+   "quote_english": "",
+   "value": "no (the notified scheme's eID means are issued by Evrotrust Technologies AD, independently of the State)",
+   "published": "2023-07",
+   "title": "Notification form for electronic identity scheme under eIDAS: Evrotrust eID (Republic of Bulgaria)",
+   "publisher": "European Commission (eID User Community)",
+   "doc_type": "eu_document",
+   "note": "Bulgaria's only notified eID scheme is private (Council of Ministers Resolution 634/2021 on private eID schemes), which argues against 'Partly'; 'Partly' holds only if the MVR ID-card eID is counted, and no source here shows that it is.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "no",
+    "reason": "The notification form says Evrotrust Technologies AD, a company, manages registration and issues the notified 'Evrotrust eID' means independently of the Member State under Article 7(a)(iii), so the issuer is not the state; the quote says nothing about who owns Evrotrust."
+   }
+  },
+  {
+   "claim": "record:BG:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.mvr.bg/dbds/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%BE-%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B2%D0%B0%D0%BD%D0%B5/%D0%B8%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%BB%D0%B8%D1%87%D0%BD%D0%B0-%D0%BA%D0%B0%D1%80%D1%82%D0%B0-%D0%B4%D0%B1%D0%B4%D1%81/%D0%B8%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%BB%D0%B8%D1%87%D0%BD%D0%B0-%D0%BA%D0%B0%D1%80%D1%82%D0%B0-%D0%BE%D0%B1%D1%89%D0%B0",
+   "quote": "за когото липсват данни в Националния автоматизиран информационен фонд за българските лични документи - \"Национален регистър на българските лични документи\", се представя удостоверителен документ за раждане.",
+   "quote_english": "for whom there is no data in the National Automated Information Fund for Bulgarian Identity Documents - 'National Register of Bulgarian Identity Documents', a birth certificate is presented.",
+   "value": "Национален автоматизиран информационен фонд за българските лични документи - \"Национален регистър на българските лични документи\" (National Register of Bulgarian Identity Documents)",
+   "published": "",
+   "title": "Издаване на лична карта – обща информация",
+   "publisher": "Министерство на вътрешните работи, дирекция „Български документи за самоличност“",
+   "doc_type": "official_page",
+   "note": "The operator's own page (MVR, BDS directorate) independently confirms the register name printed from the law.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names the 'Национален регистър на българските лични документи' personal-document register, but it says nothing about fingerprints or a fingerprint biometric system."
+   }
+  },
+  {
+   "claim": "record:BG:health_records:register",
+   "question": "Health records: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.his.bg/",
+   "quote": "Националната здравноинформационна система (НЗИС) е отворена платформа за съхранение и обмен на медицинска информация. Системата представлява единна среда за обмен на медицински данни между заинтересованите страни в сферата на здравеопазването.",
+   "quote_english": "The National Health Information System (NHIS) is an open platform for storing and exchanging medical information. The system is a single environment for exchanging medical data among healthcare stakeholders.",
+   "value": "Националната здравноинформационна система (НЗИС) (National Health Information System)",
+   "published": "2026-08-31",
+   "title": "Национална здравноинформационна система :: НЗИС",
+   "publisher": "Министерство на здравеопазването",
+   "doc_type": "official_page",
+   "note": "The operator's own site (copyright Ministry of Health) confirms the system and carries live 2026 figures.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Национална здравноинформационна система (НЗИС)",
+    "reason": "The quote names the National Health Information System (НЗИС) as the platform for storing and exchanging medical information."
+   }
+  },
+  {
+   "claim": "record:BG:health_records:count",
+   "question": "Health records: the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.his.bg/",
+   "quote": "Актуални данни към 31.08.2026 година 779 819 000 Електронни здравни документи 208 319 000+ Регистрирани е-прегледи 119 189 000+ Издадени е-рецепти",
+   "quote_english": "Current data as of 31.08.2026: 779 819 000 electronic health documents, 208 319 000+ registered e-consultations, 119 189 000+ e-prescriptions issued",
+   "value": "779 819 000 електронни здравни документи (electronic health documents)",
+   "published": "2026-08-31",
+   "title": "Национална здравноинформационна система :: НЗИС",
+   "publisher": "Министерство на здравеопазването",
+   "doc_type": "statistics",
+   "note": "A current count of documents held in the NHIS, as of 31.08.2026.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote gives only counts of e-health documents, e-examinations and e-prescriptions and does not name the register or system."
+   }
+  },
+  {
+   "claim": "record:BG:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.justice.government.bg/home/normdoc/2135581532",
+   "quote": "Бюро за съдимост има при всеки районен съд и Централно бюро за съдимост при Министерството на правосъдието.",
+   "quote_english": "There is a criminal-record bureau at every district court and a Central Criminal Records Bureau at the Ministry of Justice.",
+   "value": "Бюро за съдимост при всеки районен съд и Централно бюро за съдимост при Министерството на правосъдието (criminal-record bureaus at every district court and a Central Criminal Records Bureau at the Ministry of Justice)",
+   "published": "2026-09-01",
+   "title": "Наредба № 8 от 26 февруари 2008 г. за функциите и организацията на дейността на бюрата за съдимост",
+   "publisher": "Министерство на правосъдието",
+   "doc_type": "legislation",
+   "note": "The Ministry of Justice's own consolidated text (last amended ДВ бр. 80 of 1 September 2026) replaces the copy hosted by the FSC.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Ministry of Justice (Central Criminal Records Bureau), with criminal-record bureaus at each district court",
+    "reason": "The quote places a criminal-records bureau at every district court and the Central Criminal Records Bureau at the Ministry of Justice."
+   }
+  },
+  {
+   "claim": "record:BG:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: the body that operates it",
+   "relation": "supersedes",
+   "url": "https://www.justice.government.bg/home/normdoc/2135581532",
+   "quote": "Министерството на правосъдието създава и поддържа Централизирана автоматизирана информационна система \"Съдебен статус\", наричана по-нататък \"ЦАИС \"Съдебен статус\", с централна база данни. Бюрата за съдимост при районните съдилища и Централното бюро за съдимост при Министерството на правосъдието използват централната база данни.",
+   "quote_english": "The Ministry of Justice creates and maintains the Centralised Automated Information System 'Judicial Status' (CAIS 'Judicial Status') with a central database. The bureaus at district courts and the Central Bureau use the central database.",
+   "value": "Министерството на правосъдието, чрез ЦАИС \"Съдебен статус\" (Ministry of Justice, via the Centralised Automated Information System 'Judicial Status')",
+   "published": "2026-09-01",
+   "title": "Наредба № 8 от 26 февруари 2008 г. за функциите и организацията на дейността на бюрата за съдимост",
+   "publisher": "Министерство на правосъдието",
+   "doc_type": "legislation",
+   "note": "Newer information: the criminal-record data now sit in one central MoJ-run database (CAIS 'Judicial Status'), last supplemented by ДВ бр. 80/2026 in force 05.09.2026, rather than being operated bureau by bureau.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Ministry of Justice",
+    "reason": "The quote says the Ministry of Justice creates and maintains the ЦАИС 'Съдебен статус' central database, which the criminal-records bureaus use."
+   }
+  },
+  {
+   "claim": "record:BG:civil_registry:register",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://www.grao.bg/esgraon.html",
+   "quote": "Министерството на регионалното развитие и благоустройството чрез Главна дирекция „Гражданска регистрация и административно обслужване“ поддържа Регистър на населението – Национална база данни „Население“, Национален електронен регистър на актове за гражданско състояние, Регистър на единните граждански номера",
+   "quote_english": "The Ministry of Regional Development and Public Works, through the DG Civil Registration and Administrative Services, maintains the Population Register – National Database 'Population', the National Electronic Register of Civil Status Acts, the Register of Unified Civil Numbers",
+   "value": "Регистър на населението – Национална база данни „Население“ (Population Register – National Database 'Population')",
+   "published": "",
+   "title": "ЕСГРАОН",
+   "publisher": "Главна дирекция „Гражданска регистрация и административно обслужване“, МРРБ",
+   "doc_type": "official_page",
+   "note": "The operator's own page; the same sentence also names the civil-status acts register and the ЕГН (personal number) register.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "Ministry of Regional Development and Public Works via GD GRAO; Population Register – National Database 'Население', National Electronic Register of Civil Status Acts, Register of Unified Civil Numbers (ЕГН)",
+    "reason": "The quote says MRRB, through GD GRAO, maintains the population register, the civil status acts register and the ЕГН register."
+   }
+  },
+  {
+   "claim": "record:BG:civil_registry:operator",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://www.grao.bg/esgraon.html",
+   "quote": "Министерството на регионалното развитие и благоустройството чрез Главна дирекция „Гражданска регистрация и административно обслужване“ поддържа Регистър на населението – Национална база данни „Население“",
+   "quote_english": "The Ministry of Regional Development and Public Works, through the DG Civil Registration and Administrative Services, maintains the Population Register – National Database 'Population'",
+   "value": "Министерството на регионалното развитие и благоустройството чрез Главна дирекция „Гражданска регистрация и административно обслужване“ (Ministry of Regional Development and Public Works, through DG Civil Registration and Administrative Services)",
+   "published": "",
+   "title": "ЕСГРАОН",
+   "publisher": "Главна дирекция „Гражданска регистрация и административно обслужване“, МРРБ",
+   "doc_type": "official_page",
+   "note": "States the national-level operator; municipalities keep the local databases.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Ministry of Regional Development and Public Works via GD GRAO; Population Register – National Database 'Население'",
+    "reason": "The quote says MRRB, through GD GRAO, maintains the Population Register – National Database 'Население'."
+   }
+  },
+  {
+   "claim": "record:BG:electoral_roll:register",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://www.cik.bg/upload/280009/%E2%84%96+821-14052026-bld.pdf",
+   "quote": "съгласно чл. 26, ал. 1 от Изборния кодекс, ГД ГРАО има задължение да отпечата избирателните списъци въз основа на",
+   "quote_english": "under Art. 26(1) of the Electoral Code, DG GRAO is obliged to print the voter lists on the basis of",
+   "value": "избирателните списъци, отпечатвани от ГД ГРАО (voter lists printed by DG Civil Registration and Administrative Services)",
+   "published": "2026-05-14",
+   "title": "Централна избирателна комисия, Протокол № 821 от 14.05.2026",
+   "publisher": "Централна избирателна комисия",
+   "doc_type": "official_page",
+   "note": "The sentence continues 'the population register', but a PDF page number interrupts it there, so the quote stops before it; the voter lists come from GRAO's National Database 'Population'.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "GD GRAO (prints the electoral lists from the population registers)",
+    "reason": "The minutes cite Art. 26(1) of the Electoral Code: GD GRAO must print the voter lists on the basis of the population registers."
+   }
+  },
+  {
+   "claim": "record:BG:electoral_roll:operator",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://www.cik.bg/upload/280009/%E2%84%96+821-14052026-bld.pdf",
+   "quote": "съгласно чл. 26, ал. 1 от Изборния кодекс, ГД ГРАО има задължение да отпечата избирателните списъци въз основа на",
+   "quote_english": "under Art. 26(1) of the Electoral Code, DG GRAO is obliged to print the voter lists on the basis of",
+   "value": "ГД ГРАО (Directorate General Civil Registration and Administrative Services)",
+   "published": "2026-05-14",
+   "title": "Централна избирателна комисия, Протокол № 821 от 14.05.2026",
+   "publisher": "Централна избирателна комисия",
+   "doc_type": "official_page",
+   "note": "Names the body that produces the electoral roll.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "GD GRAO (prints the electoral lists from the population registers)",
+    "reason": "This is the same quote as item 12: under Art. 26(1) of the Electoral Code, GD GRAO prints the voter lists from the population registers."
+   }
+  },
+  {
+   "claim": "record:BG:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.rta.government.bg/upload/11661/n-I45.pdf",
+   "quote": "отдел/сектор \"Пътна полиция\" при СДВР/ОДМВР по регистрация на ПС отразява причината и датата на служебното прекратяване на регистрацията на ПС в автоматизираната информационна система КАТ (АИС – КАТ)",
+   "quote_english": "the Traffic Police department/sector at SDVR/ODMVR records the reason and date of ex officio termination of the vehicle registration in the automated information system KAT (AIS – KAT)",
+   "value": "автоматизираната информационна система КАТ (АИС – КАТ) (Automated Information System KAT, the vehicle registration system)",
+   "published": "2023-11",
+   "title": "Наредба № I-45 от 24.03.2000 г. за регистриране, отчет ... на моторните превозни средства",
+   "publisher": "Изпълнителна агенция „Автомобилна администрация“",
+   "doc_type": "legislation",
+   "note": "The consolidated ordinance text is hosted by the road transport agency; this covers vehicle registration only, not driving licences.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "АИС – КАТ (automated information system KAT), used by the 'Пътна полиция' units at SDVR/ODMVR (Ministry of Interior)",
+    "reason": "The quote says the traffic police units at SDVR/ODMVR record vehicle registration terminations in the automated information system КАТ (АИС – КАТ); it covers vehicle registrations, not driving licences."
+   }
+  },
+  {
+   "claim": "record:BG:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.rta.government.bg/upload/11661/n-I45.pdf",
+   "quote": "отдел/сектор \"Пътна полиция\" при СДВР/ОДМВР по регистрация на ПС отразява причината и датата на служебното прекратяване на регистрацията на ПС в автоматизираната информационна система КАТ (АИС – КАТ)",
+   "quote_english": "the Traffic Police department/sector at SDVR/ODMVR records the reason and date of ex officio termination of the vehicle registration in AIS – KAT",
+   "value": "\"Пътна полиция\" при СДВР/ОДМВР (Traffic Police units of the Ministry of Interior's regional directorates)",
+   "published": "2023-11",
+   "title": "Наредба № I-45 от 24.03.2000 г.",
+   "publisher": "Изпълнителна агенция „Автомобилна администрация“",
+   "doc_type": "legislation",
+   "note": "Traffic Police within the MVR structures keep the vehicle registration records.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "АИС – КАТ (automated information system KAT), used by the 'Пътна полиция' units at SDVR/ODMVR (Ministry of Interior)",
+    "reason": "This is the same quote as item 14: vehicle registration terminations are recorded by the SDVR/ODMVR traffic police in АИС – КАТ."
+   }
+  },
+  {
+   "claim": "record:BG:police_records:register",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://www.rta.government.bg/upload/11661/n-I45.pdf",
+   "quote": "обявяване за издирване и отразяване на информацията в Автоматизираната информационна система \"Издирвателна дейност\" - Национална Шенгенска информационна система (АИС ИД - НШИС).",
+   "quote_english": "declaration as wanted and recording of the information in the Automated Information System 'Search Activity' - National Schengen Information System (AIS ID - NSIS).",
+   "value": "Автоматизираната информационна система \"Издирвателна дейност\" - Национална Шенгенска информационна система (АИС ИД - НШИС) (Automated Information System 'Search Activity' – National Schengen Information System)",
+   "published": "2023-11",
+   "title": "Наредба № I-45 от 24.03.2000 г.",
+   "publisher": "Изпълнителна агенция „Автомобилна администрация“",
+   "doc_type": "legislation",
+   "note": "Names MVR's wanted-persons and wanted-objects system, which doubles as the national part of SIS.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "АИС 'Издирвателна дейност' – Национална Шенгенска информационна система (АИС ИД - НШИС)",
+    "reason": "The quote names the automated information system 'Издирвателна дейност' / National Schengen Information System as where wanted-person alerts are recorded; it names no operator."
+   }
+  },
+  {
+   "claim": "record:BG:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://www.rta.government.bg/upload/11661/n-I45.pdf",
+   "quote": "обявяване за издирване и отразяване на информацията в Автоматизираната информационна система \"Издирвателна дейност\" - Национална Шенгенска информационна система (АИС ИД - НШИС).",
+   "quote_english": "declaration as wanted and recording of the information in the Automated Information System 'Search Activity' - National Schengen Information System (AIS ID - NSIS).",
+   "value": "Национална Шенгенска информационна система (АИС ИД - НШИС) (National Schengen Information System)",
+   "published": "2023-11",
+   "title": "Наредба № I-45 от 24.03.2000 г.",
+   "publisher": "Изпълнителна агенция „Автомобилна администрация“",
+   "doc_type": "legislation",
+   "note": "The national part of SIS.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "АИС 'Издирвателна дейност' – Национална Шенгенска информационна система (АИС ИД - НШИС)",
+    "reason": "The quote names the national Schengen Information System component (НШИС), combined with the search system, as where wanted-person alerts are recorded; it names no operator."
+   }
+  },
+  {
+   "claim": "record:BG:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://www.mfa.bg/bg/news/41822",
+   "quote": "Министерството на външните работи е в процес на изпълнение на мащабен проект, предварително съгласуван с всички отговорни институции в България и ЕС, включващ внедряване и пускане в експлоатация на нова версия на Национална визова информационна система (НВИС).",
+   "quote_english": "The Ministry of Foreign Affairs is implementing a large project, agreed in advance with all responsible institutions in Bulgaria and the EU, including the deployment and commissioning of a new version of the National Visa Information System (NVIS).",
+   "value": "Национална визова информационна система (НВИС) (National Visa Information System)",
+   "published": "2024-08-02",
+   "title": "Въвеждане в експлоатация на нова версия на Национална визова информационна система",
+   "publisher": "Министерство на външните работи",
+   "doc_type": "official_page",
+   "note": "The national visa system, a new version of which went live in August 2024; it also handles consular ID-document applications.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "Национална визова информационна система (НВИС), Ministry of Foreign Affairs",
+    "reason": "The MFA news item says the Ministry of Foreign Affairs is deploying a new version of the National Visa Information System (НВИС)."
+   }
+  },
+  {
+   "claim": "record:BG:border_control:operator",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://www.mfa.bg/bg/news/41822",
+   "quote": "Министерството на външните работи е в процес на изпълнение на мащабен проект, предварително съгласуван с всички отговорни институции в България и ЕС, включващ внедряване и пускане в експлоатация на нова версия на Национална визова информационна система (НВИС).",
+   "quote_english": "The Ministry of Foreign Affairs is implementing a large project including the deployment and commissioning of a new version of the National Visa Information System (NVIS).",
+   "value": "Министерството на външните работи (Ministry of Foreign Affairs), for the national visa system",
+   "published": "2024-08-02",
+   "title": "Въвеждане в експлоатация на нова версия на Национална визова информационна система",
+   "publisher": "Министерство на външните работи",
+   "doc_type": "official_page",
+   "note": "MFA runs the NVIS; the national SIS part (AIS ID-NSIS) sits with MVR.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Национална визова информационна система (НВИС), Ministry of Foreign Affairs",
+    "reason": "This is the same quote as item 18: the MFA is putting a new version of НВИС into operation."
+   }
+  },
+  {
+   "claim": "record:BG:electoral_management:operator",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://www.cik.bg/upload/280009/%E2%84%96+821-14052026-bld.pdf",
+   "quote": "Това решение се приема на основание т. 5.2. от Договор № 3 от 29 февруари 2024 г. между Централната избирателна комисия и „Информационно обслужване“ АД, съгласно която за всеки конкретен случай на избор Централната избирателна комисия приема решение",
+   "quote_english": "This decision is adopted under item 5.2 of Contract No 3 of 29 February 2024 between the Central Election Commission and Information Services AD, under which for each election the CEC adopts a decision",
+   "value": "„Информационно обслужване“ АД (Information Services AD), under contract with the Central Election Commission",
+   "published": "2026-05-14",
+   "title": "Централна избирателна комисия, Протокол № 821 от 14.05.2026",
+   "publisher": "Централна избирателна комисия",
+   "doc_type": "official_page",
+   "note": "The state-owned Information Services AD does the computer processing of results for the CEC. The same protocol notes that the Minister of Innovation and Digital Transformation is now the legal successor of the Ministry of e-Government, which matters for the crisis-management operator fact.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "'Информационно обслужване' АД, under Contract No. 3 of 29 Feb 2024 with the Central Election Commission",
+    "reason": "The CIK minutes cite a contract under which Информационно обслужване АД does the computer processing for each election, with fees set by CIK decision; the quote alone does not say whether the company is state-owned."
+   }
+  },
+  {
+   "claim": "record:BG:central_bank:register",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.bnb.bg/PaymentSystem/index.htm",
+   "quote": "Българската народна банка оперира националния системен компонент TARGET-BNB, в който участват и платежната система за обслужване на клиентски преводи в евро БИСЕРА",
+   "quote_english": "The Bulgarian National Bank operates the national system component TARGET-BNB, in which the euro customer-payment system BISERA also participates",
+   "value": "TARGET-BNB (national system component of the Eurosystem's TARGET)",
+   "published": "",
+   "title": "Платежни и сетълмент системи",
+   "publisher": "Българска народна банка",
+   "doc_type": "official_page",
+   "note": "The operator's own page; RINGS is no longer described, and TARGET-BNB is the current national component.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "Bulgarian National Bank (operates TARGET-BNB; BISERA participates)",
+    "reason": "The quote says the BNB operates the national system component TARGET-BNB, in which the euro payment system BISERA takes part."
+   }
+  },
+  {
+   "claim": "record:BG:central_bank:operator",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.bnb.bg/PaymentSystem/index.htm",
+   "quote": "Българската народна банка оперира националния системен компонент TARGET-BNB, в който участват и платежната система за обслужване на клиентски преводи в евро БИСЕРА",
+   "quote_english": "The Bulgarian National Bank operates the national system component TARGET-BNB, in which the euro customer-payment system BISERA also participates",
+   "value": "Българската народна банка (Bulgarian National Bank)",
+   "published": "",
+   "title": "Платежни и сетълмент системи",
+   "publisher": "Българска народна банка",
+   "doc_type": "official_page",
+   "note": "The same page names BORICA AD as operator of BISERA.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Bulgarian National Bank (operates TARGET-BNB; BISERA participates)",
+    "reason": "This is the same quote as item 21: the BNB operates TARGET-BNB."
+   }
+  },
+  {
+   "claim": "record:BG:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.mvr.bg/112/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8/112_v_bg",
+   "quote": "Националната система 112 включва шест центъра за приемане и обслужване на спешни повиквания към телефон 112, които са изградени във всеки от районите за планиране",
+   "quote_english": "The National System 112 comprises six centres for receiving and handling emergency calls to 112, built in each of the planning regions",
+   "value": "Националната система 112 (National System 112)",
+   "published": "",
+   "title": "112 в България",
+   "publisher": "Министерство на вътрешните работи, дирекция „Национална система 112“",
+   "doc_type": "official_page",
+   "note": "The operator's own page (MVR Directorate National System 112).",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "National System 112 with 6 emergency call centres",
+    "reason": "The MVR page says the National System 112 includes six centres for receiving 112 calls, one in each planning region (Sofia, Ruse, Montana, Burgas, Kardzhali, Varna)."
+   }
+  },
+  {
+   "claim": "record:BG:emergency_communications:count",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.mvr.bg/112/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8/112_v_bg",
+   "quote": "Националната система 112 включва шест центъра за приемане и обслужване на спешни повиквания към телефон 112, които са изградени във всеки от районите за планиране",
+   "quote_english": "The National System 112 comprises six centres for receiving and handling emergency calls to 112",
+   "value": "шест центъра (six emergency call centres)",
+   "published": "",
+   "title": "112 в България",
+   "publisher": "Министерство на вътрешните работи, дирекция „Национална система 112“",
+   "doc_type": "official_page",
+   "note": "The centres are in Sofia, Ruse, Montana, Burgas, Kardzhali and Varna.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "National System 112 with 6 emergency call centres",
+    "reason": "This is the same quote as item 23: the National System 112 has six 112 call centres, hosted on an MVR page."
+   }
+  },
+  {
+   "claim": "indicator:BG:L2",
+   "question": "Is the government's data classification scheme established in a statute or binding regulation? yes = Classification levels are defined in a statute or binding regulation; partial = Defined only in non-binding guidance or a circular; no = A source states there is no binding classification scheme",
+   "relation": "fills_gap",
+   "url": "https://www.dksi.bg/%D1%81%D0%B8%D0%B3%D1%83%D1%80%D0%BD%D0%BE%D1%81%D1%82/%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BB%D0%BD%D0%B0-%D1%81%D0%B8%D0%B3%D1%83%D1%80%D0%BD%D0%BE%D1%81%D1%82/",
+   "quote": "В изричната норма на чл. 34 ЗЗКИ определя сроковете за защита на класифицираната информация, а именно: – за информация, маркирана с гриф за сигурност \"Строго секретно\" – 30 години;",
+   "quote_english": "The express provision of Art. 34 of the Classified Information Protection Act sets the protection periods for classified information, namely: for information marked with the security classification 'Top Secret' – 30 years;",
+   "value": "yes",
+   "published": "",
+   "title": "Документална сигурност",
+   "publisher": "Държавна комисия по сигурността на информацията",
+   "doc_type": "official_page",
+   "note": "The competent authority shows that classification levels (Top Secret, Secret, Confidential, plus official secret) are set by statute, the Classified Information Protection Act (ЗЗКИ).",
+   "review": {
+    "id": 25,
+    "quote_found": false,
+    "established": "",
+    "reason": "The fetched DKSI 'Документална сигурност' page (checked with curl and WebFetch) has no such sentence; it mentions чл. 34 only in a download title ('искане за удължаване сроковете на защита по чл. 34, ал. 2 от ЗЗКИ') and never mentions 'Строго секретно' or '30 години'."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:BG:crisis_management:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:BG:C1",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:customs:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:BG:K1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:BG:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:business_registry:foreign_dependency",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:business_registry:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:BG:digital_identity_credentials:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:education:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:facial_biometric:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:BG:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:geospatial:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:grid_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:health_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:issuance_history:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:judicial_criminal:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:land_property:foreign_dependency",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:land_property:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:land_property:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:public_finance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:BG:residence_permits:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:tax:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:trust_services_pki:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:trust_services_pki:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:beneficial_ownership:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:public_finance:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:BG:official_gazette:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:statistics_microdata:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:government_payroll:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:defence_command:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:intelligence:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BG:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:water_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "indicator:BG:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:BG:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:BG:L2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:BG:L3",
+   "status": "not_reached"
+  }
+ ]
+}

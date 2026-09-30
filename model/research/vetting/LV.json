@@ -1,0 +1,1052 @@
+{
+ "iso": "LV",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:LV:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://www.ic.iem.gov.lv/lv/jaunums/iekslietu-ministrijas-informacijas-centra-makondatosanas-pakalpojumu-attistiba-valsts-federeta-makona-ietvaros",
+   "quote": "veikta Iekšlietu ministrijas IKT un datu centru infrastruktūras atjaunošana un paplašināšana, kā arī attīstīti infrastruktūras līmeņa pakalpojumi valsts datu apstrādes mākoņa ietvarā",
+   "quote_english": "the Interior Ministry's ICT and data centre infrastructure was renewed and expanded, and infrastructure-level services were developed within the state data processing cloud",
+   "value": "Yes",
+   "published": "2026-05-29",
+   "title": "Iekšlietu ministrijas Informācijas centra mākoņdatošanas pakalpojumu attīstība valsts federētā mākoņa ietvaros",
+   "publisher": "Iekšlietu ministrijas Informācijas centrs",
+   "doc_type": "official_page",
+   "note": "An independent state body, separate from LVRTC, reports in 2026 that it runs and expanded its own data centres for the state cloud.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "A 29.05.2026 Interior Ministry IC notice says a completed project renewed and expanded the Interior Ministry's ICT and data-centre infrastructure and built infrastructure services within the state data-processing cloud, so it shows state-operated data centres in use today."
+   }
+  },
+  {
+   "claim": "indicator:LV:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://www.vdaa.gov.lv/lv/it-infrastrukturas-nodrosinasana",
+   "quote": "iestāžu virtuālo serveru un uz tiem esošo informācijas sistēmu un citu digitālo datu izmitināšana datu centrā uz VDAA vai Iestāžu īpašumā esošām iekārtām",
+   "quote_english": "hosting of institutions' virtual servers, the information systems on them and other digital data in the data centre on equipment owned by VDAA or by the institutions",
+   "value": "Yes",
+   "published": "2024-05-20",
+   "title": "IT infrastruktūras nodrošināšana",
+   "publisher": "Valsts digitālās attīstības aģentūra (VDAA)",
+   "doc_type": "official_page",
+   "note": "The State Digital Development Agency hosts government systems in its own data centre.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "partial",
+    "reason": "VDAA offers hosting of institutions' servers and systems 'datu centrā' on VDAA-owned or institution-owned equipment, but the quote does not say that the data centre itself is state-owned or state-operated."
+   }
+  },
+  {
+   "claim": "indicator:LV:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "supersedes",
+   "url": "https://www.vdaa.gov.lv/lv/valsts-makondatosanas-pakalpojumu-platforma",
+   "quote": "Valsts mākoņdatošanas pakalpojumu platforma nodrošina valsts centralizētu piekļuvi valsts mākoņdatošanas pakalpojumiem un atbalstu piemērotākā mākoņdatošanas risinājuma izvēlē",
+   "quote_english": "The State Cloud Computing Services Platform provides centralised state access to state cloud computing services and support in choosing the most suitable cloud solution",
+   "value": "Yes",
+   "published": "2026-07-02",
+   "title": "Valsts mākoņdatošanas pakalpojumu platforma",
+   "publisher": "Valsts digitālās attīstības aģentūra (VDAA)",
+   "doc_type": "official_page",
+   "note": "A 2026 VDAA service page describes the state cloud platform as operating. The page cites Cabinet Regulation No. 606, 'Valsts datu apstrādes mākoņa noteikumi' (State Data Processing Cloud Regulations), which is newer than the LVRTC project page.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "partial",
+    "reason": "The live VDAA service page describes a platform that gives centralised access to, and helps institutions choose, state cloud services (a catalogue and brokerage under MK Nr. 606), not a government cloud that VDAA itself runs; the page also mentions commercial providers."
+   }
+  },
+  {
+   "claim": "indicator:LV:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.mod.gov.lv/lv/kiberdrosiba/digitalas-drosibas-uzraudzibas-komiteja/elektroniska-identifikacija",
+   "quote": "Smart-ID un VAS “Latvijas Valsts radio un televīzijas centrs” (LVRTC), kura piedāvā četrus elektroniskās identifikācijas līdzekļus",
+   "quote_english": "Smart-ID and the state joint-stock company 'Latvian State Radio and Television Centre' (LVRTC), which offers four electronic identification means",
+   "value": "Yes",
+   "published": "",
+   "title": "Elektroniskā identifikācija",
+   "publisher": "Aizsardzības ministrija / Digitālās drošības uzraudzības komiteja",
+   "doc_type": "official_page",
+   "note": "The supervisor names LVRTC as a state joint-stock company (VAS) that provides the eID card and eParaksts means. It also names a private second provider, Smart-ID.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "partial",
+    "reason": "The quote names two qualified eID providers: Smart-ID and the state joint-stock company LVRTC, which issues four eID means (eID card, eParaksts). So one scheme is state-controlled, and the quote does not identify who controls Smart-ID."
+   }
+  },
+  {
+   "claim": "record:LV:digital_identity_credentials:register",
+   "question": "Digital identity credentials: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.vdaa.gov.lv/lv/vienotas-pieteiksanas-modulis",
+   "quote": "Paaugstinātas drošības un eIDAS kvalificētie elektroniskās identifikācijas līdzekļi: Rīki: eID karte, eParaksts, eParaksts mobile, Smart-ID",
+   "quote_english": "High-security and eIDAS-qualified electronic identification means: Tools: eID card, eParaksts, eParaksts mobile, Smart-ID",
+   "value": "eID karte, eParaksts, eParaksts mobile, Smart-ID (eID card, eParaksts, eParaksts mobile, Smart-ID)",
+   "published": "2024-09-09",
+   "title": "Vienotās pieteikšanās modulis",
+   "publisher": "Valsts digitālās attīstības aģentūra (VDAA)",
+   "doc_type": "official_page",
+   "note": "The state login service lists the same qualified eID means that the printed fact names.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "eID karte, eParaksts, eParaksts mobile, Smart-ID",
+    "reason": "The quote lists the high-assurance eIDAS identification tools accepted by the Unified Login Module; these are credential names, not the name of a single register."
+   }
+  },
+  {
+   "claim": "indicator:LV:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "corroborates",
+   "url": "https://likumi.lv/ta/id/50601",
+   "quote": "Informāciju, uz kuru attiecas šis likums, iedala: 1) vispārpieejamā informācija; 2) ierobežotas pieejamības informācija.",
+   "quote_english": "Information to which this law applies is divided into: 1) generally accessible information; 2) restricted-access information.",
+   "value": "Yes",
+   "published": "",
+   "title": "Informācijas atklātības likums",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "The Freedom of Information Law sets the statutory restricted-access tier. It sits alongside the State Secrets law already cited.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote comes from a law on likumi.lv (the Freedom of Information Law) that divides information into publicly available and restricted-access, so the classification scheme is set in statute."
+   }
+  },
+  {
+   "claim": "record:LV:customs:register",
+   "question": "Customs declarations: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.vid.gov.lv/lv/elektroniska-muitas-datu-apstrades-sistema-emdas",
+   "quote": "Elektroniskā muitas datu apstrādes sistēma (EMDAS) un tās apakšsistēmas nodrošina iespēju iesniegt elektroniski šādas muitas deklarācijas un dokumentus",
+   "quote_english": "The Electronic Customs Data Processing System (EMDAS) and its subsystems make it possible to submit the following customs declarations and documents electronically",
+   "value": "Elektroniskā muitas datu apstrādes sistēma (EMDAS) (Electronic Customs Data Processing System)",
+   "published": "2026-04-03",
+   "title": "Elektroniskā muitas datu apstrādes sistēma (EMDAS)",
+   "publisher": "Valsts ieņēmumu dienests",
+   "doc_type": "official_page",
+   "note": "The operator's own page, updated in 2026, names the customs system and its import, export and transit subsystems.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Elektroniskā muitas datu apstrādes sistēma (EMDAS)",
+    "reason": "The quote names EMDAS as the system through which customs declarations are submitted electronically."
+   }
+  },
+  {
+   "claim": "record:LV:education:register",
+   "question": "Education: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.izm.gov.lv/lv/valsts-izglitibas-informacijas-sistema",
+   "quote": "Valsts izglītības informācijas sistēmā (turpmāk - VIIS) ievadītā, radītā, iegūtā, uzkrātā un apstrādātā informācija tiek izmantota valsts un pašvaldību funkciju izglītības jomā īstenošanai",
+   "quote_english": "Information entered, created, obtained, stored and processed in the State Education Information System (VIIS) is used to carry out state and municipal functions in education",
+   "value": "Valsts izglītības informācijas sistēma (VIIS) (State Education Information System)",
+   "published": "2026-08-05",
+   "title": "Valsts izglītības informācijas sistēma",
+   "publisher": "Izglītības un zinātnes ministrija",
+   "doc_type": "official_page",
+   "note": "The controller ministry's own page, updated August 2026, confirms the system name.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Valsts izglītības informācijas sistēma (VIIS)",
+    "reason": "The quote names VIIS as the state education information system."
+   }
+  },
+  {
+   "claim": "record:LV:electoral_roll:register",
+   "question": "Electoral roll entry: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.vdaa.gov.lv/lv/velesanu-platforma",
+   "quote": "Elektroniskais tiešsaistes vēlētāju reģistrs, kas vēlēšanu iecirkņa darbiniekam nodrošina vēlētāju balsstiesību un aktuālā statusa pārbaudi tiešsaistē",
+   "quote_english": "The Electronic Online Voter Register, which lets polling-station staff check voters' voting rights and current status online",
+   "value": "Elektroniskais tiešsaistes vēlētāju reģistrs (Electronic Online Voter Register)",
+   "published": "2025-02-18",
+   "title": "Vēlēšanu platforma",
+   "publisher": "Valsts digitālās attīstības aģentūra (VDAA)",
+   "doc_type": "official_page",
+   "note": "The agency that runs the Election Platform confirms that the online voter register is one of the platform's components.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Elektroniskais tiešsaistes vēlētāju reģistrs",
+    "reason": "The quote names the online electronic voter register, part of the VDAA Election Platform, which checks voters' voting rights."
+   }
+  },
+  {
+   "claim": "record:LV:geospatial:operator",
+   "question": "Geospatial base data: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.lgia.gov.lv/lv/par-mums",
+   "quote": "Aizsardzības ministrija plāno un uzrauga LĢIA ģeodēzisko un kartogrāfisko pamatdatu iegūšanas, sagatavošanas un atjaunināšanas, kā arī ģeotelpiskās informācijas pakalpojumu sniegšanas izpildi",
+   "quote_english": "The Ministry of Defence plans and supervises LĢIA's acquisition, preparation and updating of geodetic and cartographic base data and its provision of geospatial information services",
+   "value": "LĢIA (Latvian Geospatial Information Agency), supervised by the Ministry of Defence",
+   "published": "",
+   "title": "Par mums",
+   "publisher": "Latvijas Ģeotelpiskās informācijas aģentūra",
+   "doc_type": "official_page",
+   "note": "The operator's own site confirms that LĢIA produces the geodetic and cartographic base data under the Ministry of Defence.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Latvijas Ģeotelpiskās informācijas aģentūra (LĢIA)",
+    "reason": "The quote says the Ministry of Defence plans and oversees LĢIA's production of geodetic and cartographic base data, so LĢIA is the body that operates it, with MoD in a supervisory role."
+   }
+  },
+  {
+   "claim": "record:LV:issuance_history:register",
+   "question": "Document issuance history: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.ic.iem.gov.lv/lv/nederigo-dokumentu-registrs",
+   "quote": "Nederīgo dokumentu reģistrs tiek izmantots noziedzības novēršanā un apkarošanā, nodrošinot informācijas uzkrāšanu, aktualizāciju un izplatīšanu par nederīgiem Latvijas Republikas, ārvalstu vai starptautisko organizāciju izsniegtajiem personu apliecinošiem dokumentiem",
+   "quote_english": "The Register of Invalid Documents is used to prevent and combat crime by collecting, updating and distributing information on invalid identity documents issued by Latvia, foreign states or international organisations",
+   "value": "Nederīgo dokumentu reģistrs (Register of Invalid Documents)",
+   "published": "2025-10-17",
+   "title": "Nederīgo dokumentu reģistrs",
+   "publisher": "Iekšlietu ministrijas Informācijas centrs",
+   "doc_type": "official_page",
+   "note": "The holder's own register page, updated October 2025, confirms the register name and scope.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "Nederīgo dokumentu reģistrs",
+    "reason": "The quote names the Invalid Documents Register, which holds data on invalid identity documents; it does not cover issuance history in general."
+   }
+  },
+  {
+   "claim": "record:LV:police_records:register",
+   "question": "Police information systems: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.ic.iem.gov.lv/lv/personu-mantu-un-dokumentu-atrasanas-vietas-noskaidrosanas-registrs",
+   "quote": "Nodrošināt vienotu uzskaiti personu, mantu un dokumentu meklēšanai, personas vai mantas atrašanās vietas noskaidrošanai, personas faktiskās dzīvesvietas noteikšanai, bez vēsts pazudušu personu meklēšanai",
+   "quote_english": "To provide unified records for searching for persons, property and documents, establishing the whereabouts of a person or property, determining a person's actual residence, and searching for missing persons",
+   "value": "Register for locating persons, property and documents (Personu, mantu un dokumentu atrašanās vietas noskaidrošanas reģistrs)",
+   "published": "2026-08-31",
+   "title": "Personu, mantu un dokumentu atrašanās vietas noskaidrošanas reģistrs",
+   "publisher": "Iekšlietu ministrijas Informācijas centrs",
+   "doc_type": "official_page",
+   "note": "The holder's own page, published August 2026, describes the register that Cabinet Regulation No. 41 (the current source) establishes. The Latvian register name is the page heading.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote states only the purpose (tracing persons, property and documents) and does not name the register; the name appears only in the page title, not in the quote."
+   }
+  },
+  {
+   "claim": "record:LV:tax:register",
+   "question": "Tax: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.vid.gov.lv/lv/elektroniskas-deklaresanas-sistema",
+   "quote": "Pieslēgties EDS Saite uz VID elektroniskās deklarēšanas sistēmu (EDS)",
+   "quote_english": "Log in to EDS. Link to the VID Electronic Declaration System (EDS)",
+   "value": "VID elektroniskās deklarēšanas sistēma (EDS) (VID Electronic Declaration System)",
+   "published": "2026-06-18",
+   "title": "Elektroniskās deklarēšanas sistēma",
+   "publisher": "Valsts ieņēmumu dienests",
+   "doc_type": "official_page",
+   "note": "The operator's own EDS page, updated June 2026, confirms the system name.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "VID elektroniskās deklarēšanas sistēma (EDS)",
+    "reason": "The quote names the State Revenue Service's Electronic Declaration System (EDS)."
+   }
+  },
+  {
+   "claim": "record:LV:facial_biometric:register",
+   "question": "Facial biometric: Facial images captured for identity documents",
+   "relation": "fills_gap",
+   "url": "https://www.ic.iem.gov.lv/lv/biometrijas-datu-apstrades-sistema",
+   "quote": "Fizisko personu identitātes noteikšana, kā arī svešas identitātes izmantošanas novēršana, izmantojot personu biometriskos datus (sejas attēls, pirkstu nospiedumu (delnu) attēli).",
+   "quote_english": "Establishing the identity of natural persons and preventing the use of another's identity by using persons' biometric data (facial image, fingerprint (palm) images).",
+   "value": "Biometrijas datu apstrādes sistēma (Biometric Data Processing System)",
+   "published": "2025-05-01",
+   "title": "Biometrijas datu apstrādes sistēma",
+   "publisher": "Iekšlietu ministrijas Informācijas centrs",
+   "doc_type": "official_page",
+   "note": "The system name is the heading of the holder's page. The same page says it holds the facial images of people issued identity documents.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote shows that the Biometric Data Processing System processes facial images (and fingerprints) for identifying persons; it establishes that the holding exists but does not name an operator."
+   }
+  },
+  {
+   "claim": "record:LV:facial_biometric:operator",
+   "question": "Facial biometric: Facial images captured for identity documents",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/193111",
+   "quote": "Biometrijas datu apstrādes sistēma ir valsts informācijas sistēma, kuras pārzinis un turētājs ir Iekšlietu ministrijas Informācijas centrs.",
+   "quote_english": "The Biometric Data Processing System is a state information system whose controller and holder is the Information Centre of the Ministry of the Interior.",
+   "value": "Iekšlietu ministrijas Informācijas centrs (Information Centre of the Ministry of the Interior)",
+   "published": "",
+   "title": "Biometrijas datu apstrādes sistēmas likums",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "The statutory controller and holder. IeM news items from 2026 already use the name 'Iekšlietu digitālais centrs', which suggests a rename is under way.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "Biometrijas datu apstrādes sistēma; operator Iekšlietu ministrijas Informācijas centrs",
+    "reason": "The statute says the Biometric Data Processing System is a state information system whose controller and holder is the Interior Ministry Information Centre."
+   }
+  },
+  {
+   "claim": "record:LV:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: Fingerprints captured for passports and ID cards where retained centrally",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/193111",
+   "quote": "Biometrijas datu apstrādes sistēmā iekļauj biometrijas datus, kurus iegūst: 1) izsniedzot personu apliecinošus dokumentus;",
+   "quote_english": "The Biometric Data Processing System includes biometric data obtained: 1) when issuing identity documents;",
+   "value": "Biometrijas datu apstrādes sistēma (Biometric Data Processing System)",
+   "published": "",
+   "title": "Biometrijas datu apstrādes sistēmas likums",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "The law keeps biometric data from identity-document issuance centrally. The IC register page says the data include fingerprint images.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The statute says the Biometric Data Processing System includes biometric data obtained when identity documents are issued; that shows central retention, but the quote does not itself mention fingerprints specifically."
+   }
+  },
+  {
+   "claim": "record:LV:fingerprint_biometric:operator",
+   "question": "Fingerprint biometric: Fingerprints captured for passports and ID cards where retained centrally",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/193111",
+   "quote": "Biometrijas datu apstrādes sistēma ir valsts informācijas sistēma, kuras pārzinis un turētājs ir Iekšlietu ministrijas Informācijas centrs.",
+   "quote_english": "The Biometric Data Processing System is a state information system whose controller and holder is the Information Centre of the Ministry of the Interior.",
+   "value": "Iekšlietu ministrijas Informācijas centrs (Information Centre of the Ministry of the Interior)",
+   "published": "",
+   "title": "Biometrijas datu apstrādes sistēmas likums",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "The same statutory controller as for facial images.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "Biometrijas datu apstrādes sistēma; operator Iekšlietu ministrijas Informācijas centrs",
+    "reason": "The statute names the Interior Ministry Information Centre as controller and holder of the Biometric Data Processing System."
+   }
+  },
+  {
+   "claim": "record:LV:authentication_audit_log:register",
+   "question": "Authentication audit log: Records of who authenticated to which public service and when",
+   "relation": "fills_gap",
+   "url": "https://www.vdaa.gov.lv/lv/vienotas-pieteiksanas-modulis",
+   "quote": "Vienotās pieteikšanās modulis (VPM) ir koplietošanas pakalpojums, kas palīdz identificēt mājaslapas vai portāla lietotāju.",
+   "quote_english": "The Unified Login Module (VPM) is a shared service that helps identify the user of a website or portal.",
+   "value": "Vienotās pieteikšanās modulis (VPM) (Unified Login Module)",
+   "published": "2024-09-09",
+   "title": "Vienotās pieteikšanās modulis",
+   "publisher": "Valsts digitālās attīstības aģentūra (VDAA)",
+   "doc_type": "official_page",
+   "note": "VPM is the central state authentication service run by VDAA, so its authentication records are this holding. The page does not describe an audit log explicitly.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes the Unified Login Module as a shared identification service but says nothing about keeping authentication logs or records."
+   }
+  },
+  {
+   "claim": "record:LV:health_insurance:register",
+   "question": "Statutory health insurance: Enrolment and entitlement records of the statutory health insurance scheme",
+   "relation": "fills_gap",
+   "url": "https://www.vmnvd.gov.lv/lv/pakalpojumu-sanemeju-registrs",
+   "quote": "Pakalpojumu saņēmēju reģistrs nodrošina to personu uzskaiti, kurām ir tiesības saņemt no valsts budžeta līdzekļiem apmaksātus veselības aprūpes pakalpojumus.",
+   "quote_english": "The Register of Service Recipients records the persons entitled to receive health care services paid from the state budget.",
+   "value": "Pakalpojumu saņēmēju reģistrs (Register of Service Recipients)",
+   "published": "2025-04-15",
+   "title": "Pakalpojumu saņēmēju reģistrs",
+   "publisher": "Nacionālais veselības dienests",
+   "doc_type": "official_page",
+   "note": "The National Health Service's own page names its entitlement register for the tax-funded health system.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "Pakalpojumu saņēmēju reģistrs",
+    "reason": "The quote names the Service Recipients Register, which records persons entitled to state-funded health care; it does not name the operator in the quote itself."
+   }
+  },
+  {
+   "claim": "record:LV:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/60460",
+   "quote": "Valsts vienotās datorizētās zemesgrāmatas un tās programmnodrošinājuma vienīgā īpašniece ir Latvijas valsts. Valsts vienotās datorizētās zemesgrāmatas turētāja ir Tiesu administrācija.",
+   "quote_english": "The sole owner of the State Unified Computerised Land Register and its software is the Latvian state. The holder of the State Unified Computerised Land Register is the Court Administration.",
+   "value": "Valsts vienotā datorizētā zemesgrāmata (State Unified Computerised Land Register)",
+   "published": "",
+   "title": "Zemesgrāmatu likums",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "The land register for title and mortgages, from the consolidated Land Register Law.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Valsts vienotā datorizētā zemesgrāmata; holder Tiesu administrācija",
+    "reason": "The statute says the State Unified Computerised Land Register is owned by the State of Latvia and held by the Court Administration."
+   }
+  },
+  {
+   "claim": "record:LV:land_property:operator",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/60460",
+   "quote": "Valsts vienotās datorizētās zemesgrāmatas un tās programmnodrošinājuma vienīgā īpašniece ir Latvijas valsts. Valsts vienotās datorizētās zemesgrāmatas turētāja ir Tiesu administrācija.",
+   "quote_english": "The sole owner of the State Unified Computerised Land Register and its software is the Latvian state. The holder of the State Unified Computerised Land Register is the Court Administration.",
+   "value": "Tiesu administrācija (Court Administration)",
+   "published": "",
+   "title": "Zemesgrāmatu likums",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "The statutory holder. The state owns the system and its software.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Valsts vienotā datorizētā zemesgrāmata; holder Tiesu administrācija",
+    "reason": "Same quote as item 19: the Court Administration is the holder and the Latvian state is the sole owner."
+   }
+  },
+  {
+   "claim": "record:LV:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/72847",
+   "quote": "Komercreģistru saskaņā ar šo likumu, Komerclikumu un citiem normatīvajiem aktiem ved Uzņēmumu reģistrs.",
+   "quote_english": "The Commercial Register is kept by the Register of Enterprises in accordance with this law, the Commercial Law and other regulatory enactments.",
+   "value": "Komercreģistrs (Commercial Register)",
+   "published": "",
+   "title": "Par Latvijas Republikas Uzņēmumu reģistru",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "The Register of Enterprises also keeps other registers, such as those for associations, political parties and EEIGs.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "Komercreģistrs; kept by Uzņēmumu reģistrs",
+    "reason": "The statute says the Enterprise Register (Uzņēmumu reģistrs) keeps the Commercial Register."
+   }
+  },
+  {
+   "claim": "record:LV:business_registry:operator",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/72847",
+   "quote": "Uzņēmumu reģistrs ir tiešās pārvaldes iestāde, kas darbojas tieslietu ministra pārraudzībā.",
+   "quote_english": "The Register of Enterprises is a direct administration institution operating under the supervision of the Minister for Justice.",
+   "value": "Uzņēmumu reģistrs (Register of Enterprises), under the Minister for Justice",
+   "published": "",
+   "title": "Par Latvijas Republikas Uzņēmumu reģistru",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "The statutory status of the operator.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Uzņēmumu reģistrs (direct administration body under the Minister of Justice)",
+    "reason": "The quote says the Enterprise Register is a direct administration institution under the Minister of Justice; on its own it does not name the business register it keeps."
+   }
+  },
+  {
+   "claim": "record:LV:beneficial_ownership:register",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/178987",
+   "quote": "ikvienai personai ir tiesības tūlītēji, nefiltrēti, tieši un brīvi saņemt informāciju par patiesajiem labuma guvējiem no Valsts ieņēmumu dienesta un tiešsaistes formā — no Latvijas Republikas Uzņēmumu reģistra",
+   "quote_english": "everyone has the right to receive information on beneficial owners immediately, unfiltered, directly and freely from the State Revenue Service and, online, from the Register of Enterprises of the Republic of Latvia",
+   "value": "Beneficial owner information held by Latvijas Republikas Uzņēmumu reģistrs (Register of Enterprises)",
+   "published": "",
+   "title": "Noziedzīgi iegūtu līdzekļu legalizācijas un terorisma un proliferācijas finansēšanas novēršanas likums",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "For legal entities, beneficial owners are recorded in the registers the Register of Enterprises keeps, not in a separately named register. For trusts, a separate 'Juridisko veidojumu patieso labuma guvēju reģistrs' exists.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Latvijas Republikas Uzņēmumu reģistrs (online) and Valsts ieņēmumu dienests",
+    "reason": "The quote says beneficial-ownership information is available from the State Revenue Service and online from the Enterprise Register; it does not state outright who keeps the register."
+   }
+  },
+  {
+   "claim": "record:LV:beneficial_ownership:operator",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/178987",
+   "quote": "Juridisko veidojumu patieso labuma guvēju reģistru (turpmāk šajā pantā — reģistrs) ved Latvijas Republikas Uzņēmumu reģistrs.",
+   "quote_english": "The Register of Beneficial Owners of Legal Arrangements (hereinafter in this article, the register) is kept by the Register of Enterprises of the Republic of Latvia.",
+   "value": "Latvijas Republikas Uzņēmumu reģistrs (Register of Enterprises of the Republic of Latvia)",
+   "published": "",
+   "title": "Noziedzīgi iegūtu līdzekļu legalizācijas un terorisma un proliferācijas finansēšanas novēršanas likums",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "The Register of Enterprises keeps the register of beneficial owners of legal arrangements, and legal entities' beneficial owners are also filed with it.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "Latvijas Republikas Uzņēmumu reģistrs",
+    "reason": "The statute says the Enterprise Register keeps the register of beneficial owners of legal arrangements, which covers legal arrangements rather than all legal entities."
+   }
+  },
+  {
+   "claim": "record:LV:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/45467",
+   "quote": "Valsts akciju sabiedrība \"Ceļu satiksmes drošības direkcija\" (turpmāk — Ceļu satiksmes drošības direkcija) reģistrē transportlīdzekļus, piešķir un anulē transportlīdzekļu vadīšanas tiesības un izsniedz transportlīdzekļu vadītāju apliecības, nodrošina un uztur transportlīdzekļu un to vadītāju valsts reģistru",
+   "quote_english": "The state joint-stock company 'Road Traffic Safety Directorate' registers vehicles, grants and revokes driving rights, issues driving licences, and provides and maintains the state register of vehicles and their drivers",
+   "value": "transportlīdzekļu un to vadītāju valsts reģistrs (State Register of Vehicles and Drivers)",
+   "published": "",
+   "title": "Ceļu satiksmes likums",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "From the consolidated Road Traffic Law. This article was last amended with effect from 22.11.2025.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "VAS Ceļu satiksmes drošības direkcija; transportlīdzekļu un to vadītāju valsts reģistrs",
+    "reason": "The statute says the state joint-stock company CSDD registers vehicles, issues driving licences and maintains the state register of vehicles and drivers."
+   }
+  },
+  {
+   "claim": "record:LV:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/45467",
+   "quote": "Valsts akciju sabiedrība \"Ceļu satiksmes drošības direkcija\" (turpmāk — Ceļu satiksmes drošības direkcija) reģistrē transportlīdzekļus, piešķir un anulē transportlīdzekļu vadīšanas tiesības un izsniedz transportlīdzekļu vadītāju apliecības, nodrošina un uztur transportlīdzekļu un to vadītāju valsts reģistru",
+   "quote_english": "The state joint-stock company 'Road Traffic Safety Directorate' registers vehicles, grants and revokes driving rights, issues driving licences, and provides and maintains the state register of vehicles and their drivers",
+   "value": "Valsts akciju sabiedrība \"Ceļu satiksmes drošības direkcija\" (state joint-stock company Road Traffic Safety Directorate, CSDD)",
+   "published": "",
+   "title": "Ceļu satiksmes likums",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "The operator is a state-owned company.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "VAS Ceļu satiksmes drošības direkcija; transportlīdzekļu un to vadītāju valsts reģistrs",
+    "reason": "Same quote as item 25: CSDD, a state joint-stock company, maintains the vehicle and driver register."
+   }
+  },
+  {
+   "claim": "record:LV:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://www.ic.iem.gov.lv/lv/jaunums/iekslietu-digitalais-centrs-turpina-istenot-projektu-nr-icrpvp20249-valsts-robezsardzes-elektroniskas-informacijas-sistemas-izstrade-un-ieviesana",
+   "quote": "Iekšlietu digitālais centrs (IDC) īsteno projektu, kura ietvaros tiek attīstīta Valsts robežsardzes elektronisko informācijas sistēma (REIS) un ieviesta Ieceļošanas/izceļošanas sistēmas (IIS) nacionālā daļa",
+   "quote_english": "The Interior Digital Centre (IDC) is carrying out a project to develop the State Border Guard electronic information system (REIS) and to implement the national part of the Entry/Exit System (IIS)",
+   "value": "Valsts robežsardzes elektroniskā informācijas sistēma (REIS) with the national part of the Ieceļošanas/izceļošanas sistēma (IIS) (State Border Guard Electronic Information System with the national Entry/Exit System)",
+   "published": "2026-06-30",
+   "title": "Iekšlietu digitālais centrs turpina īstenot projektu Nr. IC/RPVP/2024/9",
+   "publisher": "Iekšlietu ministrijas Informācijas centrs / Iekšlietu digitālais centrs",
+   "doc_type": "official_page",
+   "note": "The same site also has pages for 'Šengenas informācija sistēma (Latvijas valsts daļa)' and for PMLP's national visa system NVIS. The item uses the new operator name 'Iekšlietu digitālais centrs'.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Valsts robežsardzes elektroniskā informācijas sistēma (REIS); Ieceļošanas/izceļošanas sistēmas (IIS) nacionālā daļa",
+    "reason": "The quote names the Border Guard's REIS and the national part of the Entry/Exit System, both being developed in a project run by the Iekšlietu digitālais centrs; it describes development, not current operation."
+   }
+  },
+  {
+   "claim": "record:LV:border_control:operator",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://www.ic.iem.gov.lv/lv/jaunums/iekslietu-digitalais-centrs-turpina-istenot-projektu-nr-icrpvp20249-valsts-robezsardzes-elektroniskas-informacijas-sistemas-izstrade-un-ieviesana",
+   "quote": "Iekšlietu digitālais centrs (IDC) īsteno projektu, kura ietvaros tiek attīstīta Valsts robežsardzes elektronisko informācijas sistēma (REIS) un ieviesta Ieceļošanas/izceļošanas sistēmas (IIS) nacionālā daļa",
+   "quote_english": "The Interior Digital Centre (IDC) is carrying out a project to develop the State Border Guard electronic information system (REIS) and to implement the national part of the Entry/Exit System (IIS)",
+   "value": "Iekšlietu digitālais centrs (IDC) (Interior Digital Centre)",
+   "published": "2026-06-30",
+   "title": "Iekšlietu digitālais centrs turpina īstenot projektu Nr. IC/RPVP/2024/9",
+   "publisher": "Iekšlietu ministrijas Informācijas centrs / Iekšlietu digitālais centrs",
+   "doc_type": "official_page",
+   "note": "IDC appears to be the new name of the Interior Ministry Information Centre. The page shows it building the system, and does not state that it is the statutory controller.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Iekšlietu digitālais centrs (IDC) (implementing the REIS/IIS development project)",
+    "reason": "The quote shows the IDC carrying out the project that develops REIS and the national EES part; strictly, that makes IDC the developer, not a stated operator."
+   }
+  },
+  {
+   "claim": "record:LV:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://www.pmlp.gov.lv/lv/projekts/nacionalas-vizu-informacijas-sistemas-nvis-lietosana-un-attistisana",
+   "quote": "Nacionālās vīzu informācijas sistēmas (NVIS) lietošana un attīstīšana",
+   "quote_english": "Use and development of the National Visa Information System (NVIS)",
+   "value": "Nacionālā vīzu informācijas sistēma (NVIS) (National Visa Information System)",
+   "published": "2025-12-02",
+   "title": "Nacionālās vīzu informācijas sistēmas (NVIS) lietošana un attīstīšana",
+   "publisher": "Pilsonības un migrācijas lietu pārvalde",
+   "doc_type": "official_page",
+   "note": "The national visa system is the national counterpart of VIS. PMLP runs the project with the Interior Ministry Information Centre, the Border Guard and the Ministry of Foreign Affairs.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "Nacionālā vīzu informācijas sistēma (NVIS)",
+    "reason": "The quote is a PMLP project title naming the National Visa Information System; it does not state who operates it."
+   }
+  },
+  {
+   "claim": "record:LV:firearms_register:register",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://www.ic.iem.gov.lv/lv/ierocu-registrs",
+   "quote": "Vienotas šaujamieroču, to sastāvdaļu, lielas enerģijas pneimatisko ieroču, gāzes ieroču un signālieroču, salūtieroču, dezaktivēto ieroču, šaujamieroču un salūtieroču munīcijas un personām izsniegto ieroču atļauju uzskaites nodrošināšana.",
+   "quote_english": "Ensuring unified records of firearms, their components, high-energy air guns, gas and signal weapons, salute weapons, deactivated weapons, firearm and salute ammunition, and weapon permits issued to persons.",
+   "value": "Ieroču reģistrs (Weapons Register)",
+   "published": "2025-12-31",
+   "title": "Ieroču reģistrs",
+   "publisher": "Iekšlietu ministrijas Informācijas centrs",
+   "doc_type": "official_page",
+   "note": "The register name is the page heading. The quote gives the register's purpose, including records of permits issued to persons.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote gives the purpose of the register (unified records of weapons and permits) but does not contain its name or its operator."
+   }
+  },
+  {
+   "claim": "record:LV:firearms_register:operator",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://likumi.lv/ta/id/305818",
+   "quote": "Ieroču reģistra turētājs un pārzinis ir Iekšlietu ministrijas Informācijas centrs.",
+   "quote_english": "The holder and controller of the Weapons Register is the Information Centre of the Ministry of the Interior.",
+   "value": "Iekšlietu ministrijas Informācijas centrs (Information Centre of the Ministry of the Interior)",
+   "published": "",
+   "title": "Ieroču aprites likums",
+   "publisher": "Latvijas Vēstnesis (likumi.lv)",
+   "doc_type": "legislation",
+   "note": "From the consolidated Weapons Circulation Law, whose amendments run to 2026.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "Ieroču reģistrs; operator Iekšlietu ministrijas Informācijas centrs",
+    "reason": "The regulation says the Interior Ministry Information Centre is the holder and controller of the Weapons Register."
+   }
+  },
+  {
+   "claim": "record:LV:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://www.vestnesis.lv/oficialais-izdevums",
+   "quote": "Latvijas Republikas oficiālajā izdevumā “Latvijas Vēstnesis” publicē: ārējos normatīvos aktus, arī pašvaldību saistošos noteikumus, kā arī citus tiesību aktus;",
+   "quote_english": "The official publication of the Republic of Latvia 'Latvijas Vēstnesis' publishes: external regulatory enactments, including municipal binding regulations, and other legal acts;",
+   "value": "“Latvijas Vēstnesis” (official publication of the Republic of Latvia)",
+   "published": "",
+   "title": "Oficiālais izdevums",
+   "publisher": "Latvijas Vēstnesis",
+   "doc_type": "official_page",
+   "note": "The official publisher's own page. Its electronic edition at vestnesis.lv is legally binding.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "Latvijas Vēstnesis",
+    "reason": "The quote says laws and other legal acts are published in the official publication Latvijas Vēstnesis; it does not name who operates it."
+   }
+  },
+  {
+   "claim": "record:LV:public_finance:register",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://www.kase.gov.lv/pakalpojumi/norekini",
+   "quote": "Klientam, kam Valsts kasē ir atvērts konts, ir plašas iespējas veikt dažāda veida maksājumus Valsts kases nodrošinātajās maksājumu valūtās, izmantojot ePakalpojumu Maksājumi",
+   "quote_english": "A client with an account at the Treasury can make many kinds of payments in the currencies the Treasury supports, using the e-service Payments",
+   "value": "ePakalpojums Maksājumi (Treasury Payments e-service)",
+   "published": "2026-05-14",
+   "title": "Norēķini",
+   "publisher": "Valsts kase",
+   "doc_type": "official_page",
+   "note": "The payment system for Treasury accounts, which the page also calls eKase. The same site lists ePārskati for institutions' reports.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "ePakalpojums Maksājumi (eKase); Valsts kase",
+    "reason": "The quote says Treasury account holders make payments through the Treasury's ePakalpojums Maksājumi, which the page labels eKase."
+   }
+  },
+  {
+   "claim": "record:LV:public_finance:operator",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://www.kase.gov.lv/valsts-kase/par-mums",
+   "quote": "Valsts kases funkcijas: Valsts budžeta izpildes un finanšu uzskaites organizēšana; Asignējumu piešķiršana un maksājumu veikšana no valsts budžeta ieņēmumiem;",
+   "quote_english": "Functions of the Treasury: organising state budget execution and financial accounting; granting appropriations and making payments from state budget revenue;",
+   "value": "Valsts kase (State Treasury)",
+   "published": "2024-03-11",
+   "title": "Par mums",
+   "publisher": "Valsts kase",
+   "doc_type": "official_page",
+   "note": "The Treasury is a direct administration institution under the Ministry of Finance.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "Valsts kase",
+    "reason": "The Treasury lists state budget execution, financial accounting and payments from the budget among its functions; the quote names no system."
+   }
+  },
+  {
+   "claim": "record:LV:government_payroll:register",
+   "question": "Government payroll and personnel: Civil service and armed forces payroll and personnel records",
+   "relation": "fills_gap",
+   "url": "https://www.kase.gov.lv/vienotais-pakalpojumu-centrs/personala-lietvedibas-sistemas-pakalpojums/centralizetais-finansu",
+   "quote": "Centralizētais finanšu grāmatvedības un personāla lietvedības risinājuma projektējums ir pieejams",
+   "quote_english": "The design of the Centralised Financial Accounting and Personnel Records Solution is available",
+   "value": "Centralizētais finanšu grāmatvedības un personāla lietvedības risinājums (Centralised Financial Accounting and Personnel Records Solution)",
+   "published": "2024-10-02",
+   "title": "Centralizētais finanšu grāmatvedības un personāla lietvedības risinājums",
+   "publisher": "Valsts kase (Vienotais pakalpojumu centrs)",
+   "doc_type": "official_page",
+   "note": "This is the Treasury Shared Service Centre's central accounting and personnel system for government bodies. The page does not say whether it covers the armed forces, so the finding is weak.",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says only that the design of a centralised finance and personnel records solution is available; it names no system in operation and no operator."
+   }
+  },
+  {
+   "claim": "record:LV:electoral_management:register",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://www.vdaa.gov.lv/lv/velesanu-platforma",
+   "quote": "Vēlēšanu informācijas sistēmas modulis (VEL IS), kas nodrošina vēlēšanu pamatdarbības procesus un funkcionalitāti, tostarp kandidātu sarakstus, vēlēšanu gaitas žurnālus, balsu skaitīšanu un datu publicēšanu.",
+   "quote_english": "The Election Information System module (VEL IS), which supports the core election processes and functions, including candidate lists, election logs, vote counting and data publication.",
+   "value": "Vēlēšanu informācijas sistēmas modulis (VEL IS) (Election Information System module), part of the Vēlēšanu platforma (Election Platform)",
+   "published": "2025-02-18",
+   "title": "Vēlēšanu platforma",
+   "publisher": "Valsts digitālās attīstības aģentūra (VDAA)",
+   "doc_type": "official_page",
+   "note": "This covers candidate lists and results tabulation.",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "Vēlēšanu informācijas sistēmas modulis (VEL IS)",
+    "reason": "The quote names VEL IS, the Election Platform module that handles candidate lists, counting and publishing results."
+   }
+  },
+  {
+   "claim": "record:LV:electoral_management:operator",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://www.vdaa.gov.lv/lv/jaunums/velesanu-platforma-ir-gatava-2026-gada-saeimas-velesanam",
+   "quote": "VDAA nodrošina Vēlēšanu platformas darbību. Pirms Saeimas vēlēšanām ir veikta platformas pilnveidošana un nepieciešamās pārbaudes.",
+   "quote_english": "VDAA ensures the operation of the Election Platform. Before the Saeima elections the platform was improved and the necessary checks were carried out.",
+   "value": "VDAA (Valsts digitālās attīstības aģentūra, State Digital Development Agency)",
+   "published": "2026-09-22",
+   "title": "Vēlēšanu platforma ir gatava 2026. gada Saeimas vēlēšanām",
+   "publisher": "Valsts digitālās attīstības aģentūra (VDAA)",
+   "doc_type": "official_page",
+   "note": "The Central Election Commission (CVK) is the election authority, and VDAA runs the platform.",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "VDAA (operates the Vēlēšanu platforma)",
+    "reason": "The quote says VDAA runs the Election Platform, prepared for the 2026 Saeima elections."
+   }
+  },
+  {
+   "claim": "record:LV:central_bank:register",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.bank.lv/darbibas-jomas/maksajumu-sistemas-uzdevumi",
+   "quote": "Uzturam un attīstām EKS sistēmu – klientu maksājumiem un zibmaksājumiem. Esam reālā laika TARGET-Latvija sistēmas operators – starpbanku maksājumiem un monetārās politikas operācijām.",
+   "quote_english": "We maintain and develop the EKS system for customer payments and instant payments. We are the operator of the real-time TARGET-Latvija system for interbank payments and monetary policy operations.",
+   "value": "EKS sistēma and TARGET-Latvija (EKS clearing system and TARGET-Latvija), operated by Latvijas Banka",
+   "published": "",
+   "title": "Maksājumu sistēmas",
+   "publisher": "Latvijas Banka",
+   "doc_type": "official_page",
+   "note": "The central bank's own page on the national payment infrastructure.",
+   "review": {
+    "id": 38,
+    "quote_found": true,
+    "established": "Latvijas Banka; EKS and TARGET-Latvija",
+    "reason": "Latvijas Banka says it maintains the EKS system and operates the real-time TARGET-Latvija system."
+   }
+  },
+  {
+   "claim": "record:LV:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.vugd.gov.lv/lv/vienotais-arkartas-palidzibas-izsaukumu-numurs-112-latvija",
+   "quote": "ar jaunās Vienotās operatīvo dienestu informācijas sistēmas palīdzību nodod informāciju par notikumu vienlaicīgi visiem iesaistāmajiem operatīvajiem dienestiem",
+   "quote_english": "using the new Unified Emergency Services Information System, passes information about the incident simultaneously to all emergency services involved",
+   "value": "Vienotā operatīvo dienestu informācijas sistēma (Unified Emergency Services Information System)",
+   "published": "2020-08-13",
+   "title": "Vienotais ārkārtas palīdzības izsaukumu numurs 112 Latvijā",
+   "publisher": "Valsts ugunsdzēsības un glābšanas dienests",
+   "doc_type": "official_page",
+   "note": "This is the 112 dispatch system. The page is from 2020, so its current status should be checked.",
+   "review": {
+    "id": 39,
+    "quote_found": true,
+    "established": "Vienotā operatīvo dienestu informācijas sistēma",
+    "reason": "The quote names the new Unified Emergency Services Information System used by 112 dispatchers; it does not state the operator."
+   }
+  },
+  {
+   "claim": "record:LV:crisis_management:register",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://www.vugd.gov.lv/lv/valsts-civilas-aizsardzibas-plans",
+   "quote": "Valsts civilās aizsardzības plāns ir plānošanas dokuments, kas tiek sagatavots, ņemot vērā risku novērtējumu",
+   "quote_english": "The State Civil Protection Plan is a planning document prepared on the basis of a risk assessment",
+   "value": "Valsts civilās aizsardzības plāns (State Civil Protection Plan)",
+   "published": "2021-09-21",
+   "title": "Valsts civilās aizsardzības plāns",
+   "publisher": "Valsts ugunsdzēsības un glābšanas dienests",
+   "doc_type": "official_page",
+   "note": "This covers the continuity-plan part of the holding only. The VUGD site also runs a cell-broadcast alerting system (šūnu apraides sistēma), but I found no quotable name for it.",
+   "review": {
+    "id": 40,
+    "quote_found": true,
+    "established": "Valsts civilās aizsardzības plāns",
+    "reason": "The quote names the State Civil Protection Plan, a planning document; it names no crisis-management system and no operator."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:LV:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:LV:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:LV:K1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:LV:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:digital_identity_credentials:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:LV:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:LV:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:benefits_pensions:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:benefits_pensions:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:breeder_documents:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:civil_registry:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:civil_registry:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:education:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:electoral_roll:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:geospatial:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:geospatial:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:judicial_criminal:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:judicial_criminal:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:police_records:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:public_health_surveillance:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:public_health_surveillance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:residence_permits:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:residence_permits:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:breeder_documents:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:customs:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:facial_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:authentication_audit_log:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:trust_services_pki:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:government_payroll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:LV:grid_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:LV:water_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:LV:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

@@ -1,0 +1,988 @@
+{
+ "iso": "NL",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:NL:health_records:operator",
+   "question": "Health records: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://zoek.officielebekendmakingen.nl/ah-tk-20192020-2652.html",
+   "quote": "De beheerder van het Landelijk Schakelpunt is VZVZ Servicecentrum, de uitvoeringsorganisatie van de Nederlandse vereniging VZVZ.",
+   "quote_english": "The manager of the National Switch Point is VZVZ Servicecentrum, the executive organisation of the Dutch association VZVZ.",
+   "value": "VZVZ Servicecentrum (executive organisation of the association VZVZ)",
+   "published": "2020-05-01",
+   "title": "Antwoord op vragen van het lid Van Esch over de 'veronderstelde toegang' tot elektronische patiëntendossiers",
+   "publisher": "Tweede Kamer / Minister van VWS (officielebekendmakingen.nl)",
+   "doc_type": "official_page",
+   "note": "Ministerial answer on the official gazette portal replaces the VZVZ's own site; the same answer notes technical maintenance is partly done by a Dutch company with an American parent.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "VZVZ Servicecentrum (operator of the Landelijk Schakelpunt, implementing body of the Dutch association VZVZ)",
+    "reason": "Answer 9 on the page names VZVZ Servicecentrum as the beheerder of the LSP; the same answer notes that technical maintenance sits partly with a Dutch company that has a US parent."
+   }
+  },
+  {
+   "claim": "record:NL:health_records:register",
+   "question": "Health records: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://zoek.officielebekendmakingen.nl/kst-27529-170.html",
+   "quote": "uw Kamer toegezegd om informatie te sturen over de beveiliging van gegevens die gedeeld worden via het Landelijk Schakelpunt (LSP).",
+   "quote_english": "promised your Chamber to send information on the security of data shared via the National Switch Point (LSP).",
+   "value": "Landelijk Schakelpunt (LSP) (National Switch Point)",
+   "published": "2019-02-11",
+   "title": "Kamerstuk 27529-170: Informatie over de beveiliging van gegevens die gedeeld worden via het Landelijk Schakelpunt (LSP)",
+   "publisher": "Minister van VWS / Tweede Kamer",
+   "doc_type": "official_page",
+   "note": "Parliamentary letter from the health minister names the LSP; the same letter states 'De Vereniging van Zorgaanbieders voor Zorgcommunicatie (VZVZ) beheert het LSP.'",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "Landelijk Schakelpunt (LSP)",
+    "reason": "The ministerial letter names the system through which health data is shared as the Landelijk Schakelpunt (LSP)."
+   }
+  },
+  {
+   "claim": "record:NL:health_records:operator",
+   "question": "Health records: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://zoek.officielebekendmakingen.nl/kst-27529-170.html",
+   "quote": "Zoals ik u heb gemeld tijdens het AO heb ik geen rol bij de organisatie van de gegevensuitwisseling in de zorg. De Vereniging van Zorgaanbieders voor Zorgcommunicatie (VZVZ) beheert het LSP.",
+   "quote_english": "As I told you during the committee debate, I have no role in organising data exchange in healthcare. The Association of Care Providers for Care Communication (VZVZ) manages the LSP.",
+   "value": "Vereniging van Zorgaanbieders voor Zorgcommunicatie (VZVZ) (Association of Care Providers for Care Communication)",
+   "published": "2019-02-11",
+   "title": "Kamerstuk 27529-170",
+   "publisher": "Minister van VWS / Tweede Kamer",
+   "doc_type": "official_page",
+   "note": "A second official source for VZVZ as LSP operator; it also confirms the state has no role, so the operator is a private association.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "Vereniging van Zorgaanbieders voor Zorgcommunicatie (VZVZ)",
+    "reason": "The letter says VZVZ manages (beheert) the LSP and that the minister has no role in organising it."
+   }
+  },
+  {
+   "claim": "indicator:NL:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wat-pkioverheid",
+   "quote": "PKIoverheid is een afsprakenstelsel dat wordt beheerd door Logius. Het ministerie van Binnenlandse Zaken en Koninkrijksrelaties is de opdrachtgever.",
+   "quote_english": "PKIoverheid is a trust framework managed by Logius. The Ministry of the Interior and Kingdom Relations is the commissioning party.",
+   "value": "Yes",
+   "published": "",
+   "title": "Wat is PKIoverheid?",
+   "publisher": "Logius (Ministerie van BZK)",
+   "doc_type": "official_page",
+   "note": "The same page states the certificates are issued 'door de Staat der Nederlanden' and are 'niet afhankelijk van commerciële partijen'; it is more specific than the Logius organisation page used before.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "PKIoverheid is managed by Logius, with the Ministry of the Interior (BZK) as commissioning principal, so a state body runs it (the quote does not itself say Logius is a state agency; that comes from the ministry-principal relationship)."
+   }
+  },
+  {
+   "claim": "indicator:NL:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://wetten.overheid.nl/BWBR0048156",
+   "quote": "Onze Minister draagt zorg voor de inrichting, beschikbaarstelling, instandhouding, werking en beveiliging van de generieke digitale infrastructuur, waaronder infrastructuur: a. voor de uitgifte aan natuurlijke personen die beschikken over een burgerservicenummer en het gebruik door die personen van publieke identificatiemiddelen op verschillende betrouwbaarheidsniveaus;",
+   "quote_english": "Our Minister provides for the set-up, availability, maintenance, operation and security of the generic digital infrastructure, including infrastructure: a. for issuing public means of identification at various assurance levels to natural persons with a citizen service number, and for their use by those persons;",
+   "value": "Yes",
+   "published": "2025-11-11",
+   "title": "Wet digitale overheid",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "The statute makes the Minister of BZK responsible for the public eID infrastructure (DigiD); consolidated text in force from 11-11-2025.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The statute makes the Minister responsible for setting up, providing, maintaining, running and securing the infrastructure for issuing and using public identification means to BSN holders."
+   }
+  },
+  {
+   "claim": "record:NL:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.logius.nl/onze-dienstverlening/toegang/digid/wie-doet-wat",
+   "quote": "Wat doet Logius? Logius is verantwoordelijk voor het volgende: Beschikbaarheid Juiste werking Continuïteit Beveiliging Bewaken en doorontwikkelen van de DigiD-architectuur",
+   "quote_english": "What does Logius do? Logius is responsible for: availability, correct operation, continuity, security, and monitoring and further developing the DigiD architecture",
+   "value": "Logius",
+   "published": "",
+   "title": "DigiD – Wie doet wat?",
+   "publisher": "Logius (Ministerie van BZK)",
+   "doc_type": "official_page",
+   "note": "The operator's own page, independent of digid.nl's privacy statement, confirms Logius runs DigiD.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Logius",
+    "reason": "The page states Logius is responsible for DigiD's availability, correct operation, continuity, security and architecture."
+   }
+  },
+  {
+   "claim": "record:NL:digital_identity_credentials:register",
+   "question": "Digital identity credentials: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.logius.nl/over-ons/onze-organisatie",
+   "quote": "Dankzij onze diensten kan bijvoorbeeld iedereen inloggen met DigiD, en de eigen gegevens bekijken in MijnOverheid.",
+   "quote_english": "Thanks to our services, everyone can for example log in with DigiD and view their own data in MijnOverheid.",
+   "value": "DigiD",
+   "published": "",
+   "title": "Onze organisatie",
+   "publisher": "Logius (Ministerie van BZK)",
+   "doc_type": "official_page",
+   "note": "The Logius organisation page names DigiD as its national login service.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "DigiD",
+    "reason": "Logius's page names DigiD as the login system provided through its services."
+   }
+  },
+  {
+   "claim": "indicator:NL:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://zoek.officielebekendmakingen.nl/blg-1249197.pdf",
+   "quote": "Onder regie van BZK/CIO Rijk is een projectmatige aanpak gestart om de verduurzaming van de vier ODC’s beter op elkaar af te stemmen.",
+   "quote_english": "Under the direction of BZK/CIO Rijk, a project-based approach was started to better align the sustainability efforts of the four government data centres (ODCs).",
+   "value": "Yes",
+   "published": "2026-05-26",
+   "title": "Jaarrapportage Bedrijfsvoering Rijk 2025",
+   "publisher": "Ministerie van BZK",
+   "doc_type": "annual_report",
+   "note": "The official 2025 annual operations report of central government reports on the four government data centres operating in 2025.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "It describes a 2025 BZK/CIO Rijk project to coordinate making the four existing ODCs (government data centres) more sustainable, which implies they are in operation."
+   }
+  },
+  {
+   "claim": "indicator:NL:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://zoek.officielebekendmakingen.nl/blg-1263102.pdf",
+   "quote": "De rijksoverheid heeft in de periode 2010-2014 22 een grote consolidatieslag uitgevoerd van tientallen datacentra naar vier Overheidsdatacentra (ODC’s). Deze ODC’s leveren nu onder andere cloudachtige diensten binnen de rijksoverheid.",
+   "quote_english": "In 2010-2014 central government consolidated dozens of data centres into four government data centres (ODCs). These ODCs now provide, among other things, cloud-like services within central government.",
+   "value": "Yes",
+   "published": "2026-07-20",
+   "title": "Notitie Verkenning Overheidsbrede Soevereine Clouddiensten",
+   "publisher": "Ministerie van BZK (bijlage bij Kamerstuk 26643-1537)",
+   "doc_type": "official_page",
+   "note": "The annex to the source letter states that four ODCs are operating now.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The central government consolidated into four Overheidsdatacentra that 'now' deliver cloud-like services within central government."
+   }
+  },
+  {
+   "claim": "indicator:NL:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "contradicts",
+   "url": "https://zoek.officielebekendmakingen.nl/blg-1263102.pdf",
+   "quote": "Eind 2026 verwachten wij oplevering van de proof of concept en in 2027 de eerste migraties van applicaties zodat verdere opschaling in periode 2028-2030 haalbaar wordt.",
+   "quote_english": "We expect delivery of the proof of concept at the end of 2026 and the first application migrations in 2027, so that further scale-up becomes feasible in 2028-2030.",
+   "value": "No",
+   "published": "2026-07-20",
+   "title": "Notitie Verkenning Overheidsbrede Soevereine Clouddiensten",
+   "publisher": "Ministerie van BZK (bijlage bij Kamerstuk 26643-1537)",
+   "doc_type": "official_page",
+   "note": "The sovereign government cloud is still a proof of concept, so the printed 'Yes' is not supported; the cited letter itself says first applications can be hosted 'uiterlijk eind 2026'. The existing ODCs offer only 'cloudachtige diensten' (cloud-like services).",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "no",
+    "reason": "In context, the NDS Cloud programme's new sovereign cloud service is still being built: the proof of concept is expected at the end of 2026 and the first migrations in 2027, so it is not in operation."
+   }
+  },
+  {
+   "claim": "indicator:NL:L3",
+   "question": "indicator L3: Is a cloud certification that requires immunity from non-EU law in force or adopted for government use?",
+   "relation": "corroborates",
+   "url": "https://zoek.officielebekendmakingen.nl/blg-1263102.pdf",
+   "quote": "Uit de definitie van een soevereine clouddienst (zie bovengenoemd begrippenkader) volgt dat er diverse eisen en criteria gelden op grond waarvan beoordeeld wordt of een bepaalde clouddienst soeverein is. Deze eisen zijn op dit moment nog niet in wetgeving gevat.",
+   "quote_english": "The definition of a sovereign cloud service implies various requirements and criteria for judging whether a cloud service is sovereign. These requirements are at present not yet set in legislation.",
+   "value": "No",
+   "published": "2026-07-20",
+   "title": "Notitie Verkenning Overheidsbrede Soevereine Clouddiensten",
+   "publisher": "Ministerie van BZK",
+   "doc_type": "official_page",
+   "note": "The government uses the EU Cloud Sovereignty Framework (SEAL levels) only as a yardstick; sovereignty requirements are not yet in law.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "no",
+    "reason": "The note (June 2026) says the sovereignty requirements for cloud services are not yet set down in legislation, so no such certification is in force."
+   }
+  },
+  {
+   "claim": "record:NL:customs:register",
+   "question": "Customs declarations: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://zoek.officielebekendmakingen.nl/blg-1205324.pdf",
+   "quote": "Over de twee in 2024 meest gebruikte digitale systemen, AGS/DMS Invoer (34%) en AGS/DMS Uitvoer (41%), is de gemiddelde tevredenheid lager",
+   "quote_english": "For the two most-used digital systems in 2024, AGS/DMS Import (34%) and AGS/DMS Export (41%), average satisfaction is lower",
+   "value": "AGS/DMS Invoer and AGS/DMS Uitvoer (customs import and export declaration systems)",
+   "published": "2025-07-08",
+   "title": "Douane Monitor 2024",
+   "publisher": "Douane / Ministerie van Financiën",
+   "doc_type": "annual_report",
+   "note": "Newer than the 2022 letter: in 2024 declarations still ran on the combined AGS/DMS systems for import and export.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "AGS/DMS (Invoer and Uitvoer)",
+    "reason": "The quote names AGS/DMS Invoer and AGS/DMS Uitvoer as the two most-used customs digital systems in 2024; in the PDF the sentence is broken up by the chart layout, but the plain-text extraction shows it verbatim."
+   }
+  },
+  {
+   "claim": "record:NL:public_health_surveillance:register",
+   "question": "Public health surveillance: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://zoek.officielebekendmakingen.nl/blg-1258843.pdf",
+   "quote": "De vaccinatiegraad van het RVP in Nederland wordt sinds 2005 bepaald op basis van het landelijke registratiesysteem Praeventis [7]. Dit is aangesloten op de Basisregistratie Personen (BRP).",
+   "quote_english": "Since 2005, vaccination coverage of the national immunisation programme in the Netherlands has been determined from the national registration system Praeventis. It is linked to the Personal Records Database (BRP).",
+   "value": "Praeventis, het landelijke registratiesysteem (the national registration system)",
+   "published": "2026-07-02",
+   "title": "Vaccinatiegraad Rijksvaccinatieprogramma Nederland",
+   "publisher": "RIVM",
+   "doc_type": "annual_report",
+   "note": "RIVM's 2026 coverage report, the operator's own annual report, confirms Praeventis is still the national vaccination register.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "Praeventis",
+    "reason": "The national immunisation programme's vaccination coverage has been determined since 2005 from the national registration system Praeventis, which is linked to the BRP."
+   }
+  },
+  {
+   "claim": "record:NL:statistics_microdata:register",
+   "question": "Statistical microdata: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://wetten.overheid.nl/BWBR0015926",
+   "quote": "kan de directeur-generaal op verzoek, ten behoeve van statistisch of wetenschappelijk onderzoek, een verzameling van gegevens met betrekking tot het gebruik waarvan passende maatregelen zijn genomen om herkenning van afzonderlijke personen, huishoudens, ondernemingen of instellingen te voorkomen, verstrekken",
+   "quote_english": "the director-general may, on request and for statistical or scientific research, provide a collection of data for whose use appropriate measures have been taken to prevent identification of individual persons, households, enterprises or institutions",
+   "value": "verzameling van gegevens voor statistisch of wetenschappelijk onderzoek (data collection for statistical or scientific research, i.e. CBS microdata)",
+   "published": "2025-09-01",
+   "title": "Wet op het Centraal bureau voor de statistiek",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "The statutory basis for CBS microdata access for authorised researchers; consolidated text in force from 01-09-2025.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "",
+    "reason": "Article 41 of the CBS Act only allows the director-general to provide de-identified datasets for research; it names no register or system."
+   }
+  },
+  {
+   "claim": "record:NL:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.rdw.nl/over-rdw/organisatie/kerntaken",
+   "quote": "Registratieautoriteit: informatie verstrekken op het gebied van voertuigen aan belanghebbenden en registreren van voertuiggegevens en rijbewijzen;",
+   "quote_english": "Registration authority: providing vehicle information to interested parties and registering vehicle data and driving licences;",
+   "value": "RDW (as Registratieautoriteit / registration authority)",
+   "published": "",
+   "title": "Kerntaken",
+   "publisher": "RDW",
+   "doc_type": "official_page",
+   "note": "The operator's own site confirms RDW registers vehicle and driving-licence data.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "RDW",
+    "reason": "On the RDW's own core-tasks page, the quote lists acting as the registration authority for vehicle data and driving licences as an RDW task (the quote itself does not repeat the name RDW)."
+   }
+  },
+  {
+   "claim": "record:NL:issuance_history:register",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://www.rvig.nl/basisregister-reisdocumenten",
+   "quote": "Het nieuwe Basisregister Reisdocumenten (BR) bevat informatie over Nederlandse reisdocumenten die in aanvraag zijn, uitgereikt en geldig zijn, (van rechtswege) vervallen en daarmee ongeldig zijn en die definitief onttrokken zijn. De Rijksdienst voor Identiteitsgegevens beheert het BR.",
+   "quote_english": "The new Basic Register of Travel Documents (BR) holds information on Dutch travel documents that are applied for, issued and valid, expired (by law) and thus invalid, or permanently withdrawn. The National Office for Identity Data manages the BR.",
+   "value": "Basisregister Reisdocumenten (BR) (Basic Register of Travel Documents)",
+   "published": "",
+   "title": "Basisregister Reisdocumenten",
+   "publisher": "Rijksdienst voor Identiteitsgegevens (RvIG)",
+   "doc_type": "official_page",
+   "note": "The page adds that the new BR has been complete since 1 October 2023; its statutory basis is Paspoortwet § 3 (art. 4c).",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "Basisregister Reisdocumenten (BR), operated by the Rijksdienst voor Identiteitsgegevens (RvIG)",
+    "reason": "The quote names the register holding issuance and revocation status of Dutch travel documents and says RvIG manages it."
+   }
+  },
+  {
+   "claim": "record:NL:issuance_history:operator",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://www.rvig.nl/basisregister-reisdocumenten",
+   "quote": "Het nieuwe Basisregister Reisdocumenten (BR) bevat informatie over Nederlandse reisdocumenten die in aanvraag zijn, uitgereikt en geldig zijn, (van rechtswege) vervallen en daarmee ongeldig zijn en die definitief onttrokken zijn. De Rijksdienst voor Identiteitsgegevens beheert het BR.",
+   "quote_english": "The new Basic Register of Travel Documents (BR) holds information on Dutch travel documents ... The National Office for Identity Data manages the BR.",
+   "value": "Rijksdienst voor Identiteitsgegevens (National Office for Identity Data, RvIG)",
+   "published": "",
+   "title": "Basisregister Reisdocumenten",
+   "publisher": "Rijksdienst voor Identiteitsgegevens (RvIG)",
+   "doc_type": "official_page",
+   "note": "RvIG is an agency of the Ministry of BZK.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "Basisregister Reisdocumenten (BR), operated by the Rijksdienst voor Identiteitsgegevens (RvIG)",
+    "reason": "Same quote as item 15: it names the travel-document register and its manager, RvIG."
+   }
+  },
+  {
+   "claim": "record:NL:authentication_audit_log:register",
+   "question": "Authentication audit log: Records of who authenticated to which public service and when",
+   "relation": "fills_gap",
+   "url": "https://www.digid.nl/over-digid/privacy",
+   "quote": "Als gebruiker van DigiD kunt u uw gebruikersnaam, telefoonnummer, e-mailadres en gebruiksgeschiedenis inzien door in te loggen op Mijn DigiD op de website van DigiD.",
+   "quote_english": "As a DigiD user you can view your username, phone number, email address and usage history by logging in to My DigiD on the DigiD website.",
+   "value": "DigiD gebruiksgeschiedenis (DigiD usage history)",
+   "published": "",
+   "title": "Privacy – DigiD",
+   "publisher": "DigiD / Logius (Ministerie van BZK)",
+   "doc_type": "official_page",
+   "note": "The same page lists retention periods of 6 weeks to 5 years, set by art. 11 of the Besluit digitale overheid.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "DigiD usage history (gebruiksgeschiedenis), viewable in Mijn DigiD",
+    "reason": "It shows DigiD keeps a usage history that users can see, but the quote does not say who operates it or give its detail."
+   }
+  },
+  {
+   "claim": "record:NL:authentication_audit_log:foreign_dependency",
+   "question": "Authentication audit log: Records of who authenticated to which public service and when",
+   "relation": "fills_gap",
+   "url": "https://www.digid.nl/over-digid/privacy",
+   "quote": "Persoonsgegevens worden opgeslagen op ICT-faciliteiten die zich bevinden op Nederlands grondgebied en die worden beheerd door Logius. Uw persoonsgegevens worden niet doorgegeven aan landen buiten de EU.",
+   "quote_english": "Personal data are stored on ICT facilities located on Dutch territory and managed by Logius. Your personal data are not transferred to countries outside the EU.",
+   "value": "national",
+   "published": "",
+   "title": "Privacy – DigiD",
+   "publisher": "DigiD / Logius (Ministerie van BZK)",
+   "doc_type": "official_page",
+   "note": "This covers the DigiD usage and account data, including the usage history.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "national (stored on facilities on Dutch territory managed by Logius; not transferred outside the EU)",
+    "reason": "The privacy page says DigiD personal data is stored on ICT facilities in the Netherlands managed by Logius and is not passed to non-EU countries."
+   }
+  },
+  {
+   "claim": "record:NL:authentication_audit_log:operator",
+   "question": "Authentication audit log: Records of who authenticated to which public service and when",
+   "relation": "fills_gap",
+   "url": "https://www.digid.nl/over-digid/privacy",
+   "quote": "Persoonsgegevens worden opgeslagen op ICT-faciliteiten die zich bevinden op Nederlands grondgebied en die worden beheerd door Logius. Uw persoonsgegevens worden niet doorgegeven aan landen buiten de EU.",
+   "quote_english": "Personal data are stored on ICT facilities located on Dutch territory and managed by Logius. Your personal data are not transferred to countries outside the EU.",
+   "value": "Logius",
+   "published": "",
+   "title": "Privacy – DigiD",
+   "publisher": "DigiD / Logius (Ministerie van BZK)",
+   "doc_type": "official_page",
+   "note": "Logius manages the facilities that hold the DigiD usage data.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "national (stored on facilities on Dutch territory managed by Logius; not transferred outside the EU)",
+    "reason": "Same quote as item 18: storage is on Dutch territory, managed by Logius."
+   }
+  },
+  {
+   "claim": "record:NL:electoral_roll:register",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0004627",
+   "quote": "Burgemeester en wethouders registreren de kiesgerechtigdheid van de ingezetenen van de gemeente.",
+   "quote_english": "The mayor and aldermen register the voting eligibility of the municipality's residents.",
+   "value": "registratie van de kiesgerechtigdheid (municipal registration of voting eligibility)",
+   "published": "2026-01-01",
+   "title": "Kieswet",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "Kieswet art. D 1: there is no central electoral roll; each municipality registers eligibility of its residents.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Municipal executive (burgemeester en wethouders) of each municipality",
+    "reason": "The Kieswet says each municipality's mayor and aldermen register their residents' voting eligibility."
+   }
+  },
+  {
+   "claim": "record:NL:electoral_roll:operator",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0004627",
+   "quote": "Burgemeester en wethouders registreren de kiesgerechtigdheid van de ingezetenen van de gemeente.",
+   "quote_english": "The mayor and aldermen register the voting eligibility of the municipality's residents.",
+   "value": "Burgemeester en wethouders (municipal executives)",
+   "published": "2026-01-01",
+   "title": "Kieswet",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "The operator is decentralised across municipalities (Kieswet art. D 1).",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "Municipal executive (burgemeester en wethouders) of each municipality",
+    "reason": "Same quote as item 20: voting eligibility is registered by each municipality."
+   }
+  },
+  {
+   "claim": "record:NL:residence_permits:register",
+   "question": "Residence and migration status: Residence permits, asylum status and foreign-national registrations",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0011823",
+   "quote": "Er is een vreemdelingenadministratie, die wordt beheerd door Onze Minister.",
+   "quote_english": "There is an aliens administration, which is managed by Our Minister.",
+   "value": "vreemdelingenadministratie (aliens administration)",
+   "published": "2026-09-01",
+   "title": "Vreemdelingenwet 2000",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "Vreemdelingenwet 2000 (art. 107): the register holds facial images, fingerprints and other personal data of foreign nationals and is managed by the responsible Minister (Asylum and Migration).",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Vreemdelingenadministratie, managed by the Minister",
+    "reason": "The Vreemdelingenwet 2000 sets up a foreign-nationals administration managed by 'Onze Minister'; the quote does not name which ministry."
+   }
+  },
+  {
+   "claim": "record:NL:benefits_pensions:register",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0013060",
+   "quote": "Het Uitvoeringsinstituut werknemersverzekeringen draagt zorg voor de inrichting en adequate werking van de polisadministratie.",
+   "quote_english": "The Employee Insurance Agency is responsible for setting up and properly running the policy administration.",
+   "value": "polisadministratie (policy administration of employment, wages and benefits)",
+   "published": "2026-07-01",
+   "title": "Wet structuur uitvoeringsorganisatie werk en inkomen (Wet SUWI)",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "Wet SUWI art. 33: the polisadministratie records employment and benefit relationships, wages and contributions; SVB state-pension records are not covered.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Polisadministratie, operated by UWV (Uitvoeringsinstituut werknemersverzekeringen)",
+    "reason": "The statute makes UWV responsible for setting up and running the polisadministratie."
+   }
+  },
+  {
+   "claim": "record:NL:benefits_pensions:operator",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0013060",
+   "quote": "Het Uitvoeringsinstituut werknemersverzekeringen draagt zorg voor de inrichting en adequate werking van de polisadministratie.",
+   "quote_english": "The Employee Insurance Agency is responsible for setting up and properly running the policy administration.",
+   "value": "Uitvoeringsinstituut werknemersverzekeringen (UWV, Employee Insurance Agency)",
+   "published": "2026-07-01",
+   "title": "Wet SUWI",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "This is the statutory operator of the polisadministratie.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "Polisadministratie, operated by UWV (Uitvoeringsinstituut werknemersverzekeringen)",
+    "reason": "Same quote as item 23: UWV runs the polisadministratie."
+   }
+  },
+  {
+   "claim": "record:NL:beneficial_ownership:register",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://www.kvk.nl/ubo/",
+   "quote": "Het UBO-register heeft als belangrijkste doelen: fraude, misdaad en het betalen van terrorisme tegenhouden.",
+   "quote_english": "The UBO register's main aims are to stop fraud, crime and the financing of terrorism.",
+   "value": "UBO-register (Ultimate Beneficial Owner register)",
+   "published": "",
+   "title": "Ultimate Beneficial Owner (UBO)",
+   "publisher": "Kamer van Koophandel (KVK)",
+   "doc_type": "official_page",
+   "note": "KVK, the operator, keeps it as part of the Handelsregister (Handelsregisterwet 2007: 'In het handelsregister wordt opgenomen wie de uiteindelijk belanghebbende is').",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "UBO-register",
+    "reason": "The KVK page names the UBO-register and its purposes, but the quote does not say who operates it (that comes only from it being on KVK's site)."
+   }
+  },
+  {
+   "claim": "record:NL:beneficial_ownership:operator",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0021777",
+   "quote": "In het handelsregister wordt opgenomen wie de uiteindelijk belanghebbende is of de uiteindelijk belanghebbenden zijn van vennootschappen of andere juridische entiteiten",
+   "quote_english": "The trade register records who the ultimate beneficial owner or owners of companies or other legal entities are",
+   "value": "handelsregister (trade register, kept by the Kamer van Koophandel)",
+   "published": "2025-07-16",
+   "title": "Handelsregisterwet 2007",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "The statutory basis places UBO data in the trade register, which the Kamer van Koophandel (KVK) keeps; the KVK is named in the note, not the quote.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "Handelsregister (records ultimate beneficial owners)",
+    "reason": "The Handelsregisterwet says the trade register records the ultimate beneficial owners of legal entities; the quote names no operator."
+   }
+  },
+  {
+   "claim": "record:NL:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.justid.nl/onderwerpen/s/strafblad-en-het-justitieel-documentatie-systeem",
+   "quote": "De Justitiële Informatiedienst is, namens de Minister van Justitie en Veiligheid, de beheerder van de Justitiële Documentatie.",
+   "quote_english": "The Judicial Information Service is, on behalf of the Minister of Justice and Security, the manager of the Judicial Documentation.",
+   "value": "Justitiële Documentatie (Judicial Documentation, the criminal records system)",
+   "published": "",
+   "title": "Strafblad en het Justitieel Documentatie Systeem",
+   "publisher": "Justitiële Informatiedienst (Justid)",
+   "doc_type": "official_page",
+   "note": "Statutory basis: Wet justitiële en strafvorderlijke gegevens ('Onze Minister verwerkt in de justitiële documentatie justitiële gegevens'). Court case files are not covered.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Justitiële Documentatie, managed by the Justitiële Informatiedienst (Justid) on behalf of the Minister of Justice and Security",
+    "reason": "The quote names Justid as manager of the judicial documentation (criminal records)."
+   }
+  },
+  {
+   "claim": "record:NL:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.justid.nl/onderwerpen/s/strafblad-en-het-justitieel-documentatie-systeem",
+   "quote": "De Justitiële Informatiedienst is, namens de Minister van Justitie en Veiligheid, de beheerder van de Justitiële Documentatie.",
+   "quote_english": "The Judicial Information Service is, on behalf of the Minister of Justice and Security, the manager of the Judicial Documentation.",
+   "value": "Justitiële Informatiedienst (Justid, Judicial Information Service)",
+   "published": "",
+   "title": "Strafblad en het Justitieel Documentatie Systeem",
+   "publisher": "Justitiële Informatiedienst (Justid)",
+   "doc_type": "official_page",
+   "note": "Justid is an agency of the Ministry of Justice and Security.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Justitiële Documentatie, managed by the Justitiële Informatiedienst (Justid) on behalf of the Minister of Justice and Security",
+    "reason": "Same quote as item 27."
+   }
+  },
+  {
+   "claim": "record:NL:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0004287",
+   "quote": "De regering geeft het Staatsblad en de Staatscourant uit. 2 De uitgifte van het Staatsblad en de Staatscourant geschiedt elektronisch op een algemeen toegankelijke wijze. 3 De zorg voor de uitgifte van het Staatsblad berust bij Onze Minister van Justitie en Veiligheid.",
+   "quote_english": "The government publishes the Staatsblad and the Staatscourant. 2 They are published electronically in a publicly accessible way. 3 Responsibility for publishing the Staatsblad lies with Our Minister of Justice and Security.",
+   "value": "Staatsblad en Staatscourant (Bulletin of Acts and Decrees; Government Gazette)",
+   "published": "2024-01-01",
+   "title": "Bekendmakingswet",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "Bekendmakingswet art. 1; officielebekendmakingen.nl states its PDFs are the formal publications under this Act from 1 July 2009.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "Staatsblad (and Staatscourant), published electronically by the government; the Minister of Justice and Security is responsible for the Staatsblad",
+    "reason": "The statute says the government publishes the Staatsblad and Staatscourant electronically, and the Minister of Justice and Security is responsible for issuing the Staatsblad."
+   }
+  },
+  {
+   "claim": "record:NL:official_gazette:operator",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0004287",
+   "quote": "De regering geeft het Staatsblad en de Staatscourant uit. 2 De uitgifte van het Staatsblad en de Staatscourant geschiedt elektronisch op een algemeen toegankelijke wijze. 3 De zorg voor de uitgifte van het Staatsblad berust bij Onze Minister van Justitie en Veiligheid.",
+   "quote_english": "The government publishes the Staatsblad and the Staatscourant ... Responsibility for publishing the Staatsblad lies with Our Minister of Justice and Security.",
+   "value": "Minister van Justitie en Veiligheid (Minister of Justice and Security, for the Staatsblad)",
+   "published": "2024-01-01",
+   "title": "Bekendmakingswet",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "The Staatscourant falls under the Minister of BZK (art. 1(4)); KOOP runs the platform.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "Staatsblad (and Staatscourant), published electronically by the government; the Minister of Justice and Security is responsible for the Staatsblad",
+    "reason": "Same quote as item 29."
+   }
+  },
+  {
+   "claim": "record:NL:government_payroll:register",
+   "question": "Government payroll and personnel: Civil service and armed forces payroll and personnel records",
+   "relation": "fills_gap",
+   "url": "https://zoek.officielebekendmakingen.nl/blg-1249197.pdf",
+   "quote": "Dit geldt met name voor cijfers rondom personeel die afkomstig zijn uit het registratiesysteem P-Direkt.",
+   "quote_english": "This applies in particular to personnel figures that come from the P-Direkt registration system.",
+   "value": "registratiesysteem P-Direkt (P-Direkt HR/payroll registration system)",
+   "published": "2026-05-26",
+   "title": "Jaarrapportage Bedrijfsvoering Rijk 2025",
+   "publisher": "Ministerie van BZK",
+   "doc_type": "annual_report",
+   "note": "P-Direkt is the central-government personnel and payroll service within the Ministry of BZK (O&P Rijk); armed-forces payroll is not covered.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "P-Direkt",
+    "reason": "The report names P-Direkt as the registration system that personnel figures for central government come from; it says nothing about armed forces payroll or who operates it."
+   }
+  },
+  {
+   "claim": "record:NL:electoral_management:register",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://zoek.officielebekendmakingen.nl/blg-1261396.pdf",
+   "quote": "De Kiesraad heeft voor deze verkiezing aan alle deelnemende gemeenten uitslagprogrammatuur, OSV2020-U of Abacus, uitgeleverd.",
+   "quote_english": "For this election the Electoral Council supplied results software, OSV2020-U or Abacus, to all participating municipalities.",
+   "value": "uitslagprogrammatuur OSV2020-U or Abacus (results-tabulation software)",
+   "published": "2026-07-06",
+   "title": "Evaluatieadvies Kiesraad – gemeenteraadsverkiezingen 2026",
+   "publisher": "Kiesraad",
+   "doc_type": "official_page",
+   "note": "Abacus is the planned in-house successor to OSV2020-U (Ondersteunende Software Verkiezingen 2020 Uitslagen).",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "OSV2020-U or Abacus results software, supplied by the Kiesraad",
+    "reason": "The evaluation says the Kiesraad supplied results software (OSV2020-U or Abacus) to all participating municipalities, and in context the Kiesraad holds the managing role for that software."
+   }
+  },
+  {
+   "claim": "record:NL:electoral_management:operator",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://zoek.officielebekendmakingen.nl/blg-1261396.pdf",
+   "quote": "De Kiesraad heeft voor deze verkiezing aan alle deelnemende gemeenten uitslagprogrammatuur, OSV2020-U of Abacus, uitgeleverd.",
+   "quote_english": "For this election the Electoral Council supplied results software, OSV2020-U or Abacus, to all participating municipalities.",
+   "value": "Kiesraad (Electoral Council)",
+   "published": "2026-07-06",
+   "title": "Evaluatieadvies Kiesraad – gemeenteraadsverkiezingen 2026",
+   "publisher": "Kiesraad",
+   "doc_type": "official_page",
+   "note": "The Kieswet also tasks the Kiesraad with providing the software used at elections.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "OSV2020-U or Abacus results software, supplied by the Kiesraad",
+    "reason": "Same quote as item 32."
+   }
+  },
+  {
+   "claim": "record:NL:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0031788",
+   "quote": "Een meldkamer is de fysieke plaats waar de meldkamerfunctie, bedoeld in artikel 25b, eerste lid , wordt uitgevoerd. De politie heeft meldkamers. Er zijn tien meldkamers.",
+   "quote_english": "A control room is the physical place where the control-room function is carried out. The police have control rooms. There are ten control rooms.",
+   "value": "meldkamers (emergency dispatch control rooms)",
+   "published": "2026-06-12",
+   "title": "Politiewet 2012",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "Politiewet 2012 art. 25a; C2000 and the 112 platform are not named here.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "10 meldkamers (emergency control rooms), held by the police",
+    "reason": "Article 25a of the Police Act says the police has control rooms and that there are ten; it says nothing about 112 technology or the TETRA network."
+   }
+  },
+  {
+   "claim": "record:NL:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0031788",
+   "quote": "Een meldkamer is de fysieke plaats waar de meldkamerfunctie, bedoeld in artikel 25b, eerste lid , wordt uitgevoerd. De politie heeft meldkamers. Er zijn tien meldkamers.",
+   "quote_english": "A control room is the physical place where the control-room function is carried out. The police have control rooms. There are ten control rooms.",
+   "value": "politie (national police)",
+   "published": "2026-06-12",
+   "title": "Politiewet 2012",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "The police hold the control rooms by statute.",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "10 meldkamers (emergency control rooms), held by the police",
+    "reason": "Same quote as item 34."
+   }
+  },
+  {
+   "claim": "record:NL:emergency_communications:count",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0031788",
+   "quote": "Een meldkamer is de fysieke plaats waar de meldkamerfunctie, bedoeld in artikel 25b, eerste lid , wordt uitgevoerd. De politie heeft meldkamers. Er zijn tien meldkamers.",
+   "quote_english": "A control room is the physical place where the control-room function is carried out. The police have control rooms. There are ten control rooms.",
+   "value": "tien meldkamers (ten control rooms)",
+   "published": "2026-06-12",
+   "title": "Politiewet 2012",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "The statutory count of emergency control rooms.",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "10 meldkamers (emergency control rooms), held by the police",
+    "reason": "Same quote as item 34."
+   }
+  },
+  {
+   "claim": "record:NL:crisis_management:register",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://www.nl-alert.nl/",
+   "quote": "NL-Alert waarschuwt en informeert je over noodsituaties. In een NL-Alert staat wat er aan de hand is, wat je moet doen en waar je meer informatie kunt vinden.",
+   "quote_english": "NL-Alert warns and informs you about emergencies. An NL-Alert says what is happening, what you must do and where you can find more information.",
+   "value": "NL-Alert (national public warning system)",
+   "published": "",
+   "title": "NL-Alert",
+   "publisher": "Rijksoverheid (NL-Alert / NCTV)",
+   "doc_type": "official_page",
+   "note": "This is the official alerting system; the page links to NCTV and the safety regions but does not name the operator in text.",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "NL-Alert",
+    "reason": "The quote names the NL-Alert warning system and what it does, but not who operates it."
+   }
+  },
+  {
+   "claim": "record:NL:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0042012",
+   "quote": "Er is een register onderwijsdeelnemers, waarin basisgegevens, vrijstellingsgegevens, verzuimgegevens, diplomagegevens en persoonsgebonden nummers van onderwijsdeelnemers zijn opgenomen. 2 Onze Minister draagt zorg voor het beheer van het register onderwijsdeelnemers.",
+   "quote_english": "There is a register of education participants containing basic data, exemption data, absence data, diploma data and personal numbers of education participants. 2 Our Minister manages the register of education participants.",
+   "value": "register onderwijsdeelnemers (register of education participants)",
+   "published": "2026-08-01",
+   "title": "Wet register onderwijsdeelnemers",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "Art. 4; in practice DUO runs it for the Minister of OCW (not stated in this quote).",
+   "review": {
+    "id": 38,
+    "quote_found": true,
+    "established": "Register onderwijsdeelnemers, managed by the Minister",
+    "reason": "The statute sets up a register of students holding base, attendance and diploma data, managed by 'Onze Minister'; the ministry is not named in the quote."
+   }
+  },
+  {
+   "claim": "record:NL:education:operator",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://wetten.overheid.nl/BWBR0042012",
+   "quote": "Er is een register onderwijsdeelnemers, waarin basisgegevens, vrijstellingsgegevens, verzuimgegevens, diplomagegevens en persoonsgebonden nummers van onderwijsdeelnemers zijn opgenomen. 2 Onze Minister draagt zorg voor het beheer van het register onderwijsdeelnemers.",
+   "quote_english": "... Our Minister manages the register of education participants.",
+   "value": "Onze Minister (Minister of Education, Culture and Science)",
+   "published": "2026-08-01",
+   "title": "Wet register onderwijsdeelnemers",
+   "publisher": "wetten.overheid.nl (KOOP)",
+   "doc_type": "legislation",
+   "note": "The statutory manager is the Minister of OCW; DUO is the executing agency.",
+   "review": {
+    "id": 39,
+    "quote_found": true,
+    "established": "Register onderwijsdeelnemers, managed by the Minister",
+    "reason": "Same quote as item 38."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:NL:health_records:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:health_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:NL:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:NL:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:digital_identity_credentials:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:digital_identity_credentials:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:trust_services_pki:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:trust_services_pki:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:NL:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:NL:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:NL:L2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:NL:L3",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:fingerprint_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:public_health_surveillance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:statistics_microdata:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:vehicle_licensing:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:breeder_documents:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:authentication_audit_log:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:tax:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:health_insurance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:police_records:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:border_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:firearms_register:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:public_finance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:government_payroll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:central_bank:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:grid_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:water_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:NL:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:NL:L1",
+   "status": "no_better_found"
+  }
+ ]
+}

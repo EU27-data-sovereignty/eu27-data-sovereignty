@@ -69,7 +69,7 @@ class Renderer:
 
     def span(self, s: dict) -> str:
         role, text = s.get("role"), esc(s["t"])
-        if role == "gap":
+        if role in ("gap", "disputed"):
             return f"#gap[{text}]"
         if role == "fact":
             notes = []
@@ -115,6 +115,15 @@ class Renderer:
         return "\n".join(out)
 
     # -- appendix -----------------------------------------------------------
+
+    def methodology(self, level: int = 1) -> str:
+        """The generated methodology appendix (model/methodology.py), before the sources."""
+        doc = self.b["methodology"]
+        out = [f"{'=' * level} Appendix: methodology", ""]
+        for s in doc["sections"]:
+            out += [f"{'=' * (level + 1)} {esc(s['title'])}", ""]
+            out += [self.block(b) for b in s["blocks"]]
+        return "\n".join(out)
 
     def appendix(self, heading: str = "= Sources") -> str:
         cited_by: dict[str, list[tuple[str, dict]]] = {}
@@ -269,6 +278,22 @@ def ranking(b: dict, r: "Renderer") -> str:
     return "\n".join(out)
 
 
+def build_stamp() -> str:
+    """The git commit and bundle hash this PDF is built from (#84). Not in the committed bundle, which
+    cannot hold its own commit; stamped here, when the PDF is built. A dirty tree says so."""
+    import hashlib  # noqa: PLC0415
+    try:
+        commit = subprocess.run(["git", "rev-parse", "--short=12", "HEAD"], cwd=ROOT, capture_output=True,
+                                text=True, check=True).stdout.strip()
+        dirty = subprocess.run(["git", "status", "--porcelain"], cwd=ROOT, capture_output=True,
+                               text=True, check=True).stdout.strip()
+        commit += " with uncommitted changes" if dirty else ""
+    except (OSError, subprocess.CalledProcessError):
+        commit = "unknown (built outside git)"
+    digest = hashlib.sha256(BUNDLE.read_bytes()).hexdigest()[:16] if BUNDLE.exists() else "unknown"
+    return f"Built from commit {commit}; data bundle sha256 {digest}."
+
+
 def report_typ(b: dict) -> str:
     r = Renderer(b)
     docs = sorted(b["documents"].values(), key=lambda d: d["name"])
@@ -281,7 +306,7 @@ def report_typ(b: dict) -> str:
         f"  title: {string(TITLE)},",
         f"  subtitle: {string(SUBTITLE)},",
         f"  generated: {string(b['generated'])},",
-        f"  provenance: {string('Independent research. Machine-checked, not human-verified. Generated ' + b['generated'])},",
+        f"  provenance: {string('Independent research. Machine-checked, not human-verified. Generated ' + b['generated'] + '. ' + build_stamp())},",
         ")",
         "",
         "#outline(title: [Contents], depth: 1)",
@@ -289,6 +314,7 @@ def report_typ(b: dict) -> str:
         front_matter(b),
         rank,
         *body,
+        r.methodology(),
         r.appendix(),
     ])
 
@@ -304,7 +330,7 @@ def country_typ(b: dict, iso: str) -> str:
         f"  title: {string(d['name'])},",
         f"  subtitle: {string('Critical data holdings and sovereign hosting, analysed on ' + d['name'] + chr(39) + 's own fundamentals')},",
         f"  generated: {string(b['generated'])},",
-        f"  provenance: {string(d['name'] + '. Machine-checked, not human-verified. Generated ' + b['generated'])},",
+        f"  provenance: {string(d['name'] + '. Machine-checked, not human-verified. Generated ' + b['generated'] + '. ' + build_stamp())},",
         "  kicker: \"EU-27 · Country report\",",
         ")",
         "",
@@ -314,6 +340,7 @@ def country_typ(b: dict, iso: str) -> str:
         f"{esc(b['notice']['withheld'])}]",
         "",
         chapter,
+        r.methodology(),
         r.appendix(),
     ])
 

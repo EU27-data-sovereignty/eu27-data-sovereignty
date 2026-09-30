@@ -1,0 +1,1052 @@
+{
+ "iso": "ES",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:ES:L1",
+   "question": "Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? yes = A statute or binding regulation requires it for government data generally; partial = Required only for classified data or only for named sectors; no = A source states there is no such requirement",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10566",
+   "quote": "almacenamiento, procesamiento y gestión del censo electoral, los padrones municipales de habitantes y otros registros de población, datos fiscales relacionados con tributos propios o cedidos y datos de los usuarios del sistema nacional de salud, así como los correspondientes tratamientos de datos personales, deberán ubicarse y prestarse dentro del territorio de la Unión Europea.",
+   "quote_english": "storage, processing and management of the electoral roll, municipal population registers and other population registers, tax data relating to own or ceded taxes and data on users of the national health system, as well as the corresponding personal data processing, must be located and provided within the territory of the European Union.",
+   "value": "partial",
+   "published": "2019",
+   "title": "Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público (consolidated), artículo 46 bis",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "Art. 46 bis (added by Real Decreto-ley 14/2019) requires EU-territory location only for named data sectors (electoral roll, population registers, tax data, health-system user data), so partial rather than yes.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "partial",
+    "reason": "Art. 46 bis Ley 40/2015 requires EU-territory location only for named categories (electoral census, municipal population registers, tax data, national health system user data), not for government data generally."
+   }
+  },
+  {
+   "claim": "indicator:ES:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corroborates",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-131",
+   "quote": "NubeSARA es un servicio que proporciona recursos de computación y almacenamiento en modo cloud para la Administración General del Estado, y sus Organismos Públicos, mediante la configuración de nodos de consolidación tanto en centros de procesos de datos de la Administración (nube privada) como de proveedores externos (nube pública).",
+   "quote_english": "NubeSARA is a service that provides computing and storage resources in cloud mode for the General State Administration and its Public Bodies, by configuring consolidation nodes both in the Administration's data processing centres (private cloud) and at external providers (public cloud).",
+   "value": "Yes",
+   "published": "2025-01-03",
+   "title": "Resolución de 26 de diciembre de 2024 - Convenio para la prestación de la solución de Nube Híbrida NubeSARA",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado (Ministerio de la Presidencia, Justicia y Relaciones con las Cortes)",
+   "doc_type": "official_page",
+   "note": "An independent, newer gazette text names the operating government hybrid cloud NubeSARA, provided by the SGAD; note that it mixes Administration data centres with external public-cloud providers.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The 2025 convenio annex describes NubeSARA as a working cloud service for the AGE provided by the SGAD, under which the signing bodies use it, so it is operating and not just announced; note it combines Administration data centres with external public-cloud providers."
+   }
+  },
+  {
+   "claim": "indicator:ES:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-131",
+   "quote": "NubeSARA es un servicio que proporciona recursos de computación y almacenamiento en modo cloud para la Administración General del Estado, y sus Organismos Públicos, mediante la configuración de nodos de consolidación tanto en centros de procesos de datos de la Administración (nube privada) como de proveedores externos (nube pública).",
+   "quote_english": "NubeSARA is a service that provides computing and storage resources in cloud mode for the General State Administration and its Public Bodies, by configuring consolidation nodes both in the Administration's data processing centres (private cloud) and at external providers (public cloud).",
+   "value": "Yes",
+   "published": "2025-01-03",
+   "title": "Resolución de 26 de diciembre de 2024 - Convenio para la prestación de la solución de Nube Híbrida NubeSARA",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado (Ministerio de la Presidencia, Justicia y Relaciones con las Cortes)",
+   "doc_type": "official_page",
+   "note": "The 2025 agreement refers to the Administration's own data processing centres (centros de procesos de datos de la Administración) that host the private-cloud nodes.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote names 'centros de procesos de datos de la Administración (nube privada)' as NubeSARA nodes, meaning the state runs its own data centres that are in use."
+   }
+  },
+  {
+   "claim": "indicator:ES:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.dnielectronico.es/PortalDNIe/PRF1_Cons02.action?pag=REF_001&id_menu=0",
+   "quote": "expedido por la Dirección General de la Policía (Ministerio del Interior), es el documento que acredita la identidad de los españoles",
+   "quote_english": "issued by the Directorate-General of Police (Ministry of the Interior), is the document that certifies the identity of Spaniards",
+   "value": "Yes",
+   "published": "",
+   "title": "DNI electrónico - Ciudadanos",
+   "publisher": "Dirección General de la Policía",
+   "doc_type": "official_page",
+   "note": "The operator's own DNIe portal confirms that a state body, the Dirección General de la Policía, issues the national (electronic) identity document.",
+   "review": {
+    "id": 3,
+    "quote_found": false,
+    "established": "",
+    "reason": "The fetched DNIe page (raw HTML and WebFetch) has no sentence with 'expedido por la Dirección General de la Policía'; the only related text is the footer 'Ministerio del Interior. Dirección General de la Policía.'"
+   }
+  },
+  {
+   "claim": "record:ES:health_insurance:register",
+   "question": "Statutory health insurance: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.sanidad.gob.es/areas/saludDigital/tarjetaSanitariaSNS/home.htm",
+   "quote": "El Sistema Nacional de Salud cuenta con una Base de datos de Población Protegida del Sistema Nacional de Salud (BDPP-SNS) coordinada por el Ministerio de Sanidad, con la que trabajan todas las CCAA",
+   "quote_english": "The National Health System has a Protected Population Database of the National Health System (BDPP-SNS) coordinated by the Ministry of Health, with which all the Autonomous Communities work",
+   "value": "Base de datos de Población Protegida del Sistema Nacional de Salud (BDPP-SNS) (Protected Population Database of the National Health System)",
+   "published": "",
+   "title": "Tarjeta Sanitaria Individual",
+   "publisher": "Ministerio de Sanidad",
+   "doc_type": "official_page",
+   "note": "The Ministry's own page gives the database's official name and acronym, which the statute only describes.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Base de datos de Población Protegida del Sistema Nacional de Salud (BDPP-SNS)",
+    "reason": "The quote names the SNS protected-population database directly."
+   }
+  },
+  {
+   "claim": "record:ES:health_insurance:operator",
+   "question": "Statutory health insurance: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.sanidad.gob.es/areas/saludDigital/tarjetaSanitariaSNS/home.htm",
+   "quote": "El Ministerio de Sanidad tiene atribuida la responsabilidad de articular el intercambio de información entre CCAA y la interoperabilidad entre todas las tarjetas sanitarias del SNS, lo que hace a través del Código de identificación personal del Sistema Nacional de Salud (CIP-SNS)",
+   "quote_english": "The Ministry of Health is responsible for organising the exchange of information between Autonomous Communities and the interoperability of all SNS health cards, which it does through the National Health System personal identification code (CIP-SNS)",
+   "value": "Ministerio de Sanidad (Ministry of Health)",
+   "published": "",
+   "title": "Tarjeta Sanitaria Individual",
+   "publisher": "Ministerio de Sanidad",
+   "doc_type": "official_page",
+   "note": "The operator's own page confirms the Ministry of Health's role; each region keeps its own card database (BDTSI-CA).",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Ministerio de Sanidad",
+    "reason": "The quote says the Ministerio de Sanidad handles information exchange and interoperability of SNS health cards through CIP-SNS (the neighbouring sentence says it coordinates BDPP-SNS)."
+   }
+  },
+  {
+   "claim": "record:ES:judicial_criminal:register",
+   "question": "Judicial & criminal justice: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.administraciondejusticia.gob.es/-/soluciones-siraj-2",
+   "quote": "SIRAJ2 es un sistema informático que permite la gestión de los seis Registros Administrativos de Apoyo a la Actividad judicial: Registro Central de Penados Registro Central de Medidas Cautelares, Requisitorias y Sentencias No Firmes",
+   "quote_english": "SIRAJ2 is an IT system that manages the six Administrative Registers Supporting Judicial Activity: Central Register of Convicted Persons, Central Register of Precautionary Measures, Warrants and Non-Final Judgments",
+   "value": "SIRAJ2 (IT system managing the administrative registers supporting judicial activity)",
+   "published": "",
+   "title": "SIRAJ 2 - Catálogo de Servicios y Soluciones",
+   "publisher": "Servicio Público de Justicia (Ministerio de la Presidencia, Justicia y Relaciones con las Cortes)",
+   "doc_type": "official_page",
+   "note": "The Justice portal names the current system (SIRAJ2) that runs the registers listed in RD 95/2009.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "SIRAJ2 (Registro Central de Penados; Registro Central de Medidas Cautelares, Requisitorias y Sentencias No Firmes)",
+    "reason": "The quote names SIRAJ2 as the system that manages the central criminal-record registers."
+   }
+  },
+  {
+   "claim": "record:ES:tax:operator",
+   "question": "Tax: the body that operates it",
+   "relation": "supersedes",
+   "url": "https://sede.agenciatributaria.gob.es/Sede/gobierno-abierto/transparencia/organigrama/departamento-informatica-tributaria.html",
+   "quote": "Corresponden al Departamento de Informática Tributaria las funciones del artículo 8 de la Orden PRE/3581/2007",
+   "quote_english": "The Tax IT Department is assigned the functions of article 8 of Order PRE/3581/2007",
+   "value": "Departamento de Informática Tributaria (Tax IT Department) of the AEAT",
+   "published": "",
+   "title": "Organigrama - Departamento de Informática Tributaria",
+   "publisher": "Agencia Estatal de Administración Tributaria",
+   "doc_type": "official_page",
+   "note": "The department's functions now rest on Orden PRE/3581/2007 and on the Resolución of 13 January 2021 (BOE-A-2021-710), not on the 1994 text; the organigram still lists a Subdirección General de Explotación.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Departamento de Informática Tributaria (Agencia Estatal de Administración Tributaria)",
+    "reason": "On the AEAT org-chart page, the quote gives this AEAT department its functions under Orden PRE/3581/2007; the quote itself does not describe those functions, so this is a weak basis for 'operator'."
+   }
+  },
+  {
+   "claim": "record:ES:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://sede.dgt.gob.es/es/permisos-de-conducir/informe-de-conductor/",
+   "quote": "Este informe muestra los datos que, en el día de la solicitud, están vigentes en el registro de conductores e infractores de la Jefatura Central de Tráfico.",
+   "quote_english": "This report shows the data that, on the day of the request, are in force in the register of drivers and offenders of the Central Traffic Headquarters.",
+   "value": "Jefatura Central de Tráfico (Central Traffic Headquarters)",
+   "published": "",
+   "title": "Sede Electrónica DGT - Informe y certificado de conductor",
+   "publisher": "Dirección General de Tráfico",
+   "doc_type": "official_page",
+   "note": "The operator's own e-office independently confirms that the Jefatura Central de Tráfico keeps the drivers and offenders register.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Jefatura Central de Tráfico",
+    "reason": "The quote says the register of drivers and offenders belongs to the Jefatura Central de Tráfico."
+   }
+  },
+  {
+   "claim": "record:ES:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-8382",
+   "quote": "cotejo con fichero automatizado ADDNIFIL, del que se obtendrán las impresiones dactilares y fotografía de personas desaparecidas o halladas",
+   "quote_english": "matching against the automated file ADDNIFIL, from which the fingerprints and photograph of missing or found persons will be obtained",
+   "value": "ADDNIFIL (automated DNI file holding fingerprints and photographs)",
+   "published": "2011-05-13",
+   "title": "Orden INT/1202/2011, de 4 de mayo, por la que se regulan los ficheros de datos de carácter personal del Ministerio del Interior",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "Names the actual file (ADDNIFIL, DNI management) that holds the fingerprints, whereas the printed value only refers generically to 'registros biométricos'.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "ADDNIFIL",
+    "reason": "The quote says fingerprints (and photographs) are taken from the automated file ADDNIFIL."
+   }
+  },
+  {
+   "claim": "record:ES:facial_biometric:register",
+   "question": "Facial biometric: Facial images captured for identity documents",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-8382",
+   "quote": "cotejo con fichero automatizado ADDNIFIL, del que se obtendrán las impresiones dactilares y fotografía de personas desaparecidas o halladas",
+   "quote_english": "matching against the automated file ADDNIFIL, from which the fingerprints and photograph of missing or found persons will be obtained",
+   "value": "ADDNIFIL (automated DNI file holding photographs and fingerprints)",
+   "published": "2011-05-13",
+   "title": "Orden INT/1202/2011, de 4 de mayo, por la que se regulan los ficheros de datos de carácter personal del Ministerio del Interior",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "The ADDNIFIL file entry in the same Order lists the photograph and the digitised facial images from the DNI chip among its data.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "ADDNIFIL",
+    "reason": "The quote says photographs can be taken from ADDNIFIL, but only in the missing-persons context; it does not itself say the images come from identity-document capture."
+   }
+  },
+  {
+   "claim": "record:ES:issuance_history:register",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-8382",
+   "quote": "Identificación del fichero: ADDNIFIL. a.2) Finalidad: Gestión del documento nacional de identidad. a.3) Usos previstos: Identificación de los ciudadanos españoles.",
+   "quote_english": "File identification: ADDNIFIL. a.2) Purpose: Management of the national identity document. a.3) Intended uses: Identification of Spanish citizens.",
+   "value": "ADDNIFIL (national identity document management file)",
+   "published": "2011-05-13",
+   "title": "Orden INT/1202/2011, de 4 de mayo, por la que se regulan los ficheros de datos de carácter personal del Ministerio del Interior",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "Covers DNI issuance; passport issuance lists are sent to the Dirección General de la Policía under RD 896/2003.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "ADDNIFIL",
+    "reason": "The quote names ADDNIFIL as the file for managing the DNI (national ID card); it does not cover passports or say anything about revocation state."
+   }
+  },
+  {
+   "claim": "record:ES:issuance_history:operator",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-13978",
+   "quote": "Por el Ministerio de Asuntos Exteriores se comunicará al Ministerio del Interior (Dirección General de la Policía), con una periodicidad máxima de dos meses, por el procedimiento informático y telemático que se fije por ambos departamentos, las relaciones de pasaportes expedidos por las distintas representaciones diplomáticas y consulares.",
+   "quote_english": "The Ministry of Foreign Affairs shall send the Ministry of the Interior (Directorate-General of Police), at most every two months, by the IT and telematic procedure set by both departments, the lists of passports issued by the various diplomatic and consular missions.",
+   "value": "Dirección General de la Policía (Directorate-General of Police), Ministerio del Interior",
+   "published": "2003-07-12",
+   "title": "Real Decreto 896/2003, de 11 de julio, por el que se regula la expedición del pasaporte ordinario",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "The Police directorate issues passports in Spain and centrally receives the issuance lists from consulates abroad.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "Ministerio del Interior (Dirección General de la Policía)",
+    "reason": "The quote says lists of passports issued by consulates are sent to the Interior Ministry's DGP, which suggests the DGP holds passport issuance records; it names no register."
+   }
+  },
+  {
+   "claim": "record:ES:police_records:register",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-8382",
+   "quote": "Identificación del fichero: PERPOL. a.2) Finalidad: Gestión de antecedentes de las personas de interés policial",
+   "quote_english": "File identification: PERPOL. a.2) Purpose: Management of records of persons of police interest",
+   "value": "PERPOL (records of persons of police interest)",
+   "published": "2011-05-13",
+   "title": "Orden INT/1202/2011, de 4 de mayo, por la que se regulan los ficheros de datos de carácter personal del Ministerio del Interior",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "The same Order also lists the 'Sistema de registro de investigaciones' for coordinating investigations between security forces.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "PERPOL",
+    "reason": "The quote names the PERPOL file, which manages records of persons of police interest."
+   }
+  },
+  {
+   "claim": "record:ES:police_records:operator",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1995-16259",
+   "quote": "se crea y se describe en el anexo de esta Orden el fichero automatizado «Base de Datos de Señalamientos Nacionales (BSDN)», a cargo del Gabinete de Coordinación de la Secretaría de Estado de Interior",
+   "quote_english": "the automated file 'National Alerts Database (BSDN)' is created and described in the annex to this Order, under the Coordination Cabinet of the Secretariat of State for the Interior",
+   "value": "Gabinete de Coordinación de la Secretaría de Estado de Interior (Coordination Cabinet of the Secretariat of State for the Interior), for the Base de Datos de Señalamientos Nacionales",
+   "published": "1995-07-05",
+   "title": "Orden de 28 de junio de 1995 por la que se crea el fichero automatizado Base de Datos de Señalamientos Nacionales (BDSN)",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "The BDSN holds wanted persons, persons sought for extradition and missing persons; the Secretariat is now the Secretaría de Estado de Seguridad.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "Base de Datos de Señalamientos Nacionales (BDSN); operated by Gabinete de Coordinación de la Secretaría de Estado de Interior",
+    "reason": "The quote creates the BDSN file and places it under the Gabinete de Coordinación of the Secretaría de Estado de Interior."
+   }
+  },
+  {
+   "claim": "record:ES:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-8382",
+   "quote": "Identificación del fichero: N.SIS II/SIRENE II. a.2) Finalidad: Preservar el orden y la seguridad públicos, incluida la seguridad del Estado",
+   "quote_english": "File identification: N.SIS II/SIRENE II. a.2) Purpose: To preserve public order and security, including State security",
+   "value": "N.SIS II/SIRENE II (national part of the Schengen Information System)",
+   "published": "2011-05-13",
+   "title": "Orden INT/1202/2011, de 4 de mayo, por la que se regulan los ficheros de datos de carácter personal del Ministerio del Interior",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "Its stated use is 'Gestionar la parte española del Sistema de Información de Schengen'. VIS and EES are not covered here.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "N.SIS II/SIRENE II",
+    "reason": "The quote names the N.SIS II/SIRENE II file (the text around it says it manages the Spanish part of SIS II); it names no operator."
+   }
+  },
+  {
+   "claim": "record:ES:electoral_roll:register",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672",
+   "quote": "La Oficina del Censo Electoral, encuadrada en el instituto nacional de estadística, es el órgano encargado de la formación del censo electoral y ejerce sus competencias bajo la dirección y la supervisión de la Junta Electoral Central.",
+   "quote_english": "The Electoral Census Office, part of the National Statistics Institute, is the body responsible for compiling the electoral roll and exercises its powers under the direction and supervision of the Central Electoral Board.",
+   "value": "censo electoral (electoral roll)",
+   "published": "",
+   "title": "Ley Orgánica 5/1985, de 19 de junio, del Régimen Electoral General (consolidated), artículo veintinueve",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "LOREG also states that the roll is single for all elections and is updated monthly.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "Censo electoral; Oficina del Censo Electoral (within Instituto Nacional de Estadística)",
+    "reason": "The quote says the Oficina del Censo Electoral, part of the INE, compiles the electoral census under the Junta Electoral Central."
+   }
+  },
+  {
+   "claim": "record:ES:electoral_roll:operator",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672",
+   "quote": "La Oficina del Censo Electoral, encuadrada en el instituto nacional de estadística, es el órgano encargado de la formación del censo electoral y ejerce sus competencias bajo la dirección y la supervisión de la Junta Electoral Central.",
+   "quote_english": "The Electoral Census Office, part of the National Statistics Institute, is the body responsible for compiling the electoral roll and exercises its powers under the direction and supervision of the Central Electoral Board.",
+   "value": "Oficina del Censo Electoral (Electoral Census Office), within the instituto nacional de estadística",
+   "published": "",
+   "title": "Ley Orgánica 5/1985, de 19 de junio, del Régimen Electoral General (consolidated), artículo veintinueve",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "This is the statutory operator of the electoral roll.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "Oficina del Censo Electoral (Instituto Nacional de Estadística)",
+    "reason": "Same quote: the OCE within the INE is the body that compiles the electoral roll."
+   }
+  },
+  {
+   "claim": "record:ES:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-4163",
+   "quote": "El Catastro Inmobiliario es un registro administrativo dependiente del Ministerio de Hacienda en el que se describen los bienes inmuebles rústicos, urbanos y de características especiales tal y como se definen en esta ley.",
+   "quote_english": "The Real Estate Cadastre is an administrative register under the Ministry of Finance in which rural, urban and special-characteristics real estate is described as defined in this law.",
+   "value": "Catastro Inmobiliario (Real Estate Cadastre)",
+   "published": "2004-03-08",
+   "title": "Real Decreto Legislativo 1/2004, texto refundido de la Ley del Catastro Inmobiliario (consolidated)",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "This covers cadastral parcels; title and mortgages are in the separate Registro de la Propiedad (Ley Hipotecaria, art. 1).",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "Catastro Inmobiliario; under Ministerio de Hacienda",
+    "reason": "The quote defines the Catastro Inmobiliario as an administrative register that depends on the Ministerio de Hacienda."
+   }
+  },
+  {
+   "claim": "record:ES:land_property:operator",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-4163",
+   "quote": "El Catastro Inmobiliario es un registro administrativo dependiente del Ministerio de Hacienda en el que se describen los bienes inmuebles rústicos, urbanos y de características especiales tal y como se definen en esta ley.",
+   "quote_english": "The Real Estate Cadastre is an administrative register under the Ministry of Finance in which rural, urban and special-characteristics real estate is described as defined in this law.",
+   "value": "Ministerio de Hacienda (Ministry of Finance)",
+   "published": "2004-03-08",
+   "title": "Real Decreto Legislativo 1/2004, texto refundido de la Ley del Catastro Inmobiliario (consolidated)",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "The Ministry of Finance operates the cadastre, while registrars run the Registro de la Propiedad.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Ministerio de Hacienda (Catastro Inmobiliario)",
+    "reason": "Same quote: the cadastre is a register under the Ministerio de Hacienda."
+   }
+  },
+  {
+   "claim": "record:ES:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1946-2453",
+   "quote": "El Registro de la Propiedad tiene por objeto la inscripción o anotación de los actos y contratos relativos al dominio y demás derechos reales sobre bienes inmuebles.",
+   "quote_english": "The Property Registry's purpose is the registration or annotation of acts and contracts relating to ownership and other rights in rem over real estate.",
+   "value": "Registro de la Propiedad (Property Registry)",
+   "published": "",
+   "title": "Decreto de 8 de febrero de 1946, Ley Hipotecaria (consolidated), artículo 1",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "This is the title and mortgage register, which complements the Catastro.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Registro de la Propiedad",
+    "reason": "The quote names the Registro de la Propiedad and its purpose (recording title and rights in rem over real estate) but not who runs it."
+   }
+  },
+  {
+   "claim": "record:ES:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1996-17533",
+   "quote": "La organización del Registro Mercantil, integrada por los Registros Mercantiles territoriales y por el Registro Mercantil Central, se halla bajo la dependencia del Ministerio de Justicia.",
+   "quote_english": "The organisation of the Commercial Registry, made up of the territorial Commercial Registries and the Central Commercial Registry, is under the Ministry of Justice.",
+   "value": "Registro Mercantil (Commercial Registry), with the Registro Mercantil Central",
+   "published": "",
+   "title": "Real Decreto 1784/1996, Reglamento del Registro Mercantil (consolidated), artículo 1",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "This is the statutory name of the business register.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "Registro Mercantil (territorial registers and Registro Mercantil Central); under Ministerio de Justicia",
+    "reason": "The quote names the Registro Mercantil structure and places it under the Ministerio de Justicia."
+   }
+  },
+  {
+   "claim": "record:ES:business_registry:operator",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1996-17533",
+   "quote": "La organización del Registro Mercantil, integrada por los Registros Mercantiles territoriales y por el Registro Mercantil Central, se halla bajo la dependencia del Ministerio de Justicia.",
+   "quote_english": "The organisation of the Commercial Registry, made up of the territorial Commercial Registries and the Central Commercial Registry, is under the Ministry of Justice.",
+   "value": "Ministerio de Justicia (Ministry of Justice)",
+   "published": "",
+   "title": "Real Decreto 1784/1996, Reglamento del Registro Mercantil (consolidated), artículo 1",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "In practice the registries are staffed by registrars (registradores) under the Ministry.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Ministerio de Justicia",
+    "reason": "Same quote: the Registro Mercantil depends on the Ministerio de Justicia."
+   }
+  },
+  {
+   "claim": "record:ES:firearms_register:register",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1993-6202",
+   "quote": "En el Registro Nacional de Armas de la Intervención Central de Armas y Explosivos de la Dirección General de la Guardia Civil constarán todos los datos necesarios para cumplir con la finalidad de expedir las licencias, autorizaciones, permisos, tarjetas y guías de las armas que lo requieran.",
+   "quote_english": "The National Firearms Register of the Central Arms and Explosives Office of the Directorate-General of the Guardia Civil shall contain all the data needed to issue the licences, authorisations, permits, cards and guides for weapons that require them.",
+   "value": "Registro Nacional de Armas (National Firearms Register)",
+   "published": "2020-08-05",
+   "title": "Real Decreto 137/1993, de 29 de enero, Reglamento de Armas (consolidated), artículo 9",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "According to the consolidated text, the last update was published on 05/08/2020.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Registro Nacional de Armas; Intervención Central de Armas y Explosivos, Dirección General de la Guardia Civil",
+    "reason": "The quote names the national firearms register and places it within the Guardia Civil's ICAE."
+   }
+  },
+  {
+   "claim": "record:ES:firearms_register:operator",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1993-6202",
+   "quote": "En el Registro Nacional de Armas de la Intervención Central de Armas y Explosivos de la Dirección General de la Guardia Civil constarán todos los datos necesarios para cumplir con la finalidad de expedir las licencias, autorizaciones, permisos, tarjetas y guías de las armas que lo requieran.",
+   "quote_english": "The National Firearms Register of the Central Arms and Explosives Office of the Directorate-General of the Guardia Civil shall contain all the data needed to issue the licences, authorisations, permits, cards and guides for weapons that require them.",
+   "value": "Intervención Central de Armas y Explosivos de la Dirección General de la Guardia Civil (Central Arms and Explosives Office, Guardia Civil)",
+   "published": "2020-08-05",
+   "title": "Real Decreto 137/1993, de 29 de enero, Reglamento de Armas (consolidated), artículo 9",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "The Guardia Civil operates the register.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "Intervención Central de Armas y Explosivos (Dirección General de la Guardia Civil)",
+    "reason": "Same quote: the Registro Nacional de Armas belongs to the Guardia Civil's ICAE."
+   }
+  },
+  {
+   "claim": "record:ES:benefits_pensions:register",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+   "quote": "Corresponde al Instituto Nacional de la Seguridad Social la gestión y funcionamiento del Registro de Prestaciones Sociales Públicas, constituido en la Seguridad Social, con arreglo a las prescripciones establecidas legal y reglamentariamente.",
+   "quote_english": "The National Social Security Institute is responsible for managing and running the Register of Public Social Benefits, established within Social Security, in accordance with the legal and regulatory provisions.",
+   "value": "Registro de Prestaciones Sociales Públicas (Register of Public Social Benefits)",
+   "published": "",
+   "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (consolidated)",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "Contributions are collected by the Tesorería General de la Seguridad Social, the 'caja única' of the system.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "Registro de Prestaciones Sociales Públicas; Instituto Nacional de la Seguridad Social",
+    "reason": "The quote gives the INSS management and operation of the Registro de Prestaciones Sociales Públicas."
+   }
+  },
+  {
+   "claim": "record:ES:benefits_pensions:operator",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724",
+   "quote": "Corresponde al Instituto Nacional de la Seguridad Social la gestión y funcionamiento del Registro de Prestaciones Sociales Públicas, constituido en la Seguridad Social, con arreglo a las prescripciones establecidas legal y reglamentariamente.",
+   "quote_english": "The National Social Security Institute is responsible for managing and running the Register of Public Social Benefits, established within Social Security, in accordance with the legal and regulatory provisions.",
+   "value": "Instituto Nacional de la Seguridad Social (National Social Security Institute)",
+   "published": "",
+   "title": "Real Decreto Legislativo 8/2015, texto refundido de la Ley General de la Seguridad Social (consolidated)",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "The INSS manages the economic benefits of the system.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "Instituto Nacional de la Seguridad Social",
+    "reason": "Same quote: the INSS manages and operates the public social-benefits register."
+   }
+  },
+  {
+   "claim": "record:ES:public_finance:operator",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-21614",
+   "quote": "Intervención General de la Administración del Estado es el centro gestor de la contabilidad pública, al que compete: a) Gestionar la contabilidad de la Administración General del Estado.",
+   "quote_english": "The General Comptroller of the State Administration is the managing centre of public accounting, responsible for: a) Managing the accounts of the General State Administration.",
+   "value": "Intervención General de la Administración del Estado (IGAE, General Comptroller of the State Administration)",
+   "published": "",
+   "title": "Ley 47/2003, de 26 de noviembre, General Presupuestaria (consolidated)",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "Names the operator of state accounting; I did not find a quotable name for the accounting system itself.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Intervención General de la Administración del Estado (IGAE)",
+    "reason": "The quote names the IGAE as the body that manages central-government accounting; it names no system."
+   }
+  },
+  {
+   "claim": "record:ES:central_bank:register",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://clientebancario.bde.es/pcb/es/blog/La_Central_de_I_122c89639bbb061.html",
+   "quote": "La Central de Información de Riesgos es un servicio público que gestiona los riesgos que las entidades tienen con sus clientes. Las entidades deben facilitar al Banco de España, información relevante de cada uno de estos riesgos así como la identificación del cliente.",
+   "quote_english": "The Central Credit Register is a public service that manages the risks that institutions have with their customers. Institutions must provide the Banco de España with relevant information on each of these risks as well as the customer's identity.",
+   "value": "Central de Información de Riesgos (Central Credit Register), Banco de España",
+   "published": "2018-01-03",
+   "title": "La Central de Información de Riesgos",
+   "publisher": "Banco de España (Portal del Cliente Bancario)",
+   "doc_type": "official_page",
+   "note": "This is a central-bank holding of personal credit data; payment infrastructure and reserves systems are not covered.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Central de Información de Riesgos (CIR); Banco de España",
+    "reason": "The quote says banks report risk information to the Banco de España's CIR, but the CIR is a credit register, not central-bank accounts, payment infrastructure or reserves, so it only loosely fits the question."
+   }
+  },
+  {
+   "claim": "record:ES:intelligence:operator",
+   "question": "Intelligence services: Intelligence holdings and case files",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-8628",
+   "quote": "El Centro Nacional de Inteligencia es el Organismo público responsable de facilitar al Presidente del Gobierno y al Gobierno de la Nación las informaciones, análisis, estudios o propuestas",
+   "quote_english": "The National Intelligence Centre is the public body responsible for providing the Prime Minister and the Government with information, analyses, studies or proposals",
+   "value": "Centro Nacional de Inteligencia (National Intelligence Centre)",
+   "published": "",
+   "title": "Ley 11/2002, de 6 de mayo, reguladora del Centro Nacional de Inteligencia (consolidated)",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "Establishes the operator only; no named holding system is public.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "Centro Nacional de Inteligencia",
+    "reason": "The quote names the CNI as the intelligence body; it names no system or data holding."
+   }
+  },
+  {
+   "claim": "record:ES:crisis_management:register",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-7730",
+   "quote": "Se crea la Red de Alerta Nacional de Protección Civil como sistema de comunicación de avisos de emergencia a las autoridades competentes en materia de protección civil",
+   "quote_english": "The National Civil Protection Alert Network is created as a system for communicating emergency warnings to the competent civil protection authorities",
+   "value": "Red de Alerta Nacional de Protección Civil (National Civil Protection Alert Network)",
+   "published": "",
+   "title": "Ley 17/2015, de 9 de julio, del Sistema Nacional de Protección Civil (consolidated)",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "This is the statutory national alerting system.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "Red de Alerta Nacional de Protección Civil",
+    "reason": "The quote creates the national civil-protection alert network; its operator (Ministerio del Interior via CENEM) is in the next paragraph, not in the quote."
+   }
+  },
+  {
+   "claim": "record:ES:grid_control:register",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.ree.es/es/publicaciones/educacion/centro-de-control-electrico-cecoel",
+   "quote": "El Cecoel es el responsable de la supervisión del sistema eléctrico en tiempo real, de la programación de la cobertura de la demanda, de la gestión de los desvíos de generación-demanda en tiempo real y del seguimiento de los trabajos en la red de transporte.",
+   "quote_english": "Cecoel is responsible for real-time supervision of the electricity system, scheduling demand coverage, managing generation-demand deviations in real time and monitoring work on the transmission grid.",
+   "value": "Cecoel (Centro de Control Eléctrico, Electricity Control Centre)",
+   "published": "2008-10-21",
+   "title": "Centro de control eléctrico (Cecoel)",
+   "publisher": "Red Eléctrica de España",
+   "doc_type": "official_page",
+   "note": "The TSO's own page; the page title gives the full name 'Centro de control eléctrico'.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "Cecoel (Centro de Control Eléctrico)",
+    "reason": "The quote names Cecoel as the real-time grid supervision centre but does not say who runs it (the page is REE's)."
+   }
+  },
+  {
+   "claim": "record:ES:grid_control:operator",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-13645",
+   "quote": "Red Eléctrica de España, S.A., actuará como transportista único desarrollando la actividad en régimen de exclusividad en los términos establecidos en la presente ley.",
+   "quote_english": "Red Eléctrica de España, S.A. shall act as sole transmission operator, carrying out the activity exclusively under the terms of this law.",
+   "value": "Red Eléctrica de España, S.A. (sole transmission operator)",
+   "published": "",
+   "title": "Ley 24/2013, de 26 de diciembre, del Sector Eléctrico (consolidated)",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "The same law also makes it responsible for system operation, with separate accounts for peninsular and non-peninsular system operation.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "Red Eléctrica de España, S.A.",
+    "reason": "The quote makes REE the sole transmission operator; it does not mention control or SCADA systems."
+   }
+  },
+  {
+   "claim": "record:ES:water_control:register",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://www.miteco.gob.es/es/agua/temas/evaluacion-de-los-recursos-hidricos/saih.html",
+   "quote": "Los Sistemas Automáticos de Información Hidrológica (SAIH) constituyen una potente herramienta para las Confederaciones Hidrográficas (CCHH), tanto para la gestión de recursos hídricos como para la previsión y control de avenidas",
+   "quote_english": "The Automatic Hydrological Information Systems (SAIH) are a powerful tool for the River Basin Authorities, both for managing water resources and for forecasting and controlling floods",
+   "value": "Sistemas Automáticos de Información Hidrológica (SAIH) (Automatic Hydrological Information Systems), used by the Confederaciones Hidrográficas",
+   "published": "",
+   "title": "Sistemas SAIH",
+   "publisher": "Ministerio para la Transición Ecológica y el Reto Demográfico",
+   "doc_type": "official_page",
+   "note": "The real-time flood and water control systems are run per basin by the state river basin authorities.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "Sistemas Automáticos de Información Hidrológica (SAIH); used by the Confederaciones Hidrográficas",
+    "reason": "The quote names SAIH as a tool of the river-basin authorities for flood forecasting and control."
+   }
+  },
+  {
+   "claim": "record:ES:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.ciencia.gob.es/Universidades/ConsultaTitulos.html",
+   "quote": "¿Qué es el Registro Nacional de Titulados Universitarios Oficiales (RNTUO)? Es el registro donde las universidades inscriben los datos de los titulados universitarios y donde quedan grabados los títulos universitarios que haya obtenido cada persona.",
+   "quote_english": "What is the National Register of Official University Graduates (RNTUO)? It is the register in which universities record graduates' data and where the university degrees each person has obtained are recorded.",
+   "value": "Registro Nacional de Titulados Universitarios Oficiales (RNTUO) (National Register of Official University Graduates)",
+   "published": "",
+   "title": "Consulta al Registro Nacional de Titulados Universitarios Oficiales",
+   "publisher": "Ministerio de Ciencia, Innovación y Universidades",
+   "doc_type": "official_page",
+   "note": "Covers university degrees only; school records are kept by the regions.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "Registro Nacional de Titulados Universitarios Oficiales (RNTUO)",
+    "reason": "The quote names the national register of official university graduates; it names no operator."
+   }
+  },
+  {
+   "claim": "record:ES:education:operator",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-12621",
+   "quote": "se crea en el Ministerio de Educación el Registro Nacional de Titulados Universitarios Oficiales en el que se inscribirán los títulos universitarios oficiales con carácter previo a su expedición",
+   "quote_english": "the National Register of Official University Graduates is created in the Ministry of Education, in which official university degrees shall be registered before they are issued",
+   "value": "Ministerio de Educación (Ministry of Education; the register now sits with the universities ministry)",
+   "published": "",
+   "title": "Real Decreto 1002/2010, de 5 de agosto, sobre expedición de títulos universitarios oficiales (consolidated)",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "The register was created in the Ministry of Education; the current consultation service is hosted by the Ministerio de Ciencia, Innovación y Universidades.",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "Registro Nacional de Titulados Universitarios Oficiales; in Ministerio de Educación",
+    "reason": "The quote creates the RNTUO within the Ministerio de Educación."
+   }
+  },
+  {
+   "claim": "record:ES:electoral_management:register",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2024-11865",
+   "quote": "Servicios de escrutinio provisional de los resultados electorales y su difusión, así como desarrollo de otras actividades necesarias como son el apoyo informático a las Juntas Electorales, la implantación de los puntos de consulta periféricos, la integración de los resultados definitivos en la base de datos de los resultados electorales del Ministerio del Interior",
+   "quote_english": "Services for the provisional count of election results and their dissemination, and other necessary activities such as IT support to the Electoral Boards, setting up peripheral consultation points, and integrating the final results into the Ministry of the Interior's election results database",
+   "value": "base de datos de los resultados electorales del Ministerio del Interior (Ministry of the Interior election results database)",
+   "published": "2024-03-27",
+   "title": "Anuncio de formalización de contratos: Dirección General de Política Interior, Expediente EPE/11/2024",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "procurement",
+   "note": "The contracting authority is the Dirección General de Política Interior.",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "Base de datos de resultados electorales del Ministerio del Interior",
+    "reason": "The contract notice names the Interior Ministry's electoral results database and a contracted provisional-count service."
+   }
+  },
+  {
+   "claim": "record:ES:electoral_management:operator",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2024-11865",
+   "quote": "Adjudicatarios: 12.1) Nombre: Indra Soluciones Tecnologías de la Información, S.L.U.",
+   "quote_english": "Awardees: 12.1) Name: Indra Soluciones Tecnologías de la Información, S.L.U.",
+   "value": "Indra Soluciones Tecnologías de la Información, S.L.U. (contractor for the provisional-count service)",
+   "published": "2024-03-27",
+   "title": "Anuncio de formalización de contratos: Dirección General de Política Interior, Expediente EPE/11/2024",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "procurement",
+   "note": "A private Spanish contractor runs the provisional count for the Dirección General de Política Interior (contract awarded 29 February 2024, EUR 9,000,000).",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "Indra Soluciones Tecnologías de la Información, S.L.U. (contractor)",
+    "reason": "The award notice names Indra as the contractor for the provisional count and results services, which makes it the contracted service provider, not the owner of the system."
+   }
+  },
+  {
+   "claim": "record:ES:customs:register",
+   "question": "Customs declarations: Import and export declarations and duty assessments",
+   "relation": "fills_gap",
+   "url": "https://sede.agenciatributaria.gob.es/Sede/aduanas/entrada-salida-mercancias/declaracion-aduana/formas-presentacion.html",
+   "quote": "Es posible conocer la situación en que se encuentra una declaración aduanera enviada de forma telemática, siempre que se haya recibido en el sistema de información de la Aduana.",
+   "quote_english": "It is possible to check the status of a customs declaration sent electronically, provided it has been received in the Customs information system.",
+   "value": "sistema de información de la Aduana (Customs information system)",
+   "published": "2026-09-01",
+   "title": "Declaración en Aduana - Formas de presentación",
+   "publisher": "Agencia Estatal de Administración Tributaria",
+   "doc_type": "official_page",
+   "note": "The same page says the AEAT's Departamento de Informática Tributaria built the e-customs services, so AEAT is the operator.",
+   "review": {
+    "id": 38,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote only mentions a generic 'sistema de información de la Aduana'; it gives no system name or operator for customs declarations."
+   }
+  },
+  {
+   "claim": "record:ES:digital_identity_credentials:register",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-14215",
+   "quote": "Cl@ve es un sistema de Identificación, Autenticación y Firma Electrónica común para todo el Sector Público Administrativo Estatal, basado en el uso de claves concertadas",
+   "quote_english": "Cl@ve is an identification, authentication and electronic signature system common to the whole State administrative public sector, based on the use of agreed keys",
+   "value": "Cl@ve (common identification, authentication and e-signature system)",
+   "published": "2015-12-17",
+   "title": "Resolución de 14 de diciembre de 2015, prescripciones técnicas del sistema Cl@ve",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "Cl@ve is the government login scheme, used alongside the DNIe.",
+   "review": {
+    "id": 39,
+    "quote_found": true,
+    "established": "Cl@ve",
+    "reason": "The quote names Cl@ve as the shared identification, authentication and e-signature system for the state public sector."
+   }
+  },
+  {
+   "claim": "record:ES:trust_services_pki:register",
+   "question": "State PKI and qualified trust services: Root and issuing certificate authorities for government, qualified signatures and seals",
+   "relation": "fills_gap",
+   "url": "https://www.sede.fnmt.gob.es/descargas/certificados-raiz-de-la-fnmt",
+   "quote": "A continuación puedes descargar los Certificados Raíz que provee la Fábrica Nacional de Moneda y Timbre - Real Casa de la Moneda, así como sus huellas digitales: AC Raíz FNMT-RCM",
+   "quote_english": "Below you can download the Root Certificates provided by the Fábrica Nacional de Moneda y Timbre - Real Casa de la Moneda, together with their fingerprints: AC Raíz FNMT-RCM",
+   "value": "AC Raíz FNMT-RCM (FNMT-RCM root certification authority)",
+   "published": "",
+   "title": "Certificados raíz de la FNMT",
+   "publisher": "Fábrica Nacional de Moneda y Timbre - Real Casa de la Moneda",
+   "doc_type": "official_page",
+   "note": "The page also lists the subordinate CAs, including AC FNMT Usuarios, AC Representación and AC Componentes Informáticos.",
+   "review": {
+    "id": 40,
+    "quote_found": true,
+    "established": "AC Raíz FNMT-RCM; Fábrica Nacional de Moneda y Timbre - Real Casa de la Moneda",
+    "reason": "The quote names the FNMT-RCM root CA, provided by the FNMT-RCM."
+   }
+  },
+  {
+   "claim": "record:ES:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: Root and issuing certificate authorities for government, qualified signatures and seals",
+   "relation": "fills_gap",
+   "url": "https://www.fnmt.es/institucion/informacion-institucional",
+   "quote": "La Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda es una entidad pública empresarial (EPE) y medio propio (MP) de la Administración General del Estado",
+   "quote_english": "The Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda is a public business entity (EPE) and in-house provider (MP) of the General State Administration",
+   "value": "Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda (state public business entity)",
+   "published": "2025-11-11",
+   "title": "Información institucional",
+   "publisher": "Fábrica Nacional de Moneda y Timbre - Real Casa de la Moneda",
+   "doc_type": "official_page",
+   "note": "Together with the root-certificate page, this shows that the government root CA is operated by a state-owned entity, which is relevant to indicator K1.",
+   "review": {
+    "id": 41,
+    "quote_found": true,
+    "established": "Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda (state public business entity)",
+    "reason": "The quote says FNMT-RCM is a public business entity and in-house provider of the AGE; it does not itself mention PKI."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:ES:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:ES:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:ES:K1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:ES:K2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:ES:L2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:ES:breeder_documents:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:ES:civil_registry:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:ES:civil_registry:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:ES:emergency_communications:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:ES:emergency_communications:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:ES:fingerprint_biometric:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:ES:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:geospatial:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:ES:government_payroll:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:ES:health_insurance:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:judicial_criminal:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:ES:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:official_gazette:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:ES:official_gazette:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:ES:statistics_microdata:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:ES:statistics_microdata:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:ES:tax:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:tax:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:ES:vehicle_licensing:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:vehicle_licensing:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:ES:facial_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:authentication_audit_log:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:ES:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:ES:intelligence:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:grid_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:water_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:ES:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:ES:L1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:ES:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

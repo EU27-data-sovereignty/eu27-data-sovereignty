@@ -56,7 +56,7 @@ class Markdown:
 
     def span(self, s: dict) -> str:
         role, text = s.get("role"), s["t"]
-        if role == "gap":
+        if role in ("gap", "disputed"):
             return f"*{text}*"
         if role == "fact":
             marks = []
@@ -126,7 +126,10 @@ class Markdown:
             grades = [sp.get("g") for s in doc["sections"] for sp in self.walk(s) if sp.get("role") == "fact"]
             out += ["", f"**Evidence grades:** {grades.count('Strong')} Strong, {grades.count('Standard')} "
                     f"Standard. {self.b['notice']['grade_rule']} The checks behind each fact are listed in "
-                    "the country PDF and on the web page.", ""]
+                    "the country PDF and on the web page.", "",
+                    "**Methodology:** how every fact was sourced and every figure calculated is the appendix "
+                    "of the country PDF, and the web page /methodology; both are generated from the code "
+                    "that produced this brief.", ""]
         return "\n".join(out)
 
 

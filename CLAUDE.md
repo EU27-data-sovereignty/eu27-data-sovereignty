@@ -26,6 +26,7 @@ are recorded: `tests/test_docs.py` enforces it.
 ```
 ./test.sh                              # the full gate; run before every commit
 ./test.sh --no-e2e                     # without Playwright
+./test.sh --no-pdf                     # without compiling the PDFs (otherwise missing typst fails)
 ./run.sh                               # dev server, http://localhost:5173
 ./run.sh data                          # regenerate briefs, bundle and /ask corpus (pins the epoch)
 ./run.sh artefacts                     # re-render the 27 tracked posters (needs Chrome)
@@ -38,6 +39,13 @@ python3 model/sovereignty.py [ISO]     # ranking placements, range and confidenc
 python3 model/research.py verify [--iso XX]   # fetch, hash, quote-check staged research (slow, polite)
 python3 model/research.py admit        # write verified + reviewed claims into the registers
 python3 model/research.py report       # verification outcomes per state
+./run.sh admit [--check]               # research then vetting admission; --check: registers reproduce (#84)
+./run.sh recheck                       # re-fetch every source behind a printed fact; resumable (#83)
+./run.sh retry                         # not-found quotes: served page in its charset, then rendered; admit
+./run.sh eurostat check|adopt COL=PERIOD   # Eurostat vintages; pins are data (model/eurostat_pins.csv)
+./run.sh vet prepare|stage|hosts|verify|admit|report|manifest   # vetting run; the agent step is /vet
+./run.sh reproduce [--evidence]        # rebuild everything from a fresh clone of HEAD and compare (#84)
+python3 model/evidence_report.py       # docs/evidence.md, charts of grades and tiers (run by ./run.sh data)
 python3 model/provenance.py            # source register coverage per namespace
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
 
@@ -71,6 +79,15 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
 - **Coverage floors are a ratchet.** `tests/test_provenance.py` `FLOORS` and
   `tests/test_national_data.py` `NATIONAL_DATA_FLOOR` must be **raised** when coverage grows. Lowering
   one needs a recorded reason (see the comment on `record`).
+- **No fact without its evidence, as printed** (#82). A value renders only if a citation with a recorded
+  quote check backs it *and* every number and date in the printed text is in the original-language quote
+  (`evidence.value_in_quote`). Every output carries `evidence.DISCLAIMER`; never write prose claiming a
+  check that did not run (`tests/test_evidence.py`).
+- **Source tiers live in `model/sources/authorities.csv`** (#83). A new cited host must be classified there
+  or the build fails. Unofficial statute mirrors are T4, never T1.
+- **Changelog in the same commit.** A change a reader can see, or to how evidence is produced, adds its
+  entry to `CHANGELOG.md` (newest first, citing its decision) in the same commit; a new stage adds a row to
+  the README's Changelog table.
 - **Never admit unreviewed labels.** Categorical values (foreign dependency, indicator values) need an
   agreeing verdict in `model/research/dependency_review/` or the indicator `review` block (#79). Seven of the
   eight "Dependent" placements in the first, unreviewed ranking did not survive review.

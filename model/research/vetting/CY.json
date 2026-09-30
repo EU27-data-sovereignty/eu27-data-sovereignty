@@ -1,0 +1,944 @@
+{
+ "iso": "CY",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:CY:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "supersedes",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "From 1 July 2021, the Unified Data Centre (UDC) holds together the IT systems of the MLSI and the IT Systems of the newly established Deputy Ministry of Social Welfare (DMSW).",
+   "quote_english": "",
+   "value": "yes: the Unified Data Centre (UDC) holds the IT systems of the MLSI and the DMSW",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The 2025 edition replaces the 2024 supporting document, whose URL now returns 404. The same edition says the G-Cloud will run across two local government data centres.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The Unified Data Centre holds the IT systems of two ministries, and the context shows systems migrated into it in 2021-2022 and a disaster-recovery site added in 2024, so it is a government-run data centre in operation."
+   }
+  },
+  {
+   "claim": "indicator:CY:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "supersedes",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "Cyprus aims to establish a unified Government Cloud environment (G-Cloud) to provide cloud computing capabilities for the public sector by hosting governmental systems and services.",
+   "quote_english": "",
+   "value": "no: the government cloud (G-Cloud) is still an aim, not an operating platform",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The same section says the project is still in procurement, with contract sign-off expected in Q1 2026 and the first phase due by end 2026, so the printed 'Partly' looks too strong for a platform 'in operation'.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "no",
+    "reason": "The quote says Cyprus 'aims to establish' G-Cloud, and the context says the project is still in procurement, so it is not in operation."
+   }
+  },
+  {
+   "claim": "indicator:CY:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "supersedes",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "issued in February 2019 to JCC Payment Systems Ltd the first authorisation as qualified trust service provider. This qualified provider offers, in the Cyprus market, qualified electronic signatures and qualified electronic stamps",
+   "quote_english": "",
+   "value": "partial: qualified trust services come from JCC Payment Systems Ltd, a provider authorised by the state",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The state (the Department of Electronic Communications) supervises and keeps the trusted list; the QTSP itself is a company. The document does not state JCC's ownership, so a reviewer should confirm 'partial' against 'no'.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names JCC Payment Systems Ltd as the qualified trust service provider but does not say whether it is state-owned or state-controlled, so the indicator cannot be decided."
+   }
+  },
+  {
+   "claim": "indicator:CY:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "supersedes",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "Moreover, in March 2022 the Department of Electronic Communications issued to JCC Payment Systems Ltd (qualified trust services provider) an authorisation to provide eID to Cypriot citizens.",
+   "quote_english": "",
+   "value": "partial: eID is issued by JCC Payment Systems Ltd under state authorisation",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "Newer edition of the source. It also says CY Login is the government identity management system and that in January 2025 the state bought 100.000 eIDs from the national eID provider.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says JCC Payment Systems Ltd was authorised to provide eID, but it does not state that JCC is owned or controlled by the state, so the indicator is undetermined."
+   }
+  },
+  {
+   "claim": "record:CY:central_bank:register",
+   "question": "Central bank systems: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.centralbank.cy/en/financial-market-infrastructures-payments/financial-market-infrastructures-instruments/target-services",
+   "quote": "The participants of the Cyprus component of T2, the T2-CY, are credit institutions operating in Cyprus, the Cyprus Stock Exchange",
+   "quote_english": "",
+   "value": "T2-CY, the Cyprus component of T2",
+   "published": "2026",
+   "title": "TARGET Services",
+   "publisher": "Central Bank of Cyprus",
+   "doc_type": "official_page",
+   "note": "The operator's own web page, independent of the annual report. It cites TARGET-CY directives up to K.D.P. 267/2026.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "T2-CY",
+    "reason": "The quote names T2-CY, the Cyprus component of T2, and lists its participants."
+   }
+  },
+  {
+   "claim": "record:CY:customs:register",
+   "question": "Customs declarations: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.mof.gov.cy/mof/ce/theseas/theseas.nsf/introduction_en/introduction_en",
+   "quote": "the ongoing implementation of the ΄THESEAS΄ computerisation project (Cyprus Customs computerised Systems). ΄Theseas΄ automates the processing of customs import declarations",
+   "quote_english": "",
+   "value": "THESEAS (Cyprus Customs computerised Systems)",
+   "published": "",
+   "title": "THESEAS - General Information",
+   "publisher": "Customs and Excise Department, Ministry of Finance",
+   "doc_type": "official_page",
+   "note": "The Customs Department's own THESEAS site, a different page from the printed source.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "THESEAS",
+    "reason": "The quote names THESEAS (Cyprus Customs computerised Systems) as the system that automates processing of customs import declarations."
+   }
+  },
+  {
+   "claim": "record:CY:customs:register",
+   "question": "Customs declarations: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://www.mof.gov.cy/mof/customs/customs.nsf/all/4D181814A5082109C2258B87002D583C?opendocument=",
+   "quote": "Μέσα στα πλαίσια του συστήματος AIS ενσωματώθηκε και η λειτουργία του Ευρωπαϊκού Συστήματος Ενιαίας Τελωνειακής Θυρίδας αλλά και το Σύστημα Κεντρικού Τελωνισμού. Πλεονεκτήματα/Ωφέλη: 1) Πέραν της αντικατάστασης κι αναβάθμισης του υφιστάμενου Συστήματος Εισαγωγών και του Συστήματος Δηλωτικών Εισαγωγής που λειτουργούν από το 2003",
+   "quote_english": "The EU Single Window and Centralised Clearance were also integrated into the AIS system. Benefits: 1) Besides replacing and upgrading the existing Import System and Import Manifest System, which have operated since 2003",
+   "value": "AIS (Automated Import System), replacing the Import System and Import Manifest System in operation since 2003",
+   "published": "",
+   "title": "Πρόγραμμα eCustoms - AIS - Αυτοματοποιημένο Σύστημα Εισαγωγών (Automated Import System)",
+   "publisher": "Customs and Excise Department, Ministry of Finance",
+   "doc_type": "official_page",
+   "note": "The same authority says the UCC Automated Import System (CY-UCC-AIS) replaces the THESEAS-era import declaration and manifest systems. A 06/11/2023 customs notice set its go-live by 31 December 2023.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "AIS",
+    "reason": "The quote names the AIS system, which incorporates the EU Single Window and centralised clearance and replaces the import and import-manifest systems in use since 2003."
+   }
+  },
+  {
+   "claim": "record:CY:statistics_microdata:register",
+   "question": "Statistical microdata: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://library.cystat.gov.cy/NEW/Official_Statistics_Law-2021-EL-290421.pdf",
+   "quote": "«εμπιστευτικά στοιχεία» ή «εμπιστευτικά δεδομένα» σημαίνει τα στοιχεία που συλλέγονται και χρησιμοποιούνται για την παραγωγή στατιστικών, εφόσον καθιστούν δυνατή την άμεση ή έμμεση ταυτοποίηση στατιστικών μονάδων αποκαλύπτοντας εξατομικευμένες πληροφορίες τους",
+   "quote_english": "'confidential data' means data collected and used to produce statistics that allow the direct or indirect identification of statistical units, revealing their individual information",
+   "value": "εμπιστευτικά στοιχεία (confidential statistical data): data permitting direct or indirect identification of statistical units",
+   "published": "2021-04",
+   "title": "Ο περί Επίσημων Στατιστικών Νόμος του 2021 (Ν. 25(Ι)/2021)",
+   "publisher": "Statistical Service of Cyprus (CYSTAT)",
+   "doc_type": "legislation",
+   "note": "The same statutory definition, hosted by the national statistics office in place of the cylaw.org mirror. CYSTAT's law page lists no later amendment.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote is a legal definition of 'confidential data' and names no register or system."
+   }
+  },
+  {
+   "claim": "record:CY:civil_registry:register",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "The Civil Registry System is one of the main sources of information for the population in Cyprus. It is an integrated information system with a central database",
+   "quote_english": "",
+   "value": "Civil Registry System",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The system issues birth and death certificates, ID cards and passports. It is run by the Civil Registry and Migration Department.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Civil Registry System",
+    "reason": "The quote names the Civil Registry System as an integrated information system with a central database and a main source of population information."
+   }
+  },
+  {
+   "claim": "record:CY:issuance_history:register",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "which includes functionality for handing data and applications for the issuance of official documents of the Republic of Cyprus such as birth certificates, identity cards, passports, electoral booklets",
+   "quote_english": "",
+   "value": "Civil Registry System (handles applications for the issuance of identity cards and passports)",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The sentence continues the Civil Registry System description; it does not mention revocation state.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Civil Registry System",
+    "reason": "In context, the quote describes the Civil Registry System, which handles applications for official documents including identity cards and passports."
+   }
+  },
+  {
+   "claim": "record:CY:digital_identity_credentials:register",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "CY Login is the identity management system for natural (citizens) and legal persons (organisations), who need to access Government digital services.",
+   "quote_english": "",
+   "value": "CY Login",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The eID credentials themselves are issued by JCC Payment Systems Ltd under the National eID Scheme (IDMe.cy).",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "CY Login",
+    "reason": "The quote names CY Login as the identity management system that citizens and organisations use to access government digital services."
+   }
+  },
+  {
+   "claim": "record:CY:electoral_roll:register",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "the upgrade of the computerised population register system—used for the preparation and conduct of elections—is expected to be completed within the next two years.",
+   "quote_english": "",
+   "value": "computerised population register system (used for the preparation and conduct of elections)",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "From the Elections Division paragraph of the Civil Registry section.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "computerised population register system",
+    "reason": "The quote names the computerised population register system as the system used to prepare and conduct elections; it is being upgraded."
+   }
+  },
+  {
+   "claim": "record:CY:electoral_management:register",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "The system also provides functionalities for preparing and conducting all elections in the Republic of Cyprus (presidential, parliamentary, European, and local authorities’ elections).",
+   "quote_english": "",
+   "value": "Civil Registry System (functionalities for preparing and conducting all elections)",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "'The system' is the Civil Registry System named in the preceding sentences; results tabulation is not described.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "Civil Registry System",
+    "reason": "In context, 'the system' is the Civil Registry System, which provides functions for preparing and conducting all elections."
+   }
+  },
+  {
+   "claim": "record:CY:trust_services_pki:register",
+   "question": "State PKI and qualified trust services: Root and issuing certificate authorities for government, qualified signatures and seals",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "this legislation set DEC as the competent authority for the implementation of Regulation (EU) 910/2014, as the supervisory body under Article 17 of the Regulation, and as the body responsible for keeping the national trusted list",
+   "quote_english": "",
+   "value": "national trusted list, kept by the Department of Electronic Communications (DEC)",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "No state root CA is described; the qualified provider is JCC Payment Systems Ltd (see the operator finding).",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names DEC as the supervisory body that keeps the trusted list; it does not name any operator of a root or issuing CA or of a qualified trust service."
+   }
+  },
+  {
+   "claim": "record:CY:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: Root and issuing certificate authorities for government, qualified signatures and seals",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "issued in February 2019 to JCC Payment Systems Ltd the first authorisation as qualified trust service provider. This qualified provider offers, in the Cyprus market, qualified electronic signatures and qualified electronic stamps",
+   "quote_english": "",
+   "value": "JCC Payment Systems Ltd",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The qualified trust service provider authorised by the Department of Electronic Communications.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "JCC Payment Systems Ltd",
+    "reason": "The quote names JCC Payment Systems Ltd as the authorised qualified trust service provider that offers qualified electronic signatures and seals."
+   }
+  },
+  {
+   "claim": "record:CY:residence_permits:register",
+   "question": "Residence and migration status: Residence permits, asylum status and foreign-national registrations",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "In October 2021, a new contract was signed for the upgrading of the electronic system of the Asylum Service (CASS), including also a new role in the system for the Administrative Court for International Protection (IPAC).",
+   "quote_english": "",
+   "value": "electronic system of the Asylum Service (CASS)",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "This covers only the asylum part; the residence permit system of the Migration Department is not named.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "CASS (electronic system of the Asylum Service)",
+    "reason": "The quote names CASS, the Asylum Service's electronic system; it covers asylum only, not residence permits in general."
+   }
+  },
+  {
+   "claim": "record:CY:tax:register",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "The Cyprus Tax Department (CTD) provides taxpayers with the TAXISnet System so that they can submit their tax returns (declarations) electronically",
+   "quote_english": "",
+   "value": "TAXISnet System",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The same section also describes the Tax Portal, used for debt management.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "TAXISnet (Cyprus Tax Department)",
+    "reason": "The quote names the TAXISnet System, provided by the Cyprus Tax Department, for filing tax returns electronically."
+   }
+  },
+  {
+   "claim": "record:CY:tax:operator",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "The Cyprus Tax Department (CTD) provides taxpayers with the TAXISnet System so that they can submit their tax returns (declarations) electronically",
+   "quote_english": "",
+   "value": "Cyprus Tax Department (CTD)",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The operator of TAXISnet.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "TAXISnet (Cyprus Tax Department)",
+    "reason": "The quote names the TAXISnet System, provided by the Cyprus Tax Department, for filing tax returns electronically."
+   }
+  },
+  {
+   "claim": "record:CY:benefits_pensions:register",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "In the third quarter of 2021, the ERGANI system of Social Insurance Services and Online Benefit Application of the Welfare Benefits Administration Service was developed in the UDC.",
+   "quote_english": "",
+   "value": "ERGANI system of Social Insurance Services",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The UDC is the Ministry of Labour's Unified Data Centre. The core social insurance contributions system itself is not named.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "ERGANI (Social Insurance Services), hosted in the UDC",
+    "reason": "The quote names the ERGANI system of Social Insurance Services and the online benefit application, both developed in the Unified Data Centre."
+   }
+  },
+  {
+   "claim": "record:CY:benefits_pensions:operator",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "In the third quarter of 2021, the ERGANI system of Social Insurance Services and Online Benefit Application of the Welfare Benefits Administration Service was developed in the UDC.",
+   "quote_english": "",
+   "value": "Social Insurance Services",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The service that owns ERGANI.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "ERGANI (Social Insurance Services), hosted in the UDC",
+    "reason": "The quote names the ERGANI system of Social Insurance Services and the online benefit application, both developed in the Unified Data Centre."
+   }
+  },
+  {
+   "claim": "record:CY:health_insurance:register",
+   "question": "Statutory health insurance: Enrolment and entitlement records of the statutory health insurance scheme",
+   "relation": "fills_gap",
+   "url": "https://www.gesy.org.cy/en-us/hioinformationtechnologysys",
+   "quote": "The IT system is the backbone of the GHS and it is a centralised system that is under development and will be made available by the HIO.",
+   "quote_english": "",
+   "value": "GHS IT system",
+   "published": "",
+   "title": "GHS Information Technology System",
+   "publisher": "Health Insurance Organisation (HIO)",
+   "doc_type": "official_page",
+   "note": "The operator's own site. Its subsystems include the Beneficiary Portal, where beneficiaries enrol.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "GHS IT system (Health Insurance Organisation)",
+    "reason": "The quote describes a centralised GHS IT system made available by the HIO, though it calls the system 'under development' and gives no specific name."
+   }
+  },
+  {
+   "claim": "record:CY:health_insurance:operator",
+   "question": "Statutory health insurance: Enrolment and entitlement records of the statutory health insurance scheme",
+   "relation": "fills_gap",
+   "url": "https://www.gesy.org.cy/en-us/hioinformationtechnologysys",
+   "quote": "The IT system is the backbone of the GHS and it is a centralised system that is under development and will be made available by the HIO.",
+   "quote_english": "",
+   "value": "Health Insurance Organisation (HIO)",
+   "published": "",
+   "title": "GHS Information Technology System",
+   "publisher": "Health Insurance Organisation (HIO)",
+   "doc_type": "official_page",
+   "note": "The HIO runs the General Healthcare System (GHS/GeSY).",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "GHS IT system (Health Insurance Organisation)",
+    "reason": "The quote describes a centralised GHS IT system made available by the HIO, though it calls the system 'under development' and gives no specific name."
+   }
+  },
+  {
+   "claim": "record:CY:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "The Computerised Integrated Lands Information System (CILIS) is one of the largest public sector systems",
+   "quote_english": "",
+   "value": "Computerised Integrated Lands Information System (CILIS)",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The Department of Lands and Surveys system. The page says it serves more than 800 users, which is not a record count.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "CILIS (Computerised Integrated Lands Information System)",
+    "reason": "The quote names CILIS, and the context says it covers the legal, geographic and valuation functions of the land offices."
+   }
+  },
+  {
+   "claim": "record:CY:land_property:operator",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "The Department of Lands and Surveys (DLS) is one of the main Base Registries in Cyprus, It is the main source of data collection for legal, spatial and valuation data",
+   "quote_english": "",
+   "value": "Department of Lands and Surveys (DLS)",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The base registry for legal, spatial and valuation land data.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Department of Lands and Surveys (DLS)",
+    "reason": "The quote names the DLS as a main base registry and the source of legal, spatial and valuation data; it names a department, not a system."
+   }
+  },
+  {
+   "claim": "record:CY:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.companies.gov.cy/en/about/modernisation-of-the-department",
+   "quote": "the changes underway must assist to the maximum business activities and promote the initiation of investment through the maintenance of a reliable Companies Register",
+   "quote_english": "",
+   "value": "Companies Register",
+   "published": "",
+   "title": "Modernisation of the Department",
+   "publisher": "Department of Registrar of Companies and Intellectual Property",
+   "doc_type": "official_page",
+   "note": "The registrar's own site. Its statistics pages report total registered business entities as at 31/08/2026, but only as graphs.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "Companies Register",
+    "reason": "The quote refers to maintaining a reliable Companies Register."
+   }
+  },
+  {
+   "claim": "record:CY:beneficial_ownership:register",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://www.companies.gov.cy/en/21-eservices/1-registration-of-beneficial-owner-particulars/2-registration-of-beneficial-owner-particulars",
+   "quote": "the Registrar of Companies is designated as the competent authority for establishing and maintaining the central Register of Beneficial Owners of companies and other legal entities.",
+   "quote_english": "",
+   "value": "central Register of Beneficial Owners",
+   "published": "",
+   "title": "Registration of beneficial owner particulars",
+   "publisher": "Department of Registrar of Companies and Intellectual Property",
+   "doc_type": "official_page",
+   "note": "The page says the register is kept exclusively in electronic form under the Registrar's Directive K.D.P. 112/2021.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "central Register of Beneficial Owners (Registrar of Companies)",
+    "reason": "The quote names the central Register of Beneficial Owners, which the Registrar of Companies establishes and maintains."
+   }
+  },
+  {
+   "claim": "record:CY:beneficial_ownership:operator",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://www.companies.gov.cy/en/21-eservices/1-registration-of-beneficial-owner-particulars/2-registration-of-beneficial-owner-particulars",
+   "quote": "the Registrar of Companies is designated as the competent authority for establishing and maintaining the central Register of Beneficial Owners of companies and other legal entities.",
+   "quote_english": "",
+   "value": "Registrar of Companies",
+   "published": "",
+   "title": "Registration of beneficial owner particulars",
+   "publisher": "Department of Registrar of Companies and Intellectual Property",
+   "doc_type": "official_page",
+   "note": "The competent authority under the transposition of the 5th AML Directive.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "central Register of Beneficial Owners (Registrar of Companies)",
+    "reason": "The quote names the central Register of Beneficial Owners, which the Registrar of Companies establishes and maintains."
+   }
+  },
+  {
+   "claim": "record:CY:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "The Road Transport Department is one of the base registries in Cyprus as it is responsible for the vehicles and drivers’ digital registry.",
+   "quote_english": "",
+   "value": "vehicles and drivers’ digital registry",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The data is shared through the Government Data Warehouse and with the EU through EUCARIS.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Road Transport Department vehicles and drivers' digital registry",
+    "reason": "The quote says the Road Transport Department is responsible for the digital registry of vehicles and drivers."
+   }
+  },
+  {
+   "claim": "record:CY:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "The Road Transport Department is one of the base registries in Cyprus as it is responsible for the vehicles and drivers’ digital registry.",
+   "quote_english": "",
+   "value": "Road Transport Department",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The operator of the vehicle and driver registry.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Road Transport Department vehicles and drivers' digital registry",
+    "reason": "The quote says the Road Transport Department is responsible for the digital registry of vehicles and drivers."
+   }
+  },
+  {
+   "claim": "record:CY:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "The electronic registration system (iJustice) has been fully implemented since 1 February 2022 and marks an important step in the process of quality upgrade of the country's justice system.",
+   "quote_english": "",
+   "value": "iJustice (electronic registration system)",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "This is the court case system; the criminal record register is not named.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "iJustice",
+    "reason": "The quote names iJustice, the courts' electronic registration system; the context says it handles case registration, not criminal records."
+   }
+  },
+  {
+   "claim": "record:CY:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "The new CY-VIS of the Ministry of Foreign Affairs will also aim at a better implementation of the common visa policy",
+   "quote_english": "",
+   "value": "CY-VIS (National Visa Information System)",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "This covers only the visa part; the SIS and EES national systems are not named.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "new CY-VIS (Ministry of Foreign Affairs)",
+    "reason": "The quote names the new CY-VIS of the Ministry of Foreign Affairs; the context says it is still being implemented (awarded Q2 2024)."
+   }
+  },
+  {
+   "claim": "record:CY:border_control:operator",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "The new CY-VIS of the Ministry of Foreign Affairs will also aim at a better implementation of the common visa policy",
+   "quote_english": "",
+   "value": "Ministry of Foreign Affairs",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The owner of CY-VIS.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "new CY-VIS (Ministry of Foreign Affairs)",
+    "reason": "The quote names the new CY-VIS of the Ministry of Foreign Affairs; the context says it is still being implemented (awarded Q2 2024)."
+   }
+  },
+  {
+   "claim": "record:CY:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "The Law Νo. 50(Ι)/2019 was approved and published in the Official Gazette of the Republic of Cyprus on 5 April 2019.",
+   "quote_english": "",
+   "value": "Official Gazette of the Republic of Cyprus",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "This names the gazette only in passing; the Government Printing Office site was not reachable to cite directly.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "Official Gazette of the Republic of Cyprus",
+    "reason": "The quote names the Official Gazette of the Republic of Cyprus as the place where laws are published."
+   }
+  },
+  {
+   "claim": "record:CY:public_finance:register",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://library.cystat.gov.cy/NEW/EDP_Inventory(Sources&Methods)_ESA2010-EN-290626.pdf",
+   "quote": "The online accounting database system of the Treasury, namely FIMAS, records all transactions of the State on a daily basis.",
+   "quote_english": "",
+   "value": "FIMAS",
+   "published": "2026-06",
+   "title": "Inventory of the methods, procedures and sources used for the compilation of deficit and debt data (ESA 2010), Cyprus 2024",
+   "publisher": "Statistical Service of Cyprus (CYSTAT)",
+   "doc_type": "statistics",
+   "note": "The same document says the Treasury began a three-phase FIMAS upgrade in 2024, with phases due by end 2026, 2027 and 2028, after an ERP replacement project was terminated in 2023.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "FIMAS (Treasury)",
+    "reason": "The quote names FIMAS as the Treasury's online accounting database, which records all state transactions daily."
+   }
+  },
+  {
+   "claim": "record:CY:public_finance:operator",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://library.cystat.gov.cy/NEW/EDP_Inventory(Sources&Methods)_ESA2010-EN-290626.pdf",
+   "quote": "The online accounting database system of the Treasury, namely FIMAS, records all transactions of the State on a daily basis.",
+   "quote_english": "",
+   "value": "Treasury (of the Republic of Cyprus)",
+   "published": "2026-06",
+   "title": "Inventory of the methods, procedures and sources used for the compilation of deficit and debt data (ESA 2010), Cyprus 2024",
+   "publisher": "Statistical Service of Cyprus (CYSTAT)",
+   "doc_type": "statistics",
+   "note": "The system belongs to the Treasury.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "FIMAS (Treasury)",
+    "reason": "The quote names FIMAS as the Treasury's online accounting database, which records all state transactions daily."
+   }
+  },
+  {
+   "claim": "record:CY:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "the Ministry of Education, Sport and Youth (MESY) announced a tender for the provision, implementation, maintenance and operation of an Integrated School Management System (SMS).",
+   "quote_english": "",
+   "value": "Integrated School Management System (SMS)",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The contract was signed on 6 September 2022 and includes contractor-provided data-centre hosting for the primary and disaster-recovery sites (their location is not stated).",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "Integrated School Management System (SMS)",
+    "reason": "The quote names the MESY Integrated School Management System; it was tendered in 2020, and the context says the contract was signed in 2022."
+   }
+  },
+  {
+   "claim": "record:CY:education:operator",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf",
+   "quote": "the Ministry of Education, Sport and Youth (MESY) announced a tender for the provision, implementation, maintenance and operation of an Integrated School Management System (SMS).",
+   "quote_english": "",
+   "value": "Ministry of Education, Sport and Youth (MESY)",
+   "published": "2025-11",
+   "title": "CYPRUS 2025 Digital Public Administration Factsheet - Supporting document",
+   "publisher": "European Commission, Interoperable Europe (NIFO)",
+   "doc_type": "official_page",
+   "note": "The contracting authority for the SMS.",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "Integrated School Management System (SMS)",
+    "reason": "The quote names the MESY Integrated School Management System; it was tendered in 2020, and the context says the contract was signed in 2022."
+   }
+  },
+  {
+   "claim": "indicator:CY:L2",
+   "question": "Is the government's data classification scheme established in a statute or binding regulation? yes = Classification levels are defined in a statute or binding regulation; partial = Defined only in non-binding guidance or a circular; no = A source states there is no binding classification scheme",
+   "relation": "fills_gap",
+   "url": "https://www.gov.cy/media/sites/6/2026/06/1.-%CE%9F-%CF%80%CE%B5%CF%81%CE%AF-%CE%9A%CE%B1%CE%BD%CF%8C%CE%BD%CF%89%CE%BD-%CE%91%CF%83%CF%86%CE%B1%CE%BB%CE%B5%CE%AF%CE%B1%CF%82-%CE%94%CE%B9%CE%B1%CE%B2%CE%B1%CE%B8%CE%BC%CE%B9%CF%83%CE%BC%CE%AD%CE%BD%CF%89%CE%BD-%CE%A0%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CF%8E%CE%BD-%CE%95%CE%B3%CE%B3%CF%81%CE%AC%CF%86%CF%89%CE%BD-%CE%BA%CE%B1%CE%B9-%CE%A5%CE%BB%CE%B9%CE%BA%CE%BF%CF%8D-%CE%BA%CE%B1%CE%B9-%CE%B3%CE%B9%CE%B1-%CE%A3%CF%85%CE%BD%CE%B1%CF%86%CE%AE-%CE%98%CE%AD%CE%BC%CE%B1%CF%84%CE%B1-%CE%9D%CF%8C%CE%BC%CE%BF%CF%82-%CF%84%CE%BF%CF%85-2021-%CE%9D.-84I2021.pdf",
+   "quote": "διαβαθμισμένες πληροφορίες της Δημοκρατίας και διαβαθμισμένες πληροφορίες της ΕΕ με διαβάθμιση «ΑΚΡΩΣ ΑΠΟΡΡΗΤΟ», «ΑΠΟΡΡΗΤΟ» και «ΕΜΠΙΣΤΕΥΤΙΚΟ» έχουν υποστεί σχετικό έλεγχο ασφάλειας",
+   "quote_english": "classified information of the Republic and EU classified information classified 'TOP SECRET', 'SECRET' and 'CONFIDENTIAL' have undergone the relevant security check",
+   "value": "yes",
+   "published": "2021",
+   "title": "Ο περί Κανόνων Ασφαλείας Διαβαθμισμένων Πληροφοριών, Εγγράφων και Υλικού και για Συναφή Θέματα Νόμος του 2021 (Ν. 84(I)/2021)",
+   "publisher": "National Security Authority (Εθνική Αρχή Ασφάλειας), Ministry of Defence",
+   "doc_type": "legislation",
+   "note": "Law 84(I)/2021 names the Republic's classification levels, from ΠΕΡΙΟΡΙΣΜΕΝΗΣ ΧΡΗΣΗΣ (RESTRICTED) up to ΑΚΡΩΣ ΑΠΟΡΡΗΤΟ. It was amended by Law 79(I)/2023, and both are published on the NSA's legislation page.",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote is from Law 84(I)/2021, a statute on the security of classified information, which names the classification levels ΑΚΡΩΣ ΑΠΟΡΡΗΤΟ, ΑΠΟΡΡΗΤΟ and ΕΜΠΙΣΤΕΥΤΙΚΟ (and ΠΕΡΙΟΡΙΣΜΕΝΗΣ ΧΡΗΣΗΣ elsewhere)."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:CY:emergency_communications:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:emergency_communications:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:police_records:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:CY:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:CY:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:CY:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:CY:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:statistics_microdata:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:facial_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:fingerprint_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:breeder_documents:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:authentication_audit_log:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:firearms_register:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:government_payroll:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:CY:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:crisis_management:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:grid_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:water_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:CY:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:CY:L2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:CY:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

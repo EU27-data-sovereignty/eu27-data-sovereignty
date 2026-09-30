@@ -165,7 +165,8 @@ def load(path: Path = REGISTER) -> list[dict[str, str]]:
 
 
 def citation_errors(rows: list[dict[str, str]], cites: list[dict[str, str]]) -> list[str]:
-    """Each row needs exactly one :register citation, and each such citation needs its row."""
+    """Each row needs at least one :register citation, and each such citation needs its row. More than
+    one is corroboration by an independent source (#83), which is the point of vetting."""
     errors: list[str] = []
     counts: dict[str, int] = {}
     for c in cites:
@@ -174,8 +175,8 @@ def citation_errors(rows: list[dict[str, str]], cites: list[dict[str, str]]) -> 
     claimed = {claim(r) for r in rows}
     for r in rows:
         n = counts.get(claim(r), 0)
-        if n != 1:
-            errors.append(f"{r['iso']}/{r['record_class']}: needs exactly one {claim(r)} "
+        if n < 1:
+            errors.append(f"{r['iso']}/{r['record_class']}: needs at least one {claim(r)} "
                           f"citation in sources/citations.csv, found {n}")
     # Every non-empty extra fact is a claim of its own and needs its own citation (#73, #75).
     cited = {c["claim"] for c in cites}

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
 
-import type { Bundle } from '../src/data/types'
+import type { Bundle, Span } from '../src/data/types'
 
 /**
  * These assert that routes render REAL DATA, not that they merely load.
@@ -111,6 +111,76 @@ test.describe('data actually renders', () => {
     await expect(page.locator('#sources li[id^="src-"]')).toHaveCount(
       Object.keys(BUNDLE.sources).length,
     )
+  })
+})
+
+/** Every span of a document, in reading order. */
+function docSpans(iso: string): Span[] {
+  const out: Span[] = []
+  for (const s of BUNDLE.documents[iso]!.sections)
+    for (const b of s.blocks)
+      out.push(
+        ...(b.type === 'table' ? b.rows.flat() : b.type === 'list' ? b.items.flat() : b.spans),
+      )
+  return out
+}
+
+test.describe('evidence rules (#82, #83)', () => {
+  test('every page says the findings are machine-checked, not human-verified', async ({ page }) => {
+    await page.goto('/country/DE')
+    await expect(page.getByText(BUNDLE.provenance, { exact: false }).first()).toBeVisible()
+    for (const route of ['/', '/methodology']) {
+      await page.goto(route)
+      // exact: the banner on every page also contains the disclaimer, inside longer text; this
+      // checks the page's own statement of it.
+      await expect(page.getByText(BUNDLE.notice.disclaimer, { exact: true })).toBeVisible()
+    }
+  })
+
+  test('a fact carries its evidence grade, and its source lists the checks behind it', async ({
+    page,
+  }) => {
+    const fact = docSpans('DE').find(sp => sp.role === 'fact')!
+    const cite = BUNDLE.claims[fact.c![0]!]![0]!
+    await page.goto('/country/DE')
+    await expect(
+      page.getByRole('link', { name: new RegExp(`Evidence: ${fact.g}$`) }).first(),
+    ).toBeVisible()
+    // Source 1 is the first fact's first source: its entry shows that claim's grade and checks.
+    const entry = page.locator('#src-1')
+    await expect(entry).toContainText(`${cite.grade}:`)
+    await expect(entry).toContainText(cite.checklist[0]!)
+  })
+
+  test('a non-English quote is shown in the original, with the translation labelled', async ({
+    page,
+  }) => {
+    const iso = Object.keys(BUNDLE.documents).find(i =>
+      docSpans(i).some(sp => sp.c?.some(c => BUNDLE.claims[c]?.some(x => x.gloss))),
+    )!
+    await page.goto(`/country/${iso}`)
+    await expect(page.getByText('Machine translation:').first()).toBeVisible()
+  })
+
+  test('a disputed value is withheld, stated as disputed, and carries no footnote', async ({
+    page,
+  }) => {
+    // Injected, so the test does not depend on the live data holding a dispute today.
+    const DISPUTE = 'Disputed: sources disagree (injected by the test)'
+    const bundle = structuredClone(BUNDLE)
+    const holdings = bundle.documents.DE!.sections.find(s => s.id === 'holdings')!
+    const table = holdings.blocks.find(b => b.type === 'table')!
+    if (table.type !== 'table') throw new Error('no holdings table')
+    const row = table.rows.find(r => r.some(sp => sp.role === 'fact'))!
+    const i = row.findIndex(sp => sp.role === 'fact')
+    const original = row[i]!.t
+    row[i] = { t: DISPUTE, role: 'disputed', c: row[i]!.c }
+    await page.route('**/data/eu27.json', route => route.fulfill({ json: bundle }))
+    await page.goto('/country/DE')
+    const cell = page.locator('td, th').filter({ hasText: DISPUTE })
+    await expect(cell).toBeVisible()
+    await expect(cell).not.toContainText(original)
+    await expect(cell.locator('a')).toHaveCount(0)
   })
 })
 

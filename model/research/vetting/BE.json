@@ -1,0 +1,1028 @@
+{
+ "iso": "BE",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:BE:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "supersedes",
+   "url": "https://www.jurion.fanc.fgov.be/jurdb-consult/plainWettekstServlet?wettekstId=1384&lang=fr",
+   "quote": "comprend quatre niveaux: TRÈS SECRET, SECRET, CONFIDENTIEL et RESTREINT. Le niveau TRÈS SECRET est attribué lorsque l'utilisation inappropriée peut porter très gravement atteinte à un des intérêts visés à l'article 3",
+   "quote_english": "comprises four levels: TOP SECRET, SECRET, CONFIDENTIAL and RESTRICTED. The TOP SECRET level is assigned when inappropriate use could very seriously harm one of the interests referred to in Article 3",
+   "value": "Yes",
+   "published": "",
+   "title": "Loi du 11 décembre 1998 relative à la classification, aux habilitations de sécurité, aux avis de sécurité et au service public réglementé; Chapitre II",
+   "publisher": "Agence fédérale de contrôle nucléaire (FANC), Jurion regulatory database",
+   "doc_type": "legislation",
+   "note": "The current consolidated text of Art. 4 on a federal regulator's law database replaces the 1999 original on an unofficial mirror. The scheme now has four levels: RESTREINT was added by the law of 7 April 2023, and the title was changed in 2024. The official portal ejustice.just.fgov.be sits behind a CAPTCHA and could not be fetched.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote is Article 4 of the Loi du 11 décembre 1998 on classification, a statute that sets four classification levels (TRÈS SECRET, SECRET, CONFIDENTIEL, RESTREINT)."
+   }
+  },
+  {
+   "claim": "record:BE:issuance_history:register",
+   "question": "Document issuance history: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.ibz.rrn.fgov.be/nl/faq/wat-is-het-rijksregister-van-de-natuurlijke-personen/wie-beheert-het-rijksregister-van-de",
+   "quote": "Het is eveneens deze directie die belast is met het beheer van de centrale bestanden waarin de gegevens over de identiteitskaarten opgenomen zijn, met name het Register van de identiteitskaarten en het Register van de vreemdelingenkaarten.",
+   "quote_english": "It is also this directorate that manages the central files holding identity card data, namely the Register of Identity Cards and the Register of Foreigners' Cards.",
+   "value": "Register van de identiteitskaarten (Register of Identity Cards)",
+   "published": "",
+   "title": "Wie beheert het Rijksregister van de natuurlijke personen?",
+   "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+   "doc_type": "official_page",
+   "note": "The operator's own FAQ names the register, replacing an unofficial mirror of the 2005 royal decree. The directorate that manages it is the DG Identity and Civil Affairs (ADIB) of the FPS Interior.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "Register van de identiteitskaarten (and Register van de vreemdelingenkaarten)",
+    "reason": "The quote names the central files holding identity card data as the Register van de identiteitskaarten and the Register van de vreemdelingenkaarten."
+   }
+  },
+  {
+   "claim": "indicator:BE:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "supersedes",
+   "url": "https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA_BRCA34.pdf",
+   "quote": "The Belgian authorities are the TSP responsible for the Belgium Root CAs and for the CA certificates issued under the Belgian Root CA.",
+   "quote_english": "",
+   "value": "Yes",
+   "published": "2024-09-03",
+   "title": "Belgian Certificate Policy & Practice Statement for eID PKI infrastructure, Citizen CA, v5.0",
+   "publisher": "eID Repository (Belgian State / certipost)",
+   "doc_type": "official_page",
+   "note": "This is v5.0 of the CPS, dated 03/09/2024; the version cited today is v1.4. The root is the state's, but certipost nv/sa, a private company, is the TSP for the Citizen CA on behalf of the Belgian authorities, and it uses a subcontractor. So the qualified issuing service itself is outsourced.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote says the Belgian authorities are the TSP responsible for the Belgium Root CAs. The context adds that Certipost runs only the subordinate Citizen CAs on the authorities' behalf."
+   }
+  },
+  {
+   "claim": "indicator:BE:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.ibz.rrn.fgov.be/nl/faq/wat-is-het-rijksregister-van-de-natuurlijke-personen/wie-beheert-het-rijksregister-van-de",
+   "quote": "Het is eveneens deze directie die belast is met het beheer van de centrale bestanden waarin de gegevens over de identiteitskaarten opgenomen zijn, met name het Register van de identiteitskaarten en het Register van de vreemdelingenkaarten.",
+   "quote_english": "It is also this directorate that manages the central files holding identity card data, namely the Register of Identity Cards and the Register of Foreigners' Cards.",
+   "value": "Yes",
+   "published": "",
+   "title": "Wie beheert het Rijksregister van de natuurlijke personen?",
+   "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+   "doc_type": "official_page",
+   "note": "The eID card registers are managed by a directorate of the FPS Interior, which is a state body. The Federal Authentication Service (FAS) that uses the eID is run by FPS BOSA (sma-help.bosa.belgium.be/en/fas-privacy).",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Per the page context, the directorate is the Algemene Directie Identiteit en Burgerzaken of FPS Binnenlandse Zaken, which manages the central identity card registers. This is state operation of the eID card's registers, though the quote does not mention electronic authentication as such."
+   }
+  },
+  {
+   "claim": "record:BE:breeder_documents:operator",
+   "question": "Breeder document scans: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.ibz.rrn.fgov.be/sites/default/files/documents/nl/dabs/FAQ_DABS_NL_20200701.pdf",
+   "quote": "Meer bepaald zal de DABS, met de daarin opgeslagen akten, beheerd worden door het Beheerscomité DABS.",
+   "quote_english": "More specifically, the DABS and the deeds stored in it will be managed by the DABS Management Committee.",
+   "value": "Beheerscomité DABS (DABS Management Committee)",
+   "published": "2020-07-01",
+   "title": "FAQ DABS (NL) Versie 01/07/2020",
+   "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+   "doc_type": "official_page",
+   "note": "This is the FPS Interior's own FAQ, independent of the State Archives news item. The committee includes representatives of the municipalities and of several federal public services.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Beheerscomité DABS",
+    "reason": "The quote says the DABS and its stored acts will be managed by the Beheerscomité DABS. The context says this committee is made up of municipal and FPS representatives."
+   }
+  },
+  {
+   "claim": "record:BE:breeder_documents:register",
+   "question": "Breeder document scans: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.ibz.rrn.fgov.be/sites/default/files/documents/nl/dabs/FAQ_DABS_NL_20200701.pdf",
+   "quote": "DABS is de afkorting voor Databank voor Akten van de Burgerlijke Stand. Dit is de centrale databank waarin al de akten van burgerlijke stand bewaard en beheerd zullen worden.",
+   "quote_english": "DABS is the abbreviation of Database of Civil Status Deeds. This is the central database in which all civil status deeds will be stored and managed.",
+   "value": "Databank voor Akten van de Burgerlijke Stand (DABS) (Database of Civil Status Deeds)",
+   "published": "2020-07-01",
+   "title": "FAQ DABS (NL) Versie 01/07/2020",
+   "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+   "doc_type": "official_page",
+   "note": "The FPS Interior's operational FAQ confirms that DABS is the central database replacing the municipal and consular registers.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "DABS (Databank voor Akten van de Burgerlijke Stand)",
+    "reason": "The quote names DABS as the central database that stores and manages all civil status acts."
+   }
+  },
+  {
+   "claim": "record:BE:civil_registry:operator",
+   "question": "Civil registry core: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.ibz.rrn.fgov.be/nl/faq/wat-is-het-rijksregister-van-de-natuurlijke-personen/wie-beheert-het-rijksregister-van-de",
+   "quote": "De autoriteit die het Rijksregister van de natuurlijke personen beheert, is momenteel de Algemene Directie Identiteit en Burgerzaken",
+   "quote_english": "The authority that manages the National Register of Natural Persons is currently the Directorate-General Identity and Civil Affairs",
+   "value": "Algemene Directie Identiteit en Burgerzaken (Directorate-General Identity and Civil Affairs, FPS Interior)",
+   "published": "",
+   "title": "Wie beheert het Rijksregister van de natuurlijke personen?",
+   "publisher": "FOD Binnenlandse Zaken",
+   "doc_type": "official_page",
+   "note": "A dedicated FAQ page, separate from the homepage cited today, states the managing authority explicitly.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Algemene Directie Identiteit en Burgerzaken (ADIB), FPS Binnenlandse Zaken",
+    "reason": "The quote names the Algemene Directie Identiteit en Burgerzaken as the authority managing the Rijksregister, and the next words on the page place it within FPS Binnenlandse Zaken."
+   }
+  },
+  {
+   "claim": "record:BE:civil_registry:register",
+   "question": "Civil registry core: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.ibz.rrn.fgov.be/nl/faq/wat-is-het-rijksregister-van-de-natuurlijke-personen/wie-beheert-het-rijksregister-van-de",
+   "quote": "De autoriteit die het Rijksregister van de natuurlijke personen beheert, is momenteel de Algemene Directie Identiteit en Burgerzaken",
+   "quote_english": "The authority that manages the National Register of Natural Persons is currently the Directorate-General Identity and Civil Affairs",
+   "value": "Rijksregister van de natuurlijke personen (National Register of Natural Persons)",
+   "published": "",
+   "title": "Wie beheert het Rijksregister van de natuurlijke personen?",
+   "publisher": "FOD Binnenlandse Zaken",
+   "doc_type": "official_page",
+   "note": "Confirms the register's official name on a second page of the operator's site.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Rijksregister van de natuurlijke personen",
+    "reason": "The quote names the register as the Rijksregister van de natuurlijke personen."
+   }
+  },
+  {
+   "claim": "record:BE:facial_biometric:register",
+   "question": "Facial biometric: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.ibz.rrn.fgov.be/sites/default/files/documents/nl/identiteitsdocumenten/eid/eID_en_GDPR.pdf",
+   "quote": "Eenmaal de kaart geproduceerd is, zal de pasfoto te zien zijn op de identiteitskaart (zowel fysiek als op de chip) als in het rijksregister.",
+   "quote_english": "Once the card is produced, the passport photo will be visible on the identity card (both physically and on the chip) and in the National Register.",
+   "value": "Rijksregister (National Register)",
+   "published": "2020-11-25",
+   "title": "eID en GDPR",
+   "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+   "doc_type": "official_page",
+   "note": "The same document says photos are kept on a secured server with no statutory retention limit.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Rijksregister",
+    "reason": "The quote says that once the card is produced the passport photo is held both on the card and in the rijksregister."
+   }
+  },
+  {
+   "claim": "record:BE:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.ibz.rrn.fgov.be/sites/default/files/documents/nl/identiteitsdocumenten/eid/eID_en_GDPR.pdf",
+   "quote": "Er zal dus op geen enkel moment sprake zijn van een centrale databank. Dit wordt ook niet door de wetgever toegelaten.",
+   "quote_english": "There will therefore at no time be a central database. This is also not permitted by the legislator.",
+   "value": "No central register",
+   "published": "2020-11-25",
+   "title": "eID en GDPR",
+   "publisher": "FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken",
+   "doc_type": "official_page",
+   "note": "The card manufacturer holds fingerprints temporarily, for at most 3 months during production, and then deletes them.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "none (no central fingerprint database)",
+    "reason": "In context, the quote says fingerprints are kept only temporarily during production and there is never a central database, so it names no register and instead says none exists."
+   }
+  },
+  {
+   "claim": "record:BE:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: the body that operates it",
+   "relation": "supersedes",
+   "url": "https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA_BRCA34.pdf",
+   "quote": "The Belgian authorities are the TSP responsible for the Belgium Root CAs and for the CA certificates issued under the Belgian Root CA.",
+   "quote_english": "",
+   "value": "The Belgian authorities are the TSP responsible for the Belgium Root CAs",
+   "published": "2024-09-03",
+   "title": "Belgian Certificate Policy & Practice Statement for eID PKI infrastructure, Citizen CA, v5.0",
+   "publisher": "eID Repository (Belgian State / certipost)",
+   "doc_type": "official_page",
+   "note": "The CPS v5.0 (2024) replaces v1.4. It also states that certipost nv/sa acts as CA and TSP for the Citizen CAs on behalf of the Belgian authorities.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "the Belgian authorities (no specific body named)",
+    "reason": "The quote names 'the Belgian authorities' as TSP for the Root CAs, which places it with the state, but it does not identify a specific operating body."
+   }
+  },
+  {
+   "claim": "record:BE:trust_services_pki:register",
+   "question": "State PKI and qualified trust services: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA_BRCA34.pdf",
+   "quote": "other Certification Authorities within the Belgian State PKI hierarchy such as the Belgium Root Certificate Authority (BRCA)",
+   "quote_english": "",
+   "value": "Belgium Root Certificate Authority (BRCA)",
+   "published": "2024-09-03",
+   "title": "Belgian Certificate Policy & Practice Statement for eID PKI infrastructure, Citizen CA, v5.0",
+   "publisher": "eID Repository (Belgian State / certipost)",
+   "doc_type": "official_page",
+   "note": "The 2024 CPS covers the BRCA3 and BRCA4 root generations.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Belgian State PKI / Belgium Root Certificate Authority (BRCA)",
+    "reason": "The quote names the Belgian State PKI hierarchy and its root, the Belgium Root Certificate Authority (BRCA)."
+   }
+  },
+  {
+   "claim": "record:BE:digital_identity_credentials:register",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
+   "quote": "Please read this Privacy Notice to learn how personal data are collected and processed within the Federal Authentication Service (FAS) provided by DG Simplification and Digitization.",
+   "quote_english": "",
+   "value": "Federal Authentication Service (FAS)",
+   "published": "2025-08-05",
+   "title": "FAS Privacy Notice – FAS – My Digital Keys – version 1.3",
+   "publisher": "FPS Policy and Support (BOSA), DG Simplification and Digitization",
+   "doc_type": "official_page",
+   "note": "FAS, part of CSAM, holds the digital keys at their assurance levels (high, substantial, low).",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "Federal Authentication Service (FAS), provided by DG Simplification and Digitization",
+    "reason": "The quote names the FAS and the DG that provides it. It says nothing about credentials or assurance levels."
+   }
+  },
+  {
+   "claim": "record:BE:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
+   "quote": "Please read this Privacy Notice to learn how personal data are collected and processed within the Federal Authentication Service (FAS) provided by DG Simplification and Digitization.",
+   "quote_english": "",
+   "value": "DG Simplification and Digitization (FPS Policy and Support, BOSA)",
+   "published": "2025-08-05",
+   "title": "FAS Privacy Notice – FAS – My Digital Keys – version 1.3",
+   "publisher": "FPS Policy and Support (BOSA), DG Simplification and Digitization",
+   "doc_type": "official_page",
+   "note": "The notice names the FPS Policy and Support as the controller of FAS data.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "Federal Authentication Service (FAS), provided by DG Simplification and Digitization",
+    "reason": "This duplicates item 12: the quote names the service (FAS) and its provider (DG Simplification and Digitization, FPS Policy and Support per context)."
+   }
+  },
+  {
+   "claim": "record:BE:authentication_audit_log:register",
+   "question": "Authentication audit log: Records of who authenticated to which public service and when",
+   "relation": "fills_gap",
+   "url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
+   "quote": "Authentication logs (date, time, ID number, message ID, IP address, browser, OS) are stored in an audit trail for 10 years for investigation or complaint purposes.",
+   "quote_english": "",
+   "value": "FAS audit trail of authentication logs, kept for 10 years",
+   "published": "2025-08-05",
+   "title": "FAS Privacy Notice – FAS – My Digital Keys – version 1.3",
+   "publisher": "FPS Policy and Support (BOSA), DG Simplification and Digitization",
+   "doc_type": "official_page",
+   "note": "This is the audit trail of the Federal Authentication Service, operated by FPS BOSA.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "FAS authentication audit trail (DG Simplification and Digitization), retained 10 years",
+    "reason": "The quote says authentication logs (date, time, ID number, IP and more) are kept in an audit trail for 10 years. The page context attributes this to the FAS of DG Simplification and Digitization."
+   }
+  },
+  {
+   "claim": "record:BE:electoral_roll:register",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://elections.fgov.be/sites/default/files/documents/CodeElectoral__Kieswetboek.pdf",
+   "quote": "le collège des bourgmestre et échevins arrête la liste des électeurs inscrits aux registres de la population le quatre-vingtième jour qui précède celui de l'élection.",
+   "quote_english": "the college of mayor and aldermen fixes the list of electors registered in the population registers on the eightieth day before the election.",
+   "value": "liste des électeurs (list of electors), drawn from the population registers",
+   "published": "2018-07-01",
+   "title": "Code électoral / Algemeen Kieswetboek – coordination officieuse jusqu'au 1er juillet 2018",
+   "publisher": "SPF Intérieur, Direction des Elections",
+   "doc_type": "legislation",
+   "note": "This is Art. 10 of the Electoral Code, in the FPS Interior's unofficial coordination. Each municipality draws up the roll from the population registers.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "liste des électeurs, drawn up by the collège des bourgmestre et échevins (municipality)",
+    "reason": "Electoral Code Art. 10 §1 says the municipal college of mayor and aldermen draws up the voter list from the population registers 80 days before the election. The quote appears verbatim, though the PDF lays the French and Dutch text out in columns."
+   }
+  },
+  {
+   "claim": "record:BE:electoral_roll:operator",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://elections.fgov.be/sites/default/files/documents/CodeElectoral__Kieswetboek.pdf",
+   "quote": "le collège des bourgmestre et échevins arrête la liste des électeurs inscrits aux registres de la population le quatre-vingtième jour qui précède celui de l'élection.",
+   "quote_english": "the college of mayor and aldermen fixes the list of electors registered in the population registers on the eightieth day before the election.",
+   "value": "le collège des bourgmestre et échevins (municipal college of mayor and aldermen)",
+   "published": "2018-07-01",
+   "title": "Code électoral / Algemeen Kieswetboek – coordination officieuse jusqu'au 1er juillet 2018",
+   "publisher": "SPF Intérieur, Direction des Elections",
+   "doc_type": "legislation",
+   "note": "The roll is compiled per municipality, not centrally.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "liste des électeurs, drawn up by the collège des bourgmestre et échevins (municipality)",
+    "reason": "This duplicates item 15: the quote names the voter list and says the municipal college draws it up from the population registers."
+   }
+  },
+  {
+   "claim": "record:BE:benefits_pensions:register",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-onp-sfp-cadastre.html",
+   "quote": "In het Pensioenkadaster wordt informatie bewaard over de uitgekeerde eerste- en tweedepijlerpensioenen in België.",
+   "quote_english": "The Pension Register stores information on first- and second-pillar pensions paid out in Belgium.",
+   "value": "Pensioenkadaster (Pension Register)",
+   "published": "",
+   "title": "Datawarehouse | DWH_ONP_SFP_CADASTRE",
+   "publisher": "Kruispuntbank van de Sociale Zekerheid (KSZ)",
+   "doc_type": "official_page",
+   "note": "This is the Crossroads Bank for Social Security's data warehouse catalogue. The source code ONP/SFP points to the Federal Pension Service, and the page covers pension payments only.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "Pensioenkadaster",
+    "reason": "The quote names the Pensioenkadaster as the store of paid first- and second-pillar pensions. The page lists Federale Pensioendienst as the source institution, and the quote does not cover entitlements or contributions."
+   }
+  },
+  {
+   "claim": "record:BE:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-29-2018.pdf",
+   "quote": "informatie waarover de AAPD (Algemene Administratie van de Patrimoniumdocumentatie) beschikt in het kader van de haar, in uitvoering van Titel IX van het Wetboek van de inkomstenbelastingen 1992, opgedragen taken",
+   "quote_english": "information held by the AAPD (General Administration of Patrimonial Documentation) in the context of the tasks assigned to it under Title IX of the Income Tax Code 1992",
+   "value": "kadastrale documentatie of the AAPD (cadastral documentation of the General Administration of Patrimonial Documentation)",
+   "published": "2018-03-21",
+   "title": "Advies 29/2018 van 21 maart 2018 (kadastrale documentatie)",
+   "publisher": "Gegevensbeschermingsautoriteit (Belgian Data Protection Authority)",
+   "doc_type": "official_page",
+   "note": "The DPA opinion quotes the draft royal decree's definition of cadastral documentation. The AAPD is part of the FPS Finance, whose own site sits behind a CAPTCHA.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "AAPD (Algemene Administratie van de Patrimoniumdocumentatie)",
+    "reason": "The quote defines the cadastral documentation as the information the AAPD holds under Title IX of the Income Tax Code, so the AAPD is the holder."
+   }
+  },
+  {
+   "claim": "record:BE:land_property:operator",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-29-2018.pdf",
+   "quote": "informatie waarover de AAPD (Algemene Administratie van de Patrimoniumdocumentatie) beschikt in het kader van de haar, in uitvoering van Titel IX van het Wetboek van de inkomstenbelastingen 1992, opgedragen taken",
+   "quote_english": "information held by the AAPD (General Administration of Patrimonial Documentation) in the context of the tasks assigned to it under Title IX of the Income Tax Code 1992",
+   "value": "Algemene Administratie van de Patrimoniumdocumentatie (AAPD) (General Administration of Patrimonial Documentation)",
+   "published": "2018-03-21",
+   "title": "Advies 29/2018 van 21 maart 2018 (kadastrale documentatie)",
+   "publisher": "Gegevensbeschermingsautoriteit (Belgian Data Protection Authority)",
+   "doc_type": "official_page",
+   "note": "The AAPD belongs to the FPS Finance.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "kadastrale documentatie held by the AAPD",
+    "reason": "In context the quote defines the 'kadastrale documentatie' held by the AAPD, but it names no specific register or system beyond that documentation."
+   }
+  },
+  {
+   "claim": "record:BE:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://gegevensbeschermingsautoriteit.be/publications/advies-nr.-03-2023.pdf",
+   "quote": "worden geïdentificeerd aan de hand van het door de Kruispuntbank van Ondernemingen toegekende ondernemingsnummer en de postcode van de zetel van de onderneming.",
+   "quote_english": "are identified by means of the enterprise number assigned by the Crossroads Bank for Enterprises and the postcode of the enterprise's registered office.",
+   "value": "Kruispuntbank van Ondernemingen (Crossroads Bank for Enterprises)",
+   "published": "2023-01-20",
+   "title": "Advies nr. 03/2023 van 20 januari 2023",
+   "publisher": "Gegevensbeschermingsautoriteit (Belgian Data Protection Authority)",
+   "doc_type": "official_page",
+   "note": "The KBO is run by the FPS Economy, whose site sits behind a CAPTCHA. This DPA opinion names the register.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Kruispuntbank van Ondernemingen",
+    "reason": "The quote names the Kruispuntbank van Ondernemingen as the body assigning company numbers. It does not say who operates it."
+   }
+  },
+  {
+   "claim": "record:BE:beneficial_ownership:register",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-81-2022.pdf",
+   "quote": "Het UBO-register heeft tot doel toereikende, accurate en actuele informatie ter beschikking te stellen over de uiteindelijke begunstigden",
+   "quote_english": "The UBO register aims to make adequate, accurate and current information available on the ultimate beneficial owners",
+   "value": "UBO-register (register of ultimate beneficial owners)",
+   "published": "2022-04-25",
+   "title": "Advies nr. 81/2022 van 25 april 2022 (werkingsmodaliteiten UBO-register)",
+   "publisher": "Gegevensbeschermingsautoriteit (Belgian Data Protection Authority)",
+   "doc_type": "official_page",
+   "note": "The same opinion shows the Administratie van de Thesaurie (FPS Finance) running the register's supervision and its EU interconnection.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "UBO-register",
+    "reason": "The quote names the UBO-register and its purpose, but not its operator."
+   }
+  },
+  {
+   "claim": "record:BE:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-56-2026.pdf",
+   "quote": "Kruispuntbank van de Voertuigen die beheerd wordt door de Directie voor de Inschrijving van Voertuigen van de Federale Overheidsdienst Mobiliteit en Vervoer",
+   "quote_english": "Crossroads Bank for Vehicles, managed by the Vehicle Registration Directorate of the Federal Public Service Mobility and Transport",
+   "value": "Kruispuntbank van de Voertuigen (Crossroads Bank for Vehicles)",
+   "published": "2026-03-12",
+   "title": "Geschillenkamer Beslissing ten gronde 56/2026 van 12 maart 2026",
+   "publisher": "Gegevensbeschermingsautoriteit (Belgian Data Protection Authority)",
+   "doc_type": "official_page",
+   "note": "This covers vehicle registrations only, not driving licences.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Kruispuntbank van de Voertuigen, managed by the Directie voor de Inschrijving van Voertuigen (DIV), FOD Mobiliteit en Vervoer",
+    "reason": "The quote names the vehicle register and says the DIV of the FPS Mobility and Transport manages it. It says nothing about driving licences."
+   }
+  },
+  {
+   "claim": "record:BE:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-56-2026.pdf",
+   "quote": "Kruispuntbank van de Voertuigen die beheerd wordt door de Directie voor de Inschrijving van Voertuigen van de Federale Overheidsdienst Mobiliteit en Vervoer",
+   "quote_english": "Crossroads Bank for Vehicles, managed by the Vehicle Registration Directorate of the Federal Public Service Mobility and Transport",
+   "value": "Directie voor de Inschrijving van Voertuigen van de Federale Overheidsdienst Mobiliteit en Vervoer (DIV, Vehicle Registration Directorate of FPS Mobility and Transport)",
+   "published": "2026-03-12",
+   "title": "Geschillenkamer Beslissing ten gronde 56/2026 van 12 maart 2026",
+   "publisher": "Gegevensbeschermingsautoriteit (Belgian Data Protection Authority)",
+   "doc_type": "official_page",
+   "note": "The DIV operates the vehicle register.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Kruispuntbank van de Voertuigen, managed by the Directie voor de Inschrijving van Voertuigen (DIV), FOD Mobiliteit en Vervoer",
+    "reason": "This duplicates item 22: the quote gives both the name and the managing body of the vehicle register."
+   }
+  },
+  {
+   "claim": "record:BE:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://gegevensbeschermingsautoriteit.be/publications/advies-nr.-73-2026.pdf",
+   "quote": "een ontwerp van koninklijk besluit tot wijziging van het koninklijk besluit van 19 juli 2001 betreffende de toegang van bepaalde openbare besturen tot het Centraal Strafregister",
+   "quote_english": "a draft royal decree amending the royal decree of 19 July 2001 on access by certain public administrations to the Central Criminal Register",
+   "value": "Centraal Strafregister (Central Criminal Register)",
+   "published": "2026-04-15",
+   "title": "Advies nr. 73/2026 van 15 april 2026",
+   "publisher": "Gegevensbeschermingsautoriteit (Belgian Data Protection Authority)",
+   "doc_type": "official_page",
+   "note": "This covers criminal records only; court case files and judgments are not covered. The register is held by the FPS Justice, whose site sits behind a CAPTCHA.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "Centraal Strafregister",
+    "reason": "The quote names the Centraal Strafregister (the title of the draft royal decree), but not its operator."
+   }
+  },
+  {
+   "claim": "record:BE:police_records:register",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://www.controleorgaan.be/files/CON23005_NL.pdf",
+   "quote": "Vandaar dat in WPA wordt vastgelegd dat de ANG en de basisgegevensbanken door de DRI worden ontwikkeld en beheerd",
+   "quote_english": "That is why the Police Function Act lays down that the ANG and the basic databases are developed and managed by the DRI",
+   "value": "ANG (Algemene Nationale Gegevensbank, General National Database) and the basic databases",
+   "published": "2026-07",
+   "title": "Technisch toezicht door het Controleorgaan op de politionele informatie bij de federale politie, Directie van de ICT en de PZ Antwerpen m.b.t. FOCUS (CON23005)",
+   "publisher": "Controleorgaan op de politionele informatie (COC)",
+   "doc_type": "audit_report",
+   "note": "The same report spells out ANG as Algemene Nationale Gegevensbank. It also notes that the FOCUS back-end sits in the DRI data centre.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "ANG and basisgegevensbanken, developed and managed by the DRI",
+    "reason": "The quote says the Police Act (WPA) assigns development and management of the ANG and the basic databases to the DRI. Both appear only as acronyms."
+   }
+  },
+  {
+   "claim": "record:BE:police_records:operator",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://www.controleorgaan.be/files/CON23005_NL.pdf",
+   "quote": "Vandaar dat in WPA wordt vastgelegd dat de ANG en de basisgegevensbanken door de DRI worden ontwikkeld en beheerd",
+   "quote_english": "That is why the Police Function Act lays down that the ANG and the basic databases are developed and managed by the DRI",
+   "value": "DRI (Directie van de ICT of the federal police)",
+   "published": "2026-07",
+   "title": "Technisch toezicht door het Controleorgaan op de politionele informatie bij de federale politie, Directie van de ICT en de PZ Antwerpen m.b.t. FOCUS (CON23005)",
+   "publisher": "Controleorgaan op de politionele informatie (COC)",
+   "doc_type": "audit_report",
+   "note": "The report's title expands DRI as the federal police's ICT Directorate.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "ANG and basisgegevensbanken, developed and managed by the DRI",
+    "reason": "This duplicates item 25: the quote names the systems (ANG, basisgegevensbanken) and the managing body (DRI), both as acronyms."
+   }
+  },
+  {
+   "claim": "record:BE:firearms_register:register",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-169-2019.pdf",
+   "quote": "Op haar beurt brengt de lokale politie hierover bepaalde informatie in in het Centraal Wapenregister, dat beheerd wordt door een dienst van de Federale Politie.",
+   "quote_english": "The local police in turn enter certain information on this into the Central Weapons Register, which is managed by a service of the Federal Police.",
+   "value": "Centraal Wapenregister (Central Weapons Register)",
+   "published": "2019-11-08",
+   "title": "Advies nr 169/2019 van 8 november 2019",
+   "publisher": "Gegevensbeschermingsautoriteit (Belgian Data Protection Authority)",
+   "doc_type": "official_page",
+   "note": "The DPA opinion was issued on a draft royal decree under the Weapons Act.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Centraal Wapenregister, managed by a service of the Federale Politie",
+    "reason": "The quote names the Centraal Wapenregister and says a service of the Federal Police manages it, without naming which service."
+   }
+  },
+  {
+   "claim": "record:BE:firearms_register:operator",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-169-2019.pdf",
+   "quote": "Op haar beurt brengt de lokale politie hierover bepaalde informatie in in het Centraal Wapenregister, dat beheerd wordt door een dienst van de Federale Politie.",
+   "quote_english": "The local police in turn enter certain information on this into the Central Weapons Register, which is managed by a service of the Federal Police.",
+   "value": "een dienst van de Federale Politie (a service of the Federal Police)",
+   "published": "2019-11-08",
+   "title": "Advies nr 169/2019 van 8 november 2019",
+   "publisher": "Gegevensbeschermingsautoriteit (Belgian Data Protection Authority)",
+   "doc_type": "official_page",
+   "note": "The operator is the Federal Police.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Centraal Wapenregister, managed by a service of the Federale Politie",
+    "reason": "This duplicates item 27: the quote gives the name of the register and says a Federal Police service manages it."
+   }
+  },
+  {
+   "claim": "record:BE:electoral_management:register",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://elections.fgov.be/informations-generales/securite-et-transparence",
+   "quote": "MARTINE est une plateforme utilisée par différents acteurs durant le processus électoral",
+   "quote_english": "MARTINE is a platform used by various actors during the electoral process",
+   "value": "MARTINE",
+   "published": "",
+   "title": "Sécurité et transparence",
+   "publisher": "SPF Intérieur, Direction des Elections",
+   "doc_type": "official_page",
+   "note": "The page says MARTINE carries results electronically from the canton offices to the central authority. SMARTMATIC is the e-voting software and PATSY supports counting.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "MARTINE",
+    "reason": "The quote names MARTINE as a platform used in the electoral process, and the context adds that it transmits results. The quote does not name its operator."
+   }
+  },
+  {
+   "claim": "record:BE:central_bank:register",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.nbb.be/nl/betalingen-en-effecten/het-securities-settlement-system-nbb-sss",
+   "quote": "Het NBB Securities Settlement System (NBB-SSS) maakt de verwerking mogelijk van transacties op zowel de primaire markt, waar nieuwe effecten worden uitgegeven",
+   "quote_english": "The NBB Securities Settlement System (NBB-SSS) enables the processing of transactions on both the primary market, where new securities are issued",
+   "value": "NBB Securities Settlement System (NBB-SSS)",
+   "published": "",
+   "title": "Het Securities Settlement System (NBB-SSS)",
+   "publisher": "Nationale Bank van België",
+   "doc_type": "official_page",
+   "note": "The National Bank of Belgium operates NBB-SSS. Payment settlement runs on the Eurosystem's T2/T2S/TIPS, which is EU infrastructure.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "NBB Securities Settlement System (NBB-SSS)",
+    "reason": "The quote names the NBB-SSS as the securities settlement system for primary- and secondary-market transactions. It does not cover central bank accounts or reserves."
+   }
+  },
+  {
+   "claim": "record:BE:intelligence:register",
+   "question": "Intelligence services: Intelligence holdings and case files",
+   "relation": "fills_gap",
+   "url": "https://cuta.belgium.be/who-we-are/",
+   "quote": "Act of 29 March 2024 establishing the Common Database Terrorism, Extremism, Radicalisation Process (CDB T.E.R.)",
+   "quote_english": "",
+   "value": "Common Database Terrorism, Extremism, Radicalisation Process (CDB T.E.R.)",
+   "published": "",
+   "title": "Who we are - CUTA",
+   "publisher": "Coordination Unit for Threat Analysis (CUTA/OCAM)",
+   "doc_type": "official_page",
+   "note": "This is the shared database of the intelligence and security services, which CUTA manages operationally. The VSSE's own holdings are not covered.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "Common Database Terrorism, Extremism, Radicalisation Process (CDB T.E.R.)",
+    "reason": "The quote names the CDB T.E.R. and the act that established it, but not who operates it."
+   }
+  },
+  {
+   "claim": "record:BE:intelligence:operator",
+   "question": "Intelligence services: Intelligence holdings and case files",
+   "relation": "fills_gap",
+   "url": "https://cuta.belgium.be/who-we-are/",
+   "quote": "CUTA is the coordinator of the Strategic Note Extremism and Terrorism (Strategy T.E.R.) and the operational manager of the Common Database Terrorism, Extremism, Radicalisation Process (CDB T.E.R.)",
+   "quote_english": "",
+   "value": "CUTA (Coordination Unit for Threat Analysis)",
+   "published": "",
+   "title": "Who we are - CUTA",
+   "publisher": "Coordination Unit for Threat Analysis (CUTA/OCAM)",
+   "doc_type": "official_page",
+   "note": "CUTA is the operational manager of the CDB T.E.R.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "CDB T.E.R., operationally managed by CUTA",
+    "reason": "The quote says CUTA is the operational manager of the Common Database T.E.R."
+   }
+  },
+  {
+   "claim": "record:BE:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.astrid.be/nl/diensten/radiocommunicatie",
+   "quote": "De TETRA-norm waarop het ASTRID-radionetwerk is gebaseerd, is een open norm.",
+   "quote_english": "The TETRA standard on which the ASTRID radio network is based is an open standard.",
+   "value": "ASTRID-radionetwerk (ASTRID TETRA radio network)",
+   "published": "",
+   "title": "Radiocommunicatie | ASTRID",
+   "publisher": "ASTRID nv van publiek recht",
+   "doc_type": "official_page",
+   "note": "ASTRID also runs the provincial dispatch centres (meldkamers) and paging.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "ASTRID radio network (TETRA)",
+    "reason": "The quote names the ASTRID radio network and says it is built on the open TETRA standard. It does not say who operates it."
+   }
+  },
+  {
+   "claim": "record:BE:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.astrid.be/nl/over-astrid/organisatie",
+   "quote": "ASTRID is een naamloze vennootschap van publiek recht die werd opgericht in uitvoering van de wet van 8 juni 1998",
+   "quote_english": "ASTRID is a public-law limited company established under the law of 8 June 1998",
+   "value": "ASTRID (naamloze vennootschap van publiek recht, public-law company)",
+   "published": "",
+   "title": "Organisatie | ASTRID",
+   "publisher": "ASTRID nv van publiek recht",
+   "doc_type": "official_page",
+   "note": "The operator is state-controlled.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "ASTRID (public-law limited company created under the law of 8 June 1998)",
+    "reason": "The quote says ASTRID is a naamloze vennootschap van publiek recht set up under a 1998 law, which makes it a state-created public-law company. The context says it runs the radio network and dispatch centres."
+   }
+  },
+  {
+   "claim": "record:BE:emergency_communications:count",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.astrid.be/nl/diensten/radiocommunicatie",
+   "quote": "Dagelijks verwerkt het netwerk meer dan 2 miljoen radiocontacten.",
+   "quote_english": "Every day the network handles more than 2 million radio contacts.",
+   "value": "more than 2 million radio contacts per day",
+   "published": "",
+   "title": "Radiocommunicatie | ASTRID",
+   "publisher": "ASTRID nv van publiek recht",
+   "doc_type": "official_page",
+   "note": "This is a throughput figure, not a record count.",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "more than 2 million radio contacts per day",
+    "reason": "The quote says the network handles more than 2 million radio contacts daily."
+   }
+  },
+  {
+   "claim": "record:BE:crisis_management:register",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://crisiscentrum.be/nl/newsroom/meer-dan-1-miljoen-geregistreerde-adressen-be-alert",
+   "quote": "De kaap van één miljoen geregistreerde adressen in BE-Alert, het alarmeringssysteem van de overheid, is overschreden.",
+   "quote_english": "The mark of one million registered addresses in BE-Alert, the government's alerting system, has been passed.",
+   "value": "BE-Alert (the government's alerting system)",
+   "published": "2022",
+   "title": "Meer dan 1 miljoen geregistreerde adressen in BE-Alert",
+   "publisher": "Nationaal Crisiscentrum (NCCN)",
+   "doc_type": "official_page",
+   "note": "BE-Alert has been in use since 2017 by mayors, governors and the Interior Minister, and the NCCN runs it.",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "BE-Alert (government alerting system); over 1 million registered addresses",
+    "reason": "The quote names BE-Alert as the government alerting system and says it passed one million registered addresses (news item dated 6 February 2022)."
+   }
+  },
+  {
+   "claim": "record:BE:crisis_management:count",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://crisiscentrum.be/nl/newsroom/meer-dan-1-miljoen-geregistreerde-adressen-be-alert",
+   "quote": "Meer dan 1 miljoen geregistreerde adressen in BE-Alert",
+   "quote_english": "More than 1 million registered addresses in BE-Alert",
+   "value": "more than 1 million registered addresses",
+   "published": "2022",
+   "title": "Meer dan 1 miljoen geregistreerde adressen in BE-Alert",
+   "publisher": "Nationaal Crisiscentrum (NCCN)",
+   "doc_type": "official_page",
+   "note": "This is a 2022 figure and may since have grown.",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "more than 1 million registered addresses in BE-Alert",
+    "reason": "The quote is the headline stating that BE-Alert has more than 1 million registered addresses."
+   }
+  },
+  {
+   "claim": "record:BE:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led",
+   "quote": "Het bestand bevat de gegevens van LED, de Leer- en ErvaringsbewijzenDatabank.",
+   "quote_english": "The file contains the data of LED, the Learning and Experience Certificates Database.",
+   "value": "LED, de Leer- en ErvaringsbewijzenDatabank (Learning and Experience Certificates Database)",
+   "published": "",
+   "title": "Datawarehouse | DWH_AHOVOKS_LED",
+   "publisher": "Kruispuntbank van de Sociale Zekerheid (KSZ)",
+   "doc_type": "official_page",
+   "note": "LED covers the Flemish Community only; education is devolved, and the French and German-speaking Communities keep separate records.",
+   "review": {
+    "id": 38,
+    "quote_found": true,
+    "established": "LED (Leer- en ErvaringsbewijzenDatabank)",
+    "reason": "The quote names LED as the database, and the context says it collects qualification certificates for the Flemish Community only."
+   }
+  },
+  {
+   "claim": "record:BE:education:operator",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led",
+   "quote": "Het Agentschap voor Kwaliteitszorg in Onderwijs en Vorming is bevoegd voor het beheer van de databank.",
+   "quote_english": "The Agency for Quality Assurance in Education and Training is responsible for managing the database.",
+   "value": "Agentschap voor Kwaliteitszorg in Onderwijs en Vorming (Agency for Quality Assurance in Education and Training)",
+   "published": "",
+   "title": "Datawarehouse | DWH_AHOVOKS_LED",
+   "publisher": "Kruispuntbank van de Sociale Zekerheid (KSZ)",
+   "doc_type": "official_page",
+   "note": "This is a Flemish agency.",
+   "review": {
+    "id": 39,
+    "quote_found": true,
+    "established": "Agentschap voor Kwaliteitszorg in Onderwijs en Vorming",
+    "reason": "The context shows 'de databank' refers to LED, so the quote names the agency responsible for managing it. This is a Flemish, not federal, body."
+   }
+  },
+  {
+   "claim": "indicator:BE:C1",
+   "question": "Does the state operate its own government data centres that are in operation today? yes = Operated by the state or a state-controlled body and in operation; partial = Planned or under construction; no = A source states the state operates none",
+   "relation": "fills_gap",
+   "url": "https://www.gcloud.belgium.be/nl/service/detail/housing",
+   "quote": "G-Cloud heeft vier data centers waarvan een deel beschikbaar wordt gesteld aan instellingen voor het housen van racks met servers en andere componenten.",
+   "quote_english": "G-Cloud has four data centres, part of which is made available to institutions for housing racks with servers and other components.",
+   "value": "yes",
+   "published": "",
+   "title": "Housing – Datacenter-as-a-Service (G-Cloud)",
+   "publisher": "G-Cloud (Belgian federal government community cloud)",
+   "doc_type": "official_page",
+   "note": "The service is marked 'In service modus'. The 4 data centres are managed by a board of the FPS Finance, the Buildings Agency (Regie der Gebouwen) and Smals.",
+   "review": {
+    "id": 40,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote says G-Cloud, the government cloud on a belgium.be site, has four data centres whose space is offered to institutions for housing servers. It does not itself name the operating body."
+   }
+  },
+  {
+   "claim": "indicator:BE:C2",
+   "question": "Is a national sovereign or government cloud platform in operation (not announced)? yes = In operation and serving government workloads; partial = Announced or in pilot; no = A source states none exists",
+   "relation": "fills_gap",
+   "url": "https://www.gcloud.belgium.be/nl",
+   "quote": "De G-Cloud is een hybride cloud, waarbij enerzijds gebruik wordt gemaakt van diensten aangeboden door private firma's in publieke cloud-omgevingen, en anderzijds van diensten gehost in datacenters van de overheid. Het beheer van de G-Cloud gebeurt door de overheid.",
+   "quote_english": "The G-Cloud is a hybrid cloud, using on the one hand services offered by private firms in public cloud environments and on the other services hosted in government data centres. The G-Cloud is managed by the government.",
+   "value": "yes",
+   "published": "",
+   "title": "G-Cloud, de community cloud van de overheid",
+   "publisher": "G-Cloud (Belgian federal government community cloud)",
+   "doc_type": "official_page",
+   "note": "The same page says the first G-Cloud services have been operational since March 2015. It is a hybrid cloud that partly uses private public-cloud providers, so it is not purely sovereign.",
+   "review": {
+    "id": 41,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote says the G-Cloud is a hybrid cloud managed by the government, partly hosted in government data centres. The page context says its first services have been operational since March 2015."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:BE:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:BE:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:BE:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:breeder_documents:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:breeder_documents:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:civil_registry:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:facial_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:residence_permits:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:BE:trust_services_pki:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:authentication_audit_log:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:tax:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:BE:customs:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:BE:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:health_insurance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:BE:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:border_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BE:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:official_gazette:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:BE:public_finance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:BE:government_payroll:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BE:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:defence_command:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BE:intelligence:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:BE:grid_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:BE:water_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:BE:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:BE:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:BE:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:BE:L1",
+   "status": "not_reached"
+  },
+  {
+   "claim": "indicator:BE:L3",
+   "status": "not_reached"
+  }
+ ]
+}

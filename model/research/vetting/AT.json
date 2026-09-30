@@ -1,0 +1,1252 @@
+{
+ "iso": "AT",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:AT:trust_services_pki:count",
+   "question": "State PKI and qualified trust services: how many records it holds",
+   "relation": "upgrade",
+   "url": "https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/2026/09/proell-6-3-millionen-ausgestellte-id-austria-nach-erfolgreicher-id-austria-servicetour.html",
+   "quote": "Mit 30. Juni 2026 gab es bundesweit rund 6 Millionen ID Austria-Registrierungen, mit 1. September 2026 bereits fast 6,3 Millionen.",
+   "quote_english": "As of 30 June 2026 there were around 6 million ID Austria registrations nationwide; as of 1 September 2026 almost 6.3 million.",
+   "value": "fast 6,3 Millionen ID Austria-Registrierungen (almost 6.3 million ID Austria registrations) as of 1 September 2026",
+   "published": "2026-09-08",
+   "title": "Pröll: 6,3 Millionen ausgestellte \"ID Austria\" nach erfolgreicher ID Austria Servicetour",
+   "publisher": "Bundeskanzleramt Österreich",
+   "doc_type": "official_page",
+   "note": "Official federal chancellery figure dated September 2026 replaces the undated vendor (A-Trust) marketing claim of 4 million QES users; it counts ID Austria registrations, which carry the qualified signature, not A-Trust QES users as such.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "almost 6.3 million ID Austria registrations (as of 1 Sept 2026)",
+    "reason": "The quote counts ID Austria eID registrations, not PKI certificates or trust-service records, so it answers the question only if ID Austria is treated as the state PKI holding."
+   }
+  },
+  {
+   "claim": "indicator:AT:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corroborates",
+   "url": "https://www.brz.gv.at/was-wir-tun/geschaeftsfelder/cloud-solutions.html",
+   "quote": "Das BRZ bietet modernste Cloud-Technologie. SAP beispielsweise läuft bereits vollständig virtualisiert und damit ausfallsicher. Unsere GovCloud ist nach modernsten Standards zertifiziert.",
+   "quote_english": "The BRZ offers state-of-the-art cloud technology. SAP, for example, already runs fully virtualised and therefore fail-safe. Our GovCloud is certified to the latest standards.",
+   "value": "Yes",
+   "published": "",
+   "title": "Cloud Solutions & Shared Services",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "The federally owned BRZ's own cloud page names an operating GovCloud and says elsewhere on the page that migration happens 'alles in Österreich'; it is more specific than the printed business-areas overview.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "BRZ says its GovCloud is certified and that SAP already runs virtualised on it, which describes an operating platform rather than an announced one."
+   }
+  },
+  {
+   "claim": "record:AT:electoral_roll:count",
+   "question": "Electoral roll entry: how many records it holds",
+   "relation": "corroborates",
+   "url": "https://www.bmi.gv.at/412/nationalratswahlen/nationalratswahl_2024/files/verlautbarung_der_bundeswahlbehoerde_16102024_bf.pdf",
+   "quote": "über das Ergebnis der Feststellungen im dritten Ermittlungsverfahren A. Wahlberechtigte: 6.346.059 Abgegebene Stimmen: 4.929.745",
+   "quote_english": "on the result of the findings in the third determination procedure A. Persons entitled to vote: 6,346,059 Votes cast: 4,929,745",
+   "value": "6.346.059 Wahlberechtigte (6,346,059 persons entitled to vote)",
+   "published": "2024-10-16",
+   "title": "Verlautbarung der Bundeswahlbehörde, Nationalratswahl vom 29. September 2024",
+   "publisher": "Bundeswahlbehörde (Federal Electoral Board)",
+   "doc_type": "official_page",
+   "note": "The Federal Electoral Board's formal publication of the final result confirms the figure; no nationwide election has been held since then, so there is no newer total.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "6,346,059 eligible voters (Nationalratswahl 2024)",
+    "reason": "The Bundeswahlbehörde's official result gives the number of Wahlberechtigte."
+   }
+  },
+  {
+   "claim": "record:AT:issuance_history:foreign_dependency",
+   "question": "Document issuance history: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "corroborates",
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798",
+   "quote": "Die Bundesrechenzentrum GmbH hat als Auftragsverarbeiterin bei der Führung von Datenverarbeitungen gemäß § 22a und § 22b gegen Entgelt mitzuwirken.",
+   "quote_english": "The Bundesrechenzentrum GmbH shall, as processor, take part for a fee in keeping the data processing operations under § 22a and § 22b.",
+   "value": "national",
+   "published": "2026-09-30",
+   "title": "Passgesetz 1992, consolidated version",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "Under the statute, the federally owned BRZ must act as processor for the central passport/ID evidence (the IDR), which supports national infrastructure. The quote names the processor, not the hosting location.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "national",
+    "reason": "The Passgesetz (§ 22a/22b processing, central evidence of passports and ID cards) names the federal Bundesrechenzentrum GmbH as processor."
+   }
+  },
+  {
+   "claim": "record:AT:issuance_history:register",
+   "question": "Document issuance history: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.polizei.gv.at/bgld/files_bgld/datenschutz/2023/zentrales_identitaetsdokumentenregister_idr_012023_bf.pdf",
+   "quote": "Information zu der Verarbeitung „Zentrales Identitätsdokumentenregister (IDR)“ gemäß Art. 13 und 14 Datenschutz-Grundverordnung (DSGVO)",
+   "quote_english": "Information on the processing 'Central Identity Document Register (IDR)' pursuant to Art. 13 and 14 GDPR",
+   "value": "Zentrales Identitätsdokumentenregister (IDR) (Central Identity Document Register)",
+   "published": "2021-01",
+   "title": "Information zu der Verarbeitung „Zentrales Identitätsdokumentenregister (IDR)“",
+   "publisher": "Landespolizeidirektion Burgenland (Bundespolizei)",
+   "doc_type": "official_page",
+   "note": "A controller's own GDPR notice gives the official name 'Zentrales IDR' and states the purpose: notifying authorities of passports and ID cards issued. This is independent of the audit report.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Zentrales Identitätsdokumentenregister (IDR)",
+    "reason": "The data-protection notice names the processing explicitly."
+   }
+  },
+  {
+   "claim": "indicator:AT:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://www.brz.gv.at/was-wir-tun/geschaeftsfelder/trusted-data-center.html",
+   "quote": "Wir betreiben eines der größten Rechenzentren Österreichs. Mit 4.000 Servern, 50.000 betreuten IT-Arbeitsplätzen und 20.000 TB Storage im Rechenzentrum, stellen wir erstklassige Infrastruktur für den Public Sector zur Verfügung.",
+   "quote_english": "We operate one of Austria's largest data centres. With 4,000 servers, 50,000 supported IT workstations and 20,000 TB of storage in the data centre, we provide first-class infrastructure for the public sector.",
+   "value": "Yes",
+   "published": "",
+   "title": "Trusted Data Center",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "The operator itself confirms a data centre in operation; the printed source is the BRZ statute, which only establishes the company.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "BRZ says it operates one of Austria's largest data centres for the public sector (4,000 servers, 20,000 TB). Its state ownership comes from page context, not from the quote."
+   }
+  },
+  {
+   "claim": "record:AT:digital_identity_credentials:register",
+   "question": "Digital identity credentials: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.brz.gv.at/was-wir-tun/services-produkte/id-austria.html",
+   "quote": "Die ID Austria ist der österreichische elektronische Identitätsnachweis (eID), der es Menschen ermöglicht, sich sicher online zu identifizieren und damit digitale Services zu nutzen.",
+   "quote_english": "ID Austria is the Austrian electronic proof of identity (eID), which lets people identify themselves securely online and so use digital services.",
+   "value": "ID Austria, der österreichische elektronische Identitätsnachweis (eID) (ID Austria, the Austrian electronic proof of identity)",
+   "published": "",
+   "title": "ID Austria",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "The state-owned technical operator's page confirms that the statutory E-ID is branded ID Austria.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "ID Austria",
+    "reason": "The quote names ID Austria as Austria's electronic identity (eID)."
+   }
+  },
+  {
+   "claim": "record:AT:civil_registry:register",
+   "question": "Civil registry core: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.bmi.gv.at/413/start.html",
+   "quote": "Es wird ausdrücklich darauf hingewiesen, dass die Abteilung IV/DDS/9 des Bundesministeriums für Inneres (BMI) ausschließlich der technische Betreiber des ZMR ist.",
+   "quote_english": "It is expressly pointed out that Department IV/DDS/9 of the Federal Ministry of the Interior (BMI) is solely the technical operator of the ZMR.",
+   "value": "Zentrales Melderegister (ZMR) (Central Register of Residents)",
+   "published": "2025-03-27",
+   "title": "Zentrales Melderegister - ZMR",
+   "publisher": "Bundesministerium für Inneres",
+   "doc_type": "official_page",
+   "note": "The BMI's ZMR page confirms the register and names BMI Department IV/DDS/9 as its technical operator. The printed civil_registry operator instead cites the ZPR (civil-status register), so register and operator refer to different systems.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "ZMR",
+    "reason": "The quote names the register only by its abbreviation ZMR (Zentrales Melderegister)."
+   }
+  },
+  {
+   "claim": "record:AT:civil_registry:operator",
+   "question": "Civil registry core: the body that operates it",
+   "relation": "contradicts",
+   "url": "https://www.bmi.gv.at/413/start.html",
+   "quote": "Es wird ausdrücklich darauf hingewiesen, dass die Abteilung IV/DDS/9 des Bundesministeriums für Inneres (BMI) ausschließlich der technische Betreiber des ZMR ist.",
+   "quote_english": "It is expressly pointed out that Department IV/DDS/9 of the Federal Ministry of the Interior (BMI) is solely the technical operator of the ZMR.",
+   "value": "Abteilung IV/DDS/9 des Bundesministeriums für Inneres (BMI), technischer Betreiber des ZMR (Department IV/DDS/9 of the Federal Ministry of the Interior, technical operator of the ZMR)",
+   "published": "2025-03-27",
+   "title": "Zentrales Melderegister - ZMR",
+   "publisher": "Bundesministerium für Inneres",
+   "doc_type": "official_page",
+   "note": "The printed operator ('processor of the ZPR') describes the civil-status register, not the ZMR printed as the register. The BMI is the operator either way, but the pair is inconsistent; the ZPR (Zentrales Personenstandsregister, live since 1 November 2014, https://www.bmi.gv.at/414/start.html) may be the better 'civil registry core'.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Abteilung IV/DDS/9 of the Bundesministerium für Inneres (technical operator only)",
+    "reason": "The quote states explicitly that BMI department IV/DDS/9 is solely the technical operator of the ZMR."
+   }
+  },
+  {
+   "claim": "record:AT:residence_permits:register",
+   "question": "Residence and migration status: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_bmi-zentrales_fremdenregister_v2.pdf",
+   "quote": "Information zu der Verarbeitung „Zentrales Fremdenregister“ gemäß Art. 13 und 14 DatenschutzGrundverordnung (DSGVO)",
+   "quote_english": "Information on the processing 'Central Register of Foreigners' pursuant to Art. 13 and 14 GDPR",
+   "value": "Zentrales Fremdenregister (Central Register of Foreigners)",
+   "published": "",
+   "title": "Information zu der Verarbeitung „Zentrales Fremdenregister“",
+   "publisher": "Bundesministerium für Inneres",
+   "doc_type": "official_page",
+   "note": "The BMI's own GDPR notice for the register confirms the name, independent of the BFA-VG text.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Zentrales Fremdenregister",
+    "reason": "The notice names the processing. The only mismatch is a line-break hyphen in Datenschutz-Grundverordnung."
+   }
+  },
+  {
+   "claim": "record:AT:residence_permits:operator",
+   "question": "Residence and migration status: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_bmi-zentrales_fremdenregister_v2.pdf",
+   "quote": "Gemeinsame Verarbeitung und Benützung der Daten Fremder durch den Bundesminister für Inneres, das Bundesamt für Fremdenwesen und Asyl, die Vertretungsbehörden, das Bundesverwaltungsgericht und die Behörden nach dem NAG sowie die Landespolizeidirektionen in einem zentralen Register",
+   "quote_english": "Joint processing and use of data on foreigners by the Federal Minister of the Interior, the Federal Office for Immigration and Asylum, the representation authorities, the Federal Administrative Court, the NAG authorities and the provincial police directorates in a central register",
+   "value": "Bundesminister für Inneres, jointly with the Bundesamt für Fremdenwesen und Asyl and other authorities (Federal Minister of the Interior with the Federal Office for Immigration and Asylum)",
+   "published": "",
+   "title": "Information zu der Verarbeitung „Zentrales Fremdenregister“",
+   "publisher": "Bundesministerium für Inneres",
+   "doc_type": "official_page",
+   "note": "The notice confirms that the register is a joint processing led by the Federal Minister of the Interior, as the printed text says.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote lists the authorities that jointly process and use the register (BMI, BFA, missions, BVwG, NAG authorities, LPDs) but does not say which body operates it; BMI appears as controller only in the page header, not in the quote."
+   }
+  },
+  {
+   "claim": "record:AT:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.rtr.at/TKP/was_wir_tun/vertrauensdienste/Signatur/vertrauensliste/VertrListe.de.html",
+   "quote": "Mit der Führung der „Vertrauensliste“ gemäß Art. 22 eIDAS-VO ist die RTR-GmbH betraut (§ 14 Abs. 1 SVG).",
+   "quote_english": "RTR-GmbH is entrusted with keeping the 'trusted list' under Art. 22 of the eIDAS Regulation (§ 14(1) SVG).",
+   "value": "RTR-GmbH",
+   "published": "",
+   "title": "Vertrauensliste der beaufsichtigten Vertrauensdiensteanbieter",
+   "publisher": "Rundfunk und Telekom Regulierungs-GmbH (RTR)",
+   "doc_type": "official_page",
+   "note": "The regulator's own page confirms that it keeps the national trust list and publishes it as machine-readable XML.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "RTR-GmbH (keeper of the eIDAS trusted list only)",
+    "reason": "The quote shows RTR-GmbH maintains the national trusted list under Art. 22 eIDAS. That is a supervisory list, not the operation of a state PKI or trust service."
+   }
+  },
+  {
+   "claim": "record:AT:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "contradicts",
+   "url": "https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_erkennungsdienstliche_evidenz-ede_v3.pdf",
+   "quote": "Information zu der Verarbeitung „Erkennungsdienstliche Evidenz-EDE“ gemäß § 43 Datenschutzgesetz (DSG) Namen und die Kontaktdaten des Verantwortlichen: Bundesminister für Inneres",
+   "quote_english": "Information on the processing 'Identification Records Evidence (EDE)' pursuant to § 43 Data Protection Act; name of the controller: Federal Minister of the Interior",
+   "value": "Erkennungsdienstliche Evidenz-EDE (central police identification-data register, controller the Federal Minister of the Interior)",
+   "published": "",
+   "title": "Information zu der Verarbeitung „Erkennungsdienstliche Evidenz-EDE“",
+   "publisher": "Bundesministerium für Inneres",
+   "doc_type": "official_page",
+   "note": "'No central register' holds only for passport fingerprints (Passgesetz § 22b excludes lit. k). The BMI keeps the central EDE under SPG § 75 for identifying offenders, and under SPG it holds identification data including fingerprints. The quoted notice does not itself say 'fingerprints', so this should be reviewed.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "Erkennungsdienstliche Evidenz (EDE)",
+    "reason": "The notice names the processing, with the Bundesminister für Inneres as controller, but says nothing specific about fingerprints."
+   }
+  },
+  {
+   "claim": "record:AT:tax:register",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://www.brz.gv.at/was-wir-tun/services-produkte/finanzonline.html",
+   "quote": "Vom Eingang einer Steuererklärung bis hin zum Bescheid und zur Zustellung und Zahlung – der gesamte Prozess wird über FinanzOnline elektronisch abgewickelt.",
+   "quote_english": "From the receipt of a tax return through to the assessment, delivery and payment, the whole process is handled electronically via FinanzOnline.",
+   "value": "FinanzOnline",
+   "published": "",
+   "title": "FinanzOnline",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "Names the tax administration's system covering returns, assessments and payments; the client is the BMF.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "FinanzOnline",
+    "reason": "The quote says the whole tax process, from return to assessment and payment, runs electronically through FinanzOnline."
+   }
+  },
+  {
+   "claim": "record:AT:tax:operator",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://www.brz.gv.at/was-wir-tun/services-produkte/finanzonline.html",
+   "quote": "Das BRZ ist für die technische Projektumsetzung, für die Analyse, Programmierung und Systemimplementierung verantwortlich. Auftraggeber ist das BMF. Die Wartung und der laufende Betrieb werden ebenfalls vom BRZ durchgeführt.",
+   "quote_english": "The BRZ is responsible for technical implementation, analysis, programming and system implementation. The client is the BMF. Maintenance and day-to-day operation are also carried out by the BRZ.",
+   "value": "Bundesrechenzentrum GmbH (BRZ) for the Bundesministerium für Finanzen (Federal Computing Centre, for the Federal Ministry of Finance)",
+   "published": "",
+   "title": "FinanzOnline",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "The state-owned BRZ runs FinanzOnline on behalf of the BMF.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "operated by BRZ (Bundesrechenzentrum) on behalf of the BMF",
+    "reason": "BRZ carries out development, maintenance and ongoing operation, and the BMF is the client."
+   }
+  },
+  {
+   "claim": "record:AT:customs:register",
+   "question": "Customs declarations: Import and export declarations and duty assessments",
+   "relation": "fills_gap",
+   "url": "https://www.brz.gv.at/was-wir-tun/services-produkte/e-zoll.html",
+   "quote": "Seit 2014 verantwortet das BRZ die Entwicklung und den Betrieb von 30 Anwendungen für den e-zoll.",
+   "quote_english": "Since 2014 the BRZ has been responsible for developing and operating 30 applications for e-zoll.",
+   "value": "e-zoll (electronic customs)",
+   "published": "",
+   "title": "e-zoll",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "The same quote names the BRZ as developer and operator.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "e-zoll, developed and operated by BRZ",
+    "reason": "Since 2014 BRZ has been responsible for developing and operating the 30 e-zoll applications."
+   }
+  },
+  {
+   "claim": "record:AT:customs:operator",
+   "question": "Customs declarations: Import and export declarations and duty assessments",
+   "relation": "fills_gap",
+   "url": "https://www.brz.gv.at/was-wir-tun/services-produkte/e-zoll.html",
+   "quote": "Seit 2014 verantwortet das BRZ die Entwicklung und den Betrieb von 30 Anwendungen für den e-zoll.",
+   "quote_english": "Since 2014 the BRZ has been responsible for developing and operating 30 applications for e-zoll.",
+   "value": "BRZ (Bundesrechenzentrum GmbH, Federal Computing Centre)",
+   "published": "",
+   "title": "e-zoll",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "The operator's own statement.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "e-zoll, developed and operated by BRZ",
+    "reason": "Same quote as item 15. It names the system and its operator."
+   }
+  },
+  {
+   "claim": "record:AT:customs:count",
+   "question": "Customs declarations: Import and export declarations and duty assessments",
+   "relation": "fills_gap",
+   "url": "https://www.brz.gv.at/was-wir-tun/services-produkte/e-zoll.html",
+   "quote": "Insgesamt sind 1.200 Unternehmen an e-zoll angebunden, mehr als 4,5 Mio. Zollanmeldungen pro Jahr werden elektronisch abgewickelt.",
+   "quote_english": "In total 1,200 companies are connected to e-zoll; more than 4.5 million customs declarations a year are processed electronically.",
+   "value": "mehr als 4,5 Mio. Zollanmeldungen pro Jahr (more than 4,5 million customs declarations per year)",
+   "published": "",
+   "title": "e-zoll",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "This is an annual throughput figure, not a stock of records, and the page gives no date.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "more than 4.5 million customs declarations per year (1,200 companies connected)",
+    "reason": "The quote gives annual declaration volume and the number of connected companies for e-zoll."
+   }
+  },
+  {
+   "claim": "record:AT:benefits_pensions:register",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003831&Paragraf=10",
+   "quote": "Der Dachverband der Sozialversicherungsträger (§ 31 ASVG) hat für jede Person, die in den Geltungsbereich dieses Bundesgesetzes fällt, ein Pensionskonto einzurichten.",
+   "quote_english": "The umbrella association of social insurance institutions (§ 31 ASVG) shall set up a pension account for every person within the scope of this federal act.",
+   "value": "Pensionskonto (pension account)",
+   "published": "",
+   "title": "Allgemeines Pensionsgesetz § 10",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "The statutory pension account holding contribution histories; the same quote names the Dachverband as the body keeping it.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "Pensionskonto, set up by the Dachverband der Sozialversicherungsträger",
+    "reason": "The law obliges the Dachverband to set up a pension account for every covered person. The quote names the system and the responsible body but gives no hosting."
+   }
+  },
+  {
+   "claim": "record:AT:benefits_pensions:operator",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003831&Paragraf=10",
+   "quote": "Der Dachverband der Sozialversicherungsträger (§ 31 ASVG) hat für jede Person, die in den Geltungsbereich dieses Bundesgesetzes fällt, ein Pensionskonto einzurichten.",
+   "quote_english": "The umbrella association of social insurance institutions (§ 31 ASVG) shall set up a pension account for every person within the scope of this federal act.",
+   "value": "Dachverband der Sozialversicherungsträger (Umbrella Association of Austrian Social Insurance Institutions)",
+   "published": "",
+   "title": "Allgemeines Pensionsgesetz § 10",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "A public-law body of the social insurance self-administration.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Pensionskonto, set up by the Dachverband der Sozialversicherungsträger",
+    "reason": "Same quote as item 18."
+   }
+  },
+  {
+   "claim": "record:AT:health_insurance:register",
+   "question": "Statutory health insurance: Enrolment and entitlement records of the statutory health insurance scheme",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008147&Paragraf=31a",
+   "quote": "Der Dachverband hat für den gesamten Vollzugsbereich der Sozialversicherung ein elektronisches Verwaltungssystem (im folgenden ELSY genannt) flächendeckend einzuführen und dessen Betrieb sicherzustellen.",
+   "quote_english": "The umbrella association shall introduce an electronic administration system (hereinafter ELSY) across the whole of social insurance and ensure its operation.",
+   "value": "Elektronisches Verwaltungssystem (ELSY) (electronic administration system, the e-card system)",
+   "published": "2026-01-01",
+   "title": "Allgemeines Sozialversicherungsgesetz § 31a",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "ELSY is the statutory e-card system that checks entitlement; the operator is in a separate finding.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "ELSY, whose operation the Dachverband must ensure",
+    "reason": "§ 31a ASVG requires the Dachverband to introduce the ELSY administration system and ensure it runs. The quote does not name health-insurance enrolment specifically."
+   }
+  },
+  {
+   "claim": "record:AT:health_insurance:operator",
+   "question": "Statutory health insurance: Enrolment and entitlement records of the statutory health insurance scheme",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008147&Paragraf=31a",
+   "quote": "Der Dachverband hat für den gesamten Vollzugsbereich der Sozialversicherung ein elektronisches Verwaltungssystem (im folgenden ELSY genannt) flächendeckend einzuführen und dessen Betrieb sicherzustellen.",
+   "quote_english": "The umbrella association shall introduce an electronic administration system (hereinafter ELSY) across the whole of social insurance and ensure its operation.",
+   "value": "Dachverband (der Sozialversicherungsträger) (Umbrella Association of Social Insurance Institutions)",
+   "published": "2026-01-01",
+   "title": "Allgemeines Sozialversicherungsgesetz § 31a",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "Under the statute the Dachverband must ensure the system's operation.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "ELSY, whose operation the Dachverband must ensure",
+    "reason": "Same quote as item 20."
+   }
+  },
+  {
+   "claim": "record:AT:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html",
+   "quote": "Das Grundbuch Das BRZ ist zuständig für den Betrieb und die Weiterentwicklung des Grundbuchs.",
+   "quote_english": "The land register: the BRZ is responsible for operating and developing the land register.",
+   "value": "Grundbuch (land register)",
+   "published": "",
+   "title": "Registerlösungen wie Grundbuch und Firmenbuch",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "The page adds that the Grundbuch is kept at about 110 district courts; the same quote gives the BRZ as operator.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Grundbuch, operated by BRZ",
+    "reason": "BRZ says it is responsible for operating and developing the Grundbuch."
+   }
+  },
+  {
+   "claim": "record:AT:land_property:operator",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html",
+   "quote": "Das Grundbuch Das BRZ ist zuständig für den Betrieb und die Weiterentwicklung des Grundbuchs.",
+   "quote_english": "The land register: the BRZ is responsible for operating and developing the land register.",
+   "value": "BRZ (Bundesrechenzentrum GmbH, Federal Computing Centre)",
+   "published": "",
+   "title": "Registerlösungen wie Grundbuch und Firmenbuch",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "The state-owned BRZ runs it technically for the Ministry of Justice.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Grundbuch, operated by BRZ",
+    "reason": "Same quote as item 22."
+   }
+  },
+  {
+   "claim": "record:AT:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html",
+   "quote": "Das Firmenbuch Das BRZ betreibt seit 1991 das Firmenbuch für das Justizministerium und ist für (Weiter-)entwicklung und Betrieb sowie für die Schnittstellen verantwortlich.",
+   "quote_english": "The companies register: since 1991 the BRZ has operated the Firmenbuch for the Ministry of Justice and is responsible for its development, operation and interfaces.",
+   "value": "Firmenbuch (companies register)",
+   "published": "",
+   "title": "Registerlösungen wie Grundbuch und Firmenbuch",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "The same quote establishes the operator (BRZ, for the Ministry of Justice).",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "Firmenbuch, operated by BRZ for the Justice Ministry",
+    "reason": "BRZ has run the Firmenbuch for the Justizministerium since 1991."
+   }
+  },
+  {
+   "claim": "record:AT:business_registry:operator",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html",
+   "quote": "Das Firmenbuch Das BRZ betreibt seit 1991 das Firmenbuch für das Justizministerium und ist für (Weiter-)entwicklung und Betrieb sowie für die Schnittstellen verantwortlich.",
+   "quote_english": "The companies register: since 1991 the BRZ has operated the Firmenbuch for the Ministry of Justice and is responsible for its development, operation and interfaces.",
+   "value": "BRZ (Bundesrechenzentrum GmbH) for the Justizministerium (Federal Computing Centre for the Ministry of Justice)",
+   "published": "",
+   "title": "Registerlösungen wie Grundbuch und Firmenbuch",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "The operator's own statement.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "Firmenbuch, operated by BRZ for the Justice Ministry",
+    "reason": "Same quote as item 24."
+   }
+  },
+  {
+   "claim": "record:AT:business_registry:count",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html",
+   "quote": "Das Firmenbuch liefert zuverlässige Daten zu etwa 545.000 Firmen.",
+   "quote_english": "The companies register provides reliable data on about 545,000 companies.",
+   "value": "etwa 545.000 Firmen (about 545,000 companies)",
+   "published": "",
+   "title": "Registerlösungen wie Grundbuch und Firmenbuch",
+   "publisher": "Bundesrechenzentrum GmbH (BRZ)",
+   "doc_type": "official_page",
+   "note": "The page is undated; other figures on it refer to 2020.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "about 545,000 companies",
+    "reason": "The quote gives the number of companies in the Firmenbuch."
+   }
+  },
+  {
+   "claim": "record:AT:beneficial_ownership:register",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://www.bmf.gv.at/services/wiereg.html",
+   "quote": "Informationsseite der im Bundesministerium für Finanzen eingerichteten WiEReG–Registerbehörde. Das Register der wirtschaftlichen Eigentümer wurde für die Zwecke der Verhinderung von Geldwäscherei und Terrorismusfinanzierung eingerichtet",
+   "quote_english": "Information page of the WiEReG register authority set up in the Federal Ministry of Finance. The Register of Beneficial Owners was set up to prevent money laundering and terrorist financing",
+   "value": "Register der wirtschaftlichen Eigentümer (Register of Beneficial Owners)",
+   "published": "",
+   "title": "Register der wirtschaftlichen Eigentümer",
+   "publisher": "Bundesministerium für Finanzen",
+   "doc_type": "official_page",
+   "note": "Page of the register authority itself.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Register der wirtschaftlichen Eigentümer (WiEReG), with its register authority in the BMF",
+    "reason": "The quote names the register and places the register authority in the Bundesministerium für Finanzen. It does not name the technical operator."
+   }
+  },
+  {
+   "claim": "record:AT:beneficial_ownership:operator",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://www.bmf.gv.at/services/wiereg.html",
+   "quote": "Informationsseite der im Bundesministerium für Finanzen eingerichteten WiEReG–Registerbehörde. Das Register der wirtschaftlichen Eigentümer wurde für die Zwecke der Verhinderung von Geldwäscherei und Terrorismusfinanzierung eingerichtet",
+   "quote_english": "Information page of the WiEReG register authority set up in the Federal Ministry of Finance. The Register of Beneficial Owners was set up to prevent money laundering and terrorist financing",
+   "value": "WiEReG–Registerbehörde im Bundesministerium für Finanzen (WiEReG register authority in the Federal Ministry of Finance)",
+   "published": "",
+   "title": "Register der wirtschaftlichen Eigentümer",
+   "publisher": "Bundesministerium für Finanzen",
+   "doc_type": "official_page",
+   "note": "The register authority sits in the BMF.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Register der wirtschaftlichen Eigentümer (WiEReG), with its register authority in the BMF",
+    "reason": "Same quote as item 27."
+   }
+  },
+  {
+   "claim": "record:AT:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_zentrale_zulassungsevidenz-kraftfahrzeugzentralregister-kzr_v2.pdf",
+   "quote": "Information zu der Verarbeitung „Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR)“ gemäß Art. 13 und 14 Datenschutz-Grundverordnung (DSGVO)",
+   "quote_english": "Information on the processing 'Central Registration Evidence – Central Motor Vehicle Register (KZR)' pursuant to Art. 13 and 14 GDPR",
+   "value": "Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR) (Central Motor Vehicle Register)",
+   "published": "",
+   "title": "Information zu der Verarbeitung „Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR)“",
+   "publisher": "Bundesministerium für Inneres",
+   "doc_type": "official_page",
+   "note": "Covers vehicle registrations; the BRZ also operates a separate Führerscheinregister (driving licence register) according to brz.gv.at/was-wir-tun/services-produkte/eAusweise.html.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "Zentrale Zulassungsevidenz – Kraftfahrzeugzentralregister (KZR)",
+    "reason": "The notice names the processing. It covers vehicle registration only, not driving licences."
+   }
+  },
+  {
+   "claim": "record:AT:vehicle_licensing:operator",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_zentrale_zulassungsevidenz-kraftfahrzeugzentralregister-kzr_v2.pdf",
+   "quote": "Führung einer zentralen Zulassungsevidenz durch den Bundesminister für Inneres.",
+   "quote_english": "Keeping of a central registration evidence by the Federal Minister of the Interior.",
+   "value": "Bundesminister für Inneres (Federal Minister of the Interior)",
+   "published": "",
+   "title": "Information zu der Verarbeitung „Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR)“",
+   "publisher": "Bundesministerium für Inneres",
+   "doc_type": "official_page",
+   "note": "The BMI keeps the central register.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "kept by the Bundesminister für Inneres",
+    "reason": "The quote says the Bundesminister für Inneres keeps the central vehicle-registration evidence."
+   }
+  },
+  {
+   "claim": "record:AT:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10002116",
+   "quote": "Zum Zwecke der Evidenthaltung strafgerichtlicher Verurteilungen wird für das gesamte Bundesgebiet ein Strafregister geführt.",
+   "quote_english": "For the purpose of recording criminal convictions, a criminal record register is kept for the whole federal territory.",
+   "value": "Strafregister (criminal record register)",
+   "published": "2026-09-30",
+   "title": "Strafregistergesetz 1968, consolidated version",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "Statutory basis in § 1(1) StRegG.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "Strafregister",
+    "reason": "The Strafregistergesetz establishes a nationwide criminal register."
+   }
+  },
+  {
+   "claim": "record:AT:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10002116",
+   "quote": "Die Führung des Strafregisters obliegt der Landespolizeidirektion Wien als Verantwortliche gemäß Art. 4 Z 7 in Verbindung mit Art. 24 der Verordnung (EU) 2016/679",
+   "quote_english": "Keeping the criminal record register is the task of the Vienna Provincial Police Directorate as controller under Art. 4(7) in conjunction with Art. 24 of Regulation (EU) 2016/679",
+   "value": "Landespolizeidirektion Wien (Vienna Provincial Police Directorate)",
+   "published": "2026-09-30",
+   "title": "Strafregistergesetz 1968, consolidated version",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "§ 1(3) adds the Federal Minister of the Interior as processor.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "Landespolizeidirektion Wien (controller)",
+    "reason": "The law assigns keeping the Strafregister to LPD Wien as controller."
+   }
+  },
+  {
+   "claim": "record:AT:police_records:register",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_pad-protkollieren_anzeigen_daten_v2.pdf",
+   "quote": "Information zu der Verarbeitung „PAD - Protokollieren Anzeigen Daten“ gemäß § 43 Datenschutzgesetz (DSG) sowie Art. 13 und 14 DatenschutzGrundverordnung (DSGVO)",
+   "quote_english": "Information on the processing 'PAD – logging reports data' pursuant to § 43 Data Protection Act and Art. 13 and 14 GDPR",
+   "value": "PAD - Protokollieren Anzeigen Daten (police case and report logging system)",
+   "published": "",
+   "title": "Information zu der Verarbeitung „PAD - Protokollieren Anzeigen Daten“",
+   "publisher": "Bundesministerium für Inneres",
+   "doc_type": "official_page",
+   "note": "The police case-handling system, with the Federal Minister of the Interior as controller. The BMI also lists 'Kriminalpolizeilicher Aktenindex' and person-wanted evidence among its processing operations.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "PAD – Protokollieren Anzeigen Daten",
+    "reason": "The notice names the police processing. The only mismatch is line-break hyphenation."
+   }
+  },
+  {
+   "claim": "record:AT:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_nationales_schengener_informationssystem-n-sis_ii_v2.pdf",
+   "quote": "Information zu der Verarbeitung „Nationales Schengener Informationssystem (N-SIS II)“ gemäß Art. 13 und 14 Datenschutz-Grundverordnung (DSGVO)",
+   "quote_english": "Information on the processing 'National Schengen Information System (N-SIS II)' pursuant to Art. 13 and 14 GDPR",
+   "value": "Nationales Schengener Informationssystem (N-SIS II) (National Schengen Information System)",
+   "published": "",
+   "title": "Information zu der Verarbeitung „Nationales Schengener Informationssystem (N-SIS II)“",
+   "publisher": "Bundesministerium für Inneres",
+   "doc_type": "official_page",
+   "note": "The notice names the Federal Minister of the Interior as controller. The BMI also publishes notices for N-VIS and the Entry/Exit System (EES), dated 2026-04-07.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "Nationales Schengener Informationssystem (N-SIS II)",
+    "reason": "The notice names the national SIS component."
+   }
+  },
+  {
+   "claim": "record:AT:firearms_register:register",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://www.polizei.gv.at/stmk/files_stmk/datenschutz/2020/BF_Zentrales%20Waffenregister_20200224.pdf",
+   "quote": "Information zu der gemeinsamen Verarbeitung „Zentrales Waffenregister“ gemäß Art. 13 und 14 Datenschutz-Grundverordnung (DSGVO)",
+   "quote_english": "Information on the joint processing 'Central Weapons Register' pursuant to Art. 13 and 14 GDPR",
+   "value": "Zentrales Waffenregister (Central Weapons Register)",
+   "published": "2020-02-24",
+   "title": "Information zu der gemeinsamen Verarbeitung „Zentrales Waffenregister“",
+   "publisher": "Landespolizeidirektion Steiermark (Bundespolizei)",
+   "doc_type": "official_page",
+   "note": "The register is a joint processing by the weapons authorities under WaffG § 55.",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "Zentrales Waffenregister",
+    "reason": "The notice names the joint processing."
+   }
+  },
+  {
+   "claim": "record:AT:firearms_register:operator",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://www.polizei.gv.at/stmk/files_stmk/datenschutz/2020/BF_Zentrales%20Waffenregister_20200224.pdf",
+   "quote": "Auftragsverarbeiter: Bundesminister für Inneres; IBM Österreich Internationale Büromaschinen GmbH; Microsoft Österreich GmbH; Bundesrechenzentrum GmbH, Österreichische Staatsdruckerei; ermächtigte Gewerbetreibende.",
+   "quote_english": "Processors: Federal Minister of the Interior; IBM Österreich Internationale Büromaschinen GmbH; Microsoft Österreich GmbH; Bundesrechenzentrum GmbH; Österreichische Staatsdruckerei; authorised traders.",
+   "value": "Bundesminister für Inneres as processor, with IBM Österreich Internationale Büromaschinen GmbH, Microsoft Österreich GmbH and Bundesrechenzentrum GmbH as further processors",
+   "published": "2020-02-24",
+   "title": "Information zu der gemeinsamen Verarbeitung „Zentrales Waffenregister“",
+   "publisher": "Landespolizeidirektion Steiermark (Bundespolizei)",
+   "doc_type": "official_page",
+   "note": "Austrian subsidiaries of IBM and Microsoft are named as processors. This is relevant to foreign dependency, but the notice does not say where the system runs, so no foreign_dependency value is given.",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "mixed: processors are BMI, IBM Österreich, Microsoft Österreich, Bundesrechenzentrum GmbH, Österreichische Staatsdruckerei and authorised traders",
+    "reason": "The quote lists state processors alongside Austrian subsidiaries of IBM and Microsoft, but says nothing about where the infrastructure physically runs."
+   }
+  },
+  {
+   "claim": "record:AT:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20002988",
+   "quote": "Das Rechtsinformationssystem des Bundes ist eine vom Bundeskanzler bereitgestellte elektronische Datenbank.",
+   "quote_english": "The Federal Legal Information System is an electronic database provided by the Federal Chancellor.",
+   "value": "Rechtsinformationssystem des Bundes (RIS) (Federal Legal Information System)",
+   "published": "2026-09-30",
+   "title": "Bundesgesetzblattgesetz, consolidated version",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "Under § 7 BGBlG the Federal Law Gazette is published at www.ris.bka.gv.at; the same quote gives the Federal Chancellor as provider.",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "Rechtsinformationssystem des Bundes (RIS), provided by the Bundeskanzler",
+    "reason": "The RIS law says the database is provided by the Federal Chancellor."
+   }
+  },
+  {
+   "claim": "record:AT:official_gazette:operator",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20002988",
+   "quote": "Das Rechtsinformationssystem des Bundes ist eine vom Bundeskanzler bereitgestellte elektronische Datenbank.",
+   "quote_english": "The Federal Legal Information System is an electronic database provided by the Federal Chancellor.",
+   "value": "Bundeskanzler (Federal Chancellor / Federal Chancellery)",
+   "published": "2026-09-30",
+   "title": "Bundesgesetzblattgesetz, consolidated version",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "§ 6 BGBlG.",
+   "review": {
+    "id": 38,
+    "quote_found": true,
+    "established": "Rechtsinformationssystem des Bundes (RIS), provided by the Bundeskanzler",
+    "reason": "Same quote as item 37."
+   }
+  },
+  {
+   "claim": "record:AT:public_finance:register",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://rechnungshof.gv.at/rh/home/home_1/home_9/BRA_2024_Band_4.pdf",
+   "quote": "Die Zugangs- und Benutzerverwaltung im Haushaltsverrechnungssystem HV-SAP war getrennt von jener im Elektronischen Akt des Bundes (ELAK).",
+   "quote_english": "Access and user management in the budget accounting system HV-SAP was separate from that in the federal electronic file system (ELAK).",
+   "value": "Haushaltsverrechnungssystem HV-SAP (federal budget accounting system)",
+   "published": "2025",
+   "title": "Bundesrechnungsabschluss für das Jahr 2024, Textteil Band 4",
+   "publisher": "Rechnungshof Österreich",
+   "doc_type": "audit_report",
+   "note": "The audit office's 2024 federal accounts audit names the federal budget accounting system; the BRZ runs the federal HV and personnel SAP systems (brz.gv.at SAP-Services page).",
+   "review": {
+    "id": 39,
+    "quote_found": true,
+    "established": "HV-SAP (Haushaltsverrechnungssystem)",
+    "reason": "The Rechnungshof report names the federal budget accounting system HV-SAP."
+   }
+  },
+  {
+   "claim": "record:AT:government_payroll:register",
+   "question": "Government payroll and personnel: Civil service and armed forces payroll and personnel records",
+   "relation": "fills_gap",
+   "url": "https://rechnungshof.gv.at/rh/home/home_1/home_9/BRA_2024_Band_4.pdf",
+   "quote": "Die exakte Höhe der 2024 getätigten Auszahlungen ließ sich im Rahmen der Prüfung des RH nicht feststellen, da deren gesonderte Kennzeichnung im Personalverrechnungssystem PM-SAP nicht vorgesehen war.",
+   "quote_english": "The exact amount of payments made in 2024 could not be determined in the audit, as no separate flag for them was provided in the payroll system PM-SAP.",
+   "value": "Personalverrechnungssystem PM-SAP (federal payroll system)",
+   "published": "2025",
+   "title": "Bundesrechnungsabschluss für das Jahr 2024, Textteil Band 4",
+   "publisher": "Rechnungshof Österreich",
+   "doc_type": "audit_report",
+   "note": "PM-SAP is the federal personnel management and payroll system.",
+   "review": {
+    "id": 40,
+    "quote_found": true,
+    "established": "PM-SAP (Personalverrechnungssystem)",
+    "reason": "The Rechnungshof report names the payroll system PM-SAP. The only mismatch is line-break hyphenation."
+   }
+  },
+  {
+   "claim": "record:AT:electoral_management:register",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://www.bmi.gv.at/402/files/informationen/wahlen/informationsblatt_modulares_wahlpaket_bf_20250410.pdf",
+   "quote": "Information zu der Verarbeitung Modulares Wahlpaket gemäß Art. 13 und 14 Datenschutz-Grundverordnung (DSGVO) Namen und die Kontaktdaten des Verantwortlichen: Bundeswahlbehörde p.A. Bundesministerium für Inneres",
+   "quote_english": "Information on the processing 'Modular Election Package' pursuant to Art. 13 and 14 GDPR; name of the controller: Federal Electoral Board, c/o Federal Ministry of the Interior",
+   "value": "Modulares Wahlpaket (modular election package)",
+   "published": "2025-04-10",
+   "title": "Information zu der Verarbeitung Modulares Wahlpaket",
+   "publisher": "Bundeswahlbehörde / Bundesministerium für Inneres",
+   "doc_type": "official_page",
+   "note": "Its stated purpose is 'Durchführung von Wahlen' (conducting elections) under the NRWO and the presidential and European election acts.",
+   "review": {
+    "id": 41,
+    "quote_found": true,
+    "established": "Modulares Wahlpaket; controller Bundeswahlbehörde c/o BMI",
+    "reason": "The notice names the system and its controller."
+   }
+  },
+  {
+   "claim": "record:AT:electoral_management:operator",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://www.bmi.gv.at/402/files/informationen/wahlen/informationsblatt_modulares_wahlpaket_bf_20250410.pdf",
+   "quote": "Information zu der Verarbeitung Modulares Wahlpaket gemäß Art. 13 und 14 Datenschutz-Grundverordnung (DSGVO) Namen und die Kontaktdaten des Verantwortlichen: Bundeswahlbehörde p.A. Bundesministerium für Inneres",
+   "quote_english": "Information on the processing 'Modular Election Package' pursuant to Art. 13 and 14 GDPR; name of the controller: Federal Electoral Board, c/o Federal Ministry of the Interior",
+   "value": "Bundeswahlbehörde p.A. Bundesministerium für Inneres (Federal Electoral Board, c/o Federal Ministry of the Interior)",
+   "published": "2025-04-10",
+   "title": "Information zu der Verarbeitung Modulares Wahlpaket",
+   "publisher": "Bundeswahlbehörde / Bundesministerium für Inneres",
+   "doc_type": "official_page",
+   "note": "This names the controller, not the technical operator.",
+   "review": {
+    "id": 42,
+    "quote_found": true,
+    "established": "Modulares Wahlpaket; controller Bundeswahlbehörde c/o BMI",
+    "reason": "Same quote as item 41. It names a controller, not a technical operator."
+   }
+  },
+  {
+   "claim": "record:AT:central_bank:register",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.oenb.at/Zahlungsverkehr/target-services.html",
+   "quote": "Die vier Komponeten RTGS, TIPS, T2S und CLM werden unter dem gemeinsamen Namen TARGET Services geführt.",
+   "quote_english": "The four components RTGS, TIPS, T2S and CLM are run under the common name TARGET Services.",
+   "value": "TARGET Services (RTGS, TIPS, T2S, CLM)",
+   "published": "",
+   "title": "TARGET Services",
+   "publisher": "Oesterreichische Nationalbank (OeNB)",
+   "doc_type": "official_page",
+   "note": "The OeNB takes part in the Eurosystem's shared TARGET platform, which replaced TARGET2 on 20 March 2023; it is not a national system, and the page does not say where it runs.",
+   "review": {
+    "id": 43,
+    "quote_found": true,
+    "established": "TARGET Services (RTGS, TIPS, T2S, CLM)",
+    "reason": "The quote names the components but not who operates them or where they run."
+   }
+  },
+  {
+   "claim": "record:AT:intelligence:register",
+   "question": "Intelligence services: Intelligence holdings and case files",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009486",
+   "quote": "Der Bundesminister für Inneres und die Landespolizeidirektionen dürfen als gemeinsam Verantwortliche in einer Datenverarbeitung zum Zweck der Bewertung von wahrscheinlichen Gefährdungen sowie zum Erkennen von Zusammenhängen und Strukturen mittels operativer oder strategischer Analyse",
+   "quote_english": "The Federal Minister of the Interior and the provincial police directorates may, as joint controllers, in a data processing for assessing probable threats and recognising connections and structures by operational or strategic analysis",
+   "value": "Datenverarbeitung mittels operativer oder strategischer Analyse (state-protection analysis data processing, jointly controlled by the Federal Minister of the Interior and the provincial police directorates)",
+   "published": "",
+   "title": "Staatsschutz- und Nachrichtendienst-Gesetz (SNG), consolidated version",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "§ 12 SNG sets up the DSN analysis database but gives it no proper name. The military services (HNaA, AbwA) are not covered.",
+   "review": {
+    "id": 44,
+    "quote_found": true,
+    "established": "joint controllers: Bundesminister für Inneres and the Landespolizeidirektionen (§ 12 SNG analysis processing)",
+    "reason": "The SNG provision names the joint controllers of the analysis data processing but gives no system name, operator or hosting."
+   }
+  },
+  {
+   "claim": "record:AT:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.bmi.gv.at/113/Sektion_IV/Gruppe_IV_DDS/CTO/Abteilung_IV_DDS_12/start.aspx",
+   "quote": "Österreichweites Digitalfunksystem für Behörden und Organisationen mit Sicherheitsaufgaben (BOS-Digitalfunk) und Projekt-Kommunikation im Bereich des Digitalfunk",
+   "quote_english": "Austria-wide digital radio system for authorities and organisations with security tasks (BOS digital radio) and project communication in the field of digital radio",
+   "value": "BOS-Digitalfunk, österreichweites Digitalfunksystem für Behörden und Organisationen mit Sicherheitsaufgaben (nationwide public-safety digital radio system)",
+   "published": "",
+   "title": "Abteilung IV/DDS/12 (Kritische Kommunikationsinfrastrukturen)",
+   "publisher": "Bundesministerium für Inneres",
+   "doc_type": "official_page",
+   "note": "BMI Department IV/DDS/12 is responsible for its planning, expansion and operation (the TETRA network 'Digitalfunk BOS-Austria').",
+   "review": {
+    "id": 45,
+    "quote_found": true,
+    "established": "BOS-Digitalfunk (BOS Austria), run by BMI Abteilung IV/DDS/12",
+    "reason": "The department's task list names the nationwide digital radio system, and the surrounding text lists its planning, expansion and operation."
+   }
+  },
+  {
+   "claim": "record:AT:crisis_management:register",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20012321",
+   "quote": "Im Bundesministerium für Inneres wird für die Bundesregierung dauerhaft ein den technischen und sicherheitsrelevanten internationalen Standards sowie den räumlichen und personellen Bedürfnissen entsprechendes Bundeslagezentrum eingerichtet",
+   "quote_english": "A permanent Federal Situation Centre meeting international technical and security standards and the spatial and staffing needs is set up in the Federal Ministry of the Interior for the federal government",
+   "value": "Bundeslagezentrum (Federal Situation Centre)",
+   "published": "",
+   "title": "Bundes-Krisensicherheitsgesetz (B-KSG), consolidated version",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "Set up by § 6 B-KSG, in force since 2024; the same quote places it in the BMI.",
+   "review": {
+    "id": 46,
+    "quote_found": true,
+    "established": "Bundeslagezentrum in the Bundesministerium für Inneres",
+    "reason": "The law sets up the federal situation centre within the BMI for the federal government."
+   }
+  },
+  {
+   "claim": "record:AT:crisis_management:operator",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20012321",
+   "quote": "Im Bundesministerium für Inneres wird für die Bundesregierung dauerhaft ein den technischen und sicherheitsrelevanten internationalen Standards sowie den räumlichen und personellen Bedürfnissen entsprechendes Bundeslagezentrum eingerichtet",
+   "quote_english": "A permanent Federal Situation Centre meeting international technical and security standards and the spatial and staffing needs is set up in the Federal Ministry of the Interior for the federal government",
+   "value": "Bundesministerium für Inneres (Federal Ministry of the Interior)",
+   "published": "",
+   "title": "Bundes-Krisensicherheitsgesetz (B-KSG), consolidated version",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "§ 6(1) B-KSG.",
+   "review": {
+    "id": 47,
+    "quote_found": true,
+    "established": "Bundeslagezentrum in the Bundesministerium für Inneres",
+    "reason": "Same quote as item 46."
+   }
+  },
+  {
+   "claim": "record:AT:grid_control:register",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.apg.at/ueber-uns/steuerzentrale/",
+   "quote": "2009 wurde in Wien Südost die APG-Steuerzentrale, Power Grid Control, in Betrieb genommen. Sie ist das Nervenzentrum der österreichischen Stromversorgung.",
+   "quote_english": "In 2009 the APG control centre, Power Grid Control, went into operation at Vienna South-East. It is the nerve centre of Austria's electricity supply.",
+   "value": "APG-Steuerzentrale, Power Grid Control (APG control centre)",
+   "published": "",
+   "title": "Steuerzentrale",
+   "publisher": "Austrian Power Grid AG (APG)",
+   "doc_type": "official_page",
+   "note": "The transmission system operator's own page; the same quote names APG as operator.",
+   "review": {
+    "id": 48,
+    "quote_found": true,
+    "established": "APG-Steuerzentrale (Power Grid Control), APG, Wien Südost",
+    "reason": "APG says its grid control centre has been in operation since 2009."
+   }
+  },
+  {
+   "claim": "record:AT:grid_control:operator",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.apg.at/ueber-uns/steuerzentrale/",
+   "quote": "2009 wurde in Wien Südost die APG-Steuerzentrale, Power Grid Control, in Betrieb genommen. Sie ist das Nervenzentrum der österreichischen Stromversorgung.",
+   "quote_english": "In 2009 the APG control centre, Power Grid Control, went into operation at Vienna South-East. It is the nerve centre of Austria's electricity supply.",
+   "value": "APG (Austrian Power Grid AG)",
+   "published": "",
+   "title": "Steuerzentrale",
+   "publisher": "Austrian Power Grid AG (APG)",
+   "doc_type": "official_page",
+   "note": "APG is the Austrian TSO; the quote does not state its ownership.",
+   "review": {
+    "id": 49,
+    "quote_found": true,
+    "established": "APG-Steuerzentrale (Power Grid Control), APG, Wien Südost",
+    "reason": "Same quote as item 48. It names the system and APG as operator, with no IT hosting."
+   }
+  },
+  {
+   "claim": "record:AT:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451",
+   "quote": "Die zuständige Bundesministerin oder der zuständige Bundesminister hat als Verantwortliche oder Verantwortlicher gemäß Art. 4 Z 7 DSGVO zu den Zwecken gemäß § 1 Abs. 1 Z 2 automationsunterstützt die Gesamtevidenz der Schülerinnen und Schüler einzurichten.",
+   "quote_english": "The competent Federal Minister, as controller under Art. 4(7) GDPR, shall set up the automated overall register of pupils for the purposes of § 1(1)(2).",
+   "value": "Gesamtevidenz der Schülerinnen und Schüler (national overall register of pupils)",
+   "published": "",
+   "title": "Bildungsdokumentationsgesetz 2020, consolidated version",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "§ 7 BilDokG 2020; the same law sets up a Datenverbund der Universitäten und Hochschulen (DVUH) with a student register for higher education.",
+   "review": {
+    "id": 50,
+    "quote_found": true,
+    "established": "Gesamtevidenz der Schülerinnen und Schüler; controller is the competent Federal Minister",
+    "reason": "The Bildungsdokumentationsgesetz requires the competent minister, as controller, to set up the central student evidence."
+   }
+  },
+  {
+   "claim": "record:AT:education:operator",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451",
+   "quote": "Die Bundesanstalt „Statistik Österreich“ fungiert als Auftragsverarbeiterin nach Maßgabe eines Vertrages gemäß Art. 28 Abs. 3 DSGVO.",
+   "quote_english": "The federal institution 'Statistics Austria' acts as processor under a contract pursuant to Art. 28(3) GDPR.",
+   "value": "Bundesanstalt „Statistik Österreich“ (Statistics Austria), as processor",
+   "published": "",
+   "title": "Bildungsdokumentationsgesetz 2020, consolidated version",
+   "publisher": "Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS)",
+   "doc_type": "legislation",
+   "note": "The controller is the competent federal minister (education).",
+   "review": {
+    "id": 51,
+    "quote_found": true,
+    "established": "Statistik Austria (processor)",
+    "reason": "The quote names Statistik Österreich as processor under Art. 28 GDPR, but on its own it does not name the system."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:AT:trust_services_pki:count",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:AT:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:AT:K1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:AT:electoral_roll:count",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:issuance_history:foreign_dependency",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:trust_services_pki:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:AT:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:AT:K2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:AT:L2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:AT:breeder_documents:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:AT:civil_registry:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:digital_identity_credentials:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:AT:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:electoral_roll:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:AT:electoral_roll:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:AT:facial_biometric:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:AT:facial_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:AT:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:residence_permits:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:trust_services_pki:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:authentication_audit_log:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:AT:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:government_payroll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:AT:intelligence:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:grid_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:AT:water_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:AT:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:AT:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:AT:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

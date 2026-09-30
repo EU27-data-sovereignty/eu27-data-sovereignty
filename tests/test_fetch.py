@@ -102,10 +102,10 @@ class EurostatProvenance(unittest.TestCase):
     # cell did not come from where it says it did.
     TOLERANCE_PCT = 0.5
 
-    # Known defect, deliberately excluded so this test documents it rather than fails on it:
-    # 9 of 27 values match no year of nama_10_a64_e NACE O within 10% (Sweden is 40% out).
-    # See VERIFICATION.md. Remove from this set when the column is rebuilt.
-    KNOWN_BAD = {"gov_employment_k"}
+    # gov_employment_k was excluded here as a known defect until 2026-09-30: 9 of 27 values matched no
+    # year of nama_10_a64_e NACE O (Sweden 40% out). It was rebuilt from the official 2024 series
+    # (DECISIONS #84), so every column is held to its pinned source now.
+    KNOWN_BAD: set[str] = set()
 
     def setUp(self):
         path = ROOT / "model" / "eurostat_pull.csv"
@@ -124,9 +124,9 @@ class EurostatProvenance(unittest.TestCase):
                 off.append(f"{r['iso']}/{r['column']}: csv {cur} vs {r['dataset']}@{r['period']} {new}")
         self.assertEqual(off, [], "these cells do not reproduce from the source they claim")
 
-    def test_the_known_defect_is_still_scoped_to_one_column(self):
-        """If another column starts drifting, it should stop being silently tolerated."""
-        self.assertEqual(self.KNOWN_BAD, {"gov_employment_k"})
+    def test_no_column_is_tolerated_as_a_known_defect(self):
+        """A drifting column fails the test above; it is never silently tolerated."""
+        self.assertEqual(self.KNOWN_BAD, set())      # none since #84; a new one needs a recorded reason
 
     def test_every_column_is_pinned_to_a_period(self):
         for column, spec in fetch_eurostat.SERIES.items():

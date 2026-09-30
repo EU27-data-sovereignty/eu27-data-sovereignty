@@ -17,7 +17,9 @@ import national_data as nd  # noqa: E402
 import provenance  # noqa: E402
 
 # Raise as holdings are admitted. 1053 = 39 holding classes x 27 member states (#73).
-NATIONAL_DATA_FLOOR = 419
+# 419 -> 683 on 2026-09-30: 56 holdings recovered by the charset fix, the rest filled by the first
+# vetting run (#83). Every one passed the quote check and, for vetting, a blind review.
+NATIONAL_DATA_FLOOR = 683
 
 
 class Register(unittest.TestCase):
@@ -160,12 +162,12 @@ class ProvenanceLivesInTheSourceRegister(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 nd.load(old)
 
-    def test_every_row_has_exactly_one_register_citation(self):
+    def test_every_row_has_at_least_one_register_citation(self):
         self.assertEqual(nd.citation_errors(nd.load(), provenance.citations()), [])
 
     def test_a_row_without_a_citation_is_rejected(self):
         errors = nd.citation_errors([self.ROW], [])
-        self.assertTrue(any("needs exactly one" in e for e in errors))
+        self.assertTrue(any("needs at least one" in e for e in errors))
 
     def test_a_filled_extra_field_needs_its_own_citation(self):
         """#73/#75: legal basis, hosting, counts and sizes are claims, each with its own source."""

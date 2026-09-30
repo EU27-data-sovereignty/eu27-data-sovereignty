@@ -1,0 +1,36 @@
+{
+ "run": "wf_1c6b8bb6-450",
+ "prepared": "wf_1c6b8bb6-450",
+ "input_sha256": "159a61863eac5ca36e5595b444437c7a0d5a8233b41c6af9909bf823f02405c7",
+ "output_sha256": "673318264fa5949f0028e458f4235f514839e6b779b495d55effdf07dd64b358",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "built_from_commit": "b1af5fdb9f36322d3cf9211c4a87fa834cf8fa4b",
+ "states": 27,
+ "reviewer_model": [
+  "claude-opus-5-5"
+ ],
+ "agents": 54,
+ "tokens": "6752566",
+ "duration": "3843 s",
+ "tools": {
+  "python": "3.14.7",
+  "os": "Darwin 25.6.0 arm64",
+  "typst": "typst 0.15.1 (unknown commit)",
+  "node": "v26.7.0",
+  "chrome": "Google Chrome 154.0.8037.59"
+ },
+ "findings": 1017,
+ "outcomes": {
+  "below_T2": 5,
+  "corroborated": 244,
+  "disputed": 12,
+  "filled_gap": 363,
+  "holding_not_established": 38,
+  "no_better_found": 447,
+  "not_reached": 201,
+  "not_verified": 176,
+  "review_disagreed": 153,
+  "superseded_higher_tier": 23,
+  "superseded_later_same_authority": 3
+ }
+}

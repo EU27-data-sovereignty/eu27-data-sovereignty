@@ -1,0 +1,992 @@
+{
+ "iso": "IE",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:IE:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.tetraireland.ie/why-tetra",
+   "quote": "TETRA Ireland is an Irish company that owns and operates the Managed National Digital Radio Service (MNDRS). TETRA Ireland was appointed by the Department of Public Expenditure and Reform to build and operate the MNDRS following a competitive tender process undertaken in 2020.",
+   "quote_english": "",
+   "value": "Managed National Digital Radio Service (MNDRS)",
+   "published": "",
+   "title": "Why Tetra",
+   "publisher": "TETRA Ireland",
+   "doc_type": "official_page",
+   "note": "The operator's own site replaces a Motorola press release, and it shows the service is now called the Managed National Digital Radio Service (MNDRS), re-tendered in 2020.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Managed National Digital Radio Service (MNDRS)",
+    "reason": "The quote names the service TETRA Ireland owns and operates as the Managed National Digital Radio Service (MNDRS)."
+   }
+  },
+  {
+   "claim": "record:IE:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: the body that operates it",
+   "relation": "fills_gap",
+   "url": "https://www.tetraireland.ie/why-tetra",
+   "quote": "TETRA Ireland is an Irish company that owns and operates the Managed National Digital Radio Service (MNDRS).",
+   "quote_english": "",
+   "value": "TETRA Ireland",
+   "published": "",
+   "title": "Why Tetra",
+   "publisher": "TETRA Ireland",
+   "doc_type": "official_page",
+   "note": "The operator describes itself as an Irish company. That does not settle the Motorola-ownership (non-EU) question, so foreign_dependency is left unchanged.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "TETRA Ireland",
+    "reason": "The quote says TETRA Ireland, an Irish company, owns and operates the MNDRS."
+   }
+  },
+  {
+   "claim": "record:IE:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.gov.ie/en/department-of-public-expenditure-infrastructure-public-service-reform-and-digitalisation/press-releases/minister-chambers-and-minister-of-state-feighan-welcome-national-roaming-enhancement-for-first-responders/",
+   "quote": "For over two decades, Ireland's emergency services have relied on TETRA (Terrestrial Trunked Radio), a narrowband digital radio system built for voice and short text messaging.",
+   "quote_english": "",
+   "value": "TETRA (Terrestrial Trunked Radio) digital radio system for emergency services",
+   "published": "2026-09-17",
+   "title": "Minister Chambers and Minister of State Feighan welcome national roaming enhancement for first responders",
+   "publisher": "Department of Public Expenditure, Infrastructure, Public Service Reform and Digitalisation",
+   "doc_type": "official_page",
+   "note": "A September 2026 ministry release confirms TETRA is still the emergency-services network and adds that OGCIO is bringing in national roaming.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "TETRA (Terrestrial Trunked Radio)",
+    "reason": "The press release names TETRA as the digital radio system Ireland's emergency services have relied on for two decades."
+   }
+  },
+  {
+   "claim": "indicator:IE:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf",
+   "quote": "We continue to provide, and further extend, shared computing facilities to other public sector bodies from our data centre, whilst our print and mail service continued to support a number of other public sector organisations during 2025.",
+   "quote_english": "",
+   "value": "Yes",
+   "published": "2026",
+   "title": "Revenue Annual Report 2025",
+   "publisher": "Office of the Revenue Commissioners",
+   "doc_type": "annual_report",
+   "note": "This independent 2025 source shows a state-run data centre in operation. OGCIO's Build to Share page (updated 2025-07-30) adds that the purpose-built shared Government Data Centre is still a multi-year project 'underway'.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Revenue says it continues in 2025 to provide shared computing facilities to other public bodies from its own data centre, so a government data centre is in operation today."
+   }
+  },
+  {
+   "claim": "indicator:IE:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corroborates",
+   "url": "https://www.ogcio.gov.ie/en/corporate-pages/services/infrastructure/",
+   "quote": "The Government Cloud means that smaller departments and offices will not have to support their own hardware.",
+   "quote_english": "",
+   "value": "Yes",
+   "published": "2025-07-30",
+   "title": "Infrastructure",
+   "publisher": "Office of the Government Chief Information Officer (OGCIO)",
+   "doc_type": "official_page",
+   "note": "OGCIO's infrastructure services page describes the Government Cloud as a private cloud system in service under Build to Share.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The OGCIO page describes the Government Cloud as a private cloud system, part of Build to Share, in the present tense; the quote itself only states the benefit, so the evidence for operation is weak."
+   }
+  },
+  {
+   "claim": "record:IE:central_bank:register",
+   "question": "Central bank systems: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.ecb.europa.eu/paym/target/t2/html/index.en.html",
+   "quote": "T2 is the Eurosystem’s real-time gross settlement (RTGS) system, enabling payments to flow securely and efficiently across Europe.",
+   "quote_english": "",
+   "value": "T2, the Eurosystem’s real-time gross settlement (RTGS) system",
+   "published": "",
+   "title": "T2",
+   "publisher": "European Central Bank",
+   "doc_type": "official_page",
+   "note": "The ECB (platform owner) confirms T2. The Central Bank's page says T2 replaced TARGET2 on 20 March 2023 and names the Irish component TARGET-Ireland in its documents, so the label 'TARGET2-Ireland' is partly out of date.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "T2",
+    "reason": "The ECB page names T2 as the Eurosystem's RTGS system; it does not name the Irish component."
+   }
+  },
+  {
+   "claim": "record:IE:central_bank:operator",
+   "question": "Central bank systems: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2",
+   "quote": "T2 is structured as a multiplicity of payments systems using a single technical platform. The Irish component system of T2, operated by the Central Bank of Ireland, is TARGET2-Ireland.",
+   "quote_english": "",
+   "value": "Central Bank of Ireland",
+   "published": "",
+   "title": "T2",
+   "publisher": "Central Bank of Ireland",
+   "doc_type": "official_page",
+   "note": "The Central Bank's own page confirms it operates the Irish component of T2. This is a different URL from the annual report used now.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Central Bank of Ireland",
+    "reason": "The quote says the Irish component of T2, TARGET2-Ireland, is operated by the Central Bank of Ireland."
+   }
+  },
+  {
+   "claim": "record:IE:facial_biometric:count",
+   "question": "Facial biometric: how many records it holds",
+   "relation": "supersedes",
+   "url": "https://assets.gov.ie/static/documents/d05bae0e/20260915_-_DepartmentSocialProtection_AnnualReport_2025_EN_web.pdf",
+   "quote": "To date, over 4.8 million people have been SAFE Registered, including almost 410,000 in 2025.",
+   "quote_english": "",
+   "value": "over 4.8 million people SAFE Registered",
+   "published": "2026-09-15",
+   "title": "Department of Social Protection Annual Report 2025",
+   "publisher": "Department of Social Protection",
+   "doc_type": "annual_report",
+   "note": "The operator's newer (2025) total for SAFE registration, the process that captures the facial image, replaces the 2021 '70% of population' figure.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote gives 4.8 million people SAFE-registered but neither it nor the surrounding text mentions facial images or biometrics, so it does not count facial biometric records."
+   }
+  },
+  {
+   "claim": "record:IE:health_insurance:count",
+   "question": "Statutory health insurance: how many records it holds",
+   "relation": "upgrade",
+   "url": "https://about.hse.ie/api/v2/download-file/file_based_publications/PCRS_Statistical_Analysis_of_Claims_and_Payments_2025.pdf",
+   "quote": "Number of Eligible Persons per Scheme - 2025 *GMS 1,552,553 *GPVC 785,152",
+   "quote_english": "",
+   "value": "1,552,553 GMS eligible persons and 785,152 GP visit card holders in 2025",
+   "published": "2026",
+   "title": "PCRS Statistical Analysis of Claims and Payments 2025",
+   "publisher": "Health Service Executive (Primary Care Reimbursement Service)",
+   "doc_type": "statistics",
+   "note": "The same figures, taken from the HSE's own copy of the report rather than the drugsandalcohol.ie library mirror.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "1,552,553 persons (GMS eligible persons, 2025); GPVC 785,152",
+    "reason": "The PCRS table gives eligible persons per scheme for 2025, and the quote includes only the GMS and GPVC figures; these are medical-card and GP-visit-card counts, not an insurance register."
+   }
+  },
+  {
+   "claim": "record:IE:land_property:count",
+   "question": "Land & property registry: how many records it holds",
+   "relation": "supersedes",
+   "url": "https://tailte.ie/wp-content/uploads/2026/09/Annual-Report-2025-Final-EN-GA-1.pdf",
+   "quote": "Landdirect.ie is our online search application offering easy access to our registration services. 2.4 million Folios and associated spatial data can be accessed through it",
+   "quote_english": "",
+   "value": "2.4 million Folios with associated spatial data accessible via Landdirect.ie",
+   "published": "2026-09",
+   "title": "Tailte Éireann Annual Report 2025",
+   "publisher": "Tailte Éireann",
+   "doc_type": "annual_report",
+   "note": "The newer 2025 annual report (published September 2026) gives the same 2.4 million folio figure.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "2.4 million folios",
+    "reason": "The quote says 2.4 million Folios and their spatial data can be accessed through Landdirect.ie."
+   }
+  },
+  {
+   "claim": "record:IE:land_property:register",
+   "question": "Land & property registry: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://tailte.ie/wp-content/uploads/2026/09/Annual-Report-2025-Final-EN-GA-1.pdf",
+   "quote": "All relevant particulars (such as ownership and burdens) concerning the property, together with the associated spatial data, are recorded on the digital National Land Register.",
+   "quote_english": "",
+   "value": "digital National Land Register",
+   "published": "2026-09",
+   "title": "Tailte Éireann Annual Report 2025",
+   "publisher": "Tailte Éireann",
+   "doc_type": "annual_report",
+   "note": "The 2025 report still names the National Land Register and says Registration also covers the Registry of Deeds.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "National Land Register",
+    "reason": "The quote says property particulars are recorded on the digital National Land Register, in the Land Registry section of the Tailte Éireann report."
+   }
+  },
+  {
+   "claim": "record:IE:public_finance:register",
+   "question": "Treasury and state accounts: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://www.nsso.gov.ie/en/services/finance-services/",
+   "quote": "The Financial Management Shared Services (FMSS) Programme represents one of the largest transformations of financial management across Central Government in recent years. Through the introduction of a single integrated finance platform, a common chart of accounts and standardised accounting processes",
+   "quote_english": "",
+   "value": "Financial Management Shared Services (FMSS), a single integrated finance platform",
+   "published": "2026-09-30",
+   "title": "About Finance Shared Services",
+   "publisher": "National Shared Services Office",
+   "doc_type": "official_page",
+   "note": "This operator page, updated 2026-09-30, replaces the 2023 audit report. Finance Shared Services now supports 16 client public service bodies and is expected to reach close to 50. The NSSO 2024 report names the platform as SAP S/4 HANA.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Financial Management Shared Services (FMSS)",
+    "reason": "The quote names the FMSS Programme and its single integrated finance platform, but it is a programme name, not a named ledger or state-accounts system."
+   }
+  },
+  {
+   "claim": "record:IE:public_finance:operator",
+   "question": "Treasury and state accounts: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.nsso.gov.ie/en/services/finance-services/",
+   "quote": "Finance Shared Services (FSS) , is delivered by the National Shared Services Office (NSSO), and provides a centralised and standardised financial management service to Government Departments and Public Service Bodies (PSBs).",
+   "quote_english": "",
+   "value": "National Shared Services Office (NSSO)",
+   "published": "2026-09-30",
+   "title": "About Finance Shared Services",
+   "publisher": "National Shared Services Office",
+   "doc_type": "official_page",
+   "note": "The operator's own page confirms NSSO delivers the service. It does not cover the Department of Finance's Exchequer role.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "National Shared Services Office (NSSO)",
+    "reason": "The quote says Finance Shared Services is delivered by the NSSO to government departments and public service bodies."
+   }
+  },
+  {
+   "claim": "record:IE:electoral_roll:register",
+   "question": "Electoral roll entry: the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://cdn.electoralcommission.ie/app/uploads/2025/04/30104313/Oversight-Report-on-the-Electoral-Registers_online_english_tagged.pdf",
+   "quote": "The Act provided for the establishment of a shared national electoral register database. This is known as the Local Government Electoral Registration System (LGERS). It is planned that LGERS will be rolled out nationally in 2026.",
+   "quote_english": "",
+   "value": "Local Government Electoral Registration System (LGERS)",
+   "published": "2025",
+   "title": "Oversight Report on the Electoral Registers",
+   "publisher": "An Coimisiún Toghcháin (Electoral Commission)",
+   "doc_type": "official_page",
+   "note": "Names the shared national register database. The report says Dublin City Council is the designated registration authority building it and mentions cloud consumption costs, but does not name a cloud provider.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "Local Government Electoral Registration System (LGERS)",
+    "reason": "The quote names the shared national electoral register database as LGERS, though it says the national rollout is only planned for 2026."
+   }
+  },
+  {
+   "claim": "record:IE:customs:count",
+   "question": "Customs declarations: how many records it holds",
+   "relation": "fills_gap",
+   "url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf",
+   "quote": "From a customs perspective, we processed 62.8 million customs declarations through our customs transit system (NCTS) and the Automated Import and Export Systems (AIS/AES).",
+   "quote_english": "",
+   "value": "62.8 million customs declarations (2025)",
+   "published": "2026",
+   "title": "Revenue Annual Report 2025",
+   "publisher": "Office of the Revenue Commissioners",
+   "doc_type": "annual_report",
+   "note": "This is a 2025 annual volume for the systems already recorded, and also confirms the AIS/AES/NCTS system names.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "62.8 million customs declarations (processed in 2025)",
+    "reason": "The quote gives 62.8 million declarations processed through NCTS and AIS/AES, which is a throughput figure, not records held."
+   }
+  },
+  {
+   "claim": "record:IE:civil_registry:register",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://www.irishstatutebook.ie/eli/2004/act/3/section/13/enacted/en/html",
+   "quote": "a register of all births occurring in the State or to which section 26 or 27 applies (which shall be known, and is referred to in this Act, as the register of births)",
+   "quote_english": "",
+   "value": "register of births (with registers of stillbirths, deaths, marriages etc.)",
+   "published": "2004",
+   "title": "Civil Registration Act 2004, Section 13",
+   "publisher": "Office of the Attorney General (Irish Statute Book)",
+   "doc_type": "legislation",
+   "note": "Section 13 sets up the civil registers kept by an tArd-Chláraitheoir. The Law Reform Commission's revised Act is current to 31 December 2025.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "register of births",
+    "reason": "Section 13 of the 2004 Act establishes the register of all births, known as the register of births."
+   }
+  },
+  {
+   "claim": "record:IE:civil_registry:operator",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://www.irishstatutebook.ie/eli/2004/act/3/section/13/enacted/en/html",
+   "quote": "There shall be established, where appropriate, and maintained by an tArd-Chláraitheoir",
+   "quote_english": "",
+   "value": "an tArd-Chláraitheoir (Registrar General)",
+   "published": "2004",
+   "title": "Civil Registration Act 2004, Section 13",
+   "publisher": "Office of the Attorney General (Irish Statute Book)",
+   "doc_type": "legislation",
+   "note": "The statute names the Registrar General as the body that maintains the civil registers.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "an tArd-Chláraitheoir (Registrar General)",
+    "reason": "The quote, from s.13(1), says the registers are established and maintained by an tArd-Chláraitheoir."
+   }
+  },
+  {
+   "claim": "record:IE:breeder_documents:register",
+   "question": "Breeder document scans: Birth certificates, naturalisation decrees and other documents that establish identity",
+   "relation": "fills_gap",
+   "url": "https://www.irishstatutebook.ie/eli/2008/act/4/enacted/en/print",
+   "quote": "a document purporting to be a copy of an entry in a foreign births entry book or in the foreign births register, both of which are kept under section 27 of the Irish Nationality and Citizenship Act 1956",
+   "quote_english": "",
+   "value": "foreign births register",
+   "published": "2008",
+   "title": "Passports Act 2008",
+   "publisher": "Office of the Attorney General (Irish Statute Book)",
+   "doc_type": "legislation",
+   "note": "The Passports Act lists the foreign births register among the birth documents that prove citizenship for a passport. It is one breeder-document register, not a store of document scans.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "foreign births register",
+    "reason": "The quote names the foreign births entry book and foreign births register kept under s.27 of the 1956 Act; it does not say who keeps them."
+   }
+  },
+  {
+   "claim": "record:IE:digital_identity_credentials:register",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://assets.gov.ie/static/documents/d05bae0e/20260915_-_DepartmentSocialProtection_AnnualReport_2025_EN_web.pdf",
+   "quote": "MyGovID is the secure online identity authentication service provided by the department, allowing individuals to access public services online.",
+   "quote_english": "",
+   "value": "MyGovID",
+   "published": "2026-09-15",
+   "title": "Department of Social Protection Annual Report 2025",
+   "publisher": "Department of Social Protection",
+   "doc_type": "annual_report",
+   "note": "The operator's 2025 annual report. Verified accounts rely on SAFE Registration and the Public Services Card.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "MyGovID, provided by the Department of Social Protection",
+    "reason": "The quote says MyGovID is the online identity authentication service provided by the department, which the report context identifies as the Department of Social Protection."
+   }
+  },
+  {
+   "claim": "record:IE:digital_identity_credentials:count",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://assets.gov.ie/static/documents/d05bae0e/20260915_-_DepartmentSocialProtection_AnnualReport_2025_EN_web.pdf",
+   "quote": "To date, over 4.8 million people have verified their identities through SAFE, with over 3.2 million actively using their MyGovID account to access online services.",
+   "quote_english": "",
+   "value": "over 3.2 million people actively using their MyGovID account",
+   "published": "2026-09-15",
+   "title": "Department of Social Protection Annual Report 2025",
+   "publisher": "Department of Social Protection",
+   "doc_type": "annual_report",
+   "note": "The same report gives about 45 million MyGovID logins in 2025 and 504,000 accounts verified that year.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "over 3.2 million active MyGovID accounts; over 4.8 million SAFE-verified identities",
+    "reason": "The quote gives 4.8 million verified identities and 3.2 million people actively using MyGovID."
+   }
+  },
+  {
+   "claim": "record:IE:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://www.mygovid.ie/en-IE/Privacy",
+   "quote": "This website is maintained by the Department of Social Protection. The Department of Social Protection fully respects your right to privacy.",
+   "quote_english": "",
+   "value": "Department of Social Protection",
+   "published": "2022-05-23",
+   "title": "MyGovID Privacy Statement and Cookies",
+   "publisher": "Department of Social Protection",
+   "doc_type": "official_page",
+   "note": "The MyGovID site's own privacy statement names DSP as maintainer. Its static assets load from Azure blob storage, but no source was found saying where the identity data is hosted.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Department of Social Protection",
+    "reason": "The quote says the Department of Social Protection maintains the MyGovID website, which establishes who runs the site rather than stating directly who operates the scheme."
+   }
+  },
+  {
+   "claim": "indicator:IE:K2",
+   "question": "Is the national electronic identity scheme operated by the state or a state-controlled body? yes = Operated by the state or a state-controlled body; partial = Operated by a private EU provider (e.g. a bank consortium) under state supervision; no = Operated by a provider outside the EU",
+   "relation": "fills_gap",
+   "url": "https://assets.gov.ie/static/documents/d05bae0e/20260915_-_DepartmentSocialProtection_AnnualReport_2025_EN_web.pdf",
+   "quote": "MyGovID is the secure online identity authentication service provided by the department, allowing individuals to access public services online.",
+   "quote_english": "",
+   "value": "yes",
+   "published": "2026-09-15",
+   "title": "Department of Social Protection Annual Report 2025",
+   "publisher": "Department of Social Protection",
+   "doc_type": "annual_report",
+   "note": "The national eID (MyGovID) is provided by a government department (DSP).",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "MyGovID is provided by a government department (Social Protection), so the eID is operated by the state."
+   }
+  },
+  {
+   "claim": "indicator:IE:K1",
+   "question": "Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? yes = Operated by the state or a state-controlled body; partial = Operated by a private EU provider under state contract; no = Operated by a provider outside state control or outside the EU",
+   "relation": "fills_gap",
+   "url": "https://www.revenue.ie/en/tax-professionals/tdm-wm/income-tax-capital-gains-tax-corporation-tax/part-38/38-06-01.pdf",
+   "quote": "A digital certificate is a guarantee by the Certification Authority (in this case the Revenue Commissioners) that the private key, which is contained in the certificate and is used for authentication and signing purposes, can only be used by the person to whom it belongs.",
+   "quote_english": "",
+   "value": "yes",
+   "published": "2025-10",
+   "title": "Tax and Duty Manual Part 38-06-01 Revenue Online Service (ROS)",
+   "publisher": "Office of the Revenue Commissioners",
+   "doc_type": "official_page",
+   "note": "Revenue, a state body, is the certification authority for the ROS certificates that the CRO, DSP and Department of Transport also accept. This covers the government PKI, not an eIDAS qualified trust service.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The Revenue Commissioners act as the Certification Authority for ROS digital certificates, a state body, but this covers only Revenue's ROS PKI, not a government-wide root or a qualified trust service."
+   }
+  },
+  {
+   "claim": "record:IE:tax:register",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf",
+   "quote": "This chatbot is based on a private Revenue managed cloud-based conversational AI service, utilising a secure application programming interface (API) connection to the ROS database with all end user data handled securely on Revenue systems.",
+   "quote_english": "",
+   "value": "ROS database",
+   "published": "2026",
+   "title": "Revenue Annual Report 2025",
+   "publisher": "Office of the Revenue Commissioners",
+   "doc_type": "annual_report",
+   "note": "The Revenue Online Service (ROS) database holds taxpayers' filings and records. The report stresses that end-user data stays on Revenue systems.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "ROS database (on Revenue systems)",
+    "reason": "The quote mentions the ROS database and a private Revenue-managed cloud chatbot with data handled on Revenue systems; it names no cloud provider, so it establishes no hosting dependency."
+   }
+  },
+  {
+   "claim": "record:IE:tax:count",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf",
+   "quote": "Over 900,000 self-assessed taxpayers, 287,000 companies and 293,000 VAT traders registered",
+   "quote_english": "",
+   "value": "over 900,000 self-assessed taxpayers, 287,000 companies and 293,000 VAT traders registered",
+   "published": "2026",
+   "title": "Revenue Annual Report 2025",
+   "publisher": "Office of the Revenue Commissioners",
+   "doc_type": "annual_report",
+   "note": "Registration counts from Revenue's 2025 key-figures page.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "over 900,000 self-assessed taxpayers, 287,000 companies, 293,000 VAT traders registered",
+    "reason": "The quote gives registered counts per taxpayer type from Revenue's 2025 report."
+   }
+  },
+  {
+   "claim": "record:IE:tax:operator",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf",
+   "quote": "This chatbot is based on a private Revenue managed cloud-based conversational AI service, utilising a secure application programming interface (API) connection to the ROS database with all end user data handled securely on Revenue systems.",
+   "quote_english": "",
+   "value": "Revenue",
+   "published": "2026",
+   "title": "Revenue Annual Report 2025",
+   "publisher": "Office of the Revenue Commissioners",
+   "doc_type": "annual_report",
+   "note": "Revenue (the Revenue Commissioners) runs the ROS database on its own systems.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "ROS database (on Revenue systems)",
+    "reason": "This is the same quote as item 23: a Revenue-managed private cloud chatbot connected to the ROS database, with no provider named."
+   }
+  },
+  {
+   "claim": "record:IE:beneficial_ownership:register",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://www.irishstatutebook.ie/eli/2019/si/110/made/en/print",
+   "quote": "There is, by virtue of this Regulation, established a register which shall be known as the “Central Register of Beneficial Ownership of Companies and Industrial and Provident Societies”",
+   "quote_english": "",
+   "value": "Central Register of Beneficial Ownership of Companies and Industrial and Provident Societies",
+   "published": "2019",
+   "title": "S.I. No. 110 of 2019 European Union (Anti-Money Laundering: Beneficial Ownership of Corporate Entities) Regulations 2019",
+   "publisher": "Office of the Attorney General (Irish Statute Book)",
+   "doc_type": "legislation",
+   "note": "Regulation 19 of S.I. 110/2019 as made. Access rules have changed since, so check for later amendments.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "Central Register of Beneficial Ownership of Companies and Industrial and Provident Societies",
+    "reason": "S.I. 110/2019 establishes a register with that name."
+   }
+  },
+  {
+   "claim": "record:IE:beneficial_ownership:operator",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://www.irishstatutebook.ie/eli/2019/si/110/made/en/print",
+   "quote": "a registrar, who shall be known as the “Registrar of Beneficial Ownership of Companies and Industrial and Provident Societies” and is in these Regulations referred to as the “Registrar”",
+   "quote_english": "",
+   "value": "Registrar of Beneficial Ownership of Companies and Industrial and Provident Societies",
+   "published": "2019",
+   "title": "S.I. No. 110 of 2019 European Union (Anti-Money Laundering: Beneficial Ownership of Corporate Entities) Regulations 2019",
+   "publisher": "Office of the Attorney General (Irish Statute Book)",
+   "doc_type": "legislation",
+   "note": "Regulation 18 creates the Registrar, and Regulation 19(2) says the central register is maintained by the Registrar.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Registrar of Beneficial Ownership of Companies and Industrial and Provident Societies",
+    "reason": "The quote names the office-holder, the Registrar, who is responsible for the register, but it does not name the body that houses that office."
+   }
+  },
+  {
+   "claim": "record:IE:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://www.irisoifigiuil.ie/",
+   "quote": "Iris Oifigiúil is the official Irish State gazette and is published twice a week (Tuesdays and Fridays).",
+   "quote_english": "",
+   "value": "Iris Oifigiúil (official Irish State gazette)",
+   "published": "",
+   "title": "Iris Oifigiúil",
+   "publisher": "Iris Oifigiúil",
+   "doc_type": "official_page",
+   "note": "The official gazette's own site. The Irish Statute Book (eISB), which carries Act texts, says it is 'Produced by the Office of the Attorney General'.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Iris Oifigiúil",
+    "reason": "The quote names Iris Oifigiúil as the official Irish State gazette; it does not name the publisher or say that it carries the authentic text of laws."
+   }
+  },
+  {
+   "claim": "record:IE:government_payroll:register",
+   "question": "Government payroll and personnel: Civil service and armed forces payroll and personnel records",
+   "relation": "fills_gap",
+   "url": "https://www.nsso.gov.ie/1025/NSSO_Annual_Report_2024_1102.pdf",
+   "quote": "In 2024, Employee Services delivered HR services to 48,748 customers and processed payroll and pension payments totalling €7.2 billion for 164,102 customers across 54 client PSBs.",
+   "quote_english": "",
+   "value": "NSSO Employee Services HR and payroll shared service",
+   "published": "2026-02-17",
+   "title": "National Shared Services Office Annual Report 2024",
+   "publisher": "National Shared Services Office",
+   "doc_type": "annual_report",
+   "note": "The NSSO runs civil service HR and payroll as a shared service. The report mentions a PeopleSoft upgrade and does not cover Defence Forces payroll.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "164,102 payroll/pension customers across 54 client PSBs (HR services to 48,748); delivered by NSSO Employee Services",
+    "reason": "The NSSO 2024 report gives these customer counts for its Employee Services payroll and HR function; it does not mention the armed forces."
+   }
+  },
+  {
+   "claim": "record:IE:government_payroll:count",
+   "question": "Government payroll and personnel: Civil service and armed forces payroll and personnel records",
+   "relation": "fills_gap",
+   "url": "https://www.nsso.gov.ie/1025/NSSO_Annual_Report_2024_1102.pdf",
+   "quote": "In 2024, Employee Services delivered HR services to 48,748 customers and processed payroll and pension payments totalling €7.2 billion for 164,102 customers across 54 client PSBs.",
+   "quote_english": "",
+   "value": "164,102 payroll and pension customers across 54 client PSBs",
+   "published": "2026-02-17",
+   "title": "National Shared Services Office Annual Report 2024",
+   "publisher": "National Shared Services Office",
+   "doc_type": "annual_report",
+   "note": "2024 NSSO payroll and pension coverage. HR services covered 48,748 customers.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "164,102 payroll/pension customers across 54 client PSBs; operator NSSO Employee Services",
+    "reason": "This is the same quote as item 29, which establishes both the counts and that the NSSO's Employee Services delivers the payroll."
+   }
+  },
+  {
+   "claim": "record:IE:government_payroll:operator",
+   "question": "Government payroll and personnel: Civil service and armed forces payroll and personnel records",
+   "relation": "fills_gap",
+   "url": "https://www.nsso.gov.ie/en/publications/annual-report-2024/",
+   "quote": "The 2024 annual report of the National Shared Services Office details our outputs and achievements, highlighting the progress made throughout the year in delivering HR, payroll and finance shared services to Government Departments and Public Service Bodies (PSBs).",
+   "quote_english": "",
+   "value": "National Shared Services Office",
+   "published": "2026-02-17",
+   "title": "National Shared Services Office Annual Report 2024",
+   "publisher": "National Shared Services Office",
+   "doc_type": "official_page",
+   "note": "The operator's own publication page.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "National Shared Services Office (NSSO)",
+    "reason": "The quote says the NSSO delivers HR, payroll and finance shared services to departments and PSBs."
+   }
+  },
+  {
+   "claim": "record:IE:crisis_management:register",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://www.emergencyplanning.ie/",
+   "quote": "Through the Office of Emergency Planning (OEP), the department plays a central role in coordinating national emergency planning, supporting the Government Task Force on Emergency Planning and managing the National Emergency Co-ordination Centre.",
+   "quote_english": "",
+   "value": "National Emergency Co-ordination Centre",
+   "published": "2026-08-28",
+   "title": "Office of Emergency Planning",
+   "publisher": "Department of Defence, Office of Emergency Planning",
+   "doc_type": "official_page",
+   "note": "The gov.ie-hosted Office of Emergency Planning page, last updated 2026-08-28.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "National Emergency Co-ordination Centre, managed by the Department of Defence's Office of Emergency Planning",
+    "reason": "The page, reached by redirect to gov.ie, says the Department of Defence, through the OEP, manages the National Emergency Co-ordination Centre."
+   }
+  },
+  {
+   "claim": "record:IE:crisis_management:operator",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://www.emergencyplanning.ie/",
+   "quote": "Through the Office of Emergency Planning (OEP), the department plays a central role in coordinating national emergency planning, supporting the Government Task Force on Emergency Planning and managing the National Emergency Co-ordination Centre.",
+   "quote_english": "",
+   "value": "Office of Emergency Planning (OEP), Department of Defence",
+   "published": "2026-08-28",
+   "title": "Office of Emergency Planning",
+   "publisher": "Department of Defence, Office of Emergency Planning",
+   "doc_type": "official_page",
+   "note": "The page says 'the department' is the Department of Defence.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "National Emergency Co-ordination Centre, managed by the Department of Defence's Office of Emergency Planning",
+    "reason": "This is the same quote as item 32; the preceding sentence identifies the department as the Department of Defence."
+   }
+  },
+  {
+   "claim": "record:IE:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.gov.ie/en/department-of-education/services/primary-online-database-pod/",
+   "quote": "The Primary Online Database (POD) is a nationwide database of primary school pupils as they move through the primary education system and on to post primary.",
+   "quote_english": "",
+   "value": "Primary Online Database (POD)",
+   "published": "",
+   "title": "Primary Online Database (POD)",
+   "publisher": "Department of Education and Youth",
+   "doc_type": "official_page",
+   "note": "The Department's service page. The helpdesk is at the Department of Education and Youth, and a Post-Primary Online Database (P-POD) page also exists.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "Primary Online Database (POD)",
+    "reason": "The quote names POD as the nationwide database of primary school pupils; the page shows it under the Department of Education and Youth, but the quote does not say who operates it."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:IE:emergency_communications:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:IE:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:IE:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:IE:L2",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:border_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:central_bank:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:customs:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:defence_command:foreign_dependency",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:defence_command:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:defence_command:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:electoral_management:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:electoral_management:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:electoral_roll:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:facial_biometric:count",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:facial_biometric:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:facial_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:grid_control:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:grid_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:health_insurance:count",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:health_insurance:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:health_insurance:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:health_records:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:health_records:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:public_finance:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:residence_permits:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:trust_services_pki:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:vehicle_licensing:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:water_control:count",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:water_control:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:water_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:business_registry:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:business_registry:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:central_bank:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:customs:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:electoral_roll:count",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:firearms_register:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:firearms_register:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:intelligence:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:intelligence:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:land_property:count",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:land_property:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:police_records:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:police_records:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:public_health_surveillance:count",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:public_health_surveillance:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:public_health_surveillance:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:residence_permits:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IE:trust_services_pki:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:fingerprint_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:breeder_documents:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:issuance_history:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:authentication_audit_log:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:benefits_pensions:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:judicial_criminal:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:government_payroll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:IE:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:IE:K2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:IE:L1",
+   "status": "not_reached"
+  },
+  {
+   "claim": "indicator:IE:L3",
+   "status": "not_reached"
+  }
+ ]
+}

@@ -4,6 +4,8 @@ Re-pull the six Eurostat figures for all 27 member states (ROADMAP step 4).
 
     python3 model/fetch_eurostat.py            # fetch, cache, write the pull, print the diff
     python3 model/fetch_eurostat.py --offline  # re-read the cache; diff without touching the network
+    python3 model/fetch_eurostat.py --check    # pull and report only: writes nothing at all
+    python3 model/fetch_eurostat.py --adopt population_m=2027 [...]   # move pins, apply, register (#84)
 
 Why this file exists
 --------------------
@@ -74,15 +76,30 @@ PERIODS = 8
 # five of the six match their pinned vintage to within 0.06%, which is what "sourced" ought to
 # mean. Bumping a pin is a deliberate decision with a diff attached, not a side effect of
 # running the fetcher.
+PINS = ROOT / "model" / "eurostat_pins.csv"
+
+
+def pins() -> dict[str, str]:
+    """column -> pinned period. Kept as data, with the date and decision of each adoption, so moving a
+    pin is a recorded change to one row (--adopt), never an edit to this file."""
+    with PINS.open(newline="", encoding="utf-8") as fh:
+        return {r["column"]: r["period"] for r in csv.DictReader(fh)}
+
+
+_PIN = pins()
+
 SERIES: dict[str, tuple[str, dict[str, str], float, int, str]] = {
-    "population_m": ("tps00001", {"indic_de": "JAN"}, 1e-6, 3, "2025"),
-    "gdp_eur_bn": ("nama_10_gdp", {"na_item": "B1GQ", "unit": "CP_MEUR"}, 1e-3, 1, "2025"),
+    # Pins bumped 2026-09-30 (DECISIONS #84): population 2025 -> 2026, renewables 2024 -> 2025,
+    # land area 2019 -> 2026, and gov_employment_k 2023 -> 2024, whose old column reproduced no
+    # period at all and is now replaced by the official series. GDP stays 2025, revised.
+    "population_m": ("tps00001", {"indic_de": "JAN"}, 1e-6, 3, _PIN["population_m"]),
+    "gdp_eur_bn": ("nama_10_gdp", {"na_item": "B1GQ", "unit": "CP_MEUR"}, 1e-3, 1, _PIN["gdp_eur_bn"]),
     "gov_employment_k": (
         "nama_10_a64_e",
         {"nace_r2": "O", "unit": "THS_PER", "na_item": "EMP_DC"},
         1.0,
         1,
-        "2023",
+        _PIN["gov_employment_k"],
     ),
     # Band IC is 500-1,999 MWh/yr. `MWH2000-19999` is band ID, one band up: using it manufactures
     # a ~10% disagreement with a column that is in fact exact, which is precisely the kind of
@@ -92,12 +109,12 @@ SERIES: dict[str, tuple[str, dict[str, str], float, int, str]] = {
         {"nrg_cons": "MWH500-1999", "unit": "KWH", "currency": "EUR", "tax": "X_VAT"},
         1000.0,
         1,
-        "2025-S2",
+        _PIN["elec_price_eur_mwh"],
     ),
     # Renewable share OF ELECTRICITY, not of gross final energy consumption (`REN`), which
     # disagrees with all 27 by 36% on average.
-    "renewables_pct": ("nrg_ind_ren", {"nrg_bal": "REN_ELC", "unit": "PC"}, 1.0, 1, "2024"),
-    "land_km2": ("reg_area3", {"landuse": "L0008", "unit": "KM2"}, 1.0, 0, "2019"),
+    "renewables_pct": ("nrg_ind_ren", {"nrg_bal": "REN_ELC", "unit": "PC"}, 1.0, 1, _PIN["renewables_pct"]),
+    "land_km2": ("reg_area3", {"landuse": "L0008", "unit": "KM2"}, 1.0, 0, _PIN["land_km2"]),
 }
 
 
@@ -161,7 +178,7 @@ def complete_period(data: dict[str, dict[str, float]], periods: list[str], isos:
     return None
 
 
-def pull(offline: bool = False) -> tuple[list[dict[str, str]], list[str]]:
+def pull(offline: bool = False, record: bool = True) -> tuple[list[dict[str, str]], list[str]]:
     isos = countries()
     current = parameters()
     today = dt.date.today().isoformat()
@@ -180,7 +197,8 @@ def pull(offline: bool = False) -> tuple[list[dict[str, str]], list[str]]:
             body = path.read_bytes()
         else:
             result = fetchlib.fetch(url)
-            manifest.append(fetchlib.store("EU", "eurostat", column, url, result, today))
+            if record:
+                manifest.append(fetchlib.store("EU", "eurostat", column, url, result, today))
             if not result.ok:
                 notes.append(f"{column}: {dataset} returned {result.status}")
                 continue
@@ -230,7 +248,7 @@ def write_pull(rows: list[dict[str, str]]) -> None:
         writer.writerows(sorted(rows, key=lambda r: (r["iso"], r["column"])))
 
 
-def report(rows: list[dict[str, str]], notes: list[str]) -> None:
+def report(rows: list[dict[str, str]], notes: list[str], wrote: bool = True) -> None:
     """What the API now says against what the CSV holds. Reported, never applied."""
     for n in notes:
         print(f"note: {n}", file=sys.stderr)
@@ -258,7 +276,8 @@ def report(rows: list[dict[str, str]], notes: list[str]) -> None:
             f"{len(differs):>4}/{len(rs):<3}  {worst[0] * 100:>7.1f}% {worst[1]}"
         )
     print(f"\n{total} of {len(rows)} values differ from eu27_parameters.csv by more than 0.5%")
-    print(f"wrote {PULL.relative_to(ROOT)} -- review before changing any parameter")
+    if wrote:
+        print(f"wrote {PULL.relative_to(ROOT)} -- review before changing any parameter")
     if total:
         print(
             "A column that differs at its PINNED period is a provenance defect, not stale data:\n"
@@ -266,10 +285,74 @@ def report(rows: list[dict[str, str]], notes: list[str]) -> None:
         )
 
 
+def adopt(moves: dict[str, str], date: str, decision: str) -> int:
+    """Move pins to newer periods and apply them, as one recorded step (#84):
+    pins file, pull, eu27_parameters.csv, a registry source per new vintage (the old one kept, marked
+    unused), and the Eurostat citations re-synced. Prints what changed."""
+    import provenance  # noqa: PLC0415
+    rows = list(csv.DictReader(PINS.open(newline="", encoding="utf-8")))
+    for r in rows:
+        if r["column"] in moves and r["period"] != moves[r["column"]]:
+            # Only a pin that actually moves is re-stamped; restating a pin keeps its history.
+            r.update({"period": moves[r["column"]], "adopted": date, "decision": decision})
+    with PINS.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=["column", "period", "adopted", "decision"], lineterminator="\n")
+        w.writeheader()
+        w.writerows(rows)
+    for col, per in moves.items():
+        SERIES[col] = SERIES[col][:4] + (per,)
+    pulled, notes = pull()
+    if len(pulled) != 27 * len(SERIES):
+        for n in notes:
+            print(f"note: {n}", file=sys.stderr)
+        raise SystemExit("a pinned period is incomplete; nothing applied (pins file already updated: revert it)")
+    write_pull(pulled)
+    values = {(r["iso"], r["column"]): r["value"] for r in pulled}
+    raw = PARAMETERS.read_bytes().decode("utf-8")
+    nl = "\r\n" if "\r\n" in raw[:4096] else "\n"
+    params = list(csv.DictReader(PARAMETERS.open(newline="", encoding="utf-8")))
+    changed = 0
+    for r in params:
+        for col in SERIES:
+            if r[col] != values[(r["iso2"], col)]:
+                r[col] = values[(r["iso2"], col)]
+                changed += 1
+    with PARAMETERS.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(params[0]), lineterminator=nl)
+        w.writeheader()
+        w.writerows(params)
+    reg = provenance.registry()
+    for col, (ds, _f, _s, _d, period) in SERIES.items():
+        sid = f"eurostat:{ds.lower()}@{period}"
+        if sid in reg:
+            continue
+        old = next(r for k, r in sorted(reg.items()) if k.startswith(f"eurostat:{ds.lower()}@") and r["doc_type"] != "unused")
+        reg[sid] = {**old, "source_id": sid, "published": date,
+                    "notes": f"pinned vintage {period}, adopted {date} ({decision})"}
+        old["doc_type"] = "unused"
+        old["notes"] = f"{old['notes']}; superseded by {sid} on {date}".strip("; ")
+        print(f"registered {sid}, superseding {old['source_id']}")
+    provenance.write_registry(reg)
+    provenance.sync_eurostat()
+    print(f"{changed} parameter cells changed; run ./run.sh data, ./run.sh artefacts and ./test.sh")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Re-pull the Eurostat figures and diff them.")
     ap.add_argument("--offline", action="store_true", help="use the cache; do not hit the network")
+    ap.add_argument("--check", action="store_true", help="pull and report; write nothing")
+    ap.add_argument("--adopt", nargs="+", metavar="COLUMN=PERIOD", help="move pins and apply them")
+    ap.add_argument("--date", default=dt.date.today().isoformat())
+    ap.add_argument("--decision", default="#84")
     args = ap.parse_args(argv)
+    if args.adopt:
+        return adopt(dict(a.split("=", 1) for a in args.adopt), args.date, args.decision)
+    if args.check:
+        rows, notes = pull(record=False)
+        report(rows, notes, wrote=False)
+        print("(--check: nothing was written)")
+        return 0 if rows else 1
 
     rows, notes = pull(offline=args.offline)
     if not rows:

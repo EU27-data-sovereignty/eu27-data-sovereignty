@@ -1,0 +1,864 @@
+{
+ "iso": "FR",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:FR:L3",
+   "question": "indicator L3: Is a cloud certification that requires immunity from non-EU law in force or adopted for government use?",
+   "relation": "corroborates",
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053900789",
+   "quote": "La protection des données du service contre tout accès par des autorités publiques d'un Etat tiers non autorisé par le droit de l'Union européenne ou les engagements internationaux de la France.",
+   "quote_english": "Protection of the service's data against any access by public authorities of a third State not authorised by European Union law or France's international commitments.",
+   "value": "yes",
+   "published": "2026-04-14",
+   "title": "Décret n° 2026-272 du 14 avril 2026 relatif à la protection des données d'une sensibilité particulière ... traitées par un service d'informatique en nuage fourni par un prestataire privé",
+   "publisher": "Légifrance (Journal officiel)",
+   "doc_type": "legislation",
+   "note": "Binding decree applying art. 31 of loi SREN: item 10 of article 2 lists this among the requirements of an ANSSI referential whose compliance is attested by a qualification; a T1 legal text newer than the doctrine page.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Décret n° 2026-272 of 14 April 2026, in force, makes this item 10 of the security requirements that cloud services qualified for particularly sensitive administration data must meet: protection against access by third-state authorities not authorised by EU law. That is a non-EU-law immunity requirement in force for government use."
+   }
+  },
+  {
+   "claim": "indicator:FR:L1",
+   "question": "Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? yes = A statute or binding regulation requires it for government data generally; partial = Required only for classified data or only for named sectors; no = A source states there is no such requirement",
+   "relation": "fills_gap",
+   "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000049565888/2024-05-23",
+   "quote": "veillent à ce que le service d'informatique en nuage fourni par le prestataire privé mette en œuvre des critères de sécurité et de protection des données garantissant notamment la protection des données traitées ou stockées contre tout accès par des autorités publiques d'Etats tiers non autorisé par le droit de l'Union européenne ou d'un Etat membre",
+   "quote_english": "shall ensure that the cloud service provided by the private provider implements security and data-protection criteria guaranteeing in particular the protection of processed or stored data against any access by public authorities of third States not authorised by EU law or that of a Member State",
+   "value": "partial",
+   "published": "2024-05-23",
+   "title": "Article 31 - LOI n° 2024-449 du 21 mai 2024 visant à sécuriser et à réguler l'espace numérique",
+   "publisher": "Légifrance",
+   "doc_type": "legislation",
+   "note": "The obligation applies only when State administrations, operators and listed GIPs use private cloud for data of particular sensitivity (secrets protected by law, data needed for essential State missions), hence partial; implemented by décret n° 2026-272.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "partial",
+    "reason": "Article 31 of Loi 2024-449 applies the third-state-access protection only to data 'd'une sensibilité particulière' (state secrets and data essential to core state functions), not to government data generally."
+   }
+  },
+  {
+   "claim": "indicator:FR:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFSCTA000025635365",
+   "quote": "l'ANSSI, autorité de certification racine de l'Etat français, met en œuvre une infrastructure de gestion de clés cryptographiques (IGC)",
+   "quote_english": "ANSSI, root certification authority of the French State, operates a cryptographic key management infrastructure (PKI)",
+   "value": "yes",
+   "published": "2012-04-06",
+   "title": "Avis relatif aux certificats électroniques de l'autorité de certification racine de l'Etat français dits « certificats IGC/A »",
+   "publisher": "Légifrance (Journal officiel)",
+   "doc_type": "official_page",
+   "note": "Official Journal notice independently confirms the State root CA (IGC/A) is run by ANSSI, a State agency; the former cyber.gouv.fr/igca page now redirects in a loop.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote states that ANSSI, a state agency, is the root certification authority of the French State and runs its PKI (IGC)."
+   }
+  },
+  {
+   "claim": "record:FR:trust_services_pki:register",
+   "question": "State PKI and qualified trust services: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFSCTA000025635365",
+   "quote": "l'ANSSI, autorité de certification racine de l'Etat français, met en œuvre une infrastructure de gestion de clés cryptographiques (IGC)",
+   "quote_english": "ANSSI, root certification authority of the French State, operates a cryptographic key management infrastructure (PKI)",
+   "value": "infrastructure de gestion de clés cryptographiques (IGC) run by ANSSI as root certification authority of the French State (State root PKI)",
+   "published": "2012-04-06",
+   "title": "Avis relatif aux certificats électroniques de l'autorité de certification racine de l'Etat français dits « certificats IGC/A »",
+   "publisher": "Légifrance (Journal officiel)",
+   "doc_type": "official_page",
+   "note": "The same notice names it the IGC/A, the root of trust of the interministerial certification chain; T1 source replacing a 2011 ministry certificate policy PDF.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "IGC (IGC/A, infrastructure de gestion de la confiance de l'administration)",
+    "reason": "The quote names the PKI as an 'infrastructure de gestion de clés cryptographiques (IGC)', and the page context names it IGC/A."
+   }
+  },
+  {
+   "claim": "record:FR:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: the body that operates it",
+   "relation": "fills_gap",
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFSCTA000025635365",
+   "quote": "l'ANSSI, autorité de certification racine de l'Etat français, met en œuvre une infrastructure de gestion de clés cryptographiques (IGC)",
+   "quote_english": "ANSSI, root certification authority of the French State, operates a cryptographic key management infrastructure (PKI)",
+   "value": "ANSSI (National Cybersecurity Agency of France)",
+   "published": "2012-04-06",
+   "title": "Avis relatif aux certificats électroniques de l'autorité de certification racine de l'Etat français dits « certificats IGC/A »",
+   "publisher": "Légifrance (Journal officiel)",
+   "doc_type": "official_page",
+   "note": "Operator of the State root PKI stated in the Official Journal.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "ANSSI",
+    "reason": "The quote says ANSSI, as root CA of the French State, 'met en œuvre' (operates) the IGC."
+   }
+  },
+  {
+   "claim": "indicator:FR:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.franceconnect.gouv.fr/cgu/",
+   "quote": "la DINUM (Direction Interministérielle du Numérique) qui met en œuvre et opère le Téléservice FranceConnect/FranceConnect+.",
+   "quote_english": "DINUM (Interministerial Digital Directorate), which implements and operates the FranceConnect/FranceConnect+ online service.",
+   "value": "yes",
+   "published": "2026-02-20",
+   "title": "Conditions générales d'utilisation - FranceConnect (version 1.8)",
+   "publisher": "DINUM / FranceConnect",
+   "doc_type": "official_page",
+   "note": "Operator's own terms (applicable from 20 Feb 2026) confirm the national eID federation is operated by a State directorate; independent of the France Identité page.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote says DINUM, an interministerial state directorate, implements and operates FranceConnect/FranceConnect+."
+   }
+  },
+  {
+   "claim": "record:FR:authentication_audit_log:register",
+   "question": "Authentication audit log: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://www.franceconnect.gouv.fr/cgu/",
+   "quote": "FranceConnect ne conserve aucune donnée personnelle au-delà de la durée de votre session, à l’exception de l’adresse IP, nécessaire au fonctionnement et à la sécurité du service.",
+   "quote_english": "FranceConnect keeps no personal data beyond the duration of your session, except the IP address, which is needed for the operation and security of the service.",
+   "value": "FranceConnect keeps no personal data beyond the session, except the IP address",
+   "published": "2026-02-20",
+   "title": "Conditions générales d'utilisation - FranceConnect (version 1.8)",
+   "publisher": "DINUM / FranceConnect",
+   "doc_type": "official_page",
+   "note": "The 2026 terms of the same operator describe narrower retention than the 2023 privacy policy's 'traceability records'; the printed wording should be rechecked against this newer text.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote describes FranceConnect's data retention (only the IP address is kept) but names no authentication audit log or register."
+   }
+  },
+  {
+   "claim": "record:FR:civil_registry:register",
+   "question": "Civil registry core: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.insee.fr/fr/metadonnees/definition/c1602",
+   "quote": "Le répertoire national d'identification des personnes physiques (RNIPP), tenu par l'Insee depuis 1946, est l'image des registres d'état civil.",
+   "quote_english": "The national register for the identification of natural persons (RNIPP), kept by Insee since 1946, mirrors the civil-status registers.",
+   "value": "Répertoire national d'identification des personnes physiques (RNIPP) (national register for the identification of natural persons)",
+   "published": "2026-08-11",
+   "title": "Répertoire national d'identification des personnes physiques - Définition",
+   "publisher": "Insee",
+   "doc_type": "statistics",
+   "note": "The statistics office that keeps the register (T1), updated August 2026, replaces a CNIL page as source for the name.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "RNIPP (Répertoire national d'identification des personnes physiques)",
+    "reason": "The quote names the RNIPP as the image of the civil registers."
+   }
+  },
+  {
+   "claim": "record:FR:civil_registry:operator",
+   "question": "Civil registry core: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.insee.fr/fr/metadonnees/definition/c1602",
+   "quote": "Le répertoire national d'identification des personnes physiques (RNIPP), tenu par l'Insee depuis 1946, est l'image des registres d'état civil.",
+   "quote_english": "The national register for the identification of natural persons (RNIPP), kept by Insee since 1946, mirrors the civil-status registers.",
+   "value": "Insee",
+   "published": "2026-08-11",
+   "title": "Répertoire national d'identification des personnes physiques - Définition",
+   "publisher": "Insee",
+   "doc_type": "statistics",
+   "note": "Newer Insee page (Aug 2026) than the 2022 Courrier des statistiques article; confirms Insee keeps the RNIPP.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Insee",
+    "reason": "The quote says the RNIPP is 'tenu par l'Insee' (kept by Insee) since 1946."
+   }
+  },
+  {
+   "claim": "record:FR:crisis_management:register",
+   "question": "Crisis management and civil protection: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://fr-alert.gouv.fr/propos",
+   "quote": "FR-Alert est le nouveau dispositif d'alerte et d'information des populations. Déployé sur le territoire national depuis fin juin 2022, FR-Alert permet de prévenir en temps réel toute personne détentrice d’un téléphone portable de sa présence dans une zone de danger",
+   "quote_english": "FR-Alert is the new system for alerting and informing the population. Deployed nationally since the end of June 2022, FR-Alert warns in real time anyone holding a mobile phone that they are in a danger zone",
+   "value": "FR-Alert (population alert and information system)",
+   "published": "",
+   "title": "À propos | FR-Alert",
+   "publisher": "Ministère de l'Intérieur (FR-Alert)",
+   "doc_type": "official_page",
+   "note": "The system's own official site (T1) corroborates the Senate budget report.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "FR-Alert",
+    "reason": "The quote (verified by direct fetch) names FR-Alert as the national population alert and information system, deployed since June 2022."
+   }
+  },
+  {
+   "claim": "record:FR:facial_biometric:operator",
+   "question": "Facial biometric: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000033318345",
+   "quote": "Le ministre de l'intérieur (direction des libertés publiques et des affaires juridiques) et l'Agence nationale des titres sécurisés mettent en œuvre un traitement de données à caractère personnel dénommé",
+   "quote_english": "The Minister of the Interior (Directorate of Public Liberties and Legal Affairs) and the National Agency for Secure Documents implement a personal-data processing named",
+   "value": "ministre de l'intérieur and Agence nationale des titres sécurisés (Minister of the Interior and National Agency for Secure Documents)",
+   "published": "2025-12-25",
+   "title": "Décret n° 2016-1460 du 28 octobre 2016 autorisant la création d'un traitement de données à caractère personnel relatif aux passeports et aux cartes nationales d'identité",
+   "publisher": "Légifrance",
+   "doc_type": "legislation",
+   "note": "The TES decree (consolidated 25 Dec 2025) names the processing TES and shows ANTS (now France Titres) as joint implementer alongside the Interior ministry.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "Ministère de l'intérieur (DLPAJ) and Agence nationale des titres sécurisés (ANTS), jointly",
+    "reason": "The quote says the interior minister and ANTS jointly implement the processing (named TES in the following words), which the decree says holds facial images."
+   }
+  },
+  {
+   "claim": "record:FR:fingerprint_biometric:operator",
+   "question": "Fingerprint biometric: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000033318345",
+   "quote": "Le ministre de l'intérieur (direction des libertés publiques et des affaires juridiques) et l'Agence nationale des titres sécurisés mettent en œuvre un traitement de données à caractère personnel dénommé",
+   "quote_english": "The Minister of the Interior (Directorate of Public Liberties and Legal Affairs) and the National Agency for Secure Documents implement a personal-data processing named",
+   "value": "ministre de l'intérieur and Agence nationale des titres sécurisés (Minister of the Interior and National Agency for Secure Documents)",
+   "published": "2025-12-25",
+   "title": "Décret n° 2016-1460 du 28 octobre 2016 autorisant la création d'un traitement de données à caractère personnel relatif aux passeports et aux cartes nationales d'identité",
+   "publisher": "Légifrance",
+   "doc_type": "legislation",
+   "note": "Consolidated TES decree on the official law portal; ANTS co-implements with the ministry.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Ministère de l'intérieur (DLPAJ) and Agence nationale des titres sécurisés (ANTS), jointly",
+    "reason": "The same joint-operator sentence covers TES, which the decree says holds fingerprints."
+   }
+  },
+  {
+   "claim": "record:FR:issuance_history:operator",
+   "question": "Document issuance history: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000033318345",
+   "quote": "Le ministre de l'intérieur (direction des libertés publiques et des affaires juridiques) et l'Agence nationale des titres sécurisés mettent en œuvre un traitement de données à caractère personnel dénommé",
+   "quote_english": "The Minister of the Interior (Directorate of Public Liberties and Legal Affairs) and the National Agency for Secure Documents implement a personal-data processing named",
+   "value": "ministre de l'intérieur and Agence nationale des titres sécurisés (Minister of the Interior and National Agency for Secure Documents)",
+   "published": "2025-12-25",
+   "title": "Décret n° 2016-1460 du 28 octobre 2016 autorisant la création d'un traitement de données à caractère personnel relatif aux passeports et aux cartes nationales d'identité",
+   "publisher": "Légifrance",
+   "doc_type": "legislation",
+   "note": "Same TES decree; T1 consolidated text newer than the 2020 CNIL page.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "Ministère de l'intérieur (DLPAJ) and Agence nationale des titres sécurisés (ANTS), jointly",
+    "reason": "The same joint-operator sentence covers TES, which the decree says records the history of issued passports and ID cards."
+   }
+  },
+  {
+   "claim": "record:FR:digital_identity_credentials:register",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://www.franceconnect.gouv.fr/cgu/",
+   "quote": "FranceConnect permet l’identification et l’authentification électronique des usagers avec un niveau de garantie faible, au sens du règlement (UE) n°910/2014",
+   "quote_english": "FranceConnect enables electronic identification and authentication of users at a low assurance level within the meaning of Regulation (EU) No 910/2014",
+   "value": "FranceConnect (the State's electronic identification and authentication service)",
+   "published": "2026-02-20",
+   "title": "Conditions générales d'utilisation - FranceConnect (version 1.8)",
+   "publisher": "DINUM / FranceConnect",
+   "doc_type": "official_page",
+   "note": "The same terms state that FranceConnect+ covers the substantial and high eIDAS levels, relying on identity providers such as France Identité.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "FranceConnect; eIDAS assurance level low (faible)",
+    "reason": "The quote names the scheme and states its eIDAS assurance level; it does not name an operator."
+   }
+  },
+  {
+   "claim": "record:FR:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://docs.partenaires.franceconnect.gouv.fr/fi/general/fi-general-presentation/",
+   "quote": "Ces sont deux solutions opérées et développées par la DINUM ( Direction interministérielle du numérique ) pour le compte de l’État.",
+   "quote_english": "These are two solutions operated and developed by DINUM (Interministerial Digital Directorate) on behalf of the State.",
+   "value": "DINUM (Direction interministérielle du numérique)",
+   "published": "",
+   "title": "Présentation générale - FranceConnect (partner documentation)",
+   "publisher": "DINUM / FranceConnect",
+   "doc_type": "official_page",
+   "note": "Refers to FranceConnect and FranceConnect+.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "FranceConnect and FranceConnect+, operated by DINUM",
+    "reason": "The text matches apart from link markup spacing. The preceding sentence identifies the 'deux solutions' as FranceConnect and FranceConnect+, which DINUM operates and develops for the State."
+   }
+  },
+  {
+   "claim": "record:FR:electoral_roll:register",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://www.insee.fr/fr/information/3539086",
+   "quote": "La loi n° 2016-1048 du 1ᵉʳ août 2016 modifie les modalités d'inscription sur les listes électorales et institue un répertoire électoral unique (REU) dont elle confie la gestion à l'Insee.",
+   "quote_english": "Law no. 2016-1048 of 1 August 2016 changes the rules for registration on the electoral lists and establishes a single electoral register (REU), whose management it entrusts to Insee.",
+   "value": "répertoire électoral unique (REU) (single electoral register)",
+   "published": "2023-05-15",
+   "title": "Le Répertoire électoral unique",
+   "publisher": "Insee",
+   "doc_type": "statistics",
+   "note": "The operator's own page; the electoral lists are extracted from the REU through Insee's Elire application.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "Répertoire électoral unique (REU), managed by Insee",
+    "reason": "The quote says the 2016 law created the REU and gave its management to Insee."
+   }
+  },
+  {
+   "claim": "record:FR:electoral_roll:operator",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://www.insee.fr/fr/information/3539086",
+   "quote": "La loi n° 2016-1048 du 1ᵉʳ août 2016 modifie les modalités d'inscription sur les listes électorales et institue un répertoire électoral unique (REU) dont elle confie la gestion à l'Insee.",
+   "quote_english": "Law no. 2016-1048 of 1 August 2016 changes the rules for registration on the electoral lists and establishes a single electoral register (REU), whose management it entrusts to Insee.",
+   "value": "Insee",
+   "published": "2023-05-15",
+   "title": "Le Répertoire électoral unique",
+   "publisher": "Insee",
+   "doc_type": "statistics",
+   "note": "Management entrusted to Insee by law; communes and consulates update it.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "Répertoire électoral unique (REU), managed by Insee",
+    "reason": "Same quote as item 15: it establishes both the register's name (REU) and its manager (Insee)."
+   }
+  },
+  {
+   "claim": "record:FR:tax:register",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000017653944",
+   "quote": "dénommée \"ILIAD\" a pour finalité d'assurer la gestion de l'impôt sur le revenu (IR), de la taxe d'habitation (TH)",
+   "quote_english": "named \"ILIAD\" is intended to manage income tax (IR) and housing tax (TH)",
+   "value": "ILIAD (income-tax and housing-tax management application of the tax administration)",
+   "published": "2000-10-03",
+   "title": "Délibération 00-044 du 03 octobre 2000",
+   "publisher": "CNIL, via Légifrance",
+   "doc_type": "official_page",
+   "note": "Old CNIL opinion (2000) on the DGI, now DGFiP, application ILIAD for personal income tax; it covers individuals only, not companies. The quote-mark characters around ILIAD should be checked against the page.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "ILIAD",
+    "reason": "The quote names the ILIAD application for income tax and housing tax management. The surrounding context attributes it to the DGI, but the quote itself does not name an operator."
+   }
+  },
+  {
+   "claim": "record:FR:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.cadastre.gouv.fr/scpc/accueil.do",
+   "quote": "Le plan cadastral français disponible en ligne est composé de 598747 feuilles de plan aux formats image ou vecteur.",
+   "quote_english": "The French cadastral plan available online consists of 598747 plan sheets in image or vector format.",
+   "value": "plan cadastral (cadastral plan)",
+   "published": "",
+   "title": "cadastre.gouv.fr - service de consultation du plan cadastral",
+   "publisher": "Direction Générale des Finances Publiques",
+   "doc_type": "official_page",
+   "note": "The DGFiP's own cadastral service covers parcels only; title and mortgage records (fichier immobilier) are not covered by this source.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "Plan cadastral (598747 plan sheets online)",
+    "reason": "The quote names the French cadastral plan and gives a count of 598747 sheets. The operator (DGFiP) appears only in the page footer, not in the quote."
+   }
+  },
+  {
+   "claim": "record:FR:land_property:count",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.cadastre.gouv.fr/scpc/accueil.do",
+   "quote": "Le plan cadastral français disponible en ligne est composé de 598747 feuilles de plan aux formats image ou vecteur.",
+   "quote_english": "The French cadastral plan available online consists of 598747 plan sheets in image or vector format.",
+   "value": "598747 plan sheets",
+   "published": "",
+   "title": "cadastre.gouv.fr - service de consultation du plan cadastral",
+   "publisher": "Direction Générale des Finances Publiques",
+   "doc_type": "official_page",
+   "note": "Live figure on the home page, retrieved 2026-09-30; it counts map sheets, not parcels.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Plan cadastral (598747 plan sheets online)",
+    "reason": "Same quote as item 18: it establishes the cadastral plan and its sheet count, but not an operator or any title and mortgage register."
+   }
+  },
+  {
+   "claim": "record:FR:border_control:register",
+   "question": "Border and visa systems: National parts of SIS, VIS and Entry/Exit, visa and border-crossing records",
+   "relation": "fills_gap",
+   "url": "https://www.cnil.fr/fr/systeme-dinformation-sur-les-visas-visa-information-system-vis",
+   "quote": "relatifs au traitement automatisé de donnée à caractère personnel relatives aux étrangers sollicitant la délivrance d’un visa (VISABIO). Ce traitement a pour finalité : de mieux garantir le droit au séjour des personnes en situation régulière",
+   "quote_english": "relating to the automated processing of personal data on foreign nationals applying for a visa (VISABIO). This processing aims to better guarantee the right of residence of people in a regular situation",
+   "value": "VISABIO (national visa-applicant processing, the French access point to VIS)",
+   "published": "",
+   "title": "Système d'information sur les visas - Visa information system (VIS)",
+   "publisher": "CNIL",
+   "doc_type": "official_page",
+   "note": "CNIL states that French services reach VIS only through national applications: Réseau mondial Visas 2 and France-Visas for applications, VISABIO for checks.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "VISABIO",
+    "reason": "The quote names VISABIO as the processing of data on visa applicants; neither the quote nor the page names an operator."
+   }
+  },
+  {
+   "claim": "record:FR:public_finance:register",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://aife.economie.gouv.fr/nos-applications/chorus-et-chorus-formulaire/",
+   "quote": "Chorus permet d’assurer depuis 2012 l’ensemble des fonctions budgétaires et comptables de l’État, ainsi que la production des comptes de l’État",
+   "quote_english": "Since 2012 Chorus has handled all the budgetary and accounting functions of the State, as well as the production of the State's accounts",
+   "value": "Chorus (the State's budgetary and accounting application)",
+   "published": "",
+   "title": "Chorus Cœur et Chorus Formulaires",
+   "publisher": "Agence pour l'informatique financière de l'État (AIFE)",
+   "doc_type": "official_page",
+   "note": "The operator's own site; the page also says Chorus Cœur was migrated to SAP S/4HANA on 13 May 2024, which bears on foreign dependency.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "Chorus",
+    "reason": "The quote names Chorus as the system for all state budget and accounting functions since 2012. AIFE is identified elsewhere on the page, not in the quote."
+   }
+  },
+  {
+   "claim": "record:FR:central_bank:register",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.banque-france.fr/en/financial-stability/institutional-framework/systems-operated-banque-de-france",
+   "quote": "The Banque de France operates the French component of the Eurosystem’s TARGET services. These consist of real-time gross settlement, securities settlement and instant payment settlement in central bank money.",
+   "quote_english": "",
+   "value": "French component of the Eurosystem's TARGET services",
+   "published": "",
+   "title": "Systems operated by the Banque de France",
+   "publisher": "Banque de France",
+   "doc_type": "official_page",
+   "note": "The operator's own page; T2 (RTGS and CLM) replaced TARGET2 in March 2023.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "TARGET services (French component), operated by Banque de France",
+    "reason": "The quote says Banque de France operates the French component of the Eurosystem's TARGET services (RTGS, securities settlement and instant payment settlement)."
+   }
+  },
+  {
+   "claim": "record:FR:central_bank:operator",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.banque-france.fr/en/financial-stability/institutional-framework/systems-operated-banque-de-france",
+   "quote": "The Banque de France operates the French component of the Eurosystem’s TARGET services. These consist of real-time gross settlement, securities settlement and instant payment settlement in central bank money.",
+   "quote_english": "",
+   "value": "Banque de France",
+   "published": "",
+   "title": "Systems operated by the Banque de France",
+   "publisher": "Banque de France",
+   "doc_type": "official_page",
+   "note": "The operator's own statement.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "TARGET services (French component), operated by Banque de France",
+    "reason": "Same quote as item 22: it establishes both the system and its operator."
+   }
+  },
+  {
+   "claim": "record:FR:grid_control:register",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.rte-france.com/rte-en-bref",
+   "quote": "RTE, gestionnaire du réseau de transport d’électricité français, assure une mission de service public : garantir l’alimentation en électricité à chaque instant, partout en France.",
+   "quote_english": "RTE, operator of the French electricity transmission network, carries out a public-service mission: guaranteeing electricity supply at every moment, everywhere in France.",
+   "value": "réseau de transport d’électricité français (French electricity transmission network)",
+   "published": "",
+   "title": "RTE en bref",
+   "publisher": "RTE - Réseau de Transport d'Électricité",
+   "doc_type": "official_page",
+   "note": "The page names the TSO and its network but not the SCADA/EMS control system itself.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "RTE",
+    "reason": "The quote identifies RTE as the French electricity transmission system operator; it names no control or SCADA system."
+   }
+  },
+  {
+   "claim": "record:FR:grid_control:operator",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.rte-france.com/rte-en-bref",
+   "quote": "RTE, gestionnaire du réseau de transport d’électricité français, assure une mission de service public : garantir l’alimentation en électricité à chaque instant, partout en France.",
+   "quote_english": "RTE, operator of the French electricity transmission network, carries out a public-service mission: guaranteeing electricity supply at every moment, everywhere in France.",
+   "value": "RTE",
+   "published": "",
+   "title": "RTE en bref",
+   "publisher": "RTE - Réseau de Transport d'Électricité",
+   "doc_type": "official_page",
+   "note": "The operator's own site.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "RTE",
+    "reason": "Same quote as item 24: it establishes RTE as the operator but no system name."
+   }
+  },
+  {
+   "claim": "record:FR:water_control:register",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://www.vigicrues.gouv.fr/",
+   "quote": "Vigicrues.gouv.fr Le service d'information sur le risque de crues des principaux cours d'eau en France",
+   "quote_english": "Vigicrues.gouv.fr, the information service on flood risk for the main rivers in France",
+   "value": "Vigicrues (national flood-risk information service)",
+   "published": "",
+   "title": "Carte de vigilance crues nationale : Vigicrues.gouv.fr",
+   "publisher": "Service central Vigicrues (ministère de la Transition écologique)",
+   "doc_type": "official_page",
+   "note": "Covers State flood forecasting and warning only; drinking-water and water-board control systems are not established by this source.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "Vigicrues",
+    "reason": "The quote names Vigicrues as the flood-risk information service for France's main rivers; the page does not name an operator."
+   }
+  },
+  {
+   "claim": "record:FR:water_control:operator",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://lannuaire.service-public.gouv.fr/gouvernement/7e9f75fc-5862-4a33-8015-da82e7edfafd",
+   "quote": "Direction générale de la prévention des risques (DGPR) Service des risques naturels Service central Vigicrues",
+   "quote_english": "Directorate-General for Risk Prevention (DGPR), Natural Risks Service, Central Vigicrues Service",
+   "value": "Service central Vigicrues (Central Vigicrues Service), under the DGPR",
+   "published": "",
+   "title": "Service central Vigicrues - Annuaire de l'administration",
+   "publisher": "Service-Public.gouv.fr (DILA)",
+   "doc_type": "official_page",
+   "note": "Official administration directory places the service (formerly SCHAPI, Toulouse) under the DGPR of the ecology ministry.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Service central Vigicrues (SCHAPI), within DGPR's Service des risques naturels",
+    "reason": "The breadcrumb places the Service central Vigicrues under DGPR's natural risks service, and the page says this service runs the Vigicrues network."
+   }
+  },
+  {
+   "claim": "record:FR:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000046891661",
+   "quote": "(RNIE), qui permet d'attribuer un identifiant national (INE) à chaque élève du second degré, étudiant et apprenti au moyen d'une procédure automatisée.",
+   "quote_english": "(RNIE), which assigns a national identifier (INE) to every secondary-school pupil, student and apprentice through an automated procedure.",
+   "value": "RNIE (Répertoire national des identifiants élèves, étudiants et apprentis; national register of pupil, student and apprentice identifiers)",
+   "published": "2022-10-18",
+   "title": "Arrêté du 18 octobre 2022 portant création d'un traitement de données à caractère personnel dénommé « Répertoire national des identifiants élèves, étudiants et apprentis » (RNIE)",
+   "publisher": "Légifrance (Journal officiel)",
+   "doc_type": "legislation",
+   "note": "Implemented by the education and higher-education ministries, with execution by the DEPP; it is an identifier register, not a diploma register.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "RNIE (Répertoire national des identifiants élèves, étudiants et apprentis)",
+    "reason": "The quote names the RNIE, which assigns the INE identifier to students and apprentices. The responsible ministries appear in the surrounding text, not in the quote."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:FR:C1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:FR:C2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:FR:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:FR:K2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:FR:L2",
+   "status": "not_reached"
+  },
+  {
+   "claim": "indicator:FR:L3",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:authentication_audit_log:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:beneficial_ownership:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:benefits_pensions:count",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:benefits_pensions:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:benefits_pensions:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:breeder_documents:count",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:breeder_documents:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:breeder_documents:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:business_registry:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:business_registry:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:customs:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:defence_command:foreign_dependency",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:defence_command:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:emergency_communications:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:emergency_communications:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:facial_biometric:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:facial_biometric:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:fingerprint_biometric:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:fingerprint_biometric:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:firearms_register:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:firearms_register:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:geospatial:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:FR:geospatial:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:FR:government_payroll:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:government_payroll:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:health_insurance:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:health_records:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:intelligence:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:issuance_history:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:issuance_history:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:judicial_criminal:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:police_records:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:police_records:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:public_health_surveillance:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:residence_permits:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:residence_permits:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:statistics_microdata:foreign_dependency",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:statistics_microdata:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:statistics_microdata:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:vehicle_licensing:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:geospatial:count",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:public_health_surveillance:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:vehicle_licensing:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:civil_registry:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:official_gazette:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:official_gazette:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:FR:civil_registry:count",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:FR:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:electoral_management:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:FR:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:grid_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:water_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:FR:L1",
+   "status": "found"
+  }
+ ]
+}

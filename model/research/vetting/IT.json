@@ -1,0 +1,1032 @@
+{
+ "iso": "IT",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:IT:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.cartaidentita.interno.gov.it/info-utili/entra-con-cie/",
+   "quote": "La Carta di Identità Elettronica (CIE) è la chiave di accesso, garantita dallo Stato e rilasciata dal Ministero dell’Interno, che permette al cittadino di autenticarsi in tutta sicurezza ai servizi online",
+   "quote_english": "The Electronic Identity Card (CIE) is the access key, guaranteed by the State and issued by the Ministry of the Interior, that lets citizens authenticate securely to online services",
+   "value": "Yes",
+   "published": "",
+   "title": "Entra con CIE",
+   "publisher": "Ministero dell'Interno",
+   "doc_type": "official_page",
+   "note": "The Ministry of the Interior's own CIE portal says the national eID (CIE) is state-guaranteed and ministry-issued. This is independent of the AgID trusted list used as the current source.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The page says the CIE, the credential used to authenticate to online services, is guaranteed by the State and issued by the Ministry of the Interior, a state body."
+   }
+  },
+  {
+   "claim": "indicator:IT:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "corroborates",
+   "url": "https://www.acn.gov.it/portale/strategia-cloud-italia",
+   "quote": "nel 2024 l’Agenzia ha pubblicato il Regolamento ACN n. 21007/2024, che: stabilisce le modalità per la classificazione dei dati e dei servizi della Pubblica Amministrazione",
+   "quote_english": "in 2024 the Agency published ACN Regulation no. 21007/2024, which establishes the procedures for classifying the data and services of the Public Administration",
+   "value": "Yes",
+   "published": "",
+   "title": "Strategia Cloud Italia",
+   "publisher": "Agenzia per la cybersicurezza nazionale (ACN)",
+   "doc_type": "official_page",
+   "note": "ACN's own page confirms that the classification (strategic, critical, ordinary) is set by binding Regulation 21007/2024, which rests on art. 33-septies DL 179/2012. The PDF at the current source is byte-identical to ACN's other regulation link, so that link was not reused.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The page says ACN Regulation n. 21007/2024, adopted under art. 33-septies of D.L. 179/2012, sets the classification of PA data and services, which is a binding regulation."
+   }
+  },
+  {
+   "claim": "record:IT:breeder_documents:register",
+   "question": "Breeder document scans: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62",
+   "quote": "L'ANPR contiene altresì l'archivio nazionale informatizzato dei registri di stato civile tenuti dai comuni",
+   "quote_english": "The ANPR also contains the national computerised archive of the civil-status registers kept by the municipalities",
+   "value": "archivio nazionale informatizzato dei registri di stato civile (national computerised archive of civil-status registers, ANSC)",
+   "published": "2026-04-21",
+   "title": "D.Lgs. 82/2005 (Codice dell'amministrazione digitale), art. 62",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "The statutory basis for ANSC is CAD art. 62(2-bis), in the text in force from 21-4-2026, which puts the civil-status archive inside ANPR.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "ANPR (archivio nazionale informatizzato dei registri di stato civile)",
+    "reason": "CAD art. 62 says ANPR contains the national computerised archive of municipal civil-status registers; the quote names the register but says nothing about scans of breeder documents."
+   }
+  },
+  {
+   "claim": "record:IT:civil_registry:register",
+   "question": "Civil registry core: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62",
+   "quote": "È istituita presso il Ministero dell'interno l'ANPR, quale base di dati di interesse nazionale",
+   "quote_english": "The ANPR is established at the Ministry of the Interior as a database of national interest",
+   "value": "ANPR (Anagrafe nazionale della popolazione residente – National Register of the Resident Population)",
+   "published": "2026-04-21",
+   "title": "D.Lgs. 82/2005 (Codice dell'amministrazione digitale), art. 62",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "The statute that establishes ANPR, taken from the official law portal (in force from 21-4-2026).",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "ANPR (Anagrafe nazionale della popolazione residente)",
+    "reason": "CAD art. 62 establishes ANPR at the Ministry of the Interior as a database of national interest."
+   }
+  },
+  {
+   "claim": "record:IT:civil_registry:operator",
+   "question": "Civil registry core: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.anagrafenazionale.interno.it/anpr/missione/",
+   "quote": "L’ANPR è un progetto del Ministero dell’Interno, la cui realizzazione è affidata a Sogei, partner tecnologico dell’amministrazione economico-finanziaria, che ha curato anche lo sviluppo del portale.",
+   "quote_english": "ANPR is a project of the Ministry of the Interior, whose implementation is entrusted to Sogei, technology partner of the economic-financial administration, which also developed the portal.",
+   "value": "Ministero dell’Interno (Ministry of the Interior); implementation entrusted to Sogei",
+   "published": "",
+   "title": "Missione – ANPR",
+   "publisher": "Ministero dell'Interno",
+   "doc_type": "official_page",
+   "note": "The ANPR mission page states both the Ministry's ownership and Sogei's technical role explicitly, which the /anpr/ page used as the current source does not.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Ministero dell'Interno (owner), built by Sogei",
+    "reason": "The page says ANPR is a Ministry of the Interior project whose implementation is entrusted to Sogei."
+   }
+  },
+  {
+   "claim": "record:IT:crisis_management:register",
+   "question": "Crisis management and civil protection: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.it-alert.it/it/cose/",
+   "quote": "IT-alert è il sistema nazionale di allarme pubblico per l'informazione diretta alla popolazione, che dirama ai telefoni cellulari presenti in una determinata area geografica messaggi utili in caso di gravi emergenze",
+   "quote_english": "IT-alert is the national public warning system for informing the population directly, sending useful messages to mobile phones in a given geographic area in case of serious emergencies",
+   "value": "IT-alert (national public warning system)",
+   "published": "",
+   "title": "IT-alert – Cos'è",
+   "publisher": "Presidenza del Consiglio dei Ministri – Dipartimento della Protezione Civile",
+   "doc_type": "official_page",
+   "note": "Same publisher, different page. It also says the Dipartimento della Protezione Civile currently sends the IT-alert messages (Directive of 7 February 2023).",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "IT-alert",
+    "reason": "The page describes IT-alert as the national public alert system that sends emergency messages to mobile phones in a given area."
+   }
+  },
+  {
+   "claim": "record:IT:customs:register",
+   "question": "Customs declarations: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.adm.gov.it/portale/dogane/operatore/ecustoms-aida/aida",
+   "quote": "AIDA (Automazione Integrata Dogane Accise), il sistema informativo dell’Agenzia delle Dogane e dei Monopoli, è operativo dal 10 novembre 2003.",
+   "quote_english": "AIDA (Integrated Customs and Excise Automation), the information system of the Customs and Monopolies Agency, has been operational since 10 November 2003.",
+   "value": "AIDA (Automazione Integrata Dogane Accise – Integrated Customs and Excise Automation), operational since 10 November 2003",
+   "published": "",
+   "title": "AIDA (Automazione Integrata Dogane Accise)",
+   "publisher": "Agenzia delle Dogane e dei Monopoli",
+   "doc_type": "official_page",
+   "note": "The operator's own AIDA page, independent of the Libro Blu PDF; the page carries notices dated up to 29/07/2026.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "AIDA (Automazione Integrata Dogane Accise)",
+    "reason": "The page names AIDA as the information system of the Agenzia delle Dogane e dei Monopoli, in operation since 2003."
+   }
+  },
+  {
+   "claim": "record:IT:electoral_management:operator",
+   "question": "Election management and results: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://elezionistorico.interno.gov.it/",
+   "quote": "Eligendo è a cura del DAIT - Ministero dell'Interno Direzione Centrale per i Servizi Elettorali - S.I.E.",
+   "quote_english": "Eligendo is maintained by DAIT – Ministry of the Interior, Central Directorate for Electoral Services – S.I.E.",
+   "value": "Direzione Centrale per i Servizi Elettorali, DAIT – Ministero dell'Interno (Central Directorate for Electoral Services, Ministry of the Interior)",
+   "published": "",
+   "title": "Archivio Storico delle Elezioni",
+   "publisher": "Ministero dell'Interno – DAIT",
+   "doc_type": "official_page",
+   "note": "The historical-election archive's own site names the directorate that runs it.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "Ministero dell'Interno – DAIT, Direzione Centrale per i Servizi Elettorali (S.I.E.)",
+    "reason": "The page states that Eligendo is run by the DAIT of the Ministry of the Interior."
+   }
+  },
+  {
+   "claim": "record:IT:electoral_management:register",
+   "question": "Election management and results: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://elezionistorico.interno.gov.it/",
+   "quote": "L'Archivio Storico delle Elezioni mette a disposizione - a puro scopo divulgativo - una banca dati interrogabile on line, contenente i risultati delle consultazioni elettorali, partendo dagli aggregati complessivi fino al dettaglio dei singoli comuni",
+   "quote_english": "The Historical Election Archive provides, for information purposes only, an online searchable database containing election results, from overall totals down to individual municipalities",
+   "value": "Archivio Storico delle Elezioni (Historical Election Archive)",
+   "published": "",
+   "title": "Archivio Storico delle Elezioni",
+   "publisher": "Ministero dell'Interno – DAIT",
+   "doc_type": "official_page",
+   "note": "This is the archive itself, as opposed to the DAIT elections landing page.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Archivio Storico delle Elezioni",
+    "reason": "The page names the historical election archive, a searchable database of results; the page itself calls it informational only ('a puro scopo divulgativo'), not an election-management system."
+   }
+  },
+  {
+   "claim": "record:IT:health_insurance:register",
+   "question": "Statutory health insurance: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62ter",
+   "quote": "convertito, con modificazioni, dalla legge 24 novembre 2003, n. 326, l'Anagrafe nazionale degli assistiti (ANA).",
+   "quote_english": "converted with amendments by Law no. 326 of 24 November 2003, the National Register of Patients (ANA).",
+   "value": "Anagrafe nazionale degli assistiti (ANA) (National Register of Patients)",
+   "published": "2018-01-27",
+   "title": "D.Lgs. 82/2005 (CAD), art. 62-ter",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "The statute that establishes ANA, on the official law portal. The current source is the Sistema TS website.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Anagrafe nazionale degli assistiti (ANA)",
+    "reason": "CAD art. 62-ter names the national register of assisted persons (ANA); the quoted text itself gives no operator."
+   }
+  },
+  {
+   "claim": "record:IT:public_finance:operator",
+   "question": "Treasury and state accounts: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.rgs.mef.gov.it/VERSIONE-I/e_government/amministrazioni_pubbliche/siope/siope_/",
+   "quote": "trasmettere gli ordinativi informatici al tesoriere/cassiere solo ed esclusivamente per il tramite dell’infrastruttura SIOPE, gestita dalla Banca d’Italia.",
+   "quote_english": "transmit electronic orders to the treasurer/cashier solely and exclusively through the SIOPE infrastructure, managed by the Banca d'Italia.",
+   "value": "Banca d’Italia",
+   "published": "",
+   "title": "SIOPE+",
+   "publisher": "MEF – Ragioneria Generale dello Stato",
+   "doc_type": "official_page",
+   "note": "The State General Accounting Office, which owns SIOPE, independently confirms that Banca d'Italia runs the SIOPE infrastructure.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "Banca d'Italia",
+    "reason": "The page says the SIOPE infrastructure is managed by the Banca d'Italia."
+   }
+  },
+  {
+   "claim": "record:IT:public_finance:register",
+   "question": "Treasury and state accounts: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.rgs.mef.gov.it/VERSIONE-I/e_government/amministrazioni_pubbliche/siope/siope_/",
+   "quote": "SIOPE+ chiede a tutte le amministrazioni pubbliche di cui all’art. 1, comma 2, della legge n. 196 del 2009, di: ordinare incassi e pagamenti al proprio tesoriere o cassiere utilizzando esclusivamente ordinativi informatici",
+   "quote_english": "SIOPE+ requires all public administrations under art. 1(2) of Law no. 196 of 2009 to order receipts and payments to their treasurer or cashier exclusively through electronic orders",
+   "value": "SIOPE+ (Sistema informativo sulle operazioni degli enti pubblici)",
+   "published": "",
+   "title": "SIOPE+",
+   "publisher": "MEF – Ragioneria Generale dello Stato",
+   "doc_type": "official_page",
+   "note": "RGS names the current system as SIOPE+, the evolution of SIOPE under art. 1(533) of Law 232/2016.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "SIOPE+",
+    "reason": "The page names SIOPE+ as the system through which public administrations must send payment and collection orders."
+   }
+  },
+  {
+   "claim": "record:IT:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art14bis",
+   "quote": "vigilanza sui servizi fiduciari ai sensi dell'articolo 17 del regolamento UE 910/2014 in qualità di organismo a tal fine designato, sui gestori di posta elettronica certificata",
+   "quote_english": "supervision of trust services under Article 17 of Regulation (EU) 910/2014 as the body designated for that purpose, of certified e-mail providers",
+   "value": "AgID: supervision of trust services under Article 17 of Regulation (EU) 910/2014 as designated body",
+   "published": "2020-07-17",
+   "title": "D.Lgs. 82/2005 (CAD), art. 14-bis (Agenzia per l'Italia digitale)",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "CAD art. 14-bis(2)(i) lists this function under 'AgID svolge le funzioni di', which makes AgID the statutory eIDAS supervisory body.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "",
+    "reason": "CAD art. 14-bis gives AgID the task of supervising trust services as the designated body; a supervisor is not the operator of the PKI or trust services."
+   }
+  },
+  {
+   "claim": "record:IT:health_records:operator",
+   "question": "Health records: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.fascicolosanitario.gov.it/",
+   "quote": "Le informazioni presenti nel FSE del cittadino vengono fornite e gestite dalle singole Regioni e Province Autonome.",
+   "quote_english": "The information in a citizen's FSE is supplied and managed by the individual Regions and Autonomous Provinces.",
+   "value": "Regioni e Province Autonome (Regions and Autonomous Provinces)",
+   "published": "2026",
+   "title": "Fascicolo Sanitario Elettronico",
+   "publisher": "Ministero della Salute / Dipartimento per la trasformazione digitale",
+   "doc_type": "official_page",
+   "note": "The national FSE portal (FSE 2.0, news dated to September 2026) confirms regional operation. It also reports 5.9 million citizens using FSE in a 60-day window (data at 28 February 2026).",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "the individual Regions and Autonomous Provinces",
+    "reason": "The page says FSE data are supplied and managed by the individual Regions and Autonomous Provinces."
+   }
+  },
+  {
+   "claim": "record:IT:health_records:register",
+   "question": "Health records: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.fascicolosanitario.gov.it/",
+   "quote": "Nel FSE ogni cittadino può consultare la propria storia, condividendola con i professionisti sanitari per garantire un servizio più efficace ed efficiente per la sua salute.",
+   "quote_english": "In the FSE every citizen can consult their own health history, sharing it with health professionals to ensure a more effective and efficient service for their health.",
+   "value": "Fascicolo Sanitario Elettronico (FSE – Electronic Health Record)",
+   "published": "2026",
+   "title": "Fascicolo Sanitario Elettronico",
+   "publisher": "Ministero della Salute / Dipartimento per la trasformazione digitale",
+   "doc_type": "official_page",
+   "note": "The official national FSE portal. The statutory article (DL 179/2012 art. 12) was last consolidated on normattiva with the text in force from 25-2-2025.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "FSE (Fascicolo Sanitario Elettronico)",
+    "reason": "The page names the FSE as the record through which citizens consult their health history."
+   }
+  },
+  {
+   "claim": "record:IT:issuance_history:operator",
+   "question": "Document issuance history: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.cartaidentita.interno.gov.it/la-carta/",
+   "quote": "La Carta di Identità Elettronica (CIE) è il documento d’identità dei cittadini italiani emesso dal Ministero dell’Interno e prodotto dal Poligrafico e Zecca dello Stato",
+   "quote_english": "The Electronic Identity Card (CIE) is the identity document of Italian citizens issued by the Ministry of the Interior and produced by the State Printing Office and Mint",
+   "value": "Ministero dell’Interno (Ministry of the Interior) issues the CIE; produced by Poligrafico e Zecca dello Stato",
+   "published": "",
+   "title": "Cos’è la carta – CIE",
+   "publisher": "Ministero dell'Interno",
+   "doc_type": "official_page",
+   "note": "The Ministry's CIE portal confirms that only the Ministry issues the card and names IPZS as producer.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "Ministero dell'Interno (issuer), produced by Poligrafico e Zecca dello Stato",
+    "reason": "The page says the CIE is issued by the Ministry of the Interior and produced by IPZS; it says nothing directly about who operates a record of issuance history."
+   }
+  },
+  {
+   "claim": "record:IT:statistics_microdata:operator",
+   "question": "Statistical microdata: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1989-09-06;322~art15",
+   "quote": "alla esecuzione dei censimenti e delle altre rilevazioni statistiche previste dal programma statistico nazionale ed affidate alla esecuzione dell'Istituto",
+   "quote_english": "carrying out the censuses and other statistical surveys provided for in the national statistical programme and entrusted to the Institute",
+   "value": "ISTAT carries out the censuses and statistical surveys of the national statistical programme",
+   "published": "1989-10-07",
+   "title": "D.Lgs. 322/1989, art. 15 (Compiti dell'ISTAT)",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "ISTAT's statutory tasks (art. 15 D.Lgs. 322/1989) independently back its role as producer of official statistics.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "ISTAT",
+    "reason": "Art. 15 of D.Lgs. 322/1989 ('Compiti dell'ISTAT') gives ISTAT the task of carrying out censuses and statistical surveys."
+   }
+  },
+  {
+   "claim": "record:IT:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: Fingerprints captured for passports and ID cards where retained centrally",
+   "relation": "fills_gap",
+   "url": "https://www.cartaidentita.interno.gov.it/info-utili/conservazione-delle-impronte/",
+   "quote": "Le impronte digitali, registrate in sicurezza all’interno della CIE e non memorizzate in altre banche dati, non rappresentano un sistema di schedatura",
+   "quote_english": "Fingerprints, recorded securely inside the CIE and not stored in other databases, do not constitute a filing system",
+   "value": "No central fingerprint register: CIE fingerprints are stored only on the card (non memorizzate in altre banche dati – not stored in other databases)",
+   "published": "",
+   "title": "Conservazione delle impronte",
+   "publisher": "Ministero dell'Interno",
+   "doc_type": "official_page",
+   "note": "Establishes that ID-card fingerprints are not held centrally. Passport fingerprints were not checked.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "no",
+    "reason": "The page says fingerprints are stored only on the CIE chip and not in other databases, which means they are not retained centrally."
+   }
+  },
+  {
+   "claim": "record:IT:digital_identity_credentials:register",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art64",
+   "quote": "è istituito, a cura dell'Agenzia per l'Italia digitale, il sistema pubblico per la gestione dell'identità digitale di cittadini e imprese (SPID).",
+   "quote_english": "the public system for managing the digital identity of citizens and businesses (SPID) is established under the care of the Agency for Digital Italy.",
+   "value": "SPID (sistema pubblico per la gestione dell'identità digitale di cittadini e imprese – public digital identity system)",
+   "published": "2022-06-30",
+   "title": "D.Lgs. 82/2005 (CAD), art. 64",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "Art. 64(2-quater) names the CIE alongside SPID as the other means of access.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "SPID, established by the Agenzia per l'Italia digitale (national)",
+    "reason": "CAD art. 64 establishes the public digital identity system SPID under AgID."
+   }
+  },
+  {
+   "claim": "record:IT:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art64",
+   "quote": "Il sistema SPID è costituito come insieme aperto di soggetti pubblici e privati che, previo accreditamento da parte dell'AgID",
+   "quote_english": "The SPID system is constituted as an open set of public and private entities which, after accreditation by AgID",
+   "value": "Open set of public and private entities accredited by AgID",
+   "published": "2022-06-30",
+   "title": "D.Lgs. 82/2005 (CAD), art. 64",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "SPID credentials are held by accredited identity providers, private ones included, rather than by a single state operator.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "SPID: an open set of public and private providers accredited by AgID",
+    "reason": "CAD art. 64 says SPID is made up of public and private entities accredited by AgID, which does not by itself establish the providers' nationality."
+   }
+  },
+  {
+   "claim": "record:IT:tax:register",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1973-09-29;605~art1!vig=2026-09-30",
+   "quote": "L'anagrafe tributaria raccoglie e ordina su scala nazionale i dati e le notizie risultanti dalle dichiarazioni e dalle denunce presentate agli uffici dell'amministrazione finanziaria e dai relativi accertamenti",
+   "quote_english": "The tax register collects and orders on a national scale the data and information from the returns and declarations filed with the financial administration offices and from the related assessments",
+   "value": "Anagrafe tributaria (national tax register)",
+   "published": "1976-12-04",
+   "title": "DPR 605/1973, art. 1",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "The text is the version in force on 2026-09-30. Normattiva shows art. 1 as abrogated by D.Lgs. 5 agosto 2026 n. 141 with effect from 1-1-2027, so the legal basis should be rechecked after that date.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Anagrafe tributaria",
+    "reason": "Art. 1 of DPR 605/1973 names the anagrafe tributaria as the register of tax returns and assessments; the quote names no operator."
+   }
+  },
+  {
+   "claim": "record:IT:benefits_pensions:register",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1971-12-31;1388~art1",
+   "quote": "Presso l'Istituto nazionale della previdenza sociale è istituito il casellario centrale per la raccolta, la conservazione e la gestione dei dati e degli elementi relativi ai titolari di trattamenti pensionistici",
+   "quote_english": "A central register is established at the National Social Security Institute for collecting, storing and managing the data on holders of pension benefits",
+   "value": "casellario centrale dei pensionati (central register of pensioners)",
+   "published": "1998-01-01",
+   "title": "DPR 1388/1971 – Istituzione del casellario centrale dei pensionati",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "The statutory register of all pension holders, kept at INPS.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "Casellario centrale dei pensionati, at INPS",
+    "reason": "The article establishes the central pensions register at the Istituto nazionale della previdenza sociale."
+   }
+  },
+  {
+   "claim": "record:IT:benefits_pensions:operator",
+   "question": "Benefits & pensions: Entitlements, contributions and payment history for social security and state pensions",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1971-12-31;1388~art1",
+   "quote": "Presso l'Istituto nazionale della previdenza sociale è istituito il casellario centrale per la raccolta, la conservazione e la gestione dei dati e degli elementi relativi ai titolari di trattamenti pensionistici",
+   "quote_english": "A central register is established at the National Social Security Institute for collecting, storing and managing the data on holders of pension benefits",
+   "value": "Istituto nazionale della previdenza sociale (INPS)",
+   "published": "1998-01-01",
+   "title": "DPR 1388/1971 – Istituzione del casellario centrale dei pensionati",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "Operator of the pensioners' central register.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Casellario centrale dei pensionati, at INPS",
+    "reason": "Same quote as item 21: it establishes the central pensions register at INPS; hosting is not stated."
+   }
+  },
+  {
+   "claim": "record:IT:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2010-05-31;78~art19",
+   "quote": "è attivata l'\"Anagrafe Immobiliare Integrata\", costituita e gestita dall'Agenzia del Territorio",
+   "quote_english": "the 'Integrated Property Register' is activated, established and managed by the Land Agency",
+   "value": "Anagrafe Immobiliare Integrata (Integrated Property Register)",
+   "published": "2011-02-27",
+   "title": "DL 78/2010, art. 19 (Aggiornamento del catasto)",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "Integrates cadastral and property-title data by parcel. The Agenzia del Territorio has since been merged into the Agenzia delle Entrate; this merger is not stated in this quote.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "Anagrafe Immobiliare Integrata, set up and run by the Agenzia del Territorio",
+    "reason": "Art. 19 of D.L. 78/2010 says the integrated property register is set up and run by the Agenzia del Territorio."
+   }
+  },
+  {
+   "claim": "record:IT:land_property:operator",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2010-05-31;78~art19",
+   "quote": "è attivata l'\"Anagrafe Immobiliare Integrata\", costituita e gestita dall'Agenzia del Territorio",
+   "quote_english": "the 'Integrated Property Register' is activated, established and managed by the Land Agency",
+   "value": "Agenzia del Territorio (Land Agency)",
+   "published": "2011-02-27",
+   "title": "DL 78/2010, art. 19",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "The statute names the Agenzia del Territorio, whose functions now sit with the Agenzia delle Entrate. A current operator source is still needed.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "Anagrafe Immobiliare Integrata, set up and run by the Agenzia del Territorio",
+    "reason": "Same quote as item 23; hosting or provider is not stated."
+   }
+  },
+  {
+   "claim": "record:IT:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1993-12-29;580~art8",
+   "quote": "È istituito presso la camera di commercio l'ufficio del registro delle imprese di cui all'articolo 2188 del codice civile.",
+   "quote_english": "The office of the register of companies referred to in Article 2188 of the Civil Code is established at the chamber of commerce.",
+   "value": "Registro delle imprese (Register of Companies)",
+   "published": "2016-12-10",
+   "title": "Legge 580/1993, art. 8 (Registro delle imprese)",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "Statutory basis for the business register.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "Registro delle imprese, at the camera di commercio",
+    "reason": "Art. 8 of L. 580/1993 establishes the business register office at the chambers of commerce."
+   }
+  },
+  {
+   "claim": "record:IT:business_registry:operator",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1993-12-29;580~art8",
+   "quote": "È istituito presso la camera di commercio l'ufficio del registro delle imprese di cui all'articolo 2188 del codice civile.",
+   "quote_english": "The office of the register of companies referred to in Article 2188 of the Civil Code is established at the chamber of commerce.",
+   "value": "Camera di commercio (chambers of commerce)",
+   "published": "2016-12-10",
+   "title": "Legge 580/1993, art. 8",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "Kept by the chambers of commerce. The technical operator (InfoCamere) was not confirmed on an official page.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "Registro delle imprese, at the camera di commercio",
+    "reason": "Same quote as item 25; hosting is not stated."
+   }
+  },
+  {
+   "claim": "record:IT:beneficial_ownership:register",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2007-11-21;231~art21",
+   "quote": "comunicano le informazioni relative ai propri titolari effettivi, per via esclusivamente telematica e in esenzione da imposta di bollo, al Registro delle imprese, ai fini della conservazione in apposita sezione.",
+   "quote_english": "communicate information on their beneficial owners, exclusively electronically and exempt from stamp duty, to the Register of Companies, for storage in a dedicated section.",
+   "value": "Apposita sezione del Registro delle imprese (dedicated beneficial-ownership section of the Register of Companies)",
+   "published": "2026-07-23",
+   "title": "D.Lgs. 231/2007, art. 21",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "The text is in force from 23-7-2026. Comma 2 of the same article was abrogated by D.Lgs. 10 giugno 2026 n. 122, which may have changed the access rules.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "a dedicated section of the Registro delle imprese",
+    "reason": "Art. 21 of D.Lgs. 231/2007 says beneficial-ownership information is filed with the Registro delle imprese in a special section; the quote names no operator."
+   }
+  },
+  {
+   "claim": "record:IT:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285~art226",
+   "quote": "Presso il Dipartimento per i trasporti terrestri è istituito l'archivio nazionale dei veicoli",
+   "quote_english": "The national vehicle archive is established at the Department for Land Transport",
+   "value": "archivio nazionale dei veicoli (national vehicle archive)",
+   "published": "2018-07-01",
+   "title": "D.Lgs. 285/1992 (Codice della strada), art. 226",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "The same article, comma 10, sets up the anagrafe nazionale degli abilitati alla guida (national driving-licence register); see the next finding.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Archivio nazionale dei veicoli, at the Dipartimento per i trasporti terrestri",
+    "reason": "Art. 226 of the Codice della strada establishes the national vehicle archive at the Department for Land Transport."
+   }
+  },
+  {
+   "claim": "record:IT:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285~art226",
+   "quote": "Presso il Dipartimento per i trasporti terrestri è istituita l'anagrafe nazionale degli abilitati alla guida ai fini della sicurezza stradale.",
+   "quote_english": "The national register of licensed drivers is established at the Department for Land Transport for road-safety purposes.",
+   "value": "anagrafe nazionale degli abilitati alla guida (national register of licensed drivers)",
+   "published": "2018-07-01",
+   "title": "D.Lgs. 285/1992 (Codice della strada), art. 226",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "The driving-licence register, kept by the Department for Land Transport (Ministry of Infrastructure and Transport).",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "Anagrafe nazionale degli abilitati alla guida, at the Dipartimento per i trasporti terrestri",
+    "reason": "Art. 226 establishes the national register of licensed drivers at the Department for Land Transport."
+   }
+  },
+  {
+   "claim": "record:IT:judicial_criminal:register",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2002-11-14;313~art2",
+   "quote": "\"casellario giudiziale\" è la base dati di interesse nazionale ai sensi dell'articolo 60 del",
+   "quote_english": "'criminal records register' is the database of national interest under Article 60 of the",
+   "value": "casellario giudiziale (criminal records register)",
+   "published": "2024-05-01",
+   "title": "DPR 313/2002 (Testo unico casellario giudiziale), art. 2",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "The criminal-records database is defined as a database of national interest under CAD art. 60 (text in force from 1-5-2024).",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "Casellario giudiziale",
+    "reason": "Art. 2 of DPR 313/2002 defines the casellario giudiziale as a database of national interest; the quote names no operator."
+   }
+  },
+  {
+   "claim": "record:IT:police_records:register",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1981-04-01;121~art8",
+   "quote": "il Centro elaborazione dati, per la raccolta delle informazioni e dei dati di cui all'articolo 6, lettera a), e all'articolo 7.",
+   "quote_english": "the Data Processing Centre, for collecting the information and data referred to in Article 6(a) and Article 7.",
+   "value": "Centro elaborazione dati (Data Processing Centre, the inter-force police database)",
+   "published": "2005-06-01",
+   "title": "Legge 121/1981, art. 8 (Istituzione del Centro elaborazione dati)",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "Statutory basis for the national police database (CED). The SDI application is not named in this article.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "Centro elaborazione dati (CED)",
+    "reason": "Art. 8 of L. 121/1981 names the data processing centre that collects police information and data."
+   }
+  },
+  {
+   "claim": "record:IT:police_records:operator",
+   "question": "Police information systems: Investigations, wanted persons and national police databases",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1981-04-01;121~art8",
+   "quote": "È istituito presso il Ministero dell'interno, nell'ambito dell'ufficio",
+   "quote_english": "It is established at the Ministry of the Interior, within the office",
+   "value": "Ministero dell'interno (Ministry of the Interior)",
+   "published": "2005-06-01",
+   "title": "Legge 121/1981, art. 8",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "This is the opening clause of art. 8, which puts the CED at the Ministry of the Interior (Department of Public Security).",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "Ministero dell'interno",
+    "reason": "The quote says the CED is established at the Ministry of the Interior; the quote fragment on its own does not name the system."
+   }
+  },
+  {
+   "claim": "record:IT:government_payroll:register",
+   "question": "Government payroll and personnel: Civil service and armed forces payroll and personnel records",
+   "relation": "fills_gap",
+   "url": "https://noipa.mef.gov.it/cl/chi-siamo",
+   "quote": "NoiPA è la piattaforma realizzata dal Dipartimento dell'Amministrazione Generale del personale e dei servizi (DAG) del Ministero dell'Economia e delle Finanze (MEF) per la gestione del personale della PA",
+   "quote_english": "NoiPA is the platform built by the Department of General Administration, Personnel and Services (DAG) of the Ministry of Economy and Finance (MEF) to manage public-administration personnel",
+   "value": "NoiPA",
+   "published": "",
+   "title": "Chi siamo – NoiPA",
+   "publisher": "Ministero dell'Economia e delle Finanze",
+   "doc_type": "official_page",
+   "note": "The operator's own page for the national public-sector payroll and personnel platform.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "NoiPA, built by MEF – Dipartimento dell'Amministrazione Generale (DAG)",
+    "reason": "The page says NoiPA is the PA personnel-management platform built by MEF's DAG."
+   }
+  },
+  {
+   "claim": "record:IT:government_payroll:operator",
+   "question": "Government payroll and personnel: Civil service and armed forces payroll and personnel records",
+   "relation": "fills_gap",
+   "url": "https://noipa.mef.gov.it/cl/chi-siamo",
+   "quote": "NoiPA è la piattaforma realizzata dal Dipartimento dell'Amministrazione Generale del personale e dei servizi (DAG) del Ministero dell'Economia e delle Finanze (MEF) per la gestione del personale della PA",
+   "quote_english": "NoiPA is the platform built by the Department of General Administration, Personnel and Services (DAG) of the Ministry of Economy and Finance (MEF) to manage public-administration personnel",
+   "value": "Dipartimento dell'Amministrazione Generale del personale e dei servizi (DAG), Ministero dell'Economia e delle Finanze (MEF)",
+   "published": "",
+   "title": "Chi siamo – NoiPA",
+   "publisher": "Ministero dell'Economia e delle Finanze",
+   "doc_type": "official_page",
+   "note": "Operator of NoiPA.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "NoiPA, built by MEF – Dipartimento dell'Amministrazione Generale (DAG)",
+    "reason": "Same quote as item 33; hosting or provider is not stated."
+   }
+  },
+  {
+   "claim": "record:IT:central_bank:register",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.bancaditalia.it/compiti/sistema-pagamenti/index.html",
+   "quote": "A livello nazionale, la Banca d'Italia gestisce il sistema BI‑Comp, che effettua la compensazione multilaterale dei pagamenti da regolare in T2.",
+   "quote_english": "At national level, the Banca d'Italia operates the BI-Comp system, which performs multilateral clearing of payments to be settled in T2.",
+   "value": "BI‑Comp (national multilateral clearing system)",
+   "published": "",
+   "title": "Gestione dei sistemi di pagamento",
+   "publisher": "Banca d'Italia",
+   "doc_type": "official_page",
+   "note": "The quote uses a non-breaking hyphen (U+2011) in BI‑Comp. The same page says T2, the euro RTGS system, was developed by Banca d'Italia and Deutsche Bundesbank for the Eurosystem.",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "BI-Comp, run by the Banca d'Italia",
+    "reason": "The page says the Banca d'Italia runs BI-Comp, the multilateral clearing system settling in T2."
+   }
+  },
+  {
+   "claim": "record:IT:central_bank:operator",
+   "question": "Central bank systems: Central bank accounts, national payment infrastructure and reserves records",
+   "relation": "fills_gap",
+   "url": "https://www.bancaditalia.it/compiti/sistema-pagamenti/index.html",
+   "quote": "A livello nazionale, la Banca d'Italia gestisce il sistema BI‑Comp, che effettua la compensazione multilaterale dei pagamenti da regolare in T2.",
+   "quote_english": "At national level, the Banca d'Italia operates the BI-Comp system, which performs multilateral clearing of payments to be settled in T2.",
+   "value": "Banca d'Italia",
+   "published": "",
+   "title": "Gestione dei sistemi di pagamento",
+   "publisher": "Banca d'Italia",
+   "doc_type": "official_page",
+   "note": "Operator of the national payment clearing system.",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "BI-Comp, run by the Banca d'Italia",
+    "reason": "Same quote as item 35."
+   }
+  },
+  {
+   "claim": "record:IT:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62quater",
+   "quote": "è istituita, nell'ambito di un apposito sistema informativo denominato hubscuola, realizzato dal Ministero dell'istruzione, l'Anagrafe nazionale dell'istruzione (ANIST).",
+   "quote_english": "the National Education Register (ANIST) is established within a dedicated information system called hubscuola, built by the Ministry of Education.",
+   "value": "Anagrafe nazionale dell'istruzione (ANIST) (National Education Register)",
+   "published": "2021-07-31",
+   "title": "D.Lgs. 82/2005 (CAD), art. 62-quater",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "ANIST replaces the student, staff and school databases, and passes qualification data (titoli di studio) to ANPR.",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "ANIST (Anagrafe nazionale dell'istruzione) in the hubscuola system, built by the Ministero dell'istruzione",
+    "reason": "CAD art. 62-quater establishes ANIST inside hubscuola, built by the Ministry of Education."
+   }
+  },
+  {
+   "claim": "record:IT:education:operator",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62quater",
+   "quote": "è istituita, nell'ambito di un apposito sistema informativo denominato hubscuola, realizzato dal Ministero dell'istruzione, l'Anagrafe nazionale dell'istruzione (ANIST).",
+   "quote_english": "the National Education Register (ANIST) is established within a dedicated information system called hubscuola, built by the Ministry of Education.",
+   "value": "Ministero dell'istruzione (Ministry of Education)",
+   "published": "2021-07-31",
+   "title": "D.Lgs. 82/2005 (CAD), art. 62-quater",
+   "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
+   "doc_type": "legislation",
+   "note": "Operator of ANIST.",
+   "review": {
+    "id": 38,
+    "quote_found": true,
+    "established": "ANIST (Anagrafe nazionale dell'istruzione) in the hubscuola system, built by the Ministero dell'istruzione",
+    "reason": "Same quote as item 37."
+   }
+  },
+  {
+   "claim": "indicator:IT:C2",
+   "question": "Is a national sovereign or government cloud platform in operation (not announced)? yes = In operation and serving government workloads; partial = Announced or in pilot; no = A source states none exists",
+   "relation": "fills_gap",
+   "url": "https://www.polostrategiconazionale.it/",
+   "quote": "Gestiamo dati e servizi in 4 Green Data Center nazionali con un impatto positivo sulla spesa pubblica e sul risparmio energetico.",
+   "quote_english": "We manage data and services in 4 national Green Data Centres, with a positive impact on public spending and energy savings.",
+   "value": "yes",
+   "published": "",
+   "title": "Polo Strategico Nazionale: il cloud sovrano per l'Italia digitale",
+   "publisher": "Polo Strategico Nazionale S.p.A.",
+   "doc_type": "official_page",
+   "note": "PSN runs government workloads today. Per its own pages it is owned by TIM, Leonardo, CDP Equity and Sogei, with sites at Acilia, Pomezia, Rozzano and Santo Stefano Ticino; its homepage reports central administrations rising from 120 to 576. It also sells a 'Hybrid Cloud on PSN Site' based on Microsoft Azure, which is relevant to the foreign-dependency assessment.",
+   "review": {
+    "id": 39,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The Polo Strategico Nazionale site states in the present tense that it manages PA data and services in 4 national data centres, which shows it is in operation."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:IT:K1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:IT:K2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:IT:L2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:IT:L3",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:breeder_documents:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:civil_registry:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:electoral_management:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:national_archives:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:public_finance:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:trust_services_pki:operator",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:IT:C1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:IT:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:facial_biometric:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:facial_biometric:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:facial_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:health_insurance:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:health_records:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:health_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:issuance_history:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:issuance_history:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:issuance_history:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:official_gazette:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:official_gazette:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:statistics_microdata:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:trust_services_pki:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:trust_services_pki:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:authentication_audit_log:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:residence_permits:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IT:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:border_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IT:firearms_register:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IT:government_payroll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IT:defence_command:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IT:intelligence:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IT:emergency_communications:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:grid_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IT:water_control:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:IT:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:IT:C2",
+   "status": "found"
+  }
+ ]
+}

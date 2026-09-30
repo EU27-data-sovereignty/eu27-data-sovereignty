@@ -1,0 +1,7 @@
+column,period,adopted,decision
+elec_price_eur_mwh,2025-S2,2026-09-11,#14
+gdp_eur_bn,2025,2026-09-11,#14
+gov_employment_k,2024,2026-09-30,#84
+land_km2,2026,2026-09-30,#84
+population_m,2026,2026-09-30,#84
+renewables_pct,2025,2026-09-30,#84

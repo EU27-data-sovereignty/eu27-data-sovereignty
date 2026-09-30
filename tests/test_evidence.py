@@ -26,7 +26,7 @@ import sovereignty as sv  # noqa: E402
 BUNDLE = json.loads((ROOT / "web" / "public" / "data" / "eu27.json").read_text(encoding="utf-8"))
 BRIEFS = sorted((ROOT / "countries").glob("*/GOAL.md"))
 
-# Wording that claimed more than ran: 136 Eurostat facts were never hashed (2026-09-30 audit).
+# Wording that claimed more than ran: 5 migrated citations were never quote-checked (2026-09-30 audit).
 OVERSTATED = re.compile(r"fetched,? hashed,? and checked|every fact [^.;]{0,40}checked source"
                         r"|verified findings|checked against a fetched source", re.I)
 SURFACES = [
@@ -59,7 +59,7 @@ class Disclaimer(unittest.TestCase):
     def test_the_web_app_shows_it(self):
         pages = {p.name: p.read_text(encoding="utf-8") for p in (ROOT / "web" / "src").rglob("*.tsx")}
         self.assertIn("notice.disclaimer", pages["Overview.tsx"])
-        self.assertIn("notice.disclaimer", pages["Methodology.tsx"])
+        self.assertIn("bundle.methodology", pages["Methodology.tsx"])   # which opens with it (test_methodology)
         self.assertIn("not human-verified", pages["Poster.tsx"])
 
 
@@ -133,7 +133,11 @@ class Review(unittest.TestCase):
             admitted = {(r["iso"], r["indicator"]) for r in csv.DictReader(fh)}
         staged = {(iso, ind["id"]): ind for iso, doc in research.staged(None, research.INDICATOR_STAGING).items()
                   for ind in doc.get("indicators", [])}
-        disputed = sorted(k for k in admitted if not research.agreed(staged[k]))
+        import provenance  # noqa: PLC0415
+        blind = {tuple(c["claim"].split(":")[1:]) for c in provenance.citations()
+                 if c["claim"].startswith("indicator:") and "blind review agreed" in c["checked_by"]}
+        # Admitted through run 2's review, or through a vetting finding's blind review (#83).
+        disputed = sorted(k for k in admitted if k not in blind and not (k in staged and research.agreed(staged[k])))
         self.assertEqual(disputed, [])
 
 
@@ -166,7 +170,7 @@ class Grades(unittest.TestCase):
                 self.assertTrue(ck["archived"] and ck["document_hashed"], claim)
                 self.assertEqual(ck.get("quote_match"), "exact", claim)
                 self.assertFalse(ck.get("names_not_in_quote"), claim)
-                self.assertNotIn("review", ck, claim)
+                self.assertIn(ck.get("review"), (None, "blind, same model"), claim)
 
     def test_a_span_carries_its_best_grade(self):
         for d in BUNDLE["documents"].values():
@@ -189,8 +193,9 @@ class RenderedFacts(unittest.TestCase):
     # raising it fails, and so does losing any. It fell from 997 to 922 on 2026-09-30 by #82: 5
     # citations had no recorded quote check, and 70 printed values carried a number or date their
     # quote does not contain. Then to 918: 4 indicator values admitted at a reviewer's changed value
-    # were withdrawn (#79).
-    FACT_FLOOR = 918
+    # were withdrawn (#79). Then to 1390: 56 holdings recovered by the charset fix, 27 employment
+    # figures that now reproduce (#84), and the first vetting run (#83), less 20 facts now disputed.
+    FACT_FLOOR = 1390
 
     @classmethod
     def setUpClass(cls):

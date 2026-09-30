@@ -1,0 +1,816 @@
+{
+ "iso": "EL",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:EL:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2020/4727/pdf",
+   "quote": "Ως Κυβερνητικό Νέφος Δημόσιου Τομέα (G-Cloud) νοείται το σύνολο των ψηφιακών υποδομών που διαχειρίζεται η Γενική Γραμματεία Πληροφοριακών Συστημάτων Δημόσιας Διοίκησης (Γ.Γ.Π.Σ.Δ.Δ.)",
+   "quote_english": "The Public Sector Government Cloud (G-Cloud) means the set of digital infrastructures managed by the General Secretariat for Public Administration Information Systems (GSIS)",
+   "value": "Yes",
+   "published": "2020-09-23",
+   "title": "Νόμος 4727/2020 Ψηφιακή Διακυβέρνηση (ΦΕΚ Α' 184/23.09.2020), άρθρο 87",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same Article 87 provision as the lawspot mirror, now on the official Government Gazette server; paragraphs 2-3 also define RE-Cloud (GRNET) and H-Cloud (IDIKA).",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Art. 87 of Law 4727/2020 defines G-Cloud, in the present tense, as the digital infrastructure that the General Secretariat for Information Systems of Public Administration (ΓΓΠΣΔΔ) manages. Art. 86 around it requires public bodies to use it. This is a statutory definition, not an operational report, so it is a legal basis for the platform more than proof that it runs today."
+   }
+  },
+  {
+   "claim": "indicator:EL:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corroborates",
+   "url": "https://digitalstrategy.gov.gr/project/g-cloud",
+   "quote": "Συμπλήρωση των υποδομών των δύο υφιστάμενων κόμβων κυβερνητικού νέφους που είναι σε φάση ενοποίησης, συμπεριλαμβανομένης και της απαιτούμενης δικτυακής υποδομής.",
+   "quote_english": "Completion of the infrastructure of the two existing government cloud nodes that are being consolidated, including the required network infrastructure.",
+   "value": "Yes",
+   "published": "2023-12-01",
+   "title": "Ενίσχυση των κεντρικών υποδομών Κυβερνητικού Νέφους (G-Cloud) της Γ.Γ.Π.Σ.Δ.Δ.",
+   "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού)",
+   "doc_type": "official_page",
+   "note": "Independent ministry source confirming that two G-Cloud nodes already exist; the same page also plans public-cloud use for disaster-recovery sites, which matters for foreign-dependency coding.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote refers to 'the two existing government cloud nodes' (υφιστάμενων κόμβων κυβερνητικού νέφους), now being unified, so a government cloud already exists; the project itself is only for expanding it."
+   }
+  },
+  {
+   "claim": "indicator:EL:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2020/4727/pdf",
+   "quote": "Με τη χρήση των κωδικών-διαπιστευτηρίων της Γενικής Γραμματείας Πληροφοριακών Συστημάτων Δημόσιας Διοίκησης του Υπουργείου Ψηφιακής Διακυβέρνησης.",
+   "quote_english": "By using the credentials of the General Secretariat for Public Administration Information Systems of the Ministry of Digital Governance.",
+   "value": "Yes",
+   "published": "2020-09-23",
+   "title": "Νόμος 4727/2020, άρθρο 24 (Τρόποι αυθεντικοποίησης)",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Official gazette text: the first authentication method for gov.gr is the credentials issued by the state GSIS; Article 25 makes GSIS exclusively responsible for identification before those credentials are issued.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Art. 24 of Law 4727/2020 lets users log in to the single digital portal with credentials of ΓΓΠΣΔΔ of the Ministry of Digital Governance, a state body. The same article also allows bank e-banking credentials, which the quote leaves out."
+   }
+  },
+  {
+   "claim": "indicator:EL:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2020/4727/pdf",
+   "quote": "Για τα συστήματα επικοινωνιών και πληροφορικής, στα οποία αποθηκεύονται, επεξεργάζονται ή διαβιβάζονται εθνικά διαβαθμισμένες πληροφορίες, εφαρμόζονται οι διατάξεις του Εθνικού Κανονισμού Ασφαλείας (Ε.Κ.Α.).",
+   "quote_english": "For communication and information systems in which nationally classified information is stored, processed or transmitted, the provisions of the National Security Regulation (NSR) apply.",
+   "value": "Yes",
+   "published": "2020-09-23",
+   "title": "Νόμος 4727/2020, άρθρο 1 παρ. 5",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same Article 1 provision on the official gazette server; the statute refers classified-information systems to the National Security Regulation.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "partial",
+    "reason": "The statute says systems that handle nationally classified information fall under the National Security Regulation (ΕΚΑ), so a binding regime for classified information exists, but the quote does not show that ΕΚΑ sets out the classification scheme itself."
+   }
+  },
+  {
+   "claim": "record:EL:beneficial_ownership:register",
+   "question": "Beneficial ownership register: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2018/4557/pdf",
+   "quote": "Στη Γραμματεία Πληροφοριακών Συστημάτων (Γ.Γ.Π.Σ.) δημιουργείται, με χρήση διαδικτυακής ηλεκτρονικής εφαρμογής, Κεντρικό Μητρώο Πραγματικών Δικαιούχων, το οποίο συνδέεται ηλεκτρονικά με το Α.Φ.Μ.",
+   "quote_english": "At the Secretariat for Information Systems (GSIS) a Central Register of Beneficial Owners is created, using a web application, electronically linked to the tax number (AFM)",
+   "value": "Κεντρικό Μητρώο Πραγματικών Δικαιούχων (Central Register of Beneficial Owners)",
+   "published": "2018-07-30",
+   "title": "Νόμος 4557/2018, άρθρο 20 παρ. 4",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same Article 20 provision as the lawspot mirror, on the official gazette server.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Κεντρικό Μητρώο Πραγματικών Δικαιούχων (Central Register of Beneficial Owners)",
+    "reason": "Law 4557/2018 names the register as created at the Secretariat of Information Systems (Γ.Γ.Π.Σ.) and linked to the tax number (ΑΦΜ)."
+   }
+  },
+  {
+   "claim": "record:EL:beneficial_ownership:register",
+   "question": "Beneficial ownership register: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://mitos.gov.gr/index.php/%CE%94%CE%94:%CE%9A%CE%B5%CE%BD%CF%84%CF%81%CE%B9%CE%BA%CF%8C_%CE%9C%CE%B7%CF%84%CF%81%CF%8E%CE%BF_%CE%A0%CF%81%CE%B1%CE%B3%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CF%8E%CE%BD_%CE%94%CE%B9%CE%BA%CE%B1%CE%B9%CE%BF%CF%8D%CF%87%CF%89%CE%BD",
+   "quote": "Η διαδικασία αφορά στην καταχώριση των απαιτούμενων στοιχείων των πραγματικών δικαιούχων, στο Κεντρικό Μητρώο Πραγματικών Δικαιούχων (ΚΜΠΔ)",
+   "quote_english": "The procedure concerns the entry of the required data on beneficial owners in the Central Register of Beneficial Owners (KMPD)",
+   "value": "Κεντρικό Μητρώο Πραγματικών Δικαιούχων (ΚΜΠΔ) (Central Register of Beneficial Owners)",
+   "published": "2026-09-29",
+   "title": "Κεντρικό Μητρώο Πραγματικών Δικαιούχων - Εθνικό Μητρώο Διοικητικών Διαδικασιών",
+   "publisher": "Εθνικό Μητρώο Διοικητικών Διαδικασιών (ΜΙΤΟΣ), Υπουργείο Εσωτερικών",
+   "doc_type": "official_page",
+   "note": "Current (2026) official procedure register confirms the register is live under that name, with the Ministry of National Economy and Finance as the institutional body.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Κεντρικό Μητρώο Πραγματικών Δικαιούχων (ΚΜΠΔ)",
+    "reason": "The Mitos procedure page names the register, and its abbreviation ΚΜΠΔ, as the place where beneficial owner details are recorded."
+   }
+  },
+  {
+   "claim": "record:EL:border_control:register",
+   "question": "Border and visa systems: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2014/4249/pdf",
+   "quote": "λειτουργίας του πληροφοριακού συστήματος της εθνικής αρχής, στο πλαίσιο της σύμβασης SCHENGEN",
+   "quote_english": "operation of the information system of the national authority, under the SCHENGEN convention",
+   "value": "πληροφοριακό σύστημα της εθνικής αρχής στο πλαίσιο της σύμβασης SCHENGEN (information system of the national authority under the Schengen Convention)",
+   "published": "2014-03",
+   "title": "Νόμος 4249/2014 (Αναδιοργάνωση της Ελληνικής Αστυνομίας), Διεύθυνση Πληροφορικής",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same provision on the official gazette server: the Police IT Directorate supports the national Schengen system. The full sentence goes on to cite ratification by Law 2514/1997; line-break hyphenation in the PDF limits the quotable span.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "information system of the national authority under the Schengen Convention",
+    "reason": "Law 4249/2014 describes the Hellenic Police IT directorate's duty to support this system; it is a description, not a formal name, and it gives no separate visa or border-system name."
+   }
+  },
+  {
+   "claim": "record:EL:breeder_documents:register",
+   "question": "Breeder document scans: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2017/4483/pdf",
+   "quote": "οι οποίες καταχωρίζονται και τηρούνται στο πληροφοριακό σύστημα Διαχείρισης Ληξιαρχικών Πράξεων του Υπουργείου Εσωτερικών",
+   "quote_english": "which are entered and held in the Registry Acts Management information system of the Ministry of the Interior",
+   "value": "πληροφοριακό σύστημα Διαχείρισης Ληξιαρχικών Πράξεων του Υπουργείου Εσωτερικών (Ministry of the Interior Registry Acts Management information system)",
+   "published": "2017-07-31",
+   "title": "Νόμος 4483/2017, άρθρο 115 (Δημιουργία Μητρώου Πολιτών)",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same Article 115 provision on the official gazette server. Mitos (2026) adds that Law 5314/2026 assigns keeping the civil-status books to the municipalities.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "πληροφοριακό σύστημα Διαχείρισης Ληξιαρχικών Πράξεων (Civil Status Records Management system), Ministry of Interior",
+    "reason": "Law 4483/2017 names the Interior Ministry system in which civil-status acts are recorded and kept; it does not mention scanned document images."
+   }
+  },
+  {
+   "claim": "record:EL:civil_registry:register",
+   "question": "Civil registry core: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2017/4483/pdf",
+   "quote": "Στο Υπουργείο Εσωτερικών δημιουργείται και τηρείται πληροφοριακό σύστημα με την ονομασία «Μητρώο Πολιτών», το οποίο συγκροτείται από: α. το σύνολο των στοιχείων του Εθνικού Δημοτολογίου",
+   "quote_english": "An information system named 'Citizens' Register' is created and kept at the Ministry of the Interior, consisting of: a. all the data of the National Municipal Register",
+   "value": "«Μητρώο Πολιτών» (Citizens' Register)",
+   "published": "2017-07-31",
+   "title": "Νόμος 4483/2017, άρθρο 115",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same Article 115 provision as the lawspot mirror, on the official gazette server.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Μητρώο Πολιτών (Citizens' Register), Ministry of Interior",
+    "reason": "Art. 115 of Law 4483/2017 creates an information system explicitly named 'Μητρώο Πολιτών' at the Ministry of Interior, built from the National Municipal Register (Εθνικό Δημοτολόγιο) among other sources."
+   }
+  },
+  {
+   "claim": "record:EL:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2020/4727/pdf",
+   "quote": "το Υπουργείο Ψηφιακής Διακυβέρνησης ενεργεί ως Υπεύθυνος Επεξεργασίας ως προς την πρόσβαση, την επεξεργασία και τη διατήρηση των δεδομένων προσωπικού χαρακτήρα που είναι αναγκαία για τις υπηρεσίες αυθεντικοποίησης",
+   "quote_english": "the Ministry of Digital Governance acts as Controller for the access, processing and retention of the personal data necessary for the authentication services",
+   "value": "Υπουργείο Ψηφιακής Διακυβέρνησης (Ministry of Digital Governance)",
+   "published": "2020-09-23",
+   "title": "Νόμος 4727/2020, άρθρο 24 παρ. 2",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same Article 24(2) provision on the official gazette server.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Ministry of Digital Governance",
+    "reason": "Art. 24(2) of Law 4727/2020 names the Ministry of Digital Governance as data controller for the personal data used by the portal's authentication services; controller is close to operator but is not literally the same thing."
+   }
+  },
+  {
+   "claim": "record:EL:electoral_management:register",
+   "question": "Election management and results: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiFEK/1/2012/57/pdf",
+   "quote": "Επίσης συντάσσει πίνακα με αναλυτικά αποτελέσματα σταυροδοσίας των υποψηφίων, τον οποίο αποστέλλει άμεσα σε έντυπη ή ηλεκτρονική μορφή στο Υπουργείο Εσωτερικών.",
+   "quote_english": "It also draws up a table of detailed preference-vote results for the candidates, which it sends immediately in print or electronic form to the Ministry of the Interior.",
+   "value": "πίνακας με αναλυτικά αποτελέσματα σταυροδοσίας sent to the Υπουργείο Εσωτερικών (table of detailed preference-vote results sent to the Ministry of the Interior)",
+   "published": "2012-03-15",
+   "title": "Προεδρικό Διάταγμα 26/2012 (ΦΕΚ Α' 57/15.03.2012) Κωδικοποίηση νομοθεσίας για την εκλογή βουλευτών",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same provision in the original gazette issue; 'it' refers to the Court of First Instance of each electoral district. This is a procedure, not a named system.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says the court of first instance sends a table of detailed preference-vote results to the Ministry of Interior on paper or electronically, but it names no register or system."
+   }
+  },
+  {
+   "claim": "record:EL:judicial_criminal:register",
+   "question": "Judicial & criminal justice: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2019/4620/pdf",
+   "quote": "Με την επιφύλαξη της εφαρμογής του μηχανογραφικού συστήματος κατά το άρθρο 568 παρ. 1 εδ. ε΄, το ποινικό μητρώο αποτελείται από δελτία.",
+   "quote_english": "Subject to the application of the computerised system under Article 568(1)(e), the criminal record consists of record slips.",
+   "value": "ποινικό μητρώο αποτελείται από δελτία (criminal record consisting of record slips)",
+   "published": "2019-06-11",
+   "title": "Νόμος 4620/2019 Κώδικας Ποινικής Δικονομίας, άρθρο 569",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same Code of Criminal Procedure Article 569 provision on the official gazette server.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "ποινικό μητρώο (criminal record)",
+    "reason": "Art. 569 of the Code of Criminal Procedure (Law 4620/2019) says the criminal record consists of cards, subject to a computerised system; it names the register only by its generic name."
+   }
+  },
+  {
+   "claim": "record:EL:judicial_criminal:register",
+   "question": "Judicial & criminal justice: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://mitos.gov.gr/index.php/ΔΔ:Αντίγραφο_Ποινικού_Μητρώου",
+   "quote": "Η ηλεκτρονική υποβολή αίτησης και παραλαβή αντιγράφου Ποινικού Μητρώου πραγματοποιείται μέσω της πύλης https://www.ncris.gov.gr του έργου \"Εθνικό Ποινικό Μητρώο\"",
+   "quote_english": "Online application for and receipt of a criminal record extract is done through the portal https://www.ncris.gov.gr of the 'National Criminal Record' project",
+   "value": "Εθνικό Ποινικό Μητρώο (National Criminal Record), portal ncris.gov.gr",
+   "published": "2026-09-25",
+   "title": "Αντίγραφο Ποινικού Μητρώου - Εθνικό Μητρώο Διοικητικών Διαδικασιών",
+   "publisher": "Εθνικό Μητρώο Διοικητικών Διαδικασιών (ΜΙΤΟΣ)",
+   "doc_type": "official_page",
+   "note": "Newer official source that names the computerised system, where the printed value only describes paper slips; institutional body: Ministry of Justice, Criminal Record Section A.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "Εθνικό Ποινικό Μητρώο (National Criminal Record), portal ncris.gov.gr",
+    "reason": "The Mitos page names the 'Εθνικό Ποινικό Μητρώο' project and its portal ncris.gov.gr as the channel for criminal record copies."
+   }
+  },
+  {
+   "claim": "record:EL:land_property:operator",
+   "question": "Land & property registry: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2018/4512/pdf",
+   "quote": "Συστήνεται νομικό πρόσωπο δημοσίου δικαίου (Ν.Π.Δ.Δ.) με την επωνυμία «Ελληνικό Κτηματολόγιο εφεξής «Φορέας»), με έδρα την Αθήνα, το οποίο εποπτεύεται από τον Υπουργό Περιβάλλοντος και Ενέργειας.",
+   "quote_english": "A legal entity under public law named 'Hellenic Cadastre' (hereinafter 'Agency') is established, seated in Athens, supervised by the Minister of Environment and Energy.",
+   "value": "Ελληνικό Κτηματολόγιο (Hellenic Cadastre), public-law entity supervised by the Υπουργός Περιβάλλοντος και Ενέργειας (Minister of Environment and Energy)",
+   "published": "2018-01-17",
+   "title": "Νόμος 4512/2018, άρθρο 1",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same provision as the mirror, on the official gazette server. The original text is superseded on the supervising ministry: see the next finding.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "Ελληνικό Κτηματολόγιο (Hellenic Cadastre), a public-law legal entity supervised by the Minister of Environment and Energy",
+    "reason": "Art. 1 of Law 4512/2018 establishes the Hellenic Cadastre as a public-law legal entity (ΝΠΔΔ); the article heading and the text that follows give it the cadastre role, replacing ΕΚΧΑ Α.Ε. and the mortgage registries."
+   }
+  },
+  {
+   "claim": "record:EL:land_property:operator",
+   "question": "Land & property registry: the body that operates it",
+   "relation": "contradicts",
+   "url": "https://mitos.gov.gr/index.php/ΔΔ:Αντίγραφο_Κτηματολογικού_Φύλλου_(ΚΦ)",
+   "quote": "Η δυνατότητα ηλεκτρονικής υποβολής αφορά μόνο Κτηματολογικά Γραφεία που έχουν ενταχθεί υπό τον φορέα ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ σύμφωνα με τον ν.4512/2018. Βασικές πληροφορίες Θεσμικός φορέας ΥΠΟΥΡΓΕΙΟ ΨΗΦΙΑΚΗΣ ΔΙΑΚΥΒΕΡΝΗΣΗΣ",
+   "quote_english": "Online submission applies only to Cadastral Offices integrated into the HELLENIC CADASTRE agency under Law 4512/2018. Basic information: Institutional body MINISTRY OF DIGITAL GOVERNANCE",
+   "value": "ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ (Hellenic Cadastre) under the ΥΠΟΥΡΓΕΙΟ ΨΗΦΙΑΚΗΣ ΔΙΑΚΥΒΕΡΝΗΣΗΣ (Ministry of Digital Governance)",
+   "published": "2026-09-25",
+   "title": "Αντίγραφο Κτηματολογικού Φύλλου (ΚΦ) - Εθνικό Μητρώο Διοικητικών Διαδικασιών",
+   "publisher": "Εθνικό Μητρώο Διοικητικών Διαδικασιών (ΜΙΤΟΣ)",
+   "doc_type": "official_page",
+   "note": "The operator is unchanged, but the printed claim of supervision by the Minister of Environment and Energy is out of date. The current official register lists the Ministry of Digital Governance; supervision moved under P.D. 3/2021, which is reported in search results and was not fetched.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "Ελληνικό Κτηματολόγιο (Hellenic Cadastre), with the Ministry of Digital Governance as the institutional (supervising) body",
+    "reason": "The Mitos page places the cadastral offices under the Hellenic Cadastre and lists the Ministry of Digital Governance as the institutional body. The quote runs across page sections and matches only when whitespace is ignored."
+   }
+  },
+  {
+   "claim": "record:EL:police_records:register",
+   "question": "Police information systems: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2014/4249/pdf",
+   "quote": "και ασφάλειας των αρχείων και των βάσεων δεδομένων του κεντρικού συστήματος πληροφορικής της Ελληνικής Αστυνομίας και την καθοδήγηση των Υπηρεσιών",
+   "quote_english": "and security of the files and databases of the central IT system of the Hellenic Police and guidance of the Services",
+   "value": "κεντρικό σύστημα πληροφορικής της Ελληνικής Αστυνομίας (central IT system of the Hellenic Police)",
+   "published": "2014-03",
+   "title": "Νόμος 4249/2014, Διεύθυνση Πληροφορικής",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same Police IT Directorate provision on the official gazette server.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "κεντρικό σύστημα πληροφορικής της Ελληνικής Αστυνομίας (central IT system of the Hellenic Police)",
+    "reason": "Law 4249/2014 refers to the files and databases of the Hellenic Police's central IT system; this is a description rather than a proper name."
+   }
+  },
+  {
+   "claim": "record:EL:public_health_surveillance:register",
+   "question": "Public health surveillance: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2019/4633/pdf",
+   "quote": "β) Η επιδημιολογική επιτήρηση και η παρακολούθηση των επιπτώσεων των μεταδοτικών νοσημάτων στη δημόσια υγεία.",
+   "quote_english": "b) Epidemiological surveillance and monitoring of the impact of communicable diseases on public health.",
+   "value": "επιδημιολογική επιτήρηση (epidemiological surveillance) of communicable diseases as an EODY objective",
+   "published": "2019-10-16",
+   "title": "Νόμος 4633/2019 (Σύσταση ΕΟΔΥ), άρθρο 1 παρ. 2",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same EODY objectives provision on the official gazette server. It names a function, not a system; item (d) adds the provision of valid epidemiological data.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote lists epidemiological surveillance as one of the goals of the National Public Health Organisation (ΕΟΔΥ) and names no register or surveillance system."
+   }
+  },
+  {
+   "claim": "record:EL:trust_services_pki:register",
+   "question": "State PKI and qualified trust services: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://api.et.gr/apiLAW/1/2020/4727/pdf",
+   "quote": "Η Αρχή Πιστοποίησης του Ελληνικού Δημοσίου (Α.Π.Ε.Δ.) αποτελεί τον πάροχο υπηρεσιών εμπιστοσύνης του Ελληνικού Δημοσίου. Είναι αρμόδια για την έκδοση και διαχείριση πιστοποιητικών για την παροχή υπηρεσιών εμπιστοσύνης σε όλους τους φορείς του δημόσιου τομέα.",
+   "quote_english": "The Hellenic Public Administration Certification Authority (APED) is the trust service provider of the Greek State. It is responsible for issuing and managing certificates for trust services to all public-sector bodies.",
+   "value": "Αρχή Πιστοποίησης του Ελληνικού Δημοσίου (Α.Π.Ε.Δ.) (Hellenic Public Administration Certification Authority)",
+   "published": "2020-09-23",
+   "title": "Νόμος 4727/2020, άρθρο 58",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Same Article 58 provision as the lawspot mirror, on the official gazette server.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "Αρχή Πιστοποίησης του Ελληνικού Δημοσίου (Α.Π.Ε.Δ.) (Hellenic Public Administration Certification Authority)",
+    "reason": "Law 4727/2020 names Α.Π.Ε.Δ. as the Greek state's trust service provider, issuing certificates to all public-sector bodies."
+   }
+  },
+  {
+   "claim": "indicator:EL:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://digitalstrategy.gov.gr/project/tier-4_datacenter",
+   "quote": "Για την κάλυψη των αναγκών της μεταναστευτικής πολιτικής και του ασύλου υπάρχουν επί μέρους κέντρα δεδομένων στο Υπουργείο Εσωτερικών, στην Υπηρεσία Ασύλου, στην Υπηρεσία Υποδοχής και Ταυτοποίησης",
+   "quote_english": "To cover the needs of migration and asylum policy there are separate data centres at the Ministry of the Interior, the Asylum Service, the Reception and Identification Service",
+   "value": "Yes",
+   "published": "2023-12-01",
+   "title": "Κέντρο Δεδομένων υψηλής διαθεσιμότητας (Tier-4 Datacenter)",
+   "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού)",
+   "doc_type": "official_page",
+   "note": "Independent ministry source, separate from GRNET, confirming that several ministry-run government data centres are in operation.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote says separate data centres already exist ('υπάρχουν') at the Ministry of Interior, the Asylum Service and the Reception and Identification Service; the Tier-4 centre on the same page is planned, but these existing ones are state-run."
+   }
+  },
+  {
+   "claim": "indicator:EL:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://api.et.gr/apiLAW/1/2020/4727/pdf",
+   "quote": "η Γενική Γραμματεία Ψηφιακής Διακυβέρνησης και Απλούστευσης Διαδικασιών του Υπουργείου Ψηφιακής Διακυβέρνησης ασκεί τις αρμοδιότητες της Πρωτεύουσας Αρχής Πιστοποίησης.",
+   "quote_english": "the General Secretariat for Digital Governance and Simplification of Procedures of the Ministry of Digital Governance exercises the powers of the Root Certification Authority.",
+   "value": "Yes",
+   "published": "2020-09-23",
+   "title": "Νόμος 4727/2020, άρθρο 58 παρ. 2",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "T1 statute confirming that a ministry directorate holds the PKI root, which is stronger than the aped.gov.gr homepage.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "Law 4727/2020 assigns the Root Certification Authority (Πρωτεύουσα Αρχή Πιστοποίησης) role to the General Secretariat of Digital Governance of the Ministry of Digital Governance, a state body."
+   }
+  },
+  {
+   "claim": "record:EL:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://mitos.gov.gr/index.php/ΔΔ:Γενικό_Πιστοποιητικό_(εταιρικών_μεταβολών)",
+   "quote": "Η διαδικασία αφορά στην έκδοση του γενικού πιστοποιητικού (εταιρικών μεταβολών), μέσω του πληροφοριακού συστήματος του Γενικού Εμπορικού Μητρώου (Γ.Ε.ΜΗ.).",
+   "quote_english": "The procedure concerns issuing the general certificate (of corporate changes) through the information system of the General Commercial Registry (G.E.MI.).",
+   "value": "Γενικό Εμπορικό Μητρώο (Γ.Ε.ΜΗ.) (General Commercial Registry)",
+   "published": "2026-09-25",
+   "title": "Γενικό Πιστοποιητικό (εταιρικών μεταβολών) - Εθνικό Μητρώο Διοικητικών Διαδικασιών",
+   "publisher": "Εθνικό Μητρώο Διοικητικών Διαδικασιών (ΜΙΤΟΣ)",
+   "doc_type": "official_page",
+   "note": "Official procedure register names the GEMI information system; institutional body: Ministry of Development, Directorate of Companies.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Γενικό Εμπορικό Μητρώο (Γ.Ε.ΜΗ.) (General Commercial Registry)",
+    "reason": "The Mitos page says the certificate of corporate changes is issued through the ΓΕΜΗ information system; the page lists the Ministry of Development as the institutional body."
+   }
+  },
+  {
+   "claim": "record:EL:firearms_register:register",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://api.et.gr/apiLAW/1/2020/4678/pdf",
+   "quote": "Η Διεύθυνση Κρατικής Ασφάλειας του Αρχηγείου Ελληνικής Αστυνομίας αποτελεί την υπηρεσία συλλογής και ανταλλαγής πληροφοριών για την εφαρμογή του παρόντος νόμου. Στην ως άνω Υπηρεσία τηρείται αρχείο οπλοπωλών, στο οποίο εγγράφονται τα πρόσωπα που διαθέτουν τις άδειες των άρθρων 5 και 6, καθώς και ηλεκτρονικό αρχείο πυροβόλων όπλων",
+   "quote_english": "The State Security Directorate of Hellenic Police HQ is the service for collecting and exchanging information under this law. That service keeps a register of arms dealers holding the licences of Articles 5 and 6, and an electronic firearms file",
+   "value": "ηλεκτρονικό αρχείο πυροβόλων όπλων (electronic firearms file)",
+   "published": "2020-03-20",
+   "title": "Νόμος 4678/2020 (τροποποίηση ν. 2168/1993, ενσωμάτωση Οδηγίας (ΕΕ) 2017/853), άρθρο 28 παρ. 4 ν. 2168/1993",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "Statute transposing the EU Firearms Directive; the file keeps tracing data for 30 years after a firearm is destroyed.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "ηλεκτρονικό αρχείο πυροβόλων όπλων (electronic firearms file), kept by the State Security Directorate of the Hellenic Police Headquarters",
+    "reason": "Law 4678/2020 says the State Security Directorate keeps a register of arms dealers and an electronic firearms file."
+   }
+  },
+  {
+   "claim": "record:EL:firearms_register:operator",
+   "question": "Firearms register: Licensed firearms and their holders",
+   "relation": "fills_gap",
+   "url": "https://api.et.gr/apiLAW/1/2020/4678/pdf",
+   "quote": "Η Διεύθυνση Κρατικής Ασφάλειας του Αρχηγείου Ελληνικής Αστυνομίας αποτελεί την υπηρεσία συλλογής και ανταλλαγής πληροφοριών για την εφαρμογή του παρόντος νόμου. Στην ως άνω Υπηρεσία τηρείται αρχείο οπλοπωλών, στο οποίο εγγράφονται τα πρόσωπα που διαθέτουν τις άδειες των άρθρων 5 και 6, καθώς και ηλεκτρονικό αρχείο πυροβόλων όπλων",
+   "quote_english": "The State Security Directorate of Hellenic Police HQ is the service for collecting and exchanging information under this law. That service keeps a register of arms dealers holding the licences of Articles 5 and 6, and an electronic firearms file",
+   "value": "Διεύθυνση Κρατικής Ασφάλειας του Αρχηγείου Ελληνικής Αστυνομίας (State Security Directorate, Hellenic Police Headquarters)",
+   "published": "2020-03-20",
+   "title": "Νόμος 4678/2020, άρθρο 28 παρ. 4 ν. 2168/1993",
+   "publisher": "Εθνικό Τυπογραφείο (Government Gazette, api.et.gr)",
+   "doc_type": "legislation",
+   "note": "The same provision names the body that keeps the file.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "ηλεκτρονικό αρχείο πυροβόλων όπλων (electronic firearms file), kept by the State Security Directorate of the Hellenic Police Headquarters",
+    "reason": "This is the same quote and source as item 21 and is found verbatim in Law 4678/2020."
+   }
+  },
+  {
+   "claim": "record:EL:grid_control:register",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.admie.gr/anakoinoseis/enimerosi/metagogi-systimatos-ems",
+   "quote": "ΘΑ ΓΙΝΕΙ ΠΛΗΡΗΣ ΜΕΤΑΓΩΓΗ ΤΟΥ ΕΛΕΓΧΟΥ ΚΑΙ ΛΕΙΤΟΥΡΓΙΑΣ ΤΟΥ ΣΥΣΤΗΜΑΤΟΣ ΕΝΕΡΓΕΙΑΣ ΣΤΟ ΝΕΟ EMS (ENERGY MANAGEMENT SYSTEM).",
+   "quote_english": "Control and operation of the power system will be fully switched over to the new EMS (Energy Management System).",
+   "value": "EMS (Energy Management System)",
+   "published": "2017-05-30",
+   "title": "ΜΕΤΑΓΩΓΗ ΣΥΣΤΗΜΑΤΟΣ EMS",
+   "publisher": "ΑΔΜΗΕ (IPTO, Independent Power Transmission Operator)",
+   "doc_type": "official_page",
+   "note": "The TSO's own announcement of its grid-control EMS; the EMS runs at the National Energy Control Center in Kryoneri (IPTO page: admie.gr/en/nea/ekdiloseis/egkainia-psifiakoy-kentroy-eleghoy-sto-kryoneri).",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "EMS (Energy Management System)",
+    "reason": "The notice from the Independent Power Transmission Operator (ΑΔΜΗΕ/IPTO), dated 30.05.2017, says control and operation of the power system is switching fully to the new EMS; the quote names the system but not the vendor or who hosts it."
+   }
+  },
+  {
+   "claim": "record:EL:grid_control:register",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.admie.gr/en/nea/ekdiloseis/egkainia-psifiakoy-kentroy-eleghoy-sto-kryoneri",
+   "quote": "An event was held at the National Energy Control Center in Kryoneri, which involved upgrading and updating its software, hardware and control rooms, after more than 20 years of seamless operation.",
+   "quote_english": "",
+   "value": "National Energy Control Center in Kryoneri",
+   "published": "2019-12",
+   "title": "Event at the National Control Center in Kryoneri",
+   "publisher": "IPTO (ΑΔΜΗΕ)",
+   "doc_type": "official_page",
+   "note": "Names the physical control centre that hosts the grid-control systems; the upgrade was shown to the Minister on 20 December 2019.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "National Energy Control Center, Kryoneri (IPTO)",
+    "reason": "The IPTO page says the Kryoneri national control centre had its software, hardware and control rooms upgraded; the text after the quote mentions the EMS and the market systems (MMS/MSS)."
+   }
+  },
+  {
+   "claim": "record:EL:water_control:register",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://www.eydap.gr/TheCompany/Water/DistributionNetwork/",
+   "quote": "το δίκτυο ύδρευσης παρακολουθείται σε 24ωρη βάση από σύστημα τηλελέγχου – τηλεχειρισμού (SCADA) για την παρακολούθηση της λειτουργίας των ΜΕΝ, του δικτύου ύδρευσης",
+   "quote_english": "the water supply network is monitored around the clock by a remote monitoring and control system (SCADA) that monitors the operation of the water treatment plants and the supply network",
+   "value": "σύστημα τηλελέγχου – τηλεχειρισμού (SCADA) (remote monitoring and remote control system) of the EYDAP water network",
+   "published": "",
+   "title": "ΕΥΔΑΠ - Δίκτυο διανομής πόσιμου νερού",
+   "publisher": "ΕΥΔΑΠ Α.Ε. (Athens Water Supply and Sewerage Company)",
+   "doc_type": "official_page",
+   "note": "The operator's own page; it covers only greater Athens (EYDAP), not a national water-control system. The same page reports 100 continuous monitoring positions.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "SCADA telecontrol system for the water network of the Athens Water Supply and Sewerage Company (ΕΥΔΑΠ/EYDAP)",
+    "reason": "The EYDAP page says the water network is monitored around the clock by a SCADA telecontrol system; no product name is given."
+   }
+  },
+  {
+   "claim": "record:EL:education:register",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://digitalstrategy.gov.gr/project/myschool",
+   "quote": "Αφορά στον επανασχεδιασμό της πλατφόρμας MySchool, και των ψηφιακών υπηρεσιών διοίκησης που παρέχει σε σχολεία και δ/νσεις εκπαίδευσης.",
+   "quote_english": "It concerns the redesign of the MySchool platform and the digital administration services it provides to schools and education directorates.",
+   "value": "MySchool",
+   "published": "2023-12-01",
+   "title": "Ψηφιακές Υπηρεσίες MySchool",
+   "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού)",
+   "doc_type": "official_page",
+   "note": "The national school-administration platform that holds pupil records for primary and secondary education.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "MySchool platform",
+    "reason": "The Digital Strategy project page names the MySchool platform as the administrative system for schools and education directorates."
+   }
+  },
+  {
+   "claim": "record:EL:education:count",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://digitalstrategy.gov.gr/project/myschool",
+   "quote": "Η πλατφόρμα διαχειρίζεται 1,5 εκατομμύριο μαθητές, 140 χιλιάδες εκπαιδευτικό προσωπικό και εξυπηρετεί 16 χιλιάδες σχολικές μονάδες",
+   "quote_english": "The platform manages 1.5 million pupils and 140 thousand teaching staff, and serves 16 thousand school units",
+   "value": "1,5 εκατομμύριο μαθητές (pupils)",
+   "published": "2023-12-01",
+   "title": "Ψηφιακές Υπηρεσίες MySchool",
+   "publisher": "Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού)",
+   "doc_type": "official_page",
+   "note": "Pupil count held in MySchool; the same sentence gives staff and school counts.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "MySchool: 1.5 million students, 140,000 teaching staff, 16,000 school units",
+    "reason": "The quote gives the counts the platform manages; the name MySchool comes from the page title and the sentence just before."
+   }
+  },
+  {
+   "claim": "record:EL:education:operator",
+   "question": "Education: Student records, diplomas and qualifications",
+   "relation": "fills_gap",
+   "url": "https://mitos.gov.gr/index.php/ΔΔ:Βεβαίωση_Φοίτησης_Μαθητή_/_Μαθήτριας",
+   "quote": "Διαθέσιμη ηλεκτρονικά μέσω του gov.gr για τους μαθητές απόφοιτους για τους οποίους τηρούνται δεδομένα στο πληροφοριακό σύστημα του ΥΠΑΙΘΑ myschool (2013 και εντεύθεν)",
+   "quote_english": "Available electronically via gov.gr for pupils and graduates whose data are held in the information system myschool of the Ministry of Education (from 2013 onwards)",
+   "value": "ΥΠΑΙΘΑ (Ministry of Education, Religious Affairs and Sports)",
+   "published": "2026-09-25",
+   "title": "Βεβαίωση Φοίτησης Μαθητή / Μαθήτριας - Εθνικό Μητρώο Διοικητικών Διαδικασιών",
+   "publisher": "Εθνικό Μητρώο Διοικητικών Διαδικασιών (ΜΙΤΟΣ)",
+   "doc_type": "official_page",
+   "note": "Identifies myschool as the ministry's own information system that holds pupil data from 2013.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "myschool, the information system of the Ministry of Education (ΥΠΑΙΘΑ)",
+    "reason": "The Mitos page says student data from 2013 onwards is kept in the ministry's myschool information system."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:EL:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:EL:K2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:EL:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:border_control:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:EL:border_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:breeder_documents:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:digital_identity_credentials:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:electoral_roll:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:EL:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:land_property:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:police_records:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:EL:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:public_health_surveillance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:tax:foreign_dependency",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:EL:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:EL:K1",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:authentication_audit_log:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:benefits_pensions:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:customs:foreign_dependency",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:customs:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:digital_identity_credentials:foreign_dependency",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:digital_identity_credentials:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:facial_biometric:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:fingerprint_biometric:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:government_payroll:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:government_payroll:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:health_insurance:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:health_records:foreign_dependency",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:health_records:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:issuance_history:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:land_property:foreign_dependency",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:land_property:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:national_archives:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:public_finance:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:residence_permits:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:tax:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:vehicle_licensing:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:authentication_audit_log:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:government_payroll:count",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:official_gazette:operator",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:official_gazette:register",
+   "status": "not_reached"
+  },
+  {
+   "claim": "record:EL:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:firearms_register:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:central_bank:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:EL:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:EL:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:EL:emergency_communications:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:EL:grid_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:water_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:EL:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:EL:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

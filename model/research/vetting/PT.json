@@ -1,0 +1,836 @@
+{
+ "iso": "PT",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:PT:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://sirp.pt/organizacao-do-sirp/",
+   "quote": "A Comissão de Fiscalização de Dados Fiscaliza a atividade dos centros de dados do SIS e do SIED, garantindo o respeito pelos Direitos, Liberdades e Garantias",
+   "quote_english": "The Data Oversight Commission oversees the activity of the data centres of the SIS and the SIED, guaranteeing respect for Rights, Freedoms and Guarantees",
+   "value": "Yes",
+   "published": "2026",
+   "title": "Organização do SIRP",
+   "publisher": "Sistema de Informações da República Portuguesa (SIRP)",
+   "doc_type": "official_page",
+   "note": "An independent official source showing that state bodies (the intelligence services SIS and SIED) operate their own data centres today, separate from the ARTE sovereign-cloud plan.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The page says an oversight commission supervises the activity of the data centres of SIS and SIED, which are state intelligence services, so state-run data centres are in operation today; the quote does not describe any wider government estate."
+   }
+  },
+  {
+   "claim": "record:PT:civil_registry:register",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://irn.justica.gov.pt/Portals/33/Relatorio/Relat%C3%B3rio%20de%20Atividades%202024.pdf",
+   "quote": "São também recursos tecnológicos do IRN as aplicações de suporte ao negócio: Sistema Integrado do Registo Comercial (SIRCOM) Sistema Integrado do Registo e Identificação Civil (SIRIC) Sistema Integrado do Registo Predial (SIRP) Sistema Integrado de Registo Automóvel (SIRAUTO)",
+   "quote_english": "The IRN's technology resources also include the business applications: Integrated Commercial Registry System (SIRCOM), Integrated Civil Registry and Identification System (SIRIC), Integrated Land Registry System (SIRP), Integrated Vehicle Registry System (SIRAUTO)",
+   "value": "Sistema Integrado do Registo e Identificação Civil (SIRIC) (Integrated Civil Registry and Identification System)",
+   "published": "2025-08",
+   "title": "Relatório de Atividades 2024",
+   "publisher": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "doc_type": "annual_report",
+   "note": "The operator's own 2024 annual activity report names the IT system behind civil registration and civil identification.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "IRN, I.P. (SIRIC - Sistema Integrado do Registo e Identificação Civil)",
+    "reason": "The 2024 activity report lists SIRIC among IRN's own business applications. The text is verbatim in reading-order extraction, while the table layout splits it into columns. It names no hosting or provider."
+   }
+  },
+  {
+   "claim": "record:PT:civil_registry:operator",
+   "question": "Civil registry core: Births, deaths, marriages, residence and the national person identifier",
+   "relation": "fills_gap",
+   "url": "https://irn.justica.gov.pt/Sobre-o-IRN/Missao-valores-e-competencias",
+   "quote": "O IRN, I.P., tem por missão executar e acompanhar as políticas relativas aos serviços de identificação e registo, tendo em vista assegurar a prestação de serviços aos cidadãos e às empresas no âmbito da identificação civil, da concessão e emissão de passaportes, da nacionalidade, dos registos civil, predial, comercial",
+   "quote_english": "The IRN, I.P. has the mission of executing and monitoring policies on identification and registration services, ensuring services to citizens and companies in civil identification, the granting and issuing of passports, nationality, and the civil, land and commercial registers",
+   "value": "IRN, I.P. (Instituto dos Registos e do Notariado; Institute of Registries and Notary)",
+   "published": "",
+   "title": "Missão, valores e competências",
+   "publisher": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "doc_type": "official_page",
+   "note": "The operator's own site states that it runs civil identification and the civil register; the same quote supports IRN as operator of the land and commercial registers.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "IRN, I.P.",
+    "reason": "The mission statement gives IRN responsibility for civil identification and the civil registry, but says nothing about systems or hosting."
+   }
+  },
+  {
+   "claim": "record:PT:issuance_history:register",
+   "question": "Document issuance history: Which passports and ID cards were issued to whom, and their revocation state",
+   "relation": "fills_gap",
+   "url": "https://irn.justica.gov.pt/Portals/33/Relatorio/Relat%C3%B3rio%20de%20Atividades%202024.pdf",
+   "quote": "Sistema de Informação e Gestão Automatizada de Processo (SIGAP) Sistema do Ciclo de Vida do Cartão de Cidadão (SCVCC) Nova Plataforma Nacionalidade Sistema de Informação do Passaporte Eletrónico Português SiPEP",
+   "quote_english": "Automated Process Information and Management System (SIGAP), Citizen Card Life Cycle System (SCVCC), New Nationality Platform, Portuguese Electronic Passport Information System SiPEP",
+   "value": "Sistema do Ciclo de Vida do Cartão de Cidadão (SCVCC) (Citizen Card Life Cycle System); Sistema de Informação do Passaporte Eletrónico Português SiPEP (Portuguese Electronic Passport Information System)",
+   "published": "2025-08",
+   "title": "Relatório de Atividades 2024",
+   "publisher": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "doc_type": "annual_report",
+   "note": "In the IRN 2024 report this quote belongs to the list of IRN business applications. SCVCC handles the ID card life cycle and SiPEP handles passports.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "IRN, I.P. (SCVCC for the Cartão de Cidadão; SiPEP for passports)",
+    "reason": "The report lists SCVCC and SiPEP as IRN technology resources, which names the systems and their holder but not who hosts them."
+   }
+  },
+  {
+   "claim": "record:PT:digital_identity_credentials:register",
+   "question": "Digital identity credentials: The national eID scheme's accounts, credentials and assurance levels",
+   "relation": "fills_gap",
+   "url": "https://www.autenticacao.gov.pt/web/guest/chave-movel-digital",
+   "quote": "A Chave Móvel Digital (CMD) é um meio de autenticação e assinatura digital certificado pelo Estado português.",
+   "quote_english": "The Chave Móvel Digital (CMD) is a means of authentication and digital signature certified by the Portuguese State.",
+   "value": "Chave Móvel Digital (CMD) (Digital Mobile Key)",
+   "published": "",
+   "title": "Chave Móvel Digital",
+   "publisher": "ARTE - Agência para a Reforma Tecnológica do Estado (Autenticação.gov)",
+   "doc_type": "official_page",
+   "note": "The official eID portal, run by ARTE, names the national mobile eID credential.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Chave Móvel Digital (CMD)",
+    "reason": "The quote names the scheme and says the Portuguese state certifies it, but it does not say who operates it."
+   }
+  },
+  {
+   "claim": "record:PT:electoral_roll:register",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://www.sg.mai.gov.pt/pt/AdministracaoEleitoral/",
+   "quote": "Assegurar o recenseamento eleitoral de modo automático e voluntário garantindo, a operacionalidade e atualidade do sistema de informação e gestão do recenseamento eleitoral, providenciando pela organização, manutenção e gestão da Base de Dados do Recenseamento Eleitoral",
+   "quote_english": "Ensure automatic and voluntary voter registration, guaranteeing that the voter registration information and management system is operational and up to date, providing for the organisation, maintenance and management of the Voter Registration Database",
+   "value": "Base de Dados do Recenseamento Eleitoral (Voter Registration Database)",
+   "published": "",
+   "title": "Administração Eleitoral",
+   "publisher": "Secretaria-Geral do Ministério da Administração Interna (SGMAI)",
+   "doc_type": "official_page",
+   "note": "The page says the Electoral Administration of SGMAI manages the database, so the same quote supports the operator finding.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Secretaria-Geral do MAI (Administração Eleitoral)",
+    "reason": "The page gives SGMAI's electoral administration the job of organising, maintaining and managing the electoral register database (BDRE)."
+   }
+  },
+  {
+   "claim": "record:PT:electoral_roll:operator",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://www.sg.mai.gov.pt/pt/AdministracaoEleitoral/",
+   "quote": "Coordenar as operações de recolha e divulgação dos resultados do escrutínio provisório de todos os atos eleitorais e referendários.",
+   "quote_english": "Coordinate the operations of collecting and publishing the provisional count results of all elections and referendums.",
+   "value": "Secretaria-Geral do Ministério da Administração Interna – Administração Eleitoral (Secretariat-General of the Ministry of Internal Administration, Electoral Administration)",
+   "published": "",
+   "title": "Administração Eleitoral",
+   "publisher": "Secretaria-Geral do Ministério da Administração Interna (SGMAI)",
+   "doc_type": "official_page",
+   "note": "This page is SGMAI's own list of Electoral Administration duties, which include managing the voter database. The operator name comes from the page heading and publisher, not from this sentence.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote is about collecting provisional election results, not the electoral roll, so it answers nothing about who may vote where."
+   }
+  },
+  {
+   "claim": "record:PT:electoral_roll:count",
+   "question": "Electoral roll entry: Who is entitled to vote where",
+   "relation": "fills_gap",
+   "url": "https://www.sg.mai.gov.pt/",
+   "quote": "Notificações da Base de Dados do Recenseamento Eleitoral – mês de agosto 11 130 316 Números de inscritos para votar",
+   "quote_english": "Notifications from the Voter Registration Database – month of August; 11 130 316 number of people registered to vote",
+   "value": "11 130 316 inscritos para votar (registered voters)",
+   "published": "2026-08",
+   "title": "Portal da SGMAI – Números Administração Eleitoral",
+   "publisher": "Secretaria-Geral do Ministério da Administração Interna (SGMAI)",
+   "doc_type": "statistics",
+   "note": "This is a live counter on the SGMAI homepage. It sat beside August 2026 figures when fetched on 2026-09-30.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "11,130,316 registered voters",
+    "reason": "The SGMAI homepage shows 11,130,316 people registered to vote. It says nothing about who operates the database."
+   }
+  },
+  {
+   "claim": "record:PT:electoral_management:operator",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://www.sg.mai.gov.pt/pt/AdministracaoEleitoral/",
+   "quote": "Coordenar as operações de recolha e divulgação dos resultados do escrutínio provisório de todos os atos eleitorais e referendários.",
+   "quote_english": "Coordinate the operations of collecting and publishing the provisional count results of all elections and referendums.",
+   "value": "Secretaria-Geral do Ministério da Administração Interna – Administração Eleitoral (SGMAI Electoral Administration)",
+   "published": "",
+   "title": "Administração Eleitoral",
+   "publisher": "Secretaria-Geral do Ministério da Administração Interna (SGMAI)",
+   "doc_type": "official_page",
+   "note": "SGMAI states that it runs the collection and publication of provisional results; results appear at eleicoes.mai.gov.pt.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Secretaria-Geral do MAI (Administração Eleitoral)",
+    "reason": "The page gives SGMAI's electoral administration the job of coordinating the collection and release of provisional results for every election and referendum."
+   }
+  },
+  {
+   "claim": "record:PT:trust_services_pki:register",
+   "question": "State PKI and qualified trust services: Root and issuing certificate authorities for government, qualified signatures and seals",
+   "relation": "fills_gap",
+   "url": "https://www.scee.gov.pt/",
+   "quote": "procedeu-se à criação e instalação do Sistema de Certificação Electrónica do Estado (SCEE) e da Entidade de Certificação Eletrónica do Estado - Infraestrutura de Chaves Públicas (ECEE)",
+   "quote_english": "the State Electronic Certification System (SCEE) and the State Electronic Certification Entity - Public Key Infrastructure (ECEE) were created and installed",
+   "value": "Sistema de Certificação Electrónica do Estado (SCEE) (State Electronic Certification System)",
+   "published": "",
+   "title": "SCEE - Sistema de Certificação Electrónica do Estado",
+   "publisher": "SCEE / CEGER",
+   "doc_type": "official_page",
+   "note": "The state PKI's own official site. The page also names the Entidade Certificadora Raiz do Estado (ECRaizEstado) as the root.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Sistema de Certificação Electrónica do Estado (SCEE) / ECEE",
+    "reason": "The quote says the state's certification system and PKI were created and installed. That names the system, but no operating body is identified."
+   }
+  },
+  {
+   "claim": "record:PT:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: Root and issuing certificate authorities for government, qualified signatures and seals",
+   "relation": "fills_gap",
+   "url": "https://www.arte.gov.pt/certificacao-eletronica/",
+   "quote": "A gestão da ECCE é assegurada pela ARTE, no quadro das suas competências em matéria de transformação digital do Estado",
+   "quote_english": "The management of the ECCE is ensured by ARTE, within its competences for the digital transformation of the State",
+   "value": "ARTE (Agência para a Reforma Tecnológica do Estado; Agency for the Technological Reform of the State)",
+   "published": "",
+   "title": "Certificação eletrónica",
+   "publisher": "Agência para a Reforma Tecnológica do Estado, I.P. (ARTE)",
+   "doc_type": "official_page",
+   "note": "ARTE runs the Entidade Certificadora Comum do Estado (ECCE), which is part of the SCEE. The same page says the GNS accredited it as a trust service provider.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "ARTE",
+    "reason": "The page says ARTE manages the ECCE (Entidade Certificadora Comum do Estado)."
+   }
+  },
+  {
+   "claim": "indicator:PT:K1",
+   "question": "Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? yes = Operated by the state or a state-controlled body; partial = Operated by a private EU provider under state contract; no = Operated by a provider outside state control or outside the EU",
+   "relation": "fills_gap",
+   "url": "https://www.scee.gov.pt/",
+   "quote": "Uma Entidade Certificadora Raiz do Estado (ECRaizEstado), que constitui o primeiro nível e o topo da cadeia hierárquica de certificação",
+   "quote_english": "A State Root Certification Authority (ECRaizEstado), which is the first level and the top of the hierarchical certification chain",
+   "value": "yes",
+   "published": "",
+   "title": "SCEE - Sistema de Certificação Electrónica do Estado",
+   "publisher": "SCEE / CEGER",
+   "doc_type": "official_page",
+   "note": "The root of the government PKI is a State root CA within the SCEE, and a public institute (ARTE) manages the state qualified CA, the ECCE (see arte.gov.pt/certificacao-eletronica).",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The root CA is the State's own root certification entity (ECRaizEstado) inside the state's SCEE hierarchy. The quote does not name a separate operating body, so this is a reading of the name and not an explicit statement."
+   }
+  },
+  {
+   "claim": "record:PT:residence_permits:operator",
+   "question": "Residence and migration status: Residence permits, asylum status and foreign-national registrations",
+   "relation": "fills_gap",
+   "url": "https://aima.gov.pt/pt/a-aima",
+   "quote": "Enquanto serviço da administração indireta do Estado, com jurisdição e serviços desconcentrados sobre todo o território nacional, a AIMA, I.P., garantirá uma relação de proximidade com os cidadãos",
+   "quote_english": "As a service of the indirect administration of the State, with jurisdiction and decentralised services over the whole national territory, AIMA, I.P. will ensure a close relationship with citizens",
+   "value": "AIMA, I.P. (Agência para a Integração, Migrações e Asilo; Agency for Integration, Migration and Asylum)",
+   "published": "",
+   "title": "A AIMA",
+   "publisher": "Agência para a Integração, Migrações e Asilo, I.P. (AIMA)",
+   "doc_type": "official_page",
+   "note": "The same AIMA page says the agency documents foreign citizens. The quoted sentence names AIMA as the state body; it does not name a register.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "AIMA, I.P.",
+    "reason": "AIMA is described as an indirect state administration service with national jurisdiction that provides documentation services. The quote itself does not mention residence permits or asylum records."
+   }
+  },
+  {
+   "claim": "record:PT:tax:operator",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://info.portaldasfinancas.gov.pt/pt/at/Instrumentos_Gestao/Relatorio_atividades/Documents/Relatorio_de_Atividades_AT_2024.pdf",
+   "quote": "A AT tem por missão administrar os impostos, direitos aduaneiros e demais tributos que lhe sejam atribuídos, bem como exercer o controlo da fronteira externa da União Europeia e do território aduaneiro nacional",
+   "quote_english": "The AT's mission is to administer taxes, customs duties and other levies assigned to it, and to control the external border of the European Union and the national customs territory",
+   "value": "AT (Autoridade Tributária e Aduaneira; Tax and Customs Authority)",
+   "published": "2025",
+   "title": "Relatório de Atividades 2024",
+   "publisher": "Autoridade Tributária e Aduaneira (AT)",
+   "doc_type": "annual_report",
+   "note": "The operator's own 2024 activity report. It names no single tax register system.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "Autoridade Tributária e Aduaneira (AT)",
+    "reason": "AT's mission is to administer taxes. The quote says nothing about systems or hosting."
+   }
+  },
+  {
+   "claim": "record:PT:customs:register",
+   "question": "Customs declarations: Import and export declarations and duty assessments",
+   "relation": "fills_gap",
+   "url": "https://info.portaldasfinancas.gov.pt/pt/at/Instrumentos_Gestao/Relatorio_atividades/Documents/Relatorio_de_Atividades_AT_2024.pdf",
+   "quote": "de um novo sistema de tratamento das declarações aduaneiras de importação em conformidade com o CAU, que irá substituir o atual STADA-IMP, cuja entrada em produção está prevista para 2025",
+   "quote_english": "of a new system for processing import customs declarations in line with the UCC, which will replace the current STADA-IMP, whose go-live is planned for 2025",
+   "value": "STADA-IMP (customs import declaration processing system)",
+   "published": "2025",
+   "title": "Relatório de Atividades 2024",
+   "publisher": "Autoridade Tributária e Aduaneira (AT)",
+   "doc_type": "annual_report",
+   "note": "The same report says that STADA-EXP is being replaced by SAE (exports) and STADA-TRA has been replaced for transit, so the import system may have a new name since 2025.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "AT (STADA-IMP, to be replaced by a new CAU-compliant import declaration system)",
+    "reason": "AT's report names STADA-IMP as the current system for processing import declarations and says a replacement is planned for 2025. Export declarations are not covered."
+   }
+  },
+  {
+   "claim": "record:PT:customs:operator",
+   "question": "Customs declarations: Import and export declarations and duty assessments",
+   "relation": "fills_gap",
+   "url": "https://info.portaldasfinancas.gov.pt/pt/at/Instrumentos_Gestao/Relatorio_atividades/Documents/Relatorio_de_Atividades_AT_2024.pdf",
+   "quote": "A AT tem por missão administrar os impostos, direitos aduaneiros e demais tributos que lhe sejam atribuídos, bem como exercer o controlo da fronteira externa da União Europeia e do território aduaneiro nacional",
+   "quote_english": "The AT's mission is to administer taxes, customs duties and other levies assigned to it, and to control the external border of the European Union and the national customs territory",
+   "value": "AT (Autoridade Tributária e Aduaneira; Tax and Customs Authority)",
+   "published": "2025",
+   "title": "Relatório de Atividades 2024",
+   "publisher": "Autoridade Tributária e Aduaneira (AT)",
+   "doc_type": "annual_report",
+   "note": "The operator's own annual report states that it administers customs duties.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "Autoridade Tributária e Aduaneira (AT)",
+    "reason": "AT's mission includes administering customs duties and controlling the EU external border. No system is named."
+   }
+  },
+  {
+   "claim": "record:PT:land_property:register",
+   "question": "Land & property registry: Title, ownership, mortgages and cadastral parcels",
+   "relation": "fills_gap",
+   "url": "https://irn.justica.gov.pt/Portals/33/Relatorio/Relat%C3%B3rio%20de%20Atividades%202024.pdf",
+   "quote": "São também recursos tecnológicos do IRN as aplicações de suporte ao negócio: Sistema Integrado do Registo Comercial (SIRCOM) Sistema Integrado do Registo e Identificação Civil (SIRIC) Sistema Integrado do Registo Predial (SIRP) Sistema Integrado de Registo Automóvel (SIRAUTO)",
+   "quote_english": "The IRN's technology resources also include the business applications: SIRCOM, SIRIC, Integrated Land Registry System (SIRP), SIRAUTO",
+   "value": "Sistema Integrado do Registo Predial (SIRP) (Integrated Land Registry System)",
+   "published": "2025-08",
+   "title": "Relatório de Atividades 2024",
+   "publisher": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "doc_type": "annual_report",
+   "note": "IRN operates it. The same report says the simplified cadastre platform eBUPi is linked to SIRP.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "IRN, I.P. (SIRP - Sistema Integrado do Registo Predial)",
+    "reason": "SIRP, the land registry system, is listed as an IRN application. Cadastral parcels are not covered."
+   }
+  },
+  {
+   "claim": "record:PT:business_registry:register",
+   "question": "Business registry: Legal entities, officers and filings",
+   "relation": "fills_gap",
+   "url": "https://irn.justica.gov.pt/Portals/33/Relatorio/Relat%C3%B3rio%20de%20Atividades%202024.pdf",
+   "quote": "São também recursos tecnológicos do IRN as aplicações de suporte ao negócio: Sistema Integrado do Registo Comercial (SIRCOM) Sistema Integrado do Registo e Identificação Civil (SIRIC) Sistema Integrado do Registo Predial (SIRP) Sistema Integrado de Registo Automóvel (SIRAUTO)",
+   "quote_english": "The IRN's technology resources also include the business applications: Integrated Commercial Registry System (SIRCOM), SIRIC, SIRP, SIRAUTO",
+   "value": "Sistema Integrado do Registo Comercial (SIRCOM) (Integrated Commercial Registry System)",
+   "published": "2025-08",
+   "title": "Relatório de Atividades 2024",
+   "publisher": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "doc_type": "annual_report",
+   "note": "IRN operates it. The same list also names the Ficheiro Central de Pessoas Coletivas (FCPC), the central file of legal persons.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "IRN, I.P. (SIRCOM - Sistema Integrado do Registo Comercial)",
+    "reason": "SIRCOM, the commercial registry system, is listed as an IRN application."
+   }
+  },
+  {
+   "claim": "record:PT:beneficial_ownership:register",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://rcbe.justica.gov.pt/",
+   "quote": "O Registo Central de Beneficiário Efetivo (RCBE) pretende identificar todas as pessoas que controlam uma empresa, fundo ou entidade jurídica de outra natureza.",
+   "quote_english": "The Central Register of Beneficial Ownership (RCBE) aims to identify all persons who control a company, fund or other legal entity.",
+   "value": "Registo Central de Beneficiário Efetivo (RCBE) (Central Register of Beneficial Ownership)",
+   "published": "2026-09-30",
+   "title": "Registo Central do Beneficiário Efetivo",
+   "publisher": "Instituto dos Registos e do Notariado, I.P. (IRN) / Justiça.gov.pt",
+   "doc_type": "official_page",
+   "note": "The register's own official portal; it cites Lei n.º 89/2017 as the legal basis.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "Registo Central de Beneficiário Efetivo (RCBE)",
+    "reason": "The quote names the register and its purpose, but not who operates it."
+   }
+  },
+  {
+   "claim": "record:PT:beneficial_ownership:operator",
+   "question": "Beneficial ownership register: Ultimate beneficial owners of legal entities",
+   "relation": "fills_gap",
+   "url": "https://rcbe.justica.gov.pt/",
+   "quote": "A informação constante do RCBE não constitui prova da situação jurídica da entidade. A obrigação de declaração do beneficiário efetivo no âmbito do RCBE - base de dados que pretende reunir informação suficiente, exata e atual",
+   "quote_english": "The information in the RCBE is not proof of the legal status of the entity. The obligation to declare the beneficial owner under the RCBE - a database intended to hold sufficient, accurate and current information",
+   "value": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "published": "2026-09-30",
+   "title": "Registo Central do Beneficiário Efetivo",
+   "publisher": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "doc_type": "official_page",
+   "note": "The same page says verbatim 'O Instituto dos Registos e do Notariado, I.P. é o organismo responsável pelo RCBE.' That sentence is the operator evidence; the quoted passage only describes the RCBE database.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Registo Central de Beneficiário Efetivo (RCBE)",
+    "reason": "The quote describes the RCBE as a database and cites its legal basis, but names no operator."
+   }
+  },
+  {
+   "claim": "record:PT:vehicle_licensing:register",
+   "question": "Vehicle & licensing: Vehicle registrations and driving licences",
+   "relation": "fills_gap",
+   "url": "https://irn.justica.gov.pt/Portals/33/Relatorio/Relat%C3%B3rio%20de%20Atividades%202024.pdf",
+   "quote": "São também recursos tecnológicos do IRN as aplicações de suporte ao negócio: Sistema Integrado do Registo Comercial (SIRCOM) Sistema Integrado do Registo e Identificação Civil (SIRIC) Sistema Integrado do Registo Predial (SIRP) Sistema Integrado de Registo Automóvel (SIRAUTO)",
+   "quote_english": "The IRN's technology resources also include the business applications: SIRCOM, SIRIC, SIRP, Integrated Vehicle Registry System (SIRAUTO)",
+   "value": "Sistema Integrado de Registo Automóvel (SIRAUTO) (Integrated Vehicle Registry System)",
+   "published": "2025-08",
+   "title": "Relatório de Atividades 2024",
+   "publisher": "Instituto dos Registos e do Notariado, I.P. (IRN)",
+   "doc_type": "annual_report",
+   "note": "This covers vehicle ownership registration (IRN). IMT issues driving licences and number plates, and no system name for those was found.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "IRN, I.P. (SIRAUTO, vehicle registration only)",
+    "reason": "SIRAUTO, the vehicle registration system, is listed as an IRN application. Nothing is said about driving licences."
+   }
+  },
+  {
+   "claim": "record:PT:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: Criminal records, court case files and judgments",
+   "relation": "fills_gap",
+   "url": "https://registocriminal.justica.gov.pt/",
+   "quote": "A unidade orgânica da DGAJ com competência para a emissão de um certificado do registo criminal é a Direção de Serviços de Identificação Criminal (DSIC).",
+   "quote_english": "The DGAJ organisational unit competent to issue a criminal record certificate is the Criminal Identification Services Directorate (DSIC).",
+   "value": "DGAJ – Direção de Serviços de Identificação Criminal (DSIC) (Directorate-General for the Administration of Justice, Criminal Identification Services Directorate)",
+   "published": "2026-09-10",
+   "title": "Certificado do Registo Criminal Online",
+   "publisher": "Direção-Geral da Administração da Justiça (DGAJ)",
+   "doc_type": "official_page",
+   "note": "The criminal record service's own portal names DGAJ/DSIC; court case files run on Citius, and no operator statement was captured for it.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "DGAJ (Direção de Serviços de Identificação Criminal, DSIC)",
+    "reason": "The page says DGAJ's DSIC unit issues criminal record certificates. Court case files and judgments are not covered."
+   }
+  },
+  {
+   "claim": "record:PT:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://incm.pt/site/diario-da-republica/",
+   "quote": "Somos responsáveis pela edição e publicação do Diário da República",
+   "quote_english": "We are responsible for editing and publishing the Diário da República",
+   "value": "Diário da República (Official Gazette of the Portuguese Republic)",
+   "published": "",
+   "title": "Diário da República – INCM",
+   "publisher": "Imprensa Nacional-Casa da Moeda (INCM)",
+   "doc_type": "official_page",
+   "note": "The publisher's own site, INCM (the state printing house and mint), states that it edits and publishes the gazette.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "INCM (Imprensa Nacional-Casa da Moeda)",
+    "reason": "INCM says it is responsible for editing and publishing the Diário da República."
+   }
+  },
+  {
+   "claim": "record:PT:public_finance:operator",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://www.igcp.pt/",
+   "quote": "A Agência de Gestão da Tesouraria e da Dívida Pública – IGCP, E.P.E. é a entidade pública a quem compete gerir a tesouraria, o financiamento e a dívida pública direta do Estado Português.",
+   "quote_english": "The Treasury and Public Debt Management Agency – IGCP, E.P.E. is the public entity responsible for managing the treasury, financing and direct public debt of the Portuguese State.",
+   "value": "IGCP, E.P.E. (Agência de Gestão da Tesouraria e da Dívida Pública; Treasury and Public Debt Management Agency)",
+   "published": "",
+   "title": "Página Inicial | IGCP",
+   "publisher": "IGCP, E.P.E.",
+   "doc_type": "official_page",
+   "note": "Operator of the state treasury. Budget execution and accounting systems (DGO, eSPap) could not be fetched.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "IGCP, E.P.E.",
+    "reason": "IGCP describes itself as the public entity that manages the state's treasury, financing and direct public debt. Budget execution and accounting are not covered."
+   }
+  },
+  {
+   "claim": "record:PT:intelligence:register",
+   "question": "Intelligence services: Intelligence holdings and case files",
+   "relation": "fills_gap",
+   "url": "https://sirp.pt/fiscalizacao/",
+   "quote": "a Comissão de Fiscalização de Dados fiscaliza a atividade dos centros de dados do Serviço de Informações de Segurança e do Serviço de Informações Estratégicas de Defesa",
+   "quote_english": "the Data Oversight Commission oversees the activity of the data centres of the Security Intelligence Service and the Strategic Defence Intelligence Service",
+   "value": "centros de dados do Serviço de Informações de Segurança e do Serviço de Informações Estratégicas de Defesa (data centres of the SIS and the SIED)",
+   "published": "2026",
+   "title": "Fiscalização",
+   "publisher": "Sistema de Informações da República Portuguesa (SIRP)",
+   "doc_type": "official_page",
+   "note": "SIS and SIED each keep their own data centre; the Lei Quadro do SIRP states that the two are not connected to each other.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "SIS and SIED (own data centres)",
+    "reason": "The page confirms that the SIS and SIED intelligence services have data centres, which an external data commission supervises."
+   }
+  },
+  {
+   "claim": "record:PT:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.siresp.pt/",
+   "quote": "A SIRESP, S.A. é a operadora da Rede Nacional de Emergência e Segurança – SIRESP",
+   "quote_english": "SIRESP, S.A. is the operator of the National Emergency and Security Network – SIRESP",
+   "value": "Rede Nacional de Emergência e Segurança – SIRESP (National Emergency and Security Network)",
+   "published": "",
+   "title": "Home - SIRESP",
+   "publisher": "SIRESP, S.A.",
+   "doc_type": "official_page",
+   "note": "The operator's own site; the network is TETRA-based. The same quote supports SIRESP, S.A. as operator.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "SIRESP, S.A.",
+    "reason": "The page names SIRESP, S.A. as the operator of the national emergency and security network. The quote does not cover 112 or PSAP systems."
+   }
+  },
+  {
+   "claim": "record:PT:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.siresp.pt/",
+   "quote": "A SIRESP, S.A. é a operadora da Rede Nacional de Emergência e Segurança – SIRESP",
+   "quote_english": "SIRESP, S.A. is the operator of the National Emergency and Security Network – SIRESP",
+   "value": "SIRESP, S.A.",
+   "published": "",
+   "title": "Home - SIRESP",
+   "publisher": "SIRESP, S.A.",
+   "doc_type": "official_page",
+   "note": "The operator states this on its own site.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "SIRESP, S.A.",
+    "reason": "Same quote as item 25: SIRESP, S.A. operates the SIRESP network."
+   }
+  },
+  {
+   "claim": "record:PT:emergency_communications:count",
+   "question": "Emergency calls and public-safety radio: 112/PSAP systems, emergency dispatch and TETRA/public-safety networks",
+   "relation": "fills_gap",
+   "url": "https://www.siresp.pt/",
+   "quote": "A rede SIRESP é a rede de comunicações exclusiva do Estado Português para o comando, controlo e coordenação de comunicações em todas as situações de emergência e segurança, que responde às necessidades dos mais de 40.000 utilizadores",
+   "quote_english": "The SIRESP network is the Portuguese State's exclusive communications network for command, control and coordination in all emergency and security situations, serving more than 40,000 users",
+   "value": "mais de 40.000 utilizadores (more than 40,000 users)",
+   "published": "",
+   "title": "Home - SIRESP",
+   "publisher": "SIRESP, S.A.",
+   "doc_type": "official_page",
+   "note": "This counts network users, not records; the same page cites more than 35 million calls a year.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "SIRESP network, exclusive to the Portuguese State; more than 40,000 users",
+    "reason": "The quote describes SIRESP as the state's exclusive emergency communications network with over 40,000 users, but does not name its operator."
+   }
+  },
+  {
+   "claim": "record:PT:crisis_management:register",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://prociv.gov.pt/pt/prevencao-e-preparacao/alerta-e-aviso/aviso/",
+   "quote": "o qual instituiu o Sistema Nacional de Monitorização e Comunicação de Risco, de Alerta Especial e de Aviso à População",
+   "quote_english": "which established the National System for Risk Monitoring and Communication, Special Alert and Public Warning",
+   "value": "Sistema Nacional de Monitorização e Comunicação de Risco, de Alerta Especial e de Aviso à População (National System for Risk Monitoring and Communication, Special Alert and Public Warning)",
+   "published": "",
+   "title": "Aviso",
+   "publisher": "Autoridade Nacional de Emergência e Proteção Civil (ANEPC)",
+   "doc_type": "official_page",
+   "note": "Set up by Decreto-Lei n.º 2/2019, according to the ANEPC page.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "Sistema Nacional de Monitorização e Comunicação de Risco, de Alerta Especial e de Aviso à População",
+    "reason": "The quote names the national warning system established by decree, but not the body that operates it."
+   }
+  },
+  {
+   "claim": "record:PT:crisis_management:operator",
+   "question": "Crisis management and civil protection: National crisis centre systems, alerting and continuity plans",
+   "relation": "fills_gap",
+   "url": "https://prociv.gov.pt/pt/prevencao-e-preparacao/alerta-e-aviso/aviso/",
+   "quote": "A decisão de emissão de avisos de proteção civil compete, no patamar nacional, ao Centro de Coordenação Operacional Nacional (CCON)",
+   "quote_english": "The decision to issue civil protection warnings rests, at national level, with the National Operational Coordination Centre (CCON)",
+   "value": "Centro de Coordenação Operacional Nacional (CCON) (National Operational Coordination Centre)",
+   "published": "",
+   "title": "Aviso",
+   "publisher": "Autoridade Nacional de Emergência e Proteção Civil (ANEPC)",
+   "doc_type": "official_page",
+   "note": "ANEPC issues the SMS warnings, which mobile operators then deliver on its request.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "Centro de Coordenação Operacional Nacional (CCON)",
+    "reason": "At national level, CCON decides when civil protection warnings are issued. That is a decision role and the quote does not say CCON operates the systems."
+   }
+  },
+  {
+   "claim": "record:PT:grid_control:register",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.ren.pt/pt-pt/atividade/eletricidade",
+   "quote": "Enquanto gestor técnico global do Sistema Elétrico Nacional, a REN - Rede Elétrica Nacional é a entidade responsável pela segurança e continuidade do serviço de eletricidade, com o seu centro de Despacho a assegurar permanentemente o equilíbrio entre a produção e o consumo de energia elétrica.",
+   "quote_english": "As overall technical manager of the National Electricity System, REN - Rede Elétrica Nacional is responsible for the security and continuity of the electricity service, with its Dispatch centre permanently ensuring the balance between production and consumption of electricity.",
+   "value": "centro de Despacho (National Dispatch centre) of REN - Rede Elétrica Nacional",
+   "published": "",
+   "title": "Eletricidade",
+   "publisher": "REN - Redes Energéticas Nacionais",
+   "doc_type": "official_page",
+   "note": "The operator's own site; REN runs the transmission grid under a concession from the Portuguese state. The quote also supports REN - Rede Elétrica Nacional as operator.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "REN - Rede Elétrica Nacional",
+    "reason": "REN is the overall technical manager of the national electricity system and runs the dispatch centre that balances supply and demand. SCADA and EMS are not named."
+   }
+  },
+  {
+   "claim": "record:PT:grid_control:operator",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://www.ren.pt/pt-pt/atividade/eletricidade",
+   "quote": "Enquanto gestor técnico global do Sistema Elétrico Nacional, a REN - Rede Elétrica Nacional é a entidade responsável pela segurança e continuidade do serviço de eletricidade",
+   "quote_english": "As overall technical manager of the National Electricity System, REN - Rede Elétrica Nacional is the entity responsible for the security and continuity of the electricity service",
+   "value": "REN - Rede Elétrica Nacional",
+   "published": "",
+   "title": "Eletricidade",
+   "publisher": "REN - Redes Energéticas Nacionais",
+   "doc_type": "official_page",
+   "note": "The operator states this on its own site.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "REN - Rede Elétrica Nacional",
+    "reason": "REN is described as the entity responsible for the security and continuity of the electricity system. This is a shorter substring of item 30's quote."
+   }
+  },
+  {
+   "claim": "record:PT:water_control:register",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://apambiente.pt/agua/sistema-nacional-de-informacao-de-recursos-hidricos-snirh",
+   "quote": "O Sistema Nacional de Informação de Recursos Hídricos (SNIRH) processa, valida e divulga toda a informação recolhida nas redes de monitorização da APA",
+   "quote_english": "The National Water Resources Information System (SNIRH) processes, validates and publishes all information collected by the APA monitoring networks",
+   "value": "Sistema Nacional de Informação de Recursos Hídricos (SNIRH) (National Water Resources Information System)",
+   "published": "2026-06-05",
+   "title": "Sistema Nacional de Informação de Recursos Hídricos - SNIRH",
+   "publisher": "Agência Portuguesa do Ambiente (APA)",
+   "doc_type": "official_page",
+   "note": "This is a monitoring and information system that also assesses droughts and floods, not a SCADA control system.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "SNIRH (processing APA monitoring-network data)",
+    "reason": "SNIRH processes and publishes data from APA's monitoring networks. The quote does not state who operates SNIRH, and it covers monitoring data, not flood-defence or drinking-water control systems."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:PT:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:PT:C2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:PT:K2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:PT:L1",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:PT:L2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:authentication_audit_log:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:facial_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:fingerprint_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:breeder_documents:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:digital_identity_credentials:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:electoral_roll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:residence_permits:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:benefits_pensions:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:health_insurance:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:business_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:beneficial_ownership:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:judicial_criminal:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:police_records:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:border_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:firearms_register:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:government_payroll:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:central_bank:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:PT:intelligence:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:grid_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:water_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:education:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:PT:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:PT:L3",
+   "status": "no_better_found"
+  }
+ ]
+}

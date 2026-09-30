@@ -1,0 +1,1192 @@
+{
+ "iso": "HU",
+ "run": "wf_1c6b8bb6-450",
+ "date": "2026-09-30",
+ "workflow_sha256": "f750ef5c5947fbfab5905ba1cfc600e4a53814cf1b64c2ba1465fa2292a503be",
+ "reviewer_model": "claude-opus-5-5",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:HU:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corroborates",
+   "url": "https://www.dmu.gov.hu/nyilvantartasok",
+   "quote": "Elektronikus ügyintézési pontok nyilvántartása (KIOSK) Kormányzati Adatközpont kötelező igénybevételének érdekében kiadott határozatok",
+   "quote_english": "Register of electronic administration points (KIOSK); decisions issued to require use of the Government Data Centre",
+   "value": "yes",
+   "published": "",
+   "title": "Nyilvántartások",
+   "publisher": "Digitális Magyarország Ügynökség (DMÜ)",
+   "doc_type": "official_page",
+   "note": "DMÜ publishes binding decisions that order agencies to use the Government Data Centre (Kormányzati Adatközpont), which only makes sense if the data centre is running; the linked May 2026 list names systems such as the SZL personal-data register and the JÁRMŰ vehicle register.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote is only a list of register headings on the Digital Hungary Agency page, one of them about decisions on mandatory use of the Government Data Centre; it does not say who operates the centre or that it is in operation today."
+   }
+  },
+  {
+   "claim": "indicator:HU:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://hiteles.gov.hu/cikk/186/szolgaltatasainkrol_roviden",
+   "quote": "A GovCA, mint kijelölt kormányzati bizalmi szolgáltató ezen bizalmi infrastruktúra részeként nyújt tanúsítvány- és egyéb bizalmi szolgáltatásokat, valamint egyéb PKI szolgáltatásokat a jogosult szervezetek és – meghatározott körben – a lakosság számára.",
+   "quote_english": "GovCA, as the designated government trust service provider, provides certificate and other trust services and other PKI services to eligible organisations and, within a defined scope, to the public, as part of this trust infrastructure.",
+   "value": "yes",
+   "published": "",
+   "title": "Szolgáltatásainkról röviden",
+   "publisher": "Kormányzati Hitelesítés Szolgáltató (NISZ Zrt.)",
+   "doc_type": "official_page",
+   "note": "A second page on the same site (cikk/205) says that from 1 December 2025, under Government Decree 322/2024 s.152(14), signatures are validated against the eIDAS trust list instead of the chain from the administrative root CA (KGYHSZ, run by NMHH), which is being shut down. The qualified service remains with state-owned NISZ.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says GovCA is the designated government trust service provider but does not say who owns or controls GovCA, so state operation is not established from the quote."
+   }
+  },
+  {
+   "claim": "indicator:HU:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corroborates",
+   "url": "https://www.idomsoft.hu/rolunk/bemutatkozas",
+   "quote": "Állami tulajdonú fejlesztőcégként, a Digitális Magyarország Ügynökség irányítása alatt közreműködünk a Digitális Állampolgárság Program megvalósításában is, amely révén hamarosan mobiltelefonnal is igénybe lehet majd venni az állami szolgáltatásokat.",
+   "quote_english": "As a state-owned development company under the direction of the Digital Hungary Agency, we also contribute to delivering the Digital Citizenship Program, through which state services will soon be usable by mobile phone.",
+   "value": "yes",
+   "published": "",
+   "title": "Bemutatkozás | IdomSoft Zrt.",
+   "publisher": "IdomSoft Zrt.",
+   "doc_type": "official_page",
+   "note": "The operator's own site confirms it is state-owned and directed by DMÜ. The DMÜ register of SZEÜSZ/KEÜSZ services (2026-07-01 PDF) lists IdomSoft as the provider of the Central Authentication Agent (KAÜ) from 2024-01-01.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says the state-owned IdomSoft contributes to building the Digital Citizenship Program; it does not say that the national eID scheme is operated by a state body."
+   }
+  },
+  {
+   "claim": "indicator:HU:L1",
+   "question": "indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction?",
+   "relation": "upgrade",
+   "url": "https://nki.gov.hu/hatosag/tartalom/felho/",
+   "quote": "A Vhr. 1. sz. melléklete szerint az adatosztályozás biztonsági követelményeket támaszt (az adatok titkosítása, hazai adatmásolat készítése, nem privát felhőszolgáltatás esetén a szolgáltatás harmadik féltől származó tanúsítása) és korlátozásokról rendelkezik (az adatok kezelésének és tárolásának helyszíne)",
+   "quote_english": "Under Annex 1 of the implementing decree, data classification imposes security requirements (encryption, a domestic data copy, third-party certification for non-private cloud) and sets restrictions (the location where data is processed and stored)",
+   "value": "partial",
+   "published": "",
+   "title": "Felhő",
+   "publisher": "Nemzeti Kibervédelmi Intézet (national cybersecurity authority)",
+   "doc_type": "official_page",
+   "note": "The national cybersecurity authority summarises Government Decree 418/2024 (XII. 23.), which implements Act LXIX of 2024. Its table limits where data may be stored by data class, from 'no restriction within the EEA' down to 'only within Hungary'. That is a partial localisation rule, not a blanket one.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "partial",
+    "reason": "The quote says Annex 1 of the Vhr (implementing decree) imposes a domestic data copy and restricts where data is handled and stored, but it does not state an outright national or EU jurisdiction requirement."
+   }
+  },
+  {
+   "claim": "indicator:HU:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "upgrade",
+   "url": "https://nbf.hu/",
+   "quote": "A Magyar Közlöny 2025. évi 156. számában került kihirdetésre a minősített adat védelméről szóló 2009. évi CLV. törvény (a továbbiakban: Mavtv.) és ezzel kapcsolatos más törvények",
+   "quote_english": "Published in Magyar Közlöny 2025 issue 156 [was the amendment of] Act CLV of 2009 on the protection of classified data (Mavtv.) and related acts",
+   "value": "yes",
+   "published": "",
+   "title": "Nemzeti Biztonsági Felügyelet",
+   "publisher": "Nemzeti Biztonsági Felügyelet (National Security Authority)",
+   "doc_type": "official_page",
+   "note": "The regulator confirms that Act CLV of 2009 is in force. It also reports a newer amendment, Act CXXVIII of 2025 (in force 21 February 2026), which removed the mandatory five-yearly review of classified data. The same page cites the 'Titkos!' and 'Szigorúan titkos!' classification levels.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote only reports that amendments to the 2009 CLV Act on the protection of classified data were published; it does not show that the Act establishes a classification scheme."
+   }
+  },
+  {
+   "claim": "indicator:HU:L2",
+   "question": "indicator L2: Is the government's data classification scheme established in a statute or binding regulation?",
+   "relation": "corroborates",
+   "url": "https://nki.gov.hu/hatosag/tartalom/felho/",
+   "quote": "A Hatóság a Vhr. 1. sz. melléklete által meghatározott adatosztályokra vonatkozó követelményekről és korlátozásokról tájékoztató céllal egy összefoglaló listát is közzé tesz",
+   "quote_english": "The Authority also publishes, for information, a summary list of the requirements and restrictions for the data classes defined in Annex 1 of the implementing decree",
+   "value": "yes",
+   "published": "",
+   "title": "Felhő",
+   "publisher": "Nemzeti Kibervédelmi Intézet (national cybersecurity authority)",
+   "doc_type": "official_page",
+   "note": "A separate, non-classified data-classification scheme (confidentiality levels B1-B4) is set by binding regulation in Annex 1 of Government Decree 418/2024.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The quote says the data classes are defined by Annex 1 of the Vhr, a binding implementing regulation."
+   }
+  },
+  {
+   "claim": "record:HU:trust_services_pki:operator",
+   "question": "State PKI and qualified trust services: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://hiteles.gov.hu/cikk/185/kormanyzati_hitelesites_szolgaltato",
+   "quote": "A NISZ Nemzeti Infokommunikációs Szolgáltató Zrt. kijelölt kormányzati hitelesítés-szolgáltatóként (GovCA) bizalmi szolgáltatásokat és egyéb PKI szolgáltatásokat nyújt.",
+   "quote_english": "NISZ National Infocommunications Service Company, as the designated government certification service provider (GovCA), provides trust services and other PKI services.",
+   "value": "NISZ Nemzeti Infokommunikációs Szolgáltató Zrt. (National Infocommunications Service Company), as GovCA",
+   "published": "",
+   "title": "Kormányzati Hitelesítés szolgáltató",
+   "publisher": "Kormányzati Hitelesítés Szolgáltató (NISZ Zrt.)",
+   "doc_type": "official_page",
+   "note": "The operator's own trust-service site replaces an unofficial law mirror as the source.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "NISZ Nemzeti Infokommunikációs Szolgáltató Zrt.",
+    "reason": "The quote says NISZ Zrt., as the designated government certification service provider (GovCA), provides trust and PKI services."
+   }
+  },
+  {
+   "claim": "record:HU:trust_services_pki:register",
+   "question": "State PKI and qualified trust services: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://kormany.hu/nyilvantartasok/biometrikus-utlevel/biometrikus-utlevel",
+   "quote": "A biometrikus útlevél kiadásával kapcsolatban, egymástól elkülönült, független szervezeti egységeinek segítségével ellátja az országos aláíró hitelesítő hatósági (CSCA) és a nemzeti dokumentum aláíró hatósági (DS), valamint az országos ellenőrzőhitelesítő hatósági (CVCA) és a nemzeti dokumentumellenőrző-hitelesítő hatósági (DV) feladatokat.",
+   "quote_english": "For issuing biometric passports it performs, through separate independent units, the functions of the country signing certification authority (CSCA), document signer (DS), country verifying CA (CVCA) and document verifier (DV).",
+   "value": "CSCA (országos aláíró hitelesítő hatóság; country signing certification authority) for biometric passports",
+   "published": "",
+   "title": "Biometrikus útlevél",
+   "publisher": "Magyarország Kormánya (kormany.hu)",
+   "doc_type": "official_page",
+   "note": "This is an independent page on the same government site. It names the ministry as the Energiaügyi Minisztérium, which is probably out of date now that a Tudományos és Technológiai Minisztérium exists (2026).",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "ePassport PKI authorities: CSCA, DS, CVCA, DV",
+    "reason": "The quote names the passport-specific PKI authority functions (CSCA, DS, CVCA, DV), not the general government PKI or qualified trust service system."
+   }
+  },
+  {
+   "claim": "record:HU:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.idomsoft.hu/rolunk/tortenetunk",
+   "quote": "Kormányhatározat jelöli meg az IdomSoftot mint a Digitális Állampolgárság Program (DÁP) szolgáltatóját, alkalmazásfejlesztőjét és üzemeltetőjét, elkezdődik a fejlesztés előkészítése és megvalósítása.",
+   "quote_english": "A government resolution designates IdomSoft as the provider, application developer and operator of the Digital Citizenship Program (DÁP); preparation and implementation of development begins.",
+   "value": "IdomSoft Zrt., provider and operator of the Digitális Állampolgárság Program (Digital Citizenship Program)",
+   "published": "",
+   "title": "Történetünk | IdomSoft Zrt.",
+   "publisher": "IdomSoft Zrt.",
+   "doc_type": "official_page",
+   "note": "The operator's own website, in its entry dated 31 July 2023, replaces the unofficial law mirror. From 1 July 2024 IdomSoft is directly state-owned under DMÜ.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "IdomSoft",
+    "reason": "The quote says a government decree names IdomSoft as the provider, developer and operator of the Digital Citizenship Program (DÁP)."
+   }
+  },
+  {
+   "claim": "record:HU:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://dap.gov.hu/impresszum",
+   "quote": "Szolgáltató adatai Szolgáltató neve IdomSoft Informatikai Zártkörűen Működő Részvénytársaság",
+   "quote_english": "Provider details. Provider name: IdomSoft Informatikai Zrt.",
+   "value": "IdomSoft Informatikai Zártkörűen Működő Részvénytársaság (IdomSoft IT Private Limited Company)",
+   "published": "",
+   "title": "Impresszum - Digitális Állampolgár weboldal",
+   "publisher": "Digitális Állampolgárság Program (dap.gov.hu)",
+   "doc_type": "official_page",
+   "note": "The legal notice of the official DÁP portal names IdomSoft as the service provider.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "IdomSoft Informatikai Zrt.",
+    "reason": "The imprint of dap.gov.hu names IdomSoft Zrt. as the service provider, which identifies it as the provider of the DÁP service or site, not explicitly as the credential operator."
+   }
+  },
+  {
+   "claim": "record:HU:emergency_communications:register",
+   "question": "Emergency calls and public-safety radio: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://pro-m.hu/vezetek-nelkuli-halozat-edr/",
+   "quote": "A Pro-M Zrt. által üzemeltetett Egységes Digitális Rádiótávközlő Rendszer (EDR) országos, biztonságos és titkosított kommunikációs hálózat, amely a készenléti és rendvédelmi szervezetek megbízható együttműködését támogatja.",
+   "quote_english": "The Unified Digital Radio Communication System (EDR), operated by Pro-M Zrt., is a nationwide, secure and encrypted communications network supporting reliable cooperation among emergency and law-enforcement organisations.",
+   "value": "Egységes Digitális Rádiótávközlő Rendszer (EDR) (Unified Digital Radio Communication System), operated by Pro-M Zrt.",
+   "published": "",
+   "title": "Vezeték nélküli hálózat – EDR – Pro-M",
+   "publisher": "Pro-M Professzionális Mobilrádió Zrt.",
+   "doc_type": "official_page",
+   "note": "The operator's site replaces a 2010 decree seen on a mirror. The same page says the broadband EDR network has connected to the public telephone networks since August 2026, and Pro-M also builds the central part of the HU-ALERT cell-broadcast warning system.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "Egységes Digitális Rádiótávközlő Rendszer (EDR)",
+    "reason": "The quote names EDR, operated by Pro-M Zrt., as the national secure radio network for emergency and law-enforcement organisations."
+   }
+  },
+  {
+   "claim": "record:HU:civil_registry:register",
+   "question": "Civil registry core: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.idomsoft.hu/termekek",
+   "quote": "Személyi Adat- és Lakcímnyilvántartás A polgárok személyi- és lakcímadatait, valamint az azokban bekövetkezett változásokat tartalmazza és igazolja, adatszolgáltatásokat teljesít.",
+   "quote_english": "Personal Data and Address Register: contains and certifies citizens' personal and address data and changes to them, and provides data services.",
+   "value": "Személyi Adat- és Lakcímnyilvántartás (Personal Data and Address Register)",
+   "published": "",
+   "title": "DÁP Termékek | IdomSoft Zrt.",
+   "publisher": "IdomSoft Zrt.",
+   "doc_type": "official_page",
+   "note": "The operator's official product page names and describes the register. kormany.hu also has a data-service page for the 'személyiadat- és lakcímnyilvántartás'.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "Személyi Adat- és Lakcímnyilvántartás",
+    "reason": "The quote names the personal data and address register that holds citizens' personal and address data."
+   }
+  },
+  {
+   "claim": "record:HU:issuance_history:register",
+   "question": "Document issuance history: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.idomsoft.hu/termekek",
+   "quote": "Okmány nyilvántartások Kezeli és nyilvántartja a magyar hatóságok által kiállított okmányokat, támogatja az okmánykérelmek benyújtásának és elbírálásának teljes folyamatát.",
+   "quote_english": "Document registers: manages and records the documents issued by Hungarian authorities and supports the whole process of submitting and deciding document applications.",
+   "value": "Okmány nyilvántartások (document registers)",
+   "published": "",
+   "title": "DÁP Termékek | IdomSoft Zrt.",
+   "publisher": "IdomSoft Zrt.",
+   "doc_type": "official_page",
+   "note": "The operator's site describes the register of issued identity documents that the mirror cited.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "Okmány nyilvántartások",
+    "reason": "The quote names the document registers that record documents issued by Hungarian authorities."
+   }
+  },
+  {
+   "claim": "record:HU:issuance_history:operator",
+   "question": "Document issuance history: the body that operates it",
+   "relation": "contradicts",
+   "url": "https://kormany.hu/nyilvantartasok/biometrikus-utlevel/biometrikus-utlevel",
+   "quote": "Az Energiaügyi Minisztérium, mint nyilvántartó szerv törvényi felhatalmazás alapján végzi az útlevelek megszemélyesítését, és a biometrikus azonosítókat tartalmazó tároló elem adatokkal történő feltöltését.",
+   "quote_english": "The Ministry of Energy, as the registering body, personalises passports under statutory authority and loads data onto the storage element holding the biometric identifiers.",
+   "value": "Energiaügyi Minisztérium (Ministry of Energy) as registering body for passports",
+   "published": "",
+   "title": "Biometrikus útlevél",
+   "publisher": "Magyarország Kormánya (kormany.hu)",
+   "doc_type": "official_page",
+   "note": "This undated page names a different ministry from the printed 2026 decree. kormany.hu now lists a Tudományos és Technológiai Minisztérium, so this page is probably stale and the printed value is probably the newer one. Flagged for human review, not as a correction.",
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "Energiaügyi Minisztérium (for passports)",
+    "reason": "The quote says the Ministry of Energy, as the registering body, personalises passports and loads their biometric chips; this covers passports only."
+   }
+  },
+  {
+   "claim": "record:HU:land_property:operator",
+   "question": "Land & property registry: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://lechnerkozpont.hu/oldal/ingatlan-nyilvantartas-attekintes",
+   "quote": "A Lechner Nonprofit Kft. hazánk földmérési és ingatlan-nyilvántartási csúcsszerveként látja el a földmérési és térképészeti tevékenységről szóló 2012. évi XLVI. törvényben (a továbbiakban: Fttv.) meghatározott állami alapfeladatokat.",
+   "quote_english": "Lechner Nonprofit Kft., as Hungary's apex land-surveying and land-registry body, performs the core state tasks set by Act XLVI of 2012 on land surveying and mapping.",
+   "value": "Lechner Nonprofit Kft. (Lechner Knowledge Centre)",
+   "published": "",
+   "title": "Ingatlan-nyilvántartás áttekintés",
+   "publisher": "Lechner Tudásközpont",
+   "doc_type": "official_page",
+   "note": "The operator's own site replaces the mirror. The same page says Lechner provides IT support to 119 district land offices.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "Lechner Nonprofit Kft.",
+    "reason": "The quote calls Lechner Nonprofit Kft. the apex body for surveying and land registration, and the next sentence on the page says it operates the unified land registry."
+   }
+  },
+  {
+   "claim": "record:HU:land_property:register",
+   "question": "Land & property registry: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://lechnerkozpont.hu/oldal/ingatlan-nyilvantartas-attekintes",
+   "quote": "Feladatunk az egységes ingatlan-nyilvántartás üzemeltetése és fejlesztése. Biztosítja a 119 járási és kerületi földhivatal",
+   "quote_english": "Our task is operating and developing the unified land register. It supports the 119 district land offices",
+   "value": "egységes ingatlan-nyilvántartás (unified land register)",
+   "published": "",
+   "title": "Ingatlan-nyilvántartás áttekintés",
+   "publisher": "Lechner Tudásközpont",
+   "doc_type": "official_page",
+   "note": "The operator's own page names the register.",
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "egységes ingatlan-nyilvántartás",
+    "reason": "The quote names the unified land registry, which the speaker operates and develops."
+   }
+  },
+  {
+   "claim": "record:HU:land_property:count",
+   "question": "Land & property registry: the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://lechnerkozpont.hu/oldal/ingatlan-nyilvantartas-attekintes",
+   "quote": "A közhiteles adatokat tartalmazó ingatlan-nyilvántartási, térképi és földhasználati adatbázis a mintegy 10 millió magyarországi ingatlan adatát kezeli",
+   "quote_english": "The land-registry, map and land-use database holding authentic public data manages the data of about 10 million Hungarian properties",
+   "value": "about 10 million properties",
+   "published": "",
+   "title": "Ingatlan-nyilvántartás áttekintés",
+   "publisher": "Lechner Tudásközpont",
+   "doc_type": "official_page",
+   "note": "A count for the land register, from the operator.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "ingatlan-nyilvántartási, térképi és földhasználati adatbázis",
+    "reason": "The quote gives only a descriptive name for the land registry, map and land-use database of about 10 million properties, not a proper system name."
+   }
+  },
+  {
+   "claim": "record:HU:land_property:register",
+   "question": "Land & property registry: the name of the register or system",
+   "relation": "supersedes",
+   "url": "https://kormany.hu/hirek/buntetofeljelentest-tesz-a-kormany-a-felkesz-ingatlan-nyilvantartasi-rendszer-miatt",
+   "quote": "Több mint tízmilliárd forintot fizetett ki az előző kormány egy olyan elektronikus ingatlan-nyilvántartási rendszerért (E-ING), amely a 2026-os felülvizsgálat során alig 50 százalékos készültséget mutatott.",
+   "quote_english": "The previous government paid more than ten billion forints for an electronic land-registry system (E-ING) that showed barely 50 percent completion in the 2026 review.",
+   "value": "elektronikus ingatlan-nyilvántartási rendszer (E-ING) (electronic land-registry system)",
+   "published": "2026-09-28",
+   "title": "Büntetőfeljelentést tesz a kormány a félkész ingatlan-nyilvántartási rendszer miatt",
+   "publisher": "Magyarország Kormánya / Tudományos és Technológiai Minisztérium",
+   "doc_type": "official_page",
+   "note": "This is newer information (September 2026) on the system behind the land register. The ministry says E-ING is 52% complete, that it has taken over the source code and state-side operation, and that it has ended the TIGRA operating contract.",
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "E-ING (unfinished electronic land registry system)",
+    "reason": "The quote names E-ING, but says it was only about 50 percent complete at the 2026 review, so it is not the operating register."
+   }
+  },
+  {
+   "claim": "record:HU:geospatial:operator",
+   "question": "Geospatial base data: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://lechnerkozpont.hu/oldal/bemutatkozas",
+   "quote": "Hazánkban – minisztériumi szakmai háttérintézményként – a Lechner Tudásközpont foglalkozik az országos téradat-nyilvántartások kezelésével, elemzésével és szolgáltatásával a közigazgatás, a települések, az agrárium és a lakossági felhasználók számára egyaránt.",
+   "quote_english": "In Hungary, as a ministerial background institution, Lechner Knowledge Centre manages, analyses and serves the national spatial-data registers for public administration, municipalities, agriculture and the public.",
+   "value": "Lechner Tudásközpont (Lechner Knowledge Centre)",
+   "published": "",
+   "title": "Bemutatkozás",
+   "publisher": "Lechner Tudásközpont",
+   "doc_type": "official_page",
+   "note": "The operator's own site replaces the 2016 decree seen on a mirror.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "Lechner Tudásközpont",
+    "reason": "The quote says the Lechner Knowledge Centre manages, analyses and serves the national spatial data registers."
+   }
+  },
+  {
+   "claim": "record:HU:geospatial:register",
+   "question": "Geospatial base data: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://lechnerkozpont.hu/oldal/cimregiszter",
+   "quote": "A projekt eredményeként egy egységesített jogszabályi háttér, a címek elsődleges változásainak egységesített kezelésének lehetősége és egy központi mester címadat nyilvántartás jött létre.",
+   "quote_english": "The project produced a unified legal framework, unified handling of primary address changes, and a central master address register.",
+   "value": "központi mester címadat nyilvántartás (central master address register)",
+   "published": "",
+   "title": "Címregiszter",
+   "publisher": "Lechner Tudásközpont",
+   "doc_type": "official_page",
+   "note": "The same page says the address register is managed by KEK KH, whose legal successor is the Ministry of Interior, with Lechner (as successor to FÖMI) a project partner.",
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "központi mester címadat nyilvántartás (Közhiteles címregiszter)",
+    "reason": "The quote names a central master address register, and the page context names the project that built it as the 'Közhiteles címregiszter'."
+   }
+  },
+  {
+   "claim": "record:HU:health_insurance:register",
+   "question": "Statutory health insurance: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.neak.gov.hu/felso_menu/rolunk/kozerdeku_adatok/tevekenysegre_mukodesre_vonatkozo_adatok/a_szerv_nyilvantartasai/bejelentett_szemelyek_jogviszonyadatainak_nyilvant/bejelentett_szemeleyek_jogviszonyadatainak_nyilvan",
+   "quote": "II. Bejelentett személyek jogviszonyadatainak nyilvántartása Magyarország területén az egészségbiztosítási ellátások igénybevételéhez szükséges, a Magyarország területén élő magyar állampolgárok és törvényi feltételeknek megfelelő külföldi állampolgárok jogviszony adatait tartalmazó nyilvántartás.",
+   "quote_english": "II. Register of insurance-relationship data of notified persons: the register holding the insurance-relationship data of Hungarian citizens living in Hungary and eligible foreign nationals, needed to access health insurance benefits in Hungary.",
+   "value": "Bejelentett személyek jogviszonyadatainak nyilvántartása (register of insurance-relationship data of notified persons)",
+   "published": "",
+   "title": "Bejelentett személyek jogviszonyadatainak nyilvántartása",
+   "publisher": "Nemzeti Egészségbiztosítási Alapkezelő (NEAK)",
+   "doc_type": "official_page",
+   "note": "The operator's own list of its registers. A sibling page covers the separate TAJ-number register, which holds people living in 1995 and everyone added since.",
+   "review": {
+    "id": 20,
+    "quote_found": true,
+    "established": "Bejelentett személyek jogviszonyadatainak nyilvántartása",
+    "reason": "The quote names the register of insured persons' legal-relationship data used for health insurance entitlement."
+   }
+  },
+  {
+   "claim": "record:HU:health_insurance:operator",
+   "question": "Statutory health insurance: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.neak.gov.hu/felso_menu/rolunk/kozerdeku_adatok/tevekenysegre_mukodesre_vonatkozo_adatok/a_szerv_feladata_alaptevekenysege_es_hatarkore/en_a_szerv_alaptevekenyege_feladata_es_hatarkore/a_neak_feladata_alaptevekenysege_hataskore_angol",
+   "quote": "The NEAK, as a central agency, performs the functions set out in legislation, carries out the tasks relating to the management of the National Health Insurance Fund, the maintenance of records, keeping financial accounts and fulfilling the reporting obligation.",
+   "quote_english": "",
+   "value": "NEAK (National Health Insurance Fund of Hungary)",
+   "published": "",
+   "title": "Tasks of the National Health Insurance Fund of Hungary (Hungarian acronym: NEAK)",
+   "publisher": "Nemzeti Egészségbiztosítási Alapkezelő (NEAK)",
+   "doc_type": "official_page",
+   "note": "The operator's official statement of its tasks. It also says NEAK manages and operates the information systems needed for health insurance.",
+   "review": {
+    "id": 21,
+    "quote_found": true,
+    "established": "NEAK",
+    "reason": "The quote says NEAK manages the National Health Insurance Fund and maintains its records."
+   }
+  },
+  {
+   "claim": "record:HU:benefits_pensions:operator",
+   "question": "Benefits & pensions: the body that operates it",
+   "relation": "upgrade",
+   "url": "https://www.allamkincstar.gov.hu/header-tartalmak/rolunk/a-kincstar-szervezete/magyar-allamkincstar-szervezeti-egysegei/nyugdijfolyosito-igazgatosag",
+   "quote": "A Nyugdíjfolyósító Igazgatóság – az ország egész területére kiterjedő illetékességgel – a nyugellátások és a külön jogszabályban meghatározott ellátások folyósításával kapcsolatos feladatokat látja el",
+   "quote_english": "The Pension Disbursement Directorate, with nationwide competence, carries out tasks relating to the payment of pensions and other benefits defined by separate legislation",
+   "value": "Nyugdíjfolyósító Igazgatóság (Pension Disbursement Directorate) of the Magyar Államkincstár",
+   "published": "",
+   "title": "Nyugdíjfolyósító Igazgatóság",
+   "publisher": "Magyar Államkincstár (Hungarian State Treasury)",
+   "doc_type": "official_page",
+   "note": "The Treasury's own page replaces the 1997 decree seen on a mirror.",
+   "review": {
+    "id": 22,
+    "quote_found": true,
+    "established": "Nyugdíjfolyósító Igazgatóság (Magyar Államkincstár)",
+    "reason": "The quote says the Pension Disbursement Directorate, a unit of the State Treasury, pays out pensions nationwide."
+   }
+  },
+  {
+   "claim": "record:HU:benefits_pensions:register",
+   "question": "Benefits & pensions: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.allamkincstar.gov.hu/header-tartalmak/rolunk/a-kincstar-tevekenysege/a-kincstar-tevekenysege1",
+   "quote": "gondoskodik az ellátások megállapításához, folyósításához szükséges adatok begyűjtéséről, azok ellenőrzéséről, végzi a társadalombiztosítási jogszerzési nyilvántartással és a folyósításra kerülő ellátások nyilvántartásával kapcsolatos feladatokat;",
+   "quote_english": "collects and checks the data needed to award and pay benefits, and performs the tasks relating to the social-security entitlement register and the register of benefits being paid;",
+   "value": "társadalombiztosítási jogszerzési nyilvántartás (social-security entitlement register) and register of benefits paid",
+   "published": "2023-02-01",
+   "title": "A Kincstár tevékenysége",
+   "publisher": "Magyar Államkincstár (Hungarian State Treasury)",
+   "doc_type": "official_page",
+   "note": "The operator names the pension-insurance records from which insurance periods are established.",
+   "review": {
+    "id": 23,
+    "quote_found": true,
+    "established": "társadalombiztosítási jogszerzési nyilvántartás",
+    "reason": "The quote names the social security entitlement register and the register of benefits paid out, both kept by the Treasury."
+   }
+  },
+  {
+   "claim": "record:HU:government_payroll:register",
+   "question": "Government payroll and personnel: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.allamkincstar.gov.hu/header-tartalmak/rolunk/a-kincstar-tevekenysege/a-kincstar-tevekenysege1",
+   "quote": "A központosított illetményszámfejtés biztosítja az állami, az önkormányzati költségvetési szerveknél, valamint megállapodás alapján csatlakozó intézményeknél foglalkoztatottak személyi juttatásainak (illetmények és a jogviszony alapján járó egyéb juttatások), egészségbiztosítási ellátásainak (pl. táppénz, CSED, GYED, baleseti táppénz, hivatásos egészségügyi szabadság, stb) számfejtését, illetve a munkáltatókat terhelő közterhek elszámolását.",
+   "quote_english": "Centralised payroll computes pay and other personnel benefits and health-insurance benefits of staff at state and municipal budgetary bodies and institutions that join by agreement, and accounts for employer charges.",
+   "value": "központosított illetményszámfejtés (centralised payroll system) of the Magyar Államkincstár",
+   "published": "2023-02-01",
+   "title": "A Kincstár tevékenysége",
+   "publisher": "Magyar Államkincstár (Hungarian State Treasury)",
+   "doc_type": "official_page",
+   "note": "The operator's own description replaces the tax act seen on a mirror.",
+   "review": {
+    "id": 24,
+    "quote_found": true,
+    "established": "központosított illetményszámfejtés",
+    "reason": "The quote names the Treasury's centralised payroll service for public-sector employees, as a service rather than a named IT system."
+   }
+  },
+  {
+   "claim": "record:HU:crisis_management:register",
+   "question": "Crisis management and civil protection: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.katasztrofavedelem.hu/49/molari-rendszer",
+   "quote": "országos kiterjedésű, magas rendelkezésre állású, redundánsan működő adatátviteli hálózatra épülő meteorológiai és vegyi monitoring, valamint lakossági riasztó (Monitoring és Lakossági Riasztó - MoLaRi) rendszert telepített.",
+   "quote_english": "installed a meteorological and chemical monitoring and public alarm system (Monitoring and Public Alarm - MoLaRi) built on a nationwide, high-availability, redundant data network.",
+   "value": "Monitoring és Lakossági Riasztó (MoLaRi) rendszer (Monitoring and Public Alarm system)",
+   "published": "",
+   "title": "MoLaRi-rendszer",
+   "publisher": "BM Országos Katasztrófavédelmi Főigazgatóság",
+   "doc_type": "official_page",
+   "note": "The operator, the National Directorate General for Disaster Management (Ministry of Interior), names the system. Newer: a Pro-M page (2026-07-31) says the HU-ALERT cell-broadcast warning system was to be completed by end of July 2026.",
+   "review": {
+    "id": 25,
+    "quote_found": true,
+    "established": "MoLaRi (Monitoring és Lakossági Riasztó) rendszer",
+    "reason": "The quote names the MoLaRi monitoring and public alert system."
+   }
+  },
+  {
+   "claim": "record:HU:crisis_management:count",
+   "question": "Crisis management and civil protection: the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://www.katasztrofavedelem.hu/49/molari-rendszer",
+   "quote": "ennek során 768 lakossági riasztó-tájékoztató, illetve 419 monitoring végpontot telepítettek.",
+   "quote_english": "in the process 768 public alarm/information endpoints and 419 monitoring endpoints were installed.",
+   "value": "768 public alarm endpoints",
+   "published": "",
+   "title": "MoLaRi-rendszer",
+   "publisher": "BM Országos Katasztrófavédelmi Főigazgatóság",
+   "doc_type": "official_page",
+   "note": "The same page also gives 419 monitoring endpoints.",
+   "review": {
+    "id": 26,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote gives endpoint counts (768 alert points and 419 monitoring points) but names no register or system."
+   }
+  },
+  {
+   "claim": "record:HU:public_health_surveillance:register",
+   "question": "Public health surveillance: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://nngyk.gov.hu/hu/szakrendszerek/uzemszunetek.html",
+   "quote": "A Járványügyi és Védőoltási Osztály (JVO) a 2025. évre bejelentett fertőző betegek adatainak zárását 2026. március 6-án hajtja végre az Országos Szakmai Információs Szakrendszer (OSZIR) Fertőzőbeteg-jelentő alrendszerében.",
+   "quote_english": "The Epidemiology and Vaccination Department closes the data of infectious patients notified for 2025 on 6 March 2026 in the infectious-disease reporting subsystem of the National Professional Information System (OSZIR).",
+   "value": "Országos Szakmai Információs Szakrendszer (OSZIR) Fertőzőbeteg-jelentő alrendszer (National Professional Information System, infectious-disease reporting subsystem)",
+   "published": "2026",
+   "title": "Üzemszünetek",
+   "publisher": "Nemzeti Népegészségügyi és Gyógyszerészeti Központ (NNGYK)",
+   "doc_type": "official_page",
+   "note": "The operator names its surveillance system. The printed value refers to vaccination data in an 'electronic epidemiological surveillance system'. NNGYK also lists the EFRIR, EVIR and JARVANY subsystems.",
+   "review": {
+    "id": 27,
+    "quote_found": true,
+    "established": "Országos Szakmai Információs Szakrendszer (OSZIR)",
+    "reason": "The quote names OSZIR and its infectious disease reporting subsystem."
+   }
+  },
+  {
+   "claim": "record:HU:statistics_microdata:register",
+   "question": "Statistical microdata: the name of the register or system",
+   "relation": "upgrade",
+   "url": "https://www.ksh.hu/nepszamlalasok",
+   "quote": "A népszámlálás olyan rendszeresen, általában 10 évente ismétlődő, teljes körű állapotfelvétel, amely egy ország népességének egészére kiterjed és egy előre meghatározott időpontra vonatkozik.",
+   "quote_english": "The census is a complete enumeration, usually repeated every 10 years, covering a country's entire population and referring to a set reference date.",
+   "value": "népszámlálás (population census), repeated about every 10 years",
+   "published": "",
+   "title": "Népszámlálások",
+   "publisher": "Központi Statisztikai Hivatal (KSH)",
+   "doc_type": "statistics",
+   "note": "The national statistics office's own page on censuses. KSH also publishes 2022 census microdata files, and the page is served in ISO-8859-2.",
+   "review": {
+    "id": 28,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote defines a census in general terms and names no register or system for statistical microdata."
+   }
+  },
+  {
+   "claim": "record:HU:vehicle_licensing:register",
+   "question": "Vehicle & licensing: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://kormany.hu/nyilvantartasok/ugyleirasok/adatszolgaltatas-a-kozuti-kozlekedesi-nyilvantartasbol",
+   "quote": "A közúti közlekedési nyilvántartásból adatszolgáltatás jogszabályi rendelkezések alapján teljesíthető.",
+   "quote_english": "Data may be supplied from the road transport register on the basis of legal provisions.",
+   "value": "közúti közlekedési nyilvántartás (road transport register)",
+   "published": "",
+   "title": "Adatszolgáltatás a közúti közlekedési nyilvántartásból",
+   "publisher": "Magyarország Kormánya (kormany.hu)",
+   "doc_type": "official_page",
+   "note": "The government registers portal confirms the statutory road transport register, which IdomSoft runs as the national vehicle register.",
+   "review": {
+    "id": 29,
+    "quote_found": true,
+    "established": "közúti közlekedési nyilvántartás",
+    "reason": "The quote names the road transport register from which data is provided."
+   }
+  },
+  {
+   "claim": "record:HU:electoral_roll:operator",
+   "question": "Electoral roll entry: the body that operates it",
+   "relation": "corroborates",
+   "url": "https://www.dmu.gov.hu/cikkek/portfolio",
+   "quote": "Emellett az IdomSoft kezel, tart karban és fejleszt több kiemelt jelentőségű állami nyilvántartást, valamint biztosítja a választások informatikai hátterét csakúgy, mint a rend- és határvédelmi rendszereket.",
+   "quote_english": "IdomSoft also manages, maintains and develops several key state registers and provides the IT background for elections as well as law-enforcement and border-protection systems.",
+   "value": "IdomSoft Zrt.",
+   "published": "",
+   "title": "Portfólió",
+   "publisher": "Digitális Magyarország Ügynökség (DMÜ)",
+   "doc_type": "official_page",
+   "note": "IdomSoft's supervising agency, a separate source, confirms that IdomSoft provides the election IT. The legal keeper of the roll is the National Election Office.",
+   "review": {
+    "id": 30,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says IdomSoft provides the IT background for elections but does not say it operates the electoral roll."
+   }
+  },
+  {
+   "claim": "record:HU:central_bank:register",
+   "question": "Central bank systems: the name of the register or system",
+   "relation": "corroborates",
+   "url": "https://www.giro.hu/giroinstant",
+   "quote": "A hazai pénzforgalom hatékonyságának további növelése érdekében 2020. március 2-án bevezetésre került az azonnali elszámolás - GIROInstant.",
+   "quote_english": "To further improve domestic payment efficiency, instant clearing - GIROInstant - was introduced on 2 March 2020.",
+   "value": "azonnali elszámolás - GIROInstant (instant clearing), introduced 2020. március 2",
+   "published": "",
+   "title": "GIROInstant",
+   "publisher": "GIRO Zrt.",
+   "doc_type": "official_page",
+   "note": "The clearing operator independently confirms the launch date. Settlement cover is held in VIBER, the MNB's RTGS system.",
+   "review": {
+    "id": 31,
+    "quote_found": true,
+    "established": "GIROInstant",
+    "reason": "The quote names GIROInstant, a domestic instant clearing system on giro.hu; it does not say this is a central bank system."
+   }
+  },
+  {
+   "claim": "record:HU:tax:register",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://nav.gov.hu/pfile/file?path=/kiadvanyok/evkonyvek/nav-evkonyv-2025",
+   "quote": "NAV 2025. december végén több mint 8 millió adószámlát tartott nyilván, amelynek 74,8 százaléka magánszemélyekhez, 25,2 százaléka pedig gazdálkodókhoz tartozik.",
+   "quote_english": "At the end of December 2025 NAV kept more than 8 million tax accounts, 74.8 percent belonging to individuals and 25.2 percent to businesses.",
+   "value": "adószámla (taxpayer current accounts) kept by NAV",
+   "published": "2026-06-03",
+   "title": "NAV Évkönyv 2025",
+   "publisher": "Nemzeti Adó- és Vámhivatal (NAV)",
+   "doc_type": "annual_report",
+   "note": "From the tax authority's official 2025 yearbook. The same yearbook reports nearly 4.1 billion invoice-data submissions to the Online Számla system.",
+   "review": {
+    "id": 32,
+    "quote_found": true,
+    "established": "more than 8 million tax accounts (end of 2025)",
+    "reason": "The quote says NAV held over 8 million tax accounts at the end of December 2025, 74.8% for individuals and 25.2% for businesses."
+   }
+  },
+  {
+   "claim": "record:HU:tax:count",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://nav.gov.hu/pfile/file?path=/kiadvanyok/evkonyvek/nav-evkonyv-2025",
+   "quote": "NAV 2025. december végén több mint 8 millió adószámlát tartott nyilván, amelynek 74,8 százaléka magánszemélyekhez, 25,2 százaléka pedig gazdálkodókhoz tartozik.",
+   "quote_english": "At the end of December 2025 NAV kept more than 8 million tax accounts, 74.8 percent belonging to individuals and 25.2 percent to businesses.",
+   "value": "more than 8 million tax accounts",
+   "published": "2026-06-03",
+   "title": "NAV Évkönyv 2025",
+   "publisher": "Nemzeti Adó- és Vámhivatal (NAV)",
+   "doc_type": "annual_report",
+   "note": "Figure as at end of 2025.",
+   "review": {
+    "id": 33,
+    "quote_found": true,
+    "established": "more than 8 million tax accounts (end of 2025)",
+    "reason": "The quote says NAV held over 8 million tax accounts at the end of December 2025."
+   }
+  },
+  {
+   "claim": "record:HU:tax:operator",
+   "question": "Tax: Tax assessments, returns and payment history for persons and companies",
+   "relation": "fills_gap",
+   "url": "https://nav.gov.hu/pfile/file?path=/kiadvanyok/evkonyvek/nav-evkonyv-2025",
+   "quote": "NAV 2025. december végén több mint 8 millió adószámlát tartott nyilván, amelynek 74,8 százaléka magánszemélyekhez, 25,2 százaléka pedig gazdálkodókhoz tartozik.",
+   "quote_english": "At the end of December 2025 NAV kept more than 8 million tax accounts, 74.8 percent belonging to individuals and 25.2 percent to businesses.",
+   "value": "NAV (Nemzeti Adó- és Vámhivatal; National Tax and Customs Administration)",
+   "published": "2026-06-03",
+   "title": "NAV Évkönyv 2025",
+   "publisher": "Nemzeti Adó- és Vámhivatal (NAV)",
+   "doc_type": "annual_report",
+   "note": "NAV keeps the tax accounts.",
+   "review": {
+    "id": 34,
+    "quote_found": true,
+    "established": "more than 8 million tax accounts (end of 2025)",
+    "reason": "The quote says NAV held over 8 million tax accounts at the end of December 2025."
+   }
+  },
+  {
+   "claim": "record:HU:customs:register",
+   "question": "Customs declarations: Import and export declarations and duty assessments",
+   "relation": "fills_gap",
+   "url": "https://nav.gov.hu/pfile/file?path=/kiadvanyok/evkonyvek/nav-evkonyv-2025",
+   "quote": "Az Uniós Vámkódex előírásai alapján május 6-án bevezették az Automatizált Export Rendszert (AES), a bejelentett vám-árunyilatkozatok feldolgozása zökkenőmentesen zajlott.",
+   "quote_english": "Under the Union Customs Code, the Automated Export System (AES) was introduced on 6 May, and processing of lodged customs declarations ran smoothly.",
+   "value": "Automatizált Export Rendszer (AES) (Automated Export System)",
+   "published": "2026-06-03",
+   "title": "NAV Évkönyv 2025",
+   "publisher": "Nemzeti Adó- és Vámhivatal (NAV)",
+   "doc_type": "annual_report",
+   "note": "This is NAV's export-declaration system (2025). The yearbook also names NCTS phase 5, implemented by ERMIS, and the eVÁM import system for consignments under EUR 150.",
+   "review": {
+    "id": 35,
+    "quote_found": true,
+    "established": "Automatizált Export Rendszer (AES)",
+    "reason": "The quote names the Automated Export System introduced on 6 May 2025; this covers exports only."
+   }
+  },
+  {
+   "claim": "record:HU:customs:count",
+   "question": "Customs declarations: Import and export declarations and duty assessments",
+   "relation": "fills_gap",
+   "url": "https://nav.gov.hu/pfile/file?path=/kiadvanyok/evkonyvek/nav-evkonyv-2025",
+   "quote": "Regisztrációsadó-eljárásokhoz kapcsolódóan benyújtott adatlapok 190 560 Vámeljárásokhoz kapcsolódóan benyújtott árunyilatkozatok 2 404 687",
+   "quote_english": "Data sheets submitted for registration-tax procedures 190 560; goods declarations submitted for customs procedures 2 404 687",
+   "value": "2 404 687 customs goods declarations",
+   "published": "2026-06-03",
+   "title": "NAV Évkönyv 2025",
+   "publisher": "Nemzeti Adó- és Vámhivatal (NAV)",
+   "doc_type": "annual_report",
+   "note": "The yearbook's 2025 table; eVÁM low-value import procedures, about 204 million, are counted separately. The quote is from a PDF table, so text extraction may vary.",
+   "review": {
+    "id": 36,
+    "quote_found": true,
+    "established": "2,404,687 customs goods declarations (2025)",
+    "reason": "The NAV 2025 table gives 2,404,687 goods declarations submitted for customs procedures nationally in 2025."
+   }
+  },
+  {
+   "claim": "record:HU:public_finance:register",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://www.allamkincstar.gov.hu/nem-lakossagi-ugyek/kozponti-koltsegvetes-vegrehajtasat-tamogato-rendszer-kkvtr--ifmis1",
+   "quote": "A projekt keretében kialakításra kerül az „IFMIS – Integrated Financial Management Information System” azaz a „Központi Költségvetés Végrehajtását Támogató Rendszer”.",
+   "quote_english": "The project builds the 'IFMIS - Integrated Financial Management Information System', i.e. the 'Central Budget Execution Support System'.",
+   "value": "Központi Költségvetés Végrehajtását Támogató Rendszer (KKVTR / IFMIS) (Central Budget Execution Support System)",
+   "published": "2022-11-30",
+   "title": "Központi Költségvetés Végrehajtását Támogató Rendszer (KKVTR / IFMIS)",
+   "publisher": "Magyar Államkincstár (Hungarian State Treasury)",
+   "doc_type": "official_page",
+   "note": "The Treasury's own page names the budget-execution system. It says the Treasury is building the system; its KM module is already in use.",
+   "review": {
+    "id": 37,
+    "quote_found": true,
+    "established": "IFMIS / Központi Költségvetés Végrehajtását Támogató Rendszer (KKVTR)",
+    "reason": "The quote names IFMIS (KKVTR) as a system being built under a Treasury project, so it is not yet stated to be operating."
+   }
+  },
+  {
+   "claim": "record:HU:public_finance:operator",
+   "question": "Treasury and state accounts: Budget execution, treasury payments and government accounting",
+   "relation": "fills_gap",
+   "url": "https://www.allamkincstar.gov.hu/header-tartalmak/rolunk/a-kincstar-tevekenysege/a-kincstar-tevekenysege1",
+   "quote": "nyilvántartást vezet a központi költségvetés, az elkülönített állami pénzalapok és a társadalombiztosítás pénzügyi alapjai előirányzatairól, azok változásáról és teljesítéséről;",
+   "quote_english": "keeps records of the appropriations of the central budget, separate state funds and social-security funds, their changes and execution;",
+   "value": "Magyar Államkincstár (Hungarian State Treasury)",
+   "published": "2023-02-01",
+   "title": "A Kincstár tevékenysége",
+   "publisher": "Magyar Államkincstár (Hungarian State Treasury)",
+   "doc_type": "official_page",
+   "note": "The quote is from the Treasury's 'budget execution' section, so the subject of the sentence is the Treasury.",
+   "review": {
+    "id": 38,
+    "quote_found": true,
+    "established": "Magyar Államkincstár",
+    "reason": "The page context says the Treasury (Kincstár), in its budget execution role, keeps the records of central budget appropriations and their execution."
+   }
+  },
+  {
+   "claim": "record:HU:electoral_management:register",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://www.idomsoft.hu/termekek",
+   "quote": "Nemzeti Választási Rendszer A választási irodák jogszabályban előírt, választásokkal kapcsolatos szakigazgatási feladatainak elvégzését szolgáló rendszer.",
+   "quote_english": "National Election System: the system serving the election offices' statutory election-administration tasks.",
+   "value": "Nemzeti Választási Rendszer (National Election System)",
+   "published": "",
+   "title": "DÁP Termékek | IdomSoft Zrt.",
+   "publisher": "IdomSoft Zrt.",
+   "doc_type": "official_page",
+   "note": "Named by the operator that builds and runs it. IdomSoft also runs the Választási Tájékoztatási Rendszer that publishes results.",
+   "review": {
+    "id": 39,
+    "quote_found": true,
+    "established": "Nemzeti Választási Rendszer",
+    "reason": "The quote names the National Election System, which supports the election offices' statutory tasks."
+   }
+  },
+  {
+   "claim": "record:HU:electoral_management:operator",
+   "question": "Election management and results: Candidate lists, polling logistics and results tabulation systems",
+   "relation": "fills_gap",
+   "url": "https://www.valasztas.hu/nemzeti-valasztasi-iroda",
+   "quote": "A független, csak a törvénynek alárendelt autonóm államigazgatási szerv feladata a választások előkészítéséhez és lebonyolításához kapcsolódó központi feladatok ellátása.",
+   "quote_english": "The task of this independent autonomous state administration body, subordinate only to the law, is to carry out the central tasks of preparing and conducting elections.",
+   "value": "Nemzeti Választási Iroda (National Election Office)",
+   "published": "",
+   "title": "Nemzeti Választási Iroda",
+   "publisher": "Nemzeti Választási Iroda",
+   "doc_type": "official_page",
+   "note": "The election office's own site describes its central role; IdomSoft provides the IT.",
+   "review": {
+    "id": 40,
+    "quote_found": true,
+    "established": "Nemzeti Választási Iroda",
+    "reason": "The page context identifies the autonomous body carrying out central election preparation and conduct tasks as the National Election Office."
+   }
+  },
+  {
+   "claim": "record:HU:official_gazette:register",
+   "question": "Official gazette and legislation: Authentic text of laws and regulations",
+   "relation": "fills_gap",
+   "url": "https://magyarkozlony.hu/",
+   "quote": "A hivatalos lap számára kattintva (pl. Magyar Közlöny 2013. évi 1. szám) a lap gyors áttekintését és az abban történő keresést lehetővé tévő megjelenítő nézetbe jut.",
+   "quote_english": "Clicking an issue of the official journal (e.g. Magyar Közlöny 2013 issue 1) opens a viewer for quick overview and search.",
+   "value": "Magyar Közlöny (Hungarian Official Gazette)",
+   "published": "",
+   "title": "Magyar Közlöny",
+   "publisher": "Miniszterelnökség / MKIFK Magyar Közlönykiadó és Igazságügyi Fordítóközpont Zrt.",
+   "doc_type": "official_page",
+   "note": "The gazette portal. Its legal notice lists the Prime Minister's Office as publisher and MKIFK Zrt. as operator, and issues since 3 May 2013 carry an embedded digital signature. The consolidated law portal njt.hu was unreachable from this network.",
+   "review": {
+    "id": 41,
+    "quote_found": true,
+    "established": "Magyar Közlöny",
+    "reason": "The quote names the official gazette, Magyar Közlöny, in its viewer interface."
+   }
+  },
+  {
+   "claim": "record:HU:grid_control:operator",
+   "question": "Electricity grid control: Transmission system operator control and market systems (SCADA/EMS)",
+   "relation": "fills_gap",
+   "url": "https://mavir.hu/web/mavir/rendszeriranyitas",
+   "quote": "A MAVIR ZRt. gondoskodik a magyar villamosenergia-rendszer megbízható, hatékony és biztonságos irányításáról, a szükséges tartalékokról az erőművekben és a hálózaton.",
+   "quote_english": "MAVIR ZRt. ensures reliable, efficient and secure control of the Hungarian electricity system and the necessary reserves in power plants and the network.",
+   "value": "MAVIR ZRt. (Hungarian transmission system operator)",
+   "published": "",
+   "title": "Rendszerirányítás, piacműködtetés",
+   "publisher": "MAVIR Magyar Villamosenergia-ipari Átviteli Rendszerirányító ZRt.",
+   "doc_type": "official_page",
+   "note": "This names the operator only. No public page names MAVIR's SCADA/EMS system, so the register gap stays open.",
+   "review": {
+    "id": 42,
+    "quote_found": true,
+    "established": "MAVIR ZRt.",
+    "reason": "The quote says MAVIR ZRt. is responsible for controlling the Hungarian electricity system."
+   }
+  },
+  {
+   "claim": "record:HU:water_control:operator",
+   "question": "Water management control: Flood defence, water board and drinking-water control systems",
+   "relation": "fills_gap",
+   "url": "https://www.ovf.hu/rolunk/bemutatkozas/bemutatkozas",
+   "quote": "A Kárpát-medence ölelésében fekvő Magyarországon a különleges földrajzi és vízi adottságok miatt komoly hagyománya van a vizek iránti törődésnek: a vízgazdálkodásnak, a vízügyi igazgatásnak és a vízjognak. Ezeket a tevékenységeket az Országos Vízügyi Főigazgatóság (OVF) fogja össze és irányítja.",
+   "quote_english": "In Hungary, in the Carpathian Basin, care for waters (water management, water administration and water law) has a strong tradition; these activities are coordinated and directed by the General Directorate of Water Management (OVF).",
+   "value": "Országos Vízügyi Főigazgatóság (OVF) (General Directorate of Water Management)",
+   "published": "",
+   "title": "Bemutatkozás",
+   "publisher": "Országos Vízügyi Főigazgatóság",
+   "doc_type": "official_page",
+   "note": "This names the operator only. OVF directs 12 regional water directorates and flood defence through OMIT, but no public page names a control system.",
+   "review": {
+    "id": 43,
+    "quote_found": true,
+    "established": "Országos Vízügyi Főigazgatóság (OVF)",
+    "reason": "The quote says OVF coordinates and directs water management and water administration."
+   }
+  },
+  {
+   "claim": "record:HU:residence_permits:count",
+   "question": "Residence and migration status: the name of the register or system",
+   "relation": "fills_gap",
+   "url": "https://oif.gov.hu/storage/media/K%C3%B6z%C3%A9rdek%C5%B1%20adatok/Gazd%C3%A1lkod%C3%A1si%20adatok/kiadv%C3%A1nyf%C3%BCzetek/2025%20statisztik%C3%A1k.pdf",
+   "quote": "Oltalmazottként személyi igazolvánnyal rendelkező*/** 613 Befogadott 4670 Érvényes engedélyek száma összesen 403 551",
+   "quote_english": "Holding an ID card as beneficiary of subsidiary protection 613; tolerated status 4670; total valid permits 403 551",
+   "value": "403 551 valid residence permits",
+   "published": "2026",
+   "title": "Statisztika 2025. január - december",
+   "publisher": "Országos Idegenrendészeti Főigazgatóság (OIF)",
+   "doc_type": "statistics",
+   "note": "The aliens-policing authority's 2025 statistics: valid residence-entitling permits as at 31 December 2025. The quote is from the PDF table in layout order, so text extraction may vary.",
+   "review": {
+    "id": 44,
+    "quote_found": true,
+    "established": "403,551 valid residence permits (as of 31 Dec 2025)",
+    "reason": "The OIF statistics table, dated 31 December 2025, gives a total of 403,551 valid residence-entitling permits; the quote appears verbatim in the PDF's layout text."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:HU:C2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:HU:L1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:HU:L2",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:authentication_audit_log:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:beneficial_ownership:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:benefits_pensions:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:benefits_pensions:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:border_control:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:border_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:breeder_documents:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:breeder_documents:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:breeder_documents:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:civil_registry:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:crisis_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:digital_identity_credentials:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:digital_identity_credentials:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:education:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:electoral_roll:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:emergency_communications:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:emergency_communications:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:facial_biometric:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:facial_biometric:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:facial_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:fingerprint_biometric:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:fingerprint_biometric:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:fingerprint_biometric:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:firearms_register:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:firearms_register:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:geospatial:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:geospatial:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:government_payroll:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:health_insurance:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:issuance_history:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:issuance_history:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:land_property:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:land_property:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:police_records:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:public_health_surveillance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:residence_permits:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:residence_permits:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:residence_permits:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:statistics_microdata:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:trust_services_pki:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:vehicle_licensing:operator",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "indicator:HU:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:HU:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:HU:K2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:HU:L3",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:authentication_audit_log:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:civil_registry:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:digital_identity_credentials:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:electoral_roll:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:electoral_roll:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:issuance_history:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:trust_services_pki:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:vehicle_licensing:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:vehicle_licensing:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:central_bank:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:tax:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:customs:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:business_registry:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:judicial_criminal:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:official_gazette:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:public_finance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:electoral_management:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:defence_command:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:grid_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:water_control:register",
+   "status": "no_better_found"
+  }
+ ]
+}

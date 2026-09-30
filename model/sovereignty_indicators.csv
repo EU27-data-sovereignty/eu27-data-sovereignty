@@ -4,6 +4,8 @@ AT,C2,yes
 AT,K1,partial
 AT,K2,yes
 AT,L2,yes
+BE,C1,yes
+BE,C2,yes
 BE,K1,yes
 BE,K2,yes
 BE,L2,yes
@@ -14,12 +16,14 @@ CY,C1,yes
 CY,C2,partial
 CY,K1,partial
 CY,K2,partial
+CY,L2,yes
 CZ,C1,yes
 CZ,C2,yes
 CZ,K1,yes
 CZ,K2,yes
 CZ,L1,partial
 CZ,L2,yes
+CZ,L3,yes
 DE,C1,yes
 DE,C2,yes
 DE,K1,yes
@@ -30,9 +34,12 @@ DK,C1,yes
 DK,C2,yes
 DK,K1,yes
 DK,K2,partial
+DK,L1,partial
 DK,L2,partial
 EE,C1,yes
 EE,C2,yes
+EE,K1,partial
+EE,K2,yes
 EE,L2,yes
 EL,C1,yes
 EL,C2,yes
@@ -43,6 +50,7 @@ ES,C1,yes
 ES,C2,yes
 ES,K1,yes
 ES,K2,yes
+ES,L1,partial
 ES,L2,yes
 FI,C1,yes
 FI,C2,yes
@@ -71,6 +79,8 @@ HU,L2,yes
 HU,L3,no
 IE,C1,yes
 IE,C2,yes
+IE,K1,yes
+IE,K2,yes
 IE,L2,partial
 IT,C1,yes
 IT,K1,yes
@@ -84,6 +94,7 @@ LT,K1,yes
 LT,K2,yes
 LT,L1,partial
 LU,C1,yes
+LU,C2,yes
 LU,K1,yes
 LU,K2,yes
 LV,C1,yes
@@ -97,7 +108,7 @@ MT,C2,yes
 MT,K1,yes
 MT,K2,yes
 NL,C1,yes
-NL,C2,yes
+NL,C2,no
 NL,K1,yes
 NL,K2,yes
 NL,L2,yes
