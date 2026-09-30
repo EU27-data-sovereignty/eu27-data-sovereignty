@@ -4,8 +4,8 @@ Where every workstream stands, in one place. [`CHANGELOG.md`](CHANGELOG.md) reco
 when, [`ROADMAP.md`](ROADMAP.md) what is planned, [`DECISIONS.md`](DECISIONS.md) why. This file is
 the status view across all three: what is built, what is half-built, what is blocked and on what.
 
-**Status as of 2026-09-26**, on `main` after `390c57b`. Four commits (2026-09-24) are **not yet
-pushed**; the private contacts repo likewise. Working tree clean.
+**Status as of 2026-09-30**, on `main` after `af59563`. Three commits are **not yet pushed**, and
+production still serves the 2026-09-27 build. The private contacts repo is unchanged.
 
 ---
 
@@ -19,24 +19,21 @@ pushed**; the private contacts repo likewise. Working tree clean.
 | Web app | **Rebuilt**, EU theme, /ask added | 43 Vitest; 23 of 23 Playwright + axe |
 | Data-sovereignty ranking | **Evidenced** (#77); 134 of 189 indicators sourced | IE Dependent (High); IT Secured in law; 25 Not demonstrated (Low) |
 | Per-country artefacts | **Done** | 27 posters, hashes in `countries/ARTEFACTS.csv`; Chrome PDFs retired (#76) |
-| Mobile reader | **Done**, local only | 19 Jest tests; never built or deployed |
+| Mobile reader | **Stale**: on the withdrawn schema-1 bundle | 19 Jest tests; never built or deployed |
 | Secret scanning | **Done** | local gate on every commit + gitleaks in CI |
 | Tables of contents | **Done** | every brief, `SUMMARY.md`, web, mobile, book outline |
-| Representation style guides | **Done** | `artifacts/`, 6 files, citations checked by `tests/test_docs.py` |
-| Source verification | **2 of 189 legal cells** | `./run.sh sources` |
-| **Source register** | **138 of 621 parameter cells; 0 of 22 assumptions** | `python3 model/provenance.py` (#67) |
+| Style guide | **Done**, one guide + per-format notes | `artifacts/STYLE.md` from `design/tokens.json` (#74, #76) |
+| **Source register** | **707 sources, 1,392 citations**: 138/621 params, 1,017 records, 134/189 indicators, 0/22 assumptions | `python3 model/provenance.py` (#67) |
 | **Critical holdings register** | **419 of 1053 pairs** verified and admitted; dependency labels reviewed (#79) | `./run.sh registers` (#73) |
 | Institutional map | **25 of 324 pairs** (37 rows) | `python3 model/institutions.py` |
 | Named contacts | **956 rows, 910 people; 850 send-ready** | private repo at `contacts/` (#66) |
 | Paper book | **Scaffolded** | `book/build.py` typesets; ~1.1k of ~20-30k words written |
-| **Full test gate** | **Green** as of 2026-09-29 | `./test.sh` exits 0, including the #75 sourcing stage |
+| **Full test gate** | **Green** as of 2026-09-30 | `./test.sh`: 136 Python, 43 Vitest, 23 Playwright + axe |
 
-**The launch gate (widened 2026-09-24, #67): nothing public — indexing, the domain, the book, the
-mobile release, outreach sends — until every published claim cites an original source**, with
-planning assumptions sourced or visibly declared as assumptions. Today: **138 of 621 parameter cells**
-(2 of 189 legal cells), **0 of 22 assumptions** declared, and **3 of 1053 critical holdings**.
-Every mechanism is built and tested; what is missing is the reading. The plan for closing it is
-`ROADMAP.md` § Sourcing plan.
+**The launch gate (#25, #67): nothing launches — indexing, the domain, the book, the mobile release,
+outreach sends — until every published claim cites an original source.** That half is now enforced:
+the site withholds anything unsourced (`document.py --check`, 0 unsourced facts). What remains is a
+human sampling audit that measures how often the admitted claims are wrong (`ROADMAP.md` § launch gate).
 
 ---
 
@@ -44,45 +41,44 @@ Every mechanism is built and tested; what is missing is the reading. The plan fo
 
 ```mermaid
 flowchart LR
-    subgraph inputs[Inputs, hand-maintained]
-        P[model/eu27_parameters.csv<br/>27 rows x 25 columns]
-        A[model/assumptions.csv<br/>scaling_rules.csv]
-        W["countries/&lt;ISO&gt;/workloads_inputs.csv"]
+    subgraph raw[Raw data, in git]
+        HC[model/holding_classes.csv<br/>39 classes]
+        ND[model/national_data.csv<br/>holdings per state]
+        SI[model/sovereignty_indicators.csv<br/>7 indicators per state]
+        P[model/eu27_parameters.csv<br/>Eurostat + posture]
+        SR[model/sources/<br/>registry + citations]
     end
+
+    RS[model/research/<br/>agent staging] -- "research.py: fetch, sha256,<br/>quote found, review agrees" --> ND
+    RS --> SI
+    RS --> SR
 
     subgraph model[Python, stdlib only]
-        CM[capacity_model.py]
-        CD["country_data.build()<br/>one dict per country"]
+        CD[country_data.build]
+        SV[sovereignty.py<br/>groups + confidence]
+        DOC[document.py<br/>ONE content model]
     end
 
-    subgraph outputs[Renderings of the same dict]
-        B[web/public/data/eu27.json]
-        G["countries/&lt;ISO&gt;/GOAL.md"]
-        AR[posters + briefing PDFs]
-    end
+    HC --> CD
+    ND --> CD
+    P --> CD
+    SI --> SV
+    CD --> DOC
+    SV --> DOC
+    SR --> DOC
 
-    subgraph readers[Readers]
-        WEB[web/ React + Vite<br/>deployed, noindex]
-        MOB[mobile/ Expo<br/>local only]
-        BK[book/ typst<br/>scaffolded]
-    end
-
-    P --> CM
-    A --> CM
-    W --> CM
-    CM --> CD
-    CD --> B
-    CD --> G
-    CD --> AR
-    B --> WEB
-    B -- copied, parity-tested --> MOB
-    G --> BK
-
-    S[model/sources/<br/>source register] -. cites .-> P
+    DOC --> B[web/public/data/eu27.json]
+    DOC --> G["countries/&lt;ISO&gt;/GOAL.md"]
+    B --> REP[book/report.py<br/>EU-27 report + 27 PDFs]
+    B --> WEB[web/ React<br/>footnotes, ranking, map]
+    B --> POS[posters]
+    B --> ASK[api/_corpus.json<br/>/ask]
+    T[design/tokens.json] -.-> WEB
+    T -.-> REP
 ```
 
-Python is the source of truth. The briefs, the bundle, the artefacts and both readers are renderings
-of one `country_data.build()` dict, so they cannot disagree about a figure.
+Every fact in every output is a span of the one content model, and every span that states a fact
+carries claim ids that resolve to a checked source (#74, #75).
 
 ---
 
@@ -90,46 +86,65 @@ of one `country_data.build()` dict, so they cannot disagree about a figure.
 
 Each claim below is followed by the command that demonstrates it.
 
-### The model and the data
-- Stdlib-only capacity model: workloads → servers → racks → MW → sites → CAPEX/OPEX, reproducing the
-  original Dutch spreadsheet exactly (5,691 servers, 14.2 MW, EUR 339 m).
-- 27 country directories with inputs, outputs and a generated 12-section brief.
-- Byte-reproducible generation, pinned by `.build-epoch`.
+### Evidence, verified and admitted (2026-09-29)
+Two research runs across all 27 states, each claim admitted only after its document was fetched, hashed
+and found to contain the quote. Every categorical label also needs an independent reviewer's agreement
+(#79). The method is in [`METHOD.md`](METHOD.md).
 
 ```
-$ python3 -m unittest discover -s tests
-Ran 48 tests in 0.489s
-OK
+$ python3 model/research.py report | tail -1          # exact  loose  not_found  fetch_failed
+all          1961           20          284          251            0            0
+
+$ python3 model/national_data.py | tail -3
+419/1053 (country, record class) pairs recorded (40%)
+419 rows, of which 411 name a register and 8 evidence its absence.
+
+$ python3 model/provenance.py
+707 sources, 1392 citations
+namespace     supported  declared   claims
+param               138         0      621    22.2% sourced
+assumption            0         0       22     0.0% sourced
+record             1017         0     1651    61.6% sourced
+indicator           134         0      189    70.9% sourced
 ```
 
-### The web app
-Seven routes including `/country/:iso` and the sovereignty matrix; deployed at
-**sovereign-data-centers.vercel.app** with indexing disabled. Deploys are manual: the Vercel GitHub
-App is not installed, so a push ships nothing. Topology, deploy flow, freshness check and the deploy
-log: [`DEPLOYMENT.md`](DEPLOYMENT.md). Redeployed 2026-09-27, when the live site was 16 days stale
-and every deep link returned 404.
-
+### Every fact shown is sourced
 ```
-$ ./test.sh --no-e2e
-✅ All checks passed
+$ python3 model/document.py --check
+27 documents checked, 0 unsourced facts
 ```
 
-**With E2E, it now passes too** — 15 of 15 Playwright, zero axe violations, as of 2026-09-21. The
-three stale assertions that made this line necessary are fixed and now read their figures from
-`model/eu27_results.csv`; see [the gate was red for a
-week](#the-gate-was-red-for-a-week--found-2026-09-20-fixed-2026-09-21). The countermeasure that
-matters is still open: neither the web nor the mobile suite runs in CI.
+### The ranking (#77)
+```
+$ python3 model/sovereignty.py
+IE  Dependent on non-EU providers   High
+IT  Secured in law, not yet in practice   Low
+    ... 25 states: Not demonstrated, Low
+```
+Ireland's two triggers were checked by hand: the electoral register moving to a Microsoft Azure tenancy,
+and the TETRA network operator owned by Motorola Solutions. The 25 are Low mainly because hosting is
+unpublished for most holdings (`ROADMAP.md` § raise confidence).
+
+### The outputs
+- **PDFs.** The EU-27 report and 27 country reports (typst): footnotes on the page, a source appendix
+  with hash and archived copy.
+- **Web app.** Overview, Ranking with map, Countries, Country, Critical holdings, Sources, Ask,
+  Methodology. EU tokens, light and dark.
+- **Posters.** 27, in `countries/<ISO>/`, with their own source list.
+- **`/ask`.** Built and tested (#78); live once the API key is set.
+
+```
+$ ./test.sh
+✅ All checks passed        # 136 Python, 43 Vitest, 23 Playwright + axe, API type-check
+```
+
+### Deployment
+Production (`sovereign-data-centers.vercel.app`) still serves the 2026-09-27 build; the new site is on a
+protected preview. The runbook, including `/ask`, is in [`DEPLOYMENT.md`](DEPLOYMENT.md).
 
 ### The mobile reader (2026-09-17)
-`mobile/`, an Expo app: filterable country list, a country screen following the same sections as
-the web page, and a methodology screen carrying the not-yet-verified notice. It ships the bundle as
-an asset and makes no network call at all. Local only — no EAS build, no store listing, no deploy.
-
-```
-$ cd mobile && ./run.sh test
-Test Suites: 3 passed, 3 total
-Tests:       19 passed, 19 total
-```
+`mobile/` is an Expo app, local only. **It is still on the schema-1 bundle, with the withdrawn
+Dutch-scaled figures**, and must move to the content model before any release (`ROADMAP.md`).
 
 ### Tables of contents and country flags (2026-09-21)
 
@@ -218,63 +233,6 @@ Three smaller drifts surfaced in the same pass:
   one set nothing validated. Added, along with this file and the six `artifacts/` style guides.
 - `./test.sh` does not run the `mobile/` suite; those 19 tests run only from `mobile/`.
 
-### Source verification — the gate on everything public
-189 legal and regulatory cells across 27 jurisdictions are one researcher's reading of public policy
-documents. The ledger, the tiered confidence rule and the fetch layer all exist; the research does
-not.
-
-```
-$ ./run.sh sources
-2/189 cells sourced (1%)
-39 of 189 cells assert an absence and need an authoritative enumeration rather than an instrument.
-
-$ python3 model/provenance.py
-8 sources, 164 citations
-namespace     supported  declared   claims
-param               138         0      621    22.2% sourced
-assumption            0         0       22     0.0% sourced
-```
-
-Since 2026-09-24 every claim is recorded in the source register (#67), not only the legal cells: the
-136 reproducing Eurostat cells are cited from their pinned series, and the 26 `gov_employment_k`
-cells are cited but not counted, because they do not reproduce it — every brief says so beside the
-figure.
-
-### The critical national data register — mechanism done, research at 1%
-
-`model/national_data.csv` records, per member state, which of the fifteen Tier 0/Tier 1 record
-classes it holds, the register that holds them, and the official page describing it, with the
-publisher, retrieval date and a supporting quote (#60). Validated by `model/national_data.py`,
-ratcheted from both sides by `tests/test_national_data.py`, rendered as a section in all four
-country renderings and hand-written as `## 21.` in the Dutch brief.
-
-```
-$ ./run.sh registers
-3/405 (country, record class) pairs recorded (1%)
-3 rows, of which 3 name a register and 0 evidence its absence.
-```
-
-The three are the ones `TIER0-TIER1-SIZING.md` names as the figures to validate against: the BRP
-(RvIG), the BRK (Kadaster) and the Handelsregister (KVK). Four other candidate pages were tried in
-the same pass — Belastingdienst, DigiD, RDW, DUO — and **none was recorded**: two 404'd, one had no
-sentence describing a register, and one could not be attributed to a publisher with confidence. A
-failed fetch is a gap, not a guess.
-
-**It is on the source register since 2026-09-26 (#69).** The page and quote for each row are a
-`record:<ISO>:<class>:register` citation; `national_data.csv` keeps only the facts about the
-register. `record` coverage is 3/405 in `python3 model/provenance.py`, the same count this file
-reports. New rows add a citation, not columns.
-
-**The remaining 402 rows are reading, not code.** Every mechanism is in place and tested. Tier 0 alone
-is 216 pairs and is where the sovereignty argument lives; if tier 1 proves unreachable for one
-researcher, the published percentage should narrow to tier 0 rather than sit honestly stuck near
-zero (#60).
-
-The Dutch brief is the risk to watch: it is hand-written, so it is a second source of truth for the
-one country the whole model derives from. `tests/test_national_data.py` asserts every Dutch register
-name and URL in the CSV appears verbatim in `countries/NL/GOAL.md`, which is the cheapest guard
-that catches real drift.
-
 ### The institutional map — 25 of 324
 `OUTREACH.md` carries the institutions to approach in each member state as prose. The machine-checkable
 register, `model/institutions.csv`, was filled on 2026-09-24 from the same research pass that built the
@@ -309,42 +267,35 @@ crosses into this repository.
 
 ```mermaid
 flowchart TD
-    V["Every published claim sourced<br/>(source register, #67)<br/><b>138 of 621 cells; 0 of 22 assumptions</b>"]
-    V --> IDX[Stage 2: allow indexing]
-    V --> DOM["Stage 3: eu27.cloud domain"]
-    V --> BOOK[Paper book]
-    V --> OUT[Outreach sends]
-    V --> REL[Public mobile release]
-
-    OUT --> INST[Institutional register<br/>25 of 324 pairs]
-    OUT --> PEOPLE[People inventory, private<br/>850 of 956 send-ready]
-
-    style V fill:#f7e9e3,stroke:#d97757,stroke-width:2px
+    V["Every published claim sourced (#67) - enforced:<br/>0 unsourced facts shown"]
+    H["Human sampling audit<br/>measured error rate - NOT YET"]
+    V --> H
+    H --> IDX[Stage 2: allow indexing]
+    H --> DOM["Stage 3: eu27.cloud"]
+    H --> BOOK[Paper book]
+    H --> OUT[Outreach sends]
+    H --> REL[Public mobile release]
+    PROD["Production deploy of the current build<br/>(author's OK)"] -.-> H
 ```
 
-Nothing to the right of the gate moves until the cells are sourced: the first thing any ministry
-checks is the entry about its own country, and an error there costs the project its credibility in
-one reply.
+The sourcing mechanism is built and enforced. What gates launch now is a human measuring how often the
+admitted claims are wrong.
 
 ---
 
 ## Next
 
-1. **Push** the four 2026-09-24 commits here and the three in the private contacts repo (awaiting
-   the author's go-ahead).
-2. **The sourcing plan, in order** (`ROADMAP.md` § Sourcing plan): A2 join the register to the fetch
-   manifest and the national-data register, and show sources in web, mobile and book; A3 declare the
-   22 assumptions and 7 scaling rules; C sourced Tier 0/1 model for NL; B real government IT
-   inventories replacing population/GDP scaling, and the `gov_employment_k` fix.
-3. **Source the tier-1 cells**, country by country, using `./run.sh fetch` and the register.
-4. **Record the tier-0 national data registers** for the large states first (DE, FR, IT, ES, PL),
-   raising `NATIONAL_DATA_FLOOR` with each batch. `./run.sh registers` prints the gaps by country.
-5. **Institutional map beyond 25 pairs:** find the contact *page* for each of the email-routed bodies
-   (#68), then the EU-level registers (ENTSO-E, ACER, the CSIRTs network, EDPB, BEREC, GÉANT).
-6. **People inventory:** a second research pass for MT (none), CY, HU, HR, EL, SI (five rows or
-   fewer), and re-research of the 77 rows whose seat quote was not found on its page.
-5. Smaller, recorded in `ROADMAP.md`: the choropleth, sourcing the feasibility ranking's model half,
-   and the two-PDF-renderers question.
+1. **Publish:** production deploy and push, each on the author's OK. **`/ask` live:** the API key
+   (dedicated workspace with a spend limit), then the 12-question eval and the rate limit.
+2. **Raise confidence** (`ROADMAP.md` § raise confidence):
+   - a hosting research pass with #79 review;
+   - a decision on classified holdings;
+   - a rendering fetch for JavaScript pages;
+   - re-run AT, BE and EE;
+   - record counts and sizes.
+3. **The human sampling audit,** which gates launch.
+4. **Mobile to schema 2,** and the book's country parts from the content model.
+5. **Institutional map and people inventory:** unchanged since 2026-09-24; see the sections above.
 
 ---
 

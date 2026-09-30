@@ -4,9 +4,9 @@ Covers the 27 `countries/<ISO>/<ISO>-infographic.png` posters — one page per m
 to be shared on its own.
 
 They are **not illustrations.** Headless Chrome screenshots the app's `/poster/:iso` route, which
-renders from `web/public/data/eu27.json`, so every figure on a poster comes from the model and a
-poster cannot disagree with its brief (#47). Their styling is therefore the app's styling; see
-[`../html/STYLE.md`](../html/STYLE.md). `web/src/pages/Poster.tsx` is the layout.
+renders a subset of the country's content model (fundamentals and tier 0 holdings), so a poster cannot
+disagree with its report (#47, #74). Shared look: [`../STYLE.md`](../STYLE.md). `web/src/pages/Poster.tsx`
+is the layout.
 
 This is the deliberate opposite of `countries/NL/Rijkscloud-…png`, whose grid routing, cable
 landings and growth curves were drawn by an image model and derive from nothing in this repository
@@ -21,10 +21,11 @@ Both are constraints on the layout, and both hold for anything added to it.
    for a programme that exists in no member state, and they say so. Country flag emoji are
    permitted in tables of contents and navigation elsewhere in the project; **a poster is not
    navigation**, and they do not appear here.
-2. **The caveat is printed on the poster.** An image gets shared without the page that explains
-   it, so the disclaimer has to travel with the pixels. `Poster.tsx` carries it as
-   *"Working assumptions, not forecasts."* plus the provenance line. Do not move it into a
-   surrounding page, shrink it below legibility, or make it conditional.
+2. **The caveat and the sources are printed on the poster.** An image gets shared without the page
+   that explains it. `Poster.tsx` carries "Independent research, not affiliated with any government
+   or EU body", the note that italic values are withheld until sourced, and a numbered source list
+   for every fact shown (#75). Do not move them into a surrounding page, shrink them below
+   legibility, or make them conditional.
 
 ## Geometry
 
@@ -33,8 +34,8 @@ Both are constraints on the layout, and both hold for anything added to it.
   height would clip Romania or leave Malta two-thirds blank. `Poster.tsx` stamps
   `data-poster-height` on the rendered DOM and the exporter reads it back, falling back to 1400
   only if the measurement fails.
-- Sections are numbered `1 ·` … `7 ·` and carry one idea each. A poster that needs an eighth
-  section is a brief, not a poster.
+- Two panels: fundamentals and the tier 0 identity spine. A poster that needs a third is a report,
+  not a poster.
 
 ## Rendering constraints
 
@@ -54,14 +55,13 @@ The posters are committed (#24, #51). `countries/ARTEFACTS.csv` records each one
 with the sha256 of the bundle it was rendered from (#52), and `tests/test_artifacts.py` fails when
 the bundle has moved on — the only way to catch a tracked binary that CI cannot rebuild.
 
-**Re-render all 27 in full, never a subset.** `write_manifest()` refreshes the bundle hash only for
-the paths it actually rendered, so exporting just the PDFs leaves all 27 posters carrying a stale
-`bundle_sha256` and the suite red on half the manifest.
+**Re-render all 27 after any data change.** Every change to the bundle marks all 27 stale, by design.
+`write_manifest()` refreshes the bundle hash only for the paths it actually rendered.
 
 ## Verify
 
 ```
-./run.sh artefacts                        # all 27 posters and 27 briefing PDFs
+./run.sh artefacts                        # all 27 posters
 python3 -m unittest tests.test_artifacts -v
 git diff --stat -- countries/             # expected: only the files you meant to move
 ```

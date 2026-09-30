@@ -1,5 +1,10 @@
 # Feasibility ranking: sovereign data centers and sovereign AI models
 
+> **Superseded by #77 (2026-09-29).** This judgement-based grouping rested on unsourced research. The
+> project's ranking is now the rule-based data-sovereignty placement: sourced indicators, computed
+> confidence, no scores. It is on the web at `/sovereignty` and in the EU-27 report. This note is kept
+> for the record and must not be quoted as a current finding.
+
 **Authored note, 2026-09-13. Not generated, and not part of the model, the JSON bundle or the web app.**
 It answers one question that the rest of the repository deliberately does not: *across the EU-27, how
 feasible is it for each state to put together a credible national plan for both sovereign government

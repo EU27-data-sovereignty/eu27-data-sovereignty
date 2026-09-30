@@ -906,6 +906,7 @@ migration across 27 briefs, the bundle and the matrix, to fix a schema problem a
 fixes in one line. Revisit if the column needs restructuring for other reasons.
 
 ### 59. A feasibility ranking exists, as an authored note and a bounded exception to #10
+**Superseded by #77** (2026-09-29): the rule-based, sourced placement replaces this authored grouping.
 **2026-09-13.** `FEASIBILITY-RANKING.md` ranks all 27 states by how feasible a combined plan for
 sovereign data centers *and* sovereign AI models would be. It was asked for directly, and "which
 countries could actually do this?" is the question a reader of the matrix arrives at anyway.

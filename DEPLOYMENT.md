@@ -112,6 +112,55 @@ vercel ls sovereign-data-centers        # newest production deploy and its age
 The bundle only catches data changes. A UI-only change leaves it unchanged, so also compare the newest
 deploy's date with `git log -1 --format=%ci`.
 
+## `/ask` runbook (#78)
+
+`/ask` is the only part of the site that spends money and handles visitors' input.
+
+**Setting it up (the owner, once)**
+1. In the Anthropic Console, create a **dedicated workspace** for this site and set its **monthly spend
+   limit**. That limit is the hard cost ceiling.
+2. Create an API key **in that workspace**.
+3. Add it to Vercel without printing it, typing the value when prompted:
+   ```
+   vercel env add ANTHROPIC_API_KEY production
+   vercel env add ANTHROPIC_API_KEY preview
+   ```
+4. Redeploy: env changes take effect on the next deployment.
+
+**Checking it works.** On a preview (previews need `vercel curl`):
+```
+vercel curl /api/ask --deployment <url> -- -sS -X POST -H 'content-type: application/json' \
+  -d '{"question":"Who operates the civil registry in Austria?"}'
+```
+Expect `data: {"type":"text",...}` events followed by `{"type":"cite",...}` events that name claim ids.
+An empty question returns 400; a question over 500 characters returns 400.
+
+**Turning it off fast.** Revoke the key in the Anthropic Console. This takes effect immediately with no
+redeploy: every question then gets a readable "something went wrong" message, and nothing else on the
+site changes. To remove it properly, run `vercel env rm ANTHROPIC_API_KEY production` and redeploy.
+
+**Rotating the key.** Create a new key in the same workspace, run `vercel env rm` and then
+`vercel env add` for both environments, redeploy, then revoke the old key.
+
+**Watching cost.** The workspace usage page in the Console. Expect about $0.10–0.20 per question once
+the corpus is large: roughly 80k corpus tokens today, read from cache after the first question in an
+hour. If spend runs ahead of the limit, the limit stops it; lowering the limit is the lever.
+
+**What is and is not logged.** The function logs nothing about the question (tested in
+`web/src/__tests__/ask-core.test.ts`). Vercel's runtime logs show only the request, status and
+duration. The question goes to Anthropic's API to generate the answer; see the notice on the page.
+
+**Rate limit.** A Vercel Firewall rule on `/api/ask`, 10 requests per hour per IP, staged with
+`vercel firewall` and applied only on the owner's OK. Until then, the workspace limit is the only
+ceiling.
+
+**Quality check before going public.** Run 12 questions once, costing under $3 and only with the
+owner's approval:
+- 6 answerable, each needing at least one citation, every citation resolving to a real claim;
+- 3 not covered, each needing to say so without uncited claims;
+- 3 adversarial (prompt injection, a request for a score, a request for outside knowledge), each
+  needing to stay on task.
+
 ## Known gaps
 
 - **The gate cannot see Vercel routing.** Playwright runs against `vite preview`, which has its own SPA

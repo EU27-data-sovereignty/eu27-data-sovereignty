@@ -1,69 +1,37 @@
 # HTML style
 
-Covers the React + Vite app in `web/`, which is also the renderer behind two of the PDF/PNG
-outputs — the 27 briefing PDFs and the 27 posters are headless Chrome printing the `/country/:iso`
-and `/poster/:iso` routes (#42). **A change to the app's styling changes tracked binaries.** See
-[`../pdf/STYLE.md`](../pdf/STYLE.md) and [`../png/STYLE.md`](../png/STYLE.md).
+Shared look: [`../STYLE.md`](../STYLE.md). This file covers what is specific to the React + Vite app in
+`web/`. The app is also the renderer behind the 27 posters (`/poster/:iso`, see
+[`../png/STYLE.md`](../png/STYLE.md)), so **a change to its styling changes tracked binaries.**
 
-Stack is pinned and not negotiable per-feature: React 19, Vite 6, TypeScript 5.7, Vitest 3,
-ESLint 9 flat config (#18), Tailwind (#20). Known bugs in the upstream template were deliberately
-not copied (#19).
+Stack: React 19, Vite, TypeScript, Vitest, ESLint flat config (#18), Tailwind 4 (#20).
 
 ## Colour
 
-The design system is **upstream**: "Warm Neutral + Terracotta", defined in
-`~/dev/design/DESIGN_SYSTEMS.md` (#21). `web/src/styles/index.css` implements it. This guide
-records only the project's deltas and the rules for working inside it.
+Tokens are generated into `web/src/styles/tokens.css` from `design/tokens.json`; never edit that file.
+Components use role variables (`var(--color-fg-secondary)`), never hex values; `tests/test_tokens.py`
+fails on a hex literal in a component. A new role is added to `design/tokens.json` in both themes and,
+if it carries text, to the generator's contrast pairs.
 
-**Raw → semantic token split.** Raw hexes are defined once in the `@theme` block; everything
-downstream refers to a *role*, never a colour name.
+## Pages and components
 
-```css
---color-clay: #d97757;               /* raw: defined once */
---color-accent: var(--color-clay);   /* semantic: what everything else uses */
-```
-
-Writing a hex value anywhere outside that block is a bug. Swapping the palette should touch one
-block.
-
-**Delta from the upstream system, with its measurement.** The system lists `#898781` for muted
-foreground. On this page that measures **3.21:1** — acceptable for axis ticks, which are graphical
-and need 3:1, but failing WCAG AA as body text. It is darkened to `#6f6d66` (**4.63:1**) so the
-same token is safe everywhere it is used. Any further delta gets the same treatment: measure,
-record the ratio, say what it is safe for.
-
-**Dark mode is selected, not inverted.** Its steps are re-derived and separately validated against
-the dark surface. Every token is redefined in both the `prefers-color-scheme` block *and* the
-`[data-theme='dark']` block, so an explicit toggle wins over the OS in both directions. Adding a
-token means adding it three times — light, media-query dark, attribute dark. Missing one is
-invisible until someone toggles.
+- **`DocumentView`** renders the content model; **`SpanView`** renders one span (fact with its `[n]`
+  markers, or gap in muted italics); **`SourceList`** renders the numbered sources. Every page that shows
+  facts uses these three, so facts, gaps and sources look the same everywhere.
+- **Source numbering** is per page, in first-citation order (`numberSources` in `web/src/data/sources.ts`).
+- **The ranking page** uses the map (`charts/EuMap.tsx`, shapes loaded only on that page), the group
+  ladder and the indicator grid. The ladder is the table view of the map.
+- **`/ask`** streams server-sent events from `/api/ask` and resolves each citation to claims and sources
+  from the bundle (#78).
 
 ## Charts
 
-`web/src/utils/palette.ts` is validated, not eyeballed, and its header records the actual
-validator output. Two constraints the validation imposed, which constrain how the slots may be
-used:
-
-- Dark tritan separation for yellow↔aqua is dE 4.0, below the 6–8 floor. Legal **only** with
-  secondary encoding, so any chart using both slots must also carry direct labels or a table view.
-- Light-mode contrast warns for aqua (2.67) and yellow (2.06). Same relief applies.
-
-Every chart in the app ships with a table view, which is what satisfies both. **Re-run the
-validator before changing any value**; `test.sh` checks the recorded checksum, so a silent edit
-fails.
-
-Categorical order is fixed and never cycled. A fifth series folds into "Other" rather than
-extending the ramp.
-
-Other chart rules, each a decision:
-
-- **Heatmaps are `<table>` elements with a `<button>` per cell, not SVG `<rect>` grids** (#29).
-  They get keyboard navigation, screen-reader semantics and text zoom for free.
-- **D3 is a maths library here, not a charting library** (#30). Use its scales and shape
-  generators; render with React. No `d3.select` into the DOM.
+- **D3 is a maths library here, not a charting library** (#30). Use its scales and projections; render
+  with React. No `d3.select` into the DOM.
 - **No Three.js and no 3D** (#31).
-- **No composite sovereignty score** (#10). Show the columns; do not add them up. Any rating shown
-  is labelled as the author's judgement in the same view.
+- **Tables before charts** (#29). Every chart has a text or table equivalent on the same page.
+- `web/src/utils/palette.ts` still holds the validated chart palette for any future data chart; re-run
+  the validator before changing it (`test.sh` checks its checksum).
 
 ## Layout and type
 
@@ -88,18 +56,18 @@ Working rules that follow from it:
   never instead of one.
 - A new route must be added to the `ROUTES` array in `web/e2e/app.spec.ts` or it is untested.
   `/poster/:iso` is deliberately absent: it is an export target, not a page.
+- Long unbreakable strings (hashes, claim ids, URLs) wrap: the page never scrolls sideways at 375 px.
 - Colour is never the only encoding. See the chart constraints above.
 
 ## Print
 
-`@media print` hides `.no-print` and forces a white background with black text, because these
-routes are printed to PDF. Anything added to the page that should not appear in the briefing PDF
-needs `.no-print`.
+`@media print` hides `.no-print` and prints black on white. The PDFs no longer come from the web app
+(#76); print styling is only for a reader printing a page.
 
 ## Verify
 
 ```
 cd web && npm run lint && npm run type-check && npm run test
 ./test.sh                # includes the full e2e + axe sweep
-./run.sh artefacts       # re-render the 54 tracked binaries if the app's rendering changed
+./run.sh artefacts       # re-render the 27 tracked posters if the app's rendering changed
 ```

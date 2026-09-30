@@ -1,5 +1,9 @@
 # Migrate `national_data.csv` onto the source register (#67)
 
+> **Historical record of the 2026-09-26 migration.** The figures below (15 classes, 405 pairs, 3 rows)
+> are as of that date. The register has since widened to 39 classes and 1,053 pairs (#73) and holds
+> 419 verified rows. Current figures: `./run.sh registers`.
+
 **Status: done 2026-09-26, recorded as DECISIONS.md #69.** The plan below is kept as written;
 [Results](#results) at the end shows what ran and what it printed.
 

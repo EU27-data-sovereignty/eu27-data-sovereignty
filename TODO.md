@@ -1,66 +1,43 @@
 # TODO (EU-27)
 
-Country-level workstreams live in `countries/NL/TODO.md` (the reference case) and apply to every country.
-This file tracks the cross-country work.
+Cross-country work, as a checklist. Why and in what order: [`ROADMAP.md`](ROADMAP.md). How the evidence is
+produced: [`METHOD.md`](METHOD.md).
 
-## Model
-- [x] Parameterized capacity model reproducing the Dutch xlsx (`model/capacity_model.py`)
-- [x] EU-27 parameter dataset from Eurostat (`model/eu27_parameters.csv`)
-- [x] Scaling rules from the NL baseline with small-state floors and frontline multiplier
-- [ ] Replace population/GDP scaling with real per-country government IT inventories where published
-      (FR DINUM, DE ITZBund, IT PSN migration data, PL RChO, EE RIT are the likeliest sources) —
-      planned as Part B of `ROADMAP.md` § Sourcing plan
-- [ ] Per-country PUE and facility CAPEX (climate and seismic design change both)
-- [ ] Sensitivity: site size (12 MW unit), replication factor, headroom, utilization
-- [ ] 5- and 10-year growth per country
+## Publish
+- [ ] Production deploy of the current build (author's OK), then push
+- [ ] `/ask`: dedicated Anthropic workspace with a spend limit and `ANTHROPIC_API_KEY` in Vercel
+      (author), then the 12-question eval (with approval), then the Vercel Firewall rate limit
 
-## Geography
-- [ ] Replace the first-pass regions in `generate_countries.py` with scored site selection per country
-- [ ] Seismic and flood zoning as hard exclusions in the scoring
-- [ ] Grid connection lead time as a scored criterion (IE, NL, DE, BE, ES are all constrained)
+## Evidence (raise confidence)
+- [x] Critical-holdings register widened to 39 classes (#73); research run 1 for all 27: 416 admitted
+- [x] Ranking indicators (#77); research run 2 with downgrade-only review: 134 of 189 admitted
+- [x] Every dependency label independently reviewed (#79): 77 of 93 agreed
+- [ ] Hosting pass: where each verified tier 0/1 holding runs (procurement, audit offices, parliament),
+      then #79 review. About 86% are unknown today
+- [ ] Decide how classified holdings (defence, intelligence) count in the ranking: exclusion or unknown
+- [ ] Rendering fetch for JavaScript pages (FI, PT, LT, CY) and a retry route for refused sites
+      (LU, LV, RO, IE)
+- [ ] Re-run the thin run-1 states: AT, BE, EE
+- [ ] Record counts and data sizes per holding, for capacity (#73)
+- [ ] `gov_employment_k`: source it or drop it (withheld today)
+- [ ] Human sampling audit with a measured error rate: the launch gate (#25, #67)
+
+## Outputs
+- [ ] Mobile reader to schema 2 (content model), with the two Dependabot alerts fixed on the way
+- [ ] Print book: country parts rendered from the content model; write Parts I, II and V
+- [ ] Capacity from measured holdings, once enough are measured (#73)
 
 ## Testing
-- [ ] Put the web and mobile suites in CI. `ci.yml` runs the Python suite and gitleaks only — no
-      `npm run build`, no Vitest, no Playwright, no Jest — which is how a red gate survived a week
-      (2026-09-13 to 2026-09-21). Nothing copies `mobile/assets/data/eu27.json` either, and the
-      parity test that would catch the drift runs in neither `./test.sh` nor CI.
+- [ ] Put the web suites in CI. `ci.yml` runs the Python suite and gitleaks only; Vitest, Playwright
+      and the API type-check run in `./test.sh` locally.
 
 ## Federation (deferred by decision, Sept 2026)
 - [ ] Out-of-country reserve for frontline and micro states (EE data-embassy pattern)
-- [ ] Pooled sovereign capacity for states under ~3 MW
+- [ ] Pooled sovereign capacity for small states
 - [ ] Mutual DR pairs and treaty basis
 
-## Critical national data register (`model/national_data.csv`)
-- [x] Migrated onto the source register (#69, 2026-09-26): the five provenance columns dropped;
-      `rvig:brp`, `kadaster:brk`, `kvk:handelsregister` registered; `record:<ISO>:<class>:register`
-      citations; `load()` joins them back so every output is byte-identical. `source_id` in the
-      bundle, and so in the renderers, is ROADMAP A2.
-- [x] Schema, validator, coverage ratchet and the section in all four renderings (#60)
-- [x] NL: BRP, BRK, Handelsregister — 3 of 405 pairs
-- [ ] Tier 0 for the five large states (DE, FR, IT, ES, PL) — 40 pairs, the highest-value batch
-- [ ] Tier 0 for the remaining 21 states — 168 pairs; this is where the sovereignty argument lives
-- [ ] Tier 1 across all 27 — 189 pairs; decide first whether the published percentage narrows to
-      tier 0 rather than sitting stuck near zero (#60)
-- [ ] Re-try the four NL pages that failed the first pass: Belastingdienst (no describing sentence),
-      DigiD (publisher not attributable with confidence), RDW (no register named), DUO (404)
-- [ ] Validate the `TIER0-TIER1-SIZING.md` per-citizen figures against the Kadaster, RvIG and
-      Belastingdienst annual reports — a different task from recording the registers; planned as
-      Part C of `ROADMAP.md` § Sourcing plan (counts from annual reports, sizes from standards)
-
-## Write-ups
-- [ ] Hand-edit the five large states (DE, FR, IT, ES, PL) into full analyses like `countries/NL/GOAL.md`
-- [ ] Verify the sovereign-cloud and digital-ID entries in `eu27_parameters.csv` against primary sources
-
-## Sources (the launch gate, #67)
-- [x] One source register for every claim (`model/sources/`, `model/provenance.py`) — A1, 2026-09-24
-- [ ] A2: `source_id` in `fetch_manifest.csv`, `national_data.csv`, `institutions.csv`; sources in the
-      bundle, a web Sources page, mobile links, a book bibliography
-- [ ] A3: declare the 22 assumptions and 7 scaling rules (`confidence: assumption`, with rationale)
-- [ ] Full coverage in every published namespace before any launch step (`ROADMAP.md` § Sourcing plan)
-
-## Outreach
-- [x] People inventory, private (`contacts/people.csv`): 956 rows, 850 send-ready — 2026-09-24
+## Outreach (waits on the launch gate)
+- [x] People inventory, private (`contacts/people.csv`): 956 rows, 850 send-ready (2026-09-24)
 - [ ] Second research pass: MT (none), CY, HU, HR, EL, SI (five rows or fewer)
 - [ ] Re-research the 77 rows whose seat quote was not found on its page, and the ~30 unreachable
 - [ ] Institutional map beyond 25/324: contact *pages* for the email-routed bodies (#68)
-

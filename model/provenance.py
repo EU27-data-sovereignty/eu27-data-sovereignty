@@ -248,6 +248,11 @@ def label(source_id: str, reg: dict[str, dict[str, str]] | None = None) -> str:
     """The short citation a rendering prints: 'Eurostat tps00001, 2025'."""
     r = (reg or registry())[source_id]
     doc = source_id.split(":", 1)[1].split("@")[0]
+    if re.fullmatch(r"[0-9a-f]{10}", doc):
+        # A researched source (research.py) is keyed by a URL hash, which means nothing to a
+        # reader; name it by its title instead, shortened at a word boundary.
+        title = r["title"] if len(r["title"]) <= 60 else r["title"][:57].rsplit(" ", 1)[0] + "…"
+        doc = f"— {title}"
     return f"{r['publisher']} {doc}, {r['published']}" if r["published"] else f"{r['publisher']} {doc}"
 
 

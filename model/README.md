@@ -1,77 +1,100 @@
 # The model
 
-Stdlib-only Python. `capacity_model.py` turns a workload table into servers, racks, megawatts, sites and
-cost; `generate_countries.py` scales the Dutch baseline to the other 26 member states and writes their
-briefs; `country_data.py` assembles every fact about a country into the one dict that the briefs, the JSON
-bundle, the web app and the exported artefacts all render from.
+Stdlib-only Python. It turns raw data and verified research into one content model per member state,
+which every output renders: the EU-27 report and country PDFs, the web app, the markdown briefs, the
+posters and the `/ask` corpus. Each state is analysed on its own fundamentals; nothing reads a baseline
+country (#72).
+
+```mermaid
+flowchart LR
+  R[research/<ISO>.json<br/>agent staging] -- research.py verify + admit --> ND[national_data.csv]
+  R --> SI[sovereignty_indicators.csv]
+  R --> SR[sources/registry.csv<br/>sources/citations.csv]
+  HC[holding_classes.csv] --> ND
+  P[eu27_parameters.csv] --> CD[country_data.py]
+  ND --> CD
+  SI --> SV[sovereignty.py]
+  CD --> DOC[document.py]
+  SV --> DOC
+  SR --> DOC
+  DOC --> EJ[export_json.py → eu27.json]
+  DOC --> GC[generate_countries.py → GOAL.md]
+  EJ --> AC[ask_corpus.py → api/_corpus.json]
+```
 
 ## How to read the data files
 
-**Not everything in here has the same standing.** Three different kinds of claim live in these CSVs, and
-conflating them is the easiest way to misuse this project.
+**Not everything in here has the same standing.** Mixing up these kinds of claim is the easiest way to
+misuse the project.
 
-| Kind | Files and columns | Standing |
+| Kind | Where | Standing |
 |---|---|---|
-| **Sourced statistics** | `eu27_parameters.csv`: `population_m`, `gdp_eur_bn`, `gov_employment_k`, `elec_price_eur_mwh`, `renewables_pct`, `land_km2` | From Eurostat, with the dataset and vintage named in each country's brief. Checkable. |
-| **Working assumptions** | `assumptions.csv`, and everything derived from it | Plausible planning figures, not sourced. Every row says so in its `Source / Status` column. |
-| **Unverified research** | `eu27_parameters.csv`: `legal_instrument`, `certification_scheme`, `data_classification`, `procurement_vehicle`, `hyperscaler_gov_exposure`, `sovereign_cloud_initiative`, `digital_id`, `ixp`, `threat_notes` | Compiled September 2026 from public policy documents by one researcher. **Not checked against primary instruments.** |
-| **Author's judgements** | `eu27_parameters.csv`: `gov_cloud_maturity`, `certification_strength`, `hyperscaler_dependency` | Ordinal ratings assigned by the author. **Not official ratings, and not measured.** Ireland and Denmark are rated `critical` because someone decided that, not because a body published it. |
+| **Verified research** | `national_data.csv`, `sovereignty_indicators.csv`, each cell cited in `sources/` | The document was fetched, its sha256 recorded, the quote found in it. Every categorical label (e.g. foreign dependency) also has an independent reviewer's agreement (#79). Machine-checked, not yet human-audited. |
+| **Sourced statistics** | `eu27_parameters.csv`: the six Eurostat columns | Pinned series and vintage; five reproduce exactly. `gov_employment_k` does not, and is withheld everywhere as "under review". |
+| **Unverified research** | `eu27_parameters.csv`: the legal and posture text columns | Compiled September 2026 by one researcher. **Never shown as fact:** the content model withholds any cell without a supporting citation (#75). |
+| **Author's judgements** | `eu27_parameters.csv`: the ordinal rating columns | No longer rendered anywhere. Kept for history. |
+| **Declared rules** | `holding_classes.csv` (tiers, recoverability), the priority rule in `document.py`, the ranking rule in `sovereignty.py` | This project's method, stated openly, never presented as a fact about a state. |
+| **Engine constants** | `assumptions.csv`, `migration_phases.csv` | For the capacity engine, which sizes nothing until measured holdings exist (#73). |
 
-Every row of `eu27_parameters.csv` carries a `data_status` column repeating this, because GitHub renders a
-CSV as a clean table that looks more authoritative than it is.
+## How research becomes a fact
 
-**Moving rows out of the third kind is the project's gating workstream.** The source register,
-`sources/registry.csv` + `sources/citations.csv` (#67), is where that verification is recorded — every
-document once, every claim citing it with a locator and a quote (or, for a dataset, the value found) —
-and `../VERIFICATION.md` has the schema, the tiered rule and where it currently stands. `python3
-model/provenance.py` reports coverage per claim namespace; `python3 model/sources.py` applies the
-tiered rule to the legal cells. Both fail on a row that is not usable evidence.
+1. **Staging.** Agents research each state and write `research/<ISO>.json` (holdings) and
+   `research/indicators/<ISO>.json` (indicators), with verbatim quotes and URLs.
+2. **Verify.** `research.py verify`, for every claim:
+   - fetches the URL through `fetch.py`: polite, robots-aware, and cached in `cache/`;
+   - records the sha256;
+   - extracts the text (HTML, or PDF via `pdftotext`) and looks for the quote;
+   - looks up an Internet Archive snapshot of exactly that URL.
+   Every outcome is a row in `research/verification.csv`.
+3. **Review.** A separate agent judges every categorical value against written definitions.
+   Disagreement makes the value unknown (#79).
+4. **Admit.** `research.py admit` writes only claims that were verified and agreed into the registers
+   and `sources/`.
+5. **Render.** `document.py` shows a value only if a citation supports it, and a gap otherwise.
+   `document.py --check` is a `test.sh` stage.
 
-`model/national_data.csv` is the second register, and strikes the same bargain for a different
-claim: not "what does this state's law require" but "what records does this state hold, and where
-is the official page that says so". `./run.sh registers` reports it. It has three states rather
-than two -- `held`, `not_held`, and no row at all -- because a blank must be readable as
-"not yet researched" and never as a finding of absence (#60).
+`../METHOD.md` is the reader-facing version, and `research/README.md` records how each run was made.
 
-## Why the ratings are not summed
+## Why the ranking is groups, not a score
 
-The eight sovereignty-matrix dimensions are shown side by side and never combined into a score.
-Certification strength and seismic risk are not commensurable, and a single number would imply a precision
-this dataset does not have while being the first thing quoted out of context. See `DECISIONS.md` #10.
+`sovereignty.py` places each state in one of five groups by a published first-match rule. An unknown
+input counts as not demonstrated, never as sovereign. Confidence is the range of groups a state could
+still reach once its open evidence is settled. No number is produced: the dimensions do not add up, and
+a score would be quoted without its caveats (#10, #77).
 
 ## Reproducibility
 
-Generated files stamp their date from `SOURCE_DATE_EPOCH`, pinned in `.build-epoch`, so regenerating on a
-different day does not rewrite 27 files with a new date and bury the real changes. `./test.sh` asserts that
-running the generator twice is a byte-for-byte no-op.
-
-The same applies to the binaries: `export_artifacts.py` rewrites the wall-clock `/CreationDate` and
-`/ModDate` Chrome stamps into each PDF (`DECISIONS.md` #53), and records every artefact's hash — with the
-hash of the bundle it was rendered from — in `countries/ARTEFACTS.csv`, so the test suite can detect a
-tracked binary that the data has moved past (#52).
+Generated files stamp their date from `SOURCE_DATE_EPOCH`, pinned in `../.build-epoch`, so regenerating
+on another day is not a 27-file diff; `./run.sh data` and `./test.sh` both pin it. The gate regenerates
+everything and fails if anything moved. The tracked posters record the bundle hash they were rendered
+from (`countries/ARTEFACTS.csv`), so any data change requires `./run.sh artefacts` (#52).
 
 ## Files
 
 ```
-capacity_model.py      workloads -> servers -> racks -> MW -> sites -> CAPEX/OPEX
-country_data.py        assembles one country's facts into a dict; scores the matrix ordinals
-generate_countries.py  scales NL to the other 26, writes briefs and SUMMARY.md
-export_json.py         writes web/public/data/eu27.json from the same dict
-export_artifacts.py    renders the tracked per-country PNG infographics and PDF briefings
+document.py            the content model: sections -> blocks -> spans with claim ids; --check gate
+country_data.py        one state's parameter row and register view; reads no other state
+sovereignty.py         placement rule, range and confidence (#77); indicators.csv defines the inputs
+research.py            verify (fetch, hash, quote, archive) and admit (verified + reviewed only)
+fetch.py               the polite, cached fetch layer; fetch_manifest.csv records every document hash
 provenance.py          validates the source register (sources/) and reports coverage per namespace
-sources/registry.csv   one row per original document or dataset, keyed by source_id (#67)
-sources/citations.csv  one row per (claim, source): locator, quote or dataset value, confidence
-sources.py             the tiered rule for the legal cells, reading them from the register
-national_data.py       validates the critical national data register and reports coverage
-national_data.csv      per state, which Tier 0/Tier 1 record classes it holds, the register
-                       that holds them, and the official page describing it, with a quote
-emoji.py               country flag emoji derived from the ISO code; EL -> GR is the only
-                       override. Imported by generate_countries.py ONLY -- never by the book
-                       or the poster, which carry no state emblems (#47, #61, #62)
-institutions.py        validates the institutional contact map (25/324 pairs; tests/test_institutions.py)
-assumptions.csv        shared engineering and economic defaults
-eu27_parameters.csv    one row per member state; see the table above before using it
-scaling_rules.csv      how each workload class scales from the Dutch baseline
-migration_phases.csv   workload class -> migration phase
-eu27_results.csv       one result row per country (generated; the golden file for tests)
+national_data.py       the critical-holdings register: 39 classes, per-field citations (#73)
+generate_countries.py  countries/<ISO>/GOAL.md and SUMMARY.md, rendered from the content model
+export_json.py         web/public/data/eu27.json: countries, documents, claims, sources, ranking
+ask_corpus.py          api/_corpus.json for /ask: one block per sourced fact or gap (#78)
+export_artifacts.py    renders the tracked per-country posters with headless Chrome
+capacity_model.py      the capacity engine (workloads -> servers -> MW -> sites -> cost); kept for
+                       sizing from holdings; checked only against the spreadsheet it reproduces
+fetch_eurostat.py      pins and pulls the six Eurostat series (eurostat_pull.csv)
+sources.py             the older tiered rule for the legal columns (VERIFICATION.md)
+institutions.py        the public institutional contact map (#68)
+emoji.py               flag emoji for the markdown SUMMARY only; never in a PDF or poster (#47, #62)
+
+holding_classes.csv    the 39 holding classes: domain, tier, recoverability, why it matters
+national_data.csv      admitted holdings per state; every non-empty cell is its own cited claim
+indicators.csv         the 7 ranking indicators and what counts as yes / partial / no
+sovereignty_indicators.csv  admitted indicator values per state
+eu27_parameters.csv    one row per state: Eurostat figures and unverified posture text
+sources/               registry.csv (one row per document) and citations.csv (one per claim)
+research/              agent staging, reviews and verification.csv; never rendered
 ```

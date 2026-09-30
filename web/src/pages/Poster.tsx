@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { SpanView } from '@/components/DocumentView'
@@ -18,6 +19,14 @@ function table(doc: Document, id: string): Extract<Block, { type: 'table' }> | u
 
 export function Poster({ bundle }: { bundle: Bundle }) {
   const { iso = '' } = useParams()
+  const ref = useRef<HTMLElement>(null)
+  // The exporter reads this to size the screenshot to the content (export_artifacts.measure_height).
+  // Hooks run before the not-found guard below: they must not sit after an early return.
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.setAttribute('data-poster-height', String(Math.ceil(ref.current.scrollHeight)))
+    }
+  })
   const code = iso.toUpperCase()
   const doc = bundle.documents[code]
   const country = bundle.countries[code]
@@ -45,6 +54,7 @@ export function Poster({ bundle }: { bundle: Bundle }) {
 
   return (
     <article
+      ref={ref}
       style={{ width: 1024 }}
       className="mx-auto bg-[var(--color-bg-page)] p-8 text-[var(--color-fg-primary)]"
     >

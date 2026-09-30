@@ -30,6 +30,7 @@ REFERENCE = re.compile(r"(?<![\w#])#(\d{1,2})(?![0-9A-Za-z])")
 # Files that cite decisions by number. Country briefs are generated and cite none.
 CITING = ["README.md", "ROADMAP.md", "PROGRESS.md", "CHANGELOG.md", "ASSETS.md", "OUTREACH.md",
           "FEASIBILITY-RANKING.md", "DISTRIBUTION-AND-TRUST.md", "VERIFICATION.md", "DEPLOYMENT.md",
+          "METHOD.md", "CLAUDE.md", "TODO.md", "artifacts/STYLE.md", "model/research/README.md",
           "SOURCES.md", "DECISIONS.md", ".gitignore",
           "model/README.md", "book/README.md",
           # The representation style guides are the working form of the rules this register

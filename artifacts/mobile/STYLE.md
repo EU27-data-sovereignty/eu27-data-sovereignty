@@ -1,5 +1,10 @@
 # Mobile style
 
+> **Stale.** The reader still ships the schema-1 bundle, with the Dutch-scaled figures withdrawn by #72
+> and #73. Before any release it must move to schema 2 and render the content model like the web
+> country page, with the tokens from [`../STYLE.md`](../STYLE.md). The rules below describe the
+> schema-1 app.
+
 Covers the Expo Router reader in `mobile/`. It is local only — never built for a store, never
 deployed. It exists so the same document can be read on a phone without a network.
 

@@ -165,13 +165,13 @@ Tier 0 and 1 holdings for Finland without a verified source yet. Corrections and
 
 ---
 
-[^s1]: Finlex / Oikeusministeriö c26c9dda26. Laki turvallisuusverkkotoiminnasta (10/2015), 5 §. <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2015/10/fin@>
-[^s2]: Finlex / Oikeusministeriö b349c9896d. Valtioneuvoston asetus asiakirjojen turvallisuusluokittelusta valtionhallinnossa (1101/2019), 3 §. <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2019/1101/fin@>
-[^s3]: Finlex / Oikeusministeriö 4187ed7874. Laki väestötietojärjestelmästä ja Väestörekisterikeskuksen varmennepalveluista (661/2009), 61 §. <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2009/661/fin@>
-[^s4]: Digi- ja väestötietovirasto (DVV) 0e79936b79. Tunnistus (Suomi.fi-tunnistus). <https://dvv.fi/suomi.fi-tunnistus>
-[^s5]: Finlex / Oikeusministeriö bcafff1597. Laki hallinnon yhteisistä sähköisen asioinnin tukipalveluista (571/2016), 4 §. <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2016/571/fin@>
-[^s6]: Suomen Erillisverkot Oy 5bb7b96539. Konesalipalvelu. <https://www.erillisverkot.fi/palvelut/konesali-ja-suojatilat/> ([archived](https://web.archive.org/web/20260727163800/https://www.erillisverkot.fi/palvelut/konesali-ja-suojatilat/))
-[^s7]: Suomen Erillisverkot Oy 5266ce1d26. Turvapilvipalvelu (Virtuaalinen konesalipalvelu). <https://www.erillisverkot.fi/palvelut/virtuaalinen-konesali/> ([archived](https://web.archive.org/web/20260727163800/https://www.erillisverkot.fi/palvelut/virtuaalinen-konesali/))
+[^s1]: Finlex / Oikeusministeriö — Laki turvallisuusverkkotoiminnasta (10/2015), 5 §. Laki turvallisuusverkkotoiminnasta (10/2015), 5 §. <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2015/10/fin@>
+[^s2]: Finlex / Oikeusministeriö — Valtioneuvoston asetus asiakirjojen…. Valtioneuvoston asetus asiakirjojen turvallisuusluokittelusta valtionhallinnossa (1101/2019), 3 §. <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2019/1101/fin@>
+[^s3]: Finlex / Oikeusministeriö — Laki väestötietojärjestelmästä ja…. Laki väestötietojärjestelmästä ja Väestörekisterikeskuksen varmennepalveluista (661/2009), 61 §. <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute/2009/661/fin@>
+[^s4]: Digi- ja väestötietovirasto (DVV) — Tunnistus (Suomi.fi-tunnistus). Tunnistus (Suomi.fi-tunnistus). <https://dvv.fi/suomi.fi-tunnistus>
+[^s5]: Finlex / Oikeusministeriö — Laki hallinnon yhteisistä sähköisen asioinnin…. Laki hallinnon yhteisistä sähköisen asioinnin tukipalveluista (571/2016), 4 §. <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2016/571/fin@>
+[^s6]: Suomen Erillisverkot Oy — Konesalipalvelu. Konesalipalvelu. <https://www.erillisverkot.fi/palvelut/konesali-ja-suojatilat/> ([archived](https://web.archive.org/web/20260727163800/https://www.erillisverkot.fi/palvelut/konesali-ja-suojatilat/))
+[^s7]: Suomen Erillisverkot Oy — Turvapilvipalvelu (Virtuaalinen konesalipalvelu). Turvapilvipalvelu (Virtuaalinen konesalipalvelu). <https://www.erillisverkot.fi/palvelut/virtuaalinen-konesali/> ([archived](https://web.archive.org/web/20260727163800/https://www.erillisverkot.fi/palvelut/virtuaalinen-konesali/))
 [^s8]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
 [^s9]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
 [^s10]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>

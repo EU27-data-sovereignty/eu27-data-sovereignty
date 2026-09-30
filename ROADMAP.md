@@ -1,114 +1,78 @@
 # Roadmap
 
 Where this project stands, what is next, and what gates what. Reasoning behind individual choices lives in
-[`DECISIONS.md`](DECISIONS.md); the record of what changed is in [`CHANGELOG.md`](CHANGELOG.md).
+[`DECISIONS.md`](DECISIONS.md); the record of what changed is in [`CHANGELOG.md`](CHANGELOG.md). How the
+evidence is produced is in [`METHOD.md`](METHOD.md).
 
-**Status as of 2026-09-11.** The model, the data, the documents, the web app and the test suite are built
-and pushed, and the web app is deployed at
-[sovereign-data-centers.vercel.app](https://sovereign-data-centers.vercel.app) with indexing disabled. Every
-finding from both security audits is now closed. The blocker for anything further public-facing is not code
-— it is that 189 researched legal cells across 27 jurisdictions have not been verified against primary
-sources. The ledger and the
-tooling exist, the fetch layer that feeds them landed 2026-09-11 (#56), and **2 of the 189 cells are
-sourced**: [`VERIFICATION.md`](VERIFICATION.md) for method, [`SOURCES.md`](SOURCES.md) for endpoints,
-`./run.sh sources` for the live figure.
+**Status as of 2026-09-30.**
+- **The pivot.** Every member state is analysed on its own fundamentals (#72). The Dutch-scaled capacity
+  figures are withdrawn until each state can be sized from its own measured holdings (#73).
+- **Research.** Across all 27 states, 416 critical holdings and 134 of 189 ranking indicators are
+  verified and admitted. Each rests on a fetched, hashed document containing its quote; each
+  categorical label also has an independent reviewer's agreement (#79).
+- **Outputs.** One content model renders the EU-27 report, 27 country PDFs, the web app, the markdown
+  briefs and the posters, with a footnote on every fact (#74, #75).
+- **Deployment.** Production still serves the 2026-09-27 build. The new site is on a protected preview,
+  waiting for the author's go-ahead, and `/ask` waits for its API key (#78).
 
 ---
 
 ## The goal
 
-A national data-sovereignty strategy for every EU member state, covering four things per country:
+For every EU member state, a sourced analysis of the government data it cannot let depend on
+infrastructure a foreign power can compel or switch off:
 
-1. **Capacity and siting** — how much compute, storage and power a sovereign core needs, and where it goes
-2. **Legal and regulatory posture** — the governing instrument, certification regime, classification ladder
-   and procurement route, plus foreign-jurisdiction exposure
-3. **Current state and provider landscape** — what the state runs today and what it depends on
-4. **Migration path and cost** — a phased, costed sequence from today's estate to the sovereign target
+1. **Critical holdings.** The registers and systems in 39 classes: who operates them, under which law,
+   where they run, and how large they are.
+2. **Legal and institutional posture.** Jurisdiction requirements, classification in law, sovereign-cloud
+   certification, the state's control of its trust anchor and eID.
+3. **Data-sovereignty placement.** Groups by a published rule, with computed confidence, never a
+   score (#77).
+4. **Capacity.** Sized from each state's own measured holdings, once enough are measured (#73).
 
-Delivered three ways: a markdown brief and artefacts in each country's directory, an interactive web
-application, and a printed book aimed at European policymakers.
+Delivered as a web app, an EU-27 report and one PDF per country, with a question box (`/ask`) that
+answers only from the sourced findings. A printed book is later.
 
 ---
 
 ## Done
 
-### The model
-- Stdlib-only Python capacity model: workloads → servers → racks → MW → sites → CAPEX/OPEX
-- Reproduces the original Dutch spreadsheet exactly (5,691 servers, 14.2 MW, EUR 339 m), asserted in tests
-- Scales the Dutch baseline to 26 other states by population, public-administration employment and GDP
-- Four-phase migration model, keyed on workload class, with CAPEX conserving to the total
-- Byte-reproducible generation via `SOURCE_DATE_EPOCH`, pinned in `.build-epoch`
+### Evidence
+- **Critical-holdings register.** 39 classes (`model/holding_classes.csv`); 419 of 1,053 (state, class)
+  pairs recorded, each field its own cited claim (#73).
+- **Research runs across all 27 states** (`model/research/`):
+  - Holdings: 1,724 of 2,228 claims passed the quote check.
+  - Indicators: 240 of 288 passed.
+  - Dependency labels: 77 of 93 confirmed by an independent reviewer (#79).
+- **Admission.** `model/research.py` admits a claim only after fetching the document, recording its
+  sha256, finding the quote and matching an archived copy to the exact URL.
+- **Eurostat.** Six Eurostat fundamentals, pinned; five reproduce exactly (#57).
 
-### The data
-- `eu27_parameters.csv`: 25 columns × 27 states, including six researched legal/regulatory columns and two
-  ordinal columns that the sovereignty matrix scores from
-- One directory per country holding inputs, model outputs, and a 12-section brief
+### Outputs
+- **Content model.** `model/document.py`: one document per state; `document.py --check` is a gate
+  stage (0 unsourced facts).
+- **PDFs.** The EU-27 report (`/eu27-report.pdf`) and 27 country reports (`/report/<ISO>.pdf`), typst,
+  footnotes plus a source appendix.
+- **Web app** (React 19, Vite, Tailwind 4, EU tokens):
+  - Overview, Ranking with map (`/sovereignty`, also `/map`), Countries, Country, Critical holdings,
+    Sources, Ask, Methodology;
+  - 23 Playwright tests with axe on every route.
+- **Ranking.** `model/sovereignty.py`, five groups, confidence as the range of groups still reachable (#77).
+- **`/ask`.** A Vercel Function over the sourced corpus, with citations, nothing stored (#78).
+- **Design tokens.** `design/tokens.json` → web CSS, typst and mobile, contrast-checked (#74, #76).
+- **Posters.** 27 tracked summaries in `countries/<ISO>/`, re-rendered on every data change (#52).
 
-### The web app (`web/`)
-React 19, Vite 8, TypeScript 6, Tailwind 4, D3 7. Seven working routes:
+### Tooling and process
+- **`./test.sh`.** Python, sourcing gate, API type-check against the real SDK, generated files current,
+  lint, types, Vitest, build, Playwright plus axe.
+- **Decisions.** From #72 on, every entry states the decision, problem, alternatives with *Why not*,
+  what it closes off, `Verified:` and *Would change if*; `tests/test_docs.py` enforces it.
+- **Deploys.** Built locally and uploaded prebuilt (#71); runbook in [`DEPLOYMENT.md`](DEPLOYMENT.md).
 
-| Route | Content |
-|---|---|
-| `/` | EU-27 totals, the small-state cliff, the binding-constraint finding |
-| `/matrix` | Sovereignty readiness matrix — 27 × 8 diverging heatmap, sortable, cells reveal source text |
-| `/workloads` | Country × workload heatmap with absolute / row-normalized toggle |
-| `/scenario` | Live sandbox — six sliders recompute all 27 countries in the browser |
-| `/countries` | Index of all member states |
-| `/country/:iso` | The full briefing |
-| `/methodology` | What the model is, what it is not, and the assumption table |
-
-### Tooling and testing
-- `init.sh`, `run.sh`, `test.sh` following the workspace template convention
-- 106 Python tests, 66 Vitest (including TS/Python parity), 15 Playwright (E2E, accessibility,
-  responsive) and 19 Jest in `mobile/` — all passing as of 2026-09-26. The two failing Playwright
-  assertions are fixed: they read their figures from `model/eu27_results.csv` rather than
-  hardcoding them. Note the Vitest, Playwright and Jest suites run in neither `./test.sh`'s
-  default CI path nor `ci.yml`; see [`PROGRESS.md`](PROGRESS.md)
-- CI on GitHub, including a check that committed generated files match the model
-- Chart palette validated for colour-vision deficiency on both light and dark surfaces
-
-### Per-country artefacts
-- A one-page infographic (`<ISO>-infographic.png`) and a PDF briefing (`<ISO>-briefing.pdf`) in every
-  country directory, produced by `model/export_artifacts.py` via `run.sh artefacts` (not `run.sh export`,
-  which typesets something else entirely — corrected 2026-09-08)
-- Data-driven, not AI-generated; no state emblems or official-looking wordmarks; the provenance caveat is
-  printed on the poster itself, because images get shared without the page that explains them
-
-### Deployment configuration
-`vercel.json` (strict CSP, `nosniff`, `DENY` framing, restrictive `Permissions-Policy`) and a `robots.txt`
-that blocks indexing until the verification gate passes.
-
-### Deployment — stage 1 (2026-09-07)
-Live at **https://sovereign-data-centers.vercel.app**, `noindex`, on the Vercel project
-`pieteradejongs-projects/sovereign-data-centers`.
-
-- **Deploys are manual.** The Vercel GitHub App is not installed on the account, so the project could not
-  be linked to the repository and does not build on push. Until it is, shipping a change means running
-  `vercel deploy --prod` from a clean checkout — a stale site is the failure mode to watch for.
-- `.vercelignore` exists because the Vercel CLI reads it **instead of** `.gitignore`, not in addition to
-  it. It therefore repeats every rule that matters, `**/contacts/` first among them: without it the
-  private contacts working tree (#46) would be uploaded with the source. Any new `.gitignore` rule that
-  protects something has to be mirrored there.
-- `vercel.json` sets `github.silent`, so there is no deploy status on the commit; check the Vercel
-  dashboard.
-
-### Artefact integrity (2026-09-08)
-- The tracked per-country posters and PDFs are a deliberate deliverable, not an accident (#51); #41 is
-  scoped to the typst build directories it always meant
-- PDFs are byte-reproducible: Chrome's wall-clock `/CreationDate` and `/ModDate` are rewritten to
-  `.build-epoch` (#53), verified by exporting all 27 twice and comparing hashes
-- `countries/ARTEFACTS.csv` records each artefact's hash and the hash of the bundle it was rendered from;
-  `tests/test_artifacts.py` fails when the data has moved past the binaries (#52)
-- `tests/test_docs.py` asserts decision numbers are unique and every `#N` reference resolves (#55)
-
-### Documentation
-`DECISIONS.md` (59 entries), `ROADMAP.md`, `CHANGELOG.md`, `VERIFICATION.md`, `README.md` with the
-institutional outreach map, and a data-correction issue template.
-
-### Feasibility ranking (2026-09-13)
-`FEASIBILITY-RANKING.md` groups the 27 states by how feasible a combined sovereign data center and
-sovereign AI model plan would be. An authored note and a bounded exception to #10, under the
-conditions in #59. The model half is unsourced; see *Planned* below.
+### Superseded, kept for the record
+The Dutch-scaled capacity model, the sovereignty matrix, the workloads heatmap, the scenario sandbox,
+the Chrome briefing PDFs and the mono briefs. All were withdrawn by #72–#76; the capacity engine itself
+is kept for sizing from holdings.
 
 ---
 
@@ -188,131 +152,51 @@ dangling decision numbers.
 
 ## Planned
 
-### Next — provenance and verification (gates everything public-facing)
-This is the most valuable remaining work, and the only thing standing between the project and an indexed
-site, a custom domain, or a printed book. The working document is [`VERIFICATION.md`](VERIFICATION.md);
-this is the state of the five steps.
+### Next — publish what exists
+1. **Production deploy** of the current build, with the author's OK. It is public at
+   `sovereign-data-centers.vercel.app` and still `noindex`.
+2. **`/ask` live.** The author creates a dedicated Anthropic workspace with a monthly spend limit and
+   sets `ANTHROPIC_API_KEY` in Vercel. Then comes the 12-question eval (under $3, with approval), then
+   the per-IP rate limit in the Vercel Firewall.
 
-1. **Build `model/sources.csv`.** ✅ *Scaffolded 2026-09-08; superseded 2026-09-24 by the source
-   register `model/sources/` (#67), which carries the same rows and every other kind of claim.* Schema as planned —
-   `country,column,url,publisher,retrieved,confidence,quote` — with `model/sources.py` validating it and
-   `tests/test_sources.py` guarding it. A row whose quote is under 20 characters fails, because a URL alone
-   does not show the cited page says what the cell claims.
-2. **Apply the tiered rule.** ✅ *Encoded, not yet applied.* Three tier-1 columns require `confidence:
-   primary`; four tier-2 columns take an official government page; the three ordinal columns are author
-   judgements and a source row for one is a validation error. **189 cells. 2 done.** This is the work.
-   The pilot (NL, EE, FR, tier 1) found two defects in the data it was checking — France's
-   classification ladder and Cyprus's population — and two gaps in the schema itself: a compound cell
-   reads as verified when only half of it is sourced, and the ~19 states whose `certification_scheme`
-   is a *negative* claim have no primary instrument to cite. The second needs a decision before tier 1
-   can ever reach 27. Both are written up in [`VERIFICATION.md`](VERIFICATION.md).
-3. **Add a CI check** that fails when a legal cell has no citation in the register. ✅ *Exists as
-   `python3 model/sources.py --strict`, deliberately not yet wired into CI, and — as of #58 —
-   now actually reachable: until `confidence: absence` landed, 22 tier-1 cells asserted that
-   nothing exists and could never be sourced, so `--strict` could never have passed at all* — it would fail on day one and
-   be disabled on day two. What CI enforces today is the ratchet: `COVERAGE_FLOOR` in
-   `tests/test_sources.py` may only be raised, so verified cells cannot silently become unverified. Switch
-   to `--strict` when coverage reaches 189.
-4. **Re-pull Eurostat from the public API** and diff against the CSV, so the figures carry a retrieval
-   date rather than an assumption. ✅ *Done 2026-09-11.* `./run.sh fetch eurostat` writes
-   `model/eurostat_pull.csv` — value, dataset code, pinned period and the API's own `updated`
-   vintage per country per figure. **Five of the six columns were already exactly right** and now
-   reproduce from their pinned vintage at 0/27 cells differing, enforced by `tests/test_fetch.py`;
-   what they lacked was a recorded provenance, not accuracy. The pins do not move on their own (#57).
-   **`gov_employment_k` is the exception and is an open defect**: it reproduces from no period at
-   all, and 9 of 27 values match no year of the official series within 10% (Sweden 40% out). Held
-   unchanged pending a rebuild — see [`VERIFICATION.md`](VERIFICATION.md).
-5. **Run the sampling audit.** A random sample per column, independently re-checked, producing a
-   **measured error rate per column** — confidence as a number, not a feeling. This is the artefact that
-   opens stages 2 and 3; the earlier steps only make it possible.
+### Next — raise confidence (the barriers, in order of leverage)
+1. **Hosting of critical holdings.** About 86% of verified holdings have no public source for where they
+   run, which keeps nearly every state at Low confidence under #77. Run a targeted pass at procurement
+   notices, audit-office reports, parliamentary answers and hosting-provider announcements, then review
+   the dependency labels under #79.
+2. **Unmeasurable holdings.** Defence and intelligence hosting will never be published. Decide whether
+   an officially classified holding is a declared exclusion rather than an unknown. It is a decision
+   entry, because it loosens "silence is never evidence".
+3. **Pages that defeat the quote check.** JavaScript-rendered pages (FI, PT, LT, CY) and refused fetches
+   (LU, LV, RO, IE) account for most of the 23% of claims that did not verify. Add a rendering fetch for
+   verification only, recorded with its own content type, or find static equivalents.
+4. **Thin research.** Austria, Belgium and Estonia were researched shallowly in run 1. Re-run them.
+5. **Record counts and sizes** for capacity (#73). Annual reports and audit-office reports, targeted
+   per class.
 
-### Next — sourcing plan: every published claim cites an original source (approved 2026-09-24)
-The launch gate, widened by the author on 2026-09-24 and recorded in #67: **nothing launches — stage 2
-indexing, stage 3 domain, the book, the mobile release, outreach sends — until every published claim
-cites an original source**, and every planning assumption is either sourced or visibly declared as one.
-Three parts, in this order; no number moves until B3, and every step before it proves so with the
-byte-identical model diff.
-
-**A — one source register** (`model/sources/`, `model/provenance.py`, `tests/test_provenance.py`).
-- A1 ✅ *2026-09-24.* Registry + citations + validator + ratchet; `sources.csv` migrated; the Eurostat
-  cells cited from their pinned series; `write_goal()` looks citations up instead of typing them.
-  `param` 138/621, `assumption` 0/22.
-- A2. Add `source_id` to `fetch_manifest.csv` (so the cached bytes a quote was read from are named)
-  and `institutions.csv` (`national_data.csv` is on the register since #69, 2026-09-26, joined back
-  into the old row shape; its `source_id` is not yet in the bundle); export sources to `eu27.json`; a Sources page and
-  citation popovers in the web app, source links in mobile, a bibliography in the book.
-- A3. Declare the 22 assumptions and 7 scaling rules as `confidence: assumption` with a rationale each,
-  sourcing any that a published benchmark supports; `SOURCES.md` generated from the registry.
-
-**B — replace population/GDP scaling with real government IT inventories.**
-- B1–B2. `model/it_inventory.csv` (`gov_servers`, `gov_storage_pb`, `gov_dc_count`/`gov_dc_mw`,
-  `gov_it_spend_eur`, `gov_it_staff`, `consolidation_target`), each value cited. Research by country
-  batch in the same shape as the outreach pass: source and quote per row, a verifier sample, staging,
-  merge, validators. Candidates: FR DINUM, DE ITZBund/federal consolidation, IT AgID data-centre
-  census and PSN, PL RChO, EE RIT, NL SSC-ICT/ODC and the Rijks ICT-dashboard; OECD *Government at a
-  Glance*, the eGovernment Benchmark, Eurostat COFOG across the Union.
-- B3–B5. `anchor_workloads()` in `generate_countries.py`: anchor on a direct inventory metric where one
-  exists, on IT spend relative to NL where only that does, and fall back to today's formula otherwise;
-  each country records and displays its method. Fix `gov_employment_k` (below) in the same step. The
-  decision entry carries the before/after table; NL must stay 5,691 servers / 14.2 MW / EUR 339 m.
-  Countries with no public inventory stay `scaled`, and say so.
-
-**C — turn Tier 0/1 into a sourced model.**
-- Restate each record class as count × size. Counts come from annual reports (RvIG: BRP size and
-  travel documents; Kadaster: parcels, rights, deeds; Belastingdienst: returns and retention; KVK:
-  registrations); sizes from standards (ICAO Doc 9303, ANSI/NIST-ITL / ISO 19794, eIDAS). Each is a
-  `record:` citation.
-- `model/tier_records.csv` + `model/tier_sizing.py` (pure, like `country_data.build()`), NL first,
-  reconciled against today's ~1.4 PB estimate; output shown per country as its own section, checked to
-  fit inside modelled storage, without driving sizing (#12 stands). Remove the false "Feeds:" line in
-  `TIER0-TIER1-SIZING.md`. Then the other 26 via the Part B research pass.
+### Next — the launch gate (#25, #67)
+Nothing launches (indexing, `eu27.cloud`, the book, a mobile release, outreach) until every published
+claim cites an original source. The mechanism is built and enforced. What remains is a **human
+sampling audit**: an expert re-checks a random sample of admitted claims per class and indicator,
+producing a measured error rate. Two agreeing agent passes (#79) are the interim standard, and are stated
+as such.
 
 ### Then — deployment stage 2: indexing
-**Gated on:** Tier-1 verification (steps 1–4 above).
-
-Delete the two `Disallow` lines from `web/public/robots.txt` — the file's own comment says exactly this —
-redeploy, and confirm the live `/robots.txt` no longer disallows. Nothing else changes: same URL, same
-headers.
+**Gated on:** the sampling audit above. Delete the two `Disallow` lines from `web/public/robots.txt`,
+redeploy, and confirm the live `/robots.txt`.
 
 ### Then — deployment stage 3: `eu27.cloud`
-**Gated on:** the sampling audit (step 5 above).
+**Gated on:** the measured error rate. Registered through Vercel and held unattached (#70); attach it to
+the project, point DNS, and let the apex redirect settle. The domain is deliberately unofficial-sounding
+(#50).
 
-Register `eu27.cloud`, add it to the Vercel project, point DNS, and let the apex redirect settle. The
-domain is deliberately unofficial-sounding so the site is not mistaken for an EU institution's; see
-`DECISIONS.md` #50. A custom domain is also what makes the SSO-protection setting irrelevant, since
-protection applies to `*.vercel.app` only.
+### Then — capacity from holdings (#73)
+Size each state from its own measured holdings with the kept capacity engine, once enough classes have a
+sourced count or size. Each constant stays a declared `assumption:` claim.
 
-### Then — rebuild `gov_employment_k`
-The column is described as Eurostat NACE section O, and for 9 of 27 states it is not. It is one of
-the three scaling weights, so it moves server counts: adopting the official series wholesale would
-move EU-27 servers +1.4%, SE −5.9%, ES +4.7%. Establish what the current values measure before
-replacing them — substituting one unexplained column for another is not a fix.
-
-### Then — close the `ixp` and `threat_notes` gap
-`model/README.md` lists **nine** columns as unverified research; `sources.py` makes seven of them
-sourceable. `ixp` and `threat_notes` are excluded, yet `threat_notes` is the text revealed behind
-three of the eight matrix dimensions and `ixp` is rendered in brief §11. They are unverified and
-uncitable at once, which is the worst combination available. Either bring them into the tiered rule
-or say in `model/README.md` why they are outside it.
-
-### Then — source the model half of the feasibility ranking
-`FEASIBILITY-RANKING.md` rests its AI-model half on unsourced general knowledge (#59). Confirm, per
-state: EuroHPC AI Factory hosting (the four marked `AIF?` first — CZ, NL, RO, LT), the status and
-funding of each national model effort, and AI Gigafactory bids and awards. Also confirm that
-"sovereign data models" meant AI models. Then re-rank and record in the note what moved and why.
-
-### Then — the choropleth
-`/map` is in the navigation but unbuilt, so the nav currently points at nothing.
-
-1. Add `d3-geo` and pick a **conic projection**. Cyprus and Malta are ~3,000 km from Ireland, so an
-   unprojected EU map wastes most of its area on ocean.
-2. Feed it the existing `web/public/data/eu27.json`; `topojson-client` and `world-atlas` are already
-   dependencies, so no new ones are needed.
-3. Use **`scaleQuantile`, not `scaleQuantize`**, for the fill — this is the already-recorded decision
-   under *Deliberately deferred*: Germany at 24,531 servers against Malta's 502 pushes even-domain
-   bucketing into a single shade.
-4. Keep the provenance caveat on the map itself, as on the infographics — a map gets screenshotted away
-   from the page that qualifies it.
+### Then — `gov_employment_k`
+Withheld on every page as "under review": for 9 of 27 states it matches no year of the official series.
+It no longer drives any figure (#72), so the fix is to source it or drop it.
 
 ### Then — make distribution a modelled dimension
 `DISTRIBUTION-AND-TRUST.md` (#64) argues that the Tier 0/1 spine wants many small sites while the
@@ -334,22 +218,16 @@ result." This item is about changing that.
 4. **Thread it through.** `capacity_model.py` sizing math → `country_data.build()` →
    `export_json.py` → **both** `web/src/data/types.ts` and `mobile/src/data/types.ts` identically,
    or `mobile/__tests__/parity.test.ts` fails.
-5. **Re-baseline the tests.** Regenerate the golden `model/eu27_results.csv`, widen
-   `tests/test_model.py`'s `min_sites: (1, 8)` bound deliberately rather than incidentally, and
-   generalise `Conservation.test_site_count_respects_both_floors` — `sites` stops being one scalar.
+5. **Test it.** The engine has only the spreadsheet reproduction test today; a second topology needs
+   its own invariants.
 
-**Gated on:** nothing technical. It is gated on wanting a second topology in the model at all, which
-is a product decision about what the model is for, not housekeeping.
+**Gated on:** capacity from holdings (above), since capacity is withdrawn until then (#73), and on
+wanting a second topology in the model at all, which is a product decision.
 
 ### Later — the paper book
-`paper_book/`, 7 × 10 in, ~280–320 pp, grayscale-safe interior, typeset with Typst (installed).
-
-Structured as **an authored argument plus a country gazetteer**, because measurement forced it: pairwise
-prose similarity across the generated briefs is 73.5% on average, with Lithuania and Latvia at 90.2%. A
-book that is 91% generated text would be unreadable front to back. Parts I, II and V (~20–30k words) have
-to be written; the 27 briefings become an explicitly labelled reference section.
-
-`run.sh book` dispatches to `paper_book/build.py`, which **does not exist yet.**
+`book/build.py` typesets the authored Parts I, II and V (scaffolds, about 1.1k of 20–30k words). The
+generated country parts were withdrawn with the Dutch-scaled figures. When the book returns, they are
+rendered from the content model like the report. Mono interior (#28).
 
 ### Later — a mobile reader
 `mobile/` is an Expo app that reads the 27 country cases on a phone: one app with the country as
@@ -357,8 +235,10 @@ data, not 27 builds. It renders `assets/data/eu27.json` — a copy of the same b
 checked against it by `mobile/__tests__/parity.test.ts` — so the app and the site cannot disagree
 about a figure, and the app needs no network at all.
 
-**It is local-only.** No EAS build, no store listing, no deploy: `.vercelignore` excludes the
-directory and `vercel.json` builds `web/` alone. `./init.sh` then `./run.sh web` in `mobile/`.
+**It is local-only, and still on the schema-1 bundle** (the Dutch-scaled figures). No EAS build, no
+store listing, no deploy. Before any release it must move to schema 2: render the content model, like
+the web country page. Its two open Dependabot alerts (medium, `uuid` and `decode-uri-component`) go with
+that upgrade.
 
 What is deliberately not built yet:
 
@@ -366,7 +246,6 @@ What is deliberately not built yet:
   idle — unconfigured returns `null`, and unconfigured is the default. The one thing a mirror would
   buy is shipping a data correction without a store release, which only matters once there is a
   release. Schema, sync path and RLS are a design job, not a decision taken here.
-- **The matrix heatmap and the poster**, both of which are d3 work on the web side.
 - **A public release**, which sits behind the same gate as indexing and `eu27.cloud`: the legal and
   regulatory entries are not yet verified (#25). The app carries the same placeholder disclaimer the
   site does.
@@ -383,42 +262,22 @@ thing any of these people would check is the entry about their own country.
 
 ## Open questions
 
-### Two per-country PDFs, from two renderers
-Raised 2026-09-08 while resolving the #24/#41 contradiction, and left open deliberately.
-
-- `countries/<ISO>/<ISO>-briefing.pdf` — headless Chrome printing `/country/:iso`. Tracked (#51).
-- `/briefs/<ISO>.pdf` on the site — typst, from `book/build.py --briefs`. Not tracked (#41).
-
-Both render from the same dict, so they cannot disagree about a figure, and #6 is satisfied. But
-#39 chose typst precisely because printing web CSS gives no facing-page margins, no widow control
-and viewport-driven page breaks — "acceptable for a screenshot, weak for a document handed to a
-ministry" — and then the Chrome path came back the next day for the tracked artefacts without that
-being weighed.
-
-If only one should exist, it is the typst brief, and the tracked artefact becomes poster-only. That
-is a product decision about what a country directory is *for*, not housekeeping, so it is not being
-made as a side effect of an audit fix.
+- **Classified holdings in the ranking.** Barrier 2 above: exclusion or unknown. A decision is needed
+  before confidence can rise for most states.
+- **Human review.** Who performs the sampling audit, and to what standard. This gates launch.
 
 ## Deliberately deferred
 
-Recorded so that "we knew and chose not to" stays distinguishable from "we missed it". Full reasoning in
-`DECISIONS.md` #32.
+Recorded so that "we knew and chose not to" stays distinguishable from "we missed it".
 
-- **`scaleQuantile` instead of `scaleQuantize`** in the workload heatmap. With Germany at 24,531 servers
-  against Malta's 502, even-domain bucketing pushes most countries into the lightest shade. A genuine
-  legibility bug, not a preference.
-- **Sub-package D3 imports** (`d3-scale` rather than `d3`), which would cut a 47 KB chunk to about 15 KB.
-- **Discriminating dimensions for the matrix leaders.** France scores 1.00 on all eight dimensions and
-  Germany on seven. The distribution is healthy overall, and France genuinely does lead EU sovereign-cloud
-  doctrine, so this is a finding rather than a defect — but better data (eIDAS wallet status, operator
-  ownership structure) would separate the leaders.
+- **Sub-package D3 imports** (`d3-geo`, `d3-scale` rather than `d3`), to shrink the main chunk.
+- **The map chunk** (`countries-50m`, 243 KB gzipped) loads only on the ranking page; a pre-trimmed
+  EU-27 file would cut it further.
 
 ## Out of scope
 
 - Federation and out-of-country reserve for frontline and micro states — deferred by decision
 - Scored site selection replacing the first-pass regions
-- Hand-deepening the five largest states into full NL-style analyses, which collides with unconditional
-  brief regeneration
 - Publishing a min-cut analysis naming specific infrastructure nodes. `countries/NL/TODO.md` workstream C
   proposes this; the security audit flagged that a published min-cut over real fibre and power topology
   would be a materially different artefact from anything here today, and needs a deliberate decision first
@@ -429,13 +288,8 @@ Recorded so that "we knew and chose not to" stays distinguishable from "we misse
 
 ## The one thing that gates the rest
 
-Everything above is buildable. The project's real constraint is epistemic: the capacity figures are openly
-scaled placeholders and the framing covers them honestly, but the legal and regulatory entries are
-**assertions about what real jurisdictions require**, made from public policy documents by one researcher,
-and not yet checked against primary sources. Since 2026-09-24 the gate covers every published claim,
-not only those (#67, § Sourcing plan above).
-
-That is fine for a public research repository with prominent caveats and a corrections channel — which is
-what exists today, and arguably the fastest route to getting them verified. It is not fine for a custom
-domain, a printed book, or anything handed to an official. The verification work is the gate, and it does
-not get cheaper by being deferred.
+Everything above is buildable. The constraint is epistemic. Every published fact now carries a checked
+source, and every categorical label a second, independent judgement. But agreement between two machine
+passes is not an expert's reading of a statute. Until a human sampling audit measures the error rate,
+this is a public research repository with prominent caveats and a corrections channel: fine for that,
+and not yet fit for a custom domain, a printed book, or anything handed to an official.

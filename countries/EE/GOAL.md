@@ -166,17 +166,17 @@ Tier 0 and 1 holdings for Estonia without a verified source yet. Corrections and
 
 ---
 
-[^s1]: Välisluureamet – Estonian National Security Authority 3a282e16fe. Korduma kippuvad küsimused (Riigi julgeoleku volitatud esindaja). <https://www.teabeamet.ee/nsa/kkk.html>
-[^s2]: Välisluureamet – Estonian National Security Authority 52cd46756f. Võrdlustabelid. <https://www.teabeamet.ee/nsa/tabelid.html>
-[^s3]: Politsei- ja Piirivalveamet (Police and Border Guard Board) 1d46b67463, 2026-07-17. Certificate Policy for ID-1 format identity documents of the Republic of Estonia (eID CP) v2.0. <https://repository.eidpki.ee/static/documents/eid-cp-v-2.0_04.06.2026_allkirjastatud.pdf>
-[^s4]: Riigikontroll (National Audit Office of Estonia) f0e5603207, 2018-05-14. Eesti riigi kriitiliste andmekogude turvalisuse ja säilitamise tagamine. <https://www.riigikontroll.ee/sites/default/files/arhivaalid/2462/RKTR_2462_2-1.4_2213_001-2.pdf>
-[^s5]: Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv 16c4688e19. Riigipilve tehniline lahendus. <https://www.riigipilv.ee/riigipilvest/riigipilve-tehniline-lahendus>
-[^s6]: Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv 42ee6bff70. Mis saab Riigipilvest eriolukorras?. <https://www.riigipilv.ee/riigipilvest/riigipilvest-kkk/mis-saab-riigipilvest-eriolukorras>
-[^s7]: Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv 8882c59d89. Eesti Riigipilv. <https://www.riigipilv.ee/et>
-[^s8]: Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv ff4d0b6ad2. Tellijad. <https://www.riigipilv.ee/riigipilvest/kliendid> ([archived](https://web.archive.org/web/20260510204636/https://www.riigipilv.ee/riigipilvest/kliendid))
+[^s1]: Välisluureamet – Estonian National Security Authority — Korduma kippuvad küsimused (Riigi julgeoleku volitatud…. Korduma kippuvad küsimused (Riigi julgeoleku volitatud esindaja). <https://www.teabeamet.ee/nsa/kkk.html>
+[^s2]: Välisluureamet – Estonian National Security Authority — Võrdlustabelid. Võrdlustabelid. <https://www.teabeamet.ee/nsa/tabelid.html>
+[^s3]: Politsei- ja Piirivalveamet (Police and Border Guard Board) — Certificate Policy for ID-1 format identity documents of…, 2026-07-17. Certificate Policy for ID-1 format identity documents of the Republic of Estonia (eID CP) v2.0. <https://repository.eidpki.ee/static/documents/eid-cp-v-2.0_04.06.2026_allkirjastatud.pdf>
+[^s4]: Riigikontroll (National Audit Office of Estonia) — Eesti riigi kriitiliste andmekogude turvalisuse ja…, 2018-05-14. Eesti riigi kriitiliste andmekogude turvalisuse ja säilitamise tagamine. <https://www.riigikontroll.ee/sites/default/files/arhivaalid/2462/RKTR_2462_2-1.4_2213_001-2.pdf>
+[^s5]: Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv — Riigipilve tehniline lahendus. Riigipilve tehniline lahendus. <https://www.riigipilv.ee/riigipilvest/riigipilve-tehniline-lahendus>
+[^s6]: Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv — Mis saab Riigipilvest eriolukorras?. Mis saab Riigipilvest eriolukorras?. <https://www.riigipilv.ee/riigipilvest/riigipilvest-kkk/mis-saab-riigipilvest-eriolukorras>
+[^s7]: Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv — Eesti Riigipilv. Eesti Riigipilv. <https://www.riigipilv.ee/et>
+[^s8]: Riigi Info- ja Kommunikatsioonitehnoloogia Keskus (RIT) – Riigipilv — Tellijad. Tellijad. <https://www.riigipilv.ee/riigipilvest/kliendid> ([archived](https://web.archive.org/web/20260510204636/https://www.riigipilv.ee/riigipilvest/kliendid))
 [^s9]: Eurostat tps00001, 2025. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
 [^s10]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
 [^s11]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
 [^s12]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
 [^s13]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
-[^s14]: Riigi Teataja 2feeedaf05, 2026-03-13. Isikut tõendavate dokumentide seadus (Internet Archive copy of Riigi Teataja). <https://web.archive.org/web/20260313205329/https://www.riigiteataja.ee/akt/itds>
+[^s14]: Riigi Teataja — Isikut tõendavate dokumentide seadus (Internet Archive…, 2026-03-13. Isikut tõendavate dokumentide seadus (Internet Archive copy of Riigi Teataja). <https://web.archive.org/web/20260313205329/https://www.riigiteataja.ee/akt/itds>

@@ -4,8 +4,13 @@ The one thing gating everything public-facing: whether the legal and regulatory 
 `model/eu27_parameters.csv` have been checked against primary sources. `ROADMAP.md` states the
 gate; this file is how the work is done and where it currently stands.
 
-**Status: 2 of 189 legal cells sourced; 138 of 621 parameter cells across all columns.** Run
-`./run.sh sources` (legal cells) and `python3 model/provenance.py` (every namespace) for the live figures.
+**Status (2026-09-30):**
+- The legal columns of `eu27_parameters.csv` stand at 2 of 189 cells sourced.
+- Research runs 1 and 2 now carry most of the evidence, in two newer registers: 416 critical holdings
+  (1,017 cited claims) and 134 of 189 ranking indicators.
+- No value without a checked source is shown anywhere (`python3 model/document.py --check`).
+- The full pipeline (research, quote check, independent review, admission) is described in
+  [`METHOD.md`](METHOD.md). Run `python3 model/provenance.py` for every namespace.
 
 Where to look for each state's instruments is a separate document, [`SOURCES.md`](SOURCES.md),
 together with the fetch pipeline that keeps a local copy of every document consulted. This file
@@ -19,7 +24,7 @@ records does this state hold, and where is the official page that says so*. Both
 publisher, the retrieval date and a quote from the page, for the same reason — a URL shows that a
 page exists, not that it says what the row claims.
 
-**Status: 3 of 405 (country, record class) pairs recorded.** Run `./run.sh registers`.
+**Status: 419 of 1,053 (country, holding class) pairs recorded**, widened to 39 classes by #73. Run `./run.sh registers`.
 
 Two differences worth knowing before working on it:
 
@@ -37,8 +42,8 @@ read as a statement of what a state does and does not hold, rather than as a sco
 
 ## What is and is not at issue
 
-The capacity figures are openly scaled placeholders. The model says so, the briefs say so, the
-posters print it on their face, and nobody is misled by a number that announces its own basis.
+The capacity figures were scaled placeholders, and are withdrawn (#72, #73): no output shows a capacity
+figure until a state can be sized from its own measured holdings.
 
 The legal and regulatory columns are a different kind of claim. They assert what 27 real
 jurisdictions **require** — the governing instrument, the certification regime, the

@@ -7,13 +7,17 @@ the tracked per-country PNG and PDF binaries. Those are covered here by
 [`png/STYLE.md`](png/STYLE.md) and [`pdf/STYLE.md`](pdf/STYLE.md), but the word "artefact" in the
 rest of the repo keeps its existing narrower meaning.
 
+**Start with [`STYLE.md`](STYLE.md)**, the one style guide for every representation, generated from
+`design/tokens.json` (#74, #76). The per-format guides below add only what is specific to their format.
+
 | Guide | Covers | Built by |
 |---|---|---|
+| [`STYLE.md`](STYLE.md) | colour, type, facts and gaps, provenance, the ranking: everything shared | `design/build_tokens.py` |
 | [`markdown/STYLE.md`](markdown/STYLE.md) | `countries/<ISO>/GOAL.md`, `countries/SUMMARY.md` | `model/generate_countries.py` |
 | [`html/STYLE.md`](html/STYLE.md) | the React + Vite app | `web/` |
-| [`pdf/STYLE.md`](pdf/STYLE.md) | the A5 book, the 27 A4 briefs, the 27 briefing PDFs | `book/build.py`, `model/export_artifacts.py` |
+| [`pdf/STYLE.md`](pdf/STYLE.md) | the EU-27 report, the 27 country reports, the print book | `book/report.py`, `book/build.py` |
 | [`png/STYLE.md`](png/STYLE.md) | the 27 poster infographics | `model/export_artifacts.py` |
-| [`mobile/STYLE.md`](mobile/STYLE.md) | the Expo reader | `mobile/` |
+| [`mobile/STYLE.md`](mobile/STYLE.md) | the Expo reader (stale, see its header) | `mobile/` |
 
 ## What these guides are, and are not
 
@@ -31,30 +35,26 @@ Two consequences, both deliberate:
   guides are in that list, so a stale citation breaks the suite rather than quietly misleading
   someone.
 
-The page-level design system is also upstream, not here:
-`~/dev/design/DESIGN_SYSTEMS.md` owns "Warm Neutral + Terracotta". `html/STYLE.md` records only
-this project's **deltas** from it, with the measurement that justified each one.
+The design system used to be upstream ("Warm Neutral + Terracotta", #21). Since #76 it is this
+project's own EU palette, defined in `design/tokens.json` and documented in [`STYLE.md`](STYLE.md).
 
 ## Invariants that hold across every representation
 
 These are not per-format choices. They are properties of the project, and breaking one in any
 representation is a bug in that representation.
 
-1. **One dict, many renderings (#6, #7).** Every figure comes from `country_data.build()`, via
-   `web/public/data/eu27.json`. No renderer recomputes, re-derives or hardcodes a number. A
-   representation that can disagree with another one is already wrong, whichever is correct.
-2. **The caveat travels with the artefact (#25).** Anything that can be shared on its own carries
-   its own provenance line. An image gets forwarded without the page that explained it; a PDF gets
-   printed without the site it came from.
-3. **No state emblems, flags, crowns or official-looking wordmarks on the artefacts (#47).**
-   These describe a programme that exists in no member state. They must not read as though a
-   government published them. Country flag emoji are permitted **only** in tables of contents,
-   indexes and navigation — never in a poster, a briefing PDF, a title block or a wordmark.
-4. **Byte-reproducible output (#15, #53).** Nothing reads the wall clock. The build date comes
-   from `.build-epoch` via `SOURCE_DATE_EPOCH`, and Chrome's PDF timestamps are rewritten after
-   the fact. Re-running a build with no input change must produce a zero diff.
-5. **Ratings are disclosed as judgements, never as measurements.** `gov_cloud_maturity`,
-   `certification_strength` and `hyperscaler_dependency` are the author's opinions. Every
-   representation that shows one says so in the same breath (#10).
-6. **Generated files say they are generated.** Every rendered document names the script that
-   wrote it and the inputs it read, so a reader knows what to edit.
+1. **One content model, many renderings (#6, #74).** Every sentence and figure comes from
+   `model/document.py`, via `web/public/data/eu27.json`. No renderer writes content of its own, or
+   recomputes or hardcodes a number.
+2. **Every fact is sourced, every gap is visible (#75).** A value without a checked citation is
+   never shown as a fact; it is a gap, set in muted italics. `document.py --check` enforces this.
+3. **The caveat travels with the artefact (#25).** Anything that can be shared on its own carries
+   its own provenance line.
+4. **No state emblems, flags, crowns or official-looking wordmarks (#47, #76).** Country flag emoji
+   are permitted **only** in the markdown index.
+5. **Byte-reproducible output (#15, #34).** Nothing reads the wall clock; the build date comes from
+   `.build-epoch` via `SOURCE_DATE_EPOCH`. Re-running with no input change produces a zero diff.
+6. **The ranking is groups, never a score (#10, #77).** A placement always appears with its
+   confidence and the guardrail sentence.
+7. **Generated files say they are generated.** Every rendered document names the script that
+   wrote it, so a reader knows what to edit.

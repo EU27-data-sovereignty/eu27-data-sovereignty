@@ -1,5 +1,9 @@
 # `mobile/` — the Expo reader
 
+> **Stale (2026-09-30).** This reader ships the schema-1 bundle: the Dutch-scaled capacity figures that
+> #72 and #73 withdrew everywhere else. It is local-only and must move to the schema-2 content model
+> before any release (`ROADMAP.md`). The description below is of the schema-1 app.
+
 A phone reader for the 27 country cases. One app, with the country as data rather than as a build
 flavour: pick a member state, read its capacity, legal posture, provider landscape and migration
 path, switch to another.

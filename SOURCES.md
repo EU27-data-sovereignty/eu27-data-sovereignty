@@ -93,7 +93,8 @@ page said on the day it was read — does not yet hold for them, and link rot th
 Bringing them under `./run.sh fetch` is open work; until then, treat a register row's quote as the
 only evidence, which is what the validator enforces.
 
-Run `./run.sh registers` for coverage. Currently 3 of 405 pairs.
+Run `./run.sh registers` for coverage. 419 of 1,053 pairs as of 2026-09-30; the pages behind them are
+fetched, hashed and recorded in `model/fetch_manifest.csv` by `model/research.py` (see [`METHOD.md`](METHOD.md)).
 
 ## Endpoints per member state
 
