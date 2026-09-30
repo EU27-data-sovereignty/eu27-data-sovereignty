@@ -33,6 +33,7 @@ KIND = {"register": "Register or system", "operator": "Operator", "count": "Reco
 
 # Why a fact is Standard rather than Strong: each Strong condition it misses (a fact can miss several).
 SHORTFALLS = [
+    ("Best source below T2 (e.g. an unofficial law mirror)", lambda c: c["tier"] > 2),
     ("Machine summary of a non-English quote, no figure to match",
      lambda c: c["language"] != "english" and c.get("value") in ("summary", "verbatim_gloss")
      and not c.get("figures_matched")),
@@ -67,7 +68,16 @@ def build(b: dict) -> str:
     by_state = collections.defaultdict(collections.Counter)
     by_kind = collections.defaultdict(collections.Counter)
     shortfall = collections.Counter()
+    tiers = collections.Counter()
+    tier_kinds = collections.Counter()
+    mirrors = collections.Counter()
     for iso, span, best in rows:
+        top = min(b["claims"][span["c"][0]], key=lambda c: c["checks"]["tier"])["checks"]
+        t = top["tier"]
+        tiers[t] += 1
+        tier_kinds[(t, top["tier_kind"])] += 1
+        if top["tier_kind"] == "unofficial_law_mirror":
+            mirrors[iso] += 1
         by_state[iso][span["g"]] += 1
         by_kind[kind_of(span["c"][0])][span["g"]] += 1
         if span["g"] == evidence.STANDARD:
@@ -109,6 +119,29 @@ def build(b: dict) -> str:
         "```",
         "",
         f"**How grades are set.** {b['notice']['grade_rule']}",
+        "",
+        "## Source tiers",
+        "",
+        "How good is the best source behind each printed fact? Tiers are set per host in "
+        "[`model/sources/authorities.csv`](../model/sources/authorities.csv) (#83), a classification made "
+        "by an agent and not yet reviewed by a person.",
+        "",
+        *[f"- **{evidence.TIERS[t]}**" for t in sorted(evidence.TIERS)],
+        "",
+        "```mermaid",
+        "pie showData",
+        '  title "Printed facts by best source tier"',
+        *[f'  "T{t}" : {tiers[t]}' for t in sorted(tiers)],
+        "```",
+        "",
+        "| Tier | Kind of source | Facts |",
+        "|---|---|---:|",
+        *[f"| T{t} | {k.replace('_', ' ')} | {n} |" for (t, k), n in sorted(tier_kinds.items())],
+        "",
+        "Facts whose best source is an unofficial copy of a statute are the first target of the vetting "
+        "run: the same text on the official law portal would make them T1.",
+        "",
+        *bar("Facts resting on an unofficial law mirror, per state", [mirrors[i] for i in isos], "facts"),
         "",
         "## Why most facts are Standard",
         "",

@@ -16,10 +16,12 @@ No human has verified the findings. That is said on every surface, first, in the
 """
 from __future__ import annotations
 
+import csv
 import re
 import unicodedata
 import urllib.parse
 from decimal import Decimal, InvalidOperation
+from pathlib import Path
 
 DISCLAIMER = (
     "Machine-checked, not human-verified. Automated agents found these sources and checked them "
@@ -159,9 +161,59 @@ if __name__ == "__main__":
 # passed, and a fixed rule turns the list into one of two grades. A fact below Standard is not
 # printed at all; it is a gap. The grade is always computed here, never read from data.
 
+# --------------------------------------------------------------------------- #
+# Source tiers (#83)
+# --------------------------------------------------------------------------- #
+# What "a top-quality source" means, mechanically. model/sources/authorities.csv classifies every
+# cited host once; two cases are decided here, because the host alone cannot decide them:
+#   - ec.europa.eu is Eurostat (T1) for a dataset, and otherwise a Commission page (T3);
+#   - an archive URL is as good as the page it archived.
+# Not (yet) a rule: "the operator's own domain is T1 for its register". national_data.csv's holder_url
+# is the URL the research agent cited, not an independently known operator domain, so the rule would
+# be true by construction. It needs operator domains recorded on their own evidence first.
+# The classification was made by an agent on 2026-09-30 and has not been reviewed by a person.
+
+TIERS = {
+    1: "T1 authoritative original (official law portal, statistics office, Eurostat)",
+    2: "T2 competent public body or audit office",
+    3: "T3 other institution or company",
+    4: "T4 secondary (unofficial law mirror, press, encyclopedia)",
+}
+AUTHORITIES = Path(__file__).resolve().parent / "sources" / "authorities.csv"
+_authorities: dict[str, dict[str, str]] | None = None
+
+
+def authorities() -> dict[str, dict[str, str]]:
+    global _authorities
+    if _authorities is None:
+        with AUTHORITIES.open(newline="", encoding="utf-8") as fh:
+            _authorities = {r["host"]: r for r in csv.DictReader(fh)}
+    return _authorities
+
+
+def host(url: str) -> str:
+    """The host a URL speaks for; an archived copy speaks for the page it archived."""
+    if url.startswith("https://web.archive.org/web/"):
+        parts = url.split("/", 5)
+        if len(parts) == 6:
+            url = parts[5]
+    return (urllib.parse.urlsplit(url).hostname or "").removeprefix("www.")
+
+
+def tier(source: dict) -> tuple[int, str]:
+    """(tier, kind) of a source. Raises KeyError for a host nobody classified."""
+    row = authorities()[host(source["url"])]
+    if row["kind"] == "eurostat_or_commission":
+        return (1, "eurostat") if source["doc_type"] == "dataset" else (3, "commission_page")
+    if row["kind"] == "archive_of_another_source":
+        return 4, "archive_without_original"
+    return int(row["tier"]), row["kind"]
+
+
 STRONG, STANDARD = "Strong", "Standard"
 GRADE_RULE = (
-    f"{STRONG}: an official or primary source; the quote found exactly in the hashed document; an "
+    f"{STRONG}: a T1 or T2 source (an authoritative original or a competent public body); an official "
+    "or primary source; the quote found exactly in the hashed document; an "
     "archived copy of exactly that URL; no name in the value missing from the quote; and the value "
     "either quoted from an English source, found verbatim in the original, or resting on figures "
     "matched in the original. A categorical finding is Strong only after a blind review. "
@@ -186,7 +238,8 @@ def snapshot_is_exact(snapshot: str, url: str) -> bool:
 
 def checklist(checks: dict) -> list[str]:
     """The checks as short phrases a reader can scan, in the order the grade rule reads them."""
-    out = [{"primary": "primary source", "official": "official source", "secondary": "secondary source",
+    out = [TIERS[checks["tier"]].split(" (")[0] + f" ({checks['tier_kind'].replace('_', ' ')})"]
+    out += [{"primary": "primary source", "official": "official source", "secondary": "secondary source",
             "absence": "authoritative statement of absence"}.get(checks["source"], checks["source"])]
     if checks.get("dataset_value_reproduced"):
         out.append("dataset value reproduced; response not hashed")
@@ -212,7 +265,10 @@ def assess(value: str, citation: dict, source: dict, *, categorical: bool) -> di
     """The checklist and grade for one citation backing one printed value."""
     dataset = source["doc_type"] == "dataset"
     original, gloss = split_quote(citation["quote"])
+    t, t_kind = tier(source)
     checks: dict = {
+        "tier": t,
+        "tier_kind": t_kind,
         "source": citation["confidence"],
         "archived": snapshot_is_exact(source.get("archived_url", ""), source["url"]),
         "language": "english" if not gloss else "machine-translated",
@@ -233,7 +289,8 @@ def assess(value: str, citation: dict, source: dict, *, categorical: bool) -> di
         checks["names_not_in_quote"] = v["missing_names"]
 
     strong = (
-        checks["source"] in ("primary", "official")
+        checks["tier"] in (1, 2)
+        and checks["source"] in ("primary", "official")
         and checks["archived"]
         and checks["document_hashed"]
         and checks.get("quote_match") == "exact"

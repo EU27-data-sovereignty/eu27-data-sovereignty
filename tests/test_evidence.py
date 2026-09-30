@@ -141,8 +141,9 @@ class Grades(unittest.TestCase):
     """The evidence grade is computed by one rule and never read from data (#82)."""
 
     def test_the_bundle_grade_is_the_rule_recomputed(self):
-        import provenance  # noqa: PLC0415
-        reg = provenance.registry()
+        import document  # noqa: PLC0415
+        src = document.Sources()
+        reg = src.reg
         docs = BUNDLE["documents"]
         text = {c: sp["t"] for d in docs.values() for sp in self._spans(d) if sp.get("role") == "fact"
                 for c in sp["c"]}
@@ -160,6 +161,7 @@ class Grades(unittest.TestCase):
                 if c["grade"] != evidence.STRONG:
                     continue
                 ck = c["checks"]
+                self.assertIn(ck["tier"], (1, 2), claim)
                 self.assertIn(ck["source"], ("primary", "official"), claim)
                 self.assertTrue(ck["archived"] and ck["document_hashed"], claim)
                 self.assertEqual(ck.get("quote_match"), "exact", claim)

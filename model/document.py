@@ -111,6 +111,7 @@ class Sources:
         for c in self.cites:
             self.by_claim.setdefault(c["claim"], []).append(c)
 
+
     def supported(self, claim: str) -> bool:
         return any(provenance.supported(c, self.reg, self.params) for c in self.by_claim.get(claim, []))
 

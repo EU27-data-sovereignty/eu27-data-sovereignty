@@ -147,7 +147,48 @@ with the inputs that could still move it.
 > Groups describe what the sources show, not how sovereign a state is. A Low-confidence placement mostly
 > reflects research that is not finished.
 
-## 7. What this does not establish
+## 7. Source tiers and vetting
+
+**What counts as a top-quality source** is decided per host, once, in
+[`model/sources/authorities.csv`](model/sources/authorities.csv) (#83):
+
+| Tier | Kind | Examples |
+|---|---|---|
+| **T1** | The authoritative original: the official law portal or gazette, the statistics office, Eurostat | `ris.bka.gv.at`, `boe.es`, `gesetze-im-internet.de`, `riigiteataja.ee` |
+| **T2** | A competent public body or an audit office | ministries, agencies, registries, `rechnungshof.gv.at` |
+| **T3** | Another institution or a company | trust-service vendors, foundations |
+| **T4** | Secondary: an unofficial copy of a statute, press, an encyclopedia | `net.jogtar.hu`, `zakonyprolidi.cz`, `lawspot.gr` |
+
+An archived copy counts as the page it archived. The table was drawn up by an agent and has not been
+reviewed by a person. A fact is **Strong** only if its source is T1 or T2. On 2026-09-30, 166 printed
+facts rested on a T4 source, 158 of them on an unofficial copy of a statute. The live numbers are in
+[`docs/evidence.md`](docs/evidence.md).
+
+**Vetting** re-examines every printed fact, then the gaps, against these tiers. It also asks whether
+newer information exists. Nothing it finds is trusted: every claim goes through the same quote check,
+value-in-quote rule and blind review as the first research.
+
+```mermaid
+flowchart TD
+  F[Printed fact<br/>value, source, tier, date] --> R[Researcher agent<br/>per state]
+  R -->|same statement,<br/>T1/T2 source| U[upgrade or<br/>corroborate]
+  R -->|same authority,<br/>later date| S[supersedes]
+  R -->|different value| C[contradicts]
+  R -->|gap filled| G[fills gap]
+  U & S & C & G --> B[Blind reviewer<br/>sees quote and URL,<br/>not the proposed value]
+  B --> M{Mechanical checks<br/>fetch, hash, quote,<br/>value in quote}
+  M -->|agree and pass| A[Admitted]
+  M -->|fail or disagree| X[Stays out,<br/>reason recorded]
+  A --> D{Contradiction?}
+  D -->|no| P[Printed with its grade]
+  D -->|yes| DS[Shown as disputed:<br/>both sources named]
+```
+
+A contradiction is never settled by hand. A later statement by the same authority supersedes an earlier
+one, and a higher tier wins. Otherwise the fact stays **disputed**, with both sources shown, until one of
+those rules applies.
+
+## 8. What this does not establish
 
 - **No person has verified any finding.** Every output says so first, in the same words
   (`model/evidence.py`, #82). Two agreeing machine passes are the interim standard; a human sampling

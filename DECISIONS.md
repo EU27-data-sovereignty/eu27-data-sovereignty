@@ -1704,3 +1704,49 @@ recomputes every bundle grade from its checks and asserts no Strong fact misses 
 summary could then be graded by that rate rather than only labelled. It would also change if a claim
 kind gains a structured value (a number with a unit), which could be matched exactly instead of by
 tokens.
+
+### 83. "Top quality" is a source tier per host; facts are vetted against it, and contradictions are shown
+**Decision.** 2026-09-30. Every cited host is classified once in `model/sources/authorities.csv`:
+- **T1:** official law portal or gazette, statistics office, Eurostat;
+- **T2:** competent public body or audit office;
+- **T3:** other institution or company;
+- **T4:** unofficial law mirror, press, encyclopedia.
+
+`evidence.tier()` reads the table. An archived copy counts as the page it archived, and `ec.europa.eu` is
+T1 only for a dataset. A fact is Strong only if its source is T1 or T2. A vetting run re-examines every
+printed fact and then the gaps: it looks for a T1/T2 source (an upgrade or a corroboration), newer
+information (supersedes), a contradiction, or a filled gap. Each finding goes through the existing
+quote check, the value-in-quote rule (#82) and a blind review. A contradiction makes the fact
+**disputed**, never silently replaced. A later statement by the same authority supersedes, and a higher
+tier wins. Otherwise the fact stays disputed.
+
+**Problem.** Each of the 918 printed facts rests on the one source a single agent found in one pass on
+2026-09-29. Nothing recorded how good that source was beyond "official" or "secondary". With tiers
+applied, 166 facts rest on a T4 source, 158 of them on an unofficial copy of a statute such as
+`net.jogtar.hu` or `zakonyprolidi.cz`, where the official portal exists. 302 of 574 cited sources have no
+publication date, and nothing re-checked a source after admission.
+
+**Alternatives considered.**
+- **A tier per host, in a table, with two rules in code (chosen).** It is complete, since a test fails on
+  an unclassified host, and every judgement is one reviewable line.
+- **A tier from the `doc_type` and `confidence` the research agent chose.** *Why not:* those are the
+  agent's own labels. `confidence: official` sits on 158 citations of commercial statute mirrors.
+- **"The operator's own domain is T1 for its register."** *Why not, for now:* `national_data.csv`'s
+  `holder_url` is the URL the agent cited (`research.admit`), so the rule is true by construction. The
+  first version of this change applied it and marked 531 facts T1. It needs operator domains recorded
+  on their own evidence first.
+- **Replace a contradicted fact with the newest top-tier source automatically.** *Why not:* a newer page
+  can be wrong, or about a different register. Showing both sources costs one visible gap. Silently
+  replacing risks printing the error with more confidence.
+
+**Closes off.** A Strong grade on anything but a T1/T2 source. Treating an unofficial copy of a law as
+the law. Resolving a contradiction by judgement rather than by the two published rules.
+
+**Verified:** 2026-09-30, for the tiers: `tests/test_vetting.py` passes. Every cited host is classified,
+mirrors are T4, and no fact below T2 is Strong. Best tier per printed fact is T1 343, T2 400, T3 9 and
+T4 166 (`docs/evidence.md`), and Strong fell from 76 to 59. The vetting run: NOT YET. It is verified by
+all 27 staging files with blind verdicts and by the vetting report's counts.
+
+*Would change if:* a person reviews `authorities.csv` and reclassifies hosts, since the table is an
+agent's work. It would also change if operator domains are recorded independently, which would allow
+the operator-domain rule.
