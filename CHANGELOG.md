@@ -234,8 +234,11 @@ A record of what was wrong, including in this day's own work:
 - **Verified:** `./run.sh admit --check` reports "6 of 6 registers reproduce from the committed
   evidence". `./test.sh` passes in full, including the new stages: admission, PDFs, and the evidence rules
   in the browser.
-- **Not yet:** `./run.sh reproduce` on the committed tree (#84); the first CI deploy (#81), which needs
-  the `VERCEL_TOKEN` secret.
+- **Verified:** `./run.sh reproduce` on commit `f62eaac`, "reproduced from scratch" in 30 s: a fresh
+  clone regenerated every output identically, and admission, the PDFs, the web build and the tests all
+  passed. A register cell edited by hand makes `admit --check` fail, naming the line.
+- **Not yet:** `./run.sh reproduce --evidence`, the full re-fetch in a clean room; the first CI deploy
+  (#81), which needs the `VERCEL_TOKEN` secret.
 - **No finding has been reviewed by a person.**
 
 ---

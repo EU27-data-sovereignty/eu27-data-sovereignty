@@ -1822,7 +1822,12 @@ whose prompts, input or model cannot be identified.
 - `./run.sh admit --check`: "6 of 6 registers reproduce from the committed evidence". Its first run found
   admission was not a fixed point (46 register rows moved on a second run). Admission now rebuilds from
   its base every time.
-- `./run.sh reproduce` on the committed tree: NOT YET. It is verified when the clean room rebuilds HEAD.
+- A register cell edited by hand makes `admit --check` exit 1, naming the line ("5 of 6 registers
+  reproduce").
+- `./run.sh reproduce` on commit `f62eaac`: "reproduced from scratch" in 30 s. A fresh clone regenerated
+  every output with `git status` clean, admission reproduced all 6 registers, all 28 PDFs compiled, the
+  web app built, and the Python suite passed.
+- `--evidence`, the full re-fetch in a clean room: NOT YET.
 
 *Would change if:* the agent runs become deterministic (a pinned model snapshot with fixed sampling),
 which would let a rerun reproduce the findings themselves. It would also change if fetched documents
