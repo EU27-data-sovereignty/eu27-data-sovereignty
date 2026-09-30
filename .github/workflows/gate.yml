@@ -1,0 +1,26 @@
+name: Gate
+
+# The full ./test.sh, called by deploy.yml and preview.yml. Nothing deploys, to production or to
+# a preview, without this job passing first (#81, #82).
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    name: Full gate (./test.sh)
+    runs-on: ubuntu-latest
+    env:
+      # ubuntu-latest ships Google Chrome; playwright.config.ts uses an installed browser (#22).
+      CHROME_PATH: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: ./.github/actions/toolchain
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm ci --prefix web
+      - name: Run the gate
+        run: ./test.sh

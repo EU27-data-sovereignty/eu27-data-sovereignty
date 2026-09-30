@@ -1,0 +1,28 @@
+name: Toolchain
+description: Python, Node and typst for the gate and the prebuilt deploys (#81, #82).
+
+# One place for the build toolchain, so the gate, the production deploy and the preview deploy
+# cannot drift apart. typst is pinned and checksummed, never `latest` (dotfiles supply-chain.md).
+# The sha256 is the one GitHub publishes for the release asset; bump both together.
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+      with:
+        python-version: "3.14"
+    - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      with:
+        node-version: "24"
+    - name: Install typst (pinned, checksummed)
+      shell: bash
+      env:
+        TYPST_VERSION: v0.15.1
+        TYPST_SHA256: a6d077d0a95eed5a2eba715b2dae06be954f624ccbf85758a03f389ded33118c
+      run: |
+        curl -sSLo typst.tar.xz "https://github.com/typst/typst/releases/download/${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz"
+        echo "${TYPST_SHA256}  typst.tar.xz" | sha256sum -c -
+        tar -xJf typst.tar.xz
+        mkdir -p "$HOME/.local/bin"
+        mv typst-x86_64-unknown-linux-musl/typst "$HOME/.local/bin/typst"
+        rm -rf typst.tar.xz typst-x86_64-unknown-linux-musl
+        echo "$HOME/.local/bin" >> "$GITHUB_PATH"

@@ -1,0 +1,76 @@
+name: Preview
+
+# Every pull request that passes the full gate gets a prebuilt preview deployment (#82). Previews
+# sit behind Vercel login, so the smoke test goes through `vercel curl`, and a plain curl must be
+# refused. Nothing here deploys to production: no --prod, and the `production` environment, the
+# only one holding the production token path, is restricted to main.
+on:
+  pull_request:
+
+# A newer push to the same branch replaces a preview still being built.
+concurrency:
+  group: preview-${{ github.head_ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  VERCEL_CLI: vercel@61.1.0
+
+jobs:
+  gate:
+    uses: ./.github/workflows/gate.yml
+
+  preview:
+    name: Build and deploy a protected preview
+    needs: gate
+    # A pull request from a fork gets no secrets, so it stops at the gate.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    environment:
+      name: preview
+      url: ${{ steps.deploy.outputs.url }}
+    env:
+      VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: ./.github/actions/toolchain
+      - name: Pull project settings
+        run: npx --yes "$VERCEL_CLI" pull --yes --environment=preview --token="$VERCEL_TOKEN"
+      - name: Build (web app, EU-27 report, 27 country PDFs)
+        run: |
+          export SOURCE_DATE_EPOCH="$(cat .build-epoch)"
+          npx --yes "$VERCEL_CLI" build --token="$VERCEL_TOKEN"
+      - name: Deploy prebuilt
+        id: deploy
+        run: |
+          url="$(npx --yes "$VERCEL_CLI" deploy --prebuilt --token="$VERCEL_TOKEN")"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+      - name: Smoke test the preview
+        env:
+          URL: ${{ steps.deploy.outputs.url }}
+        run: |
+          set -euo pipefail
+          check() {  # path, expected content-type prefix
+            read -r code type < <(npx --yes "$VERCEL_CLI" curl "$1" --deployment "$URL" --token="$VERCEL_TOKEN" \
+              -- -sS -o /dev/null -w '%{http_code} %{content_type}\n')
+            echo "$1 -> $code $type"
+            [ "$code" = 200 ] && [[ "$type" == "$2"* ]]
+          }
+          check / text/html
+          check /country/DE text/html
+          check /eu27-report.pdf application/pdf
+          check /report/DE.pdf application/pdf
+          # Protected: without Vercel auth the preview must not serve the page.
+          code="$(curl -sS -o /dev/null -w '%{http_code}' "$URL/")"
+          echo "unauthenticated / -> $code"
+          [ "$code" != 200 ] || { echo "::error::preview is publicly readable"; exit 1; }
+          {
+            echo "### Preview"
+            echo "| Deployment | Commit |"
+            echo "|---|---|"
+            echo "| $URL | \`${GITHUB_SHA::7}\` |"
+          } >> "$GITHUB_STEP_SUMMARY"
