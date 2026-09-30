@@ -1637,3 +1637,59 @@ smoke test passing against `https://eu27.cloud`.
 
 *Would change if:* the build starts needing secrets at build time, or Vercel's build image gains typst. In
 the second case the Git integration would do the same job with less of our own CI.
+
+---
+
+## Evidence that holds up
+
+### 82. A fact is printed only if its figures are in its quote; nothing is claimed as human-verified
+**Decision.** 2026-09-30. Four rules, in `model/evidence.py`, `model/provenance.py` and `model/document.py`:
+- **Recorded evidence.** `provenance.supported()` accepts a non-dataset citation only with a quote of 20
+  or more characters and a passing quote check in `research/verification.csv` for the source URL, at the
+  sha256 the registry records. A dataset citation still needs its value to reproduce the cell.
+- **Value in quote.** `Sources.fact()` checks the printed text against each supporting citation. Every
+  number and date must appear in the original-language quote, in any EU number format, or the value is
+  a gap. A missing acronym is disclosed, not fatal. Categorical values (indicators, infrastructure
+  dependency, "No central register") come from a closed vocabulary and are admitted by review (#79).
+  `document.py --check` re-runs the rule on every fact span.
+- **Disclosure.** Every output carries one disclaimer, in the same words: machine-checked, not
+  human-verified; English wording is machine translation or summary.
+- **Honest method text.** The list of checks is generated from `evidence.CHECKS`, and the ranking rule
+  from `sovereignty.RULE`. `tests/test_evidence.py` fails on wording that claims a check that did not run.
+
+**Problem.** The gate proved that each quote is in its document. It never proved the report printed what the
+quote says. A 2026-09-30 audit found 9 of 31 printed record counts carried numbers missing from their
+quote. `record:BG:authentication_audit_log:count` printed a 10-year retention period as a record count.
+`record:FR:police_records:count` added "48 million victim records" to a quote that says 17 million.
+`supported()` returned `True` for any non-dataset citation, so 5 hand-migrated citations (#67) with no
+recorded quote check were printed as facts. The report also said every fact was "fetched, hashed and
+checked", which was false for 136 Eurostat figures.
+
+**Alternatives considered.**
+- **Figures hard, summaries labelled (chosen).** Numbers and dates are where a misreading does harm and
+  where a check is mechanical. The words of an English summary of a foreign quote cannot be checked
+  mechanically, so they are labelled as a summary and shown beside the original.
+- **Verbatim only.** *Why not:* only 15 of 676 record facts are verbatim extracts. About 580 would become
+  gaps until every claim is re-researched, and the report would be empty for reasons of format, not
+  evidence.
+- **Hard on acronyms too.** *Why not:* 138 facts failed only on an acronym, mostly a correct
+  transliteration of one in the quote (*MVR* for *МВР*). Treating a transliteration like an invented
+  figure removes true facts, and disclosing it per fact loses nothing.
+- **A numeric confidence score per fact.** *Why not:* nothing has calibrated one. Without a human audit,
+  a number such as 0.87 claims a precision nobody measured (#10, #77).
+
+**Closes off.** Printing a figure its quote does not contain, whatever the researcher meant by it. A
+value that bundles a second figure or an article number with its finding is withheld until re-staged
+with a clean value. That is why `record:FR:police_records:count` is a gap and not "17 million". It also
+closes off describing the checks as a human review.
+
+**Verified:** 2026-09-30. `python3 model/document.py --check`: 27 documents checked, 0 unsourced facts.
+Printed facts fell from 997 to 922, with `tests/test_evidence.py` `FACT_FLOOR = 922`. The coverage floors
+fell from param 138 to 136 and record 1017 to 1014 (`tests/test_provenance.py`, reason recorded).
+`tests/test_evidence.py` asserts that BG `authentication_audit_log:count` and FR `police_records:count`
+are not printed, and that a citation without a recorded quote check supports nothing.
+
+*Would change if:* a human sampling audit measures the error rate of machine summaries. The words of a
+summary could then be graded by that rate rather than only labelled. It would also change if a claim
+kind gains a structured value (a number with a unit), which could be matched exactly instead of by
+tokens.

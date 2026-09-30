@@ -2772,17 +2772,6 @@
     "value_as_found": "54.3"
    }
   ],
-  "param:FR:data_classification": [
-   {
-    "checked_by": "sources.csv migration (#67)",
-    "confidence": "primary",
-    "locator": "p. 11 (Diffusion Restreinte paragraph)",
-    "quote": "Traitee par le § 1.4.3 de l'IGI 1300, la mention « Diffusion Restreinte » (DR) n'est pas un niveau de classification mais une mention de protection.",
-    "retrieved": "2026-09-11",
-    "source_id": "sgdsn:igi-secret-defense@2021-12-01",
-    "value_as_found": ""
-   }
-  ],
   "param:FR:elec_price_eur_mwh": [
    {
     "checked_by": "fetch_eurostat.py",
@@ -3278,17 +3267,6 @@
     "value_as_found": "10.7"
    }
   ],
-  "param:NL:data_classification": [
-   {
-    "checked_by": "sources.csv migration (#67)",
-    "confidence": "primary",
-    "locator": "Artikel 4, rubricering bijzondere informatie",
-    "quote": "a. Staatsgeheim ZEER GEHEIM (afgekort Stg.ZG) b. Staatsgeheim GEHEIM (afgekort Stg.G) c. Staatsgeheim CONFIDENTIEEL (afgekort Stg.C) d. Departementaal VERTROUWELIJK (afgekort Dep.V.)",
-    "retrieved": "2026-09-11",
-    "source_id": "wetten-nl:bwbr0033507@2013-06-01",
-    "value_as_found": ""
-   }
-  ],
   "param:NL:elec_price_eur_mwh": [
    {
     "checked_by": "fetch_eurostat.py",
@@ -3718,17 +3696,6 @@
     "value_as_found": "Zentrales Melderegister (ZMR) - Central Register of Residents"
    }
   ],
-  "record:AT:digital_identity_credentials:count": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "secondary",
-    "locator": "page text",
-    "quote": "Mit der ID Austria nutzen bereits über 4,1 Millionen Bürgerinnen und Bürger eine sichere digitale Identität – das ist rund jede zweite Person in Österreich. [English: With ID Austria, over 4.1 million citizens already use a secure digital identity - roughly every second person in Austria.]",
-    "retrieved": "2026-09-29",
-    "source_id": "bundeskanzleramt-gv-at:87632f6055",
-    "value_as_found": "Over 4.1 million citizens use ID Austria (August 2025)"
-   }
-  ],
   "record:AT:digital_identity_credentials:operator": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -4004,28 +3971,6 @@
     "value_as_found": "Belgium Root CA (BRCA), the top of the government CA hierarchy"
    }
   ],
-  "record:BG:authentication_audit_log:count": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "държавните органи съхраняват информация за извършените проверки по реда на този раздел. (2) Информацията се съхранява за срок 10 години. [English: state bodies store information on the verifications performed under this section. (2) The information is stored for a period of 10 years.]",
-    "retrieved": "2026-09-29",
-    "source_id": "mtc-government-bg:c645e7ccb8",
-    "value_as_found": "Verification records are kept for 10 years (Art. 23(2)); retention period, not a record count"
-   }
-  ],
-  "record:BG:authentication_audit_log:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Всички операции, извършени в регистъра по чл. 3, ал. 1, се съхраняват в журнал на събитията. (5) Интегритетът на журнала на събитията се защитава чрез криптографски методи. [English: All operations performed in the register under Art. 3(1) are stored in an event log. (5) The integrity of the event log is protected by cryptographic methods.]",
-    "retrieved": "2026-09-29",
-    "source_id": "mtc-government-bg:c645e7ccb8",
-    "value_as_found": "All operations on the register of electronic identifiers are recorded in an event log protected cryptographically (Art. 4(4)-(5))"
-   }
-  ],
   "record:BG:beneficial_ownership:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -4035,28 +3980,6 @@
     "retrieved": "2026-09-29",
     "source_id": "bulnao-government-bg:2b62662464",
     "value_as_found": "The software change enabling beneficial-owner entries went live on 28.01.2019"
-   }
-  ],
-  "record:BG:benefits_pensions:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "поддържа информационна система за изплащаните пенсии, обезщетения и помощи по този кодекс и за гарантираните вземания по Закона за гарантираните вземания на работниците и служителите при несъстоятелност на работодателя; [English: maintains an information system on the pensions, benefits and allowances paid under this Code and on guaranteed claims under the Act on Guaranteed Claims of Workers and Employees in Employer Insolvency;]",
-    "retrieved": "2026-09-29",
-    "source_id": "mlsp-government-bg:9d6dc1d5f6",
-    "value_as_found": "NSSI maintains the information system on pensions, benefits and allowances paid (Social Security Code, Art. 33)"
-   }
-  ],
-  "record:BG:breeder_documents:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Електронните актове за гражданско състояние образуват Национален електронен регистър на актове за гражданско състояние. [English: The electronic civil status acts form the National Electronic Register of Civil Status Acts.]",
-    "retrieved": "2026-09-29",
-    "source_id": "asp-government-bg:ddac6f9091",
-    "value_as_found": "National Electronic Register of Civil Status Acts (birth, marriage, death acts) formed from the electronic equivalents of the acts (Civil Registration Act, Art. 41(5))"
    }
   ],
   "record:BG:business_registry:foreign_dependency": [
@@ -4103,17 +4026,6 @@
     "value_as_found": "BG-ALERT public warning system over mobile networks (Cell Broadcast)"
    }
   ],
-  "record:BG:customs:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Решенията по прилагане на митническото законодателство се издават от директора на Агенция „Митници“ или от началниците на митници. [English: Decisions applying customs legislation are issued by the Director of the Customs Agency or by the heads of customs offices.]",
-    "retrieved": "2026-09-29",
-    "source_id": "dv-parliament-bg:8b19398fb2",
-    "value_as_found": "Customs decisions are issued by the Director of the Customs Agency or heads of customs offices (Customs Act, Art. 19 as amended 2016)"
-   }
-  ],
   "record:BG:customs:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -4134,17 +4046,6 @@
     "retrieved": "2026-09-29",
     "source_id": "mtc-government-bg:c645e7ccb8",
     "value_as_found": "Access to the register is granted to persons designated by order of the Minister of Interior (MVR runs the register)"
-   }
-  ],
-  "record:BG:digital_identity_credentials:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "В регистъра на електронните идентификатори се вписва всеки създаден електронен идентификатор и уникалният граждански идентификатор, на който той съответства. [English: Every electronic identifier created and the unique civil identifier to which it corresponds is entered in the register of electronic identifiers.]",
-    "retrieved": "2026-09-29",
-    "source_id": "mtc-government-bg:c645e7ccb8",
-    "value_as_found": "Register of electronic identifiers linking each eID identifier to the unified civil identifier (Rules for the Electronic Identification Act, Art. 3(1))"
    }
   ],
   "record:BG:education:register": [
@@ -4169,17 +4070,6 @@
     "value_as_found": "Identity documents are issued by the Ministry of Interior, Ministry of Foreign Affairs, Ministry of Transport and Communications and Ministry of Defence"
    }
   ],
-  "record:BG:facial_biometric:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "На основата на автоматизираните информационни фондове по ал. 1 се създава Национален автоматизиран информационен фонд за българските лични документи - \"Национален регистър на българските лични документи\". [English: On the basis of the automated information funds under para. 1, a National Automated Information Fund for Bulgarian identity documents – the \"National Register of Bulgarian Identity Documents\" – is created.]",
-    "retrieved": "2026-09-29",
-    "source_id": "aref-government-bg:e0e9f32faa",
-    "value_as_found": "National Register of Bulgarian Identity Documents, built on the automated information funds of the Bulgarian Identity Documents Act (Art. 65(3))"
-   }
-  ],
   "record:BG:fingerprint_biometric:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -4189,17 +4079,6 @@
     "retrieved": "2026-09-29",
     "source_id": "aref-government-bg:e0e9f32faa",
     "value_as_found": "National Register of Bulgarian Identity Documents (automated information fund)"
-   }
-  ],
-  "record:BG:firearms_register:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "В Министерството на вътрешните работи се изгражда и поддържа единен автоматизиран регистър за дейностите по този закон. [English: A unified automated register for the activities under this Act is established and maintained at the Ministry of Interior.]",
-    "retrieved": "2026-09-29",
-    "source_id": "mfa-bg:b0be806a0f",
-    "value_as_found": "Weapons Act, Art. 11(1): MVR builds and maintains a unified automated register"
    }
   ],
   "record:BG:geospatial:register": [
@@ -4224,28 +4103,6 @@
     "value_as_found": "Project to modernise and extend the SCADA/EMS and information environment in ESO's Central Dispatch (CDU)"
    }
   ],
-  "record:BG:health_insurance:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "изпълнителите на медицинска и дентална помощ да извършат проверка на здравноосигурителния статус на лицата съгласно данни на Националната агенция за приходите. [English: providers of medical and dental care shall check the health insurance status of persons according to data of the National Revenue Agency.]",
-    "retrieved": "2026-09-29",
-    "source_id": "nhif-bg:f33b858438",
-    "value_as_found": "Providers check health-insurance status against NRA data (Health Insurance Act, Art. 50)"
-   }
-  ],
-  "record:BG:health_insurance:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Националната здравноосигурителна каса изгражда информационна система, която съдържа: 1. (изм. - ДВ, бр. 110 от 1999 г., доп., бр. 95 от 2006 г., в сила от 1.01.2007 г.) регистър на осигурените лица, [English: The National Health Insurance Fund builds an information system containing: 1. (...) a register of insured persons,]",
-    "retrieved": "2026-09-29",
-    "source_id": "nhif-bg:f33b858438",
-    "value_as_found": "Health Insurance Act, Art. 63(1): NHIF builds an information system containing the register of insured persons"
-   }
-  ],
   "record:BG:health_records:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -4268,17 +4125,6 @@
     "value_as_found": "From 27 April 2026 the Ministry of Interior moved to centralised personalisation and a new generation of identity documents"
    }
   ],
-  "record:BG:issuance_history:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "предишни значения на личните данни от българските лични документи и заявленията за издаването им; [English: previous values of the personal data from Bulgarian identity documents and the applications for their issuance;]",
-    "retrieved": "2026-09-29",
-    "source_id": "aref-government-bg:e0e9f32faa",
-    "value_as_found": "The identity-document information funds also hold previous values of personal data from documents and applications (Bulgarian Identity Documents Act, Art. 65(1)(2))"
-   }
-  ],
   "record:BG:judicial_criminal:operator": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -4288,17 +4134,6 @@
     "retrieved": "2026-09-29",
     "source_id": "fsc-bg:89bd0a8b2c",
     "value_as_found": "Criminal-record bureaus at every district court and a Central Criminal Records Bureau at the Ministry of Justice"
-   }
-  ],
-  "record:BG:judicial_criminal:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Министерството на правосъдието създава и поддържа Централизирана автоматизирана информационна система \"Съдебен статус\" (ЦАИС \"Съдебен статус\") с централна база данни. [English: The Ministry of Justice creates and maintains the Centralised Automated Information System \"Court Status\" (CAIS \"Court Status\") with a central database.]",
-    "retrieved": "2026-09-29",
-    "source_id": "fsc-bg:89bd0a8b2c",
-    "value_as_found": "The Ministry of Justice creates and maintains the Centralised Automated Information System \"Court Status\" with a central database (Ordinance No 8/2008)"
    }
   ],
   "record:BG:land_property:foreign_dependency": [
@@ -4376,17 +4211,6 @@
     "retrieved": "2026-09-29",
     "source_id": "mfa-bg:08f16f5315",
     "value_as_found": "Migration Directorate of MVR and Migration units of the regional MVR directorates (Foreigners in the Republic of Bulgaria Act)"
-   }
-  ],
-  "record:BG:residence_permits:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "В информационния фонд по ал. 1 се съхраняват и данни за наложени мерки за държавна принуда, свързани с документи за самоличност и с разрешенията за пребиваване на чужденци или пребиваването им в Република България. [English: The information fund under para. 1 also stores data on coercive measures related to identity documents and to residence permits of foreigners or their residence in the Republic of Bulgaria.]",
-    "retrieved": "2026-09-29",
-    "source_id": "aref-government-bg:e0e9f32faa",
-    "value_as_found": "A separate information fund holds coercive measures linked to identity documents and residence permits of foreigners (Art. 66(2))"
    }
   ],
   "record:BG:statistics_microdata:register": [
@@ -4662,17 +4486,6 @@
     "retrieved": "2026-09-29",
     "source_id": "celnisprava-gov-cz:96fa250cad",
     "value_as_found": "Automated import system e-Dovoz completing electronic customs systems for transit, export and import"
-   }
-  ],
-  "record:CZ:digital_identity_credentials:count": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "secondary",
-    "locator": "page text",
-    "quote": "Každý občan může mít více Identit občana a jejich počet už překonal hranici 10 milionů.",
-    "retrieved": "2026-09-29",
-    "source_id": "mv-gov-cz:a50684ad5c",
-    "value_as_found": "More than 10 million 'Identita občana' credentials; 5.5 million citizens hold an electronic identity"
    }
   ],
   "record:CZ:digital_identity_credentials:register": [
@@ -5016,17 +4829,6 @@
     "value_as_found": "DIA acts as founder of the State Trust Services Administration"
    }
   ],
-  "record:CZ:trust_services_pki:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Zřizuje se a vzniká Správa státních služeb vytvářejících důvěru",
-    "retrieved": "2026-09-29",
-    "source_id": "zakonyprolidi-cz:635a6233a1",
-    "value_as_found": "State Trust Services Administration established by Act 297/2016 § 14"
-   }
-  ],
   "record:CZ:vehicle_licensing:operator": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -5049,28 +4851,6 @@
     "value_as_found": "Road Vehicle Register, controlled by the Ministry of Transport, records vehicles, owners and operators"
    }
   ],
-  "record:DE:benefits_pensions:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Die Träger der Rentenversicherung unterhalten gemeinsam eine Datenstelle, die von der Deutschen Rentenversicherung Bund verwaltet wird. [English: The pension insurance institutions jointly maintain a data centre, which is administered by Deutsche Rentenversicherung Bund.]",
-    "retrieved": "2026-09-29",
-    "source_id": "gesetze-im-internet-de:7643471870",
-    "value_as_found": "Pension insurers jointly maintain a data centre (Datenstelle) administered by Deutsche Rentenversicherung Bund (SGB VI § 145)"
-   }
-  ],
-  "record:DE:benefits_pensions:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Der Träger der Rentenversicherung führt für jeden Versicherten ein Versicherungskonto, das nach der Versicherungsnummer geordnet ist. [English: The pension insurance institution keeps an insurance account for each insured person, ordered by insurance number.]",
-    "retrieved": "2026-09-29",
-    "source_id": "gesetze-im-internet-de:eb21a5a15b",
-    "value_as_found": "Each pension insurer keeps an insurance account for every insured person, ordered by insurance number (SGB VI § 149)"
-   }
-  ],
   "record:DE:border_control:operator": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -5082,17 +4862,6 @@
     "value_as_found": "The BKA is the central national authority operating the national part of the Schengen Information System"
    }
   ],
-  "record:DE:border_control:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Das Bundesverwaltungsamt führt eine Visa-Warndatei zur Vermeidung des Missbrauchs von Visa. [English: The Federal Office of Administration keeps a visa warning file to prevent the misuse of visas.]",
-    "retrieved": "2026-09-29",
-    "source_id": "gesetze-im-internet-de:d8b3bb5b35",
-    "value_as_found": "The Federal Office of Administration keeps a Visa Warning File to prevent visa misuse (VWDG § 1)"
-   }
-  ],
   "record:DE:breeder_documents:operator": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -5102,17 +4871,6 @@
     "retrieved": "2026-09-29",
     "source_id": "gesetze-im-internet-de:d37a59e7c8",
     "value_as_found": "Each Standesamt keeps the birth register (Geburtenregister) and other civil status registers"
-   }
-  ],
-  "record:DE:breeder_documents:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Dokumente, die einzelne Beurkundungen in den Personenstandsregistern betreffen, werden in besonderen Akten (Sammelakten) aufbewahrt. [English: Documents relating to individual entries in the civil status registers are kept in special files (collected files).]",
-    "retrieved": "2026-09-29",
-    "source_id": "gesetze-im-internet-de:aec0b77b4d",
-    "value_as_found": "Documents underlying each civil status entry are kept in special files (Sammelakten) (PStG § 6)"
    }
   ],
   "record:DE:civil_registry:operator": [
@@ -5192,17 +4950,6 @@
     "value_as_found": "Biometric features may be stored only at the issuing ID-card authorities"
    }
   ],
-  "record:DE:facial_biometric:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Das Passregister darf neben dem Lichtbild und der Unterschrift des Passinhabers sowie verfahrensbedingten Bearbeitungsvermerken ausschließlich folgende Daten enthalten [English: Besides the photograph and signature of the passport holder and procedural processing notes, the passport register may contain only the following data]",
-    "retrieved": "2026-09-29",
-    "source_id": "gesetze-im-internet-de:6aec179f85",
-    "value_as_found": "Passregister (passport register) contains the holder's photograph (Passgesetz § 21)"
-   }
-  ],
   "record:DE:fingerprint_biometric:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -5212,17 +4959,6 @@
     "retrieved": "2026-09-29",
     "source_id": "gesetze-im-internet-de:27da0847df",
     "value_as_found": "Fingerprints stored at the ID-card authority must be deleted at the latest when the card is handed over"
-   }
-  ],
-  "record:DE:intelligence:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Die Verfassungsschutzbehörden verarbeiten zur Erfüllung ihrer Unterrichtungspflichten nach Absatz 1 Informationen im gemeinsamen nachrichtendienstlichen Informationssystem. [English: The constitution protection authorities process information in the joint intelligence information system to fulfil their duties to inform under paragraph 1.]",
-    "retrieved": "2026-09-29",
-    "source_id": "gesetze-im-internet-de:a758b3c2b0",
-    "value_as_found": "The domestic intelligence authorities process information in the joint intelligence information system (BVerfSchG § 6)"
    }
   ],
   "record:DE:issuance_history:operator": [
@@ -5410,17 +5146,6 @@
     "retrieved": "2026-09-29",
     "source_id": "retsinformation-dk:6cab131ec8",
     "value_as_found": "Det Centrale Personregister (CPR) - the Central Person Register"
-   }
-  ],
-  "record:DK:customs:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "secondary",
-    "locator": "page text",
-    "quote": "Vi er nu helt overgået til de nye toldsystemer for eksport, forsendelse og import. Fremover kan nye importangivelser kun oprettes i DMS Import. [English: We have now fully moved to the new customs systems for export, transit and import. From now on new import declarations can only be created in DMS Import.]",
-    "retrieved": "2026-09-29",
-    "source_id": "toldst-dk:f040f063f2",
-    "value_as_found": "Toldstyrelsen (Customs Agency); DMS Import in full operation from March 2026"
    }
   ],
   "record:DK:customs:register": [
@@ -5797,17 +5522,6 @@
     "value_as_found": "Central Register of Beneficial Owners, created at the General Secretariat for Information Systems and linked to each legal entity's tax number (ΑΦΜ)"
    }
   ],
-  "record:EL:benefits_pensions:count": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "συγκέντρωσε για πρώτη τα φορά τα δεδομένα από 92 πληροφοριακά συστήματα των ασφαλιστικών φορέων για 4,5 εκατομμύρια συντάξεις και ταυτοποίησε 2,7 εκατομμύρια συνταξιούχους. [English: for the first time it gathered data from 92 information systems of the insurance funds for 4.5 million pensions and identified 2.7 million pensioners.]",
-    "retrieved": "2026-09-29",
-    "source_id": "idika-gr:521a11eeb5",
-    "value_as_found": "HELIOS pension control and payment system (operated by ΗΔΥΚΑ/IDIKA under Law 4093/2012) consolidated data from 92 systems covering 4.5 million pensions and 2.7 million pensioners"
-   }
-  ],
   "record:EL:benefits_pensions:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -5861,17 +5575,6 @@
     "retrieved": "2026-09-29",
     "source_id": "lawspot-gr:02cbc9afd8",
     "value_as_found": "«Μητρώο Πολιτών» (Citizens' Register): national information system combining the National Municipal Register (Δημοτολόγιο) and civil-status (registry) records"
-   }
-  ],
-  "record:EL:crisis_management:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Οργανώνει και λειτουργεί σε μόνιμη βάση και για όλη τη διάρκεια του εικοσιτετραώρου το Κέντρο Επιχειρήσεων Πολιτικής Προστασίας με ειδικευμένα στελέχη πολιτικής προστασίας και το αναγκαίο προσωπικό [English: It organises and operates on a permanent basis, around the clock, the Civil Protection Operations Centre with specialised civil-protection staff and the necessary personnel]",
-    "retrieved": "2026-09-29",
-    "source_id": "lawspot-gr:e3c728078f",
-    "value_as_found": "Civil Protection Operations Centre, run 24/7 by the General Secretariat for Civil Protection (Law 3013/2002 as reproduced; since superseded by Law 4662/2020, not retrieved)"
    }
   ],
   "record:EL:customs:foreign_dependency": [
@@ -5971,17 +5674,6 @@
     "retrieved": "2026-09-29",
     "source_id": "passport-gov-gr:fd4d0cce87",
     "value_as_found": "Encrypted fingerprint images kept in the Central Database of the Passports Directorate, accessible only to authorised police staff"
-   }
-  ],
-  "record:EL:geospatial:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Ο ΟΚΧΕ παρέχει πρόσβαση στις υπηρεσίες του άρθρου 8 παράγραφος 1 μέσω της Γεωπύλης του άρθρου 25 και μέσω της δικτυακής πύλης γεωχωρικών πληροφοριών Inspire. [English: OKXE provides access to the services of Article 8(1) through the Geoportal of Article 25 and through the Inspire geospatial information portal.]",
-    "retrieved": "2026-09-29",
-    "source_id": "lawspot-gr:d07262f4cf",
-    "value_as_found": "National Spatial Data Infrastructure (ΕΥΓΕΠ) and national Geoportal, access provided by ΟΚΧΕ under Law 3882/2010 (INSPIRE)"
    }
   ],
   "record:EL:government_payroll:count": [
@@ -6171,17 +5863,6 @@
     "value_as_found": "Integrated Information System for Fiscal Policy (ΟΠΣΔΠ), to evolve into a central Government ERP"
    }
   ],
-  "record:EL:public_health_surveillance:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Συστήνεται Νομικό Πρόσωπο Ιδιωτικού Δικαίου με την επωνυμία «Εθνικός Οργανισμός Δημόσιας Υγείας» (ΕΟΔΥ), το οποίο υπάγεται στην εποπτεία του Υπουργού Υγείας. [English: A legal entity of private law is established named \"National Public Health Organization\" (EODY), supervised by the Minister of Health.]",
-    "retrieved": "2026-09-29",
-    "source_id": "lawspot-gr:7b5731cf47",
-    "value_as_found": "National Public Health Organization (ΕΟΔΥ), private-law entity supervised by the Minister of Health (Law 4633/2019)"
-   }
-  ],
   "record:EL:public_health_surveillance:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -6191,17 +5872,6 @@
     "retrieved": "2026-09-29",
     "source_id": "lawspot-gr:7b5731cf47",
     "value_as_found": "EODY core functions include epidemiological surveillance and provision of epidemiological data"
-   }
-  ],
-  "record:EL:residence_permits:count": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "(Ενεργές ΑΔΕΤ) ΣΥΝΟΛΟ Αύγουστος 2026 274.705 41.788 591.461 99.966 1.007.920 [English: (Active refugee residence permits) TOTAL August 2026 274,705 41,788 591,461 99,966 1,007,920]",
-    "retrieved": "2026-09-29",
-    "source_id": "migration-gov-gr:6e0a2d0f6e",
-    "value_as_found": "1,007,920 residence documents in force in August 2026 (EU citizens/ethnic Greeks 274,705; temporary protection 41,788; third-country nationals 591,461; recognised refugees 99,966)"
    }
   ],
   "record:EL:residence_permits:register": [
@@ -6224,17 +5894,6 @@
     "retrieved": "2026-09-29",
     "source_id": "lawspot-gr:6f278cfeee",
     "value_as_found": "national"
-   }
-  ],
-  "record:EL:tax:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Συνιστάται Ανεξάρτητη Διοικητική Αρχή χωρίς νομική προσωπικότητα με την επωνυμία Ανεξάρτητη Αρχή Δημοσίων Εσόδων (Α.Α.Δ.Ε.) [English: An Independent Administrative Authority without legal personality is established under the name Independent Authority for Public Revenue (AADE)]",
-    "retrieved": "2026-09-29",
-    "source_id": "lawspot-gr:6f278cfeee",
-    "value_as_found": "Independent Authority for Public Revenue (ΑΑΔΕ), established by Law 4389/2016 to assess and collect tax, customs and other public revenue"
    }
   ],
   "record:EL:tax:register": [
@@ -6268,17 +5927,6 @@
     "retrieved": "2026-09-29",
     "source_id": "wallet-gov-gr:861fec6bc2",
     "value_as_found": "Driving licences and police ID cards are drawn into the Gov.gr Wallet from the respective registers in which they are held"
-   }
-  ],
-  "record:ES:beneficial_ownership:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "regular la obtención de información sobre la titularidad real, directa o indirecta, de las entidades jurídicas creando el Registro Central de Titularidades Reales, un registro que centralizará la información de titularidad real [English: to regulate obtaining information on the direct or indirect beneficial ownership of legal entities by creating the Central Register of Beneficial Ownership, which will centralise beneficial-ownership information]",
-    "retrieved": "2026-09-29",
-    "source_id": "boe-es:66991ad2c6",
-    "value_as_found": "RD 609/2023 creates the Central Register of Beneficial Ownership, centralising beneficial-ownership information"
    }
   ],
   "record:ES:breeder_documents:register": [
@@ -6356,17 +6004,6 @@
     "retrieved": "2026-09-29",
     "source_id": "boe-es:1f4d088076",
     "value_as_found": "The decree refers to biometric records (registros biométricos) associated with the identity of Spanish nationals"
-   }
-  ],
-  "record:ES:geospatial:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "estableciendo la obligación de constituir su Geoportal, y los cometidos de la Dirección General del Instituto Geográfico Nacional en relación con ella. [English: establishing the obligation to set up its Geoportal, and the duties of the Directorate-General of the National Geographic Institute in relation to it.]",
-    "retrieved": "2026-09-29",
-    "source_id": "boe-es:4c363a0682",
-    "value_as_found": "Ley 14/2010 assigns the IGN duties for the AGE geographic information infrastructure and its Geoportal"
    }
   ],
   "record:ES:geospatial:register": [
@@ -6455,17 +6092,6 @@
     "retrieved": "2026-09-29",
     "source_id": "boe-es:18a4ff3b36",
     "value_as_found": "The BOE is published in an electronic edition"
-   }
-  ],
-  "record:ES:residence_permits:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Existirá, en la Dirección General de la Policía, un Registro Central de Extranjeros en el que se anotarán: a) Entradas. b) Documentos de viaje. [English: There shall be, within the Directorate-General of the Police, a Central Register of Foreign Nationals recording: a) Entries. b) Travel documents.]",
-    "retrieved": "2026-09-29",
-    "source_id": "boe-es:8707a4fde0",
-    "value_as_found": "RD 1155/2024 art. 212: a Central Register of Foreign Nationals exists within the DGP, recording entries, travel documents, stays and authorisations"
    }
   ],
   "record:ES:statistics_microdata:operator": [
@@ -6950,17 +6576,6 @@
     "retrieved": "2026-09-29",
     "source_id": "dila-premier-ministre-gouv-fr:6edc4778ef",
     "value_as_found": "The JO is made available electronically, permanently and free of charge"
-   }
-  ],
-  "record:FR:police_records:count": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "En 2022, le TAJ contenait : 17 millions de fiches [English: In 2022, the TAJ contained: 17 million records]",
-    "retrieved": "2026-09-29",
-    "source_id": "cnil-fr:8d42381e5c",
-    "value_as_found": "17 million 'persons implicated' records (2022), plus 48 million victim records"
    }
   ],
   "record:FR:police_records:operator": [
@@ -7656,17 +7271,6 @@
     "value_as_found": "national"
    }
   ],
-  "record:HU:civil_registry:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "A Kormány a minisztert jelöli ki 1. a polgárok személyi adatainak és lakcímének nyilvántartásáról szóló 1992. évi LXVI. törvény szerinti polgárok személyi adatainak és lakcímének nyilvántartását kezelő szervként [English: The Government designates the minister 1. as the body managing the register of citizens' personal data and address under Act LXVI of 1992]",
-    "retrieved": "2026-09-29",
-    "source_id": "net-jogtar-hu:5fe9b432c7",
-    "value_as_found": "The Government designates the Minister for Science and Technology as the body managing the SZL (Government Decree 90/2026)"
-   }
-  ],
   "record:HU:civil_registry:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -8173,17 +7777,6 @@
     "value_as_found": "TARGET2-Ireland (Irish component of the Eurosystem T2 RTGS system)"
    }
   ],
-  "record:IE:customs:count": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "we processed 62.8 million customs declarations through our customs transit system (NCTS) and the Automated Import and Export Systems (AIS/AES).",
-    "retrieved": "2026-09-29",
-    "source_id": "revenue-ie:915815344e",
-    "value_as_found": "62.8 million customs declarations processed in 2025 through NCTS and AIS/AES"
-   }
-  ],
   "record:IE:customs:operator": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -8283,17 +7876,6 @@
     "value_as_found": "non_eu_provider"
    }
   ],
-  "record:IE:electoral_roll:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "The Act provided for the establishment of a shared national electoral register database. This is known as the Local Government Electoral Registration System (LGERS). It is planned that LGERS will be rolled out nationally in 2026.",
-    "retrieved": "2026-09-29",
-    "source_id": "cdn-electoralcommission-ie:5e8d8912b8",
-    "value_as_found": "Local Government Electoral Registration System (LGERS), shared national electoral register database replacing 31 local registers"
-   }
-  ],
   "record:IE:emergency_communications:foreign_dependency": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -8303,17 +7885,6 @@
     "retrieved": "2026-09-29",
     "source_id": "motorolasolutions-com:3a5eb8a308",
     "value_as_found": "non_eu_provider"
-   }
-  ],
-  "record:IE:emergency_communications:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "On completion of this open tender process BT was awarded the contract (known as a Concession Agreement) to provide 112 and 999 call answering services on behalf of the State of Ireland.",
-    "retrieved": "2026-09-29",
-    "source_id": "112-ie:ea88ea8328",
-    "value_as_found": "Emergency Call Answering Service (ECAS) for 112/999 operated by BT under a State concession (re-awarded 2019)"
    }
   ],
   "record:IE:emergency_communications:register": [
@@ -8690,17 +8261,6 @@
     "value_as_found": "ANSC - national computerised archive of civil-status registers (births, marriages, deaths)"
    }
   ],
-  "record:IT:civil_registry:count": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "PERSONE IN ANAGRAFE NAZIONALE 66.252.730 di cui 6.800.090 residenti all'estero (AIRE) [English: PERSONS IN THE NATIONAL REGISTER 66,252,730, of whom 6,800,090 are resident abroad (AIRE)]",
-    "retrieved": "2026-09-29",
-    "source_id": "anagrafenazionale-interno-it:604791f8f6",
-    "value_as_found": "66,252,730 persons in ANPR, including 6,800,090 residents abroad (AIRE), as updated 28 September 2026 (figure updated daily)"
-   }
-  ],
   "record:IT:civil_registry:operator": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -8721,17 +8281,6 @@
     "retrieved": "2026-09-29",
     "source_id": "anagrafenazionale-interno-it:0ccfa7e7df",
     "value_as_found": "ANPR (National Register of the Resident Population) is the Ministry of the Interior's single database for population data"
-   }
-  ],
-  "record:IT:crisis_management:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Il Presidente del Consiglio dei ministri, si avvale del Dipartimento della protezione civile della Presidenza del Consiglio dei ministri [English: The President of the Council of Ministers relies on the Civil Protection Department of the Presidency of the Council of Ministers]",
-    "retrieved": "2026-09-29",
-    "source_id": "normattiva-it:405d3c7907",
-    "value_as_found": "Art. 8 of Legislative Decree 1/2018 (Civil Protection Code): the Prime Minister acts through the Civil Protection Department"
    }
   ],
   "record:IT:crisis_management:register": [
@@ -8776,17 +8325,6 @@
     "retrieved": "2026-09-29",
     "source_id": "dait-interno-gov-it:fc6e2b316e",
     "value_as_found": "The historical election archive is an online database of election results down to municipality level"
-   }
-  ],
-  "record:IT:electoral_roll:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "sono definite le modalità di integrazione nell'ANPR delle liste elettorali e dei dati relativi all'iscrizione nelle liste di sezione [English: the arrangements for integrating into ANPR the electoral lists and the data on enrolment in polling-section lists are defined]",
-    "retrieved": "2026-09-29",
-    "source_id": "normattiva-it:210c9adc37",
-    "value_as_found": "Art. 62(2-ter) CAD provides for the electoral lists to be integrated into ANPR"
    }
   ],
   "record:IT:facial_biometric:foreign_dependency": [
@@ -8963,17 +8501,6 @@
     "retrieved": "2026-09-29",
     "source_id": "istat-it:efe4fdf4e5",
     "value_as_found": "ISTAT is the main producer of official statistics"
-   }
-  ],
-  "record:IT:statistics_microdata:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "effettuato dall'ISTAT con cadenza annuale, nel rispetto delle raccomandazioni internazionali e dei regolamenti europei [English: carried out by ISTAT annually, in line with international recommendations and European regulations]",
-    "retrieved": "2026-09-29",
-    "source_id": "normattiva-it:cb6d493e8b",
-    "value_as_found": "Art. 3 of Decree-Law 179/2012: ISTAT carries out an annual (permanent) population and housing census"
    }
   ],
   "record:IT:trust_services_pki:foreign_dependency": [
@@ -9405,17 +8932,6 @@
     "value_as_found": "Law on Taxes and Fees: VID communicates with taxpayers through its Electronic Declaration System (EDS)"
    }
   ],
-  "record:MT:civil_registry:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Each of the said offices shall be under the management of an officer called Director of the Public Registry",
-    "retrieved": "2026-09-29",
-    "source_id": "legislation-mt:57d033af2b",
-    "value_as_found": "Public Registry offices are managed by the Director of the Public Registry (Public Registry Act, Cap. 56)"
-   }
-  ],
   "record:MT:civil_registry:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -9592,28 +9108,6 @@
     "value_as_found": "e-ID cards carry an Authentication Certificate and a Signature Certificate"
    }
   ],
-  "record:NL:business_registry:register": [
-   {
-    "checked_by": "national_data.csv migration (#67)",
-    "confidence": "official",
-    "locator": "Intro paragraph under the heading 'Over het Handelsregister'",
-    "quote": "Bedrijven en organisaties zijn ingeschreven in het Handelsregister van KVK. Dat register is openbaar.",
-    "retrieved": "2026-09-21",
-    "source_id": "kvk:handelsregister",
-    "value_as_found": ""
-   }
-  ],
-  "record:NL:civil_registry:register": [
-   {
-    "checked_by": "national_data.csv migration (#67)",
-    "confidence": "official",
-    "locator": "Intro section, first paragraph",
-    "quote": "De Nederlandse overheid registreert persoonsgegevens in de Basisregistratie Personen (BRP).",
-    "retrieved": "2026-09-21",
-    "source_id": "rvig:brp",
-    "value_as_found": ""
-   }
-  ],
   "record:NL:customs:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -9658,17 +9152,6 @@
     "value_as_found": "DigiD: the national means for citizens to identify digitally"
    }
   ],
-  "record:NL:facial_biometric:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "De tot uitreiking bevoegde autoriteiten voeren een reisdocumentenadministratie ten behoeve van de aanvraag, verstrekking en uitreiking van reisdocumenten. De administratie bevat de gegevens bedoeld in het eerste, tweede, vierde, vijfde, zesde en zevende lid [English: The authorities competent to issue keep a travel document administration for application, provision and issuance of travel documents. The administration contains the data referred to in paragraphs one, two, four, five, six and seven]",
-    "retrieved": "2026-09-29",
-    "source_id": "wetten-overheid-nl:f0be5f00e8",
-    "value_as_found": "Issuing authorities keep a travel document administration containing the data of art. 3 paras 1-2 (incl. facial image)"
-   }
-  ],
   "record:NL:fingerprint_biometric:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -9700,17 +9183,6 @@
     "retrieved": "2026-09-29",
     "source_id": "aorta-lsp-nl:ad10d4680e",
     "value_as_found": "LSP is a national infrastructure through which care providers exchange patients' medical data"
-   }
-  ],
-  "record:NL:land_property:register": [
-   {
-    "checked_by": "national_data.csv migration (#67)",
-    "confidence": "official",
-    "locator": "Intro under the heading 'Basisregistratie Kadaster (BRK)', first item of the 'bestaat uit' list",
-    "quote": "de kadastrale registratie van onroerende zaken en zakelijke rechten",
-    "retrieved": "2026-09-21",
-    "source_id": "kadaster:brk",
-    "value_as_found": ""
    }
   ],
   "record:NL:public_health_surveillance:register": [
@@ -9768,39 +9240,6 @@
     "value_as_found": "RDW manages and is controller of the vehicle registration register"
    }
   ],
-  "record:NL:vehicle_licensing:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Er is een rijbewijzenregister. De Dienst Wegverkeer is beheerder en verwerkingsverantwoordelijke van het rijbewijzenregister. [English: There is a driving licence register. The Road Traffic Agency is manager and controller of the driving licence register.]",
-    "retrieved": "2026-09-29",
-    "source_id": "wetten-overheid-nl:d93f954bd2",
-    "value_as_found": "Art. 126: driving licence register managed by RDW"
-   }
-  ],
-  "record:PL:beneficial_ownership:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Organem właściwym w sprawach Rejestru jest minister właściwy do spraw finansów publicznych. [English: The authority competent for the Register is the minister responsible for public finance.]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:a381458969",
-    "value_as_found": "The competent authority for the register is the minister responsible for public finance (Art. 56)"
-   }
-  ],
-  "record:PL:beneficial_ownership:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Centralny Rejestr Beneficjentów Rzeczywistych, zwany dalej „Rejestrem”, jest prowadzony przy użyciu systemu teleinformatycznego [English: The Central Register of Beneficial Owners ('the Register') is kept using an ICT system]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:a381458969",
-    "value_as_found": "AML Act Art. 55: CRBR is kept using an ICT system"
-   }
-  ],
   "record:PL:benefits_pensions:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -9810,17 +9249,6 @@
     "retrieved": "2026-09-29",
     "source_id": "api-sejm-gov-pl:4590342121",
     "value_as_found": "ZUS also keeps the Central Register of Insured Persons, of Contribution Payers and of Open Pension Fund Members"
-   }
-  ],
-  "record:PL:breeder_documents:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Przeniesienie aktu stanu cywilnego do rejestru stanu cywilnego jest dokonywane z urzędu. [English: Transfer of a civil status act into the civil status register is carried out ex officio.]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:cb8726d3b3",
-    "value_as_found": "Older paper civil-status acts are transferred (digitised) into the civil status register ex officio (Art. 125)"
    }
   ],
   "record:PL:business_registry:operator": [
@@ -9843,17 +9271,6 @@
     "retrieved": "2026-09-29",
     "source_id": "api-sejm-gov-pl:b0baa097d1",
     "value_as_found": "CEIDG (sole-trader business register) is kept in an ICT system by the economy minister"
-   }
-  ],
-  "record:PL:crisis_management:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Tworzy się Rządowe Centrum Bezpieczeństwa, zwane dalej „Centrum”, będące państwową jednostką budżetową podległą Prezesowi Rady Ministrów. [English: The Government Centre for Security is established as a state budgetary unit subordinate to the Prime Minister.]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:bd018c5f12",
-    "value_as_found": "Crisis Management Act Art. 10 establishes RCB as a state budgetary unit under the Prime Minister"
    }
   ],
   "record:PL:crisis_management:register": [
@@ -9911,61 +9328,6 @@
     "value_as_found": "Profil Zaufany is an electronic identification means notified at assurance level substantial"
    }
   ],
-  "record:PL:education:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Baza danych SIO jest to centralny zbiór danych, prowadzony przez ministra właściwego do spraw oświaty i wychowania [English: The SIO database is a central data set kept by the minister responsible for education]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:b1d1f78bc5",
-    "value_as_found": "Education Information System Act Art. 4: SIO database is a central data set kept by the education minister"
-   }
-  ],
-  "record:PL:electoral_roll:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Minister właściwy do spraw informatyzacji prowadzi w systemie teleinformatycznym Centralny Rejestr Wyborców, a także zapewnia jego utrzymanie i rozwój w celu realizacji zadań określonych w kodeksie [English: The minister responsible for digital affairs keeps the Central Register of Voters in an ICT system and ensures its maintenance and development]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:36abc3dd17",
-    "value_as_found": "The digital affairs minister keeps the Central Register of Voters in an ICT system (Art. 18 §4)"
-   }
-  ],
-  "record:PL:electoral_roll:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Centralny Rejestr Wyborców obejmuje: 1) osoby, którym przysługuje prawo wybierania; [English: The Central Register of Voters covers: 1) persons who have the right to vote;]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:36abc3dd17",
-    "value_as_found": "Electoral Code Art. 18: the Central Register of Voters covers persons entitled to vote"
-   }
-  ],
-  "record:PL:facial_biometric:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Rejestr Dowodów Osobistych jest rejestrem centralnym prowadzonym w systemie teleinformatycznym. 2. Utrzymanie i rozwój Rejestru Dowodów Osobistych, w celu realizacji zadań określonych w ustawie, zapewnia minister właściwy do spraw informatyzacji [English: The ID Card Register is a central register kept in an ICT system. 2. Maintenance and development of the ID Card Register ... is ensured by the minister responsible for digital affairs]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:e6fbf3e6b0",
-    "value_as_found": "RDO is a central ICT register maintained by the minister responsible for digital affairs (Art. 55)"
-   }
-  ],
-  "record:PL:facial_biometric:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "W Rejestrze Dowodów Osobistych gromadzi się: 1) dane, o których mowa w art. 28 pkt 1–9, 13 i 15; 2) fotografię, o której mowa w art. 29; [English: The ID Card Register stores: 1) the data referred to in Art. 28 points 1-9, 13 and 15; 2) the photograph referred to in Art. 29;]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:e6fbf3e6b0",
-    "value_as_found": "The ID Card Register stores the applicant's photograph (Art. 56(1)(2) of the Identity Cards Act)"
-   }
-  ],
   "record:PL:fingerprint_biometric:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -10010,39 +9372,6 @@
     "value_as_found": "Administrator of P1 is a unit subordinate to the health minister competent for health information systems"
    }
   ],
-  "record:PL:health_records:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Elektroniczna Platforma Gromadzenia, Analizy i Udostępnienia Zasobów Cyfrowych o Zdarzeniach Medycznych jest systemem teleinformatycznym [English: The Electronic Platform for Collection, Analysis and Sharing of Digital Resources on Medical Events is an ICT system]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:dbb2eb1699",
-    "value_as_found": "Health Information System Act Art. 7: the P1 platform is an ICT system giving access to data on healthcare services in SIM"
-   }
-  ],
-  "record:PL:issuance_history:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Rejestr Dokumentów Paszportowych jest rejestrem prowadzonym w systemie teleinformatycznym. 2. Utrzymanie i rozwój Rejestru Dokumentów Paszportowych, w celu realizacji zadań określonych w ustawie, zapewnia minister właściwy do spraw informatyzacji [English: The Passport Documents Register is kept in an ICT system. 2. Maintenance and development of the Passport Documents Register ... is ensured by the minister responsible for digital affairs]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:9606c9dde2",
-    "value_as_found": "Passport Documents Register is an ICT register maintained by the digital affairs minister (Art. 78 Passport Documents Act)"
-   }
-  ],
-  "record:PL:national_archives:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Nadzór nad narodowym zasobem archiwalnym sprawuje minister właściwy do spraw kultury i ochrony dziedzictwa narodowego za pośrednictwem Naczelnego Dyrektora Archiwów Państwowych. [English: Supervision over the national archival resource is exercised by the minister responsible for culture through the Head Director of State Archives.]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:15cf3d374d",
-    "value_as_found": "Archives Act Art. 4: supervision of the national archival resource via the Head Director of State Archives"
-   }
-  ],
   "record:PL:national_archives:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -10052,28 +9381,6 @@
     "retrieved": "2026-09-29",
     "source_id": "api-sejm-gov-pl:15cf3d374d",
     "value_as_found": "Archival materials expressly include electronic documents"
-   }
-  ],
-  "record:PL:public_finance:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "przekazywane na centralny rachunek bieżący budżetu państwa, którego dysponentem jest Minister Finansów. [English: transferred to the central current account of the state budget, whose disposer is the Minister of Finance.]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:b1f79a15d4",
-    "value_as_found": "The Minister of Finance is the disposer of the central current account of the state budget (Art. 197)"
-   }
-  ],
-  "record:PL:public_finance:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Dla obsługi budżetu państwa w zakresie krajowych środków finansowych są prowadzone następujące rachunki bankowe: 1) centralny rachunek bieżący budżetu państwa [English: To service the state budget in domestic funds, the following bank accounts are kept: 1) the central current account of the state budget]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:b1f79a15d4",
-    "value_as_found": "Public Finance Act Art. 196: accounts for servicing the state budget, starting with the central current account of the state budget"
    }
   ],
   "record:PL:public_health_surveillance:operator": [
@@ -10087,28 +9394,6 @@
     "value_as_found": "The health minister designates the register's system administrator from subordinate or supervised units"
    }
   ],
-  "record:PL:public_health_surveillance:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "oraz Główny Inspektor Sanitarny lub wskazane przez niego krajowe specjalistyczne jednostki, właściwe ze względu na rodzaj zakażenia lub choroby zakaźnej, prowadzą rejestr przypadków zakażeń i zachorowań na chorobę zakaźną [English: and the Chief Sanitary Inspector or national specialist units designated by him keep the register of cases of infection and communicable disease]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:c334b38b00",
-    "value_as_found": "Communicable Diseases Act Art. 30: sanitary inspectors and the Chief Sanitary Inspector keep the register of infections and communicable disease cases"
-   }
-  ],
-  "record:PL:tax:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "Szef Krajowej Administracji Skarbowej prowadzi w systemie teleinformatycznym CRP KEP i jest administratorem danych w nim zawartych. [English: The Head of the National Revenue Administration keeps CRP KEP in an ICT system and is the controller of the data contained therein.]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:ed185045ba",
-    "value_as_found": "The Head of KAS keeps CRP KEP in an ICT system and is its data controller (Art. 14, Taxpayer Identification Act)"
-   }
-  ],
   "record:PL:tax:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -10120,17 +9405,6 @@
     "value_as_found": "Tax identification numbers (NIP) are assigned via the Central Register of Entities – National Taxpayer Records (CRP KEP)"
    }
   ],
-  "record:PL:vehicle_licensing:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Ewidencję prowadzi minister właściwy do spraw informatyzacji w systemie teleinformatycznym. W rozumieniu niniejszej ustawy minister ten jest administratorem danych i informacji zgromadzonych w ewidencji. [English: The register is kept by the minister responsible for digital affairs in an ICT system. Within the meaning of this Act that minister is the controller of the data and information in the register.]",
-    "retrieved": "2026-09-29",
-    "source_id": "api-sejm-gov-pl:c91643f3e5",
-    "value_as_found": "Road Traffic Act Art. 80a(4): the central vehicle register is kept by the digital affairs minister, who is its data controller"
-   }
-  ],
   "record:PL:vehicle_licensing:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -10140,17 +9414,6 @@
     "retrieved": "2026-09-29",
     "source_id": "coi-gov-pl:b653ed6880",
     "value_as_found": "CEPiK holds data on all vehicles, drivers and driving entitlements"
-   }
-  ],
-  "record:PT:authentication_audit_log:count": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Número Total de Autenticações 140.783.983 ■ Chave Móvel Digital Número Total de Adesões [English: Total Number of Authentications 140,783,983 ■ Digital Mobile Key Total Number of Enrolments]",
-    "retrieved": "2026-09-29",
-    "source_id": "autenticacao-gov-pt:c33c5d245c",
-    "value_as_found": "140,783,983 total authentications through Autenticação.gov (figure shown at time of research, 2026-09-29)"
    }
   ],
   "record:PT:authentication_audit_log:register": [
@@ -10263,17 +9526,6 @@
     "value_as_found": "The ANCPI Geoportal is one of the online platforms ANCPI manages"
    }
   ],
-  "record:RO:government_payroll:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "a fost efectuat un număr de 389.708 operațiuni privind gestionarea funcțiilor și funcționarilor publici prin sistemul integrat de management al funcției și funcționarilor publici [English: 389,708 operations concerning the management of public posts and civil servants were performed through the integrated management system for the civil service and civil servants]",
-    "retrieved": "2026-09-29",
-    "source_id": "anfp-gov-ro:658ccb6f27",
-    "value_as_found": "In 2025, ANFP's integrated civil-service management system processed 389,708 operations on public posts and civil servants"
-   }
-  ],
   "record:RO:grid_control:operator": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -10305,17 +9557,6 @@
     "retrieved": "2026-09-29",
     "source_id": "siui-casan-ro:5719a070c1",
     "value_as_found": "SIUI is the health insurance IT platform, run by CNAS"
-   }
-  ],
-  "record:RO:land_property:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "secondary",
-    "locator": "page text",
-    "quote": "În această etapă, reluarea funcționării vizează exclusiv sistemul integrat e-Terra. [English: At this stage, the resumption of operation concerns exclusively the integrated e-Terra system.]",
-    "retrieved": "2026-09-29",
-    "source_id": "ancpi-ro:e6619fae5b",
-    "value_as_found": "e-Terra is ANCPI's integrated system. ANCPI reported restarting it in August 2026 after an outage."
    }
   ],
   "record:RO:police_records:operator": [
@@ -10549,17 +9790,6 @@
     "value_as_found": "Passport fingerprints are stored only on the passport chip and must be destroyed once the passport is issued; no central fingerprint store"
    }
   ],
-  "record:SE:firearms_register:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Polismyndigheten ska med hjälp av automatiserad behandling föra de separata register som anges i 2-5 §§. [English: The Police Authority shall by automated processing keep the separate registers set out in sections 2-5.]",
-    "retrieved": "2026-09-29",
-    "source_id": "riksdagen-se:345f78f5f7",
-    "value_as_found": "Vapenregistren (firearms registers) kept by the Police Authority under the new Vapenlag (2026:408)"
-   }
-  ],
   "record:SE:issuance_history:count": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -10580,17 +9810,6 @@
     "retrieved": "2026-09-29",
     "source_id": "riksdagen-se:43f8b456e9",
     "value_as_found": "Passregistret: central passport register kept by the Police Authority"
-   }
-  ],
-  "record:SE:judicial_criminal:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "En allmän domstol, en allmän förvaltningsdomstol eller en hyres- och arrendenämnd är personuppgiftsansvarig för den behandling av personuppgifter som den domstolen eller nämnden utför. [English: A general court, a general administrative court or a rent and tenancy tribunal is controller for the processing of personal data it carries out.]",
-    "retrieved": "2026-09-29",
-    "source_id": "riksdagen-se:9b8b1530b6",
-    "value_as_found": "Courts are each controllers for court case data under Domstolsdatalag (2015:728)"
    }
   ],
   "record:SE:judicial_criminal:register": [
@@ -10868,17 +10087,6 @@
     "value_as_found": "Voting rights are recorded in the register of voting rights, kept within the permanent-residence register and CRP"
    }
   ],
-  "record:SI:emergency_communications:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Delo je organizirano v Centru za obveščanje Republike Slovenije in trinajstih Regijskih centrih za obveščanje [English: The work is organised in the Notification Centre of the Republic of Slovenia and thirteen Regional Notification Centres]",
-    "retrieved": "2026-09-29",
-    "source_id": "gov-si:5afb5f2046",
-    "value_as_found": "Work is organised in the Notification Centre of the Republic of Slovenia and 13 regional centres"
-   }
-  ],
   "record:SI:emergency_communications:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -11055,17 +10263,6 @@
     "value_as_found": "The register records production and delivery dates and the validity status of each ID card"
    }
   ],
-  "record:SI:land_property:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "Kataster nepremičnin, evidenco državne meje, register prostorskih enot in register naslovov vzpostavi, vodi in vzdržuje Geodetska uprava Republike Slovenije [English: The real estate cadastre, the state border register, the register of spatial units and the address register are established, kept and maintained by the Surveying and Mapping Authority of the Republic of Slovenia]",
-    "retrieved": "2026-09-29",
-    "source_id": "uradni-list-si:d6d2fe2c52",
-    "value_as_found": "The Surveying and Mapping Authority (GURS) establishes, keeps and maintains the cadastre (ZKN Art. 4)"
-   }
-  ],
   "record:SI:land_property:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -11207,17 +10404,6 @@
     "retrieved": "2026-09-29",
     "source_id": "zakony-judikaty-info:3c57bfb4b0",
     "value_as_found": "Police Force records on undesirable persons, border-control data on foreigners and illegal stay"
-   }
-  ],
-  "record:SK:breeder_documents:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "page text",
-    "quote": "(2) Okresný úrad uchováva zbierku listín oddelene od ostatných písomností a zabezpečuje jej aktualizáciu a ochranu pred zničením a poškodením a pred zneužitím údajov, ktoré obsahuje. [English: (2) The district office keeps the collection of documents separately from other papers and ensures its updating and protection against destruction, damage and misuse of its data.]",
-    "retrieved": "2026-09-29",
-    "source_id": "zakony-judikaty-info:da6ca1f082",
-    "value_as_found": "District offices keep the collection of documents and hand it to the state archive after 100 years"
    }
   ],
   "record:SK:breeder_documents:register": [
@@ -11526,17 +10712,6 @@
     "retrieved": "2026-09-29",
     "source_id": "zakony-judikaty-info:c1d1cfead6",
     "value_as_found": "Register trestov (Criminal Records Register) kept by the General Prosecutor's Office"
-   }
-  ],
-  "record:SK:land_property:count": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "confidence": "official",
-    "locator": "PDF text",
-    "quote": "počet parciel registra C počet parciel registra C so založeným LV (podiel v %) počet parciel registra E 9 033 960 7 525 626 (83,3 %) 7 643 899 počet LV 4 850 159 Kataster v absolútnych číslach [English: number of register-C parcels, number of register-C parcels with an ownership sheet (share in %), number of register-E parcels 9,033,960 7,525,626 (83.3%) 7,643,899 number of ownership sheets 4,850,159 Cadastre in absolute numbers]",
-    "retrieved": "2026-09-29",
-    "source_id": "skgeodesy-sk:1f5c574b6c",
-    "value_as_found": "As of 31 Dec 2025: 9,033,960 register-C parcels, 7,643,899 register-E parcels and 4,850,159 ownership sheets (LV)"
    }
   ],
   "record:SK:land_property:operator": [
@@ -34755,6 +33930,7 @@
           "c": [
            "indicator:AT:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -34778,6 +33954,7 @@
           "c": [
            "indicator:AT:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -34791,6 +33968,7 @@
           "c": [
            "indicator:AT:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -34804,6 +33982,7 @@
           "c": [
            "indicator:AT:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -34817,6 +33996,7 @@
           "c": [
            "indicator:AT:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -35065,6 +34245,7 @@
           "c": [
            "record:AT:fingerprint_biometric:register"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "No central register"
          },
@@ -35160,6 +34341,7 @@
           "c": [
            "record:AT:facial_biometric:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -35196,11 +34378,8 @@
           "t": "Not stated in sources"
          },
          {
-          "c": [
-           "record:AT:digital_identity_credentials:count"
-          ],
-          "role": "fact",
-          "t": "Over 4.1 million citizens use ID Austria (August 2025)"
+          "role": "gap",
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -35427,6 +34606,7 @@
           "c": [
            "record:AT:issuance_history:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -36544,6 +35724,7 @@
           "c": [
            "indicator:BE:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -36567,6 +35748,7 @@
           "c": [
            "indicator:BE:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -36580,6 +35762,7 @@
           "c": [
            "indicator:BE:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -36877,6 +36060,7 @@
           "c": [
            "record:BE:fingerprint_biometric:register"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "No central register"
          },
@@ -38332,6 +37516,7 @@
           "c": [
            "indicator:BG:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -38345,6 +37530,7 @@
           "c": [
            "indicator:BG:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -38358,6 +37544,7 @@
           "c": [
            "indicator:BG:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -38607,11 +37794,8 @@
           "t": "Facial biometric (tier 0)"
          },
          {
-          "c": [
-           "record:BG:facial_biometric:register"
-          ],
-          "role": "fact",
-          "t": "National Register of Bulgarian Identity Documents, built on the automated information funds of the Bulgarian Identity Documents Act (Art. 65(3))"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -38668,11 +37852,8 @@
           "t": "Breeder document scans (tier 0)"
          },
          {
-          "c": [
-           "record:BG:breeder_documents:register"
-          ],
-          "role": "fact",
-          "t": "National Electronic Register of Civil Status Acts (birth, marriage, death acts) formed from the electronic equivalents of the acts (Civil Registration Act, Art. 41(5))"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -38697,11 +37878,8 @@
           "t": "Authentication audit log (tier 0)"
          },
          {
-          "c": [
-           "record:BG:authentication_audit_log:register"
-          ],
-          "role": "fact",
-          "t": "All operations on the register of electronic identifiers are recorded in an event log protected cryptographically (Art. 4(4)-(5))"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -38712,11 +37890,8 @@
           "t": "Not stated in sources"
          },
          {
-          "c": [
-           "record:BG:authentication_audit_log:count"
-          ],
-          "role": "fact",
-          "t": "Verification records are kept for 10 years (Art. 23(2)); retention period, not a record count"
+          "role": "gap",
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -38729,11 +37904,8 @@
           "t": "Document issuance history (tier 0)"
          },
          {
-          "c": [
-           "record:BG:issuance_history:register"
-          ],
-          "role": "fact",
-          "t": "The identity-document information funds also hold previous values of personal data from documents and applications (Bulgarian Identity Documents Act, Art. 65(1)(2))"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -38761,11 +37933,8 @@
           "t": "Digital identity credentials (tier 0)"
          },
          {
-          "c": [
-           "record:BG:digital_identity_credentials:register"
-          ],
-          "role": "fact",
-          "t": "Register of electronic identifiers linking each eID identifier to the unified civil identifier (Rules for the Electronic Identification Act, Art. 3(1))"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -38851,11 +38020,8 @@
           "t": "Judicial & criminal justice (tier 1)"
          },
          {
-          "c": [
-           "record:BG:judicial_criminal:register"
-          ],
-          "role": "fact",
-          "t": "The Ministry of Justice creates and maintains the Centralised Automated Information System \"Court Status\" with a central database (Ordinance No 8/2008)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -38961,11 +38127,8 @@
           "t": "Residence and migration status (tier 1)"
          },
          {
-          "c": [
-           "record:BG:residence_permits:register"
-          ],
-          "role": "fact",
-          "t": "A separate information fund holds coercive measures linked to identity documents and residence permits of foreigners (Art. 66(2))"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -39029,11 +38192,8 @@
           "t": "The new Customs Import Information System (MISV) went into production on 26.11.2018"
          },
          {
-          "c": [
-           "record:BG:customs:operator"
-          ],
-          "role": "fact",
-          "t": "Customs decisions are issued by the Director of the Customs Agency or heads of customs offices (Customs Act, Art. 19 as amended 2016)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -39054,11 +38214,8 @@
           "t": "Benefits & pensions (tier 1)"
          },
          {
-          "c": [
-           "record:BG:benefits_pensions:register"
-          ],
-          "role": "fact",
-          "t": "NSSI maintains the information system on pensions, benefits and allowances paid (Social Security Code, Art. 33)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -39083,18 +38240,12 @@
           "t": "Statutory health insurance (tier 1)"
          },
          {
-          "c": [
-           "record:BG:health_insurance:register"
-          ],
-          "role": "fact",
-          "t": "Health Insurance Act, Art. 63(1): NHIF builds an information system containing the register of insured persons"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
-          "c": [
-           "record:BG:health_insurance:operator"
-          ],
-          "role": "fact",
-          "t": "Providers check health-insurance status against NRA data (Health Insurance Act, Art. 50)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -39132,6 +38283,7 @@
           "c": [
            "record:BG:land_property:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -39231,11 +38383,8 @@
           "t": "Firearms register (tier 1)"
          },
          {
-          "c": [
-           "record:BG:firearms_register:register"
-          ],
-          "role": "fact",
-          "t": "Weapons Act, Art. 11(1): MVR builds and maintains a unified automated register"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -39555,6 +38704,7 @@
           "c": [
            "record:BG:business_registry:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -40097,6 +39247,7 @@
           "c": [
            "indicator:CY:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -40110,6 +39261,7 @@
           "c": [
            "indicator:CY:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -40123,6 +39275,7 @@
           "c": [
            "indicator:CY:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -40136,6 +39289,7 @@
           "c": [
            "indicator:CY:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -41256,6 +40410,7 @@
           "c": [
            "record:CY:emergency_communications:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -41844,6 +40999,7 @@
           "c": [
            "indicator:CZ:L1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -41857,6 +41013,7 @@
           "c": [
            "indicator:CZ:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -41880,6 +41037,7 @@
           "c": [
            "indicator:CZ:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -41893,6 +41051,7 @@
           "c": [
            "indicator:CZ:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -41906,6 +41065,7 @@
           "c": [
            "indicator:CZ:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -41919,6 +41079,7 @@
           "c": [
            "indicator:CZ:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -42187,6 +41348,7 @@
           "c": [
            "record:CZ:fingerprint_biometric:register"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "No central register"
          },
@@ -42321,11 +41483,8 @@
           "t": "Not stated in sources"
          },
          {
-          "c": [
-           "record:CZ:digital_identity_credentials:count"
-          ],
-          "role": "fact",
-          "t": "More than 10 million 'Identita občana' credentials; 5.5 million citizens hold an electronic identity"
+          "role": "gap",
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -42370,11 +41529,8 @@
           "t": "State PKI and qualified trust services (tier 0)"
          },
          {
-          "c": [
-           "record:CZ:trust_services_pki:register"
-          ],
-          "role": "fact",
-          "t": "State Trust Services Administration established by Act 297/2016 § 14"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -43633,6 +42789,7 @@
           "c": [
            "indicator:DE:L1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -43646,6 +42803,7 @@
           "c": [
            "indicator:DE:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -43669,6 +42827,7 @@
           "c": [
            "indicator:DE:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -43682,6 +42841,7 @@
           "c": [
            "indicator:DE:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -43695,6 +42855,7 @@
           "c": [
            "indicator:DE:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -43708,6 +42869,7 @@
           "c": [
            "indicator:DE:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -43947,11 +43109,8 @@
           "t": "Facial biometric (tier 0)"
          },
          {
-          "c": [
-           "record:DE:facial_biometric:register"
-          ],
-          "role": "fact",
-          "t": "Passregister (passport register) contains the holder's photograph (Passgesetz § 21)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -43982,6 +43141,7 @@
           "c": [
            "record:DE:fingerprint_biometric:register"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "No central register"
          },
@@ -44008,11 +43168,8 @@
           "t": "Breeder document scans (tier 0)"
          },
          {
-          "c": [
-           "record:DE:breeder_documents:register"
-          ],
-          "role": "fact",
-          "t": "Documents underlying each civil status entry are kept in special files (Sammelakten) (PStG § 6)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -44228,11 +43385,8 @@
           "t": "Intelligence services (tier 1)"
          },
          {
-          "c": [
-           "record:DE:intelligence:register"
-          ],
-          "role": "fact",
-          "t": "The domestic intelligence authorities process information in the joint intelligence information system (BVerfSchG § 6)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -44271,6 +43425,7 @@
           "c": [
            "record:DE:digital_identity_credentials:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -44303,6 +43458,7 @@
           "c": [
            "record:DE:trust_services_pki:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -44408,18 +43564,12 @@
           "t": "Benefits & pensions (tier 1)"
          },
          {
-          "c": [
-           "record:DE:benefits_pensions:register"
-          ],
-          "role": "fact",
-          "t": "Each pension insurer keeps an insurance account for every insured person, ordered by insurance number (SGB VI § 149)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
-          "c": [
-           "record:DE:benefits_pensions:operator"
-          ],
-          "role": "fact",
-          "t": "Pension insurers jointly maintain a data centre (Datenstelle) administered by Deutsche Rentenversicherung Bund (SGB VI § 145)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -44544,11 +43694,8 @@
           "t": "Border and visa systems (tier 1)"
          },
          {
-          "c": [
-           "record:DE:border_control:register"
-          ],
-          "role": "fact",
-          "t": "The Federal Office of Administration keeps a Visa Warning File to prevent visa misuse (VWDG § 1)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -45417,6 +44564,7 @@
           "c": [
            "indicator:DK:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -45440,6 +44588,7 @@
           "c": [
            "indicator:DK:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -45453,6 +44602,7 @@
           "c": [
            "indicator:DK:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -45466,6 +44616,7 @@
           "c": [
            "indicator:DK:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -45479,6 +44630,7 @@
           "c": [
            "indicator:DK:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -46037,6 +45189,7 @@
           "c": [
            "record:DK:issuance_history:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -46120,11 +45273,8 @@
           "t": "DMS (Declaration Management System) - customs system for import, export and transit declarations"
          },
          {
-          "c": [
-           "record:DK:customs:operator"
-          ],
-          "role": "fact",
-          "t": "Toldstyrelsen (Customs Agency); DMS Import in full operation from March 2026"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -46298,6 +45448,7 @@
           "c": [
            "record:DK:judicial_criminal:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -46330,6 +45481,7 @@
           "c": [
            "record:DK:police_records:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -46504,6 +45656,7 @@
           "c": [
            "record:DK:central_bank:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "EU provider"
          },
@@ -47203,6 +46356,7 @@
           "c": [
            "indicator:EE:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -47236,6 +46390,7 @@
           "c": [
            "indicator:EE:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -47249,6 +46404,7 @@
           "c": [
            "indicator:EE:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -47262,6 +46418,7 @@
           "c": [
            "indicator:EE:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -48992,6 +48149,7 @@
           "c": [
            "indicator:EL:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -49015,6 +48173,7 @@
           "c": [
            "indicator:EL:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -49028,6 +48187,7 @@
           "c": [
            "indicator:EL:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -49041,6 +48201,7 @@
           "c": [
            "indicator:EL:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -49054,6 +48215,7 @@
           "c": [
            "indicator:EL:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -49600,6 +48762,7 @@
           "c": [
            "record:EL:digital_identity_credentials:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -49633,11 +48796,8 @@
           "t": "Not stated in sources"
          },
          {
-          "c": [
-           "record:EL:residence_permits:count"
-          ],
-          "role": "fact",
-          "t": "1,007,920 residence documents in force in August 2026 (EU citizens/ethnic Greeks 274,705; temporary protection 41,788; third-country nationals 591,461; recognised refugees 99,966)"
+          "role": "gap",
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -49665,11 +48825,8 @@
           "t": "Not stated in sources"
          },
          {
-          "c": [
-           "record:EL:benefits_pensions:count"
-          ],
-          "role": "fact",
-          "t": "HELIOS pension control and payment system (operated by ΗΔΥΚΑ/IDIKA under Law 4093/2012) consolidated data from 92 systems covering 4.5 million pensions and 2.7 million pensioners"
+          "role": "gap",
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -49728,6 +48885,7 @@
           "c": [
            "record:EL:land_property:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -49844,6 +49002,7 @@
           "c": [
            "record:EL:police_records:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -50065,11 +49224,8 @@
           "t": "Crisis management and civil protection (tier 1)"
          },
          {
-          "c": [
-           "record:EL:crisis_management:register"
-          ],
-          "role": "fact",
-          "t": "Civil Protection Operations Centre, run 24/7 by the General Secretariat for Civil Protection (Law 3013/2002 as reproduced; since superseded by Law 4662/2020, not retrieved)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -50179,16 +49335,14 @@
           "t": "Integrated Tax Information System of AADE: TAXIS - TAXISnet - Elenxis"
          },
          {
-          "c": [
-           "record:EL:tax:operator"
-          ],
-          "role": "fact",
-          "t": "Independent Authority for Public Revenue (ΑΑΔΕ), established by Law 4389/2016 to assess and collect tax, customs and other public revenue"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
            "record:EL:tax:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -50221,6 +49375,7 @@
           "c": [
            "record:EL:customs:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -50285,6 +49440,7 @@
           "c": [
            "record:EL:health_records:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -50310,11 +49466,8 @@
           "t": "EODY core functions include epidemiological surveillance and provision of epidemiological data"
          },
          {
-          "c": [
-           "record:EL:public_health_surveillance:operator"
-          ],
-          "role": "fact",
-          "t": "National Public Health Organization (ΕΟΔΥ), private-law entity supervised by the Minister of Health (Law 4633/2019)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -50390,11 +49543,8 @@
           "t": "Geospatial base data (tier 3)"
          },
          {
-          "c": [
-           "record:EL:geospatial:register"
-          ],
-          "role": "fact",
-          "t": "National Spatial Data Infrastructure (ΕΥΓΕΠ) and national Geoportal, access provided by ΟΚΧΕ under Law 3882/2010 (INSPIRE)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -50766,6 +49916,7 @@
           "c": [
            "indicator:ES:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -50789,6 +49940,7 @@
           "c": [
            "indicator:ES:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -50802,6 +49954,7 @@
           "c": [
            "indicator:ES:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -50815,6 +49968,7 @@
           "c": [
            "indicator:ES:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -50828,6 +49982,7 @@
           "c": [
            "indicator:ES:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -51426,11 +50581,8 @@
           "t": "Residence and migration status (tier 1)"
          },
          {
-          "c": [
-           "record:ES:residence_permits:register"
-          ],
-          "role": "fact",
-          "t": "RD 1155/2024 art. 212: a Central Register of Foreign Nationals exists within the DGP, recording entries, travel documents, stays and authorisations"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -51597,11 +50749,8 @@
           "t": "Beneficial ownership register (tier 1)"
          },
          {
-          "c": [
-           "record:ES:beneficial_ownership:register"
-          ],
-          "role": "fact",
-          "t": "RD 609/2023 creates the Central Register of Beneficial Ownership, centralising beneficial-ownership information"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -52102,11 +51251,8 @@
           "t": "Reference geographic information includes cadastral parcels and registered real estate"
          },
          {
-          "c": [
-           "record:ES:geospatial:operator"
-          ],
-          "role": "fact",
-          "t": "Ley 14/2010 assigns the IGN duties for the AGE geographic information infrastructure and its Geoportal"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -52542,6 +51688,7 @@
           "c": [
            "indicator:FI:L1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -52555,6 +51702,7 @@
           "c": [
            "indicator:FI:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -52578,6 +51726,7 @@
           "c": [
            "indicator:FI:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -52591,6 +51740,7 @@
           "c": [
            "indicator:FI:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -52604,6 +51754,7 @@
           "c": [
            "indicator:FI:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -52617,6 +51768,7 @@
           "c": [
            "indicator:FI:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -54335,6 +53487,7 @@
           "c": [
            "indicator:FR:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -54348,6 +53501,7 @@
           "c": [
            "indicator:FR:L3"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -54361,6 +53515,7 @@
           "c": [
            "indicator:FR:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -54374,6 +53529,7 @@
           "c": [
            "indicator:FR:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -54387,6 +53543,7 @@
           "c": [
            "indicator:FR:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -54400,6 +53557,7 @@
           "c": [
            "indicator:FR:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -54962,11 +54120,8 @@
           "t": "Not stated in sources"
          },
          {
-          "c": [
-           "record:FR:police_records:count"
-          ],
-          "role": "fact",
-          "t": "17 million 'persons implicated' records (2022), plus 48 million victim records"
+          "role": "gap",
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -55434,6 +54589,7 @@
           "c": [
            "record:FR:defence_command:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -55727,6 +54883,7 @@
           "c": [
            "record:FR:statistics_microdata:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -55867,7 +55024,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "1 of 8 posture entries have a verified source. The others were researched from public policy documents but are withheld here until each is checked against the governing instrument."
+         "t": "0 of 8 posture entries have a verified source. The others were researched from public policy documents but are withheld here until each is checked against the governing instrument."
         }
        ],
        "type": "p"
@@ -55924,11 +55081,8 @@
           "t": "Data classification"
          },
          {
-          "c": [
-           "param:FR:data_classification"
-          ],
-          "role": "fact",
-          "t": "IGI 1300: Secret / Tres Secret; 'Diffusion Restreinte' is a protection marking, not a classification level"
+          "role": "gap",
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -56132,6 +55286,7 @@
           "c": [
            "indicator:HR:L1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -56145,6 +55300,7 @@
           "c": [
            "indicator:HR:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -56168,6 +55324,7 @@
           "c": [
            "indicator:HR:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -56181,6 +55338,7 @@
           "c": [
            "indicator:HR:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -56194,6 +55352,7 @@
           "c": [
            "indicator:HR:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -56207,6 +55366,7 @@
           "c": [
            "indicator:HR:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -56805,6 +55965,7 @@
           "c": [
            "record:HR:trust_services_pki:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -57179,6 +56340,7 @@
           "c": [
            "record:HR:central_bank:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "EU provider"
          },
@@ -57385,6 +56547,7 @@
           "c": [
            "record:HR:tax:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -57906,6 +57069,7 @@
           "c": [
            "indicator:HU:L1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -57919,6 +57083,7 @@
           "c": [
            "indicator:HU:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -57932,6 +57097,7 @@
           "c": [
            "indicator:HU:L3"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "No"
          }
@@ -57945,6 +57111,7 @@
           "c": [
            "indicator:HU:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -57958,6 +57125,7 @@
           "c": [
            "indicator:HU:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -57971,6 +57139,7 @@
           "c": [
            "indicator:HU:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -57984,6 +57153,7 @@
           "c": [
            "indicator:HU:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -58198,16 +57368,14 @@
           "t": "Személyiadat- és lakcímnyilvántartás (Personal Data and Address Register): the authentic official register of citizens' personal, address and notification-address data"
          },
          {
-          "c": [
-           "record:HU:civil_registry:operator"
-          ],
-          "role": "fact",
-          "t": "The Government designates the Minister for Science and Technology as the body managing the SZL (Government Decree 90/2026)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
            "record:HU:civil_registry:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -58243,6 +57411,7 @@
           "c": [
            "record:HU:facial_biometric:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -58278,6 +57447,7 @@
           "c": [
            "record:HU:fingerprint_biometric:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -58313,6 +57483,7 @@
           "c": [
            "record:HU:breeder_documents:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -58345,6 +57516,7 @@
           "c": [
            "record:HU:authentication_audit_log:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -58551,6 +57723,7 @@
           "c": [
            "record:HU:issuance_history:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -58586,6 +57759,7 @@
           "c": [
            "record:HU:digital_identity_credentials:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -58621,6 +57795,7 @@
           "c": [
            "record:HU:electoral_roll:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -59169,6 +58344,7 @@
           "c": [
            "record:HU:residence_permits:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -59204,6 +58380,7 @@
           "c": [
            "record:HU:vehicle_licensing:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -59723,6 +58900,7 @@
           "c": [
            "indicator:IE:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -59766,6 +58944,7 @@
           "c": [
            "indicator:IE:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -59779,6 +58958,7 @@
           "c": [
            "indicator:IE:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -60123,11 +59303,8 @@
           "t": "Electoral roll entry (tier 0)"
          },
          {
-          "c": [
-           "record:IE:electoral_roll:register"
-          ],
-          "role": "fact",
-          "t": "Local Government Electoral Registration System (LGERS), shared national electoral register database replacing 31 local registers"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -60137,6 +59314,7 @@
           "c": [
            "record:IE:electoral_roll:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Non-EU provider"
          },
@@ -60374,16 +59552,14 @@
           "t": "National Digital Radio Service (NDRS), TETRA network for first responders"
          },
          {
-          "c": [
-           "record:IE:emergency_communications:operator"
-          ],
-          "role": "fact",
-          "t": "Emergency Call Answering Service (ECAS) for 112/999 operated by BT under a State concession (re-awarded 2019)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
            "record:IE:emergency_communications:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Non-EU provider"
          },
@@ -60478,11 +59654,8 @@
           "t": "Not stated in sources"
          },
          {
-          "c": [
-           "record:IE:customs:count"
-          ],
-          "role": "fact",
-          "t": "62.8 million customs declarations processed in 2025 through NCTS and AIS/AES"
+          "role": "gap",
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -60811,6 +59984,7 @@
           "c": [
            "record:IE:central_bank:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "EU provider"
          },
@@ -60846,6 +60020,7 @@
           "c": [
            "record:IE:defence_command:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -61521,6 +60696,7 @@
           "c": [
            "indicator:IT:L1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -61534,6 +60710,7 @@
           "c": [
            "indicator:IT:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -61547,6 +60724,7 @@
           "c": [
            "indicator:IT:L3"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -61560,6 +60738,7 @@
           "c": [
            "indicator:IT:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -61573,6 +60752,7 @@
           "c": [
            "indicator:IT:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -61586,6 +60766,7 @@
           "c": [
            "indicator:IT:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -61821,11 +61002,8 @@
           "t": "Not stated in sources"
          },
          {
-          "c": [
-           "record:IT:civil_registry:count"
-          ],
-          "role": "fact",
-          "t": "66,252,730 persons in ANPR, including 6,800,090 residents abroad (AIRE), as updated 28 September 2026 (figure updated daily)"
+          "role": "gap",
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -61936,6 +61114,7 @@
           "c": [
            "record:IT:facial_biometric:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -61980,11 +61159,8 @@
           "t": "Electoral roll entry (tier 0)"
          },
          {
-          "c": [
-           "record:IT:electoral_roll:register"
-          ],
-          "role": "fact",
-          "t": "Art. 62(2-ter) CAD provides for the electoral lists to be integrated into ANPR"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -62156,6 +61332,7 @@
           "c": [
            "record:IT:issuance_history:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -62191,6 +61368,7 @@
           "c": [
            "record:IT:trust_services_pki:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -62627,11 +61805,8 @@
           "t": "IT-alert is the public warning service that sends messages to devices in an area hit by a serious emergency"
          },
          {
-          "c": [
-           "record:IT:crisis_management:operator"
-          ],
-          "role": "fact",
-          "t": "Art. 8 of Legislative Decree 1/2018 (Civil Protection Code): the Prime Minister acts through the Civil Protection Department"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -62849,11 +62024,8 @@
           "t": "Statistical microdata (tier 2)"
          },
          {
-          "c": [
-           "record:IT:statistics_microdata:register"
-          ],
-          "role": "fact",
-          "t": "Art. 3 of Decree-Law 179/2012: ISTAT carries out an annual (permanent) population and housing census"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -63322,6 +62494,7 @@
           "c": [
            "indicator:LT:L1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -63355,6 +62528,7 @@
           "c": [
            "indicator:LT:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -63368,6 +62542,7 @@
           "c": [
            "indicator:LT:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -63381,6 +62556,7 @@
           "c": [
            "indicator:LT:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -63394,6 +62570,7 @@
           "c": [
            "indicator:LT:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -65132,6 +64309,7 @@
           "c": [
            "indicator:LU:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -65145,6 +64323,7 @@
           "c": [
            "indicator:LU:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -65158,6 +64337,7 @@
           "c": [
            "indicator:LU:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -65171,6 +64351,7 @@
           "c": [
            "indicator:LU:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -66280,6 +65461,7 @@
           "c": [
            "record:LU:health_insurance:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -66885,6 +66067,7 @@
           "c": [
            "indicator:LV:L1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -66898,6 +66081,7 @@
           "c": [
            "indicator:LV:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -66921,6 +66105,7 @@
           "c": [
            "indicator:LV:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -66934,6 +66119,7 @@
           "c": [
            "indicator:LV:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -66947,6 +66133,7 @@
           "c": [
            "indicator:LV:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -66960,6 +66147,7 @@
           "c": [
            "indicator:LV:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -68704,6 +67892,7 @@
           "c": [
            "indicator:MT:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -68717,6 +67906,7 @@
           "c": [
            "indicator:MT:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -68730,6 +67920,7 @@
           "c": [
            "indicator:MT:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -68743,6 +67934,7 @@
           "c": [
            "indicator:MT:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -68963,11 +68155,8 @@
           "t": "Civil Status Section of the Public Registry holds acts of birth, marriage, civil union and death registered in Malta"
          },
          {
-          "c": [
-           "record:MT:civil_registry:operator"
-          ],
-          "role": "fact",
-          "t": "Public Registry offices are managed by the Director of the Public Registry (Public Registry Act, Cap. 56)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -70446,6 +69635,7 @@
           "c": [
            "indicator:NL:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -70459,6 +69649,7 @@
           "c": [
            "indicator:NL:L3"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "No"
          }
@@ -70472,6 +69663,7 @@
           "c": [
            "indicator:NL:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -70485,6 +69677,7 @@
           "c": [
            "indicator:NL:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -70498,6 +69691,7 @@
           "c": [
            "indicator:NL:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -70511,6 +69705,7 @@
           "c": [
            "indicator:NL:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -70724,11 +69919,8 @@
           "t": "Civil registry core (tier 0)"
          },
          {
-          "c": [
-           "record:NL:civil_registry:register"
-          ],
-          "role": "fact",
-          "t": "Basisregistratie Personen (BRP)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -70753,11 +69945,8 @@
           "t": "Facial biometric (tier 0)"
          },
          {
-          "c": [
-           "record:NL:facial_biometric:register"
-          ],
-          "role": "fact",
-          "t": "Issuing authorities keep a travel document administration containing the data of art. 3 paras 1-2 (incl. facial image)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -70785,6 +69974,7 @@
           "c": [
            "record:NL:fingerprint_biometric:register"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "No central register"
          },
@@ -70947,11 +70137,8 @@
           "t": "Land & property registry (tier 1)"
          },
          {
-          "c": [
-           "record:NL:land_property:register"
-          ],
-          "role": "fact",
-          "t": "Basisregistratie Kadaster (BRK)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -71097,6 +70284,7 @@
           "c": [
            "record:NL:digital_identity_credentials:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -71248,11 +70436,8 @@
           "t": "Business registry (tier 1)"
          },
          {
-          "c": [
-           "record:NL:business_registry:register"
-          ],
-          "role": "fact",
-          "t": "Handelsregister"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -71303,11 +70488,8 @@
           "t": "Vehicle & licensing (tier 1)"
          },
          {
-          "c": [
-           "record:NL:vehicle_licensing:register"
-          ],
-          "role": "fact",
-          "t": "Art. 126: driving licence register managed by RDW"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -71876,7 +71058,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "1 of 8 posture entries have a verified source. The others were researched from public policy documents but are withheld here until each is checked against the governing instrument."
+         "t": "0 of 8 posture entries have a verified source. The others were researched from public policy documents but are withheld here until each is checked against the governing instrument."
         }
        ],
        "type": "p"
@@ -71933,11 +71115,8 @@
           "t": "Data classification"
          },
          {
-          "c": [
-           "param:NL:data_classification"
-          ],
-          "role": "fact",
-          "t": "VIRBI 2013: Departementaal VERTROUWELIJK / CONFIDENTIEEL / GEHEIM / ZEER GEHEIM"
+          "role": "gap",
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -72235,6 +71414,7 @@
           "c": [
            "indicator:PL:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -72258,6 +71438,7 @@
           "c": [
            "indicator:PL:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -72271,6 +71452,7 @@
           "c": [
            "indicator:PL:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -72284,6 +71466,7 @@
           "c": [
            "indicator:PL:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -72297,6 +71480,7 @@
           "c": [
            "indicator:PL:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -72539,18 +71723,12 @@
           "t": "Facial biometric (tier 0)"
          },
          {
-          "c": [
-           "record:PL:facial_biometric:register"
-          ],
-          "role": "fact",
-          "t": "The ID Card Register stores the applicant's photograph (Art. 56(1)(2) of the Identity Cards Act)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
-          "c": [
-           "record:PL:facial_biometric:operator"
-          ],
-          "role": "fact",
-          "t": "RDO is a central ICT register maintained by the minister responsible for digital affairs (Art. 55)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -72574,6 +71752,7 @@
           "c": [
            "record:PL:fingerprint_biometric:register"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "No central register"
          },
@@ -72600,11 +71779,8 @@
           "t": "Breeder document scans (tier 0)"
          },
          {
-          "c": [
-           "record:PL:breeder_documents:register"
-          ],
-          "role": "fact",
-          "t": "Older paper civil-status acts are transferred (digitised) into the civil status register ex officio (Art. 125)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -72655,11 +71831,8 @@
           "t": "Document issuance history (tier 0)"
          },
          {
-          "c": [
-           "record:PL:issuance_history:register"
-          ],
-          "role": "fact",
-          "t": "Passport Documents Register is an ICT register maintained by the digital affairs minister (Art. 78 Passport Documents Act)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -72719,18 +71892,12 @@
           "t": "Electoral roll entry (tier 0)"
          },
          {
-          "c": [
-           "record:PL:electoral_roll:register"
-          ],
-          "role": "fact",
-          "t": "Electoral Code Art. 18: the Central Register of Voters covers persons entitled to vote"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
-          "c": [
-           "record:PL:electoral_roll:operator"
-          ],
-          "role": "fact",
-          "t": "The digital affairs minister keeps the Central Register of Voters in an ICT system (Art. 18 §4)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -72940,11 +72107,8 @@
           "t": "Tax identification numbers (NIP) are assigned via the Central Register of Entities – National Taxpayer Records (CRP KEP)"
          },
          {
-          "c": [
-           "record:PL:tax:operator"
-          ],
-          "role": "fact",
-          "t": "The Head of KAS keeps CRP KEP in an ICT system and is its data controller (Art. 14, Taxpayer Identification Act)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -73081,18 +72245,12 @@
           "t": "Beneficial ownership register (tier 1)"
          },
          {
-          "c": [
-           "record:PL:beneficial_ownership:register"
-          ],
-          "role": "fact",
-          "t": "AML Act Art. 55: CRBR is kept using an ICT system"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
-          "c": [
-           "record:PL:beneficial_ownership:operator"
-          ],
-          "role": "fact",
-          "t": "The competent authority for the register is the minister responsible for public finance (Art. 56)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -73120,11 +72278,8 @@
           "t": "CEPiK holds data on all vehicles, drivers and driving entitlements"
          },
          {
-          "c": [
-           "record:PL:vehicle_licensing:operator"
-          ],
-          "role": "fact",
-          "t": "Road Traffic Act Art. 80a(4): the central vehicle register is kept by the digital affairs minister, who is its data controller"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -73197,18 +72352,12 @@
           "t": "Treasury and state accounts (tier 1)"
          },
          {
-          "c": [
-           "record:PL:public_finance:register"
-          ],
-          "role": "fact",
-          "t": "Public Finance Act Art. 196: accounts for servicing the state budget, starting with the central current account of the state budget"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
-          "c": [
-           "record:PL:public_finance:operator"
-          ],
-          "role": "fact",
-          "t": "The Minister of Finance is the disposer of the central current account of the state budget (Art. 197)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -73340,11 +72489,8 @@
           "t": "Council of Ministers regulation on cooperation of the RCB director with mobile network operators to warn end users (Alert RCB)"
          },
          {
-          "c": [
-           "record:PL:crisis_management:operator"
-          ],
-          "role": "fact",
-          "t": "Crisis Management Act Art. 10 establishes RCB as a state budgetary unit under the Prime Minister"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -73417,11 +72563,8 @@
           "t": "Education (tier 1)"
          },
          {
-          "c": [
-           "record:PL:education:register"
-          ],
-          "role": "fact",
-          "t": "Education Information System Act Art. 4: SIO database is a central data set kept by the education minister"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -73446,11 +72589,8 @@
           "t": "Health records (tier 2)"
          },
          {
-          "c": [
-           "record:PL:health_records:register"
-          ],
-          "role": "fact",
-          "t": "Health Information System Act Art. 7: the P1 platform is an ICT system giving access to data on healthcare services in SIM"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -73504,11 +72644,8 @@
           "t": "Public health surveillance (tier 2)"
          },
          {
-          "c": [
-           "record:PL:public_health_surveillance:register"
-          ],
-          "role": "fact",
-          "t": "Communicable Diseases Act Art. 30: sanitary inspectors and the Chief Sanitary Inspector keep the register of infections and communicable disease cases"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "c": [
@@ -73543,11 +72680,8 @@
           "t": "Archival materials expressly include electronic documents"
          },
          {
-          "c": [
-           "record:PL:national_archives:operator"
-          ],
-          "role": "fact",
-          "t": "Archives Act Art. 4: supervision of the national archival resource via the Head Director of State Archives"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -74023,6 +73157,7 @@
           "c": [
            "indicator:PT:L1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -74036,6 +73171,7 @@
           "c": [
            "indicator:PT:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -74069,6 +73205,7 @@
           "c": [
            "indicator:PT:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -74082,6 +73219,7 @@
           "c": [
            "indicator:PT:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -74095,6 +73233,7 @@
           "c": [
            "indicator:PT:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -74427,11 +73566,8 @@
           "t": "Not stated in sources"
          },
          {
-          "c": [
-           "record:PT:authentication_audit_log:count"
-          ],
-          "role": "fact",
-          "t": "140,783,983 total authentications through Autenticação.gov (figure shown at time of research, 2026-09-29)"
+          "role": "gap",
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -75819,6 +74955,7 @@
           "c": [
            "indicator:RO:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -75842,6 +74979,7 @@
           "c": [
            "indicator:RO:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -75855,6 +74993,7 @@
           "c": [
            "indicator:RO:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -75868,6 +75007,7 @@
           "c": [
            "indicator:RO:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -75881,6 +75021,7 @@
           "c": [
            "indicator:RO:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -76346,11 +75487,8 @@
           "t": "Land & property registry (tier 1)"
          },
          {
-          "c": [
-           "record:RO:land_property:register"
-          ],
-          "role": "fact",
-          "t": "e-Terra is ANCPI's integrated system. ANCPI reported restarting it in August 2026 after an outage."
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -76783,11 +75921,8 @@
           "t": "Government payroll and personnel (tier 1)"
          },
          {
-          "c": [
-           "record:RO:government_payroll:register"
-          ],
-          "role": "fact",
-          "t": "In 2025, ANFP's integrated civil-service management system processed 389,708 operations on public posts and civil servants"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -77584,6 +76719,7 @@
           "c": [
            "indicator:SE:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -77607,6 +76743,7 @@
           "c": [
            "indicator:SE:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -77620,6 +76757,7 @@
           "c": [
            "indicator:SE:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Partly"
          }
@@ -77633,6 +76771,7 @@
           "c": [
            "indicator:SE:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -77646,6 +76785,7 @@
           "c": [
            "indicator:SE:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -77926,6 +77066,7 @@
           "c": [
            "record:SE:fingerprint_biometric:register"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "No central register"
          },
@@ -78127,11 +77268,8 @@
           "t": "Belastningsregistret (criminal records register), Police Authority"
          },
          {
-          "c": [
-           "record:SE:judicial_criminal:operator"
-          ],
-          "role": "fact",
-          "t": "Courts are each controllers for court case data under Domstolsdatalag (2015:728)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -78244,6 +77382,7 @@
           "c": [
            "record:SE:electoral_roll:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -78511,11 +77650,8 @@
           "t": "Firearms register (tier 1)"
          },
          {
-          "c": [
-           "record:SE:firearms_register:register"
-          ],
-          "role": "fact",
-          "t": "Vapenregistren (firearms registers) kept by the Police Authority under the new Vapenlag (2026:408)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -78823,6 +77959,7 @@
           "c": [
            "record:SE:electoral_management:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -79358,6 +78495,7 @@
           "c": [
            "indicator:SI:L2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -79381,6 +78519,7 @@
           "c": [
            "indicator:SI:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -79394,6 +78533,7 @@
           "c": [
            "indicator:SI:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -79407,6 +78547,7 @@
           "c": [
            "indicator:SI:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -79420,6 +78561,7 @@
           "c": [
            "indicator:SI:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -79700,6 +78842,7 @@
           "c": [
            "record:SI:fingerprint_biometric:register"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "No central register"
          },
@@ -79804,6 +78947,7 @@
           "c": [
            "record:SI:authentication_audit_log:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -79858,11 +79002,8 @@
           "t": "The Land Register is a public book of rights in real property, kept by the district courts"
          },
          {
-          "c": [
-           "record:SI:land_property:operator"
-          ],
-          "role": "fact",
-          "t": "The Surveying and Mapping Authority (GURS) establishes, keeps and maintains the cadastre (ZKN Art. 4)"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -80007,6 +79148,7 @@
           "c": [
            "record:SI:digital_identity_credentials:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -80042,6 +79184,7 @@
           "c": [
            "record:SI:trust_services_pki:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -80416,6 +79559,7 @@
           "c": [
            "record:SI:central_bank:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "EU provider"
          },
@@ -80441,11 +79585,8 @@
           "t": "Regional notification centres receive and process 112 emergency calls"
          },
          {
-          "c": [
-           "record:SI:emergency_communications:operator"
-          ],
-          "role": "fact",
-          "t": "Work is organised in the Notification Centre of the Republic of Slovenia and 13 regional centres"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -80596,6 +79737,7 @@
           "c": [
            "record:SI:firearms_register:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -80657,6 +79799,7 @@
           "c": [
            "record:SI:health_records:foreign_dependency"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "National infrastructure"
          },
@@ -81149,6 +80292,7 @@
           "c": [
            "indicator:SK:K1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -81162,6 +80306,7 @@
           "c": [
            "indicator:SK:K2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -81175,6 +80320,7 @@
           "c": [
            "indicator:SK:C1"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -81188,6 +80334,7 @@
           "c": [
            "indicator:SK:C2"
           ],
+          "k": "categorical",
           "role": "fact",
           "t": "Yes"
          }
@@ -81498,11 +80645,8 @@
           "t": "Zbierka listín (collection of source documents) kept by registry offices as the basis for civil-status entries"
          },
          {
-          "c": [
-           "record:SK:breeder_documents:operator"
-          ],
-          "role": "fact",
-          "t": "District offices keep the collection of documents and hand it to the state archive after 100 years"
+          "role": "gap",
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
@@ -81692,11 +80836,8 @@
           "t": "Not stated in sources"
          },
          {
-          "c": [
-           "record:SK:land_property:count"
-          ],
-          "role": "fact",
-          "t": "As of 31 Dec 2025: 9,033,960 register-C parcels, 7,643,899 register-E parcels and 4,850,159 ownership sheets (LV)"
+          "role": "gap",
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -83071,7 +82212,7 @@
   "checks": [
    {
     "name": "Researched claims (holdings, operators, legal bases, indicators)",
-    "what": "the cited page or PDF was downloaded and its SHA-256 recorded, and the quoted text was found in the extracted document by literal matching. An archived copy was looked up on the Internet Archive; where none exists the footnote says so."
+    "what": "the cited page or PDF was downloaded and its SHA-256 recorded, and the quoted text was found in the extracted document by literal matching. Every number and date in the printed value was found in the original-language quote; the English wording is a machine summary of the quote unless it appears in it verbatim. An archived copy was looked up on the Internet Archive; where none exists the footnote says so."
    },
    {
     "name": "Eurostat figures",
@@ -83089,19 +82230,6 @@
  "provenance": "Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. A value that no checked source supports is withheld and shown as a gap. A gap means not yet sourced, never that the thing does not exist. Capacity is not yet sized.",
  "schema_version": 2,
  "sources": {
-  "112-ie:ea88ea8328": {
-   "archived_url": "",
-   "doc_type": "webpage",
-   "label": "ECAS (112.ie) — Service Providers - ECAS 112.ie",
-   "language": "en",
-   "license": "",
-   "notes": "sha256 a04d9dbe1a7a0b1d36ab13f1b93224466019421c703cd45bfa167bc91e207d4d (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "ECAS (112.ie)",
-   "source_id": "112-ie:ea88ea8328",
-   "title": "Service Providers - ECAS 112.ie",
-   "url": "https://112.ie/service-providers/"
-  },
   "a-trust-at:1f3b1dfe0f": {
    "archived_url": "https://web.archive.org/web/20260915130050/https://www.a-trust.at/de/produkte/qualifizierte_signaturservices/id_austria/",
    "doc_type": "webpage",
@@ -83310,19 +82438,6 @@
    "title": "Guida all'ANSC",
    "url": "https://www.anagrafenazionale.interno.it/area-tecnica/guida-ansc/"
   },
-  "anagrafenazionale-interno-it:604791f8f6": {
-   "archived_url": "https://web.archive.org/web/20260929004520/https://www.anagrafenazionale.interno.it/",
-   "doc_type": "report",
-   "label": "Ministero dell'Interno - Anagrafe Nazionale — ANAGRAFE NAZIONALE – Unica. Per tutti., 2026-09-28",
-   "language": "it",
-   "license": "",
-   "notes": "sha256 d1101e28aaaedfe65aa39d564c4880410c4ab08f1492ed3f3074748945f26c49 (text/html), fetched 2026-09-29",
-   "published": "2026-09-28",
-   "publisher": "Ministero dell'Interno - Anagrafe Nazionale",
-   "source_id": "anagrafenazionale-interno-it:604791f8f6",
-   "title": "ANAGRAFE NAZIONALE – Unica. Per tutti.",
-   "url": "https://www.anagrafenazionale.interno.it/"
-  },
   "ancpi-ro:e6619fae5b": {
    "archived_url": "",
    "doc_type": "webpage",
@@ -83335,19 +82450,6 @@
    "source_id": "ancpi-ro:e6619fae5b",
    "title": "ANCPI - Agentia Nationala de Cadastru si Publicitate Imobiliara",
    "url": "https://www.ancpi.ro/"
-  },
-  "anfp-gov-ro:658ccb6f27": {
-   "archived_url": "https://web.archive.org/web/20260514052203/https://www.anfp.gov.ro/media/fepnqk44/raport-activitate-anfp_2025_final.pdf",
-   "doc_type": "annual_report",
-   "label": "Agenția Națională a Funcționarilor Publici — Raport de activitate ANFP 2025, 2026",
-   "language": "ro",
-   "license": "",
-   "notes": "sha256 843372557e7a4c89b9ec496b971c9d70869a54aa8f3d2841e3662283ec1a967e (application/pdf), fetched 2026-09-29",
-   "published": "2026",
-   "publisher": "Agenția Națională a Funcționarilor Publici",
-   "source_id": "anfp-gov-ro:658ccb6f27",
-   "title": "Raport de activitate ANFP 2025",
-   "url": "https://www.anfp.gov.ro/media/fepnqk44/raport-activitate-anfp_2025_final.pdf"
   },
   "aorta-lsp-nl:ad10d4680e": {
    "archived_url": "https://web.archive.org/web/20260710165804/https://www.aorta-lsp.nl/",
@@ -83427,19 +82529,6 @@
    "title": "Ustawa z dnia 5 sierpnia 2010 r. o ochronie informacji niejawnych (art. 5)",
    "url": "https://api.sejm.gov.pl/eli/acts/DU/2010/1228/text.html"
   },
-  "api-sejm-gov-pl:36abc3dd17": {
-   "archived_url": "",
-   "doc_type": "statute",
-   "label": "Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy…, 2026-09-28",
-   "language": "pl",
-   "license": "",
-   "notes": "sha256 9961f607b133532b373bf0332955caeaad0039a3feb0798a08073d1a2e1e082e (application/pdf), fetched 2026-09-29",
-   "published": "2026-09-28",
-   "publisher": "Sejm RP / Dziennik Ustaw",
-   "source_id": "api-sejm-gov-pl:36abc3dd17",
-   "title": "Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy Kodeks wyborczy (Dz.U. 2026 poz. 1261)",
-   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1261/text.pdf"
-  },
   "api-sejm-gov-pl:4590342121": {
    "archived_url": "",
    "doc_type": "statute",
@@ -83479,19 +82568,6 @@
    "title": "Ustawa z dnia 5 września 2016 r. o usługach zaufania oraz identyfikacji elektronicznej (art. 11)",
    "url": "https://api.sejm.gov.pl/eli/acts/DU/2016/1579/text.html"
   },
-  "api-sejm-gov-pl:9606c9dde2": {
-   "archived_url": "",
-   "doc_type": "statute",
-   "label": "Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-02-20",
-   "language": "pl",
-   "license": "",
-   "notes": "sha256 cb621e4a10fc33a7e13988995c4b870abbe59da4a76a1a5596df72543d626ab2 (application/pdf), fetched 2026-09-29",
-   "published": "2026-02-20",
-   "publisher": "Sejm RP / Dziennik Ustaw",
-   "source_id": "api-sejm-gov-pl:9606c9dde2",
-   "title": "Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o dokumentach paszportowych (Dz.U. 2026 poz. 196)",
-   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/196/text.pdf"
-  },
   "api-sejm-gov-pl:a19bebcdc3": {
    "archived_url": "",
    "doc_type": "statute",
@@ -83505,19 +82581,6 @@
    "title": "Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o informatyzacji działalności podmiotów realizujących zadania publiczne (Dz.U. 2026 poz. 1241)",
    "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1241/text.pdf"
   },
-  "api-sejm-gov-pl:a381458969": {
-   "archived_url": "https://web.archive.org/web/20260217001301/https://api.sejm.gov.pl/eli/acts/DU/2025/644/text.pdf",
-   "doc_type": "statute",
-   "label": "Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2025-05-16",
-   "language": "pl",
-   "license": "",
-   "notes": "sha256 a5f4d645f345e89e820c62a90c3723666b202fff945d1cfc04b5c22899bff2ea (application/pdf), fetched 2026-09-29",
-   "published": "2025-05-16",
-   "publisher": "Sejm RP / Dziennik Ustaw",
-   "source_id": "api-sejm-gov-pl:a381458969",
-   "title": "Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o przeciwdziałaniu praniu pieniędzy oraz finansowaniu terroryzmu (Dz.U. 2025 poz. 644)",
-   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/644/text.pdf"
-  },
   "api-sejm-gov-pl:b0baa097d1": {
    "archived_url": "",
    "doc_type": "statute",
@@ -83530,45 +82593,6 @@
    "source_id": "api-sejm-gov-pl:b0baa097d1",
    "title": "Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o CEIDG i Punkcie Informacji dla Przedsiębiorcy (Dz.U. 2026 poz. 30)",
    "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/30/text.pdf"
-  },
-  "api-sejm-gov-pl:b1d1f78bc5": {
-   "archived_url": "",
-   "doc_type": "statute",
-   "label": "Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-06-18",
-   "language": "pl",
-   "license": "",
-   "notes": "sha256 6374b48f0b7304af263b39bdba84390dedbf3da4a3315dd96823b6d4c7547824 (application/pdf), fetched 2026-09-29",
-   "published": "2026-06-18",
-   "publisher": "Sejm RP / Dziennik Ustaw",
-   "source_id": "api-sejm-gov-pl:b1d1f78bc5",
-   "title": "Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o systemie informacji oświatowej (Dz.U. 2026 poz. 803)",
-   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/803/text.pdf"
-  },
-  "api-sejm-gov-pl:b1f79a15d4": {
-   "archived_url": "https://web.archive.org/web/20260617201138/https://api.sejm.gov.pl/eli/acts/DU/2025/1483/text.pdf",
-   "doc_type": "statute",
-   "label": "Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2025-10-28",
-   "language": "pl",
-   "license": "",
-   "notes": "sha256 e8222871a2b10844ba3b38625c0bffaaec5bccf348b3a1ed4868230762900a0f (application/pdf), fetched 2026-09-29",
-   "published": "2025-10-28",
-   "publisher": "Sejm RP / Dziennik Ustaw",
-   "source_id": "api-sejm-gov-pl:b1f79a15d4",
-   "title": "Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o finansach publicznych (Dz.U. 2025 poz. 1483)",
-   "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1483/text.pdf"
-  },
-  "api-sejm-gov-pl:bd018c5f12": {
-   "archived_url": "https://web.archive.org/web/20260516181147/https://api.sejm.gov.pl/eli/acts/DU/2026/574/text.pdf",
-   "doc_type": "statute",
-   "label": "Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o…, 2026-04-28",
-   "language": "pl",
-   "license": "",
-   "notes": "sha256 e613861a2c6e763112b9c441b9fcdaedb3eec9b788d29caefb2516b9b0b46b9f (application/pdf), fetched 2026-09-29",
-   "published": "2026-04-28",
-   "publisher": "Sejm RP / Dziennik Ustaw",
-   "source_id": "api-sejm-gov-pl:bd018c5f12",
-   "title": "Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o zarządzaniu kryzysowym (Dz.U. 2026 poz. 574)",
-   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/574/text.pdf"
   },
   "api-sejm-gov-pl:c334b38b00": {
    "archived_url": "",
@@ -83595,32 +82619,6 @@
    "source_id": "api-sejm-gov-pl:c57bd286fa",
    "title": "Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy o Krajowym Rejestrze Sądowym (Dz.U. 2025 poz. 869)",
    "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/869/text.pdf"
-  },
-  "api-sejm-gov-pl:c91643f3e5": {
-   "archived_url": "https://web.archive.org/web/20260412092112/https://api.sejm.gov.pl/eli/acts/DU/2024/1251/text.html",
-   "doc_type": "statute",
-   "label": "Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy…, 2024-08-19",
-   "language": "pl",
-   "license": "",
-   "notes": "sha256 bacd222edf487df64ca544108fc1511c412d34bf58d71ca01064e926266b5c2c (text/html), fetched 2026-09-29",
-   "published": "2024-08-19",
-   "publisher": "Sejm RP / Dziennik Ustaw",
-   "source_id": "api-sejm-gov-pl:c91643f3e5",
-   "title": "Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy Prawo o ruchu drogowym (Dz.U. 2024 poz. 1251)",
-   "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1251/text.html"
-  },
-  "api-sejm-gov-pl:cb8726d3b3": {
-   "archived_url": "https://web.archive.org/web/20260412063302/https://api.sejm.gov.pl/eli/acts/DU/2026/393/text.pdf",
-   "doc_type": "statute",
-   "label": "Sejm RP / Dziennik Ustaw — Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy…, 2026-03-24",
-   "language": "pl",
-   "license": "",
-   "notes": "sha256 a9e5469bd32bc2d89c2c2294dd5001f09455193ead2ed04a8866377424c45d51 (application/pdf), fetched 2026-09-29",
-   "published": "2026-03-24",
-   "publisher": "Sejm RP / Dziennik Ustaw",
-   "source_id": "api-sejm-gov-pl:cb8726d3b3",
-   "title": "Obwieszczenie Marszałka Sejmu – jednolity tekst ustawy Prawo o aktach stanu cywilnego (Dz.U. 2026 poz. 393)",
-   "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/393/text.pdf"
   },
   "api-sejm-gov-pl:dbb2eb1699": {
    "archived_url": "",
@@ -83739,19 +82737,6 @@
    "title": "Plano Nacional de Nuvem Soberana (Maio 2026)",
    "url": "https://www.arte.gov.pt/wp-content/uploads/2026/05/Plano-Nacional-de-Nuvem-Soberana.pdf"
   },
-  "asp-government-bg:ddac6f9091": {
-   "archived_url": "https://web.archive.org/web/20240824063329/https://asp.government.bg/uploaded/files/4390-Zakon-za-grazhdanskata-registratsiya.pdf",
-   "doc_type": "statute",
-   "label": "Агенция за социално подпомагане (копие на закона) — Закон за гражданската регистрация (консолидиран текст)",
-   "language": "bg",
-   "license": "",
-   "notes": "sha256 f7cb70842f09890d469e568cbf1874ff9daa190dbe7e49368c71e3e97a0002d0 (application/pdf), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Агенция за социално подпомагане (копие на закона)",
-   "source_id": "asp-government-bg:ddac6f9091",
-   "title": "Закон за гражданската регистрация (консолидиран текст)",
-   "url": "https://asp.government.bg/uploaded/files/4390-Zakon-za-grazhdanskata-registratsiya.pdf"
-  },
   "assets-gov-ie:44adfd2bcf": {
    "archived_url": "",
    "doc_type": "webpage",
@@ -83829,19 +82814,6 @@
    "source_id": "autenticacao-gov-pt:4cb6bc5565",
    "title": "A Chave Móvel Digital",
    "url": "https://www.autenticacao.gov.pt/web/guest/a-chave-movel-digital"
-  },
-  "autenticacao-gov-pt:c33c5d245c": {
-   "archived_url": "",
-   "doc_type": "report",
-   "label": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P. — Estatísticas – Autenticação.gov",
-   "language": "pt",
-   "license": "",
-   "notes": "sha256 b023dd76550fd87ba965977fe806ba5ab2d997ec0c4387b33ec771c7cdead7c7 (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "ARTE – Agência para a Reforma Tecnológica do Estado, I.P.",
-   "source_id": "autenticacao-gov-pt:c33c5d245c",
-   "title": "Estatísticas – Autenticação.gov",
-   "url": "https://www.autenticacao.gov.pt/web/guest/estatisticas"
   },
   "bbk-bund-de:f2c744301d": {
    "archived_url": "https://web.archive.org/web/20260924105236/https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warnung-in-Deutschland/MoWaS/mowas_node.html",
@@ -84038,19 +83010,6 @@
    "title": "Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España",
    "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-10707"
   },
-  "boe-es:66991ad2c6": {
-   "archived_url": "https://web.archive.org/web/20260925090949/https://www.boe.es/buscar/act.php?id=BOE-A-2023-16159",
-   "doc_type": "statute",
-   "label": "Agencia Estatal Boletín Oficial del Estado — Real Decreto 609/2023, de 11 de julio, por el que se…, 2023",
-   "language": "es",
-   "license": "",
-   "notes": "sha256 70d7963c8ef8254c188cce9633f4887aab182d5faee03fc21b67d2750c3bddc2 (text/html), fetched 2026-09-29",
-   "published": "2023",
-   "publisher": "Agencia Estatal Boletín Oficial del Estado",
-   "source_id": "boe-es:66991ad2c6",
-   "title": "Real Decreto 609/2023, de 11 de julio, por el que se crea el Registro Central de Titularidades Reales",
-   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-16159"
-  },
   "boe-es:794a6fb20f": {
    "archived_url": "https://web.archive.org/web/20260420153252/https://www.boe.es/buscar/act.php?id=BOE-A-2024-22929",
    "doc_type": "statute",
@@ -84063,19 +83022,6 @@
    "source_id": "boe-es:794a6fb20f",
    "title": "Real Decreto 1118/2024, de 5 de noviembre, por el que se aprueba el Estatuto de la Agencia Estatal de Administración Digital",
    "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-22929"
-  },
-  "boe-es:8707a4fde0": {
-   "archived_url": "",
-   "doc_type": "statute",
-   "label": "Agencia Estatal Boletín Oficial del Estado — Real Decreto 1155/2024, de 19 de noviembre, Reglamento…, 2024",
-   "language": "es",
-   "license": "",
-   "notes": "sha256 0d0182044ca92769033c6f71d9ce1533015912a724a82b91fd5659c9ead1d01a (text/html), fetched 2026-09-29",
-   "published": "2024",
-   "publisher": "Agencia Estatal Boletín Oficial del Estado",
-   "source_id": "boe-es:8707a4fde0",
-   "title": "Real Decreto 1155/2024, de 19 de noviembre, Reglamento de la Ley Orgánica 4/2000",
-   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-24099"
   },
   "boe-es:9982c3b5a8": {
    "archived_url": "",
@@ -84297,19 +83243,6 @@
    "source_id": "bundesdruckerei-de:2e8ac42075",
    "title": "Konzern - Bundesdruckerei-Gruppe",
    "url": "https://www.bundesdruckerei.de/de/konzern"
-  },
-  "bundeskanzleramt-gv-at:87632f6055": {
-   "archived_url": "https://web.archive.org/web/20260219091143/https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/2025/08/id-austria-knackt-4-millionen-marke.html",
-   "doc_type": "webpage",
-   "label": "Bundeskanzleramt Österreich — Pröll: ID Austria knackt die 4-Millionen-Marke, 2025-08",
-   "language": "de",
-   "license": "",
-   "notes": "sha256 70980e4715373088111ae32641ae3197d2fbca29d07b76a6916ebd170053068b (text/html), fetched 2026-09-29",
-   "published": "2025-08",
-   "publisher": "Bundeskanzleramt Österreich",
-   "source_id": "bundeskanzleramt-gv-at:87632f6055",
-   "title": "Pröll: ID Austria knackt die 4-Millionen-Marke",
-   "url": "https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/2025/08/id-austria-knackt-4-millionen-marke.html"
   },
   "ca1-gov-dk:964232322c": {
    "archived_url": "https://web.archive.org/web/20260608195922/https://www.ca1.gov.dk/",
@@ -85299,19 +84232,6 @@
    "title": "Asylansøgninger og opholdstilladelser: Statistisk behandling",
    "url": "https://www.dst.dk/da/Statistik/dokumentation/statistikdokumentation/asylansoegninger-og-opholdstilladelser/statistisk-behandling"
   },
-  "dv-parliament-bg:8b19398fb2": {
-   "archived_url": "",
-   "doc_type": "statute",
-   "label": "Народно събрание – Държавен вестник — Закон за изменение и допълнение на Закона за митниците,…, 2016-07-26",
-   "language": "bg",
-   "license": "",
-   "notes": "sha256 bf9d06d825048cb84ccaa449418bd9c208bfac15c1004986860f2ad323569e4b (text/html), fetched 2026-09-29",
-   "published": "2016-07-26",
-   "publisher": "Народно събрание – Държавен вестник",
-   "source_id": "dv-parliament-bg:8b19398fb2",
-   "title": "Закон за изменение и допълнение на Закона за митниците, ДВ бр. 58 от 26.7.2016 г.",
-   "url": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=105827"
-  },
   "dvv-fi:0e79936b79": {
    "archived_url": "",
    "doc_type": "webpage",
@@ -85897,45 +84817,6 @@
    "title": "§ 3 BKAG",
    "url": "https://www.gesetze-im-internet.de/bkag_2018/__3.html"
   },
-  "gesetze-im-internet-de:6aec179f85": {
-   "archived_url": "https://web.archive.org/web/20250311180221/https://www.gesetze-im-internet.de/pa_g_1986/__21.html",
-   "doc_type": "statute",
-   "label": "Bundesministerium der Justiz / gesetze-im-internet.de — § 21 PassG - Passregister",
-   "language": "de",
-   "license": "",
-   "notes": "sha256 5f9b5290155c29b8216b10aac5d51afeaffd2d9d58eb36dd80d2d0cad7ddcf1c (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
-   "source_id": "gesetze-im-internet-de:6aec179f85",
-   "title": "§ 21 PassG - Passregister",
-   "url": "https://www.gesetze-im-internet.de/pa_g_1986/__21.html"
-  },
-  "gesetze-im-internet-de:7643471870": {
-   "archived_url": "https://web.archive.org/web/20260910135714/https://www.gesetze-im-internet.de/sgb_6/__145.html",
-   "doc_type": "statute",
-   "label": "Bundesministerium der Justiz / gesetze-im-internet.de — § 145 SGB VI - Aufgaben der Datenstelle der…",
-   "language": "de",
-   "license": "",
-   "notes": "sha256 bd57b1aa31c95b846e8b567d7393ec7717ab3006206534609c857971d587f5b8 (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
-   "source_id": "gesetze-im-internet-de:7643471870",
-   "title": "§ 145 SGB VI - Aufgaben der Datenstelle der Rentenversicherung",
-   "url": "https://www.gesetze-im-internet.de/sgb_6/__145.html"
-  },
-  "gesetze-im-internet-de:a758b3c2b0": {
-   "archived_url": "https://web.archive.org/web/20260101153538/https://www.gesetze-im-internet.de/bverfschg/__6.html",
-   "doc_type": "statute",
-   "label": "Bundesministerium der Justiz / gesetze-im-internet.de — § 6 BVerfSchG",
-   "language": "de",
-   "license": "",
-   "notes": "sha256 8c0fca5329d5b7bdc69ea2aa69fc104f11351e76e122d27fb3a7d8780823192c (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
-   "source_id": "gesetze-im-internet-de:a758b3c2b0",
-   "title": "§ 6 BVerfSchG",
-   "url": "https://www.gesetze-im-internet.de/bverfschg/__6.html"
-  },
   "gesetze-im-internet-de:aab4518525": {
    "archived_url": "https://web.archive.org/web/20250821134415/https://www.gesetze-im-internet.de/s_g/__4.html",
    "doc_type": "statute",
@@ -85948,19 +84829,6 @@
    "source_id": "gesetze-im-internet-de:aab4518525",
    "title": "Sicherheitsüberprüfungsgesetz (SÜG) § 4 Allgemeine Grundsätze zum Schutz von Verschlusssachen",
    "url": "https://www.gesetze-im-internet.de/s_g/__4.html"
-  },
-  "gesetze-im-internet-de:aec0b77b4d": {
-   "archived_url": "https://web.archive.org/web/20250912133200/https://www.gesetze-im-internet.de/pstg/__6.html",
-   "doc_type": "statute",
-   "label": "Bundesministerium der Justiz / gesetze-im-internet.de — § 6 PStG - Aktenführung",
-   "language": "de",
-   "license": "",
-   "notes": "sha256 f529c47c73b866105159fdd0db60852f57eaf83530f61e119d13013823feedf9 (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
-   "source_id": "gesetze-im-internet-de:aec0b77b4d",
-   "title": "§ 6 PStG - Aktenführung",
-   "url": "https://www.gesetze-im-internet.de/pstg/__6.html"
   },
   "gesetze-im-internet-de:bf6c8ead7a": {
    "archived_url": "https://web.archive.org/web/20260102165107/https://www.gesetze-im-internet.de/bmg/__2.html",
@@ -85987,32 +84855,6 @@
    "source_id": "gesetze-im-internet-de:d37a59e7c8",
    "title": "§ 3 PStG - Personenstandsregister",
    "url": "https://www.gesetze-im-internet.de/pstg/__3.html"
-  },
-  "gesetze-im-internet-de:d8b3bb5b35": {
-   "archived_url": "https://web.archive.org/web/20240422124244/https://www.gesetze-im-internet.de/vwdg/__1.html",
-   "doc_type": "statute",
-   "label": "Bundesministerium der Justiz / gesetze-im-internet.de — § 1 VWDG - Führung und Zweck der Datei",
-   "language": "de",
-   "license": "",
-   "notes": "sha256 e1646b91917067f8ea1b4b108dba9c9fac15b8283ba029cdc1e8b1b970b67be9 (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
-   "source_id": "gesetze-im-internet-de:d8b3bb5b35",
-   "title": "§ 1 VWDG - Führung und Zweck der Datei",
-   "url": "https://www.gesetze-im-internet.de/vwdg/__1.html"
-  },
-  "gesetze-im-internet-de:eb21a5a15b": {
-   "archived_url": "https://web.archive.org/web/20260305102912/https://www.gesetze-im-internet.de/sgb_6/__149.html",
-   "doc_type": "statute",
-   "label": "Bundesministerium der Justiz / gesetze-im-internet.de — § 149 SGB VI - Versicherungskonto",
-   "language": "de",
-   "license": "",
-   "notes": "sha256 f683a7b752754ae451b17eb709d782b4ca5afe608759251359976b0b80b713a6 (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
-   "source_id": "gesetze-im-internet-de:eb21a5a15b",
-   "title": "§ 149 SGB VI - Versicherungskonto",
-   "url": "https://www.gesetze-im-internet.de/sgb_6/__149.html"
   },
   "gov-pl:74a1f71094": {
    "archived_url": "https://web.archive.org/web/20260927055032/https://www.gov.pl/web/cyfryzacja/strategia-cyfryzacji-panstwa",
@@ -86508,19 +85350,6 @@
    "title": "Ηλεκτρονική Συνταγογράφηση",
    "url": "https://www.idika.gr/erga/ilektroniki-syntagografisi/"
   },
-  "idika-gr:521a11eeb5": {
-   "archived_url": "https://web.archive.org/web/20260804115242/https://www.idika.gr/erga/eniaio-systima-syntaxeon-eseps-ilios/",
-   "doc_type": "webpage",
-   "label": "Η.Δ.Υ.Κ.Α. Μ.Α.Ε. (IDIKA) — Ενιαίο Σύστημα Ελέγχου & Πληρωμών Συντάξεων ΕΣΕΠΣ – ΗΛΙΟΣ",
-   "language": "el",
-   "license": "",
-   "notes": "sha256 5f77225a6998296d879c6f7c5a86a48b7c765913639644002bad52c2e9467ebc (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Η.Δ.Υ.Κ.Α. Μ.Α.Ε. (IDIKA)",
-   "source_id": "idika-gr:521a11eeb5",
-   "title": "Ενιαίο Σύστημα Ελέγχου & Πληρωμών Συντάξεων ΕΣΕΠΣ – ΗΛΙΟΣ",
-   "url": "https://www.idika.gr/erga/eniaio-systima-syntaxeon-eseps-ilios/"
-  },
   "idomsoft-hu:afa936eb76": {
    "archived_url": "https://web.archive.org/web/20260512054003/https://www.idomsoft.hu/termekek/",
    "doc_type": "webpage",
@@ -86833,19 +85662,6 @@
    "title": "Hosting und Betrieb - Die Rechenzentren des ITZBund",
    "url": "https://www.itzbund.de/DE/leistungsportfolio/hostingundbetrieb/hostingundbetrieb.html"
   },
-  "kadaster:brk": {
-   "archived_url": "",
-   "doc_type": "webpage",
-   "label": "Kadaster brk",
-   "language": "nl",
-   "license": "",
-   "notes": "Title read from the live page on 2026-09-26, when the quote was re-checked present. Migrated from national_data.csv (#67).",
-   "published": "",
-   "publisher": "Kadaster",
-   "source_id": "kadaster:brk",
-   "title": "Waar bestaat de BRK uit? - Kadaster.nl zakelijk",
-   "url": "https://www.kadaster.nl/zakelijk/registraties/basisregistraties/brk"
-  },
   "kormany-hu:4a59e2da4a": {
    "archived_url": "https://web.archive.org/web/20260920201822/https://kormany.hu/nyilvantartasok/biometrikus-utlevel/tajekoztato-a-csca-tanusitvanyrol",
    "doc_type": "webpage",
@@ -86858,19 +85674,6 @@
    "source_id": "kormany-hu:4a59e2da4a",
    "title": "Tájékoztató a CSCA tanúsítványról",
    "url": "https://kormany.hu/nyilvantartasok/biometrikus-utlevel/tajekoztato-a-csca-tanusitvanyrol"
-  },
-  "kvk:handelsregister": {
-   "archived_url": "",
-   "doc_type": "webpage",
-   "label": "Kamer van Koophandel (KVK) handelsregister",
-   "language": "nl",
-   "license": "",
-   "notes": "Title read from the live page on 2026-09-26, when the quote was re-checked present. Migrated from national_data.csv (#67).",
-   "published": "",
-   "publisher": "Kamer van Koophandel (KVK)",
-   "source_id": "kvk:handelsregister",
-   "title": "Over het Handelsregister | KVK",
-   "url": "https://www.kvk.nl/over-het-handelsregister/"
   },
   "lassuranceretraite-fr:93e54c372e": {
    "archived_url": "",
@@ -87015,19 +85818,6 @@
    "title": "Law 4727/2020, Article 87 – Government clouds",
    "url": "https://www.lawspot.gr/nomothesia/n-4727-2020/arthro-87-nomos-4727-2020-kyvernitika-nefi/"
   },
-  "lawspot-gr:d07262f4cf": {
-   "archived_url": "",
-   "doc_type": "statute",
-   "label": "Lawspot (reproduction of the Government Gazette text) — Νόμος 3882/2010, 2010-09-22",
-   "language": "el",
-   "license": "",
-   "notes": "sha256 f0a858953f7fd3abd4e58d4a1143b3c925c462a32c120decbe20206fd30a4e06 (text/html), fetched 2026-09-29",
-   "published": "2010-09-22",
-   "publisher": "Lawspot (reproduction of the Government Gazette text)",
-   "source_id": "lawspot-gr:d07262f4cf",
-   "title": "Νόμος 3882/2010",
-   "url": "https://www.lawspot.gr/nomothesia/nomos-3882-2010/"
-  },
   "lawspot-gr:e2d26f87c4": {
    "archived_url": "https://web.archive.org/web/20260309090533/https://www.lawspot.gr/nomothesia/nomos-4727-2020/",
    "doc_type": "statute",
@@ -87040,19 +85830,6 @@
    "source_id": "lawspot-gr:e2d26f87c4",
    "title": "Νόμος 4727/2020 (ΦΕΚ Α΄ 184/2020)",
    "url": "https://www.lawspot.gr/nomothesia/nomos-4727-2020/"
-  },
-  "lawspot-gr:e3c728078f": {
-   "archived_url": "",
-   "doc_type": "statute",
-   "label": "Lawspot (reproduction of the Government Gazette text) — Νόμος 3013/2002, 2002-05-02",
-   "language": "el",
-   "license": "",
-   "notes": "sha256 b02b6faf5718fb6cd9bd1bce8bb59900ff4b266aec1616c97c9091ab23cdf678 (text/html), fetched 2026-09-29",
-   "published": "2002-05-02",
-   "publisher": "Lawspot (reproduction of the Government Gazette text)",
-   "source_id": "lawspot-gr:e3c728078f",
-   "title": "Νόμος 3013/2002",
-   "url": "https://www.lawspot.gr/nomothesia/nomos-3013-2002/"
   },
   "lawspot-gr:fa40eabc5e": {
    "archived_url": "",
@@ -87092,19 +85869,6 @@
    "source_id": "legislation-mt:0910929420",
    "title": "FAQs – Leġiżlazzjoni Malta",
    "url": "https://legislation.mt/Home/FAQList"
-  },
-  "legislation-mt:57d033af2b": {
-   "archived_url": "",
-   "doc_type": "statute",
-   "label": "Government of Malta – Legislation Malta — Public Registry Act (Cap. 56)",
-   "language": "en",
-   "license": "",
-   "notes": "sha256 3e63c307fe8dbd9fc1f05d37d3ef9c40eaba37e4b3ba477c8332fdfd01856883 (application/pdf), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Government of Malta – Legislation Malta",
-   "source_id": "legislation-mt:57d033af2b",
-   "title": "Public Registry Act (Cap. 56)",
-   "url": "https://legislation.mt/getpdf/602e53fb8f58ad1b78f3edbe"
   },
   "legislation-mt:7adc09e117": {
    "archived_url": "",
@@ -87600,19 +86364,6 @@
    "title": "Закон за чужденците в Република България",
    "url": "https://www.mfa.bg/upload/138160/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%87%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D1%82%D0%B5%20%D0%B2%20%D0%A0%D0%B5%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F.pdf"
   },
-  "mfa-bg:b0be806a0f": {
-   "archived_url": "https://web.archive.org/web/20250623235848/https://www.mfa.bg/upload/762/10-ZOBVVPI-bg-en.pdf",
-   "doc_type": "statute",
-   "label": "Министерство на външните работи — Закон за оръжията, боеприпасите, взривните вещества и…",
-   "language": "bg",
-   "license": "",
-   "notes": "sha256 2ae3a7b7e6bccb14f1d173c7822c4f08770d6d3c8b6bb81e1657845f3ab02140 (application/pdf), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Министерство на външните работи",
-   "source_id": "mfa-bg:b0be806a0f",
-   "title": "Закон за оръжията, боеприпасите, взривните вещества и пиротехническите изделия (двуезично издание)",
-   "url": "https://www.mfa.bg/upload/762/10-ZOBVVPI-bg-en.pdf"
-  },
   "mfin-gov-hr:bae053acc3": {
    "archived_url": "https://web.archive.org/web/20260814130009/https://mfin.gov.hr/istaknute-teme/drzavna-riznica/103",
    "doc_type": "webpage",
@@ -87625,19 +86376,6 @@
    "source_id": "mfin-gov-hr:bae053acc3",
    "title": "Državna riznica",
    "url": "https://mfin.gov.hr/istaknute-teme/drzavna-riznica/103"
-  },
-  "migration-gov-gr:6e0a2d0f6e": {
-   "archived_url": "",
-   "doc_type": "report",
-   "label": "Υπουργείο Μετανάστευσης και Ασύλου — Νόμιμη Μετανάστευση Αύγουστος 2026 - Παράρτημα Β…, 2026-09",
-   "language": "el",
-   "license": "",
-   "notes": "sha256 c7df74d8fa7419182031eb233df6bc1c484c1be6819421d8487ca1920a3845ad (application/pdf), fetched 2026-09-29",
-   "published": "2026-09",
-   "publisher": "Υπουργείο Μετανάστευσης και Ασύλου",
-   "source_id": "migration-gov-gr:6e0a2d0f6e",
-   "title": "Νόμιμη Μετανάστευση Αύγουστος 2026 - Παράρτημα Β (Αναλυτικοί Πίνακες)",
-   "url": "https://migration.gov.gr/wp-content/uploads/2026/09/%CE%A0%CE%91%CE%A1%CE%91%CE%A1%CE%A4%CE%97%CE%9C%CE%91-%CE%92_%CE%91%CF%8D%CE%B3%CE%BF%CF%85%CF%83%CF%84%CE%BF%CF%82-_2026_%CE%A5%CE%9C%CE%91-GR-%CE%95%CE%BD%CE%B7%CE%BC%CE%B5%CF%81%CF%89%CF%84%CE%B9%CE%BA%CF%8C-%CE%91%CF%8D%CE%B3%CE%BF%CF%85%CF%83%CF%84%CE%BF%CF%82-%CE%92-%CE%9D%CF%8C%CE%BC%CE%B9%CE%BC%CE%B7-%CE%9C%CE%B5%CF%84%CE%B1%CE%BD%CE%AC%CF%83%CF%84%CE%B5%CF%85%CF%83%CE%B7.pdf"
   },
   "migration-gov-gr:cc30b66f53": {
    "archived_url": "https://web.archive.org/web/20260923144946/https://migration.gov.gr/migration-policy/dioikisi/",
@@ -87677,19 +86415,6 @@
    "source_id": "mirri-gov-sk:bdc8badf76",
    "title": "Vládny cloud",
    "url": "https://mirri.gov.sk/sekcie/informatizacia/dokumenty/vladny-cloud/"
-  },
-  "mlsp-government-bg:9d6dc1d5f6": {
-   "archived_url": "https://web.archive.org/web/20250620210432/https://www.mlsp.government.bg/uploads/37/politiki/trud/zakonodatelstvo/2024/kso24.pdf",
-   "doc_type": "statute",
-   "label": "Министерство на труда и социалната политика — Кодекс за социално осигуряване (консолидиран текст), 2024",
-   "language": "bg",
-   "license": "",
-   "notes": "sha256 2cb0d4432aa86d660a79f7a2a2064ea1b3bf0cf7cf8f7c77230fee5e13ce9285 (application/pdf), fetched 2026-09-29",
-   "published": "2024",
-   "publisher": "Министерство на труда и социалната политика",
-   "source_id": "mlsp-government-bg:9d6dc1d5f6",
-   "title": "Кодекс за социално осигуряване (консолидиран текст)",
-   "url": "https://www.mlsp.government.bg/uploads/37/politiki/trud/zakonodatelstvo/2024/kso24.pdf"
   },
   "mnb-hu:16c070ee02": {
    "archived_url": "https://web.archive.org/web/20260718155137/https://www.mnb.hu/penzforgalom/azonnalifizetes",
@@ -87768,19 +86493,6 @@
    "source_id": "mtc-government-bg:c645e7ccb8",
    "title": "Правилник за прилагане на Закона за електронната идентификация",
    "url": "https://www.mtc.government.bg/sites/default/files/pravilnik_za_prilagane_na_zakona_za_elektronnata_identifikaciq.pdf"
-  },
-  "mv-gov-cz:a50684ad5c": {
-   "archived_url": "https://web.archive.org/web/20251003233623/https://mv.gov.cz/clanek/pocet-elektronickych-identit-obcanu-prekonal-hranici-10-milionu.aspx",
-   "doc_type": "webpage",
-   "label": "Ministerstvo vnitra České republiky — Počet elektronických Identit občanů překonal hranici 10…",
-   "language": "cs",
-   "license": "",
-   "notes": "sha256 cb52834802cb11df5c7b91cc66bb2c1e1d248b8dcda1033d9a20a4d6074419f0 (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Ministerstvo vnitra České republiky",
-   "source_id": "mv-gov-cz:a50684ad5c",
-   "title": "Počet elektronických Identit občanů překonal hranici 10 milionů",
-   "url": "https://mv.gov.cz/clanek/pocet-elektronickych-identit-obcanu-prekonal-hranici-10-milionu.aspx"
   },
   "mvr-bg:d9551e4bf5": {
    "archived_url": "https://web.archive.org/web/20260427064743/https://mvr.bg/sofia/%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B5%D0%BD-%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BF%D1%80%D0%B5%D1%81%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/90242",
@@ -88354,19 +87066,6 @@
    "title": "Закон за здравето",
    "url": "https://www.nhif.bg/upload/30458/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%B5%D1%82%D0%BE.pdf"
   },
-  "nhif-bg:f33b858438": {
-   "archived_url": "",
-   "doc_type": "statute",
-   "label": "Национална здравноосигурителна каса (копие на закона) — Закон за здравното осигуряване",
-   "language": "bg",
-   "license": "",
-   "notes": "sha256 934a2de0dd928a97892960b8ec835560c3c8fab1930b11e43cd1da13101203eb (application/pdf), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Национална здравноосигурителна каса (копие на закона)",
-   "source_id": "nhif-bg:f33b858438",
-   "title": "Закон за здравното осигуряване",
-   "url": "https://www.nhif.bg/upload/32277/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BD%D0%BE%D1%82%D0%BE%20%D0%BE%D1%81%D0%B8%D0%B3%D1%83%D1%80%D1%8F%D0%B2%D0%B0%D0%BD%D0%B5.pdf"
-  },
   "nias-gov-hr:4ed5216d7b": {
    "archived_url": "https://web.archive.org/web/20250914232256/https://nias.gov.hr/Home/TermsOfUse",
    "doc_type": "webpage",
@@ -88392,32 +87091,6 @@
    "source_id": "nki-gov-hu:7e0f362387",
    "title": "Felhő – harmadik fél által tanúsított felhőszolgáltatások (Cloud – third-party certified cloud services)",
    "url": "https://nki.gov.hu/hatosag/tartalom/felho/"
-  },
-  "normattiva-it:210c9adc37": {
-   "archived_url": "https://web.archive.org/web/20260125120137/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62",
-   "doc_type": "statute",
-   "label": "Normattiva - Istituto Poligrafico e Zecca dello Stato — Decreto legislativo 7 marzo 2005, n. 82 (Codice…, 2005",
-   "language": "it",
-   "license": "",
-   "notes": "sha256 f235f1b7747ce13e88b6042b532f3270f74923e37c0c1fd36a73ca0e9aa5d8f4 (text/html), fetched 2026-09-29",
-   "published": "2005",
-   "publisher": "Normattiva - Istituto Poligrafico e Zecca dello Stato",
-   "source_id": "normattiva-it:210c9adc37",
-   "title": "Decreto legislativo 7 marzo 2005, n. 82 (Codice dell'amministrazione digitale), art. 62",
-   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62"
-  },
-  "normattiva-it:405d3c7907": {
-   "archived_url": "",
-   "doc_type": "statute",
-   "label": "Normattiva - Istituto Poligrafico e Zecca dello Stato — Decreto legislativo 2 gennaio 2018, n. 1 (Codice della…, 2018",
-   "language": "it",
-   "license": "",
-   "notes": "sha256 7bbc48401a15b10221f840edb3b6277bc4cea637c2f1f64540bb76914d7716c8 (text/html), fetched 2026-09-29",
-   "published": "2018",
-   "publisher": "Normattiva - Istituto Poligrafico e Zecca dello Stato",
-   "source_id": "normattiva-it:405d3c7907",
-   "title": "Decreto legislativo 2 gennaio 2018, n. 1 (Codice della protezione civile), art. 8",
-   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art8"
   },
   "normattiva-it:50a3305831": {
    "archived_url": "https://web.archive.org/web/20251012072920/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62ter",
@@ -88457,19 +87130,6 @@
    "source_id": "normattiva-it:8ae7eff63c",
    "title": "Decreto-legge 18 ottobre 2012, n. 179, art. 33-septies (Consolidamento e razionalizzazione dei siti e delle infrastrutture digitali del Paese)",
    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art33septies"
-  },
-  "normattiva-it:cb6d493e8b": {
-   "archived_url": "https://web.archive.org/web/20250521205442/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art3",
-   "doc_type": "statute",
-   "label": "Normattiva - Istituto Poligrafico e Zecca dello Stato — Decreto-legge 18 ottobre 2012, n. 179, art. 3, 2012",
-   "language": "it",
-   "license": "",
-   "notes": "sha256 d6b1b9df21c1f5a87525748f5291beb983b5a5123f39ceb53e5e13f3f1a0dc46 (text/html), fetched 2026-09-29",
-   "published": "2012",
-   "publisher": "Normattiva - Istituto Poligrafico e Zecca dello Stato",
-   "source_id": "normattiva-it:cb6d493e8b",
-   "title": "Decreto-legge 18 ottobre 2012, n. 179, art. 3",
-   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art3"
   },
   "normattiva-it:e96f2575a3": {
    "archived_url": "https://web.archive.org/web/20250819092310/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art12",
@@ -89121,19 +87781,6 @@
    "title": "Lag (2017:631) om registrering av verkliga huvudmän",
    "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2017631-om-registrering-av-verkliga_sfs-2017-631/"
   },
-  "riksdagen-se:345f78f5f7": {
-   "archived_url": "https://web.archive.org/web/20260919075515/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/",
-   "doc_type": "statute",
-   "label": "Sveriges riksdag (Svensk författningssamling) — Vapenlag (2026:408), 2026",
-   "language": "sv",
-   "license": "",
-   "notes": "sha256 86bb21fbc11dbe3e751759da5c1787a5de114ca66c5443db5bb8a993d8425795 (text/html), fetched 2026-09-29",
-   "published": "2026",
-   "publisher": "Sveriges riksdag (Svensk författningssamling)",
-   "source_id": "riksdagen-se:345f78f5f7",
-   "title": "Vapenlag (2026:408)",
-   "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/"
-  },
   "riksdagen-se:43f8b456e9": {
    "archived_url": "https://web.archive.org/web/20260813145910/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/passforordning-1979664_sfs-1979-664/",
    "doc_type": "statute",
@@ -89211,19 +87858,6 @@
    "source_id": "riksdagen-se:7d26121867",
    "title": "Vägtrafikdatalag (2019:369)",
    "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vagtrafikdatalag-2019369_sfs-2019-369/"
-  },
-  "riksdagen-se:9b8b1530b6": {
-   "archived_url": "",
-   "doc_type": "statute",
-   "label": "Sveriges riksdag (Svensk författningssamling) — Domstolsdatalag (2015:728), 2015",
-   "language": "sv",
-   "license": "",
-   "notes": "sha256 054aa2bf027e32222c0293de6a72b155504247f9cb064252f9fd999d13ae91f6 (text/html), fetched 2026-09-29",
-   "published": "2015",
-   "publisher": "Sveriges riksdag (Svensk författningssamling)",
-   "source_id": "riksdagen-se:9b8b1530b6",
-   "title": "Domstolsdatalag (2015:728)",
-   "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/domstolsdatalag-2015728_sfs-2015-728/"
   },
   "riksdagen-se:a0c451ffc9": {
    "archived_url": "https://web.archive.org/web/20260417064235/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/aktiebolagsforordning-2005559_sfs-2005-559/",
@@ -89472,19 +88106,6 @@
    "title": "WATMAN - Administrația Națională Apele Române",
    "url": "https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/"
   },
-  "rvig:brp": {
-   "archived_url": "",
-   "doc_type": "webpage",
-   "label": "Rijksdienst voor Identiteitsgegevens (RvIG) brp",
-   "language": "nl",
-   "license": "",
-   "notes": "Title read from the live page on 2026-09-26, when the quote was re-checked present. Migrated from national_data.csv (#67).",
-   "published": "",
-   "publisher": "Rijksdienst voor Identiteitsgegevens (RvIG)",
-   "source_id": "rvig:brp",
-   "title": "Basisregistratie Personen | RvIG",
-   "url": "https://www.rvig.nl/basisregistratie-personen"
-  },
   "santepubliquefrance-fr:897fe55d60": {
    "archived_url": "https://web.archive.org/web/20260305175756/https://www.santepubliquefrance.fr/maladies-a-declaration-obligatoire",
    "doc_type": "webpage",
@@ -89666,19 +88287,6 @@
    "source_id": "sgdsn-gouv-fr:f1840587a5",
    "title": "Réforme de la protection du secret de la défense nationale",
    "url": "https://www.sgdsn.gouv.fr/nos-missions/proteger/proteger-le-secret-de-la-defense-nationale/reforme-de-la-protection-du-secret"
-  },
-  "sgdsn:igi-secret-defense@2021-12-01": {
-   "archived_url": "",
-   "doc_type": "regulation",
-   "label": "Secretariat general de la defense et de la securite nationale (SGDSN) igi-secret-defense, 2021-12-01",
-   "language": "fr",
-   "license": "Licence Ouverte / Etalab 2.0",
-   "notes": "Title and date read from the cached PDF (cache/legal/FR/data_classification-6622c4f7.pdf).",
-   "published": "2021-12-01",
-   "publisher": "Secretariat general de la defense et de la securite nationale (SGDSN)",
-   "source_id": "sgdsn:igi-secret-defense@2021-12-01",
-   "title": "Instruction ministérielle sur la protection du secret de la défense nationale",
-   "url": "https://www.info.gouv.fr/upload/media/content/0001/05/1dbd413d9574bba8df1f282cab4a74f128432209.pdf"
   },
   "si-trust-gov-si:158382bc68": {
    "archived_url": "https://web.archive.org/web/20260727081439/https://www.si-trust.gov.si/sl/si-pass",
@@ -90005,19 +88613,6 @@
    "title": "DMS (Declaration Management System)",
    "url": "https://toldst.dk/erhverv/toldsystemer/dms"
   },
-  "toldst-dk:f040f063f2": {
-   "archived_url": "",
-   "doc_type": "webpage",
-   "label": "Toldstyrelsen — Nu er vi overgået til DMS Import, 2026-03-16",
-   "language": "da",
-   "license": "",
-   "notes": "sha256 5272f559d29dba5073031a5eb131e102c2469518110532244b38bd91e969533f (text/html), fetched 2026-09-29",
-   "published": "2026-03-16",
-   "publisher": "Toldstyrelsen",
-   "source_id": "toldst-dk:f040f063f2",
-   "title": "Nu er vi overgået til DMS Import",
-   "url": "https://toldst.dk/nyheder/nyt-om-told/dms-import-er-nu-i-fuld-drift"
-  },
   "transelectrica-ro:121d6fb007": {
    "archived_url": "https://web.archive.org/web/20250803190750/https://www.transelectrica.ro/ro/web/tel/operator-de-sistem",
    "doc_type": "webpage",
@@ -90174,19 +88769,6 @@
    "title": "Zakon o tujcih (uradno prečiščeno besedilo) (ZTuj-2-UPB9), Uradni list RS, št. 91/2021",
    "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2021-01-1957"
   },
-  "uradni-list-si:d6d2fe2c52": {
-   "archived_url": "https://web.archive.org/web/20220419233023/https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2021-01-1047",
-   "doc_type": "statute",
-   "label": "Uradni list Republike Slovenije — Zakon o katastru nepremičnin (ZKN), Uradni list RS, št.…, 2021-04-09",
-   "language": "sl",
-   "license": "",
-   "notes": "sha256 18af38f4a9e59439af04f85f28ff8983aca9ddc061c956e61d1237fae6d2a3df (text/html), fetched 2026-09-29",
-   "published": "2021-04-09",
-   "publisher": "Uradni list Republike Slovenije",
-   "source_id": "uradni-list-si:d6d2fe2c52",
-   "title": "Zakon o katastru nepremičnin (ZKN), Uradni list RS, št. 54/2021",
-   "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2021-01-1047"
-  },
   "val-se:9f6e2e1f67": {
    "archived_url": "https://web.archive.org/web/20260913174143/https://www.val.se/om-valmyndigheten/vart-it-stod",
    "doc_type": "webpage",
@@ -90264,19 +88846,6 @@
    "source_id": "web-archive-org:75166dee30",
    "title": "SPCSS – Státní pokladna Centrum sdílených služeb, s. p. (homepage, archived 14 May 2026)",
    "url": "https://web.archive.org/web/20260514094405/https://www.spcss.cz/"
-  },
-  "wetten-nl:bwbr0033507@2013-06-01": {
-   "archived_url": "",
-   "doc_type": "regulation",
-   "label": "Overheid.nl Wettenbank bwbr0033507, 2013-06-01",
-   "language": "nl",
-   "license": "Public domain (Auteurswet art. 11)",
-   "notes": "Title read from the cached page (cache/legal/NL/data_classification-65b06ecf.html).",
-   "published": "2013-06-01",
-   "publisher": "Overheid.nl Wettenbank",
-   "source_id": "wetten-nl:bwbr0033507@2013-06-01",
-   "title": "Besluit Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie 2013 (VIRBI 2013)",
-   "url": "https://wetten.overheid.nl/BWBR0033507/2013-06-01"
   },
   "wetten-overheid-nl:d93f954bd2": {
    "archived_url": "https://web.archive.org/web/20260922170754/https://wetten.overheid.nl/BWBR0006622/2026-09-01",

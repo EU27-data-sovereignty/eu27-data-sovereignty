@@ -56,42 +56,42 @@ The holdings Germany cannot let depend on infrastructure a foreign state can com
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | Melderegister (population/residence registers) kept by the Meldebehörden[^s15] | The Federal Central Tax Office (BZSt) stores the national personal identification number (Identifikationsnummer) with core identity data for every natural person (Abgabenordnung § 139b(3))[^s16] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | Passregister (passport register) contains the holder's photograph (Passgesetz § 21)[^s17] | Biometric features may be stored only at the issuing ID-card authorities[^s18] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | No central register[^s18] | — | — | — |
-| Critical | Breeder document scans (tier 0) | Documents underlying each civil status entry are kept in special files (Sammelakten) (PStG § 6)[^s19] | Each Standesamt keeps the birth register (Geburtenregister) and other civil status registers[^s20] | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | *Not yet sourced* | Biometric features may be stored only at the issuing ID-card authorities[^s17] | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | No central register[^s17] | — | — | — |
+| Critical | Breeder document scans (tier 0) | *Not yet sourced* | Each Standesamt keeps the birth register (Geburtenregister) and other civil status registers[^s18] | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | The ID-card register records serial number, revocation password/sum and expiry date[^s21] | A central store of all ID-card serial numbers is permitted only at the card manufacturer, solely to trace the cards[^s18] | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | The ID-card register records serial number, revocation password/sum and expiry date[^s19] | A central store of all ID-card serial numbers is permitted only at the card manufacturer, solely to trace the cards[^s17] | *Not stated in sources* | *Not yet measured* |
 | High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | The domestic intelligence authorities process information in the joint intelligence information system (BVerfSchG § 6)[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | BundID is to become the single central citizen account 'DeutschlandID' under the OZG[^s23] | *Not yet sourced* | National infrastructure[^s23] | *Not yet measured* |
+| High | Intelligence services (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | BundID is to become the single central citizen account 'DeutschlandID' under the OZG[^s20] | *Not yet sourced* | National infrastructure[^s20] | *Not yet measured* |
 | High | State PKI and qualified trust services (tier 0) | V-PKI provides certificate-based security services to federal and state authorities, municipalities and public institutions[^s3] | *Not yet sourced* | National infrastructure[^s3] | *Not yet measured* |
-| High | Residence and migration status (tier 1) | The AZR consists of a general data stock and a separately kept visa file[^s24] | The AZR is kept by BAMF; the Federal Office of Administration (BVA) processes the data on BAMF's behalf[^s24] | *Not stated in sources* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | The AZR consists of a general data stock and a separately kept visa file[^s21] | The AZR is kept by BAMF; the Federal Office of Administration (BVA) processes the data on BAMF's behalf[^s21] | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | ATLAS is the customs IT procedure for automated clearance and monitoring of cross-border goods traffic[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | Each pension insurer keeps an insurance account for every insured person, ordered by insurance number (SGB VI § 149)[^s26] | Pension insurers jointly maintain a data centre (Datenstelle) administered by Deutsche Rentenversicherung Bund (SGB VI § 145)[^s27] | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | ATLAS is the customs IT procedure for automated clearance and monitoring of cross-border goods traffic[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | The Federal Office of Administration keeps a Visa Warning File to prevent visa misuse (VWDG § 1)[^s28] | The BKA is the central national authority operating the national part of the Schengen Information System[^s29] | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | *Not yet sourced* | The BKA is the central national authority operating the national part of the Schengen Information System[^s23] | *Not stated in sources* | *Not yet measured* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | MoWaS is a highly available, hardened system for warning the population in Germany[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | MoWaS is a highly available, hardened system for warning the population in Germany[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | The Bundesarchiv provides the Digital Intermediate Archive of the Federation (DZAB) as a central service to all federal public bodies[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | The Bundesarchiv provides the Digital Intermediate Archive of the Federation (DZAB) as a central service to all federal public bodies[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 
@@ -170,18 +170,12 @@ Tier 0 and 1 holdings for Germany without a verified source yet. Corrections and
 [^s14]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
 [^s15]: Bundesministerium der Justiz / gesetze-im-internet.de — § 2 BMG - Aufgaben und Befugnisse der Meldebehörden. § 2 BMG - Aufgaben und Befugnisse der Meldebehörden. <https://www.gesetze-im-internet.de/bmg/__2.html> ([archived](https://web.archive.org/web/20260102165107/https://www.gesetze-im-internet.de/bmg/__2.html))
 [^s16]: Bundesministerium der Justiz / gesetze-im-internet.de — § 139b AO - Identifikationsnummer. § 139b AO - Identifikationsnummer. <https://www.gesetze-im-internet.de/ao_1977/__139b.html> ([archived](https://web.archive.org/web/20260227090600/https://www.gesetze-im-internet.de/ao_1977/__139b.html))
-[^s17]: Bundesministerium der Justiz / gesetze-im-internet.de — § 21 PassG - Passregister. § 21 PassG - Passregister. <https://www.gesetze-im-internet.de/pa_g_1986/__21.html> ([archived](https://web.archive.org/web/20250311180221/https://www.gesetze-im-internet.de/pa_g_1986/__21.html))
-[^s18]: Bundesministerium der Justiz / gesetze-im-internet.de — § 26 PAuswG - Sonstige Speicherung personenbezogener Daten. § 26 PAuswG - Sonstige Speicherung personenbezogener Daten. <https://www.gesetze-im-internet.de/pauswg/__26.html> ([archived](https://web.archive.org/web/20251117090709/https://www.gesetze-im-internet.de/pauswg/__26.html))
-[^s19]: Bundesministerium der Justiz / gesetze-im-internet.de — § 6 PStG - Aktenführung. § 6 PStG - Aktenführung. <https://www.gesetze-im-internet.de/pstg/__6.html> ([archived](https://web.archive.org/web/20250912133200/https://www.gesetze-im-internet.de/pstg/__6.html))
-[^s20]: Bundesministerium der Justiz / gesetze-im-internet.de — § 3 PStG - Personenstandsregister. § 3 PStG - Personenstandsregister. <https://www.gesetze-im-internet.de/pstg/__3.html>
-[^s21]: Bundesministerium der Justiz / gesetze-im-internet.de — § 23 PAuswG - Personalausweisregister. § 23 PAuswG - Personalausweisregister. <https://www.gesetze-im-internet.de/pauswg/__23.html> ([archived](https://web.archive.org/web/20251009222823/https://www.gesetze-im-internet.de/pauswg/__23.html))
-[^s22]: Bundesministerium der Justiz / gesetze-im-internet.de — § 6 BVerfSchG. § 6 BVerfSchG. <https://www.gesetze-im-internet.de/bverfschg/__6.html> ([archived](https://web.archive.org/web/20260101153538/https://www.gesetze-im-internet.de/bverfschg/__6.html))
-[^s23]: Land Brandenburg, OZG-Portal — BundID (Nutzerkonto) - DeutschlandID. BundID (Nutzerkonto) - DeutschlandID. <https://ozg.brandenburg.de/ozg/de/it-infrastrukturen/it-basiskomponenten/bundid-nutzerkonto-deutschlandid/>
-[^s24]: Bundesministerium der Justiz / gesetze-im-internet.de — § 1 AZR-Gesetz. § 1 AZR-Gesetz. <https://www.gesetze-im-internet.de/azrg/__1.html> ([archived](https://web.archive.org/web/20250215034909/https://www.gesetze-im-internet.de/azrg/__1.html))
-[^s25]: Generalzolldirektion (Zoll online) — ATLAS. ATLAS. <https://www.zoll.de/DE/Fachthemen/Zoelle/ATLAS/atlas_node.html> ([archived](https://web.archive.org/web/20260618015312/https://www.zoll.de/DE/Fachthemen/Zoelle/ATLAS/atlas_node.html))
-[^s26]: Bundesministerium der Justiz / gesetze-im-internet.de — § 149 SGB VI - Versicherungskonto. § 149 SGB VI - Versicherungskonto. <https://www.gesetze-im-internet.de/sgb_6/__149.html> ([archived](https://web.archive.org/web/20260305102912/https://www.gesetze-im-internet.de/sgb_6/__149.html))
-[^s27]: Bundesministerium der Justiz / gesetze-im-internet.de — § 145 SGB VI - Aufgaben der Datenstelle der…. § 145 SGB VI - Aufgaben der Datenstelle der Rentenversicherung. <https://www.gesetze-im-internet.de/sgb_6/__145.html> ([archived](https://web.archive.org/web/20260910135714/https://www.gesetze-im-internet.de/sgb_6/__145.html))
-[^s28]: Bundesministerium der Justiz / gesetze-im-internet.de — § 1 VWDG - Führung und Zweck der Datei. § 1 VWDG - Führung und Zweck der Datei. <https://www.gesetze-im-internet.de/vwdg/__1.html> ([archived](https://web.archive.org/web/20240422124244/https://www.gesetze-im-internet.de/vwdg/__1.html))
-[^s29]: Bundesministerium der Justiz / gesetze-im-internet.de — § 3 BKAG. § 3 BKAG. <https://www.gesetze-im-internet.de/bkag_2018/__3.html> ([archived](https://web.archive.org/web/20260227115654/https://www.gesetze-im-internet.de/bkag_2018/__3.html))
-[^s30]: Bundesamt für Bevölkerungsschutz und Katastrophenhilfe — MoWaS. MoWaS. <https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warnung-in-Deutschland/MoWaS/mowas_node.html> ([archived](https://web.archive.org/web/20260924105236/https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warnung-in-Deutschland/MoWaS/mowas_node.html))
-[^s31]: Bundesarchiv — Nutzung des Digitalen Zwischenarchivs (DZAB). Nutzung des Digitalen Zwischenarchivs (DZAB). <https://www.bundesarchiv.de/unterlagen-abgeben/behoerdenberatung-zu-schriftgut-und-informationsverwaltung/nutzung-des-digitalen-zwischenarchivs-dzab/> ([archived](https://web.archive.org/web/20260618022322/https://www.bundesarchiv.de/unterlagen-abgeben/behoerdenberatung-zu-schriftgut-und-informationsverwaltung/nutzung-des-digitalen-zwischenarchivs-dzab/))
+[^s17]: Bundesministerium der Justiz / gesetze-im-internet.de — § 26 PAuswG - Sonstige Speicherung personenbezogener Daten. § 26 PAuswG - Sonstige Speicherung personenbezogener Daten. <https://www.gesetze-im-internet.de/pauswg/__26.html> ([archived](https://web.archive.org/web/20251117090709/https://www.gesetze-im-internet.de/pauswg/__26.html))
+[^s18]: Bundesministerium der Justiz / gesetze-im-internet.de — § 3 PStG - Personenstandsregister. § 3 PStG - Personenstandsregister. <https://www.gesetze-im-internet.de/pstg/__3.html>
+[^s19]: Bundesministerium der Justiz / gesetze-im-internet.de — § 23 PAuswG - Personalausweisregister. § 23 PAuswG - Personalausweisregister. <https://www.gesetze-im-internet.de/pauswg/__23.html> ([archived](https://web.archive.org/web/20251009222823/https://www.gesetze-im-internet.de/pauswg/__23.html))
+[^s20]: Land Brandenburg, OZG-Portal — BundID (Nutzerkonto) - DeutschlandID. BundID (Nutzerkonto) - DeutschlandID. <https://ozg.brandenburg.de/ozg/de/it-infrastrukturen/it-basiskomponenten/bundid-nutzerkonto-deutschlandid/>
+[^s21]: Bundesministerium der Justiz / gesetze-im-internet.de — § 1 AZR-Gesetz. § 1 AZR-Gesetz. <https://www.gesetze-im-internet.de/azrg/__1.html> ([archived](https://web.archive.org/web/20250215034909/https://www.gesetze-im-internet.de/azrg/__1.html))
+[^s22]: Generalzolldirektion (Zoll online) — ATLAS. ATLAS. <https://www.zoll.de/DE/Fachthemen/Zoelle/ATLAS/atlas_node.html> ([archived](https://web.archive.org/web/20260618015312/https://www.zoll.de/DE/Fachthemen/Zoelle/ATLAS/atlas_node.html))
+[^s23]: Bundesministerium der Justiz / gesetze-im-internet.de — § 3 BKAG. § 3 BKAG. <https://www.gesetze-im-internet.de/bkag_2018/__3.html> ([archived](https://web.archive.org/web/20260227115654/https://www.gesetze-im-internet.de/bkag_2018/__3.html))
+[^s24]: Bundesamt für Bevölkerungsschutz und Katastrophenhilfe — MoWaS. MoWaS. <https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warnung-in-Deutschland/MoWaS/mowas_node.html> ([archived](https://web.archive.org/web/20260924105236/https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warnung-in-Deutschland/MoWaS/mowas_node.html))
+[^s25]: Bundesarchiv — Nutzung des Digitalen Zwischenarchivs (DZAB). Nutzung des Digitalen Zwischenarchivs (DZAB). <https://www.bundesarchiv.de/unterlagen-abgeben/behoerdenberatung-zu-schriftgut-und-informationsverwaltung/nutzung-des-digitalen-zwischenarchivs-dzab/> ([archived](https://web.archive.org/web/20260618022322/https://www.bundesarchiv.de/unterlagen-abgeben/behoerdenberatung-zu-schriftgut-und-informationsverwaltung/nutzung-des-digitalen-zwischenarchivs-dzab/))

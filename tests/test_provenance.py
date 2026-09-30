@@ -28,7 +28,10 @@ import provenance  # noqa: E402
 # Supported claims per namespace. Raise in the commit that adds the citations.
 # record fell from 1029 to 1017 on 2026-09-29, deliberately: #79 withdrew the 12 dependency claims an
 # independent reviewer did not confirm. A floor may only be lowered by a recorded decision.
-FLOORS = {"param": 138, "assumption": 0, "record": 1017, "indicator": 134}
+# param fell from 138 to 136 and record from 1017 to 1014 on 2026-09-30, deliberately: #82 requires a
+# recorded quote check at the registered hash, which the 5 hand-migrated citations of #67 never had
+# (param:FR/NL:data_classification, record:NL:{civil_registry,business_registry,land_property}:register).
+FLOORS = {"param": 136, "assumption": 0, "record": 1014, "indicator": 134}
 
 
 class Register(unittest.TestCase):

@@ -3,7 +3,8 @@
 An analysis, per EU member state, of the critical government data holdings a state cannot let depend on
 infrastructure a foreign power can compel or switch off, and of what sovereign hosting for them requires.
 Each state is analysed on its own fundamentals; none is scaled from or measured against another (#72).
-Every fact is footnoted to a source whose text was fetched, hashed and checked (#75).
+Every fact is footnoted to its source (#75), and every number in it was found in the quoted text (#82).
+**The findings are machine-checked, not human-verified;** every output says so.
 
 **Where it stands and what is next:** [`ROADMAP.md`](ROADMAP.md) · **how the evidence is produced:** [`METHOD.md`](METHOD.md) · **status:** [`PROGRESS.md`](PROGRESS.md)
 

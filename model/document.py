@@ -37,6 +37,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import evidence  # noqa: E402
 import national_data as nd  # noqa: E402
 import provenance  # noqa: E402
 import sovereignty as sv  # noqa: E402
@@ -113,10 +114,30 @@ class Sources:
     def supported(self, claim: str) -> bool:
         return any(provenance.supported(c, self.reg, self.params) for c in self.by_claim.get(claim, []))
 
-    def fact(self, claim: str, text: str, missing: str = "Not yet sourced") -> dict:
-        """A fact span if the claim is supported, otherwise a gap. The value is never shown unsourced."""
-        if text and self.supported(claim):
-            return {"t": text, "role": "fact", "c": [claim]}
+    def backing(self, claim: str, text: str, categorical: bool = False) -> list[dict]:
+        """The citations that support `claim` *as printed*. A free-text value must also pass the
+        value-in-quote rule against the citation (#82); a categorical value comes from a closed
+        vocabulary and is admitted by review (#79), and a dataset value by reproduction."""
+        out = []
+        for c in self.by_claim.get(claim, []):
+            if not provenance.supported(c, self.reg, self.params):
+                continue
+            src = self.reg[c["source_id"]]
+            if categorical or src["doc_type"] == "dataset":
+                out.append(c)
+            elif evidence.value_in_quote(text, c["quote"], src["title"])["ok"]:
+                out.append(c)
+        return out
+
+    def fact(self, claim: str, text: str, missing: str = "Not yet sourced", *,
+             categorical: bool = False) -> dict:
+        """A fact span if a citation supports the value as printed, otherwise a gap. The value is
+        never shown unsourced."""
+        if text and self.backing(claim, text, categorical):
+            span = {"t": text, "role": "fact", "c": [claim]}
+            if categorical:
+                span["k"] = "categorical"
+            return span
         return gap(missing)
 
 
@@ -169,7 +190,7 @@ def holdings_section(c: dict, src: Sources, entries: list[dict]) -> dict:
             name = src.fact(f"{base}:register", e["register"])
             operator = src.fact(f"{base}:operator", e["holder"]) if e["holder"] else gap()
             dep = e.get("foreign_dependency", "")
-            dependency = (src.fact(f"{base}:foreign_dependency", DEPENDENCY_LABEL[dep])
+            dependency = (src.fact(f"{base}:foreign_dependency", DEPENDENCY_LABEL[dep], categorical=True)
                           if dep and dep != "unknown" else gap("Not stated in sources"))
             size_bits = []
             if e.get("record_count"):
@@ -178,7 +199,7 @@ def holdings_section(c: dict, src: Sources, entries: list[dict]) -> dict:
                 size_bits.append(src.fact(f"{base}:size", e["data_size"]))
             size = size_bits[0] if size_bits else gap("Not yet measured")
         elif e["status"] == "not_held":
-            name = src.fact(f"{base}:register", "No central register", "Not yet sourced")
+            name = src.fact(f"{base}:register", "No central register", "Not yet sourced", categorical=True)
             operator, dependency, size = method("—"), method("—"), method("—")
         else:
             name = gap("Not yet verified")
@@ -303,7 +324,8 @@ def placement_section(c: dict, src: Sources, p: dict) -> dict:
     for i in sv.INDICATOR_IDS:
         d = INDICATOR_DEFS[i]
         v = p["indicators"][i]
-        cell = (src.fact(f"indicator:{iso}:{i}", VALUE_LABEL[v]) if v != "unknown" else gap())
+        cell = (src.fact(f"indicator:{iso}:{i}", VALUE_LABEL[v], categorical=True)
+                if v != "unknown" else gap())
         rows.append([label(d["label"]), cell])
     moves = [[method(move_text(m))] for m in p["could_move"]]
     rng = p["range"]
@@ -379,8 +401,9 @@ def check(doc: dict, src: Sources) -> list[str]:
             if not span.get("c"):
                 errors.append(f"{doc['iso']}: fact without a claim: {span['t'][:60]!r}")
             for claim in span.get("c", []):
-                if not src.supported(claim):
-                    errors.append(f"{doc['iso']}: {claim} is shown as a fact but no citation supports it")
+                if not src.backing(claim, span["t"], span.get("k") == "categorical"):
+                    errors.append(f"{doc['iso']}: {claim} is shown as {span['t'][:40]!r} but no "
+                                  "citation supports that value")
     return errors
 
 

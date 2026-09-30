@@ -86,5 +86,86 @@ class RankingRule(unittest.TestCase):
         self.assertIn('sov["rule"]', src)
 
 
+class ValueInQuote(unittest.TestCase):
+    """The printed value against its quote (#82)."""
+
+    def check(self, value, quote, title=""):
+        return evidence.value_in_quote(value, quote, title)
+
+    def test_a_number_written_in_another_locale_matches(self):
+        self.assertTrue(self.check("1,007,920 residence documents", "ΣΥΝΟΛΟ 274.705 1.007.920")["ok"])
+        self.assertTrue(self.check("4.1 million users", "über 4,1 Millionen Bürger nutzen die App")["ok"])
+        self.assertTrue(self.check("1 007 920", "total 1,007,920 in force")["ok"])
+
+    def test_a_number_the_quote_does_not_contain_fails(self):
+        r = self.check("17 million records (2022), plus 48 million victim records",
+                       "En 2022, le TAJ contenait : 17 millions de fiches "
+                       "[English: In 2022, the TAJ contained: 17 million records]")
+        self.assertFalse(r["ok"])
+        self.assertEqual(r["missing_numbers"], ["48"])
+
+    def test_a_number_only_in_the_gloss_does_not_count(self):
+        r = self.check("kept for 10 years", "съхранява се за срок от десет години [English: kept for 10 years]")
+        self.assertFalse(r["ok"])
+
+    def test_a_missing_acronym_is_disclosed_not_fatal(self):
+        r = self.check("Weapons register kept by the MVR", "Министерството на вътрешните работи (МВР) води регистър")
+        self.assertTrue(r["ok"])
+        self.assertEqual(r["missing_names"], ["MVR"])
+        self.assertEqual(r["how"], "summary")
+
+    def test_capitalised_compounds_and_generic_abbreviations_are_not_names(self):
+        self.assertEqual(evidence.acronyms("Directorate-General for ID and EU IT"), set())
+        self.assertEqual(evidence.acronyms("ZMR and RTR-GmbH"), {"ZMR", "RTR-GmbH"})
+
+    def test_how_a_value_relates_to_its_quote_is_recorded(self):
+        self.assertEqual(self.check("Zentrales Melderegister", "des Zentrales Melderegister wird geführt")["how"],
+                         "verbatim")
+        self.assertEqual(self.check("Central Register", "Zentralregister [English: the Central Register]")["how"],
+                         "verbatim_gloss")
+
+
+class RenderedFacts(unittest.TestCase):
+    """What the documents print, after #82."""
+
+    # Fact spans across the 27 documents. A ratchet like test_provenance.FLOORS: adding facts without
+    # raising it fails, and so does losing any. It fell from 997 to 922 on 2026-09-30 by #82: 5
+    # citations had no recorded quote check, and 70 printed values carried a number or date their
+    # quote does not contain.
+    FACT_FLOOR = 922
+
+    @classmethod
+    def setUpClass(cls):
+        import document  # noqa: PLC0415
+        import export_json  # noqa: PLC0415
+        cls.document = document
+        cls.src = document.Sources()
+        bundle = export_json.build_bundle()
+        cls.docs = {iso: document.country(c, cls.src) for iso, c in bundle["countries"].items()}
+        cls.facts = [(iso, s) for iso, d in cls.docs.items() for s in document.walk_spans(d)
+                     if s["role"] == "fact"]
+
+    def test_the_fact_count_is_the_recorded_one(self):
+        self.assertEqual(len(self.facts), self.FACT_FLOOR)
+
+    def test_every_printed_value_is_backed_as_printed(self):
+        errors = [e for iso, d in self.docs.items() for e in self.document.check(d, self.src)]
+        self.assertEqual(errors, [])
+
+    def test_a_retention_period_is_not_printed_as_a_record_count(self):
+        self.assertFalse(any(s["c"] == ["record:BG:authentication_audit_log:count"] for _, s in self.facts))
+
+    def test_a_figure_its_quote_does_not_contain_is_not_printed(self):
+        self.assertFalse(any(s["c"] == ["record:FR:police_records:count"] for _, s in self.facts))
+
+    def test_a_citation_without_a_recorded_quote_check_supports_nothing(self):
+        import provenance  # noqa: PLC0415
+        c = next(c for c in self.src.cites if c["checked_by"].startswith("research.py"))
+        forged = {**c, "source_id": "hand-typed:x"}
+        reg = {**self.src.reg, "hand-typed:x": {**self.src.reg[c["source_id"]], "notes": "typed in by hand"}}
+        self.assertTrue(provenance.supported(c, self.src.reg, self.src.params))
+        self.assertFalse(provenance.supported(forged, reg, self.src.params))
+
+
 if __name__ == "__main__":
     unittest.main()

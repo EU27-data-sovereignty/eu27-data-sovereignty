@@ -68,6 +68,22 @@ authoritative statement; silence is recorded as unknown. The agents' output is s
 Every outcome, pass or fail, is a row in `model/research/verification.csv`. On 2026-09-29: 1,961 exact and
 20 loose matches; 284 quotes not found; 251 documents that could not be fetched.
 
+5. **The printed value is checked against the quote** (#82). The quote check proves the quote is in the
+   document; it does not prove the report prints what the quote says. So at render time
+   (`model/evidence.py`, `document.Sources.backing`):
+   - every **number and date** in the printed value must appear in the original-language quote, read in
+     any EU number format (`1.007.920` = `1,007,920`, `4,1` = `4.1`). One that does not makes the value
+     a gap. A number found only in the English gloss does not count;
+   - an **acronym** not found in the quote, its gloss or the document title (often a transliteration,
+     *MVR* for *МВР*) is kept but named in the fact's checklist;
+   - a value that is not a **verbatim** extract of the original is an English machine summary of the
+     quote, and is labelled as one.
+
+   A citation supports nothing unless `verification.csv` records a passing quote check for its URL at the
+   hash the registry records. On 2026-09-30 these two rules took the printed facts from 997 to 922: 5
+   hand-migrated citations had no recorded check, and 70 values carried a number or date their quote
+   does not contain (a 10-year retention period printed as a record count, for one).
+
 ## 4. The independent review
 
 The quote check proves the words exist. It does not prove they mean what the label says. So every
@@ -106,8 +122,12 @@ with the inputs that could still move it.
 
 ## 7. What this does not establish
 
-- **No human expert has audited the admitted claims yet.** Two agreeing machine passes are the interim
-  standard. A human sampling audit with a measured error rate is the launch gate (#25, #67).
+- **No person has verified any finding.** Every output says so first, in the same words
+  (`model/evidence.py`, #82). Two agreeing machine passes are the interim standard; a human sampling
+  audit with a measured error rate would be the next step (#25, #67).
+- **The words of a summary are not checked, only its figures.** A register or operator name that is an
+  English summary of a foreign-language quote could still be mistranslated. The footnote shows the
+  original quote so a reader can judge.
 - **The values are machine translations.** The original-language quote is the evidence.
 - **Some true claims fail the check,** because the page renders with JavaScript or refuses automated
   requests. They stay out rather than being taken on trust.

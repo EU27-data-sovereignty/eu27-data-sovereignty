@@ -56,25 +56,25 @@ The holdings Malta cannot let depend on infrastructure a foreign state can compe
 
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Civil Status Section of the Public Registry holds acts of birth, marriage, civil union and death registered in Malta[^s9] | Public Registry offices are managed by the Director of the Public Registry (Public Registry Act, Cap. 56)[^s10] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | Facial images captured for the e-ID card are passed to the Electoral Office for voting documents and electoral registers[^s11] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | Live biometrics including fingerprints are captured at the Passport Office for passport applications[^s12] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Civil registry core (tier 0) | Civil Status Section of the Public Registry holds acts of birth, marriage, civil union and death registered in Malta[^s9] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Facial images captured for the e-ID card are passed to the Electoral Office for voting documents and electoral registers[^s10] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | Live biometrics including fingerprints are captured at the Passport Office for passport applications[^s11] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | Biometric passports have been issued since 30 September 2008[^s13] | The Identity Cards Unit issues electronic ID cards and registers e-ID accounts[^s14] | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | The e-ID virtual account is required to access Government online services[^s15] | Identity Cards Unit registers e-ID (virtual) accounts[^s14] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | The Act refers to the Electoral Register database[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | e-ID cards carry an Authentication Certificate and a Signature Certificate[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | Biometric passports have been issued since 30 September 2008[^s12] | The Identity Cards Unit issues electronic ID cards and registers e-ID accounts[^s13] | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | The e-ID virtual account is required to access Government online services[^s14] | Identity Cards Unit registers e-ID (virtual) accounts[^s13] | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | The Act refers to the Electoral Register database[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | e-ID cards carry an Authentication Certificate and a Signature Certificate[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Judicial & criminal justice (tier 1) | Named authorities (Attorney General, Commissioner of Police, Security Service) have continuous direct access to criminal conviction records[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Named authorities (Attorney General, Commissioner of Police, Security Service) have continuous direct access to criminal conviction records[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | The Service's function is protecting national security against organised crime, espionage, terrorism and sabotage[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Residence and migration status (tier 1) | Biometrics are captured from non-EU applicants for residence documents[^s19] | Expatriates Unit processes and issues residence documentation[^s20] | *Not stated in sources* | *Not yet measured* |
+| High | Intelligence services (tier 1) | The Service's function is protecting national security against organised crime, espionage, terrorism and sabotage[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Biometrics are captured from non-EU applicants for residence documents[^s18] | Expatriates Unit processes and issues residence documentation[^s19] | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | Health Act defines insured persons as those included in a list established by regulations[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | Health Act defines insured persons as those included in a list established by regulations[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -90,10 +90,10 @@ The holdings Malta cannot let depend on infrastructure a foreign state can compe
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | Legislation Malta portal holds all Maltese laws including consolidated subsidiary legislation[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Legislation Malta portal holds all Maltese laws including consolidated subsidiary legislation[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | Census of population and housing held by order under the Act[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Statistical microdata (tier 2) | Census of population and housing held by order under the Act[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
@@ -165,17 +165,16 @@ Tier 0 and 1 holdings for Malta without a verified source yet. Corrections and s
 [^s7]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
 [^s8]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
 [^s9]: Identità — Public Registry – Civil Status. Public Registry – Civil Status. <https://identita.gov.mt/public-registry-sec-page-civil-status/> ([archived](https://web.archive.org/web/20260811142151/https://identita.gov.mt/public-registry-sec-page-civil-status/))
-[^s10]: Government of Malta – Legislation Malta — Public Registry Act (Cap. 56). Public Registry Act (Cap. 56). <https://legislation.mt/getpdf/602e53fb8f58ad1b78f3edbe>
-[^s11]: Identità — Identity Cards Unit – Electoral Office. Identity Cards Unit – Electoral Office. <https://identita.gov.mt/identity-cards-unit-electoral-office/> ([archived](https://web.archive.org/web/20260415222752/https://identita.gov.mt/identity-cards-unit-electoral-office/))
-[^s12]: Identità — Passport Office – Adults Renewals. Passport Office – Adults Renewals. <https://identita.gov.mt/passport-office-adults-renewals/> ([archived](https://web.archive.org/web/20260928102340/https://identita.gov.mt/passport-office-adults-renewals/))
-[^s13]: Identità — Passport Office. Passport Office. <https://identita.gov.mt/passport-office-main-page/>
-[^s14]: Identità — Identity Cards Unit. Identity Cards Unit. <https://identita.gov.mt/identity-cards-unit/> ([archived](https://web.archive.org/web/20260516233554/https://identita.gov.mt/identity-cards-unit/))
-[^s15]: Identità — e-ID Virtual Account. e-ID Virtual Account. <https://identita.gov.mt/identity-cards-unit/eid-virtual-account/> ([archived](https://web.archive.org/web/20260811140802/https://identita.gov.mt/identity-cards-unit/eid-virtual-account/))
-[^s16]: Government of Malta – Legislation Malta — General Elections Act (Cap. 354). General Elections Act (Cap. 354). <https://legislation.mt/getpdf/661645c07403ed16fcf9eb8e>
-[^s17]: Government of Malta – Legislation Malta — Conduct Certificates Ordinance (Cap. 77). Conduct Certificates Ordinance (Cap. 77). <https://legislation.mt/getpdf/6aa1090e5ca02023e4009067>
-[^s18]: Government of Malta – Legislation Malta — Security Service Act (Cap. 391). Security Service Act (Cap. 391). <https://legislation.mt/getpdf/6022ba1cbc827214c09ac4a7>
-[^s19]: Identità — Expatriates Unit – Biometrics and Interim Receipt. Expatriates Unit – Biometrics and Interim Receipt. <https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/useful-information/finalising-application-process/biometrics-and-interim-receipt/> ([archived](https://web.archive.org/web/20260606020509/https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/useful-information/finalising-application-process/biometrics-and-interim-receipt/))
-[^s20]: Identità — Expatriates Unit. Expatriates Unit. <https://identita.gov.mt/expatriates-unit-main-page/> ([archived](https://web.archive.org/web/20260928102340/https://identita.gov.mt/expatriates-unit-main-page/))
-[^s21]: Government of Malta – Legislation Malta — Health Act (Cap. 528). Health Act (Cap. 528). <https://legislation.mt/getpdf/677e3ecacc8e8e3d102ff18a>
-[^s22]: Legislation Malta — FAQs – Leġiżlazzjoni Malta. FAQs – Leġiżlazzjoni Malta. <https://legislation.mt/Home/FAQList> ([archived](https://web.archive.org/web/20260918104521/https://legislation.mt/Home/FAQList))
-[^s23]: Government of Malta – Legislation Malta — Malta Statistics Authority Act (Cap. 422). Malta Statistics Authority Act (Cap. 422). <https://legislation.mt/getpdf/6022c0cfbc827214c09b08e1>
+[^s10]: Identità — Identity Cards Unit – Electoral Office. Identity Cards Unit – Electoral Office. <https://identita.gov.mt/identity-cards-unit-electoral-office/> ([archived](https://web.archive.org/web/20260415222752/https://identita.gov.mt/identity-cards-unit-electoral-office/))
+[^s11]: Identità — Passport Office – Adults Renewals. Passport Office – Adults Renewals. <https://identita.gov.mt/passport-office-adults-renewals/> ([archived](https://web.archive.org/web/20260928102340/https://identita.gov.mt/passport-office-adults-renewals/))
+[^s12]: Identità — Passport Office. Passport Office. <https://identita.gov.mt/passport-office-main-page/>
+[^s13]: Identità — Identity Cards Unit. Identity Cards Unit. <https://identita.gov.mt/identity-cards-unit/> ([archived](https://web.archive.org/web/20260516233554/https://identita.gov.mt/identity-cards-unit/))
+[^s14]: Identità — e-ID Virtual Account. e-ID Virtual Account. <https://identita.gov.mt/identity-cards-unit/eid-virtual-account/> ([archived](https://web.archive.org/web/20260811140802/https://identita.gov.mt/identity-cards-unit/eid-virtual-account/))
+[^s15]: Government of Malta – Legislation Malta — General Elections Act (Cap. 354). General Elections Act (Cap. 354). <https://legislation.mt/getpdf/661645c07403ed16fcf9eb8e>
+[^s16]: Government of Malta – Legislation Malta — Conduct Certificates Ordinance (Cap. 77). Conduct Certificates Ordinance (Cap. 77). <https://legislation.mt/getpdf/6aa1090e5ca02023e4009067>
+[^s17]: Government of Malta – Legislation Malta — Security Service Act (Cap. 391). Security Service Act (Cap. 391). <https://legislation.mt/getpdf/6022ba1cbc827214c09ac4a7>
+[^s18]: Identità — Expatriates Unit – Biometrics and Interim Receipt. Expatriates Unit – Biometrics and Interim Receipt. <https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/useful-information/finalising-application-process/biometrics-and-interim-receipt/> ([archived](https://web.archive.org/web/20260606020509/https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/useful-information/finalising-application-process/biometrics-and-interim-receipt/))
+[^s19]: Identità — Expatriates Unit. Expatriates Unit. <https://identita.gov.mt/expatriates-unit-main-page/> ([archived](https://web.archive.org/web/20260928102340/https://identita.gov.mt/expatriates-unit-main-page/))
+[^s20]: Government of Malta – Legislation Malta — Health Act (Cap. 528). Health Act (Cap. 528). <https://legislation.mt/getpdf/677e3ecacc8e8e3d102ff18a>
+[^s21]: Legislation Malta — FAQs – Leġiżlazzjoni Malta. FAQs – Leġiżlazzjoni Malta. <https://legislation.mt/Home/FAQList> ([archived](https://web.archive.org/web/20260918104521/https://legislation.mt/Home/FAQList))
+[^s22]: Government of Malta – Legislation Malta — Malta Statistics Authority Act (Cap. 422). Malta Statistics Authority Act (Cap. 422). <https://legislation.mt/getpdf/6022c0cfbc827214c09b08e1>

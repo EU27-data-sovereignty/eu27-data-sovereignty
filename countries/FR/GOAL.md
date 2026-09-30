@@ -67,7 +67,7 @@ The holdings France cannot let depend on infrastructure a foreign state can comp
 | High | State PKI and qualified trust services (tier 0) | The Justice ministry root CA is to be signed by IGC/A, the administration's trust infrastructure[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Judicial & criminal justice (tier 1) | ASTREA is the information system of the national criminal record[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | TAJ is a Ministry of the Interior file shared by police and gendarmerie[^s22] | FAED is run by the Direction centrale de la police judiciaire[^s23] | *Not stated in sources* | 17 million 'persons implicated' records (2022), plus 48 million victim records[^s22] |
+| High | Police information systems (tier 1) | TAJ is a Ministry of the Interior file shared by police and gendarmerie[^s22] | FAED is run by the Direction centrale de la police judiciaire[^s23] | *Not stated in sources* | *Not yet sourced* |
 | High | Intelligence services (tier 1) | DRSD SIRCID information system contracted to Airbus Defence & Space[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Residence and migration status (tier 1) | AGDREF manages the right of residence of foreign nationals[^s25] | DGEF of the Ministry of the Interior is responsible[^s25] | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -110,14 +110,14 @@ Of the 27 verified holdings, how many sources state where the infrastructure is 
 
 ## 5. Legal and institutional posture
 
-1 of 8 posture entries have a verified source. The others were researched from public policy documents but are withheld here until each is checked against the governing instrument.
+0 of 8 posture entries have a verified source. The others were researched from public policy documents but are withheld here until each is checked against the governing instrument.
 
 | Dimension | Position |
 |---|---|
 | Governing instrument | *Not yet sourced* |
 | Sovereign or government cloud | *Not yet sourced* |
 | Cloud certification | *Not yet sourced* |
-| Data classification | IGI 1300: Secret / Tres Secret; 'Diffusion Restreinte' is a protection marking, not a classification level[^s40] |
+| Data classification | *Not yet sourced* |
 | Procurement route | *Not yet sourced* |
 | National digital identity | *Not yet sourced* |
 | Internet exchange | *Not yet sourced* |
@@ -184,4 +184,3 @@ Tier 0 and 1 holdings for France without a verified source yet. Corrections and 
 [^s37]: CASD — Gouvernance et Missions. Gouvernance et Missions. <https://www.casd.eu/le-casd/gouvernance-et-missions/>
 [^s38]: CASD — Infrastructure. Infrastructure. <https://www.casd.eu/technologie/infrastructure/> ([archived](https://web.archive.org/web/20260310125751/https://www.casd.eu/technologie/infrastructure/))
 [^s39]: adresse.data.gouv.fr (DINUM / IGN) — Découvrir la Base Adresse Nationale. Découvrir la Base Adresse Nationale. <https://adresse.data.gouv.fr/decouvrir-la-BAN> ([archived](https://web.archive.org/web/20260921135714/https://adresse.data.gouv.fr/decouvrir-la-BAN))
-[^s40]: Secretariat general de la defense et de la securite nationale (SGDSN) igi-secret-defense, 2021-12-01. Instruction ministérielle sur la protection du secret de la défense nationale. <https://www.info.gouv.fr/upload/media/content/0001/05/1dbd413d9574bba8df1f282cab4a74f128432209.pdf>

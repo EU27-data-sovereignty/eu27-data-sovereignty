@@ -60,7 +60,7 @@ The holdings Portugal cannot let depend on infrastructure a foreign state can co
 | Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Authentication audit log (tier 0) | Authentication records (type, date/time) and signatures are processed to manage electronic identification[^s4] | *Not yet sourced* | *Not stated in sources* | 140,783,983 total authentications through Autenticação.gov (figure shown at time of research, 2026-09-29)[^s15] |
+| Critical | Authentication audit log (tier 0) | Authentication records (type, date/time) and signatures are processed to manage electronic identification[^s4] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
 | High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
@@ -181,4 +181,3 @@ Tier 0 and 1 holdings for Portugal without a verified source yet. Corrections an
 [^s12]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
 [^s13]: Eurostat nrg_ind_ren, 2024. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
 [^s14]: Eurostat reg_area3, 2019. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
-[^s15]: ARTE – Agência para a Reforma Tecnológica do Estado, I.P. — Estatísticas – Autenticação.gov. Estatísticas – Autenticação.gov. <https://www.autenticacao.gov.pt/web/guest/estatisticas>

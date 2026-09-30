@@ -200,15 +200,43 @@ def validate(reg: dict[str, dict[str, str]], cites: list[dict[str, str]]) -> lis
     return errors
 
 
+VERIFICATION = ROOT / "model" / "research" / "verification.csv"
+_SHA = re.compile(r"\bsha256 ([0-9a-f]{64})\b")
+_verified: dict[str, set[str]] | None = None
+
+
+def verified_hashes() -> dict[str, set[str]]:
+    """url -> the sha256 of every fetch of it whose quote check passed (research.py verify)."""
+    global _verified
+    if _verified is None:
+        _verified = {}
+        if VERIFICATION.exists():
+            with VERIFICATION.open(newline="", encoding="utf-8") as fh:
+                for r in csv.DictReader(fh):
+                    if r["match"] in ("exact", "loose") and r["sha256"]:
+                        _verified.setdefault(r["url"], set()).add(r["sha256"])
+    return _verified
+
+
 def supported(c: dict[str, str], reg: dict[str, dict[str, str]], params: dict) -> bool:
-    """Does this citation actually support its claim? Assumptions are declared, never supported."""
+    """Does this citation actually support its claim? Assumptions are declared, never supported.
+
+    A dataset citation supports a parameter only if its value reproduces the cell. Any other citation
+    supports its claim only with recorded evidence (#82): a quote of 20 characters or more, and a
+    passing quote check in research/verification.csv for the source's URL at the very hash the
+    registry records. A citation typed in by hand, however plausible, supports nothing."""
     if c["confidence"] == "assumption":
         return False
     src = reg.get(c["source_id"])
-    if src and src["doc_type"] == "dataset" and c["claim"].startswith("param:"):
+    if not src:
+        return False
+    if src["doc_type"] == "dataset" and c["claim"].startswith("param:"):
         _, iso, col = c["claim"].split(":")
         return reproduces(c["value_as_found"], params.get(iso, {}).get(col, ""))
-    return True
+    if len(c["quote"].strip()) < 20:
+        return False
+    sha = _SHA.search(src["notes"])
+    return bool(sha) and sha.group(1) in verified_hashes().get(src["url"], set())
 
 
 def claims_by_namespace() -> dict[str, set[str]]:
