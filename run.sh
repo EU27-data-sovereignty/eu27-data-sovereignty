@@ -151,10 +151,10 @@ case "${1:-dev}" in
         esac
         ;;
     deploy)
-        # Deploys are manual: the Vercel GitHub App is not installed, so a push does
-        # not ship anything (ROADMAP.md, README.md "Deployment"). A stale site is the
-        # failure mode this command exists to prevent, so it refuses to ship anything
-        # that is not the committed state of main and has not passed the gate.
+        # The manual fallback. Normally a push to main deploys through
+        # .github/workflows/deploy.yml (#81); this does the same from this machine.
+        # It refuses to ship anything that is not the committed state of main and
+        # has not passed the gate.
         if [ -n "$(git status --porcelain)" ]; then
             print_error "Working tree is dirty. Commit first — deploy ships the tree, not the last commit."
             git status --short

@@ -570,6 +570,7 @@ any file was created; the rule is now widened to `**/contacts/` and `*-contacts.
 differently-named file cannot slip through. Verified with `git check-ignore`.
 
 ### 50. Deployment is staged, and the domain is deliberately unofficial-sounding
+**Stage 3 amended by #80** (2026-09-30): the domain is attached before the audit gate, still `noindex`; announcing it stays gated.
 **2026-09-05.** Vercel, static build from `web/dist`, Git-integrated: `main` ships
 production, every PR gets a preview URL.
 
@@ -1209,6 +1210,7 @@ state with one register per Land), at which point the kind gains a qualifier rat
 gaining a second citation.
 
 ### 70. `eu27.cloud` is registered through Vercel, not an EU registrar
+**Superseded by #80** (2026-09-30): the domain was registered at iwantmyname, and its DNS stays there.
 **2026-09-27.** #50 chose `eu27.cloud` for stage 3; this settles where it is bought. It is registered
 through Vercel on the team `pieteradejongs-projects`, the same account the site already deploys from, so
 the domain, its DNS and the project sit in one place. It is bought now to hold the name. It is **not**
@@ -1239,6 +1241,7 @@ Verified: availability and price only. On 2026-09-26, Vercel `get_bulk_availabil
 which point moving the domain to an EU registrar and EU-hosted DNS becomes worth the extra account.
 
 ### 71. Deploys are built locally and uploaded prebuilt, so the site can serve the PDFs
+**Superseded by #81** (2026-09-30): the same prebuilt upload, now built in GitHub Actions on every push to `main`.
 **2026-09-29.** `./run.sh deploy` runs `vercel build --prod` on this machine and uploads `.vercel/output` with
 `vercel deploy --prebuilt --prod`. `vercel.json`'s `buildCommand` builds the web app, the 27 briefs and the
 EU-27 country report (`book/build.py --report`) into `web/dist/`.
@@ -1552,3 +1555,85 @@ TETRA network operator).
 
 *Would change if:* a human reviewer with subject expertise takes over admission, or the two-pass
 agreement rate proves so high that sampling would do.
+
+---
+
+## Domain and continuous deployment
+
+### 80. `eu27.cloud` is registered at iwantmyname and attached now, still `noindex`
+**Decision.** 2026-09-30. `eu27.cloud` was registered at iwantmyname (whois registrar Key-Systems, created
+2026-09-30T06:35Z). It stays there, and so does its DNS: an apex record and a `www` record at iwantmyname
+point it at the Vercel project `sovereign-data-centers`, with the values `vercel domains add` prints.
+`www.eu27.cloud` redirects to the apex. The domain is attached **now**, ahead of #50's stage-3 gate, and it
+serves `noindex` twice over: through `robots.txt` and through an `X-Robots-Tag: noindex` header on every path
+(`tests/test_vercel_config.py`). The site is not announced. The stage-2 indexing gate and the launch gate
+(every published claim cites a source) are unchanged.
+
+**Problem.** #70 planned the purchase through Vercel, and the docs said so. The name was bought elsewhere, so
+`vercel domains ls` knew nothing about it. Holding a paid domain unattached also meant the push-to-deploy
+pipeline (#81) had no stable address to smoke-test.
+
+**Alternatives considered.**
+- **Keep it at iwantmyname, point records at Vercel, attach now with `noindex` (chosen).** One DNS change,
+  and no transfer. The registrar is independent of the host, which is closer to the separation
+  `EU27-CLOUD-BRIEF.md` recommends than #70 was.
+- **Transfer the domain to Vercel.** *Why not:* ICANN locks a new registration against transfer for 60
+  days, and it would undo the separation above for no gain.
+- **Delegate the nameservers to Vercel.** *Why not:* it moves all of the zone's DNS to the host. Two records
+  at the registrar do the same job.
+- **Hold it unattached until stage 3, as #50 and #70 said.** *Why not:* `noindex` plus not announcing
+  already keeps unverified claims from reading as a register, which was #50's concern. The owner chose to
+  attach now.
+
+**Closes off.** The `*.vercel.app` address as the one the project names. It stays as a fallback. Removing
+`noindex` now needs both the `robots.txt` lines and the header gone, and a test changed.
+
+**Verified:** NOT YET. Registration, 2026-09-30: `whois eu27.cloud` shows `Registrar: Key-Systems, LLC` and
+`Creation Date: 2026-09-30T06:35:17.873Z`. `vercel domains ls` shows 0 domains, as expected for an external
+registration. Attachment is verified when `vercel domains inspect eu27.cloud` shows it configured, and when
+`curl -sSI https://eu27.cloud/` returns 200 with `x-robots-tag: noindex`.
+
+*Would change if:* the project starts to present itself as practising the sovereignty it describes. That is
+#70's condition, and it would then favour an EU registrar with EU-hosted DNS and DNSSEC.
+
+### 81. Production deploys from GitHub Actions on every push to `main`
+**Decision.** 2026-09-30. `.github/workflows/deploy.yml` runs on every push to `main`, and on demand. The
+**gate** job runs the full `./test.sh`, including Playwright, with Google Chrome from the runner image. The
+**deploy** job needs the gate, runs in the GitHub environment `production`, and does three things:
+- installs typst v0.15.1 from its release tarball, checked against a sha256 in the workflow;
+- runs `vercel pull`, then `vercel build --prod`, with the CLI pinned to `vercel@61.1.0`;
+- uploads with `vercel deploy --prebuilt --prod`, then smoke-tests `https://eu27.cloud`: `/`, `/country/DE`,
+  `/eu27-report.pdf`, `robots.txt`, the `noindex` header, and the live `/data/eu27.json` hash against the
+  committed one.
+
+`VERCEL_TOKEN` is a secret. `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID` are repository variables.
+`ANTHROPIC_API_KEY` stays in Vercel only. Deploys never overlap (`concurrency: production`). Each run's summary
+records the deployment, the commit and the bundle hash, and replaces the hand-written deploy log.
+`./run.sh deploy` stays as the manual fallback.
+
+**Problem.** A push shipped nothing. A stale site was the recorded failure mode: the 2026-09-11 deploy stayed
+live for 16 days while it fell 12 commits behind (DEPLOYMENT.md). Deploys could run only from this Mac,
+because the PDFs need typst (#71).
+
+**Alternatives considered.**
+- **GitHub Actions, prebuilt upload, pinned and checksummed typst (chosen).** It keeps #71's guarantee that a
+  build without typst cannot ship. It runs on any push from any machine, and the full gate stands in front
+  of every deploy.
+- **A local `./run.sh ship` that pushes and then deploys.** *Why not:* it still works from one machine only,
+  and a push from anywhere else ships nothing, so the site can go stale again.
+- **The Vercel GitHub App (Git integration), with typst downloaded in `buildCommand`.** *Why not:* the
+  install would have to run on every remote build inside Vercel's image, where the gate does not run. It
+  would also turn on PR previews before preview protection has been thought through (DEPLOYMENT.md, Known gaps).
+
+**Closes off.** A green push to `main` that stays unpublished: a merge now is a release. It also closes off
+the deploy log as hand-written rows in DEPLOYMENT.md. A CI-built PDF sets code in DejaVu Sans Mono, not
+Menlo, so it is not byte-identical to one built on this Mac.
+
+**Verified:** NOT YET. `tests/test_workflows.py` passes. It checks that every action is pinned by SHA, the
+Vercel CLI version is exact, the typst download is checksummed, the upload is prebuilt, the deploy needs the
+gate, and only `main` deploys. The typst v0.15.1 tarball's sha256 matched GitHub's published digest when it
+was downloaded on 2026-09-30. What verifies the decision is the first green `Deploy` run on `main`, with its
+smoke test passing against `https://eu27.cloud`.
+
+*Would change if:* the build starts needing secrets at build time, or Vercel's build image gains typst. In
+the second case the Git integration would do the same job with less of our own CI.

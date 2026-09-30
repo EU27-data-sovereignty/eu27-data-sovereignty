@@ -9,31 +9,39 @@ Every fact is footnoted to a source whose text was fetched, hashed and checked (
 
 ## Live site
 
-**https://sovereign-data-centers.vercel.app**
+**https://eu27.cloud** (also at https://sovereign-data-centers.vercel.app)
 
-Deliberately **not indexed** by search engines while the research is incomplete. The site, the EU-27
+Deliberately **not indexed** by search engines while the research is incomplete, and not yet announced. The site, the EU-27
 report (`/eu27-report.pdf`) and the 27 country reports (`/report/<ISO>.pdf`) show a value only when a
 checked source supports it; everything else is shown as a gap. Capacity is not yet sized (#73).
-Indexing is gated on the verification work in [`VERIFICATION.md`](VERIFICATION.md), as is the
-`eu27.cloud` domain.
+Indexing is gated on the verification work in [`VERIFICATION.md`](VERIFICATION.md), as is announcing
+the `eu27.cloud` domain.
 
 Corrections are welcome — there is a data-correction issue template.
 
 ## Deployment
 
-Live at **https://sovereign-data-centers.vercel.app**, on the Vercel project
-`pieteradejongs-projects/sovereign-data-centers`.
+Live at **https://eu27.cloud**, served by the Vercel project `pieteradejongs-projects/sovereign-data-centers`.
+
+**A push to `main` deploys to production.** `.github/workflows/deploy.yml` runs the full gate (`./test.sh`),
+builds the site, the EU-27 report and the 27 country PDFs on the runner, uploads the result prebuilt, and
+smoke-tests `https://eu27.cloud` (#81). A red gate ships nothing.
 
 ```
-./run.sh deploy     # refuses a dirty tree or a non-main branch, runs ./test.sh, then deploys
+git push                # main → gate → build → deploy → smoke test (GitHub Actions)
+./run.sh deploy         # manual fallback from this machine: same gate, same prebuilt upload
 ```
 
-**Deploys are manual: a push ships nothing.** Everything else is in
-[`DEPLOYMENT.md`](DEPLOYMENT.md): topology and headers, the deploy flow, what `.vercelignore` must keep off
-Vercel, the three stages, the freshness check for a stale site, known gaps, and a log of every production deploy.
+Everything else is in [`DEPLOYMENT.md`](DEPLOYMENT.md): topology and headers, the pipeline, what
+`.vercelignore` must keep off Vercel, the stages, the freshness check, known gaps, and the deploy history.
 
-The domain is deliberately unofficial-sounding so the site is not mistaken for an EU
-institution's (#50); it is being registered through Vercel ($7.99 first year, $24/yr renewal; checked 2026-09-26) and held unattached until stage 3 (#70).
+### The domain
+
+`eu27.cloud` was registered on 2026-09-30 at **iwantmyname**, which stays both registrar and DNS provider.
+An apex record and a `www` record there point the name at Vercel, the host, and `www` redirects to the apex
+(#80). The name is deliberately unofficial-sounding so the site is not mistaken for an EU institution's (#50).
+It is attached before the stage-3 audit gate, but it serves `noindex` (in `robots.txt` and an `X-Robots-Tag`
+header) and is not announced until the launch gate passes.
 
 ## Verification
 

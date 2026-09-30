@@ -41,6 +41,14 @@ class Headers(unittest.TestCase):
         for key in ("Content-Security-Policy", "X-Frame-Options", "X-Content-Type-Options"):
             self.assertIn(key, keys, f"{key} must be set on every path (#50)")
 
+    def test_noindex_until_stage_two(self):
+        # robots.txt alone does not keep a linked URL out of an index, and since #80 the site
+        # sits on a public domain. Remove this header together with robots.txt's Disallow at
+        # stage 2 (DEPLOYMENT.md "Staging and domain"), and this test with it.
+        everywhere = {h["key"]: h["value"] for block in CONFIG["headers"] if block["source"] == "/(.*)"
+                      for h in block["headers"]}
+        self.assertEqual(everywhere.get("X-Robots-Tag"), "noindex", "the site is not to be indexed yet (#80)")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,118 @@
+name: Deploy
+
+# A push to main that passes the full gate ships production to https://eu27.cloud (#81).
+# The build runs here, not on Vercel: the PDFs need typst, which Vercel's build image lacks,
+# so the output is built with `vercel build` and uploaded with `vercel deploy --prebuilt`
+# (the reasoning of #71, moved off one machine). ./run.sh deploy stays as the manual fallback.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Deploys never overlap, and a running one is never cancelled halfway through an upload.
+concurrency:
+  group: production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  # Pinned and checksummed, never `latest` (dotfiles supply-chain.md). The sha256 is the one
+  # GitHub publishes for the release asset; bump both together.
+  TYPST_VERSION: v0.15.1
+  TYPST_SHA256: a6d077d0a95eed5a2eba715b2dae06be954f624ccbf85758a03f389ded33118c
+  VERCEL_CLI: vercel@61.1.0
+  SITE: https://eu27.cloud
+  # ubuntu-latest ships Google Chrome; playwright.config.ts uses an installed browser (#22).
+  CHROME_PATH: /usr/bin/google-chrome
+
+jobs:
+  gate:
+    name: Full gate (./test.sh)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+      - name: Install typst (pinned, checksummed)
+        run: &typst |
+          curl -sSLo typst.tar.xz "https://github.com/typst/typst/releases/download/${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz"
+          echo "${TYPST_SHA256}  typst.tar.xz" | sha256sum -c -
+          tar -xJf typst.tar.xz
+          mkdir -p "$HOME/.local/bin"
+          mv typst-x86_64-unknown-linux-musl/typst "$HOME/.local/bin/typst"
+          rm -rf typst.tar.xz typst-x86_64-unknown-linux-musl
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm ci --prefix web
+      - name: Run the gate
+        run: ./test.sh
+
+  deploy:
+    name: Build and deploy to production
+    needs: gate
+    runs-on: ubuntu-latest
+    # The environment is restricted to main in the repository settings, so only main can
+    # read VERCEL_TOKEN.
+    environment:
+      name: production
+      url: https://eu27.cloud
+    env:
+      VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+      - name: Install typst (pinned, checksummed)
+        run: *typst
+      - name: Pull project settings
+        run: npx --yes "$VERCEL_CLI" pull --yes --environment=production --token="$VERCEL_TOKEN"
+      - name: Build (web app, EU-27 report, 27 country PDFs)
+        run: |
+          export SOURCE_DATE_EPOCH="$(cat .build-epoch)"
+          npx --yes "$VERCEL_CLI" build --prod --token="$VERCEL_TOKEN"
+      - name: Deploy prebuilt
+        id: deploy
+        run: |
+          url="$(npx --yes "$VERCEL_CLI" deploy --prebuilt --prod --token="$VERCEL_TOKEN")"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+      - name: Smoke test the live domain
+        run: |
+          set -euo pipefail
+          check() {  # path, expected content-type prefix
+            read -r code type < <(curl -sS -o /dev/null -w '%{http_code} %{content_type}\n' "$SITE$1")
+            echo "$1 -> $code $type"
+            [ "$code" = 200 ] && [[ "$type" == "$2"* ]]
+          }
+          check / text/html
+          check /country/DE text/html        # the SPA rewrite, which the gate cannot see
+          check /eu27-report.pdf application/pdf
+          curl -sS "$SITE/robots.txt" | grep -qx 'Disallow: /'
+          curl -sSI "$SITE/" | grep -qi '^x-robots-tag: noindex'
+          # Freshness: the live bundle must be the committed one (DEPLOYMENT.md).
+          want="$(sha256sum web/public/data/eu27.json | cut -d' ' -f1)"
+          for i in 1 2 3 4 5 6; do
+            got="$(curl -sS "$SITE/data/eu27.json" | sha256sum | cut -d' ' -f1)"
+            [ "$got" = "$want" ] && break
+            sleep 10
+          done
+          [ "$got" = "$want" ] || { echo "::error::live bundle $got != committed $want"; exit 1; }
+          {
+            echo "### Deployed"
+            echo "| Deployment | Commit | eu27.json sha256 |"
+            echo "|---|---|---|"
+            echo "| ${{ steps.deploy.outputs.url }} | \`${GITHUB_SHA::7}\` | \`$want\` |"
+          } >> "$GITHUB_STEP_SUMMARY"

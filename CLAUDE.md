@@ -14,7 +14,8 @@ hosting for them requires.
   country PDFs (typst), the React web app, the markdown briefs, the posters and the `/ask` corpus.
 - **Stack.** Python is stdlib-only. The web app is React 19, Vite and Tailwind 4 in `web/`. `/ask` is a
   Vercel Function in `api/`.
-- **Deployment.** Vercel, built locally and deployed prebuilt.
+- **Deployment.** Vercel at `https://eu27.cloud`. A push to `main` runs the gate, builds in GitHub Actions and
+  deploys prebuilt (#81).
 
 Read [`METHOD.md`](METHOD.md) for the evidence pipeline and [`DECISIONS.md`](DECISIONS.md) before
 changing a rule. From #72 on, a new decision entry needs every part listed in `README.md` § How decisions
@@ -29,7 +30,8 @@ are recorded: `tests/test_docs.py` enforces it.
 ./run.sh data                          # regenerate briefs, bundle and /ask corpus (pins the epoch)
 ./run.sh artefacts                     # re-render the 27 tracked posters (needs Chrome)
 ./run.sh export                        # EU-27 report + 27 country PDFs into book/build/
-./run.sh deploy                        # gate, local vercel build, prebuilt PRODUCTION deploy; owner's OK first
+git push                               # to main = PRODUCTION deploy via .github/workflows/deploy.yml; owner's OK first
+./run.sh deploy                        # manual fallback: gate, local vercel build, prebuilt PRODUCTION deploy
 
 python3 model/document.py --check      # every fact shown resolves to a checked source
 python3 model/sovereignty.py [ISO]     # ranking placements, range and confidence
@@ -75,8 +77,11 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
 - **The security gate blocks email-shaped strings.** They have come in through archive URLs. Archived
   copies are accepted only for exactly the requested host (`research.snapshot_matches`). Fix the data;
   never bypass the gate.
-- **Deploys are prebuilt and manual.** A push ships nothing. The PDFs need `typst` locally. The build
-  command runs `npm ci` at the root (for `api/`) and in `web/`. Previews sit behind Vercel login.
+- **A push to `main` is a production deploy** (#81), gated by `./test.sh` in Actions. The PDFs need `typst`,
+  which Vercel's image lacks, so every deploy is prebuilt (CI pins and checksums typst). The build command runs
+  `npm ci` at the root (for `api/`) and in `web/`. Previews are by hand and sit behind Vercel login.
+- **Pin every action by SHA** in `.github/workflows/`, and checksum any downloaded binary
+  (`tests/test_workflows.py`).
 - **SPA rewrite.** It must target `/index` under `cleanUrls` (`tests/test_vercel_config.py`).
 - **zsh.** `echo ====` breaks, because a leading `=` is command expansion; use `echo '---'`.
 - **The mobile reader is stale** (schema-1 bundle). Don't copy the new bundle into it without the
