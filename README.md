@@ -5,6 +5,8 @@ infrastructure a foreign power can compel or switch off, and of what sovereign h
 Each state is analysed on its own fundamentals; none is scaled from or measured against another (#72).
 Every fact is footnoted to a source whose text was fetched, hashed and checked (#75).
 
+**Where it stands and what is next:** [`ROADMAP.md`](ROADMAP.md) · **how the evidence is produced:** [`METHOD.md`](METHOD.md) · **status:** [`PROGRESS.md`](PROGRESS.md)
+
 ## Live site
 
 **https://sovereign-data-centers.vercel.app**
@@ -127,6 +129,7 @@ countries/
 web/                         React + Vite visualization app; reads the JSON bundle, no server
 mobile/                      Expo reader for the same bundle; local only, never built or deployed
 tests/                       stdlib unittest suite for the model and the data
+ROADMAP.md                   what is done, in progress and next, and what gates what
 METHOD.md                    how a claim is researched, checked, reviewed and shown: the evidence pipeline
 CLAUDE.md                    instructions for AI assistants: exact commands and the gotchas
 PROGRESS.md                  where every workstream stands today, on one page

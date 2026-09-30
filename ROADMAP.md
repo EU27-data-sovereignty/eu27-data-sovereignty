@@ -78,6 +78,16 @@ is kept for sizing from holdings.
 
 ## In progress
 
+- **Production deploy** of the current build: built, tested, on a protected preview; waiting for the
+  author's go-ahead. Production still serves the 2026-09-27 build.
+- **`/ask` going live** (#78): built and tested with a fake client; waiting for the API key in a dedicated
+  Anthropic workspace with a spend limit. Then the 12-question eval and the rate limit
+  (runbook: [`DEPLOYMENT.md`](DEPLOYMENT.md) § `/ask` runbook).
+
+---
+
+## Closed: security audits
+
 ### Security-audit remediation
 A full security and privacy audit was completed 2026-09-04. The repository came back largely clean: no
 secrets in the full history, no personal data, zero dependency vulnerabilities, no XSS surface, no data
@@ -151,6 +161,23 @@ dangling decision numbers.
 ---
 
 ## Planned
+
+```mermaid
+flowchart TD
+  P["Publish<br/>production deploy · /ask live"] --> C
+  subgraph C[Raise confidence]
+    H[Hosting research pass<br/>+ #79 review]
+    D[Decide: classified holdings]
+    F[Rendering fetch for JS pages]
+    T[Re-run AT, BE, EE]
+    S[Record counts and sizes]
+  end
+  C --> A["Human sampling audit<br/>measured error rate: the launch gate"]
+  A --> I[Stage 2: indexing]
+  A --> E["Stage 3: eu27.cloud"]
+  A --> O[Outreach · book · mobile release]
+  S --> K["Capacity from holdings (#73)"]
+```
 
 ### Next — publish what exists
 1. **Production deploy** of the current build, with the author's OK. It is public at
