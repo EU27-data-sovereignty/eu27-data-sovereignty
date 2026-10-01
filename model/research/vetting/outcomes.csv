@@ -896,7 +896,7 @@ HU,record:HU:vehicle_licensing:register,found,corroborates,corroborated
 HU,record:HU:water_control:operator,found,fills_gap,not_verified
 HU,record:HU:water_control:register,no_better_found,,
 IE,indicator:IE:C1,found,corroborates,corroborated
-IE,indicator:IE:C2,found,corroborates,corroborated
+IE,indicator:IE:C2,found,corroborates,same_source
 IE,indicator:IE:K1,found,fills_gap,filled_gap
 IE,indicator:IE:K2,found,fills_gap,filled_gap
 IE,indicator:IE:L1,not_reached,,
@@ -917,7 +917,7 @@ IE,record:IE:civil_registry:operator,found,fills_gap,filled_gap
 IE,record:IE:civil_registry:register,found,fills_gap,filled_gap
 IE,record:IE:crisis_management:operator,found,fills_gap,not_verified
 IE,record:IE:crisis_management:register,found,fills_gap,not_verified
-IE,record:IE:customs:count,found,fills_gap,disputed
+IE,record:IE:customs:count,found,fills_gap,same_source
 IE,record:IE:customs:operator,no_better_found,,
 IE,record:IE:customs:register,no_better_found,,
 IE,record:IE:defence_command:foreign_dependency,not_reached,,
@@ -931,7 +931,7 @@ IE,record:IE:electoral_management:operator,not_reached,,
 IE,record:IE:electoral_management:register,not_reached,,
 IE,record:IE:electoral_roll:count,no_better_found,,
 IE,record:IE:electoral_roll:foreign_dependency,no_better_found,,
-IE,record:IE:electoral_roll:register,found,fills_gap,disputed
+IE,record:IE:electoral_roll:register,found,fills_gap,same_source
 IE,record:IE:emergency_communications:foreign_dependency,no_better_found,,
 IE,record:IE:emergency_communications:operator,found,fills_gap,below_T2
 IE,record:IE:emergency_communications:register,found,upgrade,below_T2
@@ -1039,8 +1039,8 @@ IT,record:IT:tax:register,found,fills_gap,filled_gap
 IT,record:IT:trust_services_pki:foreign_dependency,no_better_found,,
 IT,record:IT:trust_services_pki:operator,found,upgrade,review_disagreed
 IT,record:IT:trust_services_pki:register,no_better_found,,
-IT,record:IT:vehicle_licensing:register,found,fills_gap,corroborated
 IT,record:IT:vehicle_licensing:register,found,fills_gap,filled_gap
+IT,record:IT:vehicle_licensing:register,found,fills_gap,same_source
 IT,record:IT:water_control:register,not_reached,,
 LT,indicator:LT:C1,found,upgrade,corroborated
 LT,indicator:LT:C2,found,upgrade,corroborated
@@ -1264,7 +1264,7 @@ MT,record:MT:water_control:register,found,fills_gap,not_verified
 NL,indicator:NL:C1,found,corroborates,corroborated
 NL,indicator:NL:C1,found,corroborates,corroborated
 NL,indicator:NL:C2,found,contradicts,superseded_later_same_authority
-NL,indicator:NL:K1,found,corroborates,corroborated
+NL,indicator:NL:K1,found,corroborates,same_source
 NL,indicator:NL:K2,found,corroborates,corroborated
 NL,indicator:NL:L1,no_better_found,,
 NL,indicator:NL:L2,no_better_found,,
@@ -1490,8 +1490,8 @@ SE,record:SE:border_control:operator,found,corroborates,review_disagreed
 SE,record:SE:border_control:register,no_better_found,,
 SE,record:SE:breeder_documents:register,found,fills_gap,filled_gap
 SE,record:SE:business_registry:register,found,corroborates,corroborated
-SE,record:SE:central_bank:register,found,fills_gap,corroborated
 SE,record:SE:central_bank:register,found,fills_gap,filled_gap
+SE,record:SE:central_bank:register,found,fills_gap,same_source
 SE,record:SE:civil_registry:count,found,supersedes,superseded_later_same_authority
 SE,record:SE:civil_registry:operator,found,corroborates,corroborated
 SE,record:SE:civil_registry:register,no_better_found,,
@@ -1536,7 +1536,7 @@ SE,record:SE:vehicle_licensing:register,found,corroborates,corroborated
 SE,record:SE:water_control:register,no_better_found,,
 SI,indicator:SI:C1,no_better_found,,
 SI,indicator:SI:C2,found,corroborates,corroborated
-SI,indicator:SI:C2,found,corroborates,corroborated
+SI,indicator:SI:C2,found,corroborates,same_source
 SI,indicator:SI:K1,found,corroborates,corroborated
 SI,indicator:SI:K2,found,corroborates,corroborated
 SI,indicator:SI:L1,no_better_found,,
@@ -1607,7 +1607,7 @@ SI,record:SI:water_control:operator,found,fills_gap,holding_not_established
 SI,record:SI:water_control:register,found,fills_gap,review_disagreed
 SK,indicator:SK:C1,found,corroborates,not_verified
 SK,indicator:SK:C2,found,corroborates,review_disagreed
-SK,indicator:SK:K1,found,corroborates,corroborated
+SK,indicator:SK:K1,found,corroborates,same_source
 SK,indicator:SK:K2,found,corroborates,not_verified
 SK,indicator:SK:L1,found,fills_gap,review_disagreed
 SK,indicator:SK:L2,found,fills_gap,not_verified

@@ -44,6 +44,23 @@ be the submitter, must read the source's language, and must declare no conflict 
 
 Submitted quotes come from anyone, so both prompts in `workflow.js` carry the guard `/ask` already had.
 
+### Fixed: a document cited twice was counted as two sources
+
+The end-to-end rehearsal of a citizen submission resubmitted a fact's own source. Admission counted it as
+a corroboration and overwrote the original citation's record. A finding that cites a document the fact
+already cites is now `same_source`: recorded, never counted as a second source, and never overwriting.
+**This corrects the 2026-09-30 vetting figures:**
+- 8 of the 244 "corroborations" cited the same document, so the count is **238**;
+- 2 of the 12 "disputes" were the agent reading that same document differently, so the count is **10**;
+- Strong falls from 107 to **106**.
+
+The run manifest is re-recorded with the corrected outcomes.
+
+### Fixed: a submission now declares its document's language
+
+The rehearsal also found that a submission recorded no language. Eligibility therefore fell back to the
+state's official languages and refused a reviewer who reads the document's actual language.
+
 ### Deferred: the legal entity (#86)
 
 A Dutch stichting is intended and not yet founded. Everything is built so it can take the project over

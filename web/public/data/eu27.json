@@ -4772,36 +4772,6 @@
   ],
   "indicator:IE:C2": [
    {
-    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
-    "checklist": [
-     "T2 competent public body or audit office (government or authority)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "archived copy of this URL",
-     "blind review agreed (reviewer: same model as the researcher)",
-     "English source"
-    ],
-    "checks": {
-     "archived": true,
-     "document_hashed": true,
-     "language": "english",
-     "quote_match": "exact",
-     "review": "blind, same model",
-     "source": "official",
-     "tier": 2,
-     "tier_kind": "government_or_authority"
-    },
-    "confidence": "official",
-    "gloss": "",
-    "grade": "Strong",
-    "locator": "page text",
-    "original": "The Government Cloud means that smaller departments and offices will not have to support their own hardware.",
-    "quote": "The Government Cloud means that smaller departments and offices will not have to support their own hardware.",
-    "retrieved": "2026-09-30",
-    "source_id": "ogcio-gov-ie:dda774ec83",
-    "value_as_found": "yes"
-   },
-   {
     "checked_by": "research.py: quote exact in fetched document",
     "checklist": [
      "T2 competent public body or audit office (government or authority)",
@@ -4829,6 +4799,36 @@
     "quote": "Delivers a shared robust, resilient, private Government Cloud infrastructure platform available for system/application hosting for all Public Bodies. [English: Same (English original).]",
     "retrieved": "2026-09-29",
     "source_id": "ogcio-gov-ie:b00e924ad9",
+    "value_as_found": "yes"
+   },
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T2 competent public body or audit office (government or authority)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "independent review agreed (not blind)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "exact",
+     "review": "agreed, not blind",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "government_or_authority"
+    },
+    "confidence": "official",
+    "gloss": "Same (English original).",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "The Government Cloud means that smaller departments and offices will not have to support their own hardware.",
+    "quote": "The Government Cloud means that smaller departments and offices will not have to support their own hardware. [English: Same (English original).]",
+    "retrieved": "2026-09-29",
+    "source_id": "ogcio-gov-ie:dda774ec83",
     "value_as_found": "yes"
    }
   ],
@@ -6390,13 +6390,13 @@
     "value_as_found": "yes"
    },
    {
-    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checked_by": "research.py: quote exact in fetched document",
     "checklist": [
      "T2 competent public body or audit office (public body)",
      "official source",
      "quote found (exact match) in the hashed document",
      "archived copy of this URL",
-     "blind review agreed (reviewer: same model as the researcher)",
+     "independent review agreed (not blind)",
      "non-English source, machine-translated"
     ],
     "checks": {
@@ -6404,18 +6404,18 @@
      "document_hashed": true,
      "language": "machine-translated",
      "quote_match": "exact",
-     "review": "blind, same model",
+     "review": "agreed, not blind",
      "source": "official",
      "tier": 2,
      "tier_kind": "public_body"
     },
     "confidence": "official",
-    "gloss": "PKIoverheid is a trust framework managed by Logius. The Ministry of the Interior and Kingdom Relations is the commissioning party.",
+    "gloss": "TSPs issue certificates under the trust anchor of the State of the Netherlands as described in the framework's guidelines.",
     "grade": "Standard",
     "locator": "page text",
-    "original": "PKIoverheid is een afsprakenstelsel dat wordt beheerd door Logius. Het ministerie van Binnenlandse Zaken en Koninkrijksrelaties is de opdrachtgever.",
-    "quote": "PKIoverheid is een afsprakenstelsel dat wordt beheerd door Logius. Het ministerie van Binnenlandse Zaken en Koninkrijksrelaties is de opdrachtgever. [English: PKIoverheid is a trust framework managed by Logius. The Ministry of the Interior and Kingdom Relations is the commissioning party.]",
-    "retrieved": "2026-09-30",
+    "original": "TSP’s geven de certificaten uit onder het vertrouwensanker van de Staat der Nederlanden zoals beschreven in de richtlijnen van het afsprakenstelsel.",
+    "quote": "TSP’s geven de certificaten uit onder het vertrouwensanker van de Staat der Nederlanden zoals beschreven in de richtlijnen van het afsprakenstelsel. [English: TSPs issue certificates under the trust anchor of the State of the Netherlands as described in the framework's guidelines.]",
+    "retrieved": "2026-09-29",
     "source_id": "logius-nl:b7d25aebe2",
     "value_as_found": "yes"
    }
@@ -7936,13 +7936,13 @@
     "value_as_found": "yes"
    },
    {
-    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checked_by": "research.py: quote exact in fetched document",
     "checklist": [
      "T2 competent public body or audit office (government or authority)",
      "official source",
      "quote found (exact match) in the hashed document",
      "no archived copy of this URL",
-     "blind review agreed (reviewer: same model as the researcher)",
+     "independent review agreed (not blind)",
      "non-English source, machine-translated"
     ],
     "checks": {
@@ -7950,18 +7950,18 @@
      "document_hashed": true,
      "language": "machine-translated",
      "quote_match": "exact",
-     "review": "blind, same model",
+     "review": "agreed, not blind",
      "source": "official",
      "tier": 2,
      "tier_kind": "government_or_authority"
     },
     "confidence": "official",
-    "gloss": "Services that use sensitive, personal and other data and information that the state does not wish to store outside its own environment run on this infrastructure.",
+    "gloss": "This infrastructure runs services that use sensitive, personal and other data and information that the state does not want to store outside its own environment.",
     "grade": "Standard",
     "locator": "page text",
     "original": "Na tej infrastrukturi se izvajajo storitve, ki uporabljajo občutljive, osebne in druge podatke in informacije, ki jih država ne želi shranjevati zunaj svojega okolja.",
-    "quote": "Na tej infrastrukturi se izvajajo storitve, ki uporabljajo občutljive, osebne in druge podatke in informacije, ki jih država ne želi shranjevati zunaj svojega okolja. [English: Services that use sensitive, personal and other data and information that the state does not wish to store outside its own environment run on this infrastructure.]",
-    "retrieved": "2026-09-30",
+    "quote": "Na tej infrastrukturi se izvajajo storitve, ki uporabljajo občutljive, osebne in druge podatke in informacije, ki jih država ne želi shranjevati zunaj svojega okolja. [English: This infrastructure runs services that use sensitive, personal and other data and information that the state does not want to store outside its own environment.]",
+    "retrieved": "2026-09-29",
     "source_id": "gov-si:b822ddd7c8",
     "value_as_found": "yes"
    }
@@ -8308,13 +8308,13 @@
     "value_as_found": "yes"
    },
    {
-    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checked_by": "research.py: quote exact in fetched document",
     "checklist": [
      "T2 competent public body or audit office (government or authority)",
      "official source",
      "quote found (exact match) in the hashed document",
      "archived copy of this URL",
-     "blind review agreed (reviewer: same model as the researcher)",
+     "independent review agreed (not blind)",
      "non-English source, machine-translated"
     ],
     "checks": {
@@ -8322,18 +8322,18 @@
      "document_hashed": true,
      "language": "machine-translated",
      "quote_match": "exact",
-     "review": "blind, same model",
+     "review": "agreed, not blind",
      "source": "official",
      "tier": 2,
      "tier_kind": "government_or_authority"
     },
     "confidence": "official",
-    "gloss": "Since 1 August 2019 the operator of the Slovak National Certification Authority (SNCA) and provider of qualified trust services is the National Agency for Network and Electronic Services (NASES).",
+    "gloss": "Since 1 August 2019 the operator of the Slovak National Certification Authority (SNCA) and provider of qualified trust services is the National Agency for Network and Electronic Services (NASES). SNCA provides qualified trust services to public authorities of the Slovak Republic.",
     "grade": "Standard",
     "locator": "page text",
-    "original": "Od 1. augusta 2019 je prevádzkovateľom Slovenskej národnej certifikačnej autority (SNCA) a poskytovateľom kvalifikovaných dôveryhodných služieb Národná agentúra pre sieťové a elektronické služby (NASES).",
-    "quote": "Od 1. augusta 2019 je prevádzkovateľom Slovenskej národnej certifikačnej autority (SNCA) a poskytovateľom kvalifikovaných dôveryhodných služieb Národná agentúra pre sieťové a elektronické služby (NASES). [English: Since 1 August 2019 the operator of the Slovak National Certification Authority (SNCA) and provider of qualified trust services is the National Agency for Network and Electronic Services (NASES).]",
-    "retrieved": "2026-09-30",
+    "original": "Od 1. augusta 2019 je prevádzkovateľom Slovenskej národnej certifikačnej autority (SNCA) a poskytovateľom kvalifikovaných dôveryhodných služieb Národná agentúra pre sieťové a elektronické služby (NASES). SNCA poskytuje kvalifikované dôveryhodné služby orgánom verejnej moci Slovenskej republiky.",
+    "quote": "Od 1. augusta 2019 je prevádzkovateľom Slovenskej národnej certifikačnej autority (SNCA) a poskytovateľom kvalifikovaných dôveryhodných služieb Národná agentúra pre sieťové a elektronické služby (NASES). SNCA poskytuje kvalifikované dôveryhodné služby orgánom verejnej moci Slovenskej republiky. [English: Since 1 August 2019 the operator of the Slovak National Certification Authority (SNCA) and provider of qualified trust services is the National Agency for Network and Electronic Services (NASES). SNCA provides qualified trust services to public authorities of the Slovak Republic.]",
+    "retrieved": "2026-09-29",
     "source_id": "snca-gov-sk:c4488488e6",
     "value_as_found": "yes"
    }
@@ -43423,14 +43423,14 @@
      "value": "summary"
     },
     "confidence": "official",
-    "gloss": "The national register of licensed drivers is established at the Department for Land Transport for road-safety purposes.",
+    "gloss": "The national vehicle archive is established at the Department for Land Transport",
     "grade": "Standard",
     "locator": "page text",
-    "original": "Presso il Dipartimento per i trasporti terrestri è istituita l'anagrafe nazionale degli abilitati alla guida ai fini della sicurezza stradale.",
-    "quote": "Presso il Dipartimento per i trasporti terrestri è istituita l'anagrafe nazionale degli abilitati alla guida ai fini della sicurezza stradale. [English: The national register of licensed drivers is established at the Department for Land Transport for road-safety purposes.]",
+    "original": "Presso il Dipartimento per i trasporti terrestri è istituito l'archivio nazionale dei veicoli",
+    "quote": "Presso il Dipartimento per i trasporti terrestri è istituito l'archivio nazionale dei veicoli [English: The national vehicle archive is established at the Department for Land Transport]",
     "retrieved": "2026-09-30",
     "source_id": "normattiva-it:68ec3d6151",
-    "value_as_found": "anagrafe nazionale degli abilitati alla guida (national register of licensed drivers)"
+    "value_as_found": "archivio nazionale dei veicoli (national vehicle archive)"
    }
   ],
   "record:LT:digital_identity_credentials:register": [
@@ -51746,14 +51746,14 @@
      "value": "summary"
     },
     "confidence": "official",
-    "gloss": "RIX-INST is the Riksbank's system for instant payments. Unlike RIX-RTGS, RIX-INST is open around the clock every day of the year and settlement in RIX-INST is immediate.",
+    "gloss": "RIX-RTGS is built to handle large payments between participants. About SEK 660 billion is turned over daily in RIX-RTGS",
     "grade": "Standard",
     "locator": "page text",
-    "original": "RIX-INST är Riksbankens system för omedelbara betalningar. Till skillnad från RIX-RTGS, är RIX-INST öppet dygnet runt alla dagar på året och avvecklingen i RIX-INST sker omedelbart.",
-    "quote": "RIX-INST är Riksbankens system för omedelbara betalningar. Till skillnad från RIX-RTGS, är RIX-INST öppet dygnet runt alla dagar på året och avvecklingen i RIX-INST sker omedelbart. [English: RIX-INST is the Riksbank's system for instant payments. Unlike RIX-RTGS, RIX-INST is open around the clock every day of the year and settlement in RIX-INST is immediate.]",
+    "original": "RIX-RTGS är uppbyggt för att kunna hantera stora betalningar mellan deltagarna. Dagligen omsätts cirka 660 miljarder kronor i RIX-RTGS",
+    "quote": "RIX-RTGS är uppbyggt för att kunna hantera stora betalningar mellan deltagarna. Dagligen omsätts cirka 660 miljarder kronor i RIX-RTGS [English: RIX-RTGS is built to handle large payments between participants. About SEK 660 billion is turned over daily in RIX-RTGS]",
     "retrieved": "2026-09-30",
     "source_id": "riksbank-se:f10cefe271",
-    "value_as_found": "RIX-INST (Riksbank's instant payment system)"
+    "value_as_found": "RIX-RTGS (Riksbank's large-value payment settlement system)"
    }
   ],
   "record:SE:civil_registry:count": [
@@ -68765,7 +68765,7 @@
      "record_count": "3.87 million registered electors (December 2024)",
      "recoverability": "medium",
      "register": "Local Government Electoral Registration System (LGERS), shared national electoral register database replacing 31 local registers",
-     "retrieved": "2026-09-30",
+     "retrieved": "2026-09-29",
      "status": "held",
      "tier": 0,
      "url": "https://cdn.electoralcommission.ie/app/uploads/2025/04/30104313/Oversight-Report-on-the-Electoral-Registers_online_english_tagged.pdf"
@@ -69823,7 +69823,7 @@
      "label": "Vehicle & licensing",
      "legal_basis": "",
      "publisher": "Normattiva (Istituto Poligrafico e Zecca dello Stato)",
-     "quote": "Presso il Dipartimento per i trasporti terrestri è istituita l'anagrafe nazionale degli abilitati alla guida ai fini della sicurezza stradale. [English: The national register of licensed drivers is established at the Department for Land Transport for road-safety purposes.]",
+     "quote": "Presso il Dipartimento per i trasporti terrestri è istituito l'archivio nazionale dei veicoli [English: The national vehicle archive is established at the Department for Land Transport]",
      "record_class": "vehicle_licensing",
      "record_count": "",
      "recoverability": "medium",
@@ -77689,7 +77689,7 @@
      "label": "Central bank systems",
      "legal_basis": "",
      "publisher": "Sveriges riksbank",
-     "quote": "RIX-INST är Riksbankens system för omedelbara betalningar. Till skillnad från RIX-RTGS, är RIX-INST öppet dygnet runt alla dagar på året och avvecklingen i RIX-INST sker omedelbart. [English: RIX-INST is the Riksbank's system for instant payments. Unlike RIX-RTGS, RIX-INST is open around the clock every day of the year and settlement in RIX-INST is immediate.]",
+     "quote": "RIX-RTGS är uppbyggt för att kunna hantera stora betalningar mellan deltagarna. Dagligen omsätts cirka 660 miljarder kronor i RIX-RTGS [English: RIX-RTGS is built to handle large payments between participants. About SEK 660 billion is turned over daily in RIX-RTGS]",
      "record_class": "central_bank",
      "record_count": "",
      "recoverability": "medium",
@@ -105511,7 +105511,7 @@
           "c": [
            "indicator:IE:C2"
           ],
-          "g": "Strong",
+          "g": "Standard",
           "k": "categorical",
           "role": "fact",
           "t": "Yes"
@@ -129453,7 +129453,7 @@
         },
         {
          "role": "method",
-         "t": "244"
+         "t": "238"
         }
        ],
        [
@@ -129463,7 +129463,7 @@
         },
         {
          "role": "method",
-         "t": "12"
+         "t": "10"
         }
        ],
        [
@@ -129524,6 +129524,16 @@
         {
          "role": "method",
          "t": "153"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "same_source"
+        },
+        {
+         "role": "method",
+         "t": "8"
         }
        ],
        [
@@ -129796,7 +129806,7 @@
         },
         {
          "role": "method",
-         "t": "107"
+         "t": "106"
         }
        ],
        [
@@ -129806,7 +129816,7 @@
         },
         {
          "role": "method",
-         "t": "1283"
+         "t": "1284"
         }
        ]
       ],
@@ -132339,7 +132349,7 @@
   },
   "cdn-electoralcommission-ie:5e8d8912b8": {
    "archived_url": "https://web.archive.org/web/20251026075202/https://cdn.electoralcommission.ie/app/uploads/2025/04/30104313/Oversight-Report-on-the-Electoral-Registers_online_english_tagged.pdf",
-   "doc_type": "webpage",
+   "doc_type": "report",
    "label": "An Coimisiún Toghcháin (Electoral Commission) — Oversight Report on the Electoral Registers, 2025",
    "language": "en",
    "license": "",
@@ -135694,11 +135704,11 @@
   "gov-si:b822ddd7c8": {
    "archived_url": "",
    "doc_type": "webpage",
-   "label": "Ministrstvo za notranje zadeve in javno upravo (GOV.SI) — Informatika v državni upravi, 2026-08-20",
+   "label": "Ministrstvo za notranje zadeve in javno upravo (GOV.SI) — Informatika v državni upravi",
    "language": "sl",
    "license": "",
    "notes": "sha256 88ba4056bce04ffe6ec0c113ea131f2621ff282cabb25644870e585b5f4b63d2 (text/html), fetched 2026-09-29",
-   "published": "2026-08-20",
+   "published": "",
    "publisher": "Ministrstvo za notranje zadeve in javno upravo (GOV.SI)",
    "source_id": "gov-si:b822ddd7c8",
    "title": "Informatika v državni upravi",

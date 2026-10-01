@@ -168,6 +168,7 @@ served HTML. It skips findings the reviewer disagreed with or that sit below T2.
 | The reviewer did not find the quote, or reached a different value | `review_disagreed` |
 | An operator, count or hosting fact for a register nobody established | `holding_not_established` |
 | Nothing printed yet | `filled_gap` |
+| The finding cites a document the fact already cites | `same_source`: recorded, not a second source |
 | The printed value passes the value-in-quote rule against the new quote | `corroborated`: a second citation |
 | A different value, from a higher tier | `superseded_higher_tier` |
 | A different value, from the same host with a later date (both dated) | `superseded_later_same_authority` |

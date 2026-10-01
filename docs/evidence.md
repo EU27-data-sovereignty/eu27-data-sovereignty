@@ -10,16 +10,16 @@
 | | Count |
 |---|---:|
 | Printed facts | 1390 |
-| Strong | 107 |
-| Standard | 1283 |
+| Strong | 106 |
+| Standard | 1284 |
 | Gaps (values withheld) | 3342 |
 | Disputed (withheld: source changed, or sources disagree) | 20 |
 
 ```mermaid
 pie showData
   title "Printed facts by evidence grade"
-  "Strong" : 107
-  "Standard" : 1283
+  "Strong" : 106
+  "Standard" : 1284
 ```
 
 **How grades are set.** Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict.
@@ -75,7 +75,7 @@ Each Strong condition a Standard fact misses. One fact can miss several, so the 
 | Best source below T2 (e.g. an unofficial law mirror) | 138 |
 | Machine summary of a non-English quote, no figure to match | 832 |
 | No archived copy of exactly this URL | 617 |
-| Categorical: review agreed but was not blind | 186 |
+| Categorical: review agreed but was not blind | 187 |
 | A name in the value is not in the quote | 168 |
 | Secondary source or statement of absence | 35 |
 | Quote matched loosely (punctuation) | 22 |
@@ -94,8 +94,8 @@ xychart-beta
 xychart-beta
   title "Strong facts per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
-  y-axis "facts" 0 --> 30
-  bar [4, 6, 4, 4, 4, 0, 5, 3, 3, 0, 2, 6, 4, 2, 30, 1, 0, 0, 2, 14, 1, 1, 3, 1, 1, 5, 1]
+  y-axis "facts" 0 --> 29
+  bar [4, 6, 4, 4, 4, 0, 5, 3, 3, 0, 2, 6, 4, 2, 29, 1, 0, 0, 2, 14, 1, 1, 3, 1, 1, 5, 1]
 ```
 
 | State | Printed | Strong | Standard | Gaps |
@@ -114,7 +114,7 @@ xychart-beta
 | France (FR) | 75 | 6 | 69 | 102 |
 | Croatia (HR) | 58 | 4 | 54 | 119 |
 | Hungary (HU) | 73 | 2 | 71 | 104 |
-| Ireland (IE) | 67 | 30 | 37 | 110 |
+| Ireland (IE) | 67 | 29 | 38 | 110 |
 | Italy (IT) | 58 | 1 | 57 | 119 |
 | Lithuania (LT) | 21 | 0 | 21 | 156 |
 | Luxembourg (LU) | 20 | 0 | 20 | 157 |
@@ -135,7 +135,7 @@ xychart-beta
 | Register or system | 635 | 48 | 587 |
 | Operator | 365 | 30 | 335 |
 | Eurostat fundamental or posture | 162 | 0 | 162 |
-| Sovereignty indicator | 135 | 8 | 127 |
+| Sovereignty indicator | 135 | 7 | 128 |
 | Infrastructure dependency | 52 | 1 | 51 |
 | Record count | 41 | 20 | 21 |
 
@@ -204,7 +204,7 @@ Each vetting run leaves a manifest (`model/research/vetting/runs/`): the hashes 
 
 | Run | Reviewer | Findings | Admitted (corroborated / filled / superseded) | Disputed | Prompts sha256 |
 |---|---|---:|---|---:|---|
-| wf_1c6b8bb6-450 | claude-opus-5-5 | 1017 | 244 / 363 / 26 | 12 | `f750ef5c5947` |
+| wf_1c6b8bb6-450 | claude-opus-5-5 | 1017 | 238 / 363 / 26 | 10 | `b38aee676549` |
 
 ## How the checks run
 

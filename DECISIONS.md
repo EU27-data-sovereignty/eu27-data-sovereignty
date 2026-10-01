@@ -1755,6 +1755,9 @@ The vetting run, verified 2026-09-30, run `wf_1c6b8bb6-450` (manifest in `model/
   authority), 12 disputed; rejected: 153 by review, 176 unverifiable, 38 unestablished holdings, 5 below
   T2; of the input items, 447 had no better source and 201 were not reached;
 - best tier per printed fact afterwards: T1 635, T2 633, T3 9, T4 113, with 107 Strong of 1,390 facts.
+- Corrected 2026-10-01: 8 "corroborations" and 2 "disputes" cited a document the fact already cited.
+  A finding like that is now `same_source`, not a second source. The corrected counts are 238
+  corroborated, 10 disputed and 106 Strong.
 
 *Would change if:* a person reviews `authorities.csv` and reclassifies hosts, since the table is an
 agent's work. It would also change if operator domains are recorded independently, which would allow

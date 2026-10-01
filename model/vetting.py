@@ -340,6 +340,10 @@ def admit() -> int:
                     set_value(claim, f["value"], f["url"])
                     cite(claim, f, v, model)
                     result = "filled_gap"
+                elif research.source_id(f["url"]) in {c["source_id"] for c in cites.values() if c["claim"] == claim}:
+                    # The same document again is not a second source: recorded, never counted as
+                    # corroboration, and it never overwrites the earlier citation's record.
+                    result = "same_source"
                 elif same_value(printed, f):
                     cite(claim, f, v, model)
                     result = "corroborated"

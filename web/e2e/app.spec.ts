@@ -282,6 +282,9 @@ test.describe('ask', () => {
 test.describe('accessibility', () => {
   for (const route of ROUTES) {
     test(`${route} has no detectable violations`, async ({ page }) => {
+      // /sources lists every claim with its checks and a "Check this fact" link (1,390 claims on
+      // 2026-10-01); a full axe scan of it takes longer than the default 30 s.
+      if (route === '/sources') test.setTimeout(120_000)
       await page.goto(route)
       await expect(page.locator('main')).toBeVisible()
       const results = await new AxeBuilder({ page })
