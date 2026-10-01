@@ -118,6 +118,8 @@ def forms() -> dict[str, dict]:
             _dropdown("field", "Which fact", list(FIELDS)),
             _dropdown("kind", "What this is", list(KINDS)),
             _field("input", "url", "URL", "The exact page or PDF, https only."),
+            _field("input", "language", "Language of the document",
+                   "Its ISO code, e.g. de, fr, en. A reviewer must read it."),
             _field("textarea", "quote", "Quote", "8 to 60 words, copied verbatim from the page, in its own language."),
             _field("textarea", "quote_english", "English translation", "Optional.", required=False),
             _field("input", "value", "Value", "What the quote establishes. Every number in it must be in the quote."),
@@ -220,7 +222,8 @@ def submission(issue: dict) -> dict | None:
         return None
     return {"issue": issue["number"], "iso": iso, "claim": claim,
             "relation": KINDS.get(f.get("What this is", ""), "fills_gap"),
-            "url": f["URL"].strip(), "quote": f["Quote"].strip(), "quote_english": f.get("English translation", "").strip(),
+            "url": f["URL"].strip(), "language": f.get("Language of the document", "").strip().lower()[:2],
+            "quote": f["Quote"].strip(), "quote_english": f.get("English translation", "").strip(),
             "value": f["Value"].strip(), "published": f.get("Published", "").strip(),
             "title": issue.get("title", "").removeprefix("[source]").strip(), "publisher": "",
             "doc_type": "official_page", "submitter": issue["user"]["login"],
@@ -322,7 +325,8 @@ def status(reg: dict | None = None) -> dict[str, dict]:
             submitters = {**submitters, claim: subs[claim]["submitter"]}
             by_claim.setdefault(claim, [])
             iso_of = subs[claim]["iso"]
-            langs = LANGUAGES.get(iso_of, set())
+            # The language the submitter declared for the document; else the state's official ones.
+            langs = {subs[claim]["language"]} if subs[claim].get("language") else LANGUAGES.get(iso_of, set())
             why = eligible(r, subs[claim]["submitter"], langs, reviewers)
             st = out.setdefault(claim, {"confirmed": [], "rejected": [], "ignored": []})
             if why:

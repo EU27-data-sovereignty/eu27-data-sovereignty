@@ -45,6 +45,7 @@ TERMS_REVIEW = "- [X] I license this review under CC BY 4.0 and sign it off unde
 def submit_body(**over) -> str:
     f = {"Country": "NL", "What it is about": "Holding: Tax", "Which fact": "Name of the register or system",
          "What this is": "A new fact (fills a gap)", "URL": "https://www.belastingdienst.nl/x",
+         "Language of the document": "nl",
          "Quote": "De Belastingdienst beheert het centrale register van alle belastingplichtigen in Nederland",
          "English translation": "_No response_", "Value": "centrale register", "Published": "2026",
          "Terms": TERMS_SUBMIT}
@@ -124,6 +125,11 @@ class TwoPersonRule(unittest.TestCase):
     def test_someone_not_on_the_roster_does_not_count(self):
         self.review(10, "mallory")
         self.assertEqual(self.state()["ignored"][0]["why"], "not on the reviewer roster")
+
+    def test_the_declared_document_language_decides_who_may_review(self):
+        contrib.ingest_issues([issue(20, "alice", submit_body(**{"Language of the document": "de"}), ["submission"])])
+        self.review(21, "dave", claim="#20", languages="de")
+        self.assertEqual(self.state("#20")["state"], "verified")
 
     def test_a_reviewer_who_does_not_read_the_language_does_not_count(self):
         self.review(10, "dave", languages="de")

@@ -301,6 +301,8 @@ def admit() -> int:
 
     def cite(claim: str, f: dict, v: dict, model: str) -> str:
         sid = research.register_source(reg, {**f, "doc_type": f.get("doc_type", "")}, v)
+        if f.get("language") and not reg[sid].get("language"):
+            reg[sid]["language"] = f["language"]
         reg[sid]["doc_type"] = DOC_TYPE.get(f.get("doc_type", ""), "webpage")
         if f.get("published") and not reg[sid]["published"]:
             reg[sid]["published"] = f["published"]

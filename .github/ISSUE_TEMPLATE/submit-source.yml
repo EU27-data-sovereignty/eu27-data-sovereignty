@@ -131,6 +131,13 @@ body:
       description: "The exact page or PDF, https only."
     validations:
       required: true
+  - type: "input"
+    id: "language"
+    attributes:
+      label: "Language of the document"
+      description: "Its ISO code, e.g. de, fr, en. A reviewer must read it."
+    validations:
+      required: true
   - type: "textarea"
     id: "quote"
     attributes:
