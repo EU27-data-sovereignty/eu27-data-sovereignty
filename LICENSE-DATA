@@ -20,11 +20,10 @@ Union, where a substantial database also attracts a sui generis extraction right
 under Directive 96/9/EC that MIT does not address at all. CC BY 4.0 explicitly
 licenses those rights and makes attribution unambiguous.
 
-Attribution matters here for a specific reason. This dataset contains contestable
-judgements about named states -- ordinal ratings of government-cloud maturity,
-certification strength and hyperscaler dependency, assigned by the author and not
-by any official body. Requiring attribution keeps those ratings traceable back to
-their caveats instead of circulating as bare facts.
+Attribution matters here for a specific reason. This dataset groups named states by a
+published rule over sourced findings, and every fact carries the evidence behind it.
+Requiring attribution keeps each finding traceable back to its source, its checks and
+its caveats instead of circulating as a bare fact.
 
 TERMS
 
@@ -39,10 +38,18 @@ Attribute as:
 
 The full licence text is at https://creativecommons.org/licenses/by/4.0/legalcode
 
+CONTRIBUTIONS
+
+Material contributed to this dataset (a source, a quote, a value or a review, through
+an issue form or a pull request) is licensed by its contributor under these same
+terms, CC BY 4.0, and signed off under the Developer Certificate of Origin
+(https://developercertificate.org). No copyright is assigned. See CONTRIBUTING.md.
+
 NO WARRANTY, AND A WARNING ABOUT ACCURACY
 
-The material is provided as-is. Beyond the usual disclaimer, note that the legal
-and regulatory entries in this dataset are unverified research compiled in
-September 2026, and the ordinal ratings are the author's judgements. They have not
-been checked against primary sources. See model/README.md before reusing them, and
-do not rely on them for a procurement or policy decision.
+The material is provided as-is. Every fact is cited to a public document whose text
+was found by machine, and each carries an evidence grade and the list of checks it
+passed (METHOD.md). Most facts have not been verified by a person: the share that has,
+under a two-person rule, is stated in every output. English wording of a non-English
+source is a machine translation. Check the cited source before relying on a fact,
+and do not rely on this dataset alone for a procurement or policy decision.

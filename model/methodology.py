@@ -63,6 +63,10 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
     runs = sorted({json.loads(p.read_text(encoding="utf-8")).get("run", "") for p in (staging / "vetting").glob("[A-Z][A-Z].json")} - {""})
     models = sorted({json.loads(p.read_text(encoding="utf-8")).get("reviewer_model", "") for p in (staging / "vetting").glob("[A-Z][A-Z].json")} - {""})
 
+    import contrib  # noqa: PLC0415
+    states = collections.Counter(s["state"] for s in contrib.status().values())
+    human = {k: states.get(k, 0) for k in ("verified", "disputed", "withdrawn")}
+    n_reviewers, n_submissions = len(contrib.roster()), len(contrib.load(contrib.SUBMISSIONS))
     spans = [s for d in documents.values() for s in document.walk_spans(d)]
     roles = collections.Counter(s["role"] for s in spans)
     grades = collections.Counter(s.get("g") for s in spans if s["role"] == "fact")
@@ -74,7 +78,8 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
 
     sections = [
         {"id": "m-status", "title": "What this is, and what it is not", "blocks": [
-            {"type": "callout", "tone": "notice", "spans": [method(evidence.DISCLAIMER)]},
+            {"type": "callout", "tone": "notice", "spans": [method(evidence.disclaimer(
+                sum(1 for s in spans if s.get("g") == evidence.VERIFIED), roles["fact"]))]},
             _p(f"This appendix is generated from the code and data that produced this document. Every rule "
                "below is the rule the build runs, and every number is counted from the files it reads. "
                f"In this build: {roles['fact']} facts are printed, {roles['gap']} values are withheld as "
@@ -119,7 +124,7 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
         ]},
         {"id": "m-grades", "title": "Evidence grades", "blocks": [
             _p(evidence.GRADE_RULE),
-            _table(["Grade", "Printed facts"], [[g, grades[g]] for g in (evidence.STRONG, evidence.STANDARD)],
+            _table(["Grade", "Printed facts"], [[g, grades[g]] for g in (evidence.VERIFIED, evidence.STRONG, evidence.STANDARD)],
                    ["left", "right"]),
             _p("There is no numeric confidence score: nothing has calibrated one."),
         ]},
@@ -135,6 +140,19 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
                "Each is multiplied into the unit shown and rounded, and must reproduce the published "
                "value within 0.5%:"),
             _table(["Figure", "Dataset", "Filters", "Period", "Scale", "Decimals"], eurostat),
+        ]},
+        {"id": "m-people", "title": "Citizens and human review", "blocks": [
+            _p("Anyone in any member state may submit a source or check a printed fact, through public "
+               "issue forms. A submitted source passes the same mechanical checks as agent research. A "
+               "fact counts as verified by a person only under the two-person rule: confirmed by someone "
+               "on the reviewer roster, who did not submit it, who reads the source's language, and who "
+               "declared no conflict of interest. One such rejection makes a fact disputed; two withdraw "
+               "it, unless two reviewers confirmed it."),
+            _table(["Human review", "Count"], [["Facts verified by a person", human["verified"]],
+                                               ["Facts disputed by a reviewer", human["disputed"]],
+                                               ["Facts withdrawn after review", human["withdrawn"]],
+                                               ["Reviewers on the roster", n_reviewers],
+                                               ["Citizen submissions staged", n_submissions]], ["left", "right"]),
         ]},
         {"id": "m-ask", "title": "Questions answered on the web", "blocks": [
             _p("The web page's Ask feature answers questions using only these sourced findings, with a "

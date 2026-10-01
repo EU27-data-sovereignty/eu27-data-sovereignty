@@ -570,3 +570,22 @@ separation available, which the model flags as insufficient.
       (`contacts/CONVENTIONS.md`, GDPR basis) in the first message
 - [x] Named individuals and addresses → private `sovereign-data-centers-contacts` repo (checked out at
       `contacts/`, #46), never this file — `contacts/people.csv`, 956 rows, 2026-09-24
+
+## Citizen track (#85)
+
+The institutional outreach above asks officials. This track asks citizens, who know where their own
+government publishes things and read its language. Contributions go through the two public forms in
+[`CONTRIBUTING.md`](CONTRIBUTING.md), and reviewers join through [`docs/reviewing.md`](docs/reviewing.md).
+
+**Where to ask first** is generated, not chosen: the *Help needed* table in
+[`docs/evidence.md`](docs/evidence.md) ranks states by withheld values, items agents did not reach,
+sources a machine could not fetch, and reviewers per language. Ask for reviewers before contributors,
+because a submission waits until someone else can check it.
+
+**Not before:**
+- the owner has confirmed the two statements marked in `docs/editorial-policy.md`;
+- the first reviewers are on the roster;
+- the site is past its `noindex` stage (#80).
+
+The launch gate (#25) still applies to anything announced.
+

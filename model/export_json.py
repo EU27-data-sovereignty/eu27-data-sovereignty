@@ -74,7 +74,10 @@ def build_bundle() -> dict:
     sources = {sid: {**src.reg[sid], "label": document.provenance.label(sid, src.reg)}
                for sid in source_ids}
 
+    import contrib  # noqa: PLC0415
     import methodology  # noqa: PLC0415
+    facts = [s for d in documents.values() for s in document.walk_spans(d) if s.get("role") == "fact"]
+    n_facts, n_verified = len(facts), sum(1 for s in facts if s.get("g") == evidence.VERIFIED)
     return {
         "schema_version": SCHEMA_VERSION,
         "documents": documents,
@@ -100,8 +103,10 @@ def build_bundle() -> dict:
         },
         "generated": gc.gen_date(),
         # One wording, from evidence.py, so no surface claims a check that did not run.
-        "provenance": f"{evidence.PROVENANCE} Capacity is not yet sized.",
-        "notice": {"disclaimer": evidence.DISCLAIMER, "withheld": evidence.WITHHELD,
+        "provenance": f"{evidence.disclaimer(n_verified, n_facts)} {evidence.WITHHELD} Capacity is not yet sized.",
+        # Where a reader checks a fact or submits a source (#85).
+        "contribute": {"review": contrib.REVIEW_TEMPLATE, "submit": contrib.SUBMIT_TEMPLATE},
+        "notice": {"disclaimer": evidence.disclaimer(n_verified, n_facts), "withheld": evidence.WITHHELD,
                    "grade_rule": evidence.GRADE_RULE,
                    "checks": [{"name": n, "what": w} for n, w in evidence.CHECKS]},
         # One disclaimer, in the bundle, so the markdown brief, the web page, the book and the

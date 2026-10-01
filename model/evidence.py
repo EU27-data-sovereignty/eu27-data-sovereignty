@@ -55,6 +55,19 @@ WITHHELD = ("A value that no checked source supports is withheld and shown as a 
 PROVENANCE = f"{DISCLAIMER} {WITHHELD}"
 
 
+def disclaimer(verified: int, total: int) -> str:
+    """The disclaimer, measured (#85). Until a person has verified a fact it is DISCLAIMER, word for
+    word; after that it states the share, so no surface can claim more or less review than happened."""
+    if not verified:
+        return DISCLAIMER
+    return (f"Machine-checked; {verified} of {total} facts also verified by a person under a two-person "
+            "rule, and the rest by machine only. Automated agents found most sources; citizens found "
+            "others, and every source was checked mechanically. English wording of a non-English source "
+            "is a machine translation or a machine summary of the quoted text. Treat each fact not "
+            "marked Verified as a lead to its cited source, not as established. Corrections are welcome "
+            "through the repository's issue forms.")
+
+
 def checks_text() -> str:
     return " ".join(f"{name}: {what}" for name, what in CHECKS)
 
@@ -227,7 +240,7 @@ def dataset_hashes() -> set[str]:
     return _dataset_hashes
 
 
-STRONG, STANDARD = "Strong", "Standard"
+VERIFIED, STRONG, STANDARD = "Verified", "Strong", "Standard"
 GRADE_RULE = (
     f"{STRONG}: a T1 or T2 source (an authoritative original or a competent public body); an official "
     "or primary source; the quote found exactly in the hashed document; an "
@@ -235,7 +248,9 @@ GRADE_RULE = (
     "either quoted from an English source, found verbatim in the original, or resting on figures "
     "matched in the original. A categorical finding is Strong only after a blind review (a reviewer "
     "shown the quote and URL but not the proposed value). "
-    f"{STANDARD}: every required check passed, but one of those did not. Anything less is not printed."
+    f"{STANDARD}: every required check passed, but one of those did not. Anything less is not printed. "
+    f"{VERIFIED}: Strong, and confirmed by a person under the two-person rule: someone on the reviewer "
+    "roster, other than whoever submitted it, who reads the source's language and declared no conflict."
 )
 
 
@@ -278,10 +293,14 @@ def checklist(checks: dict) -> list[str]:
                     "blind, same model": "blind review agreed (reviewer: same model as the researcher)",
                     "none": "not independently reviewed"}[checks["review"]])
     out.append("English source" if checks["language"] == "english" else "non-English source, machine-translated")
+    if "human_review" in checks:
+        hr = checks["human_review"]
+        out.append(f"verified by {hr['confirmed']} person(s) under the two-person rule "
+                   f"(issue {', '.join('#' + str(i) for i in hr['issues'])})")
     return out
 
 
-def assess(value: str, citation: dict, source: dict, *, categorical: bool) -> dict:
+def assess(value: str, citation: dict, source: dict, *, categorical: bool, human: dict | None = None) -> dict:
     """The checklist and grade for one citation backing one printed value."""
     dataset = source["doc_type"] == "dataset"
     original, gloss = split_quote(citation["quote"])
@@ -321,4 +340,8 @@ def assess(value: str, citation: dict, source: dict, *, categorical: bool) -> di
         and (checks["language"] == "english" or checks.get("value") == "verbatim"
              or checks.get("figures_matched", False))
     )
-    return {"grade": STRONG if strong else STANDARD, "checks": checks}
+    if human and human.get("state") == "verified":
+        checks["human_review"] = {"confirmed": len(human["confirmed"]),
+                                  "issues": sorted(r["issue"] for r in human["confirmed"])}
+    grade = (VERIFIED if strong and "human_review" in checks else STRONG if strong else STANDARD)
+    return {"grade": grade, "checks": checks}

@@ -8,6 +8,8 @@ Every fact is footnoted to its source (#75), and every number in it was found in
 
 **Where it stands and what is next:** [`ROADMAP.md`](ROADMAP.md) · **how the evidence is produced:** [`METHOD.md`](METHOD.md) · **the evidence behind each fact, charted:** [`docs/evidence.md`](docs/evidence.md) · **status:** [`PROGRESS.md`](PROGRESS.md)
 
+**Contribute:** know where your government publishes something, or read its language? [Submit a source or check a fact](CONTRIBUTING.md). No code needed.
+
 ## Live site
 
 **https://eu27.cloud** (also at https://sovereign-data-centers.vercel.app)
@@ -232,6 +234,7 @@ first, and the reasoning is in [`DECISIONS.md`](DECISIONS.md), numbered below.
 | 2026-09-17 – 09-26 | The source register: one registry, every claim pointing at a document; secret scanning in CI | #59–#69 |
 | 2026-09-27 | `eu27.cloud` registered; the deep-link 404 fixed | #70 |
 | 2026-09-29 | Rebuilt: each state on its own fundamentals, one content model for every output, sourced facts or visible gaps, a ranking by published rule, `/ask`, the first verified research with independent review, the EU-27 report | #71–#79 |
+| 2026-10-01 | Bottom-up: citizens submit sources and check facts through public forms; a fact is verified by a person only under a two-person rule; contributor terms and editorial policy; the legal entity deferred | #85–#86 |
 | 2026-09-30 | Deploys from CI. The evidence rules: machine-checked disclaimer everywhere, figures must be in their quote, grades, source tiers, rechecks, disputed facts. The first vetting run. Eurostat vintages adopted. Reproducible from scratch, with a generated methodology | #80–#84 |
 
 **Keeping it current.** Any commit that changes what a reader sees, or how the evidence is produced,

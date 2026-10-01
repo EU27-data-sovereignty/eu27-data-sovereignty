@@ -45,6 +45,7 @@ python3 model/research.py report       # verification outcomes per state
 ./run.sh eurostat check|adopt COL=PERIOD   # Eurostat vintages; pins are data (model/eurostat_pins.csv)
 ./run.sh vet prepare|stage|hosts|verify|admit|report|manifest   # vetting run; the agent step is /vet
 ./run.sh reproduce [--evidence]        # rebuild everything from a fresh clone of HEAD and compare (#84)
+./run.sh contrib forms|ingest|status|audit-sample   # citizen submissions and reviews; two-person rule (#85)
 python3 model/evidence_report.py       # docs/evidence.md, charts of grades and tiers (run by ./run.sh data)
 python3 model/provenance.py            # source register coverage per namespace
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
@@ -85,6 +86,10 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   check that did not run (`tests/test_evidence.py`).
 - **Source tiers live in `model/sources/authorities.csv`** (#83). A new cited host must be classified there
   or the build fails. Unofficial statute mirrors are T4, never T1.
+- **Citizen input is staging, never data** (#85). Issues are read with `gh api` (read-only) into
+  `model/research/contrib/`. A person's review counts only under the two-person rule (`contrib.eligible`).
+  The issue forms are generated (`contrib.py forms`); never edit them by hand. Posting anything to GitHub
+  (a comment, a label) is outward-facing, so get the owner's OK first.
 - **Changelog in the same commit.** A change a reader can see, or to how evidence is produced, adds its
   entry to `CHANGELOG.md` (newest first, citing its decision) in the same commit; a new stage adds a row to
   the README's Changelog table.

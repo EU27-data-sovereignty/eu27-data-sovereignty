@@ -22,7 +22,7 @@ pie showData
   "Standard" : 1283
 ```
 
-**How grades are set.** Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed.
+**How grades are set.** Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict.
 
 ## Source tiers
 
@@ -163,6 +163,40 @@ A fact whose evidence came into question after it was admitted: its source dropp
 - `record:PT:emergency_communications:register` (PT): Disputed: sources disagree. Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 53/2008, de 29 de Agosto – Lei de Segurança Interna, 2008 gives the value this report printed; SIRESP, S.A. — Home - SIRESP gives “Rede Nacional de Emergência e Segurança – SIRESP (National Emergency and Security Network)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
 - `record:SE:fingerprint_biometric:register` (SE): Disputed: sources disagree. Sveriges riksdag (Svensk författningssamling) — Passlag (1978:302), 1978 gives the value this report printed; Regeringskansliet (SFS) — Lag (2018:1693) om polisens behandling av…, 2026 gives “Biometriregister (biometric registers) of suspects, convicted persons and traces, kept by Polismyndigheten”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
 - `record:SK:trust_services_pki:operator` (SK): Disputed: sources disagree. Národná agentúra pre sieťové a elektronické služby (SNCA) — Certifikačná autorita gives the value this report printed; Národná agentúra pre sieťové a elektronické služby — Kvalifikované dôveryhodné služby gives “NASES (Národná agentúra pre sieťové a elektronické služby), operator of SNCA”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
+
+## Help needed
+
+Where a citizen helps most: values still withheld, items the agents did not reach, sources a machine could not fetch (a page behind a script or a refusal is often easy for a person), and reviewers who read the language. Contribute through the forms in [`CONTRIBUTING.md`](../CONTRIBUTING.md); review under [`reviewing.md`](reviewing.md).
+
+| State | Languages | Gaps | Not reached by agents | Sources a machine could not fetch | Reviewers |
+|---|---|---:|---:|---:|---:|
+| Luxembourg (LU) | de, fr, lb | 157 | 5 | 65 | 0 |
+| Lithuania (LT) | lt | 156 | 0 | 0 | 0 |
+| Romania (RO) | ro | 148 | 10 | 33 | 0 |
+| Malta (MT) | en, mt | 145 | 0 | 0 | 0 |
+| Finland (FI) | fi, sv | 144 | 10 | 0 | 0 |
+| Belgium (BE) | de, fr, nl | 132 | 6 | 20 | 0 |
+| Bulgaria (BG) | bg | 132 | 21 | 19 | 0 |
+| Latvia (LV) | lv | 128 | 0 | 29 | 0 |
+| Sweden (SE) | sv | 128 | 0 | 0 | 0 |
+| Netherlands (NL) | nl | 126 | 0 | 10 | 0 |
+| Slovakia (SK) | sk | 126 | 0 | 6 | 0 |
+| Poland (PL) | pl | 124 | 0 | 0 | 0 |
+| Portugal (PT) | pt | 123 | 0 | 2 | 0 |
+| Germany (DE) | de | 122 | 7 | 1 | 0 |
+| Greece (EL) | el | 122 | 26 | 7 | 0 |
+| Estonia (EE) | et | 121 | 4 | 0 | 0 |
+| Spain (ES) | es | 119 | 10 | 0 | 0 |
+| Croatia (HR) | hr | 119 | 28 | 0 | 0 |
+| Italy (IT) | it | 119 | 6 | 8 | 0 |
+| Denmark (DK) | da | 117 | 0 | 0 | 0 |
+| Cyprus (CY) | el, tr | 112 | 0 | 7 | 0 |
+| Slovenia (SI) | sl | 112 | 0 | 1 | 0 |
+| Ireland (IE) | en, ga | 110 | 28 | 29 | 0 |
+| Austria (AT) | de | 109 | 0 | 0 | 0 |
+| Czechia (CZ) | cs | 105 | 0 | 6 | 0 |
+| Hungary (HU) | hu | 104 | 0 | 4 | 0 |
+| France (FR) | fr | 102 | 40 | 4 | 0 |
 
 ## Agent runs
 

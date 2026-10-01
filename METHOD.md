@@ -213,13 +213,24 @@ checklist says "rendered". A page that refused us is never retried with a browse
 researcher's label. It gets only the question, the URL and the quote, and must reach an answer itself.
 But in the 2026-09-30 run it was **the same model as the researcher** (`claude-opus-5-5`, recorded in
 each staging file with the sha256 of `workflow.js`). Two readings by one model can share its blind
-spots. That is why a person reviewing a sample is still the step this method lacks (section 8).
+spots. That is why a person reviewing a sample is still the step this method lacks (section 9).
 
 A contradiction is never settled by hand. A later statement by the same authority supersedes an earlier
 one, and a higher tier wins. Otherwise the fact stays **disputed**, with both sources shown, until one of
 those rules applies.
 
-## 8. What this does not establish
+## 8. Citizens and human review
+
+Anyone may submit a source or check a printed fact through two public issue forms (`CONTRIBUTING.md`,
+#85). A submitted source goes through the same mechanical checks as agent research. A fact is **verified
+by a person** only under the **two-person rule**: someone on the reviewer roster, who did not submit it,
+who reads the source's language and who declared no conflict, confirms it. One such rejection makes the
+fact *disputed*, and two withdraw it. Every output states how many facts were verified by a person, a
+number computed at build time. A seeded random sample of unreviewed facts (`./run.sh contrib
+audit-sample`) is the human sampling audit that measures the error rate per grade. How to review is in
+[`docs/reviewing.md`](docs/reviewing.md).
+
+## 9. What this does not establish
 
 - **No person has verified any finding.** Every output says so first, in the same words
   (`model/evidence.py`, #82). Two agreeing machine passes are the interim standard; a human sampling

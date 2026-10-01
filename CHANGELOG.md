@@ -5,6 +5,52 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-01
+
+### Added: citizens can source and check facts, under a two-person rule (#85)
+
+The project is now bottom-up. Anyone in any member state can contribute through two public GitHub issue
+forms, generated from the model so they can't drift from it:
+- **Submit a source:** a public document that establishes a fact. It passes the same machine checks as
+  agent research: fetch, hash, quote, figures in the quote, tier.
+- **Check a fact:** confirm or reject a printed fact against its source. Every fact on the site and in
+  the PDFs now has a **Check this fact** link, prefilled, and every country page has a **Submit a
+  source** link.
+
+A fact counts as **verified by a person** only under the two-person rule. A reviewer must be on the
+public roster (`model/contrib/reviewers.csv`, added by a pull request the maintainer reviews), must not
+be the submitter, must read the source's language, and must declare no conflict of interest.
+- **Effects:** one confirmation makes a Strong fact **Verified**, the new top grade. One rejection makes
+  a fact disputed, with the reason shown. Two withdraw it.
+- **The disclaimer is now computed.** It reads exactly as before until a person verifies a fact, then
+  states "N of M facts also verified by a person".
+- **`./run.sh contrib audit-sample`** draws a seeded random sample of unreviewed facts. It is the human
+  sampling audit the launch gate requires.
+- **The evidence page has a "Help needed" table:** gaps, items the agents didn't reach, sources a
+  machine couldn't fetch, and reviewers per state. Luxembourg, Lithuania, Romania, Malta and Finland need
+  help most. Every state has 0 reviewers so far.
+
+### Added: contributor terms, a reviewer guide and an editorial policy (#85, #86)
+
+- `CONTRIBUTING.md`: pseudonymous contributions, licensed CC BY 4.0 under a DCO sign-off, with no
+  copyright assignment.
+- `docs/reviewing.md`: how to join the roster and what a review does.
+- `docs/editorial-policy.md`: what is published, how corrections work (never silently), conflicts of
+  interest, and ownership and funding. Two statements await the owner's confirmation.
+- `LICENSE-DATA`: its accuracy warning, which still said nothing had been checked against primary
+  sources, now describes the actual checks, and it has a contributions clause.
+
+### Changed: agent prompts treat page and input text as data, never as instructions
+
+Submitted quotes come from anyone, so both prompts in `workflow.js` carry the guard `/ask` already had.
+
+### Deferred: the legal entity (#86)
+
+A Dutch stichting is intended and not yet founded. Everything is built so it can take the project over
+unchanged.
+
+---
+
 ## 2026-09-30
 
 A day in two halves: the morning brought the documents and deployment up to date; the rest of the day

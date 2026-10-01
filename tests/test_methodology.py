@@ -29,7 +29,7 @@ TEXT = " ".join(s["t"] for s in document.walk_spans(DOC))
 
 class Content(unittest.TestCase):
     def test_every_rule_is_the_constant_the_code_runs(self):
-        for rule in (evidence.DISCLAIMER, evidence.GRADE_RULE, evidence.WITHHELD, document.PRIORITY_RULE,
+        for rule in (BUNDLE["notice"]["disclaimer"], evidence.GRADE_RULE, evidence.WITHHELD, document.PRIORITY_RULE,
                      sv.UNKNOWN_RULE, sv.CONFIDENCE_RULE):
             self.assertIn(rule, TEXT, rule[:50])
         for name, what in evidence.CHECKS:

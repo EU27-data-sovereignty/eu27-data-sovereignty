@@ -15,6 +15,7 @@ diff shows exactly what moved.
 from __future__ import annotations
 
 import collections
+import csv
 import json
 import sys
 from pathlib import Path
@@ -59,6 +60,27 @@ def facts(b: dict):
         for span in document.walk_spans(doc):
             if span.get("role") == "fact":
                 yield iso, span, b["claims"][span["c"][0]][0]
+
+
+def _help_needed(b: dict, gaps: collections.Counter) -> list[str]:
+    """Where a citizen helps most (#85): open gaps, items the vetting run did not reach, quotes a machine
+    could not fetch, and how many roster reviewers read the state's languages."""
+    import contrib  # noqa: PLC0415
+    staging = ROOT / "model" / "research"
+    rows = lambda p: list(csv.DictReader(p.open(newline="", encoding="utf-8"))) if p.exists() else []  # noqa: E731
+    not_reached = collections.Counter(r["iso"] for r in rows(staging / "vetting" / "outcomes.csv")
+                                      if r["status"] == "not_reached")
+    unfetched = collections.Counter(r["iso"] for r in rows(staging / "verification.csv")
+                                    if r["match"] == "fetch_failed")
+    roster = contrib.roster().values()
+    out = ["| State | Languages | Gaps | Not reached by agents | Sources a machine could not fetch | Reviewers |",
+           "|---|---|---:|---:|---:|---:|"]
+    for iso in sorted(b["documents"], key=lambda i: -gaps[i]):
+        langs = contrib.LANGUAGES[iso]
+        n_rev = sum(1 for r in roster if langs & {x.strip() for x in r["languages"].split(";")})
+        out.append(f"| {b['documents'][iso]['name']} ({iso}) | {', '.join(sorted(langs))} | {gaps[iso]} | "
+                   f"{not_reached[iso]} | {unfetched[iso]} | {n_rev} |")
+    return out
 
 
 def _runs_table() -> list[str]:
@@ -196,6 +218,15 @@ def build(b: dict) -> str:
         "The value is withheld until the question is settled by a published rule (METHOD.md section 7).",
         "",
         *([f"- `{s['c'][0]}` ({iso}): {s['t']}" for iso, s in disputes] or ["None."]),
+        "",
+        "## Help needed",
+        "",
+        "Where a citizen helps most: values still withheld, items the agents did not reach, sources a "
+        "machine could not fetch (a page behind a script or a refusal is often easy for a person), and "
+        "reviewers who read the language. Contribute through the forms in "
+        "[`CONTRIBUTING.md`](../CONTRIBUTING.md); review under [`reviewing.md`](reviewing.md).",
+        "",
+        *_help_needed(b, gaps),
         "",
         "## Agent runs",
         "",

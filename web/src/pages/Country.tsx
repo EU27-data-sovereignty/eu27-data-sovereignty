@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 
 import { DocumentView } from '@/components/DocumentView'
 import { SourceList } from '@/components/SourceList'
+import { submitLink } from '@/data/contribute'
 import { claimsBySource, coverage, factCounts, numberSources } from '@/data/sources'
 import type { Bundle } from '@/data/types'
 import { NotFound } from './NotFound'
@@ -62,6 +63,19 @@ export function Country({ bundle }: { bundle: Bundle }) {
           >
             Download the {doc.name} report (PDF)
           </a>
+        </p>
+
+        <p className="mb-8 max-w-3xl rounded border border-[var(--color-border)] px-3 py-2 text-sm">
+          Know a public source for one of the {gaps} withheld values, or a better one for a fact?{' '}
+          <a className="underline" href={submitLink(bundle, code)} rel="noreferrer">
+            Submit a source
+          </a>
+          . Every fact also has a <em>Check this fact</em> link in its source entry. Submissions are
+          checked by machine and then by a different person who reads the language (
+          <Link to="/methodology" className="underline">
+            methodology
+          </Link>
+          ).
         </p>
 
         <DocumentView doc={doc} bundle={bundle} numbers={numbers} />

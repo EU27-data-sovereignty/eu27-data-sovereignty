@@ -38,7 +38,10 @@ SURFACES = [
 
 class Disclaimer(unittest.TestCase):
     def test_the_bundle_carries_it(self):
-        self.assertEqual(BUNDLE["notice"]["disclaimer"], evidence.DISCLAIMER)
+        import document  # noqa: PLC0415
+        facts = [s for d in BUNDLE["documents"].values() for s in document.walk_spans(d) if s["role"] == "fact"]
+        verified = sum(1 for s in facts if s.get("g") == evidence.VERIFIED)
+        self.assertEqual(BUNDLE["notice"]["disclaimer"], evidence.disclaimer(verified, len(facts)))
         self.assertIn("not human-verified", BUNDLE["provenance"])
 
     def test_every_brief_carries_it(self):
@@ -156,13 +159,13 @@ class Grades(unittest.TestCase):
         for claim, cites in BUNDLE["claims"].items():
             for c in cites:
                 again = evidence.assess(text[claim], {**c, "claim": claim}, reg[c["source_id"]],
-                                        categorical=kind[claim] == "categorical")
+                                        categorical=kind[claim] == "categorical", human=src.human.get(claim))
                 self.assertEqual((c["grade"], c["checks"]), (again["grade"], again["checks"]), claim)
 
     def test_no_strong_fact_misses_a_required_check(self):
         for claim, cites in BUNDLE["claims"].items():
             for c in cites:
-                if c["grade"] != evidence.STRONG:
+                if c["grade"] not in (evidence.STRONG, evidence.VERIFIED):
                     continue
                 ck = c["checks"]
                 self.assertIn(ck["tier"], (1, 2), claim)
@@ -177,7 +180,7 @@ class Grades(unittest.TestCase):
             for sp in self._spans(d):
                 if sp.get("role") == "fact":
                     grades = {c["grade"] for c in BUNDLE["claims"][sp["c"][0]]}
-                    want = evidence.STRONG if evidence.STRONG in grades else evidence.STANDARD
+                    want = next(g for g in (evidence.VERIFIED, evidence.STRONG, evidence.STANDARD) if g in grades)
                     self.assertEqual(sp["g"], want, sp["c"])
 
     @staticmethod

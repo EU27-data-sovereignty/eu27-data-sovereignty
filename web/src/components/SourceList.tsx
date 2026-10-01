@@ -1,3 +1,4 @@
+import { reviewLink } from '@/data/contribute'
 import type { Bundle } from '@/data/types'
 
 /**
@@ -78,7 +79,14 @@ export function SourceList({
                           ) : null}
                           <div className="text-xs text-[var(--color-fg-muted)]">
                             <strong>{c.grade}</strong>: {c.checklist.join('; ')}; retrieved{' '}
-                            {c.retrieved}
+                            {c.retrieved}.{' '}
+                            <a
+                              className="underline"
+                              href={reviewLink(bundle, claim)}
+                              rel="noreferrer"
+                            >
+                              Check this fact
+                            </a>
                           </div>
                         </div>
                       </li>

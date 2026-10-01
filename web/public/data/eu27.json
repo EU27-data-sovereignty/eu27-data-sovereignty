@@ -56651,6 +56651,10 @@
    }
   ]
  },
+ "contribute": {
+  "review": "https://github.com/pieteradejong/sovereign-data-centers/issues/new?template=review-fact.yml&title=%5Breview%5D%20{claim}&claim={claim}",
+  "submit": "https://github.com/pieteradejong/sovereign-data-centers/issues/new?template=submit-source.yml&title=%5Bsource%5D%20&country={iso}"
+ },
  "countries": {
   "AT": {
    "iso2": "AT",
@@ -129754,7 +129758,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed."
+        "t": "Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict."
        }
       ],
       "type": "p"
@@ -129775,6 +129779,16 @@
        }
       ],
       "rows": [
+       [
+        {
+         "role": "label",
+         "t": "Verified"
+        },
+        {
+         "role": "method",
+         "t": "0"
+        }
+       ],
        [
         {
          "role": "label",
@@ -130098,6 +130112,90 @@
       "spans": [
        {
         "role": "method",
+        "t": "Anyone in any member state may submit a source or check a printed fact, through public issue forms. A submitted source passes the same mechanical checks as agent research. A fact counts as verified by a person only under the two-person rule: confirmed by someone on the reviewer roster, who did not submit it, who reads the source's language, and who declared no conflict of interest. One such rejection makes a fact disputed; two withdraw it, unless two reviewers confirmed it."
+       }
+      ],
+      "type": "p"
+     },
+     {
+      "align": [
+       "left",
+       "right"
+      ],
+      "columns": [
+       {
+        "role": "label",
+        "t": "Human review"
+       },
+       {
+        "role": "label",
+        "t": "Count"
+       }
+      ],
+      "rows": [
+       [
+        {
+         "role": "label",
+         "t": "Facts verified by a person"
+        },
+        {
+         "role": "method",
+         "t": "0"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Facts disputed by a reviewer"
+        },
+        {
+         "role": "method",
+         "t": "0"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Facts withdrawn after review"
+        },
+        {
+         "role": "method",
+         "t": "0"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Reviewers on the roster"
+        },
+        {
+         "role": "method",
+         "t": "0"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Citizen submissions staged"
+        },
+        {
+         "role": "method",
+         "t": "0"
+        }
+       ]
+      ],
+      "type": "table"
+     }
+    ],
+    "id": "m-people",
+    "title": "Citizens and human review"
+   },
+   {
+    "blocks": [
+     {
+      "spans": [
+       {
+        "role": "method",
         "t": "The web page's Ask feature answers questions using only these sourced findings, with a citation for every fact. Each question is sent to Anthropic's API to generate the answer and is not stored by this site. The model is told the findings are machine-checked and to say so in every answer."
        }
       ],
@@ -130191,7 +130289,7 @@
    }
   ],
   "disclaimer": "Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.",
-  "grade_rule": "Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed.",
+  "grade_rule": "Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict.",
   "withheld": "A value that no checked source supports is withheld and shown as a gap. A gap means not yet sourced, never that the thing does not exist."
  },
  "priority_rule": "Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.",

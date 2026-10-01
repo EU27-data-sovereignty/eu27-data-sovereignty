@@ -126,8 +126,18 @@ def stage(path: Path, run_id: str, date: str) -> int:
 
 
 def staged(isos: list[str] | None = None) -> dict[str, dict]:
-    return {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in sorted(DIR.glob("[A-Z][A-Z].json"))
-            if not isos or p.stem in isos}
+    """Every staged finding, per state: the vetting runs' and the citizens' (contrib.py, #85). A citizen
+    finding carries `source: citizen` and its issue number; its review is a person's, not a model's."""
+    out = {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in sorted(DIR.glob("[A-Z][A-Z].json"))
+           if not isos or p.stem in isos}
+    import contrib  # noqa: PLC0415
+    for s in contrib.load(contrib.SUBMISSIONS):
+        if isos and s["iso"] not in isos:
+            continue
+        doc = out.setdefault(s["iso"], {"iso": s["iso"], "findings": [], "outcomes": [], "reviewer_model": ""})
+        doc["findings"].append({**s, "url": research.clean_url(s["url"]), "question": s["claim"],
+                                "source": "citizen", "note": f"submitted in issue #{s['issue']}"})
+    return out
 
 
 # --------------------------------------------------------------------------- #
@@ -207,6 +217,10 @@ def agree(finding: dict) -> bool:
     Categorical: the same term. Free text: every figure in the value is among the reviewer's, and
     the two share a distinctive word (4+ letters), so a reviewer who read a different register off
     the same quote does not count as agreeing."""
+    if finding.get("source") == "citizen":
+        # Two-person rule (#85): a different, eligible person confirmed this submission.
+        import contrib  # noqa: PLC0415
+        return contrib.status().get(f"#{finding['issue']}", {}).get("state") == "verified"
     v = finding.get("review") or {}
     got, want = (v.get("established") or "").strip(), finding["value"].strip()
     if not v.get("quote_found") or not got:
@@ -296,7 +310,9 @@ def admit() -> int:
         cites[(claim, sid, locator)] = {
             "claim": claim, "source_id": sid, "locator": locator, "quote": quote, "value_as_found": value,
             "unit": "", "confidence": "absence" if value == "no" else "official", "retrieved": v["checked"],
-            "checked_by": f"vetting.py: quote {v['match']} in fetched document; blind review agreed ({model})",
+            "checked_by": (f"vetting.py: quote {v['match']} in fetched document; submitted by a citizen in issue "
+                           f"#{f['issue']}; confirmed by a person (two-person rule)" if f.get("source") == "citizen" else
+                           f"vetting.py: quote {v['match']} in fetched document; blind review agreed ({model})"),
         }
         return sid
 

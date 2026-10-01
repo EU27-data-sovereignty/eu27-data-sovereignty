@@ -184,6 +184,32 @@ test.describe('evidence rules (#82, #83)', () => {
   })
 })
 
+test.describe('contributing (#85)', () => {
+  test('every fact has a prefilled "Check this fact" link to the review form', async ({ page }) => {
+    const fact = docSpans('DE').find(sp => sp.role === 'fact')!
+    const claim = fact.c![0]!
+    await page.goto('/country/DE')
+    const link = page.locator('#src-1').getByRole('link', { name: 'Check this fact' }).first()
+    await expect(link).toBeVisible()
+    const href = await link.getAttribute('href')
+    expect(href).toContain('template=review-fact.yml')
+    // Source 1 is the first fact's source, so its first check link is that claim's.
+    expect(decodeURIComponent(href!)).toContain(`claim=${claim}`)
+  })
+
+  test('a country page invites a source for its withheld values', async ({ page }) => {
+    await page.goto('/country/LU')
+    const link = page.getByRole('link', { name: 'Submit a source' })
+    await expect(link).toHaveAttribute('href', /template=submit-source\.yml.*country=LU/)
+  })
+
+  test('the methodology reports human review in numbers', async ({ page }) => {
+    await page.goto('/methodology')
+    await expect(page.getByRole('heading', { name: 'Citizens and human review' })).toBeVisible()
+    await expect(page.getByText('Facts verified by a person')).toBeVisible()
+  })
+})
+
 test.describe('ranking', () => {
   test('every state appears once in the groups, with its confidence', async ({ page }) => {
     await page.goto('/sovereignty')

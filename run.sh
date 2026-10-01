@@ -66,6 +66,7 @@ show_help() {
     echo "  eurostat check   Pull at the pinned periods and report; writes nothing"
     echo "  eurostat adopt COL=PERIOD ...   Move pins, apply, register the vintage"
     echo "  vet prepare|stage|hosts|verify|admit|report   The vetting run (the agent step is /vet)"
+    echo "  contrib forms|ingest|status|audit-sample   Citizen submissions and the two-person rule"
     echo "  reproduce [--evidence]   Rebuild everything in a fresh clone and compare"
     echo
     echo -e "${GREEN}Deployment${NC}"
@@ -183,6 +184,10 @@ case "${1:-dev}" in
         ;;
     vet)
         python3 model/vetting.py "${@:2}"
+        ;;
+    contrib)
+        # Citizen submissions and reviews (#85): forms | ingest | status | audit-sample
+        python3 model/contrib.py "${@:2}"
         ;;
     reproduce)
         python3 model/reproduce.py clean-room "${@:2}"

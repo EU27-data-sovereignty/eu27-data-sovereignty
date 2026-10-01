@@ -29,6 +29,7 @@ import re
 import shutil
 import subprocess
 import sys
+import urllib.parse
 from pathlib import Path
 
 BOOK = Path(__file__).resolve().parent
@@ -148,8 +149,10 @@ class Renderer:
                 original, gloss = split_quote(c["quote"])
                 shown = (esc(original) if original else
                          f"value {esc(c['value_as_found'])} at {esc(c['locator'])}")
+                check = self.b["contribute"]["review"].replace("{claim}", urllib.parse.quote(claim, safe=""))
                 out.append(f"#claim-entry[{esc(claim)}][{shown}][{esc(gloss)}][{esc(c['grade'])}: "
-                           f"{esc('; '.join(checklist(c['checks'])))}; retrieved {esc(c['retrieved'])}]")
+                           f"{esc('; '.join(checklist(c['checks'])))}; retrieved {esc(c['retrieved'])}. "
+                           f"#link({string(check)})[Check this fact]]")
             out.append("")
         return "\n".join(out)
 

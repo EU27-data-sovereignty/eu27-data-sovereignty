@@ -1832,3 +1832,123 @@ whose prompts, input or model cannot be identified.
 *Would change if:* the agent runs become deterministic (a pinned model snapshot with fixed sampling),
 which would let a rerun reproduce the findings themselves. It would also change if fetched documents
 could be archived with rights to redistribute, which would make the evidence reproducible offline.
+
+---
+
+## Bottom-up and human-verified
+
+### 85. Citizens source and review facts; a person verifies a fact only under a two-person rule
+**Decision.** 2026-10-01. Anyone may contribute through two public GitHub issue forms. Both are generated
+from the model by `model/contrib.py forms`, so their choices cannot drift from it.
+- **`submit-source`** is for a public document that establishes a fact.
+- **`review-fact`** is for confirming or rejecting a printed fact, or a submission by its issue number.
+
+`contrib.py ingest` reads them into `model/research/contrib/` (read-only `gh api`). A submission becomes a
+staged finding and passes the same mechanical checks as agent research: fetch, hash, quote, value in
+quote, tier. The automated model review is replaced by a person's.
+
+**The two-person rule.** A review counts only if the reviewer:
+- is on `model/contrib/reviewers.csv`, added by a pull request the maintainer reviews;
+- did not submit the fact;
+- declares that they read the source's language (from the source's language, or else the state's
+  official languages);
+- declares no conflict of interest.
+
+Each reviewer counts once per fact. **Effects:**
+- one eligible confirmation makes a fact **human-verified**: the new top grade, **Verified**, if it was
+  already Strong;
+- one eligible rejection makes it **disputed**, shown with the reason;
+- two rejections withdraw it, unless two reviewers confirmed it.
+
+**Disclosure.** Every output's disclaimer is computed (`evidence.disclaimer`). It reads exactly as
+before until a person has verified a fact, and from then on states "N of M facts also verified by a
+person".
+
+**Links and audit.**
+- Every fact has a prefilled **Check this fact** link, and every country page a **Submit a source**
+  link.
+- `contrib.py audit-sample` draws a seeded, stratified random sample of unreviewed facts. It is the human
+  sampling audit #25 and #67 require.
+- `docs/evidence.md` lists where help is needed, per state.
+
+**Contributor terms.** Contributions are pseudonymous, licensed CC BY 4.0 under a DCO sign-off, with no
+copyright assignment (`CONTRIBUTING.md`, `LICENSE-DATA`). The rules for publishing and correcting are in
+`docs/editorial-policy.md`.
+
+**Problem.** Agents found every source, and no person had verified any finding. The automated reviewer
+was the same model as the researcher, the human sampling audit had no auditor, and there was no way for
+a citizen to contribute except one English-only corrections form with no process behind it. The gaps
+concentrate where machines fail: pages built with JavaScript or refusing automated requests, and states
+whose languages the agents read least well. People who live there are best placed to fill them.
+
+**Alternatives considered.**
+- **GitHub issue forms, a vetted pseudonymous roster, and mechanical eligibility (chosen).** Every step
+  is public and reproducible. No personal data beyond a public handle is held, and the evidence, not the
+  contributor, earns the trust.
+- **A web form on `eu27.cloud` from the start.** *Why not:* it needs a database, a privacy notice, a
+  GDPR controller and anti-spam before launch, and a legal entity to be the controller (#86). It is
+  phase 2.
+- **Verified real names for reviewers.** *Why not:* a barrier to entry and a GDPR load, and a risk to
+  contributors in states where reporting on government systems is sensitive. A maintained roster
+  prevents one person posing as several without knowing who anyone is.
+- **Majority voting by any GitHub user.** *Why not:* accounts cost nothing, so a vote can be bought or
+  faked. Eligibility (roster, language, no conflict, not the submitter) is what makes one confirmation
+  mean something.
+- **Keep review automated only.** *Why not:* a model checking a model shares its blind spots (METHOD.md
+  section 7). A person reading the source's language is the check the method lacked.
+
+**Closes off.** Calling a fact human-verified without an eligible person's confirmation. Anyone, the
+maintainer included, verifying their own submission. A rejection acted on silently, in either
+direction.
+
+**Verified:** 2026-10-01, in part.
+- `tests/test_contrib.py` (15 tests) passes. It checks that:
+  - the forms equal the model's vocabulary;
+  - a submission parses into the right claim, and missing attestations are refused;
+  - the submitter, an unlisted handle, a reviewer without the language and a declared conflict are
+    each ignored;
+  - one confirmation verifies, one rejection disputes, two withdraw, two confirmations outvote one
+    rejection, and a reviewer counts once;
+  - the disclaimer is unchanged at zero.
+- `./run.sh admit --check`: 6 of 6.
+- NOT YET: the first real submission and review, and the first audit sample with a measured error rate.
+  The roster is empty until the maintainer approves the first reviewers.
+
+*Would change if:* the project gains a legal entity and a privacy notice, which would allow the web form;
+or abuse appears that the roster cannot stop, which would mean requiring two confirmations instead of
+one.
+
+### 86. The legal entity is deferred; everything is built so a Dutch stichting can take it over unchanged
+**Decision.** 2026-10-01. The project stays, for now, with its owner in a personal capacity. The intended
+home is a Dutch foundation (*stichting*), probably with ANBI status, not founded yet. Meanwhile nothing is
+built that would block the move:
+- contributions are licensed CC BY 4.0 with no copyright assignment, so only the owner's own rights need
+  transferring;
+- personal data is limited to public GitHub handles, so there is no controller obligation yet beyond
+  GitHub's;
+- `docs/editorial-policy.md` states the ownership and funding plainly, and the deferral.
+
+**Problem.** Requirement 2 is that the project is housed in a European non-profit. Founding a stichting
+takes:
+- statutes, a notary, a board of at least one and preferably three, and registration with the KvK;
+- for ANBI: a published policy plan, board, pay and annual accounts.
+
+The owner chose to defer it. Building anything that assumes an entity, such as a web form that collects
+personal data, would either need the entity first or need undoing later.
+
+**Alternatives considered.**
+- **Defer, and build entity-ready (chosen).** No rework at transfer.
+- **Found the stichting now.** *Why not:* the owner's call, for later.
+- **A vereniging (association) whose contributors are members.** *Why not, for now:* a membership drive
+  by an interested party could capture it, a credibility risk for a project whose subject is
+  independence from outside control. To revisit with the entity.
+
+**Closes off.** Collecting personal data beyond public handles, which waits for the entity to be its
+controller. Accepting money without first publishing the funder.
+
+**Verified:** 2026-10-01. `LICENSE-DATA` carries the contributions clause, and `CONTRIBUTING.md` and
+`docs/editorial-policy.md` exist. `tests/test_contrib.py` refuses a submission without the CC BY/DCO
+attestation. The entity itself: NOT YET (deferred).
+
+*Would change if:* the owner founds the stichting. Then the transfer of the owner's rights, the board and
+the ANBI publication follow, and phase 2 (the web form) becomes possible.

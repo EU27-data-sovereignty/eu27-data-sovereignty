@@ -123,11 +123,19 @@ class Sources:
         self.disputing = research.DISPUTING
         # Sources that disagree and that no published rule settles (vetting.py, #83).
         self.disagreements = vetting.load_disputes()
+        # People's verdicts on printed facts, under the two-person rule (contrib.py, #85).
+        import contrib  # noqa: PLC0415
+        self.human = contrib.status(self.reg)
 
     def dispute(self, claim: str, backing: list[dict]) -> str:
         """Why a supported claim is nevertheless in question, or '' if it is not. A claim is disputed
         when every source backing it has since dropped the quote or disappeared, or when a vetted
         source disagrees and no published rule settles which one the report follows."""
+        h = self.human.get(claim, {})
+        if h.get("state") == "disputed":
+            r = h["rejected"][0]
+            return (f"a reviewer rejected this fact in issue #{r['issue']} ({r['date']}): "
+                    f"{r['reason'][:160]}. It is withheld until a second reviewer settles it")
         d = self.disagreements.get(claim)
         if d and d["other_source_id"] in self.reg:
             return (f"sources disagree. {provenance.label(d['printed_source_id'], self.reg)} gives the "
@@ -171,14 +179,18 @@ class Sources:
     def evidence(self, claim: str, text: str, categorical: bool = False) -> list[tuple[dict, dict]]:
         """(citation, checklist and grade) for every citation backing the printed value, strongest
         first (evidence.assess)."""
-        out = [(c, evidence.assess(text, c, self.reg[c["source_id"]], categorical=categorical))
+        out = [(c, evidence.assess(text, c, self.reg[c["source_id"]], categorical=categorical,
+                                   human=self.human.get(claim)))
                for c in self.backing(claim, text, categorical)]
-        return sorted(out, key=lambda ca: ca[1]["grade"] != evidence.STRONG)
+        rank = {evidence.VERIFIED: 0, evidence.STRONG: 1, evidence.STANDARD: 2}
+        return sorted(out, key=lambda ca: rank[ca[1]["grade"]])
 
     def fact(self, claim: str, text: str, missing: str = "Not yet sourced", *,
              categorical: bool = False) -> dict:
         """A fact span if a citation supports the value as printed, otherwise a gap. The value is
         never shown unsourced. `g` is the best grade among its citations."""
+        if self.human.get(claim, {}).get("state") == "withdrawn":
+            return gap("Withdrawn after two reviewers rejected it")
         found = self.evidence(claim, text, categorical) if text else []
         why = self.dispute(claim, [c for c, _ in found]) if found else ""
         if why:

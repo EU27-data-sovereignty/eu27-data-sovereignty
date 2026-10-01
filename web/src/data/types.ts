@@ -39,7 +39,7 @@ export interface Document {
   sections: Section[]
 }
 
-export type Grade = 'Strong' | 'Standard'
+export type Grade = 'Verified' | 'Strong' | 'Standard'
 
 export interface Citation {
   source_id: string
@@ -147,6 +147,8 @@ export interface Bundle {
   holding_classes: HoldingClass[]
   countries: Record<string, CountryData>
   documents: Record<string, Document>
+  /** URL templates for checking a fact ({claim}) or submitting a source ({iso}) (#85). */
+  contribute: { review: string; submit: string }
   /** How everything was sourced and calculated, generated (model/methodology.py). */
   methodology: Document
   claims: Record<string, Citation[]>
