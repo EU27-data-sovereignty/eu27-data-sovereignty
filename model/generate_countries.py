@@ -117,6 +117,12 @@ class Markdown:
             out += [f"## {t}", ""]
             for b in s["blocks"]:
                 out += [self.block(b), ""]
+        # How each fact above was checked by the model that did not write it (#87), generated.
+        out += ["## Appendix: fact check", ""]
+        for s in self.b["factcheck"]["countries"][doc["iso"]]["sections"]:
+            out += [f"### {s['title']}", ""]
+            for b in s["blocks"]:
+                out += [self.block(b), ""]
         if self.order:
             out += ["---", ""]
             for n, sid in enumerate(self.order, start=1):

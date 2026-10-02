@@ -75,6 +75,7 @@ def build_bundle() -> dict:
                for sid in source_ids}
 
     import contrib  # noqa: PLC0415
+    import factcheck_appendix  # noqa: PLC0415
     import methodology  # noqa: PLC0415
     facts = [s for d in documents.values() for s in document.walk_spans(d) if s.get("role") == "fact"]
     n_facts, n_verified = len(facts), sum(1 for s in facts if s.get("g") == evidence.VERIFIED)
@@ -83,6 +84,9 @@ def build_bundle() -> dict:
         "documents": documents,
         # How every fact was sourced and every figure calculated, generated (#84).
         "methodology": methodology.build(documents, claims, sources),
+        # How every printed fact was checked by the model that did not write it, for the EU-27 report
+        # and for each country, generated from the fact-check ledger (#87).
+        "factcheck": factcheck_appendix.build(documents, claims, sources),
         "claims": claims,
         "sources": sources,
         "holding_classes": [{"class_id": c, "label": nd.LABELS[c], "tier": nd.TIER_OF[c],

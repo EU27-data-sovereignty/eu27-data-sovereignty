@@ -126,6 +126,15 @@ class Renderer:
             out += [self.block(b) for b in s["blocks"]]
         return "\n".join(out)
 
+    def factcheck(self, iso: str = "", level: int = 1) -> str:
+        """The generated fact-check appendix (model/factcheck_appendix.py): the EU-27 one, or a country's."""
+        doc = self.b["factcheck"]["countries"][iso] if iso else self.b["factcheck"]["eu"]
+        out = [f"{'=' * level} Appendix: fact check", ""]
+        for s in doc["sections"]:
+            out += [f"{'=' * (level + 1)} {esc(s['title'])}", ""]
+            out += [self.block(b) for b in s["blocks"]]
+        return "\n".join(out)
+
     def appendix(self, heading: str = "= Sources") -> str:
         cited_by: dict[str, list[tuple[str, dict]]] = {}
         for claim, cites in self.b["claims"].items():
@@ -318,6 +327,7 @@ def report_typ(b: dict) -> str:
         rank,
         *body,
         r.methodology(),
+        r.factcheck(),
         r.appendix(),
     ])
 
@@ -344,6 +354,7 @@ def country_typ(b: dict, iso: str) -> str:
         "",
         chapter,
         r.methodology(),
+        r.factcheck(iso),
         r.appendix(),
     ])
 

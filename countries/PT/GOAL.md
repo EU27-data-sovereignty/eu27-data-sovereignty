@@ -140,6 +140,97 @@ Tier 0 and 1 holdings for Portugal without a verified source yet. Corrections an
 - Central bank systems (tier 1)
 - Defence command and logistics (tier 1)
 
+## Appendix: fact check
+
+### What was checked, and by whom
+
+> Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. The check below is made by a second model, not by a person.
+
+Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
+
+In this build, 0 of 1390 printed facts pass.
+
+| Fact written by | Checked by |
+|---|---|
+| claude-opus-5-5 | claude-fable-5-1 |
+| claude-fable-5-1 | claude-opus-5-5 |
+| anything else: unrecorded, a person, or a program | claude-fable-5-1 |
+
+### How a check runs
+
+- factcheck.py prepare lists every printed fact whose verdict is missing, stale or not passing, hashes each as printed, names its author from the recorded files, and assigns the checker by the rule.
+- The checked-in workflow (model/research/factcheck/workflow.js) asks for that checker model by name, one agent per batch of one state's facts. The checker fetches each cited page (or the Eurostat API response), looks for the quote, and decides whether it supports the statement exactly as printed: value, unit, date, country and scope. It answers supported, not supported or unclear, with a reason.
+- factcheck.py stage refuses any batch whose checker reports a different model than the one asked for, or is an author of a fact in it.
+- factcheck.py record writes the verdicts to the ledger, the run's manifest (input, workflow and bundle hashes, commit, counts) and this audit file.
+- Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically.
+
+A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the question it answers, the printed text and every citation behind it. If any of these changes, the verdict lapses and the fact must be checked again before the next deploy.
+
+### Fact-check runs
+
+No fact-check run has been recorded yet, so no printed fact has been checked.
+
+### The verdict on each fact about Portugal
+
+0 of 54 printed facts about Portugal pass.
+
+| Claim | What it answers | Written by | Checked by | Verdict | Run |
+|---|---|---|---|---|---|
+| indicator:PT:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | none | never checked |  |
+| indicator:PT:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
+| indicator:PT:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:PT:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
+| indicator:PT:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
+| param:PT:population_m | param:PT:population_m | program:fetch_eurostat.py | none | never checked |  |
+| param:PT:gdp_eur_bn | param:PT:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
+| param:PT:gov_employment_k | param:PT:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
+| param:PT:elec_price_eur_mwh | param:PT:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
+| param:PT:renewables_pct | param:PT:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
+| param:PT:land_km2 | param:PT:land_km2 | program:fetch_eurostat.py | none | never checked |  |
+| record:PT:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:electoral_roll:count | Electoral roll entry: how many records it holds | unrecorded | none | never checked |  |
+| record:PT:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:land_property:operator | Land & property registry: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:intelligence:register | Intelligence services: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:customs:operator | Customs declarations: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:border_control:operator | Border and visa systems: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:public_finance:operator | Treasury and state accounts: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:emergency_communications:count | Emergency calls and public-safety radio: how many records it holds | unrecorded | none | never checked |  |
+| record:PT:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:crisis_management:operator | Crisis management and civil protection: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:water_control:register | Water management control: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:water_control:operator | Water management control: the body that operates it | unrecorded | none | never checked |  |
+| record:PT:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
+| record:PT:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | none | never checked |  |
+
 ---
 
 [^s1]: Agência para a Reforma Tecnológica do Estado, I.P. (ARTE) — Estratégia Digital Nacional – Plano de Ação 2026-2027…, 2025-12-29. Estratégia Digital Nacional – Plano de Ação 2026-2027 (projeto 8.2). <https://www.arte.gov.pt/wp-content/uploads/2026/05/Plano-de-Acao-2026-2027_EDN.pdf>

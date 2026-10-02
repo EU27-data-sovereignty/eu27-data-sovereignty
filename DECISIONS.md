@@ -1955,3 +1955,70 @@ attestation. The entity itself: NOT YET (deferred).
 
 *Would change if:* the owner founds the stichting. Then the transfer of the owner's rights, the board and
 the ANBI publication follow, and phase 2 (the web form) becomes possible.
+
+### 87. Every printed fact is checked by the model that did not write it, before every production deploy
+**Decision.** 2026-10-01. A production deploy now requires every printed fact to have a current verdict of
+*supported* from a checker model that did not write it. The owner asked for this.
+- **The rule.** Fable 5.1 checks what Opus 5.5 wrote, and Opus 5.5 checks what Fable 5.1 wrote. Fable 5.1
+  checks anything whose author was never recorded, which today is every fact. Rule and process are in
+  `model/factcheck.py`.
+- **What a verdict covers.** It holds for the fact *exactly as printed*: a SHA-256 of the claim, the
+  question it answers, the printed text and every citation (URL, fetched-document hash, locator, quote).
+  If any of these changes, the verdict lapses, so a push re-checks only what changed.
+- **Where it runs.** The check runs locally through the `/factcheck` skill and the checked-in workflow,
+  which names each checker's model. `factcheck.py stage` refuses a batch whose checker reports a
+  different model than the one asked for, or that wrote a fact in it.
+- **What the gate requires.** `factcheck.py gate` runs in the deploy workflow's gate job and in
+  `./run.sh deploy`. It also requires `docs/fact-check-audit.md`, the generated audit file, to be current.
+- **On a disagreement.** It blocks the deploy, and nothing changes automatically. Every disagreement
+  stays on the record in the audit file.
+- **The appendix.** Every asset carries a generated fact-check appendix (`model/factcheck_appendix.py`):
+  the EU-27 report, each country PDF, each brief, the web pages `/fact-check` and `/fact-check/<ISO>`,
+  and the `/ask` corpus. Each poster carries a one-line summary.
+- **Authorship from now on.** The vetting workflow now names its models and records `researcher_model`,
+  so authors are recorded going forward.
+
+**Problem.** Each fact was found by one agent and reviewed blind by the same model (#83). The two readings
+could share that model's blind spots, and `evidence.assess` says so: "blind, same model". Nothing recorded
+which model wrote a fact, and nothing stopped a model from reviewing its own work. Nothing checked a fact
+again before a deploy: a push to `main` shipped whatever the registers held.
+
+**Alternatives considered.**
+- **Check locally, enforce in CI (chosen).** The model is set by the orchestrator, not inherited, and
+  checked against what the checker reports. No model key goes into GitHub, and CI stays a deterministic
+  check over committed files.
+- **Run the check inside the deploy workflow.** *Why not:* it puts an Anthropic key in GitHub. It
+  re-fetches every source with model calls on every push. And the agent run is not reproducible, so the
+  deploy itself would not be.
+- **Re-check every fact on every push.** *Why not:* about 58 agents per push, for facts that did not
+  change. The fact hash gives the same guarantee — every printed fact has a verdict on exactly what is
+  printed — without that cost. `prepare --all` remains for a full re-check.
+- **Turn a disagreement into a gap automatically.** *Why not:* that would let a single model's verdict
+  silently withdraw a fact. The owner decides, and the audit file keeps the record.
+- **Check facts with no recorded author with both models.** *Why not:* it doubles the first run. Every
+  recorded review so far was Opus 5.5, so Fable 5.1 adds the second model. The owner chose Fable 5.1.
+  This is a judgement, not a proof that Fable 5.1 wrote none of them; the appendix lists those authors
+  as "unrecorded".
+- **Gate every commit (in `test.sh`).** *Why not:* any data change on a branch would need a paid agent run
+  before its tests passed. The deploy is what the rule protects.
+
+**Closes off.**
+- Deploying a printed fact that no second model has checked as printed.
+- A checker model reviewing a fact it wrote.
+- Hand-written fact-check claims. The audit file and every appendix are generated, and the gate fails
+  when the audit file is stale.
+
+**Verified:** 2026-10-01, the machinery only.
+- `python3 -m unittest tests.test_factcheck` passes 27 tests. They cover the rule; the fact hash; stage
+  refusing a model mismatch, an author-checker and a foreign claim; the gate failing on a missing,
+  stale, disagreeing or ineligible verdict and on a stale audit file; and the appendix in the PDFs,
+  briefs, web, posters and `/ask`.
+- `python3 model/factcheck.py gate` on the current data prints `0 of 1390 printed facts checked,
+  supported, checker ≠ author` and exits 1. So `main` cannot deploy until the first run is recorded.
+- `factcheck.py prepare` plans 58 batches, all for claude-fable-5-1.
+- The first run: NOT YET. It needs the owner's OK for its cost. It is verified when `factcheck.py gate`
+  prints `1390 of 1390` and exits 0, and a deploy passes the new step.
+
+*Would change if:* authors are recorded for the earlier facts (re-research), or a third independent model
+family is added, which could become the checker for unrecorded facts. Also if `evidence.assess` should
+credit a cross-model check in the grades; that is a separate decision.

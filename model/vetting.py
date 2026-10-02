@@ -116,6 +116,7 @@ def stage(path: Path, run_id: str, date: str) -> int:
         for i, f in enumerate(r["research"]["findings"]):
             findings.append({**f, "url": research.clean_url(f["url"]), "review": verdicts.get(i)})
         doc = {"iso": r["iso"], "run": run_id, "date": date, "workflow_sha256": sha,
+               "researcher_model": r["research"].get("researcher_model", ""),
                "reviewer_model": (r.get("review") or {}).get("reviewer_model", ""), "blind": True,
                "findings": findings, "outcomes": r["research"]["outcomes"]}
         (DIR / f"{r['iso']}.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n",

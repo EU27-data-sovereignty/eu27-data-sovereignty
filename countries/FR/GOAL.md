@@ -135,6 +135,118 @@ Tier 0 and 1 holdings for France without a verified source yet. Corrections and 
 - Election management and results (tier 1)
 - Education (tier 1)
 
+## Appendix: fact check
+
+### What was checked, and by whom
+
+> Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. The check below is made by a second model, not by a person.
+
+Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
+
+In this build, 0 of 1390 printed facts pass.
+
+| Fact written by | Checked by |
+|---|---|
+| claude-opus-5-5 | claude-fable-5-1 |
+| claude-fable-5-1 | claude-opus-5-5 |
+| anything else: unrecorded, a person, or a program | claude-fable-5-1 |
+
+### How a check runs
+
+- factcheck.py prepare lists every printed fact whose verdict is missing, stale or not passing, hashes each as printed, names its author from the recorded files, and assigns the checker by the rule.
+- The checked-in workflow (model/research/factcheck/workflow.js) asks for that checker model by name, one agent per batch of one state's facts. The checker fetches each cited page (or the Eurostat API response), looks for the quote, and decides whether it supports the statement exactly as printed: value, unit, date, country and scope. It answers supported, not supported or unclear, with a reason.
+- factcheck.py stage refuses any batch whose checker reports a different model than the one asked for, or is an author of a fact in it.
+- factcheck.py record writes the verdicts to the ledger, the run's manifest (input, workflow and bundle hashes, commit, counts) and this audit file.
+- Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically.
+
+A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the question it answers, the printed text and every citation behind it. If any of these changes, the verdict lapses and the fact must be checked again before the next deploy.
+
+### Fact-check runs
+
+No fact-check run has been recorded yet, so no printed fact has been checked.
+
+### The verdict on each fact about France
+
+0 of 75 printed facts about France pass.
+
+| Claim | What it answers | Written by | Checked by | Verdict | Run |
+|---|---|---|---|---|---|
+| indicator:FR:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
+| indicator:FR:L3 | indicator L3: Is a cloud certification that requires immunity from non-EU law in force or adopted for government use? | unrecorded | none | never checked |  |
+| indicator:FR:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:FR:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:FR:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
+| indicator:FR:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
+| param:FR:population_m | param:FR:population_m | program:fetch_eurostat.py | none | never checked |  |
+| param:FR:gdp_eur_bn | param:FR:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
+| param:FR:gov_employment_k | param:FR:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
+| param:FR:elec_price_eur_mwh | param:FR:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
+| param:FR:renewables_pct | param:FR:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
+| param:FR:land_km2 | param:FR:land_km2 | program:fetch_eurostat.py | none | never checked |  |
+| record:FR:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:civil_registry:count | Civil registry core: how many records it holds | unrecorded | none | never checked |  |
+| record:FR:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:fingerprint_biometric:operator | Fingerprint biometric: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:breeder_documents:count | Breeder document scans: how many records it holds | unrecorded | none | never checked |  |
+| record:FR:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:land_property:count | Land & property registry: how many records it holds | unrecorded | none | never checked |  |
+| record:FR:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:police_records:operator | Police information systems: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:intelligence:register | Intelligence services: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:benefits_pensions:count | Benefits & pensions: how many records it holds | unrecorded | none | never checked |  |
+| record:FR:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:firearms_register:register | Firearms register: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:firearms_register:operator | Firearms register: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:government_payroll:operator | Government payroll and personnel: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:central_bank:register | Central bank systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:central_bank:operator | Central bank systems: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:defence_command:register | Defence command and logistics: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:defence_command:foreign_dependency | Defence command and logistics: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
+| record:FR:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:water_control:register | Water management control: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:water_control:operator | Water management control: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:health_records:register | Health records: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:statistics_microdata:operator | Statistical microdata: the body that operates it | unrecorded | none | never checked |  |
+| record:FR:statistics_microdata:foreign_dependency | Statistical microdata: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
+| record:FR:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
+| record:FR:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | none | never checked |  |
+
 ---
 
 [^s1]: Secrétariat général de la défense et de la sécurité nationale (SGDSN) — Protéger le secret de la défense nationale, 2022-11-23. Protéger le secret de la défense nationale. <https://www.sgdsn.gouv.fr/nos-missions/proteger/proteger-le-secret-de-la-defense-nationale> ([archived](https://web.archive.org/web/20260702145838/https://www.sgdsn.gouv.fr/nos-missions/proteger/proteger-le-secret-de-la-defense-nationale))

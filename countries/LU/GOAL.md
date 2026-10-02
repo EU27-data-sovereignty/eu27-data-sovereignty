@@ -161,6 +161,63 @@ Tier 0 and 1 holdings for Luxembourg without a verified source yet. Corrections 
 - Water management control (tier 1)
 - Education (tier 1)
 
+## Appendix: fact check
+
+### What was checked, and by whom
+
+> Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. The check below is made by a second model, not by a person.
+
+Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
+
+In this build, 0 of 1390 printed facts pass.
+
+| Fact written by | Checked by |
+|---|---|
+| claude-opus-5-5 | claude-fable-5-1 |
+| claude-fable-5-1 | claude-opus-5-5 |
+| anything else: unrecorded, a person, or a program | claude-fable-5-1 |
+
+### How a check runs
+
+- factcheck.py prepare lists every printed fact whose verdict is missing, stale or not passing, hashes each as printed, names its author from the recorded files, and assigns the checker by the rule.
+- The checked-in workflow (model/research/factcheck/workflow.js) asks for that checker model by name, one agent per batch of one state's facts. The checker fetches each cited page (or the Eurostat API response), looks for the quote, and decides whether it supports the statement exactly as printed: value, unit, date, country and scope. It answers supported, not supported or unclear, with a reason.
+- factcheck.py stage refuses any batch whose checker reports a different model than the one asked for, or is an author of a fact in it.
+- factcheck.py record writes the verdicts to the ledger, the run's manifest (input, workflow and bundle hashes, commit, counts) and this audit file.
+- Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically.
+
+A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the question it answers, the printed text and every citation behind it. If any of these changes, the verdict lapses and the fact must be checked again before the next deploy.
+
+### Fact-check runs
+
+No fact-check run has been recorded yet, so no printed fact has been checked.
+
+### The verdict on each fact about Luxembourg
+
+0 of 20 printed facts about Luxembourg pass.
+
+| Claim | What it answers | Written by | Checked by | Verdict | Run |
+|---|---|---|---|---|---|
+| indicator:LU:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:LU:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:LU:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
+| indicator:LU:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
+| param:LU:population_m | param:LU:population_m | program:fetch_eurostat.py | none | never checked |  |
+| param:LU:gdp_eur_bn | param:LU:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
+| param:LU:gov_employment_k | param:LU:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
+| param:LU:elec_price_eur_mwh | param:LU:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
+| param:LU:renewables_pct | param:LU:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
+| param:LU:land_km2 | param:LU:land_km2 | program:fetch_eurostat.py | none | never checked |  |
+| record:LU:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
+| record:LU:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
+| record:LU:tax:register | Tax: the name of the register or system | unrecorded | none | never checked |  |
+| record:LU:tax:operator | Tax: the body that operates it | unrecorded | none | never checked |  |
+| record:LU:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
+| record:LU:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
+| record:LU:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | none | never checked |  |
+| record:LU:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
+| record:LU:health_insurance:operator | Statutory health insurance: the body that operates it | unrecorded | none | never checked |  |
+| record:LU:health_insurance:foreign_dependency | Statutory health insurance: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
+
 ---
 
 [^s1]: INCERT GIE — INCERT – Serving Luxembourg public services. INCERT – Serving Luxembourg public services. <https://www.incert.lu/serving-luxembourg-public-agencies>

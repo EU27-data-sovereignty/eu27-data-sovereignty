@@ -7,6 +7,28 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-01
 
+### Added: every printed fact is checked by the model that did not write it, before every deploy (#87)
+
+- **The rule.** A production deploy now needs every printed fact to have a current *supported* verdict
+  from a checker model that did not write it. Fable 5.1 checks what Opus 5.5 wrote and Opus 5.5 checks
+  what Fable 5.1 wrote. Fable 5.1 checks facts whose author was never recorded, which today is all of
+  them.
+- **What a verdict covers.** It holds for the fact exactly as printed. Change the text, the quote or the
+  source, and the fact must be checked again.
+- **The check itself.** It runs locally with `/factcheck` (`./run.sh factcheck prepare|stage|record|audit|status|gate`).
+  The deploy workflow's new **Fact-check gate** step, and `./run.sh deploy`, refuse to ship until it
+  passes.
+- **The audit file.** `docs/fact-check-audit.md` records status, every disagreement ever recorded,
+  every run with its commit and hashes, and the steps. It is generated, and the gate fails if it is stale.
+- **The appendix.** Every asset now carries a generated **fact-check appendix**: the EU-27 report and
+  every country PDF ("Appendix: fact check"), every brief, the new web pages `/fact-check` and
+  `/fact-check/<ISO>` (linked from the banner on every page and from each country page), and the `/ask`
+  corpus. Every poster carries a one-line summary.
+- **Authorship.** The vetting workflow now names its models and records which model researched each
+  finding, so future facts have a recorded author.
+- **Not yet run.** No fact has been checked so far, and the appendix says so (0 of 1,390). Until the first
+  run is recorded, `main` cannot deploy.
+
 ### Added: citizens can source and check facts, under a two-person rule (#85)
 
 The project is now bottom-up. Anyone in any member state can contribute through two public GitHub issue

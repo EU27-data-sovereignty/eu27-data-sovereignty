@@ -58,6 +58,8 @@ const ROUTES = [
   '/sovereignty',
   '/ask',
   '/methodology',
+  '/fact-check',
+  '/fact-check/DE',
 ]
 
 test.describe('data actually renders', () => {
@@ -135,6 +137,25 @@ test.describe('evidence rules (#82, #83)', () => {
       // checks the page's own statement of it.
       await expect(page.getByText(BUNDLE.notice.disclaimer, { exact: true })).toBeVisible()
     }
+  })
+
+  test('every page links the fact check, and a country lists the verdict on each of its facts (#87)', async ({
+    page,
+  }) => {
+    await page.goto('/country/DE')
+    await page.getByRole('link', { name: 'fact check for Germany' }).click()
+    await expect(page).toHaveURL(/\/fact-check\/DE$/)
+    await expect(page.getByRole('heading', { name: 'Fact check: Germany' })).toBeVisible()
+    const table = BUNDLE.factcheck.countries
+      .DE!.sections.at(-1)!
+      .blocks.find(b => b.type === 'table')
+    if (table?.type !== 'table') throw new Error('no verdict table for DE')
+    const rows = table.rows
+    await expect(page.getByText(rows[0]![0]!.t, { exact: true })).toBeVisible()
+    await page.goto('/')
+    await page.getByRole('link', { name: 'How every fact was checked' }).click()
+    await expect(page).toHaveURL(/\/fact-check$/)
+    await expect(page.getByText('not by a person', { exact: false }).first()).toBeVisible()
   })
 
   test('a fact carries its evidence grade, and its source lists the checks behind it', async ({

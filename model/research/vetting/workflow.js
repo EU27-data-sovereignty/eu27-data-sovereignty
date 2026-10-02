@@ -45,8 +45,9 @@ const FINDINGS = {
         required: ['claim', 'status'],
       },
     },
+    researcher_model: { type: 'string', description: 'your own model id, exactly as you know it (e.g. claude-…)' },
   },
-  required: ['findings', 'outcomes'],
+  required: ['findings', 'outcomes', 'researcher_model'],
 }
 
 const VERDICTS = {
@@ -97,7 +98,7 @@ Rules for every finding:
 
 Return findings, and an outcome for EVERY input fact and gap: found, no_better_found (you searched and found nothing better or newer), or not_reached (you ran out of time). Work in the given order.
 
-INPUT: read the JSON file ${s.path} with the Read tool. It holds "facts" (${s.n_facts}) and "gaps" (${s.n_gaps}). Each has a claim id and a "what" describing the question; copy "what" into each finding's "question".`
+INPUT: read the JSON file ${s.path} with the Read tool. It holds "facts" (${s.n_facts}) and "gaps" (${s.n_gaps}). Each has a claim id and a "what" describing the question; copy "what" into each finding's "question". Report your own model id in researcher_model.`
 }
 
 function reviewPrompt(s, items) {
@@ -114,12 +115,17 @@ ITEMS (JSON):
 ${JSON.stringify(items)}`
 }
 
+// The models are named, not inherited from whoever runs this, so each staged file records who wrote a
+// finding and the fact check (#87) can give it to the model that did not.
+const RESEARCHER = 'opus'
+const REVIEWER = 'opus'
+
 const states = args
 log(`${states.length} states, ${states.reduce((n, s) => n + s.n_facts, 0)} facts, ${states.reduce((n, s) => n + s.n_gaps, 0)} gaps`)
 
 const results = await pipeline(
   states,
-  s => agent(researchPrompt(s), { label: `research:${s.iso}`, phase: 'Research', schema: FINDINGS }),
+  s => agent(researchPrompt(s), { label: `research:${s.iso}`, phase: 'Research', schema: FINDINGS, model: RESEARCHER }),
   (found, s) => {
     if (!found) return { iso: s.iso, research: null, review: null }
     const items = found.findings.map((f, id) => ({
@@ -129,7 +135,7 @@ const results = await pipeline(
       quote: f.quote,
     }))
     if (!items.length) return { iso: s.iso, research: found, review: { verdicts: [], reviewer_model: '' } }
-    return agent(reviewPrompt(s, items), { label: `review:${s.iso}`, phase: 'Blind review', schema: VERDICTS })
+    return agent(reviewPrompt(s, items), { label: `review:${s.iso}`, phase: 'Blind review', schema: VERDICTS, model: REVIEWER })
       .then(review => ({ iso: s.iso, research: found, review, review_items: items }))
   },
 )

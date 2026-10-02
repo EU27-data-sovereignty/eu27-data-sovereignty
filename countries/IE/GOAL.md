@@ -140,6 +140,110 @@ Tier 0 and 1 holdings for Ireland without a verified source yet. Corrections and
 - Crisis management and civil protection (tier 1)
 - Education (tier 1)
 
+## Appendix: fact check
+
+### What was checked, and by whom
+
+> Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. The check below is made by a second model, not by a person.
+
+Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
+
+In this build, 0 of 1390 printed facts pass.
+
+| Fact written by | Checked by |
+|---|---|
+| claude-opus-5-5 | claude-fable-5-1 |
+| claude-fable-5-1 | claude-opus-5-5 |
+| anything else: unrecorded, a person, or a program | claude-fable-5-1 |
+
+### How a check runs
+
+- factcheck.py prepare lists every printed fact whose verdict is missing, stale or not passing, hashes each as printed, names its author from the recorded files, and assigns the checker by the rule.
+- The checked-in workflow (model/research/factcheck/workflow.js) asks for that checker model by name, one agent per batch of one state's facts. The checker fetches each cited page (or the Eurostat API response), looks for the quote, and decides whether it supports the statement exactly as printed: value, unit, date, country and scope. It answers supported, not supported or unclear, with a reason.
+- factcheck.py stage refuses any batch whose checker reports a different model than the one asked for, or is an author of a fact in it.
+- factcheck.py record writes the verdicts to the ledger, the run's manifest (input, workflow and bundle hashes, commit, counts) and this audit file.
+- Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically.
+
+A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the question it answers, the printed text and every citation behind it. If any of these changes, the verdict lapses and the fact must be checked again before the next deploy.
+
+### Fact-check runs
+
+No fact-check run has been recorded yet, so no printed fact has been checked.
+
+### The verdict on each fact about Ireland
+
+0 of 67 printed facts about Ireland pass.
+
+| Claim | What it answers | Written by | Checked by | Verdict | Run |
+|---|---|---|---|---|---|
+| indicator:IE:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
+| indicator:IE:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:IE:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:IE:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
+| indicator:IE:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
+| param:IE:population_m | param:IE:population_m | program:fetch_eurostat.py | none | never checked |  |
+| param:IE:gdp_eur_bn | param:IE:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
+| param:IE:gov_employment_k | param:IE:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
+| param:IE:elec_price_eur_mwh | param:IE:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
+| param:IE:renewables_pct | param:IE:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
+| param:IE:land_km2 | param:IE:land_km2 | program:fetch_eurostat.py | none | never checked |  |
+| record:IE:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:facial_biometric:count | Facial biometric: how many records it holds | unrecorded | none | never checked |  |
+| record:IE:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:electoral_roll:foreign_dependency | Electoral roll entry: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
+| record:IE:electoral_roll:count | Electoral roll entry: how many records it holds | unrecorded | none | never checked |  |
+| record:IE:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:digital_identity_credentials:count | Digital identity credentials: how many records it holds | unrecorded | none | never checked |  |
+| record:IE:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:land_property:operator | Land & property registry: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:land_property:count | Land & property registry: how many records it holds | unrecorded | none | never checked |  |
+| record:IE:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:police_records:operator | Police information systems: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:intelligence:register | Intelligence services: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:intelligence:operator | Intelligence services: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:emergency_communications:foreign_dependency | Emergency calls and public-safety radio: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
+| record:IE:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:tax:register | Tax: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:tax:operator | Tax: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:tax:count | Tax: how many records it holds | unrecorded | none | never checked |  |
+| record:IE:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:customs:operator | Customs declarations: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:health_insurance:operator | Statutory health insurance: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:health_insurance:count | Statutory health insurance: how many records it holds | unrecorded | none | never checked |  |
+| record:IE:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:firearms_register:register | Firearms register: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:firearms_register:operator | Firearms register: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:public_finance:operator | Treasury and state accounts: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:electoral_management:register | Election management and results: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:electoral_management:operator | Election management and results: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:central_bank:register | Central bank systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:central_bank:operator | Central bank systems: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:central_bank:foreign_dependency | Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
+| record:IE:defence_command:register | Defence command and logistics: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:defence_command:operator | Defence command and logistics: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:defence_command:foreign_dependency | Defence command and logistics: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
+| record:IE:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:health_records:register | Health records: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:health_records:operator | Health records: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | none | never checked |  |
+| record:IE:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | none | never checked |  |
+| record:IE:public_health_surveillance:count | Public health surveillance: how many records it holds | unrecorded | none | never checked |  |
+
 ---
 
 [^s1]: Office of the Government Chief Information Officer (OGCIO) — Cloud Computing Advice Note (October 2019), 2019-10. Cloud Computing Advice Note (October 2019). <https://assets.per.gov.ie/documents/4468be59812f40dda7003116cf05f196_1.pdf>

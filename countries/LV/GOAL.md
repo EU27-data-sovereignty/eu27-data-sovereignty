@@ -147,6 +147,92 @@ Tier 0 and 1 holdings for Latvia without a verified source yet. Corrections and 
 - Electricity grid control (tier 1)
 - Water management control (tier 1)
 
+## Appendix: fact check
+
+### What was checked, and by whom
+
+> Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. The check below is made by a second model, not by a person.
+
+Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
+
+In this build, 0 of 1390 printed facts pass.
+
+| Fact written by | Checked by |
+|---|---|
+| claude-opus-5-5 | claude-fable-5-1 |
+| claude-fable-5-1 | claude-opus-5-5 |
+| anything else: unrecorded, a person, or a program | claude-fable-5-1 |
+
+### How a check runs
+
+- factcheck.py prepare lists every printed fact whose verdict is missing, stale or not passing, hashes each as printed, names its author from the recorded files, and assigns the checker by the rule.
+- The checked-in workflow (model/research/factcheck/workflow.js) asks for that checker model by name, one agent per batch of one state's facts. The checker fetches each cited page (or the Eurostat API response), looks for the quote, and decides whether it supports the statement exactly as printed: value, unit, date, country and scope. It answers supported, not supported or unclear, with a reason.
+- factcheck.py stage refuses any batch whose checker reports a different model than the one asked for, or is an author of a fact in it.
+- factcheck.py record writes the verdicts to the ledger, the run's manifest (input, workflow and bundle hashes, commit, counts) and this audit file.
+- Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically.
+
+A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the question it answers, the printed text and every citation behind it. If any of these changes, the verdict lapses and the fact must be checked again before the next deploy.
+
+### Fact-check runs
+
+No fact-check run has been recorded yet, so no printed fact has been checked.
+
+### The verdict on each fact about Latvia
+
+0 of 49 printed facts about Latvia pass.
+
+| Claim | What it answers | Written by | Checked by | Verdict | Run |
+|---|---|---|---|---|---|
+| indicator:LV:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | none | never checked |  |
+| indicator:LV:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
+| indicator:LV:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:LV:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:LV:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
+| indicator:LV:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
+| param:LV:population_m | param:LV:population_m | program:fetch_eurostat.py | none | never checked |  |
+| param:LV:gdp_eur_bn | param:LV:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
+| param:LV:gov_employment_k | param:LV:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
+| param:LV:elec_price_eur_mwh | param:LV:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
+| param:LV:renewables_pct | param:LV:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
+| param:LV:land_km2 | param:LV:land_km2 | program:fetch_eurostat.py | none | never checked |  |
+| record:LV:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:land_property:operator | Land & property registry: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:police_records:operator | Police information systems: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:tax:register | Tax: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:customs:operator | Customs declarations: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:public_finance:operator | Treasury and state accounts: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:education:operator | Education: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | none | never checked |  |
+| record:LV:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
+| record:LV:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | none | never checked |  |
+
 ---
 
 [^s1]: Saeima / Latvijas Vēstnesis (likumi.lv) — Nacionālās kiberdrošības likums (National Cybersecurity…, 2024-07-04. Nacionālās kiberdrošības likums (National Cybersecurity Law), Art. 32. <https://likumi.lv/ta/id/353390> ([archived](https://web.archive.org/web/20260421100217/https://likumi.lv/ta/id/353390))

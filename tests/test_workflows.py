@@ -51,6 +51,15 @@ class Deploy(unittest.TestCase):
         self.assertIn("run: ./test.sh", DEPLOY)
         self.assertRegex(DEPLOY, r"\n  deploy:\n(?:    .*\n)*?    needs: gate\n")
 
+    def test_deploy_waits_for_the_fact_check(self):
+        # Every printed fact checked by the model that did not write it, before production (#87):
+        # in the gate job, which deploy needs, and in the manual fallback.
+        gate = DEPLOY.split("\n  deploy:\n")[0]
+        self.assertIn("run: python3 model/factcheck.py gate", gate)
+        run_sh = (ROOT / "run.sh").read_text(encoding="utf-8")
+        deploy = run_sh.split("    deploy)\n", 1)[1].split("\n        ;;\n", 1)[0]
+        self.assertLess(deploy.index("python3 model/factcheck.py gate"), deploy.index("vercel deploy"))
+
     def test_only_main_deploys(self):
         self.assertRegex(DEPLOY, r"push:\n\s+branches: \[main\]\n")
         self.assertNotIn("pull_request", DEPLOY)

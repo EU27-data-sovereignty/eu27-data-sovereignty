@@ -138,6 +138,93 @@ Tier 0 and 1 holdings for Poland without a verified source yet. Corrections and 
 - Defence command and logistics (tier 1)
 - Intelligence services (tier 1)
 
+## Appendix: fact check
+
+### What was checked, and by whom
+
+> Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. The check below is made by a second model, not by a person.
+
+Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
+
+In this build, 0 of 1390 printed facts pass.
+
+| Fact written by | Checked by |
+|---|---|
+| claude-opus-5-5 | claude-fable-5-1 |
+| claude-fable-5-1 | claude-opus-5-5 |
+| anything else: unrecorded, a person, or a program | claude-fable-5-1 |
+
+### How a check runs
+
+- factcheck.py prepare lists every printed fact whose verdict is missing, stale or not passing, hashes each as printed, names its author from the recorded files, and assigns the checker by the rule.
+- The checked-in workflow (model/research/factcheck/workflow.js) asks for that checker model by name, one agent per batch of one state's facts. The checker fetches each cited page (or the Eurostat API response), looks for the quote, and decides whether it supports the statement exactly as printed: value, unit, date, country and scope. It answers supported, not supported or unclear, with a reason.
+- factcheck.py stage refuses any batch whose checker reports a different model than the one asked for, or is an author of a fact in it.
+- factcheck.py record writes the verdicts to the ledger, the run's manifest (input, workflow and bundle hashes, commit, counts) and this audit file.
+- Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically.
+
+A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the question it answers, the printed text and every citation behind it. If any of these changes, the verdict lapses and the fact must be checked again before the next deploy.
+
+### Fact-check runs
+
+No fact-check run has been recorded yet, so no printed fact has been checked.
+
+### The verdict on each fact about Poland
+
+0 of 50 printed facts about Poland pass.
+
+| Claim | What it answers | Written by | Checked by | Verdict | Run |
+|---|---|---|---|---|---|
+| indicator:PL:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
+| indicator:PL:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:PL:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:PL:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
+| param:PL:population_m | param:PL:population_m | program:fetch_eurostat.py | none | never checked |  |
+| param:PL:gdp_eur_bn | param:PL:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
+| param:PL:gov_employment_k | param:PL:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
+| param:PL:elec_price_eur_mwh | param:PL:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
+| param:PL:renewables_pct | param:PL:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
+| param:PL:land_km2 | param:PL:land_km2 | program:fetch_eurostat.py | none | never checked |  |
+| record:PL:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:digital_identity_credentials:count | Digital identity credentials: how many records it holds | unrecorded | none | never checked |  |
+| record:PL:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:police_records:operator | Police information systems: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:tax:register | Tax: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:border_control:operator | Border and visa systems: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:electoral_management:register | Election management and results: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:electoral_management:operator | Election management and results: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:water_control:register | Water management control: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:water_control:operator | Water management control: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:health_records:operator | Health records: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | none | never checked |  |
+| record:PL:national_archives:register | National archives (digital): the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
+| record:PL:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | none | never checked |  |
+
 ---
 
 [^s1]: Sejm RP (Dziennik Ustaw) — Ustawa z dnia 5 sierpnia 2010 r. o ochronie informacji…, 2010-10-01. Ustawa z dnia 5 sierpnia 2010 r. o ochronie informacji niejawnych (art. 5). <https://api.sejm.gov.pl/eli/acts/DU/2010/1228/text.html> ([archived](https://web.archive.org/web/20260607080912/https://api.sejm.gov.pl/eli/acts/DU/2010/1228/text.html))

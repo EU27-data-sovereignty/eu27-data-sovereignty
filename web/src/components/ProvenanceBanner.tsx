@@ -15,6 +15,10 @@ export function ProvenanceBanner({
       <a className="underline" href="/methodology">
         How this was built
       </a>
+      {' · '}
+      <a className="underline" href="/fact-check">
+        How every fact was checked
+      </a>
       .
     </p>
   )

@@ -67,6 +67,7 @@ show_help() {
     echo "  eurostat adopt COL=PERIOD ...   Move pins, apply, register the vintage"
     echo "  vet prepare|stage|hosts|verify|admit|report   The vetting run (the agent step is /vet)"
     echo "  contrib forms|ingest|status|audit-sample   Citizen submissions and the two-person rule"
+    echo "  factcheck prepare|stage|record|audit|status|gate   Cross-model fact check (agent step: /factcheck)"
     echo "  reproduce [--evidence]   Rebuild everything in a fresh clone and compare"
     echo
     echo -e "${GREEN}Deployment${NC}"
@@ -189,6 +190,11 @@ case "${1:-dev}" in
         # Citizen submissions and reviews (#85): forms | ingest | status | audit-sample
         python3 model/contrib.py "${@:2}"
         ;;
+    factcheck)
+        # Every printed fact checked by the model that did not write it (#87):
+        # prepare | stage | record | audit | status | gate
+        python3 model/factcheck.py "${@:2}"
+        ;;
     reproduce)
         python3 model/reproduce.py clean-room "${@:2}"
         ;;
@@ -213,6 +219,11 @@ case "${1:-dev}" in
         fi
         print_info "Running the full gate before deploying..."
         "$ROOT/test.sh" "${@:2}"
+        echo
+        # Every printed fact needs a current, agreeing verdict from the model that did not
+        # write it, and docs/fact-check-audit.md must be current (#87). Run /factcheck first.
+        print_info "Fact-check gate..."
+        python3 model/factcheck.py gate
         echo
         # cache/ can be hundreds of MB of fetched gazettes. .vercelignore excludes it,
         # but .vercelignore is read INSTEAD of .gitignore, so the rule is easy to lose.

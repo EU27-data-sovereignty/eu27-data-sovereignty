@@ -7,6 +7,7 @@ import type { Bundle } from './data/types'
 import { Ask } from './pages/Ask'
 import { Countries } from './pages/Countries'
 import { Country } from './pages/Country'
+import { FactCheck } from './pages/FactCheck'
 import { Holding, HoldingsIndex } from './pages/Holdings'
 import { Methodology } from './pages/Methodology'
 import { NotFound } from './pages/NotFound'
@@ -61,6 +62,8 @@ export function App() {
         <Route path="map" element={<Sovereignty bundle={bundle} />} />
         <Route path="country/:iso" element={<Country bundle={bundle} />} />
         <Route path="methodology" element={<Methodology bundle={bundle} />} />
+        <Route path="fact-check" element={<FactCheck bundle={bundle} />} />
+        <Route path="fact-check/:iso" element={<FactCheck bundle={bundle} />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

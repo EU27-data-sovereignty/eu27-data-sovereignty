@@ -152,6 +152,72 @@ Tier 0 and 1 holdings for Romania without a verified source yet. Corrections and
 - Emergency calls and public-safety radio (tier 1)
 - Crisis management and civil protection (tier 1)
 
+## Appendix: fact check
+
+### What was checked, and by whom
+
+> Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. The check below is made by a second model, not by a person.
+
+Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
+
+In this build, 0 of 1390 printed facts pass.
+
+| Fact written by | Checked by |
+|---|---|
+| claude-opus-5-5 | claude-fable-5-1 |
+| claude-fable-5-1 | claude-opus-5-5 |
+| anything else: unrecorded, a person, or a program | claude-fable-5-1 |
+
+### How a check runs
+
+- factcheck.py prepare lists every printed fact whose verdict is missing, stale or not passing, hashes each as printed, names its author from the recorded files, and assigns the checker by the rule.
+- The checked-in workflow (model/research/factcheck/workflow.js) asks for that checker model by name, one agent per batch of one state's facts. The checker fetches each cited page (or the Eurostat API response), looks for the quote, and decides whether it supports the statement exactly as printed: value, unit, date, country and scope. It answers supported, not supported or unclear, with a reason.
+- factcheck.py stage refuses any batch whose checker reports a different model than the one asked for, or is an author of a fact in it.
+- factcheck.py record writes the verdicts to the ledger, the run's manifest (input, workflow and bundle hashes, commit, counts) and this audit file.
+- Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically.
+
+A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the question it answers, the printed text and every citation behind it. If any of these changes, the verdict lapses and the fact must be checked again before the next deploy.
+
+### Fact-check runs
+
+No fact-check run has been recorded yet, so no printed fact has been checked.
+
+### The verdict on each fact about Romania
+
+0 of 29 printed facts about Romania pass.
+
+| Claim | What it answers | Written by | Checked by | Verdict | Run |
+|---|---|---|---|---|---|
+| indicator:RO:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
+| indicator:RO:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:RO:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
+| indicator:RO:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
+| param:RO:population_m | param:RO:population_m | program:fetch_eurostat.py | none | never checked |  |
+| param:RO:gdp_eur_bn | param:RO:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
+| param:RO:gov_employment_k | param:RO:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
+| param:RO:elec_price_eur_mwh | param:RO:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
+| param:RO:renewables_pct | param:RO:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
+| param:RO:land_km2 | param:RO:land_km2 | program:fetch_eurostat.py | none | never checked |  |
+| record:RO:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
+| record:RO:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
+| record:RO:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
+| record:RO:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
+| record:RO:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
+| record:RO:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | none | never checked |  |
+| record:RO:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:RO:police_records:operator | Police information systems: the body that operates it | unrecorded | none | never checked |  |
+| record:RO:tax:register | Tax: the name of the register or system | unrecorded | none | never checked |  |
+| record:RO:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
+| record:RO:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:RO:border_control:operator | Border and visa systems: the body that operates it | unrecorded | none | never checked |  |
+| record:RO:central_bank:register | Central bank systems: the name of the register or system | unrecorded | none | never checked |  |
+| record:RO:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | none | never checked |  |
+| record:RO:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | none | never checked |  |
+| record:RO:water_control:register | Water management control: the name of the register or system | unrecorded | none | never checked |  |
+| record:RO:water_control:operator | Water management control: the body that operates it | unrecorded | none | never checked |  |
+| record:RO:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
+| record:RO:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
+
 ---
 
 [^s1]: Serviciul Român de Informații (republishing the statute) — Legea nr. 182/2002 privind protecția informațiilor…, 2002-04-12. Legea nr. 182/2002 privind protecția informațiilor clasificate (Art. 18). <https://www.sri.ro/assets/files/legislatie/2024/Lege_182.2002.pdf> ([archived](https://web.archive.org/web/20251021133206/https://www.sri.ro/assets/files/legislatie/2024/Lege_182.2002.pdf))

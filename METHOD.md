@@ -213,7 +213,7 @@ checklist says "rendered". A page that refused us is never retried with a browse
 researcher's label. It gets only the question, the URL and the quote, and must reach an answer itself.
 But in the 2026-09-30 run it was **the same model as the researcher** (`claude-opus-5-5`, recorded in
 each staging file with the sha256 of `workflow.js`). Two readings by one model can share its blind
-spots. That is why a person reviewing a sample is still the step this method lacks (section 9).
+spots. That is why a person reviewing a sample is still the step this method lacks (section 10).
 
 A contradiction is never settled by hand. A later statement by the same authority supersedes an earlier
 one, and a higher tier wins. Otherwise the fact stays **disputed**, with both sources shown, until one of
@@ -230,7 +230,27 @@ number computed at build time. A seeded random sample of unreviewed facts (`./ru
 audit-sample`) is the human sampling audit that measures the error rate per grade. How to review is in
 [`docs/reviewing.md`](docs/reviewing.md).
 
-## 9. What this does not establish
+## 9. The cross-model fact check before every deploy
+
+Every printed fact is checked once more before it can ship, by a second model: the one that did not write
+it (#87). Fable 5.1 checks what Opus 5.5 wrote, Opus 5.5 checks what Fable 5.1 wrote, and Fable 5.1 checks
+facts whose author was never recorded.
+- **What the checker does.** It fetches the cited page, or the Eurostat API response, and looks for the
+  quote. It then decides whether the quote supports the statement *exactly as printed*: value, name,
+  unit, date, country and scope. It answers supported, not supported or unclear, with a reason.
+- **Which model it is.** The workflow asks for the checker by model name. `factcheck.py stage` refuses
+  an answer from any other model, and from a model that wrote the fact.
+- **What a verdict covers.** It is tied to a SHA-256 of the fact as printed and its citations, so any
+  change voids it.
+- **The gate.** A production deploy is refused unless every printed fact has a current *supported*
+  verdict, and the audit file [`docs/fact-check-audit.md`](docs/fact-check-audit.md) is current. A
+  disagreement blocks the deploy until the owner fixes the fact or its source.
+- **Where it is shown.** Every asset carries the process and its verdicts as a generated appendix.
+
+This is a check by a second machine, not by a person. It narrows the blind spots of one model; it does
+not remove those that models share.
+
+## 10. What this does not establish
 
 - **No person has verified any finding.** Every output says so first, in the same words
   (`model/evidence.py`, #82). Two agreeing machine passes are the interim standard; a human sampling

@@ -151,6 +151,8 @@ export interface Bundle {
   contribute: { review: string; submit: string }
   /** How everything was sourced and calculated, generated (model/methodology.py). */
   methodology: Document
+  /** How each printed fact was checked by the model that did not write it (model/factcheck_appendix.py, #87). */
+  factcheck: { eu: Document; countries: Record<string, Document>; lines: Record<string, string> }
   claims: Record<string, Citation[]>
   sources: Record<string, Source>
 }

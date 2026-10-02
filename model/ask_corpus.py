@@ -118,8 +118,19 @@ def build(bundle: dict) -> dict:
                     f"with its open evidence it could be anywhere from '{labels[p['range'][0]]}' to "
                     f"'{labels[p['range'][-1]]}'.",
             "claims": claims, "kind": "method"})
+    # How every printed fact was checked by the model that did not write it (#87): the EU-27 appendix,
+    # flattened to text. The per-fact verdicts stay in the PDFs and on the web page.
+    checked = []
+    for sec in bundle["factcheck"]["eu"]["sections"]:
+        for b in sec["blocks"]:
+            lines = ([b["spans"]] if b["type"] in ("p", "callout") else b["items"] if b["type"] == "list"
+                     else [[*row] for row in b["rows"]])
+            sep = " | " if b["type"] == "table" else " "
+            checked += [{"text": f"{sec['title']}: " + sep.join(sp["t"] for sp in line), "claims": [],
+                         "kind": "method"} for line in lines]
     documents = [
         {"title": "Method and rules", "blocks": method},
+        {"title": "Fact check: how each printed fact was checked by a second model", "blocks": checked},
         {"title": "Data-sovereignty ranking (placements by rule, with confidence)", "blocks": ranking},
     ]
     for iso in sorted(bundle["documents"], key=lambda i: names[i]):

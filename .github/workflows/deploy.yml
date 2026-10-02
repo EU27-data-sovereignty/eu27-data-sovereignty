@@ -54,6 +54,11 @@ jobs:
           npm ci --prefix web
       - name: Run the gate
         run: ./test.sh
+      # Every printed fact checked by the model that did not write it, and the audit file
+      # current (DECISIONS.md #87). The check itself runs locally (/factcheck); this only
+      # enforces its committed result, so no model key is needed here.
+      - name: Fact-check gate
+        run: python3 model/factcheck.py gate
 
   deploy:
     name: Build and deploy to production

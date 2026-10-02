@@ -11,6 +11,7 @@ const NAV = [
   { to: '/sources', label: 'Sources' },
   { to: '/ask', label: 'Ask' },
   { to: '/methodology', label: 'Methodology' },
+  { to: '/fact-check', label: 'Fact check' },
 ]
 
 export function Layout({ generated, provenance }: { generated: string; provenance: string }) {

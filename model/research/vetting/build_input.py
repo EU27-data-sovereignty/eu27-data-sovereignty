@@ -24,10 +24,26 @@ KIND = {"register": "the name of the register or system", "operator": "the body 
         "foreign_dependency": "where its infrastructure runs: national / eu_provider / non_eu_provider / mixed"}
 
 
+def tables() -> tuple[dict, dict]:
+    """The holding classes and indicator definitions a claim id refers to."""
+    with (ROOT / "model" / "holding_classes.csv").open(newline="", encoding="utf-8") as fh:
+        classes = {r["class_id"]: r for r in csv.DictReader(fh)}
+    with (ROOT / "model" / "indicators.csv").open(newline="", encoding="utf-8") as fh:
+        indicators = {r["id"]: r for r in csv.DictReader(fh)}
+    return classes, indicators
+
+
+def describe(claim: str, classes: dict, indicators: dict) -> str:
+    """What a printed fact answers, in words: the question its value is the answer to."""
+    parts = claim.split(":")
+    return (f"{classes[parts[2]]['label']}: {KIND.get(parts[3], parts[3])}" if parts[0] == "record"
+            else f"indicator {parts[2]}: {indicators[parts[2]]['question']}" if parts[0] == "indicator"
+            else claim)
+
+
 def main() -> int:
     b = json.loads((ROOT / "web" / "public" / "data" / "eu27.json").read_text(encoding="utf-8"))
-    classes = {r["class_id"]: r for r in csv.DictReader((ROOT / "model" / "holding_classes.csv").open())}
-    indicators = {r["id"]: r for r in csv.DictReader((ROOT / "model" / "indicators.csv").open())}
+    classes, indicators = tables()
     out = []
     for iso, doc in sorted(b["documents"].items()):
         facts = []
@@ -39,10 +55,7 @@ def main() -> int:
                 continue                    # Eurostat: vetted by fetch_eurostat.py, not by an agent
             best = min(b["claims"][claim], key=lambda c: c["checks"]["tier"])
             src = b["sources"][best["source_id"]]
-            parts = claim.split(":")
-            what = (f"{classes[parts[2]]['label']}: {KIND.get(parts[3], parts[3])}" if parts[0] == "record"
-                    else f"indicator {parts[2]}: {indicators[parts[2]]['question']}" if parts[0] == "indicator"
-                    else claim)
+            what = describe(claim, classes, indicators)
             facts.append({"claim": claim, "what": what, "printed": span["t"], "source_url": src["url"],
                           "tier": best["checks"]["tier"], "source_kind": best["checks"]["tier_kind"],
                           "published": src.get("published", ""), "grade": best["grade"]})

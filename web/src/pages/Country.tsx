@@ -79,6 +79,13 @@ export function Country({ bundle }: { bundle: Bundle }) {
         </p>
 
         <DocumentView doc={doc} bundle={bundle} numbers={numbers} />
+        <p className="my-6 max-w-3xl text-sm">
+          How each fact above was checked by a second model, the one that did not write it:{' '}
+          <Link to={`/fact-check/${code}`} className="underline">
+            fact check for {doc.name}
+          </Link>
+          .
+        </p>
         <SourceList bundle={bundle} numbers={numbers} claims={claims} />
       </div>
     </article>

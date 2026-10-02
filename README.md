@@ -234,8 +234,9 @@ first, and the reasoning is in [`DECISIONS.md`](DECISIONS.md), numbered below.
 | 2026-09-17 – 09-26 | The source register: one registry, every claim pointing at a document; secret scanning in CI | #59–#69 |
 | 2026-09-27 | `eu27.cloud` registered; the deep-link 404 fixed | #70 |
 | 2026-09-29 | Rebuilt: each state on its own fundamentals, one content model for every output, sourced facts or visible gaps, a ranking by published rule, `/ask`, the first verified research with independent review, the EU-27 report | #71–#79 |
-| 2026-10-01 | Bottom-up: citizens submit sources and check facts through public forms; a fact is verified by a person only under a two-person rule; contributor terms and editorial policy; the legal entity deferred | #85–#86 |
 | 2026-09-30 | Deploys from CI. The evidence rules: machine-checked disclaimer everywhere, figures must be in their quote, grades, source tiers, rechecks, disputed facts. The first vetting run. Eurostat vintages adopted. Reproducible from scratch, with a generated methodology | #80–#84 |
+| 2026-10-01 | Bottom-up: citizens submit sources and check facts through public forms; a fact is verified by a person only under a two-person rule; contributor terms and editorial policy; the legal entity deferred | #85–#86 |
+| 2026-10-01 | Every printed fact checked by the model that did not write it (Fable 5.1 or Opus 5.5) before every production deploy; a generated audit file and a fact-check appendix in every asset | #87 |
 
 **Keeping it current.** Any commit that changes what a reader sees, or how the evidence is produced,
 adds its entry to `CHANGELOG.md` in the same commit, citing the decision it rests on. A new stage adds a

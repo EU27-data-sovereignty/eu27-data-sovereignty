@@ -6,6 +6,11 @@ push or deploy.
 
 ## Overview
 
+**Always optimize for maximum auditability.** When choosing between approaches, prefer the one a third
+party can check. Record who or what produced each output: the model id, the run, the commit and the input
+hashes. Commit the evidence rather than relying on it, and generate audit trails from the data instead of
+writing them by hand.
+
 A sourced analysis of each EU member state's critical government data holdings, and of what sovereign
 hosting for them requires.
 - **Research.** Agents stage claims; `model/research.py` admits only claims whose quote is found in a
@@ -15,7 +20,8 @@ hosting for them requires.
 - **Stack.** Python is stdlib-only. The web app is React 19, Vite and Tailwind 4 in `web/`. `/ask` is a
   Vercel Function in `api/`.
 - **Deployment.** Vercel at `https://eu27.cloud`. A push to `main` runs the gate, builds in GitHub Actions and
-  deploys prebuilt (#81).
+  deploys prebuilt (#81). The deploy also requires every printed fact to be checked by the model that did not
+  write it (#87).
 
 Read [`METHOD.md`](METHOD.md) for the evidence pipeline and [`DECISIONS.md`](DECISIONS.md) before
 changing a rule. From #72 on, a new decision entry needs every part listed in `README.md` § How decisions
@@ -46,6 +52,8 @@ python3 model/research.py report       # verification outcomes per state
 ./run.sh vet prepare|stage|hosts|verify|admit|report|manifest   # vetting run; the agent step is /vet
 ./run.sh reproduce [--evidence]        # rebuild everything from a fresh clone of HEAD and compare (#84)
 ./run.sh contrib forms|ingest|status|audit-sample   # citizen submissions and reviews; two-person rule (#85)
+./run.sh factcheck status|gate        # cross-model fact check: what is due; the deploy gate (#87)
+./run.sh factcheck prepare|stage|record|audit   # a fact-check run; the agent step is /factcheck
 python3 model/evidence_report.py       # docs/evidence.md, charts of grades and tiers (run by ./run.sh data)
 python3 model/provenance.py            # source register coverage per namespace
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
@@ -99,6 +107,10 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
 - **The security gate blocks email-shaped strings.** They have come in through archive URLs. Archived
   copies are accepted only for exactly the requested host (`research.snapshot_matches`). Fix the data;
   never bypass the gate.
+- **Any change to a printed fact needs `/factcheck` before pushing to `main`** (#87). The deploy's
+  fact-check gate fails on a fact that is new, changed, disagreed with or checked by its own author, and on a
+  stale `docs/fact-check-audit.md`. The gate is not in `./test.sh`, so branches stay unblocked; run
+  `./run.sh factcheck status` to see what is due. Never edit the ledger or a verdict to pass it.
 - **A push to `main` is a production deploy** (#81), gated by `./test.sh` in Actions. The PDFs need `typst`,
   which Vercel's image lacks, so every deploy is prebuilt (CI pins and checksums typst). The build command runs
   `npm ci` at the root (for `api/`) and in `web/`. Previews are by hand and sit behind Vercel login.
