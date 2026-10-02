@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "CY-009",
+ "iso": "CY",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:CY:statistics_microdata:register",
+   "fact_sha256": "87d0e0f7c18d5b390c54b827f7aa5b049259fba9321fc567853296d9dbb88c67",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF (Statistics Law 25(I)/2021, art. 2) defines 'εμπιστευτικά στοιχεία/δεδομένα' as data collected for producing statistics that permit direct or indirect identification of statistical units, which is exactly the printed statement. Note it is a statutory definition, not the name of a register.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/arith/2021_1_025.pdf"
+  },
+  {
+   "claim": "record:CY:residence_permits:operator",
+   "fact_sha256": "dd562fee48c416dc9f05d38a95f0455e4ad274b874429c4e2fd4399417f9ccbf",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is the Aliens and Immigration Law (Cap. 105) and its art. 2 defines 'Τμήμα' as the Civil Registry and Migration Department (Τμήμα Αρχείου Πληθυσμού και Μετανάστευσης), matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/0_105/full.html"
+  },
+  {
+   "claim": "record:CY:business_registry:operator",
+   "fact_sha256": "98f4e9048d6112b9f0e83b241e1b8e50475f65e21c3de41fe0cf22f6f3296eea",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Companies Law (Cap. 113) art. 2 states 'ο έφορος εταιρειών ... σημαίνει τον Επίσημο Παραλήπτη και Έφορο'; the quote matches verbatim once curly quote marks are normalised. The printed statement reproduces it.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/0_113/full.html"
+  },
+  {
+   "claim": "record:CY:land_property:operator",
+   "fact_sha256": "87b8d82c4673ad3d6b5f876a34a61bd5a88634bd9549d0c226d37e29916ee8f1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Immovable Property Law (Cap. 224) art. 2 defines 'Διευθυντής' as the Director of the Department of Lands and Surveys; the Interoperable Europe PDF also calls the DLS one of the main base registries. Both quotes found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/0_224/full.html"
+  },
+  {
+   "claim": "record:CY:vehicle_licensing:register",
+   "fact_sha256": "3b116fadf26d0f02b851284fb287585119754c8c6ea8c44138e8aaed78d8af02",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Motor Vehicles and Road Traffic Law (86/1972) section 29 heading refers to registration of vehicles 'στο Μητρώο του Εφόρου' and the surrounding text speaks of motor vehicles registered in the Registrar's register; the EC PDF names the RTD's vehicles and drivers' digital registry. Both quotes verbatim.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/1972_1_86/full.html"
+  },
+  {
+   "claim": "record:CY:tax:operator",
+   "fact_sha256": "fb531973fddcce44b6f69a5e2aea89c925fd51f16ee7436db16829daaf1d3ec8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Assessment and Collection of Taxes Law (4/1978) art. 2 defines 'Έφορος' as the Tax Commissioner and any officer of the Tax Department duly authorised by him; the EC PDF names the Cyprus Tax Department as TAXISnet operator. The printed text drops 'duly authorised' but is otherwise what the source says.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/1978_1_4/full.html"
+  },
+  {
+   "claim": "record:CY:national_archives:register",
+   "fact_sha256": "9768ff917587a351e3bc86e2797c03dbb72edf6d80cea8cef5e3a6568eb24001",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "State Archives Law (208/1991) art. 3(1): 'Ιδρύεται Κρατικό Αρχείο στο οποίο κατατίθενται και φυλάσσονται δημόσια αρχεία', verbatim; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/1991_1_208/full.html"
+  },
+  {
+   "claim": "record:CY:crisis_management:register",
+   "fact_sha256": "559bc9e265ebd16c6a430c17124ab4b75777a91944c7abb1a3c593bd210ce07a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Civil Defence Law (117(I)/1996) art. 5(1) says the Minister of Interior draws up and submits the General Civil Defence Plan to the Council of Ministers for approval, and art. 2 defines the Plan as the one 'καταρτίζεται και εγκρίνεται σύμφωνα με το άρθρο 5'. Quote found verbatim once the page's windows-1253 charset is decoded correctly.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/1996_1_117/full.html"
+  },
+  {
+   "claim": "record:CY:health_insurance:operator",
+   "fact_sha256": "03ce8f8e676fe1b5b2a4efc71855e8c2f2d9d650486d0c130f989533a28439ed",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "GHS Law (89(I)/2001) art. 4(3): 'ο Οργανισμός αναπτύσσει και λειτουργεί σύστημα πληροφορικής', and art. 2 defines 'Οργανισμός' as the Health Insurance Organisation; the gesy.org.cy page says the IT system will be made available by the HIO. Both quotes verbatim.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2001_1_89/full.html"
+  },
+  {
+   "claim": "record:CY:health_insurance:register",
+   "fact_sha256": "a641c292b3395aae77152c89572f860116f55e3673716e9024310a792a48510d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 32Γ(1) of the General Health System (GeSY) Law obliges providers to use the information system for referrals, prescriptions, claims for payment and managing the beneficiary list, verbatim; the gesy.org.cy page describes the same GHS IT system. The printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2001_1_89/full.html"
+  },
+  {
+   "claim": "record:CY:central_bank:operator",
+   "fact_sha256": "855593b28640171e2bd9ad82cc0841d5d89a8e7e84b1cf99b0c4802c8c4ff784",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Central Bank of Cyprus Law (138(I)/2002) art. 39(1) says 'η Τράπεζα δύναται να ανοίγει λογαριασμούς υπέρ πιστωτικών ιδρυμάτων, δημόσιων οργανισμών και άλλων φορέων της αγοράς', with 'Τράπεζα' defined in art. 2 as the Central Bank of Cyprus. The printed sentence reproduces it, though it describes a power rather than naming a system operator.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2002_1_138/full.html"
+  },
+  {
+   "claim": "record:CY:breeder_documents:operator",
+   "fact_sha256": "2fe42230ff5097881a7ff79ff552ec5c0b904b3bc730587680bd841c113170f5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Civil Registry Law (141(I)/2002) art. 2 defines 'αρχή εγγραφής' as the Civil Registry and Migration Department and the District Administration office(s) responsible for registering births and deaths, verbatim; matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html"
+  },
+  {
+   "claim": "record:CY:breeder_documents:register",
+   "fact_sha256": "3d7d9cbbeae3e5770105e53abfab178d5dacd2f2b8533b6204a1e6215061dcfa",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 2 defines 'ληξιαρχικό μητρώο' as the register kept by the Registrar in which he records the births and deaths of his District, verbatim; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html"
+  },
+  {
+   "claim": "record:CY:civil_registry:operator",
+   "fact_sha256": "cdf21d5f0a7060fa757bea6c7f0c7efdcf2d1498a47e4011d0ab498bb01c1a6e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Same 'αρχή εγγραφής' definition: the Civil Registry and Migration Department and the District Administration offices are the registration authorities; the printed statement is a faithful paraphrase.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html"
+  },
+  {
+   "claim": "record:CY:digital_identity_credentials:operator",
+   "fact_sha256": "ec3a1137991bb256aeaa3416f2a87f0a438e88a4883b6c3cefb72c396370ef1f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quoted eID provision says 'ο Διευθυντής δίδει εντολή στον πάροχο υπηρεσιών ηλεκτρονικής ταυτότητας να εκδώσει ή ανανεώσει ηλεκτρονική ταυτότητα', and art. 2 of the same law defines 'Διευθυντής' as the Director of the 'Τμήμα', itself defined as the Civil Registry and Migration Department. The printed statement follows.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html"
+  },
+  {
+   "claim": "record:CY:electoral_roll:operator",
+   "fact_sha256": "d3d4c585c2aeda32e66945d6e946a78eddc33998f72fc45f605c5552a32dde3b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 97(1): 'Ο οικείος Έπαρχος εγγράφει στον εκλογικό κατάλογο ... κάθε εκλογέα', verbatim; the printed statement that the competent District Officer enters voters on the electoral roll matches.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html"
+  },
+  {
+   "claim": "record:CY:fingerprint_biometric:register",
+   "fact_sha256": "5521029b024d2e73bb07d7da3fcbf5dfd251801f63ed326781c25436e7bb7953",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Art. 63(5) (and 67(4) for passports) says fingerprints taken for an ID card may be used only to issue the card and are deleted within 48 hours, verbatim. That shows ID-document fingerprints are not retained under this law, but the source does not state that no central fingerprint register exists at all, so the general negative 'No central register' goes beyond what the page says.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2002_1_141/full.html"
+  },
+  {
+   "claim": "record:CY:firearms_register:operator",
+   "fact_sha256": "f97f3ac2ac5c038eb7d5e44944d234b74a74c761b617a649b746630327a80823",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 49Γ(1) says the firearms file is kept so that data are retained in the data filing system, verbatim, and the immediately preceding art. 49Α on the same page says 'Η Αστυνομία τηρεί αρχείο πυροβόλων όπλων'. Together they support 'Cyprus Police, keeping the data in a data filing system'.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2004_1_113/full.html"
+  },
+  {
+   "claim": "record:CY:firearms_register:register",
+   "fact_sha256": "53e29e189c8c3469a7a30b2ed9f417232c3eacea7f9d18ca6e98f31b64fa44d0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 49Α: 'Η Αστυνομία τηρεί αρχείο πυροβόλων όπλων στο οποίο καταγράφονται τα δεδομένα των πυροβόλων όπλων και των ουσιωδών συστατικών μερών', verbatim; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2004_1_113/full.html"
+  },
+  {
+   "claim": "record:CY:customs:operator",
+   "fact_sha256": "dc1d0d8342955a6f02e86eba9f05f9d774c3c33528fb08f3b3f1335043187f02",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Customs Code Law (94(I)/2004) art. 3(2): 'Το Τμήμα Τελωνείων είναι αρμόδιο, διά του Διευθυντή του', verbatim, with 'Διευθυντής' defined as the Director of the Customs Department. The Greek names only 'Τμήμα Τελωνείων' (Customs Department); the words 'and Excise' in the printed name are the conventional English rendering and are not in the quote.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2004_1_94/full.html"
+  },
+  {
+   "claim": "record:CY:geospatial:operator",
+   "fact_sha256": "15eb29c8c13fd5a969e5138d380f8cd554e139ab176903bc6f732ba505dba550",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "INSPIRE Law (43(I)/2010) art. 7(1) establishes the 'Διευθυντική Ομάδα' with the Director of the Department of Lands and Surveys (or representative) as its chair, verbatim; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2010_1_43/full.html"
+  },
+  {
+   "claim": "record:CY:geospatial:register",
+   "fact_sha256": "a751ba2d9f8a46dc2f9da1524dc4d790310858d269e5356f7b277076553ab417",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Annex entry '5. Διευθύνσεις Θέση ακινήτων με βάση τη διεύθυνση, συνήθως με όνομα οδού, αριθμό οικίας και ταχυδρομικό κώδικα' is on the page verbatim; the printed description of the address data theme matches it.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2010_1_43/full.html"
+  },
+  {
+   "claim": "record:CY:benefits_pensions:operator",
+   "fact_sha256": "b9b543ac5c36a5f46873ac8f9ffbf2bb2c30d7020041a1e3f0622b0fe6555586",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Social Insurance Law (59(I)/2010) art. 2 defines 'Διευθυντής' as the Director of the Social Insurance Services of the Ministry of Labour and Social Insurance, verbatim; the EC PDF also names the Social Insurance Services (ERGANI). The printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2010_1_59/full.html"
+  },
+  {
+   "claim": "record:CY:health_records:operator",
+   "fact_sha256": "96e642bc7ec9c924202538ba011eb96730373c10ad4790f761d2efdb00865f3e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "eHealth Law (59(I)/2019) art. 4(1): 'Ιδρύεται Αρχή υπό την επωνυμία «Εθνική Αρχή Ηλεκτρονικής Υγείας», η οποία αποτελεί νομικό πρόσωπο δημοσίου δικαίου', verbatim; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2019_1_59/full.html"
+  },
+  {
+   "claim": "record:CY:health_records:register",
+   "fact_sha256": "fc1903cf5bccb62078e1bb39a6d9acf7dd8998789858e06c2cb99f94642e96da",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Authority's functions include establishing 'της Ενιαίας Τράπεζας Ηλεκτρονικών Φακέλων Υγείας, η οποία φυλάσσει και διαχειρίζεται τους ηλεκτρονικούς φάκελους υγείας των πολιτών', verbatim; the printed name and description match.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2019_1_59/full.html"
+  },
+  {
+   "claim": "record:CY:official_gazette:operator",
+   "fact_sha256": "299d59cb235c8abfb9a669686e1f8c8f248420789c9163c864bf05de4724966b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Law 82(I)/2019 art. 3(2) says the electronic Gazette is made available on the Printing Office's website for unlimited time and access is free of charge, verbatim; 'Τυπογραφείο' is defined on the page as the Printing Office of the Republic of Cyprus, so 'Government Printing Office website' is a fair rendering.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2019_1_82/full.html"
+  },
+  {
+   "claim": "record:CY:official_gazette:register",
+   "fact_sha256": "89b1b9e8c20bb0eeac3bcf09df094d71a09e164394ae2b3c5908261160c7db2b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 3(1): the electronic edition of the Official Gazette 'αποτελεί τη μόνη αυθεντική έκδοση που παράγει έννομα αποτελέσματα', verbatim (subject to art. 4(2)); the EC PDF quote about Law 50(I)/2019 being published in the Official Gazette is also present. The printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2019_1_82/full.html"
+  },
+  {
+   "claim": "indicator:CY:L2",
+   "fact_sha256": "5fb0d300367a179f7c747fd6d4e6f7bdd6695b7a209e73cf689a172a5ec08868",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Law 84(I)/2021 on security rules for classified information defines 'διαβαθμισμένη πληροφορία' as information bearing a security classification of the Republic of any level (verbatim), states in art. 3(1)(b) that its purpose is to set the fundamental principles and security specifications for classified information in the Republic, and uses the levels ΑΚΡΩΣ ΑΠΟΡΡΗΤΟ, ΑΠΟΡΡΗΤΟ and ΕΜΠΙΣΤΕΥΤΙΚΟ. Tha",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2021_1_84/full.html"
+  },
+  {
+   "claim": "record:CY:border_control:register",
+   "fact_sha256": "68d9e1149e4333419f33f46cc6cc1c66246ed438efa6abc2742ca96977cff8fc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Law 171(I)/2023 art. 3: 'Η Αστυνομία Κύπρου ορίζεται ως αρμόδια αρχή στη Δημοκρατία για την εγκατάσταση, λειτουργία και συντήρηση του Εθνικού N.SIS', verbatim; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2023_1_171/full.html"
+  },
+  {
+   "claim": "record:CY:police_records:operator",
+   "fact_sha256": "c3cdefc023c5f9ce8ef5bf4eb679cc8bc4b0767a6c0bb8a71e14631fa80b5351",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is a mid-word fragment but appears verbatim within art. 6(2): 'Η Εθνική Υπηρεσία N.SIS αποτελεί Υπηρεσία της Αστυνομίας Κύπρου και υπάγεται στο Τμήμα Πληροφορικής της Αστυνομίας Κύπρου', which is exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2023_1_171/full.html"
+  }
+ ]
+}

@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "CZ-011",
+ "iso": "CZ",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:CZ:customs:register",
+   "fact_sha256": "67ba21da4b5dd61ca6f924575c518f16916773e93e36860127894c727c798051",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is a Customs Administration press release titled 'e-Dovoz' (29.10.2010) and says the launch of the automated import system will complete ('bude završena') electronic communication across all customs systems: transit, export and import. The name and scope match; note the source is a 2010 announcement written in the future tense.",
+   "quote_found": true,
+   "checked_url": "https://celnisprava.gov.cz/cz/crhradeckralove/tiskove-zpravy/2010/Stranky/e-dovoz.aspx"
+  },
+  {
+   "claim": "record:CZ:geospatial:register",
+   "fact_sha256": "9b5ab8bc42b2c54cac1bbcc1f1f1363db57c912375bfd770821244aceca52640",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ČÚZK 2025 annual report states that the theme Parcels is published from the ISKN database and Buildings, Addresses and administrative units from RÚIAN, via the ČÚZK Geoportal. Matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx"
+  },
+  {
+   "claim": "record:CZ:land_property:count",
+   "fact_sha256": "1ef4c99cc3776abe00effcfdfbb7bd550f800b2f0b039fc8ade55a1680571603",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The report says more than 33 million documents are available in the digital part of the collection of deeds ('sbírky listin'), in a passage about cadastre outputs at CzechPOINT. The figure, scope and 'more than' match.",
+   "quote_found": true,
+   "checked_url": "https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx"
+  },
+  {
+   "claim": "record:CZ:land_property:register",
+   "fact_sha256": "316ba443469b253777067faed908cd305d62cc32092e298a78b7c36ed77af59c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The report says the Czech cadastre is kept by means of an information system and defines ISKN as the integrated information system supporting state administration of the cadastre. Matches.",
+   "quote_found": true,
+   "checked_url": "https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx"
+  },
+  {
+   "claim": "param:CZ:gov_employment_k",
+   "fact_sha256": "b7b1eb9651b07ae4bf701a9c601991dbb9d521709fd03b14a745f68a6f3f9d7c",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns value 325.8 for geo=CZ, time=2024, unit THS_PER, nace O, na_item EMP_DC. Matches 325.8 thousand exactly.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=CZ&time=2024"
+  },
+  {
+   "claim": "param:CZ:gdp_eur_bn",
+   "fact_sha256": "38da90ab9c9064f3b2abe3e4295805a31da913e0433093859eafb4847cbe0d5a",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 347258.7 million EUR for CZ 2025, which scales to 347.26 bn and rounds to 347.3 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=CZ&time=2025"
+  },
+  {
+   "claim": "param:CZ:renewables_pct",
+   "fact_sha256": "b384cfe972411e18e6c3abeefb7f4dc505bf92c06889f42a51cb49762f68893c",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 19.2 (status 'p', provisional) for CZ 2025, REN_ELC, unit PC. Matches 19.2 %; the provisional flag is not contradicted by the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=CZ&time=2025"
+  },
+  {
+   "claim": "param:CZ:elec_price_eur_mwh",
+   "fact_sha256": "8f88c46b207742b488446726ff086ebbbb51a682f7c83adbbd3d189381e8af92",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1825 EUR per kWh for CZ, 2025-S2, band MWH500-1999, excluding VAT, which is 182.5 EUR/MWh as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=CZ&time=2025-S2"
+  },
+  {
+   "claim": "param:CZ:land_km2",
+   "fact_sha256": "5bc198b7bc43b86d1e0c0685ae0b13ec3fa4c3e677d90e784a6c5557b1a78c29",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 77212 km² for CZ, 2026, landuse L0008. Matches 77 212 km² exactly.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=CZ&time=2026"
+  },
+  {
+   "claim": "param:CZ:population_m",
+   "fact_sha256": "7ba0fd155508d8d4ba50aecd839f9f6fa37d898c22ab67c59cd2149f5429ec77",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 10915839 persons for CZ on 1 January 2026, which rounds to 10.92 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=CZ&time=2026"
+  },
+  {
+   "claim": "record:CZ:tax:register",
+   "fact_sha256": "6c3e8c4498303c7fbe882361ce366271d6730a4b15e6c3a7e1a58268e5deb888",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both Financial Administration organisational-rules PDFs name the 'Automatizovaný daňový informační systém' (ADIS); D4 says the unit takes part in developing and applying it, D15 lists ADIS among the systems. The documents are the Financial Administration's own organisational rules, so 'of the Financial Administration' is supported. Quote also found in OR_FS_UZ_D15.pdf.",
+   "quote_found": true,
+   "checked_url": "https://financnisprava.gov.cz/assets/cs/prilohy/fs-financni-sprava-cr/OR_FS_UZ_D4.pdf"
+  },
+  {
+   "claim": "record:CZ:emergency_communications:operator",
+   "fact_sha256": "73b4daee4220a657d0dd932398955de1eff55737a4e9985a5c8576d02b5cb40b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The HZS page says line 112 is provided by the fire rescue services of the individual regions in their Emergency Communication Centres (CTK). Matches the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://hzscr.gov.cz/clanek/hzs-jihomoravskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-dnes-je-evropsky-den-linky-112.aspx"
+  },
+  {
+   "claim": "record:CZ:emergency_communications:count",
+   "fact_sha256": "60e8bc391650f6be034c930092e089a059f363ee95e3590f7b8123f6f297309b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states that in 2025 operators of line 112 received 1 995 395 calls and 33 035 SMS. Figures and year match; the same sentence appears on the cited HZS South Bohemia page.",
+   "quote_found": true,
+   "checked_url": "https://hzscr.gov.cz/clanek/organizacni-slozky-zachranny-utvar-hzs-cr-menu-informacni-servis-zpravodajstvi-tisnova-linka-112-funguje-uz-22-let.aspx"
+  },
+  {
+   "claim": "record:CZ:emergency_communications:register",
+   "fact_sha256": "50e9f958356f0757c47e945839b85f1ea49f2cb2ab06805259c9eef6b7f3665a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says 14 call centres of line 112 currently operate in the Czech Republic and are interconnected by voice and data across the country. Matches '14 interconnected 112 call centres'.",
+   "quote_found": true,
+   "checked_url": "https://hzscr.gov.cz/clanek/tisnova-linka-112-ma-svuj-den"
+  },
+  {
+   "claim": "record:CZ:public_finance:register",
+   "fact_sha256": "c474781ecc10802cc3af29729761e373c4aaae6707c1bccdb493b6dfa6d84f8d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Ministry of Finance page says the MONITOR data come from the State Treasury system, spelled out as 'IISSP – Integrovaný informační systém Státní pokladny'. Name and expansion match.",
+   "quote_found": true,
+   "checked_url": "https://mf.gov.cz/cs/ministerstvo/informacni-systemy/iissp--monitor"
+  },
+  {
+   "claim": "indicator:CZ:C1",
+   "fact_sha256": "356eb7f672285798a7810653aa1990db635418f889bdf062de82cad2d9ad2c18",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The archived homepage of SPCSS, identified on the page as 'Státní pokladna Centrum sdílených služeb, s. p.' (a state enterprise), says under 'Naše datová centra' that it operates two independent sites (DC Vápenka, DC Zeleneč) connected by an optical ring. That is a state-owned body operating its own data centres today, so 'Yes' is supported.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260514094405/https://www.spcss.cz/"
+  },
+  {
+   "claim": "indicator:CZ:C2",
+   "fact_sha256": "528a55df76a8c376a78f64e56c3e86594d98d9057fe159ba54f52da33e37bb6b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "SPCSS describes itself in the present tense as the provider of the State part of the eGovernment cloud for the state administration, and Act 365/2000 § 6i (zakonyprolidi, quote found) provides for the government to mandate a state-established provider of state cloud computing. Together they support a government cloud in operation, not merely announced.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260514094405/https://www.spcss.cz/"
+  },
+  {
+   "claim": "record:CZ:central_bank:count",
+   "fact_sha256": "7f13a9d2923494ea08e9bc57a0ba616d470d748d0c8bbb9a3cb7c922f4cf4937",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CNB press release says that in 2024 CERTIS processed over 983 million items. Figure and year match.",
+   "quote_found": true,
+   "checked_url": "https://www.cnb.cz/cs/cnb-news/tiskove-zpravy/System-CERTIS-rocne-zpracuje-temer-miliardu-mezibankovnich-platebnich-transakci.-CNB-jej-nove-zpristupni-inbspnebankovnim-subjektum/"
+  },
+  {
+   "claim": "record:CZ:central_bank:operator",
+   "fact_sha256": "f973ac1809d6e7a72525c854552288f480f0fc872e651da20016ffe4a237ccb2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The press release states that CERTIS is currently operated by the Czech National Bank ('V současnosti jej provozuje Česká národní banka'). Matches.",
+   "quote_found": true,
+   "checked_url": "https://www.cnb.cz/cs/cnb-news/tiskove-zpravy/System-CERTIS-rocne-zpracuje-temer-miliardu-mezibankovnich-platebnich-transakci.-CNB-jej-nove-zpristupni-inbspnebankovnim-subjektum/"
+  },
+  {
+   "claim": "record:CZ:central_bank:register",
+   "fact_sha256": "99488729fbf55f3f705001f59b1176a56ef704efaad2ebad0ae9d0d0be2edeb2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CNB page says the only interbank payment system in the Czech Republic processing CZK interbank payments is the CERTIS system. Matches the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.cnb.cz/cs/platebni-styk/certis/popis-systemu-certis/"
+  },
+  {
+   "claim": "record:CZ:benefits_pensions:operator",
+   "fact_sha256": "a853e3ce919658a8789174d9f764c5f17612ec2208db40b1a08de420594fd668",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 582/1991 § 4c(1) says the Integrated Information System of the MPSV is a public-administration IS whose controller is the ministry and which includes, under letter b), the Integrated Information System of the Czech Social Security Administration (ČSSZ). Both parts of the printed statement are in the source; the zakonyprolidi quote was also found.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1991%2F582%2F2026-07-01/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:benefits_pensions:register",
+   "fact_sha256": "19fcbc94468b01e9ec71875fd9048619b816aa2dbca3d74661dc6b82e876a581",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 5 of Act 582/1991 is headed 'Česká správa sociálního zabezpečení' and letter g) says it keeps the register of pension-insurance insured persons ('registr pojištěnců důchodového pojištění'). The subject ČSSZ and the register match.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1991%2F582%2F2026-07-01/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:land_property:operator",
+   "fact_sha256": "9ed81e7724a0a214d15d32d25a80deac257274e70b97ff02ef1f1af2a8929f8b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 359/1992 § 1(1) establishes the Český úřad zeměměřický a katastrální as the central administrative authority for surveying and the real-estate cadastre. Matches; the zakonyprolidi quote was also found.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1992%2F359%2F2024-01-01/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:health_insurance:register",
+   "fact_sha256": "16014aa4da32e7a92aa76d671e8da3cf4af5edd5fcc9f2e6191489d0e68c8627",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 592/1992 states that the Všeobecná zdravotní pojišťovna keeps the register of all persons insured under public health insurance (the central register of insured persons). Matches; the zakonyprolidi quote was also found.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1992%2F592%2F2026-05-27/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:judicial_criminal:operator",
+   "fact_sha256": "0637567f48b0869d42f37bd71e6b04fddd868fb690b52b2eaba0538492a1f666",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 269/1994 § 1a(1) says the controller ('správce') of the criminal records register is the Ministry of Justice. Matches; the zakonyprolidi quote was also found.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1994%2F269%2F2026-07-01/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:judicial_criminal:register",
+   "fact_sha256": "a4c117f2b4d98994574c9ee954cbafa935537d3662d79e212874f912ed6606da",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 1a(1) defines the Rejstřík trestů as a public-administration information system containing data on natural and legal persons finally convicted by courts in criminal proceedings. Matches the printed description.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1994%2F269%2F2026-07-01/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:education:register",
+   "fact_sha256": "995a72fc1f824cad642ff73f1ace4104ef28f5473a93f7451db3705dd7aeb623",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 111/1998 § 88(1) says a higher education institution keeps a student register ('matrika studentů') that serves to keep records on students. Matches.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1998%2F111%2F2026-01-01/fragmenty?cisloStranky=1"
+  },
+  {
+   "claim": "record:CZ:residence_permits:register",
+   "fact_sha256": "6701db814359e879002c4d609177f8ac59026293a8b3adb3fbb6f9ee431e335f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 326/1999 § 158(1) says the Police operate the foreigners' information system, of which they are the controller, and that it contains an image record such as a photograph and dactyloscopic fingerprints. All elements of the printed statement are in the paragraph; the zakonyprolidi quote was also found.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1999%2F326%2F2026-06-12/fragmenty?cisloStranky=2"
+  },
+  {
+   "claim": "record:CZ:civil_registry:register",
+   "fact_sha256": "335a8314bb83ce7085102c42b3562f3434b4e0febc798c0210fc186ffb43e3a4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 133/2000 § 3(1) says population records are kept in the 'informační systém evidence obyvatel'. Matches the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F133%2F2025-01-01/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:crisis_management:operator",
+   "fact_sha256": "9648663769caae51e2a115fbbd5c63425447767f68b1a03fb04b82f5f041b839",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 240/2000 § 26(2) says administration of the crisis-management information system is ensured by the Ministry of the Interior, with the related tasks performed by the general directorate of the Fire Rescue Service. Matches; the zakonyprolidi quote was also found.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F240%2F2025-08-19/fragmenty?cisloStranky=0"
+  }
+ ]
+}

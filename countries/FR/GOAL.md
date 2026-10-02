@@ -83,7 +83,7 @@ The holdings France cannot let depend on infrastructure a foreign state can comp
 | High | Government payroll and personnel (tier 1) | PAYSAGE consolidates the payroll application for State employees[^s40] | Listed among IT projects carried by budget programmes 156 and 218[^s40] | *Not stated in sources* | *Not yet measured* |
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Central bank systems (tier 1) | French component of the Eurosystem's TARGET services[^s41] | Banque de France[^s41] | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | Artemis: AI applications for massive processing of military data[^s30] | *Not yet sourced* | National infrastructure[^s30] | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | Artemis: AI applications for massive processing of military data[^s30] | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page, but it only says the DGA awarded the Artemis initiative to Atos-Bull, Capgemini and Thales-Sopra Steria (framed as 'initiatives françaises' responding to Palantir); it says nothing about where defence command and l It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
 | High | Emergency calls and public-safety radio (tier 1) | NexSIS pools the information systems of fire and rescue services[^s42] | ANSC designs, deploys and maintains NexSIS[^s42] | *Not stated in sources* | *Not yet measured* |
 | High | Crisis management and civil protection (tier 1) | FR-Alert, the public warning system over mobile telephony[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | Téléconduite: the tools that control the power system, from dispatching rooms to substations[^s43] | RTE is the French transmission system operator[^s44] | *Not stated in sources* | *Not yet measured* |
@@ -93,8 +93,8 @@ The holdings France cannot let depend on infrastructure a foreign state can comp
 | Standard | Official gazette and legislation (tier 1) | The JO is made available electronically, permanently and free of charge[^s48] | DILA publishes the JORF[^s48] | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | The notifiable-diseases system covers 38 diseases[^s49] | Data go to the ARS and to Santé publique France epidemiologists[^s49] | *Not stated in sources* | *Not yet measured* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | Secure access services for confidential data[^s50] | CASD is a GIP whose members include the State represented by Insee[^s50] | National infrastructure[^s51] | *Not yet measured* |
-| Standard | Geospatial base data (tier 3) | BAN is a State database listing all addresses in France[^s52] | IGN runs operation and distribution of the BAN[^s52] | *Not stated in sources* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* |
+| Standard | Statistical microdata (tier 2) | Secure access services for confidential data[^s50] | CASD is a GIP whose members include the State represented by Insee[^s50] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote only says CASD designed its own dedicated secure equipment (the SD-Box) following three principles; neither it nor the rest of the page says where the central infrastructure is hosted, by whom or in which country, so it does not e It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | BAN is a State database listing all addresses in France[^s51] | IGN runs operation and distribution of the BAN[^s51] | *Not stated in sources* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* |
 
 ## 4. Foreign-dependency exposure
 
@@ -143,7 +143,7 @@ Tier 0 and 1 holdings for France without a verified source yet. Corrections and 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
 
 ### How sources were found
 
@@ -199,10 +199,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
-| T2 competent public body or audit office | 633 |
-| T3 other institution or company | 9 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
+| T2 competent public body or audit office | 589 |
+| T3 other institution or company | 7 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
 
 ### Evidence grades
 
@@ -211,8 +211,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 106 |
-| Standard | 1282 |
+| Strong | 100 |
+| Standard | 1209 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -253,7 +253,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1388 printed facts pass the fact check.
+In this build, 1309 of 1309 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -295,7 +295,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
+In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -318,93 +318,95 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about France
 
-0 of 75 printed facts about France pass.
+73 of 73 printed facts about France pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
-| indicator:FR:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
-| indicator:FR:L3 | indicator L3: Is a cloud certification that requires immunity from non-EU law in force or adopted for government use? | unrecorded | none | never checked |  |
-| indicator:FR:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:FR:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:FR:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
-| indicator:FR:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
-| param:FR:population_m | param:FR:population_m | program:fetch_eurostat.py | none | never checked |  |
-| param:FR:gdp_eur_bn | param:FR:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
-| param:FR:gov_employment_k | param:FR:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
-| param:FR:elec_price_eur_mwh | param:FR:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
-| param:FR:renewables_pct | param:FR:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
-| param:FR:land_km2 | param:FR:land_km2 | program:fetch_eurostat.py | none | never checked |  |
-| record:FR:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:civil_registry:count | Civil registry core: how many records it holds | unrecorded | none | never checked |  |
-| record:FR:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:fingerprint_biometric:operator | Fingerprint biometric: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:breeder_documents:count | Breeder document scans: how many records it holds | unrecorded | none | never checked |  |
-| record:FR:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:land_property:count | Land & property registry: how many records it holds | unrecorded | none | never checked |  |
-| record:FR:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:police_records:operator | Police information systems: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:intelligence:register | Intelligence services: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:benefits_pensions:count | Benefits & pensions: how many records it holds | unrecorded | none | never checked |  |
-| record:FR:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:firearms_register:register | Firearms register: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:firearms_register:operator | Firearms register: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:government_payroll:operator | Government payroll and personnel: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:central_bank:register | Central bank systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:central_bank:operator | Central bank systems: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:defence_command:register | Defence command and logistics: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:defence_command:foreign_dependency | Defence command and logistics: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:FR:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:water_control:register | Water management control: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:water_control:operator | Water management control: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:health_records:register | Health records: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:statistics_microdata:operator | Statistical microdata: the body that operates it | unrecorded | none | never checked |  |
-| record:FR:statistics_microdata:foreign_dependency | Statistical microdata: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:FR:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
-| record:FR:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | none | never checked |  |
+| indicator:FR:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:FR:L3 | indicator L3: Is a cloud certification that requires immunity from non-EU law in force or adopted for government use? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:FR:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:FR:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:FR:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:FR:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:FR:population_m | param:FR:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:FR:gdp_eur_bn | param:FR:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:FR:gov_employment_k | param:FR:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:FR:elec_price_eur_mwh | param:FR:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:FR:renewables_pct | param:FR:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:FR:land_km2 | param:FR:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:civil_registry:count | Civil registry core: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:fingerprint_biometric:operator | Fingerprint biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:breeder_documents:count | Breeder document scans: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:land_property:register | Land & property registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:land_property:count | Land & property registry: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:police_records:operator | Police information systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:intelligence:register | Intelligence services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:benefits_pensions:count | Benefits & pensions: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:business_registry:operator | Business registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:firearms_register:operator | Firearms register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:government_payroll:operator | Government payroll and personnel: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:central_bank:operator | Central bank systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:defence_command:register | Defence command and logistics: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:water_control:register | Water management control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:water_control:operator | Water management control: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:statistics_microdata:operator | Statistical microdata: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: France
 
-None.
+| Claim | What it answers | Checked by | Verdict | Reason |
+|---|---|---|---|---|
+| record:FR:defence_command:foreign_dependency | Defence command and logistics: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | claude-fable-5-1 | not supported | The quote is on the page, but it only says the DGA awarded the Artemis initiative to Atos-Bull, Capgemini and Thales-Sopra Steria (framed as 'initiatives françaises' responding to Palantir); it says nothing about where defence command and logistics infrastructure runs, and Artemis is an AI-applications ecosystem rather than that infrastructure. The label 'National infrastructure' is an inference t |
+| record:FR:statistics_microdata:foreign_dependency | Statistical microdata: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | claude-fable-5-1 | not supported | The quote only says CASD designed its own dedicated secure equipment (the SD-Box) following three principles; neither it nor the rest of the page says where the central infrastructure is hosted, by whom or in which country, so it does not establish the categorical label 'National infrastructure' over an EU or non-EU provider. |
 
 ---
 
@@ -458,9 +460,8 @@ None.
 [^s48]: DILA — Diffusion légale, 2026-06-26. Diffusion légale. <https://www.dila.premier-ministre.gouv.fr/institution/missions/article/diffusion-legale> ([archived](https://web.archive.org/web/20251102205650/https://www.dila.premier-ministre.gouv.fr/institution/missions/article/diffusion-legale))
 [^s49]: Santé publique France — Maladies à signalement obligatoire, 2026-04-22. Maladies à signalement obligatoire. <https://www.santepubliquefrance.fr/maladies-a-declaration-obligatoire> ([archived](https://web.archive.org/web/20260305175756/https://www.santepubliquefrance.fr/maladies-a-declaration-obligatoire))
 [^s50]: CASD — Gouvernance et Missions. Gouvernance et Missions. <https://www.casd.eu/le-casd/gouvernance-et-missions/>
-[^s51]: CASD — Infrastructure. Infrastructure. <https://www.casd.eu/technologie/infrastructure/> ([archived](https://web.archive.org/web/20260310125751/https://www.casd.eu/technologie/infrastructure/))
-[^s52]: adresse.data.gouv.fr (DINUM / IGN) — Découvrir la Base Adresse Nationale. Découvrir la Base Adresse Nationale. <https://adresse.data.gouv.fr/decouvrir-la-BAN> ([archived](https://web.archive.org/web/20260921135714/https://adresse.data.gouv.fr/decouvrir-la-BAN))
+[^s51]: adresse.data.gouv.fr (DINUM / IGN) — Découvrir la Base Adresse Nationale. Découvrir la Base Adresse Nationale. <https://adresse.data.gouv.fr/decouvrir-la-BAN> ([archived](https://web.archive.org/web/20260921135714/https://adresse.data.gouv.fr/decouvrir-la-BAN))
 
-**Evidence grades:** 6 Strong, 69 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 6 Strong, 67 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

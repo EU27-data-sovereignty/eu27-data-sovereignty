@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "IT-036",
+ "iso": "IT",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:IT:national_archives:register",
+   "fact_sha256": "6036ad9a70f379cdbecad6fa1b3468d642a9bacb7109ca4ae2592d4951277b81",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the Archivio Centrale dello Stato has among its main institutional tasks the realisation of the Repository of digital archives produced by the central bodies of the State, which matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://acs.cultura.gov.it/piano-nazionale-di-ripresa-e-resilienza-del-ministero-della-cultura/polo-di-conservazione-digitale/"
+  },
+  {
+   "claim": "record:IT:electoral_management:operator",
+   "fact_sha256": "9df50899d2e5ed92666916a46923b2bc2e8fcb0db86842360241f778f2326754",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes are verbatim: the DAIT page names the Direzione Centrale per i Servizi Elettorali as the area for information and publication of election data and, right after, says turnout data and results ('dati dell'affluenza e risultati') are made available; elezionistorico.interno.gov.it says Eligendo is maintained by that directorate.",
+   "quote_found": true,
+   "checked_url": "https://dait.interno.gov.it/elezioni"
+  },
+  {
+   "claim": "record:IT:electoral_management:register",
+   "fact_sha256": "3cdaedbe6c1207fc0ebc35f6e26874020310ad545f52825831d8b1c163d9d87f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is verbatim and the sentence continues 'partendo dagli aggregati complessivi fino al dettaglio dei singoli comuni', so the online results database down to municipality level is stated on the page.",
+   "quote_found": true,
+   "checked_url": "https://dait.interno.gov.it/elezioni"
+  },
+  {
+   "claim": "param:IT:gov_employment_k",
+   "fact_sha256": "612283a03563c6e5b213db8a8224eef7dce5f3eb55c9289c53da18aad32350e2",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 1213.1 for geo IT, time 2024 (thousand persons), matching the printed 1 213.1 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=IT&time=2024"
+  },
+  {
+   "claim": "param:IT:gdp_eur_bn",
+   "fact_sha256": "bc36012c47ba946974f1e82ce4a05ab09eb17ed100e2fd165b634e8615ea6dd3",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 2265002.5 million EUR for IT, 2025, which scaled to billions and rounded is 2 265.0 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=IT&time=2025"
+  },
+  {
+   "claim": "param:IT:renewables_pct",
+   "fact_sha256": "9a1cf3d191e8df405ac38254b3e99ef4df00270a94fd4695992a0337220e611a",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 43.5 for IT, 2025 (flagged provisional 'p'), matching the printed 43.5 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=IT&time=2025"
+  },
+  {
+   "claim": "param:IT:elec_price_eur_mwh",
+   "fact_sha256": "d10e67e9ecb12de229534f05636cc3c0aee2733a809b9689ac359ac3c4563c0e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.2203 EUR/kWh for IT, 2025-S2, band MWH500-1999 excluding VAT, which is 220.3 EUR/MWh as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=IT&time=2025-S2"
+  },
+  {
+   "claim": "param:IT:land_km2",
+   "fact_sha256": "b64fb146be41fee3680121c92aa429ec3069de2d847eb7b5c2357a3f2b2db1f3",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 297823 km2 for IT, 2026, matching the printed 297 823 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=IT&time=2026"
+  },
+  {
+   "claim": "param:IT:population_m",
+   "fact_sha256": "ab60dfd208ffec2bad5fa96b4a3a3752c7d239ef4c01399efb684f601737a532",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 58942828 persons for IT, 1 January 2026 (provisional), which rounds to 58.94 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=IT&time=2026"
+  },
+  {
+   "claim": "indicator:IT:K1",
+   "fact_sha256": "ee08b173f38a237fc5a579c8eb3a11830a038fac35a795c6a11cb93f5d1903a4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Italian trusted list contains the quoted service name under a QTST (qualified time-stamp) service entry for the Ministero della Difesa, i.e. a qualified trust service operated by a state body, which supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://eidas.agid.gov.it/TL/TSL-IT.xml"
+  },
+  {
+   "claim": "indicator:IT:K2",
+   "fact_sha256": "2a8de3307b772ed5f2904e5a57b3fa9d724bb352e0c847505470b5b3462a5ae5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The trusted list lists the 'National root CA for the Italian Electronic Identity Card' with O=Ministero dell'Interno, so the eID scheme's root is operated by a state ministry, supporting 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://eidas.agid.gov.it/TL/TSL-IT.xml"
+  },
+  {
+   "claim": "record:IT:government_payroll:operator",
+   "fact_sha256": "62cdac6976f204fab0f9c5248bfeea63cb18af6af3f52c1400d99e8dccf11f77",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states NoiPA is the platform built by the DAG of the MEF for managing public-administration personnel, matching the printed operator exactly.",
+   "quote_found": true,
+   "checked_url": "https://noipa.mef.gov.it/cl/chi-siamo"
+  },
+  {
+   "claim": "record:IT:government_payroll:register",
+   "fact_sha256": "85c6c474e750c1eb691a015cd935bcd7da73fd9aa37569f92950a83be9bb97ba",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same verbatim sentence names NoiPA as the platform for managing PA personnel, which supports the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://noipa.mef.gov.it/cl/chi-siamo"
+  },
+  {
+   "claim": "indicator:IT:L1",
+   "fact_sha256": "550d3f94366ee8d5d9f09b6075c2713a5f35a8ee2ac51dcee0b08c7c7ccb560f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes are verbatim; the ACN cloud regulation's Annex 2 requirement 2_O states that the administration's data are processed on infrastructure located in EU territory, a binding regulatory requirement for EU jurisdiction, and the normattiva art. 33-septies text adds the national-territory infrastructure provision.",
+   "quote_found": true,
+   "checked_url": "https://www.acn.gov.it/portale/documents/d/guest/regolamentocloud"
+  },
+  {
+   "claim": "indicator:IT:L3",
+   "fact_sha256": "6e514234a6e914cec291a1eb02f7ffa72fb7b4ba69c81eab5342e512ba32d8a8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The regulation (art. 17) restricts 'strategic' data and services to QC3/QC4 qualified cloud services, and Annex 2 strategic-level requirements (6_S, 8_S) only require notifying ACN of non-EU-entity access requests, granting it solely with the administration's explicit authorisation, and EU-located metadata, not full immunity from non-EU law; a qualification scheme is in force with partial immunity",
+   "quote_found": true,
+   "checked_url": "https://www.acn.gov.it/portale/documents/d/guest/regolamentocloud"
+  },
+  {
+   "claim": "indicator:IT:L2",
+   "fact_sha256": "00a3716fd7e7775404f7a124ade28d352edbdff8bc5f1b99ea20b73d9f394365",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The strategy page says ACN Regulation 21007/2024 establishes the procedures for classifying PA data and services (quote verbatim apart from a tag-induced space before a comma), and the regulation itself classifies data and services into three classes, so the classification scheme sits in a binding regulation.",
+   "quote_found": true,
+   "checked_url": "https://www.acn.gov.it/portale/strategia-cloud-italia"
+  },
+  {
+   "claim": "record:IT:customs:register",
+   "fact_sha256": "4885415eb32e2bbe216f3ccd754bc6e49926a928c3efe7825f8a23e51b046641",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ADM Libro blu 2024 says its BI system includes the DWH AIDA (Automazione Integrata Dogane Accise), a data management and reporting system collecting the Agency's operational data, matching the printed register.",
+   "quote_found": true,
+   "checked_url": "https://www.adm.gov.it/portale/documents/20182/261920520/Libro+blu+2024+-+Relazione.pdf/e46989ce-b39f-a404-3b4b-2af3196cba43?t=1784560697678"
+  },
+  {
+   "claim": "record:IT:trust_services_pki:operator",
+   "fact_sha256": "6cc9218dfa8b5db7914174d92740139b5f6e28abf03973f5f3e49a2e70541a48",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The AgID page says qualified trust service providers are subject to supervision by competent authorities, 'AgID per l'Italia', and that AgID qualifies trust service providers, which supports the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.agid.gov.it/it/piattaforme/firma-elettronica-qualificata"
+  },
+  {
+   "claim": "record:IT:public_finance:operator",
+   "fact_sha256": "4d16a651083cc5ba75e284e7a35d5ab18c0a6cad3af5540d3c699be36f3623f1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The AgID SIOPE page states electronic orders must pass through the SIOPE+ infrastructure 'gestita dalla Banca d'Italia'; the RGS page says the same of the SIOPE infrastructure. Both quotes are verbatim.",
+   "quote_found": true,
+   "checked_url": "https://www.agid.gov.it/it/piattaforme/siope"
+  },
+  {
+   "claim": "record:IT:public_finance:register",
+   "fact_sha256": "8b2ab8989e78d59ee513288b1ff546271696865e6845a059c3bf628a122609f1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The AgID page defines SIOPE as the infrastructure for electronic monitoring of receipts and payments made by the treasurers of all public administrations, which is exactly the printed statement; the RGS quote on SIOPE+ is also verbatim.",
+   "quote_found": true,
+   "checked_url": "https://www.agid.gov.it/it/piattaforme/siope"
+  },
+  {
+   "claim": "record:IT:civil_registry:operator",
+   "fact_sha256": "031f80a555c43c266853565f7dc4d70eb11de87d81dcd72418c1fb59988a0956",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ANPR site says ANPR is established at the Ministry of the Interior, which relies on Sogei S.p.A. for the technical part; the mission page says implementation is entrusted to Sogei. Both quotes are verbatim and match the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.anagrafenazionale.interno.it/anpr/"
+  },
+  {
+   "claim": "record:IT:civil_registry:register",
+   "fact_sha256": "4b1bfb22b990235237d5fe4e554f0d53232d687576b552a52fa9c132c74f4ebe",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page defines the Anagrafe nazionale della popolazione residente (ANPR) as the Ministry of the Interior's single database, and art. 62 CAD on normattiva establishes ANPR at the Ministry as a database of national interest; both support the printed name and description.",
+   "quote_found": true,
+   "checked_url": "https://www.anagrafenazionale.interno.it/anpr/"
+  },
+  {
+   "claim": "record:IT:breeder_documents:register",
+   "fact_sha256": "7832e61b04b892c92b1b1854d98f541a190492ec9066d1d6ec20881eaf2c5fc8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Both quotes are verbatim and support 'ANSC - national computerised archive of civil-status registers', but neither the ANSC guide page nor art. 62 CAD says the registers are those of births, marriages and deaths; the printed parenthetical '(births, marriages, deaths)' is an addition the cited sources do not state (art. 62 mentions birth and death declarations only as ANPR services, not as ANSC con",
+   "quote_found": true,
+   "checked_url": "https://www.anagrafenazionale.interno.it/area-tecnica/guida-ansc/"
+  },
+  {
+   "claim": "record:IT:central_bank:operator",
+   "fact_sha256": "43d9edcb762ab98d6c994d1ce4bd31ded47ecd0b3c14de601000e82e33857d3a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states that at national level the Banca d'Italia operates ('gestisce') the BI-Comp system (quote verbatim except a tag-induced space before a comma), supporting Banca d'Italia as the operator.",
+   "quote_found": true,
+   "checked_url": "https://www.bancaditalia.it/compiti/sistema-pagamenti/index.html"
+  },
+  {
+   "claim": "record:IT:central_bank:register",
+   "fact_sha256": "5a2efa85c93e7f5766828824b3a61bdbad9231e4e933835090effed2e6591274",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same sentence names BI-Comp as the system performing multilateral clearing of payments to be settled in T2 at national level, matching the printed 'BI-Comp (national multilateral clearing system)'.",
+   "quote_found": true,
+   "checked_url": "https://www.bancaditalia.it/compiti/sistema-pagamenti/index.html"
+  },
+  {
+   "claim": "record:IT:health_records:operator",
+   "fact_sha256": "9cf24455715427f4edbf5280035e2408d78e81a7e5a3cdf9f965495817b2e443",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 12(2) DL 179/2012 says 'Il FSE è istituito dalle regioni e province autonome', and fascicolosanitario.gov.it says FSE information is supplied and managed by the individual Regions and Autonomous Provinces; both quotes are verbatim and match the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art12"
+  },
+  {
+   "claim": "record:IT:health_records:register",
+   "fact_sha256": "46f58f33a1b8a3f0739342200415a8becf741b4cf30140aa0c8eb5b28ecfef06",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 12(1) defines the fascicolo sanitario elettronico (FSE) as the set of digital health and social-care data and documents generated by the patient's clinical events, which supports the printed description; the portal quote is also verbatim.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art12"
+  },
+  {
+   "claim": "record:IT:official_gazette:operator",
+   "fact_sha256": "c7216748b7eaabbbd49429182285a66c1d839dc05ecd1fc823bb3602aeec5ffe",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The gazzettaufficiale.it page states that the Istituto Poligrafico e Zecca dello Stato S.p.A. promotes the widest availability of the Gazzetta Ufficiale in digital format, on the site it serves, which supports IPZS as the body publishing the digital Gazzetta; note the source says 'promuove la fruibilità' rather than literally 'publishes'.",
+   "quote_found": true,
+   "checked_url": "https://www.gazzettaufficiale.it/"
+  },
+  {
+   "claim": "record:IT:official_gazette:register",
+   "fact_sha256": "285b684601145d3fd6fd92c7d855be77c025f06b01e55f29d7b39709704ff53e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the only definitive text is the one published in the printed Gazzetta Ufficiale, which prevails in case of discrepancy, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gazzettaufficiale.it/"
+  },
+  {
+   "claim": "record:IT:facial_biometric:foreign_dependency",
+   "fact_sha256": "a4430e582e4be7d9e05fe64aeb860ff8ff35b9384c07d7686faa902a70549c57",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CIE decree (GU 302/2015) defines the primary biometric element as the holder's facial image and the CNSD as the Centro Nazionale dei Servizi Demografici at the Ministry of the Interior; the quoted passage (verbatim across a line-break hyphenation) says the Ministry's directorate provides, under its responsibility, the IT infrastructure located in the CNSD including the CIE issuance circuit, wh",
+   "quote_found": true,
+   "checked_url": "https://www.gazzettaufficiale.it/eli/gu/2015/12/30/302/sg/pdf"
+  }
+ ]
+}

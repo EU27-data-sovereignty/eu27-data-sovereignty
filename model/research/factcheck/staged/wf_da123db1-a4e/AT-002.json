@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "AT-002",
+ "iso": "AT",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:AT:digital_identity_credentials:register",
+   "fact_sha256": "447aae70ad088f4edf8cefd7a98e347a2065ea0a79cd7be8f2de4e8536822e8d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The BRZ page says 'Die ID Austria ist der österreichische elektronische Identitätsnachweis (eID)', and the E-GovG (RIS 20003230) defines 'Elektronischer Identitätsnachweis (E-ID)' in § 2 Z 10; together they give the register name E-ID branded ID Austria exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.brz.gv.at/was-wir-tun/services-produkte/id-austria.html"
+  },
+  {
+   "claim": "record:AT:business_registry:count",
+   "fact_sha256": "d7afc0dfdba6ef5e148a035d4f7c51713e3937d1aecea1c082b749c938acb3fb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live page says verbatim 'Das Firmenbuch liefert zuverlässige Daten zu etwa 545.000 Firmen', matching the printed figure and the company register as its scope.",
+   "quote_found": true,
+   "checked_url": "https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html"
+  },
+  {
+   "claim": "record:AT:business_registry:operator",
+   "fact_sha256": "ab4c9c1e6c3f22804c56922097a7b931e6f53605baf0c836de3fff2f6681dedf",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the BRZ has operated the Firmenbuch for the Justizministerium since 1991 and is responsible for its operation. The expansion 'Bundesrechenzentrum GmbH' is not spelled out on this page (the page title is just 'BRZ'), but it is the acronym of the publishing organisation, not an added fact.",
+   "quote_found": true,
+   "checked_url": "https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html"
+  },
+  {
+   "claim": "record:AT:business_registry:register",
+   "fact_sha256": "4e3d992f1ba7776e2d3e7d9c523995788a1ccd898143f4128e9bb9b6ee8c9203",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page section is headed 'Das Firmenbuch' and the quote names the Firmenbuch as the companies register the BRZ operates, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html"
+  },
+  {
+   "claim": "record:AT:land_property:register",
+   "fact_sha256": "0e60da8c809ac08379dad9381b2b29a4eb0249bc35997a340246a9c89d7be38d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page has the section 'Das Grundbuch' with the quoted sentence that the BRZ operates and develops the Grundbuch; the register name matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html"
+  },
+  {
+   "claim": "record:AT:trust_services_pki:count",
+   "fact_sha256": "96d8c4996d18c575301e8845b858c299fb7aacfb303c5455688d31bbc5203a43",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Chancellery release says verbatim that as of 1 September 2026 there were 'fast 6,3 Millionen' ID Austria registrations, which is exactly the number, unit and date printed. Note the source counts ID Austria registrations; the printed text says so explicitly, and placing that count under 'State PKI and qualified trust services' is the report's classification, not something the page states.",
+   "quote_found": true,
+   "checked_url": "https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/2026/09/proell-6-3-millionen-ausgestellte-id-austria-nach-erfolgreicher-id-austria-servicetour.html"
+  },
+  {
+   "claim": "record:AT:central_bank:register",
+   "fact_sha256": "7edf396908c6d9099e96065f812c2e7b174994f2f20e7dc3edec2a9923d11779",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live OeNB page has been rewritten and no longer contains the quoted sentence (it now describes TARGET-Dienste as T2 with CLM and RTGS, T2S, TIPS and ECMS); the archived copy of 12 March 2026 contains it verbatim ('Die vier Komponeten RTGS, TIPS, T2S und CLM werden unter dem gemeinsamen Namen TARGET Services geführt'), which supports the printed name and four components. The citation should be ",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260312220131/https://www.oenb.at/Zahlungsverkehr/target-services.html"
+  },
+  {
+   "claim": "record:AT:issuance_history:register",
+   "fact_sha256": "075b3ea29956b43603f805938bfb5a5cad8c82794c7abd835c2983b23eb92cb4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The police GDPR notice is titled 'Zentrales Identitätsdokumentenregister (IDR)' and the Rechnungshof report refers to the Identitätsdokumentenregister for E-ID registration; both give the register name and abbreviation as printed (the PDF adds 'Zentrales', which the printed name omits).",
+   "quote_found": true,
+   "checked_url": "https://www.polizei.gv.at/bgld/files_bgld/datenschutz/2023/zentrales_identitaetsdokumentenregister_idr_012023_bf.pdf"
+  },
+  {
+   "claim": "record:AT:firearms_register:operator",
+   "fact_sha256": "605b138611188e1a462d031343d59a71626bb721b0ac2806293b72afe32c3dfe",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF lists the Auftragsverarbeiter verbatim as Bundesminister für Inneres; IBM Österreich Internationale Büromaschinen GmbH; Microsoft Österreich GmbH; Bundesrechenzentrum GmbH, Österreichische Staatsdruckerei; ermächtigte Gewerbetreibende. Every body printed is in that list; the printed text omits the Staatsdruckerei and the authorised traders and presents the Minister first, which is an omiss",
+   "quote_found": true,
+   "checked_url": "https://www.polizei.gv.at/stmk/files_stmk/datenschutz/2020/BF_Zentrales%20Waffenregister_20200224.pdf"
+  },
+  {
+   "claim": "record:AT:firearms_register:register",
+   "fact_sha256": "24e3e88259e1199ecb22c55bb99002a149714a062d2553726c202c0e4e0f326f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF title names the joint processing 'Zentrales Waffenregister', exactly the register name printed.",
+   "quote_found": true,
+   "checked_url": "https://www.polizei.gv.at/stmk/files_stmk/datenschutz/2020/BF_Zentrales%20Waffenregister_20200224.pdf"
+  },
+  {
+   "claim": "record:AT:issuance_history:foreign_dependency",
+   "fact_sha256": "231d16be2ebfc2b0518fe6c9ad0001b67485a934b097d9d586591cc178ef29d9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Both quotes are present (the RH sentence is split by a line-break hyphen 'Identitätsdokumentenregis- ters') and establish that BRZ GmbH, a federal body, is the statutory processor of the register; neither source says where the infrastructure runs or rules out further (possibly foreign) sub-processors, so 'National infrastructure' is an inference from the processor's identity rather than a statemen",
+   "quote_found": true,
+   "checked_url": "https://www.rechnungshof.gv.at/rh/home/home/2023_7_E-ID.pdf"
+  },
+  {
+   "claim": "indicator:AT:K2",
+   "fact_sha256": "3fe3520471563687bf9d486887027a5a1ea88612db333ac8dfd73958d6f60263",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "E-GovG § 4a authorises the Bundesminister für Inneres and the Stammzahlenregisterbehörde, both state bodies, to process the E-ID data for administering the E-ID, and the Rechnungshof news item says the ministry's contractor was almost exclusively the Bundesrechenzentrum (BRZ) GmbH; that supports 'Yes' to state operation. The RH page adds that most contracted work was done by BRZ subcontractors, wh",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230"
+  },
+  {
+   "claim": "record:AT:judicial_criminal:operator",
+   "fact_sha256": "a3704e2cdd8d8eba6f48d328814ed48d48fd232eb8dcd6049bb25d22e75d94da",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Strafregistergesetz 1968 says verbatim that keeping the Strafregister is the task of the Landespolizeidirektion Wien as controller, which is the operator printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10002116"
+  },
+  {
+   "claim": "record:AT:judicial_criminal:register",
+   "fact_sha256": "e7e5bdb18f86eb0aaf991a5847bbe430a267fbde200f3f465941862c0b2407d9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 1 of the Strafregistergesetz says a Strafregister is kept for the whole federal territory to record criminal convictions, matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10002116"
+  },
+  {
+   "claim": "indicator:AT:L2",
+   "fact_sha256": "7bf06c7482b71cadbf0f4f1478b29c8af3f838e7e85b92c99c38187c04164878",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "RIS 20001740 is the Informationssicherheitsgesetz (a federal statute) and contains the quoted 'GEHEIM' classification definition; RIS 10005792 is the Sicherheitspolizeigesetz § 55 Abs. 3, which likewise defines 'vertraulich', 'geheim' and 'streng geheim' in statute. Both are Bundesgesetze, so a statutory classification scheme is established as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20001740"
+  },
+  {
+   "claim": "record:AT:facial_biometric:foreign_dependency",
+   "fact_sha256": "41e1eb60fcf180a8eadf4bfaecd246f25e3335ec59969d7d110d86a8138dcc5f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The Passgesetz says verbatim that Bundesrechenzentrum GmbH takes part as processor in the § 22a/§ 22b processing; it names a federal body as processor but says nothing about where the infrastructure runs, so 'National infrastructure' rests on an inference the statute does not state.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798"
+  },
+  {
+   "claim": "record:AT:facial_biometric:register",
+   "fact_sha256": "c55bbe16a7959228d742a973f744cd863dc3f51afd6d2097386998662a922286",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 22b (headed 'Verarbeitung personenbezogener Daten im Rahmen der zentralen Evidenz') authorises processing of the § 22a Abs. 1 data except lit. k; on the same page § 22a Abs. 1 lists lit. j 'Lichtbild' and lit. k 'die Papillarlinienabdrücke zweier Finger', so the central evidence holds the facial image but not fingerprints, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798"
+  },
+  {
+   "claim": "record:AT:civil_registry:register",
+   "fact_sha256": "9fb6017668dd6a02e3ca8fb26d97ebcde1d743d7c395560d0c41d0835e89596b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Meldegesetz 1991 contains the quoted clause on keeping the Zentrales Melderegister and elsewhere on the page writes 'Zentralen Melderegisters (ZMR)', giving the name and abbreviation printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005799"
+  },
+  {
+   "claim": "record:AT:official_gazette:operator",
+   "fact_sha256": "0fa39edf9dbc8c8d80548f184362e6935e3758193e47b48643de511204ddd9d6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Bundesgesetzblattgesetz says verbatim that the RIS is an electronic database provided by the Bundeskanzler, which is the operator printed; the parenthetical 'Federal Chancellery' is a gloss on the statutory 'Bundeskanzler'.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20002988"
+  },
+  {
+   "claim": "record:AT:official_gazette:register",
+   "fact_sha256": "e451c84480a76ffd310e037a40b86243adf73961a3dc9f89ab4215e9b4251c37",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page defines the Rechtsinformationssystem des Bundes and in § 1 writes 'Rechtsinformationssystems des Bundes (RIS)', matching the printed name and abbreviation.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20002988"
+  },
+  {
+   "claim": "record:AT:digital_identity_credentials:operator",
+   "fact_sha256": "c3f6050b4900daf6946ebbf1e49c80082bfe8717004c1e428404adaa9bb1f72b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "In E-GovG § 4a the sentence follows the list of E-ID registration data (registration date, registering authority, certificate identity codes) held in the § 22b Passgesetz processing, and says the Bundesminister für Inneres and the Stammzahlenregisterbehörde are authorised to process those data for administering the E-ID, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003230"
+  },
+  {
+   "claim": "record:AT:residence_permits:operator",
+   "fact_sha256": "329bdb5bbf9e98eca3a4fd0f8c4060ebff479c50430f8d01e6c95da06be4af47",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quoted sentence is § 26 Abs. 3 of the BFA-VG, the section headed 'Zentrales Fremdenregister', so the Federal Minister of the Interior is the processor of the Central Register of Foreigners as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20007944"
+  },
+  {
+   "claim": "record:AT:breeder_documents:register",
+   "fact_sha256": "6eb681265b9296b7534c409258ae19f12362ebcc5f8e2e4874589b9a38333ec6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Personenstandsgesetz 2013 says verbatim that all documents underlying an entry are to be kept by the civil status authority that made the entry; the printed description of decentralised keeping restates that without adding anything.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008228"
+  },
+  {
+   "claim": "record:AT:intelligence:register",
+   "fact_sha256": "5b0c0843bd49ffce45944a59da882f5e64f4df77fff7192e89a757f1cc86cd67",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Staatsschutz- und Nachrichtendienst-Gesetz says the Bundesminister für Inneres and the Landespolizeidirektionen may, as joint controllers, run a data processing for threat assessment by operational or strategic analysis, which is the processing and the joint controllers printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009486"
+  },
+  {
+   "claim": "record:AT:trust_services_pki:operator",
+   "fact_sha256": "52ae2b0419da26fdc080805abbd5f5d62f430275b87864dc62685b9ddafeec34",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Signatur- und Vertrauensdienstegesetz says RTR-GmbH compiles, maintains and publishes the Art. 22 eIDAS trust list, and the RTR page says RTR-GmbH is entrusted with keeping it under § 14 Abs. 1 SVG; both match the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009585"
+  },
+  {
+   "claim": "record:AT:electoral_roll:operator",
+   "fact_sha256": "f9384634cc8faaf36ec3becab4141f58cd393655731cb7210dde3a85cb2d9dd2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Wählerevidenzgesetz 2018 says verbatim that the Federal Minister of the Interior acts as processor of ZeWaeR data for the respective municipality, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009720"
+  },
+  {
+   "claim": "record:AT:electoral_roll:register",
+   "fact_sha256": "bdb17a6edecd5d3ff1b14c472ae4dc0f1c70fc9c338695b177a023472a47f443",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The statute says the voter register is kept using the 'Zentralen Wählerregisters – ZeWaeR', giving the name and abbreviation printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009720"
+  },
+  {
+   "claim": "record:AT:education:operator",
+   "fact_sha256": "42c6f40b17b15933805110c34281d316df65a2d6930ea43a79ee33cef88ab6b1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quoted sentence is in § 7 'Gesamtevidenz der Schülerinnen und Schüler' of the Bildungsdokumentationsgesetz 2020 and says the Bundesanstalt 'Statistik Österreich' acts as processor under an Art. 28 GDPR contract, which is the operator and role printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451"
+  },
+  {
+   "claim": "record:AT:education:register",
+   "fact_sha256": "5a6b3d48e68938bdc412b41cde9cbf00e1f70e8a02cf05e729283538aac21b61",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 7 of the Bildungsdokumentationsgesetz 2020 requires the Federal Minister to set up the 'Gesamtevidenz der Schülerinnen und Schüler', matching the printed register name; 'national' is a gloss consistent with its federal, Austria-wide scope in the statute.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451"
+  },
+  {
+   "claim": "record:AT:crisis_management:operator",
+   "fact_sha256": "4d6932588a9b174a8f77320e207dd74f683125e7a11e765596b944e1cc13271c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Bundes-Krisensicherheitsgesetz says verbatim that a permanent Bundeslagezentrum is set up in the Bundesministerium für Inneres for the federal government, which supports the Interior Ministry as the operating body printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20012321"
+  }
+ ]
+}

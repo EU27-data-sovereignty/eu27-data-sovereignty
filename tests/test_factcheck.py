@@ -228,6 +228,15 @@ class Stage(Sandbox):
         self.assertEqual(code, 1)
         self.assertIn("not in this batch", out)
 
+    def test_an_email_address_in_a_checkers_text_is_removed(self):
+        name, facts = self.batch()
+        review = self.answer(facts, FABLE)
+        review["verdicts"][0]["reason"] = "Names the contact someone@example.org and the register."
+        self.run_stage([{"batch": name, "review": review}])
+        staged = json.loads((factcheck.STAGED / "run1" / f"{name}.json").read_text())
+        self.assertEqual(staged["verdicts"][0]["reason"],
+                         "Names the contact [email address removed] and the register.")
+
     def test_a_missing_verdict_is_recorded_as_unclear_not_supported(self):
         name, facts = self.batch()
         review = self.answer(facts, FABLE)
@@ -267,20 +276,20 @@ class Withhold(unittest.TestCase):
             return self.src.fact(f["claim"], f["printed"], categorical=f["categorical"])
 
     def test_a_disagreement_on_this_exact_fact_withholds_it(self):
-        f = next(x for x in self.facts if x["claim"] not in factcheck.load_ledger())
+        f = self.facts[0]                      # its ledger row is replaced by the fixture
         span = self.span(f, self.row(f))
         self.assertEqual(span["role"], "disputed")
         self.assertIn("did not confirm this: says 2019, not 2021.", span["t"])
         self.assertIn("run r9", span["t"])
 
     def test_unclear_also_withholds(self):
-        f = next(x for x in self.facts if x["claim"] not in factcheck.load_ledger())
+        f = self.facts[0]                      # its ledger row is replaced by the fixture
         span = self.span(f, self.row(f, verdict="unclear"))
         self.assertEqual(span["role"], "disputed")
         self.assertIn("could not confirm", span["t"])
 
     def test_a_verdict_on_an_older_version_withholds_nothing(self):
-        f = next(x for x in self.facts if x["claim"] not in factcheck.load_ledger())
+        f = self.facts[0]                      # its ledger row is replaced by the fixture
         self.assertEqual(self.span(f, self.row(f, fact_sha256="0" * 64))["role"], "fact")
 
     def test_a_supported_verdict_prints_the_fact(self):

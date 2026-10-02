@@ -200,8 +200,10 @@ class RenderedFacts(unittest.TestCase):
     # figures that now reproduce (#84), and the first vetting run (#83), less 20 facts now disputed.
     # Then to 1388 on 2026-10-02 by #89: the cross-model fact check's pilot did not confirm 2 facts
     # (record:DE:civil_registry:operator, indicator:DE:K2), now withheld as disputed. Each withheld fact
-    # is listed in docs/fact-check-audit.md.
-    FACT_FLOOR = 1388
+    # is listed in docs/fact-check-audit.md. Then to 1309 the same day by the first full run
+    # (wf_da123db1-a4e, claude-fable-5-1): 79 more facts it did not confirm (46 not supported, 33
+    # unclear) are withheld, 81 in all.
+    FACT_FLOOR = 1309
 
     @classmethod
     def setUpClass(cls):

@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "NL-044",
+ "iso": "NL",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "param:NL:gov_employment_k",
+   "fact_sha256": "697a32899eda91971da10f35cfd5d2f210d21ab90ef229627557c9d948c5948b",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 661.0 (THS_PER, flagged provisional 'p') for NL, 2024, NACE O, EMP_DC; matches the printed 661.0 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=NL&time=2024"
+  },
+  {
+   "claim": "param:NL:gdp_eur_bn",
+   "fact_sha256": "c845e34d2f8198b43412f81ba254ea5907f3ddd088a346aedc37072572db8d40",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 1170579.0 million EUR for NL 2025; scaled to billions and rounded this is 1 170.6 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=NL&time=2025"
+  },
+  {
+   "claim": "param:NL:renewables_pct",
+   "fact_sha256": "113d94574d2f129aed0102feabd1256d651d09cb7db4d1b98db18f847b69ce47",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 54.7 (PC, provisional) for NL, 2025, REN_ELC; matches the printed 54.7 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=NL&time=2025"
+  },
+  {
+   "claim": "param:NL:elec_price_eur_mwh",
+   "fact_sha256": "6e9ca80ba5ba67c19b00687d7cbdbf0916eb81fce8876f3123d3a455a048b721",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1991 EUR/kWh for NL 2025-S2, band MWH500-1999, excl. VAT; scaled to EUR/MWh this is 199.1 as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=NL&time=2025-S2"
+  },
+  {
+   "claim": "param:NL:land_km2",
+   "fact_sha256": "caddfc3305fc24e590e36e45e6fec87014dabc628f8a857adaad1225772e815f",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 33984 km2 for NL 2026, landuse L0008; matches the printed 33 984 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=NL&time=2026"
+  },
+  {
+   "claim": "param:NL:population_m",
+   "fact_sha256": "85560c0e2c3e504e290925bf105107486cfd494f7544922d50c30d25f12d02d1",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 18130208 persons on 1 January 2026 for NL; scaled and rounded this is 18.13 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=NL&time=2026"
+  },
+  {
+   "claim": "record:NL:official_gazette:operator",
+   "fact_sha256": "a5d8f4fd6c73fc01a3cabdb5029e5bc51784b72fb2a8b551491c7e442a0c5ff7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Bekendmakingswet art. 1(3) reads verbatim 'De zorg voor de uitgifte van het Staatsblad berust bij Onze Minister van Justitie en Veiligheid.' The printed statement limits itself to the Staatsblad, which is correct; art. 1(4) assigns the Staatscourant to the Minister of BZK.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0004287"
+  },
+  {
+   "claim": "record:NL:official_gazette:register",
+   "fact_sha256": "f043b1337e2bb0c8061c9c381e52156759b529923914598873d56cf9be15a5a2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 1(1) reads 'De regering geeft het Staatsblad en de Staatscourant uit', naming both publications as printed.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0004287"
+  },
+  {
+   "claim": "record:NL:electoral_roll:operator",
+   "fact_sha256": "d71c70f3ff0ba5f15fe00751f04faf718940a4bedb62e895e1c2224910bade80",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Kieswet art. D 1 reads verbatim 'Burgemeester en wethouders registreren de kiesgerechtigdheid van de ingezetenen van de gemeente', so the municipal executive is the registering body as printed.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0004627"
+  },
+  {
+   "claim": "record:NL:electoral_roll:register",
+   "fact_sha256": "ba235729a2c4919ef280810258a8d517d5ca5446b27b0f2632bef39be6ad2e6a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. D 1 sits under chapter D 'De registratie van de kiesgerechtigdheid' and says B&W register the kiesgerechtigdheid of residents; the printed name matches the statute's own wording.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0004627"
+  },
+  {
+   "claim": "record:NL:fingerprint_biometric:register",
+   "fact_sha256": "2a1d7b05da142f5fc00fa918409d412963c528583544c9a6aa7221b56f0b0219",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Paspoortwet art. 3(9) is on the page verbatim and says travel-document fingerprints are kept only until issuance is registered and used only for issuing, which supports the absence of a central passport fingerprint register. It does not support the broader categorical 'No central register' for fingerprint biometrics in general; another page cited in this same batch (Vreemdelingenwet art. 107) stat",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0005212/2024-01-01"
+  },
+  {
+   "claim": "record:NL:vehicle_licensing:operator",
+   "fact_sha256": "a6deaf2a7c76363430f6d406d2dfbae5f0cad0584c63424387265592673fb5d0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Wegenverkeerswet 1994 art. 42(2) reads verbatim 'De Dienst Wegverkeer is de beheerder en verwerkingsverantwoordelijke van het kentekenregister', which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0006622/2026-09-01"
+  },
+  {
+   "claim": "record:NL:residence_permits:register",
+   "fact_sha256": "fda6212c4da0277fabb3d7fa078526ad9117f4b4cc3c9576737083a64a3f1f64",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Vreemdelingenwet 2000 art. 107(1) reads verbatim 'Er is een vreemdelingenadministratie, die wordt beheerd door Onze Minister', naming the register as printed.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0011823"
+  },
+  {
+   "claim": "record:NL:benefits_pensions:operator",
+   "fact_sha256": "6651fffda6be461dff214bfd533227eb42723272377590fa69af2696e410cb9f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Wet SUWI art. 33(1) reads verbatim that the Uitvoeringsinstituut werknemersverzekeringen is responsible for setting up and running the polisadministratie; UWV is the operator as printed.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0013060"
+  },
+  {
+   "claim": "record:NL:benefits_pensions:register",
+   "fact_sha256": "6f11f641cfed57e61d9e33f86804dac7f5a9ed091b870ead69fbef7279972c6c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 33 names the polisadministratie, and art. 33(2)(a) on the same page says it records the worker's arbeidsverhouding and uitkeringsverhouding including duur, loon en premies, matching the printed gloss of employment, wages and benefits.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0013060"
+  },
+  {
+   "claim": "record:NL:beneficial_ownership:operator",
+   "fact_sha256": "11e696939ff5de212d6c2ccb7b6f719762ddbd5d72dfb4069b7f056497de1b5c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 15a(1) is on the page verbatim and places UBOs in the handelsregister; art. 3(1) on the same page says 'Het handelsregister wordt gehouden door de Kamer' and art. 1(i) defines Kamer as 'de Kamer van Koophandel', so the register is kept by KvK as printed.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0021777"
+  },
+  {
+   "claim": "record:NL:emergency_communications:count",
+   "fact_sha256": "bf0ba35519596ba1c82897098480608cff0efa07392ed048ea97650277d511b8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Politiewet 2012 art. 25a(1) reads verbatim 'Er zijn tien meldkamers.' The printed text states exactly that; note it is a count of control rooms, not of records, which the printed wording makes plain.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0031788"
+  },
+  {
+   "claim": "record:NL:emergency_communications:operator",
+   "fact_sha256": "ba86d6439f1c499484693e689aeb5117fa1a7df4977cd1f053c1f0e36fc7b2d2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 25a(1) reads 'De politie heeft meldkamers', and the Politiewet 2012 is the act governing the national police, so 'politie (national police)' is supported.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0031788"
+  },
+  {
+   "claim": "record:NL:emergency_communications:register",
+   "fact_sha256": "1d4f0db28cd7e0375f2a11460ad1dd6405ff58f90f87d1a2ed56d11154c765bc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 25a(1) defines a meldkamer as the physical place where the meldkamerfunctie (receiving and handling emergency calls, art. 25b) is performed; the printed name and gloss match.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0031788"
+  },
+  {
+   "claim": "record:NL:education:operator",
+   "fact_sha256": "197d159dda6183fd0e46dbeea650679ade574f02615d76fd4c48f459b9800c18",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Wet register onderwijsdeelnemers art. 4(2) reads verbatim 'Onze Minister draagt zorg voor het beheer van het register onderwijsdeelnemers', and art. 1 defines Onze Minister as the Minister van Onderwijs, Cultuur en Wetenschap.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0042012"
+  },
+  {
+   "claim": "record:NL:education:register",
+   "fact_sha256": "b89240d3a591e5c2bf4227ff62defb51ef1ed2de2dc2fc1178455e9d53bb65cd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 4(1) reads verbatim 'Er is een register onderwijsdeelnemers, waarin basisgegevens, ... zijn opgenomen', naming the register as printed.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0042012"
+  },
+  {
+   "claim": "record:NL:health_records:register",
+   "fact_sha256": "77ec90e51974bec050d7295c5e3f37f627f3ae1f86ba18a454716d7d07eb48a9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The homepage reads verbatim 'Het Landelijk Schakelpunt (LSP) is een landelijke infrastructuur voor de gezondheidszorg, waarmee zorgaanbieders medische gegevens van hun patiënten uitwisselen', which is what the printed text says.",
+   "quote_found": true,
+   "checked_url": "https://www.aorta-lsp.nl/"
+  },
+  {
+   "claim": "record:NL:health_records:operator",
+   "fact_sha256": "9405088044380855b8acdb4d3ed084a62c10381b280d740b12e584ae0261cac4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page reads verbatim 'AORTA, met de voorzieningen in het Landelijk Schakelpunt, bestaat sinds 2012 en is in beheer bij de Vereniging van Zorgaanbieders voor Zorgcommunicatie (VZVZ)', supporting manager VZVZ and the year 2012.",
+   "quote_found": true,
+   "checked_url": "https://www.aorta-lsp.nl/over-aorta-lsp"
+  },
+  {
+   "claim": "record:NL:statistics_microdata:register",
+   "fact_sha256": "ee038e6cdb9abf6d2f90da64f427dabf280e37a79c1b91f054512211527ef92c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CBS page reads verbatim that microdata are 'koppelbare data op persoons-, bedrijfs- en adresniveau' usable by universities, scientific organisations, planning bureaus and research bodies 'onder strikte voorwaarden'; the printed summary adds nothing beyond that.",
+   "quote_found": true,
+   "checked_url": "https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen"
+  },
+  {
+   "claim": "record:NL:authentication_audit_log:operator",
+   "fact_sha256": "c3ce84ee2a1e824e15ccb1b66f38dd19ce144c66a9de6315c124374b3cae0d5a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 7 reads verbatim that personal data are stored on ICT facilities on Dutch territory 'die worden beheerd door Logius', and the next sentence says this set consists of gebruiksgegevens en accountgegevens; section 1 adds that DigiD is managed by Logius. Logius as operator is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.digid.nl/over-digid/privacy"
+  },
+  {
+   "claim": "record:NL:authentication_audit_log:register",
+   "fact_sha256": "e654e9f9696eb619248d125e0021a394441a67facf47be5f3b185b17634bedc2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page reads verbatim that a DigiD user can view their 'gebruiksgeschiedenis' by logging in to Mijn DigiD, so the printed name 'DigiD gebruiksgeschiedenis' is what the source calls it.",
+   "quote_found": true,
+   "checked_url": "https://www.digid.nl/over-digid/privacy"
+  },
+  {
+   "claim": "record:NL:digital_identity_credentials:foreign_dependency",
+   "fact_sha256": "30a398be3527780d780c471fe70c85198694c88793547c979e3ff0079811e580",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page reads verbatim that personal data are stored on ICT facilities located on Dutch territory, managed by Logius (part of the Ministry of BZK), and not transferred outside the EU; this supports the 'national' placement.",
+   "quote_found": true,
+   "checked_url": "https://www.digid.nl/over-digid/privacy"
+  },
+  {
+   "claim": "record:NL:digital_identity_credentials:operator",
+   "fact_sha256": "a54b12c0fc5e98b68a2d7fa0f8de3b8ce1bf5eeea16f51c5791506a58b3aede5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 1 reads verbatim 'De minister van Binnenlandse Zaken en Koninkrijksrelaties is verantwoordelijk voor het verwerken van persoonsgegevens voor DigiD. Het beheer van DigiD wordt uitgevoerd door Logius.' The second citation (logius.nl wie-doet-wat) was also fetched and its quote found verbatim, listing Logius's responsibilities for DigiD.",
+   "quote_found": true,
+   "checked_url": "https://www.digid.nl/over-digid/privacy"
+  },
+  {
+   "claim": "record:NL:judicial_criminal:operator",
+   "fact_sha256": "6a421fb303b1ce9897906b8a177fbcde9436a0797a9fa32fa49cdf93226269e4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page reads verbatim 'De Justitiële Informatiedienst is, namens de Minister van Justitie en Veiligheid, de beheerder van de Justitiële Documentatie', naming Justid as manager as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.justid.nl/onderwerpen/s/strafblad-en-het-justitieel-documentatie-systeem"
+  },
+  {
+   "claim": "record:NL:judicial_criminal:register",
+   "fact_sha256": "cc225a235341bd37f99aee2bbf4d115017f9d7a0091f955ed3aa54c65ad78457",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same passage names the Justitiële Documentatie, and the surrounding text explains the strafblad is officially the 'Uittreksel Justitiële Documentatie' recording criminal convictions, supporting the printed gloss 'the criminal records system'.",
+   "quote_found": true,
+   "checked_url": "https://www.justid.nl/onderwerpen/s/strafblad-en-het-justitieel-documentatie-systeem"
+  }
+ ]
+}

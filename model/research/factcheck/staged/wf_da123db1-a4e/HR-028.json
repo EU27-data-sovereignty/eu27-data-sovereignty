@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "HR-028",
+ "iso": "HR",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:HR:crisis_management:register",
+   "fact_sha256": "a0288514b2bf201a4fa22ef33eb51dbb8923a3b24c9cf4bed4ea22b76b8893ef",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the Operativni centar civilne zaštite, organised at national level, monitors civil-protection events across Croatia through the 112 centres, which is exactly what is printed.",
+   "quote_found": true,
+   "checked_url": "https://civilna-zastita.gov.hr/sustav-112/112"
+  },
+  {
+   "claim": "record:HR:emergency_communications:register",
+   "fact_sha256": "328d2904c10cd28518ff2ddeeace16589dcb3ae4293a2b2db98bd9eb46833245",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states that Sustav 112 consists of communication- and information-linked 112 centres and the Operational Centre of Civil Protection; the printed sentence restates this.",
+   "quote_found": true,
+   "checked_url": "https://civilna-zastita.gov.hr/sustav-112/112"
+  },
+  {
+   "claim": "record:HR:land_property:operator",
+   "fact_sha256": "8046b7d2b738d44b998811e71bb873935635beff136a6c7351c6689f07591303",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The DGU page says 'ZIS zajednički koordiniraju Ministarstvo pravosuđa (MP) i Državna geodetska uprava (DGU)', matching the printed joint-coordination statement.",
+   "quote_found": true,
+   "checked_url": "https://dgu.gov.hr/zajednicki-informacijski-sustav-zemljisnih-knjiga-i-katastra/161"
+  },
+  {
+   "claim": "param:HR:gov_employment_k",
+   "fact_sha256": "fcfa412cdf1d768c6c6cc1238286396220722bdcf201dddbafc8e3aad30cd998",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 116.88 thousand persons (flag p, provisional) for HR, NACE O, EMP_DC, 2024; rounded to 116.9 thousand as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=HR&time=2024"
+  },
+  {
+   "claim": "param:HR:gdp_eur_bn",
+   "fact_sha256": "7d52cd58030428fd7e875905bdff75f936d176a46832de631c20e99836b2a861",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 92975.1 million EUR (flag p) for HR B1GQ 2025, which scales and rounds to 93.0 EUR bn.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=HR&time=2025"
+  },
+  {
+   "claim": "param:HR:renewables_pct",
+   "fact_sha256": "22f463951c484d4f97f4b89b855b21dd05b90808c3bc90134c6c29c7a8ab787e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 58.8 (flag p) for HR REN_ELC 2025, identical to the printed 58.8 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=HR&time=2025"
+  },
+  {
+   "claim": "param:HR:elec_price_eur_mwh",
+   "fact_sha256": "ca57784633164f34001684b8358db47c9ce8b138e8087ba5f801bb51af368aba",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1548 EUR/kWh for HR, band MWH500-1999, excluding VAT, 2025-S2; converted to EUR/MWh this is 154.8 as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=HR&time=2025-S2"
+  },
+  {
+   "claim": "param:HR:land_km2",
+   "fact_sha256": "14fa8508863cdf50ccaa3df312d14cafb34cc419828edbdb13448b84cfe54fe5",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 55896 km² for HR, landuse L0008, 2026, matching the printed 55 896 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=HR&time=2026"
+  },
+  {
+   "claim": "param:HR:population_m",
+   "fact_sha256": "3b9421c1222ba0db39cb106a319d659f81fc0afaf90036501d29f890c38645a7",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 3 876 002 persons on 1 January 2026 for HR, which rounds to 3.88 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=HR&time=2026"
+  },
+  {
+   "claim": "record:HR:public_finance:register",
+   "fact_sha256": "00a7f30f545eb12f0bd29b361bb9610e27e1a8f9924b7eb9e7eac3a6394fce57",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Ministry of Finance page says all financial transactions of budget users go through the State Treasury system, i.e. the single treasury account deposited with the Hrvatska narodna banka (HNB), which the printed sentence restates.",
+   "quote_found": true,
+   "checked_url": "https://mfin.gov.hr/istaknute-teme/drzavna-riznica/103"
+  },
+  {
+   "claim": "indicator:HR:C1",
+   "fact_sha256": "31d55a4a29a8de9f02a2f9da4c0c57837a3443ccb168df0f6b4a3194f8d6de20",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ministry page describes CDU as the 'državni oblak Republike Hrvatske' and 'središnja državna infrastruktura' under the State Information Infrastructure Act, says the platform rests on two geographically separate high-availability data centres, and describes it in the present tense with 24/7 staffing, so 'Yes' for state-run government data centres in operation today is supported; note the page ",
+   "quote_found": true,
+   "checked_url": "https://mpudt.gov.hr/centar-dijeljenih-usluga-cdu-drzavni-oblak-koji-pokrece-digitalnu-hrvatsku/30983"
+  },
+  {
+   "claim": "indicator:HR:C2",
+   "fact_sha256": "49dd7779dfa5487835cb4eca4ae6585513e534f01fe933b6924fcacbf17ea611",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page calls CDU the state cloud of the Republic of Croatia and reports present-day operation: more than 1,080 users, almost 6,000 virtual servers and more than 8 PB stored, so a government cloud platform in operation (not merely announced) is supported.",
+   "quote_found": true,
+   "checked_url": "https://mpudt.gov.hr/centar-dijeljenih-usluga-cdu-drzavni-oblak-koji-pokrece-digitalnu-hrvatsku/30983"
+  },
+  {
+   "claim": "indicator:HR:L1",
+   "fact_sha256": "6560fe304461456e155e99b151cbb997afa270109fe604359ffa360275b774ae",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 12 of the State Information Infrastructure Act (NN 92/2014) requires public registers to be stored in data centres on the territory of the Republic of Croatia, and the ministry page confirms the Act obliges state bodies to use CDU with exceptions; a statutory location requirement that covers public registers rather than all government data fits 'Partly'. Both quotes found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2014_07_92_1840.html"
+  },
+  {
+   "claim": "record:HR:civil_registry:register",
+   "fact_sha256": "8c1bea21b573b77c81006c5b8b7ce94537f22a8afef3c7fdca456d5cff825a3f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "NN 96/1993 Article 8 says 'O osobnim stanjima građana vode se matica rođenih, matica vjenčanih i matica umrlih' under the heading 'Vrste državnih matica', and the consolidated zakon.hr text says 'vode se državne matice: matica rođenih, matica vjenčanih i matica umrlih'; both quotes found and they match the printed name and three registers.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/1993_10_96_1878.html"
+  },
+  {
+   "claim": "record:HR:business_registry:operator",
+   "fact_sha256": "5a4c4361fbfd62b39c77cfed06c61b8c48d651677f084755f61e5bd304a317dd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 3(1) of the Court Register Act reads 'Registar vode trgovački sudovi (u daljnjem tekstu: registarski sudovi). Registar se čuva trajno.' on both the NN page and zakon.hr, which is exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/1995_01_1_1.html"
+  },
+  {
+   "claim": "record:HR:intelligence:register",
+   "fact_sha256": "8e35b6ba8059a832e17f2ea0e469f6ace737bbdf61c0a47788ba01e73cfca966",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 39(1) of the Security-Intelligence System Act says the agencies establish and keep 'zbirke i registre osobnih podataka' and other records; the printed name is a faithful description of that provision.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2006_07_79_1912.html"
+  },
+  {
+   "claim": "indicator:HR:L2",
+   "fact_sha256": "b0c6ef2454a7482896d07c0fce520a005a70ae84011d10b104b01efb99792aea",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 1 of the Zakon o tajnosti podataka states the Act lays down the concept of classified data, the classification levels and the classification procedure, and Article 6 (zakon.hr) defines VRLO TAJNO; a statute establishing the classification scheme supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2007_07_79_2483.html"
+  },
+  {
+   "claim": "record:HR:police_records:register",
+   "fact_sha256": "9bb20e7b9e7a5901d965568e7f2cb661804f680ae24f12b8e813dc916d2bb196",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The definitions article of the Police Duties and Powers Act (item 17 in NN 76/2009, item 18 on zakon.hr) states 'informacijski sustav Ministarstva je Informacijski sustav Ministarstva unutarnjih poslova', matching the printed text.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2009_07_76_1835.html"
+  },
+  {
+   "claim": "record:HR:electoral_roll:operator",
+   "fact_sha256": "d29cab9afa98f5198f087e00236763d03fad83174e184e310ddc930f6c9c4f11",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 7 of the Voter Register Act says the central state administration body for general administration determines the single software solution for keeping the register and (para 2) is responsible for processing its data, which supports naming it as the operator of the system; the same Act's Article 6 assigns day-to-day entries to county offices, so the printed body is the system operator rather",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_144_3073.html"
+  },
+  {
+   "claim": "record:HR:electoral_roll:register",
+   "fact_sha256": "625fb08b9f5f0c829b783fe550a8fe8206ce3731fb3a5045fa72a014cd400421",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 5(1) reads 'Registar birača vodi se u obliku jedinstvene elektroničke baze podataka', naming the Registar birača as printed.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_144_3073.html"
+  },
+  {
+   "claim": "record:HR:border_control:register",
+   "fact_sha256": "cac37987dd0fec250e37f63b4b8ab2382e66ce2f5a92668964c2865b38e43450",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The State Border Control Act says the Nacionalni informacijski sustav za upravljanje državnom granicom is established in the Ministry and is an integral part of the Ministry's information system, and Article 5(1) of the same Act defines 'Ministarstvo' as the Ministarstvo unutarnjih poslova, so 'part of the MUP information system' is supported.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2013_07_83_1738.html"
+  },
+  {
+   "claim": "record:HR:benefits_pensions:register",
+   "fact_sha256": "cb2538bdc6e93213ecc32617a23405e1d13862a884d084252ebd3d73c089f3b3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 104(1) of the Pension Insurance Act, under heading 'V. Matična evidencija', says the Institute keeps the matična evidencija of insured persons, pension beneficiaries and contribution payers, matching the printed name and description.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2013_12_157_3290.html"
+  },
+  {
+   "claim": "record:HR:firearms_register:register",
+   "fact_sha256": "b1297e0f539323e93fa2a30ab986f27fc1843935a1aeedd69511db56b6436b67",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 67(1) of the Weapons Act says the competent body keeps records of acquisition permits and weapons licences 'na središnjem informacijskom sustavu ministarstva nadležnog za unutarnje poslove', which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2018_10_94_1816.html"
+  },
+  {
+   "claim": "record:HR:geospatial:operator",
+   "fact_sha256": "8be8dbbc445f066cc16447a36dbb0bc9045386ae39c8e371a0e330a97e2193ea",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 136(2) of the State Survey and Real Estate Cadastre Act says the Državna geodetska uprava is responsible for establishing and keeping the spatial units register, supporting DGU as the operator.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2018_12_112_2167.html"
+  },
+  {
+   "claim": "record:HR:geospatial:register",
+   "fact_sha256": "92f2c443ee396e3a7c17152392fb5b44b618c3250fe9a69d56420ef4ba601025",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 116 reads 'Registar zgrada je evidencija o zgradama koju osniva, vodi i održava Državna geodetska uprava' on both the NN page and zakon.hr, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2018_12_112_2167.html"
+  },
+  {
+   "claim": "record:HR:facial_biometric:register",
+   "fact_sha256": "52c2b4df7ffa52a25b64fa620d21b4ad11c720bd91c06381227967539234b3c6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The driving-licence ordinance says that for an eZahtjev the licence is produced using the photograph stored in the ID-card register on the Ministry of the Interior information system at the time the electronic ID card was issued, which the printed text restates.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_01_2_39.html"
+  },
+  {
+   "claim": "record:HR:health_records:operator",
+   "fact_sha256": "a5f15f21572f6b7632381e453f62a4f2a1697fdee0b8355840229e301a1e7742",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 16 of the Health Data and Information Act lists HZZO as responsible for 'upravljanje CEZIH-om radi uspostave i održavanja središnjeg dijela CEZIH-a', matching 'HZZO manages CEZIH and maintains its central part'.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_02_14_269.html"
+  },
+  {
+   "claim": "record:HR:health_records:register",
+   "fact_sha256": "d2bf4bd219f0924f547a6c364b89604037ee1fcab8937e8db9b69cfc22cd7779",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The definitions article defines CEZIH as the central system for storing health data and information for standardised processing at primary, secondary and tertiary care levels, which the printed sentence summarises without adding anything.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_02_14_269.html"
+  },
+  {
+   "claim": "record:HR:public_health_surveillance:operator",
+   "fact_sha256": "fe12b1ba75a7be20df59b694f8ba91e6931c092fa7ef6cb81a68393efc0f52ef",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 29(1) reads 'Nacionalni javnozdravstveni informacijski sustav vodi HZJZ', and the Act abbreviates that system as NAJS, so 'NAJS is run by HZJZ' is supported.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_02_14_269.html"
+  },
+  {
+   "claim": "record:HR:public_health_surveillance:register",
+   "fact_sha256": "b1a5196f60f456bc9a9a32b304ac67f0e9904ff520c3e22cf2126aabe4f13b00",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The definitions article defines NAJS as a system for storing health data and information for processing and archiving '(zdravstvene evidencije i registri)' for public-health needs, which the printed sentence restates.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_02_14_269.html"
+  }
+ ]
+}

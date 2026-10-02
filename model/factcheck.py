@@ -294,8 +294,13 @@ def prepare(everything: bool, size: int, date: str) -> int:
     return 0
 
 
+# A checker quotes what it read, and pages carry contact addresses. Personal data never goes into a
+# committed file (the security gate blocks it), so an email address in a checker's text is removed.
+EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+
+
 def _clean(text: str, limit: int = 400) -> str:
-    return re.sub(r"\s+", " ", str(text or "")).strip()[:limit]
+    return EMAIL.sub("[email address removed]", re.sub(r"\s+", " ", str(text or "")).strip())[:limit]
 
 
 def stage(path: Path, run_id: str, prepared: str) -> int:

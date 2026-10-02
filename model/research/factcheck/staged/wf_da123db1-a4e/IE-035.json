@@ -1,0 +1,80 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "IE-035",
+ "iso": "IE",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:IE:customs:register",
+   "fact_sha256": "b1c3e046707db847fe6ed50a4da10a080b71904128bcf202f941235cf119ddbb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote itself names only AIS, but the sentence immediately before it on the same page reads 'through our customs transit system (NCTS) and the Automated Import and Export Systems (AIS/AES)', and the report's glossary expands AIS, AES and NCTS to exactly the three full names printed. In the context of the page the three systems and their names are supported.",
+   "quote_found": true,
+   "checked_url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf"
+  },
+  {
+   "claim": "record:IE:tax:count",
+   "fact_sha256": "c73b22630fa18113ffdd174b1a90cd21ab7c86b0d6326dfede7a11b3ffc29921",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim in the 2025 annual report's headline figures: 'Over 900,000 self-assessed taxpayers, 287,000 companies and 293,000 VAT traders registered'. The printed statement repeats it word for word with the same numbers.",
+   "quote_found": true,
+   "checked_url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf"
+  },
+  {
+   "claim": "record:IE:tax:operator",
+   "fact_sha256": "ad60e69baf8daf967cae56de58408a2ac6d64a4d7192810f878072c8a5b3555b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote (found verbatim) describes a 'private Revenue managed' service connecting to 'the ROS database' with data 'handled securely on Revenue systems', in Revenue's own annual report; Revenue as the operating body is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf"
+  },
+  {
+   "claim": "record:IE:tax:register",
+   "fact_sha256": "0192a9819e056ec9ee5b785c601943536682bf77201d346ec18767583221071f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote names 'the ROS database' explicitly, and the report's glossary expands ROS as Revenue Online Services; the printed system name matches the source.",
+   "quote_found": true,
+   "checked_url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf"
+  },
+  {
+   "claim": "indicator:IE:K1",
+   "fact_sha256": "2ee72d707949ebac1ddc1c774ec88a9a551a6b2fc6c3ac7cfec4a1a35fd044a6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The quote (found verbatim) establishes that the Revenue Commissioners, a state body, act as Certification Authority for ROS digital certificates, and the same manual says those certificates are used by the CRO, Department of Transport and Department of Social Protection. However the document never describes this CA as the root of the government's PKI or as a qualified trust service (no occurrence ",
+   "quote_found": true,
+   "checked_url": "https://www.revenue.ie/en/tax-professionals/tdm-wm/income-tax-capital-gains-tax-corporation-tax/part-38/38-06-01.pdf"
+  },
+  {
+   "claim": "record:IE:trust_services_pki:operator",
+   "fact_sha256": "f1cd2c5c86c767f97caa53086a7bdb0f7212705bb30283922a0980c92d3af292",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote states the Certification Authority is 'in this case the Revenue Commissioners', in a section on how ROS activity is secured by digital certificates; the manual elsewhere confirms the law 'provided for Revenue to be a Certification Authority for issuing Digital Certificates'. The printed operator statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.revenue.ie/en/tax-professionals/tdm-wm/income-tax-capital-gains-tax-corporation-tax/part-38/38-06-01.pdf"
+  },
+  {
+   "claim": "record:IE:trust_services_pki:register",
+   "fact_sha256": "52770f7f2af6dae1c17eb9c8b26cdbf34119dcdd0a8b2802bb0f8ad49398ae6c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote (found verbatim) says the ROS digital certificate design is used by the Companies Registration Office, the Department of Transport and the Department of Social Protection; the same manual expands 'Companies Registration Office (CRO)' and names the Revenue Commissioners as the CA. 'PKI' is the report's descriptive label for a CA-issued certificate scheme rather than a term the source uses",
+   "quote_found": true,
+   "checked_url": "https://www.revenue.ie/en/tax-professionals/tdm-wm/income-tax-capital-gains-tax-corporation-tax/part-38/38-06-01.pdf"
+  }
+ ]
+}

@@ -1,0 +1,290 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "ES-022",
+ "iso": "ES",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:ES:geospatial:register",
+   "fact_sha256": "11b544fde2fb57351de4c89fa7e24a94f38e08641b949edf23d18f301f0883b2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The consolidated Ley 14/2010 text states verbatim that the cadastral parcel and the real estate registered in the Cadastre form part of the Información Geográfica de Referencia, which is what the report prints.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-10707"
+  },
+  {
+   "claim": "record:ES:education:operator",
+   "fact_sha256": "68a80d3600594e05aac572cdb94fdaf755eaeaf6147b3c7b2f26e3b76d5f8ed1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote (Art. 4) supports that the register was created in the Ministerio de Educación, but the printed parenthetical 'the register now sits with the universities ministry' appears nowhere on the cited page (no mention of a Ministerio de Universidades or de Ciencia), so part of the printed statement is added beyond the source.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-12621"
+  },
+  {
+   "claim": "record:ES:breeder_documents:register",
+   "fact_sha256": "8c2d69096126074ccee0773cfbd3838734628669ce41601a7a19696953a09825",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Ley 20/2011 text says the Ministry of Justice shall adopt the provisions for the progressive incorporation of the digitised Civil Registry database data into individual records; the printed sentence restates this (the statute phrases it as an obligation, the report as an ongoing migration, but the actor, the data and the target are the same).",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-12628"
+  },
+  {
+   "claim": "record:ES:civil_registry:operator",
+   "fact_sha256": "5f1d9b3d9b16e7160f5c73bbc967812b18cb157edcd3376996214a2e8095e2b1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 22 says each Encargado del Registro Civil 'ejercerá sus cometidos bajo la dependencia funcional de la Dirección General de Seguridad Jurídica y Fe Pública', and Arts. 2 and 20 of the same page say the Registro Civil depends on the Ministerio de Justicia, which covers the printed parenthetical.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-12628"
+  },
+  {
+   "claim": "record:ES:civil_registry:register",
+   "fact_sha256": "6166583d6616b0cb6f8b5dd35940683187c7e83d0c446f573420413064cb7ce9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 3 states verbatim that the Registro Civil is single for all of Spain and is electronic, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-12628"
+  },
+  {
+   "claim": "record:ES:border_control:register",
+   "fact_sha256": "1e171c8bd8ccab9d085dbf1a7e8131ed92ce8eb07b6ed744be77be872b76516a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "File 11 is identified as N.SIS II/SIRENE II, and its stated purpose on the same page includes applying Regulation (EC) 1987/2006 and Decision 2007/533/JHA on the second-generation Schengen Information System, which supports the printed gloss 'national part of the Schengen Information System'.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-8382"
+  },
+  {
+   "claim": "record:ES:facial_biometric:register",
+   "fact_sha256": "2fbf5e1e638ffe42528963ae114ebdc1e54fb644b4a00156cd51134aff206e8d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says fingerprints and photographs are obtained by matching against the automated file ADDNIFIL, and elsewhere identifies ADDNIFIL as the file for management of the DNI, which supports the printed description.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-8382"
+  },
+  {
+   "claim": "record:ES:issuance_history:register",
+   "fact_sha256": "d2b6ad93ffe80d3185c2af68c56d86ab3645bab83af19d304a4f8ab94d8c35f4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The file entry reads 'Identificación del fichero: ADDNIFIL. Finalidad: Gestión del documento nacional de identidad', matching 'national identity document management file'.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-8382"
+  },
+  {
+   "claim": "record:ES:police_records:register",
+   "fact_sha256": "367bbe1355af17f8b510e3b710a9c6034da0f13edbd92195b140f8838e2cb89b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The file entry reads 'Identificación del fichero: PERPOL. Finalidad: Gestión de antecedentes de las personas de interés policial', matching the printed name and gloss.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-8382"
+  },
+  {
+   "claim": "record:ES:grid_control:operator",
+   "fact_sha256": "7a7e9ce3d21dd1052a8fc0f37d7dac7455c17ce24909b68f9a7d250affb212ff",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Ley 24/2013 states verbatim that Red Eléctrica de España, S.A. acts as 'transportista único' in exclusivity, which is the printed 'sole transmission operator'.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-13645"
+  },
+  {
+   "claim": "indicator:ES:L1",
+   "fact_sha256": "2268897cfa742786268070de6adacf848302248d332b6ee1289ff77395efdf6d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Ley 40/2015 requires that storage and processing of the electoral roll, population registers, tax data and national health system user data be located within EU territory; a binding rule covering specific categories rather than all government data fits 'Partly'.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-10566"
+  },
+  {
+   "claim": "record:ES:vehicle_licensing:operator",
+   "fact_sha256": "d2df734e9681d2c453caa1d2e660db993fda978189577a123075b927eb89f178",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The consolidated traffic law names the 'Registro de Conductores e Infractores del organismo autónomo Jefatura Central de Tráfico', and the DGT page (second citation, quote also found) says the data are 'vigentes en el registro de conductores e infractores de la Jefatura Central de Tráfico', supporting that the register is kept by the JCT.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11722"
+  },
+  {
+   "claim": "record:ES:vehicle_licensing:register",
+   "fact_sha256": "3f7e8acf4a4a631e7cf837b47d2634fa6439cd88396a7406fd4a5e68b4615ea1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page names the 'Registro de Vehículos del organismo autónomo Jefatura Central de Tráfico' verbatim, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11722"
+  },
+  {
+   "claim": "record:ES:benefits_pensions:operator",
+   "fact_sha256": "379dee8ed6b5758018fdc344ca603d9ec8b8acaccc8ac1d36664b69e984b40e6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The LGSS text says 'Corresponde al Instituto Nacional de la Seguridad Social la gestión y funcionamiento del Registro de Prestaciones Sociales Públicas', naming the INSS as the operator.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+  },
+  {
+   "claim": "record:ES:benefits_pensions:register",
+   "fact_sha256": "de6009799f5f31034f2a2c7f13b28f522edb0f6d112bdd20975d0933bbf08910",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same sentence names the Registro de Prestaciones Sociales Públicas, matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+  },
+  {
+   "claim": "record:ES:crisis_management:register",
+   "fact_sha256": "e906830a5ba3f93a73675c65093373c758012b07abdd781f2512eded20d2c182",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Ley 17/2015 states verbatim 'Se crea la Red de Alerta Nacional de Protección Civil', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-7730"
+  },
+  {
+   "claim": "record:ES:emergency_communications:register",
+   "fact_sha256": "98a48df61e9cc1abe50cb08dd74f4d340827df16dc24302787509d36dd20fbb9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote names the Sistema de Radiocomunicaciones Digitales de Emergencia del Estado (SIRDEE); on the same page it sits in the functions ('Coordinar, desarrollar e implantar ... sistemas de comunicaciones ... SIRDEE') of the Subdirección General de Sistemas de Información y Comunicaciones para la Seguridad, which Art. 2.5 lists among the organs depending on the Secretaría de Estado de Seguridad, ",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-3793"
+  },
+  {
+   "claim": "indicator:ES:K2",
+   "fact_sha256": "7c44e77db6d461b6744d6875ae62339b6886e13e3c6ffefffbcd5a677a93e43d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The DNI royal decree states the DNI is issued by the Ministerio del Interior through the Dirección General de la Policía, and the page regulates the DNI in physical and digital format with its electronic signature certificates, supporting a state-operated eID ('Yes'). The NIFO PDF citation could not be fetched (live URL 404, archive rate-limited), so the verdict rests on the BOE citation alone.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-6601"
+  },
+  {
+   "claim": "record:ES:fingerprint_biometric:operator",
+   "fact_sha256": "2bafbd962cab74be0522a117fb5876ff7af68a19300350058128966dd98040e1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 5 assigns exclusive competence over the DNI to the Ministerio del Interior and says that competence is exercised by the Dirección General de la Policía, 'gestionando la custodia y responsabilidad de la actividad del tratamiento de los datos personales', matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-6601"
+  },
+  {
+   "claim": "indicator:ES:C1",
+   "fact_sha256": "fc43e618bc3c581437e3484df8deb29943db607355048cf6be3806d2ec1e2c69",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The NubeSARA agreement describes nodes 'en centros de procesos de datos de la Administración (nube privada)', and the Agency statute (BOE-A-2024-22929, quote also found) assigns it the operation of 'los centros de proceso de datos de referencia, gestionados por la Agencia', supporting state-operated data centres in operation. The NIFO PDF citation could not be fetched (404 live, archive rate-limit",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-131"
+  },
+  {
+   "claim": "indicator:ES:C2",
+   "fact_sha256": "4a116236a886f102d21f373997938d1ab4b74efdadea701f720a1d34ce0f280f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The published 2024 agreement describes NubeSARA as a service providing cloud computing and storage for the AGE, and the Agency statute (quote also found) calls it 'la solución de nube híbrida propia de la Administración, conocida como NubeSARA', i.e. an operating government cloud rather than an announcement.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-131"
+  },
+  {
+   "claim": "record:ES:electoral_management:operator",
+   "fact_sha256": "f6e4a77cf63994fee9ccfb2d8056007e80418b30535c5daea7b326030dc575fc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The contract award notice lists Indra Soluciones Tecnologías de la Información, S.L.U. as awardee, and its object on the same page is 'Servicios de escrutinio provisional de los resultados electorales', matching the printed contractor description.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2024-11865"
+  },
+  {
+   "claim": "record:ES:electoral_management:register",
+   "fact_sha256": "1cf143e3fd1169196857ab114da54b6ae6a009e6b1c7cf752ab5bc228789778a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The notice's object names 'la base de datos de los resultados electorales del Ministerio del Interior' verbatim, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2024-11865"
+  },
+  {
+   "claim": "record:ES:education:register",
+   "fact_sha256": "f126b35372fa79435dab734cd97842b3cc0f7ce88a05d98ec4855b8609fa1bc1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page asks and answers '¿Qué es el Registro Nacional de Titulados Universitarios Oficiales (RNTUO)?', naming the register exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ciencia.gob.es/Universidades/ConsultaTitulos.html"
+  },
+  {
+   "claim": "record:ES:trust_services_pki:operator",
+   "fact_sha256": "bea2aa7f37c70d1c5d070734976726960280c0856f79d2664505b1e08869f4cf",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The FNMT page states it is 'una entidad pública empresarial (EPE) y medio propio (MP) de la Administración General del Estado', matching the printed 'state public business entity'.",
+   "quote_found": true,
+   "checked_url": "https://www.fnmt.es/institucion/informacion-institucional"
+  },
+  {
+   "claim": "record:ES:water_control:register",
+   "fact_sha256": "8a7ac58852a7af80a4f38c59f6d0d8fd3a5fef4525282fd9d8a6210623e83e35",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The MITECO page says the Sistemas Automáticos de Información Hidrológica (SAIH) are a tool for the Confederaciones Hidrográficas, matching the printed name and user.",
+   "quote_found": true,
+   "checked_url": "https://www.miteco.gob.es/es/agua/temas/evaluacion-de-los-recursos-hidricos/saih.html"
+  },
+  {
+   "claim": "record:ES:grid_control:register",
+   "fact_sha256": "f7a8624eadb2f9f4a61f7aa71f38d7b6c06c0265ad26a02841e64426aab76e1a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The REE page titled 'Centro de control eléctrico (Cecoel)' states Cecoel is responsible for real-time supervision of the electricity system, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.ree.es/es/publicaciones/educacion/centro-de-control-electrico-cecoel"
+  },
+  {
+   "claim": "record:ES:trust_services_pki:register",
+   "fact_sha256": "ca201c58b8cab1954ca324b38cbda1ded63ae6d46502a38e4562bebbf94cd874",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The FNMT download page lists the root certificates provided by the FNMT-RCM, beginning with 'AC Raíz FNMT-RCM', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.sede.fnmt.gob.es/descargas/certificados-raiz-de-la-fnmt"
+  }
+ ]
+}

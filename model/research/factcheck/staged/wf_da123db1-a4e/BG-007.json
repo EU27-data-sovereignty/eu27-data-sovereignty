@@ -1,0 +1,160 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "BG-007",
+ "iso": "BG",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:BG:health_records:register",
+   "fact_sha256": "0f28ae8a8c8fdc3b8fb1211d13de146121ff761d3141d0d0a2377aa0849c5953",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Health Act PDF (hash matches) contains verbatim: 'В Националната здравноинформационна система се събира ... чрез създаване и поддържане на електронен здравен запис на всеки гражданин', and his.bg carries the НЗИС description verbatim; together they support that the NHIS holds an electronic health record for every citizen.",
+   "quote_found": true,
+   "checked_url": "https://www.nhif.bg/upload/30458/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%B5%D1%82%D0%BE.pdf"
+  },
+  {
+   "claim": "record:BG:customs:register",
+   "fact_sha256": "2d1ebc5178a9b8fcf4952190dadad40ebca313ac0639ffae3c7bcc130acaacb7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote is on the page verbatim and names the system (МИСВ), but it is a forward-looking announcement ('ще бъде въведена в реална експлоатация' = will be put into live operation on 26.11.2018); the printed text asserts as fact that it went into production on that date, which the source does not confirm.",
+   "quote_found": true,
+   "checked_url": "https://www.infobusiness.bcci.bg/customs-26-11-18.html"
+  },
+  {
+   "claim": "indicator:BG:C1",
+   "fact_sha256": "87cce24ede825284d10ff8920afe05f76e55c2adaa7538740a0fc9a8611db186",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The page says the company Информационно обслужване offers colocation in its secure data centre and lists government agencies as clients, but nowhere states that the company is state-owned or that the state operates these data centres; the 'Yes' to state-operated government data centres needs outside knowledge the source does not supply.",
+   "quote_found": true,
+   "checked_url": "https://www.is-bg.net/bg/solutions/infrastructure"
+  },
+  {
+   "claim": "record:BG:border_control:operator",
+   "fact_sha256": "953ba5b5b53bd9a725a9b5dc2aef73eff1579ed2b3c7fce6ad616a342410cf57",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The MFA page says verbatim that the Ministry of Foreign Affairs is implementing the deployment and commissioning of a new version of the Национална визова информационна система (НВИС), which supports MFA as the body responsible for the national visa system.",
+   "quote_found": true,
+   "checked_url": "https://www.mfa.bg/bg/news/41822"
+  },
+  {
+   "claim": "record:BG:border_control:register",
+   "fact_sha256": "3e38654367c3ff5ba9b4224c155ebc21c1a7acff0ac587af0e3dc9a9cc8a63ff",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Both quotes are verbatim, but the MFA citation names a different system (НВИС, not printed), and the RTA ordinance names 'АИС Издирвателна дейност – НШИС' only in the context of wanted-vehicle registration termination, never as a border or visa system; the printed form also truncates the system's name. The source does not establish the printed system as the border/visa register.",
+   "quote_found": true,
+   "checked_url": "https://www.rta.government.bg/upload/11661/n-I45.pdf"
+  },
+  {
+   "claim": "record:BG:residence_permits:operator",
+   "fact_sha256": "4ad786ad4466d458aaf3659982b6176727c97f1e53a715414001e2c38d7a1291",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Foreigners Act PDF (hash matches), Art. 22(4), says the DANS opinion is binding on дирекция 'Миграция' and the 'Миграция' units at the regional MVR directorates when the residence permit under Art. 22(1)(4) is issued, which identifies these as the bodies handling residence status; it names no register, but the printed statement names only the bodies and the act.",
+   "quote_found": true,
+   "checked_url": "https://www.mfa.bg/upload/138160/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%87%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D1%82%D0%B5%20%D0%B2%20%D0%A0%D0%B5%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F.pdf"
+  },
+  {
+   "claim": "record:BG:digital_identity_credentials:operator",
+   "fact_sha256": "04f89e1160523a9410d2d5d9a83efeecd7b999ea692699c56704c2bfce7af8ff",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 4(3) of the regulation (hash matches) is verbatim as quoted and supports the main clause; the parenthetical 'MVR runs the register' is not stated in those words but is borne out by the page context (the Minister of Interior designates who may access the register, supplies the software to connect to it, registers the administrators and seals the certificates).",
+   "quote_found": true,
+   "checked_url": "https://www.mtc.government.bg/sites/default/files/pravilnik_za_prilagane_na_zakona_za_elektronnata_identifikaciq.pdf"
+  },
+  {
+   "claim": "record:BG:emergency_communications:count",
+   "fact_sha256": "d9cd990a2c911027fd9d8faf6c90678aafb4f5507ff71543c57dd5bfe215d77b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that the National System 112 comprises 'шест центъра' for receiving emergency calls, which is what is printed; note this is a count of call centres, not of records, which the printed text makes explicit.",
+   "quote_found": true,
+   "checked_url": "https://www.mvr.bg/112/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8/112_v_bg"
+  },
+  {
+   "claim": "record:BG:emergency_communications:register",
+   "fact_sha256": "57df56a589ac26f62b453b840b851c6937d4c2569e11fddfc203a266ad7efff1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The MVR page names 'Националната система 112' verbatim as the national emergency-call system.",
+   "quote_found": true,
+   "checked_url": "https://www.mvr.bg/112/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8/112_v_bg"
+  },
+  {
+   "claim": "record:BG:tax:register",
+   "fact_sha256": "09e6af0e7b0d42e5ca479ac113153a56cf1e7592e55b735b8cd6e96b9bc46f29",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ДОПК (Tax and Social Security Procedure Code) PDF, hash matching, contains Art. 80(1) verbatim: the National Revenue Agency creates and maintains a register and databases of obliged persons, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.mvr.bg/upload/296043/%D0%94%D0%9E%D0%9F%D0%9A.pdf"
+  },
+  {
+   "claim": "record:BG:crisis_management:operator",
+   "fact_sha256": "01e4b2913978c81ce02e402ea37e929b4ee4a92658bac7f10ab5563b37ba9d8d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Sega article says verbatim that the warning system was developed jointly by МВР and the Ministry of e-Government, matching the printed statement; the MVR ordinance motives (hash matches) additionally name MVR as the competent body for the system.",
+   "quote_found": true,
+   "checked_url": "https://www.segabg.com/hot/category-bulgaria/mvr-shte-izdirva-banditi-chrez-bg-alert"
+  },
+  {
+   "claim": "record:BG:crisis_management:register",
+   "fact_sha256": "d952ceec4e02449b38451797a07006718a0583fd77a6a88f701dfc81f62947c7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes are verbatim; the MVR ordinance motives describe the BG-ALERT public-warning system, its connectivity to mobile networks and the Cell Broadcast technology, and the Sega page says messages go over mobile operators' networks via Cell Broadcast Service, so every element printed is in the sources.",
+   "quote_found": true,
+   "checked_url": "https://www.mvr.bg/upload/8121/%D0%BC%D0%BE%D1%82%D0%B8%D0%B2%D0%B8_%D0%BD%D0%B0%D1%80%D0%B5%D0%B4%D0%B1%D0%B0_bg-alert.pdf"
+  },
+  {
+   "claim": "record:BG:police_records:register",
+   "fact_sha256": "4dcdfab95b275a50c9aa0503d7eb7bc5d4dc45ada6e3005becb9306f7d9760a9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Ordinance I-45 (hash matches) names verbatim the Автоматизираната информационна система 'Издирвателна дейност' – Национална Шенгенска информационна система (АИС ИД – НШИС), a search/wanted-persons-and-vehicles system, as printed in full.",
+   "quote_found": true,
+   "checked_url": "https://www.rta.government.bg/upload/11661/n-I45.pdf"
+  },
+  {
+   "claim": "record:BG:vehicle_licensing:operator",
+   "fact_sha256": "24d1970decc571743c920e91e5000bd95b89d0c05b6eedeb1d3bc3657af3577d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Ordinance I-45 says verbatim that the 'Пътна полиция' department/sector at СДВР/ОДМВР responsible for vehicle registration records registration changes in АИС–КАТ, which supports those units as the operating body for vehicle registration.",
+   "quote_found": true,
+   "checked_url": "https://www.rta.government.bg/upload/11661/n-I45.pdf"
+  },
+  {
+   "claim": "record:BG:vehicle_licensing:register",
+   "fact_sha256": "815d5405decf40681c9d0944e7a2b7e226fa62de96b8b18b00e0475e2639c1bb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same ordinance passage names 'автоматизираната информационна система КАТ (АИС – КАТ)' verbatim as the system in which vehicle registration status is recorded, matching the printed name and description.",
+   "quote_found": true,
+   "checked_url": "https://www.rta.government.bg/upload/11661/n-I45.pdf"
+  }
+ ]
+}

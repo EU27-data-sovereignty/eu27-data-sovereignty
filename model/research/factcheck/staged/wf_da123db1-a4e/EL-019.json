@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "EL-019",
+ "iso": "EL",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "indicator:EL:K1",
+   "fact_sha256": "897df707f110c10b64ca0509c0361bce903d61e6df491302f5aff08793df19f2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Law 4727/2020 art. 58 says the General Secretariat for Digital Governance of the Ministry of Digital Governance exercises the powers of the Root Certification Authority, and aped.gov.gr/about-aped says operational management of the public-sector PKI and ΑΠΕΔ is exercised by the Ministry's Trust Services Department; both cited pages were read and the quotes found verbatim. A ministry body operating",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2020/4727/pdf"
+  },
+  {
+   "claim": "record:EL:border_control:register",
+   "fact_sha256": "6ea4b5d56ff3009590a578f2ac8ff5b8dbe76e36382c4fc152bab74349817135",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Law 4249/2014 (para. 9, Διεύθυνση Πληροφορικής) lists 'the operation of the information system of the national authority, under the SCHENGEN convention ratified by Law 2514/1997'; the printed name repeats that descriptive phrase without adding anything.",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2014/4249/pdf"
+  },
+  {
+   "claim": "record:EL:police_records:register",
+   "fact_sha256": "1f94823826b5a2781e7f5c1e88216b31f20c0b71d27a19bc9e72cbc1de756e11",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both the gazette PDF and lawspot carry the quote; the surrounding text is paragraph 9 '9. Η Διεύθυνση Πληροφορικής είναι αρμόδια...' listing taking all protection and security measures for the files and databases of the central IT system of the Hellenic Police, which supports the printed name including 'protected by the Police IT Directorate'.",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2014/4249/pdf"
+  },
+  {
+   "claim": "record:EL:breeder_documents:register",
+   "fact_sha256": "d1c8314063362698dda6c2d8cf066f786b4e575c50bad8f048cf18717097d169",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Art. 115 of Law 4483/2017 (both the PDF and lawspot) says the Citizens' Register comprises the civil-status acts (ληξιαρχικές πράξεις) of Greek citizens and foreigners with events in Greece, held in the Ministry of the Interior's Registry Acts Management system, which matches the rest of the sentence; but the parenthetical '(births, marriages, deaths)' appears in neither cited source (searched bot",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2017/4483/pdf"
+  },
+  {
+   "claim": "record:EL:civil_registry:register",
+   "fact_sha256": "03ee77995963e3d086f1202088634e63797214a2d55be1a41529ae566d9ddea8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 115 creates at the Ministry of the Interior an information system named «Μητρώο Πολιτών» consisting of (a) all National Municipal Register data and (b) civil-status act data (and (c) Special Registry data), described in para. 2 as a central database; the printed name and composition match.",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2017/4483/pdf"
+  },
+  {
+   "claim": "record:EL:land_property:operator",
+   "fact_sha256": "19cbd3d3e115749b141a78b691a6d3bf68d08b07504dadac1517aeae52fdc983",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 1 of Law 4512/2018 establishes the public-law entity 'Ελληνικό Κτηματολόγιο' (HELLENIC CADASTRE) supervised by the Minister of Environment and Energy, with the purpose of keeping the cadastral data; identical text on lawspot. Matches the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2018/4512/pdf"
+  },
+  {
+   "claim": "record:EL:beneficial_ownership:register",
+   "fact_sha256": "807cf78fa67f82a03f353ebf2406135ea3fdb093e6857e0b277ed1361cafce5d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Law 4557/2018 art. 20(4) creates at the Γ.Γ.Π.Σ. (General Secretariat for Information Systems) a Central Register of Beneficial Owners electronically linked to the ΑΦΜ of each legal person or entity; mitos.gov.gr also names the ΚΜΠΔ. All three quotes found; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2018/4557/pdf"
+  },
+  {
+   "claim": "record:EL:judicial_criminal:register",
+   "fact_sha256": "83fb08a52fa7117030f7c13524443b8f3f3b91aa8299720837a4798d36a219ef",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 569(1) of the Code of Criminal Procedure (Law 4620/2019) states that, subject to application of the computerised system under art. 568(1)(e), the criminal record consists of record slips; identical on lawspot. The printed text is a faithful paraphrase.",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2019/4620/pdf"
+  },
+  {
+   "claim": "record:EL:firearms_register:operator",
+   "fact_sha256": "4e566bb57e4cb6d264bc6c987e4fa143953a9ca6bf4bfad15127f35e0fb7fa32",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Law 4678/2020 says the State Security Directorate of Hellenic Police HQ is the information collection/exchange service and that an arms-dealer register and an electronic firearms file are kept (τηρείται) at that service; this supports it as the operating body.",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2020/4678/pdf"
+  },
+  {
+   "claim": "record:EL:firearms_register:register",
+   "fact_sha256": "9eab4913600938ae1a874b85e22000e19e089e249390cf0f8cd0c4b19be842dd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same passage names an 'ηλεκτρονικό αρχείο πυροβόλων όπλων' in which tracing information on firearms is recorded and kept for 30 years; the printed name is exactly that term.",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2020/4678/pdf"
+  },
+  {
+   "claim": "indicator:EL:C2",
+   "fact_sha256": "55d1dfcd7b85055415edbcebbb164b3ed9bfd4c3aa95f8ee742e31662bdc02c3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 87 of Law 4727/2020 defines the G-Cloud as the infrastructures managed by the GSIS (Γ.Γ.Π.Σ.Δ.Δ.); digitalstrategy.gov.gr refers to 'two existing government cloud nodes' being consolidated; and the ktpae.gr page (JS-rendered with headless Chrome, quote found) states migration of several public bodies' systems to the G-Cloud has been completed. Together they support a government cloud in opera",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2020/4727/pdf"
+  },
+  {
+   "claim": "indicator:EL:K2",
+   "fact_sha256": "f5b8699b869d5c537d6c9e237ef331e4ba5f543a0da87b84916ec0d3ef2a30a0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 24 lists authentication with the credentials of the GSIS of the Ministry of Digital Governance, and art. 25 (lawspot) makes the GSIS exclusively responsible for identification and authentication for digital public services; the GSIS is a state body, so 'Yes' is supported (art. 24 also allows e-banking credentials as an alternative login, which does not change who operates the scheme).",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2020/4727/pdf"
+  },
+  {
+   "claim": "record:EL:digital_identity_credentials:operator",
+   "fact_sha256": "fdcac624c1b50d7ee2a8c19e3dac9981c042c943e6fe1671708bc1906b62bb84",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 24(2) says the Ministry of Digital Governance acts as Controller for the personal data necessary for the authentication services for digital public services via the ΕΨΠ, and the same law elsewhere names the ΕΨΠ as 'gov.gr ΕΨΠ'; identical text on lawspot. The printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2020/4727/pdf"
+  },
+  {
+   "claim": "record:EL:trust_services_pki:register",
+   "fact_sha256": "3f58ab26a3c7650f75c523364c1badc38b122b44daba04d0891cd2e96417aa28",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 58(1): ΑΠΕΔ is the trust service provider of the Greek State and is responsible for issuing and managing certificates for trust services to all public-sector bodies; the printed sentence restates this.",
+   "quote_found": true,
+   "checked_url": "https://api.et.gr/apiLAW/1/2020/4727/pdf"
+  },
+  {
+   "claim": "record:EL:tax:register",
+   "fact_sha256": "24b11883adbbda01660a5f348d7db3ff0f208112786ecc94fbedad4642c72a7d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is titled 'Ανάπτυξη νέου ενοποιημένου Ολοκληρωμένου Πληροφοριακού Συστήματος Φορολογίας της ΑΑΔΕ' and the quoted sentence names the TAXIS - TAXISnet - Elenxis environment and processes; the printed name combines exactly those elements.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/anaptyxi_neoy_enopoiimenoy_olokliromenoy_pliroforiakoy_systimatos_forologias_tis_aade"
+  },
+  {
+   "claim": "record:EL:customs:foreign_dependency",
+   "fact_sha256": "75ecbb45dc24858a96112a3774e9c2b443f7dc0fc86404fd346f8ce296e97090",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says ICISnet (with TAXISnet, Taxis, ELENXIS) is among the systems hosted on the ΓΓΠΣΔΔ (state GSIS) infrastructure, which supports 'National infrastructure'; the page also describes a planned private-cloud procurement for the database layer but names no foreign or EU provider.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/anavathmisi_diathesimotitas_efedreias_asfaleias_dedomenon_poy_filoxenoyntai_stis_ypodomes_tis_ggpsdd"
+  },
+  {
+   "claim": "record:EL:land_property:foreign_dependency",
+   "fact_sha256": "c684b0f6c97a52ce6cdb4a1b91590885e0387cb1be3f82ed883625af579dd5e5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page (status 'προγραμματισμένο') concerns upgrading the equipment of the Hellenic Cadastre's own Data Center and Disaster Recovery Center for virtualisation, which implies the registry runs on the public-law entity's own facilities and supports 'National infrastructure'; no external provider is mentioned.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/anavathmisi_exoplismoy_ktimatologioy_gia_leitoyrgia_se_eikoniko_perivallon_virtualization"
+  },
+  {
+   "claim": "record:EL:public_finance:register",
+   "fact_sha256": "47b4f233e48503457252151e048aa614910a0a6e6e6087d2ffda772cb4e33859",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the Central Administration's information system is the evolution of the ΟΠΣΔΠ, to be extended and upgraded 'υλοποιώντας τελικά το Κεντρικό και Ενιαίο Σύστημα Δημοσιονομικής Πολιτικής (Gov ERP)'; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/government_erp"
+  },
+  {
+   "claim": "record:EL:customs:register",
+   "fact_sha256": "ec12da293dca6d3aff0b1ddd11533d7b6ff6bbe4683ce5023540d5584b18154d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is titled 'Ανάπτυξη νέου ενοποιημένου Ολοκληρωμένου Πληροφοριακού Συστήματος Τελωνείων της ΑΑΔΕ (ICISnet)' and the quote refers to the existing ICISnet; this supports 'ICISnet — integrated customs information system of AADE'.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/icisnet"
+  },
+  {
+   "claim": "record:EL:government_payroll:register",
+   "fact_sha256": "6a7185bd0922e8456f3114341cb6ad6d60e79711ce8900b15c51c53fe4e4c1b3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page describes the design and implementation of a central HR management system of the Greek State that will manage all events of public-administration staff 'από την πράξη διορισμού τους μέχρι και τη συνταξιοδότησή τους'; the printed name and scope match (the page marks the project as in progress).",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/kentriko_systima_diacheirisis_anthropinoy_dynamikoy"
+  },
+  {
+   "claim": "record:EL:government_payroll:count",
+   "fact_sha256": "994eb6ba61204d39c96579da4aebe3c8f7157c94ffc6e6a4c93241f06bdaa452",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states 'τουλάχιστον 680.000 μισθοδοτούμενων, που ανήκουν σε 3.500 φορείς του ευρύτερου Δημόσιου Τομέα'; both numbers and the scope appear verbatim.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/misthodosia"
+  },
+  {
+   "claim": "record:EL:government_payroll:operator",
+   "fact_sha256": "4e930ac6f3233ac1dfde4829322b0c546e89405afeabb30efe184bf51278bfe3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the project will allow payroll, insurance, tax and related provisions to be applied centrally by the Ενιαία Αρχή Πληρωμής (ΕΑΠ); the printed statement preserves the future tense and names the same body.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/misthodosia"
+  },
+  {
+   "claim": "record:EL:education:register",
+   "fact_sha256": "afa6e969dd80bcc36a4d2017c31c75429ab0d94540cc1e4b6670434e36ead8c5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page concerns the redesign of the MySchool platform and its administration services for schools and education directorates; 'MySchool' is the name given.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/myschool"
+  },
+  {
+   "claim": "record:EL:land_property:register",
+   "fact_sha256": "b9c1f70e64bf783ed4165c53c3cd0d047afd59a9fae6792474a1829fddbd7177",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the project digitises the mortgage registries' Transcriptions and Mortgages archives and enters them into the Σύστημα Πληροφορικής του Εθνικού Κτηματολογίου (ΣΠΕΚ); the printed name and description match.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/psifiopoiisi_archeioy_ypothikofylakeion_gia_to_ethniko_ktimatologio"
+  },
+  {
+   "claim": "record:EL:benefits_pensions:register",
+   "fact_sha256": "3c804397176468f8788854b2def8b82b804deccf2b496c62e571ad81449c8d47",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The e-ΕΦΚΑ project page says insurance-period data from the digitised archives of funds merged into the former ΙΚΑ are entered into the database of the «ΑΤΛΑΣ» system for subsequent use in awarding pensions; each element of the printed description (ATLAS, e-EFKA, pension award, IKA archives) is on the page.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/psifiopoiisi_asfalistikis_istorias_e-efka"
+  },
+  {
+   "claim": "record:EL:national_archives:register",
+   "fact_sha256": "a36429a522c2486f8289a4da6778ffc1778eda75af9723e1b1866d1e138f856b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states the project concerns digitising all physical archives of the General State Archives and migrating those data from the related information systems; the printed text is a direct rendering of that sentence.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/psifiopoiisi_ton_genikon_archeion_toy_kratoys"
+  },
+  {
+   "claim": "record:EL:health_records:foreign_dependency",
+   "fact_sha256": "04870a2e770abc55a0ccc7ecbeb0eed672a1be48e4c7a66dd596b866dd18fa76",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says Law 4727/2020 places health-sector cloud management at ΗΔΙΚΑ Α.Ε. and that all central health information systems must be installed in the Health Sector Government Cloud (H-Cloud) by 1.1.2023; a government cloud at a state company supports 'National infrastructure', though the source phrases it as a legal obligation rather than an observed state.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/systima_diakyvernisis_dedomenon_gia_ton_tomea_tis_ygeias"
+  },
+  {
+   "claim": "indicator:EL:C1",
+   "fact_sha256": "e6fa9b07d9112d9b80f6d259e562f658b15a32578866b52282abb37a8771e432",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "digitalstrategy.gov.gr states that separate data centres exist ('υπάρχουν') at the Ministry of the Interior, the Asylum Service and the Reception and Identification Service, and the ktpae.gr page (rendered) refers to systems hosted on the GSIS infrastructure; the GRNET quote was also found but on its own does not say GRNET is state-owned. The first two support state-operated data centres in operat",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/tier-4_datacenter"
+  },
+  {
+   "claim": "param:EL:gov_employment_k",
+   "fact_sha256": "885de69a24ccbb3a8b127006079df2edc572651290befa50c76f27b5d8621287",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API response for nama_10_a64_e, EMP_DC, NACE O, THS_PER, geo EL, 2024 returns value 400.6 (thousand persons), matching '400.6 thousand'.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=EL&time=2024"
+  },
+  {
+   "claim": "param:EL:gdp_eur_bn",
+   "fact_sha256": "bf74cbb8e6792d51d388b757d5dc50972289ca13139536d60a51f9bc543e68ca",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API response for nama_10_gdp, B1GQ, CP_MEUR, geo EL, 2025 returns 248353.7 million euro, which scaled to billions and rounded is 248.4, matching '248.4 EUR bn'.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=EL&time=2025"
+  }
+ ]
+}

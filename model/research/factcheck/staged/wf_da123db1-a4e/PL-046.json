@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "PL-046",
+ "iso": "PL",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "indicator:PL:L2",
+   "fact_sha256": "50a1f572a22bf4a286411ec99c5c56aa3d8f0e2becea7e7783e0638dc4537b12",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is the Act of 5 August 2010 on the protection of classified information; Chapter 2 'Klasyfikowanie informacji niejawnych', Art. 5(1) contains the quote defining the 'ściśle tajne' clause (also found verbatim in the 2025/1209 consolidated text). A classification scheme set out in a statute supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2010/1228/text.html"
+  },
+  {
+   "claim": "record:PL:official_gazette:operator",
+   "fact_sha256": "3329c04e117e54b2f4d90d541c1af5c7c8751e2aab1bab0ca32a26e096c146df",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 21(1)(1) reads 'Prezes Rady Ministrów wydaje: 1) Dziennik Ustaw i Monitor Polski przy pomocy Rządowego Centrum Legislacji', which matches the printed operator exactly.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2019/1461/text.pdf"
+  },
+  {
+   "claim": "record:PL:official_gazette:register",
+   "fact_sha256": "0270173be1fc2457179f30344a9ef36526f53a7d13e76757c2f97789de17adab",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 9(1) names 'Dziennik Ustaw Rzeczypospolitej Polskiej, zwany dalej Dziennikiem Ustaw' and lists the Constitution and statutes as published there; the printed name matches.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2019/1461/text.pdf"
+  },
+  {
+   "claim": "record:PL:crisis_management:register",
+   "fact_sha256": "67650d96a0ce57a05173c91c1474d64f300817d25e557b163eba3df2990be4fe",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The document is the Rozporządzenie Rady Ministrów of 31 August 2020 'w sprawie współpracy dyrektora Rządowego Centrum Bezpieczeństwa z operatorem ruchomej publicznej sieci telekomunikacyjnej w celu powiadamiania użytkowników końcowych o zagrożeniu', and §(4)-(5) use the sender identifier 'ALERT RCB'; the printed description of the regulation is accurate, though it is a regulation title rather than",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2020/1527/text.pdf"
+  },
+  {
+   "claim": "record:PL:national_archives:register",
+   "fact_sha256": "0103004b6dd64ae5e16b1913e25e98933fc9904556799844e5c806bb79018513",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 1 of the consolidated Act on the national archival resource lists 'dokumenty elektroniczne w rozumieniu przepisów ustawy z dnia 17 lutego 2005 r. o informatyzacji...' among archival materials, which supports the printed statement; note the statement describes scope and names no register or system.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2020/164/text.html"
+  },
+  {
+   "claim": "record:PL:geospatial:operator",
+   "fact_sha256": "b9230ba3c363bbe30439c758d98fdc8e4627bad992711e43f44fb7599369f984",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is the consolidated Prawo geodezyjne i kartograficzne; Art. 7a(1) lists the tasks of the Główny Geodeta Kraju, point 3 being 'prowadzi centralny zasób geodezyjny i kartograficzny', which matches the printed statement including the article number.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1151/text.html"
+  },
+  {
+   "claim": "record:PL:geospatial:register",
+   "fact_sha256": "abf5d004377628b129001de5066687fcd5012120a8cbfa99f12bebf9605c2113",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 7a(1)(6) names the 'państwowy rejestr granic i powierzchni jednostek podziałów terytorialnych kraju, zintegrowany z ewidencją gruntów i budynków oraz ewidencją miejscowości, ulic i adresów', which the printed name faithfully renders.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1151/text.html"
+  },
+  {
+   "claim": "record:PL:vehicle_licensing:register",
+   "fact_sha256": "660d813bd03c63f66aa6351d6d0de4e2ff78604229e98270a7a0d37e258c4d47",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Chapter 2a, Art. 80a(1): 'Tworzy się centralną ewidencję pojazdów, zwaną dalej ewidencją', matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1251/text.pdf"
+  },
+  {
+   "claim": "record:PL:customs:register",
+   "fact_sha256": "c56d18f00a7e4d5738a4431f7ebec0be01f321c6e2636a53c3d54824fa218269",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PUESC page says 'PUESC to system teleinformatyczny, który umożliwia wymianę informacji drogą elektroniczną między KAS i klientami KAS' and continues 'w szczególności deklaracje i zgłoszenia'; the Prawo celne Art. 10a(1) quote also names PUESC for electronic exchange 'w szczególności deklaracji lub zgłoszeń'. Both match the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://puesc.gov.pl/web/guest/uslugi/jak-to-dziala-informacje-o-puesc"
+  },
+  {
+   "claim": "indicator:PL:K1",
+   "fact_sha256": "2e470fdad59fb49a4129928bd65515d8ddb13d8acd0f94536c5dd440a20dc63f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 2 of the Act on trust services makes the minister for computerisation responsible for the national trust infrastructure including the narodowe centrum certyfikacji; Art. 11 (also in the 2016/1579 text) allows authorising Narodowy Bank Polski, and nccert.pl states the NCC is an IT system of NBP performing tasks entrusted by the minister. The root is run by state bodies, supporting 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1725/text.pdf"
+  },
+  {
+   "claim": "record:PL:trust_services_pki:operator",
+   "fact_sha256": "fa0d53cd0fc00d72a5cfe6c13c361e14de179f258ea6ac48b8327a0be9d161c5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 11(1) says the minister 'może upoważnić Narodowy Bank Polski' to perform the Art. 10 (national certification centre) tasks and keep the register and trusted list; the printed conditional wording 'when authorised by the minister' matches the source.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1725/text.pdf"
+  },
+  {
+   "claim": "record:PL:trust_services_pki:register",
+   "fact_sha256": "cbb44fb17522daf7f7ed7a647af847a0f020262fbf462d88eeb09a7ff191989e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Chapter 2 'Krajowa infrastruktura zaufania', Art. 2, lists 'narodowe centrum certyfikacji' as component 3 of the national trust infrastructure, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1725/text.pdf"
+  },
+  {
+   "claim": "record:PL:judicial_criminal:operator",
+   "fact_sha256": "2ab669432a6bdaeb7146950a7221f0656a1d8419510161bb9fa9bdee960ecf53",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 2(1): 'Rejestr prowadzi Minister Sprawiedliwości' and the tasks are carried out by the 'Biuro Informacyjne Krajowego Rejestru Karnego' within the Ministry of Justice, matching the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2024/276/text.pdf"
+  },
+  {
+   "claim": "record:PL:judicial_criminal:register",
+   "fact_sha256": "5c22d3a4c6564cdfbd171f890b93fec8ec1c7442416485f4b09979dc72bd88ce",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 1(1) of the Act of 24 May 2000: 'Tworzy się Krajowy Rejestr Karny, zwany dalej Rejestrem', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2024/276/text.pdf"
+  },
+  {
+   "claim": "record:PL:residence_permits:operator",
+   "fact_sha256": "94c7acc270633e9bed514d845334e24d7327cfb5136d99e24c228cef3e67a813",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 449(1) of the Act on Foreigners says the national collection of registers is created and kept 'w systemie teleinformatycznym Szef Urzędu', and Art. 16(1) defines 'Szef Urzędu do Spraw Cudzoziemców, zwany dalej Szefem Urzędu', so the bracketed '[for Foreigners]' is also in the source.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1079/text.pdf"
+  },
+  {
+   "claim": "record:PL:residence_permits:register",
+   "fact_sha256": "11c163aa6912772cf9710010066e5a84cd5f33e3c452b118f285d6118601a66d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Chapter 3 heading and Art. 449(1) name the 'Krajowy zbiór rejestrów, ewidencji i wykazu w sprawach cudzoziemców', exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1079/text.pdf"
+  },
+  {
+   "claim": "record:PL:emergency_communications:operator",
+   "fact_sha256": "0b1ee9e90797e38159cd8c88078275ecc9974c2935c9de2b8e83911f11702946",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 10(10) (quoted) has the minister for public administration ensure continuity of the ICT system, and Art. 10(3) adds 'Utrzymanie i rozwój systemu teleinformatycznego zapewnia minister właściwy do spraw administracji publicznej'; this supports naming that minister as the operator of the system.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1354/text.pdf"
+  },
+  {
+   "claim": "record:PL:emergency_communications:register",
+   "fact_sha256": "d2c6912159f3993a996b99c1fd84ff042c30ba4636ec8e7d3417fd0ca0b15514",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 3(1)-(2): 'Tworzy się system powiadamiania ratunkowego' consisting of centres handling calls to 'numerów alarmowych 112, 997 i 998', matching the printed name and numbers.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1354/text.pdf"
+  },
+  {
+   "claim": "record:PL:health_insurance:register",
+   "fact_sha256": "672a2a896892963f2b5387e378a4393c58636d643c440388e90b208ce360ab29",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quoted task list includes '8) prowadzenie Centralnego Wykazu Ubezpieczonych', and elsewhere the act states 'Fundusz prowadzi Centralny Wykaz Ubezpieczonych'; the printed register name matches.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1461/text.pdf"
+  },
+  {
+   "claim": "record:PL:public_health_surveillance:operator",
+   "fact_sha256": "77dab507b2c83aa6576a397ab0e018c2e9bfe3101d096fcd10bc55b91d2ea3cd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Para. 5 reads 'Minister właściwy do spraw zdrowia wyznacza administratora systemu rejestru chorób zakaźnych spośród jednostek podległych lub nadzorowanych przez tego ministra', which the printed statement restates without adding anything.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1675/text.pdf"
+  },
+  {
+   "claim": "record:PL:fingerprint_biometric:register",
+   "fact_sha256": "29cc992a252c4627d178f058baf6921b9489e6bd8d991e9bce890b17fce0479c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote (Art. 56(2)) says fingerprints (ust. 1 pkt 2a 'odciski palców') are held in the Rejestr Dowodów Osobistych only until the card is collected, at most 90 days; Art. 56(1) lists fingerprints among the data gathered in that central register. The source therefore documents time-limited storage in a central register, not the absence of one, so it does not support 'No central register' as print",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/1753/text.pdf"
+  },
+  {
+   "claim": "record:PL:police_records:operator",
+   "fact_sha256": "426457b68ef7020e7342cd02917a19d794ee41236abaf636cf5ec667ef5cfa47",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 21nb(1): 'Komendant Główny Policji prowadzi Krajowy System Informacyjny Policji', matching the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/636/text.pdf"
+  },
+  {
+   "claim": "record:PL:police_records:register",
+   "fact_sha256": "a5fbac940be069f02b14b8fdd3d4d2d1cf086bf3322767a71a296f7ea79da400",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 21nb(1) names the 'Krajowy System Informacyjny Policji, zwany dalej KSIP', matching the printed name and abbreviation.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/636/text.pdf"
+  },
+  {
+   "claim": "record:PL:business_registry:operator",
+   "fact_sha256": "38a015030320665f45a529519c453ff459d6c6baafae4a2fb9571e5c0d5e56c5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The document is the consolidated Act on the Krajowy Rejestr Sądowy (Art. 1: 'Tworzy się Krajowy Rejestr Sądowy, zwany dalej Rejestrem'); Art. 3a(1) reads 'Minister Sprawiedliwości utrzymuje system teleinformatyczny służący do prowadzenia Rejestru', matching the printed statement and article number.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/869/text.pdf"
+  },
+  {
+   "claim": "record:PL:water_control:operator",
+   "fact_sha256": "2f92cf414599db7f14620529514b174f7309dbf3619623682fc2e5a479812ab1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 330(1): the water management information system 'prowadzą Wody Polskie', matching the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/960/text.pdf"
+  },
+  {
+   "claim": "record:PL:water_control:register",
+   "fact_sha256": "a21959f75e5989264c00116b2d564366b93219b451e70c7c0fdf425e279750c2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 330(1) names the 'System informacyjny gospodarowania wodami dla obszaru państwa', matching the printed system name.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/960/text.pdf"
+  },
+  {
+   "claim": "record:PL:border_control:operator",
+   "fact_sha256": "65846db4dbdfe10ac31d978ba27a29cc6fb40b225edd3236aa4785af0fb543f9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 2(3) of the Act on Poland's participation in SIS and VIS defines 'centralnym organie technicznym KSI – rozumie się przez to Komendanta Głównego Policji', matching the printed statement including the 'central technical authority' qualifier.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1061/text.pdf"
+  },
+  {
+   "claim": "record:PL:border_control:register",
+   "fact_sha256": "cbf6f246155a1acf1ae2d9196c03237f868143b69030454c7404fa655dcb5ea5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 1 and Art. 2(1) refer to entries and access to SIS and VIS data 'poprzez Krajowy System Informatyczny (KSI)', matching the printed name and abbreviation.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1061/text.pdf"
+  },
+  {
+   "claim": "record:PL:land_property:register",
+   "fact_sha256": "ab135731e301b5ed037b1c44fa8ffe29f0caeed77c226e7db36e7cd978bbfc9f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 25[1](1): 'Księgi wieczyste są zakładane i prowadzone w systemie teleinformatycznym', which matches 'księgi wieczyste, kept in an ICT system'.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1066/text.pdf"
+  },
+  {
+   "claim": "indicator:PL:K2",
+   "fact_sha256": "0fbeca88a3f04bc1e338cdf7133b39ed276b7acf80d74dc6f70e99fcad46b933",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 20ab of the Act on computerisation says the minister for computerisation 'zarządza publicznym systemem identyfikacji elektronicznej', and gov.pl states 'Za rozwój i utrzymanie serwisu odpowiada Minister Cyfryzacji' for profil zaufany (coi.gov.pl confirms it is a notified eID means). A state ministry operating the scheme supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1241/text.pdf"
+  }
+ ]
+}

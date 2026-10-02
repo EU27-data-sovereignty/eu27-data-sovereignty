@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "BE-004",
+ "iso": "BE",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:BE:crisis_management:count",
+   "fact_sha256": "ea0d65295974e328dd125ac6d64744b8d0c5aac1b26d70a411d078222d7755aa",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page title reads verbatim 'Meer dan 1 miljoen geregistreerde adressen in BE-Alert' and the body repeats that the one-million mark of registered addresses was passed, matching the printed count.",
+   "quote_found": true,
+   "checked_url": "https://crisiscentrum.be/nl/newsroom/meer-dan-1-miljoen-geregistreerde-adressen-be-alert"
+  },
+  {
+   "claim": "record:BE:crisis_management:register",
+   "fact_sha256": "4f3f4c8da65ffd52ce679537a45f30de07bc7a3ed6e71fb049e104b6feee9e36",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The opening sentence appears verbatim and describes BE-Alert as 'het alarmeringssysteem van de overheid', which is exactly the printed name and gloss.",
+   "quote_found": true,
+   "checked_url": "https://crisiscentrum.be/nl/newsroom/meer-dan-1-miljoen-geregistreerde-adressen-be-alert"
+  },
+  {
+   "claim": "record:BE:education:operator",
+   "fact_sha256": "54233bdb710218be2b7b861f67bf3c49095f63cd26fdc236e453792dbf953b69",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The sentence 'Het Agentschap voor Kwaliteitszorg in Onderwijs en Vorming is bevoegd voor het beheer van de databank' appears verbatim and names that agency as responsible for managing LED. Note the same page's 'Naam instelling' line lists AHOVOKS as the supplying institution, but the cited sentence states the operator as printed.",
+   "quote_found": true,
+   "checked_url": "https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led"
+  },
+  {
+   "claim": "record:BE:education:register",
+   "fact_sha256": "c7a6b731d8aafd6c1b9dccacda46b27f7be9b69c211bde0fb1c5570f106679e7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Coverage/scope section opens verbatim with 'Het bestand bevat de gegevens van LED, de Leer- en ErvaringsbewijzenDatabank', matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led"
+  },
+  {
+   "claim": "record:BE:benefits_pensions:register",
+   "fact_sha256": "5f39198a8122af83e509cb0aa26b5f64c874f8e31e7a66f2443100404e7eaf57",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page's Coverage/scope section contains the quoted sentence verbatim, naming the Pensioenkadaster as the store of first- and second-pillar pensions paid in Belgium.",
+   "quote_found": true,
+   "checked_url": "https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-onp-sfp-cadastre.html"
+  },
+  {
+   "claim": "param:BE:gov_employment_k",
+   "fact_sha256": "8d60932599293c3ae4b80452cbb9d4fe3a3d070be68233f746db38a59b5b5823",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns value 459.50 for BE, 2024, unit THS_PER (thousand persons), NACE O, flagged provisional; this matches the printed 459.5 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=BE&time=2024"
+  },
+  {
+   "claim": "param:BE:gdp_eur_bn",
+   "fact_sha256": "6eb6f8ec21a40bc07d8b254002904f07ed9049365456c308d1490900ec0c6fdc",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 642015.3 million euro (current prices) for BE 2025, provisional; scaled to billions and rounded that is 642.0 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=BE&time=2025"
+  },
+  {
+   "claim": "param:BE:renewables_pct",
+   "fact_sha256": "013d0b7d1ba547f0b3080a50d8227af91adf4aaf1fbae083c857bcd8bbe05bec",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 34.3 (percentage, REN_ELC) for BE 2025, provisional, matching the printed 34.3 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=BE&time=2025"
+  },
+  {
+   "claim": "param:BE:elec_price_eur_mwh",
+   "fact_sha256": "767230ea6a09f8c9b611676f3b0945c7eb68c89d3098a4ee43755449eba29704",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1866 EUR per kWh for BE, 2025-S2, band MWH500-1999, excluding VAT; converted to EUR/MWh that is 186.6 as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=BE&time=2025-S2"
+  },
+  {
+   "claim": "param:BE:land_km2",
+   "fact_sha256": "c499b6564e61f8e77da152b1cd97de6ccc52de12604b9f646707ee2b34563b5a",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 30452 km² for BE 2026 (landuse L0008), matching the printed 30 452 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=BE&time=2026"
+  },
+  {
+   "claim": "param:BE:population_m",
+   "fact_sha256": "b814364061c8644618853e4deeea3c1102962203b0af1044f294312a0ec871db",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 11955308 persons on 1 January 2026 for BE, provisional; rounded to millions that is 11.96 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=BE&time=2026"
+  },
+  {
+   "claim": "indicator:BE:L2",
+   "fact_sha256": "8f1147ff317ab930dc3b603388cbc1a94c9004f4ad061001bccd8370dc70516a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both pages carry the Loi du 11 décembre 1998 relative à la classification et aux habilitations de sécurité, whose Article 4 defines the classification degrees (TRES SECRET etc.) in the quoted words; the quotes appear verbatim on both pages (the jurion consolidated text adds RESTREINT). A classification scheme defined in a statute supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://etaamb.openjustice.be/fr/loi-du-11-decembre-1998_n1999007004.html"
+  },
+  {
+   "claim": "record:BE:issuance_history:register",
+   "fact_sha256": "7a1769f1c6c5edbf5de266b32eb87489c94f0b479fe8fb970cde2149404b69bd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The royal decree of 25 May 2005 contains verbatim the sentence that the Register van de Identiteitskaarten ensures a permanent inventory of identity cards produced and issued in Belgium; the ibz.rrn FAQ also names the register verbatim. The printed name and description match.",
+   "quote_found": true,
+   "checked_url": "https://etaamb.openjustice.be/nl/koninklijk-besluit-van-25-mei-2005_n2005000390.html"
+  },
+  {
+   "claim": "record:BE:business_registry:register",
+   "fact_sha256": "c6363a22d5e0ceaaf15850e161a7e718b444de3e6e6ca5c113f645b111f4be01",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Advies nr. 03/2023 (20 January 2023) contains the quoted text verbatim (across a line break), naming the Kruispuntbank van Ondernemingen as the body assigning the enterprise number. The fact asks only for the register's name, which the quote states; the opinion itself concerns a restructuring-law draft, not the KBO as such.",
+   "quote_found": true,
+   "checked_url": "https://gegevensbeschermingsautoriteit.be/publications/advies-nr.-03-2023.pdf"
+  },
+  {
+   "claim": "record:BE:judicial_criminal:register",
+   "fact_sha256": "1bd49cb4a2b1eeab0e4c77af34e54c3bb18d12c95e7d9b533b0c11241ae8affe",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Advies nr. 73/2026 (15 April 2026) has the quoted 'Betreft' line verbatim, naming the Centraal Strafregister; the printed register name matches.",
+   "quote_found": true,
+   "checked_url": "https://gegevensbeschermingsautoriteit.be/publications/advies-nr.-73-2026.pdf"
+  },
+  {
+   "claim": "indicator:BE:K1",
+   "fact_sha256": "0f08d5daf2f0d264e6b44a0cd7fc06babaa4e82d265d6e1a8376a75f9e7b1515",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Citizen CA CPS v5.0 (03/09/2024) states verbatim 'The Belgian authorities are the TSP responsible for the Belgium Root CAs and for the CA certificates issued under the Belgian Root CA' (the older CPS v1.4 says the same with CSP). The root of the state PKI being the Belgian authorities' responsibility supports 'Yes'; only the subordinate Citizen CA is run by certipost on the authorities' behalf",
+   "quote_found": true,
+   "checked_url": "https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA_BRCA34.pdf"
+  },
+  {
+   "claim": "record:BE:trust_services_pki:operator",
+   "fact_sha256": "b0c70b80c5e4ee8d8814a27ab93df10c119c7798545f38902fb5474e8c007dcd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both CPS documents contain the sentence verbatim; the older one uses 'CSP', which the same document expands as 'Certification Services Provider', so the printed wording 'certification service provider responsible for the Belgium Root CAs' matches the source.",
+   "quote_found": true,
+   "checked_url": "https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA.pdf"
+  },
+  {
+   "claim": "record:BE:trust_services_pki:register",
+   "fact_sha256": "bed251ac4bd377e7e85cedd7891bf58f9e89b9033283ff356a73c722e2f71737",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "CPS_CitizenCA.pdf states verbatim that the Belgian State set up a CA hierarchy and 'On the top of this hierarchy, there is a \"Belgium Root CA (BRCA)\"' to build trust in CAs 'within the government domain'; the BRCA34 CPS also names the BRCA verbatim. The printed name and 'top of the government CA hierarchy' match.",
+   "quote_found": true,
+   "checked_url": "https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA.pdf"
+  },
+  {
+   "claim": "record:BE:authentication_audit_log:register",
+   "fact_sha256": "f197c17942c80b3078ec4aa789bd1c07ff34b44a0cec06fb5a6dd0ff93530204",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The FAS privacy notice states verbatim that authentication logs are stored in an audit trail for 10 years; the printed 'FAS audit trail of authentication logs, kept for 10 years' matches.",
+   "quote_found": true,
+   "checked_url": "https://sma-help.bosa.belgium.be/en/fas-privacy"
+  },
+  {
+   "claim": "record:BE:digital_identity_credentials:operator",
+   "fact_sha256": "99f26c829fce3e337e0ea6dace738a6ac03741de539b89fb5d353e545226b66c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim, saying FAS is provided by DG Simplification and Digitization, and the page opens by naming 'The Federal Public Service Policy and Support, the Directorate-General for Simplification and Digitization' as responsible, with BOSA in the footer and contact address. The printed operator and parenthetical match.",
+   "quote_found": true,
+   "checked_url": "https://sma-help.bosa.belgium.be/en/fas-privacy"
+  },
+  {
+   "claim": "record:BE:digital_identity_credentials:register",
+   "fact_sha256": "ec96bb68efbdf63527ec11491ba18b6f8e3dfeaed805f22e9561acfbf985d26a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim and names the Federal Authentication Service (FAS), matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://sma-help.bosa.belgium.be/en/fas-privacy"
+  },
+  {
+   "claim": "record:BE:breeder_documents:operator",
+   "fact_sha256": "00848bb2beb446789f6d5c2bff9393bbd68e278de3e910015ab2f3ed106cd880",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The arch.be article contains verbatim that the DABS is steered by a Beheerscomité DABS responsible for its set-up and management; the ibz FAQ PDF also states verbatim that the DABS will be managed by the Beheerscomité DABS. The printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.arch.be/index.php?l=nl&m=nieuws&r=alle-nieuwsberichten&a=2023-06-14-het-rijksarchief-is-vertegenwoordigd-in-het-beheerscomite-van-de-databank-voor-akten-van-de-burgerlijke-stand"
+  },
+  {
+   "claim": "record:BE:breeder_documents:register",
+   "fact_sha256": "518ec5f188c6f79567b7d5d6b15d4ead07da57317ad317fe1a6d77fd8934d224",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim and the very next sentence on the page says the central database replaces the local registers previously kept per municipality/consulate; the ibz FAQ PDF says the same verbatim. The printed name and 'replacing the municipal and consular registers' are both on the source.",
+   "quote_found": true,
+   "checked_url": "https://www.arch.be/index.php?l=nl&m=nieuws&r=alle-nieuwsberichten&a=2023-06-14-het-rijksarchief-is-vertegenwoordigd-in-het-beheerscomite-van-de-databank-voor-akten-van-de-burgerlijke-stand"
+  },
+  {
+   "claim": "record:BE:emergency_communications:count",
+   "fact_sha256": "cf9a409daa1995d691d7e0f2f67ff07a78b6e77c925c9d64f72c9f65f62fc9c7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim 'Dagelijks verwerkt het netwerk meer dan 2 miljoen radiocontacten', matching the printed 'more than 2 million radio contacts per day'. Note this is a daily traffic figure, which is how the report prints it, not a stored-record count.",
+   "quote_found": true,
+   "checked_url": "https://www.astrid.be/nl/diensten/radiocommunicatie"
+  },
+  {
+   "claim": "record:BE:emergency_communications:register",
+   "fact_sha256": "218e2a82e5d78c968b6d28db28e875d62e549ea12ba0cad15a86e8c6f9c21cb4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The sentence about the TETRA standard underlying the ASTRID-radionetwerk appears verbatim, supporting the printed name 'ASTRID-radionetwerk (ASTRID TETRA radio network)'.",
+   "quote_found": true,
+   "checked_url": "https://www.astrid.be/nl/diensten/radiocommunicatie"
+  },
+  {
+   "claim": "record:BE:emergency_communications:operator",
+   "fact_sha256": "202239a98a2421de61060c62ce730079f92b1fccad1827f795568be1c6cef244",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that ASTRID is a naamloze vennootschap van publiek recht set up under the law of 8 June 1998, and describes it as managing the radio network; the printed operator matches.",
+   "quote_found": true,
+   "checked_url": "https://www.astrid.be/nl/over-astrid/organisatie"
+  },
+  {
+   "claim": "indicator:BE:C2",
+   "fact_sha256": "2cf9a83141f3fc2ca9987d202854197254cac54e4729f450d03c6d80c4ddfb84",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim: G-Cloud is a hybrid cloud managed by the government, and the page adds that the first generation of G-Cloud services has been operational since March 2015 with storage and infrastructure services available. That supports a government cloud platform in operation, not merely announced.",
+   "quote_found": true,
+   "checked_url": "https://www.gcloud.belgium.be/nl"
+  },
+  {
+   "claim": "indicator:BE:C1",
+   "fact_sha256": "e86f59c59f39bca8e1d276dfb1a7f88abaa2f290b29d7838c5b273a54f0e160f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim ('G-Cloud heeft vier data centers ...') and the page says the data centres are managed by a board of FOD Financiën, the Regie der Gebouwen and Smals, offering housing today. State-operated data centres in operation support 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.gcloud.belgium.be/nl/service/detail/housing"
+  },
+  {
+   "claim": "record:BE:residence_permits:register",
+   "fact_sha256": "b404c1910a46d89c43e402214b3ce7285f87fc0dd0d4a4ad8a0c0e1134337cb5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Advies nr. 121/2022 (1 July 2022) contains the quoted sentence verbatim (across line breaks): the minister's delegate said it concerns the internal database of the immigration service, Evibel, to be replaced by eMigration. The printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-121-2022.pdf"
+  },
+  {
+   "claim": "record:BE:firearms_register:operator",
+   "fact_sha256": "ca13f8451ad9550744637aaabd14eeda9583067b0195c64d8befa6593ba6ba18",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Advies nr 169/2019 (8 November 2019) contains verbatim that the Centraal Wapenregister 'beheerd wordt door een dienst van de Federale Politie', matching the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-169-2019.pdf"
+  }
+ ]
+}

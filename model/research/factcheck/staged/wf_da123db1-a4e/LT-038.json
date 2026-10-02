@@ -1,0 +1,220 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "LT-038",
+ "iso": "LT",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "param:LT:gov_employment_k",
+   "fact_sha256": "f9c35a8a562ff81ac7d6fe0b41824aae8821b612fb25af39901053134e31983a",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 98.65 thousand persons for LT, NACE O, EMP_DC, 2024 (no flag); rounded to one decimal that is the printed 98.7 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=LT&time=2024"
+  },
+  {
+   "claim": "param:LT:gdp_eur_bn",
+   "fact_sha256": "23b765902bfe98d7507f10ff78b07ac1eb97c3d5c32c61a470512218367b6119",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 84258.0 million EUR for LT B1GQ 2025, which scaled to billions and rounded is the printed 84.3 EUR bn.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=LT&time=2025"
+  },
+  {
+   "claim": "param:LT:renewables_pct",
+   "fact_sha256": "7bb7d1f65409c327fd61a6b317edab401fa6a6f232993ae40a7ef9d8490670bb",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 59.9 % for LT REN_ELC 2025, matching the printed value exactly; note the value carries Eurostat's 'p' (provisional) flag.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=LT&time=2025"
+  },
+  {
+   "claim": "param:LT:elec_price_eur_mwh",
+   "fact_sha256": "b9a9a026c16a9398425b24253b8330138fe4b72302910c462d116abed26ee3ad",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1591 EUR/kWh for LT, band MWH500-1999, excluding VAT, 2025-S2; scaled to EUR/MWh that is exactly the printed 159.1.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=LT&time=2025-S2"
+  },
+  {
+   "claim": "param:LT:land_km2",
+   "fact_sha256": "8e4f7c0d0fe291d9ab53bd87da45f0bdc1878d1ce076ede02b89beed50184a7e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 62643 km² for LT, landuse L0008, 2026, identical to the printed 62 643 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=LT&time=2026"
+  },
+  {
+   "claim": "param:LT:population_m",
+   "fact_sha256": "dfba905e44849c01a1054ed884979ad36ad01bc69d2db2dcf549c45c1665c9f1",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 2 887 592 persons for LT on 1 January 2026, which scaled to millions and rounded to two decimals is the printed 2.89 million.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=LT&time=2026"
+  },
+  {
+   "claim": "indicator:LT:K2",
+   "fact_sha256": "60e327ffc78ee17e6511d420580d115cc7d22bdfb627635a5ab08bbc09531314",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "All three quotes are verbatim on the live pages: the state (Lithuania) issues the identity cards as a 'valstybės garantuojamo' eID solution, and the certificates on them are issued by the Migration Department under the Ministry of the Interior, a state body, which answers 'Yes' to whether the eID scheme is state-operated.",
+   "quote_found": true,
+   "checked_url": "https://eid.vrm.lt/lt/apie-tapatybes-kortele"
+  },
+  {
+   "claim": "record:LT:digital_identity_credentials:register",
+   "fact_sha256": "f931d8febf0a20d3954d1406cd6f208358c3a03ccb0bf11a9320896d5588bc62",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page text names 'Lietuvos Respublikos asmens tapatybės korteles (ATK / eID)' verbatim, matching the printed register name and abbreviation.",
+   "quote_found": true,
+   "checked_url": "https://eid.vrm.lt/lt/apie-tapatybes-kortele"
+  },
+  {
+   "claim": "record:LT:issuance_history:operator",
+   "fact_sha256": "a20211b7c9aab45345ee7a53b630a155569a7d68adfe02cd69d826d116f57577",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote on the live page states that since 2020 the Ministry of the Interior is ADIS controller and that the Informatikos ir ryšių departamentas maintains ADIS's technical and software infrastructure, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/asmens-dokumentu-isdavimo-informacine-sistema-adis-2"
+  },
+  {
+   "claim": "record:LT:issuance_history:register",
+   "fact_sha256": "09235fa1c358b61bf27a368b5405256b85565b37de6004e261fc3d9814037300",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is titled and opens with 'Asmens dokumentų išdavimo informacinė sistema (toliau - ADIS)' and the cited quote describes its purpose, matching the printed name and abbreviation.",
+   "quote_found": true,
+   "checked_url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/asmens-dokumentu-isdavimo-informacine-sistema-adis-2"
+  },
+  {
+   "claim": "record:LT:firearms_register:operator",
+   "fact_sha256": "fc248419a004c6c1edc98745c6fc510e9e9b1c1fe49cbb2fc68a9ab8f9bfa09e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live page states verbatim that the Informatikos ir ryšių departamentas prie LR vidaus reikalų ministerijos is the 'Ginklų registro tvarkytojas' (processor/operator of the Firearms Register), which supports the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ginklu-registro-paslaugos-2/ginklu-registro-pazymos-ar-israso-uzsakymas-2"
+  },
+  {
+   "claim": "record:LT:firearms_register:register",
+   "fact_sha256": "63b09c6a1eec8715e57bced019c0845b6d73ed173ac9ffabb2da7b60f04f48a8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote names 'Ginklų registro' (the Firearms Register) and the page heading is 'Ginklų registro paslaugos', matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ginklu-registro-paslaugos-2/ginklu-registro-pazymos-ar-israso-uzsakymas-2"
+  },
+  {
+   "claim": "record:LT:police_records:register",
+   "fact_sha256": "c23af3c128ddf570b7a394e792ce546b74a9f619cdcf6ccf8afa52e5c65bb99a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live page states verbatim 'IAŽR - Ieškomų asmenų, neatpažintų lavonų ir nežinomų bejėgių asmenų žinybinis registras', the exact full name and abbreviation printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/ieskomu-asmenu-zinybinio-registro-iazr-paslaugos-2"
+  },
+  {
+   "claim": "record:LT:judicial_criminal:operator",
+   "fact_sha256": "22305a57a0d539c8afe1ae4ff0891668a555a5918f53ae5f2bd36450242f5ced",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live page states verbatim that the Informatikos ir ryšių departamentas prie LR vidaus reikalų ministerijos is the 'valdytojas ir tvarkytojas' (controller and processor) of the Register of Suspects, Accused and Convicted Persons, matching the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/itariamuju-kaltinamuju-ir-nuteistuju-registro-iknr-paslaugos-2"
+  },
+  {
+   "claim": "record:LT:judicial_criminal:register",
+   "fact_sha256": "db552602027ce47ca98248f28ce5b5ef99787604123b85444938467d46340212",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote names 'Įtariamųjų, kaltinamųjų ir nuteistųjų registras' and the page heading gives the abbreviation '(ĮKNR)', matching the printed name and abbreviation.",
+   "quote_found": true,
+   "checked_url": "https://www.ird.lt/lt/tvarkomu-valdomu-registru-ir-informaciniu-sistemu-paslaugos-3/itariamuju-kaltinamuju-ir-nuteistuju-registro-iknr-paslaugos-2"
+  },
+  {
+   "claim": "indicator:LT:L1",
+   "fact_sha256": "1fea62161896d5d4a76e6df562c4fdb52b8ba6f550e192e1e233178473a368d6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote, found verbatim, reports that amendments to the Valstybės informacinių išteklių valdymo įstatymas let state institutions keep copies of crisis-critical data in Lithuanian, EU, EEA or NATO-state data centres: a statutory location constraint that is only partly national/EU (NATO states include non-EU jurisdictions), which fits 'Partly'. Note the source is an LRT news report of the amendmen",
+   "quote_found": true,
+   "checked_url": "https://www.lrt.lt/naujienos/mokslas-ir-it/11/1757601/penkios-naudos-kurias-suteiks-valstybes-informaciniu-istekliu-perkelimas-i-debesija"
+  },
+  {
+   "claim": "indicator:LT:C1",
+   "fact_sha256": "4911c1e10971cc65522d947d7683819a1b3f71a6f2c76726fbb32b9578afac3b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes are verbatim: LRT reports the state data centre VDC3 was handed over and is being put into operation, and telecentras.lt records the official launch of state data centres VDC3 and VDC4 (288 racks), with the same page noting VDC1 and VDC2 run by IVPK already function, which supports 'Yes' for state data centres in operation today.",
+   "quote_found": true,
+   "checked_url": "https://www.lrt.lt/naujienos/verslas/4/2571753/antrasis-valstybinis-duomenu-centras-pradeda-veikla"
+  },
+  {
+   "claim": "indicator:LT:C2",
+   "fact_sha256": "f0e45051e0bb4fbfdeca649699d342e5ca0735ed6eecf60b36837c8e7671594c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes are verbatim: telecentras.lt describes Telecentras Cloud as a 'nacionalinė debesijos platforma' and LRT reports a signed cloud-service contract under which Via Toll data will be stored in Telecentras-operated data centres, showing the platform is in operation rather than announced. The 'national' status rests on the provider's own description; the quotes do not themselves state Telecen",
+   "quote_found": true,
+   "checked_url": "https://telecentras.lt/paslaugos/debesijos-paslaugos/"
+  },
+  {
+   "claim": "record:LT:education:operator",
+   "fact_sha256": "eadc012af2a6ce02918c8a14e9cf31afa9e87bc9d8c1baa74d4e426bb76f30f8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live page states verbatim 'Registro tvarkytojo funkcijas vykdo Nacionalinė švietimo agentūra', i.e. the National Agency for Education performs the register processor functions, matching the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.nsa.smsm.lt/informaciniu-istekliu-departamentas/registrai/diplomu-atestatu-ir-kvalifikacijos-pazymejimu-registras"
+  },
+  {
+   "claim": "record:LT:education:register",
+   "fact_sha256": "ef2b5a4f408855dc7f1f99d6f39d9ecaab79a98a0e7e60473db26b388cfebaaf",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page breadcrumb and heading read 'Diplomų, atestatų ir kvalifikacijos pažymėjimų registras' verbatim, matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.nsa.smsm.lt/informaciniu-istekliu-departamentas/registrai/diplomu-atestatu-ir-kvalifikacijos-pazymejimu-registras"
+  },
+  {
+   "claim": "indicator:LT:K1",
+   "fact_sha256": "2b1f2c25f9832c08df137a0e2f05b2b8981125d3bf19f0d093285efde7ae743a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes are verbatim: nsc.vrm.lt says the Migration Department (under the Ministry of the Interior) is taking over qualified trust service provision from the Identity Documents Personalisation Centre, and rrt.lt lists the Migration Department as registered on 13 November 2025 as a qualified-certificate provider, so the qualified trust service is operated by a state body.",
+   "quote_found": true,
+   "checked_url": "https://www.nsc.vrm.lt/default_en.htm"
+  }
+ ]
+}

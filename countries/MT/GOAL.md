@@ -56,29 +56,29 @@ The holdings Malta cannot let depend on infrastructure a foreign state can compe
 
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Civil Status Section of the Public Registry holds acts of birth, marriage, civil union and death registered in Malta[^s12][^s13] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | Facial images captured for the e-ID card are passed to the Electoral Office for voting documents and electoral registers[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | Live biometrics including fingerprints are captured at the Passport Office for passport applications[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Breeder document scans (tier 0) | Archives of the Public Registry[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Civil registry core (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are found: the Identità page says the Civil Status Section issues true copies of acts of birth, marriage, civil union and death registered in Malta, and the Civil Code (art. 238) says the Public Registry Office keeps the registe It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Facial images captured for the e-ID card are passed to the Electoral Office for voting documents and electoral registers[^s12] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | Live biometrics including fingerprints are captured at the Passport Office for passport applications[^s13] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | Archives of the Public Registry[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | Biometric passports have been issued since 30 September 2008[^s17] | The Identity Cards Unit issues electronic ID cards and registers e-ID accounts[^s18] | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | The e-ID virtual account is required to access Government online services[^s2][^s19] | Identity Cards Unit registers e-ID (virtual) accounts[^s2][^s18] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | The Act refers to the Electoral Register database[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | e-ID cards carry an Authentication Certificate and a Signature Certificate[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | Land Registration System (LRS)[^s21][^s22] | Land Registration Agency[^s23] | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Named authorities (Attorney General, Commissioner of Police, Security Service) have continuous direct access to criminal conviction records[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | Biometric passports have been issued since 30 September 2008[^s15] | The Identity Cards Unit issues electronic ID cards and registers e-ID accounts[^s16] | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | The e-ID virtual account is required to access Government online services[^s2][^s17] | Identity Cards Unit registers e-ID (virtual) accounts[^s2][^s16] | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | The Act refers to the Electoral Register database[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | e-ID cards carry an Authentication Certificate and a Signature Certificate[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | Land Registration System (LRS)[^s19][^s20] | Land Registration Agency[^s21] | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Named authorities (Attorney General, Commissioner of Police, Security Service) have continuous direct access to criminal conviction records[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | The Service's function is protecting national security against organised crime, espionage, terrorism and sabotage[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Residence and migration status (tier 1) | Biometrics are captured from non-EU applicants for residence documents[^s26] | Expatriates Unit processes and issues residence documentation[^s27][^s2] | *Not stated in sources* | *Not yet measured* |
+| High | Intelligence services (tier 1) | The Service's function is protecting national security against organised crime, espionage, terrorism and sabotage[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Biometrics are captured from non-EU applicants for residence documents[^s24] | Expatriates Unit processes and issues residence documentation[^s25][^s2] | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | Health Act defines insured persons as those included in a list established by regulations[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | Business Automation Registry Online System (BAROS)[^s29] | Malta Business Registry (MBR)[^s29] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Register of Beneficial Owners[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | Health Act defines insured persons as those included in a list established by regulations[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Business Automation Registry Online System (BAROS)[^s27] | Malta Business Registry (MBR)[^s27] | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Register of Beneficial Owners[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | Entry-Exit System (EES)[^s30] | Central Visa Unit (CVU)[^s31] | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Entry-Exit System (EES)[^s28] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote appears verbatim and establishes the CVU as the central authority for national visa policy and the Schengen acquis in visa matters, but the page names no border or visa system the CVU operates, refers separately to 'border control It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -90,10 +90,10 @@ The holdings Malta cannot let depend on infrastructure a foreign state can compe
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | Legislation Malta portal holds all Maltese laws including consolidated subsidiary legislation[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Legislation Malta portal holds all Maltese laws including consolidated subsidiary legislation[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | Census of population and housing held by order under the Act[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Statistical microdata (tier 2) | Census of population and housing held by order under the Act[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
@@ -157,7 +157,7 @@ Tier 0 and 1 holdings for Malta without a verified source yet. Corrections and s
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
 
 ### How sources were found
 
@@ -213,10 +213,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
-| T2 competent public body or audit office | 633 |
-| T3 other institution or company | 9 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
+| T2 competent public body or audit office | 589 |
+| T3 other institution or company | 7 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
 
 ### Evidence grades
 
@@ -225,8 +225,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 106 |
-| Standard | 1282 |
+| Strong | 100 |
+| Standard | 1209 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -267,7 +267,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1388 printed facts pass the fact check.
+In this build, 1309 of 1309 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -309,7 +309,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
+In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -332,50 +332,52 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Malta
 
-0 of 32 printed facts about Malta pass.
+30 of 30 printed facts about Malta pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
-| indicator:MT:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:MT:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| param:MT:population_m | param:MT:population_m | program:fetch_eurostat.py | none | never checked |  |
-| param:MT:gdp_eur_bn | param:MT:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
-| param:MT:gov_employment_k | param:MT:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
-| param:MT:elec_price_eur_mwh | param:MT:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
-| param:MT:renewables_pct | param:MT:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
-| param:MT:land_km2 | param:MT:land_km2 | program:fetch_eurostat.py | none | never checked |  |
-| record:MT:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | none | never checked |  |
-| record:MT:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
-| record:MT:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:land_property:operator | Land & property registry: the body that operates it | unrecorded | none | never checked |  |
-| record:MT:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:intelligence:register | Intelligence services: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | none | never checked |  |
-| record:MT:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
-| record:MT:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:border_control:operator | Border and visa systems: the body that operates it | unrecorded | none | never checked |  |
-| record:MT:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | none | never checked |  |
-| record:MT:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | none | never checked |  |
+| indicator:MT:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:MT:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:MT:population_m | param:MT:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:MT:gdp_eur_bn | param:MT:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:MT:gov_employment_k | param:MT:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:MT:elec_price_eur_mwh | param:MT:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:MT:renewables_pct | param:MT:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:MT:land_km2 | param:MT:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:land_property:register | Land & property registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:land_property:operator | Land & property registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:intelligence:register | Intelligence services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:business_registry:operator | Business registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:MT:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Malta
 
-None.
+| Claim | What it answers | Checked by | Verdict | Reason |
+|---|---|---|---|---|
+| record:MT:border_control:operator | Border and visa systems: the body that operates it | claude-fable-5-1 | unclear | The quote appears verbatim and establishes the CVU as the central authority for national visa policy and the Schengen acquis in visa matters, but the page names no border or visa system the CVU operates, refers separately to 'border control authorities', and does not mention the EES printed as this record's register; the source supports a visa authority, not an operator of border and visa systems. |
+| record:MT:civil_registry:register | Civil registry core: the name of the register or system | claude-fable-5-1 | unclear | Both quotes are found: the Identità page says the Civil Status Section issues true copies of acts of birth, marriage, civil union and death registered in Malta, and the Civil Code (art. 238) says the Public Registry Office keeps the register books for those acts. Neither source says the Civil Status Section itself holds the acts; the printed attribution of custody to the Section rather than the Pu |
 
 ---
 
@@ -390,29 +392,26 @@ None.
 [^s9]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
 [^s10]: Eurostat nrg_ind_ren, 2026-09-30. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
 [^s11]: Eurostat reg_area3, 2026-09-30. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
-[^s12]: Identità — Public Registry – Civil Status. Public Registry – Civil Status. <https://identita.gov.mt/public-registry-sec-page-civil-status/> ([archived](https://web.archive.org/web/20260811142151/https://identita.gov.mt/public-registry-sec-page-civil-status/))
-[^s13]: Government of Malta – Legislation Malta — Civil Code (Cap. 16), 2026-07-17. Civil Code (Cap. 16). <https://legislation.mt/getpdf/6a7c3f2652fe431ca8f9b4f1> ([archived](https://web.archive.org/web/20260813100609/https://legislation.mt/getpdf/6a7c3f2652fe431ca8f9b4f1))
-[^s14]: Identità — Identity Cards Unit – Electoral Office. Identity Cards Unit – Electoral Office. <https://identita.gov.mt/identity-cards-unit-electoral-office/> ([archived](https://web.archive.org/web/20260415222752/https://identita.gov.mt/identity-cards-unit-electoral-office/))
-[^s15]: Identità — Passport Office – Adults Renewals. Passport Office – Adults Renewals. <https://identita.gov.mt/passport-office-adults-renewals/> ([archived](https://web.archive.org/web/20260928102340/https://identita.gov.mt/passport-office-adults-renewals/))
-[^s16]: Identità — Public Registry – Main Page, 2026-06-02. Public Registry – Main Page. <https://identita.gov.mt/public-registry-main-page/> ([archived](https://web.archive.org/web/20260928102340/https://identita.gov.mt/public-registry-main-page/))
-[^s17]: Identità — Passport Office. Passport Office. <https://identita.gov.mt/passport-office-main-page/>
-[^s18]: Identità — Identity Cards Unit. Identity Cards Unit. <https://identita.gov.mt/identity-cards-unit/> ([archived](https://web.archive.org/web/20260516233554/https://identita.gov.mt/identity-cards-unit/))
-[^s19]: Identità — e-ID Virtual Account. e-ID Virtual Account. <https://identita.gov.mt/identity-cards-unit/eid-virtual-account/> ([archived](https://web.archive.org/web/20260811140802/https://identita.gov.mt/identity-cards-unit/eid-virtual-account/))
-[^s20]: Government of Malta – Legislation Malta — General Elections Act (Cap. 354). General Elections Act (Cap. 354). <https://legislation.mt/getpdf/661645c07403ed16fcf9eb8e>
-[^s21]: Legislation Malta — Land Registration Act (Cap. 296), 2021-07-06. Land Registration Act (Cap. 296). <https://legislation.mt/getpdf/60efe5f532d0f719d442f08c>
-[^s22]: Land Registration Agency — A Leap Forward in Digital Transformation – Launch of the…, 2026-07-30. A Leap Forward in Digital Transformation – Launch of the New Digital Platform LRS. <https://lra.mt/news/a-leap-forward-in-digital-transformation-launch-of-the-new-digital-platform-lrs/>
-[^s23]: Land Registration Agency — Land Registration Agency – Home, 2026-09-04. Land Registration Agency – Home. <https://lra.mt/> ([archived](https://web.archive.org/web/20260729135459/https://lra.mt/))
-[^s24]: Government of Malta – Legislation Malta — Conduct Certificates Ordinance (Cap. 77). Conduct Certificates Ordinance (Cap. 77). <https://legislation.mt/getpdf/6aa1090e5ca02023e4009067>
-[^s25]: Government of Malta – Legislation Malta — Security Service Act (Cap. 391). Security Service Act (Cap. 391). <https://legislation.mt/getpdf/6022ba1cbc827214c09ac4a7>
-[^s26]: Identità — Expatriates Unit – Biometrics and Interim Receipt. Expatriates Unit – Biometrics and Interim Receipt. <https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/useful-information/finalising-application-process/biometrics-and-interim-receipt/> ([archived](https://web.archive.org/web/20260606020509/https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/useful-information/finalising-application-process/biometrics-and-interim-receipt/))
-[^s27]: Identità — Expatriates Unit. Expatriates Unit. <https://identita.gov.mt/expatriates-unit-main-page/> ([archived](https://web.archive.org/web/20260928102340/https://identita.gov.mt/expatriates-unit-main-page/))
-[^s28]: Government of Malta – Legislation Malta — Health Act (Cap. 528). Health Act (Cap. 528). <https://legislation.mt/getpdf/677e3ecacc8e8e3d102ff18a>
-[^s29]: Malta Business Registry — Malta Business Registry – About Us. Malta Business Registry – About Us. <https://mbr.mt/>
-[^s30]: Identità — Expatriates Unit Non-EU Nationals – Entry Exit System, 2025-07-17. Expatriates Unit Non-EU Nationals – Entry Exit System. <https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/entry-exit-system/> ([archived](https://web.archive.org/web/20260302171515/https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/entry-exit-system/))
-[^s31]: Identità — Central Visa Unit – Main Page, 2026-08-12. Central Visa Unit – Main Page. <https://identita.gov.mt/central-visa-unit-main-page/> ([archived](https://web.archive.org/web/20260811143611/https://identita.gov.mt/central-visa-unit-main-page/))
-[^s32]: Legislation Malta — FAQs – Leġiżlazzjoni Malta. FAQs – Leġiżlazzjoni Malta. <https://legislation.mt/Home/FAQList> ([archived](https://web.archive.org/web/20260918104521/https://legislation.mt/Home/FAQList))
-[^s33]: Government of Malta – Legislation Malta — Malta Statistics Authority Act (Cap. 422). Malta Statistics Authority Act (Cap. 422). <https://legislation.mt/getpdf/6022c0cfbc827214c09b08e1>
+[^s12]: Identità — Identity Cards Unit – Electoral Office. Identity Cards Unit – Electoral Office. <https://identita.gov.mt/identity-cards-unit-electoral-office/> ([archived](https://web.archive.org/web/20260415222752/https://identita.gov.mt/identity-cards-unit-electoral-office/))
+[^s13]: Identità — Passport Office – Adults Renewals. Passport Office – Adults Renewals. <https://identita.gov.mt/passport-office-adults-renewals/> ([archived](https://web.archive.org/web/20260928102340/https://identita.gov.mt/passport-office-adults-renewals/))
+[^s14]: Identità — Public Registry – Main Page, 2026-06-02. Public Registry – Main Page. <https://identita.gov.mt/public-registry-main-page/> ([archived](https://web.archive.org/web/20260928102340/https://identita.gov.mt/public-registry-main-page/))
+[^s15]: Identità — Passport Office. Passport Office. <https://identita.gov.mt/passport-office-main-page/>
+[^s16]: Identità — Identity Cards Unit. Identity Cards Unit. <https://identita.gov.mt/identity-cards-unit/> ([archived](https://web.archive.org/web/20260516233554/https://identita.gov.mt/identity-cards-unit/))
+[^s17]: Identità — e-ID Virtual Account. e-ID Virtual Account. <https://identita.gov.mt/identity-cards-unit/eid-virtual-account/> ([archived](https://web.archive.org/web/20260811140802/https://identita.gov.mt/identity-cards-unit/eid-virtual-account/))
+[^s18]: Government of Malta – Legislation Malta — General Elections Act (Cap. 354). General Elections Act (Cap. 354). <https://legislation.mt/getpdf/661645c07403ed16fcf9eb8e>
+[^s19]: Legislation Malta — Land Registration Act (Cap. 296), 2021-07-06. Land Registration Act (Cap. 296). <https://legislation.mt/getpdf/60efe5f532d0f719d442f08c>
+[^s20]: Land Registration Agency — A Leap Forward in Digital Transformation – Launch of the…, 2026-07-30. A Leap Forward in Digital Transformation – Launch of the New Digital Platform LRS. <https://lra.mt/news/a-leap-forward-in-digital-transformation-launch-of-the-new-digital-platform-lrs/>
+[^s21]: Land Registration Agency — Land Registration Agency – Home, 2026-09-04. Land Registration Agency – Home. <https://lra.mt/> ([archived](https://web.archive.org/web/20260729135459/https://lra.mt/))
+[^s22]: Government of Malta – Legislation Malta — Conduct Certificates Ordinance (Cap. 77). Conduct Certificates Ordinance (Cap. 77). <https://legislation.mt/getpdf/6aa1090e5ca02023e4009067>
+[^s23]: Government of Malta – Legislation Malta — Security Service Act (Cap. 391). Security Service Act (Cap. 391). <https://legislation.mt/getpdf/6022ba1cbc827214c09ac4a7>
+[^s24]: Identità — Expatriates Unit – Biometrics and Interim Receipt. Expatriates Unit – Biometrics and Interim Receipt. <https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/useful-information/finalising-application-process/biometrics-and-interim-receipt/> ([archived](https://web.archive.org/web/20260606020509/https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/useful-information/finalising-application-process/biometrics-and-interim-receipt/))
+[^s25]: Identità — Expatriates Unit. Expatriates Unit. <https://identita.gov.mt/expatriates-unit-main-page/> ([archived](https://web.archive.org/web/20260928102340/https://identita.gov.mt/expatriates-unit-main-page/))
+[^s26]: Government of Malta – Legislation Malta — Health Act (Cap. 528). Health Act (Cap. 528). <https://legislation.mt/getpdf/677e3ecacc8e8e3d102ff18a>
+[^s27]: Malta Business Registry — Malta Business Registry – About Us. Malta Business Registry – About Us. <https://mbr.mt/>
+[^s28]: Identità — Expatriates Unit Non-EU Nationals – Entry Exit System, 2025-07-17. Expatriates Unit Non-EU Nationals – Entry Exit System. <https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/entry-exit-system/> ([archived](https://web.archive.org/web/20260302171515/https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/entry-exit-system/))
+[^s29]: Legislation Malta — FAQs – Leġiżlazzjoni Malta. FAQs – Leġiżlazzjoni Malta. <https://legislation.mt/Home/FAQList> ([archived](https://web.archive.org/web/20260918104521/https://legislation.mt/Home/FAQList))
+[^s30]: Government of Malta – Legislation Malta — Malta Statistics Authority Act (Cap. 422). Malta Statistics Authority Act (Cap. 422). <https://legislation.mt/getpdf/6022c0cfbc827214c09b08e1>
 
-**Evidence grades:** 14 Strong, 18 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 12 Strong, 18 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

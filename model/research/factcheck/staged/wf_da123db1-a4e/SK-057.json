@@ -1,0 +1,220 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "SK-057",
+ "iso": "SK",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:SK:facial_biometric:register",
+   "fact_sha256": "eb60b5f6572c84e00c303cdd95d2a0ffa936daed7235340d0788e274bd3e74eb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The live page returns HTTP 403 (Cloudflare) to both WebFetch and curl; the archived copy is the site's shortened unregistered view and cuts the quote at '...evidenciu čistopisov občianskych ...'. The visible text does say 'Ministerstvo a okresné riaditeľstvá vedú evidenciu občianskych preukazov' and that the records contain 'zobrazenie podoby tváre občana', but the defining paragraph (§ 5) that wo",
+   "quote_found": false,
+   "checked_url": "https://web.archive.org/web/20220307183542/https://zakony.judikaty.info/predpis/zakon-224/2006"
+  },
+  {
+   "claim": "record:SK:issuance_history:operator",
+   "fact_sha256": "9ea8fb1284b5a6b54dfb15dbcf413df9e6c26dc0e444d696d02d577b7809fff9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Live page 403; the archived copy truncates the quote mid-sentence and does not show the definition of 'ministerstvo' or of 'okresné riaditeľstvo'. The quote only names 'the ministry and district directorates' as keepers of the ID-card records; the page as fetched does not establish that these are the Ministry of Interior and district police directorates.",
+   "quote_found": false,
+   "checked_url": "https://web.archive.org/web/20220307183542/https://zakony.judikaty.info/predpis/zakon-224/2006"
+  },
+  {
+   "claim": "record:SK:issuance_history:register",
+   "fact_sha256": "8b416b3e31bb491dbb8a9fe524e87c3bf5a744a4e5a96db88adbafa1a2df55f1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote (items m–p) appears verbatim in § 15(2) listing what 'Evidencia občianskych preukazov' contains: numbers and series of lost and stolen ID cards, numbers of issued ID-card documents, and date of destruction; item f) on the same page lists numbers and series of ID cards issued to the citizen. This matches the printed register name and contents.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20220307183542/https://zakony.judikaty.info/predpis/zakon-224/2006"
+  },
+  {
+   "claim": "record:SK:education:register",
+   "fact_sha256": "077a9e2de4843366772d387127ee223dee4b3b48ab3af91f52c0ee024da9d3e9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim in § 157(1) of Act 245/2008, whose title on the page is 'Zákon o výchove a vzdelávaní (školský zákon)'; it defines 'Centrálny register' as the list of personal data on children, pupils and students in schools, matching the printed name and framing.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240715115213/https://zakony.judikaty.info/predpis/zakon-245/2008"
+  },
+  {
+   "claim": "record:SK:civil_registry:operator",
+   "fact_sha256": "46de09639dfe50094220bb2995dfbbb902bd9f276bdeb3d5245c7f4c23df10ce",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 23a(1) appears verbatim: the Register of Natural Persons is a base register, its administrator is 'ministerstvo', and retention is permanent; § 4(8) on the same page defines 'ministerstvo' as Ministerstvo vnútra Slovenskej republiky, so 'Ministry of Interior' is supported.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240913011250/https://zakony.judikaty.info/predpis/zakon-253/1998"
+  },
+  {
+   "claim": "record:SK:civil_registry:register",
+   "fact_sha256": "6e6b2590b50649207e2660833558493a95a9820c7599c2ae41e386b859df076e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 12(1) appears verbatim, describing the register as a public-administration information system holding data on inhabitants of the Slovak Republic by which a person can be identified and their residence and relationships established; the act's title and § 1(c) name it 'register obyvateľov Slovenskej republiky'.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240913011250/https://zakony.judikaty.info/predpis/zakon-253/1998"
+  },
+  {
+   "claim": "record:SK:digital_identity_credentials:operator",
+   "fact_sha256": "55d1e03c160de3f0abbe849190b29488af01c578af9e391feb2645b8dffa597f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "No archived_url was given, so I used Wayback's latest snapshot of the cited page (live page 403). The quote appears verbatim: the Ministry of Interior administers the authentication part of the authentication module and 'ministerstvo investícií' the communication part; the page defines 'ministerstvo investícií' as Ministerstvo investícií, regionálneho rozvoja a informatizácie SR (MIRRI).",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250624000650/https://zakony.judikaty.info/predpis/zakon-305/2013"
+  },
+  {
+   "claim": "record:SK:beneficial_ownership:register",
+   "fact_sha256": "83d11594dd01307f43dcd7c4b340ff6e33e1e1bdc1f046a0f2aae00feea97a24",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Live page 403; the archived copy is the shortened unregistered view and § 3(1) is cut to 'Register je informačný systém verejnej správy, ktorý obsahuje údaje podľa ...', so the sentences naming the Ministry of Justice as administrator and Okresný súd Žilina as registering body are absent (neither string occurs anywhere in the page body). The name 'register partnerov verejného sektora' is confirmed",
+   "quote_found": false,
+   "checked_url": "https://web.archive.org/web/20240522091210/https://zakony.judikaty.info/predpis/zakon-315/2016"
+  },
+  {
+   "claim": "record:SK:judicial_criminal:register",
+   "fact_sha256": "e8e9180f08b756c42ff681ab6c36abb9d079bc3f7d2cc56c0f8a250c983a1970",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim: 'Register trestov vedie Generálna prokuratúra Slovenskej republiky', which matches the printed register name and keeper.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240913022235/https://zakony.judikaty.info/predpis/zakon-330/2007"
+  },
+  {
+   "claim": "record:SK:crisis_management:register",
+   "fact_sha256": "d72d4bac7c7f4a4e2cbed933fc99e067a0b865ec77e8d8b71929f72ae10e2988",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "No archived_url was given, so I used Wayback's latest snapshot (live page 403). The quote appears verbatim in § 13 'Informačný systém krízového riadenia': crisis-management bodies use 'informačný systém krízového riadenia štátu', matching the printed system name.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240722202605/https://zakony.judikaty.info/predpis/zakon-387/2002"
+  },
+  {
+   "claim": "record:SK:official_gazette:operator",
+   "fact_sha256": "76df9565a8a5ccf305bc733f858b47453b3d2dad94b4d2414adc630b5c96a6cc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 12(2)–(3) appear verbatim: the publisher of the Collection of Laws is 'ministerstvo spravodlivosti' and it is issued in electronic and paper form; § 8(2) on the same page defines that term as Ministerstvo spravodlivosti SR.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250624015208/https://zakony.judikaty.info/predpis/zakon-400/2015"
+  },
+  {
+   "claim": "record:SK:official_gazette:register",
+   "fact_sha256": "7ea5c326b741178d46900b11dc03b13731d98f2811de384e4886b56cb5a28189",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 8(2) appears verbatim: the portal is part of the public-administration information system Slov-Lex, whose administrator and operator is Ministerstvo spravodlivosti Slovenskej republiky, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250624015208/https://zakony.judikaty.info/predpis/zakon-400/2015"
+  },
+  {
+   "claim": "record:SK:border_control:register",
+   "fact_sha256": "45416e52fc0a7ade9493004ca06382b26d308bcb95a3e8ef65177b5c997a21eb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Items i)–k) appear verbatim and sit inside § 76(1), which states the police unit keeps these records 'v informačných systémoch Policajného zboru': undesirable persons, foreigners' data obtained in border control, and foreigners staying illegally. This matches the printed description.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250624013534/https://zakony.judikaty.info/predpis/zakon-404/2011"
+  },
+  {
+   "claim": "record:SK:residence_permits:register",
+   "fact_sha256": "0cf776203af5e6302eb405a2d6a437b02b18d70c9c957e07e4ead75ef3d64758",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 76(1) appears verbatim: the police unit keeps in Police Force information systems records on entry, stay and departure of foreigners, visa applicants and residence applicants, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250624013534/https://zakony.judikaty.info/predpis/zakon-404/2011"
+  },
+  {
+   "claim": "record:SK:benefits_pensions:register",
+   "fact_sha256": "a6cdf290a3a2608dff46f368129ccef3e223fbe3881ae21e9cacd659e3148308",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim as item e) of § 226(1) 'Povinnosti Sociálnej poisťovne', which opens 'Sociálna poisťovňa je povinná', so the register of employers and the register of insured persons and old-age pension savers are kept by Sociálna poisťovňa, as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250624100422/https://zakony.judikaty.info/predpis/zakon-461/2003"
+  },
+  {
+   "claim": "record:SK:business_registry:register",
+   "fact_sha256": "a9b35b16ee6b0114036fff787e5ba0e960a0c08ce26d1cfb773ed51aa489e978",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 12(2)–(3) of the Act on the Commercial Register appear verbatim: the commercial register and the collection of deeds are kept in electronic form and the registry court issues extracts, matching the printed name, form and keeper.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250624003611/https://zakony.judikaty.info/predpis/zakon-530/2003"
+  },
+  {
+   "claim": "record:SK:government_payroll:operator",
+   "fact_sha256": "a175e894e196a56eaef83ed613172f49dbb5ddd10ef784235d0946681b3d9402",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "No archived_url was given, so I used Wayback's latest snapshot (live page 403). The quoted § 21(1)(a) appears verbatim; the same paragraph's item d) states the Government Office administers the central civil-service information system, and the page defines 'úrad vlády' as Úrad vlády Slovenskej republiky, supporting the printed body. Note the cited quote alone (item a) only covers uniform procedure",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240715124647/https://zakony.judikaty.info/predpis/zakon-55/2017"
+  },
+  {
+   "claim": "record:SK:government_payroll:register",
+   "fact_sha256": "a8b7faffc5919f454f18604feb6cddf0d0ec519717170a4d257ecd717572e138",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 21(1)(d) appears verbatim: the Government Office 'spravuje centrálny informačný systém štátnej služby', matching the printed system name and administrator (Wayback latest snapshot used; live page 403).",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240715124647/https://zakony.judikaty.info/predpis/zakon-55/2017"
+  },
+  {
+   "claim": "record:SK:health_insurance:register",
+   "fact_sha256": "13e183ad3e5cae113773e338e992ae8c3d1689b6ef5acd7b59c805f93df84470",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Wayback latest snapshot used (no archived_url; live page 403). The quote appears verbatim as § 20(1)(e) 'Ďalšia činnosť úradu', opening 'Úrad a) ... e) vedie 1. centrálny register poistencov'; § 1(c) defines 'úrad' as Úrad pre dohľad nad zdravotnou starostlivosťou, so the register is kept by ÚDZS as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250624015020/https://zakony.judikaty.info/predpis/zakon-581/2004"
+  },
+  {
+   "claim": "record:SK:facial_biometric:operator",
+   "fact_sha256": "7fa81976d18eb8cae0bc62a510f7be273ff0ad1af2aba99bf86d7cdb4b4ab754",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 29(1) appears verbatim: the central register of travel documents is kept by 'ministerstvo vnútra' (ministry of interior), and § 29(2)(i) on the same page lists 'podobu tváre' (facial image) among its contents, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240913021636/https://zakony.judikaty.info/predpis/zakon-647/2007"
+  },
+  {
+   "claim": "record:SK:vehicle_licensing:register",
+   "fact_sha256": "09fc7d4ef4fbba2a4cc1c69e9dd996b877be26b36c64ecc822b74e9eb06da2ba",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 111(1) appears verbatim: 'Evidencia vozidiel je informačný systém Policajného zboru', matching the printed register name and operator.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240225121954/https://zakony.judikaty.info/predpis/zakon-8/2009"
+  }
+ ]
+}

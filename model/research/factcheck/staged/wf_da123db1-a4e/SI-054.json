@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "SI-054",
+ "iso": "SI",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:SI:public_finance:register",
+   "fact_sha256": "3f909a600eabf5bc024b5191fd7c99c4afb3336b45efae6f7c548535616d72e4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The UJP page states verbatim that UJP provides payment services for budget users and keeps the register of budget users and their sub-accounts; the register-proracunskih-uporabnikov page confirms UJP keeps the Register of Budget Users.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/uprava-za-javna-placila/o-upravi/"
+  },
+  {
+   "claim": "record:SI:residence_permits:register",
+   "fact_sha256": "a8ad2abb71fe49c2443ccdc4b45c526e8eaa81c665477b4cf7ecc764c1061a7c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Foreigners Act text says the ministry responsible for internal affairs manages the central register of residence permits and revocations of residence (Register tujcev), matching the printed statement; the gov.si population-registers page also lists the register tujcev as the residence-permit source.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2021-01-1957"
+  },
+  {
+   "claim": "record:SI:national_archives:register",
+   "fact_sha256": "6333f2e64565fa9a5eae1731746ee5ff985b7127fd91bae0376cde6d11b3ee70",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page describes e-ARH.si as the secure, standardised Slovenian electronic archive for long-term preservation and further use of electronic archival material, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/teme/slovenski-elektronski-arhiv/"
+  },
+  {
+   "claim": "indicator:SI:L2",
+   "fact_sha256": "e83d1f0899834b76cf35f568637dec900926dff2afc36d1db259c2a6f61c6afe",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Classified Information Act (a statute) sets the classification levels and says bodies may use only those levels; the gov.si page confirms the levels are those set by the Act. That is a classification scheme established in statute.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2006-01-2128/zakon-o-tajnih-podatkih-uradno-precisceno-besedilo-ztp-upb2"
+  },
+  {
+   "claim": "record:SI:electoral_roll:register",
+   "fact_sha256": "1f3495568c3e53260fea61bdbd2e7f0f44bcd93980c72c60a64d7dc16567c699",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says voting rights are kept in the register of voting rights within the permanent residence register and the central population register, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/teme/volivci-in-evidenca-volilne-pravice/"
+  },
+  {
+   "claim": "indicator:SI:C2",
+   "fact_sha256": "108b92905afb323cf3bc9fb4618c6ecfa0db0267f035086a61b71e665cd2bb4b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "A 2026 procurement for maintenance of the State Computing Cloud (DRO), a ministry sector that ensures the DRO portal's operation, and a page saying services with sensitive data run on this infrastructure together show an operating, not merely announced, government cloud.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/zbirke/javne-objave/vzdrzevanje-drzavnega-racunalniskega-oblaka-dro-vmware-260317002023/"
+  },
+  {
+   "claim": "record:SI:government_payroll:foreign_dependency",
+   "fact_sha256": "1b7d265151315aab1fdff9126f41bcdcdf2d35a8b10ca10c691c91f516fb0237",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the MFERAC05 renewal aims to enable continued operation of MFERAC in the state computing cloud (DRO); this places the system's infrastructure in the national government cloud. Note it is a project-purpose statement rather than an explicit hosting declaration.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/zbirke/projekti-in-programi/prenova-mferac/"
+  },
+  {
+   "claim": "record:SI:government_payroll:register",
+   "fact_sha256": "970111c59190b007ef44160835a00807439a145e41ffeda921f74b698702e0e4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states MFERAC supports budget users' operations in finance, accounting and the payroll/HR area, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/zbirke/storitve/mferac/"
+  },
+  {
+   "claim": "record:SI:digital_identity_credentials:operator",
+   "fact_sha256": "8f630c3d6221c3013832d010c66d302c2da96ae5d28899185d7f29ceb5ae6826",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the State Trust Services Centre SI-TRUST operates within the Ministry of the Interior and Public Administration, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/sl/o-nas"
+  },
+  {
+   "claim": "record:SI:trust_services_pki:foreign_dependency",
+   "fact_sha256": "a58c6ad4ae6ad7260429507d01675e2fa50b27ecc8e9893526f7533d0f45f828",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The quote only says the SI-PASS-CA qualified certificate is securely stored at SI-TRUST (a state body); it says nothing about where SI-TRUST's PKI infrastructure runs or who provides it, so 'national infrastructure' is an inference the page does not itself make.",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/sl/si-pass"
+  },
+  {
+   "claim": "record:SI:authentication_audit_log:foreign_dependency",
+   "fact_sha256": "04e5907dbf70a730c2c8725233f50300b5df5d552cd7e0a8e0c1ba5e37b5d4e8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The SI-PASS privacy notice states data are not transferred to third countries and are processed on the territory of the Republic of Slovenia, supporting national infrastructure for the SI-PASS records.",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/sl/si-pass-obvestilo-posameznikom"
+  },
+  {
+   "claim": "record:SI:authentication_audit_log:operator",
+   "fact_sha256": "c9e41cd886306753668c2e69cda32b84bf2ee79785e050c1c177088257e623ba",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The notice names the controller as the Ministry of the Interior and Public Administration, Directorate for Development of Digital Solutions and Data Economy, SI-TRUST; the printed text abbreviates by omitting the directorate but adds nothing.",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/sl/si-pass-obvestilo-posameznikom"
+  },
+  {
+   "claim": "record:SI:authentication_audit_log:register",
+   "fact_sha256": "2870063571ef464ecd0dc3119c16ee15d2aaca043cac884c0fc979a145eb4dc1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The notice says SI-PASS keeps a collection of registered users for which, among other items, account usage data are stored, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/sl/si-pass-obvestilo-posameznikom"
+  },
+  {
+   "claim": "record:SI:digital_identity_credentials:foreign_dependency",
+   "fact_sha256": "b4a371cf9db7f6ed7e8e8a6e93c427717d6a11259b0ca9d9fe754238bc926eed",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same SI-PASS notice states data are processed on Slovenian territory and not transferred abroad, which supports national infrastructure for the SI-PASS identity service.",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/sl/si-pass-obvestilo-posameznikom"
+  },
+  {
+   "claim": "record:SI:land_property:register",
+   "fact_sha256": "2139bb47d89437d6a5d7b6275632a4c319346683f31b731ca8554221dcc94f10",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The courts' page defines the land register as a public book for rights in real property and says district courts are competent to keep it, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.sodisce.si/javne_knjige/zemljiska_knjiga/"
+  },
+  {
+   "claim": "record:SI:official_gazette:operator",
+   "fact_sha256": "e85004a9b27442a2c6c7424beeea8b9ceab7801611327cb7d545b5ae8c3c53b8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says that with the new ZOUL, publication of the official gazette was transferred as of 1 March 2026 directly to the Služba Vlade Republike Slovenije za zakonodajo, matching the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/glasilo-uradni-list-rs/o-glasilu"
+  },
+  {
+   "claim": "record:SI:official_gazette:register",
+   "fact_sha256": "4b7e2d5603820bb171b9157b7672edb3484ebfda431df7c2538a922153145bd2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states that from 1 March 2026 all publications are available exclusively in electronic form on the PISRS website and the printed edition ended 28 February 2026, which supports PISRS as the sole publication platform.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/glasilo-uradni-list-rs/o-glasilu"
+  },
+  {
+   "claim": "record:SI:firearms_register:foreign_dependency",
+   "fact_sha256": "3b2f3501e07bda67971061e327156a753cefb194ac4a98ee88f413468b3f0380",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Weapons Act says the competent body keeps these records on the central computer of the ministry responsible for internal affairs, i.e. national state infrastructure.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2000-01-2747/zakon-o-orozju-zoro-1"
+  },
+  {
+   "claim": "record:SI:firearms_register:register",
+   "fact_sha256": "7c54cde71a596f16fbc597782c4db69b3f5b25808c0ed063031c92e70d2b917d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Act defines the central register of issued firearms documents as the aggregate of the registers kept by the competent bodies, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2000-01-2747/zakon-o-orozju-zoro-1"
+  },
+  {
+   "claim": "record:SI:breeder_documents:register",
+   "fact_sha256": "2d67482ae255d9c42753ada0ed30c3455ead1fb81fde7350b00c681bd1199eed",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The text states that the collection of documents on which register entries are based is an integral part of the civil status register, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-0451"
+  },
+  {
+   "claim": "record:SI:education:register",
+   "fact_sha256": "fad3c84f76427e116a2fa728ce91c6745a4ee49b10330a5a85e8d818eed50935",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 2 says the central register under ZOFVI Art. 135.a is kept in a special computer application named Centralna evidenca udeležencev vzgoje in izobraževanja, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-2099"
+  },
+  {
+   "claim": "record:SI:police_records:register",
+   "fact_sha256": "6ff2ba8103d4b43bfd5da85660e261ad2a5f438988f3ee21eedc7d045611d7f2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Police Tasks and Powers Act lists records the police keep, beginning with criminal offences, misdemeanours and wanted persons, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2013-01-0435/"
+  },
+  {
+   "claim": "record:SI:facial_biometric:operator",
+   "fact_sha256": "86f98fdd22ff1f894c3737cad1e674f20ebda139a7834837650d89711e80e543",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Identity Card Act says the ministry responsible for internal affairs manages the register of issued identity cards centrally, and the same register holds the digital photograph, so the printed operator statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0584"
+  },
+  {
+   "claim": "record:SI:facial_biometric:register",
+   "fact_sha256": "460b2cfb73b14a028bba5f85d32eea1548e880c65da034d8951d58a8b56ccc97",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "In context the quote is item 1 of the contents of the register of issued identity cards, stating the digital photograph is held in a form that biometric reading devices cannot read, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0584"
+  },
+  {
+   "claim": "record:SI:fingerprint_biometric:register",
+   "fact_sha256": "54ea88bc3dd23006338ab3a24681edea49af1a23df2cbba9baaeea7ee14ca92a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The source shows fingerprints ARE held in the centrally managed register of issued identity cards for 15 days (90 if undelivered) before deletion; it does not state that no central register exists and covers only ID cards, so 'No central register' is not what the page says.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0584"
+  },
+  {
+   "claim": "record:SI:issuance_history:operator",
+   "fact_sha256": "07e813de25033c26984cc1c502152fd75985fd35532af2414daeae60c5842ebd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Act states the ministry responsible for internal affairs manages the register of issued identity cards centrally, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0584"
+  },
+  {
+   "claim": "record:SI:issuance_history:register",
+   "fact_sha256": "5ef8c9a85d0e924585c03fbe996cddf00a6caf660e488a95e61aa90aece9574e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The register's listed contents include the date of production and collection by the post and the validity status of the identity card, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-0584"
+  },
+  {
+   "claim": "record:SI:health_records:foreign_dependency",
+   "fact_sha256": "78318cc3019b0b062ff31c226931336a220ffa7ea4457bc4dfc0c20662727a71",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 7 makes operating the central health ICT infrastructure a mandatory public service performed by a public company wholly owned by the Republic of Slovenia with its seat in Slovenia, which supports national infrastructure.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387"
+  },
+  {
+   "claim": "record:SI:health_records:operator",
+   "fact_sha256": "498b345703623a2afc8a92c8f6032f2cbbfee2e482aed75d63ecdb8867d28637",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Act says NIJZ is responsible for establishing the information system supporting the CeZZ and DOS collections, its maintenance and security measures, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387"
+  },
+  {
+   "claim": "record:SI:benefits_pensions:register",
+   "fact_sha256": "d4d80eddacf9cbddafba91ad3622cabd5f5e9838c507f32e7c77985998514671",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ZPIZ page lists among the institute's tasks organising and keeping the matična evidenca o zavarovancih in uživalcih pravic, the register named in the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.zpiz.si/cms/?ids=content2019&inf=1191"
+  }
+ ]
+}

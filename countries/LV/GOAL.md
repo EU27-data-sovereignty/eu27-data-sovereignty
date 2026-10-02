@@ -155,7 +155,7 @@ Tier 0 and 1 holdings for Latvia without a verified source yet. Corrections and 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
 
 ### How sources were found
 
@@ -211,10 +211,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
-| T2 competent public body or audit office | 633 |
-| T3 other institution or company | 9 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
+| T2 competent public body or audit office | 589 |
+| T3 other institution or company | 7 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
 
 ### Evidence grades
 
@@ -223,8 +223,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 106 |
-| Standard | 1282 |
+| Strong | 100 |
+| Standard | 1209 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -265,7 +265,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1388 printed facts pass the fact check.
+In this build, 1309 of 1309 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -307,7 +307,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
+In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -330,63 +330,64 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Latvia
 
-0 of 49 printed facts about Latvia pass.
+49 of 49 printed facts about Latvia pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
-| indicator:LV:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | none | never checked |  |
-| indicator:LV:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
-| indicator:LV:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:LV:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:LV:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
-| indicator:LV:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
-| param:LV:population_m | param:LV:population_m | program:fetch_eurostat.py | none | never checked |  |
-| param:LV:gdp_eur_bn | param:LV:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
-| param:LV:gov_employment_k | param:LV:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
-| param:LV:elec_price_eur_mwh | param:LV:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
-| param:LV:renewables_pct | param:LV:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
-| param:LV:land_km2 | param:LV:land_km2 | program:fetch_eurostat.py | none | never checked |  |
-| record:LV:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:land_property:operator | Land & property registry: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:police_records:operator | Police information systems: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:tax:register | Tax: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:customs:operator | Customs declarations: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:public_finance:operator | Treasury and state accounts: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:education:operator | Education: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | none | never checked |  |
-| record:LV:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
-| record:LV:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | none | never checked |  |
+| indicator:LV:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:LV:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:LV:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:LV:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:LV:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:LV:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:LV:population_m | param:LV:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:LV:gdp_eur_bn | param:LV:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:LV:gov_employment_k | param:LV:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:LV:elec_price_eur_mwh | param:LV:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:LV:renewables_pct | param:LV:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:LV:land_km2 | param:LV:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:land_property:register | Land & property registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:land_property:operator | Land & property registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:police_records:operator | Police information systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:customs:operator | Customs declarations: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:business_registry:operator | Business registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:public_finance:operator | Treasury and state accounts: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:education:operator | Education: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:LV:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Latvia
 

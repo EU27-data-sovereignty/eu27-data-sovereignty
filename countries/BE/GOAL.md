@@ -154,7 +154,7 @@ Tier 0 and 1 holdings for Belgium without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
 
 ### How sources were found
 
@@ -210,10 +210,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
-| T2 competent public body or audit office | 633 |
-| T3 other institution or company | 9 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
+| T2 competent public body or audit office | 589 |
+| T3 other institution or company | 7 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
 
 ### Evidence grades
 
@@ -222,8 +222,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 106 |
-| Standard | 1282 |
+| Strong | 100 |
+| Standard | 1209 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -264,7 +264,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1388 printed facts pass the fact check.
+In this build, 1309 of 1309 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -306,7 +306,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
+In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -329,56 +329,57 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Belgium
 
-0 of 42 printed facts about Belgium pass.
+42 of 42 printed facts about Belgium pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
-| indicator:BE:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
-| indicator:BE:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:BE:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:BE:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
-| indicator:BE:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
-| param:BE:population_m | param:BE:population_m | program:fetch_eurostat.py | none | never checked |  |
-| param:BE:gdp_eur_bn | param:BE:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
-| param:BE:gov_employment_k | param:BE:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
-| param:BE:elec_price_eur_mwh | param:BE:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
-| param:BE:renewables_pct | param:BE:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
-| param:BE:land_km2 | param:BE:land_km2 | program:fetch_eurostat.py | none | never checked |  |
-| record:BE:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
-| record:BE:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | none | never checked |  |
-| record:BE:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
-| record:BE:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | none | never checked |  |
-| record:BE:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:land_property:operator | Land & property registry: the body that operates it | unrecorded | none | never checked |  |
-| record:BE:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | none | never checked |  |
-| record:BE:firearms_register:register | Firearms register: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:firearms_register:operator | Firearms register: the body that operates it | unrecorded | none | never checked |  |
-| record:BE:central_bank:register | Central bank systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | none | never checked |  |
-| record:BE:emergency_communications:count | Emergency calls and public-safety radio: how many records it holds | unrecorded | none | never checked |  |
-| record:BE:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:crisis_management:count | Crisis management and civil protection: how many records it holds | unrecorded | none | never checked |  |
-| record:BE:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
-| record:BE:education:operator | Education: the body that operates it | unrecorded | none | never checked |  |
+| indicator:BE:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:BE:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:BE:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:BE:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:BE:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:BE:population_m | param:BE:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:BE:gdp_eur_bn | param:BE:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:BE:gov_employment_k | param:BE:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:BE:elec_price_eur_mwh | param:BE:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:BE:renewables_pct | param:BE:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:BE:land_km2 | param:BE:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:land_property:register | Land & property registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:land_property:operator | Land & property registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:firearms_register:operator | Firearms register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:emergency_communications:count | Emergency calls and public-safety radio: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:crisis_management:count | Crisis management and civil protection: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:education:operator | Education: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Belgium
 

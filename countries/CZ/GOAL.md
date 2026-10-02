@@ -57,43 +57,43 @@ The holdings Czechia cannot let depend on infrastructure a foreign state can com
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | informační systém evidence obyvatel (population register information system)[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Facial biometric (tier 0) | ID card register (Evidence občanských průkazů), a public administration information system[^s20][^s21] | Ministry of the Interior is the controller of the ID card register[^s21] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | No central register[^s21] | — | — | — |
-| Critical | Breeder document scans (tier 0) | Collection of documents (sbírka listin) underlying each civil status register book[^s22][^s23] | Ministerstvo vnitra (Ministry of the Interior) as controller of the Matriční informační systém (civil status information system)[^s24] | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is §57(3): data under §56(1)(o), which the act calls only 'biometrické údaje' (biometric data, not specifically fingerprints), are kept in the ID card register until the card is collected and at most 90 days after issue. That desc It is withheld until the fact or its source is corrected and checked again* | — | — | — |
+| Critical | Breeder document scans (tier 0) | Collection of documents (sbírka listin) underlying each civil status register book[^s22][^s23] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote (§ 1b(1): Matriční informační systém ... jehož správcem je Ministerstvo vnitra) is verbatim on the cited page, but that page is the consolidation whose URL is dated 2027-01-01; the 2025-01-01 e-sbirka consolidation and the current It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | NIA keeps operational data including a record of each use of NIA data[^s9][^s11] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Document issuance history (tier 0) | The ID card register records invalid cards, the date and the reason they became invalid[^s20][^s21] | Ministry of the Interior is the controller of the ID card register[^s21] | *Not stated in sources* | *Not yet measured* |
 | High | Digital identity credentials (tier 0) | National point for identification and authentication (Národní bod, NIA), administered by DIA[^s9][^s11] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
-| High | Electoral roll entry (tier 0) | Election administration information system (ISSV) whose components include the voter list[^s25][^s26] | Ministry of the Interior administers the ISSV, which keeps voter records[^s25][^s26] | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | Election administration information system (ISSV) whose components include the voter list[^s24][^s25] | Ministry of the Interior administers the ISSV, which keeps voter records[^s24][^s25] | *Not stated in sources* | *Not yet measured* |
 | High | State PKI and qualified trust services (tier 0) | *Not yet sourced* | DIA acts as founder of the State Trust Services Administration[^s6][^s8] | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | Cadastre is kept in the Cadastre of Real Estate Information System (ISKN)[^s27] | ČÚZK is the central state authority for surveying and the cadastre[^s28][^s29] | *Not stated in sources* | More than 33 million documents in the digital part of the cadastral deed collection[^s27] |
-| High | Judicial & criminal justice (tier 1) | Criminal Records Register: public administration IS of persons finally convicted[^s30][^s31] | Ministry of Justice is the controller[^s30][^s31] | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | Cadastre is kept in the Cadastre of Real Estate Information System (ISKN)[^s26] | ČÚZK is the central state authority for surveying and the cadastre[^s27][^s28] | *Not stated in sources* | More than 33 million documents in the digital part of the cadastral deed collection[^s26] |
+| High | Judicial & criminal justice (tier 1) | Criminal Records Register: public administration IS of persons finally convicted[^s29][^s30] | Ministry of Justice is the controller[^s29][^s30] | *Not stated in sources* | *Not yet measured* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | Police operate and control the foreigners' information system, incl. photos and fingerprints[^s32][^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | Automated Tax Information System (ADIS) of the Financial Administration[^s34][^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | Automated import system e-Dovoz completing electronic customs systems for transit, export and import[^s36] | Customs Administration: General Directorate of Customs and customs offices[^s37] | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | ČSSZ keeps the register of pension insurance contributors[^s38][^s39] | MPSV is controller of the integrated MPSV information system, which includes the ČSSZ system[^s38][^s39] | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | VZP keeps the register of all persons insured under public health insurance[^s40][^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | The Public Register is a public administration IS kept electronically by the registry courts[^s42][^s43] | DIA administers the Basic Register of Persons (ROS) and assigns company identification numbers[^s44] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Register of beneficial owners is a public administration IS controlled by the Ministry of Justice[^s45] | Kept by the court competent for registration; entries made by courts or notaries[^s45] | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Road Vehicle Register, controlled by the Ministry of Transport, records vehicles, owners and operators[^s46] | Ministry of Transport keeps the central driver register and digital tachograph system[^s47][^s48] | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | Ministry of Foreign Affairs visa information system incl. photographs and fingerprints[^s33] | Police Presidium operates the national component of SIS and the SIRENE function[^s49][^s50] | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | Central Firearms Register: non-public public administration IS[^s51] | Police Presidium is the controller[^s51] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | Integrovaný informační systém Státní pokladny (IISSP) (Integrated Information System of the State Treasury)[^s52] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | Civil service information system for service relationships[^s53][^s54] | Office of the Government is the controller[^s53][^s54] | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | informační systém správy voleb (election administration information system)[^s25] | Czech Statistical Office runs results collection and builds the results system including software[^s26] | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | systém CERTIS (CERTIS interbank payment system)[^s55] | Česká národní banka (Czech National Bank)[^s56] | *Not stated in sources* | over 983 million items in 2024[^s56] |
-| High | Emergency calls and public-safety radio (tier 1) | 14 interconnected 112 call centres[^s57] | hasičské záchranné sbory jednotlivých krajů (regional Fire Rescue Services), in Centra tísňové komunikace (CTK)[^s58] | *Not stated in sources* | 1,995,395 calls and 33,035 SMS to 112 in 2025[^s59][^s60] |
-| High | Crisis management and civil protection (tier 1) | Crisis management information system supporting crisis authorities[^s61] | Administered by the Ministry of the Interior through the Fire Rescue Service directorate[^s62][^s61] | *Not stated in sources* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Police operate and control the foreigners' information system, incl. photos and fingerprints[^s31][^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Automated Tax Information System (ADIS) of the Financial Administration[^s33][^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | Automated import system e-Dovoz completing electronic customs systems for transit, export and import[^s35] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (§1(1) of Act 17/2012) only says the customs administration's basic task is protecting the Republic's economic interests and supervising goods and their movement; it does not name the General Directorate of Customs or customs offi It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | ČSSZ keeps the register of pension insurance contributors[^s36][^s37] | MPSV is controller of the integrated MPSV information system, which includes the ČSSZ system[^s36][^s37] | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | VZP keeps the register of all persons insured under public health insurance[^s38][^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | The Public Register is a public administration IS kept electronically by the registry courts[^s40][^s41] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 28(1) of Act 111/2009 supports DIA (Agentura, defined in § 7) as controller of the registr osob, but § 28(2) says the controller 'poskytuje editorům k přidělení identifikační číslo osoby' — it provides the identification numbers to the ed It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Register of beneficial owners is a public administration IS controlled by the Ministry of Justice[^s42] | Kept by the court competent for registration; entries made by courts or notaries[^s42] | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Road Vehicle Register, controlled by the Ministry of Transport, records vehicles, owners and operators[^s43] | Ministry of Transport keeps the central driver register and digital tachograph system[^s44][^s45] | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Ministry of Foreign Affairs visa information system incl. photographs and fingerprints[^s32] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 84(2) of Act 273/2008 supports that the Police Presidium operates the national component of SIS and performs the tasks of the authority exchanging supplementary information on SIS alerts, but neither page uses the word 'SIRENE' anywhere a It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Central Firearms Register: non-public public administration IS[^s46] | Police Presidium is the controller[^s46] | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | Integrovaný informační systém Státní pokladny (IISSP) (Integrated Information System of the State Treasury)[^s47] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | Civil service information system for service relationships[^s48][^s49] | Office of the Government is the controller[^s48][^s49] | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | informační systém správy voleb (election administration information system)[^s24] | Czech Statistical Office runs results collection and builds the results system including software[^s25] | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | systém CERTIS (CERTIS interbank payment system)[^s50] | Česká národní banka (Czech National Bank)[^s51] | *Not stated in sources* | over 983 million items in 2024[^s51] |
+| High | Emergency calls and public-safety radio (tier 1) | 14 interconnected 112 call centres[^s52] | hasičské záchranné sbory jednotlivých krajů (regional Fire Rescue Services), in Centra tísňové komunikace (CTK)[^s53] | *Not stated in sources* | 1,995,395 calls and 33,035 SMS to 112 in 2025[^s54][^s55] |
+| High | Crisis management and civil protection (tier 1) | Crisis management information system supporting crisis authorities[^s56] | Administered by the Ministry of the Interior through the Fire Rescue Service directorate[^s57][^s56] | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | matrika studentů (student register), kept by each higher education institution[^s63] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | SÚKL ('Ústav') establishes eRecept as a public administration information system[^s64][^s65] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | Elektronický systém Sbírky zákonů a mezinárodních smluv (electronic system of the Collection of Laws and International Treaties, e-Sbírka)[^s66] | Ministerstvo vnitra (Ministry of the Interior)[^s66] | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | Includes the register of infectious disease cases and vaccination[^s67][^s68] | Infectious disease IS: Ministry of Health controller, ÚZIS operator[^s67][^s68] | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | matrika studentů (student register), kept by each higher education institution[^s58] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | SÚKL ('Ústav') establishes eRecept as a public administration information system[^s59][^s60] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Elektronický systém Sbírky zákonů a mezinárodních smluv (electronic system of the Collection of Laws and International Treaties, e-Sbírka)[^s61] | Ministerstvo vnitra (Ministry of the Interior)[^s61] | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | Includes the register of infectious disease cases and vaccination[^s62][^s63] | Infectious disease IS: Ministry of Health controller, ÚZIS operator[^s62][^s63] | *Not stated in sources* | *Not yet measured* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | ČÚZK publishes parcels from ISKN and buildings/addresses from RÚIAN[^s27] | Český úřad zeměměřický a katastrální (Czech Office for Surveying, Mapping and Cadastre)[^s69] | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | ČÚZK publishes parcels from ISKN and buildings/addresses from RÚIAN[^s26] | Český úřad zeměměřický a katastrální (Czech Office for Surveying, Mapping and Cadastre)[^s64] | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -144,7 +144,7 @@ Tier 0 and 1 holdings for Czechia without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
 
 ### How sources were found
 
@@ -200,10 +200,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
-| T2 competent public body or audit office | 633 |
-| T3 other institution or company | 9 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
+| T2 competent public body or audit office | 589 |
+| T3 other institution or company | 7 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
 
 ### Evidence grades
 
@@ -212,8 +212,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 106 |
-| Standard | 1282 |
+| Strong | 100 |
+| Standard | 1209 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -254,7 +254,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1388 printed facts pass the fact check.
+In this build, 1309 of 1309 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -296,7 +296,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
+In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -319,87 +319,89 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Czechia
 
-0 of 69 printed facts about Czechia pass.
+64 of 64 printed facts about Czechia pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
-| indicator:CZ:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | none | never checked |  |
-| indicator:CZ:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
-| indicator:CZ:L3 | indicator L3: Is a cloud certification that requires immunity from non-EU law in force or adopted for government use? | unrecorded | none | never checked |  |
-| indicator:CZ:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:CZ:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:CZ:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
-| indicator:CZ:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
-| param:CZ:population_m | param:CZ:population_m | program:fetch_eurostat.py | none | never checked |  |
-| param:CZ:gdp_eur_bn | param:CZ:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
-| param:CZ:gov_employment_k | param:CZ:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
-| param:CZ:elec_price_eur_mwh | param:CZ:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
-| param:CZ:renewables_pct | param:CZ:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
-| param:CZ:land_km2 | param:CZ:land_km2 | program:fetch_eurostat.py | none | never checked |  |
-| record:CZ:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:land_property:operator | Land & property registry: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:land_property:count | Land & property registry: how many records it holds | unrecorded | none | never checked |  |
-| record:CZ:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:tax:register | Tax: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:customs:operator | Customs declarations: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:border_control:operator | Border and visa systems: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:firearms_register:register | Firearms register: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:firearms_register:operator | Firearms register: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:government_payroll:operator | Government payroll and personnel: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:electoral_management:register | Election management and results: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:electoral_management:operator | Election management and results: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:central_bank:register | Central bank systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:central_bank:operator | Central bank systems: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:central_bank:count | Central bank systems: how many records it holds | unrecorded | none | never checked |  |
-| record:CZ:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:emergency_communications:count | Emergency calls and public-safety radio: how many records it holds | unrecorded | none | never checked |  |
-| record:CZ:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:crisis_management:operator | Crisis management and civil protection: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:health_records:register | Health records: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | none | never checked |  |
-| record:CZ:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
-| record:CZ:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | none | never checked |  |
+| indicator:CZ:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:CZ:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:CZ:L3 | indicator L3: Is a cloud certification that requires immunity from non-EU law in force or adopted for government use? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:CZ:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:CZ:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:CZ:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:CZ:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CZ:population_m | param:CZ:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CZ:gdp_eur_bn | param:CZ:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CZ:gov_employment_k | param:CZ:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CZ:elec_price_eur_mwh | param:CZ:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CZ:renewables_pct | param:CZ:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CZ:land_km2 | param:CZ:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:land_property:register | Land & property registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:land_property:operator | Land & property registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:land_property:count | Land & property registry: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:firearms_register:operator | Firearms register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:government_payroll:operator | Government payroll and personnel: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:electoral_management:register | Election management and results: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:electoral_management:operator | Election management and results: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:central_bank:operator | Central bank systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:central_bank:count | Central bank systems: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:emergency_communications:count | Emergency calls and public-safety radio: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:crisis_management:operator | Crisis management and civil protection: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CZ:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Czechia
 
-None.
+| Claim | What it answers | Checked by | Verdict | Reason |
+|---|---|---|---|---|
+| record:CZ:border_control:operator | Border and visa systems: the body that operates it | claude-fable-5-1 | not supported | § 84(2) of Act 273/2008 supports that the Police Presidium operates the national component of SIS and performs the tasks of the authority exchanging supplementary information on SIS alerts, but neither page uses the word 'SIRENE' anywhere and the cited quote stops before the supplementary-information clause; the printed 'SIRENE function' is a label the source does not supply. |
+| record:CZ:breeder_documents:operator | Breeder document scans: the body that operates it | claude-fable-5-1 | unclear | The quote (§ 1b(1): Matriční informační systém ... jehož správcem je Ministerstvo vnitra) is verbatim on the cited page, but that page is the consolidation whose URL is dated 2027-01-01; the 2025-01-01 e-sbirka consolidation and the current zakonyprolidi text of Act 301/2000 contain no § 1b or 'Matriční informační systém', so whether this provision is in force on 2026-10-02 cannot be settled from  |
+| record:CZ:business_registry:operator | Business registry: the body that operates it | claude-fable-5-1 | not supported | § 28(1) of Act 111/2009 supports DIA (Agentura, defined in § 7) as controller of the registr osob, but § 28(2) says the controller 'poskytuje editorům k přidělení identifikační číslo osoby' — it provides the identification numbers to the editors for assignment; the editors assign them. The printed 'assigns company identification numbers' attributes the assignment to DIA, which the source does not  |
+| record:CZ:customs:operator | Customs declarations: the body that operates it | claude-fable-5-1 | not supported | The quote (§1(1) of Act 17/2012) only says the customs administration's basic task is protecting the Republic's economic interests and supervising goods and their movement; it does not name the General Directorate of Customs or customs offices (those appear in §1(2), which is not the recorded quote) and the act nowhere mentions customs declarations, so nothing on the page says who operates customs |
+| record:CZ:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | claude-fable-5-1 | not supported | The quote is §57(3): data under §56(1)(o), which the act calls only 'biometrické údaje' (biometric data, not specifically fingerprints), are kept in the ID card register until the card is collected and at most 90 days after issue. That describes a central public-administration IS that does hold the biometric data for a limited time; it does not say there is no central register, and it does not nam |
 
 ---
 
@@ -426,53 +428,48 @@ None.
 [^s21]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 269/2021 Sb., o občanských průkazech, 2021. Zákon č. 269/2021 Sb., o občanských průkazech. <https://www.zakonyprolidi.cz/cs/2021-269>
 [^s22]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 301/2000 Sb., o matrikách, jménu a příjmení…, 2025-01-01. Zákon č. 301/2000 Sb., o matrikách, jménu a příjmení (znění od 2025-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F301%2F2025-01-01/fragmenty?cisloStranky=0>
 [^s23]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 301/2000 Sb., o matrikách, jménu a příjmení, 2000. Zákon č. 301/2000 Sb., o matrikách, jménu a příjmení. <https://www.zakonyprolidi.cz/cs/2000-301> ([archived](https://web.archive.org/web/20260224043912/https://www.zakonyprolidi.cz/cs/2000-301))
-[^s24]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 301/2000 Sb., o matrikách, jménu a příjmení…, 2027-01-01. Zákon č. 301/2000 Sb., o matrikách, jménu a příjmení (budoucí znění od 2027-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F301%2F2027-01-01/fragmenty?cisloStranky=0>
-[^s25]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 88/2024 Sb., o správě voleb (znění od 2026-06-26), 2026-06-26. Zákon č. 88/2024 Sb., o správě voleb (znění od 2026-06-26). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2024%2F88%2F2026-06-26/fragmenty?cisloStranky=0>
-[^s26]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 88/2024 Sb., o správě voleb, 2024. Zákon č. 88/2024 Sb., o správě voleb. <https://www.zakonyprolidi.cz/cs/2024-88> ([archived](https://web.archive.org/web/20260113232740/https://www.zakonyprolidi.cz/cs/2024-88))
-[^s27]: Český úřad zeměměřický a katastrální — Výroční zpráva ČÚZK za rok 2025, 2026-03-10. Výroční zpráva ČÚZK za rok 2025. <https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx> ([archived](https://web.archive.org/web/20260310200755/https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx))
-[^s28]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 359/1992 Sb., o zeměměřických a katastrálních…, 2024-01-01. Zákon č. 359/1992 Sb., o zeměměřických a katastrálních orgánech (znění od 2024-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1992%2F359%2F2024-01-01/fragmenty?cisloStranky=0>
-[^s29]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 359/1992 Sb., o zeměměřických a katastrálních…, 1992. Zákon č. 359/1992 Sb., o zeměměřických a katastrálních orgánech. <https://www.zakonyprolidi.cz/cs/1992-359> ([archived](https://web.archive.org/web/20260210112357/https://www.zakonyprolidi.cz/cs/1992-359))
-[^s30]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 269/1994 Sb., o rejstříku trestů a evidenci…, 2026-07-01. Zákon č. 269/1994 Sb., o rejstříku trestů a evidenci přestupků (znění od 2026-07-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1994%2F269%2F2026-07-01/fragmenty?cisloStranky=0>
-[^s31]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 269/1994 Sb., o rejstříku trestů, 1994. Zákon č. 269/1994 Sb., o rejstříku trestů. <https://www.zakonyprolidi.cz/cs/1994-269> ([archived](https://web.archive.org/web/20260312160053/https://www.zakonyprolidi.cz/cs/1994-269))
-[^s32]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 326/1999 Sb., o pobytu cizinců na území České…, 2026-06-12. Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky (znění od 2026-06-12). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1999%2F326%2F2026-06-12/fragmenty?cisloStranky=2>
-[^s33]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 326/1999 Sb., o pobytu cizinců na území České…, 1999. Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky. <https://www.zakonyprolidi.cz/cs/1999-326>
-[^s34]: Generální finanční ředitelství — Organizační řád Finanční správy České republiky (úplné…, 2022. Organizační řád Finanční správy České republiky (úplné znění ve znění Dodatku č. 15). <https://financnisprava.gov.cz/assets/cs/prilohy/fs-financni-sprava-cr/OR_FS_UZ_D15.pdf>
-[^s35]: Generální finanční ředitelství — Organizační řád Generálního finančního ředitelství. Organizační řád Generálního finančního ředitelství. <https://financnisprava.gov.cz/assets/cs/prilohy/fs-financni-sprava-cr/OR_FS_UZ_D4.pdf>
-[^s36]: Celní správa ČR — e-Dovoz (tisková zpráva), 2010-10-29. e-Dovoz (tisková zpráva). <https://celnisprava.gov.cz/cz/crhradeckralove/tiskove-zpravy/2010/Stranky/e-dovoz.aspx>
-[^s37]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 17/2012 Sb., o Celní správě České republiky, 2012. Zákon č. 17/2012 Sb., o Celní správě České republiky. <https://www.zakonyprolidi.cz/cs/2012-17> ([archived](https://web.archive.org/web/20260214074216/https://www.zakonyprolidi.cz/cs/2012-17))
-[^s38]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 582/1991 Sb., o organizaci a provádění…, 2026-07-01. Zákon č. 582/1991 Sb., o organizaci a provádění sociálního zabezpečení (znění od 2026-07-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1991%2F582%2F2026-07-01/fragmenty?cisloStranky=0>
-[^s39]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 582/1991 Sb., o organizaci a provádění…, 1991. Zákon č. 582/1991 Sb., o organizaci a provádění sociálního zabezpečení. <https://www.zakonyprolidi.cz/cs/1991-582>
-[^s40]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 592/1992 Sb., o pojistném na veřejné zdravotní…, 2026-05-27. Zákon č. 592/1992 Sb., o pojistném na veřejné zdravotní pojištění (znění od 2026-05-27). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1992%2F592%2F2026-05-27/fragmenty?cisloStranky=0>
-[^s41]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 592/1992 Sb., o pojistném na veřejné zdravotní…, 1992. Zákon č. 592/1992 Sb., o pojistném na veřejné zdravotní pojištění. <https://www.zakonyprolidi.cz/cs/1992-592> ([archived](https://web.archive.org/web/20260501174125/https://www.zakonyprolidi.cz/cs/1992-592))
-[^s42]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 304/2013 Sb., o veřejných rejstřících…, 2024-07-19. Zákon č. 304/2013 Sb., o veřejných rejstřících právnických a fyzických osob (znění od 2024-07-19). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2013%2F304%2F2024-07-19/fragmenty?cisloStranky=0>
-[^s43]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 304/2013 Sb., o veřejných rejstřících…, 2013. Zákon č. 304/2013 Sb., o veřejných rejstřících právnických a fyzických osob. <https://www.zakonyprolidi.cz/cs/2013-304> ([archived](https://web.archive.org/web/20260201065444/https://www.zakonyprolidi.cz/cs/2013-304))
-[^s44]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 111/2009 Sb., o základních registrech, 2009. Zákon č. 111/2009 Sb., o základních registrech. <https://www.zakonyprolidi.cz/cs/2009-111> ([archived](https://web.archive.org/web/20251114195208/https://www.zakonyprolidi.cz/cs/2009-111))
-[^s45]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 37/2021 Sb., o evidenci skutečných majitelů, 2021. Zákon č. 37/2021 Sb., o evidenci skutečných majitelů. <https://www.zakonyprolidi.cz/cs/2021-37> ([archived](https://web.archive.org/web/20251007111453/https://www.zakonyprolidi.cz/cs/2021-37))
-[^s46]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 56/2001 Sb., o podmínkách provozu vozidel na…, 2001. Zákon č. 56/2001 Sb., o podmínkách provozu vozidel na pozemních komunikacích. <https://www.zakonyprolidi.cz/cs/2001-56> ([archived](https://web.archive.org/web/20260323232108/https://www.zakonyprolidi.cz/cs/2001-56))
-[^s47]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 361/2000 Sb., o provozu na pozemních…, 2026-01-01. Zákon č. 361/2000 Sb., o provozu na pozemních komunikacích (znění od 2026-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F361%2F2026-01-01/fragmenty?cisloStranky=1>
-[^s48]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 361/2000 Sb., o provozu na pozemních komunikacích, 2000. Zákon č. 361/2000 Sb., o provozu na pozemních komunikacích. <https://www.zakonyprolidi.cz/cs/2000-361> ([archived](https://web.archive.org/web/20260711182736/https://www.zakonyprolidi.cz/cs/2000-361))
-[^s49]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 273/2008 Sb., o Policii České republiky (znění…, 2026-06-12. Zákon č. 273/2008 Sb., o Policii České republiky (znění od 2026-06-12). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2008%2F273%2F2026-06-12/fragmenty?cisloStranky=0>
-[^s50]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 273/2008 Sb., o Policii České republiky, 2008. Zákon č. 273/2008 Sb., o Policii České republiky. <https://www.zakonyprolidi.cz/cs/2008-273> ([archived](https://web.archive.org/web/20260404065219/https://www.zakonyprolidi.cz/cs/2008-273))
-[^s51]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 90/2024 Sb., o zbraních a střelivu, 2024. Zákon č. 90/2024 Sb., o zbraních a střelivu. <https://www.zakonyprolidi.cz/cs/2024-90> ([archived](https://web.archive.org/web/20260623173655/https://www.zakonyprolidi.cz/cs/2024-90))
-[^s52]: Ministerstvo financí ČR — IISSP - MONITOR. IISSP - MONITOR. <https://mf.gov.cz/cs/ministerstvo/informacni-systemy/iissp--monitor> ([archived](https://web.archive.org/web/20260926100113/https://mf.gov.cz/cs/ministerstvo/informacni-systemy/iissp--monitor))
-[^s53]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 234/2014 Sb., o státní službě (znění od 2026-01-01), 2026-01-01. Zákon č. 234/2014 Sb., o státní službě (znění od 2026-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2014%2F234%2F2026-01-01/fragmenty?cisloStranky=1>
-[^s54]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 234/2014 Sb., o státní službě, 2014. Zákon č. 234/2014 Sb., o státní službě. <https://www.zakonyprolidi.cz/cs/2014-234> ([archived](https://web.archive.org/web/20260427134705/https://www.zakonyprolidi.cz/cs/2014-234))
-[^s55]: Česká národní banka — Popis systému CERTIS. Popis systému CERTIS. <https://www.cnb.cz/cs/platebni-styk/certis/popis-systemu-certis/>
-[^s56]: Česká národní banka — Systém CERTIS ročně zpracuje téměř miliardu…, 2025-01. Systém CERTIS ročně zpracuje téměř miliardu mezibankovních platebních transakcí. ČNB jej nově zpřístupní i nebankovním subjektům. <https://www.cnb.cz/cs/cnb-news/tiskove-zpravy/System-CERTIS-rocne-zpracuje-temer-miliardu-mezibankovnich-platebnich-transakci.-CNB-jej-nove-zpristupni-inbspnebankovnim-subjektum/>
-[^s57]: Hasičský záchranný sbor České republiky — Tísňová linka 112 má svůj den. Tísňová linka 112 má svůj den. <https://hzscr.gov.cz/clanek/tisnova-linka-112-ma-svuj-den> ([archived](https://web.archive.org/web/20250429081533/https://hzscr.gov.cz/clanek/tisnova-linka-112-ma-svuj-den))
-[^s58]: Hasičský záchranný sbor České republiky — HZS Jihomoravského kraje - Dnes je Evropský den linky 112, 2026-02-11. HZS Jihomoravského kraje - Dnes je Evropský den linky 112. <https://hzscr.gov.cz/clanek/hzs-jihomoravskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-dnes-je-evropsky-den-linky-112.aspx> ([archived](https://web.archive.org/web/20260308233354/https://hzscr.gov.cz/clanek/hzs-jihomoravskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-dnes-je-evropsky-den-linky-112.aspx))
-[^s59]: Hasičský záchranný sbor České republiky — Záchranný útvar HZS ČR - Tísňová linka 112 funguje už 22 let, 2026-02-10. Záchranný útvar HZS ČR - Tísňová linka 112 funguje už 22 let. <https://hzscr.gov.cz/clanek/organizacni-slozky-zachranny-utvar-hzs-cr-menu-informacni-servis-zpravodajstvi-tisnova-linka-112-funguje-uz-22-let.aspx> ([archived](https://web.archive.org/web/20260616095518/https://hzscr.gov.cz/clanek/organizacni-slozky-zachranny-utvar-hzs-cr-menu-informacni-servis-zpravodajstvi-tisnova-linka-112-funguje-uz-22-let.aspx))
-[^s60]: Hasičský záchranný sbor České republiky — Tísňová linka 112 funguje už 22 let, 2026-02-10. Tísňová linka 112 funguje už 22 let. <https://hzscr.gov.cz/clanek/hzs-jihoceskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-unor-tisnova-linka-112-funguje-uz-22-let.aspx>
-[^s61]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon), 2000. Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon). <https://www.zakonyprolidi.cz/cs/2000-240>
-[^s62]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon)…, 2025-08-19. Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon) (znění od 2025-08-19). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F240%2F2025-08-19/fragmenty?cisloStranky=0>
-[^s63]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 111/1998 Sb., o vysokých školách (znění od…, 2026-01-01. Zákon č. 111/1998 Sb., o vysokých školách (znění od 2026-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1998%2F111%2F2026-01-01/fragmenty?cisloStranky=1>
-[^s64]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 378/2007 Sb., o léčivech (znění od 2026-01-01), 2026-01-01. Zákon č. 378/2007 Sb., o léčivech (znění od 2026-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2007%2F378%2F2026-01-01/fragmenty?cisloStranky=0>
-[^s65]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 378/2007 Sb., o léčivech, 2007. Zákon č. 378/2007 Sb., o léčivech. <https://www.zakonyprolidi.cz/cs/2007-378>
-[^s66]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 222/2016 Sb., o Sbírce zákonů a mezinárodních…, 2026-08-29. Zákon č. 222/2016 Sb., o Sbírce zákonů a mezinárodních smluv (znění od 2026-08-29). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2016%2F222%2F2026-08-29/fragmenty?cisloStranky=0>
-[^s67]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 258/2000 Sb., o ochraně veřejného zdraví (znění…, 2026-06-12. Zákon č. 258/2000 Sb., o ochraně veřejného zdraví (znění od 2026-06-12). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F258%2F2026-06-12/fragmenty?cisloStranky=0>
-[^s68]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 258/2000 Sb., o ochraně veřejného zdraví, 2000. Zákon č. 258/2000 Sb., o ochraně veřejného zdraví. <https://www.zakonyprolidi.cz/cs/2000-258> ([archived](https://web.archive.org/web/20260319172250/https://www.zakonyprolidi.cz/cs/2000-258))
-[^s69]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 111/2009 Sb., o základních registrech (znění od…, 2026-01-01. Zákon č. 111/2009 Sb., o základních registrech (znění od 2026-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2009%2F111%2F2026-01-01/fragmenty?cisloStranky=0>
+[^s24]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 88/2024 Sb., o správě voleb (znění od 2026-06-26), 2026-06-26. Zákon č. 88/2024 Sb., o správě voleb (znění od 2026-06-26). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2024%2F88%2F2026-06-26/fragmenty?cisloStranky=0>
+[^s25]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 88/2024 Sb., o správě voleb, 2024. Zákon č. 88/2024 Sb., o správě voleb. <https://www.zakonyprolidi.cz/cs/2024-88> ([archived](https://web.archive.org/web/20260113232740/https://www.zakonyprolidi.cz/cs/2024-88))
+[^s26]: Český úřad zeměměřický a katastrální — Výroční zpráva ČÚZK za rok 2025, 2026-03-10. Výroční zpráva ČÚZK za rok 2025. <https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx> ([archived](https://web.archive.org/web/20260310200755/https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx))
+[^s27]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 359/1992 Sb., o zeměměřických a katastrálních…, 2024-01-01. Zákon č. 359/1992 Sb., o zeměměřických a katastrálních orgánech (znění od 2024-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1992%2F359%2F2024-01-01/fragmenty?cisloStranky=0>
+[^s28]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 359/1992 Sb., o zeměměřických a katastrálních…, 1992. Zákon č. 359/1992 Sb., o zeměměřických a katastrálních orgánech. <https://www.zakonyprolidi.cz/cs/1992-359> ([archived](https://web.archive.org/web/20260210112357/https://www.zakonyprolidi.cz/cs/1992-359))
+[^s29]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 269/1994 Sb., o rejstříku trestů a evidenci…, 2026-07-01. Zákon č. 269/1994 Sb., o rejstříku trestů a evidenci přestupků (znění od 2026-07-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1994%2F269%2F2026-07-01/fragmenty?cisloStranky=0>
+[^s30]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 269/1994 Sb., o rejstříku trestů, 1994. Zákon č. 269/1994 Sb., o rejstříku trestů. <https://www.zakonyprolidi.cz/cs/1994-269> ([archived](https://web.archive.org/web/20260312160053/https://www.zakonyprolidi.cz/cs/1994-269))
+[^s31]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 326/1999 Sb., o pobytu cizinců na území České…, 2026-06-12. Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky (znění od 2026-06-12). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1999%2F326%2F2026-06-12/fragmenty?cisloStranky=2>
+[^s32]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 326/1999 Sb., o pobytu cizinců na území České…, 1999. Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky. <https://www.zakonyprolidi.cz/cs/1999-326>
+[^s33]: Generální finanční ředitelství — Organizační řád Finanční správy České republiky (úplné…, 2022. Organizační řád Finanční správy České republiky (úplné znění ve znění Dodatku č. 15). <https://financnisprava.gov.cz/assets/cs/prilohy/fs-financni-sprava-cr/OR_FS_UZ_D15.pdf>
+[^s34]: Generální finanční ředitelství — Organizační řád Generálního finančního ředitelství. Organizační řád Generálního finančního ředitelství. <https://financnisprava.gov.cz/assets/cs/prilohy/fs-financni-sprava-cr/OR_FS_UZ_D4.pdf>
+[^s35]: Celní správa ČR — e-Dovoz (tisková zpráva), 2010-10-29. e-Dovoz (tisková zpráva). <https://celnisprava.gov.cz/cz/crhradeckralove/tiskove-zpravy/2010/Stranky/e-dovoz.aspx>
+[^s36]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 582/1991 Sb., o organizaci a provádění…, 2026-07-01. Zákon č. 582/1991 Sb., o organizaci a provádění sociálního zabezpečení (znění od 2026-07-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1991%2F582%2F2026-07-01/fragmenty?cisloStranky=0>
+[^s37]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 582/1991 Sb., o organizaci a provádění…, 1991. Zákon č. 582/1991 Sb., o organizaci a provádění sociálního zabezpečení. <https://www.zakonyprolidi.cz/cs/1991-582>
+[^s38]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 592/1992 Sb., o pojistném na veřejné zdravotní…, 2026-05-27. Zákon č. 592/1992 Sb., o pojistném na veřejné zdravotní pojištění (znění od 2026-05-27). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1992%2F592%2F2026-05-27/fragmenty?cisloStranky=0>
+[^s39]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 592/1992 Sb., o pojistném na veřejné zdravotní…, 1992. Zákon č. 592/1992 Sb., o pojistném na veřejné zdravotní pojištění. <https://www.zakonyprolidi.cz/cs/1992-592> ([archived](https://web.archive.org/web/20260501174125/https://www.zakonyprolidi.cz/cs/1992-592))
+[^s40]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 304/2013 Sb., o veřejných rejstřících…, 2024-07-19. Zákon č. 304/2013 Sb., o veřejných rejstřících právnických a fyzických osob (znění od 2024-07-19). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2013%2F304%2F2024-07-19/fragmenty?cisloStranky=0>
+[^s41]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 304/2013 Sb., o veřejných rejstřících…, 2013. Zákon č. 304/2013 Sb., o veřejných rejstřících právnických a fyzických osob. <https://www.zakonyprolidi.cz/cs/2013-304> ([archived](https://web.archive.org/web/20260201065444/https://www.zakonyprolidi.cz/cs/2013-304))
+[^s42]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 37/2021 Sb., o evidenci skutečných majitelů, 2021. Zákon č. 37/2021 Sb., o evidenci skutečných majitelů. <https://www.zakonyprolidi.cz/cs/2021-37> ([archived](https://web.archive.org/web/20251007111453/https://www.zakonyprolidi.cz/cs/2021-37))
+[^s43]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 56/2001 Sb., o podmínkách provozu vozidel na…, 2001. Zákon č. 56/2001 Sb., o podmínkách provozu vozidel na pozemních komunikacích. <https://www.zakonyprolidi.cz/cs/2001-56> ([archived](https://web.archive.org/web/20260323232108/https://www.zakonyprolidi.cz/cs/2001-56))
+[^s44]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 361/2000 Sb., o provozu na pozemních…, 2026-01-01. Zákon č. 361/2000 Sb., o provozu na pozemních komunikacích (znění od 2026-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F361%2F2026-01-01/fragmenty?cisloStranky=1>
+[^s45]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 361/2000 Sb., o provozu na pozemních komunikacích, 2000. Zákon č. 361/2000 Sb., o provozu na pozemních komunikacích. <https://www.zakonyprolidi.cz/cs/2000-361> ([archived](https://web.archive.org/web/20260711182736/https://www.zakonyprolidi.cz/cs/2000-361))
+[^s46]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 90/2024 Sb., o zbraních a střelivu, 2024. Zákon č. 90/2024 Sb., o zbraních a střelivu. <https://www.zakonyprolidi.cz/cs/2024-90> ([archived](https://web.archive.org/web/20260623173655/https://www.zakonyprolidi.cz/cs/2024-90))
+[^s47]: Ministerstvo financí ČR — IISSP - MONITOR. IISSP - MONITOR. <https://mf.gov.cz/cs/ministerstvo/informacni-systemy/iissp--monitor> ([archived](https://web.archive.org/web/20260926100113/https://mf.gov.cz/cs/ministerstvo/informacni-systemy/iissp--monitor))
+[^s48]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 234/2014 Sb., o státní službě (znění od 2026-01-01), 2026-01-01. Zákon č. 234/2014 Sb., o státní službě (znění od 2026-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2014%2F234%2F2026-01-01/fragmenty?cisloStranky=1>
+[^s49]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 234/2014 Sb., o státní službě, 2014. Zákon č. 234/2014 Sb., o státní službě. <https://www.zakonyprolidi.cz/cs/2014-234> ([archived](https://web.archive.org/web/20260427134705/https://www.zakonyprolidi.cz/cs/2014-234))
+[^s50]: Česká národní banka — Popis systému CERTIS. Popis systému CERTIS. <https://www.cnb.cz/cs/platebni-styk/certis/popis-systemu-certis/>
+[^s51]: Česká národní banka — Systém CERTIS ročně zpracuje téměř miliardu…, 2025-01. Systém CERTIS ročně zpracuje téměř miliardu mezibankovních platebních transakcí. ČNB jej nově zpřístupní i nebankovním subjektům. <https://www.cnb.cz/cs/cnb-news/tiskove-zpravy/System-CERTIS-rocne-zpracuje-temer-miliardu-mezibankovnich-platebnich-transakci.-CNB-jej-nove-zpristupni-inbspnebankovnim-subjektum/>
+[^s52]: Hasičský záchranný sbor České republiky — Tísňová linka 112 má svůj den. Tísňová linka 112 má svůj den. <https://hzscr.gov.cz/clanek/tisnova-linka-112-ma-svuj-den> ([archived](https://web.archive.org/web/20250429081533/https://hzscr.gov.cz/clanek/tisnova-linka-112-ma-svuj-den))
+[^s53]: Hasičský záchranný sbor České republiky — HZS Jihomoravského kraje - Dnes je Evropský den linky 112, 2026-02-11. HZS Jihomoravského kraje - Dnes je Evropský den linky 112. <https://hzscr.gov.cz/clanek/hzs-jihomoravskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-dnes-je-evropsky-den-linky-112.aspx> ([archived](https://web.archive.org/web/20260308233354/https://hzscr.gov.cz/clanek/hzs-jihomoravskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-dnes-je-evropsky-den-linky-112.aspx))
+[^s54]: Hasičský záchranný sbor České republiky — Záchranný útvar HZS ČR - Tísňová linka 112 funguje už 22 let, 2026-02-10. Záchranný útvar HZS ČR - Tísňová linka 112 funguje už 22 let. <https://hzscr.gov.cz/clanek/organizacni-slozky-zachranny-utvar-hzs-cr-menu-informacni-servis-zpravodajstvi-tisnova-linka-112-funguje-uz-22-let.aspx> ([archived](https://web.archive.org/web/20260616095518/https://hzscr.gov.cz/clanek/organizacni-slozky-zachranny-utvar-hzs-cr-menu-informacni-servis-zpravodajstvi-tisnova-linka-112-funguje-uz-22-let.aspx))
+[^s55]: Hasičský záchranný sbor České republiky — Tísňová linka 112 funguje už 22 let, 2026-02-10. Tísňová linka 112 funguje už 22 let. <https://hzscr.gov.cz/clanek/hzs-jihoceskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-unor-tisnova-linka-112-funguje-uz-22-let.aspx>
+[^s56]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon), 2000. Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon). <https://www.zakonyprolidi.cz/cs/2000-240>
+[^s57]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon)…, 2025-08-19. Zákon č. 240/2000 Sb., o krizovém řízení (krizový zákon) (znění od 2025-08-19). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F240%2F2025-08-19/fragmenty?cisloStranky=0>
+[^s58]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 111/1998 Sb., o vysokých školách (znění od…, 2026-01-01. Zákon č. 111/1998 Sb., o vysokých školách (znění od 2026-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F1998%2F111%2F2026-01-01/fragmenty?cisloStranky=1>
+[^s59]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 378/2007 Sb., o léčivech (znění od 2026-01-01), 2026-01-01. Zákon č. 378/2007 Sb., o léčivech (znění od 2026-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2007%2F378%2F2026-01-01/fragmenty?cisloStranky=0>
+[^s60]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 378/2007 Sb., o léčivech, 2007. Zákon č. 378/2007 Sb., o léčivech. <https://www.zakonyprolidi.cz/cs/2007-378>
+[^s61]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 222/2016 Sb., o Sbírce zákonů a mezinárodních…, 2026-08-29. Zákon č. 222/2016 Sb., o Sbírce zákonů a mezinárodních smluv (znění od 2026-08-29). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2016%2F222%2F2026-08-29/fragmenty?cisloStranky=0>
+[^s62]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 258/2000 Sb., o ochraně veřejného zdraví (znění…, 2026-06-12. Zákon č. 258/2000 Sb., o ochraně veřejného zdraví (znění od 2026-06-12). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F258%2F2026-06-12/fragmenty?cisloStranky=0>
+[^s63]: Zákony pro lidi (consolidated text of Sbírka zákonů) — Zákon č. 258/2000 Sb., o ochraně veřejného zdraví, 2000. Zákon č. 258/2000 Sb., o ochraně veřejného zdraví. <https://www.zakonyprolidi.cz/cs/2000-258> ([archived](https://web.archive.org/web/20260319172250/https://www.zakonyprolidi.cz/cs/2000-258))
+[^s64]: Ministerstvo vnitra ČR – e-Sbírka (official Collection of Laws portal) — Zákon č. 111/2009 Sb., o základních registrech (znění od…, 2026-01-01. Zákon č. 111/2009 Sb., o základních registrech (znění od 2026-01-01). <https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2009%2F111%2F2026-01-01/fragmenty?cisloStranky=0>
 
-**Evidence grades:** 4 Strong, 65 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 4 Strong, 60 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

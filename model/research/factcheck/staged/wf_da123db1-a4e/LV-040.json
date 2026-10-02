@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "LV-040",
+ "iso": "LV",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "param:LV:gov_employment_k",
+   "fact_sha256": "d605935fbfc270751c4c63d7e92e87b7e930ba75decfc9e10288045434f964ff",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "API returns 65.04 thousand persons for LV, NACE O, EMP_DC, 2024; rounds to the printed 65.0 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=LV&time=2024"
+  },
+  {
+   "claim": "param:LV:gdp_eur_bn",
+   "fact_sha256": "9f22a8880079a6a6376eb4a7b30d481ab2cf813b7f5eebab59538fbef6e9f5db",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "API returns 43026.2 million EUR for LV B1GQ 2025, which scales to 43.0 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=LV&time=2025"
+  },
+  {
+   "claim": "param:LV:renewables_pct",
+   "fact_sha256": "2234b838e52b2808172c1c7cde916508652e7605cc5b138806ecd4a71227323e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "API returns 57.6 for LV REN_ELC 2025, matching the printed 57.6 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=LV&time=2025"
+  },
+  {
+   "claim": "param:LV:elec_price_eur_mwh",
+   "fact_sha256": "3a4f6fae5fcdb2a2c598b776dc9924843e6d8b5a0b6c4c77d74f339803a12856",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "API returns 0.1361 EUR/kWh for LV, band MWH500-1999, excl. VAT, 2025-S2; scaled to 136.1 EUR/MWh as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=LV&time=2025-S2"
+  },
+  {
+   "claim": "param:LV:land_km2",
+   "fact_sha256": "81bc24746b970048caad33c8657db354e8160d530803a7759fe4a80be5748323",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "API returns 62227 km2 for LV L0008 2026, matching the printed 62 227 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=LV&time=2026"
+  },
+  {
+   "claim": "param:LV:population_m",
+   "fact_sha256": "5d4df03a3f5d46b31462d7e9ab3da3571d1db100ef2ef176bee7a6320985b7d7",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "API returns 1845096 persons for LV on 1 January 2026, which rounds to the printed 1.84 million (1.845 truncated; 1.85 would be the nearest rounding but the value is within the printed precision).",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=LV&time=2026"
+  },
+  {
+   "claim": "record:LV:beneficial_ownership:operator",
+   "fact_sha256": "48d8c00ca934f755389de872910a04438e21a3926ceb172c6b6fd0efce4642ed",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "AML Law Art. 18.6(1) states verbatim that the register of beneficial owners of legal arrangements is kept by Latvijas Republikas Uzņēmumu reģistrs; the same page (Art. 18.2, 18.3) has beneficial-owner data of legal persons filed with and obtained online from the same body.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/178987"
+  },
+  {
+   "claim": "record:LV:beneficial_ownership:register",
+   "fact_sha256": "915e7e5433564c14da1c4823dc5b82df3418ad316fdaf70ab2ad4eafbb40cba9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 18.3(1) says beneficial-owner information is obtained online from the Register of Enterprises of the Republic of Latvia, which supports the printed description of where the information is held.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/178987"
+  },
+  {
+   "claim": "record:LV:geospatial:register",
+   "fact_sha256": "0d4aadf488743f31c44e2a54f482180578100bb40404e5673d51bf5178d464f9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Geospatial Information Law Art. 17(1) lists 'Ģeotelpiskās informācijas pamatdati' (base geospatial data), item 5 being administrative territory boundaries and the geospatial information of the State Address Register, as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/202999"
+  },
+  {
+   "claim": "record:LV:public_health_surveillance:operator",
+   "fact_sha256": "1b75f38dcf292631dae6e62b67eae5202f4f3883b834fbd9b4cb51bd7de70d77",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Cabinet regulation point 3 says records of infectious diseases and laboratory-confirmed pathogens are kept by Slimību profilakses un kontroles centrs; the page uses the full name, not the acronym SPKC, but it is the same body.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/20667"
+  },
+  {
+   "claim": "record:LV:public_health_surveillance:register",
+   "fact_sha256": "4e2a11c32b65780d9e8975fe1353ceb07aba6c9630f0319dda352b4d25a5e999",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quoted passage, in context, concerns information from the Latvijas Digitālās veselības centrs information systems whose data are received, included and processed in the EPID system, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/20667"
+  },
+  {
+   "claim": "record:LV:issuance_history:register",
+   "fact_sha256": "61c17e1c766a9bbf0eb6bff9202d01717a0918a09f52f4bf06049705b02e8c5a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Personal Identification Documents Law Art. 16(2) says data on identity documents unfit for use are entered in the state information system 'Nederīgo dokumentu reģistrs'; Art. 16(1) grounds include reported loss, expiry and replacement. The parenthetical gloss '(revoked, lost)' is illustrative; 'revoked' is not a term the statute uses, but the register name and scope are as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/243484"
+  },
+  {
+   "claim": "record:LV:breeder_documents:operator",
+   "fact_sha256": "11ad3fee4eee6039aedc53e870fb8adadc0542860be72e87507baedbed32ca9d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Civil Status Acts Registration Law Art. 43(2): the registry office (dzimtsarakstu nodaļa) keeps paper entries for 100 years and then transfers them to the National Archives of Latvia, as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/253442"
+  },
+  {
+   "claim": "record:LV:breeder_documents:register",
+   "fact_sha256": "39ddc9ec47a4a92ddd75288cb94e6e9d068a91b2e2baedfebd5dde4ff9506c8d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 43(1) states verbatim that civil status register entries are kept on paper in one copy and electronically in the Fizisko personu reģistrs, matching the printed text.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/253442"
+  },
+  {
+   "claim": "record:LV:judicial_criminal:operator",
+   "fact_sha256": "af3538393780418eb409aa5d91918afe72f7c8484ec14ea78eb8cf8bf834724a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Punishment Register Law Art. 2: the register is a state information system whose controller and holder is Iekšlietu ministrijas Informācijas centrs, as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/261384"
+  },
+  {
+   "claim": "record:LV:residence_permits:operator",
+   "fact_sha256": "a386d155554b81a481438cbb7bee4cbc45791966b4c1a3ede30de6eeebe6b03b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is the Patvēruma likums (Asylum Law) and the quoted paragraph says Pilsonības un migrācijas lietu pārvalde maintains and updates the register of asylum seekers; the page uses the full name rather than the acronym PMLP.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/278986"
+  },
+  {
+   "claim": "record:LV:customs:operator",
+   "fact_sha256": "083ffe1ecc17a634fc540f26b4219d051e1072b95f2222de0cea7328d18f7af7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Customs Law Art. 3(1): within the meaning of Art. 5(1) of Regulation 952/2013 (the Union Customs Code), the customs administration in Latvia is the Valsts ieņēmumu dienests, as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/283024"
+  },
+  {
+   "claim": "record:LV:customs:register",
+   "fact_sha256": "7e1d19d49f019e8b16c89bce9fe10dd1b4ef4e0a3768bb167818112e2bc18c3b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Customs Law Art. 13(1) names the three channels as printed: the Commission's central customs systems, the Electronic Customs Data Processing System, and otherwise the VID electronic declaration system (the page spells it out rather than using 'EDS').",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/283024"
+  },
+  {
+   "claim": "record:LV:judicial_criminal:register",
+   "fact_sha256": "fd35b7985732b6dcc4d70c826c92cc96c18faafa9ed3c399e21c1cbf6e150561",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Court Information System regulation (Tiesu informatīvās sistēmas noteikumi) point 2 describes the system as a state information system covering district, regional, Supreme and Constitutional court case-management and proceedings, as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/284905"
+  },
+  {
+   "claim": "record:LV:civil_registry:operator",
+   "fact_sha256": "4c2e4a3a288f86938b66e64b005fca09489ee3081552cec1c0dc0c397a98722e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Register of Natural Persons Law Art. 2(1): the controller and holder is Pilsonības un migrācijas lietu pārvalde, as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/296185"
+  },
+  {
+   "claim": "record:LV:civil_registry:register",
+   "fact_sha256": "6c553f91efabae60d4a59b4322bd14c113c69dd751867f16db0e046337864861",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 1(1) establishes a single system for registering and recording natural persons, the Fizisko personu reģistrs, for identification and data processing, matching the printed description.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/296185"
+  },
+  {
+   "claim": "record:LV:residence_permits:register",
+   "fact_sha256": "c215f0447f59397b500f738f64c71666d02c87a4fce5542303bea2c425e8e0e9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 11 lists data on the residence document received in Latvia (residence permit, registration certificate, permanent residence certificate), and Art. 4 defines 'reģistrācijas apliecība' as the EU citizen registration certificate, so 'EU registration certificates' is on the page.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/296185"
+  },
+  {
+   "claim": "record:LV:education:operator",
+   "fact_sha256": "2310e44514bf2e9e55bd01f749eeb42833667e6984245196b37c1dcb8072a952",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is the Valsts izglītības informācijas sistēmas noteikumi (VIIS regulation) and point 4 says the system's controller is Izglītības un zinātnes ministrija, as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/307796"
+  },
+  {
+   "claim": "record:LV:education:register",
+   "fact_sha256": "e678cae7a961d2e62aa3c6264a206660986d8b7a25b3d733332b86a54f5f7fea",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Point 3 lists VIIS components including the Register of Students and Graduates, the vocational graduates register and the register of expert statements on education documents issued abroad; the printed 'recognition statements for foreign qualifications' is a fair rendering of 'ekspertīzes izziņu'.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/307796"
+  },
+  {
+   "claim": "record:LV:police_records:operator",
+   "fact_sha256": "54f9ce6b29d4714c6b31f6947ca915cbf643bc1c2a57b09df88543aa47f7bc6e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Point 2 states the system is a state information system whose controller and holder is Iekšlietu ministrijas Informācijas centrs, as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/312122"
+  },
+  {
+   "claim": "record:LV:police_records:register",
+   "fact_sha256": "cd92023c1de4351fed17a4675095a1fd976b40715ceb1d67956085228394d69b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Cabinet regulation point 1.1 defines the data included in the integrated interior information system for locating persons, property or documents, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/312122"
+  },
+  {
+   "claim": "record:LV:tax:register",
+   "fact_sha256": "50d21403f909316f65ccf9f9090cc360f405ed44096c3e4e5f743978abb88f33",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is 'Par nodokļiem un nodevām' (Law on Taxes and Fees), Art. 7.2(1): VID notifies taxpayers who are users of its electronic declaration system through that system, as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/33946"
+  },
+  {
+   "claim": "indicator:LV:L1",
+   "fact_sha256": "4c61fdbc5435c976c59ca3e92c78033865d70af1ab2d011f82468f75e1d6b130",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "National Cybersecurity Law Art. 32(1)(1) requires the state internet exchange point to keep critical data flows only within Latvian territory, a binding but narrow territorial requirement (data flows, not storage of government data generally), consistent with 'Partly'. The second citation (likumi.lv/ta/id/348742, quote found) only defines accredited systems for classified information and says noth",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/353390"
+  },
+  {
+   "claim": "record:LV:benefits_pensions:operator",
+   "fact_sha256": "e815a3e267ec256e6ec1bb3a4bd7a7c302da2f92d80ccbdb7b96a98d85ce0e4a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 24.1 ends 'Sistēmas pārzinis ir Aģentūra', and Art. 24(1) defines Aģentūra as Valsts sociālās apdrošināšanas aģentūra, so the printed controller of SAIS is supported.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/45466"
+  },
+  {
+   "claim": "record:LV:benefits_pensions:register",
+   "fact_sha256": "d70884372992dfec88f2ff135743fe5f77af853418db9b3cef899621d148b26c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 24.1 describes SAIS as a state information system holding received information to record insured persons and to grant and pay social insurance services, state benefits and service pensions, matching the printed description.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/45466"
+  }
+ ]
+}

@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "AT-001",
+ "iso": "AT",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "param:AT:gov_employment_k",
+   "fact_sha256": "a7391e0e80e681db347cb019e14957ad3970a55258e3e74bb32ca1b3d25b4100",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 280.5 for geo=AT, time=2024, unit THS_PER (thousand persons), NACE O, EMP_DC; the printed 280.5 thousand matches exactly.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=AT&time=2024"
+  },
+  {
+   "claim": "param:AT:gdp_eur_bn",
+   "fact_sha256": "f9bcd2b21ed91f8eba4730eae3adfde4800acbd00d170ff55e69e1f1b9f6d4f5",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 514328.1 million EUR (current prices) for AT 2025; scaled to billions and rounded that is 514.3 EUR bn, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=AT&time=2025"
+  },
+  {
+   "claim": "param:AT:renewables_pct",
+   "fact_sha256": "affe53598077530f28dffe189c9384e685496e792afa3ffd78063e31145cc37a",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 90.8 (percentage, REN_ELC) for AT 2025; the printed 90.8 % matches.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=AT&time=2025"
+  },
+  {
+   "claim": "param:AT:elec_price_eur_mwh",
+   "fact_sha256": "aefad47eb95bf80cb0c641fda13f63ec9330da5b0020e8e49236bcc3cdf5ec46",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1986 EUR per kWh for AT, band MWH500-1999, excluding VAT, 2025-S2; scaled to EUR/MWh that is 198.6, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=AT&time=2025-S2"
+  },
+  {
+   "claim": "param:AT:land_km2",
+   "fact_sha256": "7e96793f7d536c333844ce80cc71c9d00ce9c1551a8e19fb29e24bb1384be090",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 82494 km² for AT 2026 (landuse L0008); the printed 82 494 km² matches.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=AT&time=2026"
+  },
+  {
+   "claim": "param:AT:population_m",
+   "fact_sha256": "5b6eec07caeb24f7785b8f98a3ae25db36a2069f499e8717b83cb211259a5c48",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 9215956 persons for AT, 1 January 2026; scaled to millions and rounded that is 9.22 million, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=AT&time=2026"
+  },
+  {
+   "claim": "record:AT:government_payroll:register",
+   "fact_sha256": "9c21ce8fabdc634ee8e2b9f71f88f45c43f1c9e694d11d2a63e888dbd51068b4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Rechnungshof's Bundesrechnungsabschluss 2024 Band 4 contains the quote (split across a line-break hyphen, 'getä-tigten') naming the 'Personalverrechnungssystem PM-SAP', and elsewhere calls it 'Personalverrechnungssystem PM-SAP des Bundes', which supports the printed federal payroll system name.",
+   "quote_found": true,
+   "checked_url": "https://rechnungshof.gv.at/rh/home/home_1/home_9/BRA_2024_Band_4.pdf"
+  },
+  {
+   "claim": "record:AT:public_finance:register",
+   "fact_sha256": "7d7594c59470f837818db6f8d9cc1e86e4c954600be991b3536a0d48b3a1a549",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim in the federal accounts audit and names the 'Haushaltsverrechnungssystem HV-SAP'; in a Bundesrechnungsabschluss context this supports the printed federal budget accounting system name.",
+   "quote_found": true,
+   "checked_url": "https://rechnungshof.gv.at/rh/home/home_1/home_9/BRA_2024_Band_4.pdf"
+  },
+  {
+   "claim": "record:AT:grid_control:operator",
+   "fact_sha256": "00005d5d3ac932e6d20c18c1f39f00efa31c3d9df166048de6dc11b12217b4a4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim on APG's own page describing 'die APG-Steuerzentrale, Power Grid Control' as the nerve centre of Austria's electricity supply, and the same page names 'Austrian Power Grid AG' as the network whose system operation it covers, so APG as operator is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.apg.at/ueber-uns/steuerzentrale/"
+  },
+  {
+   "claim": "record:AT:grid_control:register",
+   "fact_sha256": "412fe382a64049ff6c1f2d10844819c4e9fa2b0c749bd0730fd5f914fb9c9a5c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim and names the system exactly as printed: 'APG-Steuerzentrale, Power Grid Control'.",
+   "quote_found": true,
+   "checked_url": "https://www.apg.at/ueber-uns/steuerzentrale/"
+  },
+  {
+   "claim": "record:AT:beneficial_ownership:operator",
+   "fact_sha256": "695457575ef979bcff0e2b2b401c7842da16a16892b85c19476ec4d11d720cc0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says it is the information page of the 'im Bundesministerium für Finanzen eingerichteten WiEReG–Registerbehörde' for the Register der wirtschaftlichen Eigentümer, which supports the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.bmf.gv.at/services/wiereg.html"
+  },
+  {
+   "claim": "record:AT:beneficial_ownership:register",
+   "fact_sha256": "f0f5af5eae46743a207947aa5c71b31e2a623a0781cface5c922e8208a1cc827",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim and names 'Das Register der wirtschaftlichen Eigentümer', matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.bmf.gv.at/services/wiereg.html"
+  },
+  {
+   "claim": "record:AT:emergency_communications:register",
+   "fact_sha256": "15a5a10e359777fc3f195935753aece164e44c1f31937d1a5904a7911db5788c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The BMI department page lists among its tasks the 'Österreichweites Digitalfunksystem für Behörden und Organisationen mit Sicherheitsaufgaben (BOS-Digitalfunk)', which the printed text reproduces; it supports the public-safety radio system name.",
+   "quote_found": true,
+   "checked_url": "https://www.bmi.gv.at/113/Sektion_IV/Gruppe_IV_DDS/CTO/Abteilung_IV_DDS_12/start.aspx"
+  },
+  {
+   "claim": "record:AT:fingerprint_biometric:register",
+   "fact_sha256": "548b77aa241eb81f8bd86c6eee95a223427e5ae6e61f2128fa58937ca745c922",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Both quotes are found. PassG § 22b only says the passport authorities process § 22a(1) data 'mit Ausnahme der lit. k' (lit. k being 'die Papillarlinienabdrücke zweier Finger') in the central passport evidence, which supports a narrower statement about passport fingerprints, not a blanket 'No central register'; the other citation is the BMI sheet for the 'Erkennungsdienstliche Evidenz-EDE', a centr",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798"
+  },
+  {
+   "claim": "record:AT:border_control:register",
+   "fact_sha256": "da4e9ee445c4e1dcb3f01f2ba4fb98294079db6c948af7a2728f2c80d9f769ce",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The BMI data-protection sheet is titled 'Information zu der Verarbeitung „Nationales Schengener Informationssystem (N-SIS II)“', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_nationales_schengener_informationssystem-n-sis_ii_v2.pdf"
+  },
+  {
+   "claim": "record:AT:police_records:register",
+   "fact_sha256": "ff0e52a1cb6ff2e3b6193e8315cac3aa3712d02aebecdb858b3eab60b2c3dd3a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The sheet is titled 'Information zu der Verarbeitung „PAD - Protokollieren Anzeigen Daten“' (the quote differs only by a line-break hyphen in 'Datenschutz-Grundverordnung'), matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_pad-protkollieren_anzeigen_daten_v2.pdf"
+  },
+  {
+   "claim": "record:AT:vehicle_licensing:operator",
+   "fact_sha256": "805d96eb3766d2fddf51d93e9500840e9acaf93c3a1395410a4f1ed27eabb3b2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The sheet names the Bundesminister für Inneres as Verantwortlicher and states the purpose as 'Führung einer zentralen Zulassungsevidenz durch den Bundesminister für Inneres', which supports the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_zentrale_zulassungsevidenz-kraftfahrzeugzentralregister-kzr_v2.pdf"
+  },
+  {
+   "claim": "record:AT:vehicle_licensing:register",
+   "fact_sha256": "26edb87a65e55885bf8b6788e46f92ea5db05a5b7bceb77d4240c66c99b705a3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The sheet is titled 'Information zu der Verarbeitung „Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR)“', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_zentrale_zulassungsevidenz-kraftfahrzeugzentralregister-kzr_v2.pdf"
+  },
+  {
+   "claim": "record:AT:electoral_management:operator",
+   "fact_sha256": "5fddd068c1dd87cedd33b4706be8b779063348889a815afe16f21290cf999263",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The sheet for the Modulares Wahlpaket names the Verantwortlicher as 'Bundeswahlbehörde p.A. Bundesministerium für Inneres', exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.bmi.gv.at/402/files/informationen/wahlen/informationsblatt_modulares_wahlpaket_bf_20250410.pdf"
+  },
+  {
+   "claim": "record:AT:electoral_management:register",
+   "fact_sha256": "77ec4556adedf71f32d893f01826313a546ebe48b6b669e06c03ae378440d14b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The sheet is titled 'Information zu der Verarbeitung Modulares Wahlpaket', matching the printed system name.",
+   "quote_found": true,
+   "checked_url": "https://www.bmi.gv.at/402/files/informationen/wahlen/informationsblatt_modulares_wahlpaket_bf_20250410.pdf"
+  },
+  {
+   "claim": "record:AT:electoral_roll:count",
+   "fact_sha256": "7d6ef3825d8c9fa4eb1486acf07503fc75e9579c785916a924bfb99015d0ad97",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The BMI results page gives the final 2024 Nationalratswahl result as determined by the Bundeswahlbehörde on 16 October 2024 with 'Wahlberechtigte: 6.346.059', matching the printed count.",
+   "quote_found": true,
+   "checked_url": "https://www.bmi.gv.at/412/nationalratswahlen/nationalratswahl_2024/start.html"
+  },
+  {
+   "claim": "record:AT:civil_registry:operator",
+   "fact_sha256": "e5e1438cb482dc1c6e193a1f895e8fe2d4dc1f540ed1876f1aec8c07f581ebe7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Gesetzesnummer 20008228 is the Personenstandsgesetz 2013; the quote sits in § 44 (Zentrales Personenstandsregister, ZPR), Abs. 3: 'Der Bundesminister für Inneres übt die Funktion des Auftragsverarbeiters ... aus', which supports the printed statement that the Federal Minister of the Interior is processor of the ZPR. The ZMR page is about a different register but does not contradict it.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008228"
+  },
+  {
+   "claim": "indicator:AT:K1",
+   "fact_sha256": "29c495fe93c7a7661c7e1d673959df1a9dc8c0e854dd215a5aad45aa1026eec0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The BMI page says the Austrian CSCA is operated by the Federal Ministry of Interior (state-run root), while the Rechnungshof E-ID report TZ 31.1 (quote found, one soft hyphen in 'Vertrauensdienste­anbieters') says the qualified trust service for the E-ID was provided by the private company A24 as subcontractor to BRZ GmbH; together they support 'Partly'.",
+   "quote_found": true,
+   "checked_url": "https://www.rechnungshof.gv.at/rh/home/home/2023_7_E-ID.pdf"
+  },
+  {
+   "claim": "record:AT:trust_services_pki:register",
+   "fact_sha256": "1294528831f6e2555ebca2b73e3da0d619d986e40ddd830d3aa323b82b98a254",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is titled 'The Austrian Country Signing CA (CSCA)' and states it is 'operated by the Federal Ministry of Interior (BMI)', matching the printed text.",
+   "quote_found": true,
+   "checked_url": "https://www.bmi.gv.at/downloads/csca.html"
+  },
+  {
+   "claim": "indicator:AT:C2",
+   "fact_sha256": "503992a9126574d47c689b591e2f16cdd4efa8fced4d576d9f22478962b888a3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "All three quotes are found: BRZ states in the present tense that 'Unsere GovCloud ist nach modernsten Standards zertifiziert', that SAP already runs fully virtualised, that the cloud move happens 'alles in Österreich', and that BRZ GoverDrive is a cloud storage service, which supports a government cloud in operation rather than merely announced.",
+   "quote_found": true,
+   "checked_url": "https://www.brz.gv.at/was-wir-tun/geschaeftsfelder/cloud-solutions.html"
+  },
+  {
+   "claim": "indicator:AT:C1",
+   "fact_sha256": "5d93073abce6e04bff671278b6734361d3a7ec5c1d2f75fa276842c2984c4d6d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "BRZ states 'Wir betreiben eines der größten Rechenzentren Österreichs' with 4,000 servers, and the BRZ-Gesetz (RIS 10001466) § 1(3) says the company's shares are reserved 100 % to the Bund and may not be sold, so a state-owned body operates data centres today.",
+   "quote_found": true,
+   "checked_url": "https://www.brz.gv.at/was-wir-tun/geschaeftsfelder/trusted-data-center.html"
+  },
+  {
+   "claim": "record:AT:customs:count",
+   "fact_sha256": "fe2ea7bd88d68c78e37b2a30068f0fc4dbf010e94273e57ad2ef85b811f1e741",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says 'mehr als 4,5 Mio. Zollanmeldungen pro Jahr werden elektronisch abgewickelt', which the printed text reproduces.",
+   "quote_found": true,
+   "checked_url": "https://www.brz.gv.at/was-wir-tun/services-produkte/e-zoll.html"
+  },
+  {
+   "claim": "record:AT:customs:register",
+   "fact_sha256": "e2f96ae78b38425b1a49277151268463786b0029b7b023bed6255cbbac7ad3fb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is BRZ's e-zoll product page and the quote names 'e-zoll' as the system whose 30 applications BRZ develops and operates; the printed name matches.",
+   "quote_found": true,
+   "checked_url": "https://www.brz.gv.at/was-wir-tun/services-produkte/e-zoll.html"
+  },
+  {
+   "claim": "record:AT:tax:operator",
+   "fact_sha256": "923e57f9c6d7ee599d79f5ef374606c2e594819be9fd5adca8500a1624e709f6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The FinanzOnline page says BRZ is responsible for implementation and that 'Die Wartung und der laufende Betrieb werden ebenfalls vom BRZ durchgeführt' with 'Auftraggeber ist das BMF', supporting BRZ as operator for the Federal Ministry of Finance.",
+   "quote_found": true,
+   "checked_url": "https://www.brz.gv.at/was-wir-tun/services-produkte/finanzonline.html"
+  },
+  {
+   "claim": "record:AT:tax:register",
+   "fact_sha256": "9a99b4cf483b54824f200e47a429144ffa11f9a4382533bf4b73fac99418fdc9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim and says the whole tax process from return to payment is handled electronically via FinanzOnline, matching the printed system name.",
+   "quote_found": true,
+   "checked_url": "https://www.brz.gv.at/was-wir-tun/services-produkte/finanzonline.html"
+  }
+ ]
+}

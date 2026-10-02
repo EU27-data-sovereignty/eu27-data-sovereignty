@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "PT-048",
+ "iso": "PT",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:PT:water_control:register",
+   "fact_sha256": "e48f356e32073eb316a47d5e0bb8fbb5aaa0727143c807032dcc10749e7ca700",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lei 58/2005 (Lei da Água) art. 8(2)(k) assigns the national water authority (APA, I.P.) the duty 'Instituir e manter atualizado o sistema nacional de informação dos recursos hídricos', and the APA page names that system SNIRH with the cited sentence verbatim. The printed statement matches the statute's wording.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1191&tabela=leis"
+  },
+  {
+   "claim": "param:PT:gov_employment_k",
+   "fact_sha256": "a5c7198f975f1bb1d19c8d5c2e7d788cabd5da396aa67d4fe1951c0bee1aa6b4",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 314.83 thousand persons for PT, 2024, NACE O, EMP_DC; rounded to one decimal that is 314.8 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=PT&time=2024"
+  },
+  {
+   "claim": "param:PT:gdp_eur_bn",
+   "fact_sha256": "709337881a00cd436dba2e615dc6719c8a8fd4ee478383663d8cac74b6d40301",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 308538.2 million EUR (flag p, provisional) for PT 2025 B1GQ; scaled to billions and rounded that is 308.5 EUR bn.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=PT&time=2025"
+  },
+  {
+   "claim": "param:PT:renewables_pct",
+   "fact_sha256": "cbb8f88ee1201fdabb0aa285773b7ccf110184c5d980e1419261a5c4651dcd36",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 65.6 (flag p) for PT 2025 REN_ELC, matching the printed 65.6 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=PT&time=2025"
+  },
+  {
+   "claim": "param:PT:elec_price_eur_mwh",
+   "fact_sha256": "b28e233699749b88ec4195c3a37bfa5054b0196c7728df38b90124c46f21ff6f",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1329 EUR per kWh for PT 2025-S2, band IC, excluding VAT; converted to EUR/MWh that is 132.9.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=PT&time=2025-S2"
+  },
+  {
+   "claim": "param:PT:land_km2",
+   "fact_sha256": "8c1186274f04890130bbfe1cc02d0818ab44428169bcc21bf5987fdf5dc103d2",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 90977 km² for PT, 2026, total land area (L0008), matching the printed 90 977 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=PT&time=2026"
+  },
+  {
+   "claim": "param:PT:population_m",
+   "fact_sha256": "e1ff232ca623e0a047430d3d95fe78e873b7d4b6db53b3587ec31f4ab836d1f0",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 11,424,031 for PT population on 1 January 2026; rounded to two decimals in millions that is 11.42 million.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=PT&time=2026"
+  },
+  {
+   "claim": "record:PT:customs:operator",
+   "fact_sha256": "254c4e35bef14e1df0e937b20490ac89a73f53cf5d372f04833935b8114750ec",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The AT 2024 activities report states verbatim that AT's mission is to administer customs duties and control the EU external border and national customs territory, and the same report lists STADA-IMP among AT's own customs-declaration systems, so AT as the operating body is supported.",
+   "quote_found": true,
+   "checked_url": "https://info.portaldasfinancas.gov.pt/pt/at/Instrumentos_Gestao/Relatorio_atividades/Documents/Relatorio_de_Atividades_AT_2024.pdf"
+  },
+  {
+   "claim": "record:PT:customs:register",
+   "fact_sha256": "0520843c9a345484cf07972bc7148be8e6823bfe0af2da3a7905f7a853ee6e47",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim ('o atual STADA-IMP') and the report's glossary expands STADA-IMP as 'Sistema de Tratamento Automático da Declaração Aduaneira – Importação', matching the printed name and description; note the report says its UCC-compliant replacement was planned for 2025.",
+   "quote_found": true,
+   "checked_url": "https://info.portaldasfinancas.gov.pt/pt/at/Instrumentos_Gestao/Relatorio_atividades/Documents/Relatorio_de_Atividades_AT_2024.pdf"
+  },
+  {
+   "claim": "record:PT:beneficial_ownership:register",
+   "fact_sha256": "f1c40913772e2b5300995d65a24592e254cdee49e38e11e001d6ae4967b3c54d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page contains the sentence verbatim naming the Registo Central de Beneficiário Efetivo (RCBE), which matches the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://rcbe.justica.gov.pt/"
+  },
+  {
+   "claim": "record:PT:intelligence:register",
+   "fact_sha256": "3b8ff2d9d688989722cc0bfce66ed92ae3a2e92a8ce108847e214704f35603d9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that the Comissão de Fiscalização de Dados oversees 'os centros de dados do Serviço de Informações de Segurança e do Serviço de Informações Estratégicas de Defesa', which is exactly what the report prints as the system.",
+   "quote_found": true,
+   "checked_url": "https://sirp.pt/fiscalizacao/"
+  },
+  {
+   "claim": "indicator:PT:L2",
+   "fact_sha256": "14ebde37f2db046bc772b5975257a93e8977c3e70847eef53e928c0306f46d90",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF is Lei Orgânica n.º 2/2014 (Diário da República, 6 Aug 2014); art. 2(5) contains the quote (split across the two-column layout) stating that the classified-matters framework SEGNAC comprises the grades Muito secreto, Secreto, Confidencial and Reservado, so a statute establishes/recognises the classification scheme.",
+   "quote_found": true,
+   "checked_url": "https://sirp.pt/wp-content/uploads/2025/09/LEI_DO_SEGREDO_DE_ESTADO.pdf"
+  },
+  {
+   "claim": "indicator:PT:C2",
+   "fact_sha256": "fc80bb7ed5263a7dcee55187e97f6d5e24008a0fa67e11151559152845b76778",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "All three quotes are present (ARTE news 29 May 2026; PNNS May 2026 with 'Desenvolvimento, pelo Estado, de infraestrutura nacional soberana de nuvem' scheduled from S1 2026; RCM 102/2026 funding implementation and initial migration via ARTE and IP Telecom). They show an approved, funded plan in execution, but none states that a sovereign cloud platform is in operation, so whether 'Partly' rather th",
+   "quote_found": true,
+   "checked_url": "https://bo.digital.gov.pt/api/assets/etic/2fecc6f4-b424-41c6-b2a8-722b17b1914f/"
+  },
+  {
+   "claim": "indicator:PT:C1",
+   "fact_sha256": "f34c73c0809c45bb69a306168f0b4127fc89a9cf199134fdd9384db1819bf49d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The SIRP page confirms data centres of the SIS and SIED exist and are overseen today, and the PNNS PDF describes the State's current model as resting on 'milhares de centros de dados dispersos'; the IP Telecom pages (3 data centres, 100% owned by Infraestruturas de Portugal) add commercial capacity but do not themselves say 'state'. The 'Yes' is supported by the SIRP and PNNS quotes.",
+   "quote_found": true,
+   "checked_url": "https://sirp.pt/organizacao-do-sirp/"
+  },
+  {
+   "claim": "indicator:PT:L1",
+   "fact_sha256": "3d36a2936132bd5e75b6a5cc149e00e6d24ce40c24cf1233292c7b3711217775",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lei Orgânica 2/2014 art. 7(c) prohibits storing classified documents outside designated locations/equipment (quote present across column breaks); RCM 102/2026 mandates ARTE and CNCS to define sovereignty requirements within 90 days; the Plano de Ação lists a planned model making sensitive data remain in national infrastructure. A binding location restriction for classified data exists but no cited",
+   "quote_found": true,
+   "checked_url": "https://sirp.pt/wp-content/uploads/2025/09/LEI_DO_SEGREDO_DE_ESTADO.pdf"
+  },
+  {
+   "claim": "indicator:PT:K2",
+   "fact_sha256": "fa9cf2f6967e4510249cba1a8782510a9da741ce58373c9472dbc421cff0e769",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes are verbatim: the site where one obtains and manages the Chave Móvel Digital is run by the Agência para a Reforma Tecnológica do Estado, I.P., which processes CMD registration and authentication data 'para fins de gerir a sua identificação eletrónica', and the CMD page says it is certified by the Portuguese State. Operation by a state body is supported, though no sentence literally say",
+   "quote_found": true,
+   "checked_url": "https://www.autenticacao.gov.pt/web/guest/termos-e-condicoes"
+  },
+  {
+   "claim": "record:PT:authentication_audit_log:register",
+   "fact_sha256": "a4ff8969f6a1d73de6c07d9c588ebf5536ed3ae6ee05e235d387ba9c22e42f01",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The terms page says verbatim that authentications (type, date/time) and signatures (files and metadata) are processed to manage the user's electronic identification, which is what the report prints.",
+   "quote_found": true,
+   "checked_url": "https://www.autenticacao.gov.pt/web/guest/termos-e-condicoes"
+  },
+  {
+   "claim": "record:PT:public_finance:operator",
+   "fact_sha256": "596a97fbdb2a19bb74adb0d7b3d02222073a6f397d098a09df364a1e035dceff",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The cited page names IGCP, E.P.E. as the entity managing the State's treasury, financing and direct public debt; it does not mention Direção-Geral do Orçamento (DGO) or ESPAP, which are the bodies the report prints.",
+   "quote_found": true,
+   "checked_url": "https://www.igcp.pt/"
+  },
+  {
+   "claim": "record:PT:land_property:operator",
+   "fact_sha256": "743986f5e114745cbcb730189fd942e030add19dac099e1b79be6c52e505a5c5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Código do Registo Predial art. 107 states verbatim that the president of the Instituto dos Registos e do Notariado, I.P. is the controller of the land-registry databases, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=488A0106&nid=488&tabela=leis&pagina=1&ficha=1&nversao="
+  },
+  {
+   "claim": "record:PT:land_property:register",
+   "fact_sha256": "9826d2ffff77194a49aca6ca20953b9ca80fdb12b1ae3288e044422050631771",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 106 states verbatim that the land registry databases organise and keep updated information on the legal status of properties, which the printed statement paraphrases faithfully.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=488A0106&nid=488&tabela=leis&pagina=1&ficha=1&nversao="
+  },
+  {
+   "claim": "record:PT:business_registry:operator",
+   "fact_sha256": "765e57a6bdfa3da055e2ba748404affc7f00e0c4f475c60dde45f36d0ffa1b0e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Código do Registo Comercial art. 78-C(1) says verbatim that the director-geral dos Registos e do Notariado is the database controller, but the page never mentions IRN; the printed gloss '(now IRN)' is added from outside the source.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=506A0078B&nid=506&tabela=leis&pagina=1&ficha=1&nversao="
+  },
+  {
+   "claim": "record:PT:business_registry:register",
+   "fact_sha256": "1556d184146ed6b3bc4e0a4bf57e6d524964bcd88269d045896ba1ec199cb35e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 78-B states verbatim that the commercial registry database organises and keeps updated information on the legal status of entities subject to registration, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=506A0078B&nid=506&tabela=leis&pagina=1&ficha=1&nversao="
+  },
+  {
+   "claim": "record:PT:civil_registry:operator",
+   "fact_sha256": "09c21e2f4089e0ef5d59412ecd852923ec899d90f9e673c85e23dfa24e80c47c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "WebFetch got 'A query falhou!' but a direct download of the same URL returned the Código do Registo Civil; art. 220-B(1) states verbatim that the president of IRN, I.P. is the controller of the civil registry database.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=682A0220A&nid=682&tabela=leis&pagina=1&ficha=1&nversao="
+  },
+  {
+   "claim": "record:PT:civil_registry:register",
+   "fact_sha256": "ad7129f77e9ea2169bf50a9620980df22267b5337146ad566f804347e6fcf1c8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 220-A(1) ('Base de dados do registo civil') states verbatim that the database holds information on nationality, civil status and capacity of citizens, matching the printed name and description.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=682A0220A&nid=682&tabela=leis&pagina=1&ficha=1&nversao="
+  },
+  {
+   "claim": "record:PT:education:register",
+   "fact_sha256": "e15a2b4932ff56f52fee996f91f327a6b4b01724a875fbd134337c803c82ceb9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "DL 396/2007 art. 7(5) says the *models* (templates) of diplomas and certificates, defined by portaria, are made available in SIGO, and art. 11(2) says training actions are inscribed in SIGO; it does not say that qualification diplomas and certificates themselves are made available in SIGO, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1081&tabela=leis"
+  },
+  {
+   "claim": "record:PT:water_control:operator",
+   "fact_sha256": "1822fa50333143d6388033daf07690d7e1236721e0bfde5bbc485e89fd693907",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lei 58/2005 art. 7(1) states verbatim that the body exercising the powers of the law is the Agência Portuguesa do Ambiente, I.P., as national water authority, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1191&tabela=leis"
+  },
+  {
+   "claim": "record:PT:issuance_history:operator",
+   "fact_sha256": "0d756f052da3f0ebf319f01e07895b484c2b42345661466a712e7a6319d2a726",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "DL 86/2000 art. 15 states verbatim 'O IRN, I. P., é o organismo responsável pelo SIPEP', the passport information system, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2056&tabela=leis"
+  },
+  {
+   "claim": "record:PT:benefits_pensions:register",
+   "fact_sha256": "9ab3178a58d511dc6eecfca4f08674c48688aa7e980ccad54df0e7b9468d1f32",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lei 4/2007 art. 99(1) states verbatim that natural and legal persons relating to the social security system are subject to identification in the information system; the printed sentence is a faithful rendering and adds no name the law does not give.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2243&tabela=leis"
+  },
+  {
+   "claim": "record:PT:judicial_criminal:operator",
+   "fact_sha256": "be0d227f0f9ad4705de2d9884ceb56f0a695f4ace26d8b81b17b2a5ea0adf5e1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lei 37/2015 art. 38(1) states verbatim that the Direção-Geral da Administração da Justiça is the entity responsible for the criminal identification databases, and registocriminal.justica.gov.pt confirms DGAJ/DSIC; matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2321&tabela=leis"
+  },
+  {
+   "claim": "record:PT:health_insurance:register",
+   "fact_sha256": "5375e5ed0b0c7c7d22ba7818291da1ff93fb9588a08bdf427ce70227e249943e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Portaria 22/2016 art. 12(1) says only that SINAVE uses the Registo Nacional de Utentes to look up patient identification for the physician profile; it does not say the register is the identification reference for 'other national health systems' generally, and the abbreviation RNU does not appear.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2506&tabela=leis"
+  }
+ ]
+}

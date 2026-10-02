@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "EE-017",
+ "iso": "EE",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "param:EE:gov_employment_k",
+   "fact_sha256": "8fa3650bf07ea31d457b7f517df6beb4b6630b84fd8a573f4830d1c7d7f54095",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns value 43.1 for geo=EE, time=2024, unit THS_PER, nace_r2=O, na_item=EMP_DC, matching the printed 43.1 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=EE&time=2024"
+  },
+  {
+   "claim": "param:EE:gdp_eur_bn",
+   "fact_sha256": "60eb3f2782a004c7bc689152a03b8e575cd45ad04ed7e6e778c672d97d1f2d3e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 41874.8 (million EUR) for EE, 2025, B1GQ, CP_MEUR; scaled to billions and rounded that is 41.9 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=EE&time=2025"
+  },
+  {
+   "claim": "param:EE:renewables_pct",
+   "fact_sha256": "565123e511a97ebbafb38c5bf8fcd268d74d233fd984e3ec45ddcfcdb017e9b1",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 41.1 for EE, 2025, REN_ELC, PC, matching the printed 41.1 %. The value carries Eurostat status flag 'p' (provisional), which the printed text does not mention.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=EE&time=2025"
+  },
+  {
+   "claim": "param:EE:elec_price_eur_mwh",
+   "fact_sha256": "c19fdd2819678a4f932dd4e7d0ff0d1e5ce5456d840b1de4da147d7600b281c3",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.141 EUR per kWh for EE, 2025-S2, band MWH500-1999, excluding VAT; scaled to EUR/MWh that is 141.0 as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=EE&time=2025-S2"
+  },
+  {
+   "claim": "param:EE:land_km2",
+   "fact_sha256": "eece069c76b31a76ef37e61ea20e9a0f668048b6dcc510e3fddac7fb49082d76",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 43110 km² for EE, 2026, landuse L0008, matching the printed 43 110 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=EE&time=2026"
+  },
+  {
+   "claim": "param:EE:population_m",
+   "fact_sha256": "c5b12c8f2720d8fd33e28e8234541ad56c28d03e5b92d6a37b01428b48810399",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 1360745 persons for EE, 1 January 2026; scaled to millions and rounded that is 1.36 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=EE&time=2026"
+  },
+  {
+   "claim": "record:EE:benefits_pensions:operator",
+   "fact_sha256": "a83cc22fb92e232b6ff42cefa5978e34d78ea22f3a726403cb040c7ec689d895",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The archived statute text reads '§ 2 ... (1) Infosüsteemi vastutav töötleja on Sotsiaalkindlustusamet', naming the Social Insurance Board as the controller (vastutav töötleja) of the social protection information system, which is what the printed operator states.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20221024144600/https://www.riigiteataja.ee/akt/108052020012"
+  },
+  {
+   "claim": "record:EE:benefits_pensions:register",
+   "fact_sha256": "c7b6f6a99c3138dad5897df2c017f7243be6bdb88b5a067d38bd7286ca7166e1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something the source does not say.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20221024144600/https://www.riigiteataja.ee/akt/108052020012"
+  },
+  {
+   "claim": "record:EE:health_insurance:operator",
+   "fact_sha256": "57ca802a863c68f55aa75b4f5bfc734c942f8e3f33b911c6532e89fc9a87b521",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page reads '§ 2. Andmekogu vastutav ja volitatud töötleja ... (1) Andmekogu vastutav töötleja on Tervisekassa', naming Tervisekassa (Health Insurance Fund) as controller of the database as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20241124195714/https://www.riigiteataja.ee/akt/107052024007"
+  },
+  {
+   "claim": "record:EE:health_insurance:register",
+   "fact_sha256": "0ddbe712577e6147a7668309e4e1d0f23be1b36f8f7f053fbb5cb83de5ea4c1a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page reads '(3) Andmekogu ametlik nimetus on Tervisekassa andmekogu ... (4) Andmekogu ingliskeelne nimetus on Health Insurance Fund Database', matching both the Estonian and English names printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20241124195714/https://www.riigiteataja.ee/akt/107052024007"
+  },
+  {
+   "claim": "record:EE:residence_permits:operator",
+   "fact_sha256": "37f5e74a19a84a3723eff831acb970d9b84c2a182361c2dbe2c7a1cfc61a1304",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 3(1) of the archived regulation reads 'Andmekogu vastutav töötleja on Politsei- ja Piirivalveamet', naming the Police and Border Guard Board as controller of the residence and work permits register as printed (SMIT is named as processor).",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250514142132/https://www.riigiteataja.ee/akt/114012017018"
+  },
+  {
+   "claim": "record:EE:residence_permits:register",
+   "fact_sha256": "e2694ef3802118a03ba78a3e98c73aff89dedb01eeb22604856e31bc05130e5d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 1 reads 'Andmekogu ametlik nimetus on elamislubade ja töölubade register', which is the official name printed; the English in parentheses is a straightforward translation.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250514142132/https://www.riigiteataja.ee/akt/114012017018"
+  },
+  {
+   "claim": "record:EE:judicial_criminal:operator",
+   "fact_sha256": "0c11babb71bca63bc04d39399cbc0232ad10f918e8c936f2353922829cbd286a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "§ 4 of the Criminal Records Database Act names Justiits- ja Digiministeerium as controller and Registrite ja Infosüsteemide Keskus as processor, supporting those two names, but the acronym 'RIK' printed after the processor's name does not appear anywhere on the cited page, so the statement as printed adds something the source does not say.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250803214052/https://www.riigiteataja.ee/akt/KarRS"
+  },
+  {
+   "claim": "record:EE:border_control:operator",
+   "fact_sha256": "eb1a18aa6a6586901753726e580d15070ec3838b68203953fb109db5e5c0102a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 2 of the archived regulation reads 'Registri vastutav töötleja on Politsei- ja Piirivalveamet', naming the Police and Border Guard Board as controller of the national SIS register as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20251022021813/https://www.riigiteataja.ee/akt/118042013027"
+  },
+  {
+   "claim": "record:EE:border_control:register",
+   "fact_sha256": "a8ee0dde2f130ef5f6662db1ce28b73a45265f5291123aedda4bdc1e5d678c62",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 1 reads 'Andmekogu ametlik nimetus on „Schengeni infosüsteemi riiklik register“', matching the printed Estonian name; the English in parentheses is a direct translation.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20251022021813/https://www.riigiteataja.ee/akt/118042013027"
+  },
+  {
+   "claim": "record:EE:police_records:operator",
+   "fact_sha256": "c1288c35286725b453dc6c87ba86894d730e7412778167c0587067d4761ab564",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 5 reads 'Infosüsteemi vastutav töötleja on Politsei- ja Piirivalveamet (edaspidi vastutav töötleja)', naming the Police and Border Guard Board as controller of information system POLIS as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20251212223739/https://www.riigiteataja.ee/akt/113012017004"
+  },
+  {
+   "claim": "record:EE:police_records:register",
+   "fact_sha256": "fb8e742b9832e776fdc956325beeca7a087383b845f893a0edb94473250bf3a6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 1 reads 'Andmekogu ametlik nimetus on «Infosüsteem POLIS»', matching the printed name exactly.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20251212223739/https://www.riigiteataja.ee/akt/113012017004"
+  },
+  {
+   "claim": "record:EE:tax:operator",
+   "fact_sha256": "89ed0f34d3a3b2a887925579e08ac542e0939382a803236ec8321debf62976ba",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 17(3) of the Taxation Act on the archived page reads 'Registri vastutav töötleja on Maksu- ja Tolliamet', naming the Tax and Customs Board as controller of the register of taxable persons as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260207063839/https://www.riigiteataja.ee/akt/MKS"
+  },
+  {
+   "claim": "record:EE:tax:register",
+   "fact_sha256": "0153b72968e5769f7b1520260941b80f87254d9c1a4ad96a014e630c3dc14e4e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 17 is headed 'Maksukohustuslaste register' and subsection (1) refers to 'Maksukohustuslaste registri (edaspidi register)', matching the printed register name; the English is a direct translation.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260207063839/https://www.riigiteataja.ee/akt/MKS"
+  },
+  {
+   "claim": "record:EE:electoral_management:operator",
+   "fact_sha256": "35ba626ae6545d6a338b4373bcaa7e086e8d71913b787e1ecc2a334dd08c488a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Riigikogu Election Act text states that Riigi valimisteenistus has the right to involve competent agencies in organising the development, management and hosting of the election information system and the electronic voting system, which places the State Electoral Office as the body in charge of those systems as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260218005759/https://www.riigiteataja.ee/akt/RKVS"
+  },
+  {
+   "claim": "record:EE:electoral_management:register",
+   "fact_sha256": "7353d827c4e1d2a66ad46c6de6c833f947dae42ea5e7bc6c0f8572402dc6ac1d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quoted provision names both 'valimiste infosüsteemi' and 'elektroonilise hääletamise süsteemi' as the systems the State Electoral Office is responsible for, matching the two systems printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260218005759/https://www.riigiteataja.ee/akt/RKVS"
+  },
+  {
+   "claim": "record:EE:electoral_roll:register",
+   "fact_sha256": "c0dd09ae8a2ccca4595d7c6ae869857fe4fee6af58d7ba27bd1f8acb6aeb24cc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 22 'Valijate nimekiri' (1) states that the Population Register controller compiles the list of voters 'rahvastikuregistri andmete alusel' (from Population Register data), which is exactly what the printed statement says.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260218005759/https://www.riigiteataja.ee/akt/RKVS"
+  },
+  {
+   "claim": "record:EE:beneficial_ownership:operator",
+   "fact_sha256": "4354a424e5ee77dc21a9b7a33bfae473c05823222e17155d0aab0635958a7731",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The archived Money Laundering and Terrorist Financing Prevention Act reads 'Tegelike kasusaajate andmekogu vastutav töötleja on Rahandusministeerium', naming the Ministry of Finance as controller as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260306092107/https://www.riigiteataja.ee/akt/RahaPTS"
+  },
+  {
+   "claim": "record:EE:beneficial_ownership:register",
+   "fact_sha256": "408fcbd910310cfdc018de757c80cee090420a5ba85bff665ed9e5283dee37e5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same sentence names the database 'Tegelike kasusaajate andmekogu', matching the printed name; the English is a direct translation.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260306092107/https://www.riigiteataja.ee/akt/RahaPTS"
+  },
+  {
+   "claim": "record:EE:issuance_history:operator",
+   "fact_sha256": "8657f5d8bbbaa04ab6ed8623b5ad72e1357f2ee3afe05c2a7b6eca816b4c9ee4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 15² (4) of the Identity Documents Act reads 'Andmekogu vastutav töötleja on Politsei- ja Piirivalveamet', naming the Police and Border Guard Board as controller of the identity documents database as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260309063502/https://www.riigiteataja.ee/akt/ITDS"
+  },
+  {
+   "claim": "record:EE:issuance_history:register",
+   "fact_sha256": "d3f6355741dc8bb2e17112f8f8506fab51f0dde7d7366a668aea86ecfb7f4429",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 15² (1) reads 'Isikut tõendavate dokumentide andmekogu (edaspidi käesolevas paragrahvis andmekogu) on Vabariigi Valitsuse asutatud andmekogu', matching the printed database name; the English is a direct translation.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260309063502/https://www.riigiteataja.ee/akt/ITDS"
+  },
+  {
+   "claim": "record:EE:facial_biometric:operator",
+   "fact_sha256": "dc05ca1a5d35d4a313e520393704cd9d57f7bef44b01f30b9dc8f47fa6dc52dd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Identity Documents Act page reads 'Andmekogu ABIS vastutavad töötlejad on Politsei- ja Piirivalveamet ning Välisministeerium', and the second cited page (ABIS statutes, § 131122021018) confirms the split between PPA and the Ministry of Foreign Affairs; both match the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260313205329/https://www.riigiteataja.ee/akt/itds"
+  },
+  {
+   "claim": "record:EE:fingerprint_biometric:operator",
+   "fact_sha256": "5bec93317bdb99501ef255ed1f7b3044b9ac8c250f595f849ba3b23dac9f07e4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names PPA alone, and the quote does not establish whether fingerprint data fall wholly outside the MFA exception, so the source is ambiguous for the scope as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260418112026/https://www.riigiteataja.ee/akt/131122021018"
+  },
+  {
+   "claim": "record:EE:education:register",
+   "fact_sha256": "8a33e079156446c602152719e2576dd100fab5715e685aa8bda1b477892fa99a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live EHIS homepage reads 'Eesti Hariduse Infosüsteem (EHIS) on riiklik register, mis koondab haridussüsteemi puudutavaid andmeid', giving both the Estonian name and the acronym printed; the English is a direct translation.",
+   "quote_found": true,
+   "checked_url": "https://www.ehis.ee/"
+  },
+  {
+   "claim": "record:EE:grid_control:register",
+   "fact_sha256": "2fa3648a14c8bab15a988f4e18845902624b90191157fc00fdb4115b0648b860",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Elering's control-centre page lists 'SCADA/EMS' among the IT applications that help 'Eleringi juhtimiskeskuse töötajatel' carry out their tasks, which supports 'SCADA/EMS at Eleringi juhtimiskeskus' as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.elering.ee/juhtimiskeskus"
+  }
+ ]
+}

@@ -1,0 +1,160 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "FR-027",
+ "iso": "FR",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:FR:grid_control:operator",
+   "fact_sha256": "f6b6607aeb53c4d745d572dd0199c3d2893c52dcace309e6183a14113ec35bd8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live page served to curl does not contain the sentence (the citation notes it is JS-rendered), but the archived copy carries it verbatim: 'RTE est le gestionnaire du Réseau de Transport d’Electricité français.' That is exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250915070403/https://www.rte-france.com/rte-en-bref"
+  },
+  {
+   "claim": "record:FR:public_health_surveillance:operator",
+   "fact_sha256": "11feee3eda21042a2a853067256fb4f0b854ab63d015513c0de89c29c4e8f070",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the system rests on transmission of data by doctors and biologists 'aux personnels compétents des Agences régionales de santé (ARS) et/ou aux épidémiologistes de Santé publique France'; both named recipients match the printed statement (the page says 'et/ou', a nuance the print flattens to 'and' without adding a body).",
+   "quote_found": true,
+   "checked_url": "https://www.santepubliquefrance.fr/maladies-a-declaration-obligatoire"
+  },
+  {
+   "claim": "record:FR:public_health_surveillance:register",
+   "fact_sha256": "2308825cc795fb15505c5eff0e683acd964e14788e7eb31d2502373341cfa8d4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Verbatim on the page: 'Le dispositif des maladies à signalement obligatoire ... concerne 38 maladies'. The number and the system match the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.santepubliquefrance.fr/maladies-a-declaration-obligatoire"
+  },
+  {
+   "claim": "record:FR:government_payroll:operator",
+   "fact_sha256": "c678cdfcd751f11c828e39dfc6f9a285797ddd0d7894dd80d94f14b24a1ee8a2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quoted table title is on the page and the list beneath it (GMBI, Nouveau réseau de proximité, PAYSAGE, PILAT, RocSP...) includes PAYSAGE, so the print 'listed among IT projects carried by budget programmes 156 and 218' is what the page shows. Note the statement names no operating body, and neither does the source.",
+   "quote_found": true,
+   "checked_url": "https://www.senat.fr/rap/l24-144-315-1/l24-144-315-1_mono.html"
+  },
+  {
+   "claim": "record:FR:government_payroll:register",
+   "fact_sha256": "22585dc56bb0b9625279334f9306c570c91779a660f940ceafbe72a4c8d4ffa5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Verbatim on the page: 'PAYSAGE : consolidation de l'application de paye des agents de l'État.' Matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.senat.fr/rap/l24-144-315-1/l24-144-315-1_mono.html"
+  },
+  {
+   "claim": "record:FR:health_records:register",
+   "fact_sha256": "76c447e1e1067979b15a55ee71c3b0fdfb082f4df8bd84fbabf5f20d179986c0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page lists 'les infrastructures numériques de l'État (dossier médical partagé, espace numérique de santé...)' as one of four investment domains; DMP is the dossier médical partagé, so the printed statement is what the source says.",
+   "quote_found": true,
+   "checked_url": "https://www.senat.fr/rap/l24-144-328/l24-144-328_mono.html"
+  },
+  {
+   "claim": "record:FR:crisis_management:register",
+   "fact_sha256": "ae0b3478897f017e418608c0b97a4c8d2aeaa21f616ccd80f0be19423a2f6fbc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The FR-Alert sentence is on the page verbatim: a system 'de diffusion d'alerte via la téléphonie mobile' for public-safety and civil-protection services, which is the printed description.",
+   "quote_found": true,
+   "checked_url": "https://www.senat.fr/rap/l24-144-329-2/l24-144-329-2_mono.html"
+  },
+  {
+   "claim": "record:FR:emergency_communications:operator",
+   "fact_sha256": "11276c48bb283047c0f5cef28fb77afbb143deafd2283418ea2f818494799352",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Immediately after the NexSIS sentence the page says 'Sa conception, son déploiement et sa maintenance sont assurés par l'agence du numérique de la sécurité civile (ANSC)', so the acronym and the three verbs in the print are on the page.",
+   "quote_found": true,
+   "checked_url": "https://www.senat.fr/rap/l24-144-329-2/l24-144-329-2_mono.html"
+  },
+  {
+   "claim": "record:FR:emergency_communications:register",
+   "fact_sha256": "1ad612b774aeab0b461ea14df409cae4d3067041f771d13fbdf9e2a49de3aef3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Verbatim on the page: 'Le programme NexSIS est un projet de mutualisation des systèmes d'information des services d'incendie et de secours (SIS).' Matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.senat.fr/rap/l24-144-329-2/l24-144-329-2_mono.html"
+  },
+  {
+   "claim": "record:FR:judicial_criminal:register",
+   "fact_sha256": "c40e85574df1ce3a30902f5c00a037b068824622b34908296ebac9bebdcba942",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page's list of the justice ministry's major digital projects contains 'ASTREA : système d'information du casier judiciaire national.' exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.senat.fr/rap/l25-139-317/l25-139-317_mono.html"
+  },
+  {
+   "claim": "record:FR:defence_command:foreign_dependency",
+   "fact_sha256": "77f0c4f13daca598a2ca837fad659863aeec94cc2b1df1338a4fe36e795f7a4e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote is on the page, but it only says the DGA awarded the Artemis initiative to Atos-Bull, Capgemini and Thales-Sopra Steria (framed as 'initiatives françaises' responding to Palantir); it says nothing about where defence command and logistics infrastructure runs, and Artemis is an AI-applications ecosystem rather than that infrastructure. The label 'National infrastructure' is an inference t",
+   "quote_found": true,
+   "checked_url": "https://www.senat.fr/rap/r19-506/r19-506_mono.html"
+  },
+  {
+   "claim": "record:FR:defence_command:register",
+   "fact_sha256": "bd045cca3f1ec9aac6bc7360d78cac3bf052f9d1d8c19d49c0467e261c838dac",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says Artemis, a DGA initiative, 'a vocation à faire émerger des applications utilisant l'intelligence artificielle pour le traitement massif des données qui permettent aux combattants de se concentrer sur les informations importantes'. The page says 'données' for the forces rather than 'military data' literally, but in this defence context the printed description matches.",
+   "quote_found": true,
+   "checked_url": "https://www.senat.fr/rap/r19-506/r19-506_mono.html"
+  },
+  {
+   "claim": "record:FR:intelligence:register",
+   "fact_sha256": "2c276d7601abeaf8b65b762837832a67078b654c5978eeddcede266b8692bfd2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Verbatim on the page: 'La DRSD a signé un marché pour son système d'information SIRCID avec Airbus Defence & Space'. Body, system name and contractor match the print.",
+   "quote_found": true,
+   "checked_url": "https://www.senat.fr/rap/r19-506/r19-506_mono.html"
+  },
+  {
+   "claim": "indicator:FR:L2",
+   "fact_sha256": "582ec05ea51b19ada40176e823c62932eae4b48db73bb54a28c245ac8368071c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both SGDSN pages carry their quotes verbatim: the first states the two classification levels (Secret, Très secret) in force since 1 July 2021; the second says the regime rests on a legal corpus of 'articles R. 2311-2 et suivants du code de la défense' and IGI n° 1300, i.e. binding regulation in the Defence Code, which supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.sgdsn.gouv.fr/nos-missions/proteger/proteger-le-secret-de-la-defense-nationale/reforme-de-la-protection-du-secret"
+  },
+  {
+   "claim": "record:FR:water_control:register",
+   "fact_sha256": "491f46e66f4739870441bd1b5cd4d63e264124c8ed683869c5f7ffaedbbef923",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live site refused the TLS connection, so I read the cited archived copy, which carries the quote verbatim: 'Vigicrues.gouv.fr Le service d'information sur le risque de crues des principaux cours d'eau en France' (the page title also calls it the 'Carte de vigilance crues nationale'). That matches the printed name and description.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260930055744/https://www.vigicrues.gouv.fr/"
+  }
+ ]
+}

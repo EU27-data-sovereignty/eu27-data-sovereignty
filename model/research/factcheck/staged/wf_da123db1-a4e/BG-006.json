@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "BG-006",
+ "iso": "BG",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:BG:facial_biometric:operator",
+   "fact_sha256": "dedd652c58b23edfac7f9b5cacab1745335178717e2fe58c2281078c4ae5599c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Act's text names exactly the four ministries that issue Bulgarian identity documents (МВР, МВнР, МТС, МО), which is what is printed. Note the statement is about who issues the documents, not who operates a facial-biometric system, but it prints nothing the source does not say.",
+   "quote_found": true,
+   "checked_url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf"
+  },
+  {
+   "claim": "record:BG:fingerprint_biometric:register",
+   "fact_sha256": "e1b2d261e63a4d3e6b1913086a4661c95ef4cb66e9bc66243dfb085978f94c3d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Act creates a national automated information fund named \"Национален регистър на българските лични документи\", matching the printed name and the parenthetical 'automated information fund'.",
+   "quote_found": true,
+   "checked_url": "https://aref.government.bg/sites/default/files/2024-04/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%82%D0%B5%20%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8.pdf"
+  },
+  {
+   "claim": "record:BG:statistics_microdata:register",
+   "fact_sha256": "c113586841ecb2c71b85906b3cd1cb829fde5f8741ae4352e741cdac230a4af1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states the 18th population and housing census was held 7 Sept–10 Oct 2021, and the site is headed and copyrighted 'Национален статистически институт – Преброяване 2021', so the year, ordinal and NSI attribution all match.",
+   "quote_found": true,
+   "checked_url": "https://census2021.bg/"
+  },
+  {
+   "claim": "indicator:BG:K1",
+   "fact_sha256": "9add3bd8c6eac317382d8ee48c0fddc320cb9dc55e76141f57aa2abce84e58fa",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CRC page lists „Информационно обслужване“ АД among the QTSPs on the national trusted list, and the cited IS 2024 report states the state (via the Minister of e-Government) holds 99.49% of its capital, that it is a certified QTSP under Regulation 910/2014 and operates the StampIT certificate infrastructure. A state-controlled body therefore operates a qualified trust service, which answers K1 '",
+   "quote_found": true,
+   "checked_url": "https://www.is-bg.net/upload/4944/IS_2024_%D0%94%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%20%D0%B7%D0%B0%20%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D1%82%D0%B0.pdf"
+  },
+  {
+   "claim": "indicator:BG:K2",
+   "fact_sha256": "ecbc3a84e0f95becfb768d46d237fd19c223d5d8fbfbf586864a62d18f715daf",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Both quotes are on their pages, but neither states who operates the national eID scheme: the CRC quote lists trust-service providers (not eID), and the Sega article only says the eID certificates are to be written to the ID-card chip and that МВР has not yet activated them. 'Partly' is an inference the sources do not state, so the support is genuinely ambiguous.",
+   "quote_found": true,
+   "checked_url": "https://www.segabg.com/hot/category-consult/otpada-edno-bezumiyata-za-lichnite-karti-chip"
+  },
+  {
+   "claim": "record:BG:trust_services_pki:operator",
+   "fact_sha256": "64ce06746aa06879196c5355163eeedade7a0851625a20617474f9bcff865e8b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CRC page names the five QTSPs entered in the national trusted list exactly as printed (Борика, Евротръст Технолъджис, Инфонотари, Информационно обслужване, Идокс България); 'Idocs' is a transliteration of Идокс.",
+   "quote_found": true,
+   "checked_url": "https://crc.bg/bg/rubriki/560/elektronni-udostoveritelni-uslugi"
+  },
+  {
+   "claim": "record:BG:trust_services_pki:register",
+   "fact_sha256": "16bff41b67a11fd54d4b05ab9b6e46f15a382f445b1d0131d9535a0023295fde",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states КРС creates, maintains and publishes the national trusted list under Art. 22 of Regulation 910/2014, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://crc.bg/bg/rubriki/560/elektronni-udostoveritelni-uslugi"
+  },
+  {
+   "claim": "param:BG:gov_employment_k",
+   "fact_sha256": "cf834548adc5ed1210317aa46f0a9417c5475071520e865e768724911127e7c0",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 217.77 thousand persons for BG, NACE O, EMP_DC, 2024; rounded to one decimal that is 217.8 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=BG&time=2024"
+  },
+  {
+   "claim": "param:BG:gdp_eur_bn",
+   "fact_sha256": "01fd4b76e7d86b4ed30c1e3ceaffe72fd4922eebaeacf48e514078594f2eff12",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 116018.3 million EUR for BG B1GQ 2025 (flagged 'p', provisional), which scales to 116.0 EUR bn.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=BG&time=2025"
+  },
+  {
+   "claim": "param:BG:renewables_pct",
+   "fact_sha256": "03bad64daf01597138cd3c3a85cbde899960edffe4af57762463399da6ba356a",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 34.4 % for BG REN_ELC 2025 (flagged 'p', provisional), matching the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=BG&time=2025"
+  },
+  {
+   "claim": "param:BG:elec_price_eur_mwh",
+   "fact_sha256": "cf65fd6ba703f8d36405edbf9453193b79ebaf3ad8d489b29ead7b9b34f03774",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1413 EUR/kWh for BG, band IC, excluding VAT, 2025-S2, which is 141.3 EUR/MWh.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=BG&time=2025-S2"
+  },
+  {
+   "claim": "param:BG:land_km2",
+   "fact_sha256": "8e6cc1c013bee622e19c15e8d1fb332d7e6ced3e450b0375bb780e262a34692e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 110001 km² (land area, total) for BG 2026, matching the printed 110 001 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=BG&time=2026"
+  },
+  {
+   "claim": "param:BG:population_m",
+   "fact_sha256": "40f0f368f720b99653f17fffbdc7f730a92a48117d6089efaf40c3e1bcb5eb1d",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 6 423 207 persons on 1 January 2026 for BG, which rounds to 6.42 million.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=BG&time=2026"
+  },
+  {
+   "claim": "record:BG:issuance_history:operator",
+   "fact_sha256": "9aa11abbd901d59838b21a36b853cebb00fd7290037a01d43a943a189352ae59",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Ministry of Interior's own press-centre notice of 27 April 2026 announces the transition to centralised personalisation and a new generation of Bulgarian identity documents. The sentence is passive, but it is МВР's announcement about the documents it issues, so the date, change and ministry match.",
+   "quote_found": true,
+   "checked_url": "https://mvr.bg/sofia/%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B5%D0%BD-%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BF%D1%80%D0%B5%D1%81%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/90242"
+  },
+  {
+   "claim": "record:BG:official_gazette:register",
+   "fact_sha256": "20db652a554498d9f692d41758bdd85c6b8dbfcc61dfe0069340f2a71646ddaa",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The N-Lex Bulgaria page says the State Gazette website holds the full content of all issues for the last 7 years in PDF, exactly as printed and attributed.",
+   "quote_found": true,
+   "checked_url": "https://n-lex.europa.eu/n-lex/info/info-bg/index?lang=bg"
+  },
+  {
+   "claim": "record:BG:education:register",
+   "fact_sha256": "64b270532a95152baa87f5ce4233119a0254cf55db636cec4da0e212ba7becbc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The NACID page names the Register of all current, interrupted and graduated students and doctoral candidates and says it is kept as an electronic database by the Minister through НАЦИД, matching the printed text.",
+   "quote_found": true,
+   "checked_url": "https://nacid.bg/bg/register_rdpzsd/"
+  },
+  {
+   "claim": "record:BG:central_bank:operator",
+   "fact_sha256": "be1e545c583f2088e854c0f495f21f0a2f021e693bb6db250e8f7b8438d8def1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The BNB page states 'Българската народна банка оперира националния системен компонент TARGET-BNB', so BNB is the operator as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.bnb.bg/PaymentSystem/index.htm"
+  },
+  {
+   "claim": "record:BG:central_bank:register",
+   "fact_sha256": "c9f14629f01e2d7d0b70470726a2d44e149a72f7e2b7f79df8ef607d6f9c25ad",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page names TARGET-BNB as the national system component and, just before, describes TARGET as the consolidated platform for T2, T2S, TIPS and the Eurosystem's ECMS, so 'national system component of the Eurosystem's TARGET' matches the page.",
+   "quote_found": true,
+   "checked_url": "https://www.bnb.bg/PaymentSystem/index.htm"
+  },
+  {
+   "claim": "record:BG:public_finance:operator",
+   "fact_sha256": "af9354cfeab02b7dc74c56e0c6f799e76afd21458b6d471358bc68407955dddf",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The BNB instruction states it sets requirements for БОРИКА АД to transform the information into ISO 20022 XML on finalisation of approved payments in СЕБРА, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/instructions_bnb_51681_bg.pdf"
+  },
+  {
+   "claim": "record:BG:public_finance:register",
+   "fact_sha256": "76537e580f11cbe446acc3b0a3d8363c9df9e3b32fa33fbe8ae839b376658313",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The instruction names the Система за електронни бюджетни разплащания (СЕБРА) as the system through which budget payment requests initiate payments, and its subject is transfers from/to accounts of budget organisations, so the name and use match.",
+   "quote_found": true,
+   "checked_url": "https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/instructions_bnb_51681_bg.pdf"
+  },
+  {
+   "claim": "record:BG:beneficial_ownership:register",
+   "fact_sha256": "0f5e3e03fb4c3f294d9b1b13d631a9ac29c38ada17804307132ab6e6fa34cbba",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The National Audit Office report states the software change enabling entry of beneficial-owner circumstances under ЗМИП was put into operation on 28.01.2019, matching the printed date and purpose.",
+   "quote_found": true,
+   "checked_url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf"
+  },
+  {
+   "claim": "record:BG:business_registry:foreign_dependency",
+   "fact_sha256": "a04f6de3545069315631d54d01aeebabbfe25f08275a156b4a55d955cfb52c7c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The audit describes the Registry Agency buying storage arrays, servers and tape libraries for its own register systems and upgrading its own data centres, with the only cloud mention being the State Hybrid Cloud run with the State e-Government Agency; no external or foreign provider appears, which supports 'national infrastructure'.",
+   "quote_found": true,
+   "checked_url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf"
+  },
+  {
+   "claim": "record:BG:business_registry:register",
+   "fact_sha256": "3e79f764640d806a5b85b7f5143e51e0492381b16dd08d819babe2f54982cbf0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The report states the Commercial Register and Register of Non-Profit Legal Entities (ТРРЮЛНЦ) is a common electronic database, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf"
+  },
+  {
+   "claim": "record:BG:land_property:foreign_dependency",
+   "fact_sha256": "fbf61aae65e42025ae42eeaac75a35cbbde6d8613ebf96be672d23838b2d1bb2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The audit cites contract 93-00-141 of 17.12.2019 for upgrading the Registry Agency's own information data centres, and elsewhere hardware purchases for its registers, with no foreign or external hosting mentioned; the Agency keeps the property register per the same report, so 'national infrastructure' is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf"
+  },
+  {
+   "claim": "record:BG:land_property:operator",
+   "fact_sha256": "04e8f30c313183a482026d36f53c514636b7d818ce97cd216682b76b64a71f4d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Immediately before the quote the report states 'Агенцията по вписванията е изпълнителна агенция към министъра на правосъдието', and the quote lists the property register, commercial register, БУЛСТАТ and other registers it is tasked to keep, matching the printed text.",
+   "quote_found": true,
+   "checked_url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf"
+  },
+  {
+   "claim": "record:BG:geospatial:register",
+   "fact_sha256": "c5ed1aadd005b4937d8c9e048107d179bf9cea9a6903e3503aaf46b9d6dd14f9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is titled 'Функции на АГКК' on the Agency's site and lists 'създаване и поддържане на топографски бази данни и на геоинформационната система' among its functions, so AGCC as the subject and the activity match.",
+   "quote_found": true,
+   "checked_url": "https://www.cadastre.bg/funkcii-na-agkk"
+  },
+  {
+   "claim": "record:BG:land_property:register",
+   "fact_sha256": "a500b14a86ac050c1b4ecad8727466adafaaf0bf983e365391cc86fb909eb0b4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The 'Функции на АГКК' page states that under the Cadastre and Property Register Act the Agency creates and maintains the cadastral map and cadastral registers for the whole country, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.cadastre.bg/funkcii-na-agkk"
+  },
+  {
+   "claim": "record:BG:electoral_roll:register",
+   "fact_sha256": "eaf5ac0f444a19b7f68501ec81076f5ae7b7c9b09441cbe72f7b8572652e025a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CEC decision states that under Art. 26(1) of the Electoral Code ГД ГРАО is obliged to print the voter lists, matching the printed Bulgarian text. The page uses only the acronym ГРАО; the English expansion in parentheses is a gloss not spelled out on the page.",
+   "quote_found": true,
+   "checked_url": "https://www.cik.bg/upload/280009/%E2%84%96+821-14052026-bld.pdf"
+  },
+  {
+   "claim": "record:BG:grid_control:register",
+   "fact_sha256": "5f311f1db16c3f1704654b0cfa6e5cc824ccdf7e8957cbbb5355f5eb8305ed5b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ESO document carries the project title 'Модернизация и Разширение на Системата SCADA/EMS и Информационната среда в Централно Диспечерско Управление (ЦДУ) на ЕСО', which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://www.eso.bg/fileObj.php?oid=131"
+  },
+  {
+   "claim": "record:BG:judicial_criminal:operator",
+   "fact_sha256": "1dcab0189ad37b190ddbd4e976bf537189a4157c8b29aec0250d7293fdfb525a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The document states there is a criminal records bureau at every district court and a Central Criminal Records Bureau at the Ministry of Justice, matching the printed text.",
+   "quote_found": true,
+   "checked_url": "https://www.fsc.bg/wp-content/uploads/2021/files/31563_file.pdf"
+  }
+ ]
+}

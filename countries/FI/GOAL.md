@@ -62,7 +62,7 @@ The holdings Finland cannot let depend on infrastructure a foreign state can com
 | Critical | Authentication audit log (tier 0) | DVV must keep a log register of processing of data stored from use of the support services (incl. identification)[^s24] | *Not yet sourced* | *Not stated in sources* | About 17 million authentications per month through Suomi.fi e-Identification[^s25] |
 | High | Document issuance history (tier 0) | Henkilökortti- ja passijärjestelmä, Heko-Passi (ID card and passport system)[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electoral roll entry (tier 0) | äänioikeusrekisteri (voting register)[^s26] | Digi- ja väestötietovirasto (Digital and Population Data Services Agency)[^s26] | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | äänioikeusrekisteri (voting register)[^s26] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and DVV is named as controller and as the body that establishes the voting register, but the same page says the voting register is part of the election information system 'jonka ylläpidosta ja toiminnasta vastaa Oik It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
 | High | State PKI and qualified trust services (tier 0) | DVV keeps a certificate register of the personal certificates it issues, under the eIDAS Regulation[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -158,7 +158,7 @@ Tier 0 and 1 holdings for Finland without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
 
 ### How sources were found
 
@@ -214,10 +214,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
-| T2 competent public body or audit office | 633 |
-| T3 other institution or company | 9 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
+| T2 competent public body or audit office | 589 |
+| T3 other institution or company | 7 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
 
 ### Evidence grades
 
@@ -226,8 +226,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 106 |
-| Standard | 1282 |
+| Strong | 100 |
+| Standard | 1209 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -268,7 +268,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1388 printed facts pass the fact check.
+In this build, 1309 of 1309 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -310,7 +310,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
+In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -333,51 +333,53 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Finland
 
-0 of 33 printed facts about Finland pass.
+32 of 32 printed facts about Finland pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
-| indicator:FI:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | none | never checked |  |
-| indicator:FI:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
-| indicator:FI:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:FI:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:FI:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
-| indicator:FI:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
-| param:FI:population_m | param:FI:population_m | program:fetch_eurostat.py | none | never checked |  |
-| param:FI:gdp_eur_bn | param:FI:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
-| param:FI:gov_employment_k | param:FI:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
-| param:FI:elec_price_eur_mwh | param:FI:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
-| param:FI:renewables_pct | param:FI:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
-| param:FI:land_km2 | param:FI:land_km2 | program:fetch_eurostat.py | none | never checked |  |
-| record:FI:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
-| record:FI:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:authentication_audit_log:count | Authentication audit log: how many records it holds | unrecorded | none | never checked |  |
-| record:FI:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | none | never checked |  |
-| record:FI:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | none | never checked |  |
-| record:FI:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
-| record:FI:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:firearms_register:register | Firearms register: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | none | never checked |  |
-| record:FI:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
+| indicator:FI:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:FI:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:FI:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:FI:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:FI:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:FI:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:FI:population_m | param:FI:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:FI:gdp_eur_bn | param:FI:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:FI:gov_employment_k | param:FI:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:FI:elec_price_eur_mwh | param:FI:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:FI:renewables_pct | param:FI:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:FI:land_km2 | param:FI:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:authentication_audit_log:count | Authentication audit log: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:business_registry:operator | Business registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Finland
 
-None.
+| Claim | What it answers | Checked by | Verdict | Reason |
+|---|---|---|---|---|
+| record:FI:electoral_roll:operator | Electoral roll entry: the body that operates it | claude-fable-5-1 | unclear | The quote is on the page and DVV is named as controller and as the body that establishes the voting register, but the same page says the voting register is part of the election information system 'jonka ylläpidosta ja toiminnasta vastaa Oikeusrekisterikeskus' (maintained and operated by the Legal Register Centre). The source is ambiguous on who operates it as opposed to who establishes/controls it |
 
 ---
 
@@ -413,6 +415,6 @@ None.
 [^s30]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki henkilötietojen käsittelystä Tullissa (650/2019), 2019. Laki henkilötietojen käsittelystä Tullissa (650/2019). <https://www.finlex.fi/fi/lainsaadanto/2019/650> ([archived](https://web.archive.org/web/20260205004618/https://www.finlex.fi/fi/lainsaadanto/2019/650))
 [^s31]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki Valtiokonttorista (305/1991), 1991. Laki Valtiokonttorista (305/1991). <https://www.finlex.fi/fi/lainsaadanto/1991/305> ([archived](https://web.archive.org/web/20260411111736/https://www.finlex.fi/fi/lainsaadanto/1991/305))
 
-**Evidence grades:** 2 Strong, 31 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 2 Strong, 30 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

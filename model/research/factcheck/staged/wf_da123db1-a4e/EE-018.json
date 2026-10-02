@@ -1,0 +1,270 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "EE-018",
+ "iso": "EE",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:EE:customs:register",
+   "fact_sha256": "6ad00c1fef766aea2e55b77a3aa5d0b06dfd968daadaa4232fdd84e5aded637d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Could not fetch any cited page: emta.ee returns a Cloudflare 'Just a moment' 403 to both curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this URL. The quote could not be checked.",
+   "quote_found": false,
+   "checked_url": "https://www.emta.ee/uudised/mta-votab-kasutusele-uue-impordi-tollivormistuse-infosusteemi"
+  },
+  {
+   "claim": "record:EE:education:operator",
+   "fact_sha256": "8d593eed979740a31f6f835754d8d2e214afbb5b3d306e0f45d4bb33eb722e0d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Could not fetch any cited page: hm.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked.",
+   "quote_found": false,
+   "checked_url": "https://www.hm.ee/sites/default/files/documents/2024-07/Eesti%20keele%20tasemeeksamiks%20ettevalmistava%20t%C3%A4ienduskoolituse%20tegevusloa%20taotlemise%20kirjeldus.pdf"
+  },
+  {
+   "claim": "record:EE:firearms_register:register",
+   "fact_sha256": "dc83bd5947dcc18e2d1aad203fd63061500265495ba75702059b342627cbdbd7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Could not fetch any cited page: politsei.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked.",
+   "quote_found": false,
+   "checked_url": "https://www.politsei.ee/files/Anal%C3%BC%C3%BCs%20ja%20statistika/ppa-avaandmete-seletuskiri-relvaregister-05.06.20.pdf"
+  },
+  {
+   "claim": "indicator:EE:K1",
+   "fact_sha256": "39524d33bc5063d7f2782edaddb2faa5df62e8f330d95ea2ffa43066296030bb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live ria.ee page is blocked (403); the cited archived copy contains the quote verbatim. The page says the state must ensure the PKI, procures and issues the tokens (PBGB) and sets requirements (RIA, ministry), while 'much of' the PKI services (certification, validation, LDAP) are sourced from private SK ID Solutions AS; that split matches 'Partly' rather than Yes or No, though the page never names",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260915103115/https://www.ria.ee/en/state-information-system/electronic-identity-eid-and-trust-services/electronic-identity-eid"
+  },
+  {
+   "claim": "record:EE:authentication_audit_log:operator",
+   "fact_sha256": "a3fe2a53b711077f1362159ae4f37ca71a15708bac575be8ab4b0a451132a115",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live ria.ee PDF is blocked (403) and no archived_url is recorded, so I read the Wayback snapshot of the exact cited URL (2026-05-19); the quote is there verbatim: the service is 'RIA arendatud ja hallatav platvorm', i.e. developed and managed by RIA. Note the SLA does not itself mention an audit log; it names RIA as operator of the authentication service.",
+   "quote_found": true,
+   "checked_url": "http://web.archive.org/web/20260519072626/https://ria.ee/sites/default/files/documents/2025-02/TARA-SLA-Riigi-autentimisteenus-1-3-2025.pdf"
+  },
+  {
+   "claim": "record:EE:authentication_audit_log:register",
+   "fact_sha256": "b2fc2ce95b965d71d46ec019aecf185ad23af798af2b0b39154635446a5a61ac",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Read via the Wayback snapshot of the cited URL (live page 403). The SLA's 'Teenuse nimi' line reads 'Riigi autentimisteenus (TARA)' and the quote is verbatim, so the printed name and the TARA acronym match the source. The document describes an authentication platform and does not mention a log; the 'audit log' framing is the report's classification, not the source's.",
+   "quote_found": true,
+   "checked_url": "http://web.archive.org/web/20260519072626/https://ria.ee/sites/default/files/documents/2025-02/TARA-SLA-Riigi-autentimisteenus-1-3-2025.pdf"
+  },
+  {
+   "claim": "indicator:EE:K2",
+   "fact_sha256": "f9b13de7b444c0011bf35ead789bb5600ede4789d55965971aa3d71e80685063",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live PDF 403; the cited archived copy holds the quote verbatim (section 3.6). The PBGB, a state body, issues the identity documents including those usable as eID means and signs the provider contracts; the same document says Mobile-ID is procured by the state with PBGB as statutory owner and SMIT builds the systems, so the national scheme is state-operated even though SK ID Solutions supplies serv",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20251023190958/https://www.ria.ee/sites/default/files/documents/2025-10/Estonian-eID-ecosystem.pdf"
+  },
+  {
+   "claim": "indicator:EE:C1",
+   "fact_sha256": "778b42fa8e570d56e3861a11d05d8daa238a3a0a725e95c0da35c33964502753",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "All four quotes found verbatim (riigikontroll PDF and two riigipilv.ee pages live; rit.ee via its cited archived copy, live page 403). The rit.ee page states the private State Cloud is run by the state through RIT with state-owned data centres, and riigipilv.ee places its hardware at several locations inside Estonia plus a duplicate data centre outside Tallinn, which supports 'Yes'; the 2018 riigi",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260612050140/https://www.rit.ee/serverteenused"
+  },
+  {
+   "claim": "indicator:EE:C2",
+   "fact_sha256": "59945c5900f2e04a4e707f6adeaa95395202f371e08001f52662f82153ec4288",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "All five quotes found verbatim (riigikontroll PDF, three riigipilv.ee pages live, rit.ee news via a Wayback snapshot of the cited URL since the live page is 403). The State Cloud was officially taken into use in May 2017, had 82 customers by June 2022 and is state-managed by RIT, which supports an operating (not merely announced) government cloud.",
+   "quote_found": true,
+   "checked_url": "https://www.riigipilv.ee/riigipilvest/riigipilvest-kkk/riigipilv-mis-see-on"
+  },
+  {
+   "claim": "record:EE:business_registry:operator",
+   "fact_sha256": "ec24f19240d14d92aa141c416e13c1d211d156ef4ad71725b1e60cea03fc6dfa",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live rik.ee 403; the cited archived copy contains the quote verbatim: entries are made by Tartu Maakohtu registriosakond (registripidaja) and the portal is developed and managed by RIK, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260829032113/https://www.rik.ee/et/e-ariregister/e-ariregistri-portaal"
+  },
+  {
+   "claim": "record:EE:business_registry:register",
+   "fact_sha256": "5f2c21ca58e1670f475f6c6c3a0b6f83d2485437837dd5d56aa23946fb80d003",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Cited archived copy contains the quote verbatim: 'E-äriregister on riigi ametlik portaal' holding data of all legal persons registered in Estonia, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260829032113/https://www.rik.ee/et/e-ariregister/e-ariregistri-portaal"
+  },
+  {
+   "claim": "record:EE:land_property:register",
+   "fact_sha256": "c50ceca6b48861368ed57cb81f2e2a09fa7dd797f4ccf71df61f3586f359524e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live rik.ee 403; the cited archived copy contains the quote verbatim: E-kinnistusraamat holds data on all registered immovables in Estonia, matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260829055311/https://www.rik.ee/et/e-kinnistusraamat/e-kinnistusraamat"
+  },
+  {
+   "claim": "record:EE:judicial_criminal:register",
+   "fact_sha256": "aa665b48340d987cfe4854efa863b7f9b0e0ace4aca4bad6c8746fff6f62f5c3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live rik.ee 403; the cited archived copy contains the quote verbatim: Karistusregister is a state database of persons and the punishments imposed on them, based on final court judgments, which matches the printed name.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260902232345/https://www.rik.ee/et/karistusregister/paring-karistusregistrist"
+  },
+  {
+   "claim": "record:EE:official_gazette:operator",
+   "fact_sha256": "5855b10f19247dcdb5186e9291a9b01066993c0f26d9836a611fed5c3d63dc46",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live rik.ee 403; the cited archived copy contains the quote verbatim: Riigi Teataja is issued by the Justiits- ja Digiministeerium and hosted and technically operated by RIK, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260312042839/https://www.rik.ee/et/muud-teenused/riigi-teataja"
+  },
+  {
+   "claim": "record:EE:official_gazette:register",
+   "fact_sha256": "24285ce03dc0c4ad3837e239183d0040490a678d1423bf525f576b4c06b0db07",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Cited archived copy contains the quote verbatim: Riigi Teataja is the official online publication of the Republic of Estonia in which legal acts are published, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260312042839/https://www.rik.ee/et/muud-teenused/riigi-teataja"
+  },
+  {
+   "claim": "record:EE:government_payroll:register",
+   "fact_sha256": "a6235228d862388673fe5708c5fd1b68dea10d8952f51473bb48f622a3bc76ff",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live rtk.ee 403; the cited archived copy contains the quote verbatim, naming 'riigi finants-, personali- ja palgaarvestuse süsteemi SAP' as the system the portal feeds, which matches the printed name for the state personnel and payroll system.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260829052208/https://www.rtk.ee/riigitootaja-iseteenindusportaal"
+  },
+  {
+   "claim": "record:EE:public_finance:register",
+   "fact_sha256": "4f44f6f09dc4ba0ff6173d76618448631ecaabf99dceebc7ddc6655d4919a412",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Same archived page and verbatim quote: the source names SAP as the state's financial (as well as personnel and payroll) accounting system, which matches the printed name; the page is about the self-service portal and says nothing more about treasury functions.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260829052208/https://www.rtk.ee/riigitootaja-iseteenindusportaal"
+  },
+  {
+   "claim": "record:EE:facial_biometric:register",
+   "fact_sha256": "6856ef1cc268f4da474f0dc47ed78635283f512fc7335f3e6f6c7e1d477f9673",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory definition, not the name of a register or system, so it does not answer 'what'; the source that names a register holding facial images (ABIS, siseministeerium.ee) is not",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260313205329/https://www.riigiteataja.ee/akt/itds"
+  },
+  {
+   "claim": "record:EE:fingerprint_biometric:register",
+   "fact_sha256": "965339ed51ee72ed72ee5abaccfe9008366a43475cc348cc9b6a297139177bcd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live siseministeerium.ee 403; the cited archived copy contains the quote verbatim under the heading 'Automaatse biomeetrilise isikutuvastuse süsteemi andmekogu ABIS': ABIS is the central state database storing facial and fingerprint images and palm prints, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260811150453/https://www.siseministeerium.ee/abis"
+  },
+  {
+   "claim": "record:EE:crisis_management:register",
+   "fact_sha256": "3201f7175b41cb1a3fc8958b311a56f3dc42afba9f092b8a4b283672bbf776a4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Could not fetch any cited page: siseministeerium.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this PDF. The quote, the EE-ALARM label and the Häirekeskus operator could not be checked.",
+   "quote_found": false,
+   "checked_url": "https://www.siseministeerium.ee/sites/default/files/documents/2024-02/EE-ALARM_ylevaade_avalik_07022024.pdf"
+  },
+  {
+   "claim": "record:EE:emergency_communications:operator",
+   "fact_sha256": "9801b8dcfc069c5e35c52ff2f6499e7c56edd12ccc35672ed89125ea86a91117",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote could not be checked, so whether it supports Häirekeskus as operator of emergency calls and public-safety radio is undetermined.",
+   "quote_found": false,
+   "checked_url": "https://www.siseministeerium.ee/sites/default/files/documents/2024-02/EE-ALARM_ylevaade_avalik_07022024.pdf"
+  },
+  {
+   "claim": "record:EE:emergency_communications:register",
+   "fact_sha256": "072c1bf8a9fcfd27dc8a9f2545ee037d9fc3dc04c93db1a2f2e1b75a2ed2ef29",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote naming 'hädaabiteadete ning abi- ja infoteadete andmekogu' could not be checked.",
+   "quote_found": false,
+   "checked_url": "https://www.siseministeerium.ee/sites/default/files/documents/2024-02/EE-ALARM_ylevaade_avalik_07022024.pdf"
+  },
+  {
+   "claim": "record:EE:civil_registry:operator",
+   "fact_sha256": "b6b5d04cbd92e786deff237b1d1262181540eee94d74f84ec2c97db6cde87a22",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live page 403 and no archived_url recorded, so I read the Wayback snapshot of the exact cited URL (2026-08-20); the quote is verbatim: 'Registrit haldab ja arendab vastutava töötlejana Siseministeerium', which supports the Ministry of the Interior as operator.",
+   "quote_found": true,
+   "checked_url": "http://web.archive.org/web/20260820123339/https://siseministeerium.ee/tegevusvaldkonnad/rahvastikutoimingud/rahvastikuregister"
+  },
+  {
+   "claim": "record:EE:civil_registry:register",
+   "fact_sha256": "d692a05fd79ea5586c3092b6549b45d74f0c741bc5fbd7976ffac13b60400977",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Same Wayback snapshot of the cited URL; the quote is verbatim and names Rahvastikuregister as the database of the main personal data of citizens and residents, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "http://web.archive.org/web/20260820123339/https://siseministeerium.ee/tegevusvaldkonnad/rahvastikutoimingud/rahvastikuregister"
+  },
+  {
+   "claim": "record:EE:issuance_history:count",
+   "fact_sha256": "342d647caf1c7d2088a0e3a6d7f3531cc892dfeda0a805827d179848fb0279c7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live page 403; the cited archived copy contains the quote verbatim: since 2002 over 3.2 million ID cards and residence permit cards have been issued. The printed figure and wording ('issued') match; the source gives a cumulative issuance count, not a stated record count, which the printed text does not overstate.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260703201829/https://www.siseministeerium.ee/tegevusvaldkonnad/tohus-rahvastikuhaldus/isikut-toendavad-dokumendid-ja-identiteedihaldus"
+  },
+  {
+   "claim": "indicator:EE:L2",
+   "fact_sha256": "d967780cd7dbee102c49c3fa4f1450e6123649ccdfff856742215f7419e83696",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "All three quotes found verbatim on the live teabeamet.ee pages and the cited Riigi Teataja archive. The State Secrets and Classified Information of Foreign States Act § 5 fixes four classification levels in statute, which supports 'Yes'; note the scheme established is the state-secrets classification, which is what the report's indicator treats as the government data classification.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260117004320/https://www.riigiteataja.ee/akt/RSVS"
+  }
+ ]
+}

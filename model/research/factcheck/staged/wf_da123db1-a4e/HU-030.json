@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "HU-030",
+ "iso": "HU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:HU:digital_identity_credentials:operator",
+   "fact_sha256": "0902adf2a6f3b673ac5e957dedccecd169b9ef2e3c05bbc8495c70339fc54017",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Government Decree 320/2024 §1 reads 'a Kormány ... digitális állampolgárság szolgáltatóként az IdomSoft Informatikai Zártkörűen Működő Részvénytársaságot (a továbbiakban: IdomSoft Zrt.) jelöli ki', i.e. designates IdomSoft Zrt. as digital citizenship service provider; the dap.gov.hu impressum and idomsoft.hu quotes were also found verbatim and agree.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2400320.KOR"
+  },
+  {
+   "claim": "param:HU:gov_employment_k",
+   "fact_sha256": "7b1ee9e0f4b389465dc7350d9b4f256e7d9131d5499678ee7780e7af647e6fa5",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 346.26 thousand persons for HU, NACE O, EMP_DC, 2024; rounded this is 346.3 thousand as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=HU&time=2024"
+  },
+  {
+   "claim": "param:HU:gdp_eur_bn",
+   "fact_sha256": "59703e9aa3374a7315bd6921193c0ead23b82ea20259e3bbf5eeed5cfe40dd84",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 218833.9 million EUR (flag p, provisional) for HU B1GQ 2025, which scales and rounds to 218.8 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=HU&time=2025"
+  },
+  {
+   "claim": "param:HU:renewables_pct",
+   "fact_sha256": "5e4fdae93b3fd993aab57d2abd41c8df11fd80a29a7808b4ddf6fddc2cdf166a",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 28.3 (flag p) for HU REN_ELC 2025, matching the printed 28.3 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=HU&time=2025"
+  },
+  {
+   "claim": "param:HU:elec_price_eur_mwh",
+   "fact_sha256": "5f79525df049af9da7babcfb973565824063f94cde2dd752037e352834cba4cf",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.2132 EUR/kWh for HU, band MWH500-1999, excluding VAT, 2025-S2; converted to EUR/MWh this is 213.2 as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=HU&time=2025-S2"
+  },
+  {
+   "claim": "param:HU:land_km2",
+   "fact_sha256": "0aa80ca905517be76b43f26645126617d16976ff7913919c00864f76c614732c",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 91248 km² for HU, L0008, 2026, matching the printed 91 248 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=HU&time=2026"
+  },
+  {
+   "claim": "param:HU:population_m",
+   "fact_sha256": "b0f00215070e36873d3a67846dcc760a16611ae94ddab081759a1bcd13b9c9ce",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 9 488 428 persons on 1 January 2026 for HU, which rounds to 9.49 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=HU&time=2026"
+  },
+  {
+   "claim": "indicator:HU:K1",
+   "fact_sha256": "5fc3f7f0ef3a81fcccb78ad3f4b8be340525152d9bb731e9e2d6fcbdcea85bf5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The quote is on the page and says NISZ Zrt. is the designated government certification service provider (GovCA) providing trust and PKI services, but the page nowhere states that NISZ is state-owned or state-controlled (no mention of 'állami tulajdon'), so the 'state or state-controlled body' element of the indicator rests on knowledge outside the cited source.",
+   "quote_found": true,
+   "checked_url": "https://hiteles.gov.hu/cikk/185/kormanyzati_hitelesites_szolgaltato"
+  },
+  {
+   "claim": "record:HU:trust_services_pki:operator",
+   "fact_sha256": "b3a810dfa80624522424e32f53ffc60babdec5009eb9c5eef5133cb3f7b6db6f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Decree 320/2024 §6 ('A Kormány ... szolgáltatóiként az alábbi szervezeteket jelöli ki') item 6 designates NISZ Zrt. for the government electronic signature, electronic seal and signature-verification service, exactly as printed; the hiteles.gov.hu quote (NISZ as GovCA) was also found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2400320.KOR"
+  },
+  {
+   "claim": "record:HU:land_property:register",
+   "fact_sha256": "37317877c947762285a3e588ffcb9196f88757ed952261426c4b3bd9a07ba5e1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act C of 2021 states verbatim that the land register 'településenként tartalmazza a Magyarország területén fekvő valamennyi ingatlant', which is what is printed; the kormany.hu (E-ING) and lechnerkozpont.hu quotes were also found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2100100.TV"
+  },
+  {
+   "claim": "record:HU:issuance_history:operator",
+   "fact_sha256": "0dc640bd88ddaa6312ef6a996e77bda01e4a3e63f1404d286266a5a5c3ebd151",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says 'Az Energiaügyi Minisztérium, mint nyilvántartó szerv ... végzi az útlevelek megszemélyesítését', i.e. the Ministry of Energy as registering body personalises passports, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://kormany.hu/nyilvantartasok/biometrikus-utlevel/biometrikus-utlevel"
+  },
+  {
+   "claim": "record:HU:trust_services_pki:register",
+   "fact_sha256": "69661519146a2f786ebd4f353978a7ae4b9bf08029b5bda31fcfd360c3b37870",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the tasks of operating the Magyar Országos Aláíró Hitelesítő Hatóság are performed by the Ministry of Energy as passport-issuing authority, and gives the CA's distinguished name 'CN=CSCA-HUNGARY, OU=CRO, O=GOV, C=HU'; the second kormany.hu quote (CSCA/DS/CVCA/DV functions for biometric passports) was also found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://kormany.hu/nyilvantartasok/biometrikus-utlevel/tajekoztato-a-csca-tanusitvanyrol"
+  },
+  {
+   "claim": "record:HU:geospatial:operator",
+   "fact_sha256": "b5a01b3bb00e92d7d89817594615575ebb25044a9583f7bbcbe5a7001d19817e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Decree 383/2016 §27(2) says the Lechner Tudásközpont Nonprofit Kft. with national competence a) manages and operates national databases and provides data from them and b) 'működteti a nemzeti téradat-infrastruktúra rendszert'; the lechnerkozpont.hu quote (manages the national spatial-data registers) was also found verbatim and supplies the 'geodata' scope.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1600383.KOR"
+  },
+  {
+   "claim": "record:HU:geospatial:register",
+   "fact_sha256": "af344cbd8ff18fe1357e48c9c06cf339718e664daf3556ab987998ec8a45a9d7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act CIII of 2023 defines the központi címregiszter as a central register that provides an authentic data source for address data to cooperating bodies' registers, as printed; the lechnerkozpont.hu quote was also found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2300103.TV"
+  },
+  {
+   "claim": "record:HU:land_property:operator",
+   "fact_sha256": "c07f366705b4a886a45ab0361b373b11d0eea2e279359d7348a861867800cc23",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Decree 383/2016 §36 reads 'A Kormány ingatlanügyi hatóságként a) ... Lechner Tudásközpont Nonprofit Korlátolt Felelősségű Társaságot, b) a földügyi igazgatási hatáskörében eljáró fővárosi és vármegyei kormányhivatalt ... jelöli ki', which is the printed designation of Lechner as land authority together with the county government offices; the lechnerkozpont.hu quote was also found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1600383.KOR"
+  },
+  {
+   "claim": "record:HU:official_gazette:register",
+   "fact_sha256": "09aaadadf4f1fdc174012a577001eb1909dfe871ff5b97b7e9b8fae00094b982",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The site's help text refers to issues of the official journal as 'Magyar Közlöny 2013. évi 1. szám', naming the gazette as printed.",
+   "quote_found": true,
+   "checked_url": "https://magyarkozlony.hu/"
+  },
+  {
+   "claim": "record:HU:customs:count",
+   "fact_sha256": "0e36cc0b3117d0f859d396152f4e15b6def0ae965bb07d5bc3e60b3e5d0f3576",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The NAV 2025 yearbook table 'Beérkezett regisztrációsadó-adatlapok, vám-árunyilatkozatok száma 2025-ben, országosan' lists 'Vámeljárásokhoz kapcsolódóan benyújtott árunyilatkozatok 2 404 687', matching the printed count.",
+   "quote_found": true,
+   "checked_url": "https://nav.gov.hu/pfile/file?path=/kiadvanyok/evkonyvek/nav-evkonyv-2025"
+  },
+  {
+   "claim": "record:HU:customs:register",
+   "fact_sha256": "0e605bb2f52abe8ef7ef4ce83130c6422334d3d1591ef08aa53a0b23836a5ec1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The yearbook says the Automatizált Export Rendszer (AES) was introduced on 6 May under the Union Customs Code and customs declarations were processed in it, naming the system as printed (the source presents it as the export declaration system).",
+   "quote_found": true,
+   "checked_url": "https://nav.gov.hu/pfile/file?path=/kiadvanyok/evkonyvek/nav-evkonyv-2025"
+  },
+  {
+   "claim": "record:HU:tax:count",
+   "fact_sha256": "33377ba5f5994ab50ed32e8f63c769ab367741ff2c09f289c99dcb250af06249",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The yearbook says 'NAV 2025. december végén több mint 8 millió adószámlát tartott nyilván', i.e. more than 8 million tax accounts, as printed.",
+   "quote_found": true,
+   "checked_url": "https://nav.gov.hu/pfile/file?path=/kiadvanyok/evkonyvek/nav-evkonyv-2025"
+  },
+  {
+   "claim": "record:HU:tax:register",
+   "fact_sha256": "e27e1b6b5d428c3f565cf3fc380273ed12df6ce85b02a7565070188d8ea762b2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same sentence names the records as adószámla kept (nyilvántartott) by NAV, matching the printed 'adószámla ... kept by NAV'.",
+   "quote_found": true,
+   "checked_url": "https://nav.gov.hu/pfile/file?path=/kiadvanyok/evkonyvek/nav-evkonyv-2025"
+  },
+  {
+   "claim": "record:HU:facial_biometric:foreign_dependency",
+   "fact_sha256": "87164e93afc1848d3d7cc28a5eae2277d7375824037714d016a7e70261c364d6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act LXVI of 1992 lists among the registering body's tasks that it 'működteti a nyilvántartás informatikai rendszerét' and, with ministerial approval, may engage only 'államigazgatási szerv vagy kizárólagos állami tulajdonú gazdálkodó szervezet' as data processor, which legally confines the register's processing to state bodies; note this is a statutory restriction, not a statement of where servers",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv"
+  },
+  {
+   "claim": "record:HU:facial_biometric:register",
+   "fact_sha256": "01700cc5a16961d0801234420ed028846610a460c50858572951130c729abe2f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Act on the personal data and address register lists under the register's contents item l) the citizen's 'arcképmását és ... aláírását, ha ... személyazonosításra alkalmas hatósági igazolványt igényelt', matching the printed statement; the abbreviation 'SZL' itself does not appear on the page, which names the register in full in the Act's title.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv"
+  },
+  {
+   "claim": "record:HU:fingerprint_biometric:foreign_dependency",
+   "fact_sha256": "e06d6579701883270674abe43536f2187c78906905c7587165c5e7f9e5f11ff5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Same provision as the facial-biometric entry: the registering body operates the register's IT system and may delegate processing only to a state administrative body or a wholly state-owned entity, which supports 'national' as a legal restriction rather than an observation of actual hosting.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv"
+  },
+  {
+   "claim": "record:HU:fingerprint_biometric:register",
+   "fact_sha256": "de4e821f978bccd31215d8b78faf3f47479994cb194b9f58b11f9fbc66a33249",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§(4) reads 'A nyilvántartás – a polgár írásbeli hozzájárulása esetén – tartalmazza a polgár ujjnyomatát az állandó személyazonosító igazolvány pótlása céljából', exactly the printed statement; 'SZL' is not on the page but the Act names this register in full.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv"
+  },
+  {
+   "claim": "record:HU:emergency_communications:operator",
+   "fact_sha256": "fbd727719429e4824bb7349d96a3ef0bd37d434ad8000a20deee108bfcf4f4f7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is item 19 of the list introduced by 'A rendőrség ... feladatkörében:' in the Police Act, so the police perform the tasks arising from receiving calls to emergency numbers, as printed.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99400034.TV"
+  },
+  {
+   "claim": "record:HU:police_records:register",
+   "fact_sha256": "59a05ac9b3c14b662447f7d749a1e48cf5cdf207db0d268672974f2577c77755",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§46/B(1) reads 'A rendőrség ... figyelmeztető jelzés elhelyezését rendelheti el a körözési nyilvántartási rendszer útján a Schengeni Információs Rendszerben', which is the printed statement that police place SIS alerts via the wanted-persons register system.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99400034.TV"
+  },
+  {
+   "claim": "record:HU:public_health_surveillance:register",
+   "fact_sha256": "98efdaacb196356ddda1d417ec8e91b1e7d8cc1db0daaa9ec8dceb4f165b8524",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "NM Decree 18/1998 requires the vaccinated child's data to be recorded 'az elektronikus járványügyi felügyeleti rendszerbe', matching the printed statement; the nngyk.gov.hu quote (OSZIR infectious-disease reporting subsystem) was also found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99800018.NM"
+  },
+  {
+   "claim": "record:HU:firearms_register:operator",
+   "fact_sha256": "42560205275dcd7fbf5ff546312bb9d14c9572bd9a19fe90587b1f5ac1eef423",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act XXIV of 2004 states 'A rendőrség által kiadott engedély szükséges: a) a lőfegyver ...', i.e. firearms require a licence issued by the police, as printed.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A0400024.TV"
+  },
+  {
+   "claim": "record:HU:firearms_register:register",
+   "fact_sha256": "6df3c7d1e25094c2a5ab3209aa146ab3b5eccb2dc17157223059e4e0ba205ebe",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Act obliges reporting to the police of the data to be recorded 'a lőfegyverek központi nyilvántartásában' (central firearms register), matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A0400024.TV"
+  },
+  {
+   "claim": "record:HU:breeder_documents:foreign_dependency",
+   "fact_sha256": "a00f9a3454c15c1c33347cc72c5621d9d83870b8f031e2cd39c714a50c0609f0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act I of 2010 §(4) allows the civil-registration registering body, with ministerial approval, to engage only a state administrative body or a wholly state-owned business entity as data processor, which confines processing to state bodies; as with the biometric entries this is a statutory restriction, not evidence of where the systems physically run.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1000001.TV"
+  }
+ ]
+}

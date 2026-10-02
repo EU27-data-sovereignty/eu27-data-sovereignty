@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "FR-026",
+ "iso": "FR",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:FR:issuance_history:operator",
+   "fact_sha256": "9f4d80e94b12632ceab20ba43a0ab62d3573d156c200cebfbb1c1f442f997305",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CNIL page on the TES file has the section 'Qui est responsable du fichier ?' answered verbatim with 'Le ministère de l'Intérieur est responsable du fichier', which names the Ministry of the Interior as the body responsible for TES.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes"
+  },
+  {
+   "claim": "record:FR:issuance_history:register",
+   "fact_sha256": "0747409ad8f0e4fc244e3c88bc0fead0e4f5912fb3e6474b527659d5d7edc06d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "In the list of data held in the TES file the page says verbatim that it also contains, for the identity card or passport, the document number, its type and its date and place of issue, which is what the printed statement says.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes"
+  },
+  {
+   "claim": "record:FR:civil_registry:register",
+   "fact_sha256": "768b8e74a98cc918396f3da6d315fca41e7900c83c2596422dad5739fe257bc3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CNIL page states verbatim 'Le RNIPP est un instrument de vérification de l'état civil des personnes nées en France', and the Insee definition page (also fetched, quote found) confirms the register's full name; the printed description matches.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/rnipp-repertoire-national-didentification-des-personnes-physiques"
+  },
+  {
+   "claim": "record:FR:vehicle_licensing:operator",
+   "fact_sha256": "4252b865c1ba3a689211b121c3fe79c5b1560f761b0d4d18e9c0a9152fb7f4bf",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CNIL SIV page says verbatim 'Il est géré par France Titres - Agence nationale des titres sécurisés (ANTS)', supporting 'Managed by France Titres (ANTS)'.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/siv-systeme-dimmatriculation-des-vehicules"
+  },
+  {
+   "claim": "record:FR:vehicle_licensing:register",
+   "fact_sha256": "2abaccfc6034675761103396e011b9e443595dba9628ac849267de45f4e1c516",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that the SIV was put in place in April 2009 to replace the Fichier national des immatriculations (FNI), matching the printed name, date and predecessor.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/siv-systeme-dimmatriculation-des-vehicules"
+  },
+  {
+   "claim": "record:FR:border_control:register",
+   "fact_sha256": "cb345e57316d67c6fd0450c71ede8c5f30e400fa9d5dc822e362120bf0cf1ed8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is on the page and names VISABIO as the automated processing of personal data on foreign nationals applying for a visa; the same page says no French service has direct VIS access and that exchanges with the VIS run exclusively through the national applications RMV2, France-Visas and VISABIO (the latter 'pour les vérifications'). The printed 'the French access point' is slightly strong si",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/systeme-dinformation-sur-les-visas-visa-information-system-vis"
+  },
+  {
+   "claim": "record:FR:police_records:register",
+   "fact_sha256": "74d37acdd34744599124dc91b57c8e123f5c155885cdd5ca8133e8648f59f65e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CNIL page says verbatim that the TAJ is a Ministry of the Interior file shared between the police and the gendarmerie nationale, exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/taj-traitement-dantecedents-judiciaires"
+  },
+  {
+   "claim": "record:FR:official_gazette:operator",
+   "fact_sha256": "32f2f7167dae0125c86ea2b015897463b3ec1d0069a4150c6fe339f7d9728089",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The DILA page states verbatim 'La DILA ... publie le Journal officiel de la République française (JORF)', supporting 'DILA publishes the JORF'.",
+   "quote_found": true,
+   "checked_url": "https://www.dila.premier-ministre.gouv.fr/institution/missions/article/diffusion-legale"
+  },
+  {
+   "claim": "record:FR:official_gazette:register",
+   "fact_sha256": "a07296aea403e8d05ad44bc4ea44d4b75dd895b824bdd5e1efc103df911fbead",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that, under the law on dematerialisation of the JORF, the Journal officiel is made available to the public in electronic form permanently and free of charge, matching the printed text.",
+   "quote_found": true,
+   "checked_url": "https://www.dila.premier-ministre.gouv.fr/institution/missions/article/diffusion-legale"
+  },
+  {
+   "claim": "record:FR:breeder_documents:count",
+   "fact_sha256": "763860ec8c1426e4d890c9387b13ca770ed938da5ec29ba63e0e87a0eaaab419",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Under 'Dépositaire de l'état civil des Français de l'étranger' the page says verbatim 'Il conserve quelques 16 millions d'actes provenant de trois sources principales', referring to the SCEC's civil-status acts; 'About 16 million civil-status acts' matches.",
+   "quote_found": true,
+   "checked_url": "https://www.diplomatie.gouv.fr/fr/services-aux-francaises-et-aux-francais/vie-administrative-et-elections/etat-civil/missions-du-service-central-d-etat-civil"
+  },
+  {
+   "claim": "record:FR:breeder_documents:operator",
+   "fact_sha256": "abb4a6c37d499cbe47c53bd4403a9330b31395e37d808cbde9866492a20fd18d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim 'le SCEC constitue un service à compétence nationale du ministère des affaires étrangères', which is the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.diplomatie.gouv.fr/fr/services-aux-francaises-et-aux-francais/vie-administrative-et-elections/etat-civil/missions-du-service-central-d-etat-civil"
+  },
+  {
+   "claim": "record:FR:breeder_documents:register",
+   "fact_sha256": "a63890a4fef552f12b63479498f26eff4545995bfb38b07e7e2f64361759764a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The SCEC missions page says verbatim 'il établit les actes des personnes qui acquièrent la nationalité française', supporting that SCEC draws up the civil-status acts of persons acquiring French nationality.",
+   "quote_found": true,
+   "checked_url": "https://www.diplomatie.gouv.fr/fr/services-aux-francaises-et-aux-francais/vie-administrative-et-elections/etat-civil/missions-du-service-central-d-etat-civil"
+  },
+  {
+   "claim": "record:FR:customs:register",
+   "fact_sha256": "e816f3923f46befdbb8e4491c59eec612fba2f66b2a4914d157ca6e6caa2be66",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The customs page says verbatim that operators may obtain their personal data contained in 'les déclarations en douane déposées dans le service en ligne DELTA', which supports that customs declarations are lodged in the DELTA online service.",
+   "quote_found": true,
+   "checked_url": "https://www.douane.gouv.fr/professionnels/autres-demarches/demande-dacces-aux-donnees-des-declarations-en-douane"
+  },
+  {
+   "claim": "record:FR:digital_identity_credentials:register",
+   "fact_sha256": "9084c4017dca8a9f97e08650e6dbdd94ade7ba6e21849c60bab552e59bf3efd9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CGU page says verbatim that FranceConnect enables electronic identification and authentication of users, and the preceding paragraph says 'l'État français a mis en place le Téléservice FranceConnect', so 'the State's electronic identification and authentication service' is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.franceconnect.gouv.fr/cgu/"
+  },
+  {
+   "claim": "record:FR:authentication_audit_log:register",
+   "fact_sha256": "efe489e54d8994b07ca54db0ad97cda7e590bac41f7250d40ab70ae3f3e5b90c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The data-protection policy's purposes table lists verbatim 'Gestion de la traçabilité de vos accès au Téléservice et des modalités de ces accès' with connection data (IP address, dates and times of connection) as the data processed, supporting that FranceConnect keeps traceability records of access to the teleservice.",
+   "quote_found": true,
+   "checked_url": "https://www.franceconnect.gouv.fr/cgu/politique-protection-donnees-personnelles/"
+  },
+  {
+   "claim": "record:FR:business_registry:operator",
+   "fact_sha256": "87c8b9a3294ed4946a38151e35de3a08cfb6ef300213defcfb5522b11a6836c8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "In the section on the registre national des entreprises the page says verbatim 'Ce registre opéré par l'INPI est entièrement dématérialisé', where 'ce registre' is the RNE just described; 'RNE is operated by INPI' is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.inpi.fr/decouvrir-inpi/formalites-dentreprises/guichet-unique-formalites-dentreprises-et-registre-national-entreprises"
+  },
+  {
+   "claim": "record:FR:business_registry:register",
+   "fact_sha256": "4c14d08d4aae296bbf3b28aaa03ceeefa9c1ba134c9e69a022a90c4c6b6bb047",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that the former registers were merged into a single register containing all businesses present in France, which is the printed description.",
+   "quote_found": true,
+   "checked_url": "https://www.inpi.fr/decouvrir-inpi/formalites-dentreprises/guichet-unique-formalites-dentreprises-et-registre-national-entreprises"
+  },
+  {
+   "claim": "record:FR:beneficial_ownership:register",
+   "fact_sha256": "82bdc5e8bb4ccc21453f49f0ce5335b9c760b70054f77c837a0ee739ec5e102f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The INPI page says verbatim that discrepancies between identified beneficial owners and those in 'le registre des bénéficiaires effectifs' are to be brought to the attention of the greffe, supporting both the register name and the discrepancy-reporting statement.",
+   "quote_found": true,
+   "checked_url": "https://www.inpi.fr/ressources/formalites-dentreprises/beneficiaires-effectifs"
+  },
+  {
+   "claim": "record:FR:electoral_roll:operator",
+   "fact_sha256": "c62d422795afcf112f33c5db977e1dbcd89d0df14dddf8321f6d614562328e87",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Insee page says verbatim that the 2016 law institutes a répertoire électoral unique (REU) 'dont elle confie la gestion à l'Insee', so Insee as operator is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.insee.fr/fr/information/3539086"
+  },
+  {
+   "claim": "record:FR:electoral_roll:register",
+   "fact_sha256": "9287e9f885e3acd9691ad866615916aba35c68ea52296a4701c95261c618f6d9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same verbatim sentence names the 'répertoire électoral unique (REU)', matching the printed register name and translation.",
+   "quote_found": true,
+   "checked_url": "https://www.insee.fr/fr/information/3539086"
+  },
+  {
+   "claim": "record:FR:civil_registry:count",
+   "fact_sha256": "ce45ca62b819dfaae95fec596cca34778d525f7a3a0db1bf438f32e1b31fc46b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Insee page says verbatim that the RNIPP contains the civil status of 113 million people born in or having lived in France, exactly the printed figure and scope.",
+   "quote_found": true,
+   "checked_url": "https://www.insee.fr/fr/information/6665188"
+  },
+  {
+   "claim": "record:FR:civil_registry:operator",
+   "fact_sha256": "00eee882554fbce5663aa30a244eb32eaadc237087449ed58de0ade831db3b49",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim 'Depuis sa création, l'Insee est responsable de la gestion du RNIPP', and the Insee definition page (also fetched, quote found) says the RNIPP is kept by Insee since 1946; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.insee.fr/fr/information/6665188"
+  },
+  {
+   "claim": "record:FR:benefits_pensions:count",
+   "fact_sha256": "d53c9d6c7b2116a760701879dd3591683258fc33857394336479dc276328fff6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF says verbatim 'L'Assurance retraite verse une retraite à 15,3 millions de personnes dans plus de 150 pays' and presents these as the general scheme's figures (annex 'Les principaux chiffres du régime général'), supporting 15.3 million pensioners paid by the general scheme.",
+   "quote_found": true,
+   "checked_url": "https://www.lassuranceretraite.fr/portail-info/files/live/sites/pub/files/PDF/dossier-institutionnel-2025.pdf"
+  },
+  {
+   "claim": "record:FR:benefits_pensions:operator",
+   "fact_sha256": "7548fe62e5a1d95a5ee26d01efb62727ca215843677d6a6b83bef428761c449e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF lists, under 'La Caisse nationale de l'Assurance retraite est également opérateur', the 'système national de gestion des identifiants (SNGI), pour l'ensemble de la sphère sociale', which supports that CNAV also runs the SNGI for the whole social-security sphere.",
+   "quote_found": true,
+   "checked_url": "https://www.lassuranceretraite.fr/portail-info/files/live/sites/pub/files/PDF/dossier-institutionnel-2025.pdf"
+  },
+  {
+   "claim": "record:FR:benefits_pensions:register",
+   "fact_sha256": "73bd0c07310cc9a310342140393d402ce3bb66fd5c38440bb7939d033f7ee369",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF says verbatim that the public authorities entrusted the Caisse nationale de l'Assurance retraite with building the RGCU, the single reference base holding the career details of the entire French population, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.lassuranceretraite.fr/portail-info/files/live/sites/pub/files/PDF/dossier-institutionnel-2025.pdf"
+  },
+  {
+   "claim": "record:FR:health_insurance:register",
+   "fact_sha256": "21632fb71a4cf371c4fc08f481732e35aee49ae2ca69f07f68c8ec2cdf84f992",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "In the same 'est également opérateur' list the PDF names 'l'Outil de calcul des droits aux soins de santé (ODSS), pour le compte de la Cnam', supporting that CNAV runs the ODSS on behalf of Cnam.",
+   "quote_found": true,
+   "checked_url": "https://www.lassuranceretraite.fr/portail-info/files/live/sites/pub/files/PDF/dossier-institutionnel-2025.pdf"
+  },
+  {
+   "claim": "indicator:FR:L3",
+   "fact_sha256": "a8463f2ce7793c059e3200dfa6d950b56e4e615275739113e32760249b607a8d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The State cloud doctrine page says verbatim that the chosen commercial cloud offer must comply with the SecNumCloud qualification and be immune to unauthorised access by third-state public authorities, and the vademecum PDF (also fetched, quote found) says SecNumCloud includes requirements for protection against non-European extraterritorial laws; a certification requiring immunity from non-EU law",
+   "quote_found": true,
+   "checked_url": "https://www.numerique.gouv.fr/offre-accompagnement/cloud-administrations/la-doctrine-cloud-etat/"
+  },
+  {
+   "claim": "indicator:FR:C1",
+   "fact_sha256": "e041c7a4c67670d6d14707d9ff7bd0a563e3aa7eff661f5c8c18400ab0ff8534",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that π's infrastructures are deployed on 2 sites in Ile-de-France, and describes Cloud π as operated by the Ministry of the Interior with more than 10,000 virtual machines, which supports state-operated government data centres in operation today.",
+   "quote_found": true,
+   "checked_url": "https://www.numerique.gouv.fr/offre-accompagnement/cloud-administrations/le-cloud-interne/"
+  },
+  {
+   "claim": "indicator:FR:C2",
+   "fact_sha256": "797fecadf9c39a1be964493e66bf99e8f093faa4b9bb9045d87f19b5dc5afcda",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page presents the interministerial cloud as two live offers, including verbatim 'π (Pi), opérée par le ministère de l'Intérieur, adaptée à l'hébergement de données sensibles jusqu'au niveau Diffusion restreinte', with current usage figures, supporting a government cloud platform in operation rather than merely announced.",
+   "quote_found": true,
+   "checked_url": "https://www.numerique.gouv.fr/offre-accompagnement/cloud-administrations/le-cloud-interne/"
+  },
+  {
+   "claim": "record:FR:grid_control:register",
+   "fact_sha256": "06abb82669171bc26e731f19339a2b7007f80bbc9ada14bd0297b6d965a4d787",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live RTE page (fetched with decompression and via WebFetch) contains the quote verbatim and continues ': des salles de dispatching jusqu'au poste électrique', so the printed description of téléconduite as the tools that control the power system from dispatching rooms to substations matches the source.",
+   "quote_found": true,
+   "checked_url": "https://www.rte-france.com/decouvrir-rte/campus-expertise-formation/centre-expertise-teleconduite"
+  }
+ ]
+}

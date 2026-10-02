@@ -83,17 +83,17 @@ The holdings Denmark cannot let depend on infrastructure a foreign state can com
 | High | Government payroll and personnel (tier 1) | Statens Lønløsning (the State Payroll Solution)[^s41] | Økonomistyrelsen (Agency for Public Finance and Management)[^s42] | *Not stated in sources* | ca. 180.000 statslige ansatte (state employees paid each month)[^s41] |
 | High | Election management and results (tier 1) | Election results system: municipalities enter manually counted vote totals into an IT system developed by KMD; Danmarks Statistik compiles results[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Central bank systems (tier 1) | TARGET DKK - Nationalbanken's payment system for krone settlement (via T2 and TIPS on TARGET Services, plus SPI for monetary-policy instruments and collateral)[^s44][^s45] | *Not yet sourced* | EU provider[^s44][^s45] | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | SINE (Sikkerhedsnettet) - Denmark's radio network for emergency communications; use mandatory under beredskabsloven § 29[^s46] | Center for Beredskabskommunikation (CFB), part of the Ministry of Civil Security and Emergency Preparedness; network operation by Dansk Beredskabskommunikation A/S[^s47] | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | Sirenevarslingssystemet (the national siren warning system)[^s48] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | Energinet carries out system-responsibility (TSO) activities, electricity transmission and gas transmission[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | SINE (Sikkerhedsnettet) - Denmark's radio network for emergency communications; use mandatory under beredskabsloven § 29[^s46] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page and supports CFB being part of the Ministry of Civil Security and Emergency Preparedness, but the cited page nowhere mentions Dansk Beredskabskommunikation A/S or network operation; that clause is added without supp It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Sirenevarslingssystemet (the national siren warning system)[^s47] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Energinet carries out system-responsibility (TSO) activities, electricity transmission and gas transmission[^s48] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | STADS (the university student administration system)[^s50] | *Not yet sourced* | *Not stated in sources* | Omkring 100.000 studerende (students)[^s50] |
-| High | Health records (tier 2) | Fælles Medicinkort (FMK) - Sundhedsdatastyrelsen's electronic register of every citizen's medication data (prescription, purchase, dispensing, dose changes)[^s51][^s52] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | STADS (the university student administration system)[^s49] | *Not yet sourced* | *Not stated in sources* | Omkring 100.000 studerende (students)[^s49] |
+| High | Health records (tier 2) | Fælles Medicinkort (FMK) - Sundhedsdatastyrelsen's electronic register of every citizen's medication data (prescription, purchase, dispensing, dose changes)[^s50][^s51] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | Det Danske Vaccinationsregister - national register of citizens' vaccinations, run by Statens Serum Institut[^s51] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | Det Danske Vaccinationsregister - national register of citizens' vaccinations, run by Statens Serum Institut[^s50] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | Danmarks Adresseregister (DAR) - authoritative register of road names and addresses[^s53] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | Danmarks Adresseregister (DAR) - authoritative register of road names and addresses[^s52] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Denmark without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
 
 ### How sources were found
 
@@ -204,10 +204,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
-| T2 competent public body or audit office | 633 |
-| T3 other institution or company | 9 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
+| T2 competent public body or audit office | 589 |
+| T3 other institution or company | 7 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
 
 ### Evidence grades
 
@@ -216,8 +216,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 106 |
-| Standard | 1282 |
+| Strong | 100 |
+| Standard | 1209 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -258,7 +258,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1388 printed facts pass the fact check.
+In this build, 1309 of 1309 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -300,7 +300,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
+In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -323,78 +323,80 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Denmark
 
-0 of 60 printed facts about Denmark pass.
+59 of 59 printed facts about Denmark pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
-| indicator:DK:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | none | never checked |  |
-| indicator:DK:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
-| indicator:DK:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:DK:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:DK:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
-| indicator:DK:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
-| param:DK:population_m | param:DK:population_m | program:fetch_eurostat.py | none | never checked |  |
-| param:DK:gdp_eur_bn | param:DK:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
-| param:DK:gov_employment_k | param:DK:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
-| param:DK:elec_price_eur_mwh | param:DK:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
-| param:DK:renewables_pct | param:DK:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
-| param:DK:land_km2 | param:DK:land_km2 | program:fetch_eurostat.py | none | never checked |  |
-| record:DK:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
-| record:DK:civil_registry:count | Civil registry core: how many records it holds | unrecorded | none | never checked |  |
-| record:DK:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | none | never checked |  |
-| record:DK:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:fingerprint_biometric:operator | Fingerprint biometric: the body that operates it | unrecorded | none | never checked |  |
-| record:DK:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:authentication_audit_log:operator | Authentication audit log: the body that operates it | unrecorded | none | never checked |  |
-| record:DK:authentication_audit_log:count | Authentication audit log: how many records it holds | unrecorded | none | never checked |  |
-| record:DK:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | none | never checked |  |
-| record:DK:intelligence:register | Intelligence services: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | none | never checked |  |
-| record:DK:issuance_history:foreign_dependency | Document issuance history: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:DK:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | none | never checked |  |
-| record:DK:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | none | never checked |  |
-| record:DK:judicial_criminal:foreign_dependency | Judicial & criminal justice: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:DK:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:police_records:foreign_dependency | Police information systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:DK:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:border_control:operator | Border and visa systems: the body that operates it | unrecorded | none | never checked |  |
-| record:DK:firearms_register:register | Firearms register: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:firearms_register:operator | Firearms register: the body that operates it | unrecorded | none | never checked |  |
-| record:DK:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:government_payroll:operator | Government payroll and personnel: the body that operates it | unrecorded | none | never checked |  |
-| record:DK:government_payroll:count | Government payroll and personnel: how many records it holds | unrecorded | none | never checked |  |
-| record:DK:electoral_management:register | Election management and results: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:central_bank:register | Central bank systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:central_bank:foreign_dependency | Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:DK:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | none | never checked |  |
-| record:DK:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:education:count | Education: how many records it holds | unrecorded | none | never checked |  |
-| record:DK:health_records:register | Health records: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | none | never checked |  |
-| record:DK:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
+| indicator:DK:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:DK:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:DK:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:DK:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:DK:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:DK:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:DK:population_m | param:DK:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:DK:gdp_eur_bn | param:DK:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:DK:gov_employment_k | param:DK:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:DK:elec_price_eur_mwh | param:DK:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:DK:renewables_pct | param:DK:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:DK:land_km2 | param:DK:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:civil_registry:count | Civil registry core: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:fingerprint_biometric:operator | Fingerprint biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:authentication_audit_log:operator | Authentication audit log: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:authentication_audit_log:count | Authentication audit log: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:intelligence:register | Intelligence services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:issuance_history:foreign_dependency | Document issuance history: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:judicial_criminal:foreign_dependency | Judicial & criminal justice: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:police_records:foreign_dependency | Police information systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:border_control:operator | Border and visa systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:firearms_register:operator | Firearms register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:government_payroll:operator | Government payroll and personnel: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:government_payroll:count | Government payroll and personnel: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:electoral_management:register | Election management and results: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:central_bank:foreign_dependency | Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:education:count | Education: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Denmark
 
-None.
+| Claim | What it answers | Checked by | Verdict | Reason |
+|---|---|---|---|---|
+| record:DK:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | claude-fable-5-1 | not supported | The quote is on the page and supports CFB being part of the Ministry of Civil Security and Emergency Preparedness, but the cited page nowhere mentions Dansk Beredskabskommunikation A/S or network operation; that clause is added without support from the cited source (it appears only on the uncited om-sine page). |
 
 ---
 
@@ -444,14 +446,13 @@ None.
 [^s44]: European Central Bank — Danish krone now available in all TARGET Services, 2025-04-23. Danish krone now available in all TARGET Services. <https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr250423~096ce05219.en.html>
 [^s45]: Danmarks Nationalbank — Overvågning af den finansielle infrastruktur 2025, 2026. Overvågning af den finansielle infrastruktur 2025. <https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025> ([archived](https://web.archive.org/web/20260513094446/https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025))
 [^s46]: Center for Beredskabskommunikation — Om SINE. Om SINE. <https://sikkerhedsnet.dk/om-sine> ([archived](https://web.archive.org/web/20260710203543/https://sikkerhedsnet.dk/om-sine))
-[^s47]: Center for Beredskabskommunikation — Om CFB. Om CFB. <https://sikkerhedsnet.dk/om-cfb>
-[^s48]: Beredskabsstyrelsen — Sirenevarsling. Sirenevarsling. <https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/> ([archived](https://web.archive.org/web/20260617225444/https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/))
-[^s49]: Retsinformation / Klima-, Energi- og Forsyningsministeriet — Bekendtgørelse af lov om Energinet (LBK nr 271 af…, 2023-03-09. Bekendtgørelse af lov om Energinet (LBK nr 271 af 09/03/2023). <https://www.retsinformation.dk/eli/lta/2023/271/xml>
-[^s50]: Uddannelses- og Forskningsstyrelsen — STADS. STADS. <https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/> ([archived](https://web.archive.org/web/20260519213542/https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/))
-[^s51]: Retsinformation / Indenrigs- og Sundhedsministeriet — Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025), 2025-03-12. Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025). <https://www.retsinformation.dk/eli/lta/2025/275/xml>
-[^s52]: Sundhedsdatastyrelsen — Fælles Medicinkort. Fælles Medicinkort. <https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort> ([archived](https://web.archive.org/web/20260616035826/https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort))
-[^s53]: Retsinformation / Styrelsen for Dataforsyning og Effektivisering — Adresseloven (LOV nr 136 af 01/02/2017), 2017-02-01. Adresseloven (LOV nr 136 af 01/02/2017). <https://www.retsinformation.dk/eli/lta/2017/136/xml>
+[^s47]: Beredskabsstyrelsen — Sirenevarsling. Sirenevarsling. <https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/> ([archived](https://web.archive.org/web/20260617225444/https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/))
+[^s48]: Retsinformation / Klima-, Energi- og Forsyningsministeriet — Bekendtgørelse af lov om Energinet (LBK nr 271 af…, 2023-03-09. Bekendtgørelse af lov om Energinet (LBK nr 271 af 09/03/2023). <https://www.retsinformation.dk/eli/lta/2023/271/xml>
+[^s49]: Uddannelses- og Forskningsstyrelsen — STADS. STADS. <https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/> ([archived](https://web.archive.org/web/20260519213542/https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/))
+[^s50]: Retsinformation / Indenrigs- og Sundhedsministeriet — Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025), 2025-03-12. Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025). <https://www.retsinformation.dk/eli/lta/2025/275/xml>
+[^s51]: Sundhedsdatastyrelsen — Fælles Medicinkort. Fælles Medicinkort. <https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort> ([archived](https://web.archive.org/web/20260616035826/https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort))
+[^s52]: Retsinformation / Styrelsen for Dataforsyning og Effektivisering — Adresseloven (LOV nr 136 af 01/02/2017), 2017-02-01. Adresseloven (LOV nr 136 af 01/02/2017). <https://www.retsinformation.dk/eli/lta/2017/136/xml>
 
-**Evidence grades:** 5 Strong, 55 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 5 Strong, 54 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "CZ-012",
+ "iso": "CZ",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:CZ:public_health_surveillance:operator",
+   "fact_sha256": "ff9a78ba12552354da8a2ef66635988774cddb93eddf948724b2b98b42d14f36",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 79a(1) of Act 258/2000 on both cited pages reads 'Jeho správcem je Ministerstvo zdravotnictví a provozovatelem Ústav zdravotnických informací a statistiky České republiky', i.e. Ministry of Health as controller and ÚZIS as operator of the Infectious Diseases IS, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2000-258"
+  },
+  {
+   "claim": "record:CZ:public_health_surveillance:register",
+   "fact_sha256": "a8ed23b83c459598b3fc5937c183416659e41aff7ff957af0a3f053fc4a27a61",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 79a(2) reads 'Součástmi Informačního systému infekčních nemocí jsou a) registr případů infekčních onemocnění a očkování', which is the printed component; the e-sbirka page confirms the system itself.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2000-258"
+  },
+  {
+   "claim": "record:CZ:breeder_documents:register",
+   "fact_sha256": "6199609e227c6b82c987f2d47331f385181265ad9326c4121757b90acc83bbd1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 8(1) of Act 301/2000 on both pages: the registry office keeps a 'sbírku listin' for each matriční kniha, consisting of the documents underlying each register entry. Matches the printed name and description.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F301%2F2025-01-01/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:breeder_documents:operator",
+   "fact_sha256": "407f2417155cd124b1edcb77728371a02c0197380282b0e6e81b397eb97c258e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The quote (§ 1b(1): Matriční informační systém ... jehož správcem je Ministerstvo vnitra) is verbatim on the cited page, but that page is the consolidation whose URL is dated 2027-01-01; the 2025-01-01 e-sbirka consolidation and the current zakonyprolidi text of Act 301/2000 contain no § 1b or 'Matriční informační systém', so whether this provision is in force on 2026-10-02 cannot be settled from ",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F301%2F2027-01-01/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:vehicle_licensing:operator",
+   "fact_sha256": "60dca1f8b03cd89d1ea13523205b3d0dbcaadc229ee2582c6199802729f795ca",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 124(2)(d) of Act 361/2000: 'Ministerstvo ... d) vede centrální registr řidičů a informační systém digitálního tachografu', and the act defines 'ministerstvo' as Ministerstvo dopravy; the e-sbirka page (§ 122(1)) adds that the ministry is správce of the central register.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2000-361"
+  },
+  {
+   "claim": "indicator:CZ:L2",
+   "fact_sha256": "4883fa8531153c9e87dc6b669a212282170d8b2767821877b94f3a67a6f8ea6e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 412/2005 § 4 sets the classification levels Přísně tajné, Tajné, Důvěrné, Vyhrazené in statute, with the harm test for each; both pages carry the quoted text. A statutory classification scheme exists, so 'Yes' is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2005-412"
+  },
+  {
+   "claim": "record:CZ:health_records:register",
+   "fact_sha256": "102f4d6e4601a25e44b9ccd075ae8d4692175e40cef4ee39e1915e624a13e1ab",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 81(1) of Act 378/2007: 'Ústav zřizuje systém eRecept jako informační systém veřejné správy', and § 13(1) defines 'Ústav' as Státní ústav pro kontrolu léčiv (SÚKL); the e-sbirka page (§ 13(3)(n)) confirms SÚKL establishes and operates the eRecept system.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2007-378"
+  },
+  {
+   "claim": "record:CZ:border_control:operator",
+   "fact_sha256": "46bef142dd3c1dbed6a9c029500a234bbeff84a51874605707828cb921f9ac43",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "§ 84(2) of Act 273/2008 supports that the Police Presidium operates the national component of SIS and performs the tasks of the authority exchanging supplementary information on SIS alerts, but neither page uses the word 'SIRENE' anywhere and the cited quote stops before the supplementary-information clause; the printed 'SIRENE function' is a label the source does not supply.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2008-273"
+  },
+  {
+   "claim": "record:CZ:geospatial:operator",
+   "fact_sha256": "0f513e5b322775b28a32c48e4e10957107480bfa929ffb37f02362ec443dee0d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 30(2) of Act 111/2009: 'Správcem registru územní identifikace je Český úřad zeměměřický a katastrální' names ČÚZK as controller of the territorial identification register (RÚIAN), matching the printed body.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2009%2F111%2F2026-01-01/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:business_registry:register",
+   "fact_sha256": "dc214aa916237f91892bf11b1f3109ad22a7cebdda7271bcc18182f1a999a11b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 1(3)-(4) of Act 304/2013: the Public Register is an IS of public administration, kept electronically, and 'Veřejný rejstřík vede soud (dále jen rejstříkový soud)'; the e-sbirka page lists the commercial register among the public registers. Matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2013-304"
+  },
+  {
+   "claim": "record:CZ:government_payroll:operator",
+   "fact_sha256": "40d4d89e7c033343f0c2c40f9525e930c296cb346d46f4913982c6cd75fdc672",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 180(2) of Act 234/2014 on both pages: 'Správcem informačního systému o státní službě je Úřad vlády', i.e. the Office of the Government is the controller, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2014-234"
+  },
+  {
+   "claim": "record:CZ:government_payroll:register",
+   "fact_sha256": "af68318d3bf06cc25b78a48b0f7a4552dfba021e3e113029ae4df7057d8b76a5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 180(1) establishes the 'informační systém o státní službě' for data needed to manage organisational matters of the service and 'služebních vztahů' (service relationships), matching the printed name and purpose.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2014-234"
+  },
+  {
+   "claim": "record:CZ:official_gazette:operator",
+   "fact_sha256": "890a8801453b176aba12002fa6499de050e7692fea421fec1bb8d904ea7ba7c7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 6(1) of Act 222/2016: 'Správcem elektronického systému Sbírky zákonů a mezinárodních smluv je Ministerstvo vnitra', naming the Ministry of the Interior as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2016%2F222%2F2026-08-29/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:official_gazette:register",
+   "fact_sha256": "be2584250850944d21f3de6a4963fad35fa6deadc33e520b979a2cdf6a32757c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 6(1) names the 'Elektronický systém Sbírky zákonů a mezinárodních smluv' as an IS of public administration; the printed name matches (the parenthetical 'e-Sbírka' is the site's own name, not in the quoted sentence, but the system name is exactly as on the page).",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2016%2F222%2F2026-08-29/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "indicator:CZ:K1",
+   "fact_sha256": "bbc4692fa492c83083cba701061e39fa2448c0938e92c5269b52b667dc93868a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 297/2016 § 14 establishes the Správa státních služeb vytvářejících důvěru as a state contributory organisation founded by the Agentura (DIA) to provide trust services for the needs of the Czech Republic, and sssvd.gov.cz states it is listed as a qualified trust service provider from 1 January 2024. A state body operates the qualified trust service, so 'Yes' is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2016-297"
+  },
+  {
+   "claim": "record:CZ:trust_services_pki:operator",
+   "fact_sha256": "5976b79837470f42a995fd258ea6bb44ad2972ebd80c6dcd3a41f29f7acf0688",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 14(2): 'Zřizovatelskou funkci vůči Správě vykonává Agentura', and § 1(c) defines 'Agentura' as Digitální a informační agentura (DIA); the e-sbirka page carries § 14(1) establishing the Správa. DIA as founder of the State Trust Services Administration is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2016-297"
+  },
+  {
+   "claim": "indicator:CZ:K2",
+   "fact_sha256": "32e45936e94b2ab89e1bcf4caff5a9e1b43d0f317526a200978da3bb20e65026",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 250/2017 § 20: the národní bod is an IS of public administration and 'Správcem národního bodu je Agentura' (DIA, defined in § 1); info.identitaobcana.cz describes NIA ID as a state-provided identification means. The scheme is state-operated, supporting 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2017-250"
+  },
+  {
+   "claim": "record:CZ:authentication_audit_log:register",
+   "fact_sha256": "a3be484cf377e3fbbe9b5f8c33767ed57a91af8c5b2a87dd5578e1939f8f4ac6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 21(2): the národní bod keeps as operational data at least ... 'c) záznam o využití údaje z národního bodu' (a record of use of data from the national point). The act names the system 'národní bod pro identifikaci a autentizaci', of which NIA is the abbreviation; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2017-250"
+  },
+  {
+   "claim": "record:CZ:digital_identity_credentials:register",
+   "fact_sha256": "db3bcecc476db42d4d21f1102451a4a74fa41f5e831efb7e77e80921311ff1e0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 3(1)(c) names the 'národní bod pro identifikaci a autentizaci (dále jen národní bod)', § 20(1) makes it an IS of public administration and § 20(2) says 'Správcem národního bodu je Agentura' (DIA per § 1). Name and administrator match the printed text.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2017-250"
+  },
+  {
+   "claim": "record:CZ:facial_biometric:register",
+   "fact_sha256": "40fd9f300434a71ec6dc14c5429c3d02d4c1758c98233688219e3694d2f2802f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 54(1) of Act 269/2021 on both pages: 'Evidence občanských průkazů je informačním systémem veřejné správy', matching the printed name and characterisation.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2021-269"
+  },
+  {
+   "claim": "record:CZ:issuance_history:register",
+   "fact_sha256": "40d40212e0f11cea112ae63371a7004a3058533dca726853bab425a680b6f495",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 56(3): for an invalid ID card the register keeps a) number/series, b) datum skutečného skončení platnosti, c) důvod skončení platnosti — invalid cards, the date and the reason, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2021-269"
+  },
+  {
+   "claim": "record:CZ:electoral_management:register",
+   "fact_sha256": "52fdadd319d153a5249193f85dca3083e08842dc1dd58f6d3b2e83f4c3168eb8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 22(1) of Act 88/2024: 'Zřizuje se informační systém správy voleb ... jako informační systém veřejné správy', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2024%2F88%2F2026-06-26/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:electoral_roll:operator",
+   "fact_sha256": "dbd1ba766d96cc9b172d0dd5a8bca18fa086bea5c897acc6bc3ba5bf2dfe24ef",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 22(1)-(2): 'Jeho správcem je Ministerstvo vnitra' and the system serves 'k zajištění evidence voličů'. ISSV is the abbreviation of the name the act gives; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2024-88"
+  },
+  {
+   "claim": "record:CZ:electoral_roll:register",
+   "fact_sha256": "f5c6b4f48c4102c269bee5da6bdcaf182af4475377cf0e4ece20fc4a88d6a2db",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 22(3): 'Součástmi informačního systému jsou a) seznam voličů, ...' — the voter list is a component of the election administration IS, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2024-88"
+  },
+  {
+   "claim": "indicator:CZ:L1",
+   "fact_sha256": "b3a90f3e1c15cff05674a504d25dfd4b8e73162d31310cdaa62fc36541a3bc02",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Decree 505/2025 (in force 1 Jan 2026) requires, for government cloud at the 'vysoká' level, customer data at rest stored only in EU/EFTA (Annex 3, 1.2) and at the 'kritická' level processing on Czech territory (Annex 4, 1.2); Act 365/2000 § 6m(2) reserves the highest level to the state cloud provider. Binding location rules exist but only for government cloud services at those levels, so 'Partly' ",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2025-505"
+  },
+  {
+   "claim": "indicator:CZ:L3",
+   "fact_sha256": "876b84c8a68caf728324d1aa51c85f155dd620b9a320cfcd395be285fe10dc78",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Decree 505/2025 on requirements for entry in the cloud computing catalogue, in force since 1 January 2026, requires at the 'kritická' level (Annex 4, 2.1) that the provider refuse foreign authorities' requests for customer data. That is a binding government-use cloud qualification scheme with immunity from non-EU requests; note the source calls it catalogue-entry requirements, not a 'certification",
+   "quote_found": true,
+   "checked_url": "https://www.e-sbirka.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2025%2F505%2F2026-01-01/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:CZ:border_control:register",
+   "fact_sha256": "df9d86c0908cb0525b88e6678afa12671ac946a244e42219b6c13c1c461fe071",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 158a(1) of Act 326/1999: the Ministry of Foreign Affairs operates an information system holding, among others, 'obrazový záznam, například fotografii' and 'otisky prstů' of the foreigner, with data in the scope of visa applications (§ 54). The printed description matches; 'visa information system' is a description, the act says only 'informační systém'.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/1999-326"
+  },
+  {
+   "claim": "record:CZ:crisis_management:register",
+   "fact_sha256": "751a1c3e2b2a4abde7c4991f4796c9ba5e5c1677de17a0f7a348f3d48577d051",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 26(1) of Act 240/2000: 'Informační systém krizového řízení je informačním systémem veřejné správy, jehož účelem je podpora orgánů krizového řízení', matching the printed name and purpose.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2000-240"
+  },
+  {
+   "claim": "record:CZ:vehicle_licensing:register",
+   "fact_sha256": "f72efe0654a0bca93deffefb7c55c0534a2fea35812ce9ee919466726a76dfd4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 4(1) of Act 56/2001: the Registr silničních vozidel is an IS of public administration 'jehož správcem je ministerstvo' (defined as Ministerstvo dopravy) and records 'silničních vozidel, vlastníků a provozovatelů těchto vozidel', as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2001-56"
+  },
+  {
+   "claim": "record:CZ:business_registry:operator",
+   "fact_sha256": "3fb9557ce4c572419315948f5b0420cdd6b3f9a0247c74ed66deafb7f87e4aa4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "§ 28(1) of Act 111/2009 supports DIA (Agentura, defined in § 7) as controller of the registr osob, but § 28(2) says the controller 'poskytuje editorům k přidělení identifikační číslo osoby' — it provides the identification numbers to the editors for assignment; the editors assign them. The printed 'assigns company identification numbers' attributes the assignment to DIA, which the source does not ",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2009-111"
+  }
+ ]
+}

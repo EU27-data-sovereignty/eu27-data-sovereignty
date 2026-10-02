@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "IE-033",
+ "iso": "IE",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:IE:electoral_management:operator",
+   "fact_sha256": "ce39aca3dcdd1e2aee65f2fabd4f23fb3514a3a1e06b0193d9e08e3cccb97cb2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Returning Officer guide states the Returning Officer's duty is to conduct the Dáil election in the constituency and ascertain and declare the results, which matches 'Returning Officers per constituency'.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/312963/3e85cb42-027b-4ede-8249-20112f9f652c.pdf"
+  },
+  {
+   "claim": "record:IE:electoral_management:register",
+   "fact_sha256": "8e216e65f95fb11bc773ce47f53099d9c6490e75e20d5aa61a95c68d5023cf2d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The guide names the Election Count Database System (Ecount) made available for the count, and its count chapter (sections 22-24) describes the physical sorting, counting and recounting of ballot papers, which supports 'used alongside the manual paper-ballot count'.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/312963/3e85cb42-027b-4ede-8249-20112f9f652c.pdf"
+  },
+  {
+   "claim": "record:IE:defence_command:foreign_dependency",
+   "fact_sha256": "4fb20a8c1de718d84a2c30cfde0a38ae32ec1146be18e95398da7f289d8c366d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The full sentence says NGWE allows the Defence Forces 'to operate a hybrid cloud strategy - securely accessing cloud services where required, as well as maintaining a secure on premise national CISN'. The source describes a hybrid of on-premise national data centres and cloud services; printing 'National infrastructure' alone drops the cloud component the source states, so the categorical label is",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf"
+  },
+  {
+   "claim": "record:IE:defence_command:operator",
+   "fact_sha256": "387165633a592d224d7985b6068b2fff9adff6a2ba05b042ea752ca9745486c3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quoted sentence does not itself name the operator, but the sentence immediately before it on the same page says 'the CIS Corps continued the implementation of the DF's Next Generation Working Environment (NGWE) project' for the DF Enterprise network, which supports 'Defence Forces CIS Corps'.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf"
+  },
+  {
+   "claim": "record:IE:defence_command:register",
+   "fact_sha256": "07b6583dd4f1652d1b258bb9781c08efd3dcdc58d2f7ee84048837f262c27c97",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same passage names the DF Enterprise network, the NGWE project and the 'on premise national Communications Information Services Network (CISN)', matching the printed names.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf"
+  },
+  {
+   "claim": "record:IE:intelligence:operator",
+   "fact_sha256": "a1c339edc414f4841f46e912494692569c9985bdd6c855a9dec36a6ec1abeef9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The source says the NSAC was established in 2019 by the Government to provide strategic analysis to the Taoiseach and Government; it does not say NSAC operates intelligence services or the Defence Forces Military Intelligence holdings named as the register. The page attributes intelligence work to Defence Forces Military Intelligence (J2), not NSAC.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf"
+  },
+  {
+   "claim": "record:IE:intelligence:register",
+   "fact_sha256": "996f2067b38cd70c585df8ef248bf987479ec594514cd6b2e761a71b289e2d2a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a register of that name.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf"
+  },
+  {
+   "claim": "indicator:IE:K2",
+   "fact_sha256": "5342f72273d45fb5e48b82c8d4bab4378fdd21db29ef2a131e87a1d8efa2c6aa",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Department of Social Protection annual report states MyGovID is 'the secure online identity authentication service provided by the department', i.e. operated by a state body, so 'Yes' is supported.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/static/documents/d05bae0e/20260915_-_DepartmentSocialProtection_AnnualReport_2025_EN_web.pdf"
+  },
+  {
+   "claim": "record:IE:digital_identity_credentials:count",
+   "fact_sha256": "d1d36abf3b355cb2451817315a52cb87cc76c3d8148702d7bf35174be6c53d79",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The report says 'over 3.2 million actively using their MyGovID account to access online services', matching the printed figure and wording.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/static/documents/d05bae0e/20260915_-_DepartmentSocialProtection_AnnualReport_2025_EN_web.pdf"
+  },
+  {
+   "claim": "record:IE:digital_identity_credentials:register",
+   "fact_sha256": "97d86671e4310f6f88e119c67038e24c72a5d33b7d8de38067b2ce6bf074640e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The report names MyGovID as the department's online identity authentication service.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/static/documents/d05bae0e/20260915_-_DepartmentSocialProtection_AnnualReport_2025_EN_web.pdf"
+  },
+  {
+   "claim": "indicator:IE:L2",
+   "fact_sha256": "2f544c1d4d8135097ea8f7f1d7ad3735f15f0e1cc39f17a55e7bb79d1da41e82",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The 2019 Cloud Computing Advice Note says some organisations have their own classification systems and 'there are no central classification rules in place except for information defined as top secret, see Department of Finance Circular 39/07'. Whether a Finance circular counts as a 'statute or binding regulation' is a judgment the source does not make, so 'Partly' is neither clearly supported nor ",
+   "quote_found": true,
+   "checked_url": "https://assets.per.gov.ie/documents/4468be59812f40dda7003116cf05f196_1.pdf"
+  },
+  {
+   "claim": "record:IE:electoral_roll:count",
+   "fact_sha256": "ee95ab79b2c033e91ee2f3b3df3a1f6fcee8c0bb559e8983a77ef4dd1cd92619",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Electoral Commission oversight report states the numbers registered to vote rose to 3.87 million in December 2024, matching the printed value and date.",
+   "quote_found": true,
+   "checked_url": "https://cdn.electoralcommission.ie/app/uploads/2025/04/30104313/Oversight-Report-on-the-Electoral-Registers_online_english_tagged.pdf"
+  },
+  {
+   "claim": "record:IE:electoral_roll:foreign_dependency",
+   "fact_sha256": "adb50a6c3a5e2010fe07d9ab8494cc3948f30f6ba971e7a19745a29df060a432",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote is one bullet in a list of LGERS project requirements ('Migration of project to DCC's Azure Public Cloud Tenancy') for a new central database that local authorities are still preparing to migrate to in 2025-2026; the page does not say the current 31 registers run there, nor does it identify Azure as a non-EU provider. Reaching 'Non-EU provider' needs outside knowledge and a future state ",
+   "quote_found": true,
+   "checked_url": "https://cdn.electoralcommission.ie/app/uploads/2025/04/30104313/Oversight-Report-on-the-Electoral-Registers_online_english_tagged.pdf"
+  },
+  {
+   "claim": "record:IE:vehicle_licensing:register",
+   "fact_sha256": "5008c987e38b17def0953cf27a5ea783a32f3125b8a8a8f9e22efde12debd9e6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The dataset page's description reads 'National Vehicle and Driver FILE (NVDF) Database containing details of all registered vehicle and driver details in Ireland', from the Department of Transport, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://datacatalogue.gov.ie/dataset/national-vehicle-and-driver-database"
+  },
+  {
+   "claim": "param:IE:gov_employment_k",
+   "fact_sha256": "a2247a5554037956e6239f3ae6a7b47b357e63f7336f22506fbf84d169c28ba4",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 150.77 thousand persons for IE, NACE O, 2024, which rounds to the printed 150.8 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=IE&time=2024"
+  },
+  {
+   "claim": "param:IE:gdp_eur_bn",
+   "fact_sha256": "aac7b1bb530d2ed223f16e7682a55357cefaf35c3317d549d529db7f7b69c75f",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 602440.9 million EUR for IE 2025, which scales to the printed 602.4 EUR bn.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=IE&time=2025"
+  },
+  {
+   "claim": "param:IE:renewables_pct",
+   "fact_sha256": "405b55ae9498f93f924d25c4e1a99c0cb94881fc6600bf1c86e963b80dbea087",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 41.7 % for IE, REN_ELC, 2025, matching the printed value; the API flags the value as provisional (status 'p').",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=IE&time=2025"
+  },
+  {
+   "claim": "param:IE:elec_price_eur_mwh",
+   "fact_sha256": "ac783ef5ca190414e064f0fd672b38669d35c6d7153539067689a8bacb9bf1fd",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.2552 EUR/kWh for IE, band MWH500-1999, excluding VAT, 2025-S2, which scales to the printed 255.2 EUR/MWh.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=IE&time=2025-S2"
+  },
+  {
+   "claim": "param:IE:land_km2",
+   "fact_sha256": "41f347c6c35cf5d09d067a80d806781c38d1358ccdb671719411c3dfa2977016",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 68655 km2 for IE, landuse L0008, 2026, matching the printed 68 655 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=IE&time=2026"
+  },
+  {
+   "claim": "param:IE:population_m",
+   "fact_sha256": "ddbb4324e393fa829f050890b2ac5a76255c9b59505d953bf43c7fa9f77051cb",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 5 510 565 persons for IE on 1 January 2026, which rounds to the printed 5.51 million.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=IE&time=2026"
+  },
+  {
+   "claim": "record:IE:business_registry:operator",
+   "fact_sha256": "46f0d87637a32bb4a2361d6987ec5a97f06a7ceefe18eb3a3b61aa4dc16a7f6b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page describes the CRO's functions (incorporation, business names, post-incorporation documents) and sits in the 'Offices and agencies' section of the Department of Enterprise, Tourism and Employment's site, which names the department on the page, supporting the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://enterprise.gov.ie/en/who-we-are/offices-agencies/companies-registration-office-cro-.html"
+  },
+  {
+   "claim": "record:IE:business_registry:register",
+   "fact_sha256": "eb7c8206968505c26711160f09b6a99b4cc481e2e27f78f90f907f0f6721d0ef",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states the CRO is 'the central repository of public statutory information on Irish companies, business names and limited partnerships', matching the printed description.",
+   "quote_found": true,
+   "checked_url": "https://enterprise.gov.ie/en/who-we-are/offices-agencies/companies-registration-office-cro-.html"
+  },
+  {
+   "claim": "record:IE:health_records:register",
+   "fact_sha256": "74861d740e0e083185ee4e3db854fecbc235b3addf47416d481f90f201ec5216",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The presentation is titled National Shared Care Record, names the MyHealth@IE programme and HSE contacts ([email address removed], HSE Health App), and defines the NSCR as a read-only digital record aggregated from various electronic sources, matching the printed name and description.",
+   "quote_found": true,
+   "checked_url": "https://iiop.ie/sites/default/files/2026-06/NSCR%20Presentation_10%20June%202026_IIOPWebinar.pdf"
+  },
+  {
+   "claim": "record:IE:land_property:count",
+   "fact_sha256": "6d5586bf0f7650b43e1699bcf5c141be2d924e07703ed9a5ecf382c75cbcf043",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both the 2024 and 2025 Tailte Éireann annual reports say Landdirect.ie gives access to '2.4 million Folios and associated spatial data', matching the printed figure; the 2025 report quote was also found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://tailte.ie/wp-content/uploads/2025/11/TE_AnnualReport2024_GA_EN.pdf"
+  },
+  {
+   "claim": "record:IE:land_property:operator",
+   "fact_sha256": "6e3fbe639882a4f8a9aac1c7cfb670bda8385dc9c2c42a7e35f59d0e3de35c5a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The 2024 annual report states that under the Tailte Éireann Act 2022, Tailte Éireann is a Civil Service body, and the same report says its Registration function is responsible for the Land Registry and Registry of Deeds.",
+   "quote_found": true,
+   "checked_url": "https://tailte.ie/wp-content/uploads/2025/11/TE_AnnualReport2024_GA_EN.pdf"
+  },
+  {
+   "claim": "record:IE:land_property:register",
+   "fact_sha256": "5b5ee9a52391b109a276b10631468c7c69c9cc93d0f9cedee8e4793ca9ab02ae",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The 2024 report says particulars are entered on folios which form the National Land Register and that the Registration function has responsibility for the Land Registry and the Registry of Deeds; the 2025 report quote on the digital National Land Register was also found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://tailte.ie/wp-content/uploads/2025/11/TE_AnnualReport2024_GA_EN.pdf"
+  },
+  {
+   "claim": "record:IE:public_finance:operator",
+   "fact_sha256": "277e6a07e1897f0c5f29071c77737e3e6c66541dd338fb0966a3631b6570baeb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The C&AG chapter states the Department of Finance manages the Central Fund of the Exchequer, and throughout attributes the FMSS programme and system to the National Shared Services Office (NSSO), matching both parts of the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.audit.gov.ie/media/jqinw3i5/6-financial-management-shared-services-implementation-progress.pdf"
+  },
+  {
+   "claim": "record:IE:public_finance:register",
+   "fact_sha256": "2ad8fdb3ac35924a02495d8198746fced5453d5d511146da45f28c0b6eacce9b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the Exchequer's transfer to FMSS'. The source does not say the Exchequer is on FMSS.",
+   "quote_found": true,
+   "checked_url": "https://www.audit.gov.ie/media/jqinw3i5/6-financial-management-shared-services-implementation-progress.pdf"
+  },
+  {
+   "claim": "record:IE:central_bank:foreign_dependency",
+   "fact_sha256": "17ffc3b7ca742be5f36eda7a6ee8499f9823f0d723c95019303ab6dabfb01b34",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quoted sentence only names the ECB Guideline as the legal instrument, but the same page states T2 is 'the Eurosystem's real-time gross settlement (RTGS) system' running on 'a single technical platform' of which TARGET2-Ireland is the Irish component, which supports an EU (Eurosystem) provider rather than national infrastructure.",
+   "quote_found": true,
+   "checked_url": "https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2"
+  },
+  {
+   "claim": "record:IE:central_bank:operator",
+   "fact_sha256": "aeabe8fe76c0d2a122ed9fac96fc8915214a67a1385f8817f4a7238d461d4286",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states 'The Irish component system of T2, operated by the Central Bank of Ireland, is TARGET2-Ireland'; the annual report quote on the Central Bank's data centre transition was also found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2"
+  }
+ ]
+}

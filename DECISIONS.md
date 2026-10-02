@@ -2017,8 +2017,16 @@ again before a deploy: a push to `main` shipped whatever the registers held.
 - `python3 model/factcheck.py gate` on the current data prints `0 of 1390 printed facts checked,
   supported, checker ≠ author` and exits 1. So `main` cannot deploy until the first run is recorded.
 - `factcheck.py prepare` plans 58 batches, all for claude-fable-5-1.
-- The first run: NOT YET. It needs the owner's OK for its cost. It is verified when `factcheck.py gate`
-  prints `1390 of 1390` and exits 0, and a deploy passes the new step.
+- The first run: 2026-10-02.
+  - The pilot `wf_074137f6-b8e` covered 30 facts. The full run `wf_da123db1-a4e` covered the other
+    1,360, in 57 batches; 16 of them were re-run after a session limit.
+  - Every response in the agent transcripts is from `claude-fable-5-1`.
+  - Result: 1,309 supported. 81 not confirmed (48 not supported, 33 unclear), which are withheld under
+    #89.
+  - `python3 model/factcheck.py gate` prints `1309 of 1309 printed facts checked, supported, checker ≠
+    author` and exits 0.
+  - Measured cost: about $250–370 from the transcripts' token usage, more than the $185–280 estimated
+    from the pilot. A deploy passing the new step is NOT YET verified.
 
 *Would change if:* authors are recorded for the earlier facts (re-research), or a third independent model
 family is added, which could become the checker for unrecorded facts. Also if `evidence.assess` should
@@ -2111,7 +2119,8 @@ Resolving a disagreement by editing a verdict: only a changed fact, checked agai
   verdict prints the fact. Every current disagreement is absent from the printed facts, and a withheld
   fact does not block the gate.
 - After `./run.sh data`, both pilot disagreements on Germany are disputed in the bundle.
-- The full run: NOT YET.
+- The full run (`wf_da123db1-a4e`): 81 facts are withheld, all listed in `docs/fact-check-audit.md`. The
+  gate exits 0 at 1,309 of 1,309. `FACT_FLOOR` went from 1390 to 1309, with the reason recorded beside it.
 
 *Would change if:* withheld facts turn out to be mostly true facts that the checker could not fetch. Then
 an *unclear* verdict could trigger a retry route instead of being withheld outright.

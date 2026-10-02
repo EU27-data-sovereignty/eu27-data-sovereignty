@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "FI-023",
+ "iso": "FI",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:FI:electoral_roll:operator",
+   "fact_sha256": "a2ab1db7f9ef0e2fc54f755ae946b170e53d8c268d10f6027b9ac69b5cc5e6d4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The quote is on the page and DVV is named as controller and as the body that establishes the voting register, but the same page says the voting register is part of the election information system 'jonka ylläpidosta ja toiminnasta vastaa Oikeusrekisterikeskus' (maintained and operated by the Legal Register Centre). The source is ambiguous on who operates it as opposed to who establishes/controls it",
+   "quote_found": true,
+   "checked_url": "https://dvv.fi/aanioikeusrekisterin-tietosuoja"
+  },
+  {
+   "claim": "record:FI:electoral_roll:register",
+   "fact_sha256": "ebcdcf5bcffebf76e7f0146b35752025499120f13fcb28d77d400a715c0649b1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states that under the Election Act an election-specific 'äänioikeusrekisteri' is established from the Population Information System; the register name matches as printed.",
+   "quote_found": true,
+   "checked_url": "https://dvv.fi/aanioikeusrekisterin-tietosuoja"
+  },
+  {
+   "claim": "indicator:FI:K1",
+   "fact_sha256": "d9f97219d1978c3fecbf6d32f9046024efb0adfd8ee0b4b0b0a9932f957ed59d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The DVV page presents the Digital and Population Data Services Agency's own root/CA certificates, and Act 661/2009 §61 (opendata.finlex XML, quote found) assigns the citizen certificate and related directory/revocation services by statute to the state agency (then Population Register Centre). Both support a state body operating the government PKI root.",
+   "quote_found": true,
+   "checked_url": "https://dvv.fi/en/ca-certificates"
+  },
+  {
+   "claim": "record:FI:civil_registry:register",
+   "fact_sha256": "aae04dd7ca7ec0d5b6bd309e8f2700f123fed7d059fad9c08c025875aaf9e31f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 661/2009 §3 (text embedded in the finlex page payload) says 'Väestötietojärjestelmä on yleinen valtakunnallinen perusrekisteri' containing data on persons, real estate, buildings and dwellings (and administrative divisions); the dvv.fi English page quote also matches. The printed statement adds nothing the source does not say.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2009/661"
+  },
+  {
+   "claim": "indicator:FI:K2",
+   "fact_sha256": "4badf0e6514edb6102d1593d201ced72386be3a8cf702c630dc726861dae9e53",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 571/2016 §4 says the Population Register Centre (state agency, now DVV) produces the support services in §3(1)(1-7), and §3(1)(4) is the natural-person identification service; the dvv.fi page (quote found) shows Suomi.fi-tunnistus as DVV's mandatory service for statutory tasks. Supports a state-operated national eID scheme.",
+   "quote_found": true,
+   "checked_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2016/571/fin@"
+  },
+  {
+   "claim": "record:FI:civil_registry:operator",
+   "fact_sha256": "e4eede5c7ab2ebb1cb937ed19ac3188a22f575d9e6d9c5c4e28d0a245399974f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 661/2009 §4(2) states DVV is responsible for the controller duties other than those in subsection 1, and the dvv.fi privacy notice names DVV (with the State Department of Åland) as controller. The printed statement omits Åland's co-controller role but asserts nothing the source contradicts.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2009/661"
+  },
+  {
+   "claim": "param:FI:gov_employment_k",
+   "fact_sha256": "4a371aca5603e4cf8c566bfe3bf993ce9aafc7e152af3b4aef781d4f60e218be",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 149.1 (THS_PER) for FI, NACE O, EMP_DC, 2024, matching the printed 149.1 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=FI&time=2024"
+  },
+  {
+   "claim": "param:FI:gdp_eur_bn",
+   "fact_sha256": "e84183d27aecad982cbbc49e7740f12c39fc97108b2e3b486aa2a28c231d484f",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 281783.0 million EUR for FI 2025, which scales and rounds to 281.8 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=FI&time=2025"
+  },
+  {
+   "claim": "param:FI:renewables_pct",
+   "fact_sha256": "1e46529b29ab7ebdb6d8f115ffecd0e08b831f291c4e3f0bddf1eeef8276fd56",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 56.6 % for FI, REN_ELC, 2025 (flagged 'p', provisional), matching the printed 56.6 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=FI&time=2025"
+  },
+  {
+   "claim": "param:FI:elec_price_eur_mwh",
+   "fact_sha256": "ff4846062bc046c4ee59f8f6df02595a52c7ab6d84296673e6dc48ba89d9b474",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.0748 EUR/kWh for FI, band MWH500-1999, excluding VAT, 2025-S2, which is 74.8 EUR/MWh as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=FI&time=2025-S2"
+  },
+  {
+   "claim": "param:FI:land_km2",
+   "fact_sha256": "c3f659b5f24ee1efbfd525e89e41d7e50e3fca3e48230c792d930d0e0f0284bc",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 303109 km² for FI, landuse L0008, 2026, matching the printed 303 109 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=FI&time=2026"
+  },
+  {
+   "claim": "param:FI:population_m",
+   "fact_sha256": "39012a13eac77ee0e79761ad8bac8be6987c5e5f645c8309c31e9835483a3bd8",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 5652881 persons for FI on 1 January 2026, which rounds to 5.65 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=FI&time=2026"
+  },
+  {
+   "claim": "indicator:FI:L1",
+   "fact_sha256": "dfb857a959d11d67fd4fcea52115595003bbabb89e5f961dfd901d16bef33511",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 10/2015 requires that facilities, equipment and services directly belonging to the security network be located and produced in Finland, with management and supervision in Finland (with an exception for operational necessity). A statutory localisation rule that covers only the security network, not all government data, supports 'Partly'.",
+   "quote_found": true,
+   "checked_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2015/10/fin@"
+  },
+  {
+   "claim": "indicator:FI:L2",
+   "fact_sha256": "2fb124751191322e4af4bf50f69507c19ebdb51a1926f9adfa63ddc55414b4da",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 906/2019 §18 obliges state authorities, courts and boards to security-classify documents, and Decree 1101/2019 §3 (quote found) defines security classes I-IV. The classification scheme is established in binding law, supporting 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2019/906/fin@"
+  },
+  {
+   "claim": "record:FI:facial_biometric:register",
+   "fact_sha256": "9fdee013738f48c61fedbb7ebe883fd1de81f3d4cbb77271be571d87918d4a00",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The police document says fingerprints, the person's photograph and signature sample are stored in the passirekisteri; the register name matches as printed.",
+   "quote_found": true,
+   "checked_url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861"
+  },
+  {
+   "claim": "record:FI:firearms_register:register",
+   "fact_sha256": "6573c35d4913b059029383a51627a9ddb343f73106ee4dfc6da5115b2918df8c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 2.9.1 'Asetietojärjestelmä' states the firearms information system manages acquisition and possession permits over their life cycle (quote matches after removing PDF line-break hyphenation). Name matches as printed.",
+   "quote_found": true,
+   "checked_url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861"
+  },
+  {
+   "claim": "record:FI:issuance_history:register",
+   "fact_sha256": "46fa101356f9dad2efa290eaa28a57ae1115b6f70c98c2e994b64aa5b2d9b563",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 2.9.2 names the Henkilökortti- ja passijärjestelmä (Heko-Passi) as managing ID card and passport applications, decisions and permit documents over their life cycle; matches as printed.",
+   "quote_found": true,
+   "checked_url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861"
+  },
+  {
+   "claim": "record:FI:police_records:register",
+   "fact_sha256": "5c307cefabe3c84ef9837ae874de031fccb4a42c30863ae75c9bdaf57fc7dbbd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 2.4.1 'Poliisiasiaintietojärjestelmä PATJA' describes crime reports and other police records being entered into it (quote matches after removing PDF line-break hyphenation). Name matches as printed.",
+   "quote_found": true,
+   "checked_url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861"
+  },
+  {
+   "claim": "record:FI:fingerprint_biometric:register",
+   "fact_sha256": "1f793f56700f602bc295b56672ef4367a1339d7d8e96350ca4661f2d9dfd8b67",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The police document says fingerprints taken at passport application are stored in the passirekisteri, supporting the printed name. The second citation (poliisi.fi advice page, quote also found) says ID-card fingerprints go to the henkilökorttirekisteri, a different register, but the printed value is backed by the PDF.",
+   "quote_found": true,
+   "checked_url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861"
+  },
+  {
+   "claim": "indicator:FI:C2",
+   "fact_sha256": "bcf8454f7a99e92ce25eba23003f190aee280cbb8da23e48bfb693ba83c7cf7d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both pages present operating services: a virtual data centre service 'owned, operated and managed by Erillisverkot' for authorities and central government, and the Turvapilvipalvelu as a fully domestic cloud separate from the public internet; the pages' footer states Erillisverkot is wholly state-owned. Supports an operating government cloud platform.",
+   "quote_found": true,
+   "checked_url": "https://www.erillisverkot.fi/palvelut/virtuaalinen-konesali/"
+  },
+  {
+   "claim": "indicator:FI:C1",
+   "fact_sha256": "e2fe721eab720ad4ca1d150e23c47b3d98c7addb95ed2262c530ca4431361cae",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Erillisverkot describes itself as a wholly state-owned special-purpose company owning 15 underground facilities containing data centres, the 2025 annual report reports a new data centre taken into customer use, and Act 10/2015 §6 confirms it is wholly state-owned (all quotes found). Supports state-operated data centres in operation.",
+   "quote_found": true,
+   "checked_url": "https://www.erillisverkot.fi/suomalainen-data-turvaan-suomeen/"
+  },
+  {
+   "claim": "record:FI:government_payroll:register",
+   "fact_sha256": "1292891e666466d8e7ee9f952c3060124ec3617d1da826b623ae3a6dba8d04a7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 305/1991 (text embedded in the finlex page payload) lists the Government Shared Services Centre for Finance and HR's data on budget-economy agencies' financial and HR administration, travel administration, planning and organisation; the printed description matches. Note the printed answer names a data holder, not a register name.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/1991/305"
+  },
+  {
+   "claim": "record:FI:breeder_documents:register",
+   "fact_sha256": "31f3102d7e2e835b1ff0c033dd0dec330969a40a30ee38528dfc32c8fb0b9819",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 661/2009 §3(2) says the Population Information System consists of the national system and the regionally organised document and similar data sets not taken into the system in digital form; the printed statement restates this.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2009/661"
+  },
+  {
+   "claim": "record:FI:geospatial:register",
+   "fact_sha256": "7929e78dc441c8afa0ae84b7e1e84a6b1da75e4ce0a47e057f59149f6b626007",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 661/2009 §15 says data on registered building projects and buildings are recorded in the Population Information System; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2009/661"
+  },
+  {
+   "claim": "record:FI:trust_services_pki:register",
+   "fact_sha256": "86b095d2d64ad0559d2b15f146f0ce385a2eb9e3b9e7d90b26cb9949b987e208",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 661/2009 says DVV keeps a certificate register of the personal certificates it issues, as provided for in Regulation (EU) 910/2014 (eIDAS), and is its controller; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2009/661"
+  },
+  {
+   "claim": "record:FI:authentication_audit_log:register",
+   "fact_sha256": "246372e26cf4b2182b160e5fe4280ab39bc8f238eca4f592711cf8ad16a8cac8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 571/2016 requires DVV to keep a log register of processing of data stored from use of the support services in §3(1)(1-7); §3(1)(4) of the same act (checked in the opendata XML) is the natural-person identification service, so '(incl. identification)' is in the source.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2016/571"
+  },
+  {
+   "claim": "record:FI:beneficial_ownership:register",
+   "fact_sha256": "3643fdb88154663634f352dc58dc3a84e9c2969aeb5879d0cd5c415cd3675349",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 650/2019 gives Customs the right to obtain from the PRH Trade Register, among other data, 'kaupparekisterin edunsaajista rekisteröitävät tiedot' (the data registered on beneficial owners). The statute grants a right of access rather than describing actual transfers, but the printed statement is a fair reading of the source.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2019/650"
+  },
+  {
+   "claim": "record:FI:border_control:register",
+   "fact_sha256": "89fc4e60445667c16153ac51b1801ab2b7704bb4d6ee325b0554cd908588a894",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 615/2020 says the national visa information system stores data on the processing of and decisions on short- and long-term visas; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2020/615"
+  },
+  {
+   "claim": "record:FI:residence_permits:operator",
+   "fact_sha256": "3cf6e9ef9d2222980681595c6eba15448f19f67544204fddb90e58b07350a2da",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 615/2020 says each authority is controller of the data it stores in the aliens-affairs case management system (National Police Board for police, Border Guard HQ for the Border Guard) and the Finnish Immigration Service is controller of international-protection registration data; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2020/615"
+  },
+  {
+   "claim": "record:FI:residence_permits:register",
+   "fact_sha256": "90dfdc7eb001df4bfb1c82aab0495d0ca29bb10f6f4b86a81ad68902ba751ac3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 615/2020 says the ulkomaalaisasioiden asiankäsittelyjärjestelmä stores immigration data other than short-term visa processing and decisions; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2020/615"
+  }
+ ]
+}

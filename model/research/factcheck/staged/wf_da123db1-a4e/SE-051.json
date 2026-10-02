@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "SE-051",
+ "iso": "SE",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "indicator:SE:K1",
+   "fact_sha256": "df68e94148da2be60ecfcf2adba282b75dd28e3a69f196bad23e1b706d8a2d7d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "SOU 2023:61 says Efos (Försäkringskassan's E-identitet för offentlig sektor) is notified at eIDAS level high but is an employee e-service credential (e-tjänstelegitimation). Nothing on the page addresses the root of a government PKI or a qualified trust service, so it does not answer K1 with 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/HBB361.html"
+  },
+  {
+   "claim": "indicator:SE:K2",
+   "fact_sha256": "0945c8c6f8d0980ee685c9db13dc99da4bd0788da31f557e991e61e57f17be74",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The quote is the Government's proposal in Prop. 2025/26:250 that the Act on state e-ID enter into force on 1 December 2026, i.e. a state-operated scheme is legislated but not in operation as of today. The source neither states current state operation nor a partial one, so whether this maps to 'Partly' is ambiguous without a rubric the page does not supply.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/HD03250.html"
+  },
+  {
+   "claim": "indicator:SE:C2",
+   "fact_sha256": "fb3739eb85bb145e3bf3f94409c78f0419343d09ff6468c4a791b7b802fcb336",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "SOU 2025:13 records that Medlingsinstitutet has a cooperation agreement with Försäkringskassan for the cloud services SAFOS Mötestjänst and SAFOS Samarbetsplattform (in use, not announced), and Förordning (2024:1005) om samordnad och säker statlig it-drift defines the coordinated state IT-operation offering with Försäkringskassan as coordinating authority. Together they show a state-run cloud offe",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/HDB313.html"
+  },
+  {
+   "claim": "record:SE:government_payroll:count",
+   "fact_sha256": "585e0674027c32e13b7bc9eaaea6613f0ef295fb214a16cd798855d13394b27c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "SOU 2025:13 section 7.2.1 states that in 2023 SSC's services covered about 1.5 million payslips ('cirka 1,5 miljoner lönespecifikationer'), which matches the printed figure and unit.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/HDB313.html"
+  },
+  {
+   "claim": "record:SE:government_payroll:operator",
+   "fact_sha256": "6b57ac176f760a77dacc7e8ed9a1e670954301f7492f698af28bf31ab340b630",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says that in 2023 SSC (Statens servicecenter) provided administrative support services to 167 agencies, of which payroll services to 143 agencies, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/HDB313.html"
+  },
+  {
+   "claim": "record:SE:government_payroll:register",
+   "fact_sha256": "e12c8f8fab591dba12f5152db6a86bfd2c98816a35e4f32c2529f039eda12d77",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "A table note in SOU 2025:13 attributes missing FTE and cost-per-FTE statistics in Brå's 2023 annual report to an outage in 'Statens Servicecenter Primula', naming Primula as SSC's personnel/payroll system.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/HDB313.html"
+  },
+  {
+   "claim": "indicator:SE:C1",
+   "fact_sha256": "340faebbbeb5e8055272782f576cfca8375cdd3dee1f41c0c7529e5c3693a82b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "SOU 2021:1's survey found 58 percent (100 of 158) of state agencies have their own data centres (220 in total), and Förordning (2024:1005) names Försäkringskassan, Lantmäteriet, Skatteverket and Trafikverket as supplier authorities providing IT operation based on their own IT operations. Both support state-operated data centres in operation.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/ZZB31.html"
+  },
+  {
+   "claim": "record:SE:issuance_history:count",
+   "fact_sha256": "864d39545c2e811ee4ce2e132b62fcb2d3dd46cefefef8a360ace57aaccabed8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Prop. 2025/26:250 section 13.3.2 says applications for Skatteverket's identity card for registered residents are today at about 170,000 identity cards annually, matching the printed count and issuer.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/hd03250.html"
+  },
+  {
+   "claim": "record:SE:official_gazette:register",
+   "fact_sha256": "ece35085765903eee70c38516ce7ee50ddb7fa8f15a7eae1d45b1bd49e35a339",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lag (1976:633) om kungörande av lagar och andra författningar provides that the Government shall ensure Svensk författningssamling is published electronically on a dedicated website and that a statute is promulgated when published there, as printed.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/sfs-1976-633.html"
+  },
+  {
+   "claim": "record:SE:facial_biometric:register",
+   "fact_sha256": "32d4ff6ca39bec08dc62ffc1582c1a42f254a27dd0fbaafbe49ea150a30cc149",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Passförordning (1979:664) § 23 requires the Police Authority to keep a passport register and to release a photograph of an individual from the passport register on request, so the register holds holders' photographs as printed.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/sfs-1979-664.html"
+  },
+  {
+   "claim": "record:SE:issuance_history:register",
+   "fact_sha256": "b91510f61f8691bb57521c554faa85de2006ca36a71ae016aa8527fd9994badb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Passförordning (1979:664) § 23 states that Polismyndigheten shall keep a passport register (passregister); a single national authority keeping one register supports the printed description, with 'central' a fair paraphrase rather than an added fact.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/sfs-1979-664.html"
+  },
+  {
+   "claim": "record:SE:breeder_documents:register",
+   "fact_sha256": "4005bf77ad6ae55b56bfc53600ad1c0be9cb1a1baeb57c349e183dc5cac56135",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Folkbokföringslag (1991:481) § 1 says marriages, births and deaths in the country shall be registered and that Skatteverket is responsible for folkbokföring and that registration, matching the printed register and body.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/sfs-1991-481.html"
+  },
+  {
+   "claim": "record:SE:police_records:register",
+   "fact_sha256": "483db4646b29ecef645fc3934155e1b5e78dbc0e6150c0b0027519b11f9217e2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lag (1998:621) om misstankeregister § 1 says Polismyndigheten shall keep a register of persons reasonably suspected of crimes (misstankeregistret) and is controller, as printed.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/sfs-1998-621.html"
+  },
+  {
+   "claim": "record:SE:land_property:operator",
+   "fact_sha256": "117a8714ccf958d59ad934ff35503802f1192d367006a16c6ab8508145aa0b19",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lag (2000:224) says the state cadastral authority is controller for personal data in fastighetsregistret, and Förordning (2000:308) § 2 says Lantmäteriet is responsible for operating and managing the register; together they support the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2000224-om-fastighetsregister_sfs-2000-224/"
+  },
+  {
+   "claim": "record:SE:land_property:register",
+   "fact_sha256": "adbfd4d5157fd8841a0a6e755300bf20478343e7201a12c55290cfbbefadf1d3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Förordning (2000:308) om fastighetsregister and Lag (2000:224) both name the register 'fastighetsregistret' kept by automated processing, as printed.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/sfs-2000-308.html"
+  },
+  {
+   "claim": "record:SE:business_registry:register",
+   "fact_sha256": "d97d7cda729922ce6f238788785b01eec91e0e6b6304cefa8fdda79761914ea0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Aktiebolagsförordning (2005:559) states Bolagsverket is controller for personal data in aktiebolagsregistret, and Aktiebolagslag (2005:551) refers to registration with Bolagsverket in aktiebolagsregistret, matching the printed name and controller.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/aktiebolagsforordning-2005559_sfs-2005-559/"
+  },
+  {
+   "claim": "record:SE:crisis_management:register",
+   "fact_sha256": "92f6fd07d8eb6de1330245ff40a133b0f48e156f2498205ea7f1710f91111a78",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Förordning (2008:1002) med instruktion för Myndigheten för civilt försvar § 7 b says the agency shall coordinate and develop 'systemet för varning och information till allmänheten' under Lag (2023:407), which is the system name printed.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/sfs-2008-1002.html"
+  },
+  {
+   "claim": "record:SE:beneficial_ownership:register",
+   "fact_sha256": "2b57bae6a03f0fe589234355757cfa726e515c21b265b13efc08b47dba56af63",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lag (2017:631) om registrering av verkliga huvudmän 2 kap. 3 § requires legal persons to notify Bolagsverket for registration in registret över verkliga huvudmän, supporting the printed name and keeper.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/sfs-2017-631.html"
+  },
+  {
+   "claim": "record:SE:public_health_surveillance:operator",
+   "fact_sha256": "73dd79644623b31541eceb2cc0c7dd5f5e4028b2dccad0c84ccbb25fb240f46b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Förordning (2021:248) med instruktion för Folkhälsomyndigheten § 16 says the agency shall coordinate, monitor and develop communicable disease control at national level, and Smittskyddslag (2004:168) says Folkhälsomyndigheten is responsible for national coordination of smittskyddet, as printed.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/sfs-2021-248.html"
+  },
+  {
+   "claim": "indicator:SE:L2",
+   "fact_sha256": "8eda8052c5419da8a4f41186ed39086e51e2690b3fffee25dd8f77237b413ddb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Säkerhetsskyddslag (2018:585) sets the four security classes (kvalificerat hemlig, hemlig, konfidentiell, begränsat hemlig) in statute and Säkerhetsskyddsförordning (2021:955) applies them, so the classification scheme is established in a statute.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/sakerhetsskyddslag-2018585_sfs-2018-585/"
+  },
+  {
+   "claim": "record:SE:civil_registry:operator",
+   "fact_sha256": "58df149b8fbd1f2539d6777174964f4094d814df6541e1fa439172fba3bb0f72",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Folkbokföringsdatalag (2026:126) makes Skatteverket controller for processing under that act, and Folkbokföringslag (1991:481) § 1 says Skatteverket ansvarar för folkbokföring (the riksdagen.se quote differs from the page only in the initial capital of 'Vigsel'); both support the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/sfs-2026-126.html"
+  },
+  {
+   "claim": "record:SE:digital_identity_credentials:operator",
+   "fact_sha256": "ab58e50fc8929146494502f68c2bb0881929d523a0e0d47a4456cc292f7eea24",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lag (2026:1358) om statlig e-legitimation och elektronisk identifiering 3 kap. 5 § designates Polismyndigheten to keep the register of state e-ID cases by automated processing, supporting the printed operator; note the page marks the act as entering into force 2026-12-01, so operation is prospective as of today.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/sfs-2026-1358.html"
+  },
+  {
+   "claim": "record:SE:digital_identity_credentials:register",
+   "fact_sha256": "960e767c083d70528db7ed3122e800fb67ddfbde61f5f6fea2409625cc00c6c3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same section is headed 'Register över ärenden om statlig e-legitimation' and requires the Police Authority to keep that register, matching the printed name; the act enters into force 2026-12-01.",
+   "quote_found": true,
+   "checked_url": "https://data.riksdagen.se/dokument/sfs-2026-1358.html"
+  },
+  {
+   "claim": "param:SE:gov_employment_k",
+   "fact_sha256": "04e26fbaa033aaf961686992813387baddededf932ab5d1fd0ed49d881b57b8e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 245.0 for nama_10_a64_e, EMP_DC, NACE O, THS_PER, SE, 2024, matching the printed 245.0 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=SE&time=2024"
+  },
+  {
+   "claim": "param:SE:gdp_eur_bn",
+   "fact_sha256": "9fb121c0f135ef61e79a580df02dcb4f55f05d97dc0dbe4939d1883a5d6f5342",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 600390.8 million EUR for B1GQ, CP_MEUR, SE, 2025, which scales to 600.4 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=SE&time=2025"
+  },
+  {
+   "claim": "param:SE:renewables_pct",
+   "fact_sha256": "f0b480f89967867d000a24d248e629ce9be7d63a457a63fbc3d8fb876ce52c4d",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 89.2 for nrg_ind_ren, REN_ELC, PC, SE, 2025, matching the printed 89.2 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=SE&time=2025"
+  },
+  {
+   "claim": "param:SE:elec_price_eur_mwh",
+   "fact_sha256": "fbbdec67e31e3edf1e8740f40d4bf89e899fc6d7a5ad8df0e1cd1c36b4741d75",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.097 EUR per kWh for band MWH500-1999 excluding VAT, SE, 2025-S2, which is 97.0 EUR/MWh as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=SE&time=2025-S2"
+  },
+  {
+   "claim": "param:SE:land_km2",
+   "fact_sha256": "8fffec1b720314fac670b29b18a31c103a9b556c3490001099fba8efc2f0271c",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 407300 km² for reg_area3, L0008, SE, 2026, matching the printed 407 300 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=SE&time=2026"
+  },
+  {
+   "claim": "param:SE:population_m",
+   "fact_sha256": "f44357b0a949c0f4a5ba60dfe9dde77faedf8f4e0b808d5dd1b7198f15ec6de2",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 10605529 persons for tps00001, JAN, SE, 2026, which rounds to 10.61 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=SE&time=2026"
+  },
+  {
+   "claim": "record:SE:judicial_criminal:register",
+   "fact_sha256": "717452d899396ef04729606b6af3e45bff5ee3c517684fb9e7dcc3bda6d1984d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lag (1998:620) om belastningsregister § 1 says Polismyndigheten shall keep a belastningsregister and is controller, and polisen.se describes the register's contents; both support the printed name and keeper.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1998620-om-belastningsregister_sfs-1998-620/"
+  }
+ ]
+}

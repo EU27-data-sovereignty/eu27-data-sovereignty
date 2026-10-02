@@ -104,7 +104,8 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
 - **Never admit unreviewed labels.** Categorical values (foreign dependency, indicator values) need an
   agreeing verdict in `model/research/dependency_review/` or the indicator `review` block (#79). Seven of the
   eight "Dependent" placements in the first, unreviewed ranking did not survive review.
-- **The security gate blocks email-shaped strings.** They have come in through archive URLs. Archived
+- **The security gate blocks email-shaped strings.** They have come in through archive URLs, and through a
+  fact checker quoting a contact address (`factcheck._clean` now removes them at staging). Archived
   copies are accepted only for exactly the requested host (`research.snapshot_matches`). Fix the data;
   never bypass the gate.
 - **Any change to a printed fact needs `/factcheck` before pushing to `main`** (#87). The deploy's

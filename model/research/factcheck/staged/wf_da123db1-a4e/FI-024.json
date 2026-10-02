@@ -1,0 +1,40 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "FI-024",
+ "iso": "FI",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:FI:business_registry:operator",
+   "fact_sha256": "a897579162c857980fb4320e812dd400093227a08fd7bc321eea0bff3aeb1e71",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Kaupparekisterilaki 564/2023 page on finlex.fi (fetched raw; the quote sits in the rendered statute payload, and the opendata.finlex.fi XML repeats it) contains verbatim 'Rekisteripitäjänä on Patentti- ja rekisterihallitus, jäljempänä rekisteriviranomainen', i.e. the Trade Register Act names the Finnish Patent and Registration Office as registrar, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2023/564"
+  },
+  {
+   "claim": "record:FI:business_registry:register",
+   "fact_sha256": "34462e39309464de5cd77626a2c178fd34b80e9a802ff40d7507f84f3697d5ca",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same statute page contains verbatim 'Rekisteriviranomainen pitää tietojärjestelmässään julkista diaaria kaupparekisteriin saapuvista ilmoituksista, hakemuksista ja tiedonannoista sekä asiakirjakansiota ilmoitusvelvollista koskevista asiakirjoista', which says the registration authority keeps a public diary and document folders in its information system; the printed statement says no more than ",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2023/564"
+  },
+  {
+   "claim": "record:FI:authentication_audit_log:count",
+   "fact_sha256": "a10ff41d92565dea236cee49ed54650dec6e10e2aa569c37ccc23e6b6078cecd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The DVV press release of 31.1.2024 contains verbatim 'Sen kautta tunnistaudutaan digipalveluihin keskimäärin 17 miljoonaa kertaa kuukaudessa', where 'sen' refers to Suomi.fi-tunnistus named in the preceding sentence; this matches 'about 17 million authentications per month through Suomi.fi e-Identification' as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.sttinfo.fi/tiedote/70085553/digi-ja-vaestotietovirasto-valitsi-vahvan-tunnistamisen-valityspalveluntarjoajaksi-telia-finland-oyjn?publisherId=3777&lang=fi"
+  }
+ ]
+}

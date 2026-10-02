@@ -58,42 +58,42 @@ The holdings Netherlands cannot let depend on infrastructure a foreign state can
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Facial biometric (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | No central register[^s17] | — | — | — |
+| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Paspoortwet art. 3(9) is on the page verbatim and says travel-document fingerprints are kept only until issuance is registered and used only for issuing, which supports the absence of a central passport fingerprint register. It does not sup It is withheld until the fact or its source is corrected and checked again* | — | — | — |
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Authentication audit log (tier 0) | DigiD gebruiksgeschiedenis (DigiD usage history)[^s18] | Logius[^s18] | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | Basisregister Reisdocumenten (BR) (Basic Register of Travel Documents)[^s19] | Rijksdienst voor Identiteitsgegevens (National Office for Identity Data, RvIG)[^s19] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | registratie van de kiesgerechtigdheid (municipal registration of voting eligibility)[^s20] | Burgemeester en wethouders (municipal executives)[^s20] | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | DigiD gebruiksgeschiedenis (DigiD usage history)[^s17] | Logius[^s17] | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | Basisregister Reisdocumenten (BR) (Basic Register of Travel Documents)[^s18] | Rijksdienst voor Identiteitsgegevens (National Office for Identity Data, RvIG)[^s18] | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | registratie van de kiesgerechtigdheid (municipal registration of voting eligibility)[^s19] | Burgemeester en wethouders (municipal executives)[^s19] | *Not stated in sources* | *Not yet measured* |
 | High | State PKI and qualified trust services (tier 0) | TSPs issue certificates under the State of the Netherlands trust anchor[^s5] | PKIoverheid is a trust framework managed by Logius on behalf of Ministry of BZK[^s5] | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Justitiële Documentatie (Judicial Documentation, the criminal records system)[^s21] | Justitiële Informatiedienst (Justid, Judicial Information Service)[^s21] | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Justitiële Documentatie (Judicial Documentation, the criminal records system)[^s20] | Justitiële Informatiedienst (Justid, Judicial Information Service)[^s20] | *Not stated in sources* | *Not yet measured* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | DigiD: the national means for citizens to identify digitally[^s4][^s6] | Minister of BZK is controller; DigiD is managed by Logius[^s18][^s22] | National infrastructure[^s18] | *Not yet measured* |
-| High | Residence and migration status (tier 1) | vreemdelingenadministratie (aliens administration)[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | DigiD: the national means for citizens to identify digitally[^s4][^s6] | Minister of BZK is controller; DigiD is managed by Logius[^s17][^s21] | National infrastructure[^s17] | *Not yet measured* |
+| High | Residence and migration status (tier 1) | vreemdelingenadministratie (aliens administration)[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | Current declaration system AGS is being replaced by the new DMS[^s24][^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | polisadministratie (policy administration of employment, wages and benefits)[^s26] | Uitvoeringsinstituut werknemersverzekeringen (UWV, Employee Insurance Agency)[^s26] | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | Current declaration system AGS is being replaced by the new DMS[^s23][^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | polisadministratie (policy administration of employment, wages and benefits)[^s25] | Uitvoeringsinstituut werknemersverzekeringen (UWV, Employee Insurance Agency)[^s25] | *Not stated in sources* | *Not yet measured* |
 | High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Business registry (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | UBO-register (Ultimate Beneficial Owner register)[^s27] | handelsregister (trade register, kept by the Kamer van Koophandel)[^s28] | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | *Not yet sourced* | RDW manages and is controller of the vehicle registration register[^s29] | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | UBO-register (Ultimate Beneficial Owner register)[^s26] | handelsregister (trade register, kept by the Kamer van Koophandel)[^s27] | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | *Not yet sourced* | RDW manages and is controller of the vehicle registration register[^s28] | *Not stated in sources* | *Not yet measured* |
 | High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Government payroll and personnel (tier 1) | registratiesysteem P-Direkt (P-Direkt HR/payroll registration system)[^s10] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | uitslagprogrammatuur OSV2020-U or Abacus (results-tabulation software)[^s30] | Kiesraad (Electoral Council)[^s30] | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | uitslagprogrammatuur OSV2020-U or Abacus (results-tabulation software)[^s29] | Kiesraad (Electoral Council)[^s29] | *Not stated in sources* | *Not yet measured* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | meldkamers (emergency dispatch control rooms)[^s31] | politie (national police)[^s31] | *Not stated in sources* | tien meldkamers (ten control rooms)[^s31] |
-| High | Crisis management and civil protection (tier 1) | NL-Alert (national public warning system)[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | meldkamers (emergency dispatch control rooms)[^s30] | politie (national police)[^s30] | *Not stated in sources* | tien meldkamers (ten control rooms)[^s30] |
+| High | Crisis management and civil protection (tier 1) | NL-Alert (national public warning system)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | register onderwijsdeelnemers (register of education participants)[^s33] | Onze Minister (Minister of Education, Culture and Science)[^s33] | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | LSP is a national infrastructure through which care providers exchange patients' medical data[^s34] | AORTA/LSP managed by VZVZ since 2012[^s35] | *Not stated in sources* | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | Staatsblad en Staatscourant (Bulletin of Acts and Decrees; Government Gazette)[^s36] | Minister van Justitie en Veiligheid (Minister of Justice and Security, for the Staatsblad)[^s36] | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | Praeventis centrally registers vaccinations of every participant in the national immunisation programme[^s37][^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | register onderwijsdeelnemers (register of education participants)[^s32] | Onze Minister (Minister of Education, Culture and Science)[^s32] | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | LSP is a national infrastructure through which care providers exchange patients' medical data[^s33] | AORTA/LSP managed by VZVZ since 2012[^s34] | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Staatsblad en Staatscourant (Bulletin of Acts and Decrees; Government Gazette)[^s35] | Minister van Justitie en Veiligheid (Minister of Justice and Security, for the Staatsblad)[^s35] | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | Praeventis centrally registers vaccinations of every participant in the national immunisation programme[^s36][^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | Microdata: linkable person, business and address-level data for authorised researchers[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Statistical microdata (tier 2) | Microdata: linkable person, business and address-level data for authorised researchers[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
@@ -152,7 +152,7 @@ Tier 0 and 1 holdings for Netherlands without a verified source yet. Corrections
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
 
 ### How sources were found
 
@@ -208,10 +208,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
-| T2 competent public body or audit office | 633 |
-| T3 other institution or company | 9 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
+| T2 competent public body or audit office | 589 |
+| T3 other institution or company | 7 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
 
 ### Evidence grades
 
@@ -220,8 +220,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 106 |
-| Standard | 1282 |
+| Strong | 100 |
+| Standard | 1209 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -262,7 +262,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1388 printed facts pass the fact check.
+In this build, 1309 of 1309 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -304,7 +304,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
+In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -327,66 +327,68 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Netherlands
 
-0 of 48 printed facts about Netherlands pass.
+47 of 47 printed facts about Netherlands pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
-| indicator:NL:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
-| indicator:NL:L3 | indicator L3: Is a cloud certification that requires immunity from non-EU law in force or adopted for government use? | unrecorded | none | never checked |  |
-| indicator:NL:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:NL:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:NL:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
-| indicator:NL:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
-| param:NL:population_m | param:NL:population_m | program:fetch_eurostat.py | none | never checked |  |
-| param:NL:gdp_eur_bn | param:NL:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
-| param:NL:gov_employment_k | param:NL:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
-| param:NL:elec_price_eur_mwh | param:NL:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
-| param:NL:renewables_pct | param:NL:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
-| param:NL:land_km2 | param:NL:land_km2 | program:fetch_eurostat.py | none | never checked |  |
-| record:NL:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:authentication_audit_log:operator | Authentication audit log: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:digital_identity_credentials:foreign_dependency | Digital identity credentials: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:NL:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:electoral_management:register | Election management and results: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:electoral_management:operator | Election management and results: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:emergency_communications:count | Emergency calls and public-safety radio: how many records it holds | unrecorded | none | never checked |  |
-| record:NL:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:education:operator | Education: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:health_records:register | Health records: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:health_records:operator | Health records: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | none | never checked |  |
-| record:NL:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | none | never checked |  |
-| record:NL:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | none | never checked |  |
+| indicator:NL:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:NL:L3 | indicator L3: Is a cloud certification that requires immunity from non-EU law in force or adopted for government use? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:NL:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:NL:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:NL:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:NL:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:NL:population_m | param:NL:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:NL:gdp_eur_bn | param:NL:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:NL:gov_employment_k | param:NL:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:NL:elec_price_eur_mwh | param:NL:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:NL:renewables_pct | param:NL:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:NL:land_km2 | param:NL:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:authentication_audit_log:operator | Authentication audit log: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:digital_identity_credentials:foreign_dependency | Digital identity credentials: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:electoral_management:register | Election management and results: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:electoral_management:operator | Election management and results: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:emergency_communications:count | Emergency calls and public-safety radio: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:education:operator | Education: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:health_records:operator | Health records: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:NL:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Netherlands
 
-None.
+| Claim | What it answers | Checked by | Verdict | Reason |
+|---|---|---|---|---|
+| record:NL:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | claude-fable-5-1 | unclear | Paspoortwet art. 3(9) is on the page verbatim and says travel-document fingerprints are kept only until issuance is registered and used only for issuing, which supports the absence of a central passport fingerprint register. It does not support the broader categorical 'No central register' for fingerprint biometrics in general; another page cited in this same batch (Vreemdelingenwet art. 107) stat |
 
 ---
 
@@ -406,30 +408,29 @@ None.
 [^s14]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
 [^s15]: Eurostat nrg_ind_ren, 2026-09-30. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
 [^s16]: Eurostat reg_area3, 2026-09-30. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
-[^s17]: Overheid.nl Wettenbank — Paspoortwet, 2024-01-01. Paspoortwet. <https://wetten.overheid.nl/BWBR0005212/2024-01-01> ([archived](https://web.archive.org/web/20260928030739/https://wetten.overheid.nl/BWBR0005212/2024-01-01/))
-[^s18]: DigiD / Logius — Privacy DigiD. Privacy DigiD. <https://www.digid.nl/over-digid/privacy> ([archived](https://web.archive.org/web/20260927120423/https://www.digid.nl/over-digid/privacy))
-[^s19]: Rijksdienst voor Identiteitsgegevens (RvIG) — Basisregister Reisdocumenten. Basisregister Reisdocumenten. <https://www.rvig.nl/basisregister-reisdocumenten> ([archived](https://web.archive.org/web/20260901014608/https://www.rvig.nl/basisregister-reisdocumenten))
-[^s20]: wetten.overheid.nl (KOOP) — Kieswet, 2026-01-01. Kieswet. <https://wetten.overheid.nl/BWBR0004627>
-[^s21]: Justitiële Informatiedienst (Justid) — Strafblad en het Justitieel Documentatie Systeem. Strafblad en het Justitieel Documentatie Systeem. <https://www.justid.nl/onderwerpen/s/strafblad-en-het-justitieel-documentatie-systeem> ([archived](https://web.archive.org/web/20260910021135/https://www.justid.nl/onderwerpen/s/strafblad-en-het-justitieel-documentatie-systeem))
-[^s22]: Logius (Ministerie van BZK) — DigiD – Wie doet wat?. DigiD – Wie doet wat?. <https://www.logius.nl/onze-dienstverlening/toegang/digid/wie-doet-wat> ([archived](https://web.archive.org/web/20260413115624/https://www.logius.nl/onze-dienstverlening/toegang/digid/wie-doet-wat))
-[^s23]: wetten.overheid.nl (KOOP) — Vreemdelingenwet 2000, 2026-09-01. Vreemdelingenwet 2000. <https://wetten.overheid.nl/BWBR0011823>
-[^s24]: Tweede Kamer der Staten-Generaal — Douane; Brief regering; Uitstel invoering nieuw…, 2022-11-07. Douane; Brief regering; Uitstel invoering nieuw aangiftesysteem van de Douane. <https://zoek.officielebekendmakingen.nl/kst-31934-61.html>
-[^s25]: Douane / Ministerie van Financiën — Douane Monitor 2024, 2025-07-08. Douane Monitor 2024. <https://zoek.officielebekendmakingen.nl/blg-1205324.pdf>
-[^s26]: wetten.overheid.nl (KOOP) — Wet structuur uitvoeringsorganisatie werk en inkomen…, 2026-07-01. Wet structuur uitvoeringsorganisatie werk en inkomen (Wet SUWI). <https://wetten.overheid.nl/BWBR0013060>
-[^s27]: Kamer van Koophandel (KVK) — Ultimate Beneficial Owner (UBO). Ultimate Beneficial Owner (UBO). <https://www.kvk.nl/ubo/> ([archived](https://web.archive.org/web/20260925130737/https://www.kvk.nl/ubo/))
-[^s28]: wetten.overheid.nl (KOOP) — Handelsregisterwet 2007, 2025-07-16. Handelsregisterwet 2007. <https://wetten.overheid.nl/BWBR0021777>
-[^s29]: Overheid.nl Wettenbank — Wegenverkeerswet 1994, 2026-09-01. Wegenverkeerswet 1994. <https://wetten.overheid.nl/BWBR0006622/2026-09-01> ([archived](https://web.archive.org/web/20260922170754/https://wetten.overheid.nl/BWBR0006622/2026-09-01))
-[^s30]: Kiesraad — Evaluatieadvies Kiesraad – gemeenteraadsverkiezingen 2026, 2026-07-06. Evaluatieadvies Kiesraad – gemeenteraadsverkiezingen 2026. <https://zoek.officielebekendmakingen.nl/blg-1261396.pdf>
-[^s31]: wetten.overheid.nl (KOOP) — Politiewet 2012, 2026-06-12. Politiewet 2012. <https://wetten.overheid.nl/BWBR0031788>
-[^s32]: Rijksoverheid (NL-Alert / NCTV) — NL-Alert. NL-Alert. <https://www.nl-alert.nl/> ([archived](https://web.archive.org/web/20260919232645/https://www.nl-alert.nl/))
-[^s33]: wetten.overheid.nl (KOOP) — Wet register onderwijsdeelnemers, 2026-08-01. Wet register onderwijsdeelnemers. <https://wetten.overheid.nl/BWBR0042012>
-[^s34]: VZVZ — AORTA-LSP. AORTA-LSP. <https://www.aorta-lsp.nl/> ([archived](https://web.archive.org/web/20260710165804/https://www.aorta-lsp.nl/))
-[^s35]: VZVZ — Over AORTA-LSP. Over AORTA-LSP. <https://www.aorta-lsp.nl/over-aorta-lsp> ([archived](https://web.archive.org/web/20260710170946/https://www.aorta-lsp.nl/over-aorta-lsp))
-[^s36]: wetten.overheid.nl (KOOP) — Bekendmakingswet, 2024-01-01. Bekendmakingswet. <https://wetten.overheid.nl/BWBR0004287>
-[^s37]: RIVM — Vaccinatiegraad Rijksvaccinatieprogramma Nederland, 2026-07-02. Vaccinatiegraad Rijksvaccinatieprogramma Nederland. <https://zoek.officielebekendmakingen.nl/blg-1258843.pdf>
-[^s38]: Tweede Kamer der Staten-Generaal — Wijziging van een aantal wetten op het terrein van VWS…, 2024-10-02. Wijziging van een aantal wetten op het terrein van VWS (grondslagen gegevensverwerking); Memorie van toelichting. <https://zoek.officielebekendmakingen.nl/kst-36621-3.html> ([archived](https://web.archive.org/web/20251013160730/https://zoek.officielebekendmakingen.nl/kst-36621-3.html))
-[^s39]: CBS — Microdata: Zelf onderzoek doen. Microdata: Zelf onderzoek doen. <https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen> ([archived](https://web.archive.org/web/20260923230852/https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen))
+[^s17]: DigiD / Logius — Privacy DigiD. Privacy DigiD. <https://www.digid.nl/over-digid/privacy> ([archived](https://web.archive.org/web/20260927120423/https://www.digid.nl/over-digid/privacy))
+[^s18]: Rijksdienst voor Identiteitsgegevens (RvIG) — Basisregister Reisdocumenten. Basisregister Reisdocumenten. <https://www.rvig.nl/basisregister-reisdocumenten> ([archived](https://web.archive.org/web/20260901014608/https://www.rvig.nl/basisregister-reisdocumenten))
+[^s19]: wetten.overheid.nl (KOOP) — Kieswet, 2026-01-01. Kieswet. <https://wetten.overheid.nl/BWBR0004627>
+[^s20]: Justitiële Informatiedienst (Justid) — Strafblad en het Justitieel Documentatie Systeem. Strafblad en het Justitieel Documentatie Systeem. <https://www.justid.nl/onderwerpen/s/strafblad-en-het-justitieel-documentatie-systeem> ([archived](https://web.archive.org/web/20260910021135/https://www.justid.nl/onderwerpen/s/strafblad-en-het-justitieel-documentatie-systeem))
+[^s21]: Logius (Ministerie van BZK) — DigiD – Wie doet wat?. DigiD – Wie doet wat?. <https://www.logius.nl/onze-dienstverlening/toegang/digid/wie-doet-wat> ([archived](https://web.archive.org/web/20260413115624/https://www.logius.nl/onze-dienstverlening/toegang/digid/wie-doet-wat))
+[^s22]: wetten.overheid.nl (KOOP) — Vreemdelingenwet 2000, 2026-09-01. Vreemdelingenwet 2000. <https://wetten.overheid.nl/BWBR0011823>
+[^s23]: Tweede Kamer der Staten-Generaal — Douane; Brief regering; Uitstel invoering nieuw…, 2022-11-07. Douane; Brief regering; Uitstel invoering nieuw aangiftesysteem van de Douane. <https://zoek.officielebekendmakingen.nl/kst-31934-61.html>
+[^s24]: Douane / Ministerie van Financiën — Douane Monitor 2024, 2025-07-08. Douane Monitor 2024. <https://zoek.officielebekendmakingen.nl/blg-1205324.pdf>
+[^s25]: wetten.overheid.nl (KOOP) — Wet structuur uitvoeringsorganisatie werk en inkomen…, 2026-07-01. Wet structuur uitvoeringsorganisatie werk en inkomen (Wet SUWI). <https://wetten.overheid.nl/BWBR0013060>
+[^s26]: Kamer van Koophandel (KVK) — Ultimate Beneficial Owner (UBO). Ultimate Beneficial Owner (UBO). <https://www.kvk.nl/ubo/> ([archived](https://web.archive.org/web/20260925130737/https://www.kvk.nl/ubo/))
+[^s27]: wetten.overheid.nl (KOOP) — Handelsregisterwet 2007, 2025-07-16. Handelsregisterwet 2007. <https://wetten.overheid.nl/BWBR0021777>
+[^s28]: Overheid.nl Wettenbank — Wegenverkeerswet 1994, 2026-09-01. Wegenverkeerswet 1994. <https://wetten.overheid.nl/BWBR0006622/2026-09-01> ([archived](https://web.archive.org/web/20260922170754/https://wetten.overheid.nl/BWBR0006622/2026-09-01))
+[^s29]: Kiesraad — Evaluatieadvies Kiesraad – gemeenteraadsverkiezingen 2026, 2026-07-06. Evaluatieadvies Kiesraad – gemeenteraadsverkiezingen 2026. <https://zoek.officielebekendmakingen.nl/blg-1261396.pdf>
+[^s30]: wetten.overheid.nl (KOOP) — Politiewet 2012, 2026-06-12. Politiewet 2012. <https://wetten.overheid.nl/BWBR0031788>
+[^s31]: Rijksoverheid (NL-Alert / NCTV) — NL-Alert. NL-Alert. <https://www.nl-alert.nl/> ([archived](https://web.archive.org/web/20260919232645/https://www.nl-alert.nl/))
+[^s32]: wetten.overheid.nl (KOOP) — Wet register onderwijsdeelnemers, 2026-08-01. Wet register onderwijsdeelnemers. <https://wetten.overheid.nl/BWBR0042012>
+[^s33]: VZVZ — AORTA-LSP. AORTA-LSP. <https://www.aorta-lsp.nl/> ([archived](https://web.archive.org/web/20260710165804/https://www.aorta-lsp.nl/))
+[^s34]: VZVZ — Over AORTA-LSP. Over AORTA-LSP. <https://www.aorta-lsp.nl/over-aorta-lsp> ([archived](https://web.archive.org/web/20260710170946/https://www.aorta-lsp.nl/over-aorta-lsp))
+[^s35]: wetten.overheid.nl (KOOP) — Bekendmakingswet, 2024-01-01. Bekendmakingswet. <https://wetten.overheid.nl/BWBR0004287>
+[^s36]: RIVM — Vaccinatiegraad Rijksvaccinatieprogramma Nederland, 2026-07-02. Vaccinatiegraad Rijksvaccinatieprogramma Nederland. <https://zoek.officielebekendmakingen.nl/blg-1258843.pdf>
+[^s37]: Tweede Kamer der Staten-Generaal — Wijziging van een aantal wetten op het terrein van VWS…, 2024-10-02. Wijziging van een aantal wetten op het terrein van VWS (grondslagen gegevensverwerking); Memorie van toelichting. <https://zoek.officielebekendmakingen.nl/kst-36621-3.html> ([archived](https://web.archive.org/web/20251013160730/https://zoek.officielebekendmakingen.nl/kst-36621-3.html))
+[^s38]: CBS — Microdata: Zelf onderzoek doen. Microdata: Zelf onderzoek doen. <https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen> ([archived](https://web.archive.org/web/20260923230852/https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen))
 
-**Evidence grades:** 1 Strong, 47 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 1 Strong, 46 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

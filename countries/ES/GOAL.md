@@ -87,13 +87,13 @@ The holdings Spain cannot let depend on infrastructure a foreign state can compe
 | High | Crisis management and civil protection (tier 1) | Red de Alerta Nacional de Protección Civil (National Civil Protection Alert Network)[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | Cecoel (Centro de Control Eléctrico, Electricity Control Centre)[^s42] | Red Eléctrica de España, S.A. (sole transmission operator)[^s43] | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | Sistemas Automáticos de Información Hidrológica (SAIH) (Automatic Hydrological Information Systems), used by the Confederaciones Hidrográficas[^s44] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Education (tier 1) | Registro Nacional de Titulados Universitarios Oficiales (RNTUO) (National Register of Official University Graduates)[^s45] | Ministerio de Educación (Ministry of Education; the register now sits with the universities ministry)[^s46] | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | Registro Nacional de Titulados Universitarios Oficiales (RNTUO) (National Register of Official University Graduates)[^s45] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (Art. 4) supports that the register was created in the Ministerio de Educación, but the printed parenthetical 'the register now sits with the universities ministry' appears nowhere on the cited page (no mention of a Ministerio de  It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | The BOE is published in an electronic edition[^s47] | The Agencia Estatal BOE edits, publishes and distributes the official gazette[^s47] | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | The BOE is published in an electronic edition[^s46] | The Agencia Estatal BOE edits, publishes and distributes the official gazette[^s46] | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | Municipalities send their Padrón data to the INE for national coordination[^s48] | INE is an autonomous body with its own legal personality[^s49] | *Not stated in sources* | *Not yet measured* |
-| Standard | Geospatial base data (tier 3) | Reference geographic information includes cadastral parcels and registered real estate[^s50] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Statistical microdata (tier 2) | Municipalities send their Padrón data to the INE for national coordination[^s47] | INE is an autonomous body with its own legal personality[^s48] | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | Reference geographic information includes cadastral parcels and registered real estate[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -145,7 +145,7 @@ Tier 0 and 1 holdings for Spain without a verified source yet. Corrections and s
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
 
 ### How sources were found
 
@@ -201,10 +201,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
-| T2 competent public body or audit office | 633 |
-| T3 other institution or company | 9 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
+| T2 competent public body or audit office | 589 |
+| T3 other institution or company | 7 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
 
 ### Evidence grades
 
@@ -213,8 +213,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 106 |
-| Standard | 1282 |
+| Strong | 100 |
+| Standard | 1209 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -255,7 +255,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1388 printed facts pass the fact check.
+In this build, 1309 of 1309 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -297,7 +297,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
+In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -320,76 +320,78 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Spain
 
-0 of 58 printed facts about Spain pass.
+57 of 57 printed facts about Spain pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
-| indicator:ES:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | none | never checked |  |
-| indicator:ES:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
-| indicator:ES:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:ES:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:ES:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
-| indicator:ES:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
-| param:ES:population_m | param:ES:population_m | program:fetch_eurostat.py | none | never checked |  |
-| param:ES:gdp_eur_bn | param:ES:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
-| param:ES:gov_employment_k | param:ES:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
-| param:ES:elec_price_eur_mwh | param:ES:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
-| param:ES:renewables_pct | param:ES:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
-| param:ES:land_km2 | param:ES:land_km2 | program:fetch_eurostat.py | none | never checked |  |
-| record:ES:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:fingerprint_biometric:operator | Fingerprint biometric: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:land_property:operator | Land & property registry: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:police_records:operator | Police information systems: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:tax:register | Tax: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:tax:operator | Tax: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:health_insurance:operator | Statutory health insurance: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:firearms_register:register | Firearms register: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:firearms_register:operator | Firearms register: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:electoral_management:register | Election management and results: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:electoral_management:operator | Election management and results: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:central_bank:register | Central bank systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:water_control:register | Water management control: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:education:operator | Education: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | none | never checked |  |
-| record:ES:statistics_microdata:operator | Statistical microdata: the body that operates it | unrecorded | none | never checked |  |
-| record:ES:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
+| indicator:ES:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:ES:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:ES:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:ES:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:ES:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:ES:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:ES:population_m | param:ES:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:ES:gdp_eur_bn | param:ES:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:ES:gov_employment_k | param:ES:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:ES:elec_price_eur_mwh | param:ES:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:ES:renewables_pct | param:ES:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:ES:land_km2 | param:ES:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:fingerprint_biometric:operator | Fingerprint biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:land_property:operator | Land & property registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:police_records:operator | Police information systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:tax:operator | Tax: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:health_insurance:operator | Statutory health insurance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:business_registry:operator | Business registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:firearms_register:operator | Firearms register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:electoral_management:register | Election management and results: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:electoral_management:operator | Election management and results: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:water_control:register | Water management control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:statistics_microdata:operator | Statistical microdata: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Spain
 
-None.
+| Claim | What it answers | Checked by | Verdict | Reason |
+|---|---|---|---|---|
+| record:ES:education:operator | Education: the body that operates it | claude-fable-5-1 | not supported | The quote (Art. 4) supports that the register was created in the Ministerio de Educación, but the printed parenthetical 'the register now sits with the universities ministry' appears nowhere on the cited page (no mention of a Ministerio de Universidades or de Ciencia), so part of the printed statement is added beyond the source. |
 
 ---
 
@@ -438,12 +440,11 @@ None.
 [^s43]: Agencia Estatal Boletín Oficial del Estado — Ley 24/2013, de 26 de diciembre, del Sector Eléctrico…. Ley 24/2013, de 26 de diciembre, del Sector Eléctrico (consolidated). <https://www.boe.es/buscar/act.php?id=BOE-A-2013-13645> ([archived](https://web.archive.org/web/20260928104552/https://www.boe.es/buscar/act.php?id=BOE-A-2013-13645))
 [^s44]: Ministerio para la Transición Ecológica y el Reto Demográfico — Sistemas SAIH. Sistemas SAIH. <https://www.miteco.gob.es/es/agua/temas/evaluacion-de-los-recursos-hidricos/saih.html> ([archived](https://web.archive.org/web/20260726180059/https://www.miteco.gob.es/es/agua/temas/evaluacion-de-los-recursos-hidricos/saih.html))
 [^s45]: Ministerio de Ciencia, Innovación y Universidades — Consulta al Registro Nacional de Titulados…. Consulta al Registro Nacional de Titulados Universitarios Oficiales. <https://www.ciencia.gob.es/Universidades/ConsultaTitulos.html> ([archived](https://web.archive.org/web/20260722151315/https://www.ciencia.gob.es/Universidades/ConsultaTitulos.html))
-[^s46]: Agencia Estatal Boletín Oficial del Estado — Real Decreto 1002/2010, de 5 de agosto, sobre expedición…. Real Decreto 1002/2010, de 5 de agosto, sobre expedición de títulos universitarios oficiales (consolidated). <https://www.boe.es/buscar/act.php?id=BOE-A-2010-12621>
-[^s47]: Agencia Estatal Boletín Oficial del Estado — Real Decreto 181/2008, de 8 de febrero, de ordenación…, 2008. Real Decreto 181/2008, de 8 de febrero, de ordenación del diario oficial «Boletín Oficial del Estado». <https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389> ([archived](https://web.archive.org/web/20260912062918/https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389))
-[^s48]: Agencia Estatal Boletín Oficial del Estado — Ley 7/1985, de 2 de abril, Reguladora de las Bases del…, 1985. Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. <https://www.boe.es/buscar/act.php?id=BOE-A-1985-5392> ([archived](https://web.archive.org/web/20260923004539/https://www.boe.es/buscar/act.php?id=BOE-A-1985-5392))
-[^s49]: Agencia Estatal Boletín Oficial del Estado — Ley 12/1989, de 9 de mayo, de la Función Estadística Pública, 1989. Ley 12/1989, de 9 de mayo, de la Función Estadística Pública. <https://www.boe.es/buscar/act.php?id=BOE-A-1989-10767> ([archived](https://web.archive.org/web/20260716060905/https://www.boe.es/buscar/act.php?id=BOE-A-1989-10767))
-[^s50]: Agencia Estatal Boletín Oficial del Estado — Ley 14/2010, de 5 de julio, sobre las infraestructuras y…, 2010. Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España. <https://www.boe.es/buscar/act.php?id=BOE-A-2010-10707> ([archived](https://web.archive.org/web/20260804161511/https://www.boe.es/buscar/act.php?id=BOE-A-2010-10707))
+[^s46]: Agencia Estatal Boletín Oficial del Estado — Real Decreto 181/2008, de 8 de febrero, de ordenación…, 2008. Real Decreto 181/2008, de 8 de febrero, de ordenación del diario oficial «Boletín Oficial del Estado». <https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389> ([archived](https://web.archive.org/web/20260912062918/https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389))
+[^s47]: Agencia Estatal Boletín Oficial del Estado — Ley 7/1985, de 2 de abril, Reguladora de las Bases del…, 1985. Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. <https://www.boe.es/buscar/act.php?id=BOE-A-1985-5392> ([archived](https://web.archive.org/web/20260923004539/https://www.boe.es/buscar/act.php?id=BOE-A-1985-5392))
+[^s48]: Agencia Estatal Boletín Oficial del Estado — Ley 12/1989, de 9 de mayo, de la Función Estadística Pública, 1989. Ley 12/1989, de 9 de mayo, de la Función Estadística Pública. <https://www.boe.es/buscar/act.php?id=BOE-A-1989-10767> ([archived](https://web.archive.org/web/20260716060905/https://www.boe.es/buscar/act.php?id=BOE-A-1989-10767))
+[^s49]: Agencia Estatal Boletín Oficial del Estado — Ley 14/2010, de 5 de julio, sobre las infraestructuras y…, 2010. Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España. <https://www.boe.es/buscar/act.php?id=BOE-A-2010-10707> ([archived](https://web.archive.org/web/20260804161511/https://www.boe.es/buscar/act.php?id=BOE-A-2010-10707))
 
-**Evidence grades:** 0 Strong, 58 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 0 Strong, 57 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

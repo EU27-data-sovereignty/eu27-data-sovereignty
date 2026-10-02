@@ -1,0 +1,100 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "CZ-013",
+ "iso": "CZ",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:CZ:customs:operator",
+   "fact_sha256": "3178241f964c7cbe7b44b790506d0b593a4ec1a841edf25e043c578e629afed1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote (§1(1) of Act 17/2012) only says the customs administration's basic task is protecting the Republic's economic interests and supervising goods and their movement; it does not name the General Directorate of Customs or customs offices (those appear in §1(2), which is not the recorded quote) and the act nowhere mentions customs declarations, so nothing on the page says who operates customs",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2012-17"
+  },
+  {
+   "claim": "record:CZ:facial_biometric:operator",
+   "fact_sha256": "172b59fcc3d73e8fa1e570c6a3dd8ce96e63bee6b4da7b505cc38764f4a3bb91",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§54(2) of Act 269/2021 says the controller (správce) of the ID card register is 'ministerstvo', which the same act defines as Ministerstvo vnitra (Ministry of the Interior), and §56(1)(i) lists the digital likeness among the register's contents, so the register holds the facial image and the printed controller matches.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2021-269"
+  },
+  {
+   "claim": "record:CZ:fingerprint_biometric:register",
+   "fact_sha256": "dc80c9f2d3ac5d1b51d00ff83d8285e6c58e0055307035a364c8b531a41f1d10",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote is §57(3): data under §56(1)(o), which the act calls only 'biometrické údaje' (biometric data, not specifically fingerprints), are kept in the ID card register until the card is collected and at most 90 days after issue. That describes a central public-administration IS that does hold the biometric data for a limited time; it does not say there is no central register, and it does not nam",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2021-269"
+  },
+  {
+   "claim": "record:CZ:issuance_history:operator",
+   "fact_sha256": "9d3baa8ee3f7497d1ebaf30f595aacac6c2a15f516a93b0c57f1f315e1b493b8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§54(2) names 'ministerstvo', defined in the act as Ministerstvo vnitra, as controller of the ID card register, and §56(2) lists per-card issue date, collection date, expiry and issuing authority among its contents, so the register is the issuance history and the printed controller is what the source says.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2021-269"
+  },
+  {
+   "claim": "record:CZ:beneficial_ownership:operator",
+   "fact_sha256": "956f3cdecfda704872f45ef3c5a1e99e2dc129f5dcab2680874bf5d48db061c5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§11(2)-(3) of Act 37/2021 says the register of beneficial owners is kept by the court competent for the registration proceedings and that entries are made by a court or a notary, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2021-37"
+  },
+  {
+   "claim": "record:CZ:beneficial_ownership:register",
+   "fact_sha256": "ddbbd56c69e0569858204f06bf203767d46b64e8347d1bf07a77b4b3906903ed",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§11(1) says the Evidence skutečných majitelů is a public administration information system whose controller (správce) is the Ministry of Justice, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2021-37"
+  },
+  {
+   "claim": "record:CZ:electoral_management:operator",
+   "fact_sha256": "429fdfa7998b65e7f87a416f904a95dbb89870e40d405cd2f5d21bdf6540e78a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§12(1)(a)-(b) of Act 88/2024, headed 'Český statistický úřad', says the Czech Statistical Office directs, ensures and methodically supports the ascertainment, processing and publication of election results and develops the results system including software, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2024-88"
+  },
+  {
+   "claim": "record:CZ:firearms_register:operator",
+   "fact_sha256": "3e5538ac6547b069c7ca3ddbeb8a56f768ceacab5ef8864861b5d40e0e1906de",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§128(2) of Act 90/2024 says the controller (správce) of the Central Firearms Register is the Police Presidium, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2024-90"
+  },
+  {
+   "claim": "record:CZ:firearms_register:register",
+   "fact_sha256": "f36985c336b41454f633ae0debeef0d4785e8b9766cf497bd39096a5736d7bc7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§128(1) says the Centrální registr zbraní is a non-public public administration information system serving state administration of weapons and ammunition, which is what the printed name and description say.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/2024-90"
+  }
+ ]
+}

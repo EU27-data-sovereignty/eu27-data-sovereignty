@@ -1,0 +1,140 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "HU-032",
+ "iso": "HU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:HU:digital_identity_credentials:foreign_dependency",
+   "fact_sha256": "3a40c5172209395e51873b974c2a5999d7b6539dc91cb6694966ebf25e57baa9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote (dated 2024-07-01) says IdomSoft came into direct state ownership under the Digitális Magyarország Ügynökség, and the same timeline names IdomSoft as the DÁP (Digital Citizenship Program) service provider, developer and operator ('szolgáltatójátát, alkalmazásfejlesztőjét és üzemeltetőjét') that took over the SZEÜSZ/KEÜSZ e-identification services from NISZ. A state-owned Hungarian operat",
+   "quote_found": true,
+   "checked_url": "https://www.idomsoft.hu/rolunk/tortenetunk"
+  },
+  {
+   "claim": "record:HU:electoral_roll:foreign_dependency",
+   "fact_sha256": "01a5aa3e048af3fcb6c40c6e0577a0a07eeff82531c6843b8081ca551ab0e409",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote only states that IdomSoft became directly state-owned; neither the quote nor anything else on the history page mentions the electoral roll or any election system, so the page does not connect this holding to IdomSoft or say what infrastructure it runs on.",
+   "quote_found": true,
+   "checked_url": "https://www.idomsoft.hu/rolunk/tortenetunk"
+  },
+  {
+   "claim": "record:HU:issuance_history:foreign_dependency",
+   "fact_sha256": "173639e90f5900a7a5d812973e8d47ec642e2ae3b2fc72d9a5b8a932be0535f6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote establishes IdomSoft's state ownership only; the history page never mentions document issuance records or document registers, so it does not support where that holding's infrastructure runs.",
+   "quote_found": true,
+   "checked_url": "https://www.idomsoft.hu/rolunk/tortenetunk"
+  },
+  {
+   "claim": "record:HU:vehicle_licensing:foreign_dependency",
+   "fact_sha256": "146d27c892d0734a9916bf7aa33870fca9758553aa6ac105f423491cf3360a64",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote is about IdomSoft's ownership; the history page does not mention the vehicle register or driving licences, so it does not tie that holding to IdomSoft or say on what infrastructure it runs.",
+   "quote_found": true,
+   "checked_url": "https://www.idomsoft.hu/rolunk/tortenetunk"
+  },
+  {
+   "claim": "record:HU:civil_registry:register",
+   "fact_sha256": "f7b1e01f94af222bf194d3a4333d29a3898e59cbeb8bd60b0061cb98378dcd2c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act LXVI of 1992 §3(1) says the register is a 'közhiteles hatósági nyilvántartás' containing citizens' personal, address and notification-address data (quote found verbatim), and IdomSoft's product page names it 'Személyi Adat- és Lakcímnyilvántartás' (quote found). The printed name, English gloss and description match; the spelling 'Személyiadat-' vs 'Személyi Adat-' is a variant of the same name",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv"
+  },
+  {
+   "claim": "record:HU:electoral_management:register",
+   "fact_sha256": "5c0a1d434bcc4f0c3bd408ed265098295ffaf8b87205279b2d967a555578df08",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The products page lists 'Nemzeti Választási Rendszer' as the system serving election offices' statutory election-administration tasks; the printed name and translation match exactly.",
+   "quote_found": true,
+   "checked_url": "https://www.idomsoft.hu/termekek"
+  },
+  {
+   "claim": "record:HU:electoral_roll:operator",
+   "fact_sha256": "5dcaabccd49d131b07f7e12c85477ee6d4def758e61037da314c4a30e3ab6b53",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is on IdomSoft's own 'Termékek' (products) page under 'Nyilvántartások és adatszolgáltatások', presenting the Nemzeti Választási Rendszer as an IdomSoft product used by election offices, which is what the printed sentence says. Note the quote itself does not use the word 'builds' and the page says nothing about who operates the electoral roll; the printed statement avoids an operator cla",
+   "quote_found": true,
+   "checked_url": "https://www.idomsoft.hu/termekek"
+  },
+  {
+   "claim": "record:HU:issuance_history:register",
+   "fact_sha256": "b04eab9f979e6731d8135d28ecaec77061bb1c10504b039b9db14fb42c1d2c58",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act LXVI of 1992 §11(1) m) lists, among the data the register ('a nyilvántartás', i.e. the personal data and address register, SZL) holds, the ID card's document identifier and the permanent ID card's electronic unique identifier and service identifier; the quote is verbatim and matches the printed statement. The IdomSoft 'Okmány nyilvántartások' quote is also found.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv"
+  },
+  {
+   "claim": "record:HU:vehicle_licensing:register",
+   "fact_sha256": "b979b1fc50f8561686d702db688211919e619893e644c0550dbc0ee204741e28",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "IdomSoft's products page lists 'Országos Jármű Nyilvántartás' (National Vehicle Register) as its product that records and manages data of vehicles registered in Hungary; the kormany.hu quote on the közúti közlekedési nyilvántartás is also found verbatim. 'Built/run by IdomSoft' rests on the system being listed as an IdomSoft product; the page does not explicitly use the word 'operates'.",
+   "quote_found": true,
+   "checked_url": "https://www.idomsoft.hu/termekek"
+  },
+  {
+   "claim": "record:HU:crisis_management:register",
+   "fact_sha256": "24e759733d0131a3c4f3c43425650bd84547982542ca3cb5c77081d690d5749b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act CXXVIII of 2011 §3 point 15 defines 'Lakossági riasztó rendszer' as the public alarm, alarm-information and storm-warning systems in the management ('kezelésében') of the central and territorial organs of the professional disaster management body, exactly as printed. The katasztrofavedelem.hu MoLaRi quote is also present verbatim (split only by underline span markup on 'Mo', 'La', 'Ri').",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1100128.TV"
+  },
+  {
+   "claim": "record:HU:central_bank:register",
+   "fact_sha256": "111958f372ede34ca80f0c1e9cf7b4d864e951256a344d342666bcae704aa2b8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The MNB page says verbatim '2020. március 2-án elindult az azonnal fizetési szolgáltatás'; the printed date and system match.",
+   "quote_found": true,
+   "checked_url": "https://www.mnb.hu/penzforgalom/azonnalifizetes"
+  },
+  {
+   "claim": "record:HU:health_insurance:operator",
+   "fact_sha256": "bf5adf25e45a46e922c746c4ac0f8e89d82811472e0323aa8be01627684eea70",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Government Decree 386/2016 §1 a) defines 'egészségbiztosítási szerv' to include the Nemzeti Egészségbiztosítási Alapkezelő (NEAK), verbatim; the NEAK English page quote is also found. The printed statement says exactly that.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1600386.KOR"
+  },
+  {
+   "claim": "record:HU:health_insurance:register",
+   "fact_sha256": "8d5f31e407dc3ce6474806605f0379c6fee77c712b75938afc1b09ead136621e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Decree 386/2016 §7(1) begins 'A NEAK ellátja...' and item e) eb) says it keeps the register of notified persons' insurance-relationship data including entitlement to health services and TAJ certification data (quote verbatim); NEAK's own register page describes the same 'Bejelentett személyek jogviszonyadatainak nyilvántartása'. The printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1600386.KOR"
+  }
+ ]
+}

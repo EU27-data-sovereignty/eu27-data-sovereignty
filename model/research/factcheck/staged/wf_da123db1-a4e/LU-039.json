@@ -1,0 +1,210 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "LU-039",
+ "iso": "LU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:LU:health_insurance:foreign_dependency",
+   "fact_sha256": "39526452abf28b265e4888d5331bafbd9d73ae25387c6e4f4154fbadb193468c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CCSS attributions page lists, among the CCSS's legal tasks, 'la centralisation et le traitement informatique des données pour le compte des différentes institutions de sécurité sociale'. A national public body doing the computer processing for the social-security institutions supports 'National infrastructure'; the page does not name any external provider.",
+   "quote_found": true,
+   "checked_url": "https://ccss.public.lu/fr/ccss/attributions.html"
+  },
+  {
+   "claim": "record:LU:health_insurance:register",
+   "fact_sha256": "834a9e7eee45d1f3349df6e7c51ce68aa1de4a1eeb71221b15e8be67db45901d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says anyone working in Luxembourg, employed or self-employed, must be affiliated by the CCSS, and continues that this affiliation protects against 'la maladie' and that working in Luxembourg means depending on Luxembourg's health insurance. That matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html"
+  },
+  {
+   "claim": "record:LU:health_insurance:operator",
+   "fact_sha256": "fdf78e314cc4c071782d4bc646d49765025cd8435f632f60286b3ec7ea78e203",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that the Caisse nationale de santé (CNS) manages benefits for all private-sector insured persons and State workers, which is exactly what is printed.",
+   "quote_found": true,
+   "checked_url": "https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html"
+  },
+  {
+   "claim": "indicator:LU:K2",
+   "fact_sha256": "0fe7e2d77b29c8e432804c3774bf641cfc358ab5378efada281e1cad71fe8922",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The GouvID page says the Luxembourg government gives citizens the possibility to use their Luxembourg eID with the GouvID app, and the CTIE attributions page (a state administration) lists production and personalisation of secure administrative documents and the related biometric data processing among its tasks. Together they support that the eID scheme is state-operated.",
+   "quote_found": true,
+   "checked_url": "https://ctie.gouvernement.lu/fr/actualites/dossiers/gouvid/gouvid.html"
+  },
+  {
+   "claim": "record:LU:digital_identity_credentials:register",
+   "fact_sha256": "a30108c78e62df6583681d06ab5f75965209defc183058dc964f41c1bab62283",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page reads 'Avec l'app GouvID, le gouvernement luxembourgeois donne au citoyen la possibilité d'utiliser sa carte d'identité électronique (eID) luxembourgeoise conjointement avec son smartphone', which matches the printed description of GouvID.",
+   "quote_found": true,
+   "checked_url": "https://ctie.gouvernement.lu/fr/actualites/dossiers/gouvid/gouvid.html"
+  },
+  {
+   "claim": "indicator:LU:C2",
+   "fact_sha256": "8a52e9317bc77182e1eb70a1110b21ee760c5565b4bbb0ce66d771d206c5bb99",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page describes the CTIE as the Luxembourg administration in charge of IT services for the government, ministries and administrations, and lists among the services it offers 'le hosting ; le cloud privé (IaaS) ; les plateformes (PaaS)'. A government private cloud offered as a current service supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://ctie.gouvernement.lu/fr/l-administration.html"
+  },
+  {
+   "claim": "indicator:LU:C1",
+   "fact_sha256": "54cbc8ae3d74478cb68cc9b4c6c6564761d76991b01f9c69de73742c1f00331f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Both quotes are present, but the CTIE quote only mentions managing IT and security equipment, not data centres, and the Wikipedia page describes LuxConnect, incorporated by the State as main shareholder, as a 'private company' operating four 'carrier neutral' commercial data centres. The sources show a state-majority-owned data-centre operator, not that the state operates its own government data c",
+   "quote_found": true,
+   "checked_url": "https://en.wikipedia.org/wiki/LuxConnect"
+  },
+  {
+   "claim": "record:LU:customs:register",
+   "fact_sha256": "945466513a8c62d467fd6d2cc53a8a439dbe8db552b44952cd008a4dc31b3767",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states that eDouane is the access point to the online services of the Customs and Excise Administration and that from eDouane one can access all online declaration applications, which matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://douanes.public.lu/fr/services-ligne/edouanes.html"
+  },
+  {
+   "claim": "param:LU:gov_employment_k",
+   "fact_sha256": "1e675ff6c9e118bbff92f25064ec66a43d6971ec9e89933f181022b871858eca",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 32.63 thousand persons for LU, NACE O, EMP_DC, 2024; rounded this is the printed 32.6 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=LU&time=2024"
+  },
+  {
+   "claim": "param:LU:gdp_eur_bn",
+   "fact_sha256": "74055fb2a7331ca0294812c0165f33f2d762c1abe563cd31ddcd50091a113e47",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 89521.5 million euro (current prices) for LU 2025, which scaled to billions and rounded is the printed 89.5 EUR bn.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=LU&time=2025"
+  },
+  {
+   "claim": "param:LU:renewables_pct",
+   "fact_sha256": "8f6ac2a28db8e06bde0c16bbfe52dee118c2873d964ca93c096faf8ce664ca14",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 23.3 percent for LU, REN_ELC, 2025, matching the printed 23.3 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=LU&time=2025"
+  },
+  {
+   "claim": "param:LU:elec_price_eur_mwh",
+   "fact_sha256": "453e007864708fdbc9e50f39cfaa445ae2b80468bcf7cdd61ac3df77569c75f7",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1717 EUR per kWh for LU, band MWH500-1999, excluding VAT, 2025-S2; scaled to EUR/MWh this is the printed 171.7.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=LU&time=2025-S2"
+  },
+  {
+   "claim": "param:LU:land_km2",
+   "fact_sha256": "130d29f0c7212a1d3940af1da11eabd773f36fbdfc2fb1d55732aae9d7cc9f56",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 2586 square kilometres for LU, landuse L0008, 2026, matching the printed 2 586 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=LU&time=2026"
+  },
+  {
+   "claim": "param:LU:population_m",
+   "fact_sha256": "64d53541d7aefc8a77e8977fdef9b372e612f92fa8d69c5dd723da13bd45c319",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 690959 persons on 1 January 2026 for LU, which rounds to the printed 0.69 million.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=LU&time=2026"
+  },
+  {
+   "claim": "record:LU:tax:operator",
+   "fact_sha256": "9eddd52d9c51fc8d767a6cc79725943ffdd192005ad845c7455039cc4592bb98",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ACD's GDPR page states verbatim that the ACD, represented by the director of taxes, is the data controller ('responsable du traitement'), matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html"
+  },
+  {
+   "claim": "record:LU:tax:register",
+   "fact_sha256": "b713f7b097d0f90acc85612b3492cc1a6c0ce4fc58c06906df5809d10bb9b6b8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page lists the purposes of the ACD's personal-data processing as the assessment of taxes, their collection and recovery, and the management of national and international information exchanges (plus internal purposes), which supports the printed summary.",
+   "quote_found": true,
+   "checked_url": "https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html"
+  },
+  {
+   "claim": "record:LU:vehicle_licensing:register",
+   "fact_sha256": "4fafd382766839b7c197aac6e1a6c6549279ba4f5babedc9f50119a7971b116f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The SNCA history page says registration aims first at the unambiguous identification of every road vehicle and its holder or owner via a unique registration number, which matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://snca.public.lu/fr/snca/histoire-snca.html"
+  },
+  {
+   "claim": "record:LU:vehicle_licensing:operator",
+   "fact_sha256": "3d7b38cae6a1afe51135d8b1e515d8848552d894d55a67c541c4e5448e60cd6d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The SNCA's stated mission is to serve Luxembourg motorists with professional support and complete information on putting road vehicles into circulation and on driving licences; the printed 'handles' is a fair summary of that remit without adding another body or scope.",
+   "quote_found": true,
+   "checked_url": "https://snca.public.lu/fr/snca/missions-valeurs.html"
+  },
+  {
+   "claim": "indicator:LU:K1",
+   "fact_sha256": "e2d9eee60be303b4dc76bb2bc5b633d3943b8242c59ed777db9c9683966a399e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "INCERT's pages say it was established in 2012 by the State of Luxembourg with a national mandate, and that as a Qualified Trust Service Provider it manages qualified time stamps and certificates for authentication and signature (eIDAS). A state-established body operating a qualified trust service supports 'Yes' under the indicator's 'or its qualified trust service' wording.",
+   "quote_found": true,
+   "checked_url": "https://www.incert.lu/serving-luxembourg-public-agencies"
+  },
+  {
+   "claim": "record:LU:digital_identity_credentials:operator",
+   "fact_sha256": "354d2a9e2a174aa05dadd8c5373a0749a03bbeae5baf96134559adec1546dd5f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The LuxTrust press release describes LuxTrust as 'prestataire de services de confiance qualifié et acteur de référence de l'identité numérique en Europe', and the page refers to 'vos identifiants LuxTrust'; this supports the printed description, with the parenthetical 'LuxTrust credentials' being the page's own term.",
+   "quote_found": true,
+   "checked_url": "https://www.luxtrust.com/fr/news/luxtrust-et-incert-scellent-un-partenariat-strategique-pour-renforcer-la-souverainete"
+  }
+ ]
+}

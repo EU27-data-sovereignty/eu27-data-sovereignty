@@ -1,0 +1,30 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "SI-055",
+ "iso": "SI",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:SI:health_insurance:register",
+   "fact_sha256": "a79b0188b5c3bd3c622f97ef7f01200670b914f0f705626936d49bf5e69227bf",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The fetched PDF (sha256 matches the recorded hash) is ZZZS's own data-collection sheet: '1. Naziv institucije: Zavod za zdravstveno zavarovanje Slovenije 2. Naziv zbirke podatkov: Evidenca o zavarovanih osebah obveznega zdravstvenega zavarovanja ...' (the full name continues 'in evidenca o zavarovanih osebah, ki so upravičene do plačila razlike do polne vrednosti'), and the same page says 'ZZZS pr",
+   "quote_found": true,
+   "checked_url": "https://www.zzzs.si/fileadmin/user_upload/dokumenti/informacije_in_publikacije/evidenca_o_zavarovanih_osebah.pdf"
+  },
+  {
+   "claim": "record:SI:health_insurance:count",
+   "fact_sha256": "e6fc479717f347b52b4f465741580bcb227d4472d74b9a899ee77ff965979adc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The fetched PDF (sha256 matches the recorded hash), ZZZS's 2025 annual-report infographic, reads verbatim '8,32 % slovenskega BDP se je v 2025 prek ZZZS namenilo za potrebe 2,1 milijona zavarovanih oseb in razdelilo med več kot 2.000 izvajalcev in dobaviteljev.' The figure 2.1 million insured persons for 2025 matches the printed 'About 2.1 million insured persons (2025)'.",
+   "quote_found": true,
+   "checked_url": "https://zavezanec.zzzs.si/fileadmin/user_upload/dokumenti/novice/2026/zzzsporocilo2025-infografika-web.pdf"
+  }
+ ]
+}

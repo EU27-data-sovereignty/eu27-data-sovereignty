@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "IE-034",
+ "iso": "IE",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:IE:central_bank:register",
+   "fact_sha256": "bdf9d454ef1555f567258b16bcde61a91d22e75c3bf252ba97c1d0c490e7cb54",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says 'The Irish component system of T2, operated by the Central Bank of Ireland, is TARGET2-Ireland' and describes T2 as the Eurosystem's real-time gross settlement (RTGS) system, which matches the printed name and gloss.",
+   "quote_found": true,
+   "checked_url": "https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2"
+  },
+  {
+   "claim": "record:IE:facial_biometric:count",
+   "fact_sha256": "0e267bf7675c443f952345c48bfbbbb9ba7e8be1e75eea8d757cae46b5ce9e10",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The DPC press release states 'In 2021, the DSP held biometric facial templates relating to 70% of the population of the State', the same figure, year and scope as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.dataprotection.ie/en/news-media/press-releases/dpc-announces-conclusion-investigation-use-facial-matching-technology-connection-public-services"
+  },
+  {
+   "claim": "record:IE:facial_biometric:operator",
+   "fact_sha256": "989f95cc819921c728c57579e04c0f2c93a6f887d9475bfcf728d064644b71cd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote says the collection, storage and processing of facial templates is done 'by the DSP', and the page spells out DSP as the Department of Social Protection in its title and first paragraph.",
+   "quote_found": true,
+   "checked_url": "https://www.dataprotection.ie/en/news-media/press-releases/dpc-announces-conclusion-investigation-use-facial-matching-technology-connection-public-services"
+  },
+  {
+   "claim": "record:IE:facial_biometric:register",
+   "fact_sha256": "7e3e2802f7a28877daaf928cbb28325bca25f472c575d93cefbf03a54edee7c0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page describes the processing of biometric facial templates as part of the Public Services Card registration process 'known as SAFE 2 registration', which is what the printed name states.",
+   "quote_found": true,
+   "checked_url": "https://www.dataprotection.ie/en/news-media/press-releases/dpc-announces-conclusion-investigation-use-facial-matching-technology-connection-public-services"
+  },
+  {
+   "claim": "record:IE:health_insurance:count",
+   "fact_sha256": "ac9cf3742696dfdd50136b8b8f6ae71e5068c0ee848a74287d852d39f6974c4d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF's 'Number of Eligible Persons per Scheme - 2025' table shows GMS 1,552,553 and GPVC 785,152; the report elsewhere ties GMS eligibility to the medical card and expands GPVC as General Practitioner Visit Card, so the printed figures and labels match.",
+   "quote_found": true,
+   "checked_url": "https://www.drugsandalcohol.ie/46590/1/PCRS_Statistical_Analysis_of_Claims_and_Payments_2025.pdf"
+  },
+  {
+   "claim": "record:IE:grid_control:operator",
+   "fact_sha256": "da513f6f623bc07e361d73d0490c33d8eaabab5fedf210a6403fa209f7ae5dd3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "EirGrid's own page says 'A team of staff operate the grid from NCCs' and 'EirGrid use the most sophisticated software in operating the grid', which supports EirGrid as operator, but the words 'transmission system operator' appear nowhere on the page, so the printed parenthetical adds a description the source does not give.",
+   "quote_found": true,
+   "checked_url": "https://www.eirgrid.ie/grid/how-grid-works/national-control-centres"
+  },
+  {
+   "claim": "record:IE:grid_control:register",
+   "fact_sha256": "20b223f4ef78cf7d4f3aaf766e5102272432224bae0f01f8da8aa5c65b5f2686",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The page names the 'National Control Centres (NCCs)' in Dublin and Belfast, but never uses the phrase 'transmission system operator'; the printed 'of the transmission system operator' is not stated by the source.",
+   "quote_found": true,
+   "checked_url": "https://www.eirgrid.ie/grid/how-grid-works/national-control-centres"
+  },
+  {
+   "claim": "record:IE:firearms_register:operator",
+   "fact_sha256": "e30b09f9e0824784ca66862cc1435fd326cb5d1e669b47a3a09a80e8e9d8234b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live garda.ie failed with a TLS error so the archived copy was used; it says applications are returned 'to the local Garda Station for consideration by the relevant Superintendent', which supports An Garda Síochána with the local Superintendent handling applications.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260917111136/https://www.garda.ie/en/about-us/online-services/firearms-licensing/"
+  },
+  {
+   "claim": "record:IE:firearms_register:register",
+   "fact_sha256": "a58ee62ba954cb58d7d0441cac56ff152d89ada791bf89d229a9d1d6b0d1c1cb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The archived garda.ie page states 'The fifth significant renewal phase of three (3) year firearm certificates commenced on the 1st August 2024', on a Garda firearms-licensing page, matching the printed description of three-year firearm certificates with Garda-run renewal phases.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260917111136/https://www.garda.ie/en/about-us/online-services/firearms-licensing/"
+  },
+  {
+   "claim": "record:IE:residence_permits:operator",
+   "fact_sha256": "e055f38d8f83b6fb72526166f74e90bfa9f72cf75a51d1ed84768213a1e92925",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says that on 13 January 2025 responsibility for all first-time registration of residence permissions transfers from the Garda National Immigration Bureau to Immigration Service Delivery (ISD) of the Department of Justice, matching the printed operator, predecessor and date.",
+   "quote_found": true,
+   "checked_url": "https://www.garda.ie/en/about-us/organised-serious-crime/immigration-gnib-/"
+  },
+  {
+   "claim": "record:IE:police_records:operator",
+   "fact_sha256": "0f034c8dd01fd5aa1279846e655ffff4b4fdd5611951daf528abc009b2d6e22c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page (fetched live on retry) says details are entered 'on the PULSE system (An Garda Síochána's database)', which names An Garda Síochána as the body whose database it is.",
+   "quote_found": true,
+   "checked_url": "https://www.garda.ie/en/about-us/our-departments/garda-information-services-centre-gisc-/"
+  },
+  {
+   "claim": "record:IE:police_records:register",
+   "fact_sha256": "117600bb62d6f4570932434c3914a1711579293ead6f2e6dfefa883a2f7e40b1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The page names PULSE as 'An Garda Síochána's database' and mentions capturing incident data, but nowhere calls it a 'national incident and intelligence database'; the word 'intelligence' appears only in an unrelated menu item, so the printed description adds scope the source does not state.",
+   "quote_found": true,
+   "checked_url": "https://www.garda.ie/en/about-us/our-departments/garda-information-services-centre-gisc-/"
+  },
+  {
+   "claim": "record:IE:border_control:register",
+   "fact_sha256": "5c070065a40b1014bde0d5cb6aefa34e29321b0cf4c36346436fb30b720b3483",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live page (reached on retry; no archive exists) says 'The Schengen Information System went live in Ireland on 15 March 2021, and enables An Garda Síochána...', matching the printed system and go-live date.",
+   "quote_found": true,
+   "checked_url": "https://www.garda.ie/en/about-us/our-departments/garda-national-crime-security-intelligence-service1/schengen-information-system-sis-/when-was-it-introduced-.html"
+  },
+  {
+   "claim": "record:IE:public_health_surveillance:count",
+   "fact_sha256": "fc31484537c4fdb1db77e794f42e629a5c5a2996f49d39933bdf9f365a22f008",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Under 'Size of national collection' the page says 'On average 33,394 cases were reported annually between 2013-2019, range 25,814 – 46,065', the same figures, period and range as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr"
+  },
+  {
+   "claim": "record:IE:public_health_surveillance:operator",
+   "fact_sha256": "c65cf07ee337ed59b172a3003cfac41fbc65cb50305b103f90f405f8959ad684",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The HIQA entry lists 'Organisation Health Protection Surveillance Centre (HPSC)' and 'Year established CIDR was established in 2004', matching both parts of the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr"
+  },
+  {
+   "claim": "record:IE:health_records:operator",
+   "fact_sha256": "93262046e411faf5c98a9144c5147aaa58add24b7d5cacb2509c2ebcb309287d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The entry lists 'Organisation HSE HIDS – Health Identifiers Service ... Chief Operations Office, HSE' and spells out the Health Service Executive (HSE) elsewhere on the page, matching the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/national-register-individual-health-identifiers"
+  },
+  {
+   "claim": "record:IE:health_insurance:operator",
+   "fact_sha256": "51512755586e30f2ed38a32db1005f4fc2e7965ca75d181639f0fce5714db904",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page lists the organisation as Health Service Executive and says 'Claim data is processed and payments are made by the Primary Care Reimbursement Service' for the GMS and other schemes, supporting HSE PCRS as operator.",
+   "quote_found": true,
+   "checked_url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/primary-care-reimbursement-service-pcrs"
+  },
+  {
+   "claim": "record:IE:health_insurance:register",
+   "fact_sha256": "cc56926bc97deb4f25337c0b1f63f53b7367847f9bc693cc41654bf33f1c8892",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PCRS entry says 'Patient identifiers are collected to record eligibility which include PPSN', refers to medical card holders and lists the General Medical Services (GMS) scheme, which covers the printed description of PCRS eligibility records keyed on PPSN.",
+   "quote_found": true,
+   "checked_url": "https://www.hiqa.ie/areas-we-work/health-information/data-collections/primary-care-reimbursement-service-pcrs"
+  },
+  {
+   "claim": "record:IE:public_health_surveillance:register",
+   "fact_sha256": "756c5b0f52bad15f0cf7784c412d1359c0def3569a10dc1277abdbfe20914d9c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The HPSC page is titled 'Computerised Infectious Disease Reporting (CIDR)' and the quote describes CIDR as the system used to collect and analyse notification data, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.hpsc.ie/cidr/"
+  },
+  {
+   "claim": "record:IE:residence_permits:register",
+   "fact_sha256": "c5cc7b2a0c0d01458168e4e244df6b7d25c43ad7a452a54686e35d50b8f11645",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page refers to a 'registered Irish Residence Permission', to the 'Irish Residence Permit (IRP card)' and to 'my record in the register of non-nationals with permission to be in the State', which together support the printed name and description; note the page's 'IRP' abbreviates the permit card rather than the register itself.",
+   "quote_found": true,
+   "checked_url": "https://www.irishimmigration.ie/information-on-revocation-of-registered-irish-residence-permissions/"
+  },
+  {
+   "claim": "record:IE:civil_registry:operator",
+   "fact_sha256": "bb808ad5ffbafd76e061de98c247ee1f164306e1a5a6b4da811844ba8d6b3a4c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 13(1) says the registers are 'established ... and maintained by an tArd-Chláraitheoir', which is the printed operator; the parenthetical 'Registrar General' is an English rendering of that Irish-language title and does not itself appear on this section's page.",
+   "quote_found": true,
+   "checked_url": "https://www.irishstatutebook.ie/eli/2004/act/3/section/13/enacted/en/html"
+  },
+  {
+   "claim": "record:IE:civil_registry:register",
+   "fact_sha256": "7999a05c3c0d0b17321b665413a7123c746f346c1c94b5390947804346bed607",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 13(1)(a) establishes 'the register of births', and the same subsection lists the registers of stillbirths, adoptions, deaths and marriages, matching the printed name and its 'etc.' list.",
+   "quote_found": true,
+   "checked_url": "https://www.irishstatutebook.ie/eli/2004/act/3/section/13/enacted/en/html"
+  },
+  {
+   "claim": "record:IE:breeder_documents:register",
+   "fact_sha256": "d6840949a389355b079587b3f92bbfd224e5acf8431b5e032ebfb50dcb3c41f8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Passports Act 2008 definition of 'certificate of birth' refers to 'the foreign births register ... kept under section 27 of the Irish Nationality and Citizenship Act 1956', so the source names a register by exactly this name; it says nothing about document scans, but the fact asked only for the register's name.",
+   "quote_found": true,
+   "checked_url": "https://www.irishstatutebook.ie/eli/2008/act/4/enacted/en/print"
+  },
+  {
+   "claim": "record:IE:beneficial_ownership:operator",
+   "fact_sha256": "897a07b256b563625c36cd02cbd8daa114c74c59e9794629250a5168a3d94fc4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Regulation 18 provides for 'a registrar, who shall be known as the Registrar of Beneficial Ownership of Companies and Industrial and Provident Societies' and Regulation 19(2) says the central register shall be maintained by the Registrar, matching the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.irishstatutebook.ie/eli/2019/si/110/made/en/print"
+  },
+  {
+   "claim": "record:IE:beneficial_ownership:register",
+   "fact_sha256": "cc736f85608ce01ecee0eceb533b2356289ae06a2167867c645395092fb2e094",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Regulation 19(1) establishes 'a register which shall be known as the Central Register of Beneficial Ownership of Companies and Industrial and Provident Societies', exactly the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.irishstatutebook.ie/eli/2019/si/110/made/en/print"
+  },
+  {
+   "claim": "record:IE:emergency_communications:foreign_dependency",
+   "fact_sha256": "62bf086ff36fa83911f353b1393b5cf28cc20552cef6c422d9935c3b5066c2bb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Chicago-datelined release says Motorola Solutions, Inc. (NYSE: MSI) acquired TETRA Ireland, 'the provider of Ireland's National Digital Radio Service', and that the company owns and operates networks, which supports classifying the provider as non-EU.",
+   "quote_found": true,
+   "checked_url": "https://www.motorolasolutions.com/newsroom/press-releases/motorola-solutions-acquires-tetra-ireland-communications.html"
+  },
+  {
+   "claim": "record:IE:emergency_communications:register",
+   "fact_sha256": "a77e660eee1570f1f4976514ccd1cdad6d22c3df850fcb97ac1d7812d976e509",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The release names the National Digital Radio Service (NDRS), says TETRA Ireland delivers LMR communications 'to thousands of first responders' and that the network is based on TETRA technology, matching the printed name and description.",
+   "quote_found": true,
+   "checked_url": "https://www.motorolasolutions.com/newsroom/press-releases/motorola-solutions-acquires-tetra-ireland-communications.html"
+  },
+  {
+   "claim": "indicator:IE:C2",
+   "fact_sha256": "215946945f52262d454b9c6c25d44a19ce7dfb2b5aca6b437fbd5911f7dc0346",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "OGCIO's Build to Share page says, in the present tense, that it 'Delivers a shared robust, resilient, private Government Cloud infrastructure platform available for system/application hosting for all Public Bodies', and the Infrastructure page (also fetched, quote found) describes the Government Cloud as a private cloud system that means smaller departments 'will not have to support their own hard",
+   "quote_found": true,
+   "checked_url": "https://www.ogcio.gov.ie/en/corporate-pages/policy/build-to-share/"
+  },
+  {
+   "claim": "indicator:IE:C1",
+   "fact_sha256": "127e5cdb953095a287cf4477cd755b58da71a5323bd3a89f034f473c8b8f28e8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Revenue Commissioners' 2025 annual report says it continues to provide shared computing facilities to other public sector bodies 'from our data centre', and the OGCIO 2019 advice note (also fetched, quote found) says Government Cloud services are delivered 'from Government Data Centres'; the Build to Share page, by contrast, says the Government Data Centre project is still 'underway', so the '",
+   "quote_found": true,
+   "checked_url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf"
+  },
+  {
+   "claim": "record:IE:customs:operator",
+   "fact_sha256": "907e01e1052b1a030d8bfd35c514b23c8e7111a3e3d1d16149934c71bcd41978",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The document is the 'Annual Report of the Revenue Commissioners for the year ended 31 December 2025' and states 'our automated customs systems processed 62.8 million customs declarations', so the Revenue Commissioners operate the customs declaration systems.",
+   "quote_found": true,
+   "checked_url": "https://www.revenue.ie/en/corporate/press-office/annual-report/2025/ar-2025.pdf"
+  }
+ ]
+}

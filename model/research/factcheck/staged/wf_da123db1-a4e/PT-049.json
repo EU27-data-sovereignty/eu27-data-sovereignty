@@ -1,0 +1,250 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "PT-049",
+ "iso": "PT",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:PT:electoral_roll:operator",
+   "fact_sha256": "924ad05db14b73e89182e155547552637bc8509094a2da4360e01f6d5a73117e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 11(1) of Lei 13/99 (current wording after Lei 47/2018) says organisation, maintenance and management of the BDRE and SIGRE fall to the electoral administration of the Secretaria-Geral do MAI, which is exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2545&tabela=leis"
+  },
+  {
+   "claim": "record:PT:facial_biometric:operator",
+   "fact_sha256": "5162ba1f785f879b0d03cdf96ea6dbe9d2553accf892e5430ecc1d26e26ff7d6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 38(1) of Lei 7/2007 names IRN, I.P. as the entity responsible for personal-data processing in the operations of Articles 36 and 37, which Article 36 defines as the Citizen Card operations (issuance, renewal, personalisation etc.), so IRN as controller for Citizen Card processing is what the page says.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2807&tabela=leis"
+  },
+  {
+   "claim": "record:PT:facial_biometric:register",
+   "fact_sha256": "5f8e964b6fd81722186ceb1ba69fdfb02fa92cb5e2176865b84824c1f663e57e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 37(4) says that beyond Citizen Card personalisation, the files with facial image, signature, height and fingerprints are communicated only to the civil identification database; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2807&tabela=leis"
+  },
+  {
+   "claim": "record:PT:fingerprint_biometric:register",
+   "fact_sha256": "6e9bfe7f8d2290daff215ef73fd77441b4fcdd2131c75c8ff230e478891907b0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 25(1) lists facial image and fingerprints (plus signature and height) as the elements the Citizen Card application is instructed with; the printed statement says no more than that.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2807&tabela=leis"
+  },
+  {
+   "claim": "record:PT:issuance_history:register",
+   "fact_sha256": "e64be5a9c75a7639eecc25e59dbf74f009239241a46e8b8da83046124e5dbc35",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 36(2)(a)-(b) lists issuance, update and renewal requests and cancellation requests among the Citizen Card operations in which holder data are processed, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2807&tabela=leis"
+  },
+  {
+   "claim": "record:PT:digital_identity_credentials:operator",
+   "fact_sha256": "267c909b458e75d0e73c1db015f4d9d5282a82fe0872b1d92158824caa52cf00",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Article 2(8) of Lei 32/2017 does assign management and security of the CMD technological infrastructure to AMA, I.P., but the page never mentions ARTE, so the printed parenthetical '(the predecessor of ARTE)' is an addition the source does not say.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2809&tabela=leis"
+  },
+  {
+   "claim": "record:PT:crisis_management:operator",
+   "fact_sha256": "6ee5647eb6c3324631af6c91d80ba4efec6abd28dde60a47bde3f774995e2fe3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 3(1) of DL 45/2019 says ANEPC's mission is to plan, coordinate and execute emergency and civil protection policies and, in the same sentence, to ensure planning and coordination of civil emergency planning 'com vista a fazer face a situações de crise ou de guerra', which covers the printed clause about crisis or war.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3049&tabela=leis"
+  },
+  {
+   "claim": "record:PT:crisis_management:register",
+   "fact_sha256": "6232a66867162b7ed5182f08acfd2fa99159ff9788f31fd2113f90bbc97bf4c5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is item f) of Article 4(2), introduced by 'A ANEPC prossegue as seguintes atribuições', so organising a national alert and warning system is stated as an ANEPC attribution.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3049&tabela=leis"
+  },
+  {
+   "claim": "record:PT:geospatial:operator",
+   "fact_sha256": "a8d090813e87fd842e28a046fee0058361d42efd72df838e65b7a864653324e1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 4(2) of Lei 99/2019 makes the Direção-Geral do Território responsible for gathering in SNIT the geographic information on territorial management instruments; the printed statement matches that.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3139&tabela=leis"
+  },
+  {
+   "claim": "record:PT:geospatial:register",
+   "fact_sha256": "a840bfefdc65218b501cbf353202f6625d40edbed74654765142bd9cd325a9d9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PNPOT text on the page lists making available products of the national reference geographic information database 'como a cartografia topográfica e ortofotocartografia', which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3139&tabela=leis"
+  },
+  {
+   "claim": "record:PT:breeder_documents:register",
+   "fact_sha256": "1f8fa5029886d3eb3f8e8d076e6ab7c792141ad9787fbaa5adc04397c94611fb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Article 32(1) of Lei 33/99 says ID-card applications and 'certidões não emitidas pelo registo civil português' are microfilmed or kept on secure computer media and then destroyed; the printed 'foreign-issued certificates' narrows a scope the source states as 'not issued by the Portuguese civil registry', which is not the same thing, and 'paper originals' is likewise not in the text.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=334&tabela=leis"
+  },
+  {
+   "claim": "record:PT:trust_services_pki:register",
+   "fact_sha256": "a4ae0665f17216713bab286f5df713b20cb9f53e0c69e9ac11278efc40559fa5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 27(1) says the Entidade de Certificação Eletrónica do Estado, as the State's root certification entity, is the top certifying service of the SCEE chain, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3404&tabela=leis"
+  },
+  {
+   "claim": "record:PT:border_control:operator",
+   "fact_sha256": "38b57e12559f09f8ec352ef715a44066ba14a70954c7b856eac9a01b5860e065",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lei 73/2021 Article 3(3) keeps in force the rules on SEF's IT and communications systems, including the national part of the Schengen Information System, 'passando a sua gestão a ser assegurada por uma unidade de tecnologias de informação de segurança', which is what the report prints.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3468&tabela=leis"
+  },
+  {
+   "claim": "record:PT:residence_permits:operator",
+   "fact_sha256": "5d89fb9e157c52001c3cf87e861fa4b08e009de3ef13a8ca9a86f125a681c979",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The preamble describes the concentration of the administrative migration and asylum functions formerly held by SEF in a new entity, AIMA, I.P.; the printed statement says the same.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3676&tabela=leis"
+  },
+  {
+   "claim": "record:PT:public_finance:register",
+   "fact_sha256": "28b010bbe2f15662230c40c306ab97f27611ec4ff07c1b3dd469b5d34bb6f336",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 5(1) of DL 13-A/2025 says the budget captivations are entered in the information systems managed by ESPAP, I.P., using information provided by DGO and registered in SIGO; the system names and bodies match the printed statement, though the source's specific subject is captivations rather than budget data generally.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3890&tabela=leis"
+  },
+  {
+   "claim": "record:PT:judicial_criminal:register",
+   "fact_sha256": "3fe191be9f43f0e6b6d9690ed703c9b1d748600c58f977393ff1f2ecded48c98",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 2(1) of the portaria says electronic processing takes place in the 'sistema de informação de suporte à atividade dos tribunais', matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3949&tabela=leis"
+  },
+  {
+   "claim": "record:PT:vehicle_licensing:register",
+   "fact_sha256": "cce38839afcae0f90e0e6bd93365e0be7bae7b0183eaf8e6e30505ecdd7a5328",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 27(2) says the vehicle registry database organises and keeps updated information on the legal status of those assets (vehicles); the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=598&tabela=leis"
+  },
+  {
+   "claim": "record:PT:border_control:register",
+   "fact_sha256": "e2e82f10f7951202302c512572fce957b46e0f9a6e71f114fc5f4ee837c63e2f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Definition vv) of Lei 23/2007 names the 'Sistema Integrado de Informação UCFE' as a police and international police-cooperation information system on borders and foreign nationals 'de utilização comum às forças e serviços de segurança' (SII UCFE), which supports every element printed.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+  },
+  {
+   "claim": "record:PT:residence_permits:register",
+   "fact_sha256": "1f42300db7220472dc817ec842fbd466af37b993a0b091c9605f4f8640e5a603",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Definition ww) names the 'Sistema Integrado de Informação AIMA' as a personal-data information system integrating non-police and international cooperation information on foreign nationals (SII AIMA), as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=920&tabela=leis"
+  },
+  {
+   "claim": "record:PT:grid_control:operator",
+   "fact_sha256": "033fa01410eb7c874fabbb6b1bcf405d3aab92f2754c57c09559e254fe1d3a8d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The REN page says REN - Rede Elétrica Nacional, as global technical manager of the National Electricity System, is responsible for the security and continuity of the electricity service; the printed operator is that name.",
+   "quote_found": true,
+   "checked_url": "https://www.ren.pt/pt-pt/atividade/eletricidade"
+  },
+  {
+   "claim": "record:PT:grid_control:register",
+   "fact_sha256": "cc5b84280ad5e1cc02f7b8c7a659773038a13583e3f50f9df5cc2e20a6fc8b8d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page attributes the permanent balancing of production and consumption to REN's 'centro de Despacho' (and later 'Centro de Despacho'), and its map legend labels it 'Despacho nacional', so the printed name and its 'National Dispatch centre' gloss are on the page.",
+   "quote_found": true,
+   "checked_url": "https://www.ren.pt/pt-pt/atividade/eletricidade"
+  },
+  {
+   "claim": "record:PT:electoral_roll:count",
+   "fact_sha256": "6c954dcd5208007d0835319a6d662ed4f9a3fafe02549a2d57d5982dee873691",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The SGMAI homepage 'Números Administração Eleitoral' block shows '11 130 316 Números de inscritos para votar', which is the printed figure and label.",
+   "quote_found": true,
+   "checked_url": "https://www.sg.mai.gov.pt/"
+  },
+  {
+   "claim": "record:PT:emergency_communications:count",
+   "fact_sha256": "0749247f992b6c99440ccb9e82062617ca7a86f4eec6e367f544da9d71e68154",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The SIRESP homepage says the network serves the needs of 'mais de 40.000 utilizadores'; the printed value and unit (users) are exactly that.",
+   "quote_found": true,
+   "checked_url": "https://www.siresp.pt/"
+  },
+  {
+   "claim": "record:PT:emergency_communications:operator",
+   "fact_sha256": "15d3e9bf3ae43b7dcd7eef3be6f9b69415715bf606cf2889781a21040dc2bb57",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The homepage states 'A SIRESP, S.A. é a operadora da Rede Nacional de Emergência e Segurança – SIRESP', which names SIRESP, S.A. as operator as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.siresp.pt/"
+  }
+ ]
+}

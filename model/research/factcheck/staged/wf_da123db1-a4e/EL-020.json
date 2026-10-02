@@ -1,0 +1,260 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "EL-020",
+ "iso": "EL",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "param:EL:renewables_pct",
+   "fact_sha256": "cb081215f63ceb39a87a9b28e431942738d2ab984eeb9389c865b68f4ba7830e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns value 60.9 (status p, provisional) for nrg_bal=REN_ELC, unit=PC, geo=EL, time=2025, which matches the printed 60.9 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=EL&time=2025"
+  },
+  {
+   "claim": "param:EL:elec_price_eur_mwh",
+   "fact_sha256": "b59d7abae2f09ff77b04a0f26458df5500d42bf0dc4d864d74a4780c3cdc3a44",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1738 EUR per kWh for band IC (500-1999 MWh), excluding VAT, Greece, 2025-S2; scaled to EUR/MWh that is exactly 173.8, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=EL&time=2025-S2"
+  },
+  {
+   "claim": "param:EL:land_km2",
+   "fact_sha256": "b439a22cd5506b0e9042bb39955c9ad4cab331b110c3e38b1520b24049d04bbc",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 130048 km² (landuse L0008, total land area) for Greece, 2026, matching the printed 130 048 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=EL&time=2026"
+  },
+  {
+   "claim": "param:EL:population_m",
+   "fact_sha256": "666ac12a3a2598446712f91b25944671a4b5570d80bfb99245f56c95c8bf0301",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 10 366 586 (status ep, estimated/provisional) for population on 1 January 2026, Greece; rounded to millions that is 10.37 million, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=EL&time=2026"
+  },
+  {
+   "claim": "record:EL:official_gazette:operator",
+   "fact_sha256": "1de4a05db0c5d18f2ff3bb67d3831261722d45ceade31674f834fa871dcd0aef",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that the National Printing Office is a public service under the Presidency of the Government, and the next sentence lists its mission as the printed and electronic publication of the Government Gazette; the page also uses the abbreviation ΦΕΚ. Every element of the printed statement is on the page.",
+   "quote_found": true,
+   "checked_url": "https://et.gr/yphresia/mission/"
+  },
+  {
+   "claim": "record:EL:official_gazette:register",
+   "fact_sha256": "d69fdc56c46c05ba9b0ef52b810cb02f1c805411c0c35c56ea706e0b43104375",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is on the page verbatim and names the Εφημερίδα της Κυβερνήσεως, its printed and electronic edition, and ensuring citizens' access to published texts; the page elsewhere uses ΦΕΚ. The printed statement adds nothing beyond this.",
+   "quote_found": true,
+   "checked_url": "https://et.gr/yphresia/mission/"
+  },
+  {
+   "claim": "record:EL:residence_permits:register",
+   "fact_sha256": "a728a2dfabbe12dff8baf1821940b669913795829285dde300517ee00860b942",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim as a responsibility of a department of the Directorate of Migration Policy on the Ministry of Migration and Asylum's own site (page header 'Διοίκηση | Υπουργείο Μετανάστευσης και Ασύλου'), naming the Migration Information Systems and the Register of Aliens and their central operation.",
+   "quote_found": true,
+   "checked_url": "https://migration.gov.gr/migration-policy/dioikisi/"
+  },
+  {
+   "claim": "record:EL:digital_identity_credentials:register",
+   "fact_sha256": "2aa629346a0b2971f74224c1a66cb5799fc2aad1a273a303341f53e26c0a9938",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that the app requires personal TaxisNet codes and a verified mobile number in ΕΜΕπ, or web-banking codes, and separately that issuing digital documents via Gov.gr Wallet requires a certified mobile number via ΕΜΕπ; this supports the printed statement (TaxisNet or web-banking credentials plus a verified mobile number).",
+   "quote_found": true,
+   "checked_url": "https://wallet.gov.gr/"
+  },
+  {
+   "claim": "record:EL:authentication_audit_log:operator",
+   "fact_sha256": "abe5a216194c60002fd93a21780268dac2163dd88a7aa33d2cd721fdf5556d53",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 6.2 states verbatim that the Greek State company 'ΕΘΝΙΚΟ ΔΙΚΤΥΟ ΥΠΟΔΟΜΩΝ ΤΕΧΝΟΛΟΓΙΑΣ ΚΑΙ ΕΡΕΥΝΑΣ Α.Ε.' (Ε.Δ.Υ.Τ.Ε. Α.Ε.) is designated processor. 'GRNET' is the company's English name and does not appear on the Greek page, but the Greek name and acronym printed alongside it do.",
+   "quote_found": true,
+   "checked_url": "https://wallet.gov.gr/privacy/"
+  },
+  {
+   "claim": "record:EL:authentication_audit_log:register",
+   "fact_sha256": "d75ffb72ae78703c13f8eb125cec5f5cd34ea6ab5f95d03cbc147c871f7716f0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page, which is the Gov.gr Wallet privacy notice, states verbatim that a history of actions in the document-presentation process is kept at Ε.Δ.Υ.Τ.Ε. Α.Ε. for twelve (12) months, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://wallet.gov.gr/privacy/"
+  },
+  {
+   "claim": "record:EL:digital_identity_credentials:foreign_dependency",
+   "fact_sha256": "91086e279a64858010aff910e55471ed5955ad99ebc36e51630d668be59186f2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The quote is on the page and says GRNET, a Greek State company, designs, implements and maintains the application on behalf of the Ministry; but the page says nothing about where the infrastructure runs (no hosting, server or data-centre statement anywhere on it). A national operator is not the same as a national hosting location, so the source is ambiguous for this categorical label.",
+   "quote_found": true,
+   "checked_url": "https://wallet.gov.gr/privacy/"
+  },
+  {
+   "claim": "record:EL:vehicle_licensing:register",
+   "fact_sha256": "4545559939b4462e96f8cc7d44aacea99abd89ae1b9093e4b65e81d1d1a4f4f5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 1.2 says the Gov.gr Wallet app lets the holder of the police identity card (Α.Δ.Τ.) and the driving licence import them, and the quoted sentence says the app accesses these public documents through the respective registers from which they are drawn; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://wallet.gov.gr/privacy/"
+  },
+  {
+   "claim": "record:EL:grid_control:register",
+   "fact_sha256": "3428d0a9113e2ed27822266c8e4f7a5a16eec47089471bc90b2c91c4e5121639",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ADMIE announcement states verbatim that control and operation of the power system would be switched fully to the new EMS (ENERGY MANAGEMENT SYSTEM); the Kryoneri page (also fetched, quote found) adds that the EMS is operated at the National Energy Control Center. The printed name matches.",
+   "quote_found": true,
+   "checked_url": "https://www.admie.gr/anakoinoseis/enimerosi/metagogi-systimatos-ems"
+  },
+  {
+   "claim": "record:EL:health_records:register",
+   "fact_sha256": "071772594da23f4fbfa68a92a7f822bf75069d12b58b4d17d44682437b8bb5f5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is headed 'Ο Εθνικός Ηλεκτρονικός Φάκελος Υγείας', uses the acronym ΕΗΦΥ, and contains the quoted description verbatim: a secure, central point for storing and managing medical data in electronic form.",
+   "quote_found": true,
+   "checked_url": "https://www.ehealthrecord.gov.gr/ehfy-overview-details"
+  },
+  {
+   "claim": "record:EL:health_insurance:register",
+   "fact_sha256": "55f1f4584a80f59f951a738486c38c90e4bf7a77d1d3e13d9c47400c7c5f98fb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that an electronic prescription registration and execution application is installed and operates at ΗΔ.Υ.Κ.Α. Μ.Α.Ε., with the aim of bringing the four largest social-insurance funds (ΟΑΕΕ, ΙΚΑ-ΕΤΑΜ, ΟΓΑ, ΟΠΑΔ) into e-prescription; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.idika.gr/erga/ilektroniki-syntagografisi/"
+  },
+  {
+   "claim": "indicator:EL:L2",
+   "fact_sha256": "1b079a5cee277f2e607fa73cb4add71fb9de9258f92f3890d24bb7524d9f706e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 1 of Law 4727/2020 states verbatim that systems holding nationally classified information are governed by the National Security Regulation (Ε.Κ.Α.), i.e. a statute recognises a national classification regime and binds it to a regulation. This supports 'Yes'; note the statute refers to the Ε.Κ.Α. rather than setting out the classification levels itself.",
+   "quote_found": true,
+   "checked_url": "https://www.lawspot.gr/nomothesia/n-4727-2020/arthro-1-nomos-4727-2020-skopos-kai-pedio-efarmogis-toy/"
+  },
+  {
+   "claim": "record:EL:border_control:operator",
+   "fact_sha256": "dead93d2872c41011f192c1bca8677ce50c7cea23694995d6534b36448bccfab",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is in Article 18 (Κλάδος Αλλοδαπών και Προστασίας Συνόρων) of Law 4249/2014, the Hellenic Police reorganisation law, as a competence of the Directorate of Aliens: examining requests submitted through the national SIRENE bureau. The printed statement attributes this to the Hellenic Police, which the law's structure supports.",
+   "quote_found": true,
+   "checked_url": "https://www.lawspot.gr/nomothesia/nomos-4249-2014/"
+  },
+  {
+   "claim": "record:EL:police_records:foreign_dependency",
+   "fact_sha256": "d34cb1a47160da0fc86d5dc5f5b775a1c989addde6726439d65707d1b44b07f6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The law states verbatim that the Hellenic Police IT Directorate is competent for designing the computerised information systems and for creating and supporting their technical and operational infrastructure, to assist Hellenic Police services; a police directorate building and supporting the infrastructure supports the 'national' label.",
+   "quote_found": true,
+   "checked_url": "https://www.lawspot.gr/nomothesia/nomos-4249-2014/"
+  },
+  {
+   "claim": "record:EL:tax:foreign_dependency",
+   "fact_sha256": "47ebeb574673152dd9d7af5f11745e5c0fd3e147508a42162fe4df0ad7ba561e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 37 of Law 4389/2016 (the law establishing the Independent Authority for Public Revenue, 'the Authority') states verbatim that the Authority's information-system data, code, websites and e-government services are hosted, safeguarded, installed and operated on computing infrastructure of the Ministry of Finance's General Secretariat for Information Systems; this supports national infrastruct",
+   "quote_found": true,
+   "checked_url": "https://www.lawspot.gr/nomothesia/nomos-4389-2016/"
+  },
+  {
+   "claim": "record:EL:public_health_surveillance:register",
+   "fact_sha256": "459bd3c60b2e5946764aad8ac132a2ba211b5e2ce5bd0610ac1048323dd22849",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quoted sentence is verbatim on the page and continues with 'η παροχή αξιόπιστων και συγκρίσιμων επιδημιολογικών δεδομένων', so both elements printed (epidemiological surveillance and provision of epidemiological data as EODY core functions) are on the page.",
+   "quote_found": true,
+   "checked_url": "https://www.lawspot.gr/nomothesia/nomos-4633-2019/"
+  },
+  {
+   "claim": "record:EL:electoral_management:register",
+   "fact_sha256": "486748fcfa3f4e01523e3cc34f7252f572da03b54295d185716a2abb75a4bf0b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The preceding sentence on the page says 'το πρωτοδικείο' (the court of first instance) counts the votes, and the quoted sentence says it also compiles a table of detailed preference-vote results sent immediately in printed or electronic form to the Ministry of the Interior; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.lawspot.gr/nomothesia/proedriko-diatagma-26-2012/"
+  },
+  {
+   "claim": "record:EL:electoral_roll:register",
+   "fact_sha256": "5977b205bb15c912a856d9a897d3e63977c4487ede082b067cb0831cbdca4bf8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 7(1) of PD 26/2012 states verbatim that elections are held only with the electoral rolls kept at the Ministry of the Interior and compiled on the basis of the municipal registers (δημοτολόγια); the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.lawspot.gr/nomothesia/proedriko-diatagma-26-2012/"
+  },
+  {
+   "claim": "record:EL:facial_biometric:register",
+   "fact_sha256": "ddaefa418c472061e44e82dc774d65f2200fa5c398712b0838ed0a1b853a9494",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page (headed Διεύθυνση Διαβατηρίων & Εγγράφων Ασφαλείας) states verbatim that the Δ.Δ.Ε.Α./Α.Ε.Α. collects and stores on the storage medium of Greek passports the facial photograph and two flat fingerprints. 'Passport chip' renders 'μέσο αποθήκευσης των διαβατηρίων' (storage medium), which is acceptable.",
+   "quote_found": true,
+   "checked_url": "https://www.passport.gov.gr/npc/data.html"
+  },
+  {
+   "claim": "record:EL:fingerprint_biometric:register",
+   "fact_sha256": "0a1f7c22e412185aa9b50a311507f959ca898b85dfb3e5915037245d935b33bd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quoted sentence is verbatim on the page and continues that only the strictly necessary police personnel, and no other Greek or foreign authority, have access to the Central Database of the Δ.Δ.Ε.Α./Α.Ε.Α.; both the encrypted storage and the access restriction printed are on the page.",
+   "quote_found": true,
+   "checked_url": "https://www.passport.gov.gr/npc/data.html"
+  },
+  {
+   "claim": "record:EL:issuance_history:register",
+   "fact_sha256": "a0f1119eb5fdd897e5c8a02b9acf48c48aa6fc0989b5678fa94004294ee8b431",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that the Hellenic Police provides public bodies with web services supplying data on issued Greek passports, and a following sentence says these web services are provided through the Interoperability Centre of the Ministry of Digital Governance; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.passport.gov.gr/npc/data.html"
+  }
+ ]
+}

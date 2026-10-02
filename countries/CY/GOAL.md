@@ -58,7 +58,7 @@ The holdings Cyprus cannot let depend on infrastructure a foreign state can comp
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | Civil Registry System[^s8] | Civil Registry and Migration Department, with District Administration offices as registration authorities[^s9] | *Not stated in sources* | *Not yet measured* |
 | Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Fingerprint biometric (tier 0) | No central register[^s9] | — | — | — |
+| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Art. 63(5) (and 67(4) for passports) says fingerprints taken for an ID card may be used only to issue the card and are deleted within 48 hours, verbatim. That shows ID-document fingerprints are not retained under this law, but the source do It is withheld until the fact or its source is corrected and checked again* | — | — | — |
 | Critical | Breeder document scans (tier 0) | Civil register of births and deaths kept by the Registrar of each District[^s9] | Civil Registry and Migration Department and District Administrations (registration authorities for births and deaths)[^s9] | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Document issuance history (tier 0) | Civil Registry System (handles applications for the issuance of identity cards and passports)[^s8] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
@@ -90,7 +90,7 @@ The holdings Cyprus cannot let depend on infrastructure a foreign state can comp
 | High | Education (tier 1) | Integrated School Management System (SMS)[^s8] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | Single Bank of Electronic Health Records, which keeps and manages citizens' electronic health records[^s33] | National eHealth Authority, a public-law legal person[^s33] | *Not stated in sources* | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | The electronic edition of the Official Gazette is the only authentic edition with legal effect[^s34][^s8] | Published permanently and free of charge on the Government Printing Office website[^s34] | *Not stated in sources* | *Not yet measured* |
-| Standard | Emergency calls and public-safety radio (tier 1) | Next Generation 112 system; development agreement between Civil Defence and CYTA, 20-month implementation[^s35] | *Not yet sourced* | National infrastructure[^s35] | *Not yet measured* |
+| Standard | Emergency calls and public-safety radio (tier 1) | Next Generation 112 system; development agreement between Civil Defence and CYTA, 20-month implementation[^s35] | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The article only reports that Civil Defence signed a development agreement with CYTA for a system to be built over 20 months; it says nothing about where the infrastructure runs, what kind of entity CYTA is, or any hosting arrangement, so ' It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | State Archives, in which public records are deposited and kept[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Statistical microdata (tier 2) | Confidential statistical data: data that permit direct or indirect identification of statistical units[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Cyprus without a verified source yet. Corrections and 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
 
 ### How sources were found
 
@@ -204,10 +204,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
-| T2 competent public body or audit office | 633 |
-| T3 other institution or company | 9 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
+| T2 competent public body or audit office | 589 |
+| T3 other institution or company | 7 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
 
 ### Evidence grades
 
@@ -216,8 +216,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 106 |
-| Standard | 1282 |
+| Strong | 100 |
+| Standard | 1209 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -258,7 +258,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1388 printed facts pass the fact check.
+In this build, 1309 of 1309 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -300,7 +300,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
+In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -323,80 +323,82 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Cyprus
 
-0 of 62 printed facts about Cyprus pass.
+60 of 60 printed facts about Cyprus pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
-| indicator:CY:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
-| param:CY:population_m | param:CY:population_m | program:fetch_eurostat.py | none | never checked |  |
-| param:CY:gdp_eur_bn | param:CY:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
-| param:CY:gov_employment_k | param:CY:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
-| param:CY:elec_price_eur_mwh | param:CY:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
-| param:CY:renewables_pct | param:CY:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
-| param:CY:land_km2 | param:CY:land_km2 | program:fetch_eurostat.py | none | never checked |  |
-| record:CY:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:digital_identity_credentials:foreign_dependency | Digital identity credentials: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:CY:digital_identity_credentials:count | Digital identity credentials: how many records it holds | unrecorded | none | never checked |  |
-| record:CY:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:police_records:operator | Police information systems: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:tax:register | Tax: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:tax:operator | Tax: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:customs:operator | Customs declarations: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:health_insurance:operator | Statutory health insurance: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:land_property:operator | Land & property registry: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:land_property:foreign_dependency | Land & property registry: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:CY:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:border_control:operator | Border and visa systems: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:firearms_register:register | Firearms register: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:firearms_register:operator | Firearms register: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:public_finance:operator | Treasury and state accounts: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:electoral_management:register | Election management and results: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:central_bank:register | Central bank systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:central_bank:operator | Central bank systems: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:health_records:register | Health records: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:health_records:operator | Health records: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | none | never checked |  |
-| record:CY:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:emergency_communications:foreign_dependency | Emergency calls and public-safety radio: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:CY:national_archives:register | National archives (digital): the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
-| record:CY:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | none | never checked |  |
+| indicator:CY:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CY:population_m | param:CY:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CY:gdp_eur_bn | param:CY:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CY:gov_employment_k | param:CY:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CY:elec_price_eur_mwh | param:CY:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CY:renewables_pct | param:CY:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CY:land_km2 | param:CY:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:digital_identity_credentials:foreign_dependency | Digital identity credentials: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:digital_identity_credentials:count | Digital identity credentials: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:police_records:operator | Police information systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:tax:operator | Tax: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:customs:operator | Customs declarations: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:health_insurance:operator | Statutory health insurance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:land_property:register | Land & property registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:land_property:operator | Land & property registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:land_property:foreign_dependency | Land & property registry: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:business_registry:operator | Business registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:border_control:operator | Border and visa systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:firearms_register:operator | Firearms register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:public_finance:operator | Treasury and state accounts: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:electoral_management:register | Election management and results: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:central_bank:operator | Central bank systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:health_records:operator | Health records: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:national_archives:register | National archives (digital): the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:CY:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Cyprus
 
-None.
+| Claim | What it answers | Checked by | Verdict | Reason |
+|---|---|---|---|---|
+| record:CY:emergency_communications:foreign_dependency | Emergency calls and public-safety radio: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | claude-fable-5-1 | not supported | The article only reports that Civil Defence signed a development agreement with CYTA for a system to be built over 20 months; it says nothing about where the infrastructure runs, what kind of entity CYTA is, or any hosting arrangement, so 'National infrastructure' needs outside knowledge the source does not supply. |
+| record:CY:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | claude-fable-5-1 | unclear | Art. 63(5) (and 67(4) for passports) says fingerprints taken for an ID card may be used only to issue the card and are deleted within 48 hours, verbatim. That shows ID-document fingerprints are not retained under this law, but the source does not state that no central fingerprint register exists at all, so the general negative 'No central register' goes beyond what the page says. |
 
 ---
 
@@ -439,6 +441,6 @@ None.
 [^s37]: CyLaw (Cyprus Bar Association) — Ο περί Επίσημων Στατιστικών Νόμος του 2021 (Ν. 25(Ι)/2021), 2021. Ο περί Επίσημων Στατιστικών Νόμος του 2021 (Ν. 25(Ι)/2021). <https://www.cylaw.org/nomoi/arith/2021_1_025.pdf> ([archived](https://web.archive.org/web/20250507125237/http://www.cylaw.org/nomoi/arith/2021_1_025.pdf))
 [^s38]: CyLaw (Cyprus Bar Association) — Ο περί της Δημιουργίας Υποδομής Χωρικών Δεδομένων…, 2010. Ο περί της Δημιουργίας Υποδομής Χωρικών Δεδομένων (INSPIRE) Νόμος του 2010 (43(I)/2010). <https://www.cylaw.org/nomoi/enop/non-ind/2010_1_43/full.html> ([archived](https://web.archive.org/web/20240527211128/https://www.cylaw.org/nomoi/enop/non-ind/2010_1_43/full.html))
 
-**Evidence grades:** 4 Strong, 58 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 4 Strong, 56 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

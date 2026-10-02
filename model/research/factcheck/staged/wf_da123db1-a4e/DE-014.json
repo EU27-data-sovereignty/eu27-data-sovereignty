@@ -1,0 +1,230 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "DE-014",
+ "iso": "DE",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:DE:business_registry:operator",
+   "fact_sha256": "ba1617456d562d30ab9ba5b13348d17d00745c43a4f8723ee1e4ad8b70530234",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 8(1) HGB reads verbatim 'Das Handelsregister wird von den Gerichten elektronisch geführt', which names the courts as the body that keeps the commercial register.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/hgb/__8.html"
+  },
+  {
+   "claim": "record:DE:business_registry:register",
+   "fact_sha256": "731e366a914e9223a255826a8675677958884d4ff691094557887153fc4200fa",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The section is titled 'Handelsregister' and the quote names it as the register the courts keep; the printed name and translation match.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/hgb/__8.html"
+  },
+  {
+   "claim": "record:DE:digital_identity_credentials:register",
+   "fact_sha256": "b10db9f787eb1a327d8e9a0a26714c048fa8b9c70504965aff5438b68c9eceba",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Brandenburg OZG page says verbatim 'Zukünftig wird die BundID gemäß OZG als zentrales Bürgerkonto für alle weiterentwickelt und in die DeutschlandID umgewandelt', and § 3(1) OZG (also fetched, quote found) provides for 'ein zentrales Bürgerkonto, das der Bund bereitstellt'. Together they support BundID becoming the central citizen account 'DeutschlandID' under the OZG; note the OZG text itself",
+   "quote_found": true,
+   "checked_url": "https://ozg.brandenburg.de/ozg/de/it-infrastrukturen/it-basiskomponenten/bundid-nutzerkonto-deutschlandid/"
+  },
+  {
+   "claim": "record:DE:issuance_history:register",
+   "fact_sha256": "33c43fd8f1e5bdc1cddcda007561a45a8dd353861e68caa70fb7de6856645b75",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 23 PAuswG ('Personalausweisregister', '(1) Die Personalausweisbehörden führen Personalausweisregister') lists in Absatz 3 the items '11. Seriennummer, 12. Sperrkennwort und Sperrsumme, 13. letzter Tag der Gültigkeitsdauer', which is what the printed statement says the ID-card register records.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/pauswg/__23.html"
+  },
+  {
+   "claim": "record:DE:facial_biometric:operator",
+   "fact_sha256": "de26da8c79b8b96ccd65da04217b147bac79f13f2e901841112c1b60d55e68a1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 26(1) PAuswG says the required data and biometric features may not be stored 'außer bei den ausstellenden Personalausweisbehörden', i.e. only at the issuing ID-card authorities, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/pauswg/__26.html"
+  },
+  {
+   "claim": "record:DE:fingerprint_biometric:register",
+   "fact_sha256": "c39ea2d9406623197cd0a9e1f37cd8a7aaae77d02f163730dc80ff0228c06c7e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The cited § 26(2) sentence requires fingerprints held by the ID-card authority to be deleted at the latest on handover of the card, and on the same page § 26(4) states 'Eine bundesweite Datenbank der biometrischen Merkmale wird nicht errichtet'; in that context 'No central register' is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/pauswg/__26.html"
+  },
+  {
+   "claim": "record:DE:issuance_history:operator",
+   "fact_sha256": "a107db77e1c11a713d0a5e03ca2088182ee0e84d5534a038eebf24fcbf122fce",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 26(3) PAuswG reads verbatim that a central storage covering all serial numbers 'darf nur bei dem Ausweishersteller und ausschließlich zum Nachweis des Verbleibs der Ausweise erfolgen', matching the printed statement exactly.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/pauswg/__26.html"
+  },
+  {
+   "claim": "record:DE:breeder_documents:operator",
+   "fact_sha256": "7c0583cd9857f33f314e1ba84af4553f89e8f0e0beb95f45af5c5582c9487257",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 3(1) PStG says verbatim 'Das Standesamt führt für seinen Zuständigkeitsbereich ... 3. ein Geburtenregister (§ 21)' alongside the marriage, partnership and death registers, which is what the printed statement says.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/pstg/__3.html"
+  },
+  {
+   "claim": "indicator:DE:L2",
+   "fact_sha256": "7e2bd4bb353093aeca0f605ad055fe5d1097fa8b7a050deffb9d59ce8c6fe648",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 4 of the Sicherheitsüberprüfungsgesetz (a federal statute) defines the four Geheimhaltungsgrade including the quoted 'VS-NUR FÜR DEN DIENSTGEBRAUCH' clause, and the VSA (a binding Allgemeine Verwaltungsvorschrift of the BMI, quote found verbatim once decoded as ISO-8859-1) classifies Verschlusssachen into those grades; a statutory classification scheme exists, so 'Yes' is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/s_g/__4.html"
+  },
+  {
+   "claim": "record:DE:health_insurance:operator",
+   "fact_sha256": "336f5dc93de5c7c9f3287146d31848b7635dc79d554cc6a5e85556386e82d224",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 288 SGB V reads verbatim 'Die Krankenkasse hat ein Versichertenverzeichnis zu führen', naming the health insurance fund as the body that keeps the register.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/sgb_5/__288.html"
+  },
+  {
+   "claim": "record:DE:health_insurance:register",
+   "fact_sha256": "4f94d87ab376d89f10ef78d3d4b5d6bc1e8d3b6c49dc6d7de70f27251fca0be0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The section is titled 'Versichertenverzeichnis' and the quoted text names it as the register of insured persons the fund must keep, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/sgb_5/__288.html"
+  },
+  {
+   "claim": "record:DE:vehicle_licensing:operator",
+   "fact_sha256": "746856f2f58909874ac68758dc54d3ee6cee933c350402bd03810860ff6919bb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 48(2) StVG says verbatim 'Das Kraftfahrt-Bundesamt führt ein Register über Fahrerlaubnisse ... (Zentrales Fahrerlaubnisregister)', naming the KBA as the operator of the central licensing register.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/stvg/__48.html"
+  },
+  {
+   "claim": "record:DE:vehicle_licensing:register",
+   "fact_sha256": "a3e7f19ecbfdcd83ba93ccc910c73c52cf1c253b8b5687e970eb37b5a066f6bb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 31(2) StVG names verbatim the 'Zentrales Fahrzeugregister des Kraftfahrt-Bundesamtes' kept by the KBA, which is the printed register name; the first citation (§ 48, quote also found) names the separate Zentrales Fahrerlaubnisregister and does not itself contain the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/stvg/__31.html"
+  },
+  {
+   "claim": "record:DE:official_gazette:register",
+   "fact_sha256": "6bef2154c0d3cb3cb55ce4cb2b653ba557ebf7d2339adb9779447648e1a943d3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 1(1) VkBkmG reads verbatim 'Das Bundesgesetzblatt ist das Verkündungsorgan des Bundes für Gesetze und Rechtsverordnungen', naming the Bundesgesetzblatt as the gazette.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/vkbkmg/__1.html"
+  },
+  {
+   "claim": "record:DE:official_gazette:operator",
+   "fact_sha256": "fc7ee7d1028f960d12087d8f5959a5c1c8bdc87371a0c1a98837eb3fe9fa47bd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 2(1) VkBkmG says verbatim the Bundesgesetzblatt 'wird vom Bundesamt für Justiz auf der Internetseite www.recht.bund.de ausgegeben' and kept available there in full and permanently, naming the Federal Office of Justice as the body that issues and maintains it.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/vkbkmg/__2.html"
+  },
+  {
+   "claim": "record:DE:firearms_register:register",
+   "fact_sha256": "20e1a500b6b1baa9d0f668366487a360195599b553a0884d4be6e844c5765d60",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 1(1) of the Waffenregistergesetz reads verbatim 'Das Nationale Waffenregister dient insbesondere dem Schutz der öffentlichen Sicherheit und Ordnung', naming the register as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/waffrg/__1.html"
+  },
+  {
+   "claim": "record:DE:firearms_register:operator",
+   "fact_sha256": "40c32a869bbd95e5d1d93c99e7cf3620aa258e57738cd1750ba0c989be208274",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 3 WaffRG reads verbatim '(1) Das Waffenregister wird von der Registerbehörde geführt. (2) Registerbehörde ist das Bundesverwaltungsamt.', naming the Federal Office of Administration as operator.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/waffrg/__3.html"
+  },
+  {
+   "claim": "indicator:DE:C2",
+   "fact_sha256": "ac932744f20ab48ef9079c3de7149a3915820386d0c63a3f83f6572d7b1a0078",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The IT-Planungsrat news item (27.03.2025) says verbatim the Deutsche Verwaltungscloud 'geht offiziell in den Produktivbetrieb: Ab dem 1. April 2025 ... löst damit die bisherige Projektphase ab', and the two ITZBund pages (quotes found) state the private Bundescloud / Bundescloud 2.0 is operated in ITZBund's own data centres; a government cloud platform in operation, not merely announced, so 'Yes' ",
+   "quote_found": true,
+   "checked_url": "https://www.it-planungsrat.de/aktuelles/details/digitalisierung-der-verwaltung-deutsche-verwaltungscloud-startet-in-den-produktivbetrieb"
+  },
+  {
+   "claim": "indicator:DE:C1",
+   "fact_sha256": "9c93d88ee7093eae0cc1696522980618bb74b53e5adf91dec1dd0c80a6949a6e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "ITZBund (the federal government's central IT provider working 'ressortübergreifend für die gesamte Bundesverwaltung') describes verbatim its 'überregionaler Verbund von Rechenzentren, aufgeteilt auf mindestens drei Regionen', and the 2024 Facts & Figures page reports 'Das neu in Betrieb genommene Rechenzentrum im Rhein-Main-Gebiet'; state-operated data centres in operation today, so 'Yes' is suppo",
+   "quote_found": true,
+   "checked_url": "https://www.itzbund.de/DE/leistungsportfolio/hostingundbetrieb/hostingundbetrieb.html"
+  },
+  {
+   "claim": "record:DE:tax:register",
+   "fact_sha256": "de4761c87ca6340ee67c64bb1653feb1c66994bce85949cc2104af0ad6932984",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Bavarian tax office page says verbatim 'ELSTER steht für die ELektronische STeuerERklärung und ermöglicht eine ... elektronische Übertragung von Steuerdaten', matching the printed name and expansion.",
+   "quote_found": true,
+   "checked_url": "https://www.lfst.bayern.de/elster"
+  },
+  {
+   "claim": "record:DE:customs:register",
+   "fact_sha256": "22249b99fafab306b78221e44549c82100dc8cb87f3424f51163d5ade47304e7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Zoll page reads verbatim 'Mit dem IT-Verfahren ATLAS ... wird die weitgehend automatisierte Abfertigung und die Überwachung des grenzüberschreitenden Warenverkehrs gewährleistet', which is what the printed statement says.",
+   "quote_found": true,
+   "checked_url": "https://www.zoll.de/DE/Fachthemen/Zoelle/ATLAS/atlas_node.html"
+  },
+  {
+   "claim": "record:DE:public_finance:register",
+   "fact_sha256": "bbfd51464ca5e946199476f7915b1d2b7db89c8b137b24fea9e1641191dde279",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page ('Übersicht HKR-Verfahren') opens verbatim with 'Das automatisierte Verfahren für das Haushalts-, Kassen- und Rechnungswesen des Bundes (HKR-Verfahren)', matching the printed name and the HKR abbreviation.",
+   "quote_found": true,
+   "checked_url": "https://zrb.bund.de/vorschriften/hkr-verfahren"
+  }
+ ]
+}

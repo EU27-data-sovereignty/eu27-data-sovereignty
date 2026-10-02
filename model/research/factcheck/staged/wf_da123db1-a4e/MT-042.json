@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "MT-042",
+ "iso": "MT",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "param:MT:gov_employment_k",
+   "fact_sha256": "d4ce386aaafdf659fd1ee3590d9ffa32c4ca162869af06ba786de18675cecc9f",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 20.06 thousand persons for MT, 2024, EMP_DC, NACE O; rounded to one decimal that is 20.1 thousand as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=MT&time=2024"
+  },
+  {
+   "claim": "param:MT:gdp_eur_bn",
+   "fact_sha256": "de78e5a5a0514660099c5c1709b25af613ac4956a19826e7684c29b9bcf1d72c",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 24664.0 million EUR for MT, 2025, B1GQ at current prices; scaled to billions and rounded that is 24.7 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=MT&time=2025"
+  },
+  {
+   "claim": "param:MT:renewables_pct",
+   "fact_sha256": "91250642feafd404c4bb27cbd5c56d80b48781f09281c7b484cc41b5e67cc841",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 11.2 (flagged provisional) for MT, 2025, REN_ELC in percent, matching the printed 11.2 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=MT&time=2025"
+  },
+  {
+   "claim": "param:MT:elec_price_eur_mwh",
+   "fact_sha256": "dd5c8042477b2ea32f19541808e80907a401c35774e4a2330c0fcf17ee8dcc20",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1352 EUR/kWh (provisional) for MT, 2025-S2, band MWH500-1999 excluding VAT; converted to EUR/MWh that is 135.2 as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=MT&time=2025-S2"
+  },
+  {
+   "claim": "param:MT:land_km2",
+   "fact_sha256": "e7479f71d70299d0ba9e9d445c1eecc4ca5c946ec6be51a51e08af8370c15dfb",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 313 km² for MT, landuse L0008, 2026, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=MT&time=2026"
+  },
+  {
+   "claim": "param:MT:population_m",
+   "fact_sha256": "d9b77b7b0d90d737bec1b26a96ef8dae400d649975a260049f53caa4401559f2",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 588,254 persons on 1 January 2026 for MT; scaled to millions and rounded that is 0.59 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=MT&time=2026"
+  },
+  {
+   "claim": "record:MT:border_control:operator",
+   "fact_sha256": "31975e625c69787149106e1b0cb0e39a8f186b42b7313982c751b489dc03d053",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The quote appears verbatim and establishes the CVU as the central authority for national visa policy and the Schengen acquis in visa matters, but the page names no border or visa system the CVU operates, refers separately to 'border control authorities', and does not mention the EES printed as this record's register; the source supports a visa authority, not an operator of border and visa systems.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/central-visa-unit-main-page/"
+  },
+  {
+   "claim": "record:MT:residence_permits:operator",
+   "fact_sha256": "0835bb0874d0d0a92d4a5bef1f0715cb191a73d980ec509e219817a535dd51d3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that the Expatriates Unit 'caters for the processing and issuing of residence documentation', and the get-to-know-identita page confirms it issues residence documents to EU nationals and residence permits to third-country nationals; the printed statement adds nothing.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/expatriates-unit-main-page/"
+  },
+  {
+   "claim": "record:MT:border_control:register",
+   "fact_sha256": "23fdc67f230d2b04c8bf80f5a6396c729ffbcfc4ebc36352cf9b5ae989f6e33c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Identità page describes the EES verbatim as an automated system registering third-country travellers at the EU's external borders, recording biometrics and entry/exit data; it names the Entry-Exit System as the border system, as printed.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/entry-exit-system/"
+  },
+  {
+   "claim": "record:MT:residence_permits:register",
+   "fact_sha256": "55c9a7fff65c354ed0da96a980399cc9821a1865caccbbee016507fab8b4bb09",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote 'During the appointment session, the biometrics will be taken.' appears verbatim on a page addressed to non-EU nationals finalising a residence document application, which is what the printed statement says; note it describes a process rather than naming a register.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/useful-information/finalising-application-process/biometrics-and-interim-receipt/"
+  },
+  {
+   "claim": "indicator:MT:K2",
+   "fact_sha256": "fab271ed2d420ecab5908ac861eaedfc3ee7baf77ece5f8bf25acf5222a05da1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Identità describes itself verbatim as a government agency established in 2013 responsible for identity management and e-ID cards, S.L. 595.07 (legislation.mt PDF, quote found) establishes it as an agency of the public administration, and the Identity Cards Unit issues e-ID cards and manages e-ID virtual accounts; the NIFO quote (archived PDF, found) confirms the eID scheme was notified under eIDAS",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/get-to-know-identita/"
+  },
+  {
+   "claim": "record:MT:digital_identity_credentials:operator",
+   "fact_sha256": "b86919f9cc08166df8b303ebc2bb60687bcd9df70a83c96bf593889ad12fa574",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes appear verbatim: the Identity Cards Unit issues e-ID cards and registers/maintains e-ID (virtual) accounts, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/identity-cards-unit/"
+  },
+  {
+   "claim": "record:MT:digital_identity_credentials:register",
+   "fact_sha256": "d0be66d6a62a3f81f53bbed9efdcbe46b5db03d4bbff59861f917cd274561b77",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that applicants may subscribe for their e-ID virtual account, 'which is required to access Government online services', matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/identity-cards-unit/eid-virtual-account/"
+  },
+  {
+   "claim": "record:MT:facial_biometric:register",
+   "fact_sha256": "b5ae8d6c10d64f93705b9a1c013c379add5c275d65865575b1cd5afff445657e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The sentence about the facial image captured for the e-ID card being passed to the Electoral Office for printing voting documents and publishing electoral registers appears verbatim and matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/identity-cards-unit-electoral-office/"
+  },
+  {
+   "claim": "record:MT:issuance_history:operator",
+   "fact_sha256": "fa84865ac797053e650c28a77f4a8f16cf3722eea6565c84185283a77b8972a3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that the Identity Cards Unit issues electronic Identity Cards to Maltese citizens and registers e-ID (Virtual) accounts, which is what the printed statement says.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/identity-cards-unit/"
+  },
+  {
+   "claim": "record:MT:trust_services_pki:register",
+   "fact_sha256": "b2a8cfc7590852b06a3b70ae0bdd5ea33dcc98154f1bb88ff8e347f1cc9eda65",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that applicants may use 'the certificates (Authentication Certificate and Signature Certificate) found on their e-ID Card', supporting the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/identity-cards-unit/eid-virtual-account/"
+  },
+  {
+   "claim": "record:MT:fingerprint_biometric:register",
+   "fact_sha256": "82d4e9202389251b0746b0eae676da9d95312cb11266ef66f623e6dafb8d1a11",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "On the Passport Office adult-renewals page the sentence 'At the office live biometrics will be captured including facial image, fingerprints, and signature.' appears verbatim, in the context of passport renewal applications made in person, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/passport-office-adults-renewals/"
+  },
+  {
+   "claim": "record:MT:issuance_history:register",
+   "fact_sha256": "bf4dcce4ec81f773e536a1273e11748b59847afb138c3692624a595be54882c2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim 'The first Maltese biometric passport was issued on September 30, 2008', which supports the printed date.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/passport-office-main-page/"
+  },
+  {
+   "claim": "record:MT:breeder_documents:register",
+   "fact_sha256": "d0c4fcf26961b8cb35baa7bc41b5981e37f228f724d58bc0af4e6d91352d1475",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that all documents presented are retained and indefinitely preserved in the Archives of the Public Registry, naming the archive as printed.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/public-registry-main-page/"
+  },
+  {
+   "claim": "record:MT:civil_registry:register",
+   "fact_sha256": "a5df992c8088c8d8bd519e84ca06b22df19d051c862185329d56225792b20015",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Both quotes are found: the Identità page says the Civil Status Section issues true copies of acts of birth, marriage, civil union and death registered in Malta, and the Civil Code (art. 238) says the Public Registry Office keeps the register books for those acts. Neither source says the Civil Status Section itself holds the acts; the printed attribution of custody to the Section rather than the Pu",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/public-registry-sec-page-civil-status/"
+  },
+  {
+   "claim": "record:MT:official_gazette:register",
+   "fact_sha256": "0d7f6f8c774392141f936cdcc9b83bfceddf129614f35853575f052bec8f84e4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Maltese sentence (with the page's spelling 'Liġijijiet') appears verbatim and says that in Legislation Malta you find all the laws of Malta including consolidated subsidiary legislation, as printed.",
+   "quote_found": true,
+   "checked_url": "https://legislation.mt/Home/FAQList"
+  },
+  {
+   "claim": "record:MT:intelligence:register",
+   "fact_sha256": "e123f1d8e80d8b64e2cec44f3d2add501a3414e9e01a108ffe49880c53c9e5c5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Security Service Act (Cap. 391) art. 3(2) reads verbatim that the function of the Service is to protect national security, in particular against threats from organised crime, espionage, terrorism and sabotage; the printed statement reproduces this (it describes a function, not a register name).",
+   "quote_found": true,
+   "checked_url": "https://legislation.mt/getpdf/6022ba1cbc827214c09ac4a7"
+  },
+  {
+   "claim": "record:MT:statistics_microdata:register",
+   "fact_sha256": "b260e15201e19eabc11189c273156651b505e7bdd7e9e3fb87a750dbb14b86be",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Malta Statistics Authority Act (Cap. 422) art. 36(3) states verbatim that for any census of population and housing the relevant order is prescribed by the Prime Minister, which supports 'held by order under the Act'.",
+   "quote_found": true,
+   "checked_url": "https://legislation.mt/getpdf/6022c0cfbc827214c09b08e1"
+  },
+  {
+   "claim": "record:MT:land_property:register",
+   "fact_sha256": "3f89e4288e85fd93c84b3f7031401fa3846b171295eaecf7c97b8d0e62827bfb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The LRA news page states verbatim that the Land Registration Agency launched the new Land Registration System (LRS); the Land Registration Act quote (PDF, found) establishes the Land Registry. The printed system name matches.",
+   "quote_found": true,
+   "checked_url": "https://lra.mt/news/a-leap-forward-in-digital-transformation-launch-of-the-new-digital-platform-lrs/"
+  },
+  {
+   "claim": "record:MT:electoral_roll:register",
+   "fact_sha256": "1312df2c201c6ec06dfffdee5beb28539363471bdd59eb20828b12d4626628a2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "General Elections Act (Cap. 354) art. 11(3) states verbatim that the Commission is to ensure that the Electoral Register database includes only eligible persons, so the Act does refer to the Electoral Register database as printed.",
+   "quote_found": true,
+   "checked_url": "https://legislation.mt/getpdf/661645c07403ed16fcf9eb8e"
+  },
+  {
+   "claim": "record:MT:health_insurance:register",
+   "fact_sha256": "491912572ca4cdbdcb439eb56fd2aaa0e0013753191e573ad57da159d86d169e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Health Act (Cap. 528) art. 2 defines verbatim '\"insured person\" means a person included in the list established by regulations made under this Act', matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://legislation.mt/getpdf/677e3ecacc8e8e3d102ff18a"
+  },
+  {
+   "claim": "record:MT:judicial_criminal:register",
+   "fact_sha256": "54147e868a3f388b6f8ea946da1ef4b7dce7405885028cd6268f776ae8e28bac",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Conduct Certificates Ordinance (Cap. 77) art. 3(6) states verbatim that the following competent authorities have continuous direct access to the complete record of criminal convictions, listing (a) the Attorney General, (b) the Commissioner of Police, (c) the Security Service, exactly the three named in print.",
+   "quote_found": true,
+   "checked_url": "https://legislation.mt/getpdf/6aa1090e5ca02023e4009067"
+  },
+  {
+   "claim": "record:MT:land_property:operator",
+   "fact_sha256": "7170b65739fede51087d1085f7d14d6efd4d64ec00bfd782876bd4fd0c2a63cd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The LRA home page states verbatim that the Land Registration Agency is the competent entity for the registration of property within the Maltese Islands, supporting it as the operator.",
+   "quote_found": true,
+   "checked_url": "https://lra.mt/"
+  },
+  {
+   "claim": "record:MT:beneficial_ownership:register",
+   "fact_sha256": "2ca203d07a165a52a10ccec26f2c0fcf95cae9b69c7b046cfebe06c683136cae",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The MBR page states verbatim that the MBR maintains the central Register of Beneficial Owners, naming the register as printed.",
+   "quote_found": true,
+   "checked_url": "https://mbr.mt/"
+  },
+  {
+   "claim": "record:MT:business_registry:operator",
+   "fact_sha256": "b2c080024cf466ea0e61a868c25d7647e77aa9e24806d28a728a1514ba67e057",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The MBR page states verbatim that the Malta Business Registry (MBR), led by the Registrar of Companies, is the central authority for all commercial entities in Malta, supporting it as the business registry operator.",
+   "quote_found": true,
+   "checked_url": "https://mbr.mt/"
+  }
+ ]
+}

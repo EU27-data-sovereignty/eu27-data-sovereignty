@@ -6,23 +6,23 @@
 
 ## Status
 
-**28 of 1388 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **2** more are withheld because the check did not confirm them.
+**1309 of 1309 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **81** more are withheld because the check did not confirm them.
 
 | Checker model | Current verdicts |
 |---|---:|
-| claude-fable-5-1 | 28 |
+| claude-fable-5-1 | 1309 |
 | claude-opus-5-5 | 0 |
 
 | Verdict | Facts |
 |---|---:|
-| supported | 28 |
+| supported | 1309 |
 | not supported | 0 |
 | unclear | 0 |
 
 | Author of the fact, as recorded | Facts |
 |---|---:|
-| program:fetch_eurostat.py | 162 |
-| unrecorded | 1226 |
+| program:fetch_eurostat.py | 161 |
+| unrecorded | 1148 |
 
 ## The rule
 
@@ -36,1368 +36,7 @@ A verdict holds for the fact exactly as printed: a SHA-256 of the claim, the que
 
 ## Not passing
 
-| Claim | Printed | Why |
-|---|---|---|
-| `indicator:AT:L2` | Yes | never checked |
-| `indicator:AT:K1` | Partly | never checked |
-| `indicator:AT:K2` | Yes | never checked |
-| `indicator:AT:C1` | Yes | never checked |
-| `indicator:AT:C2` | Yes | never checked |
-| `param:AT:population_m` | 9.22 million | never checked |
-| `param:AT:gdp_eur_bn` | 514.3 EUR bn | never checked |
-| `param:AT:gov_employment_k` | 280.5 thousand | never checked |
-| `param:AT:elec_price_eur_mwh` | 198.6 EUR/MWh | never checked |
-| `param:AT:renewables_pct` | 90.8 % | never checked |
-| `param:AT:land_km2` | 82 494 km² | never checked |
-| `record:AT:civil_registry:register` | Zentrales Melderegister (ZMR) - Central Register of Residents | never checked |
-| `record:AT:civil_registry:operator` | Federal Minister of the Interior acts as processor of the ZPR | never checked |
-| `record:AT:fingerprint_biometric:register` | No central register | never checked |
-| `record:AT:breeder_documents:register` | Supporting documents underlying civil status entries are kept by the civil status authority that made the entry (decentralised) | never checked |
-| `record:AT:facial_biometric:register` | Central evidence under § 22b Passport Act holds passport/ID card data including the facial image (lit. j) but not fingerprints (lit. k) | never checked |
-| `record:AT:facial_biometric:foreign_dependency` | National infrastructure | never checked |
-| `record:AT:digital_identity_credentials:register` | Elektronischer Identitätsnachweis (E-ID), branded ID Austria | never checked |
-| `record:AT:digital_identity_credentials:operator` | Federal Minister of the Interior and the Source PIN Register Authority process E-ID registration data | never checked |
-| `record:AT:electoral_roll:register` | Zentrales Wählerregister (ZeWaeR) - Central Voter Register | never checked |
-| `record:AT:electoral_roll:operator` | Federal Minister of the Interior acts as processor of ZeWaeR for each municipality | never checked |
-| `record:AT:electoral_roll:count` | 6,346,059 persons entitled to vote in the 2024 National Council election | never checked |
-| `record:AT:trust_services_pki:register` | Austrian Country Signing CA (CSCA) operated by the Federal Ministry of the Interior | never checked |
-| `record:AT:trust_services_pki:operator` | RTR-GmbH compiles and publishes the national trust list | never checked |
-| `record:AT:trust_services_pki:count` | fast 6,3 Millionen ID Austria-Registrierungen (almost 6.3 million ID Austria registrations) as of 1 September 2026 | never checked |
-| `record:AT:land_property:register` | Grundbuch (land register) | never checked |
-| `record:AT:judicial_criminal:register` | Strafregister (criminal record register) | never checked |
-| `record:AT:judicial_criminal:operator` | Landespolizeidirektion Wien (Vienna Provincial Police Directorate) | never checked |
-| `record:AT:police_records:register` | PAD - Protokollieren Anzeigen Daten (police case and report logging system) | never checked |
-| `record:AT:intelligence:register` | Datenverarbeitung mittels operativer oder strategischer Analyse (state-protection analysis data processing, jointly controlled by the Federal Minister of the Interior and the provincial police directorates) | never checked |
-| `record:AT:issuance_history:register` | Identitätsdokumentenregister (IDR) - Identity Document Register | never checked |
-| `record:AT:issuance_history:foreign_dependency` | National infrastructure | never checked |
-| `record:AT:residence_permits:operator` | Federal Minister of the Interior acts as processor of the Central Register of Foreigners | never checked |
-| `record:AT:tax:register` | FinanzOnline | never checked |
-| `record:AT:tax:operator` | Bundesrechenzentrum GmbH (BRZ) for the Bundesministerium für Finanzen (Federal Computing Centre, for the Federal Ministry of Finance) | never checked |
-| `record:AT:customs:register` | e-zoll (electronic customs) | never checked |
-| `record:AT:customs:count` | mehr als 4,5 Mio. Zollanmeldungen pro Jahr (more than 4,5 million customs declarations per year) | never checked |
-| `record:AT:benefits_pensions:register` | Pensionskonto (pension account) | never checked |
-| `record:AT:benefits_pensions:operator` | Dachverband der Sozialversicherungsträger (Umbrella Association of Austrian Social Insurance Institutions) | never checked |
-| `record:AT:health_insurance:register` | Elektronisches Verwaltungssystem (ELSY) (electronic administration system, the e-card system) | never checked |
-| `record:AT:health_insurance:operator` | Dachverband (der Sozialversicherungsträger) (Umbrella Association of Social Insurance Institutions) | never checked |
-| `record:AT:business_registry:register` | Firmenbuch (companies register) | never checked |
-| `record:AT:business_registry:operator` | BRZ (Bundesrechenzentrum GmbH) for the Justizministerium (Federal Computing Centre for the Ministry of Justice) | never checked |
-| `record:AT:business_registry:count` | etwa 545.000 Firmen (about 545,000 companies) | never checked |
-| `record:AT:beneficial_ownership:register` | Register der wirtschaftlichen Eigentümer (Register of Beneficial Owners) | never checked |
-| `record:AT:beneficial_ownership:operator` | WiEReG–Registerbehörde im Bundesministerium für Finanzen (WiEReG register authority in the Federal Ministry of Finance) | never checked |
-| `record:AT:vehicle_licensing:register` | Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR) (Central Motor Vehicle Register) | never checked |
-| `record:AT:vehicle_licensing:operator` | Bundesminister für Inneres (Federal Minister of the Interior) | never checked |
-| `record:AT:border_control:register` | Nationales Schengener Informationssystem (N-SIS II) (National Schengen Information System) | never checked |
-| `record:AT:firearms_register:register` | Zentrales Waffenregister (Central Weapons Register) | never checked |
-| `record:AT:firearms_register:operator` | Bundesminister für Inneres as processor, with IBM Österreich Internationale Büromaschinen GmbH, Microsoft Österreich GmbH and Bundesrechenzentrum GmbH as further processors | never checked |
-| `record:AT:public_finance:register` | Haushaltsverrechnungssystem HV-SAP (federal budget accounting system) | never checked |
-| `record:AT:government_payroll:register` | Personalverrechnungssystem PM-SAP (federal payroll system) | never checked |
-| `record:AT:electoral_management:register` | Modulares Wahlpaket (modular election package) | never checked |
-| `record:AT:electoral_management:operator` | Bundeswahlbehörde p.A. Bundesministerium für Inneres (Federal Electoral Board, c/o Federal Ministry of the Interior) | never checked |
-| `record:AT:central_bank:register` | TARGET Services (RTGS, TIPS, T2S, CLM) | never checked |
-| `record:AT:emergency_communications:register` | BOS-Digitalfunk, österreichweites Digitalfunksystem für Behörden und Organisationen mit Sicherheitsaufgaben (nationwide public-safety digital radio system) | never checked |
-| `record:AT:crisis_management:register` | Bundeslagezentrum (Federal Situation Centre) | never checked |
-| `record:AT:crisis_management:operator` | Bundesministerium für Inneres (Federal Ministry of the Interior) | never checked |
-| `record:AT:grid_control:register` | APG-Steuerzentrale, Power Grid Control (APG control centre) | never checked |
-| `record:AT:grid_control:operator` | APG (Austrian Power Grid AG) | never checked |
-| `record:AT:education:register` | Gesamtevidenz der Schülerinnen und Schüler (national overall register of pupils) | never checked |
-| `record:AT:education:operator` | Bundesanstalt „Statistik Österreich“ (Statistics Austria), as processor | never checked |
-| `record:AT:official_gazette:register` | Rechtsinformationssystem des Bundes (RIS) (Federal Legal Information System) | never checked |
-| `record:AT:official_gazette:operator` | Bundeskanzler (Federal Chancellor / Federal Chancellery) | never checked |
-| `indicator:BE:L2` | Yes | never checked |
-| `indicator:BE:K1` | Yes | never checked |
-| `indicator:BE:K2` | Yes | never checked |
-| `indicator:BE:C1` | Yes | never checked |
-| `indicator:BE:C2` | Yes | never checked |
-| `param:BE:population_m` | 11.96 million | never checked |
-| `param:BE:gdp_eur_bn` | 642.0 EUR bn | never checked |
-| `param:BE:gov_employment_k` | 459.5 thousand | never checked |
-| `param:BE:elec_price_eur_mwh` | 186.6 EUR/MWh | never checked |
-| `param:BE:renewables_pct` | 34.3 % | never checked |
-| `param:BE:land_km2` | 30 452 km² | never checked |
-| `record:BE:civil_registry:register` | Rijksregister van de natuurlijke personen (National Register of Natural Persons), the central database of identification data of all registered persons | never checked |
-| `record:BE:civil_registry:operator` | The National Register is managed by the Directorate-General Identity and Civil Affairs of the FPS Interior | never checked |
-| `record:BE:facial_biometric:register` | ID-card photos are stored and visible in the National Register | never checked |
-| `record:BE:fingerprint_biometric:register` | No central register | never checked |
-| `record:BE:breeder_documents:register` | DABS: a central database holding all civil status deeds, replacing the municipal and consular registers | never checked |
-| `record:BE:breeder_documents:operator` | DABS is governed by a DABS Management Committee responsible for its set-up and management | never checked |
-| `record:BE:authentication_audit_log:register` | FAS audit trail of authentication logs, kept for 10 years | never checked |
-| `record:BE:issuance_history:register` | Register van de Identiteitskaarten: a permanent inventory of the identity cards produced and issued in Belgium | never checked |
-| `record:BE:digital_identity_credentials:register` | Federal Authentication Service (FAS) | never checked |
-| `record:BE:digital_identity_credentials:operator` | DG Simplification and Digitization (FPS Policy and Support, BOSA) | never checked |
-| `record:BE:trust_services_pki:register` | Belgium Root CA (BRCA), the top of the government CA hierarchy | never checked |
-| `record:BE:trust_services_pki:operator` | The Belgian authorities are the certification service provider responsible for the Belgium Root CAs | never checked |
-| `record:BE:land_property:register` | kadastrale documentatie of the AAPD (cadastral documentation of the General Administration of Patrimonial Documentation) | never checked |
-| `record:BE:land_property:operator` | Algemene Administratie van de Patrimoniumdocumentatie (AAPD) (General Administration of Patrimonial Documentation) | never checked |
-| `record:BE:judicial_criminal:register` | Centraal Strafregister (Central Criminal Register) | never checked |
-| `record:BE:residence_permits:register` | Evibel is the internal database of the immigration service, to be replaced by eMigration | never checked |
-| `record:BE:benefits_pensions:register` | Pensioenkadaster (Pension Register) | never checked |
-| `record:BE:business_registry:register` | Kruispuntbank van Ondernemingen (Crossroads Bank for Enterprises) | never checked |
-| `record:BE:beneficial_ownership:register` | UBO-register (register of ultimate beneficial owners) | never checked |
-| `record:BE:vehicle_licensing:register` | Kruispuntbank van de Voertuigen (Crossroads Bank for Vehicles) | never checked |
-| `record:BE:vehicle_licensing:operator` | Directie voor de Inschrijving van Voertuigen van de Federale Overheidsdienst Mobiliteit en Vervoer (DIV, Vehicle Registration Directorate of FPS Mobility and Transport) | never checked |
-| `record:BE:firearms_register:register` | Centraal Wapenregister (Central Weapons Register) | never checked |
-| `record:BE:firearms_register:operator` | een dienst van de Federale Politie (a service of the Federal Police) | never checked |
-| `record:BE:central_bank:register` | NBB Securities Settlement System (NBB-SSS) | never checked |
-| `record:BE:emergency_communications:register` | ASTRID-radionetwerk (ASTRID TETRA radio network) | never checked |
-| `record:BE:emergency_communications:operator` | ASTRID (naamloze vennootschap van publiek recht, public-law company) | never checked |
-| `record:BE:emergency_communications:count` | more than 2 million radio contacts per day | never checked |
-| `record:BE:crisis_management:register` | BE-Alert (the government's alerting system) | never checked |
-| `record:BE:crisis_management:count` | more than 1 million registered addresses | never checked |
-| `record:BE:education:register` | LED, de Leer- en ErvaringsbewijzenDatabank (Learning and Experience Certificates Database) | never checked |
-| `record:BE:education:operator` | Agentschap voor Kwaliteitszorg in Onderwijs en Vorming (Agency for Quality Assurance in Education and Training) | never checked |
-| `indicator:BG:K1` | Yes | never checked |
-| `indicator:BG:K2` | Partly | never checked |
-| `indicator:BG:C1` | Yes | never checked |
-| `param:BG:population_m` | 6.42 million | never checked |
-| `param:BG:gdp_eur_bn` | 116.0 EUR bn | never checked |
-| `param:BG:gov_employment_k` | 217.8 thousand | never checked |
-| `param:BG:elec_price_eur_mwh` | 141.3 EUR/MWh | never checked |
-| `param:BG:renewables_pct` | 34.4 % | never checked |
-| `param:BG:land_km2` | 110 001 km² | never checked |
-| `record:BG:facial_biometric:operator` | Identity documents are issued by the Ministry of Interior, Ministry of Foreign Affairs, Ministry of Transport and Communications and Ministry of Defence | never checked |
-| `record:BG:fingerprint_biometric:register` | National Register of Bulgarian Identity Documents (automated information fund) | never checked |
-| `record:BG:issuance_history:operator` | From 27 April 2026 the Ministry of Interior moved to centralised personalisation and a new generation of identity documents | never checked |
-| `record:BG:digital_identity_credentials:operator` | Access to the register is granted to persons designated by order of the Minister of Interior (MVR runs the register) | never checked |
-| `record:BG:electoral_roll:register` | избирателните списъци, отпечатвани от ГД ГРАО (voter lists printed by DG Civil Registration and Administrative Services) | never checked |
-| `record:BG:trust_services_pki:register` | The Communications Regulation Commission creates, maintains and publishes the national Trusted List | never checked |
-| `record:BG:trust_services_pki:operator` | Qualified trust service providers on the Bulgarian Trusted List: Borica AD, Evrotrust Technologies AD, InfoNotary EAD, Information Services AD and Idocs Bulgaria EOOD | never checked |
-| `record:BG:judicial_criminal:operator` | Criminal-record bureaus at every district court and a Central Criminal Records Bureau at the Ministry of Justice | never checked |
-| `record:BG:police_records:register` | Автоматизираната информационна система "Издирвателна дейност" - Национална Шенгенска информационна система (АИС ИД - НШИС) (Automated Information System 'Search Activity' – National Schengen Information System) | never checked |
-| `record:BG:residence_permits:operator` | Migration Directorate of MVR and Migration units of the regional MVR directorates (Foreigners in the Republic of Bulgaria Act) | never checked |
-| `record:BG:tax:register` | Tax and Social Security Procedure Code: NRA creates and maintains the register and databases of obliged persons | never checked |
-| `record:BG:customs:register` | The new Customs Import Information System (MISV) went into production on 26.11.2018 | never checked |
-| `record:BG:land_property:register` | AGCC creates and maintains the cadastral map and cadastral registers for the whole country under the Cadastre and Property Register Act | never checked |
-| `record:BG:land_property:operator` | The Registry Agency (executive agency under the Minister of Justice) keeps the property register, commercial register, BULSTAT and other registers | never checked |
-| `record:BG:land_property:foreign_dependency` | National infrastructure | never checked |
-| `record:BG:beneficial_ownership:register` | The software change enabling beneficial-owner entries went live on 28.01.2019 | never checked |
-| `record:BG:vehicle_licensing:register` | автоматизираната информационна система КАТ (АИС – КАТ) (Automated Information System KAT, the vehicle registration system) | never checked |
-| `record:BG:vehicle_licensing:operator` | "Пътна полиция" при СДВР/ОДМВР (Traffic Police units of the Ministry of Interior's regional directorates) | never checked |
-| `record:BG:border_control:register` | Национална Шенгенска информационна система (АИС ИД - НШИС) (National Schengen Information System) | never checked |
-| `record:BG:border_control:operator` | Министерството на външните работи (Ministry of Foreign Affairs), for the national visa system | never checked |
-| `record:BG:public_finance:register` | SEBRA (System for Electronic Budget Payments) is used to initiate payments of budget organisations | never checked |
-| `record:BG:public_finance:operator` | BORICA AD transforms approved SEBRA payments into ISO 20022 XML | never checked |
-| `record:BG:central_bank:register` | TARGET-BNB (national system component of the Eurosystem's TARGET) | never checked |
-| `record:BG:central_bank:operator` | Българската народна банка (Bulgarian National Bank) | never checked |
-| `record:BG:emergency_communications:register` | Националната система 112 (National System 112) | never checked |
-| `record:BG:emergency_communications:count` | шест центъра (six emergency call centres) | never checked |
-| `record:BG:crisis_management:register` | BG-ALERT public warning system over mobile networks (Cell Broadcast) | never checked |
-| `record:BG:crisis_management:operator` | Developed jointly by MVR and the Ministry of e-Government | never checked |
-| `record:BG:grid_control:register` | Project to modernise and extend the SCADA/EMS and information environment in ESO's Central Dispatch (CDU) | never checked |
-| `record:BG:education:register` | Register of all current, interrupted and graduated students and doctoral candidates, kept as an electronic database through NACID | never checked |
-| `record:BG:health_records:register` | The NHIS holds an electronic health record for every citizen | never checked |
-| `record:BG:business_registry:register` | The Commercial Register and Register of Non-Profit Legal Entities is a common electronic database | never checked |
-| `record:BG:business_registry:foreign_dependency` | National infrastructure | never checked |
-| `record:BG:official_gazette:register` | The State Gazette website provides the full content of all issues for the last 7 years in PDF (EU N-Lex description) | never checked |
-| `record:BG:statistics_microdata:register` | 2021 Population and Housing Census, the 18th in Bulgaria (census site of the National Statistical Institute) | never checked |
-| `record:BG:geospatial:register` | AGCC creates and maintains the topographic databases and the geo-information system | never checked |
-| `indicator:CY:L2` | Yes | never checked |
-| `param:CY:population_m` | 1.00 million | never checked |
-| `param:CY:gdp_eur_bn` | 36.5 EUR bn | never checked |
-| `param:CY:gov_employment_k` | 36.8 thousand | never checked |
-| `param:CY:elec_price_eur_mwh` | 242.9 EUR/MWh | never checked |
-| `param:CY:renewables_pct` | 27.5 % | never checked |
-| `param:CY:land_km2` | 9 213 km² | never checked |
-| `record:CY:civil_registry:register` | Civil Registry System | never checked |
-| `record:CY:civil_registry:operator` | Civil Registry and Migration Department, with District Administration offices as registration authorities | never checked |
-| `record:CY:fingerprint_biometric:register` | No central register | never checked |
-| `record:CY:breeder_documents:register` | Civil register of births and deaths kept by the Registrar of each District | never checked |
-| `record:CY:breeder_documents:operator` | Civil Registry and Migration Department and District Administrations (registration authorities for births and deaths) | never checked |
-| `record:CY:issuance_history:register` | Civil Registry System (handles applications for the issuance of identity cards and passports) | never checked |
-| `record:CY:digital_identity_credentials:register` | CY Login | never checked |
-| `record:CY:digital_identity_credentials:operator` | The Director of the Civil Registry and Migration Department instructs the eID service provider to issue or renew the eID | never checked |
-| `record:CY:digital_identity_credentials:foreign_dependency` | EU provider | never checked |
-| `record:CY:digital_identity_credentials:count` | CY Login: 542,716 verified citizen profiles (September 2026) | never checked |
-| `record:CY:electoral_roll:register` | computerised population register system (used for the preparation and conduct of elections) | never checked |
-| `record:CY:electoral_roll:operator` | The competent District Officer enters voters on the electoral roll | never checked |
-| `record:CY:judicial_criminal:register` | iJustice (electronic registration system) | never checked |
-| `record:CY:police_records:register` | Cyprus Police computerised information system, with per-officer access codes | never checked |
-| `record:CY:police_records:operator` | The National N.SIS Service is part of the Cyprus Police and reports to the Police IT Department | never checked |
-| `record:CY:residence_permits:register` | electronic system of the Asylum Service (CASS) | never checked |
-| `record:CY:residence_permits:operator` | Civil Registry and Migration Department (the 'Department' under the Aliens and Immigration Law) | never checked |
-| `record:CY:tax:register` | TAXISnet System | never checked |
-| `record:CY:tax:operator` | Tax Commissioner and officers of the Tax Department | never checked |
-| `record:CY:customs:register` | THESEAS customs electronic system for import declarations and manifests | never checked |
-| `record:CY:customs:operator` | Customs and Excise Department, acting through its Director | never checked |
-| `record:CY:benefits_pensions:register` | ERGANI system of Social Insurance Services | never checked |
-| `record:CY:benefits_pensions:operator` | Director of the Social Insurance Services, Ministry of Labour and Social Insurance | never checked |
-| `record:CY:health_insurance:register` | GeSY information system, which providers must use for referrals, prescriptions, claims and beneficiary lists | never checked |
-| `record:CY:health_insurance:operator` | The Health Insurance Organisation develops and operates the information system | never checked |
-| `record:CY:land_property:register` | Computerised Integrated Lands Information System (CILIS) | never checked |
-| `record:CY:land_property:operator` | Director of the Department of Lands and Surveys | never checked |
-| `record:CY:land_property:foreign_dependency` | National infrastructure | never checked |
-| `record:CY:business_registry:register` | Register of companies kept by the Registrar | never checked |
-| `record:CY:business_registry:operator` | Registrar of Companies is the Official Receiver and Registrar | never checked |
-| `record:CY:beneficial_ownership:register` | Central Register of Beneficial Owners of Companies and Other Legal Entities | never checked |
-| `record:CY:beneficial_ownership:operator` | Registrar of Companies and Official Receiver, as the authority keeping the register | never checked |
-| `record:CY:vehicle_licensing:register` | Registrar's Register of motor vehicles | never checked |
-| `record:CY:vehicle_licensing:operator` | Road Transport Department | never checked |
-| `record:CY:border_control:register` | National N.SIS: the Cyprus Police is the competent authority for its installation, operation and maintenance | never checked |
-| `record:CY:border_control:operator` | Ministry of Foreign Affairs | never checked |
-| `record:CY:firearms_register:register` | Firearms file kept by the Police recording firearms and essential components | never checked |
-| `record:CY:firearms_register:operator` | Cyprus Police, keeping the data in a data filing system | never checked |
-| `record:CY:public_finance:register` | FIMAS | never checked |
-| `record:CY:public_finance:operator` | Treasury (of the Republic of Cyprus) | never checked |
-| `record:CY:electoral_management:register` | Civil Registry System (functionalities for preparing and conducting all elections) | never checked |
-| `record:CY:central_bank:register` | T2-CY, the Cypriot component of the European T2 payment system | never checked |
-| `record:CY:central_bank:operator` | The Central Bank may open accounts for credit institutions, public bodies and other market participants | never checked |
-| `record:CY:crisis_management:register` | General Civil Defence Plan drawn up by the Minister of Interior and approved by the Council of Ministers | never checked |
-| `record:CY:education:register` | Integrated School Management System (SMS) | never checked |
-| `record:CY:health_records:register` | Single Bank of Electronic Health Records, which keeps and manages citizens' electronic health records | never checked |
-| `record:CY:health_records:operator` | National eHealth Authority, a public-law legal person | never checked |
-| `record:CY:official_gazette:register` | The electronic edition of the Official Gazette is the only authentic edition with legal effect | never checked |
-| `record:CY:official_gazette:operator` | Published permanently and free of charge on the Government Printing Office website | never checked |
-| `record:CY:emergency_communications:register` | Next Generation 112 system; development agreement between Civil Defence and CYTA, 20-month implementation | never checked |
-| `record:CY:emergency_communications:foreign_dependency` | National infrastructure | never checked |
-| `record:CY:national_archives:register` | State Archives, in which public records are deposited and kept | never checked |
-| `record:CY:statistics_microdata:register` | Confidential statistical data: data that permit direct or indirect identification of statistical units | never checked |
-| `record:CY:geospatial:register` | Address data theme: location of properties by street name, house number and postcode | never checked |
-| `record:CY:geospatial:operator` | Steering Group chaired by the Director of the Department of Lands and Surveys | never checked |
-| `indicator:CZ:L1` | Partly | never checked |
-| `indicator:CZ:L2` | Yes | never checked |
-| `indicator:CZ:L3` | Yes | never checked |
-| `indicator:CZ:K1` | Yes | never checked |
-| `indicator:CZ:K2` | Yes | never checked |
-| `indicator:CZ:C1` | Yes | never checked |
-| `indicator:CZ:C2` | Yes | never checked |
-| `param:CZ:population_m` | 10.92 million | never checked |
-| `param:CZ:gdp_eur_bn` | 347.3 EUR bn | never checked |
-| `param:CZ:gov_employment_k` | 325.8 thousand | never checked |
-| `param:CZ:elec_price_eur_mwh` | 182.5 EUR/MWh | never checked |
-| `param:CZ:renewables_pct` | 19.2 % | never checked |
-| `param:CZ:land_km2` | 77 212 km² | never checked |
-| `record:CZ:civil_registry:register` | informační systém evidence obyvatel (population register information system) | never checked |
-| `record:CZ:facial_biometric:register` | ID card register (Evidence občanských průkazů), a public administration information system | never checked |
-| `record:CZ:facial_biometric:operator` | Ministry of the Interior is the controller of the ID card register | never checked |
-| `record:CZ:fingerprint_biometric:register` | No central register | never checked |
-| `record:CZ:breeder_documents:register` | Collection of documents (sbírka listin) underlying each civil status register book | never checked |
-| `record:CZ:breeder_documents:operator` | Ministerstvo vnitra (Ministry of the Interior) as controller of the Matriční informační systém (civil status information system) | never checked |
-| `record:CZ:authentication_audit_log:register` | NIA keeps operational data including a record of each use of NIA data | never checked |
-| `record:CZ:issuance_history:register` | The ID card register records invalid cards, the date and the reason they became invalid | never checked |
-| `record:CZ:issuance_history:operator` | Ministry of the Interior is the controller of the ID card register | never checked |
-| `record:CZ:digital_identity_credentials:register` | National point for identification and authentication (Národní bod, NIA), administered by DIA | never checked |
-| `record:CZ:electoral_roll:register` | Election administration information system (ISSV) whose components include the voter list | never checked |
-| `record:CZ:electoral_roll:operator` | Ministry of the Interior administers the ISSV, which keeps voter records | never checked |
-| `record:CZ:trust_services_pki:operator` | DIA acts as founder of the State Trust Services Administration | never checked |
-| `record:CZ:land_property:register` | Cadastre is kept in the Cadastre of Real Estate Information System (ISKN) | never checked |
-| `record:CZ:land_property:operator` | ČÚZK is the central state authority for surveying and the cadastre | never checked |
-| `record:CZ:land_property:count` | More than 33 million documents in the digital part of the cadastral deed collection | never checked |
-| `record:CZ:judicial_criminal:register` | Criminal Records Register: public administration IS of persons finally convicted | never checked |
-| `record:CZ:judicial_criminal:operator` | Ministry of Justice is the controller | never checked |
-| `record:CZ:residence_permits:register` | Police operate and control the foreigners' information system, incl. photos and fingerprints | never checked |
-| `record:CZ:tax:register` | Automated Tax Information System (ADIS) of the Financial Administration | never checked |
-| `record:CZ:customs:register` | Automated import system e-Dovoz completing electronic customs systems for transit, export and import | never checked |
-| `record:CZ:customs:operator` | Customs Administration: General Directorate of Customs and customs offices | never checked |
-| `record:CZ:benefits_pensions:register` | ČSSZ keeps the register of pension insurance contributors | never checked |
-| `record:CZ:benefits_pensions:operator` | MPSV is controller of the integrated MPSV information system, which includes the ČSSZ system | never checked |
-| `record:CZ:health_insurance:register` | VZP keeps the register of all persons insured under public health insurance | never checked |
-| `record:CZ:business_registry:register` | The Public Register is a public administration IS kept electronically by the registry courts | never checked |
-| `record:CZ:business_registry:operator` | DIA administers the Basic Register of Persons (ROS) and assigns company identification numbers | never checked |
-| `record:CZ:beneficial_ownership:register` | Register of beneficial owners is a public administration IS controlled by the Ministry of Justice | never checked |
-| `record:CZ:beneficial_ownership:operator` | Kept by the court competent for registration; entries made by courts or notaries | never checked |
-| `record:CZ:vehicle_licensing:register` | Road Vehicle Register, controlled by the Ministry of Transport, records vehicles, owners and operators | never checked |
-| `record:CZ:vehicle_licensing:operator` | Ministry of Transport keeps the central driver register and digital tachograph system | never checked |
-| `record:CZ:border_control:register` | Ministry of Foreign Affairs visa information system incl. photographs and fingerprints | never checked |
-| `record:CZ:border_control:operator` | Police Presidium operates the national component of SIS and the SIRENE function | never checked |
-| `record:CZ:firearms_register:register` | Central Firearms Register: non-public public administration IS | never checked |
-| `record:CZ:firearms_register:operator` | Police Presidium is the controller | never checked |
-| `record:CZ:public_finance:register` | Integrovaný informační systém Státní pokladny (IISSP) (Integrated Information System of the State Treasury) | never checked |
-| `record:CZ:government_payroll:register` | Civil service information system for service relationships | never checked |
-| `record:CZ:government_payroll:operator` | Office of the Government is the controller | never checked |
-| `record:CZ:electoral_management:register` | informační systém správy voleb (election administration information system) | never checked |
-| `record:CZ:electoral_management:operator` | Czech Statistical Office runs results collection and builds the results system including software | never checked |
-| `record:CZ:central_bank:register` | systém CERTIS (CERTIS interbank payment system) | never checked |
-| `record:CZ:central_bank:operator` | Česká národní banka (Czech National Bank) | never checked |
-| `record:CZ:central_bank:count` | over 983 million items in 2024 | never checked |
-| `record:CZ:emergency_communications:register` | 14 interconnected 112 call centres | never checked |
-| `record:CZ:emergency_communications:operator` | hasičské záchranné sbory jednotlivých krajů (regional Fire Rescue Services), in Centra tísňové komunikace (CTK) | never checked |
-| `record:CZ:emergency_communications:count` | 1,995,395 calls and 33,035 SMS to 112 in 2025 | never checked |
-| `record:CZ:crisis_management:register` | Crisis management information system supporting crisis authorities | never checked |
-| `record:CZ:crisis_management:operator` | Administered by the Ministry of the Interior through the Fire Rescue Service directorate | never checked |
-| `record:CZ:education:register` | matrika studentů (student register), kept by each higher education institution | never checked |
-| `record:CZ:health_records:register` | SÚKL ('Ústav') establishes eRecept as a public administration information system | never checked |
-| `record:CZ:official_gazette:register` | Elektronický systém Sbírky zákonů a mezinárodních smluv (electronic system of the Collection of Laws and International Treaties, e-Sbírka) | never checked |
-| `record:CZ:official_gazette:operator` | Ministerstvo vnitra (Ministry of the Interior) | never checked |
-| `record:CZ:public_health_surveillance:register` | Includes the register of infectious disease cases and vaccination | never checked |
-| `record:CZ:public_health_surveillance:operator` | Infectious disease IS: Ministry of Health controller, ÚZIS operator | never checked |
-| `record:CZ:geospatial:register` | ČÚZK publishes parcels from ISKN and buildings/addresses from RÚIAN | never checked |
-| `record:CZ:geospatial:operator` | Český úřad zeměměřický a katastrální (Czech Office for Surveying, Mapping and Cadastre) | never checked |
-| `indicator:DE:L2` | Yes | never checked |
-| `indicator:DE:C1` | Yes | never checked |
-| `indicator:DE:C2` | Yes | never checked |
-| `record:DE:facial_biometric:operator` | Biometric features may be stored only at the issuing ID-card authorities | never checked |
-| `record:DE:fingerprint_biometric:register` | No central register | never checked |
-| `record:DE:breeder_documents:operator` | Each Standesamt keeps the birth register (Geburtenregister) and other civil status registers | never checked |
-| `record:DE:issuance_history:register` | The ID-card register records serial number, revocation password/sum and expiry date | never checked |
-| `record:DE:issuance_history:operator` | A central store of all ID-card serial numbers is permitted only at the card manufacturer, solely to trace the cards | never checked |
-| `record:DE:digital_identity_credentials:register` | BundID is to become the single central citizen account 'DeutschlandID' under the OZG | never checked |
-| `record:DE:tax:register` | ELSTER (ELektronische STeuerERklärung; electronic tax return) | never checked |
-| `record:DE:customs:register` | ATLAS is the customs IT procedure for automated clearance and monitoring of cross-border goods traffic | never checked |
-| `record:DE:health_insurance:register` | Versichertenverzeichnis (register of insured persons) | never checked |
-| `record:DE:health_insurance:operator` | die Krankenkasse (each statutory health insurance fund) | never checked |
-| `record:DE:business_registry:register` | Handelsregister (commercial register) | never checked |
-| `record:DE:business_registry:operator` | die Gerichte (the courts) | never checked |
-| `record:DE:vehicle_licensing:register` | Zentrales Fahrzeugregister des Kraftfahrt-Bundesamtes (Central Vehicle Register) | never checked |
-| `record:DE:vehicle_licensing:operator` | Kraftfahrt-Bundesamt (Federal Motor Transport Authority) | never checked |
-| `record:DE:firearms_register:register` | Nationales Waffenregister (National Firearms Register) | never checked |
-| `record:DE:firearms_register:operator` | Bundesverwaltungsamt (Federal Office of Administration) | never checked |
-| `record:DE:public_finance:register` | automatisierte Verfahren für das Haushalts-, Kassen- und Rechnungswesen des Bundes (automated federal budget, cash and accounting procedure, HKR) | never checked |
-| `record:DE:official_gazette:register` | Bundesgesetzblatt (Federal Law Gazette) | never checked |
-| `record:DE:official_gazette:operator` | Bundesamt für Justiz (Federal Office of Justice) | never checked |
-| `indicator:DK:L1` | Partly | never checked |
-| `indicator:DK:L2` | Partly | never checked |
-| `indicator:DK:K1` | Yes | never checked |
-| `indicator:DK:K2` | Partly | never checked |
-| `indicator:DK:C1` | Yes | never checked |
-| `indicator:DK:C2` | Yes | never checked |
-| `param:DK:population_m` | 6.03 million | never checked |
-| `param:DK:gdp_eur_bn` | 417.8 EUR bn | never checked |
-| `param:DK:gov_employment_k` | 169.8 thousand | never checked |
-| `param:DK:elec_price_eur_mwh` | 121.6 EUR/MWh | never checked |
-| `param:DK:renewables_pct` | 77.7 % | never checked |
-| `param:DK:land_km2` | 41 987 km² | never checked |
-| `record:DK:civil_registry:register` | Det Centrale Personregister (CPR) - the Central Person Register | never checked |
-| `record:DK:civil_registry:operator` | CPR-administrationen (CPR Office), placed in the department of the Ministry of Research, Education and Digitalisation | never checked |
-| `record:DK:civil_registry:count` | About 11.4 million persons, of which just under 6.1 million living persons | never checked |
-| `record:DK:facial_biometric:register` | Immigration authorities' biometric register (facial photos and fingerprints of foreign nationals for residence cards); retained 20 years (10 years for visa cases) | never checked |
-| `record:DK:facial_biometric:operator` | Ministry of Immigration and Integration, Udlændingestyrelsen and SIRI | never checked |
-| `record:DK:fingerprint_biometric:register` | Immigration authorities' biometric register (fingerprints and facial photos of foreign nationals, captured for residence cards and identity control) | never checked |
-| `record:DK:fingerprint_biometric:operator` | Ministry of Immigration and Integration, Danish Immigration Service (Udlændingestyrelsen) and SIRI are responsible for the register | never checked |
-| `record:DK:breeder_documents:register` | Kirkeministeriet's common systems for personregistrering (church registration of births, names and deaths), used by parish registrars | never checked |
-| `record:DK:authentication_audit_log:register` | NemLog-in - the joint public digital login infrastructure through which authentications to public self-service solutions pass | never checked |
-| `record:DK:authentication_audit_log:operator` | Digitaliseringsstyrelsen; NemLog-in described as a society-critical part of public digital infrastructure | never checked |
-| `record:DK:authentication_audit_log:count` | On average around 35 million logins per month through NemLog-in | never checked |
-| `record:DK:trust_services_pki:register` | Den Danske Stat Tillidstjenester (CA1) - Danish State trust services, delivered by Digitaliseringsstyrelsen on behalf of the Danish State | never checked |
-| `record:DK:trust_services_pki:operator` | Digitaliseringsstyrelsen; CA1 is a qualified trust service provider under eIDAS on the EU trusted list | never checked |
-| `record:DK:intelligence:register` | Politiets Efterretningstjeneste (PET) - domestic security intelligence; may collect information relevant to its activities | never checked |
-| `record:DK:issuance_history:register` | Det Centrale Pasregister (Pasregistret) - Central Passport Register, with Rigspolitiet (Danish National Police) as data controller | never checked |
-| `record:DK:issuance_history:operator` | Rigspolitiet; retention: deleted two years after passport expiry or holder's death | never checked |
-| `record:DK:issuance_history:foreign_dependency` | National infrastructure | never checked |
-| `record:DK:residence_permits:register` | Information systems in the immigration field incl. Udlændinge Informations Systemet (UIS), used for data exchange between authorities (formerly UIP portal) | never checked |
-| `record:DK:residence_permits:operator` | Udlændingestyrelsen (Danish Immigration Service) receives and processes asylum and other residence permit applications | never checked |
-| `record:DK:customs:register` | DMS (Declaration Management System) - customs system for import, export and transit declarations | never checked |
-| `record:DK:health_insurance:register` | sundhedskort and sikringsgruppe enrolment based on Det Centrale Personregister (CPR) (health insurance card and coverage group registration) | never checked |
-| `record:DK:beneficial_ownership:register` | Beneficial ownership data held in CVR: legal persons and trusts obliged to register beneficial owners must be registered in CVR | never checked |
-| `record:DK:vehicle_licensing:register` | Køretøjsregisteret - the national vehicle register (DMR) covering every vehicle and its ownership | never checked |
-| `record:DK:judicial_criminal:register` | Det Centrale Kriminalregister (Kriminalregistret) - Central Criminal Register | never checked |
-| `record:DK:judicial_criminal:operator` | Rigspolitiet is data controller; regulated by the kriminalregisterbekendtgørelse | never checked |
-| `record:DK:judicial_criminal:foreign_dependency` | National infrastructure | never checked |
-| `record:DK:police_records:register` | POLSAS - the police case management system | never checked |
-| `record:DK:police_records:foreign_dependency` | National infrastructure | never checked |
-| `record:DK:border_control:register` | Schengeninformationssystemet (SIS, Schengen Information System) | never checked |
-| `record:DK:border_control:operator` | Udlændingestyrelsen (Danish Immigration Service), for SIS return alerts | never checked |
-| `record:DK:firearms_register:register` | Politiets Våbenregister (Police Firearms Register), Rigspolitiet data controller | never checked |
-| `record:DK:firearms_register:operator` | Rigspolitiet (data controller); police may also use the register for investigation and supervision of permits | never checked |
-| `record:DK:public_finance:register` | Statens Bevillings- og Regnskabsløsning (SBRL) - state appropriation and accounts solution supporting Finance Act and state accounts from FY2025 | never checked |
-| `record:DK:government_payroll:register` | Statens Lønløsning (the State Payroll Solution) | never checked |
-| `record:DK:government_payroll:operator` | Økonomistyrelsen (Agency for Public Finance and Management) | never checked |
-| `record:DK:government_payroll:count` | ca. 180.000 statslige ansatte (state employees paid each month) | never checked |
-| `record:DK:electoral_management:register` | Election results system: municipalities enter manually counted vote totals into an IT system developed by KMD; Danmarks Statistik compiles results | never checked |
-| `record:DK:central_bank:register` | TARGET DKK - Nationalbanken's payment system for krone settlement (via T2 and TIPS on TARGET Services, plus SPI for monetary-policy instruments and collateral) | never checked |
-| `record:DK:central_bank:foreign_dependency` | EU provider | never checked |
-| `record:DK:emergency_communications:register` | SINE (Sikkerhedsnettet) - Denmark's radio network for emergency communications; use mandatory under beredskabsloven § 29 | never checked |
-| `record:DK:emergency_communications:operator` | Center for Beredskabskommunikation (CFB), part of the Ministry of Civil Security and Emergency Preparedness; network operation by Dansk Beredskabskommunikation A/S | never checked |
-| `record:DK:crisis_management:register` | Sirenevarslingssystemet (the national siren warning system) | never checked |
-| `record:DK:grid_control:register` | Energinet carries out system-responsibility (TSO) activities, electricity transmission and gas transmission | never checked |
-| `record:DK:education:register` | STADS (the university student administration system) | never checked |
-| `record:DK:education:count` | Omkring 100.000 studerende (students) | never checked |
-| `record:DK:health_records:register` | Fælles Medicinkort (FMK) - Sundhedsdatastyrelsen's electronic register of every citizen's medication data (prescription, purchase, dispensing, dose changes) | never checked |
-| `record:DK:public_health_surveillance:register` | Det Danske Vaccinationsregister - national register of citizens' vaccinations, run by Statens Serum Institut | never checked |
-| `record:DK:geospatial:register` | Danmarks Adresseregister (DAR) - authoritative register of road names and addresses | never checked |
-| `indicator:EE:L2` | Yes | never checked |
-| `indicator:EE:K1` | Partly | never checked |
-| `indicator:EE:K2` | Yes | never checked |
-| `indicator:EE:C1` | Yes | never checked |
-| `indicator:EE:C2` | Yes | never checked |
-| `param:EE:population_m` | 1.36 million | never checked |
-| `param:EE:gdp_eur_bn` | 41.9 EUR bn | never checked |
-| `param:EE:gov_employment_k` | 43.1 thousand | never checked |
-| `param:EE:elec_price_eur_mwh` | 141.0 EUR/MWh | never checked |
-| `param:EE:renewables_pct` | 41.1 % | never checked |
-| `param:EE:land_km2` | 43 110 km² | never checked |
-| `record:EE:civil_registry:register` | Rahvastikuregister (Population Register) | never checked |
-| `record:EE:civil_registry:operator` | Siseministeerium (Ministry of the Interior) | never checked |
-| `record:EE:facial_biometric:register` | Biometric data under the Identity Documents Act are facial image, fingerprints, signature and iris images | never checked |
-| `record:EE:facial_biometric:operator` | ABIS controllers are the Police and Border Guard Board and the Ministry of Foreign Affairs | never checked |
-| `record:EE:fingerprint_biometric:register` | ABIS (automaatse biomeetrilise isikutuvastuse süsteemi andmekogu; Automated Biometric Identification System database) | never checked |
-| `record:EE:fingerprint_biometric:operator` | Politsei- ja Piirivalveamet (Police and Border Guard Board) | never checked |
-| `record:EE:authentication_audit_log:register` | Riigi autentimisteenus (State Authentication Service, TARA) | never checked |
-| `record:EE:authentication_audit_log:operator` | RIA (Riigi Infosüsteemi Amet; Information System Authority) | never checked |
-| `record:EE:issuance_history:register` | Isikut tõendavate dokumentide andmekogu (Identity Documents Database) | never checked |
-| `record:EE:issuance_history:operator` | Politsei- ja Piirivalveamet (Police and Border Guard Board) | never checked |
-| `record:EE:issuance_history:count` | over 3,2 miljoni isikutunnistuse ja elamisloakaardi (over 3.2 million ID cards and residence permit cards issued) | never checked |
-| `record:EE:electoral_roll:register` | Valijate nimekiri (list of voters), compiled from the Rahvastikuregister (Population Register) | never checked |
-| `record:EE:land_property:register` | E-kinnistusraamat (e-Land Register) | never checked |
-| `record:EE:judicial_criminal:register` | Karistusregister (Criminal Records Database) | never checked |
-| `record:EE:judicial_criminal:operator` | Justiits- ja Digiministeerium (Ministry of Justice and Digital Affairs); processor Registrite ja Infosüsteemide Keskus (RIK) | never checked |
-| `record:EE:police_records:register` | Infosüsteem POLIS (Information System POLIS) | never checked |
-| `record:EE:police_records:operator` | Politsei- ja Piirivalveamet (Police and Border Guard Board) | never checked |
-| `record:EE:residence_permits:register` | elamislubade ja töölubade register (Register of Residence Permits and Work Permits) | never checked |
-| `record:EE:residence_permits:operator` | Politsei- ja Piirivalveamet (Police and Border Guard Board) | never checked |
-| `record:EE:tax:register` | Maksukohustuslaste register (Register of Taxable Persons) | never checked |
-| `record:EE:tax:operator` | Maksu- ja Tolliamet (Tax and Customs Board) | never checked |
-| `record:EE:customs:register` | Impulss (import customs clearance information system) | never checked |
-| `record:EE:benefits_pensions:register` | sotsiaalkaitse infosüsteem (Social Security Information System, SKAIS) | never checked |
-| `record:EE:benefits_pensions:operator` | Sotsiaalkindlustusamet (Social Insurance Board) | never checked |
-| `record:EE:health_insurance:register` | Tervisekassa andmekogu (Health Insurance Fund Database) | never checked |
-| `record:EE:health_insurance:operator` | Tervisekassa (Health Insurance Fund) | never checked |
-| `record:EE:business_registry:register` | E-äriregister (e-Business Register) | never checked |
-| `record:EE:business_registry:operator` | Tartu Maakohtu registriosakond (registrar); RIK (develops and manages the portal) | never checked |
-| `record:EE:beneficial_ownership:register` | Tegelike kasusaajate andmekogu (Beneficial Owners Database) | never checked |
-| `record:EE:beneficial_ownership:operator` | Rahandusministeerium (Ministry of Finance) | never checked |
-| `record:EE:border_control:register` | Schengeni infosüsteemi riiklik register (national register of the Schengen Information System) | never checked |
-| `record:EE:border_control:operator` | Politsei- ja Piirivalveamet (Police and Border Guard Board) | never checked |
-| `record:EE:firearms_register:register` | teenistus- ja tsiviilrelvade register (Register of Service and Civilian Weapons) | never checked |
-| `record:EE:public_finance:register` | riigi finants-, personali- ja palgaarvestuse süsteem SAP (state financial, personnel and payroll accounting system SAP) | never checked |
-| `record:EE:government_payroll:register` | riigi finants-, personali- ja palgaarvestuse süsteem SAP (state financial, personnel and payroll accounting system SAP) | never checked |
-| `record:EE:electoral_management:register` | valimiste infosüsteem (election information system) and elektroonilise hääletamise süsteem (electronic voting system) | never checked |
-| `record:EE:electoral_management:operator` | Riigi valimisteenistus (State Electoral Office) | never checked |
-| `record:EE:emergency_communications:register` | hädaabiteadete ning abi- ja infoteadete andmekogu (database of emergency notifications and assistance and information notifications) | never checked |
-| `record:EE:emergency_communications:operator` | Häirekeskus (Emergency Response Centre) | never checked |
-| `record:EE:crisis_management:register` | ohuteavituse süsteem (public warning system, EE-ALARM), operated by Häirekeskus | never checked |
-| `record:EE:grid_control:register` | SCADA/EMS at Eleringi juhtimiskeskus (Elering control centre) | never checked |
-| `record:EE:education:register` | Eesti Hariduse Infosüsteem (EHIS; Estonian Education Information System) | never checked |
-| `record:EE:education:operator` | Haridus- ja Teadusministeerium (Ministry of Education and Research) | never checked |
-| `record:EE:official_gazette:register` | Riigi Teataja (State Gazette) | never checked |
-| `record:EE:official_gazette:operator` | Justiits- ja Digiministeerium (publisher); Registrite ja Infosüsteemide Keskus (RIK) (hosting and technical operation) | never checked |
-| `indicator:EL:L2` | Yes | never checked |
-| `indicator:EL:K1` | Yes | never checked |
-| `indicator:EL:K2` | Yes | never checked |
-| `indicator:EL:C1` | Yes | never checked |
-| `indicator:EL:C2` | Yes | never checked |
-| `param:EL:population_m` | 10.37 million | never checked |
-| `param:EL:gdp_eur_bn` | 248.4 EUR bn | never checked |
-| `param:EL:gov_employment_k` | 400.6 thousand | never checked |
-| `param:EL:elec_price_eur_mwh` | 173.8 EUR/MWh | never checked |
-| `param:EL:renewables_pct` | 60.9 % | never checked |
-| `param:EL:land_km2` | 130 048 km² | never checked |
-| `record:EL:civil_registry:register` | «Μητρώο Πολιτών» (Citizens' Register): national information system combining the National Municipal Register (Δημοτολόγιο) and civil-status (registry) records | never checked |
-| `record:EL:facial_biometric:register` | Facial image and two flat fingerprints collected by the Passports and Security Documents Directorate (Δ.Δ.Ε.Α./Α.Ε.Α.) of Hellenic Police HQ and stored on the passport chip | never checked |
-| `record:EL:fingerprint_biometric:register` | Encrypted fingerprint images kept in the Central Database of the Passports Directorate, accessible only to authorised police staff | never checked |
-| `record:EL:breeder_documents:register` | Civil-status acts (births, marriages, deaths) of Greek citizens and of foreigners with events in Greece, held in the Ministry of the Interior's Registry Acts Management system within the Citizens' Register | never checked |
-| `record:EL:authentication_audit_log:register` | GRNET keeps for 12 months a history of actions taken in the Gov.gr Wallet document-presentation process | never checked |
-| `record:EL:authentication_audit_log:operator` | GRNET (Ε.Δ.Υ.Τ.Ε. Α.Ε.), company of the Greek State, is the designated processor | never checked |
-| `record:EL:issuance_history:register` | Web services supplying public bodies with data on issued Greek passports, via the Interoperability Centre | never checked |
-| `record:EL:electoral_roll:register` | Electoral rolls kept at the Ministry of the Interior, compiled from municipal registers (δημοτολόγια) | never checked |
-| `record:EL:trust_services_pki:register` | ΑΠΕΔ issues and manages certificates for trust services to all public-sector bodies | never checked |
-| `record:EL:judicial_criminal:register` | Criminal record consists of record slips, subject to use of the computerised system | never checked |
-| `record:EL:digital_identity_credentials:register` | Gov.gr Wallet requires the personal TaxisNet credentials (or web-banking credentials) plus a verified mobile number | never checked |
-| `record:EL:digital_identity_credentials:operator` | Ministry of Digital Governance is the controller for the authentication services of gov.gr | never checked |
-| `record:EL:digital_identity_credentials:foreign_dependency` | National infrastructure | never checked |
-| `record:EL:residence_permits:register` | Migration Information Systems and the Register of Aliens (Μητρώο Αλλοδαπών), centrally operated by the Ministry of Migration and Asylum | never checked |
-| `record:EL:benefits_pensions:register` | ATLAS: digital pension award system of e-EFKA, whose database holds insurance-period data digitised from former IKA archives | never checked |
-| `record:EL:health_insurance:register` | Electronic prescription system installed and operated at ΗΔΥΚΑ (IDIKA) for the social-insurance funds | never checked |
-| `record:EL:land_property:register` | Cadastre Information System (ΣΠΕΚ), into which legacy mortgage-registry archives are being digitised | never checked |
-| `record:EL:land_property:operator` | Hellenic Cadastre (Ελληνικό Κτηματολόγιο), public-law entity supervised by the Minister of Environment and Energy | never checked |
-| `record:EL:land_property:foreign_dependency` | National infrastructure | never checked |
-| `record:EL:beneficial_ownership:register` | Central Register of Beneficial Owners, created at the General Secretariat for Information Systems and linked to each legal entity's tax number (ΑΦΜ) | never checked |
-| `record:EL:vehicle_licensing:register` | Driving licences and police ID cards are drawn into the Gov.gr Wallet from the respective registers in which they are held | never checked |
-| `record:EL:police_records:register` | Central information system of the Hellenic Police with its files and databases, protected by the Police IT Directorate | never checked |
-| `record:EL:police_records:foreign_dependency` | National infrastructure | never checked |
-| `record:EL:border_control:register` | πληροφοριακό σύστημα της εθνικής αρχής στο πλαίσιο της σύμβασης SCHENGEN (information system of the national authority under the Schengen Convention) | never checked |
-| `record:EL:border_control:operator` | Hellenic Police handles requests submitted through the national SIRENE bureau | never checked |
-| `record:EL:firearms_register:register` | ηλεκτρονικό αρχείο πυροβόλων όπλων (electronic firearms file) | never checked |
-| `record:EL:firearms_register:operator` | Διεύθυνση Κρατικής Ασφάλειας του Αρχηγείου Ελληνικής Αστυνομίας (State Security Directorate, Hellenic Police Headquarters) | never checked |
-| `record:EL:public_finance:register` | Integrated Information System for Fiscal Policy (ΟΠΣΔΠ), to evolve into a central Government ERP | never checked |
-| `record:EL:government_payroll:register` | Central Human Resources Management System for the Greek public administration, from appointment to retirement | never checked |
-| `record:EL:government_payroll:operator` | Payroll rules to be applied centrally by the Single Payment Authority (Ενιαία Αρχή Πληρωμής, ΕΑΠ) | never checked |
-| `record:EL:government_payroll:count` | At least 680,000 paid staff in 3,500 wider-public-sector bodies | never checked |
-| `record:EL:electoral_management:register` | Courts of first instance compile detailed preference-vote results and send them in print or electronically to the Ministry of the Interior | never checked |
-| `record:EL:grid_control:register` | EMS (Energy Management System) | never checked |
-| `record:EL:education:register` | MySchool | never checked |
-| `record:EL:tax:register` | Integrated Tax Information System of AADE: TAXIS - TAXISnet - Elenxis | never checked |
-| `record:EL:tax:foreign_dependency` | National infrastructure | never checked |
-| `record:EL:customs:register` | ICISnet — integrated customs information system of AADE | never checked |
-| `record:EL:customs:foreign_dependency` | National infrastructure | never checked |
-| `record:EL:official_gazette:register` | Government Gazette (Εφημερίδα της Κυβερνήσεως, ΦΕΚ): printed and electronic edition and citizens' access to published texts | never checked |
-| `record:EL:official_gazette:operator` | National Printing Office (Εθνικό Τυπογραφείο), a public service under the Presidency of the Government, publishes the Government Gazette (ΦΕΚ) in print and electronically | never checked |
-| `record:EL:health_records:register` | National Electronic Health Record (ΕΗΦΥ): a central point for storing and managing medical data | never checked |
-| `record:EL:health_records:foreign_dependency` | National infrastructure | never checked |
-| `record:EL:public_health_surveillance:register` | EODY core functions include epidemiological surveillance and provision of epidemiological data | never checked |
-| `record:EL:national_archives:register` | Digitisation of all physical holdings of the General State Archives (ΓΑΚ) and migration of data from related information systems | never checked |
-| `indicator:ES:L1` | Partly | never checked |
-| `indicator:ES:L2` | Yes | never checked |
-| `indicator:ES:K1` | Yes | never checked |
-| `indicator:ES:K2` | Yes | never checked |
-| `indicator:ES:C1` | Yes | never checked |
-| `indicator:ES:C2` | Yes | never checked |
-| `param:ES:population_m` | 49.59 million | never checked |
-| `param:ES:gdp_eur_bn` | 1 690.0 EUR bn | never checked |
-| `param:ES:gov_employment_k` | 1 727.4 thousand | never checked |
-| `param:ES:elec_price_eur_mwh` | 132.4 EUR/MWh | never checked |
-| `param:ES:renewables_pct` | 60.7 % | never checked |
-| `param:ES:land_km2` | 502 654 km² | never checked |
-| `record:ES:civil_registry:register` | Registro Civil (Civil Registry): a single, electronic register for all of Spain | never checked |
-| `record:ES:civil_registry:operator` | Registry officers work under the functional authority of the Dirección General de Seguridad Jurídica y Fe Pública (Ministry of Justice) | never checked |
-| `record:ES:facial_biometric:register` | ADDNIFIL (automated DNI file holding photographs and fingerprints) | never checked |
-| `record:ES:fingerprint_biometric:operator` | Dirección General de la Policía has custody of the DNI personal-data processing | never checked |
-| `record:ES:breeder_documents:register` | Digitised data in the Civil Registry database are being migrated into individual records by the Ministry of Justice | never checked |
-| `record:ES:issuance_history:register` | ADDNIFIL (national identity document management file) | never checked |
-| `record:ES:issuance_history:operator` | Dirección General de la Policía (Directorate-General of Police), Ministerio del Interior | never checked |
-| `record:ES:electoral_roll:register` | censo electoral (electoral roll) | never checked |
-| `record:ES:electoral_roll:operator` | Oficina del Censo Electoral (Electoral Census Office), within the instituto nacional de estadística | never checked |
-| `record:ES:trust_services_pki:register` | AC Raíz FNMT-RCM (FNMT-RCM root certification authority) | never checked |
-| `record:ES:trust_services_pki:operator` | Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda (state public business entity) | never checked |
-| `record:ES:land_property:operator` | Ministerio de Hacienda (Ministry of Finance) | never checked |
-| `record:ES:judicial_criminal:register` | The system comprises the Central Register of Convicted Persons, the Central Register for Protection of Victims of Domestic and Gender Violence, and others | never checked |
-| `record:ES:judicial_criminal:operator` | The registry system is non-public and depends on the Ministry of Justice | never checked |
-| `record:ES:police_records:register` | PERPOL (records of persons of police interest) | never checked |
-| `record:ES:police_records:operator` | Gabinete de Coordinación de la Secretaría de Estado de Interior (Coordination Cabinet of the Secretariat of State for the Interior), for the Base de Datos de Señalamientos Nacionales | never checked |
-| `record:ES:tax:register` | Ley General Tributaria: tax functions include issuing tax ID numbers and maintaining the tax censuses | never checked |
-| `record:ES:tax:operator` | AEAT's Departamento de Informática Tributaria includes sub-directorates for IT planning and for operations (Explotación) | never checked |
-| `record:ES:benefits_pensions:register` | Registro de Prestaciones Sociales Públicas (Register of Public Social Benefits) | never checked |
-| `record:ES:benefits_pensions:operator` | Instituto Nacional de la Seguridad Social (National Social Security Institute) | never checked |
-| `record:ES:health_insurance:register` | The SNS protected-population database generates a unique personal health ID code | never checked |
-| `record:ES:health_insurance:operator` | The law assigns the Ministry of Health to generate the unique SNS personal ID code | never checked |
-| `record:ES:business_registry:register` | Registro Mercantil (Commercial Registry), with the Registro Mercantil Central | never checked |
-| `record:ES:business_registry:operator` | Ministerio de Justicia (Ministry of Justice) | never checked |
-| `record:ES:vehicle_licensing:register` | Vehicle Register of the Jefatura Central de Tráfico | never checked |
-| `record:ES:vehicle_licensing:operator` | The Driver and Offender Register is kept by the Jefatura Central de Tráfico | never checked |
-| `record:ES:border_control:register` | N.SIS II/SIRENE II (national part of the Schengen Information System) | never checked |
-| `record:ES:firearms_register:register` | Registro Nacional de Armas (National Firearms Register) | never checked |
-| `record:ES:firearms_register:operator` | Intervención Central de Armas y Explosivos de la Dirección General de la Guardia Civil (Central Arms and Explosives Office, Guardia Civil) | never checked |
-| `record:ES:government_payroll:register` | The Central Personnel Register is the AGE register of its staff and of acts affecting their careers | never checked |
-| `record:ES:electoral_management:register` | base de datos de los resultados electorales del Ministerio del Interior (Ministry of the Interior election results database) | never checked |
-| `record:ES:electoral_management:operator` | Indra Soluciones Tecnologías de la Información, S.L.U. (contractor for the provisional-count service) | never checked |
-| `record:ES:central_bank:register` | Central de Información de Riesgos (Central Credit Register), Banco de España | never checked |
-| `record:ES:emergency_communications:register` | SIRDEE, the State digital emergency radio system, is coordinated by the Secretariat of State for Security | never checked |
-| `record:ES:emergency_communications:operator` | The 112 emergency call service is provided by the Autonomous Communities through their own call centres | never checked |
-| `record:ES:crisis_management:register` | Red de Alerta Nacional de Protección Civil (National Civil Protection Alert Network) | never checked |
-| `record:ES:grid_control:register` | Cecoel (Centro de Control Eléctrico, Electricity Control Centre) | never checked |
-| `record:ES:grid_control:operator` | Red Eléctrica de España, S.A. (sole transmission operator) | never checked |
-| `record:ES:water_control:register` | Sistemas Automáticos de Información Hidrológica (SAIH) (Automatic Hydrological Information Systems), used by the Confederaciones Hidrográficas | never checked |
-| `record:ES:education:register` | Registro Nacional de Titulados Universitarios Oficiales (RNTUO) (National Register of Official University Graduates) | never checked |
-| `record:ES:education:operator` | Ministerio de Educación (Ministry of Education; the register now sits with the universities ministry) | never checked |
-| `record:ES:official_gazette:register` | The BOE is published in an electronic edition | never checked |
-| `record:ES:official_gazette:operator` | The Agencia Estatal BOE edits, publishes and distributes the official gazette | never checked |
-| `record:ES:statistics_microdata:register` | Municipalities send their Padrón data to the INE for national coordination | never checked |
-| `record:ES:statistics_microdata:operator` | INE is an autonomous body with its own legal personality | never checked |
-| `record:ES:geospatial:register` | Reference geographic information includes cadastral parcels and registered real estate | never checked |
-| `indicator:FI:L1` | Partly | never checked |
-| `indicator:FI:L2` | Yes | never checked |
-| `indicator:FI:K1` | Yes | never checked |
-| `indicator:FI:K2` | Yes | never checked |
-| `indicator:FI:C1` | Yes | never checked |
-| `indicator:FI:C2` | Yes | never checked |
-| `param:FI:population_m` | 5.65 million | never checked |
-| `param:FI:gdp_eur_bn` | 281.8 EUR bn | never checked |
-| `param:FI:gov_employment_k` | 149.1 thousand | never checked |
-| `param:FI:elec_price_eur_mwh` | 74.8 EUR/MWh | never checked |
-| `param:FI:renewables_pct` | 56.6 % | never checked |
-| `param:FI:land_km2` | 303 109 km² | never checked |
-| `record:FI:civil_registry:register` | Väestötietojärjestelmä (Population Information System) is the general national base register of persons, real estate, buildings and dwellings | never checked |
-| `record:FI:civil_registry:operator` | Digital and Population Data Services Agency (DVV) carries the controller duties for the Population Information System | never checked |
-| `record:FI:facial_biometric:register` | passirekisteri (passport register) | never checked |
-| `record:FI:fingerprint_biometric:register` | passirekisteri (passport register) | never checked |
-| `record:FI:breeder_documents:register` | The Population Information System includes regionally organised documentary records not taken into digital form | never checked |
-| `record:FI:authentication_audit_log:register` | DVV must keep a log register of processing of data stored from use of the support services (incl. identification) | never checked |
-| `record:FI:authentication_audit_log:count` | About 17 million authentications per month through Suomi.fi e-Identification | never checked |
-| `record:FI:issuance_history:register` | Henkilökortti- ja passijärjestelmä, Heko-Passi (ID card and passport system) | never checked |
-| `record:FI:electoral_roll:register` | äänioikeusrekisteri (voting register) | never checked |
-| `record:FI:electoral_roll:operator` | Digi- ja väestötietovirasto (Digital and Population Data Services Agency) | never checked |
-| `record:FI:trust_services_pki:register` | DVV keeps a certificate register of the personal certificates it issues, under the eIDAS Regulation | never checked |
-| `record:FI:police_records:register` | Poliisiasiaintietojärjestelmä PATJA (Police Information System) | never checked |
-| `record:FI:residence_permits:register` | The aliens-affairs case management system holds data on non-visa immigration matters | never checked |
-| `record:FI:residence_permits:operator` | Each authority is controller for data it stores; the Finnish Immigration Service is controller for international-protection registration data | never checked |
-| `record:FI:business_registry:register` | The registration authority keeps a public diary and document files in its information system | never checked |
-| `record:FI:business_registry:operator` | The Trade Register Act names the Finnish Patent and Registration Office as registrar | never checked |
-| `record:FI:beneficial_ownership:register` | Finnish Customs receives beneficial-owner data from the PRH Trade Register | never checked |
-| `record:FI:border_control:register` | The national visa information system stores short- and long-term visa processing data | never checked |
-| `record:FI:firearms_register:register` | Asetietojärjestelmä (firearms information system) | never checked |
-| `record:FI:government_payroll:register` | The Government Shared Services Centre for Finance and HR holds data on central-government agencies' financial and HR administration | never checked |
-| `record:FI:geospatial:register` | Building data are recorded in the Population Information System | never checked |
-| `indicator:FR:L2` | Yes | never checked |
-| `indicator:FR:L3` | Yes | never checked |
-| `indicator:FR:K1` | Yes | never checked |
-| `indicator:FR:K2` | Yes | never checked |
-| `indicator:FR:C1` | Yes | never checked |
-| `indicator:FR:C2` | Yes | never checked |
-| `param:FR:population_m` | 69.11 million | never checked |
-| `param:FR:gdp_eur_bn` | 2 991.1 EUR bn | never checked |
-| `param:FR:gov_employment_k` | 2 535.1 thousand | never checked |
-| `param:FR:elec_price_eur_mwh` | 153.4 EUR/MWh | never checked |
-| `param:FR:renewables_pct` | 33.1 % | never checked |
-| `param:FR:land_km2` | 633 886 km² | never checked |
-| `record:FR:civil_registry:register` | RNIPP, the register used to verify the civil status of people born in France | never checked |
-| `record:FR:civil_registry:operator` | Insee has managed the RNIPP since its creation | never checked |
-| `record:FR:civil_registry:count` | Civil status of 113 million people born in or having lived in France | never checked |
-| `record:FR:facial_biometric:register` | TES centralises the digitised facial image and fingerprints of every ID-card and passport applicant | never checked |
-| `record:FR:facial_biometric:operator` | Ministry of the Interior is the controller of TES | never checked |
-| `record:FR:fingerprint_biometric:register` | TES holds fingerprints for issuing national ID cards and passports | never checked |
-| `record:FR:fingerprint_biometric:operator` | Ministry of the Interior | never checked |
-| `record:FR:breeder_documents:register` | SCEC draws up the civil-status acts of persons who acquire French nationality | never checked |
-| `record:FR:breeder_documents:operator` | SCEC is a national-competence service of the Ministry of Foreign Affairs | never checked |
-| `record:FR:breeder_documents:count` | About 16 million civil-status acts | never checked |
-| `record:FR:authentication_audit_log:register` | FranceConnect keeps traceability records of access to the teleservice | never checked |
-| `record:FR:issuance_history:register` | TES records document number, type, and date and place of issue for each ID card and passport | never checked |
-| `record:FR:issuance_history:operator` | Ministry of the Interior | never checked |
-| `record:FR:digital_identity_credentials:register` | FranceConnect (the State's electronic identification and authentication service) | never checked |
-| `record:FR:digital_identity_credentials:operator` | DINUM (Direction interministérielle du numérique) | never checked |
-| `record:FR:electoral_roll:register` | répertoire électoral unique (REU) (single electoral register) | never checked |
-| `record:FR:electoral_roll:operator` | Insee | never checked |
-| `record:FR:trust_services_pki:register` | The Justice ministry root CA is to be signed by IGC/A, the administration's trust infrastructure | never checked |
-| `record:FR:land_property:register` | plan cadastral (cadastral plan) | never checked |
-| `record:FR:land_property:count` | 598747 plan sheets | never checked |
-| `record:FR:judicial_criminal:register` | ASTREA is the information system of the national criminal record | never checked |
-| `record:FR:police_records:register` | TAJ is a Ministry of the Interior file shared by police and gendarmerie | never checked |
-| `record:FR:police_records:operator` | FAED is run by the Direction centrale de la police judiciaire | never checked |
-| `record:FR:intelligence:register` | DRSD SIRCID information system contracted to Airbus Defence & Space | never checked |
-| `record:FR:residence_permits:register` | AGDREF manages the right of residence of foreign nationals | never checked |
-| `record:FR:residence_permits:operator` | DGEF of the Ministry of the Interior is responsible | never checked |
-| `record:FR:customs:register` | Customs declarations are lodged in the DELTA online service | never checked |
-| `record:FR:benefits_pensions:register` | RGCU is the single career register of the whole population, built by CNAV | never checked |
-| `record:FR:benefits_pensions:operator` | CNAV also runs the SNGI identifier system for the whole social-security sphere | never checked |
-| `record:FR:benefits_pensions:count` | 15.3 million pensioners paid by the general scheme | never checked |
-| `record:FR:health_insurance:register` | CNAV runs the healthcare entitlement calculation tool (ODSS) on behalf of Cnam | never checked |
-| `record:FR:business_registry:register` | Single register covering all businesses in France | never checked |
-| `record:FR:business_registry:operator` | RNE is operated by INPI | never checked |
-| `record:FR:beneficial_ownership:register` | Register of beneficial owners; discrepancies are reported to the court registry (greffe) | never checked |
-| `record:FR:vehicle_licensing:register` | SIV, in place since April 2009, replaced the FNI | never checked |
-| `record:FR:vehicle_licensing:operator` | Managed by France Titres (ANTS) | never checked |
-| `record:FR:border_control:register` | VISABIO (national visa-applicant processing, the French access point to VIS) | never checked |
-| `record:FR:firearms_register:register` | SIA, the national firearms information system | never checked |
-| `record:FR:firearms_register:operator` | Ministry of the Interior | never checked |
-| `record:FR:public_finance:register` | Chorus (the State's budgetary and accounting application) | never checked |
-| `record:FR:government_payroll:register` | PAYSAGE consolidates the payroll application for State employees | never checked |
-| `record:FR:government_payroll:operator` | Listed among IT projects carried by budget programmes 156 and 218 | never checked |
-| `record:FR:central_bank:register` | French component of the Eurosystem's TARGET services | never checked |
-| `record:FR:central_bank:operator` | Banque de France | never checked |
-| `record:FR:defence_command:register` | Artemis: AI applications for massive processing of military data | never checked |
-| `record:FR:defence_command:foreign_dependency` | National infrastructure | never checked |
-| `record:FR:emergency_communications:register` | NexSIS pools the information systems of fire and rescue services | never checked |
-| `record:FR:emergency_communications:operator` | ANSC designs, deploys and maintains NexSIS | never checked |
-| `record:FR:crisis_management:register` | FR-Alert, the public warning system over mobile telephony | never checked |
-| `record:FR:grid_control:register` | Téléconduite: the tools that control the power system, from dispatching rooms to substations | never checked |
-| `record:FR:grid_control:operator` | RTE is the French transmission system operator | never checked |
-| `record:FR:water_control:register` | Vigicrues (national flood-risk information service) | never checked |
-| `record:FR:water_control:operator` | Service central Vigicrues (Central Vigicrues Service), under the DGPR | never checked |
-| `record:FR:health_records:register` | DMP and the digital health space are State digital infrastructures | never checked |
-| `record:FR:official_gazette:register` | The JO is made available electronically, permanently and free of charge | never checked |
-| `record:FR:official_gazette:operator` | DILA publishes the JORF | never checked |
-| `record:FR:public_health_surveillance:register` | The notifiable-diseases system covers 38 diseases | never checked |
-| `record:FR:public_health_surveillance:operator` | Data go to the ARS and to Santé publique France epidemiologists | never checked |
-| `record:FR:statistics_microdata:register` | Secure access services for confidential data | never checked |
-| `record:FR:statistics_microdata:operator` | CASD is a GIP whose members include the State represented by Insee | never checked |
-| `record:FR:statistics_microdata:foreign_dependency` | National infrastructure | never checked |
-| `record:FR:geospatial:register` | BAN is a State database listing all addresses in France | never checked |
-| `record:FR:geospatial:operator` | IGN runs operation and distribution of the BAN | never checked |
-| `indicator:HR:L1` | Partly | never checked |
-| `indicator:HR:L2` | Yes | never checked |
-| `indicator:HR:K1` | Yes | never checked |
-| `indicator:HR:K2` | Yes | never checked |
-| `indicator:HR:C1` | Yes | never checked |
-| `indicator:HR:C2` | Yes | never checked |
-| `param:HR:population_m` | 3.88 million | never checked |
-| `param:HR:gdp_eur_bn` | 93.0 EUR bn | never checked |
-| `param:HR:gov_employment_k` | 116.9 thousand | never checked |
-| `param:HR:elec_price_eur_mwh` | 154.8 EUR/MWh | never checked |
-| `param:HR:renewables_pct` | 58.8 % | never checked |
-| `param:HR:land_km2` | 55 896 km² | never checked |
-| `record:HR:civil_registry:register` | State civil registers (Državne matice): registers of births, marriages and deaths | never checked |
-| `record:HR:civil_registry:operator` | The state administration body for general administration sets up and runs the single information system for the civil registers | never checked |
-| `record:HR:facial_biometric:register` | Photograph stored in the ID-card register in the Ministry of the Interior information system (reused for driving licences) | never checked |
-| `record:HR:facial_biometric:operator` | Competent bodies for biometric collections are the ministries of the interior, foreign affairs and justice | never checked |
-| `record:HR:fingerprint_biometric:register` | Fingerprints already taken and stored electronically in a ministry document-issuance procedure are reused (central retention) | never checked |
-| `record:HR:breeder_documents:register` | Files underlying civil-register entries are of permanent value | never checked |
-| `record:HR:breeder_documents:operator` | Registers whose last entry is more than 100 years old are kept by the Croatian State Archives | never checked |
-| `record:HR:authentication_audit_log:register` | NIAS records credential-usage history, visible to the user for the last 60 days | never checked |
-| `record:HR:issuance_history:register` | ID-card register kept in the Ministry of the Interior information system, recording invalid (lost) cards | never checked |
-| `record:HR:digital_identity_credentials:register` | Nacionalni identifikacijski i autentifikacijski sustav (NIAS) (National Identification and Authentication System) | never checked |
-| `record:HR:digital_identity_credentials:operator` | tijelo državne uprave nadležno za digitalnu transformaciju (state administration body responsible for digital transformation) | never checked |
-| `record:HR:electoral_roll:register` | Registar birača (Register of voters) | never checked |
-| `record:HR:electoral_roll:operator` | Središnje tijelo državne uprave nadležno za poslove opće uprave (central state administration body for general administration) | never checked |
-| `record:HR:land_property:register` | ZIS stores and maintains all land-register and cadastre data | never checked |
-| `record:HR:land_property:operator` | ZIS is jointly coordinated by the Ministry of Justice and the State Geodetic Administration | never checked |
-| `record:HR:police_records:register` | The Ministry information system is the Information System of the Ministry of the Interior | never checked |
-| `record:HR:intelligence:register` | zbirke i registri osobnih podataka sigurnosno-obavještajnih agencija (personal-data collections and registers of the security-intelligence agencies) | never checked |
-| `record:HR:trust_services_pki:register` | AKD HRIDCA issues identification and qualified signature certificates for the eOI card | never checked |
-| `record:HR:trust_services_pki:operator` | Fina is a qualified trust service provider on the national trusted list | never checked |
-| `record:HR:trust_services_pki:foreign_dependency` | National infrastructure | never checked |
-| `record:HR:residence_permits:register` | Collection covers third-country nationals on short-term, temporary, long-term and permanent stay | never checked |
-| `record:HR:benefits_pensions:register` | matična evidencija (master record of insured persons, pension beneficiaries and contribution payers) | never checked |
-| `record:HR:business_registry:register` | Main books are linked into a single database for Croatia | never checked |
-| `record:HR:business_registry:operator` | The register is kept by the commercial courts and preserved permanently | never checked |
-| `record:HR:beneficial_ownership:register` | Central electronic database of beneficial owners of legal entities and trusts | never checked |
-| `record:HR:beneficial_ownership:operator` | Operationally run by Fina on behalf of the Anti-Money Laundering Office, Ministry of Finance | never checked |
-| `record:HR:vehicle_licensing:register` | Register of registered vehicles kept on the Ministry of the Interior information system | never checked |
-| `record:HR:border_control:register` | National information system for state border management, part of the MUP information system | never checked |
-| `record:HR:firearms_register:register` | evidencije na središnjem informacijskom sustavu ministarstva nadležnog za unutarnje poslove (records on the central information system of the Ministry of the Interior) | never checked |
-| `record:HR:public_finance:register` | All budget-user transactions go through the State Treasury system and the single treasury account held at HNB | never checked |
-| `record:HR:government_payroll:register` | The COP payroll information system is owned by the Republic of Croatia | never checked |
-| `record:HR:government_payroll:operator` | Fina processes the data on behalf of the civil-service body | never checked |
-| `record:HR:central_bank:register` | Payments in Croatia run through TARGET-HR, EuroNCS and EuroNCSInst | never checked |
-| `record:HR:central_bank:foreign_dependency` | EU provider | never checked |
-| `record:HR:emergency_communications:register` | System 112 consists of interconnected 112 centres and the Operational Centre of Civil Protection | never checked |
-| `record:HR:crisis_management:register` | National Operational Centre of Civil Protection monitors events through the 112 centres | never checked |
-| `record:HR:education:register` | Central register of higher-education certificates, diplomas and supplements (Digital Register of Diplomas) | never checked |
-| `record:HR:education:operator` | e-Matica is a centralised MZOM system; CARNET is the support centre | never checked |
-| `record:HR:health_records:register` | CEZIH is the central store of health data for primary, secondary and tertiary care | never checked |
-| `record:HR:health_records:operator` | HZZO manages CEZIH and maintains its central part | never checked |
-| `record:HR:tax:register` | Information system of the Tax Administration | never checked |
-| `record:HR:tax:foreign_dependency` | National infrastructure | never checked |
-| `record:HR:public_health_surveillance:register` | NAJS stores health data and public-health records and registers | never checked |
-| `record:HR:public_health_surveillance:operator` | NAJS is run by HZJZ | never checked |
-| `record:HR:geospatial:register` | Building register established, kept and maintained by DGU | never checked |
-| `record:HR:geospatial:operator` | Državna geodetska uprava (State Geodetic Administration) | never checked |
-| `indicator:HU:L1` | Partly | never checked |
-| `indicator:HU:L2` | Yes | never checked |
-| `indicator:HU:L3` | No | never checked |
-| `indicator:HU:K1` | Yes | never checked |
-| `indicator:HU:K2` | Yes | never checked |
-| `indicator:HU:C1` | Yes | never checked |
-| `indicator:HU:C2` | Yes | never checked |
-| `param:HU:population_m` | 9.49 million | never checked |
-| `param:HU:gdp_eur_bn` | 218.8 EUR bn | never checked |
-| `param:HU:gov_employment_k` | 346.3 thousand | never checked |
-| `param:HU:elec_price_eur_mwh` | 213.2 EUR/MWh | never checked |
-| `param:HU:renewables_pct` | 28.3 % | never checked |
-| `param:HU:land_km2` | 91 248 km² | never checked |
-| `record:HU:civil_registry:register` | Személyiadat- és lakcímnyilvántartás (Personal Data and Address Register): the authentic official register of citizens' personal, address and notification-address data | never checked |
-| `record:HU:civil_registry:foreign_dependency` | National infrastructure | never checked |
-| `record:HU:facial_biometric:register` | The SZL stores the facial image (arcképmás) and signature of citizens who applied for an ID card | never checked |
-| `record:HU:facial_biometric:operator` | The Minister for Science and Technology is designated central organ under the 2015 facial image analysis act | never checked |
-| `record:HU:facial_biometric:foreign_dependency` | National infrastructure | never checked |
-| `record:HU:fingerprint_biometric:register` | With written consent, the SZL stores the citizen's fingerprint for replacing the permanent ID card | never checked |
-| `record:HU:fingerprint_biometric:operator` | Minister of Interior designated as criminal records body, including the register of criminal and law-enforcement biometric data | never checked |
-| `record:HU:fingerprint_biometric:foreign_dependency` | National infrastructure | never checked |
-| `record:HU:breeder_documents:register` | The electronic civil register includes the register of civil-status and name-change certificates (okiratnyilvántartás) | never checked |
-| `record:HU:breeder_documents:operator` | Minister for Science and Technology is the civil-register keeping body | never checked |
-| `record:HU:breeder_documents:foreign_dependency` | National infrastructure | never checked |
-| `record:HU:authentication_audit_log:register` | The register keeper records every data-processing operation in an automated log system (naplórendszer) | never checked |
-| `record:HU:authentication_audit_log:foreign_dependency` | National infrastructure | never checked |
-| `record:HU:trust_services_pki:register` | CSCA-HUNGARY country signing CA for e-passports, operated by the passport-issuing ministry | never checked |
-| `record:HU:trust_services_pki:operator` | NISZ Zrt. is the designated provider of government e-signature, e-seal and signature validation | never checked |
-| `record:HU:land_property:register` | The land register contains every property located in Hungary, settlement by settlement | never checked |
-| `record:HU:land_property:operator` | Lechner Tudásközpont is designated land authority (with county government offices) | never checked |
-| `record:HU:police_records:register` | Police place SIS alerts via the wanted-persons register system | never checked |
-| `record:HU:issuance_history:register` | The SZL records ID card document identifiers and electronic unique identifiers | never checked |
-| `record:HU:issuance_history:operator` | Energiaügyi Minisztérium (Ministry of Energy) as registering body for passports | never checked |
-| `record:HU:issuance_history:foreign_dependency` | National infrastructure | never checked |
-| `record:HU:digital_identity_credentials:register` | Digital citizenship register: the client-registration register created by the Digital State Act | never checked |
-| `record:HU:digital_identity_credentials:operator` | IdomSoft Zrt. designated as digital citizenship service provider | never checked |
-| `record:HU:digital_identity_credentials:foreign_dependency` | National infrastructure | never checked |
-| `record:HU:electoral_roll:register` | The central electoral register is an electronic register kept by the National Election Office | never checked |
-| `record:HU:electoral_roll:operator` | IdomSoft builds the National Election System used by election offices | never checked |
-| `record:HU:electoral_roll:foreign_dependency` | National infrastructure | never checked |
-| `record:HU:tax:register` | adószámla (taxpayer current accounts) kept by NAV | never checked |
-| `record:HU:tax:count` | more than 8 million tax accounts | never checked |
-| `record:HU:customs:register` | Automatizált Export Rendszer (AES) (Automated Export System) | never checked |
-| `record:HU:customs:count` | 2 404 687 customs goods declarations | never checked |
-| `record:HU:benefits_pensions:register` | társadalombiztosítási jogszerzési nyilvántartás (social-security entitlement register) and register of benefits paid | never checked |
-| `record:HU:benefits_pensions:operator` | Government designates the Hungarian State Treasury Pension Disbursement Directorate as a pension insurance administration body | never checked |
-| `record:HU:health_insurance:register` | NEAK keeps the register of insured persons' relationship data, entitlement and TAJ data | never checked |
-| `record:HU:health_insurance:operator` | NEAK is a health insurance body | never checked |
-| `record:HU:beneficial_ownership:register` | The beneficial ownership register contains the data of reporting entities | never checked |
-| `record:HU:border_control:register` | N.SIS comprises the full national copy of SIS and the national backbone, among other parts | never checked |
-| `record:HU:border_control:operator` | N.SIS Office is responsible for data in the national copy | never checked |
-| `record:HU:firearms_register:register` | Holders must report firearm data to police for the central firearms register | never checked |
-| `record:HU:firearms_register:operator` | Firearms licences are issued by the police | never checked |
-| `record:HU:public_finance:register` | Központi Költségvetés Végrehajtását Támogató Rendszer (KKVTR / IFMIS) (Central Budget Execution Support System) | never checked |
-| `record:HU:public_finance:operator` | Magyar Államkincstár (Hungarian State Treasury) | never checked |
-| `record:HU:government_payroll:register` | Payroll-based tax obligations are met exclusively through the centralised payroll system operated by the Treasury | never checked |
-| `record:HU:electoral_management:register` | Nemzeti Választási Rendszer (National Election System) | never checked |
-| `record:HU:central_bank:register` | Instant payment service launched 2 March 2020 | never checked |
-| `record:HU:emergency_communications:register` | EDR: the Schengen-compliant digital government radio network | never checked |
-| `record:HU:emergency_communications:operator` | The police handle calls to emergency numbers | never checked |
-| `record:HU:crisis_management:register` | Public alarm system managed by the professional disaster management body | never checked |
-| `record:HU:education:register` | Central register of issued school-leaving (matura) certificates | never checked |
-| `record:HU:residence_permits:register` | Third-country nationals' data are kept in the sub-registers of the central aliens-policing register | never checked |
-| `record:HU:residence_permits:operator` | The Minister of Interior is responsible for aliens policing and asylum | never checked |
-| `record:HU:residence_permits:foreign_dependency` | National infrastructure | never checked |
-| `record:HU:vehicle_licensing:register` | National Vehicle Register system built/run by IdomSoft | never checked |
-| `record:HU:vehicle_licensing:operator` | Minister for Science and Technology is the road transport registering body | never checked |
-| `record:HU:vehicle_licensing:foreign_dependency` | National infrastructure | never checked |
-| `record:HU:official_gazette:register` | Magyar Közlöny (Hungarian Official Gazette) | never checked |
-| `record:HU:public_health_surveillance:register` | Vaccination data are entered into the electronic epidemiological surveillance system | never checked |
-| `record:HU:statistics_microdata:register` | KSH conducts censuses and micro-censuses | never checked |
-| `record:HU:geospatial:register` | Central address register provides an authentic address source for registers | never checked |
-| `record:HU:geospatial:operator` | Lechner manages national geodata databases and runs the national spatial data infrastructure | never checked |
-| `indicator:IE:L2` | Partly | never checked |
-| `indicator:IE:K1` | Yes | never checked |
-| `indicator:IE:K2` | Yes | never checked |
-| `indicator:IE:C1` | Yes | never checked |
-| `indicator:IE:C2` | Yes | never checked |
-| `param:IE:population_m` | 5.51 million | never checked |
-| `param:IE:gdp_eur_bn` | 602.4 EUR bn | never checked |
-| `param:IE:gov_employment_k` | 150.8 thousand | never checked |
-| `param:IE:elec_price_eur_mwh` | 255.2 EUR/MWh | never checked |
-| `param:IE:renewables_pct` | 41.7 % | never checked |
-| `param:IE:land_km2` | 68 655 km² | never checked |
-| `record:IE:civil_registry:register` | register of births (with registers of stillbirths, deaths, marriages etc.) | never checked |
-| `record:IE:civil_registry:operator` | an tArd-Chláraitheoir (Registrar General) | never checked |
-| `record:IE:facial_biometric:register` | SAFE 2 registration biometric facial templates (Public Services Card) | never checked |
-| `record:IE:facial_biometric:operator` | Department of Social Protection (DSP) | never checked |
-| `record:IE:facial_biometric:count` | Facial templates for 70% of the State's population (2021) | never checked |
-| `record:IE:breeder_documents:register` | foreign births register | never checked |
-| `record:IE:electoral_roll:foreign_dependency` | Non-EU provider | never checked |
-| `record:IE:electoral_roll:count` | 3.87 million registered electors (December 2024) | never checked |
-| `record:IE:digital_identity_credentials:register` | MyGovID | never checked |
-| `record:IE:digital_identity_credentials:count` | over 3.2 million people actively using their MyGovID account | never checked |
-| `record:IE:trust_services_pki:register` | ROS digital certificate PKI (Revenue CA), also used by CRO, Department of Transport and Department of Social Protection | never checked |
-| `record:IE:trust_services_pki:operator` | Revenue Commissioners act as Certification Authority for ROS digital certificates | never checked |
-| `record:IE:land_property:register` | National Land Register (folios of the Land Registry) and Registry of Deeds | never checked |
-| `record:IE:land_property:operator` | Tailte Éireann (civil service body under the Tailte Éireann Act 2022) | never checked |
-| `record:IE:land_property:count` | 2.4 million folios with associated spatial data accessible via landdirect.ie | never checked |
-| `record:IE:police_records:register` | PULSE (An Garda Síochána's national incident and intelligence database) | never checked |
-| `record:IE:police_records:operator` | An Garda Síochána | never checked |
-| `record:IE:intelligence:register` | Defence Forces Military Intelligence holdings | never checked |
-| `record:IE:intelligence:operator` | National Security Analysis Centre (established by Government in 2019) | never checked |
-| `record:IE:emergency_communications:register` | National Digital Radio Service (NDRS), TETRA network for first responders | never checked |
-| `record:IE:emergency_communications:foreign_dependency` | Non-EU provider | never checked |
-| `record:IE:residence_permits:register` | Irish Residence Permission (IRP) register: the register of non-nationals with permission to be in the State | never checked |
-| `record:IE:residence_permits:operator` | Immigration Service Delivery (ISD), Department of Justice (took over first-time registration from the Garda National Immigration Bureau, 13 January 2025) | never checked |
-| `record:IE:tax:register` | ROS database | never checked |
-| `record:IE:tax:operator` | Revenue | never checked |
-| `record:IE:tax:count` | over 900,000 self-assessed taxpayers, 287,000 companies and 293,000 VAT traders registered | never checked |
-| `record:IE:customs:register` | Automated Import System (AIS), Automated Export System (AES) and New Computerised Transit System (NCTS) | never checked |
-| `record:IE:customs:operator` | Revenue Commissioners | never checked |
-| `record:IE:health_insurance:register` | PCRS eligibility records (medical card / GMS scheme eligibility, keyed on PPSN) | never checked |
-| `record:IE:health_insurance:operator` | HSE Primary Care Reimbursement Service (PCRS) | never checked |
-| `record:IE:health_insurance:count` | 1,552,553 GMS (medical card) eligible persons and 785,152 GP visit card holders in 2025 | never checked |
-| `record:IE:business_registry:register` | Register of companies, business names and limited partnerships held by the Companies Registration Office | never checked |
-| `record:IE:business_registry:operator` | Companies Registration Office (CRO), an office of the Department of Enterprise, Tourism and Employment | never checked |
-| `record:IE:beneficial_ownership:register` | Central Register of Beneficial Ownership of Companies and Industrial and Provident Societies | never checked |
-| `record:IE:beneficial_ownership:operator` | Registrar of Beneficial Ownership of Companies and Industrial and Provident Societies | never checked |
-| `record:IE:vehicle_licensing:register` | National Vehicle and Driver File (NVDF) | never checked |
-| `record:IE:border_control:register` | National connection to the Schengen Information System (SIS), live in Ireland since 15 March 2021 | never checked |
-| `record:IE:firearms_register:register` | Firearm certificates (three-year certificates, renewal phases administered by An Garda Síochána) | never checked |
-| `record:IE:firearms_register:operator` | An Garda Síochána (applications decided by the local Superintendent) | never checked |
-| `record:IE:public_finance:register` | Financial Management Shared Services (FMSS) system, the shared government financial management system (incl. the Exchequer) | never checked |
-| `record:IE:public_finance:operator` | National Shared Services Office (FMSS); Department of Finance manages the Exchequer | never checked |
-| `record:IE:electoral_management:register` | Election Count Database System (Ecount), used alongside the manual paper-ballot count | never checked |
-| `record:IE:electoral_management:operator` | Returning Officers per constituency | never checked |
-| `record:IE:central_bank:register` | TARGET2-Ireland (Irish component of the Eurosystem T2 RTGS system) | never checked |
-| `record:IE:central_bank:operator` | Central Bank of Ireland | never checked |
-| `record:IE:central_bank:foreign_dependency` | EU provider | never checked |
-| `record:IE:defence_command:register` | Defence Forces Enterprise network (NGWE project) and national Communications Information Services Network (CISN) | never checked |
-| `record:IE:defence_command:operator` | Defence Forces CIS Corps | never checked |
-| `record:IE:defence_command:foreign_dependency` | National infrastructure | never checked |
-| `record:IE:grid_control:register` | National Control Centres (NCCs) of the transmission system operator | never checked |
-| `record:IE:grid_control:operator` | EirGrid (transmission system operator) | never checked |
-| `record:IE:health_records:register` | National Shared Care Record (NSCR), HSE MyHealth@IE programme (read-only aggregated record) | never checked |
-| `record:IE:health_records:operator` | Health Service Executive (Health Identifiers Service) | never checked |
-| `record:IE:public_health_surveillance:register` | Computerised Infectious Disease Reporting (CIDR) | never checked |
-| `record:IE:public_health_surveillance:operator` | Health Protection Surveillance Centre (HPSC); CIDR established 2004 | never checked |
-| `record:IE:public_health_surveillance:count` | On average 33,394 notified cases per year, 2013-2019 (range 25,814-46,065) | never checked |
-| `indicator:IT:L1` | Yes | never checked |
-| `indicator:IT:L2` | Yes | never checked |
-| `indicator:IT:L3` | Partly | never checked |
-| `indicator:IT:K1` | Yes | never checked |
-| `indicator:IT:K2` | Yes | never checked |
-| `indicator:IT:C1` | Yes | never checked |
-| `param:IT:population_m` | 58.94 million | never checked |
-| `param:IT:gdp_eur_bn` | 2 265.0 EUR bn | never checked |
-| `param:IT:gov_employment_k` | 1 213.1 thousand | never checked |
-| `param:IT:elec_price_eur_mwh` | 220.3 EUR/MWh | never checked |
-| `param:IT:renewables_pct` | 43.5 % | never checked |
-| `param:IT:land_km2` | 297 823 km² | never checked |
-| `record:IT:civil_registry:register` | ANPR (National Register of the Resident Population) is the Ministry of the Interior's single database for population data | never checked |
-| `record:IT:civil_registry:operator` | Ministry of the Interior; Sogei S.p.A. provides the technical operation | never checked |
-| `record:IT:breeder_documents:register` | ANSC - national computerised archive of civil-status registers (births, marriages, deaths) | never checked |
-| `record:IT:facial_biometric:register` | The CIE electronic record card (cartellino elettronico), kept by SSCE, holds the holder's photograph, signature scan and registry data | never checked |
-| `record:IT:facial_biometric:operator` | Centro Nazionale dei Servizi Demografici (CNSD), Ministry of the Interior | never checked |
-| `record:IT:facial_biometric:foreign_dependency` | National infrastructure | never checked |
-| `record:IT:digital_identity_credentials:register` | SPID (sistema pubblico per la gestione dell'identità digitale di cittadini e imprese – public digital identity system) | never checked |
-| `record:IT:digital_identity_credentials:operator` | Open set of public and private entities accredited by AgID | never checked |
-| `record:IT:land_property:register` | Anagrafe Immobiliare Integrata (Integrated Property Register) | never checked |
-| `record:IT:land_property:operator` | Agenzia del Territorio (Land Agency) | never checked |
-| `record:IT:judicial_criminal:register` | casellario giudiziale (criminal records register) | never checked |
-| `record:IT:police_records:register` | Centro elaborazione dati (Data Processing Centre, the inter-force police database) | never checked |
-| `record:IT:police_records:operator` | Ministero dell'interno (Ministry of the Interior) | never checked |
-| `record:IT:issuance_history:register` | The CIE database is part of the CNSD infrastructure | never checked |
-| `record:IT:issuance_history:operator` | Only the Ministry of the Interior may issue the CIE | never checked |
-| `record:IT:issuance_history:foreign_dependency` | National infrastructure | never checked |
-| `record:IT:trust_services_pki:register` | The CNSD 'CA Autenticazione' is the Ministry of the Interior's certification authority that issues online-authentication certificates for the CIE | never checked |
-| `record:IT:trust_services_pki:operator` | AgID is Italy's supervisory authority for qualified trust service providers | never checked |
-| `record:IT:trust_services_pki:foreign_dependency` | National infrastructure | never checked |
-| `record:IT:tax:register` | Anagrafe tributaria (national tax register) | never checked |
-| `record:IT:customs:register` | AIDA (Integrated Customs and Excise Automation) data warehouse of the Customs and Monopolies Agency | never checked |
-| `record:IT:benefits_pensions:register` | casellario centrale dei pensionati (central register of pensioners) | never checked |
-| `record:IT:benefits_pensions:operator` | Istituto nazionale della previdenza sociale (INPS) | never checked |
-| `record:IT:health_insurance:register` | The National Register of Patients (ANA) is the reference register for public health, run within Sistema Tessera Sanitaria | never checked |
-| `record:IT:health_insurance:operator` | ANA is built by the Ministry of Economy and Finance in agreement with the Ministry of Health | never checked |
-| `record:IT:business_registry:register` | Registro delle imprese (Register of Companies) | never checked |
-| `record:IT:business_registry:operator` | Camera di commercio (chambers of commerce) | never checked |
-| `record:IT:beneficial_ownership:register` | Apposita sezione del Registro delle imprese (dedicated beneficial-ownership section of the Register of Companies) | never checked |
-| `record:IT:vehicle_licensing:register` | archivio nazionale dei veicoli (national vehicle archive) | never checked |
-| `record:IT:public_finance:register` | SIOPE monitors the receipts and payments made by the treasurers of all public administrations | never checked |
-| `record:IT:public_finance:operator` | The SIOPE+ infrastructure is operated by the Banca d'Italia | never checked |
-| `record:IT:government_payroll:register` | NoiPA | never checked |
-| `record:IT:government_payroll:operator` | Dipartimento dell'Amministrazione Generale del personale e dei servizi (DAG), Ministero dell'Economia e delle Finanze (MEF) | never checked |
-| `record:IT:electoral_management:register` | The historical election archive is an online database of election results down to municipality level | never checked |
-| `record:IT:electoral_management:operator` | The Central Directorate for Electoral Services publishes turnout and results data | never checked |
-| `record:IT:central_bank:register` | BI‑Comp (national multilateral clearing system) | never checked |
-| `record:IT:central_bank:operator` | Banca d'Italia | never checked |
-| `record:IT:crisis_management:register` | IT-alert is the public warning service that sends messages to devices in an area hit by a serious emergency | never checked |
-| `record:IT:education:register` | Anagrafe nazionale dell'istruzione (ANIST) (National Education Register) | never checked |
-| `record:IT:education:operator` | Ministero dell'istruzione (Ministry of Education) | never checked |
-| `record:IT:health_records:register` | The electronic health record (FSE) holds the patient's clinical data and documents | never checked |
-| `record:IT:health_records:operator` | The FSE is set up by the regions and autonomous provinces | never checked |
-| `record:IT:official_gazette:register` | The printed Gazzetta Ufficiale is the only definitive text and prevails over the digital version | never checked |
-| `record:IT:official_gazette:operator` | IPZS publishes the Gazzetta Ufficiale in digital form | never checked |
-| `record:IT:national_archives:register` | The Central State Archive is building the repository for digital archives produced by central state bodies | never checked |
-| `record:IT:statistics_microdata:operator` | ISTAT is the main producer of official statistics | never checked |
-| `indicator:LT:L1` | Partly | never checked |
-| `indicator:LT:K1` | Yes | never checked |
-| `indicator:LT:K2` | Yes | never checked |
-| `indicator:LT:C1` | Yes | never checked |
-| `indicator:LT:C2` | Yes | never checked |
-| `param:LT:population_m` | 2.89 million | never checked |
-| `param:LT:gdp_eur_bn` | 84.3 EUR bn | never checked |
-| `param:LT:gov_employment_k` | 98.7 thousand | never checked |
-| `param:LT:elec_price_eur_mwh` | 159.1 EUR/MWh | never checked |
-| `param:LT:renewables_pct` | 59.9 % | never checked |
-| `param:LT:land_km2` | 62 643 km² | never checked |
-| `record:LT:issuance_history:register` | Asmens dokumentų išdavimo informacinė sistema, ADIS (Personal Documents Issuance Information System) | never checked |
-| `record:LT:issuance_history:operator` | Lietuvos Respublikos vidaus reikalų ministerija (Ministry of the Interior), with Informatikos ir ryšių departamentas maintaining the infrastructure | never checked |
-| `record:LT:digital_identity_credentials:register` | Lietuvos Respublikos asmens tapatybės kortelė, ATK / eID (Lithuanian identity card eID) | never checked |
-| `record:LT:judicial_criminal:register` | Įtariamųjų, kaltinamųjų ir nuteistųjų registras, ĮKNR (Register of Suspects, Accused and Convicted Persons) | never checked |
-| `record:LT:judicial_criminal:operator` | Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Information Technology and Communications Department under the Ministry of the Interior) | never checked |
-| `record:LT:police_records:register` | Ieškomų asmenų, neatpažintų lavonų ir nežinomų bejėgių asmenų žinybinis registras, IAŽR (Departmental Register of Wanted Persons, Unidentified Corpses and Unknown Helpless Persons) | never checked |
-| `record:LT:firearms_register:register` | Ginklų registras (Firearms Register) | never checked |
-| `record:LT:firearms_register:operator` | Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Information Technology and Communications Department under the Ministry of the Interior) | never checked |
-| `record:LT:education:register` | Diplomų, atestatų ir kvalifikacijos pažymėjimų registras (Register of Diplomas, Certificates and Qualification Certificates) | never checked |
-| `record:LT:education:operator` | Nacionalinė švietimo agentūra (National Agency for Education) | never checked |
-| `indicator:LU:K1` | Yes | never checked |
-| `indicator:LU:K2` | Yes | never checked |
-| `indicator:LU:C1` | Yes | never checked |
-| `indicator:LU:C2` | Yes | never checked |
-| `param:LU:population_m` | 0.69 million | never checked |
-| `param:LU:gdp_eur_bn` | 89.5 EUR bn | never checked |
-| `param:LU:gov_employment_k` | 32.6 thousand | never checked |
-| `param:LU:elec_price_eur_mwh` | 171.7 EUR/MWh | never checked |
-| `param:LU:renewables_pct` | 23.3 % | never checked |
-| `param:LU:land_km2` | 2 586 km² | never checked |
-| `record:LU:digital_identity_credentials:register` | GouvID app: lets citizens use the Luxembourg electronic identity card (eID) with a smartphone | never checked |
-| `record:LU:digital_identity_credentials:operator` | LuxTrust is a qualified trust service provider and a reference digital-identity provider (LuxTrust credentials) | never checked |
-| `record:LU:tax:register` | ACD processes personal data to assess, collect and recover taxes and to exchange information nationally and internationally | never checked |
-| `record:LU:tax:operator` | The ACD is the data controller | never checked |
-| `record:LU:customs:register` | eDouane is the access point to all online declaration applications of the Customs and Excise Administration | never checked |
-| `record:LU:vehicle_licensing:register` | Registration uniquely identifies each road vehicle and its holder or owner | never checked |
-| `record:LU:vehicle_licensing:operator` | The SNCA handles putting road vehicles into circulation and driving licences | never checked |
-| `record:LU:health_insurance:register` | Anyone working in Luxembourg must be affiliated by the CCSS, which triggers health insurance coverage | never checked |
-| `record:LU:health_insurance:operator` | The CNS manages benefits for all private-sector insured persons and State workers | never checked |
-| `record:LU:health_insurance:foreign_dependency` | National infrastructure | never checked |
-| `indicator:LV:L1` | Partly | never checked |
-| `indicator:LV:L2` | Yes | never checked |
-| `indicator:LV:K1` | Yes | never checked |
-| `indicator:LV:K2` | Yes | never checked |
-| `indicator:LV:C1` | Yes | never checked |
-| `indicator:LV:C2` | Yes | never checked |
-| `param:LV:population_m` | 1.84 million | never checked |
-| `param:LV:gdp_eur_bn` | 43.0 EUR bn | never checked |
-| `param:LV:gov_employment_k` | 65.0 thousand | never checked |
-| `param:LV:elec_price_eur_mwh` | 136.1 EUR/MWh | never checked |
-| `param:LV:renewables_pct` | 57.6 % | never checked |
-| `param:LV:land_km2` | 62 227 km² | never checked |
-| `record:LV:civil_registry:register` | Fizisko personu reģistrs (Register of Natural Persons), the single system for registering and identifying natural persons | never checked |
-| `record:LV:civil_registry:operator` | The controller and holder of the Register is PMLP (Office of Citizenship and Migration Affairs) | never checked |
-| `record:LV:breeder_documents:register` | Civil status register entries are held on paper in one copy and electronically in the Register of Natural Persons | never checked |
-| `record:LV:breeder_documents:operator` | Registry offices keep paper civil status entries for 100 years, then transfer them to the National Archives of Latvia | never checked |
-| `record:LV:issuance_history:register` | Invalid (revoked, lost) identity documents are entered in the state information system 'Register of Invalid Documents' | never checked |
-| `record:LV:digital_identity_credentials:register` | LVRTC provides four eID means: eID card, eParaksts card, eParaksts card+ and eParaksts mobile | never checked |
-| `record:LV:digital_identity_credentials:operator` | The Digital Security Supervisory Committee has qualified and supervises two eID providers: Smart-ID and the state company LVRTC | never checked |
-| `record:LV:electoral_roll:register` | Voter Register Law establishes the Voter Register and the Electronic Online Voter Register | never checked |
-| `record:LV:electoral_roll:operator` | PMLP processes the data in, and is the controller of, the Voter Register | never checked |
-| `record:LV:land_property:register` | Valsts vienotā datorizētā zemesgrāmata (State Unified Computerised Land Register) | never checked |
-| `record:LV:land_property:operator` | Tiesu administrācija (Court Administration) | never checked |
-| `record:LV:judicial_criminal:register` | TIS is the state information system for case management and proceedings of all courts, including the Supreme Court and the Constitutional Court | never checked |
-| `record:LV:judicial_criminal:operator` | The Punishment Register is a state information system controlled and held by the Interior Ministry Information Centre | never checked |
-| `record:LV:police_records:register` | Cabinet regulations define the data held in the Integrated Interior Information System for locating persons, property and documents | never checked |
-| `record:LV:police_records:operator` | The system's controller and holder is the Interior Ministry Information Centre | never checked |
-| `record:LV:residence_permits:register` | The Register of Natural Persons records residence permits, EU registration certificates and permanent residence certificates | never checked |
-| `record:LV:residence_permits:operator` | Asylum Law: PMLP maintains the Register of Asylum Seekers | never checked |
-| `record:LV:tax:register` | Law on Taxes and Fees: VID communicates with taxpayers through its Electronic Declaration System (EDS) | never checked |
-| `record:LV:customs:register` | Customs documents go through EU central customs systems, the Electronic Customs Data Processing System, or the VID EDS | never checked |
-| `record:LV:customs:operator` | Under Union Customs Code Article 5, the customs administration of Latvia is the State Revenue Service | never checked |
-| `record:LV:benefits_pensions:register` | SAIS is the state information system holding social insurance data used to record insured persons and to grant and pay benefits and pensions | never checked |
-| `record:LV:benefits_pensions:operator` | The controller of SAIS is the Agency (State Social Insurance Agency) | never checked |
-| `record:LV:business_registry:register` | Komercreģistrs (Commercial Register) | never checked |
-| `record:LV:business_registry:operator` | Uzņēmumu reģistrs (Register of Enterprises), under the Minister for Justice | never checked |
-| `record:LV:beneficial_ownership:register` | Beneficial owner information held by Latvijas Republikas Uzņēmumu reģistrs (Register of Enterprises) | never checked |
-| `record:LV:beneficial_ownership:operator` | Latvijas Republikas Uzņēmumu reģistrs (Register of Enterprises of the Republic of Latvia) | never checked |
-| `record:LV:vehicle_licensing:register` | transportlīdzekļu un to vadītāju valsts reģistrs (State Register of Vehicles and Drivers) | never checked |
-| `record:LV:vehicle_licensing:operator` | Valsts akciju sabiedrība "Ceļu satiksmes drošības direkcija" (state joint-stock company Road Traffic Safety Directorate, CSDD) | never checked |
-| `record:LV:public_finance:register` | ePakalpojums Maksājumi (Treasury Payments e-service) | never checked |
-| `record:LV:public_finance:operator` | Valsts kase (State Treasury) | never checked |
-| `record:LV:education:register` | VIIS includes the student and graduate registers and the register of recognition statements for foreign qualifications | never checked |
-| `record:LV:education:operator` | The controller of VIIS is the Ministry of Education and Science | never checked |
-| `record:LV:official_gazette:register` | “Latvijas Vēstnesis” (official publication of the Republic of Latvia) | never checked |
-| `record:LV:public_health_surveillance:register` | Surveillance data are received and processed in the EPID system, including data from the Latvian Digital Health Centre's systems | never checked |
-| `record:LV:public_health_surveillance:operator` | SPKC keeps the records of infectious diseases and laboratory-confirmed pathogens | never checked |
-| `record:LV:geospatial:register` | The base geospatial data include administrative boundaries and the geospatial information of the State Address Register | never checked |
-| `record:LV:geospatial:operator` | Geospatial Information Law: LĢIA, under the Ministry of Defence, implements state policy in geodesy, cartography and geospatial information | never checked |
-| `indicator:MT:K1` | Yes | never checked |
-| `indicator:MT:K2` | Yes | never checked |
-| `param:MT:population_m` | 0.59 million | never checked |
-| `param:MT:gdp_eur_bn` | 24.7 EUR bn | never checked |
-| `param:MT:gov_employment_k` | 20.1 thousand | never checked |
-| `param:MT:elec_price_eur_mwh` | 135.2 EUR/MWh | never checked |
-| `param:MT:renewables_pct` | 11.2 % | never checked |
-| `param:MT:land_km2` | 313 km² | never checked |
-| `record:MT:civil_registry:register` | Civil Status Section of the Public Registry holds acts of birth, marriage, civil union and death registered in Malta | never checked |
-| `record:MT:facial_biometric:register` | Facial images captured for the e-ID card are passed to the Electoral Office for voting documents and electoral registers | never checked |
-| `record:MT:fingerprint_biometric:register` | Live biometrics including fingerprints are captured at the Passport Office for passport applications | never checked |
-| `record:MT:breeder_documents:register` | Archives of the Public Registry | never checked |
-| `record:MT:issuance_history:register` | Biometric passports have been issued since 30 September 2008 | never checked |
-| `record:MT:issuance_history:operator` | The Identity Cards Unit issues electronic ID cards and registers e-ID accounts | never checked |
-| `record:MT:digital_identity_credentials:register` | The e-ID virtual account is required to access Government online services | never checked |
-| `record:MT:digital_identity_credentials:operator` | Identity Cards Unit registers e-ID (virtual) accounts | never checked |
-| `record:MT:electoral_roll:register` | The Act refers to the Electoral Register database | never checked |
-| `record:MT:trust_services_pki:register` | e-ID cards carry an Authentication Certificate and a Signature Certificate | never checked |
-| `record:MT:land_property:register` | Land Registration System (LRS) | never checked |
-| `record:MT:land_property:operator` | Land Registration Agency | never checked |
-| `record:MT:judicial_criminal:register` | Named authorities (Attorney General, Commissioner of Police, Security Service) have continuous direct access to criminal conviction records | never checked |
-| `record:MT:intelligence:register` | The Service's function is protecting national security against organised crime, espionage, terrorism and sabotage | never checked |
-| `record:MT:residence_permits:register` | Biometrics are captured from non-EU applicants for residence documents | never checked |
-| `record:MT:residence_permits:operator` | Expatriates Unit processes and issues residence documentation | never checked |
-| `record:MT:health_insurance:register` | Health Act defines insured persons as those included in a list established by regulations | never checked |
-| `record:MT:business_registry:register` | Business Automation Registry Online System (BAROS) | never checked |
-| `record:MT:business_registry:operator` | Malta Business Registry (MBR) | never checked |
-| `record:MT:beneficial_ownership:register` | Register of Beneficial Owners | never checked |
-| `record:MT:border_control:register` | Entry-Exit System (EES) | never checked |
-| `record:MT:border_control:operator` | Central Visa Unit (CVU) | never checked |
-| `record:MT:official_gazette:register` | Legislation Malta portal holds all Maltese laws including consolidated subsidiary legislation | never checked |
-| `record:MT:statistics_microdata:register` | Census of population and housing held by order under the Act | never checked |
-| `indicator:NL:L2` | Yes | never checked |
-| `indicator:NL:L3` | No | never checked |
-| `indicator:NL:K1` | Yes | never checked |
-| `indicator:NL:K2` | Yes | never checked |
-| `indicator:NL:C1` | Yes | never checked |
-| `indicator:NL:C2` | No | never checked |
-| `param:NL:population_m` | 18.13 million | never checked |
-| `param:NL:gdp_eur_bn` | 1 170.6 EUR bn | never checked |
-| `param:NL:gov_employment_k` | 661.0 thousand | never checked |
-| `param:NL:elec_price_eur_mwh` | 199.1 EUR/MWh | never checked |
-| `param:NL:renewables_pct` | 54.7 % | never checked |
-| `param:NL:land_km2` | 33 984 km² | never checked |
-| `record:NL:fingerprint_biometric:register` | No central register | never checked |
-| `record:NL:authentication_audit_log:register` | DigiD gebruiksgeschiedenis (DigiD usage history) | never checked |
-| `record:NL:authentication_audit_log:operator` | Logius | never checked |
-| `record:NL:issuance_history:register` | Basisregister Reisdocumenten (BR) (Basic Register of Travel Documents) | never checked |
-| `record:NL:issuance_history:operator` | Rijksdienst voor Identiteitsgegevens (National Office for Identity Data, RvIG) | never checked |
-| `record:NL:electoral_roll:register` | registratie van de kiesgerechtigdheid (municipal registration of voting eligibility) | never checked |
-| `record:NL:electoral_roll:operator` | Burgemeester en wethouders (municipal executives) | never checked |
-| `record:NL:trust_services_pki:register` | TSPs issue certificates under the State of the Netherlands trust anchor | never checked |
-| `record:NL:trust_services_pki:operator` | PKIoverheid is a trust framework managed by Logius on behalf of Ministry of BZK | never checked |
-| `record:NL:judicial_criminal:register` | Justitiële Documentatie (Judicial Documentation, the criminal records system) | never checked |
-| `record:NL:judicial_criminal:operator` | Justitiële Informatiedienst (Justid, Judicial Information Service) | never checked |
-| `record:NL:digital_identity_credentials:register` | DigiD: the national means for citizens to identify digitally | never checked |
-| `record:NL:digital_identity_credentials:operator` | Minister of BZK is controller; DigiD is managed by Logius | never checked |
-| `record:NL:digital_identity_credentials:foreign_dependency` | National infrastructure | never checked |
-| `record:NL:residence_permits:register` | vreemdelingenadministratie (aliens administration) | never checked |
-| `record:NL:customs:register` | Current declaration system AGS is being replaced by the new DMS | never checked |
-| `record:NL:benefits_pensions:register` | polisadministratie (policy administration of employment, wages and benefits) | never checked |
-| `record:NL:benefits_pensions:operator` | Uitvoeringsinstituut werknemersverzekeringen (UWV, Employee Insurance Agency) | never checked |
-| `record:NL:beneficial_ownership:register` | UBO-register (Ultimate Beneficial Owner register) | never checked |
-| `record:NL:beneficial_ownership:operator` | handelsregister (trade register, kept by the Kamer van Koophandel) | never checked |
-| `record:NL:vehicle_licensing:operator` | RDW manages and is controller of the vehicle registration register | never checked |
-| `record:NL:government_payroll:register` | registratiesysteem P-Direkt (P-Direkt HR/payroll registration system) | never checked |
-| `record:NL:electoral_management:register` | uitslagprogrammatuur OSV2020-U or Abacus (results-tabulation software) | never checked |
-| `record:NL:electoral_management:operator` | Kiesraad (Electoral Council) | never checked |
-| `record:NL:emergency_communications:register` | meldkamers (emergency dispatch control rooms) | never checked |
-| `record:NL:emergency_communications:operator` | politie (national police) | never checked |
-| `record:NL:emergency_communications:count` | tien meldkamers (ten control rooms) | never checked |
-| `record:NL:crisis_management:register` | NL-Alert (national public warning system) | never checked |
-| `record:NL:education:register` | register onderwijsdeelnemers (register of education participants) | never checked |
-| `record:NL:education:operator` | Onze Minister (Minister of Education, Culture and Science) | never checked |
-| `record:NL:health_records:register` | LSP is a national infrastructure through which care providers exchange patients' medical data | never checked |
-| `record:NL:health_records:operator` | AORTA/LSP managed by VZVZ since 2012 | never checked |
-| `record:NL:official_gazette:register` | Staatsblad en Staatscourant (Bulletin of Acts and Decrees; Government Gazette) | never checked |
-| `record:NL:official_gazette:operator` | Minister van Justitie en Veiligheid (Minister of Justice and Security, for the Staatsblad) | never checked |
-| `record:NL:public_health_surveillance:register` | Praeventis centrally registers vaccinations of every participant in the national immunisation programme | never checked |
-| `record:NL:statistics_microdata:register` | Microdata: linkable person, business and address-level data for authorised researchers | never checked |
-| `indicator:PL:L2` | Yes | never checked |
-| `indicator:PL:K1` | Yes | never checked |
-| `indicator:PL:K2` | Yes | never checked |
-| `indicator:PL:C2` | Yes | never checked |
-| `param:PL:population_m` | 36.33 million | never checked |
-| `param:PL:gdp_eur_bn` | 922.9 EUR bn | never checked |
-| `param:PL:gov_employment_k` | 1 242.7 thousand | never checked |
-| `param:PL:elec_price_eur_mwh` | 193.5 EUR/MWh | never checked |
-| `param:PL:renewables_pct` | 32.5 % | never checked |
-| `param:PL:land_km2` | 307 236 km² | never checked |
-| `record:PL:civil_registry:register` | Powszechny Elektroniczny System Ewidencji Ludności – rejestr PESEL (Universal Electronic Population Register System – PESEL register) | never checked |
-| `record:PL:civil_registry:operator` | minister właściwy do spraw informatyzacji (minister competent for computerisation) | never checked |
-| `record:PL:fingerprint_biometric:register` | No central register | never checked |
-| `record:PL:digital_identity_credentials:register` | Profil Zaufany is an electronic identification means notified at assurance level substantial | never checked |
-| `record:PL:digital_identity_credentials:operator` | The digital affairs minister manages the public electronic identification system (Art. 20ab, Act on Computerisation of Public Task Entities) | never checked |
-| `record:PL:digital_identity_credentials:count` | Over 14 million active trusted profiles; over 27 million mObywatel app downloads | never checked |
-| `record:PL:trust_services_pki:register` | narodowe centrum certyfikacji (national certification centre), part of the krajowa infrastruktura zaufania (national trust infrastructure) | never checked |
-| `record:PL:trust_services_pki:operator` | Narodowy Bank Polski (National Bank of Poland), when authorised by the minister competent for computerisation | never checked |
-| `record:PL:land_property:register` | księgi wieczyste (land and mortgage registers), kept in an ICT system | never checked |
-| `record:PL:judicial_criminal:register` | Krajowy Rejestr Karny (National Criminal Register) | never checked |
-| `record:PL:judicial_criminal:operator` | Minister Sprawiedliwości (Minister of Justice), through the Biuro Informacyjne Krajowego Rejestru Karnego (Information Office of the National Criminal Register) | never checked |
-| `record:PL:police_records:register` | Krajowy System Informacyjny Policji – KSIP (National Police Information System) | never checked |
-| `record:PL:police_records:operator` | Komendant Główny Policji (Chief Commander of Police) | never checked |
-| `record:PL:residence_permits:register` | Krajowy zbiór rejestrów, ewidencji i wykazu w sprawach cudzoziemców (National collection of registers, records and list concerning foreigners) | never checked |
-| `record:PL:residence_permits:operator` | Szef Urzędu (Head of the Office [for Foreigners]) | never checked |
-| `record:PL:tax:register` | Tax identification numbers (NIP) are assigned via the Central Register of Entities – National Taxpayer Records (CRP KEP) | never checked |
-| `record:PL:customs:register` | PUESC is the ICT system for electronic exchange between KAS and its clients, including declarations | never checked |
-| `record:PL:benefits_pensions:register` | ZUS also keeps the Central Register of Insured Persons, of Contribution Payers and of Open Pension Fund Members | never checked |
-| `record:PL:health_insurance:register` | Centralny Wykaz Ubezpieczonych (Central Register of Insured Persons) | never checked |
-| `record:PL:business_registry:register` | CEIDG (sole-trader business register) is kept in an ICT system by the economy minister | never checked |
-| `record:PL:business_registry:operator` | The Minister of Justice maintains the ICT system used to keep the KRS (Art. 3a) | never checked |
-| `record:PL:vehicle_licensing:register` | centralna ewidencja pojazdów (central vehicle register) | never checked |
-| `record:PL:border_control:register` | Krajowy System Informatyczny – KSI (National IT System) | never checked |
-| `record:PL:border_control:operator` | Komendant Główny Policji (Chief Commander of Police), as the central technical authority of KSI | never checked |
-| `record:PL:electoral_management:register` | Centralny Rejestr Wyborców (Central Register of Voters) | never checked |
-| `record:PL:electoral_management:operator` | Minister właściwy do spraw informatyzacji (minister competent for computerisation) | never checked |
-| `record:PL:emergency_communications:register` | system powiadamiania ratunkowego (emergency notification system) for numbers 112, 997 and 998 | never checked |
-| `record:PL:emergency_communications:operator` | Minister właściwy do spraw administracji publicznej (minister competent for public administration) | never checked |
-| `record:PL:crisis_management:register` | Council of Ministers regulation on cooperation of the RCB director with mobile network operators to warn end users (Alert RCB) | never checked |
-| `record:PL:grid_control:register` | centralny system informacji rynku energii (central energy market information system) | never checked |
-| `record:PL:grid_control:operator` | operator systemu przesyłowego elektroenergetycznego (electricity transmission system operator), acting as operator informacji rynku energii (energy market information operator) | never checked |
-| `record:PL:water_control:register` | System informacyjny gospodarowania wodami (water management information system) | never checked |
-| `record:PL:water_control:operator` | Wody Polskie (Polish Waters) | never checked |
-| `record:PL:health_records:operator` | Administrator of P1 is a unit subordinate to the health minister competent for health information systems | never checked |
-| `record:PL:official_gazette:register` | Dziennik Ustaw Rzeczypospolitej Polskiej (Journal of Laws of the Republic of Poland) | never checked |
-| `record:PL:official_gazette:operator` | Prezes Rady Ministrów (Prime Minister), with the assistance of the Rządowe Centrum Legislacji (Government Legislation Centre) | never checked |
-| `record:PL:public_health_surveillance:operator` | The health minister designates the register's system administrator from subordinate or supervised units | never checked |
-| `record:PL:national_archives:register` | Archival materials expressly include electronic documents | never checked |
-| `record:PL:geospatial:register` | State register of boundaries, integrated with the land and building cadastre and the register of localities, streets and addresses | never checked |
-| `record:PL:geospatial:operator` | Geodetic and Cartographic Law Art. 7a: the Surveyor General keeps the central geodetic and cartographic resource | never checked |
-| `indicator:PT:L1` | Partly | never checked |
-| `indicator:PT:L2` | Yes | never checked |
-| `indicator:PT:K2` | Yes | never checked |
-| `indicator:PT:C1` | Yes | never checked |
-| `indicator:PT:C2` | Partly | never checked |
-| `param:PT:population_m` | 11.42 million | never checked |
-| `param:PT:gdp_eur_bn` | 308.5 EUR bn | never checked |
-| `param:PT:gov_employment_k` | 314.8 thousand | never checked |
-| `param:PT:elec_price_eur_mwh` | 132.9 EUR/MWh | never checked |
-| `param:PT:renewables_pct` | 65.6 % | never checked |
-| `param:PT:land_km2` | 90 977 km² | never checked |
-| `record:PT:civil_registry:register` | Civil registry database (base de dados do registo civil) holding nationality, civil status and legal capacity of citizens | never checked |
-| `record:PT:civil_registry:operator` | The President of IRN, I.P. is the data controller of the civil registry database | never checked |
-| `record:PT:facial_biometric:register` | Facial image files collected for the Citizen Card are communicated only to the civil identification database | never checked |
-| `record:PT:facial_biometric:operator` | IRN, I.P. is the controller for Citizen Card data processing operations | never checked |
-| `record:PT:fingerprint_biometric:register` | Citizen Card applications must include facial image and fingerprints | never checked |
-| `record:PT:breeder_documents:register` | ID card applications and foreign-issued certificates are microfilmed or kept in secure digital storage, then the paper originals destroyed | never checked |
-| `record:PT:authentication_audit_log:register` | Authentication records (type, date/time) and signatures are processed to manage electronic identification | never checked |
-| `record:PT:issuance_history:register` | Citizen Card data processing covers issuance, update, renewal and cancellation requests | never checked |
-| `record:PT:issuance_history:operator` | IRN, I.P. is the body responsible for SIPEP | never checked |
-| `record:PT:digital_identity_credentials:operator` | Law text assigns management and security of the CMD technological infrastructure to AMA, I.P. (the predecessor of ARTE) | never checked |
-| `record:PT:electoral_roll:operator` | SGMAI electoral administration organises, maintains and manages BDRE and SIGRE | never checked |
-| `record:PT:electoral_roll:count` | 11 130 316 inscritos para votar (registered voters) | never checked |
-| `record:PT:trust_services_pki:register` | The State Electronic Certification Entity is the state's root certification authority at the top of the SCEE chain | never checked |
-| `record:PT:land_property:register` | Land registry databases hold the legal status of real property | never checked |
-| `record:PT:land_property:operator` | The President of IRN, I.P. is the controller of the land registry databases | never checked |
-| `record:PT:judicial_criminal:register` | Electronic court case processing takes place in the courts' support information system | never checked |
-| `record:PT:judicial_criminal:operator` | DGAJ is the entity responsible for the criminal identification databases | never checked |
-| `record:PT:intelligence:register` | centros de dados do Serviço de Informações de Segurança e do Serviço de Informações Estratégicas de Defesa (data centres of the SIS and the SIED) | never checked |
-| `record:PT:residence_permits:register` | SII AIMA: personal-data information system holding non-police information on foreign nationals | never checked |
-| `record:PT:residence_permits:operator` | Administrative migration and asylum functions were transferred to the new AIMA, I.P. | never checked |
-| `record:PT:customs:register` | STADA-IMP (customs import declaration processing system) | never checked |
-| `record:PT:customs:operator` | AT (Autoridade Tributária e Aduaneira; Tax and Customs Authority) | never checked |
-| `record:PT:benefits_pensions:register` | All natural and legal persons dealing with social security are identified in the information system | never checked |
-| `record:PT:health_insurance:register` | The National Patient Register (RNU) is used as the patient identification reference by other national health systems | never checked |
-| `record:PT:business_registry:register` | The commercial registry database holds the legal status of registered entities | never checked |
-| `record:PT:business_registry:operator` | The Director-General of Registries and Notary (now IRN) is the database controller | never checked |
-| `record:PT:beneficial_ownership:register` | Registo Central de Beneficiário Efetivo (RCBE) (Central Register of Beneficial Ownership) | never checked |
-| `record:PT:vehicle_licensing:register` | The vehicle registry database holds the legal status of motor vehicles | never checked |
-| `record:PT:border_control:register` | SII UCFE: shared police information system on borders and foreign nationals, used by security forces | never checked |
-| `record:PT:border_control:operator` | Management of former SEF systems, including the national part of SIS, passes to a security information technology unit | never checked |
-| `record:PT:public_finance:register` | Budget data are registered in SIGO (DGO) and entered in information systems managed by ESPAP, I.P. | never checked |
-| `record:PT:public_finance:operator` | Direção-Geral do Orçamento (DGO); Entidade de Serviços Partilhados da Administração Pública, I.P. (ESPAP) | never checked |
-| `record:PT:emergency_communications:operator` | SIRESP, S.A. | never checked |
-| `record:PT:emergency_communications:count` | mais de 40.000 utilizadores (more than 40,000 users) | never checked |
-| `record:PT:crisis_management:register` | ANEPC organises a national alert and warning system | never checked |
-| `record:PT:crisis_management:operator` | ANEPC plans, coordinates and executes emergency and civil protection policy, including civil emergency planning for crisis or war | never checked |
-| `record:PT:grid_control:register` | centro de Despacho (National Dispatch centre) of REN - Rede Elétrica Nacional | never checked |
-| `record:PT:grid_control:operator` | REN - Rede Elétrica Nacional | never checked |
-| `record:PT:water_control:register` | The national water authority establishes and maintains the national water resources information system | never checked |
-| `record:PT:water_control:operator` | APA, I.P. is the national water authority exercising the powers of the Water Law | never checked |
-| `record:PT:education:register` | Qualification diplomas and certificates under the National Qualifications System are made available in SIGO | never checked |
-| `record:PT:geospatial:register` | National reference geographic database products include topographic mapping and orthophoto mapping | never checked |
-| `record:PT:geospatial:operator` | DGT gathers territorial geographic information in the National Territorial Information System (SNIT) | never checked |
-| `indicator:RO:L2` | Yes | never checked |
-| `indicator:RO:K1` | Yes | never checked |
-| `indicator:RO:K2` | Yes | never checked |
-| `indicator:RO:C2` | Partly | never checked |
-| `param:RO:population_m` | 19.04 million | never checked |
-| `param:RO:gdp_eur_bn` | 380.1 EUR bn | never checked |
-| `param:RO:gov_employment_k` | 409.7 thousand | never checked |
-| `param:RO:elec_price_eur_mwh` | 188.7 EUR/MWh | never checked |
-| `param:RO:renewables_pct` | 49.9 % | never checked |
-| `param:RO:land_km2` | 234 270 km² | never checked |
-| `record:RO:facial_biometric:register` | Facial image and fingerprints are collected when the electronic identity card (CEI) is issued | never checked |
-| `record:RO:digital_identity_credentials:register` | ROeID is Romania's Single Sign-On solution. It generates and manages digital identities for all Romanian citizens. | never checked |
-| `record:RO:digital_identity_credentials:operator` | ROeID was implemented by the Authority for the Digitalization of Romania (ADR) | never checked |
-| `record:RO:electoral_roll:register` | The Electoral Register is a national IT system. It records identification data of Romanian citizens with voting rights and their polling station assignment. | never checked |
-| `record:RO:trust_services_pki:register` | Documents signed with the MAI-issued advanced signature certificate on the CEI have the same value as handwritten signatures | never checked |
-| `record:RO:trust_services_pki:operator` | The MAI IT directorate (DGCTI) manages the Central PKI Certification Authority and the certification authority of the MAI central apparatus | never checked |
-| `record:RO:police_records:register` | Romania set up the National Alerts IT System (SINS). It holds alerts of national and Schengen interest issued by national authorities. | never checked |
-| `record:RO:police_records:operator` | The Ministry of Internal Affairs, through its specialised structure, is the central public authority that manages SINS. It is responsible for the system's functioning and the integrity of its alerts. | never checked |
-| `record:RO:tax:register` | ANAF is consolidating its central database through a Big-Data project | never checked |
-| `record:RO:health_insurance:register` | SIUI is the health insurance IT platform, run by CNAS | never checked |
-| `record:RO:border_control:register` | Council Decision 2017/1908 gave Romania access to the Visa Information System (VIS) | never checked |
-| `record:RO:border_control:operator` | Centrul Național SIS is a structure within, or subordinated to, the Ministry of Internal Affairs | never checked |
-| `record:RO:central_bank:register` | BNR operates the financial market infrastructures ReGIS, SaFIR and TARGET-România | never checked |
-| `record:RO:grid_control:register` | Operational control of the national power system is ensured by the National Energy Dispatch and five territorial dispatch centres | never checked |
-| `record:RO:grid_control:operator` | Transelectrica is responsible for keeping the national power system running safely at all times | never checked |
-| `record:RO:water_control:register` | WATMAN is the IT system for integrated water management, aimed at flood prevention | never checked |
-| `record:RO:water_control:operator` | The WATMAN project beneficiary is the National Administration Romanian Waters (total investment EUR 63 million) | never checked |
-| `record:RO:education:register` | The new integrated system will bring together data from existing platforms such as SIIIR, PMIPN and Edusal | never checked |
-| `record:RO:geospatial:register` | The ANCPI Geoportal is one of the online platforms ANCPI manages | never checked |
-| `indicator:SE:L2` | Yes | never checked |
-| `indicator:SE:K1` | Yes | never checked |
-| `indicator:SE:K2` | Partly | never checked |
-| `indicator:SE:C1` | Yes | never checked |
-| `indicator:SE:C2` | Yes | never checked |
-| `param:SE:population_m` | 10.61 million | never checked |
-| `param:SE:gdp_eur_bn` | 600.4 EUR bn | never checked |
-| `param:SE:gov_employment_k` | 245.0 thousand | never checked |
-| `param:SE:elec_price_eur_mwh` | 97.0 EUR/MWh | never checked |
-| `param:SE:renewables_pct` | 89.2 % | never checked |
-| `param:SE:land_km2` | 407 300 km² | never checked |
-| `record:SE:civil_registry:register` | Folkbokföringsverksamheten / Skatteverket's population registration data (the national population register) | never checked |
-| `record:SE:civil_registry:operator` | Skatteverket (Swedish Tax Agency) is responsible for population registration | never checked |
-| `record:SE:civil_registry:count` | 10 610 500 persons folkbokförda (registered) at mid-year 2026 | never checked |
-| `record:SE:facial_biometric:register` | Passregistret (passport register), which holds holders' photographs | never checked |
-| `record:SE:breeder_documents:register` | Folkbokföring (population registration of births, marriages and deaths), Skatteverket | never checked |
-| `record:SE:issuance_history:register` | Passregistret: central passport register kept by the Police Authority | never checked |
-| `record:SE:issuance_history:count` | Skatteverket issues about 170,000 identity cards per year | never checked |
-| `record:SE:digital_identity_credentials:register` | Registret över ärenden om statlig e-legitimation (register of state e-ID cases) | never checked |
-| `record:SE:digital_identity_credentials:operator` | Polismyndigheten (Swedish Police Authority) | never checked |
-| `record:SE:land_property:register` | Fastighetsregistret (real property register) | never checked |
-| `record:SE:land_property:operator` | The state cadastral authority (Lantmäteriet) is controller | never checked |
-| `record:SE:judicial_criminal:register` | Belastningsregistret (criminal records register), Police Authority | never checked |
-| `record:SE:police_records:register` | Misstankeregistret (register of suspects), Polismyndigheten | never checked |
-| `record:SE:electoral_roll:register` | Röstlängd (electoral roll), drawn up by the central election authority per voting district from folkbokföring data | never checked |
-| `record:SE:electoral_roll:foreign_dependency` | National infrastructure | never checked |
-| `record:SE:business_registry:register` | Aktiebolagsregistret (companies register); Bolagsverket controller | never checked |
-| `record:SE:beneficial_ownership:register` | Registret över verkliga huvudmän, kept by Bolagsverket | never checked |
-| `record:SE:vehicle_licensing:register` | Vägtrafikregistret (road traffic register) kept by Transportstyrelsen | never checked |
-| `record:SE:border_control:register` | Swedish national part of the Schengen Information System, kept by the Police Authority | never checked |
-| `record:SE:border_control:operator` | Police Authority and Migrationsverket are each controllers for their processing in N.SIS | never checked |
-| `record:SE:public_finance:register` | Hermes, the state information system for budgeting and follow-up, developed and managed by ESV | never checked |
-| `record:SE:public_finance:operator` | ESV is responsible for state accounts | never checked |
-| `record:SE:government_payroll:register` | Primula (Statens servicecenter) | never checked |
-| `record:SE:government_payroll:operator` | Statens servicecenter (SSC), payroll services to 143 agencies in 2023 | never checked |
-| `record:SE:government_payroll:count` | about 1,5 million payslips (lönespecifikationer) per year | never checked |
-| `record:SE:central_bank:register` | RIX-RTGS (Riksbank's large-value payment settlement system) | never checked |
-| `record:SE:emergency_communications:register` | Rakel (national public-safety radio communication system) | never checked |
-| `record:SE:emergency_communications:operator` | Myndigheten för civilt försvar (Swedish Civil Defence Agency) | never checked |
-| `record:SE:crisis_management:register` | Systemet för varning och information till allmänheten (public warning and information system) | never checked |
-| `record:SE:education:register` | Each higher-education institution keeps a student register (studieregister) | never checked |
-| `record:SE:official_gazette:register` | Svensk författningssamling (SFS, Swedish Code of Statutes), published electronically on a dedicated website | never checked |
-| `record:SE:electoral_management:register` | Valmyndighetens it-stöd used to compile and publish results | never checked |
-| `record:SE:electoral_management:foreign_dependency` | National infrastructure | never checked |
-| `record:SE:public_health_surveillance:register` | Vaccinationsregistret, Folkhälsomyndigheten | never checked |
-| `record:SE:public_health_surveillance:operator` | Folkhälsomyndigheten coordinates communicable disease control nationally | never checked |
-| `indicator:SI:L2` | Yes | never checked |
-| `indicator:SI:K1` | Yes | never checked |
-| `indicator:SI:K2` | Yes | never checked |
-| `indicator:SI:C1` | Yes | never checked |
-| `indicator:SI:C2` | Yes | never checked |
-| `param:SI:population_m` | 2.13 million | never checked |
-| `param:SI:gdp_eur_bn` | 71.2 EUR bn | never checked |
-| `param:SI:gov_employment_k` | 51.1 thousand | never checked |
-| `param:SI:elec_price_eur_mwh` | 150.3 EUR/MWh | never checked |
-| `param:SI:renewables_pct` | 45.6 % | never checked |
-| `param:SI:land_km2` | 20 145 km² | never checked |
-| `record:SI:civil_registry:register` | The Central Population Register (CRP) is the central database of basic population data for Slovenia | never checked |
-| `record:SI:civil_registry:operator` | CRP is managed by the Ministry of the Interior | never checked |
-| `record:SI:facial_biometric:register` | The ID card issuance register stores the digital photograph, but in a form that biometric readers cannot read | never checked |
-| `record:SI:facial_biometric:operator` | The interior ministry manages the ID card issuance register centrally | never checked |
-| `record:SI:fingerprint_biometric:register` | No central register | never checked |
-| `record:SI:breeder_documents:register` | The collection of documents underlying civil status entries is part of the civil status register | never checked |
-| `record:SI:issuance_history:register` | The register records production and delivery dates and the validity status of each ID card | never checked |
-| `record:SI:issuance_history:operator` | The interior ministry manages the ID card issuance register centrally | never checked |
-| `record:SI:authentication_audit_log:register` | SI-PASS keeps registered-user records including account usage data | never checked |
-| `record:SI:authentication_audit_log:operator` | Controller: Ministry of the Interior and Public Administration, SI-TRUST | never checked |
-| `record:SI:authentication_audit_log:foreign_dependency` | National infrastructure | never checked |
-| `record:SI:electoral_roll:register` | Voting rights are recorded in the register of voting rights, kept within the permanent-residence register and CRP | never checked |
-| `record:SI:electoral_roll:count` | 1.695.249 voters entered in the electoral rolls | never checked |
-| `record:SI:land_property:register` | The Land Register is a public book of rights in real property, kept by the district courts | never checked |
-| `record:SI:police_records:register` | Police records include criminal offences, misdemeanours and wanted persons | never checked |
-| `record:SI:digital_identity_credentials:register` | SI-PASS is the single identity-verification and e-signature service for citizens, businesses and civil servants | never checked |
-| `record:SI:digital_identity_credentials:operator` | SI-TRUST operates within the Ministry of the Interior and Public Administration | never checked |
-| `record:SI:digital_identity_credentials:foreign_dependency` | National infrastructure | never checked |
-| `record:SI:trust_services_pki:register` | SI-TRUST manages the SI-TRUST Root and the qualified issuers SIGEN-CA and SIGOV-CA | never checked |
-| `record:SI:trust_services_pki:operator` | SI-TRUST operates within the Ministry of the Interior and Public Administration | never checked |
-| `record:SI:trust_services_pki:foreign_dependency` | National infrastructure | never checked |
-| `record:SI:residence_permits:register` | The interior ministry manages the central register of residence permits and their revocations (Register tujcev) | never checked |
-| `record:SI:tax:register` | The tax register is a single computerised, linked database of taxpayers | never checked |
-| `record:SI:tax:operator` | Under the Financial Administration Act (ZFU), FURS keeps and manages the tax register | never checked |
-| `record:SI:customs:register` | FURS runs the SIAIS2 import declaration system; a centralised-clearance upgrade was ordered in 2024 | never checked |
-| `record:SI:customs:count` | 1.146.962 customs declarations accepted in 2025 | never checked |
-| `record:SI:benefits_pensions:register` | matična evidenca o zavarovancih in uživalcih pravic (master record of insured persons and beneficiaries) | never checked |
-| `record:SI:health_insurance:register` | ZZZS keeps the register of persons covered by compulsory health insurance | never checked |
-| `record:SI:health_insurance:count` | About 2.1 million insured persons (2025) | never checked |
-| `record:SI:business_registry:register` | Poslovni register Slovenije (PRS) (Slovenian Business Register) | never checked |
-| `record:SI:business_registry:operator` | AJPES | never checked |
-| `record:SI:beneficial_ownership:register` | The RDL is a database of beneficial owners, kept for ownership transparency and AML purposes | never checked |
-| `record:SI:border_control:register` | SIS consists of a central system and national SIS systems in the member states, linked by a network | never checked |
-| `record:SI:public_finance:register` | UJP provides payment services to budget users and keeps the register of budget users and their sub-accounts | never checked |
-| `record:SI:central_bank:register` | TARGET services settle large-value payments, securities transactions and instant payments | never checked |
-| `record:SI:central_bank:foreign_dependency` | EU provider | never checked |
-| `record:SI:emergency_communications:register` | Regional notification centres receive and process 112 emergency calls | never checked |
-| `record:SI:crisis_management:register` | NCKU provides premises, IT and telecom conditions for the government in crises threatening national security | never checked |
-| `record:SI:grid_control:register` | ELES ensures safe, reliable and efficient operation of the transmission and distribution system | never checked |
-| `record:SI:grid_control:operator` | Under ZOEE, ELES performs the mandatory public service of combined transmission and distribution system operator | never checked |
-| `record:SI:education:register` | The register is kept in the application 'Centralna evidenca udeležencev vzgoje in izobraževanja' | never checked |
-| `record:SI:firearms_register:register` | The central register of issued firearms documents combines the registers kept by the competent bodies | never checked |
-| `record:SI:firearms_register:foreign_dependency` | National infrastructure | never checked |
-| `record:SI:official_gazette:register` | Pravni informacijski sistem Republike Slovenije (PISRS) (Legal Information System of the Republic of Slovenia), sole publication platform of the Uradni list RS | never checked |
-| `record:SI:official_gazette:operator` | Služba Vlade Republike Slovenije za zakonodajo (Government Legislation Office) | never checked |
-| `record:SI:government_payroll:register` | MFERAC supports budget users in finance, accounting and payroll/HR | never checked |
-| `record:SI:government_payroll:foreign_dependency` | National infrastructure | never checked |
-| `record:SI:health_records:register` | CRPP is the single system for collecting and exchanging health data on patients in Slovenia | never checked |
-| `record:SI:health_records:operator` | NIJZ is responsible for the CeZZ information system, its maintenance and security | never checked |
-| `record:SI:health_records:foreign_dependency` | National infrastructure | never checked |
-| `record:SI:national_archives:register` | e-ARH.si is the Slovenian electronic archive for long-term preservation of electronic archival records | never checked |
-| `indicator:SK:K1` | Yes | never checked |
-| `indicator:SK:K2` | Yes | never checked |
-| `indicator:SK:C1` | Yes | never checked |
-| `indicator:SK:C2` | Yes | never checked |
-| `param:SK:population_m` | 5.41 million | never checked |
-| `param:SK:gdp_eur_bn` | 136.8 EUR bn | never checked |
-| `param:SK:gov_employment_k` | 169.4 thousand | never checked |
-| `param:SK:elec_price_eur_mwh` | 209.0 EUR/MWh | never checked |
-| `param:SK:renewables_pct` | 24.1 % | never checked |
-| `param:SK:land_km2` | 48 702 km² | never checked |
-| `record:SK:civil_registry:register` | Register obyvateľov Slovenskej republiky (Register of Inhabitants of the Slovak Republic), a public-administration information system identifying persons, their residence and relationships | never checked |
-| `record:SK:civil_registry:operator` | The Ministry of Interior (ministerstvo) administers the Register of Natural Persons, a base register; retention is permanent | never checked |
-| `record:SK:facial_biometric:register` | Evidencia občianskych preukazov (ID card records) kept by the Ministry of Interior and district police directorates | never checked |
-| `record:SK:facial_biometric:operator` | The Ministry of Interior keeps the central register of travel documents, which includes the facial image | never checked |
-| `record:SK:breeder_documents:register` | Zbierka listín (collection of source documents) kept by registry offices as the basis for civil-status entries | never checked |
-| `record:SK:issuance_history:register` | Evidencia občianskych preukazov (ID card issuance records), incl. numbers of issued, lost and stolen cards and destruction dates | never checked |
-| `record:SK:issuance_history:operator` | Kept by the Ministry of Interior and district police directorates | never checked |
-| `record:SK:digital_identity_credentials:register` | eID: electronic identity card with contact chip, issued since 2 December 2013 | never checked |
-| `record:SK:digital_identity_credentials:operator` | The Ministry of Interior administers the authentication part of the authentication module; MIRRI administers its communication part | never checked |
-| `record:SK:electoral_roll:register` | Stály zoznam voličov (permanent electoral roll) compiled and kept by each municipality | never checked |
-| `record:SK:trust_services_pki:register` | Slovenská národná certifikačná autorita (SNCA), providing qualified trust services free of charge to public authorities | never checked |
-| `record:SK:land_property:register` | Kataster nehnuteľností (real-estate cadastre) including ownership, liens and other rights | never checked |
-| `record:SK:land_property:operator` | The Office of Geodesy, Cartography and Cadastre (ÚGKK SR, 'úrad') administers the cadastral records and the cadastre information system | never checked |
-| `record:SK:judicial_criminal:register` | Register trestov (Criminal Records Register) kept by the General Prosecutor's Office | never checked |
-| `record:SK:police_records:register` | Police Force information systems processing personal data, fingerprint (dactyloscopic) data and face images | never checked |
-| `record:SK:residence_permits:register` | Police Force information systems holding records on foreigners' entry, stay and departure, visa and residence applicants | never checked |
-| `record:SK:benefits_pensions:register` | Register poistencov a sporiteľov starobného dôchodkového sporenia (register of insured persons and pension savers) and employer register kept by Sociálna poisťovňa | never checked |
-| `record:SK:health_insurance:register` | Centrálny register poistencov (central register of insured persons) kept by the Health Care Surveillance Authority (ÚDZS) | never checked |
-| `record:SK:business_registry:register` | Obchodný register (Commercial Register) and collection of deeds, kept electronically by registry courts | never checked |
-| `record:SK:beneficial_ownership:register` | Register partnerov verejného sektora (Register of Public Sector Partners), run by the Ministry of Justice with Žilina District Court as registering body | never checked |
-| `record:SK:vehicle_licensing:register` | Evidencia vozidiel (vehicle register), an information system of the Police Force | never checked |
-| `record:SK:border_control:register` | Police Force records on undesirable persons, border-control data on foreigners and illegal stay | never checked |
-| `record:SK:firearms_register:register` | Police Force information system on firearms licences, holders and registered weapons | never checked |
-| `record:SK:government_payroll:register` | Centrálny informačný systém štátnej služby (central civil-service information system) administered by the Government Office | never checked |
-| `record:SK:government_payroll:operator` | Government Office of the Slovak Republic (Úrad vlády SR) | never checked |
-| `record:SK:electoral_management:register` | Register kandidátov a kandidátnych listín (Register of candidates and candidate lists), created and operated by the Ministry of Interior | never checked |
-| `record:SK:electoral_management:operator` | Election results are processed through the information system of the Statistical Office of the Slovak Republic | never checked |
-| `record:SK:central_bank:register` | Národná banka Slovenska operates two payment systems: TARGET-SK (RTGS) and SIPS (retail) | never checked |
-| `record:SK:emergency_communications:register` | Coordination centres receive 112 calls, eCall and SMS emergency communications | never checked |
-| `record:SK:crisis_management:register` | Informačný systém krízového riadenia štátu (state crisis management information system) | never checked |
-| `record:SK:grid_control:register` | Dispatch control of the transmission system, incl. defence and restoration plan in a blackout | never checked |
-| `record:SK:grid_control:operator` | SEPS a.s. is the transmission system operator including the Slovak Electricity Dispatch Centre | never checked |
-| `record:SK:education:register` | Centrálny register (central register of children, pupils and students) under the School Act | never checked |
-| `record:SK:health_records:register` | Národný zdravotnícky informačný systém (National Health Information System), administered by the National Health Information Centre | never checked |
-| `record:SK:health_records:operator` | National Health Information Centre (NCZI, 'národné centrum') | never checked |
-| `record:SK:official_gazette:register` | Slov-Lex, the public administration information system administered and operated by the Ministry of Justice | never checked |
-| `record:SK:official_gazette:operator` | The Ministry of Justice publishes the Collection of Laws; it is issued in electronic and paper form | never checked |
-| `record:SK:national_archives:register` | Elektronický archív Slovenska (Electronic Archive of Slovakia), the long-term repository of electronic archival records of public authorities | never checked |
-| `record:SK:national_archives:operator` | The Electronic Archive also archives structured data and data from Ministry of Interior production systems | never checked |
-| `record:SK:geospatial:register` | Register adries (Address Register), administered by the Ministry of Interior | never checked |
-| `record:SK:geospatial:operator` | ÚGKK SR creates, administers and operates the geodesy, cartography and cadastre information system (ISGKK) | never checked |
+None. Every printed fact passes.
 
 ## Withheld after the fact check
 
@@ -1405,8 +44,87 @@ Facts the checker did not confirm as printed. Each is shown as disputed, with th
 
 | Claim | Checker | Verdict | Run | Reason |
 |---|---|---|---|---|
+| `indicator:BG:C1` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The page says the company Информационно обслужване offers colocation in its secure data centre and lists government agencies as clients, but nowhere states that the company is state-owned or that the state operates these data centres; the 'Yes' to state-operated government data centres needs outside knowledge the source does not supply. |
+| `indicator:BG:K2` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Both quotes are on their pages, but neither states who operates the national eID scheme: the CRC quote lists trust-service providers (not eID), and the Sega article only says the eID certificates are to be written to the ID-card chip and that МВР has not yet activated them. 'Partly' is an inference the sources do not state, so the support is genuinely ambiguous. |
 | `indicator:DE:K2` | claude-fable-5-1 | not supported | wf_074137f6-b8e | Both quotes are verbatim, but neither says who operates the eID scheme: the Bundesdruckerei page only calls the group a federal technology company, and PAuswG §4(3) only says the BMI designates the card manufacturer, certificate authority and blocking-list operator (published in the Bundesanzeiger). Linking the two (that Bundesdruckerei is the designated operator) needs outside knowledge, so 'Yes' |
+| `indicator:HU:C1` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The DMÜ page says the agency decides on mandatory use of, or exemption from, 'Kormányzati Adatközpont' services, which implies such services exist, but the quote does not say the state operates the data centre or that it is in operation today. |
+| `indicator:HU:C2` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Annex 1 point 4.2.2.4 of Decree 418/2024 names 'kormányzati felhő' as a permitted venue for F4 data, which presupposes a government cloud, but the decree does not state that such a platform is in operation rather than merely provided for, so it does not by itself establish 'in operation (not announced)'. |
+| `indicator:HU:K1` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote is on the page and says NISZ Zrt. is the designated government certification service provider (GovCA) providing trust and PKI services, but the page nowhere states that NISZ is state-owned or state-controlled (no mention of 'állami tulajdon'), so the 'state or state-controlled body' element of the indicator rests on knowledge outside the cited source. |
+| `indicator:HU:K2` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The DMÜ page says the agency owns six companies and that IdomSoft contributes 'as developer' to the Digital Citizenship Programme, and the Act says the Government designates the framework-service body and the digital citizenship provider; neither cited passage states who operates the eID scheme or that the operator is state-controlled, so 'Yes' is not established by these quotes. |
+| `indicator:IE:K1` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote (found verbatim) establishes that the Revenue Commissioners, a state body, act as Certification Authority for ROS digital certificates, and the same manual says those certificates are used by the CRO, Department of Transport and Department of Social Protection. However the document never describes this CA as the root of the government's PKI or as a qualified trust service (no occurrence  |
+| `indicator:IE:L2` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The 2019 Cloud Computing Advice Note says some organisations have their own classification systems and 'there are no central classification rules in place except for information defined as top secret, see Department of Finance Circular 39/07'. Whether a Finance circular counts as a 'statute or binding regulation' is a judgment the source does not make, so 'Partly' is neither clearly supported nor  |
+| `indicator:LU:C1` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Both quotes are present, but the CTIE quote only mentions managing IT and security equipment, not data centres, and the Wikipedia page describes LuxConnect, incorporated by the State as main shareholder, as a 'private company' operating four 'carrier neutral' commercial data centres. The sources show a state-majority-owned data-centre operator, not that the state operates its own government data c |
+| `indicator:PT:C2` | claude-fable-5-1 | unclear | wf_da123db1-a4e | All three quotes are present (ARTE news 29 May 2026; PNNS May 2026 with 'Desenvolvimento, pelo Estado, de infraestrutura nacional soberana de nuvem' scheduled from S1 2026; RCM 102/2026 funding implementation and initial migration via ARTE and IP Telecom). They show an approved, funded plan in execution, but none states that a sovereign cloud platform is in operation, so whether 'Partly' rather th |
+| `indicator:SE:K1` | claude-fable-5-1 | not supported | wf_da123db1-a4e | SOU 2023:61 says Efos (Försäkringskassan's E-identitet för offentlig sektor) is notified at eIDAS level high but is an employee e-service credential (e-tjänstelegitimation). Nothing on the page addresses the root of a government PKI or a qualified trust service, so it does not answer K1 with 'Yes'. |
+| `indicator:SE:K2` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote is the Government's proposal in Prop. 2025/26:250 that the Act on state e-ID enter into force on 1 December 2026, i.e. a state-operated scheme is legislated but not in operation as of today. The source neither states current state operation nor a partial one, so whether this maps to 'Partly' is ambiguous without a rubric the page does not supply. |
+| `param:SI:population_m` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The API returns 2 135 107 persons for SI on 1 January 2026, i.e. 2.135 million; rounded to two decimals that is 2.14 million, whereas the report prints 2.13 million, which is a truncation rather than the rounded figure the source gives. |
+| `record:AT:facial_biometric:foreign_dependency` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The Passgesetz says verbatim that Bundesrechenzentrum GmbH takes part as processor in the § 22a/§ 22b processing; it names a federal body as processor but says nothing about where the infrastructure runs, so 'National infrastructure' rests on an inference the statute does not state. |
+| `record:AT:fingerprint_biometric:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Both quotes are found. PassG § 22b only says the passport authorities process § 22a(1) data 'mit Ausnahme der lit. k' (lit. k being 'die Papillarlinienabdrücke zweier Finger') in the central passport evidence, which supports a narrower statement about passport fingerprints, not a blanket 'No central register'; the other citation is the BMI sheet for the 'Erkennungsdienstliche Evidenz-EDE', a centr |
+| `record:AT:issuance_history:foreign_dependency` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Both quotes are present (the RH sentence is split by a line-break hyphen 'Identitätsdokumentenregis- ters') and establish that BRZ GmbH, a federal body, is the statutory processor of the register; neither source says where the infrastructure runs or rules out further (possibly foreign) sub-processors, so 'National infrastructure' is an inference from the processor's identity rather than a statemen |
+| `record:BG:border_control:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Both quotes are verbatim, but the MFA citation names a different system (НВИС, not printed), and the RTA ordinance names 'АИС Издирвателна дейност – НШИС' only in the context of wanted-vehicle registration termination, never as a border or visa system; the printed form also truncates the system's name. The source does not establish the printed system as the border/visa register. |
+| `record:BG:customs:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote is on the page verbatim and names the system (МИСВ), but it is a forward-looking announcement ('ще бъде въведена в реална експлоатация' = will be put into live operation on 26.11.2018); the printed text asserts as fact that it went into production on that date, which the source does not confirm. |
+| `record:CY:emergency_communications:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The article only reports that Civil Defence signed a development agreement with CYTA for a system to be built over 20 months; it says nothing about where the infrastructure runs, what kind of entity CYTA is, or any hosting arrangement, so 'National infrastructure' needs outside knowledge the source does not supply. |
+| `record:CY:fingerprint_biometric:register` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Art. 63(5) (and 67(4) for passports) says fingerprints taken for an ID card may be used only to issue the card and are deleted within 48 hours, verbatim. That shows ID-document fingerprints are not retained under this law, but the source does not state that no central fingerprint register exists at all, so the general negative 'No central register' goes beyond what the page says. |
+| `record:CZ:border_control:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | § 84(2) of Act 273/2008 supports that the Police Presidium operates the national component of SIS and performs the tasks of the authority exchanging supplementary information on SIS alerts, but neither page uses the word 'SIRENE' anywhere and the cited quote stops before the supplementary-information clause; the printed 'SIRENE function' is a label the source does not supply. |
+| `record:CZ:breeder_documents:operator` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote (§ 1b(1): Matriční informační systém ... jehož správcem je Ministerstvo vnitra) is verbatim on the cited page, but that page is the consolidation whose URL is dated 2027-01-01; the 2025-01-01 e-sbirka consolidation and the current zakonyprolidi text of Act 301/2000 contain no § 1b or 'Matriční informační systém', so whether this provision is in force on 2026-10-02 cannot be settled from  |
+| `record:CZ:business_registry:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | § 28(1) of Act 111/2009 supports DIA (Agentura, defined in § 7) as controller of the registr osob, but § 28(2) says the controller 'poskytuje editorům k přidělení identifikační číslo osoby' — it provides the identification numbers to the editors for assignment; the editors assign them. The printed 'assigns company identification numbers' attributes the assignment to DIA, which the source does not  |
+| `record:CZ:customs:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote (§1(1) of Act 17/2012) only says the customs administration's basic task is protecting the Republic's economic interests and supervising goods and their movement; it does not name the General Directorate of Customs or customs offices (those appear in §1(2), which is not the recorded quote) and the act nowhere mentions customs declarations, so nothing on the page says who operates customs |
+| `record:CZ:fingerprint_biometric:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote is §57(3): data under §56(1)(o), which the act calls only 'biometrické údaje' (biometric data, not specifically fingerprints), are kept in the ID card register until the card is collected and at most 90 days after issue. That describes a central public-administration IS that does hold the biometric data for a limited time; it does not say there is no central register, and it does not nam |
 | `record:DE:civil_registry:operator` | claude-fable-5-1 | not supported | wf_074137f6-b8e | The quote is verbatim and shows the BZSt stores the Identifikationsnummer with names and other identity data, but the printed text adds 'national personal identification number' and 'for every natural person', neither of which §139b says (it only states a natural person may not receive more than one number); the operator is supported, the printed scope is not. |
+| `record:DK:emergency_communications:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote is on the page and supports CFB being part of the Ministry of Civil Security and Emergency Preparedness, but the cited page nowhere mentions Dansk Beredskabskommunikation A/S or network operation; that clause is added without support from the cited source (it appears only on the uncited om-sine page). |
+| `record:EE:benefits_pensions:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something the source does not say. |
+| `record:EE:crisis_management:register` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Could not fetch any cited page: siseministeerium.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this PDF. The quote, the EE-ALARM label and the Häirekeskus operator could not be checked. |
+| `record:EE:customs:register` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Could not fetch any cited page: emta.ee returns a Cloudflare 'Just a moment' 403 to both curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this URL. The quote could not be checked. |
+| `record:EE:education:operator` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Could not fetch any cited page: hm.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked. |
+| `record:EE:emergency_communications:operator` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote could not be checked, so whether it supports Häirekeskus as operator of emergency calls and public-safety radio is undetermined. |
+| `record:EE:emergency_communications:register` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote naming 'hädaabiteadete ning abi- ja infoteadete andmekogu' could not be checked. |
+| `record:EE:facial_biometric:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory definition, not the name of a register or system, so it does not answer 'what'; the source that names a register holding facial images (ABIS, siseministeerium.ee) is not |
+| `record:EE:fingerprint_biometric:operator` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names PPA alone, and the quote does not establish whether fingerprint data fall wholly outside the MFA exception, so the source is ambiguous for the scope as printed. |
+| `record:EE:firearms_register:register` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Could not fetch any cited page: politsei.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked. |
+| `record:EE:judicial_criminal:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | § 4 of the Criminal Records Database Act names Justiits- ja Digiministeerium as controller and Registrite ja Infosüsteemide Keskus as processor, supporting those two names, but the acronym 'RIK' printed after the processor's name does not appear anywhere on the cited page, so the statement as printed adds something the source does not say. |
+| `record:EL:breeder_documents:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Art. 115 of Law 4483/2017 (both the PDF and lawspot) says the Citizens' Register comprises the civil-status acts (ληξιαρχικές πράξεις) of Greek citizens and foreigners with events in Greece, held in the Ministry of the Interior's Registry Acts Management system, which matches the rest of the sentence; but the parenthetical '(births, marriages, deaths)' appears in neither cited source (searched bot |
+| `record:EL:digital_identity_credentials:foreign_dependency` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote is on the page and says GRNET, a Greek State company, designs, implements and maintains the application on behalf of the Ministry; but the page says nothing about where the infrastructure runs (no hosting, server or data-centre statement anywhere on it). A national operator is not the same as a national hosting location, so the source is ambiguous for this categorical label. |
+| `record:ES:education:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote (Art. 4) supports that the register was created in the Ministerio de Educación, but the printed parenthetical 'the register now sits with the universities ministry' appears nowhere on the cited page (no mention of a Ministerio de Universidades or de Ciencia), so part of the printed statement is added beyond the source. |
+| `record:FI:electoral_roll:operator` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote is on the page and DVV is named as controller and as the body that establishes the voting register, but the same page says the voting register is part of the election information system 'jonka ylläpidosta ja toiminnasta vastaa Oikeusrekisterikeskus' (maintained and operated by the Legal Register Centre). The source is ambiguous on who operates it as opposed to who establishes/controls it |
+| `record:FR:defence_command:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote is on the page, but it only says the DGA awarded the Artemis initiative to Atos-Bull, Capgemini and Thales-Sopra Steria (framed as 'initiatives françaises' responding to Palantir); it says nothing about where defence command and logistics infrastructure runs, and Artemis is an AI-applications ecosystem rather than that infrastructure. The label 'National infrastructure' is an inference t |
+| `record:FR:statistics_microdata:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote only says CASD designed its own dedicated secure equipment (the SD-Box) following three principles; neither it nor the rest of the page says where the central infrastructure is hosted, by whom or in which country, so it does not establish the categorical label 'National infrastructure' over an EU or non-EU provider. |
+| `record:HR:facial_biometric:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote is on the page, but the law lists four competent bodies: the ministries for internal affairs, foreign affairs, justice 'te ministarstvo nadležno za poslove obrane u dijelu koji se odnosi na obavljanje vojnopolicijskih poslova'. The printed sentence states the competent bodies 'are' three ministries and drops the defence ministry (military police), so it does not match the source's scope; |
+| `record:HR:fingerprint_biometric:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Article 12(5) of the ID Card Act only says a person need not give fingerprints if they were already taken and stored electronically in a public-document issuance procedure at the Ministry. It does not say they are held in 'central retention', which the printed statement adds; the source names no register or central store. |
+| `record:HU:authentication_audit_log:foreign_dependency` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote only says IdomSoft came into direct state ownership in July 2024; the page elsewhere names IdomSoft as the DÁP provider and operator, but never mentions the log system (naplórendszer) or where its infrastructure runs, so 'National infrastructure' rests on inference rather than the source. |
+| `record:HU:civil_registry:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote states IdomSoft is state-owned; the page nowhere mentions the civil register (anyakönyv) or who hosts it, so it does not support that the civil registry's infrastructure is national. |
+| `record:HU:electoral_roll:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote only states that IdomSoft became directly state-owned; neither the quote nor anything else on the history page mentions the electoral roll or any election system, so the page does not connect this holding to IdomSoft or say what infrastructure it runs on. |
+| `record:HU:issuance_history:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote establishes IdomSoft's state ownership only; the history page never mentions document issuance records or document registers, so it does not support where that holding's infrastructure runs. |
+| `record:HU:vehicle_licensing:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote is about IdomSoft's ownership; the history page does not mention the vehicle register or driving licences, so it does not tie that holding to IdomSoft or say on what infrastructure it runs. |
+| `record:IE:defence_command:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The full sentence says NGWE allows the Defence Forces 'to operate a hybrid cloud strategy - securely accessing cloud services where required, as well as maintaining a secure on premise national CISN'. The source describes a hybrid of on-premise national data centres and cloud services; printing 'National infrastructure' alone drops the cloud component the source states, so the categorical label is |
+| `record:IE:electoral_roll:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote is one bullet in a list of LGERS project requirements ('Migration of project to DCC's Azure Public Cloud Tenancy') for a new central database that local authorities are still preparing to migrate to in 2025-2026; the page does not say the current 31 registers run there, nor does it identify Azure as a non-EU provider. Reaching 'Non-EU provider' needs outside knowledge and a future state  |
+| `record:IE:grid_control:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | EirGrid's own page says 'A team of staff operate the grid from NCCs' and 'EirGrid use the most sophisticated software in operating the grid', which supports EirGrid as operator, but the words 'transmission system operator' appear nowhere on the page, so the printed parenthetical adds a description the source does not give. |
+| `record:IE:grid_control:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The page names the 'National Control Centres (NCCs)' in Dublin and Belfast, but never uses the phrase 'transmission system operator'; the printed 'of the transmission system operator' is not stated by the source. |
+| `record:IE:intelligence:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The source says the NSAC was established in 2019 by the Government to provide strategic analysis to the Taoiseach and Government; it does not say NSAC operates intelligence services or the Defence Forces Military Intelligence holdings named as the register. The page attributes intelligence work to Defence Forces Military Intelligence (J2), not NSAC. |
+| `record:IE:intelligence:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a register of that name. |
+| `record:IE:police_records:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The page names PULSE as 'An Garda Síochána's database' and mentions capturing incident data, but nowhere calls it a 'national incident and intelligence database'; the word 'intelligence' appears only in an unrelated menu item, so the printed description adds scope the source does not state. |
+| `record:IE:public_finance:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the Exchequer's transfer to FMSS'. The source does not say the Exchequer is on FMSS. |
+| `record:IT:breeder_documents:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Both quotes are verbatim and support 'ANSC - national computerised archive of civil-status registers', but neither the ANSC guide page nor art. 62 CAD says the registers are those of births, marriages and deaths; the printed parenthetical '(births, marriages, deaths)' is an addition the cited sources do not state (art. 62 mentions birth and death declarations only as ANPR services, not as ANSC con |
+| `record:MT:border_control:operator` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote appears verbatim and establishes the CVU as the central authority for national visa policy and the Schengen acquis in visa matters, but the page names no border or visa system the CVU operates, refers separately to 'border control authorities', and does not mention the EES printed as this record's register; the source supports a visa authority, not an operator of border and visa systems. |
+| `record:MT:civil_registry:register` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Both quotes are found: the Identità page says the Civil Status Section issues true copies of acts of birth, marriage, civil union and death registered in Malta, and the Civil Code (art. 238) says the Public Registry Office keeps the register books for those acts. Neither source says the Civil Status Section itself holds the acts; the printed attribution of custody to the Section rather than the Pu |
+| `record:NL:fingerprint_biometric:register` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Paspoortwet art. 3(9) is on the page verbatim and says travel-document fingerprints are kept only until issuance is registered and used only for issuing, which supports the absence of a central passport fingerprint register. It does not support the broader categorical 'No central register' for fingerprint biometrics in general; another page cited in this same batch (Vreemdelingenwet art. 107) stat |
+| `record:PL:fingerprint_biometric:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote (Art. 56(2)) says fingerprints (ust. 1 pkt 2a 'odciski palców') are held in the Rejestr Dowodów Osobistych only until the card is collected, at most 90 days; Art. 56(1) lists fingerprints among the data gathered in that central register. The source therefore documents time-limited storage in a central register, not the absence of one, so it does not support 'No central register' as print |
+| `record:PT:breeder_documents:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Article 32(1) of Lei 33/99 says ID-card applications and 'certidões não emitidas pelo registo civil português' are microfilmed or kept on secure computer media and then destroyed; the printed 'foreign-issued certificates' narrows a scope the source states as 'not issued by the Portuguese civil registry', which is not the same thing, and 'paper originals' is likewise not in the text. |
+| `record:PT:business_registry:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Código do Registo Comercial art. 78-C(1) says verbatim that the director-geral dos Registos e do Notariado is the database controller, but the page never mentions IRN; the printed gloss '(now IRN)' is added from outside the source. |
+| `record:PT:digital_identity_credentials:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Article 2(8) of Lei 32/2017 does assign management and security of the CMD technological infrastructure to AMA, I.P., but the page never mentions ARTE, so the printed parenthetical '(the predecessor of ARTE)' is an addition the source does not say. |
+| `record:PT:education:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | DL 396/2007 art. 7(5) says the *models* (templates) of diplomas and certificates, defined by portaria, are made available in SIGO, and art. 11(2) says training actions are inscribed in SIGO; it does not say that qualification diplomas and certificates themselves are made available in SIGO, as printed. |
+| `record:PT:health_insurance:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Portaria 22/2016 art. 12(1) says only that SINAVE uses the Registo Nacional de Utentes to look up patient identification for the physician profile; it does not say the register is the identification reference for 'other national health systems' generally, and the abbreviation RNU does not appear. |
+| `record:PT:public_finance:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The cited page names IGCP, E.P.E. as the entity managing the State's treasury, financing and direct public debt; it does not mention Direção-Geral do Orçamento (DGO) or ESPAP, which are the bodies the report prints. |
+| `record:RO:health_insurance:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The page header 'SIUI Platforma Informatică a Asigurărilor de Sănătate' supports the name, but nothing on the page says who runs SIUI; it only shows a link to 'Portalul CNAS-SIUI' and a CNAS copyright line, which does not state that CNAS operates the platform, so 'run by CNAS' is an addition. |
+| `record:RO:tax:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The ANAF strategic plan says the Big-Data project 'va fi implementat în curând' (will be implemented soon) and that, over the next two years, it will consolidate the central database; the printed text presents this as something ANAF 'is consolidating' now, which the source does not say, and it names no register. |
+| `record:SE:electoral_roll:foreign_dependency` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote is on the page, but it concerns Valmyndighetens valadministrativa it-stöd (ballot ordering, voting cards, result reporting); the page never says the röstlängd is kept or produced in that system, mentioning the roll only as a limited 2026 feature for digitally marking received votes. Whether the electoral roll's infrastructure is the one Skatteverket operates is not stated by this source. |
+| `record:SI:fingerprint_biometric:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The source shows fingerprints ARE held in the centrally managed register of issued identity cards for 15 days (90 if undelivered) before deletion; it does not state that no central register exists and covers only ID cards, so 'No central register' is not what the page says. |
+| `record:SI:trust_services_pki:foreign_dependency` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote only says the SI-PASS-CA qualified certificate is securely stored at SI-TRUST (a state body); it says nothing about where SI-TRUST's PKI infrastructure runs or who provides it, so 'national infrastructure' is an inference the page does not itself make. |
+| `record:SK:beneficial_ownership:register` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Live page 403; the archived copy is the shortened unregistered view and § 3(1) is cut to 'Register je informačný systém verejnej správy, ktorý obsahuje údaje podľa ...', so the sentences naming the Ministry of Justice as administrator and Okresný súd Žilina as registering body are absent (neither string occurs anywhere in the page body). The name 'register partnerov verejného sektora' is confirmed |
+| `record:SK:emergency_communications:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The live page is blocked (HTTP 403) and the archived page carries an older wording of letter a) ('zabezpečuje príjem tiesňového volania, volania eCall30) a príjem krátkych textových správ (SMS) na jednotnom európskom čísle tiesňového volania 112') without the quoted 'a odpoveď na príjem tiesňovej komunikácie', so the quote is not on the page I could read; the older wording does say coordination ce |
+| `record:SK:facial_biometric:register` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The live page returns HTTP 403 (Cloudflare) to both WebFetch and curl; the archived copy is the site's shortened unregistered view and cuts the quote at '...evidenciu čistopisov občianskych ...'. The visible text does say 'Ministerstvo a okresné riaditeľstvá vedú evidenciu občianskych preukazov' and that the records contain 'zobrazenie podoby tváre občana', but the defining paragraph (§ 5) that wo |
+| `record:SK:geospatial:register` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The live page returns HTTP 403 (Cloudflare block) to every fetch, and the only archived snapshot (2021, the latest in Wayback) shows the law title 'Zákon o registri adries' and § 4(1) only as a truncated preview ending at 'ktorého správcom ...', so the Ministry of Interior as administrator could neither be confirmed nor refuted. |
+| `record:SK:issuance_history:operator` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Live page 403; the archived copy truncates the quote mid-sentence and does not show the definition of 'ministerstvo' or of 'okresné riaditeľstvo'. The quote only names 'the ministry and district directorates' as keepers of the ID-card records; the page as fetched does not establish that these are the Ministry of Interior and district police directorates. |
+| `record:SK:police_records:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The live page is blocked (HTTP 403) and the archived page's § 69(1) reads 'Policajný zbor spracúva podľa tohto zákona a osobitného predpisu11bc) informácie a osobné údaje zhromaždené...' without 'daktyloskopické údaje a snímky tvárí'; 'snímky tvárí' occurs nowhere on the page, so the quote and the printed 'face images' are not on the page I could read. |
 
 ## Every disagreement on record
 
@@ -1416,11 +134,91 @@ Each verdict other than *supported*, from every run, including those a later che
 |---|---|---|---|---|---|
 | wf_074137f6-b8e | `indicator:DE:K2` | claude-fable-5-1 | not supported | Both quotes are verbatim, but neither says who operates the eID scheme: the Bundesdruckerei page only calls the group a federal technology company, and PAuswG §4(3) only says the BMI designates the card manufacturer, certificate authority and blocking-list operator (published in the Bundesanzeiger). Linking the two (that Bundesdruckerei is the designated operator) needs outside knowledge, so 'Yes' | current |
 | wf_074137f6-b8e | `record:DE:civil_registry:operator` | claude-fable-5-1 | not supported | The quote is verbatim and shows the BZSt stores the Identifikationsnummer with names and other identity data, but the printed text adds 'national personal identification number' and 'for every natural person', neither of which §139b says (it only states a natural person may not receive more than one number); the operator is supported, the printed scope is not. | current |
+| wf_da123db1-a4e | `record:AT:fingerprint_biometric:register` | claude-fable-5-1 | not supported | Both quotes are found. PassG § 22b only says the passport authorities process § 22a(1) data 'mit Ausnahme der lit. k' (lit. k being 'die Papillarlinienabdrücke zweier Finger') in the central passport evidence, which supports a narrower statement about passport fingerprints, not a blanket 'No central register'; the other citation is the BMI sheet for the 'Erkennungsdienstliche Evidenz-EDE', a centr | current |
+| wf_da123db1-a4e | `record:AT:issuance_history:foreign_dependency` | claude-fable-5-1 | unclear | Both quotes are present (the RH sentence is split by a line-break hyphen 'Identitätsdokumentenregis- ters') and establish that BRZ GmbH, a federal body, is the statutory processor of the register; neither source says where the infrastructure runs or rules out further (possibly foreign) sub-processors, so 'National infrastructure' is an inference from the processor's identity rather than a statemen | current |
+| wf_da123db1-a4e | `record:AT:facial_biometric:foreign_dependency` | claude-fable-5-1 | unclear | The Passgesetz says verbatim that Bundesrechenzentrum GmbH takes part as processor in the § 22a/§ 22b processing; it names a federal body as processor but says nothing about where the infrastructure runs, so 'National infrastructure' rests on an inference the statute does not state. | current |
+| wf_da123db1-a4e | `indicator:BG:K2` | claude-fable-5-1 | unclear | Both quotes are on their pages, but neither states who operates the national eID scheme: the CRC quote lists trust-service providers (not eID), and the Sega article only says the eID certificates are to be written to the ID-card chip and that МВР has not yet activated them. 'Partly' is an inference the sources do not state, so the support is genuinely ambiguous. | current |
+| wf_da123db1-a4e | `record:BG:customs:register` | claude-fable-5-1 | not supported | The quote is on the page verbatim and names the system (МИСВ), but it is a forward-looking announcement ('ще бъде въведена в реална експлоатация' = will be put into live operation on 26.11.2018); the printed text asserts as fact that it went into production on that date, which the source does not confirm. | current |
+| wf_da123db1-a4e | `indicator:BG:C1` | claude-fable-5-1 | not supported | The page says the company Информационно обслужване offers colocation in its secure data centre and lists government agencies as clients, but nowhere states that the company is state-owned or that the state operates these data centres; the 'Yes' to state-operated government data centres needs outside knowledge the source does not supply. | current |
+| wf_da123db1-a4e | `record:BG:border_control:register` | claude-fable-5-1 | not supported | Both quotes are verbatim, but the MFA citation names a different system (НВИС, not printed), and the RTA ordinance names 'АИС Издирвателна дейност – НШИС' only in the context of wanted-vehicle registration termination, never as a border or visa system; the printed form also truncates the system's name. The source does not establish the printed system as the border/visa register. | current |
+| wf_da123db1-a4e | `record:CY:emergency_communications:foreign_dependency` | claude-fable-5-1 | not supported | The article only reports that Civil Defence signed a development agreement with CYTA for a system to be built over 20 months; it says nothing about where the infrastructure runs, what kind of entity CYTA is, or any hosting arrangement, so 'National infrastructure' needs outside knowledge the source does not supply. | current |
+| wf_da123db1-a4e | `record:CY:fingerprint_biometric:register` | claude-fable-5-1 | unclear | Art. 63(5) (and 67(4) for passports) says fingerprints taken for an ID card may be used only to issue the card and are deleted within 48 hours, verbatim. That shows ID-document fingerprints are not retained under this law, but the source does not state that no central fingerprint register exists at all, so the general negative 'No central register' goes beyond what the page says. | current |
+| wf_da123db1-a4e | `record:CZ:breeder_documents:operator` | claude-fable-5-1 | unclear | The quote (§ 1b(1): Matriční informační systém ... jehož správcem je Ministerstvo vnitra) is verbatim on the cited page, but that page is the consolidation whose URL is dated 2027-01-01; the 2025-01-01 e-sbirka consolidation and the current zakonyprolidi text of Act 301/2000 contain no § 1b or 'Matriční informační systém', so whether this provision is in force on 2026-10-02 cannot be settled from  | current |
+| wf_da123db1-a4e | `record:CZ:border_control:operator` | claude-fable-5-1 | not supported | § 84(2) of Act 273/2008 supports that the Police Presidium operates the national component of SIS and performs the tasks of the authority exchanging supplementary information on SIS alerts, but neither page uses the word 'SIRENE' anywhere and the cited quote stops before the supplementary-information clause; the printed 'SIRENE function' is a label the source does not supply. | current |
+| wf_da123db1-a4e | `record:CZ:business_registry:operator` | claude-fable-5-1 | not supported | § 28(1) of Act 111/2009 supports DIA (Agentura, defined in § 7) as controller of the registr osob, but § 28(2) says the controller 'poskytuje editorům k přidělení identifikační číslo osoby' — it provides the identification numbers to the editors for assignment; the editors assign them. The printed 'assigns company identification numbers' attributes the assignment to DIA, which the source does not  | current |
+| wf_da123db1-a4e | `record:CZ:customs:operator` | claude-fable-5-1 | not supported | The quote (§1(1) of Act 17/2012) only says the customs administration's basic task is protecting the Republic's economic interests and supervising goods and their movement; it does not name the General Directorate of Customs or customs offices (those appear in §1(2), which is not the recorded quote) and the act nowhere mentions customs declarations, so nothing on the page says who operates customs | current |
+| wf_da123db1-a4e | `record:CZ:fingerprint_biometric:register` | claude-fable-5-1 | not supported | The quote is §57(3): data under §56(1)(o), which the act calls only 'biometrické údaje' (biometric data, not specifically fingerprints), are kept in the ID card register until the card is collected and at most 90 days after issue. That describes a central public-administration IS that does hold the biometric data for a limited time; it does not say there is no central register, and it does not nam | current |
+| wf_da123db1-a4e | `record:DK:emergency_communications:operator` | claude-fable-5-1 | not supported | The quote is on the page and supports CFB being part of the Ministry of Civil Security and Emergency Preparedness, but the cited page nowhere mentions Dansk Beredskabskommunikation A/S or network operation; that clause is added without support from the cited source (it appears only on the uncited om-sine page). | current |
+| wf_da123db1-a4e | `record:EE:benefits_pensions:register` | claude-fable-5-1 | not supported | The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something the source does not say. | current |
+| wf_da123db1-a4e | `record:EE:judicial_criminal:operator` | claude-fable-5-1 | not supported | § 4 of the Criminal Records Database Act names Justiits- ja Digiministeerium as controller and Registrite ja Infosüsteemide Keskus as processor, supporting those two names, but the acronym 'RIK' printed after the processor's name does not appear anywhere on the cited page, so the statement as printed adds something the source does not say. | current |
+| wf_da123db1-a4e | `record:EE:fingerprint_biometric:operator` | claude-fable-5-1 | unclear | The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names PPA alone, and the quote does not establish whether fingerprint data fall wholly outside the MFA exception, so the source is ambiguous for the scope as printed. | current |
+| wf_da123db1-a4e | `record:EE:customs:register` | claude-fable-5-1 | unclear | Could not fetch any cited page: emta.ee returns a Cloudflare 'Just a moment' 403 to both curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this URL. The quote could not be checked. | current |
+| wf_da123db1-a4e | `record:EE:education:operator` | claude-fable-5-1 | unclear | Could not fetch any cited page: hm.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked. | current |
+| wf_da123db1-a4e | `record:EE:firearms_register:register` | claude-fable-5-1 | unclear | Could not fetch any cited page: politsei.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked. | current |
+| wf_da123db1-a4e | `record:EE:facial_biometric:register` | claude-fable-5-1 | not supported | Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory definition, not the name of a register or system, so it does not answer 'what'; the source that names a register holding facial images (ABIS, siseministeerium.ee) is not | current |
+| wf_da123db1-a4e | `record:EE:crisis_management:register` | claude-fable-5-1 | unclear | Could not fetch any cited page: siseministeerium.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this PDF. The quote, the EE-ALARM label and the Häirekeskus operator could not be checked. | current |
+| wf_da123db1-a4e | `record:EE:emergency_communications:operator` | claude-fable-5-1 | unclear | Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote could not be checked, so whether it supports Häirekeskus as operator of emergency calls and public-safety radio is undetermined. | current |
+| wf_da123db1-a4e | `record:EE:emergency_communications:register` | claude-fable-5-1 | unclear | Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote naming 'hädaabiteadete ning abi- ja infoteadete andmekogu' could not be checked. | current |
+| wf_da123db1-a4e | `record:EL:breeder_documents:register` | claude-fable-5-1 | not supported | Art. 115 of Law 4483/2017 (both the PDF and lawspot) says the Citizens' Register comprises the civil-status acts (ληξιαρχικές πράξεις) of Greek citizens and foreigners with events in Greece, held in the Ministry of the Interior's Registry Acts Management system, which matches the rest of the sentence; but the parenthetical '(births, marriages, deaths)' appears in neither cited source (searched bot | current |
+| wf_da123db1-a4e | `record:EL:digital_identity_credentials:foreign_dependency` | claude-fable-5-1 | unclear | The quote is on the page and says GRNET, a Greek State company, designs, implements and maintains the application on behalf of the Ministry; but the page says nothing about where the infrastructure runs (no hosting, server or data-centre statement anywhere on it). A national operator is not the same as a national hosting location, so the source is ambiguous for this categorical label. | current |
+| wf_da123db1-a4e | `record:ES:education:operator` | claude-fable-5-1 | not supported | The quote (Art. 4) supports that the register was created in the Ministerio de Educación, but the printed parenthetical 'the register now sits with the universities ministry' appears nowhere on the cited page (no mention of a Ministerio de Universidades or de Ciencia), so part of the printed statement is added beyond the source. | current |
+| wf_da123db1-a4e | `record:FI:electoral_roll:operator` | claude-fable-5-1 | unclear | The quote is on the page and DVV is named as controller and as the body that establishes the voting register, but the same page says the voting register is part of the election information system 'jonka ylläpidosta ja toiminnasta vastaa Oikeusrekisterikeskus' (maintained and operated by the Legal Register Centre). The source is ambiguous on who operates it as opposed to who establishes/controls it | current |
+| wf_da123db1-a4e | `record:FR:statistics_microdata:foreign_dependency` | claude-fable-5-1 | not supported | The quote only says CASD designed its own dedicated secure equipment (the SD-Box) following three principles; neither it nor the rest of the page says where the central infrastructure is hosted, by whom or in which country, so it does not establish the categorical label 'National infrastructure' over an EU or non-EU provider. | current |
+| wf_da123db1-a4e | `record:FR:defence_command:foreign_dependency` | claude-fable-5-1 | not supported | The quote is on the page, but it only says the DGA awarded the Artemis initiative to Atos-Bull, Capgemini and Thales-Sopra Steria (framed as 'initiatives françaises' responding to Palantir); it says nothing about where defence command and logistics infrastructure runs, and Artemis is an AI-applications ecosystem rather than that infrastructure. The label 'National infrastructure' is an inference t | current |
+| wf_da123db1-a4e | `record:HR:facial_biometric:operator` | claude-fable-5-1 | not supported | The quote is on the page, but the law lists four competent bodies: the ministries for internal affairs, foreign affairs, justice 'te ministarstvo nadležno za poslove obrane u dijelu koji se odnosi na obavljanje vojnopolicijskih poslova'. The printed sentence states the competent bodies 'are' three ministries and drops the defence ministry (military police), so it does not match the source's scope; | current |
+| wf_da123db1-a4e | `record:HR:fingerprint_biometric:register` | claude-fable-5-1 | not supported | Article 12(5) of the ID Card Act only says a person need not give fingerprints if they were already taken and stored electronically in a public-document issuance procedure at the Ministry. It does not say they are held in 'central retention', which the printed statement adds; the source names no register or central store. | current |
+| wf_da123db1-a4e | `indicator:HU:K1` | claude-fable-5-1 | unclear | The quote is on the page and says NISZ Zrt. is the designated government certification service provider (GovCA) providing trust and PKI services, but the page nowhere states that NISZ is state-owned or state-controlled (no mention of 'állami tulajdon'), so the 'state or state-controlled body' element of the indicator rests on knowledge outside the cited source. | current |
+| wf_da123db1-a4e | `indicator:HU:C2` | claude-fable-5-1 | unclear | Annex 1 point 4.2.2.4 of Decree 418/2024 names 'kormányzati felhő' as a permitted venue for F4 data, which presupposes a government cloud, but the decree does not state that such a platform is in operation rather than merely provided for, so it does not by itself establish 'in operation (not announced)'. | current |
+| wf_da123db1-a4e | `indicator:HU:K2` | claude-fable-5-1 | unclear | The DMÜ page says the agency owns six companies and that IdomSoft contributes 'as developer' to the Digital Citizenship Programme, and the Act says the Government designates the framework-service body and the digital citizenship provider; neither cited passage states who operates the eID scheme or that the operator is state-controlled, so 'Yes' is not established by these quotes. | current |
+| wf_da123db1-a4e | `indicator:HU:C1` | claude-fable-5-1 | unclear | The DMÜ page says the agency decides on mandatory use of, or exemption from, 'Kormányzati Adatközpont' services, which implies such services exist, but the quote does not say the state operates the data centre or that it is in operation today. | current |
+| wf_da123db1-a4e | `record:HU:authentication_audit_log:foreign_dependency` | claude-fable-5-1 | unclear | The quote only says IdomSoft came into direct state ownership in July 2024; the page elsewhere names IdomSoft as the DÁP provider and operator, but never mentions the log system (naplórendszer) or where its infrastructure runs, so 'National infrastructure' rests on inference rather than the source. | current |
+| wf_da123db1-a4e | `record:HU:civil_registry:foreign_dependency` | claude-fable-5-1 | not supported | The quote states IdomSoft is state-owned; the page nowhere mentions the civil register (anyakönyv) or who hosts it, so it does not support that the civil registry's infrastructure is national. | current |
+| wf_da123db1-a4e | `record:HU:electoral_roll:foreign_dependency` | claude-fable-5-1 | not supported | The quote only states that IdomSoft became directly state-owned; neither the quote nor anything else on the history page mentions the electoral roll or any election system, so the page does not connect this holding to IdomSoft or say what infrastructure it runs on. | current |
+| wf_da123db1-a4e | `record:HU:issuance_history:foreign_dependency` | claude-fable-5-1 | not supported | The quote establishes IdomSoft's state ownership only; the history page never mentions document issuance records or document registers, so it does not support where that holding's infrastructure runs. | current |
+| wf_da123db1-a4e | `record:HU:vehicle_licensing:foreign_dependency` | claude-fable-5-1 | not supported | The quote is about IdomSoft's ownership; the history page does not mention the vehicle register or driving licences, so it does not tie that holding to IdomSoft or say on what infrastructure it runs. | current |
+| wf_da123db1-a4e | `record:IE:defence_command:foreign_dependency` | claude-fable-5-1 | not supported | The full sentence says NGWE allows the Defence Forces 'to operate a hybrid cloud strategy - securely accessing cloud services where required, as well as maintaining a secure on premise national CISN'. The source describes a hybrid of on-premise national data centres and cloud services; printing 'National infrastructure' alone drops the cloud component the source states, so the categorical label is | current |
+| wf_da123db1-a4e | `record:IE:intelligence:operator` | claude-fable-5-1 | not supported | The source says the NSAC was established in 2019 by the Government to provide strategic analysis to the Taoiseach and Government; it does not say NSAC operates intelligence services or the Defence Forces Military Intelligence holdings named as the register. The page attributes intelligence work to Defence Forces Military Intelligence (J2), not NSAC. | current |
+| wf_da123db1-a4e | `record:IE:intelligence:register` | claude-fable-5-1 | not supported | The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a register of that name. | current |
+| wf_da123db1-a4e | `indicator:IE:L2` | claude-fable-5-1 | unclear | The 2019 Cloud Computing Advice Note says some organisations have their own classification systems and 'there are no central classification rules in place except for information defined as top secret, see Department of Finance Circular 39/07'. Whether a Finance circular counts as a 'statute or binding regulation' is a judgment the source does not make, so 'Partly' is neither clearly supported nor  | current |
+| wf_da123db1-a4e | `record:IE:electoral_roll:foreign_dependency` | claude-fable-5-1 | not supported | The quote is one bullet in a list of LGERS project requirements ('Migration of project to DCC's Azure Public Cloud Tenancy') for a new central database that local authorities are still preparing to migrate to in 2025-2026; the page does not say the current 31 registers run there, nor does it identify Azure as a non-EU provider. Reaching 'Non-EU provider' needs outside knowledge and a future state  | current |
+| wf_da123db1-a4e | `record:IE:public_finance:register` | claude-fable-5-1 | not supported | The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the Exchequer's transfer to FMSS'. The source does not say the Exchequer is on FMSS. | current |
+| wf_da123db1-a4e | `record:IE:grid_control:operator` | claude-fable-5-1 | not supported | EirGrid's own page says 'A team of staff operate the grid from NCCs' and 'EirGrid use the most sophisticated software in operating the grid', which supports EirGrid as operator, but the words 'transmission system operator' appear nowhere on the page, so the printed parenthetical adds a description the source does not give. | current |
+| wf_da123db1-a4e | `record:IE:grid_control:register` | claude-fable-5-1 | not supported | The page names the 'National Control Centres (NCCs)' in Dublin and Belfast, but never uses the phrase 'transmission system operator'; the printed 'of the transmission system operator' is not stated by the source. | current |
+| wf_da123db1-a4e | `record:IE:police_records:register` | claude-fable-5-1 | not supported | The page names PULSE as 'An Garda Síochána's database' and mentions capturing incident data, but nowhere calls it a 'national incident and intelligence database'; the word 'intelligence' appears only in an unrelated menu item, so the printed description adds scope the source does not state. | current |
+| wf_da123db1-a4e | `indicator:IE:K1` | claude-fable-5-1 | unclear | The quote (found verbatim) establishes that the Revenue Commissioners, a state body, act as Certification Authority for ROS digital certificates, and the same manual says those certificates are used by the CRO, Department of Transport and Department of Social Protection. However the document never describes this CA as the root of the government's PKI or as a qualified trust service (no occurrence  | current |
+| wf_da123db1-a4e | `record:IT:breeder_documents:register` | claude-fable-5-1 | not supported | Both quotes are verbatim and support 'ANSC - national computerised archive of civil-status registers', but neither the ANSC guide page nor art. 62 CAD says the registers are those of births, marriages and deaths; the printed parenthetical '(births, marriages, deaths)' is an addition the cited sources do not state (art. 62 mentions birth and death declarations only as ANPR services, not as ANSC con | current |
+| wf_da123db1-a4e | `indicator:LU:C1` | claude-fable-5-1 | unclear | Both quotes are present, but the CTIE quote only mentions managing IT and security equipment, not data centres, and the Wikipedia page describes LuxConnect, incorporated by the State as main shareholder, as a 'private company' operating four 'carrier neutral' commercial data centres. The sources show a state-majority-owned data-centre operator, not that the state operates its own government data c | current |
+| wf_da123db1-a4e | `record:MT:border_control:operator` | claude-fable-5-1 | unclear | The quote appears verbatim and establishes the CVU as the central authority for national visa policy and the Schengen acquis in visa matters, but the page names no border or visa system the CVU operates, refers separately to 'border control authorities', and does not mention the EES printed as this record's register; the source supports a visa authority, not an operator of border and visa systems. | current |
+| wf_da123db1-a4e | `record:MT:civil_registry:register` | claude-fable-5-1 | unclear | Both quotes are found: the Identità page says the Civil Status Section issues true copies of acts of birth, marriage, civil union and death registered in Malta, and the Civil Code (art. 238) says the Public Registry Office keeps the register books for those acts. Neither source says the Civil Status Section itself holds the acts; the printed attribution of custody to the Section rather than the Pu | current |
+| wf_da123db1-a4e | `record:NL:fingerprint_biometric:register` | claude-fable-5-1 | unclear | Paspoortwet art. 3(9) is on the page verbatim and says travel-document fingerprints are kept only until issuance is registered and used only for issuing, which supports the absence of a central passport fingerprint register. It does not support the broader categorical 'No central register' for fingerprint biometrics in general; another page cited in this same batch (Vreemdelingenwet art. 107) stat | current |
+| wf_da123db1-a4e | `record:PL:fingerprint_biometric:register` | claude-fable-5-1 | not supported | The quote (Art. 56(2)) says fingerprints (ust. 1 pkt 2a 'odciski palców') are held in the Rejestr Dowodów Osobistych only until the card is collected, at most 90 days; Art. 56(1) lists fingerprints among the data gathered in that central register. The source therefore documents time-limited storage in a central register, not the absence of one, so it does not support 'No central register' as print | current |
+| wf_da123db1-a4e | `indicator:PT:C2` | claude-fable-5-1 | unclear | All three quotes are present (ARTE news 29 May 2026; PNNS May 2026 with 'Desenvolvimento, pelo Estado, de infraestrutura nacional soberana de nuvem' scheduled from S1 2026; RCM 102/2026 funding implementation and initial migration via ARTE and IP Telecom). They show an approved, funded plan in execution, but none states that a sovereign cloud platform is in operation, so whether 'Partly' rather th | current |
+| wf_da123db1-a4e | `record:PT:public_finance:operator` | claude-fable-5-1 | not supported | The cited page names IGCP, E.P.E. as the entity managing the State's treasury, financing and direct public debt; it does not mention Direção-Geral do Orçamento (DGO) or ESPAP, which are the bodies the report prints. | current |
+| wf_da123db1-a4e | `record:PT:business_registry:operator` | claude-fable-5-1 | not supported | Código do Registo Comercial art. 78-C(1) says verbatim that the director-geral dos Registos e do Notariado is the database controller, but the page never mentions IRN; the printed gloss '(now IRN)' is added from outside the source. | current |
+| wf_da123db1-a4e | `record:PT:education:register` | claude-fable-5-1 | not supported | DL 396/2007 art. 7(5) says the *models* (templates) of diplomas and certificates, defined by portaria, are made available in SIGO, and art. 11(2) says training actions are inscribed in SIGO; it does not say that qualification diplomas and certificates themselves are made available in SIGO, as printed. | current |
+| wf_da123db1-a4e | `record:PT:health_insurance:register` | claude-fable-5-1 | not supported | Portaria 22/2016 art. 12(1) says only that SINAVE uses the Registo Nacional de Utentes to look up patient identification for the physician profile; it does not say the register is the identification reference for 'other national health systems' generally, and the abbreviation RNU does not appear. | current |
+| wf_da123db1-a4e | `record:PT:digital_identity_credentials:operator` | claude-fable-5-1 | not supported | Article 2(8) of Lei 32/2017 does assign management and security of the CMD technological infrastructure to AMA, I.P., but the page never mentions ARTE, so the printed parenthetical '(the predecessor of ARTE)' is an addition the source does not say. | current |
+| wf_da123db1-a4e | `record:PT:breeder_documents:register` | claude-fable-5-1 | not supported | Article 32(1) of Lei 33/99 says ID-card applications and 'certidões não emitidas pelo registo civil português' are microfilmed or kept on secure computer media and then destroyed; the printed 'foreign-issued certificates' narrows a scope the source states as 'not issued by the Portuguese civil registry', which is not the same thing, and 'paper originals' is likewise not in the text. | current |
+| wf_da123db1-a4e | `record:RO:health_insurance:register` | claude-fable-5-1 | not supported | The page header 'SIUI Platforma Informatică a Asigurărilor de Sănătate' supports the name, but nothing on the page says who runs SIUI; it only shows a link to 'Portalul CNAS-SIUI' and a CNAS copyright line, which does not state that CNAS operates the platform, so 'run by CNAS' is an addition. | current |
+| wf_da123db1-a4e | `record:RO:tax:register` | claude-fable-5-1 | not supported | The ANAF strategic plan says the Big-Data project 'va fi implementat în curând' (will be implemented soon) and that, over the next two years, it will consolidate the central database; the printed text presents this as something ANAF 'is consolidating' now, which the source does not say, and it names no register. | current |
+| wf_da123db1-a4e | `indicator:SE:K1` | claude-fable-5-1 | not supported | SOU 2023:61 says Efos (Försäkringskassan's E-identitet för offentlig sektor) is notified at eIDAS level high but is an employee e-service credential (e-tjänstelegitimation). Nothing on the page addresses the root of a government PKI or a qualified trust service, so it does not answer K1 with 'Yes'. | current |
+| wf_da123db1-a4e | `indicator:SE:K2` | claude-fable-5-1 | unclear | The quote is the Government's proposal in Prop. 2025/26:250 that the Act on state e-ID enter into force on 1 December 2026, i.e. a state-operated scheme is legislated but not in operation as of today. The source neither states current state operation nor a partial one, so whether this maps to 'Partly' is ambiguous without a rubric the page does not supply. | current |
+| wf_da123db1-a4e | `record:SE:electoral_roll:foreign_dependency` | claude-fable-5-1 | unclear | The quote is on the page, but it concerns Valmyndighetens valadministrativa it-stöd (ballot ordering, voting cards, result reporting); the page never says the röstlängd is kept or produced in that system, mentioning the roll only as a limited 2026 feature for digitally marking received votes. Whether the electoral roll's infrastructure is the one Skatteverket operates is not stated by this source. | current |
+| wf_da123db1-a4e | `param:SI:population_m` | claude-fable-5-1 | not supported | The API returns 2 135 107 persons for SI on 1 January 2026, i.e. 2.135 million; rounded to two decimals that is 2.14 million, whereas the report prints 2.13 million, which is a truncation rather than the rounded figure the source gives. | current |
+| wf_da123db1-a4e | `record:SI:trust_services_pki:foreign_dependency` | claude-fable-5-1 | unclear | The quote only says the SI-PASS-CA qualified certificate is securely stored at SI-TRUST (a state body); it says nothing about where SI-TRUST's PKI infrastructure runs or who provides it, so 'national infrastructure' is an inference the page does not itself make. | current |
+| wf_da123db1-a4e | `record:SI:fingerprint_biometric:register` | claude-fable-5-1 | not supported | The source shows fingerprints ARE held in the centrally managed register of issued identity cards for 15 days (90 if undelivered) before deletion; it does not state that no central register exists and covers only ID cards, so 'No central register' is not what the page says. | current |
+| wf_da123db1-a4e | `record:SK:geospatial:register` | claude-fable-5-1 | unclear | The live page returns HTTP 403 (Cloudflare block) to every fetch, and the only archived snapshot (2021, the latest in Wayback) shows the law title 'Zákon o registri adries' and § 4(1) only as a truncated preview ending at 'ktorého správcom ...', so the Ministry of Interior as administrator could neither be confirmed nor refuted. | current |
+| wf_da123db1-a4e | `record:SK:emergency_communications:register` | claude-fable-5-1 | not supported | The live page is blocked (HTTP 403) and the archived page carries an older wording of letter a) ('zabezpečuje príjem tiesňového volania, volania eCall30) a príjem krátkych textových správ (SMS) na jednotnom európskom čísle tiesňového volania 112') without the quoted 'a odpoveď na príjem tiesňovej komunikácie', so the quote is not on the page I could read; the older wording does say coordination ce | current |
+| wf_da123db1-a4e | `record:SK:police_records:register` | claude-fable-5-1 | not supported | The live page is blocked (HTTP 403) and the archived page's § 69(1) reads 'Policajný zbor spracúva podľa tohto zákona a osobitného predpisu11bc) informácie a osobné údaje zhromaždené...' without 'daktyloskopické údaje a snímky tvárí'; 'snímky tvárí' occurs nowhere on the page, so the quote and the printed 'face images' are not on the page I could read. | current |
+| wf_da123db1-a4e | `record:SK:facial_biometric:register` | claude-fable-5-1 | unclear | The live page returns HTTP 403 (Cloudflare) to both WebFetch and curl; the archived copy is the site's shortened unregistered view and cuts the quote at '...evidenciu čistopisov občianskych ...'. The visible text does say 'Ministerstvo a okresné riaditeľstvá vedú evidenciu občianskych preukazov' and that the records contain 'zobrazenie podoby tváre občana', but the defining paragraph (§ 5) that wo | current |
+| wf_da123db1-a4e | `record:SK:issuance_history:operator` | claude-fable-5-1 | unclear | Live page 403; the archived copy truncates the quote mid-sentence and does not show the definition of 'ministerstvo' or of 'okresné riaditeľstvo'. The quote only names 'the ministry and district directorates' as keepers of the ID-card records; the page as fetched does not establish that these are the Ministry of Interior and district police directorates. | current |
+| wf_da123db1-a4e | `record:SK:beneficial_ownership:register` | claude-fable-5-1 | unclear | Live page 403; the archived copy is the shortened unregistered view and § 3(1) is cut to 'Register je informačný systém verejnej správy, ktorý obsahuje údaje podľa ...', so the sentences naming the Ministry of Justice as administrator and Okresný súd Žilina as registering body are absent (neither string occurs anywhere in the page body). The name 'register partnerov verejného sektora' is confirmed | current |
 
 ## Runs
 
 | Run | Date | Facts checked | By model | Verdicts | Commit | Bundle SHA-256 | Workflow SHA-256 |
 |---|---|---:|---|---|---|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 | 58178c37425e | 71ad7382eabd09c7 | 82530c1aa976b52e |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 | 4a7d51c70b84 | 16f1b228a17dad92 | 82530c1aa976b52e |
 
 ## How a check runs

@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "FR-025",
+ "iso": "FR",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:FR:geospatial:operator",
+   "fact_sha256": "96d34fae0a5682c9060d7c20adf5a6d5b484ae5611f77229d28e2c6626663da7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Under 'Gouvernance' the page says 'L'exploitation et la diffusion de la BAN sont pilotées par l'Institut National de l'Information Géographique et forestière (IGN)', which is exactly the operator and scope printed.",
+   "quote_found": true,
+   "checked_url": "https://adresse.data.gouv.fr/decouvrir-la-BAN"
+  },
+  {
+   "claim": "record:FR:geospatial:register",
+   "fact_sha256": "f37008f30eb567a1a853dece0492048a2a9965c73bd0e568cefbe8bfbf781f22",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page opens 'La Base Adresse Nationale (BAN), est une base de données d'état répertoriant l'ensemble des adresses du territoire français', matching the printed description of the register.",
+   "quote_found": true,
+   "checked_url": "https://adresse.data.gouv.fr/decouvrir-la-BAN"
+  },
+  {
+   "claim": "record:FR:public_finance:register",
+   "fact_sha256": "c9542510ecf17d6816e74c63a734c341ffe29011785c3b3a0ccadaf5ad18e3bc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live host refused TLS from here, so I read the archived copy; it contains the quote verbatim and presents Chorus as the system handling all of the State's budgetary and accounting functions, which supports the printed name and description.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260607062032/https://aife.economie.gouv.fr/nos-applications/chorus-et-chorus-formulaire/"
+  },
+  {
+   "claim": "record:FR:trust_services_pki:register",
+   "fact_sha256": "0825621cce354b3cc1cfef51b29ff25cea546cbb1674e6880ef8b4ea47195b6c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF (section 1.4.1 note) reads 'l'AC Racine du Ministère de la Justice et des Libertés (« AC Justice ») a vocation à être signée par l'infrastructure de gestion de la confiance de l'administration « IGC/A »', which names both the Justice root CA and IGC/A as printed.",
+   "quote_found": true,
+   "checked_url": "https://crl.justice.gouv.fr/igc/ants/MJ-PC-AC-Racine.pdf"
+  },
+  {
+   "claim": "indicator:FR:K1",
+   "fact_sha256": "d1e412da8261d3e06bc6c51dc4c9246665d05bb66f205174d741ad6a8b09ee26",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ANSSI page only establishes ANSSI as supervisory body and publisher of the trusted list, but the trusted list itself (also fetched) carries a CA/QC entry 'Service d'émission de certificats de personnes qualifiés des ministères économiques et financiers' with TSP URL igc1.finances.gouv.fr, i.e. a qualified certificate service operated by state ministries, which supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.xml"
+  },
+  {
+   "claim": "record:FR:digital_identity_credentials:operator",
+   "fact_sha256": "ded5aa1d94c255dad0f3e62753c9f7143b00c85de63c15eb1d19cc571d3a2414",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states FranceConnect and FranceConnect+ are 'deux solutions opérées et développées par la DINUM (Direction interministérielle du numérique) pour le compte de l'État', matching the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://docs.partenaires.franceconnect.gouv.fr/fi/general/fi-general-presentation/"
+  },
+  {
+   "claim": "param:FR:gov_employment_k",
+   "fact_sha256": "ada0946bfcfdefcab749d85df4d81359d4e562f8655f90faa5f2d5733b210e43",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns value 2535.1 (thousand persons, NACE O, EMP_DC, FR, 2024, flagged provisional), which matches the printed '2 535.1 thousand'.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=FR&time=2024"
+  },
+  {
+   "claim": "param:FR:gdp_eur_bn",
+   "fact_sha256": "9b3a30d87ed9ca411f1db321221b4717c0e14e20c2b8c3dbb6ca1ef2eaf15086",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 2991055.9 million EUR (B1GQ, FR, 2025, provisional); scaled to billions and rounded to one decimal that is 2 991.1, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=FR&time=2025"
+  },
+  {
+   "claim": "param:FR:renewables_pct",
+   "fact_sha256": "158cfec362ae52e4abd8980e842203e6762717ad871f19bea104632446883220",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 33.1 % for REN_ELC, FR, 2025 (provisional), matching the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=FR&time=2025"
+  },
+  {
+   "claim": "param:FR:elec_price_eur_mwh",
+   "fact_sha256": "c12f0bffa9532a1a94b20000da32e53d6d6a715dba76cf2f0872af8548c12b11",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1534 EUR per kWh for band IC, excluding VAT, FR, 2025-S2; converted to EUR/MWh that is 153.4, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=FR&time=2025-S2"
+  },
+  {
+   "claim": "param:FR:land_km2",
+   "fact_sha256": "81179816a224056881f95ac1a7a090efa8e96b64be828adbc8de2c2da1634f3c",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 633886 km2 (land area total, FR, 2026), matching the printed '633 886 km²'.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=FR&time=2026"
+  },
+  {
+   "claim": "param:FR:population_m",
+   "fact_sha256": "d38fdaaad54c37b50df8239ea2295efa6e7d837d61f64aaa74ca6c4f7ecf41e3",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 69112309 persons on 1 January 2026 for FR (provisional); scaled to millions and rounded to two decimals that is 69.11, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=FR&time=2026"
+  },
+  {
+   "claim": "indicator:FR:K2",
+   "fact_sha256": "e9d6dfd6670c043353d0babab4c15a4617d7334d220513c1e076abb64593aed9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "All three quotes are present: the France Identité page alone only says the app was EU-notified (developed by France Titres, with no explicit state-control statement), but the FranceConnect CGU names DINUM as the body that 'met en œuvre et opère' the service and the FranceConnect home page calls it 'un service de l'État', which together support 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.franceconnect.gouv.fr/cgu/"
+  },
+  {
+   "claim": "record:FR:water_control:operator",
+   "fact_sha256": "588cca57f790ce1dd5244a38302bcab979f3367c3d4250dd5db81ea31154d479",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The directory entry places 'Service central Vigicrues' under 'Direction générale de la prévention des risques (DGPR) > Service des risques naturels' and its mission text says it (the Schapi) runs the Vigicrues network and administers the national hydrometric database, which supports the printed body and its placement under the DGPR.",
+   "quote_found": true,
+   "checked_url": "https://lannuaire.service-public.gouv.fr/gouvernement/7e9f75fc-5862-4a33-8015-da82e7edfafd"
+  },
+  {
+   "claim": "record:FR:firearms_register:operator",
+   "fact_sha256": "865971d237c7afcc04f61f3bce9830562c95d3c19b9e3fda9b9e581d57bb50cb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page header reads 'Ministère De l'intérieur Système d'Information sur les Armes Espace Détenteurs' on an interieur.gouv.fr host, which supports the Ministry of the Interior as the body running the system.",
+   "quote_found": true,
+   "checked_url": "https://sia.detenteurs.interieur.gouv.fr/"
+  },
+  {
+   "claim": "record:FR:firearms_register:register",
+   "fact_sha256": "43d73a5b2185ab78ba6542e4feb00f49fc0a3ca65b25a8eb33a25337f3d2dc36",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page names the 'système d'information sur les armes' and refers to it as 'le SIA' elsewhere on the page, supporting the printed name; note the word 'national' is a descriptive qualifier the page does not itself use, though the system is the Interior Ministry's single firearms system.",
+   "quote_found": true,
+   "checked_url": "https://sia.detenteurs.interieur.gouv.fr/"
+  },
+  {
+   "claim": "record:FR:central_bank:operator",
+   "fact_sha256": "2bdb7319fe18d4293ccccba5d26f0a7819ad42523b95e1eb0069e1a93f62492c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states 'The Banque de France operates the French component of the Eurosystem's TARGET services', naming the Banque de France as operator as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.banque-france.fr/en/financial-stability/institutional-framework/systems-operated-banque-de-france"
+  },
+  {
+   "claim": "record:FR:central_bank:register",
+   "fact_sha256": "b46e99ed059540ba25b23a4b728fd10bcb4f5611ea36d2ed076d90b5636f76d2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same sentence names the system as the 'French component of the Eurosystem's TARGET services' (RTGS, securities settlement, instant payments), exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.banque-france.fr/en/financial-stability/institutional-framework/systems-operated-banque-de-france"
+  },
+  {
+   "claim": "record:FR:land_property:count",
+   "fact_sha256": "61e73904d04fa9245a973fed4906f8c51d5fec930879dcb60ac3273a5b2d33bc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page (dated today) says 'Le plan cadastral français disponible en ligne est composé de 598747 feuilles de plan aux formats image ou vecteur', matching the printed count and unit.",
+   "quote_found": true,
+   "checked_url": "https://www.cadastre.gouv.fr/scpc/accueil.do"
+  },
+  {
+   "claim": "record:FR:land_property:register",
+   "fact_sha256": "3a6dc81d39a9796332592be4f05a7a8cc6c426f4f6b2f1e6b90e4513cb263a7f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is the consultation service for 'le plan cadastral français', which supports the printed register name 'plan cadastral (cadastral plan)'.",
+   "quote_found": true,
+   "checked_url": "https://www.cadastre.gouv.fr/scpc/accueil.do"
+  },
+  {
+   "claim": "record:FR:statistics_microdata:operator",
+   "fact_sha256": "ee1a3c592a9b80e345e0b2bd472eed8e4d92f1c3fc7e8c42b6dfecbe2c82aabb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The governance page says 'Le CASD est un groupement d'intérêt public rassemblant l'État représenté par INSEE, le GENES, le CNRS, ...', which supports the printed statement that CASD is a GIP whose members include the State represented by Insee.",
+   "quote_found": true,
+   "checked_url": "https://www.casd.eu/le-casd/gouvernance-et-missions/"
+  },
+  {
+   "claim": "record:FR:statistics_microdata:register",
+   "fact_sha256": "6f096633fb0fab6b4f21525e00274e143225d8ff2c120b95d5469e9c55c406bc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states the GIP's main purpose is 'd'organiser et de mettre en œuvre des services d'accès sécurisé pour les données confidentielles', which the printed name translates directly.",
+   "quote_found": true,
+   "checked_url": "https://www.casd.eu/le-casd/gouvernance-et-missions/"
+  },
+  {
+   "claim": "record:FR:statistics_microdata:foreign_dependency",
+   "fact_sha256": "acfe80893c982298995066c930d38984f9906411b4f9e2a6ef1800748781aa10",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote only says CASD designed its own dedicated secure equipment (the SD-Box) following three principles; neither it nor the rest of the page says where the central infrastructure is hosted, by whom or in which country, so it does not establish the categorical label 'National infrastructure' over an EU or non-EU provider.",
+   "quote_found": true,
+   "checked_url": "https://www.casd.eu/technologie/infrastructure/"
+  },
+  {
+   "claim": "record:FR:residence_permits:operator",
+   "fact_sha256": "84e8e45695ba8e519fb9b1f96ec9a10a47542ca5425b79cc1d01bf16fe13b0a9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Under 'Qui est responsable de ce fichier ?' the full sentence reads 'La direction générale des étrangers en France (DGEF) du ministère de l'Intérieur est responsable de ce fichier', naming the DGEF as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/application-de-gestion-des-dossiers-des-ressortissants-etrangers-en-france-agdref"
+  },
+  {
+   "claim": "record:FR:residence_permits:register",
+   "fact_sha256": "2ca8a9c99762ec5ec9e5c26eb6d70dbfa8dc1bcbbd322c812aec06849a489f19",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is titled 'Application de gestion des dossiers des ressortissants étrangers en France (AGDREF)' and says AGDREF serves to guarantee the right of residence of regular foreign nationals and combat irregular stay, which supports the printed name and purpose.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/application-de-gestion-des-dossiers-des-ressortissants-etrangers-en-france-agdref"
+  },
+  {
+   "claim": "record:FR:police_records:operator",
+   "fact_sha256": "d8c9dd4d6d453e6bd6e8ea9ad0410ae013d01802343d2de07aa5fcf4ea38f300",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "On the FAED page, the answer to 'Qui est responsable de ce fichier ?' is 'La direction centrale de la police judiciaire du ministère de l'Intérieur', which supports the printed operator of FAED.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/faed-fichier-automatise-des-empreintes-digitales"
+  },
+  {
+   "claim": "record:FR:facial_biometric:operator",
+   "fact_sha256": "5c9be8553983a9231e930d6ffe3cba1bb6093396fc79db091b37eba6ea5327bb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "On the TES page, 'Qui est responsable du fichier ?' is answered 'Le ministère de l'Intérieur est responsable du fichier', which supports the Ministry of the Interior as controller of TES.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes"
+  },
+  {
+   "claim": "record:FR:facial_biometric:register",
+   "fact_sha256": "0af884e6a344edb5e6cf1a7d49619edd60bb4d995e70eb629da9226590108f58",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the TES file centralises 'l'image numérisée du visage et des empreintes digitales ... de l'ensemble des demandeurs de carte nationale d'identité et de passeport', matching the printed description.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes"
+  },
+  {
+   "claim": "record:FR:fingerprint_biometric:operator",
+   "fact_sha256": "e07f486e4aad11344cc7ed8235d992f88b63792dae6455b01f54bda1df6d85f4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same TES page states the Ministry of the Interior is responsible for the file, which supports the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes"
+  },
+  {
+   "claim": "record:FR:fingerprint_biometric:register",
+   "fact_sha256": "b8abb253ba8b18b3fdbd313366f0963ad1a10730aa6dfbd384c66307fac37c33",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page's lead reads that the TES file 'contient des données personnelles, notamment les empreintes digitales, pour la création et la gestion des cartes nationales d'identité et des passeports des Français', which supports the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.cnil.fr/fr/le-fichier-des-titres-electroniques-securises-tes"
+  }
+ ]
+}

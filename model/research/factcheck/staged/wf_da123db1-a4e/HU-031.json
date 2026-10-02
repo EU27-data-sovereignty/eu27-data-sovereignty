@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "HU-031",
+ "iso": "HU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:HU:breeder_documents:register",
+   "fact_sha256": "12fbaa83fc69e051ee83c04fb4ea34550b16dd96539bcbd95130015f59e6628c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act I of 2010 §69(2) lists the parts of the electronic civil register, item c) being 'az anyakönyvi és névváltoztatási okiratok nyilvántartása (a továbbiakban: okiratnyilvántartás)', which is exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1000001.TV"
+  },
+  {
+   "claim": "record:HU:emergency_communications:register",
+   "fact_sha256": "61180153a2b556818300031022e79994a3b7692f6ec9abc1715230a1a20f875d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Decree 346/2010 §2 point 12 defines EDR as a mobile radio network meeting the Schengen Implementing Convention requirements and continues 'keskeny- vagy szélessávú digitális kormányzati célú rádióhálózat', matching 'Schengen-compliant digital government radio network'; the pro-m.hu quote is also verbatim and names the same EDR.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1000346.KOR"
+  },
+  {
+   "claim": "record:HU:education:register",
+   "fact_sha256": "22b86cb16256599f1e2632eda82ad7a3bac3fc0fd6e2cce5419e9e6124afba05",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act CXC of 2011 §57(7) requires a central register ('központi nyilvántartást kell vezetni') of issued érettségi (matura) certificates, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1100190.TV"
+  },
+  {
+   "claim": "record:HU:border_control:operator",
+   "fact_sha256": "f588a92e588801f0045fee86f490485e97ed6d97528339af6b85727537ff32b8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act CLXXXI of 2012 §2(1)a) states the N.SIS Hivatal is responsible for handling the data in the national copy database, as printed.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1200181.TV"
+  },
+  {
+   "claim": "record:HU:border_control:register",
+   "fact_sha256": "ceb760c196d14606b3aa6eae524a29c5f43edc6902c4de1ef6c9f83084d34f9f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote sits in definition 11 'N.SIS: a SIS magyar nemzeti rendszere, amely a következő részekből áll: a)…e)', whose parts d) and e) are the full copy of the SIS database (national copy) and the national infocommunication backbone; 'among other parts' is accurate since a)–c) are also listed.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1200181.TV"
+  },
+  {
+   "claim": "record:HU:electoral_roll:register",
+   "fact_sha256": "9a99eb8b8c2b9a6698235d1903b824e6f45b368029d8bce907f7ff2cc8c708c2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act XXXVI of 2013 §82(1) reads verbatim that the central electoral register (központi névjegyzék) is an electronic register kept by the Nemzeti Választási Iroda.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1300036.TV"
+  },
+  {
+   "claim": "record:HU:statistics_microdata:register",
+   "fact_sha256": "38636cf00e73a377af84e541c374af82cb4a939d49e985f95d0a1fc36a179d62",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is item d) of §8(2) 'A KSH feladatai' in Act CLV of 2016, so the body carrying out the census and microcensus is the KSH, as printed.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1600155.TV"
+  },
+  {
+   "claim": "record:HU:beneficial_ownership:register",
+   "fact_sha256": "3405d5e3792e539f1fc6a562e641c994242013eb3e38646c6e620ea1b2467bae",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act XLIII of 2021 §4(1) states the tényleges tulajdonosi nyilvántartás contains the following data of the adatszolgáltatók (reporting entities), matching the printed sentence.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2100043.TV"
+  },
+  {
+   "claim": "record:HU:residence_permits:foreign_dependency",
+   "fact_sha256": "6efca0f646270c59a4074baa6bad44670d8d6c9559c765125ca79f683bc1e5cf",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act XC of 2023 §253 allows data-processing for the central aliens-policing register to be entrusted only to a state administrative body or a wholly state-owned business entity, which supports classifying the infrastructure as national.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2300090.TV"
+  },
+  {
+   "claim": "record:HU:residence_permits:register",
+   "fact_sha256": "307f8dbe3f0ab4934c4db6f025a2de142b09545e83f0850f523a2d3eb2420626",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§251 says the aliens-policing authority handles third-country nationals' personal data in the sub-registers of the központi idegenrendészeti nyilvántartás, as printed.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2300090.TV"
+  },
+  {
+   "claim": "record:HU:authentication_audit_log:register",
+   "fact_sha256": "469230b28a01f7b787690e7af609ce2938910401d11b37c7c08502eece7cc527",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act CIII of 2023 §14/A(1) says the body keeping the (digital citizenship) register records in an automated system called naplórendszer the information connected with data-processing operations performed in the register; the generic singular covers all operations, so 'every' adds nothing the law does not say.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2300103.TV"
+  },
+  {
+   "claim": "record:HU:digital_identity_credentials:register",
+   "fact_sha256": "a8b637b84efd62923f8e98f923a2a09f3fb5110bf0ec4b37101bc306ba818d62",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Definition 10 of Act CIII of 2023 reads verbatim 'digitális állampolgárság nyilvántartás: az e törvénnyel létrehozott ügyfél-regisztrációs nyilvántartás', matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2300103.TV"
+  },
+  {
+   "claim": "record:HU:breeder_documents:operator",
+   "fact_sha256": "66ed24c25fdc1a069bb226125f4b7f9ba6cad0985ea03e59778dd9eb2442179f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§174/C(1) point 3 designates 'a minisztert' as the nyilvántartó szerv under Act I of 2010 on civil registration; it is in subtitle 17 'A tudományos és technológiai miniszter feladat- és hatásköre', whose §168 defines 'miniszter' as that minister, so the printed operator is correct.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR"
+  },
+  {
+   "claim": "record:HU:facial_biometric:operator",
+   "fact_sha256": "24d70c44fdd74ebdec853233418e2618fb81a10d1103dcc59760d9d22cf724be",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§174/C(1) point 13 designates the minister as központi szerv under Act CLXXXVIII of 2015 on the facial image analysis register; the subtitle's §168 identifies 'miniszter' as the tudományos és technológiai miniszter.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR"
+  },
+  {
+   "claim": "record:HU:fingerprint_biometric:operator",
+   "fact_sha256": "aa32613a118e9442184bd1689c823e72b1fc4705babeb7732539dabeaeaf99c7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§36(1)a), in subtitle 5 where §34 defines 'miniszter' as the belügyminiszter, designates the minister as bűnügyi nyilvántartó szerv under Act XLVII of 2009, whose title covers the register of criminal and law-enforcement biometric data, as printed.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR"
+  },
+  {
+   "claim": "record:HU:residence_permits:operator",
+   "fact_sha256": "8419aa39877ce164f93920aa69047d3ff65592341575901d21753ec181c00622",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§34(1) lists 'idegenrendészetért és menekültügyért' (point 6) among the belügyminiszter's responsibilities, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR"
+  },
+  {
+   "claim": "record:HU:vehicle_licensing:operator",
+   "fact_sha256": "99125b1bbd09045d5b4f00d25041d6ffcc33963c448115731b3ce4b1c98f9ac9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§174/C(1) point 6 designates the minister as közúti közlekedési nyilvántartó szerv under Act LXXXIV of 1999; the subtitle's §168 defines the minister as the tudományos és technológiai miniszter.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2600090.KOR"
+  },
+  {
+   "claim": "indicator:HU:L2",
+   "fact_sha256": "f0a4e29d718e18ec8b2928b576c13f01222c3242e2e9e2021147a8113cdcf260",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act CLV of 2009 §5(4) sets the statutory classification levels (Szigorúan titkos / Titkos / Bizalmas / Korlátozott terjesztésű), and the NKI page confirms data classes defined in Annex 1 of Decree 418/2024, so the scheme is established in statute and binding regulation.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=a0900155.tv"
+  },
+  {
+   "claim": "indicator:HU:L1",
+   "fact_sha256": "b05f9776475f47f0fbc8a4004b46b614707afe80676ab04d85b1763be0d51175",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act LXIX of 2024 §9(4) permits foreign processing only on the basis of data classification; Decree 418/2024 Annex 1 allows F1 data without geographic restriction while higher classes are confined to the EEA or Hungary, and the NKI page (quote present save for a space before two closing parentheses) confirms location restrictions by class, so a conditional, class-dependent requirement supports 'Par",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=a2400418.kor"
+  },
+  {
+   "claim": "indicator:HU:C2",
+   "fact_sha256": "8b6e475ea11653351f3fc3df03375a98e4c2b88d949ed27e88af1cd50f90f599",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "Annex 1 point 4.2.2.4 of Decree 418/2024 names 'kormányzati felhő' as a permitted venue for F4 data, which presupposes a government cloud, but the decree does not state that such a platform is in operation rather than merely provided for, so it does not by itself establish 'in operation (not announced)'.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=a2400418.kor"
+  },
+  {
+   "claim": "indicator:HU:L3",
+   "fact_sha256": "4e843bc89946566229ed4aa41e7708a6881db6e515b6e18eabf61d983ed02500",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The NKI page recognises services on the US FedRAMP marketplace (and CSA CCM, C5, SOC 2 in table 1) as certified cloud services under Decree 418/2024; none of these requires immunity from non-EU law, which supports 'No'.",
+   "quote_found": true,
+   "checked_url": "https://nki.gov.hu/hatosag/tartalom/felho/"
+  },
+  {
+   "claim": "record:HU:benefits_pensions:operator",
+   "fact_sha256": "8afb682e17912417df1f0a089d0fff4491606080a9d246871f9f4fade68d974e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Decree 168/1997 §1(1)c) designates the Magyar Államkincstár Nyugdíjfolyósító Igazgatóság as a nyugdíjbiztosítási igazgatási szerv, and the Treasury page confirms the Directorate pays pensions nationwide, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99700168.KOR"
+  },
+  {
+   "claim": "record:HU:benefits_pensions:register",
+   "fact_sha256": "65815cd5d22dfa67968fb0dd99a04af23aeeb2a6f73be61086b1d5fc8550fe3c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Treasury page says it performs the tasks relating to 'a társadalombiztosítási jogszerzési nyilvántartással és a folyósításra kerülő ellátások nyilvántartásával', the two registers printed.",
+   "quote_found": true,
+   "checked_url": "https://www.allamkincstar.gov.hu/header-tartalmak/rolunk/a-kincstar-tevekenysege/a-kincstar-tevekenysege1"
+  },
+  {
+   "claim": "record:HU:government_payroll:register",
+   "fact_sha256": "0741e0ae87cf3913910a8ccb13b8712f1d6852debdfa25cf2c3a3c04a86fe67d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Áht. §44(1) says return-based payment obligations are met centrally, exclusively via the központosított illetményszámfejtés operated by the Kincstár, and the Treasury page describes that system; this matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1100195.TV"
+  },
+  {
+   "claim": "record:HU:public_finance:operator",
+   "fact_sha256": "bbe2fff658585b408c7de37fcc142d5c230ade24c9074cf8269ad80f55cb08ff",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Under 'A Kincstár a költségvetés végrehajtásának feladatkörében' the page says the Treasury keeps the records of central budget, separate state fund and social-security fund appropriations, supporting Magyar Államkincstár as the operating body.",
+   "quote_found": true,
+   "checked_url": "https://www.allamkincstar.gov.hu/header-tartalmak/rolunk/a-kincstar-tevekenysege/a-kincstar-tevekenysege1"
+  },
+  {
+   "claim": "record:HU:public_finance:register",
+   "fact_sha256": "e5a9a5d88e6f08e5ea0128c724e908a4ca7fc6ebbb5e57904073850b6904b325",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Treasury page names the system 'IFMIS – Integrated Financial Management Information System' i.e. 'Központi Költségvetés Végrehajtását Támogató Rendszer' and refers to it as 'A KKVTR rendszer', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.allamkincstar.gov.hu/nem-lakossagi-ugyek/kozponti-koltsegvetes-vegrehajtasat-tamogato-rendszer-kkvtr--ifmis1"
+  },
+  {
+   "claim": "indicator:HU:K2",
+   "fact_sha256": "386ea00a8c7506396898a50b58aa64a4d228aa33d4ddae08df16bacb9b6f9f7b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The DMÜ page says the agency owns six companies and that IdomSoft contributes 'as developer' to the Digital Citizenship Programme, and the Act says the Government designates the framework-service body and the digital citizenship provider; neither cited passage states who operates the eID scheme or that the operator is state-controlled, so 'Yes' is not established by these quotes.",
+   "quote_found": true,
+   "checked_url": "https://www.dmu.gov.hu/cikkek/portfolio"
+  },
+  {
+   "claim": "indicator:HU:C1",
+   "fact_sha256": "010ef970fe957a1cf781be9ef3000e54de75f0f8d31f4a59c16965464305d35e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The DMÜ page says the agency decides on mandatory use of, or exemption from, 'Kormányzati Adatközpont' services, which implies such services exist, but the quote does not say the state operates the data centre or that it is in operation today.",
+   "quote_found": true,
+   "checked_url": "https://www.dmu.gov.hu/rolunk"
+  },
+  {
+   "claim": "record:HU:authentication_audit_log:foreign_dependency",
+   "fact_sha256": "b2a6274970ac1f912027c540ba5a890431aa291f5595e4f685b22f1baa271e4a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The quote only says IdomSoft came into direct state ownership in July 2024; the page elsewhere names IdomSoft as the DÁP provider and operator, but never mentions the log system (naplórendszer) or where its infrastructure runs, so 'National infrastructure' rests on inference rather than the source.",
+   "quote_found": true,
+   "checked_url": "https://www.idomsoft.hu/rolunk/tortenetunk"
+  },
+  {
+   "claim": "record:HU:civil_registry:foreign_dependency",
+   "fact_sha256": "cd07947feddf86feab471001afc576e393d3b934ebf89f0580455a641ac9595e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote states IdomSoft is state-owned; the page nowhere mentions the civil register (anyakönyv) or who hosts it, so it does not support that the civil registry's infrastructure is national.",
+   "quote_found": true,
+   "checked_url": "https://www.idomsoft.hu/rolunk/tortenetunk"
+  }
+ ]
+}

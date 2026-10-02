@@ -1,0 +1,210 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "PL-047",
+ "iso": "PL",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:PL:digital_identity_credentials:operator",
+   "fact_sha256": "b50777088e9b817ea36fa2b4ef9420fd8badc23f9380701ae621fd9b18257ffc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF (consolidated text of the ustawa o informatyzacji działalności podmiotów realizujących zadania publiczne) contains Art. 20ab: 'Minister właściwy do spraw informatyzacji: 1) zarządza publicznym systemem identyfikacji elektronicznej;', which matches the printed article number, act and statement.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1241/text.pdf"
+  },
+  {
+   "claim": "record:PL:digital_identity_credentials:register",
+   "fact_sha256": "c68f834af2cf0a23b5f0dc6b2cb89b5685da388744652d69fe6db7d40b65c905",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The COI page says verbatim 'Profil zaufany jest środkiem identyfikacji elektronicznej notyfikowanym na poziomie średnim.', and the Sejm PDF (Art. 3 pkt 14) defines profil zaufany as an środek identyfikacji elektronicznej. 'Poziom średni' is the Polish eIDAS term for assurance level 'substantial', so the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.coi.gov.pl/realizacje/profil-zaufany"
+  },
+  {
+   "claim": "record:PL:electoral_management:operator",
+   "fact_sha256": "c7aa8bc6d596e2872404fe4be370a1a410371b6ecfd2ba844fa734b3b5743ecd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The consolidated Kodeks wyborczy PDF contains, at Art. 18 § 4, 'Minister właściwy do spraw informatyzacji prowadzi w systemie teleinformatycznym Centralny Rejestr Wyborców, a także zapewnia jego utrzymanie i rozwój...' (verbatim once a line-break hyphen is joined), naming that minister as the operator.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1261/text.pdf"
+  },
+  {
+   "claim": "record:PL:electoral_management:register",
+   "fact_sha256": "d74c2e45cfef295b7a49e821a9d29183777b27bbbd8518d49b66d48992fa9185",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Same Art. 18 § 4 sentence names the 'Centralny Rejestr Wyborców', and chapter 4 of the code is titled 'Centralny Rejestr Wyborców'; the printed register name matches.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/1261/text.pdf"
+  },
+  {
+   "claim": "record:PL:tax:register",
+   "fact_sha256": "1e80421e05cb04e05edc45fad45a750703847c354077a89e625db8d6e2b3ab14",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 8a ust. 1 in the PDF reads verbatim 'Nadanie NIP następuje przy użyciu Centralnego Rejestru Podmiotów – Krajowej Ewidencji Podatników, zwanego dalej „CRP KEP”, po dokonaniu zgłoszenia identyfikacyjnego.', which is what the report prints.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/151/text.pdf"
+  },
+  {
+   "claim": "record:PL:benefits_pensions:register",
+   "fact_sha256": "34300e9070ea87de2bb65e35d6e3629a90906da924241a29530d923f14b2d6c8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is items 3)-5) of Art. 33 ust. 1 of the ustawa o systemie ubezpieczeń społecznych, which opens 'Zakład prowadzi:' (the Zakład being ZUS in that act), so ZUS keeping the three central registers is supported by the page context.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/199/text.pdf"
+  },
+  {
+   "claim": "record:PL:health_records:operator",
+   "fact_sha256": "5bd96ab500b47d89789d062d2b4e5a6c32a0a7a6714d279930323c432bbc8011",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF (ustawa o systemie informacji w ochronie zdrowia, Art. 7 ust. 2) says verbatim (hyphen joined) that the administrator of the Elektroniczna Platforma Gromadzenia, Analizy i Udostępnienia Zasobów Cyfrowych o Zdarzeniach Medycznych is 'jednostka podległa ministrowi właściwemu do spraw zdrowia, właściwa w zakresie systemów informacyjnych ochrony zdrowia'. The statute never uses the label 'P1';",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/208/text.pdf"
+  },
+  {
+   "claim": "record:PL:business_registry:register",
+   "fact_sha256": "6080d8f57f799f5c21306cd3b464e6681d9e20acb2b76a04ceb335acc863a70d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 2 ust. 1 reads verbatim 'Centralną Ewidencję i Informację o Działalności Gospodarczej, zwaną dalej „CEIDG”, prowadzi w systemie teleinformatycznym minister właściwy do spraw gospodarki.', and Art. 2 ust. 2 pkt 1 confirms it records entrepreneurs who are natural persons (sole traders).",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/30/text.pdf"
+  },
+  {
+   "claim": "record:PL:civil_registry:operator",
+   "fact_sha256": "129ad21320413d39249b5ac4ba9a1246a528857e93b87a92686afac382e363d7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 6 ust. 2 of the PDF reads verbatim 'Utrzymanie i rozwój rejestru PESEL, w celu realizacji zadań określonych w ustawie, zapewnia minister właściwy do spraw informatyzacji', naming that minister as the body maintaining the PESEL register.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/384/text.pdf"
+  },
+  {
+   "claim": "record:PL:civil_registry:register",
+   "fact_sha256": "df970b86194b7e39dd888d69babbad5d5d36aa922793a3b814e17e45f2381a78",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 3 reads (hyphen joined) 'Ewidencję ludności prowadzi się w Powszechnym Elektronicznym Systemie Ewidencji Ludności, który stanowi rejestr PESEL, oraz w rejestrach mieszkańców, prowadzonych w systemie teleinformatycznym.', matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/384/text.pdf"
+  },
+  {
+   "claim": "record:PL:grid_control:operator",
+   "fact_sha256": "96ab515ba35dc5c529e357521354c92b1884fd8a188e35c8039d88ba84643eab",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Prawo energetyczne PDF contains the quoted phrase (hyphen joined) about 'operatora systemu przesyłowego elektroenergetycznego, działającego jako operator informacji rynku energii', and Art. 3 pkt 72 defines the OIRE as the entity managing and administering the central energy market information system; the printed operator is exactly the quoted wording.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/43/text.pdf"
+  },
+  {
+   "claim": "record:PL:grid_control:register",
+   "fact_sha256": "ebda03ae5520ec02c72ea3ca9619d8318269051d57adba2393be1dbd8a643f13",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 3 pkt 69 of the PDF reads verbatim 'centralny system informacji rynku energii – system informacyjny służący do przetwarzania informacji rynku energii na potrzeby realizacji procesów rynku energii...', matching the printed system name.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2026/43/text.pdf"
+  },
+  {
+   "claim": "indicator:PL:C2",
+   "fact_sha256": "588ad916867687d344c4e6158b0f6003cae834ca0b486b056d8c1da91fcffbc2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "All three quotes are on their pages: COI describes RChO in the present tense as something offices use now, the EZD RP page says the SaaS service is deployed in RChO with production availability since July 2025, and the strategy page refers to migrating further systems onto RCHO; together they show an operating, not merely announced, government cloud.",
+   "quote_found": true,
+   "checked_url": "https://coi.gov.pl/realizacje/wspolna-infrastruktura-informatyczna-panstwa"
+  },
+  {
+   "claim": "param:PL:gov_employment_k",
+   "fact_sha256": "56fc7e84c66a55e25b20d23cf3fb8c9a0fa0c4a4cb2b771d050bd09b349aa88c",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns value 1242.70 for PL, 2024, unit 'Thousand persons', which is the printed 1 242.7 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=PL&time=2024"
+  },
+  {
+   "claim": "param:PL:gdp_eur_bn",
+   "fact_sha256": "318513bcbd058963f4923367dc63b75eba4b646fb050ea47afef70092857e77f",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 922865.5 million euro (current prices) for PL 2025, which scales and rounds to the printed 922.9 EUR bn.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=PL&time=2025"
+  },
+  {
+   "claim": "param:PL:renewables_pct",
+   "fact_sha256": "70f15dcf89ab33cab669210fdde48b3eca42d90d8f3f6af8b6c7e005eb22495e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 32.5 (percentage) for PL, REN_ELC, 2025, matching the printed 32.5 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=PL&time=2025"
+  },
+  {
+   "claim": "param:PL:elec_price_eur_mwh",
+   "fact_sha256": "61a1ce4106b4c29108db471960733c578865b538face3dd8f7f542ef57c9dc85",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1935 EUR per kWh for PL, band IC (500-1 999 MWh), excluding VAT, 2025-S2; converted to EUR/MWh that is the printed 193.5.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=PL&time=2025-S2"
+  },
+  {
+   "claim": "param:PL:land_km2",
+   "fact_sha256": "7ca76aeb49283cf56885b0901b4b3087edecda13c9c8f1221ed3ba2fba6def9b",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 307236 square kilometres (land area, total) for PL 2026, matching the printed 307 236 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=PL&time=2026"
+  },
+  {
+   "claim": "param:PL:population_m",
+   "fact_sha256": "aaa104e798eef977a22044c66294536b2d0394417b333c33e169f16ac57ee3b7",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 36332765 persons (population on 1 January) for PL 2026, which rounds to the printed 36.33 million.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=PL&time=2026"
+  },
+  {
+   "claim": "record:PL:digital_identity_credentials:count",
+   "fact_sha256": "e4e01b798a0077c37860a7c0ab2907a7d003bde9178b30cef5454665a846a30e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The COI corporation page shows '> 14 mln of active trusted profiles' and '> 27 mln of mObywatel app downloads' (the '>' sign precedes each figure), which is what the report prints as over 14 million and over 27 million.",
+   "quote_found": true,
+   "checked_url": "https://www.coi.gov.pl/corporation"
+  }
+ ]
+}

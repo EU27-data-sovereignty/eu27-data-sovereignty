@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "DK-015",
+ "iso": "DK",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "indicator:DK:K2",
+   "fact_sha256": "d7308b38ff2d8b36b02355275ec3273e5a8da7711e40b2bba9b3aeaa1d7643ef",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the MitID partnership holds the rights to the solution, and describes that partnership as a collaboration between the public sector (Digitaliseringsstyrelsen representing state, regions and municipalities) and the banks (via a subsidiary of Finans Danmark), with Nets DanID as contracted developer/operator. A jointly state-and-bank-controlled scheme supports 'Partly'.",
+   "quote_found": true,
+   "checked_url": "https://digst.dk/it-loesninger/mitid/om-mitid/"
+  },
+  {
+   "claim": "record:DK:authentication_audit_log:operator",
+   "fact_sha256": "7b1829de108c329e741c1a3764dc7dd223479ccb002e82088e7c00ca35b57d2b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes are on their pages: Digitaliseringsstyrelsen publishes the tender for NemLog-in infrastructure operation and calls it a society-critical part of public digital infrastructure, and the persondata page names it data controller for NemLog-in. Note the tender page also says infrastructure operation is contracted to NNIT (now Aeven) until March 2029; the printed statement names the responsi",
+   "quote_found": true,
+   "checked_url": "https://digst.dk/nyheder/nyhedsarkiv/2026/januar/drift-af-nemlog-in-sendes-i-udbud/"
+  },
+  {
+   "claim": "record:DK:authentication_audit_log:count",
+   "fact_sha256": "d4c49a02cd2658cd1ca10d1aea411a59dc91e325525ce74c44268809b58b0545",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The statistics page states verbatim that on average around 35 million logins per month are made through NemLog-in (updated 6 March 2026), which is exactly what is printed.",
+   "quote_found": true,
+   "checked_url": "https://digst.dk/tal-og-statistik/"
+  },
+  {
+   "claim": "param:DK:gov_employment_k",
+   "fact_sha256": "1e68c42bf199bb7463c91d495abdb9688fde9f0679e2cac670c48243beea3bd2",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 169.82 thousand persons for DK, NACE O, EMP_DC, 2024; rounded to 169.8 thousand matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=DK&time=2024"
+  },
+  {
+   "claim": "param:DK:gdp_eur_bn",
+   "fact_sha256": "b0b42d05059bf8f8d7605e6dbc9708d8c27efe1e88184207c9942e1d15cdef3b",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 417844.1 million EUR for DK, B1GQ, 2025; scaled to billions and rounded that is 417.8 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=DK&time=2025"
+  },
+  {
+   "claim": "param:DK:renewables_pct",
+   "fact_sha256": "c807162ea022f39a64fcbd40a628754a70e8515e0a50d65edbf19bdb8d813980",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 77.7 % for DK, REN_ELC, 2025 (status flag 'p', provisional), matching the printed 77.7 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=DK&time=2025"
+  },
+  {
+   "claim": "param:DK:elec_price_eur_mwh",
+   "fact_sha256": "221b030fa296d9736ffc28182a605b71930ed50e72fba8bffb5000e83cb2f282",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1216 EUR per kWh for DK, band MWH500-1999, excluding VAT, 2025-S2; scaled to EUR/MWh that is 121.6 as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=DK&time=2025-S2"
+  },
+  {
+   "claim": "param:DK:land_km2",
+   "fact_sha256": "07dfd147ea4ef77d711cf650abfec4a5f1cd0b48e37ebecaa47041c31f4d5e6a",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 41987 km2 for DK, landuse L0008, 2026, exactly the printed 41 987 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=DK&time=2026"
+  },
+  {
+   "claim": "param:DK:population_m",
+   "fact_sha256": "e4b5499ad7c046cbc5ebee6f5f2a05e4d4a887310d2516de57645ffe7b3a1b30",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 6 025 603 persons for DK on 1 January 2026; scaled and rounded that is 6.03 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=DK&time=2026"
+  },
+  {
+   "claim": "record:DK:authentication_audit_log:register",
+   "fact_sha256": "dc35d8a0f34c4edce5dde8762b58bad2b2138d35dd6e9a8c422b6f6e5ba257fc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes found. The English digst page says NemLog-in is a shared user management infrastructure and central entry point for logging on to digital services (and that it gives access to all public-sector self-services), and the executive order defines it as the joint public digital infrastructure solution enabling users to interact with digital self-service solutions. That supports the printed n",
+   "quote_found": true,
+   "checked_url": "https://en.digst.dk/systems/nemlog-in/"
+  },
+  {
+   "claim": "indicator:DK:C2",
+   "fact_sha256": "f6cd37b647aefd5de7122fcf7c2ba18c3f25bebeb66abdf15eb2799842c02728",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The GovCloud front page (Statens It) says GovCloud is being phased out and replaced by SIT Cloud Kubernetes Services and takes no new customers, i.e. a state-run cloud platform currently exists and runs; the annual report confirms SIT Cloud is under development. A government cloud is thus in operation, though the source shows it is in transition rather than a stable platform.",
+   "quote_found": true,
+   "checked_url": "https://govcloud.dk/"
+  },
+  {
+   "claim": "indicator:DK:C1",
+   "fact_sha256": "2baec36d0b728d6709287f87128117164ce516c30b8e74cba99b798231c8d674",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "All three quotes found. The GovCloud page says applications and data are at all times located in Statens It's data centres in Denmark, the 2025 annual report records work in progress on a new data centre (and expansion of current data centres), and Statens It describes itself as the state's IT operations provider. Together they support state-operated data centres in operation today.",
+   "quote_found": true,
+   "checked_url": "https://govcloud.dk/om-govcloud/"
+  },
+  {
+   "claim": "record:DK:residence_permits:register",
+   "fact_sha256": "8d272bfc4279f8f1bc5f50791ca01a15f75a3a97765e3155dff92b3ab1913e4d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is on the page, and the page goes on to list the systems holding data in the immigration field, the first being 'Udlændinge Informations Systemet (UIS)', with 'tidligere UIP-portalen' stated. The printed description matches the page.",
+   "quote_found": true,
+   "checked_url": "https://nyidanmark.dk/da/Collaborators/uip"
+  },
+  {
+   "claim": "record:DK:public_finance:register",
+   "fact_sha256": "9f68dcf897bf4f7f304be4fa39ca35bea26064626f101ad9d28de28d135fce75",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is on the page, which also says SBRL is, with the Finance Act for 2025, the new IT solution for the Finance Act and state accounts, and that the accounts part targets the 2025 state accounts; this supports 'from FY2025'.",
+   "quote_found": true,
+   "checked_url": "https://oes.dk/digitale-loesninger/statens-bevillings-og-regnskabsloesning/"
+  },
+  {
+   "claim": "record:DK:government_payroll:count",
+   "fact_sha256": "9496214918145d446faf4171ef8ef8e98e7b4ea3f0ca5465abfeaeaa45212b35",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that salary is paid every month to approx. 180,000 state employees, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://oes.dk/digitale-loesninger/statens-loenloesning/"
+  },
+  {
+   "claim": "record:DK:government_payroll:register",
+   "fact_sha256": "6e5878c1a94e1a903fc59095e1955ae665e37c51a1b4a5d9ac34017cac4a440f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is Økonomistyrelsen's page on Statens Lønløsning and the quote names it as the solution supporting state salary and pension payments; the printed name and gloss match.",
+   "quote_found": true,
+   "checked_url": "https://oes.dk/digitale-loesninger/statens-loenloesning/"
+  },
+  {
+   "claim": "record:DK:government_payroll:operator",
+   "fact_sha256": "3ccc22c4e7d60359f6e150fa50c9f8434457a9abe4c57c0b3f4d4c390da60513",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote says Økonomistyrelsen is developing SLP to replace the current Statens Lønløsning, and the page sits in Økonomistyrelsen's own 'digitale løsninger' section that lists Statens Lønløsning among its solutions. The source presents the agency as the body responsible for the system; it does not say whether technical operation is outsourced.",
+   "quote_found": true,
+   "checked_url": "https://oes.dk/digitale-loesninger/udvikling-og-udbud/statens-nye-loensystem-under-udvikling/"
+  },
+  {
+   "claim": "record:DK:firearms_register:operator",
+   "fact_sha256": "a349a1f726ed51325c5b3a96316e40d0bb7b972cb0b8e50515b4ea8e6aab6ed3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes found. The politi.dk page states elsewhere that Rigspolitiet is data controller for Politiets Våbenregister, and the cited quote says Rigspolitiet and the police districts may use it for investigations and supervision of permits; the executive order says permits are registered by the police in the register. The printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger"
+  },
+  {
+   "claim": "record:DK:firearms_register:register",
+   "fact_sha256": "bfdb1b713c09b7574721fb4bfb6527900b5293e94127a8ddaec476304d687365",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that Rigspolitiet is data controller for Politiets Våbenregister, and the executive order names 'Politiets Våbenregister'; the printed name and data-controller note match.",
+   "quote_found": true,
+   "checked_url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger"
+  },
+  {
+   "claim": "record:DK:issuance_history:operator",
+   "fact_sha256": "ba7053a6c9e49a545548d15650412ded6ea9aba094b34fae4d8fd86a1b03d4b6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The cited quote gives the retention rule (deleted two years after expiry or at the latest two years after the holder's death), and the same page states that Rigspolitiet is data controller for Det Centrale Pasregister; together they support the printed operator and retention.",
+   "quote_found": true,
+   "checked_url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger"
+  },
+  {
+   "claim": "record:DK:issuance_history:register",
+   "fact_sha256": "f51974aff4217a924ccede592fdfe443aa71d47ba072820fb127a9fb5b169b8b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that Rigspolitiet is data controller for Det Centrale Pasregister (Pasregistret), and the passport executive order refers to Det Centrale Pasregister; the printed name and controller match.",
+   "quote_found": true,
+   "checked_url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger"
+  },
+  {
+   "claim": "record:DK:judicial_criminal:operator",
+   "fact_sha256": "89f7afc59f4ca2d6e163ff18966e5e69799d28173a51893c7a487e0ff327af31",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that Rigspolitiet is data controller for the Kriminalregister, which is separately regulated by the kriminalregisterbekendtgørelse; exactly what is printed.",
+   "quote_found": true,
+   "checked_url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger"
+  },
+  {
+   "claim": "record:DK:judicial_criminal:register",
+   "fact_sha256": "e54137fc381f7e2654a53fb832977a9fbfec04f3738fb206ad4c6068b15c1646",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The politi.dk page names Det Centrale Kriminalregister (Kriminalregistret), and the 2026 executive order title names Det Centrale Kriminalregister (Kriminalregisteret); the printed name matches.",
+   "quote_found": true,
+   "checked_url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger"
+  },
+  {
+   "claim": "record:DK:police_records:register",
+   "fact_sha256": "d81a8369d5292bf657c2b6afdb2688988cf7392adb7fbdfaf6f6483fa3ab1731",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The politi.dk page refers to the police case management system POLSAS, and the 2025 order lists Politiets Sagsstyringssystem in Rigspolitiet's central system portfolio; the printed name and description match.",
+   "quote_found": true,
+   "checked_url": "https://politi.dk/om-hjemmesiden/politiets-brug-af-personoplysninger"
+  },
+  {
+   "claim": "record:DK:emergency_communications:operator",
+   "fact_sha256": "54197d4f9d4306965269ffafdcbeeff21295ed4b8435d5012d6ad9bc6de3ac43",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote is on the page and supports CFB being part of the Ministry of Civil Security and Emergency Preparedness, but the cited page nowhere mentions Dansk Beredskabskommunikation A/S or network operation; that clause is added without support from the cited source (it appears only on the uncited om-sine page).",
+   "quote_found": true,
+   "checked_url": "https://sikkerhedsnet.dk/om-cfb"
+  },
+  {
+   "claim": "record:DK:emergency_communications:register",
+   "fact_sha256": "22a4b25ebd090af6a755f4d75dadb08bd19dafffdab24df7b35c317aacd6334d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page opens with 'SINE (Sikkerhedsnettet) er Danmarks radionet til beredskabskommunikation' and the cited quote states use is mandatory for emergency authorities under beredskabsloven § 29; the printed name and description match.",
+   "quote_found": true,
+   "checked_url": "https://sikkerhedsnet.dk/om-sine"
+  },
+  {
+   "claim": "record:DK:customs:register",
+   "fact_sha256": "0607fa3b66bf24eefce8a3ad8206d573ade4170a0b0562e72bb15a0e625576bd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page title is 'DMS (Declaration Management System)' and the quote says the DMS customs system handles import, export and transit (forsendelse); the printed name and scope match.",
+   "quote_found": true,
+   "checked_url": "https://toldst.dk/erhverv/toldsystemer/dms"
+  },
+  {
+   "claim": "record:DK:education:count",
+   "fact_sha256": "2c7d88e5ce35022ed42fb0603f259481e9f58423897bb6d2169e3b749be34d3e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that around 100,000 students are administered in STADS, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/"
+  },
+  {
+   "claim": "record:DK:education:register",
+   "fact_sha256": "cc2c44fefd2dbe295a38b27b1a6d24a7e702dd09789773a3c3d7c1b7683dc89e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says STADS is the student administration system used at Danish universities and some artistic institutions; the printed name and gloss match.",
+   "quote_found": true,
+   "checked_url": "https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/"
+  },
+  {
+   "claim": "record:DK:crisis_management:register",
+   "fact_sha256": "c5625e15a1d73d2cb2ac7e5e8959043a7e2d2c956adedf3c58ac55cc75a7d471",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is on the page, which names Sirenevarslingssystemet, says there are about 1,000 sirens across Denmark covering about 80 % of the urban population, and that Beredskabsstyrelsen is responsible for operating them; this supports the printed name and the 'national' gloss.",
+   "quote_found": true,
+   "checked_url": "https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/"
+  }
+ ]
+}

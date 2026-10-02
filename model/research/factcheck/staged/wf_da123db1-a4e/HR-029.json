@@ -1,0 +1,290 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "HR-029",
+ "iso": "HR",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:HR:land_property:register",
+   "fact_sha256": "71e108fc2857488070a79d94c4bb9a225e2acd02fd8e0f4af6f1dca4ce459416",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 6(2) of the Land Registry Act reads verbatim 'ZIS je informacijski sustav u kojem se pohranjuju, održavaju i vode svi podaci zemljišnih knjiga i katastra', and 6(1) names ZIS as the Joint Information System of Land Registers and Cadastre; the same text is on zakon.hr/z/103. This is exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_06_63_1234.html"
+  },
+  {
+   "claim": "record:HR:facial_biometric:operator",
+   "fact_sha256": "c913bdd18e36322eab341c344fd6bb4553a3eb041280f607fcf4055a509e1102",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote is on the page, but the law lists four competent bodies: the ministries for internal affairs, foreign affairs, justice 'te ministarstvo nadležno za poslove obrane u dijelu koji se odnosi na obavljanje vojnopolicijskih poslova'. The printed sentence states the competent bodies 'are' three ministries and drops the defence ministry (military police), so it does not match the source's scope;",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2019_12_127_2551.html"
+  },
+  {
+   "claim": "record:HR:breeder_documents:register",
+   "fact_sha256": "29374f0c2decee622889388a23be1e403bf09f0bdb7672f8cdc722b70ad32895",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 42(1) of the civil-register rules says 'Spisi (predmeti) koji se odnose na upis u državne matice su spisi trajne vrijednosti', i.e. files relating to civil-register entries are of permanent value, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2021_10_117_2012.html"
+  },
+  {
+   "claim": "record:HR:education:register",
+   "fact_sha256": "089fae1d52c134a5b8d7c57fda051e212b8adcd3c66ef70539906550d574a63c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 5(1) of this higher-education records rulebook reads 'Središnju evidenciju svjedodžbi, diploma i dopunskih isprava o studiju (Digitalni registar diploma) vodi Ministarstvo', in a section about visoka učilišta; the printed name and the parenthetical 'Digital Register of Diplomas' match.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2023_03_36_614.html"
+  },
+  {
+   "claim": "record:HR:government_payroll:operator",
+   "fact_sha256": "11fb0769c28cf3debb9ddf038ea2c6846a738b7cf9f7e6b0b6d7c010b02c7313",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 3 point 6 says the data processor is 'Financijska agencija koja provodi obradu podataka u ime tijela nadležnog za službeničke odnose'; Fina is the Financial Agency, and 'civil-service body' renders 'tijelo nadležno za službeničke odnose'.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2023_06_59_997.html"
+  },
+  {
+   "claim": "record:HR:government_payroll:register",
+   "fact_sha256": "5cf2b535eadb94fc5552b8877934a1097320709fea06d62659c36b539fa61bfd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says 'Informacijski sustav Centraliziranog obračuna plaća u državnoj službi i javnim službama u vlasništvu je Republike Hrvatske', and the same law abbreviates the system as COP ('putem COP-a'), so the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2023_06_59_997.html"
+  },
+  {
+   "claim": "record:HR:fingerprint_biometric:register",
+   "fact_sha256": "1198019973a2342a203c78cc1f0f2bda4fc2d633d39f656dae8360cbffd93d77",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Article 12(5) of the ID Card Act only says a person need not give fingerprints if they were already taken and stored electronically in a public-document issuance procedure at the Ministry. It does not say they are held in 'central retention', which the printed statement adds; the source names no register or central store.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2015_06_62_1189.html"
+  },
+  {
+   "claim": "record:HR:issuance_history:register",
+   "fact_sha256": "ba37c645c2997d15cc03b86ca0c4ac2b2628ae981c09129b072ad67c0a9eea22",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 17(3) says a lost card is recorded as invalid 'u evidenciji osobnih iskaznica koja se vodi u informacijskom sustavu Ministarstva', and Article 8(1) of the same Act defines 'Ministarstvo' as the ministry responsible for internal affairs, so the printed register, system and content match.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2015_06_62_1189.html"
+  },
+  {
+   "claim": "record:HR:vehicle_licensing:register",
+   "fact_sha256": "4b7354a305afd4564cfbfd61099fab12a8d8978012b671ea2f6bfc7e094f1088",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 26(1) reads 'Evidencija o registriranim vozilima vodi se na informacijskom sustavu ministarstva nadležnog za unutarnje poslove', matching the printed register and the Ministry of the Interior information system.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2017_12_130_2993.html"
+  },
+  {
+   "claim": "record:HR:authentication_audit_log:register",
+   "fact_sha256": "9aefff3642203f56a9ce40feeaf8c7d4a26fd0d7d89e3f4d190ecaca1f6d8a92",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Clause 3.16 of the NIAS terms says the Moj Profil service within NIAS gives the user 'pregled povijesti korištenja vjerodajnice unutar zadnjih 60 dana', i.e. a credential-usage history visible for the last 60 days, as printed.",
+   "quote_found": true,
+   "checked_url": "https://nias.gov.hr/Home/TermsOfUse"
+  },
+  {
+   "claim": "record:HR:digital_identity_credentials:operator",
+   "fact_sha256": "61243727db538c9694775601fa1046eedf029720ecbec7c5f2ffdcdd4bbd529b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The definitions section states 'Administratori ili Administrator sustava znači tijelo državne uprave nadležno za digitalnu transformaciju', so the system administrator of NIAS is the state administration body for digital transformation, which is what is printed verbatim.",
+   "quote_found": true,
+   "checked_url": "https://nias.gov.hr/Home/TermsOfUse"
+  },
+  {
+   "claim": "record:HR:digital_identity_credentials:register",
+   "fact_sha256": "4e9df71bcd86eab92e8cd5b859579fad8d88593c91f31b58acc7d56ad68d23c5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The definitions name 'Nacionalnog identifikacijskog i autentifikacijskog sustava (u daljnjem tekstu: NIAS)', matching the printed name and abbreviation.",
+   "quote_found": true,
+   "checked_url": "https://nias.gov.hr/Home/TermsOfUse"
+  },
+  {
+   "claim": "indicator:HR:K1",
+   "fact_sha256": "a53d218f64de47bd12c043ac1d9d5b3a4f79736cb248314cff48b67c66fa646a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The AKD page says the company issues qualified certificates to citizens on the electronic ID card and 'Društvo je u 100 %-tnom vlasništvu Republike Hrvatske'; fina.hr/o-nama lists 'Osnivač: Republika Hrvatska' for Fina, which fina.hr/vjerujte-fini calls a qualified trust service provider. Both qualified trust service operators are state-owned, supporting 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.akd.hr/hr/o-nama/tvrtka-osnovni-podaci"
+  },
+  {
+   "claim": "indicator:HR:K2",
+   "fact_sha256": "493d2501b2adf3446dafc56bdae61c44e5a2620708dae5be27b7c3b1fdb1883f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The 2014 State Information Infrastructure Act says 'Sustav e-Građani je dio državnog informacijskog sustava' and includes the national identification and authentication system in it; the NIAS terms make a state administration body its administrator, and AKD, the eID certificate issuer, is 100% state-owned. All three quotes were found and together support 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2014_07_92_1840.html"
+  },
+  {
+   "claim": "record:HR:education:operator",
+   "fact_sha256": "7741a1f12246b39c52b1d009879916b18fac41e68a9436eb5316fec3defe51c8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page opens with 'e-Matica je centralizirani sustav Ministarstva znanosti, obrazovanja i mladih (MZOM)' and later states the quoted 'e-Matica je usluga Ministarstva ... a CARNET je Centar potpore', so both halves of the printed statement are on the page.",
+   "quote_found": true,
+   "checked_url": "https://www.carnet.hr/projekt/e-matica-2/"
+  },
+  {
+   "claim": "record:HR:trust_services_pki:foreign_dependency",
+   "fact_sha256": "ec88aa67815dfbc8584c45298bc31088104f01584a0856fdcaa7f9f95749c971",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says 'U AKD-u je uspostavljena PKI infrastruktura' consisting of AKD's own root AKDCA Root and the subordinate HRIDCA issuing eOI certificates under Croatian law, i.e. an in-house hierarchy at the Croatian eID certifier rather than an external EU or non-EU provider. Note the cited quote alone (HRIDCA issues eOI certificates) is thin; the 'national' reading rests on the surrounding sentenc",
+   "quote_found": true,
+   "checked_url": "https://www.eid.hr/hr/certifikati/akd-pki"
+  },
+  {
+   "claim": "record:HR:trust_services_pki:register",
+   "fact_sha256": "0440c95ad50bd179e14b45395e4962f85e347d0cee95d8e5eefc4592ce2837da",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says HRIDCA 'izdaje certifikate fizičkim osobama za potrebe eOI' and 'Certifikati koje izdaje AKD HRIDCA su identifikacijski i kvalificirani potpisni certifikati', matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.eid.hr/hr/certifikati/akd-pki"
+  },
+  {
+   "claim": "record:HR:beneficial_ownership:operator",
+   "fact_sha256": "1301910eec85370f4a792440d32d52cd31a654458eaea214994ccd17bd326ffd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states 'Operativno ga vodi Fina u ime Ureda za sprječavanja pranja novca, Ministarstva financija', exactly the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.fina.hr/javne-usluge-za-poslovne-subjekte/registri/registar-stvarnih-vlasnika"
+  },
+  {
+   "claim": "record:HR:beneficial_ownership:register",
+   "fact_sha256": "dec5a9741b8719bab43d99b40d09d40f23c3a44783a5575f7540511559a053ce",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page defines the Register of Beneficial Owners as 'središnja elektronička baza podataka o stvarnim vlasnicima pravnih subjekata i trustova', matching the printed description.",
+   "quote_found": true,
+   "checked_url": "https://www.fina.hr/javne-usluge-za-poslovne-subjekte/registri/registar-stvarnih-vlasnika"
+  },
+  {
+   "claim": "record:HR:trust_services_pki:operator",
+   "fact_sha256": "6470acc900366187996474c565f0fa543ec653a8d0f3d8ec33d5f4e23a9cc894",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says 'Fina je prvi kvalificirani pružatelj usluga povjerenja' and in the next sentence 'Izlistana je na nacionalnom Pouzdanom popisu pružatelja usluga povjerenja', so both the QTSP status and the national trusted-list listing are stated.",
+   "quote_found": true,
+   "checked_url": "https://www.fina.hr/vjerujte-fini"
+  },
+  {
+   "claim": "record:HR:central_bank:foreign_dependency",
+   "fact_sha256": "a97f1954cbf1662f480e74fee8212f8c4109a1dda4ac5b9eae376ef55df5ae77",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The HNB page says TARGET runs on the Single Shared Platform 'jointly operated by Deutsche Bundesbank, Banca d'Italia, Banque de France and Banco de España (4CB) on behalf of the Eurosystem' and that TARGET-HR is the HNB's component of it, so the central bank's RTGS runs on an EU-operated platform, supporting 'EU provider'.",
+   "quote_found": true,
+   "checked_url": "https://www.hnb.hr/en/core-functions/payment-system/payment-systems/targe-hr"
+  },
+  {
+   "claim": "record:HR:central_bank:register",
+   "fact_sha256": "f18f63c669e4f0a568bad98ccdb486ed61516bb3192ba165434f1358d6b582c1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states 'Payment operations in the Republic of Croatia are carried out through the TARGET-HR, EuroNCS and EuroNCSInst systems', matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.hnb.hr/en/statistics/statistical-data/payment-systems"
+  },
+  {
+   "claim": "record:HR:residence_permits:register",
+   "fact_sha256": "30285375303338f424f276c8dcb18c52c3e6bed8c7ac10afd70591abf143f575",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Foreigners Act's 'Sadržaj zbirke podataka' article says the Ministry keeps data collections on, item 3, 'državljanima trećih zemalja na kratkotrajnom, privremenom boravku, dugotrajnom boravku i stalnom boravku', which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://www.zakon.hr/z/142/zakon-o-strancima"
+  },
+  {
+   "claim": "record:HR:business_registry:register",
+   "fact_sha256": "836ae281faf714d57c00c88e192c5751edb2747715199c86a9a8e73366fa5740",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 3(4) of the Court Register Act reads 'Glavne knjige se povezuju u jedinstvenu bazu podataka za Republiku Hrvatsku', matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.zakon.hr/z/271/zakon-o-sudskom-registru"
+  },
+  {
+   "claim": "record:HR:tax:register",
+   "fact_sha256": "58fd70cae45f0bcf0f4a7def484113d6b5e23c002c00f15ee046d9815b9da918",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Tax Administration Act lists among its tasks 'razvoj, unaprjeđenje i korištenje informacijskog sustava Porezne uprave', naming the information system of the Tax Administration as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.zakon.hr/z/419/zakon-o-poreznoj-upravi"
+  },
+  {
+   "claim": "record:HR:breeder_documents:operator",
+   "fact_sha256": "b3d9345ad1d068c2181de30adcdee9531261a3d0820d7aaf69e2050e961665f4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 7 reads 'Državne matice u kojima je zadnji upis stariji od 100 godina, čuva Hrvatski državni arhiv', exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.zakon.hr/z/603/zakon-o-drzavnim-maticama"
+  },
+  {
+   "claim": "record:HR:civil_registry:operator",
+   "fact_sha256": "3301e51f7f4de7c9503b508457d395fb6d5665cb62b9adabe2d999557701da50",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 4 says 'Tijelo državne uprave nadležno za poslove opće uprave utvrđuje i vodi jedinstveni informacijski sustav državnih matica', matching the printed operator and system.",
+   "quote_found": true,
+   "checked_url": "https://www.zakon.hr/z/603/zakon-o-drzavnim-maticama"
+  },
+  {
+   "claim": "record:HR:tax:foreign_dependency",
+   "fact_sha256": "fa474d8af2dd8e71079b2ff2bf884afc4c759192fafe84e59ec9696374b4421b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page describes APIS IT as 'središnja ... informatička tvrtka u državnom vlasništvu' that develops and maintains the Tax Administration information system, with its own data centres enabling 'čuvanje i obradu podataka unutar Hrvatske', which supports 'National infrastructure'.",
+   "quote_found": true,
+   "checked_url": "https://znakovi.hgk.hr/proizvod/usluga-podatkovnog-centra-apis-it/"
+  }
+ ]
+}

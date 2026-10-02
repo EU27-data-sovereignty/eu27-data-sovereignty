@@ -1,0 +1,300 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "RO-050",
+ "iso": "RO",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:RO:facial_biometric:register",
+   "fact_sha256": "57d7b41b05e8fc2ab00ce8394689ae984d0fde1a131704887032c34c17a6604f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that biometric data consisting of the holder's facial image and fingerprints are collected in the CEI issuance process, which is exactly what is printed.",
+   "quote_found": true,
+   "checked_url": "https://carteadeidentitate.gov.ro/despre/"
+  },
+  {
+   "claim": "record:RO:trust_services_pki:register",
+   "fact_sha256": "1ce407254e68ba1115b11906d08e3648756a3cbf1e85c5640c46b76409f599a9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote says documents signed with the MAI-issued advanced electronic signature certificate have the same value as handwritten-signed ones; the surrounding paragraph says the CEI contains certificates issued free by MAI for advanced electronic signature, so 'on the CEI' is also on the page.",
+   "quote_found": true,
+   "checked_url": "https://carteadeidentitate.gov.ro/despre/"
+  },
+  {
+   "claim": "param:RO:gov_employment_k",
+   "fact_sha256": "9c3fba323a12abb954b00c5d9a43e03d8f9f7dc54bc602b4a94bf464619f9af2",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 409.7 (thousand persons, flag p = provisional) for RO, NACE O, 2024, matching the printed 409.7 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=RO&time=2024"
+  },
+  {
+   "claim": "param:RO:gdp_eur_bn",
+   "fact_sha256": "3575756be4e0dd034e13cb25d329af6932865979c33ad3a97f1a29164475593e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 380058.1 million EUR (flag p) for RO 2025, which scaled to billions and rounded is 380.1 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=RO&time=2025"
+  },
+  {
+   "claim": "param:RO:renewables_pct",
+   "fact_sha256": "3f66be87a2d9cab0d097a72c48352a8cf3205cd3c5ec055d6f2c82c22470fa79",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 49.9 % (flag p) for RO, REN_ELC, 2025, matching the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=RO&time=2025"
+  },
+  {
+   "claim": "param:RO:elec_price_eur_mwh",
+   "fact_sha256": "50c1a98142a9cd9c109cfd7d33cf46456978f7dc26d073c83535a404ca37f1cb",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1887 EUR/kWh for RO, band MWH500-1999, excluding VAT, 2025-S2; converted to EUR/MWh that is 188.7 as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=RO&time=2025-S2"
+  },
+  {
+   "claim": "param:RO:land_km2",
+   "fact_sha256": "8351231da83fa412640da582099cc7358dfd68a76c67f6db4f19655eb734f6a1",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 234270 km² for RO, landuse L0008, 2026, matching the printed 234 270 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=RO&time=2026"
+  },
+  {
+   "claim": "param:RO:population_m",
+   "fact_sha256": "0cff3cd787bbf1554a205c55cf00ead776a54b2681cc42b1676de593c7c6653d",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 19041322 persons (flag e = estimated) on 1 January 2026 for RO, which rounds to 19.04 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=RO&time=2026"
+  },
+  {
+   "claim": "record:RO:digital_identity_credentials:operator",
+   "fact_sha256": "5e270e4641e2e6a3fa1fabcb1de32b7276b718264bb51ace0b7415a094b121db",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that ROeID is the deliverable of the centralised digital identification platform project implemented by the Autoritatea pentru Digitalizarea României, which is what is printed (the printed text claims 'implemented', not more).",
+   "quote_found": true,
+   "checked_url": "https://roeid.ro/"
+  },
+  {
+   "claim": "record:RO:digital_identity_credentials:register",
+   "fact_sha256": "66c66dee9d261268f16ae4045ddd9848b3d6f20e22c7e4205b99da5f26612a10",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states ROeID is Romania's Single Sign-On solution through which digital identities can be generated and managed for all Romanian citizens; the printed two sentences restate this without adding anything.",
+   "quote_found": true,
+   "checked_url": "https://roeid.ro/"
+  },
+  {
+   "claim": "record:RO:water_control:operator",
+   "fact_sha256": "425be173a107613e04dddc202903cb4845e0e076bde166b54f06818ba0673057",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The WATMAN page says the project beneficiary is Administrația Națională 'Apele Române' and the total investment is 63 million euro, matching the printed name and figure.",
+   "quote_found": true,
+   "checked_url": "https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/"
+  },
+  {
+   "claim": "record:RO:water_control:register",
+   "fact_sha256": "5bff496e95412bd62718b6cfe3d9dfd86f4bfc42f39e03bb9a006a6c3e989a07",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page names WATMAN as 'Sistemul Informatic pentru Managementul Integrat al Apelor' and the same sentence continues 'prin modernizarea infrastructurii adecvate pentru prevenirea inundațiilor', so the flood-prevention aim is on the page, though that clause lies just beyond the recorded quote.",
+   "quote_found": true,
+   "checked_url": "https://rowater.ro/activitatea-institutiei/proiecte/proiecte-implementate/watman/"
+  },
+  {
+   "claim": "record:RO:border_control:register",
+   "fact_sha256": "32fc8105b828ac357250b02cd0928186128c884e4a6d79ce1ff8523d7aacf405",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The MAI Schengen bulletin states that Council Decision 2017/1908 of 12 October 2017 granted Romania and Bulgaria access to the Visa Information System (VIS), supporting the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://schengen.mai.gov.ro/index09.htm"
+  },
+  {
+   "claim": "record:RO:health_insurance:register",
+   "fact_sha256": "8570ed368c01de92040f5308fcc871de61634a019005ea45994e69162ec915d6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The page header 'SIUI Platforma Informatică a Asigurărilor de Sănătate' supports the name, but nothing on the page says who runs SIUI; it only shows a link to 'Portalul CNAS-SIUI' and a CNAS copyright line, which does not state that CNAS operates the platform, so 'run by CNAS' is an addition.",
+   "quote_found": true,
+   "checked_url": "https://siui.casan.ro/"
+  },
+  {
+   "claim": "record:RO:tax:register",
+   "fact_sha256": "201f9bbced4061d9d5fc803c18f36c883cf0fb9d6b7cc33b4389bd6c6c50eab4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The ANAF strategic plan says the Big-Data project 'va fi implementat în curând' (will be implemented soon) and that, over the next two years, it will consolidate the central database; the printed text presents this as something ANAF 'is consolidating' now, which the source does not say, and it names no register.",
+   "quote_found": true,
+   "checked_url": "https://static.anaf.ro/static/10/Anaf/Informatii_R/240917_%20Plan_%20StrategicANAF2025-2028.pdf"
+  },
+  {
+   "claim": "indicator:RO:K2",
+   "fact_sha256": "b23037dd18c84a7ec2d01cc79ade96e8fdf647954eca42e4783eed178795a52d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ROeID glossary defines the Operator as the Autoritatea pentru Digitalizarea României, a legal entity subordinate to the Ministry of Research, Innovation and Digitalisation, and the ADR article confirms ROeID is the recognised national eID scheme, so 'Yes' (state-operated) is supported; all three quotes were found on their pages.",
+   "quote_found": true,
+   "checked_url": "https://roeid.ro/glosar-termeni"
+  },
+  {
+   "claim": "indicator:RO:C2",
+   "fact_sha256": "626e6f35c268c571c169d9886e2111f4055fdb981f40dc0eba1e1b1e3d33b93b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "ADR lists the Government Cloud infrastructure under 'Proiecte în implementare', and the minister states the infrastructure component's works were received last year while the single digital interface is to be finalised this year; that is a partly operational platform, consistent with 'Partly'.",
+   "quote_found": true,
+   "checked_url": "https://www.adr.gov.ro/articole/adr-a-organizat-conferinta-de-status-a-proiectului-implementarea-infrastructurii-de-cloud-guvernamental"
+  },
+  {
+   "claim": "indicator:RO:K1",
+   "fact_sha256": "628baf9d7e9b0a435ca59f0cec5a010eac1e9edf116fdf54840521faaeeb2e3a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Romanian trusted list (scheme operator ADR) lists the Serviciul Român de Informații as a TSP whose 'SRI Root CA' and 'SRI Qualified e-Signatures CA' (CA/QC) services carry status 'granted' from 2026-07-10, and the ADR page confirms ADR is the state supervisory body; a state body operating a qualified trust service supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://trustedlist.adr.gov.ro/trustedlist.xml"
+  },
+  {
+   "claim": "record:RO:geospatial:register",
+   "fact_sha256": "423e30fc151062b46591b52e1a68aa18dcf377c6981b7bfb07ace84781a61385",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ANCPI homepage lists Geoportal among 'celelalte platforme online gestionate de ANCPI', so the printed statement that the Geoportal is one of the online platforms ANCPI manages is what the page says.",
+   "quote_found": true,
+   "checked_url": "https://www.ancpi.ro/"
+  },
+  {
+   "claim": "record:RO:central_bank:register",
+   "fact_sha256": "170c86c776a0e9d605076801f3ae3822452160bc271c684e9856fa89fcfcafb4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page, titled 'Infrastructuri ale pieței financiare operate de BNR', lists ReGIS, SaFIR and TARGET-România under 'Sisteme operate de BNR', supporting both the three names and the 'financial market infrastructures' wording.",
+   "quote_found": true,
+   "checked_url": "https://www.bnr.ro/2152-sisteme-operate-de-bnr"
+  },
+  {
+   "claim": "record:RO:education:register",
+   "fact_sha256": "722f9c4ff0c336f2ed3e0540844065cec960531c5b1ed705717b5c5d230a904e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ministry page says the newly created system will integrate data from existing platforms such as SIIIR, PMIPN and Edusal, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://www.edu.ro/proiect_sistem_integrat_management_informatii_educationale"
+  },
+  {
+   "claim": "record:RO:trust_services_pki:operator",
+   "fact_sha256": "42f728ff177587e04813ccaec4d261150889e3be5b77db2a59dedfbb5705dd5a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "On the Direcția Generală pentru Comunicații și Tehnologia Informației page, the directorate's duties include managing the Central PKI Certification Authority and the Certification Authority of the MAI central apparatus, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.mai.gov.ro/despre-noi/organizare/aparat-central/directia-generala-pentru-comunicatii-si-tehnologia-informatiei/"
+  },
+  {
+   "claim": "record:RO:border_control:operator",
+   "fact_sha256": "7e13658c3c887fbf97e7737844ca78ba7e45bae05b7fbeffe5ef82123801481c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Centrul Național SIS appears in the list headed 'Unități, instituții și structuri aflate în subordinea / în coordonarea / în cadrul Ministerului Afacerilor Interne', which supports 'a structure within, or subordinated to, the Ministry of Internal Affairs'.",
+   "quote_found": true,
+   "checked_url": "https://www.mai.gov.ro/despre-noi/organizare/structuri-in-subordinea-in-cadrul-mai/"
+  },
+  {
+   "claim": "record:RO:police_records:operator",
+   "fact_sha256": "cf10a9dcfdf02988b72195b2f2cad7d8784c77356b5d8215c61384591b191094",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The full sentence on the page reads 'Ministerul Afacerilor Interne, prin structura sa de specialitate, este autoritatea publică centrală care gestionează și răspunde de buna funcționare a SINS, de integritatea semnalărilor', matching the printed subject, role and responsibilities.",
+   "quote_found": true,
+   "checked_url": "https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html"
+  },
+  {
+   "claim": "record:RO:police_records:register",
+   "fact_sha256": "2b074e0dfcd4ca29fa67a6049b96e77e62cbb47a2e5ec16ff101ab5fb4e84386",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states that Romania established the Sistemul Informatic Național de Semnalări (SINS) containing alerts of national and Schengen interest issued by the competent national authorities, which the printed text restates.",
+   "quote_found": true,
+   "checked_url": "https://www.politiadefrontiera.ro/ro/main/pg-sistemul-de-informatii-schengen-87.html"
+  },
+  {
+   "claim": "record:RO:electoral_roll:register",
+   "fact_sha256": "9d106404163ddfa6634a895546087b95b66da35020bfa87a43cd7202e74d1e8a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF defines the Registrul electoral as a national IT system for registering and updating the identification data of Romanian citizens with the right to vote and their assignment to polling stations, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.registrulelectoral.ro/upload/public/FormulareCereri/Nota%20de%20informare%20finala%20RE.pdf"
+  },
+  {
+   "claim": "indicator:RO:L2",
+   "fact_sha256": "7ef639fa032b19614c462fccec3847f02b18c03dbd3f117f72c3f13a226e4c16",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF is Law 182/2002 on the protection of classified information (consolidated form), whose art. 15 c) defines the secrecy classes as state secrets and service secrets, so the classification scheme is set in a statute, supporting 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.sri.ro/assets/files/legislatie/2024/Lege_182.2002.pdf"
+  },
+  {
+   "claim": "record:RO:grid_control:operator",
+   "fact_sha256": "4e29aaaaa2142340a923986b097c0e4d150af1fadaeba6cacb14e64204e21a31",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says Transelectrica SA has the task of permanently maintaining the operation of the national power system in safe conditions, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://www.transelectrica.ro/ro/web/tel/operator-de-sistem"
+  },
+  {
+   "claim": "record:RO:grid_control:register",
+   "fact_sha256": "0e77b9b8d94842fc1455523e8bc605e61a51e5f17de6f5da46f051e014dfd19a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states that operational control of the SEN is ensured by the Dispeceratul Energetic Național and 5 territorial dispatch centres (București, Bacău, Cluj, Craiova, Timișoara), matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.transelectrica.ro/ro/web/tel/operator-de-sistem"
+  }
+ ]
+}

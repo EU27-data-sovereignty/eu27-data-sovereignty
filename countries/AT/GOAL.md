@@ -57,40 +57,40 @@ The holdings Austria cannot let depend on infrastructure a foreign state can com
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | Zentrales Melderegister (ZMR) - Central Register of Residents[^s19] | Federal Minister of the Interior acts as processor of the ZPR[^s20][^s21] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | No central register[^s22][^s23] | — | — | — |
+| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are found. PassG § 22b only says the passport authorities process § 22a(1) data 'mit Ausnahme der lit. k' (lit. k being 'die Papillarlinienabdrücke zweier Finger') in the central passport evidence, which supports a narrower stat It is withheld until the fact or its source is corrected and checked again* | — | — | — |
 | Critical | Breeder document scans (tier 0) | Supporting documents underlying civil status entries are kept by the civil status authority that made the entry (decentralised)[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Facial biometric (tier 0) | Central evidence under § 22b Passport Act holds passport/ID card data including the facial image (lit. j) but not fingerprints (lit. k)[^s23] | *Not yet sourced* | National infrastructure[^s23] | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | Elektronischer Identitätsnachweis (E-ID), branded ID Austria[^s24][^s6] | Federal Minister of the Interior and the Source PIN Register Authority process E-ID registration data[^s6] | *Not stated in sources* | *Not yet sourced* |
-| High | Electoral roll entry (tier 0) | Zentrales Wählerregister (ZeWaeR) - Central Voter Register[^s25] | Federal Minister of the Interior acts as processor of ZeWaeR for each municipality[^s25] | *Not stated in sources* | 6,346,059 persons entitled to vote in the 2024 National Council election[^s26] |
-| High | State PKI and qualified trust services (tier 0) | Austrian Country Signing CA (CSCA) operated by the Federal Ministry of the Interior[^s3] | RTR-GmbH compiles and publishes the national trust list[^s27][^s28] | *Not stated in sources* | fast 6,3 Millionen ID Austria-Registrierungen (almost 6.3 million ID Austria registrations) as of 1 September 2026[^s29] |
-| High | Land & property registry (tier 1) | Grundbuch (land register)[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Strafregister (criminal record register)[^s31] | Landespolizeidirektion Wien (Vienna Provincial Police Directorate)[^s31] | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | PAD - Protokollieren Anzeigen Daten (police case and report logging system)[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Facial biometric (tier 0) | Central evidence under § 22b Passport Act holds passport/ID card data including the facial image (lit. j) but not fingerprints (lit. k)[^s22] | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The Passgesetz says verbatim that Bundesrechenzentrum GmbH takes part as processor in the § 22a/§ 22b processing; it names a federal body as processor but says nothing about where the infrastructure runs, so 'National infrastructure' rests  It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | Elektronischer Identitätsnachweis (E-ID), branded ID Austria[^s23][^s6] | Federal Minister of the Interior and the Source PIN Register Authority process E-ID registration data[^s6] | *Not stated in sources* | *Not yet sourced* |
+| High | Electoral roll entry (tier 0) | Zentrales Wählerregister (ZeWaeR) - Central Voter Register[^s24] | Federal Minister of the Interior acts as processor of ZeWaeR for each municipality[^s24] | *Not stated in sources* | 6,346,059 persons entitled to vote in the 2024 National Council election[^s25] |
+| High | State PKI and qualified trust services (tier 0) | Austrian Country Signing CA (CSCA) operated by the Federal Ministry of the Interior[^s3] | RTR-GmbH compiles and publishes the national trust list[^s26][^s27] | *Not stated in sources* | fast 6,3 Millionen ID Austria-Registrierungen (almost 6.3 million ID Austria registrations) as of 1 September 2026[^s28] |
+| High | Land & property registry (tier 1) | Grundbuch (land register)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Strafregister (criminal record register)[^s30] | Landespolizeidirektion Wien (Vienna Provincial Police Directorate)[^s30] | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | PAD - Protokollieren Anzeigen Daten (police case and report logging system)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | Datenverarbeitung mittels operativer oder strategischer Analyse (state-protection analysis data processing, jointly controlled by the Federal Minister of the Interior and the provincial police directorates)[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | Identitätsdokumentenregister (IDR) - Identity Document Register[^s34][^s4] | *Not yet sourced* | National infrastructure[^s4][^s23] | *Not yet measured* |
-| High | Residence and migration status (tier 1) | *Disputed: sources disagree. Bundeskanzleramt (RIS) — BFA-Verfahrensgesetz (BFA-VG), consolidated version gives the value this report printed; Bundesministerium für Inneres — Information zu der Verarbeitung „Zentrales Fremdenregister“ gives “Zentrales Fremdenregister (Central Register of Foreigners)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | Federal Minister of the Interior acts as processor of the Central Register of Foreigners[^s35] | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | FinanzOnline[^s36] | Bundesrechenzentrum GmbH (BRZ) for the Bundesministerium für Finanzen (Federal Computing Centre, for the Federal Ministry of Finance)[^s36] | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | e-zoll (electronic customs)[^s37] | *Not yet sourced* | *Not stated in sources* | mehr als 4,5 Mio. Zollanmeldungen pro Jahr (more than 4,5 million customs declarations per year)[^s37] |
-| High | Benefits & pensions (tier 1) | Pensionskonto (pension account)[^s38] | Dachverband der Sozialversicherungsträger (Umbrella Association of Austrian Social Insurance Institutions)[^s38] | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | Elektronisches Verwaltungssystem (ELSY) (electronic administration system, the e-card system)[^s39] | Dachverband (der Sozialversicherungsträger) (Umbrella Association of Social Insurance Institutions)[^s39] | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | Firmenbuch (companies register)[^s30] | BRZ (Bundesrechenzentrum GmbH) for the Justizministerium (Federal Computing Centre for the Ministry of Justice)[^s30] | *Not stated in sources* | etwa 545.000 Firmen (about 545,000 companies)[^s30] |
-| High | Beneficial ownership register (tier 1) | Register der wirtschaftlichen Eigentümer (Register of Beneficial Owners)[^s40] | WiEReG–Registerbehörde im Bundesministerium für Finanzen (WiEReG register authority in the Federal Ministry of Finance)[^s40] | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR) (Central Motor Vehicle Register)[^s41] | Bundesminister für Inneres (Federal Minister of the Interior)[^s41] | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | Nationales Schengener Informationssystem (N-SIS II) (National Schengen Information System)[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | Zentrales Waffenregister (Central Weapons Register)[^s43] | Bundesminister für Inneres as processor, with IBM Österreich Internationale Büromaschinen GmbH, Microsoft Österreich GmbH and Bundesrechenzentrum GmbH as further processors[^s43] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | Haushaltsverrechnungssystem HV-SAP (federal budget accounting system)[^s44] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | Personalverrechnungssystem PM-SAP (federal payroll system)[^s44] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | Modulares Wahlpaket (modular election package)[^s45] | Bundeswahlbehörde p.A. Bundesministerium für Inneres (Federal Electoral Board, c/o Federal Ministry of the Interior)[^s45] | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | TARGET Services (RTGS, TIPS, T2S, CLM)[^s46] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | BOS-Digitalfunk, österreichweites Digitalfunksystem für Behörden und Organisationen mit Sicherheitsaufgaben (nationwide public-safety digital radio system)[^s47] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | Bundeslagezentrum (Federal Situation Centre)[^s48] | Bundesministerium für Inneres (Federal Ministry of the Interior)[^s48] | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | APG-Steuerzentrale, Power Grid Control (APG control centre)[^s49] | APG (Austrian Power Grid AG)[^s49] | *Not stated in sources* | *Not yet measured* |
+| High | Intelligence services (tier 1) | Datenverarbeitung mittels operativer oder strategischer Analyse (state-protection analysis data processing, jointly controlled by the Federal Minister of the Interior and the provincial police directorates)[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | Identitätsdokumentenregister (IDR) - Identity Document Register[^s33][^s4] | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are present (the RH sentence is split by a line-break hyphen 'Identitätsdokumentenregis- ters') and establish that BRZ GmbH, a federal body, is the statutory processor of the register; neither source says where the infrastructur It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | *Disputed: sources disagree. Bundeskanzleramt (RIS) — BFA-Verfahrensgesetz (BFA-VG), consolidated version gives the value this report printed; Bundesministerium für Inneres — Information zu der Verarbeitung „Zentrales Fremdenregister“ gives “Zentrales Fremdenregister (Central Register of Foreigners)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | Federal Minister of the Interior acts as processor of the Central Register of Foreigners[^s34] | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | FinanzOnline[^s35] | Bundesrechenzentrum GmbH (BRZ) for the Bundesministerium für Finanzen (Federal Computing Centre, for the Federal Ministry of Finance)[^s35] | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | e-zoll (electronic customs)[^s36] | *Not yet sourced* | *Not stated in sources* | mehr als 4,5 Mio. Zollanmeldungen pro Jahr (more than 4,5 million customs declarations per year)[^s36] |
+| High | Benefits & pensions (tier 1) | Pensionskonto (pension account)[^s37] | Dachverband der Sozialversicherungsträger (Umbrella Association of Austrian Social Insurance Institutions)[^s37] | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | Elektronisches Verwaltungssystem (ELSY) (electronic administration system, the e-card system)[^s38] | Dachverband (der Sozialversicherungsträger) (Umbrella Association of Social Insurance Institutions)[^s38] | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Firmenbuch (companies register)[^s29] | BRZ (Bundesrechenzentrum GmbH) for the Justizministerium (Federal Computing Centre for the Ministry of Justice)[^s29] | *Not stated in sources* | etwa 545.000 Firmen (about 545,000 companies)[^s29] |
+| High | Beneficial ownership register (tier 1) | Register der wirtschaftlichen Eigentümer (Register of Beneficial Owners)[^s39] | WiEReG–Registerbehörde im Bundesministerium für Finanzen (WiEReG register authority in the Federal Ministry of Finance)[^s39] | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR) (Central Motor Vehicle Register)[^s40] | Bundesminister für Inneres (Federal Minister of the Interior)[^s40] | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Nationales Schengener Informationssystem (N-SIS II) (National Schengen Information System)[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Zentrales Waffenregister (Central Weapons Register)[^s42] | Bundesminister für Inneres as processor, with IBM Österreich Internationale Büromaschinen GmbH, Microsoft Österreich GmbH and Bundesrechenzentrum GmbH as further processors[^s42] | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | Haushaltsverrechnungssystem HV-SAP (federal budget accounting system)[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | Personalverrechnungssystem PM-SAP (federal payroll system)[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | Modulares Wahlpaket (modular election package)[^s44] | Bundeswahlbehörde p.A. Bundesministerium für Inneres (Federal Electoral Board, c/o Federal Ministry of the Interior)[^s44] | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | TARGET Services (RTGS, TIPS, T2S, CLM)[^s45] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | BOS-Digitalfunk, österreichweites Digitalfunksystem für Behörden und Organisationen mit Sicherheitsaufgaben (nationwide public-safety digital radio system)[^s46] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Bundeslagezentrum (Federal Situation Centre)[^s47] | Bundesministerium für Inneres (Federal Ministry of the Interior)[^s47] | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | APG-Steuerzentrale, Power Grid Control (APG control centre)[^s48] | APG (Austrian Power Grid AG)[^s48] | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | Gesamtevidenz der Schülerinnen und Schüler (national overall register of pupils)[^s50] | Bundesanstalt „Statistik Österreich“ (Statistics Austria), as processor[^s50] | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | Gesamtevidenz der Schülerinnen und Schüler (national overall register of pupils)[^s49] | Bundesanstalt „Statistik Österreich“ (Statistics Austria), as processor[^s49] | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | Rechtsinformationssystem des Bundes (RIS) (Federal Legal Information System)[^s51] | Bundeskanzler (Federal Chancellor / Federal Chancellery)[^s51] | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Rechtsinformationssystem des Bundes (RIS) (Federal Legal Information System)[^s50] | Bundeskanzler (Federal Chancellor / Federal Chancellery)[^s50] | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
@@ -143,7 +143,7 @@ Tier 0 and 1 holdings for Austria without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
 
 ### How sources were found
 
@@ -199,10 +199,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
-| T2 competent public body or audit office | 633 |
-| T3 other institution or company | 9 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
+| T2 competent public body or audit office | 589 |
+| T3 other institution or company | 7 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
 
 ### Evidence grades
 
@@ -211,8 +211,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 106 |
-| Standard | 1282 |
+| Strong | 100 |
+| Standard | 1209 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -253,7 +253,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1388 printed facts pass the fact check.
+In this build, 1309 of 1309 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -295,7 +295,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
+In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -318,83 +318,85 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Austria
 
-0 of 65 printed facts about Austria pass.
+62 of 62 printed facts about Austria pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
-| indicator:AT:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
-| indicator:AT:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:AT:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:AT:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
-| indicator:AT:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
-| param:AT:population_m | param:AT:population_m | program:fetch_eurostat.py | none | never checked |  |
-| param:AT:gdp_eur_bn | param:AT:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
-| param:AT:gov_employment_k | param:AT:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
-| param:AT:elec_price_eur_mwh | param:AT:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
-| param:AT:renewables_pct | param:AT:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
-| param:AT:land_km2 | param:AT:land_km2 | program:fetch_eurostat.py | none | never checked |  |
-| record:AT:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:facial_biometric:foreign_dependency | Facial biometric: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:AT:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:electoral_roll:count | Electoral roll entry: how many records it holds | unrecorded | none | never checked |  |
-| record:AT:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:trust_services_pki:count | State PKI and qualified trust services: how many records it holds | unrecorded | none | never checked |  |
-| record:AT:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:intelligence:register | Intelligence services: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:issuance_history:foreign_dependency | Document issuance history: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:AT:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:tax:register | Tax: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:tax:operator | Tax: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:customs:register | Customs declarations: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:customs:count | Customs declarations: how many records it holds | unrecorded | none | never checked |  |
-| record:AT:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:health_insurance:operator | Statutory health insurance: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:business_registry:count | Business registry: how many records it holds | unrecorded | none | never checked |  |
-| record:AT:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:firearms_register:register | Firearms register: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:firearms_register:operator | Firearms register: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:electoral_management:register | Election management and results: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:electoral_management:operator | Election management and results: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:central_bank:register | Central bank systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:crisis_management:operator | Crisis management and civil protection: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:education:operator | Education: the body that operates it | unrecorded | none | never checked |  |
-| record:AT:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | none | never checked |  |
-| record:AT:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | none | never checked |  |
+| indicator:AT:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:AT:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:AT:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:AT:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:AT:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:AT:population_m | param:AT:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:AT:gdp_eur_bn | param:AT:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:AT:gov_employment_k | param:AT:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:AT:elec_price_eur_mwh | param:AT:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:AT:renewables_pct | param:AT:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:AT:land_km2 | param:AT:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:electoral_roll:count | Electoral roll entry: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:trust_services_pki:count | State PKI and qualified trust services: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:land_property:register | Land & property registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:intelligence:register | Intelligence services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:tax:operator | Tax: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:customs:count | Customs declarations: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:health_insurance:operator | Statutory health insurance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:business_registry:operator | Business registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:business_registry:count | Business registry: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:firearms_register:operator | Firearms register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:electoral_management:register | Election management and results: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:electoral_management:operator | Election management and results: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:crisis_management:operator | Crisis management and civil protection: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:education:operator | Education: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Austria
 
-None.
+| Claim | What it answers | Checked by | Verdict | Reason |
+|---|---|---|---|---|
+| record:AT:facial_biometric:foreign_dependency | Facial biometric: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | claude-fable-5-1 | unclear | The Passgesetz says verbatim that Bundesrechenzentrum GmbH takes part as processor in the § 22a/§ 22b processing; it names a federal body as processor but says nothing about where the infrastructure runs, so 'National infrastructure' rests on an inference the statute does not state. |
+| record:AT:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | claude-fable-5-1 | not supported | Both quotes are found. PassG § 22b only says the passport authorities process § 22a(1) data 'mit Ausnahme der lit. k' (lit. k being 'die Papillarlinienabdrücke zweier Finger') in the central passport evidence, which supports a narrower statement about passport fingerprints, not a blanket 'No central register'; the other citation is the BMI sheet for the 'Erkennungsdienstliche Evidenz-EDE', a centr |
+| record:AT:issuance_history:foreign_dependency | Document issuance history: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | claude-fable-5-1 | unclear | Both quotes are present (the RH sentence is split by a line-break hyphen 'Identitätsdokumentenregis- ters') and establish that BRZ GmbH, a federal body, is the statutory processor of the register; neither source says where the infrastructure runs or rules out further (possibly foreign) sub-processors, so 'National infrastructure' is an inference from the processor's identity rather than a statemen |
 
 ---
 
@@ -419,37 +421,36 @@ None.
 [^s19]: Bundeskanzleramt (RIS) — Meldegesetz 1991 (MeldeG), consolidated version. Meldegesetz 1991 (MeldeG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005799>
 [^s20]: Bundesministerium für Inneres — Zentrales Melderegister - ZMR, 2025-03-27. Zentrales Melderegister - ZMR. <https://www.bmi.gv.at/413/start.html> ([archived](https://web.archive.org/web/20260828130334/https://www.bmi.gv.at/413/start.html))
 [^s21]: Bundeskanzleramt (RIS) — Personenstandsgesetz 2013 (PStG 2013), consolidated version. Personenstandsgesetz 2013 (PStG 2013), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008228> ([archived](https://web.archive.org/web/20260407203750/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008228))
-[^s22]: Bundesministerium für Inneres — Information zu der Verarbeitung „Erkennungsdienstliche…. Information zu der Verarbeitung „Erkennungsdienstliche Evidenz-EDE“. <https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_erkennungsdienstliche_evidenz-ede_v3.pdf> ([archived](https://web.archive.org/web/20260508140958/https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_erkennungsdienstliche_evidenz-ede_v3.pdf))
-[^s23]: Bundeskanzleramt (RIS) — Passgesetz 1992, consolidated version, 2026-09-30. Passgesetz 1992, consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798> ([archived](https://web.archive.org/web/20260123224358/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798))
-[^s24]: Bundesrechenzentrum GmbH (BRZ) — ID Austria. ID Austria. <https://www.brz.gv.at/was-wir-tun/services-produkte/id-austria.html> ([archived](https://web.archive.org/web/20260610144149/https://www.brz.gv.at/was-wir-tun/services-produkte/id-austria.html))
-[^s25]: Bundeskanzleramt (RIS) — Wählerevidenzgesetz 2018 (WEviG), consolidated version. Wählerevidenzgesetz 2018 (WEviG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009720> ([archived](https://web.archive.org/web/20260208002104/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Gesetzesnummer=20009720&Abfrage=Bundesnormen))
-[^s26]: Bundesministerium für Inneres — Nationalratswahl 2024, 2024. Nationalratswahl 2024. <https://www.bmi.gv.at/412/nationalratswahlen/nationalratswahl_2024/start.html>
-[^s27]: Bundeskanzleramt (RIS) — Signatur- und Vertrauensdienstegesetz (SVG),…. Signatur- und Vertrauensdienstegesetz (SVG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009585> ([archived](https://web.archive.org/web/20260211052418/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009585))
-[^s28]: Rundfunk und Telekom Regulierungs-GmbH (RTR) — Vertrauensliste der beaufsichtigten…. Vertrauensliste der beaufsichtigten Vertrauensdiensteanbieter. <https://www.rtr.at/TKP/was_wir_tun/vertrauensdienste/Signatur/vertrauensliste/VertrListe.de.html> ([archived](https://web.archive.org/web/20260908033759/https://www.rtr.at/TKP/was_wir_tun/vertrauensdienste/Signatur/vertrauensliste/VertrListe.de.html))
-[^s29]: Bundeskanzleramt Österreich — Pröll: 6,3 Millionen ausgestellte "ID Austria" nach…, 2026-09-08. Pröll: 6,3 Millionen ausgestellte "ID Austria" nach erfolgreicher ID Austria Servicetour. <https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/2026/09/proell-6-3-millionen-ausgestellte-id-austria-nach-erfolgreicher-id-austria-servicetour.html>
-[^s30]: Bundesrechenzentrum GmbH (BRZ) — Registerlösungen wie Grundbuch und Firmenbuch. Registerlösungen wie Grundbuch und Firmenbuch. <https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html> ([archived](https://web.archive.org/web/20260519193214/https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html))
-[^s31]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Strafregistergesetz 1968, consolidated version, 2026-09-30. Strafregistergesetz 1968, consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10002116> ([archived](https://web.archive.org/web/20251105105153/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10002116))
-[^s32]: Bundesministerium für Inneres — Information zu der Verarbeitung „PAD - Protokollieren…. Information zu der Verarbeitung „PAD - Protokollieren Anzeigen Daten“. <https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_pad-protkollieren_anzeigen_daten_v2.pdf> ([archived](https://web.archive.org/web/20260508105548/https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_pad-protkollieren_anzeigen_daten_v2.pdf))
-[^s33]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Staatsschutz- und Nachrichtendienst-Gesetz (SNG),…. Staatsschutz- und Nachrichtendienst-Gesetz (SNG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009486> ([archived](https://web.archive.org/web/20251211035839/https://www.ris.bka.gv.at/geltendefassung.wxe?abfrage=bundesnormen&gesetzesnummer=20009486))
-[^s34]: Landespolizeidirektion Burgenland (Bundespolizei) — Information zu der Verarbeitung „Zentrales…, 2021-01. Information zu der Verarbeitung „Zentrales Identitätsdokumentenregister (IDR)“. <https://www.polizei.gv.at/bgld/files_bgld/datenschutz/2023/zentrales_identitaetsdokumentenregister_idr_012023_bf.pdf> ([archived](https://web.archive.org/web/20241125081919/https://www.polizei.gv.at/BGLD/files_bgld/datenschutz/2023/Zentrales_Identitaetsdokumentenregister_IDR_012023_bf.pdf))
-[^s35]: Bundeskanzleramt (RIS) — BFA-Verfahrensgesetz (BFA-VG), consolidated version. BFA-Verfahrensgesetz (BFA-VG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20007944> ([archived](https://web.archive.org/web/20260723072308/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20007944))
-[^s36]: Bundesrechenzentrum GmbH (BRZ) — FinanzOnline. FinanzOnline. <https://www.brz.gv.at/was-wir-tun/services-produkte/finanzonline.html> ([archived](https://web.archive.org/web/20260516205141/https://www.brz.gv.at/was-wir-tun/services-produkte/finanzonline.html))
-[^s37]: Bundesrechenzentrum GmbH (BRZ) — e-zoll. e-zoll. <https://www.brz.gv.at/was-wir-tun/services-produkte/e-zoll.html> ([archived](https://web.archive.org/web/20260519182925/https://www.brz.gv.at/was-wir-tun/services-produkte/e-zoll.html))
-[^s38]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Allgemeines Pensionsgesetz § 10. Allgemeines Pensionsgesetz § 10. <https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003831&Paragraf=10>
-[^s39]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Allgemeines Sozialversicherungsgesetz § 31a, 2026-01-01. Allgemeines Sozialversicherungsgesetz § 31a. <https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008147&Paragraf=31a> ([archived](https://web.archive.org/web/20260612022848/https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008147&Paragraf=31a))
-[^s40]: Bundesministerium für Finanzen — Register der wirtschaftlichen Eigentümer. Register der wirtschaftlichen Eigentümer. <https://www.bmf.gv.at/services/wiereg.html> ([archived](https://web.archive.org/web/20260723020928/https://www.bmf.gv.at/services/wiereg.html))
-[^s41]: Bundesministerium für Inneres — Information zu der Verarbeitung „Zentrale…. Information zu der Verarbeitung „Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR)“. <https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_zentrale_zulassungsevidenz-kraftfahrzeugzentralregister-kzr_v2.pdf> ([archived](https://web.archive.org/web/20260508152304/https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_zentrale_zulassungsevidenz-kraftfahrzeugzentralregister-kzr_v2.pdf))
-[^s42]: Bundesministerium für Inneres — Information zu der Verarbeitung „Nationales Schengener…. Information zu der Verarbeitung „Nationales Schengener Informationssystem (N-SIS II)“. <https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_nationales_schengener_informationssystem-n-sis_ii_v2.pdf> ([archived](https://web.archive.org/web/20260508105448/https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_nationales_schengener_informationssystem-n-sis_ii_v2.pdf))
-[^s43]: Landespolizeidirektion Steiermark (Bundespolizei) — Information zu der gemeinsamen Verarbeitung „Zentrales…, 2020-02-24. Information zu der gemeinsamen Verarbeitung „Zentrales Waffenregister“. <https://www.polizei.gv.at/stmk/files_stmk/datenschutz/2020/BF_Zentrales%20Waffenregister_20200224.pdf> ([archived](https://web.archive.org/web/20260505131709/https://www.polizei.gv.at/stmk/files_stmk/datenschutz/2020/bf_zentrales%20waffenregister_20200224.pdf))
-[^s44]: Rechnungshof Österreich — Bundesrechnungsabschluss für das Jahr 2024, Textteil Band 4, 2025. Bundesrechnungsabschluss für das Jahr 2024, Textteil Band 4. <https://rechnungshof.gv.at/rh/home/home_1/home_9/BRA_2024_Band_4.pdf>
-[^s45]: Bundeswahlbehörde / Bundesministerium für Inneres — Information zu der Verarbeitung Modulares Wahlpaket, 2025-04-10. Information zu der Verarbeitung Modulares Wahlpaket. <https://www.bmi.gv.at/402/files/informationen/wahlen/informationsblatt_modulares_wahlpaket_bf_20250410.pdf> ([archived](https://web.archive.org/web/20260616054805/https://www.bmi.gv.at/402/files/informationen/wahlen/informationsblatt_modulares_wahlpaket_bf_20250410.pdf))
-[^s46]: Oesterreichische Nationalbank (OeNB) — TARGET Services. TARGET Services. <https://www.oenb.at/Zahlungsverkehr/target-services.html> ([archived](https://web.archive.org/web/20260312220131/https://www.oenb.at/Zahlungsverkehr/target-services.html))
-[^s47]: Bundesministerium für Inneres — Abteilung IV/DDS/12 (Kritische…. Abteilung IV/DDS/12 (Kritische Kommunikationsinfrastrukturen). <https://www.bmi.gv.at/113/Sektion_IV/Gruppe_IV_DDS/CTO/Abteilung_IV_DDS_12/start.aspx>
-[^s48]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Bundes-Krisensicherheitsgesetz (B-KSG), consolidated version. Bundes-Krisensicherheitsgesetz (B-KSG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20012321>
-[^s49]: Austrian Power Grid AG (APG) — Steuerzentrale. Steuerzentrale. <https://www.apg.at/ueber-uns/steuerzentrale/> ([archived](https://web.archive.org/web/20260522164325/https://www.apg.at/ueber-uns/steuerzentrale/))
-[^s50]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Bildungsdokumentationsgesetz 2020, consolidated version. Bildungsdokumentationsgesetz 2020, consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451> ([archived](https://web.archive.org/web/20260730015701/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451))
-[^s51]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Bundesgesetzblattgesetz, consolidated version, 2026-09-30. Bundesgesetzblattgesetz, consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20002988> ([archived](https://web.archive.org/web/20230506214536/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20002988))
+[^s22]: Bundeskanzleramt (RIS) — Passgesetz 1992, consolidated version, 2026-09-30. Passgesetz 1992, consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798> ([archived](https://web.archive.org/web/20260123224358/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798))
+[^s23]: Bundesrechenzentrum GmbH (BRZ) — ID Austria. ID Austria. <https://www.brz.gv.at/was-wir-tun/services-produkte/id-austria.html> ([archived](https://web.archive.org/web/20260610144149/https://www.brz.gv.at/was-wir-tun/services-produkte/id-austria.html))
+[^s24]: Bundeskanzleramt (RIS) — Wählerevidenzgesetz 2018 (WEviG), consolidated version. Wählerevidenzgesetz 2018 (WEviG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009720> ([archived](https://web.archive.org/web/20260208002104/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Gesetzesnummer=20009720&Abfrage=Bundesnormen))
+[^s25]: Bundesministerium für Inneres — Nationalratswahl 2024, 2024. Nationalratswahl 2024. <https://www.bmi.gv.at/412/nationalratswahlen/nationalratswahl_2024/start.html>
+[^s26]: Bundeskanzleramt (RIS) — Signatur- und Vertrauensdienstegesetz (SVG),…. Signatur- und Vertrauensdienstegesetz (SVG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009585> ([archived](https://web.archive.org/web/20260211052418/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009585))
+[^s27]: Rundfunk und Telekom Regulierungs-GmbH (RTR) — Vertrauensliste der beaufsichtigten…. Vertrauensliste der beaufsichtigten Vertrauensdiensteanbieter. <https://www.rtr.at/TKP/was_wir_tun/vertrauensdienste/Signatur/vertrauensliste/VertrListe.de.html> ([archived](https://web.archive.org/web/20260908033759/https://www.rtr.at/TKP/was_wir_tun/vertrauensdienste/Signatur/vertrauensliste/VertrListe.de.html))
+[^s28]: Bundeskanzleramt Österreich — Pröll: 6,3 Millionen ausgestellte "ID Austria" nach…, 2026-09-08. Pröll: 6,3 Millionen ausgestellte "ID Austria" nach erfolgreicher ID Austria Servicetour. <https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/2026/09/proell-6-3-millionen-ausgestellte-id-austria-nach-erfolgreicher-id-austria-servicetour.html>
+[^s29]: Bundesrechenzentrum GmbH (BRZ) — Registerlösungen wie Grundbuch und Firmenbuch. Registerlösungen wie Grundbuch und Firmenbuch. <https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html> ([archived](https://web.archive.org/web/20260519193214/https://www.brz.gv.at/was-wir-tun/services-produkte/registerloesungen.html))
+[^s30]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Strafregistergesetz 1968, consolidated version, 2026-09-30. Strafregistergesetz 1968, consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10002116> ([archived](https://web.archive.org/web/20251105105153/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10002116))
+[^s31]: Bundesministerium für Inneres — Information zu der Verarbeitung „PAD - Protokollieren…. Information zu der Verarbeitung „PAD - Protokollieren Anzeigen Daten“. <https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_pad-protkollieren_anzeigen_daten_v2.pdf> ([archived](https://web.archive.org/web/20260508105548/https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_pad-protkollieren_anzeigen_daten_v2.pdf))
+[^s32]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Staatsschutz- und Nachrichtendienst-Gesetz (SNG),…. Staatsschutz- und Nachrichtendienst-Gesetz (SNG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009486> ([archived](https://web.archive.org/web/20251211035839/https://www.ris.bka.gv.at/geltendefassung.wxe?abfrage=bundesnormen&gesetzesnummer=20009486))
+[^s33]: Landespolizeidirektion Burgenland (Bundespolizei) — Information zu der Verarbeitung „Zentrales…, 2021-01. Information zu der Verarbeitung „Zentrales Identitätsdokumentenregister (IDR)“. <https://www.polizei.gv.at/bgld/files_bgld/datenschutz/2023/zentrales_identitaetsdokumentenregister_idr_012023_bf.pdf> ([archived](https://web.archive.org/web/20241125081919/https://www.polizei.gv.at/BGLD/files_bgld/datenschutz/2023/Zentrales_Identitaetsdokumentenregister_IDR_012023_bf.pdf))
+[^s34]: Bundeskanzleramt (RIS) — BFA-Verfahrensgesetz (BFA-VG), consolidated version. BFA-Verfahrensgesetz (BFA-VG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20007944> ([archived](https://web.archive.org/web/20260723072308/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20007944))
+[^s35]: Bundesrechenzentrum GmbH (BRZ) — FinanzOnline. FinanzOnline. <https://www.brz.gv.at/was-wir-tun/services-produkte/finanzonline.html> ([archived](https://web.archive.org/web/20260516205141/https://www.brz.gv.at/was-wir-tun/services-produkte/finanzonline.html))
+[^s36]: Bundesrechenzentrum GmbH (BRZ) — e-zoll. e-zoll. <https://www.brz.gv.at/was-wir-tun/services-produkte/e-zoll.html> ([archived](https://web.archive.org/web/20260519182925/https://www.brz.gv.at/was-wir-tun/services-produkte/e-zoll.html))
+[^s37]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Allgemeines Pensionsgesetz § 10. Allgemeines Pensionsgesetz § 10. <https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003831&Paragraf=10>
+[^s38]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Allgemeines Sozialversicherungsgesetz § 31a, 2026-01-01. Allgemeines Sozialversicherungsgesetz § 31a. <https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008147&Paragraf=31a> ([archived](https://web.archive.org/web/20260612022848/https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008147&Paragraf=31a))
+[^s39]: Bundesministerium für Finanzen — Register der wirtschaftlichen Eigentümer. Register der wirtschaftlichen Eigentümer. <https://www.bmf.gv.at/services/wiereg.html> ([archived](https://web.archive.org/web/20260723020928/https://www.bmf.gv.at/services/wiereg.html))
+[^s40]: Bundesministerium für Inneres — Information zu der Verarbeitung „Zentrale…. Information zu der Verarbeitung „Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR)“. <https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_zentrale_zulassungsevidenz-kraftfahrzeugzentralregister-kzr_v2.pdf> ([archived](https://web.archive.org/web/20260508152304/https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_zentrale_zulassungsevidenz-kraftfahrzeugzentralregister-kzr_v2.pdf))
+[^s41]: Bundesministerium für Inneres — Information zu der Verarbeitung „Nationales Schengener…. Information zu der Verarbeitung „Nationales Schengener Informationssystem (N-SIS II)“. <https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_nationales_schengener_informationssystem-n-sis_ii_v2.pdf> ([archived](https://web.archive.org/web/20260508105448/https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_nationales_schengener_informationssystem-n-sis_ii_v2.pdf))
+[^s42]: Landespolizeidirektion Steiermark (Bundespolizei) — Information zu der gemeinsamen Verarbeitung „Zentrales…, 2020-02-24. Information zu der gemeinsamen Verarbeitung „Zentrales Waffenregister“. <https://www.polizei.gv.at/stmk/files_stmk/datenschutz/2020/BF_Zentrales%20Waffenregister_20200224.pdf> ([archived](https://web.archive.org/web/20260505131709/https://www.polizei.gv.at/stmk/files_stmk/datenschutz/2020/bf_zentrales%20waffenregister_20200224.pdf))
+[^s43]: Rechnungshof Österreich — Bundesrechnungsabschluss für das Jahr 2024, Textteil Band 4, 2025. Bundesrechnungsabschluss für das Jahr 2024, Textteil Band 4. <https://rechnungshof.gv.at/rh/home/home_1/home_9/BRA_2024_Band_4.pdf>
+[^s44]: Bundeswahlbehörde / Bundesministerium für Inneres — Information zu der Verarbeitung Modulares Wahlpaket, 2025-04-10. Information zu der Verarbeitung Modulares Wahlpaket. <https://www.bmi.gv.at/402/files/informationen/wahlen/informationsblatt_modulares_wahlpaket_bf_20250410.pdf> ([archived](https://web.archive.org/web/20260616054805/https://www.bmi.gv.at/402/files/informationen/wahlen/informationsblatt_modulares_wahlpaket_bf_20250410.pdf))
+[^s45]: Oesterreichische Nationalbank (OeNB) — TARGET Services. TARGET Services. <https://www.oenb.at/Zahlungsverkehr/target-services.html> ([archived](https://web.archive.org/web/20260312220131/https://www.oenb.at/Zahlungsverkehr/target-services.html))
+[^s46]: Bundesministerium für Inneres — Abteilung IV/DDS/12 (Kritische…. Abteilung IV/DDS/12 (Kritische Kommunikationsinfrastrukturen). <https://www.bmi.gv.at/113/Sektion_IV/Gruppe_IV_DDS/CTO/Abteilung_IV_DDS_12/start.aspx>
+[^s47]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Bundes-Krisensicherheitsgesetz (B-KSG), consolidated version. Bundes-Krisensicherheitsgesetz (B-KSG), consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20012321>
+[^s48]: Austrian Power Grid AG (APG) — Steuerzentrale. Steuerzentrale. <https://www.apg.at/ueber-uns/steuerzentrale/> ([archived](https://web.archive.org/web/20260522164325/https://www.apg.at/ueber-uns/steuerzentrale/))
+[^s49]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Bildungsdokumentationsgesetz 2020, consolidated version. Bildungsdokumentationsgesetz 2020, consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451> ([archived](https://web.archive.org/web/20260730015701/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451))
+[^s50]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Bundesgesetzblattgesetz, consolidated version, 2026-09-30. Bundesgesetzblattgesetz, consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20002988> ([archived](https://web.archive.org/web/20230506214536/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20002988))
 
-**Evidence grades:** 4 Strong, 61 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 4 Strong, 58 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

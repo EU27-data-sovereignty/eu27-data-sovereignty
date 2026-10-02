@@ -1,0 +1,290 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "IT-037",
+ "iso": "IT",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:IT:facial_biometric:operator",
+   "fact_sha256": "4113fc0ce9477eb932fca5edb166d8d928b12f61883acfe40b939b599d192fc4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF (sha256 matches the recorded hash) defines the CNSD as set up at the Ministry of the Interior (Art. 1 i); on the same page Art. 8 says the cartellino elettronico with the photograph is kept by SSCE and Art. 10 says SSCE is part of the IT infrastructure located in the CNSD for which the Ministry of the Interior is responsible. The quote alone is a definition; the operator link comes from Ar",
+   "quote_found": true,
+   "checked_url": "https://www.gazzettaufficiale.it/eli/gu/2015/12/30/302/sg/pdf"
+  },
+  {
+   "claim": "record:IT:facial_biometric:register",
+   "fact_sha256": "07dfa90d81563ceddc935b2cbb3f87a5eebb811a5f5a9a083a9faefeda559ea0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 8 of the CIE decree says verbatim that the cartellino elettronico, kept by SSCE, contains registry information, the photograph, the signature scan and the file number; this matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.gazzettaufficiale.it/eli/gu/2015/12/30/302/sg/pdf"
+  },
+  {
+   "claim": "record:IT:issuance_history:foreign_dependency",
+   "fact_sha256": "0dfc71c2eabd7e1cba2b76d0567b1287c6b5131ab558bc6f5e68092227312260",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 10 says the Ministry of the Interior makes available, and is responsible for, the IT infrastructure located in the CNSD (a Ministry of the Interior centre) which comprises the SSCE issuance circuit; Art. 12 adds that IPZS (state printing house) provides the platform. That places the infrastructure under national state bodies.",
+   "quote_found": true,
+   "checked_url": "https://www.gazzettaufficiale.it/eli/gu/2015/12/30/302/sg/pdf"
+  },
+  {
+   "claim": "record:IT:issuance_history:register",
+   "fact_sha256": "21395a2d8379bbf7473f7d87f4b1224202ff84ea94616f6bbc3c3d793c98a7d4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Item i) 'la banca dati della CIE' is the last entry of the Art. 10 list of components of the IT infrastructure located in the CNSD, so the CIE database is part of the CNSD infrastructure as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gazzettaufficiale.it/eli/gu/2015/12/30/302/sg/pdf"
+  },
+  {
+   "claim": "record:IT:trust_services_pki:foreign_dependency",
+   "fact_sha256": "3f3932e3dc6a10c9552f46ceeaac597c06fc6eefec40de2f2b926d897a586575",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Item c) 'la Certification Authority (CA Autenticazione e PKI-CIE)' is in the Art. 10 list of infrastructure located in the CNSD under the Ministry of the Interior's responsibility, which supports national infrastructure for the CA named in this record. Note the source covers only the CIE CA/PKI, not qualified trust service providers generally.",
+   "quote_found": true,
+   "checked_url": "https://www.gazzettaufficiale.it/eli/gu/2015/12/30/302/sg/pdf"
+  },
+  {
+   "claim": "record:IT:trust_services_pki:register",
+   "fact_sha256": "c2fb3a574dc49795a530344e6c390bf044f93566865d2f9fcabdb3f2547a4357",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 1 c) defines 'CA Autenticazione' as the CNSD's Certification Authority structure issuing online-authentication certificates as part of the CIE issuance infrastructure; Art. 1 i) places the CNSD at the Ministry of the Interior and Art. 1 b) defines online authentication as via the CIE.",
+   "quote_found": true,
+   "checked_url": "https://www.gazzettaufficiale.it/eli/gu/2015/12/30/302/sg/pdf"
+  },
+  {
+   "claim": "record:IT:statistics_microdata:operator",
+   "fact_sha256": "47ed2d80c98c3e12764b54c6872da8e57c47682688a118d96533a5a8334d12ef",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ISTAT page says verbatim that the Istituto nazionale di statistica is the main producer of official statistics; the second citation (D.Lgs. 322/1989 Art. 15 b) on normattiva) also appears verbatim and assigns censuses and surveys to the Institute.",
+   "quote_found": true,
+   "checked_url": "https://www.istat.it/listituto/"
+  },
+  {
+   "claim": "record:IT:crisis_management:register",
+   "fact_sha256": "f67eed8b4a7aba7478894ad94599360b1fde092af4af65485a4951be6cb978ec",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The come-funziona page says verbatim that IT-alert is a public service sending messages to devices in the area affected by a serious emergency; the cose page (also fetched) calls it the national public warning system. Both match the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.it-alert.it/it/come-funziona/"
+  },
+  {
+   "claim": "record:IT:benefits_pensions:operator",
+   "fact_sha256": "253db5d344cd74d255007df23b8fd16dcea3068b23acefad8c7212d37317ed0e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The articolo unico says verbatim that the casellario centrale is established at the Istituto nazionale della previdenza sociale, which supports INPS as the operating body.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1971-12-31;1388~art1"
+  },
+  {
+   "claim": "record:IT:benefits_pensions:register",
+   "fact_sha256": "dcf5f7e9e5609204482d22c9ab92fcd745a0ba1070a50c7fa2506d7cb7ca418d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim and the act's title on the same page is 'Istituzione del casellario centrale dei pensionati', matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1971-12-31;1388~art1"
+  },
+  {
+   "claim": "record:IT:tax:register",
+   "fact_sha256": "696e768efd1035769c114e68f4203059fc6ef49832a8bf843343d3eda285a2e0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 1 of DPR 605/1973 says verbatim that the anagrafe tributaria collects and orders data on a national scale, which supports the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1973-09-29;605~art1!vig=2026-09-30"
+  },
+  {
+   "claim": "record:IT:judicial_criminal:register",
+   "fact_sha256": "8cc75e76d2af16230634b06657b235fc74f6a1ee7bae1dd1c89a3a0da9415e1a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 2 a) of DPR 313/2002 defines 'casellario giudiziale' as the database of national interest, verbatim as quoted; the printed register name matches.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2002-11-14;313~art2"
+  },
+  {
+   "claim": "record:IT:issuance_history:operator",
+   "fact_sha256": "a47c07febc55b5d98334b917587523f0fbc7c4c66ddcb16ea925ec73dd47bb7d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 7-vicies ter says verbatim that issuance of the electronic identity card is reserved to the Ministry of the Interior, which is what the printed statement says.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2005-01-31;7~art7viciester"
+  },
+  {
+   "claim": "record:IT:land_property:operator",
+   "fact_sha256": "daad9a3be6ffc3cf77a4687fae151fc52db03e5622732c1e4b5b88c18046b7d3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 19 comma 1 says verbatim that the Anagrafe Immobiliare Integrata is constituted and managed by the Agenzia del Territorio, supporting it as the operating body as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2010-05-31;78~art19"
+  },
+  {
+   "claim": "record:IT:land_property:register",
+   "fact_sha256": "706e42fa8e72c8f24269d0ecb43e5487d187ef46dbf8d9fdf75831d737f3c382",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same comma 1 names the 'Anagrafe Immobiliare Integrata' verbatim, matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2010-05-31;78~art19"
+  },
+  {
+   "claim": "indicator:IT:C1",
+   "fact_sha256": "715da84a6256ff1ebaa33f2d1b4a0a72c58421f79ae0b0d1ed266958def56483",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 33-septies comma 1 (in force) says verbatim that central administrations migrate their non-compliant CEDs to the national infrastructure or to other existing infrastructure of their own, which presupposes state-operated data centres in operation; the evidence is statutory rather than an operational report.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-10-18;179~art33septies"
+  },
+  {
+   "claim": "record:IT:vehicle_licensing:register",
+   "fact_sha256": "604b95326e5fc6e6f3e33a0791467a0b1fc754916e7a2eb0b30d40c1142fdd66",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "WebFetch returned only the table of contents, but a direct fetch of the page shows Art. 226 comma 5 verbatim: the archivio nazionale dei veicoli is established at the Dipartimento per i trasporti terrestri, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285~art226"
+  },
+  {
+   "claim": "record:IT:education:operator",
+   "fact_sha256": "9768f8a7b525975683296df83ccc7b721d045d4a8c17364490514e0ce210ea4c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 62-quater comma 1 says ANIST is established within the hubscuola system built by the Ministero dell'istruzione, and comma 2 says ANIST itself is 'realizzata dal Ministero dell'istruzione'; that supports the Ministry as the body behind the register as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62quater"
+  },
+  {
+   "claim": "record:IT:education:register",
+   "fact_sha256": "86c0714d2530f28b0ca4ff3dde607dd2909880012c1dc08b191cd57a5d5c8037",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim and names 'l'Anagrafe nazionale dell'istruzione (ANIST)', matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62quater"
+  },
+  {
+   "claim": "record:IT:health_insurance:operator",
+   "fact_sha256": "b7c96d4d2648eeedd99b0e15a1d470d8e48709d0025d87de0561d8bbdbcf0add",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 62-ter comma 2 says verbatim that ANA is built by the Ministry of Economy and Finance in agreement with the Ministry of Health; the printed statement repeats this exactly.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62ter"
+  },
+  {
+   "claim": "record:IT:health_insurance:register",
+   "fact_sha256": "ef103a13c7ccce56e46b217f43cdbcc7b0c53c5be9f25f32383f80992d79ec9d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 62-ter on normattiva names the Anagrafe nazionale degli assistiti (ANA) verbatim; sistemats.it redirects (301) to the Sistema TS portal, whose 'Il Sistema TS' section lists 'Anagrafe nazionale assistiti' with the quoted sentence verbatim, supporting 'reference register for public health, run within Sistema Tessera Sanitaria'.",
+   "quote_found": true,
+   "checked_url": "https://sistemats1.sanita.finanze.it/portale/home"
+  },
+  {
+   "claim": "record:IT:digital_identity_credentials:operator",
+   "fact_sha256": "bf835998817295f06357db60e2a9fec76bf13405d7fa4d63875779bebf40d47a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 64 comma 2-ter says verbatim that SPID is an open set of public and private entities accredited by AgID, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art64"
+  },
+  {
+   "claim": "record:IT:digital_identity_credentials:register",
+   "fact_sha256": "0152ed8bc33816132c13b09142a78f33bcf0062e5e8328165f5a87764ca741f7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 64 comma 2-bis establishes verbatim 'il sistema pubblico per la gestione dell'identità digitale di cittadini e imprese (SPID)', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art64"
+  },
+  {
+   "claim": "record:IT:beneficial_ownership:register",
+   "fact_sha256": "2bc56a2af26fe9be3ece68590c117d3a9fdac27502ce6e454639c7e08d2e7a03",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 21 comma 1 says verbatim that beneficial-owner information is communicated to the Registro delle imprese for storage in an 'apposita sezione', which supports the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2007-11-21;231~art21"
+  },
+  {
+   "claim": "record:IT:police_records:operator",
+   "fact_sha256": "f110938f18c0ed5cf215cfce285b29da8fa4cdc2c5d3b39ea083688a06c13e7c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 8 of L. 121/1981 says the Centro elaborazione dati is established at the Ministero dell'interno, and that the Centro's technical criteria are approved by the Minister of the Interior; this supports the Ministry as operator.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1981-04-01;121~art8"
+  },
+  {
+   "claim": "record:IT:police_records:register",
+   "fact_sha256": "d388fc1b30d3a7f9e68016f8d86e9e38a81772d4e8c8c49c849d3fb40fcf9108",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 8 names 'il Centro elaborazione dati' verbatim as the body collecting the information and data of Arts. 6(a) and 7; the register name is supported. The parenthetical gloss 'inter-force police database' is an explanatory characterisation not stated in the quoted text itself.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1981-04-01;121~art8"
+  },
+  {
+   "claim": "record:IT:business_registry:operator",
+   "fact_sha256": "7cfa9a2cee8945c7bf2b5159df57da9635b3a7bda98deb6c4aae3f154a13cd23",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 8 comma 1 of L. 580/1993 says verbatim that the ufficio del registro delle imprese is established at the camera di commercio, supporting the chamber of commerce as the operating body.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1993-12-29;580~art8"
+  },
+  {
+   "claim": "record:IT:business_registry:register",
+   "fact_sha256": "ac5c92f8be89fc0b4d01ada69b8f1034bf3495c2c6fee2a6950c42a56b509dd3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same comma names 'registro delle imprese di cui all'articolo 2188 del codice civile' verbatim, matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1993-12-29;580~art8"
+  }
+ ]
+}

@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "SI-053",
+ "iso": "SI",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "param:SI:gov_employment_k",
+   "fact_sha256": "74157140d0638f89795f846ddbf6c9a297195d4c5da2db759dede6eff9cee28f",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 51.1 for SI, 2024, unit 'Thousand persons' (EMP_DC, NACE O), matching the printed 51.1 thousand exactly.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=SI&time=2024"
+  },
+  {
+   "claim": "param:SI:gdp_eur_bn",
+   "fact_sha256": "552019bb648ac215ce65a6ac5714e656f2d3679e8a0b4329f3b6f2296b0f9421",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 71170.7 million euro (current prices) for SI, 2025; scaled to billions and rounded to one decimal this is 71.2 EUR bn, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=SI&time=2025"
+  },
+  {
+   "claim": "param:SI:renewables_pct",
+   "fact_sha256": "e54a28448fee172e65120c97072a35809f3f1212cefab05a53aef1b4a7d82142",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 45.6 (percentage, REN_ELC) for SI, 2025, matching the printed 45.6 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=SI&time=2025"
+  },
+  {
+   "claim": "param:SI:elec_price_eur_mwh",
+   "fact_sha256": "e63dcc6766d67da12b10f25d8cbcbebff008085a3dbdee0aec8f80cee634b4f9",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1503 EUR per kWh (band MWH500-1999, excluding VAT) for SI, 2025-S2; scaled to EUR/MWh this is 150.3, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=SI&time=2025-S2"
+  },
+  {
+   "claim": "param:SI:land_km2",
+   "fact_sha256": "8b8871a0b51302fcf1bf850c49d08309bceb7cd675f172562fc25f497cd661a8",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 20145 square kilometres (L0008) for SI, 2026, matching the printed 20 145 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=SI&time=2026"
+  },
+  {
+   "claim": "param:SI:population_m",
+   "fact_sha256": "97dcec3bc16c05ebe258bfc9576eec342b9fcb0d9b14ae3d453c6eb8fbe1f748",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The API returns 2 135 107 persons for SI on 1 January 2026, i.e. 2.135 million; rounded to two decimals that is 2.14 million, whereas the report prints 2.13 million, which is a truncation rather than the rounded figure the source gives.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=SI&time=2026"
+  },
+  {
+   "claim": "record:SI:civil_registry:operator",
+   "fact_sha256": "0d7ce534b13364344df0df7cd5bd36c645cf19f734ecb67515017427bbc07101",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CRP portal states verbatim 'Upravlja ga Ministrstvo za notranje zadeve Republike Slovenije' (managed by the Ministry of the Interior of the Republic of Slovenia), which matches the printed statement; the second source, gov.si, gives the current fuller name 'Ministrstvo za notranje zadeve in javno upravo' (Interior and Public Administration), so the printed name is the shorter form used by the ",
+   "quote_found": true,
+   "checked_url": "https://ecrp.gov.si/predstavitevCRP.html"
+  },
+  {
+   "claim": "record:SI:civil_registry:register",
+   "fact_sha256": "c646e6fe06fbcf36ac429fc38cdeee3669a8c8a1b49f54741e918dea79e3c2ff",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both pages state that the Centralni register prebivalstva (CRP) 'je osrednja podatkovna baza z najosnovnejšimi podatki o prebivalstvu Slovenije', which is exactly what is printed.",
+   "quote_found": true,
+   "checked_url": "https://ecrp.gov.si/predstavitevCRP.html"
+  },
+  {
+   "claim": "record:SI:health_records:register",
+   "fact_sha256": "613b199ea509ab92e7a649c139c467f21821b9d8f1c6045e8a901d39c86a91f3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The eZdravje page says the Centralni register podatkov o pacientu (CRPP) 'je enotni sistem za zbiranje in izmenjavo zdravstvenih podatkov o pacientih s stalnim ali začasnim prebivališčem v Republiki Sloveniji' and other patients treated there; the printed 'patients in Slovenia' is a fair condensation.",
+   "quote_found": true,
+   "checked_url": "https://ezdrav.si/resitve/crpp/"
+  },
+  {
+   "claim": "record:SI:beneficial_ownership:register",
+   "fact_sha256": "975ed004a4e350607058a424ffb134e00930cc8688891b6f985e9101debf8099",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The AJPES page describes the RDL as a database of beneficial-owner data kept for transparency of ownership structures and, in the sentence's continuation on the page, 'onemogočanja zlorab poslovnih subjektov za pranje denarja in financiranje terorizma', which supports the AML purpose printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ajpes.si/registri/drugi_registri/register_dejanskih_lastnikov/splosno"
+  },
+  {
+   "claim": "record:SI:business_registry:operator",
+   "fact_sha256": "2a7008a4bbdb5489c301de18010f949d5fc15757256e905ddcee395afc49e356",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "AJPES's own PRS page says AJPES decides on PRS entries for sole traders and room-letters and that AJPES enters other entities into the PRS after their primary registration ('jih AJPES šele nato vpiše v PRS'); note the page also says registry courts decide on company entries, so AJPES keeps the register while courts decide some entries.",
+   "quote_found": true,
+   "checked_url": "https://www.ajpes.si/registri/poslovni_register/splosno"
+  },
+  {
+   "claim": "record:SI:business_registry:register",
+   "fact_sha256": "2f06f5b0dec9358e39efc41adb2a9f84339275767b5d40ed1163fae7fac2761d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page names 'Poslovni register Slovenije (PRS)' as the computerised database of all business entities seated in Slovenia, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.ajpes.si/registri/poslovni_register/splosno"
+  },
+  {
+   "claim": "record:SI:electoral_roll:count",
+   "fact_sha256": "7adfb2181f95b513e8861c74ebcca35a2e70f666bed6e4bd772eaedf859da160",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "For the 22 March 2026 National Assembly election the DVK page states 1,190,932 voters (70.25 % of all eligible) voted, 53 by certificate, 'ostali volivci pa so bili vpisani v volilne imenike (1.695.249)'; 1,190,932 / 0.7025 ≈ 1.695 million confirms 1.695.249 is the number entered in the electoral rolls, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.dvk-rs.si/volitve-in-referendumi/drzavni-zbor-rs/volitve-drzavnega-zbora-rs/volitve-v-drzavni-zbor/"
+  },
+  {
+   "claim": "record:SI:central_bank:foreign_dependency",
+   "fact_sha256": "d0925e57ac7071389aaa7df3f155928c2b9efba1e593ec2cfa08aa663e781299",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ECB page says TARGET Services are 'developed and operated by the Eurosystem' and Banka Slovenije's page says the Eurosystem developed the payment infrastructure; an infrastructure operated by the Eurosystem rather than nationally fits the 'EU provider' label for the TARGET services this entry covers.",
+   "quote_found": true,
+   "checked_url": "https://www.ecb.europa.eu/paym/target/html/index.en.html"
+  },
+  {
+   "claim": "record:SI:central_bank:register",
+   "fact_sha256": "7b3d43546508f9bc22a430176c161bc71fcc07c8a647be115d04d00804b94c4e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Banka Slovenije states verbatim 'Storitve TARGET so namenjene poravnavi plačil (večinoma) velikih vrednosti, poslov z vrednostnimi papirji in takojšnjih plačil', which is the printed statement; the ECB page confirms T2, T2S and TIPS.",
+   "quote_found": true,
+   "checked_url": "https://www.bsi.si/sl/placilni-sistemi/placilna-infrastruktura"
+  },
+  {
+   "claim": "record:SI:grid_control:operator",
+   "fact_sha256": "db8234d597bac82523169fbe137300e7031ff48a27867d282eca84ee88f66e8c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The energetika-portal page states that ELES, d.o.o., under the Zakon o oskrbi z električno energijo (ZOEE), performs the mandatory public service of operator of the combined transmission and distribution electricity network, exactly as printed; eles.si confirms ELES manages the transmission network.",
+   "quote_found": true,
+   "checked_url": "https://www.energetika-portal.si/podrocja/energetika/upravljanje-kapitalskih-nalozb/eles/"
+  },
+  {
+   "claim": "record:SI:grid_control:register",
+   "fact_sha256": "5cad3655854a6579246f17803290abbb4cec3b3f3b892d558e32f1a7b7d09814",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "In the paragraph about ELES the page says it 'zagotavlja varno, zanesljivo in učinkovito obratovanje in vzdrževanje prenosnega in distribucijskega sistema', which supports the printed statement (the printed text omits 'and maintenance', adding nothing).",
+   "quote_found": true,
+   "checked_url": "https://www.energetika-portal.si/podrocja/energetika/upravljanje-kapitalskih-nalozb/eles/"
+  },
+  {
+   "claim": "record:SI:tax:operator",
+   "fact_sha256": "46ad7972cf0934987797d023f36cbf6c8ef4b55975b9630f564bb831389324a1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The FURS page says of the tax register 'Na podlagi Zakona o finančni upravi (ZFU) ga vodi in upravlja Finančna uprava Republike Slovenije (FURS)', exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.fu.gov.si/davki_in_druge_dajatve/poslovanje_z_nami/vpis_v_davcni_register_in_davcna_stevilka/"
+  },
+  {
+   "claim": "record:SI:tax:register",
+   "fact_sha256": "3ede382c7ffe23a34a4902ba51412c24a9f4cd582139aa343789fec4b8eaa05e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states 'Davčni register je enotna, z drugim evidencami povezana, informatizirana zbirka podatkov o zavezancih', matching the printed description.",
+   "quote_found": true,
+   "checked_url": "https://www.fu.gov.si/davki_in_druge_dajatve/poslovanje_z_nami/vpis_v_davcni_register_in_davcna_stevilka/"
+  },
+  {
+   "claim": "record:SI:customs:register",
+   "fact_sha256": "9393b45a406d79fb0286b8fefc3d282a2c4283bc5000f678b573659d41bc174a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "FURS's 2024 annual report contains the quote that in 2024 an upgrade of the import declaration system (SIAIS2) with a centralised clearance for import (CCI) component was ordered, and elsewhere describes SIAIS2 as its import system ('nadgrajen je bil uvozni sistem SIAIS2'); as FURS's own report on its systems, this supports the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/assets/organi-v-sestavi/FURS/Strateski-dokumenti/2025/Letno-porocilo-Financne-uprave-za-leto-2024.pdf"
+  },
+  {
+   "claim": "record:SI:customs:count",
+   "fact_sha256": "34fa17556ebc06a685b2e15f2a2e3ca87de313ae4c29b2584fbdb48041a05390",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "FURS's 2025 annual report states 'V letu 2025 je bilo sprejetih 1.146.962 carinskih deklaracij', and its table 63 repeats 1.146.962 for 2025, matching the printed count.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/assets/organi-v-sestavi/FURS/Strateski-dokumenti/2026/Letno-porocilo-Financne-uprave-za-leto-2025.pdf"
+  },
+  {
+   "claim": "indicator:SI:C1",
+   "fact_sha256": "623e415984a119585faadcc120af81845465c2f207cba540d94691b71236d57e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ministry's sector page says, in the present tense, that it manages system software and hardware in the data centres at the central location where DRO (Državni Računalniški Oblak) runs and in the local data centres of centralised bodies, which supports 'Yes' for state-operated government data centres in operation today.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-digitalno-infrastrukturo/sektor-za-podatkovno-in-streznisko-infrastrukturo/"
+  },
+  {
+   "claim": "indicator:SI:K1",
+   "fact_sha256": "8e03b37c40601d2afffe677f8584303e91c129416fca8ff6e849cb2d91f102aa",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "SI-TRUST's page says the Državni center za storitve zaupanja, which operates within the Ministry of the Interior and Public Administration, manages the root issuer SI-TRUST Root and the qualified issuers SIGEN-CA and SIGOV-CA, so the PKI root and qualified trust services are state-operated, supporting 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/sl/o-nas"
+  },
+  {
+   "claim": "indicator:SI:K2",
+   "fact_sha256": "ad595e90a494b7da397cbd6c8204882c11652fd71556b6953c081602e7046d77",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ministry page says the state SI-TRUST centre is custodian of SI-PASS, the single identity-verification service for citizens, foreigners, businesses and civil servants; si-trust.gov.si confirms this, that it issues the smsPASS mobile identity, and that the eID card is obtained at administrative units, so the eID scheme is state-operated and 'Yes' is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-razvoj-digitalnih-resitev/sektor-za-storitve-zaupanja/"
+  },
+  {
+   "claim": "record:SI:digital_identity_credentials:register",
+   "fact_sha256": "d69dcc5474bd8b3fd887f8ad034c3ed0db8b30c15e7c453df06f6b87a0aefa9e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page describes SI-PASS as 'enotna storitev za preverjanje identitete državljanov, tujcev, poslovnih subjektov in javnih uslužbencev ter izvajanje oddaljenega e-podpisa', and si-trust.gov.si calls it the single point for identity verification and e-signing; the printed statement matches (it omits foreigners, adding nothing).",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-notranje-zadeve-in-javno-upravo/o-ministrstvu/direktorat-za-informatiko/urad-za-razvoj-digitalnih-resitev/sektor-za-storitve-zaupanja/"
+  },
+  {
+   "claim": "record:SI:trust_services_pki:operator",
+   "fact_sha256": "be368eedb8d2bc9d6efdf52dff92017e7977d34bc2fd1f0ac8dc12747b3446d5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "SI-TRUST's page states verbatim 'Državni center za storitve zaupanja SI-TRUST deluje v sklopu Ministrstva za notranje zadeve in javno upravo', exactly the printed statement; the ministry page confirms SI-TRUST operates within its Sektor za storitve zaupanja.",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/sl/o-nas"
+  },
+  {
+   "claim": "record:SI:trust_services_pki:register",
+   "fact_sha256": "ffa20d7c1b805ebea06a78b5c19e29e92130928e144199b7f38bde8ab822d67c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "SI-TRUST's page says the centre 'upravlja s korenskim izdajateljem SI-TRUST Root, izdajateljem kvalificiranih digitalnih potrdil SIGEN-CA, izdajateljem kvalificiranih digitalnih potrdil SIGOV-CA', matching the printed statement; the ministry page's quote is present too (its 'SIGEN-CA , ki' differs only by whitespace around link markup).",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/sl/o-nas"
+  },
+  {
+   "claim": "record:SI:crisis_management:register",
+   "fact_sha256": "d1bcd258e8c822db564f536b159d5c2f67a4bf34ae0036c23e3274909afe3ac4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Nacionalni center za krizno upravljanje page says the centre provides 'prostorske, tehnične, informacijske in telekomunikacijske pogoje za delo Vlade Republike Slovenije v okolju, ki lahko pomembno ogrozi nacionalno varnost', which the printed statement condenses faithfully; the abbreviation NCKU itself does not appear on the page but is the report's shorthand for the page's named centre.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-obrambo/o-ministrstvu/direktorat-za-obrambne-zadeve/nacionalni-center-za-krizno-upravljanje/"
+  },
+  {
+   "claim": "record:SI:emergency_communications:register",
+   "fact_sha256": "b3d5c053b4b029fad7af6321c2a6d33b8899e2f62a9821fe499a1c7adc1063ef",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Under the heading 'Regijski centri za obveščanje' the page says 'Spremljamo, obdelujemo in prenašamo klice v sili na klicno številko 112', so regional notification centres receiving and processing 112 calls is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/uprava-za-zascito-in-resevanje/o-upravi/urad-za-obvescanje-in-alarmiranje/"
+  },
+  {
+   "claim": "record:SI:border_control:register",
+   "fact_sha256": "54cd6e88d0cda98c8953d48696dc77e5d267a44db9a3f97227c8b1eeb670d5b3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The gov.si news item states 'Tehnično je SIS sestavljen iz centralnega sistema, nacionalnih sistemov SIS v državah članicah ... ter omrežja, ki povezuje vse sisteme', which supports the printed description of SIS.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/novice/2023-03-08-prenovljeni-schengenski-informacijski-sistem/"
+  }
+ ]
+}

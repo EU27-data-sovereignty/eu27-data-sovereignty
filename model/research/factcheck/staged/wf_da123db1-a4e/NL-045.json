@@ -1,0 +1,190 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "NL-045",
+ "iso": "NL",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:NL:beneficial_ownership:register",
+   "fact_sha256": "2251f0c1d06074d601c73dbcd2d0bcea72f2443b45ccfa2ec7f621f8e977e108",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim under the page heading 'Ultimate Beneficial Owner (UBO)', and the page calls the register 'het UBO-register'. Name and expansion match the printed value exactly.",
+   "quote_found": true,
+   "checked_url": "https://www.kvk.nl/ubo/"
+  },
+  {
+   "claim": "record:NL:trust_services_pki:operator",
+   "fact_sha256": "352da34dbd16e13b169b58b09e0d4476053fddd9564906679d77bbc5080db676",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Verbatim: PKIoverheid is an afsprakenstelsel 'beheerd door Logius' and the Ministry of BZK 'is de opdrachtgever'. 'Managed by Logius on behalf of BZK' is a fair rendering of beheerder plus opdrachtgever.",
+   "quote_found": true,
+   "checked_url": "https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wat-pkioverheid"
+  },
+  {
+   "claim": "record:NL:trust_services_pki:register",
+   "fact_sha256": "002accd24921e23b9bdd4cee5840d4876fcac3572e106f4536e6422e438df795",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Verbatim: 'TSP's geven de certificaten uit onder het vertrouwensanker van de Staat der Nederlanden'. The printed sentence is a direct translation with nothing added.",
+   "quote_found": true,
+   "checked_url": "https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wat-pkioverheid"
+  },
+  {
+   "claim": "indicator:NL:K1",
+   "fact_sha256": "8db7c3d1e470db0f8c2db38f7c6ba2d0addd0e8cdb35ba20ccf3bf0d73b2b7c0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes found verbatim: Logius is an agency of the Ministry of BZK, and TSPs issue certificates under the trust anchor of the State of the Netherlands; the same page adds 'autonoom: niet afhankelijk van commerciële partijen' and 'certificaten die worden uitgegeven door de Staat der Nederlanden'. That places the root with the state and a state agency, so 'Yes' holds.",
+   "quote_found": true,
+   "checked_url": "https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wat-pkioverheid"
+  },
+  {
+   "claim": "indicator:NL:K2",
+   "fact_sha256": "1a773916b050b8f8ed68129668e3fa3c15ddd084e872b92370640bc10f14559c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "All three quotes found verbatim. Wet digitale overheid art. 5(1) makes the Minister responsible for the set-up, operation and security of the infrastructure for issuing public identification means, and DigiD is presented on the pages of Logius, an agency of the Ministry of BZK. 'Yes' is supported.",
+   "quote_found": true,
+   "checked_url": "https://wetten.overheid.nl/BWBR0048156"
+  },
+  {
+   "claim": "record:NL:digital_identity_credentials:register",
+   "fact_sha256": "038014d3fe495c5098d9c97d27c792014e65ca39f048b641c4db9d9e5f84c363",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes found verbatim; the system is named DigiD, 'een ... middel waarmee gebruikers zich digitaal kunnen identificeren' and 'iedereen [kan] inloggen met DigiD'. The name is exact; the gloss 'national means for citizens' paraphrases 'iedereen'/'gebruikers' on a central-government agency page, the pages do not themselves use the words 'landelijk' or 'burgers'.",
+   "quote_found": true,
+   "checked_url": "https://www.logius.nl/onze-dienstverlening/toegang/digid"
+  },
+  {
+   "claim": "record:NL:crisis_management:register",
+   "fact_sha256": "c9122bcbb1e604686fd98d5cf4e27419869e0510f1bbda3685f00b51f6292696",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Quote found verbatim: NL-Alert warns and informs about emergencies; the page adds 'Iedereen in Nederland moet altijd een NL-Alert kunnen ontvangen' and that 'de overheid' sends the test messages. That supports the name and the 'national public warning system' gloss, though the page does not use the word 'landelijk' itself.",
+   "quote_found": true,
+   "checked_url": "https://www.nl-alert.nl/"
+  },
+  {
+   "claim": "indicator:NL:C1",
+   "fact_sha256": "2a60ef5d71f3afd31e6e80bd82eb3753d987911225051aa577aabffedaf181ca",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "All four quotes found verbatim (the '22' in the 2010-2014 quote is a footnote marker in the PDF). ODC-Noord calls itself one of four landelijke rijksdatacenters, the 11 June 2026 Notitie says the four ODCs 'leveren nu' services, the 2025 Jaarrapportage Bedrijfsvoering Rijk describes work on the four ODCs under BZK/CIO Rijk, and the cabinet letter wants the sovereign cloud housed in the Rijk's ODCs",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/blg-1263102.pdf"
+  },
+  {
+   "claim": "record:NL:issuance_history:operator",
+   "fact_sha256": "481dabc6693214de18c02a77d331dc77f908bd85b7a7502470e4aad84b1f3e8a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Verbatim: 'De Rijksdienst voor Identiteitsgegevens beheert het BR.' The English name and RvIG abbreviation are not on the page but are a translation of the Dutch name, not an added fact.",
+   "quote_found": true,
+   "checked_url": "https://www.rvig.nl/basisregister-reisdocumenten"
+  },
+  {
+   "claim": "record:NL:issuance_history:register",
+   "fact_sha256": "b4691544eac7d52dc203d759a23d970135ef137022ede15d8515661073834832",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Verbatim: 'Het nieuwe Basisregister Reisdocumenten (BR) bevat informatie over Nederlandse reisdocumenten die in aanvraag zijn, uitgereikt en geldig zijn ...'. Name and abbreviation match; the English is a translation.",
+   "quote_found": true,
+   "checked_url": "https://www.rvig.nl/basisregister-reisdocumenten"
+  },
+  {
+   "claim": "record:NL:government_payroll:register",
+   "fact_sha256": "d1ee5ed6b7c34fab222dd43b932ef2d9c2f086b30ea46a6743ffd0a1f0be272d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Quote found verbatim in the Jaarrapportage Bedrijfsvoering Rijk 2025: personnel figures 'afkomstig zijn uit het registratiesysteem P-Direkt', and elsewhere 'personeelsgegevens vanuit P-Direkt'. The system name is exact and it is a central-government personnel registration system; note the document nowhere says 'salaris' or payroll, so the word 'payroll' in the parenthetical gloss rests on the reco",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/blg-1249197.pdf"
+  },
+  {
+   "claim": "record:NL:public_health_surveillance:register",
+   "fact_sha256": "f74c82f20a88f4b141c762d53613f5e39bccbb3aa5d1b69d4b5d32762b6730d4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Verbatim in the Memorie van Toelichting (kst-36621-3): 'het landelijke registratiesysteem Praeventis, waarin voor iedere individuele deelnemer aan het RVP centraal wordt geregistreerd welke vaccinaties zijn toegediend'; the RIVM report quote is also present verbatim. The printed sentence is a direct translation.",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/kst-36621-3.html"
+  },
+  {
+   "claim": "record:NL:electoral_management:operator",
+   "fact_sha256": "5def93d041e744de67478da33ffca44bc4e15e8abb49710a91f65a2cb10f45f2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Verbatim in the Kiesraad's 29 June 2026 Evaluatieadvies gemeenteraadsverkiezingen 2026: the Kiesraad supplied the results software to all participating municipalities, and the surrounding text speaks of 'de beheerdersrol van de programmatuur' of the Kiesraad. That supports the Kiesraad as the operating body of the results system.",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/blg-1261396.pdf"
+  },
+  {
+   "claim": "record:NL:electoral_management:register",
+   "fact_sha256": "3967c6b8dd76e545871f9e2e4316d302ea68c55097cbec1f665017116263cd7d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Verbatim: 'uitslagprogrammatuur, OSV2020-U of Abacus'. The printed value names the same two systems and translates uitslagprogrammatuur correctly.",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/blg-1261396.pdf"
+  },
+  {
+   "claim": "indicator:NL:C2",
+   "fact_sha256": "20c0a7a172dfad2f49b201dcc3ecd6ea8ca597f143237d6c5fe3b63cf4e31ec5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Quote found verbatim in the Notitie Verkenning Overheidsbrede Soevereine Clouddiensten (11 June 2026): the proof of concept is expected end 2026, first migrations 2027, and the chosen scenario A is 'een volledig nieuwe ... overheidscloud'. The same document says the existing ODCs deliver only 'cloudachtige diensten' at too small a scale, so a national sovereign cloud platform is announced, not in ",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/blg-1263102.pdf"
+  },
+  {
+   "claim": "indicator:NL:L3",
+   "fact_sha256": "7e5a0cce72bc2cbd0b302f473de38968da182b9c0bce79a409a5a634d351daf7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes found verbatim: the cabinet sees the (still proposed) CADA as the primary framework for defining cloud sovereignty criteria, and the Notitie says those requirements 'zijn op dit moment nog niet in wetgeving gevat'; neither document names any certification scheme in force. That supports 'No'.",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/kst-1263281.pdf"
+  },
+  {
+   "claim": "record:NL:customs:register",
+   "fact_sha256": "9507bddcacefc394fd78ad66f8324f91a63854596605a70e8344064750bb0364",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Verbatim in the State Secretary of Finance's letter of 2 November 2022 on the Douane: 'Het huidige aangiftesysteem (AGS) wordt vervangen door een nieuw aangiftesysteem (DMS)'; the Douane Monitor 2024 quote (AGS/DMS Invoer and Uitvoer) is also present verbatim, with a footnote marker splitting 'gemiddelde tevredenheid'. The printed sentence is a direct translation.",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/kst-31934-61.html"
+  },
+  {
+   "claim": "indicator:NL:L2",
+   "fact_sha256": "699d5a98638f018e371fcdc717b4288f88fe64e899e8ac6cba60920bac72e6a4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Quote found verbatim in art. 4(1) of the Besluit voorschrift informatiebeveiliging rijksdienst bijzondere informatie 2025, published in Staatscourant 2025, 30222 as an 'algemeen verbindend voorschrift (ministeriële regeling)', with 'Dit besluit geldt voor de Rijksdienst' and four classification levels in art. 4(2). A binding, published regulation establishing the classification scheme supports 'Ye",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/stcrt-2025-30222.html"
+  }
+ ]
+}

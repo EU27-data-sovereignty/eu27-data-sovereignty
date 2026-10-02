@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "DK-016",
+ "iso": "DK",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "indicator:DK:K1",
+   "fact_sha256": "f3dea64109082488c0bb0dd1ca8c5bb9fe96743b551191308777edfd5f49ec03",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "ca1.gov.dk states verbatim that Den Danske Stat (CA1) is a qualified trust service provider under eIDAS on the trusted list, and the page header says the services are delivered by Digitaliseringsstyrelsen on behalf of the Danish State; the NemLog-in PDF repeats that the Danish State acts as QTSP. A state-run qualified trust service supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.ca1.gov.dk/"
+  },
+  {
+   "claim": "record:DK:trust_services_pki:operator",
+   "fact_sha256": "ed012c571c947a0fbfafee0881217a0eb78dea4b04efae2bc2d57665c5aa9a6f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote (CA1 is a QTSP under eIDAS and appears on the positive list) is on the page, and the same page's heading reads 'Tillidstjenester leveret af Digitaliseringsstyrelsen på vegne af Den Danske Stat', which supports Digitaliseringsstyrelsen as operator. The page says 'positivlisten' (the eIDAS trusted list), which the report renders as 'EU trusted list'; that is a fair reading of an eIDAS list",
+   "quote_found": true,
+   "checked_url": "https://www.ca1.gov.dk/"
+  },
+  {
+   "claim": "record:DK:trust_services_pki:register",
+   "fact_sha256": "995f632bf58008940aa54a8a110ec73470faa123a088f2291d90ec2993119f55",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page carries verbatim 'Den Danske Stat Tillidstjenester (CA1) Tillidstjenester leveret af Digitaliseringsstyrelsen på vegne af Den Danske Stat', which is exactly the printed name and description.",
+   "quote_found": true,
+   "checked_url": "https://www.ca1.gov.dk/"
+  },
+  {
+   "claim": "record:DK:civil_registry:count",
+   "fact_sha256": "3c149d9325427dc98f2ba5d4bf15f8e6022e2e638a05789200f16656d9c448c8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "cpr.dk states verbatim 'ca. 11,4 millioner personer, herunder knap 6,1 millioner nulevende personer', matching the printed 11.4 million / just under 6.1 million living.",
+   "quote_found": true,
+   "checked_url": "https://www.cpr.dk/"
+  },
+  {
+   "claim": "record:DK:civil_registry:operator",
+   "fact_sha256": "a0768325f76abdde0a802436058a1569517a9b9cf47cfa166ec9d6a3474871f4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The cpr.dk page says verbatim that CPR-administrationen is organisationally placed in the department of Forsknings-, Uddannelses- og Digitaliseringsministeriet, matching the printed text. Note the second citation (the 2023 consolidated CPR Act, § 2) names a different ministry, Indenrigs- og Sundhedsministeriet, together with the municipal councils; the printed value follows the newer cpr.dk page, ",
+   "quote_found": true,
+   "checked_url": "https://www.cpr.dk/om-cpr-kontoret"
+  },
+  {
+   "claim": "record:DK:residence_permits:operator",
+   "fact_sha256": "aabb498628a02941068585744a0b30717abc458a369ae63a422cf3388ea6d077",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The DST page states verbatim that Udlændingestyrelsen is the authority that receives and processes applications for asylum and other residence permits, which is exactly what is printed.",
+   "quote_found": true,
+   "checked_url": "https://www.dst.dk/da/Statistik/dokumentation/statistikdokumentation/asylansoegninger-og-opholdstilladelser/statistisk-behandling"
+  },
+  {
+   "claim": "record:DK:electoral_management:register",
+   "fact_sha256": "dabd063d4b330c63de27fcf9cb8746d0ed48c0d82dc7cd036d33c395656bdcb2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote (votes counted manually; municipalities enter vote counts into an IT system developed by KMD) is on the page verbatim and supports the system description. The clause 'Danmarks Statistik compiles results' is not in the quote; it rests on page context only (this is DST's statistical documentation of election results, and the page says DST runs checks on the entered counts and distinguishes",
+   "quote_found": true,
+   "checked_url": "https://www.dst.dk/da/Statistik/dokumentation/statistikdokumentation/folketingsvalg--folkeafstemninger-og-europa-parlamentsvalg/praecision-og-paalidelighed"
+  },
+  {
+   "claim": "record:DK:central_bank:foreign_dependency",
+   "fact_sha256": "064741390267137d29da374964a2a249097fed7b368e1211d3857cecb431bc34",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Nationalbanken's report says verbatim that TARGET Services is a pan-European technical platform provided to participating central banks by the ECB and the Eurosystem, and that krone settlement moved from Nationalbanken's own Kronos2 to it in 2025; the ECB release says TARGET Services are developed and operated by the Eurosystem. That supports 'EU provider' for the settlement platform. Caveat: the ",
+   "quote_found": true,
+   "checked_url": "https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025"
+  },
+  {
+   "claim": "record:DK:central_bank:register",
+   "fact_sha256": "e0c46402f704201f9dd5b210164e1d55158c2e94dfe385052e7e0f2b540651d6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The report lists verbatim 'TARGET DKK (afvikling i danske kroner via T2 og TIPS på TARGET Services samt Nationalbankens system for de pengepolitiske instrumenter og sikkerhedsstillelse, SPI)' among the central systems Nationalbanken oversees; the ECB release confirms krone settlement in T2 and TIPS from 22 April 2025. Matches the printed name and description.",
+   "quote_found": true,
+   "checked_url": "https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025"
+  },
+  {
+   "claim": "record:DK:facial_biometric:operator",
+   "fact_sha256": "2170de4e30d480d721993acbe86b00b7bd1b6961765eabb37d35d5a3c2504a22",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "nyidanmark.dk says verbatim that the biometric data are registered in the immigration authorities' register for which Udlændinge- og Integrationsministeriet, Udlændingestyrelsen and SIRI are responsible; Udlændingeloven § 40 f, stk. 2 (LBK 2025/1183) says the same. Matches the printed three bodies.",
+   "quote_found": true,
+   "checked_url": "https://www.nyidanmark.dk/da/Ord-og-begreber/F%C3%A6lles/Biometri---Opbevaring-af-fingeraftryk-og-ansigtsfoto"
+  },
+  {
+   "claim": "record:DK:facial_biometric:register",
+   "fact_sha256": "7d2c5518d5cf850b5fc2bfe1fc3c100c425fab18de50b80e4112d1050c389ee4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that on application the data are kept 20 years after capture, 10 years in visa cases, and in context names 'udlændingemyndighedernes register' holding fingerprints and facial photos captured for residence cards. Note the page adds a further rule not printed: if a residence permit is granted, retention is only 10 years.",
+   "quote_found": true,
+   "checked_url": "https://www.nyidanmark.dk/da/Ord-og-begreber/F%C3%A6lles/Biometri---Opbevaring-af-fingeraftryk-og-ansigtsfoto"
+  },
+  {
+   "claim": "record:DK:fingerprint_biometric:operator",
+   "fact_sha256": "de7436821610ec39787cf900e55113d1a9d26052d61c02713e418eea230b298d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Same verbatim sentence as the facial-biometric operator: the register is the responsibility of the Ministry of Immigration and Integration, Udlændingestyrelsen and SIRI; Udlændingeloven § 40 f, stk. 2 confirms the register is kept by those three. Matches the printed text.",
+   "quote_found": true,
+   "checked_url": "https://www.nyidanmark.dk/da/Ord-og-begreber/F%C3%A6lles/Biometri---Opbevaring-af-fingeraftryk-og-ansigtsfoto"
+  },
+  {
+   "claim": "record:DK:fingerprint_biometric:register",
+   "fact_sha256": "2ec5cbb72e21ff71c0b08e9f7f405fb0a8324172f9d149d2416dc086edc4c92a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page's opening sentence says verbatim that fingerprints and facial photographs are captured for issuing residence cards and for identification and identity control in the immigration field, and later that they are registered in 'udlændingemyndighedernes register'. Matches the printed description.",
+   "quote_found": true,
+   "checked_url": "https://www.nyidanmark.dk/da/Ord-og-begreber/F%C3%A6lles/Biometri---Opbevaring-af-fingeraftryk-og-ansigtsfoto"
+  },
+  {
+   "claim": "record:DK:geospatial:register",
+   "fact_sha256": "dd8b4d7c508536c2afa058c12534f95b53d8c25e7ec46d17421dde2a689530a2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Adresseloven § 1 nr. 2 says verbatim that all road names and addresses are registered in Danmarks Adresseregister so that it is the authoritative source for road names and addresses. The abbreviation 'DAR' does not appear in the statute text, but the name and role match.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2017/136/xml"
+  },
+  {
+   "claim": "record:DK:intelligence:register",
+   "fact_sha256": "0f0f8e03a3e7acffbc89ad94369b9d21619c30c6593a81a63b584c92a9a97fe0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "PET-loven § 3 says verbatim that Politiets Efterretningstjeneste may collect and obtain information that may be relevant to its activities, and the act's title uses '(PET)'; § 1 gives PET the tasks of preventing crimes against the state's independence and security and keeping the minister informed on the country's internal security, which supports 'domestic security intelligence'. The source names",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2017/231/xml"
+  },
+  {
+   "claim": "record:DK:civil_registry:register",
+   "fact_sha256": "a1c517dcc86f91c41145dc98c4c45677f8eac3857cecc3732c3f3c684697909c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "CPR-loven § 1 nr. 2 says verbatim 'Det Centrale Personregister (CPR) indeholder grundlæggende personoplysninger om enhver, der har et personnummer', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2023/1010/xml"
+  },
+  {
+   "claim": "record:DK:vehicle_licensing:register",
+   "fact_sha256": "af5d6ead2aae377f00af8776bf090810148f0ba6227040e000c8b24e8c91641d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lov om registrering af køretøjer § 1 says verbatim that registration takes place in a single nationwide register (Køretøjsregisteret), and stk. 2 that it records information on each individual vehicle and its ownership. The tag '(DMR)' does not appear in the statute, and stk. 4 exempts royal-household, defence and emergency-agency vehicles from the register.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2023/179/xml"
+  },
+  {
+   "claim": "record:DK:grid_control:register",
+   "fact_sha256": "a8721384244cffcb1aa49820073138f1a98eaf1df421c56120afabaa2afbe730",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Lov om Energinet § 2 stk. 2 says verbatim that Energinet carries out 'systemansvarlig virksomhed, eltransmissionsvirksomhed og gastransmissionsvirksomhed', which the printed text renders as system-responsibility (TSO), electricity transmission and gas transmission.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2023/271/xml"
+  },
+  {
+   "claim": "record:DK:border_control:operator",
+   "fact_sha256": "895a484e0f6748a59c00f1e9a444e4e619195e04c0b57140fc5a51f1c48bd377",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "BEK 2025/1201 § 2 says verbatim that Udlændingestyrelsen may, on behalf of Hjemrejsestyrelsen and SIRI, report return decisions and handle related tasks under the SIS Return Regulation, which supports Udlændingestyrelsen as the body for SIS return alerts.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2025/1201/xml"
+  },
+  {
+   "claim": "record:DK:border_control:register",
+   "fact_sha256": "64f3199721859f033539cac8efd5084398b9f198b653a3399aec6428e7b3b073",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "BEK 2025/1201 § 1 names verbatim Regulation (EU) 2018/1860 'om brug af Schengeninformationssystemet i forbindelse med tilbagesendelse', so the Schengen Information System is the system named.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2025/1201/xml"
+  },
+  {
+   "claim": "record:DK:health_records:register",
+   "fact_sha256": "943a4393b84cbd9274b9b7e68342d1f1a3771a066e180aaa2954a57e01ad3798",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Sundhedsloven § 157 says verbatim that Sundhedsdatastyrelsen is responsible for operating an electronic registration of each citizen's medication data including prescription, purchase, dispensing, dose change; the Sundhedsdatastyrelsen page says verbatim that Fælles Medicinkort (FMK) is the national IT solution for citizens' current medication. Together they support the printed name and descriptio",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2025/275/xml"
+  },
+  {
+   "claim": "record:DK:public_health_surveillance:register",
+   "fact_sha256": "4e5ce7e93e8713f799d341cec97ed9d72e76eb4d45c91a78ddeea4617821e361",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Sundhedsloven § 157 a says verbatim that Statens Serum Institut is responsible for operating an electronic registration of each citizen's vaccinations '(Det Danske Vaccinationsregister)', matching the printed name and operator.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2025/275/xml"
+  },
+  {
+   "claim": "indicator:DK:L1",
+   "fact_sha256": "ff7a546dcc5e196b59ec9812de269b892be4d01131a3abb6961cac79229db85c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The title quote is on the page, and the order's § 1 provides that the IT systems listed in Annex 1 'skal føres her i landet' (must be kept in Denmark), with Annex 1 listing 15 named systems (CPR, MitID, NemLog-in3, FMK, police systems, etc.). A binding regulation that requires in-country operation only for an enumerated list supports 'Partly'.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2025/291/xml"
+  },
+  {
+   "claim": "record:DK:issuance_history:foreign_dependency",
+   "fact_sha256": "b7925e69e4b23bd507ae8ff4615c2f06d739036058e0400fe1768ecd58fa498f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is verbatim from Annex 1 item 13, and § 1 of the order requires every listed system, including Det Centrale Pasregister in Rigspolitiet's central portfolio, to be kept in Denmark. That is a binding in-country requirement rather than a direct description of the hosting, but it supports 'national'.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2025/291/xml"
+  },
+  {
+   "claim": "record:DK:judicial_criminal:foreign_dependency",
+   "fact_sha256": "ef59f227557e257a673039399e20486d95e5f7d5dcfafd991810ebdaaf61e591",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Annex 1 item 13 (quoted verbatim) includes Det Centrale Kriminalregister, and § 1 requires the listed systems to be kept in Denmark. This supports 'national' for the criminal register; the source says nothing about court systems, which the class label also covers.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2025/291/xml"
+  },
+  {
+   "claim": "record:DK:police_records:foreign_dependency",
+   "fact_sha256": "7f96f056b6dfdf480cd9d932f393554d9feaba723f06e99b3dc0b99ec5c46b32",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Annex 1 item 13 (quoted verbatim) lists Politiets Index Register, Politiets Sagsstyringssystem and the rest of Rigspolitiet's central portfolio, and § 1 requires them to be kept in Denmark, which supports 'national'.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2025/291/xml"
+  },
+  {
+   "claim": "record:DK:health_insurance:register",
+   "fact_sha256": "ba948d187658db7bb4641fceaa75ef4e92fa49aa29cfc7eb9dc9c43970ba764b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "BEK 2025/529 § 6 says verbatim that all persons registered in CPR with residence in Denmark are issued a sundhedskort, and the surrounding § 5 text deals with gruppe 1-/gruppe 2-sikring (sikringsgruppe). This supports the printed description of health-card and coverage-group registration based on CPR.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2025/529/xml"
+  },
+  {
+   "claim": "record:DK:beneficial_ownership:register",
+   "fact_sha256": "c49445b647d177eaed19cce4acdeb8156b61e5b503738fbf8b62c59862ea62b8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "CVR-loven § 11 a stk. 1 says verbatim that a legal person obliged to register beneficial owners must be registered in Det Centrale Virksomhedsregister, and stk. 2 extends the same to trusts and similar arrangements, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2026/246/xml"
+  },
+  {
+   "claim": "indicator:DK:L2",
+   "fact_sha256": "cc033fe1f91d55516a8df42a0d8193ae20f78699592912c5548229b3f7714ac4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The circular (CIR 2014/10338) sets out verbatim the four classification levels YDERST HEMMELIGT, HEMMELIGT, FORTROLIGT and TIL TJENESTEBRUG with their NATO/EU equivalents, including the quoted HEMMELIGT definition. The scheme is laid down in a government circular, binding on the administration but not a statute, which supports 'Partly'.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/retsinfo/2014/10338/xml"
+  },
+  {
+   "claim": "record:DK:breeder_documents:register",
+   "fact_sha256": "c0b655e8c1256f62cb78f098fced1232a9b23555a623ec978d381f22f8a5c6a8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The circular says verbatim that Kirkeministeriet provides common systems for personregistrering, and later that it applies to 'personregisterførere, menighedsråd...' using those systems, which supports 'used by parish registrars'; the context cites the act on notification of births and deaths. The gloss 'births, names and deaths' goes slightly beyond the text, which does not mention names.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/retsinfo/2021/9447/xml"
+  }
+ ]
+}

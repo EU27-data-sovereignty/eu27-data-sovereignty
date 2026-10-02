@@ -1,0 +1,170 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "SE-052",
+ "iso": "SE",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:SE:public_health_surveillance:register",
+   "fact_sha256": "16acb2d4996c47370cbc16db3d826fe31e263d1b1aaddcb8f2ec7668d1eb282c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes appear verbatim: the Folkhälsomyndigheten page says NVR is a health data register the agency is responsible for, and SFS 2012:453 § 1 names '(vaccinationsregistret)' in Folkhälsomyndighetens verksamhet. Name and responsible body match as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.folkhalsomyndigheten.se/vara-amnesomraden/vaccinationer/nationella-vaccinationsregistret/"
+  },
+  {
+   "claim": "record:SE:emergency_communications:operator",
+   "fact_sha256": "58823342024af942f7daa245fe37bc749ccc5bba9c8a14f2601335f58e4cfd1e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that Myndigheten för civilt försvar 'ansvarar för drift, förvaltning och utveckling av Rakel'. This supports the operator of Rakel (public-safety radio); the page says nothing about 112 emergency-call handling, which the class heading also covers.",
+   "quote_found": true,
+   "checked_url": "https://www.mcf.se/sv/amnesomraden/samhallsviktiga-kommunikationstjanster/rakel/"
+  },
+  {
+   "claim": "record:SE:emergency_communications:register",
+   "fact_sha256": "8b8037a995b8ef2217878b13fb1c6b27755a3cf11c289915a4a24a897bb32566",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page names Rakel as 'Sveriges nationella kommunikationssystem för ledning och samverkan' for actors in public order, security, health and defence, which supports the system name and the 'national public-safety communication system' gloss. The word 'radio' does not appear anywhere on the page, so that descriptor is not stated by the source.",
+   "quote_found": true,
+   "checked_url": "https://www.mcf.se/sv/amnesomraden/samhallsviktiga-kommunikationstjanster/rakel/"
+  },
+  {
+   "claim": "record:SE:central_bank:register",
+   "fact_sha256": "2c417e0f62257f961cb24f6644b7bc472e48c40f9c10f642aaf271b0242e59c7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Riksbank page contains the quote verbatim and elsewhere says 'RIX-systemet har två avvecklingstjänster; RIX-RTGS och RIX-INST. RIX-RTGS är för stora betalningar', which supports RIX-RTGS as the Riksbank's large-value settlement system.",
+   "quote_found": true,
+   "checked_url": "https://www.riksbank.se/sv/betalningar--kontanter/betalningssystemet-rix/"
+  },
+  {
+   "claim": "record:SE:civil_registry:register",
+   "fact_sha256": "b1e0f7f0dbe3a8d8be591ed11e830e8b217a1310290c766c46ea3ac14090265d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Folkbokföringsdatalag (2026:126) § 2 is quoted verbatim and places folkbokföring within Skatteverkets folkbokföringsverksamhet, matching the printed name and holder.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/folkbokforingsdatalag-2026126_sfs-2026-126/"
+  },
+  {
+   "claim": "record:SE:education:register",
+   "fact_sha256": "096212d1978891bf41d157e5bd47d34af61fda746e48894f81281c396ab8e733",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "2 kap. 1 § of förordning 1993:1153 is on the page verbatim: 'Varje högskola ska föra ett studieregister', which is exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-19931153-om-redovisning-av-studier-m_sfs-1993-1153/"
+  },
+  {
+   "claim": "record:SE:public_finance:operator",
+   "fact_sha256": "2cb6cd0978d9276a8f1a61401c475ea1d1aabf29eb36872da590c094480956fe",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is titled 'Förordning (2016:1023) med instruktion för Ekonomistyrningsverket' and § 4 reads verbatim 'Myndigheten ska 1. ansvara för statsredovisningen', so ESV being responsible for state accounts is stated.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20161023-med-instruktion-for_sfs-2016-1023/"
+  },
+  {
+   "claim": "record:SE:public_finance:register",
+   "fact_sha256": "f983fa2e489e3fd7dc8ab69e5773522376e5b2a657d404802128407b1ef0fc86",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 15 of ESV's instruction ordinance is quoted verbatim: the agency shall 'utveckla och förvalta statens informationssystem för budgetering, hantering av dokument och uppföljning (Hermes)', matching the printed name and role.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20161023-med-instruktion-for_sfs-2016-1023/"
+  },
+  {
+   "claim": "record:SE:border_control:operator",
+   "fact_sha256": "c969b801bffa1a4191e6bfe04f5679b6ffca83e536477a115fdec1618f269724",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 5 of lag 2021:1187 appears verbatim: Polismyndigheten and Migrationsverket are each personuppgiftsansvarig for the processing they perform in the Swedish national part of SIS, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20211187-med-kompletterande-bestammelser_sfs-2021-1187/"
+  },
+  {
+   "claim": "record:SE:border_control:register",
+   "fact_sha256": "5ca5c2077bc4a64da397b106c8aa6b4c79b5865eb140f3a67a7e9105e5fe4e75",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 4 appears verbatim: Polismyndigheten shall keep a register that is the Swedish national part of Schengens informationssystem, which is the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20211187-med-kompletterande-bestammelser_sfs-2021-1187/"
+  },
+  {
+   "claim": "record:SE:vehicle_licensing:register",
+   "fact_sha256": "77a2710cdaba9f3cc53f203814ef5ce5ecb5a1372a6974cc051a4e2d54d24b91",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Vägtrafikdatalag 2 kap. 1 § is on the page verbatim ('Uppgiftssamlingen benämns vägtrafikregistret', registered by Transportstyrelsen), and the Transportstyrelsen page quote also appears verbatim; both support the register name and keeper.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vagtrafikdatalag-2019369_sfs-2019-369/"
+  },
+  {
+   "claim": "record:SE:electoral_roll:register",
+   "fact_sha256": "7690a32092dc8089eeabe0d7bb13210dc3f895a71f5a1621785aa70f90cdd715",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Vallagen 5 kap. 1 § appears verbatim: the central election authority draws up a röstlängd per valdistrikt, based on data in Skatteverkets folkbokföringsverksamhet, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vallag-2005837_sfs-2005-837/"
+  },
+  {
+   "claim": "record:SE:civil_registry:count",
+   "fact_sha256": "119840b779ea93bc0f42eb839e9f88b650ffc141517747548f16a865f7014965",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The SCB page's 2026-08-21 statistical news says verbatim 'Vid halvårsskiftet 2026 var 10 610 500 personer folkbokförda i landet', the same figure, unit and date as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.scb.se/hitta-statistik/statistik-efter-amne/befolkning-och-levnadsforhallanden/befolkningens-sammansattning-och-utveckling/befolkningsstatistik/"
+  },
+  {
+   "claim": "record:SE:electoral_management:foreign_dependency",
+   "fact_sha256": "da8d2700cc92bb5bcdc79bdb2fa92619a410fb790c361bceac9f5f4372f0f9e8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim that Skatteverket is responsible for operation, development and monitoring of the IT support on behalf of Valmyndigheten, and adds that it was built in-house by Valmyndigheten with Skatteverket; that supports 'national' rather than an EU or non-EU provider. Note the page also states the physical location is withheld for secrecy reasons.",
+   "quote_found": true,
+   "checked_url": "https://www.val.se/om-valmyndigheten/vart-it-stod"
+  },
+  {
+   "claim": "record:SE:electoral_management:register",
+   "fact_sha256": "f292a93437bf2dfb81eb8bbf3b714f7b9df416f27351477dbdab29bdce15a09a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim: after manual counting the result 'läggs ... in i Valmyndighetens it-stöd för att sammanställas och kommuniceras till allmänheten', which is the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.val.se/om-valmyndigheten/vart-it-stod"
+  },
+  {
+   "claim": "record:SE:electoral_roll:foreign_dependency",
+   "fact_sha256": "7966f534cc3ee54d7909b4ecb18fbe93668bad292f03da8460d85d43b22ce711",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The quote is on the page, but it concerns Valmyndighetens valadministrativa it-stöd (ballot ordering, voting cards, result reporting); the page never says the röstlängd is kept or produced in that system, mentioning the roll only as a limited 2026 feature for digitally marking received votes. Whether the electoral roll's infrastructure is the one Skatteverket operates is not stated by this source.",
+   "quote_found": true,
+   "checked_url": "https://www.val.se/om-valmyndigheten/vart-it-stod"
+  }
+ ]
+}

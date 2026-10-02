@@ -1,0 +1,30 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "MT-043",
+ "iso": "MT",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:MT:business_registry:register",
+   "fact_sha256": "28da362debc148eca3615b3f137f443ce47a8fff8fa78595f9dfe2c396dc4b8f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live mbr.mt page contains the quote verbatim and names the Malta Business Registry's flagship portal as the 'Business Automation Registry Online System (BAROS)', used for filing and registration of commercial partnerships and legal persons, which matches the printed register/system name exactly.",
+   "quote_found": true,
+   "checked_url": "https://mbr.mt/"
+  },
+  {
+   "claim": "indicator:MT:K1",
+   "fact_sha256": "2e8cce57b7e6f3ee862e928079a511397c166238ad586b6d3ab54283ab8f205e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live TSL (sha256 matches the recorded cf9429...) contains the subject name verbatim for a QC CA service with status 'granted'; in context the TSP that lists this qualified CA is 'Malta Electronic Certification Services Ltd' whose TSPTradeName is 'Government of Malta', with its address at Identity Malta Agency and gov.mt contact/repository URIs, so the page itself places the qualified trust ser",
+   "quote_found": true,
+   "checked_url": "https://tsl.mca.org.mt/MT_TSL.xml"
+  }
+ ]
+}

@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "SK-056",
+ "iso": "SK",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "param:SK:gov_employment_k",
+   "fact_sha256": "4057dd2636d6cb6782111538bcb6fa613d7a40fb7f7fab31cf2b9e636815b995",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 169.37 (thousand persons) for geo=SK, time=2024, nace_r2=O, na_item=EMP_DC; rounded to one decimal that is the printed 169.4 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=SK&time=2024"
+  },
+  {
+   "claim": "param:SK:gdp_eur_bn",
+   "fact_sha256": "3a29308175729db7ab5eac5e0d31b7e4e62170d3e68141dcc669e58017758999",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 136754.3 million EUR for SK, 2025, B1GQ at current prices; scaled to billions and rounded that is 136.8 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=SK&time=2025"
+  },
+  {
+   "claim": "param:SK:renewables_pct",
+   "fact_sha256": "ddb0485ab29b8338b794b56198a6b3601c579c13930ad6e7477222cbe2ca9c9f",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 24.1 % for SK, 2025, REN_ELC (flagged 'p', provisional); matches the printed 24.1 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=SK&time=2025"
+  },
+  {
+   "claim": "param:SK:elec_price_eur_mwh",
+   "fact_sha256": "29b19ceef8a6ae2887ff81efba3adb4762e225a507e3617b2397d45d042e04ed",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.209 EUR/kWh for SK, 2025-S2, band MWH500-1999, excluding VAT; scaled to EUR/MWh that is 209.0 as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=SK&time=2025-S2"
+  },
+  {
+   "claim": "param:SK:land_km2",
+   "fact_sha256": "d4514fb511e7d07322751e00a371cd215bbedaf79f06a56aa2773407369534d0",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 48702 km² for SK, 2026, landuse L0008; identical to the printed 48 702 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=SK&time=2026"
+  },
+  {
+   "claim": "param:SK:population_m",
+   "fact_sha256": "71d7082bd3fe2b39be9ef1e44f17c2385038b204f87198675e416b18929aa242",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 5409407 persons for SK on 1 January 2026; scaled to millions and rounded that is 5.41 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=SK&time=2026"
+  },
+  {
+   "claim": "indicator:SK:C1",
+   "fact_sha256": "24564a22ffef73bc38076ad5710ab991735ab4f736d54f966d2111ee9710b302",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim; the same page says the government cloud is formed by a data centre administered by the Ministry of Interior and one administered by the Ministry of Finance, with DEUS operating the community part, which supports 'Yes' to state-operated government data centres in operation.",
+   "quote_found": true,
+   "checked_url": "https://mirri.gov.sk/sekcie/informatizacia/dokumenty/vladny-cloud/"
+  },
+  {
+   "claim": "indicator:SK:C2",
+   "fact_sha256": "2b7702cca786d026404e4ef258a15ff4875b9cee4d8c53552dcfb34616ee97a0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim on the Vládny cloud page, which describes the government cloud as a state-administration platform operated as a hybrid cloud with a published service catalogue, supporting a government cloud in operation.",
+   "quote_found": true,
+   "checked_url": "https://mirri.gov.sk/sekcie/informatizacia/dokumenty/vladny-cloud/"
+  },
+  {
+   "claim": "record:SK:central_bank:register",
+   "fact_sha256": "b32002892afd7ca2be18e73d4c0cb2f5371264135faa9be27cd6541bd98261e1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim; the page goes on to call TARGET-SK the only RTGS system in Slovakia and describes SIPS as 'retailový platobný systém', so both the names and the RTGS/retail labels are on the page.",
+   "quote_found": true,
+   "checked_url": "https://nbs.sk/platby/platobne-systemy/"
+  },
+  {
+   "claim": "record:SK:national_archives:operator",
+   "fact_sha256": "fb6273be614bf32c1b6511fdfd64f9c5e205228c9c1a61a8bae10650ce899466",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim on the Ministry of Interior's 'Elektronický archív Slovenska MV SR' page, and the printed sentence restates it exactly (archiving of structured data and data from MV SR production systems).",
+   "quote_found": true,
+   "checked_url": "https://www.minv.sk/?elektronicky-archiv-slovenska-mv-sr"
+  },
+  {
+   "claim": "record:SK:national_archives:register",
+   "fact_sha256": "cb37659f51ad0f69c0382e80bae4a3061ca7feb5ad0e2c57adc468dc519d03de",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim; the page is headed 'Elektronický archív Slovenska' and states it is the long-term repository of electronic archival documents produced by public authorities, matching the printed name and description.",
+   "quote_found": true,
+   "checked_url": "https://www.minv.sk/?elektronicky-archiv-slovenska-mv-sr"
+  },
+  {
+   "claim": "indicator:SK:K1",
+   "fact_sha256": "0037269bc97bc6ff28c3857bf5be14830e4063950cb8350afc605f33dcf5667e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes appear verbatim: nases.gov.sk says NASES is a contributory organisation of the Ministry of Investment, Regional Development and Informatization, and snca.gov.sk says NASES has operated the Slovak National Certification Authority and provided qualified trust services since 1 August 2019, supporting 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://snca.gov.sk/o-nas/certifikacna-autorita"
+  },
+  {
+   "claim": "record:SK:trust_services_pki:register",
+   "fact_sha256": "32db6f0c52f8f5fc30395d8481aa0f878d40fa5daab83d17c3dd5507e6a7525d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes appear verbatim; both pages name the Slovenská národná certifikačná autorita (SNCA) and state it provides qualified trust services to public authorities free of charge, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.nases.gov.sk/sluzby/sluzby-pre-po-a-ovm/doveryhodne-sluzby-snca"
+  },
+  {
+   "claim": "record:SK:grid_control:operator",
+   "fact_sha256": "a33e63490b1bca9bc71b7bf023cb510d8ca4ff21bec80268e78cbfd56b834bfa",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim on the page of Slovenská elektrizačná prenosová sústava, a. s., which says it acts as the transmission system operator in Slovakia including the Slovak electricity dispatching (Slovenský elektroenergetický dispečing), matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.sepsas.sk/o-nas/o-spolocnosti/"
+  },
+  {
+   "claim": "record:SK:grid_control:register",
+   "fact_sha256": "01eeb031c9d243981ccdf84af9841c94e4dc482e90b13d6f66210facaffef0f2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim on SEPS's dispatching page, which describes dispatch control of the transmission system and says that in a system collapse or blackout it directly manages activation of the defence plan and restoration plan, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.sepsas.sk/pre-partnerov/dispecing/"
+  },
+  {
+   "claim": "record:SK:geospatial:operator",
+   "fact_sha256": "82132c3c3b8b3b341a386d2818d128c8a3c2b346f73f6020a79e25735f2455be",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim in the PDF as a bullet under 'ÚGKK SR zabezpečuje ... najmä', and the abbreviation list defines ISGKK as 'informačný systém geodézie, kartografie a katastra', so the operator, the system and its expansion are all in the source.",
+   "quote_found": true,
+   "checked_url": "https://www.skgeodesy.sk/files/sk/slovensky/ugkk/kontrakty-vyrocne-spravy/ugkk-sr_vyrocna-sprava_2025.pdf"
+  },
+  {
+   "claim": "indicator:SK:K2",
+   "fact_sha256": "eb2e4e19fcdf1bf6e2542c513dcac09a389e98616c3b63ddc0fb277f28d58937",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim on the state portal: the eID is applied for and issued at the documents offices of the Police Force district directorates, i.e. a state body, which supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.slovensko.sk/sk/eid"
+  },
+  {
+   "claim": "record:SK:digital_identity_credentials:register",
+   "fact_sha256": "587352d3f43f2733ca6dfcee7dd559f33efe8d894e6725cd387f127670705dcc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim: since 2 December 2013 a new identity card with an electronic contact chip, the eID, has been issued, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.slovensko.sk/sk/eid"
+  },
+  {
+   "claim": "record:SK:geospatial:register",
+   "fact_sha256": "f749ac7ff6890bd2c3d303108beadd6172659523d538bcad217833b7d61afaa7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "unclear",
+   "reason": "The live page returns HTTP 403 (Cloudflare block) to every fetch, and the only archived snapshot (2021, the latest in Wayback) shows the law title 'Zákon o registri adries' and § 4(1) only as a truncated preview ending at 'ktorého správcom ...', so the Ministry of Interior as administrator could neither be confirmed nor refuted.",
+   "quote_found": false,
+   "checked_url": "https://web.archive.org/web/20210228034237/https://zakony.judikaty.info/predpis/zakon-125/2015"
+  },
+  {
+   "claim": "record:SK:emergency_communications:register",
+   "fact_sha256": "71d742b0e8b73d026b895c4a043a187406d2532acbf069304569f13be6fd3e41",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The live page is blocked (HTTP 403) and the archived page carries an older wording of letter a) ('zabezpečuje príjem tiesňového volania, volania eCall30) a príjem krátkych textových správ (SMS) na jednotnom európskom čísle tiesňového volania 112') without the quoted 'a odpoveď na príjem tiesňovej komunikácie', so the quote is not on the page I could read; the older wording does say coordination ce",
+   "quote_found": false,
+   "checked_url": "https://web.archive.org/web/20250624004629/https://zakony.judikaty.info/predpis/zakon-129/2002"
+  },
+  {
+   "claim": "record:SK:health_records:operator",
+   "fact_sha256": "f0cf52219a2149c7ee354af14633df720ba65b3ff3d17d235e874446d5a632f0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live page blocked (403); on the archived page the quote appears verbatim and § 2(1) says the national health information system is 'v správe národného centra', supporting the National Health Information Centre as operator. The abbreviation 'NCZI' does not appear on the page, only the full name.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250624093444/https://zakony.judikaty.info/predpis/zakon-153/2013"
+  },
+  {
+   "claim": "record:SK:health_records:register",
+   "fact_sha256": "49441b7f3fb5923559bf9d3f8d60619a17de1c1097b229917248f561fe8a1937",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live page blocked (403); on the archived page § 2(1) appears verbatim, defining the Národný zdravotnícky informačný systém as health information systems administered by the national centre, as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250624093444/https://zakony.judikaty.info/predpis/zakon-153/2013"
+  },
+  {
+   "claim": "record:SK:breeder_documents:register",
+   "fact_sha256": "a8a619d8c368125282facaf608383a51054c49aea96d93d31f6b4e18c368b693",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live page blocked (403); on the archived page § 9 'Zbierka listín' appears verbatim: the registry office keeps a collection of documents that serve as the basis for entries in the civil register, as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240913021122/https://zakony.judikaty.info/predpis/zakon-154/1994"
+  },
+  {
+   "claim": "record:SK:land_property:operator",
+   "fact_sha256": "0e1f1a3b134f6136e44b7a3c79d43992a66b883940aed15ad837a1fcf84166b5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live page blocked (403); on the archived page § 12 'Pôsobnosť úradu' lists d) spravuje katastrálny operát, e) spravuje informačný systém katastra verbatim, and § 1 defines 'úrad' as Úrad geodézie, kartografie a katastra Slovenskej republiky, supporting the printed operator (the abbreviation ÚGKK SR itself is not used in the statute text).",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20251008162932/https://zakony.judikaty.info/predpis/zakon-162/1995"
+  },
+  {
+   "claim": "record:SK:land_property:register",
+   "fact_sha256": "bd7318bd0072877ddbd08a54689a3722f9a9efed20b547276cf4ebec9364b25d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live page blocked (403); on the archived page § 1(1) appears verbatim, defining the kataster nehnuteľností and listing ownership, lien, easement and other rights, as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20251008162932/https://zakony.judikaty.info/predpis/zakon-162/1995"
+  },
+  {
+   "claim": "record:SK:police_records:register",
+   "fact_sha256": "e63f26f34758dde4112d993704b1ebf9bbbc8ffaa314069499d6c15c69fe2af3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The live page is blocked (HTTP 403) and the archived page's § 69(1) reads 'Policajný zbor spracúva podľa tohto zákona a osobitného predpisu11bc) informácie a osobné údaje zhromaždené...' without 'daktyloskopické údaje a snímky tvárí'; 'snímky tvárí' occurs nowhere on the page, so the quote and the printed 'face images' are not on the page I could read.",
+   "quote_found": false,
+   "checked_url": "https://web.archive.org/web/20240915235127/https://zakony.judikaty.info/predpis/zakon-171/1993"
+  },
+  {
+   "claim": "record:SK:electoral_management:operator",
+   "fact_sha256": "5d7f1bf38f0fad46da113682266f80cac4c6950e0944312b6bfc0fa77bf05fb5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live page blocked (403); on the archived page letter e) appears verbatim: election results are processed through the information system of the Statistical Office of the Slovak Republic, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240913004101/https://zakony.judikaty.info/predpis/zakon-180/2014"
+  },
+  {
+   "claim": "record:SK:electoral_management:register",
+   "fact_sha256": "951e053713045ed6268cd7e6e2585640effc11e11a4992e6cc28e15ab8233e80",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live page blocked (403); on the archived page § 11d(1) appears verbatim: the Ministry of Interior creates, administers and operates the information system Register kandidátov a kandidátnych listín, as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240913004101/https://zakony.judikaty.info/predpis/zakon-180/2014"
+  },
+  {
+   "claim": "record:SK:electoral_roll:register",
+   "fact_sha256": "021f194e28f7848ab2673089629a03ccee676ead52adc051f68d7061a66d233d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live page blocked (403); on the archived page § 9(1) appears verbatim: the stály zoznam voličov is compiled and kept by the municipality (city district in Bratislava and Košice), as printed.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240913004101/https://zakony.judikaty.info/predpis/zakon-180/2014"
+  },
+  {
+   "claim": "record:SK:firearms_register:register",
+   "fact_sha256": "cd588bc4b851426c6e8f2958cec2f4c2353dbf003981e86007fa3e510eea8de1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Live page blocked (403); on the archived page § 64(1) appears verbatim and its list includes a) issued firearms licences and their holders and f) 'evidovaných zbraniach', supporting the printed Police Force information system on licences, holders and registered weapons.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240521050240/https://zakony.judikaty.info/predpis/zakon-190/2003"
+  }
+ ]
+}

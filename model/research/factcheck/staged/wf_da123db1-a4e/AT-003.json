@@ -1,0 +1,60 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "AT-003",
+ "iso": "AT",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:AT:crisis_management:register",
+   "fact_sha256": "45ca2f5cc98bdcb309c3503b2f5b2909b587a88714e87f93d46a73b74feb2bcb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page is the consolidated Bundes-Krisensicherheitsgesetz; § 6 (headed 'Bundeslagezentrum') contains the quote verbatim and establishes a permanent Bundeslagezentrum in the Interior Ministry for the federal government, reachable in a crisis. That supports the printed name for the federal crisis-management system; note it is a situation centre (a facility), which the source does not describe as a",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20012321"
+  },
+  {
+   "claim": "record:AT:health_insurance:operator",
+   "fact_sha256": "5385208d5bf0701c17680ed68de8d91261ca4100eaeef94b4b1550fad9e5aac2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 31a(1) ASVG, quoted verbatim, obliges 'der Dachverband' to introduce ELSY across the whole social-insurance enforcement area and 'dessen Betrieb sicherzustellen' (ensure its operation), which supports the Dachverband as operator. The page itself says only 'Dachverband'; the parenthetical 'der Sozialversicherungsträger' is the ASVG body's full name (§ 31 ASVG) and is printed as an expansion, not ",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008147&Paragraf=31a"
+  },
+  {
+   "claim": "record:AT:health_insurance:register",
+   "fact_sha256": "6c926119fcd4e8a001a20150b92ff507abce093478a308ab54f34145c13c21ec",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 31a ASVG (section headed 'Grundlagen des Elektronischen Verwaltungssystems (ELSY)') contains the quote verbatim and names the 'elektronisches Verwaltungssystem (im folgenden ELSY genannt)'. The same paragraph treats the e-card as a component of ELSY ('Bestandteilen des ELSY durch Speichern und Auslesen von personenbezogenen Daten der e-card'), so the gloss 'the e-card system' is also on the page",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008147&Paragraf=31a"
+  },
+  {
+   "claim": "record:AT:benefits_pensions:operator",
+   "fact_sha256": "b85213b5528ff26458592735c50739d8eb395872fbbf818ffee462d524aeb28c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 10(1) APG (section 'Pensionskonto – Kontoführung'), quoted verbatim, obliges 'Der Dachverband der Sozialversicherungsträger (§ 31 ASVG)' to set up a pension account for every person in scope, and the section governs account keeping; that supports the Dachverband as the body operating the pension account. 'Austrian' in the English gloss is translation context, not a value the source contradicts.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003831&Paragraf=10"
+  },
+  {
+   "claim": "record:AT:benefits_pensions:register",
+   "fact_sha256": "27daf03ed97c7a526281324498f736ee1d2847cd71a4a20f8d6c004c77bc8860",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 10 APG sits under 'ABSCHNITT 3 Pensionskonto' and the verbatim quote names 'ein Pensionskonto' set up for every person within the act's scope, which matches the printed register name 'Pensionskonto (pension account)'.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20003831&Paragraf=10"
+  }
+ ]
+}

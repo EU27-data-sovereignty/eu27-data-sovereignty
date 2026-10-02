@@ -56,44 +56,44 @@ The holdings Croatia cannot let depend on infrastructure a foreign state can com
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | State civil registers (Državne matice): registers of births, marriages and deaths[^s14][^s15] | The state administration body for general administration sets up and runs the single information system for the civil registers[^s15] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | Photograph stored in the ID-card register in the Ministry of the Interior information system (reused for driving licences)[^s16] | Competent bodies for biometric collections are the ministries of the interior, foreign affairs and justice[^s17][^s18] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | Fingerprints already taken and stored electronically in a ministry document-issuance procedure are reused (central retention)[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Breeder document scans (tier 0) | Files underlying civil-register entries are of permanent value[^s20] | Registers whose last entry is more than 100 years old are kept by the Croatian State Archives[^s15] | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Photograph stored in the ID-card register in the Ministry of the Interior information system (reused for driving licences)[^s16] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page, but the law lists four competent bodies: the ministries for internal affairs, foreign affairs, justice 'te ministarstvo nadležno za poslove obrane u dijelu koji se odnosi na obavljanje vojnopolicijskih poslova'. Th It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 12(5) of the ID Card Act only says a person need not give fingerprints if they were already taken and stored electronically in a public-document issuance procedure at the Ministry. It does not say they are held in 'central retention It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | Files underlying civil-register entries are of permanent value[^s17] | Registers whose last entry is more than 100 years old are kept by the Croatian State Archives[^s15] | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | NIAS records credential-usage history, visible to the user for the last 60 days[^s7] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | ID-card register kept in the Ministry of the Interior information system, recording invalid (lost) cards[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | ID-card register kept in the Ministry of the Interior information system, recording invalid (lost) cards[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Digital identity credentials (tier 0) | Nacionalni identifikacijski i autentifikacijski sustav (NIAS) (National Identification and Authentication System)[^s7] | tijelo državne uprave nadležno za digitalnu transformaciju (state administration body responsible for digital transformation)[^s7] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | Registar birača (Register of voters)[^s21] | Središnje tijelo državne uprave nadležno za poslove opće uprave (central state administration body for general administration)[^s21] | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | ZIS stores and maintains all land-register and cadastre data[^s22][^s23] | ZIS is jointly coordinated by the Ministry of Justice and the State Geodetic Administration[^s24] | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | Registar birača (Register of voters)[^s19] | Središnje tijelo državne uprave nadležno za poslove opće uprave (central state administration body for general administration)[^s19] | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | ZIS stores and maintains all land-register and cadastre data[^s20][^s21] | ZIS is jointly coordinated by the Ministry of Justice and the State Geodetic Administration[^s22] | *Not stated in sources* | *Not yet measured* |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | The Ministry information system is the Information System of the Ministry of the Interior[^s25][^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | The Ministry information system is the Information System of the Ministry of the Interior[^s23][^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | zbirke i registri osobnih podataka sigurnosno-obavještajnih agencija (personal-data collections and registers of the security-intelligence agencies)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | AKD HRIDCA issues identification and qualified signature certificates for the eOI card[^s28] | Fina is a qualified trust service provider on the national trusted list[^s29] | National infrastructure[^s28] | *Not yet measured* |
-| High | Residence and migration status (tier 1) | Collection covers third-country nationals on short-term, temporary, long-term and permanent stay[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Intelligence services (tier 1) | zbirke i registri osobnih podataka sigurnosno-obavještajnih agencija (personal-data collections and registers of the security-intelligence agencies)[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | AKD HRIDCA issues identification and qualified signature certificates for the eOI card[^s26] | Fina is a qualified trust service provider on the national trusted list[^s27] | National infrastructure[^s26] | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Collection covers third-country nationals on short-term, temporary, long-term and permanent stay[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | matična evidencija (master record of insured persons, pension beneficiaries and contribution payers)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | matična evidencija (master record of insured persons, pension beneficiaries and contribution payers)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | Main books are linked into a single database for Croatia[^s32] | The register is kept by the commercial courts and preserved permanently[^s33][^s32] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Central electronic database of beneficial owners of legal entities and trusts[^s34] | Operationally run by Fina on behalf of the Anti-Money Laundering Office, Ministry of Finance[^s34] | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Register of registered vehicles kept on the Ministry of the Interior information system[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | National information system for state border management, part of the MUP information system[^s36][^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | evidencije na središnjem informacijskom sustavu ministarstva nadležnog za unutarnje poslove (records on the central information system of the Ministry of the Interior)[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | All budget-user transactions go through the State Treasury system and the single treasury account held at HNB[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | The COP payroll information system is owned by the Republic of Croatia[^s40] | Fina processes the data on behalf of the civil-service body[^s40] | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Main books are linked into a single database for Croatia[^s30] | The register is kept by the commercial courts and preserved permanently[^s31][^s30] | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Central electronic database of beneficial owners of legal entities and trusts[^s32] | Operationally run by Fina on behalf of the Anti-Money Laundering Office, Ministry of Finance[^s32] | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Register of registered vehicles kept on the Ministry of the Interior information system[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | National information system for state border management, part of the MUP information system[^s34][^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | evidencije na središnjem informacijskom sustavu ministarstva nadležnog za unutarnje poslove (records on the central information system of the Ministry of the Interior)[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | All budget-user transactions go through the State Treasury system and the single treasury account held at HNB[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | The COP payroll information system is owned by the Republic of Croatia[^s38] | Fina processes the data on behalf of the civil-service body[^s38] | *Not stated in sources* | *Not yet measured* |
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | Payments in Croatia run through TARGET-HR, EuroNCS and EuroNCSInst[^s41] | *Not yet sourced* | EU provider[^s42] | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | System 112 consists of interconnected 112 centres and the Operational Centre of Civil Protection[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | National Operational Centre of Civil Protection monitors events through the 112 centres[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | Payments in Croatia run through TARGET-HR, EuroNCS and EuroNCSInst[^s39] | *Not yet sourced* | EU provider[^s40] | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | System 112 consists of interconnected 112 centres and the Operational Centre of Civil Protection[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | National Operational Centre of Civil Protection monitors events through the 112 centres[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | Central register of higher-education certificates, diplomas and supplements (Digital Register of Diplomas)[^s44] | e-Matica is a centralised MZOM system; CARNET is the support centre[^s45] | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | CEZIH is the central store of health data for primary, secondary and tertiary care[^s46][^s47] | HZZO manages CEZIH and maintains its central part[^s46][^s47] | *Not stated in sources* | *Not yet measured* |
-| Standard | Tax (tier 1) | Information system of the Tax Administration[^s48] | *Not yet sourced* | National infrastructure[^s49] | *Not yet measured* |
+| High | Education (tier 1) | Central register of higher-education certificates, diplomas and supplements (Digital Register of Diplomas)[^s42] | e-Matica is a centralised MZOM system; CARNET is the support centre[^s43] | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | CEZIH is the central store of health data for primary, secondary and tertiary care[^s44][^s45] | HZZO manages CEZIH and maintains its central part[^s44][^s45] | *Not stated in sources* | *Not yet measured* |
+| Standard | Tax (tier 1) | Information system of the Tax Administration[^s46] | *Not yet sourced* | National infrastructure[^s47] | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | NAJS stores health data and public-health records and registers[^s46][^s47] | NAJS is run by HZJZ[^s46][^s47] | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | NAJS stores health data and public-health records and registers[^s44][^s45] | NAJS is run by HZJZ[^s44][^s45] | *Not stated in sources* | *Not yet measured* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | Building register established, kept and maintained by DGU[^s50][^s51] | Državna geodetska uprava (State Geodetic Administration)[^s50] | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | Building register established, kept and maintained by DGU[^s48][^s49] | Državna geodetska uprava (State Geodetic Administration)[^s48] | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -147,7 +147,7 @@ Tier 0 and 1 holdings for Croatia without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
 
 ### How sources were found
 
@@ -203,10 +203,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
-| T2 competent public body or audit office | 633 |
-| T3 other institution or company | 9 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
+| T2 competent public body or audit office | 589 |
+| T3 other institution or company | 7 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
 
 ### Evidence grades
 
@@ -215,8 +215,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 106 |
-| Standard | 1282 |
+| Strong | 100 |
+| Standard | 1209 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -257,7 +257,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1388 printed facts pass the fact check.
+In this build, 1309 of 1309 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -299,7 +299,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
+In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -322,76 +322,78 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Croatia
 
-0 of 58 printed facts about Croatia pass.
+56 of 56 printed facts about Croatia pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
-| indicator:HR:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | none | never checked |  |
-| indicator:HR:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | none | never checked |  |
-| indicator:HR:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:HR:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | none | never checked |  |
-| indicator:HR:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | none | never checked |  |
-| indicator:HR:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | none | never checked |  |
-| param:HR:population_m | param:HR:population_m | program:fetch_eurostat.py | none | never checked |  |
-| param:HR:gdp_eur_bn | param:HR:gdp_eur_bn | program:fetch_eurostat.py | none | never checked |  |
-| param:HR:gov_employment_k | param:HR:gov_employment_k | program:fetch_eurostat.py | none | never checked |  |
-| param:HR:elec_price_eur_mwh | param:HR:elec_price_eur_mwh | program:fetch_eurostat.py | none | never checked |  |
-| param:HR:renewables_pct | param:HR:renewables_pct | program:fetch_eurostat.py | none | never checked |  |
-| param:HR:land_km2 | param:HR:land_km2 | program:fetch_eurostat.py | none | never checked |  |
-| record:HR:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:land_property:register | Land & property registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:land_property:operator | Land & property registry: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:police_records:register | Police information systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:intelligence:register | Intelligence services: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:trust_services_pki:foreign_dependency | State PKI and qualified trust services: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:HR:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:business_registry:register | Business registry: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:business_registry:operator | Business registry: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:border_control:register | Border and visa systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:firearms_register:register | Firearms register: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:government_payroll:operator | Government payroll and personnel: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:central_bank:register | Central bank systems: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:central_bank:foreign_dependency | Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:HR:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:education:operator | Education: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:health_records:register | Health records: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:health_records:operator | Health records: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:tax:register | Tax: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:tax:foreign_dependency | Tax: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | none | never checked |  |
-| record:HR:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | none | never checked |  |
-| record:HR:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | none | never checked |  |
-| record:HR:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | none | never checked |  |
+| indicator:HR:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:HR:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:HR:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:HR:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:HR:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:HR:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:HR:population_m | param:HR:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:HR:gdp_eur_bn | param:HR:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:HR:gov_employment_k | param:HR:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:HR:elec_price_eur_mwh | param:HR:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:HR:renewables_pct | param:HR:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:HR:land_km2 | param:HR:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:land_property:register | Land & property registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:land_property:operator | Land & property registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:intelligence:register | Intelligence services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:trust_services_pki:foreign_dependency | State PKI and qualified trust services: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:business_registry:operator | Business registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:government_payroll:operator | Government payroll and personnel: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:central_bank:foreign_dependency | Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:education:operator | Education: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:health_records:operator | Health records: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:tax:foreign_dependency | Tax: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Croatia
 
-None.
+| Claim | What it answers | Checked by | Verdict | Reason |
+|---|---|---|---|---|
+| record:HR:facial_biometric:operator | Facial biometric: the body that operates it | claude-fable-5-1 | not supported | The quote is on the page, but the law lists four competent bodies: the ministries for internal affairs, foreign affairs, justice 'te ministarstvo nadležno za poslove obrane u dijelu koji se odnosi na obavljanje vojnopolicijskih poslova'. The printed sentence states the competent bodies 'are' three ministries and drops the defence ministry (military police), so it does not match the source's scope; |
+| record:HR:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | claude-fable-5-1 | not supported | Article 12(5) of the ID Card Act only says a person need not give fingerprints if they were already taken and stored electronically in a public-document issuance procedure at the Ministry. It does not say they are held in 'central retention', which the printed statement adds; the source names no register or central store. |
 
 ---
 
@@ -411,42 +413,40 @@ None.
 [^s14]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o državnim maticama (NN 96/1993), 1993-10. Zakon o državnim maticama (NN 96/1993). <https://narodne-novine.nn.hr/clanci/sluzbeni/1993_10_96_1878.html> ([archived](https://web.archive.org/web/20260420162921/https://narodne-novine.nn.hr/clanci/sluzbeni/1993_10_96_1878.html))
 [^s15]: Zakon.hr (consolidated text of Narodne novine 96/93, 76/13, 98/19, 133/22) — Zakon o državnim maticama (pročišćeni tekst). Zakon o državnim maticama (pročišćeni tekst). <https://www.zakon.hr/z/603/zakon-o-drzavnim-maticama> ([archived](https://web.archive.org/web/20260723125945/https://www.zakon.hr/z/603/zakon-o-drzavnim-maticama))
 [^s16]: Narodne novine d.d. — Pravilnik o vozačkim dozvolama, 2019. Pravilnik o vozačkim dozvolama. <https://narodne-novine.nn.hr/clanci/sluzbeni/2019_01_2_39.html> ([archived](https://web.archive.org/web/20260517053634/https://narodne-novine.nn.hr/clanci/sluzbeni/2019_01_2_39.html))
-[^s17]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o obradi biometrijskih podataka (NN 127/2019), 2019-12. Zakon o obradi biometrijskih podataka (NN 127/2019). <https://narodne-novine.nn.hr/clanci/sluzbeni/2019_12_127_2551.html> ([archived](https://web.archive.org/web/20260612053149/https://narodne-novine.nn.hr/clanci/sluzbeni/2019_12_127_2551.html))
-[^s18]: Zakon.hr (NN 127/19) — Zakon o obradi biometrijskih podataka, 2019. Zakon o obradi biometrijskih podataka. <https://www.zakon.hr/z/2431/zakon-o-obradi-biometrijskih-podataka> ([archived](https://web.archive.org/web/20260614042102/https://www.zakon.hr/z/2431/zakon-o-obradi-biometrijskih-podataka))
-[^s19]: Narodne novine d.d. — Zakon o osobnoj iskaznici, 2015. Zakon o osobnoj iskaznici. <https://narodne-novine.nn.hr/clanci/sluzbeni/full/2015_06_62_1189.html> ([archived](https://web.archive.org/web/20231128121708/https://narodne-novine.nn.hr/clanci/sluzbeni/full/2015_06_62_1189.html))
-[^s20]: Narodne novine d.d. — Naputak za provedbu Zakona o državnim maticama, 2021. Naputak za provedbu Zakona o državnim maticama. <https://narodne-novine.nn.hr/clanci/sluzbeni/2021_10_117_2012.html> ([archived](https://web.archive.org/web/20260612022049/https://narodne-novine.nn.hr/clanci/sluzbeni/2021_10_117_2012.html))
-[^s21]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o registru birača (NN 144/2012), 2012-12. Zakon o registru birača (NN 144/2012). <https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_144_3073.html> ([archived](https://web.archive.org/web/20260518065722/https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_144_3073.html))
-[^s22]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o zemljišnim knjigama (NN 63/2019), 2019-06. Zakon o zemljišnim knjigama (NN 63/2019). <https://narodne-novine.nn.hr/clanci/sluzbeni/2019_06_63_1234.html> ([archived](https://web.archive.org/web/20260612120931/https://narodne-novine.nn.hr/clanci/sluzbeni/2019_06_63_1234.html))
-[^s23]: Zakon.hr — Zakon o zemljišnim knjigama. Zakon o zemljišnim knjigama. <https://www.zakon.hr/z/103/zakon-o-zemljisnim-knjigama> ([archived](https://web.archive.org/web/20260916120158/https://www.zakon.hr/z/103/zakon-o-zemljisnim-knjigama))
-[^s24]: Državna geodetska uprava — Zajednički informacijski sustav zemljišnih knjiga i katastra. Zajednički informacijski sustav zemljišnih knjiga i katastra. <https://dgu.gov.hr/zajednicki-informacijski-sustav-zemljisnih-knjiga-i-katastra/161> ([archived](https://web.archive.org/web/20260715120501/https://dgu.gov.hr/zajednicki-informacijski-sustav-zemljisnih-knjiga-i-katastra/161))
-[^s25]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o policijskim poslovima i ovlastima (NN 76/2009), 2009-07. Zakon o policijskim poslovima i ovlastima (NN 76/2009). <https://narodne-novine.nn.hr/clanci/sluzbeni/2009_07_76_1835.html> ([archived](https://web.archive.org/web/20260617104913/https://narodne-novine.nn.hr/clanci/sluzbeni/2009_07_76_1835.html))
-[^s26]: Zakon.hr — Zakon o policijskim poslovima i ovlastima. Zakon o policijskim poslovima i ovlastima. <https://www.zakon.hr/z/173/zakon-o-policijskim-poslovima-i-ovlastima> ([archived](https://web.archive.org/web/20260902084202/https://www.zakon.hr/z/173/zakon-o-policijskim-poslovima-i-ovlastima))
-[^s27]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o sigurnosno-obavještajnom sustavu Republike…, 2006-07. Zakon o sigurnosno-obavještajnom sustavu Republike Hrvatske (NN 79/2006). <https://narodne-novine.nn.hr/clanci/sluzbeni/2006_07_79_1912.html>
-[^s28]: AKD d.o.o. (eid.hr) — AKD PKI – Certifikati. AKD PKI – Certifikati. <https://www.eid.hr/hr/certifikati/akd-pki> ([archived](https://web.archive.org/web/20260730092109/https://www.eid.hr/hr/certifikati/akd-pki))
-[^s29]: Fina (Financijska agencija) — Vjerujte Fini. Vjerujte Fini. <https://www.fina.hr/vjerujte-fini>
-[^s30]: Zakon.hr (NN 133/20, 114/22, 151/22, 40/25, 55/26) — Zakon o strancima (pročišćeni tekst). Zakon o strancima (pročišćeni tekst). <https://www.zakon.hr/z/142/zakon-o-strancima> ([archived](https://web.archive.org/web/20260720121718/https://www.zakon.hr/z/142/zakon-o-strancima))
-[^s31]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o mirovinskom osiguranju (NN 157/2013), 2013-12. Zakon o mirovinskom osiguranju (NN 157/2013). <https://narodne-novine.nn.hr/clanci/sluzbeni/2013_12_157_3290.html> ([archived](https://web.archive.org/web/20260710205648/https://narodne-novine.nn.hr/clanci/sluzbeni/2013_12_157_3290.html))
-[^s32]: Zakon.hr — Zakon o sudskom registru. Zakon o sudskom registru. <https://www.zakon.hr/z/271/zakon-o-sudskom-registru>
-[^s33]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o sudskom registru (NN 1/1995), 1995-01. Zakon o sudskom registru (NN 1/1995). <https://narodne-novine.nn.hr/clanci/sluzbeni/1995_01_1_1.html> ([archived](https://web.archive.org/web/20260616093421/https://narodne-novine.nn.hr/clanci/sluzbeni/1995_01_1_1.html))
-[^s34]: Fina (Financijska agencija) — Registar stvarnih vlasnika. Registar stvarnih vlasnika. <https://www.fina.hr/javne-usluge-za-poslovne-subjekte/registri/registar-stvarnih-vlasnika> ([archived](https://web.archive.org/web/20260820073130/https://www.fina.hr/javne-usluge-za-poslovne-subjekte/registri/registar-stvarnih-vlasnika))
-[^s35]: Narodne novine d.d. — Pravilnik o registraciji i označavanju vozila, 2017. Pravilnik o registraciji i označavanju vozila. <https://narodne-novine.nn.hr/clanci/sluzbeni/full/2017_12_130_2993.html> ([archived](https://web.archive.org/web/20260921093541/https://narodne-novine.nn.hr/clanci/sluzbeni/full/2017_12_130_2993.html))
-[^s36]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o nadzoru državne granice (NN 83/2013), 2013-07. Zakon o nadzoru državne granice (NN 83/2013). <https://narodne-novine.nn.hr/clanci/sluzbeni/2013_07_83_1738.html> ([archived](https://web.archive.org/web/20260511211909/https://narodne-novine.nn.hr/clanci/sluzbeni/2013_07_83_1738.html))
-[^s37]: Zakon.hr — Zakon o nadzoru državne granice. Zakon o nadzoru državne granice. <https://www.zakon.hr/z/450/zakon-o-nadzoru-drzavne-granice> ([archived](https://web.archive.org/web/20260723144358/https://www.zakon.hr/z/450/zakon-o-nadzoru-drzavne-granice))
-[^s38]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o nabavi i posjedovanju oružja građana (NN 94/2018), 2018-10. Zakon o nabavi i posjedovanju oružja građana (NN 94/2018). <https://narodne-novine.nn.hr/clanci/sluzbeni/2018_10_94_1816.html>
-[^s39]: Ministarstvo financija — Državna riznica. Državna riznica. <https://mfin.gov.hr/istaknute-teme/drzavna-riznica/103> ([archived](https://web.archive.org/web/20260814130009/https://mfin.gov.hr/istaknute-teme/drzavna-riznica/103))
-[^s40]: Narodne novine d.d. — Zakon o Registru zaposlenih i centraliziranom obračunu…, 2023. Zakon o Registru zaposlenih i centraliziranom obračunu plaća u državnoj službi i javnim službama. <https://narodne-novine.nn.hr/clanci/sluzbeni/2023_06_59_997.html> ([archived](https://web.archive.org/web/20251214072619/https://narodne-novine.nn.hr/clanci/sluzbeni/2023_06_59_997.html))
-[^s41]: Hrvatska narodna banka — Payment systems, 2023-01-01. Payment systems. <https://www.hnb.hr/en/statistics/statistical-data/payment-systems> ([archived](https://web.archive.org/web/20260520195057/https://www.hnb.hr/en/statistics/statistical-data/payment-systems))
-[^s42]: Hrvatska narodna banka — TARGET-HR. TARGET-HR. <https://www.hnb.hr/en/core-functions/payment-system/payment-systems/targe-hr> ([archived](https://web.archive.org/web/20260508191140/https://www.hnb.hr/en/core-functions/payment-system/payment-systems/targe-hr))
-[^s43]: Ravnateljstvo civilne zaštite (MUP) — Sustav 112. Sustav 112. <https://civilna-zastita.gov.hr/sustav-112/112> ([archived](https://web.archive.org/web/20260414033755/https://civilna-zastita.gov.hr/sustav-112/112))
-[^s44]: Narodne novine d.d. — Pravilnik o sadržaju i korištenju informacijskih sustava…, 2023. Pravilnik o sadržaju i korištenju informacijskih sustava u visokom obrazovanju. <https://narodne-novine.nn.hr/clanci/sluzbeni/2023_03_36_614.html> ([archived](https://web.archive.org/web/20260710102925/https://narodne-novine.nn.hr/clanci/sluzbeni/2023_03_36_614.html))
-[^s45]: CARNET — e-Matica. e-Matica. <https://www.carnet.hr/projekt/e-matica-2/> ([archived](https://web.archive.org/web/20260519213940/https://www.carnet.hr/projekt/e-matica-2/))
-[^s46]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o podacima i informacijama u zdravstvu (NN 14/2019), 2019-02. Zakon o podacima i informacijama u zdravstvu (NN 14/2019). <https://narodne-novine.nn.hr/clanci/sluzbeni/2019_02_14_269.html> ([archived](https://web.archive.org/web/20260514042307/https://narodne-novine.nn.hr/clanci/sluzbeni/2019_02_14_269.html))
-[^s47]: Zakon.hr (NN 14/19) — Zakon o podacima i informacijama u zdravstvu, 2019. Zakon o podacima i informacijama u zdravstvu. <https://www.zakon.hr/z/1883/zakon-o-podacima-i-informacijama-u-zdravstvu> ([archived](https://web.archive.org/web/20260312003855/https://www.zakon.hr/z/1883/zakon-o-podacima-i-informacijama-u-zdravstvu))
-[^s48]: Zakon.hr — Zakon o poreznoj upravi. Zakon o poreznoj upravi. <https://www.zakon.hr/z/419/zakon-o-poreznoj-upravi>
-[^s49]: Hrvatska gospodarska komora (Znakovi kvalitete) — Usluga podatkovnog centra APIS IT. Usluga podatkovnog centra APIS IT. <https://znakovi.hgk.hr/proizvod/usluga-podatkovnog-centra-apis-it/> ([archived](https://web.archive.org/web/20260610123435/https://znakovi.hgk.hr/proizvod/usluga-podatkovnog-centra-apis-it/))
-[^s50]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o državnoj izmjeri i katastru nekretnina (NN 112/2018), 2018-12. Zakon o državnoj izmjeri i katastru nekretnina (NN 112/2018). <https://narodne-novine.nn.hr/clanci/sluzbeni/2018_12_112_2167.html>
-[^s51]: Zakon.hr — Zakon o državnoj izmjeri i katastru nekretnina. Zakon o državnoj izmjeri i katastru nekretnina. <https://www.zakon.hr/z/156/zakon-o-drzavnoj-izmjeri-i-katastru-nekretnina> ([archived](https://web.archive.org/web/20260222053536/https://www.zakon.hr/z/156/zakon-o-drzavnoj-izmjeri-i-katastru-nekretnina))
+[^s17]: Narodne novine d.d. — Naputak za provedbu Zakona o državnim maticama, 2021. Naputak za provedbu Zakona o državnim maticama. <https://narodne-novine.nn.hr/clanci/sluzbeni/2021_10_117_2012.html> ([archived](https://web.archive.org/web/20260612022049/https://narodne-novine.nn.hr/clanci/sluzbeni/2021_10_117_2012.html))
+[^s18]: Narodne novine d.d. — Zakon o osobnoj iskaznici, 2015. Zakon o osobnoj iskaznici. <https://narodne-novine.nn.hr/clanci/sluzbeni/full/2015_06_62_1189.html> ([archived](https://web.archive.org/web/20231128121708/https://narodne-novine.nn.hr/clanci/sluzbeni/full/2015_06_62_1189.html))
+[^s19]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o registru birača (NN 144/2012), 2012-12. Zakon o registru birača (NN 144/2012). <https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_144_3073.html> ([archived](https://web.archive.org/web/20260518065722/https://narodne-novine.nn.hr/clanci/sluzbeni/2012_12_144_3073.html))
+[^s20]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o zemljišnim knjigama (NN 63/2019), 2019-06. Zakon o zemljišnim knjigama (NN 63/2019). <https://narodne-novine.nn.hr/clanci/sluzbeni/2019_06_63_1234.html> ([archived](https://web.archive.org/web/20260612120931/https://narodne-novine.nn.hr/clanci/sluzbeni/2019_06_63_1234.html))
+[^s21]: Zakon.hr — Zakon o zemljišnim knjigama. Zakon o zemljišnim knjigama. <https://www.zakon.hr/z/103/zakon-o-zemljisnim-knjigama> ([archived](https://web.archive.org/web/20260916120158/https://www.zakon.hr/z/103/zakon-o-zemljisnim-knjigama))
+[^s22]: Državna geodetska uprava — Zajednički informacijski sustav zemljišnih knjiga i katastra. Zajednički informacijski sustav zemljišnih knjiga i katastra. <https://dgu.gov.hr/zajednicki-informacijski-sustav-zemljisnih-knjiga-i-katastra/161> ([archived](https://web.archive.org/web/20260715120501/https://dgu.gov.hr/zajednicki-informacijski-sustav-zemljisnih-knjiga-i-katastra/161))
+[^s23]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o policijskim poslovima i ovlastima (NN 76/2009), 2009-07. Zakon o policijskim poslovima i ovlastima (NN 76/2009). <https://narodne-novine.nn.hr/clanci/sluzbeni/2009_07_76_1835.html> ([archived](https://web.archive.org/web/20260617104913/https://narodne-novine.nn.hr/clanci/sluzbeni/2009_07_76_1835.html))
+[^s24]: Zakon.hr — Zakon o policijskim poslovima i ovlastima. Zakon o policijskim poslovima i ovlastima. <https://www.zakon.hr/z/173/zakon-o-policijskim-poslovima-i-ovlastima> ([archived](https://web.archive.org/web/20260902084202/https://www.zakon.hr/z/173/zakon-o-policijskim-poslovima-i-ovlastima))
+[^s25]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o sigurnosno-obavještajnom sustavu Republike…, 2006-07. Zakon o sigurnosno-obavještajnom sustavu Republike Hrvatske (NN 79/2006). <https://narodne-novine.nn.hr/clanci/sluzbeni/2006_07_79_1912.html>
+[^s26]: AKD d.o.o. (eid.hr) — AKD PKI – Certifikati. AKD PKI – Certifikati. <https://www.eid.hr/hr/certifikati/akd-pki> ([archived](https://web.archive.org/web/20260730092109/https://www.eid.hr/hr/certifikati/akd-pki))
+[^s27]: Fina (Financijska agencija) — Vjerujte Fini. Vjerujte Fini. <https://www.fina.hr/vjerujte-fini>
+[^s28]: Zakon.hr (NN 133/20, 114/22, 151/22, 40/25, 55/26) — Zakon o strancima (pročišćeni tekst). Zakon o strancima (pročišćeni tekst). <https://www.zakon.hr/z/142/zakon-o-strancima> ([archived](https://web.archive.org/web/20260720121718/https://www.zakon.hr/z/142/zakon-o-strancima))
+[^s29]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o mirovinskom osiguranju (NN 157/2013), 2013-12. Zakon o mirovinskom osiguranju (NN 157/2013). <https://narodne-novine.nn.hr/clanci/sluzbeni/2013_12_157_3290.html> ([archived](https://web.archive.org/web/20260710205648/https://narodne-novine.nn.hr/clanci/sluzbeni/2013_12_157_3290.html))
+[^s30]: Zakon.hr — Zakon o sudskom registru. Zakon o sudskom registru. <https://www.zakon.hr/z/271/zakon-o-sudskom-registru>
+[^s31]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o sudskom registru (NN 1/1995), 1995-01. Zakon o sudskom registru (NN 1/1995). <https://narodne-novine.nn.hr/clanci/sluzbeni/1995_01_1_1.html> ([archived](https://web.archive.org/web/20260616093421/https://narodne-novine.nn.hr/clanci/sluzbeni/1995_01_1_1.html))
+[^s32]: Fina (Financijska agencija) — Registar stvarnih vlasnika. Registar stvarnih vlasnika. <https://www.fina.hr/javne-usluge-za-poslovne-subjekte/registri/registar-stvarnih-vlasnika> ([archived](https://web.archive.org/web/20260820073130/https://www.fina.hr/javne-usluge-za-poslovne-subjekte/registri/registar-stvarnih-vlasnika))
+[^s33]: Narodne novine d.d. — Pravilnik o registraciji i označavanju vozila, 2017. Pravilnik o registraciji i označavanju vozila. <https://narodne-novine.nn.hr/clanci/sluzbeni/full/2017_12_130_2993.html> ([archived](https://web.archive.org/web/20260921093541/https://narodne-novine.nn.hr/clanci/sluzbeni/full/2017_12_130_2993.html))
+[^s34]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o nadzoru državne granice (NN 83/2013), 2013-07. Zakon o nadzoru državne granice (NN 83/2013). <https://narodne-novine.nn.hr/clanci/sluzbeni/2013_07_83_1738.html> ([archived](https://web.archive.org/web/20260511211909/https://narodne-novine.nn.hr/clanci/sluzbeni/2013_07_83_1738.html))
+[^s35]: Zakon.hr — Zakon o nadzoru državne granice. Zakon o nadzoru državne granice. <https://www.zakon.hr/z/450/zakon-o-nadzoru-drzavne-granice> ([archived](https://web.archive.org/web/20260723144358/https://www.zakon.hr/z/450/zakon-o-nadzoru-drzavne-granice))
+[^s36]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o nabavi i posjedovanju oružja građana (NN 94/2018), 2018-10. Zakon o nabavi i posjedovanju oružja građana (NN 94/2018). <https://narodne-novine.nn.hr/clanci/sluzbeni/2018_10_94_1816.html>
+[^s37]: Ministarstvo financija — Državna riznica. Državna riznica. <https://mfin.gov.hr/istaknute-teme/drzavna-riznica/103> ([archived](https://web.archive.org/web/20260814130009/https://mfin.gov.hr/istaknute-teme/drzavna-riznica/103))
+[^s38]: Narodne novine d.d. — Zakon o Registru zaposlenih i centraliziranom obračunu…, 2023. Zakon o Registru zaposlenih i centraliziranom obračunu plaća u državnoj službi i javnim službama. <https://narodne-novine.nn.hr/clanci/sluzbeni/2023_06_59_997.html> ([archived](https://web.archive.org/web/20251214072619/https://narodne-novine.nn.hr/clanci/sluzbeni/2023_06_59_997.html))
+[^s39]: Hrvatska narodna banka — Payment systems, 2023-01-01. Payment systems. <https://www.hnb.hr/en/statistics/statistical-data/payment-systems> ([archived](https://web.archive.org/web/20260520195057/https://www.hnb.hr/en/statistics/statistical-data/payment-systems))
+[^s40]: Hrvatska narodna banka — TARGET-HR. TARGET-HR. <https://www.hnb.hr/en/core-functions/payment-system/payment-systems/targe-hr> ([archived](https://web.archive.org/web/20260508191140/https://www.hnb.hr/en/core-functions/payment-system/payment-systems/targe-hr))
+[^s41]: Ravnateljstvo civilne zaštite (MUP) — Sustav 112. Sustav 112. <https://civilna-zastita.gov.hr/sustav-112/112> ([archived](https://web.archive.org/web/20260414033755/https://civilna-zastita.gov.hr/sustav-112/112))
+[^s42]: Narodne novine d.d. — Pravilnik o sadržaju i korištenju informacijskih sustava…, 2023. Pravilnik o sadržaju i korištenju informacijskih sustava u visokom obrazovanju. <https://narodne-novine.nn.hr/clanci/sluzbeni/2023_03_36_614.html> ([archived](https://web.archive.org/web/20260710102925/https://narodne-novine.nn.hr/clanci/sluzbeni/2023_03_36_614.html))
+[^s43]: CARNET — e-Matica. e-Matica. <https://www.carnet.hr/projekt/e-matica-2/> ([archived](https://web.archive.org/web/20260519213940/https://www.carnet.hr/projekt/e-matica-2/))
+[^s44]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o podacima i informacijama u zdravstvu (NN 14/2019), 2019-02. Zakon o podacima i informacijama u zdravstvu (NN 14/2019). <https://narodne-novine.nn.hr/clanci/sluzbeni/2019_02_14_269.html> ([archived](https://web.archive.org/web/20260514042307/https://narodne-novine.nn.hr/clanci/sluzbeni/2019_02_14_269.html))
+[^s45]: Zakon.hr (NN 14/19) — Zakon o podacima i informacijama u zdravstvu, 2019. Zakon o podacima i informacijama u zdravstvu. <https://www.zakon.hr/z/1883/zakon-o-podacima-i-informacijama-u-zdravstvu> ([archived](https://web.archive.org/web/20260312003855/https://www.zakon.hr/z/1883/zakon-o-podacima-i-informacijama-u-zdravstvu))
+[^s46]: Zakon.hr — Zakon o poreznoj upravi. Zakon o poreznoj upravi. <https://www.zakon.hr/z/419/zakon-o-poreznoj-upravi>
+[^s47]: Hrvatska gospodarska komora (Znakovi kvalitete) — Usluga podatkovnog centra APIS IT. Usluga podatkovnog centra APIS IT. <https://znakovi.hgk.hr/proizvod/usluga-podatkovnog-centra-apis-it/> ([archived](https://web.archive.org/web/20260610123435/https://znakovi.hgk.hr/proizvod/usluga-podatkovnog-centra-apis-it/))
+[^s48]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o državnoj izmjeri i katastru nekretnina (NN 112/2018), 2018-12. Zakon o državnoj izmjeri i katastru nekretnina (NN 112/2018). <https://narodne-novine.nn.hr/clanci/sluzbeni/2018_12_112_2167.html>
+[^s49]: Zakon.hr — Zakon o državnoj izmjeri i katastru nekretnina. Zakon o državnoj izmjeri i katastru nekretnina. <https://www.zakon.hr/z/156/zakon-o-drzavnoj-izmjeri-i-katastru-nekretnina> ([archived](https://web.archive.org/web/20260222053536/https://www.zakon.hr/z/156/zakon-o-drzavnoj-izmjeri-i-katastru-nekretnina))
 
-**Evidence grades:** 4 Strong, 54 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 4 Strong, 52 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

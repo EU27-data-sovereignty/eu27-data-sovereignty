@@ -1,0 +1,130 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "BE-005",
+ "iso": "BE",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:BE:firearms_register:register",
+   "fact_sha256": "e26eaf912df61ce2f898a41a061e96036c44bcc2e13b9108c47dcd23510c7e97",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The GBA opinion (sha256 matches the recorded hash) states verbatim that the local police enter information into 'het Centraal Wapenregister, dat beheerd wordt door een dienst van de Federale Politie'. The printed register name matches exactly.",
+   "quote_found": true,
+   "checked_url": "https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-169-2019.pdf"
+  },
+  {
+   "claim": "record:BE:land_property:operator",
+   "fact_sha256": "3fae699cb3ea7f10f82316b8a0052bd0d6d9ff30ddd99e293ff47b9186b89b54",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The opinion defines the cadastral documentation as the documents, databases and information 'waarover de AAPD (Algemene Administratie van de Patrimoniumdocumentatie) beschikt' in carrying out the tasks assigned to it under Title IX WIB 1992, i.e. the AAPD holds the cadastral documentation under its statutory mandate. The printed body and its expansion match the source.",
+   "quote_found": true,
+   "checked_url": "https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-29-2018.pdf"
+  },
+  {
+   "claim": "record:BE:land_property:register",
+   "fact_sha256": "16c7c66fc433bc9022f62e288356340ffef1a8690b15368c400bb22bd2d29792",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The sentence immediately before the quote reads 'De kadastrale documentatie wordt gedefinieerd in artikel 2 ... het gaat om het geheel van de documenten ... waarover de AAPD ... beschikt', so the page names the system as the 'kadastrale documentatie' of the AAPD, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-29-2018.pdf"
+  },
+  {
+   "claim": "record:BE:beneficial_ownership:register",
+   "fact_sha256": "61c40a361a0bd3e9fe290a17a73fcf66702d37857d96b2ccc1a60c9b0cd8cfa9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The opinion states 'Het UBO-register heeft tot doel ... informatie ter beschikking te stellen over de uiteindelijke begunstigden', naming the UBO-register as the register of ultimate beneficial owners, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-81-2022.pdf"
+  },
+  {
+   "claim": "record:BE:vehicle_licensing:operator",
+   "fact_sha256": "9931e81b24daaab266b3a6413b9c3dea2f5e0ee7d77338fb3dd41e5d93ca3986",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The decision says the Kruispuntbank van de Voertuigen 'beheerd wordt door de Directie voor de Inschrijving van Voertuigen van de Federale Overheidsdienst Mobiliteit en Vervoer (hierna \"DIV\")', which matches the printed operator name, abbreviation and parent FPS.",
+   "quote_found": true,
+   "checked_url": "https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-56-2026.pdf"
+  },
+  {
+   "claim": "record:BE:vehicle_licensing:register",
+   "fact_sha256": "fc7c4be9e817d3c207e82dd92138f169e6ca83ea1e2881ba4bf2c7f7184cb0fc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same passage names the 'Kruispuntbank van de Voertuigen' (later 'KBV') as the register consulted; the printed name matches.",
+   "quote_found": true,
+   "checked_url": "https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-56-2026.pdf"
+  },
+  {
+   "claim": "indicator:BE:K2",
+   "fact_sha256": "1348e06d47b9e5097ffc9369bada86f558be0bc46b9abda30054dc56704aff0e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The eID page establishes the eID is the electronic identity card issued to every Belgian over 12, and the FAQ page states that the Algemene Directie Identiteit en Burgerzaken 'van de Federale Overheidsdienst Binnenlandse Zaken' (named in the sentence preceding the quote) manages the central files holding identity-card data, the Register van de identiteitskaarten. A directorate of the federal FPS I",
+   "quote_found": true,
+   "checked_url": "https://www.ibz.rrn.fgov.be/nl/faq/wat-is-het-rijksregister-van-de-natuurlijke-personen/wie-beheert-het-rijksregister-van-de"
+  },
+  {
+   "claim": "record:BE:civil_registry:register",
+   "fact_sha256": "53b52b162ddda4090ae904cfaa23b3e0ae77a74e3b102562376b7c85d06ac73d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page calls the Rijksregister 'het informatieverwerkingssysteem dat de registratie, opslag en communicatie van identificatiegegevens van personen verzekert' and 'een centrale databank' listing the registered groups, and the FAQ page gives the full name 'Rijksregister van de natuurlijke personen'. Name and description match as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.ibz.rrn.fgov.be/nl/burger/rijksregister-en-bevolking/rijksregister"
+  },
+  {
+   "claim": "record:BE:civil_registry:operator",
+   "fact_sha256": "e57e77c359d6918a892ece6e631468856b5bfe83857e204e9612b5ff4ca09ed8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The FAQ states the authority managing the Rijksregister is 'de Algemene Directie Identiteit en Burgerzaken (afgekort « ADIB ») van de Federale Overheidsdienst Binnenlandse Zaken', and the ibz.rrn.fgov.be home page says this FPS Interior directorate 'beheert het Rijksregister'. Directorate and parent FPS match the printed text.",
+   "quote_found": true,
+   "checked_url": "https://www.ibz.rrn.fgov.be/nl/faq/wat-is-het-rijksregister-van-de-natuurlijke-personen/wie-beheert-het-rijksregister-van-de"
+  },
+  {
+   "claim": "record:BE:facial_biometric:register",
+   "fact_sha256": "8565dc2f00ede1b0f3d12e97cab842c1c533afee63d63266a87e86dbe295fe50",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both the PDF and the HTML page state the passport photo will be visible 'op de identiteitskaart ... als in het rijksregister', and the surrounding text says the photo can be stored for unlimited time and consulted in the rijksregister by authorised persons. 'Stored and visible in the National Register' matches.",
+   "quote_found": true,
+   "checked_url": "https://www.ibz.rrn.fgov.be/sites/default/files/documents/nl/identiteitsdocumenten/eid/eID_en_GDPR.pdf"
+  },
+  {
+   "claim": "record:BE:fingerprint_biometric:register",
+   "fact_sha256": "c93f8f4b910438b418d4506bad146dbe09dc7e66eebf59a9ebe8dfcd4775b236",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Under 'Hoe worden de vingerafdrukken bewaard?' the PDF says there will at no time be a central database and the legislator does not permit one; the eID page says fingerprints are only on the card's contactless chip '(geen centrale databank)'. 'No central register' is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.ibz.rrn.fgov.be/sites/default/files/documents/nl/identiteitsdocumenten/eid/eID_en_GDPR.pdf"
+  },
+  {
+   "claim": "record:BE:central_bank:register",
+   "fact_sha256": "ce3965d4c30c5dd6b0e45c81f04fc9bfe0d8c18ecf12596a627d7c022b5340e0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The NBB page names 'Het NBB Securities Settlement System (NBB-SSS)' as the system processing primary- and secondary-market securities transactions; the printed name matches exactly.",
+   "quote_found": true,
+   "checked_url": "https://www.nbb.be/nl/betalingen-en-effecten/het-securities-settlement-system-nbb-sss"
+  }
+ ]
+}

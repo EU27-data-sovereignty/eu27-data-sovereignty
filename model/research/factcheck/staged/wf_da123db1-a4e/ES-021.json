@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "ES-021",
+ "iso": "ES",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:ES:central_bank:register",
+   "fact_sha256": "ac4460dc078523e12d615eb509e12fa07dc9e8c444c88b2174cb5baac6731bcb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Banco de España client-portal page states verbatim that the Central de Información de Riesgos is a public service and that institutions must report each risk to the Banco de España. This supports the register name and its attribution to the Banco de España as printed.",
+   "quote_found": true,
+   "checked_url": "https://clientebancario.bde.es/pcb/es/blog/La_Central_de_I_122c89639bbb061.html"
+  },
+  {
+   "claim": "param:ES:gov_employment_k",
+   "fact_sha256": "a6b1b860c4f5eacc4f36955a8b78cb7d7d2a9006db6547c0243ddfba5d71563e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns value 1727.4 (thousand persons, flag p = provisional) for geo=ES, time=2024, nace_r2=O, na_item=EMP_DC, which matches the printed 1 727.4 thousand exactly.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=ES&time=2024"
+  },
+  {
+   "claim": "param:ES:gdp_eur_bn",
+   "fact_sha256": "1c7a74d1928a84f2625054bb63f559c638247073a3878b2e16826fc8864914dd",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 1690012.0 million EUR (flag p) for ES, 2025, B1GQ at current prices; scaled to billions and rounded to one decimal this is 1 690.0 EUR bn, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=ES&time=2025"
+  },
+  {
+   "claim": "param:ES:renewables_pct",
+   "fact_sha256": "bd69ff56bb34c62990ca12595766ae9790e1c0bfa74cb9effb5fd591f013e31e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 60.7 (percent, flag p) for ES, 2025, nrg_bal=REN_ELC, matching the printed 60.7 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=ES&time=2025"
+  },
+  {
+   "claim": "param:ES:elec_price_eur_mwh",
+   "fact_sha256": "ba5b06cf7626788310a7da232892ac59c7ff5b459d603f9ab1d9020159e2050d",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.1324 EUR per kWh for ES, 2025-S2, band MWH500-1999, excluding VAT; converted to EUR/MWh this is 132.4, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=ES&time=2025-S2"
+  },
+  {
+   "claim": "param:ES:land_km2",
+   "fact_sha256": "4bcd2009c1daa7da275eed4275e9678c8095e7143a7ab5f76718f24bf85d37c5",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 502654 km² for ES, 2026, landuse=L0008, matching the printed 502 654 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=ES&time=2026"
+  },
+  {
+   "claim": "param:ES:population_m",
+   "fact_sha256": "88d957fe9430e2eb89407322dfa045623d3ba873f887bb2dfbfae993bb94d7dc",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 49590099 persons (flag p) for ES, 1 January 2026; scaled to millions and rounded to two decimals this is 49.59 million, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=ES&time=2026"
+  },
+  {
+   "claim": "record:ES:judicial_criminal:register",
+   "fact_sha256": "79e013ef48a6a6b79c6c80b801dae454aa6378ddac1cdcea43bcb6b5931f5e5c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 2.2 of Real Decreto 95/2009 on BOE states the Sistema de Registros comprises the Registro Central de Penados, the Registro Central para la Protección de las Víctimas de la Violencia Doméstica y de Género and four further central registers, which supports the two named registers 'and others'. The SIRAJ2 page quote was also found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2009-2073"
+  },
+  {
+   "claim": "indicator:ES:L2",
+   "fact_sha256": "f289970f0e0e260e015c503248a5826623a059404bdadf254104c5028a0492fa",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 3 of Ley 9/1968 de Secretos Oficiales states verbatim that classified matters (defined in art. 2 to include documents, information and data) shall be graded 'secreto' or 'reservado'; a statute therefore establishes the classification categories, supporting 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1968-444"
+  },
+  {
+   "claim": "record:ES:electoral_roll:operator",
+   "fact_sha256": "8c266b8dd57e84954cb8a1175200f662ce57e130b9afc5c8cd7f1ebc7c0a9262",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "LOREG (art. 29.1) states verbatim that the Oficina del Censo Electoral, encuadrada en el Instituto Nacional de Estadística, is the body responsible for forming the electoral census, which matches the printed operator and its placement within the INE.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672"
+  },
+  {
+   "claim": "record:ES:electoral_roll:register",
+   "fact_sha256": "83b48f276bc5dfe7d8d69f85d3342ae2fbaadb1f9b03f4be71ecccdb62647b6b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same LOREG quote names the 'censo electoral' as the register the Oficina del Censo Electoral forms, supporting the printed name 'censo electoral (electoral roll)'.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672"
+  },
+  {
+   "claim": "record:ES:statistics_microdata:register",
+   "fact_sha256": "68bfd2027ad02d0219a4babe7b17dcf1dd68b9dfd0fec9f75cdefcb3e8e73e08",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 17.3 of the Ley de Bases del Régimen Local states that municipalities send their Padrón data to the INE 'a fin de que pueda llevarse a cabo la coordinación entre los Padrones de todos los municipios', which supports the printed statement including 'for national coordination'.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-5392"
+  },
+  {
+   "claim": "record:ES:statistics_microdata:operator",
+   "fact_sha256": "6ae40bae97f8369f451b7e9cd3a788f8eeff173bb7d1a9bb4b469f24912e7d0d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Ley 12/1989 states verbatim that the Instituto Nacional de Estadística is an organismo autónomo with its own legal personality and assets, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1989-10767"
+  },
+  {
+   "claim": "record:ES:firearms_register:operator",
+   "fact_sha256": "50893ae700c9fc92f533618c649d804274ca332b6d0195f9139c647fc26e575c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Reglamento de Armas states verbatim that the Registro Nacional de Armas belongs to the Intervención Central de Armas y Explosivos de la Dirección General de la Guardia Civil, which supports the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1993-6202"
+  },
+  {
+   "claim": "record:ES:firearms_register:register",
+   "fact_sha256": "569e8a149bbf4afeb96de9f810e904046698097dbf6b05dd8ce347e11f39535a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same quote names the 'Registro Nacional de Armas', matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1993-6202"
+  },
+  {
+   "claim": "record:ES:tax:operator",
+   "fact_sha256": "eaa476db6b45858eb5fa05287d5400f7ac5dba0080a48fabc8d347a99956dd58",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Orden de 2 de junio de 1994 developing the structure of the Agencia Estatal de Administración Tributaria (section Séptimo) lists the Subdirección General de Planificación y Coordinación Informática and the Subdirección General de Explotación within the Departamento de Informática Tributaria; the AEAT organigram page also confirms the department is AEAT's. The printed statement is supported as ",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-12973"
+  },
+  {
+   "claim": "record:ES:police_records:operator",
+   "fact_sha256": "505fc9f33fbc27fa462d81ef8131c22003544c0801ec6823135b884e996fe2cc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Orden de 28 de junio de 1995 states verbatim that the fichero automatizado 'Base de Datos de Señalamientos Nacionales' is 'a cargo del Gabinete de Coordinación de la Secretaría de Estado de Interior', matching the printed operator and the database it is stated for.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1995-16259"
+  },
+  {
+   "claim": "record:ES:business_registry:operator",
+   "fact_sha256": "c93cdedc4db4c273b00440afe4ba69789ac98c6a17e451c729a19a02ec0b78ae",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Reglamento del Registro Mercantil states verbatim that the organisation of the Registro Mercantil is under the dependency of the Ministerio de Justicia, supporting the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1996-17533"
+  },
+  {
+   "claim": "record:ES:business_registry:register",
+   "fact_sha256": "5e4fbebfe7260662e41d4193ad85e273fed4a2d3836462329776e71d28dc098c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same quote names the Registro Mercantil as comprising the territorial Registros Mercantiles and the Registro Mercantil Central, matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1996-17533"
+  },
+  {
+   "claim": "record:ES:emergency_communications:operator",
+   "fact_sha256": "05886e863fae8894a56bd2e75eebd06c18ac8bcbff0c140bcade20ce760eb444",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 5.1 of Real Decreto 903/1997 states verbatim that the 112 call-handling service is provided by the Comunidades Autónomas, which establish the corresponding call-reception centres; this matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1997-14058"
+  },
+  {
+   "claim": "indicator:ES:K1",
+   "fact_sha256": "655a4bed2da536198fc5a85248133ec1774a394691e4cdac8fe112358a7cf31e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Ley 66/1997 art. 81 empowers the FNMT to provide the technical services guaranteeing the security and validity of electronic communications between state bodies and with citizens; RD 1114/1999 states the FNMT-RCM is an entidad pública empresarial (state-owned); and the Spanish trusted list TSL.xml lists FNMT-RCM (CERES) as a trust service provider with status 'granted'. Together these support 'Yes",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1997-28053"
+  },
+  {
+   "claim": "record:ES:government_payroll:register",
+   "fact_sha256": "38c41c4a4fec428cd9b267920a789013d6f685a6a2561d26a43726396320de53",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 1.1 of the Reglamento del Registro Central de Personal (RD 2073/1999) states it is the administrative register of the Administración General del Estado in which the staff are registered 'y en el que se anotan preceptivamente los actos que afecten a su vida administrativa', which supports both halves of the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-1007"
+  },
+  {
+   "claim": "record:ES:issuance_history:operator",
+   "fact_sha256": "e225e73eddf883ebbb6171b1f84d3cbd933d377bcda182d3c5fe55d58f3e0bfa",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 3 of Real Decreto 896/2003 assigns passport issuance in Spain to the organs of the Dirección General de la Policía under the Ministerio del Interior, and the quoted sentence requires Foreign Affairs to send the DGP the lists of passports issued abroad; this supports the DGP (Ministerio del Interior) as the body holding the issuance records, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-13978"
+  },
+  {
+   "claim": "record:ES:tax:register",
+   "fact_sha256": "b3b7e5448233bc6ed3d37022c5c331563f5768988c47369cb79e0a9b1b2c56d8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Ley General Tributaria (art. 117 functions of gestión tributaria) lists verbatim the issuance and revocation of the número de identificación fiscal and 'la elaboración y mantenimiento de los censos tributarios', matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-23186"
+  },
+  {
+   "claim": "record:ES:health_insurance:operator",
+   "fact_sha256": "804a6fdf9e5fdff64737a189a069096b67a23a99c5181ff187fd3e49d0b4a664",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The preamble of Real Decreto 183/2004 states verbatim that the law entrusts the Ministerio de Sanidad y Consumo with generating a unique personal identification code for the Sistema Nacional de Salud; the sanidad.gob.es page likewise assigns the CIP-SNS to the Ministerio de Sanidad. The printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-2591"
+  },
+  {
+   "claim": "record:ES:health_insurance:register",
+   "fact_sha256": "40e3ff4d7bb127c2a76ea7ba88871ef47d6ea535b81431a3850d11da0e8cedc3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "RD 183/2004 states verbatim that the base de datos de población protegida del Sistema Nacional de Salud has as its fundamental objective the generation of this personal identification code; the sanidad.gob.es page names it BDPP-SNS. The printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-2591"
+  },
+  {
+   "claim": "record:ES:land_property:operator",
+   "fact_sha256": "0135ed85ed0c535f3bdef7992fd3cb094ffc2864635c6297798348c3b65f6d34",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 1.1 of the Texto Refundido de la Ley del Catastro Inmobiliario states verbatim that the Catastro Inmobiliario is an administrative register dependent on the Ministerio de Hacienda, supporting the printed operator. Note the source concerns the cadastre (Catastro), not the Registro de la Propiedad.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-4163"
+  },
+  {
+   "claim": "record:ES:official_gazette:operator",
+   "fact_sha256": "769a15121be90b5b7f28b325729d5913f7cb7d7fcf8219ad9c16470e7a0d2b6b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Real Decreto 181/2008 states verbatim that the edición, publicación y difusión of the official gazette corresponds to the Agencia Estatal Boletín Oficial del Estado, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389"
+  },
+  {
+   "claim": "record:ES:official_gazette:register",
+   "fact_sha256": "7d2e4a0702ea1834bddd905ad8040f0bca69b9596e0aa5fc55c2d2bd73068d4e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 2.1 of RD 181/2008 states that the 'Boletín Oficial del Estado' se publica en edición electrónica under the conditions of the decree, which supports the printed statement that the BOE is published in an electronic edition.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389"
+  },
+  {
+   "claim": "record:ES:judicial_criminal:operator",
+   "fact_sha256": "a6589bfa236554b814599fb976a87b21925e2deae0149560a156fea292c5884c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The preamble of Real Decreto 95/2009 states verbatim that the Sistema de registros has a non-public character and depends on the Ministerio de Justicia, matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2009-2073"
+  }
+ ]
+}

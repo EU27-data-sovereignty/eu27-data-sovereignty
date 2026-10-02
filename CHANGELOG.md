@@ -7,6 +7,20 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-02
 
+### Changed: every printed fact checked by a second model; 81 withheld (#87, #89)
+
+- **The run.** The first full cross-model fact check (`wf_da123db1-a4e`, plus the pilot) put all 1,390
+  facts to Claude Fable 5.1, a different model from the one that researched them.
+  - **1,309 confirmed**, and now printed with a current verdict.
+  - **81 not confirmed**, now shown as disputed with the checker's reason: 48 not supported, 33 unclear.
+  - Of those, 31 are register or operator names whose printed wording goes beyond the quote, 15 are
+    hosting labels, and 13 are indicators. About a dozen are pages the checker could not fetch.
+  - **One rounding defect:** Slovenia's population printed as 2.13 million, where the source's
+    2,135,107 rounds to 2.14.
+- **Where to see them:** every withheld fact is listed in `docs/fact-check-audit.md` and in each country's
+  fact-check appendix.
+- **Cost:** about $250–370, measured from the agents' token usage.
+
 ### Fixed: eu27.cloud DNS, and a checklist for the first automatic deploy (#90)
 
 - **`eu27.cloud` had never resolved.** It had no nameservers: the registry listed it as *inactive*. It now

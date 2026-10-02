@@ -1,0 +1,200 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "LV-041",
+ "iso": "LV",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:LV:vehicle_licensing:operator",
+   "fact_sha256": "6726ff2ddfa369414bfef80c9f1b323ed5ebff851834440654dc3cc82c439774",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Road Traffic Law text says the state joint-stock company 'Ceļu satiksmes drošības direkcija' registers vehicles, issues licences and provides and maintains the state register of vehicles and drivers, which is the operator role printed. The initialism 'CSDD' does not itself appear on the page but is only the abbreviation of the quoted name.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/45467"
+  },
+  {
+   "claim": "record:LV:vehicle_licensing:register",
+   "fact_sha256": "41bbc2d2aac56e856c382ab90caef7ceeb68b8fdc75688384317a2beaeade366",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote names 'transportlīdzekļu un to vadītāju valsts reģistru' (accusative) as the register CSDD provides and maintains; the printed nominative form and English gloss match it.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/45467"
+  },
+  {
+   "claim": "indicator:LV:L2",
+   "fact_sha256": "fb1a30c7507c7d8304cb3991552a2b3424e2ae814c8482376125f8cebffc8d0c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes are verbatim in statutes on likumi.lv: the Freedom of Information Law divides information into generally accessible and restricted-access, and the State Secrets Law (id 41058, also fetched) classifies state secrets into top secret, secret, confidential and for official use. A classification scheme is thus established in statute, supporting 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/50601"
+  },
+  {
+   "claim": "record:LV:land_property:operator",
+   "fact_sha256": "a25e976e0fe3604f2a75f0aad410bbce69a0c54c04239ed9db3469bb1a1aa8f6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Land Register Law states the holder (turētāja) of the State Unified Computerised Land Register is Tiesu administrācija; being its holder is the operating role printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/60460"
+  },
+  {
+   "claim": "record:LV:land_property:register",
+   "fact_sha256": "3505de2a2226ac721d7007ec7ab7bb67e044be4d91c5aeeaaadff1d75512ce5d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote names 'Valsts vienotā datorizētā zemesgrāmata' (in genitive) as the register whose sole owner is the Latvian state; the printed name and translation match.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/60460"
+  },
+  {
+   "claim": "record:LV:business_registry:operator",
+   "fact_sha256": "7b809cd6179b6c92a71e415db9a267f53ac7a131bf508f266fc08a5caf9234f6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Register of Enterprises Law says Uzņēmumu reģistrs is a direct administration institution under the supervision of the Minister for Justice, and (next fact's quote on the same page) that it keeps the Commercial Register; both parts of the printed statement are on the page.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/72847"
+  },
+  {
+   "claim": "record:LV:business_registry:register",
+   "fact_sha256": "0ea67b21491b735e6d947e1eb80b5b3399fca7655a6f7e3f11e4e299f0b04303",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote states the Komercreģistrs is kept by the Register of Enterprises under this law and the Commercial Law; the printed register name matches.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/72847"
+  },
+  {
+   "claim": "record:LV:electoral_roll:operator",
+   "fact_sha256": "fed530cf8067a6df4b1344b3521cc791ac3929fd8d5bd0fb4478d06165986632",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 3(2) of the Voter Register Law says the data in the Register are processed by, and the Register's controller is, Pilsonības un migrācijas lietu pārvalde (PMLP); the printed statement says exactly that about the Voter Register (the Online Register's controller, VDAA, is a separate body but the statement does not claim it).",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/83681"
+  },
+  {
+   "claim": "record:LV:electoral_roll:register",
+   "fact_sha256": "7ddd3b54728c4959e352d8724c68c52402259d0814a1867603ac5fbfb9921488",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 1 of the Vēlētāju reģistra likums, which the quote comes from, continues in the same sentence '— Elektroniskā tiešsaistes vēlētāju reģistra (turpmāk — Tiešsaistes reģistrs) —', so the law establishes both the Voter Register and the Electronic Online Voter Register as printed.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/83681"
+  },
+  {
+   "claim": "record:LV:public_finance:register",
+   "fact_sha256": "83d0a14202426d8253d2050042b5450ea83b5ec5a6ae0281264726fdde523c8a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Treasury's settlements page (fetched with browser headers after an initial 403; WebFetch confirmed the same text) says clients with a Treasury account make payments 'izmantojot ePakalpojumu Maksājumi (eKase)', naming the Payments e-service; the printed name matches, though note the page presents it as a payments e-service, not a ledger of state accounts.",
+   "quote_found": true,
+   "checked_url": "https://www.kase.gov.lv/pakalpojumi/norekini"
+  },
+  {
+   "claim": "record:LV:public_finance:operator",
+   "fact_sha256": "97c09998f14ea6660c0dfd90b0b83be5fc55413386a25308c96ef2dcfcdc6ba8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page (fetched with browser headers; WebFetch confirmed it) lists 'Valsts kases funkcijas' including organising state budget execution and financial accounting and making payments from budget revenue, and states Valsts kase is a direct administration institution under the Ministry of Finance; this supports Valsts kase as the operating body.",
+   "quote_found": true,
+   "checked_url": "https://www.kase.gov.lv/valsts-kase/par-mums"
+  },
+  {
+   "claim": "record:LV:geospatial:operator",
+   "fact_sha256": "6358609dbbee5baafdd68010ca4f696c9b4c215ffdc39f0f0edc5e850065d1a8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Geospatial Information Law text says Latvijas Ģeotelpiskās informācijas aģentūra is a direct administration institution under the Ministry of Defence that implements state policy in geodesy, cartography and geospatial information; the lgia.gov.lv page quote (also found) adds that the ministry supervises its base-data work. Matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/202999"
+  },
+  {
+   "claim": "indicator:LV:C1",
+   "fact_sha256": "40a22fd0ac5df132198bec4c5209bc977bfbc45ec0f66d247bba1505c6e743a0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "LVRTC's data-centre page (under 'Valsts un pašvaldības sektoram') says it is one of the most significant data-centre providers in Latvia offering colocation in Riga and nationwide, and the par-mums page says LVRTC is 100% state-owned; together they show state-owned data centres in operation today.",
+   "quote_found": true,
+   "checked_url": "https://www.lvrtc.lv/pakalpojumi/valsts_sektoram/datu_centri/"
+  },
+  {
+   "claim": "indicator:LV:K1",
+   "fact_sha256": "a0cdbc50768416a8b02b95cbbeb9db06d6557ed5ca0a358ce8275a49c1b31105",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The cited quote only establishes 100% state ownership, but the same page states 'LVRTC ir vienīgais Latvijā reģistrētais uzticamais sertifikācijas pakalpojumu sniedzējs' (the only registered trusted certification service provider in Latvia) and lists eParaksts and certification services as a line of business, so in page context the qualified trust service is run by a state-owned body.",
+   "quote_found": true,
+   "checked_url": "https://www.lvrtc.lv/par-lvrtc/par-mums/"
+  },
+  {
+   "claim": "indicator:LV:K2",
+   "fact_sha256": "4a6edb575200a0aeb2ff6aa24280915f15a293ce0e797870a08db135183508d8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says LVRTC is registered as the only qualified high-security eID provider in the country and issues eParaksts mobile, the eID card and eParaksts cards; the page identifies itself as 'Valsts akciju sabiedrība Latvijas Valsts radio un televīzijas centrs', a state joint-stock company, and the history page quote (also found) calls these the national eID means. Supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.lvrtc.lv/projekti/eparaksts_identitate/"
+  },
+  {
+   "claim": "indicator:LV:C2",
+   "fact_sha256": "5262f6defc2d841fb92076f4e31fc79cc36879ef57831003f0be4ff35dfd6ef0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The national federated cloud page reports that in 2025 five more public-administration systems were hosted in it, bringing the total to nine, and the LVDC-2 page (quote also found) says service provision to state institutions began in early 2021; the platform is in operation, not merely announced.",
+   "quote_found": true,
+   "checked_url": "https://www.lvrtc.lv/projekti/latvijas-nacionalais-federetais-makonis/"
+  },
+  {
+   "claim": "record:LV:digital_identity_credentials:operator",
+   "fact_sha256": "beb5d22c785c775b4283427562ff45210e1dac83778b11a4f7166469a46ae6bb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Digital Security Supervisory Committee page says it has qualified and supervises two eID providers, Smart-ID and VAS 'Latvijas Valsts radio un televīzijas centrs' (LVRTC); 'VAS' (state joint-stock company) supports calling LVRTC the state company.",
+   "quote_found": true,
+   "checked_url": "https://www.mod.gov.lv/lv/kiberdrosiba/digitalas-drosibas-uzraudzibas-komiteja/elektroniska-identifikacija"
+  },
+  {
+   "claim": "record:LV:digital_identity_credentials:register",
+   "fact_sha256": "5d8e5abb537ad69ffe0f4d19dbc4b4c5f0abfd1e0ef5256e596097e61d7665ef",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "In context the relative clause 'kura piedāvā četrus elektroniskās identifikācijas līdzekļus' attaches to LVRTC in the same sentence and lists eID karte, eParaksts karte, eParaksts karte+ and eParaksts (mobile), matching the four means printed.",
+   "quote_found": true,
+   "checked_url": "https://www.mod.gov.lv/lv/kiberdrosiba/digitalas-drosibas-uzraudzibas-komiteja/elektroniska-identifikacija"
+  },
+  {
+   "claim": "record:LV:official_gazette:register",
+   "fact_sha256": "3f5b98e7c87045f1d98b73a8215b525f926271d0fcd9ce06134e981cdb029350",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states that the official publication of the Republic of Latvia 'Latvijas Vēstnesis' publishes external regulatory enactments and other legal acts, which names the gazette exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.vestnesis.lv/oficialais-izdevums"
+  }
+ ]
+}

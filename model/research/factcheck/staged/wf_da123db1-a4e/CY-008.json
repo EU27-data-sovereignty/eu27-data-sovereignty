@@ -1,0 +1,310 @@
+{
+ "run": "wf_da123db1-a4e",
+ "prepared": "2026-10-02-505dfcd3",
+ "batch": "CY-008",
+ "iso": "CY",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "param:CY:gov_employment_k",
+   "fact_sha256": "cc68023516cfbebae36d4f9234e38bf7716bd128866af6569b6c26d971bc8fb0",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 36.8 (THS_PER) for CY, NACE O, EMP_DC, 2024, matching '36.8 thousand' exactly.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=CY&time=2024"
+  },
+  {
+   "claim": "param:CY:gdp_eur_bn",
+   "fact_sha256": "6c8ebdb1699e838b5de09068dc628d8b16650ab7b3af1e4aa1ef4ce9561e1e6a",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 36483.5 million EUR (flag p, provisional) for CY B1GQ 2025, which scales and rounds to 36.5 EUR bn.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=CY&time=2025"
+  },
+  {
+   "claim": "param:CY:renewables_pct",
+   "fact_sha256": "d7eb331ce91d9756aa7614f0636c92833a686f85e24bf2579498c47fc54d1fe2",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 27.5 (flag p) for CY REN_ELC 2025, matching '27.5 %'.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=CY&time=2025"
+  },
+  {
+   "claim": "param:CY:elec_price_eur_mwh",
+   "fact_sha256": "74aa7b7224edb781af7f93be106a4cfde7d15e5a9b64c9b7d98c5c4731fb12c5",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 0.2429 EUR/kWh for CY, band MWH500-1999, excluding VAT, 2025-S2, which is 242.9 EUR/MWh.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=CY&time=2025-S2"
+  },
+  {
+   "claim": "param:CY:land_km2",
+   "fact_sha256": "f7f083520ddba4d16c2edaef80603735683a0601e6c50a9ed68031d398d64a33",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 9213 km² for CY, landuse L0008, 2026, matching '9 213 km²'.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=CY&time=2026"
+  },
+  {
+   "claim": "param:CY:population_m",
+   "fact_sha256": "4223bb27a13e42ea09460803de0e3982867ab4ad6f43645589a8bec2e24b6268",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 996571 persons (flag p) for CY on 1 January 2026, i.e. 0.997 million, which rounds to 1.00 million.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=CY&time=2026"
+  },
+  {
+   "claim": "record:CY:digital_identity_credentials:count",
+   "fact_sha256": "d405460a094109264d3de3544c53f22daacd916e09fc773c08fd543f4fdc7085",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The article (dated 13.09.2026, about CY Login) states 'There are currently 542,716 verified citizen profiles', so the figure, the system and the September 2026 date all match.",
+   "quote_found": true,
+   "checked_url": "https://en.politis.com.cy/in-depth/1032645/from-the-counter-to-the-screen-cy-login-becomes-cypruss-key-to-digital-government"
+  },
+  {
+   "claim": "record:CY:benefits_pensions:register",
+   "fact_sha256": "eb5011ecd8ad28cfd7e388aab39437aff6fa49715e63ba4863091b6eb4892864",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF (sha256 matches the recorded hash) names 'the ERGANI system of Social Insurance Services' verbatim, which is the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:border_control:operator",
+   "fact_sha256": "2213094012d51b41adfad2a991b26b6b148a11eeaae08c8c0bb9b6bf794eae31",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF attributes the visa system to the ministry ('The new CY-VIS of the Ministry of Foreign Affairs'). Caveat: the passage concerns the new CY-VIS still being built and visa only, not border systems generally.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:civil_registry:register",
+   "fact_sha256": "0a8caa6b88b88f386604135427bdeda7106dd6879466a3cc9cdb340b5920ce8c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF says 'The Civil Registry System is one of the main sources of information for the population in Cyprus', naming the system as printed.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:digital_identity_credentials:register",
+   "fact_sha256": "0018395124787542fd75c58b461487ea19a48e1f7cf17d93e9c6c3ea98df6844",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF states 'CY Login is the identity management system for natural (citizens) and legal persons', naming the system as printed.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:education:register",
+   "fact_sha256": "d93d203de9c567c565b0a68d9dd4a4f15a2b4fdb5e2554205034ebf5735f0959",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF names the 'Integrated School Management System (SMS)' verbatim in the eGovernment in Education section; the surrounding text says the contract was signed on 6 September 2022.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:electoral_management:register",
+   "fact_sha256": "8782af92b2a9b59f697d74d6b1e88cb72add2768b8aebd6b907e389d333ca40c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote 'The system also provides functionalities for preparing and conducting all elections' immediately follows the Civil Registry System description, so 'the system' is the Civil Registry System as printed.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:electoral_roll:register",
+   "fact_sha256": "50e7c06f7e10abfecd9b4113c46ffc8e8762ca92a77f2e1cdf91bc5d669c8934",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF says 'the upgrade of the computerised population register system—used for the preparation and conduct of elections—is expected to be completed within the next two years', matching the printed name and parenthetical.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:issuance_history:register",
+   "fact_sha256": "833a808bfc8070a937ce64c668290877d79b504434dae7a692ba0ce6c87a1449",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is part of the Civil Registry System sentence ('an integrated information system with a central database, which includes functionality for handing data and applications for the issuance of official documents ... identity cards, passports'), supporting the printed name and parenthetical.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:judicial_criminal:register",
+   "fact_sha256": "0eb5e93e30b320135f8c492de8b8bad449f7bbceace0e105c90322392c61f67c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF says 'The electronic registration system (iJustice) has been fully implemented since 1 February 2022', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:land_property:register",
+   "fact_sha256": "c40576f077f60c80f159a8c51d6e19d3b413099d8ddccbb672e0c03d4ff27c9a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF names 'The Computerised Integrated Lands Information System (CILIS)' verbatim under the Department of Lands and Surveys.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:residence_permits:register",
+   "fact_sha256": "38776dc56d7405832961ce408648834d3f739be64370587afc742719d807d22c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF names 'the electronic system of the Asylum Service (CASS)' verbatim. Caveat: the source describes an asylum-processing system, not a residence-permit register in general; the printed text adds nothing beyond the source.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:tax:register",
+   "fact_sha256": "4bba8c75efe0e4d1568af216c4e23168f1e79fb1e74ff97ec5bebff161d4f779",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF says 'The Cyprus Tax Department (CTD) provides taxpayers with the TAXISnet System', matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:vehicle_licensing:operator",
+   "fact_sha256": "b5a9a08f8105c1244a1282218a3679b15b8896c202382cc890d11b70510bd969",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF says the Road Transport Department 'is responsible for the vehicles and drivers' digital registry', which supports it as the operating body.",
+   "quote_found": true,
+   "checked_url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-06/iopeu-monitoring_2025-supporting-document_cyprus_final.pdf"
+  },
+  {
+   "claim": "record:CY:public_finance:operator",
+   "fact_sha256": "3fa0aad1903187da916de8f562291d6e7384a75b6df6c678df3e3f36ce77125f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CYSTAT EDP inventory for Cyprus (sha256 matches) says 'The online accounting database system of the Treasury, namely FIMAS, records all transactions of the State', attributing the system to the Treasury; the document is about the Republic of Cyprus.",
+   "quote_found": true,
+   "checked_url": "https://library.cystat.gov.cy/NEW/EDP_Inventory(Sources&Methods)_ESA2010-EN-290626.pdf"
+  },
+  {
+   "claim": "record:CY:public_finance:register",
+   "fact_sha256": "44b040709f02bff696f5bbbd7015c1e1862aab51fe50f6c831523bf31b36bc09",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same sentence names FIMAS as the Treasury's accounting database system, matching the printed name.",
+   "quote_found": true,
+   "checked_url": "https://library.cystat.gov.cy/NEW/EDP_Inventory(Sources&Methods)_ESA2010-EN-290626.pdf"
+  },
+  {
+   "claim": "record:CY:emergency_communications:foreign_dependency",
+   "fact_sha256": "a86cda928976089fc502f9989db232a3bcdd4b7bd69037a4915f9655aecebf2e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The article only reports that Civil Defence signed a development agreement with CYTA for a system to be built over 20 months; it says nothing about where the infrastructure runs, what kind of entity CYTA is, or any hosting arrangement, so 'National infrastructure' needs outside knowledge the source does not supply.",
+   "quote_found": true,
+   "checked_url": "https://news.rik.cy/el/article/2026/7/14/plerestere-kai-takhutere-plerophorese-se-krisima-peristatika-me-to-sustema-neas-genias-112/"
+  },
+  {
+   "claim": "record:CY:emergency_communications:register",
+   "fact_sha256": "072d1acf3095c332cc791fb7f250fdb3abfbe041ef0eff9aaf7d2c820ba0c95a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Greek text says the agreement for developing the Next Generation 112 System was signed between Civil Defence and CYTA with a 20-month implementation horizon, matching every element printed.",
+   "quote_found": true,
+   "checked_url": "https://news.rik.cy/el/article/2026/7/14/plerestere-kai-takhutere-plerophorese-se-krisima-peristatika-me-to-sustema-neas-genias-112/"
+  },
+  {
+   "claim": "record:CY:digital_identity_credentials:foreign_dependency",
+   "fact_sha256": "4c872fdb8d3f9dc237e05b53cc0263f4915209f31057058f72ffbdd4dd241c27",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Cyprus eID CPS (sha256 matches) states JCC outsources operation of the CA to ADACOM, a qualified trust service provider registered in Greece, which supports 'EU provider'. Caveat: this concerns the eID certificate authority operated by JCC, not the CY Login system the register row names.",
+   "quote_found": true,
+   "checked_url": "https://pki.jcc.com.cy/repository/el/CPS/files/JCC-PL-QTSP-Certification_Practice_Statement_for_eID_GR-1.4_FINAL.pdf"
+  },
+  {
+   "claim": "record:CY:land_property:foreign_dependency",
+   "fact_sha256": "541af603110ede8507a33580cc720b73ffbd3bc027f41158cb89d13a1a66626c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The DLS 2022 annual report (sha256 matches) says second-level support at the Land Information Centre is provided by officers of the Department of Information Technology Services with department officers who are responsible for maintaining and operating the central systems and backup systems, i.e. state staff run the infrastructure.",
+   "quote_found": true,
+   "checked_url": "https://portal.dls.moi.gov.cy/wp-content/uploads/2023/05/Annual-report-DLS-2022.pdf"
+  },
+  {
+   "claim": "record:CY:central_bank:register",
+   "fact_sha256": "d8e64a80726029e12294d843b966b4c5ae5af116d63ef0ce7e01ff3cde28a060",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CBC 2025 annual report (sha256 matches) says 'T2-CY is the Cypriot component of the European T2 payment system', matching the printed name verbatim.",
+   "quote_found": true,
+   "checked_url": "https://www.centralbank.cy/images/media/redirectfile/CBC_Annual_Report_English_2025_Final%20(006).pdf"
+  },
+  {
+   "claim": "record:CY:beneficial_ownership:operator",
+   "fact_sha256": "72284819db8d614c8c39463020f64cc9a273033ccf2760baac849d1fe44def7d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Law 188(I)/2007 s.61A(4)(β) says the Register is compiled, kept and published by the Registrar of Companies and Official Receiver 'as the authority keeping the Register', and companies.gov.cy confirms the Registrar is the competent authority maintaining it.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2007_1_188/full.html"
+  },
+  {
+   "claim": "record:CY:beneficial_ownership:register",
+   "fact_sha256": "f212571cfad9e8ecacde005a7c03a2552a61549cc66ca2a4ed011dada1bafdbe",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Law 188(I)/2007 s.61A(4)(α) names the 'Κεντρικό Μητρώο Πραγματικών Δικαιούχων Εταιρειών και Άλλων Νομικών Οντοτήτων', i.e. Central Register of Beneficial Owners of Companies and Other Legal Entities; companies.gov.cy uses the same name.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2007_1_188/full.html"
+  },
+  {
+   "claim": "record:CY:business_registry:register",
+   "fact_sha256": "23fef00b91d3becb866c533fba69f00af556acedef26aa4ad29f60b5a2295c78",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Cap. 113 says the registrar enters the new name 'στο μητρώο' (in the register) and companies.gov.cy refers to 'the maintenance of a reliable Companies Register', together supporting the descriptive name 'Register of companies kept by the Registrar'.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/0_113/full.html"
+  }
+ ]
+}
