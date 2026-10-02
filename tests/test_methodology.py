@@ -68,5 +68,53 @@ class Rendered(unittest.TestCase):
         self.assertIn("bundle.methodology", page)
 
 
+class Everywhere(unittest.TestCase):
+    """The methodology is in every asset, set apart in the method teal (#88)."""
+
+    def test_it_states_the_fact_check_from_its_constants(self):
+        import factcheck  # noqa: PLC0415
+        titles = [s["title"] for s in DOC["sections"]]
+        self.assertIn("The cross-model fact check before every deploy", titles)
+        for author, checker in factcheck.RULE:
+            self.assertIn(author, TEXT)
+            self.assertIn(checker, TEXT)
+
+    def test_every_brief_carries_it_in_full(self):
+        first = DOC["sections"][1]["title"]
+        for iso in BUNDLE["documents"]:
+            brief = (ROOT / "countries" / iso / "GOAL.md").read_text(encoding="utf-8")
+            self.assertIn("## Appendix: methodology", brief, iso)
+            self.assertIn(f"### {first}", brief, iso)
+
+    def test_ask_answers_from_it(self):
+        corpus = json.loads((ROOT / "api" / "_corpus.json").read_text(encoding="utf-8"))
+        titles = [d["title"] for d in corpus["documents"]]
+        self.assertIn("Methodology: how every fact was sourced, checked and calculated", titles)
+
+    def test_every_poster_points_to_it(self):
+        poster = (ROOT / "web" / "src" / "pages" / "Poster.tsx").read_text(encoding="utf-8")
+        self.assertIn("Method: /methodology", poster)
+        self.assertIn("var(--color-method)", poster)
+
+    def test_the_pdfs_set_both_appendices_in_the_method_style(self):
+        import report  # noqa: PLC0415
+        for typ in (report.report_typ(BUNDLE), report.country_typ(BUNDLE, "DE")):
+            self.assertEqual(typ.count("#method-appendix["), 2)
+        template = (ROOT / "book" / "templates" / "report.typ").read_text(encoding="utf-8")
+        self.assertIn("Method · how this was made", template)
+
+    def test_the_web_pages_use_the_method_frame(self):
+        pages = ROOT / "web" / "src" / "pages"
+        for name in ("Methodology.tsx", "FactCheck.tsx"):
+            self.assertIn("<MethodFrame", (pages / name).read_text(encoding="utf-8"), name)
+
+    def test_the_method_colour_is_a_token_in_both_themes(self):
+        tokens = json.loads((ROOT / "design" / "tokens.json").read_text(encoding="utf-8"))
+        for theme in ("light", "dark"):
+            self.assertIn("method", tokens["themes"][theme])
+            self.assertIn("method_wash", tokens["themes"][theme])
+        self.assertIn(["method", "bg_page"], tokens["contrast"]["text"])
+
+
 if __name__ == "__main__":
     unittest.main()

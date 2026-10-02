@@ -87,6 +87,19 @@ def country_blocks(doc: dict) -> list[dict]:
     return out
 
 
+def flatten(doc: dict) -> list[dict]:
+    """A generated method document as corpus blocks: one per paragraph, list item or table row."""
+    out = []
+    for sec in doc["sections"]:
+        for b in sec["blocks"]:
+            lines = ([b["spans"]] if b["type"] in ("p", "callout") else b["items"] if b["type"] == "list"
+                     else [[*row] for row in b["rows"]])
+            sep = " | " if b["type"] == "table" else " "
+            out += [{"text": f"{sec['title']}: " + sep.join(sp["t"] for sp in line), "claims": [],
+                     "kind": "method"} for line in lines]
+    return out
+
+
 def build(bundle: dict) -> dict:
     sov = bundle["sovereignty"]
     labels = {g["id"]: g["label"] for g in sov["groups"]}
@@ -118,19 +131,14 @@ def build(bundle: dict) -> dict:
                     f"with its open evidence it could be anywhere from '{labels[p['range'][0]]}' to "
                     f"'{labels[p['range'][-1]]}'.",
             "claims": claims, "kind": "method"})
-    # How every printed fact was checked by the model that did not write it (#87): the EU-27 appendix,
-    # flattened to text. The per-fact verdicts stay in the PDFs and on the web page.
-    checked = []
-    for sec in bundle["factcheck"]["eu"]["sections"]:
-        for b in sec["blocks"]:
-            lines = ([b["spans"]] if b["type"] in ("p", "callout") else b["items"] if b["type"] == "list"
-                     else [[*row] for row in b["rows"]])
-            sep = " | " if b["type"] == "table" else " "
-            checked += [{"text": f"{sec['title']}: " + sep.join(sp["t"] for sp in line), "claims": [],
-                         "kind": "method"} for line in lines]
     documents = [
         {"title": "Method and rules", "blocks": method},
-        {"title": "Fact check: how each printed fact was checked by a second model", "blocks": checked},
+        # The generated appendices every PDF and web page carries (#84, #87, #88), flattened to text, so /ask
+        # explains the method in the same words. The per-fact verdicts stay in the PDFs and on the web.
+        {"title": "Methodology: how every fact was sourced, checked and calculated",
+         "blocks": flatten(bundle["methodology"])},
+        {"title": "Fact check: how each printed fact was checked by a second model",
+         "blocks": flatten(bundle["factcheck"]["eu"])},
         {"title": "Data-sovereignty ranking (placements by rule, with confidence)", "blocks": ranking},
     ]
     for iso in sorted(bundle["documents"], key=lambda i: names[i]):

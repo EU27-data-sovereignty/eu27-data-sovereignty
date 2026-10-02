@@ -115,7 +115,9 @@ export function Poster({ bundle }: { bundle: Bundle }) {
           italics are withheld until sourced. Generated {bundle.generated}. Full report: /report/
           {code}.pdf
         </p>
-        <p className="mb-1">{bundle.factcheck.lines[code]}</p>
+        <p className="mb-1 border-l-2 border-[var(--color-method)] pl-1.5 text-[var(--color-method)]">
+          Method: /methodology. {bundle.factcheck.lines[code]}
+        </p>
         <ol className="flex flex-wrap gap-x-4">
           {[...numbers.entries()].map(([sid, n]) => (
             <li key={sid}>

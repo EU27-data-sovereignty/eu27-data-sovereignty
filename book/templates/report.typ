@@ -173,12 +173,42 @@
 // never mistaken for a fact.
 #let gap(body) = text(style: "italic", fill: quiet, body)
 
-// Method notes, notices and gaps. Tone changes the rule colour only; the words say which it is.
+// Method notes, notices and gaps. Tone changes the rule colour only; the words say which it is. Teal
+// marks how-we-know material only, here and in the appendices below (#88).
 #let callout(tone: "method", body) = block(
-  width: 100%, fill: wash, inset: (left: 9pt, right: 8pt, y: 7pt),
-  stroke: (left: 2.5pt + (if tone == "gap" { eu-gold } else { eu-blue })),
+  width: 100%, fill: if tone == "method" { method-wash } else { wash },
+  inset: (left: 9pt, right: 8pt, y: 7pt),
+  stroke: (left: 2.5pt + (if tone == "gap" { eu-gold } else if tone == "method" { method } else { eu-blue })),
   text(size: 9pt, body),
 )
+
+// The methodology and fact-check appendices: how this was made, set apart in teal so a reader never
+// mistakes method for findings (#88). Same structure as a chapter; only the colour and kicker differ.
+#let method-appendix(body) = {
+  show heading.where(level: 1): it => {
+    pagebreak(weak: true)
+    block(width: 100%, fill: method, inset: (x: 8mm, y: 7mm), radius: 1.5pt)[
+      #set text(fill: white)
+      #text(size: 8pt, tracking: 2pt)[#upper[Method · how this was made]]
+      #v(1.5mm)
+      #text(size: 22pt, weight: "regular")[#it.body]
+    ]
+    v(-1.2mm)
+    block(width: 100%, height: 1.6mm, fill: method-wash)
+    v(4mm)
+  }
+  show heading.where(level: 2): it => {
+    v(4mm)
+    block(breakable: false, sticky: true)[
+      #set text(size: 12.5pt, weight: "bold", fill: method)
+      #it.body
+      #v(-2.5mm)
+      #line(length: 100%, stroke: 0.5pt + method)
+    ]
+    v(0.5mm)
+  }
+  body
+}
 
 // Sources appendix: one entry per source, then the claims that cite it with their quotes.
 #let source-entry(n, body) = block(above: 1.1em, below: 0.4em, breakable: false,

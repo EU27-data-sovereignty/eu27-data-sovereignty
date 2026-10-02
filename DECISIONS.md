@@ -2022,3 +2022,49 @@ again before a deploy: a push to `main` shipped whatever the registers held.
 *Would change if:* authors are recorded for the earlier facts (re-research), or a third independent model
 family is added, which could become the checker for unrecorded facts. Also if `evidence.assess` should
 credit a cross-model check in the grades; that is a separate decision.
+
+### 88. The methodology is in every asset, set apart in a method teal
+**Decision.** 2026-10-01. The owner asked for both changes.
+- **Everywhere.** The generated methodology (#84) and the fact-check appendix (#87) are now in every
+  asset:
+  - the EU-27 report and every country PDF;
+  - every markdown brief, in full rather than as a pointer;
+  - the web pages `/methodology` and `/fact-check`;
+  - the `/ask` corpus, generated rather than only the hand-written summary;
+  - every poster, as a footer line pointing to `/methodology` and `/fact-check/<ISO>`, since a poster
+    cannot hold the text.
+- **The methodology covers the fact check.** It gains a section on it, built from `factcheck.RULE`.
+- **One colour for how-we-know material.** A new design token, `method` (teal), marks it everywhere:
+  - light #0F6E6E on wash #E8F4F3; dark #5FC4BF on wash #10282E;
+  - the PDF appendices open with a teal band, and the web pages use a teal `MethodFrame`;
+  - method callouts and the poster's method line are teal;
+  - every one of these sections carries the kicker "Method · how this was made". The briefs carry the
+    kicker as text, since markdown has no colour.
+
+**Problem.** The methodology was in the PDFs and on the web but not in the briefs. `/ask` answered from a
+hand-written summary, which is the drift that #82 and #84 removed elsewhere. Nothing visually set method
+apart from findings: method notes used the same EU blue as content.
+
+**Alternatives considered.**
+- **A teal method accent (chosen).** A hue used for nothing else, so it can't be confused with content
+  (blue), gaps (gold) or the ranking colours. Every text pair passes WCAG AA (5.4:1 or better), and the
+  generator checks this.
+- **A deep-navy appendix band.** *Why not:* no new colour, but the blue is shared with content, so it
+  marks method less distinctly.
+- **A quiet grey back-matter style.** *Why not:* easy to skip, and the method is what a skeptical reader
+  most needs to find.
+
+**Closes off.** Using the method teal for anything but how-we-know material. A brief, PDF, page or poster
+without the methodology or a pointer to it.
+
+**Verified:** 2026-10-01.
+- `python3 -m unittest tests.test_methodology` passes 14 tests. `Everywhere` checks the briefs in full,
+  the `/ask` corpus, the poster line, both PDF appendices in `method-appendix`, the web `MethodFrame` and
+  the token in both themes.
+- `design/build_tokens.py` passes its contrast check.
+- The DE PDF renders both appendices with the teal band.
+- Playwright: 33 passed, including accessibility on `/methodology`, `/fact-check` and `/fact-check/DE`.
+  Wide tables became keyboard-scrollable as part of this.
+
+*Would change if:* the design system adopts a different semantic colour scheme, or print tests show the
+teal does not hold up in black and white. The kicker carries the meaning without colour.

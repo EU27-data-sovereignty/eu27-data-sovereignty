@@ -6,17 +6,17 @@
 
 ## Status
 
-**0 of 1390 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them.
+**28 of 1390 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them.
 
 | Checker model | Current verdicts |
 |---|---:|
-| claude-fable-5-1 | 0 |
+| claude-fable-5-1 | 30 |
 | claude-opus-5-5 | 0 |
 
 | Verdict | Facts |
 |---|---:|
-| supported | 0 |
-| not supported | 0 |
+| supported | 28 |
+| not supported | 2 |
 | unclear | 0 |
 
 | Author of the fact, as recorded | Facts |
@@ -321,58 +321,30 @@ A verdict holds for the fact exactly as printed: a SHA-256 of the claim, the que
 | `record:CZ:public_health_surveillance:operator` | Infectious disease IS: Ministry of Health controller, ÚZIS operator | never checked |
 | `record:CZ:geospatial:register` | ČÚZK publishes parcels from ISKN and buildings/addresses from RÚIAN | never checked |
 | `record:CZ:geospatial:operator` | Český úřad zeměměřický a katastrální (Czech Office for Surveying, Mapping and Cadastre) | never checked |
-| `indicator:DE:L1` | Partly | never checked |
 | `indicator:DE:L2` | Yes | never checked |
-| `indicator:DE:K1` | Yes | never checked |
-| `indicator:DE:K2` | Yes | never checked |
+| `indicator:DE:K2` | Yes | checker found it not supported: Both quotes are verbatim, but neither says who operates the eID scheme: the Bundesdruckerei page only calls the group a federal technology company, and PAuswG §4(3) only says the BMI designates the card manufacturer, certificate authority and blocking-list operator (published in the Bundesanzeiger). Linking the two (that Bundesdruckerei is the designated operator) needs outside knowledge, so 'Yes' |
 | `indicator:DE:C1` | Yes | never checked |
 | `indicator:DE:C2` | Yes | never checked |
-| `param:DE:population_m` | 83.47 million | never checked |
-| `param:DE:gdp_eur_bn` | 4 529.7 EUR bn | never checked |
-| `param:DE:gov_employment_k` | 2 915.0 thousand | never checked |
-| `param:DE:elec_price_eur_mwh` | 226.4 EUR/MWh | never checked |
-| `param:DE:renewables_pct` | 57.9 % | never checked |
-| `param:DE:land_km2` | 353 260 km² | never checked |
-| `record:DE:civil_registry:register` | Melderegister (population/residence registers) kept by the Meldebehörden | never checked |
-| `record:DE:civil_registry:operator` | The Federal Central Tax Office (BZSt) stores the national personal identification number (Identifikationsnummer) with core identity data for every natural person (Abgabenordnung § 139b(3)) | never checked |
+| `record:DE:civil_registry:operator` | The Federal Central Tax Office (BZSt) stores the national personal identification number (Identifikationsnummer) with core identity data for every natural person (Abgabenordnung § 139b(3)) | checker found it not supported: The quote is verbatim and shows the BZSt stores the Identifikationsnummer with names and other identity data, but the printed text adds 'national personal identification number' and 'for every natural person', neither of which §139b says (it only states a natural person may not receive more than one number); the operator is supported, the printed scope is not. |
 | `record:DE:facial_biometric:operator` | Biometric features may be stored only at the issuing ID-card authorities | never checked |
 | `record:DE:fingerprint_biometric:register` | No central register | never checked |
 | `record:DE:breeder_documents:operator` | Each Standesamt keeps the birth register (Geburtenregister) and other civil status registers | never checked |
 | `record:DE:issuance_history:register` | The ID-card register records serial number, revocation password/sum and expiry date | never checked |
 | `record:DE:issuance_history:operator` | A central store of all ID-card serial numbers is permitted only at the card manufacturer, solely to trace the cards | never checked |
-| `record:DE:electoral_roll:register` | Wählerverzeichnis (electoral roll) | never checked |
-| `record:DE:electoral_roll:operator` | Gemeindebehörden (municipal authorities) | never checked |
-| `record:DE:judicial_criminal:register` | Bundeszentralregister (Federal Central Criminal Register) | never checked |
-| `record:DE:judicial_criminal:operator` | Bundesamt für Justiz (Federal Office of Justice) | never checked |
-| `record:DE:police_records:register` | polizeilicher Informationsverbund zwischen Bund und Ländern (federal-state police information network) | never checked |
-| `record:DE:police_records:operator` | Bundeskriminalamt (Federal Criminal Police Office) | never checked |
 | `record:DE:digital_identity_credentials:register` | BundID is to become the single central citizen account 'DeutschlandID' under the OZG | never checked |
-| `record:DE:digital_identity_credentials:foreign_dependency` | National infrastructure | never checked |
-| `record:DE:trust_services_pki:register` | V-PKI provides certificate-based security services to federal and state authorities, municipalities and public institutions | never checked |
-| `record:DE:trust_services_pki:foreign_dependency` | National infrastructure | never checked |
-| `record:DE:residence_permits:register` | The AZR consists of a general data stock and a separately kept visa file | never checked |
-| `record:DE:residence_permits:operator` | The AZR is kept by BAMF; the Federal Office of Administration (BVA) processes the data on BAMF's behalf | never checked |
 | `record:DE:tax:register` | ELSTER (ELektronische STeuerERklärung; electronic tax return) | never checked |
 | `record:DE:customs:register` | ATLAS is the customs IT procedure for automated clearance and monitoring of cross-border goods traffic | never checked |
 | `record:DE:health_insurance:register` | Versichertenverzeichnis (register of insured persons) | never checked |
 | `record:DE:health_insurance:operator` | die Krankenkasse (each statutory health insurance fund) | never checked |
 | `record:DE:business_registry:register` | Handelsregister (commercial register) | never checked |
 | `record:DE:business_registry:operator` | die Gerichte (the courts) | never checked |
-| `record:DE:beneficial_ownership:register` | Transparenzregister (transparency register) | never checked |
 | `record:DE:vehicle_licensing:register` | Zentrales Fahrzeugregister des Kraftfahrt-Bundesamtes (Central Vehicle Register) | never checked |
 | `record:DE:vehicle_licensing:operator` | Kraftfahrt-Bundesamt (Federal Motor Transport Authority) | never checked |
-| `record:DE:border_control:operator` | The BKA is the central national authority operating the national part of the Schengen Information System | never checked |
 | `record:DE:firearms_register:register` | Nationales Waffenregister (National Firearms Register) | never checked |
 | `record:DE:firearms_register:operator` | Bundesverwaltungsamt (Federal Office of Administration) | never checked |
 | `record:DE:public_finance:register` | automatisierte Verfahren für das Haushalts-, Kassen- und Rechnungswesen des Bundes (automated federal budget, cash and accounting procedure, HKR) | never checked |
-| `record:DE:central_bank:register` | TARGET (Eurosystem real-time gross settlement payment system) | never checked |
-| `record:DE:central_bank:operator` | Deutsche Bundesbank | never checked |
-| `record:DE:emergency_communications:register` | Digitalfunk BOS (nationwide digital radio for public-safety authorities) | never checked |
-| `record:DE:emergency_communications:operator` | Bundesanstalt für den Digitalfunk der BOS (BDBOS) | never checked |
-| `record:DE:crisis_management:register` | MoWaS is a highly available, hardened system for warning the population in Germany | never checked |
 | `record:DE:official_gazette:register` | Bundesgesetzblatt (Federal Law Gazette) | never checked |
 | `record:DE:official_gazette:operator` | Bundesamt für Justiz (Federal Office of Justice) | never checked |
-| `record:DE:national_archives:register` | The Bundesarchiv provides the Digital Intermediate Archive of the Federation (DZAB) as a central service to all federal public bodies | never checked |
 | `indicator:DK:L1` | Partly | never checked |
 | `indicator:DK:L2` | Partly | never checked |
 | `indicator:DK:K1` | Yes | never checked |
@@ -1433,11 +1405,16 @@ A verdict holds for the fact exactly as printed: a SHA-256 of the claim, the que
 
 Each verdict other than *supported*, from every run, including those a later check superseded after the fact or its source changed.
 
-None.
+| Run | Claim | Checker | Verdict | Reason | Now |
+|---|---|---|---|---|---|
+| wf_074137f6-b8e | `indicator:DE:K2` | claude-fable-5-1 | not supported | Both quotes are verbatim, but neither says who operates the eID scheme: the Bundesdruckerei page only calls the group a federal technology company, and PAuswG §4(3) only says the BMI designates the card manufacturer, certificate authority and blocking-list operator (published in the Bundesanzeiger). Linking the two (that Bundesdruckerei is the designated operator) needs outside knowledge, so 'Yes' | current |
+| wf_074137f6-b8e | `record:DE:civil_registry:operator` | claude-fable-5-1 | not supported | The quote is verbatim and shows the BZSt stores the Identifikationsnummer with names and other identity data, but the printed text adds 'national personal identification number' and 'for every natural person', neither of which §139b says (it only states a natural person may not receive more than one number); the operator is supported, the printed scope is not. | current |
 
 ## Runs
 
-No run recorded yet.
+| Run | Date | Facts checked | By model | Verdicts | Commit | Bundle SHA-256 | Workflow SHA-256 |
+|---|---|---:|---|---|---|---|---|
+| wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 | 4a7d51c70b84 | 16f1b228a17dad92 | 82530c1aa976b52e |
 
 ## How a check runs
 

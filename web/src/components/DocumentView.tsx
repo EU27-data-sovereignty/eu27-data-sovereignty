@@ -73,10 +73,12 @@ function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'
     case 'callout':
       return (
         <div
-          className={`mb-3 max-w-3xl border-l-4 bg-[var(--color-bg-emphasis)] px-3 py-2 text-sm ${
+          className={`mb-3 max-w-3xl border-l-4 px-3 py-2 text-sm ${
             block.tone === 'gap'
-              ? 'border-[var(--color-highlight)]'
-              : 'border-[var(--color-accent)]'
+              ? 'border-[var(--color-highlight)] bg-[var(--color-bg-emphasis)]'
+              : block.tone === 'method'
+                ? 'border-[var(--color-method)] bg-[var(--color-method-wash)]'
+                : 'border-[var(--color-accent)] bg-[var(--color-bg-emphasis)]'
           }`}
         >
           <Spans spans={block.spans} {...rest} />
@@ -94,7 +96,13 @@ function BlockView({ block, ...rest }: { block: Block } & Omit<SpanProps, 'span'
       )
     case 'table':
       return (
-        <div className="scroll-x mb-4">
+        // Focusable, so a keyboard user can scroll a table wider than the page (WCAG 2.1.1).
+        <div
+          className="scroll-x mb-4"
+          tabIndex={0}
+          role="region"
+          aria-label={block.columns.map(c => c.t).join(', ')}
+        >
           <table className="w-full min-w-[32rem] border-collapse text-sm">
             <thead>
               <tr className="border-b-2 border-[var(--color-accent)] bg-[var(--color-bg-emphasis)]">

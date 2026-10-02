@@ -7,6 +7,17 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-01
 
+### Added: the methodology in every asset, marked in a method teal (#88)
+
+- **Briefs:** every brief now carries the full methodology appendix, beside its fact-check appendix.
+- **`/ask`:** answers about the method from the generated methodology.
+- **Posters:** every poster points to `/methodology` and its country's fact check.
+- **The fact check:** the methodology gains a section on it.
+- **One colour, teal, marks how-we-know material everywhere.** The PDF appendices open with a teal band,
+  the `/methodology` and `/fact-check` pages use a teal frame, and method notes are teal. Each section
+  carries the label "Method · how this was made".
+- **Accessibility fix:** wide tables on the web are now keyboard-scrollable.
+
 ### Added: every printed fact is checked by the model that did not write it, before every deploy (#87)
 
 - **The rule.** A production deploy now needs every printed fact to have a current *supported* verdict

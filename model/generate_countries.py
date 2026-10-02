@@ -47,6 +47,11 @@ def cell(text: str) -> str:
     return text.replace("|", "\\|").replace("\n", " ")
 
 
+# The label every how-we-know section carries, in every output (#88). Markdown has no colour; the
+# PDFs and web pages also set these sections in the method teal.
+METHOD_KICKER = "Method · how this was made"
+
+
 class Markdown:
     """Renders one document; numbers its footnotes by source, in first-citation order."""
 
@@ -117,12 +122,15 @@ class Markdown:
             out += [f"## {t}", ""]
             for b in s["blocks"]:
                 out += [self.block(b), ""]
-        # How each fact above was checked by the model that did not write it (#87), generated.
-        out += ["## Appendix: fact check", ""]
-        for s in self.b["factcheck"]["countries"][doc["iso"]]["sections"]:
-            out += [f"### {s['title']}", ""]
-            for b in s["blocks"]:
-                out += [self.block(b), ""]
+        # How this was made, generated: the methodology (#84) and how each fact above was checked by the
+        # model that did not write it (#87). The same documents the PDFs and web pages carry (#88).
+        for title, appendix in (("Appendix: methodology", self.b["methodology"]),
+                                ("Appendix: fact check", self.b["factcheck"]["countries"][doc["iso"]])):
+            out += [f"## {title}", "", f"*{METHOD_KICKER}*", ""]
+            for s in appendix["sections"]:
+                out += [f"### {s['title']}", ""]
+                for b in s["blocks"]:
+                    out += [self.block(b), ""]
         if self.order:
             out += ["---", ""]
             for n, sid in enumerate(self.order, start=1):
@@ -133,9 +141,9 @@ class Markdown:
             out += ["", f"**Evidence grades:** {grades.count('Strong')} Strong, {grades.count('Standard')} "
                     f"Standard. {self.b['notice']['grade_rule']} The checks behind each fact are listed in "
                     "the country PDF and on the web page.", "",
-                    "**Methodology:** how every fact was sourced and every figure calculated is the appendix "
-                    "of the country PDF, and the web page /methodology; both are generated from the code "
-                    "that produced this brief.", ""]
+                    "**Methodology:** how every fact was sourced, checked and calculated is in the two "
+                    "appendices above, generated from the code that produced this brief; the same text is "
+                    "in the country PDF and on the web pages /methodology and /fact-check.", ""]
         return "\n".join(out)
 
 

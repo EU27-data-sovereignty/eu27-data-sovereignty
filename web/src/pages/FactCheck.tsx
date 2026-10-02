@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 
 import { DocumentView } from '@/components/DocumentView'
+import { MethodFrame } from '@/components/MethodFrame'
 import type { Bundle } from '@/data/types'
 
 /**
@@ -17,8 +18,7 @@ export function FactCheck({ bundle }: { bundle: Bundle }) {
   }
   const name = code ? bundle.documents[code]?.name : undefined
   return (
-    <article className="max-w-5xl">
-      <h1 className="mb-4 text-2xl font-semibold">Fact check{name ? `: ${name}` : ''}</h1>
+    <MethodFrame title={`Fact check${name ? `: ${name}` : ''}`}>
       {name && (
         <p className="mb-4 text-sm">
           <Link to={`/country/${code}`} className="underline">
@@ -31,6 +31,6 @@ export function FactCheck({ bundle }: { bundle: Bundle }) {
         </p>
       )}
       <DocumentView doc={doc} bundle={bundle} numbers={new Map()} />
-    </article>
+    </MethodFrame>
   )
 }

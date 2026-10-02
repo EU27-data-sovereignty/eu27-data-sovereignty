@@ -120,20 +120,20 @@ class Renderer:
     def methodology(self, level: int = 1) -> str:
         """The generated methodology appendix (model/methodology.py), before the sources."""
         doc = self.b["methodology"]
-        out = [f"{'=' * level} Appendix: methodology", ""]
+        out = ["#method-appendix[", f"{'=' * level} Appendix: methodology", ""]
         for s in doc["sections"]:
             out += [f"{'=' * (level + 1)} {esc(s['title'])}", ""]
             out += [self.block(b) for b in s["blocks"]]
-        return "\n".join(out)
+        return "\n".join(out + ["]"])
 
     def factcheck(self, iso: str = "", level: int = 1) -> str:
         """The generated fact-check appendix (model/factcheck_appendix.py): the EU-27 one, or a country's."""
         doc = self.b["factcheck"]["countries"][iso] if iso else self.b["factcheck"]["eu"]
-        out = [f"{'=' * level} Appendix: fact check", ""]
+        out = ["#method-appendix[", f"{'=' * level} Appendix: fact check", ""]
         for s in doc["sections"]:
             out += [f"{'=' * (level + 1)} {esc(s['title'])}", ""]
             out += [self.block(b) for b in s["blocks"]]
-        return "\n".join(out)
+        return "\n".join(out + ["]"])
 
     def appendix(self, heading: str = "= Sources") -> str:
         cited_by: dict[str, list[tuple[str, dict]]] = {}
@@ -312,7 +312,7 @@ def report_typ(b: dict) -> str:
     rank = ranking(b, r)
     body = [r.chapter(d) for d in docs]
     return "\n".join([
-        '#import "/templates/report.typ": report, callout, gap, source-entry, claim-entry',
+        '#import "/templates/report.typ": report, callout, gap, source-entry, claim-entry, method-appendix',
         "",
         "#show: report.with(",
         f"  title: {string(TITLE)},",
@@ -337,7 +337,7 @@ def country_typ(b: dict, iso: str) -> str:
     d = b["documents"][iso]
     chapter = r.chapter(d)
     return "\n".join([
-        '#import "/templates/report.typ": report, callout, gap, source-entry, claim-entry',
+        '#import "/templates/report.typ": report, callout, gap, source-entry, claim-entry, method-appendix',
         "",
         "#show: report.with(",
         f"  title: {string(d['name'])},",

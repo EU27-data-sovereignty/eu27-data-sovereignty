@@ -64,6 +64,8 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
     models = sorted({json.loads(p.read_text(encoding="utf-8")).get("reviewer_model", "") for p in (staging / "vetting").glob("[A-Z][A-Z].json")} - {""})
 
     import contrib  # noqa: PLC0415
+    import factcheck  # noqa: PLC0415
+    checked = factcheck.summary({"documents": documents, "claims": claims, "sources": sources})
     states = collections.Counter(s["state"] for s in contrib.status().values())
     human = {k: states.get(k, 0) for k in ("verified", "disputed", "withdrawn")}
     n_reviewers, n_submissions = len(contrib.roster()), len(contrib.load(contrib.SUBMISSIONS))
@@ -141,6 +143,15 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
                "value within 0.5%:"),
             _table(["Figure", "Dataset", "Filters", "Period", "Scale", "Decimals"], eurostat),
         ]},
+        {"id": "m-factcheck", "title": "The cross-model fact check before every deploy", "blocks": [
+            _p("Before anything is published, every printed fact is checked once more, exactly as printed, by a "
+               "second model: the one that did not write it. The checker fetches the cited source and decides "
+               "whether it supports the statement as printed. A production deploy is refused unless every "
+               "printed fact has a current verdict of supported. The rule, the steps and each fact's verdict "
+               "are in the fact-check appendix."),
+            _table(["Fact written by", "Checked by"], factcheck.RULE),
+            _p(f"In this build, {checked['passing']} of {checked['printed']} printed facts pass the fact check."),
+        ]},
         {"id": "m-people", "title": "Citizens and human review", "blocks": [
             _p("Anyone in any member state may submit a source or check a printed fact, through public "
                "issue forms. A submitted source passes the same mechanical checks as agent research. A "
@@ -173,8 +184,9 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
         {"id": "m-limits", "title": "What this does not establish", "blocks": [
             _list([
                 "No person has verified any finding. Agents found and checked everything.",
-                "The blind reviewer was the same model as the researcher, so the two readings can share its "
-                "blind spots.",
+                "The blind reviewer during research was the same model as the researcher, so the two readings "
+                "can share its blind spots. The fact check before each deploy uses a different model, which "
+                "narrows that risk but does not remove blind spots that models share.",
                 "English wording of a non-English source is a machine translation or machine summary. Its "
                 "figures are checked against the original; its words are not.",
                 "A gap means not yet sourced. It never means the thing does not exist.",

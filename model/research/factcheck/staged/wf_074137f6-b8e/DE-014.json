@@ -1,0 +1,310 @@
+{
+ "run": "wf_074137f6-b8e",
+ "prepared": "2026-10-01-2cf8ef1d",
+ "batch": "DE-014",
+ "iso": "DE",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "param:DE:gov_employment_k",
+   "fact_sha256": "4cb24373a1b869397a19cecc52269eefaf7838a3434feea453ef7abb51a14e1c",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "API returns value 2915.0 (THS_PER, nace O, EMP_DC, DE, 2024; status 'p' provisional), matching the printed 2 915.0 thousand.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=DE&time=2024"
+  },
+  {
+   "claim": "param:DE:gdp_eur_bn",
+   "fact_sha256": "1fed07d302aa62fc7c9a5e9d7b1cf80c40f9e9ce0c9d4fa25b71a03618a2e68d",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "API returns 4529710.0 million EUR (B1GQ, CP_MEUR, DE, 2025, provisional), which scales to 4 529.7 EUR bn as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=DE&time=2025"
+  },
+  {
+   "claim": "param:DE:renewables_pct",
+   "fact_sha256": "f18a096ce6fc19583c1ed17a029f5f24ae5971270d0f1389cd8e74b0a2f37942",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "API returns 57.9 (REN_ELC, PC, DE, 2025, provisional), matching the printed 57.9 %.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?format=JSON&nrg_bal=REN_ELC&unit=PC&geo=DE&time=2025"
+  },
+  {
+   "claim": "param:DE:elec_price_eur_mwh",
+   "fact_sha256": "f4445040927fc33382e822b78157474680f020b5a51879e132c72ef9ec46fb50",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "API returns 0.2264 EUR/kWh (band MWH500-1999, excluding VAT, DE, 2025-S2), which is 226.4 EUR/MWh as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=DE&time=2025-S2"
+  },
+  {
+   "claim": "param:DE:land_km2",
+   "fact_sha256": "258d8f3fd80cfdbaaaca1d4dd608cf73c240aa4defd4e9ac2a5d006b9a701e9e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "API returns 353260 km² (L0008, DE, 2026), matching the printed 353 260 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=DE&time=2026"
+  },
+  {
+   "claim": "param:DE:population_m",
+   "fact_sha256": "20badca0dd218fb0c910bbcb068172336bcc51bf07b874e360c1cceccdaec47f",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "API returns 83467117 persons (JAN, DE, 2026), which rounds to 83.47 million as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=DE&time=2026"
+  },
+  {
+   "claim": "record:DE:digital_identity_credentials:foreign_dependency",
+   "fact_sha256": "00a1740301d66b6cdd6d052dba3c827cbb9678350dfc7757c203bd24eebcd74e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim 'Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund', in a passage naming the BMI and ITZBund as the bodies accompanying onboarding; operation in the federal IT centre's own data centre is national infrastructure, not an EU or non-EU provider.",
+   "quote_found": true,
+   "checked_url": "https://ozg.brandenburg.de/ozg/de/it-infrastrukturen/it-basiskomponenten/bundid-nutzerkonto-deutschlandid/"
+  },
+  {
+   "claim": "record:DE:crisis_management:register",
+   "fact_sha256": "5da027a1e4ae74783ac0e34b2ab5887d51d0b7e4e519aae4bf2ec00cdd556ebe",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The BBK page opens with the exact sentence 'Das Modulare Warnsystem (kurz: MoWaS) ist ein hochverfügbares, gehärtetes System zur Warnung der Bevölkerung in Deutschland', which the printed text translates faithfully.",
+   "quote_found": true,
+   "checked_url": "https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warnung-in-Deutschland/MoWaS/mowas_node.html"
+  },
+  {
+   "claim": "indicator:DE:K1",
+   "fact_sha256": "683046387a3039785871856a7dc5fbf9f0b73323ed2f4c0f28d3e0fc30a1eb17",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The BSI page defines the Root-CA as the anchor of the hierarchy and then says 'Für die Verwaltungs-PKI wird dieser Sicherungsanker seit dem 20. Februar 2001 im BSI betrieben', i.e. the government PKI root is run by the federal office BSI; the D-Trust quote (a Bundesdruckerei group company) was also found verbatim but on its own does not establish state control, so the Yes rests on the BSI citation",
+   "quote_found": true,
+   "checked_url": "https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Moderner-Staat/Verwaltungs-PKI/verwaltungs-pki_node.html"
+  },
+  {
+   "claim": "record:DE:trust_services_pki:foreign_dependency",
+   "fact_sha256": "53a60b4b8b3cb5c2f91272bd2266597c4d5af4f9756682c16b392bda139bc859",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote, found verbatim, says the Verwaltungs-PKI root CA has been operated inside the BSI (a German federal authority) since 2001, which supports 'national infrastructure' for the state PKI.",
+   "quote_found": true,
+   "checked_url": "https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Moderner-Staat/Verwaltungs-PKI/verwaltungs-pki_node.html"
+  },
+  {
+   "claim": "record:DE:trust_services_pki:register",
+   "fact_sha256": "aa360b5b8aeb2bb3037a792e67864aeb6dd899e70306f9be8cb55c8ab258d736",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The full sentence reads 'Die Public Key Infrastruktur der Verwaltung (... V-PKI) bietet diese Basistechnologie als zertifikatsbasierte Sicherheitsdienstleistung für Bundes- und Landesbehörden, Kommunen sowie öffentliche Institutionen an', which the printed text renders exactly.",
+   "quote_found": true,
+   "checked_url": "https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Moderner-Staat/Verwaltungs-PKI/verwaltungs-pki_node.html"
+  },
+  {
+   "claim": "indicator:DE:L1",
+   "fact_sha256": "5b190a4098c16cb85e2382f14b378ea86ef1c98b12335496e177edaa34f37e4d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both quotes are verbatim: the BSI minimum standard (NCD.2.2.03) only says bodies SHOULD contract under German law and jurisdiction, and VSA §34 makes passing classified information to foreign private bodies conditional on a security agreement; neither mandates storage under national/EU jurisdiction outright, so 'Partly' is what these sources support (the VSA page was also fetched and the quote fou",
+   "quote_found": true,
+   "checked_url": "https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Mindeststandards/Mindeststandard_Nutzung_externer_Cloud-Dienste_Version_2_1.pdf?__blob=publicationFile&v=4"
+  },
+  {
+   "claim": "record:DE:national_archives:register",
+   "fact_sha256": "7871bee84ccf9d23bff0ea1e3f9096bed11bd152e033cfad4a6f82e0c6c599d2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says verbatim 'Das Bundesarchiv stellt allen öffentlichen Stellen des Bundes das Digitale Zwischenarchiv des Bundes (DZAB) als zentralen Dienst zur Verfügung', matching the printed sentence.",
+   "quote_found": true,
+   "checked_url": "https://www.bundesarchiv.de/unterlagen-abgeben/behoerdenberatung-zu-schriftgut-und-informationsverwaltung/nutzung-des-digitalen-zwischenarchivs-dzab/"
+  },
+  {
+   "claim": "record:DE:central_bank:register",
+   "fact_sha256": "38aa68a511db4b95229ca6f7af975fed5b57e2ed2c56990b562cf56613474604",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The live bundesbank.de page failed with an SSL error, so I read the cited archived copy; the quote is there verbatim and the surrounding text says the Eurosystem developed TARGET for settlement 'auf Basis einer Echtzeit-Brutto-Verrechnung (Real-Time Gross Settlement, RTGS)' and that the Eurosystem central banks operate it, supporting the printed description.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260724075900/https://www.bundesbank.de/de/aufgaben/unbarer-zahlungsverkehr/target/target-603342"
+  },
+  {
+   "claim": "indicator:DE:K2",
+   "fact_sha256": "21b6bab2c6978e79dcf54f2573b8ed2150c17d3cbc830ea0c5972557135b2944",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Both quotes are verbatim, but neither says who operates the eID scheme: the Bundesdruckerei page only calls the group a federal technology company, and PAuswG §4(3) only says the BMI designates the card manufacturer, certificate authority and blocking-list operator (published in the Bundesanzeiger). Linking the two (that Bundesdruckerei is the designated operator) needs outside knowledge, so 'Yes'",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/pauswg/__4.html"
+  },
+  {
+   "claim": "record:DE:civil_registry:operator",
+   "fact_sha256": "57a73cdbf3b12f29178cd0d95d77b1ea4cbb70076005a43a1f4de691d4d8ff0d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote is verbatim and shows the BZSt stores the Identifikationsnummer with names and other identity data, but the printed text adds 'national personal identification number' and 'for every natural person', neither of which §139b says (it only states a natural person may not receive more than one number); the operator is supported, the printed scope is not.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/ao_1977/__139b.html"
+  },
+  {
+   "claim": "record:DE:residence_permits:operator",
+   "fact_sha256": "782ad35f809110f1aa6c4c858e04a37ad0e5acbdd2591533d711a55f404378c8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "AZRG §1(1) says verbatim that the AZR is kept by the Bundesamt für Migration und Flüchtlinge and that the Bundesverwaltungsamt processes the data on its behalf and instruction, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/azrg/__1.html"
+  },
+  {
+   "claim": "record:DE:residence_permits:register",
+   "fact_sha256": "e6ae6683c6d5404285ba033fd22e6005825a6833fed133edf319837ab173cf8d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "AZRG §1(1) contains verbatim 'Das Ausländerzentralregister besteht aus einem allgemeinen Datenbestand und einer gesondert geführten Visadatei', matching the printed sentence.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/azrg/__1.html"
+  },
+  {
+   "claim": "record:DE:central_bank:operator",
+   "fact_sha256": "3bfdbc92b2c1200530a90c969eb9be3862833f8aa69971a346b70ec4eec3ba9a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is verbatim; its subject on the page is 'Die Deutsche Bundesbank ... als Zentralbank der Bundesrepublik Deutschland', which ensures payment processing and contributes to payment-system stability, supporting Deutsche Bundesbank as the operator of central bank systems.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/bbankg/__3.html"
+  },
+  {
+   "claim": "record:DE:emergency_communications:operator",
+   "fact_sha256": "b768499e80c7527a1f17f72d182c91bffd3c5cdef888bf262e2b9d3b48ca482a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "BDBOSG §1 establishes the 'Bundesanstalt für den Digitalfunk der BOS - BDBOS' and states verbatim that its purpose is building and operating the nationwide Digitalfunk BOS, supporting BDBOS as operator.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/bdbosg/__1.html"
+  },
+  {
+   "claim": "record:DE:emergency_communications:register",
+   "fact_sha256": "3bf2b47146148f2b359795b4879cde094a65d7daf22b44d81eb6253d5454407f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The verbatim quote names 'eines bundesweit einheitlichen digitalen Sprech- und Datenfunksystems für Behörden und Organisationen mit Sicherheitsaufgaben (Digitalfunk BOS)', matching the printed system name and gloss.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/bdbosg/__1.html"
+  },
+  {
+   "claim": "record:DE:police_records:operator",
+   "fact_sha256": "18dfb48c9e3c3eb2c1d5d80b65a59b21b2bb6ce8337d555c08fc6298ba01dd47",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "BKAG §29(1) says verbatim that the Bundeskriminalamt is the central office for the police information network and provides the uniform network system, supporting BKA as operator.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/bkag_2018/__29.html"
+  },
+  {
+   "claim": "record:DE:police_records:register",
+   "fact_sha256": "81f53f740de9c26f1ebb698932bad6b83025c8770e7cac471c4f317b7a3b9158",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same verbatim §29(1) sentence names the 'polizeilichen Informationsverbund zwischen Bund und Ländern', matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/bkag_2018/__29.html"
+  },
+  {
+   "claim": "record:DE:border_control:operator",
+   "fact_sha256": "61f59c3fce367173a5a2dcfffb2f73d38a77e8330b36269303f27aabcc8550ba",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "BKAG §3(2) reads 'Das Bundeskriminalamt ist ... 2. die zentrale nationale Stelle für den Betrieb des nationalen Teils des Schengener Informationssystems', so the printed statement about the BKA is exactly what the statute says.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/bkag_2018/__3.html"
+  },
+  {
+   "claim": "record:DE:civil_registry:register",
+   "fact_sha256": "8fa6bc6cc8dd0f85a092e4320c5a0b5f3f1ff07e8a8e775cad3c51858877e9ce",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "BMG §2(2) says verbatim 'Die Meldebehörden führen zur Erfüllung ihrer Aufgaben Melderegister', supporting the printed register name and its keepers.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/bmg/__2.html"
+  },
+  {
+   "claim": "record:DE:electoral_roll:operator",
+   "fact_sha256": "db0ce7e9dd6c30348104f1946b921f1201722234c8a97547386634ac4d5c7257",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "BWahlG §17(1) says verbatim 'Die Gemeindebehörden führen für jeden Wahlbezirk ein Verzeichnis der Wahlberechtigten', supporting municipal authorities as the operator.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/bwahlg/__17.html"
+  },
+  {
+   "claim": "record:DE:electoral_roll:register",
+   "fact_sha256": "c3204ecdec05a20beb914f589652cb5a91fdeb40bf2a5411ff6dd815304a0842",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The section is headed 'Wählerverzeichnis und Wahlschein' and describes the 'Verzeichnis der Wahlberechtigten', matching the printed 'Wählerverzeichnis (electoral roll)'.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/bwahlg/__17.html"
+  },
+  {
+   "claim": "record:DE:judicial_criminal:operator",
+   "fact_sha256": "7638eab13b445f641b21678e5c94926535f0a965c3eaa7ee990e64fb3230850b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "BZRG §1(1) says verbatim that the Bundesamt für Justiz keeps the Zentralregister and Erziehungsregister (Bundeszentralregister), supporting the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/bzrg/__1.html"
+  },
+  {
+   "claim": "record:DE:judicial_criminal:register",
+   "fact_sha256": "8b2ecba60ab70ef3f62228c2f3643a5dfac0f259d87f2f3a9b30a7ffa07fb575",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The verbatim quote names the 'Bundeszentralregister'; the English gloss 'Federal Central Criminal Register' is a translation of the register that the Act on the Zentralregister establishes, not an added claim.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/bzrg/__1.html"
+  },
+  {
+   "claim": "record:DE:beneficial_ownership:register",
+   "fact_sha256": "031a2e7acfcb7929fdcc2ceabc18c57e769d503604d7c4aac84924042847c025",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "GwG §18(1) says verbatim that a register for beneficial-owner information '(Transparenzregister)' is established, matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/gwg_2017/__18.html"
+  }
+ ]
+}

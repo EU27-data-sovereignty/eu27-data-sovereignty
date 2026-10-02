@@ -129106,7 +129106,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -129217,13 +129217,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -131004,7 +131051,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -131115,13 +131162,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -132304,7 +132398,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -132415,13 +132509,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -133682,7 +133823,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -133793,13 +133934,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -135502,7 +135690,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -135613,13 +135801,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -137504,7 +137739,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -137615,13 +137850,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -137633,7 +137915,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "0 of 52 printed facts about Germany pass."
+          "t": "28 of 52 printed facts about Germany pass."
          }
         ],
         "type": "p"
@@ -137689,15 +137971,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -137741,15 +138023,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -137767,15 +138049,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "not supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -137845,15 +138127,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -137871,15 +138153,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -137897,15 +138179,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -137923,15 +138205,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -137949,15 +138231,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -137975,15 +138257,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138001,15 +138283,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138027,15 +138309,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "not supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138183,15 +138465,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138209,15 +138491,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138235,15 +138517,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138261,15 +138543,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138287,15 +138569,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138313,15 +138595,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138365,15 +138647,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138391,15 +138673,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138417,15 +138699,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138443,15 +138725,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138469,15 +138751,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138651,15 +138933,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138729,15 +139011,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138833,15 +139115,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138859,15 +139141,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138885,15 +139167,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138911,15 +139193,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -138937,15 +139219,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ],
          [
@@ -139015,15 +139297,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_074137f6-b8e"
           }
          ]
         ],
@@ -139064,7 +139346,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -139175,13 +139457,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -140832,7 +141161,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -140943,13 +141272,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -142496,7 +142872,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -142607,13 +142983,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -144134,7 +144557,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -144245,13 +144668,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -145850,7 +146320,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -145961,13 +146431,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -146916,7 +147433,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -147027,13 +147544,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -149074,7 +149638,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -149185,13 +149749,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -150790,7 +151401,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -150901,13 +151512,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -152896,7 +153554,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -153007,13 +153665,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -154846,7 +155551,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -154957,13 +155662,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -156562,7 +157314,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -156673,13 +157425,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -157316,7 +158115,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -157427,13 +158226,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -158044,7 +158890,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -158155,13 +159001,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -159526,7 +160419,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -159637,13 +160530,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -160566,7 +161506,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -160677,13 +161617,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -162022,7 +163009,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -162133,13 +163120,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -163530,7 +164564,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -163641,13 +164675,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -165142,7 +166223,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -165253,13 +166334,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -166104,7 +167232,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -166215,13 +167343,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -167508,7 +168683,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -167619,13 +168794,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -169328,7 +170550,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 0 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1390 printed facts pass."
          }
         ],
         "type": "p"
@@ -169439,13 +170661,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "right",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+          "role": "label",
+          "t": "Run"
+         },
+         {
+          "role": "label",
+          "t": "Date"
+         },
+         {
+          "role": "label",
+          "t": "Facts checked"
+         },
+         {
+          "role": "label",
+          "t": "Checker models"
+         },
+         {
+          "role": "label",
+          "t": "Verdicts"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_074137f6-b8e"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-01"
+          },
+          {
+           "role": "method",
+           "t": "30"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 30"
+          },
+          {
+           "role": "method",
+           "t": "supported: 28; not supported: 2"
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-runs",
@@ -170863,7 +172132,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "In this build, 0 of 1390 printed facts pass."
+         "t": "In this build, 28 of 1390 printed facts pass."
         }
        ],
        "type": "p"
@@ -170974,13 +172243,60 @@
     {
      "blocks": [
       {
-       "spans": [
+       "align": [
+        "left",
+        "left",
+        "right",
+        "left",
+        "left"
+       ],
+       "columns": [
         {
-         "role": "method",
-         "t": "No fact-check run has been recorded yet, so no printed fact has been checked."
+         "role": "label",
+         "t": "Run"
+        },
+        {
+         "role": "label",
+         "t": "Date"
+        },
+        {
+         "role": "label",
+         "t": "Facts checked"
+        },
+        {
+         "role": "label",
+         "t": "Checker models"
+        },
+        {
+         "role": "label",
+         "t": "Verdicts"
         }
        ],
-       "type": "p"
+       "rows": [
+        [
+         {
+          "role": "label",
+          "t": "wf_074137f6-b8e"
+         },
+         {
+          "role": "method",
+          "t": "2026-10-01"
+         },
+         {
+          "role": "method",
+          "t": "30"
+         },
+         {
+          "role": "method",
+          "t": "claude-fable-5-1: 30"
+         },
+         {
+          "role": "method",
+          "t": "supported: 28; not supported: 2"
+         }
+        ]
+       ],
+       "type": "table"
       }
      ],
      "id": "f-runs",
@@ -171205,11 +172521,11 @@
          },
          {
           "role": "method",
-          "t": "0"
+          "t": "28"
          },
          {
           "role": "method",
-          "t": "52"
+          "t": "24"
          }
         ],
         [
@@ -171524,7 +172840,7 @@
    "BG": "Fact check: 0 of 45 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/BG",
    "CY": "Fact check: 0 of 62 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/CY",
    "CZ": "Fact check: 0 of 69 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/CZ",
-   "DE": "Fact check: 0 of 52 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/DE",
+   "DE": "Fact check: 28 of 52 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DE",
    "DK": "Fact check: 0 of 60 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/DK",
    "EE": "Fact check: 0 of 56 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/EE",
    "EL": "Fact check: 0 of 55 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/EL",
@@ -172595,6 +173911,79 @@
       "spans": [
        {
         "role": "method",
+        "t": "Before anything is published, every printed fact is checked once more, exactly as printed, by a second model: the one that did not write it. The checker fetches the cited source and decides whether it supports the statement as printed. A production deploy is refused unless every printed fact has a current verdict of supported. The rule, the steps and each fact's verdict are in the fact-check appendix."
+       }
+      ],
+      "type": "p"
+     },
+     {
+      "align": [
+       "left",
+       "left"
+      ],
+      "columns": [
+       {
+        "role": "label",
+        "t": "Fact written by"
+       },
+       {
+        "role": "label",
+        "t": "Checked by"
+       }
+      ],
+      "rows": [
+       [
+        {
+         "role": "label",
+         "t": "claude-opus-5-5"
+        },
+        {
+         "role": "method",
+         "t": "claude-fable-5-1"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "claude-fable-5-1"
+        },
+        {
+         "role": "method",
+         "t": "claude-opus-5-5"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "anything else: unrecorded, a person, or a program"
+        },
+        {
+         "role": "method",
+         "t": "claude-fable-5-1"
+        }
+       ]
+      ],
+      "type": "table"
+     },
+     {
+      "spans": [
+       {
+        "role": "method",
+        "t": "In this build, 28 of 1390 printed facts pass the fact check."
+       }
+      ],
+      "type": "p"
+     }
+    ],
+    "id": "m-factcheck",
+    "title": "The cross-model fact check before every deploy"
+   },
+   {
+    "blocks": [
+     {
+      "spans": [
+       {
+        "role": "method",
         "t": "Anyone in any member state may submit a source or check a printed fact, through public issue forms. A submitted source passes the same mechanical checks as agent research. A fact counts as verified by a person only under the two-person rule: confirmed by someone on the reviewer roster, who did not submit it, who reads the source's language, and who declared no conflict of interest. One such rejection makes a fact disputed; two withdraw it, unless two reviewers confirmed it."
        }
       ],
@@ -172725,7 +174114,7 @@
        [
         {
          "role": "method",
-         "t": "The blind reviewer was the same model as the researcher, so the two readings can share its blind spots."
+         "t": "The blind reviewer during research was the same model as the researcher, so the two readings can share its blind spots. The fact check before each deploy uses a different model, which narrows that risk but does not remove blind spots that models share."
         }
        ],
        [

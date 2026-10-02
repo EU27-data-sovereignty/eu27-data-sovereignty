@@ -146,7 +146,159 @@ Tier 0 and 1 holdings for Belgium without a verified source yet. Corrections and
 - Electricity grid control (tier 1)
 - Water management control (tier 1)
 
+## Appendix: methodology
+
+*Method · how this was made*
+
+### What this is, and what it is not
+
+> Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
+
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1390 facts are printed, 3342 values are withheld as gaps, and 20 are withheld as disputed.
+
+### How sources were found
+
+Research agents, one per member state, looked for each critical holding and each indicator. Each claim needed a verbatim quote of 8 to 60 words from an exact URL. Nothing an agent returned was used until it passed the mechanical checks below. Agent output is staged separately and is never rendered.
+
+| Quote check of the first research runs | Claims |
+|---|---:|
+| exact | 2138 |
+| loose | 20 |
+| not_found | 107 |
+| fetch_failed | 251 |
+
+A vetting run then re-examined every printed fact, and after it the gaps. It looked for a better source, for newer information and for any source that disagrees. Each of its findings was judged by a blind reviewer, shown the quote and URL but never the proposed value. Runs: wf_1c6b8bb6-450. Reviewer model: claude-opus-5-5, the same model as the researcher.
+
+| Vetting outcome | Findings or items |
+|---|---:|
+| below_T2 | 5 |
+| corroborated | 238 |
+| disputed | 10 |
+| filled_gap | 363 |
+| holding_not_established | 38 |
+| no_better_found | 447 |
+| not_reached | 201 |
+| not_verified | 176 |
+| review_disagreed | 153 |
+| same_source | 8 |
+| superseded_higher_tier | 23 |
+| superseded_later_same_authority | 3 |
+
+Every cited source is re-fetched periodically and each quote looked for again. A fact whose quote has vanished, or whose source is gone, is withheld as disputed. A refusal to serve the page changes nothing.
+
+| Latest recheck | Sources |
+|---|---:|
+| changed_quotes_present | 373 |
+| gone | 3 |
+| quote_vanished | 3 |
+| unchanged | 306 |
+| unreachable | 6 |
+
+### What must hold for a fact to be printed
+
+- Researched claims (holdings, operators, legal bases, indicators): the cited page or PDF was downloaded and its SHA-256 recorded, and the quoted text was found in the extracted document by literal matching. Every number and date in the printed value was found in the original-language quote; the English wording is a machine summary of the quote unless it appears in it verbatim. An archived copy was looked up on the Internet Archive; where none exists the footnote says so.
+- Eurostat figures: the value was read from a pinned Eurostat dataset through its API and compared with the table cell, within 0.5%. The raw API response is stored and its SHA-256 recorded in model/fetch_manifest.csv. The footnote names the dataset, its dimensions and the retrieval date.
+- Categorical findings (infrastructure dependency, sovereignty indicators): admitted only when a second, independent automated reviewer reached the same value from the same quote.
+
+The printed value is checked against its quote at build time. Every number and date in it must appear in the original-language quote, read in any EU number format. A number found only in the English translation does not count. An abbreviation not found in the quote is shown in the fact's checklist. A value that is not a verbatim extract is a machine summary of the quote, and is labelled as one.
+
+A value that no checked source supports is withheld and shown as a gap. A gap means not yet sourced, never that the thing does not exist.
+
+### Source tiers
+
+How good is the best source behind each fact? Each cited host is classified once. An archived copy counts as the page it archived. The classification was drawn up by an agent and has not been reviewed by a person.
+
+| Tier | Printed facts |
+|---|---:|
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 635 |
+| T2 competent public body or audit office | 633 |
+| T3 other institution or company | 9 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
+
+### Evidence grades
+
+Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict.
+
+| Grade | Printed facts |
+|---|---:|
+| Verified | 0 |
+| Strong | 106 |
+| Standard | 1284 |
+
+There is no numeric confidence score: nothing has calibrated one.
+
+### Calculations
+
+Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
+
+Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
+
+- Dependent on non-EU providers: a source shows a tier 0 or 1 holding on non-EU infrastructure, or a national eID or trust anchor outside state or EU control.
+- Sovereign in law and in practice: a statute keeps government data under national or EU jurisdiction, and at least 75% of verified tier 0/1 holdings run on national or EU infrastructure, the trust anchor and eID are state-controlled, and the state runs its own data centres or government cloud.
+- Sovereign in practice, not secured in law: the practice test, without the statute.
+- Secured in law, not yet in practice: the statute, without the practice test.
+- Not demonstrated: neither.
+
+Confidence is how many groups a state could still reach if every unknown resolved for or against it: one group is High, two Medium, three or more Low. Within a group, states are alphabetical; the order carries no meaning.
+
+Fundamentals are Eurostat values at a pinned period, read through the dissemination API. Each is multiplied into the unit shown and rounded, and must reproduce the published value within 0.5%:
+
+| Figure | Dataset | Filters | Period | Scale | Decimals |
+|---|---|---|---|---|---|
+| population_m | tps00001 | indic_de=JAN | 2026 | × 1e-06 | 3 |
+| gdp_eur_bn | nama_10_gdp | na_item=B1GQ; unit=CP_MEUR | 2025 | × 0.001 | 1 |
+| gov_employment_k | nama_10_a64_e | na_item=EMP_DC; nace_r2=O; unit=THS_PER | 2024 | × 1 | 1 |
+| elec_price_eur_mwh | nrg_pc_205 | currency=EUR; nrg_cons=MWH500-1999; tax=X_VAT; unit=KWH | 2025-S2 | × 1000 | 1 |
+| renewables_pct | nrg_ind_ren | nrg_bal=REN_ELC; unit=PC | 2025 | × 1 | 1 |
+| land_km2 | reg_area3 | landuse=L0008; unit=KM2 | 2026 | × 1 | 0 |
+
+### The cross-model fact check before every deploy
+
+Before anything is published, every printed fact is checked once more, exactly as printed, by a second model: the one that did not write it. The checker fetches the cited source and decides whether it supports the statement as printed. A production deploy is refused unless every printed fact has a current verdict of supported. The rule, the steps and each fact's verdict are in the fact-check appendix.
+
+| Fact written by | Checked by |
+|---|---|
+| claude-opus-5-5 | claude-fable-5-1 |
+| claude-fable-5-1 | claude-opus-5-5 |
+| anything else: unrecorded, a person, or a program | claude-fable-5-1 |
+
+In this build, 28 of 1390 printed facts pass the fact check.
+
+### Citizens and human review
+
+Anyone in any member state may submit a source or check a printed fact, through public issue forms. A submitted source passes the same mechanical checks as agent research. A fact counts as verified by a person only under the two-person rule: confirmed by someone on the reviewer roster, who did not submit it, who reads the source's language, and who declared no conflict of interest. One such rejection makes a fact disputed; two withdraw it, unless two reviewers confirmed it.
+
+| Human review | Count |
+|---|---:|
+| Facts verified by a person | 0 |
+| Facts disputed by a reviewer | 0 |
+| Facts withdrawn after review | 0 |
+| Reviewers on the roster | 0 |
+| Citizen submissions staged | 0 |
+
+### Questions answered on the web
+
+The web page's Ask feature answers questions using only these sourced findings, with a citation for every fact. Each question is sent to Anthropic's API to generate the answer and is not stored by this site. The model is told the findings are machine-checked and to say so in every answer.
+
+### Reproducing this document
+
+Everything is built from the project's repository. `./run.sh reproduce` rebuilds every output in a fresh clone and compares it with the published one. `./run.sh reproduce --evidence` also re-fetches every cited source and checks every quote again. The git commit and the data bundle's SHA-256 this document was built from are printed on its title page.
+
+Not reproducible byte for byte: agent research gives different findings if run again, so what is reproducible is their admission, from the recorded outputs. Also not: the posters (browser screenshots), and the hash of a page rendered in a browser.
+
+### What this does not establish
+
+- No person has verified any finding. Agents found and checked everything.
+- The blind reviewer during research was the same model as the researcher, so the two readings can share its blind spots. The fact check before each deploy uses a different model, which narrows that risk but does not remove blind spots that models share.
+- English wording of a non-English source is a machine translation or machine summary. Its figures are checked against the original; its words are not.
+- A gap means not yet sourced. It never means the thing does not exist.
+- Most states do not publish where their critical registers are hosted, so placements are mostly of low confidence. That is a finding about transparency, not about sovereignty.
+
 ## Appendix: fact check
+
+*Method · how this was made*
 
 ### What was checked, and by whom
 
@@ -154,7 +306,7 @@ Tier 0 and 1 holdings for Belgium without a verified source yet. Corrections and
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 0 of 1390 printed facts pass.
+In this build, 28 of 1390 printed facts pass.
 
 | Fact written by | Checked by |
 |---|---|
@@ -174,7 +326,9 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### Fact-check runs
 
-No fact-check run has been recorded yet, so no printed fact has been checked.
+| Run | Date | Facts checked | Checker models | Verdicts |
+|---|---|---:|---|---|
+| wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Belgium
 
@@ -265,4 +419,4 @@ No fact-check run has been recorded yet, so no printed fact has been checked.
 
 **Evidence grades:** 6 Strong, 36 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
-**Methodology:** how every fact was sourced and every figure calculated is the appendix of the country PDF, and the web page /methodology; both are generated from the code that produced this brief.
+**Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

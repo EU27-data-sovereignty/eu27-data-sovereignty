@@ -16,6 +16,8 @@ export interface Theme {
   accent: string;
   accentText: string;
   highlight: string;
+  method: string;
+  methodWash: string;
   chartSurface: string;
   gridline: string;
   baseline: string;
@@ -38,6 +40,8 @@ export const light: Theme = {
   accent: '#003399',
   accentText: '#003399',
   highlight: '#FFCC00',
+  method: '#0F6E6E',
+  methodWash: '#E8F4F3',
   chartSurface: '#FFFFFF',
   gridline: '#E3E7F0',
   baseline: '#848CA0',
@@ -60,6 +64,8 @@ export const dark: Theme = {
   accent: '#FFCC00',
   accentText: '#A9C0FF',
   highlight: '#FFCC00',
+  method: '#5FC4BF',
+  methodWash: '#10282E',
   chartSurface: '#111A31',
   gridline: '#27324F',
   baseline: '#6E7A99',
