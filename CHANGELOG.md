@@ -7,6 +7,15 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-02
 
+### Added: eu27.cloud is live, deployed automatically from `main` (#81, #90)
+
+- **The first automatic deploy:** `Deploy` run 37072208296 (commit `34d460c`). It ran the full gate, the
+  fact-check gate, the prebuilt production deploy and the smoke test, all in CI.
+- **Smoke test results:** `/`, `/country/DE`, `/fact-check`, `/methodology` and the PDFs return 200; robots
+  disallows indexing and `x-robots-tag: noindex` is set; `www` redirects to the apex; the served bundle's
+  hash equals the committed one.
+- **Still not indexed.** The site stays out of search engines until the launch gate (#50).
+
 ### Changed: every printed fact checked by a second model; 81 withheld (#87, #89)
 
 - **The run.** The first full cross-model fact check (`wf_da123db1-a4e`, plus the pilot) put all 1,390

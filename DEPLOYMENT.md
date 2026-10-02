@@ -7,8 +7,8 @@
 -->
 
 **Live:** https://eu27.cloud (fallback: https://sovereign-data-centers.vercel.app). It is `noindex` and not
-announced; see the staging below. On 2026-10-02 only the fallback answered: `eu27.cloud` had no nameservers
-until the owner set Vercel's (#90), and the newest production deploy was the manual one of 2026-09-27.
+announced; see the staging below. Since 2026-10-02 it is served at eu27.cloud and deployed from `main` by
+GitHub Actions; the first automatic deploy is in the log below.
 **Vercel project:** `pieteradejongs-projects/sovereign-data-centers`
 (`prj_rZ7Xh4QyhwGBG6Or7ZuAlMgLZzD5`, team `team_oAI3Rv2rxJ353sqF76ie872M`). The local link is in `.vercel/project.json`.
 
@@ -210,8 +210,12 @@ owner's approval:
   in DejaVu Sans Mono; the body font, Libertinus Serif, ships inside typst.
 - **No PR previews.** Only `main` deploys. Previews still come from `vercel deploy --prebuilt` by hand, and
   preview protection needs thinking through before that is automated.
-- **The smoke test needs DNS.** Until `eu27.cloud` resolves to Vercel, every `Deploy` run fails at its last
-  step, even though the deploy itself succeeded.
+- **The smoke test needs DNS and a certificate.** If `eu27.cloud` does not answer over HTTPS, the `Deploy`
+  run fails at its last step even though the deploy itself succeeded. On 2026-10-02 the certificate arrived a
+  minute after the first smoke test; `gh run rerun <id> --failed` re-ran it green.
+- **Set a secret by piping it, not at a prompt.** `gh secret set` run through Claude Code's `!` prefix has no
+  terminal to prompt on and silently stores an empty value. Use `pbpaste | gh secret set NAME --env production`
+  with the value on the clipboard.
 - **The Vercel MCP connector cannot list this project's deployments.** `list_deployments` returns 403
   (seen 2026-09-27). The CLI (`vercel ls`, `vercel inspect`) works; use that instead.
 
@@ -229,6 +233,8 @@ The bundle hash is the sha256 of the served `/data/eu27.json`.
 | 2026-09-11 03:50 | `sovereign-data-centers-8us9100tr` | `4e9c227` | — (not recorded) |
 | 2026-09-11 06:17 | `sovereign-data-centers-lq0z37s9h` | `cc242ed` | `1e9f838a…652f` |
 | 2026-09-27 06:41 | `sovereign-data-centers-3r0t04xdu` | `b2ac205` | `e472325f…e609` |
+| 2026-10-02 22:33 | `sovereign-data-centers-7sd4u2xgm` (CI, `Deploy` run 37072208296; smoke test failed only because the TLS certificate was still being issued) | `34d460c` | `71ad7382…9007` |
+| 2026-10-02 22:36 | `sovereign-data-centers-96m4ao5er` (CI, same run re-run; all green) | `34d460c` | `71ad7382…9007` |
 
 The commits for the first three rows are inferred: each is the last commit before that deploy's timestamp. From 2026-09-27 on, each row records the commit that was actually deployed.
 The 2026-09-11 06:17 deploy stayed live until 2026-09-27. By then it was 12 commits behind and served a

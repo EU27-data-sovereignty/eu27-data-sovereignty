@@ -2026,7 +2026,9 @@ again before a deploy: a push to `main` shipped whatever the registers held.
   - `python3 model/factcheck.py gate` prints `1309 of 1309 printed facts checked, supported, checker ≠
     author` and exits 0.
   - Measured cost: about $250–370 from the transcripts' token usage, more than the $185–280 estimated
-    from the pilot. A deploy passing the new step is NOT YET verified.
+    from the pilot.
+  - On 2026-10-02 the first automatic deploy (`Deploy` run 37072208296) passed the fact-check gate step in
+    CI.
 
 *Would change if:* authors are recorded for the earlier facts (re-research), or a third independent model
 family is added, which could become the checker for unrecorded facts. Also if `evidence.assess` should
@@ -2150,8 +2152,12 @@ test would fail.
 **Closes off.** Keeping DNS records at iwantmyname. A future mail or verification record would be added
 in Vercel's DNS, not at the registrar.
 
-**Verified:** NOT YET. The nameserver change is the owner's step at iwantmyname. It is verified when
-`dig +short NS eu27.cloud` prints Vercel's nameservers, `vercel domains inspect eu27.cloud` shows both
-✔, and `curl -sI https://eu27.cloud/` returns 200 with `x-robots-tag: noindex`.
+**Verified:** 2026-10-02.
+- The registry lists `ns1.vercel-dns.com` and `ns2.vercel-dns.com`.
+- Google and Cloudflare DNS-over-HTTPS resolve `eu27.cloud` to Vercel's addresses.
+- `vercel domains verify eu27.cloud` reports `configured_correctly`.
+- `https://eu27.cloud/` returns 200 with `x-robots-tag: noindex`, and `www` redirects (308) to the apex.
+- The first automatic deploy, `Deploy` run 37072208296, passed the smoke test on re-run, serving bundle
+  `71ad7382…`.
 
 *Would change if:* the domain needs services Vercel's DNS cannot host, or the project moves off Vercel.

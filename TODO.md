@@ -4,13 +4,14 @@ Cross-country work, as a checklist. Why and in what order: [`ROADMAP.md`](ROADMA
 produced: [`METHOD.md`](METHOD.md).
 
 ## Publish (first automatic deploy to eu27.cloud; checklist in `DEPLOYMENT.md`)
-- [ ] **Owner:** create a Vercel token (https://vercel.com/account/tokens, scope `pieteradejongs-projects`),
+- [x] **Owner:** create a Vercel token (https://vercel.com/account/tokens, scope `pieteradejongs-projects`),
       then `gh secret set VERCEL_TOKEN --env production` and paste it
-- [ ] **Owner:** at iwantmyname, set the nameservers for `eu27.cloud` to `ns1.vercel-dns.com` and
+- [x] **Owner:** at iwantmyname, set the nameservers for `eu27.cloud` to `ns1.vercel-dns.com` and
       `ns2.vercel-dns.com` (#90); verify with `dig +short NS eu27.cloud`
 - [x] Full fact check recorded; `factcheck.py gate` exits 0 at 1,309 of 1,309 (2026-10-02)
-- [ ] Fast-forward `main` to `feat/fact-check` and push, with the owner's OK at that moment (a push to
-      `main` is the production deploy); watch the `Deploy` run; record the deploy in `DEPLOYMENT.md`
+- [x] Fast-forwarded `main` to `feat/fact-check` and pushed (2026-10-02); `Deploy` run 37072208296 green;
+      live at https://eu27.cloud (noindex); recorded in `DEPLOYMENT.md`
+- [ ] 10 Dependabot alerts on `main` (2 high, 5 moderate, 3 low), reported by GitHub on the push
 - [ ] Fix the `security` workflow, which fails on every push because its reusable workflow is only in the
       unpushed local dotfiles (pushing dotfiles needs the owner's OK)
 - [ ] `/ask`: dedicated Anthropic workspace with a spend limit and `ANTHROPIC_API_KEY` in Vercel
