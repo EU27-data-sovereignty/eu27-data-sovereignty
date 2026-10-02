@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 
 import { SourceList } from '@/components/SourceList'
 import type { Bundle } from '@/data/types'
+import { PageBand } from '@/components/PageBand'
 
 const MAX = 500
 
@@ -117,7 +118,7 @@ export function Ask({ bundle }: { bundle: Bundle }) {
 
   return (
     <article className="max-w-3xl">
-      <h1 className="mb-1 text-2xl font-semibold">Ask about data sovereignty in the EU</h1>
+      <PageBand kicker="EU-27 · Ask" title="Ask about data sovereignty in the EU" />
       <p className="mb-4 text-sm text-[var(--color-fg-secondary)]">
         Answers come only from this project’s sourced findings, with a citation for every fact. When
         the findings don’t cover a question, the answer says so.

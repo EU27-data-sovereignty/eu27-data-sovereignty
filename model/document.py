@@ -45,9 +45,11 @@ import national_data as nd  # noqa: E402
 import provenance  # noqa: E402
 import sovereignty as sv  # noqa: E402
 
-# The Eurostat fundamentals, in display order: (column, label, unit, decimals).
+# The Eurostat fundamentals, in display order: (column, label, unit, decimals). Each is printed at the
+# precision it is stored at (fetch_eurostat.SERIES), never rounded a second time: population was stored at
+# 3 decimals and printed at 2, so Slovenia's 2,135,107 (stored 2.135) printed as 2.13, not 2.14.
 FUNDAMENTALS = [
-    ("population_m", "Population", "million", 2),
+    ("population_m", "Population", "million", 3),
     ("gdp_eur_bn", "GDP, current prices", "EUR bn", 1),
     ("gov_employment_k", "Public administration employment (NACE O)", "thousand", 1),
     ("elec_price_eur_mwh", "Non-household electricity price", "EUR/MWh", 1),

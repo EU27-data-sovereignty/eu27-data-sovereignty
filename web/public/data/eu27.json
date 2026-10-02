@@ -12394,6 +12394,36 @@
     "value_as_found": "20145"
    }
   ],
+  "param:SI:population_m": [
+   {
+    "checked_by": "fetch_eurostat.py",
+    "checklist": [
+     "T1 authoritative original (eurostat)",
+     "primary source",
+     "dataset value reproduced from the hashed API response",
+     "no archived copy of this URL",
+     "English source"
+    ],
+    "checks": {
+     "archived": false,
+     "dataset_value_reproduced": true,
+     "document_hashed": true,
+     "language": "english",
+     "source": "primary",
+     "tier": 1,
+     "tier_kind": "eurostat"
+    },
+    "confidence": "primary",
+    "gloss": "",
+    "grade": "Standard",
+    "locator": "tps00001; indic_de=JAN; geo=SI; time=2026",
+    "original": "",
+    "quote": "",
+    "retrieved": "2026-09-30",
+    "source_id": "eurostat:tps00001@2026",
+    "value_as_found": "2.135"
+   }
+  ],
   "param:SI:renewables_pct": [
    {
     "checked_by": "fetch_eurostat.py",
@@ -25682,6 +25712,108 @@
     "value_as_found": "Rahvastikuregister (Population Register)"
    }
   ],
+  "record:EE:crisis_management:register": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "(2) The Emergency Response Centre sends the public warning and the defined geographic area to mobile operators through the public warning system that is part of the database of emergency notifications and assistance and information notifications.",
+    "grade": "Standard",
+    "locator": "PDF text",
+    "original": "(2) Häirekeskus edastab mobiiltelefoniteenust osutavale sideettevõtjale ohuteavituse ja kindlaksmääratud geograafilise ala, millel asuvale mobiiltelefoniteenuse kliendile ja rändlusteenuse kasutajale tuleb ohuteavitus edastada, hädaabiteadete ning abi- ja infoteadete andmekogu osaks oleva ohuteavituse süsteemi kaudu.",
+    "quote": "(2) Häirekeskus edastab mobiiltelefoniteenust osutavale sideettevõtjale ohuteavituse ja kindlaksmääratud geograafilise ala, millel asuvale mobiiltelefoniteenuse kliendile ja rändlusteenuse kasutajale tuleb ohuteavitus edastada, hädaabiteadete ning abi- ja infoteadete andmekogu osaks oleva ohuteavituse süsteemi kaudu. [English: (2) The Emergency Response Centre sends the public warning and the defined geographic area to mobile operators through the public warning system that is part of the database of emergency notifications and assistance and information notifications.]",
+    "retrieved": "2026-09-30",
+    "source_id": "siseministeerium-ee:dc50c0d88a",
+    "value_as_found": "ohuteavituse süsteem (public warning system, EE-ALARM), operated by Häirekeskus"
+   }
+  ],
+  "record:EE:customs:register": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "From 1 July, the new import customs clearance information system Impulss starts operating, intended mainly for companies and customs agents importing goods from outside the European Union.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "1. juulist alustab tööd uus impordi tollivormistuse infosüsteem Impulss, mis on mõeldud põhiliselt väljastpoolt Euroopa Liitu kaupa importivatele ettevõtetele ja tolliagentuuridele.",
+    "quote": "1. juulist alustab tööd uus impordi tollivormistuse infosüsteem Impulss, mis on mõeldud põhiliselt väljastpoolt Euroopa Liitu kaupa importivatele ettevõtetele ja tolliagentuuridele. [English: From 1 July, the new import customs clearance information system Impulss starts operating, intended mainly for companies and customs agents importing goods from outside the European Union.]",
+    "retrieved": "2026-09-30",
+    "source_id": "emta-ee:cd2827f4fd",
+    "value_as_found": "Impulss (import customs clearance information system)"
+   }
+  ],
+  "record:EE:education:operator": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The Estonian Education Information System (EHIS) is a state register of education-system data managed by the Ministry of Education and Research.",
+    "grade": "Standard",
+    "locator": "PDF text",
+    "original": "Eesti hariduse infosüsteem (edaspidi: EHIS) on Haridus- ja Teadusministeeriumi poolt hallatav riiklik haridussüsteemi andmeid koondav register.",
+    "quote": "Eesti hariduse infosüsteem (edaspidi: EHIS) on Haridus- ja Teadusministeeriumi poolt hallatav riiklik haridussüsteemi andmeid koondav register. [English: The Estonian Education Information System (EHIS) is a state register of education-system data managed by the Ministry of Education and Research.]",
+    "retrieved": "2026-09-30",
+    "source_id": "hm-ee:d9de5e79e0",
+    "value_as_found": "Haridus- ja Teadusministeerium (Ministry of Education and Research)"
+   }
+  ],
   "record:EE:education:register": [
    {
     "checked_by": "vetting.py: quote loose in fetched document; blind review agreed (claude-opus-5-5)",
@@ -25818,6 +25950,40 @@
     "value_as_found": "Valijate nimekiri (list of voters), compiled from the Rahvastikuregister (Population Register)"
    }
   ],
+  "record:EE:emergency_communications:register": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "(2) The Emergency Response Centre sends the public warning and the defined geographic area to mobile operators, whose customers and roaming users in that area must receive it, through the public warning system that is part of the database of emergency notifications and assistance and information notifications.",
+    "grade": "Standard",
+    "locator": "PDF text",
+    "original": "(2) Häirekeskus edastab mobiiltelefoniteenust osutavale sideettevõtjale ohuteavituse ja kindlaksmääratud geograafilise ala, millel asuvale mobiiltelefoniteenuse kliendile ja rändlusteenuse kasutajale tuleb ohuteavitus edastada, hädaabiteadete ning abi- ja infoteadete andmekogu osaks oleva ohuteavituse süsteemi kaudu.",
+    "quote": "(2) Häirekeskus edastab mobiiltelefoniteenust osutavale sideettevõtjale ohuteavituse ja kindlaksmääratud geograafilise ala, millel asuvale mobiiltelefoniteenuse kliendile ja rändlusteenuse kasutajale tuleb ohuteavitus edastada, hädaabiteadete ning abi- ja infoteadete andmekogu osaks oleva ohuteavituse süsteemi kaudu. [English: (2) The Emergency Response Centre sends the public warning and the defined geographic area to mobile operators, whose customers and roaming users in that area must receive it, through the public warning system that is part of the database of emergency notifications and assistance and information notifications.]",
+    "retrieved": "2026-09-30",
+    "source_id": "siseministeerium-ee:dc50c0d88a",
+    "value_as_found": "hädaabiteadete ning abi- ja infoteadete andmekogu (database of emergency notifications and assistance and information notifications)"
+   }
+  ],
   "record:EE:facial_biometric:operator": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -25919,6 +26085,40 @@
     "retrieved": "2026-09-30",
     "source_id": "siseministeerium-ee:225cb2fd42",
     "value_as_found": "ABIS (automaatse biomeetrilise isikutuvastuse süsteemi andmekogu; Automated Biometric Identification System database)"
+   }
+  ],
+  "record:EE:firearms_register:register": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The source of the published data is the register of service and civilian weapons, whose purpose is to collect and keep information on service and civilian weapons brought into and located in Estonia, weapon and cartridge collections, deactivated weapons and their owners and holders.",
+    "grade": "Standard",
+    "locator": "PDF text",
+    "original": "Avaldatavate andmete allikas on teenistus- ja tsiviilrelvade register (edaspidi register), mille eesmärk on koguda ja säilitada teavet Eestisse saabunud ning Eestis asuvate tsiviilkäibes lubatud teenistus- ja tsiviilrelvade, relva- ja padrunikollektsioonide, laskekõlbmatute relvade ning nende omanike ja valdajate kohta",
+    "quote": "Avaldatavate andmete allikas on teenistus- ja tsiviilrelvade register (edaspidi register), mille eesmärk on koguda ja säilitada teavet Eestisse saabunud ning Eestis asuvate tsiviilkäibes lubatud teenistus- ja tsiviilrelvade, relva- ja padrunikollektsioonide, laskekõlbmatute relvade ning nende omanike ja valdajate kohta [English: The source of the published data is the register of service and civilian weapons, whose purpose is to collect and keep information on service and civilian weapons brought into and located in Estonia, weapon and cartridge collections, deactivated weapons and their owners and holders.]",
+    "retrieved": "2026-09-30",
+    "source_id": "politsei-ee:11c59964d0",
+    "value_as_found": "teenistus- ja tsiviilrelvade register (Register of Service and Civilian Weapons)"
    }
   ],
   "record:EE:government_payroll:register": [
@@ -52212,6 +52412,40 @@
     "value_as_found": "SI-TRUST manages the SI-TRUST Root and the qualified issuers SIGEN-CA and SIGOV-CA"
    }
   ],
+  "record:SK:beneficial_ownership:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T4 secondary (unofficial law mirror)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 4,
+     "tier_kind": "unofficial_law_mirror",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The register is a public administration information system containing data under § 4, administered and operated by the Ministry of Justice. The registering body is the District Court Žilina.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Register je informačný systém verejnej správy, ktorý obsahuje údaje podľa § 4 a ktorého správcom a prevádzkovateľom je Ministerstvo spravodlivosti Slovenskej republiky (ďalej len „ministerstvo“). Registrujúcim orgánom je Okresný súd Žilina.",
+    "quote": "Register je informačný systém verejnej správy, ktorý obsahuje údaje podľa § 4 a ktorého správcom a prevádzkovateľom je Ministerstvo spravodlivosti Slovenskej republiky (ďalej len „ministerstvo“). Registrujúcim orgánom je Okresný súd Žilina. [English: The register is a public administration information system containing data under § 4, administered and operated by the Ministry of Justice. The registering body is the District Court Žilina.]",
+    "retrieved": "2026-09-29",
+    "source_id": "zakony-judikaty-info:b0d7e6f4f8",
+    "value_as_found": "Register partnerov verejného sektora (Register of Public Sector Partners), run by the Ministry of Justice with Žilina District Court as registering body"
+   }
+  ],
   "record:SK:benefits_pensions:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -52696,6 +52930,41 @@
     "value_as_found": "Stály zoznam voličov (permanent electoral roll) compiled and kept by each municipality"
    }
   ],
+  "record:SK:emergency_communications:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T4 secondary (unofficial law mirror)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "every figure found in the original",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": true,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 4,
+     "tier_kind": "unofficial_law_mirror",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "a) ensures receipt of emergency calls, eCall calls, SMS and response to emergency communication on the single European emergency number 112",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "a) zabezpečuje príjem tiesňového volania, volania eCall, 30) príjem krátkych textových správ (SMS) a odpoveď na príjem tiesňovej komunikácie na jednotnom európskom čísle tiesňového volania 112",
+    "quote": "a) zabezpečuje príjem tiesňového volania, volania eCall, 30) príjem krátkych textových správ (SMS) a odpoveď na príjem tiesňovej komunikácie na jednotnom európskom čísle tiesňového volania 112 [English: a) ensures receipt of emergency calls, eCall calls, SMS and response to emergency communication on the single European emergency number 112]",
+    "retrieved": "2026-09-29",
+    "source_id": "zakony-judikaty-info:01b856c898",
+    "value_as_found": "Coordination centres receive 112 calls, eCall and SMS emergency communications"
+   }
+  ],
   "record:SK:facial_biometric:operator": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -52728,6 +52997,40 @@
     "retrieved": "2026-09-29",
     "source_id": "zakony-judikaty-info:c9aed832ed",
     "value_as_found": "The Ministry of Interior keeps the central register of travel documents, which includes the facial image"
+   }
+  ],
+  "record:SK:facial_biometric:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T4 secondary (unofficial law mirror)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 4,
+     "tier_kind": "unofficial_law_mirror",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "(1) The ministry and the district directorates keep the records of identity cards and the records of blank identity cards.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "(1) Ministerstvo a okresné riaditeľstvá vedú evidenciu občianskych preukazov a evidenciu čistopisov občianskych preukazov.",
+    "quote": "(1) Ministerstvo a okresné riaditeľstvá vedú evidenciu občianskych preukazov a evidenciu čistopisov občianskych preukazov. [English: (1) The ministry and the district directorates keep the records of identity cards and the records of blank identity cards.]",
+    "retrieved": "2026-09-29",
+    "source_id": "zakony-judikaty-info:bc65dc8528",
+    "value_as_found": "Evidencia občianskych preukazov (ID card records) kept by the Ministry of Interior and district police directorates"
    }
   ],
   "record:SK:firearms_register:register": [
@@ -52796,6 +53099,40 @@
     "retrieved": "2026-09-29",
     "source_id": "skgeodesy-sk:1f5c574b6c",
     "value_as_found": "ÚGKK SR creates, administers and operates the geodesy, cartography and cadastre information system (ISGKK)"
+   }
+  ],
+  "record:SK:geospatial:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T4 secondary (unofficial law mirror)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 4,
+     "tier_kind": "unofficial_law_mirror",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "(1) The register is a public administration information system containing data under § 5, administered by the Ministry of Interior.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "(1) Register je informačný systém verejnej správy,5) ktorý obsahuje údaje podľa § 5 a ktorého správcom je Ministerstvo vnútra Slovenskej republiky (ďalej len „ministerstvo“).",
+    "quote": "(1) Register je informačný systém verejnej správy,5) ktorý obsahuje údaje podľa § 5 a ktorého správcom je Ministerstvo vnútra Slovenskej republiky (ďalej len „ministerstvo“). [English: (1) The register is a public administration information system containing data under § 5, administered by the Ministry of Interior.]",
+    "retrieved": "2026-09-29",
+    "source_id": "zakony-judikaty-info:a3c5e3d80f",
+    "value_as_found": "Register adries (Address Register), administered by the Ministry of Interior"
    }
   ],
   "record:SK:government_payroll:operator": [
@@ -53043,6 +53380,40 @@
     "retrieved": "2026-09-29",
     "source_id": "zakony-judikaty-info:102f092bed",
     "value_as_found": "Národný zdravotnícky informačný systém (National Health Information System), administered by the National Health Information Centre"
+   }
+  ],
+  "record:SK:issuance_history:operator": [
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T4 secondary (unofficial law mirror)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 4,
+     "tier_kind": "unofficial_law_mirror",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "(1) The ministry and the district directorates keep the records of identity cards and the records of blank identity cards.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "(1) Ministerstvo a okresné riaditeľstvá vedú evidenciu občianskych preukazov a evidenciu čistopisov občianskych preukazov.",
+    "quote": "(1) Ministerstvo a okresné riaditeľstvá vedú evidenciu občianskych preukazov a evidenciu čistopisov občianskych preukazov. [English: (1) The ministry and the district directorates keep the records of identity cards and the records of blank identity cards.]",
+    "retrieved": "2026-09-29",
+    "source_id": "zakony-judikaty-info:bc65dc8528",
+    "value_as_found": "Kept by the Ministry of Interior and district police directorates"
    }
   ],
   "record:SK:issuance_history:register": [
@@ -53318,6 +53689,40 @@
     "retrieved": "2026-09-29",
     "source_id": "zakony-judikaty-info:36191f0e74",
     "value_as_found": "Slov-Lex, the public administration information system administered and operated by the Ministry of Justice"
+   }
+  ],
+  "record:SK:police_records:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T4 secondary (unofficial law mirror)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 4,
+     "tier_kind": "unofficial_law_mirror",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "(1) The Police Force processes, under this act and special regulations, information, personal data, dactyloscopic data and face images collected in performing Police Force tasks",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "(1) Policajný zbor spracúva podľa tohto zákona a osobitných predpisov11bc) informácie, osobné údaje, daktyloskopické údaje a snímky tvárí zhromaždené pri plnení úloh Policajného zboru",
+    "quote": "(1) Policajný zbor spracúva podľa tohto zákona a osobitných predpisov11bc) informácie, osobné údaje, daktyloskopické údaje a snímky tvárí zhromaždené pri plnení úloh Policajného zboru [English: (1) The Police Force processes, under this act and special regulations, information, personal data, dactyloscopic data and face images collected in performing Police Force tasks]",
+    "retrieved": "2026-09-29",
+    "source_id": "zakony-judikaty-info:66def3d68f",
+    "value_as_found": "Police Force information systems processing personal data, fingerprint (dactyloscopic) data and face images"
    }
   ],
   "record:SK:residence_permits:register": [
@@ -76700,7 +77105,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "9.22 million"
+          "t": "9.216 million"
          }
         ],
         [
@@ -76885,7 +77290,7 @@
            "record:AT:fingerprint_biometric:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are found. PassG § 22b only says the passport authorities process § 22a(1) data 'mit Ausnahme der lit. k' (lit. k being 'die Papillarlinienabdrücke zweier Finger') in the central passport evidence, which supports a narrower stat It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are found. PassG § 22b only says the passport authorities process § 22a(1) data 'mit Ausnahme der lit. k' (lit. k being 'die Papillarlinienabdrücke zweier Finger') in the central passport evidence, which supports a narrower…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "method",
@@ -76982,7 +77387,7 @@
            "record:AT:facial_biometric:foreign_dependency"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The Passgesetz says verbatim that Bundesrechenzentrum GmbH takes part as processor in the § 22a/§ 22b processing; it names a federal body as processor but says nothing about where the infrastructure runs, so 'National infrastructure' rests  It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The Passgesetz says verbatim that Bundesrechenzentrum GmbH takes part as processor in the § 22a/§ 22b processing; it names a federal body as processor but says nothing about where the infrastructure runs, so 'National infrastructure' rests…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -77275,7 +77680,7 @@
            "record:AT:issuance_history:foreign_dependency"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are present (the RH sentence is split by a line-break hyphen 'Identitätsdokumentenregis- ters') and establish that BRZ GmbH, a federal body, is the statutory processor of the register; neither source says where the infrastructur It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are present (the RH sentence is split by a line-break hyphen 'Identitätsdokumentenregis- ters') and establish that BRZ GmbH, a federal body, is the statutory processor of the register; neither source says where the…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -78535,7 +78940,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "11.96 million"
+          "t": "11.955 million"
          }
         ],
         [
@@ -80234,7 +80639,7 @@
            "indicator:BG:K2"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are on their pages, but neither states who operates the national eID scheme: the CRC quote lists trust-service providers (not eID), and the Sega article only says the eID certificates are to be written to the ID-card chip and th It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are on their pages, but neither states who operates the national eID scheme: the CRC quote lists trust-service providers (not eID), and the Sega article only says the eID certificates are to be written to the ID-card chip and…. It is withheld until the fact or its source is corrected and checked again"
          }
         ],
         [
@@ -80247,7 +80652,7 @@
            "indicator:BG:C1"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page says the company Информационно обслужване offers colocation in its secure data centre and lists government agencies as clients, but nowhere states that the company is state-owned or that the state operates these data centres; the ' It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page says the company Информационно обслужване offers colocation in its secure data centre and lists government agencies as clients, but nowhere states that the company is state-owned or that the state operates these data centres; the…. It is withheld until the fact or its source is corrected and checked again"
          }
         ],
         [
@@ -80331,7 +80736,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "6.42 million"
+          "t": "6.423 million"
          }
         ],
         [
@@ -80916,7 +81321,7 @@
            "record:BG:customs:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page verbatim and names the system (МИСВ), but it is a forward-looking announcement ('ще бъде въведена в реална експлоатация' = will be put into live operation on 26.11.2018); the printed text asserts as fact that it wen It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page verbatim and names the system (МИСВ), but it is a forward-looking announcement ('ще бъде въведена в реална експлоатация' = will be put into live operation on 26.11.2018); the printed text asserts as fact that it…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -81100,7 +81505,7 @@
            "record:BG:border_control:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim, but the MFA citation names a different system (НВИС, not printed), and the RTA ordinance names 'АИС Издирвателна дейност – НШИС' only in the context of wanted-vehicle registration termination, never as a border or  It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim, but the MFA citation names a different system (НВИС, not printed), and the RTA ordinance names 'АИС Издирвателна дейност – НШИС' only in the context of wanted-vehicle registration termination, never as a border or…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "c": [
@@ -82104,7 +82509,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "1.00 million"
+          "t": "0.997 million"
          }
         ],
         [
@@ -82315,7 +82720,7 @@
            "record:CY:fingerprint_biometric:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Art. 63(5) (and 67(4) for passports) says fingerprints taken for an ID card may be used only to issue the card and are deleted within 48 hours, verbatim. That shows ID-document fingerprints are not retained under this law, but the source do It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Art. 63(5) (and 67(4) for passports) says fingerprints taken for an ID card may be used only to issue the card and are deleted within 48 hours, verbatim. That shows ID-document fingerprints are not retained under this law, but the source…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "method",
@@ -83348,7 +83753,7 @@
            "record:CY:emergency_communications:foreign_dependency"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The article only reports that Civil Defence signed a development agreement with CYTA for a system to be built over 20 months; it says nothing about where the infrastructure runs, what kind of entity CYTA is, or any hosting arrangement, so ' It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The article only reports that Civil Defence signed a development agreement with CYTA for a system to be built over 20 months; it says nothing about where the infrastructure runs, what kind of entity CYTA is, or any hosting arrangement, so…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -83977,7 +84382,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "10.92 million"
+          "t": "10.916 million"
          }
         ],
         [
@@ -84192,7 +84597,7 @@
            "record:CZ:fingerprint_biometric:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is §57(3): data under §56(1)(o), which the act calls only 'biometrické údaje' (biometric data, not specifically fingerprints), are kept in the ID card register until the card is collected and at most 90 days after issue. That desc It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is §57(3): data under §56(1)(o), which the act calls only 'biometrické údaje' (biometric data, not specifically fingerprints), are kept in the ID card register until the card is collected and at most 90 days after issue. That…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "method",
@@ -84229,7 +84634,7 @@
            "record:CZ:breeder_documents:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote (§ 1b(1): Matriční informační systém ... jehož správcem je Ministerstvo vnitra) is verbatim on the cited page, but that page is the consolidation whose URL is dated 2027-01-01; the 2025-01-01 e-sbirka consolidation and the current It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote (§ 1b(1): Matriční informační systém ... jehož správcem je Ministerstvo vnitra) is verbatim on the cited page, but that page is the consolidation whose URL is dated 2027-01-01; the 2025-01-01 e-sbirka consolidation and the…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -84630,7 +85035,7 @@
            "record:CZ:customs:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (§1(1) of Act 17/2012) only says the customs administration's basic task is protecting the Republic's economic interests and supervising goods and their movement; it does not name the General Directorate of Customs or customs offi It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (§1(1) of Act 17/2012) only says the customs administration's basic task is protecting the Republic's economic interests and supervising goods and their movement; it does not name the General Directorate of Customs or customs…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -84727,7 +85132,7 @@
            "record:CZ:business_registry:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 28(1) of Act 111/2009 supports DIA (Agentura, defined in § 7) as controller of the registr osob, but § 28(2) says the controller 'poskytuje editorům k přidělení identifikační číslo osoby' — it provides the identification numbers to the ed It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 28(1) of Act 111/2009 supports DIA (Agentura, defined in § 7) as controller of the registr osob, but § 28(2) says the controller 'poskytuje editorům k přidělení identifikační číslo osoby' — it provides the identification numbers to the…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -84828,7 +85233,7 @@
            "record:CZ:border_control:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 84(2) of Act 273/2008 supports that the Police Presidium operates the national component of SIS and performs the tasks of the authority exchanging supplementary information on SIS alerts, but neither page uses the word 'SIRENE' anywhere a It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 84(2) of Act 273/2008 supports that the Police Presidium operates the national component of SIS and performs the tasks of the authority exchanging supplementary information on SIS alerts, but neither page uses the word 'SIRENE' anywhere…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -85726,7 +86131,7 @@
            "indicator:DE:K2"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_074137f6-b8e) did not confirm this: Both quotes are verbatim, but neither says who operates the eID scheme: the Bundesdruckerei page only calls the group a federal technology company, and PAuswG §4(3) only says the BMI designates the card manufacturer, certificate authority a It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_074137f6-b8e) did not confirm this: Both quotes are verbatim, but neither says who operates the eID scheme: the Bundesdruckerei page only calls the group a federal technology company, and PAuswG §4(3) only says the BMI designates the card manufacturer, certificate authority…. It is withheld until the fact or its source is corrected and checked again"
          }
         ],
         [
@@ -85824,7 +86229,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "83.47 million"
+          "t": "83.467 million"
          }
         ],
         [
@@ -85983,7 +86388,7 @@
            "record:DE:civil_registry:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_074137f6-b8e) did not confirm this: The quote is verbatim and shows the BZSt stores the Identifikationsnummer with names and other identity data, but the printed text adds 'national personal identification number' and 'for every natural person', neither of which §139b says (i It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_074137f6-b8e) did not confirm this: The quote is verbatim and shows the BZSt stores the Identifikationsnummer with names and other identity data, but the printed text adds 'national personal identification number' and 'for every natural person', neither of which §139b says…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -87634,7 +88039,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "6.03 million"
+          "t": "6.026 million"
          }
         ],
         [
@@ -88681,7 +89086,7 @@
            "record:DK:emergency_communications:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page and supports CFB being part of the Ministry of Civil Security and Emergency Preparedness, but the cited page nowhere mentions Dansk Beredskabskommunikation A/S or network operation; that clause is added without supp It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page and supports CFB being part of the Ministry of Civil Security and Emergency Preparedness, but the cited page nowhere mentions Dansk Beredskabskommunikation A/S or network operation; that clause is added without…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -89484,7 +89889,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "1.36 million"
+          "t": "1.361 million"
          }
         ],
         [
@@ -89669,7 +90074,7 @@
            "record:EE:facial_biometric:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory definitio It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "c": [
@@ -89710,7 +90115,7 @@
            "record:EE:fingerprint_biometric:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names P It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -89953,7 +90358,7 @@
            "record:EE:judicial_criminal:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 4 of the Criminal Records Database Act names Justiits- ja Digiministeerium as controller and Registrite ja Infosüsteemide Keskus as processor, supporting those two names, but the acronym 'RIK' printed after the processor's name does not a It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 4 of the Criminal Records Database Act names Justiits- ja Digiministeerium as controller and Registrite ja Infosüsteemide Keskus as processor, supporting those two names, but the acronym 'RIK' printed after the processor's name does not…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -90131,8 +90536,9 @@
           "c": [
            "record:EE:customs:register"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Could not fetch any cited page: emta.ee returns a Cloudflare 'Just a moment' 403 to both curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this URL. The quote could not be checked. It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "Impulss (import customs clearance information system)"
          },
          {
           "role": "gap",
@@ -90161,7 +90567,7 @@
            "record:EE:benefits_pensions:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something  It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "c": [
@@ -90355,8 +90761,9 @@
           "c": [
            "record:EE:firearms_register:register"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Could not fetch any cited page: politsei.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked. It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "teenistus- ja tsiviilrelvade register (Register of Service and Civilian Weapons)"
          },
          {
           "role": "gap",
@@ -90504,15 +90911,16 @@
           "c": [
            "record:EE:emergency_communications:register"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote naming 'hädaabiteadete ning abi- ja infoteadete andmekogu' could not be checked. It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "hädaabiteadete ning abi- ja infoteadete andmekogu (database of emergency notifications and assistance and information notifications)"
          },
          {
           "c": [
            "record:EE:emergency_communications:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote could not be checked, so whether it supports Häirekeskus as operator of emergency calls and public-safety radio is undetermined. It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_f14edd00-71f) did not confirm this: Read the hashed copy (9a0561c074d296e6.txt). The quote only says Häirekeskus transmits public warnings through a warning system that is part of the emergency-notifications database; it says nothing about who operates emergency calls or…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -90536,8 +90944,9 @@
           "c": [
            "record:EE:crisis_management:register"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Could not fetch any cited page: siseministeerium.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this PDF. The quote, the EE-ALARM label and the Häirekeskus operator  It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "ohuteavituse süsteem (public warning system, EE-ALARM), operated by Häirekeskus"
          },
          {
           "role": "gap",
@@ -90629,8 +91038,9 @@
           "c": [
            "record:EE:education:operator"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Could not fetch any cited page: hm.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked. It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "Haridus- ja Teadusministeerium (Ministry of Education and Research)"
          },
          {
           "role": "gap",
@@ -91303,7 +91713,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "10.37 million"
+          "t": "10.367 million"
          }
         ],
         [
@@ -91544,7 +91954,7 @@
            "record:EL:breeder_documents:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Art. 115 of Law 4483/2017 (both the PDF and lawspot) says the Citizens' Register comprises the civil-status acts (ληξιαρχικές πράξεις) of Greek citizens and foreigners with events in Greece, held in the Ministry of the Interior's Registry A It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Art. 115 of Law 4483/2017 (both the PDF and lawspot) says the Citizens' Register comprises the civil-status acts (ληξιαρχικές πράξεις) of Greek citizens and foreigners with events in Greece, held in the Ministry of the Interior's Registry…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -91795,7 +92205,7 @@
            "record:EL:digital_identity_credentials:foreign_dependency"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and says GRNET, a Greek State company, designs, implements and maintains the application on behalf of the Ministry; but the page says nothing about where the infrastructure runs (no hosting, server or data-centre st It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and says GRNET, a Greek State company, designs, implements and maintains the application on behalf of the Ministry; but the page says nothing about where the infrastructure runs (no hosting, server or data-centre…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -93118,7 +93528,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "49.59 million"
+          "t": "49.590 million"
          }
         ],
         [
@@ -94271,7 +94681,7 @@
            "record:ES:education:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (Art. 4) supports that the register was created in the Ministerio de Educación, but the printed parenthetical 'the register now sits with the universities ministry' appears nowhere on the cited page (no mention of a Ministerio de  It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (Art. 4) supports that the register was created in the Ministerio de Educación, but the printed parenthetical 'the register now sits with the universities ministry' appears nowhere on the cited page (no mention of a Ministerio de…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -94943,7 +95353,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "5.65 million"
+          "t": "5.653 million"
          }
         ],
         [
@@ -95316,7 +95726,7 @@
            "record:FI:electoral_roll:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and DVV is named as controller and as the body that establishes the voting register, but the same page says the voting register is part of the election information system 'jonka ylläpidosta ja toiminnasta vastaa Oik It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and DVV is named as controller and as the body that establishes the voting register, but the same page says the voting register is part of the election information system 'jonka ylläpidosta ja toiminnasta vastaa…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -96749,7 +97159,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "69.11 million"
+          "t": "69.112 million"
          }
         ],
         [
@@ -97790,7 +98200,7 @@
            "record:FR:defence_command:foreign_dependency"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page, but it only says the DGA awarded the Artemis initiative to Atos-Bull, Capgemini and Thales-Sopra Steria (framed as 'initiatives françaises' responding to Palantir); it says nothing about where defence command and l It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page, but it only says the DGA awarded the Artemis initiative to Atos-Bull, Capgemini and Thales-Sopra Steria (framed as 'initiatives françaises' responding to Palantir); it says nothing about where defence command and…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -98109,7 +98519,7 @@
            "record:FR:statistics_microdata:foreign_dependency"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote only says CASD designed its own dedicated secure equipment (the SD-Box) following three principles; neither it nor the rest of the page says where the central infrastructure is hosted, by whom or in which country, so it does not e It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote only says CASD designed its own dedicated secure equipment (the SD-Box) following three principles; neither it nor the rest of the page says where the central infrastructure is hosted, by whom or in which country, so it does not…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -98620,7 +99030,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "3.88 million"
+          "t": "3.876 million"
          }
         ],
         [
@@ -98813,7 +99223,7 @@
            "record:HR:facial_biometric:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page, but the law lists four competent bodies: the ministries for internal affairs, foreign affairs, justice 'te ministarstvo nadležno za poslove obrane u dijelu koji se odnosi na obavljanje vojnopolicijskih poslova'. Th It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page, but the law lists four competent bodies: the ministries for internal affairs, foreign affairs, justice 'te ministarstvo nadležno za poslove obrane u dijelu koji se odnosi na obavljanje vojnopolicijskih poslova'.…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -98838,7 +99248,7 @@
            "record:HR:fingerprint_biometric:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 12(5) of the ID Card Act only says a person need not give fingerprints if they were already taken and stored electronically in a public-document issuance procedure at the Ministry. It does not say they are held in 'central retention It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 12(5) of the ID Card Act only says a person need not give fingerprints if they were already taken and stored electronically in a public-document issuance procedure at the Ministry. It does not say they are held in 'central…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -100343,7 +100753,7 @@
            "indicator:HU:K1"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and says NISZ Zrt. is the designated government certification service provider (GovCA) providing trust and PKI services, but the page nowhere states that NISZ is state-owned or state-controlled (no mention of 'állam It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and says NISZ Zrt. is the designated government certification service provider (GovCA) providing trust and PKI services, but the page nowhere states that NISZ is state-owned or state-controlled (no mention of…. It is withheld until the fact or its source is corrected and checked again"
          }
         ],
         [
@@ -100356,7 +100766,7 @@
            "indicator:HU:K2"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The DMÜ page says the agency owns six companies and that IdomSoft contributes 'as developer' to the Digital Citizenship Programme, and the Act says the Government designates the framework-service body and the digital citizenship provider; n It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The DMÜ page says the agency owns six companies and that IdomSoft contributes 'as developer' to the Digital Citizenship Programme, and the Act says the Government designates the framework-service body and the digital citizenship provider…. It is withheld until the fact or its source is corrected and checked again"
          }
         ],
         [
@@ -100369,7 +100779,7 @@
            "indicator:HU:C1"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The DMÜ page says the agency decides on mandatory use of, or exemption from, 'Kormányzati Adatközpont' services, which implies such services exist, but the quote does not say the state operates the data centre or that it is in operation tod It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The DMÜ page says the agency decides on mandatory use of, or exemption from, 'Kormányzati Adatközpont' services, which implies such services exist, but the quote does not say the state operates the data centre or that it is in operation…. It is withheld until the fact or its source is corrected and checked again"
          }
         ],
         [
@@ -100382,7 +100792,7 @@
            "indicator:HU:C2"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Annex 1 point 4.2.2.4 of Decree 418/2024 names 'kormányzati felhő' as a permitted venue for F4 data, which presupposes a government cloud, but the decree does not state that such a platform is in operation rather than merely provided for, s It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Annex 1 point 4.2.2.4 of Decree 418/2024 names 'kormányzati felhő' as a permitted venue for F4 data, which presupposes a government cloud, but the decree does not state that such a platform is in operation rather than merely provided for…. It is withheld until the fact or its source is corrected and checked again"
          }
         ]
        ],
@@ -100450,7 +100860,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "9.49 million"
+          "t": "9.488 million"
          }
         ],
         [
@@ -100763,7 +101173,7 @@
            "record:HU:authentication_audit_log:foreign_dependency"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote only says IdomSoft came into direct state ownership in July 2024; the page elsewhere names IdomSoft as the DÁP provider and operator, but never mentions the log system (naplórendszer) or where its infrastructure runs, so 'National It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote only says IdomSoft came into direct state ownership in July 2024; the page elsewhere names IdomSoft as the DÁP provider and operator, but never mentions the log system (naplórendszer) or where its infrastructure runs, so…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -101052,7 +101462,7 @@
            "record:HU:electoral_roll:foreign_dependency"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote only states that IdomSoft became directly state-owned; neither the quote nor anything else on the history page mentions the electoral roll or any election system, so the page does not connect this holding to IdomSoft or say what i It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote only states that IdomSoft became directly state-owned; neither the quote nor anything else on the history page mentions the electoral roll or any election system, so the page does not connect this holding to IdomSoft or say what…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -102181,7 +102591,7 @@
            "indicator:IE:L2"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The 2019 Cloud Computing Advice Note says some organisations have their own classification systems and 'there are no central classification rules in place except for information defined as top secret, see Department of Finance Circular 39/0 It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The 2019 Cloud Computing Advice Note says some organisations have their own classification systems and 'there are no central classification rules in place except for information defined as top secret, see Department of Finance Circular…. It is withheld until the fact or its source is corrected and checked again"
          }
         ],
         [
@@ -102204,7 +102614,7 @@
            "indicator:IE:K1"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote (found verbatim) establishes that the Revenue Commissioners, a state body, act as Certification Authority for ROS digital certificates, and the same manual says those certificates are used by the CRO, Department of Transport and D It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote (found verbatim) establishes that the Revenue Commissioners, a state body, act as Certification Authority for ROS digital certificates, and the same manual says those certificates are used by the CRO, Department of Transport and…. It is withheld until the fact or its source is corrected and checked again"
          }
         ],
         [
@@ -102315,7 +102725,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "5.51 million"
+          "t": "5.511 million"
          }
         ],
         [
@@ -102628,7 +103038,7 @@
            "record:IE:electoral_roll:foreign_dependency"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is one bullet in a list of LGERS project requirements ('Migration of project to DCC's Azure Public Cloud Tenancy') for a new central database that local authorities are still preparing to migrate to in 2025-2026; the page does not It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is one bullet in a list of LGERS project requirements ('Migration of project to DCC's Azure Public Cloud Tenancy') for a new central database that local authorities are still preparing to migrate to in 2025-2026; the page does…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "c": [
@@ -102811,7 +103221,7 @@
            "record:IE:police_records:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page names PULSE as 'An Garda Síochána's database' and mentions capturing incident data, but nowhere calls it a 'national incident and intelligence database'; the word 'intelligence' appears only in an unrelated menu item, so the printe It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page names PULSE as 'An Garda Síochána's database' and mentions capturing incident data, but nowhere calls it a 'national incident and intelligence database'; the word 'intelligence' appears only in an unrelated menu item, so the…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "c": [
@@ -102844,14 +103254,14 @@
            "record:IE:intelligence:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a reg It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "c": [
            "record:IE:intelligence:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The source says the NSAC was established in 2019 by the Government to provide strategic analysis to the Taoiseach and Government; it does not say NSAC operates intelligence services or the Defence Forces Military Intelligence holdings named It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The source says the NSAC was established in 2019 by the Government to provide strategic analysis to the Taoiseach and Government; it does not say NSAC operates intelligence services or the Defence Forces Military Intelligence holdings…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -103243,7 +103653,7 @@
            "record:IE:public_finance:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the Exchequer's It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "c": [
@@ -103391,7 +103801,7 @@
            "record:IE:defence_command:foreign_dependency"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The full sentence says NGWE allows the Defence Forces 'to operate a hybrid cloud strategy - securely accessing cloud services where required, as well as maintaining a secure on premise national CISN'. The source describes a hybrid of on-pre It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The full sentence says NGWE allows the Defence Forces 'to operate a hybrid cloud strategy - securely accessing cloud services where required, as well as maintaining a secure on premise national CISN'. The source describes a hybrid of…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -103445,7 +103855,7 @@
            "record:IE:grid_control:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: EirGrid's own page says 'A team of staff operate the grid from NCCs' and 'EirGrid use the most sophisticated software in operating the grid', which supports EirGrid as operator, but the words 'transmission system operator' appear nowhere on It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: EirGrid's own page says 'A team of staff operate the grid from NCCs' and 'EirGrid use the most sophisticated software in operating the grid', which supports EirGrid as operator, but the words 'transmission system operator' appear nowhere…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -104196,7 +104606,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "58.94 million"
+          "t": "58.943 million"
          }
         ],
         [
@@ -104407,7 +104817,7 @@
            "record:IT:breeder_documents:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim and support 'ANSC - national computerised archive of civil-status registers', but neither the ANSC guide page nor art. 62 CAD says the registers are those of births, marriages and deaths; the printed parenthetical ' It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim and support 'ANSC - national computerised archive of civil-status registers', but neither the ANSC guide page nor art. 62 CAD says the registers are those of births, marriages and deaths; the printed parenthetical…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -106037,7 +106447,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "2.89 million"
+          "t": "2.888 million"
          }
         ],
         [
@@ -107750,7 +108160,7 @@
            "indicator:LU:C1"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are present, but the CTIE quote only mentions managing IT and security equipment, not data centres, and the Wikipedia page describes LuxConnect, incorporated by the State as main shareholder, as a 'private company' operating fou It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are present, but the CTIE quote only mentions managing IT and security equipment, not data centres, and the Wikipedia page describes LuxConnect, incorporated by the State as main shareholder, as a 'private company' operating…. It is withheld until the fact or its source is corrected and checked again"
          }
         ],
         [
@@ -107839,7 +108249,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "0.69 million"
+          "t": "0.691 million"
          }
         ],
         [
@@ -109654,7 +110064,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "1.84 million"
+          "t": "1.845 million"
          }
         ],
         [
@@ -111490,7 +111900,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "0.59 million"
+          "t": "0.588 million"
          }
         ],
         [
@@ -111641,7 +112051,7 @@
            "record:MT:civil_registry:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are found: the Identità page says the Civil Status Section issues true copies of acts of birth, marriage, civil union and death registered in Malta, and the Civil Code (art. 238) says the Public Registry Office keeps the registe It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are found: the Identità page says the Civil Status Section issues true copies of acts of birth, marriage, civil union and death registered in Malta, and the Civil Code (art. 238) says the Public Registry Office keeps the…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -112300,7 +112710,7 @@
            "record:MT:border_control:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote appears verbatim and establishes the CVU as the central authority for national visa policy and the Schengen acquis in visa matters, but the page names no border or visa system the CVU operates, refers separately to 'border control It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote appears verbatim and establishes the CVU as the central authority for national visa policy and the Schengen acquis in visa matters, but the page names no border or visa system the CVU operates, refers separately to 'border…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -113292,7 +113702,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "18.13 million"
+          "t": "18.130 million"
          }
         ],
         [
@@ -113495,7 +113905,7 @@
            "record:NL:fingerprint_biometric:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Paspoortwet art. 3(9) is on the page verbatim and says travel-document fingerprints are kept only until issuance is registered and used only for issuing, which supports the absence of a central passport fingerprint register. It does not sup It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Paspoortwet art. 3(9) is on the page verbatim and says travel-document fingerprints are kept only until issuance is registered and used only for issuing, which supports the absence of a central passport fingerprint register. It does not…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "method",
@@ -115104,7 +115514,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "36.33 million"
+          "t": "36.333 million"
          }
         ],
         [
@@ -115315,7 +115725,7 @@
            "record:PL:fingerprint_biometric:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (Art. 56(2)) says fingerprints (ust. 1 pkt 2a 'odciski palców') are held in the Rejestr Dowodów Osobistych only until the card is collected, at most 90 days; Art. 56(1) lists fingerprints among the data gathered in that central re It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (Art. 56(2)) says fingerprints (ust. 1 pkt 2a 'odciski palców') are held in the Rejestr Dowodów Osobistych only until the card is collected, at most 90 days; Art. 56(1) lists fingerprints among the data gathered in that central…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "method",
@@ -116824,7 +117234,7 @@
            "indicator:PT:C2"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: All three quotes are present (ARTE news 29 May 2026; PNNS May 2026 with 'Desenvolvimento, pelo Estado, de infraestrutura nacional soberana de nuvem' scheduled from S1 2026; RCM 102/2026 funding implementation and initial migration via ARTE  It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: All three quotes are present (ARTE news 29 May 2026; PNNS May 2026 with 'Desenvolvimento, pelo Estado, de infraestrutura nacional soberana de nuvem' scheduled from S1 2026; RCM 102/2026 funding implementation and initial migration via ARTE…. It is withheld until the fact or its source is corrected and checked again"
          }
         ]
        ],
@@ -116898,7 +117308,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "11.42 million"
+          "t": "11.424 million"
          }
         ],
         [
@@ -117147,7 +117557,7 @@
            "record:PT:breeder_documents:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 32(1) of Lei 33/99 says ID-card applications and 'certidões não emitidas pelo registo civil português' are microfilmed or kept on secure computer media and then destroyed; the printed 'foreign-issued certificates' narrows a scope th It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 32(1) of Lei 33/99 says ID-card applications and 'certidões não emitidas pelo registo civil português' are microfilmed or kept on secure computer media and then destroyed; the printed 'foreign-issued certificates' narrows a scope…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -117247,7 +117657,7 @@
            "record:PT:digital_identity_credentials:operator"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 2(8) of Lei 32/2017 does assign management and security of the CMD technological infrastructure to AMA, I.P., but the page never mentions ARTE, so the printed parenthetical '(the predecessor of ARTE)' is an addition the source does  It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 2(8) of Lei 32/2017 does assign management and security of the CMD technological infrastructure to AMA, I.P., but the page never mentions ARTE, so the printed parenthetical '(the predecessor of ARTE)' is an addition the source does…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -117616,7 +118026,7 @@
            "record:PT:health_insurance:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Portaria 22/2016 art. 12(1) says only that SINAVE uses the Registo Nacional de Utentes to look up patient identification for the physician profile; it does not say the register is the identification reference for 'other national health syst It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Portaria 22/2016 art. 12(1) says only that SINAVE uses the Registo Nacional de Utentes to look up patient identification for the physician profile; it does not say the register is the identification reference for 'other national health…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -118048,7 +118458,7 @@
            "record:PT:education:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: DL 396/2007 art. 7(5) says the *models* (templates) of diplomas and certificates, defined by portaria, are made available in SIGO, and art. 11(2) says training actions are inscribed in SIGO; it does not say that qualification diplomas and c It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: DL 396/2007 art. 7(5) says the *models* (templates) of diplomas and certificates, defined by portaria, are made available in SIGO, and art. 11(2) says training actions are inscribed in SIGO; it does not say that qualification diplomas and…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -118720,7 +119130,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "19.04 million"
+          "t": "19.041 million"
          }
         ],
         [
@@ -119293,7 +119703,7 @@
            "record:RO:tax:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The ANAF strategic plan says the Big-Data project 'va fi implementat în curând' (will be implemented soon) and that, over the next two years, it will consolidate the central database; the printed text presents this as something ANAF 'is con It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The ANAF strategic plan says the Big-Data project 'va fi implementat în curând' (will be implemented soon) and that, over the next two years, it will consolidate the central database; the printed text presents this as something ANAF 'is…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -119374,7 +119784,7 @@
            "record:RO:health_insurance:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page header 'SIUI Platforma Informatică a Asigurărilor de Sănătate' supports the name, but nothing on the page says who runs SIUI; it only shows a link to 'Portalul CNAS-SIUI' and a CNAS copyright line, which does not state that CNAS op It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page header 'SIUI Platforma Informatică a Asigurărilor de Sănătate' supports the name, but nothing on the page says who runs SIUI; it only shows a link to 'Portalul CNAS-SIUI' and a CNAS copyright line, which does not state that CNAS…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -120394,7 +120804,7 @@
            "indicator:SE:K1"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: SOU 2023:61 says Efos (Försäkringskassan's E-identitet för offentlig sektor) is notified at eIDAS level high but is an employee e-service credential (e-tjänstelegitimation). Nothing on the page addresses the root of a government PKI or a qu It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: SOU 2023:61 says Efos (Försäkringskassan's E-identitet för offentlig sektor) is notified at eIDAS level high but is an employee e-service credential (e-tjänstelegitimation). Nothing on the page addresses the root of a government PKI or a…. It is withheld until the fact or its source is corrected and checked again"
          }
         ],
         [
@@ -120407,7 +120817,7 @@
            "indicator:SE:K2"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is the Government's proposal in Prop. 2025/26:250 that the Act on state e-ID enter into force on 1 December 2026, i.e. a state-operated scheme is legislated but not in operation as of today. The source neither states current state It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is the Government's proposal in Prop. 2025/26:250 that the Act on state e-ID enter into force on 1 December 2026, i.e. a state-operated scheme is legislated but not in operation as of today. The source neither states current…. It is withheld until the fact or its source is corrected and checked again"
          }
         ],
         [
@@ -120511,7 +120921,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "10.61 million"
+          "t": "10.606 million"
          }
         ],
         [
@@ -121067,7 +121477,7 @@
            "record:SE:electoral_roll:foreign_dependency"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page, but it concerns Valmyndighetens valadministrativa it-stöd (ballot ordering, voting cards, result reporting); the page never says the röstlängd is kept or produced in that system, mentioning the roll only as a limit It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page, but it concerns Valmyndighetens valadministrativa it-stöd (ballot ordering, voting cards, result reporting); the page never says the röstlängd is kept or produced in that system, mentioning the roll only as a…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -122319,8 +122729,9 @@
           "c": [
            "param:SI:population_m"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The API returns 2 135 107 persons for SI on 1 January 2026, i.e. 2.135 million; rounded to two decimals that is 2.14 million, whereas the report prints 2.13 million, which is a truncation rather than the rounded figure the source gives. It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "2.135 million"
          }
         ],
         [
@@ -122539,7 +122950,7 @@
            "record:SI:fingerprint_biometric:register"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The source shows fingerprints ARE held in the centrally managed register of issued identity cards for 15 days (90 if undelivered) before deletion; it does not state that no central register exists and covers only ID cards, so 'No central re It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The source shows fingerprints ARE held in the centrally managed register of issued identity cards for 15 days (90 if undelivered) before deletion; it does not state that no central register exists and covers only ID cards, so 'No central…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "method",
@@ -122898,7 +123309,7 @@
            "record:SI:trust_services_pki:foreign_dependency"
           ],
           "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote only says the SI-PASS-CA qualified certificate is securely stored at SI-TRUST (a state body); it says nothing about where SI-TRUST's PKI infrastructure runs or who provides it, so 'national infrastructure' is an inference the page It is withheld until the fact or its source is corrected and checked again"
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote only says the SI-PASS-CA qualified certificate is securely stored at SI-TRUST (a state body); it says nothing about where SI-TRUST's PKI infrastructure runs or who provides it, so 'national infrastructure' is an inference the…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -124160,7 +124571,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "5.41 million"
+          "t": "5.409 million"
          }
         ],
         [
@@ -124344,8 +124755,9 @@
           "c": [
            "record:SK:facial_biometric:register"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The live page returns HTTP 403 (Cloudflare) to both WebFetch and curl; the archived copy is the site's shortened unregistered view and cuts the quote at '...evidenciu čistopisov občianskych ...'. The visible text does say 'Ministerstvo a ok It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "Evidencia občianskych preukazov (ID card records) kept by the Ministry of Interior and district police directorates"
          },
          {
           "c": [
@@ -124467,8 +124879,9 @@
           "c": [
            "record:SK:issuance_history:operator"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Live page 403; the archived copy truncates the quote mid-sentence and does not show the definition of 'ministerstvo' or of 'okresné riaditeľstvo'. The quote only names 'the ministry and district directorates' as keepers of the ID-card recor It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "Kept by the Ministry of Interior and district police directorates"
          },
          {
           "role": "gap",
@@ -124653,8 +125066,9 @@
           "c": [
            "record:SK:police_records:register"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The live page is blocked (HTTP 403) and the archived page's § 69(1) reads 'Policajný zbor spracúva podľa tohto zákona a osobitného predpisu11bc) informácie a osobné údaje zhromaždené...' without 'daktyloskopické údaje a snímky tvárí'; 'sním It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "Police Force information systems processing personal data, fingerprint (dactyloscopic) data and face images"
          },
          {
           "role": "gap",
@@ -124906,8 +125320,9 @@
           "c": [
            "record:SK:beneficial_ownership:register"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Live page 403; the archived copy is the shortened unregistered view and § 3(1) is cut to 'Register je informačný systém verejnej správy, ktorý obsahuje údaje podľa ...', so the sentences naming the Ministry of Justice as administrator and O It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "Register partnerov verejného sektora (Register of Public Sector Partners), run by the Ministry of Justice with Žilina District Court as registering body"
          },
          {
           "role": "gap",
@@ -125149,8 +125564,9 @@
           "c": [
            "record:SK:emergency_communications:register"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The live page is blocked (HTTP 403) and the archived page carries an older wording of letter a) ('zabezpečuje príjem tiesňového volania, volania eCall30) a príjem krátkych textových správ (SMS) na jednotnom európskom čísle tiesňového volani It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "Coordination centres receive 112 calls, eCall and SMS emergency communications"
          },
          {
           "role": "gap",
@@ -125452,8 +125868,9 @@
           "c": [
            "record:SK:geospatial:register"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The live page returns HTTP 403 (Cloudflare block) to every fetch, and the only archived snapshot (2021, the latest in Wayback) shows the law title 'Zákon o registri adries' and § 4(1) only as a truncated preview ending at 'ktorého správcom  It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "Register adries (Address Register), administered by the Ministry of Interior"
          },
          {
           "c": [
@@ -125795,7 +126212,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -125942,6 +126359,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -126193,7 +126654,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -127796,7 +128257,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -127943,6 +128404,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -128194,7 +128699,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -129186,7 +129691,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -129336,6 +129841,50 @@
          [
           {
            "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_da123db1-a4e"
           },
           {
@@ -129480,7 +130029,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -130663,7 +131212,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -130813,6 +131362,50 @@
          [
           {
            "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_da123db1-a4e"
           },
           {
@@ -130957,7 +131550,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -132590,7 +133183,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -132737,6 +133330,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -133040,7 +133677,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -134687,7 +135324,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -134834,6 +135471,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -135085,7 +135766,7 @@
           },
           {
            "role": "method",
-           "t": "wf_074137f6-b8e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -136354,7 +137035,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -136501,6 +137182,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -136778,7 +137503,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -138233,7 +138958,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -138383,6 +139108,50 @@
          [
           {
            "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_da123db1-a4e"
           },
           {
@@ -138437,7 +139206,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "46 of 46 printed facts about Estonia pass."
+          "t": "51 of 51 printed facts about Estonia pass."
          }
         ],
         "type": "p"
@@ -138631,7 +139400,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -139235,6 +140004,32 @@
          [
           {
            "role": "label",
+           "t": "record:EE:customs:register"
+          },
+          {
+           "role": "method",
+           "t": "Customs declarations: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f14edd00-71f"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:EE:benefits_pensions:operator"
           },
           {
@@ -139469,6 +140264,32 @@
          [
           {
            "role": "label",
+           "t": "record:EE:firearms_register:register"
+          },
+          {
+           "role": "method",
+           "t": "Firearms register: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f14edd00-71f"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:EE:public_finance:register"
           },
           {
@@ -139573,6 +140394,58 @@
          [
           {
            "role": "label",
+           "t": "record:EE:emergency_communications:register"
+          },
+          {
+           "role": "method",
+           "t": "Emergency calls and public-safety radio: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f14edd00-71f"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:EE:crisis_management:register"
+          },
+          {
+           "role": "method",
+           "t": "Crisis management and civil protection: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f14edd00-71f"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:EE:grid_control:register"
           },
           {
@@ -139620,6 +140493,32 @@
           {
            "role": "method",
            "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:EE:education:operator"
+          },
+          {
+           "role": "method",
+           "t": "Education: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f14edd00-71f"
           }
          ],
          [
@@ -139739,72 +140638,6 @@
          [
           {
            "role": "label",
-           "t": "record:EE:crisis_management:register"
-          },
-          {
-           "role": "method",
-           "t": "Crisis management and civil protection: the name of the register or system"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "unclear"
-          },
-          {
-           "role": "method",
-           "t": "Could not fetch any cited page: siseministeerium.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this PDF. The quote, the EE-ALARM label and the Häirekeskus operator could not be checked."
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:EE:customs:register"
-          },
-          {
-           "role": "method",
-           "t": "Customs declarations: the name of the register or system"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "unclear"
-          },
-          {
-           "role": "method",
-           "t": "Could not fetch any cited page: emta.ee returns a Cloudflare 'Just a moment' 403 to both curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this URL. The quote could not be checked."
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:EE:education:operator"
-          },
-          {
-           "role": "method",
-           "t": "Education: the body that operates it"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "unclear"
-          },
-          {
-           "role": "method",
-           "t": "Could not fetch any cited page: hm.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked."
-          }
-         ],
-         [
-          {
-           "role": "label",
            "t": "record:EE:emergency_communications:operator"
           },
           {
@@ -139817,33 +140650,11 @@
           },
           {
            "role": "method",
-           "t": "unclear"
+           "t": "not supported"
           },
           {
            "role": "method",
-           "t": "Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote could not be checked, so whether it supports Häirekeskus as operator of emergency calls and public-safety radio is undetermined."
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:EE:emergency_communications:register"
-          },
-          {
-           "role": "method",
-           "t": "Emergency calls and public-safety radio: the name of the register or system"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "unclear"
-          },
-          {
-           "role": "method",
-           "t": "Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote naming 'hädaabiteadete ning abi- ja infoteadete andmekogu' could not be checked."
+           "t": "Read the hashed copy (9a0561c074d296e6.txt). The quote only says Häirekeskus transmits public warnings through a warning system that is part of the emergency-notifications database; it says nothing about who operates emergency calls or public-safety radio, nor who administers that database, so the operator claim for this class is not what the cited text says."
           }
          ],
          [
@@ -139888,28 +140699,6 @@
           {
            "role": "method",
            "t": "The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names PPA alone, and the quote does not establish whether fingerprint data fall wholly outside the MFA exception, so the source is ambiguous for the scope as printed."
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:EE:firearms_register:register"
-          },
-          {
-           "role": "method",
-           "t": "Firearms register: the name of the register or system"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "unclear"
-          },
-          {
-           "role": "method",
-           "t": "Could not fetch any cited page: politsei.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked."
           }
          ],
          [
@@ -139972,7 +140761,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -140119,6 +140908,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -140370,7 +141203,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -141717,7 +142550,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -141864,6 +142697,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -142141,7 +143018,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -143544,7 +144421,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -143691,6 +144568,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -143968,7 +144889,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -144721,7 +145642,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -144868,6 +145789,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -145145,7 +146110,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -146986,7 +147951,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -147133,6 +148098,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -147410,7 +148419,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -148809,7 +149818,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -148956,6 +149965,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -149155,7 +150208,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -150994,7 +152047,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -151141,6 +152194,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -151340,7 +152437,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -153019,7 +154116,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -153166,6 +154263,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -153443,7 +154584,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -154846,7 +155987,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -154993,6 +156134,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -155244,7 +156429,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -155690,7 +156875,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -155837,6 +157022,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -156036,7 +157265,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -156529,7 +157758,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -156676,6 +157905,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -156953,7 +158226,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -158101,7 +159374,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -158248,6 +159521,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -158421,7 +159738,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -159248,7 +160565,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -159395,6 +160712,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -159672,7 +161033,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -160815,7 +162176,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -160962,6 +162323,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -161187,7 +162592,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -162434,7 +163839,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -162581,6 +163986,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -162806,7 +164255,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -164133,7 +165582,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -164280,6 +165729,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -164505,7 +165998,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -165202,7 +166695,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -165349,6 +166842,50 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
          [
           {
            "role": "label",
@@ -165548,7 +167085,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -166709,7 +168246,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -166859,6 +168396,50 @@
          [
           {
            "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_da123db1-a4e"
           },
           {
@@ -166913,7 +168494,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "59 of 59 printed facts about Slovenia pass."
+          "t": "60 of 60 printed facts about Slovenia pass."
          }
         ],
         "type": "p"
@@ -167082,6 +168663,32 @@
           {
            "role": "method",
            "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "param:SI:population_m"
+          },
+          {
+           "role": "method",
+           "t": "param:SI:population_m"
+          },
+          {
+           "role": "method",
+           "t": "program:fetch_eurostat.py"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -168531,28 +170138,6 @@
          [
           {
            "role": "label",
-           "t": "param:SI:population_m"
-          },
-          {
-           "role": "method",
-           "t": "param:SI:population_m"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "not supported"
-          },
-          {
-           "role": "method",
-           "t": "The API returns 2 135 107 persons for SI on 1 January 2026, i.e. 2.135 million; rounded to two decimals that is 2.14 million, whereas the report prints 2.13 million, which is a truncation rather than the rounded figure the source gives."
-          }
-         ],
-         [
-          {
-           "role": "label",
            "t": "record:SI:fingerprint_biometric:register"
           },
           {
@@ -168632,7 +170217,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+          "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -168782,6 +170367,50 @@
          [
           {
            "role": "label",
+           "t": "wf_f14edd00-71f"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "12"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 12"
+          },
+          {
+           "role": "method",
+           "t": "supported: 11; not supported: 1"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "wf_5fd3e22d-b86"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-02"
+          },
+          {
+           "role": "method",
+           "t": "27"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 27"
+          },
+          {
+           "role": "method",
+           "t": "supported: 27"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_da123db1-a4e"
           },
           {
@@ -168836,7 +170465,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "45 of 45 printed facts about Slovakia pass."
+          "t": "51 of 51 printed facts about Slovakia pass."
          }
         ],
         "type": "p"
@@ -169004,7 +170633,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_5fd3e22d-b86"
           }
          ],
          [
@@ -169192,6 +170821,32 @@
          [
           {
            "role": "label",
+           "t": "record:SK:facial_biometric:register"
+          },
+          {
+           "role": "method",
+           "t": "Facial biometric: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f14edd00-71f"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:SK:facial_biometric:operator"
           },
           {
@@ -169265,6 +170920,32 @@
           {
            "role": "method",
            "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:SK:issuance_history:operator"
+          },
+          {
+           "role": "method",
+           "t": "Document issuance history: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f14edd00-71f"
           }
          ],
          [
@@ -169452,6 +171133,32 @@
          [
           {
            "role": "label",
+           "t": "record:SK:police_records:register"
+          },
+          {
+           "role": "method",
+           "t": "Police information systems: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f14edd00-71f"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:SK:residence_permits:register"
           },
           {
@@ -169551,6 +171258,32 @@
           {
            "role": "method",
            "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:SK:beneficial_ownership:register"
+          },
+          {
+           "role": "method",
+           "t": "Beneficial ownership register: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f14edd00-71f"
           }
          ],
          [
@@ -169759,6 +171492,32 @@
           {
            "role": "method",
            "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:SK:emergency_communications:register"
+          },
+          {
+           "role": "method",
+           "t": "Emergency calls and public-safety radio: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f14edd00-71f"
           }
          ],
          [
@@ -170024,6 +171783,32 @@
          [
           {
            "role": "label",
+           "t": "record:SK:geospatial:register"
+          },
+          {
+           "role": "method",
+           "t": "Geospatial base data: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f14edd00-71f"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:SK:geospatial:operator"
           },
           {
@@ -170057,170 +171842,13 @@
      {
       "blocks": [
        {
-        "align": [
-         "left",
-         "left",
-         "left",
-         "left",
-         "left"
-        ],
-        "columns": [
+        "spans": [
          {
-          "role": "label",
-          "t": "Claim"
-         },
-         {
-          "role": "label",
-          "t": "What it answers"
-         },
-         {
-          "role": "label",
-          "t": "Checked by"
-         },
-         {
-          "role": "label",
-          "t": "Verdict"
-         },
-         {
-          "role": "label",
-          "t": "Reason"
+          "role": "method",
+          "t": "None."
          }
         ],
-        "rows": [
-         [
-          {
-           "role": "label",
-           "t": "record:SK:beneficial_ownership:register"
-          },
-          {
-           "role": "method",
-           "t": "Beneficial ownership register: the name of the register or system"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "unclear"
-          },
-          {
-           "role": "method",
-           "t": "Live page 403; the archived copy is the shortened unregistered view and § 3(1) is cut to 'Register je informačný systém verejnej správy, ktorý obsahuje údaje podľa ...', so the sentences naming the Ministry of Justice as administrator and Okresný súd Žilina as registering body are absent (neither string occurs anywhere in the page body). The name 'register partnerov verejného sektora' is confirmed"
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:SK:emergency_communications:register"
-          },
-          {
-           "role": "method",
-           "t": "Emergency calls and public-safety radio: the name of the register or system"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "not supported"
-          },
-          {
-           "role": "method",
-           "t": "The live page is blocked (HTTP 403) and the archived page carries an older wording of letter a) ('zabezpečuje príjem tiesňového volania, volania eCall30) a príjem krátkych textových správ (SMS) na jednotnom európskom čísle tiesňového volania 112') without the quoted 'a odpoveď na príjem tiesňovej komunikácie', so the quote is not on the page I could read; the older wording does say coordination ce"
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:SK:facial_biometric:register"
-          },
-          {
-           "role": "method",
-           "t": "Facial biometric: the name of the register or system"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "unclear"
-          },
-          {
-           "role": "method",
-           "t": "The live page returns HTTP 403 (Cloudflare) to both WebFetch and curl; the archived copy is the site's shortened unregistered view and cuts the quote at '...evidenciu čistopisov občianskych ...'. The visible text does say 'Ministerstvo a okresné riaditeľstvá vedú evidenciu občianskych preukazov' and that the records contain 'zobrazenie podoby tváre občana', but the defining paragraph (§ 5) that wo"
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:SK:geospatial:register"
-          },
-          {
-           "role": "method",
-           "t": "Geospatial base data: the name of the register or system"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "unclear"
-          },
-          {
-           "role": "method",
-           "t": "The live page returns HTTP 403 (Cloudflare block) to every fetch, and the only archived snapshot (2021, the latest in Wayback) shows the law title 'Zákon o registri adries' and § 4(1) only as a truncated preview ending at 'ktorého správcom ...', so the Ministry of Interior as administrator could neither be confirmed nor refuted."
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:SK:issuance_history:operator"
-          },
-          {
-           "role": "method",
-           "t": "Document issuance history: the body that operates it"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "unclear"
-          },
-          {
-           "role": "method",
-           "t": "Live page 403; the archived copy truncates the quote mid-sentence and does not show the definition of 'ministerstvo' or of 'okresné riaditeľstvo'. The quote only names 'the ministry and district directorates' as keepers of the ID-card records; the page as fetched does not establish that these are the Ministry of Interior and district police directorates."
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:SK:police_records:register"
-          },
-          {
-           "role": "method",
-           "t": "Police information systems: the name of the register or system"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "not supported"
-          },
-          {
-           "role": "method",
-           "t": "The live page is blocked (HTTP 403) and the archived page's § 69(1) reads 'Policajný zbor spracúva podľa tohto zákona a osobitného predpisu11bc) informácie a osobné údaje zhromaždené...' without 'daktyloskopické údaje a snímky tvárí'; 'snímky tvárí' occurs nowhere on the page, so the quote and the printed 'face images' are not on the page I could read."
-          }
-         ]
-        ],
-        "type": "table"
+        "type": "p"
        }
       ],
       "id": "f-withheld",
@@ -170258,7 +171886,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check."
+         "t": "In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check."
         }
        ],
        "type": "p"
@@ -170405,6 +172033,50 @@
         }
        ],
        "rows": [
+        [
+         {
+          "role": "label",
+          "t": "wf_f14edd00-71f"
+         },
+         {
+          "role": "method",
+          "t": "2026-10-02"
+         },
+         {
+          "role": "method",
+          "t": "12"
+         },
+         {
+          "role": "method",
+          "t": "claude-fable-5-1: 12"
+         },
+         {
+          "role": "method",
+          "t": "supported: 11; not supported: 1"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "wf_5fd3e22d-b86"
+         },
+         {
+          "role": "method",
+          "t": "2026-10-02"
+         },
+         {
+          "role": "method",
+          "t": "27"
+         },
+         {
+          "role": "method",
+          "t": "claude-fable-5-1: 27"
+         },
+         {
+          "role": "method",
+          "t": "supported: 27"
+         }
+        ],
         [
          {
           "role": "label",
@@ -170650,11 +172322,11 @@
          },
          {
           "role": "method",
-          "t": "46"
+          "t": "51"
          },
          {
           "role": "method",
-          "t": "46"
+          "t": "51"
          },
          {
           "role": "method",
@@ -170662,7 +172334,7 @@
          },
          {
           "role": "method",
-          "t": "10"
+          "t": "5"
          }
         ],
         [
@@ -171002,11 +172674,11 @@
          },
          {
           "role": "method",
-          "t": "45"
+          "t": "51"
          },
          {
           "role": "method",
-          "t": "45"
+          "t": "51"
          },
          {
           "role": "method",
@@ -171014,7 +172686,7 @@
          },
          {
           "role": "method",
-          "t": "6"
+          "t": "0"
          }
         ],
         [
@@ -171024,11 +172696,11 @@
          },
          {
           "role": "method",
-          "t": "59"
+          "t": "60"
          },
          {
           "role": "method",
-          "t": "59"
+          "t": "60"
          },
          {
           "role": "method",
@@ -171036,7 +172708,7 @@
          },
          {
           "role": "method",
-          "t": "3"
+          "t": "2"
          }
         ],
         [
@@ -171109,7 +172781,7 @@
    "CZ": "Fact check: 64 of 64 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/CZ",
    "DE": "Fact check: 50 of 50 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DE",
    "DK": "Fact check: 59 of 59 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DK",
-   "EE": "Fact check: 46 of 46 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/EE",
+   "EE": "Fact check: 51 of 51 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/EE",
    "EL": "Fact check: 53 of 53 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/EL",
    "ES": "Fact check: 57 of 57 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/ES",
    "FI": "Fact check: 32 of 32 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/FI",
@@ -171127,8 +172799,8 @@
    "PT": "Fact check: 47 of 47 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/PT",
    "RO": "Fact check: 27 of 27 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/RO",
    "SE": "Fact check: 43 of 43 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SE",
-   "SI": "Fact check: 59 of 59 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SI",
-   "SK": "Fact check: 45 of 45 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SK"
+   "SI": "Fact check: 60 of 60 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SI",
+   "SK": "Fact check: 51 of 51 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SK"
   }
  },
  "generated": "2026-09-29",
@@ -171388,7 +173060,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed."
+        "t": "This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed."
        }
       ],
       "type": "p"
@@ -171778,7 +173450,7 @@
         },
         {
          "role": "method",
-         "t": "612"
+         "t": "613"
         }
        ],
        [
@@ -171788,7 +173460,7 @@
         },
         {
          "role": "method",
-         "t": "589"
+         "t": "594"
         }
        ],
        [
@@ -171808,7 +173480,7 @@
         },
         {
          "role": "method",
-         "t": "101"
+         "t": "107"
         }
        ]
       ],
@@ -171872,7 +173544,7 @@
         },
         {
          "role": "method",
-         "t": "1209"
+         "t": "1221"
         }
        ]
       ],
@@ -172236,7 +173908,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "In this build, 1309 of 1309 printed facts pass the fact check."
+        "t": "In this build, 1321 of 1321 printed facts pass the fact check."
        }
       ],
       "type": "p"
@@ -176361,6 +178033,19 @@
    "title": "Archivio Storico delle Elezioni",
    "url": "https://elezionistorico.interno.gov.it/"
   },
+  "emta-ee:cd2827f4fd": {
+   "archived_url": "",
+   "doc_type": "webpage",
+   "label": "Maksu- ja Tolliamet (Tax and Customs Board) — MTA võtab kasutusele uue impordi tollivormistuse…, 2021",
+   "language": "",
+   "license": "",
+   "notes": "sha256 f81a4a1d0c92fbd6b3bb2ecd3a54bacc228274b52cd280e61448e2e36c81b539 (text/html), fetched 2026-09-30",
+   "published": "2021",
+   "publisher": "Maksu- ja Tolliamet (Tax and Customs Board)",
+   "source_id": "emta-ee:cd2827f4fd",
+   "title": "MTA võtab kasutusele uue impordi tollivormistuse infosüsteemi",
+   "url": "https://www.emta.ee/uudised/mta-votab-kasutusele-uue-impordi-tollivormistuse-infosusteemi"
+  },
   "en-digst-dk:971fe2b860": {
    "archived_url": "https://web.archive.org/web/20260910172930/https://en.digst.dk/systems/nemlog-in/",
    "doc_type": "webpage",
@@ -177751,6 +179436,19 @@
    "source_id": "hiteles-gov-hu:2a0d283b3e",
    "title": "Kormányzati Hitelesítés Szolgáltató – Kik vagyunk",
    "url": "https://hiteles.gov.hu/cikk/185/kormanyzati_hitelesites_szolgaltato"
+  },
+  "hm-ee:d9de5e79e0": {
+   "archived_url": "",
+   "doc_type": "webpage",
+   "label": "Haridus- ja Teadusministeerium — Eesti keele tasemeeksamiks ettevalmistava…, 2024-07",
+   "language": "",
+   "license": "",
+   "notes": "sha256 38e2cf8c5b69cbb280a6c16e29de1b73e09d49953e89f2aed240d26cc1b88239 (application/pdf), fetched 2026-09-30",
+   "published": "2024-07",
+   "publisher": "Haridus- ja Teadusministeerium",
+   "source_id": "hm-ee:d9de5e79e0",
+   "title": "Eesti keele tasemeeksamiks ettevalmistava täienduskoolituse tegevusloa taotlemise kirjeldus",
+   "url": "https://www.hm.ee/sites/default/files/documents/2024-07/Eesti%20keele%20tasemeeksamiks%20ettevalmistava%20t%C3%A4ienduskoolituse%20tegevusloa%20taotlemise%20kirjeldus.pdf"
   },
   "hnb-hr:96c8b3481f": {
    "archived_url": "https://web.archive.org/web/20260508191140/https://www.hnb.hr/en/core-functions/payment-system/payment-systems/targe-hr",
@@ -181509,6 +183207,19 @@
    "title": "Στο στόχαστρο αστυνομικοί για διαρροές - Ποινικές και πειθαρχικές ευθύνες σε εξέλιξη",
    "url": "https://www.politis.com.cy/politis-news/cyprus/1031511/sto-stokhastro-astinomiki-ghia-diarroes-poinikes-kai-peitharkhikes-efthynes-se-ekseliksi"
   },
+  "politsei-ee:11c59964d0": {
+   "archived_url": "",
+   "doc_type": "webpage",
+   "label": "Politsei- ja Piirivalveamet (Police and Border Guard Board) — Avaandmete seletuskiri – Teenistus- ja tsiviilrelvade…, 2020-06-05",
+   "language": "",
+   "license": "",
+   "notes": "sha256 d17bacbd08e777613fe410c505dd19453bb547da5ee43de60d146b17e05ef227 (application/pdf), fetched 2026-09-30",
+   "published": "2020-06-05",
+   "publisher": "Politsei- ja Piirivalveamet (Police and Border Guard Board)",
+   "source_id": "politsei-ee:11c59964d0",
+   "title": "Avaandmete seletuskiri – Teenistus- ja tsiviilrelvade register",
+   "url": "https://www.politsei.ee/files/Anal%C3%BC%C3%BCs%20ja%20statistika/ppa-avaandmete-seletuskiri-relvaregister-05.06.20.pdf"
+  },
   "polizei-gv-at:0c74c1b9e9": {
    "archived_url": "https://web.archive.org/web/20260505131709/https://www.polizei.gv.at/stmk/files_stmk/datenschutz/2020/bf_zentrales%20waffenregister_20200224.pdf",
    "doc_type": "webpage",
@@ -183121,6 +184832,19 @@
    "title": "Isikut tõendavad dokumendid ja identiteedihaldus",
    "url": "https://www.siseministeerium.ee/tegevusvaldkonnad/tohus-rahvastikuhaldus/isikut-toendavad-dokumendid-ja-identiteedihaldus"
   },
+  "siseministeerium-ee:dc50c0d88a": {
+   "archived_url": "",
+   "doc_type": "webpage",
+   "label": "Siseministeerium (Ministry of the Interior) — Riiklik avalikkuse hoiatamise süsteem ja ohuteavitus…, 2024-02-07",
+   "language": "",
+   "license": "",
+   "notes": "sha256 9a0561c074d296e6192a21001297c08307435c038380960d8730d275bdd29e5e (application/pdf), fetched 2026-09-30",
+   "published": "2024-02-07",
+   "publisher": "Siseministeerium (Ministry of the Interior)",
+   "source_id": "siseministeerium-ee:dc50c0d88a",
+   "title": "Riiklik avalikkuse hoiatamise süsteem ja ohuteavitus Eestis (EE-ALARM ülevaade)",
+   "url": "https://www.siseministeerium.ee/sites/default/files/documents/2024-02/EE-ALARM_ylevaade_avalik_07022024.pdf"
+  },
   "sistemats-it:89229c8c9f": {
    "archived_url": "https://web.archive.org/web/20160502181750/http://www.sistemats.it:80/",
    "doc_type": "webpage",
@@ -184083,6 +185807,19 @@
    "title": "Zakon o nadzoru državne granice",
    "url": "https://www.zakon.hr/z/450/zakon-o-nadzoru-drzavne-granice"
   },
+  "zakony-judikaty-info:01b856c898": {
+   "archived_url": "https://web.archive.org/web/20250624004629/https://zakony.judikaty.info/predpis/zakon-129/2002",
+   "doc_type": "statute",
+   "label": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o integrovanom záchrannom systéme 129/2002",
+   "language": "sk",
+   "license": "",
+   "notes": "sha256 f03483c0fee301a3e190fd7f0ba72a8d5b032a0334680807724cd0283126aa3a (text/html), fetched 2026-09-29",
+   "published": "",
+   "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+   "source_id": "zakony-judikaty-info:01b856c898",
+   "title": "Zákon o integrovanom záchrannom systéme 129/2002",
+   "url": "https://zakony.judikaty.info/predpis/zakon-129/2002"
+  },
   "zakony-judikaty-info:0879b0893a": {
    "archived_url": "https://web.archive.org/web/20250624100422/https://zakony.judikaty.info/predpis/zakon-461/2003",
    "doc_type": "statute",
@@ -184213,6 +185950,32 @@
    "title": "Zákon o strelných zbraniach a strelive 190/2003",
    "url": "https://zakony.judikaty.info/predpis/zakon-190/2003"
   },
+  "zakony-judikaty-info:66def3d68f": {
+   "archived_url": "https://web.archive.org/web/20240915235127/https://zakony.judikaty.info/predpis/zakon-171/1993",
+   "doc_type": "statute",
+   "label": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon Národnej rady Slovenskej republiky o Policajnom…",
+   "language": "sk",
+   "license": "",
+   "notes": "sha256 a08ccd5a170a48c027658651af6f873932be5cba22149fc13932ea4d42b3fda5 (text/html), fetched 2026-09-29",
+   "published": "",
+   "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+   "source_id": "zakony-judikaty-info:66def3d68f",
+   "title": "Zákon Národnej rady Slovenskej republiky o Policajnom zbore 171/1993",
+   "url": "https://zakony.judikaty.info/predpis/zakon-171/1993"
+  },
+  "zakony-judikaty-info:a3c5e3d80f": {
+   "archived_url": "https://web.archive.org/web/20210228034237/https://zakony.judikaty.info/predpis/zakon-125/2015",
+   "doc_type": "statute",
+   "label": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o registri adries 125/2015",
+   "language": "sk",
+   "license": "",
+   "notes": "sha256 4a5860b30a65ad431a87ba71f9f7d3676b6c60b176ab96dc20473e1821547498 (text/html), fetched 2026-09-29",
+   "published": "",
+   "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+   "source_id": "zakony-judikaty-info:a3c5e3d80f",
+   "title": "Zákon o registri adries 125/2015",
+   "url": "https://zakony.judikaty.info/predpis/zakon-125/2015"
+  },
   "zakony-judikaty-info:abcab898c6": {
    "archived_url": "https://web.archive.org/web/20251008162932/https://zakony.judikaty.info/predpis/zakon-162/1995",
    "doc_type": "statute",
@@ -184225,6 +185988,19 @@
    "source_id": "zakony-judikaty-info:abcab898c6",
    "title": "Katastrálny zákon 162/1995",
    "url": "https://zakony.judikaty.info/predpis/zakon-162/1995"
+  },
+  "zakony-judikaty-info:b0d7e6f4f8": {
+   "archived_url": "https://web.archive.org/web/20240522091210/https://zakony.judikaty.info/predpis/zakon-315/2016",
+   "doc_type": "statute",
+   "label": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws) — Zákon o registri partnerov verejného sektora 315/2016",
+   "language": "sk",
+   "license": "",
+   "notes": "sha256 8bf7bf0c118c521643b21122a242bfb12303c477b541d649b903718d7fe150a3 (text/html), fetched 2026-09-29",
+   "published": "",
+   "publisher": "Zákony.Judikáty.info (consolidated text of the Slovak Collection of Laws)",
+   "source_id": "zakony-judikaty-info:b0d7e6f4f8",
+   "title": "Zákon o registri partnerov verejného sektora 315/2016",
+   "url": "https://zakony.judikaty.info/predpis/zakon-315/2016"
   },
   "zakony-judikaty-info:bc65dc8528": {
    "archived_url": "https://web.archive.org/web/20220307183542/https://zakony.judikaty.info/predpis/zakon-224/2006",

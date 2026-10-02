@@ -41,7 +41,7 @@ Estonia described on its own measured characteristics. Each figure is the publis
 
 | Indicator | Value |
 |---|---:|
-| Population | 1.36 million[^s14] |
+| Population | 1.361 million[^s14] |
 | GDP, current prices | 41.9 EUR bn[^s15] |
 | Public administration employment (NACE O) | 43.1 thousand[^s16] |
 | Non-household electricity price | 141.0 EUR/MWh[^s17] |
@@ -57,8 +57,8 @@ The holdings Estonia cannot let depend on infrastructure a foreign state can com
 | Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | Rahvastikuregister (Population Register)[^s20] | Siseministeerium (Ministry of the Interior)[^s20] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory definitio It is withheld until the fact or its source is corrected and checked again* | ABIS controllers are the Police and Border Guard Board and the Ministry of Foreign Affairs[^s21][^s22] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | ABIS (automaatse biomeetrilise isikutuvastuse süsteemi andmekogu; Automated Biometric Identification System database)[^s23] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names P It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory…. It is withheld until the fact or its source is corrected and checked again* | ABIS controllers are the Police and Border Guard Board and the Ministry of Foreign Affairs[^s21][^s22] | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | ABIS (automaatse biomeetrilise isikutuvastuse süsteemi andmekogu; Automated Biometric Identification System database)[^s23] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Authentication audit log (tier 0) | Riigi autentimisteenus (State Authentication Service, TARA)[^s24] | RIA (Riigi Infosüsteemi Amet; Information System Authority)[^s24] | *Not stated in sources* | *Not yet measured* |
 | High | Document issuance history (tier 0) | Isikut tõendavate dokumentide andmekogu (Identity Documents Database)[^s25] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s25] | *Not stated in sources* | over 3,2 miljoni isikutunnistuse ja elamisloakaardi (over 3.2 million ID cards and residence permit cards issued)[^s26] |
@@ -66,31 +66,31 @@ The holdings Estonia cannot let depend on infrastructure a foreign state can com
 | High | Electoral roll entry (tier 0) | Valijate nimekiri (list of voters), compiled from the Rahvastikuregister (Population Register)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Land & property registry (tier 1) | E-kinnistusraamat (e-Land Register)[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Karistusregister (Criminal Records Database)[^s29] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 4 of the Criminal Records Database Act names Justiits- ja Digiministeerium as controller and Registrite ja Infosüsteemide Keskus as processor, supporting those two names, but the acronym 'RIK' printed after the processor's name does not a It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Karistusregister (Criminal Records Database)[^s29] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 4 of the Criminal Records Database Act names Justiits- ja Digiministeerium as controller and Registrite ja Infosüsteemide Keskus as processor, supporting those two names, but the acronym 'RIK' printed after the processor's name does not…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
 | High | Police information systems (tier 1) | Infosüsteem POLIS (Information System POLIS)[^s30] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s30] | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Residence and migration status (tier 1) | elamislubade ja töölubade register (Register of Residence Permits and Work Permits)[^s31] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s31] | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | Maksukohustuslaste register (Register of Taxable Persons)[^s32] | Maksu- ja Tolliamet (Tax and Customs Board)[^s32] | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Could not fetch any cited page: emta.ee returns a Cloudflare 'Just a moment' 403 to both curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this URL. The quote could not be checked. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something  It is withheld until the fact or its source is corrected and checked again* | Sotsiaalkindlustusamet (Social Insurance Board)[^s33] | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | Tervisekassa andmekogu (Health Insurance Fund Database)[^s34] | Tervisekassa (Health Insurance Fund)[^s34] | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | E-äriregister (e-Business Register)[^s35] | Tartu Maakohtu registriosakond (registrar); RIK (develops and manages the portal)[^s35] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Tegelike kasusaajate andmekogu (Beneficial Owners Database)[^s36] | Rahandusministeerium (Ministry of Finance)[^s36] | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | Impulss (import customs clearance information system)[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something…. It is withheld until the fact or its source is corrected and checked again* | Sotsiaalkindlustusamet (Social Insurance Board)[^s34] | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | Tervisekassa andmekogu (Health Insurance Fund Database)[^s35] | Tervisekassa (Health Insurance Fund)[^s35] | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | E-äriregister (e-Business Register)[^s36] | Tartu Maakohtu registriosakond (registrar); RIK (develops and manages the portal)[^s36] | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Tegelike kasusaajate andmekogu (Beneficial Owners Database)[^s37] | Rahandusministeerium (Ministry of Finance)[^s37] | *Not stated in sources* | *Not yet measured* |
 | High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | Schengeni infosüsteemi riiklik register (national register of the Schengen Information System)[^s37] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s37] | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Could not fetch any cited page: politsei.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | riigi finants-, personali- ja palgaarvestuse süsteem SAP (state financial, personnel and payroll accounting system SAP)[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | riigi finants-, personali- ja palgaarvestuse süsteem SAP (state financial, personnel and payroll accounting system SAP)[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Schengeni infosüsteemi riiklik register (national register of the Schengen Information System)[^s38] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s38] | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | teenistus- ja tsiviilrelvade register (Register of Service and Civilian Weapons)[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | riigi finants-, personali- ja palgaarvestuse süsteem SAP (state financial, personnel and payroll accounting system SAP)[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | riigi finants-, personali- ja palgaarvestuse süsteem SAP (state financial, personnel and payroll accounting system SAP)[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Election management and results (tier 1) | valimiste infosüsteem (election information system) and elektroonilise hääletamise süsteem (electronic voting system)[^s27] | Riigi valimisteenistus (State Electoral Office)[^s27] | *Not stated in sources* | *Not yet measured* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote naming 'hädaabiteadete ning abi- ja infoteadete andmekogu' could not be checked. It is withheld until the fact or its source is corrected and checked again* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote could not be checked, so whether it supports Häirekeskus as operator of emergency calls and public-safety radio is undetermined. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Could not fetch any cited page: siseministeerium.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this PDF. The quote, the EE-ALARM label and the Häirekeskus operator  It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | SCADA/EMS at Eleringi juhtimiskeskus (Elering control centre)[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | hädaabiteadete ning abi- ja infoteadete andmekogu (database of emergency notifications and assistance and information notifications)[^s41] | *Disputed: the fact check (claude-fable-5-1, run wf_f14edd00-71f) did not confirm this: Read the hashed copy (9a0561c074d296e6.txt). The quote only says Häirekeskus transmits public warnings through a warning system that is part of the emergency-notifications database; it says nothing about who operates emergency calls or…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | ohuteavituse süsteem (public warning system, EE-ALARM), operated by Häirekeskus[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | SCADA/EMS at Eleringi juhtimiskeskus (Elering control centre)[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | Eesti Hariduse Infosüsteem (EHIS; Estonian Education Information System)[^s40] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Could not fetch any cited page: hm.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | Eesti Hariduse Infosüsteem (EHIS; Estonian Education Information System)[^s43] | Haridus- ja Teadusministeerium (Ministry of Education and Research)[^s44] | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | Riigi Teataja (State Gazette)[^s41] | Justiits- ja Digiministeerium (publisher); Registrite ja Infosüsteemide Keskus (RIK) (hosting and technical operation)[^s41] | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Riigi Teataja (State Gazette)[^s45] | Justiits- ja Digiministeerium (publisher); Registrite ja Infosüsteemide Keskus (RIK) (hosting and technical operation)[^s45] | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Estonia without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed.
 
 ### How sources were found
 
@@ -204,10 +204,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
-| T2 competent public body or audit office | 589 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 613 |
+| T2 competent public body or audit office | 594 |
 | T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
 ### Evidence grades
 
@@ -217,7 +217,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 100 |
-| Standard | 1209 |
+| Standard | 1221 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -258,7 +258,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1309 of 1309 printed facts pass the fact check.
+In this build, 1321 of 1321 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -300,7 +300,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
+In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -323,12 +323,14 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
+| wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
 | wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
 ### The verdict on each fact about Estonia
 
-46 of 46 printed facts about Estonia pass.
+51 of 51 printed facts about Estonia pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -337,7 +339,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | indicator:EE:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:EE:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:EE:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| param:EE:population_m | param:EE:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:EE:population_m | param:EE:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_5fd3e22d-b86 |
 | param:EE:gdp_eur_bn | param:EE:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:EE:gov_employment_k | param:EE:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:EE:elec_price_eur_mwh | param:EE:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -361,6 +363,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:EE:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:tax:operator | Tax: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EE:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_f14edd00-71f |
 | record:EE:benefits_pensions:operator | Benefits & pensions: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:health_insurance:operator | Statutory health insurance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -370,12 +373,16 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:EE:beneficial_ownership:operator | Beneficial ownership register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:border_control:operator | Border and visa systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EE:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_f14edd00-71f |
 | record:EE:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:electoral_management:register | Election management and results: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:electoral_management:operator | Election management and results: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EE:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_f14edd00-71f |
+| record:EE:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_f14edd00-71f |
 | record:EE:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EE:education:operator | Education: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_f14edd00-71f |
 | record:EE:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
@@ -384,14 +391,9 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | Claim | What it answers | Checked by | Verdict | Reason |
 |---|---|---|---|---|
 | record:EE:benefits_pensions:register | Benefits & pensions: the name of the register or system | claude-fable-5-1 | not supported | The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something the source does not say. |
-| record:EE:crisis_management:register | Crisis management and civil protection: the name of the register or system | claude-fable-5-1 | unclear | Could not fetch any cited page: siseministeerium.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this PDF. The quote, the EE-ALARM label and the Häirekeskus operator could not be checked. |
-| record:EE:customs:register | Customs declarations: the name of the register or system | claude-fable-5-1 | unclear | Could not fetch any cited page: emta.ee returns a Cloudflare 'Just a moment' 403 to both curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this URL. The quote could not be checked. |
-| record:EE:education:operator | Education: the body that operates it | claude-fable-5-1 | unclear | Could not fetch any cited page: hm.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked. |
-| record:EE:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | claude-fable-5-1 | unclear | Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote could not be checked, so whether it supports Häirekeskus as operator of emergency calls and public-safety radio is undetermined. |
-| record:EE:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | claude-fable-5-1 | unclear | Same blocked PDF (Cloudflare 403, no archived copy, no Wayback snapshot); the quote naming 'hädaabiteadete ning abi- ja infoteadete andmekogu' could not be checked. |
+| record:EE:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | claude-fable-5-1 | not supported | Read the hashed copy (9a0561c074d296e6.txt). The quote only says Häirekeskus transmits public warnings through a warning system that is part of the emergency-notifications database; it says nothing about who operates emergency calls or public-safety radio, nor who administers that database, so the operator claim for this class is not what the cited text says. |
 | record:EE:facial_biometric:register | Facial biometric: the name of the register or system | claude-fable-5-1 | not supported | Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory definition, not the name of a register or system, so it does not answer 'what'; the source that names a register holding facial images (ABIS, siseministeerium.ee) is not |
 | record:EE:fingerprint_biometric:operator | Fingerprint biometric: the body that operates it | claude-fable-5-1 | unclear | The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names PPA alone, and the quote does not establish whether fingerprint data fall wholly outside the MFA exception, so the source is ambiguous for the scope as printed. |
-| record:EE:firearms_register:register | Firearms register: the name of the register or system | claude-fable-5-1 | unclear | Could not fetch any cited page: politsei.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked. |
 | record:EE:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | claude-fable-5-1 | not supported | § 4 of the Criminal Records Database Act names Justiits- ja Digiministeerium as controller and Registrite ja Infosüsteemide Keskus as processor, supporting those two names, but the acronym 'RIK' printed after the processor's name does not appear anywhere on the cited page, so the statement as printed adds something the source does not say. |
 
 ---
@@ -428,16 +430,20 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s30]: Riigi Teataja — Politsei andmekogu pidamise põhimäärus, 2025-12-12. Politsei andmekogu pidamise põhimäärus. <https://web.archive.org/web/20251212223739/https://www.riigiteataja.ee/akt/113012017004>
 [^s31]: Riigi Teataja — Elamislubade ja töölubade registri põhimäärus, 2025-05-14. Elamislubade ja töölubade registri põhimäärus. <https://web.archive.org/web/20250514142132/https://www.riigiteataja.ee/akt/114012017018>
 [^s32]: Riigi Teataja — Maksukorralduse seadus (consolidated text, Riigi Teataja…, 2026-02-07. Maksukorralduse seadus (consolidated text, Riigi Teataja snapshot). <https://web.archive.org/web/20260207063839/https://www.riigiteataja.ee/akt/MKS>
-[^s33]: Riigi Teataja — Sotsiaalkaitse infosüsteemi põhimäärus, 2022-10-24. Sotsiaalkaitse infosüsteemi põhimäärus. <https://web.archive.org/web/20221024144600/https://www.riigiteataja.ee/akt/108052020012>
-[^s34]: Riigi Teataja — Tervisekassa andmekogu pidamise põhimäärus, 2024-11-24. Tervisekassa andmekogu pidamise põhimäärus. <https://web.archive.org/web/20241124195714/https://www.riigiteataja.ee/akt/107052024007>
-[^s35]: Registrite ja Infosüsteemide Keskus (RIK) — E-äriregistri portaal. E-äriregistri portaal. <https://www.rik.ee/et/e-ariregister/e-ariregistri-portaal> ([archived](https://web.archive.org/web/20260829032113/https://www.rik.ee/et/e-ariregister/e-ariregistri-portaal))
-[^s36]: Riigi Teataja — Rahapesu ja terrorismi rahastamise tõkestamise seadus…, 2026-03-06. Rahapesu ja terrorismi rahastamise tõkestamise seadus (consolidated text, Riigi Teataja snapshot). <https://web.archive.org/web/20260306092107/https://www.riigiteataja.ee/akt/RahaPTS>
-[^s37]: Riigi Teataja — Schengeni infosüsteemi riikliku registri pidamise põhimäärus, 2025-10-22. Schengeni infosüsteemi riikliku registri pidamise põhimäärus. <https://web.archive.org/web/20251022021813/https://www.riigiteataja.ee/akt/118042013027>
-[^s38]: Riigi Tugiteenuste Keskus (State Shared Service Centre) — Riigitöötaja iseteenindusportaal. Riigitöötaja iseteenindusportaal. <https://www.rtk.ee/riigitootaja-iseteenindusportaal> ([archived](https://web.archive.org/web/20260829052208/https://www.rtk.ee/riigitootaja-iseteenindusportaal))
-[^s39]: Elering AS — Juhtimiskeskus, 2025-05-09. Juhtimiskeskus. <https://www.elering.ee/juhtimiskeskus>
-[^s40]: Haridus- ja Teadusministeerium — EHIS - Eesti Hariduse Infosüsteem. EHIS - Eesti Hariduse Infosüsteem. <https://www.ehis.ee/> ([archived](https://web.archive.org/web/20260824092833/https://www.ehis.ee/))
-[^s41]: Registrite ja Infosüsteemide Keskus (RIK) — Riigi Teataja. Riigi Teataja. <https://www.rik.ee/et/muud-teenused/riigi-teataja> ([archived](https://web.archive.org/web/20260312042839/https://www.rik.ee/et/muud-teenused/riigi-teataja))
+[^s33]: Maksu- ja Tolliamet (Tax and Customs Board) — MTA võtab kasutusele uue impordi tollivormistuse…, 2021. MTA võtab kasutusele uue impordi tollivormistuse infosüsteemi. <https://www.emta.ee/uudised/mta-votab-kasutusele-uue-impordi-tollivormistuse-infosusteemi>
+[^s34]: Riigi Teataja — Sotsiaalkaitse infosüsteemi põhimäärus, 2022-10-24. Sotsiaalkaitse infosüsteemi põhimäärus. <https://web.archive.org/web/20221024144600/https://www.riigiteataja.ee/akt/108052020012>
+[^s35]: Riigi Teataja — Tervisekassa andmekogu pidamise põhimäärus, 2024-11-24. Tervisekassa andmekogu pidamise põhimäärus. <https://web.archive.org/web/20241124195714/https://www.riigiteataja.ee/akt/107052024007>
+[^s36]: Registrite ja Infosüsteemide Keskus (RIK) — E-äriregistri portaal. E-äriregistri portaal. <https://www.rik.ee/et/e-ariregister/e-ariregistri-portaal> ([archived](https://web.archive.org/web/20260829032113/https://www.rik.ee/et/e-ariregister/e-ariregistri-portaal))
+[^s37]: Riigi Teataja — Rahapesu ja terrorismi rahastamise tõkestamise seadus…, 2026-03-06. Rahapesu ja terrorismi rahastamise tõkestamise seadus (consolidated text, Riigi Teataja snapshot). <https://web.archive.org/web/20260306092107/https://www.riigiteataja.ee/akt/RahaPTS>
+[^s38]: Riigi Teataja — Schengeni infosüsteemi riikliku registri pidamise põhimäärus, 2025-10-22. Schengeni infosüsteemi riikliku registri pidamise põhimäärus. <https://web.archive.org/web/20251022021813/https://www.riigiteataja.ee/akt/118042013027>
+[^s39]: Politsei- ja Piirivalveamet (Police and Border Guard Board) — Avaandmete seletuskiri – Teenistus- ja tsiviilrelvade…, 2020-06-05. Avaandmete seletuskiri – Teenistus- ja tsiviilrelvade register. <https://www.politsei.ee/files/Anal%C3%BC%C3%BCs%20ja%20statistika/ppa-avaandmete-seletuskiri-relvaregister-05.06.20.pdf>
+[^s40]: Riigi Tugiteenuste Keskus (State Shared Service Centre) — Riigitöötaja iseteenindusportaal. Riigitöötaja iseteenindusportaal. <https://www.rtk.ee/riigitootaja-iseteenindusportaal> ([archived](https://web.archive.org/web/20260829052208/https://www.rtk.ee/riigitootaja-iseteenindusportaal))
+[^s41]: Siseministeerium (Ministry of the Interior) — Riiklik avalikkuse hoiatamise süsteem ja ohuteavitus…, 2024-02-07. Riiklik avalikkuse hoiatamise süsteem ja ohuteavitus Eestis (EE-ALARM ülevaade). <https://www.siseministeerium.ee/sites/default/files/documents/2024-02/EE-ALARM_ylevaade_avalik_07022024.pdf>
+[^s42]: Elering AS — Juhtimiskeskus, 2025-05-09. Juhtimiskeskus. <https://www.elering.ee/juhtimiskeskus>
+[^s43]: Haridus- ja Teadusministeerium — EHIS - Eesti Hariduse Infosüsteem. EHIS - Eesti Hariduse Infosüsteem. <https://www.ehis.ee/> ([archived](https://web.archive.org/web/20260824092833/https://www.ehis.ee/))
+[^s44]: Haridus- ja Teadusministeerium — Eesti keele tasemeeksamiks ettevalmistava…, 2024-07. Eesti keele tasemeeksamiks ettevalmistava täienduskoolituse tegevusloa taotlemise kirjeldus. <https://www.hm.ee/sites/default/files/documents/2024-07/Eesti%20keele%20tasemeeksamiks%20ettevalmistava%20t%C3%A4ienduskoolituse%20tegevusloa%20taotlemise%20kirjeldus.pdf>
+[^s45]: Registrite ja Infosüsteemide Keskus (RIK) — Riigi Teataja. Riigi Teataja. <https://www.rik.ee/et/muud-teenused/riigi-teataja> ([archived](https://web.archive.org/web/20260312042839/https://www.rik.ee/et/muud-teenused/riigi-teataja))
 
-**Evidence grades:** 3 Strong, 43 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 3 Strong, 48 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

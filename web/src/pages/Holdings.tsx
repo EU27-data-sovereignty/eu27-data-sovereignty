@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 
+import { PageBand } from '@/components/PageBand'
 import { SpanView } from '@/components/DocumentView'
 import { SourceList } from '@/components/SourceList'
 import type { Bundle, Document, Span } from '@/data/types'
@@ -11,7 +12,7 @@ export function HoldingsIndex({ bundle }: { bundle: Bundle }) {
   const countries = Object.values(bundle.countries)
   return (
     <article>
-      <h1 className="mb-1 text-2xl font-semibold">Critical holdings</h1>
+      <PageBand kicker="EU-27 · Critical holdings" title="Critical holdings" />
       <p className="mb-4 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
         The {bundle.holding_classes.length} kinds of government data holding this project
         inventories, in tier order: tier 0 is the identity spine, tier 1 the legal, fiscal and
@@ -98,7 +99,7 @@ export function Holding({ bundle }: { bundle: Bundle }) {
         </Link>{' '}
         · tier {meta.tier}
       </p>
-      <h1 className="mb-4 text-2xl font-semibold">{meta.label}</h1>
+      <PageBand kicker="EU-27 · Critical holding" title={meta.label} />
       <div className="scroll-x">
         <table className="w-full min-w-[40rem] border-collapse text-sm">
           <thead>

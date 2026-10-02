@@ -249,6 +249,8 @@ facts whose author was never recorded.
   corrected and checked again. The verdict stays on the record in the audit file and the appendix.
 - **Where it is shown.** Every asset carries the process and its verdicts as a generated appendix.
 
+The procedure, step by step, and what of it is reproducible: [`docs/fact-check.md`](docs/fact-check.md).
+
 This is a check by a second machine, not by a person. It narrows the blind spots of one model; it does
 not remove those that models share.
 

@@ -41,7 +41,7 @@ Cyprus described on its own measured characteristics. Each figure is the publish
 
 | Indicator | Value |
 |---|---:|
-| Population | 1.00 million[^s2] |
+| Population | 0.997 million[^s2] |
 | GDP, current prices | 36.5 EUR bn[^s3] |
 | Public administration employment (NACE O) | 36.8 thousand[^s4] |
 | Non-household electricity price | 242.9 EUR/MWh[^s5] |
@@ -58,7 +58,7 @@ The holdings Cyprus cannot let depend on infrastructure a foreign state can comp
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | Civil Registry System[^s8] | Civil Registry and Migration Department, with District Administration offices as registration authorities[^s9] | *Not stated in sources* | *Not yet measured* |
 | Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Art. 63(5) (and 67(4) for passports) says fingerprints taken for an ID card may be used only to issue the card and are deleted within 48 hours, verbatim. That shows ID-document fingerprints are not retained under this law, but the source do It is withheld until the fact or its source is corrected and checked again* | — | — | — |
+| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Art. 63(5) (and 67(4) for passports) says fingerprints taken for an ID card may be used only to issue the card and are deleted within 48 hours, verbatim. That shows ID-document fingerprints are not retained under this law, but the source…. It is withheld until the fact or its source is corrected and checked again* | — | — | — |
 | Critical | Breeder document scans (tier 0) | Civil register of births and deaths kept by the Registrar of each District[^s9] | Civil Registry and Migration Department and District Administrations (registration authorities for births and deaths)[^s9] | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Document issuance history (tier 0) | Civil Registry System (handles applications for the issuance of identity cards and passports)[^s8] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
@@ -90,7 +90,7 @@ The holdings Cyprus cannot let depend on infrastructure a foreign state can comp
 | High | Education (tier 1) | Integrated School Management System (SMS)[^s8] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | Single Bank of Electronic Health Records, which keeps and manages citizens' electronic health records[^s33] | National eHealth Authority, a public-law legal person[^s33] | *Not stated in sources* | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | The electronic edition of the Official Gazette is the only authentic edition with legal effect[^s34][^s8] | Published permanently and free of charge on the Government Printing Office website[^s34] | *Not stated in sources* | *Not yet measured* |
-| Standard | Emergency calls and public-safety radio (tier 1) | Next Generation 112 system; development agreement between Civil Defence and CYTA, 20-month implementation[^s35] | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The article only reports that Civil Defence signed a development agreement with CYTA for a system to be built over 20 months; it says nothing about where the infrastructure runs, what kind of entity CYTA is, or any hosting arrangement, so ' It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| Standard | Emergency calls and public-safety radio (tier 1) | Next Generation 112 system; development agreement between Civil Defence and CYTA, 20-month implementation[^s35] | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The article only reports that Civil Defence signed a development agreement with CYTA for a system to be built over 20 months; it says nothing about where the infrastructure runs, what kind of entity CYTA is, or any hosting arrangement, so…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | State Archives, in which public records are deposited and kept[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Statistical microdata (tier 2) | Confidential statistical data: data that permit direct or indirect identification of statistical units[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Cyprus without a verified source yet. Corrections and 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed.
 
 ### How sources were found
 
@@ -204,10 +204,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
-| T2 competent public body or audit office | 589 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 613 |
+| T2 competent public body or audit office | 594 |
 | T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
 ### Evidence grades
 
@@ -217,7 +217,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 100 |
-| Standard | 1209 |
+| Standard | 1221 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -258,7 +258,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1309 of 1309 printed facts pass the fact check.
+In this build, 1321 of 1321 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -300,7 +300,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
+In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -323,6 +323,8 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
+| wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
 | wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
@@ -333,7 +335,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
 | indicator:CY:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| param:CY:population_m | param:CY:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:CY:population_m | param:CY:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_5fd3e22d-b86 |
 | param:CY:gdp_eur_bn | param:CY:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:CY:gov_employment_k | param:CY:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:CY:elec_price_eur_mwh | param:CY:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |

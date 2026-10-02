@@ -1,5 +1,6 @@
 import { SourceList } from '@/components/SourceList'
 import type { Bundle } from '@/data/types'
+import { PageBand } from '@/components/PageBand'
 
 /** The whole register of checked sources, each with every claim in the bundle it supports. */
 export function Sources({ bundle }: { bundle: Bundle }) {
@@ -13,7 +14,7 @@ export function Sources({ bundle }: { bundle: Bundle }) {
   }
   return (
     <article>
-      <h1 className="mb-1 text-2xl font-semibold">Sources</h1>
+      <PageBand kicker="EU-27 · Evidence" title="Sources" />
       <p className="max-w-3xl text-sm text-[var(--color-fg-secondary)]">
         {ids.length} sources support {Object.keys(bundle.claims).length} claims. A source is
         admitted only after its document was fetched, its SHA-256 recorded and the quoted text found

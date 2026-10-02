@@ -30,7 +30,7 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
 
       <header className="no-print border-b border-[var(--color-border)] px-4 py-3">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-4 gap-y-2">
-          <span className="font-semibold">EU-27 Sovereign Data Centres</span>
+          <span className="font-serif text-lg">EU-27 Sovereign Data Centres</span>
           <nav aria-label="Main" className="flex flex-wrap gap-x-3 gap-y-1 text-sm">
             {NAV.map(n => (
               <NavLink
@@ -39,7 +39,7 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
                 end={n.end}
                 className={({ isActive }) =>
                   isActive
-                    ? 'text-[var(--color-accent-text)] underline'
+                    ? 'text-[var(--color-accent-text)] underline decoration-[var(--color-eu-gold)] decoration-2 underline-offset-4'
                     : 'text-[var(--color-fg-secondary)] hover:text-[var(--color-fg-primary)]'
                 }
               >

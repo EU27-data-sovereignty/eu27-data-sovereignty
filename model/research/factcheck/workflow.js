@@ -52,6 +52,8 @@ For each fact:
    Be strict and do not use outside knowledge to fill a gap: a quote that names a register without saying who operates it does not support an operator.
 4. One or two sentences of reason, and the URL you actually read.
 
+If a fact has "cached_copies" ({source_id: path}), its pages refused automated access when last checked. Do not fetch them again. Read the cached copy instead (Read or grep the file): it is the exact document the project fetched and hashed when the fact was admitted. Judge the fact against it and say in the reason that you read the hashed copy.
+
 Facts are sorted by source, so fetch each page once and reuse it for every fact that cites it. Give a verdict for EVERY fact; never skip one. Report your own model id in checker_model.`
 }
 

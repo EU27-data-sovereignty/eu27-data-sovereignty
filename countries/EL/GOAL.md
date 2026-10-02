@@ -41,7 +41,7 @@ Greece described on its own measured characteristics. Each figure is the publish
 
 | Indicator | Value |
 |---|---:|
-| Population | 10.37 million[^s12] |
+| Population | 10.367 million[^s12] |
 | GDP, current prices | 248.4 EUR bn[^s13] |
 | Public administration employment (NACE O) | 400.6 thousand[^s14] |
 | Non-household electricity price | 173.8 EUR/MWh[^s15] |
@@ -59,7 +59,7 @@ The holdings Greece cannot let depend on infrastructure a foreign state can comp
 | Critical | Civil registry core (tier 0) | «Μητρώο Πολιτών» (Citizens' Register): national information system combining the National Municipal Register (Δημοτολόγιο) and civil-status (registry) records[^s18][^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Facial biometric (tier 0) | Facial image and two flat fingerprints collected by the Passports and Security Documents Directorate (Δ.Δ.Ε.Α./Α.Ε.Α.) of Hellenic Police HQ and stored on the passport chip[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Fingerprint biometric (tier 0) | Encrypted fingerprint images kept in the Central Database of the Passports Directorate, accessible only to authorised police staff[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Breeder document scans (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Art. 115 of Law 4483/2017 (both the PDF and lawspot) says the Citizens' Register comprises the civil-status acts (ληξιαρχικές πράξεις) of Greek citizens and foreigners with events in Greece, held in the Ministry of the Interior's Registry A It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Art. 115 of Law 4483/2017 (both the PDF and lawspot) says the Citizens' Register comprises the civil-status acts (ληξιαρχικές πράξεις) of Greek citizens and foreigners with events in Greece, held in the Ministry of the Interior's Registry…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | GRNET keeps for 12 months a history of actions taken in the Gov.gr Wallet document-presentation process[^s21] | GRNET (Ε.Δ.Υ.Τ.Ε. Α.Ε.), company of the Greek State, is the designated processor[^s21] | *Not stated in sources* | *Not yet measured* |
 | High | Document issuance history (tier 0) | Web services supplying public bodies with data on issued Greek passports, via the Interoperability Centre[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electoral roll entry (tier 0) | Electoral rolls kept at the Ministry of the Interior, compiled from municipal registers (δημοτολόγια)[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
@@ -67,7 +67,7 @@ The holdings Greece cannot let depend on infrastructure a foreign state can comp
 | High | Judicial & criminal justice (tier 1) | Criminal record consists of record slips, subject to use of the computerised system[^s24][^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | Gov.gr Wallet requires the personal TaxisNet credentials (or web-banking credentials) plus a verified mobile number[^s26] | Ministry of Digital Governance is the controller for the authentication services of gov.gr[^s4][^s23] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and says GRNET, a Greek State company, designs, implements and maintains the application on behalf of the Ministry; but the page says nothing about where the infrastructure runs (no hosting, server or data-centre st It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | Gov.gr Wallet requires the personal TaxisNet credentials (or web-banking credentials) plus a verified mobile number[^s26] | Ministry of Digital Governance is the controller for the authentication services of gov.gr[^s4][^s23] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and says GRNET, a Greek State company, designs, implements and maintains the application on behalf of the Ministry; but the page says nothing about where the infrastructure runs (no hosting, server or data-centre…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
 | High | Residence and migration status (tier 1) | Migration Information Systems and the Register of Aliens (Μητρώο Αλλοδαπών), centrally operated by the Ministry of Migration and Asylum[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
 | High | Benefits & pensions (tier 1) | ATLAS: digital pension award system of e-EFKA, whose database holds insurance-period data digitised from former IKA archives[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
 | High | Statutory health insurance (tier 1) | Electronic prescription system installed and operated at ΗΔΥΚΑ (IDIKA) for the social-insurance funds[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
@@ -146,7 +146,7 @@ Tier 0 and 1 holdings for Greece without a verified source yet. Corrections and 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed.
 
 ### How sources were found
 
@@ -202,10 +202,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
-| T2 competent public body or audit office | 589 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 613 |
+| T2 competent public body or audit office | 594 |
 | T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
 ### Evidence grades
 
@@ -215,7 +215,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 100 |
-| Standard | 1209 |
+| Standard | 1221 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -256,7 +256,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1309 of 1309 printed facts pass the fact check.
+In this build, 1321 of 1321 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -298,7 +298,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
+In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -321,6 +321,8 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
+| wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
 | wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
@@ -335,7 +337,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | indicator:EL:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:EL:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:EL:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| param:EL:population_m | param:EL:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:EL:population_m | param:EL:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_5fd3e22d-b86 |
 | param:EL:gdp_eur_bn | param:EL:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:EL:gov_employment_k | param:EL:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:EL:elec_price_eur_mwh | param:EL:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |

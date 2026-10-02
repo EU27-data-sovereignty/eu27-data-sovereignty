@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 
+import { PageBand } from '@/components/PageBand'
+
 export function NotFound() {
   return (
     <article>
-      <h1 className="mb-2 text-2xl font-semibold">Page not found</h1>
+      <PageBand kicker="EU-27" title="Page not found" />
       <p className="text-[var(--color-fg-secondary)]">
         <Link className="underline" to="/">
           Back to the overview

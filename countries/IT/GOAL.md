@@ -40,7 +40,7 @@ Italy described on its own measured characteristics. Each figure is the publishe
 
 | Indicator | Value |
 |---|---:|
-| Population | 58.94 million[^s5] |
+| Population | 58.943 million[^s5] |
 | GDP, current prices | 2 265.0 EUR bn[^s6] |
 | Public administration employment (NACE O) | 1 213.1 thousand[^s7] |
 | Non-household electricity price | 220.3 EUR/MWh[^s8] |
@@ -57,7 +57,7 @@ The holdings Italy cannot let depend on infrastructure a foreign state can compe
 |---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | ANPR (National Register of the Resident Population) is the Ministry of the Interior's single database for population data[^s11][^s12] | Ministry of the Interior; Sogei S.p.A. provides the technical operation[^s11][^s13] | *Not stated in sources* | *Not yet sourced* |
 | Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim and support 'ANSC - national computerised archive of civil-status registers', but neither the ANSC guide page nor art. 62 CAD says the registers are those of births, marriages and deaths; the printed parenthetical ' It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim and support 'ANSC - national computerised archive of civil-status registers', but neither the ANSC guide page nor art. 62 CAD says the registers are those of births, marriages and deaths; the printed parenthetical…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Facial biometric (tier 0) | The CIE electronic record card (cartellino elettronico), kept by SSCE, holds the holder's photograph, signature scan and registry data[^s14] | Centro Nazionale dei Servizi Demografici (CNSD), Ministry of the Interior[^s14] | National infrastructure[^s14] | *Not yet measured* |
 | High | Digital identity credentials (tier 0) | SPID (sistema pubblico per la gestione dell'identità digitale di cittadini e imprese – public digital identity system)[^s15] | Open set of public and private entities accredited by AgID[^s15] | *Not stated in sources* | *Not yet measured* |
@@ -149,7 +149,7 @@ Tier 0 and 1 holdings for Italy without a verified source yet. Corrections and s
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed.
 
 ### How sources were found
 
@@ -205,10 +205,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
-| T2 competent public body or audit office | 589 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 613 |
+| T2 competent public body or audit office | 594 |
 | T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
 ### Evidence grades
 
@@ -218,7 +218,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 100 |
-| Standard | 1209 |
+| Standard | 1221 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -259,7 +259,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1309 of 1309 printed facts pass the fact check.
+In this build, 1321 of 1321 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -301,7 +301,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
+In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -324,6 +324,8 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
+| wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
 | wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
@@ -339,7 +341,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | indicator:IT:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:IT:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:IT:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| param:IT:population_m | param:IT:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:IT:population_m | param:IT:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_5fd3e22d-b86 |
 | param:IT:gdp_eur_bn | param:IT:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:IT:gov_employment_k | param:IT:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:IT:elec_price_eur_mwh | param:IT:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |

@@ -7,6 +7,7 @@ import { SpanView } from '@/components/DocumentView'
 import { SourceList } from '@/components/SourceList'
 import { claimsBySource, numberSources } from '@/data/sources'
 import type { Bundle, Document, GroupId, Placement, Span } from '@/data/types'
+import { PageBand } from '@/components/PageBand'
 
 type Confidence = 'All' | Placement['confidence']
 
@@ -87,7 +88,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
 
   return (
     <article>
-      <h1 className="mb-1 text-2xl font-semibold">Data-sovereignty ranking</h1>
+      <PageBand kicker="EU-27 · Ranking by published rule" title="Data-sovereignty ranking" />
       <p className="mb-2 max-w-3xl border-l-4 border-[var(--color-highlight)] bg-[var(--color-bg-emphasis)] px-3 py-2 text-sm">
         {sov.guardrail}
       </p>
@@ -185,7 +186,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
           aria-live="polite"
           className="mb-10 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4"
         >
-          <h2 className="text-lg font-semibold">{names[selected]}</h2>
+          <h2 className="font-serif text-xl">{names[selected]}</h2>
           <p className="mb-2 text-sm">
             <strong>{labels[sel.group]}</strong> · {sel.confidence} confidence · could still reach{' '}
             {labels[sel.range[0]!]}
@@ -209,9 +210,7 @@ export function Sovereignty({ bundle }: { bundle: Bundle }) {
       ) : null}
 
       <section aria-label="Indicators">
-        <h2 className="mb-2 text-lg font-semibold text-[var(--color-accent-text)]">
-          The indicators
-        </h2>
+        <h2 className="mb-2 font-serif text-xl text-[var(--color-accent-text)]">The indicators</h2>
         <div className="scroll-x">
           <table className="w-full min-w-[40rem] border-collapse text-sm">
             <thead>

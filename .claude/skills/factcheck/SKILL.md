@@ -5,6 +5,9 @@ description: Fact-check every printed fact that is due, as printed, with the mod
 
 # /factcheck: the cross-model fact check that gates every deploy (#87)
 
+The procedure is in `docs/fact-check.md`, including the options (`--pool`, `--withheld-blocked`) and
+what is reproducible. This skill is the order of operations.
+
 A push to `main` deploys to production, and the deploy refuses to run unless `factcheck.py gate`
 passes. The gate requires every printed fact to have a current verdict of *supported* from a checker
 model that did not write it, and requires `docs/fact-check-audit.md` to be current. This skill is the

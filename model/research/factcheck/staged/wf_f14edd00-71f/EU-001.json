@@ -1,0 +1,130 @@
+{
+ "run": "wf_f14edd00-71f",
+ "prepared": "2026-10-02-97326037",
+ "batch": "EU-001",
+ "iso": "EU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:EE:customs:register",
+   "fact_sha256": "6ad00c1fef766aea2e55b77a3aa5d0b06dfd968daadaa4232fdd84e5aded637d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Read the hashed copy (f81a4a1d0c92fbd6.txt). The MTA news item says verbatim that from 1 July the new import customs clearance information system Impulss starts operating ('uus impordi tollivormistuse infosüsteem Impulss'), which matches the printed name and description exactly.",
+   "quote_found": true,
+   "checked_url": "https://www.emta.ee/uudised/mta-votab-kasutusele-uue-impordi-tollivormistuse-infosusteemi"
+  },
+  {
+   "claim": "record:EE:education:operator",
+   "fact_sha256": "8d593eed979740a31f6f835754d8d2e214afbb5b3d306e0f45d4bb33eb722e0d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Read the hashed copy (38e2cf8c5b69cbb2.txt). The ministry PDF states that EHIS is a state register 'Haridus- ja Teadusministeeriumi poolt hallatav' (managed by the Ministry of Education and Research), which names the operator as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.hm.ee/sites/default/files/documents/2024-07/Eesti%20keele%20tasemeeksamiks%20ettevalmistava%20t%C3%A4ienduskoolituse%20tegevusloa%20taotlemise%20kirjeldus.pdf"
+  },
+  {
+   "claim": "record:EE:firearms_register:register",
+   "fact_sha256": "dc83bd5947dcc18e2d1aad203fd63061500265495ba75702059b342627cbdbd7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Read the hashed copy (d17bacbd08e77761.txt). The PPA open-data note is titled 'Teenistus- ja tsiviilrelvade register' and says the data source is 'teenistus- ja tsiviilrelvade register', matching the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://www.politsei.ee/files/Anal%C3%BC%C3%BCs%20ja%20statistika/ppa-avaandmete-seletuskiri-relvaregister-05.06.20.pdf"
+  },
+  {
+   "claim": "record:EE:crisis_management:register",
+   "fact_sha256": "3201f7175b41cb1a3fc8958b311a56f3dc42afba9f092b8a4b283672bbf776a4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Read the hashed copy (9a0561c074d296e6.txt). The quoted ESS § 105¹(2) text makes Häirekeskus the body that transmits warnings through the 'ohuteavituse süsteem' (and (5) has it act on system failure), and the same overview identifies EE-ALARM as the sender name of this location-based SMS warning; the source does not use the word 'operate', but the sending function is assigned to Häirekeskus as pri",
+   "quote_found": true,
+   "checked_url": "https://www.siseministeerium.ee/sites/default/files/documents/2024-02/EE-ALARM_ylevaade_avalik_07022024.pdf"
+  },
+  {
+   "claim": "record:EE:emergency_communications:operator",
+   "fact_sha256": "9801b8dcfc069c5e35c52ff2f6499e7c56edd12ccc35672ed89125ea86a91117",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Read the hashed copy (9a0561c074d296e6.txt). The quote only says Häirekeskus transmits public warnings through a warning system that is part of the emergency-notifications database; it says nothing about who operates emergency calls or public-safety radio, nor who administers that database, so the operator claim for this class is not what the cited text says.",
+   "quote_found": true,
+   "checked_url": "https://www.siseministeerium.ee/sites/default/files/documents/2024-02/EE-ALARM_ylevaade_avalik_07022024.pdf"
+  },
+  {
+   "claim": "record:EE:emergency_communications:register",
+   "fact_sha256": "072c1bf8a9fcfd27dc8a9f2545ee037d9fc3dc04c93db1a2f2e1b75a2ed2ef29",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Read the hashed copy (9a0561c074d296e6.txt). The quoted statute text names the 'hädaabiteadete ning abi- ja infoteadete andmekogu' verbatim, which is the register name printed, and the English gloss is a faithful rendering.",
+   "quote_found": true,
+   "checked_url": "https://www.siseministeerium.ee/sites/default/files/documents/2024-02/EE-ALARM_ylevaade_avalik_07022024.pdf"
+  },
+  {
+   "claim": "record:SK:geospatial:register",
+   "fact_sha256": "f749ac7ff6890bd2c3d303108beadd6172659523d538bcad217833b7d61afaa7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Read the hashed copy (4a5860b30a65ad43.txt), the text of Act 125/2015 'o registri adries'. § 4(1) says the register's správca (administrator) is Ministerstvo vnútra Slovenskej republiky, and § 4(3) refers to 'registra adries', matching the printed name and administering body.",
+   "quote_found": true,
+   "checked_url": "https://zakony.judikaty.info/predpis/zakon-125/2015"
+  },
+  {
+   "claim": "record:SK:emergency_communications:register",
+   "fact_sha256": "71d742b0e8b73d026b895c4a043a187406d2532acbf069304569f13be6fd3e41",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Read the hashed copy (f03483c0fee301a3.txt), Act 129/2002 on the integrated rescue system. § 5(2)(a) says the koordinačné stredisko ensures receipt of emergency calls, eCall calls and SMS on 112, which is exactly the printed description; the act establishes one centre per region, so the plural is fine.",
+   "quote_found": true,
+   "checked_url": "https://zakony.judikaty.info/predpis/zakon-129/2002"
+  },
+  {
+   "claim": "record:SK:police_records:register",
+   "fact_sha256": "e63f26f34758dde4112d993704b1ebf9bbbc8ffaa314069499d6c15c69fe2af3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Read the hashed copy (a08ccd5a170a48c0.txt), Act 171/1993 on the Police Force. § 69(1) says the Police Force processes information, personal data, dactyloscopic data and face images, and § 39b of the same act refers to 'informačných systémoch Policajného zboru (§ 69)', so the printed description of Police Force information systems is supported.",
+   "quote_found": true,
+   "checked_url": "https://zakony.judikaty.info/predpis/zakon-171/1993"
+  },
+  {
+   "claim": "record:SK:facial_biometric:register",
+   "fact_sha256": "eb60b5f6572c84e00c303cdd95d2a0ffa936daed7235340d0788e274bd3e74eb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Read the hashed copy (ffdb1e2c3028e372.txt), Act 224/2006 on identity cards (2019 version). § 15(1) says the ministry and district directorates keep the 'evidencia občianskych preukazov'; the act defines 'ministerstvo' as Ministerstvo vnútra SR (§ 4b(3)) and 'okresné riaditeľstvo' as the district directorate of the Police Force (§ 4a(2)), and § 15(2)(j) lists the face image, so the printed name an",
+   "quote_found": true,
+   "checked_url": "https://zakony.judikaty.info/predpis/zakon-224/2006"
+  },
+  {
+   "claim": "record:SK:issuance_history:operator",
+   "fact_sha256": "9ea8fb1284b5a6b54dfb15dbcf413df9e6c26dc0e444d696d02d577b7809fff9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Read the hashed copy (ffdb1e2c3028e372.txt). § 15(1) of Act 224/2006 says 'Ministerstvo a okresné riaditeľstvá vedú evidenciu občianskych preukazov', with 'ministerstvo' defined as the Ministry of Interior and 'okresné riaditeľstvo' as a district directorate of the Police Force elsewhere in the same act, matching the printed keepers.",
+   "quote_found": true,
+   "checked_url": "https://zakony.judikaty.info/predpis/zakon-224/2006"
+  },
+  {
+   "claim": "record:SK:beneficial_ownership:register",
+   "fact_sha256": "83d11594dd01307f43dcd7c4b340ff6e33e1e1bdc1f046a0f2aae00feea97a24",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Read the hashed copy (8bf7bf0c118c5216.txt), Act 315/2016 'o registri partnerov verejného sektora'. § 3(1) says the register's správca and prevádzkovateľ is Ministerstvo spravodlivosti SR and the registrujúci orgán is Okresný súd Žilina, which matches the printed name, operator and registering body.",
+   "quote_found": true,
+   "checked_url": "https://zakony.judikaty.info/predpis/zakon-315/2016"
+  }
+ ]
+}

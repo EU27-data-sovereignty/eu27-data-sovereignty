@@ -306,11 +306,29 @@ def build_stamp() -> str:
     return f"Built from commit {commit}; data bundle sha256 {digest}."
 
 
+# The pages the web shows as previews of the EU-27 report, rendered from the report itself at build time
+# (`previews`), never committed. Each is found by an invisible marker, so a page that moves still renders.
+PREVIEW_ISO = "DE"
+PREVIEWS = ("cover", "ranking", "country", "methodology")
+
+
+def mark(name: str) -> str:
+    """An invisible marker recording the page it lands on, for `previews`."""
+    return f"#context [#metadata(here().page()) <preview-{name}>]"
+
+
+def after_heading(typ: str, name: str) -> str:
+    """`typ` with the preview marker for `name` placed right after its first heading line."""
+    lines = typ.split("\n")
+    i = next(n for n, line in enumerate(lines) if line.startswith("= "))
+    return "\n".join(lines[:i + 1] + [mark(name)] + lines[i + 1:])
+
+
 def report_typ(b: dict) -> str:
     r = Renderer(b)
     docs = sorted(b["documents"].values(), key=lambda d: d["name"])
-    rank = ranking(b, r)
-    body = [r.chapter(d) for d in docs]
+    rank = after_heading(ranking(b, r), "ranking")
+    body = [after_heading(r.chapter(d), "country") if d["iso"] == PREVIEW_ISO else r.chapter(d) for d in docs]
     return "\n".join([
         '#import "/templates/report.typ": report, callout, gap, source-entry, claim-entry, method-appendix',
         "",
@@ -326,7 +344,7 @@ def report_typ(b: dict) -> str:
         front_matter(b),
         rank,
         *body,
-        r.methodology(),
+        after_heading(r.methodology(), "methodology"),
         r.factcheck(),
         r.appendix(),
     ])
@@ -359,6 +377,25 @@ def country_typ(b: dict, iso: str) -> str:
     ])
 
 
+def previews(name: str, out: Path, ppi: int = 110) -> list[Path]:
+    """PNG previews of the compiled report's marked pages, as `out/report-<page>.png`. Uses typst alone,
+    so the build needs nothing beyond what makes the PDF."""
+    typ = BUILD / f"{name}.typ"
+    out.mkdir(parents=True, exist_ok=True)
+    made = []
+    for page_name in PREVIEWS:
+        page = 1
+        if page_name != "cover":
+            page = int(subprocess.run(
+                ["typst", "eval", f"query(<preview-{page_name}>).first().value", "--in", str(typ),
+                 "--root", str(BOOK)], check=True, capture_output=True, text=True).stdout.strip())
+        png = out / f"report-{page_name}.png"
+        subprocess.run(["typst", "compile", "--root", str(BOOK), str(typ), str(png), "--pages", str(page),
+                        "--ppi", str(ppi)], check=True)
+        made.append(png)
+    return made
+
+
 def compile_typ(source: str, name: str, out: Path) -> None:
     BUILD.mkdir(exist_ok=True)
     typ = BUILD / f"{name}.typ"
@@ -379,6 +416,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.out:
         compile_typ(report_typ(b), "report", args.out / "eu27-report.pdf")
+        previews("report", args.out / "previews")
         for iso in sorted(b["documents"]):
             compile_typ(country_typ(b, iso), f"report-{iso}", args.out / "report" / f"{iso}.pdf")
         print(f"{args.out}: eu27-report.pdf and {len(b['documents'])} country PDFs")

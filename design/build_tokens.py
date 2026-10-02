@@ -71,6 +71,9 @@ def css(tokens: dict) -> str:
     lines += [f"  --color-{kebab(k)}: {v};" for k, v in tokens["brand"].items()]
     lines += [f"  --color-{kebab(k)}: {v};" for k, v in light.items()]
     lines += [f"  --text-{k}: {v}px;" for k, v in px.items() if k in ("axis", "body", "stat")]
+    # The print serif, for display type on the web too: the site and the PDFs share one voice.
+    serif = ", ".join(f'"{n}"' if " " in n else n for n in tokens["type"]["print_family"]) + ", serif"
+    lines += [f"  --font-serif: {serif};"]
     lines += ["}", ""]
     dark_block = [f"    --color-{kebab(k)}: {v};" for k, v in dark.items()]
     lines += ["@layer base {", "  @media (prefers-color-scheme: dark) {",

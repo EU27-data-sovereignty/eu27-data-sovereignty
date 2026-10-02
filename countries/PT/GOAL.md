@@ -28,7 +28,7 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | State-controlled trust anchor | *Not yet sourced* |
 | State-controlled national eID | Yes[^s4][^s5] |
 | Government data centres | Yes[^s6][^s7][^s8][^s9] |
-| Government cloud in operation | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: All three quotes are present (ARTE news 29 May 2026; PNNS May 2026 with 'Desenvolvimento, pelo Estado, de infraestrutura nacional soberana de nuvem' scheduled from S1 2026; RCM 102/2026 funding implementation and initial migration via ARTE  It is withheld until the fact or its source is corrected and checked again* |
+| Government cloud in operation | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: All three quotes are present (ARTE news 29 May 2026; PNNS May 2026 with 'Desenvolvimento, pelo Estado, de infraestrutura nacional soberana de nuvem' scheduled from S1 2026; RCM 102/2026 funding implementation and initial migration via ARTE…. It is withheld until the fact or its source is corrected and checked again* |
 
 What could move this placement:
 
@@ -41,7 +41,7 @@ Portugal described on its own measured characteristics. Each figure is the publi
 
 | Indicator | Value |
 |---|---:|
-| Population | 11.42 million[^s10] |
+| Population | 11.424 million[^s10] |
 | GDP, current prices | 308.5 EUR bn[^s11] |
 | Public administration employment (NACE O) | 314.8 thousand[^s12] |
 | Non-household electricity price | 132.9 EUR/MWh[^s13] |
@@ -59,10 +59,10 @@ The holdings Portugal cannot let depend on infrastructure a foreign state can co
 | Critical | Civil registry core (tier 0) | Civil registry database (base de dados do registo civil) holding nationality, civil status and legal capacity of citizens[^s16] | The President of IRN, I.P. is the data controller of the civil registry database[^s16] | *Not stated in sources* | *Not yet measured* |
 | Critical | Facial biometric (tier 0) | Facial image files collected for the Citizen Card are communicated only to the civil identification database[^s17] | IRN, I.P. is the controller for Citizen Card data processing operations[^s17] | *Not stated in sources* | *Not yet measured* |
 | Critical | Fingerprint biometric (tier 0) | Citizen Card applications must include facial image and fingerprints[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Breeder document scans (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 32(1) of Lei 33/99 says ID-card applications and 'certidões não emitidas pelo registo civil português' are microfilmed or kept on secure computer media and then destroyed; the printed 'foreign-issued certificates' narrows a scope th It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 32(1) of Lei 33/99 says ID-card applications and 'certidões não emitidas pelo registo civil português' are microfilmed or kept on secure computer media and then destroyed; the printed 'foreign-issued certificates' narrows a scope…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | Authentication records (type, date/time) and signatures are processed to manage electronic identification[^s4] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
 | High | Document issuance history (tier 0) | Citizen Card data processing covers issuance, update, renewal and cancellation requests[^s17] | IRN, I.P. is the body responsible for SIPEP[^s18] | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | *Disputed: sources disagree. Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 7/2007, de 5 de Fevereiro – Cartão de Cidadão…, 2007 gives the value this report printed; ARTE - Agência para a Reforma Tecnológica do Estado (Autenticação.gov) — Chave Móvel Digital gives “Chave Móvel Digital (CMD) (Digital Mobile Key)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 2(8) of Lei 32/2017 does assign management and security of the CMD technological infrastructure to AMA, I.P., but the page never mentions ARTE, so the printed parenthetical '(the predecessor of ARTE)' is an addition the source does  It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet sourced* |
+| High | Digital identity credentials (tier 0) | *Disputed: sources disagree. Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 7/2007, de 5 de Fevereiro – Cartão de Cidadão…, 2007 gives the value this report printed; ARTE - Agência para a Reforma Tecnológica do Estado (Autenticação.gov) — Chave Móvel Digital gives “Chave Móvel Digital (CMD) (Digital Mobile Key)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 2(8) of Lei 32/2017 does assign management and security of the CMD technological infrastructure to AMA, I.P., but the page never mentions ARTE, so the printed parenthetical '(the predecessor of ARTE)' is an addition the source does…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet sourced* |
 | High | Electoral roll entry (tier 0) | *Disputed: sources disagree. Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 13/99, de 22 de Março – Regime Jurídico do…, 1999 gives the value this report printed; Secretaria-Geral do Ministério da Administração Interna (SGMAI) — Administração Eleitoral gives “Base de Dados do Recenseamento Eleitoral (Voter Registration Database)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | SGMAI electoral administration organises, maintains and manages BDRE and SIGRE[^s19] | *Not stated in sources* | 11 130 316 inscritos para votar (registered voters)[^s20] |
 | High | State PKI and qualified trust services (tier 0) | The State Electronic Certification Entity is the state's root certification authority at the top of the SCEE chain[^s21] | *Disputed: sources disagree. Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Decreto-Lei n.º 12/2021, de 9 de fevereiro (art. 27.º), 2021 gives the value this report printed; Agência para a Reforma Tecnológica do Estado, I.P. (ARTE) — Certificação eletrónica gives “ARTE (Agência para a Reforma Tecnológica do Estado; Agency for the Technological Reform of the State)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | Land registry databases hold the legal status of real property[^s22] | The President of IRN, I.P. is the controller of the land registry databases[^s22] | *Not stated in sources* | *Not yet measured* |
@@ -74,7 +74,7 @@ The holdings Portugal cannot let depend on infrastructure a foreign state can co
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Customs declarations (tier 1) | STADA-IMP (customs import declaration processing system)[^s29] | AT (Autoridade Tributária e Aduaneira; Tax and Customs Authority)[^s29] | *Not stated in sources* | *Not yet measured* |
 | High | Benefits & pensions (tier 1) | All natural and legal persons dealing with social security are identified in the information system[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Portaria 22/2016 art. 12(1) says only that SINAVE uses the Registo Nacional de Utentes to look up patient identification for the physician profile; it does not say the register is the identification reference for 'other national health syst It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Portaria 22/2016 art. 12(1) says only that SINAVE uses the Registo Nacional de Utentes to look up patient identification for the physician profile; it does not say the register is the identification reference for 'other national health…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Business registry (tier 1) | The commercial registry database holds the legal status of registered entities[^s31] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Código do Registo Comercial art. 78-C(1) says verbatim that the director-geral dos Registos e do Notariado is the database controller, but the page never mentions IRN; the printed gloss '(now IRN)' is added from outside the source. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
 | High | Beneficial ownership register (tier 1) | Registo Central de Beneficiário Efetivo (RCBE) (Central Register of Beneficial Ownership)[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Vehicle & licensing (tier 1) | The vehicle registry database holds the legal status of motor vehicles[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
@@ -88,7 +88,7 @@ The holdings Portugal cannot let depend on infrastructure a foreign state can co
 | High | Crisis management and civil protection (tier 1) | ANEPC organises a national alert and warning system[^s37] | ANEPC plans, coordinates and executes emergency and civil protection policy, including civil emergency planning for crisis or war[^s37] | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | centro de Despacho (National Dispatch centre) of REN - Rede Elétrica Nacional[^s38] | REN - Rede Elétrica Nacional[^s38] | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | The national water authority establishes and maintains the national water resources information system[^s39][^s40] | APA, I.P. is the national water authority exercising the powers of the Water Law[^s40] | *Not stated in sources* | *Not yet measured* |
-| High | Education (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: DL 396/2007 art. 7(5) says the *models* (templates) of diplomas and certificates, defined by portaria, are made available in SIGO, and art. 11(2) says training actions are inscribed in SIGO; it does not say that qualification diplomas and c It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: DL 396/2007 art. 7(5) says the *models* (templates) of diplomas and certificates, defined by portaria, are made available in SIGO, and art. 11(2) says training actions are inscribed in SIGO; it does not say that qualification diplomas and…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Portugal without a verified source yet. Corrections an
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed.
 
 ### How sources were found
 
@@ -204,10 +204,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
-| T2 competent public body or audit office | 589 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 613 |
+| T2 competent public body or audit office | 594 |
 | T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
 ### Evidence grades
 
@@ -217,7 +217,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 100 |
-| Standard | 1209 |
+| Standard | 1221 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -258,7 +258,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1309 of 1309 printed facts pass the fact check.
+In this build, 1321 of 1321 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -300,7 +300,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
+In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -323,6 +323,8 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
+| wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
 | wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
@@ -336,7 +338,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | indicator:PT:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:PT:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:PT:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| param:PT:population_m | param:PT:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:PT:population_m | param:PT:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_5fd3e22d-b86 |
 | param:PT:gdp_eur_bn | param:PT:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:PT:gov_employment_k | param:PT:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:PT:elec_price_eur_mwh | param:PT:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |

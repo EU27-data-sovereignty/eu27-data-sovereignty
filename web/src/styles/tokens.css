@@ -4,6 +4,8 @@
   --color-eu-blue: #003399;
   --color-eu-gold: #FFCC00;
   --color-eu-deep: #00205B;
+  --color-method-deep: #0F6E6E;
+  --color-method-pale: #E8F4F3;
   --color-bg-page: #F6F7FA;
   --color-bg-card: #FFFFFF;
   --color-bg-emphasis: #EAF0FB;
@@ -28,6 +30,7 @@
   --text-axis: 11px;
   --text-body: 14px;
   --text-stat: 30px;
+  --font-serif: "Libertinus Serif", Georgia, "Times New Roman", serif;
 }
 
 @layer base {

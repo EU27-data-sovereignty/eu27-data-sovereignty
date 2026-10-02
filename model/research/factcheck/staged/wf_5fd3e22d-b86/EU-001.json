@@ -1,0 +1,280 @@
+{
+ "run": "wf_5fd3e22d-b86",
+ "prepared": "2026-10-02-f7c0bb4f",
+ "batch": "EU-001",
+ "iso": "EU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "param:AT:population_m",
+   "fact_sha256": "ce2fcecca2c67632f79fdcd12e48fee35d96f35acdbc204112a7d8b1422e2141",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 9215956 for tps00001 (Population on 1 January - total), geo=AT, time=2026; scaled to millions and rounded to three decimals this is 9.216, matching the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=AT&time=2026"
+  },
+  {
+   "claim": "param:BE:population_m",
+   "fact_sha256": "dc9ac7f2d342c7d2fbcb5b3382c274cb40182202f164751c5bd8448886c56ecc",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 11955308 (status flag 'p', provisional) for geo=BE, time=2026; 11.955 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=BE&time=2026"
+  },
+  {
+   "claim": "param:BG:population_m",
+   "fact_sha256": "34322b65a1b400c91c3047be291c67731553484593e2a84e39a613f2615353f7",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 6423207 for geo=BG, time=2026; 6.423 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=BG&time=2026"
+  },
+  {
+   "claim": "param:CY:population_m",
+   "fact_sha256": "8f737dc6f97afdd2a7d051ad4619dc369d94cfe0967f37b8c5e926346b40423a",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 996571 (status 'p', provisional) for geo=CY, time=2026; rounded to 0.997 million, matching the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=CY&time=2026"
+  },
+  {
+   "claim": "param:CZ:population_m",
+   "fact_sha256": "23481dfed5cf9e6650ee3dcb0886a09d640ab30e1a06f260e833fb3cd19f55dc",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 10915839 for geo=CZ, time=2026; 10.916 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=CZ&time=2026"
+  },
+  {
+   "claim": "param:DE:population_m",
+   "fact_sha256": "39e619d79c18e9598231734b00cd3963c0e526db044725966a009957c2ce1de6",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 83467117 for geo=DE, time=2026; 83.467 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=DE&time=2026"
+  },
+  {
+   "claim": "param:DK:population_m",
+   "fact_sha256": "390bed1de3449e72bde06fc23e41905206c31794870d23fbbb119f65adb72dad",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 6025603 for geo=DK, time=2026; 6.026 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=DK&time=2026"
+  },
+  {
+   "claim": "param:EE:population_m",
+   "fact_sha256": "4e3f1500446959bca04f8f957d2ea6dec7559026632053fae3b41a8738cdbcf4",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 1360745 for geo=EE, time=2026; 1.361 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=EE&time=2026"
+  },
+  {
+   "claim": "param:EL:population_m",
+   "fact_sha256": "5aeb113beabceb6f25777f52b1a79f38ca94bd80dac7d0ac36fa8e8c5268cf7c",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 10366586 (status 'ep', estimated and provisional) for geo=EL, time=2026; 10.367 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=EL&time=2026"
+  },
+  {
+   "claim": "param:ES:population_m",
+   "fact_sha256": "ef7c77413502590c7c5951c0b2215521d5a89c8562a21fcff012ba724e35768e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 49590099 (status 'p', provisional) for geo=ES, time=2026; 49.590 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=ES&time=2026"
+  },
+  {
+   "claim": "param:FI:population_m",
+   "fact_sha256": "43665a9311289321305127d31f9b0fe1b56b5eb79c7a2db32b75ee381384f6ea",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 5652881 for geo=FI, time=2026; 5.653 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=FI&time=2026"
+  },
+  {
+   "claim": "param:FR:population_m",
+   "fact_sha256": "d4714fc33b86b4e6779037729375acbca918185f2c811cc8d3513f2f0963c30e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 69112309 (status 'p', provisional) for geo=FR, time=2026; 69.112 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=FR&time=2026"
+  },
+  {
+   "claim": "param:HR:population_m",
+   "fact_sha256": "30d00ba778690524819471756da8fda06ed6d7d74eae4825eb4d17965966f142",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 3876002 for geo=HR, time=2026; 3.876 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=HR&time=2026"
+  },
+  {
+   "claim": "param:HU:population_m",
+   "fact_sha256": "7f68954f6bdf7479573a353ecf0e57294452063ec0f5bf0404c473106ac01d6a",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 9488428 for geo=HU, time=2026; 9.488 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=HU&time=2026"
+  },
+  {
+   "claim": "param:IE:population_m",
+   "fact_sha256": "b15b8408e7937646957a50bb50b15b8297871202fa69fede732e70e1114660bc",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 5510565 for geo=IE, time=2026; 5.511 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=IE&time=2026"
+  },
+  {
+   "claim": "param:IT:population_m",
+   "fact_sha256": "abf763bfaefdf6578eb67492978c4bc09cf7a4cdee91d9f5bc38fb646afec89e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 58942828 (status 'p', provisional) for geo=IT, time=2026; 58.943 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=IT&time=2026"
+  },
+  {
+   "claim": "param:LT:population_m",
+   "fact_sha256": "3dfe44c17304f673952cf472c6b1ee0d169265e30ee901ba98b2e274ade01fc3",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 2887592 for geo=LT, time=2026; 2.888 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=LT&time=2026"
+  },
+  {
+   "claim": "param:LU:population_m",
+   "fact_sha256": "27868bd2e6701af7bfd50681bd67a9163042a555bb8d6552585af4249b4cc0e7",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 690959 for geo=LU, time=2026; 0.691 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=LU&time=2026"
+  },
+  {
+   "claim": "param:LV:population_m",
+   "fact_sha256": "70e734b2c18471da316814e009a19fa2494eeeac8fd2004f6f5a7e33300bc4aa",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 1845096 for geo=LV, time=2026; 1.845 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=LV&time=2026"
+  },
+  {
+   "claim": "param:MT:population_m",
+   "fact_sha256": "5b46a231b2efeef74e7b2af0bec10204b2c2578de429fbd7fd0b8dad63138f84",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 588254 for geo=MT, time=2026; 0.588 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=MT&time=2026"
+  },
+  {
+   "claim": "param:NL:population_m",
+   "fact_sha256": "faed72b16277d3a6cb21013a5b67910683080cd09b00c801d2affc5c0e4c90be",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 18130208 for geo=NL, time=2026; 18.130 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=NL&time=2026"
+  },
+  {
+   "claim": "param:PL:population_m",
+   "fact_sha256": "7ffa1c53e58f5e50c8a97492e3c35ae92aa79b83086fc25b8a9bf3c3f763b7f4",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 36332765 for geo=PL, time=2026; 36.333 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=PL&time=2026"
+  },
+  {
+   "claim": "param:PT:population_m",
+   "fact_sha256": "c4cf3401480e5f411d3f4f04d598c697a99a256c1c46085f1df0233b7170a449",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 11424031 for geo=PT, time=2026; 11.424 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=PT&time=2026"
+  },
+  {
+   "claim": "param:RO:population_m",
+   "fact_sha256": "cf878ec8e9436d684f04afa7de8cc03310b630be199c6192c223749b31498cc0",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 19041322 (status 'e', estimated) for geo=RO, time=2026; 19.041 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=RO&time=2026"
+  },
+  {
+   "claim": "param:SE:population_m",
+   "fact_sha256": "88a3d80ca33c6d6b207dc11db93772343528251bf8d150ba1a65fbea9f945469",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 10605529 for geo=SE, time=2026; rounded to three decimals this is 10.606 million, matching the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=SE&time=2026"
+  },
+  {
+   "claim": "param:SI:population_m",
+   "fact_sha256": "3811a24a383407ccb3c1a0bf5c61ebaec81cdbd45249b6f4155522f828a51e25",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 2135107 for geo=SI, time=2026; 2.135 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=SI&time=2026"
+  },
+  {
+   "claim": "param:SK:population_m",
+   "fact_sha256": "7baca098417d542f7fd63f9b6a4cf93b3ffe147601ba1352341dc7305ab810a1",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The API returns 5409407 for geo=SK, time=2026; 5.409 million matches the printed value.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=SK&time=2026"
+  }
+ ]
+}

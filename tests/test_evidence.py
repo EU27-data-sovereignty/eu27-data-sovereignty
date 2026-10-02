@@ -189,6 +189,15 @@ class Grades(unittest.TestCase):
         return document.walk_spans(doc)
 
 
+class Fundamentals(unittest.TestCase):
+    def test_every_eurostat_figure_prints_at_its_stored_precision(self):
+        # Rounding a stored value again double-rounds: 2.135 (from 2,135,107) printed as 2.13.
+        import document  # noqa: PLC0415
+        from fetch_eurostat import SERIES  # noqa: PLC0415
+        for col, _, _, places in document.FUNDAMENTALS:
+            self.assertEqual(places, SERIES[col][3], col)
+
+
 class RenderedFacts(unittest.TestCase):
     """What the documents print, after #82."""
 
@@ -202,8 +211,11 @@ class RenderedFacts(unittest.TestCase):
     # (record:DE:civil_registry:operator, indicator:DE:K2), now withheld as disputed. Each withheld fact
     # is listed in docs/fact-check-audit.md. Then to 1309 the same day by the first full run
     # (wf_da123db1-a4e, claude-fable-5-1): 79 more facts it did not confirm (46 not supported, 33
-    # unclear) are withheld, 81 in all.
-    FACT_FLOOR = 1309
+    # unclear) are withheld, 81 in all. Then to 1310: population printed at its stored precision (3
+    # decimals), so Slovenia's, withheld for double rounding, prints again, due for its fact check. Then to
+    # 1321: re-checked from their hashed copies, 11 facts whose pages refused the checker were confirmed
+    # (run wf_f14edd00-71f), and the 27 re-printed populations confirmed (wf_5fd3e22d-b86).
+    FACT_FLOOR = 1321
 
     @classmethod
     def setUpClass(cls):

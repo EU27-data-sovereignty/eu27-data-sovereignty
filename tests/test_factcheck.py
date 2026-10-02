@@ -282,6 +282,11 @@ class Withhold(unittest.TestCase):
         self.assertIn("did not confirm this: says 2019, not 2021.", span["t"])
         self.assertIn("run r9", span["t"])
 
+    def test_a_long_reason_is_cut_at_a_word_and_marked(self):
+        f = self.facts[0]
+        span = self.span(f, self.row(f, reason="word " * 80))
+        self.assertIn("word…. It is withheld", span["t"])
+
     def test_unclear_also_withholds(self):
         f = self.facts[0]                      # its ledger row is replaced by the fixture
         span = self.span(f, self.row(f, verdict="unclear"))
@@ -297,18 +302,22 @@ class Withhold(unittest.TestCase):
         self.assertEqual(self.span(f, self.row(f, verdict="supported"))["role"], "fact")
 
     def test_the_bundle_withholds_every_current_disagreement(self):
-        printed = {f["claim"] for f in self.facts}
+        # A disagreement withholds the fact it was about; a fact that has since changed prints again
+        # (with a new hash) and is due for checking.
+        printed = {f["claim"]: factcheck.fact_sha256(f) for f in self.facts}
         for claim, r in factcheck.load_ledger().items():
-            if r["verdict"] != "supported":
-                self.assertNotIn(claim, printed, claim)
+            if r["verdict"] != "supported" and claim in printed:
+                self.assertNotEqual(printed[claim], r["fact_sha256"], claim)
 
 
 class Commands(unittest.TestCase):
     SKILL = (ROOT / ".claude" / "skills" / "factcheck" / "SKILL.md").read_text(encoding="utf-8")
 
-    def test_every_factcheck_subcommand_the_skill_names_exists(self):
+    RUNBOOK = (ROOT / "docs" / "fact-check.md").read_text(encoding="utf-8")
+
+    def test_every_factcheck_subcommand_the_skill_and_runbook_name_exists(self):
         import re  # noqa: PLC0415
-        named = set(re.findall(r"\./run\.sh factcheck ([a-z]+)", self.SKILL))
+        named = set(re.findall(r"(?:\./run\.sh factcheck|model/factcheck\.py) ([a-z]+)", self.SKILL + self.RUNBOOK))
         source = (ROOT / "model" / "factcheck.py").read_text(encoding="utf-8")
         choices = set(re.findall(r'"([a-z]+)"', re.search(r"choices=\[([^\]]+)\]", source).group(1)))
         self.assertTrue(named)
@@ -318,6 +327,15 @@ class Commands(unittest.TestCase):
         self.assertIn("scriptPath: model/research/factcheck/workflow.js", self.SKILL)
         self.assertTrue(factcheck.WORKFLOW.exists())
         self.assertIn("Never push without the", self.SKILL)
+
+    def test_the_runbook_states_the_rule_from_the_code(self):
+        for author, checker in factcheck.RULE:
+            who = f"`{author}`" if author.startswith("claude-") else author
+            self.assertIn(f"| {who} | `{checker}` |", self.RUNBOOK)
+
+    def test_the_ledger_replays_from_the_staged_runs(self):
+        with redirect_stdout(io.StringIO()):
+            self.assertEqual(factcheck.replay(), 0)
 
     def test_the_workflow_sets_the_model_on_every_checker(self):
         js = factcheck.WORKFLOW.read_text(encoding="utf-8")

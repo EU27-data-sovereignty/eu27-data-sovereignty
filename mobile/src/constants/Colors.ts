@@ -81,6 +81,8 @@ export const Brand = {
   euBlue: '#003399',
   euGold: '#FFCC00',
   euDeep: '#00205B',
+  methodDeep: '#0F6E6E',
+  methodPale: '#E8F4F3',
 } as const;
 
 /** Type scale, matching `--text-axis`, `--text-body` and `--text-stat` on the web. */

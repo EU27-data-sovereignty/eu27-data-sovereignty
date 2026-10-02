@@ -6,6 +6,7 @@ import { submitLink } from '@/data/contribute'
 import { claimsBySource, coverage, factCounts, numberSources } from '@/data/sources'
 import type { Bundle } from '@/data/types'
 import { NotFound } from './NotFound'
+import { PageBand } from '@/components/PageBand'
 
 /**
  * One member state, analysed on its own fundamentals (#72). The body is the content model --
@@ -51,7 +52,7 @@ export function Country({ bundle }: { bundle: Bundle }) {
           </Link>{' '}
           · {code}
         </p>
-        <h1 className="mb-2 text-3xl font-semibold">{doc.name}</h1>
+        <PageBand kicker={`EU-27 · Country report · ${doc.iso}`} title={doc.name} />
         <p className="mb-4 text-sm text-[var(--color-fg-secondary)]">
           {cov.verified} of {cov.total} critical holding classes verified · {facts} sourced facts
           shown · {gaps} values withheld until sourced · capacity not yet sized

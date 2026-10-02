@@ -8,6 +8,7 @@ Every printed fact checked by a second model, the one that did not write it, bef
     python3 model/factcheck.py audit [--check]                # regenerate docs/fact-check-audit.md
     python3 model/factcheck.py status                         # what the gate would say
     python3 model/factcheck.py gate                           # exit 1 unless every printed fact passes
+    python3 model/factcheck.py replay                         # the ledger rebuilds from the staged runs
 
 Why this file exists
 --------------------
@@ -163,8 +164,11 @@ def withholding(row: dict | None, sha: str) -> str:
     if not row or row["verdict"] == "supported" or row["fact_sha256"] != sha:
         return ""
     what = "could not confirm" if row["verdict"] == "unclear" else "did not confirm"
+    reason = _clean(row["reason"], 1000)
+    if len(reason) > 240:                      # cut at a word, and say so, rather than mid-word
+        reason = reason[:240].rsplit(" ", 1)[0].rstrip(",;:") + "…"
     return (f"the fact check ({row['checker_model']}, run {row['run']}) {what} this: "
-            f"{_clean(row['reason'], 240)} It is withheld until the fact or its source is corrected and "
+            f"{reason.rstrip('.')}. It is withheld until the fact or its source is corrected and "
             "checked again")
 
 
@@ -247,13 +251,80 @@ def prompt_sha256() -> str:
     return hashlib.sha256(WORKFLOW.read_bytes()).hexdigest() if WORKFLOW.exists() else ""
 
 
-def prepare(everything: bool, size: int, date: str) -> int:
+# A checker's reason saying it could not read the source at all (a refusal, a block, a timeout), as
+# opposed to reading it and disagreeing.
+BLOCKED = re.compile(r"could not (be )?fetch|could not (load|retrieve|access|reach)|\b40[34]\b|timed? ?out|"
+                     r"blocked|unreachable|failed to (load|fetch)|not reachable|captcha|cloudflare", re.I)
+
+
+def unwithheld_facts() -> list[dict]:
+    """Every fact as it would print if the fact check withheld nothing: how a withheld fact is checked
+    again without printing it first."""
+    import export_json  # noqa: PLC0415
+    original = document.Sources.withheld
+    document.Sources.withheld = lambda *a, **k: ""
+    try:
+        return facts(export_json.build_bundle())
+    finally:
+        document.Sources.withheld = original
+
+
+def cached_copies(fact: dict, folder: Path) -> dict[str, str]:
+    """For each citation, a plain-text copy of the exact document the pipeline fetched and hashed when the
+    fact was admitted, found in cache/ by that hash. For pages that now refuse automated access (#89):
+    the checker reads what was hashed instead of retrying a refusal. {source_id: path}."""
+    import html as htmllib  # noqa: PLC0415
+    out = {}
+    for c in fact["citations"]:
+        m = re.search(r"sha256 ([0-9a-f]{64})", c["fetched"])
+        if not m:
+            continue
+        hit = _cache_index().get(m.group(1))
+        if not hit:
+            continue
+        txt = folder / f"{m.group(1)[:16]}.txt"
+        if not txt.exists():
+            folder.mkdir(parents=True, exist_ok=True)
+            if hit.suffix == ".pdf":
+                text = subprocess.run(["pdftotext", "-layout", str(hit), "-"], capture_output=True,
+                                      check=True).stdout.decode("utf-8", "replace")
+            else:
+                raw = hit.read_bytes()
+                cs = re.search(rb"charset=[\"']?([\w-]+)", raw[:4000])
+                page = raw.decode(cs.group(1).decode() if cs else "utf-8", "replace")
+                page = re.sub(r"(?is)<(script|style)\b.*?</\1>", " ", page)
+                text = htmllib.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", page)))
+            txt.write_text(f"Cached copy, sha256 {m.group(1)} of {c['url']}\n\n{text}", encoding="utf-8")
+        out[c["source_id"]] = str(txt)
+    return out
+
+
+_INDEX: dict[str, Path] | None = None
+
+
+def _cache_index() -> dict[str, Path]:
+    global _INDEX
+    if _INDEX is None:
+        _INDEX = {hashlib.sha256(p.read_bytes()).hexdigest(): p for p in (ROOT / "cache").rglob("*")
+                  if p.is_file() and "factcheck" not in p.parts}
+    return _INDEX
+
+
+def prepare(everything: bool, size: int, date: str, pool: bool = False, blocked: bool = False) -> int:
     """Write the workflow's input: the facts due, in batches of one state and one checker model, sorted
     by source so a checker fetches each page once. The run id is the date and the input's hash. The
     workflow's hash is recorded here, when the run is prepared, not when its manifest is written."""
     bundle = load_bundle()
     who = authors(bundle)
-    due = [(f, sha) for f, sha, why in assess(bundle, load_ledger()) if why or everything]
+    if blocked:
+        # Withheld facts whose checker could not read the source, still exactly as they were checked.
+        ledger = load_ledger()
+        rows = {c: r for c, r in ledger.items() if r["verdict"] != "supported" and BLOCKED.search(r["reason"])}
+        due = [(f, sha) for f in unwithheld_facts() if f["claim"] in rows
+               and (sha := fact_sha256(f)) == rows[f["claim"]]["fact_sha256"]]
+        who = {**who, **{f["claim"]: split_authors(rows[f["claim"]]["author_model"]) for f, _ in due}}
+    else:
+        due = [(f, sha) for f, sha, why in assess(bundle, load_ledger()) if why or everything]
     groups: dict[tuple[str, str], list[dict]] = {}
     unassignable = []
     for f, sha in due:
@@ -261,8 +332,11 @@ def prepare(everything: bool, size: int, date: str) -> int:
         if not checker:
             unassignable.append(f["claim"])
             continue
-        groups.setdefault((f["iso"], checker), []).append(
-            {**f, "fact_sha256": sha, "author_model": ";".join(sorted(who[f["claim"]]))})
+        # --pool batches across states, for a few facts in many states (one agent instead of one each).
+        record = {**f, "fact_sha256": sha, "author_model": ";".join(sorted(who[f["claim"]]))}
+        if blocked:
+            record["cached_copies"] = cached_copies(f, CACHE / f"blocked-{date}" / "docs")
+        groups.setdefault(("EU" if pool else f["iso"], checker), []).append(record)
     batches = []
     for (iso, checker), items in sorted(groups.items()):
         items.sort(key=lambda x: (x["citations"][0]["url"] if x["citations"] else "", x["claim"]))
@@ -277,7 +351,9 @@ def prepare(everything: bool, size: int, date: str) -> int:
         name = f"{b['iso']}-{n:03d}"
         path = folder / f"{name}.json"
         path.write_text(json.dumps(b, ensure_ascii=False, indent=1), encoding="utf-8")
-        args.append({"batch": name, "iso": b["iso"], "name": bundle["documents"][b["iso"]]["name"],
+        args.append({"batch": name, "iso": b["iso"],
+                     "name": bundle["documents"][b["iso"]]["name"] if b["iso"] in bundle["documents"]
+                     else "several EU member states",
                      "model": ALIAS[b["checker_model"]], "checker_model": b["checker_model"],
                      "path": str(path), "n_facts": len(b["facts"])})
     (CACHE / run / "args.json").write_text(json.dumps(args, indent=1), encoding="utf-8")
@@ -352,6 +428,34 @@ def stage(path: Path, run_id: str, prepared: str) -> int:
     return 1 if refused else 0
 
 
+def apply_run(ledger: dict, docs: list[dict], run_id: str, date: str) -> dict:
+    """The ledger after one staged run: each verdict replaces the claim's row. The only way rows change."""
+    for d in docs:
+        for v in d["verdicts"]:
+            ledger[v["claim"]] = {"claim": v["claim"], "fact_sha256": v["fact_sha256"],
+                                  "author_model": v["author_model"], "checker_model": v["checker_model"],
+                                  "verdict": v["verdict"], "reason": v["reason"],
+                                  "checked_url": v["checked_url"], "run": run_id, "checked": date}
+    return ledger
+
+
+def replay() -> int:
+    """Rebuild the ledger from every staged run, in the order they were recorded, and compare it with the
+    committed one. The agents' verdicts are not reproducible; what they did to the ledger is."""
+    ledger: dict = {}
+    runs = list(reversed(manifests()))
+    for m in runs:
+        docs = [json.loads(p.read_text(encoding="utf-8")) for p in sorted((STAGED / m["run"]).glob("*.json"))]
+        ledger = apply_run(ledger, docs, m["run"], m["date"])
+    committed = load_ledger()
+    differ = sorted(c for c in set(ledger) | set(committed) if ledger.get(c) != committed.get(c))
+    if differ:
+        print(f"ledger does NOT reproduce: {len(differ)} rows differ, e.g. {', '.join(differ[:5])}")
+        return 1
+    print(f"ledger reproduces: {len(committed)} rows from {len(runs)} staged runs, in recorded order")
+    return 0
+
+
 def record(run_id: str, output: Path | None, tokens: str, duration: str, agents: str) -> int:
     """Apply a staged run to the ledger, write its manifest, and regenerate the audit file. The raw
     workflow output is kept gzipped under cache/factcheck/<prepared>/, its sha256 in the manifest."""
@@ -362,13 +466,7 @@ def record(run_id: str, output: Path | None, tokens: str, duration: str, agents:
     docs = [json.loads(p.read_text(encoding="utf-8")) for p in staged]
     prepared = docs[0]["prepared"]
     date = run_id[:10] if re.match(r"\d{4}-\d{2}-\d{2}", run_id) else prepared[:10]
-    ledger = load_ledger()
-    for d in docs:
-        for v in d["verdicts"]:
-            ledger[v["claim"]] = {"claim": v["claim"], "fact_sha256": v["fact_sha256"],
-                                  "author_model": v["author_model"], "checker_model": v["checker_model"],
-                                  "verdict": v["verdict"], "reason": v["reason"],
-                                  "checked_url": v["checked_url"], "run": run_id, "checked": date}
+    ledger = apply_run(load_ledger(), docs, run_id, date)
     _write(LEDGER, LFIELDS, [ledger[c] for c in sorted(ledger)])
 
     verdicts = [v for d in docs for v in d["verdicts"]]
@@ -379,7 +477,11 @@ def record(run_id: str, output: Path | None, tokens: str, duration: str, agents:
         folder.mkdir(parents=True, exist_ok=True)
         (folder / "output.json.gz").write_bytes(gzip.compress(raw, mtime=0))
     commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+    previous = {m["run"]: m.get("sequence", 0) for m in manifests()}
+    sequence = previous.get(run_id) or max(previous.values(), default=0) + 1
     manifest = {
+        # The order runs were recorded in; replay applies them in this order (later verdicts win).
+        "sequence": sequence,
         "run": run_id, "prepared": prepared, "date": date,
         "input_sha256": _first_line(folder / "input.sha256"),
         "workflow_sha256": _first_line(folder / "workflow.sha256"),
@@ -410,7 +512,7 @@ def _first_line(path: Path) -> str:
 def manifests() -> list[dict]:
     """Every recorded run, newest first."""
     runs = [json.loads(p.read_text(encoding="utf-8")) for p in MANIFESTS.glob("*.json")]
-    return sorted(runs, key=lambda m: (m["date"], m["run"]), reverse=True)
+    return sorted(runs, key=lambda m: (m.get("sequence", 0), m["date"], m["run"]), reverse=True)
 
 
 def history() -> list[dict]:
@@ -599,10 +701,13 @@ def gate(strict: bool) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["prepare", "stage", "record", "audit", "status", "gate"])
+    ap.add_argument("command", choices=["prepare", "stage", "record", "audit", "status", "gate", "replay"])
     ap.add_argument("result", nargs="?", type=Path, help="stage: the workflow's output")
     ap.add_argument("--all", action="store_true", help="prepare: re-check every printed fact")
     ap.add_argument("--size", type=int, default=30, help="prepare: facts per batch (one agent each)")
+    ap.add_argument("--pool", action="store_true", help="prepare: batch across states, not one state per batch")
+    ap.add_argument("--withheld-blocked", action="store_true",
+                    help="prepare: re-check withheld facts whose source refused the checker, from the hashed copy")
     ap.add_argument("--run", default="", help="stage, record: the workflow run id")
     ap.add_argument("--prepared", default="", help="stage: the run id printed by prepare")
     ap.add_argument("--output", type=Path, help="record: the workflow's task output file")
@@ -613,13 +718,15 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--date", default=dt.date.today().isoformat())
     a = ap.parse_args(argv)
     if a.command == "prepare":
-        return prepare(a.all, a.size, a.date)
+        return prepare(a.all, a.size, a.date, a.pool, a.withheld_blocked)
     if a.command == "stage":
         return stage(a.result, a.run, a.prepared)
     if a.command == "record":
         return record(a.run, a.output, a.tokens, a.duration, a.agents)
     if a.command == "audit":
         return audit(a.check)
+    if a.command == "replay":
+        return replay()
     return gate(strict=a.command == "gate")
 
 

@@ -2161,3 +2161,49 @@ in Vercel's DNS, not at the registrar.
   `71ad7382…`.
 
 *Would change if:* the domain needs services Vercel's DNS cannot host, or the project moves off Vercel.
+
+### 91. The site takes the report's look: EU-blue bands, gold kickers and the print serif
+**Decision.** 2026-10-02, at the owner's request.
+- **Page headers.** Every page opens with a band like the PDF report's cover and chapter bands: EU blue
+  (#003399), a gold (#FFCC00) letter-spaced kicker, the title in Libertinus Serif, and a gold rule. The
+  method pages, `/methodology` and `/fact-check`, use a teal band (`method_deep` #0F6E6E) with a pale-teal
+  kicker. `web/src/components/PageBand.tsx`.
+- **The serif** is also used for section headings, the site name and the headline figures. Body text, tables
+  and navigation stay in Inter. The active navigation link takes a gold underline.
+- **The font** is self-hosted from `@fontsource/libertinus-serif` (5.3.0, exact pin, OFL), regular weight,
+  Latin and Latin Extended. The CSS name comes from the design tokens' `print_family`, so the web and the
+  PDF name the same face.
+- **The front page** shows four pages of the EU-27 report: the cover, the ranking, Germany and the
+  methodology. They are rendered from the PDF at build time by `book/report.py` (`PREVIEWS`), using typst
+  alone, and never committed.
+
+**Problem.** The site and the PDF looked like two different publications: a sans-serif web app beside a
+serif, EU-blue report. The owner asked for the front page, then the whole site, to follow the report's
+cover.
+
+**Alternatives considered.**
+- **The report's look across the site, serif for display only (chosen).** One identity across the PDF, the
+  web and the posters. Inter keeps long tables and body text legible on screen.
+- **Serif everywhere, body text included.** *Why not:* Libertinus at small sizes in dense tables reads worse
+  on screen than Inter.
+- **Google Fonts.** *Why not:* the CSP allows fonts from this origin only (`default-src 'self'`), and loading
+  from Google would send each visitor's address to a third party.
+- **Gold kicker on the teal band.** *Why not:* 4.0:1 contrast, under the 4.5:1 that text needs. The pale
+  teal wash gives 5.4:1.
+- **Committed screenshots of the PDF.** *Why not:* they would go stale with every data change, and no media
+  goes in git. Rendering at build time keeps them the deployed PDF's own pages.
+
+**Closes off.** A page title outside `PageBand`. Fonts loaded from a third party. Committed images of the
+report.
+
+**Verified:** 2026-10-02.
+- The type-check and lint are clean.
+- Playwright and axe pass on every route.
+- Contrast: white on EU blue 10.9:1, gold on EU blue 7.2:1, white on deep teal 6.0:1, pale teal on deep
+  teal 5.4:1.
+- Screenshots of `/`, `/country/DE` and `/methodology`, in light and dark mode, were checked by eye.
+- `book/report.py -o` renders the four previews: the cover, the ranking, Germany's chapter and the
+  methodology opener.
+
+*Would change if:* print or accessibility testing shows the serif hurting readability, or the project
+adopts an institutional identity, for example on transfer to the foundation (#86).

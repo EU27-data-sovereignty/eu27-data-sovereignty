@@ -23,9 +23,9 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | Indicator | Finding |
 |---|---|
 | Jurisdiction requirement | *Not yet sourced* |
-| Classification in law | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The 2019 Cloud Computing Advice Note says some organisations have their own classification systems and 'there are no central classification rules in place except for information defined as top secret, see Department of Finance Circular 39/0 It is withheld until the fact or its source is corrected and checked again* |
+| Classification in law | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The 2019 Cloud Computing Advice Note says some organisations have their own classification systems and 'there are no central classification rules in place except for information defined as top secret, see Department of Finance Circular…. It is withheld until the fact or its source is corrected and checked again* |
 | Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote (found verbatim) establishes that the Revenue Commissioners, a state body, act as Certification Authority for ROS digital certificates, and the same manual says those certificates are used by the CRO, Department of Transport and D It is withheld until the fact or its source is corrected and checked again* |
+| State-controlled trust anchor | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote (found verbatim) establishes that the Revenue Commissioners, a state body, act as Certification Authority for ROS digital certificates, and the same manual says those certificates are used by the CRO, Department of Transport and…. It is withheld until the fact or its source is corrected and checked again* |
 | State-controlled national eID | Yes[^s1] |
 | Government data centres | Yes[^s2][^s3][^s4] |
 | Government cloud in operation | Yes[^s4][^s5] |
@@ -40,7 +40,7 @@ Ireland described on its own measured characteristics. Each figure is the publis
 
 | Indicator | Value |
 |---|---:|
-| Population | 5.51 million[^s6] |
+| Population | 5.511 million[^s6] |
 | GDP, current prices | 602.4 EUR bn[^s7] |
 | Public administration employment (NACE O) | 150.8 thousand[^s8] |
 | Non-household electricity price | 255.2 EUR/MWh[^s9] |
@@ -60,14 +60,14 @@ The holdings Ireland cannot let depend on infrastructure a foreign state can com
 | Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Breeder document scans (tier 0) | foreign births register[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Electoral roll entry (tier 0) | *Not yet sourced* | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is one bullet in a list of LGERS project requirements ('Migration of project to DCC's Azure Public Cloud Tenancy') for a new central database that local authorities are still preparing to migrate to in 2025-2026; the page does not It is withheld until the fact or its source is corrected and checked again* | 3.87 million registered electors (December 2024)[^s15] |
+| Critical | Electoral roll entry (tier 0) | *Not yet sourced* | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is one bullet in a list of LGERS project requirements ('Migration of project to DCC's Azure Public Cloud Tenancy') for a new central database that local authorities are still preparing to migrate to in 2025-2026; the page does…. It is withheld until the fact or its source is corrected and checked again* | 3.87 million registered electors (December 2024)[^s15] |
 | High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Digital identity credentials (tier 0) | MyGovID[^s1] | *Not yet sourced* | *Not stated in sources* | over 3.2 million people actively using their MyGovID account[^s1] |
 | High | State PKI and qualified trust services (tier 0) | ROS digital certificate PKI (Revenue CA), also used by CRO, Department of Transport and Department of Social Protection[^s16] | Revenue Commissioners act as Certification Authority for ROS digital certificates[^s16] | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | National Land Register (folios of the Land Registry) and Registry of Deeds[^s17][^s18] | Tailte Éireann (civil service body under the Tailte Éireann Act 2022)[^s17] | *Not stated in sources* | 2.4 million folios with associated spatial data accessible via landdirect.ie[^s17][^s18] |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page names PULSE as 'An Garda Síochána's database' and mentions capturing incident data, but nowhere calls it a 'national incident and intelligence database'; the word 'intelligence' appears only in an unrelated menu item, so the printe It is withheld until the fact or its source is corrected and checked again* | An Garda Síochána[^s19] | *Not stated in sources* | *Not yet measured* |
-| High | Intelligence services (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a reg It is withheld until the fact or its source is corrected and checked again* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The source says the NSAC was established in 2019 by the Government to provide strategic analysis to the Taoiseach and Government; it does not say NSAC operates intelligence services or the Defence Forces Military Intelligence holdings named It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page names PULSE as 'An Garda Síochána's database' and mentions capturing incident data, but nowhere calls it a 'national incident and intelligence database'; the word 'intelligence' appears only in an unrelated menu item, so the…. It is withheld until the fact or its source is corrected and checked again* | An Garda Síochána[^s19] | *Not stated in sources* | *Not yet measured* |
+| High | Intelligence services (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a…. It is withheld until the fact or its source is corrected and checked again* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The source says the NSAC was established in 2019 by the Government to provide strategic analysis to the Taoiseach and Government; it does not say NSAC operates intelligence services or the Defence Forces Military Intelligence holdings…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
 | High | Emergency calls and public-safety radio (tier 1) | National Digital Radio Service (NDRS), TETRA network for first responders[^s20] | *Not yet sourced* | Non-EU provider[^s20] | *Not yet measured* |
 | High | Residence and migration status (tier 1) | Irish Residence Permission (IRP) register: the register of non-nationals with permission to be in the State[^s21] | Immigration Service Delivery (ISD), Department of Justice (took over first-time registration from the Garda National Immigration Bureau, 13 January 2025)[^s22] | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | ROS database[^s2] | Revenue[^s2] | *Not stated in sources* | over 900,000 self-assessed taxpayers, 287,000 companies and 293,000 VAT traders registered[^s2] |
@@ -79,13 +79,13 @@ The holdings Ireland cannot let depend on infrastructure a foreign state can com
 | High | Vehicle & licensing (tier 1) | National Vehicle and Driver File (NVDF)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Border and visa systems (tier 1) | National connection to the Schengen Information System (SIS), live in Ireland since 15 March 2021[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Firearms register (tier 1) | Firearm certificates (three-year certificates, renewal phases administered by An Garda Síochána)[^s29] | An Garda Síochána (applications decided by the local Superintendent)[^s29] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the Exchequer's It is withheld until the fact or its source is corrected and checked again* | National Shared Services Office (FMSS); Department of Finance manages the Exchequer[^s30] | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the…. It is withheld until the fact or its source is corrected and checked again* | National Shared Services Office (FMSS); Department of Finance manages the Exchequer[^s30] | *Not stated in sources* | *Not yet measured* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Election management and results (tier 1) | Election Count Database System (Ecount), used alongside the manual paper-ballot count[^s31] | Returning Officers per constituency[^s31] | *Not stated in sources* | *Not yet measured* |
 | High | Central bank systems (tier 1) | TARGET2-Ireland (Irish component of the Eurosystem T2 RTGS system)[^s32] | Central Bank of Ireland[^s32][^s33] | EU provider[^s32] | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | Defence Forces Enterprise network (NGWE project) and national Communications Information Services Network (CISN)[^s34] | Defence Forces CIS Corps[^s34] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The full sentence says NGWE allows the Defence Forces 'to operate a hybrid cloud strategy - securely accessing cloud services where required, as well as maintaining a secure on premise national CISN'. The source describes a hybrid of on-pre It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | Defence Forces Enterprise network (NGWE project) and national Communications Information Services Network (CISN)[^s34] | Defence Forces CIS Corps[^s34] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The full sentence says NGWE allows the Defence Forces 'to operate a hybrid cloud strategy - securely accessing cloud services where required, as well as maintaining a secure on premise national CISN'. The source describes a hybrid of…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
 | High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page names the 'National Control Centres (NCCs)' in Dublin and Belfast, but never uses the phrase 'transmission system operator'; the printed 'of the transmission system operator' is not stated by the source. It is withheld until the fact or its source is corrected and checked again* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: EirGrid's own page says 'A team of staff operate the grid from NCCs' and 'EirGrid use the most sophisticated software in operating the grid', which supports EirGrid as operator, but the words 'transmission system operator' appear nowhere on It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page names the 'National Control Centres (NCCs)' in Dublin and Belfast, but never uses the phrase 'transmission system operator'; the printed 'of the transmission system operator' is not stated by the source. It is withheld until the fact or its source is corrected and checked again* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: EirGrid's own page says 'A team of staff operate the grid from NCCs' and 'EirGrid use the most sophisticated software in operating the grid', which supports EirGrid as operator, but the words 'transmission system operator' appear nowhere…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* | *Not stated in sources* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Health records (tier 2) | National Shared Care Record (NSCR), HSE MyHealth@IE programme (read-only aggregated record)[^s35] | Health Service Executive (Health Identifiers Service)[^s36] | *Not stated in sources* | *Not yet measured* |
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Ireland without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed.
 
 ### How sources were found
 
@@ -204,10 +204,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
-| T2 competent public body or audit office | 589 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 613 |
+| T2 competent public body or audit office | 594 |
 | T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
 ### Evidence grades
 
@@ -217,7 +217,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 100 |
-| Standard | 1209 |
+| Standard | 1221 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -258,7 +258,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1309 of 1309 printed facts pass the fact check.
+In this build, 1321 of 1321 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -300,7 +300,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
+In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -323,6 +323,8 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
+| wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
 | wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
@@ -335,7 +337,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | indicator:IE:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:IE:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:IE:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| param:IE:population_m | param:IE:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:IE:population_m | param:IE:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_5fd3e22d-b86 |
 | param:IE:gdp_eur_bn | param:IE:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:IE:gov_employment_k | param:IE:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:IE:elec_price_eur_mwh | param:IE:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |

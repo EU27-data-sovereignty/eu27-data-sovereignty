@@ -45,10 +45,15 @@ Open
       `docs/fact-check-audit.md` § Withheld. By kind: 31 register or operator names worded beyond their quote,
       15 hosting labels, 13 indicators, about 12 pages the checker could not fetch. Most affected: IE 10,
       EE 10, HU 9, PT 7, SK 6
-- [ ] Fix the rounding defect the check found: `param:SI:population_m` prints 2.13 million; Eurostat's
-      2,135,107 rounds to 2.14 (probably a 3-decimal value rounded again, half-even). Check every
-      Eurostat value for the same double rounding
-- [ ] Retry route for the "unclear" facts the checker could not fetch, before treating them as wrong
+- [x] Rounding defect fixed (population printed at its stored 3 decimals; test keeps every Eurostat figure at
+      its stored precision); 27 populations re-checked and confirmed
+- [x] Retry route for facts whose pages refused the checker: `prepare --withheld-blocked`, from the hashed
+      copy; 11 of 12 confirmed. 69 facts remain withheld
+- [ ] Re-research the remaining 69 withheld facts (owner approved only the cheap retry for now; estimate
+      ~$75–145)
+- [ ] Six Slovak facts cite `zakony.judikaty.info`, an unofficial mirror (T4); find the official text (slov-lex.sk)
+- [ ] Dependabot: bump `undici` to 8.10.2 in `web/` (through `jsdom`, test-only; clears 2 high, 5 lower);
+      `node-forge` in the stale `mobile/` reader has no fix (port or drop the reader)
 - [ ] Two of the withheld facts, from the pilot:
   - [ ] `record:DE:civil_registry:operator`: the printed text says "national personal identification
         number … for every natural person"; §139b AO only says the BZSt stores these data on natural

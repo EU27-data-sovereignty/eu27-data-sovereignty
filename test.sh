@@ -127,6 +127,14 @@ step "Admission reproduces the committed registers"
 python3 model/reproduce.py admit-check
 ok "registers reproduce from the committed evidence"
 
+step "Fact-check ledger and audit file reproduce"
+# The fact-check ledger must rebuild from the committed staged verdicts, run by run in recorded order,
+# and docs/fact-check-audit.md from the ledger (#87). Whether every printed fact passes is the deploy
+# gate's job (factcheck.py gate), not this one's, so a branch with unchecked changes still passes here.
+python3 model/factcheck.py replay
+python3 model/factcheck.py audit --check
+ok "fact-check ledger reproduces from the staged runs; audit file current"
+
 # -----------------------------------------------------------------------------
 if [ "$SKIP_PDF" = true ]; then
     echo

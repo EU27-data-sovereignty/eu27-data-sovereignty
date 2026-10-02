@@ -26,8 +26,8 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | Classification in law | *Not yet sourced* |
 | Sovereign cloud certification | *Not yet sourced* |
 | State-controlled trust anchor | Yes[^s1][^s2] |
-| State-controlled national eID | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are on their pages, but neither states who operates the national eID scheme: the CRC quote lists trust-service providers (not eID), and the Sega article only says the eID certificates are to be written to the ID-card chip and th It is withheld until the fact or its source is corrected and checked again* |
-| Government data centres | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page says the company Информационно обслужване offers colocation in its secure data centre and lists government agencies as clients, but nowhere states that the company is state-owned or that the state operates these data centres; the ' It is withheld until the fact or its source is corrected and checked again* |
+| State-controlled national eID | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are on their pages, but neither states who operates the national eID scheme: the CRC quote lists trust-service providers (not eID), and the Sega article only says the eID certificates are to be written to the ID-card chip and…. It is withheld until the fact or its source is corrected and checked again* |
+| Government data centres | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page says the company Информационно обслужване offers colocation in its secure data centre and lists government agencies as clients, but nowhere states that the company is state-owned or that the state operates these data centres; the…. It is withheld until the fact or its source is corrected and checked again* |
 | Government cloud in operation | *Not yet sourced* |
 
 What could move this placement:
@@ -41,7 +41,7 @@ Bulgaria described on its own measured characteristics. Each figure is the publi
 
 | Indicator | Value |
 |---|---:|
-| Population | 6.42 million[^s3] |
+| Population | 6.423 million[^s3] |
 | GDP, current prices | 116.0 EUR bn[^s4] |
 | Public administration employment (NACE O) | 217.8 thousand[^s5] |
 | Non-household electricity price | 141.3 EUR/MWh[^s6] |
@@ -71,13 +71,13 @@ The holdings Bulgaria cannot let depend on infrastructure a foreign state can co
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Residence and migration status (tier 1) | *Not yet sourced* | Migration Directorate of MVR and Migration units of the regional MVR directorates (Foreigners in the Republic of Bulgaria Act)[^s15] | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | Tax and Social Security Procedure Code: NRA creates and maintains the register and databases of obliged persons[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page verbatim and names the system (МИСВ), but it is a forward-looking announcement ('ще бъде въведена в реална експлоатация' = will be put into live operation on 26.11.2018); the printed text asserts as fact that it wen It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page verbatim and names the system (МИСВ), but it is a forward-looking announcement ('ще бъде въведена в реална експлоатация' = will be put into live operation on 26.11.2018); the printed text asserts as fact that it…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Benefits & pensions (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Statutory health insurance (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | AGCC creates and maintains the cadastral map and cadastral registers for the whole country under the Cadastre and Property Register Act[^s17] | The Registry Agency (executive agency under the Minister of Justice) keeps the property register, commercial register, BULSTAT and other registers[^s18] | National infrastructure[^s18] | *Not yet measured* |
 | High | Beneficial ownership register (tier 1) | The software change enabling beneficial-owner entries went live on 28.01.2019[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Vehicle & licensing (tier 1) | автоматизираната информационна система КАТ (АИС – КАТ) (Automated Information System KAT, the vehicle registration system)[^s14] | "Пътна полиция" при СДВР/ОДМВР (Traffic Police units of the Ministry of Interior's regional directorates)[^s14] | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim, but the MFA citation names a different system (НВИС, not printed), and the RTA ordinance names 'АИС Издирвателна дейност – НШИС' only in the context of wanted-vehicle registration termination, never as a border or  It is withheld until the fact or its source is corrected and checked again* | Министерството на външните работи (Ministry of Foreign Affairs), for the national visa system[^s19] | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim, but the MFA citation names a different system (НВИС, not printed), and the RTA ordinance names 'АИС Издирвателна дейност – НШИС' only in the context of wanted-vehicle registration termination, never as a border or…. It is withheld until the fact or its source is corrected and checked again* | Министерството на външните работи (Ministry of Foreign Affairs), for the national visa system[^s19] | *Not stated in sources* | *Not yet measured* |
 | High | Firearms register (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Treasury and state accounts (tier 1) | SEBRA (System for Electronic Budget Payments) is used to initiate payments of budget organisations[^s20] | BORICA AD transforms approved SEBRA payments into ISO 20022 XML[^s20] | *Not stated in sources* | *Not yet measured* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -146,7 +146,7 @@ Tier 0 and 1 holdings for Bulgaria without a verified source yet. Corrections an
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed.
 
 ### How sources were found
 
@@ -202,10 +202,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
-| T2 competent public body or audit office | 589 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 613 |
+| T2 competent public body or audit office | 594 |
 | T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
 ### Evidence grades
 
@@ -215,7 +215,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 100 |
-| Standard | 1209 |
+| Standard | 1221 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -256,7 +256,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1309 of 1309 printed facts pass the fact check.
+In this build, 1321 of 1321 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -298,7 +298,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
+In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -321,6 +321,8 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
+| wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
 | wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
@@ -331,7 +333,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
 | indicator:BG:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| param:BG:population_m | param:BG:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:BG:population_m | param:BG:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_5fd3e22d-b86 |
 | param:BG:gdp_eur_bn | param:BG:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:BG:gov_employment_k | param:BG:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:BG:elec_price_eur_mwh | param:BG:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |

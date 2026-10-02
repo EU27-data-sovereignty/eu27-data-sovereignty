@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { coverage, factCounts } from '@/data/sources'
 import type { Bundle } from '@/data/types'
+import { PageBand } from '@/components/PageBand'
 
 type SortKey = 'name' | 'verified' | 'tier0' | 'facts'
 
@@ -48,7 +49,7 @@ export function Countries({ bundle }: { bundle: Bundle }) {
 
   return (
     <article>
-      <h1 className="mb-1 text-2xl font-semibold">Countries</h1>
+      <PageBand kicker="EU-27 · Member states" title="Countries" />
       <p className="mb-4 max-w-3xl text-sm text-[var(--color-fg-secondary)]">
         Each member state analysed on its own fundamentals. The columns count verified evidence;
         they are not a ranking of how sovereign a state is.

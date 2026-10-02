@@ -53,7 +53,7 @@ python3 model/research.py report       # verification outcomes per state
 ./run.sh reproduce [--evidence]        # rebuild everything from a fresh clone of HEAD and compare (#84)
 ./run.sh contrib forms|ingest|status|audit-sample   # citizen submissions and reviews; two-person rule (#85)
 ./run.sh factcheck status|gate        # cross-model fact check: what is due; the deploy gate (#87)
-./run.sh factcheck prepare|stage|record|audit   # a fact-check run; the agent step is /factcheck
+./run.sh factcheck prepare|stage|record|audit|replay   # a fact-check run (docs/fact-check.md); agent step /factcheck
 python3 model/evidence_report.py       # docs/evidence.md, charts of grades and tiers (run by ./run.sh data)
 python3 model/provenance.py            # source register coverage per namespace
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)

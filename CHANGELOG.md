@@ -7,6 +7,24 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-02
 
+### Changed: the site takes the report's look; 12 more facts confirmed; the fact-check procedure documented (#87, #89, #91)
+
+- **The theme (#91).** Every page now opens with the PDF report's cover and chapter style: an EU-blue band, a
+  gold kicker and the title in the print serif (Libertinus Serif, self-hosted). Method pages use a teal band.
+  Section headings and the headline figures are in the serif too. The front page shows four pages of the
+  EU-27 report, rendered from the deployed PDF at build time.
+- **The Slovenia rounding defect is fixed.** Population is now printed at the precision it is stored at:
+  Slovenia 2.135 million, not 2.13. All 27 population figures were re-checked and confirmed (one pooled
+  batch). A test keeps every Eurostat figure at its stored precision.
+- **Facts behind refusing pages.** 12 facts were withheld because their pages (Estonian ministries, a Slovak
+  law site) refuse automated access. They were checked again against the exact copies hashed when they were
+  admitted (`factcheck.py prepare --withheld-blocked`): 11 confirmed, 1 not supported. 69 facts remain
+  withheld.
+- **The procedure is now documented and reproducible.** [`docs/fact-check.md`](docs/fact-check.md) gives the
+  procedure. `factcheck.py replay` rebuilds the ledger from the staged runs in recorded order, and
+  `./test.sh` runs it with the audit-file check. `./run.sh data` now regenerates the audit file.
+- **Withheld facts' reasons** are now cut at a word, not mid-word.
+
 ### Added: eu27.cloud is live, deployed automatically from `main` (#81, #90)
 
 - **The first automatic deploy:** `Deploy` run 37072208296 (commit `34d460c`). It ran the full gate, the

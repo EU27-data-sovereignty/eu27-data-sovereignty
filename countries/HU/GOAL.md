@@ -25,10 +25,10 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | Jurisdiction requirement | Partly[^s1][^s2][^s3] |
 | Classification in law | Yes[^s4][^s3] |
 | Sovereign cloud certification | No[^s3] |
-| State-controlled trust anchor | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and says NISZ Zrt. is the designated government certification service provider (GovCA) providing trust and PKI services, but the page nowhere states that NISZ is state-owned or state-controlled (no mention of 'állam It is withheld until the fact or its source is corrected and checked again* |
-| State-controlled national eID | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The DMÜ page says the agency owns six companies and that IdomSoft contributes 'as developer' to the Digital Citizenship Programme, and the Act says the Government designates the framework-service body and the digital citizenship provider; n It is withheld until the fact or its source is corrected and checked again* |
-| Government data centres | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The DMÜ page says the agency decides on mandatory use of, or exemption from, 'Kormányzati Adatközpont' services, which implies such services exist, but the quote does not say the state operates the data centre or that it is in operation tod It is withheld until the fact or its source is corrected and checked again* |
-| Government cloud in operation | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Annex 1 point 4.2.2.4 of Decree 418/2024 names 'kormányzati felhő' as a permitted venue for F4 data, which presupposes a government cloud, but the decree does not state that such a platform is in operation rather than merely provided for, s It is withheld until the fact or its source is corrected and checked again* |
+| State-controlled trust anchor | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and says NISZ Zrt. is the designated government certification service provider (GovCA) providing trust and PKI services, but the page nowhere states that NISZ is state-owned or state-controlled (no mention of…. It is withheld until the fact or its source is corrected and checked again* |
+| State-controlled national eID | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The DMÜ page says the agency owns six companies and that IdomSoft contributes 'as developer' to the Digital Citizenship Programme, and the Act says the Government designates the framework-service body and the digital citizenship provider…. It is withheld until the fact or its source is corrected and checked again* |
+| Government data centres | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The DMÜ page says the agency decides on mandatory use of, or exemption from, 'Kormányzati Adatközpont' services, which implies such services exist, but the quote does not say the state operates the data centre or that it is in operation…. It is withheld until the fact or its source is corrected and checked again* |
+| Government cloud in operation | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Annex 1 point 4.2.2.4 of Decree 418/2024 names 'kormányzati felhő' as a permitted venue for F4 data, which presupposes a government cloud, but the decree does not state that such a platform is in operation rather than merely provided for…. It is withheld until the fact or its source is corrected and checked again* |
 
 What could move this placement:
 
@@ -40,7 +40,7 @@ Hungary described on its own measured characteristics. Each figure is the publis
 
 | Indicator | Value |
 |---|---:|
-| Population | 9.49 million[^s5] |
+| Population | 9.488 million[^s5] |
 | GDP, current prices | 218.8 EUR bn[^s6] |
 | Public administration employment (NACE O) | 346.3 thousand[^s7] |
 | Non-household electricity price | 213.2 EUR/MWh[^s8] |
@@ -59,7 +59,7 @@ The holdings Hungary cannot let depend on infrastructure a foreign state can com
 | High | Facial biometric (tier 0) | The SZL stores the facial image (arcképmás) and signature of citizens who applied for an ID card[^s12] | The Minister for Science and Technology is designated central organ under the 2015 facial image analysis act[^s13] | National infrastructure[^s12] | *Not yet measured* |
 | High | Fingerprint biometric (tier 0) | With written consent, the SZL stores the citizen's fingerprint for replacing the permanent ID card[^s12] | Minister of Interior designated as criminal records body, including the register of criminal and law-enforcement biometric data[^s13] | National infrastructure[^s12] | *Not yet measured* |
 | High | Breeder document scans (tier 0) | The electronic civil register includes the register of civil-status and name-change certificates (okiratnyilvántartás)[^s14] | Minister for Science and Technology is the civil-register keeping body[^s13] | National infrastructure[^s14] | *Not yet measured* |
-| High | Authentication audit log (tier 0) | The register keeper records every data-processing operation in an automated log system (naplórendszer)[^s15] | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote only says IdomSoft came into direct state ownership in July 2024; the page elsewhere names IdomSoft as the DÁP provider and operator, but never mentions the log system (naplórendszer) or where its infrastructure runs, so 'National It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Authentication audit log (tier 0) | The register keeper records every data-processing operation in an automated log system (naplórendszer)[^s15] | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote only says IdomSoft came into direct state ownership in July 2024; the page elsewhere names IdomSoft as the DÁP provider and operator, but never mentions the log system (naplórendszer) or where its infrastructure runs, so…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
 | High | State PKI and qualified trust services (tier 0) | CSCA-HUNGARY country signing CA for e-passports, operated by the passport-issuing ministry[^s16][^s17] | NISZ Zrt. is the designated provider of government e-signature, e-seal and signature validation[^s18][^s19] | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | The land register contains every property located in Hungary, settlement by settlement[^s20][^s21][^s22] | Lechner Tudásközpont is designated land authority (with county government offices)[^s21][^s23] | *Not stated in sources* | *Not yet measured* |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -68,7 +68,7 @@ The holdings Hungary cannot let depend on infrastructure a foreign state can com
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Document issuance history (tier 0) | The SZL records ID card document identifiers and electronic unique identifiers[^s11][^s12] | Energiaügyi Minisztérium (Ministry of Energy) as registering body for passports[^s17] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote establishes IdomSoft's state ownership only; the history page never mentions document issuance records or document registers, so it does not support where that holding's infrastructure runs. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
 | High | Digital identity credentials (tier 0) | Digital citizenship register: the client-registration register created by the Digital State Act[^s15] | IdomSoft Zrt. designated as digital citizenship service provider[^s25][^s26][^s19] | National infrastructure[^s26] | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | The central electoral register is an electronic register kept by the National Election Office[^s27] | IdomSoft builds the National Election System used by election offices[^s11] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote only states that IdomSoft became directly state-owned; neither the quote nor anything else on the history page mentions the electoral roll or any election system, so the page does not connect this holding to IdomSoft or say what i It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | The central electoral register is an electronic register kept by the National Election Office[^s27] | IdomSoft builds the National Election System used by election offices[^s11] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote only states that IdomSoft became directly state-owned; neither the quote nor anything else on the history page mentions the electoral roll or any election system, so the page does not connect this holding to IdomSoft or say what…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
 | High | Tax (tier 1) | adószámla (taxpayer current accounts) kept by NAV[^s28] | *Not yet sourced* | *Not stated in sources* | more than 8 million tax accounts[^s28] |
 | High | Customs declarations (tier 1) | Automatizált Export Rendszer (AES) (Automated Export System)[^s28] | *Not yet sourced* | *Not stated in sources* | 2 404 687 customs goods declarations[^s28] |
 | High | Benefits & pensions (tier 1) | társadalombiztosítási jogszerzési nyilvántartás (social-security entitlement register) and register of benefits paid[^s29] | Government designates the Hungarian State Treasury Pension Disbursement Directorate as a pension insurance administration body[^s30][^s31] | *Not stated in sources* | *Not yet measured* |
@@ -145,7 +145,7 @@ Tier 0 and 1 holdings for Hungary without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1309 facts are printed, 3342 values are withheld as gaps, and 101 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed.
 
 ### How sources were found
 
@@ -201,10 +201,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 612 |
-| T2 competent public body or audit office | 589 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 613 |
+| T2 competent public body or audit office | 594 |
 | T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 101 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
 ### Evidence grades
 
@@ -214,7 +214,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 100 |
-| Standard | 1209 |
+| Standard | 1221 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -255,7 +255,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1309 of 1309 printed facts pass the fact check.
+In this build, 1321 of 1321 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -297,7 +297,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1309 of 1309 printed facts pass, and 81 facts are withheld after the check.
+In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -320,6 +320,8 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
+| wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
 | wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
 | wf_074137f6-b8e | 2026-10-01 | 30 | claude-fable-5-1: 30 | supported: 28; not supported: 2 |
 
@@ -332,7 +334,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | indicator:HU:L1 | indicator L1: Does a statute or binding regulation require government data (or classified government data) to be stored and processed under national or EU jurisdiction? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:HU:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:HU:L3 | indicator L3: Is a cloud certification that requires immunity from non-EU law in force or adopted for government use? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| param:HU:population_m | param:HU:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| param:HU:population_m | param:HU:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_5fd3e22d-b86 |
 | param:HU:gdp_eur_bn | param:HU:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:HU:gov_employment_k | param:HU:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:HU:elec_price_eur_mwh | param:HU:elec_price_eur_mwh | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |

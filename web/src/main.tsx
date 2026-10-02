@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 
 import { App } from './App'
+// The print serif for display type (#91), self-hosted: the CSP allows fonts from this origin only.
+import '@fontsource/libertinus-serif/latin-400.css'
+import '@fontsource/libertinus-serif/latin-ext-400.css'
 import './styles/index.css'
 
 createRoot(document.getElementById('root')!).render(
