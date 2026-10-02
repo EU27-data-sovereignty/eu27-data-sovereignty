@@ -9,17 +9,17 @@
 
 | | Count |
 |---|---:|
-| Printed facts | 1390 |
+| Printed facts | 1388 |
 | Strong | 106 |
-| Standard | 1284 |
+| Standard | 1282 |
 | Gaps (values withheld) | 3342 |
-| Disputed (withheld: source changed, or sources disagree) | 20 |
+| Disputed (withheld: source changed, or sources disagree) | 22 |
 
 ```mermaid
 pie showData
   title "Printed facts by evidence grade"
   "Strong" : 106
-  "Standard" : 1284
+  "Standard" : 1282
 ```
 
 **How grades are set.** Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict.
@@ -36,7 +36,7 @@ How good is the best source behind each printed fact? Tiers are set per host in 
 ```mermaid
 pie showData
   title "Printed facts by best source tier"
-  "T1" : 635
+  "T1" : 633
   "T2" : 633
   "T3" : 9
   "T4" : 113
@@ -45,7 +45,7 @@ pie showData
 | Tier | Kind of source | Facts |
 |---|---|---:|
 | T1 | eurostat | 162 |
-| T1 | official law portal | 460 |
+| T1 | official law portal | 458 |
 | T1 | statistics office | 13 |
 | T2 | audit office | 11 |
 | T2 | government or authority | 270 |
@@ -72,11 +72,11 @@ Each Strong condition a Standard fact misses. One fact can miss several, so the 
 
 | Condition not met | Facts |
 |---|---:|
-| Best source below T2 (e.g. an unofficial law mirror) | 138 |
+| Best source below T2 (e.g. an unofficial law mirror) | 137 |
 | Machine summary of a non-English quote, no figure to match | 832 |
 | No archived copy of exactly this URL | 617 |
-| Categorical: review agreed but was not blind | 187 |
-| A name in the value is not in the quote | 168 |
+| Categorical: review agreed but was not blind | 186 |
+| A name in the value is not in the quote | 167 |
 | Secondary source or statement of absence | 35 |
 | Quote matched loosely (punctuation) | 22 |
 
@@ -87,7 +87,7 @@ xychart-beta
   title "Printed facts per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
   y-axis "facts" 0 --> 75
-  bar [65, 42, 45, 62, 69, 52, 60, 56, 55, 58, 33, 75, 58, 73, 67, 58, 21, 20, 49, 32, 48, 50, 54, 29, 46, 62, 51]
+  bar [65, 42, 45, 62, 69, 50, 60, 56, 55, 58, 33, 75, 58, 73, 67, 58, 21, 20, 49, 32, 48, 50, 54, 29, 46, 62, 51]
 ```
 
 ```mermaid
@@ -105,7 +105,7 @@ xychart-beta
 | Bulgaria (BG) | 45 | 4 | 41 | 132 |
 | Cyprus (CY) | 62 | 4 | 58 | 112 |
 | Czechia (CZ) | 69 | 4 | 65 | 105 |
-| Germany (DE) | 52 | 0 | 52 | 122 |
+| Germany (DE) | 50 | 0 | 50 | 124 |
 | Denmark (DK) | 60 | 5 | 55 | 117 |
 | Estonia (EE) | 56 | 3 | 53 | 121 |
 | Greece (EL) | 55 | 3 | 52 | 122 |
@@ -133,9 +133,9 @@ xychart-beta
 | Kind | Printed | Strong | Standard |
 |---|---:|---:|---:|
 | Register or system | 635 | 48 | 587 |
-| Operator | 365 | 30 | 335 |
+| Operator | 364 | 30 | 334 |
 | Eurostat fundamental or posture | 162 | 0 | 162 |
-| Sovereignty indicator | 135 | 7 | 128 |
+| Sovereignty indicator | 134 | 7 | 127 |
 | Infrastructure dependency | 52 | 1 | 51 |
 | Record count | 41 | 20 | 21 |
 
@@ -148,6 +148,8 @@ A fact whose evidence came into question after it was admitted: its source dropp
 - `indicator:CY:K2` (CY): Disputed: the cited source is gone (HTTP 404, rechecked 2026-09-30)
 - `indicator:CY:C1` (CY): Disputed: the cited source is gone (HTTP 404, rechecked 2026-09-30)
 - `indicator:CY:C2` (CY): Disputed: the cited source is gone (HTTP 404, rechecked 2026-09-30)
+- `indicator:DE:K2` (DE): Disputed: the fact check (claude-fable-5-1, run wf_074137f6-b8e) did not confirm this: Both quotes are verbatim, but neither says who operates the eID scheme: the Bundesdruckerei page only calls the group a federal technology company, and PAuswG §4(3) only says the BMI designates the card manufacturer, certificate authority a It is withheld until the fact or its source is corrected and checked again
+- `record:DE:civil_registry:operator` (DE): Disputed: the fact check (claude-fable-5-1, run wf_074137f6-b8e) did not confirm this: The quote is verbatim and shows the BZSt stores the Identifikationsnummer with names and other identity data, but the printed text adds 'national personal identification number' and 'for every natural person', neither of which §139b says (i It is withheld until the fact or its source is corrected and checked again
 - `record:ES:fingerprint_biometric:register` (ES): Disputed: sources disagree. Agencia Estatal Boletín Oficial del Estado — Real Decreto 255/2025, de 1 de abril, por el que se…, 2025-04-02 gives the value this report printed; Agencia Estatal Boletín Oficial del Estado — Orden INT/1202/2011, de 4 de mayo, por la que se regulan…, 2011-05-13 gives “ADDNIFIL (automated DNI file holding fingerprints and photographs)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
 - `record:ES:land_property:register` (ES): Disputed: sources disagree. Agencia Estatal Boletín Oficial del Estado — Real Decreto Legislativo 1/2004, texto refundido de la…, 2004-03-08 gives the value this report printed; Agencia Estatal Boletín Oficial del Estado — Decreto de 8 de febrero de 1946, Ley Hipotecaria… gives “Registro de la Propiedad (Property Registry)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
 - `record:FI:border_control:operator` (FI): Disputed: sources disagree. Oikeusministeriö / Finlex (Ministry of Justice) — Laki henkilötietojen käsittelystä Rajavartiolaitoksessa…, 2019 gives the value this report printed; Poliisihallitus — Tietosuojaseloste; Schengenin tietojärjestelmän…, 2023-05-11 gives “Poliisihallitus (National Police Board)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
@@ -181,9 +183,9 @@ Where a citizen helps most: values still withheld, items the agents did not reac
 | Sweden (SE) | sv | 128 | 0 | 0 | 0 |
 | Netherlands (NL) | nl | 126 | 0 | 10 | 0 |
 | Slovakia (SK) | sk | 126 | 0 | 6 | 0 |
+| Germany (DE) | de | 124 | 7 | 1 | 0 |
 | Poland (PL) | pl | 124 | 0 | 0 | 0 |
 | Portugal (PT) | pt | 123 | 0 | 2 | 0 |
-| Germany (DE) | de | 122 | 7 | 1 | 0 |
 | Greece (EL) | el | 122 | 26 | 7 | 0 |
 | Estonia (EE) | et | 121 | 4 | 0 | 0 |
 | Spain (ES) | es | 119 | 10 | 0 | 0 |

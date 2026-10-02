@@ -198,7 +198,10 @@ class RenderedFacts(unittest.TestCase):
     # quote does not contain. Then to 918: 4 indicator values admitted at a reviewer's changed value
     # were withdrawn (#79). Then to 1390: 56 holdings recovered by the charset fix, 27 employment
     # figures that now reproduce (#84), and the first vetting run (#83), less 20 facts now disputed.
-    FACT_FLOOR = 1390
+    # Then to 1388 on 2026-10-02 by #89: the cross-model fact check's pilot did not confirm 2 facts
+    # (record:DE:civil_registry:operator, indicator:DE:K2), now withheld as disputed. Each withheld fact
+    # is listed in docs/fact-check-audit.md.
+    FACT_FLOOR = 1388
 
     @classmethod
     def setUpClass(cls):

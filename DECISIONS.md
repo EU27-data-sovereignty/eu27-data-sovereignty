@@ -1971,7 +1971,8 @@ the ANBI publication follow, and phase 2 (the web form) becomes possible.
 - **What the gate requires.** `factcheck.py gate` runs in the deploy workflow's gate job and in
   `./run.sh deploy`. It also requires `docs/fact-check-audit.md`, the generated audit file, to be current.
 - **On a disagreement.** It blocks the deploy, and nothing changes automatically. Every disagreement
-  stays on the record in the audit file.
+  stays on the record in the audit file. *Superseded in part by #89: a disagreement now withholds the
+  fact instead of blocking the deploy.*
 - **The appendix.** Every asset carries a generated fact-check appendix (`model/factcheck_appendix.py`):
   the EU-27 report, each country PDF, each brief, the web pages `/fact-check` and `/fact-check/<ISO>`,
   and the `/ask` corpus. Each poster carries a one-line summary.
@@ -2068,3 +2069,80 @@ without the methodology or a pointer to it.
 
 *Would change if:* the design system adopts a different semantic colour scheme, or print tests show the
 teal does not hold up in black and white. The kicker carries the meaning without colour.
+
+### 89. A fact the fact check does not confirm is withheld, not a reason to block the deploy
+**Decision.** 2026-10-02. The owner chose this, to get the site online without lowering the standard for
+what is printed.
+- **What is withheld.** A fact with a *not supported* or *unclear* verdict, on the fact exactly as it
+  would print, is no longer printed. The content model shows it as disputed instead, with the checker's
+  model, the run and its reason. This is `document.Sources.withheld`, through the same
+  `document.disputed()` that every renderer already shows.
+- **How it is matched.** The verdict is matched on the fact's hash. `factcheck.fact_record` and
+  `citation_record` are shared by the bundle and the content model, so both compute the same hash. If the
+  fact or its source changes, the old verdict withholds nothing, and the fact is checked again before the
+  next deploy.
+- **The gate is unchanged.** Every *printed* fact needs a current supported verdict from an eligible
+  checker. A withheld fact is not printed, so the gate no longer counts it.
+- **Where withheld facts are listed.** The audit file has a section "Withheld after the fact check".
+  Each country's fact-check appendix lists its own; the EU-27 appendix counts them per state.
+
+**Problem.** Under #87, any disagreement blocked the deploy until the owner resolved it. The pilot
+disagreed with 2 of 30 facts, which suggests about 90 across the report. Resolving each before the first
+deploy would keep the site offline for days. Meanwhile the site stayed online at its fallback address,
+with an older build that no second model had checked at all.
+
+**Alternatives considered.**
+- **Withhold on disagreement (chosen).** Nothing the check did not confirm is printed, the site can
+  deploy the same day, and each disagreement stays visible and open on the record.
+- **Block the deploy until every disagreement is resolved (#87 as first decided).** *Why not:* days
+  offline, and in the meantime the fallback site served older, unchecked facts.
+- **Deploy once without the gate.** *Why not:* it breaks the rule that every production deploy is fact
+  checked.
+- **Withhold only *not supported*, and print *unclear*.** *Why not:* "unclear" includes facts whose
+  source the checker could not fetch. Printing those would print facts no second model has confirmed.
+
+**Closes off.** Printing a fact that the check disagreed with, or could not check, as printed.
+Resolving a disagreement by editing a verdict: only a changed fact, checked again, comes back.
+
+**Verified:** 2026-10-02.
+- `python3 -m unittest tests.test_factcheck` passes 34 tests. The withholding tests check that, for all
+  1,390 facts, the content model and the bundle compute the same hash. A matching *not supported* or
+  *unclear* verdict withholds the fact. A verdict on an older version withholds nothing. A supported
+  verdict prints the fact. Every current disagreement is absent from the printed facts, and a withheld
+  fact does not block the gate.
+- After `./run.sh data`, both pilot disagreements on Germany are disputed in the bundle.
+- The full run: NOT YET.
+
+*Would change if:* withheld facts turn out to be mostly true facts that the checker could not fetch. Then
+an *unclear* verdict could trigger a retry route instead of being withheld outright.
+
+### 90. eu27.cloud uses Vercel's nameservers; DNS is not kept at the registrar
+**Decision.** 2026-10-02. The owner chose this.
+- At iwantmyname, the nameservers for `eu27.cloud` are set to `ns1.vercel-dns.com` and
+  `ns2.vercel-dns.com`.
+- Vercel serves the apex and `www`, and issues the TLS certificate.
+- The domain stays registered at iwantmyname.
+
+This supersedes #80's "DNS kept there".
+
+**Problem.** #80 recorded that DNS was kept at iwantmyname with two records pointing at Vercel, and
+`DEPLOYMENT.md` said so. On 2026-10-02 the registry listed the domain as *inactive*, with no nameservers at
+all. `vercel domains inspect` showed it expected `ns1/ns2.vercel-dns.com` and saw none, and `eu27.cloud`
+resolved nowhere. The site was reachable only at its `vercel.app` fallback, and every `Deploy` run's smoke
+test would fail.
+
+**Alternatives considered.**
+- **Vercel's nameservers (chosen).** One change at the registrar. Vercel then creates the records and the
+  certificate. The fewest steps, and the fewest ways for the records and the project to drift apart.
+- **iwantmyname's nameservers, plus records there, as #80 intended.** *Why not:* two steps and two
+  records, which is the setup that was never completed. It also gives no benefit while the only thing
+  on the domain is this site.
+
+**Closes off.** Keeping DNS records at iwantmyname. A future mail or verification record would be added
+in Vercel's DNS, not at the registrar.
+
+**Verified:** NOT YET. The nameserver change is the owner's step at iwantmyname. It is verified when
+`dig +short NS eu27.cloud` prints Vercel's nameservers, `vercel domains inspect eu27.cloud` shows both
+✔, and `curl -sI https://eu27.cloud/` returns 200 with `x-robots-tag: noindex`.
+
+*Would change if:* the domain needs services Vercel's DNS cannot host, or the project moves off Vercel.

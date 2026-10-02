@@ -7,7 +7,8 @@
 -->
 
 **Live:** https://eu27.cloud (fallback: https://sovereign-data-centers.vercel.app). It is `noindex` and not
-announced; see the staging below.
+announced; see the staging below. On 2026-10-02 only the fallback answered: `eu27.cloud` had no nameservers
+until the owner set Vercel's (#90), and the newest production deploy was the manual one of 2026-09-27.
 **Vercel project:** `pieteradejongs-projects/sovereign-data-centers`
 (`prj_rZ7Xh4QyhwGBG6Or7ZuAlMgLZzD5`, team `team_oAI3Rv2rxJ353sqF76ie872M`). The local link is in `.vercel/project.json`.
 
@@ -30,7 +31,7 @@ The site is static except for one function, `/api/ask` (#78). There is no databa
 | Headers | `vercel.json` `headers` | Strict CSP (`default-src 'self'`, no inline scripts, `frame-ancestors 'none'`), `nosniff`, `X-Frame-Options: DENY`, restrictive `Permissions-Policy` |
 | Caching | `/data/*` → `public, max-age=300, must-revalidate` | Five minutes, so a redeploy shows up quickly |
 | Indexing | `web/public/robots.txt` disallows everything, and `X-Robots-Tag: noindex` on every path | Removing both is stage 2 (#80) |
-| Domain | `eu27.cloud`, registered at iwantmyname; DNS there points at Vercel; `www` → apex | #80 |
+| Domain | `eu27.cloud`, registered at iwantmyname; nameservers `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, so Vercel serves DNS and issues the certificate; `www` → apex | #80, #90 |
 | Function | `api/ask.ts` → `/api/ask`, Node 24, `maxDuration` 60 s | Streams answers from the Anthropic API over the sourced corpus `api/_corpus.json` (#78). Dependencies in the root `package.json` (exact pins); `vercel build` emits `.vercel/output/functions/api/ask.func` |
 | Secret | `ANTHROPIC_API_KEY` (Vercel env, Preview + Production) | The value is set with `vercel env add` by the owner and never printed. Without it, `/ask` returns a readable error |
 | Cost cap | A dedicated Anthropic workspace for that key, with a monthly spend limit | The hard ceiling, enforced by Anthropic. When it is reached, `/ask` says questions are paused |
@@ -44,8 +45,10 @@ demand (`gh workflow run Deploy`). Deploys never overlap, and a running one is n
 ```mermaid
 flowchart TD
     P([push to main]) --> G["gate job: ./test.sh<br/>unit · data · types · lint · build · Playwright + axe"]
+    G --> F["fact-check gate: every printed fact has a current supported verdict<br/>from a model that did not write it; audit file current (#87, #89)"]
     G -- fails --> X1[Stop: nothing ships]
-    G -- passes --> T["deploy job (environment: production)<br/>typst v0.15.1, sha256-checked"]
+    F -- fails --> X1
+    F -- passes --> T["deploy job (environment: production)<br/>typst v0.15.1, sha256-checked"]
     T --> B["vercel pull → vercel build --prod<br/>web app + EU-27 report + 27 country PDFs"]
     B --> D["vercel deploy --prebuilt --prod<br/>uploads .vercel/output only"]
     D --> S["smoke test https://eu27.cloud<br/>/ · /country/DE · /eu27-report.pdf · robots · noindex · bundle hash"]
@@ -101,11 +104,37 @@ The Vercel CLI uploads the working tree, filtered by `.vercelignore`. That file 
 | 3a — `eu27.cloud` attached | the custom domain serves the site, still `noindex` | nothing; done 2026-09-30 (#80) |
 | 3b — `eu27.cloud` announced | outreach and links point at it | the sampling audit's measured error rate, and every published claim sourced |
 
-For the reasoning, see DECISIONS #50 (staging, and why the domain sounds unofficial) and #80 (registered at
-iwantmyname, DNS kept there, attached ahead of stage 3 but `noindex`).
+For the reasoning, see DECISIONS #50 (staging, and why the domain sounds unofficial), #80 (registered at
+iwantmyname, attached ahead of stage 3 but `noindex`) and #90 (DNS served by Vercel).
 
-**DNS at iwantmyname.** Two records, with the exact values `vercel domains inspect eu27.cloud` prints: the
-apex (`@`) and `www`. Do not change the nameservers. Vercel issues the TLS certificate once the records resolve.
+**DNS: Vercel's nameservers (#90).** At iwantmyname, the domain's nameservers are set to `ns1.vercel-dns.com`
+and `ns2.vercel-dns.com`, and no records are kept there. Vercel serves the apex and `www` and issues the TLS
+certificate itself. Check it:
+
+```sh
+dig +short NS eu27.cloud                 # ns1.vercel-dns.com. ns2.vercel-dns.com.
+vercel domains inspect eu27.cloud        # Current Nameservers: both ✔
+curl -sI https://eu27.cloud/ | head -1   # HTTP/2 200
+```
+
+Until 2026-10-02 this file said DNS was kept at iwantmyname with two records. That was never put in place: the
+registry listed the domain as *inactive*, with no nameservers, so `eu27.cloud` resolved nowhere.
+
+## First automatic deploy: checklist
+
+What has to be true before a push to `main` deploys by itself. Checked state on 2026-10-02:
+
+| # | What | Who | How to check |
+|---|---|---|---|
+| 1 | `VERCEL_TOKEN` secret in the `production` environment | owner: create a token at https://vercel.com/account/tokens, scoped to `pieteradejongs-projects`, then `gh secret set VERCEL_TOKEN --env production` and paste it | `gh secret list --env production` shows the name |
+| 2 | Nameservers at iwantmyname set to Vercel's | owner | `dig +short NS eu27.cloud` |
+| 3 | Every printed fact passes the fact check; disagreements withheld | assistant, `/factcheck` | `python3 model/factcheck.py gate` exits 0 |
+| 4 | `./test.sh` passes | assistant | `./test.sh` |
+| 5 | `main` fast-forwarded to the reviewed branch and pushed | assistant, with the owner's OK at that moment | `gh run watch` on the `Deploy` run |
+| 6 | Smoke test passes on eu27.cloud | the workflow | the run summary: deployment, commit, bundle hash |
+
+Not needed for the site itself: `ANTHROPIC_API_KEY` in Vercel. Without it, `/ask` returns a readable error and
+everything else works.
 
 ## Freshness check
 

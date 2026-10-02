@@ -5,6 +5,26 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-02
+
+### Fixed: eu27.cloud DNS, and a checklist for the first automatic deploy (#90)
+
+- **`eu27.cloud` had never resolved.** It had no nameservers: the registry listed it as *inactive*. It now
+  uses Vercel's nameservers, set by the owner at iwantmyname, and `DEPLOYMENT.md` no longer claims records
+  that were never there.
+- **`DEPLOYMENT.md` gains a first-deploy checklist:** the Vercel token, the nameservers, the fact-check
+  gate, the full test gate, the push, and the smoke test. Its deploy flow now shows the fact-check gate.
+
+### Changed: a fact the fact check does not confirm is withheld, instead of blocking the deploy (#89)
+
+- **Withheld, with the reason shown.** A printed fact that the second model did not confirm, or could not
+  check, is now shown as **disputed**, with the checker's model, run and reason, until the fact or its
+  source is corrected and checked again.
+- **The gate still requires every printed fact to pass.** A withheld fact is no longer printed.
+- **Where withheld facts are listed:** in the audit file, and in each country's fact-check appendix.
+- **The pilot's two disagreements on Germany are withheld:** the civil-registry operator's scope, and
+  whether the eID scheme is state-operated.
+
 ## 2026-10-01
 
 ### Added: the methodology in every asset, marked in a method teal (#88)

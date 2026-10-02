@@ -21,7 +21,8 @@ text has a role:
     fact     a statement about the world; carries claim ids that resolve to a cited source
     gap      where a fact would go, stated as not yet sourced -- the value is withheld
     disputed where a fact was, withheld because its evidence is in question (#83): the cited source
-             no longer says it, or sources disagree. It carries the claim id and the reason.
+             no longer says it, sources disagree, a reviewer rejected it, or the cross-model fact check
+             did not confirm it as printed (#89). It carries the claim id and the reason.
 
 The rule the `--check` gate enforces (#75): a `fact` must carry at least one claim id, every claim id
 must have a citation in `sources/citations.csv`, and every citation's source must be in the registry
@@ -126,6 +127,10 @@ class Sources:
         # People's verdicts on printed facts, under the two-person rule (contrib.py, #85).
         import contrib  # noqa: PLC0415
         self.human = contrib.status(self.reg)
+        # The cross-model fact check's verdicts (factcheck.py, #87). A fact it did not confirm, exactly as
+        # printed, is withheld as disputed rather than printed (#89).
+        import factcheck  # noqa: PLC0415
+        self.checked = factcheck.load_ledger()
 
     def dispute(self, claim: str, backing: list[dict]) -> str:
         """Why a supported claim is nevertheless in question, or '' if it is not. A claim is disputed
@@ -157,6 +162,18 @@ class Sources:
                 if r["outcome"] == "quote_vanished" else
                 f"the cited source is gone (HTTP {r['http_status']}, rechecked {r['checked']})")
 
+
+    def withheld(self, claim: str, text: str, categorical: bool, found: list[tuple[dict, dict]]) -> str:
+        """Why the fact check withholds this fact as it would print, or '' (#89)."""
+        row = self.checked.get(claim)
+        if not row or row["verdict"] == "supported":
+            return ""
+        import factcheck  # noqa: PLC0415
+        cites = [factcheck.citation_record(c["source_id"], self.reg[c["source_id"]], c["locator"], c["quote"],
+                                           c["value_as_found"], bool(a["checks"].get("dataset_value_reproduced")))
+                 for c, a in found]
+        sha = factcheck.fact_sha256(factcheck.fact_record(claim, text, categorical, cites))
+        return factcheck.withholding(row, sha)
 
     def supported(self, claim: str) -> bool:
         return any(provenance.supported(c, self.reg, self.params) for c in self.by_claim.get(claim, []))
@@ -193,6 +210,8 @@ class Sources:
             return gap("Withdrawn after two reviewers rejected it")
         found = self.evidence(claim, text, categorical) if text else []
         why = self.dispute(claim, [c for c, _ in found]) if found else ""
+        if found and not why:
+            why = self.withheld(claim, text, categorical, found)
         if why:
             return disputed(claim, why)
         if found:

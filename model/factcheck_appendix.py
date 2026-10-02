@@ -56,10 +56,12 @@ def process(s: dict) -> list[dict]:
                 f"{evidence.DISCLAIMER} The check below is made by a second model, not by a person.")]},
             _p("Every printed fact is put, exactly as printed, to a checker that is a different model from the "
                "one that wrote it. The checker fetches the cited source and decides whether it supports the "
-               "statement as printed: the same value, name, unit, date, country and scope. A production "
-               "deploy is refused unless every printed fact has a current verdict of supported from an "
-               "eligible checker."),
-            _p(f"In this build, {s['passing']} of {s['printed']} printed facts pass."),
+               "statement as printed: the same value, name, unit, date, country and scope. A fact it does "
+               "not confirm is withheld, shown as disputed with the checker's reason, until it is corrected "
+               "and checked again. A production deploy is refused unless every printed fact has a current "
+               "verdict of supported from an eligible checker."),
+            _p(f"In this build, {s['passing']} of {s['printed']} printed facts pass, and {len(s['withheld'])} "
+               "facts are withheld after the check."),
             _table(["Fact written by", "Checked by"], factcheck.RULE),
         ]},
         {"id": "f-steps", "title": "How a check runs", "blocks": [
@@ -89,14 +91,16 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
     names = {iso: d["name"] for iso, d in documents.items()}
     who = factcheck.authors(bundle)
 
+    withheld = {r["claim"]: r for r in s["withheld"]}
     per_state = []
     for iso in sorted(documents, key=lambda i: names[i]):
         mine = [why for f, _, why in rows if f["iso"] == iso]
-        per_state.append([names[iso], len(mine), sum(1 for w in mine if not w), sum(1 for w in mine if w)])
+        per_state.append([names[iso], len(mine), sum(1 for w in mine if not w), sum(1 for w in mine if w),
+                          sum(1 for c in withheld if c.split(":")[1] == iso)])
     eu = {"iso": "", "name": TITLE, "sections": process(s) + [
         {"id": "f-states", "title": "Facts checked, by member state", "blocks": [
-            _table(["Member state", "Printed facts", "Supported", "Not passing"], per_state,
-                   ["left", "right", "right", "right"]),
+            _table(["Member state", "Printed facts", "Supported", "Not passing", "Withheld"], per_state,
+                   ["left", "right", "right", "right", "right"]),
             _p("Each country report lists the verdict on every one of its facts in its own fact-check "
                "appendix. Every disagreement ever recorded, with the checker's reason, is in the project's "
                "audit file, docs/fact-check-audit.md."),
@@ -124,6 +128,12 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
                 _p(f"{sum(1 for r in table if r[4] == 'supported')} of {len(table)} printed facts about "
                    f"{names[iso]} pass."),
                 _table(["Claim", "What it answers", "Written by", "Checked by", "Verdict", "Run"], table),
+            ]},
+            {"id": "f-withheld", "title": f"Withheld after the fact check: {names[iso]}", "blocks": [
+                _table(["Claim", "What it answers", "Checked by", "Verdict", "Reason"],
+                       [[c, factcheck.describe(c), r["checker_model"], r["verdict"].replace("_", " "), r["reason"]]
+                        for c, r in sorted(withheld.items()) if c.split(":")[1] == iso])
+                if any(c.split(":")[1] == iso for c in withheld) else _p("None."),
             ]},
         ]}
     return {"eu": eu, "countries": countries, "lines": lines}

@@ -145,9 +145,11 @@ test.describe('evidence rules (#82, #83)', () => {
     await page.goto('/country/DE')
     await page.getByRole('link', { name: 'fact check for Germany' }).click()
     await expect(page).toHaveURL(/\/fact-check\/DE$/)
-    await expect(page.getByRole('heading', { name: 'Fact check: Germany' })).toBeVisible()
+    await expect(
+      page.getByRole('heading', { name: 'Fact check: Germany', exact: true }),
+    ).toBeVisible()
     const table = BUNDLE.factcheck.countries
-      .DE!.sections.at(-1)!
+      .DE!.sections.find(s => s.id === 'f-facts')!
       .blocks.find(b => b.type === 'table')
     if (table?.type !== 'table') throw new Error('no verdict table for DE')
     const rows = table.rows

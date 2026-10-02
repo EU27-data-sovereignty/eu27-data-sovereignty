@@ -6,23 +6,23 @@
 
 ## Status
 
-**28 of 1390 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them.
+**28 of 1388 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **2** more are withheld because the check did not confirm them.
 
 | Checker model | Current verdicts |
 |---|---:|
-| claude-fable-5-1 | 30 |
+| claude-fable-5-1 | 28 |
 | claude-opus-5-5 | 0 |
 
 | Verdict | Facts |
 |---|---:|
 | supported | 28 |
-| not supported | 2 |
+| not supported | 0 |
 | unclear | 0 |
 
 | Author of the fact, as recorded | Facts |
 |---|---:|
 | program:fetch_eurostat.py | 162 |
-| unrecorded | 1228 |
+| unrecorded | 1226 |
 
 ## The rule
 
@@ -322,10 +322,8 @@ A verdict holds for the fact exactly as printed: a SHA-256 of the claim, the que
 | `record:CZ:geospatial:register` | ČÚZK publishes parcels from ISKN and buildings/addresses from RÚIAN | never checked |
 | `record:CZ:geospatial:operator` | Český úřad zeměměřický a katastrální (Czech Office for Surveying, Mapping and Cadastre) | never checked |
 | `indicator:DE:L2` | Yes | never checked |
-| `indicator:DE:K2` | Yes | checker found it not supported: Both quotes are verbatim, but neither says who operates the eID scheme: the Bundesdruckerei page only calls the group a federal technology company, and PAuswG §4(3) only says the BMI designates the card manufacturer, certificate authority and blocking-list operator (published in the Bundesanzeiger). Linking the two (that Bundesdruckerei is the designated operator) needs outside knowledge, so 'Yes' |
 | `indicator:DE:C1` | Yes | never checked |
 | `indicator:DE:C2` | Yes | never checked |
-| `record:DE:civil_registry:operator` | The Federal Central Tax Office (BZSt) stores the national personal identification number (Identifikationsnummer) with core identity data for every natural person (Abgabenordnung § 139b(3)) | checker found it not supported: The quote is verbatim and shows the BZSt stores the Identifikationsnummer with names and other identity data, but the printed text adds 'national personal identification number' and 'for every natural person', neither of which §139b says (it only states a natural person may not receive more than one number); the operator is supported, the printed scope is not. |
 | `record:DE:facial_biometric:operator` | Biometric features may be stored only at the issuing ID-card authorities | never checked |
 | `record:DE:fingerprint_biometric:register` | No central register | never checked |
 | `record:DE:breeder_documents:operator` | Each Standesamt keeps the birth register (Geburtenregister) and other civil status registers | never checked |
@@ -1401,6 +1399,15 @@ A verdict holds for the fact exactly as printed: a SHA-256 of the claim, the que
 | `record:SK:geospatial:register` | Register adries (Address Register), administered by the Ministry of Interior | never checked |
 | `record:SK:geospatial:operator` | ÚGKK SR creates, administers and operates the geodesy, cartography and cadastre information system (ISGKK) | never checked |
 
+## Withheld after the fact check
+
+Facts the checker did not confirm as printed. Each is shown as disputed, with this reason, instead of being printed, until the fact or its source is corrected and checked again (DECISIONS.md #89).
+
+| Claim | Checker | Verdict | Run | Reason |
+|---|---|---|---|---|
+| `indicator:DE:K2` | claude-fable-5-1 | not supported | wf_074137f6-b8e | Both quotes are verbatim, but neither says who operates the eID scheme: the Bundesdruckerei page only calls the group a federal technology company, and PAuswG §4(3) only says the BMI designates the card manufacturer, certificate authority and blocking-list operator (published in the Bundesanzeiger). Linking the two (that Bundesdruckerei is the designated operator) needs outside knowledge, so 'Yes' |
+| `record:DE:civil_registry:operator` | claude-fable-5-1 | not supported | wf_074137f6-b8e | The quote is verbatim and shows the BZSt stores the Identifikationsnummer with names and other identity data, but the printed text adds 'national personal identification number' and 'for every natural person', neither of which §139b says (it only states a natural person may not receive more than one number); the operator is supported, the printed scope is not. |
+
 ## Every disagreement on record
 
 Each verdict other than *supported*, from every run, including those a later check superseded after the fact or its source changed.
@@ -1422,4 +1429,5 @@ Each verdict other than *supported*, from every run, including those a later che
 2. The checked-in workflow (`model/research/factcheck/workflow.js`) asks for that checker model by name, one agent per batch of one state's facts. The checker fetches each cited page (or the Eurostat API response), looks for the quote, and decides whether it supports the statement exactly as printed: value, unit, date, country and scope. It answers supported, not supported or unclear, with a reason.
 3. `factcheck.py stage` refuses any batch whose checker reports a different model than the one asked for, or is an author of a fact in it.
 4. `factcheck.py record` writes the verdicts to the ledger, the run's manifest (input, workflow and bundle hashes, commit, counts) and this audit file.
-5. Before every production deploy, `factcheck.py gate` requires a current *supported* verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically.
+5. A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record.
+6. Before every production deploy, `factcheck.py gate` requires a current *supported* verdict from an eligible checker for every printed fact, and this file to be current.

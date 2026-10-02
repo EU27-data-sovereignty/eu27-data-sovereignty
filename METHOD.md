@@ -243,8 +243,10 @@ facts whose author was never recorded.
 - **What a verdict covers.** It is tied to a SHA-256 of the fact as printed and its citations, so any
   change voids it.
 - **The gate.** A production deploy is refused unless every printed fact has a current *supported*
-  verdict, and the audit file [`docs/fact-check-audit.md`](docs/fact-check-audit.md) is current. A
-  disagreement blocks the deploy until the owner fixes the fact or its source.
+  verdict, and the audit file [`docs/fact-check-audit.md`](docs/fact-check-audit.md) is current.
+- **A disagreement withholds the fact (#89).** A fact the checker does not confirm, or could not check,
+  is shown as disputed with the checker's reason instead of printed, until the fact or its source is
+  corrected and checked again. The verdict stays on the record in the audit file and the appendix.
 - **Where it is shown.** Every asset carries the process and its verdicts as a generated appendix.
 
 This is a check by a second machine, not by a person. It narrows the blind spots of one model; it does

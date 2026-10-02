@@ -1518,68 +1518,6 @@
     "value_as_found": "yes"
    }
   ],
-  "indicator:DE:K2": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "checklist": [
-     "T3 other institution or company (company)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "archived copy of this URL",
-     "independent review agreed (not blind)",
-     "non-English source, machine-translated"
-    ],
-    "checks": {
-     "archived": true,
-     "document_hashed": true,
-     "language": "machine-translated",
-     "quote_match": "exact",
-     "review": "agreed, not blind",
-     "source": "official",
-     "tier": 3,
-     "tier_kind": "company"
-    },
-    "confidence": "official",
-    "gloss": "As the federal government's technology company, the Bundesdruckerei Group contributes its digital and security expertise to the digital sovereignty of Germany and Europe.",
-    "grade": "Standard",
-    "locator": "page text",
-    "original": "Die Bundesdruckerei-Gruppe leistet mit ihrer Digital- und Sicherheitskompetenz als Technologieunternehmen des Bundes einen Beitrag für die digitale Souveränität Deutschlands und Europas.",
-    "quote": "Die Bundesdruckerei-Gruppe leistet mit ihrer Digital- und Sicherheitskompetenz als Technologieunternehmen des Bundes einen Beitrag für die digitale Souveränität Deutschlands und Europas. [English: As the federal government's technology company, the Bundesdruckerei Group contributes its digital and security expertise to the digital sovereignty of Germany and Europe.]",
-    "retrieved": "2026-09-29",
-    "source_id": "bundesdruckerei-de:2e8ac42075",
-    "value_as_found": "yes"
-   },
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "checklist": [
-     "T1 authoritative original (official law portal)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "archived copy of this URL",
-     "independent review agreed (not blind)",
-     "non-English source, machine-translated"
-    ],
-    "checks": {
-     "archived": true,
-     "document_hashed": true,
-     "language": "machine-translated",
-     "quote_match": "exact",
-     "review": "agreed, not blind",
-     "source": "official",
-     "tier": 1,
-     "tier_kind": "official_law_portal"
-    },
-    "confidence": "official",
-    "gloss": "The Federal Ministry of the Interior determines 1. the ID card manufacturer, (and further the certificate authority for service providers and the blocking-list operator)",
-    "grade": "Standard",
-    "locator": "page text",
-    "original": "Das Bundesministerium des Innern und für Heimat bestimmt 1. den Ausweishersteller,",
-    "quote": "Das Bundesministerium des Innern und für Heimat bestimmt 1. den Ausweishersteller, [English: The Federal Ministry of the Interior determines 1. the ID card manufacturer, (and further the certificate authority for service providers and the blocking-list operator)]",
-    "retrieved": "2026-09-29",
-    "source_id": "gesetze-im-internet-de:3b46010997",
-    "value_as_found": "yes"
-   }
-  ],
   "indicator:DE:L1": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -23261,44 +23199,6 @@
     "retrieved": "2026-09-30",
     "source_id": "bundesbank-de:0a757db26d",
     "value_as_found": "TARGET (Eurosystem real-time gross settlement payment system)"
-   }
-  ],
-  "record:DE:civil_registry:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "checklist": [
-     "T1 authoritative original (official law portal)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "archived copy of this URL",
-     "value is a machine summary of the quote",
-     "every figure found in the original",
-     "not in the quote: BZSt",
-     "non-English source, machine-translated"
-    ],
-    "checks": {
-     "archived": true,
-     "document_hashed": true,
-     "figures_matched": true,
-     "language": "machine-translated",
-     "names_not_in_quote": [
-      "BZSt"
-     ],
-     "quote_match": "exact",
-     "source": "official",
-     "tier": 1,
-     "tier_kind": "official_law_portal",
-     "value": "summary"
-    },
-    "confidence": "official",
-    "gloss": "The Federal Central Tax Office stores the following data on natural persons: 1. identification number, 2. business identification numbers, 3. surname, 4. former names, 5. first names",
-    "grade": "Standard",
-    "locator": "page text",
-    "original": "Das Bundeszentralamt für Steuern speichert zu natürlichen Personen folgende Daten: 1. Identifikationsnummer, 2. Wirtschafts-Identifikationsnummern, 3. Familienname, 4. frühere Namen, 5. Vornamen",
-    "quote": "Das Bundeszentralamt für Steuern speichert zu natürlichen Personen folgende Daten: 1. Identifikationsnummer, 2. Wirtschafts-Identifikationsnummern, 3. Familienname, 4. frühere Namen, 5. Vornamen [English: The Federal Central Tax Office stores the following data on natural persons: 1. identification number, 2. business identification numbers, 3. surname, 4. former names, 5. first names]",
-    "retrieved": "2026-09-29",
-    "source_id": "gesetze-im-internet-de:3fe2afde50",
-    "value_as_found": "The Federal Central Tax Office (BZSt) stores the national personal identification number (Identifikationsnummer) with core identity data for every natural person (Abgabenordnung § 139b(3))"
    }
   ],
   "record:DE:civil_registry:register": [
@@ -88943,10 +88843,8 @@
           "c": [
            "indicator:DE:K2"
           ],
-          "g": "Standard",
-          "k": "categorical",
-          "role": "fact",
-          "t": "Yes"
+          "role": "disputed",
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_074137f6-b8e) did not confirm this: Both quotes are verbatim, but neither says who operates the eID scheme: the Bundesdruckerei page only calls the group a federal technology company, and PAuswG §4(3) only says the BMI designates the card manufacturer, certificate authority a It is withheld until the fact or its source is corrected and checked again"
          }
         ],
         [
@@ -89202,9 +89100,8 @@
           "c": [
            "record:DE:civil_registry:operator"
           ],
-          "g": "Standard",
-          "role": "fact",
-          "t": "The Federal Central Tax Office (BZSt) stores the national personal identification number (Identifikationsnummer) with core identity data for every natural person (Abgabenordnung § 139b(3))"
+          "role": "disputed",
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_074137f6-b8e) did not confirm this: The quote is verbatim and shows the BZSt stores the Identifikationsnummer with names and other identity data, but the printed text adds 'national personal identification number' and 'for every natural person', neither of which §139b says (i It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -129097,7 +128994,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -129106,7 +129003,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -129195,7 +129092,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -131019,6 +130922,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Austria"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Austria"
      }
     ]
    },
@@ -131042,7 +130960,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -131051,7 +130969,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -131140,7 +131058,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -132366,6 +132290,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Belgium"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Belgium"
      }
     ]
    },
@@ -132389,7 +132328,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -132398,7 +132337,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -132487,7 +132426,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -133791,6 +133736,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Bulgaria"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Bulgaria"
      }
     ]
    },
@@ -133814,7 +133774,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -133823,7 +133783,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -133912,7 +133872,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -135658,6 +135624,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Cyprus"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Cyprus"
      }
     ]
    },
@@ -135681,7 +135662,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -135690,7 +135671,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -135779,7 +135760,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -137707,6 +137694,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Czechia"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Czechia"
      }
     ]
    },
@@ -137730,7 +137732,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -137739,7 +137741,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -137828,7 +137830,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -137915,7 +137923,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "28 of 52 printed facts about Germany pass."
+          "t": "28 of 50 printed facts about Germany pass."
          }
         ],
         "type": "p"
@@ -138028,32 +138036,6 @@
           {
            "role": "method",
            "t": "supported"
-          },
-          {
-           "role": "method",
-           "t": "wf_074137f6-b8e"
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "indicator:DE:K2"
-          },
-          {
-           "role": "method",
-           "t": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "not supported"
           },
           {
            "role": "method",
@@ -138288,32 +138270,6 @@
           {
            "role": "method",
            "t": "supported"
-          },
-          {
-           "role": "method",
-           "t": "wf_074137f6-b8e"
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:DE:civil_registry:operator"
-          },
-          {
-           "role": "method",
-           "t": "Civil registry core: the body that operates it"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "not supported"
           },
           {
            "role": "method",
@@ -139314,6 +139270,90 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Germany"
+     },
+     {
+      "blocks": [
+       {
+        "align": [
+         "left",
+         "left",
+         "left",
+         "left",
+         "left"
+        ],
+        "columns": [
+         {
+          "role": "label",
+          "t": "Claim"
+         },
+         {
+          "role": "label",
+          "t": "What it answers"
+         },
+         {
+          "role": "label",
+          "t": "Checked by"
+         },
+         {
+          "role": "label",
+          "t": "Verdict"
+         },
+         {
+          "role": "label",
+          "t": "Reason"
+         }
+        ],
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "indicator:DE:K2"
+          },
+          {
+           "role": "method",
+           "t": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "not supported"
+          },
+          {
+           "role": "method",
+           "t": "Both quotes are verbatim, but neither says who operates the eID scheme: the Bundesdruckerei page only calls the group a federal technology company, and PAuswG §4(3) only says the BMI designates the card manufacturer, certificate authority and blocking-list operator (published in the Bundesanzeiger). Linking the two (that Bundesdruckerei is the designated operator) needs outside knowledge, so 'Yes'"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:DE:civil_registry:operator"
+          },
+          {
+           "role": "method",
+           "t": "Civil registry core: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "not supported"
+          },
+          {
+           "role": "method",
+           "t": "The quote is verbatim and shows the BZSt stores the Identifikationsnummer with names and other identity data, but the printed text adds 'national personal identification number' and 'for every natural person', neither of which §139b says (it only states a natural person may not receive more than one number); the operator is supported, the printed scope is not."
+          }
+         ]
+        ],
+        "type": "table"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Germany"
      }
     ]
    },
@@ -139337,7 +139377,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -139346,7 +139386,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -139435,7 +139475,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -141129,6 +141175,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Denmark"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Denmark"
      }
     ]
    },
@@ -141152,7 +141213,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -141161,7 +141222,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -141250,7 +141311,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -142840,6 +142907,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Estonia"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Estonia"
      }
     ]
    },
@@ -142863,7 +142945,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -142872,7 +142954,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -142961,7 +143043,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -144525,6 +144613,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Greece"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Greece"
      }
     ]
    },
@@ -144548,7 +144651,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -144557,7 +144660,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -144646,7 +144749,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -146288,6 +146397,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Spain"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Spain"
      }
     ]
    },
@@ -146311,7 +146435,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -146320,7 +146444,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -146409,7 +146533,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -147401,6 +147531,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Finland"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Finland"
      }
     ]
    },
@@ -147424,7 +147569,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -147433,7 +147578,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -147522,7 +147667,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -149606,6 +149757,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about France"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: France"
      }
     ]
    },
@@ -149629,7 +149795,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -149638,7 +149804,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -149727,7 +149893,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -151369,6 +151541,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Croatia"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Croatia"
      }
     ]
    },
@@ -151392,7 +151579,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -151401,7 +151588,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -151490,7 +151677,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -153522,6 +153715,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Hungary"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Hungary"
      }
     ]
    },
@@ -153545,7 +153753,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -153554,7 +153762,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -153643,7 +153851,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -155519,6 +155733,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Ireland"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Ireland"
      }
     ]
    },
@@ -155542,7 +155771,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -155551,7 +155780,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -155640,7 +155869,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -157282,6 +157517,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Italy"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Italy"
      }
     ]
    },
@@ -157305,7 +157555,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -157314,7 +157564,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -157403,7 +157653,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -158083,6 +158339,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Lithuania"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Lithuania"
      }
     ]
    },
@@ -158106,7 +158377,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -158115,7 +158386,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -158204,7 +158475,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -158858,6 +159135,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Luxembourg"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Luxembourg"
      }
     ]
    },
@@ -158881,7 +159173,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -158890,7 +159182,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -158979,7 +159271,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -160387,6 +160685,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Latvia"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Latvia"
      }
     ]
    },
@@ -160410,7 +160723,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -160419,7 +160732,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -160508,7 +160821,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -161474,6 +161793,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Malta"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Malta"
      }
     ]
    },
@@ -161497,7 +161831,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -161506,7 +161840,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -161595,7 +161929,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -162977,6 +163317,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Netherlands"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Netherlands"
      }
     ]
    },
@@ -163000,7 +163355,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -163009,7 +163364,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -163098,7 +163453,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -164532,6 +164893,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Poland"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Poland"
      }
     ]
    },
@@ -164555,7 +164931,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -164564,7 +164940,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -164653,7 +165029,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -166191,6 +166573,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Portugal"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Portugal"
      }
     ]
    },
@@ -166214,7 +166611,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -166223,7 +166620,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -166312,7 +166709,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -167200,6 +167603,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Romania"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Romania"
      }
     ]
    },
@@ -167223,7 +167641,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -167232,7 +167650,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -167321,7 +167739,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -168651,6 +169075,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Sweden"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Sweden"
      }
     ]
    },
@@ -168674,7 +169113,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -168683,7 +169122,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -168772,7 +169211,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -170518,6 +170963,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Slovenia"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Slovenia"
      }
     ]
    },
@@ -170541,7 +171001,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+          "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
          }
         ],
         "type": "p"
@@ -170550,7 +171010,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 28 of 1390 printed facts pass."
+          "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -170639,7 +171099,13 @@
          [
           {
            "role": "method",
-           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
           }
          ]
         ],
@@ -172099,6 +172565,21 @@
       ],
       "id": "f-facts",
       "title": "The verdict on each fact about Slovakia"
+     },
+     {
+      "blocks": [
+       {
+        "spans": [
+         {
+          "role": "method",
+          "t": "None."
+         }
+        ],
+        "type": "p"
+       }
+      ],
+      "id": "f-withheld",
+      "title": "Withheld after the fact check: Slovakia"
      }
     ]
    }
@@ -172123,7 +172604,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
+         "t": "Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker."
         }
        ],
        "type": "p"
@@ -172132,7 +172613,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "In this build, 28 of 1390 printed facts pass."
+         "t": "In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check."
         }
        ],
        "type": "p"
@@ -172221,7 +172702,13 @@
         [
          {
           "role": "method",
-          "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically."
+          "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current."
          }
         ]
        ],
@@ -172309,6 +172796,7 @@
         "left",
         "right",
         "right",
+        "right",
         "right"
        ],
        "columns": [
@@ -172327,6 +172815,10 @@
         {
          "role": "label",
          "t": "Not passing"
+        },
+        {
+         "role": "label",
+         "t": "Withheld"
         }
        ],
        "rows": [
@@ -172346,6 +172838,10 @@
          {
           "role": "method",
           "t": "65"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172364,6 +172860,10 @@
          {
           "role": "method",
           "t": "42"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172382,6 +172882,10 @@
          {
           "role": "method",
           "t": "45"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172400,6 +172904,10 @@
          {
           "role": "method",
           "t": "58"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172418,6 +172926,10 @@
          {
           "role": "method",
           "t": "62"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172436,6 +172948,10 @@
          {
           "role": "method",
           "t": "69"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172454,6 +172970,10 @@
          {
           "role": "method",
           "t": "60"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172472,6 +172992,10 @@
          {
           "role": "method",
           "t": "56"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172490,6 +173014,10 @@
          {
           "role": "method",
           "t": "33"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172508,6 +173036,10 @@
          {
           "role": "method",
           "t": "75"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172517,7 +173049,7 @@
          },
          {
           "role": "method",
-          "t": "52"
+          "t": "50"
          },
          {
           "role": "method",
@@ -172525,7 +173057,11 @@
          },
          {
           "role": "method",
-          "t": "24"
+          "t": "22"
+         },
+         {
+          "role": "method",
+          "t": "2"
          }
         ],
         [
@@ -172544,6 +173080,10 @@
          {
           "role": "method",
           "t": "55"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172562,6 +173102,10 @@
          {
           "role": "method",
           "t": "73"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172580,6 +173124,10 @@
          {
           "role": "method",
           "t": "67"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172598,6 +173146,10 @@
          {
           "role": "method",
           "t": "58"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172616,6 +173168,10 @@
          {
           "role": "method",
           "t": "49"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172634,6 +173190,10 @@
          {
           "role": "method",
           "t": "21"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172652,6 +173212,10 @@
          {
           "role": "method",
           "t": "20"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172670,6 +173234,10 @@
          {
           "role": "method",
           "t": "32"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172688,6 +173256,10 @@
          {
           "role": "method",
           "t": "48"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172706,6 +173278,10 @@
          {
           "role": "method",
           "t": "50"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172724,6 +173300,10 @@
          {
           "role": "method",
           "t": "54"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172742,6 +173322,10 @@
          {
           "role": "method",
           "t": "29"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172760,6 +173344,10 @@
          {
           "role": "method",
           "t": "51"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172778,6 +173366,10 @@
          {
           "role": "method",
           "t": "62"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172796,6 +173388,10 @@
          {
           "role": "method",
           "t": "58"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ],
         [
@@ -172814,6 +173410,10 @@
          {
           "role": "method",
           "t": "46"
+         },
+         {
+          "role": "method",
+          "t": "0"
          }
         ]
        ],
@@ -172840,7 +173440,7 @@
    "BG": "Fact check: 0 of 45 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/BG",
    "CY": "Fact check: 0 of 62 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/CY",
    "CZ": "Fact check: 0 of 69 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/CZ",
-   "DE": "Fact check: 28 of 52 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DE",
+   "DE": "Fact check: 28 of 50 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DE",
    "DK": "Fact check: 0 of 60 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/DK",
    "EE": "Fact check: 0 of 56 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/EE",
    "EL": "Fact check: 0 of 55 facts confirmed by a second model that did not write them (none yet); not by a person. How: /fact-check/EL",
@@ -173121,7 +173721,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1390 facts are printed, 3342 values are withheld as gaps, and 20 are withheld as disputed."
+        "t": "This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed."
        }
       ],
       "type": "p"
@@ -173511,7 +174111,7 @@
         },
         {
          "role": "method",
-         "t": "635"
+         "t": "633"
         }
        ],
        [
@@ -173605,7 +174205,7 @@
         },
         {
          "role": "method",
-         "t": "1284"
+         "t": "1282"
         }
        ]
       ],
@@ -173969,7 +174569,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "In this build, 28 of 1390 printed facts pass the fact check."
+        "t": "In this build, 28 of 1388 printed facts pass the fact check."
        }
       ],
       "type": "p"
@@ -176065,19 +176665,6 @@
    "source_id": "bundesbank-de:0a757db26d",
    "title": "TARGET - Der Entwicklungsprozess",
    "url": "https://www.bundesbank.de/de/aufgaben/unbarer-zahlungsverkehr/target/target-603342"
-  },
-  "bundesdruckerei-de:2e8ac42075": {
-   "archived_url": "https://web.archive.org/web/20260727120331/https://www.bundesdruckerei.de/de/konzern",
-   "doc_type": "webpage",
-   "label": "Bundesdruckerei Gruppe GmbH — Konzern - Bundesdruckerei-Gruppe",
-   "language": "de",
-   "license": "",
-   "notes": "sha256 6287971476accebc4efd0a023dd737d16f50b626feee4b1c036b1665ee219b13 (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Bundesdruckerei Gruppe GmbH",
-   "source_id": "bundesdruckerei-de:2e8ac42075",
-   "title": "Konzern - Bundesdruckerei-Gruppe",
-   "url": "https://www.bundesdruckerei.de/de/konzern"
   },
   "bundeskanzleramt-gv-at:3c8dfd4d8c": {
    "archived_url": "",
@@ -179094,32 +179681,6 @@
    "source_id": "gesetze-im-internet-de:335ed8bbdb",
    "title": "Bundeszentralregistergesetz § 1",
    "url": "https://www.gesetze-im-internet.de/bzrg/__1.html"
-  },
-  "gesetze-im-internet-de:3b46010997": {
-   "archived_url": "https://web.archive.org/web/20260309012726/https://www.gesetze-im-internet.de/pauswg/__4.html",
-   "doc_type": "statute",
-   "label": "Bundesministerium der Justiz (gesetze-im-internet.de) — Personalausweisgesetz (PAuswG) § 4 Eigentum am Ausweis;…",
-   "language": "de",
-   "license": "",
-   "notes": "sha256 98953671f68d32ce151b054879ce2a6867bdccf29ba6cc92bba5b06e631916f3 (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Bundesministerium der Justiz (gesetze-im-internet.de)",
-   "source_id": "gesetze-im-internet-de:3b46010997",
-   "title": "Personalausweisgesetz (PAuswG) § 4 Eigentum am Ausweis; Ausweishersteller; Vergabestelle für Berechtigungszertifikate",
-   "url": "https://www.gesetze-im-internet.de/pauswg/__4.html"
-  },
-  "gesetze-im-internet-de:3fe2afde50": {
-   "archived_url": "https://web.archive.org/web/20260227090600/https://www.gesetze-im-internet.de/ao_1977/__139b.html",
-   "doc_type": "statute",
-   "label": "Bundesministerium der Justiz / gesetze-im-internet.de — § 139b AO - Identifikationsnummer",
-   "language": "de",
-   "license": "",
-   "notes": "sha256 600db78f9ff553e15a0d3e75809dbdd694792b40010945fbdbd7323f1bad1d3a (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Bundesministerium der Justiz / gesetze-im-internet.de",
-   "source_id": "gesetze-im-internet-de:3fe2afde50",
-   "title": "§ 139b AO - Identifikationsnummer",
-   "url": "https://www.gesetze-im-internet.de/ao_1977/__139b.html"
   },
   "gesetze-im-internet-de:4f79954d49": {
    "archived_url": "https://web.archive.org/web/20260227115654/https://www.gesetze-im-internet.de/bkag_2018/__3.html",

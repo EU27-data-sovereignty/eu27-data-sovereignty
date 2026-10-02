@@ -122,6 +122,16 @@ class Gate(Sandbox):
         self.assertEqual(code, 0, out)
         self.assertIn(f"{len(self.facts)} of {len(self.facts)} printed facts", out)
 
+    def test_a_withheld_fact_does_not_block_the_gate(self):
+        ledger = self.full_ledger()
+        withheld = {"claim": "record:XX:none:register", "fact_sha256": "1" * 64, "author_model": "unrecorded",
+                    "checker_model": FABLE, "verdict": "not_supported", "reason": "fixture", "checked_url": "",
+                    "run": "r1", "checked": "2026-10-01"}
+        self.passing({**ledger, withheld["claim"]: withheld})
+        code, out = self.gate()
+        self.assertEqual(code, 0, out)
+        self.assertIn("record:XX:none:register", factcheck.AUDIT.read_text(encoding="utf-8"))
+
     def test_fails_on_a_fact_never_checked(self):
         ledger = self.full_ledger()
         claim = self.facts[0]["claim"]
@@ -227,6 +237,63 @@ class Stage(Sandbox):
         self.assertEqual([v["verdict"] for v in staged["verdicts"]], ["supported", "unclear", "unclear"])
 
 
+class Withhold(unittest.TestCase):
+    """A fact the check did not confirm, exactly as printed, is withheld as disputed (#89)."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.src = document.Sources()
+        cls.facts = factcheck.facts(BUNDLE)
+
+    def sha_via_sources(self, f: dict) -> str:
+        found = self.src.evidence(f["claim"], f["printed"], f["categorical"])
+        cites = [factcheck.citation_record(c["source_id"], self.src.reg[c["source_id"]], c["locator"],
+                                           c["quote"], c["value_as_found"],
+                                           bool(a["checks"].get("dataset_value_reproduced")))
+                 for c, a in found]
+        return factcheck.fact_sha256(factcheck.fact_record(f["claim"], f["printed"], f["categorical"], cites))
+
+    def test_the_content_model_and_the_bundle_hash_every_fact_the_same(self):
+        for f in self.facts:
+            self.assertEqual(self.sha_via_sources(f), factcheck.fact_sha256(f), f["claim"])
+
+    def row(self, f: dict, **kw) -> dict:
+        return {"claim": f["claim"], "fact_sha256": factcheck.fact_sha256(f), "author_model": "unrecorded",
+                "checker_model": FABLE, "verdict": "not_supported", "reason": "says 2019, not 2021.",
+                "checked_url": "", "run": "r9", "checked": "2026-10-02", **kw}
+
+    def span(self, f: dict, row: dict) -> dict:
+        with mock.patch.object(self.src, "checked", {f["claim"]: row}):
+            return self.src.fact(f["claim"], f["printed"], categorical=f["categorical"])
+
+    def test_a_disagreement_on_this_exact_fact_withholds_it(self):
+        f = next(x for x in self.facts if x["claim"] not in factcheck.load_ledger())
+        span = self.span(f, self.row(f))
+        self.assertEqual(span["role"], "disputed")
+        self.assertIn("did not confirm this: says 2019, not 2021.", span["t"])
+        self.assertIn("run r9", span["t"])
+
+    def test_unclear_also_withholds(self):
+        f = next(x for x in self.facts if x["claim"] not in factcheck.load_ledger())
+        span = self.span(f, self.row(f, verdict="unclear"))
+        self.assertEqual(span["role"], "disputed")
+        self.assertIn("could not confirm", span["t"])
+
+    def test_a_verdict_on_an_older_version_withholds_nothing(self):
+        f = next(x for x in self.facts if x["claim"] not in factcheck.load_ledger())
+        self.assertEqual(self.span(f, self.row(f, fact_sha256="0" * 64))["role"], "fact")
+
+    def test_a_supported_verdict_prints_the_fact(self):
+        f = self.facts[0]
+        self.assertEqual(self.span(f, self.row(f, verdict="supported"))["role"], "fact")
+
+    def test_the_bundle_withholds_every_current_disagreement(self):
+        printed = {f["claim"] for f in self.facts}
+        for claim, r in factcheck.load_ledger().items():
+            if r["verdict"] != "supported":
+                self.assertNotIn(claim, printed, claim)
+
+
 class Commands(unittest.TestCase):
     SKILL = (ROOT / ".claude" / "skills" / "factcheck" / "SKILL.md").read_text(encoding="utf-8")
 
@@ -254,7 +321,8 @@ class Appendix(unittest.TestCase):
 
     def test_each_country_appendix_lists_exactly_its_printed_facts(self):
         for iso, doc in BUNDLE["documents"].items():
-            table = BUNDLE["factcheck"]["countries"][iso]["sections"][-1]["blocks"][-1]
+            facts = next(x for x in BUNDLE["factcheck"]["countries"][iso]["sections"] if x["id"] == "f-facts")
+            table = facts["blocks"][-1]
             self.assertEqual(sorted(r[0]["t"] for r in table["rows"]), sorted(document.claims_used(doc)), iso)
 
     def test_the_appendix_prints_no_fact_and_says_it_is_not_a_person(self):

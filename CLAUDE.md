@@ -108,8 +108,9 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   copies are accepted only for exactly the requested host (`research.snapshot_matches`). Fix the data;
   never bypass the gate.
 - **Any change to a printed fact needs `/factcheck` before pushing to `main`** (#87). The deploy's
-  fact-check gate fails on a fact that is new, changed, disagreed with or checked by its own author, and on a
-  stale `docs/fact-check-audit.md`. The gate is not in `./test.sh`, so branches stay unblocked; run
+  fact-check gate fails on a printed fact that is new, changed or checked by its own author, and on a stale
+  `docs/fact-check-audit.md`. A fact the checker did not confirm is withheld as disputed, not printed (#89):
+  `document.Sources.withheld`, keyed on the fact's hash. The gate is not in `./test.sh`, so branches stay unblocked; run
   `./run.sh factcheck status` to see what is due. Never edit the ledger or a verdict to pass it.
 - **A push to `main` is a production deploy** (#81), gated by `./test.sh` in Actions. The PDFs need `typst`,
   which Vercel's image lacks, so every deploy is prebuilt (CI pins and checksums typst). The build command runs

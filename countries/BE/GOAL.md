@@ -154,7 +154,7 @@ Tier 0 and 1 holdings for Belgium without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1390 facts are printed, 3342 values are withheld as gaps, and 20 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1388 facts are printed, 3342 values are withheld as gaps, and 22 are withheld as disputed.
 
 ### How sources were found
 
@@ -210,7 +210,7 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 635 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 633 |
 | T2 competent public body or audit office | 633 |
 | T3 other institution or company | 9 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 113 |
@@ -223,7 +223,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 106 |
-| Standard | 1284 |
+| Standard | 1282 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -264,7 +264,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 28 of 1390 printed facts pass the fact check.
+In this build, 28 of 1388 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -304,9 +304,9 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template. The check below is made by a second model, not by a person.
 
-Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
+Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 28 of 1390 printed facts pass.
+In this build, 28 of 1388 printed facts pass, and 2 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -320,7 +320,8 @@ In this build, 28 of 1390 printed facts pass.
 - The checked-in workflow (model/research/factcheck/workflow.js) asks for that checker model by name, one agent per batch of one state's facts. The checker fetches each cited page (or the Eurostat API response), looks for the quote, and decides whether it supports the statement exactly as printed: value, unit, date, country and scope. It answers supported, not supported or unclear, with a reason.
 - factcheck.py stage refuses any batch whose checker reports a different model than the one asked for, or is an author of a fact in it.
 - factcheck.py record writes the verdicts to the ledger, the run's manifest (input, workflow and bundle hashes, commit, counts) and this audit file.
-- Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy until the fact or its source is fixed and checked again; nothing is changed automatically.
+- A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record.
+- Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current.
 
 A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the question it answers, the printed text and every citation behind it. If any of these changes, the verdict lapses and the fact must be checked again before the next deploy.
 
@@ -378,6 +379,10 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:BE:crisis_management:count | Crisis management and civil protection: how many records it holds | unrecorded | none | never checked |  |
 | record:BE:education:register | Education: the name of the register or system | unrecorded | none | never checked |  |
 | record:BE:education:operator | Education: the body that operates it | unrecorded | none | never checked |  |
+
+### Withheld after the fact check: Belgium
+
+None.
 
 ---
 

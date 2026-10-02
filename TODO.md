@@ -3,9 +3,16 @@
 Cross-country work, as a checklist. Why and in what order: [`ROADMAP.md`](ROADMAP.md). How the evidence is
 produced: [`METHOD.md`](METHOD.md).
 
-## Publish
-- [ ] Production deploy of the current build (author's OK), then push. Blocked by the fact-check gate (#87)
-      until all 1,390 printed facts pass; see below
+## Publish (first automatic deploy to eu27.cloud; checklist in `DEPLOYMENT.md`)
+- [ ] **Owner:** create a Vercel token (https://vercel.com/account/tokens, scope `pieteradejongs-projects`),
+      then `gh secret set VERCEL_TOKEN --env production` and paste it
+- [ ] **Owner:** at iwantmyname, set the nameservers for `eu27.cloud` to `ns1.vercel-dns.com` and
+      `ns2.vercel-dns.com` (#90); verify with `dig +short NS eu27.cloud`
+- [ ] Full fact check recorded; `factcheck.py gate` exits 0 (see below)
+- [ ] Fast-forward `main` to `feat/fact-check` and push, with the owner's OK at that moment (a push to
+      `main` is the production deploy); watch the `Deploy` run; record the deploy in `DEPLOYMENT.md`
+- [ ] Fix the `security` workflow, which fails on every push because its reusable workflow is only in the
+      unpushed local dotfiles (pushing dotfiles needs the owner's OK)
 - [ ] `/ask`: dedicated Anthropic workspace with a spend limit and `ANTHROPIC_API_KEY` in Vercel
       (author), then the 12-question eval (with approval), then the Vercel Firewall rate limit
 
@@ -27,17 +34,18 @@ Done
 - [x] Wide web tables keyboard-scrollable (accessibility)
 
 Open
-- [ ] **Commit** the #88 methodology and style work and the pilot results (uncommitted on `feat/fact-check`)
-- [ ] **Decide the full run** for the remaining 1,360 facts (57 batches, about 45–60 min):
-      Fable 5.1, about $185–280 (the rule as chosen), or Opus 5.5, about $75–110 (reverses that choice)
+- [x] Commit the #88 methodology and style work and the pilot results (`9e1ddb2`)
+- [x] Full run decided (2026-10-02): Fable 5.1, about $185–280, for the remaining 1,362 facts
+- [x] A disagreement withholds the fact (shown as disputed with the checker's reason) instead of blocking
+      the deploy (#89)
 - [ ] Run it with `/factcheck`; stage, record, `./run.sh data`, `./run.sh artefacts`, `./test.sh`, gate
-- [ ] Resolve every disagreement (owner decides; never edit a verdict). From the pilot:
+- [ ] Resolve every withheld fact (owner decides; never edit a verdict). Withheld since the pilot:
   - [ ] `record:DE:civil_registry:operator`: the printed text says "national personal identification
         number … for every natural person"; §139b AO only says the BZSt stores these data on natural
         persons. Bring the printed text back to the quote
   - [ ] `indicator:DE:K2` (eID operated by the state): printed Yes, but no cited page says Bundesdruckerei
         is the designated operator. Find that source (e.g. the Bundesanzeiger designation) or set unknown
-- [ ] `gate` prints `1390 of 1390` and exits 0; fill in the `Verified:` line of #87
+- [ ] `gate` prints `N of N` and exits 0, with withheld facts listed; fill in the `Verified:` lines of #87, #89
 - [ ] Merge `feat/citizen-review` and `feat/fact-check` into `main` (owner's OK; a push to `main` deploys)
 - [ ] Optional: make the vetting reviewer cross-model too (it is still Opus 5.5 reviewing Opus 5.5)
 - [ ] Optional: credit the cross-model check in the evidence grades (`evidence.assess`); a decision of

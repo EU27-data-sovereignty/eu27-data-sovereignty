@@ -40,11 +40,13 @@ order of operations. Follow it exactly: a check only means something if every ru
    - the ledger;
    - the run manifest;
    - `docs/fact-check-audit.md`.
-5. **Disagreements.** Run `./run.sh factcheck status`.
-   - For every fact *not supported* or *unclear*, show the owner the claim, the printed text, the
-     checker's reason and the URL.
-   - **The owner decides.** Typically that means a better source through `/vet`, or withdrawing the
-     fact. A changed fact is due again, so the next run checks it.
+5. **Disagreements.** The content model withholds every fact the checker did not confirm (#89): it is
+   shown as disputed with the checker's reason, so a disagreement does not block the deploy.
+   - List every withheld fact for the owner: the claim, the printed text, the checker's reason and the
+     URL. The audit file's "Withheld after the fact check" section has them all.
+   - **The owner decides how each is resolved.** Typically that means a better source through `/vet`,
+     or a corrected printed text. A changed fact is no longer withheld; it is due again, so the next
+     run checks it.
    - Never edit the ledger, a register or a verdict to make the gate pass.
 6. **Build.** Run `./run.sh data`, then `./run.sh artefacts`. This refreshes the fact-check appendix
    in the bundle, the briefs, the PDFs, the web page and the poster footers.

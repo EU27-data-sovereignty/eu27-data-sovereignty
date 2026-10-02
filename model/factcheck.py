@@ -22,7 +22,8 @@ only what changed while the gate still demands a current, agreeing verdict for e
 
 The checker's answer is not trusted about itself. The workflow asks for a model by name and the checker
 reports the model it is; `stage` refuses a batch where the two differ, or where the checker is an
-author. A disagreement blocks the deploy; nothing here edits a register to make the gate pass.
+author. A fact the checker does not confirm is withheld as disputed by the content model (#89), with the
+checker's reason; nothing here edits a register or a verdict to make the gate pass.
 
 This is a check by a second machine, not by a person. Every output says so (evidence.DISCLAIMER).
 """
@@ -110,34 +111,61 @@ def eurostat_url(locator: str) -> str:
     return f"{EUROSTAT_API}/{parts[0]}?{query}"
 
 
+def citation_record(source_id: str, src: dict, locator: str, quote: str, value_as_found: str,
+                    dataset: bool) -> dict:
+    """One citation as the checker sees it and as the fact hash covers it."""
+    original, gloss = evidence.split_quote(quote)
+    return {"source_id": source_id, "url": src["url"], "archived_url": src.get("archived_url", ""),
+            "api_url": eurostat_url(locator) if dataset else "", "fetched": src.get("notes", ""),
+            "locator": locator, "quote": original, "quote_english": gloss, "value_as_found": value_as_found}
+
+
+_TABLES: tuple[dict, dict] | None = None
+
+
+def describe(claim: str) -> str:
+    global _TABLES
+    if _TABLES is None:
+        _TABLES = build_input.tables()
+    return build_input.describe(claim, *_TABLES)
+
+
+def fact_record(claim: str, printed: str, categorical: bool, citations: list[dict]) -> dict:
+    """A printed fact as the checker sees it and as `fact_sha256` hashes it. The bundle (`facts`) and the
+    content model (`document.Sources`, which withholds a fact the check disagreed with, #89) both build
+    it here, so the two can never hash the same fact differently."""
+    return {"claim": claim, "what": describe(claim), "printed": printed, "categorical": categorical,
+            "citations": citations}
+
+
 def facts(bundle: dict) -> list[dict]:
     """Every printed fact, with everything a checker needs and nothing it should not see: the question,
     the printed text, and each citation's URL, locator and quote. Grades and checklists are left out;
     they describe the process, not the fact."""
-    classes, indicators = build_input.tables()
     out = []
     for iso, doc in sorted(bundle["documents"].items()):
         for span in document.walk_spans(doc):
             if span.get("role") != "fact":
                 continue
             for claim in span["c"]:
-                cites = []
-                for c in bundle["claims"].get(claim, []):
-                    src = bundle["sources"][c["source_id"]]
-                    dataset = bool(c["checks"].get("dataset_value_reproduced"))
-                    cites.append({
-                        "source_id": c["source_id"], "url": src["url"],
-                        "archived_url": src.get("archived_url", ""),
-                        "api_url": eurostat_url(c["locator"]) if dataset else "",
-                        "fetched": src.get("notes", ""), "locator": c["locator"],
-                        "quote": c["original"], "quote_english": c["gloss"],
-                        "value_as_found": c["value_as_found"],
-                    })
-                out.append({"claim": claim, "iso": iso,
-                            "what": build_input.describe(claim, classes, indicators),
-                            "printed": span["t"], "categorical": span.get("k") == "categorical",
-                            "citations": cites})
+                cites = [citation_record(c["source_id"], bundle["sources"][c["source_id"]], c["locator"],
+                                         c["quote"], c["value_as_found"],
+                                         bool(c["checks"].get("dataset_value_reproduced")))
+                         for c in bundle["claims"].get(claim, [])]
+                out.append({**fact_record(claim, span["t"], span.get("k") == "categorical", cites),
+                            "iso": iso})
     return out
+
+
+def withholding(row: dict | None, sha: str) -> str:
+    """Why a fact is withheld after the fact check, or ''. Only a verdict on this exact fact counts: once
+    the fact or its source changes, the old verdict withholds nothing and the fact is checked again."""
+    if not row or row["verdict"] == "supported" or row["fact_sha256"] != sha:
+        return ""
+    what = "could not confirm" if row["verdict"] == "unclear" else "did not confirm"
+    return (f"the fact check ({row['checker_model']}, run {row['run']}) {what} this: "
+            f"{_clean(row['reason'], 240)} It is withheld until the fact or its source is corrected and "
+            "checked again")
 
 
 def fact_sha256(fact: dict) -> str:
@@ -402,8 +430,11 @@ def summary(bundle: dict) -> dict:
     passing = [f for f, _, why in rows if not why]
     current = [ledger[f["claim"]] for f, sha, _ in rows
                if f["claim"] in ledger and ledger[f["claim"]]["fact_sha256"] == sha]
+    printed = {f["claim"] for f, _, _ in rows}
     return {
         "printed": len(rows), "passing": len(passing),
+        # Facts the check did not confirm and the content model therefore withholds (#89).
+        "withheld": [r for c, r in sorted(ledger.items()) if c not in printed and r["verdict"] != "supported"],
         "failing": [(f, why) for f, _, why in rows if why],
         "by_checker": {m: sum(1 for r in current if r["checker_model"] == m) for m in CHECKERS.values()},
         "by_verdict": {k: sum(1 for r in current if r["verdict"] == k) for k in VERDICTS},
@@ -437,7 +468,8 @@ def audit_text(bundle: dict) -> str:
         "## Status",
         "",
         f"**{s['passing']} of {s['printed']} printed facts** have a current verdict of *supported* from a "
-        "checker model that did not write them. A deploy to production requires all of them.",
+        "checker model that did not write them. A deploy to production requires all of them. "
+        f"**{len(s['withheld'])}** more are withheld because the check did not confirm them.",
         "",
         "| Checker model | Current verdicts |",
         "|---|---:|",
@@ -469,6 +501,16 @@ def audit_text(bundle: dict) -> str:
                   *[f"| `{f['claim']}` | {_md_cell(f['printed'])} | {_md_cell(why)} |" for f, why in s["failing"]]]
     else:
         lines += ["None. Every printed fact passes."]
+    lines += ["", "## Withheld after the fact check", "",
+              "Facts the checker did not confirm as printed. Each is shown as disputed, with this reason, instead "
+              "of being printed, until the fact or its source is corrected and checked again (DECISIONS.md #89).",
+              ""]
+    if s["withheld"]:
+        lines += ["| Claim | Checker | Verdict | Run | Reason |", "|---|---|---|---|---|",
+                  *[f"| `{r['claim']}` | {r['checker_model']} | {r['verdict'].replace('_', ' ')} | {r['run']} | "
+                    f"{_md_cell(r['reason'])} |" for r in s["withheld"]]]
+    else:
+        lines += ["None."]
     past = [v for v in history() if v["verdict"] != "supported"]
     lines += ["", "## Every disagreement on record", "",
               "Each verdict other than *supported*, from every run, including those a later check superseded "
@@ -512,9 +554,11 @@ STEPS = [
     "or is an author of a fact in it.",
     "`factcheck.py record` writes the verdicts to the ledger, the run's manifest (input, workflow and bundle "
     "hashes, commit, counts) and this audit file.",
+    "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, "
+    "instead of printed, until the fact or its source is corrected and checked again. The verdict stays "
+    "on the record.",
     "Before every production deploy, `factcheck.py gate` requires a current *supported* verdict from an "
-    "eligible checker for every printed fact, and this file to be current. A disagreement blocks the deploy "
-    "until the fact or its source is fixed and checked again; nothing is changed automatically.",
+    "eligible checker for every printed fact, and this file to be current.",
 ]
 
 
