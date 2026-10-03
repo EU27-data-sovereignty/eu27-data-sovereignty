@@ -1,0 +1,37 @@
+{
+ "iso": "DK",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:DK:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: the body that operates it",
+   "relation": "corrects",
+   "url": "https://sikkerhedsnet.dk/leverandoer",
+   "quote": "Dansk Beredskabskommunikation A/S er leverandør af SINE og står for driften af beredskabernes fælles radionet.",
+   "quote_english": "Dansk Beredskabskommunikation A/S is the supplier of SINE and is responsible for operating the emergency services' shared radio network.",
+   "value": "Dansk Beredskabskommunikation A/S (supplier and operator of SINE, the emergency services' shared radio network)",
+   "published": "",
+   "title": "Leverandør",
+   "publisher": "Center for Beredskabskommunikation (sikkerhedsnet.dk)",
+   "doc_type": "official_page",
+   "note": "This is CFB's own site and supports the network-operation clause that the om-cfb page lacked. The page also says CFB manages the contract, which the state renewed in 2023 with service planned from 1 April 2026; it covers public-safety radio only, not emergency calls.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "Dansk Beredskabskommunikation A/S",
+    "reason": "The quote appears verbatim and states that Dansk Beredskabskommunikation A/S supplies SINE and runs the emergency services' shared radio network."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:DK:emergency_communications:operator",
+   "status": "found"
+  }
+ ]
+}

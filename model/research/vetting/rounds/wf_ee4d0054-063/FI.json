@@ -1,0 +1,37 @@
+{
+ "iso": "FI",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:FI:electoral_roll:operator",
+   "question": "Electoral roll entry: the body that operates it",
+   "relation": "corrects",
+   "url": "https://www.oikeusrekisterikeskus.fi/ajankohtaista/tiedote-ja-uutisarkisto/uusi-vaalitietojarjestelma-testissa-kayttajien-nakemykset-tarkeita-vaalitietojarjestelman-kehityksessa/",
+   "quote": "Vaalitietojärjestelmän omistaa oikeusministeriö ja ORK vastaa sen teknisestä ylläpidosta yhdessä Valtion tieto- ja viestintätekniikkakeskuksen ja alihankkijoiden kanssa.",
+   "quote_english": "The election information system is owned by the Ministry of Justice and ORK is responsible for its technical maintenance together with the State ICT Centre (Valtori) and subcontractors.",
+   "value": "ORK (Oikeusrekisterikeskus, Legal Register Centre) maintains the election information system technically; the system is owned by oikeusministeriö (Ministry of Justice)",
+   "published": "2026-01-19",
+   "title": "Uusi vaalitietojärjestelmä testissä: käyttäjien näkemykset tärkeitä vaalitietojärjestelmän kehityksessä",
+   "publisher": "Oikeusrekisterikeskus",
+   "doc_type": "official_page",
+   "note": "The DVV page says the voting register is part of the election information system. ORK, the operator, says it runs that system technically for the Ministry of Justice, so DVV is the controller and ORK the operator; vaalit.fi also names ORK as processor.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "Ministry of Justice (owner); Oikeusrekisterikeskus (technical maintenance, with Valtori and subcontractors)",
+    "reason": "The quote appears verbatim and says the Ministry of Justice owns the election information system and ORK maintains it technically with Valtori. It does not specifically mention the electoral roll."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:FI:electoral_roll:operator",
+   "status": "found"
+  }
+ ]
+}

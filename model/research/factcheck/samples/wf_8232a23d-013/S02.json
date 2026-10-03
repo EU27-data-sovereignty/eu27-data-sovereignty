@@ -1,0 +1,210 @@
+{
+ "run": "wf_8232a23d-013",
+ "prepared": "2026-10-02-sample-2026-2672f565",
+ "batch": "S02",
+ "iso": "EU",
+ "checker_model": "claude-opus-5-5",
+ "reported_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "claim": "record:FI:geospatial:register",
+   "fact_sha256": "7929e78dc441c8afa0ae84b7e1e84a6b1da75e4ce0a47e057f59149f6b626007",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The page has the quote verbatim: 'Väestötietojärjestelmään talletetaan ... rakennuksesta seuraavat tiedot'. It says building data are recorded in the Population Information System, which matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2009/661"
+  },
+  {
+   "claim": "record:FR:government_payroll:operator",
+   "fact_sha256": "c678cdfcd751f11c828e39dfc6f9a285797ddd0d7894dd80d94f14b24a1ee8a2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "not_supported",
+   "reason": "The quote is a table heading. The table under it lists PAYSAGE ('consolidation de l'application de paye des agents de l'État') among projects carried by programmes 156 and 218. The question asks which body operates the system, and the printed text names no body; the page snippet does not name one either.",
+   "quote_found": true,
+   "checked_url": "https://www.senat.fr/rap/l24-144-315-1/l24-144-315-1_mono.html"
+  },
+  {
+   "claim": "record:MT:business_registry:register",
+   "fact_sha256": "28da362debc148eca3615b3f137f443ce47a8fff8fa78595f9dfe2c396dc4b8f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The quote is on the page verbatim and names the MBR's portal as the Business Automation Registry Online System (BAROS), as printed.",
+   "quote_found": true,
+   "checked_url": "https://mbr.mt/"
+  },
+  {
+   "claim": "record:SK:health_records:operator",
+   "fact_sha256": "f0cf52219a2149c7ee354af14633df720ba65b3ff3d17d235e874446d5a632f0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The live page returned 403, so I read the archived copy. The quote is there verbatim. The same act says 'Národné centrum a) je správcom a prevádzkovateľom národného zdravotníckeho informačného systému', so the centre is the operator. The acronym 'NCZI' does not appear on the page; it is only an abbreviation of the name.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250624093444/https://zakony.judikaty.info/predpis/zakon-153/2013"
+  },
+  {
+   "claim": "param:DE:population_m",
+   "fact_sha256": "39e619d79c18e9598231734b00cd3963c0e526db044725966a009957c2ce1de6",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The Eurostat API returns 83,467,117 for population on 1 January, DE, 2026. Scaled to millions and rounded, that is 83.467 million, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=DE&time=2026"
+  },
+  {
+   "claim": "record:ES:health_insurance:operator",
+   "fact_sha256": "804a6fdf9e5fdff64737a189a069096b67a23a99c5181ff187fd3e49d0b4a664",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The BOE text says 'la ley encomienda al Ministerio de Sanidad y Consumo la generación de un código de identificación personal único para el Sistema Nacional de Salud', which matches the printed statement. The sanidad.gob.es quote was also found verbatim and confirms that the Ministry handles the CIP-SNS.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-2591"
+  },
+  {
+   "claim": "param:FI:gdp_eur_bn",
+   "fact_sha256": "e84183d27aecad982cbbc49e7740f12c39fc97108b2e3b486aa2a28c231d484f",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The Eurostat API returns 281,783.0 million EUR (B1GQ, CP_MEUR, FI, 2025). In billions and rounded, that is 281.8 EUR bn, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=FI&time=2025"
+  },
+  {
+   "claim": "record:PL:water_control:operator",
+   "fact_sha256": "2f92cf414599db7f14620529514b174f7309dbf3619623682fc2e5a479812ab1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The PDF text has the quote verbatim: the national water management information system 'prowadzą Wody Polskie'. That supports Wody Polskie as the operator.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2025/960/text.pdf"
+  },
+  {
+   "claim": "record:NL:trust_services_pki:operator",
+   "fact_sha256": "352da34dbd16e13b169b58b09e0d4476053fddd9564906679d77bbc5080db676",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The page says PKIoverheid is a trust framework managed by Logius, with the Ministry of BZK as 'opdrachtgever' (commissioning body). That matches 'managed by Logius on behalf of Ministry of BZK'.",
+   "quote_found": true,
+   "checked_url": "https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wat-pkioverheid"
+  },
+  {
+   "claim": "record:EE:business_registry:register",
+   "fact_sha256": "5f2c21ca58e1670f475f6c6c3a0b6f83d2485437837dd5d56aa23946fb80d003",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The live page returned 403, so I read the archived copy. The quote is there verbatim and names the E-äriregister as the state's official portal holding the data of all registered legal persons.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260829032113/https://www.rik.ee/et/e-ariregister/e-ariregistri-portaal"
+  },
+  {
+   "claim": "record:DK:vehicle_licensing:register",
+   "fact_sha256": "af5d6ead2aae377f00af8776bf090810148f0ba6227040e000c8b24e8c91641d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "not_supported",
+   "reason": "The quote and § 1(2) are on the page; § 1(2) says the register holds data on each vehicle and who it belongs to ('tilhørsforhold'). But the printed text calls the register 'DMR', and that name or abbreviation does not appear anywhere on the page.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2023/179/xml"
+  },
+  {
+   "claim": "record:IE:public_health_surveillance:register",
+   "fact_sha256": "756c5b0f52bad15f0cf7784c412d1359c0def3569a10dc1277abdbfe20914d9c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The quote is on the page verbatim. The page is titled 'Computerised Infectious Disease Reporting (CIDR)', which matches the printed name.",
+   "quote_found": true,
+   "checked_url": "https://www.hpsc.ie/cidr/"
+  },
+  {
+   "claim": "record:AT:border_control:register",
+   "fact_sha256": "da4e9ee445c4e1dcb3f01f2ba4fb98294079db6c948af7a2728f2c80d9f769ce",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The BMI PDF has the quote verbatim and names the processing 'Nationales Schengener Informationssystem (N-SIS II)', as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.bmi.gv.at/402/files/informationen/sektion_ii/bf_nationales_schengener_informationssystem-n-sis_ii_v2.pdf"
+  },
+  {
+   "claim": "record:SK:vehicle_licensing:register",
+   "fact_sha256": "09fc7d4ef4fbba2a4cc1c69e9dd996b877be26b36c64ecc822b74e9eb06da2ba",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The live page returned 403, so I read the archived copy. § 111(1) says 'Evidencia vozidiel je informačný systém Policajného zboru', which matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20240225121954/https://zakony.judikaty.info/predpis/zakon-8/2009"
+  },
+  {
+   "claim": "record:RO:central_bank:register",
+   "fact_sha256": "170c86c776a0e9d605076801f3ae3822452160bc271c684e9856fa89fcfcafb4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "not_supported",
+   "reason": "The quote is on the page, but only as navigation-menu text: 'Sisteme operate de BNR: ReGIS SaFIR TARGET-România'. That supports BNR operating the three systems. The printed text also calls them 'financial market infrastructures', and that wording does not appear anywhere on the fetched page.",
+   "quote_found": true,
+   "checked_url": "https://www.bnr.ro/2152-sisteme-operate-de-bnr"
+  },
+  {
+   "claim": "record:EL:beneficial_ownership:register",
+   "fact_sha256": "807cf78fa67f82a03f353ebf2406135ea3fdb093e6857e0b277ed1361cafce5d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The quote is verbatim in the lawspot text and in the api.et.gr PDF. It says the Central Register of Beneficial Owners is created at the Γ.Γ.Π.Σ. and linked electronically to the tax number (Α.Φ.Μ.) of each legal person or entity, as printed. The mitos.gov.gr quote was also found.",
+   "quote_found": true,
+   "checked_url": "https://www.lawspot.gr/nomothesia/nomos-4557-2018/"
+  },
+  {
+   "claim": "indicator:FI:L1",
+   "fact_sha256": "dfb857a959d11d67fd4fcea52115595003bbabb89e5f961dfd901d16bef33511",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The statute requires the security network's facilities and equipment to be located, and its services produced and managed, in Finland. That binds a specific government network, not all government data, which is consistent with 'Partly'.",
+   "quote_found": true,
+   "checked_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2015/10/fin@"
+  },
+  {
+   "claim": "record:FR:defence_command:register",
+   "fact_sha256": "bd045cca3f1ec9aac6bc7360d78cac3bf052f9d1d8c19d49c0467e261c838dac",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The quote is on the page verbatim. In context, Artemis is a DGA initiative for solutions 'utilisables par les forces', processing data 'qui permettent aux combattants' to decide. That supports 'AI applications for massive processing of military data'.",
+   "quote_found": true,
+   "checked_url": "https://www.senat.fr/rap/r19-506/r19-506_mono.html"
+  },
+  {
+   "claim": "record:FR:breeder_documents:operator",
+   "fact_sha256": "abb4a6c37d499cbe47c53bd4403a9330b31395e37d808cbde9866492a20fd18d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The page has 'le SCEC constitue un service à compétence nationale du ministère des affaires étrangères' verbatim, which matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.diplomatie.gouv.fr/fr/services-aux-francaises-et-aux-francais/vie-administrative-et-elections/etat-civil/missions-du-service-central-d-etat-civil"
+  },
+  {
+   "claim": "record:IE:vehicle_licensing:register",
+   "fact_sha256": "5008c987e38b17def0953cf27a5ea783a32f3125b8a8a8f9e22efde12debd9e6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The quote is on the page. The description on the same page reads 'National Vehicle and Driver FILE (NVDF) Database containing details of all registered vehicle and driver details in Ireland', which supports the printed name.",
+   "quote_found": true,
+   "checked_url": "https://datacatalogue.gov.ie/dataset/national-vehicle-and-driver-database"
+  }
+ ]
+}

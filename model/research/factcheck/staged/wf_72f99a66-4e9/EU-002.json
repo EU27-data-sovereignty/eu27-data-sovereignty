@@ -1,0 +1,20 @@
+{
+ "run": "wf_72f99a66-4e9",
+ "prepared": "2026-10-03-724327fc",
+ "batch": "EU-002",
+ "iso": "EU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:SI:trust_services_pki:foreign_dependency",
+   "fact_sha256": "cb3bc592c5ee667ff51f824599c931575e2f8cb268587ef1dd91376e838e1bc2",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The fetched PDF (sha256 e2fbb6f7..., identical to the recorded hash) contains the quote verbatim at section 5.1.1, and the same document defines MDP as the Ministrstvo za digitalno preobrazbo (Davčna ulica 1, Ljubljana) and SI-TRUST as the state trust-services centre operating within it, with no cloud, outsourced or foreign hosting mentioned anywhere (5.3.7 only binds any external contractors to t",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/assets/Politike/si-trust-krovna/verzija-1-7/SI-TRUST-krovna-v1.7-2025p.pdf"
+  }
+ ]
+}

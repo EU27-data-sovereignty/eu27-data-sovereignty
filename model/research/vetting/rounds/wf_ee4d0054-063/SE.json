@@ -1,0 +1,89 @@
+{
+ "iso": "SE",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:SE:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corrects",
+   "url": "https://www.digg.se/saker-digital-kommunikation/sdk-for-leverantorer-av-meddelandesystem/anslut-som-leverantor-av-meddelandesystem/anslutningsresa-for-leverantorer-av-meddelandesystem/anslutningsinformation-certifikat",
+   "quote": "EFOS Typ Certifikat Rotcertifikat Swedish Public Sector Internal Root CA SAT v1 Utfärdande CA (intermediär) Swedish Public Sector Function CA v3 SAT",
+   "quote_english": "EFOS: Type, Certificate; Root certificate: Swedish Public Sector Internal Root CA SAT v1; Issuing CA (intermediate): Swedish Public Sector Function CA v3 SAT",
+   "value": "The EFOS public-sector PKI has the root certificate Swedish Public Sector Internal Root CA SAT v1",
+   "published": "",
+   "title": "Anslutningsinformation certifikat (Säker digital kommunikation)",
+   "publisher": "Myndigheten för digital förvaltning (Digg)",
+   "doc_type": "official_page",
+   "note": "This identifies a public-sector PKI root. Its operator is the state agency Försäkringskassan (next finding). Nothing found says this is a qualified trust service. digg.se answered intermittently, but the quote was captured verbatim from the page.",
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote lists a 'Swedish Public Sector Internal Root CA SAT v1' certificate for the EFOS test environment, but neither it nor the page says who operates that root CA."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "indicator:SE:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corrects",
+   "url": "https://www.digg.se/digitala-tjanster/e-identitet-for-offentlig-sektor---efos",
+   "quote": "Den gemensamma IT-tjänsten E-identitet för offentlig sektor (EFOS) ger förutsättning för säker inloggning för alla medarbetare på statliga myndigheter. Tjänsten utvecklas och förvaltas av Försäkringskassan.",
+   "quote_english": "The shared IT service E-identity for the public sector (EFOS) enables secure login for all employees of state agencies. The service is developed and managed by the Swedish Social Insurance Agency.",
+   "value": "EFOS (E-identitet för offentlig sektor, E-identity for the public sector) is developed and managed by Försäkringskassan (Swedish Social Insurance Agency)",
+   "published": "2024-03-26",
+   "title": "E-identitet för offentlig sektor - EFOS",
+   "publisher": "Myndigheten för digital förvaltning (Digg)",
+   "doc_type": "official_page",
+   "note": "Together with the Digg certificate page (root CA of EFOS), this supports a narrower 'Yes' for the public-sector PKI only. No state-run qualified trust service was found.",
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says the employee login service EFOS is developed and managed by Försäkringskassan, but the page does not describe EFOS as a PKI root or a qualified trust service, so the K1 operator is not established."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "indicator:SE:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "supersedes",
+   "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/betankande/en-statlig-e-legitimation_hd01tu21/",
+   "quote": "Syftet är att säkerställa att kraven i EU:s förordning om elektronisk identifiering uppfylls. Den nya lagen börjar gälla den 1 december 2026. Utskottets förslag till beslut Bifall till propositionen. Riksdagens beslut Kammaren biföll utskottets förslag.",
+   "quote_english": "The purpose is to ensure that the requirements of the EU regulation on electronic identification are met. The new law applies from 1 December 2026. Committee's proposal: approve the bill. Riksdag decision: the Chamber approved the committee's proposal.",
+   "value": "Riksdag adopted the state e-ID law (statlig e-legitimation); it applies from 1 December 2026",
+   "published": "2026-06-17",
+   "title": "En statlig e-legitimation (Betänkande 2025/26:TU21)",
+   "publisher": "Sveriges riksdag",
+   "doc_type": "official_page",
+   "note": "Newer than the cited bill: the Riksdag adopted the law on 17 June 2026, but as of 2026-10-02 the state e-ID is not yet in operation, so the current answer is that the scheme is not yet state-operated; 'Partly' is not stated by any source.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote gives only the law's purpose (meeting EU eID regulation requirements) and its start date of 1 December 2026; it does not name the body that operates the scheme or say it is state-controlled, and the page summary names no implementing authority either."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:SE:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:SE:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:SE:electoral_roll:foreign_dependency",
+   "status": "no_better_found"
+  }
+ ]
+}

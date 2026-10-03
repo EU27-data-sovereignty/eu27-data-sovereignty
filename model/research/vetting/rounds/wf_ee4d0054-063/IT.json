@@ -1,0 +1,37 @@
+{
+ "iso": "IT",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:IT:breeder_documents:register",
+   "question": "Breeder document scans: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://innovazione.gov.it/notizie/articoli/ansc-oltre-1-000-comuni-hanno-aderito-ai-registri-dello-stato-civile-digitale/",
+   "quote": "L’ANSC consente una gestione completamente digitale dei registri di nascita, matrimonio, unione civile, morte e cittadinanza",
+   "quote_english": "ANSC enables fully digital management of the registers of birth, marriage, civil union, death and citizenship",
+   "value": "ANSC – registri di nascita, matrimonio, unione civile, morte e cittadinanza (ANSC – registers of birth, marriage, civil union, death and citizenship)",
+   "published": "2025-07-29",
+   "title": "ANSC: oltre 1.000 Comuni hanno aderito ai registri dello stato civile digitale",
+   "publisher": "Dipartimento per la trasformazione digitale, Presidenza del Consiglio dei ministri",
+   "doc_type": "official_page",
+   "note": "The same page spells the name out as 'Archivio Nazionale informatizzato dei registri dello stato civile (ANSC)' and lists civil union and citizenship besides birth, marriage and death, so the printed parenthetical was incomplete. Host innovazione.gov.it is not yet in authorities.csv.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "",
+    "reason": "Found verbatim; it names ANSC as the digital civil status registers (birth, marriage, etc.) but says nothing about scans of breeder documents."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:IT:breeder_documents:register",
+   "status": "found"
+  }
+ ]
+}

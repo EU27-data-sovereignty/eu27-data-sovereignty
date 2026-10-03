@@ -36,8 +36,10 @@ AT,record:AT:electoral_roll:operator,no_better_found,,
 AT,record:AT:electoral_roll:register,no_better_found,,
 AT,record:AT:emergency_communications:register,found,fills_gap,filled_gap
 AT,record:AT:facial_biometric:foreign_dependency,no_better_found,,
+AT,record:AT:facial_biometric:foreign_dependency,no_better_found,,
 AT,record:AT:facial_biometric:register,no_better_found,,
 AT,record:AT:fingerprint_biometric:register,found,contradicts,corroborated
+AT,record:AT:fingerprint_biometric:register,found,corrects,corroborated
 AT,record:AT:firearms_register:operator,found,fills_gap,filled_gap
 AT,record:AT:firearms_register:register,found,fills_gap,filled_gap
 AT,record:AT:government_payroll:register,found,fills_gap,filled_gap
@@ -46,6 +48,7 @@ AT,record:AT:grid_control:register,found,fills_gap,filled_gap
 AT,record:AT:health_insurance:operator,found,fills_gap,filled_gap
 AT,record:AT:health_insurance:register,found,fills_gap,filled_gap
 AT,record:AT:intelligence:register,found,fills_gap,filled_gap
+AT,record:AT:issuance_history:foreign_dependency,no_better_found,,
 AT,record:AT:issuance_history:foreign_dependency,found,corroborates,corroborated
 AT,record:AT:issuance_history:register,found,corroborates,corroborated
 AT,record:AT:judicial_criminal:operator,found,fills_gap,filled_gap
@@ -121,15 +124,18 @@ BE,record:BE:trust_services_pki:register,found,supersedes,corroborated
 BE,record:BE:vehicle_licensing:operator,found,fills_gap,filled_gap
 BE,record:BE:vehicle_licensing:register,found,fills_gap,filled_gap
 BE,record:BE:water_control:register,not_reached,,
-BG,indicator:BG:C1,found,corroborates,not_verified
-BG,indicator:BG:C2,found,fills_gap,not_verified
+BG,indicator:BG:C1,found,corroborates,corroborated
+BG,indicator:BG:C1,found,corrects,same_source
+BG,indicator:BG:C2,found,fills_gap,filled_gap
 BG,indicator:BG:K1,no_better_found,,
 BG,indicator:BG:K2,found,contradicts,below_T2
+BG,indicator:BG:K2,found,corrects,below_T2
 BG,indicator:BG:L1,no_better_found,,
 BG,indicator:BG:L2,found,fills_gap,review_disagreed
 BG,indicator:BG:L3,not_reached,,
 BG,record:BG:beneficial_ownership:register,not_reached,,
 BG,record:BG:border_control:operator,found,fills_gap,filled_gap
+BG,record:BG:border_control:register,no_better_found,,
 BG,record:BG:border_control:register,found,fills_gap,corroborated
 BG,record:BG:border_control:register,found,fills_gap,filled_gap
 BG,record:BG:business_registry:foreign_dependency,not_reached,,
@@ -141,6 +147,7 @@ BG,record:BG:civil_registry:register,found,fills_gap,not_verified
 BG,record:BG:crisis_management:operator,found,upgrade,corroborated
 BG,record:BG:crisis_management:register,found,upgrade,corroborated
 BG,record:BG:customs:register,no_better_found,,
+BG,record:BG:customs:register,found,corrects,corrected_withheld
 BG,record:BG:defence_command:register,not_reached,,
 BG,record:BG:digital_identity_credentials:operator,not_reached,,
 BG,record:BG:education:register,not_reached,,
@@ -203,8 +210,10 @@ CY,record:CY:education:register,found,fills_gap,filled_gap
 CY,record:CY:electoral_management:register,found,fills_gap,filled_gap
 CY,record:CY:electoral_roll:register,found,fills_gap,superseded_higher_tier
 CY,record:CY:emergency_communications:foreign_dependency,no_better_found,,
+CY,record:CY:emergency_communications:foreign_dependency,no_better_found,,
 CY,record:CY:emergency_communications:register,no_better_found,,
 CY,record:CY:facial_biometric:register,no_better_found,,
+CY,record:CY:fingerprint_biometric:register,no_better_found,,
 CY,record:CY:fingerprint_biometric:register,no_better_found,,
 CY,record:CY:firearms_register:register,no_better_found,,
 CY,record:CY:government_payroll:register,no_better_found,,
@@ -242,9 +251,12 @@ CZ,record:CZ:beneficial_ownership:register,found,upgrade,review_disagreed
 CZ,record:CZ:benefits_pensions:operator,found,upgrade,corroborated
 CZ,record:CZ:benefits_pensions:register,found,upgrade,corroborated
 CZ,record:CZ:border_control:operator,found,upgrade,corroborated
+CZ,record:CZ:border_control:operator,found,corrects,review_disagreed
 CZ,record:CZ:border_control:register,found,upgrade,review_disagreed
+CZ,record:CZ:breeder_documents:operator,found,corrects,corroborated
 CZ,record:CZ:breeder_documents:operator,found,supersedes,superseded_higher_tier
 CZ,record:CZ:breeder_documents:register,found,upgrade,corroborated
+CZ,record:CZ:business_registry:operator,found,corrects,not_verified
 CZ,record:CZ:business_registry:operator,found,upgrade,review_disagreed
 CZ,record:CZ:business_registry:register,found,upgrade,corroborated
 CZ,record:CZ:central_bank:count,found,fills_gap,filled_gap
@@ -253,6 +265,7 @@ CZ,record:CZ:central_bank:register,found,fills_gap,filled_gap
 CZ,record:CZ:civil_registry:register,found,fills_gap,filled_gap
 CZ,record:CZ:crisis_management:operator,found,upgrade,corroborated
 CZ,record:CZ:crisis_management:register,found,upgrade,review_disagreed
+CZ,record:CZ:customs:operator,found,corrects,not_verified
 CZ,record:CZ:customs:operator,found,upgrade,review_disagreed
 CZ,record:CZ:customs:register,found,supersedes,review_disagreed
 CZ,record:CZ:defence_command:register,no_better_found,,
@@ -268,6 +281,7 @@ CZ,record:CZ:emergency_communications:register,found,corroborates,review_disagre
 CZ,record:CZ:facial_biometric:operator,no_better_found,,
 CZ,record:CZ:facial_biometric:register,found,upgrade,corroborated
 CZ,record:CZ:fingerprint_biometric:register,found,corroborates,review_disagreed
+CZ,record:CZ:fingerprint_biometric:register,found,corrects,review_disagreed
 CZ,record:CZ:firearms_register:operator,no_better_found,,
 CZ,record:CZ:firearms_register:register,found,upgrade,review_disagreed
 CZ,record:CZ:geospatial:operator,found,upgrade,superseded_higher_tier
@@ -302,6 +316,7 @@ DE,indicator:DE:C2,found,supersedes,corroborated
 DE,indicator:DE:C2,found,corroborates,corroborated
 DE,indicator:DE:K1,no_better_found,,
 DE,indicator:DE:K2,no_better_found,,
+DE,indicator:DE:K2,found,corrects,corroborated
 DE,indicator:DE:L1,no_better_found,,
 DE,indicator:DE:L2,found,corroborates,corroborated
 DE,indicator:DE:L3,no_better_found,,
@@ -314,6 +329,7 @@ DE,record:DE:business_registry:register,found,fills_gap,filled_gap
 DE,record:DE:central_bank:operator,found,fills_gap,filled_gap
 DE,record:DE:central_bank:register,found,fills_gap,filled_gap
 DE,record:DE:civil_registry:operator,no_better_found,,
+DE,record:DE:civil_registry:operator,found,corrects,corroborated
 DE,record:DE:civil_registry:register,no_better_found,,
 DE,record:DE:crisis_management:register,no_better_found,,
 DE,record:DE:customs:register,no_better_found,,
@@ -393,6 +409,7 @@ DK,record:DK:education:register,found,fills_gap,filled_gap
 DK,record:DK:electoral_management:register,no_better_found,,
 DK,record:DK:electoral_roll:register,found,fills_gap,not_verified
 DK,record:DK:emergency_communications:operator,no_better_found,,
+DK,record:DK:emergency_communications:operator,found,corrects,corroborated
 DK,record:DK:emergency_communications:register,found,corroborates,review_disagreed
 DK,record:DK:facial_biometric:operator,found,upgrade,corroborated
 DK,record:DK:facial_biometric:register,found,upgrade,review_disagreed
@@ -443,6 +460,7 @@ EE,record:EE:authentication_audit_log:register,found,fills_gap,filled_gap
 EE,record:EE:beneficial_ownership:operator,found,fills_gap,filled_gap
 EE,record:EE:beneficial_ownership:register,found,fills_gap,filled_gap
 EE,record:EE:benefits_pensions:operator,found,fills_gap,filled_gap
+EE,record:EE:benefits_pensions:register,no_better_found,,
 EE,record:EE:benefits_pensions:register,found,fills_gap,filled_gap
 EE,record:EE:border_control:operator,found,fills_gap,filled_gap
 EE,record:EE:border_control:register,found,fills_gap,filled_gap
@@ -461,12 +479,15 @@ EE,record:EE:education:register,found,fills_gap,filled_gap
 EE,record:EE:electoral_management:operator,found,fills_gap,filled_gap
 EE,record:EE:electoral_management:register,found,fills_gap,filled_gap
 EE,record:EE:electoral_roll:register,found,fills_gap,filled_gap
+EE,record:EE:emergency_communications:operator,found,corrects,corroborated
 EE,record:EE:emergency_communications:operator,found,fills_gap,filled_gap
 EE,record:EE:emergency_communications:register,found,fills_gap,filled_gap
 EE,record:EE:facial_biometric:foreign_dependency,found,fills_gap,review_disagreed
 EE,record:EE:facial_biometric:operator,found,corroborates,corroborated
 EE,record:EE:facial_biometric:register,found,contradicts,corroborated
+EE,record:EE:facial_biometric:register,found,corrects,not_verified
 EE,record:EE:fingerprint_biometric:operator,found,fills_gap,filled_gap
+EE,record:EE:fingerprint_biometric:operator,found,corrects,not_verified
 EE,record:EE:fingerprint_biometric:register,found,fills_gap,filled_gap
 EE,record:EE:firearms_register:register,found,fills_gap,filled_gap
 EE,record:EE:government_payroll:register,found,fills_gap,filled_gap
@@ -477,6 +498,7 @@ EE,record:EE:intelligence:register,not_reached,,
 EE,record:EE:issuance_history:count,found,fills_gap,filled_gap
 EE,record:EE:issuance_history:operator,found,fills_gap,filled_gap
 EE,record:EE:issuance_history:register,found,fills_gap,filled_gap
+EE,record:EE:judicial_criminal:operator,found,corrects,corroborated
 EE,record:EE:judicial_criminal:operator,found,fills_gap,filled_gap
 EE,record:EE:judicial_criminal:register,found,fills_gap,filled_gap
 EE,record:EE:land_property:register,found,fills_gap,filled_gap
@@ -508,6 +530,7 @@ EL,record:EL:benefits_pensions:register,not_reached,,
 EL,record:EL:border_control:operator,no_better_found,,
 EL,record:EL:border_control:register,found,upgrade,superseded_higher_tier
 EL,record:EL:breeder_documents:register,found,upgrade,corroborated
+EL,record:EL:breeder_documents:register,found,corrects,review_disagreed
 EL,record:EL:business_registry:register,found,fills_gap,not_verified
 EL,record:EL:central_bank:register,no_better_found,,
 EL,record:EL:civil_registry:register,found,upgrade,corroborated
@@ -515,6 +538,7 @@ EL,record:EL:customs:foreign_dependency,not_reached,,
 EL,record:EL:customs:register,not_reached,,
 EL,record:EL:defence_command:register,no_better_found,,
 EL,record:EL:digital_identity_credentials:foreign_dependency,not_reached,,
+EL,record:EL:digital_identity_credentials:foreign_dependency,no_better_found,,
 EL,record:EL:digital_identity_credentials:operator,found,upgrade,corroborated
 EL,record:EL:digital_identity_credentials:register,not_reached,,
 EL,record:EL:education:count,found,fills_gap,review_disagreed
@@ -577,6 +601,7 @@ ES,record:ES:crisis_management:register,found,fills_gap,filled_gap
 ES,record:ES:customs:register,found,fills_gap,review_disagreed
 ES,record:ES:defence_command:register,no_better_found,,
 ES,record:ES:digital_identity_credentials:register,found,fills_gap,review_disagreed
+ES,record:ES:education:operator,found,corrects,corroborated
 ES,record:ES:education:operator,found,fills_gap,filled_gap
 ES,record:ES:education:register,found,fills_gap,filled_gap
 ES,record:ES:electoral_management:operator,found,fills_gap,filled_gap
@@ -647,6 +672,7 @@ FI,record:FI:education:operator,found,fills_gap,holding_not_established
 FI,record:FI:education:register,found,fills_gap,not_verified
 FI,record:FI:electoral_management:operator,found,fills_gap,holding_not_established
 FI,record:FI:electoral_management:register,found,fills_gap,review_disagreed
+FI,record:FI:electoral_roll:operator,found,corrects,corrected_withheld
 FI,record:FI:electoral_roll:operator,found,fills_gap,filled_gap
 FI,record:FI:electoral_roll:register,found,fills_gap,filled_gap
 FI,record:FI:emergency_communications:operator,found,fills_gap,not_verified
@@ -701,6 +727,7 @@ FR,record:FR:civil_registry:register,found,corroborates,corroborated
 FR,record:FR:crisis_management:register,found,corroborates,not_verified
 FR,record:FR:customs:register,not_reached,,
 FR,record:FR:defence_command:foreign_dependency,not_reached,,
+FR,record:FR:defence_command:foreign_dependency,found,corrects,not_verified
 FR,record:FR:defence_command:register,not_reached,,
 FR,record:FR:digital_identity_credentials:operator,found,fills_gap,filled_gap
 FR,record:FR:digital_identity_credentials:register,found,fills_gap,filled_gap
@@ -741,6 +768,7 @@ FR,record:FR:public_health_surveillance:register,not_reached,,
 FR,record:FR:residence_permits:operator,not_reached,,
 FR,record:FR:residence_permits:register,not_reached,,
 FR,record:FR:statistics_microdata:foreign_dependency,not_reached,,
+FR,record:FR:statistics_microdata:foreign_dependency,found,corrects,review_disagreed
 FR,record:FR:statistics_microdata:operator,not_reached,,
 FR,record:FR:statistics_microdata:register,not_reached,,
 FR,record:FR:tax:register,found,fills_gap,not_verified
@@ -782,8 +810,10 @@ HR,record:HR:electoral_roll:operator,found,fills_gap,filled_gap
 HR,record:HR:electoral_roll:register,found,fills_gap,filled_gap
 HR,record:HR:emergency_communications:register,not_reached,,
 HR,record:HR:facial_biometric:operator,found,upgrade,corroborated
+HR,record:HR:facial_biometric:operator,found,corrects,review_disagreed
 HR,record:HR:facial_biometric:register,not_reached,,
 HR,record:HR:fingerprint_biometric:register,not_reached,,
+HR,record:HR:fingerprint_biometric:register,found,corrects,corrected_withheld
 HR,record:HR:firearms_register:register,found,fills_gap,filled_gap
 HR,record:HR:geospatial:operator,found,upgrade,superseded_higher_tier
 HR,record:HR:geospatial:register,found,upgrade,corroborated
@@ -812,15 +842,21 @@ HR,record:HR:trust_services_pki:operator,not_reached,,
 HR,record:HR:trust_services_pki:register,not_reached,,
 HR,record:HR:vehicle_licensing:register,not_reached,,
 HR,record:HR:water_control:register,not_reached,,
+HU,indicator:HU:C1,found,corrects,not_verified
 HU,indicator:HU:C1,found,corroborates,review_disagreed
 HU,indicator:HU:C2,no_better_found,,
+HU,indicator:HU:C2,found,corrects,not_verified
 HU,indicator:HU:K1,found,corroborates,review_disagreed
+HU,indicator:HU:K1,found,corrects,review_disagreed
 HU,indicator:HU:K2,found,corroborates,review_disagreed
+HU,indicator:HU:K2,found,corrects,review_disagreed
+HU,indicator:HU:K2,found,corrects,review_disagreed
 HU,indicator:HU:L1,found,upgrade,corroborated
 HU,indicator:HU:L2,found,corroborates,corroborated
 HU,indicator:HU:L2,found,upgrade,review_disagreed
 HU,indicator:HU:L3,no_better_found,,
 HU,record:HU:authentication_audit_log:foreign_dependency,no_better_found,,
+HU,record:HU:authentication_audit_log:foreign_dependency,found,corrects,corroborated
 HU,record:HU:authentication_audit_log:register,no_better_found,,
 HU,record:HU:beneficial_ownership:register,no_better_found,,
 HU,record:HU:benefits_pensions:operator,found,upgrade,corroborated
@@ -832,6 +868,7 @@ HU,record:HU:breeder_documents:operator,no_better_found,,
 HU,record:HU:breeder_documents:register,no_better_found,,
 HU,record:HU:business_registry:register,no_better_found,,
 HU,record:HU:central_bank:register,found,corroborates,review_disagreed
+HU,record:HU:civil_registry:foreign_dependency,no_better_found,,
 HU,record:HU:civil_registry:foreign_dependency,no_better_found,,
 HU,record:HU:civil_registry:register,found,upgrade,corroborated
 HU,record:HU:crisis_management:count,found,fills_gap,review_disagreed
@@ -846,6 +883,7 @@ HU,record:HU:digital_identity_credentials:register,no_better_found,,
 HU,record:HU:education:register,no_better_found,,
 HU,record:HU:electoral_management:operator,found,fills_gap,not_verified
 HU,record:HU:electoral_management:register,found,fills_gap,filled_gap
+HU,record:HU:electoral_roll:foreign_dependency,no_better_found,,
 HU,record:HU:electoral_roll:foreign_dependency,no_better_found,,
 HU,record:HU:electoral_roll:operator,found,corroborates,review_disagreed
 HU,record:HU:electoral_roll:register,no_better_found,,
@@ -868,6 +906,7 @@ HU,record:HU:health_insurance:operator,found,upgrade,corroborated
 HU,record:HU:health_insurance:register,found,upgrade,corroborated
 HU,record:HU:intelligence:register,no_better_found,,
 HU,record:HU:issuance_history:foreign_dependency,no_better_found,,
+HU,record:HU:issuance_history:foreign_dependency,found,corrects,not_verified
 HU,record:HU:issuance_history:operator,found,contradicts,superseded_higher_tier
 HU,record:HU:issuance_history:register,found,upgrade,corroborated
 HU,record:HU:judicial_criminal:register,no_better_found,,
@@ -891,6 +930,7 @@ HU,record:HU:tax:register,found,fills_gap,filled_gap
 HU,record:HU:trust_services_pki:operator,found,upgrade,corroborated
 HU,record:HU:trust_services_pki:register,found,corroborates,corroborated
 HU,record:HU:vehicle_licensing:foreign_dependency,no_better_found,,
+HU,record:HU:vehicle_licensing:foreign_dependency,no_better_found,,
 HU,record:HU:vehicle_licensing:operator,no_better_found,,
 HU,record:HU:vehicle_licensing:register,found,corroborates,corroborated
 HU,record:HU:water_control:operator,found,fills_gap,not_verified
@@ -898,9 +938,11 @@ HU,record:HU:water_control:register,no_better_found,,
 IE,indicator:IE:C1,found,corroborates,corroborated
 IE,indicator:IE:C2,found,corroborates,same_source
 IE,indicator:IE:K1,found,fills_gap,filled_gap
+IE,indicator:IE:K1,found,corrects,review_disagreed
 IE,indicator:IE:K2,found,fills_gap,filled_gap
 IE,indicator:IE:L1,not_reached,,
 IE,indicator:IE:L2,not_reached,,
+IE,indicator:IE:L2,no_better_found,,
 IE,indicator:IE:L3,not_reached,,
 IE,record:IE:authentication_audit_log:register,no_better_found,,
 IE,record:IE:beneficial_ownership:operator,found,fills_gap,filled_gap
@@ -921,6 +963,7 @@ IE,record:IE:customs:count,found,fills_gap,same_source
 IE,record:IE:customs:operator,no_better_found,,
 IE,record:IE:customs:register,no_better_found,,
 IE,record:IE:defence_command:foreign_dependency,not_reached,,
+IE,record:IE:defence_command:foreign_dependency,found,corrects,corrected_withheld
 IE,record:IE:defence_command:operator,not_reached,,
 IE,record:IE:defence_command:register,not_reached,,
 IE,record:IE:digital_identity_credentials:count,found,fills_gap,filled_gap
@@ -930,6 +973,7 @@ IE,record:IE:education:register,found,fills_gap,not_verified
 IE,record:IE:electoral_management:operator,not_reached,,
 IE,record:IE:electoral_management:register,not_reached,,
 IE,record:IE:electoral_roll:count,no_better_found,,
+IE,record:IE:electoral_roll:foreign_dependency,no_better_found,,
 IE,record:IE:electoral_roll:foreign_dependency,no_better_found,,
 IE,record:IE:electoral_roll:register,found,fills_gap,same_source
 IE,record:IE:emergency_communications:foreign_dependency,no_better_found,,
@@ -946,14 +990,18 @@ IE,record:IE:government_payroll:count,found,fills_gap,not_verified
 IE,record:IE:government_payroll:operator,found,fills_gap,not_verified
 IE,record:IE:government_payroll:register,found,fills_gap,not_verified
 IE,record:IE:grid_control:operator,not_reached,,
+IE,record:IE:grid_control:operator,found,corrects,corroborated
 IE,record:IE:grid_control:register,not_reached,,
+IE,record:IE:grid_control:register,found,corrects,corroborated
 IE,record:IE:health_insurance:count,found,upgrade,not_verified
 IE,record:IE:health_insurance:operator,not_reached,,
 IE,record:IE:health_insurance:register,not_reached,,
 IE,record:IE:health_records:operator,not_reached,,
 IE,record:IE:health_records:register,not_reached,,
 IE,record:IE:intelligence:operator,not_reached,,
+IE,record:IE:intelligence:operator,found,corrects,corrected_withheld
 IE,record:IE:intelligence:register,not_reached,,
+IE,record:IE:intelligence:register,no_better_found,,
 IE,record:IE:issuance_history:register,no_better_found,,
 IE,record:IE:judicial_criminal:register,no_better_found,,
 IE,record:IE:land_property:count,found,supersedes,corroborated
@@ -962,8 +1010,10 @@ IE,record:IE:land_property:register,found,supersedes,corroborated
 IE,record:IE:official_gazette:register,found,fills_gap,not_verified
 IE,record:IE:police_records:operator,not_reached,,
 IE,record:IE:police_records:register,not_reached,,
+IE,record:IE:police_records:register,found,corrects,corroborated
 IE,record:IE:public_finance:operator,found,corroborates,not_verified
 IE,record:IE:public_finance:register,found,supersedes,not_verified
+IE,record:IE:public_finance:register,found,corrects,review_disagreed
 IE,record:IE:public_health_surveillance:count,not_reached,,
 IE,record:IE:public_health_surveillance:operator,not_reached,,
 IE,record:IE:public_health_surveillance:register,not_reached,,
@@ -991,6 +1041,7 @@ IT,record:IT:benefits_pensions:operator,found,fills_gap,filled_gap
 IT,record:IT:benefits_pensions:register,found,fills_gap,filled_gap
 IT,record:IT:border_control:register,not_reached,,
 IT,record:IT:breeder_documents:register,found,upgrade,corroborated
+IT,record:IT:breeder_documents:register,found,corrects,review_disagreed
 IT,record:IT:business_registry:operator,found,fills_gap,filled_gap
 IT,record:IT:business_registry:register,found,fills_gap,filled_gap
 IT,record:IT:central_bank:operator,found,fills_gap,filled_gap
@@ -1090,6 +1141,7 @@ LT,record:LT:vehicle_licensing:operator,found,fills_gap,not_verified
 LT,record:LT:vehicle_licensing:register,found,fills_gap,not_verified
 LT,record:LT:water_control:register,no_better_found,,
 LU,indicator:LU:C1,no_better_found,,
+LU,indicator:LU:C1,found,corrects,corroborated
 LU,indicator:LU:C2,found,fills_gap,filled_gap
 LU,indicator:LU:K1,no_better_found,,
 LU,indicator:LU:K2,no_better_found,,
@@ -1218,6 +1270,7 @@ MT,indicator:MT:L3,no_better_found,,
 MT,record:MT:authentication_audit_log:register,no_better_found,,
 MT,record:MT:beneficial_ownership:register,found,fills_gap,filled_gap
 MT,record:MT:benefits_pensions:operator,found,fills_gap,review_disagreed
+MT,record:MT:border_control:operator,found,corrects,corroborated
 MT,record:MT:border_control:operator,found,fills_gap,filled_gap
 MT,record:MT:border_control:register,found,fills_gap,filled_gap
 MT,record:MT:breeder_documents:register,found,fills_gap,filled_gap
@@ -1225,14 +1278,15 @@ MT,record:MT:business_registry:operator,found,fills_gap,filled_gap
 MT,record:MT:business_registry:register,found,fills_gap,filled_gap
 MT,record:MT:central_bank:register,found,fills_gap,review_disagreed
 MT,record:MT:civil_registry:register,found,corroborates,corroborated
-MT,record:MT:crisis_management:operator,found,fills_gap,not_verified
+MT,record:MT:civil_registry:register,found,corrects,corroborated
+MT,record:MT:crisis_management:operator,found,fills_gap,holding_not_established
 MT,record:MT:customs:operator,found,fills_gap,review_disagreed
 MT,record:MT:defence_command:register,no_better_found,,
 MT,record:MT:digital_identity_credentials:operator,found,corroborates,corroborated
 MT,record:MT:digital_identity_credentials:register,found,corroborates,corroborated
 MT,record:MT:education:operator,found,fills_gap,review_disagreed
 MT,record:MT:electoral_management:operator,found,fills_gap,review_disagreed
-MT,record:MT:electoral_management:register,found,fills_gap,not_verified
+MT,record:MT:electoral_management:register,found,fills_gap,filled_gap
 MT,record:MT:electoral_roll:register,no_better_found,,
 MT,record:MT:emergency_communications:register,no_better_found,,
 MT,record:MT:facial_biometric:register,found,corroborates,review_disagreed
@@ -1250,8 +1304,8 @@ MT,record:MT:land_property:operator,found,fills_gap,filled_gap
 MT,record:MT:land_property:register,found,fills_gap,corroborated
 MT,record:MT:land_property:register,found,fills_gap,filled_gap
 MT,record:MT:official_gazette:register,no_better_found,,
-MT,record:MT:police_records:operator,found,fills_gap,not_verified
-MT,record:MT:public_finance:operator,found,fills_gap,not_verified
+MT,record:MT:police_records:operator,found,fills_gap,holding_not_established
+MT,record:MT:public_finance:operator,found,fills_gap,holding_not_established
 MT,record:MT:residence_permits:operator,found,corroborates,corroborated
 MT,record:MT:residence_permits:register,no_better_found,,
 MT,record:MT:statistics_microdata:register,no_better_found,,
@@ -1295,6 +1349,7 @@ NL,record:NL:emergency_communications:count,found,fills_gap,filled_gap
 NL,record:NL:emergency_communications:operator,found,fills_gap,filled_gap
 NL,record:NL:emergency_communications:register,found,fills_gap,filled_gap
 NL,record:NL:fingerprint_biometric:register,no_better_found,,
+NL,record:NL:fingerprint_biometric:register,found,corrects,corroborated
 NL,record:NL:firearms_register:register,no_better_found,,
 NL,record:NL:government_payroll:register,found,fills_gap,filled_gap
 NL,record:NL:grid_control:register,no_better_found,,
@@ -1347,6 +1402,7 @@ PL,record:PL:electoral_management:register,found,fills_gap,filled_gap
 PL,record:PL:emergency_communications:operator,found,fills_gap,filled_gap
 PL,record:PL:emergency_communications:register,found,fills_gap,filled_gap
 PL,record:PL:fingerprint_biometric:register,found,contradicts,review_disagreed
+PL,record:PL:fingerprint_biometric:register,found,corrects,review_disagreed
 PL,record:PL:firearms_register:register,no_better_found,,
 PL,record:PL:geospatial:operator,no_better_found,,
 PL,record:PL:geospatial:register,no_better_found,,
@@ -1375,6 +1431,7 @@ PL,record:PL:water_control:operator,found,fills_gap,filled_gap
 PL,record:PL:water_control:register,found,fills_gap,filled_gap
 PT,indicator:PT:C1,found,corroborates,corroborated
 PT,indicator:PT:C2,no_better_found,,
+PT,indicator:PT:C2,found,corrects,review_disagreed
 PT,indicator:PT:K1,found,fills_gap,not_verified
 PT,indicator:PT:K2,no_better_found,,
 PT,indicator:PT:L1,no_better_found,,
@@ -1386,6 +1443,8 @@ PT,record:PT:beneficial_ownership:register,found,fills_gap,filled_gap
 PT,record:PT:benefits_pensions:register,no_better_found,,
 PT,record:PT:border_control:register,no_better_found,,
 PT,record:PT:breeder_documents:register,no_better_found,,
+PT,record:PT:breeder_documents:register,found,corrects,review_disagreed
+PT,record:PT:business_registry:operator,found,corrects,review_disagreed
 PT,record:PT:business_registry:register,found,fills_gap,not_verified
 PT,record:PT:central_bank:register,no_better_found,,
 PT,record:PT:civil_registry:operator,found,fills_gap,review_disagreed
@@ -1395,8 +1454,10 @@ PT,record:PT:crisis_management:register,found,fills_gap,not_verified
 PT,record:PT:customs:operator,found,fills_gap,filled_gap
 PT,record:PT:customs:register,found,fills_gap,filled_gap
 PT,record:PT:defence_command:register,no_better_found,,
+PT,record:PT:digital_identity_credentials:operator,found,corrects,corroborated
 PT,record:PT:digital_identity_credentials:register,found,fills_gap,disputed
 PT,record:PT:education:register,no_better_found,,
+PT,record:PT:education:register,found,corrects,corroborated
 PT,record:PT:electoral_management:operator,found,fills_gap,holding_not_established
 PT,record:PT:electoral_roll:count,found,fills_gap,filled_gap
 PT,record:PT:electoral_roll:operator,found,fills_gap,review_disagreed
@@ -1411,6 +1472,7 @@ PT,record:PT:government_payroll:register,no_better_found,,
 PT,record:PT:grid_control:operator,found,fills_gap,filled_gap
 PT,record:PT:grid_control:register,found,fills_gap,filled_gap
 PT,record:PT:health_insurance:register,no_better_found,,
+PT,record:PT:health_insurance:register,found,corrects,corroborated
 PT,record:PT:intelligence:register,found,fills_gap,filled_gap
 PT,record:PT:issuance_history:register,found,fills_gap,not_verified
 PT,record:PT:judicial_criminal:operator,found,fills_gap,corroborated
@@ -1418,6 +1480,7 @@ PT,record:PT:land_property:register,found,fills_gap,not_verified
 PT,record:PT:official_gazette:register,found,fills_gap,review_disagreed
 PT,record:PT:police_records:register,no_better_found,,
 PT,record:PT:public_finance:operator,found,fills_gap,corroborated
+PT,record:PT:public_finance:operator,found,corrects,corroborated
 PT,record:PT:residence_permits:operator,found,fills_gap,not_verified
 PT,record:PT:tax:operator,found,fills_gap,holding_not_established
 PT,record:PT:trust_services_pki:operator,found,fills_gap,disputed
@@ -1460,6 +1523,7 @@ RO,record:RO:geospatial:register,no_better_found,,
 RO,record:RO:grid_control:operator,no_better_found,,
 RO,record:RO:grid_control:register,no_better_found,,
 RO,record:RO:health_insurance:register,no_better_found,,
+RO,record:RO:health_insurance:register,found,corrects,corroborated
 RO,record:RO:intelligence:register,no_better_found,,
 RO,record:RO:issuance_history:operator,found,fills_gap,not_verified
 RO,record:RO:issuance_history:register,found,fills_gap,not_verified
@@ -1471,6 +1535,7 @@ RO,record:RO:public_finance:operator,found,fills_gap,not_verified
 RO,record:RO:public_finance:register,found,fills_gap,not_verified
 RO,record:RO:residence_permits:register,no_better_found,,
 RO,record:RO:tax:register,no_better_found,,
+RO,record:RO:tax:register,found,corrects,corrected_withheld
 RO,record:RO:trust_services_pki:operator,no_better_found,,
 RO,record:RO:trust_services_pki:register,no_better_found,,
 RO,record:RO:vehicle_licensing:register,no_better_found,,
@@ -1479,6 +1544,9 @@ RO,record:RO:water_control:register,not_reached,,
 SE,indicator:SE:C1,found,corroborates,review_disagreed
 SE,indicator:SE:C2,no_better_found,,
 SE,indicator:SE:K1,no_better_found,,
+SE,indicator:SE:K1,found,corrects,review_disagreed
+SE,indicator:SE:K1,found,corrects,review_disagreed
+SE,indicator:SE:K2,found,supersedes,review_disagreed
 SE,indicator:SE:K2,found,supersedes,review_disagreed
 SE,indicator:SE:L1,found,fills_gap,review_disagreed
 SE,indicator:SE:L2,found,corroborates,corroborated
@@ -1504,6 +1572,7 @@ SE,record:SE:digital_identity_credentials:register,found,fills_gap,filled_gap
 SE,record:SE:education:register,found,corroborates,not_verified
 SE,record:SE:electoral_management:foreign_dependency,no_better_found,,
 SE,record:SE:electoral_management:register,no_better_found,,
+SE,record:SE:electoral_roll:foreign_dependency,no_better_found,,
 SE,record:SE:electoral_roll:foreign_dependency,no_better_found,,
 SE,record:SE:electoral_roll:register,found,corroborates,review_disagreed
 SE,record:SE:emergency_communications:operator,found,fills_gap,filled_gap
@@ -1572,6 +1641,7 @@ SI,record:SI:emergency_communications:register,found,corroborates,review_disagre
 SI,record:SI:facial_biometric:operator,no_better_found,,
 SI,record:SI:facial_biometric:register,no_better_found,,
 SI,record:SI:fingerprint_biometric:register,no_better_found,,
+SI,record:SI:fingerprint_biometric:register,found,corrects,review_disagreed
 SI,record:SI:firearms_register:foreign_dependency,no_better_found,,
 SI,record:SI:firearms_register:register,no_better_found,,
 SI,record:SI:government_payroll:foreign_dependency,found,fills_gap,filled_gap
@@ -1599,6 +1669,7 @@ SI,record:SI:tax:count,found,fills_gap,review_disagreed
 SI,record:SI:tax:operator,no_better_found,,
 SI,record:SI:tax:register,no_better_found,,
 SI,record:SI:trust_services_pki:foreign_dependency,no_better_found,,
+SI,record:SI:trust_services_pki:foreign_dependency,found,corrects,corroborated
 SI,record:SI:trust_services_pki:operator,found,corroborates,corroborated
 SI,record:SI:trust_services_pki:register,found,corroborates,corroborated
 SI,record:SI:vehicle_licensing:operator,found,fills_gap,holding_not_established

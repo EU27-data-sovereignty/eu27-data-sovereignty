@@ -1,0 +1,18 @@
+{
+ "iso": "CY",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [],
+ "outcomes": [
+  {
+   "claim": "record:CY:emergency_communications:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:CY:fingerprint_biometric:register",
+   "status": "no_better_found"
+  }
+ ]
+}

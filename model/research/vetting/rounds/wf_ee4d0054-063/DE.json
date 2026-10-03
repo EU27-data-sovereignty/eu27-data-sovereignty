@@ -1,0 +1,64 @@
+{
+ "iso": "DE",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:DE:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corrects",
+   "url": "https://www.bva.bund.de/DE/Das-BVA/Aufgaben/P/Personalausweis/PA_Allgemein/PA_Allgemein_node.html",
+   "quote": "Die Berechtigung beantragen sie bei der Vergabestelle für Berechtigungszertifikate (VfB) im Bundesverwaltungsamt (BVA). Das BVA ist zudem zuständig für den Sperrdienst und das Sperrmanagement",
+   "quote_english": "They apply for the authorisation at the Issuing Office for Authorisation Certificates (VfB) in the Federal Office of Administration (BVA). The BVA is also responsible for the blocking service and blocking management.",
+   "value": "yes",
+   "published": "",
+   "title": "Personalausweis mit Online-Ausweisfunktion",
+   "publisher": "Bundesverwaltungsamt",
+   "doc_type": "official_page",
+   "note": "A federal authority states directly that it runs the authorisation and revocation parts of the German eID scheme, which removes the inference needed to link Bundesdruckerei to the scheme. Under PAuswG §7(1) on gesetze-im-internet.de, the cards themselves are issued by Länder-designated Personalausweisbehörden.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "On the Personalausweis online-ID page, the federal authority BVA issues the authorisation certificates for online identification and is responsible for the revocation service, so a state body operates the scheme's central functions."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "Yes: the Bundesverwaltungsamt (Federal Office of Administration) grants eID access authorisations and is responsible for the blocking service"
+  },
+  {
+   "claim": "record:DE:civil_registry:operator",
+   "question": "Civil registry core: the body that operates it",
+   "relation": "corrects",
+   "url": "https://www.bzst.de/DE/Privatpersonen/SteuerlicheIdentifikationsnummer/steuerlicheidentifikationsnummer_node.html",
+   "quote": "Das BZSt speichert zur IdNr einer natürlichen Person gemäß § 139b Absatz 3 AO folgende Daten:",
+   "quote_english": "The BZSt stores the following data with the IdNr of a natural person under § 139b(3) AO:",
+   "value": "BZSt (Bundeszentralamt für Steuern, Federal Central Tax Office) stores the data held with a natural person's IdNr (Identifikationsnummer)",
+   "published": "",
+   "title": "Die Identifikationsnummer",
+   "publisher": "Bundeszentralamt für Steuern",
+   "doc_type": "official_page",
+   "note": "This is the operator's own page and an independent source. It supports the BZSt as the body that stores the IdNr data but not 'for every natural person'. The same page lists the stored data fields and says the IdNr serves to identify a natural person uniquely in administrative procedures.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "Bundeszentralamt für Steuern (BZSt)",
+    "reason": "The quote appears verbatim and says the BZSt stores the data held against a person's tax ID number (§ 139b(3) AO). It establishes the operator of the tax-ID data store, which is only a civil-registry core if the question counts the IdNr database as one."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:DE:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:DE:civil_registry:operator",
+   "status": "found"
+  }
+ ]
+}

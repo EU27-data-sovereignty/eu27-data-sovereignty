@@ -11,6 +11,8 @@ check is shown to **fail first**, on a deliberately broken input, before it is t
 | On every pull request | `./test.sh --no-pdf`, `npm audit --audit-level=high` (root and `web/`), gitleaks, Python tests | `.github/workflows/ci.yml` |
 | On every push to `main` (a production deploy) | `./test.sh` with PDFs, the dependency audit, `factcheck.py gate`, then the deploy and `model/smoke.py` | `.github/workflows/deploy.yml` |
 | Every Monday, 06:17 UTC | `model/smoke.py` against the live site, and `fetch_eurostat.py --check` for new vintages | `.github/workflows/monitor.yml` |
+| Every day, 07:41 UTC | `model/ask_smoke.py`: one fixed question to the live `/ask`, which must answer with a citation | `.github/workflows/monitor.yml` |
+| Before a release, by hand | the fact-check stability sample (`factcheck.py prepare --sample 50`) and mutation testing (below) | `docs/fact-check.md`, this file |
 | Before trusting a checkout or a release | `./run.sh reproduce`: a fresh clone of HEAD, every output regenerated, then `./test.sh --no-e2e` | `model/reproduce.py` |
 
 ## The stages of `./test.sh`
@@ -29,7 +31,7 @@ check is shown to **fail first**, on a deliberately broken input, before it is t
 | 10–13 | Web: types, lint, formatting, Vitest | `tsc`, ESLint, Prettier, and the component and `/ask` unit tests |
 | 14 | Production build | `vite build` succeeds |
 | 15 | Size budget | gzipped: data bundle ≤ 900 KB, all JavaScript ≤ 400 KB |
-| 16 | Browser tests | Playwright with axe: every route renders real data, in light and dark mode, at 375 px, and in print |
+| 16 | Browser tests | Playwright in Chrome, Firefox, desktop Safari (WebKit), iPhone SE and iPhone 17 Pro: every route renders real data, at 375 px, in print; axe in light and dark mode (Chrome); visual regression against macOS baselines (Chrome on macOS only) |
 
 `--no-e2e` skips stage 16 and `--no-pdf` skips stage 9.
 
@@ -48,6 +50,8 @@ check is shown to **fail first**, on a deliberately broken input, before it is t
   - every state sits inside its own range.
 
   Each was shown failing against a deliberately broken rule.
+- **Hypothesis:** `test_hypothesis` searches and shrinks the same rules. It needs `requirements-dev.txt` (exact pins
+  with hashes; CI installs it) and skips with a message without it.
 - **The network layer:** `test_fetch_network`, against a real HTTP server on localhost:
   - robots `Disallow` is obeyed, and a refused robots.txt is not a rule;
   - a 403 is recorded once, never retried;
@@ -74,13 +78,55 @@ check is shown to **fail first**, on a deliberately broken input, before it is t
 
 It runs after every deploy and every week.
 
-## Not yet in place (each needs the owner's OK)
+## Phones
 
-- **Live `/ask` check:** needs `ANTHROPIC_API_KEY` in Vercel, and costs about one request a day.
-- **Mutation testing** (a dev dependency), and **`hypothesis`** in place of the seeded generators.
-- **Fact-check stability sampling:** a quarterly re-check of about 50 confirmed facts by the other model.
-- **Visual-regression baselines:** screenshots committed to git.
-- **Firefox and WebKit:** browser downloads in CI.
-- **Weekly link check of every cited source:** `research.py recheck` takes hours, so it stays a manual
-  `./run.sh recheck`.
-- **Removing the red `security` workflow:** that means pushing the dotfiles repository.
+The browser tests run on emulated iPhone SE and iPhone 17 Pro, in WebKit, Safari's engine: every route
+renders, nothing scrolls sideways, and the disclaimer stays visible. Three fixes came from an iPhone audit on
+2026-10-02:
+- **The disclaimer banner** took a quarter of a phone screen. Its first sentence now stays visible on every
+  page, and the rest is one tap away.
+- **The `/ask` question field** was 14 px. Safari zooms into anything under 16 px, so it is now 16 px.
+- **Navigation links** were 20 px tall. They are now 28 px, over WCAG 2.2's 24 px minimum.
+
+## Visual regression
+
+`web/e2e/visual.spec.ts` compares 10 screenshots against committed baselines: 4 pages in light and dark mode
+at 1280 px, and 2 at 375 px. Fonts render differently per operating system, so the baselines are macOS
+Chrome ones, and the test is skipped elsewhere, including in CI. After a deliberate design change, update
+them with `npx playwright test e2e/visual.spec.ts --project=chrome --update-snapshots`, and commit the
+images with the change.
+
+## Fact-check stability
+
+`python3 model/factcheck.py prepare --sample 50 --seed <n>` draws confirmed facts and puts them to the
+*other* checker model. Then:
+1. Run the workflow.
+2. `stage --sample 1`.
+3. `factcheck.py stability --run <id> --prepared <run>`.
+
+The result measures how often a second checker disagrees with the first. It goes in
+`model/research/factcheck/stability/` and the audit file, and never changes a verdict. Run it before each
+release, or quarterly.
+
+## Mutation testing
+
+This is an audit, not a CI step. Run `mutmut` (3.8.0, in a throwaway venv and a throwaway clone) on
+`model/evidence.py` against `test_evidence`, `test_properties` and `test_hypothesis`. It makes small changes
+to the code and checks that some test fails for each one. A surviving mutant is an assertion the suite is
+missing. Results and follow-ups are recorded in `CHANGELOG.md`.
+
+Result on 2026-10-02: 83 of 98 killed. After tests were added for the gaps it showed, 91 of 98 (93%). The 7
+survivors:
+- the `__main__` print block;
+- two likely-equivalent changes: the thousands-group count, and the blank-query flag in `_url_key`;
+- three narrow paths without a test yet: the tier of an unparseable archive URL, the Eurostat hash filter in
+  `dataset_hashes`, and the human-verified grade in `assess`.
+
+Run the audit again with `python3 tests/tools/mutation_audit.py model/evidence.py tests.test_evidence
+tests.test_properties tests.test_hypothesis`, from a throwaway clone.
+
+## Still waiting on the owner
+
+- **The live `/ask` check** runs daily, but reports "not configured" until `ANTHROPIC_API_KEY` is set in
+  Vercel. Then set the repository variable `ASK_LIVE` to `true` so that a failure fails the run.
+- **The mobile reader** (`mobile/`, schema 1) carries 4 Dependabot alerts that only a port or a removal clears.

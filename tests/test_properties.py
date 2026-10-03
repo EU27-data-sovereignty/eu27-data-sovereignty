@@ -75,6 +75,49 @@ class ValueInQuote(unittest.TestCase):
             self.assertFalse(evidence.value_in_quote(f"{n} entries", quote)["ok"])
 
 
+class MutationSurvivors(unittest.TestCase):
+    """Behaviours a mutation audit (tests/tools/mutation_audit.py, 2026-10-02) found no test pinned down."""
+
+    def readings(self, token: str) -> set[Decimal]:
+        return {Decimal(str(x)) for x in evidence._readings(token)}
+
+    def test_two_decimal_marks_are_not_a_decimal_number(self):
+        # 1.234.567 is a German million, never 1.234 with a stray mark.
+        self.assertEqual(self.readings("1.234.567"), {Decimal("1234567")})
+
+    def test_a_group_of_two_after_a_mark_is_not_a_thousands_group(self):
+        # 1,23 is one and twenty-three hundredths, not 123.
+        self.assertEqual(self.readings("1,23"), {Decimal("1.23")})
+
+    def test_one_decimal_mark_reads_as_a_fraction(self):
+        self.assertIn(Decimal("12.5"), self.readings("12,5"))
+        self.assertIn(Decimal("12.5"), self.readings("12.5"))
+
+    def test_eurostat_tiers(self):
+        commission = "https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table"
+        self.assertEqual(evidence.tier({"url": commission, "doc_type": "dataset"}), (1, "eurostat"))
+        self.assertEqual(evidence.tier({"url": commission, "doc_type": "webpage"}), (3, "commission_page"))
+
+    def test_url_key_ignores_case_www_slash_and_query_order_but_not_the_path(self):
+        k = evidence._url_key
+        self.assertEqual(k("https://WWW.Example.gov/a/b/?y=2&x=1"), k("https://example.gov/a/b?x=1&y=2"))
+        self.assertNotEqual(k("https://example.gov/a/b"), k("https://example.gov/a/c"))
+        self.assertNotEqual(k("https://example.gov/a?x=1"), k("https://example.gov/a?x=2"))
+
+    def test_only_an_archive_of_the_exact_url_counts(self):
+        url = "https://www.example.gov/register?id=7"
+        self.assertTrue(evidence.snapshot_is_exact("https://web.archive.org/web/2026/https://example.gov/register/?id=7", url))
+        self.assertFalse(evidence.snapshot_is_exact("https://web.archive.org/web/2026/https://example.gov/other", url))
+        self.assertFalse(evidence.snapshot_is_exact("https://archive.example/web/2026/https://example.gov/register?id=7", url))
+        self.assertFalse(evidence.snapshot_is_exact("https://web.archive.org/web", url))
+
+    def test_the_language_label(self):
+        base = {"tier": 2, "tier_kind": "government_or_authority", "source": "official", "document_hashed": True,
+                "quote_match": "exact", "archived": True}
+        self.assertIn("English source", evidence.checklist({**base, "language": "english"}))
+        self.assertIn("non-English source, machine-translated", evidence.checklist({**base, "language": "machine-translated"}))
+
+
 class FactHash(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

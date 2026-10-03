@@ -100,6 +100,79 @@ def prepare(isos: list[str] | None, date: str) -> int:
     return 0
 
 
+def stage_round(path: Path, run_id: str, date: str) -> int:
+    """Stage a later round (#93) under rounds/<run>/, split by the state in each claim id, so the first
+    run's staging files are never overwritten. Each finding keeps its own models."""
+    results = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(results, dict):
+        results = results["result"]
+    sha = prompt_sha256()
+    per: dict[str, dict] = {}
+    for r in results:
+        if not r or not r.get("research"):
+            continue
+        verdicts = {v["id"]: v for v in (r.get("review") or {}).get("verdicts", [])}
+        models = {"researcher_model": r["research"].get("researcher_model", ""),
+                  "reviewer_model": (r.get("review") or {}).get("reviewer_model", "")}
+        for i, f in enumerate(r["research"]["findings"]):
+            iso = f["claim"].split(":")[1]
+            doc = per.setdefault(iso, {"iso": iso, "run": run_id, "date": date, "workflow_sha256": sha,
+                                       "blind": True, "findings": [], "outcomes": []})
+            f = {**f, "url": research.clean_url(f["url"]), "review": verdicts.get(i), **models}
+            if categorical(f["claim"]):
+                # A closed vocabulary (#79): "Yes: the agency runs ..." is "yes". The wording as written is
+                # kept beside it; a value that does not start with a term of the vocabulary stays as it was
+                # and cannot pass the reviewer's agreement.
+                m = re.match(r"\s*(yes|partial|partly|no|national|eu_provider|non_eu_provider|mixed)\b",
+                             f["value"], re.I)
+                if m:
+                    f = {**f, "value_as_written": f["value"],
+                         "value": {"partly": "partial"}.get(m.group(1).lower(), m.group(1).lower())}
+            doc["findings"].append(f)
+        for o in r["research"]["outcomes"]:
+            iso = o["claim"].split(":")[1]
+            per.setdefault(iso, {"iso": iso, "run": run_id, "date": date, "workflow_sha256": sha, "blind": True,
+                                 "findings": [], "outcomes": []})["outcomes"].append(o)
+    folder = ROUNDS / run_id
+    folder.mkdir(parents=True, exist_ok=True)
+    for iso, doc in sorted(per.items()):
+        (folder / f"{iso}.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"staged round {run_id}: {sum(len(d['findings']) for d in per.values())} findings in {len(per)} states")
+    return 0
+
+
+def prepare_withheld(date: str, size: int = 12) -> int:
+    """The input for a round on the facts the fact check withheld (#93): each with what it answers, how it
+    printed, its source and the checker's reason, in batches across states."""
+    import factcheck  # noqa: PLC0415
+    ledger = factcheck.load_ledger()
+    rows = {c: r for c, r in ledger.items() if r["verdict"] != "supported"}
+    facts = []
+    for f in factcheck.unwithheld_facts():
+        r = rows.get(f["claim"])
+        if r and factcheck.fact_sha256(f) == r["fact_sha256"]:
+            facts.append({"claim": f["claim"], "what": f["what"], "printed": f["printed"],
+                          "source_url": f["citations"][0]["url"] if f["citations"] else "",
+                          "checker_reason": r["reason"]})
+    facts.sort(key=lambda f: f["claim"])
+    body = json.dumps(facts, ensure_ascii=False, sort_keys=True).encode()
+    run = f"{date}-withheld-{hashlib.sha256(body).hexdigest()[:8]}"
+    folder = RUNS / run / "in"
+    folder.mkdir(parents=True, exist_ok=True)
+    args = []
+    for n in range(0, len(facts), size):
+        name = f"W{n // size + 1:02d}"
+        path = folder / f"{name}.json"
+        path.write_text(json.dumps({"facts": facts[n:n + size], "gaps": []}, ensure_ascii=False, indent=1),
+                        encoding="utf-8")
+        args.append({"iso": name, "name": "several EU member states", "path": str(path),
+                     "n_facts": len(facts[n:n + size]), "n_gaps": 0})
+    (RUNS / run / "args.json").write_text(json.dumps(args, indent=1), encoding="utf-8")
+    (RUNS / run / "input.sha256").write_text(hashlib.sha256(body).hexdigest() + "\n")
+    print(f"run {run}: {len(facts)} withheld facts in {len(args)} batches\nargs: {RUNS / run / 'args.json'}")
+    return 0
+
+
 def stage(path: Path, run_id: str, date: str) -> int:
     """Split the workflow's return value into one staging file per state. Staging is never rendered.
     Accepts the task's output file as written (a wrapper with "result") or the bare result list."""
@@ -126,11 +199,24 @@ def stage(path: Path, run_id: str, date: str) -> int:
     return 0
 
 
+ROUNDS = DIR / "rounds"
+
+
 def staged(isos: list[str] | None = None) -> dict[str, dict]:
     """Every staged finding, per state: the vetting runs' and the citizens' (contrib.py, #85). A citizen
-    finding carries `source: citizen` and its issue number; its review is a person's, not a model's."""
+    finding carries `source: citizen` and its issue number; its review is a person's, not a model's.
+    Later rounds (`rounds/<run>/<ISO>.json`, #93) are added after the first run's, in run order; each of
+    their findings carries its own researcher and reviewer model."""
     out = {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in sorted(DIR.glob("[A-Z][A-Z].json"))
            if not isos or p.stem in isos}
+    for folder in sorted(p for p in ROUNDS.glob("*") if p.is_dir()):
+        for p in sorted(folder.glob("[A-Z][A-Z].json")):
+            if isos and p.stem not in isos:
+                continue
+            r = json.loads(p.read_text(encoding="utf-8"))
+            doc = out.setdefault(p.stem, {"iso": p.stem, "findings": [], "outcomes": [], "reviewer_model": ""})
+            doc["findings"] += r["findings"]
+            doc["outcomes"] += r["outcomes"]
     import contrib  # noqa: PLC0415
     for s in contrib.load(contrib.SUBMISSIONS):
         if isos and s["iso"] not in isos:
@@ -319,9 +405,14 @@ def admit() -> int:
         }
         return sid
 
+    # Facts the cross-model fact check ever withheld (#89). A `corrects` finding may replace only these
+    # (#93). Read from the staged verdicts, which never change, so admission still reproduces.
+    import factcheck  # noqa: PLC0415
+    withheld_ever = {v["claim"] for v in factcheck.history() if v["verdict"] != "supported"}
+
     for iso, doc in staged().items():
-        model = doc.get("reviewer_model") or "model not recorded"
         for f in doc["findings"]:
+            model = f.get("reviewer_model") or doc.get("reviewer_model") or "model not recorded"
             claim, rel = f["claim"], f["relation"]
             v = ok.get((iso, claim, rel, f["url"]))
             # In the order that explains a rejection: a finding the reviewer rejected, or on a weak
@@ -348,6 +439,16 @@ def admit() -> int:
                 elif same_value(printed, f):
                     cite(claim, f, v, model)
                     result = "corroborated"
+                elif rel == "corrects" and claim in withheld_ever:
+                    # #93: the printed value already failed the cross-model check; a verified, blindly agreed
+                    # T1/T2 finding replaces it. The new value is itself fact-checked before it can ship.
+                    sid = cite(claim, f, v, model)
+                    for c in cites.values():
+                        if c["claim"] == claim and c["source_id"] != sid and "superseded" not in c["checked_by"]:
+                            c["checked_by"] += f"; superseded {v['checked']} by {sid} (corrects a value the fact check did not confirm)"
+                    set_value(claim, f["value"], f["url"])
+                    disputes.pop(claim, None)
+                    result = "corrected_withheld"
                 else:
                     old = _best_source(claim, cites, reg)
                     rule = resolve(old, new_src, f.get("published", "")) if old else "higher_tier"
@@ -527,17 +628,21 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--apply", type=Path, help="hosts: merge a confirmed stub into authorities.csv")
     ap.add_argument("result", nargs="?", type=Path, help="stage: the workflow's JSON result")
     ap.add_argument("--run", default="", help="stage: the workflow run id")
+    ap.add_argument("--withheld", action="store_true", help="prepare: a round on the facts the fact check withheld (#93)")
+    ap.add_argument("--round", action="store_true", help="stage: a later round, under rounds/<run>/ (#93)")
     ap.add_argument("--date", default=dt.date.today().isoformat())
     ap.add_argument("--iso", action="append")
     args = ap.parse_args(argv)
     if args.command == "manifest":
         return manifest(args.run, args.output, args.prepared, args.tokens, args.duration)
     if args.command == "prepare":
+        if args.withheld:
+            return prepare_withheld(args.date)
         return prepare([i.upper() for i in args.iso] if args.iso else None, args.date)
     if args.command == "hosts":
         return hosts(args.apply)
     if args.command == "stage":
-        return stage(args.result, args.run, args.date)
+        return (stage_round if args.round else stage)(args.result, args.run, args.date)
     if args.command == "verify":
         return verify([i.upper() for i in args.iso] if args.iso else None)
     if args.command == "admit":

@@ -1,0 +1,41 @@
+{
+ "iso": "EL",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:EL:breeder_documents:register",
+   "question": "Breeder document scans: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://mitos.gov.gr/index.php/%CE%94%CE%94:%CE%9B%CE%B7%CE%BE%CE%B9%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE_%CF%80%CF%81%CE%AC%CE%BE%CE%B7_%CE%B3%CE%AD%CE%BD%CE%BD%CE%B7%CF%83%CE%B7%CF%82",
+   "quote": "Δημιουργία και τήρηση πληροφοριακού συστήματος με την ονομασία \"Μητρώο Πολιτών\", το οποίο περιλαμβάνει όλες τις εγγραφές Δημοτολογίου, καθώς και όλα τα ληξιαρχικά γεγονότα που έχουν συμβεί στην Ελλάδα, καθώς και των Ελλήνων του εξωτερικού.",
+   "quote_english": "Creation and keeping of an information system named 'Citizens' Register', which comprises all municipal-roll entries as well as all civil-status events that occurred in Greece, as well as those of Greeks abroad.",
+   "value": "Μητρώο Πολιτών (Citizens' Register), an information system comprising all municipal-roll entries and all civil-status events in Greece and of Greeks abroad",
+   "published": "",
+   "title": "Ληξιαρχική πράξη γέννησης - Εθνικό Μητρώο Διοικητικών Διαδικασιών",
+   "publisher": "Εθνικό Μητρώο Διοικητικών Διαδικασιών (Mitos, gov.gr)",
+   "doc_type": "official_page",
+   "note": "The government's national procedures register summarises Law 4483/2017 here. The quote supports the register name and its scope but not '(births, marriages, deaths)'. howto.gov.gr lists the birth, marriage, cohabitation-pact and death acts as separate documents.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote appears verbatim and names the 'Μητρώο Πολιτών' system holding municipal-register entries and civil-status events. It says nothing about scans or images of breeder documents, so it does not establish that system's name."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:EL:breeder_documents:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EL:digital_identity_credentials:foreign_dependency",
+   "status": "no_better_found"
+  }
+ ]
+}

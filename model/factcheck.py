@@ -188,6 +188,10 @@ def authors(bundle: dict) -> dict[str, set[str]]:
         for f in doc.get("findings", []):
             if model:
                 by_url.setdefault((f["claim"], f["url"]), set()).add(model)
+    for p in sorted((VETTING / "rounds").glob("*/[A-Z][A-Z].json")):     # later rounds (#93)
+        for f in json.loads(p.read_text(encoding="utf-8")).get("findings", []):
+            if f.get("researcher_model"):
+                by_url.setdefault((f["claim"], f["url"]), set()).add(f["researcher_model"])
     import contrib  # noqa: PLC0415
     for s in contrib.load(contrib.SUBMISSIONS):
         by_url.setdefault((s["claim"], s["url"]), set()).add(f"person:{s.get('submitter', '')}")
@@ -310,6 +314,73 @@ def _cache_index() -> dict[str, Path]:
     return _INDEX
 
 
+SAMPLES = DIR / "samples"
+STABILITY = DIR / "stability"
+
+
+def prepare_sample(n: int, seed: int, date: str) -> int:
+    """A stability sample (#92): `n` printed facts the check confirmed, drawn with a fixed seed, put to the
+    *other* checker model (Opus 5.5 for Fable 5.1's verdicts). Its verdicts never touch the ledger; they
+    measure how often a second checker disagrees with the first."""
+    import random  # noqa: PLC0415
+    bundle = load_bundle()
+    who = authors(bundle)
+    ledger = load_ledger()
+    pool = [(f, sha) for f, sha, why in assess(bundle, ledger) if not why]
+    pool.sort(key=lambda x: x[0]["claim"])
+    picked = random.Random(seed).sample(pool, min(n, len(pool)))
+    facts = []
+    for f, sha in picked:
+        first = ledger[f["claim"]]["checker_model"]
+        other = next((m for m in CHECKERS.values() if m != first and m not in who[f["claim"]]), "")
+        if other:
+            facts.append({**f, "fact_sha256": sha, "author_model": ";".join(sorted(who[f["claim"]])),
+                          "sample_checker": other, "first_checker": first})
+    by_model: dict[str, list] = {}
+    for f in facts:
+        by_model.setdefault(f["sample_checker"], []).append(f)
+    body = json.dumps(facts, ensure_ascii=False, sort_keys=True).encode()
+    run = f"{date}-sample-{seed}-{hashlib.sha256(body).hexdigest()[:8]}"
+    folder = CACHE / run / "in"
+    folder.mkdir(parents=True, exist_ok=True)
+    args = []
+    for m, items in sorted(by_model.items()):
+        for k in range(0, len(items), 30):
+            name = f"S{len(args) + 1:02d}"
+            (folder / f"{name}.json").write_text(json.dumps({"iso": "EU", "checker_model": m, "facts": items[k:k + 30]},
+                                                            ensure_ascii=False, indent=1), encoding="utf-8")
+            args.append({"batch": name, "iso": "EU", "name": "several EU member states", "model": ALIAS[m],
+                         "checker_model": m, "path": str(folder / f"{name}.json"), "n_facts": len(items[k:k + 30])})
+    (CACHE / run / "args.json").write_text(json.dumps(args, indent=1), encoding="utf-8")
+    (CACHE / run / "workflow.sha256").write_text(prompt_sha256() + "\n")
+    print(f"sample {run}: {len(facts)} confirmed facts, seed {seed}, to {', '.join(sorted(by_model))}\n"
+          f"args: {CACHE / run / 'args.json'}")
+    return 0
+
+
+def stability(run_id: str, prepared: str) -> int:
+    """Compare a staged sample with the ledger: how often the second checker agreed. Writes
+    stability/<run>.json and regenerates the audit file."""
+    docs = [json.loads(p.read_text(encoding="utf-8")) for p in sorted((SAMPLES / run_id).glob("*.json"))]
+    ledger = load_ledger()
+    rows = []
+    for d in docs:
+        for v in d["verdicts"]:
+            first = ledger.get(v["claim"], {})
+            rows.append({"claim": v["claim"], "first_checker": first.get("checker_model", ""),
+                         "first_verdict": first.get("verdict", ""), "second_checker": v["checker_model"],
+                         "second_verdict": v["verdict"], "reason": v["reason"]})
+    agree = sum(1 for r in rows if r["second_verdict"] == "supported")
+    seed = prepared.split("-sample-")[1].split("-")[0] if "-sample-" in prepared else ""
+    out = {"run": run_id, "prepared": prepared, "seed": seed, "date": prepared[:10], "n": len(rows),
+           "second_agreed": agree, "rate": round(agree / len(rows), 4) if rows else None,
+           "disagreements": [r for r in rows if r["second_verdict"] != "supported"]}
+    STABILITY.mkdir(parents=True, exist_ok=True)
+    (STABILITY / f"{run_id}.json").write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"stability {run_id}: the second checker agreed on {agree} of {len(rows)}")
+    return audit(check=False)
+
+
 def prepare(everything: bool, size: int, date: str, pool: bool = False, blocked: bool = False) -> int:
     """Write the workflow's input: the facts due, in batches of one state and one checker model, sorted
     by source so a checker fetches each page once. The run id is the date and the input's hash. The
@@ -379,7 +450,7 @@ def _clean(text: str, limit: int = 400) -> str:
     return EMAIL.sub("[email address removed]", re.sub(r"\s+", " ", str(text or "")).strip())[:limit]
 
 
-def stage(path: Path, run_id: str, prepared: str) -> int:
+def stage(path: Path, run_id: str, prepared: str, sample: bool = False) -> int:
     """Check the workflow's answers against what was asked, and keep them. A batch is refused, whole,
     when its checker reports a different model than the one asked for, when the checker is an author of
     any fact in it, or when it answers for facts it was not given."""
@@ -387,7 +458,7 @@ def stage(path: Path, run_id: str, prepared: str) -> int:
     if isinstance(results, dict):
         results = results["result"]
     folder = CACHE / prepared / "in"
-    out = STAGED / run_id
+    out = (SAMPLES if sample else STAGED) / run_id
     kept, refused = 0, []
     for r in results:
         if not r or not r.get("review"):
@@ -645,6 +716,22 @@ def audit_text(bundle: dict) -> str:
                 + f"{m['built_from_commit'][:12]} | {m['bundle_sha256'][:16]} | {m['workflow_sha256'][:16]} |")
     else:
         lines += ["No run recorded yet."]
+    samples = sorted((json.loads(p.read_text(encoding="utf-8")) for p in STABILITY.glob("*.json")),
+                     key=lambda x: (x["date"], x["run"]), reverse=True)
+    lines += ["", "## Stability of the check", "",
+              "Samples of confirmed facts put to the other checker model, to measure how often a second checker "
+              "disagrees. A sample never changes a verdict.", ""]
+    if samples:
+        lines += ["| Run | Date | Seed | Facts | Second checker agreed | Rate |", "|---|---|---|---:|---:|---:|",
+                  *[f"| {x['run']} | {x['date']} | {x['seed']} | {x['n']} | {x['second_agreed']} | "
+                    f"{x['rate']:.1%} |" for x in samples]]
+        dis = [d for x in samples for d in x["disagreements"]]
+        if dis:
+            lines += ["", "| Claim | First | Second | Second's reason |", "|---|---|---|---|",
+                      *[f"| `{d['claim']}` | {d['first_checker']}: {d['first_verdict']} | {d['second_checker']}: "
+                        f"{d['second_verdict'].replace('_', ' ')} | {_md_cell(d['reason'])} |" for d in dis]]
+    else:
+        lines += ["No sample yet."]
     lines += ["", "## How a check runs", "", *[f"{n}. {t}" for n, t in enumerate(STEPS, start=1)], ""]
     return "\n".join(lines)
 
@@ -701,7 +788,11 @@ def gate(strict: bool) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["prepare", "stage", "record", "audit", "status", "gate", "replay"])
+    ap.add_argument("command", choices=["prepare", "stage", "record", "audit", "status", "gate", "replay",
+                                        "stability"])
+    ap.add_argument("--sample", type=int, default=0,
+                    help="prepare: a stability sample of N confirmed facts for the other checker; stage: --sample 1 stages one")
+    ap.add_argument("--seed", type=int, default=2026, help="prepare --sample: the random seed")
     ap.add_argument("result", nargs="?", type=Path, help="stage: the workflow's output")
     ap.add_argument("--all", action="store_true", help="prepare: re-check every printed fact")
     ap.add_argument("--size", type=int, default=30, help="prepare: facts per batch (one agent each)")
@@ -717,10 +808,14 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--check", action="store_true", help="audit: fail if the file is stale, write nothing")
     ap.add_argument("--date", default=dt.date.today().isoformat())
     a = ap.parse_args(argv)
+    if a.command == "prepare" and a.sample:
+        return prepare_sample(a.sample, a.seed, a.date)
+    if a.command == "stability":
+        return stability(a.run, a.prepared)
     if a.command == "prepare":
         return prepare(a.all, a.size, a.date, a.pool, a.withheld_blocked)
     if a.command == "stage":
-        return stage(a.result, a.run, a.prepared)
+        return stage(a.result, a.run, a.prepared, sample=bool(a.sample))
     if a.command == "record":
         return record(a.run, a.output, a.tokens, a.duration, a.agents)
     if a.command == "audit":

@@ -1,0 +1,63 @@
+{
+ "iso": "HR",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:HR:facial_biometric:operator",
+   "question": "Facial biometric: the body that operates it",
+   "relation": "corrects",
+   "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2019_12_127_2551.html",
+   "quote": "nadležna tijela ovlaštena za prikupljanje i obradu biometrijskih podataka te ustrojavanje odgovarajućih zbirki podataka iz članka 6. ovoga Zakona su ministarstva nadležna za unutarnje poslove, vanjske poslove, poslove pravosuđa te ministarstvo nadležno za poslove obrane u dijelu koji se odnosi na obavljanje vojnopolicijskih poslova",
+   "quote_english": "the competent bodies authorised to collect and process biometric data and to set up the corresponding data collections referred to in Article 6 of this Act are the ministries responsible for internal affairs, foreign affairs and justice, and the ministry responsible for defence as regards military police tasks",
+   "value": "ministarstva nadležna za unutarnje poslove, vanjske poslove, poslove pravosuđa te ministarstvo nadležno za poslove obrane (the ministries for internal affairs, foreign affairs and justice, and the defence ministry for military police tasks)",
+   "published": "2019-12-27",
+   "title": "Zakon o obradi biometrijskih podataka (NN 127/2019)",
+   "publisher": "Narodne novine (Official Gazette of the Republic of Croatia)",
+   "doc_type": "legislation",
+   "note": "Same Act on the official gazette's full-text URL; the corrected value lists all four competent bodies including the defence ministry, which the printed statement dropped.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "",
+    "reason": "The definition appears verbatim in Article 3(1)(4) of the Croatian biometric data law, but it lists several competent ministries (interior, foreign affairs, justice, defence) for biometric collections in general and does not name one body operating a facial biometric system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:HR:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://forenzika.gov.hr/abis/96",
+   "quote": "ABIS sadrži dvije osnovne baze: bazu otisaka papilarnih linija prstiju i dlanova kao i fotografija lica te bazu identificiranih i neidentificiranih tragova papilarnih linija.",
+   "quote_english": "ABIS contains two basic databases: a database of finger and palm prints as well as facial photographs, and a database of identified and unidentified papillary-line traces.",
+   "value": "ABIS (Automated Biometric Identification System)",
+   "published": "",
+   "title": "ABIS – Centar za forenzična ispitivanja, istraživanja i vještačenja Ivan Vučetić",
+   "publisher": "Ministarstvo unutarnjih poslova – Centar Ivan Vučetić",
+   "doc_type": "official_page",
+   "note": "The Interior Ministry's forensic centre names its fingerprint database ABIS (an IDEMIA MBIS product, live since February 2020, replacing AFIS); this is the police/forensic fingerprint system, which is a narrower answer than the ID-card reuse statement printed, and the page gives no date.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "ABIS (Automated Biometric Identification System)",
+    "reason": "The sentence appears verbatim and names ABIS as the system that holds the fingerprint and palm-print database."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:HR:facial_biometric:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:HR:fingerprint_biometric:register",
+   "status": "found"
+  }
+ ]
+}

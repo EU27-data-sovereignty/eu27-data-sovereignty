@@ -68,6 +68,21 @@ class Deploy(unittest.TestCase):
         for wf in (ci, DEPLOY):
             self.assertIn("npm audit --audit-level=high --prefix web", wf)
 
+    def test_ci_installs_the_test_packages_by_hash(self):
+        for wf in ((ROOT / ".github" / "workflows" / "ci.yml").read_text(), DEPLOY):
+            self.assertIn("pip install --require-hashes -r requirements-dev.txt", wf)
+        reqs = (ROOT / "requirements-dev.txt").read_text()
+        for line in reqs.splitlines():
+            if line and not line.startswith(("#", " ")):
+                self.assertRegex(line, r"^[a-z0-9-]+==[0-9.]+ \\$")    # exact pin, followed by hashes
+
+    def test_the_gate_installs_every_browser_it_tests_in(self):
+        config = (ROOT / "web" / "playwright.config.ts").read_text()
+        for wf in ((ROOT / ".github" / "workflows" / "ci.yml").read_text(), DEPLOY):
+            self.assertIn("playwright install --with-deps firefox webkit", wf)
+        for project in ("firefox", "webkit", "iphone-se", "iphone-17-pro"):
+            self.assertIn(f"name: '{project}'", config)
+
     def test_the_deploy_and_the_weekly_monitor_run_the_same_smoke_test(self):
         monitor = (ROOT / ".github" / "workflows" / "monitor.yml").read_text()
         self.assertIn("python3 model/smoke.py", DEPLOY)

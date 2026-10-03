@@ -83,17 +83,17 @@ The holdings Denmark cannot let depend on infrastructure a foreign state can com
 | High | Government payroll and personnel (tier 1) | Statens Lønløsning (the State Payroll Solution)[^s41] | Økonomistyrelsen (Agency for Public Finance and Management)[^s42] | *Not stated in sources* | ca. 180.000 statslige ansatte (state employees paid each month)[^s41] |
 | High | Election management and results (tier 1) | Election results system: municipalities enter manually counted vote totals into an IT system developed by KMD; Danmarks Statistik compiles results[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Central bank systems (tier 1) | TARGET DKK - Nationalbanken's payment system for krone settlement (via T2 and TIPS on TARGET Services, plus SPI for monetary-policy instruments and collateral)[^s44][^s45] | *Not yet sourced* | EU provider[^s44][^s45] | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | SINE (Sikkerhedsnettet) - Denmark's radio network for emergency communications; use mandatory under beredskabsloven § 29[^s46] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page and supports CFB being part of the Ministry of Civil Security and Emergency Preparedness, but the cited page nowhere mentions Dansk Beredskabskommunikation A/S or network operation; that clause is added without…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | Sirenevarslingssystemet (the national siren warning system)[^s47] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | Energinet carries out system-responsibility (TSO) activities, electricity transmission and gas transmission[^s48] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | SINE (Sikkerhedsnettet) - Denmark's radio network for emergency communications; use mandatory under beredskabsloven § 29[^s46] | Center for Beredskabskommunikation (CFB), part of the Ministry of Civil Security and Emergency Preparedness; network operation by Dansk Beredskabskommunikation A/S[^s47][^s48] | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Sirenevarslingssystemet (the national siren warning system)[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Energinet carries out system-responsibility (TSO) activities, electricity transmission and gas transmission[^s50] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | STADS (the university student administration system)[^s49] | *Not yet sourced* | *Not stated in sources* | Omkring 100.000 studerende (students)[^s49] |
-| High | Health records (tier 2) | Fælles Medicinkort (FMK) - Sundhedsdatastyrelsen's electronic register of every citizen's medication data (prescription, purchase, dispensing, dose changes)[^s50][^s51] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | STADS (the university student administration system)[^s51] | *Not yet sourced* | *Not stated in sources* | Omkring 100.000 studerende (students)[^s51] |
+| High | Health records (tier 2) | Fælles Medicinkort (FMK) - Sundhedsdatastyrelsen's electronic register of every citizen's medication data (prescription, purchase, dispensing, dose changes)[^s52][^s53] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | Det Danske Vaccinationsregister - national register of citizens' vaccinations, run by Statens Serum Institut[^s50] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | Det Danske Vaccinationsregister - national register of citizens' vaccinations, run by Statens Serum Institut[^s52] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | Danmarks Adresseregister (DAR) - authoritative register of road names and addresses[^s52] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | Danmarks Adresseregister (DAR) - authoritative register of road names and addresses[^s54] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Denmark without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1346 facts are printed, 3340 values are withheld as gaps, and 66 are withheld as disputed.
 
 ### How sources were found
 
@@ -165,16 +165,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 5 |
-| corroborated | 238 |
+| below_T2 | 6 |
+| corrected_withheld | 6 |
+| corroborated | 261 |
 | disputed | 10 |
-| filled_gap | 363 |
-| holding_not_established | 38 |
-| no_better_found | 447 |
+| filled_gap | 365 |
+| holding_not_established | 41 |
+| no_better_found | 461 |
 | not_reached | 201 |
-| not_verified | 176 |
-| review_disagreed | 153 |
-| same_source | 8 |
+| not_verified | 178 |
+| review_disagreed | 172 |
+| same_source | 9 |
 | superseded_higher_tier | 23 |
 | superseded_later_same_authority | 3 |
 
@@ -204,8 +205,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 613 |
-| T2 competent public body or audit office | 594 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 620 |
+| T2 competent public body or audit office | 612 |
 | T3 other institution or company | 7 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
@@ -216,8 +217,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 100 |
-| Standard | 1221 |
+| Strong | 105 |
+| Standard | 1241 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -258,7 +259,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1321 of 1321 printed facts pass the fact check.
+In this build, 1346 of 1346 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -300,7 +301,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check.
+In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -323,6 +324,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 |
 | wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
 | wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
 | wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
@@ -330,7 +332,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Denmark
 
-59 of 59 printed facts about Denmark pass.
+60 of 60 printed facts about Denmark pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -386,6 +388,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:DK:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:central_bank:foreign_dependency | Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:DK:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -396,9 +399,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### Withheld after the fact check: Denmark
 
-| Claim | What it answers | Checked by | Verdict | Reason |
-|---|---|---|---|---|
-| record:DK:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | claude-fable-5-1 | not supported | The quote is on the page and supports CFB being part of the Ministry of Civil Security and Emergency Preparedness, but the cited page nowhere mentions Dansk Beredskabskommunikation A/S or network operation; that clause is added without support from the cited source (it appears only on the uncited om-sine page). |
+None.
 
 ---
 
@@ -448,13 +449,15 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s44]: European Central Bank — Danish krone now available in all TARGET Services, 2025-04-23. Danish krone now available in all TARGET Services. <https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr250423~096ce05219.en.html>
 [^s45]: Danmarks Nationalbank — Overvågning af den finansielle infrastruktur 2025, 2026. Overvågning af den finansielle infrastruktur 2025. <https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025> ([archived](https://web.archive.org/web/20260513094446/https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025))
 [^s46]: Center for Beredskabskommunikation — Om SINE. Om SINE. <https://sikkerhedsnet.dk/om-sine> ([archived](https://web.archive.org/web/20260710203543/https://sikkerhedsnet.dk/om-sine))
-[^s47]: Beredskabsstyrelsen — Sirenevarsling. Sirenevarsling. <https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/> ([archived](https://web.archive.org/web/20260617225444/https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/))
-[^s48]: Retsinformation / Klima-, Energi- og Forsyningsministeriet — Bekendtgørelse af lov om Energinet (LBK nr 271 af…, 2023-03-09. Bekendtgørelse af lov om Energinet (LBK nr 271 af 09/03/2023). <https://www.retsinformation.dk/eli/lta/2023/271/xml>
-[^s49]: Uddannelses- og Forskningsstyrelsen — STADS. STADS. <https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/> ([archived](https://web.archive.org/web/20260519213542/https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/))
-[^s50]: Retsinformation / Indenrigs- og Sundhedsministeriet — Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025), 2025-03-12. Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025). <https://www.retsinformation.dk/eli/lta/2025/275/xml>
-[^s51]: Sundhedsdatastyrelsen — Fælles Medicinkort. Fælles Medicinkort. <https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort> ([archived](https://web.archive.org/web/20260616035826/https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort))
-[^s52]: Retsinformation / Styrelsen for Dataforsyning og Effektivisering — Adresseloven (LOV nr 136 af 01/02/2017), 2017-02-01. Adresseloven (LOV nr 136 af 01/02/2017). <https://www.retsinformation.dk/eli/lta/2017/136/xml>
+[^s47]: Center for Beredskabskommunikation — Om CFB. Om CFB. <https://sikkerhedsnet.dk/om-cfb>
+[^s48]: Center for Beredskabskommunikation (sikkerhedsnet.dk) — Leverandør. Leverandør. <https://sikkerhedsnet.dk/leverandoer> ([archived](https://web.archive.org/web/20260710202945/https://sikkerhedsnet.dk/leverandoer))
+[^s49]: Beredskabsstyrelsen — Sirenevarsling. Sirenevarsling. <https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/> ([archived](https://web.archive.org/web/20260617225444/https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/))
+[^s50]: Retsinformation / Klima-, Energi- og Forsyningsministeriet — Bekendtgørelse af lov om Energinet (LBK nr 271 af…, 2023-03-09. Bekendtgørelse af lov om Energinet (LBK nr 271 af 09/03/2023). <https://www.retsinformation.dk/eli/lta/2023/271/xml>
+[^s51]: Uddannelses- og Forskningsstyrelsen — STADS. STADS. <https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/> ([archived](https://web.archive.org/web/20260519213542/https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/))
+[^s52]: Retsinformation / Indenrigs- og Sundhedsministeriet — Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025), 2025-03-12. Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025). <https://www.retsinformation.dk/eli/lta/2025/275/xml>
+[^s53]: Sundhedsdatastyrelsen — Fælles Medicinkort. Fælles Medicinkort. <https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort> ([archived](https://web.archive.org/web/20260616035826/https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort))
+[^s54]: Retsinformation / Styrelsen for Dataforsyning og Effektivisering — Adresseloven (LOV nr 136 af 01/02/2017), 2017-02-01. Adresseloven (LOV nr 136 af 01/02/2017). <https://www.retsinformation.dk/eli/lta/2017/136/xml>
 
-**Evidence grades:** 5 Strong, 54 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 5 Strong, 55 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

@@ -1,0 +1,141 @@
+{
+ "iso": "CZ",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:CZ:border_control:operator",
+   "question": "Border and visa systems: the body that operates it",
+   "relation": "corrects",
+   "url": "https://policie.gov.cz/clanek/sirene.aspx",
+   "quote": "Souběžně svou činnost zahájila česká centrála SIRENE. Toto pracoviště je organizační součástí úřadu služby kriminální policie a vyšetřování Policejního prezidia ČR.",
+   "quote_english": "At the same time the Czech SIRENE bureau began its work. This unit is an organisational part of the Criminal Police and Investigation Service of the Police Presidium of the Czech Republic.",
+   "value": "česká centrála SIRENE (Czech SIRENE bureau), part of the Criminal Police and Investigation Service of the Police Presidium",
+   "published": "2012-09-12",
+   "title": "SIRENE působí v ČR pět let",
+   "publisher": "Policie České republiky",
+   "doc_type": "official_page",
+   "note": "Supplies the 'SIRENE' label the statute lacks, on the operator's own (archived) site; § 84(2) of Act 273/2008 separately supports that the Police Presidium operates the national SIS component.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "",
+    "reason": "The page redirects (301) to archiv.policie.gov.cz, where the text is verbatim, but it only says the SIRENE bureau sits in the Criminal Police and Investigation Service of the Police Presidium; it does not say who operates a border or visa system such as SIS or VIS."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:CZ:breeder_documents:operator",
+   "question": "Breeder document scans: the body that operates it",
+   "relation": "corrects",
+   "url": "https://e-sbirka.gov.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F301%2F2026-10-01/fragmenty?cisloStranky=0",
+   "quote": "Matriční úřad vede pro každou matriční knihu sbírku listin za každý kalendářní rok samostatně. Sbírku listin tvoří listiny, které slouží jako podklad pro matriční zápis, jeho změnu či opravu",
+   "quote_english": "The registry office keeps, for each civil-status book, a collection of documents separately for each calendar year. The collection consists of documents that serve as the basis for the civil-status entry, its change or correction",
+   "value": "Matriční úřad (registry office) keeps the sbírka listin (collection of documents underlying civil-status entries)",
+   "published": "2025-01-01",
+   "title": "Zákon č. 301/2000 Sb., o matrikách, jménu a příjmení (version in force on 2026-10-01)",
+   "publisher": "Ministerstvo vnitra ČR, e-Sbírka",
+   "doc_type": "legislation",
+   "note": "The version e-Sbírka serves as in force on 2026-10-01 is the 2025-01-01 consolidation, which has no § 1b; the Ministry-of-Interior Matriční informační systém is only in the 2027-01-01 version, so the in-force answer is the registry offices.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Matriční úřad (civil registry office)",
+    "reason": "Act 301/2000 § 8(1) says the civil registry office keeps a collection of the source documents (sbírka listin) behind each register entry for every register book; the quote does not mention scans."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:CZ:business_registry:operator",
+   "question": "Business registry: the body that operates it",
+   "relation": "corrects",
+   "url": "https://e-sbirka.gov.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2009%2F111%2F2026-01-01/fragmenty?cisloStranky=0",
+   "quote": "Správcem registru osob je Agentura. (2) Správce registru osob poskytuje editorům k přidělení identifikační číslo osoby a identifikační číslo provozovny a odpovídá za jejich správnost.",
+   "quote_english": "The controller of the register of persons is the Agency. (2) The controller of the register of persons provides editors with the personal identification number and establishment identification number for assignment and is responsible for their correctness.",
+   "value": "Agentura (the Agency) is controller of the registr osob and provides identification numbers to editors for assignment",
+   "published": "2026-01-01",
+   "title": "Zákon č. 111/2009 Sb., o základních registrech, § 28",
+   "publisher": "e-Sbírka (Czech official collection of laws)",
+   "doc_type": "legislation",
+   "note": "Official portal replaces the zakonyprolidi mirror; § 7(1) on the same page defines 'Agentura' as Digitální a informační agentura; the editors, not DIA, assign the numbers.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Digitální a informační agentura (the Agentura)",
+    "reason": "Act 111/2009 § 28(1)-(2) makes the Agentura, which § 7(1) of the same act defines as the Digitální a informační agentura, administrator of the register of persons that assigns company identification numbers (IČO); that is a base register of persons, not strictly a trade register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:CZ:customs:operator",
+   "question": "Customs declarations: the body that operates it",
+   "relation": "corrects",
+   "url": "https://e-sbirka.gov.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2012%2F17%2F2026-01-01/fragmenty?cisloStranky=0",
+   "quote": "Generální ředitelství cel v oblasti evidence a statistiky a) je správcem centrálního informačního systému orgánů celní správy,",
+   "quote_english": "The General Directorate of Customs, in the field of records and statistics, a) is the controller of the central information system of the customs authorities,",
+   "value": "Generální ředitelství cel (General Directorate of Customs), controller of the central information system of the customs authorities",
+   "published": "2026-01-01",
+   "title": "Zákon č. 17/2012 Sb., o Celní správě České republiky, § 4(4)",
+   "publisher": "e-Sbírka (Czech official collection of laws)",
+   "doc_type": "legislation",
+   "note": "Official portal instead of zakonyprolidi; the next point, c)1, says the GDC collects and processes information on goods released into a customs procedure.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Generální ředitelství cel (General Directorate of Customs)",
+    "reason": "Act 17/2012 § 4(4)(a) makes the General Directorate of Customs administrator of the central information system of the customs authorities; it does not name a declarations system specifically."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:CZ:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://mv.gov.cz/clanek/snemovna-schvalila-novy-typ-obcanskych-prukazu-s-biometrickymi-udaji.aspx",
+   "quote": "Biometrické údaje se povedou v informačním systému evidence občanských průkazů nejdéle po dobu 90 dnů od vyrobení dokladu, a to pro účely vyřízení jeho případné reklamace. Poté dojde k jejich smazání, protože vytvářet jakékoliv databáze, které by biometrické údaje shromažďovaly, není povoleno.",
+   "quote_english": "Biometric data will be kept in the information system of the ID card register for at most 90 days from production of the document, for handling any complaint about it. They are then deleted, because creating any databases that would collect biometric data is not permitted.",
+   "value": "informační systém evidence občanských průkazů (ID card register information system), holding biometric data for at most 90 days from production of the card; no permanent biometric database is permitted",
+   "published": "2021-06",
+   "title": "Sněmovna schválila nový typ občanských průkazů s biometrickými údaji",
+   "publisher": "Ministerstvo vnitra České republiky",
+   "doc_type": "official_page",
+   "note": "Interior Ministry statement (marked archive, June 2021): the same page says the biometrics are a facial image and two fingerprints. It names the ID-card register as temporary holder and says no standing biometric database may exist, which is narrower than 'No central register'.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "informační systém evidence občanských průkazů",
+    "reason": "The page now redirects to archiv.mv.gov.cz, where the quote appears verbatim. It names the ID-card register information system as the place where the biometric data, which the page says include two fingerprints, are held for up to 90 days and then deleted."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:CZ:border_control:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:breeder_documents:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:business_registry:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:customs:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:CZ:fingerprint_biometric:register",
+   "status": "found"
+  }
+ ]
+}

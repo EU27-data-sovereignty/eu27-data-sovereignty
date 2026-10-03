@@ -1,0 +1,310 @@
+{
+ "run": "wf_8232a23d-013",
+ "prepared": "2026-10-02-sample-2026-2672f565",
+ "batch": "S01",
+ "iso": "EU",
+ "checker_model": "claude-opus-5-5",
+ "reported_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "claim": "param:NL:gdp_eur_bn",
+   "fact_sha256": "c845e34d2f8198b43412f81ba254ea5907f3ddd088a346aedc37072572db8d40",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The API returns 1,170,579.0 million EUR for NL in 2025 (B1GQ, CP_MEUR). In billions and rounded, that is 1,170.6 EUR bn, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=NL&time=2025"
+  },
+  {
+   "claim": "record:EL:health_records:register",
+   "fact_sha256": "071772594da23f4fbfa68a92a7f822bf75069d12b58b4d17d44682437b8bb5f5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The quote is on the page verbatim. The page names the system Εθνικός Ηλεκτρονικός Φάκελος Υγείας (ΕΗΦΥ) and describes it as a secure, central point for storing and managing medical data, which matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.ehealthrecord.gov.gr/ehfy-overview-details"
+  },
+  {
+   "claim": "record:LV:geospatial:register",
+   "fact_sha256": "0d4aadf488743f31c44e2a54f482180578100bb40404e5673d51bf5178d464f9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "Article 17 'Ģeotelpiskās informācijas pamatdati' (base geospatial data) lists, as item 5, the administrative territory boundaries, their descriptions and the State Address Register's geospatial information. This matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://likumi.lv/ta/id/202999"
+  },
+  {
+   "claim": "record:MT:border_control:register",
+   "fact_sha256": "23fdc67f230d2b04c8bf80f5a6396c729ffbcfc4ebc36352cf9b5ae989f6e33c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The Identità page on the Entry-Exit System contains the quote verbatim and describes the EES as the automated system that registers third-country travellers at the EU's external borders. That supports the name 'Entry-Exit System (EES)'.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/expatriates-unit-main-page/noneu-nationals/entry-exit-system/"
+  },
+  {
+   "claim": "param:IE:population_m",
+   "fact_sha256": "b15b8408e7937646957a50bb50b15b8297871202fa69fede732e70e1114660bc",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The API returns 5,510,565 for IE on 1 January 2026. In millions and rounded, that is 5.511 million, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=IE&time=2026"
+  },
+  {
+   "claim": "record:CZ:benefits_pensions:register",
+   "fact_sha256": "19fcbc94468b01e9ec71875fd9048619b816aa2dbca3d74661dc6b82e876a581",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "Both cited pages contain the quote. On zakonyprolidi.cz it is item g) in the list of ČSSZ duties: 'vede registr pojištěnců důchodového pojištění'. The surrounding items concern ČSSZ (it directs the regional social security administrations and runs the ČSSZ information system), so 'ČSSZ keeps the register' is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/1991-582"
+  },
+  {
+   "claim": "record:SE:vehicle_licensing:register",
+   "fact_sha256": "77a2710cdaba9f3cc53f203814ef5ce5ecb5a1372a6974cc051a4e2d54d24b91",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "Vägtrafikdatalagen states that Transportstyrelsen registers the data and that 'Uppgiftssamlingen benämns vägtrafikregistret'. The Transportstyrelsen page also contains its quote. This supports the name and that Transportstyrelsen keeps the register.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vagtrafikdatalag-2019369_sfs-2019-369/"
+  },
+  {
+   "claim": "record:SI:official_gazette:register",
+   "fact_sha256": "4b7e2d5603820bb171b9157b7672edb3484ebfda431df7c2538a922153145bd2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The page says that from 1 March 2026 all publications of the Uradni list RS are available exclusively in electronic form on the PISRS website, and that the printed edition ended. That supports 'sole publication platform'.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/glasilo-uradni-list-rs/o-glasilu"
+  },
+  {
+   "claim": "record:PL:trust_services_pki:register",
+   "fact_sha256": "cbb44fb17522daf7f7ed7a647af847a0f020262fbf462d88eeb09a7ff191989e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The PDF text contains the quote: the krajowa infrastruktura zaufania comprises the register, the trusted list and the narodowe centrum certyfikacji. This matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1725/text.pdf"
+  },
+  {
+   "claim": "record:HU:electoral_roll:operator",
+   "fact_sha256": "5dcaabccd49d131b07f7e12c85477ee6d4def758e61037da314c4a30e3ab6b53",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "IdomSoft's own products page (termékek) lists the Nemzeti Választási Rendszer as the system that serves election offices' statutory tasks, so 'IdomSoft builds' it is supported. The printed statement claims building, not operation, and the page says nothing about who operates it.",
+   "quote_found": true,
+   "checked_url": "https://www.idomsoft.hu/termekek"
+  },
+  {
+   "claim": "record:PT:land_property:register",
+   "fact_sha256": "9826d2ffff77194a49aca6ca20953b9ca80fdb12b1ae3288e044422050631771",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim once the page is decoded as Latin-1 (Código do Registo Predial, art. 106). It says the land registry databases hold information on the legal status of properties, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=488A0106&nid=488&tabela=leis&pagina=1&ficha=1&nversao="
+  },
+  {
+   "claim": "record:PL:geospatial:register",
+   "fact_sha256": "abf5d004377628b129001de5066687fcd5012120a8cbfa99f12bebf9605c2113",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The statute text says the Surveyor General keeps the 'państwowy rejestr granic i powierzchni jednostek podziałów terytorialnych kraju, zintegrowany z ewidencją gruntów i budynków oraz ewidencją miejscowości, ulic i adresów'. This matches the printed name and integration.",
+   "quote_found": true,
+   "checked_url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1151/text.html"
+  },
+  {
+   "claim": "record:LU:health_insurance:register",
+   "fact_sha256": "834a9e7eee45d1f3349df6e7c51ce68aa1de4a1eeb71221b15e8be67db45901d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The page says anyone working in Luxembourg must be affiliated by the CCSS, and that after affiliation 'je bénéficie des prestations de l'assurance maladie et maternité'. Both parts of the printed statement are supported.",
+   "quote_found": true,
+   "checked_url": "https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html"
+  },
+  {
+   "claim": "record:SE:business_registry:register",
+   "fact_sha256": "d97d7cda729922ce6f238788785b01eec91e0e6b6304cefa8fdda79761914ea0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "Aktiebolagsförordningen states that 'Bolagsverket är personuppgiftsansvarigt för ... aktiebolagsregistret'. The Aktiebolagslag page also contains its quote. This supports the register name and Bolagsverket as controller.",
+   "quote_found": true,
+   "checked_url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/aktiebolagsforordning-2005559_sfs-2005-559/"
+  },
+  {
+   "claim": "record:IE:central_bank:foreign_dependency",
+   "fact_sha256": "17ffc3b7ca742be5f36eda7a6ee8499f9823f0d723c95019303ab6dabfb01b34",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "not_supported",
+   "reason": "The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an Irish component operated by the Central Bank of Ireland, which does not establish 'EU provider' either.",
+   "quote_found": true,
+   "checked_url": "https://www.centralbank.ie/financial-system/payments-and-securities-settlements/target-services/t2"
+  },
+  {
+   "claim": "record:CZ:land_property:count",
+   "fact_sha256": "1ef4c99cc3776abe00effcfdfbb7bd550f800b2f0b039fc8ade55a1680571603",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "ČÚZK's 2025 annual report PDF contains 'V digitální části sbírky listin je k dispozici více než 33 milionů dokumentů', which matches the printed count.",
+   "quote_found": true,
+   "checked_url": "https://cuzk.gov.cz/getattachment/f9eb09fe-b4e4-4fae-9a5a-57af8e46edeb/Vyrocni-zprava-2025_final.pdf.aspx"
+  },
+  {
+   "claim": "indicator:BE:C1",
+   "fact_sha256": "e86f59c59f39bca8e1d276dfb1a7f88abaa2f290b29d7838c5b273a54f0e160f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The live page failed with a TLS error and the fact lists no archived_url, so I read the Wayback snapshot from 2026-06-07. It contains the quote verbatim: the Belgian federal G-Cloud has four data centres that it offers to institutions for housing. That supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260607200115/https://www.gcloud.belgium.be/nl/service/detail/housing"
+  },
+  {
+   "claim": "record:SI:firearms_register:register",
+   "fact_sha256": "7c54cde71a596f16fbc597782c4db69b3f5b25808c0ed063031c92e70d2b917d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The Zakon o orožju (firearms act) states that 'Centralna evidenca izdanih orožnih listin je zbir evidenc ... ki jih vodijo pristojni organi', which matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2000-01-2747/zakon-o-orozju-zoro-1"
+  },
+  {
+   "claim": "param:EE:gdp_eur_bn",
+   "fact_sha256": "60eb3f2782a004c7bc689152a03b8e575cd45ad04ed7e6e778c672d97d1f2d3e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The API returns 41,874.8 million EUR for EE in 2025. In billions and rounded, that is 41.9 EUR bn, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=EE&time=2025"
+  },
+  {
+   "claim": "param:LU:gov_employment_k",
+   "fact_sha256": "1e675ff6c9e118bbff92f25064ec66a43d6971ec9e89933f181022b871858eca",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The API returns 32.63 thousand persons for LU in 2024 (NACE O). Rounded, that is 32.6 thousand, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_a64_e?format=JSON&na_item=EMP_DC&nace_r2=O&unit=THS_PER&geo=LU&time=2024"
+  },
+  {
+   "claim": "record:DK:trust_services_pki:register",
+   "fact_sha256": "995f632bf58008940aa54a8a110ec73470faa123a088f2291d90ec2993119f55",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The CA1 homepage contains the quote verbatim: 'Den Danske Stat Tillidstjenester (CA1) Tillidstjenester leveret af Digitaliseringsstyrelsen på vegne af Den Danske Stat'. This matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.ca1.gov.dk/"
+  },
+  {
+   "claim": "param:HU:elec_price_eur_mwh",
+   "fact_sha256": "5f79525df049af9da7babcfb973565824063f94cde2dd752037e352834cba4cf",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The API returns 0.2132 EUR/kWh for HU in 2025-S2, band MWH500-1999, excluding VAT. That equals 213.2 EUR/MWh, as printed.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_205?format=JSON&currency=EUR&nrg_cons=MWH500-1999&tax=X_VAT&unit=KWH&geo=HU&time=2025-S2"
+  },
+  {
+   "claim": "record:IE:facial_biometric:operator",
+   "fact_sha256": "989f95cc819921c728c57579e04c0f2c93a6f887d9475bfcf728d064644b71cd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The DPC press release says biometric facial templates are collected, stored and processed 'by the DSP', and expands DSP as the Department of Social Protection. This supports DSP as the body operating it.",
+   "quote_found": true,
+   "checked_url": "https://www.dataprotection.ie/en/news-media/press-releases/dpc-announces-conclusion-investigation-use-facial-matching-technology-connection-public-services"
+  },
+  {
+   "claim": "indicator:DE:L2",
+   "fact_sha256": "7e2bd4bb353093aeca0f605ad055fe5d1097fa8b7a050deffb9d59ce8c6fe648",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "§ 4 of the Sicherheitsüberprüfungsgesetz, a statute, defines the classification levels, including VS-NUR FÜR DEN DIENSTGEBRAUCH. The VSA quote also appears verbatim once that page is decoded as Latin-1. A statutory classification scheme supports 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/s_g/__4.html"
+  },
+  {
+   "claim": "record:LU:health_insurance:operator",
+   "fact_sha256": "fdf78e314cc4c071782d4bc646d49765025cd8435f632f60286b3ec7ea78e203",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The page states that the CNS 'gère les prestations à l'usage de tous les ASSURÉS DU PRIVÉ et des OUVRIERS DE L'ÉTAT', which matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html"
+  },
+  {
+   "claim": "record:EL:electoral_roll:register",
+   "fact_sha256": "5977b205bb15c912a856d9a897d3e63977c4487ede082b067cb0831cbdca4bf8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "PD 26/2012 on lawspot states that elections use the electoral rolls kept at the Ministry of the Interior, compiled from the municipal registers (δημοτολόγια). This matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.lawspot.gr/nomothesia/proedriko-diatagma-26-2012/"
+  },
+  {
+   "claim": "record:CY:health_insurance:operator",
+   "fact_sha256": "03ce8f8e676fe1b5b2a4efc71855e8c2f2d9d650486d0c130f989533a28439ed",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "Decoded as cp1253, Law 89(I)/2001 s.4(3) says 'ο Οργανισμός αναπτύσσει και λειτουργεί σύστημα πληροφορικής', where the Organisation is the Health Insurance Organisation. The gesy.org.cy quote also appears. This supports the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2001_1_89/full.html"
+  },
+  {
+   "claim": "record:HR:digital_identity_credentials:register",
+   "fact_sha256": "4e9df71bcd86eab92e8cd5b859579fad8d88593c91f31b58acc7d56ad68d23c5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The NIAS terms-of-use page contains the quote naming the 'Nacionalni identifikacijski i autentifikacijski sustav (NIAS)', which supports the printed name.",
+   "quote_found": true,
+   "checked_url": "https://nias.gov.hr/Home/TermsOfUse"
+  },
+  {
+   "claim": "record:DE:digital_identity_credentials:register",
+   "fact_sha256": "b10db9f787eb1a327d8e9a0a26714c048fa8b9c70504965aff5438b68c9eceba",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The Brandenburg OZG page says BundID will be developed under the OZG into the central citizen account for all and converted into the DeutschlandID. OZG § 3 confirms the federal central citizen account. Both support the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://ozg.brandenburg.de/ozg/de/it-infrastrukturen/it-basiskomponenten/bundid-nutzerkonto-deutschlandid/"
+  },
+  {
+   "claim": "record:ES:trust_services_pki:operator",
+   "fact_sha256": "bea2aa7f37c70d1c5d070734976726960280c0856f79d2664505b1e08869f4cf",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "not_supported",
+   "reason": "The quote only says that FNMT-RCM is a public business entity and in-house provider of the General State Administration. Neither it nor the body text says that FNMT operates the state PKI or trust services; only the site navigation has 'Certificación Digital' and 'FNMT Ceres' links. So the page does not establish the operator role.",
+   "quote_found": true,
+   "checked_url": "https://www.fnmt.es/institucion/informacion-institucional"
+  }
+ ]
+}

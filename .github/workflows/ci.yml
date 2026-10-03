@@ -43,6 +43,10 @@ jobs:
         run: |
           npm audit --audit-level=high
           npm audit --audit-level=high --prefix web
+      - name: Install Firefox and WebKit for the browser tests (#92)
+        run: npx --prefix web playwright install --with-deps firefox webkit
+      - name: Test-only Python packages (hashed)
+        run: python3 -m pip install --require-hashes -r requirements-dev.txt
       - name: Run the gate
         run: ./test.sh --no-pdf
 
@@ -55,7 +59,9 @@ jobs:
         with:
           python-version: "3.14"
 
-      # No dependencies to install: the model is stdlib-only by design.
+      - name: Test-only Python packages (hashed)
+        run: python3 -m pip install --require-hashes -r requirements-dev.txt
+      # The model is stdlib-only by design; only the tests use hypothesis (requirements-dev.txt, #92).
       - name: Run tests
         run: python3 -m unittest discover -s tests -v
 

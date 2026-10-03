@@ -62,7 +62,7 @@ The holdings Portugal cannot let depend on infrastructure a foreign state can co
 | Critical | Breeder document scans (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 32(1) of Lei 33/99 says ID-card applications and 'certidões não emitidas pelo registo civil português' are microfilmed or kept on secure computer media and then destroyed; the printed 'foreign-issued certificates' narrows a scope…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Authentication audit log (tier 0) | Authentication records (type, date/time) and signatures are processed to manage electronic identification[^s4] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
 | High | Document issuance history (tier 0) | Citizen Card data processing covers issuance, update, renewal and cancellation requests[^s17] | IRN, I.P. is the body responsible for SIPEP[^s18] | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | *Disputed: sources disagree. Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 7/2007, de 5 de Fevereiro – Cartão de Cidadão…, 2007 gives the value this report printed; ARTE - Agência para a Reforma Tecnológica do Estado (Autenticação.gov) — Chave Móvel Digital gives “Chave Móvel Digital (CMD) (Digital Mobile Key)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Article 2(8) of Lei 32/2017 does assign management and security of the CMD technological infrastructure to AMA, I.P., but the page never mentions ARTE, so the printed parenthetical '(the predecessor of ARTE)' is an addition the source does…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet sourced* |
+| High | Digital identity credentials (tier 0) | *Disputed: sources disagree. Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 7/2007, de 5 de Fevereiro – Cartão de Cidadão…, 2007 gives the value this report printed; ARTE - Agência para a Reforma Tecnológica do Estado (Autenticação.gov) — Chave Móvel Digital gives “Chave Móvel Digital (CMD) (Digital Mobile Key)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | *Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: Lei 37/2014 art. 2(8) does assign management and security of the CMD infrastructure to AMA, I.P., and autenticacao.gov.pt says the site is managed by ARTE; but neither page says AMA was the predecessor of ARTE, so the printed parenthetical…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet sourced* |
 | High | Electoral roll entry (tier 0) | *Disputed: sources disagree. Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 13/99, de 22 de Março – Regime Jurídico do…, 1999 gives the value this report printed; Secretaria-Geral do Ministério da Administração Interna (SGMAI) — Administração Eleitoral gives “Base de Dados do Recenseamento Eleitoral (Voter Registration Database)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | SGMAI electoral administration organises, maintains and manages BDRE and SIGRE[^s19] | *Not stated in sources* | 11 130 316 inscritos para votar (registered voters)[^s20] |
 | High | State PKI and qualified trust services (tier 0) | The State Electronic Certification Entity is the state's root certification authority at the top of the SCEE chain[^s21] | *Disputed: sources disagree. Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Decreto-Lei n.º 12/2021, de 9 de fevereiro (art. 27.º), 2021 gives the value this report printed; Agência para a Reforma Tecnológica do Estado, I.P. (ARTE) — Certificação eletrónica gives “ARTE (Agência para a Reforma Tecnológica do Estado; Agency for the Technological Reform of the State)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | Land registry databases hold the legal status of real property[^s22] | The President of IRN, I.P. is the controller of the land registry databases[^s22] | *Not stated in sources* | *Not yet measured* |
@@ -74,27 +74,27 @@ The holdings Portugal cannot let depend on infrastructure a foreign state can co
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Customs declarations (tier 1) | STADA-IMP (customs import declaration processing system)[^s29] | AT (Autoridade Tributária e Aduaneira; Tax and Customs Authority)[^s29] | *Not stated in sources* | *Not yet measured* |
 | High | Benefits & pensions (tier 1) | All natural and legal persons dealing with social security are identified in the information system[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Portaria 22/2016 art. 12(1) says only that SINAVE uses the Registo Nacional de Utentes to look up patient identification for the physician profile; it does not say the register is the identification reference for 'other national health…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | The commercial registry database holds the legal status of registered entities[^s31] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Código do Registo Comercial art. 78-C(1) says verbatim that the director-geral dos Registos e do Notariado is the database controller, but the page never mentions IRN; the printed gloss '(now IRN)' is added from outside the source. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Registo Central de Beneficiário Efetivo (RCBE) (Central Register of Beneficial Ownership)[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | The vehicle registry database holds the legal status of motor vehicles[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | SII UCFE: shared police information system on borders and foreign nationals, used by security forces[^s27] | Management of former SEF systems, including the national part of SIS, passes to a security information technology unit[^s34] | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | The National Patient Register (RNU) is used as the patient identification reference by other national health systems[^s31][^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | The commercial registry database holds the legal status of registered entities[^s33] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Código do Registo Comercial art. 78-C(1) says verbatim that the director-geral dos Registos e do Notariado is the database controller, but the page never mentions IRN; the printed gloss '(now IRN)' is added from outside the source. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Registo Central de Beneficiário Efetivo (RCBE) (Central Register of Beneficial Ownership)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | The vehicle registry database holds the legal status of motor vehicles[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | SII UCFE: shared police information system on borders and foreign nationals, used by security forces[^s27] | Management of former SEF systems, including the national part of SIS, passes to a security information technology unit[^s36] | *Not stated in sources* | *Not yet measured* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Treasury and state accounts (tier 1) | Budget data are registered in SIGO (DGO) and entered in information systems managed by ESPAP, I.P.[^s35] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The cited page names IGCP, E.P.E. as the entity managing the State's treasury, financing and direct public debt; it does not mention Direção-Geral do Orçamento (DGO) or ESPAP, which are the bodies the report prints. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | Budget data are registered in SIGO (DGO) and entered in information systems managed by ESPAP, I.P.[^s37] | *Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: Both IGCP quotes are present and say the IGCP, E.P.E. manages the State's treasury, financing and direct public debt. Neither page mentions the Direção-Geral do Orçamento or ESPAP, so the printed operator is not what the cited sources say. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | *Disputed: sources disagree. Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 53/2008, de 29 de Agosto – Lei de Segurança Interna, 2008 gives the value this report printed; SIRESP, S.A. — Home - SIRESP gives “Rede Nacional de Emergência e Segurança – SIRESP (National Emergency and Security Network)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | SIRESP, S.A.[^s36] | *Not stated in sources* | mais de 40.000 utilizadores (more than 40,000 users)[^s36] |
-| High | Crisis management and civil protection (tier 1) | ANEPC organises a national alert and warning system[^s37] | ANEPC plans, coordinates and executes emergency and civil protection policy, including civil emergency planning for crisis or war[^s37] | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | centro de Despacho (National Dispatch centre) of REN - Rede Elétrica Nacional[^s38] | REN - Rede Elétrica Nacional[^s38] | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | The national water authority establishes and maintains the national water resources information system[^s39][^s40] | APA, I.P. is the national water authority exercising the powers of the Water Law[^s40] | *Not stated in sources* | *Not yet measured* |
-| High | Education (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: DL 396/2007 art. 7(5) says the *models* (templates) of diplomas and certificates, defined by portaria, are made available in SIGO, and art. 11(2) says training actions are inscribed in SIGO; it does not say that qualification diplomas and…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | *Disputed: sources disagree. Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 53/2008, de 29 de Agosto – Lei de Segurança Interna, 2008 gives the value this report printed; SIRESP, S.A. — Home - SIRESP gives “Rede Nacional de Emergência e Segurança – SIRESP (National Emergency and Security Network)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | SIRESP, S.A.[^s38] | *Not stated in sources* | mais de 40.000 utilizadores (more than 40,000 users)[^s38] |
+| High | Crisis management and civil protection (tier 1) | ANEPC organises a national alert and warning system[^s39] | ANEPC plans, coordinates and executes emergency and civil protection policy, including civil emergency planning for crisis or war[^s39] | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | centro de Despacho (National Dispatch centre) of REN - Rede Elétrica Nacional[^s40] | REN - Rede Elétrica Nacional[^s40] | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | The national water authority establishes and maintains the national water resources information system[^s41][^s42] | APA, I.P. is the national water authority exercising the powers of the Water Law[^s42] | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | Qualification diplomas and certificates under the National Qualifications System are made available in SIGO[^s43][^s44] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | National reference geographic database products include topographic mapping and orthophoto mapping[^s41] | DGT gathers territorial geographic information in the National Territorial Information System (SNIT)[^s41] | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | National reference geographic database products include topographic mapping and orthophoto mapping[^s45] | DGT gathers territorial geographic information in the National Territorial Information System (SNIT)[^s45] | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Portugal without a verified source yet. Corrections an
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1346 facts are printed, 3340 values are withheld as gaps, and 66 are withheld as disputed.
 
 ### How sources were found
 
@@ -165,16 +165,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 5 |
-| corroborated | 238 |
+| below_T2 | 6 |
+| corrected_withheld | 6 |
+| corroborated | 261 |
 | disputed | 10 |
-| filled_gap | 363 |
-| holding_not_established | 38 |
-| no_better_found | 447 |
+| filled_gap | 365 |
+| holding_not_established | 41 |
+| no_better_found | 461 |
 | not_reached | 201 |
-| not_verified | 176 |
-| review_disagreed | 153 |
-| same_source | 8 |
+| not_verified | 178 |
+| review_disagreed | 172 |
+| same_source | 9 |
 | superseded_higher_tier | 23 |
 | superseded_later_same_authority | 3 |
 
@@ -204,8 +205,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 613 |
-| T2 competent public body or audit office | 594 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 620 |
+| T2 competent public body or audit office | 612 |
 | T3 other institution or company | 7 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
@@ -216,8 +217,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 100 |
-| Standard | 1221 |
+| Strong | 105 |
+| Standard | 1241 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -258,7 +259,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1321 of 1321 printed facts pass the fact check.
+In this build, 1346 of 1346 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -300,7 +301,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check.
+In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -323,6 +324,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 |
 | wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
 | wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
 | wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
@@ -330,7 +332,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Portugal
 
-47 of 47 printed facts about Portugal pass.
+49 of 49 printed facts about Portugal pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -365,6 +367,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:PT:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:PT:customs:operator | Customs declarations: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:PT:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:PT:health_insurance:register | Statutory health insurance: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:PT:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:PT:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:PT:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -379,6 +382,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:PT:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:PT:water_control:register | Water management control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:PT:water_control:operator | Water management control: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:PT:education:register | Education: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:PT:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:PT:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
@@ -389,10 +393,8 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | indicator:PT:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | claude-fable-5-1 | unclear | All three quotes are present (ARTE news 29 May 2026; PNNS May 2026 with 'Desenvolvimento, pelo Estado, de infraestrutura nacional soberana de nuvem' scheduled from S1 2026; RCM 102/2026 funding implementation and initial migration via ARTE and IP Telecom). They show an approved, funded plan in execution, but none states that a sovereign cloud platform is in operation, so whether 'Partly' rather th |
 | record:PT:breeder_documents:register | Breeder document scans: the name of the register or system | claude-fable-5-1 | not supported | Article 32(1) of Lei 33/99 says ID-card applications and 'certidões não emitidas pelo registo civil português' are microfilmed or kept on secure computer media and then destroyed; the printed 'foreign-issued certificates' narrows a scope the source states as 'not issued by the Portuguese civil registry', which is not the same thing, and 'paper originals' is likewise not in the text. |
 | record:PT:business_registry:operator | Business registry: the body that operates it | claude-fable-5-1 | not supported | Código do Registo Comercial art. 78-C(1) says verbatim that the director-geral dos Registos e do Notariado is the database controller, but the page never mentions IRN; the printed gloss '(now IRN)' is added from outside the source. |
-| record:PT:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | claude-fable-5-1 | not supported | Article 2(8) of Lei 32/2017 does assign management and security of the CMD technological infrastructure to AMA, I.P., but the page never mentions ARTE, so the printed parenthetical '(the predecessor of ARTE)' is an addition the source does not say. |
-| record:PT:education:register | Education: the name of the register or system | claude-fable-5-1 | not supported | DL 396/2007 art. 7(5) says the *models* (templates) of diplomas and certificates, defined by portaria, are made available in SIGO, and art. 11(2) says training actions are inscribed in SIGO; it does not say that qualification diplomas and certificates themselves are made available in SIGO, as printed. |
-| record:PT:health_insurance:register | Statutory health insurance: the name of the register or system | claude-fable-5-1 | not supported | Portaria 22/2016 art. 12(1) says only that SINAVE uses the Registo Nacional de Utentes to look up patient identification for the physician profile; it does not say the register is the identification reference for 'other national health systems' generally, and the abbreviation RNU does not appear. |
-| record:PT:public_finance:operator | Treasury and state accounts: the body that operates it | claude-fable-5-1 | not supported | The cited page names IGCP, E.P.E. as the entity managing the State's treasury, financing and direct public debt; it does not mention Direção-Geral do Orçamento (DGO) or ESPAP, which are the bodies the report prints. |
+| record:PT:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | claude-fable-5-1 | not supported | Lei 37/2014 art. 2(8) does assign management and security of the CMD infrastructure to AMA, I.P., and autenticacao.gov.pt says the site is managed by ARTE; but neither page says AMA was the predecessor of ARTE, so the printed parenthetical adds a succession claim the sources do not state. |
+| record:PT:public_finance:operator | Treasury and state accounts: the body that operates it | claude-fable-5-1 | not supported | Both IGCP quotes are present and say the IGCP, E.P.E. manages the State's treasury, financing and direct public debt. Neither page mentions the Direção-Geral do Orçamento or ESPAP, so the printed operator is not what the cited sources say. |
 
 ---
 
@@ -426,18 +428,22 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s28]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Decreto-Lei n.º 41/2023, de 2 de junho – cria a AIMA, I.…, 2023. Decreto-Lei n.º 41/2023, de 2 de junho – cria a AIMA, I. P. (preâmbulo). <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3676&tabela=leis>
 [^s29]: Autoridade Tributária e Aduaneira (AT) — Relatório de Atividades 2024, 2025. Relatório de Atividades 2024. <https://info.portaldasfinancas.gov.pt/pt/at/Instrumentos_Gestao/Relatorio_atividades/Documents/Relatorio_de_Atividades_AT_2024.pdf> ([archived](https://web.archive.org/web/20260509164626/https://info.portaldasfinancas.gov.pt/pt/at/Instrumentos_Gestao/Relatorio_atividades/Documents/Relatorio_de_Atividades_AT_2024.pdf))
 [^s30]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 4/2007, de 16 de Janeiro – Bases gerais do…, 2007. Lei n.º 4/2007, de 16 de Janeiro – Bases gerais do sistema de segurança social (art. 98.º). <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2243&tabela=leis> ([archived](https://web.archive.org/web/20250430135035/https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2243&tabela=leis))
-[^s31]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Código do Registo Comercial (DL n.º 403/86), art. 78.º-B, 1986. Código do Registo Comercial (DL n.º 403/86), art. 78.º-B. <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=506A0078B&nid=506&tabela=leis&pagina=1&ficha=1&nversao=>
-[^s32]: Instituto dos Registos e do Notariado, I.P. (IRN) / Justiça.gov.pt — Registo Central do Beneficiário Efetivo, 2026-09-30. Registo Central do Beneficiário Efetivo. <https://rcbe.justica.gov.pt/> ([archived](https://web.archive.org/web/20260724173200/https://rcbe.justica.gov.pt/))
-[^s33]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Decreto-Lei n.º 54/75, de 12 de Fevereiro – Registo…, 1975. Decreto-Lei n.º 54/75, de 12 de Fevereiro – Registo automóvel (art. 27.º). <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=598&tabela=leis> ([archived](https://web.archive.org/web/20251010024521/https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=598&tabela=leis))
-[^s34]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 73/2021, de 12 de novembro – reestruturação do…, 2021. Lei n.º 73/2021, de 12 de novembro – reestruturação do sistema português de controlo de fronteiras. <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3468&tabela=leis> ([archived](https://web.archive.org/web/20240601081051/https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3468&tabela=leis))
-[^s35]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Decreto-Lei n.º 13-A/2025, de 10 de março – normas de…, 2025. Decreto-Lei n.º 13-A/2025, de 10 de março – normas de execução do Orçamento do Estado para 2025. <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3890&tabela=leis>
-[^s36]: SIRESP, S.A. — Home - SIRESP. Home - SIRESP. <https://www.siresp.pt/> ([archived](https://web.archive.org/web/20260608175758/https://www.siresp.pt/))
-[^s37]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Decreto-Lei n.º 45/2019, de 1 de abril – orgânica da…, 2019. Decreto-Lei n.º 45/2019, de 1 de abril – orgânica da ANEPC (art. 3.º). <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3049&tabela=leis>
-[^s38]: REN - Redes Energéticas Nacionais — Eletricidade. Eletricidade. <https://www.ren.pt/pt-pt/atividade/eletricidade>
-[^s39]: Agência Portuguesa do Ambiente (APA) — Sistema Nacional de Informação de Recursos Hídricos - SNIRH, 2026-06-05. Sistema Nacional de Informação de Recursos Hídricos - SNIRH. <https://apambiente.pt/agua/sistema-nacional-de-informacao-de-recursos-hidricos-snirh> ([archived](https://web.archive.org/web/20260617184912/https://apambiente.pt/agua/sistema-nacional-de-informacao-de-recursos-hidricos-snirh))
-[^s40]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 58/2005, de 29 de Dezembro – Lei da Água (art. 7.º), 2005. Lei n.º 58/2005, de 29 de Dezembro – Lei da Água (art. 7.º). <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1191&tabela=leis> ([archived](https://web.archive.org/web/20250712012849/https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1191&tabela=leis))
-[^s41]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 99/2019, de 5 de setembro – revisão do PNPOT, 2019. Lei n.º 99/2019, de 5 de setembro – revisão do PNPOT. <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3139&tabela=leis>
+[^s31]: Entidade Reguladora da Saúde (ERS) — O Registo Nacional de Utentes (RNU) e a inscrição nos…, 2026-08-12. O Registo Nacional de Utentes (RNU) e a inscrição nos cuidados de saúde primários. <https://www.ers.pt/pt/utentes/perguntas-frequentes/faq/o-registo-nacional-de-utentes-rnu-e-a-inscricao-nos-cuidados-de-saude-primarios/>
+[^s32]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Portaria n.º 22/2016, de 10 de fevereiro – Regulamento…, 2016. Portaria n.º 22/2016, de 10 de fevereiro – Regulamento de Notificação Obrigatória de Doenças Transmissíveis (art. 12.º). <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2506&tabela=leis>
+[^s33]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Código do Registo Comercial (DL n.º 403/86), art. 78.º-B, 1986. Código do Registo Comercial (DL n.º 403/86), art. 78.º-B. <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?artigo_id=506A0078B&nid=506&tabela=leis&pagina=1&ficha=1&nversao=>
+[^s34]: Instituto dos Registos e do Notariado, I.P. (IRN) / Justiça.gov.pt — Registo Central do Beneficiário Efetivo, 2026-09-30. Registo Central do Beneficiário Efetivo. <https://rcbe.justica.gov.pt/> ([archived](https://web.archive.org/web/20260724173200/https://rcbe.justica.gov.pt/))
+[^s35]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Decreto-Lei n.º 54/75, de 12 de Fevereiro – Registo…, 1975. Decreto-Lei n.º 54/75, de 12 de Fevereiro – Registo automóvel (art. 27.º). <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=598&tabela=leis> ([archived](https://web.archive.org/web/20251010024521/https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=598&tabela=leis))
+[^s36]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 73/2021, de 12 de novembro – reestruturação do…, 2021. Lei n.º 73/2021, de 12 de novembro – reestruturação do sistema português de controlo de fronteiras. <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3468&tabela=leis> ([archived](https://web.archive.org/web/20240601081051/https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3468&tabela=leis))
+[^s37]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Decreto-Lei n.º 13-A/2025, de 10 de março – normas de…, 2025. Decreto-Lei n.º 13-A/2025, de 10 de março – normas de execução do Orçamento do Estado para 2025. <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3890&tabela=leis>
+[^s38]: SIRESP, S.A. — Home - SIRESP. Home - SIRESP. <https://www.siresp.pt/> ([archived](https://web.archive.org/web/20260608175758/https://www.siresp.pt/))
+[^s39]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Decreto-Lei n.º 45/2019, de 1 de abril – orgânica da…, 2019. Decreto-Lei n.º 45/2019, de 1 de abril – orgânica da ANEPC (art. 3.º). <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3049&tabela=leis>
+[^s40]: REN - Redes Energéticas Nacionais — Eletricidade. Eletricidade. <https://www.ren.pt/pt-pt/atividade/eletricidade>
+[^s41]: Agência Portuguesa do Ambiente (APA) — Sistema Nacional de Informação de Recursos Hídricos - SNIRH, 2026-06-05. Sistema Nacional de Informação de Recursos Hídricos - SNIRH. <https://apambiente.pt/agua/sistema-nacional-de-informacao-de-recursos-hidricos-snirh> ([archived](https://web.archive.org/web/20260617184912/https://apambiente.pt/agua/sistema-nacional-de-informacao-de-recursos-hidricos-snirh))
+[^s42]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 58/2005, de 29 de Dezembro – Lei da Água (art. 7.º), 2005. Lei n.º 58/2005, de 29 de Dezembro – Lei da Água (art. 7.º). <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1191&tabela=leis> ([archived](https://web.archive.org/web/20250712012849/https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1191&tabela=leis))
+[^s43]: Direção-Geral da Educação (Ministério da Educação) — Modelos de diplomas e de certificados em formato eletrónico. Modelos de diplomas e de certificados em formato eletrónico. <https://www.dge.mec.pt/noticias/modelos-de-diplomas-e-de-certificados-em-formato-eletronico> ([archived](https://web.archive.org/web/20260214042656/https://www.dge.mec.pt/noticias/modelos-de-diplomas-e-de-certificados-em-formato-eletronico))
+[^s44]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Decreto-Lei n.º 396/2007, de 31 de Dezembro – Sistema…, 2007. Decreto-Lei n.º 396/2007, de 31 de Dezembro – Sistema Nacional de Qualificações (art. 7.º). <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1081&tabela=leis> ([archived](https://web.archive.org/web/20221206135358/https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1081&tabela=leis))
+[^s45]: Procuradoria-Geral Regional de Lisboa (consolidated legislation database) — Lei n.º 99/2019, de 5 de setembro – revisão do PNPOT, 2019. Lei n.º 99/2019, de 5 de setembro – revisão do PNPOT. <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=3139&tabela=leis>
 
-**Evidence grades:** 3 Strong, 44 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 3 Strong, 46 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

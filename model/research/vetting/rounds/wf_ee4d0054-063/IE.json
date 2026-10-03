@@ -1,0 +1,206 @@
+{
+ "iso": "IE",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:IE:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corrects",
+   "url": "https://www.revenue.ie/en/online-services/support/documents/data-and-security/ros-practice-statement.pdf",
+   "quote": "At the highest level the Revenue PKI consists of the Revenue Certification Authority (Revenue CA) and the Revenue On-Line Service Certification Authority (ROS CA). The Revenue CA is the highest point of trust in the Revenue PKI.",
+   "quote_english": "",
+   "value": "For the Revenue PKI only: the Revenue CA, run by the Revenue Commissioners, is the highest point of trust in the Revenue PKI",
+   "published": "2007-09-15",
+   "title": "Certification Practice Statement, Revenue Public Key Infrastructure (version 1.2)",
+   "publisher": "Office of the Revenue Commissioners",
+   "doc_type": "official_page",
+   "note": "This supports a narrower statement: a state body runs the root of its own PKI. It does not support a government-wide PKI root or a qualified trust service. No state-run QTSP for Ireland was found. The CPS is old (2007); the 2021 ROS CA Certificate Policy v2.0 is still current.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "partial",
+    "reason": "The 2007 CPS names the Revenue CA, run by the Irish tax authority, as the root of the Revenue PKI, which is a state PKI for one sector (Revenue and its customers) rather than a government-wide root or a qualified trust service."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:IE:defence_command:foreign_dependency",
+   "question": "Defence command and logistics: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "corrects",
+   "url": "https://assets.gov.ie/309800/2b584813-bbbb-4c12-be67-7489bc5c5a8b.pdf",
+   "quote": "allowing the Defence Forces to operate a hybrid cloud strategy - securely accessing cloud services where required, as well as maintaining a secure ‘on premise’ national IT system built around two resilient Data Centres located in McKee Bks and Defence Forces HQ, Newbridge.",
+   "quote_english": "",
+   "value": "mixed",
+   "published": "2024",
+   "title": "Department of Defence and Defence Forces Annual Report 2023",
+   "publisher": "Department of Defence (Ireland)",
+   "doc_type": "annual_report",
+   "note": "The 2023 annual report independently describes NGWE as a hybrid of cloud services and on-premise national data centres, so 'mixed' rather than 'National infrastructure'; the cloud provider is not named.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "mixed",
+    "reason": "The text is verbatim in the 2023 annual report (pdftotext check) and describes a hybrid strategy that uses cloud services where required alongside two on-premise national data centres, which makes it mixed."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "mixed (hybrid cloud: cloud services where required plus an on-premise national IT system)"
+  },
+  {
+   "claim": "record:IE:grid_control:operator",
+   "question": "Electricity grid control: the body that operates it",
+   "relation": "corrects",
+   "url": "https://www.eirgrid.ie/did-you-know",
+   "quote": "EirGrid is Ireland's TSO, which stands for 'Transmission System Operator'. We plan, manage and develop Ireland's high-voltage electricity grid for a sustainable future.",
+   "quote_english": "",
+   "value": "EirGrid (Transmission System Operator)",
+   "published": "",
+   "title": "Did You Know? 10 fast facts about EirGrid",
+   "publisher": "EirGrid",
+   "doc_type": "official_page",
+   "note": "The operator's own page states the 'Transmission System Operator' description that the control-centre page lacked.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "EirGrid",
+    "reason": "The text appears verbatim and states that EirGrid is Ireland's Transmission System Operator, which plans, manages and develops the high-voltage grid."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:IE:grid_control:register",
+   "question": "Electricity grid control: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://cms.eirgrid.ie/sites/default/files/publications/GridCodeVersion14.3.pdf",
+   "quote": "the contact location within the TSO for communication on matters pertaining to the real time operation of the Transmission System shall be the National Control Centre (NCC)",
+   "quote_english": "",
+   "value": "National Control Centre (NCC) of the TSO",
+   "published": "2025-03-25",
+   "title": "EirGrid Grid Code Version 14.3",
+   "publisher": "EirGrid plc",
+   "doc_type": "official_page",
+   "note": "The Grid Code (OC.7.2.4.1.1) places the NCC within the TSO, which the cited EirGrid page never says; elsewhere the same code calls it 'The TSO's National Control Centre'. Host cms.eirgrid.ie may need its own row in authorities.csv (eirgrid.ie is T2).",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "National Control Centre (NCC)",
+    "reason": "Found verbatim in Grid Code OC.7 text: the TSO's real-time transmission system contact location is named the National Control Centre (NCC), though this is a control centre, not a register."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:IE:intelligence:operator",
+   "question": "Intelligence services: the body that operates it",
+   "relation": "corrects",
+   "url": "https://assets.gov.ie/309800/2b584813-bbbb-4c12-be67-7489bc5c5a8b.pdf",
+   "quote": "During 2023, Military Intelligence provided 253 briefings, of which 156 were verbal briefings and 97 were written briefs. These included specific defence and security assessments, monthly intelligence and security briefings",
+   "quote_english": "",
+   "value": "Military Intelligence (Defence Forces)",
+   "published": "2024-10",
+   "title": "Department of Defence and Defence Forces Annual Report 2023",
+   "publisher": "Department of Defence (Ireland)",
+   "doc_type": "annual_report",
+   "note": "Military Intelligence is the body producing intelligence and security briefings; the NSAC (Department of the Taoiseach) only provides strategic analysis, so it should not be printed as the operator. Unofficial secondary sources say the unit was renamed the Irish Military Intelligence Service in July 2025, but no T1/T2 page confirming that could be fetched.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "Military Intelligence",
+    "reason": "Found verbatim in the Department of Defence 2023 annual report: Military Intelligence provided 253 intelligence and security briefings."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:IE:police_records:register",
+   "question": "Police information systems: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://www.cso.ie/en/methods/surveybackgroundnotes/gardarecordedcrimestatistics/",
+   "quote": "The release is based on administrative data recorded on An Garda Siochana’s PULSE (Police Using Leading Systems Effectively) and FCPS (Fixed Charge Penalty System) systems",
+   "quote_english": "",
+   "value": "PULSE (Police Using Leading Systems Effectively), An Garda Síochána's system",
+   "published": "",
+   "title": "Garda Recorded Crime Statistics - background notes",
+   "publisher": "Central Statistics Office (Ireland)",
+   "doc_type": "statistics",
+   "note": "This is the national statistics office's own description of PULSE. It gives the expanded name without the unsupported 'national incident and intelligence database' gloss. Host cso.ie is not yet in authorities.csv.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "PULSE (Police Using Leading Systems Effectively), with FCPS (Fixed Charge Penalty System)",
+    "reason": "CSO page states verbatim that Garda crime data are recorded on the PULSE and FCPS systems."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:IE:public_finance:register",
+   "question": "Treasury and state accounts: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://www.audit.gov.ie/media/11ec4lfz/2019-annual-report-chapter-5-implementation-of-financial-management-shared-services.pdf",
+   "quote": "The project to implement a financial management shared services (FMSS) model aimed to replace 31 different financial management and reporting systems in use across 48 Government departments, offices and agencies with a single financial IT system",
+   "quote_english": "",
+   "value": "financial management shared services (FMSS): a single financial IT system replacing 31 different financial management and reporting systems",
+   "published": "2020-09",
+   "title": "Report on the Accounts of the Public Services 2019, Chapter 5: Implementation of financial management shared services",
+   "publisher": "Office of the Comptroller and Auditor General",
+   "doc_type": "audit_report",
+   "note": "This supports the FMSS name and scope without the contradicted '(incl. the Exchequer)'. The 2023 C&AG chapter already cited says the Exchequer's move to FMSS was paused in September 2022.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "FMSS (financial management shared services)",
+    "reason": "Found verbatim in C&AG 2019 report ch.5; it names the FMSS project/model (later 'the FMSS system') replacing 31 systems, but it does not name the single IT system's product."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:IE:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:IE:L2",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:defence_command:foreign_dependency",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:electoral_roll:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:grid_control:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:grid_control:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:intelligence:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:intelligence:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:IE:police_records:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:IE:public_finance:register",
+   "status": "found"
+  }
+ ]
+}

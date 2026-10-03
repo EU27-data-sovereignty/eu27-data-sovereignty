@@ -214,8 +214,10 @@ class RenderedFacts(unittest.TestCase):
     # unclear) are withheld, 81 in all. Then to 1310: population printed at its stored precision (3
     # decimals), so Slovenia's, withheld for double rounding, prints again, due for its fact check. Then to
     # 1321: re-checked from their hashed copies, 11 facts whose pages refused the checker were confirmed
-    # (run wf_f14edd00-71f), and the 27 re-printed populations confirmed (wf_5fd3e22d-b86).
-    FACT_FLOOR = 1321
+    # (run wf_f14edd00-71f), and the 27 re-printed populations confirmed (wf_5fd3e22d-b86). Then to 1346:
+    # the correction round (#93, wf_ee4d0054-063) re-sourced or corrected 29 withheld facts, and the fact
+    # check confirmed 25 of the changed ones (wf_72f99a66-4e9); 46 remain withheld.
+    FACT_FLOOR = 1346
 
     @classmethod
     def setUpClass(cls):

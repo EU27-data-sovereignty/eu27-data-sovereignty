@@ -1,0 +1,64 @@
+{
+ "iso": "SI",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:SI:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2021-01-0831/zakon-o-spremembah-in-dopolnitvah-zakona-o-osebni-izkaznici-zoizk-1a",
+   "quote": "Prstna odtisa oziroma prstni odtis se v evidenci izdanih osebnih izkaznic hranita oziroma hrani do vročitve osebne izkaznice, vendar ne več kot 90 dni od datuma izdaje osebne izkaznice.",
+   "quote_english": "The two fingerprints, or the fingerprint, are kept in the record of issued identity cards until the identity card is delivered, but no longer than 90 days from the date of issue of the identity card.",
+   "value": "Fingerprints are kept temporarily in the evidenca izdanih osebnih izkaznic (record of issued identity cards), no longer than 90 days from the date of issue",
+   "published": "2021-03-19",
+   "title": "Zakon o spremembah in dopolnitvah Zakona o osebni izkaznici (ZOIzk-1A)",
+   "publisher": "Uradni list Republike Slovenije",
+   "doc_type": "legislation",
+   "note": "The official gazette names the central register that holds fingerprints temporarily, which contradicts 'No central register'; the 2025 ZOIzk-1C amendment (the current source) later set retention at 15 days after delivery (90 if undelivered); PISRS's consolidated text is JS-only and could not be quoted.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "evidenca izdanih osebnih izkaznic",
+    "reason": "The amending ID-card law says fingerprints are kept in the register of issued identity cards until the card is delivered, for at most 90 days."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:SI:trust_services_pki:foreign_dependency",
+   "question": "State PKI and qualified trust services: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "corrects",
+   "url": "https://www.si-trust.gov.si/assets/Politike/si-trust-krovna/verzija-1-7/SI-TRUST-krovna-v1.7-2025p.pdf",
+   "quote": "Oprema SI-TRUST je postavljena v posebnih, varovanih, ločenih prostorih v okviru infrastrukture MDP.",
+   "quote_english": "SI-TRUST equipment is installed in special, secured, separate premises within the infrastructure of the MDP (Ministry of Digital Transformation).",
+   "value": "national",
+   "published": "2025-12",
+   "title": "Krovna politika SI-TRUST za izdajatelje, ki delujejo v okviru ponudnika storitev zaupanja SI-TRUST, verzija 1.7",
+   "publisher": "Državni center za storitve zaupanja SI-TRUST (Ministrstvo za digitalno preobrazbo)",
+   "doc_type": "official_page",
+   "note": "The operator's master policy, section 5.1.1 (valid from 31 Dec 2025), states that the PKI equipment is installed within the Ministry of Digital Transformation's own infrastructure (MDP is defined in the document as Ministrstvo za digitalno preobrazbo), which directly supports national infrastructure.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "national",
+    "reason": "The SI-TRUST umbrella policy (section 5.1.1, extracted from the PDF) says SI-TRUST equipment sits in separate, secured rooms within the infrastructure of the MDP, which the document defines as Ministrstvo za digitalno preobrazbo, a Slovenian ministry."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "national"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:SI:fingerprint_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:SI:trust_services_pki:foreign_dependency",
+   "status": "found"
+  }
+ ]
+}

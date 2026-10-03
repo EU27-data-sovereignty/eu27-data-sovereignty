@@ -198,3 +198,35 @@ class AbsenceIsAFinding(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class CorrectionRound(unittest.TestCase):
+    """A later round (#93) is staged apart from the first run, per state, with its models and a closed
+    vocabulary for categorical values."""
+
+    def test_a_round_is_staged_per_state_with_its_models_and_vocabulary(self):
+        import json  # noqa: PLC0415
+        import tempfile  # noqa: PLC0415
+        from unittest import mock  # noqa: PLC0415
+        sys.path.insert(0, str(ROOT / "model"))
+        import vetting  # noqa: PLC0415
+        tmp = Path(tempfile.mkdtemp())
+        out = tmp / "out.json"
+        finding = {"claim": "indicator:HU:C1", "question": "q", "relation": "corrects", "url": "https://nisz.hu/x",
+                   "quote": "q", "quote_english": "", "value": "Yes: the Government Data Centre runs",
+                   "published": "", "title": "", "publisher": "", "doc_type": "official_page", "note": ""}
+        out.write_text(json.dumps([{"iso": "W01", "research": {"findings": [finding, {**finding, "claim": "record:DE:x:register",
+                                                                                          "value": "Melderegister"}],
+                                                                 "outcomes": [], "researcher_model": "claude-opus-5-5"},
+                                    "review": {"verdicts": [], "reviewer_model": "claude-opus-5-5"}}]))
+        with mock.patch.object(vetting, "ROUNDS", tmp / "rounds"), mock.patch.object(vetting, "DIR", tmp):
+            vetting.stage_round(out, "r1", "2026-10-02")
+            hu = json.loads((tmp / "rounds" / "r1" / "HU.json").read_text())["findings"][0]
+            de = json.loads((tmp / "rounds" / "r1" / "DE.json").read_text())["findings"][0]
+            merged = vetting.staged()
+        self.assertEqual((hu["value"], hu["value_as_written"]), ("yes", "Yes: the Government Data Centre runs"))
+        self.assertEqual(hu["researcher_model"], "claude-opus-5-5")
+        self.assertEqual(de["value"], "Melderegister")                       # free text is never rewritten
+        self.assertNotIn("value_as_written", de)
+        self.assertEqual(sorted(merged), ["DE", "HU"])
+        self.assertFalse(list(tmp.glob("[A-Z][A-Z].json")))                   # the first run's files untouched

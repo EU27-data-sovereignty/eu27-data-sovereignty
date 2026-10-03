@@ -139,7 +139,8 @@ export function Ask({ bundle }: { bundle: Bundle }) {
           maxLength={MAX}
           rows={3}
           onChange={e => setQuestion(e.target.value)}
-          className="w-full rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-2"
+          // 16 px: iPhone Safari zooms the whole page into any field set smaller (#92).
+          className="w-full rounded border border-[var(--color-border)] bg-[var(--color-bg-card)] p-2 text-base"
         />
         <div className="mt-1 flex items-center justify-between text-xs text-[var(--color-fg-muted)]">
           <span>

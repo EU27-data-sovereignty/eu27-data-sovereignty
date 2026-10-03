@@ -2264,3 +2264,53 @@ headers and certificate. A test file or workflow missing from `docs/testing.md`.
 
 *Would change if:* the gate grows too slow for pull requests (then split the browser tests into their own
 job), or the owner approves the items that wait for an OK, listed in `docs/testing.md`.
+
+### 93. A withheld fact can be corrected by a later round, through every check again
+**Decision.** 2026-10-02, after the owner approved re-researching the withheld facts.
+- **What the round is.** A *correction round* re-researches only the facts the cross-model check withheld
+  (#89). Its input is each fact, how it printed, its source and the checker's reason
+  (`vetting.py prepare --withheld`).
+- **The `corrects` relation.** In the vetting workflow, a finding with relation `corrects` is a T1/T2 quote
+  that supports a correct statement answering the same question.
+- **Where it is staged.** `vetting.py stage --round` writes `model/research/vetting/rounds/<run>/<ISO>.json`,
+  never over the first run. Every finding carries its researcher and reviewer models.
+- **What admission lets it do.** A `corrects` finding may replace the printed value only for a claim the fact
+  check ever withheld. That is read from the staged verdicts, which never change, so admission still
+  reproduces. The finding must also pass every check the first run's did: a T1/T2 source, the quote found in
+  the fetched page, and blind-review agreement. The old citations are marked superseded.
+- **The new value is checked again.** It is a changed fact, so `/factcheck` checks it with the model that did
+  not write it before it can ship.
+- **Categorical values.** In a round, these are reduced to their vocabulary term, so "Yes: the agency runs …"
+  becomes "yes". The wording as written is kept beside it. A value that does not start with a vocabulary
+  term is left as it was and fails the reviewer's agreement.
+
+**Problem.** The first run's resolution rules (#83) replace a printed value only with a higher-tier source,
+or a later statement of the same authority; anything else is "disputed". A fact the fact check withheld
+because its *wording* went beyond its quote could therefore never be corrected from a source of the same
+tier. It would stay withheld for good, however clear the better quote.
+
+**Alternatives considered.**
+- **A separate round, with a narrow `corrects` rule for withheld claims (chosen).** It only touches values
+  that already failed a check, it runs every check again, and the first run stays reproducible.
+- **Edit the withheld values by hand.** *Why not:* never: admission decides, and a hand edit is unauditable.
+- **Re-run the whole vetting workflow.** *Why not:* it would overwrite the first run's staging files, and
+  cost several times as much for 69 facts.
+- **Let any later same-tier source replace a printed value.** *Why not:* that reopens every confirmed fact to
+  whichever source an agent finds last. The rule stays limited to values that already failed.
+
+**Closes off.** Correcting a withheld fact any way other than a verified, blindly agreed T1/T2 finding,
+followed by a second-model check. Overwriting the first vetting run's staging files.
+
+**Verified:** 2026-10-02/03, round `wf_ee4d0054-063`.
+- 69 withheld facts went in, 6 research and 6 review agents ran, and 57 findings came back for 55 claims.
+- 39 were fetched and checked: 30 exact matches, 7 fetch failures, 2 quotes not found.
+- Admitted: 6 corrected, 22 corroborated, and 1 superseded by a higher-tier source. Not admitted: 20 where
+  the reviewer disagreed, 9 not verified, and 1 below T2.
+- `admit --check`: 6 of 6 registers reproduce.
+- `tests/test_vetting.py` `CorrectionRound` passes.
+- The fact check of the changed facts (`wf_72f99a66-4e9`, claude-fable-5-1, authors recorded as
+  claude-opus-5-5): 25 of 31 supported, 6 not supported and withheld again.
+- Result: 1,346 printed facts pass the gate, and 46 are withheld, down from 69.
+
+*Would change if:* rounds start replacing many confirmed facts, which would mean the narrow rule is being
+stretched, or a person's review (#85) becomes the way to settle a withheld fact.

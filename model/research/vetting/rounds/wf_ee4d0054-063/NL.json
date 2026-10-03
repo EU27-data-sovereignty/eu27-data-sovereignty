@@ -1,0 +1,37 @@
+{
+ "iso": "NL",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:NL:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://www.rvig.nl/afname-kwalitatief-goede-vingerafdruk-luistert-nauw",
+   "quote": "Zodra een paspoort of identiteitskaart is uitgegeven worden de vingerafdrukken uit het lokale Reisdocumenten Aanvraag- en Archiefstation (RAAS) verwijderd. Van het Aanvraagstation (AS) en Mobiele Vingerafdrukopnameapparatuur (MVA) worden na een vastgesteld aantal dagen de vingerafdrukken automatisch verwijderd. Er bestaat dus geen database waarin alle vingerafdrukken worden opgeslagen.",
+   "quote_english": "As soon as a passport or identity card has been issued, the fingerprints are deleted from the local travel document application and archive station (RAAS). From the application station (AS) and mobile fingerprint equipment (MVA) the fingerprints are deleted automatically after a set number of days. So there is no database in which all fingerprints are stored.",
+   "value": "No central database of passport and identity-card fingerprints; they are deleted from the local RAAS once the document is issued",
+   "published": "2023",
+   "title": "Afname kwalitatief goede vingerafdruk luistert nauw",
+   "publisher": "Rijksdienst voor Identiteitsgegevens (RvIG)",
+   "doc_type": "official_page",
+   "note": "The answer is narrowed to travel documents. The printed general 'No central register' is too broad because the Vreemdelingenwet (art. 107) provides for storing foreign nationals' fingerprints.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "no central fingerprint database; fingerprints held only temporarily in the local RAAS/AS/MVA stations",
+    "reason": "RvIG page states fingerprints are deleted from the local RAAS after issue and that no database stores all fingerprints."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:NL:fingerprint_biometric:register",
+   "status": "found"
+  }
+ ]
+}

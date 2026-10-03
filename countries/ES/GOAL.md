@@ -87,13 +87,13 @@ The holdings Spain cannot let depend on infrastructure a foreign state can compe
 | High | Crisis management and civil protection (tier 1) | Red de Alerta Nacional de Protección Civil (National Civil Protection Alert Network)[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | Cecoel (Centro de Control Eléctrico, Electricity Control Centre)[^s42] | Red Eléctrica de España, S.A. (sole transmission operator)[^s43] | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | Sistemas Automáticos de Información Hidrológica (SAIH) (Automatic Hydrological Information Systems), used by the Confederaciones Hidrográficas[^s44] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Education (tier 1) | Registro Nacional de Titulados Universitarios Oficiales (RNTUO) (National Register of Official University Graduates)[^s45] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (Art. 4) supports that the register was created in the Ministerio de Educación, but the printed parenthetical 'the register now sits with the universities ministry' appears nowhere on the cited page (no mention of a Ministerio de…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | Registro Nacional de Titulados Universitarios Oficiales (RNTUO) (National Register of Official University Graduates)[^s45] | Ministerio de Educación (Ministry of Education; the register now sits with the universities ministry)[^s46][^s47] | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | The BOE is published in an electronic edition[^s46] | The Agencia Estatal BOE edits, publishes and distributes the official gazette[^s46] | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | The BOE is published in an electronic edition[^s48] | The Agencia Estatal BOE edits, publishes and distributes the official gazette[^s48] | *Not stated in sources* | *Not yet measured* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | Municipalities send their Padrón data to the INE for national coordination[^s47] | INE is an autonomous body with its own legal personality[^s48] | *Not stated in sources* | *Not yet measured* |
-| Standard | Geospatial base data (tier 3) | Reference geographic information includes cadastral parcels and registered real estate[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Statistical microdata (tier 2) | Municipalities send their Padrón data to the INE for national coordination[^s49] | INE is an autonomous body with its own legal personality[^s50] | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | Reference geographic information includes cadastral parcels and registered real estate[^s51] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -145,7 +145,7 @@ Tier 0 and 1 holdings for Spain without a verified source yet. Corrections and s
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1346 facts are printed, 3340 values are withheld as gaps, and 66 are withheld as disputed.
 
 ### How sources were found
 
@@ -162,16 +162,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 5 |
-| corroborated | 238 |
+| below_T2 | 6 |
+| corrected_withheld | 6 |
+| corroborated | 261 |
 | disputed | 10 |
-| filled_gap | 363 |
-| holding_not_established | 38 |
-| no_better_found | 447 |
+| filled_gap | 365 |
+| holding_not_established | 41 |
+| no_better_found | 461 |
 | not_reached | 201 |
-| not_verified | 176 |
-| review_disagreed | 153 |
-| same_source | 8 |
+| not_verified | 178 |
+| review_disagreed | 172 |
+| same_source | 9 |
 | superseded_higher_tier | 23 |
 | superseded_later_same_authority | 3 |
 
@@ -201,8 +202,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 613 |
-| T2 competent public body or audit office | 594 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 620 |
+| T2 competent public body or audit office | 612 |
 | T3 other institution or company | 7 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
@@ -213,8 +214,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 100 |
-| Standard | 1221 |
+| Strong | 105 |
+| Standard | 1241 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -255,7 +256,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1321 of 1321 printed facts pass the fact check.
+In this build, 1346 of 1346 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -297,7 +298,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check.
+In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -320,6 +321,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 |
 | wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
 | wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
 | wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
@@ -327,7 +329,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Spain
 
-57 of 57 printed facts about Spain pass.
+58 of 58 printed facts about Spain pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -383,6 +385,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:ES:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:ES:water_control:register | Water management control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:ES:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:ES:education:operator | Education: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:ES:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:ES:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:ES:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -391,9 +394,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### Withheld after the fact check: Spain
 
-| Claim | What it answers | Checked by | Verdict | Reason |
-|---|---|---|---|---|
-| record:ES:education:operator | Education: the body that operates it | claude-fable-5-1 | not supported | The quote (Art. 4) supports that the register was created in the Ministerio de Educación, but the printed parenthetical 'the register now sits with the universities ministry' appears nowhere on the cited page (no mention of a Ministerio de Universidades or de Ciencia), so part of the printed statement is added beyond the source. |
+None.
 
 ---
 
@@ -442,11 +443,13 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s43]: Agencia Estatal Boletín Oficial del Estado — Ley 24/2013, de 26 de diciembre, del Sector Eléctrico…. Ley 24/2013, de 26 de diciembre, del Sector Eléctrico (consolidated). <https://www.boe.es/buscar/act.php?id=BOE-A-2013-13645> ([archived](https://web.archive.org/web/20260928104552/https://www.boe.es/buscar/act.php?id=BOE-A-2013-13645))
 [^s44]: Ministerio para la Transición Ecológica y el Reto Demográfico — Sistemas SAIH. Sistemas SAIH. <https://www.miteco.gob.es/es/agua/temas/evaluacion-de-los-recursos-hidricos/saih.html> ([archived](https://web.archive.org/web/20260726180059/https://www.miteco.gob.es/es/agua/temas/evaluacion-de-los-recursos-hidricos/saih.html))
 [^s45]: Ministerio de Ciencia, Innovación y Universidades — Consulta al Registro Nacional de Titulados…. Consulta al Registro Nacional de Titulados Universitarios Oficiales. <https://www.ciencia.gob.es/Universidades/ConsultaTitulos.html> ([archived](https://web.archive.org/web/20260722151315/https://www.ciencia.gob.es/Universidades/ConsultaTitulos.html))
-[^s46]: Agencia Estatal Boletín Oficial del Estado — Real Decreto 181/2008, de 8 de febrero, de ordenación…, 2008. Real Decreto 181/2008, de 8 de febrero, de ordenación del diario oficial «Boletín Oficial del Estado». <https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389> ([archived](https://web.archive.org/web/20260912062918/https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389))
-[^s47]: Agencia Estatal Boletín Oficial del Estado — Ley 7/1985, de 2 de abril, Reguladora de las Bases del…, 1985. Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. <https://www.boe.es/buscar/act.php?id=BOE-A-1985-5392> ([archived](https://web.archive.org/web/20260923004539/https://www.boe.es/buscar/act.php?id=BOE-A-1985-5392))
-[^s48]: Agencia Estatal Boletín Oficial del Estado — Ley 12/1989, de 9 de mayo, de la Función Estadística Pública, 1989. Ley 12/1989, de 9 de mayo, de la Función Estadística Pública. <https://www.boe.es/buscar/act.php?id=BOE-A-1989-10767> ([archived](https://web.archive.org/web/20260716060905/https://www.boe.es/buscar/act.php?id=BOE-A-1989-10767))
-[^s49]: Agencia Estatal Boletín Oficial del Estado — Ley 14/2010, de 5 de julio, sobre las infraestructuras y…, 2010. Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España. <https://www.boe.es/buscar/act.php?id=BOE-A-2010-10707> ([archived](https://web.archive.org/web/20260804161511/https://www.boe.es/buscar/act.php?id=BOE-A-2010-10707))
+[^s46]: Boletín Oficial del Estado — Real Decreto 472/2024, de 7 de mayo, por el que se…, 2026-04-02. Real Decreto 472/2024, de 7 de mayo, por el que se desarrolla la estructura orgánica básica del Ministerio de Ciencia, Innovación y Universidades. <https://www.boe.es/buscar/act.php?id=BOE-A-2024-9155> ([archived](https://web.archive.org/web/20241202213601/https://www.boe.es/buscar/act.php?id=BOE-A-2024-9155))
+[^s47]: Agencia Estatal Boletín Oficial del Estado — Real Decreto 1002/2010, de 5 de agosto, sobre expedición…. Real Decreto 1002/2010, de 5 de agosto, sobre expedición de títulos universitarios oficiales (consolidated). <https://www.boe.es/buscar/act.php?id=BOE-A-2010-12621>
+[^s48]: Agencia Estatal Boletín Oficial del Estado — Real Decreto 181/2008, de 8 de febrero, de ordenación…, 2008. Real Decreto 181/2008, de 8 de febrero, de ordenación del diario oficial «Boletín Oficial del Estado». <https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389> ([archived](https://web.archive.org/web/20260912062918/https://www.boe.es/buscar/act.php?id=BOE-A-2008-2389))
+[^s49]: Agencia Estatal Boletín Oficial del Estado — Ley 7/1985, de 2 de abril, Reguladora de las Bases del…, 1985. Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local. <https://www.boe.es/buscar/act.php?id=BOE-A-1985-5392> ([archived](https://web.archive.org/web/20260923004539/https://www.boe.es/buscar/act.php?id=BOE-A-1985-5392))
+[^s50]: Agencia Estatal Boletín Oficial del Estado — Ley 12/1989, de 9 de mayo, de la Función Estadística Pública, 1989. Ley 12/1989, de 9 de mayo, de la Función Estadística Pública. <https://www.boe.es/buscar/act.php?id=BOE-A-1989-10767> ([archived](https://web.archive.org/web/20260716060905/https://www.boe.es/buscar/act.php?id=BOE-A-1989-10767))
+[^s51]: Agencia Estatal Boletín Oficial del Estado — Ley 14/2010, de 5 de julio, sobre las infraestructuras y…, 2010. Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España. <https://www.boe.es/buscar/act.php?id=BOE-A-2010-10707> ([archived](https://web.archive.org/web/20260804161511/https://www.boe.es/buscar/act.php?id=BOE-A-2010-10707))
 
-**Evidence grades:** 0 Strong, 57 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 0 Strong, 58 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

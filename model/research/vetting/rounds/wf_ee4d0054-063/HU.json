@@ -1,0 +1,205 @@
+{
+ "iso": "HU",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:HU:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corrects",
+   "url": "https://nisz.hu/sajtoszoba/uj-szintre-lep-az-allami-digitalizacio-indul-a-biz-d225",
+   "quote": "A Kormányzati Adatközpont (KAK) a magyar állam egyik központi digitális informatikai infrastruktúrája, amely biztonságos, magas rendelkezésre állású és folyamatosan felügyelt környezetet biztosít a közigazgatás legfontosabb rendszerei számára. Itt futnak a központi nyilvántartások, kormányzati alkalmazások és digitális szolgáltatások",
+   "quote_english": "The Government Data Centre (KAK) is one of the Hungarian state's central digital IT infrastructures, providing a secure, highly available and continuously monitored environment for the most important systems of public administration. The central registers, government applications and digital services run here.",
+   "value": "yes",
+   "published": "2025-10-07",
+   "title": "Új szintre lép az állami digitalizáció: indul a biztonságos privát felhő",
+   "publisher": "NISZ Nemzeti Infokommunikációs Szolgáltató Zrt.",
+   "doc_type": "official_page",
+   "note": "The operator's own 2025 page states in the present tense that the state data centre exists and runs central registers. The DMÜ page only implied this. NISZ's ownership rights are exercised by the state agency DMÜ (nisz.hu/rolunk/cegbemutato).",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The Government Data Centre (KAK) is described as the Hungarian state's central IT infrastructure, where central registers and government applications run now (present tense 'Itt futnak')."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "Yes: Kormányzati Adatközpont (Government Data Centre), a central state IT infrastructure where the central registers and government applications run"
+  },
+  {
+   "claim": "indicator:HU:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corrects",
+   "url": "https://nisz.hu/sajtoszoba/uj-szintre-lep-az-allami-digitalizacio-indul-a-biz-d225",
+   "quote": "Ezek tapasztalataira építve jött létre a Digitális Állampolgárság Program (DÁP), amelynek infrastruktúráját a Kormányzati Adatközponton belül, az Oracle technológiájára épülő privát felhőkörnyezet (Oracle Dedicated Region Cloud@Customer – DRCC) szolgálja ki.",
+   "quote_english": "Building on this experience, the Digital Citizenship Programme (DÁP) was created, whose infrastructure is served by a private cloud environment built on Oracle technology (Oracle Dedicated Region Cloud@Customer – DRCC) inside the Government Data Centre.",
+   "value": "yes",
+   "published": "2025-10-07",
+   "title": "Új szintre lép az állami digitalizáció: indul a biztonságos privát felhő",
+   "publisher": "NISZ Nemzeti Infokommunikációs Szolgáltató Zrt.",
+   "doc_type": "official_page",
+   "note": "This is an operator statement in the present tense, where the decree only provides for a cloud. The same page says the service runs 'in our data centre, separated from the public cloud ecosystem'. The technology comes from a non-EU vendor (Oracle), which is relevant for any foreign-dependency label. The cited source net.jogtar.hu is an unofficial mirror.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The DÁP programme's infrastructure is served now (present tense 'szolgálja ki') by a private cloud inside the Government Data Centre built on Oracle Dedicated Region Cloud@Customer, so a government cloud is in operation; the page headline says the cloud is only 'starting' (indul), and it runs on non-EU technology."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "Yes: a private cloud environment (Oracle Dedicated Region Cloud@Customer) inside the Kormányzati Adatközpont (Government Data Centre) serves the DÁP infrastructure"
+  },
+  {
+   "claim": "indicator:HU:K1",
+   "question": "indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body?",
+   "relation": "corrects",
+   "url": "https://nisz.hu/rolunk/cegbemutato",
+   "quote": "A NISZ Zrt. felett a tulajdonosi jogokat 2022 szeptemberétől a Digitális Magyarország Ügynökség (DMÜ) gyakorolja.",
+   "quote_english": "Since September 2022, ownership rights over NISZ Zrt. have been exercised by the Digital Hungary Agency (DMÜ).",
+   "value": "NISZ Zrt. is state-controlled: its ownership rights have been exercised by the Digitális Magyarország Ügynökség (Digital Hungary Agency) since September 2022",
+   "published": "",
+   "title": "Cégbemutató – NISZ Nemzeti Infokommunikációs Szolgáltató Zrt.",
+   "publisher": "NISZ Nemzeti Infokommunikációs Szolgáltató Zrt.",
+   "doc_type": "official_page",
+   "note": "This supplies the missing state-control element. The cited hiteles.gov.hu page names NISZ as the designated government certification service provider (GovCA), and NISZ's own 2025-11-04 news item says the GovCa infrastructure was fully renewed.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote says only that the Digital Hungary Agency exercises ownership rights over NISZ Zrt.; it says nothing about NISZ or anyone operating a PKI root or a qualified trust service."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "indicator:HU:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corrects",
+   "url": "https://idomsoft.hu/rolunk/tortenetunk/",
+   "quote": "Kormányhatározat jelöli meg az IdomSoftot mint a Digitális Állampolgárság Program (DÁP) szolgáltatóját, alkalmazásfejlesztőjét és üzemeltetőjét, elkezdődik a fejlesztés előkészítése és megvalósítása.",
+   "quote_english": "A government resolution designates IdomSoft as the provider, application developer and operator of the Digital Citizenship Programme (DÁP); preparation and implementation of the development begins.",
+   "value": "IdomSoft is designated by government resolution as provider and operator of the Digitális Állampolgárság Program (Digital Citizenship Programme)",
+   "published": "",
+   "title": "Történetünk – IdomSoft Zrt.",
+   "publisher": "IdomSoft Zrt.",
+   "doc_type": "official_page",
+   "note": "The page dates this entry to 31 July 2023. Decree 320/2024 (XI. 6.), whose njt.hu text could not be fetched, designates IdomSoft as digital citizenship provider. State control is a separate finding below. DÁP is the digital identity and services programme; the eSZIG card is issued by the state.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names IdomSoft as the provider and operator of the DÁP programme, but neither it nor the page says DÁP is the national eID scheme, and the quote does not say IdomSoft is state-controlled."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "indicator:HU:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corrects",
+   "url": "https://idomsoft.hu/rolunk/tortenetunk/",
+   "quote": "2024. július 1. Leválunk a NISZ-ről Ezzel az IdomSoft közvetlen állami tulajdonba és közvetlenül a Digitális Magyarország Ügynökség irányítása alá kerül.",
+   "quote_english": "1 July 2024: We separate from NISZ. With this, IdomSoft comes into direct state ownership and directly under the control of the Digital Hungary Agency.",
+   "value": "IdomSoft has been in direct state ownership under the Digitális Magyarország Ügynökség (Digital Hungary Agency) since 1 July 2024",
+   "published": "",
+   "title": "Történetünk – IdomSoft Zrt.",
+   "publisher": "IdomSoft Zrt.",
+   "doc_type": "official_page",
+   "note": "This establishes that the designated DÁP operator, IdomSoft (finding above), is state-owned. The cited DMÜ portfolio page did not say so.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote shows IdomSoft came under direct state ownership and the control of the Digital Hungary Agency, but it does not mention any electronic identity scheme or say IdomSoft operates one."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:HU:authentication_audit_log:foreign_dependency",
+   "question": "Authentication audit log: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "corrects",
+   "url": "https://app.dap.gov.hu/mobilapp-adatkezelesi/20251110.pdf",
+   "quote": "a Keretalkalmazás működéséhez szükséges szerverszolgáltatások eredményeként létrejönnek olyan naplófájlok, melyek tartalmazzák a szolgáltatások által kezelt adatokat. A naplófájlok tárolása a szolgáltató tárolja privát felhőben (központi naplógyűjtőben).",
+   "quote_english": "the server services needed to run the framework application create log files containing the data handled by the services. The log files are stored by the service provider in a private cloud (central log collector).",
+   "value": "national",
+   "published": "2025-11-10",
+   "title": "Digitális Állampolgárság Keretalkalmazás szolgáltatás Adatkezelési Tájékoztató",
+   "publisher": "IdomSoft Zrt. (DÁP service provider)",
+   "doc_type": "official_page",
+   "note": "The DÁP privacy notice names IdomSoft (the state-owned designated provider) as 'szolgáltató' and says the logs sit in its private cloud; 'national' still relies on IdomSoft being state-owned, and the same notice lists non-EU tools (Firebase, Google Analytics) for app telemetry, not for the logs.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "national",
+    "reason": "The quote is verbatim in the DÁP privacy notice (pdftotext check) and says the log files are stored in the provider's private cloud; the notice defines that provider as the Hungarian company the government designated by Korm. rendelet 320/2024 as the digital citizenship service provider, so national (inferred from context, since the quote does not name the provider)."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "national (the service provider's private cloud, central log collector)"
+  },
+  {
+   "claim": "record:HU:issuance_history:foreign_dependency",
+   "question": "Document issuance history: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "corrects",
+   "url": "https://nisz.hu/sajtoszoba/uj-kormanyzati-adatkozponttal-folytatodik-a-koziga-d193",
+   "quote": "A KAK Felhő biztosítja a korszerű hátteret többek között a nemzeti adatvagyon körébe tartozó személyigazolvány-, lakcím és útlevél-nyilvántartások, valamint a kormányhivatalokban használt rendszerek számára is.",
+   "quote_english": "The KAK Cloud provides the modern backbone for, among others, the identity card, address and passport registers belonging to the national data assets, as well as for the systems used in government offices.",
+   "value": "national",
+   "published": "2023-11-23",
+   "title": "Új Kormányzati Adatközponttal folytatódik a közigazgatás modernizálása",
+   "publisher": "NISZ Nemzeti Infokommunikációs Szolgáltató Zrt.",
+   "doc_type": "official_page",
+   "note": "The state ICT operator says the ID card and passport registers run in the Government Data Centre cloud (KAK); this covers the document registers, not explicitly an 'issuance history' table.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "national",
+    "reason": "The sentence appears verbatim (fetched with curl because WebFetch failed on a TLS error) and says the KAK Cloud hosts the ID card, address and passport registers; the surrounding text describes KAK as a state-owned government datacenter in Budapest."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "national (KAK Felhő, the Government Data Centre cloud)"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:HU:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:HU:C2",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:HU:K1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:HU:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:authentication_audit_log:foreign_dependency",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:civil_registry:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:electoral_roll:foreign_dependency",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:HU:issuance_history:foreign_dependency",
+   "status": "found"
+  },
+  {
+   "claim": "record:HU:vehicle_licensing:foreign_dependency",
+   "status": "no_better_found"
+  }
+ ]
+}

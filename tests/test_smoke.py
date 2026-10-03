@@ -76,3 +76,26 @@ class FailsOnTheWrongSite(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AskJudge(unittest.TestCase):
+    """model/ask_smoke.py: what counts as a grounded answer from the live /ask (#92)."""
+
+    def setUp(self):
+        import ask_smoke  # noqa: PLC0415
+        self.judge = ask_smoke.judge
+        self.answer = [{"type": "text", "text": "The Federal Central Tax Office."},
+                       {"type": "cite", "claims": ["record:DE:civil_registry:operator"], "cited_text": "..."},
+                       {"type": "done", "stop_reason": "end_turn"}]
+
+    def test_a_cited_finished_answer_passes(self):
+        self.assertEqual(self.judge(self.answer)[0], "ok")
+
+    def test_an_answer_without_a_citation_fails(self):
+        self.assertEqual(self.judge([e for e in self.answer if e["type"] != "cite"])[0], "fail")
+
+    def test_a_refusal_fails(self):
+        self.assertEqual(self.judge(self.answer[:2] + [{"type": "done", "stop_reason": "refusal"}])[0], "fail")
+
+    def test_an_error_is_reported_as_not_configured(self):
+        self.assertEqual(self.judge([{"type": "error", "code": "error", "message": "x"}])[0], "not_configured")

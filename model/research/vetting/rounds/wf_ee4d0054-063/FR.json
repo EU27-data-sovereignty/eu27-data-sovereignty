@@ -1,0 +1,65 @@
+{
+ "iso": "FR",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:FR:defence_command:foreign_dependency",
+   "question": "Defence command and logistics: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "corrects",
+   "url": "https://www.defense.gouv.fr/dirisi/actualites/data-center-dimensionne-aux-enjeux-nos-armees",
+   "quote": "Soucieux de préserver l’information comme une ressource stratégique, le ministère des Armées continue d’héberger et d’archiver en interne ses données numériques.",
+   "quote_english": "Mindful of preserving information as a strategic resource, the Ministry of the Armed Forces continues to host and archive its digital data in-house.",
+   "value": "national",
+   "published": "2022-06-28",
+   "title": "Un data center dimensionné aux enjeux de nos armées",
+   "publisher": "Ministère des Armées – DIRISI",
+   "doc_type": "official_page",
+   "note": "The operator of the ministry's IT (DIRISI) states the ministry hosts its digital data in-house in its own datacentres (the page later lists pay, HR and support data among them); it covers the ministry's data generally rather than naming command and logistics systems, and says DIRISI will add an internal cloud.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "national",
+    "reason": "The sentence appears verbatim and says the French Ministry of the Armed Forces continues to host and archive its digital data in-house, with DIRISI datacenters and an internal cloud, which means national infrastructure."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "national"
+  },
+  {
+   "claim": "record:FR:statistics_microdata:foreign_dependency",
+   "question": "Statistical microdata: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "corrects",
+   "url": "https://www.casd.eu/wp/wp-content/uploads/MAPA_CCP_Datacentert_CASD2019_20190531_v1.00.pdf",
+   "quote": "L’espace proposé devra se situer dans disque de 30 km de rayon centré sur le lieu d’implantation du CASD à Palaiseau.",
+   "quote_english": "The proposed space must be located within a 30 km radius centred on CASD's site in Palaiseau.",
+   "value": "national",
+   "published": "2019-05-31",
+   "title": "Marché à procédure adaptée – CCP location d'espace datacenter CASD 2019",
+   "publisher": "Centre d'accès sécurisé aux données (CASD)",
+   "doc_type": "procurement",
+   "note": "CASD's own 2019 tender for datacentre space 'pour le fonctionnement des serveurs du CASD' requires the site to be in France near Palaiseau; it establishes location, not which colocation company won, so the provider's nationality is not stated.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "",
+    "reason": "The sentence is in the CASD datacenter tender (pdftotext check), but it only requires the hosting space to be within 30 km of Palaiseau and says nothing about whether the provider is national, EU or non-EU."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "national (datacentre space within 30 km of Palaiseau)"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:FR:defence_command:foreign_dependency",
+   "status": "found"
+  },
+  {
+   "claim": "record:FR:statistics_microdata:foreign_dependency",
+   "status": "found"
+  }
+ ]
+}

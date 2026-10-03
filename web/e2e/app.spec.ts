@@ -88,8 +88,8 @@ test.describe('data actually renders', () => {
 
   test('a value with no checked source is shown as a gap, not a fact', async ({ page }) => {
     await page.goto('/country/DE')
-    await expect(page.getByText('Not yet verified').first()).toBeVisible()
-    await expect(page.getByText('Not yet sized').first()).toBeVisible()
+    await expect(page.locator('main').getByText('Not yet verified').first()).toBeVisible()
+    await expect(page.locator('main').getByText('Not yet sized').first()).toBeVisible()
   })
 
   test('countries sort by verified holdings and link to their PDF', async ({ page }) => {
@@ -130,7 +130,17 @@ function docSpans(iso: string): Span[] {
 test.describe('evidence rules (#82, #83)', () => {
   test('every page says the findings are machine-checked, not human-verified', async ({ page }) => {
     await page.goto('/country/DE')
-    await expect(page.getByText(BUNDLE.provenance, { exact: false }).first()).toBeVisible()
+    if (test.info().project.name.startsWith('iphone')) {
+      // On a phone the banner shows its first sentence on every page, the rest one tap away (#92).
+      const lead = BUNDLE.provenance.slice(0, BUNDLE.provenance.indexOf('. ') + 1)
+      await expect(page.getByText(lead, { exact: true }).first()).toBeVisible()
+      await page.getByText('Read the full notice').click()
+      await expect(
+        page.locator('details').getByText('Treat each fact as a lead', { exact: false }),
+      ).toBeVisible()
+    } else {
+      await expect(page.getByText(BUNDLE.provenance, { exact: false }).first()).toBeVisible()
+    }
     for (const route of ['/', '/methodology']) {
       await page.goto(route)
       // exact: the banner on every page also contains the disclaimer, inside longer text; this
@@ -155,6 +165,9 @@ test.describe('evidence rules (#82, #83)', () => {
     const rows = table.rows
     await expect(page.getByText(rows[0]![0]!.t, { exact: true })).toBeVisible()
     await page.goto('/')
+    if (test.info().project.name.startsWith('iphone')) {
+      await page.getByText('Read the full notice').click() // the banner's links, one tap away on a phone
+    }
     await page.getByRole('link', { name: 'How every fact was checked' }).click()
     await expect(page).toHaveURL(/\/fact-check$/)
     await expect(page.getByText('not by a person', { exact: false }).first()).toBeVisible()

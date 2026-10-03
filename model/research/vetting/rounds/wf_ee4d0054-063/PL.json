@@ -1,0 +1,37 @@
+{
+ "iso": "PL",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:PL:fingerprint_biometric:register",
+   "question": "Fingerprint biometric: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://www.gov.pl/web/gov/dowod-osobisty-informacje",
+   "quote": "Odciski palców są przechowywane w Rejestrze Dowodów Osobistych wyłącznie po to, by wydać dowód osobisty. Odciski są automatycznie usuwane z Rejestru: w momencie odebrania dowodu przez obywatela lub jeśli obywatel nie odebrał dowodu w ciągu 90 dni od daty wydania",
+   "quote_english": "Fingerprints are stored in the Register of Identity Cards solely in order to issue the identity card. They are automatically deleted from the Register when the citizen collects the card or if the citizen has not collected it within 90 days of the date of issue",
+   "value": "Rejestr Dowodów Osobistych (Register of Identity Cards), holding fingerprints only until the card is collected or at most 90 days after issue",
+   "published": "2026-02-16",
+   "title": "Dowód osobisty - informacje",
+   "publisher": "Portal Gov.pl (Ministry of Digital Affairs / MSWiA)",
+   "doc_type": "official_page",
+   "note": "Fingerprints are held for a limited time in a central register, so 'No central register' is wrong. This matches Art. 56 of the identity cards act already cited.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Rejestr Dowodów Osobistych",
+    "reason": "gov.pl states verbatim that fingerprints are stored in the Rejestr Dowodów Osobistych only until the ID card is issued, collected or 90 days pass."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:PL:fingerprint_biometric:register",
+   "status": "found"
+  }
+ ]
+}

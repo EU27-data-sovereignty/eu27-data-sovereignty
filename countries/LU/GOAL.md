@@ -27,8 +27,8 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | Sovereign cloud certification | *Not yet sourced* |
 | State-controlled trust anchor | Yes[^s1][^s2] |
 | State-controlled national eID | Yes[^s3][^s4] |
-| Government data centres | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are present, but the CTIE quote only mentions managing IT and security equipment, not data centres, and the Wikipedia page describes LuxConnect, incorporated by the State as main shareholder, as a 'private company' operating…. It is withheld until the fact or its source is corrected and checked again* |
-| Government cloud in operation | Yes[^s5] |
+| Government data centres | Yes[^s4][^s5][^s6] |
+| Government cloud in operation | Yes[^s7] |
 
 What could move this placement:
 
@@ -41,12 +41,12 @@ Luxembourg described on its own measured characteristics. Each figure is the pub
 
 | Indicator | Value |
 |---|---:|
-| Population | 0.691 million[^s6] |
-| GDP, current prices | 89.5 EUR bn[^s7] |
-| Public administration employment (NACE O) | 32.6 thousand[^s8] |
-| Non-household electricity price | 171.7 EUR/MWh[^s9] |
-| Renewables share of electricity | 23.3 %[^s10] |
-| Land area | 2 586 km²[^s11] |
+| Population | 0.691 million[^s8] |
+| GDP, current prices | 89.5 EUR bn[^s9] |
+| Public administration employment (NACE O) | 32.6 thousand[^s10] |
+| Non-household electricity price | 171.7 EUR/MWh[^s11] |
+| Renewables share of electricity | 23.3 %[^s12] |
+| Land area | 2 586 km²[^s13] |
 
 ## 3. Critical data holdings, by priority
 
@@ -62,7 +62,7 @@ The holdings Luxembourg cannot let depend on infrastructure a foreign state can 
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | GouvID app: lets citizens use the Luxembourg electronic identity card (eID) with a smartphone[^s3] | LuxTrust is a qualified trust service provider and a reference digital-identity provider (LuxTrust credentials)[^s12] | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | GouvID app: lets citizens use the Luxembourg electronic identity card (eID) with a smartphone[^s3] | LuxTrust is a qualified trust service provider and a reference digital-identity provider (LuxTrust credentials)[^s14] | *Not stated in sources* | *Not yet measured* |
 | High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -71,12 +71,12 @@ The holdings Luxembourg cannot let depend on infrastructure a foreign state can 
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Tax (tier 1) | ACD processes personal data to assess, collect and recover taxes and to exchange information nationally and internationally[^s13] | The ACD is the data controller[^s13] | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | eDouane is the access point to all online declaration applications of the Customs and Excise Administration[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | ACD processes personal data to assess, collect and recover taxes and to exchange information nationally and internationally[^s15] | The ACD is the data controller[^s15] | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | eDouane is the access point to all online declaration applications of the Customs and Excise Administration[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Vehicle & licensing (tier 1) | Registration uniquely identifies each road vehicle and its holder or owner[^s15] | The SNCA handles putting road vehicles into circulation and driving licences[^s16] | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Registration uniquely identifies each road vehicle and its holder or owner[^s17] | The SNCA handles putting road vehicles into circulation and driving licences[^s18] | *Not stated in sources* | *Not yet measured* |
 | High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
@@ -89,7 +89,7 @@ The holdings Luxembourg cannot let depend on infrastructure a foreign state can 
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statutory health insurance (tier 1) | Anyone working in Luxembourg must be affiliated by the CCSS, which triggers health insurance coverage[^s17] | The CNS manages benefits for all private-sector insured persons and State workers[^s18] | National infrastructure[^s19] | *Not yet measured* |
+| Standard | Statutory health insurance (tier 1) | Anyone working in Luxembourg must be affiliated by the CCSS, which triggers health insurance coverage[^s19] | The CNS manages benefits for all private-sector insured persons and State workers[^s20] | National infrastructure[^s21] | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
@@ -169,7 +169,7 @@ Tier 0 and 1 holdings for Luxembourg without a verified source yet. Corrections 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1321 facts are printed, 3342 values are withheld as gaps, and 89 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1346 facts are printed, 3340 values are withheld as gaps, and 66 are withheld as disputed.
 
 ### How sources were found
 
@@ -186,16 +186,17 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 
 | Vetting outcome | Findings or items |
 |---|---:|
-| below_T2 | 5 |
-| corroborated | 238 |
+| below_T2 | 6 |
+| corrected_withheld | 6 |
+| corroborated | 261 |
 | disputed | 10 |
-| filled_gap | 363 |
-| holding_not_established | 38 |
-| no_better_found | 447 |
+| filled_gap | 365 |
+| holding_not_established | 41 |
+| no_better_found | 461 |
 | not_reached | 201 |
-| not_verified | 176 |
-| review_disagreed | 153 |
-| same_source | 8 |
+| not_verified | 178 |
+| review_disagreed | 172 |
+| same_source | 9 |
 | superseded_higher_tier | 23 |
 | superseded_later_same_authority | 3 |
 
@@ -225,8 +226,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 613 |
-| T2 competent public body or audit office | 594 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 620 |
+| T2 competent public body or audit office | 612 |
 | T3 other institution or company | 7 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
@@ -237,8 +238,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 100 |
-| Standard | 1221 |
+| Strong | 105 |
+| Standard | 1241 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -279,7 +280,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1321 of 1321 printed facts pass the fact check.
+In this build, 1346 of 1346 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -321,7 +322,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1321 of 1321 printed facts pass, and 69 facts are withheld after the check.
+In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -344,6 +345,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 |
 | wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
 | wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
 | wf_da123db1-a4e | 2026-10-02 | 1360 | claude-fable-5-1: 1360 | supported: 1281; not supported: 46; unclear: 33 |
@@ -351,12 +353,13 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Luxembourg
 
-19 of 19 printed facts about Luxembourg pass.
+20 of 20 printed facts about Luxembourg pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
 | indicator:LU:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | indicator:LU:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:LU:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | indicator:LU:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:LU:population_m | param:LU:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_5fd3e22d-b86 |
 | param:LU:gdp_eur_bn | param:LU:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -377,9 +380,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### Withheld after the fact check: Luxembourg
 
-| Claim | What it answers | Checked by | Verdict | Reason |
-|---|---|---|---|---|
-| indicator:LU:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | claude-fable-5-1 | unclear | Both quotes are present, but the CTIE quote only mentions managing IT and security equipment, not data centres, and the Wikipedia page describes LuxConnect, incorporated by the State as main shareholder, as a 'private company' operating four 'carrier neutral' commercial data centres. The sources show a state-majority-owned data-centre operator, not that the state operates its own government data c |
+None.
 
 ---
 
@@ -387,22 +388,24 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s2]: INCERT GIE — INCERT – Building trust in a Digital World (About us). INCERT – Building trust in a Digital World (About us). <https://www.incert.lu/sous-page>
 [^s3]: Centre des technologies de l'information de l'État (CTIE) — GouvID – L'app pour vous identifier auprès des services…, 2021-12-17. GouvID – L'app pour vous identifier auprès des services publics en ligne. <https://ctie.gouvernement.lu/fr/actualites/dossiers/gouvid/gouvid.html>
 [^s4]: Centre des technologies de l'information de l'État (CTIE) — Attributions du CTIE. Attributions du CTIE. <https://ctie.gouvernement.lu/fr/l-administration/Attributions.html> ([archived](https://web.archive.org/web/20260720122851/https://ctie.gouvernement.lu/fr/l-administration/Attributions.html))
-[^s5]: Centre des technologies de l'information de l'État (CTIE) — Le CTIE - Centre des technologies de l'information de l'Etat, 2025-03-12. Le CTIE - Centre des technologies de l'information de l'Etat. <https://ctie.gouvernement.lu/fr/l-administration.html> ([archived](https://web.archive.org/web/20260720122929/https://ctie.gouvernement.lu/fr/l-administration.html))
-[^s6]: Eurostat tps00001, 2026-09-30. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s7]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s8]: Eurostat nama_10_a64_e, 2026-09-30. National accounts employment data by industry (up to NACE A*64). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_e/default/table>
-[^s9]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s10]: Eurostat nrg_ind_ren, 2026-09-30. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s11]: Eurostat reg_area3, 2026-09-30. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
-[^s12]: LuxTrust — LuxTrust et INCERT scellent un partenariat stratégique…, 2026-07-28. LuxTrust et INCERT scellent un partenariat stratégique pour renforcer la souveraineté numérique. <https://www.luxtrust.com/fr/news/luxtrust-et-incert-scellent-un-partenariat-strategique-pour-renforcer-la-souverainete>
-[^s13]: Administration des contributions directes — Règlement général sur la protection des données (RGPD). Règlement général sur la protection des données (RGPD). <https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html> ([archived](https://web.archive.org/web/20260903021938/https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html))
-[^s14]: Administration des douanes et accises — eDouane - Services en ligne. eDouane - Services en ligne. <https://douanes.public.lu/fr/services-ligne/edouanes.html> ([archived](https://web.archive.org/web/20260831153900/https://douanes.public.lu/fr/services-ligne/edouanes.html))
-[^s15]: Société nationale de circulation automobile — Histoire de la SNCA. Histoire de la SNCA. <https://snca.public.lu/fr/snca/histoire-snca.html> ([archived](https://web.archive.org/web/20260612182328/https://snca.public.lu/fr/snca/histoire-snca.html))
-[^s16]: Société nationale de circulation automobile — Missions et valeurs - SNCA. Missions et valeurs - SNCA. <https://snca.public.lu/fr/snca/missions-valeurs.html> ([archived](https://web.archive.org/web/20260324003908/https://snca.public.lu/fr/snca/missions-valeurs.html))
-[^s17]: Caisse nationale de santé — Affiliation. Affiliation. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html> ([archived](https://web.archive.org/web/20260324191230/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html))
-[^s18]: Caisse nationale de santé — L'assurance maladie en bref. L'assurance maladie en bref. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html> ([archived](https://web.archive.org/web/20260324075300/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html))
-[^s19]: Centre commun de la sécurité sociale — Attributions - Centre commun de la sécurité sociale, 2020-02-07. Attributions - Centre commun de la sécurité sociale. <https://ccss.public.lu/fr/ccss/attributions.html> ([archived](https://web.archive.org/web/20260324045749/https://ccss.public.lu/fr/ccss/attributions.html))
+[^s5]: Wikipedia — LuxConnect. LuxConnect. <https://en.wikipedia.org/wiki/LuxConnect> ([archived](https://web.archive.org/web/20250802060739/https://en.wikipedia.org/wiki/LuxConnect))
+[^s6]: Gouvernement du Grand-Duché de Luxembourg (CTIE) — Factsheet CTIE, 2025-01. Factsheet CTIE. <https://gouvernement.lu/dam-assets/images-documents/actualites/2025/01/23-obertin-clarence-proximus/factsheet-ctie.pdf> ([archived](https://web.archive.org/web/20251205005314/https://gouvernement.lu/dam-assets/images-documents/actualites/2025/01/23-obertin-clarence-proximus/factsheet-ctie.pdf))
+[^s7]: Centre des technologies de l'information de l'État (CTIE) — Le CTIE - Centre des technologies de l'information de l'Etat, 2025-03-12. Le CTIE - Centre des technologies de l'information de l'Etat. <https://ctie.gouvernement.lu/fr/l-administration.html> ([archived](https://web.archive.org/web/20260720122929/https://ctie.gouvernement.lu/fr/l-administration.html))
+[^s8]: Eurostat tps00001, 2026-09-30. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s9]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s10]: Eurostat nama_10_a64_e, 2026-09-30. National accounts employment data by industry (up to NACE A*64). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_e/default/table>
+[^s11]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s12]: Eurostat nrg_ind_ren, 2026-09-30. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s13]: Eurostat reg_area3, 2026-09-30. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s14]: LuxTrust — LuxTrust et INCERT scellent un partenariat stratégique…, 2026-07-28. LuxTrust et INCERT scellent un partenariat stratégique pour renforcer la souveraineté numérique. <https://www.luxtrust.com/fr/news/luxtrust-et-incert-scellent-un-partenariat-strategique-pour-renforcer-la-souverainete>
+[^s15]: Administration des contributions directes — Règlement général sur la protection des données (RGPD). Règlement général sur la protection des données (RGPD). <https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html> ([archived](https://web.archive.org/web/20260903021938/https://impotsdirects.public.lu/fr/az/r/RGPD_GDPR.html))
+[^s16]: Administration des douanes et accises — eDouane - Services en ligne. eDouane - Services en ligne. <https://douanes.public.lu/fr/services-ligne/edouanes.html> ([archived](https://web.archive.org/web/20260831153900/https://douanes.public.lu/fr/services-ligne/edouanes.html))
+[^s17]: Société nationale de circulation automobile — Histoire de la SNCA. Histoire de la SNCA. <https://snca.public.lu/fr/snca/histoire-snca.html> ([archived](https://web.archive.org/web/20260612182328/https://snca.public.lu/fr/snca/histoire-snca.html))
+[^s18]: Société nationale de circulation automobile — Missions et valeurs - SNCA. Missions et valeurs - SNCA. <https://snca.public.lu/fr/snca/missions-valeurs.html> ([archived](https://web.archive.org/web/20260324003908/https://snca.public.lu/fr/snca/missions-valeurs.html))
+[^s19]: Caisse nationale de santé — Affiliation. Affiliation. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html> ([archived](https://web.archive.org/web/20260324191230/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/affiliation.html))
+[^s20]: Caisse nationale de santé — L'assurance maladie en bref. L'assurance maladie en bref. <https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html> ([archived](https://web.archive.org/web/20260324075300/https://cns.public.lu/fr/assure/droits-demarches/bases-bonnes-pratiques/assurance-maladie-bref.html))
+[^s21]: Centre commun de la sécurité sociale — Attributions - Centre commun de la sécurité sociale, 2020-02-07. Attributions - Centre commun de la sécurité sociale. <https://ccss.public.lu/fr/ccss/attributions.html> ([archived](https://web.archive.org/web/20260324045749/https://ccss.public.lu/fr/ccss/attributions.html))
 
-**Evidence grades:** 0 Strong, 19 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 0 Strong, 20 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

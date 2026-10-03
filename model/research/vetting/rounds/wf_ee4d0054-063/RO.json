@@ -1,0 +1,63 @@
+{
+ "iso": "RO",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:RO:health_insurance:register",
+   "question": "Statutory health insurance: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://portal.cnas.ro/cnas/pias/specificatii",
+   "quote": "Specificaţiile de Interfaţare cu SIUI+SIPE+CEAS pentru aplicaţiile de raportare ale furnizorilor de servicii medicale şi farmaceutice către Sistemul Informatic Unic Integrat al CNAS",
+   "quote_english": "The interface specifications with SIUI+SIPE+CEAS for the reporting applications of medical and pharmaceutical service providers to the Single Integrated Information System of CNAS",
+   "value": "Sistemul Informatic Unic Integrat al CNAS (SIUI) (Single Integrated Information System of the National Health Insurance House)",
+   "published": "2026-04-07",
+   "title": "Specificaţii de interfaţare cu PIAS - pentru producătorii de aplicaţii software",
+   "publisher": "Casa Naţională de Asigurări de Sănătate (CNAS), Portal CNAS-PIAS",
+   "doc_type": "official_page",
+   "note": "CNAS's own portal calls the system 'Sistemul Informatic Unic Integrat al CNAS', which attributes it to CNAS; cnas.ro (where CNAS states it organises and administers PIAS) and legislatie.just.ro refused automated access, so 'operated by' is not stated verbatim.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Sistemul Informatic Unic Integrat (SIUI) al CNAS",
+    "reason": "The CNAS page publishes interface specifications for providers to report to the Sistemul Informatic Unic Integrat of CNAS (SIUI, with SIPE and CEAS)."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:RO:tax:register",
+   "question": "Tax: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://static.anaf.ro/static/10/Anaf/Informatii_R/Raportperformanta2024.pdf",
+   "quote": "OPANAF nr. 3.792/24.07.2024 pentru aprobarea Procedurii privind modificarea din oficiu a datelor din Registrul contribuabililor/plătitorilor, precum și a modelului și conținutului unor formulare",
+   "quote_english": "ANAF President's Order no. 3,792/24.07.2024 approving the Procedure for the ex officio amendment of data in the Register of taxpayers/payers, and the model and content of certain forms",
+   "value": "Registrul contribuabililor/plătitorilor (Register of taxpayers/payers)",
+   "published": "2025",
+   "title": "Raport de performanță și transparență 2024",
+   "publisher": "Agenția Națională de Administrare Fiscală (ANAF)",
+   "doc_type": "annual_report",
+   "note": "ANAF's 2024 performance report names an actual tax register; the same report says that by end-2024 the RO e-Factura data module and intra-EU VAT fraud module were received under APIC, while the Big-Data platform itself is not described as complete.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Registrul contribuabililor/plătitorilor",
+    "reason": "The ANAF 2024 performance report (text extracted from the PDF) lists OPANAF 3.792/2024 about changing data in the Registrul contribuabililor/plătitorilor ex officio; the quote names the register but not who operates it."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:RO:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:RO:tax:register",
+   "status": "found"
+  }
+ ]
+}

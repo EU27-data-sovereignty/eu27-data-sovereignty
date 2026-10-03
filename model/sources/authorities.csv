@@ -1,4 +1,5 @@
 host,tier,kind
+112.ee,2,public_body
 112.ie,2,public_body
 112.lt,2,public_body
 a-trust.at,3,company
@@ -25,6 +26,7 @@ aped.gov.gr,2,government_or_authority
 apg.at,2,public_body
 api.et.gr,1,official_law_portal
 api.sejm.gov.pl,1,official_law_portal
+app.dap.gov.hu,2,government_or_authority
 arch.be,2,public_body
 aref.government.bg,2,government_or_authority
 arte.gov.pt,2,government_or_authority
@@ -54,6 +56,8 @@ bundesarchiv.de,2,public_body
 bundesbank.de,2,government_or_authority
 bundesdruckerei.de,3,company
 bundeskanzleramt.gv.at,2,government_or_authority
+bva.bund.de,2,public_body
+bzst.de,2,government_or_authority
 ca1.gov.dk,2,government_or_authority
 cadastre.bg,2,public_body
 cadastre.gouv.fr,2,government_or_authority
@@ -74,6 +78,7 @@ ciencia.gob.es,2,government_or_authority
 cik.bg,2,public_body
 civilna-zastita.gov.hr,2,government_or_authority
 clientebancario.bde.es,2,public_body
+cms.eirgrid.ie,2,public_body
 cms.nemlog-in.dk,2,public_body
 cnb.cz,2,public_body
 cnil.fr,2,public_body
@@ -86,6 +91,7 @@ cpr.dk,2,public_body
 crc.bg,2,public_body
 crisiscentrum.be,2,public_body
 crl.justice.gouv.fr,2,government_or_authority
+cso.ie,1,statistics_office
 ctie.gouvernement.lu,2,public_body
 cuta.belgium.be,2,government_or_authority
 cuzk.gov.cz,2,government_or_authority
@@ -98,8 +104,11 @@ data.legilux.public.lu,1,official_law_portal
 data.riksdagen.se,1,official_law_portal
 datacatalogue.gov.ie,2,government_or_authority
 dataprotection.ie,2,public_body
+defense.gouv.fr,2,government_or_authority
 depabd.mai.gov.ro,2,government_or_authority
+dge.mec.pt,2,public_body
 dgu.gov.hr,2,government_or_authority
+digg.se,2,public_body
 digid.nl,2,public_body
 digitalstrategy.gov.gr,2,government_or_authority
 digst.dk,2,public_body
@@ -118,6 +127,7 @@ dvk-rs.si,2,public_body
 dvv.fi,2,public_body
 dwh.ksz-bcss.fgov.be,2,government_or_authority
 e-sbirka.cz,1,official_law_portal
+e-sbirka.gov.cz,1,official_law_portal
 ec.europa.eu,1,eurostat_or_commission
 ecb.europa.eu,2,public_body
 ecrp.gov.si,2,government_or_authority
@@ -139,7 +149,9 @@ en.politis.com.cy,4,press
 en.wikipedia.org,4,encyclopedia
 energetika-portal.si,2,public_body
 enterprise.gov.ie,2,government_or_authority
+ep.customs.bg,2,public_body
 erillisverkot.fi,2,public_body
+ers.pt,2,public_body
 eso.bg,2,public_body
 et.gr,1,official_law_portal
 etaamb.openjustice.be,4,unofficial_law_mirror
@@ -147,11 +159,13 @@ eufunds.bg,2,public_body
 eydap.gr,3,company
 ezdrav.si,2,public_body
 fascicolosanitario.gov.it,2,government_or_authority
+files.diariodarepublica.pt,1,official_law_portal
 fina.hr,2,public_body
 financnisprava.gov.cz,2,government_or_authority
 finlex.fi,1,official_law_portal
 fnmt.es,2,public_body
 folkhalsomyndigheten.se,2,public_body
+forenzika.gov.hr,2,public_body
 fr-alert.gouv.fr,2,government_or_authority
 france-identite.gouv.fr,2,government_or_authority
 franceconnect.gouv.fr,2,government_or_authority
@@ -164,6 +178,7 @@ gegevensbeschermingsautoriteit.be,2,public_body
 gesetze-im-internet.de,1,official_law_portal
 gesy.org.cy,2,public_body
 giro.hu,2,public_body
+gouvernement.lu,2,government_or_authority
 gov.cy,2,government_or_authority
 gov.ie,2,government_or_authority
 gov.pl,2,government_or_authority
@@ -193,6 +208,7 @@ info.gouv.fr,2,government_or_authority
 info.identitaobcana.cz,2,public_body
 info.portaldasfinancas.gov.pt,2,government_or_authority
 infobusiness.bcci.bg,3,company
+innovazione.gov.it,2,government_or_authority
 inpi.fr,2,public_body
 insee.fr,1,statistics_office
 interoperable-europe.ec.europa.eu,2,government_or_authority
@@ -209,6 +225,7 @@ it-planungsrat.de,2,public_body
 itzbund.de,2,public_body
 izm.gov.lv,2,government_or_authority
 jurion.fanc.fgov.be,2,government_or_authority
+justdigi.ee,2,government_or_authority
 justice.government.bg,2,government_or_authority
 justid.nl,2,public_body
 kadaster.nl,2,public_body
@@ -275,6 +292,7 @@ net.jogtar.hu,4,unofficial_law_mirror
 news.rik.cy,4,press
 nhif.bg,2,public_body
 nias.gov.hr,2,government_or_authority
+nisz.hu,2,public_body
 nki.gov.hu,2,government_or_authority
 nl-alert.nl,2,public_body
 nngyk.gov.hu,2,government_or_authority
@@ -290,6 +308,7 @@ oenb.at,2,public_body
 oes.dk,2,public_body
 ogcio.gov.ie,2,government_or_authority
 oif.gov.hu,2,government_or_authority
+oikeusrekisterikeskus.fi,2,public_body
 opendata.finlex.fi,1,official_law_portal
 orniss.ro,2,public_body
 ovf.hu,2,public_body
@@ -299,6 +318,7 @@ passport.gov.gr,2,government_or_authority
 pgdlisboa.pt,2,public_body
 pki.jcc.com.cy,3,company
 pmlp.gov.lv,2,government_or_authority
+policie.gov.cz,2,government_or_authority
 poliisi.fi,2,public_body
 polisen.se,2,public_body
 politi.dk,2,public_body
@@ -308,6 +328,7 @@ politis.com.cy,4,press
 politsei.ee,2,public_body
 polizei.gv.at,2,government_or_authority
 polostrategiconazionale.it,2,public_body
+portal.cnas.ro,2,public_body
 portal.dls.moi.gov.cy,2,government_or_authority
 pro-m.hu,2,public_body
 prociv.gov.pt,2,government_or_authority

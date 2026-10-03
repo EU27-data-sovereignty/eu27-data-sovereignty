@@ -178,6 +178,30 @@ The researcher's own label (upgrade, supersedes, contradicts) decides none of th
 `model/research/vetting/outcomes.csv`, disagreements to `disputes.csv`, and the checks to
 `verification.csv`.
 
+### 3e. A correction round for withheld facts (#93)
+
+A fact the cross-model check did not confirm is withheld (#89). A correction round re-researches only those
+facts. It is staged apart from the first run, in `model/research/vetting/rounds/<run>/<ISO>.json`, so the
+first run's files are never overwritten. Each finding there records its researcher and reviewer models.
+
+1. `./run.sh vet prepare --withheld` writes the input: each withheld fact with what it answers, how it
+   printed, its source and the checker's reason, in batches across states.
+2. Run the same workflow (`scriptPath: model/research/vetting/workflow.js`). For facts carrying a
+   `checker_reason`, the researcher looks for a T1/T2 quote that supports a correct statement, with relation
+   `corrects`.
+3. `./run.sh vet stage <task output file> --run <id> --round`.
+4. `./run.sh vet hosts`, then `./run.sh vet verify`, then `./run.sh admit`. These are the same steps as for
+   the first run.
+
+Admission accepts a `corrects` finding only for a claim the fact check ever withheld, read from the staged
+verdicts, so admission still reproduces. The finding must also have:
+- a T1/T2 source;
+- a quote found in the fetched page;
+- blind-review agreement.
+
+It then replaces the withheld value, and the old citations are marked superseded. The new value is a changed
+fact, so `/factcheck` checks it before it can be deployed (`docs/fact-check.md`).
+
 ## 4. Quotes the check missed
 
 ```sh

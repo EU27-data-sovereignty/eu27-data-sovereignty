@@ -1,0 +1,310 @@
+{
+ "run": "wf_72f99a66-4e9",
+ "prepared": "2026-10-03-724327fc",
+ "batch": "EU-001",
+ "iso": "EU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:HU:authentication_audit_log:foreign_dependency",
+   "fact_sha256": "60a828cfb484e718f32ea5368ad005bfbab6a8cc923f75bae3631067f502b91f",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The DÁP privacy notice (read via pdftotext after WebFetch could not parse it) says the log files are stored by the service provider in a private cloud (central log collector), names the controller as IdomSoft Zrt (Budapest), and lists no foreign processor for logging; the idomsoft.hu history page confirms IdomSoft passed into direct state ownership. Private cloud of a state-owned Hungarian provide",
+   "quote_found": true,
+   "checked_url": "https://app.dap.gov.hu/mobilapp-adatkezelesi/20251110.pdf"
+  },
+  {
+   "claim": "record:IE:defence_command:foreign_dependency",
+   "fact_sha256": "37ae4115b46e15e46a8b853a4e4be81ea841e8a0d418117ab569b4d4093fa17f",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Department of Defence and Defence Forces Annual Report 2023 (pdftotext) contains the passage: a hybrid cloud strategy, securely accessing cloud services where required, alongside an on-premise national IT system around two data centres at McKee Barracks and DFHQ Newbridge. Cloud plus on-premise supports 'mixed'.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/309800/2b584813-bbbb-4c12-be67-7489bc5c5a8b.pdf"
+  },
+  {
+   "claim": "record:IE:intelligence:operator",
+   "fact_sha256": "0090729aba57db0bed1657c47f0dae4138b9d98d7da3429dcf78b08807eb7d29",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The annual report contains the 253-briefings sentence and elsewhere lists 'Military Intelligence (J2)' in the Defence Forces structure and its briefings for members of the Defence Forces, so Military Intelligence (Defence Forces) is supported.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/309800/2b584813-bbbb-4c12-be67-7489bc5c5a8b.pdf"
+  },
+  {
+   "claim": "record:IE:grid_control:register",
+   "fact_sha256": "6108fffe552fe1c16c657ec26655f4884f1ff5fc105d2028ddc24aca7800dad0",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Grid Code OC.7.2.4.1.1 (pdftotext) says the TSO's contact location for real-time operation of the Transmission System is the National Control Centre (NCC); the EirGrid page confirms NCCs in Dublin and Belfast. Matches the printed register name.",
+   "quote_found": true,
+   "checked_url": "https://cms.eirgrid.ie/sites/default/files/publications/GridCodeVersion14.3.pdf"
+  },
+  {
+   "claim": "indicator:LU:C1",
+   "fact_sha256": "1f5c92095f3229efae1d7d9d98a65d4ff9e7c6b4a559641722fa620b06ada426",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CTIE factsheet (pdftotext) says the sovereign private cloud is 'Hébergé dans plusieurs data centres du CTIE en mode actif-actif depuis 2016', i.e. the state IT centre runs its own data centres in operation; the CTIE attributions page and the LuxConnect page (state-founded, DC1.1 operational 2009) also contain their quotes.",
+   "quote_found": true,
+   "checked_url": "https://gouvernement.lu/dam-assets/images-documents/actualites/2025/01/23-obertin-clarence-proximus/factsheet-ctie.pdf"
+  },
+  {
+   "claim": "record:BG:customs:register",
+   "fact_sha256": "dc2096353e210c814d9bc56a55986dc9a5febc89c0b574d7641bb190fe17aa5e",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The news archive item of 22.01.2026 contains the quote naming the Митническата информационна система за внасяне (МИСВ) and Агенция 'Митници'. The printed name and agency match; note the page also names separate export and transit systems, so МИСВ is the import-declaration system only.",
+   "quote_found": true,
+   "checked_url": "https://ep.customs.bg/eportal/public/newsArchive"
+  },
+  {
+   "claim": "record:HR:fingerprint_biometric:register",
+   "fact_sha256": "9f5a1ccc7255216203cf0f838a7ef98f2884ff90efbe6d59a182f9657e90beb8",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page contains the quote and expands the acronym as 'Automatizirani sustav za biometrijsku identifikaciju (Automated Biometryc Identification System - ABIS)', with a fingerprint and palm-print database. Matches the printed name.",
+   "quote_found": true,
+   "checked_url": "https://forenzika.gov.hr/abis/96"
+  },
+  {
+   "claim": "record:MT:border_control:operator",
+   "fact_sha256": "a4f38a0f30602731d637e3633bf5bc2e3312b46e8db28f4d17156a4cb479220b",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Both quotes are present and show the CVU as the central authority for visa policy and the body processing D-visas, but neither page says the CVU operates any border-control system; the CVU page treats 'border control authorities' as separate bodies. The source supports the visa half only, not the CVU as operator of 'border and visa systems' as printed.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/central-visa-unit-main-page/"
+  },
+  {
+   "claim": "record:MT:civil_registry:register",
+   "fact_sha256": "5b011e0e0d942114b12e8effcd6b6a3c91aa2b5631c67554f95f283bcf0d8573",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The civil-status page (quote found) places the Civil Status Section under the Public Registry and makes it responsible for acts of birth, marriage, civil union and death registered in Malta; the Public Registry main page says those acts are kept there, and Civil Code art. 238 (pdftotext) provides for the register books in the Public Registry Office. Together they support the printed description.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/public-registry-sec-page-civil-status/"
+  },
+  {
+   "claim": "record:MT:electoral_management:register",
+   "fact_sha256": "d54b514f57ed10e45876502bb4665d5da0273ebde630ed7b95c296e7673465fc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The General Elections Act (Cap. 354, pdftotext) contains the definition of 'Electronic Counting System' verbatim, including sub-item (a) maintaining relevant data in relation to the election. Matches the printed name.",
+   "quote_found": true,
+   "checked_url": "https://legislation.mt/getpdf/661645c07403ed16fcf9eb8e"
+  },
+  {
+   "claim": "record:RO:health_insurance:register",
+   "fact_sha256": "4726c566a1eafaaa0e2bf195185683c3514c37ac1782b494a568da1a865ecd11",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "siui.casan.ro is headed 'Platforma Informatică a Asigurărilor de Sănătate' with the SIUI menu items in order and a CNAS copyright footer; the CNAS portal page calls it the 'Sistemul Informatic Unic Integrat al CNAS'. Supports 'SIUI is the health insurance IT platform, run by CNAS'.",
+   "quote_found": true,
+   "checked_url": "https://siui.casan.ro/"
+  },
+  {
+   "claim": "record:DK:emergency_communications:operator",
+   "fact_sha256": "ccddc94f8c0151f42b9bee54c3714ac73662877f03abae6f7199314b47d9a8f8",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "om-cfb says CFB is part of the Ministeriet for Samfundssikkerhed og Beredskab; the leverandoer page says Dansk Beredskabskommunikation A/S supplies SINE and operates the shared emergency radio network. Both halves of the printed statement are stated verbatim.",
+   "quote_found": true,
+   "checked_url": "https://sikkerhedsnet.dk/om-cfb"
+  },
+  {
+   "claim": "record:RO:tax:register",
+   "fact_sha256": "46f7a229efac2bafa019e4793b2d798a58247efb9b86b96195762c41f2faf6b8",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ANAF 2024 performance report (pdftotext) lists OPANAF 3.792/24.07.2024 on ex officio amendment of data in the 'Registrul contribuabililor/plătitorilor'. The register name as printed appears in ANAF's own report.",
+   "quote_found": true,
+   "checked_url": "https://static.anaf.ro/static/10/Anaf/Informatii_R/Raportperformanta2024.pdf"
+  },
+  {
+   "claim": "record:EE:judicial_criminal:operator",
+   "fact_sha256": "313d916dfbf92de1eb22523876aebf0e6ef2b0c2323cb8609ce1483cf64fe189",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Fetched the cited archive URLs with curl (WebFetch blocks web.archive.org). KarRS § 4 states the controller is the Justiits- ja Digiministeerium and the processor the Registrite ja Infosüsteemide Keskus; the ministry's own page says it is the controller of the criminal records register. Matches the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250803214052/https://www.riigiteataja.ee/akt/KarRS"
+  },
+  {
+   "claim": "record:EE:emergency_communications:operator",
+   "fact_sha256": "4d5ae63ebd6f29bab90f1d1141cc69a4d4c73881941126479d5e998823522a51",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "112.ee contains the quote and presents Häirekeskus as the provider of the hädaabiteenus on number 112. The siseministeerium PDF returned 403, so I read the project's hashed copy (sha256 9a0561c0…), which contains the ohuteavitus quote verbatim. Supports Häirekeskus as operator.",
+   "quote_found": true,
+   "checked_url": "https://www.112.ee/et/uudised/haeirekeskus-liigub-uele-uuele-domeeninimele-ja-e-posti-aadressidele-170"
+  },
+  {
+   "claim": "record:PT:digital_identity_credentials:operator",
+   "fact_sha256": "33247bd9088a5e44bf867275bb7f3c4fcb4bbe7747615fd78ae0cc0493c9a473",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Lei 37/2014 art. 2(8) does assign management and security of the CMD infrastructure to AMA, I.P., and autenticacao.gov.pt says the site is managed by ARTE; but neither page says AMA was the predecessor of ARTE, so the printed parenthetical adds a succession claim the sources do not state.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=2809&tabela=leis"
+  },
+  {
+   "claim": "record:AT:fingerprint_biometric:register",
+   "fact_sha256": "ddc5ba0b8c0b7c7802437121af2e911298de4ed782c055e1728c4e44cb77d629",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "All three quotes are present, but SPG § 75 establishes a 'Zentrale erkennungsdienstliche Evidenz' in which security authorities jointly process identification data that § 64(2) defines to include Papillarlinienabdrücke (fingerprints), and the BMI sheet names the Federal Minister of the Interior as its controller. Only passport fingerprints are excluded (Passgesetz § 22b), so 'No central register' ",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005792"
+  },
+  {
+   "claim": "record:ES:education:operator",
+   "fact_sha256": "b622382c85dfec31f03db25c8173972c72171e9ea7401d9239217ce03dc37fd8",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "RD 1002/2010 art. 4 creates the RNTUO 'en el Ministerio de Educación'; RD 472/2024 art. 4 assigns its management and custody to the Secretaría General de Universidades of the Ministerio de Ciencia, Innovación y Universidades. Both parts of the printed statement are stated.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-12621"
+  },
+  {
+   "claim": "indicator:DE:K2",
+   "fact_sha256": "68277b4103c7612b97b8561ba5eb3f150021f374030d3b642eb199b31941fca5",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "PAuswG § 4 has the BMI determine the card manufacturer, the certificate authority and the block-list operator; the BVA page says the federal BVA runs the VfB and the Sperrdienst; bundesdruckerei.de calls itself the 'Technologieunternehmen des Bundes'. The eID scheme is run by state bodies, supporting 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/pauswg/__4.html"
+  },
+  {
+   "claim": "record:DE:civil_registry:operator",
+   "fact_sha256": "a8eff05dbf01b443bea6547b9ae0d793c9cc86bde9a154b547fcd22243d1c238",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "AO § 139b(3) says the Bundeszentralamt für Steuern stores, for natural persons, the Identifikationsnummer, names, birth data, address etc., and the BZSt page repeats it. 'For every natural person' is the general reading of 'zu natürlichen Personen' rather than literal wording, but the operator, data and legal basis match.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/ao_1977/__139b.html"
+  },
+  {
+   "claim": "record:IE:police_records:register",
+   "fact_sha256": "eabcd0231d1edb2b811afe19b894b7e612a90153782a6684679121efa5758d69",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "garda.ie refused the connection, so I read the project's hashed copy (sha256 c415d6a9…, as in fetch_manifest.csv); the quote is there and the CSO page quote is live. Both call PULSE 'An Garda Síochána's database' with incident data, but neither describes it as a 'national incident and intelligence database'; 'intelligence' is added beyond the sources.",
+   "quote_found": true,
+   "checked_url": "https://www.garda.ie/en/about-us/our-departments/garda-information-services-centre-gisc-/"
+  },
+  {
+   "claim": "record:PT:education:register",
+   "fact_sha256": "41b15134c36b6193b8646d7b7f1c9a8a0cb6b19813015eaa6cd7b2edc14e6bb9",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "DL 396/2007 (the Sistema Nacional de Qualificações law) art. 7(5) says the diploma and certificate models are made available in SIGO, and the DGE page says diplomas and certificates are issued electronically through SIGO. The printed statement names SIGO as the system, which both sources state.",
+   "quote_found": true,
+   "checked_url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1081&tabela=leis"
+  },
+  {
+   "claim": "record:CZ:breeder_documents:operator",
+   "fact_sha256": "d48de57b14cf64272e01a8e1c72e3d091e757e562cd12c475cc376307292b6d6",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Both quotes are in Act 301/2000 (the .cz URL redirects to e-sbirka.gov.cz). § 1b makes the Ministry of the Interior controller of the Matriční informační systém, but § 1b(2) says that system holds the data entered in the register books, while § 8 and §§ 4–4a place the sbírka listin (the underlying documents) with the matriční úřad, the ORP and the krajský úřad. The sources do not make the Ministry",
+   "quote_found": true,
+   "checked_url": "https://e-sbirka.gov.cz/sbr-cache/dokumenty-sbirky/%2Fsb%2F2000%2F301%2F2027-01-01/fragmenty?cisloStranky=0"
+  },
+  {
+   "claim": "record:IE:grid_control:operator",
+   "fact_sha256": "babf1f54156152faa59d6740e3b4db87ad6669782d82b3e368294a02dd5f1a8f",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "did-you-know states 'EirGrid is Ireland's TSO' verbatim, and the national-control-centres page says EirGrid staff operate the grid from the NCCs in Dublin and Belfast. Supports EirGrid as operator.",
+   "quote_found": true,
+   "checked_url": "https://www.eirgrid.ie/did-you-know"
+  },
+  {
+   "claim": "record:PT:health_insurance:register",
+   "fact_sha256": "d1df20e2b6a40d9770ec435af938cde6e12a4283a51801334d2aa649b77942a7",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "ERS says the RNU is the national database for identifying and registering SNS users; Portaria 22/2016 art. 12 says SINAVE looks up patient identification data in the RNU. The register name and its role as identification reference are stated; the plural 'other national health systems' rests on the single SINAVE example plus the ERS description.",
+   "quote_found": true,
+   "checked_url": "https://www.ers.pt/pt/utentes/perguntas-frequentes/faq/o-registo-nacional-de-utentes-rnu-e-a-inscricao-nos-cuidados-de-saude-primarios/"
+  },
+  {
+   "claim": "indicator:BG:C1",
+   "fact_sha256": "5e1a7babc61dd8f82c6bde301ef3a139f0018d00b075bbe289f877ecfe40cbba",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says the Държавен хибриден частен облак is built on four data centres (ЦДЕУ1, ЦДЕУ2, recovery centre, КТЦЕП) of the State e-Government Agency and lists services it currently provides; the is-bg.net quote is also present. State-run data centres in operation support 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.eufunds.bg/bg/opgg/node/9490"
+  },
+  {
+   "claim": "indicator:BG:C2",
+   "fact_sha256": "001b4a9ca975e44ab29dcb948d5b4a89396f5f12a920c51b7d14578fd2069d8c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states in the present tense that the State Hybrid Private Cloud 'към момента предоставя' colocation, virtual resources and other services, i.e. a government cloud in operation, not merely announced.",
+   "quote_found": true,
+   "checked_url": "https://www.eufunds.bg/bg/opgg/node/9490"
+  },
+  {
+   "claim": "record:PT:public_finance:operator",
+   "fact_sha256": "7f96691e7a02cdda213f95d97fb8219a0579f66a993d10d52f4034ce86c8860d",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "Both IGCP quotes are present and say the IGCP, E.P.E. manages the State's treasury, financing and direct public debt. Neither page mentions the Direção-Geral do Orçamento or ESPAP, so the printed operator is not what the cited sources say.",
+   "quote_found": true,
+   "checked_url": "https://www.igcp.pt/pt/igcp"
+  },
+  {
+   "claim": "record:FI:electoral_roll:operator",
+   "fact_sha256": "b3de7b699065908646acdd4fbfb846d0c7d0f97790f3d77ababebf03ae02eccb",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ORK release states verbatim that the election information system is owned by the oikeusministeriö and ORK handles its technical maintenance, and describes the system as holding data on those entitled to vote. Matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.oikeusrekisterikeskus.fi/ajankohtaista/tiedote-ja-uutisarkisto/uusi-vaalitietojarjestelma-testissa-kayttajien-nakemykset-tarkeita-vaalitietojarjestelman-kehityksessa/"
+  },
+  {
+   "claim": "record:NL:fingerprint_biometric:register",
+   "fact_sha256": "a782b514e9bbf5b33b038872c7b3d030d62b7239a003942bd0f7dd52fbd6ef42",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "RvIG says fingerprints are deleted from the RAAS once the document is issued and 'er bestaat dus geen database waarin alle vingerafdrukken worden opgeslagen'; Paspoortwet art. 3(9) limits retention to issuance. Supports 'No central register'.",
+   "quote_found": true,
+   "checked_url": "https://www.rvig.nl/afname-kwalitatief-goede-vingerafdruk-luistert-nauw"
+  }
+ ]
+}

@@ -49,8 +49,12 @@ Open
       its stored precision); 27 populations re-checked and confirmed
 - [x] Retry route for facts whose pages refused the checker: `prepare --withheld-blocked`, from the hashed
       copy; 11 of 12 confirmed. 69 facts remain withheld
-- [ ] Re-research the remaining 69 withheld facts (owner approved only the cheap retry for now; estimate
-      ~$75–145)
+- [x] Correction round (#93): 69 withheld facts re-researched, 25 corrected or re-sourced and confirmed
+- [ ] 46 facts still withheld: no T1/T2 quote found, reviewer disagreed, or the check rejected the correction
+- [ ] Stability sample: Opus 5.5 disagreed with 5 of 50 Fable-confirmed facts (audit file § Stability); decide
+      whether a second-checker disagreement should withhold a fact
+- [ ] Owner: ANTHROPIC_API_KEY in Vercel (dedicated workspace, spend limit), then repository variable ASK_LIVE=true
+- [ ] Owner: port the mobile reader to schema 2, or drop it (its 4 Dependabot alerts need one or the other)
 - [ ] Six Slovak facts cite `zakony.judikaty.info`, an unofficial mirror (T4); find the official text (slov-lex.sk)
 - [x] Dependabot in `web/`: `undici` 8.11.2, `brace-expansion` 5.0.12; `npm audit --audit-level=high` clean, now a CI step
 - [ ] Dependabot in `mobile/` (stale reader): `node-forge` (no fix), `braces`; port the reader to schema 2 or drop it

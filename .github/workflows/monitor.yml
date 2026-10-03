@@ -5,7 +5,8 @@ name: Monitor
 # failure fails the run and is written to the run summary; it opens no issue and changes nothing.
 on:
   schedule:
-    - cron: "17 6 * * 1"   # Mondays 06:17 UTC
+    - cron: "17 6 * * 1"   # Mondays 06:17 UTC: the live site and data sources
+    - cron: "41 7 * * *"   # daily 07:41 UTC: one /ask question
   workflow_dispatch:
 
 permissions:
@@ -14,6 +15,7 @@ permissions:
 jobs:
   live:
     name: Live site and data sources
+    if: github.event.schedule != '41 7 * * *'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -24,3 +26,18 @@ jobs:
         run: python3 model/smoke.py --site https://eu27.cloud --bundle web/public/data/eu27.json --summary "$GITHUB_STEP_SUMMARY"
       - name: Eurostat vintages (reported, never applied)
         run: python3 model/fetch_eurostat.py --check | tee -a "$GITHUB_STEP_SUMMARY"
+
+  ask:
+    # One fixed question, daily (#92): the answer must stream, cite at least one claim and finish. Until the
+    # owner sets ANTHROPIC_API_KEY in Vercel and the repository variable ASK_LIVE to true, an error answer
+    # is reported as "not configured" rather than failing every day.
+    name: Live /ask answers with a citation
+    if: github.event.schedule == '41 7 * * *' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - name: Ask one question
+        run: python3 model/ask_smoke.py --site https://eu27.cloud ${{ vars.ASK_LIVE == 'true' && '--require' || '' }} | tee -a "$GITHUB_STEP_SUMMARY"

@@ -5,6 +5,43 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-03
+
+### Changed: 25 withheld facts corrected or re-sourced and confirmed; 46 remain withheld (#93)
+
+- **The correction round.** A round re-researched the 69 facts the cross-model check had withheld
+  (`vetting.py prepare --withheld`):
+  - 6 research and 6 blind-review agents ran (Opus 5.5), giving 57 findings;
+  - 39 were fetched and checked, with 30 exact quote matches;
+  - admitted: 6 corrected values, 22 better-sourced corroborations, and 1 higher-tier supersession.
+- **The fact check of the 31 changed facts.** It was run with Fable 5.1, since the round recorded Opus 5.5
+  as their author: 25 confirmed and 6 withheld again.
+- **The result.** 1,346 printed facts pass, and 46 remain withheld.
+- **21 new source hosts classified**, among them the Irish statistics office, Czech e-Sbírka and the
+  Portuguese official gazette as T1.
+- **How it works.** A withheld value may be replaced only by a `corrects` finding that passes every check
+  again (#93). The first vetting run's files are untouched, and admission still reproduces.
+
+### Added: iPhone and every major browser, visual regression, Hypothesis, a mutation audit, a stability sample (#92)
+
+- **Phones and browsers.** The browser tests now run in Chrome, Firefox, desktop Safari (WebKit), iPhone SE
+  and iPhone 17 Pro: 188 tests, all passing. CI installs the browsers.
+- **Three iPhone fixes:**
+  - the disclaimer banner shows its first sentence on every page, with the rest one tap away;
+  - the `/ask` field is 16 px, so Safari no longer zooms in;
+  - navigation links are 28 px tall.
+- **Visual regression.** 10 screenshot comparisons in light and dark mode, at 1280 and 375 px, against
+  macOS baselines. A thicker header rule failed all 10.
+- **Hypothesis.** `tests/test_hypothesis.py`, with `requirements-dev.txt` pinned with hashes. CI installs
+  it; the model stays stdlib-only.
+- **The mutation audit** (`tests/tools/mutation_audit.py`) on `evidence.py` killed 83 of 98 mutants. New
+  tests for the gaps it found raised that to 91 of 98 (93%). The 7 survivors are listed in
+  `docs/testing.md`.
+- **Fact-check stability.** Opus 5.5 re-checked 50 facts Fable 5.1 had confirmed and agreed on 45 (90%).
+  The 5 disagreements are in the audit file; a sample never changes a verdict.
+- **The live `/ask` check** runs daily (`model/ask_smoke.py`). It reports "not configured" until the key is
+  set in Vercel.
+
 ## 2026-10-02
 
 ### Added: comprehensive testing: pull requests, the live site, PDFs, generated inputs, the network layer (#92)

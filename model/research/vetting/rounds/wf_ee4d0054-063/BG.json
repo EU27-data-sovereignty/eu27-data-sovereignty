@@ -1,0 +1,94 @@
+{
+ "iso": "BG",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:BG:C1",
+   "question": "indicator C1: Does the state operate its own government data centres that are in operation today?",
+   "relation": "corrects",
+   "url": "https://www.eufunds.bg/bg/opgg/node/9490",
+   "quote": "Към момента ДХЧО предоставя следните услуги: 1. Колокация - използване на физическо пространство в изградените Центрове за данни, както и мрежа за достъп, преносна среда и интернет достъп.",
+   "quote_english": "At present the DHCO provides the following services: 1. Colocation - use of physical space in the built data centres, as well as access network, transmission medium and internet access.",
+   "value": "yes",
+   "published": "2022-01-01",
+   "title": "Надграждане и развитие на Държавния хибриден частен облак, финансиран по ОП „Добро управление“",
+   "publisher": "Министерски съвет на Република България (eufunds.bg)",
+   "doc_type": "official_page",
+   "note": "The same page says the DHCO rests on four data centres (ЦДЕУ1, ЦДЕУ2, a recovery centre and the e-government control centre), with the State Agency for e-Government (ДАЕУ) as beneficiary. That is a state facility; the cited page only showed the colocation offer of Информационно обслужване. The page dates from 2022, so whether it is still in operation today is not re-confirmed.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "yes",
+    "reason": "The page says the State Hybrid Private Cloud (ДХЧО) currently ('Към момента') provides colocation in the data centres already built, so state government data centres are operating today."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "Yes: the ДХЧО (Държавен хибриден частен облак, State Hybrid Private Cloud) currently provides colocation in its built data centres"
+  },
+  {
+   "claim": "indicator:BG:K2",
+   "question": "indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body?",
+   "relation": "corrects",
+   "url": "https://ec.europa.eu/digital-building-blocks/sites/download/attachments/554369079/Notification%20Form%20to%20the%20EC.PDF?version=2&modificationDate=1688543772457&api=v2",
+   "quote": "Evrotrust Technologies AD, Sofia, Bulgaria. The electronic identification means shall be issued independently of and recognized by the notifying Member State, according to Article 7(a)(iii).",
+   "quote_english": "",
+   "value": "The notified Bulgarian eID scheme's means are issued by Evrotrust Technologies AD, independently of and recognized by the Member State",
+   "published": "2023-06",
+   "title": "Notification form for electronic identity scheme under Article 9(5) of Regulation (EU) No 910/2014 (Republic of Bulgaria, Minister of e-Government)",
+   "publisher": "Republic of Bulgaria, Minister of e-Government (published by the European Commission)",
+   "doc_type": "eu_document",
+   "note": "Bulgaria's own notification names Evrotrust Technologies AD, a private company, as the registration entity, the issuer and the party operating authentication, with the Ministry of e-Government as the responsible authority. That points to 'No' or at most 'Partly' through state supervision. As of 2026 a state eID on the ID card does not yet appear to be active.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "no",
+    "reason": "In the notification form (section 3.2, 'Party issuing the electronic identification means'), the issuer is Evrotrust Technologies AD under Article 7(a)(iii), issued 'independently of' the Member State, so the scheme is not run by the state."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:BG:customs:register",
+   "question": "Customs declarations: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://ep.customs.bg/eportal/public/newsArchive",
+   "quote": "във връзка с дейности по поддръжка на елементи от ИКТ инфраструктурата на Агенция \"Митници\" (АМ) са възможни временни прекъсвания в работоспособността на Митническата информационна система за внасяне (МИСВ)",
+   "quote_english": "in connection with maintenance of elements of the ICT infrastructure of the Customs Agency (CA), temporary interruptions are possible in the operation of the Customs Import Information System (MISV)",
+   "value": "Митническата информационна система за внасяне (МИСВ) (Customs Import Information System), Агенция \"Митници\"",
+   "published": "2026-01-22",
+   "title": "Е-Портал на Агенция \"Митници\" — архив на новините",
+   "publisher": "Агенция \"Митници\" (Bulgarian Customs Agency)",
+   "doc_type": "official_page",
+   "note": "The operator's own e-portal shows MISV running in 2026 (news of 22.01.2026 and 27.05.2026 on new functionality), supporting the system name without the unconfirmed go-live-date claim from the 2018 announcement.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "Митническа информационна система за внасяне (МИСВ)",
+    "reason": "The customs agency's maintenance notice names the Customs Information System for Import (МИСВ) as one of its systems; it is about import customs processing, though the quote does not use the word 'declarations'."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:BG:C1",
+   "status": "found"
+  },
+  {
+   "claim": "indicator:BG:K2",
+   "status": "found"
+  },
+  {
+   "claim": "record:BG:border_control:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:BG:customs:register",
+   "status": "found"
+  }
+ ]
+}

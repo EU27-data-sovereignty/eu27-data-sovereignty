@@ -54,6 +54,10 @@ jobs:
           npm ci --prefix web
       - name: Install poppler (to inspect the compiled PDFs)
         run: sudo apt-get install -y --no-install-recommends poppler-utils
+      - name: Install Firefox and WebKit for the browser tests (#92)
+        run: npx --prefix web playwright install --with-deps firefox webkit
+      - name: Test-only Python packages (hashed)
+        run: python3 -m pip install --require-hashes -r requirements-dev.txt
       - name: Run the gate
         run: ./test.sh
       - name: No high-severity advisories in the shipped dependencies

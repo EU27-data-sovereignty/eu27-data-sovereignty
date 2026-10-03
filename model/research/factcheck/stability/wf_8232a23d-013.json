@@ -1,0 +1,51 @@
+{
+ "run": "wf_8232a23d-013",
+ "prepared": "2026-10-02-sample-2026-2672f565",
+ "seed": "2026",
+ "date": "2026-10-02",
+ "n": 50,
+ "second_agreed": 45,
+ "rate": 0.9,
+ "disagreements": [
+  {
+   "claim": "record:IE:central_bank:foreign_dependency",
+   "first_checker": "claude-fable-5-1",
+   "first_verdict": "supported",
+   "second_checker": "claude-opus-5-5",
+   "second_verdict": "not_supported",
+   "reason": "The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an Irish component operated by the Central Bank of Ireland, which does not establish 'EU provider' either."
+  },
+  {
+   "claim": "record:ES:trust_services_pki:operator",
+   "first_checker": "claude-fable-5-1",
+   "first_verdict": "supported",
+   "second_checker": "claude-opus-5-5",
+   "second_verdict": "not_supported",
+   "reason": "The quote only says that FNMT-RCM is a public business entity and in-house provider of the General State Administration. Neither it nor the body text says that FNMT operates the state PKI or trust services; only the site navigation has 'Certificación Digital' and 'FNMT Ceres' links. So the page does not establish the operator role."
+  },
+  {
+   "claim": "record:FR:government_payroll:operator",
+   "first_checker": "claude-fable-5-1",
+   "first_verdict": "supported",
+   "second_checker": "claude-opus-5-5",
+   "second_verdict": "not_supported",
+   "reason": "The quote is a table heading. The table under it lists PAYSAGE ('consolidation de l'application de paye des agents de l'État') among projects carried by programmes 156 and 218. The question asks which body operates the system, and the printed text names no body; the page snippet does not name one either."
+  },
+  {
+   "claim": "record:DK:vehicle_licensing:register",
+   "first_checker": "claude-fable-5-1",
+   "first_verdict": "supported",
+   "second_checker": "claude-opus-5-5",
+   "second_verdict": "not_supported",
+   "reason": "The quote and § 1(2) are on the page; § 1(2) says the register holds data on each vehicle and who it belongs to ('tilhørsforhold'). But the printed text calls the register 'DMR', and that name or abbreviation does not appear anywhere on the page."
+  },
+  {
+   "claim": "record:RO:central_bank:register",
+   "first_checker": "claude-fable-5-1",
+   "first_verdict": "supported",
+   "second_checker": "claude-opus-5-5",
+   "second_verdict": "not_supported",
+   "reason": "The quote is on the page, but only as navigation-menu text: 'Sisteme operate de BNR: ReGIS SaFIR TARGET-România'. That supports BNR operating the three systems. The printed text also calls them 'financial market infrastructures', and that wording does not appear anywhere on the fetched page."
+  }
+ ]
+}

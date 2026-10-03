@@ -1,0 +1,63 @@
+{
+ "iso": "MT",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:MT:border_control:operator",
+   "question": "Border and visa systems: the body that operates it",
+   "relation": "corrects",
+   "url": "https://identita.gov.mt/frequently-asked-questions/visa/",
+   "quote": "No, Malta D-visas are only being processed by the Central Visa Unit within Identità",
+   "quote_english": "",
+   "value": "Central Visa Unit within Identità (processes Malta D-visas)",
+   "published": "",
+   "title": "Visa - Frequently Asked Questions",
+   "publisher": "Identità (Malta)",
+   "doc_type": "official_page",
+   "note": "This narrower statement says the CVU processes national visas within Identità; no T1/T2 source found names the CVU as operator of a border system such as the EES.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Central Visa Unit within Identità",
+    "reason": "Malta FAQ states verbatim that D-visas are processed only by the Central Visa Unit within Identità."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:MT:civil_registry:register",
+   "question": "Civil registry core: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://identita.gov.mt/public-registry-main-page/",
+   "quote": "Records kept at the Public Registry include acts of birth, marriage, civil union, death, and adoption registrations",
+   "quote_english": "",
+   "value": "Public Registry (records include acts of birth, marriage, civil union, death, and adoption registrations)",
+   "published": "",
+   "title": "Public Registry",
+   "publisher": "Identità (Malta)",
+   "doc_type": "official_page",
+   "note": "This gives custody to the Public Registry rather than its Civil Status Section, matching Civil Code art. 238(1), which the same page quotes.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Public Registry",
+    "reason": "Identità page states verbatim that the Public Registry keeps acts of birth, marriage, civil union, death and adoption."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:MT:border_control:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:MT:civil_registry:register",
+   "status": "found"
+  }
+ ]
+}

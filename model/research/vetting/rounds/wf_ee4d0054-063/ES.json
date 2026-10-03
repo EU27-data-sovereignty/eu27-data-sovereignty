@@ -1,0 +1,37 @@
+{
+ "iso": "ES",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:ES:education:operator",
+   "question": "Education: the body that operates it",
+   "relation": "corrects",
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-9155",
+   "quote": "La inscripción de los títulos universitarios oficiales españoles, de formación permanente o equivalentes en el Registro Nacional de Titulados Universitarios Oficiales (RNTUO) y la gestión y custodia de este.",
+   "quote_english": "The registration of official Spanish university degrees, continuing-education degrees or equivalents in the National Register of Official University Graduates (RNTUO), and its management and custody.",
+   "value": "Secretaría General de Universidades (General Secretariat of Universities, Ministerio de Ciencia, Innovación y Universidades): registration in, management and custody of the Registro Nacional de Titulados Universitarios Oficiales (RNTUO)",
+   "published": "2026-04-02",
+   "title": "Real Decreto 472/2024, de 7 de mayo, por el que se desarrolla la estructura orgánica básica del Ministerio de Ciencia, Innovación y Universidades",
+   "publisher": "Boletín Oficial del Estado",
+   "doc_type": "legislation",
+   "note": "This supersedes the 'Ministerio de Educación' wording of RD 1002/2010. The quote is function (q) in Article 4, titled 'La Secretaría General de Universidades', so the body's name comes from the article heading and not from the quoted sentence; the ministry's July 2026 RNTUO FAQ on ciencia.gob.es is consistent.",
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Subdirección General de Seguimiento de la Calidad Académica del Sistema Universitario (under the Secretaría General de Universidades)",
+    "reason": "The quote appears verbatim as function 4.2.q. The surrounding article gives this function, including managing and keeping the RNTUO register of university degrees, to this sub-directorate. The quote alone does not name the body."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:ES:education:operator",
+   "status": "found"
+  }
+ ]
+}

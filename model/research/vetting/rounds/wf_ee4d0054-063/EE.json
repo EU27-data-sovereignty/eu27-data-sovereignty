@@ -1,0 +1,119 @@
+{
+ "iso": "EE",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:EE:emergency_communications:operator",
+   "question": "Emergency calls and public-safety radio: the body that operates it",
+   "relation": "corrects",
+   "url": "https://www.112.ee/et/uudised/haeirekeskus-liigub-uele-uuele-domeeninimele-ja-e-posti-aadressidele-170",
+   "quote": "Domeenimuudatus on asjakohane, kuna Häirekeskus ei paku vaid hädaabiteenust ning ka selles vaates oleme laiendamas kanaleid",
+   "quote_english": "The domain change is appropriate because the Emergency Response Centre does not only provide the emergency service, and in that respect too we are expanding channels",
+   "value": "Häirekeskus (Emergency Response Centre), provider of the emergency service (hädaabiteenus)",
+   "published": "2026-01-30",
+   "title": "Häirekeskus liigub üle uuele domeeninimele ja e-posti aadressidele",
+   "publisher": "Häirekeskus",
+   "doc_type": "official_page",
+   "note": "The operator's own site; the 112 page there also says 'Kõik Häirekeskusesse tehtud kõned salvestatakse'. It covers emergency calls only, not public-safety radio, and the agency is moving to the domain hairekeskus.ee.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "Häirekeskus",
+    "reason": "The quote appears verbatim and implies that Häirekeskus provides the emergency service (context: 'telefon ei ole enam ainuke viis, kuidas hädaabiteenust saada'). It says nothing about public-safety radio and does not explicitly call Häirekeskus the operator of the emergency-call system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:EE:facial_biometric:register",
+   "question": "Facial biometric: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://web.archive.org/web/20260313205329/https://www.riigiteataja.ee/akt/itds",
+   "quote": "Andmekogu ABIS on elektrooniline andmekogu, mille eesmärk käesoleva seaduse tähenduses on töödelda käesoleva seaduse § 15 lõikes 4 sätestatud dokumentide ning diplomaatilise passi väljaandmise menetlustes võetud biomeetrilisi andmeid isiku tuvastamiseks ja isikusamasuse kontrollimiseks.",
+   "quote_english": "The ABIS database is an electronic database whose purpose under this Act is to process biometric data taken in the procedures for issuing the documents specified in § 15(4) and diplomatic passports, for identifying persons and verifying identity.",
+   "value": "Andmekogu ABIS (ABIS database, the automated biometric identification system database)",
+   "published": "2025-12-10",
+   "title": "Isikut tõendavate dokumentide seadus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Identity Documents Act, version in force from 10.12.2025, read through a March 2026 archive of the official portal (the live portal blocks automated fetches). It names the register, unlike the printed definition. § 11^1 expands ABIS as 'automaatse biomeetrilise isikutuvastuse süsteemi andmekogu', and the Act's biometric data include the facial image.",
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "Andmekogu ABIS",
+    "reason": "The quote appears verbatim in § 15^4(1) of the archived law and names ABIS as the database that processes biometric data taken when identity documents are issued. It does not say that facial images in particular are in ABIS."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:EE:fingerprint_biometric:operator",
+   "question": "Fingerprint biometric: the body that operates it",
+   "relation": "corrects",
+   "url": "https://web.archive.org/web/20260313205329/https://www.riigiteataja.ee/akt/itds",
+   "quote": "Andmekogu ABIS vastutavad töötlejad on Politsei- ja Piirivalveamet ning Välisministeerium.",
+   "quote_english": "The controllers of the ABIS database are the Police and Border Guard Board and the Ministry of Foreign Affairs.",
+   "value": "Politsei- ja Piirivalveamet ning Välisministeerium (Police and Border Guard Board and Ministry of Foreign Affairs), joint controllers of andmekogu ABIS",
+   "published": "2025-12-10",
+   "title": "Isikut tõendavate dokumentide seadus",
+   "publisher": "Riigi Teataja",
+   "doc_type": "legislation",
+   "note": "Identity Documents Act § 15^4(5), read through an archived copy of the official portal. ABIS holds the biometric data, fingerprints included, so the statute names two controllers, not PPA alone; this redaction was in force until 31.05.2026, so a newer one exists.",
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "Politsei- ja Piirivalveamet and Välisministeerium (joint controllers)",
+    "reason": "The quote appears verbatim in § 15^4(5) and names the Police and Border Guard Board and the Ministry of Foreign Affairs as ABIS's controllers. It does not mention fingerprints."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:EE:judicial_criminal:operator",
+   "question": "Judicial & criminal justice: the body that operates it",
+   "relation": "corrects",
+   "url": "https://web.archive.org/web/20260824074134/https://www.justdigi.ee/isikuandmete-tootlemine",
+   "quote": "Kui Teie isikuandmed on kantud karistusregistrisse (oleme karistusregistri vastutav töötleja)",
+   "quote_english": "If your personal data are entered in the criminal records database (we are the controller of the criminal records database)",
+   "value": "the publishing ministry, Justiits- ja Digiministeerium (Ministry of Justice and Digital Affairs), as karistusregistri vastutav töötleja (controller of the criminal records database)",
+   "published": "2026-08",
+   "title": "Isikuandmete töötlemine",
+   "publisher": "Justiits- ja Digiministeerium",
+   "doc_type": "official_page",
+   "note": "The ministry's own privacy page, read through an August 2026 archive because the live site blocks automated fetches. The quote names no ministry: 'we' is the ministry that publishes the page. The same page says 'Registri volitatud töötleja on Registrite ja Infosüsteemide Keskus' without the acronym RIK; that sentence is split across two links in the HTML.",
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "Justiits- ja Digiministeerium",
+    "reason": "The quote appears verbatim on the Ministry of Justice and Digital Affairs' privacy page, where the ministry ('oleme') says it is the controller of the criminal records register (karistusregister)."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:EE:benefits_pensions:register",
+   "status": "no_better_found"
+  },
+  {
+   "claim": "record:EE:emergency_communications:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:facial_biometric:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:fingerprint_biometric:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:EE:judicial_criminal:operator",
+   "status": "found"
+  }
+ ]
+}

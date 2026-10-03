@@ -22,7 +22,7 @@
 | 🇱🇻 | [Latvia](LV/GOAL.md) | LV | 20 of 39 | 5 of 9 | Not yet sized |
 | 🇱🇹 | [Lithuania](LT/GOAL.md) | LT | 6 of 39 | 2 of 9 | Not yet sized |
 | 🇱🇺 | [Luxembourg](LU/GOAL.md) | LU | 5 of 39 | 1 of 9 | Not yet sized |
-| 🇲🇹 | [Malta](MT/GOAL.md) | MT | 18 of 39 | 8 of 9 | Not yet sized |
+| 🇲🇹 | [Malta](MT/GOAL.md) | MT | 19 of 39 | 8 of 9 | Not yet sized |
 | 🇳🇱 | [Netherlands](NL/GOAL.md) | NL | 25 of 39 | 8 of 9 | Not yet sized |
 | 🇵🇱 | [Poland](PL/GOAL.md) | PL | 32 of 39 | 8 of 9 | Not yet sized |
 | 🇵🇹 | [Portugal](PT/GOAL.md) | PT | 27 of 39 | 9 of 9 | Not yet sized |

@@ -27,6 +27,8 @@ if (!executablePath) {
   )
 }
 
+const AXE = /no detectable violations/
+
 /**
  * Port 4823 rather than Vite's default 4173: another project in this workspace runs a
  * preview server on 4173, and binding against it silently failed once, so the tests
@@ -42,9 +44,19 @@ export default defineConfig({
   use: {
     baseURL: 'http://localhost:4823',
     trace: 'on-first-retry',
-    launchOptions: { executablePath },
   },
-  projects: [{ name: 'chrome', use: { ...devices['Desktop Chrome'] } }],
+  /**
+   * Chrome is the installed browser (#22). Firefox, Safari's engine and two iPhones (#92) use Playwright's
+   * own builds, pinned with @playwright/test (`npx playwright install firefox webkit`; CI installs them).
+   * The axe scans run in Chrome only: they test the markup, which every engine is served the same.
+   */
+  projects: [
+    { name: 'chrome', use: { ...devices['Desktop Chrome'], launchOptions: { executablePath } } },
+    { name: 'firefox', use: { ...devices['Desktop Firefox'] }, grepInvert: AXE },
+    { name: 'webkit', use: { ...devices['Desktop Safari'] }, grepInvert: AXE },
+    { name: 'iphone-se', use: { ...devices['iPhone SE (3rd gen)'] }, grepInvert: AXE },
+    { name: 'iphone-17-pro', use: { ...devices['iPhone 17 Pro'] }, grepInvert: AXE },
+  ],
   webServer: {
     command: 'npm run preview -- --port 4823 --strictPort',
     url: 'http://localhost:4823',

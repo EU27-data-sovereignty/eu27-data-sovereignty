@@ -50,6 +50,7 @@ python3 model/research.py report       # verification outcomes per state
 ./run.sh retry                         # not-found quotes: served page in its charset, then rendered; admit
 ./run.sh eurostat check|adopt COL=PERIOD   # Eurostat vintages; pins are data (model/eurostat_pins.csv)
 ./run.sh vet prepare|stage|hosts|verify|admit|report|manifest   # vetting run; the agent step is /vet
+./run.sh vet prepare --withheld; ./run.sh vet stage <out> --run <id> --round   # correction round (#93)
 ./run.sh reproduce [--evidence]        # rebuild everything from a fresh clone of HEAD and compare (#84)
 ./run.sh contrib forms|ingest|status|audit-sample   # citizen submissions and reviews; two-person rule (#85)
 ./run.sh factcheck status|gate        # cross-model fact check: what is due; the deploy gate (#87)

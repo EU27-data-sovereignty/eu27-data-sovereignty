@@ -19,7 +19,7 @@ const FINDINGS = {
         properties: {
           claim: { type: 'string', description: 'the claim id from the input, unchanged' },
           question: { type: 'string', description: 'the "what" text of that input fact or gap, copied unchanged' },
-          relation: { type: 'string', enum: ['upgrade', 'corroborates', 'supersedes', 'contradicts', 'fills_gap'] },
+          relation: { type: 'string', enum: ['upgrade', 'corroborates', 'supersedes', 'contradicts', 'fills_gap', 'corrects'] },
           url: { type: 'string', description: 'the exact https URL whose text contains the quote' },
           quote: { type: 'string', description: 'verbatim, 8-60 words, in the language of the page' },
           quote_english: { type: 'string', description: 'English translation of the quote; empty if the page is English' },
@@ -80,6 +80,8 @@ Source quality, best first:
 - T1: the official law portal or official gazette of ${s.name} (consolidated text), EUR-Lex, the national statistics office, the operator's own official website.
 - T2: the competent ministry, agency or regulator; the national audit office; an official annual report on a government domain.
 - Never cite: ${MIRRORS}. They are copies, not sources. Only https URLs.
+
+FACTS WITH "checker_reason": a second model checked the printed statement against its quote and did not confirm it, for the reason given. For each such fact, find a T1/T2 source whose verbatim quote supports a CORRECT statement answering the same question: often narrower wording than was printed, or the same statement on a page that says it plainly. Relation "corrects". The value says only what the quote says, and may differ from the printed one. If no T1/T2 source supports any answer, report no finding and outcome "no_better_found". Do not repeat the printed statement unless a quote supports it exactly.
 
 PART 1 — the printed facts (weakest source first). For each fact:
 1. If it rests on a T3/T4 source (e.g. an unofficial law mirror), find the SAME statement on a T1/T2 source: relation "upgrade" (for a statute: the same provision on the official law portal).

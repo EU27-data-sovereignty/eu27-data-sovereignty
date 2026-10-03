@@ -1,0 +1,193 @@
+{
+ "iso": "PT",
+ "run": "wf_ee4d0054-063",
+ "date": "2026-10-02",
+ "workflow_sha256": "3da33301a15bf0fa49c4ca3fbbdd667b8fe7b1c922c85fe4964a18b95ee75e4b",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "indicator:PT:C2",
+   "question": "indicator C2: Is a national sovereign or government cloud platform in operation (not announced)?",
+   "relation": "corrects",
+   "url": "https://bo.digital.gov.pt/api/assets/etic/2fecc6f4-b424-41c6-b2a8-722b17b1914f/",
+   "quote": "O financiamento da implementação da Nuvem Soberana, incluindo o processo de migração inicial, é garantido pelo orçamento do Estado através da Agência para a Reforma Tecnológica do Estado, I. P. (ARTE, I. P.), e da IP Telecom, S. A.",
+   "quote_english": "Funding for the implementation of the Sovereign Cloud, including the initial migration process, is guaranteed by the State budget through the Agency for the Technological Reform of the State (ARTE) and IP Telecom.",
+   "value": "The Nuvem Soberana (Sovereign Cloud) is at implementation stage: its implementation and initial migration are funded through ARTE and IP Telecom",
+   "published": "2026-05-27",
+   "title": "Resolução do Conselho de Ministros n.º 102/2026 (Plano Nacional de Nuvem Soberana)",
+   "publisher": "Presidência do Conselho de Ministros (via digital.gov.pt)",
+   "doc_type": "legislation",
+   "note": "The resolution funds a sovereign cloud still to be implemented; the same text refers to entities 'que venham a utilizar a Nuvem Soberana'. That points to 'announced' (No) rather than 'Partly'. Press reports, not cited here, put the start in July 2027.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "no",
+    "reason": "The 27 May 2026 Council of Ministers resolution approves the National Sovereign Cloud Plan and assigns funding for its future 'implementação' and initial migration, so the cloud is planned, not shown to be in operation."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:PT:breeder_documents:register",
+   "question": "Breeder document scans: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://files.diariodarepublica.pt/1s/1999/05/115a00/26062613.pdf",
+   "quote": "Os pedidos de bilhete de identidade e as certidões não emitidas pelo registo civil português são microfilmados ou conservados em suporte informático que ofereça condições de segurança, após o que são destruídos.",
+   "quote_english": "Applications for identity cards and certificates not issued by the Portuguese civil registry are microfilmed or kept on computer media offering security conditions, after which they are destroyed.",
+   "value": "ID card applications and certificates not issued by the Portuguese civil registry are microfilmed or kept on secure computer media, then destroyed",
+   "published": "1999-05-18",
+   "title": "Lei n.º 33/99, de 18 de Maio (Diário da República I Série-A n.º 115)",
+   "publisher": "Diário da República",
+   "doc_type": "legislation",
+   "note": "This is art. 32(1) in the official gazette (original text, not consolidated). It drops the printed 'foreign-issued' and 'paper originals' glosses. Host files.diariodarepublica.pt is not yet in authorities.csv. The PDF is two-column, so text extraction may hyphenate 'certidões'.",
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "",
+    "reason": "Found in the 1999 Diário da República text (two-column layout); it says ID applications and foreign certificates are microfilmed or held digitally, but names no register or system."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:PT:business_registry:operator",
+   "question": "Business registry: the body that operates it",
+   "relation": "corrects",
+   "url": "https://irn.justica.gov.pt/Sobre-o-IRN/Quem-somos",
+   "quote": "no quadro das orientações do Programa de Reestruturação da Administração Central do Estado (PRACE) e dos objetivos definidos para a modernização administrativa dos serviços do Estado, sucedendo à Direção-Geral dos Registos e Notariado",
+   "quote_english": "within the framework of the guidelines of the Central State Administration Restructuring Programme (PRACE) and the objectives set for administrative modernisation of State services, succeeding the Directorate-General of Registries and Notary",
+   "value": "Instituto dos Registos e do Notariado (IRN), successor to the Direção-Geral dos Registos e Notariado (Institute of Registries and Notary)",
+   "published": "",
+   "title": "Quem somos",
+   "publisher": "Instituto dos Registos e do Notariado, I.P.",
+   "doc_type": "official_page",
+   "note": "This is IRN's own page saying it succeeded the Directorate-General. Paired with Código do Registo Comercial art. 78-C, it backs the '(now IRN)' gloss, which should be cited to this page and not presented as part of the statute.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "",
+    "reason": "Found verbatim as part of a sentence whose subject is the IRN, but the quote itself has no subject and does not mention the business registry or who operates it."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:PT:digital_identity_credentials:operator",
+   "question": "Digital identity credentials: the body that operates it",
+   "relation": "corrects",
+   "url": "https://www.autenticacao.gov.pt/termos-e-condicoes",
+   "quote": "Neste sítio poderá obter informações, aderir e gerir a sua identificação eletrónica, nomeadamente a Chave Móvel Digital, o Cartão de Cidadão, o Sistema de Certificação de Atributos Profissionais, e serviços de autenticação e assinatura digital. Este sítio é gerido pela A Agência para a Reforma Tecnológica do Estado, I.P.",
+   "quote_english": "On this site you can obtain information, sign up for and manage your electronic identification, namely the Chave Móvel Digital, the Citizen Card, the Professional Attributes Certification System, and authentication and digital signature services. This site is managed by the Agency for the Technological Reform of the State, I.P.",
+   "value": "The official site for managing the Chave Móvel Digital is managed by Agência para a Reforma Tecnológica do Estado, I.P. (Agency for the Technological Reform of the State, ARTE)",
+   "published": "2026",
+   "title": "Termos e Condições - Autenticação.gov",
+   "publisher": "ARTE - Agência para a Reforma Tecnológica do Estado, I.P.",
+   "doc_type": "official_page",
+   "note": "The operator's own portal names ARTE (AMA renamed by Decreto-Lei 96/2025) as manager of the CMD site; it is narrower than the printed text, since it covers the site, not explicitly the CMD back-end infrastructure that Lei 37/2014 assigns to AMA.",
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Agência para a Reforma Tecnológica do Estado, I.P. (ARTE)",
+    "reason": "The terms page says the site, through which the Chave Móvel Digital, Cartão de Cidadão and authentication services are obtained and managed, is run by ARTE; strictly, it states who runs the site rather than the credential system itself."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:PT:education:register",
+   "question": "Education: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://www.dge.mec.pt/noticias/modelos-de-diplomas-e-de-certificados-em-formato-eletronico",
+   "quote": "Os diplomas e os certificados são disponibilizados aos seus titulares pelas escolas, através de meios eletrónicos, sendo emitidos em suporte eletrónico através do Sistema Integrado de Informação e Gestão da Oferta Educativa e Formativa (SIGO).",
+   "quote_english": "Diplomas and certificates are made available to their holders by schools by electronic means, being issued in electronic form through the Integrated Information and Management System for Education and Training Provision (SIGO).",
+   "value": "Diplomas and certificates are issued electronically through the Sistema Integrado de Informação e Gestão da Oferta Educativa e Formativa (SIGO) (Integrated Information and Management System for Education and Training Provision)",
+   "published": "",
+   "title": "Modelos de diplomas e de certificados em formato eletrónico",
+   "publisher": "Direção-Geral da Educação (Ministério da Educação)",
+   "doc_type": "official_page",
+   "note": "A ministry directorate states plainly that diplomas and certificates themselves are issued through SIGO; the page concerns basic and secondary education (Portaria 194/2021), so it is narrower than 'qualifications under the National Qualifications System'.",
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "Sistema Integrado de Informação e Gestão da Oferta Educativa e Formativa (SIGO)",
+    "reason": "The DGE page says diplomas and certificates are issued electronically through SIGO, which it names in full."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:PT:health_insurance:register",
+   "question": "Statutory health insurance: the name of the register or system",
+   "relation": "corrects",
+   "url": "https://www.ers.pt/pt/utentes/perguntas-frequentes/faq/o-registo-nacional-de-utentes-rnu-e-a-inscricao-nos-cuidados-de-saude-primarios/",
+   "quote": "O RNU é a base de dados nacional de identificação e registo dos utentes no SNS, permitindo a caracterização da inscrição dos utentes nos cuidados de saúde primários.",
+   "quote_english": "The RNU is the national database for the identification and registration of users in the SNS, allowing the characterisation of users' enrolment in primary health care.",
+   "value": "Registo Nacional de Utentes (RNU) (National Register of Health Service Users), the national database for identifying and registering SNS users",
+   "published": "2026-08-12",
+   "title": "O Registo Nacional de Utentes (RNU) e a inscrição nos cuidados de saúde primários",
+   "publisher": "Entidade Reguladora da Saúde (ERS)",
+   "doc_type": "official_page",
+   "note": "The health regulator's FAQ, citing Despacho 14830/2024 as amended by Despacho 3118/2026, names the register and its abbreviation and calls it the national identification database for SNS users; it does not say other systems use it as their reference.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "Registo Nacional de Utentes (RNU)",
+    "reason": "The ERS FAQ calls the RNU the national database identifying and registering users of the SNS; the full name comes from the page title, and the SNS is a national health service rather than an insurance scheme."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:PT:public_finance:operator",
+   "question": "Treasury and state accounts: the body that operates it",
+   "relation": "corrects",
+   "url": "https://www.igcp.pt/pt/igcp",
+   "quote": "O IGCP tem por competência gerir de forma integrada, a tesouraria, o financiamento e a dívida pública direta do Estado",
+   "quote_english": "IGCP is competent to manage, in an integrated way, the treasury, the financing and the direct public debt of the State",
+   "value": "IGCP (Agência de Gestão da Tesouraria e da Dívida Pública, Treasury and Public Debt Management Agency) manages the State's treasury, financing and direct public debt",
+   "published": "",
+   "title": "IGCP - História, missão e organização da agência",
+   "publisher": "Agência de Gestão da Tesouraria e da Dívida Pública - IGCP, E.P.E.",
+   "doc_type": "official_page",
+   "note": "The operator's own page names IGCP, not DGO or ESPAP, as the body that manages the State treasury; no T1/T2 source was found here supporting DGO/ESPAP as the treasury operator.",
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "IGCP",
+    "reason": "The IGCP's own page says the IGCP is responsible for managing the State's treasury, financing and direct public debt in an integrated way."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "indicator:PT:C2",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:breeder_documents:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:business_registry:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:digital_identity_credentials:operator",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:education:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:health_insurance:register",
+   "status": "found"
+  },
+  {
+   "claim": "record:PT:public_finance:operator",
+   "status": "found"
+  }
+ ]
+}

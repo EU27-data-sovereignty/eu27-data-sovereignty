@@ -37,10 +37,12 @@ export function Layout({ generated, provenance }: { generated: string; provenanc
                 key={n.to}
                 to={n.to}
                 end={n.end}
+                // py-1: a 28 px tap target, over WCAG 2.2's 24 px minimum (#92).
                 className={({ isActive }) =>
-                  isActive
+                  'inline-block py-1 ' +
+                  (isActive
                     ? 'text-[var(--color-accent-text)] underline decoration-[var(--color-eu-gold)] decoration-2 underline-offset-4'
-                    : 'text-[var(--color-fg-secondary)] hover:text-[var(--color-fg-primary)]'
+                    : 'text-[var(--color-fg-secondary)] hover:text-[var(--color-fg-primary)]')
                 }
               >
                 {n.label}
