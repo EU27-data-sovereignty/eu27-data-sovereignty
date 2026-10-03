@@ -1,0 +1,310 @@
+{
+ "run": "wf_90fb82e7-35e",
+ "prepared": "2026-10-03-sample-2027-20207eb2",
+ "batch": "S01",
+ "iso": "EU",
+ "checker_model": "claude-opus-5-5",
+ "reported_model": "claude-opus-5-5",
+ "verdicts": [
+  {
+   "claim": "param:LU:gdp_eur_bn",
+   "fact_sha256": "74055fb2a7331ca0294812c0165f33f2d762c1abe563cd31ddcd50091a113e47",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The API returns 89521.5 million EUR (current prices, B1GQ) for LU in 2025, which is 89.5 EUR bn after scaling and rounding.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=LU&time=2025"
+  },
+  {
+   "claim": "record:IT:government_payroll:register",
+   "fact_sha256": "85c6c474e750c1eb691a015cd935bcd7da73fd9aa37569f92950a83be9bb97ba",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The page says NoiPA is the MEF/DAG platform for managing public-administration personnel, so it supports NoiPA as the name of the payroll and personnel system.",
+   "quote_found": true,
+   "checked_url": "https://noipa.mef.gov.it/cl/chi-siamo"
+  },
+  {
+   "claim": "param:DK:population_m",
+   "fact_sha256": "390bed1de3449e72bde06fc23e41905206c31794870d23fbbb119f65adb72dad",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The API returns 6,025,603 for the DK population on 1 January 2026, which rounds to 6.026 million.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tps00001?format=JSON&indic_de=JAN&geo=DK&time=2026"
+  },
+  {
+   "claim": "indicator:DK:K1",
+   "fact_sha256": "f3dea64109082488c0bb0dd1ca8c5bb9fe96743b551191308777edfd5f49ec03",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim: 'Den Danske Stat (CA1)' is a qualified trust service provider under eIDAS. The nemlog-in PDF likewise says the Danish State acts as the qualified trust service provider, so the state itself operates the QTSP and 'Yes' is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.ca1.gov.dk/"
+  },
+  {
+   "claim": "record:ES:benefits_pensions:operator",
+   "fact_sha256": "379dee8ed6b5758018fdc344ca603d9ec8b8acaccc8ac1d36664b69e984b40e6",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The LGSS text gives the Instituto Nacional de la Seguridad Social the management and running of the Registro de Prestaciones Sociales Públicas, which supports INSS as the operator.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
+  },
+  {
+   "claim": "record:HU:border_control:operator",
+   "fact_sha256": "f588a92e588801f0045fee86f490485e97ed6d97528339af6b85727537ff32b8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "Act CLXXXI of 2012 (SIS II), § 2(1)(a), says the N.SIS Hivatal is responsible for handling the data in the national copy database. That matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1200181.TV"
+  },
+  {
+   "claim": "record:SK:grid_control:register",
+   "fact_sha256": "01eeb031c9d243981ccdf84af9841c94e4dc482e90b13d6f66210facaffef0f2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The SEPS dispatch page says the Slovak Electricity Dispatch (SED) controls the power system and monitors the transmission equipment, and that in a blackout it directly manages the defence and restoration plans. This supports the printed description.",
+   "quote_found": true,
+   "checked_url": "https://www.sepsas.sk/pre-partnerov/dispecing/"
+  },
+  {
+   "claim": "record:BG:geospatial:register",
+   "fact_sha256": "c5ed1aadd005b4937d8c9e048107d179bf9cea9a6903e3503aaf46b9d6dd14f9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The AGKK functions page lists, under the Geodesy and Cartography Act, the 'creation and maintenance of topographic databases and of the geo-information system'. That supports the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.cadastre.bg/funkcii-na-agkk"
+  },
+  {
+   "claim": "record:HR:public_finance:register",
+   "fact_sha256": "00a7f30f545eb12f0bd29b361bb9610e27e1a8f9924b7eb9e7eac3a6394fce57",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The Ministry of Finance page says every budget-user transaction goes through the State Treasury system, that is the single treasury account deposited with the Hrvatska narodna banka (HNB). This matches the printed text.",
+   "quote_found": true,
+   "checked_url": "https://mfin.gov.hr/istaknute-teme/drzavna-riznica/103"
+  },
+  {
+   "claim": "record:BG:digital_identity_credentials:operator",
+   "fact_sha256": "04f89e1160523a9410d2d5d9a83efeecd7b999ea692699c56704c2bfce7af8ff",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "not_supported",
+   "reason": "Art. 4(3) only says that persons designated by order of the Minister of Interior also have access to the Art. 3(1) register. Neither that article nor Art. 3 says that the MVR runs or maintains the register, so the parenthetical operator claim '(MVR runs the register)' is added by the report.",
+   "quote_found": true,
+   "checked_url": "https://www.mtc.government.bg/sites/default/files/pravilnik_za_prilagane_na_zakona_za_elektronnata_identifikaciq.pdf"
+  },
+  {
+   "claim": "record:FI:civil_registry:register",
+   "fact_sha256": "aae04dd7ca7ec0d5b6bd309e8f2700f123fed7d059fad9c08c025875aaf9e31f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "Law 661/2009 states verbatim that the Väestötietojärjestelmä is a general national base register with data on persons, real estate, buildings and dwellings. The archived DVV page also contains its quote.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2009/661"
+  },
+  {
+   "claim": "record:SI:central_bank:register",
+   "fact_sha256": "7b3d43546508f9bc22a430176c161bc71fcc07c8a647be115d04d00804b94c4e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The Banka Slovenije page says TARGET services are for settling (mostly) large-value payments, securities transactions and instant payments. The ECB page lists T2, T2S and TIPS for the same purposes.",
+   "quote_found": true,
+   "checked_url": "https://www.bsi.si/sl/placilni-sistemi/placilna-infrastruktura"
+  },
+  {
+   "claim": "record:BG:crisis_management:register",
+   "fact_sha256": "d952ceec4e02449b38451797a07006718a0583fd77a6a88f701dfc81f62947c7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The Sega article calls BG-ALERT a system for warning the population through mobile operators' networks using Cell Broadcast technology. The MVR PDF also names Cell Broadcast and mobile networks, so the printed description is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.segabg.com/hot/category-bulgaria/mvr-shte-izdirva-banditi-chrez-bg-alert"
+  },
+  {
+   "claim": "record:DK:intelligence:register",
+   "fact_sha256": "0f0f8e03a3e7acffbc89ad94369b9d21619c30c6593a81a63b584c92a9a97fe0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The PET Act (LBK 231/2017) names Politiets Efterretningstjeneste (PET). § 1 gives it state-security tasks, and § 3 says it may collect and obtain information relevant to its activities. The word 'domestic' is a light gloss the text does not literally state.",
+   "quote_found": true,
+   "checked_url": "https://www.retsinformation.dk/eli/lta/2017/231/xml"
+  },
+  {
+   "claim": "record:EE:customs:register",
+   "fact_sha256": "6ad00c1fef766aea2e55b77a3aa5d0b06dfd968daadaa4232fdd84e5aded637d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "emta.ee returned 403 to both curl and WebFetch, so I read the project's hashed copy of that page, which contains the quote verbatim. It says the new import customs clearance information system Impulss starts on 1 July, which supports the printed name.",
+   "quote_found": true,
+   "checked_url": "hashed copy f81a4a1d0c92fbd6.txt"
+  },
+  {
+   "claim": "record:SI:official_gazette:operator",
+   "fact_sha256": "e85004a9b27442a2c6c7424beeea8b9ceab7801611327cb7d545b5ae8c3c53b8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The page says publication of the official gazette passed directly to the Služba Vlade RS za zakonodajo on 1 March 2026. That supports it as the operator.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/glasilo-uradni-list-rs/o-glasilu"
+  },
+  {
+   "claim": "param:DE:land_km2",
+   "fact_sha256": "258d8f3fd80cfdbaaaca1d4dd608cf73c240aa4defd4e9ac2a5d006b9a701e9e",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The API returns 353260 km2 for DE in 2026 with landuse L0008, labelled 'Land area - total'. This matches 353 260 km².",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/reg_area3?format=JSON&landuse=L0008&unit=KM2&geo=DE&time=2026"
+  },
+  {
+   "claim": "record:ES:tax:register",
+   "fact_sha256": "b3b7e5448233bc6ed3d37022c5c331563f5768988c47369cb79e0a9b1b2c56d8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The Ley General Tributaria lists among tax-management functions the issuing of the tax identification number and the compiling and maintenance of the tax censuses. This matches the printed text.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-23186"
+  },
+  {
+   "claim": "record:EE:residence_permits:register",
+   "fact_sha256": "e2694ef3802118a03ba78a3e98c73aff89dedb01eeb22604856e31bc05130e5d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "§ 1 of the regulation gives the database's official name as 'elamislubade ja töölubade register'. The quote is present; it differs only in whitespace before a parenthesis.",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20250514142132/https://www.riigiteataja.ee/akt/114012017018"
+  },
+  {
+   "claim": "param:BG:gdp_eur_bn",
+   "fact_sha256": "01fd4b76e7d86b4ed30c1e3ceaffe72fd4922eebaeacf48e514078594f2eff12",
+   "author_model": "program:fetch_eurostat.py",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The API returns 116018.3 million EUR for BG in 2025, which is 116.0 EUR bn after scaling and rounding.",
+   "quote_found": true,
+   "checked_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&na_item=B1GQ&unit=CP_MEUR&geo=BG&time=2025"
+  },
+  {
+   "claim": "record:DE:national_archives:register",
+   "fact_sha256": "7871bee84ccf9d23bff0ea1e3f9096bed11bd152e033cfad4a6f82e0c6c599d2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The page says the Bundesarchiv provides the DZAB to all federal public bodies as a central service. This is exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.bundesarchiv.de/unterlagen-abgeben/behoerdenberatung-zu-schriftgut-und-informationsverwaltung/nutzung-des-digitalen-zwischenarchivs-dzab/"
+  },
+  {
+   "claim": "record:DE:official_gazette:operator",
+   "fact_sha256": "fc7ee7d1028f960d12087d8f5959a5c1c8bdc87371a0c1a98837eb3fe9fa47bd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "§ 2(1) VkBkmG says the Bundesgesetzblatt is issued by the Bundesamt für Justiz on recht.bund.de, which supports it as the operator.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/vkbkmg/__2.html"
+  },
+  {
+   "claim": "record:HU:public_health_surveillance:register",
+   "fact_sha256": "98efdaacb196356ddda1d417ec8e91b1e7d8cc1db0daaa9ec8dceb4f165b8524",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The 18/1998 NM decree requires the vaccinated child's data to be recorded electronically without delay in the electronic epidemiological surveillance system. This matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99800018.NM"
+  },
+  {
+   "claim": "record:MT:facial_biometric:register",
+   "fact_sha256": "b5ae8d6c10d64f93705b9a1c013c379add5c275d65865575b1cd5afff445657e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The page says facial images captured for the e-ID card are passed to the Electoral Office for election purposes, including voting documents and electoral registers. This is the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://identita.gov.mt/identity-cards-unit-electoral-office/"
+  },
+  {
+   "claim": "record:CZ:emergency_communications:operator",
+   "fact_sha256": "73b4daee4220a657d0dd932398955de1eff55737a4e9985a5c8576d02b5cb40b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The page says line 112 is provided by the regional fire rescue services in their Centra tísňové komunikace (CTK). This matches the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://hzscr.gov.cz/clanek/hzs-jihomoravskeho-kraje-menu-informacni-servis-zpravodajstvi-2026-dnes-je-evropsky-den-linky-112.aspx"
+  },
+  {
+   "claim": "record:AT:residence_permits:operator",
+   "fact_sha256": "329bdb5bbf9e98eca3a4fd0f8c4060ebff479c50430f8d01e6c95da06be4af47",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "In the BFA-VG section on the Zentrales Fremdenregister, para. (3) says the Bundesminister für Inneres acts as processor under Art. 4(8) and Art. 28(1) GDPR. That supports the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20007944"
+  },
+  {
+   "claim": "record:ES:land_property:operator",
+   "fact_sha256": "0135ed85ed0c535f3bdef7992fd3cb094ffc2864635c6297798348c3b65f6d34",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "The cadastre law says the Catastro Inmobiliario is an administrative register that depends on the Ministerio de Hacienda. This supports the Ministry of Finance as the body behind the cadastre, though the source covers the cadastre specifically, not the property registry.",
+   "quote_found": true,
+   "checked_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-4163"
+  },
+  {
+   "claim": "record:FI:breeder_documents:register",
+   "fact_sha256": "31f3102d7e2e835b1ff0c033dd0dec330969a40a30ee38528dfc32c8fb0b9819",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "Law 661/2009 states verbatim that the Population Information System consists of the national system plus regionally organised document and similar data sets not taken into the system in digital form. This matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2009/661"
+  },
+  {
+   "claim": "record:CZ:benefits_pensions:operator",
+   "fact_sha256": "a853e3ce919658a8789174d9f764c5f17612ec2208db40b1a08de420594fd668",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "§ 4c(1) of Act 582/1991 makes the ministry (MPSV) the controller of its Integrated Information System. The page continues that the system includes (b) the Integrated Information System of the ČSSZ, so the printed statement is supported.",
+   "quote_found": true,
+   "checked_url": "https://www.zakonyprolidi.cz/cs/1991-582"
+  },
+  {
+   "claim": "record:HR:police_records:register",
+   "fact_sha256": "9bb20e7b9e7a5901d965568e7f2cb661804f680ae24f12b8e813dc916d2bb196",
+   "author_model": "unrecorded",
+   "checker_model": "claude-opus-5-5",
+   "verdict": "supported",
+   "reason": "Both the Narodne novine text and zakon.hr define the Ministry information system as the Informacijski sustav Ministarstva unutarnjih poslova. This matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2009_07_76_1835.html"
+  }
+ ]
+}

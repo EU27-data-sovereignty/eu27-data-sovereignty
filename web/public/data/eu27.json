@@ -16532,43 +16532,6 @@
     "value_as_found": "Митническата информационна система за внасяне (МИСВ) (Customs Import Information System), Агенция \"Митници\""
    }
   ],
-  "record:BG:digital_identity_credentials:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "checklist": [
-     "T2 competent public body or audit office (government or authority)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "archived copy of this URL",
-     "value is a machine summary of the quote",
-     "not in the quote: MVR",
-     "non-English source, machine-translated"
-    ],
-    "checks": {
-     "archived": true,
-     "document_hashed": true,
-     "figures_matched": false,
-     "language": "machine-translated",
-     "names_not_in_quote": [
-      "MVR"
-     ],
-     "quote_match": "exact",
-     "source": "official",
-     "tier": 2,
-     "tier_kind": "government_or_authority",
-     "value": "summary"
-    },
-    "confidence": "official",
-    "gloss": "Access to the register under Art. 3(1) is also granted to persons designated by order of the Minister of Interior, who identify themselves electronically before each access.",
-    "grade": "Standard",
-    "locator": "PDF text",
-    "original": "Достъп до регистъра по чл. 3, ал. 1 имат и лица, определени със заповед на министъра на вътрешните работи, които се идентифицират по електронен път преди всяко осъществяване на достъп.",
-    "quote": "Достъп до регистъра по чл. 3, ал. 1 имат и лица, определени със заповед на министъра на вътрешните работи, които се идентифицират по електронен път преди всяко осъществяване на достъп. [English: Access to the register under Art. 3(1) is also granted to persons designated by order of the Minister of Interior, who identify themselves electronically before each access.]",
-    "retrieved": "2026-09-29",
-    "source_id": "mtc-government-bg:c645e7ccb8",
-    "value_as_found": "Access to the register is granted to persons designated by order of the Minister of Interior (MVR runs the register)"
-   }
-  ],
   "record:BG:education:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -25753,43 +25716,6 @@
     "value_as_found": "Den Danske Stat Tillidstjenester (CA1) - Danish State trust services, delivered by Digitaliseringsstyrelsen on behalf of the Danish State"
    }
   ],
-  "record:DK:vehicle_licensing:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "checklist": [
-     "T1 authoritative original (official law portal)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "no archived copy of this URL",
-     "value is a machine summary of the quote",
-     "not in the quote: DMR",
-     "non-English source, machine-translated"
-    ],
-    "checks": {
-     "archived": false,
-     "document_hashed": true,
-     "figures_matched": false,
-     "language": "machine-translated",
-     "names_not_in_quote": [
-      "DMR"
-     ],
-     "quote_match": "exact",
-     "source": "official",
-     "tier": 1,
-     "tier_kind": "official_law_portal",
-     "value": "summary"
-    },
-    "confidence": "official",
-    "gloss": "Registration of vehicles takes place in a common national register of vehicles (the Vehicle Register), cf. however subsection 4.",
-    "grade": "Standard",
-    "locator": "page text",
-    "original": "Registrering af køretøjer sker i et for hele landet fælles register for køretøjer (Køretøjsregisteret), jf. dog stk. 4.",
-    "quote": "Registrering af køretøjer sker i et for hele landet fælles register for køretøjer (Køretøjsregisteret), jf. dog stk. 4. [English: Registration of vehicles takes place in a common national register of vehicles (the Vehicle Register), cf. however subsection 4.]",
-    "retrieved": "2026-09-29",
-    "source_id": "retsinformation-dk:b4bea568bc",
-    "value_as_found": "Køretøjsregisteret - the national vehicle register (DMR) covering every vehicle and its ownership"
-   }
-  ],
   "record:EE:authentication_audit_log:operator": [
    {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
@@ -30633,40 +30559,6 @@
     "value_as_found": "Ley General Tributaria: tax functions include issuing tax ID numbers and maintaining the tax censuses"
    }
   ],
-  "record:ES:trust_services_pki:operator": [
-   {
-    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
-    "checklist": [
-     "T2 competent public body or audit office (public body)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "archived copy of this URL",
-     "value is a machine summary of the quote",
-     "non-English source, machine-translated"
-    ],
-    "checks": {
-     "archived": true,
-     "document_hashed": true,
-     "figures_matched": false,
-     "language": "machine-translated",
-     "names_not_in_quote": [],
-     "quote_match": "exact",
-     "source": "official",
-     "tier": 2,
-     "tier_kind": "public_body",
-     "value": "summary"
-    },
-    "confidence": "official",
-    "gloss": "The Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda is a public business entity (EPE) and in-house provider (MP) of the General State Administration",
-    "grade": "Standard",
-    "locator": "page text",
-    "original": "La Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda es una entidad pública empresarial (EPE) y medio propio (MP) de la Administración General del Estado",
-    "quote": "La Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda es una entidad pública empresarial (EPE) y medio propio (MP) de la Administración General del Estado [English: The Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda is a public business entity (EPE) and in-house provider (MP) of the General State Administration]",
-    "retrieved": "2026-09-30",
-    "source_id": "fnmt-es:36cb30ad7c",
-    "value_as_found": "Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda (state public business entity)"
-   }
-  ],
   "record:ES:trust_services_pki:register": [
    {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
@@ -32905,41 +32797,6 @@
     "retrieved": "2026-09-29",
     "source_id": "adresse-data-gouv-fr:d21907c545",
     "value_as_found": "BAN is a State database listing all addresses in France"
-   }
-  ],
-  "record:FR:government_payroll:operator": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "checklist": [
-     "T2 competent public body or audit office (public body)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "no archived copy of this URL",
-     "value is a machine summary of the quote",
-     "every figure found in the original",
-     "non-English source, machine-translated"
-    ],
-    "checks": {
-     "archived": false,
-     "document_hashed": true,
-     "figures_matched": true,
-     "language": "machine-translated",
-     "names_not_in_quote": [],
-     "quote_match": "exact",
-     "source": "official",
-     "tier": 2,
-     "tier_kind": "public_body",
-     "value": "summary"
-    },
-    "confidence": "official",
-    "gloss": "Change in costs and timelines of the main IT projects carried by programmes 156 and 218",
-    "grade": "Standard",
-    "locator": "page text",
-    "original": "Évolution des coûts et des délais des principaux projets informatiques portés par les programmes 156 et 218",
-    "quote": "Évolution des coûts et des délais des principaux projets informatiques portés par les programmes 156 et 218 [English: Change in costs and timelines of the main IT projects carried by programmes 156 and 218]",
-    "retrieved": "2026-09-29",
-    "source_id": "senat-fr:43de393295",
-    "value_as_found": "Listed among IT projects carried by budget programmes 156 and 218"
    }
   ],
   "record:FR:government_payroll:register": [
@@ -38531,38 +38388,6 @@
     "retrieved": "2026-09-29",
     "source_id": "enterprise-gov-ie:b3438928a5",
     "value_as_found": "Register of companies, business names and limited partnerships held by the Companies Registration Office"
-   }
-  ],
-  "record:IE:central_bank:foreign_dependency": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "checklist": [
-     "T2 competent public body or audit office (public body)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "archived copy of this URL",
-     "independent review agreed (not blind)",
-     "English source"
-    ],
-    "checks": {
-     "archived": true,
-     "document_hashed": true,
-     "language": "english",
-     "quote_match": "exact",
-     "review": "agreed, not blind",
-     "source": "official",
-     "tier": 2,
-     "tier_kind": "public_body"
-    },
-    "confidence": "official",
-    "gloss": "",
-    "grade": "Standard",
-    "locator": "page text",
-    "original": "The key legal instrument in relation to TARGET2 is the: Guideline of the European Central Bank of 24 February 2022 on a new generation Trans-European Automated Real-time Gross Settlement Express Transfer system (TARGET)",
-    "quote": "The key legal instrument in relation to TARGET2 is the: Guideline of the European Central Bank of 24 February 2022 on a new generation Trans-European Automated Real-time Gross Settlement Express Transfer system (TARGET)",
-    "retrieved": "2026-09-29",
-    "source_id": "centralbank-ie:2bc4ad8a3c",
-    "value_as_found": "eu_provider"
    }
   ],
   "record:IE:central_bank:operator": [
@@ -49592,40 +49417,6 @@
     "retrieved": "2026-09-29",
     "source_id": "schengen-mai-gov-ro:ab80c5351f",
     "value_as_found": "Council Decision 2017/1908 gave Romania access to the Visa Information System (VIS)"
-   }
-  ],
-  "record:RO:central_bank:register": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "checklist": [
-     "T2 competent public body or audit office (public body)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "archived copy of this URL",
-     "value is a machine summary of the quote",
-     "non-English source, machine-translated"
-    ],
-    "checks": {
-     "archived": true,
-     "document_hashed": true,
-     "figures_matched": false,
-     "language": "machine-translated",
-     "names_not_in_quote": [],
-     "quote_match": "exact",
-     "source": "official",
-     "tier": 2,
-     "tier_kind": "public_body",
-     "value": "summary"
-    },
-    "confidence": "official",
-    "gloss": "Payments — Systems operated by the NBR: ReGIS, SaFIR, TARGET-România — Governance — Cyber resilience",
-    "grade": "Standard",
-    "locator": "page text",
-    "original": "Plăți Sisteme operate de BNR ReGIS SaFIR TARGET-România Guvernanță Reziliență cibernetică",
-    "quote": "Plăți Sisteme operate de BNR ReGIS SaFIR TARGET-România Guvernanță Reziliență cibernetică [English: Payments — Systems operated by the NBR: ReGIS, SaFIR, TARGET-România — Governance — Cyber resilience]",
-    "retrieved": "2026-09-29",
-    "source_id": "bnr-ro:bb5f46ce62",
-    "value_as_found": "BNR operates the financial market infrastructures ReGIS, SaFIR and TARGET-România"
    }
   ],
   "record:RO:digital_identity_credentials:operator": [
@@ -82552,9 +82343,8 @@
           "c": [
            "record:BG:digital_identity_credentials:operator"
           ],
-          "g": "Standard",
-          "role": "fact",
-          "t": "Access to the register is granted to persons designated by order of the Minister of Interior (MVR runs the register)"
+          "role": "disputed",
+          "t": "Disputed: the fact check (claude-opus-5-5, run wf_90fb82e7-35e) was confirmed once, but a second checker in a stability sample did not confirm this: Art. 4(3) only says that persons designated by order of the Minister of Interior also have access to the Art. 3(1) register. Neither that article nor Art. 3 says that the MVR runs or maintains the register, so the parenthetical operator…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -90270,9 +90060,8 @@
           "c": [
            "record:DK:vehicle_licensing:register"
           ],
-          "g": "Standard",
-          "role": "fact",
-          "t": "Køretøjsregisteret - the national vehicle register (DMR) covering every vehicle and its ownership"
+          "role": "disputed",
+          "t": "Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote and § 1(2) are on the page; § 1(2) says the register holds data on each vehicle and who it belongs to ('tilhørsforhold'). But the printed text calls the register 'DMR', and that name or abbreviation does not appear anywhere on…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -95434,9 +95223,8 @@
           "c": [
            "record:ES:trust_services_pki:operator"
           ],
-          "g": "Standard",
-          "role": "fact",
-          "t": "Fábrica Nacional de Moneda y Timbre-Real Casa de la Moneda (state public business entity)"
+          "role": "disputed",
+          "t": "Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote only says that FNMT-RCM is a public business entity and in-house provider of the General State Administration. Neither it nor the body text says that FNMT operates the state PKI or trust services; only the site navigation has…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -99604,9 +99392,8 @@
           "c": [
            "record:FR:government_payroll:operator"
           ],
-          "g": "Standard",
-          "role": "fact",
-          "t": "Listed among IT projects carried by budget programmes 156 and 218"
+          "role": "disputed",
+          "t": "Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote is a table heading. The table under it lists PAYSAGE ('consolidation de l'application de paye des agents de l'État') among projects carried by programmes 156 and 218. The question asks which body operates the system, and the…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -105307,10 +105094,8 @@
           "c": [
            "record:IE:central_bank:foreign_dependency"
           ],
-          "g": "Standard",
-          "k": "categorical",
-          "role": "fact",
-          "t": "EU provider"
+          "role": "disputed",
+          "t": "Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -121546,9 +121331,8 @@
           "c": [
            "record:RO:central_bank:register"
           ],
-          "g": "Standard",
-          "role": "fact",
-          "t": "BNR operates the financial market infrastructures ReGIS, SaFIR and TARGET-România"
+          "role": "disputed",
+          "t": "Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote is on the page, but only as navigation-menu text: 'Sisteme operate de BNR: ReGIS SaFIR TARGET-România'. That supports BNR operating the three systems. The printed text also calls them 'financial market infrastructures', and that…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "role": "gap",
@@ -127732,7 +127516,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -127822,6 +127606,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -129799,7 +129589,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -129889,6 +129679,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -131255,7 +131051,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -131345,6 +131141,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -131525,7 +131327,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "44 of 44 printed facts about Bulgaria pass."
+          "t": "43 of 43 printed facts about Bulgaria pass."
          }
         ],
         "type": "p"
@@ -131860,32 +131662,6 @@
           {
            "role": "method",
            "t": "Document issuance history: the body that operates it"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "supported"
-          },
-          {
-           "role": "method",
-           "t": "wf_da123db1-a4e"
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:BG:digital_identity_credentials:operator"
-          },
-          {
-           "role": "method",
-           "t": "Digital identity credentials: the body that operates it"
           },
           {
            "role": "method",
@@ -132793,6 +132569,28 @@
            "role": "method",
            "t": "Both quotes are verbatim, but the MFA citation names a different system (НВИС, not printed), and the RTA ordinance names 'АИС Издирвателна дейност – НШИС' only in the context of wanted-vehicle registration termination, never as a border or visa system; the printed form also truncates the system's name. The source does not establish the printed system as the border/visa register."
           }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:BG:digital_identity_credentials:operator"
+          },
+          {
+           "role": "method",
+           "t": "Digital identity credentials: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "not supported"
+          },
+          {
+           "role": "method",
+           "t": "Art. 4(3) only says that persons designated by order of the Minister of Interior also have access to the Art. 3(1) register. Neither that article nor Art. 3 says that the MVR runs or maintains the register, so the parenthetical operator claim '(MVR runs the register)' is added by the report."
+          }
          ]
         ],
         "type": "table"
@@ -132832,7 +132630,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -132922,6 +132720,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -134825,7 +134629,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -134915,6 +134719,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -136988,7 +136798,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -137078,6 +136888,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -138704,7 +138520,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -138794,6 +138610,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -138974,7 +138796,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "60 of 60 printed facts about Denmark pass."
+          "t": "59 of 59 printed facts about Denmark pass."
          }
         ],
         "type": "p"
@@ -139902,32 +139724,6 @@
          [
           {
            "role": "label",
-           "t": "record:DK:vehicle_licensing:register"
-          },
-          {
-           "role": "method",
-           "t": "Vehicle & licensing: the name of the register or system"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "supported"
-          },
-          {
-           "role": "method",
-           "t": "wf_da123db1-a4e"
-          }
-         ],
-         [
-          {
-           "role": "label",
            "t": "record:DK:judicial_criminal:register"
           },
           {
@@ -140585,13 +140381,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "left",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "None."
+          "role": "label",
+          "t": "Claim"
+         },
+         {
+          "role": "label",
+          "t": "What it answers"
+         },
+         {
+          "role": "label",
+          "t": "Checked by"
+         },
+         {
+          "role": "label",
+          "t": "Verdict"
+         },
+         {
+          "role": "label",
+          "t": "Reason"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "record:DK:vehicle_licensing:register"
+          },
+          {
+           "role": "method",
+           "t": "Vehicle & licensing: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "not supported"
+          },
+          {
+           "role": "method",
+           "t": "The quote and § 1(2) are on the page; § 1(2) says the register holds data on each vehicle and who it belongs to ('tilhørsforhold'). But the printed text calls the register 'DMR', and that name or abbreviation does not appear anywhere on the page."
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-withheld",
@@ -140628,7 +140471,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -140718,6 +140561,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -142461,7 +142310,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -142551,6 +142400,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -144272,7 +144127,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -144362,6 +144217,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -144542,7 +144403,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "58 of 58 printed facts about Spain pass."
+          "t": "57 of 57 printed facts about Spain pass."
          }
         ],
         "type": "p"
@@ -145137,32 +144998,6 @@
           {
            "role": "method",
            "t": "State PKI and qualified trust services: the name of the register or system"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "supported"
-          },
-          {
-           "role": "method",
-           "t": "wf_da123db1-a4e"
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:ES:trust_services_pki:operator"
-          },
-          {
-           "role": "method",
-           "t": "State PKI and qualified trust services: the body that operates it"
           },
           {
            "role": "method",
@@ -146101,13 +145936,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "left",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "None."
+          "role": "label",
+          "t": "Claim"
+         },
+         {
+          "role": "label",
+          "t": "What it answers"
+         },
+         {
+          "role": "label",
+          "t": "Checked by"
+         },
+         {
+          "role": "label",
+          "t": "Verdict"
+         },
+         {
+          "role": "label",
+          "t": "Reason"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "record:ES:trust_services_pki:operator"
+          },
+          {
+           "role": "method",
+           "t": "State PKI and qualified trust services: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "not supported"
+          },
+          {
+           "role": "method",
+           "t": "The quote only says that FNMT-RCM is a public business entity and in-house provider of the General State Administration. Neither it nor the body text says that FNMT operates the state PKI or trust services; only the site navigation has 'Certificación Digital' and 'FNMT Ceres' links. So the page does not establish the operator role."
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-withheld",
@@ -146144,7 +146026,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -146234,6 +146116,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -147366,7 +147254,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -147456,6 +147344,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -147636,7 +147530,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "73 of 73 printed facts about France pass."
+          "t": "72 of 72 printed facts about France pass."
          }
         ],
         "type": "p"
@@ -149058,32 +148952,6 @@
          [
           {
            "role": "label",
-           "t": "record:FR:government_payroll:operator"
-          },
-          {
-           "role": "method",
-           "t": "Government payroll and personnel: the body that operates it"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "supported"
-          },
-          {
-           "role": "method",
-           "t": "wf_da123db1-a4e"
-          }
-         ],
-         [
-          {
-           "role": "label",
            "t": "record:FR:central_bank:register"
           },
           {
@@ -149640,6 +149508,28 @@
          [
           {
            "role": "label",
+           "t": "record:FR:government_payroll:operator"
+          },
+          {
+           "role": "method",
+           "t": "Government payroll and personnel: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "not supported"
+          },
+          {
+           "role": "method",
+           "t": "The quote is a table heading. The table under it lists PAYSAGE ('consolidation de l'application de paye des agents de l'État') among projects carried by programmes 156 and 218. The question asks which body operates the system, and the printed text names no body; the page snippet does not name one either."
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:FR:statistics_microdata:foreign_dependency"
           },
           {
@@ -149697,7 +149587,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -149787,6 +149677,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -151590,7 +151486,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -151680,6 +151576,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -153845,7 +153747,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -153935,6 +153837,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -154115,7 +154023,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "61 of 61 printed facts about Ireland pass."
+          "t": "60 of 60 printed facts about Ireland pass."
          }
         ],
         "type": "p"
@@ -155537,32 +155445,6 @@
          [
           {
            "role": "label",
-           "t": "record:IE:central_bank:foreign_dependency"
-          },
-          {
-           "role": "method",
-           "t": "Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "supported"
-          },
-          {
-           "role": "method",
-           "t": "wf_da123db1-a4e"
-          }
-         ],
-         [
-          {
-           "role": "label",
            "t": "record:IE:grid_control:register"
           },
           {
@@ -155829,6 +155711,28 @@
          [
           {
            "role": "label",
+           "t": "record:IE:central_bank:foreign_dependency"
+          },
+          {
+           "role": "method",
+           "t": "Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "not supported"
+          },
+          {
+           "role": "method",
+           "t": "The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an Irish component operated by the Central Bank of Ireland, which does not establish 'EU provider' either."
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:IE:electoral_roll:foreign_dependency"
           },
           {
@@ -155952,7 +155856,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -156042,6 +155946,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -157845,7 +157755,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -157935,6 +157845,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -158755,7 +158671,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -158845,6 +158761,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -159639,7 +159561,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -159729,6 +159651,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -161277,7 +161205,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -161367,6 +161295,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -162520,7 +162454,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -162610,6 +162544,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -164132,7 +164072,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -164222,6 +164162,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -165817,7 +165763,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -165907,6 +165853,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -167590,7 +167542,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -167680,6 +167632,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -167860,7 +167818,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "29 of 29 printed facts about Romania pass."
+          "t": "28 of 28 printed facts about Romania pass."
          }
         ],
         "type": "p"
@@ -168476,32 +168434,6 @@
          [
           {
            "role": "label",
-           "t": "record:RO:central_bank:register"
-          },
-          {
-           "role": "method",
-           "t": "Central bank systems: the name of the register or system"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "supported"
-          },
-          {
-           "role": "method",
-           "t": "wf_da123db1-a4e"
-          }
-         ],
-         [
-          {
-           "role": "label",
            "t": "record:RO:grid_control:register"
           },
           {
@@ -168665,13 +168597,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "left",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "None."
+          "role": "label",
+          "t": "Claim"
+         },
+         {
+          "role": "label",
+          "t": "What it answers"
+         },
+         {
+          "role": "label",
+          "t": "Checked by"
+         },
+         {
+          "role": "label",
+          "t": "Verdict"
+         },
+         {
+          "role": "label",
+          "t": "Reason"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "record:RO:central_bank:register"
+          },
+          {
+           "role": "method",
+           "t": "Central bank systems: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "not supported"
+          },
+          {
+           "role": "method",
+           "t": "The quote is on the page, but only as navigation-menu text: 'Sisteme operate de BNR: ReGIS SaFIR TARGET-România'. That supports BNR operating the three systems. The printed text also calls them 'financial market infrastructures', and that wording does not appear anywhere on the fetched page."
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-withheld",
@@ -168708,7 +168687,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -168798,6 +168777,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -170281,7 +170266,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -170371,6 +170356,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -172278,7 +172269,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+          "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -172368,6 +172359,12 @@
           {
            "role": "method",
            "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+          }
+         ],
+         [
+          {
+           "role": "method",
+           "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
           }
          ],
          [
@@ -173969,7 +173966,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check."
+         "t": "In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check."
         }
        ],
        "type": "p"
@@ -174059,6 +174056,12 @@
          {
           "role": "method",
           "t": "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record."
+         }
+        ],
+        [
+         {
+          "role": "method",
+          "t": "Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way."
          }
         ],
         [
@@ -174317,11 +174320,11 @@
          },
          {
           "role": "method",
-          "t": "44"
+          "t": "43"
          },
          {
           "role": "method",
-          "t": "44"
+          "t": "43"
          },
          {
           "role": "method",
@@ -174329,7 +174332,7 @@
          },
          {
           "role": "method",
-          "t": "2"
+          "t": "3"
          }
         ],
         [
@@ -174405,19 +174408,19 @@
          },
          {
           "role": "method",
-          "t": "60"
+          "t": "59"
          },
          {
           "role": "method",
-          "t": "60"
-         },
-         {
-          "role": "method",
-          "t": "0"
+          "t": "59"
          },
          {
           "role": "method",
           "t": "0"
+         },
+         {
+          "role": "method",
+          "t": "1"
          }
         ],
         [
@@ -174471,11 +174474,11 @@
          },
          {
           "role": "method",
-          "t": "73"
+          "t": "72"
          },
          {
           "role": "method",
-          "t": "73"
+          "t": "72"
          },
          {
           "role": "method",
@@ -174483,7 +174486,7 @@
          },
          {
           "role": "method",
-          "t": "2"
+          "t": "3"
          }
         ],
         [
@@ -174559,11 +174562,11 @@
          },
          {
           "role": "method",
-          "t": "61"
+          "t": "60"
          },
          {
           "role": "method",
-          "t": "61"
+          "t": "60"
          },
          {
           "role": "method",
@@ -174571,7 +174574,7 @@
          },
          {
           "role": "method",
-          "t": "6"
+          "t": "7"
          }
         ],
         [
@@ -174757,19 +174760,19 @@
          },
          {
           "role": "method",
-          "t": "29"
+          "t": "28"
          },
          {
           "role": "method",
-          "t": "29"
-         },
-         {
-          "role": "method",
-          "t": "0"
+          "t": "28"
          },
          {
           "role": "method",
           "t": "0"
+         },
+         {
+          "role": "method",
+          "t": "1"
          }
         ],
         [
@@ -174823,19 +174826,19 @@
          },
          {
           "role": "method",
-          "t": "58"
+          "t": "57"
          },
          {
           "role": "method",
-          "t": "58"
-         },
-         {
-          "role": "method",
-          "t": "0"
+          "t": "57"
          },
          {
           "role": "method",
           "t": "0"
+         },
+         {
+          "role": "method",
+          "t": "1"
          }
         ],
         [
@@ -174881,19 +174884,19 @@
   "lines": {
    "AT": "Fact check: 62 of 62 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/AT",
    "BE": "Fact check: 42 of 42 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/BE",
-   "BG": "Fact check: 44 of 44 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/BG",
+   "BG": "Fact check: 43 of 43 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/BG",
    "CY": "Fact check: 60 of 60 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/CY",
    "CZ": "Fact check: 64 of 64 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/CZ",
    "DE": "Fact check: 52 of 52 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DE",
-   "DK": "Fact check: 60 of 60 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DK",
+   "DK": "Fact check: 59 of 59 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DK",
    "EE": "Fact check: 53 of 53 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/EE",
    "EL": "Fact check: 53 of 53 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/EL",
-   "ES": "Fact check: 58 of 58 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/ES",
+   "ES": "Fact check: 57 of 57 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/ES",
    "FI": "Fact check: 33 of 33 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/FI",
-   "FR": "Fact check: 73 of 73 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/FR",
+   "FR": "Fact check: 72 of 72 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/FR",
    "HR": "Fact check: 57 of 57 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/HR",
    "HU": "Fact check: 65 of 65 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/HU",
-   "IE": "Fact check: 61 of 61 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/IE",
+   "IE": "Fact check: 60 of 60 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/IE",
    "IT": "Fact check: 57 of 57 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/IT",
    "LT": "Fact check: 21 of 21 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/LT",
    "LU": "Fact check: 20 of 20 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/LU",
@@ -174902,7 +174905,7 @@
    "NL": "Fact check: 48 of 48 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/NL",
    "PL": "Fact check: 49 of 49 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/PL",
    "PT": "Fact check: 49 of 49 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/PT",
-   "RO": "Fact check: 29 of 29 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/RO",
+   "RO": "Fact check: 28 of 28 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/RO",
    "SE": "Fact check: 43 of 43 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SE",
    "SI": "Fact check: 61 of 61 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SI",
    "SK": "Fact check: 51 of 51 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SK"
@@ -175165,7 +175168,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1346 facts are printed, 3340 values are withheld as gaps, and 66 are withheld as disputed."
+        "t": "This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed."
        }
       ],
       "type": "p"
@@ -175565,7 +175568,7 @@
         },
         {
          "role": "method",
-         "t": "620"
+         "t": "619"
         }
        ],
        [
@@ -175575,7 +175578,7 @@
         },
         {
          "role": "method",
-         "t": "612"
+         "t": "607"
         }
        ],
        [
@@ -175659,7 +175662,7 @@
         },
         {
          "role": "method",
-         "t": "1241"
+         "t": "1235"
         }
        ]
       ],
@@ -176023,7 +176026,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "In this build, 1346 of 1346 printed facts pass the fact check."
+        "t": "In this build, 1340 of 1340 printed facts pass the fact check."
        }
       ],
       "type": "p"
@@ -177456,19 +177459,6 @@
    "source_id": "bnb-bg:dec1629802",
    "title": "ДДС № 03/03.05.2023 г. – Изисквания за структурата, формата и съдържанието на платежни документи ... чрез СЕБРА",
    "url": "https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/instructions_bnb_51681_bg.pdf"
-  },
-  "bnr-ro:bb5f46ce62": {
-   "archived_url": "https://web.archive.org/web/20260514142924/https://www.bnr.ro/2152-sisteme-operate-de-bnr",
-   "doc_type": "webpage",
-   "label": "Banca Națională a României — BNR Infrastructuri ale pieței financiare operate de BNR",
-   "language": "ro",
-   "license": "",
-   "notes": "sha256 650c192a12a14bab1623efcd49455a48bed6b1da1acea1b59c5dbb4d8845973a (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "Banca Națională a României",
-   "source_id": "bnr-ro:bb5f46ce62",
-   "title": "BNR Infrastructuri ale pieței financiare operate de BNR",
-   "url": "https://www.bnr.ro/2152-sisteme-operate-de-bnr"
   },
   "bo-digital-gov-pt:17741bbeeb": {
    "archived_url": "https://web.archive.org/web/20260702232015/https://bo.digital.gov.pt/api/assets/etic/2fecc6f4-b424-41c6-b2a8-722b17b1914f/",
@@ -180785,19 +180775,6 @@
    "title": "Laki Valtiokonttorista (305/1991)",
    "url": "https://www.finlex.fi/fi/lainsaadanto/1991/305"
   },
-  "fnmt-es:36cb30ad7c": {
-   "archived_url": "https://web.archive.org/web/20260410193006/https://www.fnmt.es/institucion/informacion-institucional",
-   "doc_type": "webpage",
-   "label": "Fábrica Nacional de Moneda y Timbre - Real Casa de la Moneda — Información institucional, 2025-11-11",
-   "language": "",
-   "license": "",
-   "notes": "sha256 8bd2eccb97b4441ae90fcfb0924f3989f342cce5baf7feed466adfc8e0049e94 (text/html), fetched 2026-09-30",
-   "published": "2025-11-11",
-   "publisher": "Fábrica Nacional de Moneda y Timbre - Real Casa de la Moneda",
-   "source_id": "fnmt-es:36cb30ad7c",
-   "title": "Información institucional",
-   "url": "https://www.fnmt.es/institucion/informacion-institucional"
-  },
   "folkhalsomyndigheten-se:0a20d15641": {
    "archived_url": "https://web.archive.org/web/20260907024120/https://www.folkhalsomyndigheten.se/vara-amnesomraden/vaccinationer/nationella-vaccinationsregistret/",
    "doc_type": "webpage",
@@ -183931,19 +183908,6 @@
    "title": "Centar dijeljenih usluga (CDU) – državni oblak koji pokreće digitalnu Hrvatsku",
    "url": "https://mpudt.gov.hr/centar-dijeljenih-usluga-cdu-drzavni-oblak-koji-pokrece-digitalnu-hrvatsku/30983"
   },
-  "mtc-government-bg:c645e7ccb8": {
-   "archived_url": "https://web.archive.org/web/20240719053301/https://www.mtc.government.bg/sites/default/files/pravilnik_za_prilagane_na_zakona_za_elektronnata_identifikaciq.pdf",
-   "doc_type": "statute",
-   "label": "Министерство на транспорта и съобщенията (копие на правилника) — Правилник за прилагане на Закона за електронната…, 2017",
-   "language": "bg",
-   "license": "",
-   "notes": "sha256 51bd6802f9677c1ef8949fcc4b094d7ee3ad3e47798b04050edf993027517fbb (application/pdf), fetched 2026-09-29",
-   "published": "2017",
-   "publisher": "Министерство на транспорта и съобщенията (копие на правилника)",
-   "source_id": "mtc-government-bg:c645e7ccb8",
-   "title": "Правилник за прилагане на Закона за електронната идентификация",
-   "url": "https://www.mtc.government.bg/sites/default/files/pravilnik_za_prilagane_na_zakona_za_elektronnata_identifikaciq.pdf"
-  },
   "mvr-bg:46fff4e731": {
    "archived_url": "",
    "doc_type": "webpage",
@@ -185984,19 +185948,6 @@
    "source_id": "retsinformation-dk:ab991b96f7",
    "title": "Cirkulære om sikkerhedsbeskyttelse af informationer af fælles interesse for landene i NATO eller EU, andre klassificerede informationer samt informationer af sikkerhedsmæssig beskyttelsesinteresse i øvrigt (Sikkerhedscirkulæret), CIR nr. 10338 af 17/12/2014",
    "url": "https://www.retsinformation.dk/eli/retsinfo/2014/10338/xml"
-  },
-  "retsinformation-dk:b4bea568bc": {
-   "archived_url": "",
-   "doc_type": "statute",
-   "label": "Retsinformation / Skatteministeriet — Bekendtgørelse af lov om registrering af køretøjer (LBK…, 2023-02-22",
-   "language": "da",
-   "license": "",
-   "notes": "sha256 901e8ade920e0eaf64bca2df7f6a1587aa784e729e42d25c3ca17dd91652a222 (application/xml), fetched 2026-09-29",
-   "published": "2023-02-22",
-   "publisher": "Retsinformation / Skatteministeriet",
-   "source_id": "retsinformation-dk:b4bea568bc",
-   "title": "Bekendtgørelse af lov om registrering af køretøjer (LBK nr 179 af 22/02/2023)",
-   "url": "https://www.retsinformation.dk/eli/lta/2023/179/xml"
   },
   "retsinformation-dk:b60e61662b": {
    "archived_url": "",

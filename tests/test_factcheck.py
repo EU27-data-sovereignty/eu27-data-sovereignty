@@ -237,6 +237,11 @@ class Stage(Sandbox):
         self.assertEqual(staged["verdicts"][0]["reason"],
                          "Names the contact [email address removed] and the register.")
 
+    def test_a_local_hashed_copy_is_recorded_by_name_not_path(self):
+        self.assertEqual(factcheck._checked_where("/home/someone/cache/factcheck/docs/ab12.txt"),
+                         "hashed copy ab12.txt")
+        self.assertEqual(factcheck._checked_where("https://example.gov/x"), "https://example.gov/x")
+
     def test_a_missing_verdict_is_recorded_as_unclear_not_supported(self):
         name, facts = self.batch()
         review = self.answer(facts, FABLE)
@@ -296,6 +301,18 @@ class Withhold(unittest.TestCase):
     def test_a_verdict_on_an_older_version_withholds_nothing(self):
         f = self.facts[0]                      # its ledger row is replaced by the fixture
         self.assertEqual(self.span(f, self.row(f, fact_sha256="0" * 64))["role"], "fact")
+
+    def test_a_second_checkers_disagreement_withholds_a_confirmed_fact(self):
+        f = self.facts[0]
+        second = {f["claim"]: {**self.row(f), "checker_model": OPUS, "reason": "menu text only.",
+                               "second_opinion": True}}
+        with mock.patch.object(self.src, "second", second):
+            span = self.span(f, self.row(f, verdict="supported"))
+        self.assertEqual(span["role"], "disputed")
+        self.assertIn("a second checker in a stability sample did not confirm", span["t"])
+        stale = {f["claim"]: {**second[f["claim"]], "fact_sha256": "0" * 64}}
+        with mock.patch.object(self.src, "second", stale):
+            self.assertEqual(self.span(f, self.row(f, verdict="supported"))["role"], "fact")
 
     def test_a_supported_verdict_prints_the_fact(self):
         f = self.facts[0]

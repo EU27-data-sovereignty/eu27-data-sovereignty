@@ -158,12 +158,26 @@ def facts(bundle: dict) -> list[dict]:
     return out
 
 
+def second_opinions() -> dict[str, dict]:
+    """Facts a stability sample's second checker did not confirm (#94), by claim: the latest sample row for
+    each, in ledger-row form, from the staged samples (which never change)."""
+    out: dict[str, dict] = {}
+    for p in sorted(SAMPLES.glob("*/*.json")):
+        d = json.loads(p.read_text(encoding="utf-8"))
+        for v in d["verdicts"]:
+            if v["verdict"] != "supported":
+                out[v["claim"]] = {**v, "run": d["run"], "second_opinion": True}
+    return out
+
+
 def withholding(row: dict | None, sha: str) -> str:
     """Why a fact is withheld after the fact check, or ''. Only a verdict on this exact fact counts: once
     the fact or its source changes, the old verdict withholds nothing and the fact is checked again."""
     if not row or row["verdict"] == "supported" or row["fact_sha256"] != sha:
         return ""
     what = "could not confirm" if row["verdict"] == "unclear" else "did not confirm"
+    if row.get("second_opinion"):
+        what = f"was confirmed once, but a second checker in a stability sample {what}"
     reason = _clean(row["reason"], 1000)
     if len(reason) > 240:                      # cut at a word, and say so, rather than mid-word
         reason = reason[:240].rsplit(" ", 1)[0].rstrip(",;:") + "…"
@@ -326,7 +340,10 @@ def prepare_sample(n: int, seed: int, date: str) -> int:
     bundle = load_bundle()
     who = authors(bundle)
     ledger = load_ledger()
-    pool = [(f, sha) for f, sha, why in assess(bundle, ledger) if not why]
+    sampled = {v["claim"] for p in SAMPLES.glob("*/*.json")
+               for v in json.loads(p.read_text(encoding="utf-8"))["verdicts"]}
+    # A later sample draws only facts no earlier sample checked, so the samples are independent.
+    pool = [(f, sha) for f, sha, why in assess(bundle, ledger) if not why and f["claim"] not in sampled]
     pool.sort(key=lambda x: x[0]["claim"])
     picked = random.Random(seed).sample(pool, min(n, len(pool)))
     facts = []
@@ -450,6 +467,13 @@ def _clean(text: str, limit: int = 400) -> str:
     return EMAIL.sub("[email address removed]", re.sub(r"\s+", " ", str(text or "")).strip())[:limit]
 
 
+def _checked_where(url: str) -> str:
+    """Where the checker read the source. A local file is the hashed copy (`--withheld-blocked`): recorded by
+    its name, never by a path on this machine (the security gate refuses home paths, rightly)."""
+    url = _clean(url, 500)
+    return f"hashed copy {Path(url).name}" if url.startswith("/") else url
+
+
 def stage(path: Path, run_id: str, prepared: str, sample: bool = False) -> int:
     """Check the workflow's answers against what was asked, and keep them. A batch is refused, whole,
     when its checker reports a different model than the one asked for, when the checker is an author of
@@ -485,7 +509,7 @@ def stage(path: Path, run_id: str, prepared: str, sample: bool = False) -> int:
                  "verdict": answered[c]["verdict"] if c in answered else "unclear",
                  "reason": _clean(answered[c]["reason"]) if c in answered else "the checker gave no verdict",
                  "quote_found": answered.get(c, {}).get("quote_found", False),
-                 "checked_url": _clean(answered.get(c, {}).get("checked_url", ""), 500)}
+                 "checked_url": _checked_where(answered.get(c, {}).get("checked_url", ""))}
                 for c, f in given.items()]
         out.mkdir(parents=True, exist_ok=True)
         (out / f"{r['batch']}.json").write_text(json.dumps(
@@ -612,7 +636,10 @@ def summary(bundle: dict) -> dict:
     return {
         "printed": len(rows), "passing": len(passing),
         # Facts the check did not confirm and the content model therefore withholds (#89).
-        "withheld": [r for c, r in sorted(ledger.items()) if c not in printed and r["verdict"] != "supported"],
+        "withheld": [r for c, r in sorted({**{c: r for c, r in ledger.items() if r["verdict"] != "supported"},
+                                             **{c: r for c, r in second_opinions().items()
+                                                if ledger.get(c, {}).get("verdict") == "supported"}}.items())
+                     if c not in printed],
         "failing": [(f, why) for f, _, why in rows if why],
         "by_checker": {m: sum(1 for r in current if r["checker_model"] == m) for m in CHECKERS.values()},
         "by_verdict": {k: sum(1 for r in current if r["verdict"] == k) for k in VERDICTS},
@@ -751,6 +778,8 @@ STEPS = [
     "A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, "
     "instead of printed, until the fact or its source is corrected and checked again. The verdict stays "
     "on the record.",
+    "Samples of confirmed facts are put to the other checker model to measure how often a second checker "
+    "disagrees; a fact the second checker does not confirm is withheld in the same way.",
     "Before every production deploy, `factcheck.py gate` requires a current *supported* verdict from an "
     "eligible checker for every printed fact, and this file to be current.",
 ]

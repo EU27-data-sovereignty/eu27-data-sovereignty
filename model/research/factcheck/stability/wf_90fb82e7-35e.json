@@ -1,0 +1,19 @@
+{
+ "run": "wf_90fb82e7-35e",
+ "prepared": "2026-10-03-sample-2027-20207eb2",
+ "seed": "2027",
+ "date": "2026-10-03",
+ "n": 50,
+ "second_agreed": 49,
+ "rate": 0.98,
+ "disagreements": [
+  {
+   "claim": "record:BG:digital_identity_credentials:operator",
+   "first_checker": "claude-fable-5-1",
+   "first_verdict": "supported",
+   "second_checker": "claude-opus-5-5",
+   "second_verdict": "not_supported",
+   "reason": "Art. 4(3) only says that persons designated by order of the Minister of Interior also have access to the Art. 3(1) register. Neither that article nor Art. 3 says that the MVR runs or maintains the register, so the parenthetical operator claim '(MVR runs the register)' is added by the report."
+  }
+ ]
+}

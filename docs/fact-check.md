@@ -90,6 +90,14 @@ All commands run from the repository root. `./run.sh factcheck <cmd>` is `python
    - Commit the staged run, the ledger, the manifest, the audit file and the regenerated outputs together.
    - A push to `main` is a production deploy: get the owner's OK.
 
+## A second opinion withholds too (#94)
+
+Stability samples (`prepare --sample`) put confirmed facts to the other checker model. A fact the second
+checker does not confirm, on the same fact hash, is withheld like any other disagreement. The reason says
+it was confirmed once and then not confirmed by a second checker. Two samples on 2026-10-02/03 found 6 such
+facts in 100 (10% and 2%). A sample never rewrites the ledger; the withholding is read from the staged
+samples (`factcheck.second_opinions`).
+
 ## Resolving a withheld fact
 
 Never by editing a verdict, the ledger or a register. A withheld fact comes back only as a *changed* fact:

@@ -133,6 +133,8 @@ class Sources:
         # printed, is withheld as disputed rather than printed (#89).
         import factcheck  # noqa: PLC0415
         self.checked = factcheck.load_ledger()
+        # A second checker's disagreement in a stability sample withholds too (#94).
+        self.second = factcheck.second_opinions()
 
     def dispute(self, claim: str, backing: list[dict]) -> str:
         """Why a supported claim is nevertheless in question, or '' if it is not. A claim is disputed
@@ -168,6 +170,8 @@ class Sources:
     def withheld(self, claim: str, text: str, categorical: bool, found: list[tuple[dict, dict]]) -> str:
         """Why the fact check withholds this fact as it would print, or '' (#89)."""
         row = self.checked.get(claim)
+        if row and row["verdict"] == "supported" and claim in self.second:
+            row = self.second[claim]
         if not row or row["verdict"] == "supported":
             return ""
         import factcheck  # noqa: PLC0415

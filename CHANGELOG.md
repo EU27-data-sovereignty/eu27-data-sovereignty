@@ -7,6 +7,15 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-03
 
+### Changed: a fact a second checker rejects is withheld too (#94)
+
+- **A second stability sample.** 50 more confirmed facts, none from the first sample, went to Opus 5.5,
+  which agreed on 49. Across both samples a second checker disagreed with 6 of 100 facts Fable 5.1 had
+  confirmed (10% and 2%).
+- **The new rule.** Those facts, and any found by later samples, are now withheld with the second checker's
+  reason.
+- **The result.** 1,340 printed facts pass, and 52 are withheld.
+
 ### Changed: 25 withheld facts corrected or re-sourced and confirmed; 46 remain withheld (#93)
 
 - **The correction round.** A round re-researched the 69 facts the cross-model check had withheld

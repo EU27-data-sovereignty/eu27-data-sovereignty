@@ -216,8 +216,10 @@ class RenderedFacts(unittest.TestCase):
     # 1321: re-checked from their hashed copies, 11 facts whose pages refused the checker were confirmed
     # (run wf_f14edd00-71f), and the 27 re-printed populations confirmed (wf_5fd3e22d-b86). Then to 1346:
     # the correction round (#93, wf_ee4d0054-063) re-sourced or corrected 29 withheld facts, and the fact
-    # check confirmed 25 of the changed ones (wf_72f99a66-4e9); 46 remain withheld.
-    FACT_FLOOR = 1346
+    # check confirmed 25 of the changed ones (wf_72f99a66-4e9); 46 remain withheld. Then to 1340 on
+    # 2026-10-03 by #94: two stability samples (wf_8232a23d-013, wf_90fb82e7-35e) had Opus 5.5 reject 6 of
+    # 100 facts Fable 5.1 had confirmed; a second checker's disagreement now withholds the fact too.
+    FACT_FLOOR = 1340
 
     @classmethod
     def setUpClass(cls):

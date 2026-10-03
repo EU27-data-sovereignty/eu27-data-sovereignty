@@ -74,26 +74,26 @@ The holdings Denmark cannot let depend on infrastructure a foreign state can com
 | High | Statutory health insurance (tier 1) | sundhedskort and sikringsgruppe enrolment based on Det Centrale Personregister (CPR) (health insurance card and coverage group registration)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
 | High | Beneficial ownership register (tier 1) | Beneficial ownership data held in CVR: legal persons and trusts obliged to register beneficial owners must be registered in CVR[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Køretøjsregisteret - the national vehicle register (DMR) covering every vehicle and its ownership[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Det Centrale Kriminalregister (Kriminalregistret) - Central Criminal Register[^s29][^s37] | Rigspolitiet is data controller; regulated by the kriminalregisterbekendtgørelse[^s29] | National infrastructure[^s1] | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote and § 1(2) are on the page; § 1(2) says the register holds data on each vehicle and who it belongs to ('tilhørsforhold'). But the printed text calls the register 'DMR', and that name or abbreviation does not appear anywhere on…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Det Centrale Kriminalregister (Kriminalregistret) - Central Criminal Register[^s29][^s36] | Rigspolitiet is data controller; regulated by the kriminalregisterbekendtgørelse[^s29] | National infrastructure[^s1] | *Not yet measured* |
 | High | Police information systems (tier 1) | POLSAS - the police case management system[^s29][^s1] | *Not yet sourced* | National infrastructure[^s1] | *Not yet measured* |
-| High | Border and visa systems (tier 1) | Schengeninformationssystemet (SIS, Schengen Information System)[^s38] | Udlændingestyrelsen (Danish Immigration Service), for SIS return alerts[^s38] | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | Politiets Våbenregister (Police Firearms Register), Rigspolitiet data controller[^s29][^s39] | Rigspolitiet (data controller); police may also use the register for investigation and supervision of permits[^s29][^s39] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | Statens Bevillings- og Regnskabsløsning (SBRL) - state appropriation and accounts solution supporting Finance Act and state accounts from FY2025[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | Statens Lønløsning (the State Payroll Solution)[^s41] | Økonomistyrelsen (Agency for Public Finance and Management)[^s42] | *Not stated in sources* | ca. 180.000 statslige ansatte (state employees paid each month)[^s41] |
-| High | Election management and results (tier 1) | Election results system: municipalities enter manually counted vote totals into an IT system developed by KMD; Danmarks Statistik compiles results[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | TARGET DKK - Nationalbanken's payment system for krone settlement (via T2 and TIPS on TARGET Services, plus SPI for monetary-policy instruments and collateral)[^s44][^s45] | *Not yet sourced* | EU provider[^s44][^s45] | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | SINE (Sikkerhedsnettet) - Denmark's radio network for emergency communications; use mandatory under beredskabsloven § 29[^s46] | Center for Beredskabskommunikation (CFB), part of the Ministry of Civil Security and Emergency Preparedness; network operation by Dansk Beredskabskommunikation A/S[^s47][^s48] | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | Sirenevarslingssystemet (the national siren warning system)[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | Energinet carries out system-responsibility (TSO) activities, electricity transmission and gas transmission[^s50] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Schengeninformationssystemet (SIS, Schengen Information System)[^s37] | Udlændingestyrelsen (Danish Immigration Service), for SIS return alerts[^s37] | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Politiets Våbenregister (Police Firearms Register), Rigspolitiet data controller[^s29][^s38] | Rigspolitiet (data controller); police may also use the register for investigation and supervision of permits[^s29][^s38] | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | Statens Bevillings- og Regnskabsløsning (SBRL) - state appropriation and accounts solution supporting Finance Act and state accounts from FY2025[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | Statens Lønløsning (the State Payroll Solution)[^s40] | Økonomistyrelsen (Agency for Public Finance and Management)[^s41] | *Not stated in sources* | ca. 180.000 statslige ansatte (state employees paid each month)[^s40] |
+| High | Election management and results (tier 1) | Election results system: municipalities enter manually counted vote totals into an IT system developed by KMD; Danmarks Statistik compiles results[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | TARGET DKK - Nationalbanken's payment system for krone settlement (via T2 and TIPS on TARGET Services, plus SPI for monetary-policy instruments and collateral)[^s43][^s44] | *Not yet sourced* | EU provider[^s43][^s44] | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | SINE (Sikkerhedsnettet) - Denmark's radio network for emergency communications; use mandatory under beredskabsloven § 29[^s45] | Center for Beredskabskommunikation (CFB), part of the Ministry of Civil Security and Emergency Preparedness; network operation by Dansk Beredskabskommunikation A/S[^s46][^s47] | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Sirenevarslingssystemet (the national siren warning system)[^s48] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Energinet carries out system-responsibility (TSO) activities, electricity transmission and gas transmission[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | STADS (the university student administration system)[^s51] | *Not yet sourced* | *Not stated in sources* | Omkring 100.000 studerende (students)[^s51] |
-| High | Health records (tier 2) | Fælles Medicinkort (FMK) - Sundhedsdatastyrelsen's electronic register of every citizen's medication data (prescription, purchase, dispensing, dose changes)[^s52][^s53] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | STADS (the university student administration system)[^s50] | *Not yet sourced* | *Not stated in sources* | Omkring 100.000 studerende (students)[^s50] |
+| High | Health records (tier 2) | Fælles Medicinkort (FMK) - Sundhedsdatastyrelsen's electronic register of every citizen's medication data (prescription, purchase, dispensing, dose changes)[^s51][^s52] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | Det Danske Vaccinationsregister - national register of citizens' vaccinations, run by Statens Serum Institut[^s52] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | Det Danske Vaccinationsregister - national register of citizens' vaccinations, run by Statens Serum Institut[^s51] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | Danmarks Adresseregister (DAR) - authoritative register of road names and addresses[^s54] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | Danmarks Adresseregister (DAR) - authoritative register of road names and addresses[^s53] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Denmark without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1346 facts are printed, 3340 values are withheld as gaps, and 66 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -205,8 +205,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 620 |
-| T2 competent public body or audit office | 612 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
+| T2 competent public body or audit office | 607 |
 | T3 other institution or company | 7 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
 
@@ -218,7 +218,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 105 |
-| Standard | 1241 |
+| Standard | 1235 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -259,7 +259,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1346 of 1346 printed facts pass the fact check.
+In this build, 1340 of 1340 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -301,7 +301,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after the check.
+In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -316,6 +316,7 @@ In this build, 1346 of 1346 printed facts pass, and 46 facts are withheld after 
 - factcheck.py stage refuses any batch whose checker reports a different model than the one asked for, or is an author of a fact in it.
 - factcheck.py record writes the verdicts to the ledger, the run's manifest (input, workflow and bundle hashes, commit, counts) and this audit file.
 - A fact the checker does not confirm is withheld: it is shown as disputed, with the checker's reason, instead of printed, until the fact or its source is corrected and checked again. The verdict stays on the record.
+- Samples of confirmed facts are put to the other checker model to measure how often a second checker disagrees; a fact the second checker does not confirm is withheld in the same way.
 - Before every production deploy, factcheck.py gate requires a current supported verdict from an eligible checker for every printed fact, and this file to be current.
 
 A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the question it answers, the printed text and every citation behind it. If any of these changes, the verdict lapses and the fact must be checked again before the next deploy.
@@ -332,7 +333,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Denmark
 
-60 of 60 printed facts about Denmark pass.
+59 of 59 printed facts about Denmark pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -370,7 +371,6 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:DK:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:DK:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:judicial_criminal:foreign_dependency | Judicial & criminal justice: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -399,7 +399,9 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### Withheld after the fact check: Denmark
 
-None.
+| Claim | What it answers | Checked by | Verdict | Reason |
+|---|---|---|---|---|
+| record:DK:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | claude-opus-5-5 | not supported | The quote and § 1(2) are on the page; § 1(2) says the register holds data on each vehicle and who it belongs to ('tilhørsforhold'). But the printed text calls the register 'DMR', and that name or abbreviation does not appear anywhere on the page. |
 
 ---
 
@@ -438,26 +440,25 @@ None.
 [^s33]: Toldstyrelsen — DMS (Declaration Management System). DMS (Declaration Management System). <https://toldst.dk/erhverv/toldsystemer/dms>
 [^s34]: Retsinformation / Indenrigs- og Sundhedsministeriet — Bekendtgørelse om valgfri indplacering i sikringsgrupper…, 2025-05-21. Bekendtgørelse om valgfri indplacering i sikringsgrupper og udstedelse af sundhedskort m.v.. <https://www.retsinformation.dk/eli/lta/2025/529/xml>
 [^s35]: Retsinformation / Erhvervsministeriet — Bekendtgørelse af lov om Det Centrale…, 2026-02-05. Bekendtgørelse af lov om Det Centrale Virksomhedsregister (LBK nr 246 af 05/02/2026). <https://www.retsinformation.dk/eli/lta/2026/246/xml>
-[^s36]: Retsinformation / Skatteministeriet — Bekendtgørelse af lov om registrering af køretøjer (LBK…, 2023-02-22. Bekendtgørelse af lov om registrering af køretøjer (LBK nr 179 af 22/02/2023). <https://www.retsinformation.dk/eli/lta/2023/179/xml>
-[^s37]: Retsinformation / Justitsministeriet — Bekendtgørelse om behandling af personoplysninger i Det…, 2026-06-22. Bekendtgørelse om behandling af personoplysninger i Det Centrale Kriminalregister (Kriminalregisteret). <https://www.retsinformation.dk/eli/lta/2026/589/xml>
-[^s38]: Retsinformation / Udlændinge- og Integrationsministeriet — Bekendtgørelse om udlændingemyndighedernes kompetence…, 2025-09-30. Bekendtgørelse om udlændingemyndighedernes kompetence til at indberette tilbagesendelsesafgørelser ... i medfør af SIS-tilbagesendelsesforordningen. <https://www.retsinformation.dk/eli/lta/2025/1201/xml>
-[^s39]: Retsinformation / Justitsministeriet — Cirkulære om våben og ammunition m.v., 2025-10-29. Cirkulære om våben og ammunition m.v.. <https://www.retsinformation.dk/eli/retsinfo/2025/10066/xml>
-[^s40]: Økonomistyrelsen — Statens Bevillings- og Regnskabsløsning. Statens Bevillings- og Regnskabsløsning. <https://oes.dk/digitale-loesninger/statens-bevillings-og-regnskabsloesning/> ([archived](https://web.archive.org/web/20260606021813/https://oes.dk/digitale-loesninger/statens-bevillings-og-regnskabsloesning/))
-[^s41]: Økonomistyrelsen — Lønudbetaling med Statens Lønløsning. Lønudbetaling med Statens Lønløsning. <https://oes.dk/digitale-loesninger/statens-loenloesning/> ([archived](https://web.archive.org/web/20260629120521/https://oes.dk/digitale-loesninger/statens-loenloesning/))
-[^s42]: Økonomistyrelsen — Statens nye lønsystem under udvikling. Statens nye lønsystem under udvikling. <https://oes.dk/digitale-loesninger/udvikling-og-udbud/statens-nye-loensystem-under-udvikling/>
-[^s43]: Danmarks Statistik — Folketingsvalg, folkeafstemninger og…. Folketingsvalg, folkeafstemninger og Europa-parlamentsvalg: Præcision og pålidelighed. <https://www.dst.dk/da/Statistik/dokumentation/statistikdokumentation/folketingsvalg--folkeafstemninger-og-europa-parlamentsvalg/praecision-og-paalidelighed> ([archived](https://web.archive.org/web/20260611190526/https://www.dst.dk/da/Statistik/dokumentation/statistikdokumentation/folketingsvalg--folkeafstemninger-og-europa-parlamentsvalg/praecision-og-paalidelighed))
-[^s44]: European Central Bank — Danish krone now available in all TARGET Services, 2025-04-23. Danish krone now available in all TARGET Services. <https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr250423~096ce05219.en.html>
-[^s45]: Danmarks Nationalbank — Overvågning af den finansielle infrastruktur 2025, 2026. Overvågning af den finansielle infrastruktur 2025. <https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025> ([archived](https://web.archive.org/web/20260513094446/https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025))
-[^s46]: Center for Beredskabskommunikation — Om SINE. Om SINE. <https://sikkerhedsnet.dk/om-sine> ([archived](https://web.archive.org/web/20260710203543/https://sikkerhedsnet.dk/om-sine))
-[^s47]: Center for Beredskabskommunikation — Om CFB. Om CFB. <https://sikkerhedsnet.dk/om-cfb>
-[^s48]: Center for Beredskabskommunikation (sikkerhedsnet.dk) — Leverandør. Leverandør. <https://sikkerhedsnet.dk/leverandoer> ([archived](https://web.archive.org/web/20260710202945/https://sikkerhedsnet.dk/leverandoer))
-[^s49]: Beredskabsstyrelsen — Sirenevarsling. Sirenevarsling. <https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/> ([archived](https://web.archive.org/web/20260617225444/https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/))
-[^s50]: Retsinformation / Klima-, Energi- og Forsyningsministeriet — Bekendtgørelse af lov om Energinet (LBK nr 271 af…, 2023-03-09. Bekendtgørelse af lov om Energinet (LBK nr 271 af 09/03/2023). <https://www.retsinformation.dk/eli/lta/2023/271/xml>
-[^s51]: Uddannelses- og Forskningsstyrelsen — STADS. STADS. <https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/> ([archived](https://web.archive.org/web/20260519213542/https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/))
-[^s52]: Retsinformation / Indenrigs- og Sundhedsministeriet — Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025), 2025-03-12. Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025). <https://www.retsinformation.dk/eli/lta/2025/275/xml>
-[^s53]: Sundhedsdatastyrelsen — Fælles Medicinkort. Fælles Medicinkort. <https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort> ([archived](https://web.archive.org/web/20260616035826/https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort))
-[^s54]: Retsinformation / Styrelsen for Dataforsyning og Effektivisering — Adresseloven (LOV nr 136 af 01/02/2017), 2017-02-01. Adresseloven (LOV nr 136 af 01/02/2017). <https://www.retsinformation.dk/eli/lta/2017/136/xml>
+[^s36]: Retsinformation / Justitsministeriet — Bekendtgørelse om behandling af personoplysninger i Det…, 2026-06-22. Bekendtgørelse om behandling af personoplysninger i Det Centrale Kriminalregister (Kriminalregisteret). <https://www.retsinformation.dk/eli/lta/2026/589/xml>
+[^s37]: Retsinformation / Udlændinge- og Integrationsministeriet — Bekendtgørelse om udlændingemyndighedernes kompetence…, 2025-09-30. Bekendtgørelse om udlændingemyndighedernes kompetence til at indberette tilbagesendelsesafgørelser ... i medfør af SIS-tilbagesendelsesforordningen. <https://www.retsinformation.dk/eli/lta/2025/1201/xml>
+[^s38]: Retsinformation / Justitsministeriet — Cirkulære om våben og ammunition m.v., 2025-10-29. Cirkulære om våben og ammunition m.v.. <https://www.retsinformation.dk/eli/retsinfo/2025/10066/xml>
+[^s39]: Økonomistyrelsen — Statens Bevillings- og Regnskabsløsning. Statens Bevillings- og Regnskabsløsning. <https://oes.dk/digitale-loesninger/statens-bevillings-og-regnskabsloesning/> ([archived](https://web.archive.org/web/20260606021813/https://oes.dk/digitale-loesninger/statens-bevillings-og-regnskabsloesning/))
+[^s40]: Økonomistyrelsen — Lønudbetaling med Statens Lønløsning. Lønudbetaling med Statens Lønløsning. <https://oes.dk/digitale-loesninger/statens-loenloesning/> ([archived](https://web.archive.org/web/20260629120521/https://oes.dk/digitale-loesninger/statens-loenloesning/))
+[^s41]: Økonomistyrelsen — Statens nye lønsystem under udvikling. Statens nye lønsystem under udvikling. <https://oes.dk/digitale-loesninger/udvikling-og-udbud/statens-nye-loensystem-under-udvikling/>
+[^s42]: Danmarks Statistik — Folketingsvalg, folkeafstemninger og…. Folketingsvalg, folkeafstemninger og Europa-parlamentsvalg: Præcision og pålidelighed. <https://www.dst.dk/da/Statistik/dokumentation/statistikdokumentation/folketingsvalg--folkeafstemninger-og-europa-parlamentsvalg/praecision-og-paalidelighed> ([archived](https://web.archive.org/web/20260611190526/https://www.dst.dk/da/Statistik/dokumentation/statistikdokumentation/folketingsvalg--folkeafstemninger-og-europa-parlamentsvalg/praecision-og-paalidelighed))
+[^s43]: European Central Bank — Danish krone now available in all TARGET Services, 2025-04-23. Danish krone now available in all TARGET Services. <https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr250423~096ce05219.en.html>
+[^s44]: Danmarks Nationalbank — Overvågning af den finansielle infrastruktur 2025, 2026. Overvågning af den finansielle infrastruktur 2025. <https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025> ([archived](https://web.archive.org/web/20260513094446/https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025))
+[^s45]: Center for Beredskabskommunikation — Om SINE. Om SINE. <https://sikkerhedsnet.dk/om-sine> ([archived](https://web.archive.org/web/20260710203543/https://sikkerhedsnet.dk/om-sine))
+[^s46]: Center for Beredskabskommunikation — Om CFB. Om CFB. <https://sikkerhedsnet.dk/om-cfb>
+[^s47]: Center for Beredskabskommunikation (sikkerhedsnet.dk) — Leverandør. Leverandør. <https://sikkerhedsnet.dk/leverandoer> ([archived](https://web.archive.org/web/20260710202945/https://sikkerhedsnet.dk/leverandoer))
+[^s48]: Beredskabsstyrelsen — Sirenevarsling. Sirenevarsling. <https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/> ([archived](https://web.archive.org/web/20260617225444/https://www.brs.dk/da/borger/var-klar-nar-krisen-rammer/det-skal-du-gore-nar-du-horer-sirenerne/))
+[^s49]: Retsinformation / Klima-, Energi- og Forsyningsministeriet — Bekendtgørelse af lov om Energinet (LBK nr 271 af…, 2023-03-09. Bekendtgørelse af lov om Energinet (LBK nr 271 af 09/03/2023). <https://www.retsinformation.dk/eli/lta/2023/271/xml>
+[^s50]: Uddannelses- og Forskningsstyrelsen — STADS. STADS. <https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/> ([archived](https://web.archive.org/web/20260519213542/https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/))
+[^s51]: Retsinformation / Indenrigs- og Sundhedsministeriet — Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025), 2025-03-12. Bekendtgørelse af sundhedsloven (LBK nr 275 af 12/03/2025). <https://www.retsinformation.dk/eli/lta/2025/275/xml>
+[^s52]: Sundhedsdatastyrelsen — Fælles Medicinkort. Fælles Medicinkort. <https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort> ([archived](https://web.archive.org/web/20260616035826/https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort))
+[^s53]: Retsinformation / Styrelsen for Dataforsyning og Effektivisering — Adresseloven (LOV nr 136 af 01/02/2017), 2017-02-01. Adresseloven (LOV nr 136 af 01/02/2017). <https://www.retsinformation.dk/eli/lta/2017/136/xml>
 
-**Evidence grades:** 5 Strong, 55 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 5 Strong, 54 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

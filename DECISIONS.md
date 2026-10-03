@@ -2314,3 +2314,39 @@ followed by a second-model check. Overwriting the first vetting run's staging fi
 
 *Would change if:* rounds start replacing many confirmed facts, which would mean the narrow rule is being
 stretched, or a person's review (#85) becomes the way to settle a withheld fact.
+
+### 94. A second checker's disagreement withholds a confirmed fact too
+**Decision.** 2026-10-03; the owner agreed, after a second sample.
+- **What withholds a fact.** A fact that one checker confirmed, but the other checker model did not confirm
+  in a stability sample, is withheld as disputed. The check is on the same fact hash.
+- **The reason shown** says it was confirmed once and that a second checker did not confirm it, and gives
+  that checker's reason.
+- **Where it comes from.** `factcheck.second_opinions()` reads the staged samples, which never change, and
+  `document.Sources.withheld` applies it.
+- **The ledger is untouched.** Replay still reproduces it. A changed fact is checked again, as with any
+  withheld fact.
+- **Samples are independent.** A later sample draws only facts no earlier sample checked.
+
+**Problem.** Two stability samples, each of 50 facts Fable 5.1 had confirmed, were put to Opus 5.5. It did
+not confirm 5 of the first 50 and 1 of the second 50: 6 of 100 in all. The rejections are specific, for
+example a name not in the quote, a parenthetical the source does not state, or a quote that is only menu
+text. Leaving them printed would print facts a model has rejected for a stated reason.
+
+**Alternatives considered.**
+- **Withhold on a second checker's disagreement (chosen).** The same standard as a first-checker
+  disagreement: nothing a checker rejected is printed.
+- **Leave samples as measurement only.** *Why not:* it would knowingly print six facts with a recorded
+  objection.
+- **Re-check everything with both models.** *Why not:* it doubles the cost for a measured 6% gain. Sampling
+  finds the rate and withholds what it finds; more samples, or a full second pass, stay possible.
+
+**Closes off.** Printing a fact that either checker model rejected on its current form.
+
+**Verified:** 2026-10-03.
+- Samples `wf_8232a23d-013` (45 of 50 agreed) and `wf_90fb82e7-35e` (49 of 50).
+- After `./run.sh data`: 1,340 printed facts pass, and 52 are withheld, 6 of them on a second opinion.
+- `python3 model/factcheck.py gate` prints `1340 of 1340`.
+- `tests/test_factcheck.py` shows a second opinion withholds on the same hash and not on a stale one.
+
+*Would change if:* further samples show a disagreement rate that justifies checking every fact with both
+models; or a person's review (#85) becomes the arbiter between the two checkers.
