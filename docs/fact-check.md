@@ -130,9 +130,8 @@ stays on the record in the audit file, including those a later run superseded.
   run `prepare --all` on the same bundle and compare the new staged verdicts with the old ones; the
   manifests record both runs.
 
-The clean-room rebuild (`./run.sh reproduce`) clones HEAD, regenerates every output and runs the unit tests.
-Those include the ledger replay (`tests/test_factcheck.py`), so a fresh clone proves the ledger too. The
-audit-file check runs in `./test.sh`, not in the clean room.
+The clean-room rebuild (`./run.sh reproduce`) clones HEAD, regenerates every output and runs `./test.sh
+--no-e2e` in the clone, so a fresh clone proves the ledger replay and the audit file too.
 
 ## Known limits
 

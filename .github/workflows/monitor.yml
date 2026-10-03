@@ -1,0 +1,26 @@
+name: Monitor
+
+# Weekly, read-only checks of what can change without a commit (#92): the live site (routes, PDFs, headers,
+# noindex, redirect, TLS certificate, served bundle), and whether Eurostat has published new vintages. A
+# failure fails the run and is written to the run summary; it opens no issue and changes nothing.
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # Mondays 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  live:
+    name: Live site and data sources
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - name: Smoke test the live site
+        run: python3 model/smoke.py --site https://eu27.cloud --bundle web/public/data/eu27.json --summary "$GITHUB_STEP_SUMMARY"
+      - name: Eurostat vintages (reported, never applied)
+        run: python3 model/fetch_eurostat.py --check | tee -a "$GITHUB_STEP_SUMMARY"

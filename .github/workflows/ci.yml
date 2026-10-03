@@ -19,6 +19,33 @@ jobs:
   gitleaks:
     uses: pieteradejong/dotfiles/.github/workflows/gitleaks-reusable.yml@main
 
+  # The full gate on every pull request (#92), so a pull request is not first tested by the production
+  # deploy. Same pinned setup as deploy.yml's gate job; --no-pdf because typst is only needed to ship.
+  gate:
+    name: Full gate (./test.sh --no-pdf)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    env:
+      CHROME_PATH: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm ci --prefix web
+      - name: No high-severity advisories in the shipped dependencies
+        run: |
+          npm audit --audit-level=high
+          npm audit --audit-level=high --prefix web
+      - name: Run the gate
+        run: ./test.sh --no-pdf
+
   model:
     name: Model and data integrity
     runs-on: ubuntu-latest

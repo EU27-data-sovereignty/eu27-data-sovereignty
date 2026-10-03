@@ -7,6 +7,34 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-02
 
+### Added: comprehensive testing: pull requests, the live site, PDFs, generated inputs, the network layer (#92)
+
+- **Pull requests** now run the full gate (`./test.sh --no-pdf`) and a high-severity dependency audit. Before,
+  only the Python tests ran until a change reached `main`.
+- **The live site.** `model/smoke.py` checks it after every deploy and every Monday (`monitor.yml`):
+  - routes, all 28 PDFs and the report previews;
+  - the security headers, noindex and the `www` redirect;
+  - the certificate, valid for at least 14 more days;
+  - that the served data is the committed data.
+
+  The Monday run also reports new Eurostat vintages.
+- **Compiled PDFs inspected** (`book/check_pdfs.py`): disclaimer, both appendices, the country named, fonts
+  embedded, and a size budget.
+- **Size budget:** data bundle 900 KB, JavaScript 400 KB, both gzipped.
+- **Generated-input tests** (`tests/test_properties.py`): 500 seeded cases per rule, covering
+  - value in quote across every EU number format;
+  - the fact hash;
+  - the checker rule;
+  - placement ranges.
+- **Fetch-layer tests** against a local HTTP server: robots, a 403 never retried, redirects, dead hosts, and
+  archive host matching.
+- **Web.** Component tests for `DocumentView`, `PageBand` and the theme. Browser tests now cover
+  accessibility in dark mode, every route at phone width, and print: 56 browser tests and 49 unit tests.
+- **The clean-room rebuild** now runs the whole gate in the fresh clone.
+- **`docs/testing.md`:** every suite, where it runs and what it proves.
+- **Dependencies:** `undici` 8.11.2 and `brace-expansion` 5.0.12 in `web/`, clearing the high Dependabot alerts
+  there.
+
 ### Changed: the site takes the report's look; 12 more facts confirmed; the fact-check procedure documented (#87, #89, #91)
 
 - **The theme (#91).** Every page now opens with the PDF report's cover and chapter style: an EU-blue band, a

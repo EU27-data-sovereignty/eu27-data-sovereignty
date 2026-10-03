@@ -52,8 +52,11 @@ Open
 - [ ] Re-research the remaining 69 withheld facts (owner approved only the cheap retry for now; estimate
       ~$75–145)
 - [ ] Six Slovak facts cite `zakony.judikaty.info`, an unofficial mirror (T4); find the official text (slov-lex.sk)
-- [ ] Dependabot: bump `undici` to 8.10.2 in `web/` (through `jsdom`, test-only; clears 2 high, 5 lower);
-      `node-forge` in the stale `mobile/` reader has no fix (port or drop the reader)
+- [x] Dependabot in `web/`: `undici` 8.11.2, `brace-expansion` 5.0.12; `npm audit --audit-level=high` clean, now a CI step
+- [ ] Dependabot in `mobile/` (stale reader): `node-forge` (no fix), `braces`; port the reader to schema 2 or drop it
+- [ ] Testing items that wait for the owner's OK (docs/testing.md § Not yet in place): live `/ask` check,
+      mutation testing / `hypothesis`, fact-check stability sampling, visual baselines, Firefox/WebKit,
+      weekly source link check, pushing dotfiles to fix the red `security` workflow
 - [ ] Two of the withheld facts, from the pilot:
   - [ ] `record:DE:civil_registry:operator`: the printed text says "national personal identification
         number … for every natural person"; §139b AO only says the BZSt stores these data on natural

@@ -60,6 +60,21 @@ class Deploy(unittest.TestCase):
         deploy = run_sh.split("    deploy)\n", 1)[1].split("\n        ;;\n", 1)[0]
         self.assertLess(deploy.index("python3 model/factcheck.py gate"), deploy.index("vercel deploy"))
 
+    def test_pull_requests_get_the_full_gate_and_an_audit(self):
+        # #92: a pull request runs ./test.sh and the dependency audit before it can reach main.
+        ci = (ROOT / ".github" / "workflows" / "ci.yml").read_text()
+        self.assertIn("run: ./test.sh --no-pdf", ci)
+        self.assertIn("if: github.event_name == 'pull_request'", ci)
+        for wf in (ci, DEPLOY):
+            self.assertIn("npm audit --audit-level=high --prefix web", wf)
+
+    def test_the_deploy_and_the_weekly_monitor_run_the_same_smoke_test(self):
+        monitor = (ROOT / ".github" / "workflows" / "monitor.yml").read_text()
+        self.assertIn("python3 model/smoke.py", DEPLOY)
+        self.assertIn("python3 model/smoke.py", monitor)
+        self.assertRegex(monitor, r"schedule:\n\s+- cron: ")
+        self.assertNotIn("issues: write", monitor)              # read-only: it opens nothing
+
     def test_only_main_deploys(self):
         self.assertRegex(DEPLOY, r"push:\n\s+branches: \[main\]\n")
         self.assertNotIn("pull_request", DEPLOY)

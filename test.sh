@@ -155,16 +155,14 @@ else
         echo -e "${RED}    ❌ expected 28 PDFs, found $pdfs${NC}"
         exit 1
     fi
-    # The compiled text, not just the source: every PDF opens with the disclaimer (#82).
-    if command -v pdftotext &> /dev/null; then
-        for pdf in "$PDF_DIR/eu27-report.pdf" "$PDF_DIR/report/DE.pdf"; do
-            if ! pdftotext "$pdf" - | tr -s ' \n' ' ' | grep -q "no person has reviewed the findings"; then
-                echo -e "${RED}    ❌ $(basename "$pdf") does not carry the disclaimer${NC}"
-                exit 1
-            fi
-        done
+    # The compiled PDFs, not just their source (#82, #88, #92): disclaimer, both appendices, the country
+    # named, every font embedded, a size budget, and the report previews. Needs poppler (CI installs it).
+    if command -v pdftotext &> /dev/null && command -v pdffonts &> /dev/null; then
+        python3 book/check_pdfs.py "$PDF_DIR"
+    else
+        echo -e "${YELLOW}    ⚠️  poppler (pdftotext, pdffonts) not installed: compiled PDFs not inspected${NC}"
     fi
-    ok "28 PDFs compiled; the disclaimer is in the compiled text"
+    ok "28 PDFs compiled and inspected: disclaimer, appendices, fonts, size; 4 previews"
 fi
 
 cd web
@@ -188,6 +186,24 @@ ok "unit tests pass"
 step "Production build"
 npm run --silent build
 ok "build succeeded"
+
+step "Size budget"
+# What a reader downloads, gzipped (#92): the data bundle (826 KB on 2026-10-02) and all JavaScript (342 KB,
+# 236 KB of it the map outline). Raising a budget is a decision with its reason, like a coverage floor.
+python3 - <<'PY'
+import gzip, pathlib, sys
+budget = {"data bundle": (pathlib.Path("public/data/eu27.json"), 900_000),
+          "JavaScript": (sorted(pathlib.Path("dist/assets").glob("*.js")), 400_000)}
+over = []
+for name, (paths, limit) in budget.items():
+    paths = paths if isinstance(paths, list) else [paths]
+    size = sum(len(gzip.compress(p.read_bytes(), 9)) for p in paths)
+    print(f"    {name}: {size / 1000:.0f} KB gzipped of {limit / 1000:.0f} KB")
+    if size > limit:
+        over.append(name)
+sys.exit(1 if over else 0)
+PY
+ok "data bundle and JavaScript within their gzipped budgets"
 
 cd "$ROOT"
 

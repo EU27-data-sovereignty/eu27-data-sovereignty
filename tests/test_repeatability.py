@@ -54,6 +54,22 @@ class Manifests(unittest.TestCase):
             self.assertRegex(doc["output_sha256"], r"^[0-9a-f]{64}$", path.name)
 
 
+class TestingDoc(unittest.TestCase):
+    """docs/testing.md lists every suite (#92); a new test file not listed there fails here."""
+
+    def test_every_python_test_module_is_listed(self):
+        doc = (ROOT / "docs" / "testing.md").read_text(encoding="utf-8")
+        missing = [p.stem for p in sorted((ROOT / "tests").glob("test_*.py")) if p.stem not in doc]
+        self.assertEqual(missing, [])
+
+    def test_every_workflow_is_listed(self):
+        doc = (ROOT / "docs" / "testing.md").read_text(encoding="utf-8")
+        for wf in sorted((ROOT / ".github" / "workflows").glob("*.yml")):
+            if wf.name in ("security.yml",):     # the shared security workflow, documented in DEPLOYMENT.md
+                continue
+            self.assertIn(wf.name, doc, wf.name)
+
+
 class Pins(unittest.TestCase):
     def test_eurostat_pins_are_data_with_a_decision(self):
         import csv  # noqa: PLC0415

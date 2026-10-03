@@ -136,15 +136,12 @@ def clean_room(evidence: bool = False, keep: bool = False) -> int:
         drift = subprocess.run(["git", "status", "--porcelain"], cwd=clone, capture_output=True, text=True).stdout
         if drift.strip():
             failures.append("generated files differ from the committed ones:\n" + drift[:1500])
-        run("admission reproduces the registers", sys.executable, "model/reproduce.py", "admit-check")
-        out = tmp / "pdf"
-        run("compile the EU-27 report and 27 country PDFs", sys.executable, "book/report.py", "-o", str(out))
-        pdfs = [p for p in out.rglob("*.pdf") if p.stat().st_size > 1024] if out.exists() else []
-        if len(pdfs) != 28:
-            failures.append(f"expected 28 PDFs, built {len(pdfs)}")
+        # Then the whole gate, as CI runs it, in the clone (#92): unit tests (with the fact-check ledger
+        # replay), admission, the PDFs and their inspection, types, lint, Vitest, the build and the size
+        # budget. Only the browser tests are left out (--no-e2e): they need Chrome, not the repository.
+        run("install dependencies (npm ci)", "npm", "ci", "--silent")
         run("install web dependencies (npm ci)", "npm", "ci", "--silent", cwd=clone / "web")
-        run("build the web app", "npm", "run", "--silent", "build", cwd=clone / "web")
-        run("python test suite", sys.executable, "-m", "unittest", "discover", "-s", "tests", "-q")
+        run("the full gate (./test.sh --no-e2e)", "./test.sh", "--no-e2e")
         if evidence:
             # The third-party audit, scripted: no cache, every source fetched again from the web.
             run("recheck every cited source from the live web (slow)", sys.executable,

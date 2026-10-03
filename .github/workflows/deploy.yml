@@ -52,8 +52,14 @@ jobs:
         run: |
           npm ci
           npm ci --prefix web
+      - name: Install poppler (to inspect the compiled PDFs)
+        run: sudo apt-get install -y --no-install-recommends poppler-utils
       - name: Run the gate
         run: ./test.sh
+      - name: No high-severity advisories in the shipped dependencies
+        run: |
+          npm audit --audit-level=high
+          npm audit --audit-level=high --prefix web
       # Every printed fact checked by the model that did not write it, and the audit file
       # current (DECISIONS.md #87). The check itself runs locally (/factcheck); this only
       # enforces its committed result, so no model key is needed here.
@@ -95,29 +101,15 @@ jobs:
           url="$(npx --yes "$VERCEL_CLI" deploy --prebuilt --prod --token="$VERCEL_TOKEN")"
           echo "url=$url" >> "$GITHUB_OUTPUT"
       - name: Smoke test the live domain
+        # model/smoke.py: every route, all 28 PDFs and the previews, the security headers vercel.json sets,
+        # noindex, the www redirect, the TLS certificate and the served bundle. The weekly monitor runs the same.
         run: |
           set -euo pipefail
-          check() {  # path, expected content-type prefix
-            read -r code type < <(curl -sS -o /dev/null -w '%{http_code} %{content_type}\n' "$SITE$1")
-            echo "$1 -> $code $type"
-            [ "$code" = 200 ] && [[ "$type" == "$2"* ]]
-          }
-          check / text/html
-          check /country/DE text/html        # the SPA rewrite, which the gate cannot see
-          check /eu27-report.pdf application/pdf
-          curl -sS "$SITE/robots.txt" | grep -qx 'Disallow: /'
-          curl -sSI "$SITE/" | grep -qi '^x-robots-tag: noindex'
-          # Freshness: the live bundle must be the committed one (DEPLOYMENT.md).
-          want="$(sha256sum web/public/data/eu27.json | cut -d' ' -f1)"
-          for i in 1 2 3 4 5 6; do
-            got="$(curl -sS "$SITE/data/eu27.json" | sha256sum | cut -d' ' -f1)"
-            [ "$got" = "$want" ] && break
-            sleep 10
-          done
-          [ "$got" = "$want" ] || { echo "::error::live bundle $got != committed $want"; exit 1; }
           {
             echo "### Deployed"
             echo "| Deployment | Commit | eu27.json sha256 |"
             echo "|---|---|---|"
-            echo "| ${{ steps.deploy.outputs.url }} | \`${GITHUB_SHA::7}\` | \`$want\` |"
+            echo "| ${{ steps.deploy.outputs.url }} | \`${GITHUB_SHA::7}\` | \`$(sha256sum web/public/data/eu27.json | cut -d' ' -f1)\` |"
+            echo
           } >> "$GITHUB_STEP_SUMMARY"
+          python3 model/smoke.py --site "$SITE" --bundle web/public/data/eu27.json --summary "$GITHUB_STEP_SUMMARY"

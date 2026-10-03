@@ -318,6 +318,34 @@ test.describe('accessibility', () => {
   }
 })
 
+test.describe('accessibility in dark mode (#92)', () => {
+  test.use({ colorScheme: 'dark' })
+  // /sources is left out here only for time; its markup is the same in both themes.
+  for (const route of ROUTES.filter(r => r !== '/sources')) {
+    test(`${route} has no detectable violations in dark mode`, async ({ page }) => {
+      await page.goto(route)
+      await expect(page.locator('main')).toBeVisible()
+      expect(await page.evaluate(() => matchMedia('(prefers-color-scheme: dark)').matches)).toBe(
+        true,
+      )
+      const results = await new AxeBuilder({ page })
+        .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+        .analyze()
+      expect(results.violations).toEqual([])
+    })
+  }
+})
+
+test.describe('print (#92)', () => {
+  test('printing a country page drops the navigation and keeps the findings', async ({ page }) => {
+    await page.goto('/country/DE')
+    await page.emulateMedia({ media: 'print' })
+    await expect(page.getByRole('navigation', { name: 'Main' })).toBeHidden()
+    await expect(page.getByRole('heading', { name: 'Germany', exact: true })).toBeVisible()
+    await expect(page.locator('tbody tr').first()).toBeVisible()
+  })
+})
+
 test.describe('responsive', () => {
   test('the holdings table does not force the page to scroll sideways at 375px', async ({
     page,
@@ -330,4 +358,16 @@ test.describe('responsive', () => {
     )
     expect(overflow).toBeLessThanOrEqual(1)
   })
+
+  for (const route of ROUTES.filter(r => r !== '/sources')) {
+    test(`${route} does not scroll sideways at 375px (#92)`, async ({ page }) => {
+      await page.setViewportSize({ width: 375, height: 800 })
+      await page.goto(route)
+      await expect(page.locator('main')).toBeVisible()
+      const overflow = await page.evaluate(
+        () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      )
+      expect(overflow).toBeLessThanOrEqual(1)
+    })
+  }
 })

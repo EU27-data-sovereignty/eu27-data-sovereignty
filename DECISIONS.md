@@ -2207,3 +2207,60 @@ report.
 
 *Would change if:* print or accessibility testing shows the serif hurting readability, or the project
 adopts an institutional identity, for example on transfer to the foundation (#86).
+
+### 92. Every pull request runs the full gate; the live site is smoke-tested after each deploy and weekly
+**Decision.** 2026-10-02, from the testing plan the owner approved.
+- **Pull requests (`ci.yml`).** `./test.sh --no-pdf` runs on every pull request, with the same pinned setup as
+  the deploy gate, plus `npm audit --audit-level=high` for the root and `web/`. The deploy gate also runs
+  the audit, and installs poppler so the compiled PDFs are inspected.
+- **The live site (`model/smoke.py`).** One stdlib-only smoke test runs after every deploy and every Monday
+  (`monitor.yml`, read-only, opens nothing). It checks:
+  - every route, the 28 PDFs and the 4 previews;
+  - every security header `vercel.json` sets, and noindex;
+  - the `www` redirect, and a TLS certificate valid for at least 14 more days;
+  - that the served bundle is the committed one.
+- **New checks in the gate.**
+  - `book/check_pdfs.py`: disclaimer, both appendices, country named, fonts embedded and a size budget, for
+    each compiled PDF.
+  - A gzipped size budget: data 900 KB, JavaScript 400 KB.
+  - Seeded generated-input tests for the evidence rules (`tests/test_properties.py`).
+  - Fetch-layer tests against a local HTTP server (`tests/test_fetch_network.py`).
+  - Component tests (Vitest).
+  - Browser tests: accessibility in dark mode, every route at 375 px, and print.
+- **The clean room** (`./run.sh reproduce`) now runs `./test.sh --no-e2e` in the fresh clone.
+- **`docs/testing.md`** lists every suite and where it runs. A test fails if a test file or workflow is
+  missing from it.
+
+**Problem.** A pull request got only the Python tests. Vitest, Playwright, type-check, lint, the build and
+the PDFs first ran on push to `main`, which is the production deploy. Nothing checked the live site's
+headers, routes or certificate after a deploy or between deploys. The evidence rules were tested on
+hand-picked examples only. The fetch layer had no network-level test. Of the PDFs, only the page count and
+the disclaimer were checked.
+
+**Alternatives considered.**
+- **The full gate on pull requests, smoke checks after deploy and weekly (chosen).** Every check runs before
+  a change can reach `main`, and the site is watched without a commit.
+- **Keep the deploy as the first full test.** *Why not:* a failing browser test is found only by a production
+  deploy that then does not happen. That is safe, but late.
+- **`hypothesis` for the generated inputs.** *Why not, for now:* it adds a dependency to a stdlib-only model.
+  Seeded `random` gives reproducible cases with no dependency; `hypothesis` stays open, with the owner's OK.
+- **Have the weekly monitor open GitHub issues.** *Why not:* that is outward-facing and needs the owner's OK.
+  A failed run with its summary is visible enough for now.
+
+**Closes off.** Merging a pull request that has not passed `./test.sh`. A deploy that does not check the live
+headers and certificate. A test file or workflow missing from `docs/testing.md`.
+
+**Verified:** 2026-10-02.
+- `model/smoke.py` on eu27.cloud: 54 of 54 checks passed. `tests/test_smoke.py` shows it fails against a
+  local server serving the wrong things.
+- `book/check_pdfs.py` finds 0 problems in 28 PDFs and 4 previews, and reports a removed `DE.pdf`.
+- Each generated-input property failed against a deliberately broken rule (an always-true value check,
+  English-only number reading, an always-Opus checker, and a hash that ignored the printed text), then
+  passed against the real one.
+- Playwright: 56 passed. Vitest: 49 passed. `npm audit --audit-level=high`: 0 vulnerabilities, root and
+  `web/`, after `undici` 8.11.2 and `brace-expansion` 5.0.12.
+- `./run.sh reproduce`: "reproduced from scratch".
+- The pull-request job runs on GitHub only on the next pull request: NOT YET.
+
+*Would change if:* the gate grows too slow for pull requests (then split the browser tests into their own
+job), or the owner approves the items that wait for an OK, listed in `docs/testing.md`.
