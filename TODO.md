@@ -53,7 +53,13 @@ Open
 - [ ] 46 facts still withheld: no T1/T2 quote found, reviewer disagreed, or the check rejected the correction
 - [ ] Stability sample: Opus 5.5 disagreed with 5 of 50 Fable-confirmed facts (audit file § Stability); decide
       whether a second-checker disagreement should withhold a fact
-- [ ] Owner: ANTHROPIC_API_KEY in Vercel (dedicated workspace, spend limit), then repository variable ASK_LIVE=true
+- [x] ANTHROPIC_API_KEY set in Vercel (Production), 2026-10-03
+- [ ] **Security: rotate ANTHROPIC_API_KEY.** The key in use was exposed in plain text during setup (recorded
+      in the private findings register). New key from the `eu27-ask` workspace, stored with
+      `pbpaste | vercel env add ANTHROPIC_API_KEY production`, redeploy, `python3 model/ask_smoke.py --require`,
+      then revoke the old keys. Confirm the workspace spend limit is set
+- [x] Live `/ask` answers with citations (`ask_smoke.py --require`: 1122 characters, 3 citations, 2026-10-03);
+      repository variable ASK_LIVE=true, so the daily check now fails if it stops
 - [ ] Owner: port the mobile reader to schema 2, or drop it (its 4 Dependabot alerts need one or the other)
 - [ ] Six Slovak facts cite `zakony.judikaty.info`, an unofficial mirror (T4); find the official text (slov-lex.sk)
 - [x] Dependabot in `web/`: `undici` 8.11.2, `brace-expansion` 5.0.12; `npm audit --audit-level=high` clean, now a CI step

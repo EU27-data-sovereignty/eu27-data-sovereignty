@@ -7,6 +7,16 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-03
 
+### Fixed: `/ask` answers on the live site
+
+- **The fix.** `ANTHROPIC_API_KEY` is now set in Vercel (Production), and `/ask` answers with citations: the
+  live check got 1,122 characters and 3 citations.
+- **The cause.** The first value stored had been revoked. The `unconfigured` code added earlier the same day
+  showed this from outside.
+- **The daily check is now strict** (`ASK_LIVE=true`).
+- **Rotate the key** (TODO). It was exposed in plain text during setup, and that is recorded as a security
+  finding.
+
 ### Changed: a rejected `/ask` key is reported as such (#92)
 
 - **What changed.** When the Anthropic API rejects the key, or none is set (HTTP 401), `/ask` now answers
