@@ -10,6 +10,7 @@ import {
   type AskClient,
   type Corpus,
   type StreamEvent,
+  errorMessage,
 } from '../../../api/_ask-core'
 
 /**
@@ -180,5 +181,20 @@ describe('handler', () => {
     for (const spy of spies) {
       for (const call of spy.mock.calls) expect(JSON.stringify(call)).not.toContain(secret)
     }
+  })
+})
+
+describe('errorMessage', () => {
+  it('gives a rejected or missing key its own code, and says nothing about the key', () => {
+    const m = errorMessage(401)
+    expect(m.code).toBe('unconfigured')
+    expect(m.message).not.toMatch(/key|401|auth/i)
+  })
+
+  it('keeps the budget, rate and overload codes apart', () => {
+    expect(errorMessage(402).code).toBe('paused')
+    expect(errorMessage(429).code).toBe('busy')
+    expect(errorMessage(529).code).toBe('overloaded')
+    expect(errorMessage(undefined).code).toBe('error')
   })
 })

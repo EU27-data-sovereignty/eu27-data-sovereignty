@@ -7,6 +7,14 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-03
 
+### Changed: a rejected `/ask` key is reported as such (#92)
+
+- **What changed.** When the Anthropic API rejects the key, or none is set (HTTP 401), `/ask` now answers
+  with the code `unconfigured`. Visitors see "Questions are not available right now", and nothing about the
+  key is exposed.
+- **Why.** The daily check, and anyone diagnosing, can now tell a key problem from a spent budget (`paused`)
+  or an outage.
+
 ### Changed: a fact a second checker rejects is withheld too (#94)
 
 - **A second stability sample.** 50 more confirmed facts, none from the first sample, went to Opus 5.5,

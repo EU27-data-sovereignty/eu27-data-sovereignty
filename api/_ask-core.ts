@@ -171,6 +171,13 @@ export function errorMessage(status: number | undefined): {
       code: "overloaded",
       message: "The answering service is busy. Please try again shortly.",
     };
+  // 401: the API rejected the key, or none is set. Its own code, so the daily check can say so (#92);
+  // nothing about the key is exposed.
+  if (status === 401)
+    return {
+      code: "unconfigured",
+      message: "Questions are not available right now. Please try again later.",
+    };
   if (status === 400 || status === 402 || status === 403)
     return {
       code: "paused",

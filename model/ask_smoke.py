@@ -47,6 +47,7 @@ def judge(events: list[dict]) -> tuple[str, str]:
     kinds = [e.get("type") for e in events]
     if "error" in kinds:
         e = next(x for x in events if x.get("type") == "error")
+        # "unconfigured" is a rejected or missing key (HTTP 401 from the API); "paused" a spent budget.
         return "not_configured", f"{e.get('code')}: {e.get('message')}"
     text = "".join(e.get("text", "") for e in events if e.get("type") == "text")
     cites = [e for e in events if e.get("type") == "cite" and e.get("claims")]
