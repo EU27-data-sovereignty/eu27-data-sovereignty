@@ -5,6 +5,17 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-04
+
+### Changed: the subtitle states the project's goal
+
+- **The new subtitle,** on the front page and the PDF report's cover: "Toward a well-sourced plan for every EU
+  member state: which critical government data to hold at home, and the sovereign data centres to hold it".
+  It replaces "Each member state's critical data holdings, analysed on its own fundamentals".
+- **Why "toward".** Capacity sizing stays withdrawn until each state's holdings are measured (#73), so no
+  finished plan is claimed.
+- **Visual baselines:** the 3 front-page baselines were updated with it.
+
 ## 2026-10-03
 
 ### Fixed: `/ask` answers on the live site

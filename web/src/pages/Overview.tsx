@@ -50,7 +50,8 @@ export function Overview({ bundle }: { bundle: Bundle }) {
         title={<>Sovereign Data Centres for the EU{'\u2011'}27</>}
       >
         <p className="mt-4 font-serif text-lg sm:text-2xl">
-          Each member state&apos;s critical data holdings, analysed on its own fundamentals
+          Toward a well-sourced plan for every EU member state: which critical government data to
+          hold at home, and the sovereign data centres to hold it
         </p>
       </PageBand>
       <p className="mb-6 max-w-3xl text-[var(--color-fg-secondary)]">
