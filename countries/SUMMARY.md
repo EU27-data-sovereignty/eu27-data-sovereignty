@@ -2,6 +2,8 @@
 
 > Generated 2026-09-29 by `model/generate_countries.py`. Each brief analyses one member state on its own fundamentals (DECISIONS.md #72); none is scaled from another.
 
+Where each state's key registers are hosted, and by whom: [EU-INFRASTRUCTURE.md](EU-INFRASTRUCTURE.md).
+
 | | Country | ISO | Holdings verified | Tier 0 verified | Capacity |
 |---|---|---|---:|---:|---|
 | 🇦🇹 | [Austria](AT/GOAL.md) | AT | 31 of 39 | 8 of 9 | Not yet sized |

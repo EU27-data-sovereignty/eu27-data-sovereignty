@@ -213,10 +213,18 @@ owner's approval:
 - **The smoke test needs DNS and a certificate.** If `eu27.cloud` does not answer over HTTPS, the `Deploy`
   run fails at its last step even though the deploy itself succeeded. On 2026-10-02 the certificate arrived a
   minute after the first smoke test; `gh run rerun <id> --failed` re-ran it green.
+- **Redeploy with `gh workflow run Deploy`, never the dashboard's Redeploy button.** The dashboard builds on
+  Vercel, which has no typst, so it fails every time. The Vercel project is connected to this repository (since
+  2026-10-05; on 2026-10-02 it was connected to `pieteradejong/astropieter` by mistake, and every push there
+  started a failing production build). `vercel.json` sets `git.deploymentEnabled: false`, so a push never builds
+  on Vercel: production ships only from GitHub Actions, after the gate and the fact-check gate
+  (`tests/test_vercel_config.py`).
 - **The `/ask` key.** It is stored as `ANTHROPIC_API_KEY` (Production, secret), and works whatever its prefix.
   To test a key without showing it: `curl -sS -o /dev/null -w '%{http_code}' https://api.anthropic.com/v1/models
   -H "x-api-key: $(pbpaste)" -H "anthropic-version: 2023-06-01"` should print 200. A new value takes effect only
-  after a redeploy (`gh workflow run Deploy`). Then `python3 model/ask_smoke.py --require`.
+  after a redeploy (`gh workflow run Deploy`). Then `python3 model/ask_smoke.py --require`. The safest way to
+  set it is the dashboard (Settings → Environment Variables, Production, Sensitive): the key goes from one browser
+  tab to another, never through a terminal or a chat.
 - **Set a secret by piping it, not at a prompt.** `gh secret set` run through Claude Code's `!` prefix has no
   terminal to prompt on and silently stores an empty value. Use `pbpaste | gh secret set NAME --env production`
   with the value on the clipboard.

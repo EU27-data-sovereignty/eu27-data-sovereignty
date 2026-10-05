@@ -54,47 +54,47 @@ The holdings Belgium cannot let depend on infrastructure a foreign state can com
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Rijksregister van de natuurlijke personen (National Register of Natural Persons), the central database of identification data of all registered persons[^s15][^s6] | The National Register is managed by the Directorate-General Identity and Civil Affairs of the FPS Interior[^s6][^s16] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | ID-card photos are stored and visible in the National Register[^s17][^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | No central register[^s17][^s5] | — | — | — |
-| Critical | Breeder document scans (tier 0) | DABS: a central database holding all civil status deeds, replacing the municipal and consular registers[^s19][^s20] | DABS is governed by a DABS Management Committee responsible for its set-up and management[^s19][^s20] | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | FAS audit trail of authentication logs, kept for 10 years[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | Register van de Identiteitskaarten: a permanent inventory of the identity cards produced and issued in Belgium[^s22][^s6] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | Federal Authentication Service (FAS)[^s21] | DG Simplification and Digitization (FPS Policy and Support, BOSA)[^s21] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | Belgium Root CA (BRCA), the top of the government CA hierarchy[^s3][^s4] | The Belgian authorities are the certification service provider responsible for the Belgium Root CAs[^s3][^s4] | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | kadastrale documentatie of the AAPD (cadastral documentation of the General Administration of Patrimonial Documentation)[^s23] | Algemene Administratie van de Patrimoniumdocumentatie (AAPD) (General Administration of Patrimonial Documentation)[^s23] | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Centraal Strafregister (Central Criminal Register)[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | Evibel is the internal database of the immigration service, to be replaced by eMigration[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | Pensioenkadaster (Pension Register)[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | Kruispuntbank van Ondernemingen (Crossroads Bank for Enterprises)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | UBO-register (register of ultimate beneficial owners)[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Kruispuntbank van de Voertuigen (Crossroads Bank for Vehicles)[^s29] | Directie voor de Inschrijving van Voertuigen van de Federale Overheidsdienst Mobiliteit en Vervoer (DIV, Vehicle Registration Directorate of FPS Mobility and Transport)[^s29] | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Firearms register (tier 1) | Centraal Wapenregister (Central Weapons Register)[^s30] | een dienst van de Federale Politie (a service of the Federal Police)[^s30] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | NBB Securities Settlement System (NBB-SSS)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | ASTRID-radionetwerk (ASTRID TETRA radio network)[^s32] | ASTRID (naamloze vennootschap van publiek recht, public-law company)[^s33] | *Not stated in sources* | more than 2 million radio contacts per day[^s32] |
-| High | Crisis management and civil protection (tier 1) | BE-Alert (the government's alerting system)[^s34] | *Not yet sourced* | *Not stated in sources* | more than 1 million registered addresses[^s34] |
-| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | LED, de Leer- en ErvaringsbewijzenDatabank (Learning and Experience Certificates Database)[^s35] | Agentschap voor Kwaliteitszorg in Onderwijs en Vorming (Agency for Quality Assurance in Education and Training)[^s35] | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | Rijksregister van de natuurlijke personen (National Register of Natural Persons), the central database of identification data of all registered persons[^s15][^s6] | The National Register is managed by the Directorate-General Identity and Civil Affairs of the FPS Interior[^s6][^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | ID-card photos are stored and visible in the National Register[^s17][^s18] | *Not yet sourced* | Photos are kept on a secure server (no provider or location named)[^s18] | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | No central register[^s17][^s5] | — | — | — | — |
+| Critical | Breeder document scans (tier 0) | DABS: a central database holding all civil status deeds, replacing the municipal and consular registers[^s19][^s20] | DABS is governed by a DABS Management Committee responsible for its set-up and management[^s19][^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | FAS audit trail of authentication logs, kept for 10 years[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | Register van de Identiteitskaarten: a permanent inventory of the identity cards produced and issued in Belgium[^s22][^s6] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | Federal Authentication Service (FAS)[^s21] | DG Simplification and Digitization (FPS Policy and Support, BOSA)[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | State PKI and qualified trust services (tier 0) | Belgium Root CA (BRCA), the top of the government CA hierarchy[^s3][^s4] | The Belgian authorities are the certification service provider responsible for the Belgium Root CAs[^s3][^s4] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | kadastrale documentatie of the AAPD (cadastral documentation of the General Administration of Patrimonial Documentation)[^s23] | Algemene Administratie van de Patrimoniumdocumentatie (AAPD) (General Administration of Patrimonial Documentation)[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Centraal Strafregister (Central Criminal Register)[^s24] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | Evibel is the internal database of the immigration service, to be replaced by eMigration[^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Benefits & pensions (tier 1) | Pensioenkadaster (Pension Register)[^s26] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Business registry (tier 1) | Kruispuntbank van Ondernemingen (Crossroads Bank for Enterprises)[^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | UBO-register (register of ultimate beneficial owners)[^s28] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Kruispuntbank van de Voertuigen (Crossroads Bank for Vehicles)[^s29] | Directie voor de Inschrijving van Voertuigen van de Federale Overheidsdienst Mobiliteit en Vervoer (DIV, Vehicle Registration Directorate of FPS Mobility and Transport)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Firearms register (tier 1) | Centraal Wapenregister (Central Weapons Register)[^s30] | een dienst van de Federale Politie (a service of the Federal Police)[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Central bank systems (tier 1) | NBB Securities Settlement System (NBB-SSS)[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | ASTRID-radionetwerk (ASTRID TETRA radio network)[^s32] | ASTRID (naamloze vennootschap van publiek recht, public-law company)[^s33] | *Not yet sourced* | *Not stated in sources* | more than 2 million radio contacts per day[^s32] |
+| High | Crisis management and civil protection (tier 1) | BE-Alert (the government's alerting system)[^s34] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | more than 1 million registered addresses[^s34] |
+| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | LED, de Leer- en ErvaringsbewijzenDatabank (Learning and Experience Certificates Database)[^s35] | Agentschap voor Kwaliteitszorg in Onderwijs en Vorming (Agency for Quality Assurance in Education and Training)[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
@@ -154,7 +154,7 @@ Tier 0 and 1 holdings for Belgium without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -211,10 +211,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -223,8 +223,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -233,6 +233,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -265,7 +267,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -307,7 +309,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -339,7 +341,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Belgium
 
-42 of 42 printed facts about Belgium pass.
+42 of 43 printed facts about Belgium pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -357,6 +359,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:BE:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BE:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BE:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:facial_biometric:hosting | Facial biometric: hosting | unrecorded | none | never checked |  |
 | record:BE:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BE:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BE:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -428,6 +431,6 @@ None.
 [^s34]: Nationaal Crisiscentrum (NCCN) — Meer dan 1 miljoen geregistreerde adressen in BE-Alert, 2022. Meer dan 1 miljoen geregistreerde adressen in BE-Alert. <https://crisiscentrum.be/nl/newsroom/meer-dan-1-miljoen-geregistreerde-adressen-be-alert>
 [^s35]: Kruispuntbank van de Sociale Zekerheid (KSZ) — Datawarehouse | DWH_AHOVOKS_LED. Datawarehouse | DWH_AHOVOKS_LED. <https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led> ([archived](https://web.archive.org/web/20260211053943/https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led))
 
-**Evidence grades:** 6 Strong, 36 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 6 Strong, 37 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

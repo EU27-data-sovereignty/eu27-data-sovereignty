@@ -54,47 +54,47 @@ The holdings Bulgaria cannot let depend on infrastructure a foreign state can co
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | *Not yet sourced* | Identity documents are issued by the Ministry of Interior, Ministry of Foreign Affairs, Ministry of Transport and Communications and Ministry of Defence[^s11] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | National Register of Bulgarian Identity Documents (automated information fund)[^s11] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Breeder document scans (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
-| High | Document issuance history (tier 0) | *Not yet sourced* | From 27 April 2026 the Ministry of Interior moved to centralised personalisation and a new generation of identity documents[^s12] | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | *Not yet sourced* | *Disputed: the fact check (claude-opus-5-5, run wf_90fb82e7-35e) was confirmed once, but a second checker in a stability sample did not confirm this: Art. 4(3) only says that persons designated by order of the Minister of Interior also have access to the Art. 3(1) register. Neither that article nor Art. 3 says that the MVR runs or maintains the register, so the parenthetical operator…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | избирателните списъци, отпечатвани от ГД ГРАО (voter lists printed by DG Civil Registration and Administrative Services)[^s13] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | The Communications Regulation Commission creates, maintains and publishes the national Trusted List[^s1] | Qualified trust service providers on the Bulgarian Trusted List: Borica AD, Evrotrust Technologies AD, InfoNotary EAD, Information Services AD and Idocs Bulgaria EOOD[^s1] | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | *Not yet sourced* | Criminal-record bureaus at every district court and a Central Criminal Records Bureau at the Ministry of Justice[^s14] | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Автоматизираната информационна система "Издирвателна дейност" - Национална Шенгенска информационна система (АИС ИД - НШИС) (Automated Information System 'Search Activity' – National Schengen Information System)[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | *Not yet sourced* | Migration Directorate of MVR and Migration units of the regional MVR directorates (Foreigners in the Republic of Bulgaria Act)[^s16] | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | Tax and Social Security Procedure Code: NRA creates and maintains the register and databases of obliged persons[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | Митническата информационна система за внасяне (МИСВ) (Customs Import Information System), Агенция "Митници"[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | AGCC creates and maintains the cadastral map and cadastral registers for the whole country under the Cadastre and Property Register Act[^s19] | The Registry Agency (executive agency under the Minister of Justice) keeps the property register, commercial register, BULSTAT and other registers[^s20] | National infrastructure[^s20] | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | The software change enabling beneficial-owner entries went live on 28.01.2019[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | автоматизираната информационна система КАТ (АИС – КАТ) (Automated Information System KAT, the vehicle registration system)[^s15] | "Пътна полиция" при СДВР/ОДМВР (Traffic Police units of the Ministry of Interior's regional directorates)[^s15] | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim, but the MFA citation names a different system (НВИС, not printed), and the RTA ordinance names 'АИС Издирвателна дейност – НШИС' only in the context of wanted-vehicle registration termination, never as a border or…. It is withheld until the fact or its source is corrected and checked again* | Министерството на външните работи (Ministry of Foreign Affairs), for the national visa system[^s21] | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | SEBRA (System for Electronic Budget Payments) is used to initiate payments of budget organisations[^s22] | BORICA AD transforms approved SEBRA payments into ISO 20022 XML[^s22] | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | TARGET-BNB (national system component of the Eurosystem's TARGET)[^s23] | Българската народна банка (Bulgarian National Bank)[^s23] | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | Националната система 112 (National System 112)[^s24] | *Not yet sourced* | *Not stated in sources* | шест центъра (six emergency call centres)[^s24] |
-| High | Crisis management and civil protection (tier 1) | BG-ALERT public warning system over mobile networks (Cell Broadcast)[^s25][^s26] | Developed jointly by MVR and the Ministry of e-Government[^s25][^s26] | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | Project to modernise and extend the SCADA/EMS and information environment in ESO's Central Dispatch (CDU)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | Register of all current, interrupted and graduated students and doctoral candidates, kept as an electronic database through NACID[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | The NHIS holds an electronic health record for every citizen[^s29][^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Business registry (tier 1) | The Commercial Register and Register of Non-Profit Legal Entities is a common electronic database[^s20] | *Not yet sourced* | National infrastructure[^s20] | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | The State Gazette website provides the full content of all issues for the last 7 years in PDF (EU N-Lex description)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | 2021 Population and Housing Census, the 18th in Bulgaria (census site of the National Statistical Institute)[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Geospatial base data (tier 3) | AGCC creates and maintains the topographic databases and the geo-information system[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Facial biometric (tier 0) | *Not yet sourced* | Identity documents are issued by the Ministry of Interior, Ministry of Foreign Affairs, Ministry of Transport and Communications and Ministry of Defence[^s11] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | National Register of Bulgarian Identity Documents (automated information fund)[^s11] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
+| High | Document issuance history (tier 0) | *Not yet sourced* | From 27 April 2026 the Ministry of Interior moved to centralised personalisation and a new generation of identity documents[^s12] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | *Not yet sourced* | *Disputed: the fact check (claude-opus-5-5, run wf_90fb82e7-35e) was confirmed once, but a second checker in a stability sample did not confirm this: Art. 4(3) only says that persons designated by order of the Minister of Interior also have access to the Art. 3(1) register. Neither that article nor Art. 3 says that the MVR runs or maintains the register, so the parenthetical operator…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | избирателните списъци, отпечатвани от ГД ГРАО (voter lists printed by DG Civil Registration and Administrative Services)[^s13] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | The Communications Regulation Commission creates, maintains and publishes the national Trusted List[^s1] | Qualified trust service providers on the Bulgarian Trusted List: Borica AD, Evrotrust Technologies AD, InfoNotary EAD, Information Services AD and Idocs Bulgaria EOOD[^s1] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | *Not yet sourced* | Criminal-record bureaus at every district court and a Central Criminal Records Bureau at the Ministry of Justice[^s14] | EISS is a centralised web-based application accessed over the Internet (host not stated)[^s15] | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Автоматизираната информационна система "Издирвателна дейност" - Национална Шенгенска информационна система (АИС ИД - НШИС) (Automated Information System 'Search Activity' – National Schengen Information System)[^s16] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | *Not yet sourced* | Migration Directorate of MVR and Migration units of the regional MVR directorates (Foreigners in the Republic of Bulgaria Act)[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Tax and Social Security Procedure Code: NRA creates and maintains the register and databases of obliged persons[^s18] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | Митническата информационна система за внасяне (МИСВ) (Customs Import Information System), Агенция "Митници"[^s19] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | AGCC creates and maintains the cadastral map and cadastral registers for the whole country under the Cadastre and Property Register Act[^s20] | The Registry Agency (executive agency under the Minister of Justice) keeps the property register, commercial register, BULSTAT and other registers[^s21] | *Not yet sourced* | National infrastructure[^s21] | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | The software change enabling beneficial-owner entries went live on 28.01.2019[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | автоматизираната информационна система КАТ (АИС – КАТ) (Automated Information System KAT, the vehicle registration system)[^s16] | "Пътна полиция" при СДВР/ОДМВР (Traffic Police units of the Ministry of Interior's regional directorates)[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim, but the MFA citation names a different system (НВИС, not printed), and the RTA ordinance names 'АИС Издирвателна дейност – НШИС' only in the context of wanted-vehicle registration termination, never as a border or…. It is withheld until the fact or its source is corrected and checked again* | Министерството на външните работи (Ministry of Foreign Affairs), for the national visa system[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | SEBRA (System for Electronic Budget Payments) is used to initiate payments of budget organisations[^s23] | BORICA AD transforms approved SEBRA payments into ISO 20022 XML[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Central bank systems (tier 1) | TARGET-BNB (national system component of the Eurosystem's TARGET)[^s24] | Българската народна банка (Bulgarian National Bank)[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | Националната система 112 (National System 112)[^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | шест центъра (six emergency call centres)[^s25] |
+| High | Crisis management and civil protection (tier 1) | BG-ALERT public warning system over mobile networks (Cell Broadcast)[^s26][^s27] | Developed jointly by MVR and the Ministry of e-Government[^s26][^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Project to modernise and extend the SCADA/EMS and information environment in ESO's Central Dispatch (CDU)[^s28] | *Not yet sourced* | The project includes a backup data storage and processing centre for the Central Dispatch[^s28] | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | Register of all current, interrupted and graduated students and doctoral candidates, kept as an electronic database through NACID[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | The NHIS holds an electronic health record for every citizen[^s30][^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Business registry (tier 1) | The Commercial Register and Register of Non-Profit Legal Entities is a common electronic database[^s21] | *Not yet sourced* | Registry Agency contract to expand storage arrays, upgrade servers and supply tape libraries serving the registers' information systems[^s21] | National infrastructure[^s21] | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | The State Gazette website provides the full content of all issues for the last 7 years in PDF (EU N-Lex description)[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | 2021 Population and Housing Census, the 18th in Bulgaria (census site of the National Statistical Institute)[^s33] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | AGCC creates and maintains the topographic databases and the geo-information system[^s20] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -146,7 +146,7 @@ Tier 0 and 1 holdings for Bulgaria without a verified source yet. Corrections an
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -203,10 +203,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -215,8 +215,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -225,6 +225,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -257,7 +259,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -299,7 +301,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -331,7 +333,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Bulgaria
 
-43 of 43 printed facts about Bulgaria pass.
+43 of 46 printed facts about Bulgaria pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -351,6 +353,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:BG:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BG:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BG:judicial_criminal:operator | Judicial & criminal justice: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BG:judicial_criminal:hosting | Judicial & criminal justice: hosting | unrecorded | none | never checked |  |
 | record:BG:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BG:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BG:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -371,9 +374,11 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:BG:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BG:crisis_management:operator | Crisis management and civil protection: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BG:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BG:grid_control:hosting | Electricity grid control: hosting | unrecorded | none | never checked |  |
 | record:BG:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BG:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BG:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BG:business_registry:hosting | Business registry: hosting | unrecorded | none | never checked |  |
 | record:BG:business_registry:foreign_dependency | Business registry: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BG:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BG:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -403,25 +408,26 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s12]: Министерство на вътрешните работи – ОДМВР София — Въвеждане на ново поколение български лични документи, 2026-04-27. Въвеждане на ново поколение български лични документи. <https://mvr.bg/sofia/%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B5%D0%BD-%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BF%D1%80%D0%B5%D1%81%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/90242> ([archived](https://web.archive.org/web/20260427064743/https://mvr.bg/sofia/%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B5%D0%BD-%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BF%D1%80%D0%B5%D1%81%D1%86%D0%B5%D0%BD%D1%82%D1%8A%D1%80/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/90242))
 [^s13]: Централна избирателна комисия — Централна избирателна комисия, Протокол № 821 от 14.05.2026, 2026-05-14. Централна избирателна комисия, Протокол № 821 от 14.05.2026. <https://www.cik.bg/upload/280009/%E2%84%96+821-14052026-bld.pdf> ([archived](https://web.archive.org/web/20260519104206/https://www.cik.bg/upload/280009/%E2%84%96+821-14052026-bld.pdf))
 [^s14]: Комисия за финансов надзор (копие на наредбата, актуално към 01.01.2022) — Наредба № 8 от 26.02.2008 г. за функциите и…, 2022. Наредба № 8 от 26.02.2008 г. за функциите и организацията на дейността на бюрата за съдимост. <https://www.fsc.bg/wp-content/uploads/2021/files/31563_file.pdf> ([archived](https://web.archive.org/web/20240909150602/https://www.fsc.bg/wp-content/uploads/2021/files/31563_file.pdf))
-[^s15]: Изпълнителна агенция „Автомобилна администрация“ — Наредба № I-45 от 24.03.2000 г. за регистриране, отчет…, 2023-11. Наредба № I-45 от 24.03.2000 г. за регистриране, отчет ... на моторните превозни средства. <https://www.rta.government.bg/upload/11661/n-I45.pdf>
-[^s16]: Министерство на външните работи (копие на закона) — Закон за чужденците в Република България. Закон за чужденците в Република България. <https://www.mfa.bg/upload/138160/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%87%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D1%82%D0%B5%20%D0%B2%20%D0%A0%D0%B5%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F.pdf>
-[^s17]: Министерство на вътрешните работи (копие на кодекса) — Данъчно-осигурителен процесуален кодекс. Данъчно-осигурителен процесуален кодекс. <https://www.mvr.bg/upload/296043/%D0%94%D0%9E%D0%9F%D0%9A.pdf>
-[^s18]: Агенция "Митници" (Bulgarian Customs Agency) — Е-Портал на Агенция "Митници" — архив на новините, 2026-01-22. Е-Портал на Агенция "Митници" — архив на новините. <https://ep.customs.bg/eportal/public/newsArchive> ([archived](https://web.archive.org/web/20241105154640/https://ep.customs.bg/eportal/public/newsArchive))
-[^s19]: Агенция по геодезия, картография и кадастър — Функции на АГКК. Функции на АГКК. <https://www.cadastre.bg/funkcii-na-agkk>
-[^s20]: Сметна палата на Република България — Одитен доклад № 0300101019 – Ефективност на…, 2021-08-05. Одитен доклад № 0300101019 – Ефективност на организацията и контрола на дейностите по водене и съхраняване на поддържаните от Агенцията по вписванията регистри. <https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf> ([archived](https://web.archive.org/web/20250714123738/https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf))
-[^s21]: Министерство на външните работи — Въвеждане в експлоатация на нова версия на Национална…, 2024-08-02. Въвеждане в експлоатация на нова версия на Национална визова информационна система. <https://www.mfa.bg/bg/news/41822> ([archived](https://web.archive.org/web/20260412085753/https://www.mfa.bg/bg/news/41822))
-[^s22]: Министерство на финансите – дирекция „Държавно съкровище“ (публикувано от БНБ) — ДДС № 03/03.05.2023 г. – Изисквания за структурата,…, 2023-05-03. ДДС № 03/03.05.2023 г. – Изисквания за структурата, формата и съдържанието на платежни документи ... чрез СЕБРА. <https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/instructions_bnb_51681_bg.pdf> ([archived](https://web.archive.org/web/20250527084951/https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/instructions_bnb_51681_bg.pdf))
-[^s23]: Българска народна банка — Платежни и сетълмент системи. Платежни и сетълмент системи. <https://www.bnb.bg/PaymentSystem/index.htm>
-[^s24]: Министерство на вътрешните работи, дирекция „Национална система 112“ — 112 в България. 112 в България. <https://www.mvr.bg/112/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8/112_v_bg>
-[^s25]: Министерство на вътрешните работи — Мотиви към проект на наредба за реда за изграждане,…. Мотиви към проект на наредба за реда за изграждане, поддържане, развитие и използване на системата BG-ALERT. <https://www.mvr.bg/upload/8121/%D0%BC%D0%BE%D1%82%D0%B8%D0%B2%D0%B8_%D0%BD%D0%B0%D1%80%D0%B5%D0%B4%D0%B1%D0%B0_bg-alert.pdf> ([archived](https://web.archive.org/web/20251211103031/https://www.mvr.bg/upload/8121/%D0%BC%D0%BE%D1%82%D0%B8%D0%B2%D0%B8_%D0%BD%D0%B0%D1%80%D0%B5%D0%B4%D0%B1%D0%B0_bg-alert.pdf))
-[^s26]: Вестник „Сега“ — МВР ще издирва бандити чрез BG-ALERT, 2026-01-07. МВР ще издирва бандити чрез BG-ALERT. <https://www.segabg.com/hot/category-bulgaria/mvr-shte-izdirva-banditi-chrez-bg-alert> ([archived](https://web.archive.org/web/20260122112807/https://www.segabg.com/hot/category-bulgaria/mvr-shte-izdirva-banditi-chrez-bg-alert))
-[^s27]: Електроенергиен системен оператор ЕАД — Модернизация и Разширение на Системата SCADA/EMS и…, 2016-01-20. Модернизация и Разширение на Системата SCADA/EMS и Информационната среда в ЦДУ на ЕСО – предварително обявление. <https://www.eso.bg/fileObj.php?oid=131>
-[^s28]: НАЦИД — Регистър на студенти и докторанти. Регистър на студенти и докторанти. <https://nacid.bg/bg/register_rdpzsd/>
-[^s29]: Министерство на здравеопазването — Национална здравноинформационна система :: НЗИС, 2026-08-31. Национална здравноинформационна система :: НЗИС. <https://www.his.bg/>
-[^s30]: Национална здравноосигурителна каса (копие на закона) — Закон за здравето. Закон за здравето. <https://www.nhif.bg/upload/30458/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%B5%D1%82%D0%BE.pdf>
-[^s31]: Европейска комисия / Службата за публикации на ЕС (N-Lex) — За националната база данни – България. За националната база данни – България. <https://n-lex.europa.eu/n-lex/info/info-bg/index?lang=bg> ([archived](https://web.archive.org/web/20250629165146/https://n-lex.europa.eu/n-lex/info/info-bg/index?lang=bg))
-[^s32]: Национален статистически институт — Преброяване 2021. Преброяване 2021. <https://census2021.bg/> ([archived](https://web.archive.org/web/20260717163802/https://census2021.bg/))
+[^s15]: Висш адвокатски съвет — ВСС прие график за въвеждане на Единната информационна…. ВСС прие график за въвеждане на Единната информационна система на съдилищата (ЕИСС). <https://www.vas.bg/bg/a/vss-prie-grafik-za-vvezhdane-na-edinnata-informatsionna-sistema-na-sdilishchata-eiss>
+[^s16]: Изпълнителна агенция „Автомобилна администрация“ — Наредба № I-45 от 24.03.2000 г. за регистриране, отчет…, 2023-11. Наредба № I-45 от 24.03.2000 г. за регистриране, отчет ... на моторните превозни средства. <https://www.rta.government.bg/upload/11661/n-I45.pdf>
+[^s17]: Министерство на външните работи (копие на закона) — Закон за чужденците в Република България. Закон за чужденците в Република България. <https://www.mfa.bg/upload/138160/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D1%87%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D1%82%D0%B5%20%D0%B2%20%D0%A0%D0%B5%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F.pdf>
+[^s18]: Министерство на вътрешните работи (копие на кодекса) — Данъчно-осигурителен процесуален кодекс. Данъчно-осигурителен процесуален кодекс. <https://www.mvr.bg/upload/296043/%D0%94%D0%9E%D0%9F%D0%9A.pdf>
+[^s19]: Агенция "Митници" (Bulgarian Customs Agency) — Е-Портал на Агенция "Митници" — архив на новините, 2026-01-22. Е-Портал на Агенция "Митници" — архив на новините. <https://ep.customs.bg/eportal/public/newsArchive> ([archived](https://web.archive.org/web/20241105154640/https://ep.customs.bg/eportal/public/newsArchive))
+[^s20]: Агенция по геодезия, картография и кадастър — Функции на АГКК. Функции на АГКК. <https://www.cadastre.bg/funkcii-na-agkk>
+[^s21]: Сметна палата на Република България — Одитен доклад № 0300101019 – Ефективност на…, 2021-08-05. Одитен доклад № 0300101019 – Ефективност на организацията и контрола на дейностите по водене и съхраняване на поддържаните от Агенцията по вписванията регистри. <https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf> ([archived](https://web.archive.org/web/20250714123738/https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf))
+[^s22]: Министерство на външните работи — Въвеждане в експлоатация на нова версия на Национална…, 2024-08-02. Въвеждане в експлоатация на нова версия на Национална визова информационна система. <https://www.mfa.bg/bg/news/41822> ([archived](https://web.archive.org/web/20260412085753/https://www.mfa.bg/bg/news/41822))
+[^s23]: Министерство на финансите – дирекция „Държавно съкровище“ (публикувано от БНБ) — ДДС № 03/03.05.2023 г. – Изисквания за структурата,…, 2023-05-03. ДДС № 03/03.05.2023 г. – Изисквания за структурата, формата и съдържанието на платежни документи ... чрез СЕБРА. <https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/instructions_bnb_51681_bg.pdf> ([archived](https://web.archive.org/web/20250527084951/https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/instructions_bnb_51681_bg.pdf))
+[^s24]: Българска народна банка — Платежни и сетълмент системи. Платежни и сетълмент системи. <https://www.bnb.bg/PaymentSystem/index.htm>
+[^s25]: Министерство на вътрешните работи, дирекция „Национална система 112“ — 112 в България. 112 в България. <https://www.mvr.bg/112/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8/%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8/112_v_bg>
+[^s26]: Министерство на вътрешните работи — Мотиви към проект на наредба за реда за изграждане,…. Мотиви към проект на наредба за реда за изграждане, поддържане, развитие и използване на системата BG-ALERT. <https://www.mvr.bg/upload/8121/%D0%BC%D0%BE%D1%82%D0%B8%D0%B2%D0%B8_%D0%BD%D0%B0%D1%80%D0%B5%D0%B4%D0%B1%D0%B0_bg-alert.pdf> ([archived](https://web.archive.org/web/20251211103031/https://www.mvr.bg/upload/8121/%D0%BC%D0%BE%D1%82%D0%B8%D0%B2%D0%B8_%D0%BD%D0%B0%D1%80%D0%B5%D0%B4%D0%B1%D0%B0_bg-alert.pdf))
+[^s27]: Вестник „Сега“ — МВР ще издирва бандити чрез BG-ALERT, 2026-01-07. МВР ще издирва бандити чрез BG-ALERT. <https://www.segabg.com/hot/category-bulgaria/mvr-shte-izdirva-banditi-chrez-bg-alert> ([archived](https://web.archive.org/web/20260122112807/https://www.segabg.com/hot/category-bulgaria/mvr-shte-izdirva-banditi-chrez-bg-alert))
+[^s28]: Електроенергиен системен оператор ЕАД — Модернизация и Разширение на Системата SCADA/EMS и…, 2016-01-20. Модернизация и Разширение на Системата SCADA/EMS и Информационната среда в ЦДУ на ЕСО – предварително обявление. <https://www.eso.bg/fileObj.php?oid=131>
+[^s29]: НАЦИД — Регистър на студенти и докторанти. Регистър на студенти и докторанти. <https://nacid.bg/bg/register_rdpzsd/>
+[^s30]: Министерство на здравеопазването — Национална здравноинформационна система :: НЗИС, 2026-08-31. Национална здравноинформационна система :: НЗИС. <https://www.his.bg/>
+[^s31]: Национална здравноосигурителна каса (копие на закона) — Закон за здравето. Закон за здравето. <https://www.nhif.bg/upload/30458/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD%20%D0%B7%D0%B0%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%B5%D1%82%D0%BE.pdf>
+[^s32]: Европейска комисия / Службата за публикации на ЕС (N-Lex) — За националната база данни – България. За националната база данни – България. <https://n-lex.europa.eu/n-lex/info/info-bg/index?lang=bg> ([archived](https://web.archive.org/web/20250629165146/https://n-lex.europa.eu/n-lex/info/info-bg/index?lang=bg))
+[^s33]: Национален статистически институт — Преброяване 2021. Преброяване 2021. <https://census2021.bg/> ([archived](https://web.archive.org/web/20260717163802/https://census2021.bg/))
 
-**Evidence grades:** 4 Strong, 39 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 4 Strong, 42 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

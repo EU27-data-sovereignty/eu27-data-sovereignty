@@ -54,47 +54,47 @@ The holdings Austria cannot let depend on infrastructure a foreign state can com
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Zentrales Melderegister (ZMR) - Central Register of Residents[^s19] | Federal Minister of the Interior acts as processor of the ZPR[^s20][^s21] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: All three quotes are present, but SPG § 75 establishes a 'Zentrale erkennungsdienstliche Evidenz' in which security authorities jointly process identification data that § 64(2) defines to include Papillarlinienabdrücke (fingerprints), and…. It is withheld until the fact or its source is corrected and checked again* | — | — | — |
-| Critical | Breeder document scans (tier 0) | Supporting documents underlying civil status entries are kept by the civil status authority that made the entry (decentralised)[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Facial biometric (tier 0) | Central evidence under § 22b Passport Act holds passport/ID card data including the facial image (lit. j) but not fingerprints (lit. k)[^s22] | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The Passgesetz says verbatim that Bundesrechenzentrum GmbH takes part as processor in the § 22a/§ 22b processing; it names a federal body as processor but says nothing about where the infrastructure runs, so 'National infrastructure' rests…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | Elektronischer Identitätsnachweis (E-ID), branded ID Austria[^s23][^s6] | Federal Minister of the Interior and the Source PIN Register Authority process E-ID registration data[^s6] | *Not stated in sources* | *Not yet sourced* |
-| High | Electoral roll entry (tier 0) | Zentrales Wählerregister (ZeWaeR) - Central Voter Register[^s24] | Federal Minister of the Interior acts as processor of ZeWaeR for each municipality[^s24] | *Not stated in sources* | 6,346,059 persons entitled to vote in the 2024 National Council election[^s25] |
-| High | State PKI and qualified trust services (tier 0) | Austrian Country Signing CA (CSCA) operated by the Federal Ministry of the Interior[^s3] | RTR-GmbH compiles and publishes the national trust list[^s26][^s27] | *Not stated in sources* | fast 6,3 Millionen ID Austria-Registrierungen (almost 6.3 million ID Austria registrations) as of 1 September 2026[^s28] |
-| High | Land & property registry (tier 1) | Grundbuch (land register)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Strafregister (criminal record register)[^s30] | Landespolizeidirektion Wien (Vienna Provincial Police Directorate)[^s30] | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | PAD - Protokollieren Anzeigen Daten (police case and report logging system)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | Datenverarbeitung mittels operativer oder strategischer Analyse (state-protection analysis data processing, jointly controlled by the Federal Minister of the Interior and the provincial police directorates)[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | Identitätsdokumentenregister (IDR) - Identity Document Register[^s33][^s4] | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are present (the RH sentence is split by a line-break hyphen 'Identitätsdokumentenregis- ters') and establish that BRZ GmbH, a federal body, is the statutory processor of the register; neither source says where the…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
-| High | Residence and migration status (tier 1) | *Disputed: sources disagree. Bundeskanzleramt (RIS) — BFA-Verfahrensgesetz (BFA-VG), consolidated version gives the value this report printed; Bundesministerium für Inneres — Information zu der Verarbeitung „Zentrales Fremdenregister“ gives “Zentrales Fremdenregister (Central Register of Foreigners)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | Federal Minister of the Interior acts as processor of the Central Register of Foreigners[^s34] | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | FinanzOnline[^s35] | Bundesrechenzentrum GmbH (BRZ) for the Bundesministerium für Finanzen (Federal Computing Centre, for the Federal Ministry of Finance)[^s35] | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | e-zoll (electronic customs)[^s36] | *Not yet sourced* | *Not stated in sources* | mehr als 4,5 Mio. Zollanmeldungen pro Jahr (more than 4,5 million customs declarations per year)[^s36] |
-| High | Benefits & pensions (tier 1) | Pensionskonto (pension account)[^s37] | Dachverband der Sozialversicherungsträger (Umbrella Association of Austrian Social Insurance Institutions)[^s37] | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | Elektronisches Verwaltungssystem (ELSY) (electronic administration system, the e-card system)[^s38] | Dachverband (der Sozialversicherungsträger) (Umbrella Association of Social Insurance Institutions)[^s38] | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | Firmenbuch (companies register)[^s29] | BRZ (Bundesrechenzentrum GmbH) for the Justizministerium (Federal Computing Centre for the Ministry of Justice)[^s29] | *Not stated in sources* | etwa 545.000 Firmen (about 545,000 companies)[^s29] |
-| High | Beneficial ownership register (tier 1) | Register der wirtschaftlichen Eigentümer (Register of Beneficial Owners)[^s39] | WiEReG–Registerbehörde im Bundesministerium für Finanzen (WiEReG register authority in the Federal Ministry of Finance)[^s39] | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR) (Central Motor Vehicle Register)[^s40] | Bundesminister für Inneres (Federal Minister of the Interior)[^s40] | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | Nationales Schengener Informationssystem (N-SIS II) (National Schengen Information System)[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | Zentrales Waffenregister (Central Weapons Register)[^s42] | Bundesminister für Inneres as processor, with IBM Österreich Internationale Büromaschinen GmbH, Microsoft Österreich GmbH and Bundesrechenzentrum GmbH as further processors[^s42] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | Haushaltsverrechnungssystem HV-SAP (federal budget accounting system)[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | Personalverrechnungssystem PM-SAP (federal payroll system)[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | Modulares Wahlpaket (modular election package)[^s44] | Bundeswahlbehörde p.A. Bundesministerium für Inneres (Federal Electoral Board, c/o Federal Ministry of the Interior)[^s44] | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | TARGET Services (RTGS, TIPS, T2S, CLM)[^s45] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | BOS-Digitalfunk, österreichweites Digitalfunksystem für Behörden und Organisationen mit Sicherheitsaufgaben (nationwide public-safety digital radio system)[^s46] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | Bundeslagezentrum (Federal Situation Centre)[^s47] | Bundesministerium für Inneres (Federal Ministry of the Interior)[^s47] | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | APG-Steuerzentrale, Power Grid Control (APG control centre)[^s48] | APG (Austrian Power Grid AG)[^s48] | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | Gesamtevidenz der Schülerinnen und Schüler (national overall register of pupils)[^s49] | Bundesanstalt „Statistik Österreich“ (Statistics Austria), as processor[^s49] | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | Rechtsinformationssystem des Bundes (RIS) (Federal Legal Information System)[^s50] | Bundeskanzler (Federal Chancellor / Federal Chancellery)[^s50] | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | Zentrales Melderegister (ZMR) - Central Register of Residents[^s19] | Federal Minister of the Interior acts as processor of the ZPR[^s20][^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: All three quotes are present, but SPG § 75 establishes a 'Zentrale erkennungsdienstliche Evidenz' in which security authorities jointly process identification data that § 64(2) defines to include Papillarlinienabdrücke (fingerprints), and…. It is withheld until the fact or its source is corrected and checked again* | — | — | — | — |
+| Critical | Breeder document scans (tier 0) | Supporting documents underlying civil status entries are kept by the civil status authority that made the entry (decentralised)[^s21] | *Not yet sourced* | Documents may be kept on microfilm or electronic media instead of paper[^s21] | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Facial biometric (tier 0) | Central evidence under § 22b Passport Act holds passport/ID card data including the facial image (lit. j) but not fingerprints (lit. k)[^s22] | *Not yet sourced* | Bundesrechenzentrum GmbH (state-owned) is the processor for the passport data processing under §§ 22a and 22b[^s22] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The Passgesetz says verbatim that Bundesrechenzentrum GmbH takes part as processor in the § 22a/§ 22b processing; it names a federal body as processor but says nothing about where the infrastructure runs, so 'National infrastructure' rests…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | Elektronischer Identitätsnachweis (E-ID), branded ID Austria[^s23][^s6] | Federal Minister of the Interior and the Source PIN Register Authority process E-ID registration data[^s6] | The private trust service provider runs the certificate database in its own data centre[^s4] | *Not stated in sources* | *Not yet sourced* |
+| High | Electoral roll entry (tier 0) | Zentrales Wählerregister (ZeWaeR) - Central Voter Register[^s24] | Federal Minister of the Interior acts as processor of ZeWaeR for each municipality[^s24] | *Not yet sourced* | *Not stated in sources* | 6,346,059 persons entitled to vote in the 2024 National Council election[^s25] |
+| High | State PKI and qualified trust services (tier 0) | Austrian Country Signing CA (CSCA) operated by the Federal Ministry of the Interior[^s3] | RTR-GmbH compiles and publishes the national trust list[^s26][^s27] | *Not yet sourced* | *Not stated in sources* | fast 6,3 Millionen ID Austria-Registrierungen (almost 6.3 million ID Austria registrations) as of 1 September 2026[^s28] |
+| High | Land & property registry (tier 1) | Grundbuch (land register)[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Strafregister (criminal record register)[^s30] | Landespolizeidirektion Wien (Vienna Provincial Police Directorate)[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | PAD - Protokollieren Anzeigen Daten (police case and report logging system)[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | Datenverarbeitung mittels operativer oder strategischer Analyse (state-protection analysis data processing, jointly controlled by the Federal Minister of the Interior and the provincial police directorates)[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | Identitätsdokumentenregister (IDR) - Identity Document Register[^s33][^s4] | *Not yet sourced* | BRZ GmbH is the statutory processor of the Identity Document Register[^s4] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are present (the RH sentence is split by a line-break hyphen 'Identitätsdokumentenregis- ters') and establish that BRZ GmbH, a federal body, is the statutory processor of the register; neither source says where the…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | *Disputed: sources disagree. Bundeskanzleramt (RIS) — BFA-Verfahrensgesetz (BFA-VG), consolidated version gives the value this report printed; Bundesministerium für Inneres — Information zu der Verarbeitung „Zentrales Fremdenregister“ gives “Zentrales Fremdenregister (Central Register of Foreigners)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | Federal Minister of the Interior acts as processor of the Central Register of Foreigners[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | FinanzOnline[^s35] | Bundesrechenzentrum GmbH (BRZ) for the Bundesministerium für Finanzen (Federal Computing Centre, for the Federal Ministry of Finance)[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | e-zoll (electronic customs)[^s36] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | mehr als 4,5 Mio. Zollanmeldungen pro Jahr (more than 4,5 million customs declarations per year)[^s36] |
+| High | Benefits & pensions (tier 1) | Pensionskonto (pension account)[^s37] | Dachverband der Sozialversicherungsträger (Umbrella Association of Austrian Social Insurance Institutions)[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | Elektronisches Verwaltungssystem (ELSY) (electronic administration system, the e-card system)[^s38] | Dachverband (der Sozialversicherungsträger) (Umbrella Association of Social Insurance Institutions)[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Firmenbuch (companies register)[^s29] | BRZ (Bundesrechenzentrum GmbH) for the Justizministerium (Federal Computing Centre for the Ministry of Justice)[^s29] | *Not yet sourced* | *Not stated in sources* | etwa 545.000 Firmen (about 545,000 companies)[^s29] |
+| High | Beneficial ownership register (tier 1) | Register der wirtschaftlichen Eigentümer (Register of Beneficial Owners)[^s39] | WiEReG–Registerbehörde im Bundesministerium für Finanzen (WiEReG register authority in the Federal Ministry of Finance)[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR) (Central Motor Vehicle Register)[^s40] | Bundesminister für Inneres (Federal Minister of the Interior)[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Nationales Schengener Informationssystem (N-SIS II) (National Schengen Information System)[^s41] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Zentrales Waffenregister (Central Weapons Register)[^s42] | Bundesminister für Inneres as processor, with IBM Österreich Internationale Büromaschinen GmbH, Microsoft Österreich GmbH and Bundesrechenzentrum GmbH as further processors[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | Haushaltsverrechnungssystem HV-SAP (federal budget accounting system)[^s43] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | Personalverrechnungssystem PM-SAP (federal payroll system)[^s43] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | Modulares Wahlpaket (modular election package)[^s44] | Bundeswahlbehörde p.A. Bundesministerium für Inneres (Federal Electoral Board, c/o Federal Ministry of the Interior)[^s44] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | TARGET Services (RTGS, TIPS, T2S, CLM)[^s45] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | BOS-Digitalfunk, österreichweites Digitalfunksystem für Behörden und Organisationen mit Sicherheitsaufgaben (nationwide public-safety digital radio system)[^s46] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Bundeslagezentrum (Federal Situation Centre)[^s47] | Bundesministerium für Inneres (Federal Ministry of the Interior)[^s47] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | APG-Steuerzentrale, Power Grid Control (APG control centre)[^s48] | APG (Austrian Power Grid AG)[^s48] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | Gesamtevidenz der Schülerinnen und Schüler (national overall register of pupils)[^s49] | Bundesanstalt „Statistik Österreich“ (Statistics Austria), as processor[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Official gazette and legislation (tier 1) | Rechtsinformationssystem des Bundes (RIS) (Federal Legal Information System)[^s50] | Bundeskanzler (Federal Chancellor / Federal Chancellery)[^s50] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
@@ -143,7 +143,7 @@ Tier 0 and 1 holdings for Austria without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -200,10 +200,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -212,8 +212,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -222,6 +222,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -254,7 +256,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -296,7 +298,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -328,7 +330,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Austria
 
-62 of 62 printed facts about Austria pass.
+62 of 66 printed facts about Austria pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -346,9 +348,12 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:AT:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:AT:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:AT:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:breeder_documents:hosting | Breeder document scans: hosting | unrecorded | none | never checked |  |
 | record:AT:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:facial_biometric:hosting | Facial biometric: hosting | unrecorded | none | never checked |  |
 | record:AT:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:AT:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:digital_identity_credentials:hosting | Digital identity credentials: hosting | unrecorded | none | never checked |  |
 | record:AT:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:AT:electoral_roll:operator | Electoral roll entry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:AT:electoral_roll:count | Electoral roll entry: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -361,6 +366,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:AT:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:AT:intelligence:register | Intelligence services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:AT:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:AT:issuance_history:hosting | Document issuance history: hosting | unrecorded | none | never checked |  |
 | record:AT:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:AT:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:AT:tax:operator | Tax: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -456,6 +462,6 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s49]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Bildungsdokumentationsgesetz 2020, consolidated version. Bildungsdokumentationsgesetz 2020, consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451> ([archived](https://web.archive.org/web/20260730015701/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451))
 [^s50]: Bundeskanzleramt – Rechtsinformationssystem des Bundes (RIS) — Bundesgesetzblattgesetz, consolidated version, 2026-09-30. Bundesgesetzblattgesetz, consolidated version. <https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20002988> ([archived](https://web.archive.org/web/20230506214536/https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20002988))
 
-**Evidence grades:** 4 Strong, 58 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 4 Strong, 62 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

@@ -54,47 +54,47 @@ The holdings Slovakia cannot let depend on infrastructure a foreign state can co
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Register obyvateľov Slovenskej republiky (Register of Inhabitants of the Slovak Republic), a public-administration information system identifying persons, their residence and relationships[^s11] | The Ministry of Interior (ministerstvo) administers the Register of Natural Persons, a base register; retention is permanent[^s11] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | Evidencia občianskych preukazov (ID card records) kept by the Ministry of Interior and district police directorates[^s12] | The Ministry of Interior keeps the central register of travel documents, which includes the facial image[^s13] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | Zbierka listín (collection of source documents) kept by registry offices as the basis for civil-status entries[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | Evidencia občianskych preukazov (ID card issuance records), incl. numbers of issued, lost and stolen cards and destruction dates[^s12] | Kept by the Ministry of Interior and district police directorates[^s12] | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | eID: electronic identity card with contact chip, issued since 2 December 2013[^s3] | The Ministry of Interior administers the authentication part of the authentication module; MIRRI administers its communication part[^s15] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | Stály zoznam voličov (permanent electoral roll) compiled and kept by each municipality[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | Slovenská národná certifikačná autorita (SNCA), providing qualified trust services free of charge to public authorities[^s17][^s2] | *Disputed: sources disagree. Národná agentúra pre sieťové a elektronické služby (SNCA) — Certifikačná autorita gives the value this report printed; Národná agentúra pre sieťové a elektronické služby — Kvalifikované dôveryhodné služby gives “NASES (Národná agentúra pre sieťové a elektronické služby), operator of SNCA”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | Kataster nehnuteľností (real-estate cadastre) including ownership, liens and other rights[^s18] | The Office of Geodesy, Cartography and Cadastre (ÚGKK SR, 'úrad') administers the cadastral records and the cadastre information system[^s18] | *Not stated in sources* | *Not yet sourced* |
-| High | Judicial & criminal justice (tier 1) | Register trestov (Criminal Records Register) kept by the General Prosecutor's Office[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Police Force information systems processing personal data, fingerprint (dactyloscopic) data and face images[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | Police Force information systems holding records on foreigners' entry, stay and departure, visa and residence applicants[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | Register poistencov a sporiteľov starobného dôchodkového sporenia (register of insured persons and pension savers) and employer register kept by Sociálna poisťovňa[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | Centrálny register poistencov (central register of insured persons) kept by the Health Care Surveillance Authority (ÚDZS)[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | Obchodný register (Commercial Register) and collection of deeds, kept electronically by registry courts[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Register partnerov verejného sektora (Register of Public Sector Partners), run by the Ministry of Justice with Žilina District Court as registering body[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Evidencia vozidiel (vehicle register), an information system of the Police Force[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | Police Force records on undesirable persons, border-control data on foreigners and illegal stay[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | Police Force information system on firearms licences, holders and registered weapons[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Government payroll and personnel (tier 1) | Centrálny informačný systém štátnej služby (central civil-service information system) administered by the Government Office[^s28] | Government Office of the Slovak Republic (Úrad vlády SR)[^s28] | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | Register kandidátov a kandidátnych listín (Register of candidates and candidate lists), created and operated by the Ministry of Interior[^s16] | Election results are processed through the information system of the Statistical Office of the Slovak Republic[^s16] | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | Národná banka Slovenska operates two payment systems: TARGET-SK (RTGS) and SIPS (retail)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | Coordination centres receive 112 calls, eCall and SMS emergency communications[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | Informačný systém krízového riadenia štátu (state crisis management information system)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | Dispatch control of the transmission system, incl. defence and restoration plan in a blackout[^s32] | SEPS a.s. is the transmission system operator including the Slovak Electricity Dispatch Centre[^s33] | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | Centrálny register (central register of children, pupils and students) under the School Act[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | Národný zdravotnícky informačný systém (National Health Information System), administered by the National Health Information Centre[^s35] | National Health Information Centre (NCZI, 'národné centrum')[^s35] | *Not stated in sources* | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | Slov-Lex, the public administration information system administered and operated by the Ministry of Justice[^s36] | The Ministry of Justice publishes the Collection of Laws; it is issued in electronic and paper form[^s36] | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | Elektronický archív Slovenska (Electronic Archive of Slovakia), the long-term repository of electronic archival records of public authorities[^s37] | The Electronic Archive also archives structured data and data from Ministry of Interior production systems[^s37] | *Not stated in sources* | *Not yet measured* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | Register adries (Address Register), administered by the Ministry of Interior[^s38] | ÚGKK SR creates, administers and operates the geodesy, cartography and cadastre information system (ISGKK)[^s39] | *Not stated in sources* | *Not yet measured* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | Register obyvateľov Slovenskej republiky (Register of Inhabitants of the Slovak Republic), a public-administration information system identifying persons, their residence and relationships[^s11] | The Ministry of Interior (ministerstvo) administers the Register of Natural Persons, a base register; retention is permanent[^s11] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Evidencia občianskych preukazov (ID card records) kept by the Ministry of Interior and district police directorates[^s12] | The Ministry of Interior keeps the central register of travel documents, which includes the facial image[^s13] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Breeder document scans (tier 0) | Zbierka listín (collection of source documents) kept by registry offices as the basis for civil-status entries[^s14] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | Evidencia občianskych preukazov (ID card issuance records), incl. numbers of issued, lost and stolen cards and destruction dates[^s12] | Kept by the Ministry of Interior and district police directorates[^s12] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | eID: electronic identity card with contact chip, issued since 2 December 2013[^s3] | The Ministry of Interior administers the authentication part of the authentication module; MIRRI administers its communication part[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | Stály zoznam voličov (permanent electoral roll) compiled and kept by each municipality[^s16] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | Slovenská národná certifikačná autorita (SNCA), providing qualified trust services free of charge to public authorities[^s17][^s2] | *Disputed: sources disagree. Národná agentúra pre sieťové a elektronické služby (SNCA) — Certifikačná autorita gives the value this report printed; Národná agentúra pre sieťové a elektronické služby — Kvalifikované dôveryhodné služby gives “NASES (Národná agentúra pre sieťové a elektronické služby), operator of SNCA”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | Kataster nehnuteľností (real-estate cadastre) including ownership, liens and other rights[^s18] | The Office of Geodesy, Cartography and Cadastre (ÚGKK SR, 'úrad') administers the cadastral records and the cadastre information system[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
+| High | Judicial & criminal justice (tier 1) | Register trestov (Criminal Records Register) kept by the General Prosecutor's Office[^s19] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Police Force information systems processing personal data, fingerprint (dactyloscopic) data and face images[^s20] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | Police Force information systems holding records on foreigners' entry, stay and departure, visa and residence applicants[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Benefits & pensions (tier 1) | Register poistencov a sporiteľov starobného dôchodkového sporenia (register of insured persons and pension savers) and employer register kept by Sociálna poisťovňa[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | Centrálny register poistencov (central register of insured persons) kept by the Health Care Surveillance Authority (ÚDZS)[^s23] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Obchodný register (Commercial Register) and collection of deeds, kept electronically by registry courts[^s24] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Register partnerov verejného sektora (Register of Public Sector Partners), run by the Ministry of Justice with Žilina District Court as registering body[^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Evidencia vozidiel (vehicle register), an information system of the Police Force[^s26] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Police Force records on undesirable persons, border-control data on foreigners and illegal stay[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Police Force information system on firearms licences, holders and registered weapons[^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Government payroll and personnel (tier 1) | Centrálny informačný systém štátnej služby (central civil-service information system) administered by the Government Office[^s28] | Government Office of the Slovak Republic (Úrad vlády SR)[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | Register kandidátov a kandidátnych listín (Register of candidates and candidate lists), created and operated by the Ministry of Interior[^s16] | Election results are processed through the information system of the Statistical Office of the Slovak Republic[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | Národná banka Slovenska operates two payment systems: TARGET-SK (RTGS) and SIPS (retail)[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | Coordination centres receive 112 calls, eCall and SMS emergency communications[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Informačný systém krízového riadenia štátu (state crisis management information system)[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Dispatch control of the transmission system, incl. defence and restoration plan in a blackout[^s32] | SEPS a.s. is the transmission system operator including the Slovak Electricity Dispatch Centre[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | Centrálny register (central register of children, pupils and students) under the School Act[^s34] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | Národný zdravotnícky informačný systém (National Health Information System), administered by the National Health Information Centre[^s35] | National Health Information Centre (NCZI, 'národné centrum')[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Slov-Lex, the public administration information system administered and operated by the Ministry of Justice[^s36] | The Ministry of Justice publishes the Collection of Laws; it is issued in electronic and paper form[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | Elektronický archív Slovenska (Electronic Archive of Slovakia), the long-term repository of electronic archival records of public authorities[^s37] | The Electronic Archive also archives structured data and data from Ministry of Interior production systems[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | Register adries (Address Register), administered by the Ministry of Interior[^s38] | ÚGKK SR creates, administers and operates the geodesy, cartography and cadastre information system (ISGKK)[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Slovakia without a verified source yet. Corrections an
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -205,10 +205,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -217,8 +217,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -227,6 +227,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -259,7 +261,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -301,7 +303,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|

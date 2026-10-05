@@ -2350,3 +2350,97 @@ text. Leaving them printed would print facts a model has rejected for a stated r
 
 *Would change if:* further samples show a disagreement rate that justifies checking every fact with both
 models; or a person's review (#85) becomes the arbiter between the two checkers.
+
+### 95. Hosting is printed per holding; an EU-27 overview reuses the country facts
+**Decision.** 2026-10-05; the owner asked how to document each state's key digital infrastructure and chose
+a generated overview, with structured operators to follow (#96).
+- **Hosting is printed.** Each country's holdings table gains a "Hosting (as sourced)" column from the
+  admitted `hosting` field, claim `record:<ISO>:<class>:hosting`. The same rules as every fact apply:
+  value in quote (#82), fact check (#87), withheld when not confirmed (#89).
+- **The overview is generated, not written.** `document.infrastructure()` lists every holding whose hosting
+  is printed or withheld, by state, and counts per state what the printed facts say. Each cell is a copy
+  of the span the country document prints, with the same text, claim and kind, so it carries the same
+  source and the same fact-check verdict.
+- **Where it appears.** The bundle (`infrastructure`), the EU-27 report after the ranking,
+  `countries/EU-INFRASTRUCTURE.md`, the web page `/infrastructure`, and `/ask`.
+- **It stays outside `documents`**, so it adds no fact to check and no fact to count twice.
+- **Its counts are of printed facts only.** "What is known, per state" counts a dependency only where the
+  report prints it as a fact, never a withheld or unprinted label.
+- **Layout: one table by state, not one per class.** `/holdings/<class>` already compares one class
+  across the 27, and the `/holdings/<class>` pages now take their column names from the document.
+
+**Problem.** `national_data.csv` held 71 cited hosting values, and none was printed anywhere. The question
+the project exists to answer, where a state's critical registers run and who runs them, had admitted
+evidence that no reader could see. A hand-written summary would answer it but would bypass sourcing,
+fact check and withholding, and drift from the registers.
+
+**Alternatives considered.**
+- **Print hosting, and generate the overview from the country spans (chosen).** It adds no new kind of
+  fact and no new renderer rules.
+- **A hand-written overview.** *Why not:* renderers add no content (#74), and every fact must carry its
+  source as printed (#82).
+- **Build the overview from the registers.** *Why not:* it could print a value the country report
+  withholds, or word it differently, which changes the fact-check hash.
+- **One table per tier 0/1 class.** *Why not:* that is 34 tables of mostly gaps, and `/holdings/<class>`
+  already compares one class across the 27.
+
+**Closes off.** Describing where a state's data is hosted in any output other than through a printed,
+fact-checked hosting span.
+
+**Verified:** 2026-10-05, partly.
+- `python3 model/document.py --check`: 27 documents and the overview, 0 unsourced facts.
+- 1,400 printed facts (1,340 + 60 hosting). 11 hosting values print as gaps, because their quote lacks a
+  year or number they state.
+- `tests/test_evidence.py`: every overview fact is a printed country span, and every printed hosting is in
+  the overview.
+- **NOT YET:** the cross-model fact check of the 60 new facts. `./run.sh factcheck status` lists them as
+  never checked, and the deploy gate blocks a push to `main` until `/factcheck` runs.
+- **Found while verifying, not yet fixed.** In 7 states (AT, CY, EL, FR, HU, IE, SE), the country report's
+  "Foreign-dependency exposure" section counts admitted dependency labels that the same report withholds.
+  AT, for example, shows "National: 2" while both labels print as disputed. The ranking reads the same raw
+  labels (`sovereignty.py:129`). IE stays "Dependent on non-EU providers" on a printed fact (emergency
+  radio), but its electoral-register label (Azure) is withheld. The overview counts printed facts only, so
+  it disagrees with those sections until they are fixed (TODO.md).
+
+*Would change if:* hosting becomes structured (#96), at which point the overview's tables are computed
+from operators rather than copied free text; or a reader needs the overview per class rather than per state.
+
+### 96. Hosting becomes structured: operators as entities with sourced ownership links
+**Decision.** 2026-10-05; the owner chose it over printing hosting as free text alone. Planned, not built.
+The full design is [`docs/hosting-operators.md`](docs/hosting-operators.md).
+- **Organisations are entities.** `model/organisations.csv` holds each organisation's seat and sector. A
+  holding links to the organisations that operate, process, host or provide cloud for it, in
+  `model/hosting.csv`, with the delivery model and location.
+- **Ownership is a sourced link.** `model/org_links.csv` says who owns or controls whom, and each link has
+  its own quote and source.
+- **Every categorical value is reviewed** by an independent model before admission (#79), like the
+  dependency labels.
+- **Dependency can be derived, but is never overwritten.** A dependency derived from the links is
+  reconciled against the reviewed label. Agreement corroborates the label, a gap may be filled through the
+  fact check, and a disagreement goes to review. No printed fact changes silently.
+- **Placements are diffed.** Any placement change that follows needs the owner's OK.
+
+**Problem.** Hosting is free text. Cross-country questions, such as which private or non-EU firms run
+state registers, cannot be computed, and the dependency label is a judgement that review overturned in
+seven of eight unreviewed "Dependent" cases (#79). The idea is borrowed from Palantir's Ontology: objects,
+properties and links that every view reads.
+
+**Alternatives considered.**
+- **Separate entity and link tables, reviewed per value (chosen).** One organisation is shared across
+  states and holdings, and every value is cited.
+- **Keep hosting as free text.** *Why not:* nothing about operators can be computed, and dependency stays
+  a judgement only.
+- **New columns on `national_data.csv`.** *Why not:* a holding can have several organisations,
+  organisations repeat across states, and the register's header is fixed.
+- **A graph database or an ontology platform.** *Why not:* the project is stdlib-only, and three CSV files
+  are enough at this scale and auditable in a diff.
+
+**Closes off.** Recording who runs a holding only in prose, and a dependency label that cannot be traced
+to a sourced organisation.
+
+**Verified:** NOT YET. Nothing is built. The plan is checked against the code that it would extend:
+`provenance.RECORD_KINDS` and `NAMESPACES`, `national_data.read_rows`, `research.dependency_verdict`,
+`reproduce.REGISTERS` and `factcheck.facts()`.
+
+*Would change if:* the backfill finds too few sourced ownership links to derive anything; or one
+organisation per holding proves enough, making a column simpler than a table.

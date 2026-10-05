@@ -54,47 +54,47 @@ The holdings France cannot let depend on infrastructure a foreign state can comp
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | RNIPP, the register used to verify the civil status of people born in France[^s17][^s18] | Insee has managed the RNIPP since its creation[^s19][^s18] | *Not stated in sources* | Civil status of 113 million people born in or having lived in France[^s19] |
-| Critical | Facial biometric (tier 0) | TES centralises the digitised facial image and fingerprints of every ID-card and passport applicant[^s20] | Ministry of the Interior is the controller of TES[^s20] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | TES holds fingerprints for issuing national ID cards and passports[^s20] | Ministry of the Interior[^s20] | *Not stated in sources* | *Not yet measured* |
-| Critical | Breeder document scans (tier 0) | SCEC draws up the civil-status acts of persons who acquire French nationality[^s21] | SCEC is a national-competence service of the Ministry of Foreign Affairs[^s21] | *Not stated in sources* | About 16 million civil-status acts[^s21] |
-| Critical | Authentication audit log (tier 0) | FranceConnect keeps traceability records of access to the teleservice[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | TES records document number, type, and date and place of issue for each ID card and passport[^s20] | Ministry of the Interior[^s20] | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | FranceConnect (the State's electronic identification and authentication service)[^s8] | DINUM (Direction interministérielle du numérique)[^s23] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | répertoire électoral unique (REU) (single electoral register)[^s24] | Insee[^s24] | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | The Justice ministry root CA is to be signed by IGC/A, the administration's trust infrastructure[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | plan cadastral (cadastral plan)[^s26] | *Not yet sourced* | *Not stated in sources* | 598747 plan sheets[^s26] |
-| High | Judicial & criminal justice (tier 1) | ASTREA is the information system of the national criminal record[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | TAJ is a Ministry of the Interior file shared by police and gendarmerie[^s28] | FAED is run by the Direction centrale de la police judiciaire[^s29] | *Not stated in sources* | *Not yet sourced* |
-| High | Intelligence services (tier 1) | DRSD SIRCID information system contracted to Airbus Defence & Space[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Residence and migration status (tier 1) | AGDREF manages the right of residence of foreign nationals[^s31] | DGEF of the Ministry of the Interior is responsible[^s31] | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | Customs declarations are lodged in the DELTA online service[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | RGCU is the single career register of the whole population, built by CNAV[^s33] | CNAV also runs the SNGI identifier system for the whole social-security sphere[^s33] | *Not stated in sources* | 15.3 million pensioners paid by the general scheme[^s33] |
-| High | Statutory health insurance (tier 1) | CNAV runs the healthcare entitlement calculation tool (ODSS) on behalf of Cnam[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | Single register covering all businesses in France[^s34] | RNE is operated by INPI[^s34] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Register of beneficial owners; discrepancies are reported to the court registry (greffe)[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | SIV, in place since April 2009, replaced the FNI[^s36] | Managed by France Titres (ANTS)[^s36] | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | VISABIO (national visa-applicant processing, the French access point to VIS)[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | SIA, the national firearms information system[^s38] | Ministry of the Interior[^s38] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | Chorus (the State's budgetary and accounting application)[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | PAYSAGE consolidates the payroll application for State employees[^s40] | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote is a table heading. The table under it lists PAYSAGE ('consolidation de l'application de paye des agents de l'État') among projects carried by programmes 156 and 218. The question asks which body operates the system, and the…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | French component of the Eurosystem's TARGET services[^s41] | Banque de France[^s41] | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | Artemis: AI applications for massive processing of military data[^s30] | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page, but it only says the DGA awarded the Artemis initiative to Atos-Bull, Capgemini and Thales-Sopra Steria (framed as 'initiatives françaises' responding to Palantir); it says nothing about where defence command and…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | NexSIS pools the information systems of fire and rescue services[^s42] | ANSC designs, deploys and maintains NexSIS[^s42] | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | FR-Alert, the public warning system over mobile telephony[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | Téléconduite: the tools that control the power system, from dispatching rooms to substations[^s43] | RTE is the French transmission system operator[^s44] | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | Vigicrues (national flood-risk information service)[^s45] | Service central Vigicrues (Central Vigicrues Service), under the DGPR[^s46] | *Not stated in sources* | *Not yet measured* |
-| High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Health records (tier 2) | DMP and the digital health space are State digital infrastructures[^s47] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | The JO is made available electronically, permanently and free of charge[^s48] | DILA publishes the JORF[^s48] | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | The notifiable-diseases system covers 38 diseases[^s49] | Data go to the ARS and to Santé publique France epidemiologists[^s49] | *Not stated in sources* | *Not yet measured* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | Secure access services for confidential data[^s50] | CASD is a GIP whose members include the State represented by Insee[^s50] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote only says CASD designed its own dedicated secure equipment (the SD-Box) following three principles; neither it nor the rest of the page says where the central infrastructure is hosted, by whom or in which country, so it does not…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
-| Standard | Geospatial base data (tier 3) | BAN is a State database listing all addresses in France[^s51] | IGN runs operation and distribution of the BAN[^s51] | *Not stated in sources* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | RNIPP, the register used to verify the civil status of people born in France[^s17][^s18] | Insee has managed the RNIPP since its creation[^s19][^s18] | *Not yet sourced* | *Not stated in sources* | Civil status of 113 million people born in or having lived in France[^s19] |
+| Critical | Facial biometric (tier 0) | TES centralises the digitised facial image and fingerprints of every ID-card and passport applicant[^s20] | Ministry of the Interior is the controller of TES[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | TES holds fingerprints for issuing national ID cards and passports[^s20] | Ministry of the Interior[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | SCEC draws up the civil-status acts of persons who acquire French nationality[^s21] | SCEC is a national-competence service of the Ministry of Foreign Affairs[^s21] | *Not yet sourced* | *Not stated in sources* | About 16 million civil-status acts[^s21] |
+| Critical | Authentication audit log (tier 0) | FranceConnect keeps traceability records of access to the teleservice[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | TES records document number, type, and date and place of issue for each ID card and passport[^s20] | Ministry of the Interior[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | FranceConnect (the State's electronic identification and authentication service)[^s8] | DINUM (Direction interministérielle du numérique)[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | répertoire électoral unique (REU) (single electoral register)[^s24] | Insee[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | The Justice ministry root CA is to be signed by IGC/A, the administration's trust infrastructure[^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | plan cadastral (cadastral plan)[^s26] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | 598747 plan sheets[^s26] |
+| High | Judicial & criminal justice (tier 1) | ASTREA is the information system of the national criminal record[^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | TAJ is a Ministry of the Interior file shared by police and gendarmerie[^s28] | FAED is run by the Direction centrale de la police judiciaire[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
+| High | Intelligence services (tier 1) | DRSD SIRCID information system contracted to Airbus Defence & Space[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | AGDREF manages the right of residence of foreign nationals[^s31] | DGEF of the Ministry of the Interior is responsible[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Customs declarations (tier 1) | Customs declarations are lodged in the DELTA online service[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | RGCU is the single career register of the whole population, built by CNAV[^s33] | CNAV also runs the SNGI identifier system for the whole social-security sphere[^s33] | *Not yet sourced* | *Not stated in sources* | 15.3 million pensioners paid by the general scheme[^s33] |
+| High | Statutory health insurance (tier 1) | CNAV runs the healthcare entitlement calculation tool (ODSS) on behalf of Cnam[^s33] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Single register covering all businesses in France[^s34] | RNE is operated by INPI[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Register of beneficial owners; discrepancies are reported to the court registry (greffe)[^s35] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | SIV, in place since April 2009, replaced the FNI[^s36] | Managed by France Titres (ANTS)[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | VISABIO (national visa-applicant processing, the French access point to VIS)[^s37] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | SIA, the national firearms information system[^s38] | Ministry of the Interior[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | Chorus (the State's budgetary and accounting application)[^s39] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | PAYSAGE consolidates the payroll application for State employees[^s40] | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote is a table heading. The table under it lists PAYSAGE ('consolidation de l'application de paye des agents de l'État') among projects carried by programmes 156 and 218. The question asks which body operates the system, and the…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Central bank systems (tier 1) | French component of the Eurosystem's TARGET services[^s41] | Banque de France[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | Artemis: AI applications for massive processing of military data[^s30] | *Not yet sourced* | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page, but it only says the DGA awarded the Artemis initiative to Atos-Bull, Capgemini and Thales-Sopra Steria (framed as 'initiatives françaises' responding to Palantir); it says nothing about where defence command and…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | NexSIS pools the information systems of fire and rescue services[^s42] | ANSC designs, deploys and maintains NexSIS[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | FR-Alert, the public warning system over mobile telephony[^s42] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Téléconduite: the tools that control the power system, from dispatching rooms to substations[^s43] | RTE is the French transmission system operator[^s44] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | Vigicrues (national flood-risk information service)[^s45] | Service central Vigicrues (Central Vigicrues Service), under the DGPR[^s46] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Health records (tier 2) | DMP and the digital health space are State digital infrastructures[^s47] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | The JO is made available electronically, permanently and free of charge[^s48] | DILA publishes the JORF[^s48] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | The notifiable-diseases system covers 38 diseases[^s49] | Data go to the ARS and to Santé publique France epidemiologists[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | Secure access services for confidential data[^s50] | CASD is a GIP whose members include the State represented by Insee[^s50] | CASD designed its own dedicated secure equipment[^s51] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote only says CASD designed its own dedicated secure equipment (the SD-Box) following three principles; neither it nor the rest of the page says where the central infrastructure is hosted, by whom or in which country, so it does not…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | BAN is a State database listing all addresses in France[^s52] | IGN runs operation and distribution of the BAN[^s52] | *Not yet sourced* | *Not stated in sources* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* |
 
 ## 4. Foreign-dependency exposure
 
@@ -143,7 +143,7 @@ Tier 0 and 1 holdings for France without a verified source yet. Corrections and 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -200,10 +200,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -212,8 +212,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -222,6 +222,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -254,7 +256,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -296,7 +298,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -328,7 +330,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about France
 
-72 of 72 printed facts about France pass.
+72 of 73 printed facts about France pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -402,6 +404,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:FR:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:FR:statistics_microdata:register | Statistical microdata: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:FR:statistics_microdata:operator | Statistical microdata: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FR:statistics_microdata:hosting | Statistical microdata: hosting | unrecorded | none | never checked |  |
 | record:FR:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:FR:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
@@ -465,8 +468,9 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s48]: DILA — Diffusion légale, 2026-06-26. Diffusion légale. <https://www.dila.premier-ministre.gouv.fr/institution/missions/article/diffusion-legale> ([archived](https://web.archive.org/web/20251102205650/https://www.dila.premier-ministre.gouv.fr/institution/missions/article/diffusion-legale))
 [^s49]: Santé publique France — Maladies à signalement obligatoire, 2026-04-22. Maladies à signalement obligatoire. <https://www.santepubliquefrance.fr/maladies-a-declaration-obligatoire> ([archived](https://web.archive.org/web/20260305175756/https://www.santepubliquefrance.fr/maladies-a-declaration-obligatoire))
 [^s50]: CASD — Gouvernance et Missions. Gouvernance et Missions. <https://www.casd.eu/le-casd/gouvernance-et-missions/>
-[^s51]: adresse.data.gouv.fr (DINUM / IGN) — Découvrir la Base Adresse Nationale. Découvrir la Base Adresse Nationale. <https://adresse.data.gouv.fr/decouvrir-la-BAN> ([archived](https://web.archive.org/web/20260921135714/https://adresse.data.gouv.fr/decouvrir-la-BAN))
+[^s51]: CASD — Infrastructure. Infrastructure. <https://www.casd.eu/technologie/infrastructure/> ([archived](https://web.archive.org/web/20260310125751/https://www.casd.eu/technologie/infrastructure/))
+[^s52]: adresse.data.gouv.fr (DINUM / IGN) — Découvrir la Base Adresse Nationale. Découvrir la Base Adresse Nationale. <https://adresse.data.gouv.fr/decouvrir-la-BAN> ([archived](https://web.archive.org/web/20260921135714/https://adresse.data.gouv.fr/decouvrir-la-BAN))
 
-**Evidence grades:** 6 Strong, 66 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 6 Strong, 67 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

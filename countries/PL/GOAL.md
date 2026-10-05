@@ -54,47 +54,47 @@ The holdings Poland cannot let depend on infrastructure a foreign state can comp
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Powszechny Elektroniczny System Ewidencji Ludności – rejestr PESEL (Universal Electronic Population Register System – PESEL register)[^s18] | minister właściwy do spraw informatyzacji (minister competent for computerisation)[^s18] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (Art. 56(2)) says fingerprints (ust. 1 pkt 2a 'odciski palców') are held in the Rejestr Dowodów Osobistych only until the card is collected, at most 90 days; Art. 56(1) lists fingerprints among the data gathered in that central…. It is withheld until the fact or its source is corrected and checked again* | — | — | — |
-| Critical | Breeder document scans (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | Profil Zaufany is an electronic identification means notified at assurance level substantial[^s6][^s19] | The digital affairs minister manages the public electronic identification system (Art. 20ab, Act on Computerisation of Public Task Entities)[^s6] | *Not stated in sources* | Over 14 million active trusted profiles; over 27 million mObywatel app downloads[^s20] |
-| High | Electoral roll entry (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | narodowe centrum certyfikacji (national certification centre), part of the krajowa infrastruktura zaufania (national trust infrastructure)[^s3] | Narodowy Bank Polski (National Bank of Poland), when authorised by the minister competent for computerisation[^s3] | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | księgi wieczyste (land and mortgage registers), kept in an ICT system[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Krajowy Rejestr Karny (National Criminal Register)[^s22] | Minister Sprawiedliwości (Minister of Justice), through the Biuro Informacyjne Krajowego Rejestru Karnego (Information Office of the National Criminal Register)[^s22] | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Krajowy System Informacyjny Policji – KSIP (National Police Information System)[^s23] | Komendant Główny Policji (Chief Commander of Police)[^s23] | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | Krajowy zbiór rejestrów, ewidencji i wykazu w sprawach cudzoziemców (National collection of registers, records and list concerning foreigners)[^s24] | Szef Urzędu (Head of the Office [for Foreigners])[^s24] | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | Tax identification numbers (NIP) are assigned via the Central Register of Entities – National Taxpayer Records (CRP KEP)[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | PUESC is the ICT system for electronic exchange between KAS and its clients, including declarations[^s26][^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | ZUS also keeps the Central Register of Insured Persons, of Contribution Payers and of Open Pension Fund Members[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | Centralny Wykaz Ubezpieczonych (Central Register of Insured Persons)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | CEIDG (sole-trader business register) is kept in an ICT system by the economy minister[^s30] | The Minister of Justice maintains the ICT system used to keep the KRS (Art. 3a)[^s31] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | centralna ewidencja pojazdów (central vehicle register)[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | Krajowy System Informatyczny – KSI (National IT System)[^s33] | Komendant Główny Policji (Chief Commander of Police), as the central technical authority of KSI[^s33] | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Treasury and state accounts (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Election management and results (tier 1) | Centralny Rejestr Wyborców (Central Register of Voters)[^s34] | Minister właściwy do spraw informatyzacji (minister competent for computerisation)[^s34] | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | system powiadamiania ratunkowego (emergency notification system) for numbers 112, 997 and 998[^s35] | Minister właściwy do spraw administracji publicznej (minister competent for public administration)[^s35] | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | Council of Ministers regulation on cooperation of the RCB director with mobile network operators to warn end users (Alert RCB)[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | centralny system informacji rynku energii (central energy market information system)[^s37] | operator systemu przesyłowego elektroenergetycznego (electricity transmission system operator), acting as operator informacji rynku energii (energy market information operator)[^s37] | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | System informacyjny gospodarowania wodami (water management information system)[^s38] | Wody Polskie (Polish Waters)[^s38] | *Not stated in sources* | *Not yet measured* |
-| High | Education (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | *Not yet sourced* | Administrator of P1 is a unit subordinate to the health minister competent for health information systems[^s39][^s40] | *Not stated in sources* | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | Dziennik Ustaw Rzeczypospolitej Polskiej (Journal of Laws of the Republic of Poland)[^s41] | Prezes Rady Ministrów (Prime Minister), with the assistance of the Rządowe Centrum Legislacji (Government Legislation Centre)[^s41] | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | *Not yet sourced* | The health minister designates the register's system administrator from subordinate or supervised units[^s42] | *Not stated in sources* | *Not yet measured* |
-| Standard | National archives (digital) (tier 3) | Archival materials expressly include electronic documents[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | State register of boundaries, integrated with the land and building cadastre and the register of localities, streets and addresses[^s44] | Geodetic and Cartographic Law Art. 7a: the Surveyor General keeps the central geodetic and cartographic resource[^s44] | *Not stated in sources* | *Not yet measured* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | Powszechny Elektroniczny System Ewidencji Ludności – rejestr PESEL (Universal Electronic Population Register System – PESEL register)[^s18] | minister właściwy do spraw informatyzacji (minister competent for computerisation)[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (Art. 56(2)) says fingerprints (ust. 1 pkt 2a 'odciski palców') are held in the Rejestr Dowodów Osobistych only until the card is collected, at most 90 days; Art. 56(1) lists fingerprints among the data gathered in that central…. It is withheld until the fact or its source is corrected and checked again* | — | — | — | — |
+| Critical | Breeder document scans (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | Profil Zaufany is an electronic identification means notified at assurance level substantial[^s6][^s19] | The digital affairs minister manages the public electronic identification system (Art. 20ab, Act on Computerisation of Public Task Entities)[^s6] | *Not yet sourced* | *Not stated in sources* | Over 14 million active trusted profiles; over 27 million mObywatel app downloads[^s20] |
+| High | Electoral roll entry (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | narodowe centrum certyfikacji (national certification centre), part of the krajowa infrastruktura zaufania (national trust infrastructure)[^s3] | Narodowy Bank Polski (National Bank of Poland), when authorised by the minister competent for computerisation[^s3] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | księgi wieczyste (land and mortgage registers), kept in an ICT system[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Krajowy Rejestr Karny (National Criminal Register)[^s22] | Minister Sprawiedliwości (Minister of Justice), through the Biuro Informacyjne Krajowego Rejestru Karnego (Information Office of the National Criminal Register)[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Krajowy System Informacyjny Policji – KSIP (National Police Information System)[^s23] | Komendant Główny Policji (Chief Commander of Police)[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | Krajowy zbiór rejestrów, ewidencji i wykazu w sprawach cudzoziemców (National collection of registers, records and list concerning foreigners)[^s24] | Szef Urzędu (Head of the Office [for Foreigners])[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Tax identification numbers (NIP) are assigned via the Central Register of Entities – National Taxpayer Records (CRP KEP)[^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | PUESC is the ICT system for electronic exchange between KAS and its clients, including declarations[^s26][^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | ZUS also keeps the Central Register of Insured Persons, of Contribution Payers and of Open Pension Fund Members[^s28] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | Centralny Wykaz Ubezpieczonych (Central Register of Insured Persons)[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | CEIDG (sole-trader business register) is kept in an ICT system by the economy minister[^s30] | The Minister of Justice maintains the ICT system used to keep the KRS (Art. 3a)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | centralna ewidencja pojazdów (central vehicle register)[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Krajowy System Informatyczny – KSI (National IT System)[^s33] | Komendant Główny Policji (Chief Commander of Police), as the central technical authority of KSI[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Treasury and state accounts (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Election management and results (tier 1) | Centralny Rejestr Wyborców (Central Register of Voters)[^s34] | Minister właściwy do spraw informatyzacji (minister competent for computerisation)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Emergency calls and public-safety radio (tier 1) | system powiadamiania ratunkowego (emergency notification system) for numbers 112, 997 and 998[^s35] | Minister właściwy do spraw administracji publicznej (minister competent for public administration)[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Council of Ministers regulation on cooperation of the RCB director with mobile network operators to warn end users (Alert RCB)[^s36] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | centralny system informacji rynku energii (central energy market information system)[^s37] | operator systemu przesyłowego elektroenergetycznego (electricity transmission system operator), acting as operator informacji rynku energii (energy market information operator)[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | System informacyjny gospodarowania wodami (water management information system)[^s38] | Wody Polskie (Polish Waters)[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | *Not yet sourced* | Administrator of P1 is a unit subordinate to the health minister competent for health information systems[^s39][^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Dziennik Ustaw Rzeczypospolitej Polskiej (Journal of Laws of the Republic of Poland)[^s41] | Prezes Rady Ministrów (Prime Minister), with the assistance of the Rządowe Centrum Legislacji (Government Legislation Centre)[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | *Not yet sourced* | The health minister designates the register's system administrator from subordinate or supervised units[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | Archival materials expressly include electronic documents[^s43] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | State register of boundaries, integrated with the land and building cadastre and the register of localities, streets and addresses[^s44] | Geodetic and Cartographic Law Art. 7a: the Surveyor General keeps the central geodetic and cartographic resource[^s44] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -146,7 +146,7 @@ Tier 0 and 1 holdings for Poland without a verified source yet. Corrections and 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -203,10 +203,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -215,8 +215,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -225,6 +225,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -257,7 +259,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -299,7 +301,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|

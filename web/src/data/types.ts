@@ -153,6 +153,8 @@ export interface Bundle {
   methodology: Document
   /** How each printed fact was checked by the model that did not write it (model/factcheck_appendix.py, #87). */
   factcheck: { eu: Document; countries: Record<string, Document>; lines: Record<string, string> }
+  /** Key infrastructure and hosting across the 27: copies of the country documents' spans (#95). */
+  infrastructure: Document
   claims: Record<string, Citation[]>
   sources: Record<string, Source>
 }

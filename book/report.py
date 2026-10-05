@@ -117,6 +117,14 @@ class Renderer:
             out += [self.block(b) for b in s["blocks"]]
         return "\n".join(out)
 
+    def overview(self, doc: dict, level: int = 1) -> str:
+        """A generated EU-27 document (document.infrastructure, #95): its facts footnoted like a country's."""
+        out = [f"{'=' * level} {esc(doc['name'])}", ""]
+        for s in doc["sections"]:
+            out += [f"{'=' * (level + 1)} {esc(s['title'])}", ""]
+            out += [self.block(b) for b in s["blocks"]]
+        return "\n".join(out)
+
     # -- appendix -----------------------------------------------------------
 
     def methodology(self, level: int = 1) -> str:
@@ -345,6 +353,7 @@ def report_typ(b: dict) -> str:
         "",
         front_matter(b),
         rank,
+        r.overview(b["infrastructure"]),
         *body,
         after_heading(r.methodology(), "methodology"),
         r.factcheck(),

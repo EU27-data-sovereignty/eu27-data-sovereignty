@@ -83,6 +83,8 @@ PRIORITY_RULE = (
     "Critical is 6 or more, High is 4 or 5."
 )
 
+HOSTING_COLUMN = "Hosting (as sourced)"
+
 DEPENDENCY_LABEL = {
     "national": "National infrastructure", "eu_provider": "EU provider",
     "non_eu_provider": "Non-EU provider", "mixed": "Mixed", "unknown": "Not stated in sources",
@@ -274,6 +276,7 @@ def holdings_section(c: dict, src: Sources, entries: list[dict]) -> dict:
         if e["status"] == "held":
             name = src.fact(f"{base}:register", e["register"])
             operator = src.fact(f"{base}:operator", e["holder"]) if e["holder"] else gap()
+            hosting = src.fact(f"{base}:hosting", e["hosting"]) if e.get("hosting") else gap()
             dep = e.get("foreign_dependency", "")
             dependency = (src.fact(f"{base}:foreign_dependency", DEPENDENCY_LABEL[dep], categorical=True)
                           if dep and dep != "unknown" else gap("Not stated in sources"))
@@ -285,12 +288,12 @@ def holdings_section(c: dict, src: Sources, entries: list[dict]) -> dict:
             size = size_bits[0] if size_bits else gap("Not yet measured")
         elif e["status"] == "not_held":
             name = src.fact(f"{base}:register", "No central register", "Not yet sourced", categorical=True)
-            operator, dependency, size = method("—"), method("—"), method("—")
+            operator, hosting, dependency, size = method("—"), method("—"), method("—"), method("—")
         else:
             name = gap("Not yet verified")
-            operator, dependency, size = gap("—"), gap("—"), gap("—")
+            operator, hosting, dependency, size = gap("—"), gap("—"), gap("—"), gap("—")
         rows.append([
-            label(band), label(f"{e['label']} (tier {e['tier']})"), name, operator, dependency, size,
+            label(band), label(f"{e['label']} (tier {e['tier']})"), name, operator, hosting, dependency, size,
         ])
 
     verified = sum(1 for e in entries if e["status"] != "unrecorded")
@@ -306,8 +309,9 @@ def holdings_section(c: dict, src: Sources, entries: list[dict]) -> dict:
             {"type": "callout", "tone": "method", "spans": [method(PRIORITY_RULE)]},
             {"type": "table",
              "columns": [label("Priority"), label("Holding"), label("Register or system"),
-                         label("Operator"), label("Infrastructure dependency"), label("Records / size")],
-             "align": ["left"] * 6, "rows": rows},
+                         label("Operator"), label(HOSTING_COLUMN), label("Infrastructure dependency"),
+                         label("Records / size")],
+             "align": ["left"] * 7, "rows": rows},
         ],
     }
 
@@ -450,6 +454,77 @@ def country(c: dict, src: Sources | None = None) -> dict:
 
 
 # --------------------------------------------------------------------------- #
+# EU-27 overview: key infrastructure and hosting (#95)
+# --------------------------------------------------------------------------- #
+
+OVERVIEW_COLUMNS = ("Register or system", "Operator", HOSTING_COLUMN, "Infrastructure dependency")
+COVERAGE = [("non_eu_provider", "Non-EU provider"), ("mixed", "Mixed"), ("eu_provider", "EU provider"),
+            ("national", "National infrastructure")]
+
+
+def holdings_rows(doc: dict) -> list[dict[str, dict]]:
+    """A country document's holdings table, each row keyed by column name."""
+    section = next(s for s in doc["sections"] if s["id"] == "holdings")
+    table = next(b for b in section["blocks"] if b["type"] == "table")
+    names = [c["t"] for c in table["columns"]]
+    return [dict(zip(names, row)) for row in table["rows"]]
+
+
+def infrastructure(documents: dict) -> dict:
+    """Where each state's key registers are hosted and who operates them, across the 27.
+
+    Built only from the country documents: every cell is a copy of a span a country document prints,
+    so the overview adds no fact of its own. A fact carries the same text and claim, and so the same
+    fact-check hash, and a withheld fact stays withheld. The counts are this project's own tallies of
+    printed spans, stated as method."""
+    import copy  # noqa: PLC0415
+
+    by_name = sorted(documents.values(), key=lambda d: d["name"])
+    rows, coverage = [], []
+    for d in by_name:
+        held = [r for r in holdings_rows(d) if r["Register or system"]["role"] == "fact"
+                and r["Operator"]["role"] != "method"]
+        hosted = [r for r in holdings_rows(d) if r[HOSTING_COLUMN]["role"] in ("fact", "disputed")]
+        for r in hosted:
+            rows.append([label(d["name"]), r["Holding"], *(copy.deepcopy(r[c]) for c in OVERVIEW_COLUMNS)])
+        dep = [r["Infrastructure dependency"] for r in held]
+        counts = [sum(1 for s in dep if s["role"] == "fact" and s["t"] == DEPENDENCY_LABEL[k]) for k, _ in COVERAGE]
+        coverage.append([label(d["name"]), method(str(len(held))),
+                         method(str(sum(1 for r in held if r[HOSTING_COLUMN]["role"] == "fact"))),
+                         *(method(str(n)) for n in counts), method(str(len(held) - sum(counts)))])
+    printed = sum(1 for r in rows if r[4]["role"] == "fact")
+    return {
+        "iso": "EU", "name": "Key infrastructure and hosting",
+        "sections": [
+            {"id": "hosting", "title": "Where key registers are hosted, and by whom",
+             "blocks": [
+                 {"type": "p", "spans": [method(
+                     f"Every holding whose hosting a checked source states, by member state: {printed} "
+                     "printed, and any withheld by the fact check marked as disputed. Each cell is the "
+                     "one the state's own report prints, with the same source. A holding not listed "
+                     "here has no sourced hosting yet; that is a gap in the evidence, not a finding "
+                     "that it is hosted nationally.")]},
+                 {"type": "table",
+                  "columns": [label("State"), label("Holding"), *(label(c) for c in OVERVIEW_COLUMNS)],
+                  "align": ["left"] * 6, "rows": rows},
+             ]},
+            {"id": "coverage", "title": "What is known, per state",
+             "blocks": [
+                 {"type": "p", "spans": [method(
+                     "Counted from the facts each state's report prints: holdings with a sourced "
+                     "register, how many of them have sourced hosting, and the infrastructure "
+                     "dependency their sources state. Not stated means no printed source says; it is "
+                     "never counted as national.")]},
+                 {"type": "table",
+                  "columns": [label("State"), label("Registers sourced"), label("Hosting sourced"),
+                              *(label(n) for _, n in COVERAGE), label("Not stated")],
+                  "align": ["left"] + ["right"] * 7, "rows": coverage},
+             ]},
+        ],
+    }
+
+
+# --------------------------------------------------------------------------- #
 # Sources used, and the gate
 # --------------------------------------------------------------------------- #
 
@@ -510,9 +585,10 @@ def main(argv: list[str] | None = None) -> int:
     if args.check:
         errors = [e for iso in sorted(bundle["countries"])
                   for e in check(country(bundle["countries"][iso], src), src)]
+        errors += check(bundle["infrastructure"], src)
         for e in errors:
             print(e, file=sys.stderr)
-        print(f"{len(bundle['countries'])} documents checked, {len(errors)} unsourced facts")
+        print(f"{len(bundle['countries'])} documents and the EU-27 overview checked, {len(errors)} unsourced facts")
         return 1 if errors else 0
     print(json.dumps(country(bundle["countries"][args.iso.upper()], src), indent=1, ensure_ascii=False))
     return 0

@@ -87,6 +87,9 @@ def build_bundle() -> dict:
         # How every printed fact was checked by the model that did not write it, for the EU-27 report
         # and for each country, generated from the fact-check ledger (#87).
         "factcheck": factcheck_appendix.build(documents, claims, sources),
+        # Key infrastructure and hosting across the 27 (#95): copies of the country documents' spans, so it
+        # prints no fact of its own and needs no fact check of its own.
+        "infrastructure": document.infrastructure(documents),
         "claims": claims,
         "sources": sources,
         "holding_classes": [{"class_id": c, "label": nd.LABELS[c], "tier": nd.TIER_OF[c],

@@ -11,9 +11,9 @@ produced: [`METHOD.md`](METHOD.md).
 - [x] Full fact check recorded; `factcheck.py gate` exits 0 at 1,309 of 1,309 (2026-10-02)
 - [x] Fast-forwarded `main` to `feat/fact-check` and pushed (2026-10-02); `Deploy` run 37072208296 green;
       live at https://eu27.cloud (noindex); recorded in `DEPLOYMENT.md`
-- [ ] 10 Dependabot alerts on `main` (2 high, 5 moderate, 3 low), reported by GitHub on the push
-- [ ] Fix the `security` workflow, which fails on every push because its reusable workflow is only in the
-      unpushed local dotfiles (pushing dotfiles needs the owner's OK)
+- [ ] Dependabot: 4 open (2 high, 2 moderate), all in `mobile/package-lock.json` (2026-10-05); `web/` is
+      clean. Cleared by porting or dropping the mobile reader (below)
+- [x] `security` workflow green on every push since 2026-10-03 (calls the shared workflow, `71d84ba`)
 - [ ] `/ask`: dedicated Anthropic workspace with a spend limit and `ANTHROPIC_API_KEY` in Vercel
       (author), then the 12-question eval (with approval), then the Vercel Firewall rate limit
 
@@ -41,7 +41,7 @@ Open
       the deploy (#89)
 - [x] Full run `wf_da123db1-a4e` (2026-10-02): 1,309 confirmed and 81 withheld (48 not supported, 33 unclear);
       measured cost about $250–370
-- [ ] Resolve the 81 withheld facts (owner decides; never edit a verdict). All are listed in
+- [x] (Superseded by the 52 below.) Resolve the 81 withheld facts (owner decides; never edit a verdict). All are listed in
       `docs/fact-check-audit.md` § Withheld. By kind: 31 register or operator names worded beyond their quote,
       15 hosting labels, 13 indicators, about 12 pages the checker could not fetch. Most affected: IE 10,
       EE 10, HU 9, PT 7, SK 6
@@ -50,9 +50,11 @@ Open
 - [x] Retry route for facts whose pages refused the checker: `prepare --withheld-blocked`, from the hashed
       copy; 11 of 12 confirmed. 69 facts remain withheld
 - [x] Correction round (#93): 69 withheld facts re-researched, 25 corrected or re-sourced and confirmed
-- [ ] 46 facts still withheld: no T1/T2 quote found, reviewer disagreed, or the check rejected the correction
-- [ ] Stability sample: Opus 5.5 disagreed with 5 of 50 Fable-confirmed facts (audit file § Stability); decide
-      whether a second-checker disagreement should withhold a fact
+- [ ] 52 facts still withheld (2026-10-04): 46 left after the correction round (no T1/T2 quote found,
+      reviewer disagreed, or the check rejected the correction) plus 6 a second checker rejected (#94).
+      Listed in `docs/fact-check-audit.md` § Withheld
+- [x] Stability samples: Opus 5.5 disagreed with 6 of 100 Fable-confirmed facts; a second-checker
+      disagreement now withholds the fact (#94)
 - [x] ANTHROPIC_API_KEY set in Vercel (Production), 2026-10-03
 - [ ] **Security: rotate ANTHROPIC_API_KEY.** The key in use was exposed in plain text during setup (recorded
       in the private findings register). New key from the `eu27-ask` workspace, stored with
@@ -64,9 +66,9 @@ Open
 - [ ] Six Slovak facts cite `zakony.judikaty.info`, an unofficial mirror (T4); find the official text (slov-lex.sk)
 - [x] Dependabot in `web/`: `undici` 8.11.2, `brace-expansion` 5.0.12; `npm audit --audit-level=high` clean, now a CI step
 - [ ] Dependabot in `mobile/` (stale reader): `node-forge` (no fix), `braces`; port the reader to schema 2 or drop it
-- [ ] Testing items that wait for the owner's OK (docs/testing.md § Not yet in place): live `/ask` check,
-      mutation testing / `hypothesis`, fact-check stability sampling, visual baselines, Firefox/WebKit,
-      weekly source link check, pushing dotfiles to fix the red `security` workflow
+- [x] Testing items (b89f03c, 1e52404): live `/ask` check, mutation testing, `hypothesis`, fact-check
+      stability sampling, visual baselines, Firefox/WebKit, iPhone
+- [ ] Weekly source link check (`monitor.yml` checks the live site and Eurostat vintages, not cited sources)
 - [ ] Two of the withheld facts, from the pilot:
   - [ ] `record:DE:civil_registry:operator`: the printed text says "national personal identification
         number … for every natural person"; §139b AO only says the BZSt stores these data on natural
@@ -74,7 +76,7 @@ Open
   - [ ] `indicator:DE:K2` (eID operated by the state): printed Yes, but no cited page says Bundesdruckerei
         is the designated operator. Find that source (e.g. the Bundesanzeiger designation) or set unknown
 - [x] `gate` prints `1309 of 1309` and exits 0; `Verified:` lines of #87 and #89 filled in
-- [ ] Merge `feat/citizen-review` and `feat/fact-check` into `main` (owner's OK; a push to `main` deploys)
+- [x] `feat/citizen-review` and `feat/fact-check` merged into `main` (both in `git branch --merged main`)
 - [ ] Optional: make the vetting reviewer cross-model too (it is still Opus 5.5 reviewing Opus 5.5)
 - [ ] Optional: credit the cross-model check in the evidence grades (`evidence.assess`); a decision of
       its own
@@ -89,6 +91,16 @@ Open
 - [x] Every dependency label independently reviewed (#79): 77 of 93 agreed
 - [ ] Hosting pass: where each verified tier 0/1 holding runs (procurement, audit offices, parliament),
       then #79 review. About 86% are unknown today
+- [x] Hosting printed per holding, and a generated EU-27 overview in every output (#95, 2026-10-05)
+- [ ] `/factcheck` the 60 hosting facts #95 printed; the deploy gate blocks `main` until then
+- [ ] `/vet` the 11 hosting values that print as gaps: their quote lacks a year or number they state
+      (BG land_property, five DK rows, EL tax and health_records, IT facial_biometric, SE vehicle_licensing)
+- [ ] Exposure counts and the ranking read withheld dependency labels: `document.exposure_section` and
+      `sovereignty.py:129` count the raw label, so 7 states (AT, CY, EL, FR, HU, IE, SE) count labels their
+      report withholds. Count printed facts only, diff the placements, and record the decision
+- [ ] Operators as entities (#96, `docs/hosting-operators.md`): schema, staging, review and admission;
+      then the backfill from the 71 hosting quotes, computed operator views and the derived dependency
+- [ ] Widen the decision-reference regex in `tests/test_docs.py` (1–2 digits) before decision #100
 - [ ] Decide how classified holdings (defence, intelligence) count in the ranking: exclusion or unknown
 - [ ] Rendering fetch for JavaScript pages (FI, PT, LT, CY) and a retry route for refused sites
       (LU, LV, RO, IE)
@@ -100,11 +112,13 @@ Open
 ## Outputs
 - [ ] Mobile reader to schema 2 (content model), with the two Dependabot alerts fixed on the way
 - [ ] Print book: country parts rendered from the content model; write Parts I, II and V
+- [ ] PDF tables: a long compound word (e.g. "Identitätsdokumentenregister") runs into the next column;
+      allow hyphenation or breaking in table cells
 - [ ] Capacity from measured holdings, once enough are measured (#73)
 
 ## Testing
-- [ ] Put the web suites in CI. `ci.yml` runs the Python suite and gitleaks only; Vitest, Playwright
-      and the API type-check run in `./test.sh` locally.
+- [x] Web suites in CI: `ci.yml` runs `./test.sh --no-pdf` on pull requests (Vitest, Playwright, API
+      type-check); `deploy.yml` runs the full `./test.sh`
 
 ## Federation (deferred by decision, Sept 2026)
 - [ ] Out-of-country reserve for frontline and micro states (EE data-embassy pattern)

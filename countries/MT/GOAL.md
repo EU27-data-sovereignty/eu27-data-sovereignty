@@ -54,47 +54,47 @@ The holdings Malta cannot let depend on infrastructure a foreign state can compe
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Civil Status Section of the Public Registry holds acts of birth, marriage, civil union and death registered in Malta[^s12][^s13][^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | Facial images captured for the e-ID card are passed to the Electoral Office for voting documents and electoral registers[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | Live biometrics including fingerprints are captured at the Passport Office for passport applications[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Breeder document scans (tier 0) | Archives of the Public Registry[^s12] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | Biometric passports have been issued since 30 September 2008[^s17] | The Identity Cards Unit issues electronic ID cards and registers e-ID accounts[^s18] | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | The e-ID virtual account is required to access Government online services[^s2][^s19] | Identity Cards Unit registers e-ID (virtual) accounts[^s2][^s18] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | The Act refers to the Electoral Register database[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | e-ID cards carry an Authentication Certificate and a Signature Certificate[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | Land Registration System (LRS)[^s21][^s22] | Land Registration Agency[^s23] | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Named authorities (Attorney General, Commissioner of Police, Security Service) have continuous direct access to criminal conviction records[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | The Service's function is protecting national security against organised crime, espionage, terrorism and sabotage[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Residence and migration status (tier 1) | Biometrics are captured from non-EU applicants for residence documents[^s26] | Expatriates Unit processes and issues residence documentation[^s27][^s2] | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | Health Act defines insured persons as those included in a list established by regulations[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | Business Automation Registry Online System (BAROS)[^s29] | Malta Business Registry (MBR)[^s29] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Register of Beneficial Owners[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | Entry-Exit System (EES)[^s30] | *Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: Both quotes are present and show the CVU as the central authority for visa policy and the body processing D-visas, but neither page says the CVU operates any border-control system; the CVU page treats 'border control authorities' as…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Election management and results (tier 1) | Electronic Counting System[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | Legislation Malta portal holds all Maltese laws including consolidated subsidiary legislation[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | Census of population and housing held by order under the Act[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | Civil Status Section of the Public Registry holds acts of birth, marriage, civil union and death registered in Malta[^s12][^s13][^s14] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Facial images captured for the e-ID card are passed to the Electoral Office for voting documents and electoral registers[^s15] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | Live biometrics including fingerprints are captured at the Passport Office for passport applications[^s16] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | Archives of the Public Registry[^s12] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | Biometric passports have been issued since 30 September 2008[^s17] | The Identity Cards Unit issues electronic ID cards and registers e-ID accounts[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | The e-ID virtual account is required to access Government online services[^s2][^s19] | Identity Cards Unit registers e-ID (virtual) accounts[^s2][^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | The Act refers to the Electoral Register database[^s20] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | e-ID cards carry an Authentication Certificate and a Signature Certificate[^s19] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | Land Registration System (LRS)[^s21][^s22] | Land Registration Agency[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Named authorities (Attorney General, Commissioner of Police, Security Service) have continuous direct access to criminal conviction records[^s24] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | The Service's function is protecting national security against organised crime, espionage, terrorism and sabotage[^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Biometrics are captured from non-EU applicants for residence documents[^s26] | Expatriates Unit processes and issues residence documentation[^s27][^s2] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Statutory health insurance (tier 1) | Health Act defines insured persons as those included in a list established by regulations[^s28] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Business Automation Registry Online System (BAROS)[^s29] | Malta Business Registry (MBR)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Register of Beneficial Owners[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Border and visa systems (tier 1) | Entry-Exit System (EES)[^s30] | *Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: Both quotes are present and show the CVU as the central authority for visa policy and the body processing D-visas, but neither page says the CVU operates any border-control system; the CVU page treats 'border control authorities' as…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Election management and results (tier 1) | Electronic Counting System[^s20] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Official gazette and legislation (tier 1) | Legislation Malta portal holds all Maltese laws including consolidated subsidiary legislation[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | Census of population and housing held by order under the Act[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
@@ -156,7 +156,7 @@ Tier 0 and 1 holdings for Malta without a verified source yet. Corrections and s
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -213,10 +213,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -225,8 +225,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -235,6 +235,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -267,7 +269,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -309,7 +311,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|

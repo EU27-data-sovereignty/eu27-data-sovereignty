@@ -53,47 +53,47 @@ The holdings Italy cannot let depend on infrastructure a foreign state can compe
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | ANPR (National Register of the Resident Population) is the Ministry of the Interior's single database for population data[^s11][^s12] | Ministry of the Interior; Sogei S.p.A. provides the technical operation[^s11][^s13] | *Not stated in sources* | *Not yet sourced* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim and support 'ANSC - national computerised archive of civil-status registers', but neither the ANSC guide page nor art. 62 CAD says the registers are those of births, marriages and deaths; the printed parenthetical…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Facial biometric (tier 0) | The CIE electronic record card (cartellino elettronico), kept by SSCE, holds the holder's photograph, signature scan and registry data[^s14] | Centro Nazionale dei Servizi Demografici (CNSD), Ministry of the Interior[^s14] | National infrastructure[^s14] | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | SPID (sistema pubblico per la gestione dell'identità digitale di cittadini e imprese – public digital identity system)[^s15] | Open set of public and private entities accredited by AgID[^s15] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | Anagrafe Immobiliare Integrata (Integrated Property Register)[^s16] | Agenzia del Territorio (Land Agency)[^s16] | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | casellario giudiziale (criminal records register)[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Centro elaborazione dati (Data Processing Centre, the inter-force police database)[^s18] | Ministero dell'interno (Ministry of the Interior)[^s18] | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | The CIE database is part of the CNSD infrastructure[^s14] | Only the Ministry of the Interior may issue the CIE[^s19] | National infrastructure[^s14] | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | The CNSD 'CA Autenticazione' is the Ministry of the Interior's certification authority that issues online-authentication certificates for the CIE[^s14] | AgID is Italy's supervisory authority for qualified trust service providers[^s20] | National infrastructure[^s14] | *Not yet measured* |
-| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Tax (tier 1) | Anagrafe tributaria (national tax register)[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | AIDA (Integrated Customs and Excise Automation) data warehouse of the Customs and Monopolies Agency[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | casellario centrale dei pensionati (central register of pensioners)[^s23] | Istituto nazionale della previdenza sociale (INPS)[^s23] | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | The National Register of Patients (ANA) is the reference register for public health, run within Sistema Tessera Sanitaria[^s24][^s25] | ANA is built by the Ministry of Economy and Finance in agreement with the Ministry of Health[^s24] | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | Registro delle imprese (Register of Companies)[^s26] | Camera di commercio (chambers of commerce)[^s26] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Apposita sezione del Registro delle imprese (dedicated beneficial-ownership section of the Register of Companies)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | archivio nazionale dei veicoli (national vehicle archive)[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Treasury and state accounts (tier 1) | SIOPE monitors the receipts and payments made by the treasurers of all public administrations[^s29][^s30] | The SIOPE+ infrastructure is operated by the Banca d'Italia[^s29][^s30] | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | NoiPA[^s31] | Dipartimento dell'Amministrazione Generale del personale e dei servizi (DAG), Ministero dell'Economia e delle Finanze (MEF)[^s31] | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | The historical election archive is an online database of election results down to municipality level[^s32] | The Central Directorate for Electoral Services publishes turnout and results data[^s32][^s33] | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | BI‑Comp (national multilateral clearing system)[^s34] | Banca d'Italia[^s34] | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | IT-alert is the public warning service that sends messages to devices in an area hit by a serious emergency[^s35][^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | Anagrafe nazionale dell'istruzione (ANIST) (National Education Register)[^s37] | Ministero dell'istruzione (Ministry of Education)[^s37] | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | The electronic health record (FSE) holds the patient's clinical data and documents[^s38][^s39] | The FSE is set up by the regions and autonomous provinces[^s38][^s39] | *Not stated in sources* | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | The printed Gazzetta Ufficiale is the only definitive text and prevails over the digital version[^s40] | IPZS publishes the Gazzetta Ufficiale in digital form[^s40] | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | The Central State Archive is building the repository for digital archives produced by central state bodies[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Statistical microdata (tier 2) | *Not yet sourced* | ISTAT is the main producer of official statistics[^s42][^s43] | *Not stated in sources* | *Not yet measured* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | ANPR (National Register of the Resident Population) is the Ministry of the Interior's single database for population data[^s11][^s12] | Ministry of the Interior; Sogei S.p.A. provides the technical operation[^s11][^s13] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
+| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Breeder document scans (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim and support 'ANSC - national computerised archive of civil-status registers', but neither the ANSC guide page nor art. 62 CAD says the registers are those of births, marriages and deaths; the printed parenthetical…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Facial biometric (tier 0) | The CIE electronic record card (cartellino elettronico), kept by SSCE, holds the holder's photograph, signature scan and registry data[^s14] | Centro Nazionale dei Servizi Demografici (CNSD), Ministry of the Interior[^s14] | *Not yet sourced* | National infrastructure[^s14] | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | SPID (sistema pubblico per la gestione dell'identità digitale di cittadini e imprese – public digital identity system)[^s15] | Open set of public and private entities accredited by AgID[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | Anagrafe Immobiliare Integrata (Integrated Property Register)[^s16] | Agenzia del Territorio (Land Agency)[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | casellario giudiziale (criminal records register)[^s17] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Centro elaborazione dati (Data Processing Centre, the inter-force police database)[^s18] | Ministero dell'interno (Ministry of the Interior)[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | The CIE database is part of the CNSD infrastructure[^s14] | Only the Ministry of the Interior may issue the CIE[^s19] | The CIE issuance circuit (SSCE) runs on IT infrastructure located in the Ministry of the Interior's CNSD[^s14] | National infrastructure[^s14] | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | The CNSD 'CA Autenticazione' is the Ministry of the Interior's certification authority that issues online-authentication certificates for the CIE[^s14] | AgID is Italy's supervisory authority for qualified trust service providers[^s20] | The CIE certification authority (CA Autenticazione and PKI-CIE) is part of the IT infrastructure located in the CNSD[^s14] | National infrastructure[^s14] | *Not yet measured* |
+| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Tax (tier 1) | Anagrafe tributaria (national tax register)[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | AIDA (Integrated Customs and Excise Automation) data warehouse of the Customs and Monopolies Agency[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | casellario centrale dei pensionati (central register of pensioners)[^s23] | Istituto nazionale della previdenza sociale (INPS)[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | The National Register of Patients (ANA) is the reference register for public health, run within Sistema Tessera Sanitaria[^s24][^s25] | ANA is built by the Ministry of Economy and Finance in agreement with the Ministry of Health[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Registro delle imprese (Register of Companies)[^s26] | Camera di commercio (chambers of commerce)[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Apposita sezione del Registro delle imprese (dedicated beneficial-ownership section of the Register of Companies)[^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | archivio nazionale dei veicoli (national vehicle archive)[^s28] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Treasury and state accounts (tier 1) | SIOPE monitors the receipts and payments made by the treasurers of all public administrations[^s29][^s30] | The SIOPE+ infrastructure is operated by the Banca d'Italia[^s29][^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | NoiPA[^s31] | Dipartimento dell'Amministrazione Generale del personale e dei servizi (DAG), Ministero dell'Economia e delle Finanze (MEF)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | The historical election archive is an online database of election results down to municipality level[^s32] | The Central Directorate for Electoral Services publishes turnout and results data[^s32][^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | BI‑Comp (national multilateral clearing system)[^s34] | Banca d'Italia[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Crisis management and civil protection (tier 1) | IT-alert is the public warning service that sends messages to devices in an area hit by a serious emergency[^s35][^s36] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | Anagrafe nazionale dell'istruzione (ANIST) (National Education Register)[^s37] | Ministero dell'istruzione (Ministry of Education)[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | The electronic health record (FSE) holds the patient's clinical data and documents[^s38][^s39] | The FSE is set up by the regions and autonomous provinces[^s38][^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | The printed Gazzetta Ufficiale is the only definitive text and prevails over the digital version[^s40] | IPZS publishes the Gazzetta Ufficiale in digital form[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | The Central State Archive is building the repository for digital archives produced by central state bodies[^s41] | *Not yet sourced* | The Digital Preservation Hub is described as a 'natively cloud' infrastructure; no provider is named[^s41] | *Not stated in sources* | *Not yet measured* |
+| Standard | Statistical microdata (tier 2) | *Not yet sourced* | ISTAT is the main producer of official statistics[^s42][^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
@@ -149,7 +149,7 @@ Tier 0 and 1 holdings for Italy without a verified source yet. Corrections and s
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -206,10 +206,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -218,8 +218,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -228,6 +228,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -260,7 +262,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -302,7 +304,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -334,7 +336,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Italy
 
-57 of 57 printed facts about Italy pass.
+57 of 60 printed facts about Italy pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -364,9 +366,11 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:IT:police_records:operator | Police information systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IT:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IT:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:IT:issuance_history:hosting | Document issuance history: hosting | unrecorded | none | never checked |  |
 | record:IT:issuance_history:foreign_dependency | Document issuance history: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IT:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IT:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:IT:trust_services_pki:hosting | State PKI and qualified trust services: hosting | unrecorded | none | never checked |  |
 | record:IT:trust_services_pki:foreign_dependency | State PKI and qualified trust services: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IT:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IT:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -394,6 +398,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:IT:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IT:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IT:national_archives:register | National archives (digital): the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:IT:national_archives:hosting | National archives (digital): hosting | unrecorded | none | never checked |  |
 | record:IT:statistics_microdata:operator | Statistical microdata: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
 ### Withheld after the fact check: Italy
@@ -448,6 +453,6 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s42]: Istituto nazionale di statistica (ISTAT) — L'Istituto: organizzazione e attività. L'Istituto: organizzazione e attività. <https://www.istat.it/listituto/> ([archived](https://web.archive.org/web/20260927005502/https://www.istat.it/listituto/))
 [^s43]: Normattiva (Istituto Poligrafico e Zecca dello Stato) — D.Lgs. 322/1989, art. 15 (Compiti dell'ISTAT), 1989-10-07. D.Lgs. 322/1989, art. 15 (Compiti dell'ISTAT). <https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1989-09-06;322~art15> ([archived](https://web.archive.org/web/20250906141609/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1989-09-06;322~art15))
 
-**Evidence grades:** 1 Strong, 56 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 1 Strong, 59 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

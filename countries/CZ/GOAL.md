@@ -53,47 +53,47 @@ The holdings Czechia cannot let depend on infrastructure a foreign state can com
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | informační systém evidence obyvatel (population register information system)[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | ID card register (Evidence občanských průkazů), a public administration information system[^s20][^s21] | Ministry of the Interior is the controller of the ID card register[^s21] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is §57(3): data under §56(1)(o), which the act calls only 'biometrické údaje' (biometric data, not specifically fingerprints), are kept in the ID card register until the card is collected and at most 90 days after issue. That…. It is withheld until the fact or its source is corrected and checked again* | — | — | — |
-| Critical | Breeder document scans (tier 0) | Collection of documents (sbírka listin) underlying each civil status register book[^s22][^s23] | *Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: Both quotes are in Act 301/2000 (the .cz URL redirects to e-sbirka.gov.cz). § 1b makes the Ministry of the Interior controller of the Matriční informační systém, but § 1b(2) says that system holds the data entered in the register books…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | NIA keeps operational data including a record of each use of NIA data[^s9][^s11] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | The ID card register records invalid cards, the date and the reason they became invalid[^s20][^s21] | Ministry of the Interior is the controller of the ID card register[^s21] | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | National point for identification and authentication (Národní bod, NIA), administered by DIA[^s9][^s11] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
-| High | Electoral roll entry (tier 0) | Election administration information system (ISSV) whose components include the voter list[^s24][^s25] | Ministry of the Interior administers the ISSV, which keeps voter records[^s24][^s25] | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet sourced* | DIA acts as founder of the State Trust Services Administration[^s6][^s8] | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | Cadastre is kept in the Cadastre of Real Estate Information System (ISKN)[^s26] | ČÚZK is the central state authority for surveying and the cadastre[^s27][^s28] | *Not stated in sources* | More than 33 million documents in the digital part of the cadastral deed collection[^s26] |
-| High | Judicial & criminal justice (tier 1) | Criminal Records Register: public administration IS of persons finally convicted[^s29][^s30] | Ministry of Justice is the controller[^s29][^s30] | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | Police operate and control the foreigners' information system, incl. photos and fingerprints[^s31][^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | Automated Tax Information System (ADIS) of the Financial Administration[^s33][^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | Automated import system e-Dovoz completing electronic customs systems for transit, export and import[^s35] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (§1(1) of Act 17/2012) only says the customs administration's basic task is protecting the Republic's economic interests and supervising goods and their movement; it does not name the General Directorate of Customs or customs…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | ČSSZ keeps the register of pension insurance contributors[^s36][^s37] | MPSV is controller of the integrated MPSV information system, which includes the ČSSZ system[^s36][^s37] | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | VZP keeps the register of all persons insured under public health insurance[^s38][^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | The Public Register is a public administration IS kept electronically by the registry courts[^s40][^s41] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 28(1) of Act 111/2009 supports DIA (Agentura, defined in § 7) as controller of the registr osob, but § 28(2) says the controller 'poskytuje editorům k přidělení identifikační číslo osoby' — it provides the identification numbers to the…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Register of beneficial owners is a public administration IS controlled by the Ministry of Justice[^s42] | Kept by the court competent for registration; entries made by courts or notaries[^s42] | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Road Vehicle Register, controlled by the Ministry of Transport, records vehicles, owners and operators[^s43] | Ministry of Transport keeps the central driver register and digital tachograph system[^s44][^s45] | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | Ministry of Foreign Affairs visa information system incl. photographs and fingerprints[^s32] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 84(2) of Act 273/2008 supports that the Police Presidium operates the national component of SIS and performs the tasks of the authority exchanging supplementary information on SIS alerts, but neither page uses the word 'SIRENE' anywhere…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | Central Firearms Register: non-public public administration IS[^s46] | Police Presidium is the controller[^s46] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | Integrovaný informační systém Státní pokladny (IISSP) (Integrated Information System of the State Treasury)[^s47] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | Civil service information system for service relationships[^s48][^s49] | Office of the Government is the controller[^s48][^s49] | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | informační systém správy voleb (election administration information system)[^s24] | Czech Statistical Office runs results collection and builds the results system including software[^s25] | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | systém CERTIS (CERTIS interbank payment system)[^s50] | Česká národní banka (Czech National Bank)[^s51] | *Not stated in sources* | over 983 million items in 2024[^s51] |
-| High | Emergency calls and public-safety radio (tier 1) | 14 interconnected 112 call centres[^s52] | hasičské záchranné sbory jednotlivých krajů (regional Fire Rescue Services), in Centra tísňové komunikace (CTK)[^s53] | *Not stated in sources* | 1,995,395 calls and 33,035 SMS to 112 in 2025[^s54][^s55] |
-| High | Crisis management and civil protection (tier 1) | Crisis management information system supporting crisis authorities[^s56] | Administered by the Ministry of the Interior through the Fire Rescue Service directorate[^s57][^s56] | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | matrika studentů (student register), kept by each higher education institution[^s58] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | SÚKL ('Ústav') establishes eRecept as a public administration information system[^s59][^s60] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | Elektronický systém Sbírky zákonů a mezinárodních smluv (electronic system of the Collection of Laws and International Treaties, e-Sbírka)[^s61] | Ministerstvo vnitra (Ministry of the Interior)[^s61] | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | Includes the register of infectious disease cases and vaccination[^s62][^s63] | Infectious disease IS: Ministry of Health controller, ÚZIS operator[^s62][^s63] | *Not stated in sources* | *Not yet measured* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | ČÚZK publishes parcels from ISKN and buildings/addresses from RÚIAN[^s26] | Český úřad zeměměřický a katastrální (Czech Office for Surveying, Mapping and Cadastre)[^s64] | *Not stated in sources* | *Not yet measured* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | informační systém evidence obyvatel (population register information system)[^s19] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | ID card register (Evidence občanských průkazů), a public administration information system[^s20][^s21] | Ministry of the Interior is the controller of the ID card register[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is §57(3): data under §56(1)(o), which the act calls only 'biometrické údaje' (biometric data, not specifically fingerprints), are kept in the ID card register until the card is collected and at most 90 days after issue. That…. It is withheld until the fact or its source is corrected and checked again* | — | — | — | — |
+| Critical | Breeder document scans (tier 0) | Collection of documents (sbírka listin) underlying each civil status register book[^s22][^s23] | *Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: Both quotes are in Act 301/2000 (the .cz URL redirects to e-sbirka.gov.cz). § 1b makes the Ministry of the Interior controller of the Matriční informační systém, but § 1b(2) says that system holds the data entered in the register books…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | NIA keeps operational data including a record of each use of NIA data[^s9][^s11] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | The ID card register records invalid cards, the date and the reason they became invalid[^s20][^s21] | Ministry of the Interior is the controller of the ID card register[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | National point for identification and authentication (Národní bod, NIA), administered by DIA[^s9][^s11] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
+| High | Electoral roll entry (tier 0) | Election administration information system (ISSV) whose components include the voter list[^s24][^s25] | Ministry of the Interior administers the ISSV, which keeps voter records[^s24][^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | *Not yet sourced* | DIA acts as founder of the State Trust Services Administration[^s6][^s8] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | Cadastre is kept in the Cadastre of Real Estate Information System (ISKN)[^s26] | ČÚZK is the central state authority for surveying and the cadastre[^s27][^s28] | *Not yet sourced* | *Not stated in sources* | More than 33 million documents in the digital part of the cadastral deed collection[^s26] |
+| High | Judicial & criminal justice (tier 1) | Criminal Records Register: public administration IS of persons finally convicted[^s29][^s30] | Ministry of Justice is the controller[^s29][^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | Police operate and control the foreigners' information system, incl. photos and fingerprints[^s31][^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Automated Tax Information System (ADIS) of the Financial Administration[^s33][^s34] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | Automated import system e-Dovoz completing electronic customs systems for transit, export and import[^s35] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (§1(1) of Act 17/2012) only says the customs administration's basic task is protecting the Republic's economic interests and supervising goods and their movement; it does not name the General Directorate of Customs or customs…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | ČSSZ keeps the register of pension insurance contributors[^s36][^s37] | MPSV is controller of the integrated MPSV information system, which includes the ČSSZ system[^s36][^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | VZP keeps the register of all persons insured under public health insurance[^s38][^s39] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | The Public Register is a public administration IS kept electronically by the registry courts[^s40][^s41] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 28(1) of Act 111/2009 supports DIA (Agentura, defined in § 7) as controller of the registr osob, but § 28(2) says the controller 'poskytuje editorům k přidělení identifikační číslo osoby' — it provides the identification numbers to the…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Register of beneficial owners is a public administration IS controlled by the Ministry of Justice[^s42] | Kept by the court competent for registration; entries made by courts or notaries[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Road Vehicle Register, controlled by the Ministry of Transport, records vehicles, owners and operators[^s43] | Ministry of Transport keeps the central driver register and digital tachograph system[^s44][^s45] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Ministry of Foreign Affairs visa information system incl. photographs and fingerprints[^s32] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 84(2) of Act 273/2008 supports that the Police Presidium operates the national component of SIS and performs the tasks of the authority exchanging supplementary information on SIS alerts, but neither page uses the word 'SIRENE' anywhere…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Central Firearms Register: non-public public administration IS[^s46] | Police Presidium is the controller[^s46] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | Integrovaný informační systém Státní pokladny (IISSP) (Integrated Information System of the State Treasury)[^s47] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | Civil service information system for service relationships[^s48][^s49] | Office of the Government is the controller[^s48][^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | informační systém správy voleb (election administration information system)[^s24] | Czech Statistical Office runs results collection and builds the results system including software[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | systém CERTIS (CERTIS interbank payment system)[^s50] | Česká národní banka (Czech National Bank)[^s51] | *Not yet sourced* | *Not stated in sources* | over 983 million items in 2024[^s51] |
+| High | Emergency calls and public-safety radio (tier 1) | 14 interconnected 112 call centres[^s52] | hasičské záchranné sbory jednotlivých krajů (regional Fire Rescue Services), in Centra tísňové komunikace (CTK)[^s53] | *Not yet sourced* | *Not stated in sources* | 1,995,395 calls and 33,035 SMS to 112 in 2025[^s54][^s55] |
+| High | Crisis management and civil protection (tier 1) | Crisis management information system supporting crisis authorities[^s56] | Administered by the Ministry of the Interior through the Fire Rescue Service directorate[^s57][^s56] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | matrika studentů (student register), kept by each higher education institution[^s58] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | SÚKL ('Ústav') establishes eRecept as a public administration information system[^s59][^s60] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Elektronický systém Sbírky zákonů a mezinárodních smluv (electronic system of the Collection of Laws and International Treaties, e-Sbírka)[^s61] | Ministerstvo vnitra (Ministry of the Interior)[^s61] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | Includes the register of infectious disease cases and vaccination[^s62][^s63] | Infectious disease IS: Ministry of Health controller, ÚZIS operator[^s62][^s63] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | ČÚZK publishes parcels from ISKN and buildings/addresses from RÚIAN[^s26] | Český úřad zeměměřický a katastrální (Czech Office for Surveying, Mapping and Cadastre)[^s64] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -144,7 +144,7 @@ Tier 0 and 1 holdings for Czechia without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -201,10 +201,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -213,8 +213,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -223,6 +223,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -255,7 +257,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -297,7 +299,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|

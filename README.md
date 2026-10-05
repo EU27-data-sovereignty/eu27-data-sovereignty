@@ -237,6 +237,7 @@ first, and the reasoning is in [`DECISIONS.md`](DECISIONS.md), numbered below.
 | 2026-09-30 | Deploys from CI. The evidence rules: machine-checked disclaimer everywhere, figures must be in their quote, grades, source tiers, rechecks, disputed facts. The first vetting run. Eurostat vintages adopted. Reproducible from scratch, with a generated methodology | #80–#84 |
 | 2026-10-01 | Bottom-up: citizens submit sources and check facts through public forms; a fact is verified by a person only under a two-person rule; contributor terms and editorial policy; the legal entity deferred | #85–#86 |
 | 2026-10-01 | Every printed fact checked by the model that did not write it (Fable 5.1 or Opus 5.5) before every production deploy; a generated audit file; the methodology and fact-check appendices in every asset, marked in a method teal | #87–#88 |
+| 2026-10-05 | Where key registers are hosted and by whom: hosting printed per holding, and a generated EU-27 overview in every output. Planned: operators as entities with sourced ownership links | #95–#96 |
 
 **Keeping it current.** Any commit that changes what a reader sees, or how the evidence is produced,
 adds its entry to `CHANGELOG.md` in the same commit, citing the decision it rests on. A new stage adds a

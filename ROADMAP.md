@@ -190,7 +190,9 @@ flowchart TD
 1. **Hosting of critical holdings.** About 86% of verified holdings have no public source for where they
    run, which keeps nearly every state at Low confidence under #77. Run a targeted pass at procurement
    notices, audit-office reports, parliamentary answers and hosting-provider announcements, then review
-   the dependency labels under #79.
+   the dependency labels under #79. The hosting already sourced is printed and compared across the 27
+   (#95). Next it becomes structured: operators as entities with sourced ownership links, from which a
+   dependency can be derived (#96, `docs/hosting-operators.md`).
 2. **Unmeasurable holdings.** Defence and intelligence hosting will never be published. Decide whether
    an officially classified holding is a declared exclusion rather than an unknown. It is a decision
    entry, because it loosens "silence is never evidence".

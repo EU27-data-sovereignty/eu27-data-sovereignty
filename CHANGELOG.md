@@ -5,6 +5,55 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-05
+
+### Changed: where key registers are hosted, printed and compared across the EU-27 (#95)
+
+- **Hosting is printed.** Each country report's holdings table has a new "Hosting (as sourced)" column. 60
+  admitted hosting values print as facts; they had been cited but never shown. 11 more print as gaps,
+  because their quote lacks a year or number the value states.
+- **A generated EU-27 overview,** "Key infrastructure and hosting":
+  - It lists every holding with sourced hosting, by state, and counts per state what the printed facts say.
+  - Every cell is the country report's own span, with the same source and the same fact check.
+  - It appears in the EU-27 report after the ranking, in `countries/EU-INFRASTRUCTURE.md`, on the web at
+    `/infrastructure` (nav: Hosting), and in `/ask`.
+- **The critical-holding pages** (`/holdings/<class>`) take their column names from the document, so they
+  show the hosting column too.
+- **Printed facts:** 1,340 → 1,400. The 60 new facts await the cross-model fact check before deploy.
+- **The methodology** (generated, in every asset) describes the overview and how its counts are made.
+- **Tests:** `tests/test_evidence.py` checks that every overview fact is a span a country report prints,
+  and that every printed hosting is in the overview. The book's footnote count includes the overview, and
+  `/infrastructure` joins the browser, accessibility and smoke routes.
+- **Visual baselines:** the two `/country/DE` baselines at 1280 px were updated, for the new nav item, the
+  new counts and the wider holdings table.
+
+### Decided: operators as entities with sourced ownership links (#96)
+
+- **Planned, not built.** Organisations become entities, with typed hosting properties and sourced
+  ownership links, so cross-country operator views are computed, and a dependency can be derived from
+  sourced links and reconciled with the reviewed label.
+- **Inspired by** Palantir's Ontology. The design is in
+  [`docs/hosting-operators.md`](docs/hosting-operators.md).
+
+### Found: exposure counts include withheld labels
+
+- **What.** In 7 states (AT, CY, EL, FR, HU, IE, SE), the "Foreign-dependency exposure" section counts
+  admitted dependency labels that the same report withholds. The ranking reads the same raw labels
+  (`sovereignty.py:129`).
+- **Status.** Recorded in #95 and `TODO.md`, not yet fixed. The new overview counts printed facts only.
+
+## 2026-10-05
+
+### Fixed: the Vercel project was connected to the wrong repository; Vercel no longer builds from git
+
+- **What was wrong.** From 2026-10-02 the Vercel project that serves eu27.cloud was connected to another of the
+  owner's repositories. Every push there started a production build of the wrong code, and each failed only
+  because that repository has no `web/` folder.
+- **The fix.** It is now connected to this repository, and `vercel.json` turns off git-triggered deploys
+  (`git.deploymentEnabled: false`). Production ships only from GitHub Actions, after the full gate and the
+  fact-check gate. `tests/test_vercel_config.py` keeps it that way.
+- **`DEPLOYMENT.md`:** redeploy with `gh workflow run Deploy`, and set secrets in the dashboard.
+
 ## 2026-10-04
 
 ### Changed: the subtitle states the project's goal

@@ -218,8 +218,10 @@ class RenderedFacts(unittest.TestCase):
     # the correction round (#93, wf_ee4d0054-063) re-sourced or corrected 29 withheld facts, and the fact
     # check confirmed 25 of the changed ones (wf_72f99a66-4e9); 46 remain withheld. Then to 1340 on
     # 2026-10-03 by #94: two stability samples (wf_8232a23d-013, wf_90fb82e7-35e) had Opus 5.5 reject 6 of
-    # 100 facts Fable 5.1 had confirmed; a second checker's disagreement now withholds the fact too.
-    FACT_FLOOR = 1340
+    # 100 facts Fable 5.1 had confirmed; a second checker's disagreement now withholds the fact too. Then to
+    # 1400 on 2026-10-05 by #95: the cited hosting of 60 holdings is printed (it was admitted but never
+    # shown); 11 more hosting values print as gaps, their quote lacking a year or number they state.
+    FACT_FLOOR = 1400
 
     @classmethod
     def setUpClass(cls):
@@ -238,6 +240,24 @@ class RenderedFacts(unittest.TestCase):
     def test_every_printed_value_is_backed_as_printed(self):
         errors = [e for iso, d in self.docs.items() for e in self.document.check(d, self.src)]
         self.assertEqual(errors, [])
+
+    def test_the_eu27_overview_prints_only_what_the_country_reports_print(self):
+        """#95: every fact in the infrastructure overview is a span its country document prints, with the
+        same text, claim and kind, so it shares that fact's source and fact-check verdict."""
+        overview = self.document.infrastructure(self.docs)
+        printed = {(s["t"], tuple(s["c"]), s.get("k")) for _, s in self.facts}
+        spans = [s for s in self.document.walk_spans(overview) if s["role"] in ("fact", "disputed")]
+        self.assertTrue(spans)
+        self.assertEqual([s["t"] for s in spans if s["role"] == "fact"
+                          and (s["t"], tuple(s["c"]), s.get("k")) not in printed], [])
+        self.assertEqual(self.document.check(overview, self.src), [])
+
+    def test_every_printed_hosting_is_in_the_overview(self):
+        overview = self.document.infrastructure(self.docs)
+        shown = {s["c"][0] for s in self.document.walk_spans(overview) if s["role"] == "fact"}
+        hosting = {s["c"][0] for _, s in self.facts if s["c"][0].endswith(":hosting")}
+        self.assertTrue(hosting)
+        self.assertEqual(hosting - shown, set())
 
     def test_a_retention_period_is_not_printed_as_a_record_count(self):
         self.assertFalse(any(s["c"] == ["record:BG:authentication_audit_log:count"] for _, s in self.facts))

@@ -53,47 +53,47 @@ The holdings Latvia cannot let depend on infrastructure a foreign state can comp
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Fizisko personu reģistrs (Register of Natural Persons), the single system for registering and identifying natural persons[^s17] | The controller and holder of the Register is PMLP (Office of Citizenship and Migration Affairs)[^s17] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | Civil status register entries are held on paper in one copy and electronically in the Register of Natural Persons[^s18] | Registry offices keep paper civil status entries for 100 years, then transfer them to the National Archives of Latvia[^s18] | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | Invalid (revoked, lost) identity documents are entered in the state information system 'Register of Invalid Documents'[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | LVRTC provides four eID means: eID card, eParaksts card, eParaksts card+ and eParaksts mobile[^s20] | The Digital Security Supervisory Committee has qualified and supervises two eID providers: Smart-ID and the state company LVRTC[^s20] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | Voter Register Law establishes the Voter Register and the Electronic Online Voter Register[^s21] | PMLP processes the data in, and is the controller of, the Voter Register[^s21] | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Land & property registry (tier 1) | Valsts vienotā datorizētā zemesgrāmata (State Unified Computerised Land Register)[^s22] | Tiesu administrācija (Court Administration)[^s22] | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | TIS is the state information system for case management and proceedings of all courts, including the Supreme Court and the Constitutional Court[^s23] | The Punishment Register is a state information system controlled and held by the Interior Ministry Information Centre[^s24] | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Cabinet regulations define the data held in the Integrated Interior Information System for locating persons, property and documents[^s25] | The system's controller and holder is the Interior Ministry Information Centre[^s25] | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | The Register of Natural Persons records residence permits, EU registration certificates and permanent residence certificates[^s17] | Asylum Law: PMLP maintains the Register of Asylum Seekers[^s26] | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | Law on Taxes and Fees: VID communicates with taxpayers through its Electronic Declaration System (EDS)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | Customs documents go through EU central customs systems, the Electronic Customs Data Processing System, or the VID EDS[^s28] | Under Union Customs Code Article 5, the customs administration of Latvia is the State Revenue Service[^s28] | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | SAIS is the state information system holding social insurance data used to record insured persons and to grant and pay benefits and pensions[^s29] | The controller of SAIS is the Agency (State Social Insurance Agency)[^s29] | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | Komercreģistrs (Commercial Register)[^s30] | Uzņēmumu reģistrs (Register of Enterprises), under the Minister for Justice[^s30] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Beneficial owner information held by Latvijas Republikas Uzņēmumu reģistrs (Register of Enterprises)[^s31] | Latvijas Republikas Uzņēmumu reģistrs (Register of Enterprises of the Republic of Latvia)[^s31] | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | transportlīdzekļu un to vadītāju valsts reģistrs (State Register of Vehicles and Drivers)[^s32] | Valsts akciju sabiedrība "Ceļu satiksmes drošības direkcija" (state joint-stock company Road Traffic Safety Directorate, CSDD)[^s32] | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Treasury and state accounts (tier 1) | ePakalpojums Maksājumi (Treasury Payments e-service)[^s33] | Valsts kase (State Treasury)[^s34] | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | VIIS includes the student and graduate registers and the register of recognition statements for foreign qualifications[^s35] | The controller of VIIS is the Ministry of Education and Science[^s35] | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | “Latvijas Vēstnesis” (official publication of the Republic of Latvia)[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | Surveillance data are received and processed in the EPID system, including data from the Latvian Digital Health Centre's systems[^s37] | SPKC keeps the records of infectious diseases and laboratory-confirmed pathogens[^s37] | *Not stated in sources* | *Not yet measured* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | The base geospatial data include administrative boundaries and the geospatial information of the State Address Register[^s38] | Geospatial Information Law: LĢIA, under the Ministry of Defence, implements state policy in geodesy, cartography and geospatial information[^s39][^s38] | *Not stated in sources* | *Not yet measured* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | Fizisko personu reģistrs (Register of Natural Persons), the single system for registering and identifying natural persons[^s17] | The controller and holder of the Register is PMLP (Office of Citizenship and Migration Affairs)[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Breeder document scans (tier 0) | Civil status register entries are held on paper in one copy and electronically in the Register of Natural Persons[^s18] | Registry offices keep paper civil status entries for 100 years, then transfer them to the National Archives of Latvia[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | Invalid (revoked, lost) identity documents are entered in the state information system 'Register of Invalid Documents'[^s19] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | LVRTC provides four eID means: eID card, eParaksts card, eParaksts card+ and eParaksts mobile[^s20] | The Digital Security Supervisory Committee has qualified and supervises two eID providers: Smart-ID and the state company LVRTC[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | Voter Register Law establishes the Voter Register and the Electronic Online Voter Register[^s21] | PMLP processes the data in, and is the controller of, the Voter Register[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Land & property registry (tier 1) | Valsts vienotā datorizētā zemesgrāmata (State Unified Computerised Land Register)[^s22] | Tiesu administrācija (Court Administration)[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | TIS is the state information system for case management and proceedings of all courts, including the Supreme Court and the Constitutional Court[^s23] | The Punishment Register is a state information system controlled and held by the Interior Ministry Information Centre[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Cabinet regulations define the data held in the Integrated Interior Information System for locating persons, property and documents[^s25] | The system's controller and holder is the Interior Ministry Information Centre[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | The Register of Natural Persons records residence permits, EU registration certificates and permanent residence certificates[^s17] | Asylum Law: PMLP maintains the Register of Asylum Seekers[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Law on Taxes and Fees: VID communicates with taxpayers through its Electronic Declaration System (EDS)[^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | Customs documents go through EU central customs systems, the Electronic Customs Data Processing System, or the VID EDS[^s28] | Under Union Customs Code Article 5, the customs administration of Latvia is the State Revenue Service[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | SAIS is the state information system holding social insurance data used to record insured persons and to grant and pay benefits and pensions[^s29] | The controller of SAIS is the Agency (State Social Insurance Agency)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Business registry (tier 1) | Komercreģistrs (Commercial Register)[^s30] | Uzņēmumu reģistrs (Register of Enterprises), under the Minister for Justice[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Beneficial owner information held by Latvijas Republikas Uzņēmumu reģistrs (Register of Enterprises)[^s31] | Latvijas Republikas Uzņēmumu reģistrs (Register of Enterprises of the Republic of Latvia)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | transportlīdzekļu un to vadītāju valsts reģistrs (State Register of Vehicles and Drivers)[^s32] | Valsts akciju sabiedrība "Ceļu satiksmes drošības direkcija" (state joint-stock company Road Traffic Safety Directorate, CSDD)[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Treasury and state accounts (tier 1) | ePakalpojums Maksājumi (Treasury Payments e-service)[^s33] | Valsts kase (State Treasury)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | VIIS includes the student and graduate registers and the register of recognition statements for foreign qualifications[^s35] | The controller of VIIS is the Ministry of Education and Science[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Official gazette and legislation (tier 1) | “Latvijas Vēstnesis” (official publication of the Republic of Latvia)[^s36] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | Surveillance data are received and processed in the EPID system, including data from the Latvian Digital Health Centre's systems[^s37] | SPKC keeps the records of infectious diseases and laboratory-confirmed pathogens[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | The base geospatial data include administrative boundaries and the geospatial information of the State Address Register[^s38] | Geospatial Information Law: LĢIA, under the Ministry of Defence, implements state policy in geodesy, cartography and geospatial information[^s39][^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -155,7 +155,7 @@ Tier 0 and 1 holdings for Latvia without a verified source yet. Corrections and 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -212,10 +212,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -224,8 +224,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -234,6 +234,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -266,7 +268,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -308,7 +310,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|

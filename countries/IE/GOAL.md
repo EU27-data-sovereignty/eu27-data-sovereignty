@@ -53,47 +53,47 @@ The holdings Ireland cannot let depend on infrastructure a foreign state can com
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | register of births (with registers of stillbirths, deaths, marriages etc.)[^s12] | an tArd-Chláraitheoir (Registrar General)[^s12] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | SAFE 2 registration biometric facial templates (Public Services Card)[^s13] | Department of Social Protection (DSP)[^s13] | *Not stated in sources* | Facial templates for 70% of the State's population (2021)[^s13] |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | foreign births register[^s14] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Electoral roll entry (tier 0) | *Not yet sourced* | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is one bullet in a list of LGERS project requirements ('Migration of project to DCC's Azure Public Cloud Tenancy') for a new central database that local authorities are still preparing to migrate to in 2025-2026; the page does…. It is withheld until the fact or its source is corrected and checked again* | 3.87 million registered electors (December 2024)[^s15] |
-| Critical | Defence command and logistics (tier 1) | Defence Forces Enterprise network (NGWE project) and national Communications Information Services Network (CISN)[^s16] | Defence Forces CIS Corps[^s16] | Mixed[^s17] | *Not yet measured* |
-| High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | MyGovID[^s1] | *Not yet sourced* | *Not stated in sources* | over 3.2 million people actively using their MyGovID account[^s1] |
-| High | State PKI and qualified trust services (tier 0) | ROS digital certificate PKI (Revenue CA), also used by CRO, Department of Transport and Department of Social Protection[^s18] | Revenue Commissioners act as Certification Authority for ROS digital certificates[^s18] | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | National Land Register (folios of the Land Registry) and Registry of Deeds[^s19][^s20] | Tailte Éireann (civil service body under the Tailte Éireann Act 2022)[^s19] | *Not stated in sources* | 2.4 million folios with associated spatial data accessible via landdirect.ie[^s19][^s20] |
-| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: garda.ie refused the connection, so I read the project's hashed copy (sha256 c415d6a9…, as in fetch_manifest.csv); the quote is there and the CSO page quote is live. Both call PULSE 'An Garda Síochána's database' with incident data, but…. It is withheld until the fact or its source is corrected and checked again* | An Garda Síochána[^s21] | *Not stated in sources* | *Not yet measured* |
-| High | Intelligence services (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a…. It is withheld until the fact or its source is corrected and checked again* | Military Intelligence (Defence Forces)[^s17] | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | National Digital Radio Service (NDRS), TETRA network for first responders[^s22] | *Not yet sourced* | Non-EU provider[^s22] | *Not yet measured* |
-| High | Residence and migration status (tier 1) | Irish Residence Permission (IRP) register: the register of non-nationals with permission to be in the State[^s23] | Immigration Service Delivery (ISD), Department of Justice (took over first-time registration from the Garda National Immigration Bureau, 13 January 2025)[^s24] | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | ROS database[^s2] | Revenue[^s2] | *Not stated in sources* | over 900,000 self-assessed taxpayers, 287,000 companies and 293,000 VAT traders registered[^s2] |
-| High | Customs declarations (tier 1) | Automated Import System (AIS), Automated Export System (AES) and New Computerised Transit System (NCTS)[^s2] | Revenue Commissioners[^s2] | *Not stated in sources* | *Not yet sourced* |
-| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | PCRS eligibility records (medical card / GMS scheme eligibility, keyed on PPSN)[^s25] | HSE Primary Care Reimbursement Service (PCRS)[^s25] | *Not stated in sources* | 1,552,553 GMS (medical card) eligible persons and 785,152 GP visit card holders in 2025[^s26] |
-| High | Business registry (tier 1) | Register of companies, business names and limited partnerships held by the Companies Registration Office[^s27] | Companies Registration Office (CRO), an office of the Department of Enterprise, Tourism and Employment[^s27] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Central Register of Beneficial Ownership of Companies and Industrial and Provident Societies[^s28] | Registrar of Beneficial Ownership of Companies and Industrial and Provident Societies[^s28] | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | National Vehicle and Driver File (NVDF)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | National connection to the Schengen Information System (SIS), live in Ireland since 15 March 2021[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | Firearm certificates (three-year certificates, renewal phases administered by An Garda Síochána)[^s31] | An Garda Síochána (applications decided by the local Superintendent)[^s31] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the…. It is withheld until the fact or its source is corrected and checked again* | National Shared Services Office (FMSS); Department of Finance manages the Exchequer[^s32] | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Election management and results (tier 1) | Election Count Database System (Ecount), used alongside the manual paper-ballot count[^s33] | Returning Officers per constituency[^s33] | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | TARGET2-Ireland (Irish component of the Eurosystem T2 RTGS system)[^s34] | Central Bank of Ireland[^s34][^s35] | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | National Control Centres (NCCs) of the transmission system operator[^s36][^s37] | EirGrid (transmission system operator)[^s38][^s37] | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* | *Not stated in sources* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* |
-| High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Health records (tier 2) | National Shared Care Record (NSCR), HSE MyHealth@IE programme (read-only aggregated record)[^s39] | Health Service Executive (Health Identifiers Service)[^s40] | *Not stated in sources* | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | Computerised Infectious Disease Reporting (CIDR)[^s41] | Health Protection Surveillance Centre (HPSC); CIDR established 2004[^s42] | *Not stated in sources* | On average 33,394 notified cases per year, 2013-2019 (range 25,814-46,065)[^s42] |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | register of births (with registers of stillbirths, deaths, marriages etc.)[^s12] | an tArd-Chláraitheoir (Registrar General)[^s12] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | SAFE 2 registration biometric facial templates (Public Services Card)[^s13] | Department of Social Protection (DSP)[^s13] | *Not yet sourced* | *Not stated in sources* | Facial templates for 70% of the State's population (2021)[^s13] |
+| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Breeder document scans (tier 0) | foreign births register[^s14] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Electoral roll entry (tier 0) | *Not yet sourced* | *Not yet sourced* | LGERS (national electoral register database) being migrated to Dublin City Council's Azure public cloud tenancy[^s15] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is one bullet in a list of LGERS project requirements ('Migration of project to DCC's Azure Public Cloud Tenancy') for a new central database that local authorities are still preparing to migrate to in 2025-2026; the page does…. It is withheld until the fact or its source is corrected and checked again* | 3.87 million registered electors (December 2024)[^s15] |
+| Critical | Defence command and logistics (tier 1) | Defence Forces Enterprise network (NGWE project) and national Communications Information Services Network (CISN)[^s16] | Defence Forces CIS Corps[^s16] | On-premise national CISN built around two active/active resilient data centres, with hybrid cloud access where required[^s16] | Mixed[^s17] | *Not yet measured* |
+| High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Digital identity credentials (tier 0) | MyGovID[^s1] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | over 3.2 million people actively using their MyGovID account[^s1] |
+| High | State PKI and qualified trust services (tier 0) | ROS digital certificate PKI (Revenue CA), also used by CRO, Department of Transport and Department of Social Protection[^s18] | Revenue Commissioners act as Certification Authority for ROS digital certificates[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | National Land Register (folios of the Land Registry) and Registry of Deeds[^s19][^s20] | Tailte Éireann (civil service body under the Tailte Éireann Act 2022)[^s19] | *Not yet sourced* | *Not stated in sources* | 2.4 million folios with associated spatial data accessible via landdirect.ie[^s19][^s20] |
+| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Police information systems (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: garda.ie refused the connection, so I read the project's hashed copy (sha256 c415d6a9…, as in fetch_manifest.csv); the quote is there and the CSO page quote is live. Both call PULSE 'An Garda Síochána's database' with incident data, but…. It is withheld until the fact or its source is corrected and checked again* | An Garda Síochána[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Intelligence services (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a…. It is withheld until the fact or its source is corrected and checked again* | Military Intelligence (Defence Forces)[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | National Digital Radio Service (NDRS), TETRA network for first responders[^s22] | *Not yet sourced* | *Not yet sourced* | Non-EU provider[^s22] | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Irish Residence Permission (IRP) register: the register of non-nationals with permission to be in the State[^s23] | Immigration Service Delivery (ISD), Department of Justice (took over first-time registration from the Garda National Immigration Bureau, 13 January 2025)[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | ROS database[^s2] | Revenue[^s2] | *Not yet sourced* | *Not stated in sources* | over 900,000 self-assessed taxpayers, 287,000 companies and 293,000 VAT traders registered[^s2] |
+| High | Customs declarations (tier 1) | Automated Import System (AIS), Automated Export System (AES) and New Computerised Transit System (NCTS)[^s2] | Revenue Commissioners[^s2] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
+| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Statutory health insurance (tier 1) | PCRS eligibility records (medical card / GMS scheme eligibility, keyed on PPSN)[^s25] | HSE Primary Care Reimbursement Service (PCRS)[^s25] | *Not yet sourced* | *Not stated in sources* | 1,552,553 GMS (medical card) eligible persons and 785,152 GP visit card holders in 2025[^s26] |
+| High | Business registry (tier 1) | Register of companies, business names and limited partnerships held by the Companies Registration Office[^s27] | Companies Registration Office (CRO), an office of the Department of Enterprise, Tourism and Employment[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Central Register of Beneficial Ownership of Companies and Industrial and Provident Societies[^s28] | Registrar of Beneficial Ownership of Companies and Industrial and Provident Societies[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | National Vehicle and Driver File (NVDF)[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | National connection to the Schengen Information System (SIS), live in Ireland since 15 March 2021[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Firearm certificates (three-year certificates, renewal phases administered by An Garda Síochána)[^s31] | An Garda Síochána (applications decided by the local Superintendent)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the…. It is withheld until the fact or its source is corrected and checked again* | National Shared Services Office (FMSS); Department of Finance manages the Exchequer[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Election management and results (tier 1) | Election Count Database System (Ecount), used alongside the manual paper-ballot count[^s33] | Returning Officers per constituency[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | TARGET2-Ireland (Irish component of the Eurosystem T2 RTGS system)[^s34] | Central Bank of Ireland[^s34][^s35] | Transitioned to a new data centre service provider: two Tier-3 data centres in active-active configuration (provider not named)[^s35] | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Electricity grid control (tier 1) | National Control Centres (NCCs) of the transmission system operator[^s36][^s37] | EirGrid (transmission system operator)[^s38][^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* | *Not yet sourced* | *Not stated in sources* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* |
+| High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Health records (tier 2) | National Shared Care Record (NSCR), HSE MyHealth@IE programme (read-only aggregated record)[^s39] | Health Service Executive (Health Identifiers Service)[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Public health surveillance (tier 2) | Computerised Infectious Disease Reporting (CIDR)[^s41] | Health Protection Surveillance Centre (HPSC); CIDR established 2004[^s42] | *Not yet sourced* | *Not stated in sources* | On average 33,394 notified cases per year, 2013-2019 (range 25,814-46,065)[^s42] |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Ireland without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -205,10 +205,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -217,8 +217,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -227,6 +227,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -259,7 +261,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -301,7 +303,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -333,7 +335,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Ireland
 
-60 of 60 printed facts about Ireland pass.
+60 of 63 printed facts about Ireland pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -352,9 +354,11 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:IE:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:facial_biometric:count | Facial biometric: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:IE:electoral_roll:hosting | Electoral roll entry: hosting | unrecorded | none | never checked |  |
 | record:IE:electoral_roll:count | Electoral roll entry: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:defence_command:register | Defence command and logistics: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:defence_command:operator | Defence command and logistics: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:IE:defence_command:hosting | Defence command and logistics: hosting | unrecorded | none | never checked |  |
 | record:IE:defence_command:foreign_dependency | Defence command and logistics: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:IE:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:digital_identity_credentials:count | Digital identity credentials: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -390,6 +394,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:IE:electoral_management:operator | Election management and results: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:central_bank:operator | Central bank systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:IE:central_bank:hosting | Central bank systems: hosting | unrecorded | none | never checked |  |
 | record:IE:grid_control:register | Electricity grid control: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:IE:grid_control:operator | Electricity grid control: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:IE:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -455,6 +460,6 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s41]: Health Protection Surveillance Centre (HSE) — Computerised Infectious Disease Reporting (CIDR). Computerised Infectious Disease Reporting (CIDR). <https://www.hpsc.ie/cidr/> ([archived](https://web.archive.org/web/20260911101522/https://www.hpsc.ie/cidr/))
 [^s42]: Health Information and Quality Authority — Computerised Infectious Disease Reporting (CIDR) system. Computerised Infectious Disease Reporting (CIDR) system. <https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr> ([archived](https://web.archive.org/web/20240704233334/https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr))
 
-**Evidence grades:** 28 Strong, 32 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 30 Strong, 33 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

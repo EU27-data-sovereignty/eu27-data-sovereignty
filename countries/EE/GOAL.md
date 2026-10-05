@@ -54,47 +54,47 @@ The holdings Estonia cannot let depend on infrastructure a foreign state can com
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Rahvastikuregister (Population Register)[^s20] | Siseministeerium (Ministry of the Interior)[^s20] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory…. It is withheld until the fact or its source is corrected and checked again* | ABIS controllers are the Police and Border Guard Board and the Ministry of Foreign Affairs[^s21][^s22] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | ABIS (automaatse biomeetrilise isikutuvastuse süsteemi andmekogu; Automated Biometric Identification System database)[^s23] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Authentication audit log (tier 0) | Riigi autentimisteenus (State Authentication Service, TARA)[^s24] | RIA (Riigi Infosüsteemi Amet; Information System Authority)[^s24] | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | Isikut tõendavate dokumentide andmekogu (Identity Documents Database)[^s25] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s25] | *Not stated in sources* | over 3,2 miljoni isikutunnistuse ja elamisloakaardi (over 3.2 million ID cards and residence permit cards issued)[^s26] |
-| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electoral roll entry (tier 0) | Valijate nimekiri (list of voters), compiled from the Rahvastikuregister (Population Register)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Land & property registry (tier 1) | E-kinnistusraamat (e-Land Register)[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Karistusregister (Criminal Records Database)[^s29] | Justiits- ja Digiministeerium (Ministry of Justice and Digital Affairs); processor Registrite ja Infosüsteemide Keskus (RIK)[^s30][^s31] | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Infosüsteem POLIS (Information System POLIS)[^s32] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s32] | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | elamislubade ja töölubade register (Register of Residence Permits and Work Permits)[^s33] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s33] | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | Maksukohustuslaste register (Register of Taxable Persons)[^s34] | Maksu- ja Tolliamet (Tax and Customs Board)[^s34] | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | Impulss (import customs clearance information system)[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something…. It is withheld until the fact or its source is corrected and checked again* | Sotsiaalkindlustusamet (Social Insurance Board)[^s36] | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | Tervisekassa andmekogu (Health Insurance Fund Database)[^s37] | Tervisekassa (Health Insurance Fund)[^s37] | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | E-äriregister (e-Business Register)[^s38] | Tartu Maakohtu registriosakond (registrar); RIK (develops and manages the portal)[^s38] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Tegelike kasusaajate andmekogu (Beneficial Owners Database)[^s39] | Rahandusministeerium (Ministry of Finance)[^s39] | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | Schengeni infosüsteemi riiklik register (national register of the Schengen Information System)[^s40] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s40] | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | teenistus- ja tsiviilrelvade register (Register of Service and Civilian Weapons)[^s41] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | riigi finants-, personali- ja palgaarvestuse süsteem SAP (state financial, personnel and payroll accounting system SAP)[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | riigi finants-, personali- ja palgaarvestuse süsteem SAP (state financial, personnel and payroll accounting system SAP)[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | valimiste infosüsteem (election information system) and elektroonilise hääletamise süsteem (electronic voting system)[^s27] | Riigi valimisteenistus (State Electoral Office)[^s27] | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | hädaabiteadete ning abi- ja infoteadete andmekogu (database of emergency notifications and assistance and information notifications)[^s43] | Häirekeskus (Emergency Response Centre)[^s44][^s43] | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | ohuteavituse süsteem (public warning system, EE-ALARM), operated by Häirekeskus[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | SCADA/EMS at Eleringi juhtimiskeskus (Elering control centre)[^s45] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | Eesti Hariduse Infosüsteem (EHIS; Estonian Education Information System)[^s46] | Haridus- ja Teadusministeerium (Ministry of Education and Research)[^s47] | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | Riigi Teataja (State Gazette)[^s48] | Justiits- ja Digiministeerium (publisher); Registrite ja Infosüsteemide Keskus (RIK) (hosting and technical operation)[^s48] | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | Rahvastikuregister (Population Register)[^s20] | Siseministeerium (Ministry of the Interior)[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory…. It is withheld until the fact or its source is corrected and checked again* | ABIS controllers are the Police and Border Guard Board and the Ministry of Foreign Affairs[^s21][^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | ABIS (automaatse biomeetrilise isikutuvastuse süsteemi andmekogu; Automated Biometric Identification System database)[^s23] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Authentication audit log (tier 0) | Riigi autentimisteenus (State Authentication Service, TARA)[^s24] | RIA (Riigi Infosüsteemi Amet; Information System Authority)[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | Isikut tõendavate dokumentide andmekogu (Identity Documents Database)[^s25] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s25] | *Not yet sourced* | *Not stated in sources* | over 3,2 miljoni isikutunnistuse ja elamisloakaardi (over 3.2 million ID cards and residence permit cards issued)[^s26] |
+| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Electoral roll entry (tier 0) | Valijate nimekiri (list of voters), compiled from the Rahvastikuregister (Population Register)[^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Land & property registry (tier 1) | E-kinnistusraamat (e-Land Register)[^s28] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Karistusregister (Criminal Records Database)[^s29] | Justiits- ja Digiministeerium (Ministry of Justice and Digital Affairs); processor Registrite ja Infosüsteemide Keskus (RIK)[^s30][^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Infosüsteem POLIS (Information System POLIS)[^s32] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | elamislubade ja töölubade register (Register of Residence Permits and Work Permits)[^s33] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Maksukohustuslaste register (Register of Taxable Persons)[^s34] | Maksu- ja Tolliamet (Tax and Customs Board)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | Impulss (import customs clearance information system)[^s35] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something…. It is withheld until the fact or its source is corrected and checked again* | Sotsiaalkindlustusamet (Social Insurance Board)[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | Tervisekassa andmekogu (Health Insurance Fund Database)[^s37] | Tervisekassa (Health Insurance Fund)[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | E-äriregister (e-Business Register)[^s38] | Tartu Maakohtu registriosakond (registrar); RIK (develops and manages the portal)[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Tegelike kasusaajate andmekogu (Beneficial Owners Database)[^s39] | Rahandusministeerium (Ministry of Finance)[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Border and visa systems (tier 1) | Schengeni infosüsteemi riiklik register (national register of the Schengen Information System)[^s40] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | teenistus- ja tsiviilrelvade register (Register of Service and Civilian Weapons)[^s41] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | riigi finants-, personali- ja palgaarvestuse süsteem SAP (state financial, personnel and payroll accounting system SAP)[^s42] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | riigi finants-, personali- ja palgaarvestuse süsteem SAP (state financial, personnel and payroll accounting system SAP)[^s42] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | valimiste infosüsteem (election information system) and elektroonilise hääletamise süsteem (electronic voting system)[^s27] | Riigi valimisteenistus (State Electoral Office)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Emergency calls and public-safety radio (tier 1) | hädaabiteadete ning abi- ja infoteadete andmekogu (database of emergency notifications and assistance and information notifications)[^s43] | Häirekeskus (Emergency Response Centre)[^s44][^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | ohuteavituse süsteem (public warning system, EE-ALARM), operated by Häirekeskus[^s43] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | SCADA/EMS at Eleringi juhtimiskeskus (Elering control centre)[^s45] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | Eesti Hariduse Infosüsteem (EHIS; Estonian Education Information System)[^s46] | Haridus- ja Teadusministeerium (Ministry of Education and Research)[^s47] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Official gazette and legislation (tier 1) | Riigi Teataja (State Gazette)[^s48] | Justiits- ja Digiministeerium (publisher); Registrite ja Infosüsteemide Keskus (RIK) (hosting and technical operation)[^s48] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Estonia without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -205,10 +205,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -217,8 +217,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -227,6 +227,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -259,7 +261,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -301,7 +303,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|

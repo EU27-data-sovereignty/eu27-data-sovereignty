@@ -127,6 +127,4 @@ tests.test_properties tests.test_hypothesis`, from a throwaway clone.
 
 ## Still waiting on the owner
 
-- **The live `/ask` check** runs daily, but reports "not configured" until `ANTHROPIC_API_KEY` is set in
-  Vercel. Then set the repository variable `ASK_LIVE` to `true` so that a failure fails the run.
 - **The mobile reader** (`mobile/`, schema 1) carries 4 Dependabot alerts that only a port or a removal clears.

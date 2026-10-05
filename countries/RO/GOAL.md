@@ -54,47 +54,47 @@ The holdings Romania cannot let depend on infrastructure a foreign state can com
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | Facial image and fingerprints are collected when the electronic identity card (CEI) is issued[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | ROeID is Romania's Single Sign-On solution. It generates and manages digital identities for all Romanian citizens.[^s6] | ROeID was implemented by the Authority for the Digitalization of Romania (ADR)[^s6] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | The Electoral Register is a national IT system. It records identification data of Romanian citizens with voting rights and their polling station assignment.[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | Documents signed with the MAI-issued advanced signature certificate on the CEI have the same value as handwritten signatures[^s15] | The MAI IT directorate (DGCTI) manages the Central PKI Certification Authority and the certification authority of the MAI central apparatus[^s17] | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | Romania set up the National Alerts IT System (SINS). It holds alerts of national and Schengen interest issued by national authorities.[^s18] | The Ministry of Internal Affairs, through its specialised structure, is the central public authority that manages SINS. It is responsible for the system's functioning and the integrity of its alerts.[^s18] | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Tax (tier 1) | Registrul contribuabililor/plătitorilor (Register of taxpayers/payers)[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | SIUI is the health insurance IT platform, run by CNAS[^s20][^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | Council Decision 2017/1908 gave Romania access to the Visa Information System (VIS)[^s22] | Centrul Național SIS is a structure within, or subordinated to, the Ministry of Internal Affairs[^s23] | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Government payroll and personnel (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote is on the page, but only as navigation-menu text: 'Sisteme operate de BNR: ReGIS SaFIR TARGET-România'. That supports BNR operating the three systems. The printed text also calls them 'financial market infrastructures', and that…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | Operational control of the national power system is ensured by the National Energy Dispatch and five territorial dispatch centres[^s24] | Transelectrica is responsible for keeping the national power system running safely at all times[^s24] | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | WATMAN is the IT system for integrated water management, aimed at flood prevention[^s25] | The WATMAN project beneficiary is the National Administration Romanian Waters (total investment EUR 63 million)[^s25] | *Not stated in sources* | *Not yet measured* |
-| High | Education (tier 1) | The new integrated system will bring together data from existing platforms such as SIIIR, PMIPN and Edusal[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | The ANCPI Geoportal is one of the online platforms ANCPI manages[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Facial biometric (tier 0) | Facial image and fingerprints are collected when the electronic identity card (CEI) is issued[^s15] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Digital identity credentials (tier 0) | ROeID is Romania's Single Sign-On solution. It generates and manages digital identities for all Romanian citizens.[^s6] | ROeID was implemented by the Authority for the Digitalization of Romania (ADR)[^s6] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | The Electoral Register is a national IT system. It records identification data of Romanian citizens with voting rights and their polling station assignment.[^s16] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | Documents signed with the MAI-issued advanced signature certificate on the CEI have the same value as handwritten signatures[^s15] | The MAI IT directorate (DGCTI) manages the Central PKI Certification Authority and the certification authority of the MAI central apparatus[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Police information systems (tier 1) | Romania set up the National Alerts IT System (SINS). It holds alerts of national and Schengen interest issued by national authorities.[^s18] | The Ministry of Internal Affairs, through its specialised structure, is the central public authority that manages SINS. It is responsible for the system's functioning and the integrity of its alerts.[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Tax (tier 1) | Registrul contribuabililor/plătitorilor (Register of taxpayers/payers)[^s19] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Statutory health insurance (tier 1) | SIUI is the health insurance IT platform, run by CNAS[^s20][^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Border and visa systems (tier 1) | Council Decision 2017/1908 gave Romania access to the Visa Information System (VIS)[^s22] | Centrul Național SIS is a structure within, or subordinated to, the Ministry of Internal Affairs[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Government payroll and personnel (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Central bank systems (tier 1) | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote is on the page, but only as navigation-menu text: 'Sisteme operate de BNR: ReGIS SaFIR TARGET-România'. That supports BNR operating the three systems. The printed text also calls them 'financial market infrastructures', and that…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Electricity grid control (tier 1) | Operational control of the national power system is ensured by the National Energy Dispatch and five territorial dispatch centres[^s24] | Transelectrica is responsible for keeping the national power system running safely at all times[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | WATMAN is the IT system for integrated water management, aimed at flood prevention[^s25] | The WATMAN project beneficiary is the National Administration Romanian Waters (total investment EUR 63 million)[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | The new integrated system will bring together data from existing platforms such as SIIIR, PMIPN and Edusal[^s26] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | The ANCPI Geoportal is one of the online platforms ANCPI manages[^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -160,7 +160,7 @@ Tier 0 and 1 holdings for Romania without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -217,10 +217,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -229,8 +229,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -239,6 +239,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -271,7 +273,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -313,7 +315,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|

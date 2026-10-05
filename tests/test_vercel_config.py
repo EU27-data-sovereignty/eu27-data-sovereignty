@@ -52,3 +52,11 @@ class Headers(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Deploys(unittest.TestCase):
+    def test_vercel_never_builds_from_git_itself(self):
+        # The project is connected to the repo (2026-10-05), but production ships only from GitHub Actions,
+        # prebuilt, after ./test.sh and the fact-check gate (#81, #87). A Vercel-side build from a push would
+        # skip both, and cannot build the PDFs anyway (no typst).
+        self.assertEqual(CONFIG.get("git"), {"deploymentEnabled": False})

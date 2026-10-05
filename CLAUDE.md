@@ -75,6 +75,11 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   `research.py admit` moves claims into `national_data.csv`, `sovereignty_indicators.csv` and `sources/`.
 - **The ranking has no score.** `sovereignty.py` returns group ids and a range. Tests fail on a numeric
   score (#10, #77).
+- **The EU-27 overview copies spans** (#95). `document.infrastructure()` builds "Key infrastructure and
+  hosting" from the country documents' holdings tables, never from the registers. It sits in
+  `bundle["infrastructure"]`, outside `documents`, so it adds no facts to check or count. Its counts are of
+  printed facts only. Renderers: `Report.overview` (PDF), `countries/EU-INFRASTRUCTURE.md`,
+  `/infrastructure`, and `/ask`. Structured operators are planned (#96, `docs/hosting-operators.md`).
 - **`/ask`.** `api/_ask-core.ts` holds all the logic with a structural client, so the web Vitest suite
   tests it without the SDK. `api/ask.ts` wires the real SDK, and a compile-time assignment proves the
   request type-checks. The root `package.json` and `tsconfig.json` exist only for `api/`.
@@ -121,5 +126,10 @@ vercel curl <path> --deployment <preview-url> -- -sS            # previews need 
   (`tests/test_workflows.py`).
 - **SPA rewrite.** It must target `/index` under `cleanUrls` (`tests/test_vercel_config.py`).
 - **zsh.** `echo ====` breaks, because a leading `=` is command expansion; use `echo '---'`.
+- **Holdings-table columns are looked up by name.** The overview (`document.holdings_rows`) and
+  `/holdings/<class>` read the columns by their label, so renaming a column label changes both. `ask_corpus`
+  still reads `row[1]` and `row[2]`, so keep the holding and register in those positions.
+- **Withheld labels still feed counts.** `exposure_section` and `sovereignty.py` read the raw
+  `foreign_dependency`, including labels the report withholds (TODO.md). Don't build new counts that way.
 - **The mobile reader is stale** (schema-1 bundle). Don't copy the new bundle into it without the
   schema-2 port.

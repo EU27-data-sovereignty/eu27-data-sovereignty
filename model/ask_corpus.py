@@ -140,6 +140,9 @@ def build(bundle: dict) -> dict:
         {"title": "Fact check: how each printed fact was checked by a second model",
          "blocks": flatten(bundle["factcheck"]["eu"])},
         {"title": "Data-sovereignty ranking (placements by rule, with confidence)", "blocks": ranking},
+        # The same spans the country documents print, so its claims cite as they do there (#95).
+        {"title": "Key infrastructure and hosting across the EU-27",
+         "blocks": country_blocks(bundle["infrastructure"])},
     ]
     for iso in sorted(bundle["documents"], key=lambda i: names[i]):
         documents.append({"title": f"{names[iso]} ({iso})", "iso": iso,

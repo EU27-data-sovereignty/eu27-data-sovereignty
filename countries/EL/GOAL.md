@@ -54,47 +54,47 @@ The holdings Greece cannot let depend on infrastructure a foreign state can comp
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | «Μητρώο Πολιτών» (Citizens' Register): national information system combining the National Municipal Register (Δημοτολόγιο) and civil-status (registry) records[^s18][^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | Facial image and two flat fingerprints collected by the Passports and Security Documents Directorate (Δ.Δ.Ε.Α./Α.Ε.Α.) of Hellenic Police HQ and stored on the passport chip[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | Encrypted fingerprint images kept in the Central Database of the Passports Directorate, accessible only to authorised police staff[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Breeder document scans (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Art. 115 of Law 4483/2017 (both the PDF and lawspot) says the Citizens' Register comprises the civil-status acts (ληξιαρχικές πράξεις) of Greek citizens and foreigners with events in Greece, held in the Ministry of the Interior's Registry…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | GRNET keeps for 12 months a history of actions taken in the Gov.gr Wallet document-presentation process[^s21] | GRNET (Ε.Δ.Υ.Τ.Ε. Α.Ε.), company of the Greek State, is the designated processor[^s21] | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | Web services supplying public bodies with data on issued Greek passports, via the Interoperability Centre[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | Electoral rolls kept at the Ministry of the Interior, compiled from municipal registers (δημοτολόγια)[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | ΑΠΕΔ issues and manages certificates for trust services to all public-sector bodies[^s4][^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Criminal record consists of record slips, subject to use of the computerised system[^s24][^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | Gov.gr Wallet requires the personal TaxisNet credentials (or web-banking credentials) plus a verified mobile number[^s26] | Ministry of Digital Governance is the controller for the authentication services of gov.gr[^s4][^s23] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and says GRNET, a Greek State company, designs, implements and maintains the application on behalf of the Ministry; but the page says nothing about where the infrastructure runs (no hosting, server or data-centre…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
-| High | Residence and migration status (tier 1) | Migration Information Systems and the Register of Aliens (Μητρώο Αλλοδαπών), centrally operated by the Ministry of Migration and Asylum[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
-| High | Benefits & pensions (tier 1) | ATLAS: digital pension award system of e-EFKA, whose database holds insurance-period data digitised from former IKA archives[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
-| High | Statutory health insurance (tier 1) | Electronic prescription system installed and operated at ΗΔΥΚΑ (IDIKA) for the social-insurance funds[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | Cadastre Information System (ΣΠΕΚ), into which legacy mortgage-registry archives are being digitised[^s30] | Hellenic Cadastre (Ελληνικό Κτηματολόγιο), public-law entity supervised by the Minister of Environment and Energy[^s31][^s32] | National infrastructure[^s33] | *Not yet measured* |
-| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Beneficial ownership register (tier 1) | Central Register of Beneficial Owners, created at the General Secretariat for Information Systems and linked to each legal entity's tax number (ΑΦΜ)[^s34][^s35][^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Driving licences and police ID cards are drawn into the Gov.gr Wallet from the respective registers in which they are held[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Central information system of the Hellenic Police with its files and databases, protected by the Police IT Directorate[^s37][^s38] | *Not yet sourced* | National infrastructure[^s38] | *Not yet measured* |
-| High | Border and visa systems (tier 1) | πληροφοριακό σύστημα της εθνικής αρχής στο πλαίσιο της σύμβασης SCHENGEN (information system of the national authority under the Schengen Convention)[^s37] | Hellenic Police handles requests submitted through the national SIRENE bureau[^s38] | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | ηλεκτρονικό αρχείο πυροβόλων όπλων (electronic firearms file)[^s39] | Διεύθυνση Κρατικής Ασφάλειας του Αρχηγείου Ελληνικής Αστυνομίας (State Security Directorate, Hellenic Police Headquarters)[^s39] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | Integrated Information System for Fiscal Policy (ΟΠΣΔΠ), to evolve into a central Government ERP[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | Central Human Resources Management System for the Greek public administration, from appointment to retirement[^s41] | Payroll rules to be applied centrally by the Single Payment Authority (Ενιαία Αρχή Πληρωμής, ΕΑΠ)[^s42] | *Not stated in sources* | At least 680,000 paid staff in 3,500 wider-public-sector bodies[^s42] |
-| High | Election management and results (tier 1) | Courts of first instance compile detailed preference-vote results and send them in print or electronically to the Ministry of the Interior[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | EMS (Energy Management System)[^s43][^s44] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | MySchool[^s45] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Tax (tier 1) | Integrated Tax Information System of AADE: TAXIS - TAXISnet - Elenxis[^s46] | *Not yet sourced* | National infrastructure[^s47] | *Not yet measured* |
-| Standard | Customs declarations (tier 1) | ICISnet — integrated customs information system of AADE[^s48] | *Not yet sourced* | National infrastructure[^s49] | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | Government Gazette (Εφημερίδα της Κυβερνήσεως, ΦΕΚ): printed and electronic edition and citizens' access to published texts[^s50] | National Printing Office (Εθνικό Τυπογραφείο), a public service under the Presidency of the Government, publishes the Government Gazette (ΦΕΚ) in print and electronically[^s50] | *Not stated in sources* | *Not yet measured* |
-| Standard | Health records (tier 2) | National Electronic Health Record (ΕΗΦΥ): a central point for storing and managing medical data[^s51] | *Not yet sourced* | National infrastructure[^s52] | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | EODY core functions include epidemiological surveillance and provision of epidemiological data[^s53] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | National archives (digital) (tier 3) | Digitisation of all physical holdings of the General State Archives (ΓΑΚ) and migration of data from related information systems[^s54] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | «Μητρώο Πολιτών» (Citizens' Register): national information system combining the National Municipal Register (Δημοτολόγιο) and civil-status (registry) records[^s18][^s19] | *Not yet sourced* | The law allows hosting of the Citizens' Register to be assigned by joint ministerial decision to the technological infrastructure of another public-sector body (no source found naming the actual host)[^s19] | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Facial image and two flat fingerprints collected by the Passports and Security Documents Directorate (Δ.Δ.Ε.Α./Α.Ε.Α.) of Hellenic Police HQ and stored on the passport chip[^s20] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | Encrypted fingerprint images kept in the Central Database of the Passports Directorate, accessible only to authorised police staff[^s20] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Art. 115 of Law 4483/2017 (both the PDF and lawspot) says the Citizens' Register comprises the civil-status acts (ληξιαρχικές πράξεις) of Greek citizens and foreigners with events in Greece, held in the Ministry of the Interior's Registry…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | GRNET keeps for 12 months a history of actions taken in the Gov.gr Wallet document-presentation process[^s21] | GRNET (Ε.Δ.Υ.Τ.Ε. Α.Ε.), company of the Greek State, is the designated processor[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | Web services supplying public bodies with data on issued Greek passports, via the Interoperability Centre[^s20] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | Electoral rolls kept at the Ministry of the Interior, compiled from municipal registers (δημοτολόγια)[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | ΑΠΕΔ issues and manages certificates for trust services to all public-sector bodies[^s4][^s23] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Criminal record consists of record slips, subject to use of the computerised system[^s24][^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Digital identity credentials (tier 0) | Gov.gr Wallet requires the personal TaxisNet credentials (or web-banking credentials) plus a verified mobile number[^s26] | Ministry of Digital Governance is the controller for the authentication services of gov.gr[^s4][^s23] | GRNET (Ε.Δ.Υ.Τ.Ε. Α.Ε.), a Greek state-owned company, is the processor that designs, implements and maintains the Gov.gr Wallet application[^s21] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and says GRNET, a Greek State company, designs, implements and maintains the application on behalf of the Ministry; but the page says nothing about where the infrastructure runs (no hosting, server or data-centre…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Migration Information Systems and the Register of Aliens (Μητρώο Αλλοδαπών), centrally operated by the Ministry of Migration and Asylum[^s27] | *Not yet sourced* | Migration and asylum data centres (holding biometric data) are in ministry/agency premises; consolidation into a Tier-4 data centre at the Ministry of Migration's Kerani building was planned[^s6] | *Not stated in sources* | *Not yet sourced* |
+| High | Benefits & pensions (tier 1) | ATLAS: digital pension award system of e-EFKA, whose database holds insurance-period data digitised from former IKA archives[^s28] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet sourced* |
+| High | Statutory health insurance (tier 1) | Electronic prescription system installed and operated at ΗΔΥΚΑ (IDIKA) for the social-insurance funds[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | Cadastre Information System (ΣΠΕΚ), into which legacy mortgage-registry archives are being digitised[^s30] | Hellenic Cadastre (Ελληνικό Κτηματολόγιο), public-law entity supervised by the Minister of Environment and Energy[^s31][^s32] | Hellenic Cadastre operates its own Data Center and Disaster Recovery Center (upgrade planned)[^s33] | National infrastructure[^s33] | *Not yet measured* |
+| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Beneficial ownership register (tier 1) | Central Register of Beneficial Owners, created at the General Secretariat for Information Systems and linked to each legal entity's tax number (ΑΦΜ)[^s34][^s35][^s36] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Driving licences and police ID cards are drawn into the Gov.gr Wallet from the respective registers in which they are held[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Central information system of the Hellenic Police with its files and databases, protected by the Police IT Directorate[^s37][^s38] | *Not yet sourced* | The Hellenic Police IT Directorate designs the computerised information systems and creates and supports their technical infrastructure[^s38] | National infrastructure[^s38] | *Not yet measured* |
+| High | Border and visa systems (tier 1) | πληροφοριακό σύστημα της εθνικής αρχής στο πλαίσιο της σύμβασης SCHENGEN (information system of the national authority under the Schengen Convention)[^s37] | Hellenic Police handles requests submitted through the national SIRENE bureau[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | ηλεκτρονικό αρχείο πυροβόλων όπλων (electronic firearms file)[^s39] | Διεύθυνση Κρατικής Ασφάλειας του Αρχηγείου Ελληνικής Αστυνομίας (State Security Directorate, Hellenic Police Headquarters)[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | Integrated Information System for Fiscal Policy (ΟΠΣΔΠ), to evolve into a central Government ERP[^s40] | *Not yet sourced* | G-Cloud project plans infrastructure for systems hosted in the data centre and disaster site of the Ministry of Finance and AADE[^s9] | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | Central Human Resources Management System for the Greek public administration, from appointment to retirement[^s41] | Payroll rules to be applied centrally by the Single Payment Authority (Ενιαία Αρχή Πληρωμής, ΕΑΠ)[^s42] | *Not yet sourced* | *Not stated in sources* | At least 680,000 paid staff in 3,500 wider-public-sector bodies[^s42] |
+| High | Election management and results (tier 1) | Courts of first instance compile detailed preference-vote results and send them in print or electronically to the Ministry of the Interior[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Crisis management and civil protection (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | EMS (Energy Management System)[^s43][^s44] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | MySchool[^s45] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Tax (tier 1) | Integrated Tax Information System of AADE: TAXIS - TAXISnet - Elenxis[^s46] | *Not yet sourced* | *Not yet sourced* | National infrastructure[^s47] | *Not yet measured* |
+| Standard | Customs declarations (tier 1) | ICISnet — integrated customs information system of AADE[^s48] | *Not yet sourced* | ICISnet is hosted on ΓΓΠΣΔΔ infrastructure[^s49] | National infrastructure[^s49] | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Government Gazette (Εφημερίδα της Κυβερνήσεως, ΦΕΚ): printed and electronic edition and citizens' access to published texts[^s50] | National Printing Office (Εθνικό Τυπογραφείο), a public service under the Presidency of the Government, publishes the Government Gazette (ΦΕΚ) in print and electronically[^s50] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Health records (tier 2) | National Electronic Health Record (ΕΗΦΥ): a central point for storing and managing medical data[^s51] | *Not yet sourced* | *Not yet sourced* | National infrastructure[^s52] | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | EODY core functions include epidemiological surveillance and provision of epidemiological data[^s53] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | Digitisation of all physical holdings of the General State Archives (ΓΑΚ) and migration of data from related information systems[^s54] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -146,7 +146,7 @@ Tier 0 and 1 holdings for Greece without a verified source yet. Corrections and 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -203,10 +203,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -215,8 +215,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -225,6 +225,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -257,7 +259,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -299,7 +301,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -331,7 +333,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Greece
 
-53 of 53 printed facts about Greece pass.
+53 of 60 printed facts about Greece pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -347,6 +349,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | param:EL:renewables_pct | param:EL:renewables_pct | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:EL:land_km2 | param:EL:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EL:civil_registry:hosting | Civil registry core: hosting | unrecorded | none | never checked |  |
 | record:EL:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -357,21 +360,26 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:EL:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EL:digital_identity_credentials:hosting | Digital identity credentials: hosting | unrecorded | none | never checked |  |
 | record:EL:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EL:residence_permits:hosting | Residence and migration status: hosting | unrecorded | none | never checked |  |
 | record:EL:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:health_insurance:register | Statutory health insurance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:land_property:register | Land & property registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:land_property:operator | Land & property registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EL:land_property:hosting | Land & property registry: hosting | unrecorded | none | never checked |  |
 | record:EL:land_property:foreign_dependency | Land & property registry: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EL:police_records:hosting | Police information systems: hosting | unrecorded | none | never checked |  |
 | record:EL:police_records:foreign_dependency | Police information systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:border_control:operator | Border and visa systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:firearms_register:operator | Firearms register: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:public_finance:register | Treasury and state accounts: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EL:public_finance:hosting | Treasury and state accounts: hosting | unrecorded | none | never checked |  |
 | record:EL:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:government_payroll:operator | Government payroll and personnel: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:government_payroll:count | Government payroll and personnel: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -381,6 +389,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:EL:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:tax:foreign_dependency | Tax: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:customs:register | Customs declarations: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EL:customs:hosting | Customs declarations: hosting | unrecorded | none | never checked |  |
 | record:EL:customs:foreign_dependency | Customs declarations: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EL:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -453,6 +462,6 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s53]: Lawspot (reproduction of the Government Gazette text) — Νόμος 4633/2019, 2019-10-16. Νόμος 4633/2019. <https://www.lawspot.gr/nomothesia/nomos-4633-2019/> ([archived](https://web.archive.org/web/20260121092729/https://www.lawspot.gr/nomothesia/nomos-4633-2019/))
 [^s54]: Υπουργείο Ψηφιακής Διακυβέρνησης (Βίβλος Ψηφιακού Μετασχηματισμού 2020-2025) — Ψηφιοποίηση των Γενικών Αρχείων του Κράτους, 2023-12-01. Ψηφιοποίηση των Γενικών Αρχείων του Κράτους. <https://digitalstrategy.gov.gr/project/psifiopoiisi_ton_genikon_archeion_toy_kratoys> ([archived](https://web.archive.org/web/20260413121410/https://digitalstrategy.gov.gr/project/psifiopoiisi_ton_genikon_archeion_toy_kratoys))
 
-**Evidence grades:** 3 Strong, 50 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 4 Strong, 56 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

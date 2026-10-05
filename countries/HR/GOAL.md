@@ -53,47 +53,47 @@ The holdings Croatia cannot let depend on infrastructure a foreign state can com
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | State civil registers (Državne matice): registers of births, marriages and deaths[^s14][^s15] | The state administration body for general administration sets up and runs the single information system for the civil registers[^s15] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | Photograph stored in the ID-card register in the Ministry of the Interior information system (reused for driving licences)[^s16] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page, but the law lists four competent bodies: the ministries for internal affairs, foreign affairs, justice 'te ministarstvo nadležno za poslove obrane u dijelu koji se odnosi na obavljanje vojnopolicijskih poslova'.…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | ABIS (Automated Biometric Identification System)[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Breeder document scans (tier 0) | Files underlying civil-register entries are of permanent value[^s18] | Registers whose last entry is more than 100 years old are kept by the Croatian State Archives[^s15] | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | NIAS records credential-usage history, visible to the user for the last 60 days[^s7] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | ID-card register kept in the Ministry of the Interior information system, recording invalid (lost) cards[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | Nacionalni identifikacijski i autentifikacijski sustav (NIAS) (National Identification and Authentication System)[^s7] | tijelo državne uprave nadležno za digitalnu transformaciju (state administration body responsible for digital transformation)[^s7] | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | Registar birača (Register of voters)[^s20] | Središnje tijelo državne uprave nadležno za poslove opće uprave (central state administration body for general administration)[^s20] | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | ZIS stores and maintains all land-register and cadastre data[^s21][^s22] | ZIS is jointly coordinated by the Ministry of Justice and the State Geodetic Administration[^s23] | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | The Ministry information system is the Information System of the Ministry of the Interior[^s24][^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | zbirke i registri osobnih podataka sigurnosno-obavještajnih agencija (personal-data collections and registers of the security-intelligence agencies)[^s26] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | AKD HRIDCA issues identification and qualified signature certificates for the eOI card[^s27] | Fina is a qualified trust service provider on the national trusted list[^s28] | National infrastructure[^s27] | *Not yet measured* |
-| High | Residence and migration status (tier 1) | Collection covers third-country nationals on short-term, temporary, long-term and permanent stay[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | matična evidencija (master record of insured persons, pension beneficiaries and contribution payers)[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | Main books are linked into a single database for Croatia[^s31] | The register is kept by the commercial courts and preserved permanently[^s32][^s31] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Central electronic database of beneficial owners of legal entities and trusts[^s33] | Operationally run by Fina on behalf of the Anti-Money Laundering Office, Ministry of Finance[^s33] | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Register of registered vehicles kept on the Ministry of the Interior information system[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | National information system for state border management, part of the MUP information system[^s35][^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | evidencije na središnjem informacijskom sustavu ministarstva nadležnog za unutarnje poslove (records on the central information system of the Ministry of the Interior)[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | All budget-user transactions go through the State Treasury system and the single treasury account held at HNB[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | The COP payroll information system is owned by the Republic of Croatia[^s39] | Fina processes the data on behalf of the civil-service body[^s39] | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | Payments in Croatia run through TARGET-HR, EuroNCS and EuroNCSInst[^s40] | *Not yet sourced* | EU provider[^s41] | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | System 112 consists of interconnected 112 centres and the Operational Centre of Civil Protection[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | National Operational Centre of Civil Protection monitors events through the 112 centres[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | Central register of higher-education certificates, diplomas and supplements (Digital Register of Diplomas)[^s43] | e-Matica is a centralised MZOM system; CARNET is the support centre[^s44] | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | CEZIH is the central store of health data for primary, secondary and tertiary care[^s45][^s46] | HZZO manages CEZIH and maintains its central part[^s45][^s46] | *Not stated in sources* | *Not yet measured* |
-| Standard | Tax (tier 1) | Information system of the Tax Administration[^s47] | *Not yet sourced* | National infrastructure[^s48] | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | NAJS stores health data and public-health records and registers[^s45][^s46] | NAJS is run by HZJZ[^s45][^s46] | *Not stated in sources* | *Not yet measured* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | Building register established, kept and maintained by DGU[^s49][^s50] | Državna geodetska uprava (State Geodetic Administration)[^s49] | *Not stated in sources* | *Not yet measured* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | State civil registers (Državne matice): registers of births, marriages and deaths[^s14][^s15] | The state administration body for general administration sets up and runs the single information system for the civil registers[^s15] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Photograph stored in the ID-card register in the Ministry of the Interior information system (reused for driving licences)[^s16] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page, but the law lists four competent bodies: the ministries for internal affairs, foreign affairs, justice 'te ministarstvo nadležno za poslove obrane u dijelu koji se odnosi na obavljanje vojnopolicijskih poslova'.…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | ABIS (Automated Biometric Identification System)[^s17] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | Files underlying civil-register entries are of permanent value[^s18] | Registers whose last entry is more than 100 years old are kept by the Croatian State Archives[^s15] | Civil-register files are tracked in the electronic office-management information system[^s18] | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | NIAS records credential-usage history, visible to the user for the last 60 days[^s7] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | ID-card register kept in the Ministry of the Interior information system, recording invalid (lost) cards[^s19] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | Nacionalni identifikacijski i autentifikacijski sustav (NIAS) (National Identification and Authentication System)[^s7] | tijelo državne uprave nadležno za digitalnu transformaciju (state administration body responsible for digital transformation)[^s7] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | Registar birača (Register of voters)[^s20] | Središnje tijelo državne uprave nadležno za poslove opće uprave (central state administration body for general administration)[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | ZIS stores and maintains all land-register and cadastre data[^s21][^s22] | ZIS is jointly coordinated by the Ministry of Justice and the State Geodetic Administration[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Police information systems (tier 1) | The Ministry information system is the Information System of the Ministry of the Interior[^s24][^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | zbirke i registri osobnih podataka sigurnosno-obavještajnih agencija (personal-data collections and registers of the security-intelligence agencies)[^s26] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | AKD HRIDCA issues identification and qualified signature certificates for the eOI card[^s27] | Fina is a qualified trust service provider on the national trusted list[^s28] | Subordinate CA HRIDCA, operated within AKD's own PKI, issues eOI certificates to natural persons[^s27] | National infrastructure[^s27] | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Collection covers third-country nationals on short-term, temporary, long-term and permanent stay[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Benefits & pensions (tier 1) | matična evidencija (master record of insured persons, pension beneficiaries and contribution payers)[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Business registry (tier 1) | Main books are linked into a single database for Croatia[^s31] | The register is kept by the commercial courts and preserved permanently[^s32][^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Central electronic database of beneficial owners of legal entities and trusts[^s33] | Operationally run by Fina on behalf of the Anti-Money Laundering Office, Ministry of Finance[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Register of registered vehicles kept on the Ministry of the Interior information system[^s34] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | National information system for state border management, part of the MUP information system[^s35][^s36] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | evidencije na središnjem informacijskom sustavu ministarstva nadležnog za unutarnje poslove (records on the central information system of the Ministry of the Interior)[^s37] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | All budget-user transactions go through the State Treasury system and the single treasury account held at HNB[^s38] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | The COP payroll information system is owned by the Republic of Croatia[^s39] | Fina processes the data on behalf of the civil-service body[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Central bank systems (tier 1) | Payments in Croatia run through TARGET-HR, EuroNCS and EuroNCSInst[^s40] | *Not yet sourced* | *Not yet sourced* | EU provider[^s41] | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | System 112 consists of interconnected 112 centres and the Operational Centre of Civil Protection[^s42] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | National Operational Centre of Civil Protection monitors events through the 112 centres[^s42] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | Central register of higher-education certificates, diplomas and supplements (Digital Register of Diplomas)[^s43] | e-Matica is a centralised MZOM system; CARNET is the support centre[^s44] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | CEZIH is the central store of health data for primary, secondary and tertiary care[^s45][^s46] | HZZO manages CEZIH and maintains its central part[^s45][^s46] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Tax (tier 1) | Information system of the Tax Administration[^s47] | *Not yet sourced* | State-owned APIS IT develops and maintains the Tax and Customs Administration information systems[^s48] | National infrastructure[^s48] | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Public health surveillance (tier 2) | NAJS stores health data and public-health records and registers[^s45][^s46] | NAJS is run by HZJZ[^s45][^s46] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | Building register established, kept and maintained by DGU[^s49][^s50] | Državna geodetska uprava (State Geodetic Administration)[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -147,7 +147,7 @@ Tier 0 and 1 holdings for Croatia without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -204,10 +204,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -216,8 +216,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -226,6 +226,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -258,7 +260,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -300,7 +302,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -332,7 +334,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Croatia
 
-57 of 57 printed facts about Croatia pass.
+57 of 60 printed facts about Croatia pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -354,6 +356,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:HR:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:HR:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:HR:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:breeder_documents:hosting | Breeder document scans: hosting | unrecorded | none | never checked |  |
 | record:HR:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:HR:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:HR:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -366,6 +369,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:HR:intelligence:register | Intelligence services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:HR:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:HR:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:trust_services_pki:hosting | State PKI and qualified trust services: hosting | unrecorded | none | never checked |  |
 | record:HR:trust_services_pki:foreign_dependency | State PKI and qualified trust services: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:HR:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:HR:benefits_pensions:register | Benefits & pensions: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -388,6 +392,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:HR:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:HR:health_records:operator | Health records: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:HR:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:HR:tax:hosting | Tax: hosting | unrecorded | none | never checked |  |
 | record:HR:tax:foreign_dependency | Tax: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:HR:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:HR:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -453,6 +458,6 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s49]: Narodne novine (Official Gazette of the Republic of Croatia) — Zakon o državnoj izmjeri i katastru nekretnina (NN 112/2018), 2018-12. Zakon o državnoj izmjeri i katastru nekretnina (NN 112/2018). <https://narodne-novine.nn.hr/clanci/sluzbeni/2018_12_112_2167.html>
 [^s50]: Zakon.hr — Zakon o državnoj izmjeri i katastru nekretnina. Zakon o državnoj izmjeri i katastru nekretnina. <https://www.zakon.hr/z/156/zakon-o-drzavnoj-izmjeri-i-katastru-nekretnina> ([archived](https://web.archive.org/web/20260222053536/https://www.zakon.hr/z/156/zakon-o-drzavnoj-izmjeri-i-katastru-nekretnina))
 
-**Evidence grades:** 4 Strong, 53 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 4 Strong, 56 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

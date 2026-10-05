@@ -9,17 +9,17 @@
 
 | | Count |
 |---|---:|
-| Printed facts | 1340 |
-| Strong | 105 |
-| Standard | 1235 |
-| Gaps (values withheld) | 3340 |
+| Printed facts | 1400 |
+| Strong | 109 |
+| Standard | 1291 |
+| Gaps (values withheld) | 4324 |
 | Disputed (withheld: source changed, or sources disagree) | 72 |
 
 ```mermaid
 pie showData
   title "Printed facts by evidence grade"
-  "Strong" : 105
-  "Standard" : 1235
+  "Strong" : 109
+  "Standard" : 1291
 ```
 
 **How grades are set.** Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict.
@@ -36,25 +36,25 @@ How good is the best source behind each printed fact? Tiers are set per host in 
 ```mermaid
 pie showData
   title "Printed facts by best source tier"
-  "T1" : 619
-  "T2" : 607
-  "T3" : 7
-  "T4" : 107
+  "T1" : 629
+  "T2" : 638
+  "T3" : 10
+  "T4" : 123
 ```
 
 | Tier | Kind of source | Facts |
 |---|---|---:|
 | T1 | eurostat | 162 |
-| T1 | official law portal | 444 |
-| T1 | statistics office | 13 |
-| T2 | audit office | 10 |
-| T2 | government or authority | 262 |
-| T2 | public body | 335 |
-| T3 | chamber of commerce | 1 |
-| T3 | company | 4 |
-| T3 | private foundation | 2 |
-| T4 | press | 5 |
-| T4 | unofficial law mirror | 102 |
+| T1 | official law portal | 453 |
+| T1 | statistics office | 14 |
+| T2 | audit office | 13 |
+| T2 | government or authority | 278 |
+| T2 | public body | 347 |
+| T3 | chamber of commerce | 2 |
+| T3 | company | 5 |
+| T3 | private foundation | 3 |
+| T4 | press | 6 |
+| T4 | unofficial law mirror | 117 |
 
 Facts whose best source is an unofficial copy of a statute are the first target of the vetting run: the same text on the official law portal would make them T1.
 
@@ -62,8 +62,8 @@ Facts whose best source is an unofficial copy of a statute are the first target 
 xychart-beta
   title "Facts resting on an unofficial law mirror, per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
-  y-axis "facts" 0 --> 33
-  bar [0, 0, 0, 22, 10, 0, 0, 0, 7, 0, 0, 0, 5, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33]
+  y-axis "facts" 0 --> 37
+  bar [0, 0, 0, 23, 10, 0, 0, 0, 9, 0, 0, 0, 5, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33]
 ```
 
 ## Why most facts are Standard
@@ -72,12 +72,12 @@ Each Strong condition a Standard fact misses. One fact can miss several, so the 
 
 | Condition not met | Facts |
 |---|---:|
-| Best source below T2 (e.g. an unofficial law mirror) | 130 |
-| Machine summary of a non-English quote, no figure to match | 816 |
-| No archived copy of exactly this URL | 595 |
+| Best source below T2 (e.g. an unofficial law mirror) | 149 |
+| Machine summary of a non-English quote, no figure to match | 869 |
+| No archived copy of exactly this URL | 615 |
 | Categorical: review agreed but was not blind | 160 |
-| A name in the value is not in the quote | 156 |
-| Secondary source or statement of absence | 27 |
+| A name in the value is not in the quote | 167 |
+| Secondary source or statement of absence | 30 |
 | Quote matched loosely (punctuation) | 20 |
 
 ## By state
@@ -86,47 +86,47 @@ Each Strong condition a Standard fact misses. One fact can miss several, so the 
 xychart-beta
   title "Printed facts per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
-  y-axis "facts" 0 --> 72
-  bar [62, 42, 43, 60, 64, 52, 59, 53, 53, 57, 33, 72, 57, 65, 60, 57, 21, 20, 49, 32, 48, 49, 49, 28, 43, 61, 51]
+  y-axis "facts" 0 --> 78
+  bar [66, 43, 46, 64, 64, 55, 61, 53, 60, 57, 33, 73, 60, 78, 63, 60, 21, 21, 49, 32, 51, 49, 49, 28, 45, 68, 51]
 ```
 
 ```mermaid
 xychart-beta
   title "Strong facts per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
-  y-axis "facts" 0 --> 28
-  bar [4, 6, 4, 4, 4, 1, 5, 3, 3, 0, 2, 6, 4, 2, 28, 1, 0, 0, 2, 13, 1, 1, 3, 1, 1, 5, 1]
+  y-axis "facts" 0 --> 30
+  bar [4, 6, 4, 4, 4, 1, 6, 3, 4, 0, 2, 6, 4, 2, 30, 1, 0, 0, 2, 13, 1, 1, 3, 1, 1, 5, 1]
 ```
 
 | State | Printed | Strong | Standard | Gaps |
 |---|---:|---:|---:|---:|
-| Austria (AT) | 62 | 4 | 58 | 112 |
-| Belgium (BE) | 42 | 6 | 36 | 132 |
-| Bulgaria (BG) | 43 | 4 | 39 | 134 |
-| Cyprus (CY) | 60 | 4 | 56 | 114 |
-| Czechia (CZ) | 64 | 4 | 60 | 110 |
-| Germany (DE) | 52 | 1 | 51 | 122 |
-| Denmark (DK) | 59 | 5 | 54 | 118 |
-| Estonia (EE) | 53 | 3 | 50 | 124 |
-| Greece (EL) | 53 | 3 | 50 | 124 |
-| Spain (ES) | 57 | 0 | 57 | 120 |
-| Finland (FI) | 33 | 2 | 31 | 144 |
-| France (FR) | 72 | 6 | 66 | 105 |
-| Croatia (HR) | 57 | 4 | 53 | 120 |
-| Hungary (HU) | 65 | 2 | 63 | 112 |
-| Ireland (IE) | 60 | 28 | 32 | 117 |
-| Italy (IT) | 57 | 1 | 56 | 120 |
-| Lithuania (LT) | 21 | 0 | 21 | 156 |
-| Luxembourg (LU) | 20 | 0 | 20 | 157 |
-| Latvia (LV) | 49 | 2 | 47 | 128 |
-| Malta (MT) | 32 | 13 | 19 | 145 |
-| Netherlands (NL) | 48 | 1 | 47 | 126 |
-| Poland (PL) | 49 | 1 | 48 | 125 |
-| Portugal (PT) | 49 | 3 | 46 | 128 |
-| Romania (RO) | 28 | 1 | 27 | 149 |
-| Sweden (SE) | 43 | 1 | 42 | 131 |
-| Slovenia (SI) | 61 | 5 | 56 | 113 |
-| Slovakia (SK) | 51 | 1 | 50 | 126 |
+| Austria (AT) | 66 | 4 | 62 | 146 |
+| Belgium (BE) | 43 | 6 | 37 | 169 |
+| Bulgaria (BG) | 46 | 4 | 42 | 170 |
+| Cyprus (CY) | 64 | 4 | 60 | 148 |
+| Czechia (CZ) | 64 | 4 | 60 | 148 |
+| Germany (DE) | 55 | 1 | 54 | 157 |
+| Denmark (DK) | 61 | 6 | 55 | 155 |
+| Estonia (EE) | 53 | 3 | 50 | 163 |
+| Greece (EL) | 60 | 4 | 56 | 156 |
+| Spain (ES) | 57 | 0 | 57 | 159 |
+| Finland (FI) | 33 | 2 | 31 | 183 |
+| France (FR) | 73 | 6 | 67 | 143 |
+| Croatia (HR) | 60 | 4 | 56 | 156 |
+| Hungary (HU) | 78 | 2 | 76 | 138 |
+| Ireland (IE) | 63 | 30 | 33 | 153 |
+| Italy (IT) | 60 | 1 | 59 | 156 |
+| Lithuania (LT) | 21 | 0 | 21 | 195 |
+| Luxembourg (LU) | 21 | 0 | 21 | 195 |
+| Latvia (LV) | 49 | 2 | 47 | 167 |
+| Malta (MT) | 32 | 13 | 19 | 184 |
+| Netherlands (NL) | 51 | 1 | 50 | 161 |
+| Poland (PL) | 49 | 1 | 48 | 163 |
+| Portugal (PT) | 49 | 3 | 46 | 167 |
+| Romania (RO) | 28 | 1 | 27 | 188 |
+| Sweden (SE) | 45 | 1 | 44 | 167 |
+| Slovenia (SI) | 68 | 5 | 63 | 144 |
+| Slovakia (SK) | 51 | 1 | 50 | 165 |
 
 ## By kind of fact
 
@@ -136,6 +136,7 @@ xychart-beta
 | Operator | 352 | 31 | 321 |
 | Eurostat fundamental or posture | 162 | 0 | 162 |
 | Sovereignty indicator | 126 | 6 | 120 |
+| Hosting | 60 | 4 | 56 |
 | Record count | 41 | 20 | 21 |
 | Infrastructure dependency | 39 | 2 | 37 |
 
@@ -222,33 +223,33 @@ Where a citizen helps most: values still withheld, items the agents did not reac
 
 | State | Languages | Gaps | Not reached by agents | Sources a machine could not fetch | Reviewers |
 |---|---|---:|---:|---:|---:|
-| Luxembourg (LU) | de, fr, lb | 157 | 5 | 65 | 0 |
-| Lithuania (LT) | lt | 156 | 0 | 0 | 0 |
-| Romania (RO) | ro | 149 | 10 | 33 | 0 |
-| Malta (MT) | en, mt | 145 | 0 | 0 | 0 |
-| Finland (FI) | fi, sv | 144 | 10 | 0 | 0 |
-| Bulgaria (BG) | bg | 134 | 21 | 19 | 0 |
-| Belgium (BE) | de, fr, nl | 132 | 6 | 20 | 0 |
-| Sweden (SE) | sv | 131 | 0 | 0 | 0 |
-| Latvia (LV) | lv | 128 | 0 | 29 | 0 |
-| Portugal (PT) | pt | 128 | 0 | 2 | 0 |
-| Netherlands (NL) | nl | 126 | 0 | 10 | 0 |
-| Slovakia (SK) | sk | 126 | 0 | 6 | 0 |
-| Poland (PL) | pl | 125 | 0 | 0 | 0 |
-| Estonia (EE) | et | 124 | 4 | 0 | 0 |
-| Greece (EL) | el | 124 | 26 | 7 | 0 |
-| Germany (DE) | de | 122 | 7 | 1 | 0 |
-| Spain (ES) | es | 120 | 10 | 0 | 0 |
-| Croatia (HR) | hr | 120 | 28 | 0 | 0 |
-| Italy (IT) | it | 120 | 6 | 8 | 0 |
-| Denmark (DK) | da | 118 | 0 | 0 | 0 |
-| Ireland (IE) | en, ga | 117 | 28 | 29 | 0 |
-| Cyprus (CY) | el, tr | 114 | 0 | 7 | 0 |
-| Slovenia (SI) | sl | 113 | 0 | 1 | 0 |
-| Austria (AT) | de | 112 | 0 | 0 | 0 |
-| Hungary (HU) | hu | 112 | 0 | 4 | 0 |
-| Czechia (CZ) | cs | 110 | 0 | 6 | 0 |
-| France (FR) | fr | 105 | 40 | 4 | 0 |
+| Lithuania (LT) | lt | 195 | 0 | 0 | 0 |
+| Luxembourg (LU) | de, fr, lb | 195 | 5 | 65 | 0 |
+| Romania (RO) | ro | 188 | 10 | 33 | 0 |
+| Malta (MT) | en, mt | 184 | 0 | 0 | 0 |
+| Finland (FI) | fi, sv | 183 | 10 | 0 | 0 |
+| Bulgaria (BG) | bg | 170 | 21 | 19 | 0 |
+| Belgium (BE) | de, fr, nl | 169 | 6 | 20 | 0 |
+| Latvia (LV) | lv | 167 | 0 | 29 | 0 |
+| Portugal (PT) | pt | 167 | 0 | 2 | 0 |
+| Sweden (SE) | sv | 167 | 0 | 0 | 0 |
+| Slovakia (SK) | sk | 165 | 0 | 6 | 0 |
+| Estonia (EE) | et | 163 | 4 | 0 | 0 |
+| Poland (PL) | pl | 163 | 0 | 0 | 0 |
+| Netherlands (NL) | nl | 161 | 0 | 10 | 0 |
+| Spain (ES) | es | 159 | 10 | 0 | 0 |
+| Germany (DE) | de | 157 | 7 | 1 | 0 |
+| Greece (EL) | el | 156 | 26 | 7 | 0 |
+| Croatia (HR) | hr | 156 | 28 | 0 | 0 |
+| Italy (IT) | it | 156 | 6 | 8 | 0 |
+| Denmark (DK) | da | 155 | 0 | 0 | 0 |
+| Ireland (IE) | en, ga | 153 | 28 | 29 | 0 |
+| Cyprus (CY) | el, tr | 148 | 0 | 7 | 0 |
+| Czechia (CZ) | cs | 148 | 0 | 6 | 0 |
+| Austria (AT) | de | 146 | 0 | 0 | 0 |
+| Slovenia (SI) | sl | 144 | 0 | 1 | 0 |
+| France (FR) | fr | 143 | 40 | 4 | 0 |
+| Hungary (HU) | hu | 138 | 0 | 4 | 0 |
 
 ## Agent runs
 

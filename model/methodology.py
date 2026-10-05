@@ -134,6 +134,10 @@ def build(documents: dict, claims: dict, sources: dict) -> dict:
             _p(f"Priority of a holding. {document.PRIORITY_RULE}"),
             _p("Infrastructure exposure counts, for each state, the verified holdings whose cited source "
                "says where the infrastructure runs. Silence counts as not stated, never as national."),
+            _p("Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a "
+               "checked source states. Each cell is a copy of the one the state's own report prints, so it "
+               "has the same source and the same fact check, and a withheld value stays withheld. Its "
+               "counts per state are of printed facts only."),
             _p(f"Data-sovereignty placement. {sv.UNKNOWN_RULE} Each state is placed by the first rule it "
                "meets, in this order:"),
             _list([f"{sv.LABELS[g]}: {t}." for g, t in sv.RULE]),

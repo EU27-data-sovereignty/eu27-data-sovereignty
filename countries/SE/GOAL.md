@@ -54,47 +54,47 @@ The holdings Sweden cannot let depend on infrastructure a foreign state can comp
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Folkbokföringsverksamheten / Skatteverket's population registration data (the national population register)[^s12] | Skatteverket (Swedish Tax Agency) is responsible for population registration[^s13][^s14] | *Not stated in sources* | 10 610 500 persons folkbokförda (registered) at mid-year 2026[^s15] |
-| Critical | Facial biometric (tier 0) | Passregistret (passport register), which holds holders' photographs[^s16][^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | *Disputed: sources disagree. Sveriges riksdag (Svensk författningssamling) — Passlag (1978:302), 1978 gives the value this report printed; Regeringskansliet (SFS) — Lag (2018:1693) om polisens behandling av…, 2026 gives “Biometriregister (biometric registers) of suspects, convicted persons and traces, kept by Polismyndigheten”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | — | — | — |
-| Critical | Breeder document scans (tier 0) | Folkbokföring (population registration of births, marriages and deaths), Skatteverket[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | Passregistret: central passport register kept by the Police Authority[^s16][^s17] | *Not yet sourced* | *Not stated in sources* | Skatteverket issues about 170,000 identity cards per year[^s19] |
-| High | Digital identity credentials (tier 0) | Registret över ärenden om statlig e-legitimation (register of state e-ID cases)[^s20] | Polismyndigheten (Swedish Police Authority)[^s20] | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Land & property registry (tier 1) | Fastighetsregistret (real property register)[^s21][^s22] | The state cadastral authority (Lantmäteriet) is controller[^s21][^s22] | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Belastningsregistret (criminal records register), Police Authority[^s23][^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Misstankeregistret (register of suspects), Polismyndigheten[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electoral roll entry (tier 0) | Röstlängd (electoral roll), drawn up by the central election authority per voting district from folkbokföring data[^s26] | *Not yet sourced* | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page, but it concerns Valmyndighetens valadministrativa it-stöd (ballot ordering, voting cards, result reporting); the page never says the röstlängd is kept or produced in that system, mentioning the roll only as a…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
-| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | Aktiebolagsregistret (companies register); Bolagsverket controller[^s27][^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Registret över verkliga huvudmän, kept by Bolagsverket[^s29][^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Vägtrafikregistret (road traffic register) kept by Transportstyrelsen[^s31][^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | Swedish national part of the Schengen Information System, kept by the Police Authority[^s33] | Police Authority and Migrationsverket are each controllers for their processing in N.SIS[^s33] | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | Hermes, the state information system for budgeting and follow-up, developed and managed by ESV[^s34] | ESV is responsible for state accounts[^s34] | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | Primula (Statens servicecenter)[^s5] | Statens servicecenter (SSC), payroll services to 143 agencies in 2023[^s5] | *Not stated in sources* | about 1,5 million payslips (lönespecifikationer) per year[^s5] |
-| High | Central bank systems (tier 1) | RIX-RTGS (Riksbank's large-value payment settlement system)[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | Rakel (national public-safety radio communication system)[^s36] | Myndigheten för civilt försvar (Swedish Civil Defence Agency)[^s36] | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | Systemet för varning och information till allmänheten (public warning and information system)[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | Each higher-education institution keeps a student register (studieregister)[^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | Svensk författningssamling (SFS, Swedish Code of Statutes), published electronically on a dedicated website[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Election management and results (tier 1) | Valmyndighetens it-stöd used to compile and publish results[^s40] | *Not yet sourced* | National infrastructure[^s40] | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | Vaccinationsregistret, Folkhälsomyndigheten[^s41][^s42] | Folkhälsomyndigheten coordinates communicable disease control nationally[^s43][^s44] | *Not stated in sources* | *Not yet measured* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | Folkbokföringsverksamheten / Skatteverket's population registration data (the national population register)[^s12] | Skatteverket (Swedish Tax Agency) is responsible for population registration[^s13][^s14] | *Not yet sourced* | *Not stated in sources* | 10 610 500 persons folkbokförda (registered) at mid-year 2026[^s15] |
+| Critical | Facial biometric (tier 0) | Passregistret (passport register), which holds holders' photographs[^s16][^s17] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | *Disputed: sources disagree. Sveriges riksdag (Svensk författningssamling) — Passlag (1978:302), 1978 gives the value this report printed; Regeringskansliet (SFS) — Lag (2018:1693) om polisens behandling av…, 2026 gives “Biometriregister (biometric registers) of suspects, convicted persons and traces, kept by Polismyndigheten”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | — | — | — | — |
+| Critical | Breeder document scans (tier 0) | Folkbokföring (population registration of births, marriages and deaths), Skatteverket[^s18] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | Passregistret: central passport register kept by the Police Authority[^s16][^s17] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | Skatteverket issues about 170,000 identity cards per year[^s19] |
+| High | Digital identity credentials (tier 0) | Registret över ärenden om statlig e-legitimation (register of state e-ID cases)[^s20] | Polismyndigheten (Swedish Police Authority)[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Land & property registry (tier 1) | Fastighetsregistret (real property register)[^s21][^s22] | The state cadastral authority (Lantmäteriet) is controller[^s21][^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Belastningsregistret (criminal records register), Police Authority[^s23][^s24] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Misstankeregistret (register of suspects), Polismyndigheten[^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Electoral roll entry (tier 0) | Röstlängd (electoral roll), drawn up by the central election authority per voting district from folkbokföring data[^s26] | *Not yet sourced* | Skatteverket operates, develops and monitors Valmyndigheten's election IT on its behalf[^s27] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page, but it concerns Valmyndighetens valadministrativa it-stöd (ballot ordering, voting cards, result reporting); the page never says the röstlängd is kept or produced in that system, mentioning the roll only as a…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Business registry (tier 1) | Aktiebolagsregistret (companies register); Bolagsverket controller[^s28][^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Registret över verkliga huvudmän, kept by Bolagsverket[^s30][^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Vägtrafikregistret (road traffic register) kept by Transportstyrelsen[^s32][^s33] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Swedish national part of the Schengen Information System, kept by the Police Authority[^s34] | Police Authority and Migrationsverket are each controllers for their processing in N.SIS[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | Hermes, the state information system for budgeting and follow-up, developed and managed by ESV[^s35] | ESV is responsible for state accounts[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | Primula (Statens servicecenter)[^s5] | Statens servicecenter (SSC), payroll services to 143 agencies in 2023[^s5] | *Not yet sourced* | *Not stated in sources* | about 1,5 million payslips (lönespecifikationer) per year[^s5] |
+| High | Central bank systems (tier 1) | RIX-RTGS (Riksbank's large-value payment settlement system)[^s36] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | Rakel (national public-safety radio communication system)[^s37] | Myndigheten för civilt försvar (Swedish Civil Defence Agency)[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Systemet för varning och information till allmänheten (public warning and information system)[^s38] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | Each higher-education institution keeps a student register (studieregister)[^s39] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Official gazette and legislation (tier 1) | Svensk författningssamling (SFS, Swedish Code of Statutes), published electronically on a dedicated website[^s40] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Election management and results (tier 1) | Valmyndighetens it-stöd used to compile and publish results[^s27] | *Not yet sourced* | Election IT support is operated by Skatteverket on behalf of Valmyndigheten[^s27] | National infrastructure[^s27] | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | Vaccinationsregistret, Folkhälsomyndigheten[^s41][^s42] | Folkhälsomyndigheten coordinates communicable disease control nationally[^s43][^s44] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
@@ -151,7 +151,7 @@ Tier 0 and 1 holdings for Sweden without a verified source yet. Corrections and 
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -208,10 +208,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -220,8 +220,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -230,6 +230,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -262,7 +264,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -304,7 +306,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -336,7 +338,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Sweden
 
-43 of 43 printed facts about Sweden pass.
+43 of 45 printed facts about Sweden pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -363,6 +365,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:SE:judicial_criminal:register | Judicial & criminal justice: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SE:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SE:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:SE:electoral_roll:hosting | Electoral roll entry: hosting | unrecorded | none | never checked |  |
 | record:SE:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SE:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SE:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -380,6 +383,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:SE:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SE:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SE:electoral_management:register | Election management and results: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:SE:electoral_management:hosting | Election management and results: hosting | unrecorded | none | never checked |  |
 | record:SE:electoral_management:foreign_dependency | Election management and results: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SE:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SE:public_health_surveillance:operator | Public health surveillance: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -420,25 +424,25 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s24]: Sveriges riksdag (Svensk författningssamling) — Lag (1998:620) om belastningsregister, 1998. Lag (1998:620) om belastningsregister. <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1998620-om-belastningsregister_sfs-1998-620/> ([archived](https://web.archive.org/web/20260813145908/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1998620-om-belastningsregister_sfs-1998-620/))
 [^s25]: Regeringskansliet (SFS) — Lag (1998:621) om misstankeregister, 2026. Lag (1998:621) om misstankeregister. <https://data.riksdagen.se/dokument/sfs-1998-621.html>
 [^s26]: Sveriges riksdag (Svensk författningssamling) — Vallag (2005:837), 2005. Vallag (2005:837). <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vallag-2005837_sfs-2005-837/> ([archived](https://web.archive.org/web/20260924072102/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vallag-2005837_sfs-2005-837/))
-[^s27]: Regeringskansliet (SFS) — Aktiebolagslag (2005:551), 2026. Aktiebolagslag (2005:551). <https://data.riksdagen.se/dokument/sfs-2005-551.html> ([archived](https://web.archive.org/web/20230328035707/https://data.riksdagen.se/dokument/sfs-2005-551.html))
-[^s28]: Sveriges riksdag (Svensk författningssamling) — Aktiebolagsförordning (2005:559), 2005. Aktiebolagsförordning (2005:559). <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/aktiebolagsforordning-2005559_sfs-2005-559/> ([archived](https://web.archive.org/web/20260417064235/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/aktiebolagsforordning-2005559_sfs-2005-559/))
-[^s29]: Regeringskansliet (SFS) — Lag (2017:631) om registrering av verkliga huvudmän, 2026. Lag (2017:631) om registrering av verkliga huvudmän. <https://data.riksdagen.se/dokument/sfs-2017-631.html>
-[^s30]: Sveriges riksdag (Svensk författningssamling) — Lag (2017:631) om registrering av verkliga huvudmän, 2017. Lag (2017:631) om registrering av verkliga huvudmän. <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2017631-om-registrering-av-verkliga_sfs-2017-631/> ([archived](https://web.archive.org/web/20260813171133/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2017631-om-registrering-av-verkliga_sfs-2017-631/))
-[^s31]: Sveriges riksdag (Svensk författningssamling) — Vägtrafikdatalag (2019:369), 2019. Vägtrafikdatalag (2019:369). <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vagtrafikdatalag-2019369_sfs-2019-369/> ([archived](https://web.archive.org/web/20260609063421/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vagtrafikdatalag-2019369_sfs-2019-369/))
-[^s32]: Transportstyrelsen — Fordonsdata från vägtrafikregistret. Fordonsdata från vägtrafikregistret. <https://www.transportstyrelsen.se/sv/vagtrafik/fordon/fordons-agaruppgift/uttag-av-fordonsdata-pa-fil/fordonsdata-fran-vagtrafikregistret/> ([archived](https://web.archive.org/web/20260930160034/https://www.transportstyrelsen.se/sv/vagtrafik/fordon/fordons-agaruppgift/uttag-av-fordonsdata-pa-fil/fordonsdata-fran-vagtrafikregistret/))
-[^s33]: Sveriges riksdag (Svensk författningssamling) — Lag (2021:1187) med kompletterande bestämmelser till…, 2021. Lag (2021:1187) med kompletterande bestämmelser till EU:s förordningar om Schengens informationssystem. <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20211187-med-kompletterande-bestammelser_sfs-2021-1187/> ([archived](https://web.archive.org/web/20260813144455/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20211187-med-kompletterande-bestammelser_sfs-2021-1187/))
-[^s34]: Sveriges riksdag (Svensk författningssamling) — Förordning (2016:1023) med instruktion för…, 2016. Förordning (2016:1023) med instruktion för Ekonomistyrningsverket. <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20161023-med-instruktion-for_sfs-2016-1023/> ([archived](https://web.archive.org/web/20250502031355/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20161023-med-instruktion-for_sfs-2016-1023/))
-[^s35]: Sveriges riksbank — Betalningssystemet RIX. Betalningssystemet RIX. <https://www.riksbank.se/sv/betalningar--kontanter/betalningssystemet-rix/>
-[^s36]: Myndigheten för civilt försvar — Rakel. Rakel. <https://www.mcf.se/sv/amnesomraden/samhallsviktiga-kommunikationstjanster/rakel/> ([archived](https://web.archive.org/web/20260915155037/https://www.mcf.se/sv/amnesomraden/samhallsviktiga-kommunikationstjanster/rakel/))
-[^s37]: Regeringskansliet (SFS) — Förordning (2008:1002) med instruktion för Myndigheten…, 2026. Förordning (2008:1002) med instruktion för Myndigheten för civilt försvar. <https://data.riksdagen.se/dokument/sfs-2008-1002.html> ([archived](https://web.archive.org/web/20230228040108/https://data.riksdagen.se/dokument/sfs-2008-1002.html))
-[^s38]: Sveriges riksdag (Svensk författningssamling) — Förordning (1993:1153) om redovisning av studier m.m.…, 1993. Förordning (1993:1153) om redovisning av studier m.m. vid universitet och högskolor. <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-19931153-om-redovisning-av-studier-m_sfs-1993-1153/> ([archived](https://web.archive.org/web/20260516085842/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-19931153-om-redovisning-av-studier-m_sfs-1993-1153/))
-[^s39]: Regeringskansliet (SFS) — Lag (1976:633) om kungörande av lagar och andra…. Lag (1976:633) om kungörande av lagar och andra författningar. <https://data.riksdagen.se/dokument/sfs-1976-633.html>
-[^s40]: Valmyndigheten — Vårt it-stöd. Vårt it-stöd. <https://www.val.se/om-valmyndigheten/vart-it-stod> ([archived](https://web.archive.org/web/20260913174143/https://www.val.se/om-valmyndigheten/vart-it-stod))
+[^s27]: Valmyndigheten — Vårt it-stöd. Vårt it-stöd. <https://www.val.se/om-valmyndigheten/vart-it-stod> ([archived](https://web.archive.org/web/20260913174143/https://www.val.se/om-valmyndigheten/vart-it-stod))
+[^s28]: Regeringskansliet (SFS) — Aktiebolagslag (2005:551), 2026. Aktiebolagslag (2005:551). <https://data.riksdagen.se/dokument/sfs-2005-551.html> ([archived](https://web.archive.org/web/20230328035707/https://data.riksdagen.se/dokument/sfs-2005-551.html))
+[^s29]: Sveriges riksdag (Svensk författningssamling) — Aktiebolagsförordning (2005:559), 2005. Aktiebolagsförordning (2005:559). <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/aktiebolagsforordning-2005559_sfs-2005-559/> ([archived](https://web.archive.org/web/20260417064235/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/aktiebolagsforordning-2005559_sfs-2005-559/))
+[^s30]: Regeringskansliet (SFS) — Lag (2017:631) om registrering av verkliga huvudmän, 2026. Lag (2017:631) om registrering av verkliga huvudmän. <https://data.riksdagen.se/dokument/sfs-2017-631.html>
+[^s31]: Sveriges riksdag (Svensk författningssamling) — Lag (2017:631) om registrering av verkliga huvudmän, 2017. Lag (2017:631) om registrering av verkliga huvudmän. <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2017631-om-registrering-av-verkliga_sfs-2017-631/> ([archived](https://web.archive.org/web/20260813171133/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2017631-om-registrering-av-verkliga_sfs-2017-631/))
+[^s32]: Sveriges riksdag (Svensk författningssamling) — Vägtrafikdatalag (2019:369), 2019. Vägtrafikdatalag (2019:369). <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vagtrafikdatalag-2019369_sfs-2019-369/> ([archived](https://web.archive.org/web/20260609063421/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vagtrafikdatalag-2019369_sfs-2019-369/))
+[^s33]: Transportstyrelsen — Fordonsdata från vägtrafikregistret. Fordonsdata från vägtrafikregistret. <https://www.transportstyrelsen.se/sv/vagtrafik/fordon/fordons-agaruppgift/uttag-av-fordonsdata-pa-fil/fordonsdata-fran-vagtrafikregistret/> ([archived](https://web.archive.org/web/20260930160034/https://www.transportstyrelsen.se/sv/vagtrafik/fordon/fordons-agaruppgift/uttag-av-fordonsdata-pa-fil/fordonsdata-fran-vagtrafikregistret/))
+[^s34]: Sveriges riksdag (Svensk författningssamling) — Lag (2021:1187) med kompletterande bestämmelser till…, 2021. Lag (2021:1187) med kompletterande bestämmelser till EU:s förordningar om Schengens informationssystem. <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20211187-med-kompletterande-bestammelser_sfs-2021-1187/> ([archived](https://web.archive.org/web/20260813144455/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20211187-med-kompletterande-bestammelser_sfs-2021-1187/))
+[^s35]: Sveriges riksdag (Svensk författningssamling) — Förordning (2016:1023) med instruktion för…, 2016. Förordning (2016:1023) med instruktion för Ekonomistyrningsverket. <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20161023-med-instruktion-for_sfs-2016-1023/> ([archived](https://web.archive.org/web/20250502031355/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-20161023-med-instruktion-for_sfs-2016-1023/))
+[^s36]: Sveriges riksbank — Betalningssystemet RIX. Betalningssystemet RIX. <https://www.riksbank.se/sv/betalningar--kontanter/betalningssystemet-rix/>
+[^s37]: Myndigheten för civilt försvar — Rakel. Rakel. <https://www.mcf.se/sv/amnesomraden/samhallsviktiga-kommunikationstjanster/rakel/> ([archived](https://web.archive.org/web/20260915155037/https://www.mcf.se/sv/amnesomraden/samhallsviktiga-kommunikationstjanster/rakel/))
+[^s38]: Regeringskansliet (SFS) — Förordning (2008:1002) med instruktion för Myndigheten…, 2026. Förordning (2008:1002) med instruktion för Myndigheten för civilt försvar. <https://data.riksdagen.se/dokument/sfs-2008-1002.html> ([archived](https://web.archive.org/web/20230228040108/https://data.riksdagen.se/dokument/sfs-2008-1002.html))
+[^s39]: Sveriges riksdag (Svensk författningssamling) — Förordning (1993:1153) om redovisning av studier m.m.…, 1993. Förordning (1993:1153) om redovisning av studier m.m. vid universitet och högskolor. <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-19931153-om-redovisning-av-studier-m_sfs-1993-1153/> ([archived](https://web.archive.org/web/20260516085842/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/forordning-19931153-om-redovisning-av-studier-m_sfs-1993-1153/))
+[^s40]: Regeringskansliet (SFS) — Lag (1976:633) om kungörande av lagar och andra…. Lag (1976:633) om kungörande av lagar och andra författningar. <https://data.riksdagen.se/dokument/sfs-1976-633.html>
 [^s41]: Folkhälsomyndigheten — Nationella vaccinationsregistret. Nationella vaccinationsregistret. <https://www.folkhalsomyndigheten.se/vara-amnesomraden/vaccinationer/nationella-vaccinationsregistret/> ([archived](https://web.archive.org/web/20260907024120/https://www.folkhalsomyndigheten.se/vara-amnesomraden/vaccinationer/nationella-vaccinationsregistret/))
 [^s42]: Sveriges riksdag (Svensk författningssamling) — Lag (2012:453) om register över nationella…, 2012. Lag (2012:453) om register över nationella vaccinationsprogram m.m.. <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2012453-om-register-over-nationella_sfs-2012-453/> ([archived](https://web.archive.org/web/20260606164900/https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2012453-om-register-over-nationella_sfs-2012-453/))
 [^s43]: Regeringskansliet (SFS) — Förordning (2021:248) med instruktion för…, 2026. Förordning (2021:248) med instruktion för Folkhälsomyndigheten. <https://data.riksdagen.se/dokument/sfs-2021-248.html>
 [^s44]: Sveriges riksdag (Svensk författningssamling) — Smittskyddslag (2004:168), 2004. Smittskyddslag (2004:168). <https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/smittskyddslag-2004168_sfs-2004-168/>
 
-**Evidence grades:** 1 Strong, 42 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 1 Strong, 44 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

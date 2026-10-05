@@ -54,47 +54,47 @@ The holdings Slovenia cannot let depend on infrastructure a foreign state can co
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | The Central Population Register (CRP) is the central database of basic population data for Slovenia[^s17][^s18] | CRP is managed by the Ministry of the Interior[^s17][^s18] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | The ID card issuance register stores the digital photograph, but in a form that biometric readers cannot read[^s19] | The interior ministry manages the ID card issuance register centrally[^s19] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The source shows fingerprints ARE held in the centrally managed register of issued identity cards for 15 days (90 if undelivered) before deletion; it does not state that no central register exists and covers only ID cards, so 'No central…. It is withheld until the fact or its source is corrected and checked again* | — | — | — |
-| Critical | Breeder document scans (tier 0) | The collection of documents underlying civil status entries is part of the civil status register[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | The register records production and delivery dates and the validity status of each ID card[^s19] | The interior ministry manages the ID card issuance register centrally[^s19] | *Not stated in sources* | *Not yet measured* |
-| High | Authentication audit log (tier 0) | SI-PASS keeps registered-user records including account usage data[^s21] | Controller: Ministry of the Interior and Public Administration, SI-TRUST[^s21] | National infrastructure[^s21] | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | Voting rights are recorded in the register of voting rights, kept within the permanent-residence register and CRP[^s22][^s18] | *Not yet sourced* | *Not stated in sources* | 1.695.249 voters entered in the electoral rolls[^s23] |
-| High | Land & property registry (tier 1) | The Land Register is a public book of rights in real property, kept by the district courts[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | Police records include criminal offences, misdemeanours and wanted persons[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Digital identity credentials (tier 0) | SI-PASS is the single identity-verification and e-signature service for citizens, businesses and civil servants[^s3][^s5] | SI-TRUST operates within the Ministry of the Interior and Public Administration[^s4] | National infrastructure[^s21] | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | SI-TRUST manages the SI-TRUST Root and the qualified issuers SIGEN-CA and SIGOV-CA[^s3][^s4] | SI-TRUST operates within the Ministry of the Interior and Public Administration[^s3][^s4] | National infrastructure[^s26][^s5] | *Not yet measured* |
-| High | Residence and migration status (tier 1) | The interior ministry manages the central register of residence permits and their revocations (Register tujcev)[^s18][^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | The tax register is a single computerised, linked database of taxpayers[^s28] | Under the Financial Administration Act (ZFU), FURS keeps and manages the tax register[^s28] | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | FURS runs the SIAIS2 import declaration system; a centralised-clearance upgrade was ordered in 2024[^s29] | *Not yet sourced* | *Not stated in sources* | 1.146.962 customs declarations accepted in 2025[^s30] |
-| High | Benefits & pensions (tier 1) | matična evidenca o zavarovancih in uživalcih pravic (master record of insured persons and beneficiaries)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | ZZZS keeps the register of persons covered by compulsory health insurance[^s32] | *Not yet sourced* | *Not stated in sources* | About 2.1 million insured persons (2025)[^s33] |
-| High | Business registry (tier 1) | Poslovni register Slovenije (PRS) (Slovenian Business Register)[^s34] | AJPES[^s34] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | The RDL is a database of beneficial owners, kept for ownership transparency and AML purposes[^s35][^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | SIS consists of a central system and national SIS systems in the member states, linked by a network[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | UJP provides payment services to budget users and keeps the register of budget users and their sub-accounts[^s38][^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | TARGET services settle large-value payments, securities transactions and instant payments[^s40][^s41] | *Not yet sourced* | EU provider[^s40][^s41] | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | Regional notification centres receive and process 112 emergency calls[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | NCKU provides premises, IT and telecom conditions for the government in crises threatening national security[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | ELES ensures safe, reliable and efficient operation of the transmission and distribution system[^s44] | Under ZOEE, ELES performs the mandatory public service of combined transmission and distribution system operator[^s45][^s44] | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | The register is kept in the application 'Centralna evidenca udeležencev vzgoje in izobraževanja'[^s46] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Firearms register (tier 1) | The central register of issued firearms documents combines the registers kept by the competent bodies[^s47] | *Not yet sourced* | National infrastructure[^s47] | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | Pravni informacijski sistem Republike Slovenije (PISRS) (Legal Information System of the Republic of Slovenia), sole publication platform of the Uradni list RS[^s48] | Služba Vlade Republike Slovenije za zakonodajo (Government Legislation Office)[^s48] | *Not stated in sources* | *Not yet measured* |
-| Standard | Government payroll and personnel (tier 1) | MFERAC supports budget users in finance, accounting and payroll/HR[^s49][^s50] | *Not yet sourced* | National infrastructure[^s50] | *Not yet measured* |
-| Standard | Health records (tier 2) | CRPP is the single system for collecting and exchanging health data on patients in Slovenia[^s51] | NIJZ is responsible for the CeZZ information system, its maintenance and security[^s52] | National infrastructure[^s52] | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | e-ARH.si is the Slovenian electronic archive for long-term preservation of electronic archival records[^s53] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | The Central Population Register (CRP) is the central database of basic population data for Slovenia[^s17][^s18] | CRP is managed by the Ministry of the Interior[^s17][^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | The ID card issuance register stores the digital photograph, but in a form that biometric readers cannot read[^s19] | The interior ministry manages the ID card issuance register centrally[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The source shows fingerprints ARE held in the centrally managed register of issued identity cards for 15 days (90 if undelivered) before deletion; it does not state that no central register exists and covers only ID cards, so 'No central…. It is withheld until the fact or its source is corrected and checked again* | — | — | — | — |
+| Critical | Breeder document scans (tier 0) | The collection of documents underlying civil status entries is part of the civil status register[^s20] | *Not yet sourced* | Parts or all of the document collection may be kept in the register's central computerised database[^s20] | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | The register records production and delivery dates and the validity status of each ID card[^s19] | The interior ministry manages the ID card issuance register centrally[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Authentication audit log (tier 0) | SI-PASS keeps registered-user records including account usage data[^s21] | Controller: Ministry of the Interior and Public Administration, SI-TRUST[^s21] | Processed on Slovenian territory; no transfers to third countries[^s21] | National infrastructure[^s21] | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | Voting rights are recorded in the register of voting rights, kept within the permanent-residence register and CRP[^s22][^s18] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | 1.695.249 voters entered in the electoral rolls[^s23] |
+| High | Land & property registry (tier 1) | The Land Register is a public book of rights in real property, kept by the district courts[^s24] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Police information systems (tier 1) | Police records include criminal offences, misdemeanours and wanted persons[^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Digital identity credentials (tier 0) | SI-PASS is the single identity-verification and e-signature service for citizens, businesses and civil servants[^s3][^s5] | SI-TRUST operates within the Ministry of the Interior and Public Administration[^s4] | SI-PASS personal data are not transferred to third countries and are processed on Slovenian territory[^s21] | National infrastructure[^s21] | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | SI-TRUST manages the SI-TRUST Root and the qualified issuers SIGEN-CA and SIGOV-CA[^s3][^s4] | SI-TRUST operates within the Ministry of the Interior and Public Administration[^s3][^s4] | Qualified SI-PASS-CA signing certificates are stored at SI-TRUST[^s5] | National infrastructure[^s26][^s5] | *Not yet measured* |
+| High | Residence and migration status (tier 1) | The interior ministry manages the central register of residence permits and their revocations (Register tujcev)[^s18][^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | The tax register is a single computerised, linked database of taxpayers[^s28] | Under the Financial Administration Act (ZFU), FURS keeps and manages the tax register[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | FURS runs the SIAIS2 import declaration system; a centralised-clearance upgrade was ordered in 2024[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | 1.146.962 customs declarations accepted in 2025[^s30] |
+| High | Benefits & pensions (tier 1) | matična evidenca o zavarovancih in uživalcih pravic (master record of insured persons and beneficiaries)[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | ZZZS keeps the register of persons covered by compulsory health insurance[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | About 2.1 million insured persons (2025)[^s33] |
+| High | Business registry (tier 1) | Poslovni register Slovenije (PRS) (Slovenian Business Register)[^s34] | AJPES[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | The RDL is a database of beneficial owners, kept for ownership transparency and AML purposes[^s35][^s36] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Border and visa systems (tier 1) | SIS consists of a central system and national SIS systems in the member states, linked by a network[^s37] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | UJP provides payment services to budget users and keeps the register of budget users and their sub-accounts[^s38][^s39] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Central bank systems (tier 1) | TARGET services settle large-value payments, securities transactions and instant payments[^s40][^s41] | *Not yet sourced* | *Not yet sourced* | EU provider[^s40][^s41] | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | Regional notification centres receive and process 112 emergency calls[^s42] | *Not yet sourced* | The contractor was a bidder group represented by Telekom Slovenije[^s43] | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | NCKU provides premises, IT and telecom conditions for the government in crises threatening national security[^s44] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | ELES ensures safe, reliable and efficient operation of the transmission and distribution system[^s45] | Under ZOEE, ELES performs the mandatory public service of combined transmission and distribution system operator[^s46][^s45] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | The register is kept in the application 'Centralna evidenca udeležencev vzgoje in izobraževanja'[^s47] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Firearms register (tier 1) | The central register of issued firearms documents combines the registers kept by the competent bodies[^s48] | *Not yet sourced* | Registers are kept on the interior ministry's central computer[^s48] | National infrastructure[^s48] | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | Pravni informacijski sistem Republike Slovenije (PISRS) (Legal Information System of the Republic of Slovenia), sole publication platform of the Uradni list RS[^s49] | Služba Vlade Republike Slovenije za zakonodajo (Government Legislation Office)[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Government payroll and personnel (tier 1) | MFERAC supports budget users in finance, accounting and payroll/HR[^s50][^s51] | *Not yet sourced* | *Not yet sourced* | National infrastructure[^s51] | *Not yet measured* |
+| Standard | Health records (tier 2) | CRPP is the single system for collecting and exchanging health data on patients in Slovenia[^s52] | NIJZ is responsible for the CeZZ information system, its maintenance and security[^s53] | Central health ICT is a public service run by a public company wholly owned by the Republic of Slovenia[^s53] | National infrastructure[^s53] | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | e-ARH.si is the Slovenian electronic archive for long-term preservation of electronic archival records[^s54] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
@@ -146,7 +146,7 @@ Tier 0 and 1 holdings for Slovenia without a verified source yet. Corrections an
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -203,10 +203,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -215,8 +215,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -225,6 +225,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -257,7 +259,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -299,7 +301,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -331,7 +333,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Slovenia
 
-61 of 61 printed facts about Slovenia pass.
+61 of 68 printed facts about Slovenia pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -351,10 +353,12 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:SI:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:SI:breeder_documents:hosting | Breeder document scans: hosting | unrecorded | none | never checked |  |
 | record:SI:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:authentication_audit_log:operator | Authentication audit log: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:SI:authentication_audit_log:hosting | Authentication audit log: hosting | unrecorded | none | never checked |  |
 | record:SI:authentication_audit_log:foreign_dependency | Authentication audit log: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:electoral_roll:count | Electoral roll entry: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -362,9 +366,11 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:SI:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:SI:digital_identity_credentials:hosting | Digital identity credentials: hosting | unrecorded | none | never checked |  |
 | record:SI:digital_identity_credentials:foreign_dependency | Digital identity credentials: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:SI:trust_services_pki:hosting | State PKI and qualified trust services: hosting | unrecorded | none | never checked |  |
 | record:SI:trust_services_pki:foreign_dependency | State PKI and qualified trust services: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:SI:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -382,11 +388,13 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:SI:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:central_bank:foreign_dependency | Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:SI:emergency_communications:hosting | Emergency calls and public-safety radio: hosting | unrecorded | none | never checked |  |
 | record:SI:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:SI:firearms_register:hosting | Firearms register: hosting | unrecorded | none | never checked |  |
 | record:SI:firearms_register:foreign_dependency | Firearms register: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -394,6 +402,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:SI:government_payroll:foreign_dependency | Government payroll and personnel: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:health_records:operator | Health records: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:SI:health_records:hosting | Health records: hosting | unrecorded | none | never checked |  |
 | record:SI:health_records:foreign_dependency | Health records: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:national_archives:register | National archives (digital): the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 
@@ -447,18 +456,19 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s40]: European Central Bank — TARGET Services. TARGET Services. <https://www.ecb.europa.eu/paym/target/html/index.en.html> ([archived](https://web.archive.org/web/20260917182025/https://www.ecb.europa.eu/paym/target/html/index.en.html))
 [^s41]: Banka Slovenije — Plačilna infrastruktura. Plačilna infrastruktura. <https://www.bsi.si/sl/placilni-sistemi/placilna-infrastruktura>
 [^s42]: GOV.SI (Uprava RS za zaščito in reševanje) — Urad za obveščanje in alarmiranje. Urad za obveščanje in alarmiranje. <https://www.gov.si/drzavni-organi/organi-v-sestavi/uprava-za-zascito-in-resevanje/o-upravi/urad-za-obvescanje-in-alarmiranje/> ([archived](https://web.archive.org/web/20260323061511/https://www.gov.si/drzavni-organi/organi-v-sestavi/uprava-za-zascito-in-resevanje/o-upravi/urad-za-obvescanje-in-alarmiranje/))
-[^s43]: GOV.SI (Ministrstvo za obrambo) — Nacionalni center za krizno upravljanje. Nacionalni center za krizno upravljanje. <https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-obrambo/o-ministrstvu/direktorat-za-obrambne-zadeve/nacionalni-center-za-krizno-upravljanje/> ([archived](https://web.archive.org/web/20250727032849/https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-obrambo/o-ministrstvu/direktorat-za-obrambne-zadeve/nacionalni-center-za-krizno-upravljanje/))
-[^s44]: Portal Energetika (ministry responsible for energy) — ELES, d.o.o. sistemski operater prenosnega…. ELES, d.o.o. sistemski operater prenosnega elektroenergetskega omrežja. <https://www.energetika-portal.si/podrocja/energetika/upravljanje-kapitalskih-nalozb/eles/> ([archived](https://web.archive.org/web/20250516111733/https://www.energetika-portal.si/podrocja/energetika/upravljanje-kapitalskih-nalozb/eles/))
-[^s45]: ELES, d. o. o. — ELES, d. o. o.. ELES, d. o. o.. <https://www.eles.si/>
-[^s46]: Uradni list Republike Slovenije — Pravilnik o načinu in pogojih dostopa do podatkov iz…, 2011-06-03. Pravilnik o načinu in pogojih dostopa do podatkov iz centralne evidence udeležencev vzgoje in izobraževanja, Uradni list RS, št. 43/2011. <https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-2099> ([archived](https://web.archive.org/web/20240504214009/https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-2099))
-[^s47]: Uradni list Republike Slovenije — Zakon o orožju (ZOro-1), Uradni list RS, št. 61/2000, 2000-07-06. Zakon o orožju (ZOro-1), Uradni list RS, št. 61/2000. <https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2000-01-2747/zakon-o-orozju-zoro-1> ([archived](https://web.archive.org/web/20210924055842/https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2000-01-2747/zakon-o-orozju-zoro-1))
-[^s48]: Uradni list Republike Slovenije — O glasilu, 2026. O glasilu. <https://www.uradni-list.si/glasilo-uradni-list-rs/glasilo-uradni-list-rs/o-glasilu> ([archived](https://web.archive.org/web/20260608175302/https://www.uradni-list.si/glasilo-uradni-list-rs/glasilo-uradni-list-rs/o-glasilu))
-[^s49]: GOV.SI (Ministrstvo za finance) — Sistem MFERAC. Sistem MFERAC. <https://www.gov.si/zbirke/storitve/mferac/>
-[^s50]: Ministrstvo za finance — Prenova MFERAC, 2024-01-24. Prenova MFERAC. <https://www.gov.si/zbirke/projekti-in-programi/prenova-mferac/> ([archived](https://web.archive.org/web/20260216201728/https://www.gov.si/zbirke/projekti-in-programi/prenova-mferac/))
-[^s51]: eZdravje (NIJZ) — CRPP - eZdravje. CRPP - eZdravje. <https://ezdrav.si/resitve/crpp/> ([archived](https://web.archive.org/web/20251015032134/https://ezdrav.si/resitve/crpp/))
-[^s52]: Uradni list Republike Slovenije — Zakon o digitalizaciji zdravstva (ZDigZ), Uradni list…, 2025-12-04. Zakon o digitalizaciji zdravstva (ZDigZ), Uradni list RS, št. 100/2025. <https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387>
-[^s53]: GOV.SI — Slovenski elektronski arhiv. Slovenski elektronski arhiv. <https://www.gov.si/teme/slovenski-elektronski-arhiv/> ([archived](https://web.archive.org/web/20260612043003/https://www.gov.si/teme/slovenski-elektronski-arhiv/))
+[^s43]: GOV.SI (Ministrstvo za notranje zadeve) — Po več letih bo zgrajena nova infrastruktura sistema TETRA, 2020-12-10. Po več letih bo zgrajena nova infrastruktura sistema TETRA. <https://www.gov.si/novice/2020-12-10-po-vec-letih-bo-zgrajena-nova-infrastruktura-sistema-tetra/>
+[^s44]: GOV.SI (Ministrstvo za obrambo) — Nacionalni center za krizno upravljanje. Nacionalni center za krizno upravljanje. <https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-obrambo/o-ministrstvu/direktorat-za-obrambne-zadeve/nacionalni-center-za-krizno-upravljanje/> ([archived](https://web.archive.org/web/20250727032849/https://www.gov.si/drzavni-organi/ministrstva/ministrstvo-za-obrambo/o-ministrstvu/direktorat-za-obrambne-zadeve/nacionalni-center-za-krizno-upravljanje/))
+[^s45]: Portal Energetika (ministry responsible for energy) — ELES, d.o.o. sistemski operater prenosnega…. ELES, d.o.o. sistemski operater prenosnega elektroenergetskega omrežja. <https://www.energetika-portal.si/podrocja/energetika/upravljanje-kapitalskih-nalozb/eles/> ([archived](https://web.archive.org/web/20250516111733/https://www.energetika-portal.si/podrocja/energetika/upravljanje-kapitalskih-nalozb/eles/))
+[^s46]: ELES, d. o. o. — ELES, d. o. o.. ELES, d. o. o.. <https://www.eles.si/>
+[^s47]: Uradni list Republike Slovenije — Pravilnik o načinu in pogojih dostopa do podatkov iz…, 2011-06-03. Pravilnik o načinu in pogojih dostopa do podatkov iz centralne evidence udeležencev vzgoje in izobraževanja, Uradni list RS, št. 43/2011. <https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-2099> ([archived](https://web.archive.org/web/20240504214009/https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-2099))
+[^s48]: Uradni list Republike Slovenije — Zakon o orožju (ZOro-1), Uradni list RS, št. 61/2000, 2000-07-06. Zakon o orožju (ZOro-1), Uradni list RS, št. 61/2000. <https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2000-01-2747/zakon-o-orozju-zoro-1> ([archived](https://web.archive.org/web/20210924055842/https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2000-01-2747/zakon-o-orozju-zoro-1))
+[^s49]: Uradni list Republike Slovenije — O glasilu, 2026. O glasilu. <https://www.uradni-list.si/glasilo-uradni-list-rs/glasilo-uradni-list-rs/o-glasilu> ([archived](https://web.archive.org/web/20260608175302/https://www.uradni-list.si/glasilo-uradni-list-rs/glasilo-uradni-list-rs/o-glasilu))
+[^s50]: GOV.SI (Ministrstvo za finance) — Sistem MFERAC. Sistem MFERAC. <https://www.gov.si/zbirke/storitve/mferac/>
+[^s51]: Ministrstvo za finance — Prenova MFERAC, 2024-01-24. Prenova MFERAC. <https://www.gov.si/zbirke/projekti-in-programi/prenova-mferac/> ([archived](https://web.archive.org/web/20260216201728/https://www.gov.si/zbirke/projekti-in-programi/prenova-mferac/))
+[^s52]: eZdravje (NIJZ) — CRPP - eZdravje. CRPP - eZdravje. <https://ezdrav.si/resitve/crpp/> ([archived](https://web.archive.org/web/20251015032134/https://ezdrav.si/resitve/crpp/))
+[^s53]: Uradni list Republike Slovenije — Zakon o digitalizaciji zdravstva (ZDigZ), Uradni list…, 2025-12-04. Zakon o digitalizaciji zdravstva (ZDigZ), Uradni list RS, št. 100/2025. <https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387>
+[^s54]: GOV.SI — Slovenski elektronski arhiv. Slovenski elektronski arhiv. <https://www.gov.si/teme/slovenski-elektronski-arhiv/> ([archived](https://web.archive.org/web/20260612043003/https://www.gov.si/teme/slovenski-elektronski-arhiv/))
 
-**Evidence grades:** 5 Strong, 56 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 5 Strong, 63 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

@@ -64,7 +64,8 @@ class Typeset(unittest.TestCase):
         """One footnote per distinct citation (source, locator, date) of every fact span: a fact
         that rests on three documents shows all three."""
         expected = 0
-        for d in self.bundle["documents"].values():
+        # The EU-27 overview (#95) follows the ranking and footnotes its facts like the country chapters.
+        for d in [self.bundle["infrastructure"], *self.bundle["documents"].values()]:
             for s in report.document_spans(d):
                 if s.get("role") == "fact":
                     cites = {(c["source_id"], c["locator"], c["retrieved"])

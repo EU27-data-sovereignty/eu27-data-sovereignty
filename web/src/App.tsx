@@ -9,6 +9,7 @@ import { Countries } from './pages/Countries'
 import { Country } from './pages/Country'
 import { FactCheck } from './pages/FactCheck'
 import { Holding, HoldingsIndex } from './pages/Holdings'
+import { Infrastructure } from './pages/Infrastructure'
 import { Methodology } from './pages/Methodology'
 import { NotFound } from './pages/NotFound'
 import { Overview } from './pages/Overview'
@@ -56,6 +57,7 @@ export function App() {
         <Route path="countries" element={<Countries bundle={bundle} />} />
         <Route path="holdings" element={<HoldingsIndex bundle={bundle} />} />
         <Route path="holdings/:cls" element={<Holding bundle={bundle} />} />
+        <Route path="infrastructure" element={<Infrastructure bundle={bundle} />} />
         <Route path="sources" element={<Sources bundle={bundle} />} />
         <Route path="sovereignty" element={<Sovereignty bundle={bundle} />} />
         <Route path="ask" element={<Ask bundle={bundle} />} />

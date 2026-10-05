@@ -147,6 +147,30 @@ class Markdown:
         return "\n".join(out)
 
 
+def overview(bundle: dict) -> str:
+    """countries/EU-INFRASTRUCTURE.md: the EU-27 key-infrastructure overview (document.infrastructure, #95)."""
+    md, doc = Markdown(bundle), bundle["infrastructure"]
+    out = [
+        f"# EU-27: {doc['name'].lower()}",
+        "",
+        f"> Generated {bundle['generated']} by `model/generate_countries.py` from the content model "
+        "(`model/document.py`). Every value is the one a state's own brief prints, with the same source; the "
+        f"same overview is in the EU-27 report and on the web.\n>\n> **{bundle['notice']['disclaimer']}** "
+        f"{bundle['notice']['withheld']} A value in *italics* is withheld.",
+        "",
+    ]
+    for s in doc["sections"]:
+        out += [f"## {s['title']}", ""]
+        for b in s["blocks"]:
+            out += [md.block(b), ""]
+    out += ["---", ""]
+    for n, sid in enumerate(md.order, start=1):
+        src = bundle["sources"][sid]
+        archived = f" ([archived]({src['archived_url']}))" if src.get("archived_url") else ""
+        out.append(f"[^s{n}]: {src['label']}. {src['title']}. <{src['url']}>{archived}")
+    return "\n".join(out + [""])
+
+
 def summary(bundle: dict) -> str:
     rows = []
     for iso in sorted(bundle["documents"], key=lambda i: bundle["documents"][i]["name"]):
@@ -163,6 +187,8 @@ def summary(bundle: dict) -> str:
         f"> Generated {bundle['generated']} by `model/generate_countries.py`. Each brief analyses one "
         "member state on its own fundamentals (DECISIONS.md #72); none is scaled from another.",
         "",
+        "Where each state's key registers are hosted, and by whom: [EU-INFRASTRUCTURE.md](EU-INFRASTRUCTURE.md).",
+        "",
         "| | Country | ISO | Holdings verified | Tier 0 verified | Capacity |",
         "|---|---|---|---:|---:|---|",
         *rows,
@@ -178,7 +204,8 @@ def main() -> int:
         (COUNTRIES / iso).mkdir(parents=True, exist_ok=True)
         (COUNTRIES / iso / "GOAL.md").write_text(Markdown(bundle).document(doc), encoding="utf-8")
     (COUNTRIES / "SUMMARY.md").write_text(summary(bundle), encoding="utf-8")
-    print(f"countries/: {len(bundle['documents'])} briefs and SUMMARY.md")
+    (COUNTRIES / "EU-INFRASTRUCTURE.md").write_text(overview(bundle), encoding="utf-8")
+    print(f"countries/: {len(bundle['documents'])} briefs, SUMMARY.md and EU-INFRASTRUCTURE.md")
     return 0
 
 

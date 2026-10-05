@@ -6,7 +6,7 @@
 
 ## Status
 
-**1340 of 1340 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **52** more are withheld because the check did not confirm them.
+**1340 of 1400 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **52** more are withheld because the check did not confirm them.
 
 | Checker model | Current verdicts |
 |---|---:|
@@ -23,7 +23,7 @@
 |---|---:|
 | claude-opus-5-5 | 23 |
 | program:fetch_eurostat.py | 162 |
-| unrecorded | 1155 |
+| unrecorded | 1215 |
 
 ## The rule
 
@@ -37,7 +37,68 @@ A verdict holds for the fact exactly as printed: a SHA-256 of the claim, the que
 
 ## Not passing
 
-None. Every printed fact passes.
+| Claim | Printed | Why |
+|---|---|---|
+| `record:AT:breeder_documents:hosting` | Documents may be kept on microfilm or electronic media instead of paper | never checked |
+| `record:AT:facial_biometric:hosting` | Bundesrechenzentrum GmbH (state-owned) is the processor for the passport data processing under §§ 22a and 22b | never checked |
+| `record:AT:digital_identity_credentials:hosting` | The private trust service provider runs the certificate database in its own data centre | never checked |
+| `record:AT:issuance_history:hosting` | BRZ GmbH is the statutory processor of the Identity Document Register | never checked |
+| `record:BE:facial_biometric:hosting` | Photos are kept on a secure server (no provider or location named) | never checked |
+| `record:BG:judicial_criminal:hosting` | EISS is a centralised web-based application accessed over the Internet (host not stated) | never checked |
+| `record:BG:grid_control:hosting` | The project includes a backup data storage and processing centre for the Central Dispatch | never checked |
+| `record:BG:business_registry:hosting` | Registry Agency contract to expand storage arrays, upgrade servers and supply tape libraries serving the registers' information systems | never checked |
+| `record:CY:digital_identity_credentials:hosting` | JCC Payment Systems outsources operation of the eID certification authority to ADACOM, a qualified trust service provider registered in Greece | never checked |
+| `record:CY:land_property:hosting` | Central and backup systems of the Land Information System are maintained by officers of the government Department of Information Technology Services together with DLS officers | never checked |
+| `record:CY:border_control:hosting` | National N.SIS installed, operated and maintained by the Cyprus Police (national) | never checked |
+| `record:CY:emergency_communications:hosting` | NG112 developed by CYTA, the Cypriot telecommunications organisation | never checked |
+| `record:DE:facial_biometric:hosting` | No nationwide central database of biometric features is to be established; storage is decentral | never checked |
+| `record:DE:digital_identity_credentials:hosting` | BundID is operated in the data centre of the Informationstechnikzentrum Bund (ITZBund), the federal IT service provider | never checked |
+| `record:DE:trust_services_pki:hosting` | The root CA (trust anchor) of the public-administration PKI has been operated at the BSI since 20 February 2001 | never checked |
+| `record:DK:central_bank:hosting` | At Easter 2025 Nationalbanken moved krone settlement from its own system Kronos2 to the pan-European TARGET Services platform | never checked |
+| `record:DK:emergency_communications:hosting` | SINE network operation is supplied by Dansk Beredskabskommunikation A/S (ownership not stated in this source) | never checked |
+| `record:EL:civil_registry:hosting` | The law allows hosting of the Citizens' Register to be assigned by joint ministerial decision to the technological infrastructure of another public-sector body (no source found naming the actual host) | never checked |
+| `record:EL:digital_identity_credentials:hosting` | GRNET (Ε.Δ.Υ.Τ.Ε. Α.Ε.), a Greek state-owned company, is the processor that designs, implements and maintains the Gov.gr Wallet application | never checked |
+| `record:EL:residence_permits:hosting` | Migration and asylum data centres (holding biometric data) are in ministry/agency premises; consolidation into a Tier-4 data centre at the Ministry of Migration's Kerani building was planned | never checked |
+| `record:EL:land_property:hosting` | Hellenic Cadastre operates its own Data Center and Disaster Recovery Center (upgrade planned) | never checked |
+| `record:EL:police_records:hosting` | The Hellenic Police IT Directorate designs the computerised information systems and creates and supports their technical infrastructure | never checked |
+| `record:EL:public_finance:hosting` | G-Cloud project plans infrastructure for systems hosted in the data centre and disaster site of the Ministry of Finance and AADE | never checked |
+| `record:EL:customs:hosting` | ICISnet is hosted on ΓΓΠΣΔΔ infrastructure | never checked |
+| `record:FR:statistics_microdata:hosting` | CASD designed its own dedicated secure equipment | never checked |
+| `record:HR:breeder_documents:hosting` | Civil-register files are tracked in the electronic office-management information system | never checked |
+| `record:HR:trust_services_pki:hosting` | Subordinate CA HRIDCA, operated within AKD's own PKI, issues eOI certificates to natural persons | never checked |
+| `record:HR:tax:hosting` | State-owned APIS IT develops and maintains the Tax and Customs Administration information systems | never checked |
+| `record:HU:civil_registry:hosting` | Data processing for the SZL may only be outsourced to a state administrative body or a wholly state-owned company (unless a ministerial exemption is granted) | never checked |
+| `record:HU:facial_biometric:hosting` | Data processing for the SZL may only be outsourced to a state administrative body or a wholly state-owned company (unless a ministerial exemption is granted) | never checked |
+| `record:HU:fingerprint_biometric:hosting` | Data processing for the SZL may only be outsourced to a state administrative body or a wholly state-owned company (unless a ministerial exemption is granted) | never checked |
+| `record:HU:breeder_documents:hosting` | The civil register keeping body may only use a state body or wholly state-owned company as data processor unless an exemption is authorised | never checked |
+| `record:HU:authentication_audit_log:hosting` | DÁP portal log files are stored by IdomSoft in a private cloud (central log collector) | never checked |
+| `record:HU:land_property:hosting` | Land register processing restricted to state bodies or 100% state-owned companies | never checked |
+| `record:HU:issuance_history:hosting` | Data processing for the travel-document register may only be entrusted to a state body or wholly state-owned company unless an individual exemption is granted | never checked |
+| `record:HU:electoral_roll:hosting` | NEO may only use state bodies or wholly state-owned companies as processors for the electoral registers | never checked |
+| `record:HU:border_control:hosting` | NS.CP operation uses a central application-operation provider designated by Government decree | never checked |
+| `record:HU:emergency_communications:hosting` | Pro-M Zrt. is the government-purpose communications provider | never checked |
+| `record:HU:crisis_management:hosting` | Pro-M builds and operates the infrastructure of the defence and security public alerting system | never checked |
+| `record:HU:residence_permits:hosting` | Processing for the central aliens-policing register may only be entrusted to a state body or wholly state-owned company | never checked |
+| `record:HU:vehicle_licensing:hosting` | Processing restricted to state bodies or wholly state-owned companies | never checked |
+| `record:IE:electoral_roll:hosting` | LGERS (national electoral register database) being migrated to Dublin City Council's Azure public cloud tenancy | never checked |
+| `record:IE:defence_command:hosting` | On-premise national CISN built around two active/active resilient data centres, with hybrid cloud access where required | never checked |
+| `record:IE:central_bank:hosting` | Transitioned to a new data centre service provider: two Tier-3 data centres in active-active configuration (provider not named) | never checked |
+| `record:IT:issuance_history:hosting` | The CIE issuance circuit (SSCE) runs on IT infrastructure located in the Ministry of the Interior's CNSD | never checked |
+| `record:IT:trust_services_pki:hosting` | The CIE certification authority (CA Autenticazione and PKI-CIE) is part of the IT infrastructure located in the CNSD | never checked |
+| `record:IT:national_archives:hosting` | The Digital Preservation Hub is described as a 'natively cloud' infrastructure; no provider is named | never checked |
+| `record:LU:health_insurance:hosting` | The CCSS centralises and processes data on behalf of the social security institutions | never checked |
+| `record:NL:digital_identity_credentials:hosting` | Stored on ICT facilities on Dutch territory managed by Logius; not transferred outside the EU | never checked |
+| `record:NL:health_records:hosting` | Medical data remain stored decentrally at the source (GP or pharmacist) | never checked |
+| `record:NL:statistics_microdata:hosting` | Research is done inside the CBS microdata environment | never checked |
+| `record:SE:electoral_roll:hosting` | Skatteverket operates, develops and monitors Valmyndigheten's election IT on its behalf | never checked |
+| `record:SE:electoral_management:hosting` | Election IT support is operated by Skatteverket on behalf of Valmyndigheten | never checked |
+| `record:SI:breeder_documents:hosting` | Parts or all of the document collection may be kept in the register's central computerised database | never checked |
+| `record:SI:authentication_audit_log:hosting` | Processed on Slovenian territory; no transfers to third countries | never checked |
+| `record:SI:digital_identity_credentials:hosting` | SI-PASS personal data are not transferred to third countries and are processed on Slovenian territory | never checked |
+| `record:SI:trust_services_pki:hosting` | Qualified SI-PASS-CA signing certificates are stored at SI-TRUST | never checked |
+| `record:SI:emergency_communications:hosting` | The contractor was a bidder group represented by Telekom Slovenije | never checked |
+| `record:SI:firearms_register:hosting` | Registers are kept on the interior ministry's central computer | never checked |
+| `record:SI:health_records:hosting` | Central health ICT is a public service run by a public company wholly owned by the Republic of Slovenia | never checked |
 
 ## Withheld after the fact check
 

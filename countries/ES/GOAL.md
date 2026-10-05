@@ -53,47 +53,47 @@ The holdings Spain cannot let depend on infrastructure a foreign state can compe
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Registro Civil (Civil Registry): a single, electronic register for all of Spain[^s16] | Registry officers work under the functional authority of the Dirección General de Seguridad Jurídica y Fe Pública (Ministry of Justice)[^s16] | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | ADDNIFIL (automated DNI file holding photographs and fingerprints)[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | *Disputed: sources disagree. Agencia Estatal Boletín Oficial del Estado — Real Decreto 255/2025, de 1 de abril, por el que se…, 2025-04-02 gives the value this report printed; Agencia Estatal Boletín Oficial del Estado — Orden INT/1202/2011, de 4 de mayo, por la que se regulan…, 2011-05-13 gives “ADDNIFIL (automated DNI file holding fingerprints and photographs)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | Dirección General de la Policía has custody of the DNI personal-data processing[^s6] | *Not stated in sources* | *Not yet measured* |
-| Critical | Breeder document scans (tier 0) | Digitised data in the Civil Registry database are being migrated into individual records by the Ministry of Justice[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | ADDNIFIL (national identity document management file)[^s17] | Dirección General de la Policía (Directorate-General of Police), Ministerio del Interior[^s18] | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electoral roll entry (tier 0) | censo electoral (electoral roll)[^s19] | Oficina del Censo Electoral (Electoral Census Office), within the instituto nacional de estadística[^s19] | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | AC Raíz FNMT-RCM (FNMT-RCM root certification authority)[^s20] | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote only says that FNMT-RCM is a public business entity and in-house provider of the General State Administration. Neither it nor the body text says that FNMT operates the state PKI or trust services; only the site navigation has…. It is withheld until the fact or its source is corrected and checked again* | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | *Disputed: sources disagree. Agencia Estatal Boletín Oficial del Estado — Real Decreto Legislativo 1/2004, texto refundido de la…, 2004-03-08 gives the value this report printed; Agencia Estatal Boletín Oficial del Estado — Decreto de 8 de febrero de 1946, Ley Hipotecaria… gives “Registro de la Propiedad (Property Registry)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | Ministerio de Hacienda (Ministry of Finance)[^s21] | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | The system comprises the Central Register of Convicted Persons, the Central Register for Protection of Victims of Domestic and Gender Violence, and others[^s22][^s23] | The registry system is non-public and depends on the Ministry of Justice[^s23] | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | PERPOL (records of persons of police interest)[^s17] | Gabinete de Coordinación de la Secretaría de Estado de Interior (Coordination Cabinet of the Secretariat of State for the Interior), for the Base de Datos de Señalamientos Nacionales[^s24] | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | Ley General Tributaria: tax functions include issuing tax ID numbers and maintaining the tax censuses[^s25] | AEAT's Departamento de Informática Tributaria includes sub-directorates for IT planning and for operations (Explotación)[^s26][^s27] | *Not stated in sources* | *Not yet measured* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | Registro de Prestaciones Sociales Públicas (Register of Public Social Benefits)[^s28] | Instituto Nacional de la Seguridad Social (National Social Security Institute)[^s28] | *Not stated in sources* | *Not yet measured* |
-| High | Statutory health insurance (tier 1) | The SNS protected-population database generates a unique personal health ID code[^s29][^s30] | The law assigns the Ministry of Health to generate the unique SNS personal ID code[^s29][^s30] | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | Registro Mercantil (Commercial Registry), with the Registro Mercantil Central[^s31] | Ministerio de Justicia (Ministry of Justice)[^s31] | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Vehicle Register of the Jefatura Central de Tráfico[^s32] | The Driver and Offender Register is kept by the Jefatura Central de Tráfico[^s32][^s33] | *Not stated in sources* | *Not yet measured* |
-| High | Border and visa systems (tier 1) | N.SIS II/SIRENE II (national part of the Schengen Information System)[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | Registro Nacional de Armas (National Firearms Register)[^s34] | Intervención Central de Armas y Explosivos de la Dirección General de la Guardia Civil (Central Arms and Explosives Office, Guardia Civil)[^s34] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Government payroll and personnel (tier 1) | The Central Personnel Register is the AGE register of its staff and of acts affecting their careers[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | base de datos de los resultados electorales del Ministerio del Interior (Ministry of the Interior election results database)[^s36] | Indra Soluciones Tecnologías de la Información, S.L.U. (contractor for the provisional-count service)[^s36] | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | Central de Información de Riesgos (Central Credit Register), Banco de España[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | SIRDEE, the State digital emergency radio system, is coordinated by the Secretariat of State for Security[^s38] | The 112 emergency call service is provided by the Autonomous Communities through their own call centres[^s39] | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | Red de Alerta Nacional de Protección Civil (National Civil Protection Alert Network)[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | Cecoel (Centro de Control Eléctrico, Electricity Control Centre)[^s41] | Red Eléctrica de España, S.A. (sole transmission operator)[^s42] | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | Sistemas Automáticos de Información Hidrológica (SAIH) (Automatic Hydrological Information Systems), used by the Confederaciones Hidrográficas[^s43] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Education (tier 1) | Registro Nacional de Titulados Universitarios Oficiales (RNTUO) (National Register of Official University Graduates)[^s44] | Ministerio de Educación (Ministry of Education; the register now sits with the universities ministry)[^s45][^s46] | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | The BOE is published in an electronic edition[^s47] | The Agencia Estatal BOE edits, publishes and distributes the official gazette[^s47] | *Not stated in sources* | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | Municipalities send their Padrón data to the INE for national coordination[^s48] | INE is an autonomous body with its own legal personality[^s49] | *Not stated in sources* | *Not yet measured* |
-| Standard | Geospatial base data (tier 3) | Reference geographic information includes cadastral parcels and registered real estate[^s50] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | Registro Civil (Civil Registry): a single, electronic register for all of Spain[^s16] | Registry officers work under the functional authority of the Dirección General de Seguridad Jurídica y Fe Pública (Ministry of Justice)[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | ADDNIFIL (automated DNI file holding photographs and fingerprints)[^s17] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | *Disputed: sources disagree. Agencia Estatal Boletín Oficial del Estado — Real Decreto 255/2025, de 1 de abril, por el que se…, 2025-04-02 gives the value this report printed; Agencia Estatal Boletín Oficial del Estado — Orden INT/1202/2011, de 4 de mayo, por la que se regulan…, 2011-05-13 gives “ADDNIFIL (automated DNI file holding fingerprints and photographs)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | Dirección General de la Policía has custody of the DNI personal-data processing[^s6] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | Digitised data in the Civil Registry database are being migrated into individual records by the Ministry of Justice[^s16] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | ADDNIFIL (national identity document management file)[^s17] | Dirección General de la Policía (Directorate-General of Police), Ministerio del Interior[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Electoral roll entry (tier 0) | censo electoral (electoral roll)[^s19] | Oficina del Censo Electoral (Electoral Census Office), within the instituto nacional de estadística[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | AC Raíz FNMT-RCM (FNMT-RCM root certification authority)[^s20] | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote only says that FNMT-RCM is a public business entity and in-house provider of the General State Administration. Neither it nor the body text says that FNMT operates the state PKI or trust services; only the site navigation has…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | *Disputed: sources disagree. Agencia Estatal Boletín Oficial del Estado — Real Decreto Legislativo 1/2004, texto refundido de la…, 2004-03-08 gives the value this report printed; Agencia Estatal Boletín Oficial del Estado — Decreto de 8 de febrero de 1946, Ley Hipotecaria… gives “Registro de la Propiedad (Property Registry)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | Ministerio de Hacienda (Ministry of Finance)[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | The system comprises the Central Register of Convicted Persons, the Central Register for Protection of Victims of Domestic and Gender Violence, and others[^s22][^s23] | The registry system is non-public and depends on the Ministry of Justice[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | PERPOL (records of persons of police interest)[^s17] | Gabinete de Coordinación de la Secretaría de Estado de Interior (Coordination Cabinet of the Secretariat of State for the Interior), for the Base de Datos de Señalamientos Nacionales[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | Ley General Tributaria: tax functions include issuing tax ID numbers and maintaining the tax censuses[^s25] | AEAT's Departamento de Informática Tributaria includes sub-directorates for IT planning and for operations (Explotación)[^s26][^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Benefits & pensions (tier 1) | Registro de Prestaciones Sociales Públicas (Register of Public Social Benefits)[^s28] | Instituto Nacional de la Seguridad Social (National Social Security Institute)[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Statutory health insurance (tier 1) | The SNS protected-population database generates a unique personal health ID code[^s29][^s30] | The law assigns the Ministry of Health to generate the unique SNS personal ID code[^s29][^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Registro Mercantil (Commercial Registry), with the Registro Mercantil Central[^s31] | Ministerio de Justicia (Ministry of Justice)[^s31] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | *Not yet sourced* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Vehicle Register of the Jefatura Central de Tráfico[^s32] | The Driver and Offender Register is kept by the Jefatura Central de Tráfico[^s32][^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | N.SIS II/SIRENE II (national part of the Schengen Information System)[^s17] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Registro Nacional de Armas (National Firearms Register)[^s34] | Intervención Central de Armas y Explosivos de la Dirección General de la Guardia Civil (Central Arms and Explosives Office, Guardia Civil)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Government payroll and personnel (tier 1) | The Central Personnel Register is the AGE register of its staff and of acts affecting their careers[^s35] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | base de datos de los resultados electorales del Ministerio del Interior (Ministry of the Interior election results database)[^s36] | Indra Soluciones Tecnologías de la Información, S.L.U. (contractor for the provisional-count service)[^s36] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | Central de Información de Riesgos (Central Credit Register), Banco de España[^s37] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | SIRDEE, the State digital emergency radio system, is coordinated by the Secretariat of State for Security[^s38] | The 112 emergency call service is provided by the Autonomous Communities through their own call centres[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Red de Alerta Nacional de Protección Civil (National Civil Protection Alert Network)[^s40] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Cecoel (Centro de Control Eléctrico, Electricity Control Centre)[^s41] | Red Eléctrica de España, S.A. (sole transmission operator)[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | Sistemas Automáticos de Información Hidrológica (SAIH) (Automatic Hydrological Information Systems), used by the Confederaciones Hidrográficas[^s43] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | Registro Nacional de Titulados Universitarios Oficiales (RNTUO) (National Register of Official University Graduates)[^s44] | Ministerio de Educación (Ministry of Education; the register now sits with the universities ministry)[^s45][^s46] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Official gazette and legislation (tier 1) | The BOE is published in an electronic edition[^s47] | The Agencia Estatal BOE edits, publishes and distributes the official gazette[^s47] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | Municipalities send their Padrón data to the INE for national coordination[^s48] | INE is an autonomous body with its own legal personality[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | Reference geographic information includes cadastral parcels and registered real estate[^s50] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -145,7 +145,7 @@ Tier 0 and 1 holdings for Spain without a verified source yet. Corrections and s
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -202,10 +202,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -214,8 +214,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -224,6 +224,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -256,7 +258,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -298,7 +300,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|

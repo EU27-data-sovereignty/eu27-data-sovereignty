@@ -53,47 +53,47 @@ The holdings Lithuania cannot let depend on infrastructure a foreign state can c
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Document issuance history (tier 0) | Asmens dokumentų išdavimo informacinė sistema, ADIS (Personal Documents Issuance Information System)[^s16] | Lietuvos Respublikos vidaus reikalų ministerija (Ministry of the Interior), with Informatikos ir ryšių departamentas maintaining the infrastructure[^s16] | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | Lietuvos Respublikos asmens tapatybės kortelė, ATK / eID (Lithuanian identity card eID)[^s4] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Judicial & criminal justice (tier 1) | Įtariamųjų, kaltinamųjų ir nuteistųjų registras, ĮKNR (Register of Suspects, Accused and Convicted Persons)[^s17] | Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Information Technology and Communications Department under the Ministry of the Interior)[^s17] | *Not stated in sources* | *Not yet measured* |
-| High | Police information systems (tier 1) | Ieškomų asmenų, neatpažintų lavonų ir nežinomų bejėgių asmenų žinybinis registras, IAŽR (Departmental Register of Wanted Persons, Unidentified Corpses and Unknown Helpless Persons)[^s18] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Firearms register (tier 1) | Ginklų registras (Firearms Register)[^s19] | Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Information Technology and Communications Department under the Ministry of the Interior)[^s19] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | Diplomų, atestatų ir kvalifikacijos pažymėjimų registras (Register of Diplomas, Certificates and Qualification Certificates)[^s20] | Nacionalinė švietimo agentūra (National Agency for Education)[^s20] | *Not stated in sources* | *Not yet measured* |
-| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Facial biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Fingerprint biometric (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Critical | Authentication audit log (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Document issuance history (tier 0) | Asmens dokumentų išdavimo informacinė sistema, ADIS (Personal Documents Issuance Information System)[^s16] | Lietuvos Respublikos vidaus reikalų ministerija (Ministry of the Interior), with Informatikos ir ryšių departamentas maintaining the infrastructure[^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | Lietuvos Respublikos asmens tapatybės kortelė, ATK / eID (Lithuanian identity card eID)[^s4] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | State PKI and qualified trust services (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Judicial & criminal justice (tier 1) | Įtariamųjų, kaltinamųjų ir nuteistųjų registras, ĮKNR (Register of Suspects, Accused and Convicted Persons)[^s17] | Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Information Technology and Communications Department under the Ministry of the Interior)[^s17] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Ieškomų asmenų, neatpažintų lavonų ir nežinomų bejėgių asmenų žinybinis registras, IAŽR (Departmental Register of Wanted Persons, Unidentified Corpses and Unknown Helpless Persons)[^s18] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Residence and migration status (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Beneficial ownership register (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Firearms register (tier 1) | Ginklų registras (Firearms Register)[^s19] | Informatikos ir ryšių departamentas prie Lietuvos Respublikos vidaus reikalų ministerijos (Information Technology and Communications Department under the Ministry of the Interior)[^s19] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | Diplomų, atestatų ir kvalifikacijos pažymėjimų registras (Register of Diplomas, Certificates and Qualification Certificates)[^s20] | Nacionalinė švietimo agentūra (National Agency for Education)[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
@@ -167,7 +167,7 @@ Tier 0 and 1 holdings for Lithuania without a verified source yet. Corrections a
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -224,10 +224,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -236,8 +236,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -246,6 +246,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -278,7 +280,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -320,7 +322,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|

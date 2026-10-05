@@ -54,6 +54,7 @@ const ROUTES = [
   '/country/NL',
   '/holdings',
   '/holdings/civil_registry',
+  '/infrastructure',
   '/sources',
   '/sovereignty',
   '/ask',

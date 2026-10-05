@@ -76,9 +76,11 @@ export function Holding({ bundle }: { bundle: Bundle }) {
   if (!meta) return <NotFound />
 
   const rows: { iso: string; name: string; cells: Span[] }[] = []
+  let columns: string[] = []
   for (const doc of Object.values(bundle.documents).sort((a, b) => a.name.localeCompare(b.name))) {
     const table = doc.sections.find(s => s.id === 'holdings')?.blocks.find(b => b.type === 'table')
     if (!table || table.type !== 'table') continue
+    columns = table.columns.slice(2).map(c => c.t)
     const row = table.rows.find(r => r[1]?.t.startsWith(`${meta.label} (`))
     if (row) rows.push({ iso: doc.iso, name: doc.name, cells: row.slice(2) })
   }
@@ -104,13 +106,7 @@ export function Holding({ bundle }: { bundle: Bundle }) {
         <table className="w-full min-w-[40rem] border-collapse text-sm">
           <thead>
             <tr className="border-b-2 border-[var(--color-accent)] bg-[var(--color-bg-emphasis)]">
-              {[
-                'Country',
-                'Register or system',
-                'Operator',
-                'Infrastructure',
-                'Records / size',
-              ].map(h => (
+              {['Country', ...columns].map(h => (
                 <th key={h} scope="col" className="px-2 py-1.5 text-left">
                   {h}
                 </th>

@@ -53,47 +53,47 @@ The holdings Denmark cannot let depend on infrastructure a foreign state can com
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
-| Priority | Holding | Register or system | Operator | Infrastructure dependency | Records / size |
-|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Det Centrale Personregister (CPR) - the Central Person Register[^s17] | CPR-administrationen (CPR Office), placed in the department of the Ministry of Research, Education and Digitalisation[^s18][^s17] | *Not stated in sources* | About 11.4 million persons, of which just under 6.1 million living persons[^s19] |
-| Critical | Facial biometric (tier 0) | Immigration authorities' biometric register (facial photos and fingerprints of foreign nationals for residence cards); retained 20 years (10 years for visa cases)[^s20] | Ministry of Immigration and Integration, Udlændingestyrelsen and SIRI[^s20][^s21] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | Immigration authorities' biometric register (fingerprints and facial photos of foreign nationals, captured for residence cards and identity control)[^s20] | Ministry of Immigration and Integration, Danish Immigration Service (Udlændingestyrelsen) and SIRI are responsible for the register[^s20][^s21] | *Not stated in sources* | *Not yet measured* |
-| Critical | Breeder document scans (tier 0) | Kirkeministeriet's common systems for personregistrering (church registration of births, names and deaths), used by parish registrars[^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | NemLog-in - the joint public digital login infrastructure through which authentications to public self-service solutions pass[^s23][^s24] | Digitaliseringsstyrelsen; NemLog-in described as a society-critical part of public digital infrastructure[^s25][^s26] | *Not stated in sources* | On average around 35 million logins per month through NemLog-in[^s27] |
-| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* |
-| High | State PKI and qualified trust services (tier 0) | Den Danske Stat Tillidstjenester (CA1) - Danish State trust services, delivered by Digitaliseringsstyrelsen on behalf of the Danish State[^s3] | Digitaliseringsstyrelsen; CA1 is a qualified trust service provider under eIDAS on the EU trusted list[^s3] | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | Politiets Efterretningstjeneste (PET) - domestic security intelligence; may collect information relevant to its activities[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | Det Centrale Pasregister (Pasregistret) - Central Passport Register, with Rigspolitiet (Danish National Police) as data controller[^s29][^s30] | Rigspolitiet; retention: deleted two years after passport expiry or holder's death[^s29] | National infrastructure[^s1] | *Not yet measured* |
-| High | Residence and migration status (tier 1) | Information systems in the immigration field incl. Udlændinge Informations Systemet (UIS), used for data exchange between authorities (formerly UIP portal)[^s31] | Udlændingestyrelsen (Danish Immigration Service) receives and processes asylum and other residence permit applications[^s32] | *Not stated in sources* | *Not yet measured* |
-| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Customs declarations (tier 1) | DMS (Declaration Management System) - customs system for import, export and transit declarations[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Statutory health insurance (tier 1) | sundhedskort and sikringsgruppe enrolment based on Det Centrale Personregister (CPR) (health insurance card and coverage group registration)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Beneficial ownership register (tier 1) | Beneficial ownership data held in CVR: legal persons and trusts obliged to register beneficial owners must be registered in CVR[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote and § 1(2) are on the page; § 1(2) says the register holds data on each vehicle and who it belongs to ('tilhørsforhold'). But the printed text calls the register 'DMR', and that name or abbreviation does not appear anywhere on…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Det Centrale Kriminalregister (Kriminalregistret) - Central Criminal Register[^s29][^s36] | Rigspolitiet is data controller; regulated by the kriminalregisterbekendtgørelse[^s29] | National infrastructure[^s1] | *Not yet measured* |
-| High | Police information systems (tier 1) | POLSAS - the police case management system[^s29][^s1] | *Not yet sourced* | National infrastructure[^s1] | *Not yet measured* |
-| High | Border and visa systems (tier 1) | Schengeninformationssystemet (SIS, Schengen Information System)[^s37] | Udlændingestyrelsen (Danish Immigration Service), for SIS return alerts[^s37] | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | Politiets Våbenregister (Police Firearms Register), Rigspolitiet data controller[^s29][^s38] | Rigspolitiet (data controller); police may also use the register for investigation and supervision of permits[^s29][^s38] | *Not stated in sources* | *Not yet measured* |
-| High | Treasury and state accounts (tier 1) | Statens Bevillings- og Regnskabsløsning (SBRL) - state appropriation and accounts solution supporting Finance Act and state accounts from FY2025[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Government payroll and personnel (tier 1) | Statens Lønløsning (the State Payroll Solution)[^s40] | Økonomistyrelsen (Agency for Public Finance and Management)[^s41] | *Not stated in sources* | ca. 180.000 statslige ansatte (state employees paid each month)[^s40] |
-| High | Election management and results (tier 1) | Election results system: municipalities enter manually counted vote totals into an IT system developed by KMD; Danmarks Statistik compiles results[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | TARGET DKK - Nationalbanken's payment system for krone settlement (via T2 and TIPS on TARGET Services, plus SPI for monetary-policy instruments and collateral)[^s43][^s44] | *Not yet sourced* | EU provider[^s43][^s44] | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | SINE (Sikkerhedsnettet) - Denmark's radio network for emergency communications; use mandatory under beredskabsloven § 29[^s45] | Center for Beredskabskommunikation (CFB), part of the Ministry of Civil Security and Emergency Preparedness; network operation by Dansk Beredskabskommunikation A/S[^s46][^s47] | *Not stated in sources* | *Not yet measured* |
-| High | Crisis management and civil protection (tier 1) | Sirenevarslingssystemet (the national siren warning system)[^s48] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Electricity grid control (tier 1) | Energinet carries out system-responsibility (TSO) activities, electricity transmission and gas transmission[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| High | Education (tier 1) | STADS (the university student administration system)[^s50] | *Not yet sourced* | *Not stated in sources* | Omkring 100.000 studerende (students)[^s50] |
-| High | Health records (tier 2) | Fælles Medicinkort (FMK) - Sundhedsdatastyrelsen's electronic register of every citizen's medication data (prescription, purchase, dispensing, dose changes)[^s51][^s52] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Public health surveillance (tier 2) | Det Danske Vaccinationsregister - national register of citizens' vaccinations, run by Statens Serum Institut[^s51] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | Danmarks Adresseregister (DAR) - authoritative register of road names and addresses[^s53] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
+|---|---|---|---|---|---|---|
+| Critical | Civil registry core (tier 0) | Det Centrale Personregister (CPR) - the Central Person Register[^s17] | CPR-administrationen (CPR Office), placed in the department of the Ministry of Research, Education and Digitalisation[^s18][^s17] | *Not yet sourced* | *Not stated in sources* | About 11.4 million persons, of which just under 6.1 million living persons[^s19] |
+| Critical | Facial biometric (tier 0) | Immigration authorities' biometric register (facial photos and fingerprints of foreign nationals for residence cards); retained 20 years (10 years for visa cases)[^s20] | Ministry of Immigration and Integration, Udlændingestyrelsen and SIRI[^s20][^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | Immigration authorities' biometric register (fingerprints and facial photos of foreign nationals, captured for residence cards and identity control)[^s20] | Ministry of Immigration and Integration, Danish Immigration Service (Udlændingestyrelsen) and SIRI are responsible for the register[^s20][^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Breeder document scans (tier 0) | Kirkeministeriet's common systems for personregistrering (church registration of births, names and deaths), used by parish registrars[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | NemLog-in - the joint public digital login infrastructure through which authentications to public self-service solutions pass[^s23][^s24] | Digitaliseringsstyrelsen; NemLog-in described as a society-critical part of public digital infrastructure[^s25][^s26] | *Not yet sourced* | *Not stated in sources* | On average around 35 million logins per month through NemLog-in[^s27] |
+| High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | State PKI and qualified trust services (tier 0) | Den Danske Stat Tillidstjenester (CA1) - Danish State trust services, delivered by Digitaliseringsstyrelsen on behalf of the Danish State[^s3] | Digitaliseringsstyrelsen; CA1 is a qualified trust service provider under eIDAS on the EU trusted list[^s3] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Intelligence services (tier 1) | Politiets Efterretningstjeneste (PET) - domestic security intelligence; may collect information relevant to its activities[^s28] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | Det Centrale Pasregister (Pasregistret) - Central Passport Register, with Rigspolitiet (Danish National Police) as data controller[^s29][^s30] | Rigspolitiet; retention: deleted two years after passport expiry or holder's death[^s29] | *Not yet sourced* | National infrastructure[^s1] | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Information systems in the immigration field incl. Udlændinge Informations Systemet (UIS), used for data exchange between authorities (formerly UIP portal)[^s31] | Udlændingestyrelsen (Danish Immigration Service) receives and processes asylum and other residence permit applications[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Customs declarations (tier 1) | DMS (Declaration Management System) - customs system for import, export and transit declarations[^s33] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Statutory health insurance (tier 1) | sundhedskort and sikringsgruppe enrolment based on Det Centrale Personregister (CPR) (health insurance card and coverage group registration)[^s34] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Beneficial ownership register (tier 1) | Beneficial ownership data held in CVR: legal persons and trusts obliged to register beneficial owners must be registered in CVR[^s35] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote and § 1(2) are on the page; § 1(2) says the register holds data on each vehicle and who it belongs to ('tilhørsforhold'). But the printed text calls the register 'DMR', and that name or abbreviation does not appear anywhere on…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Det Centrale Kriminalregister (Kriminalregistret) - Central Criminal Register[^s29][^s36] | Rigspolitiet is data controller; regulated by the kriminalregisterbekendtgørelse[^s29] | *Not yet sourced* | National infrastructure[^s1] | *Not yet measured* |
+| High | Police information systems (tier 1) | POLSAS - the police case management system[^s29][^s1] | *Not yet sourced* | *Not yet sourced* | National infrastructure[^s1] | *Not yet measured* |
+| High | Border and visa systems (tier 1) | Schengeninformationssystemet (SIS, Schengen Information System)[^s37] | Udlændingestyrelsen (Danish Immigration Service), for SIS return alerts[^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Politiets Våbenregister (Police Firearms Register), Rigspolitiet data controller[^s29][^s38] | Rigspolitiet (data controller); police may also use the register for investigation and supervision of permits[^s29][^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Treasury and state accounts (tier 1) | Statens Bevillings- og Regnskabsløsning (SBRL) - state appropriation and accounts solution supporting Finance Act and state accounts from FY2025[^s39] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Government payroll and personnel (tier 1) | Statens Lønløsning (the State Payroll Solution)[^s40] | Økonomistyrelsen (Agency for Public Finance and Management)[^s41] | *Not yet sourced* | *Not stated in sources* | ca. 180.000 statslige ansatte (state employees paid each month)[^s40] |
+| High | Election management and results (tier 1) | Election results system: municipalities enter manually counted vote totals into an IT system developed by KMD; Danmarks Statistik compiles results[^s42] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Central bank systems (tier 1) | TARGET DKK - Nationalbanken's payment system for krone settlement (via T2 and TIPS on TARGET Services, plus SPI for monetary-policy instruments and collateral)[^s43][^s44] | *Not yet sourced* | At Easter 2025 Nationalbanken moved krone settlement from its own system Kronos2 to the pan-European TARGET Services platform[^s44] | EU provider[^s43][^s44] | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | SINE (Sikkerhedsnettet) - Denmark's radio network for emergency communications; use mandatory under beredskabsloven § 29[^s45] | Center for Beredskabskommunikation (CFB), part of the Ministry of Civil Security and Emergency Preparedness; network operation by Dansk Beredskabskommunikation A/S[^s46][^s47] | SINE network operation is supplied by Dansk Beredskabskommunikation A/S (ownership not stated in this source)[^s45] | *Not stated in sources* | *Not yet measured* |
+| High | Crisis management and civil protection (tier 1) | Sirenevarslingssystemet (the national siren warning system)[^s48] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electricity grid control (tier 1) | Energinet carries out system-responsibility (TSO) activities, electricity transmission and gas transmission[^s49] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | STADS (the university student administration system)[^s50] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | Omkring 100.000 studerende (students)[^s50] |
+| High | Health records (tier 2) | Fælles Medicinkort (FMK) - Sundhedsdatastyrelsen's electronic register of every citizen's medication data (prescription, purchase, dispensing, dose changes)[^s51][^s52] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Public health surveillance (tier 2) | Det Danske Vaccinationsregister - national register of citizens' vaccinations, run by Statens Serum Institut[^s51] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| Standard | Geospatial base data (tier 3) | Danmarks Adresseregister (DAR) - authoritative register of road names and addresses[^s53] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Denmark without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1340 facts are printed, 3340 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
 
 ### How sources were found
 
@@ -205,10 +205,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 619 |
-| T2 competent public body or audit office | 607 |
-| T3 other institution or company | 7 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 107 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
+| T2 competent public body or audit office | 638 |
+| T3 other institution or company | 10 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
 
 ### Evidence grades
 
@@ -217,8 +217,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 105 |
-| Standard | 1235 |
+| Strong | 109 |
+| Standard | 1291 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -227,6 +227,8 @@ There is no numeric confidence score: nothing has calibrated one.
 Priority of a holding. Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 Infrastructure exposure counts, for each state, the verified holdings whose cited source says where the infrastructure runs. Silence counts as not stated, never as national.
+
+Key infrastructure and hosting, the EU-27 overview, lists every holding whose hosting a checked source states. Each cell is a copy of the one the state's own report prints, so it has the same source and the same fact check, and a withheld value stays withheld. Its counts per state are of printed facts only.
 
 Data-sovereignty placement. An input without a checked source is unknown and counts as not demonstrated: never as sovereign, never as dependent. Each state is placed by the first rule it meets, in this order:
 
@@ -259,7 +261,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1340 printed facts pass the fact check.
+In this build, 1340 of 1400 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -301,7 +303,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1340 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -333,7 +335,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Denmark
 
-59 of 59 printed facts about Denmark pass.
+59 of 61 printed facts about Denmark pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -386,9 +388,11 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:DK:government_payroll:count | Government payroll and personnel: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:electoral_management:register | Election management and results: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:DK:central_bank:hosting | Central bank systems: hosting | unrecorded | none | never checked |  |
 | record:DK:central_bank:foreign_dependency | Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:emergency_communications:operator | Emergency calls and public-safety radio: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
+| record:DK:emergency_communications:hosting | Emergency calls and public-safety radio: hosting | unrecorded | none | never checked |  |
 | record:DK:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:DK:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -459,6 +463,6 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s52]: Sundhedsdatastyrelsen — Fælles Medicinkort. Fælles Medicinkort. <https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort> ([archived](https://web.archive.org/web/20260616035826/https://sundhedsdatastyrelsen.dk/digitale-loesninger/faelles-medicinkort))
 [^s53]: Retsinformation / Styrelsen for Dataforsyning og Effektivisering — Adresseloven (LOV nr 136 af 01/02/2017), 2017-02-01. Adresseloven (LOV nr 136 af 01/02/2017). <https://www.retsinformation.dk/eli/lta/2017/136/xml>
 
-**Evidence grades:** 5 Strong, 54 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 6 Strong, 55 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.
