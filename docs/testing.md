@@ -5,6 +5,8 @@ check is shown to **fail first**, on a deliberately broken input, before it is t
 
 ## Where the checks run
 
+The whole pipeline, its timings and the proposed speed-ups are in [`process.md`](process.md).
+
 | When | What runs | Where it is defined |
 |---|---|---|
 | Before every commit you make | `./test.sh` (all stages below); the security gate on commit | `test.sh` |

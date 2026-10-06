@@ -7,6 +7,22 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-06
 
+### Fixed: a new high-severity advisory in the web build's dependencies blocked the deploy
+
+- **What happened.** The deploy of `2deb629` stopped at `npm audit`. GHSA-68fv-2mgg-jv7q (`source-map-js` up to
+  1.2.1, an event-loop denial of service through crafted source maps) was published after the previous deploy.
+- **Exposure.** None at runtime. The package is used only by the build tools (Vite, PostCSS, Tailwind, jsdom), and
+  it reads only this repository's own source maps.
+- **The fix.** `npm audit fix` in `web/` moves the transitive dependency to 1.2.2. Only the lockfile changes, and
+  the direct pins stay exact.
+
+### Added: the process diagram and proposed optimisations
+
+- `docs/process.md`: the whole pipeline as a Mermaid diagram, from research through the fact check to the deploy
+  and monitoring, with measured deploy timings.
+- It proposes eight optimisations, each keyed by content so a stale cache cannot be used. None is implemented
+  yet. Optimisations 7 and 8 change how facts are checked, so they wait for the owner and a decision entry.
+
 ### Changed: the hosting-operators work is fact-checked: 56 of 60 confirmed (#95)
 
 - **How it got onto `main`.** The hosting-operators work, from another session, went to `main` unreviewed inside

@@ -35,7 +35,7 @@ git push                # main → gate → build → deploy → smoke test (Git
 ./run.sh deploy         # manual fallback from this machine: same gate, same prebuilt upload
 ```
 
-Everything else is in [`DEPLOYMENT.md`](DEPLOYMENT.md): topology and headers, the pipeline, what
+The whole pipeline is diagrammed in [`docs/process.md`](docs/process.md). Everything else is in [`DEPLOYMENT.md`](DEPLOYMENT.md): topology and headers, the pipeline, what
 `.vercelignore` must keep off Vercel, the stages, the freshness check, known gaps, and the deploy history.
 
 ### The domain
