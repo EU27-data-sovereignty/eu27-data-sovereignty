@@ -35,7 +35,7 @@ import provenance  # noqa: E402
 # its own, and EE K2, LU C2, PL C1 and RO C1 had been admitted at the reviewer's changed value.
 # Raised 2026-09-30 by the charset fix, the Eurostat vintages (#84: the employment column now
 # reproduces) and the first vetting run (#83).
-FLOORS = {"param": 162, "assumption": 0, "record": 1511, "indicator": 142}
+FLOORS = {"param": 162, "assumption": 0, "record": 1523, "indicator": 142}
 
 
 class Register(unittest.TestCase):

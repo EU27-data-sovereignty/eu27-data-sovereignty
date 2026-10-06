@@ -202,6 +202,25 @@ verdicts, so admission still reproduces. The finding must also have:
 It then replaces the withheld value, and the old citations are marked superseded. The new value is a changed
 fact, so `/factcheck` checks it before it can be deployed (`docs/fact-check.md`).
 
+### 3f. A research wave: filling one kind of gap (`docs/gaps.md`)
+
+A wave researches only gaps, one field at a time across the holdings already known, and re-vets no printed
+fact. Its input comes from `docs/gaps.md` (`model/gaps.py`), so a wave is the gap list turned into work. The
+first wave is `hosting`: the hosting and foreign dependency of each known holding.
+
+1. `python3 model/vetting.py prepare --wave hosting [--iso NL]` writes the input. Each gap names its holding's
+   register and operator, so the search starts from the name. Start with a **one-state pilot** and measure its
+   cost from the agent transcripts. The full wave runs only on the owner's OK of that cost.
+2. Run the same workflow (`scriptPath: model/research/vetting/workflow.js`). For a `:hosting` gap, the
+   researcher names every organisation the quote names, in `organisations` (staging only, for #96). For
+   every gap it does not fill, it says in `searched` what it tried.
+3. `./run.sh vet stage <task output file> --run <id> --round`. A wave is staged as a round, so nothing
+   earlier is overwritten.
+4. `./run.sh vet hosts`, `./run.sh vet verify`, `./run.sh admit`, then `/factcheck` for the new facts. These
+   are the same steps as above.
+
+Each search in a wave counts as a pass in `docs/gaps.md`. A gap with two passes and no finding is dry.
+
 ## 4. Quotes the check missed
 
 ```sh

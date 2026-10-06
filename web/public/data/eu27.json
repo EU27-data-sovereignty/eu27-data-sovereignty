@@ -46565,6 +46565,75 @@
     "value_as_found": "e-ID cards carry an Authentication Certificate and a Signature Certificate"
    }
   ],
+  "record:NL:authentication_audit_log:hosting": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "not in the quote: PICARD",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [
+      "PICARD"
+     ],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The DigiD service is based on central processing of data. This takes place on an application platform that runs on (technical) infrastructure in a government data centre.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "De DigiD voorziening is gebaseerd op centrale verwerking van gegevens. Dit gebeurt op een applicatieplatform dat draait op een (technische) infrastructuur in een overheidsdatacenter.",
+    "quote": "De DigiD voorziening is gebaseerd op centrale verwerking van gegevens. Dit gebeurt op een applicatieplatform dat draait op een (technische) infrastructuur in een overheidsdatacenter. [English: The DigiD service is based on central processing of data. This takes place on an application platform that runs on (technical) infrastructure in a government data centre.]",
+    "retrieved": "2026-10-06",
+    "source_id": "logius-nl:6b03829bb7",
+    "value_as_found": "DigiD runs on an application platform on infrastructure in a government data centre (overheidsdatacenter)"
+   },
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "comparable to the services Solvinity currently provides to Logius, namely the management work on the PICARD platform. This concerns providers that can demonstrably meet the requirements for continuity, security, compliance and scalability of the DigiD service.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "vergelijkbaar zijn met de dienstverlening die Solvinity momenteel aan Logius levert, namelijk de beheerwerkzaamheden van het PICARD-platform. Het gaat daarbij om aanbieders die aantoonbaar kunnen voldoen aan de eisen voor continuïteit, beveiliging, compliance en schaalbaarheid van de DigiD-dienstverlening.",
+    "quote": "vergelijkbaar zijn met de dienstverlening die Solvinity momenteel aan Logius levert, namelijk de beheerwerkzaamheden van het PICARD-platform. Het gaat daarbij om aanbieders die aantoonbaar kunnen voldoen aan de eisen voor continuïteit, beveiliging, compliance en schaalbaarheid van de DigiD-dienstverlening. [English: comparable to the services Solvinity currently provides to Logius, namely the management work on the PICARD platform. This concerns providers that can demonstrably meet the requirements for continuity, security, compliance and scalability of the DigiD service.]",
+    "retrieved": "2026-10-06",
+    "source_id": "zoek-officielebekendmakingen-nl:edaa1074dc",
+    "value_as_found": "Solvinity currently manages the PICARD platform for Logius on which the DigiD service depends"
+   }
+  ],
   "record:NL:authentication_audit_log:operator": [
    {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
@@ -46804,6 +46873,40 @@
     "retrieved": "2026-09-30",
     "source_id": "nl-alert-nl:c1106b2e65",
     "value_as_found": "NL-Alert (national public warning system)"
+   }
+  ],
+  "record:NL:customs:hosting": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "IBM carries out the modifications to the Customs Declarations Management System (DMS) and manages this system.",
+    "grade": "Standard",
+    "locator": "PDF text",
+    "original": "IBM voert de aanpassingen in het Douaneaangiften Management Systeem (DMS) uit en beheert dit systeem.",
+    "quote": "IBM voert de aanpassingen in het Douaneaangiften Management Systeem (DMS) uit en beheert dit systeem. [English: IBM carries out the modifications to the Customs Declarations Management System (DMS) and manages this system.]",
+    "retrieved": "2026-10-06",
+    "source_id": "tweedekamer-nl:9db1f11767",
+    "value_as_found": "IBM modifies and manages (beheert) the Douaneaangiften Management Systeem (DMS)"
    }
   ],
   "record:NL:customs:register": [
@@ -47314,6 +47417,40 @@
     "value_as_found": "tien meldkamers (ten control rooms)"
    }
   ],
+  "record:NL:emergency_communications:hosting": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "manages the control rooms for all emergency services and provides a network of ten operationally and technically interconnected control-room locations. It does so as an autonomous unit within the police organisation with its own management, budget and staff.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "beheert voor alle hulpdiensten de meldkamers en zorgt voor een netwerk van tien operationeel en technisch met elkaar verbonden meldkamerlocaties. Dit doet zij als een zelfstandig onderdeel binnen de politie-organisatie met een eigen sturing, budget en medewerkers.",
+    "quote": "beheert voor alle hulpdiensten de meldkamers en zorgt voor een netwerk van tien operationeel en technisch met elkaar verbonden meldkamerlocaties. Dit doet zij als een zelfstandig onderdeel binnen de politie-organisatie met een eigen sturing, budget en medewerkers. [English: manages the control rooms for all emergency services and provides a network of ten operationally and technically interconnected control-room locations. It does so as an autonomous unit within the police organisation with its own management, budget and staff.]",
+    "retrieved": "2026-10-06",
+    "source_id": "meldkamersamenwerking-nl:6a1f9e3841",
+    "value_as_found": "The Landelijke Meldkamer Samenwerking (LMS), an autonomous unit within the police organisation, manages the control rooms and their interconnected network of control-room locations"
+   }
+  ],
   "record:NL:emergency_communications:operator": [
    {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
@@ -47444,6 +47581,72 @@
     "value_as_found": "Fingerprints taken for a travel document are kept only until issuance (or non-issuance) is registered, and used only for issuing"
    }
   ],
+  "record:NL:government_payroll:foreign_dependency": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "blind review agreed (reviewer: same model as the researcher)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "exact",
+     "review": "blind, same model",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal"
+    },
+    "confidence": "official",
+    "gloss": "The project started with preparations at the end of 2014 and was completed in mid-2017 with a successful migration. Since then all P-Direkt servers have run under the State's own management.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Het project is eind 2014 gestart met de voorbereidingen en medio 2017 afgerond met een succesvolle migratie. Sindsdien draaien alle servers van P-Direkt in eigen Rijksbeheer.",
+    "quote": "Het project is eind 2014 gestart met de voorbereidingen en medio 2017 afgerond met een succesvolle migratie. Sindsdien draaien alle servers van P-Direkt in eigen Rijksbeheer. [English: The project started with preparations at the end of 2014 and was completed in mid-2017 with a successful migration. Since then all P-Direkt servers have run under the State's own management.]",
+    "retrieved": "2026-10-06",
+    "source_id": "zoek-officielebekendmakingen-nl:318bde7c33",
+    "value_as_found": "national"
+   }
+  ],
+  "record:NL:government_payroll:hosting": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "In the transition to the Government Data Centre, P-Direkt, SSC-ICT and Match (the data centre where the servers previously ran) worked closely together.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Bij de transitie naar het Overheids Data Centrum hebben P-Direkt, SSC-ICT en Match (het datacenter waar de servers eerst draaiden) nauw samengewerkt.",
+    "quote": "Bij de transitie naar het Overheids Data Centrum hebben P-Direkt, SSC-ICT en Match (het datacenter waar de servers eerst draaiden) nauw samengewerkt. [English: In the transition to the Government Data Centre, P-Direkt, SSC-ICT and Match (the data centre where the servers previously ran) worked closely together.]",
+    "retrieved": "2026-10-06",
+    "source_id": "zoek-officielebekendmakingen-nl:318bde7c33",
+    "value_as_found": "P-Direkt's servers moved to the Overheids Data Centrum (Government Data Centre) of SSC-ICT"
+   }
+  ],
   "record:NL:government_payroll:register": [
    {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
@@ -47517,37 +47720,68 @@
   ],
   "record:NL:health_records:operator": [
    {
-    "checked_by": "research.py: quote exact in fetched document",
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
     "checklist": [
-     "T3 other institution or company (private foundation)",
+     "T1 authoritative original (official law portal)",
      "official source",
      "quote found (exact match) in the hashed document",
      "archived copy of this URL",
      "value is a machine summary of the quote",
-     "every figure found in the original",
      "non-English source, machine-translated"
     ],
     "checks": {
      "archived": true,
      "document_hashed": true,
-     "figures_matched": true,
+     "figures_matched": false,
      "language": "machine-translated",
      "names_not_in_quote": [],
      "quote_match": "exact",
      "source": "official",
-     "tier": 3,
-     "tier_kind": "private_foundation",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
      "value": "summary"
     },
     "confidence": "official",
-    "gloss": "AORTA, with the facilities in the National Switch Point, has existed since 2012 and is managed by VZVZ.",
+    "gloss": "As I told you during the committee debate, I have no role in organising data exchange in healthcare. The Association of Care Providers for Care Communication (VZVZ) manages the LSP.",
     "grade": "Standard",
     "locator": "page text",
-    "original": "AORTA, met de voorzieningen in het Landelijk Schakelpunt, bestaat sinds 2012 en is in beheer bij de Vereniging van Zorgaanbieders voor Zorgcommunicatie (VZVZ).",
-    "quote": "AORTA, met de voorzieningen in het Landelijk Schakelpunt, bestaat sinds 2012 en is in beheer bij de Vereniging van Zorgaanbieders voor Zorgcommunicatie (VZVZ). [English: AORTA, with the facilities in the National Switch Point, has existed since 2012 and is managed by VZVZ.]",
-    "retrieved": "2026-09-29",
-    "source_id": "aorta-lsp-nl:b5dd9e1e0f",
-    "value_as_found": "AORTA/LSP managed by VZVZ since 2012"
+    "original": "Zoals ik u heb gemeld tijdens het AO heb ik geen rol bij de organisatie van de gegevensuitwisseling in de zorg. De Vereniging van Zorgaanbieders voor Zorgcommunicatie (VZVZ) beheert het LSP.",
+    "quote": "Zoals ik u heb gemeld tijdens het AO heb ik geen rol bij de organisatie van de gegevensuitwisseling in de zorg. De Vereniging van Zorgaanbieders voor Zorgcommunicatie (VZVZ) beheert het LSP. [English: As I told you during the committee debate, I have no role in organising data exchange in healthcare. The Association of Care Providers for Care Communication (VZVZ) manages the LSP.]",
+    "retrieved": "2026-10-06",
+    "source_id": "zoek-officielebekendmakingen-nl:9be1fa4222",
+    "value_as_found": "Vereniging van Zorgaanbieders voor Zorgcommunicatie (VZVZ) (Association of Care Providers for Care Communication)"
+   },
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The manager of the National Switch Point is VZVZ Servicecentrum, the executive organisation of the Dutch association VZVZ.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "De beheerder van het Landelijk Schakelpunt is VZVZ Servicecentrum, de uitvoeringsorganisatie van de Nederlandse vereniging VZVZ.",
+    "quote": "De beheerder van het Landelijk Schakelpunt is VZVZ Servicecentrum, de uitvoeringsorganisatie van de Nederlandse vereniging VZVZ. [English: The manager of the National Switch Point is VZVZ Servicecentrum, the executive organisation of the Dutch association VZVZ.]",
+    "retrieved": "2026-10-06",
+    "source_id": "zoek-officielebekendmakingen-nl:d3f09ad164",
+    "value_as_found": "VZVZ Servicecentrum (executive organisation of the association VZVZ)"
    }
   ],
   "record:NL:health_records:register": [
@@ -47582,6 +47816,38 @@
     "retrieved": "2026-09-29",
     "source_id": "aorta-lsp-nl:ad10d4680e",
     "value_as_found": "LSP is a national infrastructure through which care providers exchange patients' medical data"
+   },
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "promised your Chamber to send information on the security of data shared via the National Switch Point (LSP).",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "uw Kamer toegezegd om informatie te sturen over de beveiliging van gegevens die gedeeld worden via het Landelijk Schakelpunt (LSP).",
+    "quote": "uw Kamer toegezegd om informatie te sturen over de beveiliging van gegevens die gedeeld worden via het Landelijk Schakelpunt (LSP). [English: promised your Chamber to send information on the security of data shared via the National Switch Point (LSP).]",
+    "retrieved": "2026-10-06",
+    "source_id": "zoek-officielebekendmakingen-nl:9be1fa4222",
+    "value_as_found": "Landelijk Schakelpunt (LSP) (National Switch Point)"
    }
   ],
   "record:NL:issuance_history:operator": [
@@ -47655,6 +47921,40 @@
     "value_as_found": "Basisregister Reisdocumenten (BR) (Basic Register of Travel Documents)"
    }
   ],
+  "record:NL:judicial_criminal:hosting": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The Functional Management (FB) and Technical Application Management (TAB) teams handle the day-to-day management, maintenance and (further) development of the Judicial Documentation System (JDS).",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "De teams Functioneel Beheer (FB) en Technisch Applicatiebeheer (TAB) verzorgen het dagelijkse beheer, onderhoud en (door)ontwikkeling van het Justitieel Documentatie Systeem (JDS).",
+    "quote": "De teams Functioneel Beheer (FB) en Technisch Applicatiebeheer (TAB) verzorgen het dagelijkse beheer, onderhoud en (door)ontwikkeling van het Justitieel Documentatie Systeem (JDS). [English: The Functional Management (FB) and Technical Application Management (TAB) teams handle the day-to-day management, maintenance and (further) development of the Judicial Documentation System (JDS).]",
+    "retrieved": "2026-10-06",
+    "source_id": "justid-nl:eef8335f6e",
+    "value_as_found": "Justid's own Functioneel Beheer and Technisch Applicatiebeheer teams run day-to-day management of the Justitieel Documentatie Systeem (JDS)"
+   }
+  ],
   "record:NL:judicial_criminal:operator": [
    {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
@@ -47723,6 +48023,40 @@
     "value_as_found": "Justitiële Documentatie (Judicial Documentation, the criminal records system)"
    }
   ],
+  "record:NL:land_property:hosting": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "An important step was the move to a KPN platform that is not tied to one specific cloud solution.",
+    "grade": "Standard",
+    "locator": "PDF text",
+    "original": "Een belangrijke stap was de overstap naar een platform van KPN dat niet vastzit aan één specifieke cloudoplossing.",
+    "quote": "Een belangrijke stap was de overstap naar een platform van KPN dat niet vastzit aan één specifieke cloudoplossing. [English: An important step was the move to a KPN platform that is not tied to one specific cloud solution.]",
+    "retrieved": "2026-10-06",
+    "source_id": "eerstekamer-nl:eb031fecab",
+    "value_as_found": "Kadaster moved to a platform of KPN that is not tied to one specific cloud solution"
+   }
+  ],
   "record:NL:official_gazette:operator": [
    {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
@@ -47789,6 +48123,40 @@
     "retrieved": "2026-09-30",
     "source_id": "wetten-overheid-nl:9d05496e81",
     "value_as_found": "Staatsblad en Staatscourant (Bulletin of Acts and Decrees; Government Gazette)"
+   }
+  ],
+  "record:NL:public_health_surveillance:hosting": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "Supplier Sopra Steria carries out the technical application management and the application development.",
+    "grade": "Standard",
+    "locator": "PDF text",
+    "original": "Leverancier Sopra Steria voert het technisch applicatiebeheer en de applicatieontwikkeling uit.",
+    "quote": "Leverancier Sopra Steria voert het technisch applicatiebeheer en de applicatieontwikkeling uit. [English: Supplier Sopra Steria carries out the technical application management and the application development.]",
+    "retrieved": "2026-10-06",
+    "source_id": "adviescollegeicttoetsing-nl:50c8a422b7",
+    "value_as_found": "Sopra Steria carries out technical application management and application development of Praeventis"
    }
   ],
   "record:NL:public_health_surveillance:register": [
@@ -47891,6 +48259,38 @@
     "value_as_found": "vreemdelingenadministratie (aliens administration)"
    }
   ],
+  "record:NL:statistics_microdata:foreign_dependency": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T1 authoritative original (statistics office)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "blind review agreed (reviewer: same model as the researcher)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "exact",
+     "review": "blind, same model",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "statistics_office"
+    },
+    "confidence": "official",
+    "gloss": "The files themselves remain on a server at CBS and a researcher can run analyses remotely via a secure internet connection.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "De bestanden zelf blijven op een server bij CBS en via een beveiligde internetverbinding kan een onderzoeker op afstand analyses uitvoeren.",
+    "quote": "De bestanden zelf blijven op een server bij CBS en via een beveiligde internetverbinding kan een onderzoeker op afstand analyses uitvoeren. [English: The files themselves remain on a server at CBS and a researcher can run analyses remotely via a secure internet connection.]",
+    "retrieved": "2026-10-06",
+    "source_id": "cbs-nl:a29fcd51c6",
+    "value_as_found": "national"
+   }
+  ],
   "record:NL:statistics_microdata:hosting": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -47957,6 +48357,40 @@
     "retrieved": "2026-09-29",
     "source_id": "cbs-nl:4c20e66a3a",
     "value_as_found": "Microdata: linkable person, business and address-level data for authorised researchers"
+   }
+  ],
+  "record:NL:trust_services_pki:hosting": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "English source"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "english",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "",
+    "grade": "Strong",
+    "locator": "page text",
+    "original": "KPN B.V. is the supplier of technical services for the Root and Intermediate Certificates for Logius, including maintaining the corresponding Certificate Revocation Lists (CRLs)",
+    "quote": "KPN B.V. is the supplier of technical services for the Root and Intermediate Certificates for Logius, including maintaining the corresponding Certificate Revocation Lists (CRLs)",
+    "retrieved": "2026-10-06",
+    "source_id": "cps-pkioverheid-nl:144bb49b5a",
+    "value_as_found": "KPN B.V. supplies the technical services for the PKIoverheid Root and Intermediate Certificates for Logius, including the CRLs"
    }
   ],
   "record:NL:trust_services_pki:operator": [
@@ -48028,6 +48462,72 @@
     "retrieved": "2026-09-29",
     "source_id": "logius-nl:b7d25aebe2",
     "value_as_found": "TSPs issue certificates under the State of the Netherlands trust anchor"
+   }
+  ],
+  "record:NL:vehicle_licensing:foreign_dependency": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "blind review agreed (reviewer: same model as the researcher)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "exact",
+     "review": "blind, same model",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body"
+    },
+    "confidence": "official",
+    "gloss": "An important condition in the RDW's cloud policy is that register data is stored in its own data centre.",
+    "grade": "Standard",
+    "locator": "PDF text",
+    "original": "Een belangrijke voorwaarde in het cloudbeleid van de RDW is dat registerdata wordt opgeslagen in het eigen datacenter.",
+    "quote": "Een belangrijke voorwaarde in het cloudbeleid van de RDW is dat registerdata wordt opgeslagen in het eigen datacenter. [English: An important condition in the RDW's cloud policy is that register data is stored in its own data centre.]",
+    "retrieved": "2026-10-06",
+    "source_id": "rdw-nl:fedb1ae027",
+    "value_as_found": "national"
+   }
+  ],
+  "record:NL:vehicle_licensing:hosting": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "An important condition in the RDW's cloud policy is that register data is stored in its own data centre.",
+    "grade": "Standard",
+    "locator": "PDF text",
+    "original": "Een belangrijke voorwaarde in het cloudbeleid van de RDW is dat registerdata wordt opgeslagen in het eigen datacenter.",
+    "quote": "Een belangrijke voorwaarde in het cloudbeleid van de RDW is dat registerdata wordt opgeslagen in het eigen datacenter. [English: An important condition in the RDW's cloud policy is that register data is stored in its own data centre.]",
+    "retrieved": "2026-10-06",
+    "source_id": "rdw-nl:fedb1ae027",
+    "value_as_found": "RDW register data is stored in RDW's own data centre (eigen datacenter)"
    }
   ],
   "record:NL:vehicle_licensing:operator": [
@@ -74279,7 +74779,7 @@
      "foreign_dependency": "",
      "holder": "Logius",
      "holder_url": "https://www.digid.nl/over-digid/privacy",
-     "hosting": "",
+     "hosting": "Solvinity currently manages the PICARD platform for Logius on which the DigiD service depends",
      "label": "Authentication audit log",
      "legal_basis": "",
      "publisher": "DigiD / Logius",
@@ -74321,7 +74821,7 @@
      "foreign_dependency": "",
      "holder": "PKIoverheid is a trust framework managed by Logius on behalf of Ministry of BZK",
      "holder_url": "https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wat-pkioverheid",
-     "hosting": "",
+     "hosting": "KPN B.V. supplies the technical services for the PKIoverheid Root and Intermediate Certificates for Logius, including the CRLs",
      "label": "State PKI and qualified trust services",
      "legal_basis": "",
      "publisher": "Logius",
@@ -74384,7 +74884,7 @@
      "foreign_dependency": "",
      "holder": "Douane (Netherlands Customs), part of Belastingdienst, Ministry of Finance",
      "holder_url": "https://wetten.overheid.nl/BWBR0023746/2026-07-01",
-     "hosting": "",
+     "hosting": "IBM modifies and manages (beheert) the Douaneaangiften Management Systeem (DMS)",
      "label": "Customs declarations",
      "legal_basis": "General Customs Act implements the Union Customs Code",
      "publisher": "Douane / Ministerie van Financiën",
@@ -74447,7 +74947,7 @@
      "foreign_dependency": "",
      "holder": "Kadaster",
      "holder_url": "https://www.kadaster.nl/",
-     "hosting": "",
+     "hosting": "Kadaster moved to a platform of KPN that is not tied to one specific cloud solution",
      "label": "Land & property registry",
      "legal_basis": "",
      "publisher": "Kadaster",
@@ -74507,10 +75007,10 @@
      "confidence": "official",
      "data_size": "",
      "domain": "transport",
-     "foreign_dependency": "",
+     "foreign_dependency": "national",
      "holder": "RDW manages and is controller of the vehicle registration register",
      "holder_url": "https://wetten.overheid.nl/BWBR0006622/2026-09-01",
-     "hosting": "",
+     "hosting": "RDW register data is stored in RDW's own data centre (eigen datacenter)",
      "label": "Vehicle & licensing",
      "legal_basis": "Road Traffic Act 1994 art. 42: vehicle registration register is a base register",
      "publisher": "Overheid.nl Wettenbank",
@@ -74531,7 +75031,7 @@
      "foreign_dependency": "",
      "holder": "Justitiële Informatiedienst (Justid, Judicial Information Service)",
      "holder_url": "https://www.justid.nl/onderwerpen/s/strafblad-en-het-justitieel-documentatie-systeem",
-     "hosting": "",
+     "hosting": "Justid's own Functioneel Beheer and Technisch Applicatiebeheer teams run day-to-day management of the Justitieel Documentatie Systeem (JDS)",
      "label": "Judicial & criminal justice",
      "legal_basis": "",
      "publisher": "Justitiële Informatiedienst (Justid)",
@@ -74654,10 +75154,10 @@
      "confidence": "official",
      "data_size": "",
      "domain": "governance",
-     "foreign_dependency": "",
+     "foreign_dependency": "national",
      "holder": "",
      "holder_url": "https://zoek.officielebekendmakingen.nl/blg-1249197.pdf",
-     "hosting": "",
+     "hosting": "P-Direkt's servers moved to the Overheids Data Centrum (Government Data Centre) of SSC-ICT",
      "label": "Government payroll and personnel",
      "legal_basis": "",
      "publisher": "Ministerie van BZK",
@@ -74762,7 +75262,7 @@
      "foreign_dependency": "",
      "holder": "politie (national police)",
      "holder_url": "https://wetten.overheid.nl/BWBR0031788",
-     "hosting": "",
+     "hosting": "The Landelijke Meldkamer Samenwerking (LMS), an autonomous unit within the police organisation, manages the control rooms and their interconnected network of control-room locations",
      "label": "Emergency calls and public-safety radio",
      "legal_basis": "",
      "publisher": "wetten.overheid.nl (KOOP)",
@@ -74865,21 +75365,21 @@
      "data_size": "",
      "domain": "health",
      "foreign_dependency": "",
-     "holder": "AORTA/LSP managed by VZVZ since 2012",
+     "holder": "VZVZ Servicecentrum (executive organisation of the association VZVZ)",
      "holder_url": "https://www.aorta-lsp.nl/over-aorta-lsp",
      "hosting": "Medical data remain stored decentrally at the source (GP or pharmacist)",
      "label": "Health records",
      "legal_basis": "Wabvpz defines electronic exchange systems",
-     "publisher": "VZVZ",
-     "quote": "Het Landelijk Schakelpunt (LSP) is een landelijke infrastructuur voor de gezondheidszorg, waarmee zorgaanbieders medische gegevens van hun patiënten uitwisselen. [English: The National Switch Point (LSP) is a national healthcare infrastructure through which care providers exchange their patients' medical data.]",
+     "publisher": "Minister van VWS / Tweede Kamer",
+     "quote": "uw Kamer toegezegd om informatie te sturen over de beveiliging van gegevens die gedeeld worden via het Landelijk Schakelpunt (LSP). [English: promised your Chamber to send information on the security of data shared via the National Switch Point (LSP).]",
      "record_class": "health_records",
      "record_count": "",
      "recoverability": "low",
      "register": "LSP is a national infrastructure through which care providers exchange patients' medical data",
-     "retrieved": "2026-09-29",
+     "retrieved": "2026-10-06",
      "status": "held",
      "tier": 2,
-     "url": "https://www.aorta-lsp.nl/"
+     "url": "https://zoek.officielebekendmakingen.nl/kst-27529-170.html"
     },
     {
      "confidence": "official",
@@ -74888,7 +75388,7 @@
      "foreign_dependency": "",
      "holder": "RIVM (National Institute for Public Health and the Environment)",
      "holder_url": "https://zoek.officielebekendmakingen.nl/kst-36621-3.html",
-     "hosting": "",
+     "hosting": "Sopra Steria carries out technical application management and application development of Praeventis",
      "label": "Public health surveillance",
      "legal_basis": "Public Health Act art. 6b: vaccination programme set by order in council",
      "publisher": "Tweede Kamer der Staten-Generaal",
@@ -74906,7 +75406,7 @@
      "confidence": "official",
      "data_size": "",
      "domain": "statistics",
-     "foreign_dependency": "",
+     "foreign_dependency": "national",
      "holder": "Centraal Bureau voor de Statistiek (CBS)",
      "holder_url": "https://wetten.overheid.nl/BWBR0015926/2025-09-01",
      "hosting": "Research is done inside the CBS microdata environment",
@@ -120298,7 +120798,7 @@
         [
          {
           "role": "method",
-          "t": "If any of the 32 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
+          "t": "If any of the 30 tier 0/1 holdings whose hosting is not yet sourced turns out to run on non-EU infrastructure: Dependent on non-EU providers."
          }
         ]
        ],
@@ -120639,8 +121139,12 @@
           "t": "Logius"
          },
          {
-          "role": "gap",
-          "t": "Not yet sourced"
+          "c": [
+           "record:NL:authentication_audit_log:hosting"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "Solvinity currently manages the PICARD platform for Logius on which the DigiD service depends"
          },
          {
           "role": "gap",
@@ -120753,8 +121257,12 @@
           "t": "PKIoverheid is a trust framework managed by Logius on behalf of Ministry of BZK"
          },
          {
-          "role": "gap",
-          "t": "Not yet sourced"
+          "c": [
+           "record:NL:trust_services_pki:hosting"
+          ],
+          "g": "Strong",
+          "role": "fact",
+          "t": "KPN B.V. supplies the technical services for the PKIoverheid Root and Intermediate Certificates for Logius, including the CRLs"
          },
          {
           "role": "gap",
@@ -120783,8 +121291,12 @@
           "t": "Not yet sourced"
          },
          {
-          "role": "gap",
-          "t": "Not yet sourced"
+          "c": [
+           "record:NL:land_property:hosting"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "Kadaster moved to a platform of KPN that is not tied to one specific cloud solution"
          },
          {
           "role": "gap",
@@ -120821,8 +121333,12 @@
           "t": "Justitiële Informatiedienst (Justid, Judicial Information Service)"
          },
          {
-          "role": "gap",
-          "t": "Not yet sourced"
+          "c": [
+           "record:NL:judicial_criminal:hosting"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "Justid's own Functioneel Beheer and Technisch Applicatiebeheer teams run day-to-day management of the Justitieel Documentatie Systeem (JDS)"
          },
          {
           "role": "gap",
@@ -121056,8 +121572,12 @@
           "t": "Not yet sourced"
          },
          {
-          "role": "gap",
-          "t": "Not yet sourced"
+          "c": [
+           "record:NL:customs:hosting"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "IBM modifies and manages (beheert) the Douaneaangiften Management Systeem (DMS)"
          },
          {
           "role": "gap",
@@ -121211,40 +121731,6 @@
          },
          {
           "role": "label",
-          "t": "Vehicle & licensing (tier 1)"
-         },
-         {
-          "role": "gap",
-          "t": "Not yet sourced"
-         },
-         {
-          "c": [
-           "record:NL:vehicle_licensing:operator"
-          ],
-          "g": "Standard",
-          "role": "fact",
-          "t": "RDW manages and is controller of the vehicle registration register"
-         },
-         {
-          "role": "gap",
-          "t": "Not yet sourced"
-         },
-         {
-          "role": "gap",
-          "t": "Not stated in sources"
-         },
-         {
-          "role": "gap",
-          "t": "Not yet measured"
-         }
-        ],
-        [
-         {
-          "role": "label",
-          "t": "High"
-         },
-         {
-          "role": "label",
           "t": "Border and visa systems (tier 1)"
          },
          {
@@ -121326,40 +121812,6 @@
          {
           "role": "gap",
           "t": "—"
-         }
-        ],
-        [
-         {
-          "role": "label",
-          "t": "High"
-         },
-         {
-          "role": "label",
-          "t": "Government payroll and personnel (tier 1)"
-         },
-         {
-          "c": [
-           "record:NL:government_payroll:register"
-          ],
-          "g": "Standard",
-          "role": "fact",
-          "t": "registratiesysteem P-Direkt (P-Direkt HR/payroll registration system)"
-         },
-         {
-          "role": "gap",
-          "t": "Not yet sourced"
-         },
-         {
-          "role": "gap",
-          "t": "Not yet sourced"
-         },
-         {
-          "role": "gap",
-          "t": "Not stated in sources"
-         },
-         {
-          "role": "gap",
-          "t": "Not yet measured"
          }
         ],
         [
@@ -121456,8 +121908,12 @@
           "t": "politie (national police)"
          },
          {
-          "role": "gap",
-          "t": "Not yet sourced"
+          "c": [
+           "record:NL:emergency_communications:hosting"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "The Landelijke Meldkamer Samenwerking (LMS), an autonomous unit within the police organisation, manages the control rooms and their interconnected network of control-room locations"
          },
          {
           "role": "gap",
@@ -121627,7 +122083,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "AORTA/LSP managed by VZVZ since 2012"
+          "t": "VZVZ Servicecentrum (executive organisation of the association VZVZ)"
          },
          {
           "c": [
@@ -121640,6 +122096,49 @@
          {
           "role": "gap",
           "t": "Not stated in sources"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet measured"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Standard"
+         },
+         {
+          "role": "label",
+          "t": "Vehicle & licensing (tier 1)"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         },
+         {
+          "c": [
+           "record:NL:vehicle_licensing:operator"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "RDW manages and is controller of the vehicle registration register"
+         },
+         {
+          "c": [
+           "record:NL:vehicle_licensing:hosting"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "RDW register data is stored in RDW's own data centre (eigen datacenter)"
+         },
+         {
+          "c": [
+           "record:NL:vehicle_licensing:foreign_dependency"
+          ],
+          "g": "Standard",
+          "k": "categorical",
+          "role": "fact",
+          "t": "National infrastructure"
          },
          {
           "role": "gap",
@@ -121691,6 +122190,49 @@
          },
          {
           "role": "label",
+          "t": "Government payroll and personnel (tier 1)"
+         },
+         {
+          "c": [
+           "record:NL:government_payroll:register"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "registratiesysteem P-Direkt (P-Direkt HR/payroll registration system)"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         },
+         {
+          "c": [
+           "record:NL:government_payroll:hosting"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "P-Direkt's servers moved to the Overheids Data Centrum (Government Data Centre) of SSC-ICT"
+         },
+         {
+          "c": [
+           "record:NL:government_payroll:foreign_dependency"
+          ],
+          "g": "Standard",
+          "k": "categorical",
+          "role": "fact",
+          "t": "National infrastructure"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet measured"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Standard"
+         },
+         {
+          "role": "label",
           "t": "Public health surveillance (tier 2)"
          },
          {
@@ -121706,8 +122248,12 @@
           "t": "Not yet sourced"
          },
          {
-          "role": "gap",
-          "t": "Not yet sourced"
+          "c": [
+           "record:NL:public_health_surveillance:hosting"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "Sopra Steria carries out technical application management and application development of Praeventis"
          },
          {
           "role": "gap",
@@ -121778,8 +122324,13 @@
           "t": "Research is done inside the CBS microdata environment"
          },
          {
-          "role": "gap",
-          "t": "Not stated in sources"
+          "c": [
+           "record:NL:statistics_microdata:foreign_dependency"
+          ],
+          "g": "Standard",
+          "k": "categorical",
+          "role": "fact",
+          "t": "National infrastructure"
          },
          {
           "role": "gap",
@@ -121857,7 +122408,7 @@
          },
          {
           "role": "method",
-          "t": "1"
+          "t": "4"
          }
         ],
         [
@@ -121897,7 +122448,7 @@
          },
          {
           "role": "method",
-          "t": "23"
+          "t": "20"
          }
         ]
        ],
@@ -134038,7 +134589,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -134191,6 +134742,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -136233,7 +136806,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -136386,6 +136959,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -137743,7 +138338,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -137896,6 +138491,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -139422,7 +140039,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -139575,6 +140192,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -141543,7 +142182,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -141696,6 +142335,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -143734,7 +144395,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -143887,6 +144548,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -145577,7 +146260,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -145730,6 +146413,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -147602,7 +148307,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -147755,6 +148460,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -149463,7 +150190,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -149616,6 +150343,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -151484,7 +152233,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -151637,6 +152386,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -153405,7 +154176,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -153558,6 +154329,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -154655,7 +155448,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -154808,6 +155601,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -157036,7 +157851,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -157189,6 +158004,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -159035,7 +159872,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -159188,6 +160025,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -161656,7 +162515,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -161809,6 +162668,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -163861,7 +164742,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -164014,6 +164895,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -165860,7 +166763,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -166013,6 +166916,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -166798,7 +167723,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -166951,6 +167876,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -167736,7 +168683,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -167889,6 +168836,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -169402,7 +170371,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -169555,6 +170524,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -170673,7 +171664,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -170829,6 +171820,28 @@
          [
           {
            "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_e9645602-884"
           },
           {
@@ -170971,7 +171984,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "51 of 51 printed facts about Netherlands pass."
+          "t": "63 of 63 printed facts about Netherlands pass."
          }
         ],
         "type": "p"
@@ -171405,6 +172418,32 @@
          [
           {
            "role": "label",
+           "t": "record:NL:authentication_audit_log:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Authentication audit log: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f7d14e4d-412"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:NL:issuance_history:register"
           },
           {
@@ -171561,6 +172600,58 @@
          [
           {
            "role": "label",
+           "t": "record:NL:trust_services_pki:hosting"
+          },
+          {
+           "role": "method",
+           "t": "State PKI and qualified trust services: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f7d14e4d-412"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:NL:land_property:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Land & property registry: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f7d14e4d-412"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:NL:judicial_criminal:register"
           },
           {
@@ -171608,6 +172699,32 @@
           {
            "role": "method",
            "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:NL:judicial_criminal:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Judicial & criminal justice: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f7d14e4d-412"
           }
          ],
          [
@@ -171769,6 +172886,32 @@
          [
           {
            "role": "label",
+           "t": "record:NL:customs:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Customs declarations: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f7d14e4d-412"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:NL:benefits_pensions:register"
           },
           {
@@ -171852,58 +172995,6 @@
           {
            "role": "method",
            "t": "Beneficial ownership register: the body that operates it"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "supported"
-          },
-          {
-           "role": "method",
-           "t": "wf_da123db1-a4e"
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:NL:vehicle_licensing:operator"
-          },
-          {
-           "role": "method",
-           "t": "Vehicle & licensing: the body that operates it"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "supported"
-          },
-          {
-           "role": "method",
-           "t": "wf_da123db1-a4e"
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:NL:government_payroll:register"
-          },
-          {
-           "role": "method",
-           "t": "Government payroll and personnel: the name of the register or system"
           },
           {
            "role": "method",
@@ -172024,6 +173115,32 @@
           {
            "role": "method",
            "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:NL:emergency_communications:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Emergency calls and public-safety radio: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f7d14e4d-412"
           }
          ],
          [
@@ -172153,7 +173270,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_f7d14e4d-412"
           }
          ],
          [
@@ -172179,7 +173296,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_f7d14e4d-412"
           }
          ],
          [
@@ -172206,6 +173323,84 @@
           {
            "role": "method",
            "t": "wf_e9645602-884"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:NL:vehicle_licensing:operator"
+          },
+          {
+           "role": "method",
+           "t": "Vehicle & licensing: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:NL:vehicle_licensing:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Vehicle & licensing: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f7d14e4d-412"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:NL:vehicle_licensing:foreign_dependency"
+          },
+          {
+           "role": "method",
+           "t": "Vehicle & licensing: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f7d14e4d-412"
           }
          ],
          [
@@ -172263,6 +173458,84 @@
          [
           {
            "role": "label",
+           "t": "record:NL:government_payroll:register"
+          },
+          {
+           "role": "method",
+           "t": "Government payroll and personnel: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:NL:government_payroll:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Government payroll and personnel: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f7d14e4d-412"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:NL:government_payroll:foreign_dependency"
+          },
+          {
+           "role": "method",
+           "t": "Government payroll and personnel: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f7d14e4d-412"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:NL:public_health_surveillance:register"
           },
           {
@@ -172284,6 +173557,32 @@
           {
            "role": "method",
            "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:NL:public_health_surveillance:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Public health surveillance: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f7d14e4d-412"
           }
          ],
          [
@@ -172336,6 +173635,32 @@
           {
            "role": "method",
            "t": "wf_e9645602-884"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:NL:statistics_microdata:foreign_dependency"
+          },
+          {
+           "role": "method",
+           "t": "Statistical microdata: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_f7d14e4d-412"
           }
          ]
         ],
@@ -172391,7 +173716,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -172544,6 +173869,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -174104,7 +175451,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -174257,6 +175604,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -175905,7 +177274,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -176058,6 +177427,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -177072,7 +178463,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -177225,6 +178616,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -178725,7 +180138,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -178878,6 +180291,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -180932,7 +182367,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -181085,6 +182520,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_f7d14e4d-412"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "14"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 14"
+          },
+          {
+           "role": "method",
+           "t": "supported: 14"
+          }
+         ],
          [
           {
            "role": "label",
@@ -182651,7 +184108,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
+         "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
         }
        ],
        "type": "p"
@@ -182804,6 +184261,28 @@
         }
        ],
        "rows": [
+        [
+         {
+          "role": "label",
+          "t": "wf_f7d14e4d-412"
+         },
+         {
+          "role": "method",
+          "t": "2026-10-06"
+         },
+         {
+          "role": "method",
+          "t": "14"
+         },
+         {
+          "role": "method",
+          "t": "claude-fable-5-1: 14"
+         },
+         {
+          "role": "method",
+          "t": "supported: 14"
+         }
+        ],
         [
          {
           "role": "label",
@@ -183401,11 +184880,11 @@
          },
          {
           "role": "method",
-          "t": "51"
+          "t": "63"
          },
          {
           "role": "method",
-          "t": "51"
+          "t": "63"
          },
          {
           "role": "method",
@@ -183609,7 +185088,7 @@
    "LU": "Fact check: 21 of 21 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/LU",
    "LV": "Fact check: 49 of 49 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/LV",
    "MT": "Fact check: 32 of 32 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/MT",
-   "NL": "Fact check: 51 of 51 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/NL",
+   "NL": "Fact check: 63 of 63 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/NL",
    "PL": "Fact check: 49 of 49 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/PL",
    "PT": "Fact check: 49 of 49 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/PT",
    "RO": "Fact check: 28 of 28 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/RO",
@@ -183865,7 +185344,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "Every holding whose hosting a checked source states, by member state: 56 printed, and any withheld by the fact check marked as disputed. Each cell is the one the state's own report prints, with the same source. A holding not listed here has no sourced hosting yet; that is a gap in the evidence, not a finding that it is hosted nationally."
+        "t": "Every holding whose hosting a checked source states, by member state: 65 printed, and any withheld by the fact check marked as disputed. Each cell is the one the state's own report prints, with the same source. A holding not listed here has no sourced hosting yet; that is a gap in the evidence, not a finding that it is hosted nationally."
        }
       ],
       "type": "p"
@@ -185770,6 +187249,150 @@
         },
         {
          "role": "label",
+         "t": "Authentication audit log (tier 0)"
+        },
+        {
+         "c": [
+          "record:NL:authentication_audit_log:register"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "DigiD gebruiksgeschiedenis (DigiD usage history)"
+        },
+        {
+         "c": [
+          "record:NL:authentication_audit_log:operator"
+         ],
+         "g": "Strong",
+         "role": "fact",
+         "t": "Logius"
+        },
+        {
+         "c": [
+          "record:NL:authentication_audit_log:hosting"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "Solvinity currently manages the PICARD platform for Logius on which the DigiD service depends"
+        },
+        {
+         "role": "gap",
+         "t": "Not stated in sources"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Netherlands"
+        },
+        {
+         "role": "label",
+         "t": "State PKI and qualified trust services (tier 0)"
+        },
+        {
+         "c": [
+          "record:NL:trust_services_pki:register"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "TSPs issue certificates under the State of the Netherlands trust anchor"
+        },
+        {
+         "c": [
+          "record:NL:trust_services_pki:operator"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "PKIoverheid is a trust framework managed by Logius on behalf of Ministry of BZK"
+        },
+        {
+         "c": [
+          "record:NL:trust_services_pki:hosting"
+         ],
+         "g": "Strong",
+         "role": "fact",
+         "t": "KPN B.V. supplies the technical services for the PKIoverheid Root and Intermediate Certificates for Logius, including the CRLs"
+        },
+        {
+         "role": "gap",
+         "t": "Not stated in sources"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Netherlands"
+        },
+        {
+         "role": "label",
+         "t": "Land & property registry (tier 1)"
+        },
+        {
+         "role": "gap",
+         "t": "Not yet sourced"
+        },
+        {
+         "role": "gap",
+         "t": "Not yet sourced"
+        },
+        {
+         "c": [
+          "record:NL:land_property:hosting"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "Kadaster moved to a platform of KPN that is not tied to one specific cloud solution"
+        },
+        {
+         "role": "gap",
+         "t": "Not stated in sources"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Netherlands"
+        },
+        {
+         "role": "label",
+         "t": "Judicial & criminal justice (tier 1)"
+        },
+        {
+         "c": [
+          "record:NL:judicial_criminal:register"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "Justitiële Documentatie (Judicial Documentation, the criminal records system)"
+        },
+        {
+         "c": [
+          "record:NL:judicial_criminal:operator"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "Justitiële Informatiedienst (Justid, Judicial Information Service)"
+        },
+        {
+         "c": [
+          "record:NL:judicial_criminal:hosting"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "Justid's own Functioneel Beheer and Technisch Applicatiebeheer teams run day-to-day management of the Justitieel Documentatie Systeem (JDS)"
+        },
+        {
+         "role": "gap",
+         "t": "Not stated in sources"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Netherlands"
+        },
+        {
+         "role": "label",
          "t": "Digital identity credentials (tier 0)"
         },
         {
@@ -185813,6 +187436,78 @@
         },
         {
          "role": "label",
+         "t": "Customs declarations (tier 1)"
+        },
+        {
+         "c": [
+          "record:NL:customs:register"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "Current declaration system AGS is being replaced by the new DMS"
+        },
+        {
+         "role": "gap",
+         "t": "Not yet sourced"
+        },
+        {
+         "c": [
+          "record:NL:customs:hosting"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "IBM modifies and manages (beheert) the Douaneaangiften Management Systeem (DMS)"
+        },
+        {
+         "role": "gap",
+         "t": "Not stated in sources"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Netherlands"
+        },
+        {
+         "role": "label",
+         "t": "Emergency calls and public-safety radio (tier 1)"
+        },
+        {
+         "c": [
+          "record:NL:emergency_communications:register"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "meldkamers (emergency dispatch control rooms)"
+        },
+        {
+         "c": [
+          "record:NL:emergency_communications:operator"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "politie (national police)"
+        },
+        {
+         "c": [
+          "record:NL:emergency_communications:hosting"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "The Landelijke Meldkamer Samenwerking (LMS), an autonomous unit within the police organisation, manages the control rooms and their interconnected network of control-room locations"
+        },
+        {
+         "role": "gap",
+         "t": "Not stated in sources"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Netherlands"
+        },
+        {
+         "role": "label",
          "t": "Health records (tier 2)"
         },
         {
@@ -185829,7 +187524,7 @@
          ],
          "g": "Standard",
          "role": "fact",
-         "t": "AORTA/LSP managed by VZVZ since 2012"
+         "t": "VZVZ Servicecentrum (executive organisation of the association VZVZ)"
         },
         {
          "c": [
@@ -185838,6 +187533,118 @@
          "g": "Standard",
          "role": "fact",
          "t": "Medical data remain stored decentrally at the source (GP or pharmacist)"
+        },
+        {
+         "role": "gap",
+         "t": "Not stated in sources"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Netherlands"
+        },
+        {
+         "role": "label",
+         "t": "Vehicle & licensing (tier 1)"
+        },
+        {
+         "role": "gap",
+         "t": "Not yet sourced"
+        },
+        {
+         "c": [
+          "record:NL:vehicle_licensing:operator"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "RDW manages and is controller of the vehicle registration register"
+        },
+        {
+         "c": [
+          "record:NL:vehicle_licensing:hosting"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "RDW register data is stored in RDW's own data centre (eigen datacenter)"
+        },
+        {
+         "c": [
+          "record:NL:vehicle_licensing:foreign_dependency"
+         ],
+         "g": "Standard",
+         "k": "categorical",
+         "role": "fact",
+         "t": "National infrastructure"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Netherlands"
+        },
+        {
+         "role": "label",
+         "t": "Government payroll and personnel (tier 1)"
+        },
+        {
+         "c": [
+          "record:NL:government_payroll:register"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "registratiesysteem P-Direkt (P-Direkt HR/payroll registration system)"
+        },
+        {
+         "role": "gap",
+         "t": "Not yet sourced"
+        },
+        {
+         "c": [
+          "record:NL:government_payroll:hosting"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "P-Direkt's servers moved to the Overheids Data Centrum (Government Data Centre) of SSC-ICT"
+        },
+        {
+         "c": [
+          "record:NL:government_payroll:foreign_dependency"
+         ],
+         "g": "Standard",
+         "k": "categorical",
+         "role": "fact",
+         "t": "National infrastructure"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Netherlands"
+        },
+        {
+         "role": "label",
+         "t": "Public health surveillance (tier 2)"
+        },
+        {
+         "c": [
+          "record:NL:public_health_surveillance:register"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "Praeventis centrally registers vaccinations of every participant in the national immunisation programme"
+        },
+        {
+         "role": "gap",
+         "t": "Not yet sourced"
+        },
+        {
+         "c": [
+          "record:NL:public_health_surveillance:hosting"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "Sopra Steria carries out technical application management and application development of Praeventis"
         },
         {
          "role": "gap",
@@ -185874,8 +187681,13 @@
          "t": "Research is done inside the CBS microdata environment"
         },
         {
-         "role": "gap",
-         "t": "Not stated in sources"
+         "c": [
+          "record:NL:statistics_microdata:foreign_dependency"
+         ],
+         "g": "Standard",
+         "k": "categorical",
+         "role": "fact",
+         "t": "National infrastructure"
         }
        ],
        [
@@ -186954,27 +188766,27 @@
         },
         {
          "role": "method",
+         "t": "10"
+        },
+        {
+         "role": "method",
+         "t": "0"
+        },
+        {
+         "role": "method",
+         "t": "0"
+        },
+        {
+         "role": "method",
+         "t": "0"
+        },
+        {
+         "role": "method",
          "t": "3"
         },
         {
          "role": "method",
-         "t": "0"
-        },
-        {
-         "role": "method",
-         "t": "0"
-        },
-        {
-         "role": "method",
-         "t": "0"
-        },
-        {
-         "role": "method",
-         "t": "1"
-        },
-        {
-         "role": "method",
-         "t": "18"
+         "t": "16"
         }
        ],
        [
@@ -187244,7 +189056,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1396 facts are printed, 4324 values are withheld as gaps, and 76 are withheld as disputed."
+        "t": "This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1408 facts are printed, 4312 values are withheld as gaps, and 76 are withheld as disputed."
        }
       ],
       "type": "p"
@@ -187375,7 +189187,7 @@
         },
         {
          "role": "method",
-         "t": "261"
+         "t": "264"
         }
        ],
        [
@@ -187395,7 +189207,7 @@
         },
         {
          "role": "method",
-         "t": "365"
+         "t": "377"
         }
        ],
        [
@@ -187415,7 +189227,7 @@
         },
         {
          "role": "method",
-         "t": "461"
+         "t": "486"
         }
        ],
        [
@@ -187435,7 +189247,7 @@
         },
         {
          "role": "method",
-         "t": "178"
+         "t": "177"
         }
        ],
        [
@@ -187445,7 +189257,7 @@
         },
         {
          "role": "method",
-         "t": "172"
+         "t": "177"
         }
        ],
        [
@@ -187465,7 +189277,7 @@
         },
         {
          "role": "method",
-         "t": "23"
+         "t": "24"
         }
        ],
        [
@@ -187644,7 +189456,7 @@
         },
         {
          "role": "method",
-         "t": "628"
+         "t": "634"
         }
        ],
        [
@@ -187654,7 +189466,7 @@
         },
         {
          "role": "method",
-         "t": "636"
+         "t": "644"
         }
        ],
        [
@@ -187664,7 +189476,7 @@
         },
         {
          "role": "method",
-         "t": "10"
+         "t": "8"
         }
        ],
        [
@@ -187728,7 +189540,7 @@
         },
         {
          "role": "method",
-         "t": "108"
+         "t": "109"
         }
        ],
        [
@@ -187738,7 +189550,7 @@
         },
         {
          "role": "method",
-         "t": "1288"
+         "t": "1299"
         }
        ]
       ],
@@ -188111,7 +189923,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "In this build, 1396 of 1396 printed facts pass the fact check."
+        "t": "In this build, 1408 of 1408 printed facts pass the fact check."
        }
       ],
       "type": "p"
@@ -188479,6 +190291,19 @@
    "title": "Découvrir la Base Adresse Nationale",
    "url": "https://adresse.data.gouv.fr/decouvrir-la-BAN"
   },
+  "adviescollegeicttoetsing-nl:50c8a422b7": {
+   "archived_url": "https://web.archive.org/web/20250909012810/https://www.adviescollegeicttoetsing.nl/site/binaries/site-content/collections/documents/2025/06/23/advies-doorontwikkeling-praeventis/advies-programma-doorontwikkeling-praeventis.pdf",
+   "doc_type": "report",
+   "label": "Adviescollege ICT-toetsing — Advies programma Doorontwikkeling Praeventis, 2025-06-23",
+   "language": "",
+   "license": "",
+   "notes": "sha256 819b0003b0b6f283d098bfe7f25c51e0a2d01c9d651cae2a2fcf0ef341b16102 (application/pdf), fetched 2026-10-06",
+   "published": "2025-06-23",
+   "publisher": "Adviescollege ICT-toetsing",
+   "source_id": "adviescollegeicttoetsing-nl:50c8a422b7",
+   "title": "Advies programma Doorontwikkeling Praeventis",
+   "url": "https://www.adviescollegeicttoetsing.nl/site/binaries/site-content/collections/documents/2025/06/23/advies-doorontwikkeling-praeventis/advies-programma-doorontwikkeling-praeventis.pdf"
+  },
   "agid-gov-it:0ee49b73ca": {
    "archived_url": "https://web.archive.org/web/20260923012741/https://www.agid.gov.it/it/piattaforme/siope",
    "doc_type": "webpage",
@@ -188660,19 +190485,6 @@
    "source_id": "aorta-lsp-nl:ad10d4680e",
    "title": "AORTA-LSP",
    "url": "https://www.aorta-lsp.nl/"
-  },
-  "aorta-lsp-nl:b5dd9e1e0f": {
-   "archived_url": "https://web.archive.org/web/20260710170946/https://www.aorta-lsp.nl/over-aorta-lsp",
-   "doc_type": "webpage",
-   "label": "VZVZ — Over AORTA-LSP",
-   "language": "nl",
-   "license": "",
-   "notes": "sha256 7dc35dd0aeec7cc259b6875320dc09fc08c47478f0c66b3536e527fdc5714df3 (text/html), fetched 2026-09-29",
-   "published": "",
-   "publisher": "VZVZ",
-   "source_id": "aorta-lsp-nl:b5dd9e1e0f",
-   "title": "Over AORTA-LSP",
-   "url": "https://www.aorta-lsp.nl/over-aorta-lsp"
   },
   "apambiente-pt:23c2c3685b": {
    "archived_url": "https://web.archive.org/web/20260617184912/https://apambiente.pt/agua/sistema-nacional-de-informacao-de-recursos-hidricos-snirh",
@@ -190364,6 +192176,19 @@
    "title": "Microdata: Zelf onderzoek doen",
    "url": "https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen"
   },
+  "cbs-nl:a29fcd51c6": {
+   "archived_url": "https://web.archive.org/web/20260413144015/https://www.cbs.nl/nl-nl/corporate/2017/04/toegang-tot-microdata-cbs-flexibeler-voor-onderzoekers",
+   "doc_type": "webpage",
+   "label": "Centraal Bureau voor de Statistiek — Toegang tot microdata CBS flexibeler voor onderzoekers, 2017-01",
+   "language": "",
+   "license": "",
+   "notes": "sha256 957107e327ade1865f5a14a4fea3519732b917e1793f660f6b7979dd634f9534 (text/html), fetched 2026-10-06",
+   "published": "2017-01",
+   "publisher": "Centraal Bureau voor de Statistiek",
+   "source_id": "cbs-nl:a29fcd51c6",
+   "title": "Toegang tot microdata CBS flexibeler voor onderzoekers",
+   "url": "https://www.cbs.nl/nl-nl/corporate/2017/04/toegang-tot-microdata-cbs-flexibeler-voor-onderzoekers"
+  },
   "ccss-public-lu:fe41e35d97": {
    "archived_url": "https://web.archive.org/web/20260324045749/https://ccss.public.lu/fr/ccss/attributions.html",
    "doc_type": "webpage",
@@ -190818,6 +192643,19 @@
    "source_id": "cpr-dk:97615a4356",
    "title": "CPR-kontoret (forside)",
    "url": "https://www.cpr.dk/"
+  },
+  "cps-pkioverheid-nl:144bb49b5a": {
+   "archived_url": "https://web.archive.org/web/20260712001717/https://cps.pkioverheid.nl/pkioverheid-cps-unified-v5.6.html",
+   "doc_type": "webpage",
+   "label": "Logius – Policy Authority PKIoverheid — CPS PA PKIoverheid Unified version 5.6, 2026-07-15",
+   "language": "",
+   "license": "",
+   "notes": "sha256 bf52fe9682700d642963ebfa02cd17f9b2fd47faa38675ccc77f0640ce647880 (text/html), fetched 2026-10-06",
+   "published": "2026-07-15",
+   "publisher": "Logius – Policy Authority PKIoverheid",
+   "source_id": "cps-pkioverheid-nl:144bb49b5a",
+   "title": "CPS PA PKIoverheid Unified version 5.6",
+   "url": "https://cps.pkioverheid.nl/pkioverheid-cps-unified-v5.6.html"
   },
   "crc-bg:091930d4a9": {
    "archived_url": "",
@@ -192287,6 +194125,19 @@
    "source_id": "edu-ro:3157e3b959",
    "title": "Sistem integrat de management al informațiilor în educație",
    "url": "https://www.edu.ro/proiect_sistem_integrat_management_informatii_educationale"
+  },
+  "eerstekamer-nl:eb031fecab": {
+   "archived_url": "",
+   "doc_type": "annual_report",
+   "label": "Kadaster (sent to the Eerste Kamer) — Jaarverslag Kadaster 2025, 2026",
+   "language": "",
+   "license": "",
+   "notes": "sha256 36f216f2bfa525ef27c52f160f73695579f51729fc88d10f1a535c6b3f83e932 (application/pdf), fetched 2026-10-06",
+   "published": "2026",
+   "publisher": "Kadaster (sent to the Eerste Kamer)",
+   "source_id": "eerstekamer-nl:eb031fecab",
+   "title": "Jaarverslag Kadaster 2025",
+   "url": "https://www.eerstekamer.nl/behandeling/20260414/jaarverslag_kadaster_2025_bijlage/document3/f=/vmxgpusqksww.pdf"
   },
   "ehealthrecord-gov-gr:229375a8be": {
    "archived_url": "",
@@ -194784,6 +196635,19 @@
    "title": "Strafblad en het Justitieel Documentatie Systeem",
    "url": "https://www.justid.nl/onderwerpen/s/strafblad-en-het-justitieel-documentatie-systeem"
   },
+  "justid-nl:eef8335f6e": {
+   "archived_url": "",
+   "doc_type": "webpage",
+   "label": "Justitiële Informatiedienst (Justid) — Functioneel en technisch applicatiebeheer - Justitieel…",
+   "language": "",
+   "license": "",
+   "notes": "sha256 875cd1d6e8fcc388a1a3025f505c3f8c73e562f31c955f887233a088cfa59a70 (text/html), fetched 2026-10-06",
+   "published": "",
+   "publisher": "Justitiële Informatiedienst (Justid)",
+   "source_id": "justid-nl:eef8335f6e",
+   "title": "Functioneel en technisch applicatiebeheer - Justitieel Documentatie Systeem (JDS)",
+   "url": "https://www.justid.nl/producten-en-dienstencatalogus/nieuwbouw-en-onderhoud-systemen/informatiesystemen/justitieel-documentatie-systeem-jds"
+  },
   "kase-gov-lv:2e529b3d08": {
    "archived_url": "",
    "doc_type": "webpage",
@@ -195577,6 +197441,19 @@
    "title": "Par nodokļiem un nodevām",
    "url": "https://likumi.lv/ta/id/33946"
   },
+  "logius-nl:6b03829bb7": {
+   "archived_url": "https://web.archive.org/web/20261002113720/https://www.logius.nl/onze-dienstverlening/toegang/digid/documentatie/gegevensverwerkingen-digid",
+   "doc_type": "webpage",
+   "label": "Logius — Gegevensverwerkingen DigiD",
+   "language": "",
+   "license": "",
+   "notes": "sha256 4523c995b5660bffe738eb720032b9c7fc51a918e9e5658671bfbe78886e082a (text/html), fetched 2026-10-06",
+   "published": "",
+   "publisher": "Logius",
+   "source_id": "logius-nl:6b03829bb7",
+   "title": "Gegevensverwerkingen DigiD",
+   "url": "https://www.logius.nl/onze-dienstverlening/toegang/digid/documentatie/gegevensverwerkingen-digid"
+  },
   "logius-nl:78fa158f87": {
    "archived_url": "https://web.archive.org/web/20260413115624/https://www.logius.nl/onze-dienstverlening/toegang/digid/wie-doet-wat",
    "doc_type": "webpage",
@@ -195849,6 +197726,19 @@
    "source_id": "mcf-se:ea628ff787",
    "title": "Rakel",
    "url": "https://www.mcf.se/sv/amnesomraden/samhallsviktiga-kommunikationstjanster/rakel/"
+  },
+  "meldkamersamenwerking-nl:6a1f9e3841": {
+   "archived_url": "https://web.archive.org/web/20260513041639/https://www.meldkamersamenwerking.nl/over-lms/",
+   "doc_type": "webpage",
+   "label": "Landelijke Meldkamer Samenwerking — Over LMS",
+   "language": "",
+   "license": "",
+   "notes": "sha256 db347bd394f8046d9ed09cdf6379cf9ef5d910e2007fc4281997efa6f77d4ee8 (text/html), fetched 2026-10-06",
+   "published": "",
+   "publisher": "Landelijke Meldkamer Samenwerking",
+   "source_id": "meldkamersamenwerking-nl:6a1f9e3841",
+   "title": "Over LMS",
+   "url": "https://www.meldkamersamenwerking.nl/over-lms/"
   },
   "messervices-cyber-gouv-fr:86b9503348": {
    "archived_url": "",
@@ -197891,6 +199781,19 @@
    "title": "Registo Central do Beneficiário Efetivo",
    "url": "https://rcbe.justica.gov.pt/"
   },
+  "rdw-nl:fedb1ae027": {
+   "archived_url": "",
+   "doc_type": "annual_report",
+   "label": "RDW — Jaarverslag RDW 2025, 2026",
+   "language": "",
+   "license": "",
+   "notes": "sha256 6070d7bf369aa315bf245c69257efcabee0d91bd0a78c1fd6bc456b68af30834 (application/pdf), fetched 2026-10-06",
+   "published": "2026",
+   "publisher": "RDW",
+   "source_id": "rdw-nl:fedb1ae027",
+   "title": "Jaarverslag RDW 2025",
+   "url": "https://www.rdw.nl/-/media/rdwnl/overrdw/documenten/publicaties/jaarverslagen/rdw-wettelijk-jaarverslag-2025-sdt-def.pdf"
+  },
   "rechnungshof-gv-at:58d5050525": {
    "archived_url": "",
    "doc_type": "report",
@@ -199841,6 +201744,19 @@
    "title": "Malta Trusted List (TSL)",
    "url": "https://tsl.mca.org.mt/MT_TSL.xml"
   },
+  "tweedekamer-nl:9db1f11767": {
+   "archived_url": "",
+   "doc_type": "report",
+   "label": "Adviescollege ICT-toetsing — Advies project CCI/CCE, 2025-10-31",
+   "language": "",
+   "license": "",
+   "notes": "sha256 3ed8b4a66aa6dcee6ffb383402a907547943e54f01e9fe6591079ffdf9fae75f (application/pdf), fetched 2026-10-06",
+   "published": "2025-10-31",
+   "publisher": "Adviescollege ICT-toetsing",
+   "source_id": "tweedekamer-nl:9db1f11767",
+   "title": "Advies project CCI/CCE",
+   "url": "https://www.tweedekamer.nl/downloads/document?id=2025D49022"
+  },
   "ufsn-dk:02aa5d2c5e": {
    "archived_url": "https://web.archive.org/web/20260519213542/https://ufsn.dk/institutioner-og-drift/studieadministrative-systemer/stads/",
    "doc_type": "webpage",
@@ -201154,6 +203070,19 @@
    "title": "Jaarrapportage Bedrijfsvoering Rijk 2025",
    "url": "https://zoek.officielebekendmakingen.nl/blg-1249197.pdf"
   },
+  "zoek-officielebekendmakingen-nl:318bde7c33": {
+   "archived_url": "https://web.archive.org/web/20240617083409/https://zoek.officielebekendmakingen.nl/kst-34950-XVIII-1.html",
+   "doc_type": "annual_report",
+   "label": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties — Jaarverslag en slotwet Wonen en Rijksdienst (XVIII) 2017, 2018",
+   "language": "",
+   "license": "",
+   "notes": "sha256 25af6dd0070039dd11d79b9df3e8e12feb31c6d3831f0b60afe38295787ca248 (text/html), fetched 2026-10-06",
+   "published": "2018",
+   "publisher": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+   "source_id": "zoek-officielebekendmakingen-nl:318bde7c33",
+   "title": "Jaarverslag en slotwet Wonen en Rijksdienst (XVIII) 2017",
+   "url": "https://zoek.officielebekendmakingen.nl/kst-34950-XVIII-1.html"
+  },
   "zoek-officielebekendmakingen-nl:37250de695": {
    "archived_url": "",
    "doc_type": "webpage",
@@ -201245,6 +203174,32 @@
    "title": "Wijziging van een aantal wetten op het terrein van VWS (grondslagen gegevensverwerking); Memorie van toelichting",
    "url": "https://zoek.officielebekendmakingen.nl/kst-36621-3.html"
   },
+  "zoek-officielebekendmakingen-nl:9be1fa4222": {
+   "archived_url": "https://web.archive.org/web/20240220054303/https://zoek.officielebekendmakingen.nl/kst-27529-170.html",
+   "doc_type": "webpage",
+   "label": "Minister van VWS / Tweede Kamer — Kamerstuk 27529-170: Informatie over de beveiliging van…, 2019-02-11",
+   "language": "",
+   "license": "",
+   "notes": "sha256 2f30329ca5d175cc0bbd207880317486b3e6e16ef0645d112c60dfeeb2815ea1 (text/html), fetched 2026-10-06",
+   "published": "2019-02-11",
+   "publisher": "Minister van VWS / Tweede Kamer",
+   "source_id": "zoek-officielebekendmakingen-nl:9be1fa4222",
+   "title": "Kamerstuk 27529-170: Informatie over de beveiliging van gegevens die gedeeld worden via het Landelijk Schakelpunt (LSP)",
+   "url": "https://zoek.officielebekendmakingen.nl/kst-27529-170.html"
+  },
+  "zoek-officielebekendmakingen-nl:d3f09ad164": {
+   "archived_url": "",
+   "doc_type": "webpage",
+   "label": "Tweede Kamer / Minister van VWS (officielebekendmakingen.nl) — Antwoord op vragen van het lid Van Esch over de…, 2020-05-01",
+   "language": "",
+   "license": "",
+   "notes": "sha256 4205e57ea8cd12eaa9d20342e875e750e5e3dcc3e32047b4eb703992ac02a313 (text/html), fetched 2026-10-06",
+   "published": "2020-05-01",
+   "publisher": "Tweede Kamer / Minister van VWS (officielebekendmakingen.nl)",
+   "source_id": "zoek-officielebekendmakingen-nl:d3f09ad164",
+   "title": "Antwoord op vragen van het lid Van Esch over de 'veronderstelde toegang' tot elektronische patiëntendossiers",
+   "url": "https://zoek.officielebekendmakingen.nl/ah-tk-20192020-2652.html"
+  },
   "zoek-officielebekendmakingen-nl:e44cd52175": {
    "archived_url": "",
    "doc_type": "annual_report",
@@ -201257,6 +203212,19 @@
    "source_id": "zoek-officielebekendmakingen-nl:e44cd52175",
    "title": "Douane Monitor 2024",
    "url": "https://zoek.officielebekendmakingen.nl/blg-1205324.pdf"
+  },
+  "zoek-officielebekendmakingen-nl:edaa1074dc": {
+   "archived_url": "",
+   "doc_type": "webpage",
+   "label": "Tweede Kamer / Staatssecretaris van Binnenlandse Zaken en Koninkrijksrelaties — Aanhangsel Handelingen TK 2025-2026, nr. 2359…, 2026-06-25",
+   "language": "",
+   "license": "",
+   "notes": "sha256 a1373dcd4cf44958e2166eda8eb1cc85edf014881619e864b503aad9f4fbedf8 (text/html), fetched 2026-10-06",
+   "published": "2026-06-25",
+   "publisher": "Tweede Kamer / Staatssecretaris van Binnenlandse Zaken en Koninkrijksrelaties",
+   "source_id": "zoek-officielebekendmakingen-nl:edaa1074dc",
+   "title": "Aanhangsel Handelingen TK 2025-2026, nr. 2359 (Kamervragen over DigiD, Solvinity en Kyndryl)",
+   "url": "https://zoek.officielebekendmakingen.nl/ah-tk-20252026-2359.html"
   },
   "zoll-de:f2183dbfc2": {
    "archived_url": "https://web.archive.org/web/20260618015312/https://www.zoll.de/DE/Fachthemen/Zoelle/ATLAS/atlas_node.html",
@@ -201965,7 +203933,7 @@
       "input": "L1"
      },
      {
-      "count": 32,
+      "count": 30,
       "group": "dependent",
       "if": "non_eu_found",
       "input": "holdings"

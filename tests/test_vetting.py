@@ -230,3 +230,26 @@ class CorrectionRound(unittest.TestCase):
         self.assertNotIn("value_as_written", de)
         self.assertEqual(sorted(merged), ["DE", "HU"])
         self.assertFalse(list(tmp.glob("[A-Z][A-Z].json")))                   # the first run's files untouched
+
+
+class Wave(unittest.TestCase):
+    """A research wave (docs/vetting.md 3f): only the wave's gaps, each naming its register, no printed fact."""
+
+    def test_the_hosting_wave_is_exactly_its_open_gaps(self):
+        import gaps  # noqa: PLC0415
+        import national_data as nd  # noqa: PLC0415
+        sys.path.insert(0, str(ROOT / "model" / "research" / "vetting"))
+        import build_input  # noqa: PLC0415
+        states = build_input.wave("hosting")
+        self.assertTrue(all(not s["facts"] for s in states))
+        asked = {g["claim"] for s in states for g in s["gaps"]}
+        expected = {c["claim"] for c in gaps.cells() if c["kind"] == "holding"
+                    and c["field"] in ("hosting", "foreign_dependency") and c["state"] != "filled"}
+        self.assertEqual(asked, expected)
+        rows = {(r["iso"], r["record_class"]): r for r in nd.read_rows()}
+        for s in states:
+            for g in s["gaps"]:
+                _, iso, cls, _ = g["claim"].split(":")
+                self.assertEqual(rows[(iso, cls)]["status"], "held")
+                self.assertIn(rows[(iso, cls)]["register"], g["what"])
+

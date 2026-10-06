@@ -16,8 +16,8 @@ This page derives the difference from the research that already ran, so it is ge
   every state, so each cell has had one search. A claim it made that is not in the register failed
   verification or review: the evidence exists, but was not admitted.
 - **Run 2** (`model/research/indicators/<ISO>.json`) did the same for the seven indicators.
-- **The vetting run** (`model/research/vetting/<ISO>.json`) searched again for the claims it reached. The
-  outcome `not_reached` is not a search.
+- **The vetting run** (`model/research/vetting/<ISO>.json`), its later rounds and research waves
+  (`rounds/<run>/`) searched again for the claims they reached. The outcome `not_reached` is not a search.
 
 A cell is **dry** once two passes have found nothing (the stop rule in docs/status.md). Absence that was
 *established* (a register is `not_held`, with an authoritative source) is data, not a gap.
@@ -67,11 +67,13 @@ def research_passes() -> tuple[dict, set]:
             passes[f"indicator:{iso}:{ind['id']}"] += 1
             if ind.get("claims"):
                 claimed.add(f"indicator:{iso}:{ind['id']}")
-        vet = _json(RESEARCH / "vetting" / f"{iso}.json")
-        for o in vet.get("outcomes", []):
+    # The vetting run, its later rounds and waves (rounds/<run>/), and citizens' submissions (#85, #93).
+    import vetting  # noqa: PLC0415
+    for doc in vetting.staged().values():
+        for o in doc.get("outcomes", []):
             if o["status"] in SEARCHED:
                 passes[o["claim"]] += 1
-        for f in vet.get("findings", []):
+        for f in doc.get("findings", []):
             claimed.add(f["claim"])
     return passes, claimed
 

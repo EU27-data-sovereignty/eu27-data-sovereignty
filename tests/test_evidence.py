@@ -222,8 +222,9 @@ class RenderedFacts(unittest.TestCase):
     # 1400 on 2026-10-05 by #95: the cited hosting of 60 holdings is printed (it was admitted but never
     # shown); 11 more hosting values print as gaps, their quote lacking a year or number they state. Then to
     # 1396 on 2026-10-06: the fact check of those 60 (Fable 5.1, wf_e9645602-884) confirmed 56 and the
-    # other 4 are withheld (#89).
-    FACT_FLOOR = 1396
+    # other 4 are withheld (#89). Then to 1408 on 2026-10-06: the hosting wave's NL pilot (wf_41009054-f6b) filled 12
+    # gaps, all confirmed by Fable 5.1 (wf_f7d14e4d-412).
+    FACT_FLOOR = 1408
 
     @classmethod
     def setUpClass(cls):

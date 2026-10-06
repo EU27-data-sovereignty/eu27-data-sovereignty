@@ -9,17 +9,17 @@
 
 | | Count |
 |---|---:|
-| Printed facts | 1396 |
-| Strong | 108 |
-| Standard | 1288 |
-| Gaps (values withheld) | 4324 |
+| Printed facts | 1408 |
+| Strong | 109 |
+| Standard | 1299 |
+| Gaps (values withheld) | 4312 |
 | Disputed (withheld: source changed, or sources disagree) | 76 |
 
 ```mermaid
 pie showData
   title "Printed facts by evidence grade"
-  "Strong" : 108
-  "Standard" : 1288
+  "Strong" : 109
+  "Standard" : 1299
 ```
 
 **How grades are set.** Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict.
@@ -36,23 +36,23 @@ How good is the best source behind each printed fact? Tiers are set per host in 
 ```mermaid
 pie showData
   title "Printed facts by best source tier"
-  "T1" : 628
-  "T2" : 636
-  "T3" : 10
+  "T1" : 634
+  "T2" : 644
+  "T3" : 8
   "T4" : 122
 ```
 
 | Tier | Kind of source | Facts |
 |---|---|---:|
 | T1 | eurostat | 162 |
-| T1 | official law portal | 452 |
-| T1 | statistics office | 14 |
+| T1 | official law portal | 457 |
+| T1 | statistics office | 15 |
 | T2 | audit office | 13 |
 | T2 | government or authority | 278 |
-| T2 | public body | 345 |
+| T2 | public body | 353 |
 | T3 | chamber of commerce | 2 |
 | T3 | company | 5 |
-| T3 | private foundation | 3 |
+| T3 | private foundation | 1 |
 | T4 | press | 5 |
 | T4 | unofficial law mirror | 117 |
 
@@ -72,11 +72,11 @@ Each Strong condition a Standard fact misses. One fact can miss several, so the 
 
 | Condition not met | Facts |
 |---|---:|
-| Best source below T2 (e.g. an unofficial law mirror) | 148 |
-| Machine summary of a non-English quote, no figure to match | 866 |
-| No archived copy of exactly this URL | 614 |
-| Categorical: review agreed but was not blind | 160 |
-| A name in the value is not in the quote | 166 |
+| Best source below T2 (e.g. an unofficial law mirror) | 147 |
+| Machine summary of a non-English quote, no figure to match | 875 |
+| No archived copy of exactly this URL | 619 |
+| Categorical: review agreed but was not blind | 163 |
+| A name in the value is not in the quote | 167 |
 | Secondary source or statement of absence | 29 |
 | Quote matched loosely (punctuation) | 20 |
 
@@ -87,7 +87,7 @@ xychart-beta
   title "Printed facts per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
   y-axis "facts" 0 --> 78
-  bar [65, 43, 46, 63, 64, 54, 61, 53, 60, 57, 33, 73, 60, 78, 62, 60, 21, 21, 49, 32, 51, 49, 49, 28, 45, 68, 51]
+  bar [65, 43, 46, 63, 64, 54, 61, 53, 60, 57, 33, 73, 60, 78, 62, 60, 21, 21, 49, 32, 63, 49, 49, 28, 45, 68, 51]
 ```
 
 ```mermaid
@@ -95,7 +95,7 @@ xychart-beta
   title "Strong facts per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
   y-axis "facts" 0 --> 29
-  bar [4, 6, 4, 4, 4, 1, 6, 3, 4, 0, 2, 6, 4, 2, 29, 1, 0, 0, 2, 13, 1, 1, 3, 1, 1, 5, 1]
+  bar [4, 6, 4, 4, 4, 1, 6, 3, 4, 0, 2, 6, 4, 2, 29, 1, 0, 0, 2, 13, 2, 1, 3, 1, 1, 5, 1]
 ```
 
 | State | Printed | Strong | Standard | Gaps |
@@ -120,7 +120,7 @@ xychart-beta
 | Luxembourg (LU) | 21 | 0 | 21 | 195 |
 | Latvia (LV) | 49 | 2 | 47 | 167 |
 | Malta (MT) | 32 | 13 | 19 | 184 |
-| Netherlands (NL) | 51 | 1 | 50 | 161 |
+| Netherlands (NL) | 63 | 2 | 61 | 149 |
 | Poland (PL) | 49 | 1 | 48 | 163 |
 | Portugal (PT) | 49 | 3 | 46 | 167 |
 | Romania (RO) | 28 | 1 | 27 | 188 |
@@ -136,9 +136,9 @@ xychart-beta
 | Operator | 352 | 31 | 321 |
 | Eurostat fundamental or posture | 162 | 0 | 162 |
 | Sovereignty indicator | 126 | 6 | 120 |
-| Hosting | 56 | 3 | 53 |
+| Hosting | 65 | 4 | 61 |
+| Infrastructure dependency | 42 | 2 | 40 |
 | Record count | 41 | 20 | 21 |
-| Infrastructure dependency | 39 | 2 | 37 |
 
 ## Disputed facts
 
@@ -240,7 +240,6 @@ Where a citizen helps most: values still withheld, items the agents did not reac
 | Slovakia (SK) | sk | 165 | 0 | 6 | 0 |
 | Estonia (EE) | et | 163 | 4 | 0 | 0 |
 | Poland (PL) | pl | 163 | 0 | 0 | 0 |
-| Netherlands (NL) | nl | 161 | 0 | 10 | 0 |
 | Spain (ES) | es | 159 | 10 | 0 | 0 |
 | Germany (DE) | de | 158 | 7 | 1 | 0 |
 | Greece (EL) | el | 156 | 26 | 7 | 0 |
@@ -249,6 +248,7 @@ Where a citizen helps most: values still withheld, items the agents did not reac
 | Denmark (DK) | da | 155 | 0 | 0 | 0 |
 | Ireland (IE) | en, ga | 154 | 28 | 29 | 0 |
 | Cyprus (CY) | el, tr | 149 | 0 | 7 | 0 |
+| Netherlands (NL) | nl | 149 | 0 | 10 | 0 |
 | Czechia (CZ) | cs | 148 | 0 | 6 | 0 |
 | Austria (AT) | de | 147 | 0 | 0 | 0 |
 | Slovenia (SI) | sl | 144 | 0 | 1 | 0 |
@@ -262,6 +262,7 @@ Each vetting run leaves a manifest (`model/research/vetting/runs/`): the hashes 
 | Run | Reviewer | Findings | Admitted (corroborated / filled / superseded) | Disputed | Prompts sha256 |
 |---|---|---:|---|---:|---|
 | wf_1c6b8bb6-450 | claude-opus-5-5 | 1017 | 238 / 363 / 26 | 10 | `b38aee676549` |
+| wf_41009054-f6b | claude-opus-5-5 | 20 | 1 / 12 / 0 | 0 | `4bfecf6007ec` |
 
 ## How the checks run
 

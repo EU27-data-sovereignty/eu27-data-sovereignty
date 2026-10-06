@@ -6,22 +6,22 @@
 
 ## Status
 
-**1396 of 1396 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **56** more are withheld because the check did not confirm them.
+**1408 of 1408 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **56** more are withheld because the check did not confirm them.
 
 | Checker model | Current verdicts |
 |---|---:|
-| claude-fable-5-1 | 1396 |
+| claude-fable-5-1 | 1408 |
 | claude-opus-5-5 | 0 |
 
 | Verdict | Facts |
 |---|---:|
-| supported | 1396 |
+| supported | 1408 |
 | not supported | 0 |
 | unclear | 0 |
 
 | Author of the fact, as recorded | Facts |
 |---|---:|
-| claude-opus-5-5 | 23 |
+| claude-opus-5-5 | 35 |
 | program:fetch_eurostat.py | 162 |
 | unrecorded | 1211 |
 
@@ -205,6 +205,7 @@ Each verdict other than *supported*, from every run, including those a later che
 
 | Run | Date | Facts checked | By model | Verdicts | Commit | Bundle SHA-256 | Workflow SHA-256 |
 |---|---|---:|---|---|---|---|---|
+| wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 | fa40304fce9e | 281207eb5d1c41fa | 2f780d07c1acd7ae |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 | 0683d7fabda3 | 0e95781076d86516 | 2f780d07c1acd7ae |
 | wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 | 1e52404b64ae | b68a25235dd3f7be | 2f780d07c1acd7ae |
 | wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 | 29ffa20ba372 | bbd942f41db04282 | 2f780d07c1acd7ae |

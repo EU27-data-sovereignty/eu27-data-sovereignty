@@ -35,8 +35,8 @@ established as absent have a known register.
 |---|---|---|---|---|---|---|
 | `holder` | 588 of 675 | 87 | 46 | 0 | 41 | 0 |
 | `legal_basis` | 259 of 675 | 416 | 135 | 0 | 281 | 0 |
-| `hosting` | 71 of 675 | 604 | 29 | 0 | 575 | 0 |
-| `foreign_dependency` | 52 of 675 | 623 | 27 | 0 | 596 | 0 |
+| `hosting` | 80 of 675 | 595 | 29 | 0 | 559 | 7 |
+| `foreign_dependency` | 55 of 675 | 620 | 28 | 0 | 576 | 16 |
 | `record_count` | 56 of 675 | 619 | 24 | 0 | 595 | 0 |
 | `data_size` | 0 of 675 | 675 | 0 | 0 | 675 | 0 |
 
@@ -107,7 +107,7 @@ established as absent have a known register.
 | LT | 6 of 39 | 0 of 6 | 67 | 15 | 0 | 33 | 19 |
 | LU | 5 of 39 | 1 of 5 | 60 | 30 | 0 | 26 | 4 |
 | MT | 19 of 39 | 0 of 19 | 111 | 10 | 0 | 84 | 17 |
-| NL | 24 of 38 | 3 of 24 | 126 | 28 | 0 | 86 | 12 |
+| NL | 24 of 38 | 12 of 24 | 114 | 29 | 0 | 50 | 35 |
 | PL | 31 of 38 | 0 of 31 | 160 | 14 | 0 | 141 | 5 |
 | PT | 27 of 39 | 0 of 27 | 137 | 6 | 0 | 124 | 7 |
 | RO | 15 of 39 | 0 of 15 | 98 | 12 | 0 | 77 | 9 |

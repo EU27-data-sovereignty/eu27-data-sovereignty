@@ -1,0 +1,30 @@
+{
+ "run": "wf_41009054-f6b",
+ "prepared": "2026-10-06-db0c37a1",
+ "input_sha256": "db0c37a14e53c29316e0e3ba3c79b613394c5840c451989b4110ba5682b62750",
+ "output_sha256": "31b3bb405a020c95c55c0a755c3332fc09c7766465326bbf063b3ac126a65725",
+ "workflow_sha256": "4bfecf6007ece56f1768d88ab45fb5e62213a369e22292d8a627ad11a3b69f04",
+ "built_from_commit": "fa40304fce9e4fe19fe15f9db57078168736ef49",
+ "states": 1,
+ "reviewer_model": [
+  "claude-opus-5-5"
+ ],
+ "agents": 2,
+ "tokens": "257742 subagent tokens (excl. cache); transcripts: 17,950 output, 257,726 cache write, 8,638,164 cache read; about $6.40 at Opus 5.5 list prices",
+ "duration": "834 s",
+ "tools": {
+  "python": "3.14.8",
+  "os": "Darwin 25.6.0 arm64",
+  "typst": "typst 0.15.1 (unknown commit)",
+  "node": "v26.7.0",
+  "chrome": "Google Chrome 155.0.8059.39"
+ },
+ "findings": 20,
+ "outcomes": {
+  "corroborated": 1,
+  "filled_gap": 12,
+  "no_better_found": 25,
+  "not_verified": 2,
+  "review_disagreed": 6
+ }
+}

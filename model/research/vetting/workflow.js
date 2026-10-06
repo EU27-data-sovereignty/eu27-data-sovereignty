@@ -29,6 +29,20 @@ const FINDINGS = {
           publisher: { type: 'string' },
           doc_type: { type: 'string', enum: ['legislation', 'official_page', 'annual_report', 'audit_report', 'statistics', 'procurement', 'eu_document'] },
           note: { type: 'string', description: 'one sentence: why this is better, newer, or what it contradicts' },
+          organisations: {
+            type: 'array',
+            description: 'for a hosting finding: each organisation the quote names (staging only, for structured operators, #96)',
+            items: {
+              type: 'object',
+              properties: {
+                name: { type: 'string', description: 'as the quote gives it' },
+                role: { type: 'string', enum: ['operator', 'processor', 'host', 'cloud'] },
+                seat: { type: 'string', description: 'ISO-2 country of its seat, if known from a source; else empty' },
+                sector: { type: 'string', enum: ['state', 'state_owned', 'private', 'eu_body', 'intergovernmental', 'unknown'] },
+              },
+              required: ['name', 'role', 'seat', 'sector'],
+            },
+          },
         },
         required: ['claim', 'question', 'relation', 'url', 'quote', 'quote_english', 'value', 'published', 'title', 'publisher', 'doc_type', 'note'],
       },
@@ -41,6 +55,7 @@ const FINDINGS = {
         properties: {
           claim: { type: 'string' },
           status: { type: 'string', enum: ['found', 'no_better_found', 'not_reached'] },
+          searched: { type: 'string', description: 'for no_better_found: the searches and kinds of source you tried, in one line, so a later pass can try different ones' },
         },
         required: ['claim', 'status'],
       },
@@ -90,7 +105,11 @@ PART 1 — the printed facts (weakest source first). For each fact:
 4. If a T1/T2 source states something DIFFERENT from the printed value: relation "contradicts".
 Do not return a finding that uses the same URL as the current source.
 
-PART 2 — the gaps. For each, find a T1/T2 source that establishes it: relation "fills_gap". For a holding: the official name of the register or system (value), and in separate findings with the same claim id pattern where you can: record:${s.iso}:<class>:operator, :count, :foreign_dependency (value one of national, eu_provider, non_eu_provider, mixed; only if the source says where the infrastructure runs). For an indicator: value yes, partial or no exactly as defined.
+PART 2 — the gaps. For each, find a T1/T2 source that establishes it: relation "fills_gap". The last part of a holding's claim id names what is asked:
+- :register: the official name of the register or system. Where you can, add separate findings for the same holding's :operator, :count and :foreign_dependency.
+- :hosting: where the holding's data is hosted and who runs that infrastructure, as the quote states it: the state's own data centre or a named government shared-service centre, a named hosting or cloud provider, or the named body that operates its IT systems. Good sources: procurement notices (TED, national portals), audit-office reports, parliamentary answers, the operator's or provider's own announcements, annual reports. Name every organisation the quote names, and add a structured entry for each to "organisations".
+- :foreign_dependency: one of national, eu_provider, non_eu_provider, mixed, and only if the source says where the infrastructure runs or who provides it.
+For an indicator: value yes, partial or no exactly as defined.
 
 Rules for every finding:
 - FETCH the URL yourself and copy the quote VERBATIM from the page text, 8-60 words, in the page's language. A quote that is not literally on that page will be rejected by a machine check.
@@ -98,7 +117,7 @@ Rules for every finding:
 - For a register or operator name, write the name as the quote gives it, followed by an English rendering in parentheses when the page is not English.
 - For counts, give the figure and its unit as the quote states them, e.g. "10.4 million records".
 
-Return findings, and an outcome for EVERY input fact and gap: found, no_better_found (you searched and found nothing better or newer), or not_reached (you ran out of time). Work in the given order.
+Return findings, and an outcome for EVERY input fact and gap: found, no_better_found (you searched and found nothing better or newer; say in "searched" what you tried), or not_reached (you ran out of time). Work in the given order.
 
 INPUT: read the JSON file ${s.path} with the Read tool. It holds "facts" (${s.n_facts}) and "gaps" (${s.n_gaps}). Each has a claim id and a "what" describing the question; copy "what" into each finding's "question". Report your own model id in researcher_model.`
 }

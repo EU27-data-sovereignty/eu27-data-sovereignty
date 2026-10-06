@@ -3,6 +3,7 @@
 Build the vetting run's input: per state, every printed fact and every open gap to work on (#83).
 
     python3 model/research/vetting/build_input.py > input.json
+    python3 model/research/vetting/build_input.py --wave hosting > input.json   # gaps only (docs/gaps.md)
 
 Read from the bundle, so the researcher sees exactly what the report prints: the value, the source
 behind it, that source's tier and date, and the evidence grade. Facts on the weakest sources come
@@ -22,6 +23,14 @@ import document  # noqa: E402
 KIND = {"register": "the name of the register or system", "operator": "the body that operates it",
         "count": "how many records it holds", "size": "its data size",
         "foreign_dependency": "where its infrastructure runs: national / eu_provider / non_eu_provider / mixed"}
+# The questions a wave asks. Kept apart from KIND on purpose: factcheck.describe() reads KIND for each fact's
+# "what", which is part of the fact's hash (#87), so changing KIND would re-open every checked fact of that kind.
+WAVE_KIND = {**KIND, "hosting": "where its data is hosted and who runs that infrastructure: the data centre, "
+                                "the hosting or cloud provider, or the body that operates its IT systems"}
+
+# A wave: research only these fields of the holdings already known, no re-vetting of printed facts. Each
+# gap is one docs/gaps.md calls not filled, so a wave is the gap list turned into work.
+WAVES = {"hosting": ("hosting", "foreign_dependency")}
 
 
 def tables() -> tuple[dict, dict]:
@@ -41,7 +50,36 @@ def describe(claim: str, classes: dict, indicators: dict) -> str:
             else claim)
 
 
+def wave(name: str) -> list[dict]:
+    """Per state, only gaps: the wave's fields of every known holding that has none yet, tier 0 first."""
+    import gaps  # noqa: PLC0415
+    classes, _ = tables()
+    b = json.loads((ROOT / "web" / "public" / "data" / "eu27.json").read_text(encoding="utf-8"))
+    field_of = {kind: field for field, kind in gaps.FIELDS.items()}
+    want = {field_of[k] for k in WAVES[name]}
+    todo = [c for c in gaps.cells() if c["kind"] == "holding" and c["field"] in want and c["state"] != "filled"]
+    import national_data  # noqa: PLC0415
+    rows = {(r["iso"], r["record_class"]): r for r in national_data.read_rows()}
+
+    def holding(iso: str, cls: str) -> str:
+        """The class, and the register the report already names for it, so the search starts from the name."""
+        r = rows[(iso, cls)]
+        return (f"{classes[cls]['label']} (the register: {r['register']}"
+                + (f"; operated by {r['holder']}" if r["holder"] else "") + ")")
+
+    out = []
+    for iso, doc in sorted(b["documents"].items()):
+        mine = sorted((c for c in todo if c["iso"] == iso), key=lambda c: (int(c["tier"]), c["item"], c["field"]))
+        out.append({"iso": iso, "name": doc["name"], "facts": [], "gaps": [
+            {"claim": c["claim"], "tier": int(c["tier"]),
+             "what": f"{holding(iso, c['item'])}: {WAVE_KIND[gaps.FIELDS[c['field']]]}"} for c in mine]})
+    return out
+
+
 def main() -> int:
+    if "--wave" in sys.argv:
+        json.dump(wave(sys.argv[sys.argv.index("--wave") + 1]), sys.stdout, ensure_ascii=False, indent=1)
+        return 0
     b = json.loads((ROOT / "web" / "public" / "data" / "eu27.json").read_text(encoding="utf-8"))
     classes, indicators = tables()
     out = []

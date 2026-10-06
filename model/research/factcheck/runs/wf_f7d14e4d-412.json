@@ -1,0 +1,24 @@
+{
+ "sequence": 7,
+ "run": "wf_f7d14e4d-412",
+ "prepared": "2026-10-06-2582f26f",
+ "date": "2026-10-06",
+ "input_sha256": "2582f26fb30795637d04f78e371b260f0740bf0da0cf849b3dcdaa52261f5a8e",
+ "workflow_sha256": "2f780d07c1acd7ae9b1ce20e3150dae1da3d08e246e215d33da624ab799b28c9",
+ "output_sha256": "eb86b3fd2f510f306dd605b0b5467b732d00e1faeef2b41ae43df0511574349e",
+ "built_from_commit": "fa40304fce9e4fe19fe15f9db57078168736ef49",
+ "bundle_sha256": "281207eb5d1c41fa7e95f736f317676ae098d343612ecd3f165d3c8c92919d8d",
+ "batches": 1,
+ "agents": "1",
+ "tokens": "91358 (excluding cache)",
+ "duration": "142 s",
+ "facts_checked": 14,
+ "checker_model": {
+  "claude-fable-5-1": 14
+ },
+ "verdicts": {
+  "supported": 14,
+  "not_supported": 0,
+  "unclear": 0
+ }
+}

@@ -1,0 +1,150 @@
+{
+ "run": "wf_f7d14e4d-412",
+ "prepared": "2026-10-06-2582f26f",
+ "batch": "EU-001",
+ "iso": "EU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:NL:trust_services_pki:hosting",
+   "fact_sha256": "2d6aaa1a3f97e4a8c1a028e9d4607fd9983be42ff8b93afe99e24a788a0f76c9",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PKIoverheid CPS v5.6 (section 1.3.1.1) states verbatim that KPN B.V. is the supplier of technical services for the Root and Intermediate Certificates for Logius, including maintaining the CRLs (the sentence continues with OCSP responders). That matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://cps.pkioverheid.nl/pkioverheid-cps-unified-v5.6.html"
+  },
+  {
+   "claim": "record:NL:public_health_surveillance:hosting",
+   "fact_sha256": "7e31c6da65d7feddd785e736471bdfc071d4e7bf1349f549caa4af8c65c16e88",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Adviescollege ICT-toetsing advice on Doorontwikkeling Praeventis (23 June 2025) contains the quote verbatim in the paragraph on DVP's Agile Release Train, and elsewhere notes the 'grote afhankelijkheid van de leverancier (Sopra Steria)'. In the context of this Praeventis advice the sentence supports that Sopra Steria does technical application management and development of Praeventis.",
+   "quote_found": true,
+   "checked_url": "https://www.adviescollegeicttoetsing.nl/site/binaries/site-content/collections/documents/2025/06/23/advies-doorontwikkeling-praeventis/advies-programma-doorontwikkeling-praeventis.pdf"
+  },
+  {
+   "claim": "record:NL:health_records:register",
+   "fact_sha256": "d28432404ad105048044f3a90995a606b1a6936af3eb6fd43ed141f8315ed6f5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The aorta-lsp.nl page says verbatim that the Landelijk Schakelpunt (LSP) is a national healthcare infrastructure through which care providers exchange their patients' medical data; the Kamerstuk 27529-170 quote also appears verbatim and names the LSP. Both support the printed description.",
+   "quote_found": true,
+   "checked_url": "https://www.aorta-lsp.nl/"
+  },
+  {
+   "claim": "record:NL:statistics_microdata:foreign_dependency",
+   "fact_sha256": "4c7b7d650576ed0dc72e8f1737725142868e6fcdfcfd6f41b4faf664b20e5107",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CBS article (24 Jan 2017) states verbatim that the microdata files remain on a server at CBS and researchers analyse them remotely over a secured connection; nothing on the page mentions an external or foreign provider. That supports 'national infrastructure', though the source is from 2017.",
+   "quote_found": true,
+   "checked_url": "https://www.cbs.nl/nl-nl/corporate/2017/04/toegang-tot-microdata-cbs-flexibeler-voor-onderzoekers"
+  },
+  {
+   "claim": "record:NL:land_property:hosting",
+   "fact_sha256": "c17f680cee561ce3827cbb6ded2ab5bbc450a3e37aa172455b4355ce5bbf469c",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Kadaster Jaarverslag 2025 PDF, section 'Digitale autonomie', says verbatim that an important step was the move to a KPN platform not tied to one specific cloud solution, written in Kadaster's first person. That matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.eerstekamer.nl/behandeling/20260414/jaarverslag_kadaster_2025_bijlage/document3/f=/vmxgpusqksww.pdf"
+  },
+  {
+   "claim": "record:NL:judicial_criminal:hosting",
+   "fact_sha256": "834e655409ac9558f86117508e2ea8d257ebfc220da754384c5f8899ff9cd79a",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote appears verbatim on Justid's own product-and-service catalogue page for JDS, which describes the FB and TAB teams as Justid's service (interfaces 'binnen en buiten Justid', software kept current 'door Justid in samenwerking met leveranciers', teams as contact point between users and suppliers). The word 'own' is not in the quote but follows from the page's context; the quote itself suppo",
+   "quote_found": true,
+   "checked_url": "https://www.justid.nl/producten-en-dienstencatalogus/nieuwbouw-en-onderhoud-systemen/informatiesystemen/justitieel-documentatie-systeem-jds"
+  },
+  {
+   "claim": "record:NL:authentication_audit_log:hosting",
+   "fact_sha256": "db9c7e12d80261c94c68f4a510842a15c3fa7992e77473e84f4093a7c1d3e9c6",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Kamervragen aanhangsel 2025-2026 nr. 2359 (answer 13) contains the quote verbatim: the services Solvinity currently delivers to Logius are the management work on the PICARD platform, in the context of the DigiD service; answer 16 adds 'beheerwerkzaamheden van het PICARD-platform voor DigiD en andere Logius-diensten'. The Logius page quote on a government data centre was also found verbatim.",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/ah-tk-20252026-2359.html"
+  },
+  {
+   "claim": "record:NL:emergency_communications:hosting",
+   "fact_sha256": "6d6b8f07351cae4218b304c12f5726e2afe326a6568346a535fad7ef11105562",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that the Landelijke Meldkamer Samenwerking (LMS) manages the control rooms for all emergency services, provides a network of ten interconnected control-room locations, and does so as an autonomous unit within the police organisation. That matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.meldkamersamenwerking.nl/over-lms/"
+  },
+  {
+   "claim": "record:NL:vehicle_licensing:foreign_dependency",
+   "fact_sha256": "b3f53ddb281a41dc106b0f754a5271486abbe1a88509d06f3a25803e53b8889a",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The RDW Jaarverslag 2025 PDF says verbatim that a key condition of RDW's cloud policy is that register data is stored in its own data centre, and that RDW is working to reduce dependence on non-European cloud suppliers for other cloud services. Register data in RDW's own data centre supports 'national infrastructure' for the register.",
+   "quote_found": true,
+   "checked_url": "https://www.rdw.nl/-/media/rdwnl/overrdw/documenten/publicaties/jaarverslagen/rdw-wettelijk-jaarverslag-2025-sdt-def.pdf"
+  },
+  {
+   "claim": "record:NL:vehicle_licensing:hosting",
+   "fact_sha256": "fbac3753fb1a465b7e088111cf5f9d06e8fe8214e171c156178125c82af26887",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same RDW Jaarverslag 2025 quote states verbatim that register data is stored in RDW's own data centre ('eigen datacenter'), which is exactly what is printed.",
+   "quote_found": true,
+   "checked_url": "https://www.rdw.nl/-/media/rdwnl/overrdw/documenten/publicaties/jaarverslagen/rdw-wettelijk-jaarverslag-2025-sdt-def.pdf"
+  },
+  {
+   "claim": "record:NL:customs:hosting",
+   "fact_sha256": "75ee03328bfbd2dad29a088180854a4385fb438ba1534f389d880f4e395e323a",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF (Adviescollege ICT-toetsing advice on project CCI/CCE, 31 Oct 2025) says verbatim that IBM carries out the modifications to the Douaneaangiften Management Systeem (DMS) and manages ('beheert') this system; it also notes the IBM contract runs to 2028. That matches the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.tweedekamer.nl/downloads/document?id=2025D49022"
+  },
+  {
+   "claim": "record:NL:health_records:operator",
+   "fact_sha256": "123af10a2656504c1f3a7b04a5c45908b8191a8e8685f47f16f9f23fe0170cf9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Kamervragen aanhangsel 2019-2020 nr. 2652 (answer 9, Minister Van Rijn) states verbatim that the manager of the Landelijk Schakelpunt is VZVZ Servicecentrum, the executive organisation of the association VZVZ; the Kamerstuk 27529-170 quote that VZVZ manages the LSP was also found verbatim. Both support the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/ah-tk-20192020-2652.html"
+  },
+  {
+   "claim": "record:NL:government_payroll:foreign_dependency",
+   "fact_sha256": "12b8370c5d0383c02886f5a1ee753c49809d80366bddf7f055d7504900039075",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Jaarverslag Wonen en Rijksdienst 2017 (Kamerstuk 34950-XVIII nr. 1) contains the quote verbatim under 'Migratie housing en hosting naar SSC-ICT': since mid-2017 all P-Direkt servers run under the State's own management ('in eigen Rijksbeheer'). That supports 'national infrastructure', though the source dates from 2018.",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/kst-34950-XVIII-1.html"
+  },
+  {
+   "claim": "record:NL:government_payroll:hosting",
+   "fact_sha256": "81887462218e7c352bf4816d981f39f9c7c284ed7576c06dd2d7a2660c470e82",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The same Kamerstuk contains the quote verbatim under the heading 'Migratie housing en hosting naar SSC-ICT', and the financial section refers to 'de overgang naar het Overheids Data Centrum van SSC-ICT'. Together they support that P-Direkt's servers moved to SSC-ICT's Overheids Data Centrum.",
+   "quote_found": true,
+   "checked_url": "https://zoek.officielebekendmakingen.nl/kst-34950-XVIII-1.html"
+  }
+ ]
+}

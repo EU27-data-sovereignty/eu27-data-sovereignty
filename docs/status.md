@@ -104,11 +104,15 @@ skipped. **eu27.cloud still serves the previous good deploy (`f119e8f`).**
    - measure the error rate.
 4. Decide on the mobile app and the foundation. The app's store accounts and Supabase wait for the
    foundation.
-5. **Before 2026-11-05: renew the `/ask` key** (`DEPLOYMENT.md` § `/ask` runbook; calendar reminder
+5. **The data plan, step 1: find as much data as we can.** The gap list is `docs/gaps.md`. The hosting wave's
+   pilot (NL) filled 12 of 44 gaps for $6.40. **The full wave** covers 1,227 hosting and dependency gaps in 27
+   states. Estimated cost, scaled from the pilot: research $150–250, plus about $50 to fact-check what it
+   finds. It waits for the owner's OK.
+6. **Before 2026-11-05: renew the `/ask` key** (`DEPLOYMENT.md` § `/ask` runbook; calendar reminder
    2026-11-02).
-6. **Optimisation 5**, a per-country PDF cache. The PDF job (about 4 min) is now the slowest part of every
+7. **Optimisation 5**, a per-country PDF cache. The PDF job (about 4 min) is now the slowest part of every
    deploy (`docs/process.md`).
-7. Small items:
+8. Small items:
    - a per-visitor rate limit on `/api/ask` in the Vercel firewall;
    - tests for the 3 remaining mutation-audit gaps;
    - a vetting reviewer from a different model than its researcher;

@@ -54,12 +54,23 @@ def reset_derived() -> None:
     import provenance  # noqa: PLC0415
     import research  # noqa: PLC0415
     import vetting  # noqa: PLC0415
-    base = [c for c in provenance.citations() if not c["checked_by"].startswith(DERIVED)]
+    cites = provenance.citations()
+    base = [c for c in cites if not c["checked_by"].startswith(DERIVED)]
+    derived_claims = {c["claim"] for c in cites if c["checked_by"].startswith(DERIVED)}
     cited = {c["source_id"] for c in base}
     reg = {sid: r for sid, r in provenance.registry().items()
            if sid in cited or not r["notes"].startswith("sha256 ")}
     supported = {tuple(c["claim"].split(":")[1:3]) for c in base if c["claim"].startswith("record:")}
+    base_claims = {c["claim"] for c in base}
     rows = [r for r in nd.read_rows() if (r["iso"], r["record_class"]) in supported]
+    # A kept row loses the fields an earlier admission filled on it: those cited only by admission's own
+    # citations. Otherwise such a field (found 2026-10-06: the hosting wave filled NL land_property:hosting on a
+    # migrated row) reads as an existing fact on the next run, and "filled_gap" becomes "corroborated".
+    for r in rows:
+        for kind, field in vetting.FIELD_OF_KIND.items():
+            claim = f"record:{r['iso']}:{r['record_class']}:{kind}"
+            if kind != "register" and claim in derived_claims and claim not in base_claims:
+                r[field] = ""
     provenance.write_registry(reg)
     provenance.write_citations(base)
     nd.write_rows(rows)

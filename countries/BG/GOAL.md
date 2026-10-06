@@ -146,7 +146,7 @@ Tier 0 and 1 holdings for Bulgaria without a verified source yet. Corrections an
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1396 facts are printed, 4324 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1408 facts are printed, 4312 values are withheld as gaps, and 76 are withheld as disputed.
 
 ### How sources were found
 
@@ -165,16 +165,16 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 |---|---:|
 | below_T2 | 6 |
 | corrected_withheld | 6 |
-| corroborated | 261 |
+| corroborated | 264 |
 | disputed | 10 |
-| filled_gap | 365 |
+| filled_gap | 377 |
 | holding_not_established | 41 |
-| no_better_found | 461 |
+| no_better_found | 486 |
 | not_reached | 201 |
-| not_verified | 178 |
-| review_disagreed | 172 |
+| not_verified | 177 |
+| review_disagreed | 177 |
 | same_source | 9 |
-| superseded_higher_tier | 23 |
+| superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
 Every cited source is re-fetched periodically and each quote looked for again. A fact whose quote has vanished, or whose source is gone, is withheld as disputed. A refusal to serve the page changes nothing.
@@ -203,9 +203,9 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 628 |
-| T2 competent public body or audit office | 636 |
-| T3 other institution or company | 10 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 634 |
+| T2 competent public body or audit office | 644 |
+| T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
 ### Evidence grades
@@ -215,8 +215,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 108 |
-| Standard | 1288 |
+| Strong | 109 |
+| Standard | 1299 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -259,7 +259,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1396 of 1396 printed facts pass the fact check.
+In this build, 1408 of 1408 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -301,7 +301,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check.
+In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -325,6 +325,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
 | wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 |
 | wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |

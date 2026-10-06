@@ -7,6 +7,37 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-06
 
+### Added: research waves, and the hosting wave's pilot on the Netherlands: 12 gaps filled, $6.40
+
+- **The mode.** A wave researches only the gaps `docs/gaps.md` lists, for one kind of field, and re-vets no printed
+  fact. It runs as `python3 model/vetting.py prepare --wave hosting`, and is staged as a round, so nothing earlier is
+  overwritten. Each gap names its holding's register and operator, so the search starts from the right name.
+  Hosting findings also list the organisations their quote names (staging only, for #96), and an unfilled gap
+  says what was searched. Runbook: `docs/vetting.md` §3f.
+- **The pilot.** Run `wf_41009054-f6b`: Opus 5.5 researcher, blind Opus 5.5 reviewer. It covered the Netherlands'
+  44 hosting and dependency gaps and returned 20 findings.
+  - **12 admitted:** 9 hosting and 3 dependency. Among them: RDW keeps vehicle-register data in its own data
+    centre; IBM manages the customs declaration system DMS; Solvinity manages the DigiD platform; Kadaster moved
+    to a KPN platform; KPN runs PKIoverheid's root services.
+  - **8 rejected:** 6 by the blind reviewer, and 2 because their pages could not be fetched.
+  - **No source found** for the other 25 gaps. Each now has a second pass recorded in `docs/gaps.md`.
+- **Two earlier findings verified.** Re-verifying the Netherlands also fetched two findings from the 2026-09-30
+  vetting run that had failed to fetch then, both for the health-record exchange (the LSP). The operator is now
+  printed from a higher-tier source as "VZVZ Servicecentrum".
+- **The fact check.** Fable 5.1 confirmed all 14 new and changed facts (`wf_f7d14e4d-412`). 1,408 of 1,408
+  printed facts pass. `FACT_FLOOR` rose to 1,408 and the record floor to 1,523.
+- **Cost, measured from the transcripts.** About **$6.40**, at Opus 5.5 list prices: 17,950 output tokens,
+  257,726 cache writes and 8.6M cache reads. It took 14 minutes, and the cost is recorded in the run manifest.
+- **Fixed on the way:**
+  - A wave description first changed the "what" text that every hosting fact's hash includes. That re-opened
+    62 checked facts with no printed change, and the fact-check status caught it. The wave now has its own
+    descriptions (`build_input.WAVE_KIND`).
+  - A round's manifest now counts only its own run.
+  - **The reproducibility check had a bug.** Rebuilding admission from scratch (`reproduce.reset_derived`) kept
+    fields that an earlier admission had filled on base rows. So the pilot's Kadaster hosting, on a migrated
+    row, re-admitted as "corroborated" instead of "filled". Those fields are now cleared before the rebuild, and
+    all 6 registers reproduce.
+
 ### Added: `docs/gaps.md`, every missing piece of data and how hard it has been looked for
 
 - **Why.** This is the first step of the data plan: find as much as possible, then choose the structure, then

@@ -1,0 +1,830 @@
+{
+ "iso": "NL",
+ "run": "wf_41009054-f6b",
+ "date": "2026-10-06",
+ "workflow_sha256": "4bfecf6007ece56f1768d88ab45fb5e62213a369e22292d8a627ad11a3b69f04",
+ "blind": true,
+ "findings": [
+  {
+   "claim": "record:NL:authentication_audit_log:hosting",
+   "question": "Authentication audit log (the register: DigiD gebruiksgeschiedenis (DigiD usage history); operated by Logius): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://zoek.officielebekendmakingen.nl/ah-tk-20252026-2359.html",
+   "quote": "vergelijkbaar zijn met de dienstverlening die Solvinity momenteel aan Logius levert, namelijk de beheerwerkzaamheden van het PICARD-platform. Het gaat daarbij om aanbieders die aantoonbaar kunnen voldoen aan de eisen voor continuïteit, beveiliging, compliance en schaalbaarheid van de DigiD-dienstverlening.",
+   "quote_english": "comparable to the services Solvinity currently provides to Logius, namely the management work on the PICARD platform. This concerns providers that can demonstrably meet the requirements for continuity, security, compliance and scalability of the DigiD service.",
+   "value": "Solvinity currently manages the PICARD platform for Logius on which the DigiD service depends",
+   "published": "2026-06-25",
+   "title": "Aanhangsel Handelingen TK 2025-2026, nr. 2359 (Kamervragen over DigiD, Solvinity en Kyndryl)",
+   "publisher": "Tweede Kamer / Staatssecretaris van Binnenlandse Zaken en Koninkrijksrelaties",
+   "doc_type": "official_page",
+   "note": "Parliamentary answer on DigiD dependencies on Solvinity (acquired by Kyndryl); the same document says Logius plans a re-tender of this platform management under the defence and security procurement act. It concerns DigiD as a whole, not only the usage-history log.",
+   "organisations": [
+    {
+     "name": "Solvinity",
+     "role": "processor",
+     "seat": "",
+     "sector": "private"
+    },
+    {
+     "name": "Logius",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 0,
+    "quote_found": true,
+    "established": "Solvinity (manages the PICARD platform behind DigiD for Logius)",
+    "reason": "In the DigiD context the page says Solvinity currently delivers to Logius the management of the PICARD platform, which names who runs the infrastructure."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:authentication_audit_log:hosting",
+   "question": "Authentication audit log (the register: DigiD gebruiksgeschiedenis (DigiD usage history); operated by Logius): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://www.logius.nl/onze-dienstverlening/toegang/digid/documentatie/gegevensverwerkingen-digid",
+   "quote": "De DigiD voorziening is gebaseerd op centrale verwerking van gegevens. Dit gebeurt op een applicatieplatform dat draait op een (technische) infrastructuur in een overheidsdatacenter.",
+   "quote_english": "The DigiD service is based on central processing of data. This takes place on an application platform that runs on (technical) infrastructure in a government data centre.",
+   "value": "DigiD runs on an application platform on infrastructure in a government data centre (overheidsdatacenter)",
+   "published": "",
+   "title": "Gegevensverwerkingen DigiD",
+   "publisher": "Logius",
+   "doc_type": "official_page",
+   "note": "The operator's own page; the same page describes the gebruiksgeschiedenis as DigiD's transaction logging, so it lives inside this central platform.",
+   "organisations": [
+    {
+     "name": "Logius",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 1,
+    "quote_found": true,
+    "established": "a government data centre (overheidsdatacenter), operator not named",
+    "reason": "The quote places DigiD's central processing on infrastructure in a government data centre but does not say which one or who runs it."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:authentication_audit_log:foreign_dependency",
+   "question": "Authentication audit log (the register: DigiD gebruiksgeschiedenis (DigiD usage history); operated by Logius): where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "fills_gap",
+   "url": "https://www.logius.nl/onze-dienstverlening/toegang/digid/documentatie/gegevensverwerkingen-digid",
+   "quote": "De verwerkingen van de DigiD voorziening, binnen de verantwoordelijkheid van Logius, vinden enkel in Nederland plaats.",
+   "quote_english": "The processing operations of the DigiD service, under the responsibility of Logius, take place only in the Netherlands.",
+   "value": "national",
+   "published": "",
+   "title": "Gegevensverwerkingen DigiD",
+   "publisher": "Logius",
+   "doc_type": "official_page",
+   "note": "The next sentence on the page says suppliers may use processing facilities within the EEA, and a 2026 parliamentary answer notes that the platform manager Solvinity was acquired by Kyndryl (US), so a reviewer may prefer 'mixed'.",
+   "review": {
+    "id": 2,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote gives only the location (processing in the Netherlands), not who provides the infrastructure, and the next sentence says suppliers may use data centres anywhere in the EEA, so no provider class follows from it."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "national"
+  },
+  {
+   "claim": "record:NL:land_property:hosting",
+   "question": "Land & property registry (the register: Basisregistratie Kadaster (BRK); operated by Kadaster): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://www.eerstekamer.nl/behandeling/20260414/jaarverslag_kadaster_2025_bijlage/document3/f=/vmxgpusqksww.pdf",
+   "quote": "Een belangrijke stap was de overstap naar een platform van KPN dat niet vastzit aan één specifieke cloudoplossing.",
+   "quote_english": "An important step was the move to a KPN platform that is not tied to one specific cloud solution.",
+   "value": "Kadaster moved to a platform of KPN that is not tied to one specific cloud solution",
+   "published": "2026",
+   "title": "Jaarverslag Kadaster 2025",
+   "publisher": "Kadaster (sent to the Eerste Kamer)",
+   "doc_type": "annual_report",
+   "note": "Kadaster's 2025 annual report: under the KITA project its IT moved from one supplier to five, as a cloud transition. It also mentions a private-cloud supplier and public cloud services, so the foreign dependency is left open.",
+   "organisations": [
+    {
+     "name": "KPN",
+     "role": "host",
+     "seat": "",
+     "sector": "private"
+    },
+    {
+     "name": "Kadaster",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 3,
+    "quote_found": true,
+    "established": "KPN (platform Kadaster moved to)",
+    "reason": "Kadaster's annual report says it moved to a KPN platform, but this is about Kadaster's IT in general and does not name the BRK specifically."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:customs:hosting",
+   "question": "Customs declarations (the register: Current declaration system AGS is being replaced by the new DMS; operated by Douane (Netherlands Customs), part of Belastingdienst, Ministry of Finance): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://www.tweedekamer.nl/downloads/document?id=2025D49022",
+   "quote": "IBM voert de aanpassingen in het Douaneaangiften Management Systeem (DMS) uit en beheert dit systeem.",
+   "quote_english": "IBM carries out the modifications to the Customs Declarations Management System (DMS) and manages this system.",
+   "value": "IBM modifies and manages (beheert) the Douaneaangiften Management Systeem (DMS)",
+   "published": "2025-10-31",
+   "title": "Advies project CCI/CCE",
+   "publisher": "Adviescollege ICT-toetsing",
+   "doc_type": "audit_report",
+   "note": "Review by the Dutch government's ICT advisory board (AcICT). The same letter says the IBM contract ends in 2028. It names who operates the system, not the data centre.",
+   "organisations": [
+    {
+     "name": "IBM",
+     "role": "processor",
+     "seat": "",
+     "sector": "private"
+    },
+    {
+     "name": "Douane",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 4,
+    "quote_found": true,
+    "established": "IBM (modifies and manages DMS)",
+    "reason": "The quote says outright that IBM makes the changes to the DMS declaration system and manages it."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:benefits_pensions:hosting",
+   "question": "Benefits & pensions (the register: polisadministratie (policy administration of employment, wages and benefits); operated by Uitvoeringsinstituut werknemersverzekeringen (UWV, Employee Insurance Agency)): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://jaarverslag.uwv.nl/jaarverslag-2025/jaarverslag/digitalisering/geautomatiseerde-dienstverlening-en-ondersteuning",
+   "quote": "We hebben de datacenterdienstverlening bij één leverancier ondergebracht.",
+   "quote_english": "We have placed our data-centre services with a single supplier.",
+   "value": "UWV's data-centre services are placed with one (unnamed) supplier",
+   "published": "2026",
+   "title": "UWV Jaarverslag 2025 – Geautomatiseerde dienstverlening en ondersteuning",
+   "publisher": "UWV",
+   "doc_type": "annual_report",
+   "note": "Covers all of UWV, not only the polisadministratie. The same page says UWV fully outsources the operation of its infrastructure and does not name the supplier.",
+   "organisations": [
+    {
+     "name": "UWV",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 5,
+    "quote_found": true,
+    "established": "",
+    "reason": "It says UWV moved its data centre services to a single supplier but does not name that supplier."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:government_payroll:hosting",
+   "question": "Government payroll and personnel (the register: registratiesysteem P-Direkt (P-Direkt HR/payroll registration system)): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://zoek.officielebekendmakingen.nl/kst-34950-XVIII-1.html",
+   "quote": "Bij de transitie naar het Overheids Data Centrum hebben P-Direkt, SSC-ICT en Match (het datacenter waar de servers eerst draaiden) nauw samengewerkt.",
+   "quote_english": "In the transition to the Government Data Centre, P-Direkt, SSC-ICT and Match (the data centre where the servers previously ran) worked closely together.",
+   "value": "P-Direkt's servers moved to the Overheids Data Centrum (Government Data Centre) of SSC-ICT",
+   "published": "2018",
+   "title": "Jaarverslag en slotwet Wonen en Rijksdienst (XVIII) 2017",
+   "publisher": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+   "doc_type": "annual_report",
+   "note": "This is the 2017 annual report, so the hosting may have changed since. Its section heading is 'Migratie housing en hosting naar SSC-ICT'. The same report is on rijksfinancien.nl, but that page served a JavaScript shell when re-fetched.",
+   "organisations": [
+    {
+     "name": "SSC-ICT",
+     "role": "host",
+     "seat": "NL",
+     "sector": "state"
+    },
+    {
+     "name": "Match",
+     "role": "host",
+     "seat": "",
+     "sector": "private"
+    },
+    {
+     "name": "P-Direkt",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 6,
+    "quote_found": true,
+    "established": "SSC-ICT / Overheids Data Centrum (previously Match)",
+    "reason": "The quote describes moving P-Direkt's servers from the Match data centre to the government data centre run by SSC-ICT."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:government_payroll:foreign_dependency",
+   "question": "Government payroll and personnel (the register: registratiesysteem P-Direkt (P-Direkt HR/payroll registration system)): where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "fills_gap",
+   "url": "https://zoek.officielebekendmakingen.nl/kst-34950-XVIII-1.html",
+   "quote": "Het project is eind 2014 gestart met de voorbereidingen en medio 2017 afgerond met een succesvolle migratie. Sindsdien draaien alle servers van P-Direkt in eigen Rijksbeheer.",
+   "quote_english": "The project started with preparations at the end of 2014 and was completed in mid-2017 with a successful migration. Since then all P-Direkt servers have run under the State's own management.",
+   "value": "national",
+   "published": "2018",
+   "title": "Jaarverslag en slotwet Wonen en Rijksdienst (XVIII) 2017",
+   "publisher": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+   "doc_type": "annual_report",
+   "note": "Since mid-2017 all servers run 'in eigen Rijksbeheer' (under the State's own management) in SSC-ICT's government data centre. The source is old, so check whether it still holds.",
+   "review": {
+    "id": 7,
+    "quote_found": true,
+    "established": "national",
+    "reason": "It says all P-Direkt servers have run under the government's own management (eigen Rijksbeheer) since 2017."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "national"
+  },
+  {
+   "claim": "record:NL:judicial_criminal:hosting",
+   "question": "Judicial & criminal justice (the register: Justitiële Documentatie (Judicial Documentation, the criminal records system); operated by Justitiële Informatiedienst (Justid, Judicial Information Service)): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://www.justid.nl/producten-en-dienstencatalogus/nieuwbouw-en-onderhoud-systemen/informatiesystemen/justitieel-documentatie-systeem-jds",
+   "quote": "De teams Functioneel Beheer (FB) en Technisch Applicatiebeheer (TAB) verzorgen het dagelijkse beheer, onderhoud en (door)ontwikkeling van het Justitieel Documentatie Systeem (JDS).",
+   "quote_english": "The Functional Management (FB) and Technical Application Management (TAB) teams handle the day-to-day management, maintenance and (further) development of the Judicial Documentation System (JDS).",
+   "value": "Justid's own Functioneel Beheer and Technisch Applicatiebeheer teams run day-to-day management of the Justitieel Documentatie Systeem (JDS)",
+   "published": "",
+   "title": "Functioneel en technisch applicatiebeheer - Justitieel Documentatie Systeem (JDS)",
+   "publisher": "Justitiële Informatiedienst (Justid)",
+   "doc_type": "official_page",
+   "note": "Names the body that operates the system (Justid's own teams), not the data centre it runs in.",
+   "organisations": [
+    {
+     "name": "Justitiële Informatiedienst",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 8,
+    "quote_found": true,
+    "established": "Justid's own Functioneel Beheer and Technisch Applicatiebeheer teams (application management; hosting not stated)",
+    "reason": "The quote says Justid teams manage and maintain the JDS application but does not say where it is hosted or who runs the hardware."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:vehicle_licensing:hosting",
+   "question": "Vehicle & licensing (the register: Art. 126: driving licence register managed by RDW; operated by RDW manages and is controller of the vehicle registration register): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://www.rdw.nl/-/media/rdwnl/overrdw/documenten/publicaties/jaarverslagen/rdw-wettelijk-jaarverslag-2025-sdt-def.pdf",
+   "quote": "Een belangrijke voorwaarde in het cloudbeleid van de RDW is dat registerdata wordt opgeslagen in het eigen datacenter.",
+   "quote_english": "An important condition in the RDW's cloud policy is that register data is stored in its own data centre.",
+   "value": "RDW register data is stored in RDW's own data centre (eigen datacenter)",
+   "published": "2026",
+   "title": "Jaarverslag RDW 2025",
+   "publisher": "RDW",
+   "doc_type": "annual_report",
+   "note": "Elsewhere the same report mentions 'ons datacenter op Zernike' (Groningen) and says RDW increasingly uses cloud services for other workloads.",
+   "organisations": [
+    {
+     "name": "RDW",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 9,
+    "quote_found": true,
+    "established": "RDW's own data centre",
+    "reason": "RDW's cloud policy requires register data to be stored in RDW's own data centre."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:vehicle_licensing:foreign_dependency",
+   "question": "Vehicle & licensing (the register: Art. 126: driving licence register managed by RDW; operated by RDW manages and is controller of the vehicle registration register): where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "fills_gap",
+   "url": "https://www.rdw.nl/-/media/rdwnl/overrdw/documenten/publicaties/jaarverslagen/rdw-wettelijk-jaarverslag-2025-sdt-def.pdf",
+   "quote": "Een belangrijke voorwaarde in het cloudbeleid van de RDW is dat registerdata wordt opgeslagen in het eigen datacenter.",
+   "quote_english": "An important condition in the RDW's cloud policy is that register data is stored in its own data centre.",
+   "value": "national",
+   "published": "2026",
+   "title": "Jaarverslag RDW 2025",
+   "publisher": "RDW",
+   "doc_type": "annual_report",
+   "note": "Register data sits in RDW's own data centre. The next sentence speaks of reducing dependence on non-European cloud suppliers for other cloud services, so the label covers the register data only.",
+   "review": {
+    "id": 10,
+    "quote_found": true,
+    "established": "national",
+    "reason": "Register data must be stored in RDW's own data centre, so it is hosted by the government body itself."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "national"
+  },
+  {
+   "claim": "record:NL:education:hosting",
+   "question": "Education (the register: register onderwijsdeelnemers (register of education participants); operated by Onze Minister (Minister of Education, Culture and Science)): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://www.adviescollegeicttoetsing.nl/documenten/2026/02/16/advies-enterprise-cloud",
+   "quote": "Dienst Uitvoering Onderwijs (DUO) wil zijn standaardapplicaties migreren naar cloudinfrastructuur van het Overheidsdatacentrum Noord (ODC-Noord).",
+   "quote_english": "Dienst Uitvoering Onderwijs (DUO) wants to migrate its standard applications to cloud infrastructure of Government Data Centre North (ODC-Noord).",
+   "value": "DUO wants to migrate its standard applications to cloud infrastructure of the Overheidsdatacentrum Noord (ODC-Noord)",
+   "published": "2026-02-23",
+   "title": "Advies Enterprise Cloud",
+   "publisher": "Adviescollege ICT-toetsing",
+   "doc_type": "audit_report",
+   "note": "This is a migration DUO plans, not where the data runs now. The advice found that no application had moved yet. It does not name the register onderwijsdeelnemers specifically.",
+   "organisations": [
+    {
+     "name": "Overheidsdatacentrum Noord (ODC-Noord)",
+     "role": "cloud",
+     "seat": "NL",
+     "sector": "state"
+    },
+    {
+     "name": "Dienst Uitvoering Onderwijs (DUO)",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 11,
+    "quote_found": true,
+    "established": "",
+    "reason": "This is only an intention ('wil') to move DUO's standard applications to ODC-Noord; it says neither that the register of education participants is hosted there now nor that it is among those applications."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:crisis_management:hosting",
+   "question": "Crisis management and civil protection (the register: NL-Alert (national public warning system)): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://www.nl-alert.nl/zo-werkt-nl-alert/vragen-en-antwoorden",
+   "quote": "Als je NL-Alerts wilt ontvangen moet je bereik hebben van één van de mobiele providers in Nederland (KPN, Odido of VodafoneZiggo).",
+   "quote_english": "To receive NL-Alerts you need coverage from one of the mobile providers in the Netherlands (KPN, Odido or VodafoneZiggo).",
+   "value": "NL-Alert is delivered over the networks of the mobile providers KPN, Odido and VodafoneZiggo",
+   "published": "",
+   "title": "NL-Alert – Vragen en antwoorden",
+   "publisher": "NL-Alert (Rijksoverheid)",
+   "doc_type": "official_page",
+   "note": "These are the broadcast networks NL-Alert is sent over, not a data-hosting location. The same page says alerts are sent through the transmission masts of the mobile providers using cell broadcast.",
+   "organisations": [
+    {
+     "name": "KPN",
+     "role": "host",
+     "seat": "",
+     "sector": "private"
+    },
+    {
+     "name": "Odido",
+     "role": "host",
+     "seat": "",
+     "sector": "private"
+    },
+    {
+     "name": "VodafoneZiggo",
+     "role": "host",
+     "seat": "",
+     "sector": "private"
+    }
+   ],
+   "review": {
+    "id": 12,
+    "quote_found": true,
+    "established": "",
+    "reason": "It names the mobile networks that deliver alerts to phones, not where NL-Alert's data is hosted or who runs its systems."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:electoral_management:hosting",
+   "question": "Election management and results (the register: uitslagprogrammatuur OSV2020-U or Abacus (results-tabulation software); operated by Kiesraad (Electoral Council)): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://open.overheid.nl/documenten/35d30e9b-10eb-4932-8008-714e09b9dc4c/file",
+   "quote": "Net zoals OSV2020 wordt Abacus decentraal gehost. Dat betekent dat de programmatuur gebruikt wordt op ‘standalone computers’ die niet zijn verbonden met het internet.",
+   "quote_english": "Like OSV2020, Abacus is hosted decentrally. This means the software is used on 'standalone computers' that are not connected to the internet.",
+   "value": "OSV2020 and Abacus are hosted decentrally, on standalone computers not connected to the internet",
+   "published": "2026-01-09",
+   "title": "Kamerbrief Evaluatie Tweede Kamerverkiezing 29 oktober 2025",
+   "publisher": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+   "doc_type": "official_page",
+   "note": "A letter to parliament evaluating the 2025 general election. The same letter says the Kiesraad develops Abacus itself.",
+   "organisations": [
+    {
+     "name": "Kiesraad",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 13,
+    "quote_found": true,
+    "established": "decentrally hosted on standalone computers that are not connected to the internet",
+    "reason": "The quote says Abacus, like OSV2020, runs on offline standalone computers rather than being hosted centrally."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:electoral_management:foreign_dependency",
+   "question": "Election management and results (the register: uitslagprogrammatuur OSV2020-U or Abacus (results-tabulation software); operated by Kiesraad (Electoral Council)): where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "fills_gap",
+   "url": "https://open.overheid.nl/documenten/35d30e9b-10eb-4932-8008-714e09b9dc4c/file",
+   "quote": "Net zoals OSV2020 wordt Abacus decentraal gehost. Dat betekent dat de programmatuur gebruikt wordt op ‘standalone computers’ die niet zijn verbonden met het internet.",
+   "quote_english": "Like OSV2020, Abacus is hosted decentrally. This means the software is used on 'standalone computers' that are not connected to the internet.",
+   "value": "national",
+   "published": "2026-01-09",
+   "title": "Kamerbrief Evaluatie Tweede Kamerverkiezing 29 oktober 2025",
+   "publisher": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+   "doc_type": "official_page",
+   "note": "The software runs offline on standalone computers at the electoral bodies, with no external hosting provider. The label is inferred from that; the quote does not say 'national'.",
+   "review": {
+    "id": 14,
+    "quote_found": true,
+    "established": "national",
+    "reason": "The software runs decentrally on standalone offline computers of its government users, with no hosting or cloud provider involved."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "national"
+  },
+  {
+   "claim": "record:NL:trust_services_pki:hosting",
+   "question": "State PKI and qualified trust services (the register: TSPs issue certificates under the State of the Netherlands trust anchor; operated by PKIoverheid is a trust framework managed by Logius on behalf of Ministry of BZK): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://cps.pkioverheid.nl/pkioverheid-cps-unified-v5.6.html",
+   "quote": "KPN B.V. is the supplier of technical services for the Root and Intermediate Certificates for Logius, including maintaining the corresponding Certificate Revocation Lists (CRLs)",
+   "quote_english": "",
+   "value": "KPN B.V. supplies the technical services for the PKIoverheid Root and Intermediate Certificates for Logius, including the CRLs",
+   "published": "2026-07-15",
+   "title": "CPS PA PKIoverheid Unified version 5.6",
+   "publisher": "Logius – Policy Authority PKIoverheid",
+   "doc_type": "official_page",
+   "note": "The current Certification Practice Statement, in force from 15 July 2026. Version 4.5 had worded this as 'KPN BV is responsible for the technical management of Staat der Nederlanden Root CA'.",
+   "organisations": [
+    {
+     "name": "KPN B.V.",
+     "role": "processor",
+     "seat": "",
+     "sector": "private"
+    },
+    {
+     "name": "Logius",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 15,
+    "quote_found": true,
+    "established": "KPN B.V. (technical services for Root and Intermediate certificates, CRLs and OCSP)",
+    "reason": "The CPS names KPN B.V. as Logius's supplier of technical services for the PKIoverheid root and intermediate certificates."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:trust_services_pki:foreign_dependency",
+   "question": "State PKI and qualified trust services (the register: TSPs issue certificates under the State of the Netherlands trust anchor; operated by PKIoverheid is a trust framework managed by Logius on behalf of Ministry of BZK): where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "fills_gap",
+   "url": "https://cps.pkioverheid.nl/pkioverheid-cps-unified-v5.6.html",
+   "quote": "KPN B.V. is the supplier of technical services for the Root and Intermediate Certificates for Logius, including maintaining the corresponding Certificate Revocation Lists (CRLs)",
+   "quote_english": "",
+   "value": "national",
+   "published": "2026-07-15",
+   "title": "CPS PA PKIoverheid Unified version 5.6",
+   "publisher": "Logius – Policy Authority PKIoverheid",
+   "doc_type": "official_page",
+   "note": "The root infrastructure is run by KPN B.V., a Dutch company. The quote names the supplier but not its location, so 'national' rests on KPN being Dutch. The issuing TSPs (for example DigiCert) are not covered.",
+   "review": {
+    "id": 16,
+    "quote_found": true,
+    "established": "",
+    "reason": "The quote names KPN B.V. as supplier but gives neither its nationality nor where the infrastructure is, so a provider class would need outside knowledge."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "national"
+  },
+  {
+   "claim": "record:NL:public_health_surveillance:hosting",
+   "question": "Public health surveillance (the register: Praeventis centrally registers vaccinations of every participant in the national immunisation programme; operated by RIVM (National Institute for Public Health and the Environment)): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://www.adviescollegeicttoetsing.nl/site/binaries/site-content/collections/documents/2025/06/23/advies-doorontwikkeling-praeventis/advies-programma-doorontwikkeling-praeventis.pdf",
+   "quote": "Leverancier Sopra Steria voert het technisch applicatiebeheer en de applicatieontwikkeling uit.",
+   "quote_english": "Supplier Sopra Steria carries out the technical application management and the application development.",
+   "value": "Sopra Steria carries out technical application management and application development of Praeventis",
+   "published": "2025-06-23",
+   "title": "Advies programma Doorontwikkeling Praeventis",
+   "publisher": "Adviescollege ICT-toetsing",
+   "doc_type": "audit_report",
+   "note": "The advice also notes RIVM's 'grote afhankelijkheid van de leverancier (Sopra Steria)'. The quote names who manages the application, not the data centre.",
+   "organisations": [
+    {
+     "name": "Sopra Steria",
+     "role": "processor",
+     "seat": "",
+     "sector": "private"
+    },
+    {
+     "name": "RIVM",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 17,
+    "quote_found": true,
+    "established": "Sopra Steria (technical application management and development; hosting not stated)",
+    "reason": "The ICT review says Sopra Steria does Praeventis's technical application management and development but does not say where it is hosted."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  },
+  {
+   "claim": "record:NL:statistics_microdata:foreign_dependency",
+   "question": "Statistical microdata (the register: Microdata: linkable person, business and address-level data for authorised researchers; operated by Centraal Bureau voor de Statistiek (CBS)): where its infrastructure runs: national / eu_provider / non_eu_provider / mixed",
+   "relation": "fills_gap",
+   "url": "https://www.cbs.nl/nl-nl/corporate/2017/04/toegang-tot-microdata-cbs-flexibeler-voor-onderzoekers",
+   "quote": "De bestanden zelf blijven op een server bij CBS en via een beveiligde internetverbinding kan een onderzoeker op afstand analyses uitvoeren.",
+   "quote_english": "The files themselves remain on a server at CBS and a researcher can run analyses remotely via a secure internet connection.",
+   "value": "national",
+   "published": "2017-01",
+   "title": "Toegang tot microdata CBS flexibeler voor onderzoekers",
+   "publisher": "Centraal Bureau voor de Statistiek",
+   "doc_type": "official_page",
+   "note": "The microdata stay on a server at CBS itself. The source dates from 2017.",
+   "review": {
+    "id": 18,
+    "quote_found": true,
+    "established": "national",
+    "reason": "It says the microdata files stay on a server at CBS itself, and researchers reach them remotely."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5",
+   "value_as_written": "national"
+  },
+  {
+   "claim": "record:NL:emergency_communications:hosting",
+   "question": "Emergency calls and public-safety radio (the register: meldkamers (emergency dispatch control rooms); operated by politie (national police)): where its data is hosted and who runs that infrastructure: the data centre, the hosting or cloud provider, or the body that operates its IT systems",
+   "relation": "fills_gap",
+   "url": "https://www.meldkamersamenwerking.nl/over-lms/",
+   "quote": "beheert voor alle hulpdiensten de meldkamers en zorgt voor een netwerk van tien operationeel en technisch met elkaar verbonden meldkamerlocaties. Dit doet zij als een zelfstandig onderdeel binnen de politie-organisatie met een eigen sturing, budget en medewerkers.",
+   "quote_english": "manages the control rooms for all emergency services and provides a network of ten operationally and technically interconnected control-room locations. It does so as an autonomous unit within the police organisation with its own management, budget and staff.",
+   "value": "The Landelijke Meldkamer Samenwerking (LMS), an autonomous unit within the police organisation, manages the control rooms and their interconnected network of control-room locations",
+   "published": "",
+   "title": "Over LMS",
+   "publisher": "Landelijke Meldkamer Samenwerking",
+   "doc_type": "official_page",
+   "note": "The subject of the quoted sentence is 'De Landelijke Meldkamer Samenwerking (LMS)', which the page renders with spaces around the abbreviation; the quote starts after it. It names the operating body, not a data centre.",
+   "organisations": [
+    {
+     "name": "Landelijke Meldkamer Samenwerking (LMS)",
+     "role": "operator",
+     "seat": "NL",
+     "sector": "state"
+    }
+   ],
+   "review": {
+    "id": 19,
+    "quote_found": true,
+    "established": "Landelijke Meldkamer Samenwerking (LMS), an independent unit within the police",
+    "reason": "The page context shows LMS as the subject; it manages the control rooms and their network of ten linked locations as part of the police organisation, though no data centre is named."
+   },
+   "researcher_model": "claude-opus-5-5",
+   "reviewer_model": "claude-opus-5-5"
+  }
+ ],
+ "outcomes": [
+  {
+   "claim": "record:NL:authentication_audit_log:foreign_dependency",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:authentication_audit_log:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:civil_registry:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "RvIG jaarplan 2025 (mentions outsourced IT and datacenter failover but names no provider), rvig.nl BRP-V/GBA-V pages, AcICT Toekomst BRP, ABDTOPConsult outsourcing report"
+  },
+  {
+   "claim": "record:NL:civil_registry:hosting",
+   "status": "no_better_found",
+   "searched": "RvIG jaarplan 2025 PDF, rvig.nl Diginetwerk/BRP-V pages, AcICT advice search, Kamerbrieven on ICT outsourcing; no named host/data centre for BRP-V found"
+  },
+  {
+   "claim": "record:NL:electoral_roll:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "Not specifically searched beyond Kiesraad pages; municipal registration has no single hosting source"
+  },
+  {
+   "claim": "record:NL:electoral_roll:hosting",
+   "status": "no_better_found",
+   "searched": "Kiesraad pages and BZK election evaluation letter (cover results software only, not the municipal voter registration)"
+  },
+  {
+   "claim": "record:NL:facial_biometric:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "RvIG jaarplan 2025 (names IDEMIA as document producer only), RvIG/BRP hosting searches"
+  },
+  {
+   "claim": "record:NL:facial_biometric:hosting",
+   "status": "no_better_found",
+   "searched": "RvIG jaarplan 2025, rvig.nl; no source naming where municipal travel-document administrations are hosted"
+  },
+  {
+   "claim": "record:NL:issuance_history:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "RvIG jaarplan 2025, rvig.nl, AcICT; no named provider for the Basisregister Reisdocumenten"
+  },
+  {
+   "claim": "record:NL:issuance_history:hosting",
+   "status": "no_better_found",
+   "searched": "RvIG jaarplan 2025 (outsourced IT, datacenter failover, no provider named), ODC-Noord site (customer list not published)"
+  },
+  {
+   "claim": "record:NL:trust_services_pki:foreign_dependency",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:trust_services_pki:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:beneficial_ownership:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "kvk.nl annual reports/privacy pages search for cloud/datacenter/servers; nothing on UBO-register hosting"
+  },
+  {
+   "claim": "record:NL:beneficial_ownership:hosting",
+   "status": "no_better_found",
+   "searched": "kvk.nl jaarverslag 2024, privacy pages, web search for KVK cloud/datacenter"
+  },
+  {
+   "claim": "record:NL:benefits_pensions:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "UWV jaarverslag 2025 digitalisering page (one unnamed datacenter supplier, hybrid cloud strategy) - no location stated"
+  },
+  {
+   "claim": "record:NL:benefits_pensions:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:business_registry:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "kvk.nl jaarverslag/jaarplan search, KVK privacy pages, general web search KVK cloud Azure/AWS"
+  },
+  {
+   "claim": "record:NL:business_registry:hosting",
+   "status": "no_better_found",
+   "searched": "kvk.nl jaarverslag 2024, privacy statement, web search for KVK datacenter/cloud"
+  },
+  {
+   "claim": "record:NL:crisis_management:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "nl-alert.nl Q&A (names Dutch mobile operators but not where the alerting back end runs), LMS site"
+  },
+  {
+   "claim": "record:NL:crisis_management:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:customs:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "AcICT CCI/CCE advice (IBM manages DMS, no location), Belastingdienst digital autonomy news, Kamerstuk 31066-340, TK debate 2026D13699"
+  },
+  {
+   "claim": "record:NL:customs:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:education:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "AcICT Enterprise Cloud advice (planned ODC-Noord migration only), ODC-Noord site, duo.nl"
+  },
+  {
+   "claim": "record:NL:education:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:electoral_management:foreign_dependency",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:electoral_management:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:emergency_communications:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "meldkamersamenwerking.nl Over LMS; no infrastructure location/provider stated"
+  },
+  {
+   "claim": "record:NL:emergency_communications:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:government_payroll:foreign_dependency",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:government_payroll:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:judicial_criminal:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "justid.nl JDS and systeemontwikkeling pages; no data-centre or provider stated"
+  },
+  {
+   "claim": "record:NL:judicial_criminal:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:land_property:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "Kadaster jaarverslag 2024 and 2025 (KPN platform, private and unnamed public cloud services) - not enough to label"
+  },
+  {
+   "claim": "record:NL:land_property:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:official_gazette:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "Logius IT-fundament page (Logius services on ODCs, but Staatsblad/KOOP not named), koopoverheid.nl, Kamervragen 2025-2026 nr. 2359"
+  },
+  {
+   "claim": "record:NL:official_gazette:hosting",
+   "status": "no_better_found",
+   "searched": "koopoverheid.nl, Logius IT-fundament and publicatie pages; no source tying officielebekendmakingen hosting to a named data centre"
+  },
+  {
+   "claim": "record:NL:residence_permits:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "IND INDiGO searches (old 2011 audit blg-106937 not retrievable), ind.nl, AcICT"
+  },
+  {
+   "claim": "record:NL:residence_permits:hosting",
+   "status": "no_better_found",
+   "searched": "IND INDiGO hosting searches on ind.nl, rijksoverheid.nl, officielebekendmakingen.nl; only 2009-2013 news-site material found"
+  },
+  {
+   "claim": "record:NL:vehicle_licensing:foreign_dependency",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:vehicle_licensing:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:health_records:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "aorta-lsp.nl (LSP runs in two unnamed datacentres), vzvz.nl ICT pages; DXC role only on news sites"
+  },
+  {
+   "claim": "record:NL:public_health_surveillance:foreign_dependency",
+   "status": "no_better_found",
+   "searched": "AcICT Praeventis advice 2019 and 2025 (Sopra Steria manages the application; no hosting location)"
+  },
+  {
+   "claim": "record:NL:public_health_surveillance:hosting",
+   "status": "found"
+  },
+  {
+   "claim": "record:NL:statistics_microdata:foreign_dependency",
+   "status": "found"
+  }
+ ]
+}

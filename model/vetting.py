@@ -76,12 +76,14 @@ def prompt_sha256() -> str:
 RUNS = ROOT / "cache" / "vetting"
 
 
-def prepare(isos: list[str] | None, date: str) -> int:
+def prepare(isos: list[str] | None, date: str, wave: str | None = None) -> int:
     """Write the workflow's input: one file per state, and the args to pass. The run id is the date
-    and the input's hash, so the same input on the same day is the same run."""
+    and the input's hash, so the same input on the same day is the same run. With a wave, the input is
+    only that wave's gaps from docs/gaps.md, and no printed fact is re-vetted."""
     import subprocess  # noqa: PLC0415
-    raw = subprocess.run([sys.executable, str(DIR / "build_input.py")], capture_output=True, check=True).stdout
-    states = [s for s in json.loads(raw) if not isos or s["iso"] in isos]
+    raw = subprocess.run([sys.executable, str(DIR / "build_input.py")] + (["--wave", wave] if wave else []),
+                         capture_output=True, check=True).stdout
+    states = [s for s in json.loads(raw) if (not isos or s["iso"] in isos) and (s["facts"] or s["gaps"])]
     body = json.dumps(states, ensure_ascii=False, sort_keys=True).encode()
     run = f"{date}-{hashlib.sha256(body).hexdigest()[:8]}"
     folder = RUNS / run / "in"
@@ -575,6 +577,12 @@ def manifest(run_id: str, output: Path, prepared: str, tokens: str, duration: st
     doc = json.loads(raw)
     states = staged()
     rows = _read(OUTCOMES, OFIELDS)
+    if (ROUNDS / run_id).is_dir():
+        # A later round or wave counts only itself: its own states, findings, and the admission outcomes of
+        # the claims it worked on. The first run's manifest counted everything staged, which was then the same.
+        states = {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in sorted((ROUNDS / run_id).glob("*.json"))}
+        mine = {x["claim"] for d in states.values() for x in d["findings"] + d["outcomes"]}
+        rows = [r for r in rows if r["claim"] in mine]
     totals: dict[str, int] = {}
     for r in rows:
         k = r["result"] or r["status"]
@@ -588,7 +596,8 @@ def manifest(run_id: str, output: Path, prepared: str, tokens: str, duration: st
         "workflow_sha256": prompt_sha256(),
         "built_from_commit": commit,
         "states": len(states),
-        "reviewer_model": sorted({d.get("reviewer_model", "") for d in states.values()} - {""}),
+        "reviewer_model": sorted(({d.get("reviewer_model", "") for d in states.values()}
+                                  | {f.get("reviewer_model", "") for d in states.values() for f in d["findings"]}) - {""}),
         "agents": doc.get("agentCount") if isinstance(doc, dict) else None,
         "tokens": tokens, "duration": duration,
         "tools": tool_versions(),
@@ -628,6 +637,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--apply", type=Path, help="hosts: merge a confirmed stub into authorities.csv")
     ap.add_argument("result", nargs="?", type=Path, help="stage: the workflow's JSON result")
     ap.add_argument("--run", default="", help="stage: the workflow run id")
+    ap.add_argument("--wave", choices=["hosting"], help="prepare: only this wave's gaps from docs/gaps.md; "
+                    "stage the result with --round")
     ap.add_argument("--withheld", action="store_true", help="prepare: a round on the facts the fact check withheld (#93)")
     ap.add_argument("--round", action="store_true", help="stage: a later round, under rounds/<run>/ (#93)")
     ap.add_argument("--date", default=dt.date.today().isoformat())
@@ -638,7 +649,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "prepare":
         if args.withheld:
             return prepare_withheld(args.date)
-        return prepare([i.upper() for i in args.iso] if args.iso else None, args.date)
+        return prepare([i.upper() for i in args.iso] if args.iso else None, args.date, args.wave)
     if args.command == "hosts":
         return hosts(args.apply)
     if args.command == "stage":
