@@ -50,7 +50,7 @@ Slovenia described on its own measured characteristics. Each figure is the publi
 
 ## 3. Critical data holdings, by priority
 
-The holdings Slovenia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 30 of 39 holding classes have a verified source; 3 have a sourced record count or data size.
+The holdings Slovenia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 31 of 39 holding classes have a verified source; 3 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
@@ -91,18 +91,18 @@ The holdings Slovenia cannot let depend on infrastructure a foreign state can co
 | Standard | Official gazette and legislation (tier 1) | Pravni informacijski sistem Republike Slovenije (PISRS) (Legal Information System of the Republic of Slovenia), sole publication platform of the Uradni list RS[^s49] | Služba Vlade Republike Slovenije za zakonodajo (Government Legislation Office)[^s49] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Standard | Government payroll and personnel (tier 1) | MFERAC supports budget users in finance, accounting and payroll/HR[^s50][^s51] | *Not yet sourced* | *Not yet sourced* | National infrastructure[^s51] | *Not yet measured* |
 | Standard | Health records (tier 2) | CRPP is the single system for collecting and exchanging health data on patients in Slovenia[^s52] | NIJZ is responsible for the CeZZ information system, its maintenance and security[^s53] | Central health ICT is a public service run by a public company wholly owned by the Republic of Slovenia[^s53] | National infrastructure[^s53] | *Not yet measured* |
-| Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | e-ARH.si is the Slovenian electronic archive for long-term preservation of electronic archival records[^s54] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Public health surveillance (tier 2) | The electronic register of vaccinated persons and adverse events (eRCO) has operated since 2017[^s55] | *Not yet sourced* | The state-owned public company is the contractual processor for the public-health collections (Art. 22(2))[^s53] | National infrastructure[^s53] | *Not yet measured* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Geospatial base data (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 29 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 30 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
-| National infrastructure | 6 |
+| National infrastructure | 7 |
 | EU provider | 1 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
@@ -146,7 +146,7 @@ Tier 0 and 1 holdings for Slovenia without a verified source yet. Corrections an
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1408 facts are printed, 4312 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
 
 ### How sources were found
 
@@ -154,10 +154,10 @@ Research agents, one per member state, looked for each critical holding and each
 
 | Quote check of the first research runs | Claims |
 |---|---:|
-| exact | 2138 |
-| loose | 20 |
-| not_found | 107 |
-| fetch_failed | 251 |
+| exact | 2192 |
+| loose | 21 |
+| not_found | 75 |
+| fetch_failed | 228 |
 
 A vetting run then re-examined every printed fact, and after it the gaps. It looked for a better source, for newer information and for any source that disagrees. Each of its findings was judged by a blind reviewer, shown the quote and URL but never the proposed value. Runs: wf_1c6b8bb6-450. Reviewer model: claude-opus-5-5, the same model as the researcher.
 
@@ -165,15 +165,15 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 |---|---:|
 | below_T2 | 6 |
 | corrected_withheld | 6 |
-| corroborated | 264 |
-| disputed | 10 |
-| filled_gap | 377 |
-| holding_not_established | 41 |
+| corroborated | 275 |
+| disputed | 11 |
+| filled_gap | 367 |
+| holding_not_established | 38 |
 | no_better_found | 486 |
 | not_reached | 201 |
-| not_verified | 177 |
+| not_verified | 173 |
 | review_disagreed | 177 |
-| same_source | 9 |
+| same_source | 14 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -203,8 +203,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 634 |
-| T2 competent public body or audit office | 644 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
+| T2 competent public body or audit office | 643 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -216,7 +216,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 109 |
-| Standard | 1299 |
+| Standard | 1315 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -259,7 +259,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1408 of 1408 printed facts pass the fact check.
+In this build, 1424 of 1424 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -301,7 +301,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check.
+In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -325,6 +325,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
 | wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 |
@@ -335,7 +336,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Slovenia
 
-68 of 68 printed facts about Slovenia pass.
+71 of 71 printed facts about Slovenia pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -407,6 +408,9 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:SI:health_records:hosting | Health records: hosting | unrecorded | claude-fable-5-1 | supported | wf_e9645602-884 |
 | record:SI:health_records:foreign_dependency | Health records: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:national_archives:register | National archives (digital): the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:SI:public_health_surveillance:register | Public health surveillance: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| record:SI:public_health_surveillance:hosting | Public health surveillance: hosting | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| record:SI:public_health_surveillance:foreign_dependency | Public health surveillance: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 
 ### Withheld after the fact check: Slovenia
 
@@ -470,7 +474,8 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s52]: eZdravje (NIJZ) — CRPP - eZdravje. CRPP - eZdravje. <https://ezdrav.si/resitve/crpp/> ([archived](https://web.archive.org/web/20251015032134/https://ezdrav.si/resitve/crpp/))
 [^s53]: Uradni list Republike Slovenije — Zakon o digitalizaciji zdravstva (ZDigZ), Uradni list…, 2025-12-04. Zakon o digitalizaciji zdravstva (ZDigZ), Uradni list RS, št. 100/2025. <https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387>
 [^s54]: GOV.SI — Slovenski elektronski arhiv. Slovenski elektronski arhiv. <https://www.gov.si/teme/slovenski-elektronski-arhiv/> ([archived](https://web.archive.org/web/20260612043003/https://www.gov.si/teme/slovenski-elektronski-arhiv/))
+[^s55]: Nacionalni inštitut za javno zdravje (NIJZ) — Elektronski register cepljenih oseb in neželenih učinkov…, 2025-11-06. Elektronski register cepljenih oseb in neželenih učinkov po cepljenju - eRCO. <https://nijz.si/nalezljive-bolezni/cepljenje/elektronski-register-cepljenih-oseb-in-nezelenih-ucinkov-po-cepljenju-erco/> ([archived](https://web.archive.org/web/20260210081857/https://nijz.si/nalezljive-bolezni/cepljenje/elektronski-register-cepljenih-oseb-in-nezelenih-ucinkov-po-cepljenju-erco/))
 
-**Evidence grades:** 5 Strong, 63 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 6 Strong, 65 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

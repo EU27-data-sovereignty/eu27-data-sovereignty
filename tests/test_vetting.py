@@ -253,3 +253,18 @@ class Wave(unittest.TestCase):
                 self.assertEqual(rows[(iso, cls)]["status"], "held")
                 self.assertIn(rows[(iso, cls)]["register"], g["what"])
 
+    def test_the_unverified_wave_is_the_cheapest_gaps_and_keeps_the_review_blind(self):
+        import gaps  # noqa: PLC0415
+        sys.path.insert(0, str(ROOT / "model" / "research" / "vetting"))
+        import build_input  # noqa: PLC0415
+        states = build_input.wave("unverified")
+        asked = {g["claim"]: g for s in states for g in s["gaps"]}
+        self.assertEqual(set(asked), {c["claim"] for c in gaps.cells() if c["kind"] == "holding"
+                                      and c["field"] == "register" and c["state"] == "claimed_unverified"})
+        for g in asked.values():
+            self.assertTrue(g["earlier"], g["claim"])
+            for e in g["earlier"]:
+                # The earlier value is a lead for the researcher only; the question the reviewer sees omits it.
+                if e["value"]:
+                    self.assertNotIn(e["value"], g["what"])
+

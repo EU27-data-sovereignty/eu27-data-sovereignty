@@ -637,7 +637,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--apply", type=Path, help="hosts: merge a confirmed stub into authorities.csv")
     ap.add_argument("result", nargs="?", type=Path, help="stage: the workflow's JSON result")
     ap.add_argument("--run", default="", help="stage: the workflow run id")
-    ap.add_argument("--wave", choices=["hosting"], help="prepare: only this wave's gaps from docs/gaps.md; "
+    ap.add_argument("--wave", choices=["hosting", "unverified"], help="prepare: only this wave's gaps from docs/gaps.md; "
                     "stage the result with --round")
     ap.add_argument("--withheld", action="store_true", help="prepare: a round on the facts the fact check withheld (#93)")
     ap.add_argument("--round", action="store_true", help="stage: a later round, under rounds/<run>/ (#93)")

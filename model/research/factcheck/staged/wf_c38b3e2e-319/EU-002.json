@@ -1,0 +1,30 @@
+{
+ "run": "wf_c38b3e2e-319",
+ "prepared": "2026-10-06-77091afd",
+ "batch": "EU-002",
+ "iso": "EU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:SI:public_health_surveillance:foreign_dependency",
+   "fact_sha256": "5d40a2843b041d8f3a7d641ac6176dc4f2da1562e940fb4ccf173e65e28fbc28",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The quote is verbatim Art. 7(3) of the Zakon o digitalizaciji zdravstva (ZDigZ), making 'družba' the contractual processor of the Art. 22(2) public-health collections (which include the communicable-disease collection, point 1). On the same page Art. 7(2) defines that company as a public enterprise wholly owned by the Republic of Slovenia with its seat in Slovenia, and Art. 7(7) forbids it to tran",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387"
+  },
+  {
+   "claim": "record:SI:public_health_surveillance:hosting",
+   "fact_sha256": "d1a8b9b6809d17aadd74386e4f4ec567955189d1e37b82f2786050e84b313070",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 7(3) ZDigZ states verbatim that the company is, under the GDPR, the contractual processor of the collections in Art. 22(1) points 2-5 and Art. 22(2); Art. 22(2) is headed 'Zbirke podatkov na področju javnega zdravja' (public-health collections), and Art. 7(2) defines the company as a javno podjetje whose sole founder and shareholder is the Republic of Slovenia, so 'state-owned public company'",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387"
+  }
+ ]
+}

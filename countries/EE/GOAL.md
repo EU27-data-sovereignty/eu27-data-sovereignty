@@ -58,7 +58,7 @@ The holdings Estonia cannot let depend on infrastructure a foreign state can com
 |---|---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | Rahvastikuregister (Population Register)[^s20] | Siseministeerium (Ministry of the Interior)[^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Facial biometric (tier 0) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory…. It is withheld until the fact or its source is corrected and checked again* | ABIS controllers are the Police and Border Guard Board and the Ministry of Foreign Affairs[^s21][^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | ABIS (automaatse biomeetrilise isikutuvastuse süsteemi andmekogu; Automated Biometric Identification System database)[^s23] | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names…. It is withheld until the fact or its source is corrected and checked again* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | ABIS (automaatse biomeetrilise isikutuvastuse süsteemi andmekogu; Automated Biometric Identification System database)[^s23] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s21][^s22] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Breeder document scans (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Critical | Authentication audit log (tier 0) | Riigi autentimisteenus (State Authentication Service, TARA)[^s24] | RIA (Riigi Infosüsteemi Amet; Information System Authority)[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Document issuance history (tier 0) | Isikut tõendavate dokumentide andmekogu (Identity Documents Database)[^s25] | Politsei- ja Piirivalveamet (Police and Border Guard Board)[^s25] | *Not yet sourced* | *Not stated in sources* | over 3,2 miljoni isikutunnistuse ja elamisloakaardi (over 3.2 million ID cards and residence permit cards issued)[^s26] |
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Estonia without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1408 facts are printed, 4312 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
 
 ### How sources were found
 
@@ -156,10 +156,10 @@ Research agents, one per member state, looked for each critical holding and each
 
 | Quote check of the first research runs | Claims |
 |---|---:|
-| exact | 2138 |
-| loose | 20 |
-| not_found | 107 |
-| fetch_failed | 251 |
+| exact | 2192 |
+| loose | 21 |
+| not_found | 75 |
+| fetch_failed | 228 |
 
 A vetting run then re-examined every printed fact, and after it the gaps. It looked for a better source, for newer information and for any source that disagrees. Each of its findings was judged by a blind reviewer, shown the quote and URL but never the proposed value. Runs: wf_1c6b8bb6-450. Reviewer model: claude-opus-5-5, the same model as the researcher.
 
@@ -167,15 +167,15 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 |---|---:|
 | below_T2 | 6 |
 | corrected_withheld | 6 |
-| corroborated | 264 |
-| disputed | 10 |
-| filled_gap | 377 |
-| holding_not_established | 41 |
+| corroborated | 275 |
+| disputed | 11 |
+| filled_gap | 367 |
+| holding_not_established | 38 |
 | no_better_found | 486 |
 | not_reached | 201 |
-| not_verified | 177 |
+| not_verified | 173 |
 | review_disagreed | 177 |
-| same_source | 9 |
+| same_source | 14 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -205,8 +205,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 634 |
-| T2 competent public body or audit office | 644 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
+| T2 competent public body or audit office | 643 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -218,7 +218,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 109 |
-| Standard | 1299 |
+| Standard | 1315 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -261,7 +261,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1408 of 1408 printed facts pass the fact check.
+In this build, 1424 of 1424 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -303,7 +303,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check.
+In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -327,6 +327,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
 | wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 |
@@ -337,7 +338,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Estonia
 
-53 of 53 printed facts about Estonia pass.
+54 of 54 printed facts about Estonia pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -356,6 +357,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:EE:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:EE:fingerprint_biometric:operator | Fingerprint biometric: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 | record:EE:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:authentication_audit_log:operator | Authentication audit log: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:EE:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -401,7 +403,6 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 |---|---|---|---|---|
 | record:EE:benefits_pensions:register | Benefits & pensions: the name of the register or system | claude-fable-5-1 | not supported | The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something the source does not say. |
 | record:EE:facial_biometric:register | Facial biometric: the name of the register or system | claude-fable-5-1 | not supported | Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory definition, not the name of a register or system, so it does not answer 'what'; the source that names a register holding facial images (ABIS, siseministeerium.ee) is not |
-| record:EE:fingerprint_biometric:operator | Fingerprint biometric: the body that operates it | claude-fable-5-1 | unclear | The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names PPA alone, and the quote does not establish whether fingerprint data fall wholly outside the MFA exception, so the source is ambiguous for the scope as printed. |
 
 ---
 
@@ -454,6 +455,6 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s47]: Haridus- ja Teadusministeerium — Eesti keele tasemeeksamiks ettevalmistava…, 2024-07. Eesti keele tasemeeksamiks ettevalmistava täienduskoolituse tegevusloa taotlemise kirjeldus. <https://www.hm.ee/sites/default/files/documents/2024-07/Eesti%20keele%20tasemeeksamiks%20ettevalmistava%20t%C3%A4ienduskoolituse%20tegevusloa%20taotlemise%20kirjeldus.pdf>
 [^s48]: Registrite ja Infosüsteemide Keskus (RIK) — Riigi Teataja. Riigi Teataja. <https://www.rik.ee/et/muud-teenused/riigi-teataja> ([archived](https://web.archive.org/web/20260312042839/https://www.rik.ee/et/muud-teenused/riigi-teataja))
 
-**Evidence grades:** 3 Strong, 50 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 3 Strong, 51 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

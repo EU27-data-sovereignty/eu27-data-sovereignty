@@ -146,7 +146,7 @@ Tier 0 and 1 holdings for Bulgaria without a verified source yet. Corrections an
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1408 facts are printed, 4312 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
 
 ### How sources were found
 
@@ -154,10 +154,10 @@ Research agents, one per member state, looked for each critical holding and each
 
 | Quote check of the first research runs | Claims |
 |---|---:|
-| exact | 2138 |
-| loose | 20 |
-| not_found | 107 |
-| fetch_failed | 251 |
+| exact | 2192 |
+| loose | 21 |
+| not_found | 75 |
+| fetch_failed | 228 |
 
 A vetting run then re-examined every printed fact, and after it the gaps. It looked for a better source, for newer information and for any source that disagrees. Each of its findings was judged by a blind reviewer, shown the quote and URL but never the proposed value. Runs: wf_1c6b8bb6-450. Reviewer model: claude-opus-5-5, the same model as the researcher.
 
@@ -165,15 +165,15 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 |---|---:|
 | below_T2 | 6 |
 | corrected_withheld | 6 |
-| corroborated | 264 |
-| disputed | 10 |
-| filled_gap | 377 |
-| holding_not_established | 41 |
+| corroborated | 275 |
+| disputed | 11 |
+| filled_gap | 367 |
+| holding_not_established | 38 |
 | no_better_found | 486 |
 | not_reached | 201 |
-| not_verified | 177 |
+| not_verified | 173 |
 | review_disagreed | 177 |
-| same_source | 9 |
+| same_source | 14 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -203,8 +203,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 634 |
-| T2 competent public body or audit office | 644 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
+| T2 competent public body or audit office | 643 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -216,7 +216,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 109 |
-| Standard | 1299 |
+| Standard | 1315 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -259,7 +259,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1408 of 1408 printed facts pass the fact check.
+In this build, 1424 of 1424 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -301,7 +301,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check.
+In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -325,6 +325,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
 | wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 |
@@ -340,8 +341,8 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
 | indicator:BG:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| indicator:BG:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
-| indicator:BG:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
+| indicator:BG:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | claude-opus-5-5 | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| indicator:BG:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 | param:BG:population_m | param:BG:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_5fd3e22d-b86 |
 | param:BG:gdp_eur_bn | param:BG:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:BG:gov_employment_k | param:BG:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -398,7 +399,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 [^s1]: Комисия за регулиране на съобщенията — Електронни удостоверителни услуги. Електронни удостоверителни услуги. <https://crc.bg/bg/rubriki/560/elektronni-udostoveritelni-uslugi>
 [^s2]: Информационно обслужване АД — Информационно обслужване АД – Доклад за дейността 2024…, 2025. Информационно обслужване АД – Доклад за дейността 2024 (Annual activity report 2024). <https://www.is-bg.net/upload/4944/IS_2024_%D0%94%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%20%D0%B7%D0%B0%20%D0%B4%D0%B5%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D1%82%D0%B0.pdf>
-[^s3]: eufunds.bg (Управляващ орган на ОП „Добро управление“) — Надграждане и развитие на държавния хибриден частен…, 2022-01-01. Надграждане и развитие на държавния хибриден частен облак, финансиран по ОП „Добро управление“. <https://www.eufunds.bg/bg/opgg/node/9490> ([archived](https://web.archive.org/web/20260314130013/https://www.eufunds.bg/bg/opgg/node/9490))
+[^s3]: eufunds.bg (Министерство на финансите) — Надграждане и развитие на Държавния хибриден частен…, 2022-01-01. Надграждане и развитие на Държавния хибриден частен облак, финансиран по ОП „Добро управление“. <https://www.eufunds.bg/bg/opgg/node/9490> ([archived](https://web.archive.org/web/20260314130013/https://www.eufunds.bg/bg/opgg/node/9490))
 [^s4]: Информационно обслужване АД — Инфраструктура. Инфраструктура. <https://www.is-bg.net/bg/solutions/infrastructure>
 [^s5]: Eurostat tps00001, 2026-09-30. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
 [^s6]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>

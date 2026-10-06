@@ -93,6 +93,7 @@ cps.pkioverheid.nl,2,public_body
 crc.bg,2,public_body
 crisiscentrum.be,2,public_body
 crl.justice.gouv.fr,2,government_or_authority
+csam.be,2,government_or_authority
 cso.ie,1,statistics_office
 ctie.gouvernement.lu,2,public_body
 cuta.belgium.be,2,government_or_authority
@@ -295,8 +296,10 @@ nccert.pl,2,public_body
 neak.gov.hu,2,government_or_authority
 net.jogtar.hu,4,unofficial_law_mirror
 news.rik.cy,4,press
+newsbeast.gr,4,press
 nhif.bg,2,public_body
 nias.gov.hr,2,government_or_authority
+nijz.si,2,public_body
 nisz.hu,2,public_body
 nki.gov.hu,2,government_or_authority
 nl-alert.nl,2,public_body
@@ -336,6 +339,7 @@ polizei.gv.at,2,government_or_authority
 polostrategiconazionale.it,2,public_body
 portal.cnas.ro,2,public_body
 portal.dls.moi.gov.cy,2,government_or_authority
+press.itsme-id.com,3,company
 pro-m.hu,2,public_body
 prociv.gov.pt,2,government_or_authority
 puesc.gov.pl,2,government_or_authority
@@ -415,6 +419,7 @@ toldst.dk,2,public_body
 transelectrica.ro,2,public_body
 transportstyrelsen.se,2,public_body
 trustedlist.adr.gov.ro,2,government_or_authority
+tsl.belgium.be,2,government_or_authority
 tsl.digital.gob.es,2,government_or_authority
 tsl.mca.org.mt,2,public_body
 tweedekamer.nl,2,public_body

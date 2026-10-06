@@ -7,6 +7,29 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-06
 
+### Changed: a free retry recovers 6 registers and 26 sourced claims; the cheapest gaps go to a wave
+
+- **The order.** The owner chose the cheapest gaps first: the 116 registers a research run had found but could not
+  verify. A free pass came first, with no model cost:
+  1. re-fetch every unverified claim (`research.py verify`);
+  2. retry missing quotes in a rendered page (`--rendered`), which recovered 32 of 74;
+  3. re-verify the vetting findings (`vetting.py verify`).
+
+  Robots.txt refusals and 403s are recorded and never routed around.
+- **The result.** 690 of 1,053 (state, class) pairs are now recorded (684 before), and 1,549 record claims are
+  sourced (1,523 before). 6 of the 116 registers verified; 110 remain.
+- **New hosts.** Five newly cited hosts were classified: `csam.be`, `tsl.belgium.be` and `nijz.si` as T2;
+  `press.itsme-id.com` as T3 (a company); `newsbeast.gr` as T4 (press).
+- **The fact check.** Fable 5.1 confirmed all 32 new and changed facts (`wf_c38b3e2e-319`). Among them, 7 printed
+  values changed because a better-tier source replaced the old one. 1,424 of 1,424 printed facts pass. The floors
+  rose: `FACT_FLOOR` 1,424, records 1,549, register 690.
+- **The next wave.** `prepare --wave unverified` takes the remaining 110 registers. Each carries `earlier`: what
+  earlier searches proposed, the URL they cited, and why it was not admitted. The researcher must cite a different,
+  fetchable URL. `earlier` is never copied into a finding's question, so the blind reviewer still never sees the
+  proposed value, and `tests/test_vetting.py` checks this.
+- **A flaky test fixed.** One run of the 375 px visual test screenshotted "Loading the EU-27 dataset…", because the
+  loading message sits inside `<main>` too. The test now waits for it to go.
+
 ### Added: research waves, and the hosting wave's pilot on the Netherlands: 12 gaps filled, $6.40
 
 - **The mode.** A wave researches only the gaps `docs/gaps.md` lists, for one kind of field, and re-vets no printed

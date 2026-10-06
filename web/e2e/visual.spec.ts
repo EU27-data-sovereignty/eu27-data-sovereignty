@@ -27,6 +27,7 @@ for (const scheme of ['light', 'dark'] as const) {
         await page.setViewportSize({ width: 1280, height: 900 })
         await page.goto(route)
         await expect(page.locator('main')).toBeVisible()
+        await expect(page.getByText('Loading the EU-27 dataset')).toHaveCount(0)
         await page.evaluate(() => document.fonts.ready)
         await expect(page).toHaveScreenshot({ maxDiffPixelRatio: 0.01 })
       })
@@ -39,6 +40,8 @@ for (const route of ['/', '/country/DE']) {
     await page.setViewportSize({ width: 375, height: 812 })
     await page.goto(route)
     await expect(page.locator('main')).toBeVisible()
+    // The loading message renders inside <main> too; a screenshot taken then showed only it (2026-10-06).
+    await expect(page.getByText('Loading the EU-27 dataset')).toHaveCount(0)
     await page.evaluate(() => document.fonts.ready)
     await expect(page).toHaveScreenshot({ maxDiffPixelRatio: 0.01 })
   })

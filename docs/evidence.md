@@ -9,17 +9,17 @@
 
 | | Count |
 |---|---:|
-| Printed facts | 1408 |
+| Printed facts | 1424 |
 | Strong | 109 |
-| Standard | 1299 |
-| Gaps (values withheld) | 4312 |
+| Standard | 1315 |
+| Gaps (values withheld) | 4296 |
 | Disputed (withheld: source changed, or sources disagree) | 76 |
 
 ```mermaid
 pie showData
   title "Printed facts by evidence grade"
   "Strong" : 109
-  "Standard" : 1299
+  "Standard" : 1315
 ```
 
 **How grades are set.** Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict.
@@ -36,8 +36,8 @@ How good is the best source behind each printed fact? Tiers are set per host in 
 ```mermaid
 pie showData
   title "Printed facts by best source tier"
-  "T1" : 634
-  "T2" : 644
+  "T1" : 651
+  "T2" : 643
   "T3" : 8
   "T4" : 122
 ```
@@ -45,11 +45,11 @@ pie showData
 | Tier | Kind of source | Facts |
 |---|---|---:|
 | T1 | eurostat | 162 |
-| T1 | official law portal | 457 |
+| T1 | official law portal | 474 |
 | T1 | statistics office | 15 |
 | T2 | audit office | 13 |
-| T2 | government or authority | 278 |
-| T2 | public body | 353 |
+| T2 | government or authority | 280 |
+| T2 | public body | 350 |
 | T3 | chamber of commerce | 2 |
 | T3 | company | 5 |
 | T3 | private foundation | 1 |
@@ -73,12 +73,12 @@ Each Strong condition a Standard fact misses. One fact can miss several, so the 
 | Condition not met | Facts |
 |---|---:|
 | Best source below T2 (e.g. an unofficial law mirror) | 147 |
-| Machine summary of a non-English quote, no figure to match | 875 |
-| No archived copy of exactly this URL | 619 |
-| Categorical: review agreed but was not blind | 163 |
-| A name in the value is not in the quote | 167 |
+| Machine summary of a non-English quote, no figure to match | 886 |
+| No archived copy of exactly this URL | 623 |
+| Categorical: review agreed but was not blind | 164 |
+| A name in the value is not in the quote | 170 |
 | Secondary source or statement of absence | 29 |
-| Quote matched loosely (punctuation) | 20 |
+| Quote matched loosely (punctuation) | 22 |
 
 ## By state
 
@@ -87,7 +87,7 @@ xychart-beta
   title "Printed facts per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
   y-axis "facts" 0 --> 78
-  bar [65, 43, 46, 63, 64, 54, 61, 53, 60, 57, 33, 73, 60, 78, 62, 60, 21, 21, 49, 32, 63, 49, 49, 28, 45, 68, 51]
+  bar [65, 45, 46, 63, 64, 54, 61, 54, 60, 57, 43, 73, 60, 78, 62, 60, 21, 21, 49, 32, 63, 49, 49, 28, 45, 71, 51]
 ```
 
 ```mermaid
@@ -95,22 +95,22 @@ xychart-beta
   title "Strong facts per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
   y-axis "facts" 0 --> 29
-  bar [4, 6, 4, 4, 4, 1, 6, 3, 4, 0, 2, 6, 4, 2, 29, 1, 0, 0, 2, 13, 2, 1, 3, 1, 1, 5, 1]
+  bar [4, 5, 4, 4, 4, 1, 6, 3, 4, 0, 2, 6, 4, 2, 29, 1, 0, 0, 2, 13, 2, 1, 3, 1, 1, 6, 1]
 ```
 
 | State | Printed | Strong | Standard | Gaps |
 |---|---:|---:|---:|---:|
 | Austria (AT) | 65 | 4 | 61 | 147 |
-| Belgium (BE) | 43 | 6 | 37 | 169 |
+| Belgium (BE) | 45 | 5 | 40 | 167 |
 | Bulgaria (BG) | 46 | 4 | 42 | 170 |
 | Cyprus (CY) | 63 | 4 | 59 | 149 |
 | Czechia (CZ) | 64 | 4 | 60 | 148 |
 | Germany (DE) | 54 | 1 | 53 | 158 |
 | Denmark (DK) | 61 | 6 | 55 | 155 |
-| Estonia (EE) | 53 | 3 | 50 | 163 |
+| Estonia (EE) | 54 | 3 | 51 | 162 |
 | Greece (EL) | 60 | 4 | 56 | 156 |
 | Spain (ES) | 57 | 0 | 57 | 159 |
-| Finland (FI) | 33 | 2 | 31 | 183 |
+| Finland (FI) | 43 | 2 | 41 | 173 |
 | France (FR) | 73 | 6 | 67 | 143 |
 | Croatia (HR) | 60 | 4 | 56 | 156 |
 | Hungary (HU) | 78 | 2 | 76 | 138 |
@@ -125,19 +125,19 @@ xychart-beta
 | Portugal (PT) | 49 | 3 | 46 | 167 |
 | Romania (RO) | 28 | 1 | 27 | 188 |
 | Sweden (SE) | 45 | 1 | 44 | 167 |
-| Slovenia (SI) | 68 | 5 | 63 | 144 |
+| Slovenia (SI) | 71 | 6 | 65 | 141 |
 | Slovakia (SK) | 51 | 1 | 50 | 165 |
 
 ## By kind of fact
 
 | Kind | Printed | Strong | Standard |
 |---|---:|---:|---:|
-| Register or system | 620 | 46 | 574 |
-| Operator | 352 | 31 | 321 |
+| Register or system | 626 | 46 | 580 |
+| Operator | 359 | 31 | 328 |
 | Eurostat fundamental or posture | 162 | 0 | 162 |
 | Sovereignty indicator | 126 | 6 | 120 |
-| Hosting | 65 | 4 | 61 |
-| Infrastructure dependency | 42 | 2 | 40 |
+| Hosting | 67 | 4 | 63 |
+| Infrastructure dependency | 43 | 2 | 41 |
 | Record count | 41 | 20 | 21 |
 
 ## Disputed facts
@@ -167,7 +167,6 @@ A fact whose evidence came into question after it was admitted: its source dropp
 - `record:DE:digital_identity_credentials:hosting` (DE): Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The page says 'Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund', which supports the core clause, but the expansion 'Informationstechnikzentrum Bund' and the description 'the federal IT service provider' appear nowhere on the…. It is withheld until the fact or its source is corrected and checked again
 - `record:DK:vehicle_licensing:register` (DK): Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote and § 1(2) are on the page; § 1(2) says the register holds data on each vehicle and who it belongs to ('tilhørsforhold'). But the printed text calls the register 'DMR', and that name or abbreviation does not appear anywhere on…. It is withheld until the fact or its source is corrected and checked again
 - `record:EE:facial_biometric:register` (EE): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory…. It is withheld until the fact or its source is corrected and checked again
-- `record:EE:fingerprint_biometric:operator` (EE): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names…. It is withheld until the fact or its source is corrected and checked again
 - `record:EE:benefits_pensions:register` (EE): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something…. It is withheld until the fact or its source is corrected and checked again
 - `record:EL:breeder_documents:register` (EL): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Art. 115 of Law 4483/2017 (both the PDF and lawspot) says the Citizens' Register comprises the civil-status acts (ληξιαρχικές πράξεις) of Greek citizens and foreigners with events in Greece, held in the Ministry of the Interior's Registry…. It is withheld until the fact or its source is corrected and checked again
 - `record:EL:digital_identity_credentials:foreign_dependency` (EL): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote is on the page and says GRNET, a Greek State company, designs, implements and maintains the application on behalf of the Ministry; but the page says nothing about where the infrastructure runs (no hosting, server or data-centre…. It is withheld until the fact or its source is corrected and checked again
@@ -175,6 +174,7 @@ A fact whose evidence came into question after it was admitted: its source dropp
 - `record:ES:trust_services_pki:operator` (ES): Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote only says that FNMT-RCM is a public business entity and in-house provider of the General State Administration. Neither it nor the body text says that FNMT operates the state PKI or trust services; only the site navigation has…. It is withheld until the fact or its source is corrected and checked again
 - `record:ES:land_property:register` (ES): Disputed: sources disagree. Agencia Estatal Boletín Oficial del Estado — Real Decreto Legislativo 1/2004, texto refundido de la…, 2004-03-08 gives the value this report printed; Agencia Estatal Boletín Oficial del Estado — Decreto de 8 de febrero de 1946, Ley Hipotecaria… gives “Registro de la Propiedad (Property Registry)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
 - `record:FI:border_control:operator` (FI): Disputed: sources disagree. Oikeusministeriö / Finlex (Ministry of Justice) — Laki henkilötietojen käsittelystä Rajavartiolaitoksessa…, 2019 gives the value this report printed; Poliisihallitus — Tietosuojaseloste; Schengenin tietojärjestelmän…, 2023-05-11 gives “Poliisihallitus (National Police Board)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
+- `record:FI:education:operator` (FI): Disputed: sources disagree. Oikeusministeriö / Finlex (Ministry of Justice) — Laki valtakunnallisista opinto-, koulutus- ja…, 2017 gives the value this report printed; Finlex / oikeusministeriö — Laki valtakunnallisista opinto- ja tutkintorekistereistä… gives “Opetushallitus (Finnish National Agency for Education)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
 - `record:FR:government_payroll:operator` (FR): Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote is a table heading. The table under it lists PAYSAGE ('consolidation de l'application de paye des agents de l'État') among projects carried by programmes 156 and 218. The question asks which body operates the system, and the…. It is withheld until the fact or its source is corrected and checked again
 - `record:FR:defence_command:foreign_dependency` (FR): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is on the page, but it only says the DGA awarded the Artemis initiative to Atos-Bull, Capgemini and Thales-Sopra Steria (framed as 'initiatives françaises' responding to Palantir); it says nothing about where defence command and…. It is withheld until the fact or its source is corrected and checked again
 - `record:FR:statistics_microdata:foreign_dependency` (FR): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote only says CASD designed its own dedicated secure equipment (the SD-Box) following three principles; neither it nor the rest of the page says where the central infrastructure is hosted, by whom or in which country, so it does not…. It is withheld until the fact or its source is corrected and checked again
@@ -231,28 +231,28 @@ Where a citizen helps most: values still withheld, items the agents did not reac
 | Luxembourg (LU) | de, fr, lb | 195 | 5 | 65 | 0 |
 | Romania (RO) | ro | 188 | 10 | 33 | 0 |
 | Malta (MT) | en, mt | 184 | 0 | 0 | 0 |
-| Finland (FI) | fi, sv | 183 | 10 | 0 | 0 |
-| Bulgaria (BG) | bg | 170 | 21 | 19 | 0 |
-| Belgium (BE) | de, fr, nl | 169 | 6 | 20 | 0 |
+| Finland (FI) | fi, sv | 173 | 10 | 0 | 0 |
+| Bulgaria (BG) | bg | 170 | 21 | 16 | 0 |
+| Belgium (BE) | de, fr, nl | 167 | 6 | 6 | 0 |
 | Latvia (LV) | lv | 167 | 0 | 29 | 0 |
 | Portugal (PT) | pt | 167 | 0 | 2 | 0 |
 | Sweden (SE) | sv | 167 | 0 | 0 | 0 |
 | Slovakia (SK) | sk | 165 | 0 | 6 | 0 |
-| Estonia (EE) | et | 163 | 4 | 0 | 0 |
 | Poland (PL) | pl | 163 | 0 | 0 | 0 |
+| Estonia (EE) | et | 162 | 4 | 0 | 0 |
 | Spain (ES) | es | 159 | 10 | 0 | 0 |
 | Germany (DE) | de | 158 | 7 | 1 | 0 |
-| Greece (EL) | el | 156 | 26 | 7 | 0 |
+| Greece (EL) | el | 156 | 26 | 6 | 0 |
 | Croatia (HR) | hr | 156 | 28 | 0 | 0 |
-| Italy (IT) | it | 156 | 6 | 8 | 0 |
+| Italy (IT) | it | 156 | 6 | 4 | 0 |
 | Denmark (DK) | da | 155 | 0 | 0 | 0 |
 | Ireland (IE) | en, ga | 154 | 28 | 29 | 0 |
 | Cyprus (CY) | el, tr | 149 | 0 | 7 | 0 |
 | Netherlands (NL) | nl | 149 | 0 | 10 | 0 |
 | Czechia (CZ) | cs | 148 | 0 | 6 | 0 |
 | Austria (AT) | de | 147 | 0 | 0 | 0 |
-| Slovenia (SI) | sl | 144 | 0 | 1 | 0 |
 | France (FR) | fr | 143 | 40 | 4 | 0 |
+| Slovenia (SI) | sl | 141 | 0 | 0 | 0 |
 | Hungary (HU) | hu | 138 | 0 | 4 | 0 |
 
 ## Agent runs

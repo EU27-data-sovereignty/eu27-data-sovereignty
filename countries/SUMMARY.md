@@ -14,7 +14,7 @@ Where each state's key registers are hosted, and by whom: [EU-INFRASTRUCTURE.md]
 | 🇨🇿 | [Czechia](CZ/GOAL.md) | CZ | 32 of 39 | 9 of 9 | Not yet sized |
 | 🇩🇰 | [Denmark](DK/GOAL.md) | DK | 28 of 39 | 7 of 9 | Not yet sized |
 | 🇪🇪 | [Estonia](EE/GOAL.md) | EE | 26 of 39 | 6 of 9 | Not yet sized |
-| 🇫🇮 | [Finland](FI/GOAL.md) | FI | 16 of 39 | 8 of 9 | Not yet sized |
+| 🇫🇮 | [Finland](FI/GOAL.md) | FI | 21 of 39 | 8 of 9 | Not yet sized |
 | 🇫🇷 | [France](FR/GOAL.md) | FR | 35 of 39 | 9 of 9 | Not yet sized |
 | 🇩🇪 | [Germany](DE/GOAL.md) | DE | 27 of 39 | 8 of 9 | Not yet sized |
 | 🇬🇷 | [Greece](EL/GOAL.md) | EL | 32 of 39 | 9 of 9 | Not yet sized |
@@ -30,6 +30,6 @@ Where each state's key registers are hosted, and by whom: [EU-INFRASTRUCTURE.md]
 | 🇵🇹 | [Portugal](PT/GOAL.md) | PT | 27 of 39 | 9 of 9 | Not yet sized |
 | 🇷🇴 | [Romania](RO/GOAL.md) | RO | 15 of 39 | 4 of 9 | Not yet sized |
 | 🇸🇰 | [Slovakia](SK/GOAL.md) | SK | 29 of 39 | 7 of 9 | Not yet sized |
-| 🇸🇮 | [Slovenia](SI/GOAL.md) | SI | 30 of 39 | 9 of 9 | Not yet sized |
+| 🇸🇮 | [Slovenia](SI/GOAL.md) | SI | 31 of 39 | 9 of 9 | Not yet sized |
 | 🇪🇸 | [Spain](ES/GOAL.md) | ES | 30 of 39 | 7 of 9 | Not yet sized |
 | 🇸🇪 | [Sweden](SE/GOAL.md) | SE | 24 of 39 | 7 of 9 | Not yet sized |

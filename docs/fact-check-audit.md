@@ -6,24 +6,24 @@
 
 ## Status
 
-**1408 of 1408 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **56** more are withheld because the check did not confirm them.
+**1424 of 1424 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **55** more are withheld because the check did not confirm them.
 
 | Checker model | Current verdicts |
 |---|---:|
-| claude-fable-5-1 | 1408 |
+| claude-fable-5-1 | 1424 |
 | claude-opus-5-5 | 0 |
 
 | Verdict | Facts |
 |---|---:|
-| supported | 1408 |
+| supported | 1424 |
 | not supported | 0 |
 | unclear | 0 |
 
 | Author of the fact, as recorded | Facts |
 |---|---:|
-| claude-opus-5-5 | 35 |
+| claude-opus-5-5 | 36 |
 | program:fetch_eurostat.py | 162 |
-| unrecorded | 1211 |
+| unrecorded | 1226 |
 
 ## The rule
 
@@ -73,7 +73,6 @@ Facts the checker did not confirm as printed. Each is shown as disputed, with th
 | `record:DK:vehicle_licensing:register` | claude-opus-5-5 | not supported | wf_8232a23d-013 | The quote and § 1(2) are on the page; § 1(2) says the register holds data on each vehicle and who it belongs to ('tilhørsforhold'). But the printed text calls the register 'DMR', and that name or abbreviation does not appear anywhere on the page. |
 | `record:EE:benefits_pensions:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something the source does not say. |
 | `record:EE:facial_biometric:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory definition, not the name of a register or system, so it does not answer 'what'; the source that names a register holding facial images (ABIS, siseministeerium.ee) is not |
-| `record:EE:fingerprint_biometric:operator` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names PPA alone, and the quote does not establish whether fingerprint data fall wholly outside the MFA exception, so the source is ambiguous for the scope as printed. |
 | `record:EL:breeder_documents:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Art. 115 of Law 4483/2017 (both the PDF and lawspot) says the Citizens' Register comprises the civil-status acts (ληξιαρχικές πράξεις) of Greek citizens and foreigners with events in Greece, held in the Ministry of the Interior's Registry Acts Management system, which matches the rest of the sentence; but the parenthetical '(births, marriages, deaths)' appears in neither cited source (searched bot |
 | `record:EL:digital_identity_credentials:foreign_dependency` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote is on the page and says GRNET, a Greek State company, designs, implements and maintains the application on behalf of the Ministry; but the page says nothing about where the infrastructure runs (no hosting, server or data-centre statement anywhere on it). A national operator is not the same as a national hosting location, so the source is ambiguous for this categorical label. |
 | `record:ES:trust_services_pki:operator` | claude-opus-5-5 | not supported | wf_8232a23d-013 | The quote only says that FNMT-RCM is a public business entity and in-house provider of the General State Administration. Neither it nor the body text says that FNMT operates the state PKI or trust services; only the site navigation has 'Certificación Digital' and 'FNMT Ceres' links. So the page does not establish the operator role. |
@@ -115,7 +114,7 @@ Each verdict other than *supported*, from every run, including those a later che
 | wf_da123db1-a4e | `record:AT:facial_biometric:foreign_dependency` | claude-fable-5-1 | unclear | The Passgesetz says verbatim that Bundesrechenzentrum GmbH takes part as processor in the § 22a/§ 22b processing; it names a federal body as processor but says nothing about where the infrastructure runs, so 'National infrastructure' rests on an inference the statute does not state. | current |
 | wf_da123db1-a4e | `indicator:BG:K2` | claude-fable-5-1 | unclear | Both quotes are on their pages, but neither states who operates the national eID scheme: the CRC quote lists trust-service providers (not eID), and the Sega article only says the eID certificates are to be written to the ID-card chip and that МВР has not yet activated them. 'Partly' is an inference the sources do not state, so the support is genuinely ambiguous. | current |
 | wf_da123db1-a4e | `record:BG:customs:register` | claude-fable-5-1 | not supported | The quote is on the page verbatim and names the system (МИСВ), but it is a forward-looking announcement ('ще бъде въведена в реална експлоатация' = will be put into live operation on 26.11.2018); the printed text asserts as fact that it went into production on that date, which the source does not confirm. | superseded: supported in wf_72f99a66-4e9 |
-| wf_da123db1-a4e | `indicator:BG:C1` | claude-fable-5-1 | not supported | The page says the company Информационно обслужване offers colocation in its secure data centre and lists government agencies as clients, but nowhere states that the company is state-owned or that the state operates these data centres; the 'Yes' to state-operated government data centres needs outside knowledge the source does not supply. | superseded: supported in wf_72f99a66-4e9 |
+| wf_da123db1-a4e | `indicator:BG:C1` | claude-fable-5-1 | not supported | The page says the company Информационно обслужване offers colocation in its secure data centre and lists government agencies as clients, but nowhere states that the company is state-owned or that the state operates these data centres; the 'Yes' to state-operated government data centres needs outside knowledge the source does not supply. | superseded: supported in wf_c38b3e2e-319 |
 | wf_da123db1-a4e | `record:BG:border_control:register` | claude-fable-5-1 | not supported | Both quotes are verbatim, but the MFA citation names a different system (НВИС, not printed), and the RTA ordinance names 'АИС Издирвателна дейност – НШИС' only in the context of wanted-vehicle registration termination, never as a border or visa system; the printed form also truncates the system's name. The source does not establish the printed system as the border/visa register. | current |
 | wf_da123db1-a4e | `record:CY:emergency_communications:foreign_dependency` | claude-fable-5-1 | not supported | The article only reports that Civil Defence signed a development agreement with CYTA for a system to be built over 20 months; it says nothing about where the infrastructure runs, what kind of entity CYTA is, or any hosting arrangement, so 'National infrastructure' needs outside knowledge the source does not supply. | current |
 | wf_da123db1-a4e | `record:CY:fingerprint_biometric:register` | claude-fable-5-1 | unclear | Art. 63(5) (and 67(4) for passports) says fingerprints taken for an ID card may be used only to issue the card and are deleted within 48 hours, verbatim. That shows ID-document fingerprints are not retained under this law, but the source does not state that no central fingerprint register exists at all, so the general negative 'No central register' goes beyond what the page says. | current |
@@ -127,7 +126,7 @@ Each verdict other than *supported*, from every run, including those a later che
 | wf_da123db1-a4e | `record:DK:emergency_communications:operator` | claude-fable-5-1 | not supported | The quote is on the page and supports CFB being part of the Ministry of Civil Security and Emergency Preparedness, but the cited page nowhere mentions Dansk Beredskabskommunikation A/S or network operation; that clause is added without support from the cited source (it appears only on the uncited om-sine page). | superseded: supported in wf_72f99a66-4e9 |
 | wf_da123db1-a4e | `record:EE:benefits_pensions:register` | claude-fable-5-1 | not supported | The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something the source does not say. | current |
 | wf_da123db1-a4e | `record:EE:judicial_criminal:operator` | claude-fable-5-1 | not supported | § 4 of the Criminal Records Database Act names Justiits- ja Digiministeerium as controller and Registrite ja Infosüsteemide Keskus as processor, supporting those two names, but the acronym 'RIK' printed after the processor's name does not appear anywhere on the cited page, so the statement as printed adds something the source does not say. | superseded: supported in wf_72f99a66-4e9 |
-| wf_da123db1-a4e | `record:EE:fingerprint_biometric:operator` | claude-fable-5-1 | unclear | The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names PPA alone, and the quote does not establish whether fingerprint data fall wholly outside the MFA exception, so the source is ambiguous for the scope as printed. | current |
+| wf_da123db1-a4e | `record:EE:fingerprint_biometric:operator` | claude-fable-5-1 | unclear | The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names PPA alone, and the quote does not establish whether fingerprint data fall wholly outside the MFA exception, so the source is ambiguous for the scope as printed. | superseded: supported in wf_c38b3e2e-319 |
 | wf_da123db1-a4e | `record:EE:customs:register` | claude-fable-5-1 | unclear | Could not fetch any cited page: emta.ee returns a Cloudflare 'Just a moment' 403 to both curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot of this URL. The quote could not be checked. | superseded: supported in wf_f14edd00-71f |
 | wf_da123db1-a4e | `record:EE:education:operator` | claude-fable-5-1 | unclear | Could not fetch any cited page: hm.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked. | superseded: supported in wf_f14edd00-71f |
 | wf_da123db1-a4e | `record:EE:firearms_register:register` | claude-fable-5-1 | unclear | Could not fetch any cited page: politsei.ee returns a Cloudflare 403 to curl and WebFetch, no archived_url is recorded, and the Wayback Machine has no snapshot. The quote could not be checked. | superseded: supported in wf_f14edd00-71f |
@@ -205,6 +204,7 @@ Each verdict other than *supported*, from every run, including those a later che
 
 | Run | Date | Facts checked | By model | Verdicts | Commit | Bundle SHA-256 | Workflow SHA-256 |
 |---|---|---:|---|---|---|---|---|
+| wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 | 8291f70e01be | c66e3a7e23512f42 | 2f780d07c1acd7ae |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 | fa40304fce9e | 281207eb5d1c41fa | 2f780d07c1acd7ae |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 | 0683d7fabda3 | 0e95781076d86516 | 2f780d07c1acd7ae |
 | wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 | 1e52404b64ae | b68a25235dd3f7be | 2f780d07c1acd7ae |

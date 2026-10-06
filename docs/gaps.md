@@ -18,27 +18,27 @@ follow its register, so only the register is counted for it.
 
 ## Holdings: is the register known?
 
-675 of 1044 (state, class) pairs that are not
+681 of 1044 (state, class) pairs that are not
 established as absent have a known register.
 
 | | Have | Gaps | Claimed, not verified | Never searched | Searched once | Searched twice, not found |
 |---|---|---|---|---|---|---|
 | Tier 0 | 183 of 234 | 51 | 32 | 0 | 2 | 17 |
-| Tier 1 | 438 of 675 | 237 | 76 | 0 | 39 | 122 |
-| Tier 2 | 32 of 81 | 49 | 6 | 0 | 43 | 0 |
+| Tier 1 | 443 of 675 | 232 | 71 | 0 | 39 | 122 |
+| Tier 2 | 33 of 81 | 48 | 5 | 0 | 43 | 0 |
 | Tier 3 | 22 of 54 | 32 | 2 | 0 | 30 | 0 |
-| **All** | 675 of 1044 | 369 | 116 | 0 | 114 | 139 |
+| **All** | 681 of 1044 | 363 | 110 | 0 | 114 | 139 |
 
 ## Fields of the known holdings
 
 | | Have | Gaps | Claimed, not verified | Never searched | Searched once | Searched twice, not found |
 |---|---|---|---|---|---|---|
-| `holder` | 588 of 675 | 87 | 46 | 0 | 41 | 0 |
-| `legal_basis` | 259 of 675 | 416 | 135 | 0 | 281 | 0 |
-| `hosting` | 80 of 675 | 595 | 29 | 0 | 559 | 7 |
-| `foreign_dependency` | 55 of 675 | 620 | 28 | 0 | 576 | 16 |
-| `record_count` | 56 of 675 | 619 | 24 | 0 | 595 | 0 |
-| `data_size` | 0 of 675 | 675 | 0 | 0 | 675 | 0 |
+| `holder` | 599 of 681 | 82 | 45 | 0 | 37 | 0 |
+| `legal_basis` | 268 of 681 | 413 | 128 | 0 | 285 | 0 |
+| `hosting` | 82 of 681 | 599 | 28 | 0 | 564 | 7 |
+| `foreign_dependency` | 56 of 681 | 625 | 28 | 0 | 581 | 16 |
+| `record_count` | 57 of 681 | 624 | 23 | 0 | 601 | 0 |
+| `data_size` | 0 of 681 | 681 | 0 | 0 | 681 | 0 |
 
 ## Registers not yet found, by class
 
@@ -61,7 +61,7 @@ established as absent have a known register.
 | `land_property` (tier 1) | 22 of 27 | 5 | 4 | 0 | 0 | 1 |
 | `business_registry` (tier 1) | 21 of 27 | 6 | 3 | 0 | 0 | 3 |
 | `beneficial_ownership` (tier 1) | 24 of 27 | 3 | 1 | 0 | 0 | 2 |
-| `vehicle_licensing` (tier 1) | 21 of 27 | 6 | 3 | 0 | 0 | 3 |
+| `vehicle_licensing` (tier 1) | 22 of 27 | 5 | 2 | 0 | 0 | 3 |
 | `judicial_criminal` (tier 1) | 20 of 27 | 7 | 6 | 0 | 0 | 1 |
 | `police_records` (tier 1) | 21 of 27 | 6 | 2 | 0 | 0 | 4 |
 | `border_control` (tier 1) | 21 of 27 | 6 | 2 | 0 | 2 | 2 |
@@ -69,17 +69,17 @@ established as absent have a known register.
 | `official_gazette` (tier 1) | 18 of 27 | 9 | 6 | 0 | 1 | 2 |
 | `public_finance` (tier 1) | 18 of 27 | 9 | 3 | 0 | 1 | 5 |
 | `government_payroll` (tier 1) | 16 of 27 | 11 | 3 | 0 | 3 | 5 |
-| `electoral_management` (tier 1) | 15 of 27 | 12 | 5 | 0 | 2 | 5 |
+| `electoral_management` (tier 1) | 16 of 27 | 11 | 4 | 0 | 2 | 5 |
 | `central_bank` (tier 1) | 17 of 27 | 10 | 2 | 0 | 0 | 8 |
 | `defence_command` (tier 1) | 2 of 27 | 25 | 1 | 0 | 9 | 15 |
-| `intelligence` (tier 1) | 8 of 27 | 19 | 4 | 0 | 3 | 12 |
+| `intelligence` (tier 1) | 9 of 27 | 18 | 3 | 0 | 3 | 12 |
 | `emergency_communications` (tier 1) | 19 of 27 | 8 | 3 | 0 | 0 | 5 |
-| `crisis_management` (tier 1) | 20 of 27 | 7 | 4 | 0 | 0 | 3 |
+| `crisis_management` (tier 1) | 21 of 27 | 6 | 3 | 0 | 0 | 3 |
 | `grid_control` (tier 1) | 13 of 27 | 14 | 2 | 0 | 3 | 9 |
 | `water_control` (tier 1) | 6 of 27 | 21 | 5 | 0 | 7 | 9 |
-| `education` (tier 1) | 21 of 27 | 6 | 3 | 0 | 2 | 1 |
+| `education` (tier 1) | 22 of 27 | 5 | 2 | 0 | 2 | 1 |
 | `health_records` (tier 2) | 13 of 27 | 14 | 1 | 0 | 13 | 0 |
-| `public_health_surveillance` (tier 2) | 11 of 27 | 16 | 2 | 0 | 14 | 0 |
+| `public_health_surveillance` (tier 2) | 12 of 27 | 15 | 1 | 0 | 14 | 0 |
 | `statistics_microdata` (tier 2) | 8 of 27 | 19 | 3 | 0 | 16 | 0 |
 | `geospatial` (tier 3) | 15 of 27 | 12 | 1 | 0 | 11 | 0 |
 | `national_archives` (tier 3) | 7 of 27 | 20 | 1 | 0 | 19 | 0 |
@@ -89,20 +89,20 @@ established as absent have a known register.
 | State | Registers known | Hosting known | Gaps | Claimed, not verified | Never searched | Searched once | Searched twice, not found |
 |---|---|---|---|---|---|---|---|
 | AT | 30 of 38 | 4 of 30 | 153 | 6 | 0 | 143 | 4 |
-| BE | 19 of 38 | 1 of 19 | 116 | 12 | 0 | 98 | 6 |
+| BE | 19 of 38 | 2 of 19 | 111 | 7 | 0 | 98 | 6 |
 | BG | 31 of 39 | 4 of 31 | 140 | 13 | 0 | 126 | 1 |
 | HR | 29 of 39 | 3 of 29 | 135 | 10 | 0 | 123 | 2 |
 | CY | 29 of 38 | 4 of 29 | 125 | 6 | 0 | 111 | 8 |
 | CZ | 31 of 38 | 0 of 31 | 147 | 9 | 0 | 134 | 4 |
 | DK | 28 of 39 | 8 of 28 | 127 | 29 | 0 | 96 | 2 |
 | EE | 26 of 39 | 0 of 26 | 152 | 14 | 0 | 133 | 5 |
-| FI | 16 of 39 | 0 of 16 | 104 | 17 | 0 | 84 | 3 |
+| FI | 21 of 39 | 0 of 21 | 116 | 9 | 0 | 104 | 3 |
 | FR | 35 of 39 | 1 of 35 | 161 | 16 | 0 | 144 | 1 |
 | DE | 26 of 38 | 3 of 26 | 134 | 20 | 0 | 114 | 0 |
 | EL | 32 of 39 | 9 of 32 | 141 | 7 | 0 | 129 | 5 |
 | HU | 31 of 39 | 13 of 31 | 129 | 15 | 0 | 108 | 6 |
 | IE | 27 of 39 | 3 of 27 | 117 | 21 | 0 | 94 | 2 |
-| IT | 27 of 39 | 4 of 27 | 135 | 21 | 0 | 111 | 3 |
+| IT | 27 of 39 | 4 of 27 | 133 | 19 | 0 | 111 | 3 |
 | LV | 20 of 39 | 0 of 20 | 116 | 21 | 0 | 89 | 6 |
 | LT | 6 of 39 | 0 of 6 | 67 | 15 | 0 | 33 | 19 |
 | LU | 5 of 39 | 1 of 5 | 60 | 30 | 0 | 26 | 4 |
@@ -112,7 +112,7 @@ established as absent have a known register.
 | PT | 27 of 39 | 0 of 27 | 137 | 6 | 0 | 124 | 7 |
 | RO | 15 of 39 | 0 of 15 | 98 | 12 | 0 | 77 | 9 |
 | SK | 29 of 39 | 0 of 29 | 143 | 9 | 0 | 131 | 3 |
-| SI | 29 of 38 | 7 of 29 | 126 | 11 | 0 | 112 | 3 |
+| SI | 30 of 38 | 8 of 30 | 127 | 10 | 0 | 114 | 3 |
 | ES | 30 of 39 | 0 of 30 | 155 | 22 | 0 | 129 | 4 |
 | SE | 23 of 38 | 3 of 23 | 125 | 12 | 0 | 102 | 11 |
 

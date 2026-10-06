@@ -1,0 +1,310 @@
+{
+ "run": "wf_c38b3e2e-319",
+ "prepared": "2026-10-06-77091afd",
+ "batch": "EU-001",
+ "iso": "EU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:FI:electoral_management:operator",
+   "fact_sha256": "2eb6b47f2847e57905e2176dd8386223ad6f7b0053da10c9310bfc1746b7b728",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Vaalilaki 714/1998 (fetched page, embedded text) contains verbatim: 'Vaalilautakunta voi ottaa avustavaa henkilöstöä ... 77 §:ssä tarkoitettua ääni-oikeusrekisterin ja muiden oikeusministeriön tietojärjestelmien käyttämistä varten', i.e. polling committees (vaalilautakunta) use the voting register and other Ministry of Justice systems. The dvv.fi page also contains its quote verbatim (Oikeusrekist",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/1998/714"
+  },
+  {
+   "claim": "record:SI:public_health_surveillance:register",
+   "fact_sha256": "9441676708fe8b13223e9971e242226e11a81fdd9a7ba614783cdce571247d6c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The NIJZ page states verbatim that at the start of 2017 the 'Elektronski register cepljenih oseb in neželenih učinkov po cepljenju – eRCO' began operating within eZdravje, matching the name, abbreviation and 2017 start date.",
+   "quote_found": true,
+   "checked_url": "https://nijz.si/nalezljive-bolezni/cepljenje/elektronski-register-cepljenih-oseb-in-nezelenih-ucinkov-po-cepljenju-erco/"
+  },
+  {
+   "claim": "record:FI:vehicle_licensing:operator",
+   "fact_sha256": "9e5e47de86338b0335e8a8e8454aa4ca88bad35c5057a11ac0ca950f3329e9f4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The consolidated act XML contains verbatim 'Liikenne- ja viestintävirasto pitää sähköisesti liikenneasioiden rekisteriä, joka sisältää tietoja:', naming the Finnish Transport and Communications Agency as keeper of the transport register. The short name 'Traficom' does not appear anywhere in the act text; it is the same body, but that alias comes from outside the source.",
+   "quote_found": true,
+   "checked_url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2017/320/fin@20251001"
+  },
+  {
+   "claim": "indicator:BE:K1",
+   "fact_sha256": "237d3c7e480b5f79260280944c7315e0db0c01c3130c54a8ea84c3ed1a0eb719",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both CPS PDFs (downloaded and text-extracted) contain their sentences verbatim ('The Belgian authorities are the TSP/CSP responsible for the Belgium Root CAs ...'), and the Belgian trusted list XML contains verbatim the subject 'CN=eSign CA eID, SERIALNUMBER=202501, OU=QTSP: FPS Policy and Support - BOSA ... O=Kingdom of Belgium - Federal Government'. Together they show the root CA and the qualifi",
+   "quote_found": true,
+   "checked_url": "https://tsl.belgium.be/tsl-be.xml"
+  },
+  {
+   "claim": "record:BE:authentication_audit_log:operator",
+   "fact_sha256": "8d27d665e3bd0e1509ab482c16f1cc00643452ce2a0dcd8f1085c207e953fcc3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The FAS privacy notice states verbatim that the Federal Public Service Policy and Support, DG Simplification and Digitization, 'is responsible for your personal data', i.e. the controller, matching the printed 'Controller: FPS BOSA, DG Simplification and Digitization'.",
+   "quote_found": true,
+   "checked_url": "https://sma-help.bosa.belgium.be/en/fas-privacy"
+  },
+  {
+   "claim": "record:BE:authentication_audit_log:register",
+   "fact_sha256": "d17bff981756b96192a8e77ca84d613367d3620c794869dca3ff396f42af002d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The notice says verbatim 'Authentication logs (date, time, ID number, message ID, IP address, browser, OS) are stored in an audit trail for 10 years ...' within the FAS privacy notice; the printed text lists a subset of those fields and the 10-year retention, adding nothing.",
+   "quote_found": true,
+   "checked_url": "https://sma-help.bosa.belgium.be/en/fas-privacy"
+  },
+  {
+   "claim": "record:BE:digital_identity_credentials:hosting",
+   "fact_sha256": "987456d2f72334be796196dce0967a4ed3cfa4b94f944285261dc487dc493694",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The notice says verbatim 'DG Simplification and Digitization employs subcontractors as processors under GDPR-compliant contracts' and names no subcontractor, matching 'uses subcontractors as data processors (not named)'.",
+   "quote_found": true,
+   "checked_url": "https://sma-help.bosa.belgium.be/en/fas-privacy"
+  },
+  {
+   "claim": "record:BE:digital_identity_credentials:operator",
+   "fact_sha256": "77dc6c8036ddacca68ad49f92271aae6432994bac5760600f11957f590c94ef0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The notice says verbatim the FAS is 'provided by DG Simplification and Digitization', and elsewhere identifies that DG as part of the Federal Public Service Policy and Support (BOSA), supporting the printed operator.",
+   "quote_found": true,
+   "checked_url": "https://sma-help.bosa.belgium.be/en/fas-privacy"
+  },
+  {
+   "claim": "record:BE:digital_identity_credentials:register",
+   "fact_sha256": "2fb29a3ed83c312fd76255ca0b65766382de2b16041315a34c6560f576e2c0ba",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The notice contains verbatim 'The FAS enables citizens to authenticate themselves using digital keys ...'; the page is titled 'FAS – My Digital Keys', lists eID and itsme as keys and carries the CSAM footer, so the printed name and examples are all on the page.",
+   "quote_found": true,
+   "checked_url": "https://sma-help.bosa.belgium.be/en/fas-privacy"
+  },
+  {
+   "claim": "record:EE:fingerprint_biometric:operator",
+   "fact_sha256": "2c3611db1806b6b34f594a7367e85a3eda8c22e2c3a60087acde632a870d255c",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The archived ABIS statute (fetched by curl) contains verbatim § 5(1)-(2): the controller is the Politsei- ja Piirivalveamet except for data under subsections 2 and 3 (Ministry of Foreign Affairs, and in (3) the Estonian Forensic Science Institute); the archived Identity Documents Act also contains verbatim that PPA and the MFA are the controllers. PPA is the primary controller as printed, though t",
+   "quote_found": true,
+   "checked_url": "https://web.archive.org/web/20260418112026/https://www.riigiteataja.ee/akt/131122021018"
+  },
+  {
+   "claim": "indicator:IT:K2",
+   "fact_sha256": "d5b9bd1445aeb0ab90f67180151083fe4c5e2419885fbe256ddf53d1fedcd97c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Both cartaidentita.interno.gov.it pages contain their sentences verbatim (CIE 'garantita dallo Stato e rilasciata dal Ministero dell'Interno'; 'emesso dal Ministero dell'Interno e prodotto dal Poligrafico e Zecca dello Stato'), and the Italian trusted list XML (fetched by curl) contains verbatim 'C=IT, O=Ministero dell'Interno, OU=Direz. Centr. per i Servizi Demografici - CNSD, CN=National root CA",
+   "quote_found": true,
+   "checked_url": "https://eidas.agid.gov.it/TL/TSL-IT.xml"
+  },
+  {
+   "claim": "record:IT:issuance_history:operator",
+   "fact_sha256": "f878ab3210b2c55b0a52d83b726d26db8ba74de0069c7f8459740c9f5e03811c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 7-vicies ter, para 2-bis of D.L. 7/2005 states verbatim 'L'emissione della carta d'identità elettronica è riservata al Ministero dell'interno ...', i.e. issuance is reserved to the Ministry of the Interior; the la-carta page's quote is also present verbatim.",
+   "quote_found": true,
+   "checked_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2005-01-31;7~art7viciester"
+  },
+  {
+   "claim": "indicator:BE:K2",
+   "fact_sha256": "93dcd2c86b2f41b513656c3fefad7ba001b394ebc54933a645752b444532c14f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "csam.be states verbatim that CSAM is an initiative of listed federal government bodies (RSZ, FOD BOSA DG DT, FOD Financiën, KSZ, FOD Economie, FOD Binnenlandse Zaken) and is carried by government services; ibz.rrn.fgov.be contains verbatim that the eID is issued to every Belgian over 12 and that the Algemene Directie Identiteit en Burgerzaken of FOD Binnenlandse Zaken manages the identity-card reg",
+   "quote_found": true,
+   "checked_url": "https://www.csam.be/nl/over-csam.html"
+  },
+  {
+   "claim": "indicator:BG:C1",
+   "fact_sha256": "c7d30dde4bdc35c7a0c2e6deaf30f51c8101f7e505fb1f74e9b47a37e6b35ec0",
+   "author_model": "claude-opus-5-5",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The eufunds.bg page (State e-Government Agency project, 2022) states verbatim that the State Hybrid Private Cloud is built on four data centres (ЦДЕУ1, ЦДЕУ2, Recovery Centre, КТЦЕП) and describes services currently provided from them, supporting state-operated data centres in operation. The is-bg.net quote is present verbatim but only describes colocation and does not itself establish state owner",
+   "quote_found": true,
+   "checked_url": "https://www.eufunds.bg/bg/opgg/node/9490"
+  },
+  {
+   "claim": "indicator:BG:C2",
+   "fact_sha256": "26af808322ada321e27d197fe1f1cc21b2b1934e2a9509704eced67a70fa38b7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page contains verbatim the sentence that, in parallel with upgrading the ДХЧО (State Hybrid Private Cloud), already-built infrastructure of other administrations is being joined to the cloud; the page describes an existing, operating cloud being upgraded, with services currently provided, not merely an announcement.",
+   "quote_found": true,
+   "checked_url": "https://www.eufunds.bg/bg/opgg/node/9490"
+  },
+  {
+   "claim": "record:FI:firearms_register:register",
+   "fact_sha256": "cb668800295cce7c6f267b0ad472371b02c013ebcd7d1656949eee7b455d8391",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Firearms Act page contains verbatim 'Ase-elinkeinonharjoittajien välisestä luovutuksesta on tehtävä ilmoitus 10 päivän kuluessa sähköistä asiointia käyttäen poliisin asetietojärjestelmään', and the police document-publicity PDF (downloaded) contains verbatim the description of the asetietojärjestelmä, matching the printed text.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/1998/1"
+  },
+  {
+   "claim": "record:FI:electoral_management:register",
+   "fact_sha256": "94514542b61f0e3ab5aea57f3a3b6c214eb11d8f07f749724c14afda6a2fd8ab",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Vaalilaki 714/1998 contains verbatim 'Oikeusministeriö laatii tarvittaessa valtakunnallisesta ehdokasrekisteristä tulosteen ...', i.e. the Ministry of Justice produces printouts from the national candidate register.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/1998/714"
+  },
+  {
+   "claim": "record:FI:crisis_management:operator",
+   "fact_sha256": "476aa8eaf27d047baccdbc28573029cdbe297e10128571d53e1402db8e2e2dd8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 262/2003 is titled 'Valtioneuvoston ohjesääntö' (Government Rules of Procedure) and contains verbatim, in the list 'Valtioneuvoston kanslian toimialaan kuuluvat:', 'valtioneuvoston yhteinen tilannekuva, varautuminen ja turvallisuus, häiriötilanteiden hallinnan yleinen yhteensovittaminen'. The printed statement (which does not name the assignee) is consistent with this; the source assigns these",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2003/262"
+  },
+  {
+   "claim": "record:FI:fingerprint_biometric:register",
+   "fact_sha256": "54d1092e8fc46ee912f18463c70f79a229e8ce1cd7a8c864a1da732c622ff880",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Passport Act contains verbatim 'Sormenjäljet talletetaan passin tekniseen osaan sekä passirekisteriin' and states the police keep that register; the police PDF also says verbatim that applicant fingerprints are stored in the passirekisteri. The word 'centrally' is not in the source, but the passport register is a single police-kept register as opposed to the chip, so nothing contradictory is a",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2006/671"
+  },
+  {
+   "claim": "record:FI:issuance_history:register",
+   "fact_sha256": "45e32d7c92080d2f9d67cc81f74e61edd443e41894e8f758797c1c8e6abc89f5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Passilaki 671/2006 contains verbatim 'Tässä laissa poliisille, ulkoministeriölle ja 10 §:ssä tarkoitetulle Suomen edustustolle säädettyjen tehtävien suorittamiseksi poliisi pitää rekisteriä ...', matching the printed statement; the police PDF's Heko-Passi description is also present verbatim.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2006/671"
+  },
+  {
+   "claim": "record:FI:trust_services_pki:operator",
+   "fact_sha256": "bce0f101596e642ba0b71d29cdbcc0246a0dab3b49c1c971ca2cbe21cb0adddf",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Passport Act contains verbatim that the certificates for verifying the authenticity and integrity of chip data and for reading fingerprints are created by Digi- ja väestötietovirasto (DVV), exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2006/671"
+  },
+  {
+   "claim": "record:FI:geospatial:operator",
+   "fact_sha256": "5a1817baa874ed1a05d5dd355477444d411a70d629a9d34769e527f9f071b4cb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Laki paikkatietoinfrastruktuurista 421/2009 contains verbatim that Maanmittauslaitos is responsible for introducing the online service for searching spatial data sets and services and viewing their metadata, i.e. the national spatial-data discovery service.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2009/421"
+  },
+  {
+   "claim": "record:FI:crisis_management:register",
+   "fact_sha256": "38e3a64d4ca8adeeefa0772b9dc1dfc89ab977bc98223df9e47853966cf63875",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Laki vaaratiedotteesta 466/2012 contains verbatim 'Vaaratiedote välitetään väestölle radiossa ja Hätäkeskuslaitoksen tarjoamaan telepäätelaitesovellukseen', matching radio and the Emergency Response Centre Agency's mobile application.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2012/466"
+  },
+  {
+   "claim": "record:FI:vehicle_licensing:register",
+   "fact_sha256": "54fe8aa542edd6d756492ef5e4d4b823bd6882e207c67853913d1cbe173052dc",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 320/2017 contains verbatim 'Liikenne- ja viestintävirasto pitää sähköisesti liikenneasioiden rekisteriä, joka sisältää tietoja:'. The source names the agency only as Liikenne- ja viestintävirasto; the short name 'Traficom' does not appear on the page, though it denotes the same body.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2017/320"
+  },
+  {
+   "claim": "record:FI:education:register",
+   "fact_sha256": "2390f23cd8542d487898d86b59e6df3dcb631f2cfc3aaf5052a6908f811afcd8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 884/2017 contains verbatim 'Oppijanumerorekisterin rekisterinpitäjä on Opetushallitus. Oppijanumerorekisteriin tallennettavat tiedot säilytetään pysyvästi', supporting controller and permanent retention; note the sentence continues with an exception for contact details, which the printed summary omits.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2017/884"
+  },
+  {
+   "claim": "record:FI:facial_biometric:register",
+   "fact_sha256": "e8bc491fb067fcb6f675d7ecbf9f3d87891c22419d11dfe670eca9f04c540e21",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 616/2019 contains verbatim the item on the person's photograph and signature sample submitted when applying for a licence or decision, within the list of data processed for licence-administration (lupahallinto) tasks; the police PDF confirms verbatim that passport applicants' photographs go into the passport register, supporting the '(e.g. passport/ID card)' gloss.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2019/616"
+  },
+  {
+   "claim": "record:FI:intelligence:register",
+   "fact_sha256": "84fab1c1efa0572e4417bcc50b62d8efb076439dda7ce94023f8c27c875c5f17",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act 616/2019 contains verbatim 'Suojelupoliisi saa käsitellä henkilötietoja, jotka ovat tarpeen kansallisen turvallisuuden suojaamiseksi, valtio- ja yhteiskuntajärjestystä tai valtion turvallisuutta uhkaavien toimintojen ... estämiseksi', matching the printed summary.",
+   "quote_found": true,
+   "checked_url": "https://www.finlex.fi/fi/lainsaadanto/2019/616"
+  },
+  {
+   "claim": "indicator:BE:C1",
+   "fact_sha256": "d4b8af5d50155ecd072303ba4ad2a73da1110c50e6827e3a3780ed47ea95305f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "gcloud.belgium.be states verbatim that G-Cloud has four data centres offered to institutions for housing racks, that the services list shows 'Housing Datacenter-as-a-Service En service', and that part of G-Cloud is 'hébergés dans les data centers de l'État'. State-operated data centres in operation: 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.gcloud.belgium.be/nl/service/detail/housing"
+  },
+  {
+   "claim": "indicator:BE:C2",
+   "fact_sha256": "da288f03f8532d6cc7c892f8287e3d58c9fd41c0cb02345912bfbb2116ce84ee",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "gcloud.belgium.be states verbatim that G-Cloud is a hybrid cloud managed by the government ('Het beheer van de G-Cloud gebeurt door de overheid' / 'La gestion du G-Cloud est assurée par l'État'), that its services are already available and widely used, and that the first generation has been operational since March 2015. A government cloud in operation: 'Yes'.",
+   "quote_found": true,
+   "checked_url": "https://www.gcloud.belgium.be/nl"
+  },
+  {
+   "claim": "indicator:EL:L2",
+   "fact_sha256": "cc5be6ac80891a93d240b95e355e1e189f8590c82424de77bdc1ad7d4c6436eb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Law 4727/2020 art. 1(5) states verbatim that systems holding nationally classified information are governed by the National Security Regulation (Ε.Κ.Α.), and the newsbeast.gr article (quote present verbatim) says the classification levels are set out in the GEETHA regulation and the related Government Gazette (ΦΕΚ 336/2005, art. 4). Together these show the classification scheme rests on a statute ",
+   "quote_found": true,
+   "checked_url": "https://www.lawspot.gr/nomothesia/n-4727-2020/arthro-1-nomos-4727-2020-skopos-kai-pedio-efarmogis-toy/"
+  }
+ ]
+}

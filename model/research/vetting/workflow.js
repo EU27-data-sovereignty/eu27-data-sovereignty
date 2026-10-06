@@ -109,6 +109,7 @@ PART 2 — the gaps. For each, find a T1/T2 source that establishes it: relation
 - :register: the official name of the register or system. Where you can, add separate findings for the same holding's :operator, :count and :foreign_dependency.
 - :hosting: where the holding's data is hosted and who runs that infrastructure, as the quote states it: the state's own data centre or a named government shared-service centre, a named hosting or cloud provider, or the named body that operates its IT systems. Good sources: procurement notices (TED, national portals), audit-office reports, parliamentary answers, the operator's or provider's own announcements, annual reports. Name every organisation the quote names, and add a structured entry for each to "organisations".
 - :foreign_dependency: one of national, eu_provider, non_eu_provider, mixed, and only if the source says where the infrastructure runs or who provides it.
+A gap may carry "earlier": values an earlier search proposed, the URL it cited, and why that could not be admitted. Use it as a lead, not as evidence: find the same thing on a DIFFERENT URL that a machine can fetch (an official page, the law portal, an annual report), and never cite an "earlier" URL again. Never copy anything from "earlier" into a finding's "question".
 For an indicator: value yes, partial or no exactly as defined.
 
 Rules for every finding:

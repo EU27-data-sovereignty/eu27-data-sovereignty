@@ -372,6 +372,36 @@
   ],
   "indicator:BE:C1": [
    {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T2 competent public body or audit office (government or authority)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "independent review agreed (not blind)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "exact",
+     "review": "agreed, not blind",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "government_or_authority"
+    },
+    "confidence": "official",
+    "gloss": "Housing: Datacenter-as-a-Service - In service",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Housing Datacenter-as-a-Service En service",
+    "quote": "Housing Datacenter-as-a-Service En service [English: Housing: Datacenter-as-a-Service - In service]",
+    "retrieved": "2026-10-06",
+    "source_id": "gcloud-belgium-be:57c7090819",
+    "value_as_found": "yes"
+   },
+   {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
     "checklist": [
      "T2 competent public body or audit office (government or authority)",
@@ -399,6 +429,36 @@
     "quote": "G-Cloud heeft vier data centers waarvan een deel beschikbaar wordt gesteld aan instellingen voor het housen van racks met servers en andere componenten. [English: G-Cloud has four data centres, part of which is made available to institutions for housing racks with servers and other components.]",
     "retrieved": "2026-09-30",
     "source_id": "gcloud-belgium-be:a990eba60c",
+    "value_as_found": "yes"
+   },
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T2 competent public body or audit office (government or authority)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "independent review agreed (not blind)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "exact",
+     "review": "agreed, not blind",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "government_or_authority"
+    },
+    "confidence": "official",
+    "gloss": "G-Cloud is a hybrid cloud that uses, on the one hand, services from private companies in public cloud environments and, on the other, services hosted in the State's data centres.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Le G-Cloud est un cloud hybride qui utilise, d’une part, des services proposés par des sociétés privées dans des environnements de cloud public et, d’autre part, des services hébergés dans les data centers de l’État.",
+    "quote": "Le G-Cloud est un cloud hybride qui utilise, d’une part, des services proposés par des sociétés privées dans des environnements de cloud public et, d’autre part, des services hébergés dans les data centers de l’État. [English: G-Cloud is a hybrid cloud that uses, on the one hand, services from private companies in public cloud environments and, on the other, services hosted in the State's data centres.]",
+    "retrieved": "2026-10-06",
+    "source_id": "gcloud-belgium-be:c19798a75e",
     "value_as_found": "yes"
    }
   ],
@@ -431,6 +491,66 @@
     "quote": "De G-Cloud is een hybride cloud, waarbij enerzijds gebruik wordt gemaakt van diensten aangeboden door private firma's in publieke cloud-omgevingen, en anderzijds van diensten gehost in datacenters van de overheid. Het beheer van de G-Cloud gebeurt door de overheid. [English: The G-Cloud is a hybrid cloud, using on the one hand services offered by private firms in public cloud environments and on the other services hosted in government data centres. The G-Cloud is managed by the government.]",
     "retrieved": "2026-09-30",
     "source_id": "gcloud-belgium-be:0e51a732f9",
+    "value_as_found": "yes"
+   },
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T2 competent public body or audit office (government or authority)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "independent review agreed (not blind)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "exact",
+     "review": "agreed, not blind",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "government_or_authority"
+    },
+    "confidence": "official",
+    "gloss": "These services are already available and widely used.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Ces services sont d'ores et déjà disponibles et largement utilisés.",
+    "quote": "Ces services sont d'ores et déjà disponibles et largement utilisés. [English: These services are already available and widely used.]",
+    "retrieved": "2026-10-06",
+    "source_id": "gcloud-belgium-be:57c7090819",
+    "value_as_found": "yes"
+   },
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T2 competent public body or audit office (government or authority)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "independent review agreed (not blind)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "exact",
+     "review": "agreed, not blind",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "government_or_authority"
+    },
+    "confidence": "official",
+    "gloss": "G-Cloud is managed by the State.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "La gestion du G-Cloud est assurée par l’État.",
+    "quote": "La gestion du G-Cloud est assurée par l’État. [English: G-Cloud is managed by the State.]",
+    "retrieved": "2026-10-06",
+    "source_id": "gcloud-belgium-be:c19798a75e",
     "value_as_found": "yes"
    }
   ],
@@ -494,9 +614,69 @@
     "retrieved": "2026-09-29",
     "source_id": "repository-eid-belgium-be:8485ac65e6",
     "value_as_found": "yes"
+   },
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T2 competent public body or audit office (government or authority)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "independent review agreed (not blind)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "exact",
+     "review": "agreed, not blind",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "government_or_authority"
+    },
+    "confidence": "official",
+    "gloss": "The qualified eID signing CA 'eSign CA eID': qualified trust service provider FPS BOSA; CA/RA FPS Home Affairs; Kingdom of Belgium - Federal Government.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "CN=eSign CA eID, SERIALNUMBER=202501, OU=QTSP: FPS Policy and Support - BOSA (NTRBE-0671516647), OU=CA/RA: FPS Home Affairs - BIK-GCI (NTRBE-0362475538), O=Kingdom of Belgium - Federal Government, L=Brussels, C=BE",
+    "quote": "CN=eSign CA eID, SERIALNUMBER=202501, OU=QTSP: FPS Policy and Support - BOSA (NTRBE-0671516647), OU=CA/RA: FPS Home Affairs - BIK-GCI (NTRBE-0362475538), O=Kingdom of Belgium - Federal Government, L=Brussels, C=BE [English: The qualified eID signing CA 'eSign CA eID': qualified trust service provider FPS BOSA; CA/RA FPS Home Affairs; Kingdom of Belgium - Federal Government.]",
+    "retrieved": "2026-10-06",
+    "source_id": "tsl-belgium-be:61c0487109",
+    "value_as_found": "yes"
    }
   ],
   "indicator:BE:K2": [
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T2 competent public body or audit office (government or authority)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "independent review agreed (not blind)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "exact",
+     "review": "agreed, not blind",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "government_or_authority"
+    },
+    "confidence": "official",
+    "gloss": "CSAM is the result of cooperation between several government services and is an initiative of the following bodies: National Social Security Office; FPS BOSA DG DT; FPS Finance; Crossroads Bank for Social Security; FPS Economy; FPS Home Affairs.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "CSAM is het resultaat van de samenwerking tussen verschillende overheidsdiensten en is een initiatief van de volgende instanties: Rijksdienst voor Sociale Zekerheid; FOD BOSA DG DT; FOD Financiën; Kruispuntbank van de Sociale Zekerheid; FOD Economie, KMO, Middenstand en Energie; FOD Binnenlandse Zaken.",
+    "quote": "CSAM is het resultaat van de samenwerking tussen verschillende overheidsdiensten en is een initiatief van de volgende instanties: Rijksdienst voor Sociale Zekerheid; FOD BOSA DG DT; FOD Financiën; Kruispuntbank van de Sociale Zekerheid; FOD Economie, KMO, Middenstand en Energie; FOD Binnenlandse Zaken. [English: CSAM is the result of cooperation between several government services and is an initiative of the following bodies: National Social Security Office; FPS BOSA DG DT; FPS Finance; Crossroads Bank for Social Security; FPS Economy; FPS Home Affairs.]",
+    "retrieved": "2026-10-06",
+    "source_id": "csam-be:a42648682c",
+    "value_as_found": "yes"
+   },
    {
     "checked_by": "research.py: quote exact in fetched document",
     "checklist": [
@@ -684,13 +864,13 @@
   ],
   "indicator:BG:C2": [
    {
-    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checked_by": "research.py: quote exact in fetched document",
     "checklist": [
      "T2 competent public body or audit office (public body)",
      "official source",
      "quote found (exact match) in the hashed document",
      "archived copy of this URL",
-     "blind review agreed (reviewer: same model as the researcher)",
+     "independent review agreed (not blind)",
      "non-English source, machine-translated"
     ],
     "checks": {
@@ -698,18 +878,18 @@
      "document_hashed": true,
      "language": "machine-translated",
      "quote_match": "exact",
-     "review": "blind, same model",
+     "review": "agreed, not blind",
      "source": "official",
      "tier": 2,
      "tier_kind": "public_body"
     },
     "confidence": "official",
-    "gloss": "At present the State Hybrid Private Cloud provides the following services: 1. Colocation - use of physical space in the built data centres, plus access network, transmission and internet access. 2. Provision of virtual resources",
+    "gloss": "In parallel with upgrading the DHChO, the technical infrastructure already built by other administrations is being joined to the cloud.",
     "grade": "Standard",
     "locator": "page text",
-    "original": "Към момента ДХЧО предоставя следните услуги: 1. Колокация - използване на физическо пространство в изградените Центрове за данни, както и мрежа за достъп, преносна среда и интернет достъп. 2. Предоставяне на виртуални ресурси",
-    "quote": "Към момента ДХЧО предоставя следните услуги: 1. Колокация - използване на физическо пространство в изградените Центрове за данни, както и мрежа за достъп, преносна среда и интернет достъп. 2. Предоставяне на виртуални ресурси [English: At present the State Hybrid Private Cloud provides the following services: 1. Colocation - use of physical space in the built data centres, plus access network, transmission and internet access. 2. Provision of virtual resources]",
-    "retrieved": "2026-10-02",
+    "original": "Успоредно с процеса на надграждане на ДХЧО, върви процес на присъединяване на вече изградена техническа инфраструктура на други администрации към облака.",
+    "quote": "Успоредно с процеса на надграждане на ДХЧО, върви процес на присъединяване на вече изградена техническа инфраструктура на други администрации към облака. [English: In parallel with upgrading the DHChO, the technical infrastructure already built by other administrations is being joined to the cloud.]",
+    "retrieved": "2026-10-06",
     "source_id": "eufunds-bg:696a817ef2",
     "value_as_found": "yes"
    }
@@ -2904,6 +3084,36 @@
     "retrieved": "2026-09-29",
     "source_id": "lawspot-gr:86306a9b7f",
     "value_as_found": "yes"
+   },
+   {
+    "checked_by": "research.py: quote loose in fetched document",
+    "checklist": [
+     "T4 secondary (press)",
+     "secondary source",
+     "quote found (loose match) in the hashed document",
+     "no archived copy of this URL",
+     "independent review agreed (not blind)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "loose",
+     "review": "agreed, not blind",
+     "source": "secondary",
+     "tier": 4,
+     "tier_kind": "press"
+    },
+    "confidence": "secondary",
+    "gloss": "How many classification levels exist and what does each mean, at least in Greece? The answer is given by the Hellenic National Defence General Staff's joint regulation on military correspondence and the related Government Gazette.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Πόσες διαβαθμίσεις απορρήτων υπάρχουν όμως και τι σημαίνει η κάθε μία, τουλάχιστον στην Ελλάδα; Την απάντηση δίνουν ο διακλαδικός κανονισμός στρατιωτικής αλληλογραφίας του ΓΕΕΘΑ και το σχετικό ΦΕΚ.",
+    "quote": "Πόσες διαβαθμίσεις απορρήτων υπάρχουν όμως και τι σημαίνει η κάθε μία, τουλάχιστον στην Ελλάδα; Την απάντηση δίνουν ο διακλαδικός κανονισμός στρατιωτικής αλληλογραφίας του ΓΕΕΘΑ και το σχετικό ΦΕΚ. [English: How many classification levels exist and what does each mean, at least in Greece? The answer is given by the Hellenic National Defence General Staff's joint regulation on military correspondence and the related Government Gazette.]",
+    "retrieved": "2026-10-06",
+    "source_id": "newsbeast-gr:b860d20602",
+    "value_as_found": "yes"
    }
   ],
   "indicator:ES:C1": [
@@ -4801,6 +5011,66 @@
    }
   ],
   "indicator:IT:K2": [
+   {
+    "checked_by": "vetting.py: quote loose in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (government or authority)",
+     "official source",
+     "quote found (loose match) in the hashed document",
+     "archived copy of this URL",
+     "blind review agreed (reviewer: same model as the researcher)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "loose",
+     "review": "blind, same model",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "government_or_authority"
+    },
+    "confidence": "official",
+    "gloss": "The Electronic Identity Card (CIE) is the access key, guaranteed by the State and issued by the Ministry of the Interior, that lets citizens authenticate securely to online services",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "La Carta di Identità Elettronica (CIE) è la chiave di accesso, garantita dallo Stato e rilasciata dal Ministero dell’Interno, che permette al cittadino di autenticarsi in tutta sicurezza ai servizi online",
+    "quote": "La Carta di Identità Elettronica (CIE) è la chiave di accesso, garantita dallo Stato e rilasciata dal Ministero dell’Interno, che permette al cittadino di autenticarsi in tutta sicurezza ai servizi online [English: The Electronic Identity Card (CIE) is the access key, guaranteed by the State and issued by the Ministry of the Interior, that lets citizens authenticate securely to online services]",
+    "retrieved": "2026-10-06",
+    "source_id": "cartaidentita-interno-gov-it:0e84e5750c",
+    "value_as_found": "yes"
+   },
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T2 competent public body or audit office (government or authority)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "independent review agreed (not blind)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "exact",
+     "review": "agreed, not blind",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "government_or_authority"
+    },
+    "confidence": "official",
+    "gloss": "[The CIE] is the identity document of Italian citizens issued by the Ministry of the Interior and produced by the State Printing Office and Mint (Poligrafico e Zecca dello Stato).",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "è il documento d’identità dei cittadini italiani emesso dal Ministero dell’Interno e prodotto dal Poligrafico e Zecca dello Stato",
+    "quote": "è il documento d’identità dei cittadini italiani emesso dal Ministero dell’Interno e prodotto dal Poligrafico e Zecca dello Stato [English: [The CIE] is the identity document of Italian citizens issued by the Ministry of the Interior and produced by the State Printing Office and Mint (Poligrafico e Zecca dello Stato).]",
+    "retrieved": "2026-10-06",
+    "source_id": "cartaidentita-interno-gov-it:6f0fc5490b",
+    "value_as_found": "yes"
+   },
    {
     "checked_by": "research.py: quote exact in fetched document",
     "checklist": [
@@ -14904,9 +15174,47 @@
     "value_as_found": "Zentrale Zulassungsevidenz - Kraftfahrzeugzentralregister (KZR) (Central Motor Vehicle Register)"
    }
   ],
+  "record:BE:authentication_audit_log:operator": [
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T2 competent public body or audit office (government or authority)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "not in the quote: BOSA, FPS",
+     "English source"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "english",
+     "names_not_in_quote": [
+      "BOSA",
+      "FPS"
+     ],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "government_or_authority",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "The Federal Public Service Policy and Support, the Directorate-General for Simplification and Digitization (\"DG Simplification and Digitization\"), is responsible for your personal data",
+    "quote": "The Federal Public Service Policy and Support, the Directorate-General for Simplification and Digitization (\"DG Simplification and Digitization\"), is responsible for your personal data",
+    "retrieved": "2026-10-06",
+    "source_id": "sma-help-bosa-belgium-be:8e1cbe5617",
+    "value_as_found": "Controller: FPS BOSA, DG Simplification and Digitization"
+   }
+  ],
   "record:BE:authentication_audit_log:register": [
    {
-    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checked_by": "research.py: quote exact in fetched document",
     "checklist": [
      "T2 competent public body or audit office (government or authority)",
      "official source",
@@ -14934,9 +15242,9 @@
     "locator": "page text",
     "original": "Authentication logs (date, time, ID number, message ID, IP address, browser, OS) are stored in an audit trail for 10 years for investigation or complaint purposes.",
     "quote": "Authentication logs (date, time, ID number, message ID, IP address, browser, OS) are stored in an audit trail for 10 years for investigation or complaint purposes.",
-    "retrieved": "2026-09-30",
+    "retrieved": "2026-10-06",
     "source_id": "sma-help-bosa-belgium-be:8e1cbe5617",
-    "value_as_found": "FAS audit trail of authentication logs, kept for 10 years"
+    "value_as_found": "FAS authentication logs (date, time, ID number, IP address, browser, OS) are kept in an audit trail for 10 years"
    }
   ],
   "record:BE:beneficial_ownership:register": [
@@ -15414,9 +15722,46 @@
     "value_as_found": "BE-Alert (the government's alerting system)"
    }
   ],
+  "record:BE:digital_identity_credentials:hosting": [
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T2 competent public body or audit office (government or authority)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "not in the quote: BOSA",
+     "English source"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "english",
+     "names_not_in_quote": [
+      "BOSA"
+     ],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "government_or_authority",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "DG Simplification and Digitization employs subcontractors as processors under GDPR-compliant contracts.",
+    "quote": "DG Simplification and Digitization employs subcontractors as processors under GDPR-compliant contracts.",
+    "retrieved": "2026-10-06",
+    "source_id": "sma-help-bosa-belgium-be:8e1cbe5617",
+    "value_as_found": "BOSA uses subcontractors as data processors (not named)"
+   }
+  ],
   "record:BE:digital_identity_credentials:operator": [
    {
-    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checked_by": "research.py: quote exact in fetched document",
     "checklist": [
      "T2 competent public body or audit office (government or authority)",
      "official source",
@@ -15447,20 +15792,21 @@
     "locator": "page text",
     "original": "Please read this Privacy Notice to learn how personal data are collected and processed within the Federal Authentication Service (FAS) provided by DG Simplification and Digitization.",
     "quote": "Please read this Privacy Notice to learn how personal data are collected and processed within the Federal Authentication Service (FAS) provided by DG Simplification and Digitization.",
-    "retrieved": "2026-09-30",
+    "retrieved": "2026-10-06",
     "source_id": "sma-help-bosa-belgium-be:8e1cbe5617",
-    "value_as_found": "DG Simplification and Digitization (FPS Policy and Support, BOSA)"
+    "value_as_found": "FPS Policy and Support (BOSA), DG Simplification and Digitization provides the FAS"
    }
   ],
   "record:BE:digital_identity_credentials:register": [
    {
-    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checked_by": "research.py: quote exact in fetched document",
     "checklist": [
      "T2 competent public body or audit office (government or authority)",
      "official source",
      "quote found (exact match) in the hashed document",
      "archived copy of this URL",
-     "value quoted verbatim",
+     "value is a machine summary of the quote",
+     "not in the quote: CSAM, eID",
      "English source"
     ],
     "checks": {
@@ -15468,22 +15814,25 @@
      "document_hashed": true,
      "figures_matched": false,
      "language": "english",
-     "names_not_in_quote": [],
+     "names_not_in_quote": [
+      "CSAM",
+      "eID"
+     ],
      "quote_match": "exact",
      "source": "official",
      "tier": 2,
      "tier_kind": "government_or_authority",
-     "value": "verbatim"
+     "value": "summary"
     },
     "confidence": "official",
     "gloss": "",
-    "grade": "Strong",
+    "grade": "Standard",
     "locator": "page text",
-    "original": "Please read this Privacy Notice to learn how personal data are collected and processed within the Federal Authentication Service (FAS) provided by DG Simplification and Digitization.",
-    "quote": "Please read this Privacy Notice to learn how personal data are collected and processed within the Federal Authentication Service (FAS) provided by DG Simplification and Digitization.",
-    "retrieved": "2026-09-30",
+    "original": "The FAS enables citizens to authenticate themselves using digital keys, allowing authorities to confirm who is requesting access to their applications.",
+    "quote": "The FAS enables citizens to authenticate themselves using digital keys, allowing authorities to confirm who is requesting access to their applications.",
+    "retrieved": "2026-10-06",
     "source_id": "sma-help-bosa-belgium-be:8e1cbe5617",
-    "value_as_found": "Federal Authentication Service (FAS)"
+    "value_as_found": "Federal Authentication Service (FAS / CSAM 'My digital keys'): citizens authenticate with digital keys such as the eID or itsme"
    }
   ],
   "record:BE:education:operator": [
@@ -26981,6 +27330,72 @@
     "value_as_found": "Politsei- ja Piirivalveamet (Police and Border Guard Board) and Välisministeerium (Ministry of Foreign Affairs)"
    }
   ],
+  "record:EE:fingerprint_biometric:operator": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The controllers of the ABIS database are the Police and Border Guard Board and the Ministry of Foreign Affairs.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Andmekogu ABIS vastutavad töötlejad on Politsei- ja Piirivalveamet ning Välisministeerium.",
+    "quote": "Andmekogu ABIS vastutavad töötlejad on Politsei- ja Piirivalveamet ning Välisministeerium. [English: The controllers of the ABIS database are the Police and Border Guard Board and the Ministry of Foreign Affairs.]",
+    "retrieved": "2026-10-06",
+    "source_id": "web-archive-org:2feeedaf05",
+    "value_as_found": "Politsei- ja Piirivalveamet ning Välisministeerium (Police and Border Guard Board and Ministry of Foreign Affairs), joint controllers of andmekogu ABIS"
+   },
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "(1) The controller of the database is the Police and Border Guard Board, except for the data in subsections 2 and 3. (2) For data entered under sections 10, 15 and 16, the controller is the Ministry of Foreign Affairs.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "(1) Andmekogu vastutav töötleja on Politsei- ja Piirivalveamet, välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul. (2) Paragrahvides 10, 15 ja 16 sätestatu alusel andmekogusse kantavate andmete puhul on vastutav töötleja Välisministeerium.",
+    "quote": "(1) Andmekogu vastutav töötleja on Politsei- ja Piirivalveamet, välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul. (2) Paragrahvides 10, 15 ja 16 sätestatu alusel andmekogusse kantavate andmete puhul on vastutav töötleja Välisministeerium. [English: (1) The controller of the database is the Police and Border Guard Board, except for the data in subsections 2 and 3. (2) For data entered under sections 10, 15 and 16, the controller is the Ministry of Foreign Affairs.]",
+    "retrieved": "2026-09-30",
+    "source_id": "web-archive-org:5fe96ae958",
+    "value_as_found": "Politsei- ja Piirivalveamet (Police and Border Guard Board)"
+   }
+  ],
   "record:EE:fingerprint_biometric:register": [
    {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
@@ -31862,6 +32277,211 @@
     "value_as_found": "Väestötietojärjestelmä (Population Information System) is the general national base register of persons, real estate, buildings and dwellings"
    }
   ],
+  "record:FI:crisis_management:operator": [
+   {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "the Government's common situational picture, preparedness and security, general coordination of disruption management",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "valtioneuvoston yhteinen tilannekuva, varautuminen ja turvallisuus, häiriötilanteiden hallinnan yleinen yhteensovittaminen",
+    "quote": "valtioneuvoston yhteinen tilannekuva, varautuminen ja turvallisuus, häiriötilanteiden hallinnan yleinen yhteensovittaminen [English: the Government's common situational picture, preparedness and security, general coordination of disruption management]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:d1bdfd8e0f",
+    "value_as_found": "Government Rules of Procedure assign the Government's common situational picture and coordination of disruption management"
+   }
+  ],
+  "record:FI:crisis_management:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The emergency warning is transmitted to the population by radio and to the mobile terminal application provided by the Emergency Response Centre Agency.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Vaaratiedote välitetään väestölle radiossa ja Hätäkeskuslaitoksen tarjoamaan telepäätelaitesovellukseen.",
+    "quote": "Vaaratiedote välitetään väestölle radiossa ja Hätäkeskuslaitoksen tarjoamaan telepäätelaitesovellukseen. [English: The emergency warning is transmitted to the population by radio and to the mobile terminal application provided by the Emergency Response Centre Agency.]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:71dd7b8cce",
+    "value_as_found": "Emergency warnings are distributed via radio and the Emergency Response Centre Agency's mobile application"
+   }
+  ],
+  "record:FI:education:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "not in the quote: EDUFI",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [
+      "EDUFI"
+     ],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The controller of the learner-number register is the Finnish National Agency for Education. Data stored in the register are kept permanently",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Oppijanumerorekisterin rekisterinpitäjä on Opetushallitus. Oppijanumerorekisteriin tallennettavat tiedot säilytetään pysyvästi",
+    "quote": "Oppijanumerorekisterin rekisterinpitäjä on Opetushallitus. Oppijanumerorekisteriin tallennettavat tiedot säilytetään pysyvästi [English: The controller of the learner-number register is the Finnish National Agency for Education. Data stored in the register are kept permanently]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:7bef6f1c9d",
+    "value_as_found": "EDUFI is controller of the learner-number register; its data are kept permanently"
+   }
+  ],
+  "record:FI:electoral_management:operator": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The voting register is part of the election information system, whose maintenance and operation is the responsibility of the Legal Register Centre.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Äänioikeusrekisteri on osa vaalitietojärjestelmää, jonka ylläpidosta ja toiminnasta vastaa Oikeusrekisterikeskus.",
+    "quote": "Äänioikeusrekisteri on osa vaalitietojärjestelmää, jonka ylläpidosta ja toiminnasta vastaa Oikeusrekisterikeskus. [English: The voting register is part of the election information system, whose maintenance and operation is the responsibility of the Legal Register Centre.]",
+    "retrieved": "2026-09-30",
+    "source_id": "dvv-fi:b45f1e0ae1",
+    "value_as_found": "Oikeusrekisterikeskus (Legal Register Centre)"
+   },
+   {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The election board may engage assisting staff for counting ballots and for using the voting register and other Ministry of Justice information systems.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Vaalilautakunta voi ottaa avustavaa henkilöstöä äänestyslippujen laskemista ja järjestämistä varten sekä 77 §:ssä tarkoitettua ääni-oikeusrekisterin ja muiden oikeusministeriön tietojärjestelmien käyttämistä varten.",
+    "quote": "Vaalilautakunta voi ottaa avustavaa henkilöstöä äänestyslippujen laskemista ja järjestämistä varten sekä 77 §:ssä tarkoitettua ääni-oikeusrekisterin ja muiden oikeusministeriön tietojärjestelmien käyttämistä varten. [English: The election board may engage assisting staff for counting ballots and for using the voting register and other Ministry of Justice information systems.]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:266545fc48",
+    "value_as_found": "Polling committees use the voting register and other Ministry of Justice information systems"
+   }
+  ],
+  "record:FI:electoral_management:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The Ministry of Justice prepares as needed a printout from the national candidate register with each candidate's data by constituency, wellbeing services county or municipality.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Oikeusministeriö laatii tarvittaessa valtakunnallisesta ehdokasrekisteristä tulosteen, johon otetaan vaalipiireittäin, hyvinvointialueittain tai kunnittain kunkin ehdokkaan ehdokaslistojen yhdistelmässä olevat tiedot.",
+    "quote": "Oikeusministeriö laatii tarvittaessa valtakunnallisesta ehdokasrekisteristä tulosteen, johon otetaan vaalipiireittäin, hyvinvointialueittain tai kunnittain kunkin ehdokkaan ehdokaslistojen yhdistelmässä olevat tiedot. [English: The Ministry of Justice prepares as needed a printout from the national candidate register with each candidate's data by constituency, wellbeing services county or municipality.]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:266545fc48",
+    "value_as_found": "The Ministry of Justice produces printouts from the national candidate register"
+   }
+  ],
   "record:FI:electoral_roll:operator": [
    {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
@@ -31932,6 +32552,38 @@
   ],
   "record:FI:facial_biometric:register": [
    {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "the person's photograph and signature sample submitted to the police, the Ministry for Foreign Affairs or a foreign-service authority when applying for a licence or decision for whose production they are needed;",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "henkilön valokuva ja nimikirjoitusnäyte, jotka hän on luovuttanut poliisille, ulkoministeriölle tai ulkoasiainhallinnon viranomaiselle hakiessaan sellaista lupaa tai päätöstä, jonka valmistamiseen henkilön valokuva ja nimikirjoitusnäyte ovat tarpeen;",
+    "quote": "henkilön valokuva ja nimikirjoitusnäyte, jotka hän on luovuttanut poliisille, ulkoministeriölle tai ulkoasiainhallinnon viranomaiselle hakiessaan sellaista lupaa tai päätöstä, jonka valmistamiseen henkilön valokuva ja nimikirjoitusnäyte ovat tarpeen; [English: the person's photograph and signature sample submitted to the police, the Ministry for Foreign Affairs or a foreign-service authority when applying for a licence or decision for whose production they are needed;]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:02d0194424",
+    "value_as_found": "Police licence-administration data include photographs submitted when applying for a licence or decision (e.g. passport/ID card)"
+   },
+   {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
     "checklist": [
      "T2 competent public body or audit office (public body)",
@@ -31965,6 +32617,38 @@
    }
   ],
   "record:FI:fingerprint_biometric:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "Fingerprints are stored in the technical part of the passport and in the passport register. Fingerprints in the passport register must be kept separate from suspects' identifying data.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Sormenjäljet talletetaan passin tekniseen osaan sekä passirekisteriin. Passirekisteriin talletetut sormenjäljet on pidettävä erillään rikoksesta epäiltyjen henkilötuntomerkeistä.",
+    "quote": "Sormenjäljet talletetaan passin tekniseen osaan sekä passirekisteriin. Passirekisteriin talletetut sormenjäljet on pidettävä erillään rikoksesta epäiltyjen henkilötuntomerkeistä. [English: Fingerprints are stored in the technical part of the passport and in the passport register. Fingerprints in the passport register must be kept separate from suspects' identifying data.]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:de19523b4a",
+    "value_as_found": "Passport fingerprints are stored centrally in the passport register as well as in the chip"
+   },
    {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
     "checklist": [
@@ -32032,6 +32716,38 @@
   ],
   "record:FI:firearms_register:register": [
    {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "A transfer between firearms dealers must be notified within 10 days electronically to the police firearms information system.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Ase-elinkeinonharjoittajien välisestä luovutuksesta on tehtävä ilmoitus 10 päivän kuluessa sähköistä asiointia käyttäen poliisin asetietojärjestelmään.",
+    "quote": "Ase-elinkeinonharjoittajien välisestä luovutuksesta on tehtävä ilmoitus 10 päivän kuluessa sähköistä asiointia käyttäen poliisin asetietojärjestelmään. [English: A transfer between firearms dealers must be notified within 10 days electronically to the police firearms information system.]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:8dcfb17b3f",
+    "value_as_found": "Transfers between firearms dealers must be notified electronically to the police firearms information system"
+   },
+   {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
     "checklist": [
      "T2 competent public body or audit office (public body)",
@@ -32062,6 +32778,40 @@
     "retrieved": "2026-09-30",
     "source_id": "poliisi-fi:29745db65f",
     "value_as_found": "Asetietojärjestelmä (firearms information system)"
+   }
+  ],
+  "record:FI:geospatial:operator": [
+   {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The National Land Survey is responsible for introducing an online service enabling searching for spatial data sets and services and viewing their metadata",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Maanmittauslaitos vastaa siitä, että otetaan käyttöön paikkatietoaineistojen ja näitä aineistoja koskevien palvelujen etsimisen ja niitä koskevien metatietojen tarkastelun mahdollistava verkkopalvelu",
+    "quote": "Maanmittauslaitos vastaa siitä, että otetaan käyttöön paikkatietoaineistojen ja näitä aineistoja koskevien palvelujen etsimisen ja niitä koskevien metatietojen tarkastelun mahdollistava verkkopalvelu [English: The National Land Survey is responsible for introducing an online service enabling searching for spatial data sets and services and viewing their metadata]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:ee1f09c571",
+    "value_as_found": "The National Land Survey is responsible for the national spatial-data discovery service"
    }
   ],
   "record:FI:geospatial:register": [
@@ -32132,7 +32882,73 @@
     "value_as_found": "The Government Shared Services Centre for Finance and HR holds data on central-government agencies' financial and HR administration"
    }
   ],
+  "record:FI:intelligence:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "Supo may process personal data necessary to protect national security and to prevent, detect and investigate activities and projects threatening the state and social order or state security",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Suojelupoliisi saa käsitellä henkilötietoja, jotka ovat tarpeen kansallisen turvallisuuden suojaamiseksi, valtio- ja yhteiskuntajärjestystä tai valtion turvallisuutta uhkaavien toimintojen ja hankkeiden estämiseksi, paljastamiseksi ja selvittämiseksi",
+    "quote": "Suojelupoliisi saa käsitellä henkilötietoja, jotka ovat tarpeen kansallisen turvallisuuden suojaamiseksi, valtio- ja yhteiskuntajärjestystä tai valtion turvallisuutta uhkaavien toimintojen ja hankkeiden estämiseksi, paljastamiseksi ja selvittämiseksi [English: Supo may process personal data necessary to protect national security and to prevent, detect and investigate activities and projects threatening the state and social order or state security]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:02d0194424",
+    "value_as_found": "Supo may process personal data needed to protect national security and counter threats to the state"
+   }
+  ],
   "record:FI:issuance_history:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "To perform the tasks laid down in this Act for the police, the Ministry for Foreign Affairs and Finnish missions, the police keep a register in which are recorded:",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Tässä laissa poliisille, ulkoministeriölle ja 10 §:ssä tarkoitetulle Suomen edustustolle säädettyjen tehtävien suorittamiseksi poliisi pitää rekisteriä, johon talletetaan:",
+    "quote": "Tässä laissa poliisille, ulkoministeriölle ja 10 §:ssä tarkoitetulle Suomen edustustolle säädettyjen tehtävien suorittamiseksi poliisi pitää rekisteriä, johon talletetaan: [English: To perform the tasks laid down in this Act for the police, the Ministry for Foreign Affairs and Finnish missions, the police keep a register in which are recorded:]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:de19523b4a",
+    "value_as_found": "The police keep the passport register for tasks of the police, the Ministry for Foreign Affairs and missions"
+   },
    {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
     "checklist": [
@@ -32268,6 +33084,40 @@
     "value_as_found": "The aliens-affairs case management system holds data on non-visa immigration matters"
    }
   ],
+  "record:FI:trust_services_pki:operator": [
+   {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The certificates for verifying the authenticity and integrity of data stored in the technical part and for reading fingerprints are created by DVV.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Tekniseen osaan talletettujen tietojen aitouden ja eheyden varmistamiseen liittyvät sekä sormenjälkien lukemisessa tarvittavat varmenteet luo Digi- ja väestötietovirasto.",
+    "quote": "Tekniseen osaan talletettujen tietojen aitouden ja eheyden varmistamiseen liittyvät sekä sormenjälkien lukemisessa tarvittavat varmenteet luo Digi- ja väestötietovirasto. [English: The certificates for verifying the authenticity and integrity of data stored in the technical part and for reading fingerprints are created by DVV.]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:de19523b4a",
+    "value_as_found": "DVV creates the certificates used to verify passport chip data and read fingerprints"
+   }
+  ],
   "record:FI:trust_services_pki:register": [
    {
     "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
@@ -32303,6 +33153,74 @@
     "retrieved": "2026-09-30",
     "source_id": "finlex-fi:a3b56bc0af",
     "value_as_found": "DVV keeps a certificate register of the personal certificates it issues, under the eIDAS Regulation"
+   }
+  ],
+  "record:FI:vehicle_licensing:operator": [
+   {
+    "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The Finnish Transport and Communications Agency keeps the transport register electronically, which contains data",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Liikenne- ja viestintävirasto pitää sähköisesti liikenneasioiden rekisteriä, joka sisältää tietoja",
+    "quote": "Liikenne- ja viestintävirasto pitää sähköisesti liikenneasioiden rekisteriä, joka sisältää tietoja [English: The Finnish Transport and Communications Agency keeps the transport register electronically, which contains data]",
+    "retrieved": "2026-09-30",
+    "source_id": "opendata-finlex-fi:ebd35033eb",
+    "value_as_found": "Liikenne- ja viestintävirasto (Finnish Transport and Communications Agency, Traficom)"
+   }
+  ],
+  "record:FI:vehicle_licensing:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document (rendered in a headless browser)",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The Finnish Transport and Communications Agency keeps the transport register electronically, containing data on:",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Liikenne- ja viestintävirasto pitää sähköisesti liikenneasioiden rekisteriä, joka sisältää tietoja:",
+    "quote": "Liikenne- ja viestintävirasto pitää sähköisesti liikenneasioiden rekisteriä, joka sisältää tietoja: [English: The Finnish Transport and Communications Agency keeps the transport register electronically, containing data on:]",
+    "retrieved": "2026-10-06",
+    "source_id": "finlex-fi:1d9de947d2",
+    "value_as_found": "Traficom keeps the transport register electronically"
    }
   ],
   "record:FR:authentication_audit_log:register": [
@@ -42711,6 +43629,38 @@
    }
   ],
   "record:IT:issuance_history:operator": [
+   {
+    "checked_by": "vetting.py: quote loose in fetched document; blind review agreed (claude-opus-5-5)",
+    "checklist": [
+     "T2 competent public body or audit office (government or authority)",
+     "official source",
+     "quote found (loose match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": false,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "loose",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "government_or_authority",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "The Electronic Identity Card (CIE) is the identity document of Italian citizens issued by the Ministry of the Interior and produced by the State Printing Office and Mint",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "La Carta di Identità Elettronica (CIE) è il documento d’identità dei cittadini italiani emesso dal Ministero dell’Interno e prodotto dal Poligrafico e Zecca dello Stato",
+    "quote": "La Carta di Identità Elettronica (CIE) è il documento d’identità dei cittadini italiani emesso dal Ministero dell’Interno e prodotto dal Poligrafico e Zecca dello Stato [English: The Electronic Identity Card (CIE) is the identity document of Italian citizens issued by the Ministry of the Interior and produced by the State Printing Office and Mint]",
+    "retrieved": "2026-10-06",
+    "source_id": "cartaidentita-interno-gov-it:6f0fc5490b",
+    "value_as_found": "Ministero dell’Interno (Ministry of the Interior) issues the CIE; produced by Poligrafico e Zecca dello Stato"
+   },
    {
     "checked_by": "research.py: quote exact in fetched document",
     "checklist": [
@@ -55764,6 +56714,108 @@
     "value_as_found": "UJP provides payment services to budget users and keeps the register of budget users and their sub-accounts"
    }
   ],
+  "record:SI:public_health_surveillance:foreign_dependency": [
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "independent review agreed (not blind)",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "language": "machine-translated",
+     "quote_match": "exact",
+     "review": "agreed, not blind",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal"
+    },
+    "confidence": "official",
+    "gloss": "Under the GDPR, the company is the contractual processor of the data collections in points 2 to 5 of Article 22(1) and in Article 22(2) of this Act.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Družba šteje v skladu s Splošno uredbo o varstvu podatkov za pogodbenega obdelovalca zbirk podatkov iz 2. do 5. točke prvega odstavka 22. člena in drugega odstavka 22. člena tega zakona.",
+    "quote": "Družba šteje v skladu s Splošno uredbo o varstvu podatkov za pogodbenega obdelovalca zbirk podatkov iz 2. do 5. točke prvega odstavka 22. člena in drugega odstavka 22. člena tega zakona. [English: Under the GDPR, the company is the contractual processor of the data collections in points 2 to 5 of Article 22(1) and in Article 22(2) of this Act.]",
+    "retrieved": "2026-09-29",
+    "source_id": "uradni-list-si:628415e5c1",
+    "value_as_found": "national"
+   }
+  ],
+  "record:SI:public_health_surveillance:hosting": [
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T1 authoritative original (official law portal)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "no archived copy of this URL",
+     "value is a machine summary of the quote",
+     "every figure found in the original",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": false,
+     "document_hashed": true,
+     "figures_matched": true,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 1,
+     "tier_kind": "official_law_portal",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "Under the GDPR, the company is the contractual processor of the data collections in points 2 to 5 of Article 22(1) and in Article 22(2) of this Act.",
+    "grade": "Standard",
+    "locator": "page text",
+    "original": "Družba šteje v skladu s Splošno uredbo o varstvu podatkov za pogodbenega obdelovalca zbirk podatkov iz 2. do 5. točke prvega odstavka 22. člena in drugega odstavka 22. člena tega zakona.",
+    "quote": "Družba šteje v skladu s Splošno uredbo o varstvu podatkov za pogodbenega obdelovalca zbirk podatkov iz 2. do 5. točke prvega odstavka 22. člena in drugega odstavka 22. člena tega zakona. [English: Under the GDPR, the company is the contractual processor of the data collections in points 2 to 5 of Article 22(1) and in Article 22(2) of this Act.]",
+    "retrieved": "2026-09-29",
+    "source_id": "uradni-list-si:628415e5c1",
+    "value_as_found": "The state-owned public company is the contractual processor for the public-health collections (Art. 22(2))"
+   }
+  ],
+  "record:SI:public_health_surveillance:register": [
+   {
+    "checked_by": "research.py: quote exact in fetched document",
+    "checklist": [
+     "T2 competent public body or audit office (public body)",
+     "official source",
+     "quote found (exact match) in the hashed document",
+     "archived copy of this URL",
+     "value is a machine summary of the quote",
+     "every figure found in the original",
+     "non-English source, machine-translated"
+    ],
+    "checks": {
+     "archived": true,
+     "document_hashed": true,
+     "figures_matched": true,
+     "language": "machine-translated",
+     "names_not_in_quote": [],
+     "quote_match": "exact",
+     "source": "official",
+     "tier": 2,
+     "tier_kind": "public_body",
+     "value": "summary"
+    },
+    "confidence": "official",
+    "gloss": "At the beginning of 2017, the Electronic Register of Vaccinated Persons and Adverse Events Following Immunisation began operating within eZdravje",
+    "grade": "Strong",
+    "locator": "page text",
+    "original": "Z začetkom leta 2017 je v okviru eZdravja pričel z delovanjem Elektronski register cepljenih oseb in neželenih učinkov po cepljenju",
+    "quote": "Z začetkom leta 2017 je v okviru eZdravja pričel z delovanjem Elektronski register cepljenih oseb in neželenih učinkov po cepljenju [English: At the beginning of 2017, the Electronic Register of Vaccinated Persons and Adverse Events Following Immunisation began operating within eZdravje]",
+    "retrieved": "2026-10-06",
+    "source_id": "nijz-si:7a1dff293b",
+    "value_as_found": "The electronic register of vaccinated persons and adverse events (eRCO) has operated since 2017"
+   }
+  ],
   "record:SI:residence_permits:register": [
    {
     "checked_by": "vetting.py: quote exact in fetched document; blind review agreed (claude-opus-5-5)",
@@ -58549,18 +59601,18 @@
      "data_size": "",
      "domain": "identity",
      "foreign_dependency": "",
-     "holder": "DG Simplification and Digitization (FPS Policy and Support, BOSA)",
+     "holder": "FPS Policy and Support (BOSA), DG Simplification and Digitization provides the FAS",
      "holder_url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
-     "hosting": "",
+     "hosting": "BOSA uses subcontractors as data processors (not named)",
      "label": "Digital identity credentials",
-     "legal_basis": "",
-     "publisher": "FPS Policy and Support (BOSA), DG Simplification and Digitization",
-     "quote": "Please read this Privacy Notice to learn how personal data are collected and processed within the Federal Authentication Service (FAS) provided by DG Simplification and Digitization.",
+     "legal_basis": "Article 9 of the Law of 18 July 2017 on electronic identification",
+     "publisher": "FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering",
+     "quote": "The FAS enables citizens to authenticate themselves using digital keys, allowing authorities to confirm who is requesting access to their applications.",
      "record_class": "digital_identity_credentials",
-     "record_count": "",
+     "record_count": "itsme: more than eight million users in Belgium (2025)",
      "recoverability": "medium",
-     "register": "Federal Authentication Service (FAS)",
-     "retrieved": "2026-09-30",
+     "register": "Federal Authentication Service (FAS / CSAM 'My digital keys'): citizens authenticate with digital keys such as the eID or itsme",
+     "retrieved": "2026-10-06",
      "status": "held",
      "tier": 0,
      "url": "https://sma-help.bosa.belgium.be/en/fas-privacy"
@@ -58570,18 +59622,18 @@
      "data_size": "",
      "domain": "identity",
      "foreign_dependency": "",
-     "holder": "",
+     "holder": "Controller: FPS BOSA, DG Simplification and Digitization",
      "holder_url": "https://sma-help.bosa.belgium.be/en/fas-privacy",
      "hosting": "",
      "label": "Authentication audit log",
-     "legal_basis": "",
-     "publisher": "FPS Policy and Support (BOSA), DG Simplification and Digitization",
+     "legal_basis": "Article 9 of the Law of 18 July 2017 on electronic identification is the legal basis for processing within the FAS",
+     "publisher": "FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering",
      "quote": "Authentication logs (date, time, ID number, message ID, IP address, browser, OS) are stored in an audit trail for 10 years for investigation or complaint purposes.",
      "record_class": "authentication_audit_log",
      "record_count": "",
      "recoverability": "low",
-     "register": "FAS audit trail of authentication logs, kept for 10 years",
-     "retrieved": "2026-09-30",
+     "register": "FAS authentication logs (date, time, ID number, IP address, browser, OS) are kept in an audit trail for 10 years",
+     "retrieved": "2026-10-06",
      "status": "held",
      "tier": 0,
      "url": "https://sma-help.bosa.belgium.be/en/fas-privacy"
@@ -66142,17 +67194,17 @@
      "data_size": "",
      "domain": "identity",
      "foreign_dependency": "",
-     "holder": "",
-     "holder_url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861",
+     "holder": "Poliisi (Poliisihallitus)",
+     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/2019/616",
      "hosting": "",
      "label": "Facial biometric",
-     "legal_basis": "",
+     "legal_basis": "Passport Act requires a facial image with every passport application",
      "publisher": "Poliisihallitus",
      "quote": "Lisäksi passirekisteriin talletetaan passinhakijalta passin hakutilanteessa otetut sormenjäljet sekä henkilön valokuva ja nimikirjoitusnäyte [English: In addition, the fingerprints taken from the passport applicant when applying, together with the person's photograph and signature sample, are stored in the passport register]",
      "record_class": "facial_biometric",
      "record_count": "",
      "recoverability": "low",
-     "register": "passirekisteri (passport register)",
+     "register": "Police licence-administration data include photographs submitted when applying for a licence or decision (e.g. passport/ID card)",
      "retrieved": "2026-09-30",
      "status": "held",
      "tier": 0,
@@ -66163,17 +67215,17 @@
      "data_size": "",
      "domain": "identity",
      "foreign_dependency": "",
-     "holder": "",
-     "holder_url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861",
+     "holder": "Poliisi (Poliisihallitus)",
+     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/2006/671",
      "hosting": "",
      "label": "Fingerprint biometric",
-     "legal_basis": "",
+     "legal_basis": "Passport Act: fingerprints are taken from every passport applicant by the issuing authority",
      "publisher": "Poliisihallitus",
      "quote": "Lisäksi passirekisteriin talletetaan passinhakijalta passin hakutilanteessa otetut sormenjäljet sekä henkilön valokuva ja nimikirjoitusnäyte [English: In addition, the fingerprints taken from the passport applicant when applying, together with the person's photograph and signature sample, are stored in the passport register]",
      "record_class": "fingerprint_biometric",
      "record_count": "",
      "recoverability": "low",
-     "register": "passirekisteri (passport register)",
+     "register": "Passport fingerprints are stored centrally in the passport register as well as in the chip",
      "retrieved": "2026-09-30",
      "status": "held",
      "tier": 0,
@@ -66205,17 +67257,17 @@
      "data_size": "",
      "domain": "identity",
      "foreign_dependency": "",
-     "holder": "",
-     "holder_url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861",
+     "holder": "Poliisi (Poliisihallitus)",
+     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/2006/671",
      "hosting": "",
      "label": "Document issuance history",
-     "legal_basis": "",
+     "legal_basis": "Use, disclosure and deletion of passport-register data are governed by the Police Personal Data Act",
      "publisher": "Poliisihallitus",
      "quote": "Henkilökortti- ja passijärjestelmässä (Heko-Passi) hallitaan henkilökortti- ja passihakemuksia ja niihin liittyviä päätöksiä ja lupa-asiakirjoja koko niiden elinkaaren ajan. [English: The ID card and passport system (Heko-Passi) manages ID card and passport applications and the related decisions and permit documents over their whole life cycle.]",
      "record_class": "issuance_history",
      "record_count": "",
      "recoverability": "medium",
-     "register": "Henkilökortti- ja passijärjestelmä, Heko-Passi (ID card and passport system)",
+     "register": "The police keep the passport register for tasks of the police, the Ministry for Foreign Affairs and missions",
      "retrieved": "2026-09-30",
      "status": "held",
      "tier": 0,
@@ -66289,8 +67341,8 @@
      "data_size": "",
      "domain": "identity",
      "foreign_dependency": "",
-     "holder": "Digi- ja väestötietovirasto (DVV)",
-     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/2009/661",
+     "holder": "DVV creates the certificates used to verify passport chip data and read fingerprints",
+     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/2006/671",
      "hosting": "",
      "label": "State PKI and qualified trust services",
      "legal_basis": "",
@@ -66474,25 +67526,25 @@
      "url": "https://www.finlex.fi/fi/lainsaadanto/2019/650"
     },
     {
-     "confidence": "",
+     "confidence": "official",
      "data_size": "",
      "domain": "transport",
      "foreign_dependency": "",
-     "holder": "",
-     "holder_url": "",
+     "holder": "Liikenne- ja viestintävirasto Traficom",
+     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/2017/320",
      "hosting": "",
      "label": "Vehicle & licensing",
      "legal_basis": "",
-     "publisher": "",
-     "quote": "",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Liikenne- ja viestintävirasto pitää sähköisesti liikenneasioiden rekisteriä, joka sisältää tietoja: [English: The Finnish Transport and Communications Agency keeps the transport register electronically, containing data on:]",
      "record_class": "vehicle_licensing",
      "record_count": "",
      "recoverability": "medium",
-     "register": "",
-     "retrieved": "",
-     "status": "unrecorded",
+     "register": "Traficom keeps the transport register electronically",
+     "retrieved": "2026-10-06",
+     "status": "held",
      "tier": 1,
-     "url": ""
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2017/320"
     },
     {
      "confidence": "",
@@ -66562,8 +67614,8 @@
      "data_size": "",
      "domain": "justice",
      "foreign_dependency": "",
-     "holder": "",
-     "holder_url": "https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861",
+     "holder": "Poliisi",
+     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/1998/1",
      "hosting": "",
      "label": "Firearms register",
      "legal_basis": "",
@@ -66572,7 +67624,7 @@
      "record_class": "firearms_register",
      "record_count": "",
      "recoverability": "medium",
-     "register": "Asetietojärjestelmä (firearms information system)",
+     "register": "Transfers between firearms dealers must be notified electronically to the police firearms information system",
      "retrieved": "2026-09-30",
      "status": "held",
      "tier": 1,
@@ -66642,25 +67694,25 @@
      "url": "https://www.finlex.fi/fi/lainsaadanto/1991/305"
     },
     {
-     "confidence": "",
+     "confidence": "official",
      "data_size": "",
      "domain": "governance",
      "foreign_dependency": "",
-     "holder": "",
-     "holder_url": "",
+     "holder": "Polling committees use the voting register and other Ministry of Justice information systems",
+     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/1998/714",
      "hosting": "",
      "label": "Election management and results",
      "legal_basis": "",
-     "publisher": "",
-     "quote": "",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Oikeusministeriö laatii tarvittaessa valtakunnallisesta ehdokasrekisteristä tulosteen, johon otetaan vaalipiireittäin, hyvinvointialueittain tai kunnittain kunkin ehdokkaan ehdokaslistojen yhdistelmässä olevat tiedot. [English: The Ministry of Justice prepares as needed a printout from the national candidate register with each candidate's data by constituency, wellbeing services county or municipality.]",
      "record_class": "electoral_management",
      "record_count": "",
      "recoverability": "medium",
-     "register": "",
-     "retrieved": "",
-     "status": "unrecorded",
+     "register": "The Ministry of Justice produces printouts from the national candidate register",
+     "retrieved": "2026-10-06",
+     "status": "held",
      "tier": 1,
-     "url": ""
+     "url": "https://www.finlex.fi/fi/lainsaadanto/1998/714"
     },
     {
      "confidence": "",
@@ -66705,25 +67757,25 @@
      "url": ""
     },
     {
-     "confidence": "",
+     "confidence": "official",
      "data_size": "",
      "domain": "security",
      "foreign_dependency": "",
-     "holder": "",
-     "holder_url": "",
+     "holder": "Suojelupoliisi (Supo); Puolustusvoimien tiedustelulaitos",
+     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/2019/616",
      "hosting": "",
      "label": "Intelligence services",
-     "legal_basis": "",
-     "publisher": "",
-     "quote": "",
+     "legal_basis": "Supo's statutory task is to acquire information to protect national security",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Suojelupoliisi saa käsitellä henkilötietoja, jotka ovat tarpeen kansallisen turvallisuuden suojaamiseksi, valtio- ja yhteiskuntajärjestystä tai valtion turvallisuutta uhkaavien toimintojen ja hankkeiden estämiseksi, paljastamiseksi ja selvittämiseksi [English: Supo may process personal data necessary to protect national security and to prevent, detect and investigate activities and projects threatening the state and social order or state security]",
      "record_class": "intelligence",
      "record_count": "",
      "recoverability": "low",
-     "register": "",
-     "retrieved": "",
-     "status": "unrecorded",
+     "register": "Supo may process personal data needed to protect national security and counter threats to the state",
+     "retrieved": "2026-10-06",
+     "status": "held",
      "tier": 1,
-     "url": ""
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2019/616"
     },
     {
      "confidence": "",
@@ -66747,25 +67799,25 @@
      "url": ""
     },
     {
-     "confidence": "",
+     "confidence": "official",
      "data_size": "",
      "domain": "security",
      "foreign_dependency": "",
-     "holder": "",
-     "holder_url": "",
+     "holder": "Government Rules of Procedure assign the Government's common situational picture and coordination of disruption management",
+     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/2003/262",
      "hosting": "",
      "label": "Crisis management and civil protection",
      "legal_basis": "",
-     "publisher": "",
-     "quote": "",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Vaaratiedote välitetään väestölle radiossa ja Hätäkeskuslaitoksen tarjoamaan telepäätelaitesovellukseen. [English: The emergency warning is transmitted to the population by radio and to the mobile terminal application provided by the Emergency Response Centre Agency.]",
      "record_class": "crisis_management",
      "record_count": "",
      "recoverability": "medium",
-     "register": "",
-     "retrieved": "",
-     "status": "unrecorded",
+     "register": "Emergency warnings are distributed via radio and the Emergency Response Centre Agency's mobile application",
+     "retrieved": "2026-10-06",
+     "status": "held",
      "tier": 1,
-     "url": ""
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2012/466"
     },
     {
      "confidence": "",
@@ -66810,25 +67862,25 @@
      "url": ""
     },
     {
-     "confidence": "",
+     "confidence": "official",
      "data_size": "",
      "domain": "education",
      "foreign_dependency": "",
-     "holder": "",
-     "holder_url": "",
+     "holder": "EDUFI is responsible for the general operation and technical prerequisites of the data resource",
+     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/2017/884",
      "hosting": "",
      "label": "Education",
      "legal_basis": "",
-     "publisher": "",
-     "quote": "",
+     "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+     "quote": "Oppijanumerorekisterin rekisterinpitäjä on Opetushallitus. Oppijanumerorekisteriin tallennettavat tiedot säilytetään pysyvästi [English: The controller of the learner-number register is the Finnish National Agency for Education. Data stored in the register are kept permanently]",
      "record_class": "education",
      "record_count": "",
      "recoverability": "medium",
-     "register": "",
-     "retrieved": "",
-     "status": "unrecorded",
+     "register": "EDUFI is controller of the learner-number register; its data are kept permanently",
+     "retrieved": "2026-10-06",
+     "status": "held",
      "tier": 1,
-     "url": ""
+     "url": "https://www.finlex.fi/fi/lainsaadanto/2017/884"
     },
     {
      "confidence": "",
@@ -66898,8 +67950,8 @@
      "data_size": "",
      "domain": "property",
      "foreign_dependency": "",
-     "holder": "Maanmittauslaitos (National Land Survey); Digi- ja väestötietovirasto for building data",
-     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/2009/661",
+     "holder": "The National Land Survey is responsible for the national spatial-data discovery service",
+     "holder_url": "https://www.finlex.fi/fi/lainsaadanto/2009/421",
      "hosting": "",
      "label": "Geospatial base data",
      "legal_basis": "",
@@ -70534,10 +71586,10 @@
      "domain": "identity",
      "foreign_dependency": "",
      "holder": "Comuni (municipal electoral offices); integration into ANPR under the Ministero dell'Interno",
-     "holder_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art62",
+     "holder_url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:1967-03-20;223",
      "hosting": "",
      "label": "Electoral roll entry",
-     "legal_basis": "",
+     "legal_basis": "Presidential Decree 223/1967, consolidated act on active voting rights and keeping of the electoral lists",
      "publisher": "Normattiva - Istituto Poligrafico e Zecca dello Stato",
      "quote": "sono definite le modalità di integrazione nell'ANPR delle liste elettorali e dei dati relativi all'iscrizione nelle liste di sezione [English: the arrangements for integrating into ANPR the electoral lists and the data on enrolment in polling-section lists are defined]",
      "record_class": "electoral_roll",
@@ -70558,7 +71610,7 @@
      "holder_url": "https://www.agid.gov.it/it/piattaforme/firma-elettronica-qualificata",
      "hosting": "The CIE certification authority (CA Autenticazione and PKI-CIE) is part of the IT infrastructure located in the CNSD",
      "label": "State PKI and qualified trust services",
-     "legal_basis": "",
+     "legal_basis": "Art. 29 CAD: providers of qualified trust services apply to AgID for qualification",
      "publisher": "Gazzetta Ufficiale della Repubblica Italiana - Istituto Poligrafico e Zecca dello Stato",
      "quote": "la struttura di Certification Authority del CNSD che emette i certificati di autenticazione in rete, componente della piattaforma e dell’infrastruttura per l’emissione della CIE [English: the CNSD Certification Authority structure that issues online authentication certificates, a component of the platform and infrastructure for issuing the CIE]",
      "record_class": "trust_services_pki",
@@ -79647,25 +80699,25 @@
      "url": "https://ezdrav.si/resitve/crpp/"
     },
     {
-     "confidence": "",
+     "confidence": "official",
      "data_size": "",
      "domain": "health",
-     "foreign_dependency": "",
-     "holder": "",
-     "holder_url": "",
-     "hosting": "",
+     "foreign_dependency": "national",
+     "holder": "NIJZ and controllers listed in Annex 1 of ZDigZ",
+     "holder_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387",
+     "hosting": "The state-owned public company is the contractual processor for the public-health collections (Art. 22(2))",
      "label": "Public health surveillance",
-     "legal_basis": "",
-     "publisher": "",
-     "quote": "",
+     "legal_basis": "ZDigZ Art. 22(2) lists public-health collections, starting with notifiable diseases",
+     "publisher": "Nacionalni inštitut za javno zdravje (NIJZ)",
+     "quote": "Z začetkom leta 2017 je v okviru eZdravja pričel z delovanjem Elektronski register cepljenih oseb in neželenih učinkov po cepljenju [English: At the beginning of 2017, the Electronic Register of Vaccinated Persons and Adverse Events Following Immunisation began operating within eZdravje]",
      "record_class": "public_health_surveillance",
      "record_count": "",
      "recoverability": "medium",
-     "register": "",
-     "retrieved": "",
-     "status": "unrecorded",
+     "register": "The electronic register of vaccinated persons and adverse events (eRCO) has operated since 2017",
+     "retrieved": "2026-10-06",
+     "status": "held",
      "tier": 2,
-     "url": ""
+     "url": "https://nijz.si/nalezljive-bolezni/cepljenje/elektronski-register-cepljenih-oseb-in-nezelenih-ucinkov-po-cepljenju-erco/"
     },
     {
      "confidence": "",
@@ -82919,7 +83971,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "The holdings Belgium cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 20 of 39 holding classes have a verified source; 2 have a sourced record count or data size."
+         "t": "The holdings Belgium cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 20 of 39 holding classes have a verified source; 3 have a sourced record count or data size."
         }
        ],
        "type": "p"
@@ -83139,11 +84191,15 @@
           ],
           "g": "Strong",
           "role": "fact",
-          "t": "FAS audit trail of authentication logs, kept for 10 years"
+          "t": "FAS authentication logs (date, time, ID number, IP address, browser, OS) are kept in an audit trail for 10 years"
          },
          {
-          "role": "gap",
-          "t": "Not yet sourced"
+          "c": [
+           "record:BE:authentication_audit_log:operator"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "Controller: FPS BOSA, DG Simplification and Digitization"
          },
          {
           "role": "gap",
@@ -83205,9 +84261,9 @@
           "c": [
            "record:BE:digital_identity_credentials:register"
           ],
-          "g": "Strong",
+          "g": "Standard",
           "role": "fact",
-          "t": "Federal Authentication Service (FAS)"
+          "t": "Federal Authentication Service (FAS / CSAM 'My digital keys'): citizens authenticate with digital keys such as the eID or itsme"
          },
          {
           "c": [
@@ -83215,11 +84271,15 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "DG Simplification and Digitization (FPS Policy and Support, BOSA)"
+          "t": "FPS Policy and Support (BOSA), DG Simplification and Digitization provides the FAS"
          },
          {
-          "role": "gap",
-          "t": "Not yet sourced"
+          "c": [
+           "record:BE:digital_identity_credentials:hosting"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "BOSA uses subcontractors as data processors (not named)"
          },
          {
           "role": "gap",
@@ -83227,7 +84287,7 @@
          },
          {
           "role": "gap",
-          "t": "Not yet measured"
+          "t": "Not yet sourced"
          }
         ],
         [
@@ -84485,7 +85545,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "Not yet sized. Capacity for Belgium will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 2 of 39 holding classes have a sourced measurement so far."
+         "t": "Not yet sized. Capacity for Belgium will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 3 of 39 holding classes have a sourced measurement so far."
         }
        ],
        "tone": "gap",
@@ -95046,8 +96106,9 @@
           "c": [
            "record:EE:fingerprint_biometric:operator"
           ],
-          "role": "disputed",
-          "t": "Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names…. It is withheld until the fact or its source is corrected and checked again"
+          "g": "Standard",
+          "role": "fact",
+          "t": "Politsei- ja Piirivalveamet (Police and Border Guard Board)"
          },
          {
           "role": "gap",
@@ -100871,7 +101932,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "The holdings Finland cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 16 of 39 holding classes have a verified source; 1 have a sourced record count or data size."
+         "t": "The holdings Finland cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 21 of 39 holding classes have a verified source; 1 have a sourced record count or data size."
         }
        ],
        "type": "p"
@@ -100980,7 +102041,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "passirekisteri (passport register)"
+          "t": "Police licence-administration data include photographs submitted when applying for a licence or decision (e.g. passport/ID card)"
          },
          {
           "role": "gap",
@@ -101014,7 +102075,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "passirekisteri (passport register)"
+          "t": "Passport fingerprints are stored centrally in the passport register as well as in the chip"
          },
          {
           "role": "gap",
@@ -101120,7 +102181,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "Henkilökortti- ja passijärjestelmä, Heko-Passi (ID card and passport system)"
+          "t": "The police keep the passport register for tasks of the police, the Ministry for Foreign Affairs and missions"
          },
          {
           "role": "gap",
@@ -101225,8 +102286,12 @@
           "t": "DVV keeps a certificate register of the personal certificates it issues, under the eIDAS Regulation"
          },
          {
-          "role": "gap",
-          "t": "Not yet sourced"
+          "c": [
+           "record:FI:trust_services_pki:operator"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "DVV creates the certificates used to verify passport chip data and read fingerprints"
          },
          {
           "role": "gap",
@@ -101375,24 +102440,28 @@
           "t": "Intelligence services (tier 1)"
          },
          {
-          "role": "gap",
-          "t": "Not yet verified"
+          "c": [
+           "record:FI:intelligence:register"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "Supo may process personal data needed to protect national security and counter threats to the state"
          },
          {
           "role": "gap",
-          "t": "—"
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
-          "t": "—"
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
-          "t": "—"
+          "t": "Not stated in sources"
          },
          {
           "role": "gap",
-          "t": "—"
+          "t": "Not yet measured"
          }
         ],
         [
@@ -101635,24 +102704,32 @@
           "t": "Vehicle & licensing (tier 1)"
          },
          {
-          "role": "gap",
-          "t": "Not yet verified"
+          "c": [
+           "record:FI:vehicle_licensing:register"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "Traficom keeps the transport register electronically"
+         },
+         {
+          "c": [
+           "record:FI:vehicle_licensing:operator"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "Liikenne- ja viestintävirasto Traficom"
          },
          {
           "role": "gap",
-          "t": "—"
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
-          "t": "—"
+          "t": "Not stated in sources"
          },
          {
           "role": "gap",
-          "t": "—"
-         },
-         {
-          "role": "gap",
-          "t": "—"
+          "t": "Not yet measured"
          }
         ],
         [
@@ -101707,7 +102784,7 @@
           ],
           "g": "Standard",
           "role": "fact",
-          "t": "Asetietojärjestelmä (firearms information system)"
+          "t": "Transfers between firearms dealers must be notified electronically to the police firearms information system"
          },
          {
           "role": "gap",
@@ -101800,24 +102877,32 @@
           "t": "Election management and results (tier 1)"
          },
          {
-          "role": "gap",
-          "t": "Not yet verified"
+          "c": [
+           "record:FI:electoral_management:register"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "The Ministry of Justice produces printouts from the national candidate register"
+         },
+         {
+          "c": [
+           "record:FI:electoral_management:operator"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "Polling committees use the voting register and other Ministry of Justice information systems"
          },
          {
           "role": "gap",
-          "t": "—"
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
-          "t": "—"
+          "t": "Not stated in sources"
          },
          {
           "role": "gap",
-          "t": "—"
-         },
-         {
-          "role": "gap",
-          "t": "—"
+          "t": "Not yet measured"
          }
         ],
         [
@@ -101890,24 +102975,32 @@
           "t": "Crisis management and civil protection (tier 1)"
          },
          {
-          "role": "gap",
-          "t": "Not yet verified"
+          "c": [
+           "record:FI:crisis_management:register"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "Emergency warnings are distributed via radio and the Emergency Response Centre Agency's mobile application"
+         },
+         {
+          "c": [
+           "record:FI:crisis_management:operator"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "Government Rules of Procedure assign the Government's common situational picture and coordination of disruption management"
          },
          {
           "role": "gap",
-          "t": "—"
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
-          "t": "—"
+          "t": "Not stated in sources"
          },
          {
           "role": "gap",
-          "t": "—"
-         },
-         {
-          "role": "gap",
-          "t": "—"
+          "t": "Not yet measured"
          }
         ],
         [
@@ -101980,24 +103073,31 @@
           "t": "Education (tier 1)"
          },
          {
-          "role": "gap",
-          "t": "Not yet verified"
+          "c": [
+           "record:FI:education:register"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "EDUFI is controller of the learner-number register; its data are kept permanently"
+         },
+         {
+          "c": [
+           "record:FI:education:operator"
+          ],
+          "role": "disputed",
+          "t": "Disputed: sources disagree. Oikeusministeriö / Finlex (Ministry of Justice) — Laki valtakunnallisista opinto-, koulutus- ja…, 2017 gives the value this report printed; Finlex / oikeusministeriö — Laki valtakunnallisista opinto- ja tutkintorekistereistä… gives “Opetushallitus (Finnish National Agency for Education)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact"
          },
          {
           "role": "gap",
-          "t": "—"
+          "t": "Not yet sourced"
          },
          {
           "role": "gap",
-          "t": "—"
+          "t": "Not stated in sources"
          },
          {
           "role": "gap",
-          "t": "—"
-         },
-         {
-          "role": "gap",
-          "t": "—"
+          "t": "Not yet measured"
          }
         ],
         [
@@ -102168,8 +103268,12 @@
           "t": "Building data are recorded in the Population Information System"
          },
          {
-          "role": "gap",
-          "t": "Not yet sourced"
+          "c": [
+           "record:FI:geospatial:operator"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "The National Land Survey is responsible for the national spatial-data discovery service"
          },
          {
           "role": "gap",
@@ -102197,7 +103301,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "Of the 16 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national."
+         "t": "Of the 21 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national."
         }
        ],
        "type": "p"
@@ -102265,7 +103369,7 @@
          },
          {
           "role": "method",
-          "t": "16"
+          "t": "21"
          }
         ]
        ],
@@ -102457,12 +103561,6 @@
         [
          {
           "role": "method",
-          "t": "Vehicle & licensing (tier 1)"
-         }
-        ],
-        [
-         {
-          "role": "method",
           "t": "Judicial & criminal justice (tier 1)"
          }
         ],
@@ -102481,12 +103579,6 @@
         [
          {
           "role": "method",
-          "t": "Election management and results (tier 1)"
-         }
-        ],
-        [
-         {
-          "role": "method",
           "t": "Central bank systems (tier 1)"
          }
         ],
@@ -102499,19 +103591,7 @@
         [
          {
           "role": "method",
-          "t": "Intelligence services (tier 1)"
-         }
-        ],
-        [
-         {
-          "role": "method",
           "t": "Emergency calls and public-safety radio (tier 1)"
-         }
-        ],
-        [
-         {
-          "role": "method",
-          "t": "Crisis management and civil protection (tier 1)"
          }
         ],
         [
@@ -102524,12 +103604,6 @@
          {
           "role": "method",
           "t": "Water management control (tier 1)"
-         }
-        ],
-        [
-         {
-          "role": "method",
-          "t": "Education (tier 1)"
          }
         ]
        ],
@@ -130842,7 +131916,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "The holdings Slovenia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 30 of 39 holding classes have a verified source; 3 have a sourced record count or data size."
+         "t": "The holdings Slovenia cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 31 of 39 holding classes have a verified source; 3 have a sourced record count or data size."
         }
        ],
        "type": "p"
@@ -132189,36 +133263,6 @@
          },
          {
           "role": "label",
-          "t": "Public health surveillance (tier 2)"
-         },
-         {
-          "role": "gap",
-          "t": "Not yet verified"
-         },
-         {
-          "role": "gap",
-          "t": "—"
-         },
-         {
-          "role": "gap",
-          "t": "—"
-         },
-         {
-          "role": "gap",
-          "t": "—"
-         },
-         {
-          "role": "gap",
-          "t": "—"
-         }
-        ],
-        [
-         {
-          "role": "label",
-          "t": "Standard"
-         },
-         {
-          "role": "label",
           "t": "National archives (digital) (tier 3)"
          },
          {
@@ -132240,6 +133284,49 @@
          {
           "role": "gap",
           "t": "Not stated in sources"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet measured"
+         }
+        ],
+        [
+         {
+          "role": "label",
+          "t": "Standard"
+         },
+         {
+          "role": "label",
+          "t": "Public health surveillance (tier 2)"
+         },
+         {
+          "c": [
+           "record:SI:public_health_surveillance:register"
+          ],
+          "g": "Strong",
+          "role": "fact",
+          "t": "The electronic register of vaccinated persons and adverse events (eRCO) has operated since 2017"
+         },
+         {
+          "role": "gap",
+          "t": "Not yet sourced"
+         },
+         {
+          "c": [
+           "record:SI:public_health_surveillance:hosting"
+          ],
+          "g": "Standard",
+          "role": "fact",
+          "t": "The state-owned public company is the contractual processor for the public-health collections (Art. 22(2))"
+         },
+         {
+          "c": [
+           "record:SI:public_health_surveillance:foreign_dependency"
+          ],
+          "g": "Standard",
+          "k": "categorical",
+          "role": "fact",
+          "t": "National infrastructure"
          },
          {
           "role": "gap",
@@ -132319,7 +133406,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "Of the 29 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national."
+         "t": "Of the 30 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national."
         }
        ],
        "type": "p"
@@ -132347,7 +133434,7 @@
          },
          {
           "role": "method",
-          "t": "6"
+          "t": "7"
          }
         ],
         [
@@ -134589,7 +135676,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -134742,6 +135829,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -136806,7 +137915,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -136959,6 +138068,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -137126,7 +138257,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "43 of 43 printed facts about Belgium pass."
+          "t": "45 of 45 printed facts about Belgium pass."
          }
         ],
         "type": "p"
@@ -137216,7 +138347,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -137242,7 +138373,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -137268,7 +138399,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -137294,7 +138425,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -137658,7 +138789,33 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:BE:authentication_audit_log:operator"
+          },
+          {
+           "role": "method",
+           "t": "Authentication audit log: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -137710,7 +138867,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -137736,7 +138893,33 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:BE:digital_identity_credentials:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Digital identity credentials: hosting"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -138338,7 +139521,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -138491,6 +139674,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -138748,7 +139953,7 @@
           },
           {
            "role": "method",
-           "t": "wf_72f99a66-4e9"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -138774,7 +139979,7 @@
           },
           {
            "role": "method",
-           "t": "wf_72f99a66-4e9"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -140039,7 +141244,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -140192,6 +141397,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -142182,7 +143409,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -142335,6 +143562,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -144395,7 +145644,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -144548,6 +145797,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -146260,7 +147531,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -146413,6 +147684,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -148307,7 +149600,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -148460,6 +149753,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -148627,7 +149942,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "53 of 53 printed facts about Estonia pass."
+          "t": "54 of 54 printed facts about Estonia pass."
          }
         ],
         "type": "p"
@@ -149056,6 +150371,32 @@
           {
            "role": "method",
            "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:EE:fingerprint_biometric:operator"
+          },
+          {
+           "role": "method",
+           "t": "Fingerprint biometric: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "claude-opus-5-5"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -150129,28 +151470,6 @@
            "role": "method",
            "t": "Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory definition, not the name of a register or system, so it does not answer 'what'; the source that names a register holding facial images (ABIS, siseministeerium.ee) is not"
           }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:EE:fingerprint_biometric:operator"
-          },
-          {
-           "role": "method",
-           "t": "Fingerprint biometric: the body that operates it"
-          },
-          {
-           "role": "method",
-           "t": "claude-fable-5-1"
-          },
-          {
-           "role": "method",
-           "t": "unclear"
-          },
-          {
-           "role": "method",
-           "t": "The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names PPA alone, and the quote does not establish whether fingerprint data fall wholly outside the MFA exception, so the source is ambiguous for the scope as printed."
-          }
          ]
         ],
         "type": "table"
@@ -150190,7 +151509,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -150343,6 +151662,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -150574,7 +151915,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -152233,7 +153574,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -152386,6 +153727,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -154176,7 +155539,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -154329,6 +155692,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -154496,7 +155881,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "33 of 33 printed facts about Finland pass."
+          "t": "43 of 43 printed facts about Finland pass."
          }
         ],
         "type": "p"
@@ -154924,7 +156309,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -154950,7 +156335,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -155054,7 +156439,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -155138,6 +156523,32 @@
          [
           {
            "role": "label",
+           "t": "record:FI:trust_services_pki:operator"
+          },
+          {
+           "role": "method",
+           "t": "State PKI and qualified trust services: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:FI:police_records:register"
           },
           {
@@ -155159,6 +156570,32 @@
           {
            "role": "method",
            "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:FI:intelligence:register"
+          },
+          {
+           "role": "method",
+           "t": "Intelligence services: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -155294,6 +156731,58 @@
          [
           {
            "role": "label",
+           "t": "record:FI:vehicle_licensing:register"
+          },
+          {
+           "role": "method",
+           "t": "Vehicle & licensing: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:FI:vehicle_licensing:operator"
+          },
+          {
+           "role": "method",
+           "t": "Vehicle & licensing: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:FI:border_control:register"
           },
           {
@@ -155340,7 +156829,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -155372,6 +156861,136 @@
          [
           {
            "role": "label",
+           "t": "record:FI:electoral_management:register"
+          },
+          {
+           "role": "method",
+           "t": "Election management and results: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:FI:electoral_management:operator"
+          },
+          {
+           "role": "method",
+           "t": "Election management and results: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:FI:crisis_management:register"
+          },
+          {
+           "role": "method",
+           "t": "Crisis management and civil protection: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:FI:crisis_management:operator"
+          },
+          {
+           "role": "method",
+           "t": "Crisis management and civil protection: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:FI:education:register"
+          },
+          {
+           "role": "method",
+           "t": "Education: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:FI:geospatial:register"
           },
           {
@@ -155393,6 +157012,32 @@
           {
            "role": "method",
            "t": "wf_da123db1-a4e"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:FI:geospatial:operator"
+          },
+          {
+           "role": "method",
+           "t": "Geospatial base data: the body that operates it"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
           }
          ]
         ],
@@ -155448,7 +157093,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -155601,6 +157246,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -157851,7 +159518,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -158004,6 +159671,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -159872,7 +161561,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -160025,6 +161714,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -162515,7 +164226,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -162668,6 +164379,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -164742,7 +166475,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -164895,6 +166628,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -165230,7 +166985,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -165776,7 +167531,7 @@
           },
           {
            "role": "method",
-           "t": "wf_da123db1-a4e"
+           "t": "wf_c38b3e2e-319"
           }
          ],
          [
@@ -166763,7 +168518,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -166916,6 +168671,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -167723,7 +169500,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -167876,6 +169653,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -168683,7 +170482,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -168836,6 +170635,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -170371,7 +172192,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -170524,6 +172345,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -171664,7 +173507,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -171817,6 +173660,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -173716,7 +175581,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -173869,6 +175734,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -175451,7 +177338,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -175604,6 +177491,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -177274,7 +179183,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -177427,6 +179336,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -178463,7 +180394,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -178616,6 +180547,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -180138,7 +182091,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -180291,6 +182244,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -180458,7 +182433,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "68 of 68 printed facts about Slovenia pass."
+          "t": "71 of 71 printed facts about Slovenia pass."
          }
         ],
         "type": "p"
@@ -182266,6 +184241,84 @@
            "role": "method",
            "t": "wf_da123db1-a4e"
           }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:SI:public_health_surveillance:register"
+          },
+          {
+           "role": "method",
+           "t": "Public health surveillance: the name of the register or system"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:SI:public_health_surveillance:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Public health surveillance: hosting"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
+          }
+         ],
+         [
+          {
+           "role": "label",
+           "t": "record:SI:public_health_surveillance:foreign_dependency"
+          },
+          {
+           "role": "method",
+           "t": "Public health surveillance: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed"
+          },
+          {
+           "role": "method",
+           "t": "unrecorded"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "supported"
+          },
+          {
+           "role": "method",
+           "t": "wf_c38b3e2e-319"
+          }
          ]
         ],
         "type": "table"
@@ -182367,7 +184420,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+          "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -182520,6 +184573,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_c38b3e2e-319"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "32"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 32"
+          },
+          {
+           "role": "method",
+           "t": "supported: 32"
+          }
+         ],
          [
           {
            "role": "label",
@@ -184108,7 +186183,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check."
+         "t": "In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check."
         }
        ],
        "type": "p"
@@ -184261,6 +186336,28 @@
         }
        ],
        "rows": [
+        [
+         {
+          "role": "label",
+          "t": "wf_c38b3e2e-319"
+         },
+         {
+          "role": "method",
+          "t": "2026-10-06"
+         },
+         {
+          "role": "method",
+          "t": "32"
+         },
+         {
+          "role": "method",
+          "t": "claude-fable-5-1: 32"
+         },
+         {
+          "role": "method",
+          "t": "supported: 32"
+         }
+        ],
         [
          {
           "role": "label",
@@ -184484,11 +186581,11 @@
          },
          {
           "role": "method",
-          "t": "43"
+          "t": "45"
          },
          {
           "role": "method",
-          "t": "43"
+          "t": "45"
          },
          {
           "role": "method",
@@ -184616,11 +186713,11 @@
          },
          {
           "role": "method",
-          "t": "53"
+          "t": "54"
          },
          {
           "role": "method",
-          "t": "53"
+          "t": "54"
          },
          {
           "role": "method",
@@ -184628,7 +186725,7 @@
          },
          {
           "role": "method",
-          "t": "3"
+          "t": "2"
          }
         ],
         [
@@ -184638,11 +186735,11 @@
          },
          {
           "role": "method",
-          "t": "33"
+          "t": "43"
          },
          {
           "role": "method",
-          "t": "33"
+          "t": "43"
          },
          {
           "role": "method",
@@ -184990,11 +187087,11 @@
          },
          {
           "role": "method",
-          "t": "68"
+          "t": "71"
          },
          {
           "role": "method",
-          "t": "68"
+          "t": "71"
          },
          {
           "role": "method",
@@ -185069,16 +187166,16 @@
   },
   "lines": {
    "AT": "Fact check: 65 of 65 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/AT",
-   "BE": "Fact check: 43 of 43 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/BE",
+   "BE": "Fact check: 45 of 45 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/BE",
    "BG": "Fact check: 46 of 46 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/BG",
    "CY": "Fact check: 63 of 63 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/CY",
    "CZ": "Fact check: 64 of 64 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/CZ",
    "DE": "Fact check: 54 of 54 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DE",
    "DK": "Fact check: 61 of 61 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DK",
-   "EE": "Fact check: 53 of 53 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/EE",
+   "EE": "Fact check: 54 of 54 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/EE",
    "EL": "Fact check: 60 of 60 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/EL",
    "ES": "Fact check: 57 of 57 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/ES",
-   "FI": "Fact check: 33 of 33 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/FI",
+   "FI": "Fact check: 43 of 43 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/FI",
    "FR": "Fact check: 73 of 73 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/FR",
    "HR": "Fact check: 60 of 60 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/HR",
    "HU": "Fact check: 78 of 78 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/HU",
@@ -185093,7 +187190,7 @@
    "PT": "Fact check: 49 of 49 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/PT",
    "RO": "Fact check: 28 of 28 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/RO",
    "SE": "Fact check: 45 of 45 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SE",
-   "SI": "Fact check: 68 of 68 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SI",
+   "SI": "Fact check: 71 of 71 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SI",
    "SK": "Fact check: 51 of 51 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SK"
   }
  },
@@ -185344,7 +187441,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "Every holding whose hosting a checked source states, by member state: 65 printed, and any withheld by the fact check marked as disputed. Each cell is the one the state's own report prints, with the same source. A holding not listed here has no sourced hosting yet; that is a gap in the evidence, not a finding that it is hosted nationally."
+        "t": "Every holding whose hosting a checked source states, by member state: 67 printed, and any withheld by the fact check marked as disputed. Each cell is the one the state's own report prints, with the same source. A holding not listed here has no sourced hosting yet; that is a gap in the evidence, not a finding that it is hosted nationally."
        }
       ],
       "type": "p"
@@ -185558,6 +187655,44 @@
          "g": "Standard",
          "role": "fact",
          "t": "Photos are kept on a secure server (no provider or location named)"
+        },
+        {
+         "role": "gap",
+         "t": "Not stated in sources"
+        }
+       ],
+       [
+        {
+         "role": "label",
+         "t": "Belgium"
+        },
+        {
+         "role": "label",
+         "t": "Digital identity credentials (tier 0)"
+        },
+        {
+         "c": [
+          "record:BE:digital_identity_credentials:register"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "Federal Authentication Service (FAS / CSAM 'My digital keys'): citizens authenticate with digital keys such as the eID or itsme"
+        },
+        {
+         "c": [
+          "record:BE:digital_identity_credentials:operator"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "FPS Policy and Support (BOSA), DG Simplification and Digitization provides the FAS"
+        },
+        {
+         "c": [
+          "record:BE:digital_identity_credentials:hosting"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "BOSA uses subcontractors as data processors (not named)"
         },
         {
          "role": "gap",
@@ -187972,6 +190107,45 @@
        [
         {
          "role": "label",
+         "t": "Slovenia"
+        },
+        {
+         "role": "label",
+         "t": "Public health surveillance (tier 2)"
+        },
+        {
+         "c": [
+          "record:SI:public_health_surveillance:register"
+         ],
+         "g": "Strong",
+         "role": "fact",
+         "t": "The electronic register of vaccinated persons and adverse events (eRCO) has operated since 2017"
+        },
+        {
+         "role": "gap",
+         "t": "Not yet sourced"
+        },
+        {
+         "c": [
+          "record:SI:public_health_surveillance:hosting"
+         ],
+         "g": "Standard",
+         "role": "fact",
+         "t": "The state-owned public company is the contractual processor for the public-health collections (Art. 22(2))"
+        },
+        {
+         "c": [
+          "record:SI:public_health_surveillance:foreign_dependency"
+         ],
+         "g": "Standard",
+         "k": "categorical",
+         "role": "fact",
+         "t": "National infrastructure"
+        }
+       ],
+       [
+        {
+         "role": "label",
          "t": "Sweden"
         },
         {
@@ -188154,7 +190328,7 @@
         },
         {
          "role": "method",
-         "t": "1"
+         "t": "2"
         },
         {
          "role": "method",
@@ -188388,7 +190562,7 @@
         },
         {
          "role": "method",
-         "t": "16"
+         "t": "21"
         },
         {
          "role": "method",
@@ -188412,7 +190586,7 @@
         },
         {
          "role": "method",
-         "t": "16"
+         "t": "21"
         }
        ],
        [
@@ -188932,11 +191106,11 @@
         },
         {
          "role": "method",
-         "t": "29"
+         "t": "30"
         },
         {
          "role": "method",
-         "t": "7"
+         "t": "8"
         },
         {
          "role": "method",
@@ -188952,7 +191126,7 @@
         },
         {
          "role": "method",
-         "t": "6"
+         "t": "7"
         },
         {
          "role": "method",
@@ -189056,7 +191230,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1408 facts are printed, 4312 values are withheld as gaps, and 76 are withheld as disputed."
+        "t": "This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed."
        }
       ],
       "type": "p"
@@ -189099,7 +191273,7 @@
         },
         {
          "role": "method",
-         "t": "2138"
+         "t": "2192"
         }
        ],
        [
@@ -189109,7 +191283,7 @@
         },
         {
          "role": "method",
-         "t": "20"
+         "t": "21"
         }
        ],
        [
@@ -189119,7 +191293,7 @@
         },
         {
          "role": "method",
-         "t": "107"
+         "t": "75"
         }
        ],
        [
@@ -189129,7 +191303,7 @@
         },
         {
          "role": "method",
-         "t": "251"
+         "t": "228"
         }
        ]
       ],
@@ -189187,7 +191361,7 @@
         },
         {
          "role": "method",
-         "t": "264"
+         "t": "275"
         }
        ],
        [
@@ -189197,7 +191371,7 @@
         },
         {
          "role": "method",
-         "t": "10"
+         "t": "11"
         }
        ],
        [
@@ -189207,7 +191381,7 @@
         },
         {
          "role": "method",
-         "t": "377"
+         "t": "367"
         }
        ],
        [
@@ -189217,7 +191391,7 @@
         },
         {
          "role": "method",
-         "t": "41"
+         "t": "38"
         }
        ],
        [
@@ -189247,7 +191421,7 @@
         },
         {
          "role": "method",
-         "t": "177"
+         "t": "173"
         }
        ],
        [
@@ -189267,7 +191441,7 @@
         },
         {
          "role": "method",
-         "t": "9"
+         "t": "14"
         }
        ],
        [
@@ -189456,7 +191630,7 @@
         },
         {
          "role": "method",
-         "t": "634"
+         "t": "651"
         }
        ],
        [
@@ -189466,7 +191640,7 @@
         },
         {
          "role": "method",
-         "t": "644"
+         "t": "643"
         }
        ],
        [
@@ -189550,7 +191724,7 @@
         },
         {
          "role": "method",
-         "t": "1299"
+         "t": "1315"
         }
        ]
       ],
@@ -189923,7 +192097,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "In this build, 1408 of 1408 printed facts pass the fact check."
+        "t": "In this build, 1424 of 1424 printed facts pass the fact check."
        }
       ],
       "type": "p"
@@ -192124,6 +194298,32 @@
    "title": "e-Matica",
    "url": "https://www.carnet.hr/projekt/e-matica-2/"
   },
+  "cartaidentita-interno-gov-it:0e84e5750c": {
+   "archived_url": "https://web.archive.org/web/20260822165458/https://www.cartaidentita.interno.gov.it/info-utili/entra-con-cie/",
+   "doc_type": "webpage",
+   "label": "Ministero dell'Interno — Entra con CIE",
+   "language": "",
+   "license": "",
+   "notes": "sha256 e97c2e7e55e2b63af138c54ae341ee2e268bde9c7f124a4445479d3bf0aa11a8 (text/html), fetched 2026-10-06",
+   "published": "",
+   "publisher": "Ministero dell'Interno",
+   "source_id": "cartaidentita-interno-gov-it:0e84e5750c",
+   "title": "Entra con CIE",
+   "url": "https://www.cartaidentita.interno.gov.it/info-utili/entra-con-cie/"
+  },
+  "cartaidentita-interno-gov-it:6f0fc5490b": {
+   "archived_url": "https://web.archive.org/web/20260515172529/https://www.cartaidentita.interno.gov.it/la-carta/",
+   "doc_type": "webpage",
+   "label": "Ministero dell'Interno — Cos'è la carta - Carta di Identità Elettronica (CIE)",
+   "language": "it",
+   "license": "",
+   "notes": "sha256 5a5aff1c54db01d8d36488e2ed26804ae558a51d3cc6cb0a4d39d477a3f26519 (text/html), fetched 2026-10-06",
+   "published": "",
+   "publisher": "Ministero dell'Interno",
+   "source_id": "cartaidentita-interno-gov-it:6f0fc5490b",
+   "title": "Cos'è la carta - Carta di Identità Elettronica (CIE)",
+   "url": "https://www.cartaidentita.interno.gov.it/la-carta/"
+  },
   "carteadeidentitate-gov-ro:5b7eebedb2": {
    "archived_url": "https://web.archive.org/web/20260820162144/https://carteadeidentitate.gov.ro/despre/",
    "doc_type": "webpage",
@@ -192695,6 +194895,19 @@
    "source_id": "crl-justice-gouv-fr:0e1f52349c",
    "title": "Politique de certification – AC Racine Justice",
    "url": "https://crl.justice.gouv.fr/igc/ants/MJ-PC-AC-Racine.pdf"
+  },
+  "csam-be:a42648682c": {
+   "archived_url": "https://web.archive.org/web/20260928064715/https://www.csam.be/nl/over-csam.html",
+   "doc_type": "webpage",
+   "label": "CSAM (Belgian federal government services) — Over CSAM",
+   "language": "nl",
+   "license": "",
+   "notes": "sha256 3fbd84aa13ffe3b827c3e09317afa8f917d990afb8d40f1b3c1e1132cb282c07 (text/html), fetched 2026-10-06",
+   "published": "",
+   "publisher": "CSAM (Belgian federal government services)",
+   "source_id": "csam-be:a42648682c",
+   "title": "Over CSAM",
+   "url": "https://www.csam.be/nl/over-csam.html"
   },
   "ctie-gouvernement-lu:231c9e328b": {
    "archived_url": "",
@@ -194493,14 +196706,14 @@
   "eufunds-bg:696a817ef2": {
    "archived_url": "https://web.archive.org/web/20260314130013/https://www.eufunds.bg/bg/opgg/node/9490",
    "doc_type": "webpage",
-   "label": "eufunds.bg (Управляващ орган на ОП „Добро управление“) — Надграждане и развитие на държавния хибриден частен…, 2022-01-01",
-   "language": "",
+   "label": "eufunds.bg (Министерство на финансите) — Надграждане и развитие на Държавния хибриден частен…, 2022-01-01",
+   "language": "bg",
    "license": "",
-   "notes": "sha256 906d8cb55550b2128d9895869b3218c1207a06d0e3b3122b6c66a027c3cbadf4 (text/html), fetched 2026-10-02",
+   "notes": "sha256 4866b0693786288478ad6b05ef84726736cbc502551401a2b7c8eafae39ac082 (text/html), fetched 2026-10-06",
    "published": "2022-01-01",
-   "publisher": "eufunds.bg (Управляващ орган на ОП „Добро управление“)",
+   "publisher": "eufunds.bg (Министерство на финансите)",
    "source_id": "eufunds-bg:696a817ef2",
-   "title": "Надграждане и развитие на държавния хибриден частен облак, финансиран по ОП „Добро управление“",
+   "title": "Надграждане и развитие на Държавния хибриден частен облак, финансиран по ОП „Добро управление“",
    "url": "https://www.eufunds.bg/bg/opgg/node/9490"
   },
   "eurostat:nama_10_a64_e@2024": {
@@ -194672,6 +196885,19 @@
    "title": "Organizační řád Generálního finančního ředitelství",
    "url": "https://financnisprava.gov.cz/assets/cs/prilohy/fs-financni-sprava-cr/OR_FS_UZ_D4.pdf"
   },
+  "finlex-fi:02d0194424": {
+   "archived_url": "https://web.archive.org/web/20260313135303/https://www.finlex.fi/fi/lainsaadanto/2019/616",
+   "doc_type": "statute",
+   "label": "Oikeusministeriö / Finlex (Ministry of Justice) — Laki henkilötietojen käsittelystä poliisitoimessa (616/2019), 2019",
+   "language": "fi",
+   "license": "",
+   "notes": "sha256 3337d45571e36a988555ceed9e27f9c8dbdc6a3228c6fe5539f5d5cba8661f50 (text/html; rendered), fetched 2026-10-06",
+   "published": "2019",
+   "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+   "source_id": "finlex-fi:02d0194424",
+   "title": "Laki henkilötietojen käsittelystä poliisitoimessa (616/2019)",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/2019/616"
+  },
   "finlex-fi:16797d08ca": {
    "archived_url": "https://web.archive.org/web/20260421162858/https://www.finlex.fi/fi/lainsaadanto/2020/615",
    "doc_type": "statute",
@@ -194685,6 +196911,32 @@
    "title": "Laki henkilötietojen käsittelystä maahanmuuttohallinnossa (615/2020)",
    "url": "https://www.finlex.fi/fi/lainsaadanto/2020/615"
   },
+  "finlex-fi:1d9de947d2": {
+   "archived_url": "https://web.archive.org/web/20260823190508/https://www.finlex.fi/fi/lainsaadanto/2017/320",
+   "doc_type": "statute",
+   "label": "Oikeusministeriö / Finlex (Ministry of Justice) — Laki liikenteen palveluista (320/2017), 2017",
+   "language": "fi",
+   "license": "",
+   "notes": "sha256 80588b3811fd744681238e4d4b546537388cbb237383f6ed63647b239c92b8f0 (text/html; rendered), fetched 2026-10-06",
+   "published": "2017",
+   "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+   "source_id": "finlex-fi:1d9de947d2",
+   "title": "Laki liikenteen palveluista (320/2017)",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/2017/320"
+  },
+  "finlex-fi:266545fc48": {
+   "archived_url": "https://web.archive.org/web/20261003184141/https://www.finlex.fi/fi/lainsaadanto/1998/714",
+   "doc_type": "statute",
+   "label": "Oikeusministeriö / Finlex (Ministry of Justice) — Vaalilaki (714/1998), 1998",
+   "language": "fi",
+   "license": "",
+   "notes": "sha256 82c958b1e76a75c13ccd1522dbb9696841c7f482bcf9829cfa2655c5bbe578a6 (text/html; rendered), fetched 2026-10-06",
+   "published": "1998",
+   "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+   "source_id": "finlex-fi:266545fc48",
+   "title": "Vaalilaki (714/1998)",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/1998/714"
+  },
   "finlex-fi:57bda539c4": {
    "archived_url": "https://web.archive.org/web/20251010152906/https://www.finlex.fi/fi/lainsaadanto/2023/564",
    "doc_type": "statute",
@@ -194697,6 +196949,45 @@
    "source_id": "finlex-fi:57bda539c4",
    "title": "Kaupparekisterilaki (564/2023)",
    "url": "https://www.finlex.fi/fi/lainsaadanto/2023/564"
+  },
+  "finlex-fi:71dd7b8cce": {
+   "archived_url": "https://web.archive.org/web/20260606193431/https://www.finlex.fi/fi/lainsaadanto/2012/466",
+   "doc_type": "statute",
+   "label": "Oikeusministeriö / Finlex (Ministry of Justice) — Laki vaaratiedotteesta (466/2012), 2012",
+   "language": "fi",
+   "license": "",
+   "notes": "sha256 557b60b32f63334a2706b7f9cda898d68361af217b85aca988bf894fcf693cee (text/html; rendered), fetched 2026-10-06",
+   "published": "2012",
+   "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+   "source_id": "finlex-fi:71dd7b8cce",
+   "title": "Laki vaaratiedotteesta (466/2012)",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/2012/466"
+  },
+  "finlex-fi:7bef6f1c9d": {
+   "archived_url": "https://web.archive.org/web/20260521134011/https://www.finlex.fi/fi/lainsaadanto/2017/884",
+   "doc_type": "statute",
+   "label": "Oikeusministeriö / Finlex (Ministry of Justice) — Laki valtakunnallisista opinto-, koulutus- ja…, 2017",
+   "language": "fi",
+   "license": "",
+   "notes": "sha256 5dd4738bbd07627f0b67c31ac5c4ffd2904a7fd35ae877963ed7c640ca85255f (text/html; rendered), fetched 2026-10-06",
+   "published": "2017",
+   "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+   "source_id": "finlex-fi:7bef6f1c9d",
+   "title": "Laki valtakunnallisista opinto-, koulutus- ja tutkintorekistereistä (884/2017)",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/2017/884"
+  },
+  "finlex-fi:8dcfb17b3f": {
+   "archived_url": "https://web.archive.org/web/20260929151524/https://www.finlex.fi/fi/lainsaadanto/1998/1",
+   "doc_type": "statute",
+   "label": "Oikeusministeriö / Finlex (Ministry of Justice) — Ampuma-aselaki (1/1998), 1998",
+   "language": "fi",
+   "license": "",
+   "notes": "sha256 a1fae784dee0bd71fcf242de1ccbe0a700edcbf1481a283d00701f68944adf6d (text/html; rendered), fetched 2026-10-06",
+   "published": "1998",
+   "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+   "source_id": "finlex-fi:8dcfb17b3f",
+   "title": "Ampuma-aselaki (1/1998)",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/1998/1"
   },
   "finlex-fi:a3b56bc0af": {
    "archived_url": "https://web.archive.org/web/20260522204328/https://www.finlex.fi/fi/lainsaadanto/2009/661",
@@ -194736,6 +197027,45 @@
    "source_id": "finlex-fi:bf53c1026d",
    "title": "Laki henkilötietojen käsittelystä Tullissa (650/2019)",
    "url": "https://www.finlex.fi/fi/lainsaadanto/2019/650"
+  },
+  "finlex-fi:d1bdfd8e0f": {
+   "archived_url": "",
+   "doc_type": "statute",
+   "label": "Oikeusministeriö / Finlex (Ministry of Justice) — Valtioneuvoston ohjesääntö (262/2003), 2003",
+   "language": "fi",
+   "license": "",
+   "notes": "sha256 c3e135338c038246baa696b0051854415e676241fd3880b181ceff5e38ac2259 (text/html; rendered), fetched 2026-10-06",
+   "published": "2003",
+   "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+   "source_id": "finlex-fi:d1bdfd8e0f",
+   "title": "Valtioneuvoston ohjesääntö (262/2003)",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/2003/262"
+  },
+  "finlex-fi:de19523b4a": {
+   "archived_url": "",
+   "doc_type": "statute",
+   "label": "Oikeusministeriö / Finlex (Ministry of Justice) — Passilaki (671/2006), 2006",
+   "language": "fi",
+   "license": "",
+   "notes": "sha256 38c25f500ae4e8a8589b0acff8a5cd4c8094427b77a35d852a96293c8dc238d5 (text/html; rendered), fetched 2026-10-06",
+   "published": "2006",
+   "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+   "source_id": "finlex-fi:de19523b4a",
+   "title": "Passilaki (671/2006)",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/2006/671"
+  },
+  "finlex-fi:ee1f09c571": {
+   "archived_url": "",
+   "doc_type": "statute",
+   "label": "Oikeusministeriö / Finlex (Ministry of Justice) — Laki paikkatietoinfrastruktuurista (421/2009), 2009",
+   "language": "fi",
+   "license": "",
+   "notes": "sha256 b80617a557f4eec3f95aace9ff5f9ac6622dcfe4cadf2c4878822ffa8dfccfde (text/html; rendered), fetched 2026-10-06",
+   "published": "2009",
+   "publisher": "Oikeusministeriö / Finlex (Ministry of Justice)",
+   "source_id": "finlex-fi:ee1f09c571",
+   "title": "Laki paikkatietoinfrastruktuurista (421/2009)",
+   "url": "https://www.finlex.fi/fi/lainsaadanto/2009/421"
   },
   "finlex-fi:fc7ba5241d": {
    "archived_url": "https://web.archive.org/web/20260411111736/https://www.finlex.fi/fi/lainsaadanto/1991/305",
@@ -194945,6 +197275,19 @@
    "title": "G-Cloud, de community cloud van de overheid",
    "url": "https://www.gcloud.belgium.be/nl"
   },
+  "gcloud-belgium-be:57c7090819": {
+   "archived_url": "",
+   "doc_type": "webpage",
+   "label": "G-Cloud (Belgian federal public services, social-security institutions and state ICT organisations) — G-Cloud - Services",
+   "language": "fr",
+   "license": "",
+   "notes": "sha256 9031fa0d1b23290e14fe8c7b2675410f3bb1f128d5971eef9ce5cf4354fb5d1f (text/html), fetched 2026-10-06",
+   "published": "",
+   "publisher": "G-Cloud (Belgian federal public services, social-security institutions and state ICT organisations)",
+   "source_id": "gcloud-belgium-be:57c7090819",
+   "title": "G-Cloud - Services",
+   "url": "https://www.gcloud.belgium.be/fr/services"
+  },
   "gcloud-belgium-be:a990eba60c": {
    "archived_url": "",
    "doc_type": "webpage",
@@ -194957,6 +197300,19 @@
    "source_id": "gcloud-belgium-be:a990eba60c",
    "title": "Housing – Datacenter-as-a-Service (G-Cloud)",
    "url": "https://www.gcloud.belgium.be/nl/service/detail/housing"
+  },
+  "gcloud-belgium-be:c19798a75e": {
+   "archived_url": "",
+   "doc_type": "webpage",
+   "label": "G-Cloud (Belgian federal public services, social-security institutions and state ICT organisations) — G-Cloud - Home",
+   "language": "fr",
+   "license": "",
+   "notes": "sha256 f3bf6bf1da3eec5575f7f028116fe219980180398291a000a2f633f44b245fbf (text/html), fetched 2026-10-06",
+   "published": "",
+   "publisher": "G-Cloud (Belgian federal public services, social-security institutions and state ICT organisations)",
+   "source_id": "gcloud-belgium-be:c19798a75e",
+   "title": "G-Cloud - Home",
+   "url": "https://www.gcloud.belgium.be/fr"
   },
   "gegevensbeschermingsautoriteit-be:0b53e3e7a5": {
    "archived_url": "https://web.archive.org/web/20240921144846/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-29-2018.pdf",
@@ -198728,6 +201084,19 @@
    "title": "Πληρέστερη και ταχύτερη πληροφόρηση σε κρίσιμα περιστατικά με το Σύστημα Νέας Γενιάς 112",
    "url": "https://news.rik.cy/el/article/2026/7/14/plerestere-kai-takhutere-plerophorese-se-krisima-peristatika-me-to-sustema-neas-genias-112/"
   },
+  "newsbeast-gr:b860d20602": {
+   "archived_url": "",
+   "doc_type": "webpage",
+   "label": "Newsbeast — Πώς διαβαθμίζονται τα απόρρητα έγγραφα στην Ελλάδα, 2017-11-24",
+   "language": "el",
+   "license": "",
+   "notes": "sha256 be2d0e23003ecefc9b829fd48349ed211f0995d341e00245b0a6dcf12ec2b30d (text/html), fetched 2026-10-06",
+   "published": "2017-11-24",
+   "publisher": "Newsbeast",
+   "source_id": "newsbeast-gr:b860d20602",
+   "title": "Πώς διαβαθμίζονται τα απόρρητα έγγραφα στην Ελλάδα",
+   "url": "https://www.newsbeast.gr/greece/arthro/3026379/pos-diavathmizonte-ta-aporrita-engrafa-stin-ellada"
+  },
   "nhif-bg:5d73db1b8c": {
    "archived_url": "",
    "doc_type": "statute",
@@ -198753,6 +201122,19 @@
    "source_id": "nias-gov-hr:4ed5216d7b",
    "title": "Opći uvjeti korištenja - NIAS",
    "url": "https://nias.gov.hr/Home/TermsOfUse"
+  },
+  "nijz-si:7a1dff293b": {
+   "archived_url": "https://web.archive.org/web/20260210081857/https://nijz.si/nalezljive-bolezni/cepljenje/elektronski-register-cepljenih-oseb-in-nezelenih-ucinkov-po-cepljenju-erco/",
+   "doc_type": "webpage",
+   "label": "Nacionalni inštitut za javno zdravje (NIJZ) — Elektronski register cepljenih oseb in neželenih učinkov…, 2025-11-06",
+   "language": "sl",
+   "license": "",
+   "notes": "sha256 c74028f7aaa68ba102c7d1bee128d7d426f7db672e7561ebf323ac8e2eac19d6 (text/html), fetched 2026-10-06",
+   "published": "2025-11-06",
+   "publisher": "Nacionalni inštitut za javno zdravje (NIJZ)",
+   "source_id": "nijz-si:7a1dff293b",
+   "title": "Elektronski register cepljenih oseb in neželenih učinkov po cepljenju - eRCO",
+   "url": "https://nijz.si/nalezljive-bolezni/cepljenje/elektronski-register-cepljenih-oseb-in-nezelenih-ucinkov-po-cepljenju-erco/"
   },
   "nki-gov-hu:7e0f362387": {
    "archived_url": "https://web.archive.org/web/20250628235716/https://nki.gov.hu/hatosag/tartalom/felho/",
@@ -199286,6 +201668,19 @@
    "source_id": "opendata-finlex-fi:c26c9dda26",
    "title": "Laki turvallisuusverkkotoiminnasta (10/2015), 5 §",
    "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2015/10/fin@"
+  },
+  "opendata-finlex-fi:ebd35033eb": {
+   "archived_url": "",
+   "doc_type": "statute",
+   "label": "Finlex / oikeusministeriö — Laki liikenteen palveluista 320/2017 (ajantasainen), 2025",
+   "language": "",
+   "license": "",
+   "notes": "sha256 a9fd12e2dc21622a4856331e271dbfb05ced853e2f21ac86bb9315b53e43c17a (application/xml), fetched 2026-09-30",
+   "published": "2025",
+   "publisher": "Finlex / oikeusministeriö",
+   "source_id": "opendata-finlex-fi:ebd35033eb",
+   "title": "Laki liikenteen palveluista 320/2017 (ajantasainen)",
+   "url": "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2017/320/fin@20251001"
   },
   "opendata-finlex-fi:f6efecd649": {
    "archived_url": "",
@@ -201435,14 +203830,14 @@
   "sma-help-bosa-belgium-be:8e1cbe5617": {
    "archived_url": "https://web.archive.org/web/20260928063339/https://sma-help.bosa.belgium.be/en/fas-privacy",
    "doc_type": "webpage",
-   "label": "FPS Policy and Support (BOSA), DG Simplification and Digitization — FAS Privacy Notice – FAS – My Digital Keys – version 1.3, 2025-08-05",
-   "language": "",
+   "label": "FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering — Privacy statement - FAS - My Digital Keys, 2025-08-05",
+   "language": "en",
    "license": "",
-   "notes": "sha256 6f1ff77874b0f967b5d56e5e03036f3338c66b9315378d61a94414a97d02aa20 (text/html), fetched 2026-09-30",
+   "notes": "sha256 a653696264a475474190809c4cf033980716bc299959260848e0947131185dc4 (text/html), fetched 2026-10-06",
    "published": "2025-08-05",
-   "publisher": "FPS Policy and Support (BOSA), DG Simplification and Digitization",
+   "publisher": "FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering",
    "source_id": "sma-help-bosa-belgium-be:8e1cbe5617",
-   "title": "FAS Privacy Notice – FAS – My Digital Keys – version 1.3",
+   "title": "Privacy statement - FAS - My Digital Keys",
    "url": "https://sma-help.bosa.belgium.be/en/fas-privacy"
   },
   "snca-gov-sk:c4488488e6": {
@@ -201717,6 +204112,19 @@
    "source_id": "trustedlist-adr-gov-ro:ecb749bb9f",
    "title": "Romanian Trusted List (TSL) – Serviciul de Telecomunicatii Speciale entry",
    "url": "https://trustedlist.adr.gov.ro/trustedlist.xml"
+  },
+  "tsl-belgium-be:61c0487109": {
+   "archived_url": "https://web.archive.org/web/20261004023100/https://tsl.belgium.be/tsl-be.xml",
+   "doc_type": "webpage",
+   "label": "FPS Economy, SMEs, Self-employed and Energy — Belgian Trusted List (TSL-BE)",
+   "language": "en",
+   "license": "",
+   "notes": "sha256 cabba95e3100a45edaf923b72d4fb6fa38a5b4bd5ab3a3555c2d79563e83396b (text/xml), fetched 2026-10-06",
+   "published": "",
+   "publisher": "FPS Economy, SMEs, Self-employed and Energy",
+   "source_id": "tsl-belgium-be:61c0487109",
+   "title": "Belgian Trusted List (TSL-BE)",
+   "url": "https://tsl.belgium.be/tsl-be.xml"
   },
   "tsl-digital-gob-es:71ad256934": {
    "archived_url": "",

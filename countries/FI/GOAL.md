@@ -49,55 +49,55 @@ Finland described on its own measured characteristics. Each figure is the publis
 
 ## 3. Critical data holdings, by priority
 
-The holdings Finland cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 16 of 39 holding classes have a verified source; 1 have a sourced record count or data size.
+The holdings Finland cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 21 of 39 holding classes have a verified source; 1 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|---|
 | Critical | Civil registry core (tier 0) | Väestötietojärjestelmä (Population Information System) is the general national base register of persons, real estate, buildings and dwellings[^s19][^s20] | Digital and Population Data Services Agency (DVV) carries the controller duties for the Population Information System[^s21][^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | passirekisteri (passport register)[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | passirekisteri (passport register)[^s23][^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | Police licence-administration data include photographs submitted when applying for a licence or decision (e.g. passport/ID card)[^s22][^s23] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | Passport fingerprints are stored centrally in the passport register as well as in the chip[^s24][^s25][^s23] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | Critical | Breeder document scans (tier 0) | The Population Information System includes regionally organised documentary records not taken into digital form[^s20] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | DVV must keep a log register of processing of data stored from use of the support services (incl. identification)[^s24] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | About 17 million authentications per month through Suomi.fi e-Identification[^s25] |
-| High | Document issuance history (tier 0) | Henkilökortti- ja passijärjestelmä, Heko-Passi (ID card and passport system)[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | DVV must keep a log register of processing of data stored from use of the support services (incl. identification)[^s26] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | About 17 million authentications per month through Suomi.fi e-Identification[^s27] |
+| High | Document issuance history (tier 0) | The police keep the passport register for tasks of the police, the Ministry for Foreign Affairs and missions[^s24][^s23] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Digital identity credentials (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Electoral roll entry (tier 0) | äänioikeusrekisteri (voting register)[^s26] | ORK (Oikeusrekisterikeskus, Legal Register Centre) maintains the election information system technically; the system is owned by oikeusministeriö (Ministry of Justice)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | State PKI and qualified trust services (tier 0) | DVV keeps a certificate register of the personal certificates it issues, under the eIDAS Regulation[^s20] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Electoral roll entry (tier 0) | äänioikeusrekisteri (voting register)[^s28] | ORK (Oikeusrekisterikeskus, Legal Register Centre) maintains the election information system technically; the system is owned by oikeusministeriö (Ministry of Justice)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | State PKI and qualified trust services (tier 0) | DVV keeps a certificate register of the personal certificates it issues, under the eIDAS Regulation[^s20] | DVV creates the certificates used to verify passport chip data and read fingerprints[^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Land & property registry (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Judicial & criminal justice (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Police information systems (tier 1) | Poliisiasiaintietojärjestelmä PATJA (Police Information System)[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Police information systems (tier 1) | Poliisiasiaintietojärjestelmä PATJA (Police Information System)[^s23] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | The aliens-affairs case management system holds data on non-visa immigration matters[^s28] | Each authority is controller for data it stores; the Finnish Immigration Service is controller for international-protection registration data[^s28] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Intelligence services (tier 1) | Supo may process personal data needed to protect national security and counter threats to the state[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | The aliens-affairs case management system holds data on non-visa immigration matters[^s30] | Each authority is controller for data it stores; the Finnish Immigration Service is controller for international-protection registration data[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Benefits & pensions (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | The registration authority keeps a public diary and document files in its information system[^s29] | The Trade Register Act names the Finnish Patent and Registration Office as registrar[^s29][^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | Finnish Customs receives beneficial-owner data from the PRH Trade Register[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Border and visa systems (tier 1) | The national visa information system stores short- and long-term visa processing data[^s28] | *Disputed: sources disagree. Oikeusministeriö / Finlex (Ministry of Justice) — Laki henkilötietojen käsittelystä Rajavartiolaitoksessa…, 2019 gives the value this report printed; Poliisihallitus — Tietosuojaseloste; Schengenin tietojärjestelmän…, 2023-05-11 gives “Poliisihallitus (National Police Board)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Firearms register (tier 1) | Asetietojärjestelmä (firearms information system)[^s22] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | The registration authority keeps a public diary and document files in its information system[^s31] | The Trade Register Act names the Finnish Patent and Registration Office as registrar[^s31][^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | Finnish Customs receives beneficial-owner data from the PRH Trade Register[^s33] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Traficom keeps the transport register electronically[^s34] | Liikenne- ja viestintävirasto Traficom[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Border and visa systems (tier 1) | The national visa information system stores short- and long-term visa processing data[^s30] | *Disputed: sources disagree. Oikeusministeriö / Finlex (Ministry of Justice) — Laki henkilötietojen käsittelystä Rajavartiolaitoksessa…, 2019 gives the value this report printed; Poliisihallitus — Tietosuojaseloste; Schengenin tietojärjestelmän…, 2023-05-11 gives “Poliisihallitus (National Police Board)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Transfers between firearms dealers must be notified electronically to the police firearms information system[^s36][^s23] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Government payroll and personnel (tier 1) | The Government Shared Services Centre for Finance and HR holds data on central-government agencies' financial and HR administration[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Government payroll and personnel (tier 1) | The Government Shared Services Centre for Finance and HR holds data on central-government agencies' financial and HR administration[^s37] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Election management and results (tier 1) | The Ministry of Justice produces printouts from the national candidate register[^s38] | Polling committees use the voting register and other Ministry of Justice information systems[^s28][^s38] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Central bank systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Emergency calls and public-safety radio (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Crisis management and civil protection (tier 1) | Emergency warnings are distributed via radio and the Emergency Response Centre Agency's mobile application[^s39] | Government Rules of Procedure assign the Government's common situational picture and coordination of disruption management[^s40] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Education (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
+| High | Education (tier 1) | EDUFI is controller of the learner-number register; its data are kept permanently[^s41] | *Disputed: sources disagree. Oikeusministeriö / Finlex (Ministry of Justice) — Laki valtakunnallisista opinto-, koulutus- ja…, 2017 gives the value this report printed; Finlex / oikeusministeriö — Laki valtakunnallisista opinto- ja tutkintorekistereistä… gives “Opetushallitus (Finnish National Agency for Education)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | National archives (digital) (tier 3) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Statistical microdata (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| Standard | Geospatial base data (tier 3) | Building data are recorded in the Population Information System[^s20] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Standard | Geospatial base data (tier 3) | Building data are recorded in the Population Information System[^s20] | The National Land Survey is responsible for the national spatial-data discovery service[^s42] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 
 ## 4. Foreign-dependency exposure
 
-Of the 16 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
+Of the 21 verified holdings, how many sources state where the infrastructure is operated. A holding counts as dependent only when a cited document says so; silence is counted as not stated, never as national.
 
 | Infrastructure | Holdings |
 |---|---:|
@@ -105,7 +105,7 @@ Of the 16 verified holdings, how many sources state where the infrastructure is 
 | EU provider | 0 |
 | Mixed | 0 |
 | Non-EU provider | 0 |
-| Not stated in sources | 16 |
+| Not stated in sources | 21 |
 
 ## 5. Legal and institutional posture
 
@@ -136,19 +136,14 @@ Tier 0 and 1 holdings for Finland without a verified source yet. Corrections and
 - Benefits & pensions (tier 1)
 - Statutory health insurance (tier 1)
 - Land & property registry (tier 1)
-- Vehicle & licensing (tier 1)
 - Judicial & criminal justice (tier 1)
 - Official gazette and legislation (tier 1)
 - Treasury and state accounts (tier 1)
-- Election management and results (tier 1)
 - Central bank systems (tier 1)
 - Defence command and logistics (tier 1)
-- Intelligence services (tier 1)
 - Emergency calls and public-safety radio (tier 1)
-- Crisis management and civil protection (tier 1)
 - Electricity grid control (tier 1)
 - Water management control (tier 1)
-- Education (tier 1)
 
 ## Appendix: methodology
 
@@ -158,7 +153,7 @@ Tier 0 and 1 holdings for Finland without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1408 facts are printed, 4312 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
 
 ### How sources were found
 
@@ -166,10 +161,10 @@ Research agents, one per member state, looked for each critical holding and each
 
 | Quote check of the first research runs | Claims |
 |---|---:|
-| exact | 2138 |
-| loose | 20 |
-| not_found | 107 |
-| fetch_failed | 251 |
+| exact | 2192 |
+| loose | 21 |
+| not_found | 75 |
+| fetch_failed | 228 |
 
 A vetting run then re-examined every printed fact, and after it the gaps. It looked for a better source, for newer information and for any source that disagrees. Each of its findings was judged by a blind reviewer, shown the quote and URL but never the proposed value. Runs: wf_1c6b8bb6-450. Reviewer model: claude-opus-5-5, the same model as the researcher.
 
@@ -177,15 +172,15 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 |---|---:|
 | below_T2 | 6 |
 | corrected_withheld | 6 |
-| corroborated | 264 |
-| disputed | 10 |
-| filled_gap | 377 |
-| holding_not_established | 41 |
+| corroborated | 275 |
+| disputed | 11 |
+| filled_gap | 367 |
+| holding_not_established | 38 |
 | no_better_found | 486 |
 | not_reached | 201 |
-| not_verified | 177 |
+| not_verified | 173 |
 | review_disagreed | 177 |
-| same_source | 9 |
+| same_source | 14 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -215,8 +210,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 634 |
-| T2 competent public body or audit office | 644 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
+| T2 competent public body or audit office | 643 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -228,7 +223,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 109 |
-| Standard | 1299 |
+| Standard | 1315 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -271,7 +266,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1408 of 1408 printed facts pass the fact check.
+In this build, 1424 of 1424 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -313,7 +308,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check.
+In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -337,6 +332,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
 | wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 |
@@ -347,7 +343,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Finland
 
-33 of 33 printed facts about Finland pass.
+43 of 43 printed facts about Finland pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -365,25 +361,35 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | param:FI:land_km2 | param:FI:land_km2 | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:FI:civil_registry:register | Civil registry core: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:FI:civil_registry:operator | Civil registry core: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:FI:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:FI:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| record:FI:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 | record:FI:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:FI:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:FI:authentication_audit_log:count | Authentication audit log: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:FI:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 | record:FI:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:FI:electoral_roll:operator | Electoral roll entry: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:FI:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 | record:FI:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:intelligence:register | Intelligence services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 | record:FI:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:FI:residence_permits:operator | Residence and migration status: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:FI:business_registry:register | Business registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:FI:business_registry:operator | Business registry: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:FI:beneficial_ownership:register | Beneficial ownership register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:vehicle_licensing:register | Vehicle & licensing: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| record:FI:vehicle_licensing:operator | Vehicle & licensing: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 | record:FI:border_control:register | Border and visa systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:FI:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 | record:FI:government_payroll:register | Government payroll and personnel: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:electoral_management:register | Election management and results: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| record:FI:electoral_management:operator | Election management and results: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| record:FI:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| record:FI:crisis_management:operator | Crisis management and civil protection: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| record:FI:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 | record:FI:geospatial:register | Geospatial base data: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:FI:geospatial:operator | Geospatial base data: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 
 ### Withheld after the fact check: Finland
 
@@ -412,18 +418,28 @@ None.
 [^s19]: Digital and Population Data Services Agency (DVV) — Population Information System. Population Information System. <https://dvv.fi/en/population-information-system> ([archived](https://web.archive.org/web/20260512125439/https://dvv.fi/en/population-information-system))
 [^s20]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki väestötietojärjestelmästä ja Digi- ja…, 2009. Laki väestötietojärjestelmästä ja Digi- ja väestötietoviraston varmennepalveluista (661/2009). <https://www.finlex.fi/fi/lainsaadanto/2009/661> ([archived](https://web.archive.org/web/20260522204328/https://www.finlex.fi/fi/lainsaadanto/2009/661))
 [^s21]: Digi- ja väestötietovirasto — Väestötietojärjestelmän tietosuojaseloste. Väestötietojärjestelmän tietosuojaseloste. <https://dvv.fi/vtj-tietosuoja> ([archived](https://web.archive.org/web/20260831170900/https://dvv.fi/vtj-tietosuoja))
-[^s22]: Poliisihallitus — Poliisin asiakirjajulkisuuskuvaus, 2021-06-30. Poliisin asiakirjajulkisuuskuvaus. <https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861>
-[^s23]: Poliisi — Sormenjäljet matkustusoikeudelliselle henkilökortille. Sormenjäljet matkustusoikeudelliselle henkilökortille. <https://poliisi.fi/neuvontapalvelu/-/asset_publisher/ZtAEeHB39Lxr/content/sormenjaljet-matkustusoikeudelliselle-henkilokortille>
-[^s24]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki hallinnon yhteisistä sähköisen asioinnin…, 2016. Laki hallinnon yhteisistä sähköisen asioinnin tukipalveluista (571/2016). <https://www.finlex.fi/fi/lainsaadanto/2016/571> ([archived](https://web.archive.org/web/20260919081102/https://www.finlex.fi/fi/lainsaadanto/2016/571))
-[^s25]: Digi- ja väestötietovirasto (DVV), via STT Info — Digi- ja väestötietovirasto valitsi vahvan tunnistamisen…, 2024-01-31. Digi- ja väestötietovirasto valitsi vahvan tunnistamisen välityspalveluntarjoajaksi Telia Finland Oyj:n. <https://www.sttinfo.fi/tiedote/70085553/digi-ja-vaestotietovirasto-valitsi-vahvan-tunnistamisen-valityspalveluntarjoajaksi-telia-finland-oyjn?publisherId=3777&lang=fi> ([archived](https://web.archive.org/web/20240202092418/https://www.sttinfo.fi/tiedote/70085553/digi-ja-vaestotietovirasto-valitsi-vahvan-tunnistamisen-valityspalveluntarjoajaksi-telia-finland-oyjn?publisherId=3777&lang=fi))
-[^s26]: Digi- ja väestötietovirasto — Äänioikeusrekisterin tietosuojaseloste. Äänioikeusrekisterin tietosuojaseloste. <https://dvv.fi/aanioikeusrekisterin-tietosuoja> ([archived](https://web.archive.org/web/20260529172204/https://dvv.fi/aanioikeusrekisterin-tietosuoja))
-[^s27]: Oikeusrekisterikeskus — Uusi vaalitietojärjestelmä testissä: käyttäjien…, 2026-01-19. Uusi vaalitietojärjestelmä testissä: käyttäjien näkemykset tärkeitä vaalitietojärjestelmän kehityksessä. <https://www.oikeusrekisterikeskus.fi/ajankohtaista/tiedote-ja-uutisarkisto/uusi-vaalitietojarjestelma-testissa-kayttajien-nakemykset-tarkeita-vaalitietojarjestelman-kehityksessa/> ([archived](https://web.archive.org/web/20260617125057/https://www.oikeusrekisterikeskus.fi/ajankohtaista/tiedote-ja-uutisarkisto/uusi-vaalitietojarjestelma-testissa-kayttajien-nakemykset-tarkeita-vaalitietojarjestelman-kehityksessa/))
-[^s28]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki henkilötietojen käsittelystä…, 2020. Laki henkilötietojen käsittelystä maahanmuuttohallinnossa (615/2020). <https://www.finlex.fi/fi/lainsaadanto/2020/615> ([archived](https://web.archive.org/web/20260421162858/https://www.finlex.fi/fi/lainsaadanto/2020/615))
-[^s29]: Oikeusministeriö / Finlex (Ministry of Justice) — Kaupparekisterilaki (564/2023), 2023. Kaupparekisterilaki (564/2023). <https://www.finlex.fi/fi/lainsaadanto/2023/564> ([archived](https://web.archive.org/web/20251010152906/https://www.finlex.fi/fi/lainsaadanto/2023/564))
-[^s30]: Finlex / oikeusministeriö — Kaupparekisterilaki 564/2023 (ajantasainen). Kaupparekisterilaki 564/2023 (ajantasainen). <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2023/564/fin@>
-[^s31]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki henkilötietojen käsittelystä Tullissa (650/2019), 2019. Laki henkilötietojen käsittelystä Tullissa (650/2019). <https://www.finlex.fi/fi/lainsaadanto/2019/650> ([archived](https://web.archive.org/web/20260205004618/https://www.finlex.fi/fi/lainsaadanto/2019/650))
-[^s32]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki Valtiokonttorista (305/1991), 1991. Laki Valtiokonttorista (305/1991). <https://www.finlex.fi/fi/lainsaadanto/1991/305> ([archived](https://web.archive.org/web/20260411111736/https://www.finlex.fi/fi/lainsaadanto/1991/305))
+[^s22]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki henkilötietojen käsittelystä poliisitoimessa (616/2019), 2019. Laki henkilötietojen käsittelystä poliisitoimessa (616/2019). <https://www.finlex.fi/fi/lainsaadanto/2019/616> ([archived](https://web.archive.org/web/20260313135303/https://www.finlex.fi/fi/lainsaadanto/2019/616))
+[^s23]: Poliisihallitus — Poliisin asiakirjajulkisuuskuvaus, 2021-06-30. Poliisin asiakirjajulkisuuskuvaus. <https://poliisi.fi/documents/25235045/26823782/Poliisin+asiakirjajulkisuuskuvaus.pdf/0bc008c3-7106-fa8b-89a1-fb01b8088e8d?t=1630301434861>
+[^s24]: Oikeusministeriö / Finlex (Ministry of Justice) — Passilaki (671/2006), 2006. Passilaki (671/2006). <https://www.finlex.fi/fi/lainsaadanto/2006/671>
+[^s25]: Poliisi — Sormenjäljet matkustusoikeudelliselle henkilökortille. Sormenjäljet matkustusoikeudelliselle henkilökortille. <https://poliisi.fi/neuvontapalvelu/-/asset_publisher/ZtAEeHB39Lxr/content/sormenjaljet-matkustusoikeudelliselle-henkilokortille>
+[^s26]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki hallinnon yhteisistä sähköisen asioinnin…, 2016. Laki hallinnon yhteisistä sähköisen asioinnin tukipalveluista (571/2016). <https://www.finlex.fi/fi/lainsaadanto/2016/571> ([archived](https://web.archive.org/web/20260919081102/https://www.finlex.fi/fi/lainsaadanto/2016/571))
+[^s27]: Digi- ja väestötietovirasto (DVV), via STT Info — Digi- ja väestötietovirasto valitsi vahvan tunnistamisen…, 2024-01-31. Digi- ja väestötietovirasto valitsi vahvan tunnistamisen välityspalveluntarjoajaksi Telia Finland Oyj:n. <https://www.sttinfo.fi/tiedote/70085553/digi-ja-vaestotietovirasto-valitsi-vahvan-tunnistamisen-valityspalveluntarjoajaksi-telia-finland-oyjn?publisherId=3777&lang=fi> ([archived](https://web.archive.org/web/20240202092418/https://www.sttinfo.fi/tiedote/70085553/digi-ja-vaestotietovirasto-valitsi-vahvan-tunnistamisen-valityspalveluntarjoajaksi-telia-finland-oyjn?publisherId=3777&lang=fi))
+[^s28]: Digi- ja väestötietovirasto — Äänioikeusrekisterin tietosuojaseloste. Äänioikeusrekisterin tietosuojaseloste. <https://dvv.fi/aanioikeusrekisterin-tietosuoja> ([archived](https://web.archive.org/web/20260529172204/https://dvv.fi/aanioikeusrekisterin-tietosuoja))
+[^s29]: Oikeusrekisterikeskus — Uusi vaalitietojärjestelmä testissä: käyttäjien…, 2026-01-19. Uusi vaalitietojärjestelmä testissä: käyttäjien näkemykset tärkeitä vaalitietojärjestelmän kehityksessä. <https://www.oikeusrekisterikeskus.fi/ajankohtaista/tiedote-ja-uutisarkisto/uusi-vaalitietojarjestelma-testissa-kayttajien-nakemykset-tarkeita-vaalitietojarjestelman-kehityksessa/> ([archived](https://web.archive.org/web/20260617125057/https://www.oikeusrekisterikeskus.fi/ajankohtaista/tiedote-ja-uutisarkisto/uusi-vaalitietojarjestelma-testissa-kayttajien-nakemykset-tarkeita-vaalitietojarjestelman-kehityksessa/))
+[^s30]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki henkilötietojen käsittelystä…, 2020. Laki henkilötietojen käsittelystä maahanmuuttohallinnossa (615/2020). <https://www.finlex.fi/fi/lainsaadanto/2020/615> ([archived](https://web.archive.org/web/20260421162858/https://www.finlex.fi/fi/lainsaadanto/2020/615))
+[^s31]: Oikeusministeriö / Finlex (Ministry of Justice) — Kaupparekisterilaki (564/2023), 2023. Kaupparekisterilaki (564/2023). <https://www.finlex.fi/fi/lainsaadanto/2023/564> ([archived](https://web.archive.org/web/20251010152906/https://www.finlex.fi/fi/lainsaadanto/2023/564))
+[^s32]: Finlex / oikeusministeriö — Kaupparekisterilaki 564/2023 (ajantasainen). Kaupparekisterilaki 564/2023 (ajantasainen). <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2023/564/fin@>
+[^s33]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki henkilötietojen käsittelystä Tullissa (650/2019), 2019. Laki henkilötietojen käsittelystä Tullissa (650/2019). <https://www.finlex.fi/fi/lainsaadanto/2019/650> ([archived](https://web.archive.org/web/20260205004618/https://www.finlex.fi/fi/lainsaadanto/2019/650))
+[^s34]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki liikenteen palveluista (320/2017), 2017. Laki liikenteen palveluista (320/2017). <https://www.finlex.fi/fi/lainsaadanto/2017/320> ([archived](https://web.archive.org/web/20260823190508/https://www.finlex.fi/fi/lainsaadanto/2017/320))
+[^s35]: Finlex / oikeusministeriö — Laki liikenteen palveluista 320/2017 (ajantasainen), 2025. Laki liikenteen palveluista 320/2017 (ajantasainen). <https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/2017/320/fin@20251001>
+[^s36]: Oikeusministeriö / Finlex (Ministry of Justice) — Ampuma-aselaki (1/1998), 1998. Ampuma-aselaki (1/1998). <https://www.finlex.fi/fi/lainsaadanto/1998/1> ([archived](https://web.archive.org/web/20260929151524/https://www.finlex.fi/fi/lainsaadanto/1998/1))
+[^s37]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki Valtiokonttorista (305/1991), 1991. Laki Valtiokonttorista (305/1991). <https://www.finlex.fi/fi/lainsaadanto/1991/305> ([archived](https://web.archive.org/web/20260411111736/https://www.finlex.fi/fi/lainsaadanto/1991/305))
+[^s38]: Oikeusministeriö / Finlex (Ministry of Justice) — Vaalilaki (714/1998), 1998. Vaalilaki (714/1998). <https://www.finlex.fi/fi/lainsaadanto/1998/714> ([archived](https://web.archive.org/web/20261003184141/https://www.finlex.fi/fi/lainsaadanto/1998/714))
+[^s39]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki vaaratiedotteesta (466/2012), 2012. Laki vaaratiedotteesta (466/2012). <https://www.finlex.fi/fi/lainsaadanto/2012/466> ([archived](https://web.archive.org/web/20260606193431/https://www.finlex.fi/fi/lainsaadanto/2012/466))
+[^s40]: Oikeusministeriö / Finlex (Ministry of Justice) — Valtioneuvoston ohjesääntö (262/2003), 2003. Valtioneuvoston ohjesääntö (262/2003). <https://www.finlex.fi/fi/lainsaadanto/2003/262>
+[^s41]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki valtakunnallisista opinto-, koulutus- ja…, 2017. Laki valtakunnallisista opinto-, koulutus- ja tutkintorekistereistä (884/2017). <https://www.finlex.fi/fi/lainsaadanto/2017/884> ([archived](https://web.archive.org/web/20260521134011/https://www.finlex.fi/fi/lainsaadanto/2017/884))
+[^s42]: Oikeusministeriö / Finlex (Ministry of Justice) — Laki paikkatietoinfrastruktuurista (421/2009), 2009. Laki paikkatietoinfrastruktuurista (421/2009). <https://www.finlex.fi/fi/lainsaadanto/2009/421>
 
-**Evidence grades:** 2 Strong, 31 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 2 Strong, 41 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

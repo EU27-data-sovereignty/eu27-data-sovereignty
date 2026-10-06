@@ -30,7 +30,7 @@ WAVE_KIND = {**KIND, "hosting": "where its data is hosted and who runs that infr
 
 # A wave: research only these fields of the holdings already known, no re-vetting of printed facts. Each
 # gap is one docs/gaps.md calls not filled, so a wave is the gap list turned into work.
-WAVES = {"hosting": ("hosting", "foreign_dependency")}
+WAVES = {"hosting": ("hosting", "foreign_dependency"), "unverified": ("register",)}
 
 
 def tables() -> tuple[dict, dict]:
@@ -57,12 +57,18 @@ def wave(name: str) -> list[dict]:
     b = json.loads((ROOT / "web" / "public" / "data" / "eu27.json").read_text(encoding="utf-8"))
     field_of = {kind: field for field, kind in gaps.FIELDS.items()}
     want = {field_of[k] for k in WAVES[name]}
-    todo = [c for c in gaps.cells() if c["kind"] == "holding" and c["field"] in want and c["state"] != "filled"]
+    # The "unverified" wave takes only registers a run already found but could not verify: the cheapest gaps.
+    states = {"claimed_unverified"} if name == "unverified" else {"claimed_unverified", "not_searched",
+                                                                    "searched_once", "dry"}
+    todo = [c for c in gaps.cells() if c["kind"] == "holding" and c["field"] in want and c["state"] in states]
+    earlier = earlier_attempts() if name == "unverified" else {}
     import national_data  # noqa: PLC0415
     rows = {(r["iso"], r["record_class"]): r for r in national_data.read_rows()}
 
     def holding(iso: str, cls: str) -> str:
         """The class, and the register the report already names for it, so the search starts from the name."""
+        if (iso, cls) not in rows:
+            return f"{classes[cls]['label']} ({classes[cls]['contains']})"
         r = rows[(iso, cls)]
         return (f"{classes[cls]['label']} (the register: {r['register']}"
                 + (f"; operated by {r['holder']}" if r["holder"] else "") + ")")
@@ -72,7 +78,36 @@ def wave(name: str) -> list[dict]:
         mine = sorted((c for c in todo if c["iso"] == iso), key=lambda c: (int(c["tier"]), c["item"], c["field"]))
         out.append({"iso": iso, "name": doc["name"], "facts": [], "gaps": [
             {"claim": c["claim"], "tier": int(c["tier"]),
-             "what": f"{holding(iso, c['item'])}: {WAVE_KIND[gaps.FIELDS[c['field']]]}"} for c in mine]})
+             "what": f"{holding(iso, c['item'])}: {WAVE_KIND[gaps.FIELDS[c['field']]]}",
+             **({"earlier": earlier[c["claim"]]} if c["claim"] in earlier else {})} for c in mine]})
+    return out
+
+
+def earlier_attempts() -> dict[str, list[dict]]:
+    """Per register claim, what earlier runs proposed and why it was not admitted. The researcher reads this
+    from the input file; it is never copied into a finding's question, so the blind reviewer never sees it."""
+    import research  # noqa: PLC0415
+    import vetting  # noqa: PLC0415
+    reason = {"fetch_failed": "the page could not be fetched (robots.txt, refusal or error)",
+              "not_found": "the quote was not on the fetched page"}
+    out: dict[str, list[dict]] = {}
+    rv = {(r["iso"], r["class_id"], r["url"]): r for r in research.load_verification()}
+    for iso, doc in research.staged(None).items():
+        for cls, c in research.claims(doc):
+            if c["field"] != "holding_name":
+                continue
+            v = rv.get((iso, cls, research.clean_url(c["url"])), {})
+            out.setdefault(f"record:{iso}:{cls}:register", []).append(
+                {"value": c.get("value", ""), "url": c["url"],
+                 "why_not": reason.get(v.get("match", ""), v.get("match", "not verified"))})
+    vv = {(r["claim"], r["url"]): r for r in vetting.load_verification().values()}
+    for iso, doc in vetting.staged().items():
+        for f in doc["findings"]:
+            if f["claim"].endswith(":register"):
+                v = vv.get((f["claim"], f["url"]), {})
+                why = ("the blind reviewer did not reach the same value" if not vetting.agree(f) else
+                       reason.get(v.get("match", ""), v.get("match", "not verified")))
+                out.setdefault(f["claim"], []).append({"value": f["value"], "url": f["url"], "why_not": why})
     return out
 
 

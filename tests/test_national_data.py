@@ -19,7 +19,7 @@ import provenance  # noqa: E402
 # Raise as holdings are admitted. 1053 = 39 holding classes x 27 member states (#73).
 # 419 -> 683 on 2026-09-30: 56 holdings recovered by the charset fix, the rest filled by the first
 # vetting run (#83). Every one passed the quote check and, for vetting, a blind review.
-NATIONAL_DATA_FLOOR = 684
+NATIONAL_DATA_FLOOR = 690
 
 
 class Register(unittest.TestCase):

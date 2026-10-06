@@ -25,10 +25,10 @@ Groups describe what the sources show, not how sovereign a state is. A Low-confi
 | Jurisdiction requirement | *Not yet sourced* |
 | Classification in law | Yes[^s1][^s2] |
 | Sovereign cloud certification | *Not yet sourced* |
-| State-controlled trust anchor | Yes[^s3][^s4] |
-| State-controlled national eID | Yes[^s5][^s6] |
-| Government data centres | Yes[^s7] |
-| Government cloud in operation | Yes[^s8] |
+| State-controlled trust anchor | Yes[^s3][^s4][^s5] |
+| State-controlled national eID | Yes[^s6][^s7][^s8] |
+| Government data centres | Yes[^s9][^s10][^s11] |
+| Government cloud in operation | Yes[^s12][^s9][^s11] |
 
 What could move this placement:
 
@@ -41,54 +41,54 @@ Belgium described on its own measured characteristics. Each figure is the publis
 
 | Indicator | Value |
 |---|---:|
-| Population | 11.955 million[^s9] |
-| GDP, current prices | 642.0 EUR bn[^s10] |
-| Public administration employment (NACE O) | 459.5 thousand[^s11] |
-| Non-household electricity price | 186.6 EUR/MWh[^s12] |
-| Renewables share of electricity | 34.3 %[^s13] |
-| Land area | 30 452 km²[^s14] |
+| Population | 11.955 million[^s13] |
+| GDP, current prices | 642.0 EUR bn[^s14] |
+| Public administration employment (NACE O) | 459.5 thousand[^s15] |
+| Non-household electricity price | 186.6 EUR/MWh[^s16] |
+| Renewables share of electricity | 34.3 %[^s17] |
+| Land area | 30 452 km²[^s18] |
 
 ## 3. Critical data holdings, by priority
 
-The holdings Belgium cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 20 of 39 holding classes have a verified source; 2 have a sourced record count or data size.
+The holdings Belgium cannot let depend on infrastructure a foreign state can compel or switch off, ranked by a declared rule. 20 of 39 holding classes have a verified source; 3 have a sourced record count or data size.
 
 > Priority = consequence of loss (tier 0: 3, tier 1: 2, tier 2: 1, tier 3: 0) + difficulty of rebuilding (low recoverability: 2, medium: 1, high: 0) + known exposure to non-EU providers (non-EU or mixed: 2, EU provider or not yet known: 1, national: 0). Critical is 6 or more, High is 4 or 5.
 
 | Priority | Holding | Register or system | Operator | Hosting (as sourced) | Infrastructure dependency | Records / size |
 |---|---|---|---|---|---|---|
-| Critical | Civil registry core (tier 0) | Rijksregister van de natuurlijke personen (National Register of Natural Persons), the central database of identification data of all registered persons[^s15][^s6] | The National Register is managed by the Directorate-General Identity and Civil Affairs of the FPS Interior[^s6][^s16] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Facial biometric (tier 0) | ID-card photos are stored and visible in the National Register[^s17][^s18] | *Not yet sourced* | Photos are kept on a secure server (no provider or location named)[^s18] | *Not stated in sources* | *Not yet measured* |
-| Critical | Fingerprint biometric (tier 0) | No central register[^s17][^s5] | — | — | — | — |
-| Critical | Breeder document scans (tier 0) | DABS: a central database holding all civil status deeds, replacing the municipal and consular registers[^s19][^s20] | DABS is governed by a DABS Management Committee responsible for its set-up and management[^s19][^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| Critical | Authentication audit log (tier 0) | FAS audit trail of authentication logs, kept for 10 years[^s21] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Document issuance history (tier 0) | Register van de Identiteitskaarten: a permanent inventory of the identity cards produced and issued in Belgium[^s22][^s6] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Digital identity credentials (tier 0) | Federal Authentication Service (FAS)[^s21] | DG Simplification and Digitization (FPS Policy and Support, BOSA)[^s21] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Civil registry core (tier 0) | Rijksregister van de natuurlijke personen (National Register of Natural Persons), the central database of identification data of all registered persons[^s19][^s8] | The National Register is managed by the Directorate-General Identity and Civil Affairs of the FPS Interior[^s8][^s20] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Facial biometric (tier 0) | ID-card photos are stored and visible in the National Register[^s21][^s22] | *Not yet sourced* | Photos are kept on a secure server (no provider or location named)[^s22] | *Not stated in sources* | *Not yet measured* |
+| Critical | Fingerprint biometric (tier 0) | No central register[^s21][^s7] | — | — | — | — |
+| Critical | Breeder document scans (tier 0) | DABS: a central database holding all civil status deeds, replacing the municipal and consular registers[^s23][^s24] | DABS is governed by a DABS Management Committee responsible for its set-up and management[^s23][^s24] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| Critical | Authentication audit log (tier 0) | FAS authentication logs (date, time, ID number, IP address, browser, OS) are kept in an audit trail for 10 years[^s25] | Controller: FPS BOSA, DG Simplification and Digitization[^s25] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Document issuance history (tier 0) | Register van de Identiteitskaarten: a permanent inventory of the identity cards produced and issued in Belgium[^s26][^s8] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Digital identity credentials (tier 0) | Federal Authentication Service (FAS / CSAM 'My digital keys'): citizens authenticate with digital keys such as the eID or itsme[^s25] | FPS Policy and Support (BOSA), DG Simplification and Digitization provides the FAS[^s25] | BOSA uses subcontractors as data processors (not named)[^s25] | *Not stated in sources* | *Not yet sourced* |
 | High | Electoral roll entry (tier 0) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | State PKI and qualified trust services (tier 0) | Belgium Root CA (BRCA), the top of the government CA hierarchy[^s3][^s4] | The Belgian authorities are the certification service provider responsible for the Belgium Root CAs[^s3][^s4] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Land & property registry (tier 1) | kadastrale documentatie of the AAPD (cadastral documentation of the General Administration of Patrimonial Documentation)[^s23] | Algemene Administratie van de Patrimoniumdocumentatie (AAPD) (General Administration of Patrimonial Documentation)[^s23] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Judicial & criminal justice (tier 1) | Centraal Strafregister (Central Criminal Register)[^s24] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Land & property registry (tier 1) | kadastrale documentatie of the AAPD (cadastral documentation of the General Administration of Patrimonial Documentation)[^s27] | Algemene Administratie van de Patrimoniumdocumentatie (AAPD) (General Administration of Patrimonial Documentation)[^s27] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Judicial & criminal justice (tier 1) | Centraal Strafregister (Central Criminal Register)[^s28] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Police information systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Defence command and logistics (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Intelligence services (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Residence and migration status (tier 1) | Evibel is the internal database of the immigration service, to be replaced by eMigration[^s25] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Residence and migration status (tier 1) | Evibel is the internal database of the immigration service, to be replaced by eMigration[^s29] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Tax (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Customs declarations (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Benefits & pensions (tier 1) | Pensioenkadaster (Pension Register)[^s26] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Benefits & pensions (tier 1) | Pensioenkadaster (Pension Register)[^s30] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Statutory health insurance (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Business registry (tier 1) | Kruispuntbank van Ondernemingen (Crossroads Bank for Enterprises)[^s27] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Beneficial ownership register (tier 1) | UBO-register (register of ultimate beneficial owners)[^s28] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Vehicle & licensing (tier 1) | Kruispuntbank van de Voertuigen (Crossroads Bank for Vehicles)[^s29] | Directie voor de Inschrijving van Voertuigen van de Federale Overheidsdienst Mobiliteit en Vervoer (DIV, Vehicle Registration Directorate of FPS Mobility and Transport)[^s29] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Business registry (tier 1) | Kruispuntbank van Ondernemingen (Crossroads Bank for Enterprises)[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Beneficial ownership register (tier 1) | UBO-register (register of ultimate beneficial owners)[^s32] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Vehicle & licensing (tier 1) | Kruispuntbank van de Voertuigen (Crossroads Bank for Vehicles)[^s33] | Directie voor de Inschrijving van Voertuigen van de Federale Overheidsdienst Mobiliteit en Vervoer (DIV, Vehicle Registration Directorate of FPS Mobility and Transport)[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Border and visa systems (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Firearms register (tier 1) | Centraal Wapenregister (Central Weapons Register)[^s30] | een dienst van de Federale Politie (a service of the Federal Police)[^s30] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Firearms register (tier 1) | Centraal Wapenregister (Central Weapons Register)[^s34] | een dienst van de Federale Politie (a service of the Federal Police)[^s34] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Treasury and state accounts (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Election management and results (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Central bank systems (tier 1) | NBB Securities Settlement System (NBB-SSS)[^s31] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Emergency calls and public-safety radio (tier 1) | ASTRID-radionetwerk (ASTRID TETRA radio network)[^s32] | ASTRID (naamloze vennootschap van publiek recht, public-law company)[^s33] | *Not yet sourced* | *Not stated in sources* | more than 2 million radio contacts per day[^s32] |
-| High | Crisis management and civil protection (tier 1) | BE-Alert (the government's alerting system)[^s34] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | more than 1 million registered addresses[^s34] |
+| High | Central bank systems (tier 1) | NBB Securities Settlement System (NBB-SSS)[^s35] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Emergency calls and public-safety radio (tier 1) | ASTRID-radionetwerk (ASTRID TETRA radio network)[^s36] | ASTRID (naamloze vennootschap van publiek recht, public-law company)[^s37] | *Not yet sourced* | *Not stated in sources* | more than 2 million radio contacts per day[^s36] |
+| High | Crisis management and civil protection (tier 1) | BE-Alert (the government's alerting system)[^s38] | *Not yet sourced* | *Not yet sourced* | *Not stated in sources* | more than 1 million registered addresses[^s38] |
 | High | Electricity grid control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Water management control (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
-| High | Education (tier 1) | LED, de Leer- en ErvaringsbewijzenDatabank (Learning and Experience Certificates Database)[^s35] | Agentschap voor Kwaliteitszorg in Onderwijs en Vorming (Agency for Quality Assurance in Education and Training)[^s35] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
+| High | Education (tier 1) | LED, de Leer- en ErvaringsbewijzenDatabank (Learning and Experience Certificates Database)[^s39] | Agentschap voor Kwaliteitszorg in Onderwijs en Vorming (Agency for Quality Assurance in Education and Training)[^s39] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Health records (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Official gazette and legislation (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | Standard | Public health surveillance (tier 2) | *Not yet verified* | *—* | *—* | *—* | *—* |
@@ -125,7 +125,7 @@ Of the 19 verified holdings, how many sources state where the infrastructure is 
 
 ## 6. Capacity
 
-> Not yet sized. Capacity for Belgium will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 2 of 39 holding classes have a sourced measurement so far.
+> Not yet sized. Capacity for Belgium will be derived from its own measured holdings (record counts and data sizes), not scaled from another country. 3 of 39 holding classes have a sourced measurement so far.
 
 ## 7. Research still open
 
@@ -154,7 +154,7 @@ Tier 0 and 1 holdings for Belgium without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1408 facts are printed, 4312 values are withheld as gaps, and 76 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1424 facts are printed, 4296 values are withheld as gaps, and 76 are withheld as disputed.
 
 ### How sources were found
 
@@ -162,10 +162,10 @@ Research agents, one per member state, looked for each critical holding and each
 
 | Quote check of the first research runs | Claims |
 |---|---:|
-| exact | 2138 |
-| loose | 20 |
-| not_found | 107 |
-| fetch_failed | 251 |
+| exact | 2192 |
+| loose | 21 |
+| not_found | 75 |
+| fetch_failed | 228 |
 
 A vetting run then re-examined every printed fact, and after it the gaps. It looked for a better source, for newer information and for any source that disagrees. Each of its findings was judged by a blind reviewer, shown the quote and URL but never the proposed value. Runs: wf_1c6b8bb6-450. Reviewer model: claude-opus-5-5, the same model as the researcher.
 
@@ -173,15 +173,15 @@ A vetting run then re-examined every printed fact, and after it the gaps. It loo
 |---|---:|
 | below_T2 | 6 |
 | corrected_withheld | 6 |
-| corroborated | 264 |
-| disputed | 10 |
-| filled_gap | 377 |
-| holding_not_established | 41 |
+| corroborated | 275 |
+| disputed | 11 |
+| filled_gap | 367 |
+| holding_not_established | 38 |
 | no_better_found | 486 |
 | not_reached | 201 |
-| not_verified | 177 |
+| not_verified | 173 |
 | review_disagreed | 177 |
-| same_source | 9 |
+| same_source | 14 |
 | superseded_higher_tier | 24 |
 | superseded_later_same_authority | 3 |
 
@@ -211,8 +211,8 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 634 |
-| T2 competent public body or audit office | 644 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 651 |
+| T2 competent public body or audit office | 643 |
 | T3 other institution or company | 8 |
 | T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
@@ -224,7 +224,7 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 |---|---:|
 | Verified | 0 |
 | Strong | 109 |
-| Standard | 1299 |
+| Standard | 1315 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -267,7 +267,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1408 of 1408 printed facts pass the fact check.
+In this build, 1424 of 1424 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -309,7 +309,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1408 of 1408 printed facts pass, and 56 facts are withheld after the check.
+In this build, 1424 of 1424 printed facts pass, and 55 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -333,6 +333,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_c38b3e2e-319 | 2026-10-06 | 32 | claude-fable-5-1: 32 | supported: 32 |
 | wf_f7d14e4d-412 | 2026-10-06 | 14 | claude-fable-5-1: 14 | supported: 14 |
 | wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
 | wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 |
@@ -343,15 +344,15 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Belgium
 
-43 of 43 printed facts about Belgium pass.
+45 of 45 printed facts about Belgium pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
 | indicator:BE:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| indicator:BE:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| indicator:BE:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| indicator:BE:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| indicator:BE:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| indicator:BE:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| indicator:BE:K2 | indicator K2: Is the national electronic identity scheme operated by the state or a state-controlled body? | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| indicator:BE:C1 | indicator C1: Does the state operate its own government data centres that are in operation today? | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| indicator:BE:C2 | indicator C2: Is a national sovereign or government cloud platform in operation (not announced)? | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 | param:BE:population_m | param:BE:population_m | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_5fd3e22d-b86 |
 | param:BE:gdp_eur_bn | param:BE:gdp_eur_bn | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | param:BE:gov_employment_k | param:BE:gov_employment_k | program:fetch_eurostat.py | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -365,10 +366,12 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:BE:fingerprint_biometric:register | Fingerprint biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BE:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BE:breeder_documents:operator | Breeder document scans: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:BE:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| record:BE:authentication_audit_log:operator | Authentication audit log: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 | record:BE:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:BE:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:BE:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
+| record:BE:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| record:BE:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
+| record:BE:digital_identity_credentials:hosting | Digital identity credentials: hosting | unrecorded | claude-fable-5-1 | supported | wf_c38b3e2e-319 |
 | record:BE:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BE:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:BE:land_property:register | Land & property registry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -401,38 +404,42 @@ None.
 [^s2]: Agence fédérale de contrôle nucléaire (FANC), Jurion regulatory database — Loi du 11 décembre 1998 relative à la classification,…. Loi du 11 décembre 1998 relative à la classification, aux habilitations de sécurité, aux avis de sécurité et au service public réglementé; Chapitre II. <https://www.jurion.fanc.fgov.be/jurdb-consult/plainWettekstServlet?wettekstId=1384&lang=fr>
 [^s3]: eID Repository (Belgian State / certipost) — Belgian Certificate Policy & Practice Statement for eID…, 2024-09-03. Belgian Certificate Policy & Practice Statement for eID PKI infrastructure, Citizen CA, v5.0. <https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA_BRCA34.pdf> ([archived](https://web.archive.org/web/20240228070218/http://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA_BRCA34.pdf))
 [^s4]: Belgian eID PKI repository — Citizen CA Certification Practice Statement (v1.4). Citizen CA Certification Practice Statement (v1.4). <https://repository.eid.belgium.be/downloads/citizen/en/CPS_CitizenCA.pdf>
-[^s5]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — eID | IBZ - FOD Binnenlandse Zaken. eID | IBZ - FOD Binnenlandse Zaken. <https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid> ([archived](https://web.archive.org/web/20260617223429/https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid))
-[^s6]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — Wie beheert het Rijksregister van de natuurlijke personen?. Wie beheert het Rijksregister van de natuurlijke personen?. <https://www.ibz.rrn.fgov.be/nl/faq/wat-is-het-rijksregister-van-de-natuurlijke-personen/wie-beheert-het-rijksregister-van-de>
-[^s7]: G-Cloud (Belgian federal government community cloud) — Housing – Datacenter-as-a-Service (G-Cloud). Housing – Datacenter-as-a-Service (G-Cloud). <https://www.gcloud.belgium.be/nl/service/detail/housing>
-[^s8]: G-Cloud (Belgian federal government community cloud) — G-Cloud, de community cloud van de overheid. G-Cloud, de community cloud van de overheid. <https://www.gcloud.belgium.be/nl> ([archived](https://web.archive.org/web/20260720192938/https://www.gcloud.belgium.be/nl))
-[^s9]: Eurostat tps00001, 2026-09-30. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
-[^s10]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
-[^s11]: Eurostat nama_10_a64_e, 2026-09-30. National accounts employment data by industry (up to NACE A*64). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_e/default/table>
-[^s12]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
-[^s13]: Eurostat nrg_ind_ren, 2026-09-30. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
-[^s14]: Eurostat reg_area3, 2026-09-30. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
-[^s15]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — Rijksregister | IBZ - FOD Binnenlandse Zaken. Rijksregister | IBZ - FOD Binnenlandse Zaken. <https://www.ibz.rrn.fgov.be/nl/burger/rijksregister-en-bevolking/rijksregister> ([archived](https://web.archive.org/web/20260911221802/https://www.ibz.rrn.fgov.be/nl/burger/rijksregister-en-bevolking/rijksregister))
-[^s16]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — Home | IBZ - FOD Binnenlandse Zaken. Home | IBZ - FOD Binnenlandse Zaken. <https://www.ibz.rrn.fgov.be/nl>
-[^s17]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — eID en GDPR, 2020-11-25. eID en GDPR. <https://www.ibz.rrn.fgov.be/sites/default/files/documents/nl/identiteitsdocumenten/eid/eID_en_GDPR.pdf>
-[^s18]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — eID en GDPR | IBZ - FOD Binnenlandse Zaken. eID en GDPR | IBZ - FOD Binnenlandse Zaken. <https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid/eid-en-gdpr>
-[^s19]: Rijksarchief in België — Het Rijksarchief is vertegenwoordigd in het…, 2023-06-14. Het Rijksarchief is vertegenwoordigd in het beheerscomité van de Databank voor Akten van de Burgerlijke Stand. <https://www.arch.be/index.php?l=nl&m=nieuws&r=alle-nieuwsberichten&a=2023-06-14-het-rijksarchief-is-vertegenwoordigd-in-het-beheerscomite-van-de-databank-voor-akten-van-de-burgerlijke-stand> ([archived](https://web.archive.org/web/20260416001407/https://www.arch.be/index.php?l=nl&m=nieuws&r=alle-nieuwsberichten&a=2023-06-14-het-rijksarchief-is-vertegenwoordigd-in-het-beheerscomite-van-de-databank-voor-akten-van-de-burgerlijke-stand))
-[^s20]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — FAQ DABS (NL) Versie 01/07/2020, 2020-07-01. FAQ DABS (NL) Versie 01/07/2020. <https://www.ibz.rrn.fgov.be/sites/default/files/documents/nl/dabs/FAQ_DABS_NL_20200701.pdf>
-[^s21]: FPS Policy and Support (BOSA), DG Simplification and Digitization — FAS Privacy Notice – FAS – My Digital Keys – version 1.3, 2025-08-05. FAS Privacy Notice – FAS – My Digital Keys – version 1.3. <https://sma-help.bosa.belgium.be/en/fas-privacy> ([archived](https://web.archive.org/web/20260928063339/https://sma-help.bosa.belgium.be/en/fas-privacy))
-[^s22]: Belgisch Staatsblad (copy published by etaamb.openjustice.be) — Koninklijk Besluit van 25/05/2005 tot bepaling van de…, 2005-05-25. Koninklijk Besluit van 25/05/2005 tot bepaling van de personen en instellingen die toegang hebben tot het register van de identiteitskaarten. <https://etaamb.openjustice.be/nl/koninklijk-besluit-van-25-mei-2005_n2005000390.html>
-[^s23]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies 29/2018 van 21 maart 2018 (kadastrale documentatie), 2018-03-21. Advies 29/2018 van 21 maart 2018 (kadastrale documentatie). <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-29-2018.pdf> ([archived](https://web.archive.org/web/20240921144846/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-29-2018.pdf))
-[^s24]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr. 73/2026 van 15 april 2026, 2026-04-15. Advies nr. 73/2026 van 15 april 2026. <https://gegevensbeschermingsautoriteit.be/publications/advies-nr.-73-2026.pdf>
-[^s25]: Gegevensbeschermingsautoriteit — Advies nr. 121/2022 van 1 juli 2022, 2022-07-01. Advies nr. 121/2022 van 1 juli 2022. <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-121-2022.pdf> ([archived](https://web.archive.org/web/20220706131107/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-121-2022.pdf))
-[^s26]: Kruispuntbank van de Sociale Zekerheid (KSZ) — Datawarehouse | DWH_ONP_SFP_CADASTRE. Datawarehouse | DWH_ONP_SFP_CADASTRE. <https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-onp-sfp-cadastre.html>
-[^s27]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr. 03/2023 van 20 januari 2023, 2023-01-20. Advies nr. 03/2023 van 20 januari 2023. <https://gegevensbeschermingsautoriteit.be/publications/advies-nr.-03-2023.pdf>
-[^s28]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr. 81/2022 van 25 april 2022…, 2022-04-25. Advies nr. 81/2022 van 25 april 2022 (werkingsmodaliteiten UBO-register). <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-81-2022.pdf>
-[^s29]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Geschillenkamer Beslissing ten gronde 56/2026 van 12…, 2026-03-12. Geschillenkamer Beslissing ten gronde 56/2026 van 12 maart 2026. <https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-56-2026.pdf> ([archived](https://web.archive.org/web/20260603114950/https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-56-2026.pdf))
-[^s30]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr 169/2019 van 8 november 2019, 2019-11-08. Advies nr 169/2019 van 8 november 2019. <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-169-2019.pdf> ([archived](https://web.archive.org/web/20251008074530/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-169-2019.pdf))
-[^s31]: Nationale Bank van België — Het Securities Settlement System (NBB-SSS). Het Securities Settlement System (NBB-SSS). <https://www.nbb.be/nl/betalingen-en-effecten/het-securities-settlement-system-nbb-sss>
-[^s32]: ASTRID nv van publiek recht — Radiocommunicatie | ASTRID. Radiocommunicatie | ASTRID. <https://www.astrid.be/nl/diensten/radiocommunicatie> ([archived](https://web.archive.org/web/20250403085231/https://www.astrid.be/nl/diensten/radiocommunicatie))
-[^s33]: ASTRID nv van publiek recht — Organisatie | ASTRID. Organisatie | ASTRID. <https://www.astrid.be/nl/over-astrid/organisatie> ([archived](https://web.archive.org/web/20230131192154/https://www.astrid.be/nl/over-astrid/organisatie))
-[^s34]: Nationaal Crisiscentrum (NCCN) — Meer dan 1 miljoen geregistreerde adressen in BE-Alert, 2022. Meer dan 1 miljoen geregistreerde adressen in BE-Alert. <https://crisiscentrum.be/nl/newsroom/meer-dan-1-miljoen-geregistreerde-adressen-be-alert>
-[^s35]: Kruispuntbank van de Sociale Zekerheid (KSZ) — Datawarehouse | DWH_AHOVOKS_LED. Datawarehouse | DWH_AHOVOKS_LED. <https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led> ([archived](https://web.archive.org/web/20260211053943/https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led))
+[^s5]: FPS Economy, SMEs, Self-employed and Energy — Belgian Trusted List (TSL-BE). Belgian Trusted List (TSL-BE). <https://tsl.belgium.be/tsl-be.xml> ([archived](https://web.archive.org/web/20261004023100/https://tsl.belgium.be/tsl-be.xml))
+[^s6]: CSAM (Belgian federal government services) — Over CSAM. Over CSAM. <https://www.csam.be/nl/over-csam.html> ([archived](https://web.archive.org/web/20260928064715/https://www.csam.be/nl/over-csam.html))
+[^s7]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — eID | IBZ - FOD Binnenlandse Zaken. eID | IBZ - FOD Binnenlandse Zaken. <https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid> ([archived](https://web.archive.org/web/20260617223429/https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid))
+[^s8]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — Wie beheert het Rijksregister van de natuurlijke personen?. Wie beheert het Rijksregister van de natuurlijke personen?. <https://www.ibz.rrn.fgov.be/nl/faq/wat-is-het-rijksregister-van-de-natuurlijke-personen/wie-beheert-het-rijksregister-van-de>
+[^s9]: G-Cloud (Belgian federal public services, social-security institutions and state ICT organisations) — G-Cloud - Services. G-Cloud - Services. <https://www.gcloud.belgium.be/fr/services>
+[^s10]: G-Cloud (Belgian federal government community cloud) — Housing – Datacenter-as-a-Service (G-Cloud). Housing – Datacenter-as-a-Service (G-Cloud). <https://www.gcloud.belgium.be/nl/service/detail/housing>
+[^s11]: G-Cloud (Belgian federal public services, social-security institutions and state ICT organisations) — G-Cloud - Home. G-Cloud - Home. <https://www.gcloud.belgium.be/fr>
+[^s12]: G-Cloud (Belgian federal government community cloud) — G-Cloud, de community cloud van de overheid. G-Cloud, de community cloud van de overheid. <https://www.gcloud.belgium.be/nl> ([archived](https://web.archive.org/web/20260720192938/https://www.gcloud.belgium.be/nl))
+[^s13]: Eurostat tps00001, 2026-09-30. Population on 1 January. <https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table>
+[^s14]: Eurostat nama_10_gdp, 2025. GDP and main components (output, expenditure and income). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table>
+[^s15]: Eurostat nama_10_a64_e, 2026-09-30. National accounts employment data by industry (up to NACE A*64). <https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_e/default/table>
+[^s16]: Eurostat nrg_pc_205, 2025-S2. Electricity prices for non-household consumers - bi-annual data (from 2007 onwards). <https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table>
+[^s17]: Eurostat nrg_ind_ren, 2026-09-30. Share of energy from renewable sources. <https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table>
+[^s18]: Eurostat reg_area3, 2026-09-30. Area by NUTS 3 region. <https://ec.europa.eu/eurostat/databrowser/view/reg_area3/default/table>
+[^s19]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — Rijksregister | IBZ - FOD Binnenlandse Zaken. Rijksregister | IBZ - FOD Binnenlandse Zaken. <https://www.ibz.rrn.fgov.be/nl/burger/rijksregister-en-bevolking/rijksregister> ([archived](https://web.archive.org/web/20260911221802/https://www.ibz.rrn.fgov.be/nl/burger/rijksregister-en-bevolking/rijksregister))
+[^s20]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — Home | IBZ - FOD Binnenlandse Zaken. Home | IBZ - FOD Binnenlandse Zaken. <https://www.ibz.rrn.fgov.be/nl>
+[^s21]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — eID en GDPR, 2020-11-25. eID en GDPR. <https://www.ibz.rrn.fgov.be/sites/default/files/documents/nl/identiteitsdocumenten/eid/eID_en_GDPR.pdf>
+[^s22]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — eID en GDPR | IBZ - FOD Binnenlandse Zaken. eID en GDPR | IBZ - FOD Binnenlandse Zaken. <https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid/eid-en-gdpr>
+[^s23]: Rijksarchief in België — Het Rijksarchief is vertegenwoordigd in het…, 2023-06-14. Het Rijksarchief is vertegenwoordigd in het beheerscomité van de Databank voor Akten van de Burgerlijke Stand. <https://www.arch.be/index.php?l=nl&m=nieuws&r=alle-nieuwsberichten&a=2023-06-14-het-rijksarchief-is-vertegenwoordigd-in-het-beheerscomite-van-de-databank-voor-akten-van-de-burgerlijke-stand> ([archived](https://web.archive.org/web/20260416001407/https://www.arch.be/index.php?l=nl&m=nieuws&r=alle-nieuwsberichten&a=2023-06-14-het-rijksarchief-is-vertegenwoordigd-in-het-beheerscomite-van-de-databank-voor-akten-van-de-burgerlijke-stand))
+[^s24]: FOD Binnenlandse Zaken, Algemene Directie Identiteit en Burgerzaken — FAQ DABS (NL) Versie 01/07/2020, 2020-07-01. FAQ DABS (NL) Versie 01/07/2020. <https://www.ibz.rrn.fgov.be/sites/default/files/documents/nl/dabs/FAQ_DABS_NL_20200701.pdf>
+[^s25]: FOD Beleid en Ondersteuning (BOSA), DG Vereenvoudiging en Digitalisering — Privacy statement - FAS - My Digital Keys, 2025-08-05. Privacy statement - FAS - My Digital Keys. <https://sma-help.bosa.belgium.be/en/fas-privacy> ([archived](https://web.archive.org/web/20260928063339/https://sma-help.bosa.belgium.be/en/fas-privacy))
+[^s26]: Belgisch Staatsblad (copy published by etaamb.openjustice.be) — Koninklijk Besluit van 25/05/2005 tot bepaling van de…, 2005-05-25. Koninklijk Besluit van 25/05/2005 tot bepaling van de personen en instellingen die toegang hebben tot het register van de identiteitskaarten. <https://etaamb.openjustice.be/nl/koninklijk-besluit-van-25-mei-2005_n2005000390.html>
+[^s27]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies 29/2018 van 21 maart 2018 (kadastrale documentatie), 2018-03-21. Advies 29/2018 van 21 maart 2018 (kadastrale documentatie). <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-29-2018.pdf> ([archived](https://web.archive.org/web/20240921144846/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-29-2018.pdf))
+[^s28]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr. 73/2026 van 15 april 2026, 2026-04-15. Advies nr. 73/2026 van 15 april 2026. <https://gegevensbeschermingsautoriteit.be/publications/advies-nr.-73-2026.pdf>
+[^s29]: Gegevensbeschermingsautoriteit — Advies nr. 121/2022 van 1 juli 2022, 2022-07-01. Advies nr. 121/2022 van 1 juli 2022. <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-121-2022.pdf> ([archived](https://web.archive.org/web/20220706131107/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-121-2022.pdf))
+[^s30]: Kruispuntbank van de Sociale Zekerheid (KSZ) — Datawarehouse | DWH_ONP_SFP_CADASTRE. Datawarehouse | DWH_ONP_SFP_CADASTRE. <https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-onp-sfp-cadastre.html>
+[^s31]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr. 03/2023 van 20 januari 2023, 2023-01-20. Advies nr. 03/2023 van 20 januari 2023. <https://gegevensbeschermingsautoriteit.be/publications/advies-nr.-03-2023.pdf>
+[^s32]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr. 81/2022 van 25 april 2022…, 2022-04-25. Advies nr. 81/2022 van 25 april 2022 (werkingsmodaliteiten UBO-register). <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-81-2022.pdf>
+[^s33]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Geschillenkamer Beslissing ten gronde 56/2026 van 12…, 2026-03-12. Geschillenkamer Beslissing ten gronde 56/2026 van 12 maart 2026. <https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-56-2026.pdf> ([archived](https://web.archive.org/web/20260603114950/https://www.gegevensbeschermingsautoriteit.be/publications/beslissing-ten-gronde-nr.-56-2026.pdf))
+[^s34]: Gegevensbeschermingsautoriteit (Belgian Data Protection Authority) — Advies nr 169/2019 van 8 november 2019, 2019-11-08. Advies nr 169/2019 van 8 november 2019. <https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-169-2019.pdf> ([archived](https://web.archive.org/web/20251008074530/https://www.gegevensbeschermingsautoriteit.be/publications/advies-nr.-169-2019.pdf))
+[^s35]: Nationale Bank van België — Het Securities Settlement System (NBB-SSS). Het Securities Settlement System (NBB-SSS). <https://www.nbb.be/nl/betalingen-en-effecten/het-securities-settlement-system-nbb-sss>
+[^s36]: ASTRID nv van publiek recht — Radiocommunicatie | ASTRID. Radiocommunicatie | ASTRID. <https://www.astrid.be/nl/diensten/radiocommunicatie> ([archived](https://web.archive.org/web/20250403085231/https://www.astrid.be/nl/diensten/radiocommunicatie))
+[^s37]: ASTRID nv van publiek recht — Organisatie | ASTRID. Organisatie | ASTRID. <https://www.astrid.be/nl/over-astrid/organisatie> ([archived](https://web.archive.org/web/20230131192154/https://www.astrid.be/nl/over-astrid/organisatie))
+[^s38]: Nationaal Crisiscentrum (NCCN) — Meer dan 1 miljoen geregistreerde adressen in BE-Alert, 2022. Meer dan 1 miljoen geregistreerde adressen in BE-Alert. <https://crisiscentrum.be/nl/newsroom/meer-dan-1-miljoen-geregistreerde-adressen-be-alert>
+[^s39]: Kruispuntbank van de Sociale Zekerheid (KSZ) — Datawarehouse | DWH_AHOVOKS_LED. Datawarehouse | DWH_AHOVOKS_LED. <https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led> ([archived](https://web.archive.org/web/20260211053943/https://dwh.ksz-bcss.fgov.be/nl/sourcedetail/dwh-ahovoks-led))
 
-**Evidence grades:** 6 Strong, 37 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 5 Strong, 40 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.
