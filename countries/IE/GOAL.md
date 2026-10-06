@@ -83,7 +83,7 @@ The holdings Ireland cannot let depend on infrastructure a foreign state can com
 | High | Treasury and state accounts (tier 1) | *Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the…. It is withheld until the fact or its source is corrected and checked again* | National Shared Services Office (FMSS); Department of Finance manages the Exchequer[^s32] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Government payroll and personnel (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Election management and results (tier 1) | Election Count Database System (Ecount), used alongside the manual paper-ballot count[^s33] | Returning Officers per constituency[^s33] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
-| High | Central bank systems (tier 1) | TARGET2-Ireland (Irish component of the Eurosystem T2 RTGS system)[^s34] | Central Bank of Ireland[^s34][^s35] | Transitioned to a new data centre service provider: two Tier-3 data centres in active-active configuration (provider not named)[^s35] | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
+| High | Central bank systems (tier 1) | TARGET2-Ireland (Irish component of the Eurosystem T2 RTGS system)[^s34] | Central Bank of Ireland[^s34][^s35] | *Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The quote is in the PDF (p. 65, 'Our Technology'), but it only says the Bank transitioned to two new Tier-3 data centres in active-active configuration; neither the quote nor the surrounding text mentions a 'data centre service provider'…. It is withheld until the fact or its source is corrected and checked again* | *Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an…. It is withheld until the fact or its source is corrected and checked again* | *Not yet measured* |
 | High | Crisis management and civil protection (tier 1) | *Not yet verified* | *—* | *—* | *—* | *—* |
 | High | Electricity grid control (tier 1) | National Control Centres (NCCs) of the transmission system operator[^s36][^s37] | EirGrid (transmission system operator)[^s38][^s37] | *Not yet sourced* | *Not stated in sources* | *Not yet measured* |
 | High | Water management control (tier 1) | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* | *Not yet sourced* | *Not stated in sources* | *Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)* |
@@ -148,7 +148,7 @@ Tier 0 and 1 holdings for Ireland without a verified source yet. Corrections and
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1396 facts are printed, 4324 values are withheld as gaps, and 76 are withheld as disputed.
 
 ### How sources were found
 
@@ -205,10 +205,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
-| T2 competent public body or audit office | 638 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 628 |
+| T2 competent public body or audit office | 636 |
 | T3 other institution or company | 10 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
 ### Evidence grades
 
@@ -217,8 +217,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 109 |
-| Standard | 1291 |
+| Strong | 108 |
+| Standard | 1288 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -261,7 +261,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1400 printed facts pass the fact check.
+In this build, 1396 of 1396 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -303,7 +303,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -327,6 +327,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
 | wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 |
 | wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
 | wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
@@ -335,7 +336,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Ireland
 
-60 of 63 printed facts about Ireland pass.
+62 of 62 printed facts about Ireland pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -354,11 +355,11 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:IE:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:facial_biometric:count | Facial biometric: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:IE:electoral_roll:hosting | Electoral roll entry: hosting | unrecorded | none | never checked |  |
+| record:IE:electoral_roll:hosting | Electoral roll entry: hosting | unrecorded | claude-fable-5-1 | supported | wf_e9645602-884 |
 | record:IE:electoral_roll:count | Electoral roll entry: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:defence_command:register | Defence command and logistics: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:defence_command:operator | Defence command and logistics: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:IE:defence_command:hosting | Defence command and logistics: hosting | unrecorded | none | never checked |  |
+| record:IE:defence_command:hosting | Defence command and logistics: hosting | unrecorded | claude-fable-5-1 | supported | wf_e9645602-884 |
 | record:IE:defence_command:foreign_dependency | Defence command and logistics: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:IE:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:digital_identity_credentials:count | Digital identity credentials: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -394,7 +395,6 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:IE:electoral_management:operator | Election management and results: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:IE:central_bank:operator | Central bank systems: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:IE:central_bank:hosting | Central bank systems: hosting | unrecorded | none | never checked |  |
 | record:IE:grid_control:register | Electricity grid control: the name of the register or system | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:IE:grid_control:operator | Electricity grid control: the body that operates it | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:IE:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -410,6 +410,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | indicator:IE:K1 | indicator K1: Is the root of the government's public key infrastructure or its qualified trust service operated by the state or a state-controlled body? | claude-fable-5-1 | unclear | The quote (found verbatim) establishes that the Revenue Commissioners, a state body, act as Certification Authority for ROS digital certificates, and the same manual says those certificates are used by the CRO, Department of Transport and Department of Social Protection. However the document never describes this CA as the root of the government's PKI or as a qualified trust service (no occurrence  |
 | indicator:IE:L2 | indicator L2: Is the government's data classification scheme established in a statute or binding regulation? | claude-fable-5-1 | unclear | The 2019 Cloud Computing Advice Note says some organisations have their own classification systems and 'there are no central classification rules in place except for information defined as top secret, see Department of Finance Circular 39/07'. Whether a Finance circular counts as a 'statute or binding regulation' is a judgment the source does not make, so 'Partly' is neither clearly supported nor  |
 | record:IE:central_bank:foreign_dependency | Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | claude-opus-5-5 | not supported | The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an Irish component operated by the Central Bank of Ireland, which does not establish 'EU provider' either. |
+| record:IE:central_bank:hosting | Central bank systems: hosting | claude-fable-5-1 | not supported | The quote is in the PDF (p. 65, 'Our Technology'), but it only says the Bank transitioned to two new Tier-3 data centres in active-active configuration; neither the quote nor the surrounding text mentions a 'data centre service provider' or a transition to a new provider, so that part of the printed statement is added. The Tier-3/active-active part alone would be supported. |
 | record:IE:electoral_roll:foreign_dependency | Electoral roll entry: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | claude-fable-5-1 | not supported | The quote is one bullet in a list of LGERS project requirements ('Migration of project to DCC's Azure Public Cloud Tenancy') for a new central database that local authorities are still preparing to migrate to in 2025-2026; the page does not say the current 31 registers run there, nor does it identify Azure as a non-EU provider. Reaching 'Non-EU provider' needs outside knowledge and a future state  |
 | record:IE:intelligence:register | Intelligence services: the name of the register or system | claude-fable-5-1 | not supported | The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a register of that name. |
 | record:IE:police_records:register | Police information systems: the name of the register or system | claude-fable-5-1 | not supported | garda.ie refused the connection, so I read the project's hashed copy (sha256 c415d6a9…, as in fetch_manifest.csv); the quote is there and the CSO page quote is live. Both call PULSE 'An Garda Síochána's database' with incident data, but neither describes it as a 'national incident and intelligence database'; 'intelligence' is added beyond the sources. |
@@ -460,6 +461,6 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 [^s41]: Health Protection Surveillance Centre (HSE) — Computerised Infectious Disease Reporting (CIDR). Computerised Infectious Disease Reporting (CIDR). <https://www.hpsc.ie/cidr/> ([archived](https://web.archive.org/web/20260911101522/https://www.hpsc.ie/cidr/))
 [^s42]: Health Information and Quality Authority — Computerised Infectious Disease Reporting (CIDR) system. Computerised Infectious Disease Reporting (CIDR) system. <https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr> ([archived](https://web.archive.org/web/20240704233334/https://www.hiqa.ie/areas-we-work/health-information/data-collections/computerised-infectious-disease-reporting-cidr))
 
-**Evidence grades:** 30 Strong, 33 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
+**Evidence grades:** 29 Strong, 33 Standard. Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict. The checks behind each fact are listed in the country PDF and on the web page.
 
 **Methodology:** how every fact was sourced, checked and calculated is in the two appendices above, generated from the code that produced this brief; the same text is in the country PDF and on the web pages /methodology and /fact-check.

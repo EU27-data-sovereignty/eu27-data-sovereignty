@@ -1,0 +1,310 @@
+{
+ "run": "wf_e9645602-884",
+ "prepared": "2026-10-06-7aa12861",
+ "batch": "EU-001",
+ "iso": "EU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:IT:national_archives:hosting",
+   "fact_sha256": "df38084e505ebc767fa625e62fe86851ee0382b2e99945c33f0557b3cc27a72b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states the Polo di Conservazione Digitale's aim is 'un'infrastruttura, nativamente cloud' on which two preservation systems rest; no cloud provider is named anywhere on the page, so the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://acs.cultura.gov.it/piano-nazionale-di-ripresa-e-resilienza-del-ministero-della-cultura/polo-di-conservazione-digitale/"
+  },
+  {
+   "claim": "record:IE:defence_command:hosting",
+   "fact_sha256": "85a840ebe59626e616eea8b3c8fc11f55140909c146d1f0bcb79e3c83f9ee46a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The PDF (NGWE section) says the Defence Forces will operate 'a hybrid cloud strategy - securely accessing cloud services where required, as well as maintaining a secure on premise national CISN built around two Active/Active resilient Data Centres', which is exactly what is printed.",
+   "quote_found": true,
+   "checked_url": "https://assets.gov.ie/static/documents/54a1dec6/Department_of_Defence_and_Defence_Forces_Annual_Report_2024_English_DNet.pdf"
+  },
+  {
+   "claim": "record:LU:health_insurance:hosting",
+   "fact_sha256": "7d78292ed1c8cfcba5c84a68c6d6f727e778ef7a12eeb4e672565ee594b72085",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The CCSS attributions list includes 'la centralisation et le traitement informatique des données pour le compte des différentes institutions de sécurité sociale'; the printed statement is a faithful paraphrase.",
+   "quote_found": true,
+   "checked_url": "https://ccss.public.lu/fr/ccss/attributions.html"
+  },
+  {
+   "claim": "record:IE:electoral_roll:hosting",
+   "fact_sha256": "588b2a03e3ff49b3c054693d44400f6a30a8f98a3337bfd1957418a5425b3886",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The report defines LGERS as the 'shared national electoral register database', defines DCC as Dublin City Council, and lists among LGERS project requirements 'Migration of project to DCC's Azure Public Cloud Tenancy'; the printed statement matches that context.",
+   "quote_found": true,
+   "checked_url": "https://cdn.electoralcommission.ie/app/uploads/2025/04/30104313/Oversight-Report-on-the-Electoral-Registers_online_english_tagged.pdf"
+  },
+  {
+   "claim": "record:HU:authentication_audit_log:hosting",
+   "fact_sha256": "cefdf788af646a97050f1c4f5a4ff83dcd5c81b1669c59eca37964bb3faa974e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The privacy notice says the controller (adatkezelő) stores DÁP website log files in a private cloud (central log collector), and the same page names the controller as IdomSoft Informatikai Zrt., so 'stored by IdomSoft' follows from the page itself.",
+   "quote_found": true,
+   "checked_url": "https://dap.gov.hu/adatkezelesi-tajekoztato"
+  },
+  {
+   "claim": "record:EL:customs:hosting",
+   "fact_sha256": "b8e7bb6b2f04ef24ff6fd49929a904d30953138dc3978dfcad71a504a9a94a7f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page lists ICISnet among 'πληροφοριακών συστημάτων που φιλοξενούνται στις υποδομές της ΓΓΠΣΔΔ', i.e. systems hosted on GSIS infrastructure, which is what is printed.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/anavathmisi_diathesimotitas_efedreias_asfaleias_dedomenon_poy_filoxenoyntai_stis_ypodomes_tis_ggpsdd"
+  },
+  {
+   "claim": "record:EL:land_property:hosting",
+   "fact_sha256": "403ad185f65938df16dac6b012a4866168ae02621975e2bbe9345386bf151d6e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The project is titled 'Αναβάθμιση εξοπλισμού Κέντρου Δεδομένων και Εφεδρικού Κέντρου Δεδομένων Κτηματολογίου' with status 'προγραμματισμένο' (planned), which presupposes the Cadastre's own data centre and DR centre and an upgrade that is planned, as printed.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/anavathmisi_exoplismoy_ktimatologioy_gia_leitoyrgia_se_eikoniko_perivallon_virtualization"
+  },
+  {
+   "claim": "record:EL:public_finance:hosting",
+   "fact_sha256": "64cb751b0d3e39991f93f21e866f5da96f752b5a3069b2767a1d889e88d966b5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The G-Cloud project page lists completing infrastructure for 'όλα τα υφιστάμενα και νέα έργα που θα φιλοξενηθούν στο data center και στο disaster site του Υπ.Οικ. και της ΑΑΔΕ', matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/g-cloud"
+  },
+  {
+   "claim": "record:EL:residence_permits:hosting",
+   "fact_sha256": "340f978f61800e0cae689c2ba3142cecbe550f0d918cd2431312ecb70c16ecf4",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says separate migration/asylum data centres exist at the Ministry of Interior, the Asylum Service, the Reception and Identification Service and the Ministry of Migration premises, that they hold biometric data, and that consolidation into a Tier-4 centre at the Kerani building has been planned; all elements of the printed statement are on the page.",
+   "quote_found": true,
+   "checked_url": "https://digitalstrategy.gov.gr/project/tier-4_datacenter"
+  },
+  {
+   "claim": "record:HR:breeder_documents:hosting",
+   "fact_sha256": "5003117f791d7a535d7fde85a2abc0d646c650ece1033204066a864b6c2acdf5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 43(1) of the published rules says 'Za spise državnih matica vodi se posebna evidencija u informacijskom sustavu elektroničkog uredskog poslovanja', which the printed statement renders faithfully; the source names no operator or location, and the statement claims none.",
+   "quote_found": true,
+   "checked_url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2021_10_117_2012.html"
+  },
+  {
+   "claim": "record:HU:civil_registry:hosting",
+   "fact_sha256": "33abdffd5fd3d9f47b5d54f6fe58d69de0a9364001a869d95e6c76ce0dfc1936",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act LXVI of 1992 (SZL law) lets the register body engage only a state administrative body or wholly state-owned company as processor, with ministerial approval, 'kivéve, ha a miniszter előterjesztésére ... egyedi felmentést' is granted; this matches the printed restriction and exemption.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv"
+  },
+  {
+   "claim": "record:HU:facial_biometric:hosting",
+   "fact_sha256": "ae2169d2581220dc2515b47f49ff8edfd3de33dc89fa2c5e53284e117ba49ade",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Same SZL provision as above; the Act also lists the citizen's arcképmás (facial image) among SZL data, so the printed statement about SZL processing restrictions applies to this data class as the source describes it.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv"
+  },
+  {
+   "claim": "record:HU:fingerprint_biometric:hosting",
+   "fact_sha256": "e64496913482fb77d14df0caecf39640ccb1b6e0beec4dc38a3ff92b98c47094",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Same SZL provision; the Act defines ujjnyomat (fingerprint) data within the register's scope, and the quote with its 'kivéve ... egyedi felmentést' continuation supports the restriction-with-exemption as printed.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99200066.tv"
+  },
+  {
+   "claim": "record:HU:issuance_history:hosting",
+   "fact_sha256": "0a69e6792cb9713f3c7cb0ff11d015f277ab7bbd98397c2f85dc64ba01c93ee1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 25 of Act XII of 1998 says the controller may entrust travel-document register processing only to a state administrative body or wholly state-owned company, 'kivéve, ha e korlátozás alól ... egyedi felmentést kap', matching the printed statement including the individual exemption.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99800012.TV"
+  },
+  {
+   "claim": "record:HU:vehicle_licensing:hosting",
+   "fact_sha256": "7ec75c109b02adc7751511c971786a1d77fd21b47f4c9288fd021d25e434c1d3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act LXXXIV of 1999 states the registering body may entrust register data processing only to a state administrative body or wholly state-owned company, exactly the printed restriction.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=99900084.TV"
+  },
+  {
+   "claim": "record:HU:breeder_documents:hosting",
+   "fact_sha256": "55b9bf2baf56c6e8bbcba2c1dd7e08a7d82db3471ebc094309a6f74bc4e59aae",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act I of 2010 §(4) lets the civil-register body engage, with ministerial approval, only a state administrative body or wholly state-owned company as processor, followed by 'kivéve, ha az anyakönyvi ügyekért felelős miniszter előterjesztésére ...' an exemption; this supports the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1000001.TV"
+  },
+  {
+   "claim": "record:HU:crisis_management:hosting",
+   "fact_sha256": "85290ad0b001171674768ceb5b7fd8afddbbeca08cc92a05c444d114b1d691db",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Decree 346/2010 §3(3) says the government-purpose communications provider builds, runs and operates the infrastructure of the defence and security public alerting system, and §3(2) on the same page names that provider as Pro-M Zrt., so 'Pro-M builds and operates' follows from the page.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1000346.KOR"
+  },
+  {
+   "claim": "record:HU:emergency_communications:hosting",
+   "fact_sha256": "f84981be7f66335f70159595942bef8f45946bd07f9e1ba8141c267e06fd7fe5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§3(2) states verbatim 'A kormányzati célú hírközlési szolgáltató a Pro-M Professzionális Mobil és Hálózati Szolgáltató Zártkörűen Működő Részvénytársaság', which is exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1000346.KOR"
+  },
+  {
+   "claim": "record:HU:border_control:hosting",
+   "fact_sha256": "190eab5e4bdeaf9b670bb6c3e162eeb8359543a796a3070b411060258c587b80",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act CLXXXI of 2012 §2(1)k) says the N.SIS Office, for NS.CP operation and security, uses the central provider designated by Government decree for mandatory centralised application operation and development services; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1200181.TV"
+  },
+  {
+   "claim": "record:HU:electoral_roll:hosting",
+   "fact_sha256": "003b0604c88c3e439971f8353444ff7b64bf12ce4343ca3207b45c5b0b39a5cd",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act XXXVI of 2013 §(3) states the National Election Office may engage only a state administrative body or wholly state-owned company as processor for the polling-district register and the central and other electoral registers, as printed.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A1300036.TV"
+  },
+  {
+   "claim": "record:HU:land_property:hosting",
+   "fact_sha256": "a83a61ffafda82bf9489c2763f355dbda52f9d6b09b35ec659d0370c4ef6d510",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Act C of 2021 §(3) says the land authority may entrust land-register processing only to a state administrative body or a 100% state-owned company, exactly the printed restriction.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2100100.TV"
+  },
+  {
+   "claim": "record:HU:residence_permits:hosting",
+   "fact_sha256": "909fbc98ad6d455ac23953b4ddf9335b4ab37aa99cc5e3cc0e4a812fa5179eab",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 253 of Act XC of 2023 says the aliens policing authority may entrust central aliens-policing register processing only to a state administrative body or wholly state-owned company, as printed.",
+   "quote_found": true,
+   "checked_url": "https://net.jogtar.hu/jogszabaly?docid=A2300090.TV"
+  },
+  {
+   "claim": "record:CY:emergency_communications:hosting",
+   "fact_sha256": "0f6939893cc6870220aea92fa2b6ad12bb2f9a81bb6fbb179fdbf39da7790df2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The article supports that the NG112 development agreement was signed between Civil Defence and CYTA, but it mentions CYTA only by name and nowhere describes it as 'the Cypriot telecommunications organisation'; that descriptor is added from outside the source. The core clause would pass if the gloss were dropped.",
+   "quote_found": true,
+   "checked_url": "https://news.rik.cy/el/article/2026/7/14/plerestere-kai-takhutere-plerophorese-se-krisima-peristatika-me-to-sustema-neas-genias-112/"
+  },
+  {
+   "claim": "record:DE:digital_identity_credentials:hosting",
+   "fact_sha256": "17bac313fbc6c2efc877d59aa5f99189fe09552ec97c967742197a956f327b36",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The page says 'Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund', which supports the core clause, but the expansion 'Informationstechnikzentrum Bund' and the description 'the federal IT service provider' appear nowhere on the page; the page itself expands ITZBund as 'IT-Dienstleistungszentrum Berlin'. Only the added gloss fails.",
+   "quote_found": true,
+   "checked_url": "https://ozg.brandenburg.de/ozg/de/it-infrastrukturen/it-basiskomponenten/bundid-nutzerkonto-deutschlandid/"
+  },
+  {
+   "claim": "record:CY:digital_identity_credentials:hosting",
+   "fact_sha256": "37eb73a93034a454440dc83d8c740da0f82ce5457f54ae4ba7892a3382ec6fe9",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The eID CPS (v1.4, p.39) states JCC Payment Systems assigns operation of the CA (ΑΠ) to ADACOM, a qualified trust service provider registered in Greece and on the EU trusted list; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://pki.jcc.com.cy/repository/el/CPS/files/JCC-PL-QTSP-Certification_Practice_Statement_for_eID_GR-1.4_FINAL.pdf"
+  },
+  {
+   "claim": "record:CY:land_property:hosting",
+   "fact_sha256": "8f6749bae62b0073c339aedfc26234a8ca45644786cd565029a30821dbf72ca7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "In the section 'Τομείς Κλάδου Διαχείρισης και Υποστήριξης ΣΠΓ' (Land Information System) the DLS 2022 report says second-level support at the Land Information Centre is provided by officers of the Department of IT Services with Department officers responsible for maintaining the central systems and subsystems and operating/monitoring the backup systems, which supports the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://portal.dls.moi.gov.cy/wp-content/uploads/2023/05/Annual-report-DLS-2022.pdf"
+  },
+  {
+   "claim": "record:DK:emergency_communications:hosting",
+   "fact_sha256": "27e2ebbfec92d5fb7804842ce4db3c3c9c7f20dcf4cfd10362b3b5a52859357e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Under 'Leverandør' the page says 'Dansk Beredskabskommunikation A/S står for driften af SINE'; the page says nothing about that company's ownership, so the parenthetical is also accurate.",
+   "quote_found": true,
+   "checked_url": "https://sikkerhedsnet.dk/om-sine"
+  },
+  {
+   "claim": "record:EL:digital_identity_credentials:hosting",
+   "fact_sha256": "46d8a8eabcbbf954a83be3052a8d94e9879f0a4fc6ec8073a211e437ccd880e2",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 6.2 of the Gov.gr Wallet privacy policy says the state-owned company (ανώνυμη εταιρεία του Ελληνικού Δημοσίου) ΕΘΝΙΚΟ ΔΙΚΤΥΟ ΥΠΟΔΟΜΩΝ ΤΕΧΝΟΛΟΓΙΑΣ ΚΑΙ ΕΡΕΥΝΑΣ Α.Ε. (Ε.Δ.Υ.Τ.Ε. Α.Ε.) is designated processor and undertakes design, implementation and maintenance of the application; 'GRNET' is the English rendering of that name, which the report prints alongside the Greek one.",
+   "quote_found": true,
+   "checked_url": "https://wallet.gov.gr/privacy/"
+  },
+  {
+   "claim": "record:NL:health_records:hosting",
+   "fact_sha256": "aaa0298c3c30759cc85d76480c6afc1e5582a81ee6d5982295e4fd76c8eda76a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states 'Die gegevens zijn en blijven decentraal opgeslagen bij de bron; de dossierhoudende huisarts of apotheker', which is exactly the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.aorta-lsp.nl/over-aorta-lsp/hoe-werkt-het-landelijk-schakelpunt"
+  },
+  {
+   "claim": "record:DE:trust_services_pki:hosting",
+   "fact_sha256": "5ec50f7788d7f913d8af75a0f80c832ac9bfb9cee83840e48524b00ba9357b18",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The BSI page describes the Root-CA as the Sicherungsanker of the Verwaltungs-PKI and says 'wird dieser Sicherungsanker seit dem 20. Februar 2001 im BSI betrieben', matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.bsi.bund.de/DE/Themen/Oeffentliche-Verwaltung/Moderner-Staat/Verwaltungs-PKI/verwaltungs-pki_node.html"
+  }
+ ]
+}

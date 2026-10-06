@@ -5,6 +5,23 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ---
 
+## 2026-10-06
+
+### Changed: the hosting-operators work is fact-checked: 56 of 60 confirmed (#95)
+
+- **How it got onto `main`.** The hosting-operators work, from another session, went to `main` unreviewed inside
+  commit `0683d7f`, which used `git add -A`. The fact-check gate stopped its deploy.
+- **The check.** The owner chose to keep it, and its 60 new `hosting` facts were checked by Fable 5.1 (run
+  `wf_e9645602-884`): 56 confirmed, 4 withheld with the checker's reasons.
+- **The result.** 1,396 printed facts pass, and 56 are withheld.
+- **The lesson,** recorded in `docs/status.md`: commit named files only.
+
+### Added: status and plans
+
+- `docs/status.md`: a point-in-time snapshot.
+- `docs/plans/mobile-app.md`: the React Native app in all 24 EU languages.
+- `docs/plans/stichting.md`: the Dutch foundation to house the project, as planning input and not legal advice.
+
 ## 2026-10-05
 
 ### Changed: where key registers are hosted, printed and compared across the EU-27 (#95)

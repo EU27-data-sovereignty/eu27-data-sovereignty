@@ -6,16 +6,16 @@
 
 ## Status
 
-**1340 of 1400 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **52** more are withheld because the check did not confirm them.
+**1396 of 1396 printed facts** have a current verdict of *supported* from a checker model that did not write them. A deploy to production requires all of them. **56** more are withheld because the check did not confirm them.
 
 | Checker model | Current verdicts |
 |---|---:|
-| claude-fable-5-1 | 1340 |
+| claude-fable-5-1 | 1396 |
 | claude-opus-5-5 | 0 |
 
 | Verdict | Facts |
 |---|---:|
-| supported | 1340 |
+| supported | 1396 |
 | not supported | 0 |
 | unclear | 0 |
 
@@ -23,7 +23,7 @@
 |---|---:|
 | claude-opus-5-5 | 23 |
 | program:fetch_eurostat.py | 162 |
-| unrecorded | 1215 |
+| unrecorded | 1211 |
 
 ## The rule
 
@@ -37,68 +37,7 @@ A verdict holds for the fact exactly as printed: a SHA-256 of the claim, the que
 
 ## Not passing
 
-| Claim | Printed | Why |
-|---|---|---|
-| `record:AT:breeder_documents:hosting` | Documents may be kept on microfilm or electronic media instead of paper | never checked |
-| `record:AT:facial_biometric:hosting` | Bundesrechenzentrum GmbH (state-owned) is the processor for the passport data processing under §§ 22a and 22b | never checked |
-| `record:AT:digital_identity_credentials:hosting` | The private trust service provider runs the certificate database in its own data centre | never checked |
-| `record:AT:issuance_history:hosting` | BRZ GmbH is the statutory processor of the Identity Document Register | never checked |
-| `record:BE:facial_biometric:hosting` | Photos are kept on a secure server (no provider or location named) | never checked |
-| `record:BG:judicial_criminal:hosting` | EISS is a centralised web-based application accessed over the Internet (host not stated) | never checked |
-| `record:BG:grid_control:hosting` | The project includes a backup data storage and processing centre for the Central Dispatch | never checked |
-| `record:BG:business_registry:hosting` | Registry Agency contract to expand storage arrays, upgrade servers and supply tape libraries serving the registers' information systems | never checked |
-| `record:CY:digital_identity_credentials:hosting` | JCC Payment Systems outsources operation of the eID certification authority to ADACOM, a qualified trust service provider registered in Greece | never checked |
-| `record:CY:land_property:hosting` | Central and backup systems of the Land Information System are maintained by officers of the government Department of Information Technology Services together with DLS officers | never checked |
-| `record:CY:border_control:hosting` | National N.SIS installed, operated and maintained by the Cyprus Police (national) | never checked |
-| `record:CY:emergency_communications:hosting` | NG112 developed by CYTA, the Cypriot telecommunications organisation | never checked |
-| `record:DE:facial_biometric:hosting` | No nationwide central database of biometric features is to be established; storage is decentral | never checked |
-| `record:DE:digital_identity_credentials:hosting` | BundID is operated in the data centre of the Informationstechnikzentrum Bund (ITZBund), the federal IT service provider | never checked |
-| `record:DE:trust_services_pki:hosting` | The root CA (trust anchor) of the public-administration PKI has been operated at the BSI since 20 February 2001 | never checked |
-| `record:DK:central_bank:hosting` | At Easter 2025 Nationalbanken moved krone settlement from its own system Kronos2 to the pan-European TARGET Services platform | never checked |
-| `record:DK:emergency_communications:hosting` | SINE network operation is supplied by Dansk Beredskabskommunikation A/S (ownership not stated in this source) | never checked |
-| `record:EL:civil_registry:hosting` | The law allows hosting of the Citizens' Register to be assigned by joint ministerial decision to the technological infrastructure of another public-sector body (no source found naming the actual host) | never checked |
-| `record:EL:digital_identity_credentials:hosting` | GRNET (Ε.Δ.Υ.Τ.Ε. Α.Ε.), a Greek state-owned company, is the processor that designs, implements and maintains the Gov.gr Wallet application | never checked |
-| `record:EL:residence_permits:hosting` | Migration and asylum data centres (holding biometric data) are in ministry/agency premises; consolidation into a Tier-4 data centre at the Ministry of Migration's Kerani building was planned | never checked |
-| `record:EL:land_property:hosting` | Hellenic Cadastre operates its own Data Center and Disaster Recovery Center (upgrade planned) | never checked |
-| `record:EL:police_records:hosting` | The Hellenic Police IT Directorate designs the computerised information systems and creates and supports their technical infrastructure | never checked |
-| `record:EL:public_finance:hosting` | G-Cloud project plans infrastructure for systems hosted in the data centre and disaster site of the Ministry of Finance and AADE | never checked |
-| `record:EL:customs:hosting` | ICISnet is hosted on ΓΓΠΣΔΔ infrastructure | never checked |
-| `record:FR:statistics_microdata:hosting` | CASD designed its own dedicated secure equipment | never checked |
-| `record:HR:breeder_documents:hosting` | Civil-register files are tracked in the electronic office-management information system | never checked |
-| `record:HR:trust_services_pki:hosting` | Subordinate CA HRIDCA, operated within AKD's own PKI, issues eOI certificates to natural persons | never checked |
-| `record:HR:tax:hosting` | State-owned APIS IT develops and maintains the Tax and Customs Administration information systems | never checked |
-| `record:HU:civil_registry:hosting` | Data processing for the SZL may only be outsourced to a state administrative body or a wholly state-owned company (unless a ministerial exemption is granted) | never checked |
-| `record:HU:facial_biometric:hosting` | Data processing for the SZL may only be outsourced to a state administrative body or a wholly state-owned company (unless a ministerial exemption is granted) | never checked |
-| `record:HU:fingerprint_biometric:hosting` | Data processing for the SZL may only be outsourced to a state administrative body or a wholly state-owned company (unless a ministerial exemption is granted) | never checked |
-| `record:HU:breeder_documents:hosting` | The civil register keeping body may only use a state body or wholly state-owned company as data processor unless an exemption is authorised | never checked |
-| `record:HU:authentication_audit_log:hosting` | DÁP portal log files are stored by IdomSoft in a private cloud (central log collector) | never checked |
-| `record:HU:land_property:hosting` | Land register processing restricted to state bodies or 100% state-owned companies | never checked |
-| `record:HU:issuance_history:hosting` | Data processing for the travel-document register may only be entrusted to a state body or wholly state-owned company unless an individual exemption is granted | never checked |
-| `record:HU:electoral_roll:hosting` | NEO may only use state bodies or wholly state-owned companies as processors for the electoral registers | never checked |
-| `record:HU:border_control:hosting` | NS.CP operation uses a central application-operation provider designated by Government decree | never checked |
-| `record:HU:emergency_communications:hosting` | Pro-M Zrt. is the government-purpose communications provider | never checked |
-| `record:HU:crisis_management:hosting` | Pro-M builds and operates the infrastructure of the defence and security public alerting system | never checked |
-| `record:HU:residence_permits:hosting` | Processing for the central aliens-policing register may only be entrusted to a state body or wholly state-owned company | never checked |
-| `record:HU:vehicle_licensing:hosting` | Processing restricted to state bodies or wholly state-owned companies | never checked |
-| `record:IE:electoral_roll:hosting` | LGERS (national electoral register database) being migrated to Dublin City Council's Azure public cloud tenancy | never checked |
-| `record:IE:defence_command:hosting` | On-premise national CISN built around two active/active resilient data centres, with hybrid cloud access where required | never checked |
-| `record:IE:central_bank:hosting` | Transitioned to a new data centre service provider: two Tier-3 data centres in active-active configuration (provider not named) | never checked |
-| `record:IT:issuance_history:hosting` | The CIE issuance circuit (SSCE) runs on IT infrastructure located in the Ministry of the Interior's CNSD | never checked |
-| `record:IT:trust_services_pki:hosting` | The CIE certification authority (CA Autenticazione and PKI-CIE) is part of the IT infrastructure located in the CNSD | never checked |
-| `record:IT:national_archives:hosting` | The Digital Preservation Hub is described as a 'natively cloud' infrastructure; no provider is named | never checked |
-| `record:LU:health_insurance:hosting` | The CCSS centralises and processes data on behalf of the social security institutions | never checked |
-| `record:NL:digital_identity_credentials:hosting` | Stored on ICT facilities on Dutch territory managed by Logius; not transferred outside the EU | never checked |
-| `record:NL:health_records:hosting` | Medical data remain stored decentrally at the source (GP or pharmacist) | never checked |
-| `record:NL:statistics_microdata:hosting` | Research is done inside the CBS microdata environment | never checked |
-| `record:SE:electoral_roll:hosting` | Skatteverket operates, develops and monitors Valmyndigheten's election IT on its behalf | never checked |
-| `record:SE:electoral_management:hosting` | Election IT support is operated by Skatteverket on behalf of Valmyndigheten | never checked |
-| `record:SI:breeder_documents:hosting` | Parts or all of the document collection may be kept in the register's central computerised database | never checked |
-| `record:SI:authentication_audit_log:hosting` | Processed on Slovenian territory; no transfers to third countries | never checked |
-| `record:SI:digital_identity_credentials:hosting` | SI-PASS personal data are not transferred to third countries and are processed on Slovenian territory | never checked |
-| `record:SI:trust_services_pki:hosting` | Qualified SI-PASS-CA signing certificates are stored at SI-TRUST | never checked |
-| `record:SI:emergency_communications:hosting` | The contractor was a bidder group represented by Telekom Slovenije | never checked |
-| `record:SI:firearms_register:hosting` | Registers are kept on the interior ministry's central computer | never checked |
-| `record:SI:health_records:hosting` | Central health ICT is a public service run by a public company wholly owned by the Republic of Slovenia | never checked |
+None. Every printed fact passes.
 
 ## Withheld after the fact check
 
@@ -117,17 +56,20 @@ Facts the checker did not confirm as printed. Each is shown as disputed, with th
 | `indicator:SE:K1` | claude-fable-5-1 | not supported | wf_da123db1-a4e | SOU 2023:61 says Efos (Försäkringskassan's E-identitet för offentlig sektor) is notified at eIDAS level high but is an employee e-service credential (e-tjänstelegitimation). Nothing on the page addresses the root of a government PKI or a qualified trust service, so it does not answer K1 with 'Yes'. |
 | `indicator:SE:K2` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The quote is the Government's proposal in Prop. 2025/26:250 that the Act on state e-ID enter into force on 1 December 2026, i.e. a state-operated scheme is legislated but not in operation as of today. The source neither states current state operation nor a partial one, so whether this maps to 'Partly' is ambiguous without a rubric the page does not supply. |
 | `record:AT:facial_biometric:foreign_dependency` | claude-fable-5-1 | unclear | wf_da123db1-a4e | The Passgesetz says verbatim that Bundesrechenzentrum GmbH takes part as processor in the § 22a/§ 22b processing; it names a federal body as processor but says nothing about where the infrastructure runs, so 'National infrastructure' rests on an inference the statute does not state. |
+| `record:AT:facial_biometric:hosting` | claude-fable-5-1 | not supported | wf_e9645602-884 | § 16(6) Passgesetz 1992 says verbatim that Bundesrechenzentrum GmbH participates as processor in the data processing under §§ 22a and 22b, which supports the processor role; but the cited page says nothing about BRZ's ownership, so the printed '(state-owned)' is added from outside the source. |
 | `record:AT:fingerprint_biometric:register` | claude-fable-5-1 | not supported | wf_72f99a66-4e9 | All three quotes are present, but SPG § 75 establishes a 'Zentrale erkennungsdienstliche Evidenz' in which security authorities jointly process identification data that § 64(2) defines to include Papillarlinienabdrücke (fingerprints), and the BMI sheet names the Federal Minister of the Interior as its controller. Only passport fingerprints are excluded (Passgesetz § 22b), so 'No central register'  |
 | `record:AT:issuance_history:foreign_dependency` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Both quotes are present (the RH sentence is split by a line-break hyphen 'Identitätsdokumentenregis- ters') and establish that BRZ GmbH, a federal body, is the statutory processor of the register; neither source says where the infrastructure runs or rules out further (possibly foreign) sub-processors, so 'National infrastructure' is an inference from the processor's identity rather than a statemen |
 | `record:BG:border_control:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Both quotes are verbatim, but the MFA citation names a different system (НВИС, not printed), and the RTA ordinance names 'АИС Издирвателна дейност – НШИС' only in the context of wanted-vehicle registration termination, never as a border or visa system; the printed form also truncates the system's name. The source does not establish the printed system as the border/visa register. |
 | `record:BG:digital_identity_credentials:operator` | claude-opus-5-5 | not supported | wf_90fb82e7-35e | Art. 4(3) only says that persons designated by order of the Minister of Interior also have access to the Art. 3(1) register. Neither that article nor Art. 3 says that the MVR runs or maintains the register, so the parenthetical operator claim '(MVR runs the register)' is added by the report. |
 | `record:CY:emergency_communications:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The article only reports that Civil Defence signed a development agreement with CYTA for a system to be built over 20 months; it says nothing about where the infrastructure runs, what kind of entity CYTA is, or any hosting arrangement, so 'National infrastructure' needs outside knowledge the source does not supply. |
+| `record:CY:emergency_communications:hosting` | claude-fable-5-1 | not supported | wf_e9645602-884 | The article supports that the NG112 development agreement was signed between Civil Defence and CYTA, but it mentions CYTA only by name and nowhere describes it as 'the Cypriot telecommunications organisation'; that descriptor is added from outside the source. The core clause would pass if the gloss were dropped. |
 | `record:CY:fingerprint_biometric:register` | claude-fable-5-1 | unclear | wf_da123db1-a4e | Art. 63(5) (and 67(4) for passports) says fingerprints taken for an ID card may be used only to issue the card and are deleted within 48 hours, verbatim. That shows ID-document fingerprints are not retained under this law, but the source does not state that no central fingerprint register exists at all, so the general negative 'No central register' goes beyond what the page says. |
 | `record:CZ:border_control:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | § 84(2) of Act 273/2008 supports that the Police Presidium operates the national component of SIS and performs the tasks of the authority exchanging supplementary information on SIS alerts, but neither page uses the word 'SIRENE' anywhere and the cited quote stops before the supplementary-information clause; the printed 'SIRENE function' is a label the source does not supply. |
 | `record:CZ:breeder_documents:operator` | claude-fable-5-1 | not supported | wf_72f99a66-4e9 | Both quotes are in Act 301/2000 (the .cz URL redirects to e-sbirka.gov.cz). § 1b makes the Ministry of the Interior controller of the Matriční informační systém, but § 1b(2) says that system holds the data entered in the register books, while § 8 and §§ 4–4a place the sbírka listin (the underlying documents) with the matriční úřad, the ORP and the krajský úřad. The sources do not make the Ministry |
 | `record:CZ:business_registry:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | § 28(1) of Act 111/2009 supports DIA (Agentura, defined in § 7) as controller of the registr osob, but § 28(2) says the controller 'poskytuje editorům k přidělení identifikační číslo osoby' — it provides the identification numbers to the editors for assignment; the editors assign them. The printed 'assigns company identification numbers' attributes the assignment to DIA, which the source does not  |
 | `record:CZ:customs:operator` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote (§1(1) of Act 17/2012) only says the customs administration's basic task is protecting the Republic's economic interests and supervising goods and their movement; it does not name the General Directorate of Customs or customs offices (those appear in §1(2), which is not the recorded quote) and the act nowhere mentions customs declarations, so nothing on the page says who operates customs |
 | `record:CZ:fingerprint_biometric:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote is §57(3): data under §56(1)(o), which the act calls only 'biometrické údaje' (biometric data, not specifically fingerprints), are kept in the ID card register until the card is collected and at most 90 days after issue. That describes a central public-administration IS that does hold the biometric data for a limited time; it does not say there is no central register, and it does not nam |
+| `record:DE:digital_identity_credentials:hosting` | claude-fable-5-1 | not supported | wf_e9645602-884 | The page says 'Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund', which supports the core clause, but the expansion 'Informationstechnikzentrum Bund' and the description 'the federal IT service provider' appear nowhere on the page; the page itself expands ITZBund as 'IT-Dienstleistungszentrum Berlin'. Only the added gloss fails. |
 | `record:DK:vehicle_licensing:register` | claude-opus-5-5 | not supported | wf_8232a23d-013 | The quote and § 1(2) are on the page; § 1(2) says the register holds data on each vehicle and who it belongs to ('tilhørsforhold'). But the printed text calls the register 'DMR', and that name or abbreviation does not appear anywhere on the page. |
 | `record:EE:benefits_pensions:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The page supports the name 'sotsiaalkaitse infosüsteem' and its English name 'Social Security Information System', but the acronym 'SKAIS' printed alongside them appears nowhere on the cited page, so the statement as printed adds something the source does not say. |
 | `record:EE:facial_biometric:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory definition, not the name of a register or system, so it does not answer 'what'; the source that names a register holding facial images (ABIS, siseministeerium.ee) is not |
@@ -144,6 +86,7 @@ Facts the checker did not confirm as printed. Each is shown as disputed, with th
 | `record:HU:issuance_history:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote establishes IdomSoft's state ownership only; the history page never mentions document issuance records or document registers, so it does not support where that holding's infrastructure runs. |
 | `record:HU:vehicle_licensing:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote is about IdomSoft's ownership; the history page does not mention the vehicle register or driving licences, so it does not tie that holding to IdomSoft or say on what infrastructure it runs. |
 | `record:IE:central_bank:foreign_dependency` | claude-opus-5-5 | not supported | wf_8232a23d-013 | The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an Irish component operated by the Central Bank of Ireland, which does not establish 'EU provider' either. |
+| `record:IE:central_bank:hosting` | claude-fable-5-1 | not supported | wf_e9645602-884 | The quote is in the PDF (p. 65, 'Our Technology'), but it only says the Bank transitioned to two new Tier-3 data centres in active-active configuration; neither the quote nor the surrounding text mentions a 'data centre service provider' or a transition to a new provider, so that part of the printed statement is added. The Tier-3/active-active part alone would be supported. |
 | `record:IE:electoral_roll:foreign_dependency` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote is one bullet in a list of LGERS project requirements ('Migration of project to DCC's Azure Public Cloud Tenancy') for a new central database that local authorities are still preparing to migrate to in 2025-2026; the page does not say the current 31 registers run there, nor does it identify Azure as a non-EU provider. Reaching 'Non-EU provider' needs outside knowledge and a future state  |
 | `record:IE:intelligence:register` | claude-fable-5-1 | not supported | wf_da123db1-a4e | The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a register of that name. |
 | `record:IE:police_records:register` | claude-fable-5-1 | not supported | wf_72f99a66-4e9 | garda.ie refused the connection, so I read the project's hashed copy (sha256 c415d6a9…, as in fetch_manifest.csv); the quote is there and the CSO page quote is live. Both call PULSE 'An Garda Síochána's database' with incident data, but neither describes it as a 'national incident and intelligence database'; 'intelligence' is added beyond the sources. |
@@ -253,11 +196,16 @@ Each verdict other than *supported*, from every run, including those a later che
 | wf_72f99a66-4e9 | `record:IE:police_records:register` | claude-fable-5-1 | not supported | garda.ie refused the connection, so I read the project's hashed copy (sha256 c415d6a9…, as in fetch_manifest.csv); the quote is there and the CSO page quote is live. Both call PULSE 'An Garda Síochána's database' with incident data, but neither describes it as a 'national incident and intelligence database'; 'intelligence' is added beyond the sources. | current |
 | wf_72f99a66-4e9 | `record:CZ:breeder_documents:operator` | claude-fable-5-1 | not supported | Both quotes are in Act 301/2000 (the .cz URL redirects to e-sbirka.gov.cz). § 1b makes the Ministry of the Interior controller of the Matriční informační systém, but § 1b(2) says that system holds the data entered in the register books, while § 8 and §§ 4–4a place the sbírka listin (the underlying documents) with the matriční úřad, the ORP and the krajský úřad. The sources do not make the Ministry | current |
 | wf_72f99a66-4e9 | `record:PT:public_finance:operator` | claude-fable-5-1 | not supported | Both IGCP quotes are present and say the IGCP, E.P.E. manages the State's treasury, financing and direct public debt. Neither page mentions the Direção-Geral do Orçamento or ESPAP, so the printed operator is not what the cited sources say. | current |
+| wf_e9645602-884 | `record:CY:emergency_communications:hosting` | claude-fable-5-1 | not supported | The article supports that the NG112 development agreement was signed between Civil Defence and CYTA, but it mentions CYTA only by name and nowhere describes it as 'the Cypriot telecommunications organisation'; that descriptor is added from outside the source. The core clause would pass if the gloss were dropped. | current |
+| wf_e9645602-884 | `record:DE:digital_identity_credentials:hosting` | claude-fable-5-1 | not supported | The page says 'Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund', which supports the core clause, but the expansion 'Informationstechnikzentrum Bund' and the description 'the federal IT service provider' appear nowhere on the page; the page itself expands ITZBund as 'IT-Dienstleistungszentrum Berlin'. Only the added gloss fails. | current |
+| wf_e9645602-884 | `record:IE:central_bank:hosting` | claude-fable-5-1 | not supported | The quote is in the PDF (p. 65, 'Our Technology'), but it only says the Bank transitioned to two new Tier-3 data centres in active-active configuration; neither the quote nor the surrounding text mentions a 'data centre service provider' or a transition to a new provider, so that part of the printed statement is added. The Tier-3/active-active part alone would be supported. | current |
+| wf_e9645602-884 | `record:AT:facial_biometric:hosting` | claude-fable-5-1 | not supported | § 16(6) Passgesetz 1992 says verbatim that Bundesrechenzentrum GmbH participates as processor in the data processing under §§ 22a and 22b, which supports the processor role; but the cited page says nothing about BRZ's ownership, so the printed '(state-owned)' is added from outside the source. | current |
 
 ## Runs
 
 | Run | Date | Facts checked | By model | Verdicts | Commit | Bundle SHA-256 | Workflow SHA-256 |
 |---|---|---:|---|---|---|---|---|
+| wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 | 0683d7fabda3 | 0e95781076d86516 | 2f780d07c1acd7ae |
 | wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 | 1e52404b64ae | b68a25235dd3f7be | 2f780d07c1acd7ae |
 | wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 | 29ffa20ba372 | bbd942f41db04282 | 2f780d07c1acd7ae |
 | wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 | 29ffa20ba372 | bbd942f41db04282 | 82530c1aa976b52e |

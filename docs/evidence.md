@@ -9,17 +9,17 @@
 
 | | Count |
 |---|---:|
-| Printed facts | 1400 |
-| Strong | 109 |
-| Standard | 1291 |
+| Printed facts | 1396 |
+| Strong | 108 |
+| Standard | 1288 |
 | Gaps (values withheld) | 4324 |
-| Disputed (withheld: source changed, or sources disagree) | 72 |
+| Disputed (withheld: source changed, or sources disagree) | 76 |
 
 ```mermaid
 pie showData
   title "Printed facts by evidence grade"
-  "Strong" : 109
-  "Standard" : 1291
+  "Strong" : 108
+  "Standard" : 1288
 ```
 
 **How grades are set.** Strong: a T1 or T2 source (an authoritative original or a competent public body); an official or primary source; the quote found exactly in the hashed document; an archived copy of exactly that URL; no name in the value missing from the quote; and the value either quoted from an English source, found verbatim in the original, or resting on figures matched in the original. A categorical finding is Strong only after a blind review (a reviewer shown the quote and URL but not the proposed value). Standard: every required check passed, but one of those did not. Anything less is not printed. Verified: Strong, and confirmed by a person under the two-person rule: someone on the reviewer roster, other than whoever submitted it, who reads the source's language and declared no conflict.
@@ -36,24 +36,24 @@ How good is the best source behind each printed fact? Tiers are set per host in 
 ```mermaid
 pie showData
   title "Printed facts by best source tier"
-  "T1" : 629
-  "T2" : 638
+  "T1" : 628
+  "T2" : 636
   "T3" : 10
-  "T4" : 123
+  "T4" : 122
 ```
 
 | Tier | Kind of source | Facts |
 |---|---|---:|
 | T1 | eurostat | 162 |
-| T1 | official law portal | 453 |
+| T1 | official law portal | 452 |
 | T1 | statistics office | 14 |
 | T2 | audit office | 13 |
 | T2 | government or authority | 278 |
-| T2 | public body | 347 |
+| T2 | public body | 345 |
 | T3 | chamber of commerce | 2 |
 | T3 | company | 5 |
 | T3 | private foundation | 3 |
-| T4 | press | 6 |
+| T4 | press | 5 |
 | T4 | unofficial law mirror | 117 |
 
 Facts whose best source is an unofficial copy of a statute are the first target of the vetting run: the same text on the official law portal would make them T1.
@@ -72,12 +72,12 @@ Each Strong condition a Standard fact misses. One fact can miss several, so the 
 
 | Condition not met | Facts |
 |---|---:|
-| Best source below T2 (e.g. an unofficial law mirror) | 149 |
-| Machine summary of a non-English quote, no figure to match | 869 |
-| No archived copy of exactly this URL | 615 |
+| Best source below T2 (e.g. an unofficial law mirror) | 148 |
+| Machine summary of a non-English quote, no figure to match | 866 |
+| No archived copy of exactly this URL | 614 |
 | Categorical: review agreed but was not blind | 160 |
-| A name in the value is not in the quote | 167 |
-| Secondary source or statement of absence | 30 |
+| A name in the value is not in the quote | 166 |
+| Secondary source or statement of absence | 29 |
 | Quote matched loosely (punctuation) | 20 |
 
 ## By state
@@ -87,25 +87,25 @@ xychart-beta
   title "Printed facts per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
   y-axis "facts" 0 --> 78
-  bar [66, 43, 46, 64, 64, 55, 61, 53, 60, 57, 33, 73, 60, 78, 63, 60, 21, 21, 49, 32, 51, 49, 49, 28, 45, 68, 51]
+  bar [65, 43, 46, 63, 64, 54, 61, 53, 60, 57, 33, 73, 60, 78, 62, 60, 21, 21, 49, 32, 51, 49, 49, 28, 45, 68, 51]
 ```
 
 ```mermaid
 xychart-beta
   title "Strong facts per state"
   x-axis [AT, BE, BG, CY, CZ, DE, DK, EE, EL, ES, FI, FR, HR, HU, IE, IT, LT, LU, LV, MT, NL, PL, PT, RO, SE, SI, SK]
-  y-axis "facts" 0 --> 30
-  bar [4, 6, 4, 4, 4, 1, 6, 3, 4, 0, 2, 6, 4, 2, 30, 1, 0, 0, 2, 13, 1, 1, 3, 1, 1, 5, 1]
+  y-axis "facts" 0 --> 29
+  bar [4, 6, 4, 4, 4, 1, 6, 3, 4, 0, 2, 6, 4, 2, 29, 1, 0, 0, 2, 13, 1, 1, 3, 1, 1, 5, 1]
 ```
 
 | State | Printed | Strong | Standard | Gaps |
 |---|---:|---:|---:|---:|
-| Austria (AT) | 66 | 4 | 62 | 146 |
+| Austria (AT) | 65 | 4 | 61 | 147 |
 | Belgium (BE) | 43 | 6 | 37 | 169 |
 | Bulgaria (BG) | 46 | 4 | 42 | 170 |
-| Cyprus (CY) | 64 | 4 | 60 | 148 |
+| Cyprus (CY) | 63 | 4 | 59 | 149 |
 | Czechia (CZ) | 64 | 4 | 60 | 148 |
-| Germany (DE) | 55 | 1 | 54 | 157 |
+| Germany (DE) | 54 | 1 | 53 | 158 |
 | Denmark (DK) | 61 | 6 | 55 | 155 |
 | Estonia (EE) | 53 | 3 | 50 | 163 |
 | Greece (EL) | 60 | 4 | 56 | 156 |
@@ -114,7 +114,7 @@ xychart-beta
 | France (FR) | 73 | 6 | 67 | 143 |
 | Croatia (HR) | 60 | 4 | 56 | 156 |
 | Hungary (HU) | 78 | 2 | 76 | 138 |
-| Ireland (IE) | 63 | 30 | 33 | 153 |
+| Ireland (IE) | 62 | 29 | 33 | 154 |
 | Italy (IT) | 60 | 1 | 59 | 156 |
 | Lithuania (LT) | 21 | 0 | 21 | 195 |
 | Luxembourg (LU) | 21 | 0 | 21 | 195 |
@@ -136,7 +136,7 @@ xychart-beta
 | Operator | 352 | 31 | 321 |
 | Eurostat fundamental or posture | 162 | 0 | 162 |
 | Sovereignty indicator | 126 | 6 | 120 |
-| Hosting | 60 | 4 | 56 |
+| Hosting | 56 | 3 | 53 |
 | Record count | 41 | 20 | 21 |
 | Infrastructure dependency | 39 | 2 | 37 |
 
@@ -145,6 +145,7 @@ xychart-beta
 A fact whose evidence came into question after it was admitted: its source dropped the quote or disappeared on recheck (`research.py recheck`), or a vetting run found a source that disagrees. The value is withheld until the question is settled by a published rule (METHOD.md section 7).
 
 - `record:AT:fingerprint_biometric:register` (AT): Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: All three quotes are present, but SPG § 75 establishes a 'Zentrale erkennungsdienstliche Evidenz' in which security authorities jointly process identification data that § 64(2) defines to include Papillarlinienabdrücke (fingerprints), and…. It is withheld until the fact or its source is corrected and checked again
+- `record:AT:facial_biometric:hosting` (AT): Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: § 16(6) Passgesetz 1992 says verbatim that Bundesrechenzentrum GmbH participates as processor in the data processing under §§ 22a and 22b, which supports the processor role; but the cited page says nothing about BRZ's ownership, so the…. It is withheld until the fact or its source is corrected and checked again
 - `record:AT:facial_biometric:foreign_dependency` (AT): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The Passgesetz says verbatim that Bundesrechenzentrum GmbH takes part as processor in the § 22a/§ 22b processing; it names a federal body as processor but says nothing about where the infrastructure runs, so 'National infrastructure' rests…. It is withheld until the fact or its source is corrected and checked again
 - `record:AT:issuance_history:foreign_dependency` (AT): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Both quotes are present (the RH sentence is split by a line-break hyphen 'Identitätsdokumentenregis- ters') and establish that BRZ GmbH, a federal body, is the statutory processor of the register; neither source says where the…. It is withheld until the fact or its source is corrected and checked again
 - `record:AT:residence_permits:register` (AT): Disputed: sources disagree. Bundeskanzleramt (RIS) — BFA-Verfahrensgesetz (BFA-VG), consolidated version gives the value this report printed; Bundesministerium für Inneres — Information zu der Verarbeitung „Zentrales Fremdenregister“ gives “Zentrales Fremdenregister (Central Register of Foreigners)”. Neither is higher-tier or a later statement of the same authority, so both are shown and neither is printed as fact
@@ -156,12 +157,14 @@ A fact whose evidence came into question after it was admitted: its source dropp
 - `indicator:CY:C1` (CY): Disputed: the cited source is gone (HTTP 404, rechecked 2026-09-30)
 - `indicator:CY:C2` (CY): Disputed: the cited source is gone (HTTP 404, rechecked 2026-09-30)
 - `record:CY:fingerprint_biometric:register` (CY): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: Art. 63(5) (and 67(4) for passports) says fingerprints taken for an ID card may be used only to issue the card and are deleted within 48 hours, verbatim. That shows ID-document fingerprints are not retained under this law, but the source…. It is withheld until the fact or its source is corrected and checked again
+- `record:CY:emergency_communications:hosting` (CY): Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The article supports that the NG112 development agreement was signed between Civil Defence and CYTA, but it mentions CYTA only by name and nowhere describes it as 'the Cypriot telecommunications organisation'; that descriptor is added from…. It is withheld until the fact or its source is corrected and checked again
 - `record:CY:emergency_communications:foreign_dependency` (CY): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The article only reports that Civil Defence signed a development agreement with CYTA for a system to be built over 20 months; it says nothing about where the infrastructure runs, what kind of entity CYTA is, or any hosting arrangement, so…. It is withheld until the fact or its source is corrected and checked again
 - `record:CZ:fingerprint_biometric:register` (CZ): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote is §57(3): data under §56(1)(o), which the act calls only 'biometrické údaje' (biometric data, not specifically fingerprints), are kept in the ID card register until the card is collected and at most 90 days after issue. That…. It is withheld until the fact or its source is corrected and checked again
 - `record:CZ:breeder_documents:operator` (CZ): Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: Both quotes are in Act 301/2000 (the .cz URL redirects to e-sbirka.gov.cz). § 1b makes the Ministry of the Interior controller of the Matriční informační systém, but § 1b(2) says that system holds the data entered in the register books…. It is withheld until the fact or its source is corrected and checked again
 - `record:CZ:customs:operator` (CZ): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote (§1(1) of Act 17/2012) only says the customs administration's basic task is protecting the Republic's economic interests and supervising goods and their movement; it does not name the General Directorate of Customs or customs…. It is withheld until the fact or its source is corrected and checked again
 - `record:CZ:business_registry:operator` (CZ): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 28(1) of Act 111/2009 supports DIA (Agentura, defined in § 7) as controller of the registr osob, but § 28(2) says the controller 'poskytuje editorům k přidělení identifikační číslo osoby' — it provides the identification numbers to the…. It is withheld until the fact or its source is corrected and checked again
 - `record:CZ:border_control:operator` (CZ): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: § 84(2) of Act 273/2008 supports that the Police Presidium operates the national component of SIS and performs the tasks of the authority exchanging supplementary information on SIS alerts, but neither page uses the word 'SIRENE' anywhere…. It is withheld until the fact or its source is corrected and checked again
+- `record:DE:digital_identity_credentials:hosting` (DE): Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The page says 'Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund', which supports the core clause, but the expansion 'Informationstechnikzentrum Bund' and the description 'the federal IT service provider' appear nowhere on the…. It is withheld until the fact or its source is corrected and checked again
 - `record:DK:vehicle_licensing:register` (DK): Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote and § 1(2) are on the page; § 1(2) says the register holds data on each vehicle and who it belongs to ('tilhørsforhold'). But the printed text calls the register 'DMR', and that name or abbreviation does not appear anywhere on…. It is withheld until the fact or its source is corrected and checked again
 - `record:EE:facial_biometric:register` (EE): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: Both quotes are verbatim (ITDS archive live; ABIS page via its cited archived copy), and the ITDS sentence does define biometric data as facial image, fingerprints, signature and iris images. But the printed text is that statutory…. It is withheld until the fact or its source is corrected and checked again
 - `record:EE:fingerprint_biometric:operator` (EE): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) could not confirm this: The quote says the controller is Politsei- ja Piirivalveamet 'välja arvatud lõigetes 2 ja 3 sätestatud andmete puhul', with the Ministry of Foreign Affairs as controller for data entered under §§ 10, 15 and 16; the printed statement names…. It is withheld until the fact or its source is corrected and checked again
@@ -191,6 +194,7 @@ A fact whose evidence came into question after it was admitted: its source dropp
 - `record:IE:police_records:register` (IE): Disputed: the fact check (claude-fable-5-1, run wf_72f99a66-4e9) did not confirm this: garda.ie refused the connection, so I read the project's hashed copy (sha256 c415d6a9…, as in fetch_manifest.csv); the quote is there and the CSO page quote is live. Both call PULSE 'An Garda Síochána's database' with incident data, but…. It is withheld until the fact or its source is corrected and checked again
 - `record:IE:intelligence:register` (IE): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The quote names Military Intelligence as a Defence Forces function delivering security outputs; nowhere does the report name a register or system, and 'holdings' is the report's own wording. The source confirms the unit exists but not a…. It is withheld until the fact or its source is corrected and checked again
 - `record:IE:public_finance:register` (IE): Disputed: the fact check (claude-fable-5-1, run wf_da123db1-a4e) did not confirm this: The FMSS system name is supported, but the page contradicts '(incl. the Exchequer)': it says the Exchequer ran FMSS in parallel from April 2022 and that in September 2022 the Department of Finance 'made the decision to pause the…. It is withheld until the fact or its source is corrected and checked again
+- `record:IE:central_bank:hosting` (IE): Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The quote is in the PDF (p. 65, 'Our Technology'), but it only says the Bank transitioned to two new Tier-3 data centres in active-active configuration; neither the quote nor the surrounding text mentions a 'data centre service provider'…. It is withheld until the fact or its source is corrected and checked again
 - `record:IE:central_bank:foreign_dependency` (IE): Disputed: the fact check (claude-opus-5-5, run wf_8232a23d-013) was confirmed once, but a second checker in a stability sample did not confirm this: The quote only names the legal instrument for TARGET2, an ECB guideline. It says nothing about where the central bank's infrastructure runs or who hosts it. Elsewhere the page calls T2 the Eurosystem's single technical platform, with an…. It is withheld until the fact or its source is corrected and checked again
 - `record:IE:water_control:register` (IE): Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)
 - `record:IE:water_control:operator` (IE): Disputed: the cited source no longer contains the quoted text (rechecked 2026-09-30)
@@ -238,15 +242,15 @@ Where a citizen helps most: values still withheld, items the agents did not reac
 | Poland (PL) | pl | 163 | 0 | 0 | 0 |
 | Netherlands (NL) | nl | 161 | 0 | 10 | 0 |
 | Spain (ES) | es | 159 | 10 | 0 | 0 |
-| Germany (DE) | de | 157 | 7 | 1 | 0 |
+| Germany (DE) | de | 158 | 7 | 1 | 0 |
 | Greece (EL) | el | 156 | 26 | 7 | 0 |
 | Croatia (HR) | hr | 156 | 28 | 0 | 0 |
 | Italy (IT) | it | 156 | 6 | 8 | 0 |
 | Denmark (DK) | da | 155 | 0 | 0 | 0 |
-| Ireland (IE) | en, ga | 153 | 28 | 29 | 0 |
-| Cyprus (CY) | el, tr | 148 | 0 | 7 | 0 |
+| Ireland (IE) | en, ga | 154 | 28 | 29 | 0 |
+| Cyprus (CY) | el, tr | 149 | 0 | 7 | 0 |
 | Czechia (CZ) | cs | 148 | 0 | 6 | 0 |
-| Austria (AT) | de | 146 | 0 | 0 | 0 |
+| Austria (AT) | de | 147 | 0 | 0 | 0 |
 | Slovenia (SI) | sl | 144 | 0 | 1 | 0 |
 | France (FR) | fr | 143 | 40 | 4 | 0 |
 | Hungary (HU) | hu | 138 | 0 | 4 | 0 |

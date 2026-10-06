@@ -13943,40 +13943,6 @@
     "value_as_found": "BOS-Digitalfunk, österreichweites Digitalfunksystem für Behörden und Organisationen mit Sicherheitsaufgaben (nationwide public-safety digital radio system)"
    }
   ],
-  "record:AT:facial_biometric:hosting": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "checklist": [
-     "T1 authoritative original (official law portal)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "archived copy of this URL",
-     "value is a machine summary of the quote",
-     "non-English source, machine-translated"
-    ],
-    "checks": {
-     "archived": true,
-     "document_hashed": true,
-     "figures_matched": false,
-     "language": "machine-translated",
-     "names_not_in_quote": [],
-     "quote_match": "exact",
-     "source": "official",
-     "tier": 1,
-     "tier_kind": "official_law_portal",
-     "value": "summary"
-    },
-    "confidence": "official",
-    "gloss": "Bundesrechenzentrum GmbH shall, as processor, participate for a fee in the conduct of the data processing under § 22a and § 22b.",
-    "grade": "Standard",
-    "locator": "page text",
-    "original": "Die Bundesrechenzentrum GmbH hat als Auftragsverarbeiterin bei der Führung von Datenverarbeitungen gemäß § 22a und § 22b gegen Entgelt mitzuwirken.",
-    "quote": "Die Bundesrechenzentrum GmbH hat als Auftragsverarbeiterin bei der Führung von Datenverarbeitungen gemäß § 22a und § 22b gegen Entgelt mitzuwirken. [English: Bundesrechenzentrum GmbH shall, as processor, participate for a fee in the conduct of the data processing under § 22a and § 22b.]",
-    "retrieved": "2026-09-29",
-    "source_id": "ris-bka-gv-at:c8de5cda2b",
-    "value_as_found": "Bundesrechenzentrum GmbH (state-owned) is the processor for the passport data processing under §§ 22a and 22b"
-   }
-  ],
   "record:AT:facial_biometric:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -18752,43 +18718,6 @@
     "value_as_found": "computerised population register system (used for the preparation and conduct of elections)"
    }
   ],
-  "record:CY:emergency_communications:hosting": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "checklist": [
-     "T4 secondary (press)",
-     "secondary source",
-     "quote found (exact match) in the hashed document",
-     "archived copy of this URL",
-     "value is a machine summary of the quote",
-     "not in the quote: NG112",
-     "non-English source, machine-translated"
-    ],
-    "checks": {
-     "archived": true,
-     "document_hashed": true,
-     "figures_matched": false,
-     "language": "machine-translated",
-     "names_not_in_quote": [
-      "NG112"
-     ],
-     "quote_match": "exact",
-     "source": "secondary",
-     "tier": 4,
-     "tier_kind": "press",
-     "value": "summary"
-    },
-    "confidence": "secondary",
-    "gloss": "The agreement for the development of the Next Generation 112 System between Civil Defence and CYTA was signed yesterday, with an implementation horizon of 20 months.",
-    "grade": "Standard",
-    "locator": "page text",
-    "original": "Υπογράφηκε χθες η συμφωνία για την ανάπτυξη του Συστήματος Νέας Γενιάς 112 μεταξύ της Πολιτικής Άμυνας και της CYTA, με ορίζοντα υλοποίησης του έργου τους 20 μήνες.",
-    "quote": "Υπογράφηκε χθες η συμφωνία για την ανάπτυξη του Συστήματος Νέας Γενιάς 112 μεταξύ της Πολιτικής Άμυνας και της CYTA, με ορίζοντα υλοποίησης του έργου τους 20 μήνες. [English: The agreement for the development of the Next Generation 112 System between Civil Defence and CYTA was signed yesterday, with an implementation horizon of 20 months.]",
-    "retrieved": "2026-09-29",
-    "source_id": "news-rik-cy:647e246cd1",
-    "value_as_found": "NG112 developed by CYTA, the Cypriot telecommunications organisation"
-   }
-  ],
   "record:CY:emergency_communications:register": [
    {
     "checked_by": "research.py: quote exact in fetched document",
@@ -23026,40 +22955,6 @@
     "retrieved": "2026-09-29",
     "source_id": "ozg-brandenburg-de:9abc55e93a",
     "value_as_found": "national"
-   }
-  ],
-  "record:DE:digital_identity_credentials:hosting": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "checklist": [
-     "T2 competent public body or audit office (public body)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "no archived copy of this URL",
-     "value is a machine summary of the quote",
-     "non-English source, machine-translated"
-    ],
-    "checks": {
-     "archived": false,
-     "document_hashed": true,
-     "figures_matched": false,
-     "language": "machine-translated",
-     "names_not_in_quote": [],
-     "quote_match": "exact",
-     "source": "official",
-     "tier": 2,
-     "tier_kind": "public_body",
-     "value": "summary"
-    },
-    "confidence": "official",
-    "gloss": "BundID is operated in the ITZBund data centre",
-    "grade": "Standard",
-    "locator": "page text",
-    "original": "Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund",
-    "quote": "Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund [English: BundID is operated in the ITZBund data centre]",
-    "retrieved": "2026-09-29",
-    "source_id": "ozg-brandenburg-de:9abc55e93a",
-    "value_as_found": "BundID is operated in the data centre of the Informationstechnikzentrum Bund (ITZBund), the federal IT service provider"
    }
   ],
   "record:DE:digital_identity_credentials:register": [
@@ -39811,41 +39706,6 @@
     "retrieved": "2026-09-29",
     "source_id": "enterprise-gov-ie:b3438928a5",
     "value_as_found": "Register of companies, business names and limited partnerships held by the Companies Registration Office"
-   }
-  ],
-  "record:IE:central_bank:hosting": [
-   {
-    "checked_by": "research.py: quote exact in fetched document",
-    "checklist": [
-     "T2 competent public body or audit office (public body)",
-     "official source",
-     "quote found (exact match) in the hashed document",
-     "archived copy of this URL",
-     "value is a machine summary of the quote",
-     "every figure found in the original",
-     "English source"
-    ],
-    "checks": {
-     "archived": true,
-     "document_hashed": true,
-     "figures_matched": true,
-     "language": "english",
-     "names_not_in_quote": [],
-     "quote_match": "exact",
-     "source": "official",
-     "tier": 2,
-     "tier_kind": "public_body",
-     "value": "summary"
-    },
-    "confidence": "official",
-    "gloss": "",
-    "grade": "Strong",
-    "locator": "PDF text",
-    "original": "A major milestone was the successful transitioning to two new Tier-3 data centres operating in active-active configuration, providing near-zero downtime capability and avails of new security monitoring capabilities.",
-    "quote": "A major milestone was the successful transitioning to two new Tier-3 data centres operating in active-active configuration, providing near-zero downtime capability and avails of new security monitoring capabilities.",
-    "retrieved": "2026-09-29",
-    "source_id": "centralbank-ie:8160b5326b",
-    "value_as_found": "Transitioned to a new data centre service provider: two Tier-3 data centres in active-active configuration (provider not named)"
    }
   ],
   "record:IE:central_bank:operator": [
@@ -80768,9 +80628,8 @@
           "c": [
            "record:AT:facial_biometric:hosting"
           ],
-          "g": "Standard",
-          "role": "fact",
-          "t": "Bundesrechenzentrum GmbH (state-owned) is the processor for the passport data processing under §§ 22a and 22b"
+          "role": "disputed",
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: § 16(6) Passgesetz 1992 says verbatim that Bundesrechenzentrum GmbH participates as processor in the data processing under §§ 22a and 22b, which supports the processor role; but the cited page says nothing about BRZ's ownership, so the…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "c": [
@@ -87784,9 +87643,8 @@
           "c": [
            "record:CY:emergency_communications:hosting"
           ],
-          "g": "Standard",
-          "role": "fact",
-          "t": "NG112 developed by CYTA, the Cypriot telecommunications organisation"
+          "role": "disputed",
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The article supports that the NG112 development agreement was signed between Civil Defence and CYTA, but it mentions CYTA only by name and nowhere describes it as 'the Cypriot telecommunications organisation'; that descriptor is added from…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "c": [
@@ -91032,9 +90890,8 @@
           "c": [
            "record:DE:digital_identity_credentials:hosting"
           ],
-          "g": "Standard",
-          "role": "fact",
-          "t": "BundID is operated in the data centre of the Informationstechnikzentrum Bund (ITZBund), the federal IT service provider"
+          "role": "disputed",
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The page says 'Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund', which supports the core clause, but the expansion 'Informationstechnikzentrum Bund' and the description 'the federal IT service provider' appear nowhere on the…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "c": [
@@ -109716,9 +109573,8 @@
           "c": [
            "record:IE:central_bank:hosting"
           ],
-          "g": "Strong",
-          "role": "fact",
-          "t": "Transitioned to a new data centre service provider: two Tier-3 data centres in active-active configuration (provider not named)"
+          "role": "disputed",
+          "t": "Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The quote is in the PDF (p. 65, 'Our Technology'), but it only says the Bank transitioned to two new Tier-3 data centres in active-active configuration; neither the quote nor the surrounding text mentions a 'data centre service provider'…. It is withheld until the fact or its source is corrected and checked again"
          },
          {
           "c": [
@@ -134182,7 +134038,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -134338,6 +134194,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -134458,7 +134336,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "62 of 66 printed facts about Austria pass."
+          "t": "65 of 65 printed facts about Austria pass."
          }
         ],
         "type": "p"
@@ -134878,15 +134756,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -134913,32 +134791,6 @@
           {
            "role": "method",
            "t": "wf_da123db1-a4e"
-          }
-         ],
-         [
-          {
-           "role": "label",
-           "t": "record:AT:facial_biometric:hosting"
-          },
-          {
-           "role": "method",
-           "t": "Facial biometric: hosting"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "none"
-          },
-          {
-           "role": "method",
-           "t": "never checked"
-          },
-          {
-           "role": "method",
-           "t": ""
           }
          ],
          [
@@ -135008,15 +134860,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -135346,15 +135198,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -136280,6 +136132,28 @@
          [
           {
            "role": "label",
+           "t": "record:AT:facial_biometric:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Facial biometric: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "not supported"
+          },
+          {
+           "role": "method",
+           "t": "§ 16(6) Passgesetz 1992 says verbatim that Bundesrechenzentrum GmbH participates as processor in the data processing under §§ 22a and 22b, which supports the processor role; but the cited page says nothing about BRZ's ownership, so the printed '(state-owned)' is added from outside the source."
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:AT:fingerprint_biometric:register"
           },
           {
@@ -136359,7 +136233,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -136515,6 +136389,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -136635,7 +136531,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "42 of 43 printed facts about Belgium pass."
+          "t": "43 of 43 printed facts about Belgium pass."
          }
         ],
         "type": "p"
@@ -137055,15 +136951,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -137847,7 +137743,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -138003,6 +137899,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -138123,7 +138041,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "43 of 46 printed facts about Bulgaria pass."
+          "t": "46 of 46 printed facts about Bulgaria pass."
          }
         ],
         "type": "p"
@@ -138595,15 +138513,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -139141,15 +139059,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -139245,15 +139163,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -139504,7 +139422,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -139660,6 +139578,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -139780,7 +139720,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "60 of 64 printed facts about Cyprus pass."
+          "t": "63 of 63 printed facts about Cyprus pass."
          }
         ],
         "type": "p"
@@ -140200,15 +140140,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -140720,15 +140660,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -140980,15 +140920,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -141358,32 +141298,6 @@
          [
           {
            "role": "label",
-           "t": "record:CY:emergency_communications:hosting"
-          },
-          {
-           "role": "method",
-           "t": "Emergency calls and public-safety radio: hosting"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "none"
-          },
-          {
-           "role": "method",
-           "t": "never checked"
-          },
-          {
-           "role": "method",
-           "t": ""
-          }
-         ],
-         [
-          {
-           "role": "label",
            "t": "record:CY:national_archives:register"
           },
           {
@@ -141550,6 +141464,28 @@
          [
           {
            "role": "label",
+           "t": "record:CY:emergency_communications:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Emergency calls and public-safety radio: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "not supported"
+          },
+          {
+           "role": "method",
+           "t": "The article supports that the NG112 development agreement was signed between Civil Defence and CYTA, but it mentions CYTA only by name and nowhere describes it as 'the Cypriot telecommunications organisation'; that descriptor is added from outside the source. The core clause would pass if the gloss were dropped."
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:CY:fingerprint_biometric:register"
           },
           {
@@ -141607,7 +141543,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -141760,6 +141696,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
          [
           {
            "role": "label",
@@ -143776,7 +143734,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -143932,6 +143890,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -144052,7 +144032,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "52 of 55 printed facts about Germany pass."
+          "t": "54 of 54 printed facts about Germany pass."
          }
         ],
         "type": "p"
@@ -144498,15 +144478,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -144798,32 +144778,6 @@
          [
           {
            "role": "label",
-           "t": "record:DE:digital_identity_credentials:hosting"
-          },
-          {
-           "role": "method",
-           "t": "Digital identity credentials: hosting"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "none"
-          },
-          {
-           "role": "method",
-           "t": "never checked"
-          },
-          {
-           "role": "method",
-           "t": ""
-          }
-         ],
-         [
-          {
-           "role": "label",
            "t": "record:DE:digital_identity_credentials:foreign_dependency"
           },
           {
@@ -144888,15 +144842,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -145533,13 +145487,60 @@
      {
       "blocks": [
        {
-        "spans": [
+        "align": [
+         "left",
+         "left",
+         "left",
+         "left",
+         "left"
+        ],
+        "columns": [
          {
-          "role": "method",
-          "t": "None."
+          "role": "label",
+          "t": "Claim"
+         },
+         {
+          "role": "label",
+          "t": "What it answers"
+         },
+         {
+          "role": "label",
+          "t": "Checked by"
+         },
+         {
+          "role": "label",
+          "t": "Verdict"
+         },
+         {
+          "role": "label",
+          "t": "Reason"
          }
         ],
-        "type": "p"
+        "rows": [
+         [
+          {
+           "role": "label",
+           "t": "record:DE:digital_identity_credentials:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Digital identity credentials: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "not supported"
+          },
+          {
+           "role": "method",
+           "t": "The page says 'Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund', which supports the core clause, but the expansion 'Informationstechnikzentrum Bund' and the description 'the federal IT service provider' appear nowhere on the page; the page itself expands ITZBund as 'IT-Dienstleistungszentrum Berlin'. Only the added gloss fails."
+          }
+         ]
+        ],
+        "type": "table"
        }
       ],
       "id": "f-withheld",
@@ -145576,7 +145577,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -145732,6 +145733,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -145852,7 +145875,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "59 of 61 printed facts about Denmark pass."
+          "t": "61 of 61 printed facts about Denmark pass."
          }
         ],
         "type": "p"
@@ -147182,15 +147205,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -147286,15 +147309,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -147579,7 +147602,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -147732,6 +147755,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
          [
           {
            "role": "label",
@@ -149418,7 +149463,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -149574,6 +149619,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -149694,7 +149761,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "53 of 60 printed facts about Greece pass."
+          "t": "60 of 60 printed facts about Greece pass."
          }
         ],
         "type": "p"
@@ -150062,15 +150129,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -150348,15 +150415,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -150400,15 +150467,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -150530,15 +150597,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -150660,15 +150727,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -150842,15 +150909,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -151102,15 +151169,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -151417,7 +151484,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -151570,6 +151637,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
          [
           {
            "role": "label",
@@ -153316,7 +153405,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -153469,6 +153558,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
          [
           {
            "role": "label",
@@ -154544,7 +154655,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -154700,6 +154811,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -154820,7 +154953,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "72 of 73 printed facts about France pass."
+          "t": "73 of 73 printed facts about France pass."
          }
         ],
         "type": "p"
@@ -156696,15 +156829,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -156903,7 +157036,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -157059,6 +157192,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -157179,7 +157334,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "57 of 60 printed facts about Croatia pass."
+          "t": "60 of 60 printed facts about Croatia pass."
          }
         ],
         "type": "p"
@@ -157703,15 +157858,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -158041,15 +158196,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -158639,15 +158794,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -158880,7 +159035,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -159036,6 +159191,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -159156,7 +159333,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "65 of 78 printed facts about Hungary pass."
+          "t": "78 of 78 printed facts about Hungary pass."
          }
         ],
         "type": "p"
@@ -159472,15 +159649,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -159550,15 +159727,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -159654,15 +159831,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -159758,15 +159935,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -159836,15 +160013,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -159992,15 +160169,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -160096,15 +160273,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -160252,15 +160429,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -160564,15 +160741,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -160824,15 +161001,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -160876,15 +161053,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -160980,15 +161157,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -161084,15 +161261,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -161479,7 +161656,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -161635,6 +161812,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -161755,7 +161954,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "60 of 63 printed facts about Ireland pass."
+          "t": "62 of 62 printed facts about Ireland pass."
          }
         ],
         "type": "p"
@@ -162201,15 +162400,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -162305,15 +162504,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -163229,32 +163428,6 @@
          [
           {
            "role": "label",
-           "t": "record:IE:central_bank:hosting"
-          },
-          {
-           "role": "method",
-           "t": "Central bank systems: hosting"
-          },
-          {
-           "role": "method",
-           "t": "unrecorded"
-          },
-          {
-           "role": "method",
-           "t": "none"
-          },
-          {
-           "role": "method",
-           "t": "never checked"
-          },
-          {
-           "role": "method",
-           "t": ""
-          }
-         ],
-         [
-          {
-           "role": "label",
            "t": "record:IE:grid_control:register"
           },
           {
@@ -163543,6 +163716,28 @@
          [
           {
            "role": "label",
+           "t": "record:IE:central_bank:hosting"
+          },
+          {
+           "role": "method",
+           "t": "Central bank systems: hosting"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1"
+          },
+          {
+           "role": "method",
+           "t": "not supported"
+          },
+          {
+           "role": "method",
+           "t": "The quote is in the PDF (p. 65, 'Our Technology'), but it only says the Bank transitioned to two new Tier-3 data centres in active-active configuration; neither the quote nor the surrounding text mentions a 'data centre service provider' or a transition to a new provider, so that part of the printed statement is added. The Tier-3/active-active part alone would be supported."
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "record:IE:electoral_roll:foreign_dependency"
           },
           {
@@ -163666,7 +163861,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -163822,6 +164017,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -163942,7 +164159,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "57 of 60 printed facts about Italy pass."
+          "t": "60 of 60 printed facts about Italy pass."
          }
         ],
         "type": "p"
@@ -164674,15 +164891,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -164778,15 +164995,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -165506,15 +165723,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -165643,7 +165860,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -165796,6 +166013,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
          [
           {
            "role": "label",
@@ -166559,7 +166798,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -166715,6 +166954,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -166835,7 +167096,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "20 of 21 printed facts about Luxembourg pass."
+          "t": "21 of 21 printed facts about Luxembourg pass."
          }
         ],
         "type": "p"
@@ -167385,15 +167646,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -167475,7 +167736,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -167628,6 +167889,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
          [
           {
            "role": "label",
@@ -169119,7 +169402,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -169272,6 +169555,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
          [
           {
            "role": "label",
@@ -170368,7 +170673,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -170524,6 +170829,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -170644,7 +170971,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "48 of 51 printed facts about Netherlands pass."
+          "t": "51 of 51 printed facts about Netherlands pass."
          }
         ],
         "type": "p"
@@ -171350,15 +171677,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -171870,15 +172197,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -172000,15 +172327,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ]
         ],
@@ -172064,7 +172391,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -172217,6 +172544,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
          [
           {
            "role": "label",
@@ -173755,7 +174104,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -173908,6 +174257,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
          [
           {
            "role": "label",
@@ -175534,7 +175905,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -175687,6 +176058,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
          [
           {
            "role": "label",
@@ -176679,7 +177072,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -176835,6 +177228,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -176955,7 +177370,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "43 of 45 printed facts about Sweden pass."
+          "t": "45 of 45 printed facts about Sweden pass."
          }
         ],
         "type": "p"
@@ -177609,15 +178024,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -178077,15 +178492,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -178310,7 +178725,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -178466,6 +178881,28 @@
          [
           {
            "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
+         [
+          {
+           "role": "label",
            "t": "wf_72f99a66-4e9"
           },
           {
@@ -178586,7 +179023,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "61 of 68 printed facts about Slovenia pass."
+          "t": "68 of 68 printed facts about Slovenia pass."
          }
         ],
         "type": "p"
@@ -179058,15 +179495,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -179188,15 +179625,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -179396,15 +179833,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -179500,15 +179937,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -179968,15 +180405,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -180124,15 +180561,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -180332,15 +180769,15 @@
           },
           {
            "role": "method",
-           "t": "none"
+           "t": "claude-fable-5-1"
           },
           {
            "role": "method",
-           "t": "never checked"
+           "t": "supported"
           },
           {
            "role": "method",
-           "t": ""
+           "t": "wf_e9645602-884"
           }
          ],
          [
@@ -180495,7 +180932,7 @@
         "spans": [
          {
           "role": "method",
-          "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+          "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
          }
         ],
         "type": "p"
@@ -180648,6 +181085,28 @@
          }
         ],
         "rows": [
+         [
+          {
+           "role": "label",
+           "t": "wf_e9645602-884"
+          },
+          {
+           "role": "method",
+           "t": "2026-10-06"
+          },
+          {
+           "role": "method",
+           "t": "60"
+          },
+          {
+           "role": "method",
+           "t": "claude-fable-5-1: 60"
+          },
+          {
+           "role": "method",
+           "t": "supported: 56; not supported: 4"
+          }
+         ],
          [
           {
            "role": "label",
@@ -182192,7 +182651,7 @@
        "spans": [
         {
          "role": "method",
-         "t": "In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check."
+         "t": "In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check."
         }
        ],
        "type": "p"
@@ -182345,6 +182804,28 @@
         }
        ],
        "rows": [
+        [
+         {
+          "role": "label",
+          "t": "wf_e9645602-884"
+         },
+         {
+          "role": "method",
+          "t": "2026-10-06"
+         },
+         {
+          "role": "method",
+          "t": "60"
+         },
+         {
+          "role": "method",
+          "t": "claude-fable-5-1: 60"
+         },
+         {
+          "role": "method",
+          "t": "supported: 56; not supported: 4"
+         }
+        ],
         [
          {
           "role": "label",
@@ -182502,19 +182983,19 @@
          },
          {
           "role": "method",
-          "t": "66"
+          "t": "65"
          },
          {
           "role": "method",
-          "t": "62"
+          "t": "65"
+         },
+         {
+          "role": "method",
+          "t": "0"
          },
          {
           "role": "method",
           "t": "4"
-         },
-         {
-          "role": "method",
-          "t": "3"
          }
         ],
         [
@@ -182528,11 +183009,11 @@
          },
          {
           "role": "method",
-          "t": "42"
+          "t": "43"
          },
          {
           "role": "method",
-          "t": "1"
+          "t": "0"
          },
          {
           "role": "method",
@@ -182550,11 +183031,11 @@
          },
          {
           "role": "method",
-          "t": "43"
+          "t": "46"
          },
          {
           "role": "method",
-          "t": "3"
+          "t": "0"
          },
          {
           "role": "method",
@@ -182572,11 +183053,11 @@
          },
          {
           "role": "method",
-          "t": "57"
+          "t": "60"
          },
          {
           "role": "method",
-          "t": "3"
+          "t": "0"
          },
          {
           "role": "method",
@@ -182590,19 +183071,19 @@
          },
          {
           "role": "method",
-          "t": "64"
+          "t": "63"
          },
          {
           "role": "method",
-          "t": "60"
+          "t": "63"
          },
          {
           "role": "method",
-          "t": "4"
+          "t": "0"
          },
          {
           "role": "method",
-          "t": "2"
+          "t": "3"
          }
         ],
         [
@@ -182638,11 +183119,11 @@
          },
          {
           "role": "method",
-          "t": "59"
+          "t": "61"
          },
          {
           "role": "method",
-          "t": "2"
+          "t": "0"
          },
          {
           "role": "method",
@@ -182704,11 +183185,11 @@
          },
          {
           "role": "method",
-          "t": "72"
+          "t": "73"
          },
          {
           "role": "method",
-          "t": "1"
+          "t": "0"
          },
          {
           "role": "method",
@@ -182722,19 +183203,19 @@
          },
          {
           "role": "method",
-          "t": "55"
+          "t": "54"
          },
          {
           "role": "method",
-          "t": "52"
-         },
-         {
-          "role": "method",
-          "t": "3"
+          "t": "54"
          },
          {
           "role": "method",
           "t": "0"
+         },
+         {
+          "role": "method",
+          "t": "1"
          }
         ],
         [
@@ -182748,11 +183229,11 @@
          },
          {
           "role": "method",
-          "t": "53"
+          "t": "60"
          },
          {
           "role": "method",
-          "t": "7"
+          "t": "0"
          },
          {
           "role": "method",
@@ -182770,11 +183251,11 @@
          },
          {
           "role": "method",
-          "t": "65"
+          "t": "78"
          },
          {
           "role": "method",
-          "t": "13"
+          "t": "0"
          },
          {
           "role": "method",
@@ -182788,19 +183269,19 @@
          },
          {
           "role": "method",
-          "t": "63"
+          "t": "62"
          },
          {
           "role": "method",
-          "t": "60"
+          "t": "62"
          },
          {
           "role": "method",
-          "t": "3"
+          "t": "0"
          },
          {
           "role": "method",
-          "t": "7"
+          "t": "8"
          }
         ],
         [
@@ -182814,11 +183295,11 @@
          },
          {
           "role": "method",
-          "t": "57"
+          "t": "60"
          },
          {
           "role": "method",
-          "t": "3"
+          "t": "0"
          },
          {
           "role": "method",
@@ -182880,11 +183361,11 @@
          },
          {
           "role": "method",
-          "t": "20"
+          "t": "21"
          },
          {
           "role": "method",
-          "t": "1"
+          "t": "0"
          },
          {
           "role": "method",
@@ -182924,11 +183405,11 @@
          },
          {
           "role": "method",
-          "t": "48"
+          "t": "51"
          },
          {
           "role": "method",
-          "t": "3"
+          "t": "0"
          },
          {
           "role": "method",
@@ -183034,11 +183515,11 @@
          },
          {
           "role": "method",
-          "t": "61"
+          "t": "68"
          },
          {
           "role": "method",
-          "t": "7"
+          "t": "0"
          },
          {
           "role": "method",
@@ -183078,11 +183559,11 @@
          },
          {
           "role": "method",
-          "t": "43"
+          "t": "45"
          },
          {
           "role": "method",
-          "t": "2"
+          "t": "0"
          },
          {
           "role": "method",
@@ -183108,32 +183589,32 @@
    ]
   },
   "lines": {
-   "AT": "Fact check: 62 of 66 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/AT",
-   "BE": "Fact check: 42 of 43 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/BE",
-   "BG": "Fact check: 43 of 46 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/BG",
-   "CY": "Fact check: 60 of 64 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/CY",
+   "AT": "Fact check: 65 of 65 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/AT",
+   "BE": "Fact check: 43 of 43 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/BE",
+   "BG": "Fact check: 46 of 46 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/BG",
+   "CY": "Fact check: 63 of 63 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/CY",
    "CZ": "Fact check: 64 of 64 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/CZ",
-   "DE": "Fact check: 52 of 55 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DE",
-   "DK": "Fact check: 59 of 61 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DK",
+   "DE": "Fact check: 54 of 54 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DE",
+   "DK": "Fact check: 61 of 61 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/DK",
    "EE": "Fact check: 53 of 53 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/EE",
-   "EL": "Fact check: 53 of 60 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/EL",
+   "EL": "Fact check: 60 of 60 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/EL",
    "ES": "Fact check: 57 of 57 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/ES",
    "FI": "Fact check: 33 of 33 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/FI",
-   "FR": "Fact check: 72 of 73 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/FR",
-   "HR": "Fact check: 57 of 60 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/HR",
-   "HU": "Fact check: 65 of 78 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/HU",
-   "IE": "Fact check: 60 of 63 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/IE",
-   "IT": "Fact check: 57 of 60 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/IT",
+   "FR": "Fact check: 73 of 73 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/FR",
+   "HR": "Fact check: 60 of 60 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/HR",
+   "HU": "Fact check: 78 of 78 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/HU",
+   "IE": "Fact check: 62 of 62 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/IE",
+   "IT": "Fact check: 60 of 60 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/IT",
    "LT": "Fact check: 21 of 21 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/LT",
-   "LU": "Fact check: 20 of 21 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/LU",
+   "LU": "Fact check: 21 of 21 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/LU",
    "LV": "Fact check: 49 of 49 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/LV",
    "MT": "Fact check: 32 of 32 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/MT",
-   "NL": "Fact check: 48 of 51 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/NL",
+   "NL": "Fact check: 51 of 51 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/NL",
    "PL": "Fact check: 49 of 49 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/PL",
    "PT": "Fact check: 49 of 49 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/PT",
    "RO": "Fact check: 28 of 28 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/RO",
-   "SE": "Fact check: 43 of 45 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SE",
-   "SI": "Fact check: 61 of 68 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SI",
+   "SE": "Fact check: 45 of 45 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SE",
+   "SI": "Fact check: 68 of 68 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SI",
    "SK": "Fact check: 51 of 51 facts confirmed by a second model that did not write them (claude-fable-5-1); not by a person. How: /fact-check/SK"
   }
  },
@@ -183384,7 +183865,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "Every holding whose hosting a checked source states, by member state: 60 printed, and any withheld by the fact check marked as disputed. Each cell is the one the state's own report prints, with the same source. A holding not listed here has no sourced hosting yet; that is a gap in the evidence, not a finding that it is hosted nationally."
+        "t": "Every holding whose hosting a checked source states, by member state: 56 printed, and any withheld by the fact check marked as disputed. Each cell is the one the state's own report prints, with the same source. A holding not listed here has no sourced hosting yet; that is a gap in the evidence, not a finding that it is hosted nationally."
        }
       ],
       "type": "p"
@@ -183484,9 +183965,8 @@
          "c": [
           "record:AT:facial_biometric:hosting"
          ],
-         "g": "Standard",
-         "role": "fact",
-         "t": "Bundesrechenzentrum GmbH (state-owned) is the processor for the passport data processing under §§ 22a and 22b"
+         "role": "disputed",
+         "t": "Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: § 16(6) Passgesetz 1992 says verbatim that Bundesrechenzentrum GmbH participates as processor in the data processing under §§ 22a and 22b, which supports the processor role; but the cited page says nothing about BRZ's ownership, so the…. It is withheld until the fact or its source is corrected and checked again"
         },
         {
          "c": [
@@ -183981,9 +184461,8 @@
          "c": [
           "record:CY:emergency_communications:hosting"
          ],
-         "g": "Standard",
-         "role": "fact",
-         "t": "NG112 developed by CYTA, the Cypriot telecommunications organisation"
+         "role": "disputed",
+         "t": "Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The article supports that the NG112 development agreement was signed between Civil Defence and CYTA, but it mentions CYTA only by name and nowhere describes it as 'the Cypriot telecommunications organisation'; that descriptor is added from…. It is withheld until the fact or its source is corrected and checked again"
         },
         {
          "c": [
@@ -184170,9 +184649,8 @@
          "c": [
           "record:DE:digital_identity_credentials:hosting"
          ],
-         "g": "Standard",
-         "role": "fact",
-         "t": "BundID is operated in the data centre of the Informationstechnikzentrum Bund (ITZBund), the federal IT service provider"
+         "role": "disputed",
+         "t": "Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The page says 'Der Betrieb der BundID erfolgt im Rechenzentrum des ITZBund', which supports the core clause, but the expansion 'Informationstechnikzentrum Bund' and the description 'the federal IT service provider' appear nowhere on the…. It is withheld until the fact or its source is corrected and checked again"
         },
         {
          "c": [
@@ -185111,9 +185589,8 @@
          "c": [
           "record:IE:central_bank:hosting"
          ],
-         "g": "Strong",
-         "role": "fact",
-         "t": "Transitioned to a new data centre service provider: two Tier-3 data centres in active-active configuration (provider not named)"
+         "role": "disputed",
+         "t": "Disputed: the fact check (claude-fable-5-1, run wf_e9645602-884) did not confirm this: The quote is in the PDF (p. 65, 'Our Technology'), but it only says the Bank transitioned to two new Tier-3 data centres in active-active configuration; neither the quote nor the surrounding text mentions a 'data centre service provider'…. It is withheld until the fact or its source is corrected and checked again"
         },
         {
          "c": [
@@ -185831,7 +186308,7 @@
         },
         {
          "role": "method",
-         "t": "4"
+         "t": "3"
         },
         {
          "role": "method",
@@ -185967,7 +186444,7 @@
         },
         {
          "role": "method",
-         "t": "4"
+         "t": "3"
         },
         {
          "role": "method",
@@ -186171,7 +186648,7 @@
         },
         {
          "role": "method",
-         "t": "2"
+         "t": "1"
         },
         {
          "role": "method",
@@ -186273,7 +186750,7 @@
         },
         {
          "role": "method",
-         "t": "2"
+         "t": "1"
         },
         {
          "role": "method",
@@ -186767,7 +187244,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed."
+        "t": "This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1396 facts are printed, 4324 values are withheld as gaps, and 76 are withheld as disputed."
        }
       ],
       "type": "p"
@@ -187167,7 +187644,7 @@
         },
         {
          "role": "method",
-         "t": "629"
+         "t": "628"
         }
        ],
        [
@@ -187177,7 +187654,7 @@
         },
         {
          "role": "method",
-         "t": "638"
+         "t": "636"
         }
        ],
        [
@@ -187197,7 +187674,7 @@
         },
         {
          "role": "method",
-         "t": "123"
+         "t": "122"
         }
        ]
       ],
@@ -187251,7 +187728,7 @@
         },
         {
          "role": "method",
-         "t": "109"
+         "t": "108"
         }
        ],
        [
@@ -187261,7 +187738,7 @@
         },
         {
          "role": "method",
-         "t": "1291"
+         "t": "1288"
         }
        ]
       ],
@@ -187634,7 +188111,7 @@
       "spans": [
        {
         "role": "method",
-        "t": "In this build, 1340 of 1400 printed facts pass the fact check."
+        "t": "In this build, 1396 of 1396 printed facts pass the fact check."
        }
       ],
       "type": "p"

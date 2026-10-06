@@ -220,8 +220,10 @@ class RenderedFacts(unittest.TestCase):
     # 2026-10-03 by #94: two stability samples (wf_8232a23d-013, wf_90fb82e7-35e) had Opus 5.5 reject 6 of
     # 100 facts Fable 5.1 had confirmed; a second checker's disagreement now withholds the fact too. Then to
     # 1400 on 2026-10-05 by #95: the cited hosting of 60 holdings is printed (it was admitted but never
-    # shown); 11 more hosting values print as gaps, their quote lacking a year or number they state.
-    FACT_FLOOR = 1400
+    # shown); 11 more hosting values print as gaps, their quote lacking a year or number they state. Then to
+    # 1396 on 2026-10-06: the fact check of those 60 (Fable 5.1, wf_e9645602-884) confirmed 56 and the
+    # other 4 are withheld (#89).
+    FACT_FLOOR = 1396
 
     @classmethod
     def setUpClass(cls):

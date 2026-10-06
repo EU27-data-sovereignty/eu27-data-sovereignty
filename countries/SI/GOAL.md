@@ -146,7 +146,7 @@ Tier 0 and 1 holdings for Slovenia without a verified source yet. Corrections an
 
 > Machine-checked, not human-verified. Automated agents found these sources and checked them mechanically; no person has reviewed the findings. English wording of a non-English source is a machine translation or a machine summary of the quoted text. Treat each fact as a lead to its cited source, not as established. Corrections are welcome through the repository's issue template.
 
-This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1400 facts are printed, 4324 values are withheld as gaps, and 72 are withheld as disputed.
+This appendix is generated from the code and data that produced this document. Every rule below is the rule the build runs, and every number is counted from the files it reads. In this build: 1396 facts are printed, 4324 values are withheld as gaps, and 76 are withheld as disputed.
 
 ### How sources were found
 
@@ -203,10 +203,10 @@ How good is the best source behind each fact? Each cited host is classified once
 
 | Tier | Printed facts |
 |---|---:|
-| T1 authoritative original (official law portal, statistics office, Eurostat) | 629 |
-| T2 competent public body or audit office | 638 |
+| T1 authoritative original (official law portal, statistics office, Eurostat) | 628 |
+| T2 competent public body or audit office | 636 |
 | T3 other institution or company | 10 |
-| T4 secondary (unofficial law mirror, press, encyclopedia) | 123 |
+| T4 secondary (unofficial law mirror, press, encyclopedia) | 122 |
 
 ### Evidence grades
 
@@ -215,8 +215,8 @@ Strong: a T1 or T2 source (an authoritative original or a competent public body)
 | Grade | Printed facts |
 |---|---:|
 | Verified | 0 |
-| Strong | 109 |
-| Standard | 1291 |
+| Strong | 108 |
+| Standard | 1288 |
 
 There is no numeric confidence score: nothing has calibrated one.
 
@@ -259,7 +259,7 @@ Before anything is published, every printed fact is checked once more, exactly a
 | claude-fable-5-1 | claude-opus-5-5 |
 | anything else: unrecorded, a person, or a program | claude-fable-5-1 |
 
-In this build, 1340 of 1400 printed facts pass the fact check.
+In this build, 1396 of 1396 printed facts pass the fact check.
 
 ### Citizens and human review
 
@@ -301,7 +301,7 @@ Not reproducible byte for byte: agent research gives different findings if run a
 
 Every printed fact is put, exactly as printed, to a checker that is a different model from the one that wrote it. The checker fetches the cited source and decides whether it supports the statement as printed: the same value, name, unit, date, country and scope. A fact it does not confirm is withheld, shown as disputed with the checker's reason, until it is corrected and checked again. A production deploy is refused unless every printed fact has a current verdict of supported from an eligible checker.
 
-In this build, 1340 of 1400 printed facts pass, and 52 facts are withheld after the check.
+In this build, 1396 of 1396 printed facts pass, and 56 facts are withheld after the check.
 
 | Fact written by | Checked by |
 |---|---|
@@ -325,6 +325,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 | Run | Date | Facts checked | Checker models | Verdicts |
 |---|---|---:|---|---|
+| wf_e9645602-884 | 2026-10-06 | 60 | claude-fable-5-1: 60 | supported: 56; not supported: 4 |
 | wf_72f99a66-4e9 | 2026-10-03 | 31 | claude-fable-5-1: 31 | supported: 25; not supported: 6 |
 | wf_f14edd00-71f | 2026-10-02 | 12 | claude-fable-5-1: 12 | supported: 11; not supported: 1 |
 | wf_5fd3e22d-b86 | 2026-10-02 | 27 | claude-fable-5-1: 27 | supported: 27 |
@@ -333,7 +334,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 
 ### The verdict on each fact about Slovenia
 
-61 of 68 printed facts about Slovenia pass.
+68 of 68 printed facts about Slovenia pass.
 
 | Claim | What it answers | Written by | Checked by | Verdict | Run |
 |---|---|---|---|---|---|
@@ -353,12 +354,12 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:SI:facial_biometric:register | Facial biometric: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:facial_biometric:operator | Facial biometric: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:breeder_documents:register | Breeder document scans: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:SI:breeder_documents:hosting | Breeder document scans: hosting | unrecorded | none | never checked |  |
+| record:SI:breeder_documents:hosting | Breeder document scans: hosting | unrecorded | claude-fable-5-1 | supported | wf_e9645602-884 |
 | record:SI:issuance_history:register | Document issuance history: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:issuance_history:operator | Document issuance history: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:authentication_audit_log:register | Authentication audit log: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:authentication_audit_log:operator | Authentication audit log: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:SI:authentication_audit_log:hosting | Authentication audit log: hosting | unrecorded | none | never checked |  |
+| record:SI:authentication_audit_log:hosting | Authentication audit log: hosting | unrecorded | claude-fable-5-1 | supported | wf_e9645602-884 |
 | record:SI:authentication_audit_log:foreign_dependency | Authentication audit log: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:electoral_roll:register | Electoral roll entry: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:electoral_roll:count | Electoral roll entry: how many records it holds | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -366,11 +367,11 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:SI:police_records:register | Police information systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:digital_identity_credentials:register | Digital identity credentials: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:digital_identity_credentials:operator | Digital identity credentials: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:SI:digital_identity_credentials:hosting | Digital identity credentials: hosting | unrecorded | none | never checked |  |
+| record:SI:digital_identity_credentials:hosting | Digital identity credentials: hosting | unrecorded | claude-fable-5-1 | supported | wf_e9645602-884 |
 | record:SI:digital_identity_credentials:foreign_dependency | Digital identity credentials: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:trust_services_pki:register | State PKI and qualified trust services: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:trust_services_pki:operator | State PKI and qualified trust services: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:SI:trust_services_pki:hosting | State PKI and qualified trust services: hosting | unrecorded | none | never checked |  |
+| record:SI:trust_services_pki:hosting | State PKI and qualified trust services: hosting | unrecorded | claude-fable-5-1 | supported | wf_e9645602-884 |
 | record:SI:trust_services_pki:foreign_dependency | State PKI and qualified trust services: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | claude-opus-5-5 | claude-fable-5-1 | supported | wf_72f99a66-4e9 |
 | record:SI:residence_permits:register | Residence and migration status: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:tax:register | Tax: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -388,13 +389,13 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:SI:central_bank:register | Central bank systems: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:central_bank:foreign_dependency | Central bank systems: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:emergency_communications:register | Emergency calls and public-safety radio: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:SI:emergency_communications:hosting | Emergency calls and public-safety radio: hosting | unrecorded | none | never checked |  |
+| record:SI:emergency_communications:hosting | Emergency calls and public-safety radio: hosting | unrecorded | claude-fable-5-1 | supported | wf_e9645602-884 |
 | record:SI:crisis_management:register | Crisis management and civil protection: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:grid_control:register | Electricity grid control: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:grid_control:operator | Electricity grid control: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:education:register | Education: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:firearms_register:register | Firearms register: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:SI:firearms_register:hosting | Firearms register: hosting | unrecorded | none | never checked |  |
+| record:SI:firearms_register:hosting | Firearms register: hosting | unrecorded | claude-fable-5-1 | supported | wf_e9645602-884 |
 | record:SI:firearms_register:foreign_dependency | Firearms register: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:official_gazette:register | Official gazette and legislation: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:official_gazette:operator | Official gazette and legislation: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
@@ -402,7 +403,7 @@ A verdict holds for one fact exactly as printed: a SHA-256 of the claim, the que
 | record:SI:government_payroll:foreign_dependency | Government payroll and personnel: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:health_records:register | Health records: the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:health_records:operator | Health records: the body that operates it | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
-| record:SI:health_records:hosting | Health records: hosting | unrecorded | none | never checked |  |
+| record:SI:health_records:hosting | Health records: hosting | unrecorded | claude-fable-5-1 | supported | wf_e9645602-884 |
 | record:SI:health_records:foreign_dependency | Health records: where its infrastructure runs: national / eu_provider / non_eu_provider / mixed | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 | record:SI:national_archives:register | National archives (digital): the name of the register or system | unrecorded | claude-fable-5-1 | supported | wf_da123db1-a4e |
 

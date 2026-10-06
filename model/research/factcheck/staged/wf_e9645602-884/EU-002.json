@@ -1,0 +1,310 @@
+{
+ "run": "wf_e9645602-884",
+ "prepared": "2026-10-06-7aa12861",
+ "batch": "EU-002",
+ "iso": "EU",
+ "checker_model": "claude-fable-5-1",
+ "reported_model": "claude-fable-5-1",
+ "verdicts": [
+  {
+   "claim": "record:BG:business_registry:hosting",
+   "fact_sha256": "47cdd2d093c834b01893787ce3d70b47f37b815a637cc7923ac23c019ef58a2b",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Bulgarian National Audit Office report on the Registry Agency (АВ) names contract № 93-00-14 of 14.12.2017 with exactly this subject: expanding storage arrays, upgrading servers and supplying tape libraries serving the registers' information systems. Quote found verbatim in the PDF text (extracted with pdftotext).",
+   "quote_found": true,
+   "checked_url": "https://www.bulnao.government.bg/media/documents/OD_AV_230821.pdf"
+  },
+  {
+   "claim": "record:FR:statistics_microdata:hosting",
+   "fact_sha256": "7364ea2b939eb97fd2d8cbbf394bbb673eb15e9c9b9c57be772cf656ac041417",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says that because no market solution met the security requirements, 'le CASD a conçu un équipement sécurisé dédié'; the printed statement restates this without adding a location or operator.",
+   "quote_found": true,
+   "checked_url": "https://www.casd.eu/technologie/infrastructure/"
+  },
+  {
+   "claim": "record:NL:statistics_microdata:hosting",
+   "fact_sha256": "2edb2f9231cf8b6c3b5070b78f2961e679a4c796315c7d4f9bc7a01ca0fc39b5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim 'Het onderzoek wordt gedaan in de CBS-microdataomgeving', which is what the report prints.",
+   "quote_found": true,
+   "checked_url": "https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen"
+  },
+  {
+   "claim": "record:IE:central_bank:hosting",
+   "fact_sha256": "bff3fbb2a75f3cfe87d3c54507732e36280ebcdf7375066abfc948f02d287dd7",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "The quote is in the PDF (p. 65, 'Our Technology'), but it only says the Bank transitioned to two new Tier-3 data centres in active-active configuration; neither the quote nor the surrounding text mentions a 'data centre service provider' or a transition to a new provider, so that part of the printed statement is added. The Tier-3/active-active part alone would be supported.",
+   "quote_found": true,
+   "checked_url": "https://www.centralbank.ie/docs/default-source/publications/corporate-reports/annual-reports/annual-report-2025-and-annual-performance-statement-2025-2026.pdf"
+  },
+  {
+   "claim": "record:CY:border_control:hosting",
+   "fact_sha256": "ec4052a7d0b80c7df44451eab4c15b9c07e41ec800b6f9cf7bd2349ed7beeed3",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 3 of Law 171(I)/2023 (page served in windows-1253; WebFetch's first pass missed it) states verbatim that the Cyprus Police is the competent authority for the installation, operation and maintenance of the National N.SIS.",
+   "quote_found": true,
+   "checked_url": "https://www.cylaw.org/nomoi/enop/non-ind/2023_1_171/full.html"
+  },
+  {
+   "claim": "record:NL:digital_identity_credentials:hosting",
+   "fact_sha256": "a2bff852ebd3917e05c7f3ddce36a492ace35b4705ab033aac7939d4d0ea600d",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Section 7 of the DigiD privacy statement says personal data are stored on ICT facilities on Dutch territory managed by Logius and not transferred outside the EU, exactly as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.digid.nl/over-digid/privacy"
+  },
+  {
+   "claim": "record:HR:trust_services_pki:hosting",
+   "fact_sha256": "7c644a7d314a12e68b6086b142c3ed68ce2571a8125d544053f3b39c02a33838",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says a PKI infrastructure is established at AKD ('U AKD-u je uspostavljena PKI'), consisting of the AKDCA Root and the subordinate CA HRIDCA which issues certificates to natural persons for the eOI; this covers every element of the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.eid.hr/hr/certifikati/akd-pki"
+  },
+  {
+   "claim": "record:BG:grid_control:hosting",
+   "fact_sha256": "c2f9726651beb4e4ac3f857bcc1e633433513091f3079c3b668905360227ff38",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The ESO procurement pre-notice for the 'Modernisation and expansion of SCADA/EMS and the information environment in the Central Dispatch Management (ЦДУ)' lists as contract 2 the construction of a backup data storage and processing centre for the ЦДУ; the quote is verbatim in the PDF text.",
+   "quote_found": true,
+   "checked_url": "https://www.eso.bg/fileObj.php?oid=131"
+  },
+  {
+   "claim": "record:IT:issuance_history:hosting",
+   "fact_sha256": "c74bf9f210e5b8c6807d4d0b51b7607bda626c60d748b6e0e9790e95bf622bcb",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Art. 10 of the decree (GU 302/2015) says the Ministero dell'interno makes available, under its responsibility, the IT infrastructure located in the CNSD comprising a) the CIE issuance circuit (SSCE). Quote found verbatim once line-break hyphenation in the two-column PDF text is joined.",
+   "quote_found": true,
+   "checked_url": "https://www.gazzettaufficiale.it/eli/gu/2015/12/30/302/sg/pdf"
+  },
+  {
+   "claim": "record:IT:trust_services_pki:hosting",
+   "fact_sha256": "00cf75d071121769f4b3907b1adb6b26ffaf0a84dec88ad7534792fa78329e43",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Item c) of the same Art. 10 list of the CNSD infrastructure is 'la Certification Authority (CA Autenticazione e PKI-CIE)', so the CA is part of the IT infrastructure located in the CNSD as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.gazzettaufficiale.it/eli/gu/2015/12/30/302/sg/pdf"
+  },
+  {
+   "claim": "record:DE:facial_biometric:hosting",
+   "fact_sha256": "106cd4657f5cefe455339e031bc1cbba4dbfe668919cda915c387ba6db36e30a",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 26(4) PAuswG states verbatim that no nationwide database of biometric features is established, and § 26(1) limits storage to the issuing ID-card authorities, which supports 'storage is decentral'.",
+   "quote_found": true,
+   "checked_url": "https://www.gesetze-im-internet.de/pauswg/__26.html"
+  },
+  {
+   "claim": "record:SI:emergency_communications:hosting",
+   "fact_sha256": "d8fd853751d6acdf6cdd36a0ddb3559585496963ccbdf081150fb940b6698e91",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The news item says the TETRA contract was signed by the acting police director-general and the representative of the bidder group (Telekom Slovenije, Airbus Defence and Space Oy, Iskratel), the director of Telekom Slovenije's business market; the printed statement matches.",
+   "quote_found": true,
+   "checked_url": "https://www.gov.si/novice/2020-12-10-po-vec-letih-bo-zgrajena-nova-infrastruktura-sistema-tetra/"
+  },
+  {
+   "claim": "record:BE:facial_biometric:hosting",
+   "fact_sha256": "a00d487fe7e869cedc081cc5377a0638ad8483901268dc6a0e8cc8c1aa7bb783",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Under 'Hoe worden de foto's bewaard?' the page says the photos are kept on a secure server accessible only to competent authorities, and names no provider or location, as the printed statement notes.",
+   "quote_found": true,
+   "checked_url": "https://www.ibz.rrn.fgov.be/nl/burger/identiteitsdocumenten/eid/eid-en-gdpr"
+  },
+  {
+   "claim": "record:EL:police_records:hosting",
+   "fact_sha256": "19f977c360b6369430c2a0323960eb5c7b6cb15313e86b8f10af93ff3c404311",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Law 4249/2014 states verbatim that the IT Directorate of the Hellenic Police headquarters is competent for designing computerised information systems and creating and supporting their technical and operational infrastructure.",
+   "quote_found": true,
+   "checked_url": "https://www.lawspot.gr/nomothesia/nomos-4249-2014/"
+  },
+  {
+   "claim": "record:EL:civil_registry:hosting",
+   "fact_sha256": "b2ab158dfc9896ed612f736df5a02abc2481df04507af8046c983cecaeaf7ff1",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 117 of Law 4483/2017 ('Φιλοξενία πληροφοριακού συστήματος Μητρώου Πολιτών') says hosting of the Citizens' Register may be assigned by joint ministerial decision to suitable infrastructure of a third public-sector body; it does not name a host, matching the printed caveat. Quote found verbatim in the full page (fetched directly; WebFetch's excerpt was truncated).",
+   "quote_found": true,
+   "checked_url": "https://www.lawspot.gr/nomothesia/nomos-4483-2017/"
+  },
+  {
+   "claim": "record:DK:central_bank:hosting",
+   "fact_sha256": "ab907fed28024fade1d85b339873619b860abdc362a5a4420ecb240ae096da76",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The report states verbatim that at Easter 2025 Nationalbanken moved DKK settlement from its own system Kronos2 to the pan-European TARGET Services platform.",
+   "quote_found": true,
+   "checked_url": "https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/rapport/2026/overvaagning-af-den-finansielle-infrastruktur-2025"
+  },
+  {
+   "claim": "record:AT:digital_identity_credentials:hosting",
+   "fact_sha256": "e9ab433073e59f96bf5455809e7ccea14ed809ca79d81db049239a36f74ccc77",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The Rechnungshof report (TZ 28) says the trust service provider was legally obliged to ensure operation of the certificate database run within its sphere of control (Rechenzentrum), and elsewhere defines VDA as 'Vertrauensdiensteanbieter (privates Unternehmen)' and calls it 'privatwirtschaftlich'; quote found verbatim in the PDF text apart from whitespace extraction artefacts.",
+   "quote_found": true,
+   "checked_url": "https://www.rechnungshof.gv.at/rh/home/home/2023_7_E-ID.pdf"
+  },
+  {
+   "claim": "record:AT:issuance_history:hosting",
+   "fact_sha256": "b672abe05aaec9b2e7a24516fb7a05339d1f38f0de6e9d297946d21d78c3423e",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The report states that the BMI commissioned BRZ GmbH, 'den gesetzlichen Auftragsverarbeiter des Identitätsdokumentenregisters', which is exactly what is printed.",
+   "quote_found": true,
+   "checked_url": "https://www.rechnungshof.gv.at/rh/home/home/2023_7_E-ID.pdf"
+  },
+  {
+   "claim": "record:AT:facial_biometric:hosting",
+   "fact_sha256": "9ae6e86f12ef6aa70e88eb6460efe5533c24674960e1cf6319e2f443b451d245",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "not_supported",
+   "reason": "§ 16(6) Passgesetz 1992 says verbatim that Bundesrechenzentrum GmbH participates as processor in the data processing under §§ 22a and 22b, which supports the processor role; but the cited page says nothing about BRZ's ownership, so the printed '(state-owned)' is added from outside the source.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10005798"
+  },
+  {
+   "claim": "record:AT:breeder_documents:hosting",
+   "fact_sha256": "b73f03cd190992b3b76652dfe6c11f87d2cac54ff5390e87667620c896655b87",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "§ 59(3) PStG 2013 states verbatim that microfilms or electronic data carriers may be kept instead of the documents under para. 1 (the papers underlying civil-status entries). Found in the full page fetched directly; WebFetch's excerpt stopped at § 48.",
+   "quote_found": true,
+   "checked_url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008228"
+  },
+  {
+   "claim": "record:SI:trust_services_pki:hosting",
+   "fact_sha256": "03c7b501853e1cebc77b676a4bdb735b9fe91f5e35ef048f052851b0d130251c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page says documents are signed with the qualified SI-PASS-CA certificate 'ki je varno shranjeno pri SI-TRUST', matching the printed statement.",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/sl/si-pass"
+  },
+  {
+   "claim": "record:SI:authentication_audit_log:hosting",
+   "fact_sha256": "312dbad190679621baaf9de89d005993854ab4839288afa8a12325a88fca0a2f",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The SI-PASS GDPR notice says the data are not transferred to third countries and are processed on the territory of Slovenia; its scope is SI-PASS personal data including 'podatki o uporabi računa' (account usage data). It does not use the words audit log, so the match to this record relies on account-usage data covering authentication records; the printed sentence itself adds nothing beyond the qu",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/sl/si-pass-obvestilo-posameznikom"
+  },
+  {
+   "claim": "record:SI:digital_identity_credentials:hosting",
+   "fact_sha256": "0935742246e77dd3f0b180df84b63b29c8f060bca18d430bed0427b362bc80f5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The SI-PASS personal-data notice states verbatim that data are not transferred to third countries and are processed on Slovenian territory, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.si-trust.gov.si/sl/si-pass-obvestilo-posameznikom"
+  },
+  {
+   "claim": "record:SI:firearms_register:hosting",
+   "fact_sha256": "ab716181d50c8bd39527e636d682d7295c33a959b193c495f883768527536cda",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 75 of the Weapons Act (ZOro-1) lists the firearms-licence records and says verbatim that the competent body keeps them on the central computer of the ministry responsible for internal affairs.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2000-01-2747/zakon-o-orozju-zoro-1"
+  },
+  {
+   "claim": "record:SI:breeder_documents:hosting",
+   "fact_sha256": "1eb98432c7101fe04fdb67c2eb44f5fbf3f90fac7223b617233aa0b5f33f2901",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 19 of the Civil Register Act (ZMatR-UPB2) says that, depending on technical possibilities, parts of or the whole collection of documents are also kept in the register's central computerised database, as printed.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2011-01-0451"
+  },
+  {
+   "claim": "record:SI:health_records:hosting",
+   "fact_sha256": "2da48ed0026a0b59de9b90f4a4508c684eec19a8605dc78e6cbe54675b94c4f5",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "Article 7 of the Health Digitalisation Act (ZDigZ) defines the public service as the central health ICT infrastructure and para. 2 says verbatim it is performed by a public company whose sole founder and member is the Republic of Slovenia.",
+   "quote_found": true,
+   "checked_url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2025-01-3387"
+  },
+  {
+   "claim": "record:SE:electoral_management:hosting",
+   "fact_sha256": "f7b6255987cf7bb988534bdb1476d23eae2dfdc170d093c7a1f7cb55624da7d0",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page states verbatim that Skatteverket is responsible for operation, development and monitoring of the election-administration IT support on behalf of Valmyndigheten, and that the IT support is used to compile and communicate election results.",
+   "quote_found": true,
+   "checked_url": "https://www.val.se/om-valmyndigheten/vart-it-stod"
+  },
+  {
+   "claim": "record:SE:electoral_roll:hosting",
+   "fact_sha256": "41d6b4dd602def90b37d0c496aefe6aef1eeae7f0bb9a2c953ae71645892b92c",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The printed sentence restates the quote (Skatteverket operates, develops and monitors Valmyndigheten's IT support on its behalf). The page ties that IT support to voter cards and to marking received votes in the electoral roll (röstlängden) from 2026, but does not itself say the roll is hosted there; the statement as printed adds nothing beyond the quote.",
+   "quote_found": true,
+   "checked_url": "https://www.val.se/om-valmyndigheten/vart-it-stod"
+  },
+  {
+   "claim": "record:BG:judicial_criminal:hosting",
+   "fact_sha256": "b9a772181ec509f7eb935037010aa2b774fb4d915f088a17b5d535ffa3ee54f8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The SJC news item says verbatim that EISS is a centralised web-based application accessed by users over the Internet, and names no host, matching the printed '(host not stated)'.",
+   "quote_found": true,
+   "checked_url": "https://www.vas.bg/bg/a/vss-prie-grafik-za-vvezhdane-na-edinnata-informatsionna-sistema-na-sdilishchata-eiss"
+  },
+  {
+   "claim": "record:HR:tax:hosting",
+   "fact_sha256": "41c9367f853666562a51fb18904511f439edc5f2dffb4352b7eab4c5568d50d8",
+   "author_model": "unrecorded",
+   "checker_model": "claude-fable-5-1",
+   "verdict": "supported",
+   "reason": "The page describes APIS IT d.o.o. as 'središnja je informatička tvrtka u državnom vlasništvu' (state-owned) and says verbatim that it develops and maintains the Tax and Customs Administration information systems, so both 'state-owned' and the role are on the page.",
+   "quote_found": true,
+   "checked_url": "https://znakovi.hgk.hr/proizvod/usluga-podatkovnog-centra-apis-it/"
+  }
+ ]
+}
