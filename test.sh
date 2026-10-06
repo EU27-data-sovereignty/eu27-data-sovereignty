@@ -123,12 +123,13 @@ step "Generated files are current"
 # countries/ holds tracked binaries that are re-rendered by hand (#51), and work in
 # progress under model/ is normal, so a dirty tree is not by itself a stale one --
 # and a check that cries wolf on every uncommitted edit is a check people stop reading.
-GENERATED_PATHS=(countries model web/public/data api/_corpus.json docs/evidence.md)
+GENERATED_PATHS=(countries model web/public/data api/_corpus.json docs/evidence.md docs/gaps.md)
 before="$(git diff -- "${GENERATED_PATHS[@]}" | shasum)"
 python3 model/generate_countries.py > /dev/null
 python3 model/export_json.py > /dev/null
 python3 model/ask_corpus.py > /dev/null
 python3 model/evidence_report.py > /dev/null
+python3 model/gaps.py > /dev/null
 after="$(git diff -- "${GENERATED_PATHS[@]}" | shasum)"
 if [ "$before" != "$after" ]; then
     echo -e "${RED}    ❌ Generated files are stale: regenerating changed them. Run ./run.sh data and commit.${NC}"

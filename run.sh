@@ -89,8 +89,9 @@ regen_data() {
     python3 model/export_json.py
     python3 model/ask_corpus.py > /dev/null
     python3 model/evidence_report.py > /dev/null
+    python3 model/gaps.py > /dev/null                 # what is missing, and how hard it was looked for
     python3 model/factcheck.py audit > /dev/null      # reads the bundle just written (#87)
-    print_success "Country files, briefs, bundle, /ask corpus, docs/evidence.md and docs/fact-check-audit.md regenerated"
+    print_success "Country files, briefs, bundle, /ask corpus, docs/evidence.md, docs/gaps.md and docs/fact-check-audit.md regenerated"
 }
 
 case "${1:-dev}" in

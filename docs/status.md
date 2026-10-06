@@ -129,3 +129,4 @@ skipped. **eu27.cloud still serves the previous good deploy (`f119e8f`).**
 | Deploying | `DEPLOYMENT.md` |
 | Plans | `docs/plans/mobile-app.md`, `docs/plans/stichting.md` |
 | The pipeline, its timings and the proposed speed-ups | `docs/process.md` |
+| What data is missing, and how often it was searched | `docs/gaps.md`, generated |

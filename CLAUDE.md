@@ -58,6 +58,7 @@ python3 model/research.py report       # verification outcomes per state
 ./run.sh factcheck status|gate        # cross-model fact check: what is due; the deploy gate (#87)
 ./run.sh factcheck prepare|stage|record|audit|replay   # a fact-check run (docs/fact-check.md); agent step /factcheck
 python3 model/evidence_report.py       # docs/evidence.md, charts of grades and tiers (run by ./run.sh data)
+python3 model/gaps.py [--csv out.csv]  # docs/gaps.md: every gap and how often it was searched (run by ./run.sh data)
 python3 model/provenance.py            # source register coverage per namespace
 python3 design/build_tokens.py         # regenerate design tokens (web CSS, typst, mobile)
 
