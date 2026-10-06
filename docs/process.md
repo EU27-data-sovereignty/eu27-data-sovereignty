@@ -97,8 +97,11 @@ replay, the clean-room rebuild, and the full local `./test.sh`.
 ## Status
 
 - **Optimisations 1–3: built on 2026-10-06 (#97)**, in `.github/workflows/gate.yml`, `deploy.yml`, `ci.yml`,
-  `./test.sh --only` and `./run.sh site`. They are one change because they share `gate.yml`. The timings
-  above are from before; the first runs give the after, recorded in `CHANGELOG.md`.
+  `./test.sh --only` and `./run.sh site`. They are one change because they share `gate.yml`.
+- **Measured.** The first run took 5 min 08 s from push to live, against about 11.5 min before (`CHANGELOG.md`).
+  Its caches were all cold.
+- **The PDF job (3:59) is now the critical path,** so optimisation 5 (a per-country PDF cache) is the next
+  saving.
 - Optimisations 4–8 are not started.
 
 ## Order of work

@@ -2482,7 +2482,9 @@ now fails. It also closes off a deploy that builds anything itself: the deploy j
 - `python3 -m unittest tests.test_workflows` passes 17 tests;
 - `actionlint` reports nothing on the new workflow.
 
-**NOT YET:** the first CI runs of the split gate, and their before-and-after timings.
+**In CI**, on the first run (`d8bd0d1`, 2026-10-06, every cache cold): every job passed. The deploy took
+5 min 08 s from push to live, against about 11.5 min before. The tree-hash check passed, and so did 55 of 55
+smoke checks. The PDF job (3:59) is now the critical path.
 
 *Would change if:* the parallel jobs' setup time outweighs the saving (each job installs its own
 dependencies); or GitHub artifacts prove unreliable enough that a deploy fails for want of one.

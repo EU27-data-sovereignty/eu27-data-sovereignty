@@ -30,7 +30,19 @@ What changed and when. Reasoning for the choices behind these changes lives in
   - every cache key is a pin or checksum;
   - the deploy ships the gate's artifacts.
 - **Verified locally.** Each group passes on its own, and `vercel build` of the prebuilt `web/dist` gives an
-  identical tree hash. The CI timings before and after are **not yet measured**; the first run gives them.
+  identical tree hash.
+- **Measured in CI.** The first run, on `d8bd0d1` with every cache cold, took **5 min 08 s** from push to live.
+  The previous run, 37383861627, took about 11.5 min.
+
+  | Job | Time |
+  |---|---|
+  | model | 30 s |
+  | web | 39 s |
+  | e2e, the 5 browser jobs | 1:07–2:12 each, starting after web |
+  | pdf | 3:59, the critical path |
+  | deploy, including the tree-hash check | 1:02 |
+
+  The deploy then passed 55 of 55 smoke checks, with 1,396 of 1,396 printed facts.
 
 ### Fixed: a new high-severity advisory in the web build's dependencies blocked the deploy
 
