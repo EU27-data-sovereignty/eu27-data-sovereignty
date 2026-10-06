@@ -267,7 +267,7 @@ else
     step "The live /ask answers, through a real Anthropic API call"
     # One fixed question to https://eu27.cloud/api/ask: the function runs, the key is accepted, the model
     # answers, and the answer cites the corpus (model/ask_smoke.py, #92). It costs one request, within the
-    # eu27-ask workspace's spend limit. A rejected or missing key fails here (--require).
+    # eu27 workspace's spend limit. A rejected or missing key fails here (--require).
     # It tests the live site, not this checkout, so CI runs it after the deploy, against the new deploy
     # (deploy.yml): run before it, a broken key would block the very redeploy that fixes it.
     python3 model/ask_smoke.py --require

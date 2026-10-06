@@ -7,6 +7,14 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-06
 
+### Security: the exposed `/ask` keys are revoked, and the private findings register's entry is closed
+
+- **The new key.** It is in the Anthropic workspace `eu27`, created 2026-10-06, and is the only key the Console
+  lists there. It was set in the Vercel dashboard as a sensitive Production variable, never in a terminal or chat.
+- **Proof it works.** Deploy run 37518689761 (`ac5c6af`) passed the new live `/ask` stage: 940 characters, 3
+  citations.
+- **It expires on 2026-11-05.** `TODO.md` holds the renewal step.
+
 ### Added: `./test.sh` checks the live `/ask` end to end, with a real API call
 
 - **The check.** A new stage 17 (group `live`) runs `model/ask_smoke.py --require`. It asks the live

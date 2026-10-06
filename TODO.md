@@ -56,10 +56,13 @@ Open
 - [x] Stability samples: Opus 5.5 disagreed with 6 of 100 Fable-confirmed facts; a second-checker
       disagreement now withholds the fact (#94)
 - [x] ANTHROPIC_API_KEY set in Vercel (Production), 2026-10-03
-- [ ] **Security: rotate ANTHROPIC_API_KEY.** The key in use was exposed in plain text during setup (recorded
-      in the private findings register). New key from the `eu27-ask` workspace, stored with
-      `pbpaste | vercel env add ANTHROPIC_API_KEY production`, redeploy, `python3 model/ask_smoke.py --require`,
-      then revoke the old keys. Confirm the workspace spend limit is set
+- [x] **Security: rotate ANTHROPIC_API_KEY** (done 2026-10-06; the private findings register's entry is closed).
+      A new key in the `eu27` workspace, set in the Vercel dashboard as a sensitive Production variable. Deploy run
+      37518689761: `/ask: ok (940 characters, 3 citations)`. The Console lists only that key. The spend limit is set
+- [ ] **Before 2026-11-05: renew the `/ask` key.** The current key expires that day, and `/ask` stops with it.
+      Create a key in the `eu27` workspace, paste it in the Vercel dashboard (`ANTHROPIC_API_KEY`, Production),
+      then push or run `gh workflow run Deploy`. The deploy's live `/ask` stage confirms it. Then delete the old key.
+      The daily monitor would catch a lapse, but only after `/ask` is down
 - [x] Live `/ask` answers with citations (`ask_smoke.py --require`: 1122 characters, 3 citations, 2026-10-03);
       repository variable ASK_LIVE=true, so the daily check now fails if it stops
 - [ ] Owner: port the mobile reader to schema 2, or drop it (its 4 Dependabot alerts need one or the other)

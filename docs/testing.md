@@ -38,7 +38,7 @@ The whole pipeline, its timings and the proposed speed-ups are in [`process.md`]
 | 17 | The live `/ask` | `model/ask_smoke.py --require`: one question to https://eu27.cloud/api/ask, through a real Anthropic API call, must answer with citations. A rejected or missing key fails it |
 
 `--no-e2e` skips stage 16, `--no-pdf` skips stage 9 and `--no-live` skips stage 17. Stage 17 tests the live site,
-not the checkout, and costs one request within the `eu27-ask` spend limit. Use `--no-live` offline or while the
+not the checkout, and costs one request within the `eu27` workspace spend limit. Use `--no-live` offline or while the
 key is being replaced.
 
 **In CI the stages run as parallel jobs** (`.github/workflows/gate.yml`, #97). `./test.sh --only GROUP` runs one
