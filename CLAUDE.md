@@ -33,7 +33,8 @@ are recorded: `tests/test_docs.py` enforces it.
 ./test.sh                              # the full gate; run before every commit
 ./test.sh --no-e2e                     # without Playwright
 ./test.sh --no-pdf                     # without compiling the PDFs (otherwise missing typst fails)
-./test.sh --only model|pdf|web|e2e [--project NAME]   # one stage group; CI runs them as parallel jobs (#97)
+./test.sh --no-live                    # without the live /ask check (one real API call to eu27.cloud)
+./test.sh --only model|pdf|web|e2e|live [--project NAME]   # one stage group; CI runs them as parallel jobs (#97)
 ./run.sh                               # dev server, http://localhost:5173
 ./run.sh data                          # regenerate briefs, bundle and /ask corpus (pins the epoch)
 ./run.sh artefacts                     # re-render the 27 tracked posters (needs Chrome)

@@ -101,3 +101,7 @@ jobs:
             echo
           } >> "$GITHUB_STEP_SUMMARY"
           python3 model/smoke.py --site "$SITE" --bundle web/public/data/eu27.json --summary "$GITHUB_STEP_SUMMARY"
+      # /ask end to end on the deploy just made: the function, the key, the model and the citations (#92).
+      # ./test.sh's live group, run here rather than in the gate (see test.sh).
+      - name: The live /ask answers through a real API call
+        run: ./test.sh --only live

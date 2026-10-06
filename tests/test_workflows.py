@@ -78,9 +78,18 @@ class Deploy(unittest.TestCase):
         # group, so the parallel jobs run what ./test.sh runs (docs/process.md, optimisation 3).
         groups = test_sh_groups()
         self.assertNotIn(None, groups, f"stages outside any --only group: {groups.get(None)}")
-        self.assertEqual(sorted(groups), ["e2e", "model", "pdf", "web"])
-        for group in groups:
+        self.assertEqual(sorted(groups), ["e2e", "live", "model", "pdf", "web"])
+        for group in set(groups) - {"live"}:
             self.assertRegex(GATE, rf"\./test\.sh --only {group}\b")
+
+    def test_the_live_ask_check_runs_after_the_deploy(self):
+        # The live group calls the live /ask, so it runs on the new deploy, after it, never in the gate: a
+        # broken key must not block the redeploy that fixes it.
+        self.assertNotIn("--only live", GATE)
+        deploy_job = DEPLOY.split("\n  deploy:\n")[1]
+        self.assertLess(deploy_job.index("deploy --prebuilt --prod"), deploy_job.index("run: ./test.sh --only live"))
+        live = TEST_SH.split("if ! in_group live; then", 1)[1].split("\nfi\n", 1)[0]
+        self.assertIn("python3 model/ask_smoke.py --require", live)
 
     def test_deploy_waits_for_the_fact_check(self):
         # Every printed fact checked by the model that did not write it, before production (#87):

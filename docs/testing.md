@@ -35,16 +35,22 @@ The whole pipeline, its timings and the proposed speed-ups are in [`process.md`]
 | 15 | Size budget | gzipped: data bundle ≤ 900 KB, all JavaScript ≤ 400 KB |
 | 16 | Browser tests | Playwright in Chrome, Firefox, desktop Safari (WebKit), iPhone SE and iPhone 17 Pro: every route renders real data, at 375 px, in print; axe in light and dark mode (Chrome); visual regression against macOS baselines (Chrome on macOS only) |
 
-`--no-e2e` skips stage 16 and `--no-pdf` skips stage 9.
+| 17 | The live `/ask` | `model/ask_smoke.py --require`: one question to https://eu27.cloud/api/ask, through a real Anthropic API call, must answer with citations. A rejected or missing key fails it |
+
+`--no-e2e` skips stage 16, `--no-pdf` skips stage 9 and `--no-live` skips stage 17. Stage 17 tests the live site,
+not the checkout, and costs one request within the `eu27-ask` spend limit. Use `--no-live` offline or while the
+key is being replaced.
 
 **In CI the stages run as parallel jobs** (`.github/workflows/gate.yml`, #97). `./test.sh --only GROUP` runs one
 group:
 - `model`: stages 1–4 and 6–8;
 - `web`: stages 5 and 10–15;
 - `pdf`: stage 9;
-- `e2e`: stage 16, with `--project NAME` for one Playwright project.
+- `e2e`: stage 16, with `--project NAME` for one Playwright project;
+- `live`: stage 17. CI runs it in the deploy job, after the deploy and against it, not in the gate. A broken key
+  must not block the redeploy that fixes it.
 
-The four groups partition the stages, and `tests/test_workflows.py` fails if a stage is outside every group or
+The five groups partition the stages, and `tests/test_workflows.py` fails if a stage is outside every group or
 a group is not run. Locally, `./test.sh` with no flag still runs everything in order.
 
 ## The Python suite, by subject

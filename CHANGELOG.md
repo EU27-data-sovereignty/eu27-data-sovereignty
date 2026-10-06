@@ -7,6 +7,18 @@ What changed and when. Reasoning for the choices behind these changes lives in
 
 ## 2026-10-06
 
+### Added: `./test.sh` checks the live `/ask` end to end, with a real API call
+
+- **The check.** A new stage 17 (group `live`) runs `model/ask_smoke.py --require`. It asks the live
+  https://eu27.cloud/api/ask one fixed question and fails unless the function runs, the key is accepted, the
+  model answers, and the answer cites the corpus. It costs one request per run.
+- **Where it runs.** The deploy job runs it after the deploy, against the new deploy. It is not in the gate:
+  run before the deploy, a broken key would block the very redeploy that fixes it.
+- **Skipping it.** `--no-live` skips it, for offline use or while the key is being replaced.
+- **Shown to fail first.** On 2026-10-06, after the live key was deleted during the EU-1 key cleanup, the stage
+  failed with `not_configured` and exit 1. `tests/test_workflows.py` checks that it runs after the deploy and
+  never in the gate.
+
 ### Changed: the gate runs as parallel jobs, and the deploy ships the build the gate tested (#97)
 
 - **One build, shipped as tested (optimisation 1).** The deploy job no longer rebuilds the site or recompiles the

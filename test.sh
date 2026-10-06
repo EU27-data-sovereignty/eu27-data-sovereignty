@@ -10,7 +10,8 @@ set -e
 #   ./test.sh              everything
 #   ./test.sh --no-e2e     skip the browser stage (no Chrome, or CI without one)
 #   ./test.sh --no-pdf     skip compiling the PDFs (no typst); without it, missing typst fails
-#   ./test.sh --only GROUP one group: model, pdf, web or e2e (CI runs them as parallel jobs)
+#   ./test.sh --no-live    skip the live /ask check (offline, or the key is being replaced)
+#   ./test.sh --only GROUP one group: model, pdf, web, e2e or live (CI runs them as parallel jobs)
 #   ./test.sh --only e2e --project NAME   one Playwright project (CI runs one job each)
 #   PDF_OUT=dir ./test.sh  keep the compiled PDFs in dir (CI deploys exactly these)
 #
@@ -27,19 +28,21 @@ cd "$ROOT"
 
 SKIP_E2E=false
 SKIP_PDF=false
+SKIP_LIVE=false
 ONLY=""
 PROJECT=""
 while [ $# -gt 0 ]; do
     case "$1" in
         --no-e2e) SKIP_E2E=true ;;
         --no-pdf) SKIP_PDF=true ;;
+        --no-live) SKIP_LIVE=true ;;
         --only)
             ONLY="$2"; shift
-            case "$ONLY" in model|pdf|web|e2e) ;; *) echo -e "${RED}❌ --only takes model, pdf, web or e2e${NC}"; exit 1 ;; esac
+            case "$ONLY" in model|pdf|web|e2e|live) ;; *) echo -e "${RED}❌ --only takes model, pdf, web, e2e or live${NC}"; exit 1 ;; esac
             ;;
         --project) PROJECT="$2"; shift ;;
         --help|-h)
-            sed -n '3,18p' "$0" | sed 's/^# \{0,1\}//'
+            sed -n '3,19p' "$0" | sed 's/^# \{0,1\}//'
             exit 0
             ;;
         *)
@@ -252,6 +255,23 @@ else
     fi
     ok "routes render real data; no accessibility violations"
     cd "$ROOT"
+fi
+
+# -----------------------------------------------------------------------------
+if ! in_group live; then
+    :
+elif [ "$SKIP_LIVE" = true ]; then
+    echo
+    echo -e "${YELLOW}⚠️  Skipping the live /ask check (--no-live)${NC}"
+else
+    step "The live /ask answers, through a real Anthropic API call"
+    # One fixed question to https://eu27.cloud/api/ask: the function runs, the key is accepted, the model
+    # answers, and the answer cites the corpus (model/ask_smoke.py, #92). It costs one request, within the
+    # eu27-ask workspace's spend limit. A rejected or missing key fails here (--require).
+    # It tests the live site, not this checkout, so CI runs it after the deploy, against the new deploy
+    # (deploy.yml): run before it, a broken key would block the very redeploy that fixes it.
+    python3 model/ask_smoke.py --require
+    ok "/ask answered with citations"
 fi
 
 # -----------------------------------------------------------------------------
